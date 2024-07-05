@@ -1,9 +1,9 @@
-$NetBSD: patch-src_Makefile,v 1.1 2021/05/17 10:38:48 micha Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2024/07/05 15:52:47 micha Exp $
 
 Use libtool.
 Upstream will not merge this (libtool is listed as not acceptable).
 
---- src/Makefile.orig	2021-05-04 17:36:17.000000000 +0000
+--- src/Makefile.orig	2023-12-09 13:58:40.000000000 +0000
 +++ src/Makefile
 @@ -235,6 +235,10 @@ $(LIBNAME): $(OBJECTS)
  	$(LIBCOMMAND) $@ $(OBJECTS)
@@ -22,7 +22,7 @@ Upstream will not merge this (libtool is listed as not acceptable).
  
 +libfltk_forms.la: $(FLOBJECTS)
 +	echo $(CXX) $@ ...
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(FLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(FLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 -L. -lfltk $(LDLIBS)
 +
  libfltk_forms.so.$(FL_DSO_VERSION): $(FLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
@@ -33,7 +33,7 @@ Upstream will not merge this (libtool is listed as not acceptable).
  
 +libfltk_gl.la: $(GLOBJECTS)
 +	echo $(CXX) $@ ...
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(GLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(GLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 -L. -lfltk $(LDLIBS) $(GLDLIBS)
 +
  libfltk_gl.so.$(FL_DSO_VERSION): $(GLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
@@ -44,7 +44,7 @@ Upstream will not merge this (libtool is listed as not acceptable).
  
 +libfltk_images.la: $(IMGOBJECTS)
 +	echo $(CXX) $@ ...
-+	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(IMGOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 $(LDLIBS)
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(IMGOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 1:9 -L. $(IMAGELIBS) -lfltk $(LDLIBS)
 +
  libfltk_images.so.$(FL_DSO_VERSION): $(IMGOBJECTS) libfltk.so.$(FL_DSO_VERSION)
  	echo $(DSOCOMMAND) $@ ...
