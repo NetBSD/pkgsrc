@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/05 19:51:46 maya Exp $
+bin/minikube
