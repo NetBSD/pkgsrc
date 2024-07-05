@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2024/04/15 10:25:57 micha Exp $
+@comment $NetBSD: PLIST,v 1.62 2024/07/05 10:34:12 micha Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
