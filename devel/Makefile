@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4306 2024/06/30 06:37:12 taca Exp $
+# $NetBSD: Makefile,v 1.4307 2024/07/05 20:25:24 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -2394,6 +2394,7 @@ SUBDIR+=	prcs
 SUBDIR+=	premake5
 SUBDIR+=	protobuf
 SUBDIR+=	protobuf-c
+SUBDIR+=	protobuf-go
 SUBDIR+=	pstreams
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
