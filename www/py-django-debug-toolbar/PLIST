@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/10 08:42:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/07/05 07:57:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -75,6 +75,9 @@ ${PYSITELIB}/debug_toolbar/middleware.pyo
 ${PYSITELIB}/debug_toolbar/panels/__init__.py
 ${PYSITELIB}/debug_toolbar/panels/__init__.pyc
 ${PYSITELIB}/debug_toolbar/panels/__init__.pyo
+${PYSITELIB}/debug_toolbar/panels/alerts.py
+${PYSITELIB}/debug_toolbar/panels/alerts.pyc
+${PYSITELIB}/debug_toolbar/panels/alerts.pyo
 ${PYSITELIB}/debug_toolbar/panels/cache.py
 ${PYSITELIB}/debug_toolbar/panels/cache.pyc
 ${PYSITELIB}/debug_toolbar/panels/cache.pyo
@@ -158,6 +161,7 @@ ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/base.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/panel_button.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/panel_content.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/includes/theme_selector.html
+${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/alerts.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/cache.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/headers.html
 ${PYSITELIB}/debug_toolbar/templates/debug_toolbar/panels/history.html
