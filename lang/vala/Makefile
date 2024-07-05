@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2024/04/30 09:06:12 adam Exp $
+# $NetBSD: Makefile,v 1.105 2024/07/05 10:55:33 micha Exp $
 
 DISTNAME=	vala-0.56.17
+PKGREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vala/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
