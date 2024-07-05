@@ -1,4 +1,4 @@
-$NetBSD: patch-config_config__perl.pl,v 1.4 2022/07/22 12:04:46 micha Exp $
+$NetBSD: patch-config_config__perl.pl,v 1.5 2024/07/05 10:34:12 micha Exp $
 
 Add rpath for pkgsrc
 
