@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/05/31 09:30:30 fcambus Exp $
+# $NetBSD: Makefile,v 1.35 2024/07/05 20:55:55 cheusov Exp $
 #
 
 DISTNAME=	byacc-20230521
@@ -12,6 +12,9 @@ COMMENT=	Berkeley Yacc
 LICENSE=	public-domain
 
 GNU_CONFIGURE=	YES
+
+CONFIGURE_ARGS+=	--with-manpage-format=normal
+
 MAKE_FILE=	makefile
 
 .include "../../mk/bsd.pkg.mk"
