@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/06/08 12:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/07/05 19:30:25 adam Exp $
 
 DISTNAME=	gi_docgen-2024.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
@@ -22,7 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
 .endif
@@ -32,17 +31,14 @@ PYTHON_SELF_CONFLICT=		yes
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Fixing PREFIX.
-SUBST_FILES.prefix+=	gidocgen/utils.py
-SUBST_SED.prefix+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_FILES.prefix=	gidocgen/utils.py
+SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-.include "../../mk/bsd.prefs.mk"
-
-post-install:
-.if ${PKGMANDIR} != "share/man"
-	${MV} ${DESTDIR}${PREFIX}/share/man/man1/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endif
+SUBST_CLASSES+=		mandir
+SUBST_STAGE.mandir=	pre-configure
+SUBST_MESSAGE.mandir=	Fixing path man pages.
+SUBST_FILES.mandir=	setup.cfg
+SUBST_SED.mandir=	-e 's,^share/man,${PKGMANDIR},'
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
