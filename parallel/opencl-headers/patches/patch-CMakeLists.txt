@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/07/06 15:49:09 adam Exp $
+
+Treat Darwin as other platforms, and fix installation.
+
+--- CMakeLists.txt.orig	2024-07-06 11:22:50.360442167 +0000
++++ CMakeLists.txt
+@@ -22,7 +22,7 @@ include(GNUInstallDirs)
+ add_library(Headers INTERFACE)
+ add_library(OpenCL::Headers ALIAS Headers)
+ 
+-if(CMAKE_SYSTEM_NAME MATCHES Darwin)
++if(FALSE)
+   execute_process(
+     COMMAND ln -snf ${CMAKE_CURRENT_SOURCE_DIR}/CL ${CMAKE_CURRENT_BINARY_DIR}/CL
+     COMMAND ln -snf ${CMAKE_CURRENT_SOURCE_DIR}/CL ${CMAKE_CURRENT_BINARY_DIR}/OpenCL
