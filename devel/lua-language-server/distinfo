@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/04/30 22:01:33 nikita Exp $
+$NetBSD: distinfo,v 1.6 2024/07/06 10:57:00 riastradh Exp $
 
 BLAKE2s (CppCXY-EmmyLuaCodeStyle-660a26085ff2c1275392a291063404d54fdd32b9.tar.gz) = 00126b42aac3f95c6b64eab5e66c64ec00e87e9b435710667f8343e0916234cc
 SHA512 (CppCXY-EmmyLuaCodeStyle-660a26085ff2c1275392a291063404d54fdd32b9.tar.gz) = 1ff267021d9c9daf53197cec1d5256dbd336ca19a17ef49ec7a2ac9ca34bff95ccf7da871dead34d7d270822b4f16f2b5e9066cbc7307c2c3f2092f5ff304503
@@ -27,4 +27,5 @@ Size (lua-language-server-3.8.3.tar.gz) = 2749058 bytes
 BLAKE2s (sqmedeiros-lpeglabel-912b0b9e8641074408ffc2259e069b188e0c717b.tar.gz) = 86a1e3cd622c2e6578a3d29dcce25bd7a9177b9d5d780d2de81d4c1a92355a61
 SHA512 (sqmedeiros-lpeglabel-912b0b9e8641074408ffc2259e069b188e0c717b.tar.gz) = ab84dad276f57092eee338ed00dc3656cc9a4a31f0ca4198ef3d1c169873af2f91756c4c4f92a0595d6fc109c2a07aae7495a4fdd658784f2420ad37bc3bf55c
 Size (sqmedeiros-lpeglabel-912b0b9e8641074408ffc2259e069b188e0c717b.tar.gz) = 83171 bytes
+SHA1 (patch-3rd_bee.lua_bee_thread_atomic__sync.cpp) = 7cc0b0fc4d157e842754c912a5129afb63c37560
 SHA1 (patch-make.lua) = fba3453dbeecebc87e48b55bbefb580331cc5a5c

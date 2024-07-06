@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2024/05/27 09:08:22 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/07/06 10:57:00 riastradh Exp $
 
 DISTNAME=		lua-language-server-3.8.3
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
+PKGREVISION=		1
 CATEGORIES=		devel lua
 MASTER_SITES=		${MASTER_SITE_GITHUB:=luals/}
 GITHUB_PROJECT=		lua-language-server
