@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.7 2024/04/22 07:05:15 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.8 2024/07/06 15:45:07 adam Exp $
 
 Fix building assembler files.
 https://github.com/llvm/llvm-project/issues/59978

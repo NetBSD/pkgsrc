@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_modules_MLIRConfig.cmake.in,v 1.1 2023/10/06 19:15:21 adam Exp $
+$NetBSD: patch-cmake_modules_MLIRConfig.cmake.in,v 1.2 2024/07/06 15:45:09 adam Exp $
 
 Provide proper path to mlir-tblgen.
 
---- cmake/modules/MLIRConfig.cmake.in.orig	2022-11-16 06:28:29.000000000 +0000
+--- cmake/modules/MLIRConfig.cmake.in.orig	2024-04-17 00:21:15.000000000 +0000
 +++ cmake/modules/MLIRConfig.cmake.in
-@@ -8,14 +8,11 @@ find_package(LLVM REQUIRED CONFIG
+@@ -9,15 +9,12 @@ find_package(LLVM ${LLVM_VERSION} EXACT
  set(MLIR_EXPORTED_TARGETS "@MLIR_EXPORTS@")
  set(MLIR_CMAKE_DIR "@MLIR_CONFIG_CMAKE_DIR@")
  set(MLIR_INCLUDE_DIRS "@MLIR_CONFIG_INCLUDE_DIRS@")
@@ -13,6 +13,7 @@ Provide proper path to mlir-tblgen.
  set(MLIR_PDLL_TABLEGEN_EXE "@MLIR_CONFIG_PDLL_TABLEGEN_EXE@")
  set(MLIR_INSTALL_AGGREGATE_OBJECTS "@MLIR_INSTALL_AGGREGATE_OBJECTS@")
  set(MLIR_ENABLE_BINDINGS_PYTHON "@MLIR_ENABLE_BINDINGS_PYTHON@")
+ set(MLIR_ENABLE_EXECUTION_ENGINE "@MLIR_ENABLE_EXECUTION_ENGINE@")
  
 -# For mlir_tablegen()
 -set(MLIR_INCLUDE_DIR "@MLIR_INCLUDE_DIR@")

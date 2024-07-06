@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.2 2024/04/22 07:28:21 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/07/06 15:45:09 adam Exp $
 
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (mlir-17.0.6.src.tar.xz) = 222120f283eb3cdb326a1cda5161816988cf4f82dac90ca40466c1e05d58bc18
-SHA512 (mlir-17.0.6.src.tar.xz) = 40e5310d1ee613d38d2fc1f72cd4902c402e72e18fc44c275bbd7605e86934093a9b1e64329e91a5e99adb7e95c5cede550dd8c500bf505f037ad264ecba268a
-Size (mlir-17.0.6.src.tar.xz) = 5336028 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
-SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 528ffcd98d35b22c168b228daca28af319a47c5c
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (mlir-18.1.8.src.tar.xz) = 5b76035aa1d485be09dae9d4c1c5211cc64420d21c127c7462725e746f2bdf67
+SHA512 (mlir-18.1.8.src.tar.xz) = 5b183b325a3fc2c69056ad517548a07ba2294ab4e3df35c8a477a0824da75c348c62a5ff5ca06be98d993e92830fb7bc0a52ff7fcd47dd1e995cb2830f4ea9d3
+Size (mlir-18.1.8.src.tar.xz) = 5898700 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
+SHA1 (patch-cmake_modules_MLIRConfig.cmake.in) = 69c4f32891e21e239f6bafc9305e79440809cf6c
 SHA1 (patch-tools_mlir-tblgen_CMakeLists.txt) = 7b78acbf8a85443f2cc3f13786bbbda25b0b8d74

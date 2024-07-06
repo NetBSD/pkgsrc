@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/04/22 07:05:14 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/07/06 15:45:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 

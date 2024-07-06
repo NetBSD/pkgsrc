@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.26 2024/05/29 16:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/07/06 15:45:09 adam Exp $
 
-PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	compiler-rt-${LLVM_VERSION}.src
@@ -20,8 +19,10 @@ NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	lld-${LLVM_VERSION}*:../../devel/lld
 
-USE_LANGUAGES=	c99 c++17
-USE_TOOLS+=	ggrep
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		ggrep
 
 SSP_SUPPORTED=		no
 PKGSRC_USE_STACK_CHECK=	no
@@ -92,8 +93,7 @@ post-install:
 .endif
 
 ABI=			# 32
-CFLAGS+=		-fno-exceptions
-CFLAGS+=		-O2
+CFLAGS+=		-O2 -fno-exceptions
 CXXFLAGS+=		-O2
 PKGSRC_COMPILER=	clang
 CLANGBASE=		${PREFIX}

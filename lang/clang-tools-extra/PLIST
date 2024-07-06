@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/04/22 07:04:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/07/06 15:45:08 adam Exp $
 bin/clang-apply-replacements
 bin/clang-change-namespace
 bin/clang-doc
@@ -75,6 +75,9 @@ include/clang-tidy/bugprone/AssignmentInIfConditionCheck.h
 include/clang-tidy/bugprone/BadSignalToKillThreadCheck.h
 include/clang-tidy/bugprone/BoolPointerImplicitConversionCheck.h
 include/clang-tidy/bugprone/BranchCloneCheck.h
+include/clang-tidy/bugprone/CastingThroughVoidCheck.h
+include/clang-tidy/bugprone/ChainedComparisonCheck.h
+include/clang-tidy/bugprone/ComparePointerToMemberVirtualFunctionCheck.h
 include/clang-tidy/bugprone/CopyConstructorInitCheck.h
 include/clang-tidy/bugprone/DanglingHandleCheck.h
 include/clang-tidy/bugprone/DynamicStaticInitializersCheck.h
@@ -86,6 +89,8 @@ include/clang-tidy/bugprone/ForwardDeclarationNamespaceCheck.h
 include/clang-tidy/bugprone/ForwardingReferenceOverloadCheck.h
 include/clang-tidy/bugprone/ImplicitWideningOfMultiplicationResultCheck.h
 include/clang-tidy/bugprone/InaccurateEraseCheck.h
+include/clang-tidy/bugprone/IncDecInConditionsCheck.h
+include/clang-tidy/bugprone/IncorrectEnableIfCheck.h
 include/clang-tidy/bugprone/IncorrectRoundingsCheck.h
 include/clang-tidy/bugprone/InfiniteLoopCheck.h
 include/clang-tidy/bugprone/IntegerDivisionCheck.h
@@ -96,11 +101,13 @@ include/clang-tidy/bugprone/MisplacedOperatorInStrlenInAllocCheck.h
 include/clang-tidy/bugprone/MisplacedPointerArithmeticInAllocCheck.h
 include/clang-tidy/bugprone/MisplacedWideningCastCheck.h
 include/clang-tidy/bugprone/MoveForwardingReferenceCheck.h
+include/clang-tidy/bugprone/MultiLevelImplicitPointerConversionCheck.h
 include/clang-tidy/bugprone/MultipleNewInOneExpressionCheck.h
 include/clang-tidy/bugprone/MultipleStatementMacroCheck.h
 include/clang-tidy/bugprone/NoEscapeCheck.h
 include/clang-tidy/bugprone/NonZeroEnumToBoolConversionCheck.h
 include/clang-tidy/bugprone/NotNullTerminatedResultCheck.h
+include/clang-tidy/bugprone/OptionalValueConversionCheck.h
 include/clang-tidy/bugprone/ParentVirtualCallCheck.h
 include/clang-tidy/bugprone/PosixReturnCheck.h
 include/clang-tidy/bugprone/RedundantBranchConditionCheck.h
@@ -137,6 +144,7 @@ include/clang-tidy/bugprone/UnhandledExceptionAtNewCheck.h
 include/clang-tidy/bugprone/UnhandledSelfAssignmentCheck.h
 include/clang-tidy/bugprone/UniquePtrArrayMismatchCheck.h
 include/clang-tidy/bugprone/UnsafeFunctionsCheck.h
+include/clang-tidy/bugprone/UnusedLocalNonTrivialVariableCheck.h
 include/clang-tidy/bugprone/UnusedRaiiCheck.h
 include/clang-tidy/bugprone/UnusedReturnValueCheck.h
 include/clang-tidy/bugprone/UseAfterMoveCheck.h
@@ -170,6 +178,7 @@ include/clang-tidy/cppcoreguidelines/MisleadingCaptureDefaultByValueCheck.h
 include/clang-tidy/cppcoreguidelines/MissingStdForwardCheck.h
 include/clang-tidy/cppcoreguidelines/NarrowingConversionsCheck.h
 include/clang-tidy/cppcoreguidelines/NoMallocCheck.h
+include/clang-tidy/cppcoreguidelines/NoSuspendWithLockCheck.h
 include/clang-tidy/cppcoreguidelines/OwningMemoryCheck.h
 include/clang-tidy/cppcoreguidelines/PreferMemberInitializerCheck.h
 include/clang-tidy/cppcoreguidelines/ProBoundsArrayToPointerDecayCheck.h
@@ -212,6 +221,7 @@ include/clang-tidy/google/UnnamedNamespaceInHeaderCheck.h
 include/clang-tidy/google/UpgradeGoogletestCaseCheck.h
 include/clang-tidy/google/UsingNamespaceDirectiveCheck.h
 include/clang-tidy/hicpp/ExceptionBaseclassCheck.h
+include/clang-tidy/hicpp/IgnoredRemoveResultCheck.h
 include/clang-tidy/hicpp/MultiwayPathsCoveredCheck.h
 include/clang-tidy/hicpp/NoAssemblerCheck.h
 include/clang-tidy/hicpp/SignedBitwiseCheck.h
@@ -224,9 +234,11 @@ include/clang-tidy/llvm/TwineLocalCheck.h
 include/clang-tidy/llvmlibc/CalleeNamespaceCheck.h
 include/clang-tidy/llvmlibc/ImplementationInNamespaceCheck.h
 include/clang-tidy/llvmlibc/InlineFunctionDeclCheck.h
+include/clang-tidy/llvmlibc/NamespaceConstants.h
 include/clang-tidy/llvmlibc/RestrictSystemLibcHeadersCheck.h
 include/clang-tidy/misc/ConfusableIdentifierCheck.h
 include/clang-tidy/misc/ConstCorrectnessCheck.h
+include/clang-tidy/misc/CoroutineHostileRAIICheck.h
 include/clang-tidy/misc/DefinitionsInHeadersCheck.h
 include/clang-tidy/misc/HeaderIncludeCycleCheck.h
 include/clang-tidy/misc/IncludeCleanerCheck.h
@@ -270,6 +282,7 @@ include/clang-tidy/modernize/TypeTraitsCheck.h
 include/clang-tidy/modernize/UnaryStaticAssertCheck.h
 include/clang-tidy/modernize/UseAutoCheck.h
 include/clang-tidy/modernize/UseBoolLiteralsCheck.h
+include/clang-tidy/modernize/UseConstraintsCheck.h
 include/clang-tidy/modernize/UseDefaultMemberInitCheck.h
 include/clang-tidy/modernize/UseEmplaceCheck.h
 include/clang-tidy/modernize/UseEqualsDefaultCheck.h
@@ -278,6 +291,8 @@ include/clang-tidy/modernize/UseNodiscardCheck.h
 include/clang-tidy/modernize/UseNoexceptCheck.h
 include/clang-tidy/modernize/UseNullptrCheck.h
 include/clang-tidy/modernize/UseOverrideCheck.h
+include/clang-tidy/modernize/UseStartsEndsWithCheck.h
+include/clang-tidy/modernize/UseStdNumbersCheck.h
 include/clang-tidy/modernize/UseStdPrintCheck.h
 include/clang-tidy/modernize/UseTrailingReturnTypeCheck.h
 include/clang-tidy/modernize/UseTransparentFunctorsCheck.h
@@ -297,6 +312,7 @@ include/clang-tidy/objc/SuperSelfCheck.h
 include/clang-tidy/openmp/ExceptionEscapeCheck.h
 include/clang-tidy/openmp/UseDefaultNoneCheck.h
 include/clang-tidy/performance/AvoidEndlCheck.h
+include/clang-tidy/performance/EnumSizeCheck.h
 include/clang-tidy/performance/FasterStringFindCheck.h
 include/clang-tidy/performance/ForRangeCopyCheck.h
 include/clang-tidy/performance/ImplicitConversionInLoopCheck.h
@@ -320,6 +336,8 @@ include/clang-tidy/portability/RestrictSystemIncludesCheck.h
 include/clang-tidy/portability/SIMDIntrinsicsCheck.h
 include/clang-tidy/portability/StdAllocatorConstCheck.h
 include/clang-tidy/readability/AvoidConstParamsInDecls.h
+include/clang-tidy/readability/AvoidNestedConditionalOperatorCheck.h
+include/clang-tidy/readability/AvoidReturnWithVoidValueCheck.h
 include/clang-tidy/readability/AvoidUnconditionalPreprocessorIfCheck.h
 include/clang-tidy/readability/BracesAroundStatementsCheck.h
 include/clang-tidy/readability/ConstReturnTypeCheck.h
@@ -347,14 +365,17 @@ include/clang-tidy/readability/NonConstParameterCheck.h
 include/clang-tidy/readability/OperatorsRepresentationCheck.h
 include/clang-tidy/readability/QualifiedAutoCheck.h
 include/clang-tidy/readability/RedundantAccessSpecifiersCheck.h
+include/clang-tidy/readability/RedundantCastingCheck.h
 include/clang-tidy/readability/RedundantControlFlowCheck.h
 include/clang-tidy/readability/RedundantDeclarationCheck.h
 include/clang-tidy/readability/RedundantFunctionPtrDereferenceCheck.h
+include/clang-tidy/readability/RedundantInlineSpecifierCheck.h
 include/clang-tidy/readability/RedundantMemberInitCheck.h
 include/clang-tidy/readability/RedundantPreprocessorCheck.h
 include/clang-tidy/readability/RedundantSmartptrGetCheck.h
 include/clang-tidy/readability/RedundantStringCStrCheck.h
 include/clang-tidy/readability/RedundantStringInitCheck.h
+include/clang-tidy/readability/ReferenceToConstructedTemporaryCheck.h
 include/clang-tidy/readability/SimplifyBooleanExprCheck.h
 include/clang-tidy/readability/SimplifySubscriptExprCheck.h
 include/clang-tidy/readability/StaticAccessedThroughInstanceCheck.h

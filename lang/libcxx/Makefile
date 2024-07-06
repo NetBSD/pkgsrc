@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/22 07:05:15 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/06 15:45:07 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -24,7 +24,7 @@ SITES.${LIBCXXABI}${EXTRACT_SUFX}=	\
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
-GCC_REQD+=		12
+GCC_REQD+=		13
 
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DLIBCXX_CXX_ABI=system-libcxxabi

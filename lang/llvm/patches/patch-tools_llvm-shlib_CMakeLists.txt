@@ -1,37 +1,15 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.10 2024/04/22 06:52:42 adam Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.11 2024/07/06 15:45:06 adam Exp $
 
-Use the Linux style linking everywhere except Darwin and SunOS.
+Add style linking for SunOS.
 
---- tools/llvm-shlib/CMakeLists.txt.orig	2023-11-28 08:52:28.000000000 +0000
+--- tools/llvm-shlib/CMakeLists.txt.orig	2024-04-17 00:21:15.000000000 +0000
 +++ tools/llvm-shlib/CMakeLists.txt
-@@ -33,16 +33,11 @@ if(LLVM_BUILD_LLVM_DYLIB)
-   add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${INSTALL_WITH_TOOLCHAIN} ${SOURCES})
- 
+@@ -44,6 +44,8 @@ if(LLVM_BUILD_LLVM_DYLIB)
    list(REMOVE_DUPLICATES LIB_NAMES)
--  if((MINGW) OR (HAIKU)
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "GNU")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "FreeBSD")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "NetBSD")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "OpenBSD")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "DragonFly")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Fuchsia")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "Android")
--     OR ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")) # FIXME: It should be "GNU ld for elf"
-+  if ("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
+   if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
+     set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
++  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
 +    set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
-+  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
-+    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
-+  else()
+   else()
      configure_file(
      ${CMAKE_CURRENT_SOURCE_DIR}/simple_version_script.map.in
-     ${LLVM_LIBRARY_DIR}/tools/llvm-shlib/simple_version_script.map)
-@@ -60,8 +55,6 @@ if(LLVM_BUILD_LLVM_DYLIB)
-       # inside and outside libLLVM.so.
-       target_link_options(LLVM PRIVATE LINKER:-Bsymbolic-functions)
-     endif()
--  elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
--    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
-   endif()
- 
-   target_link_libraries(LLVM PRIVATE ${LIB_NAMES})

@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2023/10/06 19:15:20 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/07/06 15:45:06 adam Exp $
 
 Fix build for Darwin.
 
