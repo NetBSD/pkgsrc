@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.51 2024/05/29 16:32:15 adam Exp $
+# $NetBSD: Makefile,v 1.52 2024/07/06 15:45:08 adam Exp $
 
-PKGREVISION= 1
 .include "../../lang/llvm/version.mk"
 
 DISTNAME=	lldb-${LLVM_VERSION}.src
@@ -66,7 +65,8 @@ PKG_FAIL_REASON+=	"Only NetBSD >= 9.99.22 provides ptrace(2) PT_STOP"
 .endif
 
 # Not yet ported, so avoid wasting time trying...
-NOT_FOR_PLATFORM+=	NetBSD-*-powerpc
+# See: source/Plugins/Process/NetBSD
+NOT_FOR_PLATFORM+=	NetBSD-*-aarch64 NetBSD-*-powerpc
 
 .include "../../devel/cmake/build.mk"
 #.include "../../devel/googletest/buildlink3.mk" # check-lldb-unit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/29 09:55:10 nia Exp $
+# $NetBSD: Makefile,v 1.25 2024/07/06 15:45:08 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
 FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		4.8

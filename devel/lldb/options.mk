@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/04/26 20:07:15 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2024/07/06 15:45:08 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldb
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/04/22 07:06:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/07/06 15:45:08 adam Exp $
 bin/ld.lld
 bin/ld64.lld
 bin/lld

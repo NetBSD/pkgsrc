@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.19 2024/04/22 07:04:01 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/07/06 15:45:08 adam Exp $
 
-BLAKE2s (clang-17.0.6.src.tar.xz) = 888020252b920ca120cc022d13cf411d7dc024f4076ccaff5eccc38dc1e4b438
-SHA512 (clang-17.0.6.src.tar.xz) = da6f670a52d60c46bbe6bfa2870106f6a6714c9566fab293b8c624a555308104a1a05cd065643091d7006ef4533a9a722dff1fccaf26f348a0c0a5c7b9331439
-Size (clang-17.0.6.src.tar.xz) = 21577596 bytes
-BLAKE2s (clang-tools-extra-17.0.6.src.tar.xz) = 34adb6dfd8e8cb375e798d0473f70affd3d9a481368754eace97e08416de3412
-SHA512 (clang-tools-extra-17.0.6.src.tar.xz) = 5110dd36ee1c966d22760000f0c28cf070fd00b05445d418d264dbd3b48426a203f934e402d408fab2602dbf39a29d66898cc7c69c1a52b5e0e6e7097f9db877
-Size (clang-tools-extra-17.0.6.src.tar.xz) = 3269980 bytes
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
+BLAKE2s (clang-18.1.8.src.tar.xz) = 7b596722003d9519baaa1f49320bc7ce80f3da104d96df834ebbc0778cb3cfa7
+SHA512 (clang-18.1.8.src.tar.xz) = 4147ef5e3547e80fbea573a6e3964870b38e7a547e796deb8859ca670b039ddd1af289cd4feadcb4ab5e94211b2ab5e91dfa84f58f114fdcbc9e807c9de901ca
+Size (clang-18.1.8.src.tar.xz) = 22155252 bytes
+BLAKE2s (clang-tools-extra-18.1.8.src.tar.xz) = 1d7c6a430a66d8313dc305e4989807aa70f0eb0ecef4e6ebe39f402cb8d8a04c
+SHA512 (clang-tools-extra-18.1.8.src.tar.xz) = e6770875b1bfb3626de2e15133aa819669c889574134b7c22d30882717d0f400a73d2e0e881a2bd707e0b07bca5fcfd1d4a9e83b1101c7f15e4657782659b6fe
+Size (clang-tools-extra-18.1.8.src.tar.xz) = 3340400 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
