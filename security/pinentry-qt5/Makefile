@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/05/29 16:34:18 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/07/06 06:57:47 adam Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-qt5-/}
-PKGREVISION=	2
 COMMENT=	Applications for entering PINs or Passphrases, Qt5 enabled
 CONFLICTS=	pinentry-qt4-[0-9]*
 
@@ -25,6 +24,10 @@ INSTALL_DIRS=		qt5
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i -f
+
+# XXX: conflicts with pinentry-qt6
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/pixmaps/pinentry.png
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../x11/qt5-qtbase/buildlink3.mk"
