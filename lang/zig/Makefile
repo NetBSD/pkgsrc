@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/06/08 12:35:09 nikita Exp $
+# $NetBSD: Makefile,v 1.41 2024/07/06 16:23:03 adam Exp $
 
-DISTNAME=	zig-0.12.1
+DISTNAME=	zig-0.13.0
 CATEGORIES=	lang
 MASTER_SITES=	https://ziglang.org/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -21,12 +21,10 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${DESTDIR}${PREFIX}
 # avoid full-cu-features available to build host,
 # in other words ensure that we run everywhere
 CMAKE_CONFIGURE_ARGS+=	-DZIG_TARGET_MCPU=baseline
-CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
+#CMAKE_CONFIGURE_ARGS+=	-DZIG_PIE=ON
 
 MAKE_ENV+=	ZIG_GLOBAL_CACHE_DIR=${WRKDIR}/zig-global-cache
 MAKE_ENV+=	ZIG_LOCAL_CACHE_DIR=${WRKDIR}/zig-local-cache
-
-MAKE_ENV+=	VERBOSE=1
 
 CHECK_PORTABILITY_SKIP+=	ci/azure/macos_script
 BUILDLINK_TRANSFORM+=		rm:-Werror
