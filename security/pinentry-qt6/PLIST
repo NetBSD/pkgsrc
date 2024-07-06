@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/03/20 15:46:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/06 06:57:47 adam Exp $
 bin/pinentry-qt
 share/applications/org.gnupg.pinentry-qt.desktop
+share/pixmaps/pinentry.png
