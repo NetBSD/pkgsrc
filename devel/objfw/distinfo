@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/05/22 20:29:38 js Exp $
+$NetBSD: distinfo,v 1.24 2024/07/06 11:04:01 js Exp $
 
-BLAKE2s (objfw-1.1.4.tar.gz) = b467ec8a01f144ab2fdeb67454e6320b9e254f6da71a819f070b0a4e6f969d53
-SHA512 (objfw-1.1.4.tar.gz) = 5fdb774c27c43a048efd30de710947c41fb589995b8c0f988f272cffbee8babf390de65144bac852ba03351e6552f9592322ae7f6e35038a7c10272129268f30
-Size (objfw-1.1.4.tar.gz) = 949764 bytes
+BLAKE2s (objfw-1.1.5.tar.gz) = 93a5d33eea9df973023cba8e728056e3c430e51cd73a1cc273d9fb6bcc58403d
+SHA512 (objfw-1.1.5.tar.gz) = 0d1d07869499d00292de8a49236fcf451e81fada5f473ba0015467ed3abc0f0a4298ae3fcd29bea8cb3151cc702ed3115358edff6864d8d21f527a1eac42416c
+Size (objfw-1.1.5.tar.gz) = 949630 bytes
