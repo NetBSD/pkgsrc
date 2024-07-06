@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/04/07 07:34:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/07/06 06:57:46 adam Exp $
 
 PKGNAME=	${DISTNAME:S/pinentry-/pinentry-gnome3-/}
-PKGREVISION=	2
 COMMENT=	Applications for entering PINs or Passphrases, GNOME 3 enabled
 
 .include "../../security/pinentry/Makefile.common"
