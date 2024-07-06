@@ -1,14 +1,15 @@
-$NetBSD: distinfo,v 1.25 2024/04/22 07:05:15 adam Exp $
+$NetBSD: distinfo,v 1.26 2024/07/06 15:45:06 adam Exp $
 
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (compiler-rt-17.0.6.src.tar.xz) = 8040b6b978282e9e1c096321ce72be431ac88683cb1126f24e72637a21eef328
-SHA512 (compiler-rt-17.0.6.src.tar.xz) = 56dc9d304dd4ba8d28179077dd99ca7c820ce26dbc70d33b2ba41769928adc900f7618d3efef756b2fc92e322d2f25dba49be966d6583d2d8f1fce9283a9cdf7
-Size (compiler-rt-17.0.6.src.tar.xz) = 2421808 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (compiler-rt-18.1.8.src.tar.xz) = 266de1c998f04997c17b032762f7ea2755fcc2df7a2dfc4e9733be835bb9754a
+SHA512 (compiler-rt-18.1.8.src.tar.xz) = fb8795bd51c9b005c2ad1975591e9e2715740d6407ccad41379f136ef2e8d24ded8b97b01165a3ae4bd377119a6a1049ca05d3220404fc12bee86114ff2bff0d
+Size (compiler-rt-18.1.8.src.tar.xz) = 2469712 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
-SHA1 (patch-lib_asan_CMakeLists.txt) = b06a9cf121847d4fabf1da34e3af1d036c110b43
+SHA1 (patch-lib_fuzzer_FuzzerUtilLinux.cpp) = 9de59ffcb31d511f67f10fa4ec55cfa7c7f64b31
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cpp) = bc04e2d792c8eaffb26b60fdaceef261ffe03371

@@ -1,20 +1,19 @@
-$NetBSD: distinfo,v 1.44 2024/07/02 18:14:26 cheusov Exp $
+$NetBSD: distinfo,v 1.45 2024/07/06 15:45:05 adam Exp $
 
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (llvm-17.0.6.src.tar.xz) = b377367982a058f99672f3b9a489547dd9d1a6383c6e9b65d7a4a653565b7455
-SHA512 (llvm-17.0.6.src.tar.xz) = bf9b04d0d45c67168b195c550cd8326e3a01176f92776705846aad3956a494bcb7a053b0b0bde19abd68dc0068e5c97ef99dee7eadfdb727bc0d758b2684f3bd
-Size (llvm-17.0.6.src.tar.xz) = 59298244 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (llvm-18.1.8.src.tar.xz) = b9353b29fb4d0d561b8ed4c5e96b2acef39f08721ef798fb7c48fbf3bd7955df
+SHA512 (llvm-18.1.8.src.tar.xz) = 930814730bb2d80cf7f7b2968f0f1f1442009ca62a7ca29992b69d63823270584b059d16aa845bb381411da566e7e4f255fcfbc38acbdf865eb0419b4dfd7459
+Size (llvm-18.1.8.src.tar.xz) = 61986468 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-CMakeLists.txt) = c53cef61bdaeaf5216b78330992357a632a2b0b2
 SHA1 (patch-cmake_config-ix.cmake) = f5cd0c949d35020d1051f95417e7944aa71a3d54
 SHA1 (patch-cmake_modules_AddLLVM.cmake) = 4e6668e0c3e13423ce3e19304f4ad60f66d41562
 SHA1 (patch-include_llvm-c_DataTypes.h) = ff547cae5bdf90c5a1371b9eb196e7537a03b18d
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 0a8db4d876b749dd492fced6fbc8c4faf3ff2450
-SHA1 (patch-lib_Support_BLAKE3-blake3__impl.h) = 29624dc764c747b247dbde19e9d186a853b59134
 SHA1 (patch-lib_Target_CSKY_MCTargetDesc_CSKYMCCodeEmitter.cpp) = a769f1533a136f9c50630e3219cafbf005e4e4e1
-SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 6ecb1623a9da13a8b4121cfbead1fd6ca7dfdee4
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 4f3d0f527735126293519b42d7fd33dc41a910c2
 SHA1 (patch-utils_llvm-lit_CMakeLists.txt) = 8b18659fe7189c9077b0409e123d41c01e8c8610

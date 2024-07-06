@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.37 2024/04/22 07:06:39 adam Exp $
+$NetBSD: distinfo,v 1.38 2024/07/06 15:45:08 adam Exp $
 
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (lldb-17.0.6.src.tar.xz) = b11c531823763d748df262917a95f8011695c504c9e227baca32716cdb7f7024
-SHA512 (lldb-17.0.6.src.tar.xz) = 80b327c89b160b1dcdbea1946a7c69514e797056629c0a7501c77e7557d6bb3a7ae6ecdd0d760d072b1f7c3f5b136838f76c8d75522cd84622a03b1b25ba6e6c
-Size (lldb-17.0.6.src.tar.xz) = 10493512 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (lldb-18.1.8.src.tar.xz) = 767a50b8585d137633b02f0d8dfcd9ef7e665b4b8c66f49810ce9890a11db998
+SHA512 (lldb-18.1.8.src.tar.xz) = f356a657d1aec860aeaaeb3aa3190652735160dd1e86dfbbae0441ace0a21cc774621198b0fc26c37d3e7c34d68d8a5f56806097f0c8d94718f5fc03495b1a3e
+Size (lldb-18.1.8.src.tar.xz) = 10598652 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 773d420c3fd2c9b4af6af9d42c5778e96a1ae52b
 SHA1 (patch-source_API_CMakeLists.txt) = 23a7b24632f937a4541863aff6a7591255cafe40
 SHA1 (patch-source_Host_common_Editline.cpp) = 40d78016a3932b77f7176628bfa60b3c96b80c6a
-SHA1 (patch-source_Host_netbsd_HostNetBSD.cpp) = 8c19657d90ffea176b1297331fd23a8b565c6f1d
-SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.cpp) = 15c6d8399198de567b4e901533e1b1f77d9e348f
-SHA1 (patch-source_Plugins_Process_NetBSD_NativeProcessNetBSD.h) = 26a7298b835b97b89257975f7e87f0f8225e5f99

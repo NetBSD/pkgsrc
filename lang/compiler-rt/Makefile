@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/22 07:05:15 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/07/06 15:45:06 adam Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -11,7 +11,8 @@ HOMEPAGE=	https://compiler-rt.llvm.org/
 COMMENT=	LLVM runtime libraries
 LICENSE=	apache-2.0
 
-NOT_FOR_PLATFORM=	NetBSD-[0-7].*-*
+# aarch64: lib/tsan/rtl/tsan_platform_linux.cpp
+NOT_FOR_PLATFORM=	NetBSD-[0-7].*-* NetBSD-*-aarch64
 
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++14

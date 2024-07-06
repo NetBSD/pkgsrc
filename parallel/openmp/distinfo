@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.19 2024/04/22 07:25:56 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/07/06 15:45:08 adam Exp $
 
-BLAKE2s (cmake-17.0.6.src.tar.xz) = 582f437814c47608b5a8e97e32b602103684755251f75c1b176d595db997ce1b
-SHA512 (cmake-17.0.6.src.tar.xz) = b2c5e404ca36542d44e1a7f2801bbcecbcf5f1e8c63b793bb2308228483406bdfe002720aadb913c0228cd2bbe5998465eaadc4a49fad6a5eb6ff907fa5fd45a
-Size (cmake-17.0.6.src.tar.xz) = 8712 bytes
-BLAKE2s (openmp-17.0.6.src.tar.xz) = 6e86a483d736897feb87b3179f43ac55a584f4bec78168f361fd278162120f9c
-SHA512 (openmp-17.0.6.src.tar.xz) = 836c48db873e3da64835913c2c1d80efaebdfc7061f153acc7b478ea0d73b9c546a09d70dd1465e3e92684947c4a9cb197886b29cbd42418a778faa56b08cc5e
-Size (openmp-17.0.6.src.tar.xz) = 1273412 bytes
-BLAKE2s (runtimes-17.0.6.src.tar.xz) = 73840072a471442d27a106bbd026ef334d4fe6be083f3e3f79f9ac69c8c9e1b9
-SHA512 (runtimes-17.0.6.src.tar.xz) = 3d73abf3c25eb319e12d9f4118158a05f26bb569534b1fe0dd2e99f948046e0bfa9511b61d65863506444ff330c065b9e3bb77310daf3c71dd658a01622fd812
-Size (runtimes-17.0.6.src.tar.xz) = 6240 bytes
-SHA1 (patch-runtime_src_kmp__os.h) = 70e8b720cebff0c919387aa4ce0f9e4217934271
+BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
+SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
+Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
+BLAKE2s (openmp-18.1.8.src.tar.xz) = 4efb6e4c22d6421b53c575cfcf1383bf8ff9e88b302911f97afc37fb01c7f7a1
+SHA512 (openmp-18.1.8.src.tar.xz) = 7c2ca736524fb741112be247ac6be39cfe1dc92381c5e2997d97044ab9705c224ae5eabcf43b59cdec9a715a14227c6fb02cb2d1829ebc47b82d3af6e4d197d3
+Size (openmp-18.1.8.src.tar.xz) = 1320200 bytes
+BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
+SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
+Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
+SHA1 (patch-runtime_src_kmp__os.h) = a5b0e015bf21f284468931fb093956752f93700e
