@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4302 2024/07/06 06:58:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4303 2024/07/06 11:04:09 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6838,3 +6838,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/protobuf-go version 1.34.1 [maya 2024-07-05]
 	Updated security/libsecret to 0.20.5 [adam 2024-07-06]
 	Updated security/pinentry to 1.3.1 [adam 2024-07-06]
+	Updated devel/objfw to 1.1.5 [js 2024-07-06]
