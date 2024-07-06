@@ -1,8 +1,8 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2022/11/14 18:44:06 adam Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2024/07/06 15:45:06 adam Exp $
 
 Fix build.
 
---- src/CMakeLists.txt.orig	2022-11-02 03:11:40.000000000 +0000
+--- src/CMakeLists.txt.orig	2024-04-17 00:21:15.000000000 +0000
 +++ src/CMakeLists.txt
 @@ -57,6 +57,7 @@ if (MSVC_IDE OR XCODE)
  endif()
@@ -12,15 +12,15 @@ Fix build.
  include_directories("${LIBCXXABI_LIBCXX_PATH}/src")
  
  if (LIBCXXABI_HAS_CXA_THREAD_ATEXIT_IMPL)
-@@ -168,7 +169,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER)
+@@ -166,7 +167,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER)
      target_link_libraries(cxxabi_shared_objects PUBLIC unwind_shared)
    endif()
  endif()
--target_link_libraries(cxxabi_shared_objects PRIVATE cxx-headers ${LIBCXXABI_BUILTINS_LIBRARY} ${LIBCXXABI_SHARED_LIBRARIES} ${LIBCXXABI_LIBRARIES})
- target_link_libraries(cxxabi_shared_objects PUBLIC cxxabi-headers)
- set_target_properties(cxxabi_shared_objects
-   PROPERTIES
-@@ -239,7 +239,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER AND LIBC
+-target_link_libraries(cxxabi_shared_objects PRIVATE cxx-headers ${LIBCXXABI_LIBRARIES})
+ if (NOT CXX_SUPPORTS_NOSTDLIBXX_FLAG)
+   target_link_libraries(cxxabi_shared_objects PRIVATE ${LIBCXXABI_BUILTINS_LIBRARY})
+ endif()
+@@ -249,7 +249,6 @@ if (LIBCXXABI_USE_LLVM_UNWINDER AND LIBC
    target_link_libraries(cxxabi_static_objects PUBLIC unwind_static_objects) # propagate usage requirements
    target_sources(cxxabi_static_objects PUBLIC $<TARGET_OBJECTS:unwind_static_objects>)
  endif()

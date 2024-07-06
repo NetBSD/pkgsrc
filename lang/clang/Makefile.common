@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2024/06/17 11:27:02 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.59 2024/07/06 15:45:07 adam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -115,26 +115,21 @@ LIBCPP_CHECK=	NO
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
-# On SunOS use the libraries from the GCC used to build clang rather than
-# aimlessly searching the file system for ones that might be incompatible.
-#
-SUBST_CLASSES.SunOS+=	sunos-gcc
-SUBST_STAGE.sunos-gcc=	pre-configure
-SUBST_FILES.sunos-gcc=	lib/Driver/ToolChains/Gnu.cpp
-SUBST_SED.sunos-gcc=	-e 's,@GCCBASEDIR@,${CCPATH:H:H},'
-
-# Not perfect, but should catch most common cases.  We can't simply use
-# gcc-libs as that doesn't ship the headers.
-#
-.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Mgcc}
-BUILDLINK_DEPMETHOD.${_GCC_PKGBASE}=	full
+# Enable full LLVM suite on SunOS
+.if ${OPSYS} == "SunOS"
+.include "../../lang/compiler-rt/buildlink3.mk"
+.include "../../lang/libcxx/buildlink3.mk"
+.include "../../lang/libcxxabi/buildlink3.mk"
+.include "../../lang/libunwind/buildlink3.mk"
+CMAKE_ARGS+=    -DCLANG_DEFAULT_RTLIB:STRING="compiler-rt"
+CMAKE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
 .endif
 
 # 3.8.0 -> 3.8
 LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
 
-PKGVERSION_MAJOR=	17
+PKGVERSION_MAJOR=	18
 PLIST_SUBST+=		PKGVERSION_MAJOR=${PKGVERSION_MAJOR}
 
 PLIST_VARS+=	notdylib

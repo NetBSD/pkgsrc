@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2019/06/17 16:35:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/06 15:45:08 adam Exp $
 include/omp-tools.h
 include/omp.h
 include/ompt.h
+include/ompx.h
 lib/libgomp.so
 lib/libiomp5.so
 lib/libomp.so

@@ -1,4 +1,4 @@
-$NetBSD: patch-source_Host_common_Editline.cpp,v 1.1 2023/10/06 19:15:20 adam Exp $
+$NetBSD: patch-source_Host_common_Editline.cpp,v 1.2 2024/07/06 15:45:08 adam Exp $
 
 Remove the hack for Darwin.
 

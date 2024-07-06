@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.27 2024/05/29 17:18:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2024/07/06 15:45:05 adam Exp $
 
 BUILDLINK_TREE+=	llvm
 
 .if !defined(LLVM_BUILDLINK3_MK)
 LLVM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.llvm+=	llvm>=17.0.0<18
+BUILDLINK_API_DEPENDS.llvm+=	llvm>=18.0.0
 BUILDLINK_PKGSRCDIR.llvm?=	../../lang/llvm
 
 LLVM_CONFIG_PATH?=		${BUILDLINK_PREFIX.llvm}/bin/llvm-config
@@ -73,8 +73,8 @@ BUILDLINK_FILES.llvm+=		bin/llvm-ranlib
 BUILDLINK_FILES.llvm+=		bin/llvm-rc
 BUILDLINK_FILES.llvm+=		bin/llvm-readelf
 BUILDLINK_FILES.llvm+=		bin/llvm-readobj
+BUILDLINK_FILES.llvm+=		bin/llvm-readtapi
 BUILDLINK_FILES.llvm+=		bin/llvm-reduce
-BUILDLINK_FILES.llvm+=		bin/llvm-remark-size-diff
 BUILDLINK_FILES.llvm+=		bin/llvm-remarkutil
 BUILDLINK_FILES.llvm+=		bin/llvm-rtdyld
 BUILDLINK_FILES.llvm+=		bin/llvm-sim
@@ -84,7 +84,6 @@ BUILDLINK_FILES.llvm+=		bin/llvm-stress
 BUILDLINK_FILES.llvm+=		bin/llvm-strings
 BUILDLINK_FILES.llvm+=		bin/llvm-strip
 BUILDLINK_FILES.llvm+=		bin/llvm-symbolizer
-BUILDLINK_FILES.llvm+=		bin/llvm-tapi-diff
 BUILDLINK_FILES.llvm+=		bin/llvm-tblgen
 BUILDLINK_FILES.llvm+=		bin/llvm-tli-checker
 BUILDLINK_FILES.llvm+=		bin/llvm-undname
