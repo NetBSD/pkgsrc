@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 18:16:24 asau Exp $
+# $NetBSD: Makefile,v 1.15 2024/07/07 08:55:44 nia Exp $
 #
 
 DISTNAME=	ddos_scan
 PKGNAME=	ddos-scan-20000325
-CATEGORIES=	net security
+CATEGORIES=	security net
 MASTER_SITES=	http://staff.washington.edu/dittrich/misc/
 EXTRACT_SUFX=	.tar
 
@@ -13,9 +13,9 @@ COMMENT=	Scan for a limited set of distributed denial of service (ddos) agents
 
 BUILD_TARGET=	default dds
 
-INSTALLATION_DIRS=	sbin share/doc
+LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
-BUILD_ENV+=	OPSYS=${OSYS:Q}
+INSTALLATION_DIRS=	sbin share/doc
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dds ${DESTDIR}${PREFIX}/sbin/dds
