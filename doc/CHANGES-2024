@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4311 2024/07/07 06:28:04 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4312 2024/07/07 06:39:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6865,3 +6865,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Syntax-Keyword-Match to 0.15 [wiz 2024-07-07]
 	Updated devel/p5-Test-Without-Module to 0.22 [wiz 2024-07-07]
 	Updated devel/p5-XS-Parse-Keyword to 0.43 [wiz 2024-07-07]
+	Updated security/py-certifi to 2024.7.4 [wiz 2024-07-07]
