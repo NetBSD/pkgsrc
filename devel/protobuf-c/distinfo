@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2024/04/14 09:35:46 wiz Exp $
+$NetBSD: distinfo,v 1.17 2024/07/07 15:54:15 wiz Exp $
 
 BLAKE2s (protobuf-c-1.5.0.tar.gz) = 7f89b0a27fe78e2bd91b67013315845a236dd9787121a7c5f1989850639e9573
 SHA512 (protobuf-c-1.5.0.tar.gz) = 175c9fc901cab88308730eea982dd62b1e0decdceb80aa53be163f17a440b4acecb834a784beab5cd71186413a322a323f4539758a8727ca51801cf92f9bd3da
 Size (protobuf-c-1.5.0.tar.gz) = 507251 bytes
 SHA1 (patch-protoc-c_c__file.cc) = fc3343b738a546f0c9bb6bb15c97b1dc45e19d49
-SHA1 (patch-protoc-c_c__generator.h) = 0ea8cbc701b9725747adb705068df1b2574461a9
+SHA1 (patch-protoc-c_c__generator.h) = 47310ce5f3f75558b7a1ec0a9d89bdd370068973
 SHA1 (patch-protoc-c_c__helpers.h) = 69ecf6cdf3f76bab88b6509ba82ac1733131b679
