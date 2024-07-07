@@ -1,34 +1,25 @@
-# $NetBSD: platform.mk,v 1.23 2024/03/21 02:14:14 nia Exp $
+# $NetBSD: platform.mk,v 1.24 2024/07/07 11:00:37 wiz Exp $
 
 # This file encodes whether a given platform has support for rust.
 
+# Platforms where rust ought to work but does not require a link to an
+# open PR.
+
 .if !defined(PLATFORM_SUPPORTS_RUST)
 
-.include "../../mk/bsd.fast.prefs.mk"
-
-# Little bit of future-proofing.
-.for i in 9 10 11
-RUST_PLATFORMS+=	NetBSD-${i}.*-aarch64
-RUST_PLATFORMS+=	NetBSD-${i}.*-aarch64eb
-RUST_PLATFORMS+=	NetBSD-${i}.*-earmv6hf
-RUST_PLATFORMS+=	NetBSD-${i}.*-earmv7hf
-RUST_PLATFORMS+=	NetBSD-${i}.*-i386
-RUST_PLATFORMS+=	NetBSD-${i}.*-mipsel
-RUST_PLATFORMS+=	NetBSD-${i}.*-powerpc
-RUST_PLATFORMS+=	NetBSD-${i}.*-riscv64
-RUST_PLATFORMS+=	NetBSD-${i}.*-sparc64
-RUST_PLATFORMS+=	NetBSD-${i}.*-x86_64
+# Rust needs NetBSD>7
+.for rust_arch in aarch64 earmv7hf i386 powerpc riscv64 sparc64 x86_64
+.  for rust_os in Darwin FreeBSD Linux NetBSD SunOS
+.    if ${OPSYS} != "NetBSD" || empty(OS_VERSION:M[0-7].*)
+RUST_PLATFORMS+=	${rust_os}-*-${rust_arch}
+.    endif
+.  endfor
 .endfor
 
-RUST_PLATFORMS+=	Darwin-*-aarch64
-RUST_PLATFORMS+=	Darwin-*-x86_64
-RUST_PLATFORMS+=	FreeBSD-*-x86_64
-RUST_PLATFORMS+=	Linux-*-aarch64
-RUST_PLATFORMS+=	Linux-*-earmv6hf
-RUST_PLATFORMS+=	Linux-*-earmv7hf
-RUST_PLATFORMS+=	Linux-*-i386
-RUST_PLATFORMS+=	Linux-*-x86_64
-RUST_PLATFORMS+=	SunOS-*-x86_64
+.if ${OPSYS} == "NetBSD" && (${MACHINE_ARCH} == "aarch64" || ${MACHINE_ARCH} == "earmv7hf")
+RUST_DIR?=	../../lang/rust176
+.endif
+RUST_DIR?=	../../lang/rust
 
 .for rust_platform in ${RUST_PLATFORMS}
 .  if !empty(MACHINE_PLATFORM:M${rust_platform})
