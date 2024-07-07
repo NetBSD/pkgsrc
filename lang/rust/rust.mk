@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.8 2022/07/01 06:58:18 pin Exp $
+# $NetBSD: rust.mk,v 1.9 2024/07/07 11:00:37 wiz Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -32,6 +32,7 @@
 #	Default: no
 
 .include "../../mk/bsd.fast.prefs.mk"
+.include "platform.mk"
 
 RUST_REQ?=	1.56.1
 RUST_RUNTIME?=	no
@@ -43,7 +44,7 @@ RUST_TYPE?=	src
 BUILDLINK_DEPMETHOD.rust-bin?=		build
 .  endif
 BUILDLINK_API_DEPENDS.rust-bin+=	rust-bin>=${RUST_REQ}
-.  include "../../lang/rust-bin/buildlink3.mk"
+.  include "${RUST_DIR}-bin/buildlink3.mk"
 .endif
 
 .if ${RUST_TYPE} == "src"
@@ -51,5 +52,5 @@ BUILDLINK_API_DEPENDS.rust-bin+=	rust-bin>=${RUST_REQ}
 BUILDLINK_DEPMETHOD.rust?=		build
 .  endif
 BUILDLINK_API_DEPENDS.rust+=		rust>=${RUST_REQ}
-.  include "../../lang/rust/buildlink3.mk"
+.  include "${RUST_DIR}/buildlink3.mk"
 .endif
