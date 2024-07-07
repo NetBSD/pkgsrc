@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/04/07 07:35:29 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2024/07/07 11:37:24 nros Exp $
 
 DISTNAME=	wxWidgets-3.0.5.1
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK30/}
@@ -65,6 +65,15 @@ CPPFLAGS+=		-D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=1
 PLIST_SRC+=		${PLIST_SRC_DFLT}
 
 CONFIGURE_ARGS.SunOS+=	--disable-xlocale
+
+.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[yY][eE][sS])
+SUBST_CLASSES+=		wx-rpath
+SUBST_STAGE.wx-rpath=	pre-configure
+SUBST_MESSAGE.wx-rpath=	Setting rpath in wx-config
+SUBST_FILES.wx-rpath=	wx-config.in
+SUBST_SED.wx-rpath+=	-e 's|@WXCONFIG_RPATH@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
+SUBST_SED.wx-rpath+=	-e 's,is_installed || \[ -n ,\[ -n ,g'
+.endif
 
 post-configure:
 	${ECHO} 'install_qadll: install_xmldll' >> ${WRKSRC}/Makefile
