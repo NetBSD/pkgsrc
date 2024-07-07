@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2024/07/07 07:36:08 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.61 2024/07/07 14:00:21 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -113,6 +113,21 @@ LIBCPP_CHECK=	NO
 
 .if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} != YES
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+.endif
+
+# On SunOS use the libraries from the GCC used to build clang rather than
+# aimlessly searching the file system for ones that might be incompatible.
+#
+SUBST_CLASSES.SunOS+=	sunos-gcc
+SUBST_STAGE.sunos-gcc=	pre-configure
+SUBST_FILES.sunos-gcc=	lib/Driver/ToolChains/Gnu.cpp
+SUBST_SED.sunos-gcc=	-e 's,@GCCBASEDIR@,${CCPATH:H:H},'
+
+# Not perfect, but should catch most common cases.  We can't simply use
+# gcc-libs as that doesn't ship the headers.
+#
+.if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER:Mgcc}
+BUILDLINK_DEPMETHOD.${_GCC_PKGBASE}=	full
 .endif
 
 # 3.8.0 -> 3.8

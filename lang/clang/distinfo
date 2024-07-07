@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.86 2024/07/07 07:36:08 jperkin Exp $
+$NetBSD: distinfo,v 1.87 2024/07/07 14:00:21 wiz Exp $
 
 BLAKE2s (clang-18.1.8.src.tar.xz) = 7b596722003d9519baaa1f49320bc7ce80f3da104d96df834ebbc0778cb3cfa7
 SHA512 (clang-18.1.8.src.tar.xz) = 4147ef5e3547e80fbea573a6e3964870b38e7a547e796deb8859ca670b039ddd1af289cd4feadcb4ab5e94211b2ab5e91dfa84f58f114fdcbc9e807c9de901ca
@@ -9,5 +9,7 @@ Size (cmake-18.1.8.src.tar.xz) = 8708 bytes
 BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566d2447e8f4ce8ad0b068e90e
 SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
 Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
-SHA1 (patch-lib_Driver_ToolChain.cpp) = 33a8e346a72893140fde42245e4b108f3a9b9e3e
+SHA1 (patch-lib_Basic_Targets_OSTargets.h) = 0dcfbf3c8b0006e3314c36a75995032891ea8ceb
+SHA1 (patch-lib_Driver_ToolChain.cpp) = 06002fa45d16f9b9385f8a7a947aaf3970007938
+SHA1 (patch-lib_Driver_ToolChains_Gnu.cpp) = c24056b86736a29fc9bef3b20f83dedb4a260535
 SHA1 (patch-lib_Interpreter_IncrementalParser.cpp) = c5ace959ce566478316447b1621e9bfd9a537cc5
