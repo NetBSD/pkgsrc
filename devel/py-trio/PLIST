@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/16 07:46:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/07/07 14:50:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
@@ -10,6 +10,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/trio/__init__.py
 ${PYSITELIB}/trio/__init__.pyc
 ${PYSITELIB}/trio/__init__.pyo
+${PYSITELIB}/trio/__main__.py
+${PYSITELIB}/trio/__main__.pyc
+${PYSITELIB}/trio/__main__.pyo
 ${PYSITELIB}/trio/_abc.py
 ${PYSITELIB}/trio/_abc.pyc
 ${PYSITELIB}/trio/_abc.pyo
@@ -127,6 +130,9 @@ ${PYSITELIB}/trio/_core/_tests/tutil.pyo
 ${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.py
 ${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.pyc
 ${PYSITELIB}/trio/_core/_tests/type_tests/nursery_start.pyo
+${PYSITELIB}/trio/_core/_tests/type_tests/run.py
+${PYSITELIB}/trio/_core/_tests/type_tests/run.pyc
+${PYSITELIB}/trio/_core/_tests/type_tests/run.pyo
 ${PYSITELIB}/trio/_core/_thread_cache.py
 ${PYSITELIB}/trio/_core/_thread_cache.pyc
 ${PYSITELIB}/trio/_core/_thread_cache.pyo
@@ -175,6 +181,9 @@ ${PYSITELIB}/trio/_highlevel_ssl_helpers.pyo
 ${PYSITELIB}/trio/_path.py
 ${PYSITELIB}/trio/_path.pyc
 ${PYSITELIB}/trio/_path.pyo
+${PYSITELIB}/trio/_repl.py
+${PYSITELIB}/trio/_repl.pyc
+${PYSITELIB}/trio/_repl.pyo
 ${PYSITELIB}/trio/_signals.py
 ${PYSITELIB}/trio/_signals.pyc
 ${PYSITELIB}/trio/_signals.pyo
@@ -265,6 +274,9 @@ ${PYSITELIB}/trio/_tests/test_highlevel_ssl_helpers.pyo
 ${PYSITELIB}/trio/_tests/test_path.py
 ${PYSITELIB}/trio/_tests/test_path.pyc
 ${PYSITELIB}/trio/_tests/test_path.pyo
+${PYSITELIB}/trio/_tests/test_repl.py
+${PYSITELIB}/trio/_tests/test_repl.pyc
+${PYSITELIB}/trio/_tests/test_repl.pyo
 ${PYSITELIB}/trio/_tests/test_scheduler_determinism.py
 ${PYSITELIB}/trio/_tests/test_scheduler_determinism.pyc
 ${PYSITELIB}/trio/_tests/test_scheduler_determinism.pyo
@@ -331,6 +343,9 @@ ${PYSITELIB}/trio/_tests/type_tests/path.pyo
 ${PYSITELIB}/trio/_tests/type_tests/raisesgroup.py
 ${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyc
 ${PYSITELIB}/trio/_tests/type_tests/raisesgroup.pyo
+${PYSITELIB}/trio/_tests/type_tests/task_status.py
+${PYSITELIB}/trio/_tests/type_tests/task_status.pyc
+${PYSITELIB}/trio/_tests/type_tests/task_status.pyo
 ${PYSITELIB}/trio/_threads.py
 ${PYSITELIB}/trio/_threads.pyc
 ${PYSITELIB}/trio/_threads.pyo
