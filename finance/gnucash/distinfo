@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.124 2024/07/05 08:08:01 wiz Exp $
+$NetBSD: distinfo,v 1.125 2024/07/07 19:41:15 wiz Exp $
 
-BLAKE2s (gnucash-5.7.tar.bz2) = 60c09b57473dda7828ed6f9f0c8bfab275bef01c4602a737715a28462f294c7f
-SHA512 (gnucash-5.7.tar.bz2) = 151f6f35f5f53091f544a070cbdbf5724e99b4429f575fd3d38b27f19d1fc616fa4c050e4b66708d5b881f8c115f0770865ddca85bfba4e2fab5f70daf7e2fac
-Size (gnucash-5.7.tar.bz2) = 14988224 bytes
-SHA1 (patch-libgnucash_engine_Account.cpp) = 3e77249f95da8a1589bfabc610a6b14c57ff2c43
+BLAKE2s (gnucash-5.8.tar.bz2) = 3b66164784dfb3f884729549579b963d4f17aa0c392c7c65eba4d0b6b1455212
+SHA512 (gnucash-5.8.tar.bz2) = 3eca261b8be218eb130a75877f2c8b31de55c6c422c1f2d9fadea648efc66a0e7d536117505c4b6f2da7c67d9a01f87db66a0198914d24dea87d00dcd68bfb0f
+Size (gnucash-5.8.tar.bz2) = 14998331 bytes
