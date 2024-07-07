@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/05/29 16:35:16 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/07/07 11:37:24 nros Exp $
 
 DISTNAME=	wxWidgets-3.2.5
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
@@ -103,6 +103,15 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_VARS.fix-paths=		PREFIX
+.endif
+
+.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[yY][eE][sS])
+SUBST_CLASSES+=		wx-rpath
+SUBST_STAGE.wx-rpath=	pre-configure
+SUBST_MESSAGE.wx-rpath=	Setting rpath in wx-config
+SUBST_FILES.wx-rpath=	wx-config.in
+SUBST_SED.wx-rpath+=	-e 's|@WXCONFIG_RPATH@|${COMPILER_RPATH_FLAG}${PREFIX}/lib|g'
+SUBST_SED.wx-rpath+=	-e 's,is_installed || \[ -n ,\[ -n ,g'
 .endif
 
 post-build:
