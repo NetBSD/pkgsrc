@@ -1,9 +1,9 @@
-$NetBSD: patch-3rd_bee.lua_bee_thread_atomic__sync.cpp,v 1.2 2024/07/07 14:00:18 riastradh Exp $
+$NetBSD: patch-3rd_luamake_bee.lua_bee_thread_atomic__sync.cpp,v 1.1 2024/07/07 14:00:18 riastradh Exp $
 
 https://github.com/actboy168/bee.lua/pull/50
 
---- 3rd/bee.lua/bee/thread/atomic_sync.cpp.orig	2024-04-23 08:56:20.000000000 +0000
-+++ 3rd/bee.lua/bee/thread/atomic_sync.cpp
+--- 3rd/luamake/bee.lua/bee/thread/atomic_sync.cpp.orig	2024-04-23 01:38:34.000000000 +0000
++++ 3rd/luamake/bee.lua/bee/thread/atomic_sync.cpp
 @@ -50,7 +50,10 @@ static void futex_wait(const int* ptr, i
  #    if defined(__linux__)
      ::syscall(SYS_futex, ptr, FUTEX_WAIT | FUTEX_PRIVATE_FLAG, val, timeout, 0, 0);
