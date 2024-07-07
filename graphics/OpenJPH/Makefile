@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/06 19:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/07 09:25:40 nia Exp $
 
 DISTNAME=	OpenJPH-0.10.0
 CATEGORIES=	graphics
@@ -14,6 +14,12 @@ USE_LANGUAGES=	c++
 
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/openjph.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
+
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH} != "x86_64"
+CMAKE_ARGS+=	-DOJPH_DISABLE_INTEL_SIMD=ON
+CMAKE_ARGS+=	-DOJPH_ENABLE_INTEL_AVX512=OFF
+.endif
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/tiff/buildlink3.mk"
