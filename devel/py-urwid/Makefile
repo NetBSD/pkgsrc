@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2024/06/12 15:15:38 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/07/07 15:03:44 wiz Exp $
 
-DISTNAME=	urwid-2.6.14
+DISTNAME=	urwid-2.6.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -26,6 +26,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zmq-[0-9]*:../../net/py-zmq
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# two win32 tests error out
+# 27 warnings, 2 errors
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
