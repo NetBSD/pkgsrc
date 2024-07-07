@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/05/29 16:32:27 adam Exp $
+# $NetBSD: Makefile,v 1.47 2024/07/07 09:35:49 nia Exp $
 
 DISTNAME=	raine-0.96.7
 PKGREVISION=	3
@@ -25,6 +25,16 @@ MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin
 MAKE_FLAGS+=	sharedir=${DESTDIR}${PREFIX}/share
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=	rainedata=${DESTDIR}${PREFIX}/share/raine
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_ARCH} == "earmv6hf"
+CFLAGS+=		-march=armv6-a -marm
+.endif
+
+.if ${MACHINE_ARCH} == "earmv7hf"
+CFLAGS+=		-march=armv7-a -marm
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
