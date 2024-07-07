@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/06/26 16:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/07/07 14:48:18 wiz Exp $
 
-DISTNAME=	pdm_backend-2.3.1
+DISTNAME=	pdm_backend-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-backend/}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mercurial-[0-9]*:../../devel/py-mercurial
 USE_LANGUAGES=	c # for tests
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# 77 passed, 1 skipped, 1 warning, 9 errors
 
 .include "../../lang/python/pyversion.mk"
 
