@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2024/04/07 07:35:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/07 09:19:09 nia Exp $
 
 VERSION=	4.21
 PKGNAME=	swt-${VERSION}
 PKGREVISION=	5
 DISTNAME=	swt-${VERSION}-gtk-linux-x86_64
-CATEGORIES=	graphics java x11
-MASTER_SITES=   http://archive.eclipse.org/eclipse/downloads/drops4/R-${VERSION}-202109060500/
+CATEGORIES=	x11 java graphics
+MASTER_SITES=	http://archive.eclipse.org/eclipse/downloads/drops4/R-${VERSION}-202109060500/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,16 +13,18 @@ HOMEPAGE=	https://www.eclipse.org/swt/
 COMMENT=	Standard Widget Toolkit for Java
 LICENSE=	epl-v2.0
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake pkg-config unzip
 USE_JAVA=	yes
 
 USE_LANGUAGES=	c c++11
 
-SWT_VERSION=    4946r21
+SWT_VERSION=	4946r21
 
 MAKE_FILE=	make_netbsd.mak
 MAKE_ENV+=	SWT_VERSION=${SWT_VERSION} MAKE_CAIRO=make_cairo
 PLIST_SUBST+=	SWT_VERSION=${SWT_VERSION}
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 SUBST_CLASSES+=			fix-rpaths
 SUBST_FILES.fix-rpaths=		make_netbsd.mak
@@ -31,7 +33,7 @@ SUBST_SED.fix-rpaths=		-e 's,--libs-only-L,--libs,g'
 SUBST_STAGE.fix-rpaths=		pre-configure
 
 post-extract:
-	@${MKDIR} ${WRKSRC}
+	${MKDIR} ${WRKSRC}
 	(cd ${WRKSRC} && ${UNZIP_CMD} -qo ../*.zip)
 	${CP} ${FILESDIR}/build.xml ${WRKSRC}/build.xml
 	${CP} ${WRKSRC}/make_linux.mak ${WRKSRC}/make_netbsd.mak
@@ -41,7 +43,7 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build.sh
 
 do-install:
-	@${MKDIR} ${DESTDIR}${PREFIX}/lib/java/
+	${MKDIR} ${DESTDIR}${PREFIX}/lib/java/
 	${INSTALL_LIB} ${WRKSRC}/libswt-*.so ${DESTDIR}${PREFIX}/lib/
 	${INSTALL_DATA} ${WRKDIR}/swt.jar ${DESTDIR}${PREFIX}/lib/java/
 

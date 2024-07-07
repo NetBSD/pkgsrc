@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/10/11 13:29:17 bouyer Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2024/07/07 09:19:09 nia Exp $
 lib/libswt-atk-gtk-${SWT_VERSION}.so
 lib/libswt-awt-gtk-${SWT_VERSION}.so
 lib/libswt-cairo-gtk-${SWT_VERSION}.so
