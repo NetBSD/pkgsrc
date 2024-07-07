@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/05/29 16:31:26 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/07/07 09:51:44 nia Exp $
 
 DISTNAME=	htslib-1.17
 PKGREVISION=	5
@@ -18,6 +18,10 @@ CONFIGURE_ARGS+=	--enable-libcurl
 PKGCONFIG_OVERRIDE=	htslib.pc.in
 TEST_TARGET=		test
 MAKE_ENV+=		BUILT_TEST_PROGRAMS=''
+
+# Causes build failures:
+# error: incompatible type for argument 1 of 'vreinterpret_u16_u8'
+CONFIGURE_ENV.NetBSD+=	hts_cv_have_neon=no
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
