@@ -1,0 +1,199 @@
+#! /bin/sh
+
+# Root of targets tools + dest directories
+# or unset to default to a native build.
+
+# This script assumes target tools in $root/tools 
+# and target's destdir in $root/dest, the result of a NetBSD build.sh.
+# ...or the native root, when we don't cross-compile
+root=${CROSS_ROOT:-/}
+
+incadd=""
+native=false
+if [ $root = "/" ]; then
+	native=true
+else
+	# What's the tools/bin prefix (if we're cross-building)?
+	gnuarch=${GNU_CROSS_TARGET:?}
+
+	# A special hack for netbsd-8 targets.
+	# netbsd-8 has gcc 5.5, but llvm and rust needs >= 7
+	# so we build tools from -9, and try to use that, but
+	# then the include path becomes wrong, and <stdatomic.h>
+	# is no longer picked up automatically by the compiler
+	# from the target destination directory
+	case $gnuarch in
+		sparc64*)	incadd="-I=/usr/include/gcc-5"
+				;;
+
+				# immintrin & from gcc-5 not
+				# compatible with gcc7, apparently
+		i[3456]86*)	incadd="-I=/usr/include/gcc-7"
+				;;
+
+				# mips64 does soft-float
+		mips64*)	madd="-msoft-float"
+				;;
+	esac
+	# We build both for -8 and -9 due to ABI differences,
+	# so can't just test $gnuarch...  Yes, a vile hack.
+	if [ "$root" = "/u/macppc" ]; then
+		incadd="-I=/usr/include/gcc-5"
+	fi
+fi
+
+# Who are we a wrapper for? (Typically either gcc or c++)
+who=$(basename $0 | sed -e 's/-wrap$//')
+
+args=""
+if [ ! -z "$madd" ]; then
+	args="$args $madd"
+fi
+
+# May need to add $linkadd before first -l or fist -L
+linkadd="-Wl,--sysroot=${root}/dest"
+# (perhaps this is overly cautious, other adjustments we do
+# below may be sufficient...)
+# Lib directories to ensure we search and have in run-path
+libs="/lib /usr/lib /usr/pkg/lib"
+
+for d in $libs; do
+	if ! $native; then
+		linkadd="$linkadd -L=$d"
+		linkadd="$linkadd -Wl,-rpath-link=${root}/dest/$d"
+	fi
+	# Run-path is for when we execute on the target,
+	# so no $root prefix
+	linkadd="$linkadd -Wl,-rpath,$d"
+done
+
+# ...and add a placeholder so we can tweak RPATH with chrpath,
+# since chrpath can't extend the length of the run path
+# (This may also not be needed, we use LD_LIBRARY_PATH instead)
+placeholder="placeholder-$(date | openssl dgst -sha1 | \
+	awk '{ print $2 }')"
+linkadd="$linkadd -Wl,-rpath,/$placeholder"
+# the / is a sneaky attempt to let it past cwrapper...
+
+# More debugging
+linkadd="$linkadd -Wl,--verbose"
+
+linktweaked=false
+
+# Step through args, tweak where required
+set -- "$@"
+while [ $# -gt 0 ]; do
+	case "$1" in
+# Insert = at the front of -isystem args.
+# This is to get --sysroot prepended, so that
+# we pick up the correct set of header files.
+# (I thought this wasn't reqired, but apparently it is...)
+		-isystem)
+			shift
+			args="$args -isystem =$1"
+			;;
+# Also doctor -I directives of known paths and
+# redirect them to the --sysroot.
+		-I/usr/include)
+			args="$args -I=/usr/include"
+			;;
+		-I/usr/include/krb5)
+			args="$args -I=/usr/include/krb5"
+			;;
+		-I/usr/pkg/include)
+# Try to drop this...
+			if ! $native; then
+				args="$args -I=/usr/pkg/include"
+			fi
+			;;
+		-I)
+			if [ $2 = "/usr/include" ]; then
+				args="$args -I=/usr/include"
+				shift
+			elif [ $2 = "/usr/include/krb5" ]; then
+				args="$args -I=/usr/include/krb5"
+				shift
+			elif [ $2 = "/usr/pkg/include" ]; then
+# Try to drop this too...
+				if ! $native; then
+					args="$args -I=/usr/pkg/include"
+				fi
+				shift
+			else
+				args="$args -I"
+			fi
+			;;
+		-l*)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args $1"
+			;;
+		-L)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			shift
+			tweaked=false
+			# redirect these to -Wl,--sysroot
+			for d in /lib /usr/lib /usr/pkg/lib; do
+				if [ $1 = $d ]; then
+					args="$args -L =$d"
+					tweaked=true
+				fi
+			done
+			# Not redirected?  If so we need to add
+			if ! $tweaked; then
+				args="$args -L $1"
+			fi
+			;;
+			
+		-L/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/lib"
+			;;
+		-L/usr/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/usr/lib"
+			;;
+		-L/usr/pkg/lib)
+			if ! $linktweaked; then
+				args="$args $linkadd"
+				linktweaked=true
+			fi
+			args="$args -L=/usr/pkg/lib"
+			;;
+		-Wl,--enable-new-dtags)
+			# ignore
+			;;
+		*)
+			args="$args $1"
+			;;
+	esac
+	shift
+done
+
+if $native; then
+	# Try to avoid cwrappers, which does "undocumented magic"
+	# by invoking the compiler "directly".
+	#cmd="/usr/bin/${who} $args"
+	# (however, this wrapper isn't used when buliding natively...)
+	cmd="${who} $args"
+else
+	cmd="${root}/tools/bin/${gnuarch}-${who} \
+		--sysroot=${root}/dest \
+		$incadd \
+		$args"
+fi
+
+# Cannot echo to stdout, messes up e.g. "gcc -print-prog-name=ld" output...
+#echo $cmd >> /tmp/gcc-wrap.log
+exec $cmd
