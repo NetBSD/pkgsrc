@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/04/20 12:10:30 nros Exp $
+# $NetBSD: Makefile,v 1.21 2024/07/07 08:59:45 nia Exp $
 #
 
 DISTNAME=	nspmod-0.1
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 NOT_FOR_PLATFORM=	Interix-*-*
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nspmod ${DESTDIR}${PREFIX}/bin
