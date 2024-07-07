@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/05/29 16:33:43 adam Exp $
+# $NetBSD: Makefile,v 1.103 2024/07/07 10:08:44 nia Exp $
 
 DISTNAME=	gpac-1.0.1
 PKGREVISION=	21
@@ -58,5 +58,6 @@ PLIST_SUBST+=		LIBEXT=so
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/xmlrpc-c/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
