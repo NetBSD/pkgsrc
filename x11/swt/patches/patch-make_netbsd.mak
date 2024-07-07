@@ -1,7 +1,7 @@
-$NetBSD: patch-make_netbsd.mak,v 1.1 2023/10/11 13:29:17 bouyer Exp $
+$NetBSD: patch-make_netbsd.mak,v 1.2 2024/07/07 09:19:10 nia Exp $
 
---- make_netbsd.mak.orig	2023-10-04 14:51:05.055924498 +0200
-+++ make_netbsd.mak	2023-10-04 14:51:54.306059503 +0200
+--- make_netbsd.mak.orig	2024-07-07 09:15:44.846002966 +0000
++++ make_netbsd.mak
 @@ -12,7 +12,7 @@
  #     IBM Corporation - initial API and implementation
  #*******************************************************************************
@@ -11,7 +11,7 @@ $NetBSD: patch-make_netbsd.mak,v 1.1 2023/10/11 13:29:17 bouyer Exp $
  
  # SWT debug flags for various SWT components.
  #SWT_WEBKIT_DEBUG = -DWEBKIT_DEBUG
-@@ -66,25 +66,26 @@
+@@ -66,25 +66,26 @@ CAIROLIBS = `pkg-config --libs-only-L ca
  # Do not use pkg-config to get libs because it includes unnecessary dependencies (i.e. pangoxft-1.0)
  ifeq ($(GTK_VERSION), 4.0)
  GTKCFLAGS = `pkg-config --cflags gtk4 gtk4-x11 gtk4-unix-print`
@@ -43,7 +43,7 @@ $NetBSD: patch-make_netbsd.mak,v 1.1 2023/10/11 13:29:17 bouyer Exp $
  WEBKITCFLAGS = `pkg-config --cflags gio-2.0`
  
  WEBKIT_EXTENSION_CFLAGS=`pkg-config --cflags gtk+-3.0 webkit2gtk-web-extension-4.0`
-@@ -120,21 +121,22 @@
+@@ -120,21 +121,18 @@ CFLAGS := $(CFLAGS) \
  		$(SWT_WEBKIT_DEBUG) \
  		-DLINUX -DGTK \
  		-I$(JAVA_HOME)/include \
@@ -52,11 +52,11 @@ $NetBSD: patch-make_netbsd.mak,v 1.1 2023/10/11 13:29:17 bouyer Exp $
 +		-I$(LOCALBASE)/include \
  		${SWT_PTR_CFLAGS}
 -LFLAGS = -shared -fPIC ${SWT_LFLAGS}
+-
+-# Treat all warnings as errors. If your new code produces a warning, please
+-# take time to properly understand and fix/silence it as necessary.
+-CFLAGS += -Werror
 +LFLAGS = -shared -fPIC ${SWT_LFLAGS} ${LDFLAGS}
- 
- # Treat all warnings as errors. If your new code produces a warning, please
- # take time to properly understand and fix/silence it as necessary.
- CFLAGS += -Werror
  
  ifndef NO_STRIP
 -	# -s = Remove all symbol table and relocation information from the executable.
