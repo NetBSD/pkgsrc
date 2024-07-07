@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/04/22 09:59:20 he Exp $
+# $NetBSD: Makefile,v 1.11 2024/07/07 09:57:01 nia Exp $
 #
 
 DISTNAME=	zzuf-0.15
@@ -10,9 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://caca.zoy.org/wiki/zzuf/
 COMMENT=	Transparent application input fuzzer
 
-USE_LANGUAGES=	gnu99
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+# for alloca
+FORCE_C_STD=	gnu99
 
 # overrides read() definition
 FORTIFY_SUPPORTED=	no
