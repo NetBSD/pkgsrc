@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/05/20 07:45:16 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/07/07 06:26:11 wiz Exp $
 
-BLAKE2s (Test-Without-Module-0.21.tar.gz) = c716bb0d03d9f01083a7e1ec7bcb7167ed5d44cd7a9bea89d1d1406024408453
-SHA512 (Test-Without-Module-0.21.tar.gz) = 0d9230e15fa46001458a8e4a1ad97d24a8766b9df8326d166da92763a01624d01972d023951d3c58e9bbfd4e0d23e92d610565873a622eaaf87c8ec2a4f0a7f7
-Size (Test-Without-Module-0.21.tar.gz) = 13985 bytes
+BLAKE2s (Test-Without-Module-0.22.tar.gz) = fb49ff4f50f0c19a21ee7da193e43b14d495c385d48e0b6a4fe10adfabfa5e82
+SHA512 (Test-Without-Module-0.22.tar.gz) = 03db73162721c7a7961a99fe50117dd484393b306e6eed5824d72ea6a713558b6312087ac819abdcb3092381493fd800188316bf32d1c169308eb6b4633a4d4b
+Size (Test-Without-Module-0.22.tar.gz) = 19464 bytes
