@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/25 07:51:24 mrg Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/07 09:41:09 nia Exp $
 
 DISTNAME=	libretro-parallel-n64-20200528
 CATEGORIES=	emulators
@@ -26,6 +26,8 @@ CFLAGS+=	-DNO_ASM -DARM_FIX
 .elif ${MACHINE_ARCH} == "earmv7hf"
 MAKE_FLAGS+=	WITH_DYNAREC=arm
 MAKE_FLAGS+=	HAVE_NEON=1
+CFLAGS+=	-march=armv7-a -marm
+CFLAGS+=	-mfpu=neon -mfloat-abi=hard
 CFLAGS+=	-DNO_ASM -DARM_FIX
 .elif !empty(MACHINE_ARCH:M*arm*)
 MAKE_FLAGS+=	WITH_DYNAREC=arm
