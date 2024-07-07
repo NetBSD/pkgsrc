@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/06/15 08:01:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2024/07/07 08:58:41 nia Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		11
@@ -6,7 +6,9 @@ COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 CONFLICTS=		ap-php-[0-9]*
 
-USE_TOOLS+=		autoconf lex pkg-config
+USE_TOOLS+=		autoconf lex pkg-config bison
+
+TOOL_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 
 APACHE_MODULE=		YES
 
