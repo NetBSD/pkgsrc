@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2024/07/06 15:45:07 adam Exp $
+# $NetBSD: Makefile.common,v 1.60 2024/07/07 07:36:08 jperkin Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -113,16 +113,6 @@ LIBCPP_CHECK=	NO
 
 .if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} != YES
 CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
-.endif
-
-# Enable full LLVM suite on SunOS
-.if ${OPSYS} == "SunOS"
-.include "../../lang/compiler-rt/buildlink3.mk"
-.include "../../lang/libcxx/buildlink3.mk"
-.include "../../lang/libcxxabi/buildlink3.mk"
-.include "../../lang/libunwind/buildlink3.mk"
-CMAKE_ARGS+=    -DCLANG_DEFAULT_RTLIB:STRING="compiler-rt"
-CMAKE_ARGS+=    -DCLANG_DEFAULT_CXX_STDLIB:STRING="libc++"
 .endif
 
 # 3.8.0 -> 3.8
