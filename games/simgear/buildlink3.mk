@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.98 2024/05/23 14:19:06 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.99 2024/07/07 09:29:23 nia Exp $
 
 BUILDLINK_TREE+=	simgear
 
@@ -13,7 +13,10 @@ BUILDLINK_PKGSRCDIR.simgear?=	../../games/simgear
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} != "Darwin"
+.  include "../../graphics/MesaLib/buildlink3.mk"
+.endif
 .include "../../graphics/osg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2024/05/29 16:32:43 adam Exp $
+# $NetBSD: Makefile,v 1.165 2024/07/07 09:29:23 nia Exp $
 
 DISTNAME=	simgear-2020.3.11
 PKGREVISION=	39
@@ -23,13 +23,17 @@ CMAKE_ARGS+=		-DSIMGEAR_SHARED=ON
 CMAKE_ARGS+=		-DSYSTEM_EXPAT=ON
 CMAKE_ARGS+=		-DSYSTEM_UDNS=ON
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "x86_64"
+CMAKE_ARGS+=		-DENABLE_SIMD=OFF
+.endif
+
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # The cmake script warns against building in the source directory.
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} sgbuild
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
