@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2020/01/26 17:31:35 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2024/07/07 10:06:37 nia Exp $
 #
 
 DISTNAME=	popa3d-1.0.3
@@ -23,6 +23,10 @@ RCD_SCRIPTS=	popa3d
 
 FILES_SUBST+=	POPA3D_USER=${POPA3D_USER:Q}
 FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+MAKE_ENV+=	OPSYS=${OPSYS:Q}
 
 SUBST_CLASSES+=		params
 SUBST_STAGE.params=	pre-configure
