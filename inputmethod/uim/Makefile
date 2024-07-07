@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2024/05/29 16:33:12 adam Exp $
+# $NetBSD: Makefile,v 1.188 2024/07/07 10:01:48 nia Exp $
 
 PKGREVISION= 11
 .include "../../inputmethod/uim/Makefile.common"
@@ -19,7 +19,11 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 USE_TOOLS+=	gmake pkg-config
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	autopoint
-USE_LANGUAGES=	c99 c++11
+USE_LANGUAGES=	c c++
+
+# alloca
+FORCE_C_STD=	gnu99
+FORCE_CXX_STD=	gnu++11
 
 # Avoid finding mono tool and breaking.
 MAKE_FLAGS+=	CSI=
