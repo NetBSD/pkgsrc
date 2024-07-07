@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2024/07/07 14:00:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.62 2024/07/07 14:00:38 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -39,14 +39,12 @@ CXXFLAGS+=	-D_GLIBCXX_HAVE_ENOTRECOVERABLE=1
 CXXFLAGS+=	-DENOTRECOVERABLE=98
 .endif
 
-REPLACE_PERL+=		test/make_test_dirs.pl
 REPLACE_PERL+=		tools/scan-build/bin/scan-build
 REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
 REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
 REPLACE_PERL+=		utils/TestUtils/pch-test.pl
 REPLACE_PERL+=		utils/analyzer/reducer.pl
 REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
-REPLACE_PERL+=		www/demo/index.cgi
 
 REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
 REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
@@ -56,7 +54,6 @@ REPLACE_PYTHON+=	docs/tools/generate_formatted_state.py
 REPLACE_PYTHON+=	lib/Tooling/DumpTool/generate_cxx_src_locs.py
 REPLACE_PYTHON+=	test/AST/gen_ast_dump_json_test.py
 REPLACE_PYTHON+=	test/Analysis/check-analyzer-fixit.py
-REPLACE_PYTHON+=	test/Driver/check-time-trace-sections.py
 REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
 REPLACE_PYTHON+=	tools/clang-format/git-clang-format
 REPLACE_PYTHON+=	tools/scan-build-py/bin/analyze-build
