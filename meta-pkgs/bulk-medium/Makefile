@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2024/06/02 15:40:14 taca Exp $
+# $NetBSD: Makefile,v 1.114 2024/07/08 07:04:31 nia Exp $
 
-DISTNAME=	bulk-medium-20240602
+DISTNAME=	bulk-medium-20240708
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -193,7 +193,8 @@ DEPENDS+=	gtk3+-[0-9]*:../../x11/gtk3
 #
 # 4. Linux compat packages
 #
-.if ${OPSYS} == "NetBSD"
+.if ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || \
+    ${MACHINE_PLATFORM:MNetBSD-*-i386}
 DEPENDS+=	suse>=13.1:../../meta-pkgs/suse131
 .endif
 
