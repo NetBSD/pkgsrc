@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/03/16 01:00:16 js Exp $
+# $NetBSD: Makefile,v 1.19 2024/07/08 14:35:42 js Exp $
 
 DISTNAME=	release_${PKGVERSION_NOREV}
 PKGNAME=	sickgear-3.30.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SickGear/}
 GITHUB_PROJECT=	SickGear
@@ -31,6 +31,12 @@ INSTALLATION_DIRS+=	bin lib/sickgear
 
 # These are wrong all over the place.
 CHECK_PERMS_SKIP=	*
+
+post-extract:
+	# This just downloads dependencies *at runtime* without asking when
+	# they are not met, including downloading binary .so files of
+	# questionable sources!
+	rm ${WRKSRC}/sickgear/piper.py
 
 do-build:
 	find ${WRKSRC} -name '*.orig' -exec rm {} \;
