@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/07 10:41:20 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/08 14:46:23 wiz Exp $
 
 DISTNAME=	rustc-1.76.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -179,7 +179,7 @@ CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 #
 # If we aren't on 9-current, and are on 8.x or 9.x, avoid parallel.
 # Release 9.x and 9.1 or later is OK.
-.  if ${OPSYS} == "NetBSD" && 090999 < ${OPSYS_VERSION} && ${OPSYS_VERSION} < 090900
+.  if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 090999 && ${OPSYS_VERSION} < 090900
 MAKE_JOBS_SAFE?=	no
 .  endif
 
