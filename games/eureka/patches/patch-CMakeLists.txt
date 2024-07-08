@@ -1,0 +1,23 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/07/08 14:04:42 micha Exp $
+
+Let pkgsrc handle icon and desktop files.
+
+--- CMakeLists.txt.orig	2024-07-07 19:06:38.000000000 +0000
++++ CMakeLists.txt
+@@ -170,10 +170,12 @@ if(UNIX AND NOT APPLE)  # Linux
+             DESTINATION "${eureka_install_dir}"
+     )
+     # The full-install sequence is here
+-    install(CODE "execute_process(
+-        COMMAND xdg-desktop-menu install --novendor ${CMAKE_CURRENT_SOURCE_DIR}/misc/eureka.desktop
+-        COMMAND xdg-icon-resource install --novendor --size 32 ${CMAKE_CURRENT_SOURCE_DIR}/misc/eureka.xpm
+-    )")
++    #install(CODE "execute_process(
++    #    COMMAND xdg-desktop-menu install --novendor ${CMAKE_CURRENT_SOURCE_DIR}/misc/eureka.desktop
++    #    COMMAND xdg-icon-resource install --novendor --size 32 ${CMAKE_CURRENT_SOURCE_DIR}/misc/eureka.xpm
++    #)")
++    install(FILES misc/eureka.xpm DESTINATION share/icons/hicolor/32x32/apps)
++    install(FILES misc/eureka.desktop DESTINATION share/applications)
+ 
+     # uninstall target
+     if(NOT TARGET uninstall)
