@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/06/06 19:11:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2024/07/08 05:51:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -614,6 +614,9 @@ ${PYSITELIB}/matplotlib/sphinxext/mathmpl.pyo
 ${PYSITELIB}/matplotlib/sphinxext/plot_directive.py
 ${PYSITELIB}/matplotlib/sphinxext/plot_directive.pyc
 ${PYSITELIB}/matplotlib/sphinxext/plot_directive.pyo
+${PYSITELIB}/matplotlib/sphinxext/roles.py
+${PYSITELIB}/matplotlib/sphinxext/roles.pyc
+${PYSITELIB}/matplotlib/sphinxext/roles.pyo
 ${PYSITELIB}/matplotlib/spines.py
 ${PYSITELIB}/matplotlib/spines.pyc
 ${PYSITELIB}/matplotlib/spines.pyi
@@ -1014,6 +1017,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/stem_orientation.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/sticky_tolerance.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/symlog.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/symlog2.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/test_alpha.pdf
