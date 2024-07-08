@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2020/02/26 12:28:02 micha Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/08 14:04:42 micha Exp $
 bin/eureka
+share/applications/eureka.desktop
 share/eureka/about_logo.png
 share/eureka/bindings.cfg
 share/eureka/common/doom_colors.ugh
@@ -37,3 +38,4 @@ share/eureka/ports/odamex.ugh
 share/eureka/ports/vanilla.ugh
 share/eureka/ports/xdoom.ugh
 share/eureka/ports/zdoom.ugh
+share/icons/hicolor/32x32/apps/eureka.xpm

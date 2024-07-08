@@ -1,10 +1,10 @@
-$NetBSD: patch-src_m__files.cc,v 1.2 2020/02/26 12:28:02 micha Exp $
+$NetBSD: patch-src_m__files.cc,v 1.3 2024/07/08 14:04:42 micha Exp $
 
 Add placeholder for pkgsrc DOOMWADDIR to beginning of search list.
 
 --- src/m_files.cc.orig	2018-06-23 11:29:07.000000000 +0000
 +++ src/m_files.cc
-@@ -723,6 +723,7 @@ static const char * SearchForIWAD(const 
+@@ -506,6 +506,7 @@ static const char * SearchForIWAD(const 
  		"c:/doom2",
  		"c:/doom95",
  #else

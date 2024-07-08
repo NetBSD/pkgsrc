@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/04/27 18:38:44 micha Exp $
+# $NetBSD: options.mk,v 1.4 2024/07/08 14:04:42 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eureka
 PKG_SUPPORTED_OPTIONS=	opengl xdg-utils
@@ -13,13 +13,7 @@ PKG_SUGGESTED_OPTIONS=	opengl xdg-utils
 # If FLTK is compiled with opengl option, disabling it here allows to force
 # usage of the software renderer (recommended without hardware acceleration).
 .if empty(PKG_OPTIONS.fltk13:Mopengl) || empty(PKG_OPTIONS:Mopengl)
-SUBST_CLASSES+=		opengl
-SUBST_STAGE.opengl=	do-configure
-SUBST_MESSAGE.opengl=	Disable OpenGL renderer in Makefile ...
-SUBST_FILES.opengl=	Makefile
-SUBST_SED.opengl=	-e 's,\# CXXFLAGS += -DNO_OPENGL,CXXFLAGS += -DNO_OPENGL,'
-SUBST_SED.opengl+=	-e 's, --use-gl,,'
-SUBST_SED.opengl+=	-e 's,LIBS += -lGLU -lGL,\#LIBS += -lGLU -lGL,'
+CMAKE_ARGS+=	-DENABLE_OPENGL=off
 .endif
 
 # xdg-utils: Create dependency for xdg-utils (Portland project)
