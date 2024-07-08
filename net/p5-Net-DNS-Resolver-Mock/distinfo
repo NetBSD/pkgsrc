@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:18 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/07/08 07:45:24 wen Exp $
 
-BLAKE2s (Net-DNS-Resolver-Mock-1.20200215.tar.gz) = 0d05a8b95551d5b0d35d5f27a420d0d9da1277302126425b3f3bdc8c1a66b63e
-SHA512 (Net-DNS-Resolver-Mock-1.20200215.tar.gz) = 92ac244dc2a7b939b1e8e8c71eb9ce65fdf1494dd08c62e6fc3720ffa82acc7c354bd7dcb8c77d9e52ee132773864b4b3ba869303af7363001ff5e9125c06802
-Size (Net-DNS-Resolver-Mock-1.20200215.tar.gz) = 10961 bytes
+BLAKE2s (Net-DNS-Resolver-Mock-1.20230216.tar.gz) = 83a6bc3d299650a764a789001faafc8f985326a05ab7a24da44684ccb978c79c
+SHA512 (Net-DNS-Resolver-Mock-1.20230216.tar.gz) = 832fdae88ef915251bd71ebacd3223cd8adb269cbb2e9724c617b31cfa65c92471ce93273070143c629e0a3f3bda54bcd5d55ae78fd60eae6c929bb7da7e1290
+Size (Net-DNS-Resolver-Mock-1.20230216.tar.gz) = 11264 bytes
