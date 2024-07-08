@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/10 12:39:09 js Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/08 14:35:42 js Exp $
 bin/sickgear
 lib/sickgear/CHANGES.md
 lib/sickgear/COPYING.txt
@@ -3107,7 +3107,6 @@ lib/sickgear/sickgear/notifiers/xbmc.py
 lib/sickgear/sickgear/nzbSplitter.py
 lib/sickgear/sickgear/nzbget.py
 lib/sickgear/sickgear/people_queue.py
-lib/sickgear/sickgear/piper.py
 lib/sickgear/sickgear/postProcessor.py
 lib/sickgear/sickgear/processTV.py
 lib/sickgear/sickgear/properFinder.py
