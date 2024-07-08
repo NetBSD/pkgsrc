@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2024/06/22 00:39:23 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2024/07/08 05:03:01 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 #       Also look in ${WRKSRC}/third-party/versions.mak for pjproject
 
-DISTNAME=	asterisk-19.1.0
-PKGREVISION=	18
+DISTNAME=	asterisk-19.8.1
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -27,6 +26,8 @@ MAKE_JOBS_SAFE=	NO
 BROKEN_ON_PLATFORM=	NetBSD-*-i386
 
 CONFLICTS+=	asterisk-sounds-extra-[0-9]*
+
+MKPIE_SUPPORTED=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -191,13 +192,6 @@ SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
 
-# XXX gross hack, gethostbyname_r on NETBSD is for internal use only
-SUBST_CLASSES.NetBSD+=		gethostbyname_r
-SUBST_STAGE.gethostbyname_r=	post-configure
-SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
-SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
-SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
-
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
 OWN_DIRS_PERMS+=	${ASTSPOOLDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
@@ -228,9 +222,9 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 .if !empty(PKG_OPTIONS:Masterisk-config)
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
 .  for f in acl.conf adsi.conf aeap.conf agents.conf alarmreceiver.conf	\
-	alsa.conf amd.conf app_mysql.conf app_skel.conf ari.conf	\
+	alsa.conf amd.conf app_skel.conf ari.conf	\
 	ast_debug_tools.conf asterisk.adsi calendar.conf ccss.conf	\
-	cdr.conf cdr_adaptive_odbc.conf cdr_custom.conf			\
+	cdr.conf cdr_adaptive_odbc.conf cdr_beanstalkd.conf cdr_custom.conf			\
 	cdr_manager.conf cdr_odbc.conf cdr_pgsql.conf			\
 	cdr_sqlite3_custom.conf cdr_tds.conf cel.conf			\
 	cel_beanstalkd.conf cel_custom.conf cel_odbc.conf		\
@@ -241,9 +235,9 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	dundi.conf enum.conf extconfig.conf extensions.ael		\
 	extensions.conf extensions.lua extensions_minivm.conf		\
 	features.conf festival.conf followme.conf func_odbc.conf	\
-	hep.conf http.conf iax.conf iaxprov.conf indications.conf	\
+	geolocation.conf hep.conf http.conf iax.conf iaxprov.conf indications.conf	\
 	logger.conf manager.conf meetme.conf mgcp.conf minivm.conf	\
-	modules.conf motif.conf musiconhold.conf muted.conf ooh323.conf	\
+	modules.conf motif.conf musiconhold.conf ooh323.conf	\
 	osp.conf phoneprov.conf pjproject.conf pjsip.conf		\
 	pjsip_notify.conf pjsip_wizard.conf prometheus.conf		\
 	queuerules.conf queues.conf res_config_mysql.conf		\
@@ -272,16 +266,16 @@ post-install:
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
 	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README-SERIOUSLY.bestpractices.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADE.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/Zaptel-to-DAHDI.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/asterisk-19.1.0-summary.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/ChangeLog-19.8.1.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLogs/historical/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.pdf ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/IAX2-security.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/README.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
@@ -299,6 +293,7 @@ LDFLAGS+= -L${PREFIX}/lib
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

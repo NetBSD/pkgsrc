@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2021/11/14 02:30:21 jnemeth Exp $
+# $NetBSD: options.mk,v 1.2 2024/07/08 05:03:01 jnemeth Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=		x11 unixodbc ilbc webvmail ldap spandsp
@@ -62,15 +62,8 @@ post-configure:
 .if !empty(PKG_OPTIONS:Munixodbc)
 	${ECHO} "MENUSELECT_APPS=app_voicemail_odbc" >> ${WRKSRC}/pkgsrc.makeopts
 .endif
-.if defined(PLIST.mgcp)
-	${ECHO} "MENUSELECT_RES=-res_pktccops" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_CHANNELS=-chan_mgcp" >> ${WRKSRC}/pkgsrc.makeopts
-.endif
 	${ECHO} "MENUSELECT_AGIS=agi-test.agi eagi-test eagi-sphinx-test jukebox.agi" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_APPS=-app_macro" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_RES=-res_monitor" >> ${WRKSRC}/pkgsrc.makeopts
 	${ECHO} "MENUSELECT_CFLAGS=-BUILD_NATIVE" >> ${WRKSRC}/pkgsrc.makeopts
-	${ECHO} "MENUSELECT_CHANNELS=-chan_sip -chan_skinny" >> ${WRKSRC}/pkgsrc.makeopts
 	# this is a hack to work around a bug in menuselect
 	cd ${WRKSRC} && make menuselect.makeopts
 
