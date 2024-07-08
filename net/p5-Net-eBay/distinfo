@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 11:06:24 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/07/08 14:12:27 wen Exp $
 
-BLAKE2s (Net-eBay-0.61.tar.gz) = 3e8821f25abf2fd19a8ed3889b6793668f3272f34e75e7e7c92d591b6ac4a1f7
-SHA512 (Net-eBay-0.61.tar.gz) = dafd2ef698bd30e4d24cdb8c10647be800c316f919ae9c7c240a4bb40d76fc798519dd10d9a1344371481b5d49a122ed71d3bdec7f5f6cc00cc36d420fd41f6f
-Size (Net-eBay-0.61.tar.gz) = 24969 bytes
+BLAKE2s (Net-eBay-0.62.tar.gz) = f0aeed4117a2bf19ff338df5a584fef5ebecf0a9db8906e5222ef50713293167
+SHA512 (Net-eBay-0.62.tar.gz) = b382641be6823a95aefb0a02490fecee807fede51e93310fb105582ea35e20d5a5a16d76ceffef9687f62c29eab514d8a16d862898bf29e112eba15f4d6b5fd4
+Size (Net-eBay-0.62.tar.gz) = 26719 bytes
