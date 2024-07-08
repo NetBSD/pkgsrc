@@ -1,19 +1,28 @@
-$NetBSD: patch-src_main.cc,v 1.2 2020/02/26 12:28:02 micha Exp $
+$NetBSD: patch-src_main.cc,v 1.3 2024/07/08 14:04:42 micha Exp $
 
+Include missing header.
 Add placeholder for pkgsrc PREFIX to beginning of search list.
 Remove date to make builds reproducible (based on Debian patch).
 
---- src/main.cc.orig	2019-09-27 11:13:24.000000000 +0000
+--- src/main.cc.orig	2024-07-04 06:00:57.000000000 +0000
 +++ src/main.cc
-@@ -317,6 +317,7 @@ static void Determine_InstallPath(const 
+@@ -30,6 +30,7 @@
+ 
+ #include <time.h>
+ #include <memory>
++#include <signal.h>
+ #include <stdexcept>
+ 
+ #include "im_color.h"
+@@ -324,6 +325,7 @@ static void Determine_InstallPath(const 
  #else
- 	static const char *prefixes[] =
- 	{
-+		"PKGSRC_PREFIX",
- 		"/usr/local",
- 		"/usr",
- 		"/opt",
-@@ -968,7 +968,7 @@ static void ShowHelp()
+ 		static const fs::path prefixes[] =
+ 		{
++			"PKGSRC_PREFIX",
+ 			"/usr/local",
+ 			"/usr",
+ 			"/opt",
+@@ -1058,7 +1060,7 @@ static void ShowHelp()
  
  static void ShowVersion()
  {
