@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/08 14:04:42 micha Exp $
 
-DISTNAME=	eureka-1.27b-source
-# Some macOS patches were added after the release of 1.27 but unfortunately
-# the archive name was not changed (pkgsrc used 1.27.1 for this version).
-# The second patch release is called 1.27b, we use version 1.27.2 for it.
-# Switch back to upstream naming scheme for next major/minor release.
-PKGNAME=	${DISTNAME:S/-source//:S/b/.2/}
-PKGREVISION=	3
+DISTNAME=	eureka-2.0.1
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eureka-editor/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ioan-chera/}
+GITHUB_PROJECT=	eureka-editor
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	micha@NetBSD.org
-HOMEPAGE=	https://sourceforge.net/projects/eureka-editor/
+HOMEPAGE=	https://eureka-editor.sourceforge.net/
 COMMENT=	Doom/Heretic/Hexen map editor
 LICENSE=	gnu-gpl-v2
 
-# Makefile declares "-std=c++03"
-USE_LANGUAGES=	c++03
-USE_TOOLS+=	gmake
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c11
+USE_CXX_FEATURES+=	c++17
 
-WRKSRC=		${WRKDIR}/eureka-1.27b-source
+CMAKE_ARGS+=		-DENABLE_UNIT_TESTS=off
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom
@@ -43,5 +39,13 @@ SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.pkg.mk"
