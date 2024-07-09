@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/10/24 22:44:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/09 13:50:33 bouyer Exp $
 
 DISTNAME=	collectd-cgp-1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ INSTALLATION_DIRS=	share/collectd-graph-panel
 
 WRKSRC=		${WRKDIR}/CGP-1
 
-DEPENDS+=	${PHP_PKG_PREFIX}-rrd>=1.1.3:../../databases/php-rrd
+DEPENDS+=	${PHP_PKG_PREFIX}-rrd>=1.1.3:../../databases/php-rrd1
 
 PHP_VERSIONS_ACCEPTED=	56 # php-rrd
 
