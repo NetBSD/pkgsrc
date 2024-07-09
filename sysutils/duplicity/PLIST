@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/03/04 14:45:17 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/07/09 08:08:32 triaxx Exp $
 bin/duplicity
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
@@ -18,9 +18,9 @@ ${PYSITELIB}/duplicity/_librsyncmodule.c
 ${PYSITELIB}/duplicity/argparse311.py
 ${PYSITELIB}/duplicity/argparse311.pyc
 ${PYSITELIB}/duplicity/argparse311.pyo
-${PYSITELIB}/duplicity/asyncscheduler.py
-${PYSITELIB}/duplicity/asyncscheduler.pyc
-${PYSITELIB}/duplicity/asyncscheduler.pyo
+${PYSITELIB}/duplicity/backend_pool.py
+${PYSITELIB}/duplicity/backend_pool.pyc
+${PYSITELIB}/duplicity/backend_pool.pyo
 ${PYSITELIB}/duplicity/backend.py
 ${PYSITELIB}/duplicity/backend.pyc
 ${PYSITELIB}/duplicity/backend.pyo
@@ -184,9 +184,6 @@ ${PYSITELIB}/duplicity/dup_tarfile.pyo
 ${PYSITELIB}/duplicity/dup_temp.py
 ${PYSITELIB}/duplicity/dup_temp.pyc
 ${PYSITELIB}/duplicity/dup_temp.pyo
-${PYSITELIB}/duplicity/dup_threading.py
-${PYSITELIB}/duplicity/dup_threading.pyc
-${PYSITELIB}/duplicity/dup_threading.pyo
 ${PYSITELIB}/duplicity/dup_time.py
 ${PYSITELIB}/duplicity/dup_time.pyc
 ${PYSITELIB}/duplicity/dup_time.pyo
