@@ -1,18 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2014/12/10 09:43:29 mef Exp $
+$NetBSD: patch-ab,v 1.3 2024/07/10 08:07:48 nia Exp $
 
-Don't hard-code -lpthread. Don't link with -lresolv on DragonFly.
-(above is by @joerg from cvs log. But -pthread does not exist anymore)
-
---- src/tools/Makefile.in.orig	2009-08-15 22:19:24.000000000 +0900
-+++ src/tools/Makefile.in	2014-12-10 18:16:10.000000000 +0900
-@@ -141,6 +141,11 @@ target_alias = @target_alias@
+--- src/tools/Makefile.in.orig	2009-08-15 13:19:24.000000000 +0000
++++ src/tools/Makefile.in
+@@ -141,6 +141,8 @@ target_alias = @target_alias@
  INCLUDES = -I@top_srcdir@/src/lib
  AM_CFLAGS = @CFLAGS@
  
 +AM_LDFLAGS = -lldap -llber -lldap_r ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} @LDFLAGS@
-+.if ${OPSYS} != "DragonFly"
-+AM_LDFLAGS += -lresolv
-+.endif
 +
  bin_PROGRAMS = adtool
  
