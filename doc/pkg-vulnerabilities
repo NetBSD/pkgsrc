@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.216 2024/07/08 03:38:52 jnemeth Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.217 2024/07/10 06:15:28 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26058,3 +26058,5 @@ apache<2.4.60	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-36387
 apache<2.4.61	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-39884
 znc<1.9.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-39844
 7-zip<24.01	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2023-52168
+py{37,38,39,310,311,312}-django>=4<4.2.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-38875
+py{37,38,39,310,311,312}-django>=5<5.0.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-38875
