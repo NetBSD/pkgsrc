@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:11:02 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/07/10 08:07:48 nia Exp $
 #
 
 DISTNAME=	adtool-1.3.3
@@ -15,6 +15,11 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 PTHREAD_OPTS+=		require
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "DragonFly"
+LIBS+=			-lresolv
+.endif
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
