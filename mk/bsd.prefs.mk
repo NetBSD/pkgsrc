@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.449 2024/06/05 17:17:21 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.450 2024/07/10 18:24:01 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -90,6 +90,7 @@ UNAME=echo Unknown
 .if !defined(NATIVE_OPSYS)
 NATIVE_OPSYS:=		${:!${UNAME} -s!:S/-//g:S/\///g:C/^CYGWIN_.*$/Cygwin/}
 MAKEFLAGS+=		NATIVE_OPSYS=${NATIVE_OPSYS:Q}
+MAKEFLAGS+=		OPSYS=${OPSYS:Q} # defined in crossvars
 .endif
 
 # OS_VARIANT is used to differentiate operating systems which have a common
@@ -104,6 +105,7 @@ NATIVE_OS_VARIANT?=	# empty
 _NATIVE_OS_VERSION_CMD=	${UNAME} -r
 NATIVE_OS_VERSION=	${_NATIVE_OS_VERSION_CMD:sh}
 MAKEFLAGS+=		NATIVE_OS_VERSION=${NATIVE_OS_VERSION:Q}
+MAKEFLAGS+=		OS_VERSION=${OS_VERSION:Q} # defined in crossvars
 .endif
 
 #
@@ -117,6 +119,7 @@ _NATIVE_OPSYS_VERSION_CMD=	${UNAME} -r | \
 			awk -F. '{major=int($$1); minor=int($$2); if (minor>=100) minor=99; patch=int($$3); if (patch>=100) patch=99; printf "%02d%02d%02d", major, minor, patch}'
 NATIVE_OPSYS_VERSION=	${_NATIVE_OPSYS_VERSION_CMD:sh}
 MAKEFLAGS+=		NATIVE_OPSYS_VERSION=${NATIVE_OPSYS_VERSION:Q}
+MAKEFLAGS+=		OPSYS_VERSION=${OPSYS_VERSION:Q} # defined in crossvars
 .endif
 
 # Preload these for architectures not in all variations of bsd.own.mk,
@@ -343,6 +346,7 @@ NATIVE_LOWER_OPSYS:=		${NATIVE_OPSYS:tl}
 NATIVE_OS_VERSION:=	${NATIVE_OS_VERSION}
 
 MAKEFLAGS+=		NATIVE_LOWER_OPSYS=${NATIVE_LOWER_OPSYS:Q}
+MAKEFLAGS+=		LOWER_OPSYS=${LOWER_OPSYS:Q} # defined in crossvars
 
 NATIVE_LOWER_VENDOR?=	# empty ("arch--opsys")
 
