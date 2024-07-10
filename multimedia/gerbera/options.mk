@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2024/04/26 15:28:23 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2024/07/10 06:17:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gerbera
 
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg ffmpegthumbnailer javascript matroska systemd
-PKG_SUGGESTED_OPTIONS=	ffmpegthumbnailer javascript matroska
+PKG_SUGGESTED_OPTIONS=	javascript matroska
 
 .include "../../mk/bsd.options.mk"
 
