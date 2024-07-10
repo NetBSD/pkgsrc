@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.218 2024/06/11 06:51:18 adam Exp $
+$NetBSD: distinfo,v 1.219 2024/07/10 06:52:48 triaxx Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
@@ -17,10 +17,11 @@ SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
 SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
 SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
 SHA1 (patch-meson.build) = 6b0607903b84c84d26bd5c54f3f0b9e4b256d787
+SHA1 (patch-qemu-options.hx) = 6cf811ae421db1e8d45f7098bd36733c6dc7d9cf
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
 SHA1 (patch-target_arm_tcg_translate-sve.c) = b5eeb08331e61a16b2cf4b7ab9b668755aa9a04e
 SHA1 (patch-target_i386_cpu.c) = f55795305c385784caee00c2a767a1cafa42ed91
 SHA1 (patch-target_i386_meson.build) = b8f413866ac1079d3ddeb21aacf226509e25ae9c
-SHA1 (patch-target_i386_nvmm_nvmm-all.c) = 28184cc3d1afc064d332bdd2530db16d8258222f
+SHA1 (patch-target_i386_nvmm_nvmm-all.c) = 9c0b6158bd28b5a5a9da98bd211e19494857076d
 SHA1 (patch-util_coroutine-ucontext.c) = 02cdf634e64f7e71029047b93747f192df715e6a
 SHA1 (patch-util_osdep.c) = 1e5bcde7be23792f487334d35797869bff686d25
