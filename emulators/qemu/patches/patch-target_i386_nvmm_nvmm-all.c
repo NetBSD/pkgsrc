@@ -1,10 +1,10 @@
-$NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.6 2024/02/20 14:16:58 imil Exp $
+$NetBSD: patch-target_i386_nvmm_nvmm-all.c,v 1.7 2024/07/10 06:52:48 triaxx Exp $
 
 Permit using older nvmm version.
 
---- target/i386/nvmm/nvmm-all.c.orig	2024-01-29 19:13:22.000000000 +0000
+--- target/i386/nvmm/nvmm-all.c.orig	2024-06-10 18:35:25.000000000 +0000
 +++ target/i386/nvmm/nvmm-all.c
-@@ -1171,14 +1171,10 @@ nvmm_accel_init(MachineState *ms)
+@@ -1169,14 +1169,10 @@ nvmm_accel_init(MachineState *ms)
          error_report("NVMM: Unable to fetch capability, error=%d", errno);
          return -err;
      }
@@ -17,6 +17,6 @@ Permit using older nvmm version.
 -        error_report("NVMM: Wrong state size %u", qemu_mach.cap.state_size);
 -        return -EPROGMISMATCH;
 -    }
-
+ 
      ret = nvmm_machine_create(&qemu_mach.mach);
      if (ret == -1) {
