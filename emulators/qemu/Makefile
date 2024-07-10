@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2024/06/11 06:51:18 adam Exp $
+# $NetBSD: Makefile,v 1.346 2024/07/10 06:52:48 triaxx Exp $
 
 DISTNAME=	qemu-9.0.1
 CATEGORIES=	emulators
@@ -101,6 +101,12 @@ SUBST_FILES.oss+=	audio/ossaudio.c
 SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .endif
 
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing paths in manpages.
+SUBST_FILES.man+=	qemu-options.hx
+SUBST_VARS.man+=	PKG_SYSCONFDIR
+
 UE_ARCHS+=		aarch64 aarch64_be
 UE_ARCHS+=		alpha arm armeb cris
 UE_ARCHS+=		hexagon hppa
@@ -115,40 +121,40 @@ UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
 UE_ARCHS+=		x86_64 xtensa xtensaeb
 
 .if ${OPSYS} == "NetBSD"
-PLIST.ga=			yes
-PLIST.nbd=			yes
+PLIST.ga=		yes
+PLIST.nbd=		yes
 .  if !exists(/usr/include/machine/trap.h)	\
 	|| "1"=="1"	# XXX usermode emulation is broken
-CONFIGURE_ARGS+=		--disable-bsd-user
+CONFIGURE_ARGS+=	--disable-bsd-user
 .  else
-CONFIGURE_ARGS+=		--enable-bsd-user
-USER_EMUL=			i386 x86_64
+CONFIGURE_ARGS+=	--enable-bsd-user
+USER_EMUL=		i386 x86_64
 .  endif
 .elif ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
-USER_EMUL=			i386 x86_64
-PLIST.ga=			yes
-PLIST.nbd=			yes
+USER_EMUL=		i386 x86_64
+PLIST.ga=		yes
+PLIST.nbd=		yes
 .elif ${OPSYS} == "Darwin"
 USER_EMUL=
-CONFIGURE_ARGS+=		--disable-bsd-user
-PLIST.nbd=			yes
+CONFIGURE_ARGS+=	--disable-bsd-user
+PLIST.nbd=		yes
 .elif ${OPSYS} == "Linux"
 # Help this package to build on systems too old for user-mode code.
 HAVE_LINUX_USER!=	${CPP} ${CPPFLAGS} ${FILESDIR}/linux-user-test.h \
-  >/dev/null 2>&1 && echo yes || echo no
+			>/dev/null 2>&1 && echo yes || echo no
 .  if ${HAVE_LINUX_USER} != "yes"
-CONFIGURE_ARGS+=		--disable-linux-user
+CONFIGURE_ARGS+=	--disable-linux-user
 .  else
-USER_EMUL=			${UE_ARCHS}
+USER_EMUL=		${UE_ARCHS}
 .  endif
-PLIST.bridge-helper=		yes
-PLIST.ga=			yes
-PLIST.nbd=			yes
-PLIST.pr-helper=		yes
+PLIST.bridge-helper=	yes
+PLIST.ga=		yes
+PLIST.nbd=		yes
+PLIST.pr-helper=	yes
 .elif ${MACHINE_PLATFORM:MSunOS-5.11-*}
-PLIST.ga=			yes
-PLIST.nbd=			yes
-CONFIGURE_ARGS+=		--disable-coroutine-pool
+PLIST.ga=		yes
+PLIST.nbd=		yes
+CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
 PLIST_VARS+=		plugins
