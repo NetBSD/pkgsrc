@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4360 2024/07/11 19:08:51 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4361 2024/07/11 19:45:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6920,3 +6920,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django4 to 4.2.14 [adam 2024-07-11]
 	Updated lang/nodejs20 to 20.15.1 [adam 2024-07-11]
 	Updated lang/nodejs to 22.4.1 [adam 2024-07-11]
+	Updated graphics/ImageMagick to 7.1.1.29nb4 [wiz 2024-07-11]
