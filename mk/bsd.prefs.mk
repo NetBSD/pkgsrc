@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.450 2024/07/10 18:24:01 riastradh Exp $
+# $NetBSD: bsd.prefs.mk,v 1.451 2024/07/11 01:50:10 riastradh Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -413,7 +413,10 @@ TARGET_MACHINE_PLATFORM=	${TARGET_OPSYS}-${TARGET_OS_VERSION}-${TARGET_MACHINE_A
 # or Cygwin (XXX or HP-UX or AIX or OSF/1 or ...).
 #
 # We will later set OBJECT_FMT to be conditional on USE_CROSS_COMPILE.
-.if ${NATIVE_OPSYS} == "Cygwin"
+.if ${NATIVE_OPSYS} == "AIX"
+NATIVE_OBJECT_FMT?=	XCOFF
+OBJECT_FMT?=		XCOFF
+.elif ${NATIVE_OPSYS} == "Cygwin"
 NATIVE_OBJECT_FMT?=	PE
 OBJECT_FMT?=		PE
 .elif ${NATIVE_OPSYS} == "Darwin"
