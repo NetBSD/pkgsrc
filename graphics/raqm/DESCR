@@ -1,0 +1,12 @@
+Raqm is a small library that encapsulates the logic for complex text
+layout and provides a convenient API.
+
+It currently provides bidirectional text support (using FriBiDi),
+shaping (using HarfBuzz), and proper script itemization. As a result,
+Raqm can support most writing systems covered by Unicode.
+
+The documentation can be accessed on the web at:
+http://host-oman.github.io/libraqm/
+
+Raqm is writing, also number or digit and the Arabic word for digital
+shares the same root, so it is a play on "digital writing".
