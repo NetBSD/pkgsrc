@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2023/11/12 13:21:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2024/07/11 19:50:51 wiz Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -13,6 +13,10 @@ BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 
 pkgbase := gd
 .include "../../mk/pkg-build-options.mk"
+
+.if ${PKG_BUILD_OPTIONS.gd:Mraqm}
+.include "../../graphics/raqm/buildlink3.mk"
+.endif
 
 .if ${PKG_BUILD_OPTIONS.gd:Mtiff}
 .include "../../graphics/tiff/buildlink3.mk"
