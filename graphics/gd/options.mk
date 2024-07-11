@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2023/05/24 17:14:52 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2024/07/11 19:50:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gd
-PKG_SUPPORTED_OPTIONS=	libimagequant tiff x11
-PKG_SUGGESTED_OPTIONS=	libimagequant tiff
+PKG_SUPPORTED_OPTIONS=	libimagequant raqm tiff x11
+PKG_SUGGESTED_OPTIONS=	libimagequant raqm tiff
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,6 +11,13 @@ PKG_SUGGESTED_OPTIONS=	libimagequant tiff
 CONFIGURE_ARGS+=	--with-liq=${BUILDLINK_PREFIX.libimagequant}
 .else
 CONFIGURE_ARGS+=	--without-liq
+.endif
+
+.if !empty(PKG_OPTIONS:Mraqm)
+.include "../../graphics/raqm/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-raqm=${BUILDLINK_PREFIX.raqm}
+.else
+CONFIGURE_ARGS+=	--without-raqm
 .endif
 
 .if !empty(PKG_OPTIONS:Mtiff)
