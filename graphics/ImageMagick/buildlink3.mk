@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.111 2024/05/16 06:15:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.112 2024/07/11 19:45:12 wiz Exp $
 
 BUILDLINK_TREE+=	ImageMagick
 
@@ -33,6 +33,9 @@ pkgbase := ImageMagick
 .endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick:Mopenexr}
 .include "../../graphics/openexr/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.ImageMagick:Mraqm}
+.include "../../graphics/raqm/buildlink3.mk"
 .endif
 .if ${PKG_BUILD_OPTIONS.ImageMagick:Mtiff}
 .include "../../graphics/tiff/buildlink3.mk"
