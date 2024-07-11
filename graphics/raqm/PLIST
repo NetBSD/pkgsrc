@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/11 17:18:22 wiz Exp $
+include/raqm-version.h
+include/raqm.h
+lib/libraqm.so
+lib/libraqm.so.0
+lib/libraqm.so.${PKGVERSION}
+lib/pkgconfig/raqm.pc
