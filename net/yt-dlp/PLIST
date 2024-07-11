@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/07/02 09:04:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/07/11 20:02:32 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2874,6 +2874,9 @@ ${PYSITELIB}/yt_dlp/extractor/vidlii.pyo
 ${PYSITELIB}/yt_dlp/extractor/vidly.py
 ${PYSITELIB}/yt_dlp/extractor/vidly.pyc
 ${PYSITELIB}/yt_dlp/extractor/vidly.pyo
+${PYSITELIB}/yt_dlp/extractor/vidyard.py
+${PYSITELIB}/yt_dlp/extractor/vidyard.pyc
+${PYSITELIB}/yt_dlp/extractor/vidyard.pyo
 ${PYSITELIB}/yt_dlp/extractor/viewlift.py
 ${PYSITELIB}/yt_dlp/extractor/viewlift.pyc
 ${PYSITELIB}/yt_dlp/extractor/viewlift.pyo
@@ -2928,6 +2931,9 @@ ${PYSITELIB}/yt_dlp/extractor/vrt.pyo
 ${PYSITELIB}/yt_dlp/extractor/vtm.py
 ${PYSITELIB}/yt_dlp/extractor/vtm.pyc
 ${PYSITELIB}/yt_dlp/extractor/vtm.pyo
+${PYSITELIB}/yt_dlp/extractor/vtv.py
+${PYSITELIB}/yt_dlp/extractor/vtv.pyc
+${PYSITELIB}/yt_dlp/extractor/vtv.pyo
 ${PYSITELIB}/yt_dlp/extractor/vuclip.py
 ${PYSITELIB}/yt_dlp/extractor/vuclip.pyc
 ${PYSITELIB}/yt_dlp/extractor/vuclip.pyo
