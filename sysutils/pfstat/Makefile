@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2023/12/23 09:52:14 zafer Exp $
+# $NetBSD: Makefile,v 1.40 2024/07/11 19:53:39 wiz Exp $
 
 DISTNAME=	pfstat-2.5
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	sysutils net
 MASTER_SITES=	#
 
