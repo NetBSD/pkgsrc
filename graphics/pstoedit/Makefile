@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.133 2024/05/29 16:33:01 adam Exp $
+# $NetBSD: Makefile,v 1.134 2024/07/11 19:53:37 wiz Exp $
 
 DISTNAME=	pstoedit-3.78
-PKGREVISION=	18
+PKGREVISION=	20
 CATEGORIES=	converters graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 
