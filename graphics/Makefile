@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1056 2024/05/26 12:26:49 markd Exp $
+# $NetBSD: Makefile,v 1.1057 2024/07/11 17:18:36 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -562,6 +562,7 @@ SUBDIR+=	qvplay
 SUBDIR+=	rabbit
 SUBDIR+=	radiance
 SUBDIR+=	raleigh-reloaded
+SUBDIR+=	raqm
 SUBDIR+=	rawtherapee
 SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
