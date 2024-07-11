@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.82 2024/07/01 16:30:02 adam Exp $
+# $NetBSD: Makefile,v 1.83 2024/07/11 19:48:08 wiz Exp $
 
 DISTNAME=	pillow-10.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow/}
 
@@ -31,6 +32,7 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 .include "../../graphics/libimagequant/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../graphics/raqm/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/jpeg.buildlink3.mk"
