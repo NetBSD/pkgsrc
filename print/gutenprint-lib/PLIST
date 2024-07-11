@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2020/10/26 10:57:15 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/07/11 18:41:05 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -396,6 +396,8 @@ share/locale/fr/LC_MESSAGES/gutenprint.mo
 share/locale/fr/gutenprint_fr.po
 share/locale/gl/LC_MESSAGES/gutenprint.mo
 share/locale/gl/gutenprint_gl.po
+share/locale/hr/LC_MESSAGES/gutenprint.mo
+share/locale/hr/gutenprint_hr.po
 share/locale/hu/LC_MESSAGES/gutenprint.mo
 share/locale/hu/gutenprint_hu.po
 share/locale/it/LC_MESSAGES/gutenprint.mo
@@ -428,4 +430,3 @@ share/locale/zh_CN/LC_MESSAGES/gutenprint.mo
 share/locale/zh_CN/gutenprint_zh_CN.po
 share/locale/zh_TW/LC_MESSAGES/gutenprint.mo
 share/locale/zh_TW/gutenprint_zh_TW.po
-@pkgdir share/gutenprint/doc/reference-html
