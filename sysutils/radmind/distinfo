@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2021/10/26 11:20:06 nia Exp $
+$NetBSD: distinfo,v 1.28 2024/07/12 13:26:40 hauke Exp $
 
 BLAKE2s (radmind-1.14.1.tar.gz) = ecab16cf79583ade0b5064fb8f61e2882017b696f04184c6825b9e2cf8d1c34e
 SHA512 (radmind-1.14.1.tar.gz) = bccf9681a6899be3b500065237dd1e04cd83ffb6f9be0e355412e7b0c556325f7d13435cec65a8a5e156e4411da915744f01a615472f6361d52c4d54d8be20eb
@@ -13,7 +13,7 @@ SHA1 (patch-configure.ac) = 12968655962adc00ce095866151d11747ac9b565
 SHA1 (patch-ktcheck.c) = 83c03e417fc93863a8575b0cb2f93e09cba1d937
 SHA1 (patch-largefile.h) = 806f12878aa628f30355b82ac23a5c92740f42a1
 SHA1 (patch-lcksum.c) = 7b7b4da338bb13f2508c5b22307263eaedb32347
-SHA1 (patch-libsnet_snet.c) = 29484ae6775a1fe9d02980a84503762b55a093e9
+SHA1 (patch-libsnet_snet.c) = f47b805d68c1e55581503fe33a748bd495c5db33
 SHA1 (patch-openssl__compat.c) = 0076abec076f29764d86ec1fc3b0bf7092c7dd18
 SHA1 (patch-openssl__compat.h) = d73ce65dde6e48e378feded637b7b6a4d8e36047
 SHA1 (patch-ra.sh) = 05ba697814bf4833a9c38f881e43639067afba29
