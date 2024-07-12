@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4367 2024/07/12 07:11:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4368 2024/07/12 07:44:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6930,3 +6930,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/exim-html to 4.98 [adam 2024-07-12]
 	Updated devel/py-astroid to 3.2.3 [adam 2024-07-12]
 	Updated net/py-unearth to 0.16.1 [adam 2024-07-12]
+	Updated textproc/translate-toolkit to 3.13.2 [adam 2024-07-12]
+	Updated textproc/ugrep to 6.2.0 [adam 2024-07-12]
