@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/30 13:39:40 sjmulder Exp $
+# $NetBSD: Makefile,v 1.13 2024/07/12 18:49:04 sjmulder Exp $
 
-DISTNAME=	mustach-1.2.6
+DISTNAME=	mustach-1.2.9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=jobol/}
 GITLAB_PROJECT=	mustach
@@ -9,7 +9,7 @@ GITLAB_RELEASE=	${PKGVERSION_NOREV}
 MAINTAINER=	sjmulder@NetBSD.org
 HOMEPAGE=	https://gitlab.com/jobol/mustach
 COMMENT=	C implementation of mustache templating
-LICENSE=	apache-2.0
+LICENSE=	0-clause-bsd
 
 # 'test' is basic-tests and spec-tests, which downloads files with git
 TEST_TARGET=	basic-tests
