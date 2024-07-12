@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.2 2024/07/02 06:32:44 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.3 2024/07/12 18:58:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -12,4 +12,14 @@ www/firefox-l10n: dependent update
 
 Pullup ticket #6874 - requested by wiz
 security/openssh: security fix (RCE)
+
+Pullup ticket #6875 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #6876 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #6877 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
