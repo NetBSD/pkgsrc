@@ -1,10 +1,20 @@
-$NetBSD: patch-makeinclude.in,v 1.1 2021/05/17 10:38:48 micha Exp $
+$NetBSD: patch-makeinclude.in,v 1.2 2024/07/12 10:27:14 micha Exp $
 
+Do not use the static libraries created in "../lib".
 Use libtool.
 Upstream will not merge this (libtool is listed as not acceptable).
 
---- makeinclude.in.orig	2021-05-04 17:36:17.000000000 +0000
+--- makeinclude.in.orig	2023-12-09 13:58:40.000000000 +0000
 +++ makeinclude.in
+@@ -100,7 +100,7 @@ LINKFLTKIMG	= @LINKFLTKIMG@ @LINKFLTK@ $
+ LINKFLTKCAIRO	= @LINKFLTKCAIRO@ $(CAIROLIBS)
+ FLTKCAIROOPTION = @FLTKCAIROOPTION@
+ LINKSHARED	= @DSOLINK@ @LINKSHARED@ $(IMAGELIBS) $(CAIROLIBS)
+-IMAGELIBS	= -L../lib @IMAGELIBS@
++IMAGELIBS	= @IMAGELIBS@
+ 
+ # image libraries to build...
+ IMAGEDIRS	= @JPEG@ @ZLIB@ @PNG@
 @@ -152,20 +152,20 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
  
  .o$(EXEEXT):
