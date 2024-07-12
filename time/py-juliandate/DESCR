@@ -1,0 +1,2 @@
+Simple conversions between Julian Dates and Julian/Gregorian calendar
+dates, supporting ancient dates (BCE).
