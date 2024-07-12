@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/07/12 13:26:40 hauke Exp $
+# $NetBSD: Makefile,v 1.46 2024/07/12 13:28:42 hauke Exp $
 #
 
 DISTNAME=	radmind-1.14.1
@@ -20,10 +20,11 @@ CONFIGURE_ENV+=		diffpath=${TOOLS_DIFF:Q}
 # provide, so we need to side-step {echopath}.
 CONFIGURE_ENV+=		ac_cv_path_echopath=${TOOLS_ECHO:Q}
 
-.include "../../mk/compiler.mk"
-
 USE_LANGUAGES=		c
 USE_CC_FEATURES=	c99
+
+.include "../../mk/compiler.mk"
+
 # libsnet uses K&R function declarations
 .if !empty(CC_VERSION:Mclang-1[5-9].*) || !empty(CC_VERSION:Mclang-[2-9][1-9].*)
 CFLAGS+=		-Wno-deprecated-non-prototype
