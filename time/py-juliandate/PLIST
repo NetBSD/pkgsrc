@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/12 06:19:02 wiz Exp $
+bin/jd-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/juliandate/__init__.py
+${PYSITELIB}/juliandate/__init__.pyc
+${PYSITELIB}/juliandate/__init__.pyo
+${PYSITELIB}/juliandate/__version__.py
+${PYSITELIB}/juliandate/__version__.pyc
+${PYSITELIB}/juliandate/__version__.pyo
+${PYSITELIB}/juliandate/jd.py
+${PYSITELIB}/juliandate/jd.pyc
+${PYSITELIB}/juliandate/jd.pyo
+${PYSITELIB}/juliandate/juliandate.py
+${PYSITELIB}/juliandate/juliandate.pyc
+${PYSITELIB}/juliandate/juliandate.pyo
