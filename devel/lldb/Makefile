@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2024/07/06 15:45:08 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/07/13 11:37:48 nikita Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -53,7 +53,7 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}
+PLIST_SUBST+=	LLVM_MAJOR_VERSION=${LLVM_MAJOR_VERSION}.1
 
 .include "options.mk"
 
