@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/25 15:12:05 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/07/13 15:25:25 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION:S/-rc/rc/}
@@ -87,7 +87,8 @@ pre-install:
 post-install:
 	cd ${DESTDIR}${PREFIX}/${GEM_HOME} && \
 		find . \! -type d \( -name 'Makefile*' -o -name '.*.time' \
-			-o -name '*.o' -o -name 'gem_make.out' \) -exec rm {} \;
+			-o -name '*.o' -o -name 'gem_make.out' \
+			-o -name 'mkmf.log' \) -exec rm {} \;
 	cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/${RUBY_DOC}
 	${MV} ${DESTDIR}${PREFIX}/${RUBY_DOC}/ChangeLog  ${DESTDIR}${PREFIX}/${RUBY_DOC}/ChangeLog.prev
 .for f in ${DOCS}
