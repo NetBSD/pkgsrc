@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4388 2024/07/13 16:01:21 taca Exp $
+$NetBSD: CHANGES-2024,v 1.4389 2024/07/13 16:03:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6954,3 +6954,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-excon to 0.111.0 [taca 2024-07-13]
 	Updated www/ruby-faraday to 2.10.0 [taca 2024-07-13]
 	Updated www/ruby-rack to 3.1.7 [taca 2024-07-13]
+	Updated www/ruby-websocket to 1.2.11 [taca 2024-07-13]
