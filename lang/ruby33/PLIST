@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/15 15:43:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/07/13 15:25:25 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1491,8 +1491,11 @@ ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/Rakefile
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/TODO.md
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/exe/rdbg
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/debug.c
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/debug_version.h
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/extconf.h
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/extconf.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/ext/debug/iseq_collector.c
+${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/exts.mk
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug/abbrev_command.rb
 ${GEM_HOME}/gems/debug-${RUBY_DEBUG_VER}/lib/debug/breakpoint.rb
@@ -1833,6 +1836,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/docs/tools.md
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/exe/rbs
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/constants.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/constants.h
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/extconf.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/extconf.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/lexer.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/lexer.h
@@ -1849,6 +1853,7 @@ ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/rbs_extension.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/ruby_objs.c
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/ruby_objs.h
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/ext/rbs_extension/unescape.c
+${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/exts.mk
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/goodcheck.yml
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs.rb
 ${GEM_HOME}/gems/rbs-${RUBY_RBS_VER}/lib/rbs/ancestor_graph.rb
