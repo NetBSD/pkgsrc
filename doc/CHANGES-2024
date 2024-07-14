@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4442 2024/07/14 14:00:06 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4443 2024/07/14 15:46:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7009,3 +7009,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/scons4 to 4.8.0 [wiz 2024-07-14]
 	Updated mail/rspamd to 3.9.0 [wiz 2024-07-14]
 	Updated www/syncstorage-rs to 0.17.1 [wiz 2024-07-14]
+	Updated devel/ruby-async to 2.14.0 [taca 2024-07-14]
