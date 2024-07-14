@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.7 2024/04/19 11:46:29 nia Exp $
+# $NetBSD: build.mk,v 1.8 2024/07/14 13:53:16 wiz Exp $
 #
 # This Makefile fragment supports building using the SCons build tool.
 #
@@ -60,9 +60,9 @@ scons-test:
 .if ${SCONS_DO_INSTALL} == "yes"
 do-install: scons-install
 scons-install:
-.for d in ${INSTALL_DIRS}
+.  for d in ${INSTALL_DIRS}
 	cd ${WRKSRC} && cd ${d} && ${SETENV} ${INSTALL_ENV} ${SCONSBIN} ${_SCONS_INSTALL_ARGS} ${INSTALL_TARGET}
-.endfor
+.  endfor
 .endif
 
 _VARGROUPS+=		scons
