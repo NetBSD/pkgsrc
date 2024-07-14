@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.256 2024/05/29 16:33:25 adam Exp $
+# $NetBSD: Makefile,v 1.257 2024/07/14 08:51:29 mef Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
 # to avoid unnecessarily breaking macOS users.
 #
-DISTNAME=	R-4.4.0
-PKGREVISION=	1
+DISTNAME=	R-4.4.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=base/R-4/}
 
@@ -150,11 +149,6 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 #TOOL_DEPENDS+=		tex-mptopdf-[0-9]*:../../graphics/tex-mptopdf
 #TOOL_DEPENDS+=		tex-pdftex-def-[0-9]*:../../print/tex-pdftex
 
-#SUBST_CLASSES+=		rpath
-#SUBST_STAGE.rpath=	pre-configure
-#SUBST_FILES.rpath=	configure.ac
-#SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
-
 SUBST_CLASSES+=		fixwrap
 SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
@@ -185,7 +179,7 @@ fix-darwin-install-name:
 
 # remove orig version left out
 post-install:
-	${RM}	${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
+	${RM}	-f ${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
