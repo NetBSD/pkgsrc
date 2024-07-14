@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2024/04/06 06:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/14 13:53:16 wiz Exp $
 
-DISTNAME=	SCons-4.7.0
+DISTNAME=	scons-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=S/SCons/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 EXTRACT_USING=	bsdtar
 
 MAINTAINER=	gdt@NetBSD.org
@@ -22,6 +22,9 @@ REPLACE_PYTHON+=	script/sconsign
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/sc/SC/}
+WHEEL_NAME=	${DISTNAME:S/sc/SC/}
+
 # XXX: not sure why this is needed exactly
 # but -Wl,-rpath is filtered out by buildlink from the c++ command line
 SUBST_CLASSES+=		rflag
@@ -35,9 +38,9 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} scons scons-${PYVERSSUFFIX}
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} scons-configure-cache scons-configure-cache-${PYVERSSUFFIX}
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} sconsign sconsign-${PYVERSSUFFIX}
-	cd ${DESTDIR}${PREFIX} && ${MV} scons.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scons-${PYVERSSUFFIX}.1
-	cd ${DESTDIR}${PREFIX} && ${MV} scons-time.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scons-time-${PYVERSSUFFIX}.1
-	cd ${DESTDIR}${PREFIX} && ${MV} sconsign.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sconsign-${PYVERSSUFFIX}.1
+	${INSTALL_DATA} ${WRKSRC}/scons.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scons-${PYVERSSUFFIX}.1
+	${INSTALL_DATA} ${WRKSRC}/scons-time.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scons-time-${PYVERSSUFFIX}.1
+	${INSTALL_DATA} ${WRKSRC}/sconsign.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/sconsign-${PYVERSSUFFIX}.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
