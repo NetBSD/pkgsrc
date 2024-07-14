@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2024/04/08 03:21:25 jnemeth Exp $
+# $NetBSD: Makefile,v 1.140 2024/07/14 12:33:57 wiz Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -79,6 +79,7 @@ SUBDIR+=	py-rich
 SUBDIR+=	py-serial
 SUBDIR+=	py-term-background
 SUBDIR+=	py-termstyle
+SUBDIR+=	py-textual
 SUBDIR+=	qodem
 SUBDIR+=	qpage
 SUBDIR+=	qt6-qtconnectivity
