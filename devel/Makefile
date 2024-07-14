@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4307 2024/07/05 20:25:24 maya Exp $
+# $NetBSD: Makefile,v 1.4308 2024/07/14 07:10:09 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -113,7 +113,6 @@ SUBDIR+=	SDL_ttf
 SUBDIR+=	SDLmm
 SUBDIR+=	SOPE
 SUBDIR+=	SOPE5
-SUBDIR+=	ZenTest
 SUBDIR+=	abseil
 SUBDIR+=	accerciser
 SUBDIR+=	aceunit
@@ -3223,6 +3222,7 @@ SUBDIR+=	rt4
 SUBDIR+=	rt5
 SUBDIR+=	rttr
 SUBDIR+=	ruby-SDL
+SUBDIR+=	ruby-ZenTest
 SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activejob61
 SUBDIR+=	ruby-activejob70
