@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/07/02 05:25:31 taca Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/14 07:15:10 taca Exp $
 
-DISTNAME=	RubyInline-3.14.0
+DISTNAME=	RubyInline-3.14.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/^Ruby//:tl}
 CATEGORIES=	devel
 
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.zenspider.com/ZSS/Products/RubyInline/
 COMMENT=	Embed C/C++ code directly in Ruby
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-ZenTest>=4.3<5:../../devel/ZenTest
+DEPENDS+=	${RUBY_PKGPREFIX}-ZenTest>=4.3<5:../../devel/ruby-ZenTest
 
 USE_LANGUAGES=	# none
 
