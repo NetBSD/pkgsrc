@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4309 2024/07/14 10:16:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4310 2024/07/14 11:58:52 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3054,6 +3054,7 @@ SUBDIR+=	py-test-datadir
 SUBDIR+=	py-test-datafiles
 SUBDIR+=	py-test-doctestplus
 SUBDIR+=	py-test-env
+SUBDIR+=	py-test-examples
 SUBDIR+=	py-test-expect
 SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
@@ -3223,7 +3224,6 @@ SUBDIR+=	rt4
 SUBDIR+=	rt5
 SUBDIR+=	rttr
 SUBDIR+=	ruby-SDL
-SUBDIR+=	ruby-ZenTest
 SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activejob61
 SUBDIR+=	ruby-activejob70
