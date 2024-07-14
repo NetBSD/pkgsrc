@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4430 2024/07/14 13:10:01 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4431 2024/07/14 13:21:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6997,3 +6997,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-nh3 to 0.2.18 [wiz 2024-07-14]
 	Updated devel/py-packageurl to 0.15.3 [wiz 2024-07-14]
 	Updated devel/py-pip to 24.1.2 [wiz 2024-07-14]
+	Updated security/py-google-auth to 2.32.0 [wiz 2024-07-14]
