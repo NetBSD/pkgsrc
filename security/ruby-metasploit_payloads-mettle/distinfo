@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2024/06/30 16:27:47 taca Exp $
+$NetBSD: distinfo,v 1.27 2024/07/14 07:55:21 taca Exp $
 
-BLAKE2s (metasploit_payloads-mettle-1.0.28.gem) = 13e4533216a95aefc271cadc8b7ed28d469c7d90a7a6b427d8e94783b3aa71cf
-SHA512 (metasploit_payloads-mettle-1.0.28.gem) = ce4aa6ecb54fee1d8d64864f29f6448d9cbf0c11924447ac4c79e98880543ff16087ce4112a82bc3f68f5fc2f43e546977f078d0992b39d965dd5045043fd6cc
-Size (metasploit_payloads-mettle-1.0.28.gem) = 23411712 bytes
+BLAKE2s (metasploit_payloads-mettle-1.0.30.gem) = 443ef33855ed560229f1b116c9280a4db1d5432209d0442cbe10b87af91ab8cd
+SHA512 (metasploit_payloads-mettle-1.0.30.gem) = 10c469012744ae2699f8e48ee96cb5e2e06a4f1cc488f80cd8f79f84ee77efcf01222a46e51f36670c15fdd5ffa114fb32bbe418e86889cafa0228da40cf8fa1
+Size (metasploit_payloads-mettle-1.0.30.gem) = 23415296 bytes
