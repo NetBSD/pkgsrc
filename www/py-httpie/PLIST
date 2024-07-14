@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2023/05/21 17:57:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/07/14 06:04:57 wiz Exp $
 bin/http-${PYVERSSUFFIX}
 bin/httpie-${PYVERSSUFFIX}
 bin/https-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/httpie/__init__.py
 ${PYSITELIB}/httpie/__init__.pyc
 ${PYSITELIB}/httpie/__init__.pyo
