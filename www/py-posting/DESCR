@@ -1,0 +1,10 @@
+Posting is an HTTP client, not unlike Postman and Insomnia. As a
+TUI application, it can be used over SSH and enables efficient
+keyboard-centric workflows. Your requests are stored locally in
+simple YAML files, meaning they're easy to read and version control.
+
+Some notable features include: "jump mode" navigation,
+environments/variables system with autocompletion, syntax highlighting
+powered by tree-sitter, Vim keys, various builtin themes, a
+configuration system, "open in $EDITOR", and a command palette for
+quickly accessing functionality.
