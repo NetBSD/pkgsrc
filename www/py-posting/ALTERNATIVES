@@ -1,0 +1,1 @@
+bin/posting @PREFIX@/bin/posting-@PYVERSSUFFIX@
