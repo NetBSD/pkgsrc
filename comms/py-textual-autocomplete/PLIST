@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:41:17 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/textual_autocomplete/__init__.py
+${PYSITELIB}/textual_autocomplete/__init__.pyc
+${PYSITELIB}/textual_autocomplete/__init__.pyo
+${PYSITELIB}/textual_autocomplete/_autocomplete.py
+${PYSITELIB}/textual_autocomplete/_autocomplete.pyc
+${PYSITELIB}/textual_autocomplete/_autocomplete.pyo
+${PYSITELIB}/textual_autocomplete/_autocomplete2.py
+${PYSITELIB}/textual_autocomplete/_autocomplete2.pyc
+${PYSITELIB}/textual_autocomplete/_autocomplete2.pyo
+${PYSITELIB}/textual_autocomplete/matcher.py
+${PYSITELIB}/textual_autocomplete/matcher.pyc
+${PYSITELIB}/textual_autocomplete/matcher.pyo
+${PYSITELIB}/textual_autocomplete/py.typed
