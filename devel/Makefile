@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4308 2024/07/14 07:10:09 taca Exp $
+# $NetBSD: Makefile,v 1.4309 2024/07/14 10:16:57 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3148,6 +3148,7 @@ SUBDIR+=	py-whichcraft
 SUBDIR+=	py-wrapt
 SUBDIR+=	py-xbe
 SUBDIR+=	py-xdg
+SUBDIR+=	py-xdg-base-dirs
 SUBDIR+=	py-xdis
 SUBDIR+=	py-xdist
 SUBDIR+=	py-xopen
