@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2024/05/31 04:41:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.41 2024/07/14 08:51:29 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -202,7 +202,6 @@ lib/R/include/Rinternals.h
 lib/R/include/Rmath.h
 lib/R/include/Rversion.h
 lib/R/lib/libR.so
-lib/R/library/grDevices/libs/cairo.so
 lib/R/library/KernSmooth/DESCRIPTION
 lib/R/library/KernSmooth/INDEX
 lib/R/library/KernSmooth/Meta/Rd.rds
@@ -776,6 +775,7 @@ lib/R/library/grDevices/html/00Index.html
 lib/R/library/grDevices/html/R.css
 lib/R/library/grDevices/icc/srgb
 lib/R/library/grDevices/icc/srgb.flate
+lib/R/library/grDevices/libs/cairo.so
 lib/R/library/grDevices/libs/grDevices.so
 lib/R/library/graphics/DESCRIPTION
 lib/R/library/graphics/INDEX
@@ -1235,13 +1235,13 @@ lib/R/library/survival/doc/compete.pdf
 lib/R/library/survival/doc/concordance.R
 lib/R/library/survival/doc/concordance.Rnw
 lib/R/library/survival/doc/concordance.pdf
-lib/R/library/survival/doc/discrim.R
-lib/R/library/survival/doc/discrim.Rnw
-lib/R/library/survival/doc/discrim.pdf
 lib/R/library/survival/doc/index.html
 lib/R/library/survival/doc/matrix.R
 lib/R/library/survival/doc/matrix.Rnw
 lib/R/library/survival/doc/matrix.pdf
+lib/R/library/survival/doc/methods.R
+lib/R/library/survival/doc/methods.Rnw
+lib/R/library/survival/doc/methods.pdf
 lib/R/library/survival/doc/multi.Rnw
 lib/R/library/survival/doc/multi.pdf
 lib/R/library/survival/doc/other.Rnw
