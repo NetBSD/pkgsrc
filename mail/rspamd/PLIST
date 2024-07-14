@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2024/01/21 20:22:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/07/14 13:57:08 wiz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -22,6 +22,7 @@ share/examples/rspamd/groups.conf
 share/examples/rspamd/lang_detection.inc
 share/examples/rspamd/logging.inc
 share/examples/rspamd/maps.d/dmarc_whitelist.inc
+share/examples/rspamd/maps.d/exe_clickbait.inc
 share/examples/rspamd/maps.d/maillist.inc
 share/examples/rspamd/maps.d/mid.inc
 share/examples/rspamd/maps.d/mime_types.inc
@@ -34,6 +35,7 @@ share/examples/rspamd/modules.d/antivirus.conf
 share/examples/rspamd/modules.d/arc.conf
 share/examples/rspamd/modules.d/asn.conf
 share/examples/rspamd/modules.d/aws_s3.conf
+share/examples/rspamd/modules.d/bayes_expiry.conf
 share/examples/rspamd/modules.d/bimi.conf
 share/examples/rspamd/modules.d/chartable.conf
 share/examples/rspamd/modules.d/clickhouse.conf
@@ -48,6 +50,7 @@ share/examples/rspamd/modules.d/external_services.conf
 share/examples/rspamd/modules.d/force_actions.conf
 share/examples/rspamd/modules.d/forged_recipients.conf
 share/examples/rspamd/modules.d/fuzzy_check.conf
+share/examples/rspamd/modules.d/gpt.conf
 share/examples/rspamd/modules.d/greylist.conf
 share/examples/rspamd/modules.d/hfilter.conf
 share/examples/rspamd/modules.d/history_redis.conf
@@ -232,6 +235,7 @@ share/rspamd/lualib/redis_scripts/neural_train_size.lua
 share/rspamd/lualib/redis_scripts/ratelimit_check.lua
 share/rspamd/lualib/redis_scripts/ratelimit_cleanup_pending.lua
 share/rspamd/lualib/redis_scripts/ratelimit_update.lua
+share/rspamd/lualib/rspamadm/classifier_test.lua
 share/rspamd/lualib/rspamadm/clickhouse.lua
 share/rspamd/lualib/rspamadm/configgraph.lua
 share/rspamd/lualib/rspamadm/confighelp.lua
@@ -273,6 +277,7 @@ share/rspamd/plugins/external_services.lua
 share/rspamd/plugins/force_actions.lua
 share/rspamd/plugins/forged_recipients.lua
 share/rspamd/plugins/fuzzy_collect.lua
+share/rspamd/plugins/gpt.lua
 share/rspamd/plugins/greylist.lua
 share/rspamd/plugins/hfilter.lua
 share/rspamd/plugins/history_redis.lua
@@ -304,6 +309,7 @@ share/rspamd/plugins/spf.lua
 share/rspamd/plugins/trie.lua
 share/rspamd/plugins/url_redirector.lua
 share/rspamd/plugins/whitelist.lua
+share/rspamd/rules/archives.lua
 share/rspamd/rules/bitcoin.lua
 share/rspamd/rules/bounce.lua
 share/rspamd/rules/content.lua
@@ -346,6 +352,7 @@ share/rspamd/www/fonts/glyphicons-halflings-regular.woff
 share/rspamd/www/fonts/glyphicons-halflings-regular.woff2
 share/rspamd/www/img/asc.png
 share/rspamd/www/img/desc.png
+share/rspamd/www/img/drop-area.svg
 share/rspamd/www/img/rspamd_logo_navbar.png
 share/rspamd/www/index.html
 share/rspamd/www/js/app/common.js
