@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24631 2024/07/14 06:25:02 wiz Exp $
+$NetBSD: TODO,v 1.24632 2024/07/14 07:39:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -620,6 +620,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o evolution-exchange-3.5.2
 	o evolution-mapi-0.32.2
 	o ex-20050325
+	o exiv2-0.28.3
 	o exmh-2.8.0
 	o faces-1.7.7
 	o facter-2.4.5
@@ -856,6 +857,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.18.0
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -922,6 +924,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.0
 	o mercury-22.01.8
 	o merkaator-0.18.3
+	o meson-1.5.0
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -1111,6 +1114,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o procmail-3.24
 	o profit-2.5.3
 	o proj-9.2.0
+	o prometheus-2.53.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1123,33 +1127,47 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.5.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.137.0
+	o py-google-auth-2.32.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-maturin-1.7.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
+	o py-nh3-0.2.18
 	o py-numpy-2.0
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-packageurl-0.15.3
 	o py-pdf-parser-0.7.4
+	o py-pip-24.1.2
+	o py-pip-api-0.0.34
 	o py-postgresql-5.1.2
-	o py-pycnite-2024.6.28
+	o py-puremagic-1.26
+	o py-pycnite-2024.7.9
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-readme_renderer-44.0
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-serializable-1.1.0
+	o py-setuptools-70.3.0
 	o py-simpletal-5.1
+	o py-sip-qt6-13.8.0
+	o py-sip6-6.8.6
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
@@ -1186,6 +1204,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.9.0
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1201,6 +1220,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o scilab-5.5.2
 	o scm-5f3 [dholland has a partial update]
 	o scm-blackbox-2.0.0
+	o scons4-4.8.0
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
@@ -1258,6 +1278,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
+	o syncstorage-rs-0.17.1
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
