@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2024/06/18 03:13:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.121.2.1 2024/07/14 16:57:19 bsiegert Exp $
 #
 
-TB_VER=		115.12.0
+TB_VER=		115.12.2
 PKGNAME=	thunderbird-l10n-${TB_VER}
 DISTNAME=	# empty
 CATEGORIES=	mail
