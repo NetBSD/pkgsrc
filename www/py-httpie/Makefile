@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/10/23 06:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/07/14 06:04:57 wiz Exp $
 
-DISTNAME=	httpie-3.2.2
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
-PKGREVISION=	1
+DISTNAME=	httpie-3.2.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
 
@@ -28,14 +27,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-USE_PKG_RESOURCES=	yes
-
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing mandir paths.
-SUBST_FILES.man=	setup.py
+SUBST_FILES.man=	setup.cfg
 SUBST_SED.man+=		-e 's,share/man,${PKGMANDIR},g'
 
 post-install:
@@ -46,11 +43,13 @@ post-install:
 	${MV} ${bin}.1 ${bin}-${PYVERSSUFFIX}.1 || ${TRUE}
 .endfor
 
-# test status as of 3.2.2
-# 20 failed, 1006 passed, 5 skipped, 3 xfailed, 395 warnings
+# for tests
+ALLOW_NETWORK_ACCESS=1
+# test status as of 3.2.3
+# 19 failed, 1008 passed, 5 skipped, 4 xfailed, 166 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
