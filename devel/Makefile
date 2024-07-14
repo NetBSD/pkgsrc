@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4311 2024/07/14 12:00:43 wiz Exp $
+# $NetBSD: Makefile,v 1.4312 2024/07/14 12:29:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3038,6 +3038,7 @@ SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sure
+SUBDIR+=	py-syrupy
 SUBDIR+=	py-sysctl
 SUBDIR+=	py-tenacity
 SUBDIR+=	py-termcolor
