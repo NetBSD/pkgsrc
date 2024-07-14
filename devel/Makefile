@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4310 2024/07/14 11:58:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4311 2024/07/14 12:00:43 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2808,6 +2808,7 @@ SUBDIR+=	py-pycnite
 SUBDIR+=	py-pycotap
 SUBDIR+=	py-pydantic
 SUBDIR+=	py-pydantic-core
+SUBDIR+=	py-pydantic-settings
 SUBDIR+=	py-pydispatcher
 SUBDIR+=	py-pyelftools
 SUBDIR+=	py-pygit2
