@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4436 2024/07/14 13:33:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4437 2024/07/14 13:38:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7003,3 +7003,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-puremagic to 1.26 [wiz 2024-07-14]
 	Updated textproc/py-readme_renderer to 44.0 [wiz 2024-07-14]
 	Updated devel/py-serializable to 1.1.0 [wiz 2024-07-14]
+	Updated devel/py-setuptools to 70.3.0 [wiz 2024-07-14]
