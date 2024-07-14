@@ -1,4 +1,4 @@
-$NetBSD: README.NetBSD,v 1.1 2023/12/07 17:41:55 gdt Exp $
+$NetBSD: README.NetBSD,v 1.2 2024/07/14 23:42:48 gutteridge Exp $
 
 To use the NetBSD/amd64 Virtual Memory Monitor (NVMM) for QEMU :
 
@@ -9,8 +9,8 @@ You may want to run the NVMM tests to confirm that your setup is correct:
 # cd /usr/tests/lib/libnvmm/
 # atf-run | atf-report
 
-Configure the permissions once either by adding the username(s) of its users
-to the nvmm group in /etc/groups.
+Configure the permissions by adding the username(s) of its users to the nvmm
+group in /etc/group.
 
 Append "-accel nvmm" to your usual Qemu command line
 $ qemu-system-x86_64 -smp 4 -m 8G -cdrom Win10_2004_English_x64.iso -accel nvmm
