@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/06/08 15:49:15 taca Exp $
+# $NetBSD: Makefile,v 1.21 2024/07/14 07:45:28 taca Exp $
 
-DISTNAME=	mime-types-data-3.2024.0604
+DISTNAME=	mime-types-data-3.2024.0702
 CATEGORIES=	mail
 
 MAINTAINER=	minskim@NetBSD.org
