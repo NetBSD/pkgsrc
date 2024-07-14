@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4396 2024/07/14 06:07:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4397 2024/07/14 06:25:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6963,3 +6963,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/p5-IO-Socket-SSL to 2.087 [wiz 2024-07-14]
 	Updated www/py-httpie to 3.2.3 [wiz 2024-07-14]
 	Updated devel/py-test-lazy-fixture to 0.6.3nb2 [wiz 2024-07-14]
+	Updated devel/stgit to 2.4.7 [wiz 2024-07-14]
