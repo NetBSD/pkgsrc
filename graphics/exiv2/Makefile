@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2024/02/19 12:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/07/14 12:59:11 wiz Exp $
 
-DISTNAME=	exiv2-0.28.2
+DISTNAME=	exiv2-0.28.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exiv2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
