@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/02/19 12:38:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/07/14 12:59:11 wiz Exp $
 bin/exiv2
 include/exiv2/asfvideo.hpp
 include/exiv2/basicio.hpp
@@ -18,7 +18,6 @@ include/exiv2/exiv2lib_export.h
 include/exiv2/exv_conf.h
 include/exiv2/futils.hpp
 include/exiv2/gifimage.hpp
-include/exiv2/http.hpp
 include/exiv2/image.hpp
 include/exiv2/image_types.hpp
 include/exiv2/iptc.hpp
