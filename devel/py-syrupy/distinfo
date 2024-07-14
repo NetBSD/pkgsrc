@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/14 12:28:50 wiz Exp $
+
+BLAKE2s (syrupy-4.6.1.tar.gz) = 4a12254195d5fb79c4dff81f9f312810bb5d735c129ee184401e37b44f486a77
+SHA512 (syrupy-4.6.1.tar.gz) = 914e03d5dc9a4ee559ca4844915a31796731feea13a14c997e02b1bd4579dd0222fe346585538c8f5fb442d1e60bb18bdb77f8f8b0c5005a36511ea1e39099b1
+Size (syrupy-4.6.1.tar.gz) = 47550 bytes
