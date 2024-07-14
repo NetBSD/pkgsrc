@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/04/28 17:11:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/07/14 13:31:35 wiz Exp $
 
-DISTNAME=	readme_renderer-43.0
+DISTNAME=	readme_renderer-44.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/readme_renderer/}
@@ -12,13 +12,13 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.13.1:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.21.2:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.5.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-nh3>=0:../../www/py-nh3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
