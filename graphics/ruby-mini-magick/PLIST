@@ -1,28 +1,14 @@
-@comment $NetBSD: PLIST,v 1.17 2024/06/15 15:56:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/07/14 07:31:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/lib/mini_gmagick.rb
 ${GEM_LIBDIR}/lib/mini_magick.rb
 ${GEM_LIBDIR}/lib/mini_magick/configuration.rb
 ${GEM_LIBDIR}/lib/mini_magick/image.rb
 ${GEM_LIBDIR}/lib/mini_magick/image/info.rb
 ${GEM_LIBDIR}/lib/mini_magick/shell.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/animate.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/compare.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/composite.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/conjure.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/convert.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/display.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/identify.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/import.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/magick.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/mogrify.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/mogrify_restricted.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/montage.rb
-${GEM_LIBDIR}/lib/mini_magick/tool/stream.rb
 ${GEM_LIBDIR}/lib/mini_magick/utilities.rb
 ${GEM_LIBDIR}/lib/mini_magick/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
