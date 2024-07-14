@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/23 13:39:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/07/14 13:33:18 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,4 +12,10 @@ ${PYSITELIB}/serializable/formatters.pyo
 ${PYSITELIB}/serializable/helpers.py
 ${PYSITELIB}/serializable/helpers.pyc
 ${PYSITELIB}/serializable/helpers.pyo
+${PYSITELIB}/serializable/json.py
+${PYSITELIB}/serializable/json.pyc
+${PYSITELIB}/serializable/json.pyo
 ${PYSITELIB}/serializable/py.typed
+${PYSITELIB}/serializable/xml.py
+${PYSITELIB}/serializable/xml.pyc
+${PYSITELIB}/serializable/xml.pyo
