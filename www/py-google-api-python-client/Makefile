@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.85 2024/07/07 14:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2024/07/14 13:44:27 wiz Exp $
 
-DISTNAME=	google-api-python-client-2.136.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	google_api_python_client-2.137.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/googleapis/google-api-python-client
