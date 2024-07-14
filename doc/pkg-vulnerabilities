@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.218 2024/07/12 07:09:03 adam Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.219 2024/07/14 06:16:33 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26061,3 +26061,4 @@ znc<1.9.1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-39844
 py{37,38,39,310,311,312}-django>=4<4.2.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-38875
 py{37,38,39,310,311,312}-django>=5<5.0.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-38875
 exim<4.98	smtp-smuggling-attack	https://nvd.nist.gov/vuln/detail/CVE-2023-51766
+py{38,39,310,311,312}-httpie-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2023-48052
