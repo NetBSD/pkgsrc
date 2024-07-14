@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/02/23 15:00:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/07/14 07:45:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Code-of-Conduct.md
 ${GEM_LIBDIR}/Contributing.md
@@ -25,7 +25,9 @@ ${GEM_LIBDIR}/types/audio.yaml
 ${GEM_LIBDIR}/types/chemical.yaml
 ${GEM_LIBDIR}/types/conference.yaml
 ${GEM_LIBDIR}/types/drawing.yaml
+${GEM_LIBDIR}/types/example.yaml
 ${GEM_LIBDIR}/types/font.yaml
+${GEM_LIBDIR}/types/haptics.yaml
 ${GEM_LIBDIR}/types/image.yaml
 ${GEM_LIBDIR}/types/message.yaml
 ${GEM_LIBDIR}/types/model.yaml
