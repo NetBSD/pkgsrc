@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2024/07/07 14:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/07/14 13:20:49 wiz Exp $
 
-DISTNAME=	google-auth-2.31.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	google_auth-2.32.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/googleapis/google-auth-library-python
@@ -29,7 +29,7 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # 4 failed due to proxy setting
-# 4 failed, 1131 passed, 15 skipped, 49 warnings
+# 4 failed, 1143 passed, 15 skipped, 49 warnings
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography OpenSSL
