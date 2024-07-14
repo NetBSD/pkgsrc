@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:00:18 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pydantic_settings/__init__.py
+${PYSITELIB}/pydantic_settings/__init__.pyc
+${PYSITELIB}/pydantic_settings/__init__.pyo
+${PYSITELIB}/pydantic_settings/main.py
+${PYSITELIB}/pydantic_settings/main.pyc
+${PYSITELIB}/pydantic_settings/main.pyo
+${PYSITELIB}/pydantic_settings/py.typed
+${PYSITELIB}/pydantic_settings/sources.py
+${PYSITELIB}/pydantic_settings/sources.pyc
+${PYSITELIB}/pydantic_settings/sources.pyo
+${PYSITELIB}/pydantic_settings/utils.py
+${PYSITELIB}/pydantic_settings/utils.pyc
+${PYSITELIB}/pydantic_settings/utils.pyo
+${PYSITELIB}/pydantic_settings/version.py
+${PYSITELIB}/pydantic_settings/version.pyc
+${PYSITELIB}/pydantic_settings/version.pyo

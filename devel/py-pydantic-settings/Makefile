@@ -1,0 +1,24 @@
+# $NetBSD: Makefile,v 1.1 2024/07/14 12:00:18 wiz Exp $
+
+DISTNAME=	pydantic_settings-2.3.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+CATEGORIES=	devel python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic_settings/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/pydantic/pydantic-settings
+COMMENT=	Settings management using Pydantic
+LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.7.0:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-dotenv>=0.21.0:../../devel/py-dotenv
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-examples>=0:../../devel/py-test-examples
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=0:../../devel/py-test-mock
+
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/wheel.mk"
+.include "../../mk/bsd.pkg.mk"
