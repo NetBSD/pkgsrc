@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/07 21:39:17 wiz Exp $
-bin/heif-convert
+@comment $NetBSD: PLIST,v 1.5 2024/07/14 13:01:25 wiz Exp $
+bin/heif-dec
 bin/heif-enc
 bin/heif-info
 bin/heif-thumbnailer
 include/libheif/heif.h
 include/libheif/heif_cxx.h
+include/libheif/heif_items.h
 include/libheif/heif_plugin.h
 include/libheif/heif_properties.h
 include/libheif/heif_regions.h
@@ -16,7 +17,7 @@ lib/libheif.so
 lib/libheif.so.1
 lib/libheif.so.${PKGVERSION}
 lib/pkgconfig/libheif.pc
-man/man1/heif-convert.1
+man/man1/heif-dec.1
 man/man1/heif-enc.1
 man/man1/heif-info.1
 man/man1/heif-thumbnailer.1
