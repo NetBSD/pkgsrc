@@ -1,4 +1,4 @@
-$NetBSD: patch-library_std_src_sys_unix_thread__parking_netbsd.rs,v 1.4 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-library_std_src_sys_pal_unix_thread__parking_netbsd.rs,v 1.1 2024/07/15 03:32:23 wiz Exp $
 
 Try to cast to make this build, to avoid
 
@@ -21,8 +21,8 @@ For more information about this error, try `rustc --explain E0277`.
 
 This to un-break the 32-bit ports ... again.
 
---- library/std/src/sys/unix/thread_parking/netbsd.rs.orig	2023-03-06 15:58:58.000000000 +0000
-+++ library/std/src/sys/unix/thread_parking/netbsd.rs
+--- library/std/src/sys/pal/unix/thread_parking/netbsd.rs.orig	2024-03-22 14:07:26.254534488 +0000
++++ library/std/src/sys/pal/unix/thread_parking/netbsd.rs
 @@ -34,7 +34,7 @@ pub fn park_timeout(dur: Duration, hint:
          // Saturate so that the operation will definitely time out
          // (even if it is after the heat death of the universe).

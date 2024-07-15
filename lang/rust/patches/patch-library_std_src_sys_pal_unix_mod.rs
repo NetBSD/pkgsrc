@@ -1,10 +1,10 @@
-$NetBSD: patch-library_std_src_sys_unix_mod.rs,v 1.10 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-library_std_src_sys_pal_unix_mod.rs,v 1.1 2024/07/15 03:32:23 wiz Exp $
 
 Add libexecinfo for backtrace() on NetBSD.
 
---- library/std/src/sys/unix/mod.rs.orig	2021-02-10 17:36:44.000000000 +0000
-+++ library/std/src/sys/unix/mod.rs
-@@ -269,6 +269,7 @@ cfg_if::cfg_if! {
+--- library/std/src/sys/pal/unix/mod.rs.orig	2024-03-22 12:47:54.470537834 +0000
++++ library/std/src/sys/pal/unix/mod.rs
+@@ -384,6 +384,7 @@ cfg_if::cfg_if! {
          #[link(name = "pthread")]
          extern "C" {}
      } else if #[cfg(target_os = "netbsd")] {
