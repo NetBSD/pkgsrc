@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.31 2024/07/15 22:36:52 sjmulder Exp $
+$NetBSD: distinfo,v 1.32 2024/07/15 22:44:54 sjmulder Exp $
 
 BLAKE2s (nnn-4.9.tar.gz) = 55ebf293e0ed886798eb9ce90969b45c3cfadc88714d74e16c01fa05872b7150
 SHA512 (nnn-4.9.tar.gz) = 3c16ed1cbc5466b05306e38c6f5d8eb7ade9cf5ad766f9ff3bf7d20d5bfb9bdf1564527e27191e2cd85542c25245f338e1236630de3d1c8e5fbd10d54d628a14
 Size (nnn-4.9.tar.gz) = 255144 bytes
-SHA1 (patch-src_nnn.c) = a61aa482a61cbffa4b3fcfcc1c1778c7b67716b9
+SHA1 (patch-src_nnn.c) = 649a46faa103b6bc15f45be6fca5759440e93f78
