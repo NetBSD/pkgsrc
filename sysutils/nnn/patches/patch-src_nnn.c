@@ -1,6 +1,7 @@
-$NetBSD: patch-src_nnn.c,v 1.6 2024/07/15 22:36:52 sjmulder Exp $
+$NetBSD: patch-src_nnn.c,v 1.7 2024/07/15 22:44:54 sjmulder Exp $
 
  - dprintf() polyfill for Solaris.
+   https://github.com/jarun/nnn/pull/1911
  - Disable large file support on old glibc where unsupported in fts.h.
    https://github.com/jarun/nnn/pull/1910
 
@@ -29,33 +30,35 @@ $NetBSD: patch-src_nnn.c,v 1.6 2024/07/15 22:36:52 sjmulder Exp $
  #define alloca(size) __builtin_alloca(size)
  #endif
  
-+#ifdef __sun	/* for Illumos. Solaris 11 has it. */
++#ifdef __sun
 +#define NEED_DPRINTF
 +#endif
 +
  #include "nnn.h"
  #include "dbg.h"
  
-@@ -854,6 +861,25 @@ static void notify_fifo(bool force);
+@@ -854,6 +861,27 @@ static void notify_fifo(bool force);
  
  /* Functions */
  
 +#ifdef NEED_DPRINTF
-+int dprintf(int fd, const char *format, ...)
++static int dprintf(int fd, const char *format, ...)
 +{
 +	va_list ap;
 +	char *s;
++	int len, nwritten;
 +
 +	va_start(ap, format);
-+	if (vasprintf(&s, format, ap) == -1)
-+		{ va_end(ap); return -1; }
++	len = vasprintf(&s, format, ap);
 +	va_end(ap);
 +
-+	if (write(fd, s, strlen(s)) == -1)
-+		{ free(s); return -1; }
++	if (len == -1)
++		return -1;
 +
++	nwritten = write(fd, s, len);
 +	free(s);
-+	return 0;
++
++	return nwritten;
 +}
 +#endif
 +
