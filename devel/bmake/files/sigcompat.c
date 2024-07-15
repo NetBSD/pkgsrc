@@ -104,7 +104,7 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)sigcompat.c	5.3 (Berkeley) 2/24/91";*/
-static char *rcsid = "$Id: sigcompat.c,v 1.8 2020/05/24 21:10:17 nia Exp $";
+static char *rcsid = "$Id: sigcompat.c,v 1.9 2024/07/15 09:10:06 jperkin Exp $";
 #endif				/* LIBC_SCCS and not lint */
 
 #undef signal
@@ -204,7 +204,7 @@ SIG_HDLR(*signal(int sig, SIG_HDLR(*handler)(int)))(int)
 #ifdef SIGSET_T_INT
 # define ss2m(ss) (MASK_T) *(ss)
 # define m2ss(ss, m)	*ss = (sigset_t) *(m)
-#else
+#elif !defined(HAVE_SIGSETMASK) || defined(FORCE_POSIX_SIGNALS)
 static  MASK_T
 ss2m(sigset_t *ss)
 {

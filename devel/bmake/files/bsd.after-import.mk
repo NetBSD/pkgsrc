@@ -1,4 +1,4 @@
-# $Id: bsd.after-import.mk,v 1.5 2020/05/24 21:10:17 nia Exp $
+# $Id: bsd.after-import.mk,v 1.6 2024/07/15 09:10:06 jperkin Exp $
 
 # This makefile is for use when integrating bmake into a BSD build
 # system.  Use this makefile after importing bmake.
@@ -9,7 +9,7 @@
 # The goal is to allow the benefits of autoconf without
 # the overhead of running configure.
 
-all: _makefile
+all: _makefile _utmakefile
 all: after-import
 
 # we rely on bmake
@@ -37,7 +37,9 @@ SRCTOP := ${srctop}
 .endif
 
 # This lets us match what boot-strap does
-.if !defined(HOST_OS)
+.if defined(.MAKE.OS)
+HOST_OS:= ${.MAKE.OS}
+.elif !defined(HOST_OS)
 HOST_OS!= uname
 .endif
 
@@ -57,6 +59,7 @@ bootstrap:	${BMAKE_SRC}/boot-strap ${MAKEFILE}
 # Makefiles need a little more tweaking than say config.h
 MAKEFILE_SED = 	sed -e '/^MACHINE/d' \
 	-e '/include.*VERSION/d' \
+	-e '/^CC=/s,=,?=,' \
 	-e '/^PROG/ { s,=,?=,;s,bmake,$${.CURDIR:T},; }' \
 	-e 's,^.-include,.sinclude,' \
 	-e '/^\..*include  *</ { s,<,<bsd.,;/autoconf/d; }' \
@@ -65,18 +68,25 @@ MAKEFILE_SED = 	sed -e '/^MACHINE/d' \
 # These are the simple files we want to capture
 configured_files= config.h Makefile.config unit-tests/Makefile.config
 
+# FreeBSD has dropped their tag with svn
+.if ${HOST_OS:NFreeBSD} == ""
+ECHO_TAG= :
+.else
+ECHO_TAG?= echo
+.endif
+
 after-import: bootstrap ${MAKEFILE}
 .for f in ${configured_files:M*.[ch]}
 	@echo Capturing $f
 	@mkdir -p ${${.CURDIR}/$f:L:H}
-	@(echo '/* $$${HOST_OS}$$ */'; cat ${HOST_OS}/$f) > ${.CURDIR}/$f
+	@(${ECHO_TAG} '/* $$${HOST_OS}$$ */'; cat ${HOST_OS}/$f) > ${.CURDIR}/$f
 .endfor
 .for f in ${configured_files:M*Makefile*}
 	@echo Capturing $f
 	@mkdir -p ${${.CURDIR}/$f:L:H}
 	@(echo '# This is a generated file, do NOT edit!'; \
 	echo '# See ${_this:S,${SRCTOP}/,,}'; \
-	echo '#'; echo '# $$${HOST_OS}$$'; echo; \
+	echo '#'; ${ECHO_TAG} '# $$${HOST_OS}$$'; echo; \
 	echo 'SRCTOP?= $${.CURDIR:${${.CURDIR}/$f:L:H:S,${SRCTOP}/,,:C,[^/]+,H,g:S,/,:,g}}'; echo; \
 	${MAKEFILE_SED} ${HOST_OS}/$f ) > ${.CURDIR}/$f
 .endfor
@@ -86,7 +96,7 @@ _makefile:	bootstrap ${MAKEFILE}
 	@echo Generating ${.CURDIR}/Makefile
 	@(echo '# This is a generated file, do NOT edit!'; \
 	echo '# See ${_this:S,${SRCTOP}/,,}'; \
-	echo '#'; echo '# $$${HOST_OS}$$'; \
+	echo '#'; ${ECHO_TAG} '# $$${HOST_OS}$$'; \
 	echo; echo 'SRCTOP?= $${.CURDIR:${.CURDIR:S,${SRCTOP}/,,:C,[^/]+,H,g:S,/,:,g}}'; \
 	echo; echo '# look here first for config.h'; \
 	echo 'CFLAGS+= -I$${.CURDIR}'; echo; \
@@ -106,6 +116,19 @@ _makefile:	bootstrap ${MAKEFILE}
 	echo ) > ${.TARGET}
 	@cmp -s ${.TARGET} ${.CURDIR}/Makefile || \
 	    mv ${.TARGET} ${.CURDIR}/Makefile
+
+_utmakefile: bootstrap ${MAKEFILE}
+	@echo Generating ${.CURDIR}/unit-tests/Makefile
+	@mkdir -p ${.CURDIR}/unit-tests
+	@(echo '# This is a generated file, do NOT edit!'; \
+	echo '# See ${_this:S,${SRCTOP}/,,}'; \
+	echo '#'; ${ECHO_TAG} '# $$${HOST_OS}$$'; \
+	${MAKEFILE_SED} \
+	-e '/^UNIT_TESTS/s,=.*,= $${srcdir},' \
+	${BMAKE_SRC}/unit-tests/Makefile ) > ${.TARGET}
+	@cmp -s ${.TARGET} ${.CURDIR}/unit-tests/Makefile || \
+	    mv ${.TARGET} ${.CURDIR}/unit-tests/Makefile
+
 
 .include <bsd.obj.mk>
 

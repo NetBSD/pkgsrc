@@ -1,15 +1,17 @@
-# $Id: meta.sys.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: meta.sys.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
 #
-#	@(#) Copyright (c) 2010-2020, Simon J. Gerraty
+#	@(#) Copyright (c) 2010-2023, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -17,32 +19,44 @@
 # include this if you want to enable meta mode
 # for maximum benefit, requires filemon(4) driver.
 
-.if ${MAKE_VERSION:U0} > 20100901
-.if !target(.ERROR)
-
-.-include <local.meta.sys.mk>
-
 # absolute path to what we are reading.
-_PARSEDIR = ${.PARSEDIR:tA}
+_PARSEDIR ?= ${.PARSEDIR:tA}
+
+.-include <local.meta.sys.env.mk>
 
 .if !defined(SYS_MK_DIR)
 SYS_MK_DIR := ${_PARSEDIR}
 .endif
 
-META_MODE += meta verbose
+.if !target(.ERROR)
+
+META_MODE += meta
+.if empty(.MAKEFLAGS:M-s)
+META_MODE += verbose
+.endif
+.if ${MAKE_VERSION:U0} > 20130323 && empty(.MAKE.PATH_FILEMON)
+# we do not support filemon
+META_MODE += nofilemon
+MKDEP_MK ?= auto.dep.mk
+.endif
+
 .MAKE.MODE ?= ${META_MODE}
 
-.if ${.MAKE.LEVEL} == 0
+_filemon := ${.MAKE.PATH_FILEMON:U/dev/filemon}
+
+.if empty(UPDATE_DEPENDFILE)
 _make_mode := ${.MAKE.MODE} ${META_MODE}
 .if ${_make_mode:M*read*} != "" || ${_make_mode:M*nofilemon*} != ""
 # tell everyone we are not updating Makefile.depend*
 UPDATE_DEPENDFILE = NO
 .export UPDATE_DEPENDFILE
 .endif
-.if ${UPDATE_DEPENDFILE:Uyes:tl} == "no" && !exists(/dev/filemon)
+.if ${_filemon:T:Mfilemon} == "filemon"
+.if ${UPDATE_DEPENDFILE:Uyes:tl} == "no" && !exists(${_filemon})
 # we should not get upset
 META_MODE += nofilemon
 .export META_MODE
+.endif
 .endif
 .endif
 
@@ -55,19 +69,7 @@ META_MODE += silent=yes
 .endif
 .endif
 
-# we use the pseudo machine "host" for the build host.
-# this should be taken care of before we get here
-.if ${OBJTOP:Ua} == ${HOST_OBJTOP:Ub}
-MACHINE = host
-.endif
-
-.if !defined(MACHINE0)
-# it can be handy to know which MACHINE kicked off the build
-# for example, if using Makefild.depend for multiple machines,
-# allowing only MACHINE0 to update can keep things simple.
-MACHINE0 := ${MACHINE}
-.export MACHINE0
-.endif
+.if ${MK_DIRDEPS_BUILD:Uno} == "yes"
 
 .if !defined(META2DEPS)
 .if defined(PYTHON) && exists(${PYTHON})
@@ -82,10 +84,16 @@ META2DEPS := ${META2DEPS}
 
 MAKE_PRINT_VAR_ON_ERROR += \
 	.ERROR_TARGET \
+	.ERROR_EXIT \
 	.ERROR_META_FILE \
 	.MAKE.LEVEL \
 	MAKEFILE \
 	.MAKE.MODE
+
+MK_META_ERROR_TARGET = yes
+.endif
+
+.if ${MK_META_ERROR_TARGET:Uno} == "yes"
 
 .if !defined(SB) && defined(SRCTOP)
 SB = ${SRCTOP:H}
@@ -93,30 +101,24 @@ SB = ${SRCTOP:H}
 ERROR_LOGDIR ?= ${SB}/error
 meta_error_log = ${ERROR_LOGDIR}/meta-${.MAKE.PID}.log
 
-# we are not interested in make telling us a failure happened elsewhere
 .ERROR: _metaError
+# We are interested here in the target(s) that caused the build to fail.
+# We want to ignore targets that were "aborted" due to failure
+# elsewhere per the message below or a sub-make may just exit 6.
 _metaError: .NOMETA .NOTMAIN
-	-@[ "${.ERROR_META_FILE}" ] && { \
+	-@[ ${.ERROR_EXIT:U0} = 6 ] && exit 0; \
+	[ "${.ERROR_META_FILE}" ] && { \
 	grep -q 'failure has been detected in another branch' ${.ERROR_META_FILE} && exit 0; \
 	mkdir -p ${meta_error_log:H}; \
 	cp ${.ERROR_META_FILE} ${meta_error_log}; \
 	echo "ERROR: log ${meta_error_log}" >&2; }; :
 
 .endif
+.endif
 
 # Are we, after all, in meta mode?
 .if ${.MAKE.MODE:Uno:Mmeta*} != ""
-MKDEP_MK = meta.autodep.mk
-
-.if ${.MAKE.MAKEFILES:M*sys.dependfile.mk} == ""
-# this does all the smarts of setting .MAKE.DEPENDFILE
-.-include <sys.dependfile.mk>
-# check if we got anything sane
-.if ${.MAKE.DEPENDFILE} == ".depend"
-.undef .MAKE.DEPENDFILE
-.endif
-.MAKE.DEPENDFILE ?= Makefile.depend
-.endif
+MKDEP_MK ?= meta.autodep.mk
 
 # we can afford to use cookies to prevent some targets
 # re-running needlessly
@@ -140,34 +142,18 @@ META_NOECHO= :
 .warning Setting UPDATE_DEPENDFILE=NO due to -k
 UPDATE_DEPENDFILE= NO
 .export UPDATE_DEPENDFILE
-.elif !exists(/dev/filemon)
-.error ${.newline}ERROR: The filemon module (/dev/filemon) is not loaded.
+.elif ${_filemon:T} == "filemon" && !exists(${_filemon})
+.error ${.newline}ERROR: The filemon module (${_filemon}) is not loaded.
 .endif
 .endif
 
-.if ${.MAKE.LEVEL} == 0
-# make sure dirdeps target exists and do it first
-all: dirdeps .WAIT
-dirdeps:
-.NOPATH: dirdeps
+.else				# in meta mode?
 
-.if defined(ALL_MACHINES)
-# the first .MAIN: is what counts
-# by default dirdeps is all we want at level0
-.MAIN: dirdeps
-# tell dirdeps.mk what we want
-BUILD_AT_LEVEL0 = no
-.endif
-.if ${.TARGETS:Nall} == "" 
-# it works best if we do everything via sub-makes
-BUILD_AT_LEVEL0 ?= no
-.endif
-
-.endif
-.else
 META_COOKIE_TOUCH=
 # some targets need to be .PHONY in non-meta mode
 META_NOPHONY= .PHONY
 META_NOECHO= echo
-.endif
-.endif
+
+.endif				# in meta mode?
+
+.-include <local.meta.sys.mk>

@@ -40,7 +40,7 @@
 #
 
 # RCSid:
-#	$Id: mkdeps.sh,v 1.5 2020/05/24 21:10:17 nia Exp $
+#	$Id: mkdeps.sh,v 1.6 2024/07/15 09:10:06 jperkin Exp $
 #
 #	@(#) Copyright (c) 1993 Simon J. Gerraty
 #
@@ -118,6 +118,13 @@ else
     rm -f /tmp/f$$.c
   fi
 fi
+
+# some Linux systems have deprecated egrep in favor of grep -E
+# but not everyone supports that
+case "`echo bmake | egrep 'a|b' 2>&1`" in
+bmake) ;;
+*) egrep() { grep -E "$@"; }
+esac
 
 clean_up() {
   trap "" 2 3

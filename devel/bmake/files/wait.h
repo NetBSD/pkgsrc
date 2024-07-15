@@ -6,7 +6,7 @@
  */
 /*
  * RCSid:
- *	$Id: wait.h,v 1.5 2020/05/24 21:10:17 nia Exp $
+ *	$Id: wait.h,v 1.6 2024/07/15 09:10:07 jperkin Exp $
  *
  *      @(#)Copyright (c) 1994, Simon J. Gerraty.
  *      

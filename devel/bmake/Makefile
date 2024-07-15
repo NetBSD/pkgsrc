@@ -1,15 +1,10 @@
-# $NetBSD: Makefile,v 1.80 2022/11/09 13:14:07 joerg Exp $
+# $NetBSD: Makefile,v 1.81 2024/07/15 09:10:05 jperkin Exp $
 
-DISTNAME=	bmake-20200524
-PKGREVISION=	1
+PKGNAME=	bmake-20240711
 CATEGORIES=	devel
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	https://www.crufty.net/ftp/pub/sjg/
 
-# distfile obtained from ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
-# source is kept in files/ for bootstrap purposes
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jperkin@pkgsrc.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	modified-bsd
@@ -22,14 +17,11 @@ WRKSRC=		${WRKDIR}/bmake
 
 USE_FEATURES=	nbcompat
 
-makesyspath=	${PREFIX}/share/mk
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-default-sys-path=${makesyspath}
-CONFIGURE_ARGS+=	--with-machine_arch=${MACHINE_ARCH}
+CONFIGURE_ARGS+=	--with-default-sys-path=${PREFIX}/share/mk
+CONFIGURE_ARGS+=	--with-force-machine-arch=${MACHINE_ARCH}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
@@ -63,7 +55,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${DESTDIR}${PREFIX}/bin
 .if !empty(MANINSTALL:Mcatinstall)
-.  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
+.  if ${CATMAN_SECTION_SUFFIX:U:tl} == "yes"
 	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.1
 .  else
 	${INSTALL_MAN} ${WRKSRC}/bmake.cat1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/bmake.0
@@ -72,6 +64,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 do-test:
-	cd ${WRKSRC}/unit-tests && ${WRKSRC}/bmake test
+	cd ${WRKSRC}/unit-tests && MAKEFLAGS= ${WRKSRC}/bmake -r -m / test
 
 .include "../../mk/bsd.pkg.mk"

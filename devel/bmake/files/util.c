@@ -1,46 +1,33 @@
-/*	$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $	*/
+/*	$NetBSD: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.17 2020/08/25 21:43:33 js Exp $
+ *	$Id: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $
  */
-#if defined(__MINT__) || defined(__linux__)
-#include <signal.h>
-#endif
 
-#include "make.h"
-
-#ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $";
-#else
-#ifndef lint
-__RCSID("$NetBSD: util.c,v 1.17 2020/08/25 21:43:33 js Exp $");
-#endif
-#endif
-
+#include <sys/param.h>
 #include <errno.h>
 #include <time.h>
 #include <signal.h>
 
-#ifndef SA_RESTART
-#define SA_RESTART 0
-#endif
+#include "make.h"
 
-#if !defined(HAVE_STRERROR)
+MAKE_RCSID("$NetBSD: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $");
+
+#if !defined(MAKE_NATIVE) && !defined(HAVE_STRERROR)
 extern int errno, sys_nerr;
 extern char *sys_errlist[];
 
 char *
 strerror(int e)
 {
-    static char buf[100];
-    if (e < 0 || e >= sys_nerr) {
-	snprintf(buf, sizeof(buf), "Unknown error %d", e);
-	return buf;
-    }
-    else
-	return sys_errlist[e];
+	static char buf[100];
+	if (e < 0 || e >= sys_nerr) {
+		snprintf(buf, sizeof buf, "Unknown error %d", e);
+		return buf;
+	} else
+		return sys_errlist[e];
 }
 #endif
 
@@ -70,9 +57,9 @@ findenv(const char *name, int *offset)
 char *
 getenv(const char *name)
 {
-    int offset;
+	int offset;
 
-    return(findenv(name, &offset));
+	return findenv(name, &offset);
 }
 
 int
@@ -86,8 +73,8 @@ unsetenv(const char *name)
 		return -1;
 	}
 
-	while (findenv(name, &offset))	{ /* if set multiple times */
-		for (p = &environ[offset];; ++p)
+	while (findenv(name, &offset)) {	/* if set multiple times */
+		for (p = &environ[offset];; p++)
 			if (!(*p = *(p + 1)))
 				break;
 	}
@@ -107,8 +94,8 @@ setenv(const char *name, const char *value, int rewrite)
 		return -1;
 	}
 
-	if (*value == '=')			/* no `=' in value */
-		++value;
+	if (*value == '=')	/* no `=' in value */
+		value++;
 	l_value = strlen(value);
 
 	/* find if already exists */
@@ -135,7 +122,7 @@ setenv(const char *name, const char *value, int rewrite)
 		environ = savedEnv;
 		environ[offset + 1] = NULL;
 	}
-	for (cc = name; *cc && *cc != '='; ++cc)	/* no `=' in name */
+	for (cc = name; *cc && *cc != '='; cc++)	/* no `=' in name */
 		continue;
 	size = cc - name;
 	/* name + `=' + value */
@@ -166,55 +153,55 @@ main(int argc, char *argv[])
 
 
 #if defined(__hpux__) || defined(__hpux)
-/* strrcpy():
+/*
+ * strrcpy():
  *	Like strcpy, going backwards and returning the new pointer
  */
 static char *
 strrcpy(char *ptr, char *str)
 {
-    int len = strlen(str);
+	int len = strlen(str);
 
-    while (len)
-	*--ptr = str[--len];
+	while (len != 0)
+		*--ptr = str[--len];
 
-    return (ptr);
-} /* end strrcpy */
+	return ptr;
+}
 
-
-char    *sys_siglist[] = {
-        "Signal 0",
-        "Hangup",                       /* SIGHUP    */
-        "Interrupt",                    /* SIGINT    */
-        "Quit",                         /* SIGQUIT   */
-        "Illegal instruction",          /* SIGILL    */
-        "Trace/BPT trap",               /* SIGTRAP   */
-        "IOT trap",                     /* SIGIOT    */
-        "EMT trap",                     /* SIGEMT    */
-        "Floating point exception",     /* SIGFPE    */
-        "Killed",                       /* SIGKILL   */
-        "Bus error",                    /* SIGBUS    */
-        "Segmentation fault",           /* SIGSEGV   */
-        "Bad system call",              /* SIGSYS    */
-        "Broken pipe",                  /* SIGPIPE   */
-        "Alarm clock",                  /* SIGALRM   */
-        "Terminated",                   /* SIGTERM   */
-        "User defined signal 1",        /* SIGUSR1   */
-        "User defined signal 2",        /* SIGUSR2   */
-        "Child exited",                 /* SIGCLD    */
-        "Power-fail restart",           /* SIGPWR    */
-        "Virtual timer expired",        /* SIGVTALRM */
-        "Profiling timer expired",      /* SIGPROF   */
-        "I/O possible",                 /* SIGIO     */
-        "Window size changes",          /* SIGWINDOW */
-        "Stopped (signal)",             /* SIGSTOP   */
-        "Stopped",                      /* SIGTSTP   */
-        "Continued",                    /* SIGCONT   */
-        "Stopped (tty input)",          /* SIGTTIN   */
-        "Stopped (tty output)",         /* SIGTTOU   */
-        "Urgent I/O condition",         /* SIGURG    */
-        "Remote lock lost (NFS)",       /* SIGLOST   */
-        "Signal 31",                    /* reserved  */
-        "DIL signal"                    /* SIGDIL    */
+char *sys_siglist[] = {
+	"Signal 0",
+	"Hangup",			/* SIGHUP    */
+	"Interrupt",			/* SIGINT    */
+	"Quit",				/* SIGQUIT   */
+	"Illegal instruction",		/* SIGILL    */
+	"Trace/BPT trap",		/* SIGTRAP   */
+	"IOT trap",			/* SIGIOT    */
+	"EMT trap",			/* SIGEMT    */
+	"Floating point exception",	/* SIGFPE    */
+	"Killed",			/* SIGKILL   */
+	"Bus error",			/* SIGBUS    */
+	"Segmentation fault",		/* SIGSEGV   */
+	"Bad system call",		/* SIGSYS    */
+	"Broken pipe",			/* SIGPIPE   */
+	"Alarm clock",			/* SIGALRM   */
+	"Terminated",			/* SIGTERM   */
+	"User defined signal 1",	/* SIGUSR1   */
+	"User defined signal 2",	/* SIGUSR2   */
+	"Child exited",			/* SIGCLD    */
+	"Power-fail restart",		/* SIGPWR    */
+	"Virtual timer expired",	/* SIGVTALRM */
+	"Profiling timer expired",	/* SIGPROF   */
+	"I/O possible",			/* SIGIO     */
+	"Window size changes",		/* SIGWINDOW */
+	"Stopped (signal)",		/* SIGSTOP   */
+	"Stopped",			/* SIGTSTP   */
+	"Continued",			/* SIGCONT   */
+	"Stopped (tty input)",		/* SIGTTIN   */
+	"Stopped (tty output)",		/* SIGTTOU   */
+	"Urgent I/O condition",		/* SIGURG    */
+	"Remote lock lost (NFS)",	/* SIGLOST   */
+	"Signal 31",			/* reserved  */
+	"DIL signal"			/* SIGDIL    */
 };
 #endif /* __hpux__ || __hpux */
 
@@ -230,7 +217,7 @@ char    *sys_siglist[] = {
 int
 killpg(int pid, int sig)
 {
-    return kill(-pid, sig);
+	return kill(-pid, sig);
 }
 
 #if !defined(BSD) && !defined(d_fileno)
@@ -280,7 +267,7 @@ getwd(char *pathname)
 	if (st_cur.st_ino == st_root.st_ino &&
 	    DEV_DEV_COMPARE(st_cur.st_dev, st_root.st_dev)) {
 	    (void)strcpy(pathname, *pathptr != '/' ? "/" : pathptr);
-	    return (pathname);
+	    return pathname;
 	}
 
 	/* open the parent directory */
@@ -303,8 +290,7 @@ getwd(char *pathname)
 	    for (d = readdir(dp); d != NULL; d = readdir(dp))
 		if (d->d_fileno == st_cur.st_ino)
 		    break;
-	}
-	else {
+	} else {
 	    /*
 	     * Parent has a different device. This is a mount point so we
 	     * need to stat every member
@@ -353,20 +339,28 @@ getcwd(path, sz)
 }
 #endif
 
+#if !defined(HAVE_SIGACTION)
+#include "sigact.h"
+#endif
+
+#ifndef SA_RESTART
+# define SA_RESTART 0
+#endif
+
 /* force posix signals */
-void (*
-bmake_signal(int s, void (*a)(int)))(int)
+SignalProc
+bmake_signal(int s, SignalProc a)
 {
-    struct sigaction sa, osa;
+	struct sigaction sa, osa;
 
-    sa.sa_handler = a;
-    sigemptyset(&sa.sa_mask);
-    sa.sa_flags = SA_RESTART;
+	sa.sa_handler = a;
+	sigemptyset(&sa.sa_mask);
+	sa.sa_flags = SA_RESTART;
 
-    if (sigaction(s, &sa, &osa) == -1)
-	return SIG_ERR;
-    else
-	return osa.sa_handler;
+	if (sigaction(s, &sa, &osa) == -1)
+		return SIG_ERR;
+	else
+		return osa.sa_handler;
 }
 
 #if !defined(HAVE_VSNPRINTF) || !defined(HAVE_VASPRINTF)
@@ -396,14 +390,14 @@ vsnprintf(char *s, size_t n, const char *fmt, va_list args)
 	 * We cast to void * to make everyone happy.
 	 */
 	fakebuf._ptr = (void *)s;
-	fakebuf._cnt = n-1;
+	fakebuf._cnt = n - 1;
 	fakebuf._file = -1;
 	_doprnt(fmt, args, &fakebuf);
 	fakebuf._cnt++;
 	putc('\0', &fakebuf);
-	if (fakebuf._cnt<0)
-	    fakebuf._cnt = 0;
-	return (n-fakebuf._cnt-1);
+	if (fakebuf._cnt < 0)
+		fakebuf._cnt = 0;
+	return n - fakebuf._cnt - 1;
 #else
 #ifndef _PATH_DEVNULL
 # define _PATH_DEVNULL "/dev/null"
@@ -441,18 +435,28 @@ snprintf(char *s, size_t n, const char *fmt, ...)
 }
 #endif
 		
-#if !defined(HAVE_STRFTIME)
+#if !defined(HAVE_STRFTIME) || defined(FORCE_BMAKE_STRFTIME)
+/* we only implement enough to pass our unit-tests */
 size_t
 strftime(char *buf, size_t len, const char *fmt, const struct tm *tm)
 {
-	static char months[][4] = {
-		"Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+	static const char *months[] = {
+		"January", "February", "March", 
+		"April", "May", "June", 
+		"July", "August", "September",
+		"October", "November", "December"
 	};
-
+	static const char *days[] = {
+		"Sunday", "Monday", "Tuesday", "Wednesday",
+		"Thursday", "Friday", "Saturday"
+	};
+	int i;
 	size_t s;
 	char *b = buf;
+	char *cp;
 
+	if (fmt == NULL || *fmt == '\0')
+		fmt = "%c";
 	while (*fmt) {
 		if (len == 0)
 			return buf - b;
@@ -461,6 +465,7 @@ strftime(char *buf, size_t len, const char *fmt, const struct tm *tm)
 			len--;
 			continue;
 		}
+		fmt++;
 		switch (*fmt++) {
 		case '%':
 			*buf++ = '%';
@@ -471,25 +476,86 @@ strftime(char *buf, size_t len, const char *fmt, const struct tm *tm)
 			*buf = '%';
 			s = 1;
 			break;
+		case 'A':
+			s = snprintf(buf, len, "%s", days[tm->tm_wday]);
+			break;
+		case 'a':
+			s = snprintf(buf, len, "%.3s", days[tm->tm_wday]);
+			break;
+		case 'B':
+			if (tm->tm_mon >= 12)
+				return buf - b;
+			s = snprintf(buf, len, "%s", months[tm->tm_mon]);
+			break;
+		case 'b':
+			if (tm->tm_mon >= 12)
+				return buf - b;
+			s = snprintf(buf, len, "%.3s", months[tm->tm_mon]);
+			break;
+		case 'c':
+			s = strftime(buf, len, "%a %b %e %H:%M:%S %Y", tm);
+			break;
+		case 'd':
+			s = snprintf(buf, len, "%02d", tm->tm_mday);
+			break;
+		case 'e':
+			s = snprintf(buf, len, "%2d", tm->tm_mday);
+			break;
+		case 'F':
+			s = strftime(buf, len, "%y-%m-%d", tm);
+			break;
+		case 'H':
+			s = snprintf(buf, len, "%02d", tm->tm_hour);
+			break;
+		case 'I':
+			if ((i = tm->tm_hour) == 0)
+				i = 24;
+			s = snprintf(buf, len, "%02d", (i > 12) ? (i - 12) : i);
+			break;
+		case 'j':
+			s = snprintf(buf, len, "%03d", tm->tm_yday + 1);
+			break;
 		case 'k':
 			s = snprintf(buf, len, "%d", tm->tm_hour);
 			break;
 		case 'M':
 			s = snprintf(buf, len, "%02d", tm->tm_min);
 			break;
+		case 'm':
+			s = snprintf(buf, len, "%02d", 1 + tm->tm_mon);
+			break;
 		case 'S':
 			s = snprintf(buf, len, "%02d", tm->tm_sec);
 			break;
-		case 'b':
-			if (tm->tm_mon >= 12)
-				return buf - b;
-			s = snprintf(buf, len, "%s", months[tm->tm_mon]);
+		case 's':
+			s = snprintf(buf, len, "%ld", (long)time(NULL));
 			break;
-		case 'd':
-			s = snprintf(buf, len, "%02d", tm->tm_mday);
+		case 'T':
+			s = strftime(buf, len, "%H:%M:%S", tm);
+			break;
+		case 'w':
+			s = snprintf(buf, len, "%02d", tm->tm_wday);
 			break;
 		case 'Y':
 			s = snprintf(buf, len, "%d", 1900 + tm->tm_year);
+			break;
+		case 'y':
+			s = snprintf(buf, len, "%02d", tm->tm_year % 100);
+			break;
+		case 'Z':
+			if ((cp = getenv("TZ")) != NULL) {
+				char tz[20];
+
+				i = snprintf(tz, sizeof(tz), "%s", cp);
+				if (i > 5) {
+					cp = &tz[i - 3];
+					tz[3] = '\0';
+				} else
+					cp = tz;
+				s = snprintf(buf, len, "%s",
+				    tm->tm_isdst ? cp : tz);
+			} else
+				s = 0;
 			break;
 		default:
 			s = snprintf(buf, len, "Unsupported format %c",
@@ -499,6 +565,7 @@ strftime(char *buf, size_t len, const char *fmt, const struct tm *tm)
 		buf += s;
 		len -= s;
 	}
+	return buf - b;
 }
 #endif
 
@@ -597,4 +664,80 @@ warnx(const char *fmt, ...)
         vwarnx(fmt, ap);
         va_end(ap);
 }
+#endif
+
+#ifdef HAVE_INTTYPES_H
+#include <inttypes.h>
+#elif defined(HAVE_STDINT_H)
+#include <stdint.h>
+#endif
+#ifdef HAVE_LIMITS_H
+#include <limits.h>
+#endif
+
+#ifndef NUM_TYPE
+# ifdef HAVE_LONG_LONG_INT
+#   define NUM_TYPE long long
+# elif defined(_INT64_T_DECLARED) || defined(int64_t)
+#   define NUM_TYPE int64_t
+# endif
+#endif
+
+#ifdef NUM_TYPE
+#if !defined(HAVE_STRTOLL)
+#define BCS_ONLY
+#define _FUNCNAME strtoll
+#define __INT NUM_TYPE
+#undef __INT_MIN
+#undef __INT_MAX
+#ifdef LLONG_MAX
+# define __INT_MIN LLONG_MIN
+# define __INT_MAX LLONG_MAX
+#elif defined(INT64_MAX)
+# define __INT_MIN INT64_MIN
+# define __INT_MAX INT64_MAX
+#endif
+#ifndef _DIAGASSERT
+# define _DIAGASSERT(e)
+#endif
+#ifndef __UNCONST
+# define __UNCONST(a)      ((void *)(unsigned long)(const void *)(a))
+#endif
+#include "_strtol.h"
+#endif
+
+#endif
+
+#if !defined(HAVE_STRTOL)
+#define BCS_ONLY
+#define _FUNCNAME strtol
+#define __INT long
+#undef __INT_MIN
+#undef __INT_MAX
+#define __INT_MIN LONG_MIN
+#define __INT_MAX LONG_MAX
+#ifndef _DIAGASSERT
+# define _DIAGASSERT(e)
+#endif
+#ifndef __UNCONST
+# define __UNCONST(a)      ((void *)(unsigned long)(const void *)(a))
+#endif
+#include "_strtol.h"
+#endif
+
+#if !defined(HAVE_STRTOUL)
+#define BCS_ONLY
+#define _FUNCNAME strtoul
+#define __INT unsigned long
+#undef __INT_MIN
+#undef __INT_MAX
+#define __INT_MIN 0
+#define __INT_MAX ULONG_MAX
+#ifndef _DIAGASSERT
+# define _DIAGASSERT(e)
+#endif
+#ifndef __UNCONST
+# define __UNCONST(a)      ((void *)(unsigned long)(const void *)(a))
+#endif
+#include "_strtol.h"
 #endif

@@ -1,4 +1,6 @@
-# $Id: meta.subdir.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: meta.subdir.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
 #
 #	@(#) Copyright (c) 2010, Simon J. Gerraty
@@ -6,10 +8,10 @@
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -17,7 +19,7 @@
 .if !defined(NO_SUBDIR) && !empty(SUBDIR)
 .if make(destroy*) || make(clean*)
 .MAKE.MODE = compat
-.if !commands(destroy)
+.if !commands(obj)
 .-include <bsd.obj.mk>
 .endif
 .elif ${.MAKE.LEVEL} == 0
@@ -32,7 +34,7 @@ DIRDEPS = ${SUBDIR:N.WAIT:O:u:@d@${RELDIR}/$d@}
 .include <meta.autodep.mk>
 .else
 # this is the cunning bit
-# actually it is probably a bit risky 
+# actually it is probably a bit risky
 # since we may pickup subdirs which are not relevant
 # the alternative is a walk through the tree though
 # which is difficult without a sub-make.
@@ -68,7 +70,6 @@ DIRDEPS := ${DIRDEPS:S,^./,,:S,/./,/,g:${SUBDIRDEPS_FILTER:Uu}}
 # dirdeps.mk will compute some interesting combinations.
 .undef ALL_MACHINES
 
-DEP_RELDIR = ${RELDIR}
 .include <dirdeps.mk>
 .endif
 .endif
