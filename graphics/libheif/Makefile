@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/07/14 13:01:25 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/07/15 02:51:34 wiz Exp $
 
 DISTNAME=	libheif-1.18.0
 CATEGORIES=	graphics
@@ -14,6 +14,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_RAV1E=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
 
