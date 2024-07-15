@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.280 2024/03/03 12:46:28 wiz Exp $
+# $NetBSD: Makefile.common,v 1.281 2024/07/15 06:12:17 triaxx Exp $
 #
 # used by graphics/p5-PerlMagick/Makefile
 #
 # Changelog: https://github.com/ImageMagick/Website/blob/main/ChangeLog.md
 
 IM_MAJOR_VER=		7.1.1
-IM_MINOR_VER=		29
+IM_MINOR_VER=		35
 IM_MAJOR_LIB_VER=	7
 
-.if (${IM_MINOR_VER} != NONE)
+.if ${IM_MINOR_VER} != NONE
 DISTSUFFIX=	${IM_MAJOR_VER}-${IM_MINOR_VER}
 .else
 DISTSUFFIX=	${IM_MAJOR_VER}

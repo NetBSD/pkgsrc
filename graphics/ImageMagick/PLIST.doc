@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.8 2023/11/14 19:01:34 nia Exp $
+@comment $NetBSD: PLIST.doc,v 1.9 2024/07/15 06:12:17 triaxx Exp $
 man/man1/ImageMagick.1
 man/man1/Magick++-config.1
 man/man1/MagickCore-config.1
@@ -17,7 +17,6 @@ man/man1/mogrify.1
 man/man1/montage.1
 man/man1/stream.1
 share/doc/ImageMagick-7/LICENSE
-share/doc/ImageMagick-7/NEWS.txt
 share/doc/ImageMagick-7/images/ImageMagick.ico
 share/doc/ImageMagick-7/images/affine.png
 share/doc/ImageMagick-7/images/annotate.png
@@ -252,6 +251,7 @@ share/doc/ImageMagick-7/www/api/version.html
 share/doc/ImageMagick-7/www/api/vision.html
 share/doc/ImageMagick-7/www/api/wand-view.html
 share/doc/ImageMagick-7/www/architecture.html
+share/doc/ImageMagick-7/www/assets/color-modes.js
 share/doc/ImageMagick-7/www/assets/magick.css
 share/doc/ImageMagick-7/www/assets/magick.js
 share/doc/ImageMagick-7/www/changelog.html
@@ -312,6 +312,7 @@ share/doc/ImageMagick-7/www/opencl.html
 share/doc/ImageMagick-7/www/openmp.html
 share/doc/ImageMagick-7/www/perl-magick.html
 share/doc/ImageMagick-7/www/porting.html
+share/doc/ImageMagick-7/www/privacy-policy.html
 share/doc/ImageMagick-7/www/quantize.html
 share/doc/ImageMagick-7/www/resources.html
 share/doc/ImageMagick-7/www/search.html
