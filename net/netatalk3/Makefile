@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/07/15 11:25:03 hauke Exp $
+# $NetBSD: Makefile,v 1.66 2024/07/15 11:39:54 hauke Exp $
 
 DISTNAME=	netatalk-3.1.19
 PKGNAME=	${DISTNAME:C/-/3-/}
@@ -51,8 +51,6 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BUILDLINK_PREFIX.db5}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--with-libevent-header=${BUILDLINK_PREFIX.libevent}/include
-CONFIGURE_ARGS+=	--with-libevent-lib=${BUILDLINK_PREFIX.libevent}/lib
 CONFIGURE_ARGS+=	--without-mysql-config
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
