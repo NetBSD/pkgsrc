@@ -1,3 +1,5 @@
+$NetBSD: patch-src_lib_fmt_AudioFormatFormatter.hxx,v 1.2 2024/07/15 10:06:15 adam Exp $
+
 --- src/lib/fmt/AudioFormatFormatter.hxx.orig	2023-12-20 07:21:57.000000000 -0800
 +++ src/lib/fmt/AudioFormatFormatter.hxx	2024-07-14 16:13:04.360021663 -0700
 @@ -39,7 +39,7 @@
