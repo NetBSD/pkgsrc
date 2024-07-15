@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.221 2024/07/15 06:06:01 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.222 2024/07/15 06:10:51 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20051,7 +20051,7 @@ wireshark>=3.2<3.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020
 wireshark>=2.6<2.6.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-25863
 wireshark>=3.0<3.0.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-25863
 wireshark>=3.2<3.2.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-25863
-wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-26575
+wireshark<3.4.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-26575
 spice-server<0.14.2.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-14355
 spice-gtk<0.14.2.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-14355
 qemu<5.1.1	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-25742
@@ -25445,12 +25445,12 @@ wireshark<4.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-2952
 wireshark<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0667
 wireshark>=4<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0666
 wireshark<4.0.6	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-0668
-wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3649
-wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3648
+wireshark<4.0.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3649
+wireshark<4.0.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-3648
 wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4513
-wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4512
+wireshark<4.0.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4512
 wireshark<4.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-4511
-wireshark-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-5371
+wireshark<4.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-5371
 w3m<0.5.3.0.20230121nb4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
 w3m-img<0.5.3.0.20230121nb2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38252
 w3m<0.5.3.0.20230121nb4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2023-38253
