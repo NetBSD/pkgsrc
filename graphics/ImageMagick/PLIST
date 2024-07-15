@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.121 2023/11/15 12:08:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.122 2024/07/15 06:12:17 triaxx Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -134,7 +134,6 @@ include/ImageMagick-7/MagickWand/animate.h
 include/ImageMagick-7/MagickWand/compare.h
 include/ImageMagick-7/MagickWand/composite.h
 include/ImageMagick-7/MagickWand/conjure.h
-include/ImageMagick-7/MagickWand/convert.h
 include/ImageMagick-7/MagickWand/deprecate.h
 include/ImageMagick-7/MagickWand/display.h
 include/ImageMagick-7/MagickWand/drawing-wand.h
