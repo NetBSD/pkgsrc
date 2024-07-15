@@ -82,8 +82,22 @@
 #
 #	Possibly useful configure_args:
 #
+#	--without-makefile
+#		do not generate 'makefile'.
+#
+#		'makefile' is used to enable the classic
+#		'./configure; make; make install' dance, but on
+#		systems with case insensitive filesystems it can lead
+#		to infinite recursion.
+#
+#		It is disabled by default on Darwin, and Cygwin.
+#
 #	--without-meta
 #		disable use of meta mode.
+#
+#		Even without filemon(9) meta mode is very useful
+#		both for debugging build and improving reliability of
+#		update builds.
 #
 #	--without-filemon
 #		disable use of filemon(9) which is currently only
@@ -107,6 +121,10 @@
 #		set "machine_arch" to override that determined by
 #		machine.sh
 #
+#	--with-force_machine_arch="machine_arch"
+#		force "machine_arch" to override that determined by
+#		machine.sh
+#
 #	--with-default-sys-path="syspath"
 #		set an explicit default "syspath" which is where bmake
 #		will look for sys.mk and friends.
@@ -115,7 +133,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.14 2020/05/24 21:10:17 nia Exp $
+#	$Id: boot-strap,v 1.15 2024/07/15 09:10:06 jperkin Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -311,6 +329,14 @@ FindHereOrAbove() {
     )
 }
 
+# is $1 newer than $2 ...
+is_newer() {
+	case `'ls' -1td "$@" 2> /dev/null | head -1` in
+	$1) return 0;;
+	esac
+	return 1
+}
+
 # is $1 missing from $2 (or PATH) ?
 no_path() {
 	eval "__p=\$${2:-PATH}"
@@ -401,17 +427,6 @@ Bmake() {
     )
 }
 
-# there is actually a shell where type is not a builtin
-# if type is missing, which(1) had better exists!
-if (type cat) > /dev/null 2>&1; then
-which() {
-        type "$@" | sed 's,[()],,g;s,^[^/][^/]*,,;q'
-}
-fi
-# make sure test below uses the same diff that configure did
-TOOL_DIFF=`which diff`
-export TOOL_DIFF
-
 op_configure() {
 	$srcdir/configure $CONFIGURE_ARGS || exit 1
 }
@@ -421,13 +436,18 @@ op_build() {
 	chmod 755 make-bootstrap.sh || exit 1
 	./make-bootstrap.sh || exit 1
 	case "$op" in
-	build) op_test;;
+	build) rm -f tested; op_test;;
 	esac
 }
 
 op_test() {
 	[ -x bmake ] || op_build
-	Bmake test || exit 1
+	case "$op" in
+	test) ;;
+	*) is_newer bmake tested || return;;
+	esac
+	Bmake test TEST_MAKE=$objdir/bmake "$@" || exit 1
+	touch tested
 }
 
 op_clean() {
@@ -458,18 +478,26 @@ op_all() {
 	else
 		op_test
 		MAKE_VERSION=`sed -n '/^_MAKE_VERSION/ { s,.*=  *,,;p; }' $srcdir/Makefile`
-		echo You can install by running:
-		echo
-		echo $0 $cmd_args op=install
-		echo
-		echo "Use --install-prefix=/something to install somewhere other than $prefix"
-		echo "Use --install-destdir=/somewhere to set DESTDIR during install"
-		echo "Use --install-host-target to use INSTALL_BIN=$HOST_TARGET/bin"
-		echo "Use -DWITH_PROG_VERSION to install as bmake-$MAKE_VERSION"
-		echo "Use -DWITHOUT_PROG_LINK to suppress bmake -> bmake-$MAKE_VERSION symlink"
-		echo "Use -DWITHOUT_INSTALL_MK to skip installing files to $prefix/share/mk"
+		cat << EOM
+You can install by running:
+
+$0 $cmd_args op=install
+
+Use --install-prefix=/something to install somewhere other than $prefix
+Use --install-destdir=/somewhere to set DESTDIR during install
+Use --install-host-target to use INSTALL_BIN=$HOST_TARGET/bin
+Use -DWITH_PROG_VERSION to install as bmake-$MAKE_VERSION
+Use -DWITHOUT_PROG_LINK to suppress bmake -> bmake-$MAKE_VERSION symlink
+Use -DWITHOUT_INSTALL_MK to skip installing files to $prefix/share/mk
+EOM
 	fi
+	cat << EOM
+
+Note: bmake.cat1 contains ANSI escape sequences.
+You may need the -r or -R option to more/less to view it correctly.
+
+EOM
 }
 
-op_$op
+op_$op "$@"
 exit 0

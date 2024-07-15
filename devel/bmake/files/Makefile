@@ -1,4 +1,4 @@
-#	$Id: Makefile,v 1.5 2020/05/24 21:10:17 nia Exp $
+#	$Id: Makefile,v 1.6 2024/07/15 09:10:06 jperkin Exp $
 
 PROG=	bmake
 
@@ -11,6 +11,7 @@ SRCS= \
 	for.c \
 	hash.c \
 	job.c \
+	lst.c \
 	main.c \
 	make.c \
 	make_malloc.c \
@@ -18,42 +19,11 @@ SRCS= \
 	metachar.c \
 	parse.c \
 	str.c \
-	strlist.c \
 	suff.c \
 	targ.c \
 	trace.c \
 	util.c \
 	var.c
-
-# from lst.lib/
-SRCS+= \
-	lstAppend.c \
-	lstAtEnd.c \
-	lstAtFront.c \
-	lstClose.c \
-	lstConcat.c \
-	lstDatum.c \
-	lstDeQueue.c \
-	lstDestroy.c \
-	lstDupl.c \
-	lstEnQueue.c \
-	lstFind.c \
-	lstFindFrom.c \
-	lstFirst.c \
-	lstForEach.c \
-	lstForEachFrom.c \
-	lstInit.c \
-	lstInsert.c \
-	lstIsAtEnd.c \
-	lstIsEmpty.c \
-	lstLast.c \
-	lstMember.c \
-	lstNext.c \
-	lstOpen.c \
-	lstPrev.c \
-	lstRemove.c \
-	lstReplace.c \
-	lstSucc.c
 
 .-include "VERSION"
 .-include "Makefile.inc"
@@ -78,6 +48,12 @@ CFLAGS+= -I. -I${srcdir} ${XDEFS} -DMAKE_NATIVE
 CFLAGS+= ${COPTS.${.ALLSRC:M*.c:T:u}}
 COPTS.main.c+= "-DMAKE_VERSION=\"${_MAKE_VERSION}\""
 
+.for x in FORCE_MAKE_OS FORCE_MACHINE FORCE_MACHINE_ARCH
+.ifdef $x
+COPTS.main.c+= "-D$x=\"${$x}\""
+.endif
+.endfor
+
 # meta mode can be useful even without filemon
 # should be set by now
 USE_FILEMON ?= no
@@ -92,12 +68,13 @@ FILEMON_H ?= /usr/include/dev/filemon/filemon.h
 .if exists(${FILEMON_H}) && ${FILEMON_H:T} == "filemon.h"
 COPTS.filemon_dev.c += -DHAVE_FILEMON_H -I${FILEMON_H:H}
 .endif
-.endif				# USE_FILEMON == dev
+.elif ${USE_FILEMON} == "ktrace"
+COPTS.filemon_ktrace.c += -Wno-error=unused-parameter
+.endif
 
 .endif				# USE_FILEMON
 
 .PATH:	${srcdir}
-.PATH:	${srcdir}/lst.lib
 
 .if make(obj) || make(clean)
 SUBDIR+= unit-tests
@@ -109,17 +86,17 @@ SUBDIR+= unit-tests
 # list of OS's which are derrived from BSD4.4
 BSD44_LIST= NetBSD FreeBSD OpenBSD DragonFly MirBSD Bitrig
 # we are...
-OS!= uname -s
+OS := ${.MAKE.OS:U${uname -s:L:sh}}
 # are we 4.4BSD ?
 isBSD44:=${BSD44_LIST:M${OS}}
 
-.if ${isBSD44} == ""
-MANTARGET= cat
-INSTALL?=${srcdir}/install-sh
-.if (${MACHINE} == "sun386")
+.if ${isBSD44} == "" && ${OS:NCygwin:NDarwin:NLinux} != ""
+MANTARGET?= cat
+.if ${MACHINE} == "sun386"
 # even I don't have one of these anymore :-)
 CFLAGS+= -DPORTAR
-.elif (${MACHINE} != "sunos")
+.elif ${OS} != "SunOS"
+# assume the worst
 SRCS+= sigcompat.c
 CFLAGS+= -DSIGNAL_FLAGS=SA_RESTART
 .endif
@@ -155,10 +132,10 @@ EXTRACT_MAN=no
 MAN= ${PROG}.1
 MAN1= ${MAN}
 
-.if (${PROG} != "make")
+.if ${PROG} != "make"
 CLEANFILES+= my.history
 .if make(${MAN}) || !exists(${srcdir}/${MAN})
-my.history: ${MAKEFILE}
+my.history:
 	@(echo ".Nm"; \
 	echo "is derived from NetBSD"; \
 	echo ".Xr make 1 ."; \
@@ -200,42 +177,61 @@ SHAREDIR= ${SHAREDIR.bmake:U${prefix}/share}
 BINDIR= ${BINDIR.bmake:U${prefix}/bin}
 MANDIR= ${MANDIR.bmake:U${SHAREDIR}/man}
 
-.if !exists(.depend)
 ${OBJS}: config.h
-.endif
 
 # start-delete2 for bsd.after-import.mk
 
 # make sure that MAKE_VERSION gets updated.
-main.o: ${SRCS} ${.CURDIR}/VERSION
+main.o: ${srcdir}/VERSION
 
 .if ${MK_AUTOCONF_MK} == "yes"
 CONFIGURE_DEPS += ${.CURDIR}/VERSION
 # we do not need or want the generated makefile
 CONFIGURE_ARGS += --without-makefile
+AUTOCONF_GENERATED_MAKEFILE = Makefile.config
 .include <autoconf.mk>
 .endif
-SHARE_MK?=${SHAREDIR}/mk
-MKSRC=${srcdir}/mk
-INSTALL?=${srcdir}/install-sh
+SHARE_MK ?= ${SHAREDIR}/mk
+MKSRC = ${srcdir}/mk
+INSTALL ?= ${srcdir}/install-sh
 
 .if ${MK_INSTALL_MK} == "yes"
 install: install-mk
 .endif
 
 beforeinstall:
-	test -d ${DESTDIR}${BINDIR} || ${INSTALL} -m 775 -d ${DESTDIR}${BINDIR}
-	test -d ${DESTDIR}${MANDEST} || ${INSTALL} -m 775 -d ${DESTDIR}${MANDEST}
+	test -d ${DESTDIR}${BINDIR} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${BINDIR}
+	test -d ${DESTDIR}${MANDEST} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${MANDEST}
 
 install-mk:
 .if exists(${MKSRC}/install-mk)
-	test -d ${DESTDIR}${SHARE_MK} || ${INSTALL} -m 775 -d ${DESTDIR}${SHARE_MK}
-	sh ${MKSRC}/install-mk -v -m 644 ${DESTDIR}${SHARE_MK}
+	test -d ${DESTDIR}${SHARE_MK} || ${INSTALL} -m ${DIRMODE} -d ${DESTDIR}${SHARE_MK}
+	sh ${MKSRC}/install-mk -v -m ${NONBINMODE} ${DESTDIR}${SHARE_MK}
 .else
 	@echo need to unpack mk.tar.gz under ${srcdir} or set MKSRC; false
 .endif
 # end-delete2
 
 # A simple unit-test driver to help catch regressions
-accept test:
-	cd ${.CURDIR}/unit-tests && MAKEFLAGS= ${.MAKE} -r -m / TEST_MAKE=${TEST_MAKE:U${.OBJDIR}/${PROG:T}} ${.TARGET}
+TEST_MAKE ?= ${.OBJDIR}/${PROG:T}
+accept test: .NOMETA
+	cd ${.CURDIR}/unit-tests && \
+	MAKEFLAGS= ${TEST_MAKE} -r -m / ${.TARGET} ${TESTS:DTESTS=${TESTS:Q}}
+
+
+.if make(test) && ${MK_AUTO_OBJ} == "yes"
+# The test target above visits unit-tests with -r -m /
+# which prevents MK_AUTO_OBJ doing its job
+# so do it here
+.if defined(MAKEOBJDIRPREFIX) || ${MAKEOBJDIR:U:M*/*} != ""
+_utobj = ${.OBJDIR}/unit-tests
+.else
+_utobj = ${.CURDIR}/unit-tests/${MAKEOBJDIR:Uobj}
+.endif
+utobj: .NOMETA
+	@test -d ${_utobj} && exit 0; \
+	echo "[Creating ${_utobj}...]"; \
+	umask ${OBJDIR_UMASK:U002}; \
+	mkdir -p ${_utobj}
+test: utobj
+.endif

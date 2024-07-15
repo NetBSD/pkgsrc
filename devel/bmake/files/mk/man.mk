@@ -1,9 +1,15 @@
-# $Id: man.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# $Id: man.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
-.if !target(__${.PARSEFILE}__)
-__${.PARSEFILE}__:
+# should be set properly in sys.mk
+_this ?= ${.PARSEFILE:S,bsd.,,}
+
+.if !target(__${_this}__)
+__${_this}__: .NOTMAIN
+
+OPTIONS_DEFAULT_NO += CMT2DOC
 
 .include <init.mk>
+.include <options.mk>
 
 # unlike bsd.man.mk we handle 3 approaches
 # 1. install unformated nroff (default)
@@ -13,66 +19,25 @@ __${.PARSEFILE}__:
 # so we have to use sed(1).
 
 # set MANTARGET=cat for formatted pages
-MANTARGET?=	man
+MANTARGET ?=	man
 # set this to .0 for same behavior as bsd.man.mk
-MCATEXT?=
+MCATEXT ?=
 
-NROFF?=		nroff
-MANDIR?=	/usr/share/man
-MANDOC?= man
+NROFF ?=	nroff
+MANDIR ?=	/usr/share/man
+MANDOC ?= man
 
-.SUFFIXES: .1 .2 .3 .4 .5 .6 .7 .8 .9 .cat1 .cat2 .cat3 .cat4 .cat5 .cat6 \
-	.cat7 .cat8 .cat9
-
-.9.cat9 .8.cat8 .7.cat7 .6.cat6 .5.cat5 .4.cat4 .3.cat3 .2.cat2 .1.cat1:
-	@echo "${NROFF} -${MANDOC} ${.IMPSRC} > ${.TARGET:T}"
-	@${NROFF} -${MANDOC} ${.IMPSRC} > ${.TARGET:T} || ( rm -f ${.TARGET:T} ; false )
-
-.if defined(MAN) && !empty(MAN)
-
-# we use cmt2doc.pl to extract manpages from source
-# this is triggered by the setting of EXTRACT_MAN or MAN being set but
-# not existsing.
-
-.if !exists(${MAN:[1]}) && !target(${MAN:[1]})
-.if defined(EXTRACT_MAN) && ${EXTRACT_MAN} == "no"
-MAN=
-.else
-.if exists(/usr/local/share/bin/cmt2doc.pl)
-CMT2DOC?= cmt2doc.pl
-CMT2DOC_OPTS?=  ${CMT2DOC_ORGOPT} -pmS${.TARGET:E}
-.endif
-.ifdef CMT2DOC
-.c.8 .c.5 .c.3 .c.4 .c.1 \
-	.cc.8 .cc.5 .cc.3 .cc.4 .cc.1 \
-	.h.8 .h.5 .h.3 .h.4 .h.1 \
-	.sh.8 .sh.5 .sh.3 .sh.4 .sh.1 \
-	.pl.8 .pl.5 .pl.3 .pl.4 .pl.1:
-	@echo "${CMT2DOC} ${.IMPSRC} > ${.TARGET:T}"
-	@${CMT2DOC} ${CMT2DOC_OPTS} ${.IMPSRC} > ${.TARGET:T} || ( rm -f ${.TARGET:T} ; false )
-.else
-MAN=
-.endif
-.endif
-.endif
-
-_mandir=${DESTDIR}${MANDIR}/${MANTARGET}`echo $$page | sed -e 's/.*\.cat/./' -e 's/.*\.//'`
+MAN_SUFFIXES?= .1 .2 .3 .4 .5 .6 .7 .8 .9
+.SUFFIXES: ${MAN_SUFFIXES}
 .if ${MANTARGET} == "cat"
-_mfromdir?=.
-MANALL=	${MAN:S/.1$/.cat1/g:S/.2$/.cat2/g:S/.3$/.cat3/g:S/.4$/.cat4/g:S/.5$/.cat5/g:S/.6$/.cat6/g:S/.7$/.cat7/g:S/.8$/.cat8/g:S/.9$/.cat9/g}
-.if ${MCATEXT} == ""
-_minstpage=`echo $$page | sed 's/\.cat/./'`
-.else
-_minstpage=`echo $$page | sed 's/\.cat.*//'`${MCATEXT}
+.SUFFIXES: ${MAN_SUFFIXES:S,.,.cat,}
 .endif
-.endif
-.if target(${MAN:[1]})
-_mfromdir?=.
-.endif
-_mfromdir?=${.CURDIR}
-MANALL?= ${MAN}
-_minstpage?=$${page}
-.endif
+
+${MAN_SUFFIXES:@s@$s${s:S,.,.cat,}@}:
+	@echo "${NROFF} -${MANDOC} ${.IMPSRC} > ${.TARGET:T}"
+	@${NROFF} -${MANDOC} ${.IMPSRC} > ${.TARGET:T}.new && \
+	mv ${.TARGET:T}.new ${.TARGET:T}
+
 
 .if !empty(MANOWN)
 MAN_INSTALL_OWN ?= -o ${MANOWN} -g ${MANGRP}
@@ -81,11 +46,93 @@ MAN_CHOWN ?= chown
 MAN_CHOWN = :
 .endif
 
-MINSTALL=	${INSTALL} ${COPY} ${MAN_INSTALL_OWN} -m ${MANMODE}
+MINSTALL = ${INSTALL} ${COPY} ${MAN_INSTALL_OWN} -m ${MANMODE}
+
+.if defined(MAN) && !empty(MAN)
+
+.if ${MANTARGET} == "cat"
+MANALL ?= ${MAN:T:@p@${p:R}.cat${p:E}@}
+.else
+MANALL ?= ${MAN}
+.endif
+
+.if ${MK_CMT2DOC} == "yes"
+# use cmt2doc.py to extract manpages from source
+CMT2DOC ?= cmt2doc.py
+# -m  produces man(7)
+# -mm produces mdoc(7)
+CMT2DOC_FLAGS ?= -pm
+CMT2DOC_OPTS ?=  ${CMT2DOC_ORGOPT} -S${.TARGET:E}
+CMT2DOC_SUFFIXES += .c .h .sh .pl .py
+
+.SUFFIXES: ${CMT2DOC_SUFFIXES}
+
+${CMT2DOC_SUFFIXES:@s@${MAN_SUFFIXES:@m@$s$m@}@}:
+	@echo "${CMT2DOC} ${.IMPSRC} > ${.TARGET:T}"
+	@${CMT2DOC} ${CMT2DOC_FLAGS} ${CMT2DOC_OPTS} ${.IMPSRC} > ${.TARGET:T}.new && \
+	mv ${.TARGET:T}.new ${.TARGET:T}
+
+.endif
+
+# none of this is relevant unless doing maninstall
+.if make(*install)
+_mandir = ${DESTDIR}${MANDIR}/${MANTARGET}`echo $$page | sed -e 's/.*\.cat/./' -e 's/.*\.//'`
+.if ${MANTARGET} == "cat"
+_mfromdir ?= .
+.if ${MCATEXT} == ""
+_minstpage = `echo $$page | sed 's/\.cat/./'`
+.else
+_minstpage = `echo $$page | sed 's/\.cat.*//'`${MCATEXT}
+.endif
+.endif
+.if target(${MAN:[1]})
+_mfromdir ?= .
+.endif
+_mfromdir ?= ${.CURDIR}
+_minstpage ?= $${page}
+.endif
+
 .if defined(MANZ)
 # chown and chmod are done afterward automatically
-MCOMPRESS=	gzip -cf
-MCOMPRESSSUFFIX= .gz
+MCOMPRESS_CMD ?= gzip -cf
+MCOMPRESS_EXT ?= .gz
+
+_MANZ_USE:	.USE
+	@${MCOMPRESS_CMD} ${.ALLSRC} > ${.TARGET}
+
+.for _page in ${MANALL}
+${_page:T}${MCOMPRESS_EXT}: ${_page} _MANZ_USE
+.endfor
+.endif
+
+.if ${MK_STAGING_MAN} == "yes"
+_mansets := ${MAN:E:O:u:M*[1-9]:@s@man$s@}
+.if ${MANTARGET} == "cat"
+STAGE_AS_SETS += ${_mansets}
+_stage_man = stage_as
+.else
+STAGE_SETS += ${_mansets}
+_stage_man = stage_files
+.endif
+STAGE_TARGETS += ${_stage_man}
+.for _page _as in ${MANALL:@x@$x ${x:T:S/.cat/./}@}
+${_stage_man}.man${_as:E}: ${_page}
+.if target(${_page:T}${MCOMPRESS_EXT:Umanz})
+${_man_stage}.man${_as:E}: ${_page:T}${MCOMPRESS_EXT}
+.endif
+STAGE_DIR.man${_as:E} ?= ${STAGE_OBJTOP}${MANDIR}/${MANTARGET}${_as:E}${MANSUBDIR}
+.if ${MANTARGET} == "cat"
+STAGE_AS_${_page} = ${_as}
+.endif
+.endfor
+.if !defined(NO_MLINKS) && !empty(MLINKS)
+STAGE_SETS += mlinks
+STAGE_TARGETS += stage_links
+STAGE_LINKS.mlinks := ${MLINKS:M*.[1-9]:@f@${f:S,^,${MANDIR}/${MANTARGET}${f:E}${MANSUBDIR}/,}@}
+stage_links.mlinks: ${_mansets:@s@stage_files.$s@}
+.endif
+.endif
+
 .endif
 
 maninstall:

@@ -1,7 +1,10 @@
-# $Id: dep.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# $Id: dep.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
-.if !target(__${.PARSEFILE}__)
-__${.PARSEFILE}__:
+# should be set properly in sys.mk
+_this ?= ${.PARSEFILE:S,bsd.,,}
+
+.if !target(__${_this}__)
+__${_this}__: .NOTMAIN
 
 # handle Proc*C as well...
 .if defined(SRCS)
@@ -9,13 +12,18 @@ __${.PARSEFILE}__:
 .include <proc.mk>
 .endif
 
+.if ${MAKE_VERSION:U0} >= 20211212
+OBJ_SUFFIXES += ${.SUFFIXES:M*o}
+.else
 # it would be nice to be able to query .SUFFIXES
-OBJ_EXTENSIONS+= .o .po .lo .So
+OBJ_SUFFIXES += .o .po .lo ${PICO}
+.endif
+OBJ_SUFFIXES += ${PCM}
 
 # explicit dependencies help short-circuit .SUFFIX searches
 SRCS_DEP_FILTER+= N*.[hly]
 .for s in ${SRCS:${SRCS_DEP_FILTER:O:u:ts:}}
-.for e in ${OBJ_EXTENSIONS:O:u}
+.for e in ${OBJ_SUFFIXES:O:u}
 .if !target(${s:T:R}$e)
 ${s:T:R}$e: $s
 .endif
@@ -94,6 +102,7 @@ depend: beforedepend .depend _SUBDIRUSE afterdepend
 	    ${CXXFLAGS:M-[ID]*} ${CPPFLAGS} $$files;; \
 	esac
 .endif
+.-include <ccm.dep.mk>
 .else
 .depend:
 .endif

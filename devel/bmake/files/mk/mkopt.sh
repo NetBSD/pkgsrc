@@ -1,15 +1,18 @@
-:
-# $Id: mkopt.sh,v 1.2 2020/05/24 11:09:44 nia Exp $
+#!/bin/sh
+
+# SPDX-License-Identifier: BSD-2-Clause
 #
-#	@(#) Copyright (c) 2014, Simon J. Gerraty
+# $Id: mkopt.sh,v 1.3 2024/07/15 09:10:09 jperkin Exp $
+#
+#	@(#) Copyright (c) 2014-2022, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -83,9 +86,36 @@ _mk_opts_defaults() {
 	$OPTIONS_DEFAULT_DEPENDENT $__DEFAULT_DEPENDENT_OPTIONS
 }
 
+# _mk_cmdline_opts opt ...
+# look at the command line (saved in _cmdline)
+# to see any options we care about are being set with -DWITH*
+# or MK_*= if 'opt' is '*' then all options are of interest.
+_cmdline="$0 $@"
+_mk_cmdline_opts() {
+    for _x in $_cmdline
+    do
+	case "$_x" in
+	-DWITH*|${_MKOPT_PREFIX:-MK_}*)
+	    for _o in "$@"
+	    do
+		case "$_x" in
+		-DWITH_$_o|-DWITHOUT_$_o) eval ${_x#-D}=1;;
+		-DWITH_$_o=*|-DWITHOUT_$_o=*) eval ${_x#-D};;
+		${_MKOPT_PREFIX:-MK_}$_o=*) eval "$_x";;
+		esac
+	    done
+	    ;;
+	esac
+    done
+}
+
+
 case "/$0" in
 */mkopt*)
     _list=no
+    _mk_cmdline_opts '*'
+    _mk_opts no DEBUG
+    [ $MK_DEBUG = no ] || set -x
     while :
     do
 	case "$1" in

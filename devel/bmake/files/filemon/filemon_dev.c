@@ -1,6 +1,6 @@
-/*	$NetBSD: filemon_dev.c,v 1.2 2020/05/24 11:09:44 nia Exp $	*/
+/*	$NetBSD: filemon_dev.c,v 1.3 2024/07/15 09:10:07 jperkin Exp $	*/
 
-/*-
+/*
  * Copyright (c) 2020 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
@@ -39,11 +39,15 @@
 #include <unistd.h>
 
 #ifdef HAVE_FILEMON_H
-#  include <filemon.h>
+# include <filemon.h>
 #endif
 
 #ifndef _PATH_FILEMON
-#define	_PATH_FILEMON	"/dev/filemon"
+#define _PATH_FILEMON	"/dev/filemon"
+#endif
+
+#ifndef MAKE_ATTR_UNUSED
+#define MAKE_ATTR_UNUSED        __attribute__((__unused__))
 #endif
 
 struct filemon {
@@ -65,12 +69,12 @@ filemon_open(void)
 	int error;
 
 	/* Allocate and zero a struct filemon object.  */
-	F = calloc(1, sizeof(*F));
+	F = calloc(1, sizeof *F);
 	if (F == NULL)
 		return NULL;
 
 	/* Try opening /dev/filemon, up to six times (cargo cult!).  */
-	for (i = 0; (F->fd = open(_PATH_FILEMON, O_RDWR)) == -1; i++) {
+	for (i = 0; (F->fd = open(_PATH_FILEMON, O_RDWR|O_CLOEXEC)) == -1; i++) {
 		if (i == 5) {
 			error = errno;
 			goto fail0;
@@ -101,7 +105,7 @@ filemon_setfd(struct filemon *F, int fd)
 }
 
 void
-filemon_setpid_parent(struct filemon *F, pid_t pid)
+filemon_setpid_parent(struct filemon *F MAKE_ATTR_UNUSED, pid_t pid MAKE_ATTR_UNUSED)
 {
 	/* Nothing to do!  */
 }
@@ -127,7 +131,7 @@ filemon_close(struct filemon *F)
 	free(F);
 
 	/* Set errno and return -1 if anything went wrong.  */
-	if (error) {
+	if (error != 0) {
 		errno = error;
 		return -1;
 	}
@@ -137,14 +141,14 @@ filemon_close(struct filemon *F)
 }
 
 int
-filemon_readfd(const struct filemon *F)
+filemon_readfd(const struct filemon *F MAKE_ATTR_UNUSED)
 {
 
 	return -1;
 }
 
 int
-filemon_process(struct filemon *F)
+filemon_process(struct filemon *F MAKE_ATTR_UNUSED)
 {
 
 	return 0;

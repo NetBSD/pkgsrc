@@ -1,4 +1,4 @@
-/*	$NetBSD: dir.h,v 1.7 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: dir.h,v 1.8 2024/07/15 09:10:06 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -72,37 +72,40 @@
  *	from: @(#)dir.h	8.1 (Berkeley) 6/6/93
  */
 
-/* dir.h --
- */
+#ifndef MAKE_DIR_H
+#define MAKE_DIR_H
 
-#ifndef	MAKE_DIR_H
-#define	MAKE_DIR_H
+typedef struct CachedDir CachedDir;
 
-typedef struct Path {
-    char         *name;	    	/* Name of directory */
-    int	    	  refCount; 	/* Number of paths with this directory */
-    int		  hits;	    	/* the number of times a file in this
-				 * directory has been found */
-    Hash_Table    files;    	/* Hash table of files in directory */
-} Path;
-
-void Dir_Init(const char *);
+void Dir_Init(void);
 void Dir_InitCur(const char *);
 void Dir_InitDot(void);
+#ifdef CLEANUP
 void Dir_End(void);
+#endif
 void Dir_SetPATH(void);
-Boolean Dir_HasWildcards(char *);
-void Dir_Expand(const char *, Lst, Lst);
-char *Dir_FindFile(const char *, Lst);
-int Dir_FindHereOrAbove(char *, char *, char *, int);
-int Dir_MTime(GNode *, Boolean);
-Path *Dir_AddDir(Lst, const char *);
-char *Dir_MakeFlags(const char *, Lst);
-void Dir_ClearPath(Lst);
-void Dir_Concat(Lst, Lst);
+void Dir_SetSYSPATH(void);
+bool Dir_HasWildcards(const char *) MAKE_ATTR_USE;
+void SearchPath_Expand(SearchPath *, const char *, StringList *);
+char *Dir_FindFile(const char *, SearchPath *) MAKE_ATTR_USE;
+char *Dir_FindInclude(const char *, SearchPath *) MAKE_ATTR_USE;
+char *Dir_FindHereOrAbove(const char *, const char *) MAKE_ATTR_USE;
+void Dir_UpdateMTime(GNode *, bool);
+CachedDir *SearchPath_Add(SearchPath *, const char *);
+char *SearchPath_ToFlags(SearchPath *, const char *) MAKE_ATTR_USE;
+void SearchPath_Clear(SearchPath *);
+void SearchPath_AddAll(SearchPath *, SearchPath *);
 void Dir_PrintDirectories(void);
-void Dir_PrintPath(Lst);
-void Dir_Destroy(void *);
-void * Dir_CopyDir(void *);
+void SearchPath_Print(const SearchPath *);
+SearchPath *Dir_CopyDirSearchPath(void) MAKE_ATTR_USE;
 
-#endif /* MAKE_DIR_H */
+/* Stripped-down variant of struct stat. */
+struct cached_stat {
+	time_t cst_mtime;
+	mode_t cst_mode;
+};
+
+int cached_lstat(const char *, struct cached_stat *);
+int cached_stat(const char *, struct cached_stat *);
+
+#endif

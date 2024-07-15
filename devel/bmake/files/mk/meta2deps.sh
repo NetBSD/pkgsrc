@@ -5,11 +5,11 @@
 #
 # SYNOPSIS:
 #	meta2deps.sh SB="SB" "meta" ...
-#	
+#
 # DESCRIPTION:
 #	This script looks each "meta" file and extracts the
 #	information needed to deduce build and src dependencies.
-#	
+#
 #	To do this, we extract the 'CWD' record as well as all the
 #	syscall traces which describe 'R'ead, 'C'hdir and 'E'xec
 #	syscalls.
@@ -77,20 +77,22 @@
 
 
 # RCSid:
-#	$Id: meta2deps.sh,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$Id: meta2deps.sh,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
+# SPDX-License-Identifier: BSD-2-Clause
+#
 # Copyright (c) 2010-2013, Juniper Networks, Inc.
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions 
-# are met: 
+# modification, are permitted provided that the following conditions
+# are met:
 # 1. Redistributions of source code must retain the above copyright
-#    notice, this list of conditions and the following disclaimer. 
+#    notice, this list of conditions and the following disclaimer.
 # 2. Redistributions in binary form must reproduce the above copyright
 #    notice, this list of conditions and the following disclaimer in the
-#    documentation and/or other materials provided with the distribution.  
-# 
+#    documentation and/or other materials provided with the distribution.
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 # "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
 # LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -101,14 +103,14 @@
 # DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 # THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 meta2src() {
     cat /dev/null "$@" |
     sed -n '/^R .*\.[chyl]$/s,^..[0-9]* ,,p' |
     sort -u
 }
-    
+
 meta2dirs() {
     cat /dev/null "$@" |
     sed -n '/^R .*\/.*\.[a-z0-9][^\/]*$/s,^..[0-9]* \(.*\)/[^/]*$,\1,p' |
@@ -139,8 +141,20 @@ add_list() {
     eval "$name=\"$list\""
 }
 
+# some Linux systems have deprecated egrep in favor of grep -E
+# but not everyone supports that
+case "`echo bmake | egrep 'a|b' 2>&1`" in
+bmake) ;;
+*) egrep() { grep -E "$@"; }
+esac
+
 _excludes_f() {
     egrep -v "$EXCLUDES"
+}
+
+error() {
+    echo "ERROR: $@" >&2
+    exit 1
 }
 
 meta2deps() {
@@ -169,7 +183,7 @@ meta2deps() {
     case "$MACHINE" in
     host) _ht=$HOST_TARGET;;
     esac
-    
+
     for o in $OBJROOTS
     do
 	case "$MACHINE,/$o/" in
@@ -203,7 +217,7 @@ meta2deps() {
     obj_re=
     add_list '|' -s '/*' src_re $SRCTOPS
     add_list '|' -s '*' obj_re $OBJROOTS
-    
+
     [ -z "$RELDIR" ] && unset DPDEPS
     tf=/tmp/m2d$$-$USER
     rm -f $tf.*
@@ -236,8 +250,8 @@ meta2deps() {
 	;;
     *) cat /dev/null "$@";;
     esac 2> /dev/null |
-    sed -e 's,^CWD,C C,;/^[CREFLM] /!d' -e "s,',,g" |
-    $_excludes |
+    sed -e 's,^CWD,C C,;/^[#CREFLMVX] /!d' -e "s,',,g" |
+    $_excludes | ( version=no epids= xpids= eof_token=no
     while read op pid path junk
     do
 	: op=$op pid=$pid path=$path
@@ -249,10 +263,21 @@ meta2deps() {
 		SB=`echo $CWD | sed 's,/obj.*,,'`
 	    fi
 	    SRCTOP=${SRCTOP:-$SB/src}
+	    case "$verion" in
+	    no) ;;		# ignore
+	    0) error "no filemon data";;
+	    *) ;;
+	    esac
+	    version=0
+	    case "$eof_token" in
+	    no) ;;		# ignore
+	    0) error "truncated filemon data";;
+	    esac
+	    eof_token=0
 	    continue
 	    ;;
 	$pid,$pid) ;;
-	*)
+	[1-9]*)
 	    case "$lpid" in
 	    "") ;;
 	    *) eval ldir_$lpid=$ldir;;
@@ -262,7 +287,9 @@ meta2deps() {
 	    ;;
 	esac
 
+	: op=$op path=$path
 	case "$op,$path" in
+	V,*) version=$pid; continue;;
 	W,*srcrel|*.dirdep) continue;;
 	C,*)
 	    case "$path" in
@@ -274,11 +301,22 @@ meta2deps() {
 	    eval cwd_$pid=$cwd
 	    continue
 	    ;;
-	F,*) # $path is new pid  
+	F,*) # $path is new pid
 	    eval cwd_$path=$cwd ldir_$path=$ldir
 	    continue
-	    ;;	  
+	    ;;
+	\#,bye) eof_token=1; continue;;
+	\#*) continue;;
 	*)  dir=${path%/*}
+	    case "$op" in
+	    E)	# setid apps get no tracing so we won't see eXit
+		case `'ls' -l $path 2> /dev/null | sed 's, .*,,'` in
+		*s*) ;;
+		*) epids="$epids $pid";;
+		esac
+		;;
+	    X) xpids="$xpids $pid"; continue;;
+	    esac
 	    case "$path" in
 	    $src_re|$obj_re) ;;
 	    /*/stage/*) ;;
@@ -368,6 +406,22 @@ meta2deps() {
 	    echo $dir;;
 	esac
     done > $tf.dirdep
+    : version=$version
+    case "$version" in
+    0) error "no filemon data";;
+    esac
+    : eof_token=$eof_token
+    case "$eof_token" in
+    0) error "truncated filemon data";;
+    esac
+    for p in $epids
+    do
+	: p=$p
+	case " $xpids " in
+	*" $p "*) ;;
+	*) error "missing eXit for pid $p";;
+	esac
+    done ) || exit 1
     _nl=echo
     for f in $tf.dirdep $tf.qual $tf.srcdep
     do

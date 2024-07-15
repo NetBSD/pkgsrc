@@ -1,14 +1,16 @@
-# $Id: progs.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: progs.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 #
 #	@(#) Copyright (c) 2006, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -37,16 +39,26 @@ PROG ?= $t
 # just one of many
 PROG_VARS += \
 	BINDIR \
-	CFLAGS \
-	COPTS \
-	CPPFLAGS \
 	CXXFLAGS \
 	DPADD \
 	DPLIBS \
 	LDADD \
-	LDFLAGS \
 	MAN \
-	SRCS
+
+.ifndef SYS_OS_MK
+# assume we are not using init.mk, otherwise
+# we need to avoid overlap with its
+# QUALIFIED_VAR_LIST which includes these and its
+# VAR_QUALIFIER_LIST includes .TARGET which
+# would match PROG
+PROG_VARS += \
+	CFLAGS \
+	COPTS \
+	CPPFLAGS \
+	LDFLAGS \
+	SRCS \
+
+.endif
 
 .for v in ${PROG_VARS:O:u}
 .if defined(${v}.${PROG}) || defined(${v}_${PROG})
@@ -87,16 +99,21 @@ x.$p= PROG_CXX=$p
 .endif
 
 $p ${p}_p: .PHONY .MAKE
-	(cd ${.CURDIR} && ${.MAKE} -f ${MAKEFILE} PROG=$p ${x.$p})
+	(cd ${.CURDIR} && ${.MAKE} -f ${MAKEFILE} PROG=$p ${x.$p} -DWITHOUT_META_STATS)
 
 .for t in ${PROGS_TARGETS:O:u}
 $p.$t: .PHONY .MAKE
-	(cd ${.CURDIR} && ${.MAKE} -f ${MAKEFILE} PROG=$p ${x.$p} ${@:E})
+	(cd ${.CURDIR} && ${.MAKE} -f ${MAKEFILE} PROG=$p ${x.$p} ${@:E} -DWITHOUT_META_STATS)
 .endfor
 .endfor
 
 .for t in ${PROGS_TARGETS:O:u}
 $t: ${PROGS:%=%.$t}
 .endfor
+
+.if !defined(WITHOUT_META_STATS) && ${.MAKE.LEVEL} > 0
+.END: _reldir_finish
+.ERROR: _reldir_failed
+.endif
 
 .endif

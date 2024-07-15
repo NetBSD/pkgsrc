@@ -1,4 +1,4 @@
-#	$NetBSD: nls.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$NetBSD: nls.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
 .if !target(.MAIN)
 # init.mk not included

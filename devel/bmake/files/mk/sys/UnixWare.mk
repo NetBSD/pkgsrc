@@ -1,16 +1,18 @@
-#	$Id: UnixWare.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$Id: UnixWare.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
 #	based on "Id: SunOS.5.sys.mk,v 1.6 2003/09/30 16:42:23 sjg Exp "
-#	$NetBSD: UnixWare.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$NetBSD: UnixWare.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
 #	@(#)sys.mk	5.11 (Berkeley) 3/13/91
 
-OS?=		UnixWare
-unix?=		We run ${OS}.
-ROOT_GROUP=	root
+OS ?=		UnixWare
+OS_DEF_FLAG ?= -DUNIXWARE
+unix ?=		We run ${OS}.
+ROOT_GROUP ?=	root
+DEV_TOOLS_PREFIX ?= /usr/local
 
-# can't fine one anywhere, so just stop the dependency
-LIBCRT0= /dev/null
+# can't find one anywhere, so just stop the dependency
+LIBCRT0 ?= /dev/null
 
-PATH=/usr/sbin:/usr/bin:/usr/ccs/bin:/usr/ccs/lib:/usr/ucb:/usr/local/bin
+PATH ?= /usr/sbin:/usr/bin:/usr/ccs/bin:/usr/ccs/lib:/usr/ucb:${DEV_TOOLS_PREFIX}/bin
 
 .SUFFIXES: .out .a .ln .o .c ${CXX_SUFFIXES} .F .f .r .y .l .s .S .cl .p .h .sh .m4
 
@@ -19,119 +21,123 @@ PATH=/usr/sbin:/usr/bin:/usr/ccs/bin:/usr/ccs/lib:/usr/ucb:/usr/local/bin
 # no -X
 LD_X=
 LD_x=
-AR?=		ar
-ARFLAGS?=	rl
-RANLIB?=	:
+AR ?=		ar
+ARFLAGS ?=	r
+RANLIB ?=	:
 
-AS?=		as
-AS_STDIN?=	-
-AFLAGS?=
-COMPILE.s?=	${AS} ${AFLAGS}
-LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
-COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c
-LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
+AS ?=		as
+AS_STDIN ?=	-
+AFLAGS ?=
+COMPILE.s ?=	${AS} ${AFLAGS}
+LINK.s ?=	${CC} ${AFLAGS} ${LDFLAGS}
+COMPILE.S ?=	${CC} ${AFLAGS} ${CPPFLAGS} -c
+LINK.S ?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 # at least gcc 2.95 on UnixWare has no internal macro to identify the system
-.if exists(/usr/local/bin/gcc)
-CC?=		gcc -pipe -DUNIXWARE
-DBG?=		-O -g
-STATIC?=	-static
+.if exists(${DEV_TOOLS_PREFIX}/bin/gcc)
+CC ?=		gcc -pipe ${OS_DEF_FLAG}
+DBG ?=		-O -g
+STATIC ?=	-static
 .else
-CC?=		cc
-DBG?=		-g
-STATIC?=	-Bstatic # XXX: don't know about UDK compilers
+CC ?=		cc
+DBG ?=		-g
+STATIC ?=	-Bstatic # XXX: don't know about UDK compilers
 .endif
-CFLAGS?=	${DBG}
-COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
-LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CFLAGS ?=	${DBG}
+COMPILE.c ?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
+LINK.c ?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-.if exists(/usr/local/bin/g++)
-CXX?=		g++ -DUNIXWARE
+.if exists(${DEV_TOOLS_PREFIX}/bin/g++)
+CXX ?=		g++ ${OS_DEF_FLAG}
 .else
-CXX?=		c++ # XXX: don't know about UDK compilers
+CXX ?=		c++ # XXX: don't know about UDK compilers
 .endif
-CXXFLAGS?=	${CFLAGS}
-COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
-LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CXXFLAGS ?=	${CFLAGS}
+COMPILE.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
+LINK.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CPP?=		/usr/ccs/lib/cpp
+.if exists(${DEV_TOOLS_PREFIX}/bin/cpp)
+CPP ?=		cpp
+.else
+CPP ?=		/usr/ccs/lib/cpp
+.endif
 .if defined(DESTDIR)
 CPPFLAGS+=	-nostdinc -idirafter ${DESTDIR}/usr/include
 .endif
 
-MK_DEP?=	mkdeps.sh -N
-.if exists(/usr/local/bin/g77)
-FC?=		g77
+MK_DEP ?=	mkdeps.sh -N
+.if exists(${DEV_TOOLS_PREFIX}/bin/g77)
+FC ?=		g77
 .else
-FC?=		f77 # XXX: don't know about UDK compilers
+FC ?=		f77 # XXX: don't know about UDK compilers
 .endif
-FFLAGS?=	-O
-RFLAGS?=
-COMPILE.f?=	${FC} ${FFLAGS} -c
-LINK.f?=	${FC} ${FFLAGS} ${LDFLAGS}
-COMPILE.F?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
-LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
-LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
+FFLAGS ?=	-O
+RFLAGS ?=
+COMPILE.f ?=	${FC} ${FFLAGS} -c
+LINK.f ?=	${FC} ${FFLAGS} ${LDFLAGS}
+COMPILE.F ?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
+LINK.F ?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.r ?=	${FC} ${FFLAGS} ${RFLAGS} -c
+LINK.r ?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-INSTALL?=	/usr/ucb/install # BSD install
+INSTALL ?=	/usr/ucb/install # BSD install
 
-LEX?=		lex
-LFLAGS?=
-LEX.l?=		${LEX} ${LFLAGS}
+LEX ?=		lex
+LFLAGS ?=
+LEX.l ?=		${LEX} ${LFLAGS}
 
-LD?=		ld
-LDFLAGS?=
+LD ?=		ld
+LDFLAGS ?=
 
-LIBC?=		${DESTDIR}/usr/ccs/lib/libc.a
-LIBCOMPAT?=
-LIBCRYPT?=	${DESTDIR}/usr/lib/libcrypt.a
-LIBCURSES?=	${DESTDIR}/usr/ccs/lib/libcurses.a
-LIBDBM?=
-LIBDES?=
-LIBEDIT?=
-LIBGCC?=
-LIBKDB?=
-LIBKRB?=
-LIBKVM?=
-LIBL?=		${DESTDIR}/usr/ccs/lib/libl.a
-LIBM?=		${DESTDIR}/usr/ccs/lib/libm.a
-LIBMP?=
-LIBPC?=
-LIBPCAP?=
-LIBPLOT?=
-LIBRESOLV?=
-LIBRPCSVC?=	${DESTDIR}/usr/lib/librpcsvc.a
-LIBSKEY?=	${DESTDIR}/usr/lib/libskey.a
-LIBTERMCAP?=	${DESTDIR}/usr/ccs/lib/libtermcap.a
-LIBUTIL?=
-LIBWRAP?=
-LIBY?=		${DESTDIR}/usr/ccs/lib/liby.a
-LIBZ?=
+LIBC ?=		${DESTDIR}/usr/ccs/lib/libc.a
+LIBCOMPAT ?=
+LIBCRYPT ?=	${DESTDIR}/usr/lib/libcrypt.a
+LIBCURSES ?=	${DESTDIR}/usr/ccs/lib/libcurses.a
+LIBDBM ?=
+LIBDES ?=
+LIBEDIT ?=
+LIBGCC ?=
+LIBKDB ?=
+LIBKRB ?=
+LIBKVM ?=
+LIBL ?=		${DESTDIR}/usr/ccs/lib/libl.a
+LIBM ?=		${DESTDIR}/usr/ccs/lib/libm.a
+LIBMP ?=
+LIBPC ?=
+LIBPCAP ?=
+LIBPLOT ?=
+LIBRESOLV ?=
+LIBRPCSVC ?=	${DESTDIR}/usr/lib/librpcsvc.a
+LIBSKEY ?=	${DESTDIR}/usr/lib/libskey.a
+LIBTERMCAP ?=	${DESTDIR}/usr/ccs/lib/libtermcap.a
+LIBUTIL ?=
+LIBWRAP ?=
+LIBY ?=		${DESTDIR}/usr/ccs/lib/liby.a
+LIBZ ?=
 
-LINT?=		lint
-LINTFLAGS?=	-pF
+LINT ?=		lint
+LINTFLAGS ?=	-pF
 
-LORDER?=	lorder
+LORDER ?=	lorder
 
-NM?=		nm
+NM ?=		nm
 
-PC?=		pc # XXX: UDK probably does not have pc
-PFLAGS?=
-COMPILE.p?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
-LINK.p?=	${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
+PC ?=		pc # XXX: UDK probably does not have pc
+PFLAGS ?=
+COMPILE.p ?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
+LINK.p ?=	${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-SIZE?=		size
+SIZE ?=		size
 
-TSORT?=		tsort
+TSORT ?=		tsort
 
-.if exists(/usr/local/bin/bison)
-YACC?=		bison -y
+.if exists(${DEV_TOOLS_PREFIX}/bin/bison)
+YACC ?=		bison -y
 .else
-YACC?=		yacc
+YACC ?=		yacc
 .endif
-YFLAGS?=	-d
-YACC.y?=	${YACC} ${YFLAGS}
+YFLAGS ?=	-d
+YACC.y ?=	${YACC} ${YFLAGS}
 
 # C
 .c:
@@ -219,7 +225,7 @@ ${CXX_SUFFIXES:%=%.a}:
 	mv lex.yy.c ${.TARGET}
 .l.o:
 	${LEX.l} ${.IMPSRC}
-	${COMPILE.c} -o ${.TARGET} lex.yy.c 
+	${COMPILE.c} -o ${.TARGET} lex.yy.c
 	rm -f lex.yy.c
 
 # Yacc
@@ -239,3 +245,4 @@ ${CXX_SUFFIXES:%=%.a}:
 .sh:
 	rm -f ${.TARGET}
 	cp ${.IMPSRC} ${.TARGET}
+	chmod a+x ${.TARGET}
