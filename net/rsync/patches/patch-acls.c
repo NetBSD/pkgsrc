@@ -1,14 +1,14 @@
-$NetBSD: patch-acls.c,v 1.1 2024/05/22 09:49:36 bouyer Exp $
+$NetBSD: patch-acls.c,v 1.2 2024/07/15 17:20:03 hauke Exp $
 
 Properly handle EOPNOTSUPP
 
---- acls.c.orig	2024-05-22 11:29:32.963825978 +0200
-+++ acls.c	2024-05-22 11:30:07.507590619 +0200
-@@ -1101,6 +1101,9 @@
+--- acls.c.orig	2022-09-11 17:04:26.000000000 +0000
++++ acls.c
+@@ -1101,6 +1101,9 @@ int default_perms_for_dir(const char *dir)
  #ifdef ENOTSUP
  		case ENOTSUP:
  #endif
-+#ifdef EOPNOTSUPP
++#if defined(EOPNOTSUPP) &&  (!defined(ENOTSUP) || (ENOTSUP != EOPNOTSUPP))
 +		case EOPNOTSUPP:
 +#endif
  		case ENOSYS:
