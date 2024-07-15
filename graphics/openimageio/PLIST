@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/07/02 10:34:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/07/15 09:32:01 mrg Exp $
 bin/iconvert
 bin/idiff
 bin/igrep
@@ -17,6 +17,7 @@ include/OpenImageIO/dassert.h
 include/OpenImageIO/deepdata.h
 include/OpenImageIO/detail/farmhash.h
 include/OpenImageIO/detail/fmt.h
+include/OpenImageIO/detail/fmt/base.h
 include/OpenImageIO/detail/fmt/chrono.h
 include/OpenImageIO/detail/fmt/core.h
 include/OpenImageIO/detail/fmt/format-inl.h
