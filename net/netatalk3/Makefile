@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2024/07/12 13:39:36 hauke Exp $
+# $NetBSD: Makefile,v 1.65 2024/07/15 11:25:03 hauke Exp $
 
 DISTNAME=	netatalk-3.1.19
 PKGNAME=	${DISTNAME:C/-/3-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}Netatalk/releases/download/${DISTNAME:S/./-/g}/
 EXTRACT_SUFX=	.tar.xz
@@ -37,7 +38,11 @@ BUILD_DEFS+=		VARBASE
 OWN_DIRS+=		${VARBASE}/db/netatalk/CNID ${REAL_ROOT_USER} ${REAL_ROOT_GROUP}
 
 CONFIGURE_ARGS+=	--enable-overwrite
+.if ${OPSYS} == "FreeBSD"
+CONFIGURE_ARGS+=	--enable-quota=no
+.else
 CONFIGURE_ARGS+=	--enable-quota
+.endif
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
