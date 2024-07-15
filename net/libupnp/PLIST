@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2021/06/04 18:56:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/07/15 10:15:28 adam Exp $
 include/upnp/Callback.h
 include/upnp/UpnpActionComplete.h
 include/upnp/UpnpActionRequest.h
@@ -20,6 +20,7 @@ include/upnp/ithread.h
 include/upnp/ixml.h
 include/upnp/ixmldebug.h
 include/upnp/list.h
+include/upnp/posix_overwrites.h
 include/upnp/upnp.h
 include/upnp/upnpconfig.h
 include/upnp/upnpdebug.h
