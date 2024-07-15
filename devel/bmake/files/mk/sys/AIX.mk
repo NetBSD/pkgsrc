@@ -1,80 +1,80 @@
-#	$NetBSD: AIX.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$NetBSD: AIX.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
 #	@(#)sys.mk	5.11 (Berkeley) 3/13/91
 
-OS=		AIX
-unix=		We run ${OS}.
-ROOT_GROUP=	system
+OS ?=		AIX
+unix ?=		We run ${OS}.
+ROOT_GROUP ?=	system
 
 # This needs a lot of work yet...
 
-NOPIC=no	# no shared libs?
+NOPIC ?=no	# no shared libs?
 
 .SUFFIXES: .out .a .ln .o .c ${CXX_SUFFIXES} .F .f .r .y .l .s .S .cl .p .h .sh .m4
 
 .LIBS:		.a
 
-AR=		ar
-ARFLAGS=	rl
-RANLIB=		ranlib
+AR ?=		ar
+ARFLAGS ?=	r
+RANLIB ?=		ranlib
 
-AS=		as
+AS ?=		as
 AFLAGS=
-COMPILE.s=	${AS} ${AFLAGS}
-LINK.s=		${CC} ${AFLAGS} ${LDFLAGS}
-COMPILE.S=	${CC} ${AFLAGS} ${CPPFLAGS} -c
-LINK.S=		${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.s ?=	${AS} ${AFLAGS}
+LINK.s ?=		${CC} ${AFLAGS} ${LDFLAGS}
+COMPILE.S ?=	${CC} ${AFLAGS} ${CPPFLAGS} -c
+LINK.S ?=		${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 .if exists(/usr/local/bin/gcc)
-CC=		gcc
-DBG=		-O -g
-STATIC?=		-static
+CC ?=		gcc
+DBG ?=		-O -g
+STATIC ?=		-static
 .else
-CC=             cc 
-DBG=         -g
-STATIC=         
+CC ?=             cc
+DBG ?=         -g
+STATIC ?=
 .endif
-CFLAGS=		${DBG}
-COMPILE.c=	${CC} ${CFLAGS} ${CPPFLAGS} -c
-LINK.c=		${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CFLAGS ?=		${DBG}
+COMPILE.c ?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
+LINK.c ?=		${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CXX=		g++
-CXXFLAGS=	${CFLAGS}
-COMPILE.cc=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
-LINK.cc=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CXX ?=		g++
+CXXFLAGS ?=	${CFLAGS}
+COMPILE.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
+LINK.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CPP=		cpp
+CPP ?=		cpp
 .if defined(DESTDIR)
 CPPFLAGS+=	-nostdinc -idirafter ${DESTDIR}/usr/include
 .endif
 
-MK_DEP=	mkdeps.sh -N
-FC=		f77
-FFLAGS=		-O
+MK_DEP ?=	mkdeps.sh -N
+FC ?=		f77
+FFLAGS ?=		-O
 RFLAGS=
-COMPILE.f=	${FC} ${FFLAGS} -c
-LINK.f=		${FC} ${FFLAGS} ${LDFLAGS}
-COMPILE.F=	${FC} ${FFLAGS} ${CPPFLAGS} -c
-LINK.F=		${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.r=	${FC} ${FFLAGS} ${RFLAGS} -c
-LINK.r=		${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
+COMPILE.f ?=	${FC} ${FFLAGS} -c
+LINK.f ?=		${FC} ${FFLAGS} ${LDFLAGS}
+COMPILE.F ?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
+LINK.F ?=		${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.r ?=	${FC} ${FFLAGS} ${RFLAGS} -c
+LINK.r ?=		${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-LEX=		lex
+LEX ?=		lex
 LFLAGS=
-LEX.l=		${LEX} ${LFLAGS}
+LEX.l ?=		${LEX} ${LFLAGS}
 
-LD=		ld
+LD ?=		ld
 LDFLAGS=
 
-LINT=		lint
-LINTFLAGS=	-chapbx
+LINT ?=		lint
+LINTFLAGS ?=	-chapbx
 
-PC=		pc
+PC ?=		pc
 PFLAGS=
-COMPILE.p=	${PC} ${PFLAGS} ${CPPFLAGS} -c
-LINK.p=		${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.p ?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
+LINK.p ?=		${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-YACC=		yacc
-YFLAGS=		-d
-YACC.y=		${YACC} ${YFLAGS}
+YACC ?=		yacc
+YFLAGS ?=		-d
+YACC.y ?=		${YACC} ${YFLAGS}
 
 # C
 .c:
@@ -138,7 +138,7 @@ ${CXX_SUFFIXES:%=%.a}:
 .s:
 	${LINK.s} -o ${.TARGET} ${.IMPSRC} ${LDLIBS}
 .s.o:
-	${COMPILE.s} -o ${.TARGET} ${.IMPSRC} 
+	${COMPILE.s} -o ${.TARGET} ${.IMPSRC}
 .s.a:
 	${COMPILE.s} ${.IMPSRC}
 	${AR} ${ARFLAGS} $@ $*.o
@@ -162,7 +162,7 @@ ${CXX_SUFFIXES:%=%.a}:
 	mv lex.yy.c ${.TARGET}
 .l.o:
 	${LEX.l} ${.IMPSRC}
-	${COMPILE.c} -o ${.TARGET} lex.yy.c 
+	${COMPILE.c} -o ${.TARGET} lex.yy.c
 	rm -f lex.yy.c
 
 # Yacc
@@ -182,3 +182,4 @@ ${CXX_SUFFIXES:%=%.a}:
 .sh:
 	rm -f ${.TARGET}
 	cp ${.IMPSRC} ${.TARGET}
+	chmod a+x ${.TARGET}

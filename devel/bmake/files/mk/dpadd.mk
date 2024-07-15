@@ -1,14 +1,16 @@
-# $Id: dpadd.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
 #
-#	@(#) Copyright (c) 2004, Simon J. Gerraty
+# $Id: dpadd.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
+#
+#	@(#) Copyright (c) 2004-2023, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -75,9 +77,13 @@
 #	and -L${STAGE_OBJTOP}/usr/lib are sufficient, and we should
 #	have no need of anything else.
 #
-	
+#	Sometimes things are more complicated so allow for
+#	DPLIBS to be qualified with each of the variables in
+#	DPLIBS_QUALIFIER_LIST (default is VAR_QUALIFIER_LIST same as
+#	init.mk)
+
 .if !target(__${.PARSEFILE}__)
-__${.PARSEFILE}__:
+__${.PARSEFILE}__: .NOTMAIN
 
 # sometimes we play games with .CURDIR etc
 # _* hold the original values of .*
@@ -98,7 +104,7 @@ RELOBJTOP?= ${OBJTOP}
 RELSRCTOP?= ${SRCTOP}
 
 # we get included just about everywhere so this is handy...
-# C*DEBUG_XTRA are for defining on cmd line etc 
+# C*DEBUG_XTRA are for defining on cmd line etc
 # so do not use in makefiles.
 .ifdef CFLAGS_DEBUG_XTRA
 CFLAGS_LAST += ${CFLAGS_DEBUG_XTRA}
@@ -110,7 +116,9 @@ CXXFLAGS_LAST += ${CXXFLAGS_DEBUG_XTRA}
 .-include <local.dpadd.mk>
 
 # DPLIBS helps us ensure we keep DPADD and LDADD in sync
-DPLIBS+= ${DPLIBS_LAST}
+DPLIBS_QUALIFIER_LIST ?= ${VAR_QUALIFIER_LIST}
+DPLIBS += ${DPLIBS_QUALIFIER_LIST:u:@Q@${DPLIBS.$Q:U}@}
+DPLIBS+= ${DPLIBS_LAST} ${DPLIBS_QUALIFIER_LIST:u:@Q@${DPLIBS_LAST.$Q:U}@}
 DPADD+= ${DPLIBS:N-*}
 .for __lib in ${DPLIBS}
 .if "${__lib:M-*}" != ""
@@ -131,7 +139,7 @@ __dpadd_libs := ${DPADD:M*/lib*}
 # dups will be dealt with later.
 # Note: libfoo_pic uses DPLIBS_libfoo
 __ldadd_all_xtras=
-.for __lib in ${__dpadd_libs:@d@${DPLIBS_${d:T:R:S,_pic,,}}@}
+.for __lib in ${__dpadd_libs:@d@${DPLIBS_${d:T:R:S,_pic,,}} ${DPLIBS_QUALIFIER_LIST:u:@Q@${DPLIBS_${d:T:R:S,_pic,,}.$Q:U}@}@}
 __ldadd_all_xtras+= ${LDADD_${__lib}:U${__lib:T:R:S/lib/-l/:C/\.so.*//}}
 .if "${DPADD:M${__lib}}" == ""
 DPADD+= ${__lib}
@@ -180,14 +188,14 @@ SRC_LIBS+= ${_OBJDIR}/lib${LIB}.a
 .endif
 .endif
 
-# 
+#
 # This little bit of magic, assumes that SRC_libfoo will be
 # set if it cannot be correctly derrived from ${LIBFOO}
 # Note that SRC_libfoo and INCLUDES_libfoo should be named for the
 # actual library name not the variable name that might refer to it.
 # 99% of the time the two are the same, but the DPADD logic
 # only has the library name available, so stick to that.
-# 
+#
 
 SRC_LIBS?=
 # magic_libs includes those we want to link with
@@ -198,7 +206,7 @@ DPMAGIC_LIBS += ${__dpadd_magic_libs} \
 
 # we skip this for staged libs
 .for __lib in ${DPMAGIC_LIBS:O:u:N${STAGE_OBJTOP:Unot}*/lib/*}
-# 
+#
 # if SRC_libfoo is not set, then we assume that the srcdir corresponding
 # to where we found the library is correct.
 #
@@ -211,12 +219,13 @@ OBJ_${__lib:T:R} ?= ${__lib:H:S,${OBJTOP},${RELOBJTOP},}
 # If INCLUDES_libfoo is not set, then we'll use ${SRC_libfoo}/h if it exists,
 # else just ${SRC_libfoo}.
 #
-INCLUDES_${__lib:T:R}?= -I${exists(${SRC_${__lib:T:R}}/h):?${SRC_${__lib:T:R}}/h:${SRC_${__lib:T:R}}}
-
+.if !empty(SRC_${__lib:T:R})
+INCLUDES_${__lib:T:R} ?= -I${exists(${SRC_${__lib:T:R}}/h):?${SRC_${__lib:T:R}}/h:${SRC_${__lib:T:R}}}
+.endif
 .endfor
 
-# even for staged libs we sometimes 
-# need to allow direct -I to avoid cicular dependencies 
+# even for staged libs we sometimes
+# need to allow direct -I to avoid cicular dependencies
 .for __lib in ${DPMAGIC_LIBS:O:u:T:R}
 .if !empty(SRC_${__lib}) && empty(INCLUDES_${__lib})
 # must be a staged lib
@@ -247,7 +256,7 @@ SHLDADD+= -L${__lib:H}
 # Now for the bits we actually need
 __dpadd_incs=
 .for __lib in ${__dpadd_libs:u}
-.if (make(${PROG}_p) || defined(NEED_GPROF)) && exists(${__lib:R}_p.a)
+.if (make(${PROG:U}_p) || defined(NEED_GPROF)) && exists(${__lib:R}_p.a)
 __ldadd=-l${__lib:T:R:S,lib,,}
 LDADD := ${LDADD:S,^${__ldadd}$,${__ldadd}_p,g}
 .endif
@@ -267,7 +276,7 @@ __dpadd_last_incs += ${__dpadd_magic_libs:O:u:@s@${SRC_LIBS_${s:T:R}:U}@:@x@${IN
 __dpadd_last_incs := \
 	${__dpadd_last_incs:N-I/usr/*} \
 	${__dpadd_incs:M-I/usr/*} \
-	${__dpadd_last_incs:M-I/usr/*} 
+	${__dpadd_last_incs:M-I/usr/*}
 __dpadd_incs := ${__dpadd_incs:N-I/usr/*}
 .endif
 
@@ -310,12 +319,12 @@ dpadd:	.NOTMAIN
 .endif
 
 .ifdef SRC_PATHADD
-# We don't want to assume that we need to .PATH every element of 
+# We don't want to assume that we need to .PATH every element of
 # SRC_LIBS, but the Makefile cannot do
 # .PATH: ${SRC_libfoo}
 # since the value of SRC_libfoo must be available at the time .PATH:
-# is read - and we only just worked it out.  
-# Further, they can't wait until after include of {lib,prog}.mk as 
+# is read - and we only just worked it out.
+# Further, they can't wait until after include of {lib,prog}.mk as
 # the .PATH is needed before then.
 # So we let the Makefile do
 # SRC_PATHADD+= ${SRC_libfoo}

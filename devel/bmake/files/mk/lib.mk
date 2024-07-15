@@ -1,7 +1,10 @@
-# $Id: lib.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# $Id: lib.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
-.if !target(__${.PARSEFILE}__)
-__${.PARSEFILE}__:
+# should be set properly in sys.mk
+_this ?= ${.PARSEFILE:S,bsd.,,}
+
+.if !target(__${_this}__)
+__${_this}__: .NOTMAIN
 
 .include <init.mk>
 
@@ -30,10 +33,9 @@ SHLIB_FULLVERSION := ${SHLIB_FULLVERSION}
 
 # add additional suffixes not exported.
 # .po is used for profiling object files.
-# ${PICO} is used for PIC object files.
-PICO?= .pico
-.SUFFIXES: .out .a .ln ${PICO} .po .o .s .S .c .cc .C .m .F .f .r .y .l .cl .p .h
-.SUFFIXES: .sh .m4 .m
+.SUFFIXES: .out .a .ln ${PICO} ${PCM} .po .o .s .S .c ${CXX_SUFFIXES} \
+	${CCM_SUFFIXES} .m .F .f .r .y .l .cl .p .h \
+	.sh .m4 .m
 
 CFLAGS+=	${COPTS}
 
@@ -62,12 +64,16 @@ META_NOECHO?= echo
 #		 	(usually just ${CPPPICFLAGS} ${CPICFLAGS})
 # APICFLAGS:		flags for ${AS} to assemble .[sS] to ${PICO} objects.
 
+# we simplify life by letting the toolchain do most of the work
+# _CCLINK is set by init.mk based on whether we are doing C++ or not
+SHLIB_LD ?= ${_CCLINK}
+
 .if ${TARGET_OSNAME} == "NetBSD"
 .if ${MACHINE_ARCH} == "alpha"
 		# Alpha-specific shared library flags
 FPICFLAGS ?= -fPIC
 CPICFLAGS ?= -fPIC -DPIC
-CPPPICFLAGS?= -DPIC 
+CPPPICFLAGS?= -DPIC
 CAPICFLAGS?= ${CPPPICFLAGS} ${CPICFLAGS}
 APICFLAGS ?=
 .elif ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb"
@@ -87,7 +93,7 @@ MKPICLIB= no
 
 .elif (${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64") && \
        ${OBJECT_FMT} == "ELF"
-# If you use -fPIC you need to define BIGPIC to turn on 32-bit 
+# If you use -fPIC you need to define BIGPIC to turn on 32-bit
 # relocations in asm code
 FPICFLAGS ?= -fPIC
 CPICFLAGS ?= -fPIC -DPIC
@@ -102,7 +108,7 @@ SHLIB_SOVERSION=${SHLIB_FULLVERSION}
 SHLIB_SHFLAGS=
 FPICFLAGS ?= -fPIC
 CPICFLAGS?= -fPIC -DPIC
-CPPPICFLAGS?= -DPIC 
+CPPPICFLAGS?= -DPIC
 CAPICFLAGS?= ${CPPPICFLAGS} ${CPICFLAGS}
 APICFLAGS?= -k
 
@@ -111,7 +117,7 @@ APICFLAGS?= -k
 # Platform-independent linker flags for ELF shared libraries
 .if ${OBJECT_FMT} == "ELF"
 SHLIB_SOVERSION=	${SHLIB_MAJOR}
-SHLIB_SHFLAGS=		-soname lib${LIB}.so.${SHLIB_SOVERSION}
+SHLIB_SHFLAGS=		-Wl,-soname,lib${LIB}.so.${SHLIB_SOVERSION}
 SHLIB_LDSTARTFILE?=	/usr/lib/crtbeginS.o
 SHLIB_LDENDFILE?=	/usr/lib/crtendS.o
 .endif
@@ -125,7 +131,7 @@ LD_shared=${SHLIB_SHFLAGS}
 .if ${TARGET_OSNAME} == "FreeBSD"
 .if ${OBJECT_FMT} == "ELF"
 SHLIB_SOVERSION=	${SHLIB_MAJOR}
-SHLIB_SHFLAGS=		-soname lib${LIB}.so.${SHLIB_SOVERSION}
+SHLIB_SHFLAGS=		-Wl,-soname,lib${LIB}.so.${SHLIB_SOVERSION}
 .else
 SHLIB_SHFLAGS=		-assert pure-text
 .endif
@@ -168,9 +174,8 @@ AR_cq= -cqs
 .elif ${TARGET_OSNAME} == "FreeBSD"
 LD_solib= lib${LIB}_pic.a
 .elif ${TARGET_OSNAME} == "Linux"
-SHLIB_LD = ${CC}
 # this is ambiguous of course
-LD_shared=-shared -Wl,"-soname lib${LIB}.so.${SHLIB_MAJOR}"
+LD_shared=-shared -Wl,-soname,lib${LIB}.so.${SHLIB_MAJOR}
 LD_solib= -Wl,--whole-archive lib${LIB}_pic.a -Wl,--no-whole-archive
 .if ${COMPILER_TYPE} == "gcc"
 # Linux uses GNU ld, which is a multi-pass linker
@@ -180,7 +185,6 @@ LD_pobjs = ${POBJS}
 LD_sobjs = ${SOBJS}
 .endif
 .elif ${TARGET_OSNAME} == "Darwin"
-SHLIB_LD = ${CC}
 SHLIB_INSTALL_VERSION ?= ${SHLIB_MAJOR}
 SHLIB_COMPATABILITY_VERSION ?= ${SHLIB_MAJOR}.${SHLIB_MINOR:U0}
 SHLIB_COMPATABILITY ?= \
@@ -213,8 +217,6 @@ PICFLAG ?= -fPIC -fno-common
 RANLIB = :
 .endif
 
-SHLIB_LD ?= ${LD}
-
 .if !empty(SHLIB_MAJOR)
 .if ${NEED_SOLINKS} && empty(SHLIB_LINKS)
 .if ${MK_LINKLIB} != "no"
@@ -246,7 +248,7 @@ DLLIB ?= -ldl
 .endif
 
 # some libs have lots of objects, and scanning all .o, .po and ${PICO} meta files
-# is a waste of time, this tells meta.autodep.mk to just pick one 
+# is a waste of time, this tells meta.autodep.mk to just pick one
 # (typically ${PICO})
 # yes, 42 is a random number.
 .if ${MK_DIRDEPS_BUILD} == "yes" && ${SRCS:Uno:[\#]} > 42
@@ -267,12 +269,16 @@ SHLIB_AGE != . ${.CURDIR}/shlib_version ; echo $$age
 .c.o:
 	${COMPILE.c} ${.IMPSRC}
 
+# precompiled C++ Modules
+${CCM_SUFFIXES:%=%${PCM}}:
+	${COMPILE.pcm} ${.IMPSRC}
+
 # for the normal .a we do not want to strip symbols
 ${CXX_SUFFIXES:%=%.o}:
 	${COMPILE.cc} ${.IMPSRC}
 
 .S.o .s.o:
-	${COMPILE.S} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC} 
+	${COMPILE.S} ${CFLAGS:M-[ID]*} ${AINC} ${.IMPSRC}
 
 .if (${LD_X} == "")
 .c.po:
@@ -380,18 +386,22 @@ _LIBS+= ${libLDORDER_INC}
 
 .include <ldorder.mk>
 .endif
+# avoid -dL errors
+LDADD_LDORDER ?=
 
 .if !defined(_SKIP_BUILD)
-realbuild: ${_LIBS} 
+realbuild: ${_LIBS}
 .endif
 
 all: _SUBDIRUSE
 
-.for s in ${SRCS:N*.h:M*/*}
+OBJS_SRCS = ${SRCS:${OBJS_SRCS_FILTER}}
+
+.for s in ${OBJS_SRCS:M*/*}
 ${.o ${PICO} .po .lo:L:@o@${s:T:R}$o@}: $s
 .endfor
 
-OBJS+=	${SRCS:T:N*.h:R:S/$/.o/g}
+OBJS+=	${OBJS_SRCS:T:R:S/$/.o/g}
 .NOPATH:	${OBJS}
 
 .if ${MK_LIBTOOL} == "yes"
@@ -441,25 +451,23 @@ lib${LIB}_pic.a: ${SOBJS}
 	@${AR} ${AR_cq} ${.TARGET} ${LD_sobjs}
 	${RANLIB} ${.TARGET}
 
-#SHLIB_LDADD?= ${LDADD}
-
 # bound to be non-portable...
 # this is known to work for NetBSD 1.6 and FreeBSD 4.2
 lib${LIB}.${LD_so}: ${SOLIB} ${DPADD}
 	@${META_NOECHO} building shared ${LIB} library \(version ${SHLIB_FULLVERSION}\)
 	@rm -f ${.TARGET}
-.if ${TARGET_OSNAME} == "NetBSD" || ${TARGET_OSNAME} == "FreeBSD"
+.if ${TARGET_OSNAME:NFreeBSD:NNetBSD} == ""
 .if ${OBJECT_FMT} == "ELF"
-	${SHLIB_LD} -x -shared ${SHLIB_SHFLAGS} -o ${.TARGET} \
-	    ${SHLIB_LDSTARTFILE} \
-	    --whole-archive ${SOLIB} --no-whole-archive ${SHLIB_LDADD} \
-	    ${SHLIB_LDENDFILE}
+	${SHLIB_LD} -shared -Wl,-x ${SHLIB_SHFLAGS} ${LDFLAGS} -o ${.TARGET} \
+	    -Wl,--whole-archive ${SOLIB} -Wl,--no-whole-archive \
+	    ${LDADD} ${SHLIB_LDADD}
 .else
-	${SHLIB_LD} ${LD_x} ${LD_shared} \
-	    -o ${.TARGET} ${SOLIB} ${SHLIB_LDADD}
+	${SHLIB_LD} ${LD_x} ${LD_shared} ${LDFLAGS} \
+	    -o ${.TARGET} ${SOLIB} ${LDADD} ${SHLIB_LDADD}
 .endif
 .else
-	${SHLIB_LD} -o ${.TARGET} ${LD_shared} ${LD_solib} ${DLLIB} ${SHLIB_LDADD}
+	${SHLIB_LD} ${LDFLAGS} -o ${.TARGET} \
+	    ${LD_shared} ${LD_solib} ${DLLIB} ${LDADD} ${SHLIB_LDADD}
 .endif
 .endif
 .if !empty(SHLIB_LINKS)
@@ -479,7 +487,7 @@ cleanlib: .PHONY
 	rm -f a.out [Ee]rrs mklog core *.core ${CLEANFILES}
 	rm -f lib${LIB}.a ${OBJS}
 	rm -f lib${LIB}_p.a ${POBJS}
-	rm -f lib${LIB}_pic.a lib${LIB}.so.*.* ${SOBJS}
+	rm -f lib${LIB}_pic.a lib${LIB}*${LD_solink} lib${LIB}*${LD_solink}.* ${SOBJS}
 	rm -f llib-l${LIB}.ln ${LOBJS}
 .if !empty(SHLIB_LINKS)
 	rm -f ${SHLIB_LINKS}
@@ -603,6 +611,10 @@ realinstall: beforeinstall
 .if !empty(LIB)
 STAGE_LIBDIR?= ${STAGE_OBJTOP}${LIBDIR}
 stage_libs: ${_LIBS}
+
+__libtoken ?= __lib${LIB:C,[^a-zA-Z0-9_],_,g}__
+__libtoken := ${__libtoken}
+COPTS += -D${__libtoken}
 .endif
 
 .include <final.mk>
