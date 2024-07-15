@@ -1,13 +1,16 @@
-$NetBSD: patch-ab,v 1.44 2023/07/14 18:25:48 ryoon Exp $
+$NetBSD: patch-ab,v 1.45 2024/07/15 11:39:40 ryoon Exp $
 
 CC_VERSION_OPTS for gcc is modified to avoid going through the link
 stage. If pkgsrc appends or prepends any linker flags through
 CWRAPPERS (e.g. for MKRELRO), getting the version of the compiler may
 fail because GCC will try to link the nonexistent program.
 
---- configure.orig	2021-09-14 15:56:15.000000000 +0000
+As of libheif-1.18.0, builtin_h265_decoder and so on are not available
+anymore.
+
+--- configure.orig	2024-05-03 00:36:33.000000000 +0000
 +++ configure
-@@ -22344,11 +22344,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
+@@ -21054,11 +21054,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
           See https://bugzilla.gnome.org/show_bug.cgi?id=787222"
    fi
    # For GCC, use -v which has more information than --version.
@@ -21,7 +24,25 @@ fail because GCC will try to link the nonexistent program.
  fi
  
  for CC_VERSION_OPT in $CC_VERSION_OPTS; do
-@@ -36084,7 +36084,7 @@ esac
+@@ -30417,13 +30417,13 @@ can_export_heic=no
+ can_import_avif=no
+ can_export_avif=no
+ if test "x$have_libheif" = xyes; then
+-  can_import_heic=`$PKG_CONFIG --variable=builtin_h265_decoder libheif`
+-  can_export_heic=`$PKG_CONFIG --variable=builtin_h265_encoder libheif`
++  can_import_heic=yes
++  can_export_heic=yes
+   if test "x$can_import_heic" = xyes; then
+     MIME_TYPES="$MIME_TYPES;image/heif;image/heic"
+   fi
+-  can_import_avif=`$PKG_CONFIG --variable=builtin_avif_decoder libheif`
+-  can_export_avif=`$PKG_CONFIG --variable=builtin_avif_encoder libheif`
++  can_import_avif=yes
++  can_export_avif=yes
+   if test "x$can_import_avif" = xyes; then
+     MIME_TYPES="$MIME_TYPES;image/avif"
+   fi
+@@ -34799,7 +34799,7 @@ esac
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
