@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.220 2024/07/14 12:59:10 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.221 2024/07/15 06:06:01 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -21807,9 +21807,11 @@ mbedtls<2.24.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail
 mbedtls<2.25.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-36475
 mit-krb5<1.18.5	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-37750
 ffmpeg4<4.4.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-38171
-exiv2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18774
-exiv2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18773
-exiv2-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-18771
+# not reproducible? https://github.com/Exiv2/exiv2/issues/759
+#exiv2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18774
+# not reproducible? https://github.com/Exiv2/exiv2/issues/760
+#exiv2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18773
+exiv2<0.27.1	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-18771
 plib-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-38714
 sqlite3<3.36.0nb1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-36690
 knot<5.3.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-40083
