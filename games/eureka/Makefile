@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/07/12 11:13:13 micha Exp $
+# $NetBSD: Makefile,v 1.11 2024/07/15 13:08:44 micha Exp $
 
 DISTNAME=	eureka-2.0.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ioan-chera/}
 GITHUB_PROJECT=	eureka-editor
@@ -13,7 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES+=	c11
-USE_CXX_FEATURES+=	c++17
+# charconv is not used by package, but needs GCC 8 (GCC 7.5 is not good enough)
+USE_CXX_FEATURES+=	c++17 charconv has_include unique_ptr
 
 CMAKE_ARGS+=		-DENABLE_UNIT_TESTS=off
 
