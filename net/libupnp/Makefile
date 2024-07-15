@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/07/15 10:15:28 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/07/15 10:26:47 adam Exp $
 
 DISTNAME=	libupnp-1.14.19
 CATEGORIES=	net
@@ -14,6 +14,9 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-samples
+# The following options are strong recommendations from multimedia/gerbera:
+CONFIGURE_ARGS+=	--disable-blocking-tcp-connections
+CONFIGURE_ARGS+=	--enable-reuseaddr
 PKGCONFIG_OVERRIDE+=	libupnp.pc.in
 TEST_TARGET=		check
 
