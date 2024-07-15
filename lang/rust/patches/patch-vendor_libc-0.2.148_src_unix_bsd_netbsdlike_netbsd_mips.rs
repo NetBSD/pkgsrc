@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_libc-0.2.148_src_unix_bsd_netbsdlike+netbsd_mips.rs,v 1.2 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-vendor_libc-0.2.148_src_unix_bsd_netbsdlike_netbsd_mips.rs,v 1.1 2024/07/15 03:32:24 wiz Exp $
 
 Add entry for NetBSD/mips.
 

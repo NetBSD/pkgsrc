@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.9 2024/04/18 09:29:42 pin Exp $
+# $NetBSD: do-cross.mk,v 1.10 2024/07/15 03:32:23 wiz Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
@@ -10,10 +10,10 @@ SHORT_TARGETS+=		armv6
 SHORT_TARGETS+=		sparc64
 SHORT_TARGETS+=		powerpc
 SHORT_TARGETS+=		arm64
-SHORT_TARGETS+=		arm64_be
+#SHORT_TARGETS+=	arm64_be
 SHORT_TARGETS+=		i386
 SHORT_TARGETS+=		riscv64
-SHORT_TARGETS+=		mipsel	# produces mips32 (not mips1) executables
+#SHORT_TARGETS+=	mipsel	# produces mips32 (not mips1) executables
 
 # Conditional local overrides of ROOT.* variables:
 .sinclude "local-roots.mk"
@@ -77,7 +77,7 @@ CA.${st}+=--set=target.${TGT.${st}}.linker=${SCRIPTS}/gcc-wrap
 CA.${st}+=--set=target.${TGT.${st}}.ar=${ROOT.${st}}/tools/bin/${G_TGT.${st}}-ar
 do-${st}:
 	mkdir -p dist
-	@echo "=======> Cross-building rust for ${st}"
+	@${ECHO} "=======> Cross-building rust for ${st}"
 	${DEBUG} make -f Makefile clean
 	${DEBUG} env \
 		CROSS_ROOT=${ROOT.${st}} \
@@ -95,13 +95,13 @@ do-${st}:
 		src=$${distdir}/$${comp}-${V_NOREV}-${TGT.${st}}.tar.xz; \
 		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.xz; \
 		if [ ! -f "$${tgt}" ]; then \
-			echo ln $${src} $${tgt}; \
+			${ECHO} ln $${src} $${tgt}; \
 			${DEBUG} ln $${src} $${tgt}; \
 		fi; \
 	done; \
 	src_comp=rust-src-${V_NOREV}.tar.xz; \
 	if [ ! -f dist/$${src_comp} ]; then \
-		echo ln $${distdir}/$${src_comp} dist; \
+		${ECHO} ln $${distdir}/$${src_comp} dist; \
 		${DEBUG} ln $${distdir}/$${src_comp} dist; \
 	fi
 .endfor
