@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2021/08/23 09:58:59 adam Exp $
+# $NetBSD: options.mk,v 1.26 2024/07/15 12:30:57 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=		dso inet6 sasl slapi slp
@@ -41,6 +41,14 @@ BUILDLINK_API_DEPENDS.cyrus-sasl+=	cyrus-sasl>=2.1.15
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=		--without-cyrus-sasl
+
+# FreeBSD clang linker trips over undefined symbols
+SUBST_CLASSES.FreeBSD+=	linksym
+SUBST_STAGE.linksym=	pre-configure
+SUBST_FILES.linksym=	libraries/libldap/ldap.map
+SUBST_SED.linksym=	-E -e '/ldap_(int|pvt)_sasl_.+;/d'
+SUBST_SED.linksym+=	-e '/ldap_host_connected_to;/d'
+SUBST_MESSAGE.linksym=	Fixing missing symbols linker error.
 .endif
 
 ###
