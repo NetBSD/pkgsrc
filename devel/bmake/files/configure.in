@@ -1,44 +1,84 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.16 2020/05/24 21:10:17 nia Exp $
+dnl	$Id: configure.in,v 1.17 2024/07/15 09:10:06 jperkin Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
-AC_PREREQ(2.50)
-AC_INIT([bmake], [20200524], [sjg@NetBSD.org])
+AC_PREREQ([2.71])
+AC_INIT([bmake],[20240711],[sjg@NetBSD.org])
 AC_CONFIG_HEADERS(config.h)
 
 dnl make srcdir absolute
 case "$srcdir" in
 /*) ;;
-*) srcdir=`cd $srcdir && pwd`;;
+*) srcdir=`cd $srcdir && 'pwd'`;;
 esac
 
 dnl get _MAKE_VERSION
 . $srcdir/VERSION
 OS=`uname -s`
 
+dnl function to set DEFSHELL_INDEX
+use_defshell() {
+	case "$defshell_path$DEFSHELL_INDEX" in
+	"") ;;
+	*) return 0;;
+	esac
+	case "$1" in
+	*csh) # we must be desperate
+		DEFSHELL_INDEX=DEFSHELL_INDEX_CSH;;
+	*ksh*)
+		DEFSHELL_INDEX=DEFSHELL_INDEX_KSH;;
+	sh|/bin/sh|*/bsh)
+		DEFSHELL_INDEX=DEFSHELL_INDEX_SH;;
+	*=*)	# eg. sh=/bin/bsh
+		eval `IFS="="; set -- $1; echo name=$1 defshell_path=$2`
+		case "$name" in
+		csh) DEFSHELL_INDEX=DEFSHELL_INDEX_CSH;;
+		ksh) DEFSHELL_INDEX=DEFSHELL_INDEX_KSH;;
+		sh) DEFSHELL_INDEX=DEFSHELL_INDEX_SH;;
+		*) DEFSHELL_INDEX=DEFSHELL_INDEX_CUSTOM;;
+		esac
+		;;
+	*)	DEFSHELL_INDEX=DEFSHELL_INDEX_CUSTOM
+		defshell_path=$1
+		;;
+	esac
+	case "$defshell_path,$1" in
+	,/bin/*) ;;
+	,*/*) defshell_path=$1;;
+	esac
+}
 dnl
 AC_ARG_WITH(defshell,
-[  --with-defshell=SHELL  use SHELL by default - must be sh compatible, use sh or ksh to pick the internal definitions],
+[  --with-defshell=[[name=]]SHELL	use SHELL by default
+	optional 'name' can be 'sh' to indicate SHELL is sh compatible
+	eg. --with-defshell=sh=/bin/bsh
+	use just 'sh' or 'ksh' to pick the internal definitions],
 [case "${withval}" in
 yes)   AC_MSG_ERROR(bad value ${withval} given for bmake DEFSHELL) ;;
 no)    ;;
-*)     case "$with_defshell" in
-       sh)  DEFSHELL_INDEX=DEFSHELL_INDEX_SH;;	# it's the default anyway
-       ksh) DEFSHELL_INDEX=DEFSHELL_INDEX_KSH;;
-       csh) DEFSHELL_INDEX=DEFSHELL_INDEX_CSH;;	# kidding right?
-       *)   defshell_path=$with_defshell;;	# better be sh compatible!
-       esac
-       ;;
-       esac])
+*)     use_defshell $with_defshell;;
+esac])
 dnl
+dnl sometimes uname -s output is not useful
+FORCE_MAKE_OS=
+make_os=
 case "$OS" in
-CYGWIN*|MINGW*) use_makefile=no;;
+CYGWIN*)
+	use_makefile=no
+	OS=Cygwin
+	FORCE_MAKE_OS=$OS
+	;;
+Darwin|MINGW*) use_makefile=no;;
 *) use_makefile=yes;;
 esac
+if test "x$FORCE_MAKE_OS" != x; then
+	force_make_os=FORCE_
+	make_os=${FORCE_MAKE_OS}
+fi
 AC_ARG_WITH(makefile,
-[ --without-makefile dissable use of generated makefile],
+[  --without-makefile disable use of generated makefile],
 [case "${withval}" in
 yes|no) use_makefile=${withval};;
 *) AC_MSG_ERROR(bad value ${withval} given for makefile) ;;
@@ -46,21 +86,25 @@ esac])
 dnl
 use_meta=yes
 AC_ARG_WITH(meta,
-[ --without-meta dissable use of meta-mode],
+[  --without-meta disable use of meta-mode],
 [case "${withval}" in
 yes|no) use_meta=${withval};;
 *) AC_MSG_ERROR(bad value ${withval} given for meta) ;;
 esac])
 dnl
 AC_ARG_WITH(filemon,
-[ --with-filemon={no,dev,ktrace,path/filemon.h} indicate filemon method for meta-mode. Path to filemon.h implies dev],
+[  --with-filemon={no,dev,ktrace,path/filemon.h} indicate filemon method for meta-mode. Path to filemon.h implies dev],
 [ case "/${withval}" in
 /no) use_filemon=no;;
 /*trace) filemon_h=no use_filemon="${withval}";;
 */filemon.h) filemon_h="${withval}";;
 */filemon*) filemon_h="${withval}/filemon.h";;
 *) AC_MSG_ERROR(bad value ${withval} given for filemon) ;;
-esac],
+esac
+case "$use_filemon,$filemon_h" in
+,*.h) use_filemon=dev;;
+esac
+],
 [
 case "$OS" in
 NetBSD) filemon_h=no use_filemon=ktrace;;
@@ -82,6 +126,13 @@ dev) ;;
 *) filemon_h=no;;
 esac
 ])
+dnl some systems have broken/incomplete strftime
+AC_ARG_WITH(bmake_strftime,
+[ --with-bmake-strftime force use of bmake strftime],
+[case "${withval}" in
+yes|no) bmake_strftime=$withval;;
+esac])
+dnl
 dnl echo "Note: use_meta=$use_meta use_filemon=$use_filemon filemon_h=$filemon_h" >&6
 case "$use_meta" in
 yes)
@@ -93,6 +144,49 @@ yes)
 esac
 dnl
 dnl Check for OS problems
+dnl
+dnl Minix 3 at least has bugs in headers where _NETBSD_SOURCE
+dnl is needed for compilation
+case "$OS" in
+Minix)	CPPFLAGS="${CPPFLAGS} -D_NETBSD_SOURCE"
+	test -x /usr/pkg/bin/clang && CC=${CC:-clang}
+	;;
+SCO_SV)	# /bin/sh is not usable
+	ALT_DEF_SHELLS="/bin/lsh /usr/bin/bash /bin/ksh"
+	FORCE_USE_SHELL=1
+	;;
+esac
+if test "x$FORCE_USE_SHELL" != x; then
+	CPPFLAGS="${CPPFLAGS} -DFORCE_USE_SHELL"
+fi
+dnl
+# Not everyone groks TZ=Europe/Berlin
+# which is used by the localtime tests
+echo $ECHO_N "checking whether system has timezone Europe/Berlin... $ECHO_C" >&6
+eval `TZ=UTC date '+utc_H=%H utc_d=%d' 2> /dev/null`
+eval `TZ=Europe/Berlin date '+utc1_H=%H utc1_d=%d' 2> /dev/null`
+if test ${utc1_d-0} = 01 -a ${utc_d-0} -gt ${utc1_d-0} ||
+   test ${utc_d-0} -lt ${utc1_d-0} -o ${utc_H-0} -lt ${utc1_H-0}; then
+	echo yes  >&6
+	UTC_1=Europe/Berlin
+else
+	eval `TZ=UTC-1 date '+utc1_H=%H utc1_d=%d' 2> /dev/null`
+	if test ${utc1_d-0} = 01 -a ${utc_d-0} -gt ${utc1_d-0} ||
+	   test ${utc_d-0} -lt ${utc1_d-0} -o ${utc_H-0} -lt ${utc1_H-0}; then
+		UTC_1=UTC-1
+		echo no, using UTC-1 >&6
+	fi
+fi
+test "x$UTC_1" = x && echo no >&6
+dnl
+dnl Add some places to look for compilers
+oldPATH=$PATH
+for d in /usr/gnu/bin
+do
+	test -d $d || continue
+	PATH=$PATH:$d
+done
+export PATH	
 dnl Solaris's signal.h only privides sigset_t etc if one of
 dnl _EXTENSIONS_ _POSIX_C_SOURCE or _XOPEN_SOURCE are defined.
 dnl The later two seem to cause more problems than they solve so if we
@@ -100,9 +194,11 @@ dnl see _EXTENSIONS_ we use it.
 AC_USE_SYSTEM_EXTENSIONS
 dnl Checks for programs.
 AC_PROG_CC
-AC_PROG_CC_C99
-dnl AC_PROG_GCC_TRADITIONAL
 AC_PROG_INSTALL
+# We have to override that on some systems
+case "$OS" in
+IRIX*) ac_INSTALL=$srcdir/install-sh;;
+esac
 dnl Executable suffix - normally empty; .exe on os2.
 AC_SUBST(ac_exe_suffix)dnl
 dnl
@@ -117,14 +213,40 @@ if test $bmake_path_max -gt 1024; then
    # this is all we expect
    bmake_path_max=1024
 fi
+if test ${bmake_strftime:-no} = yes; then
+   CPPFLAGS="${CPPFLAGS} -DFORCE_BMAKE_STRFTIME"
+fi
 echo "Using: BMAKE_PATH_MAX=$bmake_path_max" >&6
 AC_SUBST(bmake_path_max)dnl
 dnl
-dnl AC_C_CROSS
-dnl
-
+# if type does not work which(1) had better!
+# note we cannot rely on type returning non-zero on failure
+if (type cat) > /dev/null 2>&1; then
+: which
+which() {
+	type "$@" | sed 's,[[()]],,g;s,^[[^/]][[^/]]*,,;q'
+}
+fi
+dnl if CC is somewhere that was not in PATH we need its full path
+dnl watch out for included flags!
+case "$CC" in
+/*) ;;
+*)
+    for x in $CC
+    do
+        _cc=`which $x`
+        break
+    done
+    if test -x ${_cc:-/dev/null}; then
+        _cc_dir=`dirname $_cc`
+        case ":$oldPATH:" in
+        *:$_cc_dir:*) ;;
+        *) CC=$_cc_dir/$CC;;
+        esac
+    fi
+    ;;
+esac
 dnl Checks for header files.
-AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
 AC_HEADER_DIRENT
 dnl Keep this list sorted
@@ -145,48 +267,55 @@ AC_CHECK_HEADERS( \
 	paths.h \
 	poll.h \
 	ranlib.h \
-	string.h \
+	regex.h \
 	sys/mman.h \
 	sys/select.h \
 	sys/socket.h \
 	sys/time.h \
 	sys/uio.h \
-	unistd.h \
 	utime.h \
 	)
 
 dnl Both *BSD and Linux have sys/cdefs.h, most do not.
 dnl If it is missing, we add -I${srcdir}/missing to CFLAGS
-dnl also if sys/cdefs.h does not have __RCSID we need to use ours
-dnl but we need to include the host's one too *sigh*
-AC_CHECK_HEADER(sys/cdefs.h,
-echo $ECHO_N "checking whether sys/cdefs.h is compatible... $ECHO_C" >&6
-AC_EGREP_CPP(yes,
-[#include <sys/cdefs.h>
-#ifdef __RCSID
-yes
-#endif
-],
-echo yes  >&6,
-echo no  >&6; CPPFLAGS="${CPPFLAGS} -I`cd ${srcdir}/missing && pwd` -DNEED_HOST_CDEFS_H"),
+AC_CHECK_HEADER(sys/cdefs.h,,
 CPPFLAGS="${CPPFLAGS} -I`cd ${srcdir}/missing && pwd`")
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
 AC_C_BIGENDIAN
 AC_C_CONST
+AC_C_INLINE
+AC_TYPE_INT64_T
+AC_TYPE_LONG_LONG_INT
 AC_TYPE_MODE_T
 AC_TYPE_OFF_T
 AC_TYPE_PID_T
 AC_TYPE_SIZE_T
 AC_TYPE_UINT32_T
-AC_DECL_SYS_SIGLIST
-AC_HEADER_TIME
+AC_CHECK_DECLS([sys_siglist],[],[],[#include <signal.h>
+/* NetBSD declares sys_siglist in unistd.h.  */
+#ifdef HAVE_UNISTD_H
+# include <unistd.h>
+#endif
+])
+
+AC_CHECK_HEADERS_ONCE([sys/time.h])
+
 AC_STRUCT_TM
 
+dnl we need sig_atomic_t
+AH_TEMPLATE([sig_atomic_t],[type that signal handlers can safely frob])
+AC_CHECK_TYPES([sig_atomic_t],[],[],
+[
+#ifdef HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+#include <signal.h>
+])
+
 dnl Checks for library functions.
-AC_TYPE_SIGNAL
-AC_FUNC_VFORK
+AC_FUNC_FORK
 AC_FUNC_VPRINTF
 AC_FUNC_WAIT3
 dnl Keep this list sorted
@@ -195,23 +324,29 @@ AC_CHECK_FUNCS( \
 	errx \
 	getcwd \
 	getenv \
-	getopt \
 	getwd \
 	killpg \
-	mmap \
 	putenv \
 	select \
 	setenv \
 	setpgid \
+	setrlimit \
 	setsid \
-	sigaction \
+	sigaddset \
+	sigpending \
+	sigprocmask \
+	sigsetmask \
+	sigsuspend \
 	sigvec \
 	snprintf \
 	strerror \
+	stresep \
 	strftime \
 	strsep \
 	strtod \
 	strtol \
+	strtoll \
+	strtoul \
 	sysctl \
 	unsetenv \
 	vsnprintf \
@@ -224,8 +359,10 @@ AC_CHECK_FUNCS( \
 
 dnl functions which we may need to provide
 AC_REPLACE_FUNCS( \
+	getopt \
 	realpath \
 	dirname \
+	sigaction \
 	stresep \
 	strlcpy \
 	)
@@ -241,7 +378,6 @@ dnl
 dnl Structures
 dnl
 AC_HEADER_STAT
-AC_STRUCT_ST_RDEV
 dnl
 echo "checking if compiler supports __func__" >&6
 AC_LANG(C)
@@ -249,13 +385,20 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([],[[const char *func = __func__;]])],,
 	AC_DEFINE(__func__, __FUNCTION__, C99 function name))
 dnl
 dnl we want this for unit-tests/Makefile
-echo $ECHO_N "checking if diff -u works... $ECHO_C" >&6
-if diff -u /dev/null /dev/null > /dev/null 2>&1; then
-   diff_u=-u
-   echo yes >&6
+dnl GNU diff is known to support -u
+if test -x /usr/gnu/bin/diff; then
+	diff=/usr/gnu/bin/diff
+	diff_u=-u
 else
-   diff_u=
-   echo no >&6
+	diff=${diff:-diff}
+	echo $ECHO_N "checking if $diff -u works... $ECHO_C" >&6
+	if $diff -u /dev/null /dev/null > /dev/null 2>&1; then
+		diff_u=-u
+		echo yes >&6
+	else
+		diff_u=
+		echo no >&6
+	fi
 fi
 dnl
 dnl AC_* don't quite cut it.
@@ -273,7 +416,7 @@ machine_arch=MACHINE_ARCH
 EOF
 
 default_machine=`(eval "$ac_cpp conftest.$ac_ext") 2>&5 | 
-	egrep machine= | tr -d ' "'`
+	grep machine= | tr -d ' "'`
 rm -rf conftest*
 if test "$default_machine"; then
 	eval "$default_machine"
@@ -307,7 +450,7 @@ AC_ARG_WITH(force_machine_arch,
 [case "${withval}" in
 yes)   force_machine_arch=FORCE_;;
 no)    ;;
-*)     force_machine_arch=FORCE_; machine_arch=$with_force_machine;;
+*)     force_machine_arch=FORCE_; machine_arch=$with_force_machine_arch;;
 esac])
 dnl
 AC_ARG_WITH(machine_arch,
@@ -320,7 +463,7 @@ esac])
 dnl
 dnl Tell them what we ended up with
 dnl
-echo "Using: ${force_machine}MACHINE=$machine, MACHINE_ARCH=$machine_arch" 1>&6
+echo "Using: ${force_machine}MACHINE=$machine, ${force_machine_arch}MACHINE_ARCH=$machine_arch" 1>&6
 dnl
 dnl Allow folk to control _PATH_DEFSYSPATH
 dnl
@@ -350,7 +493,7 @@ dnl
 dnl And this can be handy to do with out.
 dnl
 AC_ARG_ENABLE(pwd-override,
-[  --disable-pwd-override  disable \$PWD overriding getcwd()],
+[  --disable-pwd-override  disable $PWD overriding getcwd()],
 [case "${enableval}" in
 yes)   ;;
 no)    CPPFLAGS="$CPPFLAGS -DNO_PWD_OVERRIDE" ;;
@@ -361,7 +504,7 @@ dnl Just for grins
 dnl
 AC_ARG_ENABLE(check-make-chdir,
 [  --disable-check-make-chdir disable make trying to guess 
-	when it should automatically cd \${.CURDIR}],
+	when it should automatically cd ${.CURDIR}],
 [case "${enableval}" in
 yes)   ;;
 no)    CPPFLAGS="$CPPFLAGS -DNO_CHECK_MAKE_CHDIR" ;;
@@ -392,34 +535,71 @@ done
 mksrc=`echo $mksrc | sed "s,$srcdir,\\\${srcdir},"`
 echo "Using: MKSRC=$mksrc" 1>&6
 dnl On some systems we want a different default shell by default
-if test -x /usr/xpg4/bin/sh; then
-        defshell_path=${defshell_path:-/usr/xpg4/bin/sh}
-fi
-if test -n "$defshell_path"; then
+for sh in /usr/xpg4/bin/sh $ALT_DEF_SHELLS
+do
+	test -x $sh || continue
+	use_defshell $sh
+	break
+done
+case "$defshell_path$DEFSHELL_INDEX" in
+"")	;;
+*DEFSHELL_INDEX_CUSTOM)
 	echo "Using: SHELL=$defshell_path"  >&6
 	AC_DEFINE_UNQUOTED(DEFSHELL_CUSTOM, "$defshell_path", Path of default shell)
-fi
-if test -n "$DEFSHELL_INDEX"; then
-       AC_DEFINE_UNQUOTED(DEFSHELL_INDEX, $DEFSHELL_INDEX, Shell spec to use by default)
-fi        
+	;;
+/*INDEX*)
+	echo "Using: SHELL=$DEFSHELL_INDEX ($defshell_path)" | sed 's,DEFSHELL_INDEX_,,' >&6
+	AC_DEFINE_UNQUOTED(DEFSHELL_INDEX, $DEFSHELL_INDEX, Shell spec to use by default)
+AC_DEFINE_UNQUOTED(DEFSHELL_PATH, "$defshell_path", Path of default shell)
+	;;
+*)
+	echo "Using: SHELL=$DEFSHELL_INDEX" | sed 's,DEFSHELL_INDEX_,,' >&6
+	AC_DEFINE_UNQUOTED(DEFSHELL_INDEX, $DEFSHELL_INDEX, Shell spec to use by default)
+	;;
+esac
 dnl
+dnl Some systems have deprecated egrep in favor of grep -E
+case "`echo bmake | egrep 'a|b' 2>&1`" in
+bmake) egrep=egrep;;
+*) egrep='grep -E';;
+esac
+dnl
+AC_SUBST(egrep)
+AC_SUBST(make_os)
+AC_SUBST(force_make_os)
 AC_SUBST(machine)
 AC_SUBST(force_machine)
 AC_SUBST(machine_arch)
+AC_SUBST(force_machine_arch)
 AC_SUBST(mksrc)
 AC_SUBST(default_sys_path)
 AC_SUBST(INSTALL)
 AC_SUBST(GCC)
+AC_SUBST(diff)
 AC_SUBST(diff_u)
 AC_SUBST(use_meta)
 AC_SUBST(use_filemon)
 AC_SUBST(filemon_h)
 AC_SUBST(_MAKE_VERSION)
+AC_SUBST(UTC_1)
 bm_outfiles="Makefile.config unit-tests/Makefile.config make-bootstrap.sh"
 if test $use_makefile = yes; then
    bm_outfiles="makefile $bm_outfiles"
 fi
-AC_OUTPUT($bm_outfiles)
+
+here=`'pwd'`
+: srcdir=$srcdir
+: here=  $here
+case "$here" in
+$srcdir/obj*) # make sure we put unit-tests/Makefile.config in the right place
+	obj=`basename $here`
+	mkdir -p $srcdir/unit-tests/$obj
+	test -d unit-tests || ln -s ../unit-tests/$obj unit-tests
+	;;
+esac
+
+AC_CONFIG_FILES([$bm_outfiles])
+AC_OUTPUT
 cat <<EOF
 
 You can now run

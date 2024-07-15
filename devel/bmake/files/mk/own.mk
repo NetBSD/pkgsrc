@@ -1,7 +1,10 @@
-# $Id: own.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# $Id: own.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 
-.if !target(__${.PARSEFILE}__)
-__${.PARSEFILE}__:
+# should be set properly in sys.mk
+_this ?= ${.PARSEFILE:S,bsd.,,}
+
+.if !target(__${_this}__)
+__${_this}__: .NOTMAIN
 
 .if !target(__init.mk__)
 .include "init.mk"
@@ -37,31 +40,10 @@ libprefix?=	/usr
 # FreeBSD at least does not set this
 MACHINE_ARCH?=	${MACHINE}
 # we need to make sure these are defined too in case sys.mk fails to.
-COMPILE.s?=	${CC} ${AFLAGS} -c
-LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
-COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
-LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
-LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
-CXXFLAGS?=	${CFLAGS}
-COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
-LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
-LINK.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.f?=	${FC} ${FFLAGS} -c
-LINK.f?=	${FC} ${FFLAGS} ${LDFLAGS}
-COMPILE.F?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
-LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
-LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
-LEX.l?=		${LEX} ${LFLAGS}
-COMPILE.p?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
-LINK.p?=	${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
-YACC.y?=	${YACC} ${YFLAGS}
 
 # for suffix rules
 IMPFLAGS?=	${COPTS.${.IMPSRC:T}} ${CPUFLAGS.${.IMPSRC:T}} ${CPPFLAGS.${.IMPSRC:T}}
-.for s in .c .cc 
+.for s in .c .cc
 COMPILE.$s += ${IMPFLAGS}
 LINK.$s +=  ${IMPFLAGS}
 .endfor
@@ -119,16 +101,17 @@ OPTIONS_DEFAULT_DEPENDENT+= \
 	PICINSTALL/LINKLIB \
 	PICLIB/PIC \
 	PROFILE/LINKLIB \
+	STAGING_MAN/STAGING \
 	STAGING_PROG/STAGING \
 
 .include <options.mk>
 
 .if ${MK_INSTALL_AS_USER} == "yes"
 # We ignore this if user is root.
-_uid!=  id -u
+_uid:= ${.MAKE.UID:U${id -u:L:sh}}
 .if ${_uid} != 0
 .if !defined(USERGRP)
-USERGRP!=  id -g
+USERGRP:=  ${.MAKE.GID:U${id -g:L:sh}}
 .export USERGRP
 .endif
 .for x in BIN CONF DOC INC INFO FILES KMOD LIB MAN NLS PROG SHARE
@@ -153,8 +136,7 @@ INCDIR?=	${INCLUDEDIR}
 # Define MANZ to have the man pages compressed (gzip)
 #MANZ=		1
 
-MANTARGET?= cat
-MANDIR?=	${prefix}/share/man/${MANTARGET}
+MANDIR?=	${prefix}/share/man
 MANGRP?=	${BINGRP}
 MANOWN?=	${BINOWN}
 MANMODE?=	${NONBINMODE}
@@ -211,8 +193,8 @@ CFLAGS+= ${CPPFLAGS}
 
 # allow for per target flags
 # apply the :T:R first, so the more specific :T can override if needed
-CPPFLAGS += ${CPPFLAGS_${.TARGET:T:R}} ${CPPFLAGS_${.TARGET:T}} 
-CFLAGS += ${CFLAGS_${.TARGET:T:R}} ${CFLAGS_${.TARGET:T}} 
+CPPFLAGS += ${CPPFLAGS_${.TARGET:T:R}} ${CPPFLAGS_${.TARGET:T}}
+CFLAGS += ${CFLAGS_${.TARGET:T:R}} ${CFLAGS_${.TARGET:T}}
 
 # Define SYS_INCLUDE to indicate whether you want symbolic links to the system
 # source (``symlinks''), or a separate copy (``copies''); (latter useful
@@ -257,10 +239,12 @@ MK_NLS=		no
 .if ${MK_META_MODE:Uno} == "yes"
 # should all be set by sys.mk if not default
 TARGET_SPEC_VARS ?= MACHINE
+.if ${MAKE_VERSION} >= 20120325
 .if ${TARGET_SPEC_VARS:[#]} > 1
 TARGET_SPEC_VARS_REV := ${TARGET_SPEC_VARS:[-1..1]}
 .else
 TARGET_SPEC_VARS_REV = ${TARGET_SPEC_VARS}
+.endif
 .endif
 .if ${MK_STAGING} == "yes"
 STAGE_ROOT?= ${OBJROOT}/stage

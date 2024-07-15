@@ -1,13 +1,28 @@
-# $Id: varcmd.mk,v 1.3 2020/05/24 11:09:44 nia Exp $
+# $NetBSD: varcmd.mk,v 1.4 2024/07/15 09:10:28 jperkin Exp $
 #
 # Test behaviour of recursive make and vars set on command line.
+#
+# FIXME: The purpose of this test is unclear.  The test uses six levels of
+# sub-makes, which makes it incredibly hard to understand.  There must be at
+# least an introductory explanation about what _should_ happen here.
+# The variable names are terrible, as well as their values.
+#
+# This test produces different results if the large block with the condition
+# "scope == SCOPE_GLOBAL" in Var_SetWithFlags is removed.  This test should
+# be rewritten to make it clear why there is a difference and why this is
+# actually intended.  Removing that large block of code makes only this test
+# and vardebug.mk fail, which is not enough.
+#
+# See also:
+#	var-scope-cmdline.mk
+#	varname-makeflags.mk
 
-FU=fu
-FOO?=foo
+FU=	fu
+FOO?=	foo
 .if !empty(.TARGETS)
-TAG=${.TARGETS}
+TAG=	${.TARGETS}
 .endif
-TAG?=default
+TAG?=	default
 
 all:	one
 
@@ -43,11 +58,11 @@ VAR=Internal
 four:	show
 	@${.MAKE} -f ${MAKEFILE} five
 
-M = x
-V.y = is y
-V.x = is x
-V := ${V.$M}
-K := ${V}
+M=	x
+V.y=	is y
+V.x=	is x
+V:=	${V.$M}
+K:=	${V}
 
 show-v:
 	@echo '${TAG} v=${V} k=${K}'
@@ -57,4 +72,3 @@ five:	show show-v
 
 six:	show-v
 	@${.MAKE} -f ${MAKEFILE} V=override show-v
-

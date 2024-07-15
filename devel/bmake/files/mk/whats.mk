@@ -1,20 +1,22 @@
-# $Id: whats.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: whats.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 #
 #	@(#) Copyright (c) 2014-2020, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
 
 .if ${MK_WHATSTRING:Uno} == "yes"
-# it can be useful to embed a what(1) string in binaries 
+# it can be useful to embed a what(1) string in binaries
 # so that the build location can be seen from a core file.
 .if defined(KMOD)
 what_thing ?= ${KMOD}
@@ -55,7 +57,7 @@ what_location := ${WHAT_LOCATION}
 # this script is done in multiple lines so we can
 # use the token ${.OODATE:MNO_META_CMP}
 # to prevent the variable parts making this constantly out-of-date
-${what_uuid}.c:
+${what_uuid}.c:	.NOTMAIN
 	echo 'extern const char ${WHAT_LINE_IDS:@i@${what_var}_$i[]@:ts,};' > $@
 .for i in ${WHAT_LINE_IDS}
 .if ${WHAT_NOCMP_LINE_IDS:M$i} != ""

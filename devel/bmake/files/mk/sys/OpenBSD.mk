@@ -1,8 +1,8 @@
-#	$NetBSD: OpenBSD.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+#	$NetBSD: OpenBSD.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
-OS=		OpenBSD
-unix?=		We run ${OS}.
+OS ?=		OpenBSD
+unix ?=		We run ${OS}.
 
 .SUFFIXES: .out .a .ln .o .s .S .c ${CXX_SUFFIXES} .F .f .r .y .l .cl .p .h
 .SUFFIXES: .sh .m4
@@ -12,88 +12,88 @@ unix?=		We run ${OS}.
 # need to make sure this is set
 MACHINE_ARCH.${MACHINE} ?= ${MACHINE}
 .if empty(MACHINE_ARCH)
-MACHINE_ARCH = ${MACHINE_ARCH.${MACHINE}}
+MACHINE_ARCH  ?= ${MACHINE_ARCH.${MACHINE}}
 .endif
 
-AR?=		ar
-ARFLAGS?=	rl
-RANLIB?=	ranlib
+AR ?=		ar
+ARFLAGS ?=	r
+RANLIB ?=	ranlib
 
-AS?=		as
-AFLAGS?=
-.if ${MACHINE_ARCH} == "sparc64" 
+AS ?=		as
+AFLAGS ?=
+.if ${MACHINE_ARCH} == "sparc64"
 AFLAGS+= -Wa,-Av9a
 .endif
-COMPILE.s?=	${CC} ${AFLAGS} -c
-LINK.s?=	${CC} ${AFLAGS} ${LDFLAGS}
-COMPILE.S?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
-LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.s ?=	${CC} ${AFLAGS} -c
+LINK.s ?=	${CC} ${AFLAGS} ${LDFLAGS}
+COMPILE.S ?=	${CC} ${AFLAGS} ${CPPFLAGS} -c -traditional-cpp
+LINK.S ?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CC?=		cc
+CC ?=		cc
 .if ${MACHINE_ARCH} == "alpha" || \
     ${MACHINE_ARCH} == "i386" || \
     ${MACHINE_ARCH} == "m68k" || \
     ${MACHINE_ARCH} == "sparc" || \
     ${MACHINE_ARCH} == "vax"
-DBG?=	-O2
+DBG ?=	-O2
 .else
-DBG?=	-O
+DBG ?=	-O
 .endif
-CFLAGS?=	${DBG}
-COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
-LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CFLAGS ?=	${DBG}
+COMPILE.c ?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
+LINK.c ?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CXX?=		c++
-CXXFLAGS?=	${CFLAGS}
-COMPILE.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
-LINK.cc?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
+CXX ?=		c++
+CXXFLAGS ?=	${CFLAGS}
+COMPILE.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} -c
+LINK.cc ?=	${CXX} ${CXXFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-OBJC?=		${CC}
-OBJCFLAGS?=	${CFLAGS}
-COMPILE.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
-LINK.m?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
+OBJC ?=		${CC}
+OBJCFLAGS ?=	${CFLAGS}
+COMPILE.m ?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} -c
+LINK.m ?=	${OBJC} ${OBJCFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-CPP?=		cpp
-CPPFLAGS?=	
+CPP ?=		cpp
+CPPFLAGS ?=
 
-FC?=		f77
-FFLAGS?=	-O
-RFLAGS?=
-COMPILE.f?=	${FC} ${FFLAGS} -c
-LINK.f?=	${FC} ${FFLAGS} ${LDFLAGS}
-COMPILE.F?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
-LINK.F?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
-COMPILE.r?=	${FC} ${FFLAGS} ${RFLAGS} -c
-LINK.r?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
+FC ?=		f77
+FFLAGS ?=	-O
+RFLAGS ?=
+COMPILE.f ?=	${FC} ${FFLAGS} -c
+LINK.f ?=	${FC} ${FFLAGS} ${LDFLAGS}
+COMPILE.F ?=	${FC} ${FFLAGS} ${CPPFLAGS} -c
+LINK.F ?=	${FC} ${FFLAGS} ${CPPFLAGS} ${LDFLAGS}
+COMPILE.r ?=	${FC} ${FFLAGS} ${RFLAGS} -c
+LINK.r ?=	${FC} ${FFLAGS} ${RFLAGS} ${LDFLAGS}
 
-INSTALL?=	install
+INSTALL ?=	install
 
-LEX?=		lex
-LFLAGS?=
-LEX.l?=		${LEX} ${LFLAGS}
+LEX ?=		lex
+LFLAGS ?=
+LEX.l ?=		${LEX} ${LFLAGS}
 
-LD?=		ld
-LDFLAGS?=
+LD ?=		ld
+LDFLAGS ?=
 
-LINT?=		lint
-LINTFLAGS?=	-chapbxzF
+LINT ?=		lint
+LINTFLAGS ?=	-chapbxzF
 
-LORDER?=	lorder
+LORDER ?=	lorder
 
-NM?=		nm
+NM ?=		nm
 
-PC?=		pc
-PFLAGS?=
-COMPILE.p?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
-LINK.p?=	${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
+PC ?=		pc
+PFLAGS ?=
+COMPILE.p ?=	${PC} ${PFLAGS} ${CPPFLAGS} -c
+LINK.p ?=	${PC} ${PFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
-SIZE?=		size
+SIZE ?=		size
 
-TSORT?= 	tsort -q
+TSORT ?= 	tsort -q
 
-YACC?=		yacc
-YFLAGS?=
-YACC.y?=	${YACC} ${YFLAGS}
+YACC ?=		yacc
+YFLAGS ?=
+YACC.y ?=	${YACC} ${YFLAGS}
 
 # C
 .c:
@@ -183,7 +183,7 @@ ${CXX_SUFFIXES:%=%.a}:
 	mv lex.yy.c ${.TARGET}
 .l.o:
 	${LEX.l} ${.IMPSRC}
-	${COMPILE.c} -o ${.TARGET} lex.yy.c 
+	${COMPILE.c} -o ${.TARGET} lex.yy.c
 	rm -f lex.yy.c
 
 # Yacc
@@ -203,3 +203,4 @@ ${CXX_SUFFIXES:%=%.a}:
 .sh:
 	rm -f ${.TARGET}
 	cp ${.IMPSRC} ${.TARGET}
+	chmod a+x ${.TARGET}

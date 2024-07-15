@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.c,v 1.5 2020/05/24 21:10:17 nia Exp $	*/
+/*	$NetBSD: getopt.c,v 1.6 2024/07/15 09:10:06 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994
@@ -58,8 +58,8 @@ int
 getopt(int nargc, char * const nargv[], const char *ostr)
 {
 	extern char *__progname;
-	static const char *place = EMSG; 	/* option letter processing */
-	char *oli;				/* option letter list index */
+	static const char *place = EMSG;	/* option letter processing */
+	const char *oli;			/* option letter list index */
 
 #ifndef BSD4_4
 	if (!__progname) {

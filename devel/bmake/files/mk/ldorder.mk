@@ -1,4 +1,6 @@
-# $Id: ldorder.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: ldorder.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 #
 #	@(#) Copyright (c) 2015, Simon J. Gerraty
 #
@@ -130,7 +132,7 @@ ${_ldorder}: ${_ldorders}
 # it can also add to CFLAGS etc.
 .for __inc in ${LDORDER_LIBS:S,$,.${LDORDER_INC},}
 .if !target(__${__inc}__)
-__${__inc}__:
+__${__inc}__: .NOTMAIN
 # make sure this is reset
 LDORDER_LIBS =
 _ldorders =

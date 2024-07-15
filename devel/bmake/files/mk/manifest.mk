@@ -1,14 +1,16 @@
-# $Id: manifest.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: manifest.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 #
 #	@(#) Copyright (c) 2014, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -21,12 +23,12 @@
 # ${MANIFEST}.DIRS += bin sbin usr/bin ...
 # for each dir we have a ${MANIFEST}.SRCS.$dir
 # that provides the absolute path to the contents
-# ${MANIFEST}.SRCS.bin += ${OBJTOP}/bin/sh/sh 
+# ${MANIFEST}.SRCS.bin += ${OBJTOP}/bin/sh/sh
 # ${MANIFEST}.SYMLINKS is a list of src target pairs
 # for each file/dir there are a number of attributes
 # UID GID MODE FLAGS
 # which can be set per dir, per file or we use defaults
-# eg.  
+# eg.
 # MODE.sbin = 550
 # MODE.usr/sbin = 550
 # MODE.dirs = 555
@@ -37,7 +39,7 @@
 # means passwd gets 4555 other files in usr/bin get 555 and
 # files in usr/sbin get 500
 # STORE defaults to basename of src and target directory
-# but we can use 
+# but we can use
 # ${MANIFEST}.SRCS.sbin += ${OBJTOP}/bin/sh-static/sh-static
 # STORE.sbin/sh-static = sbin/sh
 #
@@ -47,7 +49,7 @@
 UID.dirs ?= 0
 GID.dirs ?= 0
 MODE.dirs ?= 775
-FLAGS.dirs ?= 
+FLAGS.dirs ?=
 
 UID.files ?= 0
 GID.files ?= 0

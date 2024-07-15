@@ -1,3 +1,4 @@
+# $NetBSD: ternary.mk,v 1.2 2024/07/15 09:10:27 jperkin Exp $
 
 all:
 	@for x in "" A= A=42; do ${.MAKE} -f ${MAKEFILE} show $$x; done

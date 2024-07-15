@@ -1,14 +1,16 @@
-# $Id: sys.clean-env.mk,v 1.2 2020/05/24 11:09:44 nia Exp $
+# SPDX-License-Identifier: BSD-2-Clause
+#
+# $Id: sys.clean-env.mk,v 1.3 2024/07/15 09:10:09 jperkin Exp $
 #
 #	@(#) Copyright (c) 2009, Simon J. Gerraty
 #
 #	This file is provided in the hope that it will
 #	be of use.  There is absolutely NO WARRANTY.
 #	Permission to copy, redistribute or otherwise
-#	use this file is hereby granted provided that 
+#	use this file is hereby granted provided that
 #	the above copyright notice and this notice are
-#	left intact. 
-#      
+#	left intact.
+#
 #	Please send copies of changes and bug-fixes to:
 #	sjg@crufty.net
 #
@@ -52,10 +54,10 @@ MAKE_ENV_SAVE_PREFIX_LIST += \
 
 
 # This could be a list of vars or patterns to explicitly exclude.
-MAKE_ENV_SAVE_EXCLUDE_LIST ?= _
+MAKE_ENV_SAVE_EXCLUDE_LIST += _
 
 # This is the actual list that we will save
-# HOME is probably something worth clobbering eg. 
+# HOME is probably something worth clobbering eg.
 # HOME=/var/empty
 MAKE_ENV_SAVE_VAR_LIST += \
 	HOME \
@@ -68,7 +70,7 @@ MAKE_ENV_SAVE_VAR_LIST += \
 	USER \
 	${_env_vars:${MAKE_ENV_SAVE_EXCLUDE_LIST:${M_ListToSkip}}}
 
-_env_vars != env | egrep '^(${MAKE_ENV_SAVE_PREFIX_LIST:ts|})' | sed 's,=.*,,'; echo
+_env_vars != env | ${EGREP:Uegrep} '^(${MAKE_ENV_SAVE_PREFIX_LIST:ts|})' | sed 's,=.*,,'; echo
 
 _export_list =
 .for v in ${MAKE_ENV_SAVE_VAR_LIST:O:u}
@@ -115,7 +117,7 @@ MAKEOBJDIR = $${.CURDIR:S,${_srctop},$${OBJTOP},}
 $v := ${$v}
 .endfor
 .else
-# we cannot use the '$$' trick, anymore
+# we cannot rely on the '$$' trick (depending on .MAKE.SAVE_DOLLARS)
 # but we can export a literal (unexpanded) value
 SRCTOP := ${_srctop}
 OBJROOT := ${_objroot}
@@ -125,6 +127,6 @@ MAKEOBJDIR = ${.CURDIR:S,${SRCTOP},${OBJTOP},}
 .endif
 #.info ${_tricky_env_vars:@v@${.newline}$v=${$v}@}
 #showenv:
-#	@env | egrep 'OBJ|SRC'
+#	@env | ${EGREP:Uegrep} 'OBJ|SRC'
 .endif				# MAKEOBJDIR
 .endif				# level 0
