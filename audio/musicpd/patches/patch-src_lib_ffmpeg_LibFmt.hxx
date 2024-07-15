@@ -1,3 +1,5 @@
+$NetBSD: patch-src_lib_ffmpeg_LibFmt.hxx,v 1.2 2024/07/15 10:06:15 adam Exp $
+
 --- src/lib/ffmpeg/LibFmt.hxx.orig	2023-12-20 07:21:57.000000000 -0800
 +++ src/lib/ffmpeg/LibFmt.hxx	2024-07-14 16:13:04.359461264 -0700
 @@ -29,7 +29,7 @@
