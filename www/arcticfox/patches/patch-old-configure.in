@@ -1,0 +1,38 @@
+$NetBSD: patch-old-configure.in,v 1.1 2024/07/16 08:05:47 nia Exp $
+
+- Add Sun Audio support.
+
+--- old-configure.in.orig	2024-03-20 16:39:08.000000000 +0000
++++ old-configure.in
+@@ -2586,6 +2586,13 @@ esac
+ 
+ MOZ_CONFIG_NSPR()
+ 
++dnl If SunOS or NetBSD, assume that Sun Audio is available
++case "$OS_TARGET" in
++SunOS|NetBSD)
++    MOZ_SUN=1
++    ;;
++esac
++
+ dnl ========================================================
+ dnl system libevent Support
+ dnl ========================================================
+@@ -4195,7 +4202,7 @@ if test -n "$MOZ_SYSTEM_LIBVPX"; then
+     dnl === libvpx Version check ===
+     dnl ============================
+     dnl Check to see if we have a system libvpx package.
+-    PKG_CHECK_MODULES(MOZ_LIBVPX, vpx >= 1.3.0)
++    PKG_CHECK_MODULES(MOZ_LIBVPX, vpx)
+ 
+     CFLAGS="$CFLAGS $MOZ_LIBVPX_CFLAGS"
+     LIBS="$LIBS $MOZ_LIBVPX_LIBS"
+@@ -4355,6 +4362,8 @@ if test -n "$MOZ_WEBM_ENCODER"; then
+ fi
+ AC_SUBST(MOZ_WEBM_ENCODER)
+ 
++AC_SUBST(MOZ_SUN)
++
+ dnl ==================================
+ dnl = Check alsa availability on Linux
+ dnl ==================================

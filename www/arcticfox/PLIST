@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/03/21 21:42:07 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/07/16 08:05:47 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -17,10 +17,24 @@ lib/${PKGNAME}/defaults/pref/channel-prefs.js
 lib/${PKGNAME}/dependentlibs.list
 lib/${PKGNAME}/dictionaries/en-US.aff
 lib/${PKGNAME}/dictionaries/en-US.dic
+lib/${PKGNAME}/libfreebl3.chk
+lib/${PKGNAME}/libfreebl3.so
 lib/${PKGNAME}/liblgpllibs.so
 lib/${PKGNAME}/libmozavcodec.so
 lib/${PKGNAME}/libmozavutil.so
 lib/${PKGNAME}/libmozsqlite3.so
+lib/${PKGNAME}/libnspr4.so
+lib/${PKGNAME}/libnss3.so
+lib/${PKGNAME}/libnssckbi.so
+lib/${PKGNAME}/libnssdbm3.chk
+lib/${PKGNAME}/libnssdbm3.so
+lib/${PKGNAME}/libnssutil3.so
+lib/${PKGNAME}/libplc4.so
+lib/${PKGNAME}/libplds4.so
+lib/${PKGNAME}/libsmime3.so
+lib/${PKGNAME}/libsoftokn3.chk
+lib/${PKGNAME}/libsoftokn3.so
+lib/${PKGNAME}/libssl3.so
 lib/${PKGNAME}/libxul.so
 lib/${PKGNAME}/omni.ja
 lib/${PKGNAME}/platform.ini
@@ -42,6 +56,10 @@ lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidl.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidllex.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpidlyacc.py
 lib/arcticfox-devel-${PKGVERSION}/sdk/bin/xpt.py
+lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libnss3.so
+lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libnssutil3.so
+lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libsmime3.so
+lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libssl3.so
 lib/arcticfox-devel-${PKGVERSION}/sdk/lib/libxul.so
 lib/arcticfox-devel-${PKGVERSION}/xpcom-config.h
 share/applications/arcticfox.desktop
