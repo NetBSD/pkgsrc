@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/07/09 05:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/07/16 03:26:02 adam Exp $
 
-DISTNAME=	ruff-0.5.1
+DISTNAME=	ruff-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -28,7 +28,7 @@ MAKE_ENV+=	CARGO_NET_OFFLINE=true
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
-	mv ${WRKDIR}/lsp-types* ${WRKSRC}
+	${MV} ${WRKDIR}/lsp-types* ${WRKSRC}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
