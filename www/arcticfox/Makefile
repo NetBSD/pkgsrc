@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/07/16 08:05:47 nia Exp $
+# $NetBSD: Makefile,v 1.48 2024/07/16 10:27:56 nia Exp $
 
 DISTNAME=	arcticfox-44.0
 CATEGORIES=	www
@@ -104,7 +104,6 @@ INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 
-CHECK_PORTABILITY_SKIP+=	intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	js/src/tests/*.sh
 CHECK_PORTABILITY_SKIP+=	memory/jemalloc/src/configure
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/*/*.sh
