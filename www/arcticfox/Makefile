@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2024/04/07 07:35:11 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/07/16 08:05:47 nia Exp $
 
-DISTNAME=	arcticfox-43.1
-PKGREVISION=	3
+DISTNAME=	arcticfox-44.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -15,30 +14,45 @@ LICENSE=	mpl-1.1
 USE_TOOLS+=	perl pkg-config autoconf213
 USE_TOOLS+=	zip unzip gmake
 
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-OVERRIDE_GNU_CONFIG_SCRIPTS=	# yes
-OVERRIDE_DIRDEPTH=		5
+CONFIG_GUESS_OVERRIDE+=	./build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	./intl/icu/source/config.guess
+CONFIG_GUESS_OVERRIDE+=	./ipc/chromium/src/third_party/libevent/config.guess
+CONFIG_GUESS_OVERRIDE+=	./js/src/ctypes/libffi/config.guess
+CONFIG_GUESS_OVERRIDE+=	./memory/jemalloc/src/config.guess
+CONFIG_GUESS_OVERRIDE+=	./modules/freetype2/builds/unix/config.guess
+CONFIG_GUESS_OVERRIDE+=	./nsprpub/build/autoconf/config.guess
+CONFIG_GUESS_OVERRIDE+=	./toolkit/crashreporter/google-breakpad/autotools/config.guess
 
+CONFIG_SUB_OVERRIDE+=	./build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	./intl/icu/source/config.sub
+CONFIG_SUB_OVERRIDE+=	./ipc/chromium/src/third_party/libevent/config.sub
+CONFIG_SUB_OVERRIDE+=	./js/src/ctypes/libffi/config.sub
+CONFIG_SUB_OVERRIDE+=	./memory/jemalloc/src/config.sub
+CONFIG_SUB_OVERRIDE+=	./modules/freetype2/builds/unix/config.sub
+CONFIG_SUB_OVERRIDE+=	./nsprpub/build/autoconf/config.sub
+CONFIG_SUB_OVERRIDE+=	./toolkit/crashreporter/google-breakpad/autotools/config.sub
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-crashreporter
+CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-debug
-CONFIGURE_ARGS+=	--disable-eme
-CONFIGURE_ARGS+=	--disable-gamepad
-CONFIGURE_ARGS+=	--disable-gconf
-CONFIGURE_ARGS+=	--disable-gio
-CONFIGURE_ARGS+=	--disable-gstreamer
+CONFIGURE_ARGS+=	--disable-updater
 CONFIGURE_ARGS+=	--disable-mozril-geoloc
-CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-webrtc
+CONFIGURE_ARGS+=	--disable-safe-browsing
 CONFIGURE_ARGS+=	--disable-parental-controls
 CONFIGURE_ARGS+=	--disable-safe-browsing
-CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--disable-updater
-CONFIGURE_ARGS+=	--disable-webrtc
-CONFIGURE_ARGS+=	--enable-application=browser
+CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-eme
+CONFIGURE_ARGS+=	--disable-gamepad
+CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--enable-install-strip
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--enable-strip
+CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--with-branding=browser/branding/arcticfox
 
 # gtk3 now supported and default, but gtk2 less buggy
@@ -53,14 +67,15 @@ CONFIGURE_ARGS+=	--with-system-bz2
 # Causes build failures. :-/
 # CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
-CONFIGURE_ARGS+=	--with-system-libvpx
-CONFIGURE_ARGS+=	--with-system-nss
-CONFIGURE_ARGS+=	--with-system-nspr
+#CONFIGURE_ARGS+=	--with-system-nss
+#CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-hunspell
 CONFIGURE_ARGS+=	--enable-system-ffi
 CONFIGURE_ARGS+=	--enable-system-pixman
+# error: System SQLite library is not compiled with SQLITE_SECURE_DELETE.
+#CONFIGURE_ARGS+=	--enable-system-sqlite
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 starts, but crashes on some sites
@@ -78,6 +93,10 @@ CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
+
+CWRAPPERS_APPEND.cc+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
+CWRAPPERS_APPEND.cxx+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
+CWRAPPERS_APPEND.ld+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 
 INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/16x16/apps
@@ -122,8 +141,10 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-.include "../../devel/nspr/buildlink3.mk"
-.include "../../devel/nss/buildlink3.mk"
+#.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/GConf/buildlink3.mk"
+#.include "../../devel/nspr/buildlink3.mk"
+#.include "../../devel/nss/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -134,7 +155,8 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../multimedia/libvpx/buildlink3.mk"
+#.include "../../multimedia/ffmpeg2/buildlink3.mk"
+#.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
