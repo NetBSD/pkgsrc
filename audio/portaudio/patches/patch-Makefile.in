@@ -1,19 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.1 2020/04/17 15:50:03 nia Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2024/07/16 11:40:16 adam Exp $
 
 - Sun/NetBSD audio support.
 - Correct path for pkgconfig files.
 
---- Makefile.in.orig	2016-10-30 01:23:04.000000000 +0000
+--- Makefile.in.orig	2021-04-01 00:35:41.000000000 +0000
 +++ Makefile.in
 @@ -146,6 +146,7 @@ SRC_DIRS = \
  	src/hostapi/dsound \
  	src/hostapi/jack \
  	src/hostapi/oss \
 +	src/hostapi/sun \
+ 	src/hostapi/skeleton \
  	src/hostapi/wasapi \
  	src/hostapi/wdmks \
- 	src/hostapi/wmme \
-@@ -193,8 +194,8 @@ install: lib/$(PALIB) portaudio-2.0.pc
+@@ -194,8 +195,8 @@ install: lib/$(PALIB) portaudio-2.0.pc
  	for include in $(INCLUDES); do \
  		$(INSTALL_DATA) -m 644 $(top_srcdir)/include/$$include $(DESTDIR)$(includedir)/$$include; \
  	done
