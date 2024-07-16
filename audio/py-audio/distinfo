@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 09:59:23 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/07/16 11:41:27 adam Exp $
 
-BLAKE2s (PyAudio-0.2.11.tar.gz) = ec040a93f10c7bc8c9056916ce888296b00d6711dd3c549cd476b0996bd6efc5
-SHA512 (PyAudio-0.2.11.tar.gz) = 64db5542ee60837c9b07677e146fc7b060ff47c8b1c04cbb575bce79dd3ed4776c201e169ff2860f27dbe9e00a77046ba0cb925b55f7c546f8de46c6df68954e
-Size (PyAudio-0.2.11.tar.gz) = 37428 bytes
+BLAKE2s (PyAudio-0.2.14.tar.gz) = c4a120862566b4511b5713a316c24e4de2be52af715b24286f979837095b44fe
+SHA512 (PyAudio-0.2.14.tar.gz) = 2133db0968edcb0d82c6c1922f842d045a32c77998cfae8b38a041c67650cfacf9f6354c8a252db1b5148f73d229940b4c27064b400d2de7ab7e9370f73b8b95
+Size (PyAudio-0.2.14.tar.gz) = 47066 bytes
