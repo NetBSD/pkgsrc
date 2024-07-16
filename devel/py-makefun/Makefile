@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/11/26 14:22:06 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/07/16 03:41:29 adam Exp $
 
-DISTNAME=	makefun-1.15.2
+DISTNAME=	makefun-1.15.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/makefun/}
