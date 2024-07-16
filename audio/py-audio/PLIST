@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/18 07:27:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/16 11:41:27 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/_portaudio.so
-${PYSITELIB}/pyaudio.py
-${PYSITELIB}/pyaudio.pyc
-${PYSITELIB}/pyaudio.pyo
+${PYSITELIB}/pyaudio/__init__.py
+${PYSITELIB}/pyaudio/__init__.pyc
+${PYSITELIB}/pyaudio/__init__.pyo
+${PYSITELIB}/pyaudio/_portaudio.so
