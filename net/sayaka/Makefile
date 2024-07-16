@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/07/15 08:33:21 tsutsui Exp $
+# $NetBSD: Makefile,v 1.52 2024/07/16 16:01:41 tsutsui Exp $
 
 DISTNAME=	sayaka-3.7.6
 CATEGORIES=	net
@@ -8,7 +8,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/isaki68k/sayaka
-COMMENT=	Terminal specific Twitter client
+COMMENT=	Terminal specific Misskey client
 LICENSE=	modified-bsd AND mit
 
 GNU_CONFIGURE=		yes
