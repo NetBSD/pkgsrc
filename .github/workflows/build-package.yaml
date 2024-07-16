@@ -1,0 +1,26 @@
+name: Build Package
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo github: "${{ github }}"
+      - run: echo env: "${{ env }}"
+      - run: echo vars: "${{ vars }}"
+      - run: echo job: "${{ job }}"
+      - run: echo jobs: "${{ jobs }}"
+      - run: echo steps: "${{ steps }}"
+      - run: echo runner: "${{ runner }}"
+      - run: echo strategy: "${{ strategy }}"
+      - run: echo matrix: "${{ matrix }}"
+      - run: echo needs: "${{ needs }}"
+      - run: echo inputs: "${{ inputs }}"
+
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Bootstrap
+        run: |
+          cd ${{ github.workspace }}/bootstrap
+          ./bootstrap --prefix=/tmp/pkg --unprivileged --make-jobs=8
+      - run: echo "This job's status is ${{ job.status }}."
