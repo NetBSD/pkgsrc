@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2023/12/30 01:16:42 zafer Exp $
+# $NetBSD: Makefile,v 1.40 2024/07/16 11:40:16 adam Exp $
 
-DISTNAME=	pa_stable_v190600_20161030
+DISTNAME=	pa_stable_v190700_20210406
 PKGNAME=	${DISTNAME:S/^pa_stable_v/portaudio-/1:S/_/./g}
-PKGREVISION=	13
 CATEGORIES=	audio
-MASTER_SITES=	https://www.portaudio.com/archives/
+MASTER_SITES=	https://files.portaudio.com/archives/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nia@NetBSD.org
-HOMEPAGE=	http://www.portaudio.com/
+HOMEPAGE=	https://www.portaudio.com/
 COMMENT=	Portable cross-platform audio API
 LICENSE=	mit
 

@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2024/07/16 11:40:16 adam Exp $
+include/portaudio2/pa_mac_core.h
