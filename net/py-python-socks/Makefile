@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/12/17 16:07:37 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/07/16 03:28:44 adam Exp $
 
-DISTNAME=	python-socks-2.4.4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	python_socks-2.5.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-socks/}
 
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=  ${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+# asyncio
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0.1:../../devel/py-async-timeout
 
 USE_LANGUAGES=	# none
