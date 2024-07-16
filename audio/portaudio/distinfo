@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.29 2022/06/14 14:18:45 nia Exp $
+$NetBSD: distinfo,v 1.30 2024/07/16 11:40:16 adam Exp $
 
-BLAKE2s (pa_stable_v190600_20161030.tgz) = 19c45436985da2c2ff7a4f016c7ae9dcb0772b43ffa3356961a2a98cacdb24d9
-SHA512 (pa_stable_v190600_20161030.tgz) = 7ec692cbd8c23878b029fad9d9fd63a021f57e60c4921f602995a2fca070c29f17a280c7f2da5966c4aad29d28434538452f4c822eacf3a60af59a6dc8e9704c
-Size (pa_stable_v190600_20161030.tgz) = 1450572 bytes
-SHA1 (patch-Makefile.in) = 28f587f171b4a504e3982e6f8fcf3f148e5aa5c9
+BLAKE2s (pa_stable_v190700_20210406.tgz) = 570e46ea4a81c83cedbbc1a96d9402b0aa4f6d0d6b04df204937e7dbc851407d
+SHA512 (pa_stable_v190700_20210406.tgz) = 77393bf0628ad9c9d5fb1b0d9b1732d403e23513b1332553964bdafcc80878b2798141011d2615688150d753a594285e718cf716e990b2396f1d8dea7babd02d
+Size (pa_stable_v190700_20210406.tgz) = 1462695 bytes
+SHA1 (patch-Makefile.in) = 642e7d6a22310ac5f352476dcac77288c1c9f30c
 SHA1 (patch-bindings_cpp_Makefile.am) = bcd45cba537c867ed9b2e20e1468e9f16ed0b3f7
-SHA1 (patch-configure.in) = 9ccc782631a6aaa9e2c7b8390a6b527ead25d0a5
+SHA1 (patch-configure.in) = bd0ce61a170bc3c440748a41b36ac7cda5a7d2ed
 SHA1 (patch-include_pa__unix__oss.h) = 8e4ede09d5bf730bf8c2e8ca4aca6f700f58f2f7
 SHA1 (patch-include_portaudio.h) = 9a2e4aeb126056aded5cc49c40cde40e16738757
 SHA1 (patch-src_common_pa__front.c) = cdddb6f537f803b55873ad6bfa936a6bff47556d
 SHA1 (patch-src_common_pa__stream.c) = 58e6ab2a61957208973a59be2f1140abc922f360
 SHA1 (patch-src_common_pa__stream.h) = 94781a9ae79ea1340eea8caadc106416c019cf74
 SHA1 (patch-src_hostapi_alsa_pa__linux__alsa.c) = 71daf913422f72aa379ae8cc302186800cff7717
-SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 785b6ba7fc89cf973c992541ee79a045a5c40707
+SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 242c97f89d6a33ac8491f8725981a60a3d1e210c
 SHA1 (patch-src_hostapi_sun_pa__unix__sun.c) = 1e54e4fb75f15e74d931a11ee157beaae9a5f917
 SHA1 (patch-src_os_unix_pa__unix__hostapis.c) = 8cfc7d7aac8f9803e204711ded3d64842913f4fd
