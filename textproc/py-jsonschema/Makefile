@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2024/05/08 08:23:39 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/07/17 08:09:19 adam Exp $
 
-DISTNAME=	jsonschema-4.22.0
+DISTNAME=	jsonschema-4.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonschema/}
