@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.4 2024/07/14 17:02:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.5 2024/07/17 21:09:47 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -29,4 +29,7 @@ mail/thunderbird-l10n: dependent update
 
 Pullup ticket #6878 - requested by hauke
 net/netatalk3: security fix
+
+Pullup ticket #6879 - requested by wiz
+www/apache24: security update
 
