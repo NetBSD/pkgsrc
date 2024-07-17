@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2024/06/04 06:43:38 pin Exp $
+# $NetBSD: Makefile,v 1.59 2024/07/17 11:39:43 pin Exp $
 
-DISTNAME=	nushell-0.94.2
+DISTNAME=	nushell-0.95.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -11,6 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.77.2
 USE_TOOLS+=	pkg-config
 
 PKG_SHELL=	bin/nu
