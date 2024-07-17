@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/02/21 12:23:44 adam Exp $
+$NetBSD: distinfo,v 1.28 2024/07/17 03:44:21 adam Exp $
 
-BLAKE2s (prettytable-3.10.0.tar.gz) = c4d7684ce8c309c6b18a69b6b266a83760b5218396263339f9f0b394ef0d01a0
-SHA512 (prettytable-3.10.0.tar.gz) = 184ab33f3ebe12b3496ff6e2dd2115b4c5f1cf51cedbb73dfa8028e371847c30e69830bb656a92ae3784e70414c4e5782a45b5b39fed87924adaf40078049059
-Size (prettytable-3.10.0.tar.gz) = 54830 bytes
+BLAKE2s (prettytable-3.10.2.tar.gz) = 3b4718a8218f891390f216e4885b9d6651274130bbe3c34ec7de93516e2c9dbd
+SHA512 (prettytable-3.10.2.tar.gz) = 6a71f7d7b6fddca75e4b1bfd96ca6e26301c0c231be4703fe9c59e1c13a1482f814fbbfd661d1fc6bb37346f55a7488b794d5041016faf68711297a8cbdbe5c5
+Size (prettytable-3.10.2.tar.gz) = 56415 bytes
