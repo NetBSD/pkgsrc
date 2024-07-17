@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.56 2024/06/03 13:44:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2024/07/17 17:32:16 scole Exp $
 
-ST_VERSION=	2.28
+ST_VERSION=	2.29
 PKGNAME=	split-thai-${ST_VERSION}
-PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	scole@NetBSD.org
 HOMEPAGE=	https://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/
-COMMENT=	Utilities and an emacs library to split UTF-8 Thai text into words
-# pthai.el, other code, icu dict, swath dict, libreoffice dict
-LICENSE=	2-clause-bsd AND public-domain AND mit AND gnu-gpl-v2 AND gnu-lgpl-v3
+COMMENT=	Emacs library to split UTF-8 Thai text into words and more
+# pthai.el, icu dict, swath dict, libreoffice dict
+LICENSE=	2-clause-bsd AND mit AND gnu-gpl-v2 AND gnu-lgpl-v3
 
 GITHUB_ICU_TAG=		929cf40ecbf464bb133113995185c7353f2e106d
 LIBREOFFICE_VERSION=	7-6-4
@@ -20,40 +19,24 @@ SITES.split-thai-${ST_VERSION}.tgz=	${MASTER_SITE_LOCAL}
 SITES.thaidict-${GITHUB_ICU_TAG}.txt=	-${MASTER_SITE_GITHUB:=unicode-org/}/icu/raw/${GITHUB_ICU_TAG}/icu4c/source/data/brkitr/dictionaries/thaidict.txt
 SITES.th_TH-${LIBREOFFICE_VERSION}.dic=	-${LIBREOFFICE_SITE}
 
-USE_LANGUAGES=		c++
-FORCE_CXX_STD=		c++17
-
-USE_TOOLS=	pkg-config mkdir cp sh:run env awk cat sort uniq grep wc echo
-USE_TOOLS+=	perl:run
+USE_TOOLS=	mkdir cp env awk cat sort uniq grep wc echo
 TOOL_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
+TOOL_DEPENDS+=	swath-[0-9]*:../../textproc/swath
 DEPENDS+=	emacs-[0-9]*:../../editors/emacs
-DEPENDS+=	swath-[0-9]*:../../textproc/swath
 DEPENDS+=	sox-[0-9]*:../../audio/sox
-
-REPLACE_PERL=	st-wordbreak tgrep
-REPLACE_SH=	st-swath
 
 UTF8_ENV=	env LC_ALL=C.UTF-8
 
 ST_SHARE_DIR=		share/split-thai
-ST_SHARE_BIN=		bin
-INSTALLATION_DIRS=	${ST_SHARE_BIN} ${ST_SHARE_DIR}
+INSTALLATION_DIRS=	${ST_SHARE_DIR}
 
-ST_SHARE_FILES=		README.txt pthai.el sampledict.txt words words.tri
-
-# xxx REPLACE_EMACS_SCRIPT
-SUBST_CLASSES+=			st-emacs-app
-SUBST_STAGE.st-emacs-app=	pre-configure
-SUBST_MESSAGE.st-emacs-app=	Fixing emacs script paths.
-SUBST_FILES.st-emacs-app=	st-emacs
-SUBST_SED.st-emacs-app=		-e 's,!/bin/emacs,!${PREFIX}/bin/emacs,g'
+ST_SHARE_FILES=		README.txt pthai.el sampledict.txt words
 
 SUBST_CLASSES+=			dictionary-app
 SUBST_STAGE.dictionary-app=	pre-configure
 SUBST_MESSAGE.dictionary-app=	Fixing dictionary paths.
-SUBST_FILES.dictionary-app=	st-emacs st-swath st-wordbreak pthai.el
+SUBST_FILES.dictionary-app=	README.txt pthai.el
 SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
-SUBST_SED.dictionary-app+=	-e 's,ST_SHARE_BIN,${PREFIX}/${ST_SHARE_BIN},g'
 
 # there are some dictionary entries with '/' and '"' that emacs
 # puthash doesn't like.  skip them with grep so consoles without utf8
@@ -71,8 +54,6 @@ pre-build:
 	cd ${WRKSRC} && \
 		${UTF8_ENV} cat icu-dict swath-dict th_TH.dic thai-word-dict | \
 			grep -v '[#0123456789/"]' | sort | uniq > words
-	cd ${WRKSRC} && \
-		${UTF8_ENV} trietool words add-list -e utf-8 words
 .for i in icu-dict thai-word-dict th_TH.dic swath-dict
 	@${ECHO} `wc -l ${WRKSRC}/${i} | awk '{print $$1}'` words in ${i}
 .endfor
@@ -80,17 +61,10 @@ pre-build:
 		unique words in combined dictionary
 
 do-build:
-	cd ${WRKSRC} &&	\
-		${CXX} ${CPPFLAGS} -o st-icu st-icu.cc \
-		`pkg-config --libs --cflags icu-io`
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/st-emacs ${WRKSRC}/st-swath \
-		${WRKSRC}/st-wordbreak ${WRKSRC}/tgrep ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/st-icu ${DESTDIR}${PREFIX}/bin
 .for i in ${ST_SHARE_FILES}
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/split-thai
 .endfor
 
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
