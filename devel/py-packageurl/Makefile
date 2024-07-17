@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/07/14 13:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/07/17 04:14:20 adam Exp $
 
-DISTNAME=	packageurl_python-0.15.3
+DISTNAME=	packageurl_python-0.15.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_python//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packageurl-python/}
