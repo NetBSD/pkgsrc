@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2024/07/11 20:02:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/07/17 03:39:10 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -723,12 +723,6 @@ ${PYSITELIB}/yt_dlp/extractor/digiteka.pyo
 ${PYSITELIB}/yt_dlp/extractor/discogs.py
 ${PYSITELIB}/yt_dlp/extractor/discogs.pyc
 ${PYSITELIB}/yt_dlp/extractor/discogs.pyo
-${PYSITELIB}/yt_dlp/extractor/discovery.py
-${PYSITELIB}/yt_dlp/extractor/discovery.pyc
-${PYSITELIB}/yt_dlp/extractor/discovery.pyo
-${PYSITELIB}/yt_dlp/extractor/discoverygo.py
-${PYSITELIB}/yt_dlp/extractor/discoverygo.pyc
-${PYSITELIB}/yt_dlp/extractor/discoverygo.pyo
 ${PYSITELIB}/yt_dlp/extractor/disney.py
 ${PYSITELIB}/yt_dlp/extractor/disney.pyc
 ${PYSITELIB}/yt_dlp/extractor/disney.pyo
