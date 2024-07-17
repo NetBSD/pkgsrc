@@ -1,17 +1,17 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2024/04/30 09:58:52 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2024/07/17 11:38:02 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.13
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.3
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.2
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.2
-CARGO_CRATE_DEPENDS+=	anyhow-1.0.82
+CARGO_CRATE_DEPENDS+=	anyhow-1.0.86
 CARGO_CRATE_DEPENDS+=	bitflags-2.5.0
 CARGO_CRATE_DEPENDS+=	cc-1.0.94
-CARGO_CRATE_DEPENDS+=	clap-4.5.4
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.2
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.2
-CARGO_CRATE_DEPENDS+=	clap_derive-4.5.4
+CARGO_CRATE_DEPENDS+=	clap-4.5.8
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.8
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.7
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.8
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.0
 CARGO_CRATE_DEPENDS+=	csv-1.3.0
@@ -23,6 +23,7 @@ CARGO_CRATE_DEPENDS+=	errno-dragonfly-0.1.2
 CARGO_CRATE_DEPENDS+=	exitcode-1.1.2
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	itertools-0.12.1
+CARGO_CRATE_DEPENDS+=	itertools-0.13.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11
 CARGO_CRATE_DEPENDS+=	libc-0.2.153
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.13
@@ -39,7 +40,7 @@ CARGO_CRATE_DEPENDS+=	syn-2.0.59
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-truncate-1.0.0
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.12
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.13
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	winapi-0.3.9
 CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
