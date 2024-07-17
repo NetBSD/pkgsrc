@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/17 08:01:26 adam Exp $
+
+BLAKE2s (covdefaults-2.3.0.tar.gz) = 3b7bc8d0f1d8ab7d1013149660e00cf700613fb7f2d4000093370a9792c92b33
+SHA512 (covdefaults-2.3.0.tar.gz) = 45a221872c0e3ece42d86813b7846658f18c507c08107727c78a31046d37d6441019a24b0f9f010d9e330af30158c77b35f55c90d7f83feaa237aa4d2f16fa13
+Size (covdefaults-2.3.0.tar.gz) = 4835 bytes
