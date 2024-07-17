@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/04/28 16:33:23 pin Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/17 12:06:41 pin Exp $
 
-DISTNAME=	ripdrag-0.4.8
+DISTNAME=	ripdrag-0.4.9
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/ripdrag/
 EXTRACT_SUFX=	.crate
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk4}/lib
