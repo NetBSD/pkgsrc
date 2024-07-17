@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.17 2024/07/17 11:51:58 jperkin Exp $
+# $NetBSD: pre-build,v 1.18 2024/07/17 14:32:53 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -133,6 +133,10 @@ echo "MACHINE_ARCH=${machine_arch}" >> ${loc}/status
 echo "OS_VARIANT=${os_variant}" >> ${loc}/status
 echo "LOWER_VARIANT_VERSION=${lower_variant_version}" >> ${loc}/status
 echo "COMPILER=${pkgsrc_compiler}" >> ${loc}/status
+
+if [ -f /etc/os-release ]; then
+	awk '/^PRETTY_NAME/ {gsub(/\"/, "");print;}' /etc/os-release >> ${loc}/status
+fi
 
 date '+BUILD_START_ISO=%Y-%m-%d %H:%M
 BUILD_START_DIR=%Y%m%d.%H%M
