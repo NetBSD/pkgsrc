@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/04/30 09:58:52 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/07/17 11:38:02 pin Exp $
 
-DISTNAME=	csview-1.3.2
+DISTNAME=	csview-1.3.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wfxr/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,11 @@ LICENSE=	apache-2.0 OR mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=		pkg-config
 
-#INSTALLATION_DIRS=	bin
 AUTO_MKDIRS=		yes
 
 do-install:
