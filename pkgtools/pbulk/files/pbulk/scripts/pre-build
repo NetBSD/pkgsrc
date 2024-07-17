@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pre-build,v 1.16 2021/01/02 21:54:46 riastradh Exp $
+# $NetBSD: pre-build,v 1.17 2024/07/17 11:51:58 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -103,31 +103,36 @@ esac
 
 # Log common settings...
 opsys=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OPSYS`
-opver=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OS_VERSION`
+os_version=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OS_VERSION`
+os_variant=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OS_VARIANT`
+lower_variant_version=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=LOWER_VARIANT_VERSION`
+machine_arch=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=MACHINE_ARCH`
+pkgsrc_compiler=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=PKGSRC_COMPILER`
+
 # Check if it is an OS with variants where we would rather use the
 # variant name and version rather than common name and version
+platform_opsys=${opsys}
+platform_os_version=${os_version}
 case "$opsys" in
-	SunOS | Cygwin | SCO_SV)
-		opvar=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=OS_VARIANT`
-	case "$opsys" in
-		Cygwin | SCO_SV)
-			opsys=$opvar
-		;;
-		SunOS)
-			if [ -n "$opvar" ]; then
-			opsys=$opvar
-			opver=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=LOWER_VARIANT_VERSION`
-			fi
-		;;
-	esac
+Cygwin | SCO_SV)
+	platform_opsys=${os_variant}
+	;;
+SunOS)
+	if [ -n "${os_variant}" ]; then
+		platform_opsys=${os_variant}
+		platform_os_version=${lower_variant_version}
+	fi
 	;;
 esac
 
-platform=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=MACHINE_ARCH`
-compiler=`cd ${pkgsrc}/pkgtools/pkg_install && ${make} show-var VARNAME=PKGSRC_COMPILER`
 
-echo "PLATFORM=${opsys} ${opver}/${platform}" > ${loc}/status
-echo "COMPILER=${compiler}" >> ${loc}/status
+echo "PLATFORM=${platform_opsys} ${platform_os_version}/${machine_arch}" > ${loc}/status
+echo "OPSYS=${opsys}" >> ${loc}/status
+echo "OS_VERSION=${os_version}" >> ${loc}/status
+echo "MACHINE_ARCH=${machine_arch}" >> ${loc}/status
+echo "OS_VARIANT=${os_variant}" >> ${loc}/status
+echo "LOWER_VARIANT_VERSION=${lower_variant_version}" >> ${loc}/status
+echo "COMPILER=${pkgsrc_compiler}" >> ${loc}/status
 
 date '+BUILD_START_ISO=%Y-%m-%d %H:%M
 BUILD_START_DIR=%Y%m%d.%H%M
