@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/06/14 20:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/17 19:24:54 wiz Exp $
 
-DISTNAME=	7z2406-src
-PKGNAME=	7-zip-24.06
+DISTNAME=	7z2407-src
+PKGNAME=	7-zip-24.07
 CATEGORIES=	archivers
 MASTER_SITES=	https://www.7-zip.org/a/
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2024/06/14 20:28:47 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/07/17 19:24:54 wiz Exp $
 
-BLAKE2s (7z2406-src.tar.xz) = 109eaa04873ee0d94b1eb54fc47371fefef6a051baed0945d2238c616d6894a6
-SHA512 (7z2406-src.tar.xz) = 02c6d7d045ba0dc0e8533f471f3c138f0d6549b59594095cb81a2f0e602627bd6a49df3fd680e21400a908006121ff7ba370086db9bde639f79b821bb4c9707a
-Size (7z2406-src.tar.xz) = 1487008 bytes
+BLAKE2s (7z2407-src.tar.xz) = adb3bc4f48639e6f5deffa01c2ac3b953c506ef5999070d315b9baeca3f18082
+SHA512 (7z2407-src.tar.xz) = 0299e5c1e1dfd33ecf22077f812da1f25bf2146a713c7a7e2498d639520f21f029e853914e66a84d1edfc5d721e1f3d914a3171ab336a406a94bc82d5b2d8e5d
+Size (7z2407-src.tar.xz) = 1488556 bytes
 SHA1 (patch-C_SwapBytes.c) = 1e32b0dd26a3c16251c74d48a97da0aada43f506
