@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/07/05 07:57:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/17 09:14:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -135,6 +135,9 @@ ${PYSITELIB}/debug_toolbar/panels/staticfiles.pyo
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.py
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.pyc
 ${PYSITELIB}/debug_toolbar/panels/templates/__init__.pyo
+${PYSITELIB}/debug_toolbar/panels/templates/jinja2.py
+${PYSITELIB}/debug_toolbar/panels/templates/jinja2.pyc
+${PYSITELIB}/debug_toolbar/panels/templates/jinja2.pyo
 ${PYSITELIB}/debug_toolbar/panels/templates/panel.py
 ${PYSITELIB}/debug_toolbar/panels/templates/panel.pyc
 ${PYSITELIB}/debug_toolbar/panels/templates/panel.pyo
