@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/17 12:03:14 pin Exp $
+bin/cargo-release
