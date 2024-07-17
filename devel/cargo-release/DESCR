@@ -1,0 +1,18 @@
+cargo subcommand release: everything about releasing a rust crate.
+
+Features
+- Ensure you are in a good state for release, including:
+  - Right branch
+  - Up-to-date with remote
+  - Clean tree
+- Supports workspaces using cargo's native flags, like --workspace,
+  --exclude and --package
+  - Updates dependent crates in workspace when changing version
+  - Change detection to help guide in what crates might not need a release
+  - Optionally share commits
+- Handles cargo publish, tagging, and pushing
+- Pre-release search and replace for custom version updates, including
+  - Updating changelogs
+  - Update tags in Dockerfile's
+- Pre-release hook for extra customization, including
+  - CHANGELOG generation
