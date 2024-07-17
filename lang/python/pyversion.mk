@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.160 2024/06/05 22:44:57 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.161 2024/07/17 09:57:13 hauke Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -247,11 +247,12 @@ PYINC=		include/python${PYVERSSUFFIX}
 PYLIB=		lib/python${PYVERSSUFFIX}
 PYSITELIB=	${PYLIB}/site-packages
 
-PRINT_PLIST_AWK+=	/^${PYINC:S|/|\\/|g}/ \
+# Expect paths directly under PREFIX, but allow for ${PLIST.*} prefix(es)
+PRINT_PLIST_AWK+=	/(^|^\$$.+\})${PYINC:S|/|\\/|g}/ \
 			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}") }
-PRINT_PLIST_AWK+=	/^${PYSITELIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/(^|^\$$.+\})${PYSITELIB:S|/|\\/|g}/ \
 			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}") }
-PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/(^|^\$$.+\})${PYLIB:S|/|\\/|g}/ \
 			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
 
 ALL_ENV+=		PYTHON=${TOOL_PYTHONBIN}
@@ -284,8 +285,8 @@ _PKG_VARS.pyversion=	\
 	PYTHON_VERSIONS_ACCEPTED PYTHON_VERSIONS_INCOMPATIBLE		\
 	PYTHON_SELF_CONFLICT PYTHON_FOR_BUILD_ONLY USE_CMAKE BUILD_USES_CMAKE
 _SYS_VARS.pyversion=	\
-	PYTHON_VERSION PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX PYPKGSRCDIR		\
-	PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL		\
+	PYTHON_VERSION PYTHON_VERSION_REQD PYPACKAGE PYVERSSUFFIX	\
+	PYPKGSRCDIR PYPKGPREFIX PYTHONBIN PYTHONCONFIG PY_COMPILE_ALL	\
 	PY_COMPILE_O_ALL PYINC PYLIB PYSITELIB CMAKE_ARGS		\
 	TOOL_PYTHONBIN
 _USE_VARS.pyversion=	\
