@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/08/30 10:46:36 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/07/17 04:16:51 adam Exp $
 
-BLAKE2s (littleutils-0.2.2.tar.gz) = 2ac7b4477066734d83b7703fa4aa44a1cbd0711d61509936a598abbc2d8a3eaa
-SHA512 (littleutils-0.2.2.tar.gz) = ce0b3af4ef5db634ce0dbb916deb767260f66418abbdca2b289386ecd4c2e44602cb95d568c70588ef9a40e3d700f33cbc5bcdbf859f5030795f79f11871a6ff
-Size (littleutils-0.2.2.tar.gz) = 6579 bytes
+BLAKE2s (littleutils-0.2.4.tar.gz) = e993b5ab30df39872a4916db17f9b0ad7dd89e99530c81249ef5a12c011cba4e
+SHA512 (littleutils-0.2.4.tar.gz) = 818eb4a1264188cf2edd392602cb4235590fed6a7542870748a3a5a52b6ee303436e2462991a437d19916a39303694e49c7f10282524a569346541bc4eebf515
+Size (littleutils-0.2.4.tar.gz) = 9526 bytes
