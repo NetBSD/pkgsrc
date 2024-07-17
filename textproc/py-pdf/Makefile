@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/04/14 08:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/07/17 03:50:23 adam Exp $
 
-DISTNAME=	pypdf-4.2.0
+DISTNAME=	pypdf-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
 
@@ -14,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.9:../../devel/py-flit_core
 # full
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
+DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
 
