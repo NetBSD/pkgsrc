@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/11 14:05:17 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/07/18 12:52:23 ryoon Exp $
 tomcat/LICENSE
 tomcat/NOTICE
 tomcat/RELEASE-NOTES
@@ -30,7 +30,7 @@ tomcat/common/i18n/tomcat-i18n-es.jar
 tomcat/common/i18n/tomcat-i18n-fr.jar
 tomcat/common/i18n/tomcat-i18n-ja.jar
 tomcat/common/lib/commons-el.jar
-tomcat/common/lib/ecj-3.7.jar
+tomcat/common/lib/ecj-3.7.2.jar
 tomcat/common/lib/jasper-compiler.jar
 tomcat/common/lib/jasper-runtime.jar
 tomcat/common/lib/jsp-api.jar
@@ -826,14 +826,12 @@ tomcat/webapps/webdav/WEB-INF/web.xml
 tomcat/webapps/webdav/index.html
 tomcat/webapps/webdav/tomcat-power.gif
 tomcat/webapps/webdav/tomcat.gif
-@pkgdir tomcat/common/classes
-@pkgdir tomcat/common/endorsed
-@pkgdir tomcat/logs
-@pkgdir tomcat/server/classes
-@pkgdir tomcat/shared/classes
-@pkgdir tomcat/shared/lib
-@pkgdir tomcat/temp
-@pkgdir tomcat/webapps/balancer/images
 @pkgdir tomcat/work
-@unexec ${RM} -rf %D/tomcat/temp 2> /dev/null || ${TRUE}
-@unexec ${RM} -rf %D/tomcat/work 2> /dev/null || ${TRUE}
+@pkgdir tomcat/webapps/balancer/images
+@pkgdir tomcat/temp
+@pkgdir tomcat/shared/lib
+@pkgdir tomcat/shared/classes
+@pkgdir tomcat/server/classes
+@pkgdir tomcat/logs
+@pkgdir tomcat/common/endorsed
+@pkgdir tomcat/common/classes
