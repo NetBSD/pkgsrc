@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4495 2024/07/18 11:56:31 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.4496 2024/07/18 12:05:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7095,3 +7095,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/apache-tomcat9 to 9.0.91 [ryoon 2024-07-18]
 	Updated www/apache-tomcat85 to 8.5.100 [ryoon 2024-07-18]
 	Updated www/apache-tomcat7 to 7.0.109 [ryoon 2024-07-18]
+	Updated www/apache-tomcat6 to 6.0.53 [ryoon 2024-07-18]
