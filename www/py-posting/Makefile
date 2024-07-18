@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/14 12:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/18 04:52:45 wiz Exp $
 
 DISTNAME=	posting-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,8 @@ DEPENDS+=	${PYPKGPREFIX}-dotenv-[0-9]*:../../devel/py-dotenv
 DEPENDS+=	${PYPKGPREFIX}-xdg-base-dirs-[0-9]*:../../devel/py-xdg-base-dirs
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} posting posting-${PYVERSSUFFIX}
