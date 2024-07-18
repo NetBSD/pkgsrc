@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/18 12:19:48 ryoon Exp $
+
+BLAKE2s (apache-tomcat-10.1.26.tar.gz) = 19f5f7de26db222e85346db53f67a8db51e560cb9db5a560cc81b83cc84640cf
+SHA512 (apache-tomcat-10.1.26.tar.gz) = 0a62e55c1ff9f8f04d7aff938764eac46c289eda888abf43de74a82ceb7d879e94a36ea3e5e46186bc231f07871fcc4c58f11e026f51d4487a473badb21e9355
+Size (apache-tomcat-10.1.26.tar.gz) = 13103265 bytes
