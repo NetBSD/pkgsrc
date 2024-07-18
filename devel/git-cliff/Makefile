@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/06/03 19:47:24 pin Exp $
+# $NetBSD: Makefile,v 1.41 2024/07/18 09:57:19 pin Exp $
 
-DISTNAME=	git-cliff-2.3.0
+DISTNAME=	git-cliff-2.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.75.0
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
