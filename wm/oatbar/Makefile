@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/04/07 07:35:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/18 09:58:29 pin Exp $
 
-DISTNAME=	oatbar-0.0.30
-PKGREVISION=	2
+DISTNAME=	oatbar-0.1.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=igor-petruk/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +12,9 @@ LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
