@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/18 13:25:36 ktnb Exp $
+bin/mtm
+man/man1/mtm.1
+share/mtm/terminfo/mtm.ti
