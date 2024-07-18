@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4498 2024/07/18 12:52:39 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.4499 2024/07/18 13:12:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7098,3 +7098,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/apache-tomcat6 to 6.0.53 [ryoon 2024-07-18]
 	Added www/apache-tomcat10 version 10.1.26 [ryoon 2024-07-18]
 	Updated www/apache-tomcat55 to 5.5.36 [ryoon 2024-07-18]
+	Updated net/openvpn to 2.6.12 [adam 2024-07-18]
+	Updated net/grpc to 1.65.1 [adam 2024-07-18]
+	Updated net/py-grpcio to 1.65.1 [adam 2024-07-18]
+	Updated net/py-grpcio-testing to 1.65.1 [adam 2024-07-18]
+	Updated net/py-grpcio-tools to 1.65.1 [adam 2024-07-18]
