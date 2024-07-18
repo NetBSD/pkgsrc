@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/04/11 21:35:36 spz Exp $
+$NetBSD: distinfo,v 1.13 2024/07/18 11:48:07 ryoon Exp $
 
-BLAKE2s (apache-tomcat-9.0.62.tar.gz) = 894a62f82f26b227b0050daf25b31c70025fb37c5f432834ecc1a623b68233dd
-SHA512 (apache-tomcat-9.0.62.tar.gz) = 179af1d50a7d330d0842d3f1cae086bbc1b20e8f6752d66500663f3ac71d80f50113bbd29931e21c8e2eccd982f9f872e193364311316fdd67349130d440c83f
-Size (apache-tomcat-9.0.62.tar.gz) = 11560971 bytes
+BLAKE2s (apache-tomcat-9.0.91.tar.gz) = a7b7cd5eaef73d62ccf916eeff8b25a6a4bef03d3b0539deee28e0c903276ff8
+SHA512 (apache-tomcat-9.0.91.tar.gz) = b22054c9141782232a693765d23d944f0f50774af17dd8968331e020b425e71459b5877a7ba8c2121246a5ce47e6b6a31c3f4215ef133e942da45b49cb534948
+Size (apache-tomcat-9.0.91.tar.gz) = 11762988 bytes
