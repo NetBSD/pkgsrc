@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4488 2024/07/18 09:55:34 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4489 2024/07/18 09:56:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7088,3 +7088,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/get_iplayer to 3.35 [prlw1 2024-07-18]
 	Added sysutils/opensbi-sun20i-d1 version 1.4 [rxg 2024-07-18]
 	Updated devel/cargo-modules to 0.16.6 [pin 2024-07-18]
+	Updated devel/garden to 1.7.0 [pin 2024-07-18]
