@@ -1,0 +1,12 @@
+mtm is the Micro Terminal Multiplexer, a terminal multiplexer.
+It has four major features/principles: simplicity,
+compatibility, size, and stability.
+
+There are only a few commands, two of which are hardly ever used.
+There are no modes, no dozens of commands, no crazy feature list.
+mtm emulates a classic ANSI text terminal. That means it should
+work out of the box on essentially all terminfo/termcap-based
+systems (even pretty old ones), without needing to install a new
+termcap entry. mtm is small; the entire project is around 1000
+lines of code. mtm is "finished" as it is now.You don't need to
+worry about it changing on you unexpectedly.

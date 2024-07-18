@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2024/07/18 13:25:36 ktnb Exp $
+
+Use LDFLAGS. https://github.com/deadpixi/mtm/pull/35
+
+--- Makefile.orig	2024-07-03 04:33:05.333529850 +0000
++++ Makefile
+@@ -11,7 +11,7 @@ LIBS      ?= -l$(CURSESLIB) -lutil
+ all: mtm
+ 
+ mtm: vtparser.c mtm.c pair.c config.h
+-	$(CC) $(CFLAGS) $(FEATURES) -o $@ $(HEADERS) vtparser.c mtm.c pair.c $(LIBPATH) $(LIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) $(FEATURES) -o $@ $(HEADERS) vtparser.c mtm.c pair.c $(LIBPATH) $(LIBS)
+ 	strip mtm
+ 
+ config.h: config.def.h
