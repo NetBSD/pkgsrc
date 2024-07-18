@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4490 2024/07/18 09:57:37 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4491 2024/07/18 09:58:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7090,3 +7090,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cargo-modules to 0.16.6 [pin 2024-07-18]
 	Updated devel/garden to 1.7.0 [pin 2024-07-18]
 	Updated devel/git-cliff to 2.4.0 [pin 2024-07-18]
+	Updated wm/oatbar to 0.1.0 [pin 2024-07-18]
