@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/07/03 08:30:50 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/07/18 04:53:37 wiz Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -169,7 +169,6 @@ ${PLIST.nls}share/mc/hints/mc.hint.ca
 ${PLIST.nls}share/mc/hints/mc.hint.cs
 ${PLIST.nls}share/mc/hints/mc.hint.da
 ${PLIST.nls}share/mc/hints/mc.hint.de
-${PLIST.nls}share/mc/hints/mc.hint.de_CH
 ${PLIST.nls}share/mc/hints/mc.hint.el
 ${PLIST.nls}share/mc/hints/mc.hint.en_GB
 ${PLIST.nls}share/mc/hints/mc.hint.eo
@@ -178,14 +177,13 @@ ${PLIST.nls}share/mc/hints/mc.hint.et
 ${PLIST.nls}share/mc/hints/mc.hint.eu
 ${PLIST.nls}share/mc/hints/mc.hint.fa
 ${PLIST.nls}share/mc/hints/mc.hint.fr
-${PLIST.nls}share/mc/hints/mc.hint.fr_CA
 ${PLIST.nls}share/mc/hints/mc.hint.ga
 ${PLIST.nls}share/mc/hints/mc.hint.gl
 ${PLIST.nls}share/mc/hints/mc.hint.hu
 ${PLIST.nls}share/mc/hints/mc.hint.id
 ${PLIST.nls}share/mc/hints/mc.hint.it
-${PLIST.nls}share/mc/hints/mc.hint.it_IT
 ${PLIST.nls}share/mc/hints/mc.hint.ja
+${PLIST.nls}share/mc/hints/mc.hint.ka
 ${PLIST.nls}share/mc/hints/mc.hint.ko
 ${PLIST.nls}share/mc/hints/mc.hint.lt
 ${PLIST.nls}share/mc/hints/mc.hint.nb
@@ -198,10 +196,8 @@ ${PLIST.nls}share/mc/hints/mc.hint.ru
 ${PLIST.nls}share/mc/hints/mc.hint.sk
 ${PLIST.nls}share/mc/hints/mc.hint.sr
 ${PLIST.nls}share/mc/hints/mc.hint.sv
-${PLIST.nls}share/mc/hints/mc.hint.sv_SE
 ${PLIST.nls}share/mc/hints/mc.hint.tr
 ${PLIST.nls}share/mc/hints/mc.hint.uk
-${PLIST.nls}share/mc/hints/mc.hint.zh
 ${PLIST.nls}share/mc/hints/mc.hint.zh_CN
 ${PLIST.nls}share/mc/hints/mc.hint.zh_TW
 ${PLIST.mc-charset}share/mc/mc.charsets
