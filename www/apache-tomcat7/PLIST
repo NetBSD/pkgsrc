@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2020/10/15 16:27:21 otis Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/07/18 11:55:53 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -596,6 +596,7 @@ share/tomcat/webapps/host-manager/META-INF/context.xml
 share/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/404.jsp
+share/tomcat/webapps/host-manager/WEB-INF/manager.xml
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
 share/tomcat/webapps/host-manager/images/add.gif
 share/tomcat/webapps/host-manager/images/asf-logo.svg
@@ -607,7 +608,6 @@ share/tomcat/webapps/host-manager/images/tomcat.gif
 share/tomcat/webapps/host-manager/images/update.gif
 share/tomcat/webapps/host-manager/images/void.gif
 share/tomcat/webapps/host-manager/index.jsp
-share/tomcat/webapps/host-manager/manager.xml
 share/tomcat/webapps/manager/META-INF/context.xml
 share/tomcat/webapps/manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/403.jsp
