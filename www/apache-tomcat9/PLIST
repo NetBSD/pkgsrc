@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/11 21:35:36 spz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/07/18 11:48:07 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -77,8 +77,10 @@ share/tomcat/webapps/ROOT/index.jsp
 share/tomcat/webapps/ROOT/tomcat.css
 share/tomcat/webapps/ROOT/tomcat.svg
 share/tomcat/webapps/docs/BUILDING.txt
+share/tomcat/webapps/docs/META-INF/context.xml
 share/tomcat/webapps/docs/RELEASE-NOTES.txt
 share/tomcat/webapps/docs/RUNNING.txt
+share/tomcat/webapps/docs/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/docs/WEB-INF/web.xml
 share/tomcat/webapps/docs/aio.html
 share/tomcat/webapps/docs/annotationapi/index.html
@@ -95,8 +97,8 @@ share/tomcat/webapps/docs/appdev/sample/index.html
 share/tomcat/webapps/docs/appdev/sample/sample.war
 share/tomcat/webapps/docs/appdev/sample/src/mypackage/Hello.java
 share/tomcat/webapps/docs/appdev/sample/web/WEB-INF/web.xml
-share/tomcat/webapps/docs/appdev/sample/web/images/tomcat.gif
 share/tomcat/webapps/docs/appdev/sample/web/hello.jsp
+share/tomcat/webapps/docs/appdev/sample/web/images/tomcat.gif
 share/tomcat/webapps/docs/appdev/sample/web/index.html
 share/tomcat/webapps/docs/appdev/source.html
 share/tomcat/webapps/docs/appdev/web.xml.txt
@@ -405,6 +407,8 @@ share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeAnnotation.ja
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer$1.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/SnakeTimer.java
+share/tomcat/webapps/examples/WEB-INF/jsp/403.jsp
+share/tomcat/webapps/examples/WEB-INF/jsp/403.jsp.html
 share/tomcat/webapps/examples/WEB-INF/jsp/debug-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/example-taglib.tld
 share/tomcat/webapps/examples/WEB-INF/jsp/jsp2-example-taglib.tld
