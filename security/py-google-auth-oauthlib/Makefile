@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/01/15 13:22:13 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/19 07:00:30 adam Exp $
 
-DISTNAME=	google-auth-oauthlib-1.2.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	google_auth_oauthlib-1.2.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-auth-oauthlib/}
 
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-google-auth>=2.15.0:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.7.0:../../security/py-requests-oauthlib
 
 USE_LANGUAGES=	# none
-   
+
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
