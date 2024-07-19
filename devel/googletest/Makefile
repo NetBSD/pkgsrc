@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/08/05 07:13:17 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/07/19 06:51:21 adam Exp $
 
-DISTNAME=	googletest-1.14.0
+DISTNAME=	googletest-1.15.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,8 @@ HOMEPAGE=	https://github.com/google/googletest
 COMMENT=	Google's C++ testing framework
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
-
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 
 CFLAGS+=	-fPIE
 CXXFLAGS+=	-fPIE
