@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2023/06/11 11:30:07 rhialto Exp $
+$NetBSD: distinfo,v 1.5 2024/07/19 16:59:38 rhialto Exp $
 
-BLAKE2s (simhv312-4.zip) = e4de2125136167883b9e0c8dcd28e6f0346e7134ce3a22bca75eee510781fabc
-SHA512 (simhv312-4.zip) = 6e7daf5553db734cc3bf94c72ee60b7981aa903cbf75f0570803d298a23fedc1801b629ea7e5b55592db7041abfad3c8fd850030ef1cd2bf3004d9ac59ee8e8c
-Size (simhv312-4.zip) = 2844892 bytes
+BLAKE2s (simhv312-5.zip) = b1b77d85dcf5d117cbb874f67ab3cda9d0acfa6e5fcf164f322aeb511b473886
+SHA512 (simhv312-5.zip) = 09dccd79bb36f9dc7d708efcb4eac7a2962767f653e2c8ac08250e7d42baf2ab48ee497b579b40c8f9796ed32390e72bd21b9c7fc91d2da7042465139f3165e3
+Size (simhv312-5.zip) = 2877994 bytes
 SHA1 (patch-makefile) = 20b74c26ee5bf17889b4b958944a6f7e56fd1938
