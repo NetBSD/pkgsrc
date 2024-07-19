@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/09/18 14:58:14 js Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/19 09:51:36 jperkin Exp $
 bin/wg
+${PLIST.wg-quick}bin/wg-quick
+${PLIST.wg-quick}man/man8/wg-quick.8
 man/man8/wg.8
+share/bash-completion/completions/wg
+${PLIST.wg-quick}share/bash-completion/completions/wg-quick
