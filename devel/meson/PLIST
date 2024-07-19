@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/12/30 16:29:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/07/19 07:26:37 adam Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -166,6 +166,9 @@ ${PYSITELIB}/mesonbuild/compilers/java.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/__init__.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/__init__.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/__init__.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/apple.py
+${PYSITELIB}/mesonbuild/compilers/mixins/apple.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/apple.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/arm.pyo
@@ -391,6 +394,9 @@ ${PYSITELIB}/mesonbuild/linkers/detect.pyo
 ${PYSITELIB}/mesonbuild/linkers/linkers.py
 ${PYSITELIB}/mesonbuild/linkers/linkers.pyc
 ${PYSITELIB}/mesonbuild/linkers/linkers.pyo
+${PYSITELIB}/mesonbuild/machinefile.py
+${PYSITELIB}/mesonbuild/machinefile.pyc
+${PYSITELIB}/mesonbuild/machinefile.pyo
 ${PYSITELIB}/mesonbuild/mcompile.py
 ${PYSITELIB}/mesonbuild/mcompile.pyc
 ${PYSITELIB}/mesonbuild/mcompile.pyo
@@ -412,6 +418,9 @@ ${PYSITELIB}/mesonbuild/mesonlib.pyo
 ${PYSITELIB}/mesonbuild/mesonmain.py
 ${PYSITELIB}/mesonbuild/mesonmain.pyc
 ${PYSITELIB}/mesonbuild/mesonmain.pyo
+${PYSITELIB}/mesonbuild/mformat.py
+${PYSITELIB}/mesonbuild/mformat.pyc
+${PYSITELIB}/mesonbuild/mformat.pyo
 ${PYSITELIB}/mesonbuild/minit.py
 ${PYSITELIB}/mesonbuild/minit.pyc
 ${PYSITELIB}/mesonbuild/minit.pyo
@@ -427,6 +436,9 @@ ${PYSITELIB}/mesonbuild/mlog.pyo
 ${PYSITELIB}/mesonbuild/modules/__init__.py
 ${PYSITELIB}/mesonbuild/modules/__init__.pyc
 ${PYSITELIB}/mesonbuild/modules/__init__.pyo
+${PYSITELIB}/mesonbuild/modules/_qt.py
+${PYSITELIB}/mesonbuild/modules/_qt.pyc
+${PYSITELIB}/mesonbuild/modules/_qt.pyo
 ${PYSITELIB}/mesonbuild/modules/cmake.py
 ${PYSITELIB}/mesonbuild/modules/cmake.pyc
 ${PYSITELIB}/mesonbuild/modules/cmake.pyo
@@ -472,9 +484,6 @@ ${PYSITELIB}/mesonbuild/modules/python.pyo
 ${PYSITELIB}/mesonbuild/modules/python3.py
 ${PYSITELIB}/mesonbuild/modules/python3.pyc
 ${PYSITELIB}/mesonbuild/modules/python3.pyo
-${PYSITELIB}/mesonbuild/modules/qt.py
-${PYSITELIB}/mesonbuild/modules/qt.pyc
-${PYSITELIB}/mesonbuild/modules/qt.pyo
 ${PYSITELIB}/mesonbuild/modules/qt4.py
 ${PYSITELIB}/mesonbuild/modules/qt4.pyc
 ${PYSITELIB}/mesonbuild/modules/qt4.pyo
@@ -517,6 +526,9 @@ ${PYSITELIB}/mesonbuild/munstable_coredata.pyo
 ${PYSITELIB}/mesonbuild/optinterpreter.py
 ${PYSITELIB}/mesonbuild/optinterpreter.pyc
 ${PYSITELIB}/mesonbuild/optinterpreter.pyo
+${PYSITELIB}/mesonbuild/options.py
+${PYSITELIB}/mesonbuild/options.pyc
+${PYSITELIB}/mesonbuild/options.pyo
 ${PYSITELIB}/mesonbuild/programs.py
 ${PYSITELIB}/mesonbuild/programs.pyc
 ${PYSITELIB}/mesonbuild/programs.pyo
