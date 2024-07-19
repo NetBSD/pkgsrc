@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/06/04 06:46:15 pin Exp $
+# $NetBSD: Makefile,v 1.13 2024/07/19 09:47:13 pin Exp $
 
-DISTNAME=	rust-kanban-0.9.7
+DISTNAME=	rust-kanban-0.10.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yashs662/}
 GITHUB_PROJECT=	rust_kanban
@@ -13,6 +13,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
