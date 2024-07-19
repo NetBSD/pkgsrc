@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/01/15 13:22:13 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/07/19 07:00:30 adam Exp $
 
-BLAKE2s (google-auth-oauthlib-1.2.0.tar.gz) = 56a1ada4e469d22dc3347d0c32177b12c69bcd0ce56438b0516b2b44f2754bec
-SHA512 (google-auth-oauthlib-1.2.0.tar.gz) = ada4c9c3ea64c32e3c8215626eaf0dbdd80bf5130dca214deab1d789e1892148f72daf3c749682e4d76b5245015c23de0dc455442e973725cb336f872dad25fb
-Size (google-auth-oauthlib-1.2.0.tar.gz) = 24829 bytes
+BLAKE2s (google_auth_oauthlib-1.2.1.tar.gz) = 91a3712d08aa090636655c627a6cfa73c98276d6734b327c6476f0d4405c8861
+SHA512 (google_auth_oauthlib-1.2.1.tar.gz) = 67c4bf28c95dcb2d65d4657a9dd8ace99429b18c0d140a1f11353b08d731a3410780754b06f7480c3482941497dd15b72675a72184434506f41ee22e47904bb7
+Size (google_auth_oauthlib-1.2.1.tar.gz) = 24970 bytes
