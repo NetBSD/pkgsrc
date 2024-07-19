@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.224 2024/07/17 18:59:45 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.225 2024/07/19 05:53:56 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19086,12 +19086,12 @@ thunderbird<68.6	multiple-vulnerabilities	https://www.mozilla.org/en-US/security
 ImageMagick6<6.9.11.0	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-10251
 ImageMagick<7.0.10.0	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-10251
 ansible<2.9.7	insecure-temporary-files		https://nvd.nist.gov/vuln/detail/CVE-2020-1733
-ansible-[0-9]*	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2020-1735
+ansible<2.9.7	directory-traversal			https://nvd.nist.gov/vuln/detail/CVE-2020-1735
 ansible<2.9.12	insecure-file-permissions		https://nvd.nist.gov/vuln/detail/CVE-2020-1736
-ansible-[0-9]*	code-injection				https://nvd.nist.gov/vuln/detail/CVE-2020-1738
+ansible<2.9.7	code-injection				https://nvd.nist.gov/vuln/detail/CVE-2020-1738
 ansible<2.9.7	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-1739
 ansible<2.9.7	insecure-temporary-files		https://nvd.nist.gov/vuln/detail/CVE-2020-1740
-ansible-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-1753
+ansible<2.9.7	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-1753
 bitcoin<0.17.1	log-injection				https://nvd.nist.gov/vuln/detail/CVE-2018-20586
 icu<67.1	integer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-10531
 nethack-lib<3.6.0		input-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-5253
@@ -19140,7 +19140,7 @@ py{27,36,37,38}-zim-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/C
 horde-[0-9]*			arbitrary-file-write		https://nvd.nist.gov/vuln/detail/CVE-2020-8866
 horde-[0-9]*			arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-8865
 memcached>=1.6.0<1.6.2		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-10931
-ansible-[0-9]*			code-injection			https://nvd.nist.gov/vuln/detail/CVE-2020-10684
+ansible<2.9.7			code-injection			https://nvd.nist.gov/vuln/detail/CVE-2020-10684
 py{27,36,37,38}-yaml<5.3.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-1747
 GraphicsMagick<1.3.35		buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-10938
 okular<20.04.0			arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2020-9359
@@ -21308,8 +21308,10 @@ py{36,37,38,39}-django>=2.2<2.2.24	access-bypass		https://nvd.nist.gov/vuln/deta
 py{36,37,38,39}-django>=3<3.2.4		access-bypass		https://nvd.nist.gov/vuln/detail/CVE-2021-33571
 rabbitmq<3.8.16		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-22116
 wireshark<3.4.6		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-22222
-ansible-[0-9]*		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-3532
-ansible-[0-9]*		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-3533
+# rejected
+#ansible-[0-9]*		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-3532
+# rejected
+#ansible-[0-9]*		information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-3533
 apache>=2.4.6<2.4.48	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-17567
 apache>=2.4.41<2.4.48	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-13950
 apache<2.4.48		stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-35452
