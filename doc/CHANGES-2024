@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4503 2024/07/19 07:00:50 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4504 2024/07/19 07:08:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7109,3 +7109,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/googletest to 1.15.0 [adam 2024-07-19]
 	Updated sysutils/py-kubernetes to 30.1.0 [adam 2024-07-19]
 	Updated security/py-google-auth-oauthlib to 1.2.1 [adam 2024-07-19]
+	Updated devel/py-test-asyncio to 0.23.8 [adam 2024-07-19]
+	Updated devel/py-hypothesis to 6.108.2 [adam 2024-07-19]
