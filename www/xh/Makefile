@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/04/15 07:48:48 pin Exp $
+# $NetBSD: Makefile,v 1.11 2024/07/19 09:58:32 pin Exp $
 
-DISTNAME=	xh-0.22.0
+DISTNAME=	xh-0.22.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ducaale/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ COMMENT=	Friendly and fast tool for sending HTTP requests
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.74.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/xh/auto-completion
 
