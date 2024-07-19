@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/05/27 12:17:19 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/07/19 06:49:06 adam Exp $
 
-DISTNAME=	benchmark-1.8.4
+DISTNAME=	benchmark-1.8.5
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -12,16 +12,12 @@ HOMEPAGE=	https://github.com/google/benchmark
 COMMENT=	Microbenchmark support library
 LICENSE=	apache-2.0
 
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+TEST_TARGET=		test
+
 CMAKE_ARGS+=	-DBENCHMARK_ENABLE_GTEST_TESTS=OFF
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-
-# as of 1.7.0
-# 97% tests passed, 2 tests failed out of 64
-# The following tests FAILED:
-# 55 - user_counters_test (Subprocess aborted)
-# 60 - user_counters_tabular_test (Subprocess aborted)
-TEST_TARGET=	test
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
