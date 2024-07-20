@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/06/30 16:50:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/07/20 15:45:49 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_cdp.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_context.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_debugger.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_devtools.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_fedcm_dialog.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_file_downloads.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_launching.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/has_log_events.rb
@@ -71,6 +72,9 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_extensions/uploads_files.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/driver_finder.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/element.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/error.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/fedcm.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/fedcm/account.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/fedcm/dialog.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/file_reaper.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/html5/local_storage.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/html5/session_storage.rb
