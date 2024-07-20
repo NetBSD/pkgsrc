@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/04/25 09:12:35 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/07/20 06:18:09 adam Exp $
 
-DISTNAME=	pyaml-24.4.0
+DISTNAME=	pyaml-24.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyaml/}
