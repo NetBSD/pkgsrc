@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/02/12 19:03:54 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/20 12:57:21 adam Exp $
 
-DISTNAME=	jupyterlab_widgets-3.0.10
+DISTNAME=	jupyterlab_widgets-3.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab-widgets/}
