@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/01 23:20:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/20 13:02:58 adam Exp $
 
 DISTNAME=	pyfolio-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # py-ipython, py-matplotlib, py-scipy
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-ipython, py-matplotlib, py-scipy
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
