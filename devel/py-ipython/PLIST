@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2023/11/02 09:17:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/07/20 12:38:41 adam Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -649,6 +649,9 @@ ${PYSITELIB}/IPython/utils/_process_cli.pyo
 ${PYSITELIB}/IPython/utils/_process_common.py
 ${PYSITELIB}/IPython/utils/_process_common.pyc
 ${PYSITELIB}/IPython/utils/_process_common.pyo
+${PYSITELIB}/IPython/utils/_process_emscripten.py
+${PYSITELIB}/IPython/utils/_process_emscripten.pyc
+${PYSITELIB}/IPython/utils/_process_emscripten.pyo
 ${PYSITELIB}/IPython/utils/_process_posix.py
 ${PYSITELIB}/IPython/utils/_process_posix.pyc
 ${PYSITELIB}/IPython/utils/_process_posix.pyo
