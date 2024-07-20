@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/02/20 05:23:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/20 19:07:04 adam Exp $
 
-DISTNAME=	jupyterlab_server-2.25.3
+DISTNAME=	jupyterlab_server-2.27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab_server/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://jupyterlab-server.readthedocs.io/
 COMMENT=	Server components for JupyterLab and JupyterLab like applications
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.7:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.10:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.3:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-json5>=0.9.0:../../textproc/py-json5
