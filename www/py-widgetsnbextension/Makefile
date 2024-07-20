@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/02/09 14:21:30 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/07/20 12:53:44 adam Exp $
 
-DISTNAME=	widgetsnbextension-4.0.10
+DISTNAME=	widgetsnbextension-4.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/widgetsnbextension/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	IPython HTML widgets for Jupyter
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_packaging-[0-9]*:../../devel/py-jupyter_packaging
+TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_packaging>=0.10:../../devel/py-jupyter_packaging
 
 USE_LANGUAGES=	# none
 
