@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2024/05/29 16:35:09 adam Exp $
+# $NetBSD: Makefile,v 1.94 2024/07/20 05:58:38 adam Exp $
 
-DISTNAME=	PyQt5-5.15.10
+DISTNAME=	PyQt5-5.15.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
-PKGREVISION=	7
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt5/}
 
@@ -11,8 +10,8 @@ COMMENT=	Python binding for Qt5
 HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt/intro
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6-[0-9]*:../../x11/py-sip6
-TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder-[0-9]*:../../x11/py-qt-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.8.6:../../x11/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.14.1:../../x11/py-qt-builder
 DEPENDS+=	${PYPKGPREFIX}-sip-qt5>=12:../../x11/py-sip-qt5
 
 USE_LANGUAGES=		c c++
