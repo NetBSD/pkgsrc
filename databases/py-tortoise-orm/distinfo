@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/07/04 11:02:15 adam Exp $
+$NetBSD: distinfo,v 1.19 2024/07/20 06:22:51 adam Exp $
 
-BLAKE2s (tortoise_orm-0.21.4.tar.gz) = 43a5f3645e0a0dbde00c32d162343c8b18cef20b58fe24c69e2cd62f3eee66cf
-SHA512 (tortoise_orm-0.21.4.tar.gz) = da4efa3573141767e6a13b4e82892d325abb2b1c4d9a53ac69b4fbda0ff950378743b119bc81d703376b9761ee51004fd151ef370d03c3fd6e7d57b7a0920690
-Size (tortoise_orm-0.21.4.tar.gz) = 137178 bytes
+BLAKE2s (tortoise_orm-0.21.5.tar.gz) = e4c562794e8ef2724c32dc6f237704f6ca5a8ebb6a8d81980aaab52f6c1d53e4
+SHA512 (tortoise_orm-0.21.5.tar.gz) = 0e1c8c0bf5c1924e5910a16b9ba34fe9a5ddabf048b215975534b98d22854aa5e019b5c1413de590e14b49b45f09fad47c3c902e1136c4fdf5e6677a1ec4a307
+Size (tortoise_orm-0.21.5.tar.gz) = 137296 bytes
