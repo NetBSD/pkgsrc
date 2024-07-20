@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/14 16:26:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/20 06:09:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,6 +10,9 @@ ${PYSITELIB}/pytest_httpserver/__init__.pyo
 ${PYSITELIB}/pytest_httpserver/blocking_httpserver.py
 ${PYSITELIB}/pytest_httpserver/blocking_httpserver.pyc
 ${PYSITELIB}/pytest_httpserver/blocking_httpserver.pyo
+${PYSITELIB}/pytest_httpserver/hooks.py
+${PYSITELIB}/pytest_httpserver/hooks.pyc
+${PYSITELIB}/pytest_httpserver/hooks.pyo
 ${PYSITELIB}/pytest_httpserver/httpserver.py
 ${PYSITELIB}/pytest_httpserver/httpserver.pyc
 ${PYSITELIB}/pytest_httpserver/httpserver.pyo
