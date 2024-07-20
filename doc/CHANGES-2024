@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4519 2024/07/20 06:10:01 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4520 2024/07/20 06:20:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7134,3 +7134,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/py-qt6 to 6.7.1 [adam 2024-07-20]
 	Updated devel/py-test-flake8 to 1.2.0 [adam 2024-07-20]
 	Updated devel/py-test-httpserver to 1.0.11 [adam 2024-07-20]
+	Updated www/libproxy to 0.5.8 [adam 2024-07-20]
+	Updated devel/orc to 0.4.39 [adam 2024-07-20]
+	Updated textproc/py-pyaml to 24.7.0 [adam 2024-07-20]
+	Updated mail/py-checkdmarc to 5.4.0 [adam 2024-07-20]
