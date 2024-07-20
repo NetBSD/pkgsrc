@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/02/12 19:16:18 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/07/20 19:30:14 adam Exp $
 
-DISTNAME=	notebook-7.0.8
+DISTNAME=	notebook-7.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/notebook/}
@@ -12,8 +12,8 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0.5:../../devel/py-hatch-jupyter-builder
-DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=4.0.2:../../www/py-jupyterlab
-DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.22.1:../../www/py-jupyterlab-server
+DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=4.2.0:../../www/py-jupyterlab
+DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.27.1:../../www/py-jupyterlab-server
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.4.0:../../www/py-jupyter_server
 DEPENDS+=	${PYPKGPREFIX}-notebook_shim>=0.2:../../www/py-notebook_shim
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2.0:../../www/py-tornado
@@ -22,7 +22,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 SUBST_CLASSES+=		jlpm
 SUBST_STAGE.jlpm=	pre-configure
