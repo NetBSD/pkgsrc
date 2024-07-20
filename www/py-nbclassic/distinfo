@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/05/05 10:59:41 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/07/20 19:27:10 adam Exp $
 
-BLAKE2s (nbclassic-1.0.0.tar.gz) = ecb504b71af886d2a45c1cf96580df2a65581ae97d72e5f6497329dafb235e82
-SHA512 (nbclassic-1.0.0.tar.gz) = fc80cd6311ab9cac9e0fdcf4d37cffc383c90327da8c27901239b84486e4afe23372665b0e1464ec78845816e829c4f3cf8672b4a0ad7e396fdb962b2f4f5a1b
-Size (nbclassic-1.0.0.tar.gz) = 20201455 bytes
+BLAKE2s (nbclassic-1.1.0.tar.gz) = 9001b987bc5c9838a0ca76854dc08dc104aadee9dd584508da5d819790e4c9ff
+SHA512 (nbclassic-1.1.0.tar.gz) = a5348ff7bff944c12745111fcf64ca92d75bf7bc063d51baf04bc8894473ba0689ec4420ff1ce2d2a40601b55d14a1cd257215cd4f11839fa47e8ea93933268d
+Size (nbclassic-1.1.0.tar.gz) = 20194834 bytes
