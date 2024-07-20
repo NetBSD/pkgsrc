@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:50 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/07/20 15:30:46 taca Exp $
 
-BLAKE2s (em-socksify-0.3.2.gem) = 628a98515b86fa63c1fc8ccc70d33fde42296007112dad0edd7ec282249519f0
-SHA512 (em-socksify-0.3.2.gem) = 0fb0b27073acceed860282c0f67e6614d9253321ec537d5237b41a47708a8e0b1023ea34bacd6e23327192917bae1da055ccbaa4bdb414b0421f9c392f1a31ed
-Size (em-socksify-0.3.2.gem) = 9216 bytes
+BLAKE2s (em-socksify-0.3.3.gem) = b7c177b55bb80a29fcbfea556187bf5bfd4de1a0b220cb2fe38e0c8adf8a42cf
+SHA512 (em-socksify-0.3.3.gem) = 5a385a261dafbb023a73af15f4c7ff025adefcef7d7a99195272d1d7a6d08dcea5ad6cdf4996a210e44bc3196de90849b1334c14da39db5dd532b5bcc0bebeb0
+Size (em-socksify-0.3.3.gem) = 8704 bytes
