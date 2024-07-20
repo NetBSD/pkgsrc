@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/04/08 05:54:12 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/07/20 13:06:03 adam Exp $
 
 DISTNAME=	ipyparallel-8.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -38,7 +38,7 @@ REPLACE_PYTHON+=	ipyparallel/controller/app.py
 REPLACE_PYTHON+=	ipyparallel/controller/heartmonitor.py
 REPLACE_PYTHON+=	ipyparallel/engine/app.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 post-install:
 .for bin in ipcluster ipcontroller ipengine
