@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4518 2024/07/19 16:59:49 rhialto Exp $
+$NetBSD: CHANGES-2024,v 1.4519 2024/07/20 06:10:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7130,3 +7130,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake to 3.30.1 [adam 2024-07-19]
 	Updated devel/cmake-gui to 3.30.1 [adam 2024-07-19]
 	Updated emulators/simh3 to 3.12.5 [rhialto 2024-07-19]
+	Updated x11/py-qt5 to 5.15.11 [adam 2024-07-20]
+	Updated x11/py-qt6 to 6.7.1 [adam 2024-07-20]
+	Updated devel/py-test-flake8 to 1.2.0 [adam 2024-07-20]
+	Updated devel/py-test-httpserver to 1.0.11 [adam 2024-07-20]
