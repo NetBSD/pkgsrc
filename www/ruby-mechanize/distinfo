@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2024/06/15 16:42:59 taca Exp $
+$NetBSD: distinfo,v 1.25 2024/07/20 15:44:14 taca Exp $
 
-BLAKE2s (mechanize-2.10.1.gem) = 0b0016c449bc84f4c16eaff6a284a4c352fbb198b5dedf0bfe4417e74b913623
-SHA512 (mechanize-2.10.1.gem) = 553768769c49708361ce55c84e8a78aeac05dc9aa872e03f706c18be86b9ce5cfdacf3d41fbd64b8b980fc8962b9e2aa5cc0eef512793b6615281d253393c431
-Size (mechanize-2.10.1.gem) = 144384 bytes
+BLAKE2s (mechanize-2.11.0.gem) = a97521f1a36d0e439c7ebaaab7d08731220c520c45f2bab12aaefb2a195f9163
+SHA512 (mechanize-2.11.0.gem) = a51c9b8b72943b88f7ff4cb15e3d2988da00f47758371c9939365ad701acb1823812e23cb5050c4d8e571bfb2c5e381eeaba795f644122b7c1d7c1a938414549
+Size (mechanize-2.11.0.gem) = 144896 bytes
