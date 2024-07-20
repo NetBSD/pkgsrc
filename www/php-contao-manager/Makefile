@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/26 14:11:45 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/20 14:16:22 taca Exp $
 #
 
 DISTNAME=	${CM_NAME}.phar
@@ -13,16 +13,16 @@ HOMEPAGE=	https://contao.org/
 COMMENT=	Management tool for Contao Open Source CMS
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.1.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=8.1.0:../../databases/php-pdo_mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.1.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.1.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.1.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.1.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 
 CM_NAME=	contao-manager
-CM_VERSION=	1.8.4
+CM_VERSION=	1.8.6
 NO_BUILD=	yes
 
 PHP_VERSIONS_ACCEPTED=	81 82 83
