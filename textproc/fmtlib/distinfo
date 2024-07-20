@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/07/10 11:03:17 prlw1 Exp $
+$NetBSD: distinfo,v 1.21 2024/07/20 18:52:16 adam Exp $
 
-BLAKE2s (fmt-11.0.1.tar.gz) = 8c4d34a0e08236c8969e8c6eef373b0991c3bebe4eec801ef5708de6bcf5c7f8
-SHA512 (fmt-11.0.1.tar.gz) = 1db6bea592323a3a52adad91d416925a3d86e150ee1a73a31be0ff0e901aba5b0a1aeab39785ff7303694175dd27ae0984d4921759d7b09159c30d8e9d3491e3
-Size (fmt-11.0.1.tar.gz) = 698903 bytes
+BLAKE2s (fmt-11.0.2.tar.gz) = 77a8241bddf0b4ffa0f89c5f4970decb365dae49db84eea77be15984c1c9e1fe
+SHA512 (fmt-11.0.2.tar.gz) = 47ff6d289dcc22681eea6da465b0348172921e7cafff8fd57a1540d3232cc6b53250a4625c954ee0944c87963b17680ecbc3ea123e43c2c822efe0dc6fa6cef3
+Size (fmt-11.0.2.tar.gz) = 700956 bytes
