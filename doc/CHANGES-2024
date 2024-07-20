@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4525 2024/07/20 15:20:29 taca Exp $
+$NetBSD: CHANGES-2024,v 1.4526 2024/07/20 15:24:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7154,3 +7154,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-ipywidgets to 8.1.3 [adam 2024-07-20]
 	Updated www/php-contao-manager to 1.8.6 [taca 2024-07-20]
 	Updated devel/ruby-async to 2.14.2 [taca 2024-07-20]
+	Updated devel/ruby-console to 1.27.0 [taca 2024-07-20]
