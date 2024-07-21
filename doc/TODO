@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24654 2024/07/21 06:57:40 wiz Exp $
+$NetBSD: TODO,v 1.24655 2024/07/21 07:14:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-sun50i_a64-2.4
 	o arti-1.2.5 [wip, https://gitlab.torproject.org/tpo/core/rust-pwd-grp/-/issues/4]
 	o asapm-3.1
+	o asciidoc-10.2.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
@@ -682,6 +683,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gimp-docs-ru-2.10.0
 	o gimp-docs-sv-2.10.0
 	o gimp-docs-zh_CN-2.10.0
+	o git-filter-repo-2.45.0
 	o gitea-1.22.1
 	o gjs-1.70.1
 	o gkrellm-2.3.11
@@ -728,6 +730,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o gossip-0.31
+	o govulncheck-1.1.3
 	o gperiodic-3.0.3
 	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
@@ -1122,8 +1125,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-OpenSSL-24.2.1
+	o py-astroid-3.2.4
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cryptography-43.0.0
+	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
@@ -1148,9 +1155,16 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.5.4
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-71.0.4
 	o py-simpletal-5.1
+	o py-sphinx-7.4.7
+	o py-sphinx-autoapi-3.2.0
+	o py-sphinx-autodoc-typehints-2.2.3
+	o py-sphinxcontrib-htmlhelp-2.0.6
+	o py-sphinxcontrib-qthelp-1.0.8
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
@@ -1310,6 +1324,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-cpp-0.22.3
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
