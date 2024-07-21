@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/21 20:47:13 markd Exp $
+include/LayerShellQt/Shell
+include/LayerShellQt/Window
+include/LayerShellQt/layershellqt_export.h
+include/LayerShellQt/shell.h
+include/LayerShellQt/window.h
+lib/cmake/LayerShellQt/LayerShellQtConfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtConfigVersion.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets-noconfig.cmake
+lib/cmake/LayerShellQt/LayerShellQtTargets.cmake
+lib/libLayerShellQtInterface.so
+lib/libLayerShellQtInterface.so.6
+lib/libLayerShellQtInterface.so.${PKGVERSION}
+qt6/plugins/wayland-shell-integration/liblayer-shell.so
+qt6/qml/org/kde/layershell/LayerShellQtQml.qmltypes
+qt6/qml/org/kde/layershell/kde-qmlmodule.version
+qt6/qml/org/kde/layershell/libLayerShellQtQml.so
+qt6/qml/org/kde/layershell/qmldir
