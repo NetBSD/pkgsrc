@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2024/05/05 20:28:45 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2024/07/21 09:27:08 wiz Exp $
 
-DISTNAME=	sphinx-7.3.7
+DISTNAME=	sphinx-7.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
 
@@ -31,11 +30,14 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcon
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.9:../../textproc/py-sphinxcontrib-serializinghtml
 TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+# 34 failed, 2125 passed, 30 skipped, 37 warnings
 
 .include "../../lang/python/pyversion.mk"
 
