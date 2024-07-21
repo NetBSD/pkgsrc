@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2024/07/20 12:33:45 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2024/07/21 09:16:34 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	Inflector-0.11.4
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
