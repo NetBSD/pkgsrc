@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.33 2024/01/23 06:33:48 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
+@comment $NetBSD: PLIST,v 1.34 2024/07/21 09:12:25 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.APACHE
+${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE.BSD
 ${PYSITELIB}/cryptography/__about__.py
 ${PYSITELIB}/cryptography/__about__.pyc
 ${PYSITELIB}/cryptography/__about__.pyo
@@ -30,22 +29,13 @@ ${PYSITELIB}/cryptography/hazmat/backends/__init__.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/__init__.pyo
-${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.py
-${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.pyc
-${PYSITELIB}/cryptography/hazmat/backends/openssl/aead.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/backend.pyo
-${PYSITELIB}/cryptography/hazmat/backends/openssl/ciphers.py
-${PYSITELIB}/cryptography/hazmat/backends/openssl/ciphers.pyc
-${PYSITELIB}/cryptography/hazmat/backends/openssl/ciphers.pyo
-${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.py
-${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.pyc
-${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/__init__.pyo
-${PYSITELIB}/cryptography/hazmat/bindings/_rust.so
+${PYSITELIB}/cryptography/hazmat/bindings/_rust.abi3.so
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/__init__.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/_openssl.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/asn1.pyi
@@ -53,6 +43,7 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust/exceptions.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/ocsp.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/__init__.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/aead.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/ciphers.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/cmac.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/dh.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/dsa.pyi
@@ -67,7 +58,9 @@ ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/poly1305.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/rsa.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/x25519.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/openssl/x448.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/pkcs12.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/pkcs7.pyi
+${PYSITELIB}/cryptography/hazmat/bindings/_rust/test_support.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/_rust/x509.pyi
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/__init__.pyc
@@ -78,6 +71,15 @@ ${PYSITELIB}/cryptography/hazmat/bindings/openssl/_conditional.pyo
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/binding.py
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/binding.pyc
 ${PYSITELIB}/cryptography/hazmat/bindings/openssl/binding.pyo
+${PYSITELIB}/cryptography/hazmat/decrepit/__init__.py
+${PYSITELIB}/cryptography/hazmat/decrepit/__init__.pyc
+${PYSITELIB}/cryptography/hazmat/decrepit/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/__init__.py
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/__init__.pyc
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.py
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.pyc
+${PYSITELIB}/cryptography/hazmat/decrepit/ciphers/algorithms.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/__init__.pyo
