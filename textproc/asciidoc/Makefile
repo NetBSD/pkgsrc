@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.77 2024/05/29 16:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/07/21 08:46:27 wiz Exp $
 
-DISTNAME=	asciidoc-10.2.0
-PKGREVISION=	7
+DISTNAME=	asciidoc-10.2.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciidoc/}
-DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	https://asciidoc.org/
 COMMENT=	ASCII to formatted document converter
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
-USE_PKG_RESOURCES=	yes
 USE_TOOLS+=		pax
 
 REPLACE_PYTHON+=	asciidoc/a2x.py
@@ -37,6 +36,6 @@ SUBST_FILES.pyvers=	asciidoc/resources/filters/source/source-highlight-filter.co
 SUBST_SED.pyvers=	-e 's,pygmentize ,pygmentize-${PYVERSSUFFIX} ,g'
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
