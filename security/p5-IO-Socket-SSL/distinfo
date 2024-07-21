@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.110 2024/07/14 04:51:28 wiz Exp $
+$NetBSD: distinfo,v 1.111 2024/07/21 06:57:28 wiz Exp $
 
-BLAKE2s (IO-Socket-SSL-2.087.tar.gz) = f41adf1785d402e55c95e84a6647fb7a7744a6df92ee0ca1dafdae54d6fa4d0d
-SHA512 (IO-Socket-SSL-2.087.tar.gz) = 5e2fe19fd50c2c5377d9939dfbc28f61eb6aace9643a7bcfdddbd878f45c062d0dd58e1637fbe98b5288f689daacee2f3a6b9089c06ffa5706426868faaf5b47
-Size (IO-Socket-SSL-2.087.tar.gz) = 270113 bytes
+BLAKE2s (IO-Socket-SSL-2.088.tar.gz) = 4ac7f03c6dffa793fd037cc61a381b7224e9082b4e4d0db8c6db5a71b22e94f4
+SHA512 (IO-Socket-SSL-2.088.tar.gz) = 940cda4a51b3ae7d58fda8d995c3fe35962d7efe32618c846040f0efbc5157cc0056f609b77019647a5d757795894fe453d3c2b4dc1473e131d8db3cba929383
+Size (IO-Socket-SSL-2.088.tar.gz) = 270154 bytes
