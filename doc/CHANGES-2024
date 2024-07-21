@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4547 2024/07/21 08:46:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4548 2024/07/21 08:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7181,3 +7181,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Test-Without-Module to 0.23 [wiz 2024-07-21]
 	Updated devel/p5-XS-Parse-Keyword to 0.44 [wiz 2024-07-21]
 	Updated textproc/asciidoc to 10.2.1 [wiz 2024-07-21]
+	Updated devel/git-filter-repo to 2.45.0 [wiz 2024-07-21]
