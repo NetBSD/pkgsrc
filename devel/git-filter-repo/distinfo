@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2023/06/16 15:05:12 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2024/07/21 08:50:54 wiz Exp $
 
-BLAKE2s (git-filter-repo-2.38.0.tar.xz) = 16e293fea1886df839589dbb0919ec146e7c1a3e4533adc700a9363d68c0662c
-SHA512 (git-filter-repo-2.38.0.tar.xz) = 786c27c1952a5e3625c924e71958cfd61d9065d32754a3e957f258767ccb5b147778c5d499eb82c7c1bf36a2f5a50b1cde372ebbc927aeeedbd713e5ab6563d8
-Size (git-filter-repo-2.38.0.tar.xz) = 153772 bytes
-SHA1 (patch-Makefile) = 847dff06a9d2f62cf39ef4520b6d6244314ac223
+BLAKE2s (git-filter-repo-2.45.0.tar.xz) = e2ead36b73b89f051f4b59868dbc980ed3b1c4fb7153aa6f623e62f7efe98459
+SHA512 (git-filter-repo-2.45.0.tar.xz) = 2fa48a1c6fe285570d02c63d71c92e1a79a4f4dfc0527141b6bed19f4ec27c92f6b98def2c6541bf1fef149e7dd191b023942c99b370b1a5b1555c2cac3e0c42
+Size (git-filter-repo-2.45.0.tar.xz) = 155808 bytes
+SHA1 (patch-Makefile) = 1be28444ec92766cf32d77b50361461c482349f7
