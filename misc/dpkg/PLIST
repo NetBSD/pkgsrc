@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/03/21 06:11:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/07/21 10:13:19 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -46,6 +46,7 @@ include/dpkg/dpkg-db.h
 include/dpkg/dpkg.h
 include/dpkg/ehandle.h
 include/dpkg/error.h
+include/dpkg/execname.h
 include/dpkg/fdio.h
 include/dpkg/file.h
 include/dpkg/fsys.h
@@ -80,8 +81,11 @@ include/dpkg/version.h
 lib/libdpkg.la
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Arch.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Archive/Ar.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/Build/Info.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildAPI.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildDriver.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildDriver/DebianRules.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildEnv.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildFlags.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Dpkg/BuildInfo.pm
@@ -269,7 +273,6 @@ man/fr/man1/dpkg-scansources.1
 man/fr/man1/dpkg-shlibdeps.1
 man/fr/man1/dpkg-source.1
 man/fr/man1/dpkg-split.1
-man/fr/man1/dpkg-statoverride.1
 man/fr/man1/dpkg-trigger.1
 man/fr/man1/dpkg-vendor.1
 man/fr/man1/dselect.1
@@ -345,8 +348,11 @@ man/man1/dselect.1
 man/man1/update-alternatives.1
 man/man3/Dpkg.3perl
 man/man3/Dpkg::Arch.3perl
+man/man3/Dpkg::Archive::Ar.3perl
 man/man3/Dpkg::Build::Info.3perl
 man/man3/Dpkg::BuildAPI.3perl
+man/man3/Dpkg::BuildDriver.3perl
+man/man3/Dpkg::BuildDriver::DebianRules.3perl
 man/man3/Dpkg::BuildEnv.3perl
 man/man3/Dpkg::BuildFlags.3perl
 man/man3/Dpkg::BuildInfo.3perl
@@ -458,6 +464,7 @@ man/man5/dsc.5
 man/man5/dselect.cfg.5
 man/man7/deb-version.7
 man/man7/dpkg-build-api.7
+man/man7/libdpkg.7
 man/man8/dpkg-fsys-usrunmess.8
 man/man8/start-stop-daemon.8
 man/nl/man1/dpkg-architecture.1
@@ -592,6 +599,7 @@ man/sv/man1/dpkg-architecture.1
 man/sv/man1/dpkg-buildapi.1
 man/sv/man1/dpkg-buildflags.1
 man/sv/man1/dpkg-buildpackage.1
+man/sv/man1/dpkg-buildtree.1
 man/sv/man1/dpkg-checkbuilddeps.1
 man/sv/man1/dpkg-deb.1
 man/sv/man1/dpkg-distaddfile.1
@@ -664,6 +672,7 @@ share/aclocal/dpkg-types.m4
 share/aclocal/dpkg-unicode.m4
 share/doc/dpkg/README.api
 share/doc/dpkg/README.feature-removal-schedule
+share/doc/dpkg/spec/build-driver.txt
 share/doc/dpkg/spec/frontend-api.txt
 share/doc/dpkg/spec/protected-field.txt
 share/doc/dpkg/spec/rootless-builds.txt
