@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/07/21 20:35:03 markd Exp $
+
+BLAKE2s (kwayland-6.0.5.tar.xz) = 7ae1745c86e08f3b0e8549b4acbefef751f3a66b6c541539f1f739855e9ac5c3
+SHA512 (kwayland-6.0.5.tar.xz) = 85007a154b223bf87d5b66f00671d8a011125145797e19d60631e0f3d7c95d301bd0004180b9cfaa2fa6790c4057f68b614462870703076e1dcccc09bbc3a84b
+Size (kwayland-6.0.5.tar.xz) = 133720 bytes
+SHA1 (patch-src_client_fakeinput.cpp) = e22343c8fa46bb875fe70c93823ab2cc4448e528
