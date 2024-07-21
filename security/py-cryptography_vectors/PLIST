@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/01/25 05:56:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/07/21 09:12:59 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
@@ -63,6 +63,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp_rfc5114_2.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhp_rfc5114_2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub.pem
+${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub_cryptography_old.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub_rfc5114_2.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/dhpub_rfc5114_2.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/DH/rfc3526.txt
@@ -108,6 +109,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/Readme.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigGen.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/FIPS_186-3/SigVer.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/RFC6979/evppkey_ecdsa_rfc6979.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/ECDSA/SECP256K1/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.der
 ${PYSITELIB}/cryptography_vectors/asymmetric/Ed25519/ed25519-pkcs8-enc.pem
@@ -162,6 +164,14 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-nopsw.key-cert.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-nopsw.key.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-psw.key
 ${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/rsa-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ecdsa-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ecdsa-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ecdsa-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ecdsa-psw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ed25519-nopsw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ed25519-nopsw.key.pub
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ed25519-psw.key
+${PYSITELIB}/cryptography_vectors/asymmetric/OpenSSH/sk-ed25519-psw.key.pub
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/README.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_4096.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/PEM_Serialization/dsa_private_key.pem
@@ -526,6 +536,7 @@ ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-cfb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-ecb.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/IDEA/idea-ofb.txt
+${PYSITELIB}/cryptography_vectors/ciphers/RC2/rc2-cbc.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SEED/rfc-4196.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SEED/rfc-4269.txt
 ${PYSITELIB}/cryptography_vectors/ciphers/SEED/seed-cfb.txt
@@ -2253,6 +2264,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ca/ca_key.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ca/rsa_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ca/rsa_key.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ca/rsae_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_all_reasons.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_crl_issuer.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/cdp_empty_hostname.pem
@@ -2291,6 +2303,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_null_alg_params.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_selfsigned_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ec_no_named_curve.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ecdsa_null_alg.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/ekucrit-testuser-cert.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/extended_key_usage.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/freshestcrl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ian_uri.pem
