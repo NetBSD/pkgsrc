@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2024/06/10 09:33:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2024/07/21 01:02:26 manu Exp $
 
 DISTNAME=	pcsc-lite-2.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
@@ -16,6 +16,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex perl pkg-config
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 MESON_ARGS+=	-Dipcdir=${VARBASE}/pcsc-lite
 MESON_ARGS+=	-Dlibsystemd=false
@@ -44,7 +45,6 @@ RCD_SCRIPTS=		pcscd
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../lang/python/application.mk"
-.include "../../security/polkit/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
