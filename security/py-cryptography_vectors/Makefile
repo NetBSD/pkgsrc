@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2024/06/05 07:26:46 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/07/21 09:12:59 wiz Exp $
 
-DISTNAME=	cryptography_vectors-42.0.8
+DISTNAME=	cryptography_vectors-43.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography_vectors/}
