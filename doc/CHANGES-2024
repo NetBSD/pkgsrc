@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4545 2024/07/21 06:58:19 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4546 2024/07/21 06:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7179,3 +7179,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/PC6001VX to 4.2.9 [tsutsui 2024-07-21]
 	Updated security/p5-IO-Socket-SSL to 2.088 [wiz 2024-07-21]
 	Updated devel/p5-Test-Without-Module to 0.23 [wiz 2024-07-21]
+	Updated devel/p5-XS-Parse-Keyword to 0.44 [wiz 2024-07-21]
