@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2024/05/03 20:34:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.219 2024/07/21 20:54:14 markd Exp $
 
 DISTNAME=	blender-4.1.1
 CATEGORIES=	graphics
@@ -68,7 +68,7 @@ REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
 
 INSTALLATION_DIRS=	bin share/blender
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310 312
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
