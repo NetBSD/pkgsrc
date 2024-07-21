@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4315 2024/07/17 12:03:59 pin Exp $
+# $NetBSD: Makefile,v 1.4316 2024/07/21 20:35:03 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -2383,6 +2383,7 @@ SUBDIR+=	pipestatus
 SUBDIR+=	pkg-config
 SUBDIR+=	pkgconf
 SUBDIR+=	plasma-wayland-protocols
+SUBDIR+=	plasma6-kwayland
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	poco
