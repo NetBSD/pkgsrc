@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2024/05/21 09:52:52 nia Exp $
+# $NetBSD: Makefile.common,v 1.13 2024/07/22 19:26:30 adam Exp $
 #
 # used by databases/mariadb1011-client/Makefile
 # used by databases/mariadb1011-server/Makefile
@@ -16,13 +16,13 @@ DISTINFO_FILE?=	${.CURDIR}/../../databases/mariadb1011-client/distinfo
 PATCHDIR?=	${.CURDIR}/../../databases/mariadb1011-client/patches
 
 USE_CMAKE=	yes
+USE_CURSES=	wide
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run pkg-config bison
-USE_CURSES=	wide
 
 PLIST_SRC=	${PLIST_SRC_DFLT}
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,6 +60,7 @@ CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DINSTALL_SYSCONFDIR="${PKG_SYSCONFDIR}"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MARIADB_DATADIR}
 
+CMAKE_ARGS+=		-DKRB5_CONFIG=${KRB5_CONFIG}
 CMAKE_ARGS+=		-DWITH_UNIT_TESTS=OFF
 CMAKE_ARGS+=		-DWITH_LIBWRAP=ON
 CMAKE_ARGS+=		-DWITH_PCRE="system"
@@ -128,8 +129,8 @@ CPPFLAGS+=	-DHAVE_CURSES_H
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/zstd/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
