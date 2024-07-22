@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/11/04 14:02:24 js Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/07/22 15:05:46 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ijson/__init__.py
 ${PYSITELIB}/ijson/__init__.pyc
 ${PYSITELIB}/ijson/__init__.pyo
@@ -28,6 +29,9 @@ ${PYSITELIB}/ijson/backends/yajl2_c.pyo
 ${PYSITELIB}/ijson/backends/yajl2_cffi.py
 ${PYSITELIB}/ijson/backends/yajl2_cffi.pyc
 ${PYSITELIB}/ijson/backends/yajl2_cffi.pyo
+${PYSITELIB}/ijson/benchmark.py
+${PYSITELIB}/ijson/benchmark.pyc
+${PYSITELIB}/ijson/benchmark.pyo
 ${PYSITELIB}/ijson/common.py
 ${PYSITELIB}/ijson/common.pyc
 ${PYSITELIB}/ijson/common.pyo
