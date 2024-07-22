@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/28 16:16:15 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/22 04:51:06 adam Exp $
 
-DISTNAME=	aiostream-0.6.1
+DISTNAME=	aiostream-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiostream/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/vxgmichel/aiostream
 COMMENT=	Generator-based operators for asynchronous iteration
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.5:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
