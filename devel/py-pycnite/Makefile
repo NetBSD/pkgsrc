@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/06/14 19:52:52 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/07/22 04:31:25 adam Exp $
 
-DISTNAME=	pycnite-2024.6.13
+DISTNAME=	pycnite-2024.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycnite/}
