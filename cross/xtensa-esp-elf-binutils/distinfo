@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2024/07/22 20:01:50 tnn Exp $
+
+BLAKE2s (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 7cd662eceee9bd5ae1216fde1ddf3a7ea67a2607b727075ee65d9fe1429478a6
+SHA512 (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 2d8235e9743d95804278d964887f48f1935e932f48b2a6467ee3e81028b2909c05ad825ee14bffeadbbfaab2d54badea78d986192000a1126b2ccb1d75bd9649
+Size (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 1123972 bytes
+BLAKE2s (espressif-binutils-gdb-esp-2.41.0_20240305.tar.gz) = 3db9c614e3c61f9ecf290a419a5c9bcb3d8191adbc2ada7e9be77e98618eb56c
+SHA512 (espressif-binutils-gdb-esp-2.41.0_20240305.tar.gz) = 610ea208e2ee15fce67de960e60a724ae4ab5d7c5c01e3fb3d62abfb4600771b195d82d0441fa6e9ca05752a8ddba37fa11923fc3745ead5a98d04147678b707
+Size (espressif-binutils-gdb-esp-2.41.0_20240305.tar.gz) = 65669754 bytes
+SHA1 (patch-bfd_xtensa-dynconfig.c) = 24ca1663c8d3236419bb43f93a744fca9704b46b
