@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2024/06/30 22:00:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.50 2024/07/22 11:22:34 adam Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
 DISTNAME=	harfbuzz-9.0.0
@@ -33,7 +33,7 @@ MESON_ARGS+=	-Dbenchmark=disabled
 
 PLIST_SRC=		PLIST
 
-PLIST_VARS+=		graphite2
+PLIST_VARS+=		coretext graphite2
 PRINT_PLIST_AWK+=	{ if (/^include\/harfbuzz\/hb-graphite2.h/) $$0 = "$${PLIST.graphite2}" $$0 }
 
 .if ${LIBRSVG_TYPE} == "rust"
@@ -74,7 +74,7 @@ MESON_ARGS+=		-Dcoretext=disabled
 
 .  else
 MESON_ARGS+=		-Dcoretext=enabled
-PLIST_SRC+=		PLIST.coretext
+PLIST.coretext=		yes
 .  endif
 .endif
 
