@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 11:01:18 nia Exp $
+$NetBSD: distinfo,v 1.29 2024/07/22 20:22:31 adam Exp $
 
-BLAKE2s (totem-pl-parser-3.26.5.tar.xz) = f9e48b6754cd5fcd0a95b03893f2b080a75cc547b76a484ad295c0f3e2f87438
-SHA512 (totem-pl-parser-3.26.5.tar.xz) = ce110d92f60da328272a8135a57ba60785ea4bca1fde3703a734969e7ba5b382ef19dc3b8930a5641d8f8effabf627f7e9b2727ee94e69e6144e0f085079e14d
-Size (totem-pl-parser-3.26.5.tar.xz) = 1318700 bytes
+BLAKE2s (totem-pl-parser-3.26.6.tar.xz) = 486bc4238d71a2da03e5c1ec8278541b5bbfd1cace89d9df2dadeb4486eb4ba7
+SHA512 (totem-pl-parser-3.26.6.tar.xz) = 1a7aa69e147b55c3c9761328604821a7e40bac4e7b82492e5ce1b2405e3b6d5154e3b06687f2446ec923b34bf6ea96eef179ef8410c005a061d448fc6b3e754e
+Size (totem-pl-parser-3.26.6.tar.xz) = 1503888 bytes
