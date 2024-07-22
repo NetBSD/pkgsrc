@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/06/28 09:04:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/07/22 05:50:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -37,7 +37,6 @@ ${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/markers.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/requirements.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/specifiers.pyi
 ${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/version.pyi
-${PYSITELIB}/pkg_resources-stubs/extern/__init__.pyi
 ${PYSITELIB}/pkg_resources-stubs/py.typed
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
@@ -107,7 +106,6 @@ ${PYSITELIB}/setuptools-stubs/discovery.pyi
 ${PYSITELIB}/setuptools-stubs/dist.pyi
 ${PYSITELIB}/setuptools-stubs/errors.pyi
 ${PYSITELIB}/setuptools-stubs/extension.pyi
-${PYSITELIB}/setuptools-stubs/extern/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/glob.pyi
 ${PYSITELIB}/setuptools-stubs/installer.pyi
 ${PYSITELIB}/setuptools-stubs/launch.pyi
