@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/09 13:53:00 nia Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/22 20:21:56 adam Exp $
 bin/uchardet
 include/uchardet/uchardet.h
+lib/cmake/uchardet/uchardet-config-version.cmake
+lib/cmake/uchardet/uchardet-config.cmake
+lib/cmake/uchardet/uchardet-targets-noconfig.cmake
+lib/cmake/uchardet/uchardet-targets.cmake
 lib/libuchardet.a
 lib/libuchardet.so
-lib/libuchardet.so.0
 lib/libuchardet.so.${PKGVERSION}
+lib/libuchardet.so.0
 lib/pkgconfig/uchardet.pc
 man/man1/uchardet.1
