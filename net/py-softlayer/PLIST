@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/06/11 09:38:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/07/22 04:56:09 adam Exp $
 bin/slcli-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -1407,6 +1407,9 @@ ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Customer_Notification_Virtual_Gue
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Action.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Action.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Action.pyo
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Department.py
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Department.pyc
+${PYSITELIB}/SoftLayer/fixtures/SoftLayer_User_Permission_Department.pyo
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_DedicatedHost.py
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_DedicatedHost.pyc
 ${PYSITELIB}/SoftLayer/fixtures/SoftLayer_Virtual_DedicatedHost.pyo
