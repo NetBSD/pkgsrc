@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.64 2024/07/15 09:41:36 adam Exp $
+$NetBSD: distinfo,v 1.65 2024/07/22 17:48:58 adam Exp $
 
-BLAKE2s (ccache-4.10.1.tar.gz) = 0d3dbb611cbae5e78b0d31c88982a893a49113ad66793addafb5eab7dca357aa
-SHA512 (ccache-4.10.1.tar.gz) = 28c91693e9a37eed494ff4fc8a98e12d566fa8510bab3587a7a67e94b80b8d9c146952ffe13c5b852adf5c2b91e70f073b70809f36fbbd8730fbbf900a7ddc55
-Size (ccache-4.10.1.tar.gz) = 664780 bytes
-SHA1 (patch-cmake_FindFmt.cmake) = ace90f8a55d64a486fd2fb9a7bbeec138eadac46
+BLAKE2s (ccache-4.10.2.tar.gz) = fc279df477ee204052126ae4893f8e6949da4a60fa275737ffb336cdb39efd0b
+SHA512 (ccache-4.10.2.tar.gz) = c6b66821372492b3e52cfaaad9a3167039aa943557ab2e1119fa68e3e983dcd022b839c54ef016802c0092209cae8122fcb8aa4dbe3bc03902183376bde2c4ef
+Size (ccache-4.10.2.tar.gz) = 665037 bytes
