@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/04/30 09:31:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/07/22 04:53:56 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -85,6 +85,9 @@ ${PYSITELIB}/mypy/dmypy_util.pyo
 ${PYSITELIB}/mypy/erasetype.py
 ${PYSITELIB}/mypy/erasetype.pyc
 ${PYSITELIB}/mypy/erasetype.pyo
+${PYSITELIB}/mypy/error_formatter.py
+${PYSITELIB}/mypy/error_formatter.pyc
+${PYSITELIB}/mypy/error_formatter.pyo
 ${PYSITELIB}/mypy/errorcodes.py
 ${PYSITELIB}/mypy/errorcodes.pyc
 ${PYSITELIB}/mypy/errorcodes.pyo
@@ -449,6 +452,9 @@ ${PYSITELIB}/mypy/test/testmodulefinder.pyo
 ${PYSITELIB}/mypy/test/testmypyc.py
 ${PYSITELIB}/mypy/test/testmypyc.pyc
 ${PYSITELIB}/mypy/test/testmypyc.pyo
+${PYSITELIB}/mypy/test/testoutput.py
+${PYSITELIB}/mypy/test/testoutput.pyc
+${PYSITELIB}/mypy/test/testoutput.pyo
 ${PYSITELIB}/mypy/test/testparse.py
 ${PYSITELIB}/mypy/test/testparse.pyc
 ${PYSITELIB}/mypy/test/testparse.pyo
@@ -563,6 +569,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_tkinter.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_tracemalloc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/dbapi.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/importlib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/wsgi.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_typeshed/xml.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_warnings.pyi
@@ -1360,6 +1367,7 @@ ${PYSITELIB}/mypyc/lib-rt/misc_ops.c
 ${PYSITELIB}/mypyc/lib-rt/module_shim.tmpl
 ${PYSITELIB}/mypyc/lib-rt/mypyc_util.h
 ${PYSITELIB}/mypyc/lib-rt/pythoncapi_compat.h
+${PYSITELIB}/mypyc/lib-rt/pythonsupport.c
 ${PYSITELIB}/mypyc/lib-rt/pythonsupport.h
 ${PYSITELIB}/mypyc/lib-rt/set_ops.c
 ${PYSITELIB}/mypyc/lib-rt/setup.py
@@ -1513,6 +1521,7 @@ ${PYSITELIB}/mypyc/test-data/run-misc.test
 ${PYSITELIB}/mypyc/test-data/run-multimodule.test
 ${PYSITELIB}/mypyc/test-data/run-mypy-sim.test
 ${PYSITELIB}/mypyc/test-data/run-primitives.test
+${PYSITELIB}/mypyc/test-data/run-python312.test
 ${PYSITELIB}/mypyc/test-data/run-python37.test
 ${PYSITELIB}/mypyc/test-data/run-python38.test
 ${PYSITELIB}/mypyc/test-data/run-sets.test
