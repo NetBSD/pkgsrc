@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/07/16 03:44:37 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/07/22 04:16:06 adam Exp $
 
 DISTNAME=	uncertainties-3.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://uncertainties-python-package.readthedocs.io/
 COMMENT=	Transparent calculations with uncertainties on the quantities involved
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
