@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2024/07/22 20:01:50 tnn Exp $
+
+BLAKE2s (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 7cd662eceee9bd5ae1216fde1ddf3a7ea67a2607b727075ee65d9fe1429478a6
+SHA512 (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 2d8235e9743d95804278d964887f48f1935e932f48b2a6467ee3e81028b2909c05ad825ee14bffeadbbfaab2d54badea78d986192000a1126b2ccb1d75bd9649
+Size (crosstool-NG-esp-13.2.0_20240530-src.tar.xz) = 1123972 bytes
+BLAKE2s (espressif-gcc-13.2.0-8b450d265fc2e60f5be980feb6c9f9c214c6c298-8b450d265fc2e60f5be980feb6c9f9c214c6c298.tar.gz) = cd2a1b6edc2c5595c8100304708f20274b44d4375ff1f5d6d53e67c7798424da
+SHA512 (espressif-gcc-13.2.0-8b450d265fc2e60f5be980feb6c9f9c214c6c298-8b450d265fc2e60f5be980feb6c9f9c214c6c298.tar.gz) = 61bd28b53bcd1d1a2f599d2234d9bb60f6da89fa6205790ec188504e5ac7ca26c3f48e209fd91f8a83242fc5e0cd16b48b2037d9a6c70c203a95c974d227b748
+Size (espressif-gcc-13.2.0-8b450d265fc2e60f5be980feb6c9f9c214c6c298-8b450d265fc2e60f5be980feb6c9f9c214c6c298.tar.gz) = 137908598 bytes
+BLAKE2s (newlib-esp-4.3.0_20240530.tar.gz) = dfc14ade71836cf9d271e141666456808624f6c703a2ba5daebd8c06a0b7e645
+SHA512 (newlib-esp-4.3.0_20240530.tar.gz) = ac9b465a1fd99d5d25ef6af412638d397bcebc7961731d4c2bf08155f78a8cb76c485ef0652e45c7a64db7b9191891b07a276aa3becaee03dea295b5f8241c08
+Size (newlib-esp-4.3.0_20240530.tar.gz) = 12031304 bytes
+SHA1 (patch-gcc_config_xtensa_xtensa-dynconfig.cc) = 8d0de3278ca3d0d9a682b9c8b54a241b4d506d3b
+SHA1 (patch-gcc_system.h) = 9ef5369990b02063aa7d8bd6ad977259ba80a105
+SHA1 (patch-libgcc_libgcov.h) = ed9fd122c5b9786c8a3476b13892a1c0c803509d
+SHA1 (patch-newlib_libc_posix_collate.c) = 105aa07ba8de71eb1b3c4459303ceba26ed9dadc
+SHA1 (patch-newlib_libc_posix_regcomp.c) = 8f2e669b338f638c041992fc051d119f0ae21445

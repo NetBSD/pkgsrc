@@ -1,8 +1,8 @@
-$NetBSD: patch-newlib_libc_posix_collate.c,v 1.1 2022/04/14 00:50:00 tnn Exp $
+$NetBSD: patch-newlib_libc_posix_collate.c,v 1.1 2024/07/22 20:01:50 tnn Exp $
 
 work around a problem where PATH_MAX is undefined
 
---- newlib/libc/posix/collate.c.orig	2022-03-31 06:25:20.000000000 +0000
+--- newlib/libc/posix/collate.c.orig	2024-07-20 16:18:23.269162402 +0000
 +++ newlib/libc/posix/collate.c
 @@ -26,6 +26,7 @@
   */
@@ -11,4 +11,4 @@ work around a problem where PATH_MAX is undefined
 +#include "../include/limits.h"
  
  #include "namespace.h"
- #include <rune.h>
+ #include "rune.h"

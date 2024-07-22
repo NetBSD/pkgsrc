@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2024/04/02 22:33:56 js Exp $
+# $NetBSD: Makefile,v 1.115 2024/07/22 20:01:49 tnn Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -79,12 +79,8 @@ SUBDIR+=	riscv64-none-elf-binutils
 SUBDIR+=	riscv64-none-elf-gcc
 SUBDIR+=	stlink
 SUBDIR+=	uisp
-SUBDIR+=	xtensa-esp32-elf-binutils
-SUBDIR+=	xtensa-esp32-elf-gcc
-SUBDIR+=	xtensa-esp32s2-elf-binutils
-SUBDIR+=	xtensa-esp32s2-elf-gcc
-SUBDIR+=	xtensa-esp32s3-elf-binutils
-SUBDIR+=	xtensa-esp32s3-elf-gcc
+SUBDIR+=	xtensa-esp-elf-binutils
+SUBDIR+=	xtensa-esp-elf-gcc
 SUBDIR+=	xtensa-lx106-elf-binutils
 SUBDIR+=	xtensa-lx106-elf-gcc
 SUBDIR+=	z80asm
