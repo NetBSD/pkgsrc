@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2023/06/21 14:40:43 taca Exp $
+# $NetBSD: options.mk,v 1.6 2024/07/22 18:18:01 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server blacklist blocklist
 PKG_SUPPORTED_OPTIONS+=	threads readline lmdb mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	geoip tuning dnstap pkcs11
+PKG_SUPPORTED_OPTIONS+=	gssapi geoip tuning dnstap pkcs11
 PKG_SUGGESTED_OPTIONS+=	readline
 
 PLIST_VARS+=	dnstap lmdb pkcs11
@@ -85,6 +85,13 @@ CONFIGURE_ARGS+=	--with-blocklist=no
 CONFIGURE_ARGS+=	--with-geoip=${PREFIX}
 LDFLAGS+=		-lGeoIP
 .include "../../net/GeoIP/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}/bin/krb5-config
+.include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gssapi
 .endif
 
 .if !empty(PKG_OPTIONS:Mpkcs11)
