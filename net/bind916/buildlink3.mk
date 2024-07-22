@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2023/08/14 05:24:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/07/22 18:18:01 adam Exp $
 
 BUILDLINK_TREE+=	bind
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	bind
 BIND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bind+=	bind>=9.16.0<9.18
-BUILDLINK_ABI_DEPENDS.bind?=	bind>=9.16.42nb1
+BUILDLINK_ABI_DEPENDS.bind+=	bind>=9.16.42nb1
 BUILDLINK_PKGSRCDIR.bind?=	../../net/bind916
 .endif # BIND_BUILDLINK3_MK
 
