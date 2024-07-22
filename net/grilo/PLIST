@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/01/20 01:32:17 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/22 20:49:18 adam Exp $
 bin/grl-inspect-0.3
 bin/grl-launch-0.3
 include/grilo-0.3/grilo.h
@@ -28,13 +28,13 @@ lib/girepository-1.0/GrlNet-0.3.typelib
 lib/girepository-1.0/GrlPls-0.3.typelib
 lib/libgrilo-0.3.so
 lib/libgrilo-0.3.so.0
-lib/libgrilo-0.3.so.0.311.1
+lib/libgrilo-0.3.so.0.316.1
 lib/libgrlnet-0.3.so
 lib/libgrlnet-0.3.so.0
-lib/libgrlnet-0.3.so.0.311.0
+lib/libgrlnet-0.3.so.0.316.0
 lib/libgrlpls-0.3.so
 lib/libgrlpls-0.3.so.0
-lib/libgrlpls-0.3.so.0.311.0
+lib/libgrlpls-0.3.so.0.316.0
 lib/pkgconfig/grilo-0.3.pc
 lib/pkgconfig/grilo-net-0.3.pc
 lib/pkgconfig/grilo-pls-0.3.pc
@@ -44,7 +44,9 @@ man/man1/grl-launch-0.3.1
 share/gir-1.0/Grl-0.3.gir
 share/gir-1.0/GrlNet-0.3.gir
 share/gir-1.0/GrlPls-0.3.gir
+share/locale/ab/LC_MESSAGES/grilo.mo
 share/locale/as/LC_MESSAGES/grilo.mo
+share/locale/be/LC_MESSAGES/grilo.mo
 share/locale/bg/LC_MESSAGES/grilo.mo
 share/locale/bs/LC_MESSAGES/grilo.mo
 share/locale/ca/LC_MESSAGES/grilo.mo
@@ -57,6 +59,7 @@ share/locale/en_GB/LC_MESSAGES/grilo.mo
 share/locale/eo/LC_MESSAGES/grilo.mo
 share/locale/es/LC_MESSAGES/grilo.mo
 share/locale/eu/LC_MESSAGES/grilo.mo
+share/locale/fa/LC_MESSAGES/grilo.mo
 share/locale/fi/LC_MESSAGES/grilo.mo
 share/locale/fr/LC_MESSAGES/grilo.mo
 share/locale/fur/LC_MESSAGES/grilo.mo
@@ -67,10 +70,12 @@ share/locale/hu/LC_MESSAGES/grilo.mo
 share/locale/id/LC_MESSAGES/grilo.mo
 share/locale/it/LC_MESSAGES/grilo.mo
 share/locale/ja/LC_MESSAGES/grilo.mo
+share/locale/ka/LC_MESSAGES/grilo.mo
 share/locale/ko/LC_MESSAGES/grilo.mo
 share/locale/lt/LC_MESSAGES/grilo.mo
 share/locale/lv/LC_MESSAGES/grilo.mo
 share/locale/ml/LC_MESSAGES/grilo.mo
+share/locale/ms/LC_MESSAGES/grilo.mo
 share/locale/nb/LC_MESSAGES/grilo.mo
 share/locale/ne/LC_MESSAGES/grilo.mo
 share/locale/nl/LC_MESSAGES/grilo.mo
