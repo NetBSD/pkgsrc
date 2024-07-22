@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2024/05/29 16:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.61 2024/07/22 20:49:18 adam Exp $
 
-DISTNAME=	grilo-0.3.11
-PKGREVISION=	30
+DISTNAME=	grilo-0.3.16
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/grilo/0.3/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +28,5 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/grilo-pls-0.3.pc
 .include "../../lang/python/tool.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
-.include "../../security/liboauth/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
