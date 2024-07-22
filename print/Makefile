@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.933 2024/04/30 08:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.934 2024/07/22 05:38:04 adam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -135,7 +135,6 @@ SUBDIR+=	pslib
 SUBDIR+=	psutils
 SUBDIR+=	ptexenc
 SUBDIR+=	py-PDF2
-SUBDIR+=	py-Pdf
 SUBDIR+=	py-cups
 SUBDIR+=	py-latexcodec
 SUBDIR+=	py-octoprint
