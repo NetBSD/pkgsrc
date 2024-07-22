@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/04/29 19:08:34 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/07/22 04:18:22 adam Exp $
 
-BLAKE2s (versioningit-3.1.1.tar.gz) = 322f322046312b37e967f0e2dc586a6609e7efa49963e6d1f7209d3ff121f7f7
-SHA512 (versioningit-3.1.1.tar.gz) = f8e23834324f785b93668f4cb55d57885cf96e9ca16f1d6a06c3610dd00a79c018960fe52aff5fe4cc735b5fcec27be1ceb151a88e0e9a447cba750dd6956816
-Size (versioningit-3.1.1.tar.gz) = 212882 bytes
+BLAKE2s (versioningit-3.1.2.tar.gz) = d7331fa94136a123d8dd9b7d75953a5f87dcd9c1dcdf953ad394b68b7a30657b
+SHA512 (versioningit-3.1.2.tar.gz) = 0e09a51ed9a137ffa9a66c2a8b4c43131bd27d07e35b896248d963a780f955d6bf37de29c04e41acf06dd636a3609d045e359b28429d7272fad6187db7748c3c
+Size (versioningit-3.1.2.tar.gz) = 213047 bytes
