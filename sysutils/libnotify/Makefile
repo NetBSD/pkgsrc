@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2024/04/07 07:35:01 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2024/07/22 21:11:30 adam Exp $
 
-DISTNAME=	libnotify-0.8.1
-PKGREVISION=	6
+DISTNAME=	libnotify-0.8.3
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libnotify/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,12 +16,12 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 CONFLICTS+=	libnotify07-[0-9]*
 SUPERSEDES+=	libnotify07-[0-9]*
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE=		output/meson-private/libnotify.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-MESON_ARGS+=		-Dintrospection=enabled
+MESON_ARGS+=	-Dintrospection=enabled
 
 # Apply removals to post-wrapper transformed arguments.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
