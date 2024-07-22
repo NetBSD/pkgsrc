@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/09/16 19:27:04 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2024/07/22 07:26:14 wiz Exp $
 
 DISTNAME=	liboggz-1.1.1
 PKGREVISION=	1
