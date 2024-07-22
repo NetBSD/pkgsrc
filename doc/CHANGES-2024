@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4574 2024/07/22 17:52:57 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4575 2024/07/22 20:04:13 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7231,3 +7231,11 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ijson to 3.3.0 [adam 2024-07-22]
 	Updated devel/ccache to 4.10.2 [adam 2024-07-22]
 	Updated math/py-asteval to 1.0.1 [adam 2024-07-22]
+	Added cross/xtensa-esp-elf-binutils version 2.41.0 [tnn 2024-07-22]
+	Added cross/xtensa-esp-elf-gcc version 13.2.0 [tnn 2024-07-22]
+	Removed cross/xtensa-esp32-elf-binutils successor cross/xtensa-esp-elf-binutils [tnn 2024-07-22]
+	Removed cross/xtensa-esp32-elf-gcc successor cross/xtensa-esp-elf-gcc [tnn 2024-07-22]
+	Removed cross/xtensa-esp32s2-elf-binutils successor cross/xtensa-esp-elf-binutils [tnn 2024-07-22]
+	Removed cross/xtensa-esp32s2-elf-gcc successor cross/xtensa-esp-elf-gcc[tnn 2024-07-22]
+	Removed cross/xtensa-esp32s3-elf-binutils successor cross/xtensa-esp-elf-binutils [tnn 2024-07-22]
+	Removed cross/xtensa-esp32s3-elf-gcc successor cross/xtensa-esp-elf-gcc[tnn 2024-07-22]
