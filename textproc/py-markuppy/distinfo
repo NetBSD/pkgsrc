@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2022/11/29 10:30:55 adam Exp $
-
-BLAKE2s (MarkupPy-1.14.tar.gz) = 30c6009ead783896e186743eea35ea3f97da33cd7c194395a63d686796979156
-SHA512 (MarkupPy-1.14.tar.gz) = dbc0abaaa0b9ffd95d2aebe62e5f718a44a0e614eeded5f3624df190778f11a10aa98e34c444e38295ac05de38c4ddad57fe885446ebe7c4b9fd1d64b312f168
-Size (MarkupPy-1.14.tar.gz) = 6815 bytes
