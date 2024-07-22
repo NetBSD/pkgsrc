@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/22 20:01:50 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/22 20:05:38 tnn Exp $
 
 DISTNAME=		espressif-gcc-13.2.0-${GITHUB_TAG}
 PKGNAME=		xtensa-esp-elf-gcc-13.2.0
@@ -97,7 +97,7 @@ CHECK_PORTABILITY_SKIP+=	gcc/config/nvptx/gen-opt.sh
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	gcc/config/xtensa/xtensa-dynconfig.cc
-SUBST_STAGE.prefix=	 pre-configure
+SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Substitute GNU_CONFIGURE_PREFIX in patch
 SUBST_VARS.prefix+=	GNU_CONFIGURE_PREFIX
 
