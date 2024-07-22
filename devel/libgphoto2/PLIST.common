@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.24 2021/11/23 14:28:34 ryoon Exp $
+@comment $NetBSD: PLIST.common,v 1.25 2024/07/22 11:11:45 adam Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -51,6 +51,9 @@ lib/libgphoto2/${PKGVERSION}/konica.la
 lib/libgphoto2/${PKGVERSION}/konica_qm150.la
 lib/libgphoto2/${PKGVERSION}/largan.la
 lib/libgphoto2/${PKGVERSION}/lg_gsm.la
+lib/libgphoto2/${PKGVERSION}/lumix.a
+lib/libgphoto2/${PKGVERSION}/lumix.la
+lib/libgphoto2/${PKGVERSION}/lumix.so
 lib/libgphoto2/${PKGVERSION}/mars.la
 lib/libgphoto2/${PKGVERSION}/mustek.la
 lib/libgphoto2/${PKGVERSION}/panasonic_coolshot.la
@@ -86,10 +89,18 @@ lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
 lib/libgphoto2/${PKGVERSION}/tp6801.la
 lib/libgphoto2/print-camera-list
 lib/libgphoto2_port.la
-lib/libgphoto2_port/0.12.0/disk.la
-lib/libgphoto2_port/0.12.0/ptpip.la
-lib/libgphoto2_port/0.12.0/serial.la
-${PLIST.libusb}lib/libgphoto2_port/0.12.0/usb1.la
+lib/libgphoto2_port/0.12.2/disk.a
+lib/libgphoto2_port/0.12.2/disk.la
+lib/libgphoto2_port/0.12.2/disk.so
+lib/libgphoto2_port/0.12.2/ptpip.a
+lib/libgphoto2_port/0.12.2/ptpip.la
+lib/libgphoto2_port/0.12.2/ptpip.so
+lib/libgphoto2_port/0.12.2/serial.a
+lib/libgphoto2_port/0.12.2/serial.la
+lib/libgphoto2_port/0.12.2/serial.so
+lib/libgphoto2_port/0.12.2/usb1.a
+lib/libgphoto2_port/0.12.2/usb1.la
+lib/libgphoto2_port/0.12.2/usb1.so
 lib/pkgconfig/libgphoto2.pc
 lib/pkgconfig/libgphoto2_port.pc
 man/man3/libgphoto2.3
@@ -102,7 +113,6 @@ share/doc/libgphoto2/NEWS
 share/doc/libgphoto2/README.md
 share/doc/libgphoto2/README.packaging
 share/doc/libgphoto2/RELEASE-HOWTO.md
-share/doc/libgphoto2/camlibs/ChangeLog
 share/doc/libgphoto2/camlibs/README.9050
 share/doc/libgphoto2/camlibs/README.9051
 share/doc/libgphoto2/camlibs/README.9052
@@ -155,7 +165,7 @@ share/libgphoto2/${PKGVERSION}/konica/german
 share/libgphoto2/${PKGVERSION}/konica/japanese
 share/libgphoto2/${PKGVERSION}/konica/korean
 share/libgphoto2/${PKGVERSION}/konica/spanish
-share/libgphoto2_port/0.12.0/vcamera/README.txt
+share/libgphoto2_port/0.12.2/vcamera/README.txt
 share/locale/cs/LC_MESSAGES/libgphoto2-6.mo
 share/locale/cs/LC_MESSAGES/libgphoto2_port-12.mo
 share/locale/da/LC_MESSAGES/libgphoto2-6.mo
@@ -179,6 +189,7 @@ share/locale/nl/LC_MESSAGES/libgphoto2_port-12.mo
 share/locale/pl/LC_MESSAGES/libgphoto2-6.mo
 share/locale/pl/LC_MESSAGES/libgphoto2_port-12.mo
 share/locale/pt_BR/LC_MESSAGES/libgphoto2_port-12.mo
+share/locale/ro/LC_MESSAGES/libgphoto2_port-12.mo
 share/locale/ru/LC_MESSAGES/libgphoto2-6.mo
 share/locale/ru/LC_MESSAGES/libgphoto2_port-12.mo
 share/locale/sk/LC_MESSAGES/libgphoto2_port-12.mo
