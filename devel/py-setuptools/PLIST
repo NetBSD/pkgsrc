@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.91 2024/07/21 09:21:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.92 2024/07/22 03:57:26 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -10,6 +16,7 @@ ${PYSITELIB}/pkg_resources/__init__.py
 ${PYSITELIB}/pkg_resources/__init__.pyc
 ${PYSITELIB}/pkg_resources/__init__.pyo
 ${PYSITELIB}/pkg_resources/api_tests.txt
+${PYSITELIB}/pkg_resources/py.typed
 ${PYSITELIB}/pkg_resources/tests/__init__.py
 ${PYSITELIB}/pkg_resources/tests/__init__.pyc
 ${PYSITELIB}/pkg_resources/tests/__init__.pyo
@@ -42,12 +49,6 @@ ${PYSITELIB}/pkg_resources/tests/test_resources.pyo
 ${PYSITELIB}/pkg_resources/tests/test_working_set.py
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyc
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
