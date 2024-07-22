@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.16 2024/03/23 07:15:01 adam Exp $
-bin/pydisassemble-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.17 2024/07/22 05:28:31 adam Exp $
 bin/uncompyle6-${PYVERSSUFFIX}
+bin/uncompyle6-tokenize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/${WHEEL_INFODIR}/zip-safe
 ${PYSITELIB}/uncompyle6/__init__.py
 ${PYSITELIB}/uncompyle6/__init__.pyc
 ${PYSITELIB}/uncompyle6/__init__.pyo
@@ -120,8 +119,8 @@ ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_check.py
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_check.pyc
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_check.pyo
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.py
-${PLIST.py3x}${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyc
-${PLIST.py3x}${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyo
+${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyc
+${PYSITELIB}/uncompyle6/parsers/reducecheck/and_not_check.pyo
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.py
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.pyc
 ${PYSITELIB}/uncompyle6/parsers/reducecheck/aug_assign.pyo
