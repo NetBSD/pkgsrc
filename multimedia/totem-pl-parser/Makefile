@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.88 2024/05/29 16:33:47 adam Exp $
+# $NetBSD: Makefile,v 1.89 2024/07/22 20:22:31 adam Exp $
 
-DISTNAME=	totem-pl-parser-3.26.5
-PKGREVISION=	9
+DISTNAME=	totem-pl-parser-3.26.6
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem-pl-parser/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,8 +11,6 @@ COMMENT=	Totem playlist parser
 LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	pkg-config xgettext
-
-MESON_ARGS+=	-Denable-quvi=no
 
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35
@@ -33,10 +30,11 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/plparse/plparser.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,${WRKSRC}/plparse/plparser-mini.map
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/uchardet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
