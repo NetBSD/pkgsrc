@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2024/03/23 07:15:01 adam Exp $
+$NetBSD: distinfo,v 1.30 2024/07/22 05:28:31 adam Exp $
 
-BLAKE2s (uncompyle6-3.9.1.tar.gz) = 36f0e174b2d6d27b599103e2bc802d6140696095a11c4727fa958c3f1dadb380
-SHA512 (uncompyle6-3.9.1.tar.gz) = 13528c12e65c2daa584d727ed966993c5cb11d2aeff29e5d497195111b40ab2f1cccb0ff3ad28116b57e1b01bdaa36147de5afb7a484c717a1f5189cabf9e3e8
-Size (uncompyle6-3.9.1.tar.gz) = 2495775 bytes
+BLAKE2s (uncompyle6-3.9.2.tar.gz) = a1f8ebd03e8facf2efba82672ec10a831d9a954301ca301d366b6cc35adf2cf4
+SHA512 (uncompyle6-3.9.2.tar.gz) = e68c23fb68eff33c6a5bbeaa19576aaf3a43703bdb57644088b8d9da680a44fb7ba3ba38cb9ee832e108e194f914f808332151c701448c9c6dc203feffcd4fd2
+Size (uncompyle6-3.9.2.tar.gz) = 2500020 bytes
