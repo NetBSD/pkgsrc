@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/07/16 10:02:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.11 2024/07/22 19:27:34 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	4
@@ -50,8 +50,6 @@ REPLACE_BASH+=		scripts/wsrep_sst_*.sh
 REPLACE_BASH+=		scripts/mariadb-service-convert
 
 .include "options.mk"
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/mariadb1011-client/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
