@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/07/22 18:18:01 adam Exp $
+# $NetBSD: options.mk,v 1.7 2024/07/22 19:08:18 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind916
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
@@ -88,8 +88,8 @@ LDFLAGS+=		-lGeoIP
 .endif
 
 .if !empty(PKG_OPTIONS:Mgssapi)
-CONFIGURE_ARGS+=	--with-gssapi=${KRB5BASE}/bin/krb5-config
 .include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-gssapi=${KRB5_CONFIG}
 .else
 CONFIGURE_ARGS+=	--without-gssapi
 .endif
