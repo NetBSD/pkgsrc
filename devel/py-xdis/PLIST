@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/03/23 06:49:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/07/22 05:19:21 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -41,6 +41,12 @@ ${PYSITELIB}/xdis/codetype/code20.pyo
 ${PYSITELIB}/xdis/codetype/code30.py
 ${PYSITELIB}/xdis/codetype/code30.pyc
 ${PYSITELIB}/xdis/codetype/code30.pyo
+${PYSITELIB}/xdis/codetype/code310-try.py
+${PYSITELIB}/xdis/codetype/code310-try.pyc
+${PYSITELIB}/xdis/codetype/code310-try.pyo
+${PYSITELIB}/xdis/codetype/code310.py
+${PYSITELIB}/xdis/codetype/code310.pyc
+${PYSITELIB}/xdis/codetype/code310.pyo
 ${PYSITELIB}/xdis/codetype/code311.py
 ${PYSITELIB}/xdis/codetype/code311.pyc
 ${PYSITELIB}/xdis/codetype/code311.pyo
@@ -62,12 +68,12 @@ ${PYSITELIB}/xdis/dropbox/__init__.pyo
 ${PYSITELIB}/xdis/dropbox/decrypt25.py
 ${PYSITELIB}/xdis/dropbox/decrypt25.pyc
 ${PYSITELIB}/xdis/dropbox/decrypt25.pyo
-${PYSITELIB}/xdis/graal/__init__.py
-${PYSITELIB}/xdis/graal/__init__.pyc
-${PYSITELIB}/xdis/graal/__init__.pyo
 ${PYSITELIB}/xdis/instruction.py
 ${PYSITELIB}/xdis/instruction.pyc
 ${PYSITELIB}/xdis/instruction.pyo
+${PYSITELIB}/xdis/jvm.py
+${PYSITELIB}/xdis/jvm.pyc
+${PYSITELIB}/xdis/jvm.pyo
 ${PYSITELIB}/xdis/lineoffsets.py
 ${PYSITELIB}/xdis/lineoffsets.pyc
 ${PYSITELIB}/xdis/lineoffsets.pyo
