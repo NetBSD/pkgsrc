@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/06/07 18:09:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/07/22 20:43:00 adam Exp $
 bin/json-glib-format
 bin/json-glib-validate
 include/json-glib-1.0/json-glib/json-builder.h
@@ -17,7 +17,7 @@ include/json-glib-1.0/json-glib/json-version.h
 lib/girepository-1.0/Json-1.0.typelib
 lib/libjson-glib-1.0.so
 lib/libjson-glib-1.0.so.0
-lib/libjson-glib-1.0.so.0.600.2
+lib/libjson-glib-1.0.so.0.800.0
 lib/pkgconfig/json-glib-1.0.pc
 libexec/installed-tests/json-glib-1.0/array
 libexec/installed-tests/json-glib-1.0/boxed
@@ -53,6 +53,7 @@ share/installed-tests/json-glib-1.0/reader.test
 share/installed-tests/json-glib-1.0/serialize-complex.test
 share/installed-tests/json-glib-1.0/serialize-full.test
 share/installed-tests/json-glib-1.0/serialize-simple.test
+share/locale/ab/LC_MESSAGES/json-glib-1.0.mo
 share/locale/as/LC_MESSAGES/json-glib-1.0.mo
 share/locale/be/LC_MESSAGES/json-glib-1.0.mo
 share/locale/bg/LC_MESSAGES/json-glib-1.0.mo
@@ -69,6 +70,7 @@ share/locale/eo/LC_MESSAGES/json-glib-1.0.mo
 share/locale/es/LC_MESSAGES/json-glib-1.0.mo
 share/locale/et/LC_MESSAGES/json-glib-1.0.mo
 share/locale/eu/LC_MESSAGES/json-glib-1.0.mo
+share/locale/fa/LC_MESSAGES/json-glib-1.0.mo
 share/locale/fr/LC_MESSAGES/json-glib-1.0.mo
 share/locale/fur/LC_MESSAGES/json-glib-1.0.mo
 share/locale/gl/LC_MESSAGES/json-glib-1.0.mo
@@ -79,6 +81,7 @@ share/locale/hu/LC_MESSAGES/json-glib-1.0.mo
 share/locale/id/LC_MESSAGES/json-glib-1.0.mo
 share/locale/it/LC_MESSAGES/json-glib-1.0.mo
 share/locale/ja/LC_MESSAGES/json-glib-1.0.mo
+share/locale/ka/LC_MESSAGES/json-glib-1.0.mo
 share/locale/ko/LC_MESSAGES/json-glib-1.0.mo
 share/locale/ky/LC_MESSAGES/json-glib-1.0.mo
 share/locale/lt/LC_MESSAGES/json-glib-1.0.mo

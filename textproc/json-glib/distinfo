@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:22:13 nia Exp $
+$NetBSD: distinfo,v 1.22 2024/07/22 20:43:00 adam Exp $
 
-BLAKE2s (json-glib-1.6.2.tar.xz) = 3d8ac531a9c1549e21d2f4ceb883c7041e348e18e694fc5db838c9eaaa27c095
-SHA512 (json-glib-1.6.2.tar.xz) = 8412390a639d368ed11181621739f43bc4900143ac062c3824c7140abec58ca2b09773a415034f03896a4ff63aa3414b492997da532848709238a83c3a068b11
-Size (json-glib-1.6.2.tar.xz) = 170260 bytes
+BLAKE2s (json-glib-1.8.0.tar.xz) = 01bbe7f56b493c5323174bbc6169c1341386744c48b19e0ed330ef50cbcd2ec0
+SHA512 (json-glib-1.8.0.tar.xz) = e4fe16bb7c5b72fcf9c0966ac1903ff0cd74ec8eab891db4b94e92353bdcb57b24613b6c2cce7bfa1996603c367d1b4939c12209369dfb915aac0f3804a3a900
+Size (json-glib-1.8.0.tar.xz) = 157300 bytes
