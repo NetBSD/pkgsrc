@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/05 11:14:02 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/22 15:01:59 adam Exp $
 include/avif/avif.h
+include/avif/avif_cxx.h
 lib/cmake/libavif/libavif-config-noconfig.cmake
 lib/cmake/libavif/libavif-config-version.cmake
 lib/cmake/libavif/libavif-config.cmake
 lib/libavif.so
 lib/libavif.so.16
-lib/libavif.so.16.0.3
+lib/libavif.so.16.1.0
 lib/pkgconfig/libavif.pc
