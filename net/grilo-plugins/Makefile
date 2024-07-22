@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2024/05/29 16:33:52 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/07/22 20:51:42 adam Exp $
 
-DISTNAME=	grilo-plugins-0.3.10
-PKGREVISION=	21
+DISTNAME=	grilo-plugins-0.3.16
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/grilo-plugins/0.3/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,8 +10,7 @@ HOMEPAGE=	https://wiki.gnome.org/Projects/Grilo
 COMMENT=	Plugins for grilo media browser
 LICENSE=	gnu-lgpl-v2
 
-USE_TOOLS+=	pkg-config xgettext itstool
-USE_TOOLS+=	gdbus-codegen
+USE_TOOLS+=	gdbus-codegen pkg-config xgettext itstool
 
 LDFLAGS.SunOS+=	-lsocket
 

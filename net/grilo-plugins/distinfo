@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:05:41 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/07/22 20:51:42 adam Exp $
 
-BLAKE2s (grilo-plugins-0.3.10.tar.xz) = e2ab09edc17ce2a4887d711e53862ad778f85da4c823f4fb1da4c2fb110bcc5f
-SHA512 (grilo-plugins-0.3.10.tar.xz) = 93d4fcc7d6fd1b43925e286c8856c90d240cf9244d04a8b034df85781b1a6bffcb5c635576e37717325f82a0be567a7087715ff6d680b3c5aca133c6deb43ed2
-Size (grilo-plugins-0.3.10.tar.xz) = 1447368 bytes
+BLAKE2s (grilo-plugins-0.3.16.tar.xz) = 55f92a1503a7c854203bf789cc4f94fc505d8116271b3e7551c1880e38d22288
+SHA512 (grilo-plugins-0.3.16.tar.xz) = ce1f2786af24ebac98a1dac455f91fa7f63eefcf9029872a8ca1d631bf4fcf76f0578e68e00da20fbfe4c0aeac285ccf9a3e1a8301ffa623a45dbb0b75cb2a32
+Size (grilo-plugins-0.3.16.tar.xz) = 1843572 bytes
