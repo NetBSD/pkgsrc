@@ -1,0 +1,15 @@
+$NetBSD: patch-meson.build,v 1.1 2024/07/22 20:46:14 adam Exp $
+
+Allow newer uhttpmock.
+
+--- meson.build.orig	2024-07-22 10:06:11.097500961 +0000
++++ meson.build
+@@ -138,7 +138,7 @@ always_build_tests = get_option('always_
+ install_tests = get_option('installed_tests')
+ 
+ if always_build_tests
+-  libuhttpmock_dep = dependency('libuhttpmock-0.0', version: '>= 0.5.0')
++  libuhttpmock_dep = dependency('libuhttpmock-1.0', version: '>= 0.5.0')
+ 
+   gdk_pixbuf_dep = dependency('gdk-pixbuf-2.0', version: '>= 2.14')
+   config_h.set('HAVE_GDK_PIXBUF', gdk_pixbuf_dep.found())
