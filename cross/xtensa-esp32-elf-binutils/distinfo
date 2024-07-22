@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2022/04/13 21:02:33 tnn Exp $
-
-BLAKE2s (binutils-2.35.2.tar.xz) = 233b46e45700eab0874a417f8585e404cc72543af8425c6fd4de06e97eb3435c
-SHA512 (binutils-2.35.2.tar.xz) = 9974ede5978d32e0d68fef23da48fa00bd06b0bff7ec45b00ca075c126d6bbe0cf2defc03ecc3f17bc6cc85b64271a13009c4049d7ba17de26e84e3a6e2c0348
-Size (binutils-2.35.2.tar.xz) = 22056908 bytes
-BLAKE2s (crosstool-NG-esp-2021r2-patch3.tar.gz) = 2013c2818fd818473d5a6d923108f6c80bd6b62345a1e2a835bb4ba9a5f104b7
-SHA512 (crosstool-NG-esp-2021r2-patch3.tar.gz) = 65a4c60151fb13311c21092c9b575fa29cac1beb9642ed73940c2d5fb5b11b8129b73ccfab847a02fb99d0a6b596b98d7f54c40fdcf304a2b667ca78746ed2cb
-Size (crosstool-NG-esp-2021r2-patch3.tar.gz) = 3145346 bytes
