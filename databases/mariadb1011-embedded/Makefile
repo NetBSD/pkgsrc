@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/07/16 10:02:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/22 19:28:04 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
 PKGREVISION=	4
@@ -375,8 +375,6 @@ post-install:
 			rm -rf ${DESTDIR}${PREFIX}/$$file; \
 		done
 
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../archivers/xz/buildlink3.mk"
 .include "../../databases/mariadb1011-client/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
