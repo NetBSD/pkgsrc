@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.39 2022/11/04 00:40:58 taca Exp $
+$NetBSD: distinfo,v 1.40 2024/07/23 09:18:17 jperkin Exp $
 
 BLAKE2s (php-7.4.33.tar.xz) = 11ec78e0a566d33168e9867e60796f25b8edc4efa03868929251a6297021e79d
 SHA512 (php-7.4.33.tar.xz) = 499b63b99e5d8e8082ff89d3a91b4cb9a593ea7553b96e48863414c13d2e50275904ed29070e2232e529ee91160f505e6060a4d129cb5bf098aa5b6ea0928d3d
 Size (php-7.4.33.tar.xz) = 10420144 bytes
 SHA1 (patch-build_libtool.m4) = 3656eb516fb14defd4b0964fe21e117c630be856
 SHA1 (patch-configure) = 5e9c9c06f6d819d5ba2832d648f41363f40f3108
+SHA1 (patch-configure.ac) = 13a720fc341d5b1975e8a91e98f761333319af7d
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
 SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = b0ded220ffa42b77228d66696f00212caf37b4aa
 SHA1 (patch-ext_intl_collator_collator__sort.c) = 7fdb751cabb24eb4097cfb5cf23ba217a9893530
@@ -18,6 +19,7 @@ SHA1 (patch-ext_tidy_config.m4) = 380f4e8927582b2781faf58b17ad81b6dc967ba7
 SHA1 (patch-ext_xsl_php__xsl.h) = a9877bff7bacc77926a4541a0ac171c00ad1a627
 SHA1 (patch-php.ini-development) = e6815f2774ba071baa510fd5490fb5fa377d2462
 SHA1 (patch-php.ini-production) = 3ee4d2e2e4fb4dbcb5b64df86751f7feeef0e20d
+SHA1 (patch-sapi_apache2handler_config.m4) = fe5699f21f10459200b75f5150b095bae693945d
 SHA1 (patch-sapi_cgi_Makefile.frag) = f4cd64d334884c49787d8854115c8cd69cc79bb8
 SHA1 (patch-sapi_cli_Makefile.frag) = 1cd29d09042863acbf5330e406410fdcf75d06b3
 SHA1 (patch-sapi_fpm_fpm_events_port.c) = 9acd2a5eedb19d0d002e7dcbd705c84be91695fa
