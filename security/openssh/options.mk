@@ -1,8 +1,11 @@
-# $NetBSD: options.mk,v 1.49 2024/04/11 05:29:57 schmonz Exp $
+# $NetBSD: options.mk,v 1.50 2024/07/23 06:38:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
-PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam legacymodsz
+PKG_SUPPORTED_OPTIONS=	editline fido kerberos openssl pam openssh-legacymodsz
 PKG_SUGGESTED_OPTIONS=	editline openssl
+
+# remove after pkgsrc-2024Q3
+PKG_OPTIONS_LEGACY_OPTS+=	legacymodsz:openssh-legacymodsz
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +36,7 @@ CONFIGURE_ENV+=		ac_cv_search_k_hasafs=no
 .  endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mlegacymodsz)
+.if !empty(PKG_OPTIONS:Mopenssh-legacymodsz)
 CONFIGURE_ARGS+=	CPPFLAGS="${CPPFLAGS} -DSSH_RSA_INSECURE_LEGACY_MIN_MOD_SZ=768"
 .endif
 
