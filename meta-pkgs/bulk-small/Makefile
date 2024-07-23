@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/04/10 10:37:13 adam Exp $
+# $NetBSD: Makefile,v 1.59 2024/07/23 15:07:18 jperkin Exp $
 
 DISTNAME=	bulk-small-20231107
 CATEGORIES=	meta-pkgs
@@ -78,7 +78,7 @@ DEPENDS+=	bozohttpd-[0-9]*:../../www/bozohttpd
 .endif
 
 .if ${OPSYS} != "NetBSD" && ${OPSYS} != "OpenBSD"
-DEPENDS+=	tmux-[0-9]*:../../sysutils/tmux
+DEPENDS+=	tmux-[0-9]*:../../misc/tmux
 .endif
 
 .if ${X11_TYPE} == "native"
