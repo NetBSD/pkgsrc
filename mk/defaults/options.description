@@ -693,6 +693,7 @@ openipmi		Enable OpenIPMI support.
 openldap		Enable OpenLDAP support.
 openmp	Enable OpenMP multithreading.
 openmpi-vampirtrace	Build VampirTrace as part of OpenMPI.
+openssh-legacymodsz	Support keys with sizes < 1024 bits. (insecure! for compatibility with very old devices)
 openssl			Enable OpenSSL support.
 opentracker-ipv6-only	Enable IPv6 mode for opentracker (disables IPv4).
 opentracker-restrictions	Enable support for whitelisting and restrict statistics in opentracker.
