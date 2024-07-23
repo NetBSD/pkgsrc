@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4584 2024/07/23 08:06:50 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4585 2024/07/23 08:07:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7258,3 +7258,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/desktop-file-utils to 0.27 [adam 2024-07-23]
 	Updated shells/oh-my-posh to 22.0.1 [pin 2024-07-23]
 	Updated net/slumber to 1.7.0 [pin 2024-07-23]
+	Updated net/sniffnet to 1.3.1 [pin 2024-07-23]
