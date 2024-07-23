@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.10 2024/07/15 03:32:23 wiz Exp $
+# $NetBSD: do-cross.mk,v 1.11 2024/07/23 05:15:37 wiz Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 
@@ -77,7 +77,7 @@ CA.${st}+=--set=target.${TGT.${st}}.linker=${SCRIPTS}/gcc-wrap
 CA.${st}+=--set=target.${TGT.${st}}.ar=${ROOT.${st}}/tools/bin/${G_TGT.${st}}-ar
 do-${st}:
 	mkdir -p dist
-	@${ECHO} "=======> Cross-building rust for ${st}"
+	@echo "=======> Cross-building rust for ${st}"
 	${DEBUG} make -f Makefile clean
 	${DEBUG} env \
 		CROSS_ROOT=${ROOT.${st}} \
@@ -95,13 +95,13 @@ do-${st}:
 		src=$${distdir}/$${comp}-${V_NOREV}-${TGT.${st}}.tar.xz; \
 		tgt=dist/$${comp}-${VERSION}-$${TT}.tar.xz; \
 		if [ ! -f "$${tgt}" ]; then \
-			${ECHO} ln $${src} $${tgt}; \
+			echo ln $${src} $${tgt}; \
 			${DEBUG} ln $${src} $${tgt}; \
 		fi; \
 	done; \
 	src_comp=rust-src-${V_NOREV}.tar.xz; \
 	if [ ! -f dist/$${src_comp} ]; then \
-		${ECHO} ln $${distdir}/$${src_comp} dist; \
+		echo ln $${distdir}/$${src_comp} dist; \
 		${DEBUG} ln $${distdir}/$${src_comp} dist; \
 	fi
 .endfor
