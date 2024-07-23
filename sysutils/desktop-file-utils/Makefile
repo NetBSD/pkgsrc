@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2023/12/07 22:28:43 abs Exp $
+# $NetBSD: Makefile,v 1.52 2024/07/23 06:23:42 adam Exp $
 
-DISTNAME=	desktop-file-utils-0.26
-PKGREVISION=	4
+DISTNAME=	desktop-file-utils-0.27
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://freedesktop.org/software/desktop-file-utils/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -11,12 +10,12 @@ HOMEPAGE=	https://www.freedesktop.org/wiki/Software/desktop-file-utils
 COMMENT=	Utilities to manage desktop entries
 LICENSE=	gnu-gpl-v2
 
-USE_CC_FEATURES+=	c11
+USE_CC_FEATURES=	c11
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=	pkg-config
 
-FILES_SUBST+=		APPLICATIONS_PATH="${PREFIX}/share/applications"
-FILES_SUBST+=		UPDATE_DESKTOPDB="${PREFIX}/bin/update-desktop-database"
+FILES_SUBST+=	APPLICATIONS_PATH="${PREFIX}/share/applications"
+FILES_SUBST+=	UPDATE_DESKTOPDB="${PREFIX}/bin/update-desktop-database"
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -24,8 +23,8 @@ SUBST_FILES.paths=	src/update-desktop-database.c
 SUBST_VARS.paths=	LOCALBASE
 
 PRINT_PLIST_AWK+=	/^share\/applications\/mimeinfo.cache$$/ \
-				{ print "@comment in INSTALL script: " $$0; \
-				  next; }
+			{ print "@comment in INSTALL script: " $$0; \
+			  next; }
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
