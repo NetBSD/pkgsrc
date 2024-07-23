@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.226 2024/07/22 06:24:18 adam Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.227 2024/07/23 06:04:37 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -12004,7 +12004,7 @@ libarchive<3.3.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2016-10
 libarchive<3.3.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2016-10350
 Radicale<1.1.2		brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2017-8342
 php{56,70,71}-roundcube<1.2.5	weak-authentication		https://nvd.nist.gov/vuln/detail/CVE-2017-8114
-dpkg-[0-9]*		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2017-8283
+dpkg<1.18.24		directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2017-8283
 udfclient<0.8.8		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-8305
 libressl>=2.5.1<2.5.4	incorrect-signature-verification	https://nvd.nist.gov/vuln/detail/CVE-2017-8301
 freetype2<2.8	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2017-8105
@@ -21803,7 +21803,7 @@ exiv2<0.27.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18899
 exiv2<0.27.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-18898
 libgda-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-39359
 libgfbgraph-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-39358
-grilo-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-39365
+grilo<0.3.14	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-39365
 mbedtls<2.25.0	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2020-36478
 mbedtls<2.24.0	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2020-36477
 mbedtls<2.24.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-36476
