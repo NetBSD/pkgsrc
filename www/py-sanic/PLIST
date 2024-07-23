@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/01/05 18:23:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/07/23 05:33:50 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -147,6 +147,30 @@ ${PYSITELIB}/sanic/http/tls/creators.pyo
 ${PYSITELIB}/sanic/log.py
 ${PYSITELIB}/sanic/log.pyc
 ${PYSITELIB}/sanic/log.pyo
+${PYSITELIB}/sanic/logging/__init__.py
+${PYSITELIB}/sanic/logging/__init__.pyc
+${PYSITELIB}/sanic/logging/__init__.pyo
+${PYSITELIB}/sanic/logging/color.py
+${PYSITELIB}/sanic/logging/color.pyc
+${PYSITELIB}/sanic/logging/color.pyo
+${PYSITELIB}/sanic/logging/default.py
+${PYSITELIB}/sanic/logging/default.pyc
+${PYSITELIB}/sanic/logging/default.pyo
+${PYSITELIB}/sanic/logging/deprecation.py
+${PYSITELIB}/sanic/logging/deprecation.pyc
+${PYSITELIB}/sanic/logging/deprecation.pyo
+${PYSITELIB}/sanic/logging/filter.py
+${PYSITELIB}/sanic/logging/filter.pyc
+${PYSITELIB}/sanic/logging/filter.pyo
+${PYSITELIB}/sanic/logging/formatter.py
+${PYSITELIB}/sanic/logging/formatter.pyc
+${PYSITELIB}/sanic/logging/formatter.pyo
+${PYSITELIB}/sanic/logging/loggers.py
+${PYSITELIB}/sanic/logging/loggers.pyc
+${PYSITELIB}/sanic/logging/loggers.pyo
+${PYSITELIB}/sanic/logging/setup.py
+${PYSITELIB}/sanic/logging/setup.pyc
+${PYSITELIB}/sanic/logging/setup.pyo
 ${PYSITELIB}/sanic/middleware.py
 ${PYSITELIB}/sanic/middleware.pyc
 ${PYSITELIB}/sanic/middleware.pyo
