@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/07/01 09:19:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/07/23 06:37:00 wiz Exp $
 bin/scp
 bin/sftp
 bin/ssh
@@ -28,7 +28,6 @@ man/man8/ssh-sk-helper.8
 man/man8/sshd.8
 sbin/sshd
 share/examples/openssh/moduli
-${PLIST.darwin}share/examples/openssh/org.openssh.sshd.sb
 share/examples/openssh/ssh_config
 ${PLIST.pam}share/examples/openssh/sshd.pam
 share/examples/openssh/sshd_config
