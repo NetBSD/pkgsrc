@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.28 2024/03/17 12:39:50 nia Exp $
+# $NetBSD: Makefile,v 1.29 2024/07/23 06:22:37 adam Exp $
 
-DISTNAME=	lz4-1.9.4
+DISTNAME=	lz4-1.10.0
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lz4/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://lz4.github.io/lz4/
 COMMENT=	Extremely Fast Compression algorithm
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=		c99 c++
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
