@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/27 05:07:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/07/23 05:29:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -180,9 +180,9 @@ ${PYSITELIB}/pyfakefs/tests/patched_packages_test.pyo
 ${PYSITELIB}/pyfakefs/tests/performance_test.py
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyc
 ${PYSITELIB}/pyfakefs/tests/performance_test.pyo
-${PYSITELIB}/pyfakefs/tests/skip_open.py
-${PYSITELIB}/pyfakefs/tests/skip_open.pyc
-${PYSITELIB}/pyfakefs/tests/skip_open.pyo
+${PYSITELIB}/pyfakefs/tests/skipped_pathlib.py
+${PYSITELIB}/pyfakefs/tests/skipped_pathlib.pyc
+${PYSITELIB}/pyfakefs/tests/skipped_pathlib.pyo
 ${PYSITELIB}/pyfakefs/tests/test_utils.py
 ${PYSITELIB}/pyfakefs/tests/test_utils.pyc
 ${PYSITELIB}/pyfakefs/tests/test_utils.pyo
