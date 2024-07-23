@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2019/11/04 21:13:02 rillig Exp $
+# $NetBSD: builtin.mk,v 1.7 2024/07/23 05:54:47 wiz Exp $
 
 BUILTIN_PKG:=	skey
 
@@ -24,7 +24,7 @@ MAKEVARS+=		IS_BUILTIN.skey
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.skey) && \
-    !empty(IS_BUILTIN.skey:M[yY][eE][sS) && \
+    !empty(IS_BUILTIN.skey:M[yY][eE][sS]) && \
     empty(H_SKEY:M__nonexistent__)
 # XXX
 # XXX Consider the native skey to be skey-1.1.5.
