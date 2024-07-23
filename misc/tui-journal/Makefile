@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/06/01 14:14:57 pin Exp $
+# $NetBSD: Makefile,v 1.23 2024/07/23 08:08:41 pin Exp $
 
-DISTNAME=	tui-journal-0.9.0
+DISTNAME=	tui-journal-0.9.1
 CATEGORIES=	misc
 MASTER_SITES=	https://static.crates.io/crates/tui-journal/
 EXTRACT_SUFX=	.crate
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.75.0
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
