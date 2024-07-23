@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.123 2024/07/01 09:19:40 wiz Exp $
+$NetBSD: distinfo,v 1.124 2024/07/23 05:56:16 wiz Exp $
 
 BLAKE2s (openssh-9.8p1.tar.gz) = 813dc945583cd4a126388d2b70f8e0aec259c72c5545108bfe7fe9f2d29c17b8
 SHA512 (openssh-9.8p1.tar.gz) = 95dec2f18e58eb47994f3de4430253e0665e185564b65088ca5f4108870e05feddef8cda8d3c0a4b75f18b98cc2c024df0e27de53b48c1a16da8da483cb8292a
 Size (openssh-9.8p1.tar.gz) = 1910393 bytes
 SHA1 (patch-Makefile.in) = 38df2aa7aaeeaac660763724188852bdb8bdcd24
-SHA1 (patch-clientloop.c) = 6211c64f77e1f5cf687d38e201b97f7a415d3598
 SHA1 (patch-configure.ac) = eb759d065e296a5fdf1e8925308e6e77ea2c60a8
 SHA1 (patch-defines.h) = 5424b1b24f1d4bbd47efa614ee180a45e7b9a54e
-SHA1 (patch-sandbox-darwin.c) = 5ae84525b5bf8232afc2d201868e19ac7e5b2bc8
-SHA1 (patch-sshd-session.c) = 1269a177432e92c8937ee43c0093882207c203c5
 SHA1 (patch-sshkey.h) = aaaf622f377e455c49683fcc2ca42576ccd097bb
