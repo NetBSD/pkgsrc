@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/07/23 09:18:17 jperkin Exp $
+
+Don't automatically add libgcc on SunOS. Reported upstream as #75941.
+
+--- configure.ac.orig	2024-07-23 08:44:26.300593600 +0000
++++ configure.ac
+@@ -264,9 +264,6 @@ AX_CHECK_COMPILE_FLAG([-fvisibility=hidd
+ case $host_alias in
+   *solaris*)
+     CPPFLAGS="$CPPFLAGS -D_POSIX_PTHREAD_SEMANTICS"
+-    if test "${enable_libgcc+set}" != "set" && test "$GCC" = "yes"; then
+-      enable_libgcc=yes
+-    fi
+     ;;
+   *dgux*)
+     CPPFLAGS="$CPPFLAGS -D_BSD_TIMEOFDAY_FLAVOR"
