@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2024/06/12 10:15:59 adam Exp $
+# $NetBSD: Makefile,v 1.306 2024/07/23 05:25:16 wiz Exp $
 
 .include "Makefile.common"
 
@@ -86,6 +86,14 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 # to run gdbus-codegen to generate gdbus-daemon-generated.{h,c}
 PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../mk/compiler.mk"
+
+# Work around GCC 4.x bug https://gcc.gnu.org/bugzilla/show_bug.cgi?id=54113
+# preventing a successful CentOS 7 build
+.if !empty(CC_VERSION:Mgcc-4.*)
+BUILDLINK_TRANSFORM+=   rm:-Werror=missing-prototypes
+.endif
 
 post-extract:
 	${CHMOD} +x ${WRKSRC}/gio/tests/gengiotypefuncs.py
