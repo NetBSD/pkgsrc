@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2024/07/23 05:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.285 2024/07/23 06:37:00 wiz Exp $
 
 DISTNAME=		openssh-9.8p1
 PKGREVISION=		1
@@ -109,16 +109,7 @@ CONFIGURE_ARGS+=	--with-xauth=${PREFIX}/bin/xauth
 
 CONFS=			ssh_config sshd_config moduli
 
-PLIST_VARS+=		darwin
-
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-
-# enable privsep patches
-.if ${OPSYS} == "Darwin"
-CONF_FILES+=		${EGDIR}/org.openssh.sshd.sb ${PKG_SYSCONFDIR}/org.openssh.sshd.sb
-CPPFLAGS+=		-D__APPLE_SANDBOX_NAMED_EXTERNAL__
-PLIST.darwin=		yes
-.endif
 
 .for f in ${CONFS}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -130,12 +121,6 @@ RCD_SCRIPT_SRC.sshd=	${WRKDIR}/sshd.sh
 SMF_METHODS=		sshd
 
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
-
-SUBST_CLASSES+=		patch
-SUBST_STAGE.patch=	pre-configure
-SUBST_FILES.patch=	sandbox-darwin.c
-SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
-SUBST_VARS.patch=	PKG_SYSCONFDIR
 
 .include "../../devel/zlib/buildlink3.mk"
 
@@ -154,9 +139,6 @@ post-configure:
 		${SED} -e '/HAVE_ECDSA_START/,/HAVE_ECDSA_STOP/d' \
 			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
 	fi
-	${SED} -e 's,@VARBASE@,${VARBASE},g' \
-		< ${FILESDIR}/org.openssh.sshd.sb.in \
-		> ${WRKDIR}/org.openssh.sshd.sb
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
@@ -166,10 +148,6 @@ post-install:
 .if !empty(PKG_OPTIONS:Mpam) && ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic \
 	  ${DESTDIR}${EGDIR}/sshd.pam
-.endif
-.if ${OPSYS} == "Darwin"
-	${INSTALL_DATA} ${WRKDIR}/org.openssh.sshd.sb \
-		${DESTDIR}${EGDIR}/org.openssh.sshd.sb
 .endif
 
 .include "../../mk/bsd.pkg.mk"
