@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/07/22 20:05:38 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/23 13:03:41 tnn Exp $
 
 DISTNAME=		espressif-gcc-13.2.0-${GITHUB_TAG}
 PKGNAME=		xtensa-esp-elf-gcc-13.2.0
@@ -28,7 +28,7 @@ DEPENDS+=	xtensa-esp-elf-binutils>=2.41.0:../../cross/xtensa-esp-elf-binutils
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		bash gmake makeinfo perl
+USE_TOOLS+=		bash gmake gsed makeinfo perl
 
 TOOL_DEPENDS+=		gtexinfo>=5.1:../../devel/gtexinfo
 _TOOLS_USE_PKGSRC.makeinfo=	yes
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--with-sysroot=${GNU_CONFIGURE_PREFIX}/xtensa-esp-elf
 CONFIGURE_ARGS+=	--with-native-system-header-dir=/nonexistent/include
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--enable-threads=no
+CONFIGURE_ARGS+=	--enable-static
 CONFIGURE_ARGS+=	--disable-shared
 CONFIGURE_ARGS+=	--with-pkgversion="${PKGNAME} (pkgsrc)"
 CONFIGURE_ARGS+=	--disable-__cxa_atexit
