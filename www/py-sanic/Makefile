@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/01/11 13:13:27 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/07/23 05:33:50 adam Exp $
 
-DISTNAME=	sanic-23.12.1
+DISTNAME=	sanic-24.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sanic/}
@@ -10,13 +10,13 @@ HOMEPAGE=	https://github.com/sanic-org/sanic
 COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-html5tagger>=1.2.1:../../textproc/py-html5tagger
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools
 DEPENDS+=	${PYPKGPREFIX}-multidict>=5.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-sanic-routing>=23.12.0:../../www/py-sanic-routing
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tracerite>=1.0.0:../../devel/py-tracerite
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-ujson>=1.35:../../textproc/py-ujson
@@ -42,8 +42,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-types-ujson-[0-9]*:../../devel/py-types-ujson
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
