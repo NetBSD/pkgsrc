@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/07/22 20:21:56 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/24 09:35:59 jperkin Exp $
 
 DISTNAME=	uchardet-0.0.8
 CATEGORIES=	textproc
@@ -19,7 +19,7 @@ TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src
 TEST_TARGET=	test
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/version.script
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/${CMAKE_BUILD_DIR}/src/version.script
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
