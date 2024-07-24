@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.47 2024/05/01 19:11:18 adam Exp $
+$NetBSD: distinfo,v 1.48 2024/07/24 06:55:38 adam Exp $
 
-BLAKE2s (django_cms-4.1.1.tar.gz) = 0df8aa474cfc6a5b4e056ccc0cf616cf4ac2f097dd8dde0b5e76cddf78fe7e2b
-SHA512 (django_cms-4.1.1.tar.gz) = b0532c77e9a68ea0b5501db2710acde8b7c8184517c33b9c823f918ee58c33e7415c7285226425d5b0fb311ed17d1146f5110cf2b19ef07cd28f8054655f0dd7
-Size (django_cms-4.1.1.tar.gz) = 5083564 bytes
+BLAKE2s (django_cms-4.1.2.tar.gz) = 7fa041bef25d02716b75ba135cee122c95e41a66bf083e61cff781c37f703417
+SHA512 (django_cms-4.1.2.tar.gz) = 3679c01d6f843f23de5f68e644d1ddfb04a8a8b4463040347376d9125cc871f2b4969d3f936249bed6a268546d17a7e19662e427c0e95bd33440d94b2454e016
+Size (django_cms-4.1.2.tar.gz) = 5088670 bytes
