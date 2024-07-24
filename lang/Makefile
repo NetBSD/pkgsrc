@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.729 2024/07/07 10:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.730 2024/07/24 11:49:03 schmonz Exp $
 #
 
 COMMENT=	Programming languages
@@ -239,6 +239,7 @@ SUBDIR+=	php82
 SUBDIR+=	php83
 SUBDIR+=	picoc
 SUBDIR+=	pict
+SUBDIR+=	pnut
 SUBDIR+=	polyml
 SUBDIR+=	purescript
 SUBDIR+=	py-annotated-types
