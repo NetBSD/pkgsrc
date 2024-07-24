@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4592 2024/07/24 07:35:21 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4593 2024/07/24 10:54:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7272,3 +7272,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/curl to 8.9.0 [wiz 2024-07-24]
 	Updated www/libcurl-gnutls to 8.9.0 [wiz 2024-07-24]
 	Updated shells/oh-my-posh to 22.0.3 [pin 2024-07-24]
+	Updated textproc/xapian to 1.4.26 [schmonz 2024-07-24]
