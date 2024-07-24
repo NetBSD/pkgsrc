@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2024/05/01 19:11:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2024/07/24 06:55:38 adam Exp $
 bin/djangocms-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -685,6 +685,12 @@ ${PYSITELIB}/cms/migrations/0034_remove_pagecontent_placeholders.pyo
 ${PYSITELIB}/cms/migrations/0035_auto_20230822_2208.py
 ${PYSITELIB}/cms/migrations/0035_auto_20230822_2208.pyc
 ${PYSITELIB}/cms/migrations/0035_auto_20230822_2208.pyo
+${PYSITELIB}/cms/migrations/0035_auto_20230822_2208_squashed_0036_auto_20240311_1028.py
+${PYSITELIB}/cms/migrations/0035_auto_20230822_2208_squashed_0036_auto_20240311_1028.pyc
+${PYSITELIB}/cms/migrations/0035_auto_20230822_2208_squashed_0036_auto_20240311_1028.pyo
+${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.py
+${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.pyc
+${PYSITELIB}/cms/migrations/0036_auto_20240311_1028.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
@@ -769,11 +775,11 @@ ${PYSITELIB}/cms/sitemaps/__init__.pyo
 ${PYSITELIB}/cms/sitemaps/cms_sitemap.py
 ${PYSITELIB}/cms/sitemaps/cms_sitemap.pyc
 ${PYSITELIB}/cms/sitemaps/cms_sitemap.pyo
+${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.admin.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.base.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.pagetree.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.welcome.css
 ${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.wizard.css
-${PYSITELIB}/cms/static/cms/css/${PKGVERSION}/cms.admin.css
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.eot
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.svg
 ${PYSITELIB}/cms/static/cms/fonts/${PKGVERSION}/django-cms-iconfont.ttf
@@ -1027,6 +1033,7 @@ ${PYSITELIB}/cms/static/cms/sass/components/pagetree/_legend.scss
 ${PYSITELIB}/cms/static/cms/sass/components/pagetree/_node-state.scss
 ${PYSITELIB}/cms/static/cms/sass/components/pagetree/_tree.scss
 ${PYSITELIB}/cms/static/cms/sass/libs/_iconfont.scss
+${PYSITELIB}/cms/static/cms/sass/libs/_rtl_patch.scss
 ${PYSITELIB}/cms/static/cms/sass/mixins/_all.scss
 ${PYSITELIB}/cms/static/cms/sass/mixins/_buttons.scss
 ${PYSITELIB}/cms/static/cms/sass/mixins/_custom.scss
