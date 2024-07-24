@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/04/10 20:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/07/24 06:43:27 adam Exp $
 
-DISTNAME=	pspdfutils-3.3.2
+DISTNAME=	pspdfutils-3.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
@@ -15,8 +15,8 @@ CONFLICTS+=	psutils<3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage-[0-9]*:../../devel/py-argparse-manpage
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-puremagic-[0-9]*:../../sysutils/py-puremagic
-DEPENDS+=	${PYPKGPREFIX}-pdf>=3.16.0:../../textproc/py-pdf
+DEPENDS+=	${PYPKGPREFIX}-puremagic>=1.26:../../sysutils/py-puremagic
+DEPENDS+=	${PYPKGPREFIX}-pdf>=4.2.0:../../textproc/py-pdf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-datafiles>=0:../../devel/py-test-datafiles
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath>=0:../../devel/py-testpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-wand>=0:../../graphics/py-wand
