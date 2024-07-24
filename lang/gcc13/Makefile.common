@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2024/06/07 10:28:55 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/07/24 23:01:28 gutteridge Exp $
 # used by lang/gcc13-libjit/Makefile
 
 GCC_PKGNAME=		gcc13
@@ -44,6 +44,8 @@ CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 # error: 'for' loop initial declarations are only allowed in C99 mode
 USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99
+USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=		c++11
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
