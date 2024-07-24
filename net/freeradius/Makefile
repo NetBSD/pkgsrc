@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.124 2024/06/19 08:46:33 adam Exp $
+# $NetBSD: Makefile,v 1.125 2024/07/24 14:28:05 manu Exp $
 
+#PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}
@@ -49,13 +50,18 @@ SUBST_MESSAGE.secconf=	Substituting user and group in radiusd.conf
 SUBST_FILES.secconf=	raddb/radiusd.conf
 SUBST_VARS.secconf=	RADIUS_USER RADIUS_GROUP
 
+SUBST_CLASSES+=         interp
+SUBST_MESSAGE.interp=   Fixing interpreter.
+SUBST_STAGE.interp=     pre-configure
+SUBST_FILES.interp=     src/main/radsecret
+SUBST_SED.interp=       -e 's,/usr/bin/env perl,${PERL5},'
+
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER} RADIUS_GROUP=${RADIUS_GROUP}
 MESSAGE_SUBST+=		BOOTSTRAP=${PKG_SYSCONFDIR}/certs/bootstrap
 
+REPLACE_PERL+=		src/modules/rlm_counter/rad_counter
 REPLACE_PERL+=		scripts/sql/radsqlrelay
 REPLACE_PERL+=		scripts/sql/rlm_sqlippool_tool
-REPLACE_PERL+=		src/main/radsecret
-REPLACE_PERL+=		src/modules/rlm_counter/rad_counter
 
 EGDIR=		${PREFIX}/share/examples/freeradius
 
