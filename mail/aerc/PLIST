@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/03/04 13:05:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/07/24 13:50:55 ktnb Exp $
 bin/aerc
 bin/carddav-query
 libexec/aerc/filters/calendar
@@ -31,6 +31,7 @@ share/aerc/binds.conf
 share/aerc/stylesets/blue
 share/aerc/stylesets/default
 share/aerc/stylesets/dracula
+share/aerc/stylesets/monochrome
 share/aerc/stylesets/nord
 share/aerc/stylesets/pink
 share/aerc/stylesets/solarized
