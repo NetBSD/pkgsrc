@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2024/05/23 04:15:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.100 2024/07/24 07:28:04 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -15,6 +15,7 @@ include/curl/urlapi.h
 include/curl/websockets.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
+man/man1/curl-config.1
 man/man1/curl.1
 man/man3/CURLINFO_ACTIVESOCKET.3
 man/man3/CURLINFO_APPCONNECT_TIME.3
@@ -374,6 +375,7 @@ man/man3/CURLOPT_STREAM_WEIGHT.3
 man/man3/CURLOPT_SUPPRESS_CONNECT_HEADERS.3
 man/man3/CURLOPT_TCP_FASTOPEN.3
 man/man3/CURLOPT_TCP_KEEPALIVE.3
+man/man3/CURLOPT_TCP_KEEPCNT.3
 man/man3/CURLOPT_TCP_KEEPIDLE.3
 man/man3/CURLOPT_TCP_KEEPINTVL.3
 man/man3/CURLOPT_TCP_NODELAY.3
