@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/24 11:48:58 schmonz Exp $
+bin/pnut
+bin/pnut.sh
+share/doc/pnut/README.md
