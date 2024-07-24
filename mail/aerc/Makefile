@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/07/03 06:59:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2024/07/24 13:50:55 ktnb Exp $
 
-DISTNAME=	0.17.0
+DISTNAME=	0.18.1
 PKGNAME=	aerc-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
@@ -44,10 +43,15 @@ GO_LDFLAGS+=	-X git.sr.ht/~rjarry/aerc/config.shareDir=${PREFIX}/share/aerc
 GO_LDFLAGS+=	-X git.sr.ht/~rjarry/aerc/config.libexecDir=${PREFIX}/libexec/aerc
 MAKE_ENV+=	CGO_LDFLAGS=${CGO_LDFLAGS:Q}
 
+# due to a wildcard in GNUmakefile, the .orig from patching gets
+# installed, so we have to remove it for now.
+# https://todo.sr.ht/~rjarry/aerc/269
+do-configure:
+	${RM} ${WRKSRC}/filters/wrap.c.orig
+
 do-build:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV}	\
 	    GOPATH=${WRKDIR}/.gopath ${GO} ${GOFLAGS} build ${GO_BUILD_TAGS} -ldflags=${GO_LDFLAGS:Q} -o aerc
-
 
 do-install:
 	cd ${WRKSRC} && ${GMAKE} ${INSTALL_MAKE_FLAGS} install
