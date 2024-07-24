@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/07/05 19:30:25 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/07/24 09:16:41 jperkin Exp $
 
 DISTNAME=	gi_docgen-2024.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
@@ -39,6 +39,7 @@ SUBST_STAGE.mandir=	pre-configure
 SUBST_MESSAGE.mandir=	Fixing path man pages.
 SUBST_FILES.mandir=	setup.cfg
 SUBST_SED.mandir=	-e 's,^share/man,${PKGMANDIR},'
+SUBST_NOOP_OK.mandir=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
