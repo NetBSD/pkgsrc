@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2024/06/28 09:58:10 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/07/24 06:50:28 adam Exp $
 
-BLAKE2s (django_compressor-4.5.tar.gz) = ca062a70bdacbd1e57a0cf269dfe6dcc73fffa28e0e78183182564f7b84945ad
-SHA512 (django_compressor-4.5.tar.gz) = d41aec352c0b972e356b1d2cf15769ec266919bc94fd2db35947d0b037a3ee3e7d79f7fb342fcb066b2e80e406b6fafb1c67e413d9996ff4799efeb24f0c3685
-Size (django_compressor-4.5.tar.gz) = 422011 bytes
+BLAKE2s (django_compressor-4.5.1.tar.gz) = 1b568412464d7c1fd0115cc2554f922b4a879e9b45d021fd31713f860f0792a7
+SHA512 (django_compressor-4.5.1.tar.gz) = 696e032de9c6cd39a924e28e98a476f49fc25629ec1f1d446d78e6be93695435a9cf1b3222807dd6644efd19955c2252648105bacc207b2ee5c00a6338e7046a
+Size (django_compressor-4.5.1.tar.gz) = 124734 bytes
 SHA1 (patch-setup.py) = fe12fcde239c377912ccfbdbf8f2e0ffeeff7ff6
