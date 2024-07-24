@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2024/05/29 16:34:51 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/24 07:28:25 wiz Exp $
 
-PKGREVISION= 1
 .include "../../www/curl/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/curl/libcurl-gnutls/}
