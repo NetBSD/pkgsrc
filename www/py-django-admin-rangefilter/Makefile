@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/05/22 16:28:53 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/07/24 06:49:12 adam Exp $
 
-DISTNAME=	django_admin_rangefilter-0.13.0
+DISTNAME=	django_admin_rangefilter-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-admin-rangefilter/}
