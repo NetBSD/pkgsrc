@@ -1,0 +1,5 @@
+omm (stands for "on-my-mind") is a keyboard-driven task manager for
+the command line. It is intended for those who need to frequently
+rearrange tasks in their to-do list. It lets you move any item to the
+top of the list, add tasks at specific positions, and adjust task
+priorities up or down, all via one or two keypresses.
