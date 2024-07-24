@@ -1,10 +1,17 @@
-# $NetBSD: options.mk,v 1.4 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: options.mk,v 1.5 2024/07/24 09:33:29 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
 # x11 is not suggested because it's not reasonable to include a GUI in
 # a foundation library.
-PKG_SUGGESTED_OPTIONS=	doc gmp
+PKG_SUGGESTED_OPTIONS=	gmp
+
+.include "../../mk/bsd.prefs.mk"
+
+# pdftex is highly unreliable
+.if ${OPSYS} != "SunOS"
+PKG_SUGGESTED_OPTIONS+=	doc
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,7 +24,7 @@ TOOL_DEPENDS+=		tex-pdftex>=1.40.11:../../print/tex-pdftex
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
 INSTALL_TARGET+=	install-doc
-MAKE_ENV+=		PDFTEX=${LOCALBASE}/bin/pdftex
+MAKE_ENV+=		PDFTEX=${PREFIX}/bin/pdftex
 .endif
 
 PLIST_VARS+=		nogmp gmp
@@ -43,5 +50,5 @@ CONFIGURE_ENV+=		Xincroot=${X11BASE}/include
 .else
 CONFIGURE_ARGS+=	--graphic=none
 # don't let the configure script find an installed fltk
-CONFIGURE_ARGS+=	--with-fltk={BUILDLINK_DIR:Q}/nonexistent
+CONFIGURE_ARGS+=	--with-fltk=${BUILDLINK_DIR:Q}/nonexistent
 .endif
