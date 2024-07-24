@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4591 2024/07/24 07:28:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4592 2024/07/24 07:35:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7271,3 +7271,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-cms to 4.1.2 [adam 2024-07-24]
 	Updated www/curl to 8.9.0 [wiz 2024-07-24]
 	Updated www/libcurl-gnutls to 8.9.0 [wiz 2024-07-24]
+	Updated shells/oh-my-posh to 22.0.3 [pin 2024-07-24]
