@@ -1,10 +1,11 @@
-$NetBSD: patch-src_main_util.c,v 1.1 2021/06/25 11:42:48 adam Exp $
+$NetBSD: patch-src_main_util.c,v 1.2 2024/07/24 14:28:05 manu Exp $
 
 O_DIRECTORY to open(2) is a Linuxism.
 
---- src/main/util.c.orig	2016-09-29 15:19:48.000000000 +0000
-+++ src/main/util.c
-@@ -31,6 +31,14 @@ RCSID("$Id: 22299f8c8d6bc98616fa025ee3da
+--- src/main/util.c.orig	2024-07-08 22:29:24.000000000 +0200
++++ src/main/util.c	2024-07-19 11:18:24.524415048 +0200
+@@ -30,8 +30,16 @@
+ #include <sys/stat.h>
  #include <fcntl.h>
  
  /*
@@ -19,3 +20,4 @@ O_DIRECTORY to open(2) is a Linuxism.
   *	The signal() function in Solaris 2.5.1 sets SA_NODEFER in
   *	sa_flags, which causes grief if signal() is called in the
   *	handler before the cause of the signal has been cleared.
+  *	(Infinite recursion).
