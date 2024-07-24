@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2024/06/19 08:46:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2024/07/24 14:28:05 manu Exp $
 bin/dhcpclient
 bin/map_unit
 bin/rad_counter
