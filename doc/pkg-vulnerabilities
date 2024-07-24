@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.227 2024/07/23 06:04:37 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.228 2024/07/24 07:30:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26047,3 +26047,4 @@ exiv2<0.28.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2024-39695
 apache<2.4.62	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-40725
 mit-krb5<1.21.3	truncated-token	https://nvd.nist.gov/vuln/detail/CVE-2024-37370
 mit-krb5<1.21.3	invalid-memory-reads	https://nvd.nist.gov/vuln/detail/CVE-2024-37371
+libcurl-gnutls>8.6.0<8.9.0	free-of-memory-not-on-heap	https://nvd.nist.gov/vuln/detail/CVE-2024-6197
