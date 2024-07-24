@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/07/22 04:22:07 adam Exp $
+$NetBSD: distinfo,v 1.29 2024/07/24 06:36:36 adam Exp $
 
-BLAKE2s (tifffile-2024.7.21.tar.gz) = 3525d2827a3d6253b24c06aa2ae0c5f032417c6a2da1c66d7729bfdece6e232d
-SHA512 (tifffile-2024.7.21.tar.gz) = a547a1ad588dab2c0a0a86198c16bddc98463fe7c9669ff4ccb1ceda6126f264da322596d2109c06969bae671d726e140a73fd0b796d321a7e3c72a4662cf535
-Size (tifffile-2024.7.21.tar.gz) = 362275 bytes
+BLAKE2s (tifffile-2024.7.24.tar.gz) = 4a05be31aee794b2db0b0f31abbf9f1b0005e68f718d66e13873f8dfdbb3e1f2
+SHA512 (tifffile-2024.7.24.tar.gz) = ea2b5d7155182e487353a525c4379c3e71ff3d8e1e82e238392170d62e66d5ce495a8f4f135d58612672beb314d0032dfbe3563a99a81a1f707659880c416866
+Size (tifffile-2024.7.24.tar.gz) = 362806 bytes
