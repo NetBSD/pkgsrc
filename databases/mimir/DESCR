@@ -1,0 +1,8 @@
+Grafana Mimir provides a scalable long-term storage for Prometheus.
+Some of the core strengths of Grafana Mimir include:
+- Easy to install and maintain
+- Massive scalability
+- Global view of metrics
+- Cheap, durable metric storage
+- High availability
+- Natively multi-tenant
