@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/01/12 14:26:59 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/07/25 12:29:55 wiz Exp $
 
 DISTNAME=	python-daemon-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://pagure.io/python-daemon/
 COMMENT=	Library to implement a well-behaved Unix daemon process
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.10:../../devel/py-lockfile
