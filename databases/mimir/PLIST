@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/25 16:58:13 tnn Exp $
+bin/markblocks
+bin/metaconvert
+bin/mimir
+bin/mimir-continuous-test
+bin/mimirtool
+bin/query-tee
+share/examples/mimir/mimir.yaml
