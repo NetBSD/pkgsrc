@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2020/01/18 23:35:16 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.5 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	etcutils-0.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmmv/etcutils/0.1/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.NetBSD.org/~jmmv/etcutils/
 COMMENT=	Utilities to programmatically edit configuration files
 LICENSE=	2-clause-bsd

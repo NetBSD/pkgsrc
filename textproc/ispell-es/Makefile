@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 11:15:47 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.3 2024/07/25 05:41:53 wiz Exp $
 
 DISTNAME=	espa~nol-1.7
 PKGNAME=	ispell-${DISTNAME:S/pa~nol//1}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.datsi.fi.upm.es/~coes/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://es.tldp.org/htmls/coes.html
 COMMENT=	Spanish dictionary for interactive spelling checker
 

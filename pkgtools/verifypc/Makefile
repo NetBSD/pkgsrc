@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2021/07/10 23:02:09 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.19 2024/07/25 05:41:52 wiz Exp $
 
 PKGNAME=	verifypc-1.8
 CATEGORIES=	pkgtools
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sanity check package dependencies according to pkg-config
 LICENSE=	modified-bsd
 
