@@ -1,0 +1,55 @@
+# $NetBSD: mimir.yaml,v 1.1 2024/07/25 16:58:13 tnn Exp $
+
+# Do not use this configuration in production.
+# It is for demonstration purposes only.
+
+usage_stats:
+  enabled: false
+
+multitenancy_enabled: false
+
+blocks_storage:
+  backend: filesystem
+  bucket_store:
+    sync_dir: ./tsdb-sync
+  filesystem:
+    dir: ./data/tsdb
+  tsdb:
+    dir: ./tsdb
+
+compactor:
+  data_dir: ./compactor
+  sharding_ring:
+    kvstore:
+      store: memberlist
+
+distributor:
+  ring:
+    instance_addr: 127.0.0.1
+    kvstore:
+      store: memberlist
+
+ingester:
+  ring:
+    instance_addr: 127.0.0.1
+    kvstore:
+      store: memberlist
+    replication_factor: 1
+
+ruler_storage:
+  backend: filesystem
+  filesystem:
+    dir: ./rules
+
+server:
+  grpc_listen_address: 127.0.0.1
+  http_listen_address: 127.0.0.1
+  http_listen_port: 9009
+  log_level: error
+
+memberlist:
+  bind_addr: [127.0.0.1]
+
+store_gateway:
+  sharding_ring:
+    replication_factor: 1
