@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:10:05 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/07/25 06:47:24 adam Exp $
 
-BLAKE2s (sqlitebrowser-3.12.2.tar.gz) = 5f6d06306f466691f9fc1e71f7593bf77be517efb20b2c51ae2215885b9d2dfb
-SHA512 (sqlitebrowser-3.12.2.tar.gz) = a6afc0a4286f07adb7038f3a010c93e14204b477bde27b1599c9bfe3390422d3edfaa2a9381b1f13e63a7aaf90e931ee85358eb8b2c15b6ea55818d29c59395f
-Size (sqlitebrowser-3.12.2.tar.gz) = 3990817 bytes
+BLAKE2s (sqlitebrowser-3.13.0.tar.gz) = b6a88926b2e59c1a33721e21206554554aa5921ad76b975f87ed8efb20926e5a
+SHA512 (sqlitebrowser-3.13.0.tar.gz) = 6261043cee7bc5c525b162e0b5d1ac38d380228ffd752e086fecb49c7f50b463a993a6128547d99addb0480ba71e4f6dd3a0c1e412a692ae86b0b183b7379610
+Size (sqlitebrowser-3.13.0.tar.gz) = 4901507 bytes
+SHA1 (patch-CMakeLists.txt) = a656b54c097493929e9dbc74eed57cd6963034d1
