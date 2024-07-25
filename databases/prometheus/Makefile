@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2024/07/16 06:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2024/07/25 14:41:32 tnn Exp $
 
 # Important: UI has to be manually built when updating. See instructions below.
 
@@ -80,7 +80,7 @@ WEBUI_DIR=	${PREFIX}/share/prometheus
 DATADIR=	${VARBASE}/lib/prometheus
 LOGDIR=		${VARBASE}/log/prometheus
 
-BUILD_DEFS+=		PROMETHEUS_USER PROMETHEUS_GROUP VARBASE
+BUILD_DEFS+=		PROMETHEUS_USER PROMETHEUS_GROUP
 FILES_SUBST+=		PROMETHEUS_USER=${PROMETHEUS_USER:Q}
 FILES_SUBST+=		PROMETHEUS_GROUP=${PROMETHEUS_GROUP:Q}
 FILES_SUBST+=		DATADIR=${DATADIR:Q}
