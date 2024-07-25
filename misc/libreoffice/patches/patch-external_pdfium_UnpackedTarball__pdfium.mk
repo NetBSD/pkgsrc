@@ -1,12 +1,12 @@
-$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.7 2023/02/13 14:59:36 ryoon Exp $
+$NetBSD: patch-external_pdfium_UnpackedTarball__pdfium.mk,v 1.8 2024/07/25 06:09:45 ryoon Exp $
 
 * Support pkgsrc and NetBSD
 
---- external/pdfium/UnpackedTarball_pdfium.mk.orig	2023-01-25 14:26:33.000000000 +0000
+--- external/pdfium/UnpackedTarball_pdfium.mk.orig	2024-07-11 15:10:12.112490280 +0000
 +++ external/pdfium/UnpackedTarball_pdfium.mk
-@@ -25,6 +25,8 @@ pdfium_patches += abseil-trivial.patch
+@@ -18,6 +18,8 @@ pdfium_patches += constexpr-template.pat
  
- pdfium_patches += constexpr-template.patch
+ pdfium_patches += annot.patch.1
  
 +pdfium_patches += pkgsrc.patch.1
 +

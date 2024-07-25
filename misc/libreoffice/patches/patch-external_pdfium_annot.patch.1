@@ -1,0 +1,16 @@
+$NetBSD: patch-external_pdfium_annot.patch.1,v 1.1 2024/07/25 06:09:45 ryoon Exp $
+
+* Avoid error in fpdf_annot.cpp:
+  error: conversion from 'absl::lts_20240116::optional<unsigned int>' to non-scalar type 'std::optional<unsigned int>' requested
+
+--- external/pdfium/annot.patch.1.orig	2024-07-12 01:04:30.563451441 +0000
++++ external/pdfium/annot.patch.1
+@@ -32,7 +32,7 @@ index bc1f7f7eb..075baf1df 100644
+ +  if (!pWidget)
+ +    return false;
+ +
+-+  std::optional<FX_COLORREF> text_color = pWidget->GetTextColor();
+++  absl::optional<FX_COLORREF> text_color = pWidget->GetTextColor();
+ +  if (!text_color)
+ +    return false;
+ +
