@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2024/06/27 12:31:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.650 2024/07/25 02:49:09 jnemeth Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -227,6 +227,7 @@ SUBDIR+=	moreutils
 SUBDIR+=	most
 SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
+SUBDIR+=	mtm
 SUBDIR+=	multitail
 SUBDIR+=	nq
 SUBDIR+=	nxtvepg
@@ -237,6 +238,7 @@ SUBDIR+=	ocaml-opaline
 SUBDIR+=	ocaml-opam
 SUBDIR+=	ocaml-opam-file-format
 SUBDIR+=	ocaml-topkg
+SUBDIR+=	omm
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
 SUBDIR+=	open2300-pgsql
