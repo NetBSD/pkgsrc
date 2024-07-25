@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: prometheus.sh,v 1.1 2023/12/15 15:00:09 wiz Exp $
+# $NetBSD: prometheus.sh,v 1.2 2024/07/25 16:02:56 tnn Exp $
 #
 # PROVIDE: prometheus
 # REQUIRE: DAEMON
@@ -21,7 +21,7 @@ rcvar=$name
 prometheus_user="@PROMETHEUS_USER@"
 prometheus_group="@PROMETHEUS_GROUP@"
 command="@PREFIX@/bin/prometheus"
-command_args="> @LOGDIR@/prometheus.log 2>&1 &"
+command_args=">> @LOGDIR@/prometheus.log 2>&1 &"
 
 
 if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
