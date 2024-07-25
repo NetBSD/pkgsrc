@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2024/06/23 17:16:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	sandboxctl-1.1
 PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}sandboxctl/releases/download/sandboxctl-1.1/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Manages chroot-based sandboxes
 LICENSE=	modified-bsd
 

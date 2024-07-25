@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/04/27 10:17:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	google-authenticator-libpam-1.09
 PKGNAME=	${DISTNAME:S/libpam-//}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	google-authenticator-libpam
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/google-authenticator-libpam
 COMMENT=	One-time password generator and PAM module from Google
 LICENSE=	apache-2.0
