@@ -1,4 +1,4 @@
-$NetBSD: patch-config_makefiles_rust.mk,v 1.1 2023/09/11 12:33:25 ryoon Exp $
+$NetBSD: patch-config_makefiles_rust.mk,v 1.1.8.1 2024/07/25 06:15:40 ryoon Exp $
 
 NetBSD doesn't get along with parallel rust builds (it causes issues
 with ld.so) which are the default. Force -j1.
@@ -23,7 +23,7 @@ From: https://bugzilla.mozilla.org/show_bug.cgi?id=1644409
  ifndef MOZ_CODE_COVERAGE
  ifeq (,$(findstring gkrust_gtest,$(RUST_LIBRARY_FILE)))
 -cargo_rustc_flags += -Clto$(if $(filter full,$(MOZ_LTO_RUST_CROSS)),=fat)
-+cargo_rustc_flags += -Clto$(if $(filter full,$(MOZ_LTO_RUST_CROSS)),=thin)
++cargo_rustc_flags += -Clto=thin
  endif
  # We need -Cembed-bitcode=yes for all crates when using -Clto.
  RUSTFLAGS += -Cembed-bitcode=yes
