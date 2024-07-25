@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/07/25 11:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/07/25 05:41:51 wiz Exp $
 
 DISTNAME=	shtk-1.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 GITHUB_RELEASE=	${DISTNAME}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Application toolkit for POSIX-compliant shell scripts
 LICENSE=	modified-bsd
 

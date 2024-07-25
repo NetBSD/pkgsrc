@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2019/04/04 02:24:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/25 05:41:53 wiz Exp $
 
 DISTNAME=	skhd-0.3.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=koekeishiya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simple hotkey daemon for macOS
 LICENSE=	mit
 

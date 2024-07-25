@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2016/12/31 09:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	sysbuild-2.7
 PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/jmmv/sysbuild/releases/download/sysbuild-2.7/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Automates builds of NetBSD and manages source trees
 LICENSE=	modified-bsd
 

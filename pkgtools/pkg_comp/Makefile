@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.62 2022/05/08 20:26:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.63 2024/07/25 05:41:51 wiz Exp $
 
 DISTNAME=	pkg_comp-2.1
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}pkg_comp/releases/download/pkg_comp-2.1/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Automates builds of packages and manages pkgsrc trees
 LICENSE=	modified-bsd
 
