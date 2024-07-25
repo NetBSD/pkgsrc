@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.336 2024/06/28 15:14:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.337 2024/07/25 06:09:45 ryoon Exp $
 
-VERREL=		24.2.4
+VERREL=		24.2.5
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
@@ -137,10 +137,10 @@ MORE_DISTFILES= \
 	Java-WebSocket-1.5.4.tar.gz \
 	NotoSans-v2.012.zip \
 	NotoSerif-v2.012.zip \
-	NotoSansHebrew-v2.004.zip \
+	NotoSansHebrew-v3.001.zip \
 	NotoSansArabic-v2.010.zip \
 	NotoKufiArabic-v2.109.zip \
-	NotoNaskhArabic-v2.016.zip \
+	NotoNaskhArabic-v2.019.zip \
 	NotoSerifHebrew-v2.004.zip \
 	NotoSansArmenian-v2.008.zip \
 	NotoSerifArmenian-v2.008.zip \
