@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.228 2024/07/24 07:30:12 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.229 2024/07/25 06:27:11 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19636,7 +19636,7 @@ ndpi-[0-9]*		stack-overflow			https://nvd.nist.gov/vuln/detail/CVE-2020-15474
 ndpi-[0-9]*		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2020-15475
 ndpi-[0-9]*		out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2020-15476
 openjpeg<2.4.0		use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2020-15389
-openssh-[0-9]*		man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2020-14145
+openssh<8.5		man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2020-14145
 putty>=0.68<0.74	man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2020-14002
 powerdns-recursor<4.3.2	access-bypass			https://nvd.nist.gov/vuln/detail/CVE-2020-14196
 qemu<5.0.1		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-15469
