@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4606 2024/07/25 17:25:12 scole Exp $
+$NetBSD: CHANGES-2024,v 1.4607 2024/07/25 17:57:26 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7289,3 +7289,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/py-pspdfutils to 3.3.4 [adam 2024-07-25]
 	Added databases/mimir version 2.13.0 [tnn 2024-07-25]
 	Updated textproc/split-thai to 2.30 [scole 2024-07-25]
+	Updated security/authelia to 4.38.9 [tnn 2024-07-25]
