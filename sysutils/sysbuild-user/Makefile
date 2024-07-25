@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	sysbuild-user-1.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Runs sysbuild periodically under a dedicated user
 LICENSE=	modified-bsd
 

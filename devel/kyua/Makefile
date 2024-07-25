@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2024/05/29 16:32:12 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/07/25 05:41:51 wiz Exp $
 
 DISTNAME=	kyua-0.13
 PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/kyua/releases/download/${DISTNAME}/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jmmv/kyua/
 COMMENT=	Testing framework for infrastructure software
 LICENSE=	modified-bsd

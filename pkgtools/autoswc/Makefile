@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2019/05/23 19:23:12 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2024/07/25 05:41:51 wiz Exp $
 
 PKGNAME=		autoswc-1.6
 CATEGORIES=		pkgtools sysutils
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Generates system wide cache files for GNU autoconf
 LICENSE=		modified-bsd
 

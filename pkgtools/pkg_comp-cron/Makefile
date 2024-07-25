@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2017/02/17 21:27:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2024/07/25 05:41:52 wiz Exp $
 
 DISTNAME=	pkg_comp-cron-1.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Configures periodic pkgsrc binary package builds
 LICENSE=	modified-bsd
 

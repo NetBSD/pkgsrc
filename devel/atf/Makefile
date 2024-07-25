@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2017/02/22 11:46:58 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/07/25 05:41:51 wiz Exp $
 
 DISTNAME=	atf-0.21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 GITHUB_RELEASE=	${DISTNAME}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jmmv/atf/
 COMMENT=	Automated testing framework
 LICENSE=	2-clause-bsd

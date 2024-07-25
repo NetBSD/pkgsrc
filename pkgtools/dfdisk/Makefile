@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2019/05/23 19:23:12 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.20 2024/07/25 05:41:51 wiz Exp $
 
 PKGNAME=	dfdisk-1.0
 CATEGORIES=	pkgtools
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fetch distfiles from multiple locations
 LICENSE=	modified-bsd
 

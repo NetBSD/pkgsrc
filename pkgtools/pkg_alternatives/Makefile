@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2020/01/10 12:20:50 leot Exp $
-#
+# $NetBSD: Makefile,v 1.25 2024/07/25 05:41:51 wiz Exp $
 
 PKGNAME=	pkg_alternatives-1.7
 CATEGORIES=	pkgtools
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generic wrappers for programs with similar interfaces
 LICENSE=	modified-bsd
 
