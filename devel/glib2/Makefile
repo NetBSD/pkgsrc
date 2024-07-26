@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2024/07/23 05:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.307 2024/07/26 15:34:43 wiz Exp $
 
 .include "Makefile.common"
 
@@ -55,6 +55,12 @@ SUBST_FILES.python+=	output/glib/gtester-report
 SUBST_MESSAGE.python=	Fixing path to Python.
 SUBST_SED.python+=	-e "s,^\(.*\)/usr/bin/env.*,\1${PYTHONBIN},"
 
+SUBST_CLASSES+=		meson
+SUBST_STAGE.meson=	pre-configure
+SUBST_FILES.meson+=	meson.build
+SUBST_MESSAGE.meson=	Forcing meson to find proper Python.
+SUBST_VARS.meson+=	PYTHONBIN
+
 GIO_MODULES_DIR=	${PREFIX}/lib/gio/modules
 OWN_DIRS=		${GIO_MODULES_DIR}
 
@@ -91,8 +97,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 # Work around GCC 4.x bug https://gcc.gnu.org/bugzilla/show_bug.cgi?id=54113
 # preventing a successful CentOS 7 build
-.if !empty(CC_VERSION:Mgcc-4.*)
-BUILDLINK_TRANSFORM+=   rm:-Werror=missing-prototypes
+.if ${CC_VERSION:Mgcc-4.*}
+BUILDLINK_TRANSFORM+=	rm:-Werror=missing-prototypes
 .endif
 
 post-extract:
