@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.9 2024/07/26 14:15:14 wiz Exp $
+# $NetBSD: eol-packages,v 1.10 2024/07/26 14:22:36 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1140,13 +1140,13 @@ Description: Upgrade to PHP 8.1 or newer.
 
 Package: MySQL (5.5.x)
 eol date: December 31, 2015
-Description: Upgrade to 5.6 (or newer version).
+Description: Upgrade to 8.0 (or newer version).
 
 Package: MySQL (5.6.x)
 eol date: February 28, 2018
-Description: Upgrade to 5.6 (or newer version).
+Description: Upgrade to 8.0 (or newer version).
 
 Package: MySQL (5.7.x)
 eol date: October 31, 2020
-Description: Upgrade to 5.6 (or newer version).
+Description: Upgrade to 8.0 (or newer version).
 
