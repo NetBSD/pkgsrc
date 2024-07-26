@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1057 2024/07/11 17:18:36 wiz Exp $
+# $NetBSD: Makefile,v 1.1058 2024/07/26 22:15:49 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -489,6 +489,7 @@ SUBDIR+=	prison
 SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
 SUBDIR+=	ptex
+SUBDIR+=	py-DPainter
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-OpenGL-accelerate
 SUBDIR+=	py-Pillow
