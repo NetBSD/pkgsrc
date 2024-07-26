@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1798 2024/07/18 12:21:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.1799 2024/07/26 08:05:23 nia Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -632,6 +632,7 @@ SUBDIR+=	p5-Web-Scraper
 SUBDIR+=	p5-WordPress-XMLRPC
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
+SUBDIR+=	palemoon
 SUBDIR+=	paros
 SUBDIR+=	passenger
 SUBDIR+=	pear-HTML_Common

@@ -1,0 +1,29 @@
+$NetBSD: patch-platform_build_moz.build,v 1.1 2024/07/26 08:05:23 nia Exp $
+
+Avoid configure errors.
+
+--- platform/build/moz.build.orig	2024-07-25 09:37:43.581267584 +0000
++++ platform/build/moz.build
+@@ -52,12 +52,6 @@ if CONFIG['ENABLE_TESTS']:
+     if CONFIG['OS_ARCH'] == 'Linux':
+         FINAL_TARGET_FILES += ['/tools/rb/fix_linux_stack.py']
+ 
+-# Put a useful .gdbinit in the bin directory, to be picked up automatically
+-# by GDB when we debug executables there.
+-FINAL_TARGET_FILES += ['/.gdbinit']
+-FINAL_TARGET_PP_FILES += ['.gdbinit_python.in']
+-OBJDIR_FILES += ['!/dist/bin/.gdbinit_python']
+-
+ # Install the clang runtime library for ASAN next to the binaries we produce.
+ if CONFIG['MOZ_ASAN'] and CONFIG['MOZ_CLANG_RT_ASAN_LIB_PATH']:
+     FINAL_TARGET_FILES += [CONFIG['MOZ_CLANG_RT_ASAN_LIB_PATH']]
+@@ -78,9 +72,6 @@ if CONFIG['MOZ_APP_BASENAME']:
+ DEFINES['TOPSRCDIR'] = TOPSRCDIR
+ DEFINES['TOPOBJDIR'] = TOPOBJDIR
+ 
+-# NOTE: Keep .gdbinit in the topsrcdir for people who run gdb from the topsrcdir.
+-OBJDIR_FILES += ['/.gdbinit']
+-
+ # Put a .lldbinit in the bin directory and the objdir, to be picked up
+ # automatically by LLDB when we debug executables using either of those two
+ # directories as the current working directory.  The .lldbinit file will
