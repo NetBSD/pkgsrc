@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.8 2024/04/13 08:14:24 wiz Exp $
+# $NetBSD: eol-packages,v 1.9 2024/07/26 14:15:14 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -86,15 +86,15 @@ Package: micq
 eol date: November 28, 2007
 Description: Project renamed to climm, see chat/climm.
 
-Package: mysql (3.23.x)
+Package: MySQL (3.23.x)
 eol date: July 31, 2006
 Description: Upgrade to a newer version.
 
-Package: mysql (4.0.x)
+Package: MySQL (4.0.x)
 eol date: September 30, 2006
 Description: Upgrade to a newer version.
 
-Package: mysql (4.1.x)
+Package: MySQL (4.1.x)
 eol date: December 31, 2006
 Description: Upgrade to a newer version.
 
@@ -364,7 +364,7 @@ eol date: October, 2011
 URL: http://www.python.org/download/releases/2.5.6/
 Description: Upgrade to a newer version.
 
-Package: mysql (5.0.x)
+Package: MySQL (5.0.x)
 eol date: January 9, 2011
 Description: Upgrade to a newer version.
 
@@ -562,7 +562,7 @@ Package: python32
 eol date: Apr, 2014
 Description: not eol by vendor, but package has been removed. Update to newer version.
 
-Package: mysql (5.1.x)
+Package: MySQL (5.1.x)
 eol date: December 4, 2013
 Description: Upgrade to 5.6 (or newer version).
 
@@ -1137,3 +1137,16 @@ Package: PHP (8.0)
 eol date: November 26, 2023
 URL: http://php.net/supported-versions.php
 Description: Upgrade to PHP 8.1 or newer.
+
+Package: MySQL (5.5.x)
+eol date: December 31, 2015
+Description: Upgrade to 5.6 (or newer version).
+
+Package: MySQL (5.6.x)
+eol date: February 28, 2018
+Description: Upgrade to 5.6 (or newer version).
+
+Package: MySQL (5.7.x)
+eol date: October 31, 2020
+Description: Upgrade to 5.6 (or newer version).
+
