@@ -1,4 +1,4 @@
-$NetBSD: patch-meson.build,v 1.21 2024/04/09 16:57:18 wiz Exp $
+$NetBSD: patch-meson.build,v 1.22 2024/07/26 15:34:43 wiz Exp $
 
 - On Darwin, optionally use Cocoa (needed for X11 users).
 
@@ -14,8 +14,8 @@ $NetBSD: patch-meson.build,v 1.21 2024/04/09 16:57:18 wiz Exp $
 
 - Check also for sys/ptrace.h header file.
 
---- meson.build.orig	2024-03-07 21:35:05.000000000 +0000
-+++ meson.build
+--- meson.build.orig	2024-07-08 14:03:15.000000000 +0000
++++ meson.build	2024-07-26 14:38:02.009750717 +0000
 @@ -412,6 +412,7 @@ headers = [
    'sys/mount.h',
    'sys/param.h',
@@ -54,9 +54,12 @@ $NetBSD: patch-meson.build,v 1.21 2024/04/09 16:57:18 wiz Exp $
    if cc.compiles(glib_conf_prefix + '''
                   #include <stdio.h>
                   #ifdef HAVE_SYS_TYPES_H
-@@ -2421,7 +2421,7 @@ glib_conf.set('HAVE_PROC_SELF_CMDLINE', 
+@@ -2419,9 +2419,9 @@ endif
  
- python = import('python').find_installation(modules: ['packaging'])
+ glib_conf.set('HAVE_PROC_SELF_CMDLINE', have_proc_self_cmdline)
+ 
+-python = import('python').find_installation(modules: ['packaging'])
++python = import('python').find_installation('@PYTHONBIN@', modules: ['packaging'])
  # used for '#!/usr/bin/env <name>'
 -python_name = 'python3'
 +python_name = python.path()
