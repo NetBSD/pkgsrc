@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4610 2024/07/26 08:05:37 nia Exp $
+$NetBSD: CHANGES-2024,v 1.4611 2024/07/26 09:00:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7294,3 +7294,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/py-tempora to 5.7.0 [adam 2024-07-26]
 	Updated print/py-pikepdf to 9.1.0 [adam 2024-07-26]
 	Added www/palemoon version 33.2.1 [nia 2024-07-26]
+	Updated devel/difftastic to 0.59.0 [pin 2024-07-26]
