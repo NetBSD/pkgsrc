@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/06/11 08:52:23 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/26 06:53:25 adam Exp $
 
-DISTNAME=	pikepdf-9.0.0
+DISTNAME=	pikepdf-9.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
@@ -17,12 +17,13 @@ DEPENDS+=	${PYPKGPREFIX}-deprecated-[0-9]*:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=3.0.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.5.0:../../devel/py-test-xdist
 
-USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config
-
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
