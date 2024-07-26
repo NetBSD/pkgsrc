@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/07/17 11:39:43 pin Exp $
+# $NetBSD: Makefile,v 1.60 2024/07/26 09:00:56 pin Exp $
 
-DISTNAME=	nushell-0.95.0
+DISTNAME=	nushell-0.96.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -8,6 +8,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://www.nushell.sh/
 COMMENT=	New type of shell
 LICENSE=	mit
+
+SITES.curl-sys-0.4.73+curl-8.8.0.crate=	https://static.crates.io/crates/curl-sys/
 
 .include "cargo-depends.mk"
 
