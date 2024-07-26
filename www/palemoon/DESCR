@@ -1,0 +1,14 @@
+A customizable, privacy-respecting web browser derived from the
+independent Pale Moon(tm) codebase, in turn derived from community
+code from the Mozilla project.
+
+This package is an UNOFFICIAL build and not to be confused with
+official Pale Moon software available from palemoon.org.
+
+No support is provided from Moonchild Productions - all
+responsibility for this package falls on the pkgsrc community.
+
+Pale Moon does not support NetBSD and this software has been
+modified to enhance NetBSD compatibility.
+
+Pale Moon is a trademark of Moonchild Productions.
