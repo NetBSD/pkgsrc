@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.229 2024/07/25 06:27:11 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.230 2024/07/26 14:15:14 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26048,3 +26048,7 @@ apache<2.4.62	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/
 mit-krb5<1.21.3	truncated-token	https://nvd.nist.gov/vuln/detail/CVE-2024-37370
 mit-krb5<1.21.3	invalid-memory-reads	https://nvd.nist.gov/vuln/detail/CVE-2024-37371
 libcurl-gnutls>8.6.0<8.9.0	free-of-memory-not-on-heap	https://nvd.nist.gov/vuln/detail/CVE-2024-6197
+mysql-client-5.6.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+mysql-server-5.6.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+mysql-client-5.7.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+mysql-server-5.7.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
