@@ -1,0 +1,22 @@
+$NetBSD: distinfo,v 1.1 2024/07/26 08:05:23 nia Exp $
+
+BLAKE2s (palemoon-33.2.1/palemoon.tar.gz) = 5963bc12be28b07ded0558bb20bc27108f3aebd1895e4730e6a6ac2013a7ae9d
+SHA512 (palemoon-33.2.1/palemoon.tar.gz) = 72e6a4858af679a88fd079ed28020a8d845366d0b3ea5cb00b5a17dd9d6b7a4171397ceaa156b3e9f1d185e39e7ba8c82864641bd21f704350ef4b6473cc693d
+Size (palemoon-33.2.1/palemoon.tar.gz) = 8567974 bytes
+BLAKE2s (palemoon-33.2.1/psutil.tar.gz) = 7a2c5c938910795453cf1cdfd5fbfa4dc8cac15e6eb43a5e9aba91ac032b37ce
+SHA512 (palemoon-33.2.1/psutil.tar.gz) = 95c246ed4ce68a476f83868312101d88dafa9d4cef96ff60af646a443c00e6cc447d37cc1ac4e85224db16c24390575174bb7ef76f48cb839fe2e93749107ffb
+Size (palemoon-33.2.1/psutil.tar.gz) = 274361 bytes
+BLAKE2s (palemoon-33.2.1/uxp.tar.gz) = 1776ecd102d0db4b65cfb41c1055d4320f9b559268585356d0794ffa868df5f3
+SHA512 (palemoon-33.2.1/uxp.tar.gz) = 37621d572bdd3fcf043f5edce3d0ac1dd089a1ed1ccf5126a4052b74e47b0032761c25e6192b96adfe6fe96f131881f43415150fcd68e543e9f05d89a4dd19af
+Size (palemoon-33.2.1/uxp.tar.gz) = 264109377 bytes
+SHA1 (patch-palemoon_app_profile_palemoon.js) = 5169b1ffdb764277a4ab2b6e73e9070d329eef47
+SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
+SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
+SHA1 (patch-platform_gfx_gl_GLContextProviderGLX.cpp) = 56685c8c5f176b0660a6208437d81085f6ad00a5
+SHA1 (patch-platform_intl_icu_source_configure) = 87d19e9212b4340d9b052b5a89be84432ad1cff2
+SHA1 (patch-platform_js_src_jit_ProcessExecutableMemory.cpp) = 5cf5a2205a2b38fb8785e6c255231fbcdbd13949
+SHA1 (patch-platform_js_src_vm_ArrayBufferObject.cpp) = 652db4b78ecaba840c0cba945b4af39a6b1362b9
+SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
+SHA1 (patch-platform_media_libcubeb_src_moz.build) = 5f9f7656bf9d251edb395cb19fae8cd614c0b287
+SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
+SHA1 (patch-platform_toolkit_xre_glxtest.cpp) = f8bd5705f5cf87651df59ba22f4566136e3bc4ef
