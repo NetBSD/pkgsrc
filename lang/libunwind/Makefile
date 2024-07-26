@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/07/06 15:45:07 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/07/26 22:30:47 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,7 +18,7 @@ EXTRA_DIST+=	${LIBCXX}${EXTRACT_SUFX}
 SITES.${LIBCXX}${EXTRACT_SUFX}=	\
 	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_RELEASE}/}
 
-USE_CXX_FEATURES=	c++11
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax
 SSP_SUPPORTED=		no
