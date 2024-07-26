@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/07/19 11:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/07/26 10:08:22 pin Exp $
 
-DISTNAME=	ast-grep-0.25.2
+DISTNAME=	ast-grep-0.25.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ast-grep/}
 
@@ -11,6 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.67.0
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	bin
