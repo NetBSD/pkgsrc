@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.230 2024/07/26 14:15:14 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.231 2024/07/26 21:03:55 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26052,3 +26052,4 @@ mysql-client-5.6.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-
 mysql-server-5.6.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 mysql-client-5.7.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 mysql-server-5.7.[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+orc<0.4.39	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-40897
