@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.15 2024/07/21 01:26:16 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.16 2024/07/27 06:27:47 iquiw Exp $
 
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.8.mod
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.8.zip
