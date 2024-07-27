@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/11/04 14:35:07 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/27 12:22:54 bacon Exp $
 
-DISTNAME=	kallisto-0.50.1
+DISTNAME=	kallisto-0.51.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

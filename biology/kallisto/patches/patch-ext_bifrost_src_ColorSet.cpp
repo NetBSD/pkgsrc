@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_bifrost_src_ColorSet.cpp,v 1.1 2023/11/04 14:35:07 bacon Exp $
+$NetBSD: patch-ext_bifrost_src_ColorSet.cpp,v 1.2 2024/07/27 12:22:54 bacon Exp $
 
 # vfscanf() not found on NetBSD 9
 
