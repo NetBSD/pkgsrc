@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2024/07/26 09:57:46 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/07/27 14:04:15 abs Exp $
 
 BLAKE2s (palemoon-33.2.1/palemoon.tar.gz) = 5963bc12be28b07ded0558bb20bc27108f3aebd1895e4730e6a6ac2013a7ae9d
 SHA512 (palemoon-33.2.1/palemoon.tar.gz) = 72e6a4858af679a88fd079ed28020a8d845366d0b3ea5cb00b5a17dd9d6b7a4171397ceaa156b3e9f1d185e39e7ba8c82864641bd21f704350ef4b6473cc693d
@@ -21,3 +21,4 @@ SHA1 (patch-platform_media_libcubeb_src_moz.build) = 5f9f7656bf9d251edb395cb19fa
 SHA1 (patch-platform_old-configure.in) = 05711cd91f7adca8c7325d01dc6e6553ce5bedb5
 SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
 SHA1 (patch-platform_toolkit_xre_glxtest.cpp) = f8bd5705f5cf87651df59ba22f4566136e3bc4ef
+SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
