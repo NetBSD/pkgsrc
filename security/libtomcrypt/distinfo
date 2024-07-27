@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:17:17 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/07/27 06:06:46 wiz Exp $
 
 BLAKE2s (crypt-1.18.2.tar.xz) = ec4318a9ff32931e3239b94d170c333c9f5a963af5772d4e597b257b3d22d89c
 SHA512 (crypt-1.18.2.tar.xz) = f6117a12a42b07f8de4a8aedbccf6ff4ee94b4b81cb7263af99627c32eae646ca8ead7d3063737918db4aa118673001fcf2cfa8e4ca8b528fb00045fda7cc893
 Size (crypt-1.18.2.tar.xz) = 2638064 bytes
 SHA1 (patch-ab) = 8c3750217ec90663a90f2b871e8eb8a940fe2fb0
+SHA1 (patch-src_pk_asn1_der_utf8_der__decode__utf8__string.c) = 56bd2f004304611b388068dd2c7826622c02b03a
