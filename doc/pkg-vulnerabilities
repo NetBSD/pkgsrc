@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.232 2024/07/27 06:08:17 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.233 2024/07/27 21:04:33 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -18641,7 +18641,7 @@ py{27,36,37,38}-waitress<1.4.0	http-request-smuggling		https://nvd.nist.gov/vuln
 py{27,36,37,38}-waitress<1.4.0	http-request-smuggling		https://nvd.nist.gov/vuln/detail/CVE-2019-16786
 libgnome-keyring<3.10.0	sensitive-information-leak	https://nvd.nist.gov/vuln/detail/CVE-2012-6111
 gnutls<3.2.0	oracle-attack		https://nvd.nist.gov/vuln/detail/CVE-2015-8313
-libreoffice-[0-9]*	remote-file-view	https://nvd.nist.gov/vuln/detail/CVE-2012-5639
+libreoffice<6.4.4	remote-file-view	https://nvd.nist.gov/vuln/detail/CVE-2012-5639
 php{56,70,71,72,73,74}-drupal>=8.7.4<8.7.5	access-bypass			https://www.drupal.org/SA-CORE-2019-008
 php{56,70,71,72,73,74}-drupal>=8<8.7.11		denial-of-service		https://www.drupal.org/SA-CORE-2019-009
 php{56,70,71,72,73,74}-drupal>=8<8.7.11		multiple-vulnerabilities	https://www.drupal.org/SA-CORE-2019-010
