@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/07/27 06:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/07/27 08:27:34 wiz Exp $
 
 DISTNAME=	crypt-1.18.2
 PKGNAME=	libtom${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libtom/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -25,6 +25,11 @@ MAKE_FLAGS+=	EXTRALIBS="-ltommath"
 CPPFLAGS+=	-DUSE_LTM -DLTM_DESC
 
 PKGCONFIG_OVERRIDE+=	libtomcrypt.pc.in
+
+INSTALLATION_DIRS+=	share/doc/libtomcrypt
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/doc/crypt.pdf ${DESTDIR}${PREFIX}/share/doc/libtomcrypt
 
 .include "../../math/ltm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
