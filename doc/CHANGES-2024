@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4622 2024/07/27 08:27:42 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4623 2024/07/27 12:23:03 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7306,3 +7306,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/fzf to 0.54.2 [iquiw 2024-07-27]
 	Updated sysutils/restic to 0.17.0 [iquiw 2024-07-27]
 	Updated security/libtomcrypt to 1.18.2nb3 [wiz 2024-07-27]
+	Updated biology/kallisto to 0.51.0 [bacon 2024-07-27]
