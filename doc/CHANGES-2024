@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4618 2024/07/26 22:16:00 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4619 2024/07/27 06:06:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7302,3 +7302,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/split-thai to 2.31 [scole 2024-07-26]
 	Updated security/libtomcrypt to 1.18.2nb1 [wiz 2024-07-26]
 	Added graphics/py-DPainter version 1.2.2 [wiz 2024-07-26]
+	Updated security/libtomcrypt to 1.18.2nb2 [wiz 2024-07-27]
