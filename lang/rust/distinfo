@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.172 2024/07/15 03:32:23 wiz Exp $
+$NetBSD: distinfo,v 1.173 2024/07/27 02:35:24 tnn Exp $
 
 BLAKE2s (rust-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 5423dd837f47538992a67313a83983b583148f670f561da1d2a256fc98b5e24d
 SHA512 (rust-1.77.1-aarch64_be-unknown-netbsd.tar.xz) = 449b8520f0904e15163e6a55bec5dcdb18c0e423b6dd2450f99dd061edcdbd33e9c4fe5dc874ab09b4efabd6199f9ad595f13ecd4d69d708c68f9fc54c1da6c4
@@ -108,7 +108,7 @@ Size (rust-std-1.78.0-x86_64-unknown-netbsd.tar.xz) = 23245376 bytes
 BLAKE2s (rustc-1.79.0-src.tar.gz) = 0d2faf6d2455275a09c78a0f8e3e1bfa5d864b5dfc70980f7ee42c188422f4fc
 SHA512 (rustc-1.79.0-src.tar.gz) = 4fa7385b2e89816849f1c353be3bf8fd36c05896ca7ded53dedfb92876ab2f40b77235a9eaa84ab34c045ddcd3a5c67644a986b9cc8695e5f824d22416bcd018
 Size (rustc-1.79.0-src.tar.gz) = 297469050 bytes
-SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = 3105b0c89cf04b4469fc56cd89e7e4a661517002
+SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = f5336828d70f9fc684ea871a6869138ac7a18b4f
 SHA1 (patch-compiler_rustc__llvm_build.rs) = a4a66d449fc9eb99d648d02a041778a68f4f7ce8
 SHA1 (patch-compiler_rustc__target_src_spec_base_netbsd.rs) = 7d910631f49acf2c33fdd191fd3e0f261efae234
 SHA1 (patch-compiler_rustc__target_src_spec_mod.rs) = a22b5d28997ed9a5565deec9c34322165d563d00
@@ -120,7 +120,7 @@ SHA1 (patch-library_std_src_sys_pal_unix_thread__parking_netbsd.rs) = 9b073ba37a
 SHA1 (patch-src_bootstrap_bootstrap.py) = 5cd73003292c935ce0e405edd132180233a04857
 SHA1 (patch-src_bootstrap_src_core_build__steps_compile.rs) = 4696304623232acd419ad15597f539a10a014271
 SHA1 (patch-src_bootstrap_src_core_build__steps_install.rs) = cc6558df42c9c9ac28fdb2ff180bdaa7f22ce816
-SHA1 (patch-src_bootstrap_src_core_builder.rs) = bb9f428bf4da9bf11a19de69f308ef4d9b5a7002
+SHA1 (patch-src_bootstrap_src_core_builder.rs) = e3fd19e0a18f1e79e287c85035ea431b98d91d9a
 SHA1 (patch-src_bootstrap_src_lib.rs) = d29bc3c0b335d5e788eecbb02fc08966beef0fb1
 SHA1 (patch-src_llvm-project_llvm_CMakeLists.txt) = 7abfabb6ec70df229a69355f8c76825610165c37
 SHA1 (patch-src_llvm-project_llvm_cmake_modules_AddLLVM.cmake) = e1b2eb2f0b3cf1cf87b443656ae306b3242f6b12
