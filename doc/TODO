@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24672 2024/07/22 15:06:08 adam Exp $
+$NetBSD: TODO,v 1.24673 2024/07/27 06:22:09 taca Exp $
 
 Suggested new packages
 ======================
@@ -948,7 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o musescore-4.2 [now has a fixed ALSA dependency, and some features were removed]
 	o mypaint-2.0.1
 	o mysql-8.0.38
-	o mysql-8.4.1 (LTS)
+	o mysql-8.4.2 (LTS)
 	o mysql-workbench-8.0.23
 	o nagios-ncsa-2.10.0
 	o nagios-plugin-dnsrbl-0.5
