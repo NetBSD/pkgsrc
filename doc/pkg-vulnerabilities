@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.231 2024/07/26 21:03:55 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.232 2024/07/27 06:08:17 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -12133,16 +12133,10 @@ postgresql93-server<9.3.17	multiple-vulnerabilities	https://www.postgresql.org/a
 postgresql94-server<9.4.12	multiple-vulnerabilities	https://www.postgresql.org/about/news/1746/
 postgresql95-server<9.5.7	multiple-vulnerabilities	https://www.postgresql.org/about/news/1746/
 postgresql96-server<9.6.3	multiple-vulnerabilities	https://www.postgresql.org/about/news/1746/
-libreoffice-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
-libreoffice5-bin-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
-libreoffice-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7856
-libreoffice5-bin-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7856
-libreoffice-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
-libreoffice5-bin-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
-libreoffice-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2017-7882
-libreoffice5-bin-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2017-7882
-libreoffice-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-8358
-libreoffice5-bin-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-8358
+libreoffice<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
+libreoffice5-bin<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2016-10327
+libreoffice<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
+libreoffice5-bin<5.2.5	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-7870
 php{56,70,71}-owncloud>=9.0<9.058	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
 php{56,70,71}-owncloud>=9.1<9.1.5	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2017-0891
 php{56,70,71}-wordpress<4.7.5	cross-site-scripting	https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-9061
@@ -14976,7 +14970,7 @@ php70-ldap<7.0.30	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10
 php71-ldap<7.1.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10548
 php72-ldap<7.2.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-10548
 phpmyadmin<4.7.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2017-18264
-libreoffice-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-10583
+libreoffice<5.4.7	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-10583
 openvpn<2.4.6	double-free			https://nvd.nist.gov/vuln/detail/CVE-2018-9336
 ansible<1.2.1	man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2013-2233
 p7zip<18.05	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-10115
@@ -15639,7 +15633,6 @@ mantis>=2.1.0<2.15.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2
 mantis>=2.0<2.15.1	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-14504
 py{27,34,35,36,37}-django>=1.11.0<1.11.15	open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2018-14574
 py{34,35,36,37}-django>=2.0<2.0.8		open-redirect	https://nvd.nist.gov/vuln/detail/CVE-2018-14574
-libreoffice-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-14939
 php{56,70,71,72}-drupal>=7<7.56		multiple-vulnerabilities	https://www.drupal.org/SA-CORE-2017-003
 php{56,70,71,72}-drupal>=8<8.3.4	multiple-vulnerabilities	https://www.drupal.org/SA-CORE-2017-003
 rpm<4.14.0		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2017-7500
@@ -18194,7 +18187,7 @@ freerdp-[0-9]*		memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-17177
 py{27,34,35,36,37}-Pillow<6.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-16865
 libsoup<2.68.2	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2019-17266
 p5-libapreq2-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-12412
-libtomcrypt-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-17362
+libtomcrypt<1.18.2nb2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2019-17362
 gif2png<3.0		memory-leak		https://nvd.nist.gov/vuln/detail/CVE-2019-17371
 zabbix-[0-9]*		authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-17382
 exiv2<0.27.3		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-17402
