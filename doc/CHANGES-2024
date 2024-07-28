@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4651 2024/07/28 21:13:40 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4652 2024/07/28 21:15:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7337,3 +7337,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/ruby32-base to 3.2.5 [taca 2024-07-28]
 	Updated lang/ruby32 to 3.2.5 [taca 2024-07-28]
 	Updated devel/py-tortoisehg to 6.6.3nb3 [wiz 2024-07-28]
+	Updated x11/libX11 to 1.8.10 [wiz 2024-07-28]
