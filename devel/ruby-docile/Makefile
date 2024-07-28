@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2021/05/23 13:25:28 taca Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/28 13:20:33 taca Exp $
 
-DISTNAME=	docile-1.4.0
+DISTNAME=	docile-1.4.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

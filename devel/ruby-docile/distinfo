@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:19:30 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/07/28 13:20:33 taca Exp $
 
-BLAKE2s (docile-1.4.0.gem) = d10607cfd7230670822cf1901b32c9f175eb424661c9fcf2fcb5289cc6bd42ad
-SHA512 (docile-1.4.0.gem) = e2fb8eabe6e8e3bc6cf05354afe91cb75f52701c3b90c0ba36cee20c920c379ca7da8acf49ac0bcb9128a8176a738172c5754fb422e660a107f4615c415bfe15
-Size (docile-1.4.0.gem) = 16384 bytes
+BLAKE2s (docile-1.4.1.gem) = 5ea727c254bc25f9dadc4b744103abc9b977e276401b5428b0c13a63ba721762
+SHA512 (docile-1.4.1.gem) = 6ea008713422e188eb8be89d05e4de9da59c8e197927659192bde9382815bc0fddfd5030a9f56d2eb93f571c09d46c9c7b5839569ee33ef371526769fc5e5e54
+Size (docile-1.4.1.gem) = 16896 bytes
