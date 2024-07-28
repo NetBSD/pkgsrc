@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/28 09:40:03 wiz Exp $
+${PYSITELIB}/wat/__init__.py
+${PYSITELIB}/wat/__init__.pyc
+${PYSITELIB}/wat/__init__.pyo
+${PYSITELIB}/wat/inspection/__init__.py
+${PYSITELIB}/wat/inspection/__init__.pyc
+${PYSITELIB}/wat/inspection/__init__.pyo
+${PYSITELIB}/wat/inspection/inspection.py
+${PYSITELIB}/wat/inspection/inspection.pyc
+${PYSITELIB}/wat/inspection/inspection.pyo
+${PYSITELIB}/wat/py.typed
+${PYSITELIB}/wat/version.py
+${PYSITELIB}/wat/version.pyc
+${PYSITELIB}/wat/version.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

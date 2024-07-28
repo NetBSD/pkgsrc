@@ -1,0 +1,6 @@
+WAT is a powerful inspection tool that allows you to delve into
+and examine unknown objects at runtime.
+
+If you find yourself deep within the Python console, feeling dazed
+and confused, wondering "WAT? What's that thing?", that's where
+the `wat` inspector comes in handy.
