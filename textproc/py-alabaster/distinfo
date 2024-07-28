@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/01/14 09:02:59 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/07/28 11:47:15 wiz Exp $
 
-BLAKE2s (alabaster-0.7.16.tar.gz) = a3167f7a06ca0408b6bd04a82fe4f4de6c2cb885da5861947c67f81764178d35
-SHA512 (alabaster-0.7.16.tar.gz) = 2ef9d0c631bbd8d3a527e6f6c1e9d1a5533d9fad5e018c66f29b386cc788eee831083b67bb6e86b0ba66fdd78b12ddfc4e5ac15ca01f33d4a914d166a114c393
-Size (alabaster-0.7.16.tar.gz) = 23776 bytes
+BLAKE2s (alabaster-1.0.0.tar.gz) = 436e24dd1edb4945801187c6c964522595811f7abf188f84cce2ca46a97751ba
+SHA512 (alabaster-1.0.0.tar.gz) = 097755d8d5f8c818288f2bdea5ecb9217f4bbfbab238fb4e8f2e135d9a7777bb9a6056decabf709f8a255495d4269d92233bcdf73c6c9ec82e79f52d65849955
+Size (alabaster-1.0.0.tar.gz) = 24210 bytes
