@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2024/07/19 07:26:37 adam Exp $
+# $NetBSD: Makefile,v 1.68 2024/07/28 11:49:51 wiz Exp $
 
-DISTNAME=	meson-1.5.0
+DISTNAME=	meson-1.5.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -38,9 +38,9 @@ REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
-# Total passed tests:  489
-# Total failed tests:  90
-# Total skipped tests: 169
+# Total passed tests:  448
+# Total failed tests:  39
+# Total skipped tests: 95
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
 
