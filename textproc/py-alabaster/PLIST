@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/14 09:02:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/07/28 11:47:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,6 +14,7 @@ ${PYSITELIB}/alabaster/navigation.html
 ${PYSITELIB}/alabaster/relations.html
 ${PYSITELIB}/alabaster/static/alabaster.css_t
 ${PYSITELIB}/alabaster/static/custom.css
+${PYSITELIB}/alabaster/static/github-banner.svg
 ${PYSITELIB}/alabaster/support.py
 ${PYSITELIB}/alabaster/support.pyc
 ${PYSITELIB}/alabaster/support.pyo
