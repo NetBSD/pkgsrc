@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/28 09:40:03 wiz Exp $
+
+BLAKE2s (wat_inspector-0.2.1.tar.gz) = fb5051fa7068a68d54b47bb415a18c261d5f31adeae8dad1bc5f4c48bb301668
+SHA512 (wat_inspector-0.2.1.tar.gz) = 4cc7acf8db984238a88ea4d016d5f786e66640f3ec0d6eb48f7206d825d01f038768378c8a868876e2650dd4e681efd73d01ab3728fc89d0e8abd15144157fb1
+Size (wat_inspector-0.2.1.tar.gz) = 20102 bytes
