@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2021/07/15 10:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/07/28 22:50:48 rillig Exp $
 
 DISTNAME=		adwaita-icon-theme-40.1.1
 CATEGORIES=		graphics gnome
@@ -11,6 +11,7 @@ COMMENT=		Standard GNOME icons
 LICENSE=		cc-by-sa-v3.0 OR gnu-lgpl-v3
 
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 USE_TOOLS+=		gmake pkg-config
 # otherwise it creates lots of superfluous lib/locale dirs
 USE_PKGLOCALEDIR=	yes
