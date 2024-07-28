@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.5 2024/07/17 21:09:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.6 2024/07/28 13:18:57 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -32,4 +32,14 @@ net/netatalk3: security fix
 
 Pullup ticket #6879 - requested by wiz
 www/apache24: security update
+
+Pullup ticket #6880 - requested by taca
+www/ruby-rack; security update
+
+Pullup ticket #6881 - requested by taca
+www/firefox: security update
+www/firefox-l10n: dependency update
+
+Pullup ticket #6882 - requested by taca
+net/bind918: security update
 
