@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/04/28 09:56:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/07/28 21:13:29 wiz Exp $
 bin/thg
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
@@ -479,6 +479,7 @@ share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
 share/doc/tortoisehg/html/_static/documentation_options.js
 share/doc/tortoisehg/html/_static/file.png
+share/doc/tortoisehg/html/_static/github-banner.svg
 share/doc/tortoisehg/html/_static/language_data.js
 share/doc/tortoisehg/html/_static/minus.png
 share/doc/tortoisehg/html/_static/plus.png
