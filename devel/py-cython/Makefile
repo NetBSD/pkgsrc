@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2024/05/26 01:59:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.94 2024/07/28 11:56:32 wiz Exp $
 
 DISTNAME=	Cython-3.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -20,6 +20,8 @@ REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
 
 USE_CC_FEATURES=	c99
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD+=		c99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
