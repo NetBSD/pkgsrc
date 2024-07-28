@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/06/15 16:32:25 taca Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/28 13:41:02 taca Exp $
 
-DISTNAME=	sanitize-6.1.1
+DISTNAME=	sanitize-6.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
