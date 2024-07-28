@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/07/15 02:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/07/28 11:45:17 wiz Exp $
 
-DISTNAME=	libheif-1.18.0
+DISTNAME=	libheif-1.18.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
