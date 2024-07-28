@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/06/30 22:03:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/07/28 11:52:09 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -53,6 +53,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/admob.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/admob.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsense.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/adsensehost.v4.1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/adsenseplatform.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/adsenseplatform.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/advisorynotifications.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/aiplatform.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/aiplatform.v1beta1.json
@@ -93,6 +95,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/artifactregistry.v1beta2.
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/assuredworkloads.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/assuredworkloads.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/authorizedbuyersmarketplace.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/authorizedbuyersmarketplace.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/backupdr.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/baremetalsolution.v1alpha1.json
@@ -194,6 +197,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/containeranalysis.v1beta1
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/content.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/contentwarehouse.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/css.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/customsearch.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/datacatalog.v1beta1.json
