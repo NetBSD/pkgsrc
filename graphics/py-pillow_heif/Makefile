@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/07/04 11:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/07/28 11:58:50 wiz Exp $
 
-DISTNAME=	pillow_heif-0.17.0
+DISTNAME=	pillow_heif-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pillow_heif/}
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1.0:../../graphics/py-Pillow
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# 608 passed, 12 skipped, 69 warnings
 
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.17.6
