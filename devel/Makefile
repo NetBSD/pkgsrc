@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4316 2024/07/21 20:35:03 markd Exp $
+# $NetBSD: Makefile,v 1.4317 2024/07/28 09:40:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3148,6 +3148,7 @@ SUBDIR+=	py-virtualenv
 SUBDIR+=	py-visitor
 SUBDIR+=	py-vulture
 SUBDIR+=	py-wasm
+SUBDIR+=	py-wat-inspector
 SUBDIR+=	py-wcwidth
 SUBDIR+=	py-whatthepatch
 SUBDIR+=	py-wheel
