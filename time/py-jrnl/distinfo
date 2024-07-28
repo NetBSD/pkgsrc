@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:24:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/07/28 10:01:33 leot Exp $
 
-BLAKE2s (jrnl-1.9.8.tar.gz) = d3481395df1b9e1895a7a1871580dd096a7e14f305d7a4cf2108efb4f17fe53e
-SHA512 (jrnl-1.9.8.tar.gz) = dad2e78a984c2415674e26e833dac118bc99acbd43b860dbf39a19a0374c92393b91087f0d1b3163ad0cf851c7abfebe80ce74320d6058f8a494a84bc51d0aef
-Size (jrnl-1.9.8.tar.gz) = 193595 bytes
-SHA1 (patch-setup.py) = 41ccaebed6a5bf3aca3a94eec376e6de830e0f32
+BLAKE2s (jrnl-4.1.tar.gz) = a33e59928da3600bf708c09d3959672728942afe8ad362a5588b7b1dcc9e8229
+SHA512 (jrnl-4.1.tar.gz) = 4f3c074340144fd35f6e15100c4f233e5662f547e143bff7ea49fc8cfa33f480439f892436f231f4f576f181249c5a717e6c14810fec8be35f5ee4db24df43b8
+Size (jrnl-4.1.tar.gz) = 59126 bytes
