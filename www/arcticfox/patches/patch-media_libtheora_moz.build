@@ -1,0 +1,15 @@
+$NetBSD: patch-media_libtheora_moz.build,v 1.1 2024/07/28 18:50:33 nia Exp $
+
+The ARM ASM is broken on NetBSD.
+
+--- media/libtheora/moz.build.orig	2024-07-28 10:15:10.264850902 +0000
++++ media/libtheora/moz.build
+@@ -76,7 +76,7 @@ if '86' in CONFIG['OS_TEST']:
+         ]
+ 
+ if CONFIG['GNU_AS']:
+-    if 'arm' in CONFIG['OS_TEST']:
++    if 'arm' in CONFIG['OS_TEST'] and CONFIG['OS_ARCH'] != 'NetBSD':
+         SOURCES += [
+             'lib/arm/armcpu.c',
+             'lib/arm/armstate.c',
