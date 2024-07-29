@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/06/30 09:48:35 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/29 07:54:26 adam Exp $
 
-DISTNAME=	python-rapidjson-1.18
+DISTNAME=	python-rapidjson-1.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-rapidjson/}
