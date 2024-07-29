@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 09:57:12 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/07/29 11:35:31 wen Exp $
 
-BLAKE2s (Archive-Tar-Wrapper-0.38.tar.gz) = 47d3ec20db7a2257e49fdbb4a6fe54d8835ed183d818029c5e348985da7fca99
-SHA512 (Archive-Tar-Wrapper-0.38.tar.gz) = 99779c654f6f9ec507685ca37c041cdff077bce3b6ec96a6005454e9ef8a9c2bf470053b8fc751342d80b722ee115b1aba27b16b328e7210c7b869bee57cd3f6
-Size (Archive-Tar-Wrapper-0.38.tar.gz) = 38425 bytes
+BLAKE2s (Archive-Tar-Wrapper-0.41.tar.gz) = e8b807ac641c7e64b7911312e6bd7fca3bcf2927eda79a7fe00d3fa1820bbe90
+SHA512 (Archive-Tar-Wrapper-0.41.tar.gz) = a34925a5d1b176ac11f7dbee76a02afa0a438887dfde15ac60e3288767e22410dd1089b3fe61149929c4f522f15d2023a29f2e0dcbd764cb1d25f2f85ae46258
+Size (Archive-Tar-Wrapper-0.41.tar.gz) = 37960 bytes
