@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/04/15 09:14:03 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/07/29 07:29:59 pin Exp $
 
-DISTNAME=	starship-1.18.2
+DISTNAME=	starship-1.20.1
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,22 +18,12 @@ ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
 .include "cargo-depends.mk"
 
-USE_LANGUAGES=	c
+RUST_REQ=	1.74.0
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
-# Disable all battery features on NetBSD
-# See https://github.com/svartalf/rust-battery/issues/20
-# and https://github.com/svartalf/rust-battery/issues/33
-# The new fork at starship/rust-battery does not address issues
-# with NetBSD support, hence disable both.
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		notify gix-max-perf
-.endif
 
 INSTALLATION_DIRS=	bin
 EGDIR=			${PREFIX}/share/examples/starship/auto-completion
