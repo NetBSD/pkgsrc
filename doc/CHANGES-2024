@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4685 2024/07/29 11:36:33 wen Exp $
+$NetBSD: CHANGES-2024,v 1.4686 2024/07/29 11:53:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7373,3 +7373,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/krusader to 2.8.1 [wiz 2024-07-29]
 	Updated archivers/p5-Archive-Extract to 0.88 [wen 2024-07-29]
 	Updated archivers/p5-Archive-Tar-Wrapper to 0.41 [wen 2024-07-29]
+	Updated chat/p5-POE-Component-IRC to 6.93 [wen 2024-07-29]
