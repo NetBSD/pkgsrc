@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:55 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/07/29 04:58:45 wen Exp $
 
-BLAKE2s (Number-Tolerant-1.708.tar.gz) = e92b3f4107c09cab433d171dae32131a78e9bbb77f9108910fd3ff5105627d9c
-SHA512 (Number-Tolerant-1.708.tar.gz) = 9a8b878d65e5c6cb9600bd743d5b74a639e4be4c07cca5a954fe0042d5ea749ac656e9b480d8e8a2573259ad85639e110ff531d61259e83ebb66d913fe37374a
-Size (Number-Tolerant-1.708.tar.gz) = 35210 bytes
+BLAKE2s (Number-Tolerant-1.710.tar.gz) = c04cf7cc97bd114f0bc0ce8338f437e121f73e886389ed22786890f1dd190ef1
+SHA512 (Number-Tolerant-1.710.tar.gz) = 358478a1f699a231d74391219b94bd20f41298e164279bee7f0ca793442c4ab273498daa5ac247486753644c592769239070c46a03e568e435aa626fec12dc9f
+Size (Number-Tolerant-1.710.tar.gz) = 36305 bytes
