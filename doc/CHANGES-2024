@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4654 2024/07/29 01:55:24 wen Exp $
+$NetBSD: CHANGES-2024,v 1.4655 2024/07/29 02:18:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7340,3 +7340,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libX11 to 1.8.10 [wiz 2024-07-28]
 	Updated geography/p5-Geo-Gpx to 1.11 [wen 2024-07-29]
 	Updated mail/p5-Mail-DKIM to 1.20240619 [wen 2024-07-29]
+	Updated mail/p5-Mail-SPF to 3.20240617 [wen 2024-07-29]
