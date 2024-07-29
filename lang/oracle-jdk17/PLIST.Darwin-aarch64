@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin-aarch64,v 1.2 2023/05/05 18:00:52 adam Exp $
+@comment $NetBSD: PLIST.Darwin-aarch64,v 1.3 2024/07/29 06:28:18 adam Exp $
 bin/oracle-jdk17-jar
 bin/oracle-jdk17-jarsigner
 bin/oracle-jdk17-java
@@ -157,6 +157,7 @@ java/oracle-jdk17/legal/java.base/c-libutl.md
 java/oracle-jdk17/legal/java.base/cldr.md
 java/oracle-jdk17/legal/java.base/icu.md
 java/oracle-jdk17/legal/java.base/public_suffix.md
+java/oracle-jdk17/legal/java.base/siphash.md
 java/oracle-jdk17/legal/java.base/unicode.md
 java/oracle-jdk17/legal/java.base/zlib.md
 java/oracle-jdk17/legal/java.compiler/COPYRIGHT
@@ -384,4 +385,37 @@ java/oracle-jdk17/lib/server/libjvm.dylib
 java/oracle-jdk17/lib/shaders.metallib
 java/oracle-jdk17/lib/src.zip
 java/oracle-jdk17/lib/tzdb.dat
+java/oracle-jdk17/man/man1/jabswitch.1
+java/oracle-jdk17/man/man1/jaccessinspector.1
+java/oracle-jdk17/man/man1/jaccesswalker.1
+java/oracle-jdk17/man/man1/jar.1
+java/oracle-jdk17/man/man1/jarsigner.1
+java/oracle-jdk17/man/man1/java.1
+java/oracle-jdk17/man/man1/javac.1
+java/oracle-jdk17/man/man1/javadoc.1
+java/oracle-jdk17/man/man1/javap.1
+java/oracle-jdk17/man/man1/jcmd.1
+java/oracle-jdk17/man/man1/jconsole.1
+java/oracle-jdk17/man/man1/jdb.1
+java/oracle-jdk17/man/man1/jdeprscan.1
+java/oracle-jdk17/man/man1/jdeps.1
+java/oracle-jdk17/man/man1/jfr.1
+java/oracle-jdk17/man/man1/jhsdb.1
+java/oracle-jdk17/man/man1/jinfo.1
+java/oracle-jdk17/man/man1/jlink.1
+java/oracle-jdk17/man/man1/jmap.1
+java/oracle-jdk17/man/man1/jmod.1
+java/oracle-jdk17/man/man1/jpackage.1
+java/oracle-jdk17/man/man1/jps.1
+java/oracle-jdk17/man/man1/jrunscript.1
+java/oracle-jdk17/man/man1/jshell.1
+java/oracle-jdk17/man/man1/jstack.1
+java/oracle-jdk17/man/man1/jstat.1
+java/oracle-jdk17/man/man1/jstatd.1
+java/oracle-jdk17/man/man1/keytool.1
+java/oracle-jdk17/man/man1/kinit.1
+java/oracle-jdk17/man/man1/klist.1
+java/oracle-jdk17/man/man1/ktab.1
+java/oracle-jdk17/man/man1/rmiregistry.1
+java/oracle-jdk17/man/man1/serialver.1
 java/oracle-jdk17/release

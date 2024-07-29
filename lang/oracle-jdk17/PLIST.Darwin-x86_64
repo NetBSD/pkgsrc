@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin-x86_64,v 1.2 2023/05/05 18:00:52 adam Exp $
+@comment $NetBSD: PLIST.Darwin-x86_64,v 1.3 2024/07/29 06:28:18 adam Exp $
 bin/oracle-jdk17-jar
 bin/oracle-jdk17-jarsigner
 bin/oracle-jdk17-java
@@ -157,6 +157,7 @@ java/oracle-jdk17/legal/java.base/c-libutl.md
 java/oracle-jdk17/legal/java.base/cldr.md
 java/oracle-jdk17/legal/java.base/icu.md
 java/oracle-jdk17/legal/java.base/public_suffix.md
+java/oracle-jdk17/legal/java.base/siphash.md
 java/oracle-jdk17/legal/java.base/unicode.md
 java/oracle-jdk17/legal/java.compiler/COPYRIGHT
 java/oracle-jdk17/legal/java.compiler/LICENSE
