@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4683 2024/07/29 10:48:27 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4684 2024/07/29 11:29:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7371,3 +7371,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated wm/spectrwm to 3.6.0 [pin 2024-07-29]
 	Updated x11/xterm to 393 [pin 2024-07-29]
 	Updated sysutils/krusader to 2.8.1 [wiz 2024-07-29]
+	Updated archivers/p5-Archive-Extract to 0.88 [wen 2024-07-29]
