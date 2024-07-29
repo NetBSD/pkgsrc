@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/01/27 04:08:58 wen Exp $
+$NetBSD: distinfo,v 1.15 2024/07/29 04:46:47 wen Exp $
 
-BLAKE2s (User-Identity-1.01.tar.gz) = 88595ad40eb8984250b152f915ad3fef41133dd82e4b9c56154c76af3995920c
-SHA512 (User-Identity-1.01.tar.gz) = 541492a3a43dace6fddc5cdc237e64447e5b3871f4609c9a8b1304f250e57dac3c7cf2b17f6a11c8a9030ca40f72971e6439d275e6f9390680bb56013d5635a9
-Size (User-Identity-1.01.tar.gz) = 28933 bytes
+BLAKE2s (User-Identity-1.02.tar.gz) = 335a71aa7a0befe60d0d5bbbe649773924cb126761d3c871da9224fd8b73797f
+SHA512 (User-Identity-1.02.tar.gz) = abc96a5ed08a86fe1d68d176f1b972f11aa50249b1f5299a2f44b90f02bdcb0d9c76a132b4de2db927f9148bbe7194f431e3f7aba95ca7935fcbbc636cf9875e
+Size (User-Identity-1.02.tar.gz) = 29058 bytes
