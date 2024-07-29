@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/29 03:50:59 wen Exp $
+
+BLAKE2s (Hash-Ordered-0.014.tar.gz) = cc5d4e3d0b41cbe9e99605c01fc516ee6228ba509eb9bf652a5010c2ea962921
+SHA512 (Hash-Ordered-0.014.tar.gz) = 077abdd3b536f5b31d913c2c0849e1775f91daa5ca83734671088ab06d9fe11cf80f743e32c5db1bf70a874248337c3bebeafceef1a6e38078f92966474480c3
+Size (Hash-Ordered-0.014.tar.gz) = 36831 bytes
