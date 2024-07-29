@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/29 07:07:10 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_snapshot/__init__.py
+${PYSITELIB}/pytest_snapshot/__init__.pyc
+${PYSITELIB}/pytest_snapshot/__init__.pyo
+${PYSITELIB}/pytest_snapshot/_utils.py
+${PYSITELIB}/pytest_snapshot/_utils.pyc
+${PYSITELIB}/pytest_snapshot/_utils.pyo
+${PYSITELIB}/pytest_snapshot/_version.py
+${PYSITELIB}/pytest_snapshot/_version.pyc
+${PYSITELIB}/pytest_snapshot/_version.pyo
+${PYSITELIB}/pytest_snapshot/plugin.py
+${PYSITELIB}/pytest_snapshot/plugin.pyc
+${PYSITELIB}/pytest_snapshot/plugin.pyo
