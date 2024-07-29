@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/08/20 04:38:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/07/29 10:48:18 wiz Exp $
 bin/krusader
 man/ca/man1/krusader.1
 man/de/man1/krusader.1
@@ -6,6 +6,7 @@ man/it/man1/krusader.1
 man/man1/krusader.1
 man/nl/man1/krusader.1
 man/pt/man1/krusader.1
+man/ru/man1/krusader.1
 man/sv/man1/krusader.1
 man/uk/man1/krusader.1
 qt5/plugins/kf5/kio/kio_iso.so
