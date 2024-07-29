@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2021/12/06 12:43:50 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2024/07/29 12:32:38 wen Exp $
 
-BLAKE2s (Algorithm-Backoff-0.009.tar.gz) = 12abab8f4c6d04f93797d1aa3f2004839fba1c00bccbbb62f740b91bc6612f37
-SHA512 (Algorithm-Backoff-0.009.tar.gz) = e3764518941d11f6dcd0b69aa6206bf382a7ad00ad77eee96493ae237ffd0a6a54b1796e8947974a112fe5fcf6b148fc60c9d1cf8b073ee9b4a22e44640bccfc
-Size (Algorithm-Backoff-0.009.tar.gz) = 23444 bytes
+BLAKE2s (Algorithm-Backoff-0.010.tar.gz) = 26fd4d0f8372f5bc82d2307e44daac2ad5104e6ec7bbb248594127e254cd49e8
+SHA512 (Algorithm-Backoff-0.010.tar.gz) = 11849a4f27caf6bfc03bafa39b641cfa258804b93a70b607523fce215b3f143322ff7731418727264ab86f63db38844d0b3cf8d0096acda1f3815ac1504066bb
+Size (Algorithm-Backoff-0.010.tar.gz) = 24913 bytes
