@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/30 10:03:33 wen Exp $
+$NetBSD: distinfo,v 1.6 2024/07/29 01:29:30 wen Exp $
 
-BLAKE2s (Geo-Gpx-1.09.tar.gz) = c532e17c36cc67f2aa6b28d4030e27c89f8e281dcf7c3f3a965db64cf0fefda1
-SHA512 (Geo-Gpx-1.09.tar.gz) = 2b68b406dcfd60578e8f99813748c33af04f3ecc036ccb45d5f5d8b488b6c79d23fe6f641b15f9d73007274a2e8bef5cf020bda6aecd74310afbd743d5820dd3
-Size (Geo-Gpx-1.09.tar.gz) = 40946 bytes
+BLAKE2s (Geo-Gpx-1.11.tar.gz) = 1273c2e440e26bacf74bb2a1305adc5df3326975137c0e36519299860718b7ed
+SHA512 (Geo-Gpx-1.11.tar.gz) = 1e49ba4a1ff69686a80336db609254474b7455635d9a3e19a595fd93fbdc5833f4d097ee8e40cd2493c2827b2153c4d599c9127803de06c6eec84c825f3ca99e
+Size (Geo-Gpx-1.11.tar.gz) = 47924 bytes
