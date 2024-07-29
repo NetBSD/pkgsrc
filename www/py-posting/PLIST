@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:50:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/29 07:21:35 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,6 +24,9 @@ ${PYSITELIB}/posting/commands.pyo
 ${PYSITELIB}/posting/config.py
 ${PYSITELIB}/posting/config.pyc
 ${PYSITELIB}/posting/config.pyo
+${PYSITELIB}/posting/help_screen.py
+${PYSITELIB}/posting/help_screen.pyc
+${PYSITELIB}/posting/help_screen.pyo
 ${PYSITELIB}/posting/highlight_url.py
 ${PYSITELIB}/posting/highlight_url.pyc
 ${PYSITELIB}/posting/highlight_url.pyo
@@ -55,6 +58,9 @@ ${PYSITELIB}/posting/save_request.pyo
 ${PYSITELIB}/posting/suggesters.py
 ${PYSITELIB}/posting/suggesters.pyc
 ${PYSITELIB}/posting/suggesters.pyo
+${PYSITELIB}/posting/themes.py
+${PYSITELIB}/posting/themes.pyc
+${PYSITELIB}/posting/themes.pyo
 ${PYSITELIB}/posting/tuple_to_multidict.py
 ${PYSITELIB}/posting/tuple_to_multidict.pyc
 ${PYSITELIB}/posting/tuple_to_multidict.pyo
@@ -85,6 +91,9 @@ ${PYSITELIB}/posting/widgets/collection/new_request_modal.pyo
 ${PYSITELIB}/posting/widgets/datatable.py
 ${PYSITELIB}/posting/widgets/datatable.pyc
 ${PYSITELIB}/posting/widgets/datatable.pyo
+${PYSITELIB}/posting/widgets/input.py
+${PYSITELIB}/posting/widgets/input.pyc
+${PYSITELIB}/posting/widgets/input.pyo
 ${PYSITELIB}/posting/widgets/key_value.py
 ${PYSITELIB}/posting/widgets/key_value.pyc
 ${PYSITELIB}/posting/widgets/key_value.pyo
@@ -154,3 +163,6 @@ ${PYSITELIB}/posting/widgets/variable_autocomplete.pyo
 ${PYSITELIB}/posting/widgets/variable_input.py
 ${PYSITELIB}/posting/widgets/variable_input.pyc
 ${PYSITELIB}/posting/widgets/variable_input.pyo
+${PYSITELIB}/posting/xresources.py
+${PYSITELIB}/posting/xresources.pyc
+${PYSITELIB}/posting/xresources.pyo
