@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2022/01/04 20:55:40 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/07/29 07:24:26 wiz Exp $
 
-DISTNAME=	pyperclip-1.8.2
+DISTNAME=	pyperclip-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyperclip/}
 
@@ -11,6 +10,9 @@ HOMEPAGE=	https://github.com/asweigart/pyperclip
 COMMENT=	Python module for cross-platform clipboard functions
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 .include "../../mk/bsd.prefs.mk"
@@ -18,5 +20,5 @@ USE_LANGUAGES=	# none
 DEPENDS+=	xclip-[0-9]*:../../x11/xclip
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
