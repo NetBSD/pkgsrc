@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:16:05 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/07/29 12:52:33 wen Exp $
 
-BLAKE2s (CLASS-1.00.tar.gz) = b80d9f2d26dc2ea2a3ed4eaa1ac41f62ce786d083ab38ec2af6cbac0aa08bba6
-SHA512 (CLASS-1.00.tar.gz) = 6e6f782cc7d86e5a5e5f052fbc598374451ce0600a238480275c462f1782b70b68e0b4cc968efa349bfdf1736d587b9f8d21b95361ad0a0f22bb46b324c08451
-Size (CLASS-1.00.tar.gz) = 3579 bytes
+BLAKE2s (CLASS-v1.1.8.tar.gz) = f123ae45a8634cbd878d7ba5ff1b01fa2ea7d163184ed24ddcd7920c8a989b41
+SHA512 (CLASS-v1.1.8.tar.gz) = 7e00a1abf5c2a864198b04d3a22e0243d536e989dea98bfd7e4eeb32fd84f061535b3266caac3f8f4eb57e52a4df44d1ce1a1b0288b7360daea5f974a4fa47b1
+Size (CLASS-v1.1.8.tar.gz) = 6769 bytes
