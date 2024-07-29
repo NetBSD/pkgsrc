@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4665 2024/07/29 06:59:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4666 2024/07/29 07:07:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7352,3 +7352,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/oracle-jdk17 to 17.0.12 [adam 2024-07-29]
 	Updated net/grpc to 1.65.2 [adam 2024-07-29]
 	Updated lang/py-annotated-types to 0.7.0 [wiz 2024-07-29]
+	Added devel/py-test-snapshot version 0.9.0 [wiz 2024-07-29]
