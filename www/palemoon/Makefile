@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/07/27 14:04:15 abs Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/29 18:13:48 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -89,6 +89,10 @@ CWRAPPERS_APPEND.ld+=	${LINKER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
+.endif
+
+.if ${MACHINE_PLATFORM:MNetBSD-*-earm*}
+LDFLAGS+=		-Wl,--no-keep-memory
 .endif
 
 INSTALLATION_DIRS+=	share/applications
