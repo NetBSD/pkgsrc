@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/04/19 04:23:30 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/07/29 07:57:18 adam Exp $
 
-DISTNAME=	requirements_parser-0.9.0
+DISTNAME=	requirements_parser-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requirements-parser/}
