@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:33:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/29 07:29:03 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -45,6 +45,12 @@ ${PYSITELIB}/textual/_compositor.pyo
 ${PYSITELIB}/textual/_context.py
 ${PYSITELIB}/textual/_context.pyc
 ${PYSITELIB}/textual/_context.pyo
+${PYSITELIB}/textual/_debug.py
+${PYSITELIB}/textual/_debug.pyc
+${PYSITELIB}/textual/_debug.pyo
+${PYSITELIB}/textual/_dispatch_key.py
+${PYSITELIB}/textual/_dispatch_key.pyc
+${PYSITELIB}/textual/_dispatch_key.pyo
 ${PYSITELIB}/textual/_doc.py
 ${PYSITELIB}/textual/_doc.pyc
 ${PYSITELIB}/textual/_doc.pyo
@@ -120,9 +126,6 @@ ${PYSITELIB}/textual/_spatial_map.pyo
 ${PYSITELIB}/textual/_styles_cache.py
 ${PYSITELIB}/textual/_styles_cache.pyc
 ${PYSITELIB}/textual/_styles_cache.pyo
-${PYSITELIB}/textual/_system_commands.py
-${PYSITELIB}/textual/_system_commands.pyc
-${PYSITELIB}/textual/_system_commands.pyo
 ${PYSITELIB}/textual/_text_area_theme.py
 ${PYSITELIB}/textual/_text_area_theme.pyc
 ${PYSITELIB}/textual/_text_area_theme.pyo
@@ -150,9 +153,6 @@ ${PYSITELIB}/textual/_win_sleep.pyo
 ${PYSITELIB}/textual/_work_decorator.py
 ${PYSITELIB}/textual/_work_decorator.pyc
 ${PYSITELIB}/textual/_work_decorator.pyo
-${PYSITELIB}/textual/_worker_manager.py
-${PYSITELIB}/textual/_worker_manager.pyc
-${PYSITELIB}/textual/_worker_manager.pyo
 ${PYSITELIB}/textual/_wrap.py
 ${PYSITELIB}/textual/_wrap.pyc
 ${PYSITELIB}/textual/_wrap.pyo
@@ -388,6 +388,9 @@ ${PYSITELIB}/textual/lazy.pyo
 ${PYSITELIB}/textual/logging.py
 ${PYSITELIB}/textual/logging.pyc
 ${PYSITELIB}/textual/logging.pyo
+${PYSITELIB}/textual/map_geometry.py
+${PYSITELIB}/textual/map_geometry.pyc
+${PYSITELIB}/textual/map_geometry.pyo
 ${PYSITELIB}/textual/message.py
 ${PYSITELIB}/textual/message.pyc
 ${PYSITELIB}/textual/message.pyo
@@ -470,6 +473,9 @@ ${PYSITELIB}/textual/suggester.pyo
 ${PYSITELIB}/textual/suggestions.py
 ${PYSITELIB}/textual/suggestions.pyc
 ${PYSITELIB}/textual/suggestions.pyo
+${PYSITELIB}/textual/system_commands.py
+${PYSITELIB}/textual/system_commands.pyc
+${PYSITELIB}/textual/system_commands.pyo
 ${PYSITELIB}/textual/timer.py
 ${PYSITELIB}/textual/timer.pyc
 ${PYSITELIB}/textual/timer.pyo
@@ -651,6 +657,9 @@ ${PYSITELIB}/textual/widgets/select.pyo
 ${PYSITELIB}/textual/widgets/selection_list.py
 ${PYSITELIB}/textual/widgets/selection_list.pyc
 ${PYSITELIB}/textual/widgets/selection_list.pyo
+${PYSITELIB}/textual/widgets/tabbed_content.py
+${PYSITELIB}/textual/widgets/tabbed_content.pyc
+${PYSITELIB}/textual/widgets/tabbed_content.pyo
 ${PYSITELIB}/textual/widgets/text_area.py
 ${PYSITELIB}/textual/widgets/text_area.pyc
 ${PYSITELIB}/textual/widgets/text_area.pyo
@@ -660,3 +669,6 @@ ${PYSITELIB}/textual/widgets/tree.pyo
 ${PYSITELIB}/textual/worker.py
 ${PYSITELIB}/textual/worker.pyc
 ${PYSITELIB}/textual/worker.pyo
+${PYSITELIB}/textual/worker_manager.py
+${PYSITELIB}/textual/worker_manager.pyc
+${PYSITELIB}/textual/worker_manager.pyo
