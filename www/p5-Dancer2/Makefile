@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2024/01/07 01:36:12 wen Exp $
+# $NetBSD: Makefile,v 1.70 2024/07/29 07:19:01 wen Exp $
 
-DISTNAME=	Dancer2-1.1.0
+DISTNAME=	Dancer2-1.1.1
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CR/CROMEDOME/}
