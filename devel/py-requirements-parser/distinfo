@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/04/19 04:23:30 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/07/29 07:57:19 adam Exp $
 
-BLAKE2s (requirements_parser-0.9.0.tar.gz) = fa85e8a1d00849b63156b63f19a27763661da4e0b38f09533ce8afc09d1dd6af
-SHA512 (requirements_parser-0.9.0.tar.gz) = 5efe2597df306dd8eddea1cab506a2d5f07df336eff54975ffca66d6d8ee09c4f5b6017f8cbb56fd95317d78c1eb931ae3e5ac6021780876aca6ef4aefca9ba4
-Size (requirements_parser-0.9.0.tar.gz) = 21997 bytes
+BLAKE2s (requirements_parser-0.10.2.tar.gz) = bf0021d96a5d580c527a5d15b2163ca2f0b077f51b7c96af4f872d212bd04001
+SHA512 (requirements_parser-0.10.2.tar.gz) = 8966ea18b96398b5c570660751a7694141fdc218db8eb776389a4735f62003d84d760897a125b03ca811477134545dc58aa8d4bd7d8091aa95729e100795d9b0
+Size (requirements_parser-0.10.2.tar.gz) = 23477 bytes
