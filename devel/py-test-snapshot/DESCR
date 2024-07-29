@@ -1,0 +1,17 @@
+A plugin for snapshot testing with pytest.
+
+This library was inspired by jest's snapshot testing. Snapshot
+testing can be used to test that the value of an expression does
+not change unexpectedly. The added benefits of snapshot testing
+are that
+
+* They are easy to create.
+* They are easy to update when the expected value of a test
+  changes.
+
+Instead of manually updating tests when the expected value of an
+expression changes, the developer simply needs to
+
+* run pytest --snapshot-update to update the snapshot tests
+* verify that the snapshot files contain the new expected results
+* commit the snapshot changes to version control
