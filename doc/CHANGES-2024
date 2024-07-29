@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4671 2024/07/29 07:26:19 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4672 2024/07/29 07:27:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7358,3 +7358,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-posting to 1.9.3 [wiz 2024-07-29]
 	Updated x11/py-pyperclip to 1.9.0 [wiz 2024-07-29]
 	Updated textproc/py-sphinx-autoapi to 3.2.1 [wiz 2024-07-29]
+	Updated math/p5-Spreadsheet-Read to 0.90 [wen 2024-07-29]
