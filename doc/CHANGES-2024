@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4690 2024/07/29 12:53:30 wen Exp $
+$NetBSD: CHANGES-2024,v 1.4691 2024/07/29 17:47:00 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7378,3 +7378,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-B-Keywords to 1.27 [wen 2024-07-29]
 	Updated devel/p5-Carp-Assert-More to 2.4.0 [wen 2024-07-29]
 	Updated devel/p5-CLASS to 1.1.8 [wen 2024-07-29]
+	Updated lang/chicken5-boot to 5.4.0 [ktnb 2024-07-29]
