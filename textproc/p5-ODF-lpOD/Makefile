@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/04/28 00:39:52 wen Exp $
+# $NetBSD: Makefile,v 1.9 2024/07/29 07:51:27 wen Exp $
 
-DISTNAME=	ODF-lpOD-1.200
+DISTNAME=	ODF-lpOD-2.001
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ODF/}
