@@ -1,0 +1,16 @@
+$NetBSD: patch-platform_media_libtheora_moz.build,v 1.1 2024/07/29 18:13:48 nia Exp $
+
+Runtime CPU detection on ARM is currently unimplemented for anything
+except Linux.
+
+--- platform/media/libtheora/moz.build.orig	2024-07-29 10:59:14.581061883 +0000
++++ platform/media/libtheora/moz.build
+@@ -82,7 +82,7 @@ if CONFIG['INTEL_ARCHITECTURE']:
+             'lib/x86/x86state.c',
+         ]
+ 
+-if CONFIG['GNU_AS']:
++if CONFIG['GNU_AS'] and CONFIG['OS_ARCH'] == 'Linux':
+     if CONFIG['CPU_ARCH'] == 'arm':
+         SOURCES += [
+             'lib/arm/armcpu.c',
