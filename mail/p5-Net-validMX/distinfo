@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:54:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/07/29 03:11:04 wen Exp $
 
-BLAKE2s (Net-validMX-2.5.0.tar.gz) = 80f7080508343c2a944c047b7ede34150ae4d6582764a0706ab9f0852542a459
-SHA512 (Net-validMX-2.5.0.tar.gz) = 2e9c6fdbfc074a3de4e3a4ec898d560f3f163729f01fbbf12320b062babe74a42a484358fc63b5510f2de89179bec1e4c1928f6d722b1dd1d0f50268ad407861
-Size (Net-validMX-2.5.0.tar.gz) = 15064 bytes
+BLAKE2s (Net-validMX-2.5.2.tar.gz) = ea9b8ba01b5ea9edfde48167335a77ad1653c0717e451bfeddae24be49b64373
+SHA512 (Net-validMX-2.5.2.tar.gz) = dbf82da388a6e4e4f45f3ecb08fd4cf54741db5b6166a6a72e288f2556d47de08b557a1303d6b9ab3df2c76099cd3ba80a8deb6f5fc5b78091ba7a4ff1545e18
+Size (Net-validMX-2.5.2.tar.gz) = 24179 bytes
