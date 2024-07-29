@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2023/07/06 09:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/07/29 11:52:36 wen Exp $
 
-DISTNAME=	POE-Component-IRC-6.90
+DISTNAME=	POE-Component-IRC-6.93
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	chat perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
