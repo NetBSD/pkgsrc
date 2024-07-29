@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2023/10/14 01:13:32 markd Exp $
+$NetBSD: distinfo,v 1.28 2024/07/29 02:53:53 wen Exp $
 
-BLAKE2s (MIME-tools-5.510.tar.gz) = 3bb09a24ba148cc97d8e96341709a6a678bee7802a018b06a1e4fd96b7f2a3b8
-SHA512 (MIME-tools-5.510.tar.gz) = 86d110cc3ed3e9744a07a7b671df713708ab70f57aea858a9570bd021102b4cea91a869239f6c40611f1b1fae190e1b6d1bd65b54914ffc3a41fdf9160977328
-Size (MIME-tools-5.510.tar.gz) = 417208 bytes
-SHA1 (patch-lib_MIME_Decoder_QuotedPrint.pm) = b512ee827e20fe602da35383cd6ce6932291cc49
+BLAKE2s (MIME-tools-5.515.tar.gz) = 6c976c3a7f05aff0597f026b84e6456ca45c17c1c9ce2304eea3b6de4c1c8079
+SHA512 (MIME-tools-5.515.tar.gz) = 3a9bbc1b58762170bfb3ccdc2d5fda006fcfdb5eca6092555011819e9fd0b68f1b0a178c86dc7e95a2e6f8d89d6988b1c26823d06ca201859ddc87f9e37981db
+Size (MIME-tools-5.515.tar.gz) = 424146 bytes
