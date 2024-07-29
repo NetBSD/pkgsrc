@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/29 07:07:10 wiz Exp $
+
+BLAKE2s (pytest-snapshot-0.9.0.tar.gz) = 2c1d18f9e8e4bd15f0e305d6e8c3a78a774a73dcd4a6228c79b3bfc681149125
+SHA512 (pytest-snapshot-0.9.0.tar.gz) = ad0ce310ea8927dfac1ae07bae0bfb6651cfe4cb9e0ec17475923eaee4a64cac99ca24840da3831dfc24a514cde09cd9433fa896316646ba40078b46d8f079db
+Size (pytest-snapshot-0.9.0.tar.gz) = 19877 bytes
