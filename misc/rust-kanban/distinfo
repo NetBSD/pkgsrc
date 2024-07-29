@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/07/19 09:47:13 pin Exp $
+$NetBSD: distinfo,v 1.13 2024/07/29 07:28:53 pin Exp $
 
 BLAKE2s (addr2line-0.22.0.crate) = 834589b7006b3b8d1e40e66abf813d18a5e9d6fac9433c24b0b18920c435a58e
 SHA512 (addr2line-0.22.0.crate) = b334f51bd369348b4446805b4f624ec9b4cc8eefcc53ceb57b523ff55bf018d1dfe23259daf48d1878170ad4fcb44181d4738456eb5e35ede6932ff29686268e
@@ -396,9 +396,9 @@ Size (reqwest-0.12.5.crate) = 177108 bytes
 BLAKE2s (ring-0.17.8.crate) = 9b7fe9b075087b8d63c6aef6af4e8d76565429d17bb8b879e509ac92a3d1ab41
 SHA512 (ring-0.17.8.crate) = e4966409a4078ee43bfc9cc659d08ad28419effe2a729c8c275361a7fe0620a3c727009bcfb1d0bab265af2bc107b50c19d868a4e80da7a8bb55f97e8b214358
 Size (ring-0.17.8.crate) = 4188554 bytes
-BLAKE2s (rust-kanban-0.10.1.tar.gz) = 3ffb18a9ca19b6724dda4ca08932471ea05e2f7d976a23bc91c6d958bb8502dc
-SHA512 (rust-kanban-0.10.1.tar.gz) = 2f9da5c89ed3d93c4d6c3bcc4fc2de26eae123aa27e359fed6f7ad5d537913740dbf34f512495cc3ee44cb006a27e8c9ccf7bb9e76977a334eed695506aff2e4
-Size (rust-kanban-0.10.1.tar.gz) = 161263 bytes
+BLAKE2s (rust-kanban-0.10.2.tar.gz) = 5624edce341669b57d77eebe1571c1c86944c67e3f3e009ecbbd446a5fa251d9
+SHA512 (rust-kanban-0.10.2.tar.gz) = 09e2262f206dee3d0b1ba07d3eba421f5cb3a6c340df4d16bc3948903369e48115ac1ead72317785a8f014d26628b66d5c1b64d2532529d9c558a739274e8e23
+Size (rust-kanban-0.10.2.tar.gz) = 167772 bytes
 BLAKE2s (rustc-demangle-0.1.24.crate) = d1f3a5297eef667d93ae97758e4ce9ec9638a15af9e432cf197c0103e95dde1c
 SHA512 (rustc-demangle-0.1.24.crate) = eb897c35300b87766e6105917a907fca1c5b1f7691fc03c6c1aaf38075ac883a73d1eb54a245d13ba59c7b0f0333d6543e23fc1b1c542fbbd5c750a84660b9e8
 Size (rustc-demangle-0.1.24.crate) = 29047 bytes
