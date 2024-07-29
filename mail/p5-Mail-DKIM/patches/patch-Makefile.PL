@@ -1,13 +1,11 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2024/02/04 05:48:29 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2024/07/29 01:54:28 wen Exp $
 
-Install the scripts.
-
---- Makefile.PL.orig	2024-01-24 04:01:35.000000000 +0000
+--- Makefile.PL.orig	2024-07-29 01:36:08.663599670 +0000
 +++ Makefile.PL
-@@ -41,6 +41,7 @@ my %WriteMakefileArgs = (
+@@ -42,6 +42,7 @@ my %WriteMakefileArgs = (
      "lib" => 0
    },
-   "VERSION" => "1.20240124",
+   "VERSION" => "1.20240619",
 +  "EXE_FILES" => [qw(scripts/arcsign.pl scripts/arcverify.pl scripts/dkimsign.pl scripts/dkimverify.pl)],
    "test" => {
      "TESTS" => "t/*.t"
