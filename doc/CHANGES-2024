@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4694 2024/07/29 20:09:38 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.4695 2024/07/29 20:26:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7382,3 +7382,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/chicken5 to 5.4.0 [ktnb 2024-07-29]
 	Updated mail/mu to 1.12.6 [ktnb 2024-07-29]
 	Updated lang/owl-lisp to 0.2.1 [ktnb 2024-07-29]
+	Updated net/nsd to 4.10.0 [ryoon 2024-07-29]
