@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:05:21 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/07/29 11:52:36 wen Exp $
 
-BLAKE2s (POE-Component-IRC-6.90.tar.gz) = 7e730a410fc3861b164d059bd54cde3b70cbfa9093e889db3c202a435e5e3f65
-SHA512 (POE-Component-IRC-6.90.tar.gz) = c8106bf740a60dc075f99df40c96f30232f69f1369ea5f68ce10636ab0640536ef2c806d73e721f21c21043ab7c386a1e54e099241bd52070648ffc9fd010750
-Size (POE-Component-IRC-6.90.tar.gz) = 375501 bytes
+BLAKE2s (POE-Component-IRC-6.93.tar.gz) = 76729ea4cf2286e42fdc1216fb9c7ce74d99e1c8d76c2dd05ca2bc88bc2a40cd
+SHA512 (POE-Component-IRC-6.93.tar.gz) = 334535cb4f02c63fbc8b457b9e5c6d8cb96ef0ac159ac6f810d7cda337f55a729b73115a65dfca11c44ca286d355667500b021cd5408943a1afd2d325ece7be0
+Size (POE-Component-IRC-6.93.tar.gz) = 377897 bytes
