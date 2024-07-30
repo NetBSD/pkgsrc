@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2023/08/25 06:33:47 wen Exp $
+$NetBSD: distinfo,v 1.27 2024/07/30 03:05:34 wen Exp $
 
-BLAKE2s (SQL-Translator-1.63.tar.gz) = 607207a5e12f69569d27e2abf66d9c8d1eae45fa69836cdda55bed7793ee6656
-SHA512 (SQL-Translator-1.63.tar.gz) = e1809cbe110238f8fd1f2e35a1107d833b9c94754c331fccae60c89eb3ce38448b18f03b2497f13ffb7a9bcd1419c63a728e24654b92b04dd2d23b5a82a6a66e
-Size (SQL-Translator-1.63.tar.gz) = 419418 bytes
+BLAKE2s (SQL-Translator-1.65.tar.gz) = 4f3b1a1f305f4fc2d4e17bf7ec38ca61a8a377f75eea4d28b9e96d5fbd3b1847
+SHA512 (SQL-Translator-1.65.tar.gz) = f321edfb8a8c8ee2f5030b1dfed1c070b3e684790fe0193a6a164db304b242f1ca7680caef9359dbefc20bed3768c7d40880cf94bfe114c5e3f9e6c57a758d6f
+Size (SQL-Translator-1.65.tar.gz) = 405476 bytes
