@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/30 13:40:25 wen Exp $
+$NetBSD: distinfo,v 1.7 2024/07/30 06:45:39 wen Exp $
 
-BLAKE2s (Term-ReadLine-Gnu-1.45.tar.gz) = b98b2c6fc54626960df4be9ccc8d7af678773f9284893cf776ac1a3456217505
-SHA512 (Term-ReadLine-Gnu-1.45.tar.gz) = a195b26609ce8b723edfa334e44260c0c246a8a33b781a0a7d4922ade38541fe5e5e7bdd162c81eb7190afcfcce6fc1595089d40ab7036d17ece794bc3ecb102
-Size (Term-ReadLine-Gnu-1.45.tar.gz) = 205786 bytes
+BLAKE2s (Term-ReadLine-Gnu-1.46.tar.gz) = e7880a48036ccd886808cce4d0b280aab060bacf853a49c47497fa4f2a9cb399
+SHA512 (Term-ReadLine-Gnu-1.46.tar.gz) = 574c97b5915f6afbe75506758aa0def7a23372ef3c696e081c8e9732a57828b29ec8c9d643f767188d264a212b60595f43cb1c59bf8ffee74af73c9588a362b9
+Size (Term-ReadLine-Gnu-1.46.tar.gz) = 204896 bytes
