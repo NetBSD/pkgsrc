@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2024/06/09 14:55:16 vins Exp $
+# $NetBSD: options.mk,v 1.3 2024/07/30 14:09:34 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.meli
 
 PKG_SUPPORTED_OPTIONS+=	dbus debug gpgme notmuch sqlite3 w3m
-PKG_SUGGESTED_OPTIONS=	dbus gpgme notmuch
+PKG_SUGGESTED_OPTIONS=	dbus gpgme notmuch sqlite3
 
 .include "../../mk/bsd.options.mk"
 
