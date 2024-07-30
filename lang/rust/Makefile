@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2024/07/15 03:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.313 2024/07/30 18:01:15 tnn Exp $
 
 DISTNAME=	rustc-1.79.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -64,12 +64,6 @@ CONFIGURE_ARGS+=	--enable-vendor
 
 # cargo defaults to using the number of available CPUs
 MAKE_ENV+=		CARGO_BUILD_JOBS=${_MAKE_JOBS_N}
-
-# Rust builds some bundled components with strict version requirements, ensure
-# that any conflicting packages pulled in via dependencies are not buildlinked.
-BUILDLINK_FILES_CMD.libssh2=	${TRUE}
-BUILDLINK_FILES_CMD.xz=		${TRUE}
-MAKE_ENV+=			LZMA_API_STATIC=1
 
 # MacOS X 10.7 is the oldest supported version. See
 # ${WRKSRC}/src/bootstrap/lib.rs
@@ -491,6 +485,13 @@ provide-libgcc-for-bootstrap:
 	cp ${FILESDIR}/libgcc_s.so.1 ${RUST_BOOTSTRAP_PATH}/lib/.
 .  endif
 .endif
+
+# Rust builds some bundled components with strict version requirements, ensure
+# that any conflicting packages pulled in via dependencies are not buildlinked.
+BUILDLINK_FILES_CMD.xz=		${TRUE}
+MAKE_ENV+=			LZMA_API_STATIC=1
+pre-configure:
+	${RM} -rf ${BUILDLINK_DIR}/include/libssh2*
 
 #
 # These are essentially copies of the "all", "test", and "install" Makefile
