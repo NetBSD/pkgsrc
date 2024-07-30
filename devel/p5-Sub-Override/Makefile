@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/07/06 09:40:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/07/30 06:26:44 wen Exp $
 
-DISTNAME=	Sub-Override-0.09
+DISTNAME=	Sub-Override-0.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
