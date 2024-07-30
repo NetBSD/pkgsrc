@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/06/09 14:55:16 vins Exp $
+# $NetBSD: Makefile,v 1.20 2024/07/30 14:09:34 vins Exp $
 
-DISTNAME=	v0.8.5
+DISTNAME=	v0.8.6
 PKGNAME=	${DISTNAME:S|^v|meli-|}
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -16,7 +16,7 @@ BROKEN_ON_PLATFORM=	*-*-powerpc64 *-*-sparc64
 # error[E0308]: mismatched types
 ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 
-USE_TOOLS+=	pax pkg-config
+USE_TOOLS+=	patch pax pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
@@ -30,7 +30,9 @@ CARGO_FEATURES=			cli-docs jmap regexp smtp
 PKG_DOCS=	meli/docs/external-tools.md meli/docs/mail.vim
 DOCDIR=		share/doc/${PKGBASE}
 
-WRKSRC=	${WRKDIR}/meli
+WRKSRC=		${WRKDIR}/meli
+VENDORSRC=	${WRKDIR}/vendor
+VENDORPATCH=	patch-libsqlite3-sys_Cargo.toml
 
 MAKE_ENV+=	OPENSSL_DIR=${SSLBASE:Q}
 
@@ -43,6 +45,15 @@ RUSTFLAGS+=	-C link-arg=-L${PREFIX}/lib
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/man7 ${DOCDIR}
+
+post-patch:
+	@${STEP_MSG} "Patching vendor crates"
+.for i in ${VENDORPATCH}
+	@${STEP_MSG} "Applying pkgsrc patch ${FILESDIR}/${i}"
+	${RUN}${CP} ${FILESDIR}/${i} ${VENDORSRC}
+	${RUN}cd ${VENDORSRC} && \
+	  ${PATCH} -b -p0 < ${VENDORSRC}/${i}
+.endfor
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/meli	\

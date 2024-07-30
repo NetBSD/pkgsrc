@@ -1,0 +1,16 @@
+$NetBSD: patch-libsqlite3-sys_Cargo.toml,v 1.1 2024/07/30 14:09:35 vins Exp $
+
+"bundled" feature is needed to support SQLite > 3.14
+https://github.com/rusqlite/rusqlite/issues/1507
+
+--- libsqlite3-sys-0.26.0/Cargo.toml.orig	2024-07-30 11:59:26.707973025 +0000
++++ libsqlite3-sys-0.26.0/Cargo.toml
+@@ -69,7 +69,7 @@ bundled-windows = [
+     "bundled_bindings",
+ ]
+ bundled_bindings = []
+-default = ["min_sqlite_version_3_14_0"]
++default = ["min_sqlite_version_3_14_0", "bundled"]
+ in_gecko = []
+ min_sqlite_version_3_14_0 = [
+     "pkg-config",
