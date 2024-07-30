@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2024/01/31 17:57:59 adam Exp $
+# $NetBSD: Makefile,v 1.55 2024/07/30 11:52:19 adam Exp $
 
-DISTNAME=	tdb-1.4.10
+DISTNAME=	tdb-1.4.11
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/tdb/
 
