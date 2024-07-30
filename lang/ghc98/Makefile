@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/06/20 12:49:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/30 11:38:42 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -101,6 +101,9 @@ CONFIGURE_ENV+=		ac_cv_path_HSCOLOUR=
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.common}
 CONFIGURE_ARGS+=	--with-system-libffi
+
+# workaround for http://gnats.netbsd.org/58379
+CFLAGS+=	-D__STDC_NO_ATOMICS__
 
 # CFLAGS and LDFLAGS are currently not honored by "./configure". Since
 # LDFLAGS contains rpath flags it's very important to force GHC to honor
