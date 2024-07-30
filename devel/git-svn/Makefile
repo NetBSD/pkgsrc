@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2024/06/28 14:06:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2024/07/30 11:48:45 adam Exp $
 
 .include "../../devel/git/Makefile.version"
 
 DISTNAME=	# empty
 PKGNAME=	git-svn-${GIT_VERSION}
-PKGREVISION=	1
 CATEGORIES+=	meta-pkgs devel
 DISTFILES=	# empty
 
