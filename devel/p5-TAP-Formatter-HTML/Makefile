@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/07/06 09:40:05 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/07/30 06:42:27 wen Exp $
 
-DISTNAME=	TAP-Formatter-HTML-0.11
+DISTNAME=	TAP-Formatter-HTML-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SP/SPURKIS/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SC/SCHWIGON/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/TAP::Formatter::HTML
