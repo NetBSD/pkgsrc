@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4704 2024/07/30 06:30:29 wen Exp $
+$NetBSD: CHANGES-2024,v 1.4705 2024/07/30 06:35:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7396,3 +7396,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-rapidfuzz to 3.9.5 [adam 2024-07-30]
 	Updated devel/p5-Software-License to 0.104006 [wen 2024-07-30]
 	Updated devel/p5-Sub-Override to 0.12 [wen 2024-07-30]
+	Updated devel/p5-System-Command to 1.122 [wen 2024-07-30]
