@@ -1,4 +1,4 @@
-$NetBSD: patch-opendkim_opendkim.c,v 1.1 2023/04/21 13:03:09 manu Exp $
+$NetBSD: patch-opendkim_opendkim.c,v 1.2 2024/07/30 13:49:04 manu Exp $
 
 Add OmitHeadersDB directive to specify file containing per-recipient 
 list of headers to not use in signature. The file format is:
@@ -64,7 +64,7 @@ From upstream https://github.com/trusteddomainproject/OpenDKIM/pull/173
 +
 +	strlcpy(tmp, rcpt, sizeof(tmp));
 +	status = dkim_mail_parse(tmp, &user, &domain);
-+	if (status != 0)
++	if (status != 0 || user == NULL || domain == NULL)
 +	{
 +		return -1;
 +	}
