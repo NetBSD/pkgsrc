@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/23 02:29:17 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/07/30 08:10:19 wiz Exp $
 bin/scdoc
-lib/pkgconfig/scdoc.pc
 man/man1/scdoc.1
 man/man5/scdoc.5
+share/pkgconfig/scdoc.pc
