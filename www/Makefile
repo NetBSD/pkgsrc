@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1799 2024/07/26 08:05:23 nia Exp $
+# $NetBSD: Makefile,v 1.1800 2024/07/30 17:05:18 vins Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -954,6 +954,7 @@ SUBDIR+=	qt6-qthttpserver
 SUBDIR+=	qt6-qtwebchannel
 SUBDIR+=	qutebrowser
 SUBDIR+=	ramaze
+SUBDIR+=	redlib
 SUBDIR+=	rekonq
 SUBDIR+=	restish
 SUBDIR+=	ruby-actioncable61
