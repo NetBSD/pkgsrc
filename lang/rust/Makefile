@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2024/07/30 18:01:15 tnn Exp $
+# $NetBSD: Makefile,v 1.314 2024/07/30 18:06:32 tnn Exp $
 
 DISTNAME=	rustc-1.79.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -141,17 +141,9 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips"
 CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 .endif
 
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/android-sdk.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/debuglink.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/run.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/run-docker.sh
+CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/core/src/unicode/printable.py
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/build-std-detect.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/dox.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run-docker.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/run.sh
-CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/style.sh
-
+CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/*.sh
 CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 CHECK_PORTABILITY_SKIP+=	vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 
