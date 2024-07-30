@@ -1,23 +1,23 @@
-$NetBSD: patch-src_cmd_INIT_package.sh,v 1.1 2023/09/18 14:11:41 vins Exp $
+$NetBSD: patch-bin_package,v 1.1 2024/07/30 15:17:08 vins Exp $
 
-install target fixes.
+install target fixes, for pkgsrc compatibility.
 
---- src/cmd/INIT/package.sh.orig	2023-09-15 02:28:23.000000000 +0000
-+++ src/cmd/INIT/package.sh
-@@ -2548,8 +2548,8 @@ do_install() # dir [ command ... ]
+--- bin/package.orig	2024-07-02 02:41:19.000000000 +0000
++++ bin/package
+@@ -2666,8 +2666,8 @@ do_install() # dir [ command ... ]
  	done
  	# set install directories
  	bindir=$dd/bin
--	man1dir=${dd:-/usr}/share/man/man1
 -	fundir=${dd:-/usr}/share/fun
-+	man1dir=${dd:-/usr}/man/man1
+-	mandir=${dd:-/usr}/share/man
 +	fundir=${dd:-/usr}/libexec/ksh93
- 	# and off we go
- 	trace mkdir -p "$bindir" "$man1dir" || exit
- 	for f
-@@ -2557,9 +2557,10 @@ do_install() # dir [ command ... ]
- 		trace cp "bin/$f" "$bindir/" || exit
- 		# install manual and autoloadable functions
++	mandir=${dd:-/usr}/man
+ 	man1dir=$mandir/man1
+ 	man3dir=$mandir/man3
+ 	libdir=$dd/lib
+@@ -2686,9 +2686,10 @@ do_install() # dir [ command ... ]
+ 		fi
+ 		# install manual pages and autoloadable functions
  		case $f in
 -		ksh)	trace cp "$PACKAGEROOT/src/cmd/ksh93/sh.1" "$man1dir/ksh.1" || exit
 +		ksh)	trace cp "$PACKAGEROOT/src/cmd/ksh93/sh.1" "$man1dir/ksh93.1" || exit
