@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/07/04 05:55:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/07/30 11:48:45 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-perlscripts-${GIT_VERSION}
-PKGREVISION=	3
 COMMENT=	Git commands that rely on Perl
 
 CONFLICTS+=	git-base<2.41.0nb1
