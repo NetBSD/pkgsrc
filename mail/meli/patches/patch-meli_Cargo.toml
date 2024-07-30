@@ -1,0 +1,24 @@
+$NetBSD: patch-meli_Cargo.toml,v 1.1 2024/07/30 14:09:35 vins Exp $
+
+Avoid static linking of vendored libraries
+
+--- meli/Cargo.toml.orig	2024-06-08 08:55:13.000000000 +0000
++++ meli/Cargo.toml
+@@ -52,7 +52,7 @@ version = "0.2.3"
+ optional = true
+ 
+ [features]
+-default = ["sqlite3", "notmuch", "smtp", "dbus-notifications", "gpgme", "cli-docs", "jmap", "static"]
++default = ["sqlite3", "notmuch", "smtp", "dbus-notifications", "gpgme", "cli-docs", "jmap"]
+ notmuch = ["melib/notmuch"]
+ jmap = ["melib/jmap"]
+ sqlite3 = ["melib/sqlite3"]
+@@ -69,7 +69,7 @@ http-static = ["melib/http-static"]
+ sqlite3-static = ["melib/sqlite3-static"]
+ dbus-static = ["dep:notify-rust", "notify-rust?/d_vendored"]
+ libz-static = ["dep:libz-sys", "libz-sys?/static"]
+-static = ["tls-static", "http-static", "sqlite3-static", "dbus-static", "libz-static"]
++# static = ["tls-static", "http-static", "sqlite3-static", "dbus-static", "libz-static"]
+ 
+ # Print tracing logs as meli runs in stderr
+ # enable for debug tracing logs: build with --features=debug-tracing and export MELI_DEBUG_STDERR
