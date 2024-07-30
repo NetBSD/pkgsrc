@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/07/28 10:26:08 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/07/30 03:50:59 adam Exp $
 
-DISTNAME=	incremental-24.7.1
+DISTNAME=	incremental-24.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/incremental/}
