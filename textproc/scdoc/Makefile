@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/07/30 08:10:19 wiz Exp $
 
-DISTNAME=	scdoc-1.10.1
+DISTNAME=	1.11.3
+PKGNAME=	scdoc-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	https://git.sr.ht/~sircmpwn/scdoc/refs/1.10.1/
+MASTER_SITES=	https://git.sr.ht/~sircmpwn/scdoc/archive/
+DIST_SUBDIR=	scdoc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~sircmpwn/scdoc/
 COMMENT=	Simple man page generator
 LICENSE=	mit
+
+WRKSRC=		${WRKDIR}/scdoc-${DISTNAME}
 
 USE_TOOLS+=	gmake
 
