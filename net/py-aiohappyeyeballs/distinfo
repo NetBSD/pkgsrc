@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/31 08:44:12 adam Exp $
+
+BLAKE2s (aiohappyeyeballs-2.3.2.tar.gz) = 0bcede2c9927ee80fd94c5d311c04456cb5151e5baf128939297b759a1e1114e
+SHA512 (aiohappyeyeballs-2.3.2.tar.gz) = 7628918fc2ae4554900bce6eb5fa1db3950587aca53284150a92a40d35fd4b1e8c716cf42488755ee1811a946e79ab57841633ecd1ba18b85a68776458c08d24
+Size (aiohappyeyeballs-2.3.2.tar.gz) = 11333 bytes

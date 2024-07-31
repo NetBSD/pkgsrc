@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/07/31 08:44:12 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/aiohappyeyeballs/__init__.py
+${PYSITELIB}/aiohappyeyeballs/__init__.pyc
+${PYSITELIB}/aiohappyeyeballs/__init__.pyo
+${PYSITELIB}/aiohappyeyeballs/impl.py
+${PYSITELIB}/aiohappyeyeballs/impl.pyc
+${PYSITELIB}/aiohappyeyeballs/impl.pyo
+${PYSITELIB}/aiohappyeyeballs/py.typed
+${PYSITELIB}/aiohappyeyeballs/types.py
+${PYSITELIB}/aiohappyeyeballs/types.pyc
+${PYSITELIB}/aiohappyeyeballs/types.pyo
+${PYSITELIB}/aiohappyeyeballs/utils.py
+${PYSITELIB}/aiohappyeyeballs/utils.pyc
+${PYSITELIB}/aiohappyeyeballs/utils.pyo
