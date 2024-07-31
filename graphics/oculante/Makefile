@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2024/05/21 09:20:32 pin Exp $
+# $NetBSD: Makefile,v 1.83 2024/07/31 18:00:09 pin Exp $
 
-DISTNAME=	oculante-0.8.22
-PKGREVISION=	1
+DISTNAME=	oculante-0.8.23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -16,6 +15,9 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config perl
 
