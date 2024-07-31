@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4726 2024/07/31 17:54:42 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4727 2024/07/31 17:56:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7434,3 +7434,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cargo-modules to 0.16.8 [pin 2024-07-31]
 	Updated graphics/gifski to 1.32.0 [pin 2024-07-31]
 	Updated devel/git-branchless to 0.9.0 [pin 2024-07-31]
+	Updated chat/gomuks to 0.3.1 [pin 2024-07-31]
