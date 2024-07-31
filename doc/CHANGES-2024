@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4717 2024/07/30 17:15:20 vins Exp $
+$NetBSD: CHANGES-2024,v 1.4718 2024/07/31 07:10:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7410,3 +7410,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/ximaging to 1.8 [vins 2024-07-30]
 	Added www/redlib version 0.35.1 [vins 2024-07-30]
 	Removed www/libreddit successor www/redlib [vins 2024-07-30]
+	Updated devel/blosc2 to 2.15.1 [adam 2024-07-31]
+	Updated graphics/libavif to 1.1.1 [adam 2024-07-31]
+	Updated net/py-grpcio to 1.65.2 [adam 2024-07-31]
+	Updated net/py-grpcio-testing to 1.65.2 [adam 2024-07-31]
+	Updated net/py-grpcio-tools to 1.65.2 [adam 2024-07-31]
