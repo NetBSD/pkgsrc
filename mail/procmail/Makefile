@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2023/03/01 13:37:26 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2024/07/31 22:31:50 vins Exp $
 
-DISTNAME=	procmail-3.22
-PKGREVISION=	5
+DISTNAME=	procmail-3.24
 CATEGORIES=	mail
-#MASTER_SITES=	ftp://ftp.procmail.org/pub/procmail/
-# 3.24 is at https://github.com/BuGlessRB/procmail/archive/refs/tags/v3.24.tar.gz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=BuGlessRB/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kim@NetBSD.org
 HOMEPAGE=	https://github.com/BuGlessRB/procmail
@@ -12,6 +11,10 @@ COMMENT=	Local mail delivery agent
 LICENSE=	artistic OR gnu-gpl-v2
 
 MAKE_JOBS_SAFE=	no
+
+### Inlining functions (implied by -O3 or higher) cause the strstr() test
+### to enter an infinite loop so disable it.  This fixes PR pkg/30999.
+CFLAGS+=	-fno-inline-functions
 
 MAKE_ENV+=		SHELL=${SH:Q} CHMOD=${CHMOD:Q}
 INSTALL_TARGET=		install-suid install.man
@@ -23,14 +26,14 @@ SPECIAL_PERMS+=	bin/procmail ${SETUID_ROOT_PERMS}
 
 BUILD_DEFS+=	PROCMAIL_MAILSPOOLHOME PROCMAIL_TRUSTED_IDS
 
-PROCMAIL_TRUSTED_IDS?=\
-"root","daemon","uucp","mail","x400","network","list","slist","lists","news",0
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+
+PROCMAIL_TRUSTED_IDS?= \
+	"root","daemon","uucp","mail","x400","network","list","slist","lists","news",0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-
-### Inlining functions (implied by -O3 or higher) cause the strstr() test
-### to enter an infinite loop so disable it.  This fixes PR pkg/30999.
-CFLAGS+=	-fno-inline-functions
+INSTALLATION_DIRS+=	share/examples/${PKGBASE} share/doc/${PKGBASE}
 
 pre-configure:
 	${ECHO} "#define TRUSTED_IDS {${PROCMAIL_TRUSTED_IDS:Q}}"	\
@@ -46,17 +49,17 @@ pre-configure:
 	>> ${WRKSRC}/src/authenticate.h
 .endif
 
-.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+.if ${USE_CROSS_COMPILE:U:tl} == yes
 MAKE_FLAGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 
-.if exists(${FILESDIR}/autoconf-${OPSYS}.h.in)
+.  if exists(${FILESDIR}/autoconf-${OPSYS}.h.in)
 post-configure:
 	cd ${WRKSRC} && ${MAKE} init
 	${SED} -e s,@PREFIX@,${PREFIX:U},g				\
 		-e s,@PKGVERSION@,${PKGVERSION:U},g			\
 	    < ${FILESDIR}/autoconf-${OPSYS}.h.in			\
 	    > ${WRKSRC}/autoconf.h
-.endif
+.  endif
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -73,5 +76,13 @@ do-install:
 		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/$$f; \
 	done
 .endif
+
+PKG_DOCS=	FAQ FEATURES HISTORY KNOWN_BUGS README
+PKG_EXAMPLES=	1procmailrc 1rmail 2procmailrc 2rmail 3procmailrc 3rmail \
+		advanced dirname forward local_procmail_lmtp.m4 mailstat
+
+post-install:
+	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${PKG_EXAMPLES:S|^|${WRKSRC}/examples/|} ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

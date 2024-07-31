@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2010/01/27 18:14:05 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2024/07/31 22:31:50 vins Exp $
 
---- src/recommend.c.orig	1999-10-20 04:47:45.000000000 +0000
+--- src/recommend.c.orig	2022-03-02 09:52:56.000000000 +0000
 +++ src/recommend.c
 @@ -19,7 +19,6 @@ int main(argc,argv)const int argc;const 
     { fprintf(stderr,"Please run this program via 'make recommend'\n");
@@ -30,7 +30,7 @@ $NetBSD: patch-ad,v 1.4 2010/01/27 18:14:05 joerg Exp $
 +     printf("chmod %lo ${DESTDIR}%s\n",(unsigned long)(sgid|PERMIS),argv[2]);
    else if(chmdir==1)
       goto nogchmod;
-   if(chmdir)
+   if (!SANEvarmail && chmdir)
 -     printf("chmod %c+w %s/.\n",chmdir==1?'g':'a',mailspooldir);
 +     printf("chmod %c+w ${DESTDIR}%s/.\n",chmdir==1?'g':'a',mailspooldir);
  nogchmod:
