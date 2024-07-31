@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2024/06/26 16:57:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2024/07/31 08:14:36 adam Exp $
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -415,6 +415,9 @@ ${PYSITELIB}/pip/_internal/utils/misc.pyo
 ${PYSITELIB}/pip/_internal/utils/packaging.py
 ${PYSITELIB}/pip/_internal/utils/packaging.pyc
 ${PYSITELIB}/pip/_internal/utils/packaging.pyo
+${PYSITELIB}/pip/_internal/utils/retry.py
+${PYSITELIB}/pip/_internal/utils/retry.pyc
+${PYSITELIB}/pip/_internal/utils/retry.pyo
 ${PYSITELIB}/pip/_internal/utils/setuptools_build.py
 ${PYSITELIB}/pip/_internal/utils/setuptools_build.pyc
 ${PYSITELIB}/pip/_internal/utils/setuptools_build.pyo
@@ -1102,40 +1105,6 @@ ${PYSITELIB}/pip/_vendor/rich/traceback.pyo
 ${PYSITELIB}/pip/_vendor/rich/tree.py
 ${PYSITELIB}/pip/_vendor/rich/tree.pyc
 ${PYSITELIB}/pip/_vendor/rich/tree.pyo
-${PYSITELIB}/pip/_vendor/tenacity/__init__.py
-${PYSITELIB}/pip/_vendor/tenacity/__init__.pyc
-${PYSITELIB}/pip/_vendor/tenacity/__init__.pyo
-${PYSITELIB}/pip/_vendor/tenacity/_asyncio.py
-${PYSITELIB}/pip/_vendor/tenacity/_asyncio.pyc
-${PYSITELIB}/pip/_vendor/tenacity/_asyncio.pyo
-${PYSITELIB}/pip/_vendor/tenacity/_utils.py
-${PYSITELIB}/pip/_vendor/tenacity/_utils.pyc
-${PYSITELIB}/pip/_vendor/tenacity/_utils.pyo
-${PYSITELIB}/pip/_vendor/tenacity/after.py
-${PYSITELIB}/pip/_vendor/tenacity/after.pyc
-${PYSITELIB}/pip/_vendor/tenacity/after.pyo
-${PYSITELIB}/pip/_vendor/tenacity/before.py
-${PYSITELIB}/pip/_vendor/tenacity/before.pyc
-${PYSITELIB}/pip/_vendor/tenacity/before.pyo
-${PYSITELIB}/pip/_vendor/tenacity/before_sleep.py
-${PYSITELIB}/pip/_vendor/tenacity/before_sleep.pyc
-${PYSITELIB}/pip/_vendor/tenacity/before_sleep.pyo
-${PYSITELIB}/pip/_vendor/tenacity/nap.py
-${PYSITELIB}/pip/_vendor/tenacity/nap.pyc
-${PYSITELIB}/pip/_vendor/tenacity/nap.pyo
-${PYSITELIB}/pip/_vendor/tenacity/py.typed
-${PYSITELIB}/pip/_vendor/tenacity/retry.py
-${PYSITELIB}/pip/_vendor/tenacity/retry.pyc
-${PYSITELIB}/pip/_vendor/tenacity/retry.pyo
-${PYSITELIB}/pip/_vendor/tenacity/stop.py
-${PYSITELIB}/pip/_vendor/tenacity/stop.pyc
-${PYSITELIB}/pip/_vendor/tenacity/stop.pyo
-${PYSITELIB}/pip/_vendor/tenacity/tornadoweb.py
-${PYSITELIB}/pip/_vendor/tenacity/tornadoweb.pyc
-${PYSITELIB}/pip/_vendor/tenacity/tornadoweb.pyo
-${PYSITELIB}/pip/_vendor/tenacity/wait.py
-${PYSITELIB}/pip/_vendor/tenacity/wait.pyc
-${PYSITELIB}/pip/_vendor/tenacity/wait.pyo
 ${PYSITELIB}/pip/_vendor/tomli/__init__.py
 ${PYSITELIB}/pip/_vendor/tomli/__init__.pyc
 ${PYSITELIB}/pip/_vendor/tomli/__init__.pyo
