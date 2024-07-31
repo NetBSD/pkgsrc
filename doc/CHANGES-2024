@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4736 2024/07/31 18:29:43 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4737 2024/07/31 18:40:45 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7447,3 +7447,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/py-matplotlib-venn to 1.0.0 [adam 2024-07-31]
 	Updated math/py-numexpr to 2.10.1 [adam 2024-07-31]
 	Updated geography/py-obspy to 1.4.1 [adam 2024-07-31]
+	Updated www/links-gui to 2.30 [nia 2024-07-31]
+	Updated www/links to 2.30 [nia 2024-07-31]
