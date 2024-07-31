@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 09:59:33 nia Exp $
+$NetBSD: distinfo,v 1.23 2024/07/31 20:41:15 markd Exp $
 
 BLAKE2s (TiMidity++-2.15.0.tar.xz) = 65ff32e8fd12ff0c768901afeb5e85476502c79759a484e32689b186e7c40186
 SHA512 (TiMidity++-2.15.0.tar.xz) = 36c3c79d941903109d5d6d529963d12e8192a857e80402ad5ab0d1e223451a7cf5dc8fdd046b22ae7da96f413d68db8587a8fce348635838eba2f30f7019192f
 Size (TiMidity++-2.15.0.tar.xz) = 1363040 bytes
+SHA1 (patch-configure) = c5d0144604563e0bd5dd2a394779b977879b46dc
 SHA1 (patch-timidity_sun__a.c) = f9bb6c92a9eca27bdaa262395fe358efc5e9b600
