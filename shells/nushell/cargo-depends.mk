@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.42 2024/07/26 09:00:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.43 2024/07/31 17:58:46 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -326,11 +326,11 @@ CARGO_CRATE_DEPENDS+=	object-0.32.2
 CARGO_CRATE_DEPENDS+=	omnipath-0.1.6
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	open-5.3.0
-CARGO_CRATE_DEPENDS+=	openssl-0.10.64
+CARGO_CRATE_DEPENDS+=	openssl-0.10.66
 CARGO_CRATE_DEPENDS+=	openssl-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	openssl-probe-0.1.5
 CARGO_CRATE_DEPENDS+=	openssl-src-300.2.3+3.2.1
-CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.102
+CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.103
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	ordered-multimap-0.7.3
 CARGO_CRATE_DEPENDS+=	os_display-0.1.3
