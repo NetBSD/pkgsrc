@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.315 2024/07/31 08:05:50 he Exp $
+# $NetBSD: Makefile,v 1.316 2024/07/31 12:30:43 he Exp $
 
 DISTNAME=	rustc-1.79.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -19,15 +19,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash grep gmake perl:build pkg-config
 
-# The NetBSD bootstraps are built for NetBSD 8 (because rust doesn't
-# build on 7).  Mark earlier versions as broken.
-BROKEN_ON_PLATFORM+=	NetBSD-[1-7].*-*
-# Bootstrap is built for NetBSD 9.x on these platforms:
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-*arm*
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-aarch64
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-sparc64
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-powerpc
-BROKEN_ON_PLATFORM+=	NetBSD-8.*-i386
+# The NetBSD bootstraps are built for NetBSD 9 (because rust doesn't
+# build on 8 or earlier), or because the target didn't exist in 8
+# or 9 (as in riscv64).  Therefore, mark earlier versions as broken.
+BROKEN_ON_PLATFORM+=	NetBSD-[1-8].*-*
 
 HAS_CONFIGURE=		yes
 PYTHON_FOR_BUILD_ONLY=	yes
