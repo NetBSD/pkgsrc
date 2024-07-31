@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2024/07/02 09:18:54 adam Exp $
+$NetBSD: distinfo,v 1.36 2024/07/31 07:53:24 adam Exp $
 
-BLAKE2s (m3u8-5.1.0.tar.gz) = 03b6e7dbabf32de1cab1e05e874ff4068739f6dc15f54c78573a68c74a3c1f49
-SHA512 (m3u8-5.1.0.tar.gz) = fb7f106c748fd4fe0313e9b90edeb09aa94ed8050e0ba8f945e55cdef5cf3bf8bf765fcf10ac392e3cd1156ef7903ead8d2f09f08907ccb96ff5cd9e442464b5
-Size (m3u8-5.1.0.tar.gz) = 41526 bytes
+BLAKE2s (m3u8-5.2.0.tar.gz) = cadd97e0bb31a15c841b39f9f3561f199110f620dd71ab4f38613f4a5332eac1
+SHA512 (m3u8-5.2.0.tar.gz) = d8500476a860872636837fce6f4f7a0f814687472c703175695cfabf548fca8036ecdec6e1350965a9818c276dbfb13abe15e99e3c30a53edc735bbf154a085a
+Size (m3u8-5.2.0.tar.gz) = 41933 bytes
