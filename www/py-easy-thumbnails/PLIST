@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/10 16:37:09 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/07/31 08:07:24 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/easy_thumbnails/VIL/Image.py
 ${PYSITELIB}/easy_thumbnails/VIL/Image.pyc
 ${PYSITELIB}/easy_thumbnails/VIL/Image.pyo
@@ -149,6 +148,9 @@ ${PYSITELIB}/easy_thumbnails/tests/test_svg_processors.pyo
 ${PYSITELIB}/easy_thumbnails/tests/test_templatetags.py
 ${PYSITELIB}/easy_thumbnails/tests/test_templatetags.pyc
 ${PYSITELIB}/easy_thumbnails/tests/test_templatetags.pyo
+${PYSITELIB}/easy_thumbnails/tests/test_thumbnail_cleanup.py
+${PYSITELIB}/easy_thumbnails/tests/test_thumbnail_cleanup.pyc
+${PYSITELIB}/easy_thumbnails/tests/test_thumbnail_cleanup.pyo
 ${PYSITELIB}/easy_thumbnails/tests/test_widgets.py
 ${PYSITELIB}/easy_thumbnails/tests/test_widgets.pyc
 ${PYSITELIB}/easy_thumbnails/tests/test_widgets.pyo
