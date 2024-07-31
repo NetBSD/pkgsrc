@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/07/23 13:50:32 taca Exp $
+# $NetBSD: Makefile,v 1.35 2024/07/31 20:54:37 markd Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=		--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 CONFIGURE_ARGS.DragonFly+=	--disable-kqueue
 CONFIGURE_ARGS.SunOS+=		--disable-epoll
+CONFIGURE_ENV+=			ac_cv_path_SPHINX_BUILD=""
 
 # Remove WRKDIR reference by modifying pkg-config related path.
 SUBST_CLASSES+=		pkgconf
