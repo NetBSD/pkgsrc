@@ -1,0 +1,2 @@
+TCR is a programming workflow, standing for Test && Commit || Revert.
+This is a Go implementation of TCR.
