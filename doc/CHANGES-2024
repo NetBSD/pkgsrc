@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4718 2024/07/31 07:10:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4719 2024/07/31 07:58:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7415,3 +7415,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-grpcio to 1.65.2 [adam 2024-07-31]
 	Updated net/py-grpcio-testing to 1.65.2 [adam 2024-07-31]
 	Updated net/py-grpcio-tools to 1.65.2 [adam 2024-07-31]
+	Updated multimedia/py-m3u8 to 5.2.0 [adam 2024-07-31]
+	Updated lang/py-mypy to 1.11.1 [adam 2024-07-31]
+	Updated textproc/py-pyphen to 0.16.0 [adam 2024-07-31]
+	Updated textproc/py-phonenumbers to 8.13.42 [adam 2024-07-31]
