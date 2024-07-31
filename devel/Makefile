@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4319 2024/07/29 07:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4320 2024/07/31 08:57:53 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2989,6 +2989,7 @@ SUBDIR+=	py-quixote
 SUBDIR+=	py-radon
 SUBDIR+=	py-random2
 SUBDIR+=	py-rauth
+SUBDIR+=	py-re-assert
 SUBDIR+=	py-readlike
 SUBDIR+=	py-rednose
 SUBDIR+=	py-reparser

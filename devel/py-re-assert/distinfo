@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/07/31 08:57:53 adam Exp $
+
+BLAKE2s (re_assert-1.1.0.tar.gz) = 828deb365b82a1eb9b5535fdb99a4d887a35725822953c4f80380645c92eb2ec
+SHA512 (re_assert-1.1.0.tar.gz) = 4ba11f8d7a5ea9cc4553e76f4b26ecd7fa0af58139d0b9d4322f1e6646bb81a6400f19bbf62409de2136611535f0d344bcc3e3f12fc057bd2c05d9b4407303cd
+Size (re_assert-1.1.0.tar.gz) = 3869 bytes
