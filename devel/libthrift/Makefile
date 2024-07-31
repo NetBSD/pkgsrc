@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2023/12/29 18:24:41 adam Exp $
+# $NetBSD: Makefile,v 1.98 2024/07/31 20:48:46 markd Exp $
 
 PKGREVISION= 6
 .include "../../devel/thrift/Makefile.common"
@@ -12,6 +12,7 @@ BUILD_DIRS=	lib/cpp
 TOOLS_BROKEN+=	perl
 
 CONFIGURE_ARGS+=	--without-rs # puts garbage into Makefile
+CONFIGURE_ARGS+=	--enable-tests=no
 CONFIGURE_ENV+=		THRIFT=${PREFIX}/bin/thrift
 CONFIGURE_ENV+=		ac_cv_prog_PERL= # none, not needed
 PKGCONFIG_OVERRIDE=	lib/cpp/thrift-nb.pc.in
