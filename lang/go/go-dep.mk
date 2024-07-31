@@ -1,6 +1,10 @@
-# $NetBSD: go-dep.mk,v 1.2 2019/09/10 20:01:06 rillig Exp $
+# $NetBSD: go-dep.mk,v 1.3 2024/07/31 18:57:52 riastradh Exp $
 #
 # This file implements dep (https://github.com/golang/dep) support in pkgsrc.
+#
+# PLEASE NOTE: dep has been deprecated since 2020.  You probably want
+# to use go-module.mk instead, unless the software you're packaging
+# hasn't had maintenance in years.
 #
 # === Package-settable variables ===
 #
