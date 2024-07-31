@@ -1,9 +1,9 @@
-$NetBSD: patch-numpy_core_src_common_mem__overlap.c,v 1.1 2023/03/13 21:11:15 wiz Exp $
+$NetBSD: patch-numpy___core_src_common_mem__overlap.c,v 1.1 2024/07/31 18:11:24 adam Exp $
 
 Workaround for https://github.com/numpy/numpy/issues/23379
 
---- numpy/core/src/common/mem_overlap.c.orig	2023-02-05 17:13:47.573364500 +0000
-+++ numpy/core/src/common/mem_overlap.c
+--- numpy/_core/src/common/mem_overlap.c.orig	2023-02-05 17:13:47.573364500 +0000
++++ numpy/_core/src/common/mem_overlap.c
 @@ -921,3 +921,17 @@ solve_may_have_internal_overlap(PyArrayO
      /* Solve */
      return solve_diophantine(nterms, terms, -1, max_work, 1, x);
