@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.82 2024/06/12 08:57:43 adam Exp $
+# $NetBSD: Makefile,v 1.83 2024/07/31 18:15:38 adam Exp $
 
-DISTNAME=	scipy-1.13.1
+DISTNAME=	scipy-1.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.scipy.org/
+HOMEPAGE=	https://scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
@@ -30,6 +30,14 @@ USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		ATLAS=None
 GCC_REQD+=		8
+
+SUBST_CLASSES+=		f2py
+SUBST_STAGE.f2py=	pre-configure
+SUBST_MESSAGE.f2py=	Fixing f2py binary name.
+SUBST_FILES.f2py=	scipy/meson.build
+SUBST_FILES.f2py+=	tools/generate_f2pymod.py
+SUBST_SED.f2py=		-e "s,('f2py'),('f2py-${PYVERSSUFFIX}'),"
+SUBST_SED.f2py+=	-e "s,\['f2py',\['f2py-${PYVERSSUFFIX}',"
 
 SUBST_CLASSES+=		pythran
 SUBST_STAGE.pythran=	pre-configure
@@ -65,7 +73,7 @@ WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -73,11 +81,11 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
-	${FIND} ${DESTDIR}${PREFIX} -name "*.so" |                      \
-		while read lib; do                                      \
-		libname=`basename $${lib}`;                             \
-		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
-		install_name_tool -id $${libdir}/$${libname} $${lib};   \
+	${FIND} ${DESTDIR}${PREFIX}/${PYSITELIB} -name "*.so" |			\
+		while read lib; do						\
+		libname=`basename $${lib}`;					\
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;		\
+		install_name_tool -id $${libdir}/$${libname} $${lib};		\
 	done
 .endif
 
@@ -94,7 +102,7 @@ do-test:
 .include "../../lang/python/wheel.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/blas.buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.22.4
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.23.5
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
