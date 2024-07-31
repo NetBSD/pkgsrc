@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.52 2024/06/12 08:57:43 adam Exp $
+$NetBSD: distinfo,v 1.53 2024/07/31 18:15:38 adam Exp $
 
-BLAKE2s (scipy-1.13.1.tar.gz) = 62fb276532801ee896d00a3886122f9fa9b146834d148086f226e9fc71bf3858
-SHA512 (scipy-1.13.1.tar.gz) = 28aafdbcae7229a3d11f192683b703cb485d45e4d90413d6564df3d9005bc8fd4df8bd92caffe657666828cd7253e7e0363c0948c74a1b8f3f3b7d4f4cfd9b36
-Size (scipy-1.13.1.tar.gz) = 57210720 bytes
+BLAKE2s (scipy-1.14.0.tar.gz) = 6fe964536a9daa776c4912ba2cc938bc8d84ee9bdaa9cbe90053ecacc5dd0c8a
+SHA512 (scipy-1.14.0.tar.gz) = 6579d988a2093602f5fc82203bbb5dc5690a95032484b5d5bd843d1e7995b3b89d802c7b38ec0345c1f3d8e22c98fb92b3982a1eadfcdf63607f929a52b56abf
+Size (scipy-1.14.0.tar.gz) = 58618870 bytes
 SHA1 (patch-scipy_spatial___ckdtree.pyx) = 09f79827790edb78204cca7bbe25b5f373834dd4
 SHA1 (patch-scipy_spatial_ckdtree_src_ckdtree__decl.h) = f05aa0f0ebbf49f119b17ce8646d2f496a557019
 SHA1 (patch-scipy_special_Faddeeva.hh) = 9f6c0bb808fc9be0a1c1b7e65395d29f13821233
-SHA1 (patch-scipy_special_sf__error.c) = 416489193a6ff90caaa95f489a452f23f0a27bbe
-SHA1 (patch-scipy_special_special_amos_amos.h) = 549e0f0da08665227d97753ff58fb6e151b03a9d
-SHA1 (patch-scipy_special_special_specfun.h) = 1d8245b82f50983ebad488274a11f20f9359aae4
-SHA1 (patch-scipy_special_stirling2.h) = 137ff81f610328661a5ce4d04c8700602c989d4b
+SHA1 (patch-scipy_special_boost__special__functions.h) = 109e8855d0d841c614bc9d7e0ac6f2e44de29fdb
+SHA1 (patch-scipy_special_meson.build) = db22da79b31a0fb8dbdac96f398463f4d24adfe0
+SHA1 (patch-scipy_special_special_amos_amos.h) = a1bf4688ce0f342c15749f7864b2dfcad37c2513
+SHA1 (patch-scipy_special_special_specfun.h) = a2e1c91f25165009cf1222a70154ca3bed3f6074
+SHA1 (patch-scipy_special_special_specfun_specfun.h) = 97649f3d99d77f4b27606c541034aab1ee57c9a2
+SHA1 (patch-scipy_special_stirling2.h) = a0399b310939c740b66ddb29cb83338393d2e2df
 SHA1 (patch-scipy_special_wright.hh) = 56d65f9ed4bec96f0b927bbe42edd30fc6546454
 SHA1 (patch-scipy_stats___unuran_meson.build) = afa31bf66c9599c8ffc102f2013694305c7e8d03
