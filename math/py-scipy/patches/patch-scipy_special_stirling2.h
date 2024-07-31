@@ -1,9 +1,9 @@
-$NetBSD: patch-scipy_special_stirling2.h,v 1.1 2024/04/19 19:24:25 adam Exp $
+$NetBSD: patch-scipy_special_stirling2.h,v 1.2 2024/07/31 18:15:38 adam Exp $
 
 Prefer C++ headers.
 Fix error: 'isinf' was not declared in this scope; did you mean 'std::isinf'?
 
---- scipy/special/stirling2.h.orig	2024-04-02 18:31:54.000000000 +0000
+--- scipy/special/stirling2.h.orig	2024-06-24 18:58:56.000000000 +0000
 +++ scipy/special/stirling2.h
 @@ -1,12 +1,15 @@
  #ifndef STIRLING_H
@@ -20,6 +20,6 @@ Fix error: 'isinf' was not declared in this scope; did you mean 'std::isinf'?
 +using std::isinf;
 +using std::isnan;
 +
+ #include "special/binom.h"
  #include "special/lambertw.h"
- 
  
