@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4320 2024/07/31 08:57:53 adam Exp $
+# $NetBSD: Makefile,v 1.4321 2024/07/31 20:01:20 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,6 +469,7 @@ SUBDIR+=	go-review
 SUBDIR+=	go-staticcheck
 SUBDIR+=	go-swagger
 SUBDIR+=	go-sys
+SUBDIR+=	go-tcr
 SUBDIR+=	go-tools
 SUBDIR+=	go-wire
 SUBDIR+=	gob2
