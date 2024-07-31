@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/06/18 06:14:40 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/07/31 07:57:30 adam Exp $
 
-DISTNAME=	phonenumbers-8.13.39
+DISTNAME=	phonenumbers-8.13.42
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/phonenumbers/}
