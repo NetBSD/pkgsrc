@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/28 17:27:38 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.4 2024/07/31 18:20:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -29,3 +28,21 @@ ${PYSITELIB}/matplotlib_venn/_venn2.pyo
 ${PYSITELIB}/matplotlib_venn/_venn3.py
 ${PYSITELIB}/matplotlib_venn/_venn3.pyc
 ${PYSITELIB}/matplotlib_venn/_venn3.pyo
+${PYSITELIB}/matplotlib_venn/layout/__init__.py
+${PYSITELIB}/matplotlib_venn/layout/__init__.pyc
+${PYSITELIB}/matplotlib_venn/layout/__init__.pyo
+${PYSITELIB}/matplotlib_venn/layout/api.py
+${PYSITELIB}/matplotlib_venn/layout/api.pyc
+${PYSITELIB}/matplotlib_venn/layout/api.pyo
+${PYSITELIB}/matplotlib_venn/layout/venn2/__init__.py
+${PYSITELIB}/matplotlib_venn/layout/venn2/__init__.pyc
+${PYSITELIB}/matplotlib_venn/layout/venn2/__init__.pyo
+${PYSITELIB}/matplotlib_venn/layout/venn2/exact.py
+${PYSITELIB}/matplotlib_venn/layout/venn2/exact.pyc
+${PYSITELIB}/matplotlib_venn/layout/venn2/exact.pyo
+${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.py
+${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.pyc
+${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.pyo
+${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.py
+${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.pyc
+${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.pyo
