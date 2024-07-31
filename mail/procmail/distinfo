@@ -1,18 +1,16 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 10:54:22 nia Exp $
+$NetBSD: distinfo,v 1.21 2024/07/31 22:31:50 vins Exp $
 
-BLAKE2s (procmail-3.22.tar.gz) = 33be19e42bd561fcd35520ca56f3ccd4b4cf7a651563f0d847ed5bbc4bddb696
-SHA512 (procmail-3.22.tar.gz) = 3d0658329a55957a8d5741e03b0853b030c4524acef30641663213aa9eefc8264f8cc2b68a00a89e5f9f0f7c916c41a42e1b6c8df562c545ba97d8ab9049a936
-Size (procmail-3.22.tar.gz) = 226817 bytes
+BLAKE2s (procmail-3.24.tar.gz) = 767825dbe6f0f2d6d089930e630e0db402dc31ab00a855a895d1f39422df8f9c
+SHA512 (procmail-3.24.tar.gz) = ce3763205d7e34c8a096c411487de296ecfb190ba817ad07926d44811222e689faedb97a3d4e85989db70e5a2298b26fff70c9d0cb0324a447ddc8988d7fe8ea
+Size (procmail-3.24.tar.gz) = 299704 bytes
+SHA1 (patch-Makefile) = d37a6b8d7769bd98efeca3abb7d52b12873971c0
 SHA1 (patch-aa) = 6e29885f53d24662c5c69ac906ccc36a26665be2
 SHA1 (patch-ab) = 5233a6033198dc2baec135a6fba987e7e2b89ff2
-SHA1 (patch-ac) = fe2350e704546c2262d546bb615175dd0591ba8b
-SHA1 (patch-ad) = b35d6d508a15b8e70734ac7ccd58c19db31717ab
+SHA1 (patch-ac) = 733cd77ec249f9173fd92d04e7003b547450a4ed
+SHA1 (patch-ad) = 93b091d6e49ed16ef8024767e210896905b74aa6
 SHA1 (patch-ae) = b5ac027b337c8d9cf9c6096a48ef534315e18250
-SHA1 (patch-af) = 889f937f50561308c644d5a4bd836eccabbb2938
 SHA1 (patch-ag) = 8f2ae1f2e7bdc3c2295148c33183176423802fee
-SHA1 (patch-ba) = 2ebbd43d2773b147ee6410e37ab3696aeda3c07c
-SHA1 (patch-bb) = 5b273bd60d24168794189bb844e39e94bd688ea8
-SHA1 (patch-bc) = 7344d3c2fce1bcd3276d8e5014bf9537c6dece5c
-SHA1 (patch-bd) = 27a7711e400f934bc82937eae68681e0b5c30c4a
-SHA1 (patch-Makefile) = d37a6b8d7769bd98efeca3abb7d52b12873971c0
 SHA1 (patch-src_Makefile.0) = 9136b5f011456cba313d1a4884144e881974261d
+SHA1 (patch-src_autoconf) = 1bb90bb2280651cf55d00ee32565e14d52067fbe
+SHA1 (patch-src_formisc.c) = ce14e9587f47f70741c2ce44261fd4146361f621
+SHA1 (patch-src_mailfold.c) = 52b800662885f3da094c545961d2b054224bcc91

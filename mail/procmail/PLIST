@@ -1,11 +1,28 @@
-@comment $NetBSD: PLIST,v 1.3 2018/01/01 22:29:41 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/07/31 22:31:50 vins Exp $
 bin/formail
 bin/lockfile
 bin/mailstat
 bin/procmail
 man/man1/formail.1
 man/man1/lockfile.1
+man/man1/mailstat.1
 man/man1/procmail.1
 man/man5/procmailex.5
 man/man5/procmailrc.5
 man/man5/procmailsc.5
+share/doc/procmail/FAQ
+share/doc/procmail/FEATURES
+share/doc/procmail/HISTORY
+share/doc/procmail/KNOWN_BUGS
+share/doc/procmail/README
+share/examples/procmail/1procmailrc
+share/examples/procmail/1rmail
+share/examples/procmail/2procmailrc
+share/examples/procmail/2rmail
+share/examples/procmail/3procmailrc
+share/examples/procmail/3rmail
+share/examples/procmail/advanced
+share/examples/procmail/dirname
+share/examples/procmail/forward
+share/examples/procmail/local_procmail_lmtp.m4
+share/examples/procmail/mailstat
