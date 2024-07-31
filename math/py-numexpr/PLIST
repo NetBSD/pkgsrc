@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/17 16:05:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/07/31 18:22:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -8,16 +8,30 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/numexpr/__init__.py
 ${PYSITELIB}/numexpr/__init__.pyc
 ${PYSITELIB}/numexpr/__init__.pyo
+${PYSITELIB}/numexpr/complex_functions.hpp
 ${PYSITELIB}/numexpr/cpuinfo.py
 ${PYSITELIB}/numexpr/cpuinfo.pyc
 ${PYSITELIB}/numexpr/cpuinfo.pyo
 ${PYSITELIB}/numexpr/expressions.py
 ${PYSITELIB}/numexpr/expressions.pyc
 ${PYSITELIB}/numexpr/expressions.pyo
+${PYSITELIB}/numexpr/functions.hpp
+${PYSITELIB}/numexpr/interp_body.cpp
+${PYSITELIB}/numexpr/interpreter.cpp
+${PYSITELIB}/numexpr/interpreter.hpp
 ${PYSITELIB}/numexpr/interpreter.so
+${PYSITELIB}/numexpr/missing_posix_functions.hpp
+${PYSITELIB}/numexpr/module.cpp
+${PYSITELIB}/numexpr/module.hpp
+${PYSITELIB}/numexpr/msvc_function_stubs.hpp
 ${PYSITELIB}/numexpr/necompiler.py
 ${PYSITELIB}/numexpr/necompiler.pyc
 ${PYSITELIB}/numexpr/necompiler.pyo
+${PYSITELIB}/numexpr/numexpr_config.hpp
+${PYSITELIB}/numexpr/numexpr_object.cpp
+${PYSITELIB}/numexpr/numexpr_object.hpp
+${PYSITELIB}/numexpr/opcodes.hpp
+${PYSITELIB}/numexpr/str-two-way.hpp
 ${PYSITELIB}/numexpr/tests/__init__.py
 ${PYSITELIB}/numexpr/tests/__init__.pyc
 ${PYSITELIB}/numexpr/tests/__init__.pyo
@@ -30,3 +44,6 @@ ${PYSITELIB}/numexpr/utils.pyo
 ${PYSITELIB}/numexpr/version.py
 ${PYSITELIB}/numexpr/version.pyc
 ${PYSITELIB}/numexpr/version.pyo
+${PYSITELIB}/numexpr/win32/pthread.c
+${PYSITELIB}/numexpr/win32/pthread.h
+${PYSITELIB}/numexpr/win32/stdint.h
