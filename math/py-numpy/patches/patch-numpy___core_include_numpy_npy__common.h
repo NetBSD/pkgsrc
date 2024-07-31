@@ -1,12 +1,12 @@
-$NetBSD: patch-numpy_core_include_numpy_npy__common.h,v 1.2 2022/05/25 19:22:20 tnn Exp $
+$NetBSD: patch-numpy___core_include_numpy_npy__common.h,v 1.1 2024/07/31 18:11:24 adam Exp $
 
 Fix build on non-x86:
 The configure test for __builtin_prefetch is broken with clang.
 _configtest.c:6:3: error: builtin functions must be directly called
 
---- numpy/core/include/numpy/npy_common.h.orig	2022-05-20 05:46:10.000000000 +0000
-+++ numpy/core/include/numpy/npy_common.h
-@@ -116,7 +116,7 @@
+--- numpy/_core/include/numpy/npy_common.h.orig	2024-07-20 17:15:41.000000000 +0000
++++ numpy/_core/include/numpy/npy_common.h
+@@ -68,7 +68,7 @@
  #define NPY_UNLIKELY(x) (x)
  #endif
  

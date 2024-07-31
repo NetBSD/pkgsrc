@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.90 2024/02/28 11:34:37 jperkin Exp $
+$NetBSD: distinfo,v 1.91 2024/07/31 18:11:24 adam Exp $
 
-BLAKE2s (numpy-1.26.4.tar.gz) = bd231b8e1b8dc4defd4e0d6d36624e652470fc7d64907b27b1e5a550e660c207
-SHA512 (numpy-1.26.4.tar.gz) = f7121ab4099fa0686f9c095d456baa4a5869d651d7b7a06385f885f329cf08f11024b5df5e7b4ee705970062a8102ec4f709512eabbfd5c9fccce4ef83b9c208
-Size (numpy-1.26.4.tar.gz) = 15786129 bytes
-SHA1 (patch-numpy_core_feature__detection__misc.h) = 4eabe9ded0c62797d64901c35a46df60d3662e2e
-SHA1 (patch-numpy_core_include_numpy_npy__common.h) = 354e336b98f634b6298d0b1d0e85ef1a9d240bff
-SHA1 (patch-numpy_core_setup.py) = 01f90b7eb700cfa51edded31498c2de4c3850848
-SHA1 (patch-numpy_core_src_common_mem__overlap.c) = 10d65c7f8ba740ce2bae5ad47ef3162cd2c5a40b
-SHA1 (patch-numpy_core_src_npymath_npy__math__private.h) = e3b8e751fd0b6b6c6794d714aa5f60dfe9d7f421
+BLAKE2s (numpy-2.0.1.tar.gz) = 72fa3b0a7b55851aeae797872a269995bffda013b76f2c19a1bee9aeadcf8455
+SHA512 (numpy-2.0.1.tar.gz) = 4f638c17b44317b0000000b729726a5a4e9519af11d254b0e2daf32c6ff0cfdd56723a9cbee67c9145088f429f1f0cce79240f968211c2fb5ac08378e86dccfe
+Size (numpy-2.0.1.tar.gz) = 18872007 bytes
+SHA1 (patch-numpy___core_feature__detection__misc.h) = c0f4d318c93fcd0e36c34c549c7778350b8a6ea5
+SHA1 (patch-numpy___core_include_numpy_npy__common.h) = 175cd8f64af681949c3e8bfde064c93908433ea2
+SHA1 (patch-numpy___core_src_common_mem__overlap.c) = 709f140252e8582c325d30fa0289dda3d9a5c888
 SHA1 (patch-numpy_distutils_command_config.py) = eb37d28482689703e0c1a264f9768409cf8bb4b6
 SHA1 (patch-numpy_distutils_fcompiler_____init____.py) = 49d070da5b48bd9818b37ac3254341fa68503c53
 SHA1 (patch-numpy_distutils_fcompiler_g95.py) = be73b64a3e551df998b6a904d6db762bf28a98ed
 SHA1 (patch-numpy_distutils_fcompiler_gnu.py) = 1ab3fd7b3f42328f4094f1b21a65c05ae4d975b7
 SHA1 (patch-numpy_distutils_log.py) = 4c968b934fb24da096a1f4d2cd4ebb2e3fd92334
 SHA1 (patch-numpy_linalg_lapack__litemodule.c) = e97ec871c2f33c3121b3c8471a9e5a74c3c798c8
-SHA1 (patch-numpy_linalg_setup.py) = 867a2aba13ebb60b67ac2824a4cb1aff2e1231ee
 SHA1 (patch-numpy_linalg_umath__linalg.cpp) = 4e02f3b4f6550653e851b0b6819f7048aac297e6
