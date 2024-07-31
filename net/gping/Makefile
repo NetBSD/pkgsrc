@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/02/29 14:20:51 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/07/31 17:57:21 pin Exp $
 
-DISTNAME=	gping-1.16.1
+DISTNAME=	gping-1.17.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orf/}
 GITHUB_TAG=	refs/tags/gping-v${PKGVERSION_NOREV}
@@ -14,6 +14,9 @@ LICENSE=	mit
 
 WRKSRC=	${WRKDIR}/gping-gping-v${PKGVERSION_NOREV}
 
+#RUST_REQ=		1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
