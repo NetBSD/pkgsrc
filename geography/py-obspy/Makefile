@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/03/06 21:07:39 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/07/31 18:29:21 adam Exp $
 
-DISTNAME=	obspy-1.4.0
+DISTNAME=	obspy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/obspy/}
@@ -19,7 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-decorator>=0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-requests>=0:../../devel/py-requests
-
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-proj>=0:../../geography/py-proj
 # unpackaged
@@ -30,7 +29,7 @@ USE_TOOLS+=	bash:run
 
 REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 PYTHON_SELF_CONFLICT=		yes
 
 pre-configure:
