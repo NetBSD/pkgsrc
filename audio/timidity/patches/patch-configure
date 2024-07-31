@@ -1,0 +1,196 @@
+$NetBSD: patch-configure,v 1.1 2024/07/31 20:41:15 markd Exp $
+
+gcc14 fixes
+
+--- configure.orig	2018-08-28 23:33:39.000000000 +0000
++++ configure
+@@ -6893,8 +6893,8 @@ main ()
+   for (i = 0; i < 256; i++)
+     if (XOR (islower (i), ISLOWER (i))
+ 	|| toupper (i) != TOUPPER (i))
+-      exit(2);
+-  exit (0);
++      return 2;
++  return 0;
+ }
+ _ACEOF
+ rm -f conftest$ac_exeext
+@@ -7750,8 +7750,8 @@ main ()
+   for (i = 0; i < 256; i++)
+     if (XOR (islower (i), ISLOWER (i))
+ 	|| toupper (i) != TOUPPER (i))
+-      exit(2);
+-  exit (0);
++      return 2;
++  return 0;
+ }
+ _ACEOF
+ rm -f conftest$ac_exeext
+@@ -9029,6 +9029,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <stdlib>
+ int
+ main ()
+ {
+@@ -10556,7 +10557,7 @@ main ()
+   /* Some versions of memcmp are not 8-bit clean.  */
+   char c0 = 0x40, c1 = 0x80, c2 = 0x81;
+   if (memcmp(&c0, &c2, 1) >= 0 || memcmp(&c1, &c2, 1) >= 0)
+-    exit (1);
++    return 1;
+ 
+   /* The Next x86 OpenStep bug shows up only when comparing 16 bytes
+      or more and with at least one buffer not starting on a 4-byte boundary.
+@@ -10572,9 +10573,9 @@ main ()
+ 	strcpy (a, "--------01111111");
+ 	strcpy (b, "--------10000000");
+ 	if (memcmp (a, b, 16) >= 0)
+-	  exit (1);
++	  return 1;
+       }
+-    exit (0);
++    return 0;
+   }
+ 
+   ;
+@@ -12020,7 +12021,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	va_start (args1, i);
+ 	va_copy (args2, args1);
+ 	if (va_arg (args2, int) != 42 || va_arg (args1, int) != 42)
+-	  exit (1);
++	  return 1;
+ 	va_end (args1); va_end (args2);
+ 	}
+ 	int main() {
+@@ -12081,7 +12082,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	va_start (args1, i);
+ 	__va_copy (args2, args1);
+ 	if (va_arg (args2, int) != 42 || va_arg (args1, int) != 42)
+-	  exit (1);
++	  return 1;
+ 	va_end (args1); va_end (args2);
+ 	}
+ 	int main() {
+@@ -12157,7 +12158,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 	va_start (args1, i);
+ 	args2 = args1;
+ 	if (va_arg (args2, int) != 42 || va_arg (args1, int) != 42)
+-	  exit (1);
++	  return 1;
+ 	va_end (args1); va_end (args2);
+ 	}
+ 	int main() {
+@@ -13028,14 +13029,14 @@ main ()
+ #endif
+ 
+ #  if(SND_LIB_MAJOR > $alsa_min_major_version)
+-  exit(0);
++  return 0;
+ #  else
+ #    if(SND_LIB_MAJOR < $alsa_min_major_version)
+ #       error not present
+ #    endif
+ 
+ #   if(SND_LIB_MINOR > $alsa_min_minor_version)
+-  exit(0);
++  return 0;
+ #   else
+ #     if(SND_LIB_MINOR < $alsa_min_minor_version)
+ #          error not present
+@@ -13046,7 +13047,7 @@ main ()
+ #      endif
+ #    endif
+ #  endif
+-exit(0);
++return 0;
+ 
+   ;
+   return 0;
+@@ -13105,14 +13106,14 @@ main ()
+ #endif
+ 
+ #  if(SND_LIB_MAJOR > $alsa_min_major_version)
+-  exit(0);
++  return 0;
+ #  else
+ #    if(SND_LIB_MAJOR < $alsa_min_major_version)
+ #       error not present
+ #    endif
+ 
+ #   if(SND_LIB_MINOR > $alsa_min_minor_version)
+-  exit(0);
++  return 0;
+ #   else
+ #     if(SND_LIB_MINOR < $alsa_min_minor_version)
+ #          error not present
+@@ -13123,7 +13124,7 @@ main ()
+ #      endif
+ #    endif
+ #  endif
+-exit(0);
++return 0;
+ 
+   ;
+   return 0;
+@@ -16618,6 +16619,7 @@ EOM
+ 
+ cat > fred.c <<EOM
+ #include <stdio.h>
++#include <stdlib.h>
+ #$i_dlfcn I_DLFCN
+ #ifdef I_DLFCN
+ #include <dlfcn.h>      /* the dynamic linker include file for Sunos/Solaris */
+@@ -19594,14 +19596,14 @@ main ()
+ #endif
+ 
+ #  if(SND_LIB_MAJOR > $alsa_min_major_version)
+-  exit(0);
++  return 0;
+ #  else
+ #    if(SND_LIB_MAJOR < $alsa_min_major_version)
+ #       error not present
+ #    endif
+ 
+ #   if(SND_LIB_MINOR > $alsa_min_minor_version)
+-  exit(0);
++  return 0;
+ #   else
+ #     if(SND_LIB_MINOR < $alsa_min_minor_version)
+ #          error not present
+@@ -19612,7 +19614,7 @@ main ()
+ #      endif
+ #    endif
+ #  endif
+-exit(0);
++return 0;
+ 
+   ;
+   return 0;
+@@ -19671,14 +19673,14 @@ main ()
+ #endif
+ 
+ #  if(SND_LIB_MAJOR > $alsa_min_major_version)
+-  exit(0);
++  return 0;
+ #  else
+ #    if(SND_LIB_MAJOR < $alsa_min_major_version)
+ #       error not present
+ #    endif
+ 
+ #   if(SND_LIB_MINOR > $alsa_min_minor_version)
+-  exit(0);
++  return 0;
+ #   else
+ #     if(SND_LIB_MINOR < $alsa_min_minor_version)
+ #          error not present
+@@ -19689,7 +19691,7 @@ main ()
+ #      endif
+ #    endif
+ #  endif
+-exit(0);
++return 0;
+ 
+   ;
+   return 0;
