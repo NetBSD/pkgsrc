@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4728 2024/07/31 17:57:44 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4729 2024/07/31 17:59:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7436,3 +7436,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/git-branchless to 0.9.0 [pin 2024-07-31]
 	Updated chat/gomuks to 0.3.1 [pin 2024-07-31]
 	Updated net/gping to 1.17.3 [pin 2024-07-31]
+	Updated shells/nushell to 0.96.1 [pin 2024-07-31]
