@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2024/07/26 09:00:56 pin Exp $
+$NetBSD: distinfo,v 1.50 2024/07/31 17:58:46 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -945,9 +945,9 @@ Size (num_threads-0.1.7.crate) = 7455 bytes
 BLAKE2s (number_prefix-0.4.0.crate) = e2e6caf7fd792ec56ec5665184ed1b66469de944c998ee8e0eee92eb0f7105b5
 SHA512 (number_prefix-0.4.0.crate) = a43b668d7314218b86ca7451daa9dfef71f6c9f6616bc34c12d94ae6030f182bcca9da83905cb46f3d49d0aa81385a787e92e4f3ae239658067adc249f8174df
 Size (number_prefix-0.4.0.crate) = 6922 bytes
-BLAKE2s (nushell-0.96.0.tar.gz) = 3bc23c4e12f8ebacaf613557b00c86fa15fbd9ac1a5c288cfc5170d473be8023
-SHA512 (nushell-0.96.0.tar.gz) = 29103258829818fb8a666674f3c9cb3b393732f1bebbf2275bb8095c30e3cc090a448855cd8b254bf6a9f2d499546b51d71a6fedd57b79dcad2284ee88a19c59
-Size (nushell-0.96.0.tar.gz) = 3141672 bytes
+BLAKE2s (nushell-0.96.1.tar.gz) = 371b7c3cd0dbc1697064f32251a1d6bf049841e8ee6634f575db2ff1bb1bd96d
+SHA512 (nushell-0.96.1.tar.gz) = f4c62d46b15c5e7b5abd1044271c78dd63a9b45c739dc1e8a0eb70203756a4531d0a65f84bb9665cc902183366e335b952fce6cf4b9d70999d56f187692cb28e
+Size (nushell-0.96.1.tar.gz) = 3143709 bytes
 BLAKE2s (objc-0.2.7.crate) = e34a570a877d402bef4a22098157a24171ada921812037222da0b82a1424f391
 SHA512 (objc-0.2.7.crate) = 7178870c8e4e9154b4c7b4953b3164946b7ce72c956a02b9ba18889353c72be735824bd73e44a485e42ad5f97994820d9153ac684629342755a6a63711ab5988
 Size (objc-0.2.7.crate) = 22036 bytes
@@ -981,9 +981,9 @@ Size (once_cell-1.19.0.crate) = 33046 bytes
 BLAKE2s (open-5.3.0.crate) = 7d6f0ff9a1802d9f97ac08b06b7e796c491ca512d4c5b47247eb0e33a41709bd
 SHA512 (open-5.3.0.crate) = 00d149ae8b56e5f03c16099ec3b663afb64187b1f81840324e02d46ccdf25736415c3da9759996c06afe420f26dca78606eb193ff31797d950e7cca505753a8e
 Size (open-5.3.0.crate) = 24718 bytes
-BLAKE2s (openssl-0.10.64.crate) = 6efc893904d20bc9cfb7f866db327e407e045f5aa0312c99e6d8aec0b272e60d
-SHA512 (openssl-0.10.64.crate) = a1fa9f71cfebbb37ed9d4a902360f2cc95a78f55b5da5d51eef69db38cef016fc03236485158d689ccf054e04937b8cddf88e3f0f31672997fb30c6cac73cbf6
-Size (openssl-0.10.64.crate) = 272306 bytes
+BLAKE2s (openssl-0.10.66.crate) = 1ea8ce6f3d81030e0b92ab70b38b21a0d51f0f0ebe18c3ef9897604779a3f2bc
+SHA512 (openssl-0.10.66.crate) = 2f4dd6e40dd8aff8c04563517fabeecd5ac0d986764649cc9af9bf4ce25757a67f75655eee207703b46fe57661a216ff00144358ffcbc70525447a063fa086c1
+Size (openssl-0.10.66.crate) = 273705 bytes
 BLAKE2s (openssl-macros-0.1.1.crate) = edb78e0a672af6601a8a2fb10b3d9064caa4059b92688e022ff5354bfa59cac3
 SHA512 (openssl-macros-0.1.1.crate) = 57e75c84f78fb83f884eeaedb0dd135ecb40192dad2facd908e6a575c9b65b38a2c93bca4630e09ea5a82c77d8bc8364cb2f5778cbfe9d8f484cafe3346b883c
 Size (openssl-macros-0.1.1.crate) = 5601 bytes
@@ -993,9 +993,9 @@ Size (openssl-probe-0.1.5.crate) = 7227 bytes
 BLAKE2s (openssl-src-300.2.3+3.2.1.crate) = a64ef4709023f71705dfdd847abcbd8356aa9bb1d2c356dd0d9d9bc1663d3fc2
 SHA512 (openssl-src-300.2.3+3.2.1.crate) = e853c20aa2fec0f60d7c1e948377b322441e709961178501f535351db7f581dca7c8c3dac8343b9ccbe44b3f4247371ca2e3e691c8ac7bdc67034f86055b79e5
 Size (openssl-src-300.2.3+3.2.1.crate) = 9584245 bytes
-BLAKE2s (openssl-sys-0.9.102.crate) = bc9c1ccc1f9c7622c5c0ede02b469c8a62894b24bf5f63685718bea4a24bd7bf
-SHA512 (openssl-sys-0.9.102.crate) = 7ecfaa0b49cea5c60f6f063fe5217252a65b27c5e6d1185e0aa1bb4b59c4cf9bf326840e8795a870a537c18ee5a987feedaaf2dd767cd6f1380f25468a1622bd
-Size (openssl-sys-0.9.102.crate) = 68622 bytes
+BLAKE2s (openssl-sys-0.9.103.crate) = faa3d0bf8cc172fb82dd3b59763487a2e1996d150a65b1cf13455b4c6dc50846
+SHA512 (openssl-sys-0.9.103.crate) = 61b802f6baf918ec055be90ee47c69fe0184f6d9a1d29c748386192a11d4df115758961ec9b636126a6b42d7d8f7509248c59f7c035905558c4cc35b804a8eaf
+Size (openssl-sys-0.9.103.crate) = 71552 bytes
 BLAKE2s (option-ext-0.2.0.crate) = a179d39823f42e954c5fe82b67b6689a7078b0e88bc659f06354f02ee868b465
 SHA512 (option-ext-0.2.0.crate) = f8539f97b01af97e0b80fc96556002251befa60f8ddd19613311e62f9dc9834d71c22f5d8e7c53c4925046e38cdcf834c3c28042a4da862d6f6a21ddff8d8e56
 Size (option-ext-0.2.0.crate) = 7345 bytes
