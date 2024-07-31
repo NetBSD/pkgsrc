@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4723 2024/07/31 09:06:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4724 2024/07/31 17:51:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7431,3 +7431,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/py-re-assert version 1.1.0 [adam 2024-07-31]
 	Updated www/py-aiohttp to 3.10.0 [adam 2024-07-31]
 	Updated www/py-aiohttp-socks to 0.9.0 [adam 2024-07-31]
+	Updated devel/cargo-modules to 0.16.8 [pin 2024-07-31]
