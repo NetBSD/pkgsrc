@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/03/01 13:36:19 pin Exp $
+$NetBSD: distinfo,v 1.10 2024/07/31 18:02:58 pin Exp $
 
-BLAKE2s (qt5ct-1.7.tar.bz2) = 7605aac98482dffb94f4ca22507c55605ef24c93019044cf7ab6972f8519d319
-SHA512 (qt5ct-1.7.tar.bz2) = 97f1afc137e750abbb8c4e442cb6e09d2aa0c4979de2117ea644d484e1f7489bec144332814aae961bfaa5f8ac9ddf027c7a665274a65aef26fc4bf7c45610c0
-Size (qt5ct-1.7.tar.bz2) = 85464 bytes
+BLAKE2s (qt5ct-1.8.tar.bz2) = 55fea7f2edcb93ba8e9e3b08c0e94927f9a41f719555873f5760870af43e960f
+SHA512 (qt5ct-1.8.tar.bz2) = 5417850fb2bad4faaed59c8af61bec04c1ee7fefe8495286571e257b2f68cd417d36439c66fcfac28bb735c753a4ca4cec327b74e97e5ce8c2d4e36b3e4fba28
+Size (qt5ct-1.8.tar.bz2) = 85945 bytes
