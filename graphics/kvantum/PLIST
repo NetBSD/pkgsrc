@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2024/03/20 13:10:10 pin Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/07/31 18:05:57 pin Exp $
 bin/kvantummanager
 bin/kvantumpreview
-qt5/plugins/styles/libkvantum.so
+qt6/plugins/styles/libkvantum.so
 share/Kvantum/KvAdapta/KvAdapta.kvconfig
 share/Kvantum/KvAdapta/KvAdapta.svg
 share/Kvantum/KvAdaptaDark/KvAdaptaDark.kvconfig
@@ -111,6 +111,7 @@ share/color-schemes/KvSimplicityDark.colors
 share/color-schemes/KvSimplicityDarkLight.colors
 share/color-schemes/KvSimplicityTurquoise.colors
 share/color-schemes/KvYaru.colors
+share/color-schemes/Kvantum.colors
 share/color-schemes/KvantumAlt.colors
 share/icons/hicolor/scalable/apps/kvantum.svg
 share/kvantummanager/translations/kvantummanager_ar_DZ.qm
