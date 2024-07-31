@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/02/10 21:47:13 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/07/31 17:52:53 pin Exp $
 
-DISTNAME=	gifski-1.14.4
+DISTNAME=	gifski-1.32.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
@@ -11,6 +11,9 @@ LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 .include "../../lang/rust/cargo.mk"
