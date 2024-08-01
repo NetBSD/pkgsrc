@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/06 12:42:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/01 18:50:45 vins Exp $
 
 DISTNAME=	xc-core-hr
 PKGVER=		20220127
@@ -8,7 +8,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/dl/
 COMMENT=	High-resolution version of X11 core cursor theme
 LICENSE=	cc-by-sa-v3.0

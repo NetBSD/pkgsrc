@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2024/07/04 20:18:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/01 18:50:46 vins Exp $
 
 DISTNAME=	mm-0.96.0.14
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.kermitproject.org/mm/
 COMMENT=	UNIX reimplementation of the TOPS-20 MM program
 LICENSE=	modified-bsd
