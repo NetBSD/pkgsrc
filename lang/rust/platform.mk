@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.26 2024/07/31 12:21:23 he Exp $
+# $NetBSD: platform.mk,v 1.27 2024/08/01 15:24:39 tnn Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -16,7 +16,7 @@ RUST_PLATFORMS+=	${rust_os}-*-${rust_arch}
 .  endfor
 .endfor
 
-.if ${OPSYS} == "NetBSD" && (${MACHINE_ARCH} == "earmv7hf")
+.if ${MACHINE_PLATFORM:MNetBSD-*-earm*} && ${OPSYS_VERSION} < 100000
 RUST_DIR?=	../../lang/rust176
 .endif
 RUST_DIR?=	../../lang/rust
