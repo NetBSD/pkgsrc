@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.319 2024/06/28 13:46:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.320 2024/08/01 15:27:50 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		115.12.2
+TB_VER=		115.13.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -87,8 +87,8 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} && mkdir -p ${OBJDIR}
-	cd ${WRKSRC}${MOZILLA_DIR} && autoconf-2.13 old-configure.in > old-configure
-	cd ${WRKSRC}${MOZILLA_DIR}/js/src && autoconf-2.13 old-configure.in > old-configure
+#	cd ${WRKSRC}${MOZILLA_DIR} && autoconf-2.13 old-configure.in > old-configure
+#	cd ${WRKSRC}${MOZILLA_DIR}/js/src && autoconf-2.13 old-configure.in > old-configure
 	touch ${WRKSRC}/.mozconfig
 
 do-build:
