@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/29 06:27:08 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/01 18:50:46 vins Exp $
 
 DISTNAME=	fonts
 PKGVER=		20211030
@@ -10,7 +10,7 @@ GITHUB_PROJECT=	fonts
 GITHUB_TAG=	0480a776c8a0b9c05cba4037084f74c5f8c042f6
 
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/cmvnd/fonts/
 COMMENT=	Tiny bitmap fonts
 LICENSE=	gnu-gpl-v3

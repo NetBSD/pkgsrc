@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/08/29 05:58:08 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/01 18:50:46 vins Exp $
 
 DISTNAME=	suxus-1.5
 CATEGORIES=	fonts
@@ -9,7 +9,7 @@ DISTFILES=	suxus-iso-8859-1.bdf.gz \
 		suxus-iso-8859-15.bdf.gz \
 		fonts.alias
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oldhome.schmorp.de/marc/suxus.html
 COMMENT=	Readable bitmap font for low-res displays
 LICENSE=	public-domain
