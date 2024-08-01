@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4754 2024/08/01 20:18:38 scole Exp $
+$NetBSD: CHANGES-2024,v 1.4755 2024/08/01 21:06:08 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7464,3 +7464,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/difftastic to 0.60.0 [pin 2024-08-01]
 	Updated security/lastpass-cli to 1.5.0 [vins 2024-08-01]
 	Updated textproc/split-thai to 2.32 [scole 2024-08-01]
+	Updated print/scribus-qt5 to 1.6.2 [markd 2024-08-01]
