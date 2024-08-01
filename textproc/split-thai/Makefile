@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/07/26 15:37:26 scole Exp $
+# $NetBSD: Makefile,v 1.60 2024/08/01 20:10:30 scole Exp $
 
-ST_VERSION=	2.31
+ST_VERSION=	2.32
 PKGNAME=	split-thai-${ST_VERSION}
 CATEGORIES=	textproc
 
@@ -22,10 +22,8 @@ SITES.th_TH-${LIBREOFFICE_VERSION}.dic=	-${LIBREOFFICE_SITE}
 USE_TOOLS=	mkdir cp env awk cat sort uniq grep wc echo
 TOOL_DEPENDS+=	libdatrie-[0-9]*:../../devel/libdatrie
 TOOL_DEPENDS+=	swath-[0-9]*:../../textproc/swath
-DEPENDS+=	emacs-[0-9]*:../../editors/emacs
+DEPENDS+=	emacs>=27.0:../../editors/emacs
 DEPENDS+=	sox-[0-9]*:../../audio/sox
-
-UTF8_ENV=	env LC_ALL=C.UTF-8
 
 ST_SHARE_DIR=		share/split-thai
 INSTALLATION_DIRS=	${ST_SHARE_DIR}
@@ -42,17 +40,15 @@ SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
 # puthash doesn't like.  skip them with grep so consoles without utf8
 # understanding won't be munged when the failure to add prints out an error
 pre-build:
-	cd ${WRKSRC} && ${UTF8_ENV} emacs --batch \
+	cd ${WRKSRC} && emacs --batch \
 		--eval='(setq pthai-bootstrap t)' \
 		--eval='(load-file "pthai.el")' \
 		--eval='(pthai-twt-save "thai-word-dict")'
 	cp ${WRKDIR}/thaidict-${GITHUB_ICU_TAG}.txt ${WRKSRC}/icu-dict
 	cp ${WRKDIR}/th_TH-${LIBREOFFICE_VERSION}.dic ${WRKSRC}/th_TH.dic
-	cd ${PREFIX}/share/swath && \
-		${UTF8_ENV} trietool swathdic list | \
+	cd ${PREFIX}/share/swath && trietool swathdic list | \
 		awk '{print $$1}' > ${WRKSRC}/swath-dict
-	cd ${WRKSRC} && \
-		${UTF8_ENV} cat icu-dict swath-dict th_TH.dic thai-word-dict | \
+	cd ${WRKSRC} && cat icu-dict swath-dict th_TH.dic thai-word-dict | \
 			grep -v '[#0123456789/"]' | sort | uniq > words
 .for i in icu-dict thai-word-dict th_TH.dic swath-dict
 	@${ECHO} `wc -l ${WRKSRC}/${i} | awk '{print $$1}'` words in ${i}
@@ -68,3 +64,4 @@ do-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
+ALL_ENV+=     LC_ALL=en_US.UTF-8
