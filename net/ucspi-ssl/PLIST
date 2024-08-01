@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2023/12/09 19:10:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/01 11:48:16 schmonz Exp $
 bin/https@
 bin/sslcat
 bin/sslclient
 bin/sslconnect
 ${PLIST.perl}bin/sslperl
 bin/sslserver
+include/ucspissl.h
+lib/ucspissl.a
 man/man1/https@.1
 man/man1/sslcat.1
 man/man1/sslclient.1
