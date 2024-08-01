@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/04/24 06:51:22 pin Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/01 12:53:02 pin Exp $
 
-DISTNAME=	yazi-0.2.5
+DISTNAME=	yazi-0.3.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
@@ -19,6 +22,8 @@ INSTALLATION_DIRS=	bin share/examples/yazi
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yazi \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ya \
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/keymap.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi

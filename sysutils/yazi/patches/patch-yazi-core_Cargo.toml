@@ -1,0 +1,15 @@
+$NetBSD: patch-yazi-core_Cargo.toml,v 1.1 2024/08/01 12:53:02 pin Exp $
+
+Don't pull git version of notify.
+
+--- yazi-core/Cargo.toml.orig	2024-08-01 12:07:47.271755375 +0000
++++ yazi-core/Cargo.toml
+@@ -25,7 +25,7 @@ bitflags      = "2.6.0"
+ crossterm     = "0.27.0"
+ dirs          = "5.0.1"
+ futures       = "0.3.30"
+-notify        = { git = "https://github.com/notify-rs/notify.git", rev = "96dec74316a93bed6eec9db177b233e6e017275e", default-features = false, features = [ "macos_fsevent" ] }
++notify        = { version = "6.1.1", default-features = false, features = [ "macos_fsevent" ] }
+ parking_lot   = "0.12.3"
+ ratatui       = "0.27.0"
+ scopeguard    = "1.2.0"
