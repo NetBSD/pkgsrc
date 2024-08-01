@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/10/01 13:57:49 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/01 18:50:46 vins Exp $
 
 PKGNAME=	leahfonts-20170708
 CATEGORIES=	fonts
@@ -12,7 +12,7 @@ SITES.5x13-master.tar.xz=	${MASTER_SITES}/5x13/snapshot/
 SITES.sq-master.tar.xz=		${MASTER_SITES}/sq/snapshot/
 SITES.smalltalk10.bdf=		https://leahneukirchen.org/fonts/
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://leahneukirchen.org/fonts/
 COMMENT=	Bitmap fonts by Leah Neukirchen
 LICENSE=	public-domain

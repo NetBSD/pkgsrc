@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2022/12/19 21:00:16 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/01 18:50:45 vins Exp $
 
 DISTNAME=	xmem_${PKGVER:S/./_/}
 PKGVER=		1.29
@@ -6,7 +6,7 @@ PKGNAME=	xmem-${PKGVER}
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	${HOMEPAGE}/archive/
 
-MAINTAINER=	vins@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sdf.org/bch/xmem
 COMMENT=	Memory and swap meter for X11
 LICENSE=	mit
