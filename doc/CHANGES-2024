@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4749 2024/08/01 15:31:13 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.4750 2024/08/01 15:41:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7459,3 +7459,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/yazi to 0.3.0 [pin 2024-08-01]
 	Updated mail/thunderbird to 115.13.0 [ryoon 2024-08-01]
 	Updated mail/thunderbird-l10n to 115.13.0 [ryoon 2024-08-01]
+	Updated www/firefox to 128.0.3 [ryoon 2024-08-01]
