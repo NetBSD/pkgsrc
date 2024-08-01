@@ -1,9 +1,19 @@
-$NetBSD: patch-upload-queue.c,v 1.1 2017/08/16 15:18:24 jperkin Exp $
+$NetBSD: patch-upload-queue.c,v 1.2 2024/08/01 20:10:15 vins Exp $
 
 SunOS compatibility.
+Compatibility fix for time_t on 32-bit arches.
 
---- upload-queue.c.orig	2017-06-28 12:50:49.000000000 +0000
+--- upload-queue.c.orig	2024-05-16 16:29:10.000000000 +0000
 +++ upload-queue.c
+@@ -86,7 +86,7 @@ static void upload_queue_write_entry(con
+ 
+ 	for (serial = 0; serial < ULONG_MAX; ++serial) {
+ 		free(name);
+-		xasprintf(&name, "upload-queue/%lu%04lu", time(NULL), serial);
++		xasprintf(&name, "upload-queue/%llu%04lu", (long long)time(NULL), serial);
+ 		if (!config_exists(name))
+ 			break;
+ 	}
 @@ -110,8 +110,12 @@ static void upload_queue_cleanup_failure
  
  	while ((entry = readdir(dir))) {

@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/08/16 15:18:24 jperkin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/08/01 20:10:15 vins Exp $
 
 Link against libsocket on SunOS.
 Remove non-portable compiler warning flags.
 
---- CMakeLists.txt.orig	2017-06-28 12:50:49.000000000 +0000
+--- CMakeLists.txt.orig	2024-05-16 16:29:10.000000000 +0000
 +++ CMakeLists.txt
-@@ -45,10 +45,13 @@ file(GLOB PROJECT_SOURCES *.c)
+@@ -101,7 +101,7 @@ file(GLOB PROJECT_SOURCES *.c)
  
  set(PROJECT_DEFINITIONS "_GNU_SOURCE")
  
@@ -14,13 +14,7 @@ Remove non-portable compiler warning flags.
  if(APPLE)
    set(PROJECT_FLAGS "${PROJECT_FLAGS} -Wno-deprecated-declarations")
  endif()
-+if (CMAKE_SYSTEM_NAME MATCHES "SunOS")
-+  set(PROJECT_FLAGS "${PROJECT_FLAGS} -D_XOPEN_SOURCE=600 -D__EXTENSIONS__")
-+endif (CMAKE_SYSTEM_NAME MATCHES "SunOS")
- 
- # Main lpass executable
- add_executable(${PROJECT_NAME} ${PROJECT_HEADERS} ${PROJECT_SOURCES})
-@@ -62,6 +65,9 @@ target_link_libraries(${PROJECT_NAME} ${
+@@ -121,6 +121,9 @@ target_link_libraries(${PROJECT_NAME} ${
  if (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
    target_link_libraries(${PROJECT_NAME} "-lkvm")
  endif (CMAKE_SYSTEM_NAME MATCHES "OpenBSD")
