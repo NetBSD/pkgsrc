@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2023/12/09 19:10:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.64 2024/08/01 11:48:16 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.12.10
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -17,6 +18,8 @@ DJB_SLASHPACKAGE=	YES
 
 SSL_SCRIPTS=		https@ sslcat sslconnect
 SSL_PROGRAMS=		sslclient sslserver
+SSL_LIBS=		ucspissl.a
+SSL_HEADERS=		ucspissl.h
 SSL_MAN1PAGES=		${SSL_SCRIPTS:S/$/.1/g} ${SSL_PROGRAMS:S/$/.1/g}
 SSL_MAN1PAGES+=		sslhandle.1
 SSL_MAN2PAGES=		ucspi-tls.2
@@ -44,7 +47,7 @@ DJB_CONFIG_CMDS=							\
 # from `postconf -d | grep tls_medium_cipherlist`
 DEFAULT_MEDIUM_CIPHERS=	aNULL:-aNULL:HIGH:MEDIUM:+RC4:@STRENGTH
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man2 share/doc/${PKGBASE} ${EGDIR}
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man2 share/doc/${PKGBASE} ${EGDIR}
 
 .include "options.mk"
 
@@ -59,6 +62,14 @@ do-install: do-install-sslperl
 
 .for i in ${SSL_PROGRAMS}
 	  ${INSTALL_PROGRAM} ${WRKSRC}/command/${i} ${DESTDIR}${PREFIX}/bin
+.endfor
+
+.for i in ${SSL_LIBS}
+	  ${INSTALL_DATA} ${WRKSRC}/compile/${i} ${DESTDIR}${PREFIX}/lib
+.endfor
+
+.for i in ${SSL_HEADERS}
+	  ${INSTALL_DATA} ${WRKSRC}/compile/${i} ${DESTDIR}${PREFIX}/include
 .endfor
 
 .for i in ${SSL_MAN1PAGES}
