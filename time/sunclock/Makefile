@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/12/09 14:13:00 vins Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/01 18:50:45 vins Exp $
 #
 
 DISTNAME=	sunclock-3.57
@@ -6,7 +6,7 @@ CATEGORIES=	time x11
 MASTER_SITES=	https://raw.githubusercontent.com/nongiach/Sunclock/f4106eb0a81f7594726d6b2859efd8fc64cc1225/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	vins@NetBSD.org	
+MAINTAINER=	pkgsrc-users@NetBSD.org	
 COMMENT=	Show which portion of the Earth's surface is illuminated by the Sun
 LICENSE=	gnu-gpl-v2
 
