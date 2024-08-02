@@ -1,8 +1,8 @@
-$NetBSD: patch-cmake_modules_LXQtCompilerSettings.cmake,v 1.4 2023/04/19 04:54:03 gutteridge Exp $
+$NetBSD: patch-cmake_modules_LXQtCompilerSettings.cmake,v 1.5 2024/08/02 16:52:38 pin Exp $
 
 Avoid -Bsymbolic* on SunOS.
 
---- cmake/modules/LXQtCompilerSettings.cmake.orig	2022-04-16 00:48:16.000000000 +0000
+--- cmake/modules/LXQtCompilerSettings.cmake.orig	2024-05-27 05:52:17.311703304 +0000
 +++ cmake/modules/LXQtCompilerSettings.cmake
 @@ -164,7 +164,11 @@ if (CMAKE_COMPILER_IS_GNUCXX OR LXQT_COM
          set(NO_UNDEFINED_FLAGS "-Wl,--no-undefined")
