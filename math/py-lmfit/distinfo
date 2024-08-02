@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/11/07 11:58:47 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/08/02 07:39:27 adam Exp $
 
-BLAKE2s (lmfit-1.0.3.tar.gz) = af27a0fd80fb6f26ca92b13ec72f3eca1482e5591e14f4a39f3198696c112e1d
-SHA512 (lmfit-1.0.3.tar.gz) = 33febdd68104bb41ca379a8acd03a8bb985ba8785d607ab110b63bc7b3b39b9d95161a683fe015613bee6d99100ede82d1f3574515a6bfb9160300a5791fcc55
-Size (lmfit-1.0.3.tar.gz) = 292475 bytes
+BLAKE2s (lmfit-1.3.2.tar.gz) = 4b693c220ecfa9f8a1d3f963684d6e4bc826d7acc699ca483c8409b97aeaa390
+SHA512 (lmfit-1.3.2.tar.gz) = 2dbba258aa14bd9bdb032cfe93086e207da5398137a06031aa1f09a0f9c35636e89488ed1bd348cdc2a5ea140df839f5cb414d9d208ac7ddda5f7f11d0c058d4
+Size (lmfit-1.3.2.tar.gz) = 623945 bytes
