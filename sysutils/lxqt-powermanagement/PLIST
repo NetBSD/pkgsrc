@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/14 04:20:21 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/02 17:36:53 pin Exp $
 bin/lxqt-config-powermanagement
 bin/lxqt-powermanagement
 share/applications/lxqt-config-powermanagement.desktop
@@ -26,10 +26,12 @@ share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_it.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ja.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_ko.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lg.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_lt.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_nb_NO.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_nl.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_oc.qm
+share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_pa.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_pl.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_pt.qm
 share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_pt_BR.qm
@@ -62,10 +64,12 @@ share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_id.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_it.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ja.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_ko.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lg.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_lt.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_nb_NO.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_nl.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_oc.qm
+share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_pa.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_pl.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_pt.qm
 share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_pt_BR.qm
