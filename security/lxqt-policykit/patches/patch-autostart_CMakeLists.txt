@@ -1,10 +1,10 @@
-$NetBSD: patch-autostart_CMakeLists.txt,v 1.1 2020/12/07 12:10:22 pin Exp $
+$NetBSD: patch-autostart_CMakeLists.txt,v 1.2 2024/08/02 17:12:07 pin Exp $
 
-Install config file to proper location
+Install config file to proper location.
 
---- autostart/CMakeLists.txt.orig	2020-10-30 22:00:57.000000000 +0000
+--- autostart/CMakeLists.txt.orig	2024-05-28 12:55:25.616096311 +0000
 +++ autostart/CMakeLists.txt
-@@ -10,6 +10,6 @@ add_custom_target(lxqt_policykit_autosta
+@@ -11,6 +11,6 @@ add_custom_target(lxqt_policykit_autosta
  
  install(FILES
      ${DESKTOP_FILES}
