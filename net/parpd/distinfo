@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/04/23 07:52:21 roy Exp $
+$NetBSD: distinfo,v 1.14 2024/08/02 11:33:19 roy Exp $
 
-BLAKE2s (parpd-2.1.1.tar.xz) = eafa2522423820701c0e71be3fb7d7446d52923f58ddb1f14e565441072b275f
-SHA512 (parpd-2.1.1.tar.xz) = 93ee7e89de081cde19c6c7c3c1bbddd3809fdbbc83771acfb2c3bc64d6ee84b021e8d0a9698e58f64c5ff02c8e2448f28a14cd11b59b9826e302d6ee33c878a2
-Size (parpd-2.1.1.tar.xz) = 34520 bytes
+BLAKE2s (parpd-2.3.0.tar.xz) = cf2dca1fa4d06b4872087454267b2152d08e29992f4a11bbe33c7d9221283303
+SHA512 (parpd-2.3.0.tar.xz) = e803eafcf1e23abbc984fea7422480aba3968fb6fa4ea43378c0deb3b96e57ca4d4146b515859dad8c1be81312df0e3167cc24700b2d860dbb396fefdbc50a4b
+Size (parpd-2.3.0.tar.xz) = 39964 bytes
