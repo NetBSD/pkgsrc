@@ -1,4 +1,4 @@
-$NetBSD: patch-panel_CMakeLists.txt,v 1.3 2020/12/07 12:55:28 pin Exp $
+$NetBSD: patch-panel_CMakeLists.txt,v 1.4 2024/08/02 17:54:16 pin Exp $
 
 Work around undefined symbol issue (which would cause the panel to fail
 to run if the volume plugin was enabled), as discussed in:
@@ -6,9 +6,9 @@ https://github.com/lxqt/lxqt/issues/1075
 
 Install fallback .conf files to a consistent location.
 
---- panel/CMakeLists.txt.orig	2020-11-05 16:09:19.000000000 +0000
+--- panel/CMakeLists.txt.orig	2024-06-07 07:16:13.376894114 +0000
 +++ panel/CMakeLists.txt
-@@ -55,6 +55,8 @@ set(LIBRARIES
+@@ -58,6 +58,8 @@ set(LIBRARIES
      lxqt
  )
  
@@ -17,8 +17,8 @@ Install fallback .conf files to a consistent location.
  file(GLOB CONFIG_FILES resources/*.conf)
  
  ############################################
-@@ -104,7 +106,7 @@ target_link_libraries(${PROJECT}
- )
+@@ -110,7 +112,7 @@ target_link_libraries(${PROJECT}
+ set_property(TARGET ${PROJECT} PROPERTY ENABLE_EXPORTS TRUE)
  
  install(TARGETS ${PROJECT} RUNTIME DESTINATION bin)
 -install(FILES ${CONFIG_FILES} DESTINATION ${CMAKE_INSTALL_DATADIR}/lxqt)
