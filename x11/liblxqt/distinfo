@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/11/14 00:39:02 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2024/08/02 16:57:16 pin Exp $
 
-BLAKE2s (liblxqt-1.4.0.tar.xz) = 16622484cfb5a3768e4eacfeb135c3016126ecb1f587db40a83c0c17d41d17e0
-SHA512 (liblxqt-1.4.0.tar.xz) = 2012bedab77fba7979d456c9e223e6a0a2f86c272d59eb66d3dbb4b028348972789249fa4a3889d419004210b7c5fcd1e989c196bb338ec8caa31bb0eca1d703
-Size (liblxqt-1.4.0.tar.xz) = 84388 bytes
+BLAKE2s (liblxqt-2.0.0.tar.xz) = 4f94684352f5900cb98a9a15cfa929d8cb0d22c6539dd02a8239a4116efb3190
+SHA512 (liblxqt-2.0.0.tar.xz) = 916a035b9c57430f8abc57cbb38a6397183dbc54c708c25f05acae9ddbb2dc7c210bc1957258ff0553cc29772acbc5e51cd6ce670c58d857f395f0b1d0f1e588
+Size (liblxqt-2.0.0.tar.xz) = 85988 bytes
