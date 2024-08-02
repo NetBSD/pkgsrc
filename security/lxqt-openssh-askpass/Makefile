@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/05/29 16:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/02 17:32:13 pin Exp $
 
-DISTNAME=	lxqt-openssh-askpass-1.4.0
-PKGREVISION=	2
+DISTNAME=	lxqt-openssh-askpass-2.0.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,15 +15,10 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
+TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
-TOOL_DEPENDS+=	lxqt-build-tools>=0.13.0:../../devel/lxqt-build-tools
-TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
-
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
