@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.6 2024/07/28 13:18:57 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.7 2024/08/02 14:14:37 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -42,4 +42,7 @@ www/firefox-l10n: dependency update
 
 Pullup ticket #6882 - requested by taca
 net/bind918: security update
+
+Pullup ticket #6883 - requested by taca
+lang/ruby32-base: security fix
 
