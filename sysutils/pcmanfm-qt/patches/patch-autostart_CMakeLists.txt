@@ -1,10 +1,10 @@
-$NetBSD: patch-autostart_CMakeLists.txt,v 1.1 2020/12/07 11:45:36 pin Exp $
+$NetBSD: patch-autostart_CMakeLists.txt,v 1.2 2024/08/02 17:51:44 pin Exp $
 
-Install config file to proper location
+Install config file to proper location.
 
---- autostart/CMakeLists.txt.orig	2020-11-02 22:27:00.000000000 +0000
+--- autostart/CMakeLists.txt.orig	2024-05-28 09:45:30.421623919 +0000
 +++ autostart/CMakeLists.txt
-@@ -10,6 +10,6 @@ add_custom_target(autostart_desktop_file
+@@ -11,6 +11,6 @@ add_custom_target(autostart_desktop_file
  
  install(FILES
      ${DESKTOP_FILES}
