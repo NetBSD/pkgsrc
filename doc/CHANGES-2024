@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4775 2024/08/02 16:54:43 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4776 2024/08/02 16:56:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7489,3 +7489,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/xfce4-extras to 4.18.1nb21 [gutteridge 2024-08-02]
 	Updated devel/lxqt-build-tools to 2.0.0 [pin 2024-08-02]
 	Updated x11/libqtxdg to 4.0.0 [pin 2024-08-02]
+	Updated x11/qtxdg-tools to 4.0.0 [pin 2024-08-02]
