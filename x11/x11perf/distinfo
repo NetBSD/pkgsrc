@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/10/30 01:08:02 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/08/02 07:08:15 wiz Exp $
 
-BLAKE2s (x11perf-1.6.2.tar.xz) = ce839b1ab7024845711e07f3f426859542d1fb2303187d1df5e1a40349ec4ad7
-SHA512 (x11perf-1.6.2.tar.xz) = 5be9e601071a42d103adbab5f30c1900a3779a5b2c06c709df99a85487c9790d36b835d43f5c6d74cc7d950cc3ad06927210d7b1f58939cfd0b4a6f3e5e32112
-Size (x11perf-1.6.2.tar.xz) = 173800 bytes
+BLAKE2s (x11perf-1.7.0.tar.xz) = 81df40e290174004cfe55bfa8314db02ce6469504a03cc3073307dd8568e517a
+SHA512 (x11perf-1.7.0.tar.xz) = de8185bfbac15fb5eb15c18ba8450d8e383e1356675e0368c9a443d4c2d14245fab87ac0aa4ddcc5ebf731af0ad1173f53c6937104c1be824bfda5b58112fd5e
+Size (x11perf-1.7.0.tar.xz) = 181396 bytes
