@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/07/04 19:51:29 pin Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/02 10:15:32 pin Exp $
 
-DISTNAME=	lemonbar-1.4
+DISTNAME=	lemonbar-1.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LemonBoy/}
 GITHUB_PROJECT=	bar
