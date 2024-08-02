@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4321 2024/07/31 20:01:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.4322 2024/08/02 17:46:00 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -918,6 +918,7 @@ SUBDIR+=	libdatrie
 SUBDIR+=	libdazzle
 SUBDIR+=	libdbusmenu-glib
 SUBDIR+=	libdbusmenu-gtk3
+SUBDIR+=	libdbusmenu-lxqt
 SUBDIR+=	libdbusmenu-qt
 SUBDIR+=	libdbusmenu-qt5
 SUBDIR+=	libdeflate
