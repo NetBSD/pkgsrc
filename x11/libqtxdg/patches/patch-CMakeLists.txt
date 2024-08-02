@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2022/05/11 00:30:42 gutteridge Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/08/02 16:54:22 pin Exp $
 
 Install config files to pkgsrc standard location.
 
---- CMakeLists.txt.orig	2022-05-10 19:59:47.077468288 +0000
+--- CMakeLists.txt.orig	2024-05-27 07:57:49.656959023 +0000
 +++ CMakeLists.txt
 @@ -68,7 +68,7 @@ message(STATUS "Building ${PROJECT_NAME}
  if (QTXDG_INSTALL_DEFAPPS_CONFIG)
