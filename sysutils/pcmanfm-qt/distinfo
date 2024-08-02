@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.15 2024/02/13 17:26:41 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2024/08/02 17:51:44 pin Exp $
 
-BLAKE2s (pcmanfm-qt-1.4.1.tar.xz) = 8c3aea0539daa41f94b970cc0400e482588e0b1171044b6fefbfba165d9c39b2
-SHA512 (pcmanfm-qt-1.4.1.tar.xz) = 3c0186ba2defe3ce440345bfe17635613e9fa2a511dc8309810799cbac931266ea9a42a9a3ebed7bd7bb2f7ec4383dc7d1526b7c689424c5aefcc295bfa2845d
-Size (pcmanfm-qt-1.4.1.tar.xz) = 390960 bytes
-SHA1 (patch-autostart_CMakeLists.txt) = 5dbb1afdfbe9c62132df0674064f436684c87b59
+BLAKE2s (pcmanfm-qt-2.0.0.tar.xz) = 1f852252b4b43b71d95a8302ef83386b65ae21582b900b218640740f5ad4d1d9
+SHA512 (pcmanfm-qt-2.0.0.tar.xz) = b4f46245d8e14874546bd95d47fdab41988a6caef3fef45509e3fd12f11d79ab71a0d44a60ca755b097caf7471bc3cd1160078f020270fd6a7cbf58283a4bda3
+Size (pcmanfm-qt-2.0.0.tar.xz) = 395756 bytes
+SHA1 (patch-CMakeLists.txt) = a4b14884c521b66d6e80bd12574c442382af8b52
+SHA1 (patch-autostart_CMakeLists.txt) = cde2e8a24d2b0518476512f6762f84769b1dc6c0
 SHA1 (patch-config_CMakeLists.txt) = c3a99b1fc660131d94df4e9daf500dee8e65a7df
+SHA1 (patch-pcmanfm_CMakeLists.txt) = c122458d305f98e1e3f96210e9d0aba12d82009e
+SHA1 (patch-pcmanfm_desktopwindow.cpp) = 8542d9dd10b9e5ed95a42e3b24e4d6b457437bc7
