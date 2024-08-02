@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2024/06/08 22:49:45 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/02 00:14:13 gdt Exp $
 
 # This package is intentionally old to avoid:
 #   Server Side Public License
 DISTNAME=	mongodb-src-r3.4.24
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -20,8 +20,7 @@ EXTRACT_USING=	bsdtar
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-
-FORCE_CXX_STD+=	c++17
+USE_CXX_FEATURES+=	c++11
 
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--dbg=off # on: argument parsing problem
@@ -30,7 +29,8 @@ SCONS_ARGS+=	--release
 SCONS_ARGS+=	--runtime-hardening=off # on: does not produce executables
 # incompatible with latest boost version, missing boost/filesystem/convenience.hpp
 #SCONS_ARGS+=	--use-system-boost
-SCONS_ARGS+=	--use-system-icu
+# incompatible with latest icu, which (buggily) forces too-new C++
+#SCONS_ARGS+=	--use-system-icu
 SCONS_ARGS+=	--use-system-pcre
 SCONS_ARGS+=	--use-system-snappy
 SCONS_ARGS+=	--use-system-tcmalloc
@@ -152,6 +152,5 @@ post-install:
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
