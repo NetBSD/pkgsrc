@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/08/02 17:05:29 pin Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/02 17:50:59 abs Exp $
 
 DISTNAME=	lximage-qt-2.0.1
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../deve/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/libfm-qt/buildlink3.mk"
