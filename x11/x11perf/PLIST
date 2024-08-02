@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/08/02 07:08:15 wiz Exp $
 bin/x11perf
 bin/x11perfcomp
-lib/X11/x11perfcomp/Xmark
-lib/X11/x11perfcomp/fillblnk
-lib/X11/x11perfcomp/perfboth
-lib/X11/x11perfcomp/perfratio
 man/man1/Xmark.1
 man/man1/x11perf.1
 man/man1/x11perfcomp.1
+share/X11/x11perfcomp/Xmark
+share/X11/x11perfcomp/fillblnk
+share/X11/x11perfcomp/perfboth
+share/X11/x11perfcomp/perfratio
