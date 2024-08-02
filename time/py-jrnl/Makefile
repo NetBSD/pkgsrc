@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/07/28 10:01:33 leot Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/02 13:29:11 wiz Exp $
 
 DISTNAME=	jrnl-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://jrnl.sh/
 COMMENT=	Command line journal application
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.4.0:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8:../../time/py-dateutil
@@ -23,8 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-xdg>=0.27.0:../../devel/py-xdg
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39	# Python 3.10 or newer
-
-USE_PKG_RESOURCES=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/jrnl ${DESTDIR}${PREFIX}/bin/jrnl-${PYVERSSUFFIX} || ${TRUE}
