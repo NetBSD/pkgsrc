@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:04 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/08/02 10:15:32 pin Exp $
 
-BLAKE2s (lemonbar-1.4.tar.gz) = e9ec0de179c109a4ed28caf46e1185fdcdbf834bbdc2725c9362f2751d34326e
-SHA512 (lemonbar-1.4.tar.gz) = 2e516298854ad4ebf3dd4b67e933f0dca46a23cfb4146ef1737f26d937c582d0f9ce93b62ce094a7e456d55bd6273168f664c284c48c9637c8ed08f032799b14
-Size (lemonbar-1.4.tar.gz) = 16810 bytes
+BLAKE2s (lemonbar-1.5.tar.gz) = 5bb1381f6e385487f200ef96991905bd6585c7782728f2dc327b2c173e7ded5f
+SHA512 (lemonbar-1.5.tar.gz) = 0ab519f21e40eec50d1c8b090d45c6ad7e4ec98e04831a32599d19e74684f975f0f8c9aaa10c83ecd97e33bedcef545199fbc7094291dcbc63233089eabf9860
+Size (lemonbar-1.5.tar.gz) = 16944 bytes
 SHA1 (patch-lemonbar.c) = 63ebe2eaaf6ea08dc2eee48a7f6496f819358520
