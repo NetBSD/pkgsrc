@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/21 08:35:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2024/08/02 14:13:24 bsiegert Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -2002,6 +2002,7 @@ ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/doc/rexml/tasks/tocs/element_toc.rdoc
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/doc/rexml/tasks/tocs/master_toc.rdoc
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/doc/rexml/tasks/tocs/node_toc.rdoc
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/doc/rexml/tasks/tocs/parent_toc.rdoc
+${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/doc/rexml/tutorial.rdoc
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/lib/rexml.rb
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/lib/rexml/attlistdecl.rb
 ${GEM_HOME}/gems/rexml-${RUBY_REXML_VER}/lib/rexml/attribute.rb
