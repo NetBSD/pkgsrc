@@ -1,6 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2018/03/07 11:57:37 wiz Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
+# $NetBSD: buildlink3.mk,v 1.10 2024/08/02 07:07:17 wiz Exp $
 
 BUILDLINK_TREE+=	libXtst
 
