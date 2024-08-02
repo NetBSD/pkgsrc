@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/04/18 09:38:08 pin Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/02 16:57:16 pin Exp $
 bin/lxqt-backlight_backend
 include/lxqt/LXQt/Application
 include/lxqt/LXQt/AutostartEntry
@@ -39,7 +39,7 @@ include/lxqt/LXQt/lxqtsettings.h
 include/lxqt/LXQt/lxqtsingleapplication.h
 include/lxqt/LXQt/lxqttranslator.h
 lib/liblxqt.so
-lib/liblxqt.so.1
+lib/liblxqt.so.2
 lib/liblxqt.so.${PKGVERSION}
 lib/pkgconfig/lxqt.pc
 share/cmake/lxqt/lxqt-config-version.cmake
@@ -76,11 +76,13 @@ share/lxqt/translations/liblxqt/liblxqt_it.qm
 share/lxqt/translations/liblxqt/liblxqt_ja.qm
 share/lxqt/translations/liblxqt/liblxqt_kk.qm
 share/lxqt/translations/liblxqt/liblxqt_ko.qm
+share/lxqt/translations/liblxqt/liblxqt_lg.qm
 share/lxqt/translations/liblxqt/liblxqt_lt.qm
 share/lxqt/translations/liblxqt/liblxqt_lv.qm
 share/lxqt/translations/liblxqt/liblxqt_nb_NO.qm
 share/lxqt/translations/liblxqt/liblxqt_nl.qm
 share/lxqt/translations/liblxqt/liblxqt_oc.qm
+share/lxqt/translations/liblxqt/liblxqt_pa.qm
 share/lxqt/translations/liblxqt/liblxqt_pl.qm
 share/lxqt/translations/liblxqt/liblxqt_pt.qm
 share/lxqt/translations/liblxqt/liblxqt_pt_BR.qm
