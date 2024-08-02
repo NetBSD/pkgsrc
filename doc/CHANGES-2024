@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4793 2024/08/02 17:47:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4794 2024/08/02 17:49:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7507,3 +7507,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/lxqt-powermanagement to 2.0.0 [pin 2024-08-02]
 	Added devel/libdbusmenu-lxqt version 0.1.0 [pin 2024-08-02]
 	Updated x11/lxqt-qtplugin to 2.0.0 [pin 2024-08-02]
+	Updated x11/lxqt-session to 2.0.0 [pin 2024-08-02]
