@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/11/14 04:19:32 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/08/02 18:15:15 pin Exp $
 bin/lxqt-config-notificationd
 bin/lxqt-notificationd
 share/applications/lxqt-config-notificationd.desktop
@@ -26,11 +26,13 @@ share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_id.q
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_it.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ja.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_ko.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lg.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lt.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_lv.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_nb_NO.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_nl.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_oc.qm
+share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pa.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pl.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pt.qm
 share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_pt_BR.qm
@@ -64,11 +66,13 @@ share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_it.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ja.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_kk.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_ko.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lg.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lt.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_lv.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_nb_NO.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_nl.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_oc.qm
+share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pa.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pl.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt.qm
 share/lxqt/translations/lxqt-notificationd/lxqt-notificationd_pt_BR.qm
