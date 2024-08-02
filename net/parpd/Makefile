@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2023/04/23 07:52:21 roy Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/02 11:33:19 roy Exp $
 
-DISTNAME=		parpd-2.1.1
+DISTNAME=		parpd-2.3.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetworkConfiguration/}
 GITHUB_PROJECT=		parpd
@@ -12,7 +12,7 @@ HOMEPAGE=		https://roy.marples.name/projects/parpd/
 COMMENT=		RFC1027 compliant Proxy ARP Daemon
 LICENSE=		modified-bsd
 
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c11
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
