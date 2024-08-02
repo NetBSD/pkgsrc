@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/05/29 16:32:15 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/02 16:52:38 pin Exp $
 
-DISTNAME=	lxqt-build-tools-0.13.0
-PKGREVISION=	8
+DISTNAME=	lxqt-build-tools-2.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -16,16 +15,11 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++ # Needed to satisfy cmake
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
 PKG_SYSCONFSUBDIR=	xdg
 CMAKE_ARGS+=		-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
-BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.15.0
-.include "../../x11/qt5-qtbase/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt6-qtbase+=	qt6-qtbase>=6.6.0
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
