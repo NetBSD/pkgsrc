@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/07/17 03:39:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/08/02 07:51:15 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1362,6 +1362,9 @@ ${PYSITELIB}/yt_dlp/extractor/lci.pyo
 ${PYSITELIB}/yt_dlp/extractor/lcp.py
 ${PYSITELIB}/yt_dlp/extractor/lcp.pyc
 ${PYSITELIB}/yt_dlp/extractor/lcp.pyo
+${PYSITELIB}/yt_dlp/extractor/learningonscreen.py
+${PYSITELIB}/yt_dlp/extractor/learningonscreen.pyc
+${PYSITELIB}/yt_dlp/extractor/learningonscreen.pyo
 ${PYSITELIB}/yt_dlp/extractor/lecture2go.py
 ${PYSITELIB}/yt_dlp/extractor/lecture2go.pyc
 ${PYSITELIB}/yt_dlp/extractor/lecture2go.pyo
