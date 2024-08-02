@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/07/31 18:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/02 07:30:16 adam Exp $
 
-DISTNAME=	matplotlib-venn-1.0.0
+DISTNAME=	matplotlib-venn-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib-venn/}
