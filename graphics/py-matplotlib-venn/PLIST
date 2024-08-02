@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2024/07/31 18:20:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/02 07:30:16 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -43,6 +44,9 @@ ${PYSITELIB}/matplotlib_venn/layout/venn2/exact.pyo
 ${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.py
 ${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.pyc
 ${PYSITELIB}/matplotlib_venn/layout/venn3/__init__.pyo
+${PYSITELIB}/matplotlib_venn/layout/venn3/cost_based.py
+${PYSITELIB}/matplotlib_venn/layout/venn3/cost_based.pyc
+${PYSITELIB}/matplotlib_venn/layout/venn3/cost_based.pyo
 ${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.py
 ${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.pyc
 ${PYSITELIB}/matplotlib_venn/layout/venn3/pairwise.pyo
