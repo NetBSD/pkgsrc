@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4762 2024/08/02 07:45:47 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4763 2024/08/02 07:46:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7475,3 +7475,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-lmfit to 1.3.2 [adam 2024-08-02]
 	Updated lang/gcc14 to 14.2.0 [wiz 2024-08-02]
 	Updated lang/gcc14-libs to 14.2.0nb1 [wiz 2024-08-02]
+	Updated lang/gcc14-libjit to 14.2.0 [wiz 2024-08-02]
