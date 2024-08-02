@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4788 2024/08/02 17:31:24 pin Exp $
+$NetBSD: CHANGES-2024,v 1.4789 2024/08/02 17:32:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7502,3 +7502,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/lxqt-admin to 2.0.0 [pin 2024-08-02]
 	Updated x11/lxqt-config to 2.0.0 [pin 2024-08-02]
 	Updated x11/lxqt-globalkeys to 2.0.0 [pin 2024-08-02]
+	Updated security/lxqt-openssh-askpass to 2.0.1 [pin 2024-08-02]
