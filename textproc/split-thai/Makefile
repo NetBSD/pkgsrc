@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2024/08/01 20:10:30 scole Exp $
+# $NetBSD: Makefile,v 1.61 2024/08/03 18:37:06 scole Exp $
 
-ST_VERSION=	2.32
+ST_VERSION=	2.33
 PKGNAME=	split-thai-${ST_VERSION}
 CATEGORIES=	textproc
 
@@ -40,7 +40,7 @@ SUBST_SED.dictionary-app=	-e 's,ST_SHARE_DIR,${PREFIX}/${ST_SHARE_DIR},g'
 # puthash doesn't like.  skip them with grep so consoles without utf8
 # understanding won't be munged when the failure to add prints out an error
 pre-build:
-	cd ${WRKSRC} && emacs --batch \
+	cd ${WRKSRC} && emacs -Q --batch \
 		--eval='(setq pthai-bootstrap t)' \
 		--eval='(load-file "pthai.el")' \
 		--eval='(pthai-twt-save "thai-word-dict")'
