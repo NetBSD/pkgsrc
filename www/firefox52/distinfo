@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.35 2024/08/02 08:55:33 martin Exp $
+$NetBSD: distinfo,v 1.36 2024/08/03 09:28:41 nia Exp $
 
 BLAKE2s (firefox-52.9.0esr.source.tar.xz) = 68da851ecfe1b03231157bf79732865d3cf81b7c10128a2e2a9e6e7be3963348
 SHA512 (firefox-52.9.0esr.source.tar.xz) = bfca42668ca78a12a9fb56368f4aae5334b1f7a71966fbba4c32b9c5e6597aac79a6e340ac3966779d2d5563eb47c054ab33cc40bfb7306172138ccbd3adb2b9
 Size (firefox-52.9.0esr.source.tar.xz) = 214087304 bytes
 SHA1 (patch-aa) = 31ba818e5f507c0ebdddd178b4801ab81e1bbbe5
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
-SHA1 (patch-as) = b596132c7b6902c4f7ddb901e28e1437b99bb428
+SHA1 (patch-as) = 03cc0f37718188613285093fc80116ac7c2ea38a
 SHA1 (patch-build_gyp.mozbuild) = 481270e6703e556fb87a3440cb3cfb3d4fcc4c86
 SHA1 (patch-build_moz.configure_init.configure) = f2df0c6b92aa825a61f6a4ee1f70f5443c61858e
 SHA1 (patch-build_moz.configure_keyfiles.configure) = dd46c7c29464f374eed3f0762f4653d42032c261
@@ -53,7 +53,7 @@ SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = 79587891c2a1716a27d4dca0e5b5880069a430e
 SHA1 (patch-image_Downscaler.h) = c92aa17c22310d0b16cdc4bb778d3029c4b154e3
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = ed86c3fbb3aef753eec6f6a97940594aac5f3f2f
 SHA1 (patch-intl_hyphenation_glue_hnjalloc.h) = abe01bea5872a57f3d00bbbf89f958621f08a655
-SHA1 (patch-intl_lwbrk_nsJISx4051LineBreaker.cpp) = f5a94cf64b2d2cfda70ca5c856750c4f0b87c0a6
+SHA1 (patch-intl_icu_source_configure) = 20d4d68285c1a40b38442dba62af01188db3f6dc
 SHA1 (patch-intl_unicharutil_util_moz.build) = 2e604c8695b490657ee14cae01ca84d7bd51236c
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 24b63a6e51d9ab27f2788ee02f2ffa7e1c36f29a
 SHA1 (patch-ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = cceefce420cfcfc67f74375e3fe5d17a75a562e4
