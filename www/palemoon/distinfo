@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/07/29 18:13:48 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/08/03 08:54:26 nia Exp $
 
 BLAKE2s (palemoon-33.2.1/palemoon.tar.gz) = 5963bc12be28b07ded0558bb20bc27108f3aebd1895e4730e6a6ac2013a7ae9d
 SHA512 (palemoon-33.2.1/palemoon.tar.gz) = 72e6a4858af679a88fd079ed28020a8d845366d0b3ea5cb00b5a17dd9d6b7a4171397ceaa156b3e9f1d185e39e7ba8c82864641bd21f704350ef4b6473cc693d
@@ -9,7 +9,7 @@ Size (palemoon-33.2.1/psutil.tar.gz) = 274361 bytes
 BLAKE2s (palemoon-33.2.1/uxp.tar.gz) = 1776ecd102d0db4b65cfb41c1055d4320f9b559268585356d0794ffa868df5f3
 SHA512 (palemoon-33.2.1/uxp.tar.gz) = 37621d572bdd3fcf043f5edce3d0ac1dd089a1ed1ccf5126a4052b74e47b0032761c25e6192b96adfe6fe96f131881f43415150fcd68e543e9f05d89a4dd19af
 Size (palemoon-33.2.1/uxp.tar.gz) = 264109377 bytes
-SHA1 (patch-palemoon_app_profile_palemoon.js) = dfcb5b385d25053b190187a2f74923cbd78179cd
+SHA1 (patch-palemoon_app_profile_palemoon.js) = 0687dccbb5adff1ee0ea71fef4ebd46174a434d4
 SHA1 (patch-platform_build_moz.build) = 7b45929d58ad0963423f7c859922df6d98413c67
 SHA1 (patch-platform_gfx_angle_src_libANGLE_renderer_gl_glx_FunctionsGLX.cpp) = 502d79eb3ef41e08328bbac9fbb5048b96660bbb
 SHA1 (patch-platform_gfx_gl_GLContextProviderGLX.cpp) = 56685c8c5f176b0660a6208437d81085f6ad00a5
@@ -24,10 +24,10 @@ SHA1 (patch-platform_media_libcubeb_src_moz.build) = 5f9f7656bf9d251edb395cb19fa
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
 SHA1 (patch-platform_media_libvpx_config_linux_arm_vpx__config.h) = a580208cd342d7dc27985118e1707772e0cccf02
 SHA1 (patch-platform_old-configure.in) = 05711cd91f7adca8c7325d01dc6e6553ce5bedb5
+SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
-SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
-SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 5b6a5c6eea2668cc5eaaf775400c382114876d86
-SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = de7188f7ac09fd3d4a65968a12ae324b3a0415c4
 SHA1 (patch-platform_toolkit_xre_glxtest.cpp) = f8bd5705f5cf87651df59ba22f4566136e3bc4ef
 SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
+SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 5b6a5c6eea2668cc5eaaf775400c382114876d86
+SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = de7188f7ac09fd3d4a65968a12ae324b3a0415c4
