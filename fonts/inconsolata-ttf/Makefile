@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2020/11/06 18:04:25 maya Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/03 14:19:22 pin Exp $
 
-PKGNAME=	inconsolata-ttf-2.001
+PKGNAME=	inconsolata-ttf-3.001
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/fonts/raw/${TAG}/ofl/inconsolata/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
