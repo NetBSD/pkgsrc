@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.180 2024/06/18 03:17:01 ryoon Exp $
+$NetBSD: distinfo,v 1.181 2024/08/03 09:34:01 nia Exp $
 
 BLAKE2s (seamonkey-2.53.18.2.source.tar.xz) = a42f71a30987b314ee9028d0ed7a2647cc0e075a4c9d84c327adc2da7ec56242
 SHA512 (seamonkey-2.53.18.2.source.tar.xz) = 38f37c1dafcfc64656205b67571b747e6f23287f4969e4713e1e373052df4cffc706de3356580a5715b90958c212291947eaf57d2e3ceeb1501ed81022004fe3
@@ -9,7 +9,6 @@ SHA1 (patch-configure.in) = 7338ac220134d825cae28614698e4d920cbb383f
 SHA1 (patch-dom_indexedDB_IDBTransaction.h) = 7882f1264889d5f17af0bafa68bfa5aff5b57634
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__ESSL__autogen.cpp) = 915fbe98d20ff405f031636add07d4bd610b5939
 SHA1 (patch-gfx_angle_checkout_src_compiler_translator_SymbolTable__autogen.cpp) = c78ada128986334d04ae07ec98545ecf611a7dfc
-SHA1 (patch-intl_lwbrk_LineBreaker.cpp) = 08c6891a7e616a298babbe047daa8380bca0c2f7
 SHA1 (patch-mailnews_base_search_src_nsMsgSearchTerm.cpp) = 5a5890c5347cdb1a0899eebe4f014584fa460c10
 SHA1 (patch-mozilla_browser_branding_unofficial_locales_en-US_brand.dtd) = 5c6074fb8e0baf4e7dc2dd49718bfd285e65e3e1
 SHA1 (patch-mozilla_dom_base_nsAttrName.h) = 37ffbf4bf4c43b62759d68af858717ddd9108fe8
