@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/06/14 20:11:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/08/03 07:23:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -233,6 +233,9 @@ ${PYSITELIB}/xarray/core/weighted.pyo
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.py
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.pyc
 ${PYSITELIB}/xarray/datatree_/datatree/__init__.pyo
+${PYSITELIB}/xarray/groupers.py
+${PYSITELIB}/xarray/groupers.pyc
+${PYSITELIB}/xarray/groupers.pyo
 ${PYSITELIB}/xarray/indexes/__init__.py
 ${PYSITELIB}/xarray/indexes/__init__.pyc
 ${PYSITELIB}/xarray/indexes/__init__.pyo
