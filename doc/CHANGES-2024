@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4813 2024/08/03 07:24:10 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4814 2024/08/03 07:34:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7541,3 +7541,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/ffplay7 to 7.0.2 [adam 2024-08-03]
 	Updated math/py-scikit-learn to 1.5.1 [adam 2024-08-03]
 	Updated math/py-xarray to 2024.7.0 [adam 2024-08-03]
+	Updated sysutils/e2fsprogs to 1.46.4nb3 [wiz 2024-08-03]
