@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.48 2024/04/07 07:33:58 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/08/03 15:38:42 tsutsui Exp $
 
 DISTNAME=		xnp2-0.86
-PKGREVISION=		25
+PKGREVISION=		26
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.nonakap.org/np2/release/
+MASTER_SITES=		https://www.nonakap.org/np2/release/
 EXTRACT_SUFX=		.tar.bz2
+
+PATCHFILES=		xnp2-r2805.patch
+PATCHFILES+=		xnp2-r2846.patch
+PATCH_SITES=		https://www.nonakap.org/np2/
 
 MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		https://www.nonakap.org/np2/
@@ -35,6 +39,7 @@ post-install:
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.SDL2+=	SDL2>=2.0.3
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
