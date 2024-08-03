@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/04/05 10:41:31 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/08/03 08:06:45 adam Exp $
 
-BLAKE2s (django-filter-24.2.tar.gz) = c7350a0ee291e28a6aa17a3308d57a0a71bc54f79fdd7e273bfc428cf062d89b
-SHA512 (django-filter-24.2.tar.gz) = 246345f2b90e67a9947e2d2e5e17c996a58c4b8e7aaeb89a25b23cd35e6c31763dc3522e649d308458dc457037b0d7daf7f57dbef9af633f86e04b15fb8c36ab
-Size (django-filter-24.2.tar.gz) = 142937 bytes
+BLAKE2s (django_filter-24.3.tar.gz) = c8e8e21e20daced22bf9bd7d1f076b393c08c5816100619b820671f529e607a5
+SHA512 (django_filter-24.3.tar.gz) = f21576b4ce8e2cbf71ebee032e35979f4b8333bb64827188e5c4901b2102e8ec4f8fc5c07614aed15d376c5606ffd6e976822f318bfd46615d59206564ef009a
+Size (django_filter-24.3.tar.gz) = 144444 bytes
