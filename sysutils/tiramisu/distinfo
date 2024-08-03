@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/11/09 08:51:02 pin Exp $
+$NetBSD: distinfo,v 1.10 2024/08/03 15:51:42 pin Exp $
 
-BLAKE2s (tiramisu-2.0.20211107.tar.gz) = 91a5c8b45d30277b4d26e1a03384a4b42e7c4c35a367e32a3f787930cf1f7f5b
-SHA512 (tiramisu-2.0.20211107.tar.gz) = ac205467e7e4bec1768040455902bed0bb545f8550d8d22c3ed94fec13cee04409bf1f3e49bd3136cd4f36d312fc553e950ce66eaeb20b4ba0ee7fb3160409fc
-Size (tiramisu-2.0.20211107.tar.gz) = 3061582 bytes
+BLAKE2s (tiramisu-2.0.20240610.tar.gz) = a5abec4a4b956d437475ee8bcc2ec1c80dc623412993d73a766fa2761bd9acba
+SHA512 (tiramisu-2.0.20240610.tar.gz) = 812701ff1ef3ac4b2a3470c467e346bf7708fc6bdd80ccf9e1f144c8419fd48db9bef92923a06c3a0c15887eda630ad97606aeeb1610f4bd11a0d911b483a7f0
+Size (tiramisu-2.0.20240610.tar.gz) = 3061724 bytes
 SHA1 (patch-Makefile) = 4777ea431d283fa8089ae15ddc9ca387f6a61553
