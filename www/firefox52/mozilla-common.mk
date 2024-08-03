@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.17 2023/10/23 06:37:56 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.18 2024/08/03 09:28:41 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -39,7 +39,6 @@ CXXFLAGS+=		-mstackrealign
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 
@@ -53,7 +52,6 @@ CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-hunspell
 CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
@@ -143,7 +141,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

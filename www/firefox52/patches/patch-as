@@ -1,7 +1,6 @@
-$NetBSD: patch-as,v 1.2 2018/07/30 12:23:11 jmcneill Exp $
+$NetBSD: patch-as,v 1.3 2024/08/03 09:28:42 nia Exp $
 
 * Treat DragonFly like FreeBSD.
-* Add system ICU support
 * Enable ARM64 JIT
 
 --- js/src/old-configure.in.orig	2017-04-11 02:13:16.000000000 +0000
