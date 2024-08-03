@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/04/02 13:48:51 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2024/08/03 19:28:29 bsiegert Exp $
 
 BLAKE2s (go1.21.5.darwin-amd64.tar.gz) = ffa3efd58cd6e3af21dd2509a697a80e92da630da3353f4074ece6cfbeb4fbed
 SHA512 (go1.21.5.darwin-amd64.tar.gz) = ddd5a73edfc4aa9a15fc0be0548a0f1a4369becbe1e2f4435e3dd705ff4d3b7d8787b2ebba2fbad664065be71ac83378f2149975b426ee3192314ce07ae4f1ec
@@ -6,6 +6,18 @@ Size (go1.21.5.darwin-amd64.tar.gz) = 67299408 bytes
 BLAKE2s (go1.21.5.darwin-arm64.tar.gz) = ffeb36749508f387ed95699709d223aa20cb448c690adb4faef951eb7a962b4b
 SHA512 (go1.21.5.darwin-arm64.tar.gz) = aabea2c25180830c310c91c9112f62dfb498b19f1f5a514893469c9802e474044b52f29bc40a9df7724c25b5243c5daf90c93fe846783dd94eb6d95c128a8af0
 Size (go1.21.5.darwin-arm64.tar.gz) = 65096621 bytes
+BLAKE2s (go1.21.5.freebsd-386.tar.gz) = 2ef7c8fde619f7c50236d5434cc0609a2ec576d1fbc7a4c968e7b1622625cbd6
+SHA512 (go1.21.5.freebsd-386.tar.gz) = aa3f68c4e786401559e27d2f8754de9992496eb7ad94be5506bd97511bbc51d6ba4ecd25fd1ac759063170de081735d98828b8af0c9675f2f19f1e8239db07ce
+Size (go1.21.5.freebsd-386.tar.gz) = 64890223 bytes
+BLAKE2s (go1.21.5.freebsd-amd64.tar.gz) = f5d857f13d9c38767c9aa24639dbfe06234bfed6a842fd49467ff7823435728f
+SHA512 (go1.21.5.freebsd-amd64.tar.gz) = e6f9d7f5417fdf61ca9705e41069abbed4b8d931c6d065edf22094fbd2b4c702c2806180547258b941ba19de1904f24bc63f2318bcc7ffedca16cca7ee35ce9c
+Size (go1.21.5.freebsd-amd64.tar.gz) = 66496187 bytes
+BLAKE2s (go1.21.5.freebsd-arm.tar.gz) = 5cbcf8a85cbb992a0c63d12ac0b2cbfd9ee5cfddca557f08664c98041882d086
+SHA512 (go1.21.5.freebsd-arm.tar.gz) = 190a6d67f3d827d4e0fd4210290af73a780a7942ba0ae0366531bf06ac9b9040777fcb05b7cdaf62d40526f58c3adccb9a475897fdec5b9043eb9dfc2358104d
+Size (go1.21.5.freebsd-arm.tar.gz) = 65053155 bytes
+BLAKE2s (go1.21.5.freebsd-arm64.tar.gz) = ec61eb909cc98bbb030bf90e280564e23151b4917dda0dfa239e5d204228d86c
+SHA512 (go1.21.5.freebsd-arm64.tar.gz) = da2b7f3cc99d4733682d2bdff840cf388194890ffd2e1480811e1c59ac374fcde1b6ef36929288c76e4e90df9e6c4165889e359e9d3db7af91b4f91de022ecff
+Size (go1.21.5.freebsd-arm64.tar.gz) = 63538092 bytes
 BLAKE2s (go1.21.5.linux-386.tar.gz) = 6ab794f3a7ba4ac4ef526b47326081910220ab215b909caf71ed8abe0aab58cf
 SHA512 (go1.21.5.linux-386.tar.gz) = 7613da732ea30cfd2832276a5a1b51df5ababb34b3e655de7d2ff3329ac0dd0bbca6681e6ba2483bca512478be493ffb2b9b5da712d8e1783954832af758bb9b
 Size (go1.21.5.linux-386.tar.gz) = 65080739 bytes
