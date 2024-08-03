@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/07/20 06:16:29 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/08/03 10:43:01 nia Exp $
 
 DISTNAME=	orc-0.4.39
 CATEGORIES=	devel
@@ -21,7 +21,7 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/orc:${WRKSRC}/output/orc-test
 MESON_ARGS+=	-Dgtk_doc=disabled
 
 USE_CC_FEATURES+=	c99
-FORCE_C_STD=		c99
+FORCE_C_STD=		gnu99
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
