@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2024/03/05 14:45:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2024/08/03 12:28:44 nia Exp $
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
 # used by audio/gst-plugins1-faad/Makefile
@@ -33,8 +33,12 @@ DISTINFO_FILE=	${.CURDIR}/../../multimedia/gst-plugins1-bad/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/gst-plugins1-bad/patches
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
+# "#error This file requires compiler and library support for the ISO C++ 2011 standard."
 # needs default visibility for fdopen (etc.) on some platforms
 FORCE_C_STD=	gnu99
+FORCE_CXX_STD=	gnu++11
+
+USE_CXX_FEATURES+=	c++11
 
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
