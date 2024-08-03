@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/07/22 20:38:12 adam Exp $
+# $NetBSD: Makefile,v 1.49 2024/08/03 09:20:45 nia Exp $
 
 DISTNAME=	uhttpmock-0.11.0
 CATEGORIES=	www devel
@@ -11,6 +11,8 @@ COMMENT=	Library for mocking web service APIs which use HTTP or HTTPS
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
+
+TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 
 PKGCONFIG_OVERRIDE+=	libuhttpmock/libuhttpmock.pc.in
 
