@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/02/28 10:14:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/08/03 14:37:11 mef Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -42,8 +42,7 @@ share/tomcat/lib/tomcat-i18n-fr.jar
 share/tomcat/lib/tomcat-i18n-ja.jar
 share/tomcat/webapps/ROOT/RELEASE-NOTES.txt
 share/tomcat/webapps/ROOT/WEB-INF/web.xml
-share/tomcat/webapps/ROOT/asf-logo-wide.gif
-share/tomcat/webapps/ROOT/build.xml
+share/tomcat/webapps/ROOT/asf-logo-wide.svg
 share/tomcat/webapps/ROOT/favicon.ico
 share/tomcat/webapps/ROOT/index.html
 share/tomcat/webapps/ROOT/index.jsp
@@ -133,13 +132,14 @@ share/tomcat/webapps/docs/funcspecs/index.html
 share/tomcat/webapps/docs/funcspecs/mbean-names.html
 share/tomcat/webapps/docs/html-manager-howto.html
 share/tomcat/webapps/docs/images/add.gif
-share/tomcat/webapps/docs/images/asf-logo.gif
+share/tomcat/webapps/docs/images/asf-logo.svg
 share/tomcat/webapps/docs/images/code.gif
 share/tomcat/webapps/docs/images/design.gif
 share/tomcat/webapps/docs/images/docs.gif
 share/tomcat/webapps/docs/images/fix.gif
 share/tomcat/webapps/docs/images/printer.gif
 share/tomcat/webapps/docs/images/tomcat.gif
+share/tomcat/webapps/docs/images/tomcat.png
 share/tomcat/webapps/docs/images/tomcat.svg
 share/tomcat/webapps/docs/images/update.gif
 share/tomcat/webapps/docs/images/void.gif
@@ -456,7 +456,7 @@ share/tomcat/webapps/host-manager/WEB-INF/jsp/401.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
 share/tomcat/webapps/host-manager/images/add.gif
-share/tomcat/webapps/host-manager/images/asf-logo.gif
+share/tomcat/webapps/host-manager/images/asf-logo.svg
 share/tomcat/webapps/host-manager/images/code.gif
 share/tomcat/webapps/host-manager/images/design.gif
 share/tomcat/webapps/host-manager/images/docs.gif
@@ -473,7 +473,7 @@ share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
 share/tomcat/webapps/manager/images/add.gif
-share/tomcat/webapps/manager/images/asf-logo.gif
+share/tomcat/webapps/manager/images/asf-logo.svg
 share/tomcat/webapps/manager/images/code.gif
 share/tomcat/webapps/manager/images/design.gif
 share/tomcat/webapps/manager/images/docs.gif
