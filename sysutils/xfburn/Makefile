@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2024/04/07 07:35:03 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/03 02:33:04 gutteridge Exp $
 
-VERSION=	0.7.0
+VERSION=	0.7.1
 DISTNAME=	xfburn-${VERSION}
-PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/apps/xfburn/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,8 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool msgfmt pkg-config
+USE_TOOLS+=	gmake msgfmt pkg-config
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
