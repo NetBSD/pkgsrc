@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2024/05/29 16:33:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/03 14:49:34 tsutsui Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	inputmethod editors
 
 EMACS_MODULES=	base leim
+
+# Package Requires >= 24.3 for cl-lib etc.
+EMACS_VERSIONS_ACCEPTED=	emacs26 emacs26nox
+EMACS_VERSIONS_ACCEPTED+=	emacs27 emacs27nox
+EMACS_VERSIONS_ACCEPTED+=	emacs28 emacs28nox
+EMACS_VERSIONS_ACCEPTED+=	emacs29 emacs29nox
 
 .include "../../editors/emacs/modules.mk"
 

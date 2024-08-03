@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/02/10 01:20:46 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2024/08/03 14:49:34 tsutsui Exp $
 
 BLAKE2s (mozc-2.26.4282.100.tar.xz) = 0d6239653ece7577159c7dc23ead2e2a42239496f0b7c3d30db472634689d12e
 SHA512 (mozc-2.26.4282.100.tar.xz) = 236ec8ece076aea04480cb9aee30076699a30db88356c8bd9eb0694d86716a89748a6d33d66f5ba831e95bd0d16260e3111a9c75fded9e34df35e1785980cf12
@@ -44,5 +44,6 @@ SHA1 (patch-session_session__test.cc) = 7396e2f4931257d8a33087b1bed5418a038fefa1
 SHA1 (patch-third__party_abseil-cpp_absl_base_config.h) = e996fad886e0763c7be7b79735819e668159fd82
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = 8adc79d5d7eed3cbf406ebcfbd5832b7a050ced6
 SHA1 (patch-uim-mozc) = 0000583d8f3f44ef2281888c7cfdb968c17ec798
+SHA1 (patch-unix_emacs_mozc.el) = 1f91d7cae62c76b9bdccb5dca02bf145934ced9c
 SHA1 (patch-unix_ibus_ibus.gyp) = aa2077cf3c379bf9ce33e97abe478540346782ad
 SHA1 (patch-unix_ibus_path__util.cc) = a6aa368d9ce8926e200602fdc370c13e35d5a8cf
