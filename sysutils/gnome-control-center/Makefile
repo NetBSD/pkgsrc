@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/05/29 16:34:25 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/03 09:35:58 nia Exp $
 
 DISTNAME=	gnome-control-center-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
@@ -36,6 +36,7 @@ PKGCONFIG_OVERRIDE+=		output/panels/keyboard/gnome-keybindings.pc
 .include "../../lang/python/tool.mk"
 .include "../../net/gnome-online-accounts/buildlink3.mk"
 .include "../../net/grilo/buildlink3.mk"
+.include "../../net/libsoup/buildlink3.mk"
 .include "../../net/samba4/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
