@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/09 06:31:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/03 08:05:04 adam Exp $
+bin/debugpy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/debugpy/ThirdPartyNotices.txt
 ${PYSITELIB}/debugpy/__init__.py
@@ -445,6 +447,9 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt4.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt5.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt5.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt5.pyo
+${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt6.py
+${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt6.pyc
+${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhookqt6.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhooktk.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhooktk.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_ipython/inputhooktk.pyo
