@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.2 2023/08/13 19:41:47 leot Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2024/08/03 13:38:25 pin Exp $
 
 Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
 
---- Makefile.in.orig	2023-07-20 22:43:20.000000000 +0000
+--- Makefile.in.orig	2024-08-03 13:24:41.830239586 +0000
 +++ Makefile.in
 @@ -16,9 +16,9 @@ LDFLAGS = @LDFLAGS@
  CPPFLAGS = @CPPFLAGS@
@@ -21,7 +21,7 @@ Adjust GNU-isms to BSD-isms (ifneq is supported only by GNU make).
  	tags.${O} ttyin.${O} version.${O} xbuf.${O}  @REGEX_O@
  
 -ifneq (@SECURE_COMPILE@,1)
-+.if @SECURE_COMPILE@ != 1
++.if @SECURE_COMPILE@,1
  OBJ += lesskey_parse.${O}
 -endif
 +.endif
