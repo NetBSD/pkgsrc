@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/04/02 13:49:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/03 19:28:29 bsiegert Exp $
 
 PKGNAME=	go-bin-1.21.5
 CATEGORIES=	lang
@@ -43,6 +43,34 @@ DIST.darwin-arm64=		go${PKGVERSION_NOREV}.darwin-arm64.tar.gz
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make(mdi)
 DISTFILES+=			${DIST.darwin-arm64}
 EXTRACT_ONLY+=			${DIST.darwin-arm64}
+.endif
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-i386
+DIST.freebsd-386=		go${PKGVERSION_NOREV}.freebsd-386.tar.gz
+.if ${MACHINE_PLATFORM:MFreeBSD-*-i386} || make(distinfo) || make(mdi)
+DISTFILES+=			${DIST.freebsd-386}
+EXTRACT_ONLY+=			${DIST.freebsd-386}
+.endif
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-x86_64
+DIST.freebsd-amd64=		go${PKGVERSION_NOREV}.freebsd-amd64.tar.gz
+.if ${MACHINE_PLATFORM:MFreeBSD-*-x86_64} || make(distinfo) || make(mdi)
+DISTFILES+=			${DIST.freebsd-amd64}
+EXTRACT_ONLY+=			${DIST.freebsd-amd64}
+.endif
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-*arm*
+DIST.freebsd-arm=		go${PKGVERSION_NOREV}.freebsd-arm.tar.gz
+.if ${MACHINE_PLATFORM:MFreeBSD-*-*arm*} || make(distinfo) || make(mdi)
+DISTFILES+=			${DIST.freebsd-arm}
+EXTRACT_ONLY+=			${DIST.freebsd-arm}
+.endif
+
+ONLY_FOR_PLATFORM+=		FreeBSD-*-aarch64
+DIST.freebsd-arm64=		go${PKGVERSION_NOREV}.freebsd-arm64.tar.gz
+.if ${MACHINE_PLATFORM:MFreeBSD-*-aarch64} || make(distinfo) || make(mdi)
+DISTFILES+=			${DIST.freebsd-arm64}
+EXTRACT_ONLY+=			${DIST.freebsd-arm64}
 .endif
 
 ONLY_FOR_PLATFORM+=		Linux-*-i386
