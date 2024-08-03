@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/07/06 16:16:06 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/08/03 09:54:16 nia Exp $
 
 BLAKE2s (pocl-6.0.tar.gz) = 41c872fa3c88593a4f9eecc1788cabb68b0c34906ec9d88ab545f449f3a0ce75
 SHA512 (pocl-6.0.tar.gz) = a24efadbbb81c810cd5c4bbb8abfa75b9bbdfeca786e8471dd75d40a78024d04c1b5c5a7114e75e1eb70a1b6a3756bb47ba741de0f1c4d1416fbce4688d62cc0
 Size (pocl-6.0.tar.gz) = 2466652 bytes
+SHA1 (patch-lib_CL_clReleaseCommandBufferKHR.c) = e7ff54e189527b58ff719c51e0d365b3096a7607
+SHA1 (patch-lib_CL_devices_proxy_pocl__proxy.c) = 774f4a9425c7d5f2820d4c8858a90ce8299b8897
