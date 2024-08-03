@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2024/08/02 10:17:18 pin Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/03 06:53:18 wiz Exp $
 
 DISTNAME=	st-0.9.2
 PKGNAME=	${DISTNAME:S/-/-term-/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	https://dl.suckless.org/st/
 
@@ -27,7 +28,6 @@ SUBST_FILES.configmk=		config.mk
 SUBST_MESSAGE.makefile=		Do not install the st terminfo entry
 SUBST_FILES.makefile=		Makefile
 SUBST_SED.configdefh+=		-e '/font/ s,".*","monospace:size=10",'
-SUBST_SED.configdefh+=		-e 's,st-256color,xterm,g'
 SUBST_SED.configmk+=		-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.configmk+=		-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.configmk+=		-e 's,/usr/X11R6,${X11BASE},g'
