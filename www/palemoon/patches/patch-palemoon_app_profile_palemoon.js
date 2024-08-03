@@ -1,4 +1,4 @@
-$NetBSD: patch-palemoon_app_profile_palemoon.js,v 1.2 2024/07/29 13:55:54 nia Exp $
+$NetBSD: patch-palemoon_app_profile_palemoon.js,v 1.3 2024/08/03 08:54:26 nia Exp $
 
 Modify some defaults to provide a better initial experience on NetBSD.
 
@@ -13,4 +13,4 @@ Modify some defaults to provide a better initial experience on NetBSD.
 +
 +// Otherwise handshake fails on some sites,
 +// see various posts on the pale moon forums
-+pref("security.tls.version.max", 3);
++pref("security.tls.hello_downgrade_check", false);
