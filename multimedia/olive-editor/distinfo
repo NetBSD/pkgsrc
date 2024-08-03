@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2023/10/15 19:57:54 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2024/08/03 11:13:27 nia Exp $
 
 BLAKE2s (olive-editor-0.2.0pre20230924-55eedbfce909dfd7df97611a2eea1d1958385f9c.tar.gz) = 28d9d3c9998990f318b55ab15310c6a395841fd32e073db336dc6f4f97df9f44
 SHA512 (olive-editor-0.2.0pre20230924-55eedbfce909dfd7df97611a2eea1d1958385f9c.tar.gz) = 36e3284f7b4a0f563c6e62078f5ec901e5edcdd97230097537003b0b7b3cdcaad773e8b081e7b1af2fc5d0f3b0f5fc1740eb957ef95760cc7338c9ef20f528dc
@@ -11,5 +11,6 @@ SHA512 (olive-editor-core-277792824801495e868580ca86f6e7a1b53e4779.tar.gz) = 131
 Size (olive-editor-core-277792824801495e868580ca86f6e7a1b53e4779.tar.gz) = 76408 bytes
 SHA1 (patch-CMakeLists.txt) = 6995fddfb1dfb3c7e663f8a1c61db701c9601f85
 SHA1 (patch-app_CMakeLists.txt) = d01fc5269c79fef9f8b4aa65dd128c58f2e0dc61
+SHA1 (patch-app_render_renderer.cpp) = 5dcf685ab7c9f3a84a0d5df13b4b2058bda320cf
 SHA1 (patch-cmake_FindFFMPEG.cmake) = 2f2aef426f7a3e93e66ff500840dcadec5e499e3
 SHA1 (patch-ext_core_src_util_timecodefunctions.cpp) = 81e20605774b8463f7d53fe1dc448dee2cb3e5e9
