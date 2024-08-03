@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:27:03 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/08/03 14:12:53 pin Exp $
 
-BLAKE2s (cantarell-fonts-0.301.tar.xz) = bc579650146672fa4ffe7292d58083f16fc1ae3522d0de2e553b10b3f2aac656
-SHA512 (cantarell-fonts-0.301.tar.xz) = 84bd37e9eeeb3001d336af49634184552d77df3ca780ef4cd9166925c87710575ab0208f50df2e4f0216f3b64dbe0ef5288a271866244e6cd1cd5518462f8b02
-Size (cantarell-fonts-0.301.tar.xz) = 570328 bytes
+BLAKE2s (cantarell-fonts-0.303.tar.xz) = 971ab25804095bba70b9abfb1b6ad04ce3a589ac562abb1f2148f9335edc8e30
+SHA512 (cantarell-fonts-0.303.tar.xz) = c4b11b30fd98ae7dbd87e2597a700baecc5474d381ea852442687996007eb574674200c1b42f6fa1a69606b0d0794ec7003e6dbf34008fa4eb6c5b60ba5d6db9
+Size (cantarell-fonts-0.303.tar.xz) = 244604 bytes
