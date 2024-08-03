@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.24 2024/06/18 03:17:01 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.25 2024/08/03 09:34:01 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -73,7 +73,6 @@ CONFIGURE_ARGS+=	--disable-rust-simd
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}js/src/tests/update-test262.sh
-CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}intl/icu/source/configure
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/components/loop/run-all-loop-tests.sh
 CHECK_PORTABILITY_SKIP+=	${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests.sh
 
@@ -87,7 +86,7 @@ CONFIGURE_ARGS+=	--enable-system-pixman
 # textproc/hunspell 1.3 is too old
 #CONFIGURE_ARGS+=	--enable-system-hunspell
 CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--with-system-icu
+#CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
@@ -208,7 +207,6 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.18
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.35
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
