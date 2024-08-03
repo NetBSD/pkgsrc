@@ -1,0 +1,7 @@
+reader is for your command line what the readability view is for modern
+browsers: A lightweight tool offering better readability of web pages on the
+CLI.
+
+reader parses a web page for its actual content and displays it in nicely
+highlighted text on the command line. In addition, reader renders embedded
+images from that page as colored block-renders on the terminal as well.
