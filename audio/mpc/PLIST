@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/05/16 16:42:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/08/03 14:28:58 mef Exp $
 bin/mpc
 man/man1/mpc.1
 share/doc/mpc/AUTHORS
@@ -16,6 +16,7 @@ share/doc/mpc/html/_static/custom.css
 share/doc/mpc/html/_static/doctools.js
 share/doc/mpc/html/_static/documentation_options.js
 share/doc/mpc/html/_static/file.png
+share/doc/mpc/html/_static/github-banner.svg
 share/doc/mpc/html/_static/language_data.js
 share/doc/mpc/html/_static/minus.png
 share/doc/mpc/html/_static/plus.png
