@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2021/05/24 19:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/03 09:59:04 nia Exp $
 #
 
 DISTNAME=	deforaos-desktop-2020.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
@@ -13,9 +13,13 @@ LICENSE=	gnu-gpl-v3
 
 META_PACKAGE=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 DEPENDS+=	deforaos-browser>=0.5.3:../../sysutils/deforaos-browser
 DEPENDS+=	deforaos-camera>=0.3.0:../../graphics/deforaos-camera
+.if ${X11_TYPE} == "modular"
 DEPENDS+=	deforaos-coder>=0.3.0:../../devel/deforaos-coder
+.endif
 DEPENDS+=	deforaos-editor>=0.4.1:../../editors/deforaos-editor
 DEPENDS+=	deforaos-icon-theme>=0.1.3:../../graphics/deforaos-icon-theme
 DEPENDS+=	deforaos-integration>=0.1.0:../../x11/deforaos-integration
