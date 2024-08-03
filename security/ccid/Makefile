@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/07/05 19:32:53 adam Exp $
+# $NetBSD: Makefile,v 1.47 2024/08/03 09:51:10 nia Exp $
 
 DISTNAME=	ccid-1.6.1
 CATEGORIES=	security
@@ -20,6 +20,8 @@ USE_TOOLS+=		autoconf automake autoreconf flex perl pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+TOOL_DEPENDS+=		autoconf-archive-[0-9]*:../../devel/autoconf-archive
 
 OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		dylib
