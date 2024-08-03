@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1801 2024/07/30 17:11:45 vins Exp $
+# $NetBSD: Makefile,v 1.1802 2024/08/03 10:46:17 pin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -953,6 +953,7 @@ SUBDIR+=	qt6-qthttpserver
 SUBDIR+=	qt6-qtwebchannel
 SUBDIR+=	qutebrowser
 SUBDIR+=	ramaze
+SUBDIR+=	reader
 SUBDIR+=	redlib
 SUBDIR+=	rekonq
 SUBDIR+=	restish
