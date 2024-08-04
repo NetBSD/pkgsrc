@@ -1,4 +1,4 @@
-$NetBSD: patch-collector_cpu__netbsd.go,v 1.1 2024/08/04 12:27:41 tnn Exp $
+$NetBSD: patch-collector_cpu__netbsd.go,v 1.2 2024/08/04 13:09:15 tnn Exp $
 
 collector/cpu_netbsd: fix 32-bit host support and plug memory leak
 https://github.com/prometheus/node_exporter/pull/3083
@@ -60,7 +60,7 @@ https://github.com/prometheus/node_exporter/pull/3083
 -			(int64(typ)<<8)|
 -			nr,
 -		),
-+		uintptr(_IOWR(typ, nr, unsafe.Sizeof(plistref{}))),
++		uintptr(_IOWR(typ, nr, size)),
  		uintptr(retptr),
  	)
  	if errno != 0 {
