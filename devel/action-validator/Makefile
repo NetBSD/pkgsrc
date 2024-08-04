@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/01/18 19:28:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/04 17:43:17 pin Exp $
 
-DISTNAME=		action-validator-0.5.4
+DISTNAME=		action-validator-0.6.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mpalmer/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -10,6 +10,7 @@ HOMEPAGE=		https://github.com/mpalmer/action-validator/
 COMMENT=		Validate GitHub Action and Workflow YAML files
 LICENSE=		gnu-gpl-v3
 
+RUST_REQ=		1.60.0
 BUILD_DEPENDS+=		schemastore>=0.20231122:../../textproc/schemastore
 
 USE_LANGUAGES=		c
