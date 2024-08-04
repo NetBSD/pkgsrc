@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2024/01/18 19:28:24 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2024/08/04 17:43:17 pin Exp $
 
-BLAKE2s (action-validator-0.5.4.tar.gz) = 331a38ad642abe587216a295c3a629e3d7ac853f3fae2064ffb0391a433f4df2
-SHA512 (action-validator-0.5.4.tar.gz) = 1806121ab3fe96e2a187ccdb13192ff9bb9205f05102f08b11e73ab619edda8af0dc99f880858b336ce15713f79dda6121a91ac18403495b23a1986fe2768f93
-Size (action-validator-0.5.4.tar.gz) = 43137 bytes
+BLAKE2s (action-validator-0.6.0.tar.gz) = 9562f3f0cb485d7b079999548efd289659a001865c130cca146295d72dbc1bc8
+SHA512 (action-validator-0.6.0.tar.gz) = bb1e3cb616f897d468352fd91a87cbedf22d0dc2ad2ba9d9d07aaa5368e4935e11884ee932c1f432ca13e6265d4c2d5d6d26ed8d9f7849f442c91b55d952dcc7
+Size (action-validator-0.6.0.tar.gz) = 44000 bytes
 BLAKE2s (addr-0.15.6.crate) = a22cad8818f1c069a91d58a4baecd2b84dc825e9236d7a979c1ad645f5e95a6d
 SHA512 (addr-0.15.6.crate) = d943f18e7b87b0f5c4d3157cb8797864f21fb4281df2a7df728c92c48e6f4627854af40c9a489071260ba7850beeb10092dd9b02013c7540e6a21bcbde17438e
 Size (addr-0.15.6.crate) = 92595 bytes
@@ -273,9 +273,9 @@ Size (unicode-normalization-0.1.22.crate) = 122604 bytes
 BLAKE2s (unicode-width-0.1.10.crate) = e66d8140c18f2e4f3e4eee069114d5d3679b5885bd0fdff01989b7ce1b35983d
 SHA512 (unicode-width-0.1.10.crate) = 9836a8d489d18ea1ecfe1957ed6d5da7dce825e138cd1848aef093fa8d2eb83fcf01eabb1a2446df4f5ede4e67316e9e81b5d58b59d4e8c5d67870e8fa5dca3b
 Size (unicode-width-0.1.10.crate) = 18968 bytes
-BLAKE2s (unsafe-libyaml-0.2.8.crate) = 5e90dc086a1b3be42602b2f7982a6398de532643c86d0d67ec42ee2c38e1bf86
-SHA512 (unsafe-libyaml-0.2.8.crate) = cead338c7cf7e72ca875323828a8802287d0645fb89942973b78d1e1e240374de3b0b227e53b1e7e8db12517ab0a79b73b643246570057559f4cd69ec79a4e7d
-Size (unsafe-libyaml-0.2.8.crate) = 61459 bytes
+BLAKE2s (unsafe-libyaml-0.2.10.crate) = a2c3652ae346cbeeffc9424fc45da76db900eef2447ca575e1958183af14bcad
+SHA512 (unsafe-libyaml-0.2.10.crate) = 9989fd93105ae343ce3ed097fc66e62ad9fcb64b8ace4ac2f7bcd374782f9919082ba0bc0f246a9a7071c35172f08953560a8108553076a819d9d1d7dce9a5aa
+Size (unsafe-libyaml-0.2.10.crate) = 61964 bytes
 BLAKE2s (uritemplate-next-0.2.0.crate) = 1009d6536226bf765e93fd58d4acdd771098ec5b310082e2c5c981e20a3edaf1
 SHA512 (uritemplate-next-0.2.0.crate) = 5ada7af71f77286c20a0d6bcc5a9266e9aefac609e4a291a165f7195992da65ea8967a976193afbec873ebdac58f887b4091b76fd9e9cec412d9713cc623dedb
 Size (uritemplate-next-0.2.0.crate) = 21154 bytes
