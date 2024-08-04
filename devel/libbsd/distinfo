@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2024/03/05 19:44:36 vins Exp $
+$NetBSD: distinfo,v 1.7 2024/08/04 06:55:30 vins Exp $
 
-BLAKE2s (libbsd-0.12.1.tar.xz) = 03a5af583b8ce84801f68b94482dbddd3366f633e2e8ec2485439c5c0165e58f
-SHA512 (libbsd-0.12.1.tar.xz) = c45c7861b63295c118f53ce868437ad73887b6764708d0a348b796f5abe2cefc9adbb0dd3be23f6348d6bf63a9920a13b7f90d065299cac5a05ce0376211073a
-Size (libbsd-0.12.1.tar.xz) = 444048 bytes
+BLAKE2s (libbsd-0.12.2.tar.xz) = 9565e77d85e6cb2e9a21b6b662bf1c7dcf57246fc1b67e4f677b5740c5ab946d
+SHA512 (libbsd-0.12.2.tar.xz) = ce43e4f0486d5f00d4a8119ee863eaaa2f968cae4aa3d622976bb31ad601dfc565afacef7ebade5eba33fff1c329b5296c6387c008d1e1805d878431038f8b21
+Size (libbsd-0.12.2.tar.xz) = 446032 bytes
 SHA1 (patch-src_Makefile.am) = b56fccab3f23cf25f0ee6906f9ebefa76e6e500f
