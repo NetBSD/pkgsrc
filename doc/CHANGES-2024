@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4838 2024/08/04 11:10:12 kim Exp $
+$NetBSD: CHANGES-2024,v 1.4839 2024/08/04 13:01:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7574,3 +7574,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed security/tor-browser-noscript [nia 2024-08-04]
 	Removed security/tor-browser [nia 2024-08-04]
 	Added www/wcurl version 2024.07.10 [kim 2024-08-04]
+	Updated sysutils/broot to 1.41.1 [pin 2024-08-04]
