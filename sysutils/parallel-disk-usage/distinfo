@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/02/11 21:07:18 pin Exp $
+$NetBSD: distinfo,v 1.11 2024/08/04 17:47:21 pin Exp $
 
 BLAKE2s (anstream-0.6.11.crate) = c2b6fd0c7d2a5ab620b3ce90406fabc6375c282240c6d9c694de0b38e1d7c823
 SHA512 (anstream-0.6.11.crate) = f8dd65cc116a1495782a3bfc98edfdd0973ab22ea2fafd292fb4bd3495af7b5ea410f320d3fa05f7f812fa96c2a20f4cd2af9fc58869a1a306f32714cbe45163
@@ -120,9 +120,9 @@ Size (indexmap-2.2.2.crate) = 76160 bytes
 BLAKE2s (itertools-0.10.5.crate) = a445c07be8da5c4bdf8dd6fb0a92746438e9ee1767fc180b2da34b31daa4de8d
 SHA512 (itertools-0.10.5.crate) = d03c3cfba9841776913bbb6daad0c8945830c155f32ae4b48872e0f937c75a443f0ac9a0355f43b359ff75232f38b15f4f6d446b4be30b00b4209cf66ef770c3
 Size (itertools-0.10.5.crate) = 115354 bytes
-BLAKE2s (itertools-0.12.1.crate) = b9e8619f89e4ce180362f76d1f284b5ad2f1052f6bdc28fd6320c008dd580b68
-SHA512 (itertools-0.12.1.crate) = 0d9c1849dcc0ddf7555b0aeb7e4f2ef3b101cfc6f03310ce1b6072d70ac8c8d3387ef4c726146102012e75171e0b0bf13465704b6edfc02752e349dc6af7cf68
-Size (itertools-0.12.1.crate) = 137761 bytes
+BLAKE2s (itertools-0.13.0.crate) = dab065a4b256f0a8e2f8856274e6333cbf666090a1cb8a36201e34e63d2be4f3
+SHA512 (itertools-0.13.0.crate) = c6cb8f93a93b6ac1a2cbb3033e66fc81a39f83be773b734bea3311332b96bc71bbb518aae3e6b40cb537590c23de1ca4964361c336795c3985bde63232d410c4
+Size (itertools-0.13.0.crate) = 146261 bytes
 BLAKE2s (itoa-1.0.10.crate) = 6ea3d7fa20f33e902bb4a65f2d096df3d0bb0722b17d1b2358d814452e29e7ff
 SHA512 (itoa-1.0.10.crate) = fc496be0873e31afa6ddf7f2958030f8fcb517cadb86a48280a0c50ce50460afda189af1e6c26e5ff6f85c750d772c21503864c32b526c4fe4bcdb5b07918538
 Size (itoa-1.0.10.crate) = 10534 bytes
@@ -135,9 +135,9 @@ Size (linux-raw-sys-0.4.13.crate) = 1493855 bytes
 BLAKE2s (maplit-1.0.2.crate) = f6de238711037163128cffba54e8a1b1d330c5a03720f4a146b0d70cc550da43
 SHA512 (maplit-1.0.2.crate) = 917b5cf665e12b687035c895b60b2ae05622963f495f5693515fd24d56f49e95a06ffced68606d061bd20822c655100035930673fd4b0d4790168763b6961a9f
 Size (maplit-1.0.2.crate) = 8871 bytes
-BLAKE2s (parallel-disk-usage-0.9.2.tar.gz) = d1c6ae18deda4f0db1cca3960323086d5df3c27f19885e2fec38e1ca8068fced
-SHA512 (parallel-disk-usage-0.9.2.tar.gz) = af994a8cf35115af063ee9e004f808d3af358a785aed7a1faf204199c31968024a7982b027f4de81ad800e57d89406b7ecb27f4c519d77243093a10563bf3975
-Size (parallel-disk-usage-0.9.2.tar.gz) = 76760 bytes
+BLAKE2s (parallel-disk-usage-0.9.3.tar.gz) = 5bff102fcadc070310787a3da729cf804974c69d0d5cabc3f30c5ed8f97174c3
+SHA512 (parallel-disk-usage-0.9.3.tar.gz) = 3db460fedd90d8b35a4831e69a66f7dd1fec438393647a0090fb120c5edac8e962ae2b8fa9722fe472001f856283784f0496c0ba5b2394db59b3516c2b5e8686
+Size (parallel-disk-usage-0.9.3.tar.gz) = 76720 bytes
 BLAKE2s (pipe-trait-0.4.0.crate) = 2aac011841ae56c82e7eaf0a5d2cf12bff61b8950e2e298897d91d77c9c4a804
 SHA512 (pipe-trait-0.4.0.crate) = 0a8dc7b99551040228ae2aa5d59450603f71926c430eabbea764e87fd62097753bb38ae9931624c11cd5c82b6d540761c12326eaf971884ea561bbf5aef21a16
 Size (pipe-trait-0.4.0.crate) = 4222 bytes
