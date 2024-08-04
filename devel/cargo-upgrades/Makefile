@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/10/09 12:16:02 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/04 17:45:27 pin Exp $
 
-DISTNAME=	cargo-upgrades-2.0.0
+DISTNAME=	cargo-upgrades-2.1.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kornelski/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -12,7 +12,10 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/cargo-upgrades-v2.0.0-9107370a2b2a559f5def95d87a0f38e32fa2de76
+WRKSRC=		${WRKDIR}/cargo-upgrades-v2.1.2-d890d43432610221d593216a68f0c14d7df4ccd7
+
+RUST_REQ=	1.70.0
+USE_LANGUAGES+=	c c++
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
