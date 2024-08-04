@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2024/02/10 21:48:21 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2024/08/04 17:47:21 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.11
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
@@ -40,7 +40,7 @@ CARGO_CRATE_DEPENDS+=	heck-0.4.1
 CARGO_CRATE_DEPENDS+=	ident_case-1.0.1
 CARGO_CRATE_DEPENDS+=	indexmap-2.2.2
 CARGO_CRATE_DEPENDS+=	itertools-0.10.5
-CARGO_CRATE_DEPENDS+=	itertools-0.12.1
+CARGO_CRATE_DEPENDS+=	itertools-0.13.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.10
 CARGO_CRATE_DEPENDS+=	libc-0.2.153
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.13
