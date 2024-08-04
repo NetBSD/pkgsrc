@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2024/05/23 11:53:45 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2024/08/04 09:46:29 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -159,8 +159,8 @@ CARGO_CRATE_DEPENDS+=	strum_macros-0.25.3
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.55
 CARGO_CRATE_DEPENDS+=	tempfile-3.10.1
-CARGO_CRATE_DEPENDS+=	thiserror-1.0.58
-CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.58
+CARGO_CRATE_DEPENDS+=	thiserror-1.0.63
+CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.63
 CARGO_CRATE_DEPENDS+=	tiff-0.9.1
 CARGO_CRATE_DEPENDS+=	tiny-keccak-2.0.2
 CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.1.4
