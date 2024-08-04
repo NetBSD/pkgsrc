@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4322 2024/08/02 17:46:00 pin Exp $
+# $NetBSD: Makefile,v 1.4323 2024/08/04 13:19:46 nia Exp $
 #
 
 COMMENT=	Development utilities
@@ -1304,7 +1304,6 @@ SUBDIR+=	ocamlgraph
 SUBDIR+=	ocamlify
 SUBDIR+=	ocamlmod
 SUBDIR+=	ode
-SUBDIR+=	ogre
 SUBDIR+=	okteta
 SUBDIR+=	omake
 SUBDIR+=	opa
