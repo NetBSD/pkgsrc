@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:19:22 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/08/04 07:18:56 adam Exp $
 
-BLAKE2s (robin-map-0.6.3.tar.gz) = a2b05288acb996654795e2c000e6ffae6fb37f6eceb7b54b8798bd9d8fb9492a
-SHA512 (robin-map-0.6.3.tar.gz) = 485557f300d33bda62bb8accdf246819ee8ffe956bc022e7ddca54ff6ad1a9fdb8db8d80690add3ef238e834d1eb8e2905920cb0a0674e7df010f6946d01297b
-Size (robin-map-0.6.3.tar.gz) = 64506 bytes
+BLAKE2s (robin-map-1.3.0.tar.gz) = 0f21b5cbfb07724f3956ea8ccd30f111de2f3f0a5b04561b0600c86e8ab38073
+SHA512 (robin-map-1.3.0.tar.gz) = 862cb98d771d1acb692e27d1cc8a4f2cda0883b66af7b38b63ea702ed2d4fc4d49e5700ca4d5f5148fee132f36e111c4839d4f8c52c96a9c60f3937d941b2320
+Size (robin-map-1.3.0.tar.gz) = 70562 bytes
