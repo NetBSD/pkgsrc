@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/07/19 08:35:33 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/08/04 07:30:12 adam Exp $
 
-DISTNAME=	PyJWT-2.8.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
+DISTNAME=	pyjwt-2.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyjwt/JWT/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyJWT/}
 
@@ -10,16 +10,17 @@ HOMEPAGE=	https://github.com/jpadilla/pyjwt
 COMMENT=	JSON Web Token implementation in Python
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.0.0:../../devel/py-test
+WHEEL_NAME=	${DISTNAME:S/pyjwt/PyJWT/}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+# crypto
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
