@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/10 09:20:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/04 07:20:18 adam Exp $
 bin/ug
 bin/ug+
 bin/ugrep
@@ -11,9 +11,11 @@ share/bash-completion/completions/ug
 share/bash-completion/completions/ug+
 share/bash-completion/completions/ugrep
 share/bash-completion/completions/ugrep+
+share/bash-completion/completions/ugrep-indexer
 share/fish/vendor_completions.d/ug+.fish
 share/fish/vendor_completions.d/ug.fish
 share/fish/vendor_completions.d/ugrep+.fish
+share/fish/vendor_completions.d/ugrep-indexer.fish
 share/fish/vendor_completions.d/ugrep.fish
 share/ugrep/patterns/README.md
 share/ugrep/patterns/c++/README.md
@@ -206,3 +208,4 @@ share/zsh/site-functions/_ug
 share/zsh/site-functions/_ug+
 share/zsh/site-functions/_ugrep
 share/zsh/site-functions/_ugrep+
+share/zsh/site-functions/_ugrep-indexer
