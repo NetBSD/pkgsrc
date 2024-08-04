@@ -1,4 +1,4 @@
-# $NetBSD: dependency.mk,v 1.5 2024/05/10 11:48:13 wiz Exp $
+# $NetBSD: dependency.mk,v 1.6 2024/08/04 09:42:36 kim Exp $
 #
 # Not for public use - use through versioned_dependencies.mk.
 #
@@ -22,7 +22,7 @@ PYCRYPTOGRAPHY_TYPE?=	c
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYCRYPTOGRAPHY_TYPE:tl} == "rust"
-PYCRYPTOGRAPHY_VERSION?=	cryptography>=0
+PYCRYPTOGRAPHY_VERSION?=	cryptography>=43
 PYCRYPTOGRAPHY_DIR?=		security/py-cryptography
 .else
 PYCRYPTOGRAPHY_VERSION?=	cryptography>=0<3.4
