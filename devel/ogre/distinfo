@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:15:58 nia Exp $
-
-BLAKE2s (ogre-1.12.11.tar.gz) = a2f06b92bedf79e76fae4bde370c8eb98a179d7900beeb342d6c344fc9357a29
-SHA512 (ogre-1.12.11.tar.gz) = eba7918b3731dcc0e61c8caddb3e93f4bfbf61731695bd619730741e16eaf6d85ecc867ef9f5935a745c3dbefdf9b2b639a3b839886781f24bccdc79d7eeb03f
-Size (ogre-1.12.11.tar.gz) = 91325649 bytes
-SHA1 (patch-OgreMain_include_OgreBitwise.h) = b9419c6b988486b1cf064f34cf6bbb5474a9278a
