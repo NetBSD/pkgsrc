@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/19 14:36:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/08/04 13:05:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -24,9 +24,12 @@ ${PYSITELIB}/xgboost/config.pyo
 ${PYSITELIB}/xgboost/core.py
 ${PYSITELIB}/xgboost/core.pyc
 ${PYSITELIB}/xgboost/core.pyo
-${PYSITELIB}/xgboost/dask.py
-${PYSITELIB}/xgboost/dask.pyc
-${PYSITELIB}/xgboost/dask.pyo
+${PYSITELIB}/xgboost/dask/__init__.py
+${PYSITELIB}/xgboost/dask/__init__.pyc
+${PYSITELIB}/xgboost/dask/__init__.pyo
+${PYSITELIB}/xgboost/dask/utils.py
+${PYSITELIB}/xgboost/dask/utils.pyc
+${PYSITELIB}/xgboost/dask/utils.pyo
 ${PYSITELIB}/xgboost/data.py
 ${PYSITELIB}/xgboost/data.pyc
 ${PYSITELIB}/xgboost/data.pyo
@@ -41,9 +44,6 @@ ${PYSITELIB}/xgboost/plotting.py
 ${PYSITELIB}/xgboost/plotting.pyc
 ${PYSITELIB}/xgboost/plotting.pyo
 ${PYSITELIB}/xgboost/py.typed
-${PYSITELIB}/xgboost/rabit.py
-${PYSITELIB}/xgboost/rabit.pyc
-${PYSITELIB}/xgboost/rabit.pyo
 ${PYSITELIB}/xgboost/sklearn.py
 ${PYSITELIB}/xgboost/sklearn.pyc
 ${PYSITELIB}/xgboost/sklearn.pyo
@@ -68,6 +68,9 @@ ${PYSITELIB}/xgboost/spark/utils.pyo
 ${PYSITELIB}/xgboost/testing/__init__.py
 ${PYSITELIB}/xgboost/testing/__init__.pyc
 ${PYSITELIB}/xgboost/testing/__init__.pyo
+${PYSITELIB}/xgboost/testing/continuation.py
+${PYSITELIB}/xgboost/testing/continuation.pyc
+${PYSITELIB}/xgboost/testing/continuation.pyo
 ${PYSITELIB}/xgboost/testing/dask.py
 ${PYSITELIB}/xgboost/testing/dask.pyc
 ${PYSITELIB}/xgboost/testing/dask.pyo
@@ -77,6 +80,9 @@ ${PYSITELIB}/xgboost/testing/data.pyo
 ${PYSITELIB}/xgboost/testing/data_iter.py
 ${PYSITELIB}/xgboost/testing/data_iter.pyc
 ${PYSITELIB}/xgboost/testing/data_iter.pyo
+${PYSITELIB}/xgboost/testing/federated.py
+${PYSITELIB}/xgboost/testing/federated.pyc
+${PYSITELIB}/xgboost/testing/federated.pyo
 ${PYSITELIB}/xgboost/testing/metrics.py
 ${PYSITELIB}/xgboost/testing/metrics.pyc
 ${PYSITELIB}/xgboost/testing/metrics.pyo
