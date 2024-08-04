@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/06/16 06:01:37 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/04 17:48:16 pin Exp $
 
-DISTNAME=	qcalc-0.9.6
+DISTNAME=	qcalc-0.14.3
 CATEGORIES=	math
 MASTER_SITES=	https://static.crates.io/crates/qcalc/
 EXTRACT_SUFX=	.crate
@@ -11,6 +11,10 @@ COMMENT=	Terminal GUI calculator
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
