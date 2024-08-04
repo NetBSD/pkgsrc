@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/07/28 01:14:24 tnn Exp $
+$NetBSD: distinfo,v 1.13 2024/08/04 00:08:21 tnn Exp $
 
 BLAKE2s (github.com_alecthomas_kingpin_v2_@v_v2.4.0.mod) = 20c554bf73adc1d4faea9cf1eba7f569d362037f364d643d7176e790eed60759
 SHA512 (github.com_alecthomas_kingpin_v2_@v_v2.4.0.mod) = 27b647208aec705c995e523035f278c6b81102ba59f5a95e6e7adf1e8cba2e166d73f0d1115946acfcb736918b5b0db66d2f2aeba084a3581a7a29d342f511b2
@@ -387,5 +387,7 @@ Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
 BLAKE2s (node_exporter-1.8.2.tar.gz) = 2370bedb44e5469e3f9971b1c7e493adf4995107d748a8853e7549750e53548f
 SHA512 (node_exporter-1.8.2.tar.gz) = 68112a85a9ffde88d75893c30ab992ae3c591d44fbefa10e45cf94d228c8f8c44bb3585707521e355817c4b4276cf77eeaf4ed9d0261de02620135ad12f5e711
 Size (node_exporter-1.8.2.tar.gz) = 335292 bytes
+SHA1 (patch-collector_filesystem__common.go) = 5340a9b36478efa1563c7359469840a7bb652343
+SHA1 (patch-collector_filesystem__netbsd.go) = 446190ceca0c37bada8ed444ce497c2e9b8e05ae
 SHA1 (patch-collector_netdev__common.go) = 83b6615334490e8ccfd8c311b36ee2ec98c0ad15
 SHA1 (patch-collector_netdev__netbsd.go) = 59d5409ea5ab267c48c9a5d299e66c7c283f8680
