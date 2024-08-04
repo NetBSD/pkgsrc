@@ -1,4 +1,4 @@
-# $NetBSD: mimir.yaml,v 1.1 2024/07/25 16:58:13 tnn Exp $
+# $NetBSD: mimir.yaml,v 1.2 2024/08/04 18:13:24 tnn Exp $
 
 # Do not use this configuration in production.
 # It is for demonstration purposes only.
@@ -35,6 +35,10 @@ ingester:
     kvstore:
       store: memberlist
     replication_factor: 1
+
+ruler:
+  ring:
+    instance_addr: 127.0.0.1
 
 ruler_storage:
   backend: filesystem
