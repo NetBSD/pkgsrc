@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4842 2024/08/04 13:39:16 fox Exp $
+$NetBSD: CHANGES-2024,v 1.4843 2024/08/04 13:51:24 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7579,3 +7579,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-wat-inspector to 0.3.3 [adam 2024-08-04]
 	Removed devel/ogre [nia 2024-08-04]
 	Updated sysutils/eza to 0.18.24 [fox 2024-08-04]
+	Updated security/wolfssl to 5.7.2 [fox 2024-08-04]
