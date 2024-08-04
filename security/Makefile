@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.955 2024/07/22 20:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.956 2024/08/04 09:48:58 nia Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -666,9 +666,6 @@ SUBDIR+=	terrapin-scanner
 SUBDIR+=	tkpasman
 SUBDIR+=	tlswrapper
 SUBDIR+=	tlsx
-SUBDIR+=	tor-browser
-SUBDIR+=	tor-browser-https-everywhere
-SUBDIR+=	tor-browser-noscript
 SUBDIR+=	tripwire
 SUBDIR+=	trufflehog
 SUBDIR+=	uacme
