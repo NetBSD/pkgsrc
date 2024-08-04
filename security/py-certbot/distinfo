@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.88 2024/06/06 12:05:45 adam Exp $
+$NetBSD: distinfo,v 1.89 2024/08/04 09:42:35 kim Exp $
 
 BLAKE2s (certbot-2.11.0.tar.gz) = 0da1b56df6ad6cba0ca62fe7f7fbce25ddae98a2bc1c2d0c5919e812f8057690
 SHA512 (certbot-2.11.0.tar.gz) = ddc4d92d5b9df8917cf073a0478d85e4dc739160b7f3f6f667df0a119fef8423f0d36e93fcd7972d6e961e44e11eabcf4889c499f9d10388cd6e89eee019bc34
 Size (certbot-2.11.0.tar.gz) = 438415 bytes
+SHA1 (patch-certbot__internal_test_ocsp_test.py) = 0989e284346c1697ebcf4ea0a1177b647eeb483e
+SHA1 (patch-certbot_ocsp.py) = d24e8afc7b328f10fd1918fefa747043702573a9
