@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:19:18 nia Exp $
+$NetBSD: distinfo,v 1.17 2024/08/04 10:52:06 nia Exp $
 
 BLAKE2s (acpica-unix2-20160930.tar.gz) = 28558ae94c89198319fb030e0e8ca3f4755d60d10b11552aa92e3958019d1c99
 SHA512 (acpica-unix2-20160930.tar.gz) = 9d3eb7ece52bd62ff5784f7173b7ad5d1140bcb56c8ed4256d7293b0f6d296c5ad600636c26f6fbc0989440839b2e986ae387c65389451538779748d1d932b1a
@@ -6,7 +6,8 @@ Size (acpica-unix2-20160930.tar.gz) = 1424425 bytes
 BLAKE2s (acpitests-unix-20160930.tar.gz) = ef14f9d1c2d1de085617b49e453897c8df67c489b0df6d380f56936dbd1b3c78
 SHA512 (acpitests-unix-20160930.tar.gz) = f982826e01de7a79da543c2ca99dfc9459829a03332841dfe00f45bfc1620bdfa986a5ce4c8bbee2933325c1c526434c04e3601d727fb111f049e71e080a4c71
 Size (acpitests-unix-20160930.tar.gz) = 1829886 bytes
-SHA1 (patch-generate_unix_Makefile.config) = b760ec07afa96902641ff4b979b7764baa39aceb
+SHA1 (patch-generate_unix_Makefile.config) = 1822c8eaa710d48fec00fe529304ee6cd465696f
+SHA1 (patch-generate_unix_iasl_Makefile) = 5fe72f757032e8b3ad6a9159bec9d4c44e7a948e
 SHA1 (patch-source_compiler_aslanalyze.c) = fae01580943d61dd907bd2835be432258f972f7d
 SHA1 (patch-source_compiler_aslpredef.c) = 1d4c9a5fe0ad437f55b0381761ed128624fc220d
 SHA1 (patch-source_compiler_aslwalks.c) = 7c18ed4005c383020f94c71a2fc5ee2f768fcb07
