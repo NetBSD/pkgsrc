@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24697 2024/08/03 05:01:36 wiz Exp $
+$NetBSD: TODO,v 1.24698 2024/08/04 07:03:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,6 +413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
+	o abseil-20240701
 	o accountsservice-23.13.9 [switched to meson]
 	o admesh-0.98.2
 	o adms-2.3.6
@@ -515,6 +516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cargo-c-0.10.2 [wip, needs rust 1.77]
+	o cargo-c-0.10.3
 	o cddbd-1.5.2
 	o cdrdao-1.2.5
 	o cdrkit-1.1.10
@@ -633,6 +635,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.3.6
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -856,6 +859,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libinotify-0.0.20240724
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -1108,6 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-9.2.0
+	o protobuf-27.3
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1116,8 +1121,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o pxp-1.2.9
 	o py-HappyDoc-3.0
+	o py-JWT-2.9.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-attrs-24.1.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-dot-3.0.1
@@ -1127,9 +1134,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-foolscap-23.3.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.139.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-keyring-25.3.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1139,16 +1148,30 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-posting-1.10.0
+	o py-protobuf-5.27.3
+	o py-pydantic-settings-2.4.0
 	o py-pymc3-3.8
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-qtgraph-qt5-0.12.1
 	o py-quixote-3.3
+	o py-ruff-0.5.6
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-72.1.0
+	o py-setuptools-rust-1.10.0
 	o py-simpletal-5.1
+	o py-sphinx-8.0.2
+	o py-sphinxcontrib-applehelp-2.0.0
+	o py-sphinxcontrib-devhelp-2.0.0
+	o py-sphinxcontrib-htmlhelp-2.1.0
+	o py-sphinxcontrib-qthelp-2.0.0
+	o py-sphinxcontrib-serializinghtml-2.0.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-terminator-2.1.1
+	o py-textual-0.75.1
+	o py-textual-autocomplete-3.0.0a9
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
@@ -1172,6 +1195,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restic-rest-server-0.13.0
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
@@ -1182,6 +1206,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.9.1
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
