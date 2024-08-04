@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.29 2024/07/25 20:28:43 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.30 2024/08/04 13:38:50 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -76,6 +76,7 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.9.0
 CARGO_CRATE_DEPENDS+=	natord-1.0.9
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.0
+CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	number_prefix-0.4.0
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
@@ -129,9 +130,9 @@ CARGO_CRATE_DEPENDS+=	tempfile-3.8.0
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.48
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.48
-CARGO_CRATE_DEPENDS+=	time-0.3.30
+CARGO_CRATE_DEPENDS+=	time-0.3.36
 CARGO_CRATE_DEPENDS+=	time-core-0.1.2
-CARGO_CRATE_DEPENDS+=	time-macros-0.2.15
+CARGO_CRATE_DEPENDS+=	time-macros-0.2.18
 CARGO_CRATE_DEPENDS+=	timeago-0.4.2
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.2.0
