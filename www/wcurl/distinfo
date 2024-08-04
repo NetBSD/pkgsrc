@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/04 11:09:57 kim Exp $
+
+BLAKE2s (wcurl-2024.07.10.tar.gz) = 8f690933827eb9e6d68a76b9e34be17959588bac627eb4b91a37b4a4ba0328af
+SHA512 (wcurl-2024.07.10.tar.gz) = 303e52211ebb948a71ec2ef4e0eb4ad7e0de4bb82b6e6fa025a161b0c5c2fc0c0205fd9782e08f1759363ca1a2f9186d42a0073deb955dbf586691b513a7a1e4
+Size (wcurl-2024.07.10.tar.gz) = 5791 bytes
