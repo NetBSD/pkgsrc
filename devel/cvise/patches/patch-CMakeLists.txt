@@ -1,9 +1,19 @@
-$NetBSD: patch-CMakeLists.txt,v 1.5 2024/04/19 04:48:55 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.6 2024/08/04 10:18:42 nia Exp $
 
+Do not force -Werror.
 Do not set -O3 optimization flags.
 
 --- CMakeLists.txt.orig	2024-03-13 20:19:48.000000000 +0000
 +++ CMakeLists.txt
+@@ -171,7 +171,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+     OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+   # XXX figure out how to get "-std=c++17 -fno-rtti" from LLVM.  That's how we
+   # get those options in the Automake path...
+-  set(COMMON_FLAGS "-Wall -Wextra -Werror -pedantic -Wno-unused-parameter")
++  set(COMMON_FLAGS "-Wall -Wextra -pedantic -Wno-unused-parameter")
+   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${COMMON_FLAGS}")
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMMON_FLAGS} -std=c++17 -fno-rtti -fno-strict-aliasing")
+   if(SUPPORTS_FVISIBILITY_INLINES_HIDDEN_FLAG)
 @@ -197,8 +197,6 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
      set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=deprecated-declarations")
    endif()
