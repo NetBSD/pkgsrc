@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2024/07/28 09:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/04 13:07:35 adam Exp $
 
-DISTNAME=	wat_inspector-0.2.1
+DISTNAME=	wat_inspector-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=w/wat_inspector/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/wat-inspector/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/wat_inspector/
+HOMEPAGE=	https://github.com/igrek51/wat
 COMMENT=	Deep inspection of Python objects
 LICENSE=	mit
 
