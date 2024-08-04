@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2024/02/11 10:01:46 vins Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/04 20:13:07 vins Exp $
 
-DISTNAME=	plan9port-20240110
+DISTNAME=	plan9port-20240717
 CATEGORIES=	misc plan9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
-GITHUB_TAG=	be7c68f6954f7dcaa53403e0f600716f65a13d32
+GITHUB_TAG=	a2567fcac9851e5cc965a236679f568b0e79cff2
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://9fans.github.io/plan9port/
