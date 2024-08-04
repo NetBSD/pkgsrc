@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.80 2024/07/17 11:35:37 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.81 2024/08/04 13:01:12 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	ahash-0.4.8
@@ -121,8 +121,8 @@ CARGO_CRATE_DEPENDS+=	jobserver-0.1.31
 CARGO_CRATE_DEPENDS+=	jpeg-decoder-0.3.1
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.69
 CARGO_CRATE_DEPENDS+=	kurbo-0.9.5
-CARGO_CRATE_DEPENDS+=	lazy-regex-3.1.0
-CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.1.0
+CARGO_CRATE_DEPENDS+=	lazy-regex-3.2.0
+CARGO_CRATE_DEPENDS+=	lazy-regex-proc_macros-3.2.0
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	lebe-0.5.2
 CARGO_CRATE_DEPENDS+=	lfs-core-0.11.2
@@ -216,7 +216,7 @@ CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	snafu-0.7.5
 CARGO_CRATE_DEPENDS+=	snafu-derive-0.7.5
 CARGO_CRATE_DEPENDS+=	spin-0.9.8
-CARGO_CRATE_DEPENDS+=	splitty-1.0.1
+CARGO_CRATE_DEPENDS+=	splitty-1.0.2
 CARGO_CRATE_DEPENDS+=	str-buf-1.0.6
 CARGO_CRATE_DEPENDS+=	strict-0.1.4
 CARGO_CRATE_DEPENDS+=	strict-0.2.0
