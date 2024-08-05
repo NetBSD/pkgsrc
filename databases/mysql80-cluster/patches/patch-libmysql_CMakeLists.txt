@@ -1,0 +1,73 @@
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2024/08/05 01:24:00 jnemeth Exp $
+
+* Generate libmysqlclient.so.18.0.0 file and libmysqlclient_r.so.18.0.0 symlink
+  on FreeBSD to supress PLIST divergence.
+
+--- libmysql/CMakeLists.txt.orig	2024-03-27 19:25:51.000000000 +0000
++++ libmysql/CMakeLists.txt
+@@ -142,10 +142,10 @@ SET(CLIENT_API_FUNCTIONS
+   mysql_warning_count
+   mysql_real_connect_dns_srv
+   mysql_bind_param
+-  mysql_plugin_get_option
+-  mysql_get_ssl_session_reused
+-  mysql_get_ssl_session_data
+-  mysql_free_ssl_session_data
++#pkgsrc  mysql_plugin_get_option
++#pkgsrc  mysql_get_ssl_session_reused
++#pkgsrc  mysql_get_ssl_session_data
++#pkgsrc  mysql_free_ssl_session_data
+   mysql_binlog_close
+   mysql_binlog_fetch
+   mysql_binlog_open
+@@ -332,7 +332,7 @@ ENDIF()
+ 
+ IF(UNIX)
+   SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
+-  IF(NOT FREEBSD AND NOT APPLE)
++  IF(NOT APPLE)
+     STRING_APPEND(OS_SHARED_LIB_VERSION
+       ".${SHARED_LIB_MINOR_VERSION}.${SHARED_LIB_PATCH_VERSION}")
+   ENDIF()
+@@ -405,41 +405,3 @@ ENDFOREACH()
+ #
+ CONFIGURE_FILE(api_test.c.in ${CMAKE_CURRENT_BINARY_DIR}/api_test.c)
+ 
+-#
+-# Note: Compiling this test application will fail if not all symbols
+-# from @CLIENT_API_FUNCTIONS@ are declared by <mysql.h>. It will fail
+-# to run if not all of these symbols are exported by the library.
+-#
+-MYSQL_ADD_EXECUTABLE(libmysql_api_test
+-  ${CMAKE_CURRENT_BINARY_DIR}/api_test.c
+-  LINK_LIBRARIES libmysql ${LIBRT}
+-  SKIP_INSTALL
+-  )
+-# Clang/UBSAN needs this on some platforms.
+-SET_TARGET_PROPERTIES(libmysql_api_test PROPERTIES LINKER_LANGUAGE CXX)
+-
+-IF(MY_COMPILER_IS_GNU)
+-  ADD_COMPILE_FLAGS(
+-    ${CMAKE_CURRENT_BINARY_DIR}/api_test.c
+-    COMPILE_FLAGS -Wstrict-prototypes
+-    )
+-ENDIF()
+-
+-MY_CHECK_CXX_COMPILER_WARNING("-Wmissing-profile" HAS_WARN_FLAG)
+-IF(HAS_WARN_FLAG)
+-  ADD_COMPILE_FLAGS(
+-    ${CMAKE_CURRENT_BINARY_DIR}/api_test.c
+-    COMPILE_FLAGS ${HAS_WARN_FLAG}
+-    )
+-ENDIF()
+-
+-# Verify that libmysql_api_test runs OK
+-ADD_CUSTOM_COMMAND(
+-  OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/libmysql_api_test.out
+-  DEPENDS libmysql_api_test
+-  COMMAND libmysql_api_test
+-  > ${CMAKE_CURRENT_BINARY_DIR}/libmysql_api_test.out
+-  )
+-MY_ADD_CUSTOM_TARGET(run_libmysql_api_test ALL
+-  DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/libmysql_api_test.out
+-  )
