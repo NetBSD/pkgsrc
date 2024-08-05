@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/10/04 11:36:18 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/05 12:10:00 tnn Exp $
 
 DISTNAME=	ruamel.yaml.clib-0.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1:S/./-/1}
@@ -11,6 +11,8 @@ COMMENT=	C version of reader, parser and emitter for ruamel.yaml
 LICENSE=	mit
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+CFLAGS+=	-Wno-error=incompatible-pointer-types
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
