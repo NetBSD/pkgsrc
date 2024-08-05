@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2023/08/02 16:17:17 nia Exp $
+# $NetBSD: Makefile,v 1.53 2024/08/05 08:07:00 tnn Exp $
 
 DISTNAME=	libexif-0.6.24
 CATEGORIES=	graphics
@@ -21,6 +21,9 @@ PKGCONFIG_OVERRIDE=	libexif.pc.in
 
 # "error: 'for' loop initial declarations are only allowed in C99 mode"
 FORCE_C_STD=		c99
+
+# 199506L for localtime_r, but has to be at least 200112L with C99
+CPPFLAGS+=	-D_POSIX_C_SOURCE=200112L
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
