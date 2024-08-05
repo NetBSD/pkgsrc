@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.3 2012/07/20 09:58:36 adam Exp $
+$NetBSD: patch-ab,v 1.4 2024/08/05 12:48:18 tnn Exp $
 
 --- tcpd.h.orig	2003-04-16 14:27:11.000000000 +0000
 +++ tcpd.h
-@@ -137,7 +137,11 @@ extern void fromhost();			/* get/validat
+@@ -11,6 +11,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <strings.h>
+ 
+ typedef struct sockaddr_gen {
+     union {
+@@ -137,7 +138,11 @@ extern void fromhost();			/* get/validat
  #define fromhost sock_host		/* no TLI support needed */
  #endif
  
@@ -14,7 +22,7 @@ $NetBSD: patch-ab,v 1.3 2012/07/20 09:58:36 adam Exp $
  extern void shell_cmd();		/* execute shell command */
  extern char *percent_x();		/* do %<char> expansion */
  extern void rfc931();			/* client name from RFC 931 daemon */
-@@ -196,20 +200,35 @@ extern struct request_info *request_set(
+@@ -196,20 +201,35 @@ extern struct request_info *request_set(
    * host_info structures serve as caches for the lookup results.
    */
  

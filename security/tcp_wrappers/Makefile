@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2016/01/29 10:43:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2024/08/05 12:48:18 tnn Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -41,6 +41,9 @@ MAKE_ENV+=	IPV6="-DHAVE_IPV6 -DUSE_GETHOSTBYNAME2 -DUSE_STRERROR"
 MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .  endif
 .endif
+
+CFLAGS+=	-D_POSIX_C_SOURCE=200809L	# popen(3)
+CFLAGS+=	-D_XOPEN_SOURCE=500		# endgrent(3)
 
 # Default to /etc/hosts.{allow,deny} for the configuration files to match
 # the historic location of these files.  This may be changed by setting
