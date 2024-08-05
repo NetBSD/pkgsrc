@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4324 2024/08/05 19:27:51 adam Exp $
+# $NetBSD: Makefile,v 1.4325 2024/08/05 20:37:05 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2630,6 +2630,7 @@ SUBDIR+=	py-google-i18n-address
 SUBDIR+=	py-googleapis-common-protos
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-guppy3
+SUBDIR+=	py-h5netcdf
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hamcrest
 SUBDIR+=	py-hatch-fancy-pypi-readme
