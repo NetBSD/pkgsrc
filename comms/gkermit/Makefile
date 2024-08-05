@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2022/01/01 18:53:02 rhialto Exp $
+# $NetBSD: Makefile,v 1.31 2024/08/05 07:50:48 tnn Exp $
 
 DISTNAME=	gku201
 PKGNAME=	gkermit-2.01
@@ -17,7 +17,7 @@ MAKE_ENV+=	KFLAGS=${CFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	-DERRNO_H
+CFLAGS+=	-DERRNO_H -DNEEDUNISTD
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/gkermit
 
