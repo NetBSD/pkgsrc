@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2024/07/25 02:49:09 jnemeth Exp $
+# $NetBSD: Makefile,v 1.651 2024/08/05 19:26:02 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -291,6 +291,7 @@ SUBDIR+=	py-crashtest
 SUBDIR+=	py-dep-logic
 SUBDIR+=	py-domdf-python-tools
 SUBDIR+=	py-expandvars
+SUBDIR+=	py-fastprogress
 SUBDIR+=	py-ghp-import
 SUBDIR+=	py-icecream
 SUBDIR+=	py-immutables
