@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2024/07/22 03:57:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.93 2024/08/05 05:33:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1380,9 +1380,6 @@ ${PYSITELIB}/setuptools/tests/test_setopt.pyo
 ${PYSITELIB}/setuptools/tests/test_setuptools.py
 ${PYSITELIB}/setuptools/tests/test_setuptools.pyc
 ${PYSITELIB}/setuptools/tests/test_setuptools.pyo
-${PYSITELIB}/setuptools/tests/test_test.py
-${PYSITELIB}/setuptools/tests/test_test.pyc
-${PYSITELIB}/setuptools/tests/test_test.pyo
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.py
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.pyc
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.pyo
