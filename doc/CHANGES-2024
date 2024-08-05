@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4862 2024/08/05 09:13:39 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4863 2024/08/05 09:25:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7608,3 +7608,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-redis to 5.0.8 [adam 2024-08-05]
 	Updated www/py-uvicorn to 0.30.5 [adam 2024-08-05]
 	Updated devel/py-pydantic-settings to 2.4.0 [adam 2024-08-05]
+	Updated textproc/cmark to 0.31.1 [adam 2024-08-05]
+	Updated misc/dpkg to 1.22.11 [adam 2024-08-05]
