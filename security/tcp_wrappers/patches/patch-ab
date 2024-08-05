@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2024/08/05 12:48:18 tnn Exp $
+$NetBSD: patch-ab,v 1.5 2024/08/05 14:15:10 tnn Exp $
 
 --- tcpd.h.orig	2003-04-16 14:27:11.000000000 +0000
 +++ tcpd.h
@@ -10,19 +10,21 @@ $NetBSD: patch-ab,v 1.4 2024/08/05 12:48:18 tnn Exp $
  
  typedef struct sockaddr_gen {
      union {
-@@ -137,7 +138,11 @@ extern void fromhost();			/* get/validat
+@@ -137,7 +138,13 @@ extern void fromhost();			/* get/validat
  #define fromhost sock_host		/* no TLI support needed */
  #endif
  
 +#ifdef __STDC__
 +extern int hosts_access(struct request_info *);		/* access control */
++extern int hosts_ctl(char *daemon, char *name, char *addr, char *user);
 +#else
  extern int hosts_access();		/* access control */
++extern int hosts_ctl();
 +#endif
  extern void shell_cmd();		/* execute shell command */
  extern char *percent_x();		/* do %<char> expansion */
  extern void rfc931();			/* client name from RFC 931 daemon */
-@@ -196,20 +201,35 @@ extern struct request_info *request_set(
+@@ -196,20 +203,35 @@ extern struct request_info *request_set(
    * host_info structures serve as caches for the lookup results.
    */
  
