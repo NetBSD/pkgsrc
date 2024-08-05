@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:15:28 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/08/05 08:19:59 tnn Exp $
 
 BLAKE2s (libsmi-0.5.0.tar.gz) = 49b8a2ca616afa1aa7102936a0a5ac024a7c19d2fd5c3ec1ced0f6b82ed2b6bc
 SHA512 (libsmi-0.5.0.tar.gz) = be82e6b7054426e4634ac9d90467b89a51a9c836273c9d516f07ff3cec3a8dcc8b3bb0e0396d5facec3d9c952b17fb67f24ff2d3959e7e5cf9eced72023a0708
@@ -7,3 +7,5 @@ SHA1 (patch-aa) = 0daa795492391e52cce09db2334872838ea654f3
 SHA1 (patch-ab) = 2ebd512bfa4e284eaf892a5437f0bf12ad3ff36c
 SHA1 (patch-ac) = e10b25773c6df404b74a2cd28bac06cbd6183983
 SHA1 (patch-ad) = ca9376deac37b3c894f8d34e4b73473af49c7790
+SHA1 (patch-lib_parser-yang.y) = 99c21a34a6348c844d2728b457d1d2cb808dfb8d
+SHA1 (patch-lib_yang-data.h) = 9d6e15f17d4cd753175c954d52bf3b1d4b52311e
