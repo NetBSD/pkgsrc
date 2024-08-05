@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.235 2024/08/02 22:37:32 morr Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.236 2024/08/05 06:37:07 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20617,7 +20617,7 @@ vault<1.6.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2020-255
 vault<1.6.2	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-3024
 ruby{25,26,27}-mechanize<2.7.7	command-injection	https://nvd.nist.gov/vuln/detail/CVE-2021-21289
 sudo<1.9.5p2	privilege-escalation		https://nvd.nist.gov/vuln/detail/CVE-2021-3156
-wolfssl-[0-9]*	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-3336
+wolfssl<4.7.0	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-3336
 xenkernel413<4.13.2nb5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3308
 ruby{25,26,27}-activerecord52<5.2.4.5		cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2021-22880
 ruby{25,26,27}-activerecord60<6.0.3.5		cross-site-request-forgery	https://nvd.nist.gov/vuln/detail/CVE-2021-22880
@@ -25205,7 +25205,7 @@ bind>=9.18<9.18.18	denial-of-service	https://kb.isc.org/docs/cve-2023-4236
 cups-base<2.4.7	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-4504
 zbar-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2023-40890
 zbar-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-40889
-zola-[0-9]*	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-40274
+zola<0.18.0	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2023-40274
 zstd<1.5.4	buffer-overrun	https://nvd.nist.gov/vuln/detail/CVE-2022-4899
 z3<4.8.8	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2020-19725
 yasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-29581
