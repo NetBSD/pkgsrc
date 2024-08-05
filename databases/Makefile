@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.714 2024/07/25 16:59:10 tnn Exp $
+# $NetBSD: Makefile,v 1.715 2024/08/05 01:26:18 jnemeth Exp $
 
 COMMENT=	Databases
 
@@ -122,6 +122,7 @@ SUBDIR+=	mysql57-client
 SUBDIR+=	mysql57-server
 SUBDIR+=	mysql75-cluster
 SUBDIR+=	mysql80-client
+SUBDIR+=	mysql80-cluster
 SUBDIR+=	mysql80-server
 SUBDIR+=	mysqld_exporter
 SUBDIR+=	mysqltuner
