@@ -1,0 +1,3 @@
+bin/nc3tonc4 @PREFIX@/bin/nc3tonc4-@PYVERSSUFFIX@
+bin/nc4tonc3 @PREFIX@/bin/nc4tonc3-@PYVERSSUFFIX@
+bin/ncinfo @PREFIX@/bin/ncinfo-@PYVERSSUFFIX@
