@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/01/26 03:15:50 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/05 13:23:25 tnn Exp $
 
 DISTNAME=		enca-1.15
-CATEGORIES=		converters
+CATEGORIES=		textproc converters
 MASTER_SITES=		http://dl.cihar.com/enca/
 EXTRACT_SUFX=		.tar.bz2
 
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/enca.pc.in
+PKGCONFIG_OVERRIDE+=	enca.pc.in
 
 USE_TOOLS+=		autoconf automake autoreconf
 TOOL_DEPENDS+=		autoconf-archive>=0:../../devel/autoconf-archive
