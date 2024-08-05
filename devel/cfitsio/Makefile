@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2024/06/10 10:56:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2024/08/05 14:50:55 adam Exp $
 
-DISTNAME=	cfitsio-4.2.0
-PKGREVISION=	4
+DISTNAME=	cfitsio-4.4.1
 CATEGORIES=	devel
 MASTER_SITES=	https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
@@ -11,18 +10,16 @@ COMMENT=	FITS (flexible image transport system) file input and output
 # similar; no copyright claim.
 LICENSE=	isc
 
-USE_LANGUAGES=		c # fortran
+USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
-
 # Does not detect pkgsrc zlib correctly.
 CONFIGURE_ARGS+=	--without-zlib-check
+PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig share/doc/cfitsio
 
-CFITSIO_DOCS=	cfitsio.pdf cfortran.doc fitsio.pdf fitsio.doc \
-		fpackguide.pdf quick.pdf
+CFITSIO_DOCS=	cfitsio.pdf fitsio.pdf fpackguide.pdf quick.pdf
 
 post-install:
 	cd ${WRKSRC}/docs && \
