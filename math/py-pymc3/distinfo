@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:56:04 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/08/05 19:36:24 adam Exp $
 
-BLAKE2s (pymc3-3.7.tar.gz) = 84cee7a643956208dde241558e48c5e4f9ee97bdc39d050c55c7c63241bfa4d9
-SHA512 (pymc3-3.7.tar.gz) = 7efa3a86b7c9b34a9574faedb26396431168a63ba2c03e4680537ce5798105d6c3c273954f5c54de324015123fc0afa3b9ba8f88617a4e1f17924f66b5430a05
-Size (pymc3-3.7.tar.gz) = 30780326 bytes
+BLAKE2s (pymc3-3.11.6.tar.gz) = 320462a44b2519a747604f124bc940a0aa506cfa6b08e2f858cfcf8e83639ddf
+SHA512 (pymc3-3.11.6.tar.gz) = f601fa9995298ea2e22c79ebfba4aa1d1619b596a7af0b93b5743f4e4b6f3f57a1d5b8396004beaabd631347e648cb964e9293f1aeeca2e3a016ef7ff9aed27a
+Size (pymc3-3.11.6.tar.gz) = 804470 bytes
