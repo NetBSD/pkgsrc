@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4858 2024/08/05 05:42:37 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4859 2024/08/05 06:30:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7598,3 +7598,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-wheel to 0.44.0 [adam 2024-08-05]
 	Updated devel/py-setuptools-rust to 1.10.1 [adam 2024-08-05]
 	Updated www/py-aiohttp to 3.10.1 [adam 2024-08-05]
+	Removed databases/mysql56-client [wiz 2024-08-05]
+	Removed databases/mysql56-server [wiz 2024-08-05]
+	Removed databases/mysql57-client [wiz 2024-08-05]
+	Removed databases/mysql57-server [wiz 2024-08-05]
