@@ -1,12 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2002/10/08 14:29:36 abs Exp $
+$NetBSD: patch-ab,v 1.4 2024/08/05 10:24:32 tnn Exp $
 
---- data/rservice.c.orig	Wed Jan 31 18:45:08 1996
+--- data/rservice.c.orig	1996-01-31 18:45:08.000000000 +0000
 +++ data/rservice.c
-@@ -10,6 +10,7 @@
+@@ -10,12 +10,16 @@
     ... whatever.  _H*/
  
  #include <stdio.h>
 +#include <string.h>
++#include <stdlib.h>
++#include <unistd.h>
  
  /* change if you like; "id" is a good one for figuring out if you won too */
  static char cmd[] = "pwd";
+ 
+ static char buf [256];
+ 
++int
+ main(argc, argv)
+   int argc;
+   char * argv[];
