@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.602 2024/08/03 06:02:47 adam Exp $
+# $NetBSD: Makefile,v 1.603 2024/08/05 12:40:29 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -391,7 +391,6 @@ SUBDIR+=	pspp
 SUBDIR+=	py-Keras-Applications
 SUBDIR+=	py-Keras-Preprocessing
 SUBDIR+=	py-Theano
-SUBDIR+=	py-abcpmc
 SUBDIR+=	py-almost
 SUBDIR+=	py-arviz
 SUBDIR+=	py-asdf
