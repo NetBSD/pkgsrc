@@ -1,0 +1,14 @@
+$NetBSD: patch-sql_CMakeLists.txt,v 1.1 2024/08/05 01:24:00 jnemeth Exp $
+
+--- sql/CMakeLists.txt.orig	2022-03-23 13:49:36.000000000 +0000
++++ sql/CMakeLists.txt
+@@ -739,6 +743,9 @@ ELSEIF(SOLARIS)
+ ELSEIF(WIN32)
+   LIST(APPEND SQL_SHARED_SOURCES
+     resourcegroups/platform/thread_attrs_api_win.cc)
++ELSE()
++  LIST(APPEND SQL_SHARED_SOURCES
++    resourcegroups/platform/thread_attrs_api_apple.cc)
+ ENDIF()
+ 
+ SET(SQL_SOURCE
