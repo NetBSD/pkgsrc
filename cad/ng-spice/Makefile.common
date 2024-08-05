@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2023/08/02 16:17:15 nia Exp $
+# $NetBSD: Makefile.common,v 1.4 2024/08/05 13:11:06 tnn Exp $
 #
 # used by can/ng-spice
 # used by can/ng-spice-shared
@@ -23,3 +23,7 @@ CONFIGURE_ARGS+=	--disable-debug
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		c99
+
+CFLAGS.Linux+=		-D_POSIX_C_SOURCE=200809L       # fileno(3)
+# should be _XOPEN_SOURCE, but glibc hides usleep with _POSIX_C_SOURCE.
+CFLAGS.Linux+=		-D_DEFAULT_SOURCE=1             # usleep(3)
