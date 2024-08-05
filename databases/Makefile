@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.715 2024/08/05 01:26:18 jnemeth Exp $
+# $NetBSD: Makefile,v 1.716 2024/08/05 06:30:26 wiz Exp $
 
 COMMENT=	Databases
 
@@ -116,10 +116,6 @@ SUBDIR+=	mongodb3
 SUBDIR+=	mongodb4
 SUBDIR+=	myodbc
 SUBDIR+=	mysql-connector-c++
-SUBDIR+=	mysql56-client
-SUBDIR+=	mysql56-server
-SUBDIR+=	mysql57-client
-SUBDIR+=	mysql57-server
 SUBDIR+=	mysql75-cluster
 SUBDIR+=	mysql80-client
 SUBDIR+=	mysql80-cluster
