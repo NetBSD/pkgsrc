@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4871 2024/08/05 19:37:23 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4872 2024/08/05 20:42:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7626,3 +7626,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added math/py-theano-pymc version 1.1.2 [adam 2024-08-05]
 	Removed math/py-Theano successor py-theano-pymc [adam 2024-08-05]
 	Updated math/py-pymc3 to 3.11.6 [adam 2024-08-05]
+	Added devel/py-h5netcdf version 1.3.0 [adam 2024-08-05]
+	Added devel/py-dm-tree version 0.1.8 [adam 2024-08-05]
+	Added math/py-xarray-einstats version 0.7.0 [adam 2024-08-05]
+	Updated math/py-arviz to 0.19.0 [adam 2024-08-05]
