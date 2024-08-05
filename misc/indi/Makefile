@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2024/05/29 16:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/05 14:51:37 adam Exp $
 
-DISTNAME=	indi-2.0.7
-PKGREVISION=	3
+DISTNAME=	indi-2.0.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=indilib/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/indilib/indi/
+HOMEPAGE=	https://github.com/indilib/indi
 COMMENT=	Implementation of the Instrument-Neutral-Device-Interface protocol
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-DINDI_BUILD_SERVER=NO
@@ -27,7 +26,6 @@ PKGCONFIG_OVERRIDE=	libindi.pc.cmake
 .include "../../math/gsl/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
-# not checked but used
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
