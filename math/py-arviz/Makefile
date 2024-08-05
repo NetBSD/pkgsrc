@@ -1,27 +1,31 @@
-# $NetBSD: Makefile,v 1.12 2024/08/05 13:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/05 20:42:07 adam Exp $
 
-DISTNAME=	arviz-0.11.4
+DISTNAME=	arviz-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/arviz/}
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	https://arviz-devs.github.io/arviz/
+HOMEPAGE=	https://python.arviz.org/
 COMMENT=	Exploratory analysis of Bayesian models
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-netCDF4-[0-9]*:../../math/py-netCDF4
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.12:../../math/py-numpy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-dm-tree>=0.1.8:../../devel/py-dm-tree
+DEPENDS+=	${PYPKGPREFIX}-h5netcdf>=1.0.2:../../devel/py-h5netcdf
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.5:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.23:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.19:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-xarray>=0.16.1:../../math/py-xarray
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.5.0:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=60.0.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-xarray>=2022.6.0:../../math/py-xarray
+DEPENDS+=	${PYPKGPREFIX}-xarray-einstats>=0.3:../../math/py-xarray-einstats
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
