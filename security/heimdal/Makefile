@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2024/05/29 16:34:14 adam Exp $
+# $NetBSD: Makefile,v 1.165 2024/08/05 10:04:41 tnn Exp $
 
 DISTNAME=	heimdal-7.8.0
 PKGREVISION=	8
@@ -43,6 +43,8 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	${ABI:D--with-mips-abi=${ABI}}
 CONFIGURE_ENV+=		COMPILE_ET=no	# build Heimdal's compile_et(1)
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+
+CFLAGS+=		-Wno-error=implicit-function-declaration
 
 .include "../../mk/bdb.buildlink3.mk"
 
