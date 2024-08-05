@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.21 2024/08/05 12:48:18 tnn Exp $
+$NetBSD: distinfo,v 1.22 2024/08/05 14:15:10 tnn Exp $
 
 BLAKE2s (tcp_wrappers_7.6-ipv6.4.tar.gz) = d05aa438c87a74553812522d91d4dc3c078ed3d176512fde8fe1094f11915ee7
 SHA512 (tcp_wrappers_7.6-ipv6.4.tar.gz) = b753b2e54fe243fbcb403470b19fa1b08a912a6a65981dc1bf20288379b903701d4b5a477350cb3470cb6d908cf51ef653f44dc17daff17f34e59b6aa1b41c95
 Size (tcp_wrappers_7.6-ipv6.4.tar.gz) = 138700 bytes
 SHA1 (patch-aa) = 6bc6f0523b4e8c31a4b02af948f285e800d5c59b
-SHA1 (patch-ab) = 3cf3d6647a5d36acbe9c263b2ac6156f496fcc51
+SHA1 (patch-ab) = 1d1f4cc9ba21e4599a622b69587732527a1a5166
 SHA1 (patch-ac) = a9cd493a470782e8f6bdd38fde6c746fb1e371c0
 SHA1 (patch-af) = 1bf946174b027880014e64aa9b84dcfa5ca951a0
 SHA1 (patch-ag) = a2c88d1db9b3ec127f7a0889dcb4329ea3eb06a3
