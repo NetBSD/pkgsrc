@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/03 11:17:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/05 14:51:37 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_activefocuser_focus
 bin/indi_alluna_tcs2
 bin/indi_alto
 bin/indi_arduinost4
+bin/indi_astrolink4mini2
 bin/indi_astromech_lpm
 bin/indi_astrometry
 bin/indi_astrotrac_telescope
@@ -30,6 +31,7 @@ bin/indi_esatto_focus
 bin/indi_esattoarco_focus
 bin/indi_eval
 bin/indi_falcon_rotator
+bin/indi_falconv2_rotator
 bin/indi_fcusb_focus
 bin/indi_flipflat
 bin/indi_gemini_focus
@@ -146,7 +148,10 @@ bin/indi_tcfs3_focus
 bin/indi_tcfs_focus
 bin/indi_teenastro_focus
 bin/indi_temma_telescope
+bin/indi_terrans_powerboxgo_v2
+bin/indi_terrans_powerboxpro_v2
 bin/indi_trutech_wheel
+bin/indi_universalror_dome
 bin/indi_uranus_weather
 bin/indi_usbdewpoint
 bin/indi_usbfocusv3_focus
@@ -160,6 +165,7 @@ bin/indi_wandererbox_pro_v3
 bin/indi_wanderercover_v4_ec
 bin/indi_watchdog
 bin/indi_watcher_weather
+bin/indi_wavesharemodbus_relay
 bin/indi_weather_safety_proxy
 bin/indi_xagyl_wheel
 bin/shelyak_usis
@@ -220,10 +226,12 @@ include/libindi/indifocuserinterface.h
 include/libindi/indigps.h
 include/libindi/indigpsinterface.h
 include/libindi/indiguiderinterface.h
+include/libindi/indiinputinterface.h
 include/libindi/indijson.hpp
 include/libindi/indilightboxinterface.h
 include/libindi/indilogger.h
 include/libindi/indimacros.h
+include/libindi/indioutputinterface.h
 include/libindi/indiproperties.h
 include/libindi/indiproperty.h
 include/libindi/indipropertybasic.h
@@ -276,19 +284,19 @@ lib/indi/MathPlugins/libindi_Nearest_MathPlugin.so
 lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
-lib/libindiAlignmentDriver.so.2
 lib/libindiAlignmentDriver.so.${PKGVERSION}
+lib/libindiAlignmentDriver.so.2
 lib/libindiclient.a
 lib/libindiclient.so
-lib/libindiclient.so.2
 lib/libindiclient.so.${PKGVERSION}
+lib/libindiclient.so.2
 lib/libindidriver.a
 lib/libindidriver.so
-lib/libindidriver.so.2
 lib/libindidriver.so.${PKGVERSION}
+lib/libindidriver.so.2
 lib/libindilx200.so
-lib/libindilx200.so.2
 lib/libindilx200.so.${PKGVERSION}
+lib/libindilx200.so.2
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
