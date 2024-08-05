@@ -1,0 +1,13 @@
+$NetBSD: patch-router_CMakeLists.txt,v 1.1 2024/08/05 01:24:00 jnemeth Exp $
+
+--- router/CMakeLists.txt.orig	2022-03-23 13:49:36.000000000 +0000
++++ router/CMakeLists.txt
+@@ -92,7 +92,7 @@ INCLUDE(${CMAKE_SOURCE_DIR}/cmake/rapidj
+ SET(ROUTER_LICENSE_FILE "${CMAKE_SOURCE_DIR}/router/LICENSE.router")
+ SET(ROUTER_README_FILE "${CMAKE_SOURCE_DIR}/router/README.router")
+ 
+-SET(DOC_DESTINATION ".")
++SET(DOC_DESTINATION "share/doc/mysql")
+ IF(NOT INSTALL_LAYOUT MATCHES "RPM")
+   INSTALL(FILES
+       ${ROUTER_LICENSE_FILE}
