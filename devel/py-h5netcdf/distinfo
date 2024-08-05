@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/05 20:37:05 adam Exp $
+
+BLAKE2s (h5netcdf-1.3.0.tar.gz) = 263bf67954cdc98aff5661d656f7c0dada9628e3c9f64663a9c88fef52555129
+SHA512 (h5netcdf-1.3.0.tar.gz) = f3445603de15a1ab1368e62d21a3714db9523b17a3c02ef8a4e80d2effe52a7afdf0e848f28e2241bf8ac31f14e806dd54ed789ed422dbbc485a7d23e9df2b59
+Size (h5netcdf-1.3.0.tar.gz) = 57781 bytes
