@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/08/05 19:32:15 adam Exp $
+
+BLAKE2s (Theano-PyMC-1.1.2.tar.gz) = c5988dcce7f6c23e74ee439b1561836433d3630a62f100902a5884386c03d0db
+SHA512 (Theano-PyMC-1.1.2.tar.gz) = a7dcdaa24ac6a74a9442d0b6dbe5e474a03aa921427d88348303b20151c7ab28786b99cb1877d83e220bf92abc45bfaa9fdcf44e7ba56e41ce392b9aec0239ed
+Size (Theano-PyMC-1.1.2.tar.gz) = 1810180 bytes
+SHA1 (patch-setup.py) = f76e6a6ca2480a3eb0cdabc4af752fcefe1508ea
