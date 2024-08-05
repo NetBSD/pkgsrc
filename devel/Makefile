@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4323 2024/08/04 13:19:46 nia Exp $
+# $NetBSD: Makefile,v 1.4324 2024/08/05 19:27:51 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2542,6 +2542,7 @@ SUBDIR+=	py-ddt
 SUBDIR+=	py-debugpy
 SUBDIR+=	py-decorator
 SUBDIR+=	py-deepstate
+SUBDIR+=	py-deprecat
 SUBDIR+=	py-deprecated
 SUBDIR+=	py-deprecation
 SUBDIR+=	py-dialog
