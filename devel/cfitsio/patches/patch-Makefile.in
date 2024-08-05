@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2023/07/22 10:11:02 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2024/08/05 14:50:55 adam Exp $
 
 Use libtool.
 
---- Makefile.in.orig	2022-10-31 18:40:23.000000000 +0000
+--- Makefile.in.orig	2024-06-17 15:47:47.000000000 +0000
 +++ Makefile.in
-@@ -38,13 +38,15 @@ SHELL =		/bin/sh
+@@ -39,13 +39,15 @@ SHELL =		/bin/sh
  ARCHIVE =	@ARCHIVE@
  RANLIB =	@RANLIB@
  CC =		@CC@
@@ -21,7 +21,7 @@ Use libtool.
  LIBS =		@LIBS@
  LIBS_CURL =	@LIBS_CURL@
  FLEX =		flex
-@@ -93,11 +95,11 @@ all:
+@@ -94,11 +96,11 @@ all:
  all-nofitsio:
  		${MAKE} stand_alone "FITSIO_SRC="
  
@@ -37,7 +37,7 @@ Use libtool.
  
  shared: lib${PACKAGE}${SHLIB_SUFFIX}
  
-@@ -108,23 +110,15 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
+@@ -109,23 +111,15 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
  			ln -sf ${CFITSIO_SHLIB_SONAME} $@; \
  		fi
  
@@ -66,52 +66,57 @@ Use libtool.
  		    fi; \
  		done
  
-@@ -141,31 +135,31 @@ utils:		${FPACK_UTILS} ${UTILS}
- swapproc.o:	swapproc.c
- 		${CC} -c ${CFLAGS} ${CPPFLAGS} ${SSE_FLAGS} ${DEFS} $<
+@@ -168,34 +162,34 @@ utilities/fvrf_key.o: utilities/fvrf_key
+ utilities/fvrf_misc.o: utilities/fvrf_misc.c
+ 		${CC} -c -I. -I./utilities -DSTANDALONE $< -o $@
  
--smem:		smem.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm
-+smem:		smem.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm
+-fitsverify:	lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS} ${FVERIFY_OBJ}
+-		${CC} ${LDFLAGS_BIN} -o $@ ${FVERIFY_OBJ} -L. -l${PACKAGE} -lm ${LIBS}
++fitsverify:	lib${PACKAGE}.la ${OBJECTS} ${FVERIFY_OBJ}
++		${LD} ${LDFLAGS_BIN} -o $@ ${FVERIFY_OBJ} -L. -l${PACKAGE} -lm ${LIBS}
  
--testprog:	testprog.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
-+testprog:	testprog.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-fpack:		utilities/fpack.o utilities/fpackutil.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
++fpack:		utilities/fpack.o utilities/fpackutil.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
  
--fpack:		fpack.o fpackutil.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
-+fpack:		fpack.o fpackutil.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
+-funpack:	utilities/funpack.o utilities/fpackutil.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
++funpack:	utilities/funpack.o utilities/fpackutil.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< utilities/fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
  
--funpack:	funpack.o fpackutil.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
-+funpack:	funpack.o fpackutil.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
+-smem:		utilities/smem.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm
++smem:		utilities/smem.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm
  
--fitscopy:	fitscopy.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
-+fitscopy:	fitscopy.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-testprog:	utilities/testprog.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
++testprog:	utilities/testprog.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
  
--speed:		speed.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
-+speed:		speed.o lib${PACKAGE}.la ${OBJECTS}
-+		${LDD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-fitscopy:	utilities/fitscopy.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
++fitscopy:	utilities/fitscopy.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
  
--imcopy:		imcopy.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
-+imcopy:		imcopy.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-speed:		utilities/speed.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
++speed:		utilities/speed.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
  
--cookbook:	cookbook.o lib${PACKAGE}.a ${OBJECTS}
--		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
-+cookbook:	cookbook.o lib${PACKAGE}.la ${OBJECTS}
-+		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-imcopy:		utilities/imcopy.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
++imcopy:		utilities/imcopy.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
  
--testf77:	testf77.o lib${PACKAGE}.a ${OBJECTS}
-+testf77:	testf77.o lib${PACKAGE}.la ${OBJECTS}
- 		${FC} ${LDFLAGS_BIN} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
+-cookbook:	utilities/cookbook.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
++cookbook:	utilities/cookbook.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
  
- # Tested with bison 3.8 and flex 2.6.4
+-testf77:	utilities/testf77.o lib${PACKAGE}${SHLIB_SUFFIX} ${OBJECTS}
++testf77:	utilities/testf77.o lib${PACKAGE}.la ${OBJECTS}
+ 		${FC} ${LDFLAGS_BIN} -o $@ $< -L. -l${PACKAGE} -lm ${LIBS}
+ 
+ # eval: ==================================================================
