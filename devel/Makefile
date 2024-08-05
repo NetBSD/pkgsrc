@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4325 2024/08/05 20:37:05 adam Exp $
+# $NetBSD: Makefile,v 1.4326 2024/08/05 20:38:39 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2553,6 +2553,7 @@ SUBDIR+=	py-dirty-equals
 SUBDIR+=	py-distlib
 SUBDIR+=	py-distorm3
 SUBDIR+=	py-distro
+SUBDIR+=	py-dm-tree
 SUBDIR+=	py-doc8
 SUBDIR+=	py-docopt
 SUBDIR+=	py-docstyle

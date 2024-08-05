@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/05 20:38:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/tree/__init__.py
+${PYSITELIB}/tree/__init__.pyc
+${PYSITELIB}/tree/__init__.pyo
+${PYSITELIB}/tree/_tree.so
+${PYSITELIB}/tree/sequence.py
+${PYSITELIB}/tree/sequence.pyc
+${PYSITELIB}/tree/sequence.pyo
+${PYSITELIB}/tree/tree_benchmark.py
+${PYSITELIB}/tree/tree_benchmark.pyc
+${PYSITELIB}/tree/tree_benchmark.pyo
+${PYSITELIB}/tree/tree_test.py
+${PYSITELIB}/tree/tree_test.pyc
+${PYSITELIB}/tree/tree_test.pyo
