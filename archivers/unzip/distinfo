@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 09:57:19 nia Exp $
+$NetBSD: distinfo,v 1.34 2024/08/05 09:03:00 tnn Exp $
 
 BLAKE2s (unzip60.tgz) = d083b60907af71a6870edc1e87be4566dee486d5089e1fc3b57cc6ebac00818f
 SHA512 (unzip60.tgz) = 0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b6cdbf9ddc0d9471f67af783e960f8fa2e620394d51384257dca23d06bcd90224a80ce5d
@@ -8,6 +8,7 @@ SHA1 (patch-ac) = 27b91401d4d5ecc3842c91dc49c08f42c8646154
 SHA1 (patch-crypt.c) = e44e14ba2c8e5651659c6756a5adbe88b4385ca4
 SHA1 (patch-extract.c) = 042fe7d233d0b3cb1e978902c901e8239f7a3732
 SHA1 (patch-fileio.c) = 910ddb3b847cae92326697a399234b2948555534
+SHA1 (patch-globals.h) = d537ad18fa4406cd4b78ccee694c3cccb832f5a3
 SHA1 (patch-list.c) = 29e6dc3f5d40bb087a8bff58f75eb02568f3ad87
 SHA1 (patch-process.c) = d6e6ed05ef7c2977353e848d9e9cba2877577812
 SHA1 (patch-unix_unxcfg.h) = b2831f38b2245dacedd4eb2eef12ee1e3cf20613
