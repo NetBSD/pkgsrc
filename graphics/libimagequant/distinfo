@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2024/08/05 07:02:20 adam Exp $
+$NetBSD: distinfo,v 1.39 2024/08/05 08:30:31 ryoon Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -93,3 +93,5 @@ Size (zerocopy-0.7.35.crate) = 152645 bytes
 BLAKE2s (zerocopy-derive-0.7.35.crate) = b80899d1b7a843a5225638171775a0c9643052c9e96f7b88a825150d0725505e
 SHA512 (zerocopy-derive-0.7.35.crate) = dbe23573b62a6267d7bc8c744320b75b2fbda03b908c1d175211f7394374fe182bce58021e25485c10671d726b2007f250565dfe53134d51c89293bb607e9feb
 Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
+SHA1 (patch-src_kmeans.rs) = 544ffc828efcd7c1496a8f55ea8bc08847fa0118
+SHA1 (patch-src_quant.rs) = ac82039104443c84f84dbe44922952550e554a17
