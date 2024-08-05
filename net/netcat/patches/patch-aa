@@ -1,12 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2002/10/08 14:29:36 abs Exp $
+$NetBSD: patch-aa,v 1.3 2024/08/05 10:24:32 tnn Exp $
 
---- data/data.c.orig	Tue Feb 27 13:43:48 1996
+--- data/data.c.orig	1996-02-27 13:43:48.000000000 +0000
 +++ data/data.c
-@@ -16,6 +16,7 @@
+@@ -16,6 +16,10 @@
     *Hobbit*, started 951004 or so and randomly screwed around with since */
  
  #include <stdio.h>
 +#include <string.h>
++#include <unistd.h>
++#include <stdlib.h>
++#include <time.h>
  
  #ifdef MSDOS				/* for MSC only at the moment... */
  #include <fcntl.h>
+@@ -72,6 +76,7 @@ int randint()
+   return (x);
+ }
+ 
++int
+ main (argc, argv)
+   int argc;
+   char ** argv;

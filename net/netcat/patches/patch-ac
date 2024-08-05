@@ -1,12 +1,30 @@
-$NetBSD: patch-ac,v 1.2 2002/10/08 14:29:36 abs Exp $
+$NetBSD: patch-ac,v 1.3 2024/08/05 10:24:32 tnn Exp $
 
---- data/xor.c.orig	Sun Feb 18 03:18:16 1996
+--- data/xor.c.orig	1996-02-18 03:18:16.000000000 +0000
 +++ data/xor.c
-@@ -14,6 +14,7 @@
+@@ -14,13 +14,17 @@
     *Hobbit*, 960208 */
  
  #include <stdio.h>
 +#include <string.h>
  #include <fcntl.h>
++#include <stdlib.h>
++#include <unistd.h>
  
  char buf[8192];
+ char bytes[256];
+ char * py;
+ 
+ /* do the xor, in place.  Uses global ptr "py" to maintain "bytes" state */
++int
+ xorb (buf, len)
+   char * buf;
+   int len;
+@@ -41,6 +45,7 @@ xorb (buf, len)
+ } /* xorb */
+ 
+ /* blah */
++int
+ main (argc, argv)
+   int argc;
+   char ** argv;

@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
+$NetBSD: patch-ad,v 1.6 2024/08/05 10:24:32 tnn Exp $
 
---- netcat.c.orig	1996-03-21 01:38:04.000000000 +0100
-+++ netcat.c	2011-01-13 16:06:00.000000000 +0100
+--- netcat.c.orig	1996-03-21 00:38:04.000000000 +0000
++++ netcat.c
 @@ -44,12 +44,7 @@
  #include <sys/select.h>
  #endif
@@ -16,7 +16,16 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  
  #ifdef HAVE_RANDOM		/* aficionados of ?rand48() should realize */
  #define SRAND srandom		/* that this doesn't need *strong* random */
-@@ -151,6 +146,7 @@
+@@ -73,6 +68,8 @@
+ #include <errno.h>
+ #include <signal.h>
+ #include <fcntl.h>		/* O_WRONLY et al */
++#include <time.h>
++#include <unistd.h>
+ 
+ /* handy stuff: */
+ #define SA struct sockaddr	/* socket overgeneralization braindeath */
+@@ -151,6 +148,7 @@ unsigned char * stage = NULL;	/* hexdump
  
  /* global cmd flags: */
  USHORT o_alla = 0;
@@ -24,7 +33,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  unsigned int o_interval = 0;
  USHORT o_listen = 0;
  USHORT o_nflag = 0;
-@@ -160,6 +156,7 @@
+@@ -160,6 +158,7 @@ USHORT o_udpmode = 0;
  USHORT o_verbose = 0;
  unsigned int o_wait = 0;
  USHORT o_zero = 0;
@@ -32,7 +41,15 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  /* o_tn in optional section */
  
  /* Debug macro: squirt whatever message and sleep a bit so we can see it go
-@@ -225,6 +222,14 @@
+@@ -171,6 +170,7 @@ USHORT o_zero = 0;
+ #define Debug(x)	/* nil... */
+ #endif
+ 
++void helpme();
+ 
+ /* support routines -- the bulk of this thing.  Placed in such an order that
+    we don't have to forward-declare anything: */
+@@ -225,6 +225,14 @@ void catch ()
    bail (" punt!");
  }
  
@@ -47,7 +64,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  /* timeout and other signal handling cruft */
  void tmtravel ()
  {
-@@ -333,6 +338,7 @@
+@@ -333,6 +341,7 @@ HINF * gethostpoop (name, numeric)
    struct in_addr iaddr;
    register HINF * poop = NULL;
    register int x;
@@ -55,7 +72,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  
  /* I really want to strangle the twit who dreamed up all these sockaddr and
     hostent abstractions, and then forced them all to be incompatible with
-@@ -361,9 +367,9 @@
+@@ -361,9 +370,9 @@ HINF * gethostpoop (name, numeric)
      bail ("gethostpoop fuxored");
    strcpy (poop->name, unknown);		/* preload it */
  /* see wzv:workarounds.c for dg/ux return-a-struct inet_addr lossage */
@@ -67,7 +84,15 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
      if (numeric)
        bail ("Can't parse %s as an IP address", name);
      hostent = gethostbyname (name);
-@@ -620,6 +626,13 @@
+@@ -568,6 +577,7 @@ char * pr00gie = NULL;			/* global ptr t
+    that would be security-critical, which is why it's ifdefed out by default.
+    Use at your own hairy risk; if you leave shells lying around behind open
+    listening ports you deserve to lose!! */
++void
+ doexec (fd)
+   int fd;
+ {
+@@ -620,6 +630,13 @@ newskt:
    rr = setsockopt (nnetfd, SOL_SOCKET, SO_REUSEADDR, &x, sizeof (x));
    if (rr == -1)
      holler ("nnetfd reuseaddr failed");		/* ??? */
@@ -81,7 +106,15 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  #ifdef SO_REUSEPORT	/* doesnt exist everywhere... */
    rr = setsockopt (nnetfd, SOL_SOCKET, SO_REUSEPORT, &x, sizeof (x));
    if (rr == -1)
-@@ -1216,6 +1229,18 @@
+@@ -944,6 +961,7 @@ dol_err:
+    Use the time delay between writes if given, otherwise use the "tcp ping"
+    trick for getting the RTT.  [I got that idea from pluvius, and warped it.]
+    Return either the original fd, or clean up and return -1. */
++int
+ udptest (fd, where)
+   int fd;
+   IA * where;
+@@ -1216,6 +1234,18 @@ Debug (("got %d from the net, errno %d",
  	if (rr <= 0) {			/* at end, or fukt, or ... */
  	  FD_CLR (0, ding1);		/* disable and close stdin */
  	  close (0);
@@ -100,7 +133,15 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  	} else {
  	  rzleft = rr;
  	  zp = bigbuf_in;
-@@ -1314,10 +1339,6 @@
+@@ -1292,6 +1322,7 @@ Debug (("wrote %d to net, errno %d", rr,
+ 
+ /* main :
+    now we pull it all together... */
++int
+ main (argc, argv)
+   int argc;
+   char ** argv;
+@@ -1314,10 +1345,6 @@ main (argc, argv)
    USHORT curport = 0;
    char * randports = NULL;
  
@@ -111,7 +152,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  /* I was in this barbershop quartet in Skokie IL ... */
  /* round up the usual suspects, i.e. malloc up all the stuff we need */
    lclend = (SAI *) Hmalloc (sizeof (SA));
-@@ -1354,7 +1375,8 @@
+@@ -1354,7 +1381,8 @@ main (argc, argv)
      argv[1] = cp;			/* head of new arg block */
      fprintf (stderr, "Cmd line: ");
      fflush (stderr);		/* I dont care if it's unbuffered or not! */
@@ -121,7 +162,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
      if (insaved <= 0)
        bail ("wrong");
      x = findline (cp, insaved);
-@@ -1389,12 +1411,14 @@
+@@ -1389,12 +1417,14 @@ main (argc, argv)
  
  /* If your shitbox doesn't have getopt, step into the nineties already. */
  /* optarg, optind = next-argv-component [i.e. flag arg]; optopt = last-char */
@@ -137,7 +178,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  #ifdef GAPING_SECURITY_HOLE
        case 'e':				/* prog to exec */
  	pr00gie = optarg;
-@@ -1443,6 +1467,8 @@
+@@ -1443,6 +1473,8 @@ main (argc, argv)
  	break;
        case 'r':				/* randomize various things */
  	o_random++; break;
@@ -146,7 +187,15 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
        case 's':				/* local source address */
  /* do a full lookup [since everything else goes through the same mill],
     unless -n was previously specified.  In fact, careful placement of -n can
-@@ -1642,6 +1668,7 @@
+@@ -1627,6 +1659,7 @@ Debug (("netfd %d from port %d to port %
+ #ifdef HAVE_HELP		/* unless we wanna be *really* cryptic */
+ /* helpme :
+    the obvious */
++void
+ helpme()
+ {
+   o_verbose = 1;
+@@ -1642,6 +1675,7 @@ options:");
  	-e prog			program to exec after connect [dangerous!!]");
  #endif
    holler ("\
@@ -154,7 +203,7 @@ $NetBSD: patch-ad,v 1.5 2015/12/29 04:04:30 dholland Exp $
  	-g gateway		source-routing hop point[s], up to 8\n\
  	-G num			source-routing pointer: 4, 8, 12, ...\n\
  	-h			this cruft\n\
-@@ -1651,6 +1678,7 @@
+@@ -1651,6 +1685,7 @@ options:");
  	-o file			hex dump of traffic\n\
  	-p port			local port number\n\
  	-r			randomize local and remote ports\n\
