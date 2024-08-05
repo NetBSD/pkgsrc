@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2024/08/05 20:38:39 adam Exp $
+
+BLAKE2s (dm-tree-0.1.8.tar.gz) = f3c5b7d86694838f606c97cc7b8cc25ca0b9e98f82a3514c4a53626415e62dc0
+SHA512 (dm-tree-0.1.8.tar.gz) = c0a5f5b1ab84c735949d1de922cc4efdd8dc17f521c8ee4b049e288d04f233c272d769260406b1cdefecfb3e0ac9a0836bdded557cf747e70229076254ec6468
+Size (dm-tree-0.1.8.tar.gz) = 35384 bytes
+SHA1 (patch-setup.py) = 92af74d15b7c1663ee237a2080723ffc09899349
+SHA1 (patch-tree_CMakeLists.txt) = f1657471a712fe19538e9eef21c02bea61db4064
