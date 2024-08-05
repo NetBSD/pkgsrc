@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/10/28 19:57:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/08/05 05:34:11 adam Exp $
 bin/wheel-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,6 +11,9 @@ ${PYSITELIB}/wheel/__init__.pyo
 ${PYSITELIB}/wheel/__main__.py
 ${PYSITELIB}/wheel/__main__.pyc
 ${PYSITELIB}/wheel/__main__.pyo
+${PYSITELIB}/wheel/_bdist_wheel.py
+${PYSITELIB}/wheel/_bdist_wheel.pyc
+${PYSITELIB}/wheel/_bdist_wheel.pyo
 ${PYSITELIB}/wheel/_setuptools_logging.py
 ${PYSITELIB}/wheel/_setuptools_logging.pyc
 ${PYSITELIB}/wheel/_setuptools_logging.pyo
