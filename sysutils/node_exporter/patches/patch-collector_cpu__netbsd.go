@@ -1,4 +1,4 @@
-$NetBSD: patch-collector_cpu__netbsd.go,v 1.2 2024/08/04 13:09:15 tnn Exp $
+$NetBSD: patch-collector_cpu__netbsd.go,v 1.3 2024/08/05 00:55:21 tnn Exp $
 
 collector/cpu_netbsd: fix 32-bit host support and plug memory leak
 https://github.com/prometheus/node_exporter/pull/3083
@@ -84,3 +84,26 @@ https://github.com/prometheus/node_exporter/pull/3083
  
  	var props sysmonProperties
  	if _, err = plist.Unmarshal(bytes, &props); err != nil {
+@@ -180,7 +183,7 @@ func getCPUTimes() ([]cputime, error) {
+ 	if err != nil {
+ 		return nil, err
+ 	}
+-	ncpus := *(*int)(unsafe.Pointer(&ncpusb[0]))
++	ncpus := int(*(*uint32)(unsafe.Pointer(&ncpusb[0])))
+ 
+ 	if ncpus < 1 {
+ 		return nil, errors.New("Invalid cpu number")
+@@ -192,10 +195,10 @@ func getCPUTimes() ([]cputime, error) {
+ 		if err != nil {
+ 			return nil, err
+ 		}
+-		for len(cpb) >= int(unsafe.Sizeof(int(0))) {
+-			t := *(*int)(unsafe.Pointer(&cpb[0]))
++		for len(cpb) >= int(unsafe.Sizeof(uint64(0))) {
++			t := *(*uint64)(unsafe.Pointer(&cpb[0]))
+ 			times = append(times, float64(t)/cpufreq)
+-			cpb = cpb[unsafe.Sizeof(int(0)):]
++			cpb = cpb[unsafe.Sizeof(uint64(0)):]
+ 		}
+ 	}
+ 
