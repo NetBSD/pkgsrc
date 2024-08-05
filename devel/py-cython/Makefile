@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2024/07/28 11:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2024/08/05 18:44:58 adam Exp $
 
-DISTNAME=	Cython-3.0.10
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	cython-3.0.11
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cython.org/
 COMMENT=	C-Extensions for Python
 LICENSE=	apache-1.1
+
+WHEEL_NAME=	Cython-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
