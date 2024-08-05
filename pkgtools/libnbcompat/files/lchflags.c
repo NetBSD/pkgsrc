@@ -1,4 +1,4 @@
-/*	$NetBSD: lchflags.c,v 1.5 2024/08/05 10:57:08 tnn Exp $	*/
+/*	$NetBSD: lchflags.c,v 1.6 2024/08/05 11:07:20 tnn Exp $	*/
 
 /*-
  * Copyright (c) 2002 The NetBSD Foundation, Inc.
@@ -49,7 +49,8 @@ lchflags(const char *path, unsigned long flags)
 		return 0;
 	}
 #if defined(__linux__)
-	return ENOSYS;
+	errno = (path == NULL ? EINVAL : ENOSYS);
+	return -1;
 #else
 	return (chflags(path, flags));
 #endif
