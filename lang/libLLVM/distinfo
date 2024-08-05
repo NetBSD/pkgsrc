@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2022/03/13 15:22:32 tnn Exp $
+$NetBSD: distinfo,v 1.20 2024/08/05 14:04:06 tnn Exp $
 
 BLAKE2s (llvm-13.0.1.src.tar.xz) = 5fff4c8506340cc14b2160478be6403c80f526841209a4b1b3a9f16cf61dcc05
 SHA512 (llvm-13.0.1.src.tar.xz) = 05fbe8708ac3d0dfef3a9135ee88185a95ed492095429a97d33b8aadb0187e59ad42d1a7184f02b5c84fdd31f3d7227c65bd292ed0aa039b29522e59cf90a965
@@ -10,5 +10,6 @@ SHA1 (patch-cmake_modules_CMakeLists.txt) = 57462a55dfd2af82df51f62fc222a081cdb3
 SHA1 (patch-cmake_modules_CheckAtomic.cmake) = cb2eda89ca2413728fc594ff01fa7a287b2a22b9
 SHA1 (patch-include_llvm-c_DataTypes.h) = 790c9458d6590a0d6985fdcbd8785da340b9779b
 SHA1 (patch-include_llvm_Analysis_ConstantFolding.h) = 56b9374da236c346565897977040255b9766cab8
+SHA1 (patch-include_llvm_Support_Signals.h) = dc4d7488b77c3b1ce96c112d7dc6eb30dbfabe4c
 SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 12b0f7dd0d8caf635ca139abdde3ba49dc753cbe
 SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 97b9c7c3487989c2909dd0294a67a5328d9ef309
