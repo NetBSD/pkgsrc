@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2024/07/06 15:45:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2024/08/05 23:50:20 tnn Exp $
 bin/amdgpu-arch
 bin/analyze-build
 bin/c-index-test
@@ -822,16 +822,16 @@ lib/clang/${PKGVERSION_MAJOR}/include/amxfp16intrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/amxintrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/arm64intr.h
 lib/clang/${PKGVERSION_MAJOR}/include/arm_acle.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_bf16.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_cde.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_bf16.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_cde.h
 lib/clang/${PKGVERSION_MAJOR}/include/arm_cmse.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_fp16.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_mve.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_neon.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_fp16.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_mve.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_neon.h
 lib/clang/${PKGVERSION_MAJOR}/include/arm_neon_sve_bridge.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_sme.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_sve.h
-lib/clang/${PKGVERSION_MAJOR}/include/arm_vector_types.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_sme.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_sve.h
+${PLIST.ARM}lib/clang/${PKGVERSION_MAJOR}/include/arm_vector_types.h
 lib/clang/${PKGVERSION_MAJOR}/include/armintr.h
 lib/clang/${PKGVERSION_MAJOR}/include/avx2intrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/avx512bf16intrin.h
@@ -965,7 +965,7 @@ lib/clang/${PKGVERSION_MAJOR}/include/rdseedintrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/riscv_bitmanip.h
 lib/clang/${PKGVERSION_MAJOR}/include/riscv_crypto.h
 lib/clang/${PKGVERSION_MAJOR}/include/riscv_ntlh.h
-lib/clang/${PKGVERSION_MAJOR}/include/riscv_vector.h
+${PLIST.RISCV}lib/clang/${PKGVERSION_MAJOR}/include/riscv_vector.h
 lib/clang/${PKGVERSION_MAJOR}/include/rtmintrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/s390intrin.h
 lib/clang/${PKGVERSION_MAJOR}/include/serializeintrin.h
