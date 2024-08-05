@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/05/03 11:17:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/08/05 14:51:37 adam Exp $
 
-BLAKE2s (indi-2.0.7.tar.gz) = c65ea1384e77d74b06ec2c63761ea12a23d12c88e226c2685a77e8282d7fa76a
-SHA512 (indi-2.0.7.tar.gz) = 292c0a5b8f07b24c42ea9424be19012c97317206b837d8601ec4d771fa35c314bf00712509f8199ee3da193ea12f0c3e90036a49deece304dc256cdeba60810d
-Size (indi-2.0.7.tar.gz) = 2843758 bytes
-SHA1 (patch-libs_alignment_CMakeLists.txt) = c33eff42aa5aa7c264df4dda9f0ad728fb783252
-SHA1 (patch-libs_indicore_CMakeLists.txt) = 6dca6faa75570ef890f08d2c2273a52501f1dbb7
-SHA1 (patch-libs_indicore_indicom.c) = 1dcba7770f0021bdcd26eed2381e7397494ac29f
-SHA1 (patch-libs_indicore_indidevapi.h) = 31ccbc3c8a33767341e4eadef05ae56a4241aeb8
-SHA1 (patch-libs_indicore_sharedblob.c) = 716e28a3b283a729947d269b8a10eff5242de239
-SHA1 (patch-libs_sockets_tcpsocket.cpp) = dac402efc5c98f0b3f81f74f29e07a825dc5d042
+BLAKE2s (indi-2.0.9.tar.gz) = 6fbd152798d2383139c9b44fd523c304c43b3f3729943c641960ff3b15ec6e15
+SHA512 (indi-2.0.9.tar.gz) = b5e1ef58c2139bd5dd79e72d9d25d5c0730f29dff2db0001db5b1d0eff029f60f714c13e14e820f5ccfa8ab6cba25f4cd16e699f9842fa722ef961d00fc8c4a4
+Size (indi-2.0.9.tar.gz) = 2894181 bytes
+SHA1 (patch-libs_alignment_CMakeLists.txt) = 46824a50efabdf5bb03943b413a70d8753cfd3fc

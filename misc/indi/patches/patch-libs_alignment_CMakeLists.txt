@@ -1,20 +1,26 @@
-$NetBSD: patch-libs_alignment_CMakeLists.txt,v 1.1 2024/05/03 11:17:14 wiz Exp $
+$NetBSD: patch-libs_alignment_CMakeLists.txt,v 1.2 2024/08/05 14:51:37 adam Exp $
 
-Use CMAKE_DL_LIBS for libdl, which does not exist everywhere.
+On Darwin, set correct install name dir for plug-ins.
 
---- libs/alignment/CMakeLists.txt.orig	2024-05-03 10:36:05.404763201 +0000
+--- libs/alignment/CMakeLists.txt.orig	2024-08-05 10:54:29.125435547 +0000
 +++ libs/alignment/CMakeLists.txt
-@@ -32,11 +32,11 @@ add_library(AlignmentDriver SHARED ${Ali
- set_target_properties(AlignmentDriver PROPERTIES COMPILE_FLAGS "-fPIC")
+@@ -145,6 +145,9 @@ set(NearestMathPlugin_SRCS
+ )
  
- IF(APPLE)
--    target_link_libraries(AlignmentDriver dl -L/usr/local/lib ${GSL_LIBRARIES})
-+    target_link_libraries(AlignmentDriver ${CMAKE_DL_LIBS} -L/usr/local/lib ${GSL_LIBRARIES})
- ELSE()
-     # Force linking all referenced libraries because of libgsl is not linked against cblas library on Linux
-     SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-as-needed")
--    target_link_libraries(AlignmentDriver dl ${GSL_LIBRARIES}
-+    target_link_libraries(AlignmentDriver ${CMAKE_DL_LIBS} ${GSL_LIBRARIES}
-         $<$<PLATFORM_ID:CYGWIN>:indidriver>
-     )
- ENDIF()
+ add_library(indi_Nearest_MathPlugin SHARED ${NearestMathPlugin_SRCS})
++IF(APPLE)
++    set_property(TARGET indi_Nearest_MathPlugin PROPERTY INSTALL_NAME_DIR ${INDI_MATH_PLUGINS_DIRECTORY})
++ENDIF()
+ target_include_directories(indi_Nearest_MathPlugin
+     PRIVATE
+         ${libindi_SOURCE_DIR}/libs/indicore
+@@ -168,6 +171,9 @@ set(SVDMathPlugin_SRCS
+ 
+ add_library(indi_SVD_MathPlugin SHARED ${SVDMathPlugin_SRCS})
+ set_property(TARGET indi_SVD_MathPlugin APPEND PROPERTY COMPILE_DEFINITIONS SVD_TRANSFORM_MATRIX)
++IF(APPLE)
++    set_property(TARGET indi_SVD_MathPlugin PROPERTY INSTALL_NAME_DIR ${INDI_MATH_PLUGINS_DIRECTORY})
++ENDIF()
+ target_link_libraries(indi_SVD_MathPlugin
+     indidriver
+     $<$<PLATFORM_ID:CYGWIN>:AlignmentDriver>
