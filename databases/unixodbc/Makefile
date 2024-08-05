@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/08/05 13:20:08 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2024/08/05 13:25:42 tnn Exp $
 
 DISTNAME=	unixODBC-2.3.12
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -34,8 +34,6 @@ CONFIGURE_ARGS+=	--with-pth=${PTHREADBASE:Q}
 
 CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 LIBS.SunOS+=		-lsocket -lnsl
-
-#CFLAGS+=		-Wno-error=incompatible-pointer-types
 
 # Override the local definitions that point to the self-contained libtool
 # convenience library.  We want the one installed by pkgsrc.  Also override
