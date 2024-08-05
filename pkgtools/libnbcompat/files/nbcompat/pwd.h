@@ -1,4 +1,4 @@
-/*	$NetBSD: pwd.h,v 1.4 2013/02/10 12:38:52 obache Exp $	*/
+/*	$NetBSD: pwd.h,v 1.5 2024/08/05 11:17:22 tnn Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -54,6 +54,22 @@ int uid_from_user(const char *, uid_t *);
 
 #if !HAVE_DECL_ENDPWENT
 void endpwent(void);
+#endif
+
+#if !HAVE_PWCACHE_USERDB
+int pwcache_userdb(
+	int		(*a_setpassent)(int),
+	void		(*a_endpwent)(void),
+	struct passwd *	(*a_getpwnam)(const char *),
+	struct passwd *	(*a_getpwuid)(uid_t));
+#endif
+
+#if !HAVE_PWCACHE_GROUPDB
+int pwcache_groupdb(
+	int		(*a_setgroupent)(int),
+	void		(*a_endgrent)(void),
+	struct group *	(*a_getgrnam)(const char *),
+	struct group *	(*a_getgrgid)(gid_t));
 #endif
 
 #endif	/* !_NBCOMPAT_PWD_H_ */
