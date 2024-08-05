@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/02/25 15:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/05 05:37:32 adam Exp $
 
-DISTNAME=	setuptools-rust-1.9.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	setuptools_rust-1.10.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools-rust/}
 
@@ -14,16 +14,10 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.3.2:../../devel/py-setuptools_sc
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.8.2:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=62.4:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.3:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.1:../../textproc/py-tomli
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
