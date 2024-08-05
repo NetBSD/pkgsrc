@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/05 20:39:56 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/xarray_einstats/__init__.py
+${PYSITELIB}/xarray_einstats/__init__.pyc
+${PYSITELIB}/xarray_einstats/__init__.pyo
+${PYSITELIB}/xarray_einstats/accessors.py
+${PYSITELIB}/xarray_einstats/accessors.pyc
+${PYSITELIB}/xarray_einstats/accessors.pyo
+${PYSITELIB}/xarray_einstats/einops.py
+${PYSITELIB}/xarray_einstats/einops.pyc
+${PYSITELIB}/xarray_einstats/einops.pyo
+${PYSITELIB}/xarray_einstats/linalg.py
+${PYSITELIB}/xarray_einstats/linalg.pyc
+${PYSITELIB}/xarray_einstats/linalg.pyo
+${PYSITELIB}/xarray_einstats/numba.py
+${PYSITELIB}/xarray_einstats/numba.pyc
+${PYSITELIB}/xarray_einstats/numba.pyo
+${PYSITELIB}/xarray_einstats/py.typed
+${PYSITELIB}/xarray_einstats/stats.py
+${PYSITELIB}/xarray_einstats/stats.pyc
+${PYSITELIB}/xarray_einstats/stats.pyo
+${PYSITELIB}/xarray_einstats/tutorial.py
+${PYSITELIB}/xarray_einstats/tutorial.pyc
+${PYSITELIB}/xarray_einstats/tutorial.pyo
