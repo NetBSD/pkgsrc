@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/08/01 23:20:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/05 19:36:24 adam Exp $
 
-DISTNAME=	pymc3-3.7
+DISTNAME=	pymc3-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymc3/}
 
@@ -11,16 +10,22 @@ HOMEPAGE=	https://github.com/pymc-devs/pymc3
 COMMENT=	Bayesian modeling and probabilistic machine learning
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-Theano>=1.0.0:../../math/py-Theano
-DEPENDS+=	${PYPKGPREFIX}-h5py>=2.7.0:../../devel/py-h5py
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=1.5.0:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.13.0:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas>=0.18.0:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-patsy>=0.4.0:../../math/py-patsy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=0.18.1:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-tqdm>=4.8.4:../../misc/py-tqdm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-arviz>=0.11.0:../../math/py-arviz
+DEPENDS+=	${PYPKGPREFIX}-cachetools>=4.2.1:../../devel/py-cachetools
+DEPENDS+=	${PYPKGPREFIX}-deprecat>0:../../devel/py-deprecat
+DEPENDS+=	${PYPKGPREFIX}-dill>0:../../textproc/py-dill
+DEPENDS+=	${PYPKGPREFIX}-fastprogress>=0.2.0:../../misc/py-fastprogress
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.15.0:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=0.24.0:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-patsy>=0.5.1:../../math/py-patsy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.7.3:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-semver>=2.13.0:../../devel/py-semver
+DEPENDS+=	${PYPKGPREFIX}-theano-pymc>=1.1.2:../../math/py-theano-pymc
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
