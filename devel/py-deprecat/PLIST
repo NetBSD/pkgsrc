@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/05 19:27:51 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/deprecat/__init__.py
+${PYSITELIB}/deprecat/__init__.pyc
+${PYSITELIB}/deprecat/__init__.pyo
+${PYSITELIB}/deprecat/classic.py
+${PYSITELIB}/deprecat/classic.pyc
+${PYSITELIB}/deprecat/classic.pyo
+${PYSITELIB}/deprecat/example.py
+${PYSITELIB}/deprecat/example.pyc
+${PYSITELIB}/deprecat/example.pyo
+${PYSITELIB}/deprecat/sphinx.py
+${PYSITELIB}/deprecat/sphinx.pyc
+${PYSITELIB}/deprecat/sphinx.pyo
