@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.10 2023/10/22 11:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/05 14:45:29 adam Exp $
 
-DISTNAME=	pyqtgraph-0.12.0
+DISTNAME=	pyqtgraph-0.13.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
-PKGREVISION=	1
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=pyqtgraph/}
-GITHUB_TAG=	pyqtgraph-${PKGVERSION_NOREV}
-GITHUB_PROJECT=	pyqtgraph
+CATEGORIES=	x11 python
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyqtgraph/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pyqtgraph/pyqtgraph
 COMMENT=	Scientific Graphics and GUI Library for Python
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17:../../math/py-numpy
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
 # Optional deps
+DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 312 # py-OpenGL
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
