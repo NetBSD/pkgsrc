@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/03/11 11:35:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2024/08/05 12:01:52 tnn Exp $
 
 DISTNAME=	mbrola-3.3
 CATEGORIES=	audio
@@ -19,6 +19,8 @@ BUILD_TARGET=
 MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	bin share/doc/mbrola
+
+CFLAGS+=	-D_XOPEN_SOURCE=500	# swab(3)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Bin/mbrola ${DESTDIR}${PREFIX}/bin
