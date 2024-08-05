@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.23 2023/08/10 07:44:52 adam Exp $
+$NetBSD: distinfo,v 1.24 2024/08/05 13:20:08 tnn Exp $
 
 BLAKE2s (unixODBC-2.3.12.tar.gz) = aff316a61bfab36b9efc8fd6d8636bc157ecd41133fd006ac56ce5c82a1ad14d
 SHA512 (unixODBC-2.3.12.tar.gz) = ca9d8db943195679a44db1fc09391dc6662ab1721112c93d448f04011e98502462ffe14b8364eb03707d851db456eced20eb61a22370392ca88d917038d45b56
 Size (unixODBC-2.3.12.tar.gz) = 1753915 bytes
+SHA1 (patch-Drivers_Postgre7.1_info.c) = 64b10ae23ea3e933a522ec9356164765c179d89b
 SHA1 (patch-Makefile.in) = 807eb24caff7e01493bb6d60f3b253d9f34fa2fc
