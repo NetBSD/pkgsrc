@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/05 19:26:02 adam Exp $
+
+BLAKE2s (fastprogress-1.0.3.tar.gz) = 7a41deec27829e346f78f148cf5a3df24a4eb4b3f72e8065989ed03916d8199a
+SHA512 (fastprogress-1.0.3.tar.gz) = 07660d2e887bc7d28c01eda0231f328f325e05e9c2948abd12c12bc0ede4822e5282356e56b171b93a2539bcdc16f6fae0c1044e6ef22f08bc44e8725f2735f7
+Size (fastprogress-1.0.3.tar.gz) = 14920 bytes

@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/05 19:26:02 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/fastprogress/__init__.py
+${PYSITELIB}/fastprogress/__init__.pyc
+${PYSITELIB}/fastprogress/__init__.pyo
+${PYSITELIB}/fastprogress/_nbdev.py
+${PYSITELIB}/fastprogress/_nbdev.pyc
+${PYSITELIB}/fastprogress/_nbdev.pyo
+${PYSITELIB}/fastprogress/core.py
+${PYSITELIB}/fastprogress/core.pyc
+${PYSITELIB}/fastprogress/core.pyo
+${PYSITELIB}/fastprogress/fastprogress.py
+${PYSITELIB}/fastprogress/fastprogress.pyc
+${PYSITELIB}/fastprogress/fastprogress.pyo
+${PYSITELIB}/fastprogress/version.py
+${PYSITELIB}/fastprogress/version.pyc
+${PYSITELIB}/fastprogress/version.pyo
