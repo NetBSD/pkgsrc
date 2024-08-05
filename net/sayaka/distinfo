@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.33 2024/07/15 08:33:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.34 2024/08/05 14:00:48 tsutsui Exp $
 
-BLAKE2s (sayaka-3.7.6.tar.gz) = d47611647f34bfaacaf8393e21b5cf83c426a44a449244b45d5f3d51ce35d5b9
-SHA512 (sayaka-3.7.6.tar.gz) = af6cf9ac48cf815d3408c0342dc39d69179460b0a697619134dee9b89f33fb41cce308defb2ce608ba72b5d95fcfc85458bd6fbbe60fa1f4c70e5ea04a11b192
-Size (sayaka-3.7.6.tar.gz) = 442091 bytes
+BLAKE2s (sayaka-3.7.7.tar.gz) = 22eaeea4064887099f0c0622df860016bc97a2d9406e3e6903aa0205db21d9db
+SHA512 (sayaka-3.7.7.tar.gz) = 663d2f6bebed51a85f5f405ffb94cb7b7f900fc3c71b0b5e23b4ae1ac8b1316961b3ee0ab0afabf886e7257d6df299abeb0eafea3e67d5a1a5402503a7fc0ea0
+Size (sayaka-3.7.7.tar.gz) = 444781 bytes
 SHA1 (patch-src_WSClient.cpp) = 1ffafc503b03ef7ce66e4c5e85a5cdcbfebc58ea
