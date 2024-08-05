@@ -1,5 +1,5 @@
 /* system.h: system-dependent declarations; include this first.
-   $Id: system.h,v 1.1.1.1 2003/06/09 22:16:11 seb Exp $
+   $Id: system.h,v 1.2 2024/08/05 14:40:09 tnn Exp $
 
    Copyright (C) 1997, 1998, 1999, 2000, 2001, 2002 Free Software
    Foundation, Inc.
@@ -40,6 +40,10 @@ extern char *substring ();
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif /* HAVE_UNISTD_H */
+
+#ifdef HAVE_STDLIB_H
+#include <stdlib.h>
+#endif /* HAVE_STDLIB_H */
 
 #include <stdio.h>
 #include <sys/types.h>
