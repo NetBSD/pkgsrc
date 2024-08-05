@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4856 2024/08/05 01:23:54 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.4857 2024/08/05 01:24:52 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7593,3 +7593,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/drawterm to 20240703 [vins 2024-08-04]
 	Updated sysutils/xfce4-thunar to 4.18.11 [gutteridge 2024-08-05]
 	Updated meta-pkgs/xfce4 to 4.18.1nb17 [gutteridge 2024-08-05]
+	Added databases/mysql80-cluster version 8.0.39 [jnemeth 2024-08-05]
