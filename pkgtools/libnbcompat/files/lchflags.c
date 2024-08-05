@@ -1,4 +1,4 @@
-/*	$NetBSD: lchflags.c,v 1.4 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: lchflags.c,v 1.5 2024/08/05 10:57:08 tnn Exp $	*/
 
 /*-
  * Copyright (c) 2002 The NetBSD Foundation, Inc.
@@ -35,6 +35,8 @@
 #include <nbcompat.h>
 #include <nbcompat/stat.h>
 #include <nbcompat/unistd.h>
+#include <errno.h>
+
 
 int
 lchflags(const char *path, unsigned long flags)
@@ -46,5 +48,9 @@ lchflags(const char *path, unsigned long flags)
 	if (S_ISLNK(psb.st_mode)) {
 		return 0;
 	}
+#if defined(__linux__)
+	return ENOSYS;
+#else
 	return (chflags(path, flags));
+#endif
 }
