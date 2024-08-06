@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:17:19 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/08/06 16:07:06 tnn Exp $
 
 BLAKE2s (mhash-0.9.9.tar.bz2) = 130b13eb3202c4f1249689abb5fabeabfb4f68c82a41e8b293b139d9ce9f672f
 SHA512 (mhash-0.9.9.tar.bz2) = 96e780858d6693ed253f98dff7d56df906bdfb66da463d53289c4495e4fa7432294be64e57cf9cdac35e5b85b3b134638534cc4e596ec2e3555a68f5445b1ff0
@@ -6,7 +6,7 @@ Size (mhash-0.9.9.tar.bz2) = 634563 bytes
 BLAKE2s (mhash-freebsd-patches-20081108.diff.gz) = c847c2ea05a90265d77b623606a00e45daee4b092e46d54713b5067ff48f3714
 SHA512 (mhash-freebsd-patches-20081108.diff.gz) = a08ebd2997b94a4241f674f4c0ce0a50123a78e8729040ad8f8264dee5350d8ed1e494539f7cfc1dba5afb278a1c63ef08853641616cba2da21769971ea8ca79
 Size (mhash-freebsd-patches-20081108.diff.gz) = 6376 bytes
-SHA1 (patch-aa) = dd0c768a7f710adeaf6350550e97f36dfa3344f3
+SHA1 (patch-aa) = b65814b689abfa823d024583b5646a5bd68343c2
 SHA1 (patch-ab) = 39d26134ebbc935a6bbbc0876fdc23bc52a8a29f
 SHA1 (patch-ac) = aea5b22ffd9cb13513f4262e401a8ac17f05cf7b
 SHA1 (patch-include_mutils_mutils.h) = f4480583fc5e45c79c27a697442676357327dcbf
