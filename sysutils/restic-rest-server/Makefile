@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/07/03 06:59:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/06 12:54:42 wiz Exp $
 
-DISTNAME=	rest-server-0.12.1
+DISTNAME=	rest-server-0.13.0
 PKGNAME=	restic-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=restic/}
 GITHUB_PROJECT=	rest-server
