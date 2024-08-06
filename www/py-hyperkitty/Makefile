@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/29 07:55:36 markd Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/06 11:27:09 adam Exp $
 
 DISTNAME=	hyperkitty-1.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -34,12 +34,12 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-django-debug-toolbar-[0-9]*:../../www/py-django-de
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 REPLACE_PYTHON=	hyperkitty/contrib/cleanarch3 hyperkitty/contrib/check_hk_import
 
 post-install:
-	rm -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/example_project
+	${RM} -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/example_project
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
