@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4877 2024/08/06 06:33:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4878 2024/08/06 08:02:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7644,3 +7644,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-ftfy to 6.2.3 [adam 2024-08-06]
 	Updated graphics/libimagequant to 4.3.3 [adam 2024-08-06]
 	Updated net/yt-dlp to 2024.8.6 [adam 2024-08-06]
+	Added math/py-astropy-iers-data version 0.2024.8.5.0.32.23 [adam 2024-08-06]
+	Updated math/py-asdf to 3.4.0 [adam 2024-08-06]
