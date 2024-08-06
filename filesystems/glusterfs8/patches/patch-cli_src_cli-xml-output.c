@@ -1,7 +1,9 @@
-$NetBSD: patch-cli_src_cli-xml-output.c,v 1.2 2024/08/06 18:54:02 riastradh Exp $
+$NetBSD: patch-cli_src_cli-xml-output.c,v 1.3 2024/08/06 21:10:48 riastradh Exp $
 
 Avoid wrong-size integer casts and fix format string.
+
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- cli/src/cli-xml-output.c.orig	2020-09-16 18:40:32.172503539 +0000
 +++ cli/src/cli-xml-output.c

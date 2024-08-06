@@ -1,31 +1,31 @@
-$NetBSD: distinfo,v 1.81 2024/08/06 18:55:00 riastradh Exp $
+$NetBSD: distinfo,v 1.82 2024/08/06 21:10:47 riastradh Exp $
 
 BLAKE2s (glusterfs-10.4.tar.gz) = 9813ba102591f6ab715fc7d3dc089860888effe70dc146a4366667be0cc9bd0c
 SHA512 (glusterfs-10.4.tar.gz) = 06c563ab77a29145b1fac44f5a56a91539accb69ba736fe6297aa3f38b128e68ba4f7d0b49ac6eb56397a51950fb4de882ff60037e91c61ad13dd89a18139d82
 Size (glusterfs-10.4.tar.gz) = 8293872 bytes
-SHA1 (patch-api_src_glfs.c) = 0092cae6a58a58b58e51a5aa90a4423ac32f0100
-SHA1 (patch-cli_src_cli-cmd-parser.c) = 50415e57abe2e7385df326434cde357958070356
-SHA1 (patch-cli_src_cli-xml-output.c) = 44326b6936bc2576fcce74b0a5390f1b641354a7
+SHA1 (patch-api_src_glfs.c) = c35c974631b7674643edc31d526f18a648be9cce
+SHA1 (patch-cli_src_cli-cmd-parser.c) = 4bf24309275b6500e3acb0a12fcacf365b86ff04
+SHA1 (patch-cli_src_cli-xml-output.c) = afd03ce801992985864504dbc19887b62447da7d
 SHA1 (patch-configure.ac) = aa9da3d124299e6f42664408234318aee10d9061
 SHA1 (patch-contrib_umountd_umountd.c) = 631ecf62ff5815d1d935b12ccf0e8d285eed4319
 SHA1 (patch-events-src-Makefile.am) = 5a112994c9990962a19eecd3933dabb18d5db2b0
 SHA1 (patch-events-tools-Makefile.am) = b224ed16200befdb68e51eebd762257a0911e591
 SHA1 (patch-extras-Makefile.am) = e5dead8310eed0fa0c6b12aa7a0da52bbeb4d41b
 SHA1 (patch-extras-ganesha-config-Makefile.am) = 547f144948a394aa981a0b799cb7435681f8a5d5
-SHA1 (patch-extras_geo-rep_gsync-sync-gfid.c) = a31c0539580089228f3f45c02455c6b577fadbc8
+SHA1 (patch-extras_geo-rep_gsync-sync-gfid.c) = caaa112c1e42e6b2ccab2d902dff310fe3b314e1
 SHA1 (patch-geo-replication_Makefile.am) = 71c2b4fa9d14d8489db8eaff11f7801792f53122
-SHA1 (patch-geo-replication_src_procdiggy.c) = 7fbd4e39bb6a655b1b06874d26849f938b9ec942
+SHA1 (patch-geo-replication_src_procdiggy.c) = 99af75d7ba7733b25c4cd2e1cc10c0341a3dd3a6
 SHA1 (patch-libglusterfs-src-glusterfs-dict.h) = ebfdfe6ffbdda3532d15fe108d4214b1e9596304
 SHA1 (patch-libglusterfs_src_glusterfs_logging.h) = eefd14b5b6711e1002f925ea3c421a8ced3cb365
 SHA1 (patch-rpc_rpc-lib_src_xdr-rpc.h) = 0abbb0498c264922b0a36db0ef696666186805f6
-SHA1 (patch-xlators_cluster_ec_src_ec-code.c) = c89118e1a57f603b8bb5e4b55b127c016b4c6e52
+SHA1 (patch-xlators_cluster_ec_src_ec-code.c) = 8f8563e9eebe8c85ff1bba7fff808694cad0d259
 SHA1 (patch-xlators_cluster_ec_src_ec.c) = cc0e17403e544ce54fb0758c92d2d43b86ba2e66
-SHA1 (patch-xlators_debug_io-stats_src_io-stats.c) = 2e030b81b8d4486838eabe85850022e2a14bcb6e
+SHA1 (patch-xlators_debug_io-stats_src_io-stats.c) = e15f32db5a87429511e0ca7640a8697d75b24326
 SHA1 (patch-xlators_features_index_src_index.c) = 1eb997f585231d9ec53e5e9f252b9a3594597b80
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-ganesha.c) = 544936587107dab83467b41ee9b5b6bfa54bd4a4
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-geo-rep.c) = dcc40fc3370bce694469b3cd0284e65d476afcff
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-mountbroker.c) = 5a24dc7f8c65e1a9cc4089c1be7a34b4c8a5dfc6
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-pmap.c) = 122aa9befa8212b468c18180323b7d14c734560a
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-utils.c) = 99fe72105a9cc0681a8b0c42d75f5e2d8e3b8aa6
-SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-volume-set.c) = 15e7337832f5cadb846bf50800c9a761356cabf3
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-ganesha.c) = e459795097b8b5445eefdb1dc6305c206737800b
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-geo-rep.c) = 51ada58de5beb3b0d5b9b6a620b184cca3f23eba
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-mountbroker.c) = 15ead6a6bbc32e98db93a3488e67f82a33889ce5
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-pmap.c) = 089542458e6d8189d3a40c9b6c9c0b37389b1d8a
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-utils.c) = 5b50dbb72246918b5daf39bbdffc8c10124af2b4
+SHA1 (patch-xlators_mgmt_glusterd_src_glusterd-volume-set.c) = f8895fb70109fa65eacab6832c875efa588176aa
 SHA1 (patch-xlators_storage_posix_src_posix-inode-fd-ops.c) = 47cead403a15bd440b91c2a1673359095f2e1bdb
