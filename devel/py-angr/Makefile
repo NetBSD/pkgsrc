@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/17 13:21:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/06 11:25:02 adam Exp $
 
 .include "version.mk"
 
@@ -60,7 +60,7 @@ DEPENDS+=	${PYPKGPREFIX}-unique-log-filter-[0-9]*:../../textproc/py-unique-log-f
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 OPSYSVARS+=	SOEXT
 SOEXT.Darwin=	dylib
