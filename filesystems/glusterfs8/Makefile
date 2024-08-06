@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/08/06 18:55:00 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/06 18:55:09 riastradh Exp $
 
 DISTNAME=	glusterfs-8.2
 PKGREVISION=	17
@@ -76,8 +76,6 @@ CHECK_PORTABILITY_SKIP+=	extras/peer_add_secret_pub.in
 
 SUBST_CLASSES+=		mtab
 SUBST_STAGE.mtab=	post-build
-SUBST_FILES.mtab=	doc/mount.glusterfs.8
-SUBST_FILES.mtab=	libglusterfs/src/compat.h
 SUBST_FILES.mtab=	xlators/mount/fuse/utils/mount.glusterfs.in
 SUBST_SED.mtab=		-e "s,mtab,/proc/mounts,g"
 
@@ -111,7 +109,7 @@ post-install:
 	    ${DESTDIR}/${PREFIX}/sbin/mount_glusterfs
 
 # Debug
-CFLAGS+=		-g 
+CFLAGS+=		-g
 INSTALL_UNSTRIPPED=	yes
 CONFIGURE_ARGS+=	--enable-debug
 #.include "../../devel/boehm-gc/buildlink3.mk"
