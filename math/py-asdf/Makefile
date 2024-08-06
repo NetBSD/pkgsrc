@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/08/03 06:00:52 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/06 08:01:52 adam Exp $
 
-DISTNAME=	asdf-3.3.0
+DISTNAME=	asdf-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
@@ -15,8 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
 DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.3:../../math/py-asdf-transform-schemas
-DEPENDS+=	${PYPKGPREFIX}-attrs>=20.1.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.6.2:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19:../../devel/py-packaging
@@ -30,6 +29,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata-[0-9]*:../../net/py-test-remotedat
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
+.endif
 
 REPLACE_PYTHON+=	asdf/_jsonschema/json/bin/jsonschema_suite
 REPLACE_PYTHON+=	asdf/extern/RangeHTTPServer.py
