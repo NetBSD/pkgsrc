@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/08/06 18:50:08 riastradh Exp $
+
+Use getprogname() as short program name if available.
+
+--- configure.ac.orig	2004-02-23 17:57:29.000000000 +0000
++++ configure.ac
+@@ -69,7 +69,7 @@ AC_DEFUN([ARGP_CHECK_FUNC],
+ ARGP_CHECK_FUNC([#include <stdio.h>], [putc_unlocked('x', stdout)])
+ 
+ AC_CHECK_FUNCS(flockfile)
+-AC_CHECK_FUNCS(fputs_unlocked fwrite_unlocked)
++AC_CHECK_FUNCS(fputs_unlocked fwrite_unlocked getprogname)
+ 
+ # Used only by argp-test.c, so don't use AC_REPLACE_FUNCS.
+ AC_CHECK_FUNCS(strdup asprintf)
