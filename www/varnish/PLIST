@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2022/11/14 19:29:13 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/08/06 01:34:40 tnn Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -46,6 +46,7 @@ include/varnish/tbl/sess_attr.h
 include/varnish/tbl/sess_close.h
 include/varnish/tbl/symbol_kind.h
 include/varnish/tbl/vcc_feature_bits.h
+include/varnish/tbl/vcl_context.h
 include/varnish/tbl/vcl_returns.h
 include/varnish/tbl/vcl_states.h
 include/varnish/tbl/vhd_fsm.h
@@ -86,6 +87,7 @@ include/varnish/vsa.h
 include/varnish/vsb.h
 include/varnish/vsha256.h
 include/varnish/vtcp.h
+include/varnish/vte.h
 include/varnish/vtim.h
 include/varnish/vtree.h
 include/varnish/vut.h
@@ -97,6 +99,7 @@ lib/varnish/vmods/libvmod_blob.la
 lib/varnish/vmods/libvmod_cookie.la
 lib/varnish/vmods/libvmod_debug.la
 lib/varnish/vmods/libvmod_directors.la
+lib/varnish/vmods/libvmod_h2.la
 lib/varnish/vmods/libvmod_proxy.la
 lib/varnish/vmods/libvmod_purge.la
 lib/varnish/vmods/libvmod_std.la
@@ -113,6 +116,7 @@ man/man1/varnishtop.1
 man/man3/vmod_blob.3
 man/man3/vmod_cookie.3
 man/man3/vmod_directors.3
+man/man3/vmod_h2.3
 man/man3/vmod_proxy.3
 man/man3/vmod_purge.3
 man/man3/vmod_std.3
@@ -122,6 +126,7 @@ man/man7/varnish-cli.7
 man/man7/varnish-counters.7
 man/man7/vcl-backend.7
 man/man7/vcl-probe.7
+man/man7/vcl-step.7
 man/man7/vcl-var.7
 man/man7/vcl.7
 man/man7/vsl-query.7
@@ -132,6 +137,15 @@ share/aclocal/varnish-legacy.m4
 share/aclocal/varnish.m4
 share/examples/varnish/builtin.vcl
 share/examples/varnish/example.vcl
+share/varnish/vcc/vmod_blob.vcc
+share/varnish/vcc/vmod_cookie.vcc
+share/varnish/vcc/vmod_directors.vcc
+share/varnish/vcc/vmod_h2.vcc
+share/varnish/vcc/vmod_proxy.vcc
+share/varnish/vcc/vmod_purge.vcc
+share/varnish/vcc/vmod_std.vcc
+share/varnish/vcc/vmod_unix.vcc
+share/varnish/vcc/vmod_vtc.vcc
 share/varnish/vcl/devicedetect.vcl
 share/varnish/vmodtool.py
 share/varnish/vsctool.py
