@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.236 2024/08/05 06:37:07 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.237 2024/08/06 14:41:23 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22883,8 +22883,8 @@ tcpreplay<4.3.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4538
 tcpreplay<4.3.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45387
 tiff<4.3.0nb1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0561
 tiff<4.3.0nb1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0562
-unzip-[0-9]*	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-0529
-unzip-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0530
+unzip<6.0nb10	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-0529
+unzip<6.0nb10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0530
 vim<8.2.4327	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-0554
 ImageMagick<7.0.10.31	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3596
 ImageMagick<7.0.11.14	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3610
