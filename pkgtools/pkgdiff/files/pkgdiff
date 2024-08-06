@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: pkgdiff,v 1.23 2015/02/03 22:50:27 abs Exp $
+# $NetBSD: pkgdiff,v 1.24 2024/08/06 03:56:10 tnn Exp $
 #
 # Usage: pkgdiff newfile
 #        pkgdiff oldfile newfile
@@ -97,7 +97,7 @@ dodiff() {
 }
 
 dogrep() {
-	egrep $* '\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\$'
+	@EGREP@ $* '\$(NetBSD|Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State)(:.*)?\$'
 }
 
 case x"$PKGDIFF_FMT" in x)
