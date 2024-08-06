@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/08/01 23:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/06 11:44:05 adam Exp $
 
-DISTNAME=	sklearn-pandas-1.8.0
+DISTNAME=	sklearn-pandas-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sklearn-pandas/}
 
@@ -11,13 +10,16 @@ HOMEPAGE=	https://github.com/paulgb/sklearn-pandas
 COMMENT=	Pandas integration with sklearn
 LICENSE=	zlib AND 2-clause-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
-DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.17:../../math/py-scikit-learn
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.18.1:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-pandas>=1.1.4:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.23.0:../../math/py-scikit-learn
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5.1:../../math/py-scipy
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
