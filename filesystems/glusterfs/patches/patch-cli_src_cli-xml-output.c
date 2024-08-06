@@ -1,6 +1,8 @@
-$NetBSD: patch-cli_src_cli-xml-output.c,v 1.1 2024/08/06 18:51:19 riastradh Exp $
+$NetBSD: patch-cli_src_cli-xml-output.c,v 1.2 2024/08/06 18:54:02 riastradh Exp $
 
 Fix time type cast abuse.
+
+Avoid ctype(3) abuse.
 
 --- cli/src/cli-xml-output.c.orig	2023-04-06 09:01:24.673967239 +0000
 +++ cli/src/cli-xml-output.c
@@ -32,3 +34,21 @@ Fix time type cast abuse.
  
      gf_time_fmt_tv(timestr, sizeof timestr, &tv, gf_timefmt_FT);
      ret = xmlTextWriterWriteFormatElement(writer, (xmlChar *)"time", "%s",
+@@ -3413,7 +3417,7 @@ _output_gsync_config(FILE *fp, xmlTextWr
+             break;
+ 
+         v = resbuf + strlen(resbuf) - 1;
+-        while (isspace(*v)) {
++        while (isspace((unsigned char)*v)) {
+             /* strip trailing space */
+             *v-- = '\0';
+         }
+@@ -3435,7 +3439,7 @@ _output_gsync_config(FILE *fp, xmlTextWr
+             goto out;
+         }
+         *v++ = '\0';
+-        while (isspace(*v))
++        while (isspace((unsigned char)*v))
+             v++;
+         v = gf_strdup(v);
+         if (!v) {
