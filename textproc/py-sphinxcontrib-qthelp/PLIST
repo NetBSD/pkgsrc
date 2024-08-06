@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/07 22:19:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/08/06 13:07:18 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/qthelp/__init__.pyo
@@ -100,9 +100,9 @@ ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_CN/LC_MESSAGES/sphinxcontrib.qthelp
 ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_CN/LC_MESSAGES/sphinxcontrib.qthelp.po
 ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.qthelp.mo
 ${PYSITELIB}/sphinxcontrib/qthelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.qthelp.po
+${PYSITELIB}/sphinxcontrib/qthelp/py.typed
 ${PYSITELIB}/sphinxcontrib/qthelp/templates/project.qhcp
 ${PYSITELIB}/sphinxcontrib/qthelp/templates/project.qhp
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
