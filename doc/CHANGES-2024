@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4901 2024/08/06 14:05:44 nia Exp $
+$NetBSD: CHANGES-2024,v 1.4902 2024/08/06 14:18:18 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7676,3 +7676,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/abseil to 20240722.0 [wiz 2024-08-06]
 	Updated x11/picom to 11.2 [nia 2024-08-06]
 	Updated emulators/mednafen to 1.32.1 [nia 2024-08-06]
+	Updated graphics/imv to 4.5.0 [nia 2024-08-06]
