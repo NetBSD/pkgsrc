@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2019/11/03 10:39:05 rillig Exp $
+# $NetBSD: builtin.mk,v 1.4 2024/08/06 18:55:26 riastradh Exp $
 
 BUILTIN_PKG:=	argp
 
@@ -24,7 +24,7 @@ MAKEVARS+=		IS_BUILTIN.argp
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.argp) && \
-    !empty(IS_BUILTIN.argp:M[yY][eE][sS]) && \
+    ${IS_BUILTIN.argp:tl} == "yes" && \
     empty(H_ARGP:M__nonexistent__)
 
 ###
@@ -36,8 +36,7 @@ MAKEVARS+=		IS_BUILTIN.argp
 USE_BUILTIN.argp=	no
 .    else
 USE_BUILTIN.argp=	${IS_BUILTIN.argp}
-.      if defined(BUILTIN_PKG.argp) && \
-        !empty(IS_BUILTIN.argp:M[yY][eE][sS])
+.      if defined(BUILTIN_PKG.argp) && ${IS_BUILTIN.argp:tl} == "yes"
 USE_BUILTIN.argp=	yes
 .      endif
 .    endif  # PREFER.argp
