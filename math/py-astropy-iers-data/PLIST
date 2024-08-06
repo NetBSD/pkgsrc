@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/06 07:55:24 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/astropy_iers_data/__init__.py
+${PYSITELIB}/astropy_iers_data/__init__.pyc
+${PYSITELIB}/astropy_iers_data/__init__.pyo
+${PYSITELIB}/astropy_iers_data/_version.py
+${PYSITELIB}/astropy_iers_data/_version.pyc
+${PYSITELIB}/astropy_iers_data/_version.pyo
+${PYSITELIB}/astropy_iers_data/data/Leap_Second.dat
+${PYSITELIB}/astropy_iers_data/data/README.rst
+${PYSITELIB}/astropy_iers_data/data/ReadMe.eopc04
+${PYSITELIB}/astropy_iers_data/data/ReadMe.finals2000A
+${PYSITELIB}/astropy_iers_data/data/eopc04.1962-now
+${PYSITELIB}/astropy_iers_data/data/finals2000A.all
+${PYSITELIB}/astropy_iers_data/tests/__init__.py
+${PYSITELIB}/astropy_iers_data/tests/__init__.pyc
+${PYSITELIB}/astropy_iers_data/tests/__init__.pyo
