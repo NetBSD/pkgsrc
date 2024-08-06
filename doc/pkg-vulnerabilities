@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.237 2024/08/06 14:41:23 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.238 2024/08/06 14:44:53 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22339,8 +22339,7 @@ go116<1.16.10	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-41772
 go117<1.17.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-41772
 go116<1.16.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-41771
 go117<1.17.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2021-41771
-speex-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-23904
-speex-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-23903
+speex<1.2.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-23903
 belle-sip<5.0.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43611
 belle-sip<5.0.20	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-43610
 mailman<2.1.36	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2021-43331
