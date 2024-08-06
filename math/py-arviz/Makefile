@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/08/05 20:42:07 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/06 06:26:09 adam Exp $
 
 DISTNAME=	arviz-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools>=60.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1.0:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-xarray>=2022.6.0:../../math/py-xarray
 DEPENDS+=	${PYPKGPREFIX}-xarray-einstats>=0.3:../../math/py-xarray-einstats
+TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*:../../converters/py-cloudpickle
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
