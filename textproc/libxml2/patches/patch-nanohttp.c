@@ -1,6 +1,7 @@
-$NetBSD: patch-nanohttp.c,v 1.1 2024/08/06 18:48:42 riastradh Exp $
+$NetBSD: patch-nanohttp.c,v 1.2 2024/08/06 22:40:14 riastradh Exp $
 
 Avoid ctype(3) abuse.
+https://gitlab.gnome.org/GNOME/libxml2/-/issues/780
 
 --- nanohttp.c.orig	2024-06-12 10:56:14.000000000 +0000
 +++ nanohttp.c
