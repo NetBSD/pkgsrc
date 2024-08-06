@@ -1,6 +1,7 @@
-$NetBSD: patch-doc_source_conf.py,v 1.1 2024/08/06 17:19:52 wiz Exp $
+$NetBSD: patch-doc_source_conf.py,v 1.2 2024/08/06 17:24:11 wiz Exp $
 
 Avoid problem with sphinx 8.
+https://github.com/pimutils/khal/issues/1356
 
 --- doc/source/conf.py.orig	2024-08-06 17:18:55.985963360 +0000
 +++ doc/source/conf.py
