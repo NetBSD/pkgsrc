@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/04/26 16:46:30 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/06 00:54:16 tnn Exp $
 
-DISTNAME=	kicad-packages3D-8.0.1
+DISTNAME=	kicad-packages3D-8.0.4
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
