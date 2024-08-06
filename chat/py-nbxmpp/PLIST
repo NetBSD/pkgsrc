@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/08/10 12:03:37 nia Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/06 23:21:25 gdt Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -226,9 +226,6 @@ ${PYSITELIB}/nbxmpp/plugin.pyo
 ${PYSITELIB}/nbxmpp/protocol.py
 ${PYSITELIB}/nbxmpp/protocol.pyc
 ${PYSITELIB}/nbxmpp/protocol.pyo
-${PYSITELIB}/nbxmpp/resolver.py
-${PYSITELIB}/nbxmpp/resolver.pyc
-${PYSITELIB}/nbxmpp/resolver.pyo
 ${PYSITELIB}/nbxmpp/simplexml.py
 ${PYSITELIB}/nbxmpp/simplexml.pyc
 ${PYSITELIB}/nbxmpp/simplexml.pyo
