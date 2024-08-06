@@ -1,6 +1,7 @@
-$NetBSD: patch-extras_geo-rep_gsync-sync-gfid.c,v 1.1 2024/08/06 18:54:02 riastradh Exp $
+$NetBSD: patch-extras_geo-rep_gsync-sync-gfid.c,v 1.2 2024/08/06 21:10:47 riastradh Exp $
 
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- extras/geo-rep/gsync-sync-gfid.c.orig	2023-04-06 09:01:24.705967342 +0000
 +++ extras/geo-rep/gsync-sync-gfid.c

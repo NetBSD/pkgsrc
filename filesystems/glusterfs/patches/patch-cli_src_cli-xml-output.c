@@ -1,8 +1,9 @@
-$NetBSD: patch-cli_src_cli-xml-output.c,v 1.2 2024/08/06 18:54:02 riastradh Exp $
+$NetBSD: patch-cli_src_cli-xml-output.c,v 1.3 2024/08/06 21:10:47 riastradh Exp $
 
 Fix time type cast abuse.
 
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- cli/src/cli-xml-output.c.orig	2023-04-06 09:01:24.673967239 +0000
 +++ cli/src/cli-xml-output.c

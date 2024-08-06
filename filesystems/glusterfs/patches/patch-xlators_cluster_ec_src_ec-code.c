@@ -1,6 +1,7 @@
-$NetBSD: patch-xlators_cluster_ec_src_ec-code.c,v 1.1 2024/08/06 18:54:02 riastradh Exp $
+$NetBSD: patch-xlators_cluster_ec_src_ec-code.c,v 1.2 2024/08/06 21:10:47 riastradh Exp $
 
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- xlators/cluster/ec/src/ec-code.c.orig	2023-04-06 09:01:24.919968028 +0000
 +++ xlators/cluster/ec/src/ec-code.c
