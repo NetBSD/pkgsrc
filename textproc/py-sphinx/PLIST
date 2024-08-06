@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2024/07/21 09:27:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/08/06 13:17:10 wiz Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -684,10 +684,8 @@ ${PYSITELIB}/sphinx/templates/latex/longtable.tex.jinja
 ${PYSITELIB}/sphinx/templates/latex/sphinxmessages.sty.jinja
 ${PYSITELIB}/sphinx/templates/latex/tabular.tex.jinja
 ${PYSITELIB}/sphinx/templates/latex/tabulary.tex.jinja
-${PYSITELIB}/sphinx/templates/quickstart/Makefile.jinja
 ${PYSITELIB}/sphinx/templates/quickstart/Makefile.new.jinja
 ${PYSITELIB}/sphinx/templates/quickstart/conf.py.jinja
-${PYSITELIB}/sphinx/templates/quickstart/make.bat.jinja
 ${PYSITELIB}/sphinx/templates/quickstart/make.bat.new.jinja
 ${PYSITELIB}/sphinx/templates/quickstart/root_doc.rst.jinja
 ${PYSITELIB}/sphinx/templates/texinfo/Makefile
@@ -866,6 +864,9 @@ ${PYSITELIB}/sphinx/util/_io.pyo
 ${PYSITELIB}/sphinx/util/_pathlib.py
 ${PYSITELIB}/sphinx/util/_pathlib.pyc
 ${PYSITELIB}/sphinx/util/_pathlib.pyo
+${PYSITELIB}/sphinx/util/_timestamps.py
+${PYSITELIB}/sphinx/util/_timestamps.pyc
+${PYSITELIB}/sphinx/util/_timestamps.pyo
 ${PYSITELIB}/sphinx/util/build_phase.py
 ${PYSITELIB}/sphinx/util/build_phase.pyc
 ${PYSITELIB}/sphinx/util/build_phase.pyo
