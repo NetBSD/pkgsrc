@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/07/04 10:00:22 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/06 13:20:22 wiz Exp $
 
-DISTNAME=	abseil-20240116.2
-PKGREVISION=	1
+DISTNAME=	abseil-20240722.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=abseil/}
 GITHUB_PROJECT=	abseil-cpp
@@ -17,7 +16,7 @@ USE_LANGUAGES=		c++
 FORCE_CXX_STD=		c++14
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
-# .buildlink/include/absl/base/policy_checks.h:57:2: error:
+# include/absl/base/policy_checks.h:57:2: error:
 # #error "This package requires GCC 7 or higher."
 GCC_REQD+=	7
 
