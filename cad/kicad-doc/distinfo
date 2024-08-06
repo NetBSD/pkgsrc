@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.17 2024/01/08 08:04:35 tnn Exp $
-
-BLAKE2s (kicad-doc-7.0.10.tar.gz) = 9b7dde2bc5abfb574afe2b6282181492733bb389b7d9542c60597d0c7851f398
-SHA512 (kicad-doc-7.0.10.tar.gz) = 120570d3eed45505d37e044e33ab450c7cbfa291aed62ad5e15fd8fbaffaa12ed0b3bac66389600af2b0a84da220f9e28eb5b39cb2b853cd4f674bcc958fc6f3
-Size (kicad-doc-7.0.10.tar.gz) = 694461148 bytes
