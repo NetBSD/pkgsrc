@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/03 08:54:26 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/06 09:58:26 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -93,6 +93,12 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-earm*}
 LDFLAGS+=		-Wl,--no-keep-memory
+.endif
+
+PLIST_VARS+=		ffvpx
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.ffvpx=		yes	# see platform/old-configure.in
 .endif
 
 INSTALLATION_DIRS+=	share/applications
