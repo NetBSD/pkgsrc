@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.39 2024/08/05 08:30:31 ryoon Exp $
+$NetBSD: distinfo,v 1.40 2024/08/06 06:31:34 adam Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -48,9 +48,9 @@ Size (hashbrown-0.13.2.crate) = 105265 bytes
 BLAKE2s (libc-0.2.155.crate) = 7d2724d3fdb09b655c8f405ec03a9d9ed8c9c307c38e2461f86edc269f477aab
 SHA512 (libc-0.2.155.crate) = 05354bba532b8338bda1f88f12c7f3893429734a06e33925fca2b99d49548ae5216e2cd84e782d2368a2dfef20b0e035e2dcad8dd13ede7119462a8c639b2807
 Size (libc-0.2.155.crate) = 743539 bytes
-BLAKE2s (libimagequant-4.3.2.tar.gz) = ce32575c584de4f1e12488966e41f191804038f0bd5a162efde93c3e8574dc41
-SHA512 (libimagequant-4.3.2.tar.gz) = 683284d57d784c4a4d338b99c152a18bd0451b06980776bd23837f3cf20aec92c503fd6cd2863eea08cc81c92690b2e176e3e7fcbdb8ebb65b4c26f534a9d9ca
-Size (libimagequant-4.3.2.tar.gz) = 88605 bytes
+BLAKE2s (libimagequant-4.3.3.tar.gz) = 95f2d9b07d17e14e18c0b8f0c0ddb85d594ab6c73300f45067141f06a75b8f0b
+SHA512 (libimagequant-4.3.3.tar.gz) = 566271e77bcf1b8fd434245baabc48b9868d7062ca81d4f6fa63e7f8bcf261d103f53869e31fb31802e9d56a85d870f237f8a654586447b973041959158cb50d
+Size (libimagequant-4.3.3.tar.gz) = 88598 bytes
 BLAKE2s (lodepng-3.10.4.crate) = be6e47e5427d06fcd8282656c1ae249f13fea62904c603f068d237c837a6eded
 SHA512 (lodepng-3.10.4.crate) = 0818237c976e39eb4c2b997f1b81209ea2254507bd9ab6e6b217325ebaf82dc863c46ae2bbe0750b71d4e033ddad18bf6838e0640fe01affe309c31435a66487
 Size (lodepng-3.10.4.crate) = 52635 bytes
@@ -93,5 +93,3 @@ Size (zerocopy-0.7.35.crate) = 152645 bytes
 BLAKE2s (zerocopy-derive-0.7.35.crate) = b80899d1b7a843a5225638171775a0c9643052c9e96f7b88a825150d0725505e
 SHA512 (zerocopy-derive-0.7.35.crate) = dbe23573b62a6267d7bc8c744320b75b2fbda03b908c1d175211f7394374fe182bce58021e25485c10671d726b2007f250565dfe53134d51c89293bb607e9feb
 Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
-SHA1 (patch-src_kmeans.rs) = 544ffc828efcd7c1496a8f55ea8bc08847fa0118
-SHA1 (patch-src_quant.rs) = ac82039104443c84f84dbe44922952550e554a17
