@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2024/08/06 18:54:01 riastradh Exp $
+$NetBSD: distinfo,v 1.81 2024/08/06 18:55:00 riastradh Exp $
 
 BLAKE2s (glusterfs-10.4.tar.gz) = 9813ba102591f6ab715fc7d3dc089860888effe70dc146a4366667be0cc9bd0c
 SHA512 (glusterfs-10.4.tar.gz) = 06c563ab77a29145b1fac44f5a56a91539accb69ba736fe6297aa3f38b128e68ba4f7d0b49ac6eb56397a51950fb4de882ff60037e91c61ad13dd89a18139d82
@@ -6,7 +6,7 @@ Size (glusterfs-10.4.tar.gz) = 8293872 bytes
 SHA1 (patch-api_src_glfs.c) = 0092cae6a58a58b58e51a5aa90a4423ac32f0100
 SHA1 (patch-cli_src_cli-cmd-parser.c) = 50415e57abe2e7385df326434cde357958070356
 SHA1 (patch-cli_src_cli-xml-output.c) = 44326b6936bc2576fcce74b0a5390f1b641354a7
-SHA1 (patch-configure.ac) = bc76ecb683f7a6eef32d6b11f86df4760c12e032
+SHA1 (patch-configure.ac) = aa9da3d124299e6f42664408234318aee10d9061
 SHA1 (patch-contrib_umountd_umountd.c) = 631ecf62ff5815d1d935b12ccf0e8d285eed4319
 SHA1 (patch-events-src-Makefile.am) = 5a112994c9990962a19eecd3933dabb18d5db2b0
 SHA1 (patch-events-tools-Makefile.am) = b224ed16200befdb68e51eebd762257a0911e591

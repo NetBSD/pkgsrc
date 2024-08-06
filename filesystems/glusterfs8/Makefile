@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/06 18:54:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/06 18:55:00 riastradh Exp $
 
 DISTNAME=	glusterfs-8.2
 PKGREVISION=	17
@@ -120,6 +120,13 @@ CONFIGURE_ARGS+=	--enable-debug
 #LIBS+=			-lgc
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	ac_cv_file__etc_centos_release=no
+CONFIGURE_ARGS+=	ac_cv_file__etc_debian_version=no
+CONFIGURE_ARGS+=	ac_cv_file__etc_SuSE_release=no
+CONFIGURE_ARGS+=	ac_cv_file__etc_redhat_release=no
+.endif
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/argp/buildlink3.mk"
