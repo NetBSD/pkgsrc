@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/06/25 02:00:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/06 08:39:20 adam Exp $
 
-DISTNAME=	astropy-5.3.4
+DISTNAME=	astropy-6.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
 
@@ -11,19 +10,22 @@ HOMEPAGE=	https://www.astropy.org/
 COMMENT=	Python module for astronomical calculations and data analysis
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
-DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2024.7.1.0.34.3:../../math/py-astropy-iers-data
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
 # recommended
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.5:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.5.3:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.8:../../math/py-scipy
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_SELF_CONFLICT=	yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
