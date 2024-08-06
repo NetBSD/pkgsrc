@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2023/11/16 16:29:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.105 2024/08/06 03:56:10 tnn Exp $
 
-PKGNAME=	pkgdiff-1.11
+PKGNAME=	pkgdiff-1.12
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	wiz@NetBSD.org
@@ -50,6 +50,7 @@ do-build:
 .endfor
 	${SED} -e 's|@DIFF@|${PKGDIFF_DIFF}|g'		\
 		-e 's|@SH@|${SH}|g'			\
+		-e 's|@EGREP@|${EGREP}|g'		\
 		< ${FILESDIR}/pkgdiff			\
 		> ${WRKSRC}/pkgdiff
 	${CP} ${FILESDIR}/pkgvi ${WRKSRC}
