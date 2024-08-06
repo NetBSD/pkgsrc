@@ -1,6 +1,7 @@
-$NetBSD: patch-cli_src_cli-xml-output.c,v 1.1 2024/08/06 18:51:19 riastradh Exp $
+$NetBSD: patch-cli_src_cli-xml-output.c,v 1.2 2024/08/06 18:54:02 riastradh Exp $
 
 Avoid wrong-size integer casts and fix format string.
+Avoid ctype(3) abuse.
 
 --- cli/src/cli-xml-output.c.orig	2020-09-16 18:40:32.172503539 +0000
 +++ cli/src/cli-xml-output.c
@@ -37,3 +38,21 @@ Avoid wrong-size integer casts and fix format string.
               time_usec);
      ret = xmlTextWriterWriteFormatElement(writer, (xmlChar *)"time", "%s",
                                            timestr);
+@@ -3425,7 +3425,7 @@ _output_gsync_config(FILE *fp, xmlTextWr
+             break;
+ 
+         v = resbuf + strlen(resbuf) - 1;
+-        while (isspace(*v)) {
++        while (isspace((unsigned char)*v)) {
+             /* strip trailing space */
+             *v-- = '\0';
+         }
+@@ -3447,7 +3447,7 @@ _output_gsync_config(FILE *fp, xmlTextWr
+             goto out;
+         }
+         *v++ = '\0';
+-        while (isspace(*v))
++        while (isspace((unsigned char)*v))
+             v++;
+         v = gf_strdup(v);
+         if (!v) {
