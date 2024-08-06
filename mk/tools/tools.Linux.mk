@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.70 2024/07/03 13:27:16 cheusov Exp $
+# $NetBSD: tools.Linux.mk,v 1.71 2024/08/06 03:50:23 tnn Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -75,17 +75,11 @@ TOOLS_PLATFORM.diff3?=		${_path}/diff3
 .  if exists(${_path}/dirname)
 TOOLS_PLATFORM.dirname?=	${_path}/dirname
 .  endif
-.  if exists(${_path}/egrep)
-TOOLS_PLATFORM.egrep?=		${_path}/egrep
-.  endif
 .  if exists(${_path}/env)
 TOOLS_PLATFORM.env?=		${_path}/env
 .  endif
 .  if exists(${_path}/expr)
 TOOLS_PLATFORM.expr?=		${_path}/expr
-.  endif
-.  if exists(${_path}/fgrep)
-TOOLS_PLATFORM.fgrep?=		${_path}/fgrep
 .  endif
 .  if exists(${_path}/file)
 TOOLS_PLATFORM.file?=		${_path}/file
@@ -110,6 +104,8 @@ TOOLS_PLATFORM.gawk?=		${_path}/gawk
 .  endif
 .  if exists(${_path}/grep)
 TOOLS_PLATFORM.grep?=		${_path}/grep
+TOOLS_PLATFORM.egrep?=		${_path}/grep -E
+TOOLS_PLATFORM.fgrep?=		${_path}/grep -F
 .  endif
 .  if exists(${_path}/groff)
 TOOLS_PLATFORM.groff?=		${_path}/groff
