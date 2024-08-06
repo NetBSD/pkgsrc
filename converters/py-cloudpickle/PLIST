@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/06 06:22:18 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/cloudpickle/__init__.py
+${PYSITELIB}/cloudpickle/__init__.pyc
+${PYSITELIB}/cloudpickle/__init__.pyo
+${PYSITELIB}/cloudpickle/cloudpickle.py
+${PYSITELIB}/cloudpickle/cloudpickle.pyc
+${PYSITELIB}/cloudpickle/cloudpickle.pyo
+${PYSITELIB}/cloudpickle/cloudpickle_fast.py
+${PYSITELIB}/cloudpickle/cloudpickle_fast.pyc
+${PYSITELIB}/cloudpickle/cloudpickle_fast.pyo
