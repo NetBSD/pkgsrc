@@ -1,6 +1,7 @@
-$NetBSD: patch-cli_src_cli-cmd-parser.c,v 1.1 2024/08/06 18:54:01 riastradh Exp $
+$NetBSD: patch-cli_src_cli-cmd-parser.c,v 1.2 2024/08/06 21:10:47 riastradh Exp $
 
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- cli/src/cli-cmd-parser.c.orig	2023-04-06 09:01:24.665967213 +0000
 +++ cli/src/cli-cmd-parser.c
