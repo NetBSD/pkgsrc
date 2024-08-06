@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/04/26 16:03:30 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/08/06 12:38:50 wiz Exp $
 
-BLAKE2s (libinotify-20211018.tar.gz) = 6e02921da404953056c104647e5d305d311192e486587a881797cf36e209f07f
-SHA512 (libinotify-20211018.tar.gz) = 69a501403f323abd95b6052fc0ab94deb729637de3753ccd7e1fe8836020f4ff4cfa25ab46ea3fbff86f0c481cb3ae62053ca8144c2fb2404e3f4b1feb3f93a7
-Size (libinotify-20211018.tar.gz) = 74778 bytes
+BLAKE2s (libinotify-20240724.tar.gz) = 61c8b4a8a83d74c952319abf11f2a50292eab10cd7c78768563d14c85c4bec5d
+SHA512 (libinotify-20240724.tar.gz) = 0827686359bb0266a0ff0acdda063dcde8dde667112a22cf0821aef32417d9b7c910c14edb81fa63f7025d67738f709e048e0b7f8891d8ecdc522160dc1cfc56
+Size (libinotify-20240724.tar.gz) = 77857 bytes

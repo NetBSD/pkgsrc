@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2024/06/17 16:43:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/06 12:38:50 wiz Exp $
 
 DISTNAME=	libinotify
 PKGNAME=	${DISTNAME}-0.0.${GITHUB_TAG}
-PKGREVISON=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libinotify-kqueue/}
 GITHUB_PROJECT=	libinotify-kqueue
-GITHUB_TAG=	20211018
+GITHUB_TAG=	20240724
 
 MAINTAINER=	me@dmitrymatveev.co.uk
 #HOMEPAGE=	http://dmitrymatveev.co.uk/gsoc11
