@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.181 2024/06/17 18:48:24 adam Exp $
+# $NetBSD: Makefile,v 1.182 2024/08/06 18:48:42 riastradh Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	XML parser library from the GNOME project
 LICENSE=	modified-bsd
