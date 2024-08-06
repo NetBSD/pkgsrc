@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2021/01/13 09:17:24 nia Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/06 18:49:16 riastradh Exp $
 
 DISTNAME=	argp-standalone-1.3
 PKGNAME=	argp-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.lysator.liu.se/~nisse/misc/
 
