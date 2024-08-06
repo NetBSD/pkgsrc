@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/15 22:14:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/06 11:44:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -22,9 +22,15 @@ ${PYSITELIB}/skimage/_shared/_tempfile.pyo
 ${PYSITELIB}/skimage/_shared/_warnings.py
 ${PYSITELIB}/skimage/_shared/_warnings.pyc
 ${PYSITELIB}/skimage/_shared/_warnings.pyo
+${PYSITELIB}/skimage/_shared/compat.py
+${PYSITELIB}/skimage/_shared/compat.pyc
+${PYSITELIB}/skimage/_shared/compat.pyo
 ${PYSITELIB}/skimage/_shared/coord.py
 ${PYSITELIB}/skimage/_shared/coord.pyc
 ${PYSITELIB}/skimage/_shared/coord.pyo
+${PYSITELIB}/skimage/_shared/dtype.py
+${PYSITELIB}/skimage/_shared/dtype.pyc
+${PYSITELIB}/skimage/_shared/dtype.pyo
 ${PYSITELIB}/skimage/_shared/fast_exp.h
 ${PYSITELIB}/skimage/_shared/fast_exp.so
 ${PYSITELIB}/skimage/_shared/filters.py
@@ -44,6 +50,9 @@ ${PYSITELIB}/skimage/_shared/tests/__init__.pyo
 ${PYSITELIB}/skimage/_shared/tests/test_coord.py
 ${PYSITELIB}/skimage/_shared/tests/test_coord.pyc
 ${PYSITELIB}/skimage/_shared/tests/test_coord.pyo
+${PYSITELIB}/skimage/_shared/tests/test_dtype.py
+${PYSITELIB}/skimage/_shared/tests/test_dtype.pyc
+${PYSITELIB}/skimage/_shared/tests/test_dtype.pyo
 ${PYSITELIB}/skimage/_shared/tests/test_fast_exp.py
 ${PYSITELIB}/skimage/_shared/tests/test_fast_exp.pyc
 ${PYSITELIB}/skimage/_shared/tests/test_fast_exp.pyo
@@ -75,6 +84,12 @@ ${PYSITELIB}/skimage/_shared/utils.pyo
 ${PYSITELIB}/skimage/_shared/version_requirements.py
 ${PYSITELIB}/skimage/_shared/version_requirements.pyc
 ${PYSITELIB}/skimage/_shared/version_requirements.pyo
+${PYSITELIB}/skimage/_vendored/__init__.py
+${PYSITELIB}/skimage/_vendored/__init__.pyc
+${PYSITELIB}/skimage/_vendored/__init__.pyo
+${PYSITELIB}/skimage/_vendored/numpy_lookfor.py
+${PYSITELIB}/skimage/_vendored/numpy_lookfor.pyc
+${PYSITELIB}/skimage/_vendored/numpy_lookfor.pyo
 ${PYSITELIB}/skimage/color/__init__.py
 ${PYSITELIB}/skimage/color/__init__.pyc
 ${PYSITELIB}/skimage/color/__init__.pyi
@@ -726,6 +741,7 @@ ${PYSITELIB}/skimage/measure/tests/test_regionprops.pyc
 ${PYSITELIB}/skimage/measure/tests/test_regionprops.pyo
 ${PYSITELIB}/skimage/metrics/__init__.py
 ${PYSITELIB}/skimage/metrics/__init__.pyc
+${PYSITELIB}/skimage/metrics/__init__.pyi
 ${PYSITELIB}/skimage/metrics/__init__.pyo
 ${PYSITELIB}/skimage/metrics/_adapted_rand_error.py
 ${PYSITELIB}/skimage/metrics/_adapted_rand_error.pyc
@@ -771,6 +787,7 @@ ${PYSITELIB}/skimage/morphology/_flood_fill.pyo
 ${PYSITELIB}/skimage/morphology/_flood_fill_cy.so
 ${PYSITELIB}/skimage/morphology/_grayreconstruct.so
 ${PYSITELIB}/skimage/morphology/_max_tree.so
+${PYSITELIB}/skimage/morphology/_misc_cy.so
 ${PYSITELIB}/skimage/morphology/_skeletonize.py
 ${PYSITELIB}/skimage/morphology/_skeletonize.pyc
 ${PYSITELIB}/skimage/morphology/_skeletonize.pyo
@@ -1032,6 +1049,9 @@ ${PYSITELIB}/skimage/transform/_geometric.pyc
 ${PYSITELIB}/skimage/transform/_geometric.pyo
 ${PYSITELIB}/skimage/transform/_hough_transform.so
 ${PYSITELIB}/skimage/transform/_radon_transform.so
+${PYSITELIB}/skimage/transform/_thin_plate_splines.py
+${PYSITELIB}/skimage/transform/_thin_plate_splines.pyc
+${PYSITELIB}/skimage/transform/_thin_plate_splines.pyo
 ${PYSITELIB}/skimage/transform/_warps.py
 ${PYSITELIB}/skimage/transform/_warps.pyc
 ${PYSITELIB}/skimage/transform/_warps.pyo
@@ -1072,6 +1092,9 @@ ${PYSITELIB}/skimage/transform/tests/test_pyramids.pyo
 ${PYSITELIB}/skimage/transform/tests/test_radon_transform.py
 ${PYSITELIB}/skimage/transform/tests/test_radon_transform.pyc
 ${PYSITELIB}/skimage/transform/tests/test_radon_transform.pyo
+${PYSITELIB}/skimage/transform/tests/test_thin_plate_splines.py
+${PYSITELIB}/skimage/transform/tests/test_thin_plate_splines.pyc
+${PYSITELIB}/skimage/transform/tests/test_thin_plate_splines.pyo
 ${PYSITELIB}/skimage/transform/tests/test_warps.py
 ${PYSITELIB}/skimage/transform/tests/test_warps.pyc
 ${PYSITELIB}/skimage/transform/tests/test_warps.pyo
@@ -1139,6 +1162,9 @@ ${PYSITELIB}/skimage/util/tests/test_invert.pyo
 ${PYSITELIB}/skimage/util/tests/test_labels.py
 ${PYSITELIB}/skimage/util/tests/test_labels.pyc
 ${PYSITELIB}/skimage/util/tests/test_labels.pyo
+${PYSITELIB}/skimage/util/tests/test_lookfor.py
+${PYSITELIB}/skimage/util/tests/test_lookfor.pyc
+${PYSITELIB}/skimage/util/tests/test_lookfor.pyo
 ${PYSITELIB}/skimage/util/tests/test_map_array.py
 ${PYSITELIB}/skimage/util/tests/test_map_array.pyc
 ${PYSITELIB}/skimage/util/tests/test_map_array.pyo
