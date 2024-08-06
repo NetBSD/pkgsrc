@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2024/07/21 09:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2024/08/06 13:17:10 wiz Exp $
 
-DISTNAME=	sphinx-7.4.7
+DISTNAME=	sphinx-8.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -37,7 +37,8 @@ USE_TOOLS+=	makeinfo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-# 34 failed, 2125 passed, 30 skipped, 37 warnings
+# as of 8.0.2
+# 37 failed, 2126 passed, 30 skipped, 3 warnings
 
 .include "../../lang/python/pyversion.mk"
 
