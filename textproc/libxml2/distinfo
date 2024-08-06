@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.147 2024/06/17 18:48:24 adam Exp $
+$NetBSD: distinfo,v 1.148 2024/08/06 18:48:42 riastradh Exp $
 
 BLAKE2s (libxml2-2.12.8.tar.xz) = 18a1d86e24c48a116bf35dd702529245d73b6fb69b48eba25ae691d078530038
 SHA512 (libxml2-2.12.8.tar.xz) = 59baac9a82a734045112be6da12bbbe80a71575145424c2225e4bd9f8d54e53c674dcbc9576eb55f646632335702e7f0b1928f96a851159ace9b26f677fd3d77
 Size (libxml2-2.12.8.tar.xz) = 2643728 bytes
 SHA1 (patch-configure) = 88b8910f5606eabff74ac3754dfe734e5d8617d7
+SHA1 (patch-nanohttp.c) = b0e9c3e7bcd97180f77586970c8cd8f6931c0ab7
