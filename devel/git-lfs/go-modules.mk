@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2023/12/22 19:14:42 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.6 2024/08/06 01:02:35 tnn Exp $
 
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.mod
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.zip
@@ -22,8 +22,8 @@ GO_MODULE_FILES+=	github.com/gorilla/securecookie/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/gorilla/sessions/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/hashicorp/go-uuid/@v/v1.0.2.mod
 GO_MODULE_FILES+=	github.com/hashicorp/go-uuid/@v/v1.0.2.zip
-GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.0.1.mod
-GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.0.1.zip
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/jcmturner/aescts/v2/@v/v2.0.0.mod
 GO_MODULE_FILES+=	github.com/jcmturner/aescts/v2/@v/v2.0.0.zip
 GO_MODULE_FILES+=	github.com/jcmturner/dnsutils/v2/@v/v2.0.0.mod
@@ -36,6 +36,8 @@ GO_MODULE_FILES+=	github.com/jcmturner/gokrb5/v8/@v/v8.4.2.mod
 GO_MODULE_FILES+=	github.com/jcmturner/gokrb5/v8/@v/v8.4.2.zip
 GO_MODULE_FILES+=	github.com/jcmturner/rpc/v2/@v/v2.0.3.mod
 GO_MODULE_FILES+=	github.com/jcmturner/rpc/v2/@v/v2.0.3.zip
+GO_MODULE_FILES+=	github.com/jmhodges/clock/@v/v1.2.0.mod
+GO_MODULE_FILES+=	github.com/jmhodges/clock/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/leonelquinteros/gotext/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/leonelquinteros/gotext/@v/v1.5.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.4.mod
@@ -49,8 +51,8 @@ GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/rubyist/tracerx/@v/v0.0.0-20170927163412-787959303086.mod
 GO_MODULE_FILES+=	github.com/rubyist/tracerx/@v/v0.0.0-20170927163412-787959303086.zip
 GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.6.0.mod
-GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.6.0.zip
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.7.0.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.7.0.zip
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.mod
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
 GO_MODULE_FILES+=	github.com/ssgelm/cookiejarparser/@v/v1.0.1.mod
@@ -78,8 +80,8 @@ GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20190620200207-3b0461eec859.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20191027093000-83d349e8ac1a.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20200114155413-6afb5195e5aa.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20201021035429-f5854403a974.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.19.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.19.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.17.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.17.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.zip
