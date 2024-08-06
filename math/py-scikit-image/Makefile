@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/02/18 11:15:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/06 11:44:50 adam Exp $
 
-DISTNAME=	scikit_image-0.22.0
+DISTNAME=	scikit_image-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
@@ -12,30 +12,26 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13:../../devel/py-meson_python
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.21.1:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.8:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-imageio>=2.33:../../graphics/py-imageio
+DEPENDS+=	${PYPKGPREFIX}-lazy_loader>=0.4:../../misc/py-lazy_loader
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2.8:../../math/py-networkx
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.0.1:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-imageio>=2.27:../../graphics/py-imageio
-DEPENDS+=	${PYPKGPREFIX}-tifffile>=2022.8.12:../../graphics/py-tifffile
-DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-lazy_loader>=0.2:../../misc/py-lazy_loader
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-tifffile>=2022.8.12:../../graphics/py-tifffile
 # optional
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.0.3:../../graphics/py-matplotlib
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.6:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
 
 USE_LANGUAGES=	c c++
-GCC_REQD+=	8
+GCC_REQD+=	9
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 pre-configure:
 	${LN} -f -s ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 	${LN} -f -s ${PREFIX}/bin/pythran-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/pythran
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-pythran/buildlink3.mk"
