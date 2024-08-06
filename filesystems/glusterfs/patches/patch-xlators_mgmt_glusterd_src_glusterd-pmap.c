@@ -1,6 +1,7 @@
-$NetBSD: patch-xlators_mgmt_glusterd_src_glusterd-pmap.c,v 1.1 2024/08/06 18:54:02 riastradh Exp $
+$NetBSD: patch-xlators_mgmt_glusterd_src_glusterd-pmap.c,v 1.2 2024/08/06 21:10:48 riastradh Exp $
 
 Avoid ctype(3) abuse.
+https://github.com/gluster/glusterfs/issues/4397
 
 --- xlators/mgmt/glusterd/src/glusterd-pmap.c.orig	2023-04-06 09:01:25.007968310 +0000
 +++ xlators/mgmt/glusterd/src/glusterd-pmap.c
