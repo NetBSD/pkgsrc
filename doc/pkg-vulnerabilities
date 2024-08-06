@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.239 2024/08/06 15:06:59 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.240 2024/08/06 15:07:17 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24040,30 +24040,30 @@ zoneminder<1.37.24	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-202
 zoneminder<1.37.24	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-39285
 zoneminder<1.37.24	session-hijack	https://nvd.nist.gov/vuln/detail/CVE-2022-30769
 zoneminder<1.37.24	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-30768
-openimageio-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-41794
-openimageio-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-41981
-openimageio-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-43597
-openimageio-[0-9]*	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-43598
-openimageio-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41639
-openimageio-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41684
-openimageio-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41999
-openimageio-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-43603
-openimageio-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-41838
-openimageio-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43592
-openimageio-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43596
-openimageio-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43599
-openimageio-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43600
-openimageio-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43601
-openimageio-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43602
-openimageio-[0-9]*	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2022-41837
+openimageio<2.5.0.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-41794
+openimageio<2.5.0.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-41981
+openimageio<2.5.0.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-43597
+openimageio<2.5.0.0	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-43598
+openimageio<2.5.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41639
+openimageio<2.5.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41684
+openimageio<2.5.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-41999
+openimageio<2.5.0.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-43603
+openimageio<2.5.0.0	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-41838
+openimageio<2.5.0.0	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43592
+openimageio<2.5.0.0	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43596
+openimageio<2.5.0.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43599
+openimageio<2.5.0.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43600
+openimageio<2.5.0.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43601
+openimageio<2.5.0.0	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-43602
+openimageio<2.5.0.0	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2022-41837
 openimageio-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-43593
-openimageio-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-43594
+openimageio<2.5.0.0	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-43594
 openimageio-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-43595
-openimageio-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-36354
-openimageio-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-38143
+openimageio<2.5.0.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-36354
+openimageio<2.5.0.0	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-38143
 openimageio-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41649
-openimageio-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41977
-openimageio-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41988
+openimageio<2.5.0.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41977
+openimageio<2.5.0.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-41988
 redis>=7<7.0.5	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-35951
 redis>=7<7.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-22458
 redis>=6.0<6.0.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-35977
