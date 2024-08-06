@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/26 16:46:30 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/08/06 00:54:16 tnn Exp $
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_ASMEY1435-2014_EN.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_DE.kicad_wks
 share/kicad/template/A2_ISO5457-1999_ISO7200-2004-compact_EN.kicad_wks
@@ -31,6 +31,13 @@ share/kicad/template/A4_ISO5457-1999_ISO7200-2004_ASMEY1435-2014_EN.kicad_wks
 share/kicad/template/A4_ISO5457-1999_ISO7200-2004_DE.kicad_wks
 share/kicad/template/A4_ISO5457-1999_ISO7200-2004_EN.kicad_wks
 share/kicad/template/A4_ISO5457-1999_ISO7200-2004_GR.kicad_wks
+share/kicad/template/API_Series-500/API_Series-500.kicad_pcb
+share/kicad/template/API_Series-500/API_Series-500.kicad_pro
+share/kicad/template/API_Series-500/API_Series-500.kicad_sch
+share/kicad/template/API_Series-500/meta/Schematics.png
+share/kicad/template/API_Series-500/meta/brd.png
+share/kicad/template/API_Series-500/meta/icon.png
+share/kicad/template/API_Series-500/meta/info.html
 share/kicad/template/Arduino_Mega/Arduino_Mega.kicad_pcb
 share/kicad/template/Arduino_Mega/Arduino_Mega.kicad_pro
 share/kicad/template/Arduino_Mega/Arduino_Mega.kicad_sch
@@ -80,6 +87,15 @@ share/kicad/template/BeagleBone-Black-Cape/BeagleBone-Black-Cape.kicad_sch
 share/kicad/template/BeagleBone-Black-Cape/meta/brd.png
 share/kicad/template/BeagleBone-Black-Cape/meta/icon.png
 share/kicad/template/BeagleBone-Black-Cape/meta/info.html
+share/kicad/template/Edgeberry_Cartridge/Edgeberry.kicad_sym
+share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_pcb
+share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_pro
+share/kicad/template/Edgeberry_Cartridge/Edgeberry_cartridge_template.kicad_sch
+share/kicad/template/Edgeberry_Cartridge/Hardware_Cartridge_Design_Guide.pdf
+share/kicad/template/Edgeberry_Cartridge/meta/Edgeberry.png
+share/kicad/template/Edgeberry_Cartridge/meta/cartridge.png
+share/kicad/template/Edgeberry_Cartridge/meta/icon.png
+share/kicad/template/Edgeberry_Cartridge/meta/info.html
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pcb
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_pro
 share/kicad/template/EuroCard160mmX100mm/EuroCard160mmX100mm.kicad_sch
@@ -119,6 +135,21 @@ share/kicad/template/RaspberryPi-uHAT/RaspberryPi-uHAT.kicad_sch
 share/kicad/template/RaspberryPi-uHAT/meta/brd.png
 share/kicad/template/RaspberryPi-uHAT/meta/icon.png
 share/kicad/template/RaspberryPi-uHAT/meta/info.html
+share/kicad/template/STM32H7_DevEBox/DevEBox.kicad_pcb
+share/kicad/template/STM32H7_DevEBox/DevEBox.kicad_prl
+share/kicad/template/STM32H7_DevEBox/DevEBox.kicad_pro
+share/kicad/template/STM32H7_DevEBox/DevEBox.kicad_sch
+share/kicad/template/STM32H7_DevEBox/meta/DevEBox_Board.png
+share/kicad/template/STM32H7_DevEBox/meta/STM32H7XX_M_schematics.pdf
+share/kicad/template/STM32H7_DevEBox/meta/info.html
+share/kicad/template/STM32_Nucleo-64_Morpho/STM_Nucleo64_Morpho.kicad_pcb
+share/kicad/template/STM32_Nucleo-64_Morpho/STM_Nucleo64_Morpho.kicad_prl
+share/kicad/template/STM32_Nucleo-64_Morpho/STM_Nucleo64_Morpho.kicad_pro
+share/kicad/template/STM32_Nucleo-64_Morpho/STM_Nucleo64_Morpho.kicad_sch
+share/kicad/template/STM32_Nucleo-64_Morpho/fp-info-cache
+share/kicad/template/STM32_Nucleo-64_Morpho/meta/STM32_Nucleo-64_board.png
+share/kicad/template/STM32_Nucleo-64_Morpho/meta/icon.png
+share/kicad/template/STM32_Nucleo-64_Morpho/meta/info.html
 share/kicad/template/TI-LaunchPad-BoosterPack-20pin/TI-LaunchPad-BoosterPack-20pin.kicad_pcb
 share/kicad/template/TI-LaunchPad-BoosterPack-20pin/TI-LaunchPad-BoosterPack-20pin.kicad_pro
 share/kicad/template/TI-LaunchPad-BoosterPack-20pin/TI-LaunchPad-BoosterPack-20pin.kicad_sch
