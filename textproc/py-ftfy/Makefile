@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/04/26 16:52:00 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/06 06:28:26 adam Exp $
 
-DISTNAME=	ftfy-6.2.0
+DISTNAME=	ftfy-6.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/ftfy/}
