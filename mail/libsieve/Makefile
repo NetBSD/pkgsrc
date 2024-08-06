@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2015/03/15 19:11:21 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/06 13:04:56 tnn Exp $
 #
 
 DISTNAME=		libsieve-2.3.1
 CATEGORIES=		mail
-MASTER_SITES=		https://github.com/downloads/sodabrew/libsieve/
-
+# https://github.com/sodabrew/libsieve/issues/5
+#MASTER_SITES=		https://github.com/downloads/sodabrew/libsieve/
+MASTER_SITES=		https://src.fedoraproject.org/repo/extras/libsieve/libsieve-2.3.1.tar.gz/bb48eecf877cc7fdb2b0dfe757b48d7a/
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sodabrew.com/libsieve/
+HOMEPAGE=		https://github.com/sodabrew/libsieve
 COMMENT=		Library for parsing, sorting and filtering mail
 LICENSE=		gnu-lgpl-v2.1
 
