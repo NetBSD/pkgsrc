@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2024/05/19 11:55:37 wiz Exp $
+$NetBSD: distinfo,v 1.51 2024/08/06 18:27:23 tnn Exp $
 
 BLAKE2s (ghostscript-10.03.1.tar.xz) = f5edbba3d8c82612959270320f844caeb2ba6108f071cf736eabecb46cd9861b
 SHA512 (ghostscript-10.03.1.tar.xz) = 59e071cd23aed246b51317d3cccd9ccf8e1e84c4ecf9b22fb938e561eff42cec61915b0bdd96a313a3ea27750579c54ca0d0862b65edd306a621731c0063ffd3
@@ -10,4 +10,5 @@ SHA1 (patch-base_ttobjs.h) = 378ad7d316a4a9dc53b9c8e612582a7c8e9b3688
 SHA1 (patch-base_unix-dll.mak) = 8076ce689807872bf94b552daaf9547b646ca249
 SHA1 (patch-configure) = c448faa2f588dd8d7f58a9c1498b3dc5e903a5e2
 SHA1 (patch-devices_devs.mak) = e9937d401a278cc6d0a6d4cff78c526375bc18ca
+SHA1 (patch-devices_gdevescp.c) = 7eece110c7eac20132deddc2441edddd675ef58f
 SHA1 (patch-pdf_pdf__sec.c) = 18a88ff5b93b01fbb7b350c9c96399b14dc93b40
