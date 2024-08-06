@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/06/28 15:33:10 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/06 11:23:30 adam Exp $
 
 DISTNAME=	pytype-2024.4.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	c c++
 
 # Python 3.12 not supported as of 2024.4.11
 # 'Python versions > 3.11 are not yet supported.' when running pytype
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 312
 
 post-install:
 .for file in annotate-ast merge-pyi pytd pytype pytype-single pyxref
