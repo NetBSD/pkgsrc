@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/04/19 19:29:23 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/06 06:44:34 adam Exp $
 
 DISTNAME=	statsmodels-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=1.13.0:../../math/py-scipy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-randomly-[0-9]*:../../devel/py-test-randomly
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../lang/python/wheel.mk"
 BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.18
