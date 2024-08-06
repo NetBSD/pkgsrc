@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/04/26 16:46:30 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/08/06 00:54:16 tnn Exp $
 share/kicad/symbols/4xxx.kicad_sym
 share/kicad/symbols/4xxx_IEEE.kicad_sym
 share/kicad/symbols/74xGxx.kicad_sym
@@ -150,6 +150,7 @@ share/kicad/symbols/MCU_Texas.kicad_sym
 share/kicad/symbols/MCU_Texas_MSP430.kicad_sym
 share/kicad/symbols/MCU_Texas_SimpleLink.kicad_sym
 share/kicad/symbols/MCU_WCH_CH32V0.kicad_sym
+share/kicad/symbols/MCU_WCH_CH32V2.kicad_sym
 share/kicad/symbols/MCU_WCH_CH32V3.kicad_sym
 share/kicad/symbols/Mechanical.kicad_sym
 share/kicad/symbols/Memory_EEPROM.kicad_sym
