@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.27 2024/02/19 11:51:43 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/08/06 17:19:52 wiz Exp $
 
 BLAKE2s (khal-0.11.3.tar.gz) = 18e613451c2d983b17cdac8c61d61f4d794c3b1c8aaeebff4b1b46014076effd
 SHA512 (khal-0.11.3.tar.gz) = 1f7f82e04ad913df9e2e4bd315a70b9832b1af3f6d2db794018c780645f5bdb6df39efb45a36b38e3c1327932a1cb91d4c735f578b29a9326ef0f163fecd7bba
 Size (khal-0.11.3.tar.gz) = 196953 bytes
+SHA1 (patch-doc_source_conf.py) = 012fa0d32110b3f9dd4df88b039e32270a56780d
