@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:56:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/08/06 11:44:05 adam Exp $
 
-BLAKE2s (sklearn-pandas-1.8.0.tar.gz) = af83dc687cea16ec36005c847720affaa4c9c83d4f5392fa6ba4e2ddebb9bc8d
-SHA512 (sklearn-pandas-1.8.0.tar.gz) = 8b63eb590e16e4fa37a7912e33f0a69fc5fc8283cd1da03a274e5ae4f1f70b13aca84b178b22651c778b39d07ba2dac189689f1017c111b2528dc818f23c755a
-Size (sklearn-pandas-1.8.0.tar.gz) = 16388 bytes
+BLAKE2s (sklearn-pandas-2.2.0.tar.gz) = 3adf2839c7e1b8346a3ed2c1a959cd434d62ae7072488575b41a4e1a9eba3f3a
+SHA512 (sklearn-pandas-2.2.0.tar.gz) = 50b4b45d100cae71ea5734a4ffee6ab415c7a61d89c21ff08fb5ff5b00ee79ef0d20e0c5dc12500e61b3185bbdb50aabf05d4f0d832ea88b78d2872dd6d9f16f
+Size (sklearn-pandas-2.2.0.tar.gz) = 17358 bytes
