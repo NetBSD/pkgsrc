@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/05/11 11:15:42 morr Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/08/06 22:12:04 mef Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -175,6 +175,7 @@ share/vim/${VIM_SUBDIR}/keymap/dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto.vim
 share/vim/${VIM_SUBDIR}/keymap/esperanto_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/french-azerty.vim
+share/vim/${VIM_SUBDIR}/keymap/georgian-qwerty.vim
 share/vim/${VIM_SUBDIR}/keymap/german-qwertz.vim
 share/vim/${VIM_SUBDIR}/keymap/greek.vim
 share/vim/${VIM_SUBDIR}/keymap/greek_cp1253.vim
