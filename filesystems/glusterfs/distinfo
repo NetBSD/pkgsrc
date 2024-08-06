@@ -1,12 +1,19 @@
-$NetBSD: distinfo,v 1.78 2023/06/06 00:58:05 gutteridge Exp $
+$NetBSD: distinfo,v 1.79 2024/08/06 18:51:18 riastradh Exp $
 
 BLAKE2s (glusterfs-10.4.tar.gz) = 9813ba102591f6ab715fc7d3dc089860888effe70dc146a4366667be0cc9bd0c
 SHA512 (glusterfs-10.4.tar.gz) = 06c563ab77a29145b1fac44f5a56a91539accb69ba736fe6297aa3f38b128e68ba4f7d0b49ac6eb56397a51950fb4de882ff60037e91c61ad13dd89a18139d82
 Size (glusterfs-10.4.tar.gz) = 8293872 bytes
+SHA1 (patch-cli_src_cli-xml-output.c) = 1448eec53bce1bdcd35e2363d126d29c11db64c6
 SHA1 (patch-configure.ac) = bc76ecb683f7a6eef32d6b11f86df4760c12e032
+SHA1 (patch-contrib_umountd_umountd.c) = 631ecf62ff5815d1d935b12ccf0e8d285eed4319
 SHA1 (patch-events-src-Makefile.am) = 5a112994c9990962a19eecd3933dabb18d5db2b0
 SHA1 (patch-events-tools-Makefile.am) = b224ed16200befdb68e51eebd762257a0911e591
 SHA1 (patch-extras-Makefile.am) = e5dead8310eed0fa0c6b12aa7a0da52bbeb4d41b
 SHA1 (patch-extras-ganesha-config-Makefile.am) = 547f144948a394aa981a0b799cb7435681f8a5d5
 SHA1 (patch-geo-replication_Makefile.am) = 71c2b4fa9d14d8489db8eaff11f7801792f53122
 SHA1 (patch-libglusterfs-src-glusterfs-dict.h) = ebfdfe6ffbdda3532d15fe108d4214b1e9596304
+SHA1 (patch-libglusterfs_src_glusterfs_logging.h) = eefd14b5b6711e1002f925ea3c421a8ced3cb365
+SHA1 (patch-rpc_rpc-lib_src_xdr-rpc.h) = 0abbb0498c264922b0a36db0ef696666186805f6
+SHA1 (patch-xlators_cluster_ec_src_ec.c) = cc0e17403e544ce54fb0758c92d2d43b86ba2e66
+SHA1 (patch-xlators_features_index_src_index.c) = 1eb997f585231d9ec53e5e9f252b9a3594597b80
+SHA1 (patch-xlators_storage_posix_src_posix-inode-fd-ops.c) = 47cead403a15bd440b91c2a1673359095f2e1bdb
