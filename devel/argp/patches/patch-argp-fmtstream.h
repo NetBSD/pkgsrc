@@ -1,4 +1,6 @@
-$NetBSD: patch-argp-fmtstream.h,v 1.2 2018/08/29 18:08:08 kamil Exp $
+$NetBSD: patch-argp-fmtstream.h,v 1.3 2024/08/06 18:55:26 riastradh Exp $
+
+Fix build with c99 compilers
 
 --- argp-fmtstream.h.orig	2003-12-11 08:37:05.000000000 +0000
 +++ argp-fmtstream.h
