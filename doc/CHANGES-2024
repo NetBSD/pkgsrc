@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4899 2024/08/06 13:20:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4900 2024/08/06 13:39:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7674,3 +7674,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated comms/py-textual to 0.75.1 [wiz 2024-08-06]
 	Updated textproc/py-sphinx to 8.0.2 [wiz 2024-08-06]
 	Updated devel/abseil to 20240722.0 [wiz 2024-08-06]
+	Updated x11/picom to 11.2 [nia 2024-08-06]
