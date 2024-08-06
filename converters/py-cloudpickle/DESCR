@@ -1,0 +1,6 @@
+cloudpickle makes it possible to serialize Python constructs not supported by
+the default pickle module from the Python standard library.
+
+cloudpickle is especially useful for cluster computing where Python code is
+shipped over the network to execute on remote hosts, possibly close to the
+data.
