@@ -1,4 +1,4 @@
-$NetBSD: patch-rpc_rpc_lib_rpcsvc.c,v 1.1 2023/03/12 11:55:59 js Exp $
+$NetBSD: patch-rpc_rpc-lib_src_rpcsvc.c,v 1.1 2024/08/06 18:55:55 riastradh Exp $
 
 NetBSD build fixes
 From upstream https://review.gluster.org/24648
