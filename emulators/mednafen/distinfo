@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2022/01/19 21:56:43 nia Exp $
+$NetBSD: distinfo,v 1.28 2024/08/06 14:05:34 nia Exp $
 
-BLAKE2s (mednafen-1.29.0.tar.xz) = 4d741da139ff9fd4cd4cd6c26eb8934c5f05f46f17609de084dd4fd34131063d
-SHA512 (mednafen-1.29.0.tar.xz) = 375f0fb4f12907faf56b4e9ecdc44c1655b0660a3773240fe3118f2b261e171479b8eb254299f899fc442b54041c941eab2a5f343aec559d9731c3e92cde0569
-Size (mednafen-1.29.0.tar.xz) = 3512784 bytes
+BLAKE2s (mednafen-1.32.1.tar.xz) = 026ffcca300a26b3093b0ce02c8ca72a070ea9f0291a77f425093434b04c2cb4
+SHA512 (mednafen-1.32.1.tar.xz) = 5a99c62561823ba9a59d4dfd3b454f87989c83b873f61d8d25e44af7e8fbf25a7513d26c7566672538a62aac400281f611f2db943e88fe839cd05d088087f8d9
+Size (mednafen-1.32.1.tar.xz) = 3571236 bytes
