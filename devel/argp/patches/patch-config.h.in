@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2024/08/06 18:50:08 riastradh Exp $
+
+Use getprogname() as short program name if available.
+
+--- config.h.in.orig	2004-02-23 17:59:01.000000000 +0000
++++ config.h.in
+@@ -38,6 +38,9 @@
+ /* Define to 1 if you have the `fwrite_unlocked' function. */
+ #undef HAVE_FWRITE_UNLOCKED
+ 
++/* Define to 1 if you have the `getprogname' function. */
++#undef HAVE_GETPROGNAME
++
+ /* Define if the compiler understands __attribute__ */
+ #undef HAVE_GCC_ATTRIBUTE
+ 
