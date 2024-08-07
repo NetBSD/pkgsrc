@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2023/11/13 16:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/08/07 08:59:52 adam Exp $
 
-DISTNAME=	PyYAML-6.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyYAML/yaml/}
-PKGREVISION=	1
+DISTNAME=	pyyaml-6.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyYAML/}
 
@@ -11,12 +10,14 @@ HOMEPAGE=	https://github.com/yaml/pyyaml
 COMMENT=	Collection of libraries to process YAML with Python
 LICENSE=	mit
 
-# does not build with cython-3.x as of 6.0.1
-# https://github.com/yaml/pyyaml/issues/601
-#DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+WHEEL_NAME=	PyYAML-${PKGVERSION_NOREV}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
