@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2024/06/08 07:39:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/08/07 20:27:26 adam Exp $
 share/doc/python3.12/.buildinfo
 share/doc/python3.12/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.12/_images/hashlib-blake2-tree.png
 share/doc/python3.12/_images/kde_example.png
-share/doc/python3.12/_images/logging_flow.png
 share/doc/python3.12/_images/pathlib-inheritance.png
 share/doc/python3.12/_images/tk_msg.png
 share/doc/python3.12/_images/turtle-star.png
@@ -78,6 +77,15 @@ share/doc/python3.12/_sources/c-api/veryhigh.rst.txt
 share/doc/python3.12/_sources/c-api/weakref.rst.txt
 share/doc/python3.12/_sources/contents.rst.txt
 share/doc/python3.12/_sources/copyright.rst.txt
+share/doc/python3.12/_sources/deprecations/c-api-pending-removal-in-3.14.rst.txt
+share/doc/python3.12/_sources/deprecations/c-api-pending-removal-in-3.15.rst.txt
+share/doc/python3.12/_sources/deprecations/c-api-pending-removal-in-future.rst.txt
+share/doc/python3.12/_sources/deprecations/index.rst.txt
+share/doc/python3.12/_sources/deprecations/pending-removal-in-3.13.rst.txt
+share/doc/python3.12/_sources/deprecations/pending-removal-in-3.14.rst.txt
+share/doc/python3.12/_sources/deprecations/pending-removal-in-3.15.rst.txt
+share/doc/python3.12/_sources/deprecations/pending-removal-in-3.16.rst.txt
+share/doc/python3.12/_sources/deprecations/pending-removal-in-future.rst.txt
 share/doc/python3.12/_sources/distributing/index.rst.txt
 share/doc/python3.12/_sources/extending/building.rst.txt
 share/doc/python3.12/_sources/extending/embedding.rst.txt
@@ -502,6 +510,7 @@ share/doc/python3.12/_static/doctools.js
 share/doc/python3.12/_static/documentation_options.js
 share/doc/python3.12/_static/file.png
 share/doc/python3.12/_static/glossary.json
+share/doc/python3.12/_static/glossary_search.js
 share/doc/python3.12/_static/language_data.js
 share/doc/python3.12/_static/menu.js
 share/doc/python3.12/_static/minus.png
@@ -514,6 +523,7 @@ share/doc/python3.12/_static/pydoctheme.css
 share/doc/python3.12/_static/pydoctheme_dark.css
 share/doc/python3.12/_static/pygments.css
 share/doc/python3.12/_static/pygments_dark.css
+share/doc/python3.12/_static/rtd_switcher.js
 share/doc/python3.12/_static/search-focus.js
 share/doc/python3.12/_static/searchtools.js
 share/doc/python3.12/_static/sidebar.js
@@ -589,6 +599,15 @@ share/doc/python3.12/c-api/veryhigh.html
 share/doc/python3.12/c-api/weakref.html
 share/doc/python3.12/contents.html
 share/doc/python3.12/copyright.html
+share/doc/python3.12/deprecations/c-api-pending-removal-in-3.14.html
+share/doc/python3.12/deprecations/c-api-pending-removal-in-3.15.html
+share/doc/python3.12/deprecations/c-api-pending-removal-in-future.html
+share/doc/python3.12/deprecations/index.html
+share/doc/python3.12/deprecations/pending-removal-in-3.13.html
+share/doc/python3.12/deprecations/pending-removal-in-3.14.html
+share/doc/python3.12/deprecations/pending-removal-in-3.15.html
+share/doc/python3.12/deprecations/pending-removal-in-3.16.html
+share/doc/python3.12/deprecations/pending-removal-in-future.html
 share/doc/python3.12/distributing/index.html
 share/doc/python3.12/download.html
 share/doc/python3.12/extending/building.html

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/06/08 07:39:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/07 20:27:26 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -1034,7 +1034,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-24.0-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-24.2-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2878,9 +2878,18 @@ lib/python${PY_VER_SUFFIX}/test/test_array.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asdl_parser.py
 lib/python${PY_VER_SUFFIX}/test/test_asdl_parser.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asdl_parser.pyo
-lib/python${PY_VER_SUFFIX}/test/test_ast.py
-lib/python${PY_VER_SUFFIX}/test/test_ast.pyc
-lib/python${PY_VER_SUFFIX}/test/test_ast.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ast/__init__.py
+lib/python${PY_VER_SUFFIX}/test/test_ast/__init__.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ast/__init__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ast/snippets.py
+lib/python${PY_VER_SUFFIX}/test/test_ast/snippets.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ast/snippets.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ast/test_ast.py
+lib/python${PY_VER_SUFFIX}/test/test_ast/test_ast.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ast/test_ast.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ast/utils.py
+lib/python${PY_VER_SUFFIX}/test/test_ast/utils.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ast/utils.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncgen.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncgen.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncgen.pyo
@@ -4357,6 +4366,9 @@ lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations.pyo
 lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_2.py
 lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_2.pyc
 lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_2.pyo
+lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_pep695.py
+lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_pep695.pyc
+lib/python${PY_VER_SUFFIX}/test/test_inspect/inspect_stringized_annotations_pep695.pyo
 lib/python${PY_VER_SUFFIX}/test/test_inspect/test_inspect.py
 lib/python${PY_VER_SUFFIX}/test/test_inspect/test_inspect.pyc
 lib/python${PY_VER_SUFFIX}/test/test_inspect/test_inspect.pyo
@@ -5400,6 +5412,9 @@ lib/python${PY_VER_SUFFIX}/test/test_unittest/test_skipping.pyo
 lib/python${PY_VER_SUFFIX}/test/test_unittest/test_suite.py
 lib/python${PY_VER_SUFFIX}/test/test_unittest/test_suite.pyc
 lib/python${PY_VER_SUFFIX}/test/test_unittest/test_suite.pyo
+lib/python${PY_VER_SUFFIX}/test/test_unittest/test_util.py
+lib/python${PY_VER_SUFFIX}/test/test_unittest/test_util.pyc
+lib/python${PY_VER_SUFFIX}/test/test_unittest/test_util.pyo
 lib/python${PY_VER_SUFFIX}/test/test_unittest/testmock/__init__.py
 lib/python${PY_VER_SUFFIX}/test/test_unittest/testmock/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_unittest/testmock/__init__.pyo
