@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/01/30 19:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/07 16:11:47 jperkin Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-smt>=0.9.5:../../math/py-smt
 DEPENDS+=	${PYPKGPREFIX}-z3>=4.10.2.0:../../math/py-z3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310 311 312
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
