@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/17 13:21:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/07 16:08:46 jperkin Exp $
 
 DISTNAME=	spectra-0.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TEST_DEPENDS=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m nose -v test
