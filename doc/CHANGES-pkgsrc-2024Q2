@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.7 2024/08/02 14:14:37 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.8 2024/08/07 18:48:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -45,4 +45,14 @@ net/bind918: security update
 
 Pullup ticket #6883 - requested by taca
 lang/ruby32-base: security fix
+
+Pullup ticket #6884 - requested by morr
+editors/vim-share: security fix
+
+Pullup ticket #6885 - requested by riastradh
+filesystems/glusterfs: build fix -- Use @VARBASE@, @PREFIX@, &c., instead of
+/var, /usr/pkg, &c., in the rc script
+
+Pullup ticket #6886 - requested by nia
+archivers/unzip: security fix
 
