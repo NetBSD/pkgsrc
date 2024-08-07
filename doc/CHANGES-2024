@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4921 2024/08/07 20:16:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.4922 2024/08/07 20:27:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7715,3 +7715,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-attrs to 24.2.0 [adam 2024-08-07]
 	Updated textproc/py-rapidjson to 1.20 [adam 2024-08-07]
 	Updated devel/py-atpublic to 5.0 [adam 2024-08-07]
+	Updated lang/python312 to 3.12.5 [adam 2024-08-07]
+	Updated lang/py312-html-docs to 3.12.5 [adam 2024-08-07]
