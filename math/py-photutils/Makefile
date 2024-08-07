@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/05/18 13:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/07 16:12:49 jperkin Exp $
 
 DISTNAME=	photutils-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-gwcs>=0.12:../../math/py-gwcs
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-scikit
 PYTHON_VERSIONS_INCOMPATIBLE+=	38 # py-scikit-learn
+PYTHON_VERSIONS_INCOMPATIBLE+=	39 # py-scikit-learn py-scikit-image ...
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
