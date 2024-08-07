@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4907 2024/08/06 23:21:33 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.4908 2024/08/07 01:02:15 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7685,3 +7685,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django4 to 4.2.15 [adam 2024-08-06]
 	Updated www/py-django to 5.0.8 [adam 2024-08-06]
 	Updated chat/py-nbxmpp to 2.0.6 [gdt 2024-08-06]
+	Updated mail/aerc to 0.18.2 [ktnb 2024-08-07]
