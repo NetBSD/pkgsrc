@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2024/07/24 13:50:55 ktnb Exp $
+$NetBSD: distinfo,v 1.4 2024/08/07 01:01:37 ktnb Exp $
 
-BLAKE2s (aerc/0.18.1.tar.gz) = 569c08a4690353d8fbf5265f7982ba053a4619e3e2d1c658230ac8539360ee37
-SHA512 (aerc/0.18.1.tar.gz) = 38429da656e82cbf63ebfcce655644d4bb7b390c22a2bf93e0bd77448f20a5513aa7dad687e9188ebc222edecc488cee025362e5fa3abd484d1b574261c93c98
-Size (aerc/0.18.1.tar.gz) = 447293 bytes
+BLAKE2s (aerc/0.18.2.tar.gz) = 8c50893568e13d823024a9ea18d224d659c722375bc51a5419dc629fc5f6a823
+SHA512 (aerc/0.18.2.tar.gz) = accce8bf2d5e90bffa615e58c68cb187e2eb0ede64bbebe69735c1367c51f286d2dfa505f6b0c67a5958f32afacb9903b1c12e397e64e49403807b78d3bad25c
+Size (aerc/0.18.2.tar.gz) = 447348 bytes
 BLAKE2s (aerc/git.sr.ht_~rjarry_go-opt_@v_v1.4.0.mod) = d84c08c70e997cd9810932b7444740fa833662228c75b3e46ddd7bdc4cf23210
 SHA512 (aerc/git.sr.ht_~rjarry_go-opt_@v_v1.4.0.mod) = a590eb3ecf9ffe311a21fc7d73cf908d451957927bb8bb214b21ebeae4c8ebf9ac2e0b769b4db2e504737cfc4e3e0c7a448202e4915a7a18bf47f59dcc6285fd
 Size (aerc/git.sr.ht_~rjarry_go-opt_@v_v1.4.0.mod) = 232 bytes
@@ -15,12 +15,12 @@ Size (aerc/git.sr.ht_~rockorager_go-jmap_@v_v0.5.0.mod) = 450 bytes
 BLAKE2s (aerc/git.sr.ht_~rockorager_go-jmap_@v_v0.5.0.zip) = a892426d2552b7727fd25c7b2edf43fac7c39f194f0d02f34ca12e26f27b6581
 SHA512 (aerc/git.sr.ht_~rockorager_go-jmap_@v_v0.5.0.zip) = d48b66cd0322cb5d9c2d8c75f47dc8ac9ec8c3af5c085e6a923ce28acebc6e2af6b7f06ca584da8a2a3aecb7a7714b2178e2c600241d9f6cdbbb6d6e606f2803
 Size (aerc/git.sr.ht_~rockorager_go-jmap_@v_v0.5.0.zip) = 60200 bytes
-BLAKE2s (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.mod) = 8452d376424047775d46fb8e6a9f71bb8ea6f3cd31ddd0fef546773addc23cc6
-SHA512 (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.mod) = a0166f87b77449cf20850ce070d1b397e7f1beed34c0f81fdff5267805139222b94c49d422ee9e509b73a0b091f533b92defc6f95a62814f6b954ff0ed75bbe2
-Size (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.mod) = 566 bytes
-BLAKE2s (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.zip) = 1968088ca834c096b1e2c908721bbe28fe17f2706cb6ab220837cad1aa89ab68
-SHA512 (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.zip) = d794f3d268833df72195c76507dd3e52caaaccce3201eff5bcc9d64241e412c263acf4ff1932fc85ee7c335db6386c04f28e966edbe22b718f171e12bdc3d0cb
-Size (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.9.2.zip) = 123970 bytes
+BLAKE2s (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.mod) = 8452d376424047775d46fb8e6a9f71bb8ea6f3cd31ddd0fef546773addc23cc6
+SHA512 (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.mod) = a0166f87b77449cf20850ce070d1b397e7f1beed34c0f81fdff5267805139222b94c49d422ee9e509b73a0b091f533b92defc6f95a62814f6b954ff0ed75bbe2
+Size (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.mod) = 566 bytes
+BLAKE2s (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.zip) = 7e485ffc2c0195d398fc4da626d0b7d4abef354bc299f0fd98b8acadb0e071a2
+SHA512 (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.zip) = 2d02d8394876890ecb98278095cbe63bdb7d896fb33e816efda2fd8df9206fd8fc0a05232a525e23eb20c74bd684d434a28c31fcfab13081a55b20ea6964d0c9
+Size (aerc/git.sr.ht_~rockorager_vaxis_@v_v0.10.3.zip) = 126698 bytes
 BLAKE2s (aerc/github.com__proton_mail_go-crypto_@v_v0.0.0-20230923063757-afb1ddc0824c.mod) = 52c634792c633f22d901fbafcfa1a4ab46c24753f2e2d7a49faa25fcdddc9eaf
 SHA512 (aerc/github.com__proton_mail_go-crypto_@v_v0.0.0-20230923063757-afb1ddc0824c.mod) = 91e992ec8c04df114cdcd0489bca65675606112ca58899139f9cff65a8e4eb15a049240f987f6f524c2f59ace3bd1377bc0de9c28b0c7ff86826634e6dd4d3d4
 Size (aerc/github.com__proton_mail_go-crypto_@v_v0.0.0-20230923063757-afb1ddc0824c.mod) = 125 bytes

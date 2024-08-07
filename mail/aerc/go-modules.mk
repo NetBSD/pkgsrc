@@ -1,11 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.3 2024/07/24 13:50:55 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.4 2024/08/07 01:01:37 ktnb Exp $
 
 GO_MODULE_FILES+=	git.sr.ht/~rjarry/go-opt/@v/v1.4.0.mod
 GO_MODULE_FILES+=	git.sr.ht/~rjarry/go-opt/@v/v1.4.0.zip
 GO_MODULE_FILES+=	git.sr.ht/~rockorager/go-jmap/@v/v0.5.0.mod
 GO_MODULE_FILES+=	git.sr.ht/~rockorager/go-jmap/@v/v0.5.0.zip
-GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.9.2.mod
-GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.9.2.zip
+GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.10.3.mod
+GO_MODULE_FILES+=	git.sr.ht/~rockorager/vaxis/@v/v0.10.3.zip
 GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v0.0.0-20230923063757-afb1ddc0824c.mod
 GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.0.0.zip
