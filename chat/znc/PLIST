@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/21 11:31:14 nikita Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/07 22:23:46 nia Exp $
 bin/znc
 bin/znc-buildmod
 include/znc/Buffer.h
@@ -93,8 +93,10 @@ lib/znc/watch.so
 lib/znc/webadmin.so
 man/man1/znc-buildmod.1
 man/man1/znc.1
+share/znc/cmake/CMakeFindDependencyMacroPC.cmake
 share/znc/cmake/ZNCConfig.cmake
 share/znc/cmake/ZNCConfigVersion.cmake
+share/znc/cmake/use_homebrew.cmake
 share/znc/cmake/znc_internal-noconfig.cmake
 share/znc/cmake/znc_internal.cmake
 share/znc/cmake/znc_public.cmake
@@ -134,7 +136,10 @@ share/znc/translations/id-ID
 share/znc/translations/it-IT
 share/znc/translations/nl-NL
 share/znc/translations/pl-PL
+share/znc/translations/pt-BR
+share/znc/translations/pt-PT
 share/znc/translations/ru-RU
+share/znc/translations/tr-TR
 share/znc/webskins/_default_/pub/External.png
 share/znc/webskins/_default_/pub/_default_.css
 share/znc/webskins/_default_/pub/favicon.ico
