@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/27 09:52:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/07 10:48:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/jaraco/vcs/__init__.py
 ${PYSITELIB}/jaraco/vcs/__init__.pyc
@@ -13,6 +14,9 @@ ${PYSITELIB}/jaraco/vcs/base.pyo
 ${PYSITELIB}/jaraco/vcs/cmd.py
 ${PYSITELIB}/jaraco/vcs/cmd.pyc
 ${PYSITELIB}/jaraco/vcs/cmd.pyo
+${PYSITELIB}/jaraco/vcs/fixtures.py
+${PYSITELIB}/jaraco/vcs/fixtures.pyc
+${PYSITELIB}/jaraco/vcs/fixtures.pyo
 ${PYSITELIB}/jaraco/vcs/library.py
 ${PYSITELIB}/jaraco/vcs/library.pyc
 ${PYSITELIB}/jaraco/vcs/library.pyo
