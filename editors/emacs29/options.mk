@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2024/05/15 07:35:11 jperkin Exp $
+# $NetBSD: options.mk,v 1.8 2024/08/07 15:20:07 wiz Exp $
 
 ### Set options
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
@@ -53,10 +53,10 @@ CONFIGURE_ARGS+=	--without-json
 ###
 .if !empty(PKG_OPTIONS:Mlibgccjit)
 CONFIGURE_ARGS+=	--with-native-compilation
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc13-libjit}/gcc13/lib
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gcc14-libjit}/gcc14/lib
 GENERATE_PLIST+=	cd ${DESTDIR}${PREFIX} && \
         ${FIND} lib/emacs/${PKGVERSION_NOREV}/native-lisp/ \( -type f -o -type l \) -print | ${SORT};
-.  include "../../lang/gcc13-libjit/buildlink3.mk"
+.  include "../../lang/gcc14-libjit/buildlink3.mk"
 PLIST.native=		yes
 .else
 PLIST.nonative=		yes
