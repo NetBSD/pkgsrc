@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.241 2024/08/06 15:10:10 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.242 2024/08/07 22:29:01 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -25519,7 +25519,7 @@ webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-202
 webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25361
 webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25360
 webkit-gtk<2.36.8	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2023-25358
-libde265-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-47664
+libde265<1.0.10	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-47664
 libcares<1.19.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-4904
 webkit-gtk<2.26.0	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2019-8720
 qemu>=7.2.0<7.2.3	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-0330
