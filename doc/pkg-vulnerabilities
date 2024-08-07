@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.242 2024/08/07 22:29:01 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.243 2024/08/07 22:35:45 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -24855,7 +24855,7 @@ pixman<0.42.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-4463
 pgpool-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-22332
 openscad<2022-01-09	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0497
 openscad<2022-02-04	uninitialized-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0496
-opusfile-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47021
+opusfile<0.12nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47021
 openssh<9.2	double-free	https://nvd.nist.gov/vuln/detail/CVE-2023-25136
 p5-HTML-StripScripts-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24038
 patchelf<0.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-44940
