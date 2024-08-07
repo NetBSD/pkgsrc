@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/02/10 07:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/07 09:58:38 adam Exp $
 
-DISTNAME=	zope.proxy-5.2
+DISTNAME=	zope.proxy-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.proxy/}
