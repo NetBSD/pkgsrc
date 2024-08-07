@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/24 22:08:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/07 22:34:40 nia Exp $
 
 DISTNAME=	opusfile-0.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	https://downloads.xiph.org/releases/opus/
 
