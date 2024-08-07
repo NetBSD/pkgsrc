@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/14 14:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/07 19:24:31 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
@@ -13,7 +13,7 @@ DEPENDS+=	deepstate-afl>=${VERSION}:../../devel/deepstate-afl
 #DEPENDS+=	deepstate-honggfuzz>=${VERSION}:../../devel/deepstate-honggfuzz
 DEPENDS+=	deepstate-libfuzzer>=${VERSION}:../../devel/deepstate-libfuzzer
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 311
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 311 312
 
 USE_PKG_RESOURCES=	yes
 
