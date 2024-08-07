@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/06/01 14:10:03 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/07 08:41:51 pin Exp $
 
-DISTNAME=	bacon-2.18.2
+DISTNAME=	bacon-2.19.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ COMMENT=	Background rust code check
 LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.76.0
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
