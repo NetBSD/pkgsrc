@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/09 06:39:38 khorben Exp $
-bin/pysmt-install
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/08/07 11:01:45 adam Exp $
+bin/pysmt-install-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pysmt/__init__.py
 ${PYSITELIB}/pysmt/__init__.pyc
 ${PYSITELIB}/pysmt/__init__.pyo
@@ -32,9 +34,12 @@ ${PYSITELIB}/pysmt/cmd/installers/bdd.pyo
 ${PYSITELIB}/pysmt/cmd/installers/btor.py
 ${PYSITELIB}/pysmt/cmd/installers/btor.pyc
 ${PYSITELIB}/pysmt/cmd/installers/btor.pyo
-${PYSITELIB}/pysmt/cmd/installers/cvc4.py
-${PYSITELIB}/pysmt/cmd/installers/cvc4.pyc
-${PYSITELIB}/pysmt/cmd/installers/cvc4.pyo
+${PYSITELIB}/pysmt/cmd/installers/cvcfive.py
+${PYSITELIB}/pysmt/cmd/installers/cvcfive.pyc
+${PYSITELIB}/pysmt/cmd/installers/cvcfive.pyo
+${PYSITELIB}/pysmt/cmd/installers/cvcfour.py
+${PYSITELIB}/pysmt/cmd/installers/cvcfour.pyc
+${PYSITELIB}/pysmt/cmd/installers/cvcfour.pyo
 ${PYSITELIB}/pysmt/cmd/installers/msat.py
 ${PYSITELIB}/pysmt/cmd/installers/msat.pyc
 ${PYSITELIB}/pysmt/cmd/installers/msat.pyo
@@ -134,9 +139,12 @@ ${PYSITELIB}/pysmt/solvers/bdd.pyo
 ${PYSITELIB}/pysmt/solvers/btor.py
 ${PYSITELIB}/pysmt/solvers/btor.pyc
 ${PYSITELIB}/pysmt/solvers/btor.pyo
-${PYSITELIB}/pysmt/solvers/cvc4.py
-${PYSITELIB}/pysmt/solvers/cvc4.pyc
-${PYSITELIB}/pysmt/solvers/cvc4.pyo
+${PYSITELIB}/pysmt/solvers/cvcfive.py
+${PYSITELIB}/pysmt/solvers/cvcfive.pyc
+${PYSITELIB}/pysmt/solvers/cvcfive.pyo
+${PYSITELIB}/pysmt/solvers/cvcfour.py
+${PYSITELIB}/pysmt/solvers/cvcfour.pyc
+${PYSITELIB}/pysmt/solvers/cvcfour.pyo
 ${PYSITELIB}/pysmt/solvers/eager.py
 ${PYSITELIB}/pysmt/solvers/eager.pyc
 ${PYSITELIB}/pysmt/solvers/eager.pyo
@@ -176,6 +184,8 @@ ${PYSITELIB}/pysmt/substituter.pyo
 ${PYSITELIB}/pysmt/test/__init__.py
 ${PYSITELIB}/pysmt/test/__init__.pyc
 ${PYSITELIB}/pysmt/test/__init__.pyo
+${PYSITELIB}/pysmt/test/configs/config1.ini
+${PYSITELIB}/pysmt/test/configs/config_bad.ini
 ${PYSITELIB}/pysmt/test/examples.py
 ${PYSITELIB}/pysmt/test/examples.pyc
 ${PYSITELIB}/pysmt/test/examples.pyo
@@ -263,9 +273,9 @@ ${PYSITELIB}/pysmt/test/test_configuration.pyo
 ${PYSITELIB}/pysmt/test/test_constants.py
 ${PYSITELIB}/pysmt/test/test_constants.pyc
 ${PYSITELIB}/pysmt/test/test_constants.pyo
-${PYSITELIB}/pysmt/test/test_cvc4_quantifiers.py
-${PYSITELIB}/pysmt/test/test_cvc4_quantifiers.pyc
-${PYSITELIB}/pysmt/test/test_cvc4_quantifiers.pyo
+${PYSITELIB}/pysmt/test/test_cvc_quantifiers.py
+${PYSITELIB}/pysmt/test/test_cvc_quantifiers.pyc
+${PYSITELIB}/pysmt/test/test_cvc_quantifiers.pyo
 ${PYSITELIB}/pysmt/test/test_dwf.py
 ${PYSITELIB}/pysmt/test/test_dwf.pyc
 ${PYSITELIB}/pysmt/test/test_dwf.pyo
