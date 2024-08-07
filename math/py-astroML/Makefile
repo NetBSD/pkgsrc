@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/01 23:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/07 16:09:35 jperkin Exp $
 
 DISTNAME=	astroML-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://www.astroml.org/
 COMMENT=	Astropy affiliated module for machine learning and data mining
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=2.1.1:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.18:../../math/py-scikit-learn
