@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/08/07 06:42:48 pin Exp $
+$NetBSD: distinfo,v 1.21 2024/08/07 08:41:08 pin Exp $
 
-BLAKE2s (3.0.0.tar.gz) = d2891cb4f0779dc6de1ed0a1b2851264211e3e802e3907637a51fe008e192559
-SHA512 (3.0.0.tar.gz) = fc84c85ff17b991e6bedc0eaf98d6c233c095ddd2bef5688a5666a0e6ece708f2e8a7bba3799f94eb4b450c53329b1dc7eec2008db0dae2e51b52732db9e61a7
-Size (3.0.0.tar.gz) = 117463 bytes
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
 Size (adler-1.0.2.crate) = 12778 bytes
@@ -687,6 +684,9 @@ Size (version_check-0.9.5.crate) = 15554 bytes
 BLAKE2s (walkdir-2.5.0.crate) = cdca816b58618429084d9471946f73d668cb8ef2960edd8edbefcf29390ba926
 SHA512 (walkdir-2.5.0.crate) = da36a121dc6656942dc9cd9887fcf4f6eea7750354ef3f59c7c25d836e7afe06f33260b4d55d0d99421104ed4ce56ef2a1f0f4c3b713766fff90548c21793fad
 Size (walkdir-2.5.0.crate) = 23951 bytes
+BLAKE2s (wallust-3.0.0.crate) = e15aa30a420a07606b236d0b540f5b8563a76a20b77fed452982342ffdad0475
+SHA512 (wallust-3.0.0.crate) = 4581bdc19fa9ea62438115979c4a8c2f48784499e3626a86d7aee72a6059a63b74f41ca0a439cede9a38490e4d3fde098fee0e18b0ebbfc4886494bab98c0fa7
+Size (wallust-3.0.0.crate) = 116830 bytes
 BLAKE2s (wallust_themes-1.0.0.crate) = ec626b20855bdd61279040755666ca73430640f3fa86da7ad85301d6d5c4a405
 SHA512 (wallust_themes-1.0.0.crate) = a523d369e81d0143f6eea878231d85b13b42c683873af4de2b1927e679a603525c4b67da68c574a74196256ada360fb81358ac3deafaa5ba3b8b4b1f000ca62f
 Size (wallust_themes-1.0.0.crate) = 30140 bytes
