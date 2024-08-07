@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/21 20:56:10 bacon Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/07 14:25:58 bacon Exp $
 man/man1/desktop-installer.1
 sbin/battery-shutdown.sh
 sbin/desktop-installer
