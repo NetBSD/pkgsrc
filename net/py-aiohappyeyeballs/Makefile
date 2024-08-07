@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/02 07:32:16 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/07 15:07:03 adam Exp $
 
-DISTNAME=	aiohappyeyeballs-2.3.4
+DISTNAME=	aiohappyeyeballs-2.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohappyeyeballs/}
