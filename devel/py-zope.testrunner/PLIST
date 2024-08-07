@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/02 12:50:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/08/07 10:00:37 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -397,6 +397,9 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sampletestsf.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sampletestsf.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sampletestsf.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/sampletestsl.rst
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/subtest.py
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/subtest.pyc
+${PYSITELIB}/zope/testrunner/tests/testrunner-ex/subtest.pyo
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/unicode.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/unicode.pyc
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex/unicode.pyo
@@ -437,6 +440,7 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-shuffle.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-simple.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-stops-when-stop-on-error.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-subprocess-errors.rst
+${PYSITELIB}/zope/testrunner/tests/testrunner-subtest.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-subunit-err.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-subunit-leaks.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-subunit-v2.rst
