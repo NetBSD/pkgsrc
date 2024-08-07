@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2024/03/09 21:52:57 pin Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/07 06:42:48 pin Exp $
 
-DISTNAME=	3.0.0-beta
-# This is actually an update from 3.0.0-alpha to 3.0.0-beta.
-# Unfortunately, I made a mistake on the previous update and pushed it as 3.0.0
-# instead of 3.0.0-alpha as it should have been.
-PKGREVISION=	1
+DISTNAME=	3.0.0
+# This is actually an update from 3.0.0-beta to 3.0.0 release.
+# Unfortunately, I made a mistake on previous updates and pushed
+# 3.0.0-alpha as 3.0.0 so, use PKGREVISION to handle this.
+PKGREVISION=	2
 PKGNAME=	wallust-${DISTNAME:S/-beta//}
 CATEGORIES=	graphics
 MASTER_SITES=	https://codeberg.org/explosion-mental/wallust/archive/
@@ -17,6 +17,10 @@ LICENSE=	mit
 .include "cargo-depends.mk"
 
 WRKSRC=		${WRKDIR}/wallust
+
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 
 INSTALLATION_DIRS=	share/examples/wallust \
 			${PKGMANDIR}/man1 \
