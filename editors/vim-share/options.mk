@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2023/11/16 09:54:10 wiz Exp $
+# $NetBSD: options.mk,v 1.11.6.1 2024/08/07 18:37:21 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vim
 PKG_SUPPORTED_OPTIONS+=	ruby python perl lua luajit
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--with-python-command=${PYTHONBIN}
 .  else
 CONFIGURE_ARGS+=	--enable-python3interp
 CONFIGURE_ARGS+=	--with-python3-command=${PYTHONBIN}
+LDFLAGS+=      -rdynamic
 .  endif
 .endif
 
