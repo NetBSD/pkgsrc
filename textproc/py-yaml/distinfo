@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2023/11/13 16:34:01 wiz Exp $
+$NetBSD: distinfo,v 1.22 2024/08/07 08:59:52 adam Exp $
 
-BLAKE2s (PyYAML-6.0.1.tar.gz) = dac1c12e1cd5749e5de625592f08eedaa6a9618ae42d5e843e8e0cf3007a08d2
-SHA512 (PyYAML-6.0.1.tar.gz) = 94a29924484f557c0966d485c2b70232909253f27fcea9b89e1db1462abf61f2f85d55fbae0177b2bed70eb5daa75813551e868df4df4cddfdee9a87bd08485f
-Size (PyYAML-6.0.1.tar.gz) = 125201 bytes
+BLAKE2s (pyyaml-6.0.2.tar.gz) = e62355a7e14c406db099758a90bf36d2f214da58b1d9e65e880609479b595c79
+SHA512 (pyyaml-6.0.2.tar.gz) = a675e0056bb6af9119c7f2796e349ced05afca64118a5b444d66dafcb6a774cf274eeba7eab044b86eb6c12a9d7c785c654f6cf229e1d190340dd06ea76e25ec
+Size (pyyaml-6.0.2.tar.gz) = 130631 bytes
 SHA1 (patch-setup.py) = a0e8492719abfb58375d6ad2483cc7a2c5305496
