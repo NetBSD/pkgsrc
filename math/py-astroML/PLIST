@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2020/12/19 14:42:39 mef Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/08/07 20:10:27 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/astroML/__init__.py
 ${PYSITELIB}/astroML/__init__.pyc
 ${PYSITELIB}/astroML/__init__.pyo
@@ -91,6 +91,9 @@ ${PYSITELIB}/astroML/datasets/sdss_filters.pyo
 ${PYSITELIB}/astroML/datasets/sdss_galaxy_colors.py
 ${PYSITELIB}/astroML/datasets/sdss_galaxy_colors.pyc
 ${PYSITELIB}/astroML/datasets/sdss_galaxy_colors.pyo
+${PYSITELIB}/astroML/datasets/sdss_galaxy_images.py
+${PYSITELIB}/astroML/datasets/sdss_galaxy_images.pyc
+${PYSITELIB}/astroML/datasets/sdss_galaxy_images.pyo
 ${PYSITELIB}/astroML/datasets/sdss_specgals.py
 ${PYSITELIB}/astroML/datasets/sdss_specgals.pyc
 ${PYSITELIB}/astroML/datasets/sdss_specgals.pyo
@@ -100,6 +103,12 @@ ${PYSITELIB}/astroML/datasets/sdss_spectrum.pyo
 ${PYSITELIB}/astroML/datasets/sdss_sspp.py
 ${PYSITELIB}/astroML/datasets/sdss_sspp.pyc
 ${PYSITELIB}/astroML/datasets/sdss_sspp.pyo
+${PYSITELIB}/astroML/datasets/tests/__init__.py
+${PYSITELIB}/astroML/datasets/tests/__init__.pyc
+${PYSITELIB}/astroML/datasets/tests/__init__.pyo
+${PYSITELIB}/astroML/datasets/tests/test_datasets.py
+${PYSITELIB}/astroML/datasets/tests/test_datasets.pyc
+${PYSITELIB}/astroML/datasets/tests/test_datasets.pyo
 ${PYSITELIB}/astroML/datasets/tools/__init__.py
 ${PYSITELIB}/astroML/datasets/tools/__init__.pyc
 ${PYSITELIB}/astroML/datasets/tools/__init__.pyo
@@ -280,6 +289,9 @@ ${PYSITELIB}/astroML/tests/test_filters.pyo
 ${PYSITELIB}/astroML/tests/test_fourier.py
 ${PYSITELIB}/astroML/tests/test_fourier.pyc
 ${PYSITELIB}/astroML/tests/test_fourier.pyo
+${PYSITELIB}/astroML/tests/test_lumfunc.py
+${PYSITELIB}/astroML/tests/test_lumfunc.pyc
+${PYSITELIB}/astroML/tests/test_lumfunc.pyo
 ${PYSITELIB}/astroML/tests/test_resample.py
 ${PYSITELIB}/astroML/tests/test_resample.pyc
 ${PYSITELIB}/astroML/tests/test_resample.pyo
