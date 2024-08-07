@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:56:00 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/08/07 20:10:27 adam Exp $
 
-BLAKE2s (astroML-1.0.tar.gz) = 5d93d63f7b7775d20853b6945850244bf96c40832b86681ed2d3e1fde8028436
-SHA512 (astroML-1.0.tar.gz) = b61f3644c495befe242dd2530be9d82d257653875f4597c64634768fbea0f12eceee17107a4a6133abe0744ba65568858cb479086f3be69b0d432c4a3d89e2bc
-Size (astroML-1.0.tar.gz) = 538896 bytes
+BLAKE2s (astroML-1.0.2.post1.tar.gz) = a607f9d5183dc6f1dd9d3bddd22961fe7cffcd4a43c2d7f02e4e0f0986454f5b
+SHA512 (astroML-1.0.2.post1.tar.gz) = 0e91bf3645ba810b1df6338da54276bac3cab94c788635eb934c1da72a3a2ad44c93a66c8c7c311b1ddeae7dfeb66195f514271f100111403416ab90859938e4
+Size (astroML-1.0.2.post1.tar.gz) = 115119 bytes
