@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/01/09 06:39:38 khorben Exp $
+$NetBSD: distinfo,v 1.5 2024/08/07 11:01:45 adam Exp $
 
-BLAKE2s (PySMT-0.9.5.tar.gz) = 126a5cfcaaed9f885da8d28225d71ca1075db924086b904146a8d00e2dc03830
-SHA512 (PySMT-0.9.5.tar.gz) = d1e3b4f9f7bc90c15ddcfbcf87e4d487acff9613ae48d56a91bd83ab1c929af8c15ced29f6b097a599f91b41bbfadcf89e4601edba2bdff36c80c41b7c5165bb
-Size (PySMT-0.9.5.tar.gz) = 1138859 bytes
+BLAKE2s (PySMT-0.9.6.tar.gz) = 2f1a074871f9c1b41c4bd23cf4140f70c63da61a3f13a10dbc4e0882e1f04980
+SHA512 (PySMT-0.9.6.tar.gz) = d0610bb6d83f2ecc822f0c1393652009479593f5404851ddcd86da914341b58bb4376b713d0d87437f98b9eb42c2298ea3c83a36707ba774cfbdc611fa760044
+Size (PySMT-0.9.6.tar.gz) = 262806 bytes
