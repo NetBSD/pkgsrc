@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/10/21 20:56:10 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/07 14:25:58 bacon Exp $
 
-DISTNAME=	desktop-installer-0.8.3
+DISTNAME=	desktop-installer-1.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
