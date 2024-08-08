@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.98 2024/08/06 18:48:42 riastradh Exp $
+# $NetBSD: Makefile,v 1.99 2024/08/08 08:51:09 adam Exp $
 
 PYTHON_27_ACCEPTED=	yes
 
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
