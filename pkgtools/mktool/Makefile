@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/08/08 10:42:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/08 11:51:20 wiz Exp $
 
-DISTNAME=	mktool-0.1.8
+DISTNAME=	mktool-0.1.10
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
