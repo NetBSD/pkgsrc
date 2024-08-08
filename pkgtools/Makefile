@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2024/01/01 13:39:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.127 2024/08/08 10:42:34 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -26,6 +26,7 @@ SUBDIR+=	libkver
 SUBDIR+=	libnbcompat
 SUBDIR+=	lintpkgsrc
 SUBDIR+=	mksandbox
+SUBDIR+=	mktool
 SUBDIR+=	mktools
 SUBDIR+=	mtree
 SUBDIR+=	nih
