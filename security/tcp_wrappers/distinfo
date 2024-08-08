@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2024/08/05 14:15:10 tnn Exp $
+$NetBSD: distinfo,v 1.23 2024/08/08 20:34:11 triaxx Exp $
 
 BLAKE2s (tcp_wrappers_7.6-ipv6.4.tar.gz) = d05aa438c87a74553812522d91d4dc3c078ed3d176512fde8fe1094f11915ee7
 SHA512 (tcp_wrappers_7.6-ipv6.4.tar.gz) = b753b2e54fe243fbcb403470b19fa1b08a912a6a65981dc1bf20288379b903701d4b5a477350cb3470cb6d908cf51ef653f44dc17daff17f34e59b6aa1b41c95
@@ -13,7 +13,7 @@ SHA1 (patch-ai) = 8e27da22c3e52d755749968d07c1e9227c48f417
 SHA1 (patch-aj) = 07f1d068d8e0173fe16ebef5430c0b5d257eac3f
 SHA1 (patch-clean__exit.c) = 6a61c97251c37c2f67d47cc31cd01b31de1a0d32
 SHA1 (patch-diag.c) = 370d7473e3d3bb29308903c1ee530cdd15978708
-SHA1 (patch-fakelog.c) = 68cd6578fd534d0ae72571d53c259638b691df4d
+SHA1 (patch-fakelog.c) = 29c34feb951df20a105b24bf6025ae4d68a5f587
 SHA1 (patch-fix_options.c) = ce49ff5b4b1e26eb7634e61fa33ad4697917fbcb
 SHA1 (patch-myvsyslog.c) = bda66de72825eadbf175ebe4ba47107317d7f820
 SHA1 (patch-options.c) = 3e33dc27a5b3e17889536124e4d5c5262758f2a0
