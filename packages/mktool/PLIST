@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/08 10:41:11 wiz Exp $
+bin/mktool
