@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/04/19 22:18:21 gutteridge Exp $
+# $NetBSD: Makefile,v 1.67 2024/08/08 15:02:57 he Exp $
 
-DISTNAME=	rust-1.76.0
+DISTNAME=	rust-1.79.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -24,7 +24,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 # he@NetBSD.org provided binaries
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
-ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64eb
+#ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64eb
 ONLY_FOR_PLATFORM+=	NetBSD-*-earmv7hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
@@ -43,7 +43,7 @@ CHECK_RELRO_SKIP+=	lib/rustlib/*/bin/*
 CHECK_SHLIBS_SKIP+=	bin/cargo-clippy
 CHECK_SHLIBS_SKIP+=	bin/rustfmt
 
-# All kits are now built for 9.0.
+# Bootstraps built for 9.0 or newer, -8 gcc is too old...
 BROKEN_ON_PLATFORM+=	NetBSD-8.*
 
 # Binary distributions aren't built as PIE.
@@ -108,36 +108,39 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 # NetBSD provided binaries:
 
 NBSUF=
+# Selective for a few targets (rebuilt binaries):
+NB:=		-nb1
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	aarch64_be-unknown-netbsd
-DN:=		${DISTNAME}${NBSUF}
-EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-DISTFILES:=	${DISTFILES} ${DF}
-SITES.${DF}=	${NETBSD_REPO}
-.endif
+#.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make(makesum) || make(mdi)
+#RUST_ARCH:=	aarch64_be-unknown-netbsd
+#DN:=		${DISTNAME}${NBSUF}
+#EXTRACT_SUFX=	.tar.xz
+#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+#DISTFILES:=	${DISTFILES} ${DF}
+#SITES.${DF}=	${NETBSD_REPO}
+#.endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	armv6-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	armv7-unknown-netbsd-eabihf
+NB:=		-nb1
+RUST_ARCH:=	armv7-unknown-netbsd-eabihf${VMOD}
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
@@ -196,8 +199,7 @@ SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
 
 # Binary still extracts to plain non-nb'ed directory
 WRKSRC:=	${WRKSRC:C/nb[0-9]*//}
-# Undo the powerpc netbsd90 thingie...
-WRKSRC:=	${WRKSRC:C/netbsd90/netbsd/}
+WRKSRC:=	${WRKSRC:C/-$//}
 
 do-install:
 	cd ${.CURDIR}/files; pax -rw install.sh ${WRKSRC}
@@ -240,7 +242,6 @@ fix-darwin-install-name:
 		done;							\
 	done
 .  endfor
-
 .else
 # Not Darwin:
 
@@ -260,10 +261,11 @@ FORCE_RPATH=		--force-rpath
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in clippy-driver miri rls rust-analyzer rustc rustdoc
-	if [ -f ${DESTDIR}${PREFIX}/bin/${bin} ]; then \
+.  for bin in bin/clippy-driver bin/miri bin/rls bin/rust-analyzer \
+	bin/rustc bin/rustdoc libexec/rust-analyzer-proc-macro-srv
+	if [ -f ${DESTDIR}${PREFIX}/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
-		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/bin/${bin} ; \
+		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/${bin} ; \
 	fi
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
