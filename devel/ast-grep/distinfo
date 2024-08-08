@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2024/08/06 18:45:23 pin Exp $
+$NetBSD: distinfo,v 1.28 2024/08/08 17:27:32 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -36,9 +36,9 @@ Size (anyhow-1.0.86.crate) = 46741 bytes
 BLAKE2s (assert_cmd-2.0.15.crate) = 5470870c1f2c26c17cd2b068f05e5feedaea9a39e7245aa4539dbe08ac4b5bd4
 SHA512 (assert_cmd-2.0.15.crate) = 7ba88c3af404c431be87ba15ca11f43173abeadd26cd1f4ec2adef4d098091f3d7715608896169b6c50b8b94a0cb1796b2e31726bb66352318c825c3bdaa4755
 Size (assert_cmd-2.0.15.crate) = 25726 bytes
-BLAKE2s (ast-grep-0.25.7.tar.gz) = 6293b5fd6221a88569e7a3331513ee6c91b924c4a40cd5f0a4e83a66776eb5c0
-SHA512 (ast-grep-0.25.7.tar.gz) = a3cc7cdbb0b1dc0120943eeb6831b41a9a2dae36d0410a155a5c7fd46287b9fca2cd7f5a7049e6355f390677a786ed6272d1967cce2a250632162f506c1c893c
-Size (ast-grep-0.25.7.tar.gz) = 845593 bytes
+BLAKE2s (ast-grep-0.26.0.tar.gz) = fe96660de453e06add4aa152f6941575760765064fdc3f773c95b9048f052cfe
+SHA512 (ast-grep-0.26.0.tar.gz) = 8f7d4d73c55770fe3a7d4ba76c5bc4670e9af1259fe8f932331a4d9a6fba9bf7d3746337d292e8190807cb93943e6db70facee9aeef84a762f616d2bf3412c4a
+Size (ast-grep-0.26.0.tar.gz) = 845323 bytes
 BLAKE2s (async-trait-0.1.80.crate) = 15f1b67e14b1c463ff22d1692667ffc8ebaebf0ff3899a814fdec3214b422145
 SHA512 (async-trait-0.1.80.crate) = 3e92bc8d38feea49ebb5011303e55853bbbf5d0fb7c4f6ed6aa471b9000a2a0ea5475619f98831641e8ee484beaa6fd8880770a96b8a5a7df26e392c1b4b3a19
 Size (async-trait-0.1.80.crate) = 28775 bytes
@@ -486,9 +486,9 @@ Size (syn-2.0.61.crate) = 257199 bytes
 BLAKE2s (target-lexicon-0.12.14.crate) = b550eb4dc7975990be971b9df6a17f3ce29403ea8a8e8b10d1b1a0324f05af15
 SHA512 (target-lexicon-0.12.14.crate) = 3410ecc0faf854f49c41c99f83972960e67065b1e0e78557a7c4996d996109bfd167d2121a019f5256f996c896cd45af032038ab7918fdcc6ee6311693ce951a
 Size (target-lexicon-0.12.14.crate) = 25508 bytes
-BLAKE2s (tempfile-3.10.1.crate) = 4f7b06eecc5247baecdae6f053b331230e880d2a72e0cce7b0814e70d7674a87
-SHA512 (tempfile-3.10.1.crate) = bac7515b85b0d01ea914b527f0fadd3a4d8e77c9eabe786977d2625d8a3e91decaec502dd15bab4d49a43597fa7cf7660fff4be1b043112d13b542a72443bf39
-Size (tempfile-3.10.1.crate) = 33653 bytes
+BLAKE2s (tempfile-3.11.0.crate) = c22dd68e5aac201639b063dcc54e080420b058211e8ffc4839c316d253692709
+SHA512 (tempfile-3.11.0.crate) = 47d4c48c4f90d116a2f7d5ebf29ea623fb0a0fbfb1192aaaa53a83218ac910b6c836d6d4d8233b07d06e14de70fbf30d243152b7ac22a03d180905c53b6ad9e6
+Size (tempfile-3.11.0.crate) = 34153 bytes
 BLAKE2s (termcolor-1.4.1.crate) = 052eddf6925aee94ddd6422f049b834dfc769ebd3b40553e579a82895d10a253
 SHA512 (termcolor-1.4.1.crate) = b66aad157c4fa2985f764321d157dfb1f0325fd633811870db7919b5579bf7bc19fefe99e1c706cdfa67504c37dc2ca3d283e11d1bb516edcfaf1eb7747a778a
 Size (termcolor-1.4.1.crate) = 18773 bytes
