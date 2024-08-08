@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4937 2024/08/08 15:04:15 he Exp $
+$NetBSD: CHANGES-2024,v 1.4938 2024/08/08 17:06:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7746,3 +7746,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added pkgtools/mktool version 0.1.8 [wiz 2024-08-08]
 	Updated pkgtools/mktool to 0.1.10 [wiz 2024-08-08]
 	Updated lang/rust-bin to 1.79.0 [he 2024-08-08]
+	Updated mail/roundcube to 1.6.8 [taca 2024-08-08]
+	Updated mail/roundcube-plugin-enigma to 1.6.8 [taca 2024-08-08]
+	Updated mail/roundcube-plugin-password to 1.6.8 [taca 2024-08-08]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.8 [taca 2024-08-08]
