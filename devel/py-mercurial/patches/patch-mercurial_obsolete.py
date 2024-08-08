@@ -1,8 +1,8 @@
-$NetBSD: patch-mercurial_obsolete.py,v 1.1 2024/06/20 23:56:45 joerg Exp $
+$NetBSD: patch-mercurial_obsolete.py,v 1.2 2024/08/08 08:11:11 wiz Exp $
 
 Upstream f28c52a9f7b4
 
---- mercurial/obsolete.py.orig	2024-03-29 20:37:05.000000000 +0000
+--- mercurial/obsolete.py.orig	2024-08-01 14:34:33.000000000 +0000
 +++ mercurial/obsolete.py
 @@ -771,10 +771,11 @@ class obsstore:
              _addchildren(self.children, markers)
@@ -19,16 +19,17 @@ Upstream f28c52a9f7b4
  
          - marker that use this changeset as successor
          - prune marker of direct children on this changeset
-@@ -782,10 +783,24 @@ class obsstore:
+@@ -782,10 +783,23 @@ class obsstore:
            markers
  
          It is a set so you cannot rely on order."""
+-
+-        pendingnodes = set(nodes)
 +        if nodes is None:
 +            nodes = set()
 +        if revs is None:
 +            revs = set()
- 
--        pendingnodes = set(nodes)
++
 +        get_rev = self.repo.unfiltered().changelog.index.get_rev
 +        pendingnodes = set()
 +        for marker in self._all:
@@ -41,7 +42,6 @@ Upstream f28c52a9f7b4
 +                        pendingnodes.add(node)
          seenmarkers = set()
 -        seennodes = set(pendingnodes)
-+        seenmarkers = set()
 +        seennodes = set()
          precursorsmarkers = self.predecessors
          succsmarkers = self.successors
