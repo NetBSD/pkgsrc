@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2024/08/01 15:21:25 ryoon Exp $
+$NetBSD: distinfo,v 1.13 2024/08/08 03:54:49 gutteridge Exp $
 
-BLAKE2s (firefox-115.13.0esr.source.tar.xz) = f0cc616f13869bdfe9e2b740373bf16f84fd6deaffd2029068ecafc115a9db05
-SHA512 (firefox-115.13.0esr.source.tar.xz) = 799cdf2d0494003a5addd0da703f53deb9c9d6bb6f6c95d40026363382803e2d086039c7798940a1f35f4cba111f2e8e21bde8ac2eac29fd9bd6876dd8d3a85f
-Size (firefox-115.13.0esr.source.tar.xz) = 510571488 bytes
+BLAKE2s (firefox-115.14.0esr.source.tar.xz) = 34f0f8e821073cf601ea75a4c3a295e62f10be56a9f38be087bfdcd7d84c64e4
+SHA512 (firefox-115.14.0esr.source.tar.xz) = dd40c1fd3cf454dbf33a85d38e47bb0e736ed89b829643653e239f43232441f4e9f3c7876f058ff2e6f19daf2b50a8f2d13274e9a107d8a258a6067d1fc43f54
+Size (firefox-115.14.0esr.source.tar.xz) = 507310580 bytes
 BLAKE2s (nodejs-output-115.0.tgz) = 95d25628b865aa71e85c63001f4054d03ff58b273ca05784a021fa176b2b1425
 SHA512 (nodejs-output-115.0.tgz) = 345108033cfbff90e3244bb5591b307e1fcf56c7290b5112e949d400bdadf08c1e4a6d109b5f7264ac417c2cc4e76371cc14678417f6cb017649cc883bdbb4d4
 Size (nodejs-output-115.0.tgz) = 221458 bytes
