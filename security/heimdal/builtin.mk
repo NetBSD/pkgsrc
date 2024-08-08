@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.20 2024/01/13 20:10:07 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.21 2024/08/08 08:27:53 wiz Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -20,6 +20,12 @@ IS_BUILTIN.heimdal=	no
 .  if empty(H_HEIMDAL:M__nonexistent__) && empty(H_HEIMDAL:M${LOCALBASE}/*)
 IS_BUILTIN.heimdal=	yes
 .  endif
+# heimdal in NetBSD<10 links against sqlite3, which might lead to linking
+# against multiple versions of sqlite3.
+# For that reason, do not accept that version as built-in.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+IS_BUILTIN.heimdal=	no
+.endif
 .endif
 MAKEVARS+=		IS_BUILTIN.heimdal
 
@@ -34,30 +40,6 @@ BUILTIN_VERSION.heimdal!=						\
 	${_CROSS_DESTDIR:U:Q}${SH_KRB5_CONFIG:Q} --version |		\
 	${AWK} '{ print $$2; exit }'
 .  else
-#
-# heimdal<=0.6.x doesn't have a method of checking files to discover
-# the version number of the software.  Match up heimdal versions with
-# OS versions for an approximate determination of the heimdal version.
-#
-_BLTN_HEIMDAL_VERSIONS=		0.6.3  0.6.2  0.6.1  0.6  0.5  0.4e  0.3f  0.3e
-_BLTN_HEIMDAL_0.6.3=		NetBSD-2.* NetBSD-[3-9]*-*
-_BLTN_HEIMDAL_0.6.2=		# empty
-_BLTN_HEIMDAL_0.6.1=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
-_BLTN_HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
-_BLTN_HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
-_BLTN_HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*			\
-				NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-* \
-				NetBSD-1.5[YZ]-* NetBSD-1.5Z*-*
-_BLTN_HEIMDAL_0.3f=		NetBSD-1.5X-*
-_BLTN_HEIMDAL_0.3e=		NetBSD-1.5[UVW]-* \
-				NetBSD-1.5.*-*
-.    for _heimdal_version_ in ${_BLTN_HEIMDAL_VERSIONS}
-.      for _pattern_ in ${_BLTN_HEIMDAL_${_heimdal_version_}}
-.        if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILTIN_VERSION.heimdal?=	${_heimdal_version_}
-.        endif
-.      endfor
-.    endfor
 BUILTIN_VERSION.heimdal?=	0.2t
 .  endif
 BUILTIN_PKG.heimdal=		heimdal-${BUILTIN_VERSION.heimdal}
