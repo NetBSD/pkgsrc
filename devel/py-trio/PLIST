@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/07/07 14:50:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/08/08 05:16:50 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE2
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.MIT
@@ -310,6 +310,9 @@ ${PYSITELIB}/trio/_tests/test_timeouts.pyo
 ${PYSITELIB}/trio/_tests/test_tracing.py
 ${PYSITELIB}/trio/_tests/test_tracing.pyc
 ${PYSITELIB}/trio/_tests/test_tracing.pyo
+${PYSITELIB}/trio/_tests/test_trio.py
+${PYSITELIB}/trio/_tests/test_trio.pyc
+${PYSITELIB}/trio/_tests/test_trio.pyo
 ${PYSITELIB}/trio/_tests/test_unix_pipes.py
 ${PYSITELIB}/trio/_tests/test_unix_pipes.pyc
 ${PYSITELIB}/trio/_tests/test_unix_pipes.pyo
