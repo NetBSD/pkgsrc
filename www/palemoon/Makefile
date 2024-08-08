@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2024/08/06 20:58:11 nia Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/08 11:03:31 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
 PKGNAME=	palemoon-33.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -74,12 +74,11 @@ CONFIGURE_ARGS+=	--disable-precompiled-startupcache
 CONFIGURE_ARGS+=	--disable-jemalloc
 
 # non-default options to integrate better with pkgsrc
+# do not use system cairo, causes segfaults
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-optimize=-O2
 CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--enable-system-cairo
-CONFIGURE_ARGS+=	--enable-system-pixman
 
 CWRAPPERS_APPEND.cc+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 CWRAPPERS_APPEND.cxx+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
@@ -152,7 +151,6 @@ post-install:
 .endif
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
@@ -161,6 +159,5 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
