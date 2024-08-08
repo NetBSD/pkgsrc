@@ -4,3 +4,5 @@ of pkgsrc's mk infrastructure.
 Many targets under `mk/` are implemented using a combination of
 shell and awk, and can suffer from a lack of performance, especially
 when input sizes grow.
+
+This is an alpha version and work-in-progress.
