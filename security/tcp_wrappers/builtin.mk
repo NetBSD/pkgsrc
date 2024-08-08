@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2019/11/04 21:13:03 rillig Exp $
+# $NetBSD: builtin.mk,v 1.11 2024/08/08 20:34:11 triaxx Exp $
 
 BUILTIN_PKG:=	tcp_wrappers
 
@@ -32,12 +32,12 @@ USE_BUILTIN.tcp_wrappers=	no
 .  else
 USE_BUILTIN.tcp_wrappers=	${IS_BUILTIN.tcp_wrappers}
 .    if defined(BUILTIN_PKG.tcp_wrappers) && \
-        !empty(IS_BUILTIN.tcp_wrappers:M[yY][eE][sS])
+	${IS_BUILTIN.tcp_wrappers:tl} == yes
 USE_BUILTIN.tcp_wrappers=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.tcp_wrappers}
-.        if !empty(USE_BUILTIN.tcp_wrappers:M[yY][eE][sS])
+.      for dep in ${BUILDLINK_API_DEPENDS.tcp_wrappers}
+.        if ${USE_BUILTIN.tcp_wrappers:tl} == yes
 USE_BUILTIN.tcp_wrappers!=						\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.tcp_wrappers:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.tcp_wrappers:Q}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\

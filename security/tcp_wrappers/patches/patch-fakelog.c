@@ -1,4 +1,6 @@
-$NetBSD: patch-fakelog.c,v 1.1 2024/08/05 12:48:18 tnn Exp $
+$NetBSD: patch-fakelog.c,v 1.2 2024/08/08 20:34:11 triaxx Exp $
+
+Add missing specifier to avoid implicit int return.
 
 --- fakelog.c.orig	1994-12-28 16:42:22.000000000 +0000
 +++ fakelog.c
