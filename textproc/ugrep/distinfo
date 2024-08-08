@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.77 2024/08/04 07:20:18 adam Exp $
+$NetBSD: distinfo,v 1.78 2024/08/08 09:01:00 adam Exp $
 
-BLAKE2s (ugrep-6.3.0.tar.gz) = 9167f1ec0f49588f5f0944db741dc8d585525d091d7200b2c56b65fb832eca8c
-SHA512 (ugrep-6.3.0.tar.gz) = f76a3a18e25965e990badef677a67c864cc24f12dfa766ad79502a67c33b695b83af0a0af7a318883c9c0e9d2102bb9c9dcef716553c1c64f100c5fb10719e08
-Size (ugrep-6.3.0.tar.gz) = 7032313 bytes
+BLAKE2s (ugrep-6.4.0.tar.gz) = 755dec04be75d09fb461d1c4a1350d887beaec8773c1c4fb489e001347425dd2
+SHA512 (ugrep-6.4.0.tar.gz) = 88e669dfe798afcd65eb591906d09ae344cbbb1f9b5fb7b6e160be5fff14883d5cf81e7013fbdc8be4df1edd2e3ac61e31a9a5a98e080ae71d4a7d9a2c9d0b66
+Size (ugrep-6.4.0.tar.gz) = 7043097 bytes
 SHA1 (patch-lzma_C_CpuArch.c) = 37ba2265c7a348abedaf5c1eaf95677142cc2b9d
