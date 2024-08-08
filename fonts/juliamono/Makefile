@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/04/14 09:10:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/08 20:04:11 pin Exp $
 
 DISTNAME=	JuliaMono
-PKGNAME=	juliamono-0.044
+PKGNAME=	juliamono-0.056
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cormullion/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
