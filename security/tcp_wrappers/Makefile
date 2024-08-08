@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2024/08/05 14:15:10 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/08 20:34:11 triaxx Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security net
 MASTER_SITES=	ftp://ftp.porcupine.org/pub/security/
 
@@ -24,7 +24,7 @@ BUILD_TARGET.Darwin=	netbsd
 BUILD_TARGET.Interix=	netbsd
 BUILD_TARGET.Haiku=	netbsd
 BUILD_TARGET.Linux=	${LOWER_OPSYS}
-.if !empty(OPSYS:M*BSD)
+.if ${OPSYS:M*BSD}
 BUILD_TARGET.${OPSYS}=	netbsd
 .endif
 BUILD_TARGET.SunOS=	sunos5
@@ -36,7 +36,7 @@ LDFLAGS.SCO_SV+=	-lsocket
 BUILD_TARGET=		${BUILD_TARGET.${OPSYS}}
 
 .if !empty(PKG_OPTIONS:Minet6)
-.  if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
+.  if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 MAKE_ENV+=	IPV6="-DHAVE_IPV6 -DUSE_GETHOSTBYNAME2 -DUSE_STRERROR"
 .  elif ${OPSYS} != "Linux" && ${OPSYS} != "Interix"
 MAKE_ENV+=	IPV6=-DHAVE_IPV6
@@ -45,6 +45,7 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 
 CFLAGS+=	-D_POSIX_C_SOURCE=200809L	# popen(3)
 CFLAGS+=	-D_XOPEN_SOURCE=500		# endgrent(3)
+CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
 
 # Default to /etc/hosts.{allow,deny} for the configuration files to match
 # the historic location of these files.  This may be changed by setting
@@ -55,12 +56,11 @@ MAKE_ENV+=	PKGSYSCONFDIR=${PKG_SYSCONFDIR}
 
 INSTALLATION_DIRS=	bin include lib libexec ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
-post-build:
-	set -e; cd ${WRKSRC}; for file in *.[0-9]; do			\
-		${MV} -f $$file $$file.BAK;				\
-		${SED}	-e "s|/etc/hosts\.|${PKG_SYSCONFDIR}/hosts.|g"	\
-			$$file.BAK > $$file;				\
-	done
+SUBST_CLASSES+=		man
+SUBST_MESSAGE.man=	Fixing ${PKG_SYSCONFDIR} in manpages.
+SUBST_STAGE.man=	pre-configure
+SUBST_FILES.man=	*.[0-9]
+SUBST_SED.man=		-e 's|/etc/hosts\.|${PKG_SYSCONFDIR}/hosts.|g'
 
 DOCDIR=			${PREFIX}/share/doc/tcp_wrappers
 INSTALLATION_DIRS+=	${DOCDIR}
