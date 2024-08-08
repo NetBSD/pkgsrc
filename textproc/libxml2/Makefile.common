@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.22 2024/06/17 18:48:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.23 2024/08/08 08:51:09 adam Exp $
 #
 # used by textproc/libxml2/Makefile
 # used by textproc/py-libxml2/Makefile
 
-DISTNAME=	libxml2-2.12.8
+DISTNAME=	libxml2-2.12.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
