@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/03/25 10:53:40 markd Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/08 23:57:54 wiz Exp $
 
 DISTNAME=	biber-2.20
 PKGNAME=	p5-biblatex-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=plk/}
 GITHUB_PROJECT=	biber
@@ -31,12 +32,15 @@ DEPENDS+=		p5-Encode-EUCJPASCII-[0-9]*:../../textproc/p5-Encode-EUCJPASCII
 DEPENDS+=		p5-Encode-HanExtra-[0-9]*:../../textproc/p5-Encode-HanExtra
 DEPENDS+=		p5-Encode-JIS2K-[0-9]*:../../textproc/p5-Encode-JIS2K
 DEPENDS+=		p5-File-Slurper-[0-9]*:../../devel/p5-File-Slurper
+DEPENDS+=		p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=		p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=		p5-Lingua-Translit>=0.25:../../textproc/p5-Lingua-Translit
 DEPENDS+=		p5-List-AllUtils-[0-9]*:../../devel/p5-List-AllUtils
 DEPENDS+=		p5-List-MoreUtils-XS-[0-9]*:../../devel/p5-List-MoreUtils-XS
 DEPENDS+=		p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=		p5-Log-Log4perl-[0-9]*:../../devel/p5-Log-Log4perl
+DEPENDS+=		p5-Mozilla-CA-[0-9]*:../../security/p5-Mozilla-CA
+DEPENDS+=		p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
 DEPENDS+=		p5-PerlIO-utf8_strict-[0-9]*:../../devel/p5-PerlIO-utf8_strict
 DEPENDS+=		p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 DEPENDS+=		p5-Sort-Key-[0-9]*:../../devel/p5-Sort-Key
@@ -47,6 +51,7 @@ DEPENDS+=		p5-Text-CSV-[0-9]*:../../textproc/p5-Text-CSV
 DEPENDS+=		p5-Text-CSV_XS-[0-9]*:../../textproc/p5-Text-CSV_XS
 DEPENDS+=		p5-Text-Roman-[0-9]*:../../textproc/p5-Text-Roman
 DEPENDS+=		p5-Unicode-LineBreak>=2016.003:../../textproc/p5-Unicode-LineBreak
+DEPENDS+=		p5-LWP-Protocol-https-[0-9]*:../../www/p5-LWP-Protocol-https
 DEPENDS+=		p5-XML-LibXML-Simple-[0-9]*:../../textproc/p5-XML-LibXML-Simple
 DEPENDS+=		p5-XML-LibXML>=1.70:../../textproc/p5-XML-LibXML
 DEPENDS+=		p5-XML-LibXSLT-[0-9]*:../../textproc/p5-XML-LibXSLT
