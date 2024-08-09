@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/01/13 06:34:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/08/09 19:02:56 adam Exp $
 
-BLAKE2s (sphinxcontrib_websupport-1.2.7.tar.gz) = 4655f8b7b634bc39777477b544d7d183188167df94c7733d539c156b40d252e0
-SHA512 (sphinxcontrib_websupport-1.2.7.tar.gz) = daa5ecf6fd3fb6df6a9a3b60668d42d50d93454dc3c2703a1dd43d75220b326e90c5e0ae2cca27afe62e41ae03e7144e6b4cfe70096b857af74c8981fadba9ca
-Size (sphinxcontrib_websupport-1.2.7.tar.gz) = 599362 bytes
+BLAKE2s (sphinxcontrib_websupport-2.0.0.tar.gz) = 2bfb5e2a06fe132ecfe33ca6b18d2fe9794288f3ef72f96db46416fb7db97090
+SHA512 (sphinxcontrib_websupport-2.0.0.tar.gz) = 2a38530db266b6eb26f200ac135a98d1ea982baae4d20fa6dbccc8ff36c6f4c4b7fe012665372c1065553cd27ebba4178127b40481e0b25363436a4a7a3920e0
+Size (sphinxcontrib_websupport-2.0.0.tar.gz) = 600125 bytes
