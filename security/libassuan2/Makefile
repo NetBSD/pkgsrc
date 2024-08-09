@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/03/07 10:48:40 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/08/09 03:53:22 ryoon Exp $
 
-DISTNAME=	libassuan-2.5.7
+DISTNAME=	libassuan-3.0.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libassuan/
 MASTER_SITES+=	http://mirrors.dotsrc.org/gcrypt/libassuan/
