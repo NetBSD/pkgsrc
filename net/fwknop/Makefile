@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/06/25 07:08:23 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/09 09:42:31 ryoon Exp $
 
 DISTNAME=	fwknop-2.6.11
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrash/}
 

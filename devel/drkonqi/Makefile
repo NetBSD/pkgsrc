@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/05/29 16:32:00 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/09 09:42:10 ryoon Exp $
 
 DISTNAME=	drkonqi-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/plasma-desktop/

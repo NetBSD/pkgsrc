@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/08/09 09:42:23 ryoon Exp $
 
 BUILDLINK_TREE+=	notmuch
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	notmuch
 NOTMUCH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.notmuch+=	notmuch>=0.16
-BUILDLINK_ABI_DEPENDS.notmuch+=	notmuch>=0.37nb1
+BUILDLINK_ABI_DEPENDS.notmuch+=	notmuch>=0.38.3nb1
 BUILDLINK_PKGSRCDIR.notmuch?=	../../mail/notmuch
 
 .include "../../mail/gmime3/buildlink3.mk"

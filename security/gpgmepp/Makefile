@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2024/05/29 16:34:14 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/09 09:42:33 ryoon Exp $
 
 DISTNAME=	gpgmepp-15.12.2
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.2/src/}
 EXTRACT_SUFX=	.tar.xz

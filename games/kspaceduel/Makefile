@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2024/05/29 16:32:40 adam Exp $
+# $NetBSD: Makefile,v 1.71 2024/08/09 09:42:17 ryoon Exp $
 
 DISTNAME=	kspaceduel-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kspaceduel/
