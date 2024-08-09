@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.8 2024/08/07 18:48:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q2,v 1.1.2.9 2024/08/09 19:04:25 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q2 branch:
 
@@ -55,4 +55,14 @@ filesystems/glusterfs: build fix -- Use @VARBASE@, @PREFIX@, &c., instead of
 
 Pullup ticket #6886 - requested by nia
 archivers/unzip: security fix
+
+Pullup ticket #6887 - requested by nia
+chat/znc: security fix
+
+Pullup ticket #6888 - requested by nia
+audio/opusfile: security fix
+
+Pullup ticket #6889 - requested by gutteridge
+www/firefox115: security fix
+www/firefox115-l10n: dependent update
 
