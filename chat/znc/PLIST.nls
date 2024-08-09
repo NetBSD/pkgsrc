@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nls,v 1.5 2024/05/21 11:31:14 nikita Exp $
+@comment $NetBSD: PLIST.nls,v 1.5.2.1 2024/08/09 19:03:37 bsiegert Exp $
 share/locale/bg_BG/LC_MESSAGES/znc-admindebug.mo
 share/locale/bg_BG/LC_MESSAGES/znc-adminlog.mo
 share/locale/bg_BG/LC_MESSAGES/znc-alias.mo
@@ -250,6 +250,7 @@ share/locale/es_ES/LC_MESSAGES/znc-chansaver.mo
 share/locale/es_ES/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/es_ES/LC_MESSAGES/znc-clientnotify.mo
 share/locale/es_ES/LC_MESSAGES/znc-controlpanel.mo
+share/locale/es_ES/LC_MESSAGES/znc-corecaps.mo
 share/locale/es_ES/LC_MESSAGES/znc-crypt.mo
 share/locale/es_ES/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/es_ES/LC_MESSAGES/znc-cyrusauth.mo
@@ -539,6 +540,7 @@ share/locale/pl_PL/LC_MESSAGES/znc-chansaver.mo
 share/locale/pl_PL/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/pl_PL/LC_MESSAGES/znc-clientnotify.mo
 share/locale/pl_PL/LC_MESSAGES/znc-controlpanel.mo
+share/locale/pl_PL/LC_MESSAGES/znc-corecaps.mo
 share/locale/pl_PL/LC_MESSAGES/znc-crypt.mo
 share/locale/pl_PL/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/pl_PL/LC_MESSAGES/znc-cyrusauth.mo
@@ -596,6 +598,7 @@ share/locale/pt_BR/LC_MESSAGES/znc-chansaver.mo
 share/locale/pt_BR/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/pt_BR/LC_MESSAGES/znc-clientnotify.mo
 share/locale/pt_BR/LC_MESSAGES/znc-controlpanel.mo
+share/locale/pt_BR/LC_MESSAGES/znc-corecaps.mo
 share/locale/pt_BR/LC_MESSAGES/znc-crypt.mo
 share/locale/pt_BR/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/pt_BR/LC_MESSAGES/znc-cyrusauth.mo
@@ -653,6 +656,7 @@ share/locale/pt_PT/LC_MESSAGES/znc-chansaver.mo
 share/locale/pt_PT/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/pt_PT/LC_MESSAGES/znc-clientnotify.mo
 share/locale/pt_PT/LC_MESSAGES/znc-controlpanel.mo
+share/locale/pt_PT/LC_MESSAGES/znc-corecaps.mo
 share/locale/pt_PT/LC_MESSAGES/znc-crypt.mo
 share/locale/pt_PT/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/pt_PT/LC_MESSAGES/znc-cyrusauth.mo
@@ -710,6 +714,7 @@ share/locale/ro_RO/LC_MESSAGES/znc-chansaver.mo
 share/locale/ro_RO/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/ro_RO/LC_MESSAGES/znc-clientnotify.mo
 share/locale/ro_RO/LC_MESSAGES/znc-controlpanel.mo
+share/locale/ro_RO/LC_MESSAGES/znc-corecaps.mo
 share/locale/ro_RO/LC_MESSAGES/znc-crypt.mo
 share/locale/ro_RO/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/ro_RO/LC_MESSAGES/znc-cyrusauth.mo
@@ -767,6 +772,7 @@ share/locale/ru_RU/LC_MESSAGES/znc-chansaver.mo
 share/locale/ru_RU/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/ru_RU/LC_MESSAGES/znc-clientnotify.mo
 share/locale/ru_RU/LC_MESSAGES/znc-controlpanel.mo
+share/locale/ru_RU/LC_MESSAGES/znc-corecaps.mo
 share/locale/ru_RU/LC_MESSAGES/znc-crypt.mo
 share/locale/ru_RU/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/ru_RU/LC_MESSAGES/znc-cyrusauth.mo
@@ -824,6 +830,7 @@ share/locale/tr_TR/LC_MESSAGES/znc-chansaver.mo
 share/locale/tr_TR/LC_MESSAGES/znc-clearbufferonmsg.mo
 share/locale/tr_TR/LC_MESSAGES/znc-clientnotify.mo
 share/locale/tr_TR/LC_MESSAGES/znc-controlpanel.mo
+share/locale/tr_TR/LC_MESSAGES/znc-corecaps.mo
 share/locale/tr_TR/LC_MESSAGES/znc-crypt.mo
 share/locale/tr_TR/LC_MESSAGES/znc-ctcpflood.mo
 share/locale/tr_TR/LC_MESSAGES/znc-cyrusauth.mo
@@ -862,8 +869,3 @@ share/locale/tr_TR/LC_MESSAGES/znc-stripcontrols.mo
 share/locale/tr_TR/LC_MESSAGES/znc-watch.mo
 share/locale/tr_TR/LC_MESSAGES/znc-webadmin.mo
 share/locale/tr_TR/LC_MESSAGES/znc.mo
-share/znc/cmake/CMakeFindDependencyMacroPC.cmake
-share/znc/cmake/use_homebrew.cmake
-share/znc/translations/pt-BR
-share/znc/translations/pt-PT
-share/znc/translations/tr-TR
