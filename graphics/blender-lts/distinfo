@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.9 2024/07/25 06:00:38 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2024/08/09 03:40:22 ryoon Exp $
 
 BLAKE2s (blender-3.6.12.tar.xz) = 694d9c81c15567deb40df317e4d92b533f0724c90a64ce142fc16454597b4855
 SHA512 (blender-3.6.12.tar.xz) = cddaf51998caa03cf21e74a4f14aadb83dac72d8f1067331e5d29fdfd87767011c996ad87c2a33df9884cca8222536e262e7865b13c7fc7e8a70944dba3605c7
 Size (blender-3.6.12.tar.xz) = 67899636 bytes
 SHA1 (patch-CMakeLists.txt) = 633e27f2ee5f5ad6b200d97ed1fbe8b2f17172ef
+SHA1 (patch-build__files_cmake_Modules_FindOpenColorIO.cmake) = 9343cd9db144419f206afc9e51148ce2675f1c41
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_IO.h) = 791224b988da0383c306e76de5e93cb1cedc960e
 SHA1 (patch-extern_Eigen3_Eigen_src_Core_arch_CUDA_Half.h) = ee35286558e5590495f1c973ae99ede32048ac38
 SHA1 (patch-intern_cycles_kernel_light_tree.h) = b2d2827f769ffe3b8bde413dd0e19ebb6f2367b4
