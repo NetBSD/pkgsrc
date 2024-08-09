@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/06/14 13:19:53 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/09 18:38:34 ktnb Exp $
 
-DISTNAME=	SuiteSparse-7.7.0
+DISTNAME=	SuiteSparse-7.8.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DrTimothyAldenDavis/}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	Set of packages for sparse matrices calculation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++ fortran77
+USE_LANGUAGES=	c c++ fortran8
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
@@ -21,7 +21,5 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../math/openblas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-# reported at: https://github.com/DrTimothyAldenDavis/SuiteSparse/issues/837
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
