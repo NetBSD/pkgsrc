@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.60 2024/05/16 06:15:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.61 2024/08/09 11:07:36 nia Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -28,6 +28,12 @@ pkgbase:= curl
 .endif
 .if ${PKG_BUILD_OPTIONS.curl:Mhttp2}
 .  include "../../www/nghttp2/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.curl:Mbrotli}
+.  include "../../archivers/brotli/buildlink3.mk"
+.endif
+.if ${PKG_BUILD_OPTIONS.curl:Mzstd}
+.  include "../../archivers/zstd/buildlink3.mk"
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
