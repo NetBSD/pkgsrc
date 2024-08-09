@@ -1,0 +1,7 @@
+bashlex is a Python port of the parser used internally by GNU bash.
+
+For the most part it's transliterated from C, the major differences are:
+
+1. it does not execute anything
+2. it is reentrant
+3. it generates a complete AST
