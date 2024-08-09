@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/08/09 03:53:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2024/08/09 12:02:45 adam Exp $
 
 DISTNAME=	libassuan-3.0.1
 CATEGORIES=	security
@@ -19,6 +19,6 @@ TEST_TARGET=		check
 
 CONFLICTS=	libassuan-1.*
 
-BUILDLINK_ABI_DEPENDS.libgpg-error+=	libgpg-error>=1.17
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.17
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
