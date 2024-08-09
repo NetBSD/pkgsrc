@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/12/22 19:19:13 zafer Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/09 03:34:12 ryoon Exp $
 
 DISTNAME=	lv451
 PKGNAME=	lv-4.51
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	#
 
