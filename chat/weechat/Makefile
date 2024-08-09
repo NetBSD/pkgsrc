@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.147 2024/05/29 16:31:34 adam Exp $
+# $NetBSD: Makefile,v 1.148 2024/08/09 14:34:35 ryoon Exp $
 
-DISTNAME=	weechat-4.2.2
-PKGREVISION=	2
+DISTNAME=	weechat-4.3.5
 CATEGORIES=	chat
 MASTER_SITES=	https://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.xz
@@ -64,5 +63,6 @@ pre-configure:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../textproc/cJSON/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
