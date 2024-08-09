@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2023/04/10 13:59:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.75 2024/08/09 11:15:25 wiz Exp $
 #
 
 COMMENT=	Shells
@@ -33,6 +33,7 @@ SUBDIR+=	pbosh
 SUBDIR+=	pdksh
 SUBDIR+=	perlsh
 SUBDIR+=	posh
+SUBDIR+=	py-bashlex
 SUBDIR+=	rc
 SUBDIR+=	rssh
 SUBDIR+=	scponly
