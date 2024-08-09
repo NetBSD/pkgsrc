@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4326 2024/08/05 20:38:39 adam Exp $
+# $NetBSD: Makefile,v 1.4327 2024/08/09 18:52:06 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -260,6 +260,7 @@ SUBDIR+=	coconut
 SUBDIR+=	cogito
 SUBDIR+=	colordiff
 SUBDIR+=	commit-patch
+SUBDIR+=	compiledb-go
 SUBDIR+=	compiz-bcop
 SUBDIR+=	compizconfig-backend-gconf
 SUBDIR+=	concurrencykit
