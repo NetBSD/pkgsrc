@@ -1,0 +1,17 @@
+$NetBSD: patch-config.h.in,v 1.1 2024/08/09 12:02:45 adam Exp $
+
+Check if putc_unlocked(); Fixes "duplicate symbol '___sputc'" on Darwin.
+https://dev.gnupg.org/T7246
+
+--- config.h.in.orig	2024-08-09 11:52:53.288428556 +0000
++++ config.h.in
+@@ -49,6 +49,9 @@
+ /* Define to 1 if you have the `getrlimit' function. */
+ #undef HAVE_GETRLIMIT
+ 
++/* Define to 1 if you have the `putc_unlocked' function. */
++#undef HAVE_PUTC_UNLOCKED
++
+ /* Define to 1 if you have `inet_pton'. */
+ #undef HAVE_INET_PTON
+ 
