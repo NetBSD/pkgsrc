@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.20 2023/10/22 13:34:31 js Exp $
+# $NetBSD: options.mk,v 1.21 2024/08/09 11:07:36 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=		inet6 libssh2 gssapi ldap rtmp idn http2 brotli
+PKG_SUPPORTED_OPTIONS+=		zstd
 PKG_SUGGESTED_OPTIONS=		http2 inet6 idn
 PKG_OPTIONS_LEGACY_OPTS=	libidn:idn
 
@@ -67,4 +68,11 @@ CONFIGURE_ARGS+=	--without-nghttp2
 CONFIGURE_ARGS+=	--with-brotli
 .else
 CONFIGURE_ARGS+=	--without-brotli
+.endif
+
+.if !empty(PKG_OPTIONS:Mzstd)
+.include "../../archivers/zstd/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-zstd
+.else
+CONFIGURE_ARGS+=	--without-zstd
 .endif
