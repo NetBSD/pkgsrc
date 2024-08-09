@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/06/28 13:40:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/09 09:42:21 ryoon Exp $
 
 DISTNAME=	gmime-3.2.15
 PKGNAME=	${DISTNAME:S/gmime/gmime3/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jstedfast/}
 GITHUB_PROJECT=	gmime

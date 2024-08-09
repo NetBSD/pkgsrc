@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2024/07/06 06:57:46 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/08/09 09:42:34 ryoon Exp $
 
 COMMENT=	Applications for entering PINs or Passphrases
+PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--disable-pinentry-fltk
 CONFIGURE_ARGS+=	--disable-pinentry-gnome3

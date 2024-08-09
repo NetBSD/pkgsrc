@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2024/05/29 16:32:40 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/08/09 09:42:17 ryoon Exp $
 
 DISTNAME=	ksirk-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/ksirk/

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2024/06/07 23:55:45 markd Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/09 09:42:26 ryoon Exp $
 
 DISTNAME=	kdav-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

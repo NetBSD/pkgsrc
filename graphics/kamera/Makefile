@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2024/05/29 16:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.84 2024/08/09 09:42:19 ryoon Exp $
 
 DISTNAME=	kamera-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://apps.kde.org/kamera/
