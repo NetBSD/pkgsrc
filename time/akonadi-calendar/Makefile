@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/05/29 16:34:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/09 09:42:37 ryoon Exp $
 
 DISTNAME=	akonadi-calendar-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

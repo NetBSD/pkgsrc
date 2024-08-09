@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2024/05/29 16:32:06 adam Exp $
+# $NetBSD: Makefile,v 1.86 2024/08/09 09:42:11 ryoon Exp $
 #
 
 DISTNAME=	kdevelop-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://www.kdevelop.org/
