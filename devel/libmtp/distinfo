@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2021/11/13 10:20:12 nia Exp $
+$NetBSD: distinfo,v 1.19 2024/08/09 14:15:59 ryoon Exp $
 
-BLAKE2s (libmtp-1.1.19.tar.gz) = a0e6cef711e22bed6a5477f87c89e6843518b4cfce491352d9d7c04965f08caa
-SHA512 (libmtp-1.1.19.tar.gz) = 3cd3b0ea5aecb25abf4267e301d5e82ad9f6253bfa5a3bc4c70645d3007c69b014d6407c6703665d987cce3a42bd2219abbf1972e5964b39e9e1329bf9091044
-Size (libmtp-1.1.19.tar.gz) = 855810 bytes
+BLAKE2s (libmtp-1.1.21.tar.gz) = 53c04b94294f26300d1e2d9e33365fa21148bc1885b7ac863492723a6a4ef350
+SHA512 (libmtp-1.1.21.tar.gz) = 510f01f75de37a07c8ce54957a8fb74724538a7cfbdf1a86c201fda68573ef23fa578ff7baf2d9df938703b5776ded4ab1057c617125f3539e594bb5a1f3146f
+Size (libmtp-1.1.21.tar.gz) = 862703 bytes
 SHA1 (patch-configure) = f57b708684696e496b1d61783e48fe4b63618d65
 SHA1 (patch-hotplug.sh.in) = 72216bb36bd0f6274c16c09d121fcffb567ab120
 SHA1 (patch-m4_byteorder.m4) = e6c1170d9099f13c637b3a73d67618d318c7a73d
