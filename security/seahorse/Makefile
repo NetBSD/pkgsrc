@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.190 2024/05/29 16:34:20 adam Exp $
+# $NetBSD: Makefile,v 1.191 2024/08/09 09:42:35 ryoon Exp $
 
 DISTNAME=	seahorse-3.38.0.1
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/3.38/}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	security gnome
 EXTRACT_SUFX=	.tar.xz
 

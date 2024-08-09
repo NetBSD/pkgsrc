@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2024/04/06 08:06:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/08/09 09:42:37 ryoon Exp $
 
 BUILDLINK_TREE+=	libksysguard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libksysguard
 LIBKSYSGUARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libksysguard+=	libksysguard>=5.6.3
-BUILDLINK_ABI_DEPENDS.libksysguard?=	libksysguard>=5.27.10nb1
+BUILDLINK_ABI_DEPENDS.libksysguard?=	libksysguard>=5.27.10nb3
 BUILDLINK_PKGSRCDIR.libksysguard?=	../../sysutils/libksysguard
 
 .include "../../x11/plasma-framework/buildlink3.mk"

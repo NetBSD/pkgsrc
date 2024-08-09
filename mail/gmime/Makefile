@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2023/11/28 17:28:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/09 09:42:21 ryoon Exp $
 
 DISTNAME=	gmime-2.6.23
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.6/}
 EXTRACT_SUFX=	.tar.xz

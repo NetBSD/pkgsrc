@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2024/05/29 16:33:38 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/08/09 09:42:29 ryoon Exp $
 
 DISTNAME=	libkeduvocdocument-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/

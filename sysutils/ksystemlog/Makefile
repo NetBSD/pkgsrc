@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2024/05/29 16:34:27 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/08/09 09:42:36 ryoon Exp $
 
 DISTNAME=	ksystemlog-${KAPPSVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://kde.org/applications/system/ksystemlog/
