@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:43:50 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/08/09 11:35:11 micha Exp $
 
-BLAKE2s (chocolate-doom-3.0.1.tar.gz) = de9d6a04bf19e7bab6e8a85203619e19a638d8d2289c55a9a662def0fef7f28c
-SHA512 (chocolate-doom-3.0.1.tar.gz) = bec5daf5b26a8dd238780cb4e0c23ffc59b97825d323aa67bb6a3279cd243c18c03e899c4cb4b3106ac187330c6421915a14a6a7c0d34cb0ee75d6f29f9dc905
-Size (chocolate-doom-3.0.1.tar.gz) = 2514985 bytes
+BLAKE2s (chocolate-doom-3.1.0.tar.gz) = fc930d6da9c8ff2bb87ce2d887237aa77271312f913c277f2824ef90534787de
+SHA512 (chocolate-doom-3.1.0.tar.gz) = 17f65c6f4a48dd1b0aa71bdf495d1036602739f1955d64f7de46157fce912ab4e4344a0f7ad073980f50d67e34f9f5e84402e7f2142cd6364453b71c8d5c2592
+Size (chocolate-doom-3.1.0.tar.gz) = 2256537 bytes
