@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2024/04/06 08:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/09 11:35:11 micha Exp $
 
-DISTNAME=	chocolate-doom-3.0.1
-PKGREVISION=	10
+DISTNAME=	chocolate-doom-3.1.0
 CATEGORIES=	games
-MASTER_SITES=	http://www.chocolate-doom.org/downloads/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=chocolate-doom/}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chocolate-doom.org/
@@ -11,7 +11,7 @@ COMMENT=	Doom/Heretic/Hexen/Strife source port
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,13 +30,8 @@ REPLACE_PYTHON+=		man/simplecpp
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/pkg/osx/Resources/app.png \
-		${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/chocolate-doom.png
-	${MV} ${DESTDIR}${PREFIX}/share/icons/chocolate-doom.png \
-		${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps
-	${MV} ${DESTDIR}${PREFIX}/share/icons/chocolate-setup.png \
-		${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps
+pre-configure:
+	set -e; cd ${WRKSRC} && autoreconf -fi
 
 .include "../../lang/python/application.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
