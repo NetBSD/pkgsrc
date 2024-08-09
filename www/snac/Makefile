@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/07/09 23:45:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/09 15:19:11 schmonz Exp $
 
-DISTNAME=		snac-2.56
+DISTNAME=		snac-2.57
 CATEGORIES=		www
 MASTER_SITES=		${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz= -${MASTER_SITES}${PKGVERSION_NOREV}${EXTRACT_SUFX}
