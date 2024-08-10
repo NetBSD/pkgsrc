@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/08/10 12:12:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/08/10 12:27:03 nia Exp $
 
-BLAKE2s (lsqlite3_v096.zip.zip) = e9fed3bf3324efa389f8116c54ca0ab279044794a6b5c4b16b6af62cf8cd2189
-SHA512 (lsqlite3_v096.zip.zip) = 3cc2478818a235c8596a767d8f445363bba653f17db06a500a82dabde3529799d25fd251026cad8a6835e12d7d703a4ca593a7d8d09290ffd68c9b0f480a03c8
-Size (lsqlite3_v096.zip.zip) = 2124404 bytes
+BLAKE2s (lsqlite3_v096.zip) = 9599e23dd116bd34a97214986bae9dcd6d1f0077aed8a30702971eb25ad4ce70
+SHA512 (lsqlite3_v096.zip) = c90081879f3f094fa86b7fe5894c8fa937d98188b677da68678b3938b7630b9232d831f2d6c64fe63f676a7f1a1a9ae84ce7d8bc74cec6e74150e126a68c2c92
+Size (lsqlite3_v096.zip) = 2124172 bytes
