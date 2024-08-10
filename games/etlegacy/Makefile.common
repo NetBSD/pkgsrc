@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2023/11/20 01:17:39 nia Exp $
+# $NetBSD: Makefile.common,v 1.10 2024/08/10 11:12:16 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
-ETL_VERSION=	2.81.1
+ETL_VERSION=	2.82.1
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -10,7 +10,7 @@ DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
 DISTFILES+=	etlegacy.tar.gz
 DISTFILES+=	etlegacy-libs.tar.gz
 
-LIBS_TAG=	f04f846898a92d36fd9cfe7425b1ab4d31bca794
+LIBS_TAG=	72d4180a2e314c2dff3dfa174d21f5a30c9085b2
 
 SITES.etlegacy.tar.gz= \
 	-https://github.com/etlegacy/etlegacy/archive/v${PKGVERSION_NOREV}.tar.gz
