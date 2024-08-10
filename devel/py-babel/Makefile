@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/05/06 04:42:45 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/08/10 06:29:30 wiz Exp $
 
 DISTNAME=	babel-2.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,11 +15,14 @@ WHEEL_NAME=	Babel-${PKGVERSION_NOREV}
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# as of 2.15.0
+# 1 failed, 5986 passed, 1074 skipped, 333 warnings
 
 .include "../../lang/python/pyversion.mk"
 
