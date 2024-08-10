@@ -1,15 +1,15 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2024/03/22 08:26:48 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2024/08/10 15:36:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	anstream-0.6.12
-CARGO_CRATE_DEPENDS+=	anstyle-1.0.4
+CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.2
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.0
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.1
 CARGO_CRATE_DEPENDS+=	bitflags-1.2.1
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
-CARGO_CRATE_DEPENDS+=	clap-4.5.3
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.2
+CARGO_CRATE_DEPENDS+=	clap-4.5.15
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.15
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.0
 CARGO_CRATE_DEPENDS+=	colored-2.1.0
