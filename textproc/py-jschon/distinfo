@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/10 08:13:11 js Exp $
+
+BLAKE2s (jschon-0.11.1.tar.gz) = 0747c6a76923bafa330f747295574cba5341392a714629147bb678a1a71968b0
+SHA512 (jschon-0.11.1.tar.gz) = dfbaf96785c4d8e6feb3a3894f593922a1ae27daca8500a09d433b82025d06dfd0ffed6ca01101bab1187cec7c22fa72de6cb79b525b4b62cc8e9065f4aa7e15
+Size (jschon-0.11.1.tar.gz) = 69411 bytes
