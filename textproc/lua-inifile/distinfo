@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:22:20 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/08/10 14:19:18 nia Exp $
 
-BLAKE2s (lua-inifile-1.0.tar.gz) = 66134b3f3c7945fa261a763ff0579044641f39b4f8c7ba7d3db1bd2e4aa7a4b6
-SHA512 (lua-inifile-1.0.tar.gz) = d0a9aa825cd5cf4a3b0b562853f3593141f537388c3e3a4334317b2536aa2dd695bdea37058d3d907aad10162bb71ef5b324c769e65cbd18e4526e37275cb970
-Size (lua-inifile-1.0.tar.gz) = 2611 bytes
+BLAKE2s (lua-inifile-1.1.tar.gz) = fa12f2444a6745752580d36453ff95356dbefe8e2094c9ea6c473a6342feede1
+SHA512 (lua-inifile-1.1.tar.gz) = 039126031272301ae825bdfa5c4db94cba96a3cee6a6e3326941af471e177bdd2a0e51176ff992932203ec99900d90abc36b6380c9fecc482af517231d504f61
+Size (lua-inifile-1.1.tar.gz) = 4448 bytes
