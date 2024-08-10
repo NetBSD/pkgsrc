@@ -1,0 +1,38 @@
+$NetBSD: patch-software-PKG-INFO,v 1.1 2024/08/10 14:18:49 js Exp $
+
+Upstream is not providing source tarballs and the git repo is missing the
+PKG-INFO file. Therefore this adds the METADATA file from the wheel on top of
+the git repo.
+
+This is as a patch and not in files/ to be able to add a comment with the
+justification.
+
+--- /dev/null	2024-08-08 08:42:47.162564599 +0000
++++ software/PKG-INFO
+@@ -0,0 +1,26 @@
++Metadata-Version: 2.1
++Name: fx2
++Version: 0.13
++Summary: A Python package for interacting with Cypress EZ-USB FX2 series chips
++Author-email: whitequark <whitequark@whitequark.org>
++License: BSD-0-clause
++Project-URL: Documentation, https://libfx2.readthedocs.io/
++Project-URL: Source Code, https://github.com/whitequark/libfx2
++Project-URL: Bug Tracker, https://github.com/whitequark/libfx2/issues
++Classifier: Development Status :: 4 - Beta
++Classifier: License :: OSI Approved
++Classifier: Topic :: Software Development :: Embedded Systems
++Classifier: Topic :: System :: Hardware
++Description-Content-Type: text/x-rst
++Requires-Dist: libusb1 >=1.0
++
++fx2
++===
++
++The *fx2* Python package allows interacting with Cypress EZ-USB FX2 series microcontrollers.
++It provides:
++
++  * *fx2*, a Python library for interacting with the bootloader,
++  * *fx2tool*, a tool for programming and debugging the chips.
++
++See the documentation for details.
