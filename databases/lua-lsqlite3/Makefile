@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/08/10 12:12:20 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/10 12:27:03 nia Exp $
 
-DISTNAME=	lsqlite3_v096.zip
+DISTNAME=	lsqlite3_v096
 PKGNAME=	${LUA_PKGPREFIX}-lsqlite3-0.9.6
 CATEGORIES=	databases lua
 MASTER_SITES=	http://lua.sqlite.org/index.cgi/zip/
