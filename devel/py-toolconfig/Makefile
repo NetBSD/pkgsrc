@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/01/14 09:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/10 06:45:55 adam Exp $
 
 DISTNAME=	pytoolconfig-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=0.991:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
