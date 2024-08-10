@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/08/10 07:00:02 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/10 07:04:18 wiz Exp $
 
 DISTNAME=		feed2exec-0.20.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,6 @@ DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 TEST_DEPENDS+=		${PYPKGPREFIX}-betamax>=0.8.0:../../www/py-betamax
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=		${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-TEST_DEPENDS+=		${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		# none
 
@@ -44,6 +43,7 @@ SUBST_SED.version=	-e 's|@VERSION@|${PKGVERSION_NOREV}|'
 post-extract:
 	${ECHO} "version_number = \"${PKGVERSION_NOREV}\"" > ${WRKSRC}/feed2exec/_version.py
 
+# 3 failed, 45 passed, 2 skipped, 1 xfailed, 91 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
