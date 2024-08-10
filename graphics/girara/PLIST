@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2020/07/27 15:14:20 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/10 07:49:42 adam Exp $
 include/girara/callbacks.h
 include/girara/commands.h
 include/girara/completion.h
@@ -18,22 +18,22 @@ include/girara/template.h
 include/girara/types.h
 include/girara/utils.h
 lib/libgirara-gtk3.so
-lib/libgirara-gtk3.so.3
-lib/libgirara-gtk3.so.3.1
+lib/libgirara-gtk3.so.4
+lib/libgirara-gtk3.so.4.0
 lib/pkgconfig/girara-gtk3.pc
-share/locale/ar/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/de/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/el/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/eo/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/es/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/fa_IR/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/fr/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/he/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/it/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/nl/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/pl/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/pt_BR/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/ru/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/sv/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/tr/LC_MESSAGES/libgirara-gtk3-3.mo
-share/locale/uk_UA/LC_MESSAGES/libgirara-gtk3-3.mo
+share/locale/ar/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/de/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/el/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/eo/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/es/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/fa_IR/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/fr/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/he/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/it/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/nl/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/pl/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/pt_BR/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/ru/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/sv/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/tr/LC_MESSAGES/libgirara-gtk3-4.mo
+share/locale/uk_UA/LC_MESSAGES/libgirara-gtk3-4.mo
