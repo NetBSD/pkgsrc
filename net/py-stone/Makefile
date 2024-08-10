@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/08/10 07:39:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/10 16:13:41 wiz Exp $
 
 DISTNAME=	stone-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Interface description language (IDL) for APIs
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=5.3.2:../../devel/py-test-runner
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
