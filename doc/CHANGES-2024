@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4977 2024/08/10 08:13:27 js Exp $
+$NetBSD: CHANGES-2024,v 1.4978 2024/08/10 08:17:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7798,3 +7798,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-orjson to 3.10.7 [adam 2024-08-10]
 	Updated textproc/py-odfpy to 1.4.1nb3 [wiz 2024-08-10]
 	Added textproc/py-jschon version 0.11.1 [js 2024-08-10]
+	Updated time/py-arrow to 1.3.0nb1 [wiz 2024-08-10]
