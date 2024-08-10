@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2024/04/05 17:31:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2024/08/10 13:50:13 gdt Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -1535,9 +1535,6 @@ ${PYSITELIB}/twisted/python/test/test_urlpath.pyo
 ${PYSITELIB}/twisted/python/test/test_util.py
 ${PYSITELIB}/twisted/python/test/test_util.pyc
 ${PYSITELIB}/twisted/python/test/test_util.pyo
-${PYSITELIB}/twisted/python/test/test_versions.py
-${PYSITELIB}/twisted/python/test/test_versions.pyc
-${PYSITELIB}/twisted/python/test/test_versions.pyo
 ${PYSITELIB}/twisted/python/test/test_win32.py
 ${PYSITELIB}/twisted/python/test/test_win32.pyc
 ${PYSITELIB}/twisted/python/test/test_win32.pyo
@@ -1776,6 +1773,12 @@ ${PYSITELIB}/twisted/test/stdio_test_consumer.pyo
 ${PYSITELIB}/twisted/test/stdio_test_halfclose.py
 ${PYSITELIB}/twisted/test/stdio_test_halfclose.pyc
 ${PYSITELIB}/twisted/test/stdio_test_halfclose.pyo
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy.py
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy.pyc
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy.pyo
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy_write.py
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy_write.pyc
+${PYSITELIB}/twisted/test/stdio_test_halfclose_buggy_write.pyo
 ${PYSITELIB}/twisted/test/stdio_test_hostpeer.py
 ${PYSITELIB}/twisted/test/stdio_test_hostpeer.pyc
 ${PYSITELIB}/twisted/test/stdio_test_hostpeer.pyo
@@ -2294,9 +2297,6 @@ ${PYSITELIB}/twisted/web/script.pyo
 ${PYSITELIB}/twisted/web/server.py
 ${PYSITELIB}/twisted/web/server.pyc
 ${PYSITELIB}/twisted/web/server.pyo
-${PYSITELIB}/twisted/web/soap.py
-${PYSITELIB}/twisted/web/soap.pyc
-${PYSITELIB}/twisted/web/soap.pyo
 ${PYSITELIB}/twisted/web/static.py
 ${PYSITELIB}/twisted/web/static.pyc
 ${PYSITELIB}/twisted/web/static.pyo
@@ -2372,9 +2372,6 @@ ${PYSITELIB}/twisted/web/test/test_resource.pyo
 ${PYSITELIB}/twisted/web/test/test_script.py
 ${PYSITELIB}/twisted/web/test/test_script.pyc
 ${PYSITELIB}/twisted/web/test/test_script.pyo
-${PYSITELIB}/twisted/web/test/test_soap.py
-${PYSITELIB}/twisted/web/test/test_soap.pyc
-${PYSITELIB}/twisted/web/test/test_soap.pyo
 ${PYSITELIB}/twisted/web/test/test_stan.py
 ${PYSITELIB}/twisted/web/test/test_stan.pyc
 ${PYSITELIB}/twisted/web/test/test_stan.pyo
