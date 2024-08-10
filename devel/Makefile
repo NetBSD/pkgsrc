@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4328 2024/08/10 08:25:42 js Exp $
+# $NetBSD: Makefile,v 1.4329 2024/08/10 10:56:56 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2423,6 +2423,7 @@ SUBDIR+=	py-aiosignal
 SUBDIR+=	py-aiostream
 SUBDIR+=	py-aiounittest
 SUBDIR+=	py-allpairspy
+SUBDIR+=	py-amaranth
 SUBDIR+=	py-angr
 SUBDIR+=	py-anyio
 SUBDIR+=	py-anytree
