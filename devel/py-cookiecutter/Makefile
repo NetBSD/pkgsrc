@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/02/22 08:43:55 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/10 06:32:22 wiz Exp $
 
 DISTNAME=	cookiecutter-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,9 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.3.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# as of 2.6.0
+# 12 failed, 355 passed, 4 skipped
 
 USE_LANGUAGES=	# none
 
