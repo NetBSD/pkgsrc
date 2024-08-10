@@ -1,6 +1,6 @@
-$NetBSD: patch-doc_meson.build,v 1.3 2019/10/27 10:43:43 nia Exp $
+$NetBSD: patch-doc_meson.build,v 1.4 2024/08/10 07:50:33 adam Exp $
 
-Also search for versioned sphinx-build-s.
+Also search for versioned sphinx-build.
 
 --- doc/meson.build.orig	2018-12-22 15:33:23.000000000 +0000
 +++ doc/meson.build
