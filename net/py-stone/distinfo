@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/08/10 16:13:41 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/08/10 16:14:40 wiz Exp $
 
 BLAKE2s (stone-3.3.8.tar.gz) = 10b8cde71a769943be8ad29440631fc5ebbed122a16b9ce8c7c94dcdd18401a9
 SHA512 (stone-3.3.8.tar.gz) = 134f6e70de98836d2f27999386c059de7aeb42fa5f1dfb2481a003035ec25ed8bfe110ddbd0bb2f906482d22367688cc433799eee2ca07d72a82635234218a56
 Size (stone-3.3.8.tar.gz) = 189586 bytes
-SHA1 (patch-setup.py) = 93ed205788aeca24eb17de184c441a2b25f1ce9f
+SHA1 (patch-setup.py) = 095845d650cf242b4c26785f8ed0bdb8a437993c
 SHA1 (patch-test_requirements.txt) = 7b160453cb63be7741073d3c36469b0aef59825c
