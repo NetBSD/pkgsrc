@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2024/08/10 14:18:49 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/10 15:56:28 js Exp $
 
 # IMPORTANT: When updating this, extract the METADATA file from the PyPI wheel
 # as PKG-INFO and update the patch!
 DISTNAME=	fx2-0.13
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=whitequark/}
 GITHUB_PROJECT=	libfx2
@@ -18,7 +19,7 @@ LICENSE=	0-clause-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-usb-[0-9]*:../../devel/py-usb
+DEPENDS+=	${PYPKGPREFIX}-libusb1-[0-9]*:../../devel/py-libusb1
 
 USE_LANGUAGES=	# none
 
