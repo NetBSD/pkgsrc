@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.33 2024/08/10 11:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/10 11:39:12 wiz Exp $
 
-DISTNAME=	terminator-2.1.0
+DISTNAME=	terminator-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnome-terminator/}
 GITHUB_PROJECT=	terminator
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://launchpad.net/terminator
+HOMEPAGE=	https://github.com/gnome-terminator/terminator
 COMMENT=	Terminator, multiple terminals in one window
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dbus-[0-9]*:../../sysutils/py-dbus
@@ -38,6 +36,9 @@ SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# as of 2.1.4
+# 6 warnings, 46 errors
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
