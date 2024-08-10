@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/10 23:51:48 js Exp $
+
+BLAKE2s (cryptopassphrase-1.0.tar.gz) = 69bb0158585301ebe54f0d782feb1af1aaaa2554222545fa93ecae7c0e568e28
+SHA512 (cryptopassphrase-1.0.tar.gz) = 9faa3ed7fa08abf0873b47d919a679c8a50b45a7fffd9f5d6380bca11b5f53d23d24e9f3c5f9749a671ba60631a15b59944c0730dd2002752837467a2b6f370b
+Size (cryptopassphrase-1.0.tar.gz) = 637913 bytes
