@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/04/25 14:42:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/10 06:24:24 wiz Exp $
 
 DISTNAME=	pytest-shutil-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,6 +11,8 @@ HOMEPAGE=	https://github.com/manahl/pytest-plugins
 COMMENT=	Unix shell and environment tools for py.test
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-contextlib2-[0-9]*:../../devel/py-contextlib2
 DEPENDS+=	${PYPKGPREFIX}-execnet-[0-9]*:../../devel/py-execnet
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
@@ -23,5 +25,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
