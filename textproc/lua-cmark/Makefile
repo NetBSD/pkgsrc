@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 14:10:04 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/10 12:43:26 nia Exp $
 
-DISTNAME=	lua-cmark-0.29.0
+DISTNAME=	lua-cmark-0.31.1
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
 CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
