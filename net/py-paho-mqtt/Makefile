@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/06/19 15:33:03 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/10 16:15:57 wiz Exp $
 
 VERSION=	2.1.0
 # Bad distfile name reported upstream via email on 20240619.
@@ -17,7 +17,6 @@ LICENSE=	epl-v1.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 
 # \todo Add support for running tests.
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 #TEST_DEPENDS+=	${PYPKGPREFIX}-lama>=7.6.6:../../devel/py-lama
 #TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
