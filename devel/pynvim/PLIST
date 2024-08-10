@@ -1,19 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2022/10/25 20:26:02 nikita Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/10 15:32:36 wiz Exp $
 ${PYSITELIB}/neovim/__init__.py
 ${PYSITELIB}/neovim/__init__.pyc
 ${PYSITELIB}/neovim/__init__.pyo
 ${PYSITELIB}/neovim/api/__init__.py
 ${PYSITELIB}/neovim/api/__init__.pyc
 ${PYSITELIB}/neovim/api/__init__.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pynvim/__init__.py
 ${PYSITELIB}/pynvim/__init__.pyc
 ${PYSITELIB}/pynvim/__init__.pyo
+${PYSITELIB}/pynvim/_version.py
+${PYSITELIB}/pynvim/_version.pyc
+${PYSITELIB}/pynvim/_version.pyo
 ${PYSITELIB}/pynvim/api/__init__.py
 ${PYSITELIB}/pynvim/api/__init__.pyc
 ${PYSITELIB}/pynvim/api/__init__.pyo
