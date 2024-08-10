@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/08/18 01:01:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/10 08:10:03 wiz Exp $
 bin/csv2ods-${PYVERSSUFFIX}
 bin/mailodf-${PYVERSSUFFIX}
 bin/odf2mht-${PYVERSSUFFIX}
@@ -10,11 +10,6 @@ bin/odfmeta-${PYVERSSUFFIX}
 bin/odfoutline-${PYVERSSUFFIX}
 bin/odfuserfield-${PYVERSSUFFIX}
 bin/xml2odf-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/odf/__init__.py
 ${PYSITELIB}/odf/__init__.pyc
 ${PYSITELIB}/odf/__init__.pyo
@@ -117,6 +112,10 @@ ${PYSITELIB}/odf/userfield.pyo
 ${PYSITELIB}/odf/xforms.py
 ${PYSITELIB}/odf/xforms.pyc
 ${PYSITELIB}/odf/xforms.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/csv2ods-${PYVERSSUFFIX}.1
 man/man1/mailodf-${PYVERSSUFFIX}.1
 man/man1/odf2mht-${PYVERSSUFFIX}.1
