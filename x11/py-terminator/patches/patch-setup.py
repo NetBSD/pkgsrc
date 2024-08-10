@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.4 2021/01/24 11:15:07 kamil Exp $
+$NetBSD: patch-setup.py,v 1.5 2024/08/10 11:33:31 wiz Exp $
 
 Use the right path for man-pages in pkgsrc.
 
@@ -19,8 +19,11 @@ Install the man pages in the right directory.
  
  test_deps = [
      'pytest'
-@@ -246,4 +242,3 @@ setup(name=APP_NAME,
-       package_data={'terminatorlib': ['preferences.glade', 'layoutlauncher.glade']},
-       cmdclass={'build': BuildData, 'install_data': InstallData, 'uninstall': Uninstall},
-       distclass=TerminatorDist)
--
+@@ -232,7 +228,6 @@ setup(name=APP_NAME,
+           'terminatorlib.plugins',
+       ],
+       setup_requires=[
+-          'pytest-runner',
+       ],
+       install_requires=[
+           'pycairo',
