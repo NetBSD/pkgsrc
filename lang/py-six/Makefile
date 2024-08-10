@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/06/05 22:44:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/10 07:01:19 wiz Exp $
 
 DISTNAME=	six-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,10 +16,14 @@ USE_LANGUAGES=	# none
 PYSETUPTESTTARGET=	pytest
 
 PYTHON_27_ACCEPTED=	yes
+
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} > 300
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+= ${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+do-test:
+	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
+	${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 .endif
 
 .include "../../lang/python/egg.mk"
