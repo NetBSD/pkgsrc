@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4327 2024/08/09 18:52:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4328 2024/08/10 08:25:42 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2988,6 +2988,7 @@ SUBDIR+=	py-pyte
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pytype
 SUBDIR+=	py-pyutil
+SUBDIR+=	py-pyvcd
 SUBDIR+=	py-pyvex
 SUBDIR+=	py-queuelib
 SUBDIR+=	py-quixote
