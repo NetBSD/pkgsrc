@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.9 2024/07/07 11:00:37 wiz Exp $
+# $NetBSD: rust.mk,v 1.10 2024/08/10 10:50:42 js Exp $
 #
 # This file determines the type of rust package to use.
 #
@@ -14,7 +14,7 @@
 #	Official Rust binaries are only published for certain platforms,
 #	including Darwin, FreeBSD, Linux, and NetBSD x86_64.
 #
-#	Possible values: src bin
+#	Possible values: src bin native
 #	Default: src
 #
 # === Package-settable variables ===
