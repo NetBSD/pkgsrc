@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2021/01/20 21:06:30 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2024/08/10 07:14:15 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/dropbox/__init__.py
 ${PYSITELIB}/dropbox/__init__.pyc
 ${PYSITELIB}/dropbox/__init__.pyo
@@ -53,6 +52,9 @@ ${PYSITELIB}/dropbox/files.pyo
 ${PYSITELIB}/dropbox/oauth.py
 ${PYSITELIB}/dropbox/oauth.pyc
 ${PYSITELIB}/dropbox/oauth.pyo
+${PYSITELIB}/dropbox/openid.py
+${PYSITELIB}/dropbox/openid.pyc
+${PYSITELIB}/dropbox/openid.pyo
 ${PYSITELIB}/dropbox/paper.py
 ${PYSITELIB}/dropbox/paper.pyc
 ${PYSITELIB}/dropbox/paper.pyo
@@ -89,7 +91,6 @@ ${PYSITELIB}/dropbox/team_log.pyo
 ${PYSITELIB}/dropbox/team_policies.py
 ${PYSITELIB}/dropbox/team_policies.pyc
 ${PYSITELIB}/dropbox/team_policies.pyo
-${PYSITELIB}/dropbox/trusted-certs.crt
 ${PYSITELIB}/dropbox/users.py
 ${PYSITELIB}/dropbox/users.pyc
 ${PYSITELIB}/dropbox/users.pyo
