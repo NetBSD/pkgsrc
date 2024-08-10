@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/13 06:29:07 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/10 07:56:35 adam Exp $
 
 DISTNAME=	sphinx_inline_tabs-2023.4.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
