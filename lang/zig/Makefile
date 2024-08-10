@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/07/06 16:23:03 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/10 10:19:01 nia Exp $
 
 DISTNAME=	zig-0.13.0
 CATEGORIES=	lang
@@ -33,7 +33,7 @@ UNLIMIT_RESOURCES=	stacksize
 
 # again, sigh...
 RELRO_SUPPORTED=	no
-#MKPIE_SUPPORTED=	no
+MKPIE_SUPPORTED=	no
 # TODO: /usr/bin/env + /bin/env in lib/std/zig/system.zig
 
 # after install, because the zig binary ends up in paths like
