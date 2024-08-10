@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/07/03 08:09:36 adam Exp $
+# $NetBSD: Makefile,v 1.51 2024/08/10 07:51:43 wiz Exp $
 
 DISTNAME=	weasyprint-62.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-tinycss2>=1.3.0:../../textproc/py-tinycss2
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=	c
 
