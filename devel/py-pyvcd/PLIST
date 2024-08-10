@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/10 08:25:42 js Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/vcd/__init__.py
+${PYSITELIB}/vcd/__init__.pyc
+${PYSITELIB}/vcd/__init__.pyo
+${PYSITELIB}/vcd/common.py
+${PYSITELIB}/vcd/common.pyc
+${PYSITELIB}/vcd/common.pyo
+${PYSITELIB}/vcd/gtkw.py
+${PYSITELIB}/vcd/gtkw.pyc
+${PYSITELIB}/vcd/gtkw.pyo
+${PYSITELIB}/vcd/py.typed
+${PYSITELIB}/vcd/reader.py
+${PYSITELIB}/vcd/reader.pyc
+${PYSITELIB}/vcd/reader.pyo
+${PYSITELIB}/vcd/writer.py
+${PYSITELIB}/vcd/writer.pyc
+${PYSITELIB}/vcd/writer.pyo
