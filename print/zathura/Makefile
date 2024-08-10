@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2024/05/29 16:34:12 adam Exp $
+# $NetBSD: Makefile,v 1.66 2024/08/10 07:50:33 adam Exp $
 
-DISTNAME=	zathura-0.5.4
-PKGREVISION=	1
+DISTNAME=	zathura-0.5.8
 CATEGORIES=	print
 MASTER_SITES=	https://pwmt.org/projects/zathura/download/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 # Avoid possible dependency on librsvg
 MESON_ARGS+=	-D convert-icon=disabled
@@ -35,13 +34,17 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 .if ${OPSYS} == "NetBSD"
 # Needs --desktop and --xml
 TOOLS_PLATFORM.msgfmt=
+.elif ${OPSYS} == "Darwin"
+.include "../../x11/gtk-mac-integration/buildlink3.mk"
 .endif
+
+USE_BUILTIN.file=	no # pkgconfig files are needed
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/meson/build.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.girara?=	girara>=0.3.7
+BUILDLINK_API_DEPENDS.girara+=	girara>=0.4.3
 .include "../../graphics/girara/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
