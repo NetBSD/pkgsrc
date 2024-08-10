@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/04 21:48:31 nikita Exp $
+$NetBSD: distinfo,v 1.9 2024/08/10 07:50:58 adam Exp $
 
-BLAKE2s (zathura-pdf-poppler-0.3.2.tar.xz) = b6278aefa345093cba757e90bf58d090859a43d2d2c7d2a1081931d21be663af
-SHA512 (zathura-pdf-poppler-0.3.2.tar.xz) = a24c4ae3f423c4bff2ec52bae9c171fe4296f738fdb3dd6bc7037d56210b5f03ffa6d6676c54b092ddb5f9e3bf7afef1a05239e1478c0c0da58091dbda1cf09f
-Size (zathura-pdf-poppler-0.3.2.tar.xz) = 9976 bytes
+BLAKE2s (zathura-pdf-poppler-0.3.3.tar.xz) = 8d65c287f5146c34dde7fcf8b1b55947d647efd1705c7fd25bc32aaa90655165
+SHA512 (zathura-pdf-poppler-0.3.3.tar.xz) = 8aeebd0218e82888a1dd0449bcc3f3d7ef0086e99d42d5de38f21770d23c2035c3f9162ab13891cd622108775d13d11f3ac64b8699dbd17a052ad910da9c1db0
+Size (zathura-pdf-poppler-0.3.3.tar.xz) = 9832 bytes
