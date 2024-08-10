@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.37 2024/05/04 20:06:55 tnn Exp $
+# $NetBSD: cargo.mk,v 1.38 2024/08/10 11:17:31 js Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
@@ -70,6 +70,11 @@ print-cargo-depends:
 			print "CARGO_CRATE_DEPENDS+=\t" name "-" vers;	\
 			}' ${CARGO_WRKSRC}/Cargo.lock
 
+.if ${RUST_TYPE} == "native"
+CARGO=			cargo
+.else
+CARGO=			${PREFIX}/bin/cargo
+.endif
 DEFAULT_CARGO_ARGS=	--offline -j${_MAKE_JOBS_N}	\
 			  ${CARGO_NO_DEFAULT_FEATURES:M[yY][eE][sS]:C/[yY][eE][sS]/--no-default-features/}	\
 			  ${CARGO_FEATURES:C/.*/--features/W}	\
@@ -86,7 +91,7 @@ do-build: do-cargo-build
 
 .PHONY: do-cargo-build
 do-cargo-build:
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_ARGS}
+	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} ${CARGO_ARGS}
 
 .if !target(do-install) && ${GNU_CONFIGURE:Uno:tl} == no
 do-install: do-cargo-install
@@ -94,7 +99,7 @@ do-install: do-cargo-install
 
 .PHONY: do-cargo-install
 do-cargo-install:
-	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_INSTALL_ARGS}
+	${RUN} cd ${CARGO_WRKSRC} && ${SETENV} ${MAKE_ENV} ${CARGO} ${CARGO_INSTALL_ARGS}
 	# remove files cargo uses for tracking installations
 	${RM} -f ${DESTDIR}${PREFIX}/.crates.toml
 	${RM} -f ${DESTDIR}${PREFIX}/.crates2.json
