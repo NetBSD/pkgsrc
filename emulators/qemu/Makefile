@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2024/07/17 04:12:47 adam Exp $
+# $NetBSD: Makefile,v 1.348 2024/08/10 07:00:51 adam Exp $
 
 DISTNAME=	qemu-9.0.2
 CATEGORIES=	emulators
@@ -24,7 +24,7 @@ HAS_CONFIGURE=		yes
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 .include "options.mk"
 
