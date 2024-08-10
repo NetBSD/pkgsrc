@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/06/11 11:44:53 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/10 07:39:59 wiz Exp $
 
-DISTNAME=	stone-3.3.6
+DISTNAME=	stone-3.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stone/}
