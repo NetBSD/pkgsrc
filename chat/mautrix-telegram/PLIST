@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/04/23 13:49:50 js Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/08/10 06:26:23 wiz Exp $
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/LICENSE
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/METADATA
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/RECORD
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/WHEEL
+${PYSITELIB}/mautrix_telegram-${PKGVERSION}+dev.unknown.dist-info/top_level.txt
 ${PYSITELIB}/mautrix_telegram/__init__.py
 ${PYSITELIB}/mautrix_telegram/__init__.pyc
 ${PYSITELIB}/mautrix_telegram/__init__.pyo
