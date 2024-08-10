@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2023/12/02 08:25:21 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/08/10 15:46:27 wiz Exp $
 
 BLAKE2s (pygal-3.0.4.tar.gz) = ccc21b8cbd50a7bb026d55601c938fab3f8fdf627aef9b502c99e34646e7edbe
 SHA512 (pygal-3.0.4.tar.gz) = ed9c74a256b1155ac18a6dfc1fd9ade75b010b759f99ed33ba3c1f0e3dd6c4c19f9917aa6ce5bee300c793df74429d8fedf6ce3dbc60019be5cbe839f26abd70
 Size (pygal-3.0.4.tar.gz) = 81840 bytes
+SHA1 (patch-setup.py) = adee32a5a3fd199d2f2c7931cd9e0d2c87f99ee8

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/12/02 08:25:21 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/10 15:46:27 wiz Exp $
 
 DISTNAME=	pygal-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python SVG graph plotting library
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 # png
@@ -27,6 +26,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# as of 3.0.4
+# 4414 passed, 8710 warnings
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
