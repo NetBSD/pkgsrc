@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4997 2024/08/10 12:59:04 nia Exp $
+$NetBSD: CHANGES-2024,v 1.4998 2024/08/10 13:20:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7822,3 +7822,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/lua-cmark to 0.31.1 [nia 2024-08-10]
 	Updated games/stone-soup-sdl to 0.31.0 [nia 2024-08-10]
 	Updated games/stone-soup to 0.31.0 [nia 2024-08-10]
+	Updated chat/srain to 1.7.0 [adam 2024-08-10]
+	Updated print/py-pikepdf to 9.1.1 [adam 2024-08-10]
