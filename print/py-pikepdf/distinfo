@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/07/26 06:53:25 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/08/10 13:20:11 adam Exp $
 
-BLAKE2s (pikepdf-9.1.0.tar.gz) = da43604b8d4862ccf380f7dcf5dfd7d0ba93dfb34d4d89ba08196c6302d268dc
-SHA512 (pikepdf-9.1.0.tar.gz) = 0fbf1ca151b6a234cd23a5148c9e8e4e033c5da5c935b4786fe6167555da7016c55b124dd2f9e8dc414c9782829f38412227820229a8459cc9dbe03220620fae
-Size (pikepdf-9.1.0.tar.gz) = 2869103 bytes
+BLAKE2s (pikepdf-9.1.1.tar.gz) = 3c19257d5ad1a525b584de71f3b3320d596f6888f65250ac88817c5da6cfe669
+SHA512 (pikepdf-9.1.1.tar.gz) = 0b3c2c89d9226212806791e00470c2c64147f0738d26bfe9c5288414cf515760213e3cdc70a62ef3f53a0ee43b7d8e2cc0076f14fe22bdbac2ff50e0a8984164
+Size (pikepdf-9.1.1.tar.gz) = 2869514 bytes
