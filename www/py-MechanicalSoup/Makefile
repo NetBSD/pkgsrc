@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/11/07 22:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/10 09:22:58 wiz Exp $
 
 DISTNAME=	MechanicalSoup-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MechanicalSoup/}
 
@@ -10,7 +11,8 @@ HOMEPAGE=	https://github.com/hickford/MechanicalSoup
 COMMENT=	Library for automating interaction with websites
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.7:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
@@ -26,5 +28,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+# as of 1.3.0
+# 69 failed, 66 passed
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
