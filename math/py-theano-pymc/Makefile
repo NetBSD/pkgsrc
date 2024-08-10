@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/05 19:32:15 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/10 06:00:14 wiz Exp $
 
 DISTNAME=	Theano-PyMC-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.14:../../math/py-scipy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+REPLACE_SH+=			theano/misc/check_blas_many.sh
 
 # Prefer versioneer from pkgsrc.
 post-extract:
