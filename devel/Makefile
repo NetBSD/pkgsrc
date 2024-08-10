@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4330 2024/08/10 14:18:49 js Exp $
+# $NetBSD: Makefile,v 1.4331 2024/08/10 16:01:57 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -443,6 +443,7 @@ SUBDIR+=	gitnr
 SUBDIR+=	gitolite
 SUBDIR+=	gitui
 SUBDIR+=	glade
+SUBDIR+=	glasgow
 SUBDIR+=	glib
 SUBDIR+=	glib2
 SUBDIR+=	glib2-tools
