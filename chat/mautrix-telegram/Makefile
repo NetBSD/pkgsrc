@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/12/01 11:10:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/10 06:26:23 wiz Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mautrix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,8 +13,8 @@ HOMEPAGE=	https://github.com/mautrix/telegram
 COMMENT=	Matrix-Telegram hybrid puppeting/relaybot bridge
 LICENSE=	gnu-agpl-v3
 
-# pytest-runner
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic
@@ -34,13 +34,11 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # py-mautrix
 
-EGG_NAME=	mautrix_telegram-${PKGVERSION_NOREV}+dev.unknown
-
 INSTALLATION_DIRS+=	share/mautrix-telegram
 
 post-install:
 	mv ${DESTDIR}${PREFIX}/example-config.yaml \
 		${DESTDIR}${PREFIX}/share/mautrix-telegram/
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
