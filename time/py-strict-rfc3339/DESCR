@@ -1,0 +1,11 @@
+Strict, simple, lightweight RFC3339 functions
+
+Goals
+-----
+
+ - Convert unix timestamps to and from RFC3339.
+ - Either produce RFC3339 strings with a UTC offset (Z) or with the offset
+   that the C time module reports is the local timezone offset.
+ - Simple with minimal dependencies/libraries.
+ - Avoid timezones as much as possible.
+ - Be very strict and follow RFC3339.
