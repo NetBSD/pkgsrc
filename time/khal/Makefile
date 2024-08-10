@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/02/19 11:51:43 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/10 07:49:06 adam Exp $
 
 DISTNAME=	khal-0.11.3
 CATEGORIES=	time net python
@@ -32,7 +32,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 INSTALLATION_DIRS=	share/doc/khal ${PKGMANDIR}/man1
 REPLACE_PYTHON+=	khal/*/*.py
