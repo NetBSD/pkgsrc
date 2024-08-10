@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2021/11/23 13:38:29 cirnatdan Exp $
+$NetBSD: distinfo,v 1.37 2024/08/10 22:21:23 wiz Exp $
 
-BLAKE2s (zenity-3.41.0.tar.xz) = 8da4d9053a5913effa5576c5745ba9f169be02b8e135fd1b76428afc29b294ff
-SHA512 (zenity-3.41.0.tar.xz) = b198ae68fda77f74c9f6deba683759612067c4ee28551a667c96500296db89313f3f2330fcaa53b6e4840ee3367d438e766be8ba7c006952872aebe93684b307
-Size (zenity-3.41.0.tar.xz) = 3093244 bytes
+BLAKE2s (zenity-4.0.1.tar.xz) = 47b77621f91376b79ff12aa525f8fcde0f8baa110e2b6eee7a657b7f675e6924
+SHA512 (zenity-4.0.1.tar.xz) = f84e14fd66dbe6bd21d030c1879d8d44250bc8c0661c5ccb6cad7fe8d257e4b01427ce27894cf5a5c27566113587f6b34adc9051826e870e44b836b5c63fb11f
+Size (zenity-4.0.1.tar.xz) = 3093476 bytes
