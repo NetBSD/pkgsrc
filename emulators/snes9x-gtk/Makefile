@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.108 2024/05/29 16:32:27 adam Exp $
+# $NetBSD: Makefile,v 1.109 2024/08/10 12:04:36 nia Exp $
 
-PKGREVISION= 4
 .include "../../emulators/snes9x/Makefile.common"
 
 PKGNAME=	snes9x-gtk-${SNES9X_VERSION}
@@ -33,7 +32,7 @@ USE_CXX_FEATURES+=	c++17 filesystem
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_MESSAGE.oss=	Correct path to OSS device.
-SUBST_FILES.oss+=	gtk/src/gtk_sound_driver_oss.cpp
+SUBST_FILES.oss+=	common/audio/s9x_sound_driver_oss.cpp
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 LDFLAGS+=		${LIBOSSAUDIO}
 .else
