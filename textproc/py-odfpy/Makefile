@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/09/28 22:12:46 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/10 08:10:03 wiz Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/odfpy/}
 
@@ -11,14 +11,16 @@ HOMEPAGE=	https://github.com/eea/odfpy
 COMMENT=	Python API and tools to manipulate OpenDocument files
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# as of 1.4.1
+# 115 passed, 1 skipped
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-PYSETUPTESTTARGET=	pytest
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
@@ -37,5 +39,5 @@ post-install:
 	      ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${bin}-${PYVERSSUFFIX}.1
 .endfor
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
