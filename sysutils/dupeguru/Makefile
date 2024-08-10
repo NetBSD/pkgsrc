@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2023/11/07 22:38:04 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/10 07:54:16 adam Exp $
 
 DISTNAME=	dupeguru-src-4.0.4_RC
 PKGNAME=	${DISTNAME:S/-src//:S/_RC/rc1/}
@@ -23,7 +23,7 @@ WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c
 USE_TOOLS=		gmake pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 REPLACE_PYTHON+=		run.py
 
 MAKE_ENV+=	PYRCC5=pyrcc5-${PYVERSSUFFIX}
