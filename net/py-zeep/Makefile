@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2023/11/07 22:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/10 07:43:46 wiz Exp $
 
 DISTNAME=	zeep-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
 
@@ -10,6 +11,8 @@ HOMEPAGE=	https://docs.python-zeep.org/
 COMMENT=	Fast and modern Python SOAP client
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-isodate>=0.5.4:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.0:../../textproc/py-lxml
@@ -24,15 +27,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock>=0.7.0:../../devel/py-requests-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=6.2.5:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.8.1:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpx-[0-9]:../../www/py-test-httpx
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpx-[0-9]*:../../www/py-test-httpx
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+# 471 passed, 18 skipped, 32 warnings
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
