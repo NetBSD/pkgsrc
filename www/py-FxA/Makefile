@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/20 10:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/10 09:18:29 wiz Exp $
 
 DISTNAME=	PyFxA-0.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -21,7 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.14:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-grequests>=0:../../net/py-grequests
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../net/py-responses
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.4:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner>=4.5.1:../../devel/py-test-runner
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-otp>=0:../../security/py-otp
@@ -32,7 +31,7 @@ USE_TOOLS+=	ftp:test
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # test status as of 0.7.8
-# 18 failed, 97 passed, 1 skipped, 1 warning
+# 18 failed, 97 passed, 1 skipped, 4 warnings
 # https://github.com/mozilla/PyFxA/issues/95
 
 # missing files in distfile
