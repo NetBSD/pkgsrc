@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2022/12/15 12:25:31 nia Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/10 12:58:39 nia Exp $
 bin/crawl
 share/stone-soup/dat/clua/autofight.lua
 share/stone-soup/dat/clua/automagic.lua
@@ -27,6 +27,15 @@ share/stone-soup/dat/database/randbook.txt
 share/stone-soup/dat/database/randname.txt
 share/stone-soup/dat/database/shout.txt
 share/stone-soup/dat/database/wpnnoise.txt
+share/stone-soup/dat/database/zh/FAQ.txt
+share/stone-soup/dat/database/zh/godname.txt
+share/stone-soup/dat/database/zh/godspeak.txt
+share/stone-soup/dat/database/zh/help.txt
+share/stone-soup/dat/database/zh/miscname.txt
+share/stone-soup/dat/database/zh/monflee.txt
+share/stone-soup/dat/database/zh/monspell.txt
+share/stone-soup/dat/database/zh/montitle.txt
+share/stone-soup/dat/database/zh/shout.txt
 share/stone-soup/dat/defaults/autopickup_exceptions.txt
 share/stone-soup/dat/defaults/glyph_colours.txt
 share/stone-soup/dat/defaults/menu_colours.txt
@@ -88,6 +97,7 @@ share/stone-soup/dat/des/branches/vaults_rooms_standard.des
 share/stone-soup/dat/des/branches/zot.des
 share/stone-soup/dat/des/builder/alphashops.des
 share/stone-soup/dat/des/builder/arena.des
+share/stone-soup/dat/des/builder/custombooks.des
 share/stone-soup/dat/des/builder/decor.des
 share/stone-soup/dat/des/builder/dummy.des
 share/stone-soup/dat/des/builder/layout.des
@@ -132,6 +142,7 @@ share/stone-soup/dat/des/serial/forest.des
 share/stone-soup/dat/des/serial/glass.des
 share/stone-soup/dat/des/serial/gnoll_camp.des
 share/stone-soup/dat/des/serial/ice.des
+share/stone-soup/dat/des/serial/library.des
 share/stone-soup/dat/des/serial/magic_research.des
 share/stone-soup/dat/des/serial/park.des
 share/stone-soup/dat/des/serial/rivers.des
@@ -362,6 +373,7 @@ share/stone-soup/dat/descript/mutations.txt
 share/stone-soup/dat/descript/nl/ability.txt
 share/stone-soup/dat/descript/nl/tutorial.txt
 share/stone-soup/dat/descript/nl/unident.txt
+share/stone-soup/dat/descript/passives.txt
 share/stone-soup/dat/descript/pl/ability.txt
 share/stone-soup/dat/descript/pl/backgrounds.txt
 share/stone-soup/dat/descript/pl/cards.txt
@@ -436,10 +448,13 @@ share/stone-soup/dat/descript/zh/gods.txt
 share/stone-soup/dat/descript/zh/hints.txt
 share/stone-soup/dat/descript/zh/items.txt
 share/stone-soup/dat/descript/zh/monsters.txt
+share/stone-soup/dat/descript/zh/mutations.txt
+share/stone-soup/dat/descript/zh/passives.txt
 share/stone-soup/dat/descript/zh/quotes.txt
 share/stone-soup/dat/descript/zh/skills.txt
 share/stone-soup/dat/descript/zh/species.txt
 share/stone-soup/dat/descript/zh/spells.txt
+share/stone-soup/dat/descript/zh/status.txt
 share/stone-soup/dat/descript/zh/tutorial.txt
 share/stone-soup/dat/descript/zh/unident.txt
 share/stone-soup/dat/descript/zh/unrand.txt
@@ -520,10 +535,10 @@ share/stone-soup/dat/dlua/lm_fog.lua
 share/stone-soup/dat/dlua/lm_items.lua
 share/stone-soup/dat/dlua/lm_mon_prop.lua
 share/stone-soup/dat/dlua/lm_monst.lua
-share/stone-soup/dat/dlua/lm_mslav.lua
 share/stone-soup/dat/dlua/lm_named_hatch.lua
 share/stone-soup/dat/dlua/lm_pdesc.lua
 share/stone-soup/dat/dlua/lm_props.lua
+share/stone-soup/dat/dlua/lm_replica.lua
 share/stone-soup/dat/dlua/lm_timed.lua
 share/stone-soup/dat/dlua/lm_tmsg.lua
 share/stone-soup/dat/dlua/lm_toll.lua
@@ -561,7 +576,6 @@ share/stone-soup/docs/crawl_manual.txt
 share/stone-soup/docs/develop/IRC.txt
 share/stone-soup/docs/develop/android.txt
 share/stone-soup/docs/develop/arena.txt
-share/stone-soup/docs/develop/background_creation.txt
 share/stone-soup/docs/develop/ctags.txt
 share/stone-soup/docs/develop/editor_tips.txt
 share/stone-soup/docs/develop/gdb_tips.txt
@@ -594,18 +608,6 @@ share/stone-soup/docs/quickstart.md
 share/stone-soup/docs/quickstart.txt
 share/stone-soup/docs/ssh_guide.txt
 share/stone-soup/docs/tiles_help.txt
-share/stone-soup/settings/0.12_monster_glyphs.txt
-share/stone-soup/settings/0.13_monster_glyphs.txt
-share/stone-soup/settings/0.14_monster_glyphs.txt
-share/stone-soup/settings/0.16_monster_glyphs.txt
-share/stone-soup/settings/0.17_monster_glyphs.txt
-share/stone-soup/settings/0.18_monster_glyphs.txt
-share/stone-soup/settings/0.9_monster_glyphs.txt
-share/stone-soup/settings/034_command_keys.txt
-share/stone-soup/settings/052_monster_glyphs.txt
-share/stone-soup/settings/060_monster_glyphs.txt
-share/stone-soup/settings/071_monster_glyphs.txt
-share/stone-soup/settings/080_monster_glyphs.txt
 share/stone-soup/settings/advanced_optioneering.txt
 share/stone-soup/settings/colemak_command_keys.txt
 share/stone-soup/settings/dec_glyphs.txt
