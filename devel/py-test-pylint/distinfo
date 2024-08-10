@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/10/06 12:43:24 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/08/10 15:18:01 wiz Exp $
 
 BLAKE2s (pytest-pylint-0.21.0.tar.gz) = 5fadfd4d1c7631133a6f63d7580f778742ab857e4d29a59c806a8f103eb0329c
 SHA512 (pytest-pylint-0.21.0.tar.gz) = 5c7c7fc8ffd5fa9a3f216339db9ec965bb81d14efe6c70cff74a782e1cd092ca762a6bba1cf517decf97ff903338cf20045ec80580fd30d7f676c1e4c47fe96f
 Size (pytest-pylint-0.21.0.tar.gz) = 14250 bytes
+SHA1 (patch-setup.py) = d4ef339620520298b65d6f12427e6b1cda8f4ae5
