@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/07/09 08:08:32 triaxx Exp $
+# $NetBSD: Makefile,v 1.69 2024/08/10 08:05:20 wiz Exp $
 
 DISTNAME=	duplicity-3.0.0
 CATEGORIES=	sysutils net python
@@ -33,7 +33,9 @@ DEPENDS+=	${PYPKGPREFIX}-swiftclient-[0-9]*:../../www/py-swiftclient
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=3.0.5:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# as of 3.0.0
+# 119 failed, 324 passed, 27 skipped, 18 warnings, 2 errors
 
 GPG=	${PREFIX}/bin/gpg2
 LFTP=	${PREFIX}/bin/lftp
