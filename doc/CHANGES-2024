@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4992 2024/08/10 11:29:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4993 2024/08/10 11:39:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7814,3 +7814,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/etlegacy to 2.82.1 [nia 2024-08-10]
 	Updated www/py-wsproto to 1.2.0nb1 [wiz 2024-08-10]
 	Updated www/py-wstools to 0.4.8nb2 [wiz 2024-08-10]
+	Updated x11/py-terminator to 2.1.4 [wiz 2024-08-10]
