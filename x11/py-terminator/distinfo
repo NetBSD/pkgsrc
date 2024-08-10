@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2024/08/10 11:33:31 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/08/10 11:39:12 wiz Exp $
 
-BLAKE2s (terminator-2.1.0.tar.gz) = ab7ddf2f55be79849e35623a4b75230d1c369fd0dafd768147a3ba7386850835
-SHA512 (terminator-2.1.0.tar.gz) = 0406b0542d5b4498084968b4e49a5ae3ff10db394907930923ad76ac5edf459c976a0a5b8617fd3a14dcde464b563ae137beb33e04b5b82ae856c497abf3fd04
-Size (terminator-2.1.0.tar.gz) = 1030864 bytes
-SHA1 (patch-setup.py) = c8827cccc9c0f390136f93c72fb0037b3498d420
+BLAKE2s (terminator-2.1.4.tar.gz) = 2d428380aa7134e9f0a91bd83c165e46a041ac0697dbe7974e81c9b15729ee81
+SHA512 (terminator-2.1.4.tar.gz) = 6a6d441fa849695a5c4919db6d553ce8572f75ef66bfb6d4c7cd044d2e952428841c315a90aca0906592bdfff28ff93a17e8a0d6a72287563d1a6d3d6a319db9
+Size (terminator-2.1.4.tar.gz) = 1064970 bytes
+SHA1 (patch-setup.py) = cc42f3c4bd03becb9511911c0ff6785332cac47c
