@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1480 2024/07/22 06:20:21 adam Exp $
+# $NetBSD: Makefile,v 1.1481 2024/08/10 08:13:11 js Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1077,6 +1077,7 @@ SUBDIR+=	py-jellyfish
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jmespath
 SUBDIR+=	py-jsbeautifier
+SUBDIR+=	py-jschon
 SUBDIR+=	py-json-logger
 SUBDIR+=	py-json5
 SUBDIR+=	py-jsonlib3
