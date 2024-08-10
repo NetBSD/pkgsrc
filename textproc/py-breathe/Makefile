@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/07 22:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/10 07:57:06 adam Exp $
 
 DISTNAME=	breathe-4.35.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
