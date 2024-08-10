@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/07 22:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/10 06:42:57 wiz Exp $
 
 DISTNAME=	dictdiffer-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://github.com/inveniosoftware/dictdiffer
 COMMENT=	Library that helps you to diff and patch dictionaries
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner>=2.7:../../devel/py-test-runner
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.1.0:../../devel/py-setuptools_scm
 #TEST_DEPENDS+=	${PYPKGPREFIX}-check-manifest>=0.42:../../wip/py-check-manifest
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
@@ -27,5 +28,5 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
