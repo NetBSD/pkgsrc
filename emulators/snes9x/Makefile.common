@@ -1,19 +1,20 @@
-# $NetBSD: Makefile.common,v 1.8 2024/02/21 11:31:21 nia Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/08/10 12:04:36 nia Exp $
 
 # used by emulators/libretro-snes9x/Makefile
 # used by emulators/snes9x/Makefile
 # used by emulators/snes9x-gtk/Makefile
 
-SNES9X_VERSION=		1.62.3
+SNES9X_VERSION=		1.63
 DISTNAME=		snes9x-${SNES9X_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=snes9xgit/}
 GITHUB_PROJECT=		snes9x
 GITHUB_TAG=		${SNES9X_VERSION}
 
-GITHUB_SUBMODULES+=	KhronosGroup SPIRV-Cross 4e2fdb25671c742a9fbe93a6034eb1542244c7e1 external/SPIRV-Cross
-GITHUB_SUBMODULES+=	KhronosGroup glslang 6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7 external/glslang
-GITHUB_SUBMODULES+=	KhronosGroup Vulkan-Headers a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2 external/vulkan-headers
+GITHUB_SUBMODULES+=	KhronosGroup SPIRV-Cross bccaa94db814af33d8ef05c153e7c34d8bd4d685 external/SPIRV-Cross
+GITHUB_SUBMODULES+=	mozilla cubeb ac8474a5929e9de3bce84f16f8c589240eb9f7c4 external/cubeb
+GITHUB_SUBMODULES+=	KhronosGroup glslang 9c7fd1a33e5cecbe465e1cd70170167d5e40d398 external/glslang
+GITHUB_SUBMODULES+=	KhronosGroup Vulkan-Headers 577baa05033cf1d9236b3d078ca4b3269ed87a2b external/vulkan-headers
 
 HOMEPAGE=		http://www.snes9x.com/
 LICENSE=		snes9x-license
