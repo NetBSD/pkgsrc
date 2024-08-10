@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/07/29 07:26:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/10 08:11:07 adam Exp $
 
 DISTNAME=	sphinx_autoapi-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,16 +19,13 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=5.2.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 # 311 passed, 2 errors
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
