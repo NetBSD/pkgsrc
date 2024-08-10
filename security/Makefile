@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.956 2024/08/04 09:48:58 nia Exp $
+# $NetBSD: Makefile,v 1.957 2024/08/10 23:51:48 js Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -59,6 +59,7 @@ SUBDIR+=	courier-authlib
 SUBDIR+=	crack
 SUBDIR+=	cracklib
 SUBDIR+=	crypto++
+SUBDIR+=	cryptopassphrase
 SUBDIR+=	cvm
 SUBDIR+=	cy2-anonymous
 SUBDIR+=	cy2-crammd5
