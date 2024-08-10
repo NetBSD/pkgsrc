@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.29 2023/11/20 10:19:00 nia Exp $
+$NetBSD: distinfo,v 1.30 2024/08/10 12:04:36 nia Exp $
 
-BLAKE2s (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = 13efb2c6ee687bc849b16e406028fdd04dd56aa52dc68ec5f3f766f2243e416b
-SHA512 (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = ec47b1d966006c6e654e84e7fa16124c774de3ca6fd508d3cfe0568e3df79eee3f5aeedfae1d744b99e162beeee23afe498249b2291091bc14c0357db304bebe
-Size (KhronosGroup-SPIRV-Cross-4e2fdb25671c742a9fbe93a6034eb1542244c7e1.tar.gz) = 1714902 bytes
-BLAKE2s (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = 400ab5b06150ea9b53c0937f36c8ac811540cf5534b870de71e99378c64f8283
-SHA512 (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = b35541413efb5124691e0d13403acc00a85af51e3165828e892e90f059a7d7dc83f9bde43c6a7a1f471ae6eb8ec0155ee873adcc7afb537d5adbaccafcd7d849
-Size (KhronosGroup-Vulkan-Headers-a3dd2655a3a68c2a67c55a0f8b77dcb8b166ada2.tar.gz) = 1832285 bytes
-BLAKE2s (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = bb3a1f149905af1a1830ad9d8bcef27e5ec1df7ce87f03f24cfcfc065f67ccb4
-SHA512 (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = 49efe8841bbe2d603d5dd03bdb273bb991ee6ea509081048c01b7c4de6d4cad42f223755e1cb391c426993fba72ed3878e28bcce8dd7f6eeb5adf873705b7d62
-Size (KhronosGroup-glslang-6d41bb9c557c5a0eec61ffba1f775dc5f717a8f7.tar.gz) = 3694607 bytes
-BLAKE2s (snes9x-1.62.3.tar.gz) = 6a516b64fc0bba5770b2659cfb32eb8e68f5108a5d2e339a086972f5f27795bb
-SHA512 (snes9x-1.62.3.tar.gz) = 005222bc054fbdfef92acc3ce5ad1f4b18eaff4382ab352d61e5c9c3fbe952ca085e964535e628730976f795c568e9e8751e6ef997f864c719c421d67d9e04db
-Size (snes9x-1.62.3.tar.gz) = 3423799 bytes
-SHA1 (patch-gtk_CMakeLists.txt) = d096662fc1ffa88fe70e68175fedadf950df0d24
-SHA1 (patch-shaders_shader__platform.h) = b026b27fb2fb7f6a3df9ec0c40bf334729d30f28
-SHA1 (patch-unix_configure) = 99a9693d98462430e2fa072bad648089f7035d39
-SHA1 (patch-unix_unix.cpp) = 46e2edc50769e040bc729492f213f455cd1f61c1
+BLAKE2s (KhronosGroup-SPIRV-Cross-bccaa94db814af33d8ef05c153e7c34d8bd4d685.tar.gz) = a3c0e5eb6b3410b118c98308f9827de7da8c739aa0c54f31e281ead2e51770f2
+SHA512 (KhronosGroup-SPIRV-Cross-bccaa94db814af33d8ef05c153e7c34d8bd4d685.tar.gz) = c97a801fbaba78a724e8e8da96f59b054f01800aaa912065802295a132e5a9c0678c0ebef734bc2eced4d8afe834433364ede9a1d5efadcbace4e7c671b6825b
+Size (KhronosGroup-SPIRV-Cross-bccaa94db814af33d8ef05c153e7c34d8bd4d685.tar.gz) = 1745485 bytes
+BLAKE2s (KhronosGroup-Vulkan-Headers-577baa05033cf1d9236b3d078ca4b3269ed87a2b.tar.gz) = d562311443937dc00e10bdae0d8b977c15a4b17cd7998713c555ebc9e4c89dff
+SHA512 (KhronosGroup-Vulkan-Headers-577baa05033cf1d9236b3d078ca4b3269ed87a2b.tar.gz) = bdf4af1106d88ea338387b48fe43e2a35eeca5527131c4af6d098304f1f4601f6588f5c63f94b14defbb59ba6afe3c97a0e0b7d38ff3e744c11cdfa8a6cff452
+Size (KhronosGroup-Vulkan-Headers-577baa05033cf1d9236b3d078ca4b3269ed87a2b.tar.gz) = 2265390 bytes
+BLAKE2s (KhronosGroup-glslang-9c7fd1a33e5cecbe465e1cd70170167d5e40d398.tar.gz) = 9cfa8fd1d9f22a4726fa3d788949098a1fa0db455e16161deffdee9da118886c
+SHA512 (KhronosGroup-glslang-9c7fd1a33e5cecbe465e1cd70170167d5e40d398.tar.gz) = 8226897c973d11dd7d4a59549d298acb3dc6f683c60ef4c824555be10f8cc114f99f23b01999c439c9eb9671f636e2f082b6c7d1cc6967eadfc91571d1cdc422
+Size (KhronosGroup-glslang-9c7fd1a33e5cecbe465e1cd70170167d5e40d398.tar.gz) = 3704453 bytes
+BLAKE2s (mozilla-cubeb-ac8474a5929e9de3bce84f16f8c589240eb9f7c4.tar.gz) = dda77a38813ebd4364792986837c2591668a3f695d03079131ee3b22e70e9d61
+SHA512 (mozilla-cubeb-ac8474a5929e9de3bce84f16f8c589240eb9f7c4.tar.gz) = 209b1d07b0886c6a704e6bc3a145f8de451c2d858a26af5c615f905df59f00efdb9b90470b6664f4eec1d6f57566a9ac161d9ecdf0416ae06be833fc06fa0667
+Size (mozilla-cubeb-ac8474a5929e9de3bce84f16f8c589240eb9f7c4.tar.gz) = 229199 bytes
+BLAKE2s (snes9x-1.63.tar.gz) = a5f714d03684e355cbc6ec7a7d8b9a54bd37a3c887cdbbbad84851cd86b748f3
+SHA512 (snes9x-1.63.tar.gz) = c6f0edc64b673167812ebb5e972afed0d2a51234bb24779cb613cda6cac5580193c738e697199917735bb3bc621cb040796d448db44d0e57bdd781daf24055cf
+Size (snes9x-1.63.tar.gz) = 5134657 bytes
+SHA1 (patch-external_imgui_imgui__impl__opengl3__loader.h) = 70b1ab58a48c31d8dca6423985e54e2d095e2dd7
