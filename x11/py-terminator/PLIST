@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/10 11:33:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/08/10 11:39:12 wiz Exp $
 bin/remotinator
 bin/terminator
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
@@ -31,9 +31,6 @@ ${PYSITELIB}/terminatorlib/debugserver.pyo
 ${PYSITELIB}/terminatorlib/editablelabel.py
 ${PYSITELIB}/terminatorlib/editablelabel.pyc
 ${PYSITELIB}/terminatorlib/editablelabel.pyo
-${PYSITELIB}/terminatorlib/encoding.py
-${PYSITELIB}/terminatorlib/encoding.pyc
-${PYSITELIB}/terminatorlib/encoding.pyo
 ${PYSITELIB}/terminatorlib/factory.py
 ${PYSITELIB}/terminatorlib/factory.pyc
 ${PYSITELIB}/terminatorlib/factory.pyo
@@ -71,12 +68,30 @@ ${PYSITELIB}/terminatorlib/plugins/command_notify.pyo
 ${PYSITELIB}/terminatorlib/plugins/custom_commands.py
 ${PYSITELIB}/terminatorlib/plugins/custom_commands.pyc
 ${PYSITELIB}/terminatorlib/plugins/custom_commands.pyo
+${PYSITELIB}/terminatorlib/plugins/dir_open.py
+${PYSITELIB}/terminatorlib/plugins/dir_open.pyc
+${PYSITELIB}/terminatorlib/plugins/dir_open.pyo
+${PYSITELIB}/terminatorlib/plugins/insert_term_name.py
+${PYSITELIB}/terminatorlib/plugins/insert_term_name.pyc
+${PYSITELIB}/terminatorlib/plugins/insert_term_name.pyo
 ${PYSITELIB}/terminatorlib/plugins/logger.py
 ${PYSITELIB}/terminatorlib/plugins/logger.pyc
 ${PYSITELIB}/terminatorlib/plugins/logger.pyo
 ${PYSITELIB}/terminatorlib/plugins/maven.py
 ${PYSITELIB}/terminatorlib/plugins/maven.pyc
 ${PYSITELIB}/terminatorlib/plugins/maven.pyo
+${PYSITELIB}/terminatorlib/plugins/mousefree_url_handler.py
+${PYSITELIB}/terminatorlib/plugins/mousefree_url_handler.pyc
+${PYSITELIB}/terminatorlib/plugins/mousefree_url_handler.pyo
+${PYSITELIB}/terminatorlib/plugins/run_cmd_on_match.py
+${PYSITELIB}/terminatorlib/plugins/run_cmd_on_match.pyc
+${PYSITELIB}/terminatorlib/plugins/run_cmd_on_match.pyo
+${PYSITELIB}/terminatorlib/plugins/save_last_session_layout.py
+${PYSITELIB}/terminatorlib/plugins/save_last_session_layout.pyc
+${PYSITELIB}/terminatorlib/plugins/save_last_session_layout.pyo
+${PYSITELIB}/terminatorlib/plugins/save_user_session_layout.py
+${PYSITELIB}/terminatorlib/plugins/save_user_session_layout.pyc
+${PYSITELIB}/terminatorlib/plugins/save_user_session_layout.pyo
 ${PYSITELIB}/terminatorlib/plugins/terminalshot.py
 ${PYSITELIB}/terminatorlib/plugins/terminalshot.pyc
 ${PYSITELIB}/terminatorlib/plugins/terminalshot.pyo
