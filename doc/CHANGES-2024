@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4967 2024/08/10 06:55:51 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4968 2024/08/10 07:14:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7784,3 +7784,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/mautrix-telegram to 0.11.3nb3 [wiz 2024-08-10]
 	Updated devel/py-dictdiffer to 0.9.0 [wiz 2024-08-10]
 	Updated filesystems/py-fs to 2.4.16nb1 [wiz 2024-08-10]
+	Updated net/py-dropbox to 12.0.2 [wiz 2024-08-10]
