@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/07 22:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/10 08:06:56 adam Exp $
 
 DISTNAME=	sphinx_basic_ng-1.0.0b2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -10,11 +10,11 @@ HOMEPAGE=	https://github.com/pradyunsg/sphinx-basic-ng
 COMMENT=	Modern skeleton for Sphinx themes
 LICENSE=	mit
 
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.0:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
