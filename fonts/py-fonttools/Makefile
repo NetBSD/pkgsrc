@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2024/07/07 14:40:41 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2024/08/10 06:58:01 wiz Exp $
 
 DISTNAME=	fonttools-4.53.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-fs>=2.2.0:../../filesystems/py-fs
 DEPENDS+=	${PYPKGPREFIX}-brotli>=1.0.1:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-zopfli>=0.1.4:../../archivers/py-zopfli
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=3.0:../../devel/py-test
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
+
+# 10 failed, 4384 passed, 62 skipped, 2 xfailed, 23 warnings
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
