@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.py,v 1.3 2024/08/10 16:13:41 wiz Exp $
+$NetBSD: patch-setup.py,v 1.4 2024/08/10 16:14:40 wiz Exp $
 
 Remove unused depdendency.
+https://github.com/dropbox/stone/issues/344
 
 --- setup.py.orig	2024-07-19 18:05:56.000000000 +0000
 +++ setup.py
