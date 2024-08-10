@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5015 2024/08/10 16:25:07 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5016 2024/08/10 22:21:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7841,3 +7841,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/todoman to 4.0.0nb4 [wiz 2024-08-10]
 	Added devel/glasgow version 0.0.20240810 [js 2024-08-10]
 	Removed devel/py-test-runner [wiz 2024-08-10]
+	Updated x11/zenity to 4.0.1 [wiz 2024-08-10]
