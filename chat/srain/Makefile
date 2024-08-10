@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/10 06:57:59 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/10 13:18:58 adam Exp $
 
-DISTNAME=	srain-1.3.2
-PKGREVISION=	16
+DISTNAME=	srain-1.7.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SrainApp/}
 
@@ -16,6 +15,7 @@ USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
 
+MESON_ARGS+=	-Dapp_indicator=false
 MESON_ARGS+=	-Ddoc_builders=man
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/srain
@@ -25,7 +25,7 @@ CONF_FILES=	${EGDIR}/builtin.cfg ${PKG_SYSCONFDIR}/srain/builtin.cfg
 
 SUBST_CLASSES+=		sphinx
 SUBST_STAGE.sphinx=	pre-configure
-SUBST_FILES.sphinx=	doc/meson.build
+SUBST_FILES.sphinx=	docs/meson.build
 SUBST_MESSAGE.sphinx=	Fixing sphinx binary name.
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build-${PYVERSSUFFIX},"
 
@@ -39,7 +39,7 @@ post-install:
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libconfig/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../net/libsoup/buildlink3.mk"
+.include "../../net/libsoup3/buildlink3.mk"
 .include "../../security/libsecret/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
