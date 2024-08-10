@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/08/06 13:17:10 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2024/08/10 06:44:19 adam Exp $
 
 DISTNAME=	sphinx-8.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,42 +12,36 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.14:../../textproc/py-alabaster
-DEPENDS+=	${PYPKGPREFIX}-babel>=2.9:../../devel/py-babel
-DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0:../../textproc/py-defusedxml
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.18.1:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-babel>=2.13:../../devel/py-babel
+DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-imagesize>=1.3:../../graphics/py-imagesize
-DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-packaging>=21.0:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.0:../../textproc/py-snowballstemmer
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2.17:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.2:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp-[0-9]*:../../textproc/py-sphinxcontrib-applehelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp-[0-9]*:../../textproc/py-sphinxcontrib-devhelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.0:../../textproc/py-sphinxcontrib-htmlhelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcontrib-jsmath
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.9:../../textproc/py-sphinxcontrib-serializinghtml
-TEST_DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
-TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
+TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.0:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 # as of 8.0.2
 # 37 failed, 2126 passed, 30 skipped, 3 warnings
 
 .include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.0:../../devel/py-importlib-metadata
-.endif
-
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=0:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=2:../../textproc/py-tomli
 .endif
 
 post-install:
