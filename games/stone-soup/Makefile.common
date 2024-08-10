@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.15 2024/05/06 08:27:53 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2024/08/10 12:58:39 nia Exp $
 # used by games/stone-soup/Makefile
 # used by games/stone-soup-sdl/Makefile
 
-DISTNAME=	stone-soup-0.29.1
+DISTNAME=	stone-soup-0.31.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crawl/}
 GITHUB_PROJECT=	crawl

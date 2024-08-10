@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2022/12/15 12:25:31 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/08/10 12:58:39 nia Exp $
 
-BLAKE2s (stone-soup-0.29.1.tar.gz) = 4c2681c123f08cb4b31e08b92f52661fdb1baf3b45d4891321454fae34bbba37
-SHA512 (stone-soup-0.29.1.tar.gz) = 2ca49c4cd228526d47e4ad7e9556b6c26566595458423cd8e6b762298f229eb7ba273770ae1e12939ba66574a5b55e44812d06c4809d4327ed9bfd738501af04
-Size (stone-soup-0.29.1.tar.gz) = 17510846 bytes
+BLAKE2s (stone-soup-0.31.0.tar.gz) = f3436963802b4d20b2967530ccce6bff5c03df5b3d941d8663fd95af0b5a99af
+SHA512 (stone-soup-0.31.0.tar.gz) = ad354d57a39d07ad8a1a89a7fd20b33a4cd88fcbf1f2276cdefe8890c223272b7a34969a373f6b1f39cff72499c1e2773592ce368e887307908acd59ca00ca4b
+Size (stone-soup-0.31.0.tar.gz) = 22432560 bytes
 SHA1 (patch-source_util_gen__ver.pl) = 9f97d5ef511ef5c59d87977025c2280f4ccf1838
