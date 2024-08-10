@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4988 2024/08/10 09:48:34 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.4989 2024/08/10 10:57:08 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7809,3 +7809,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-hyperframe to 6.0.1nb2 [wiz 2024-08-10]
 	Updated www/py-rfc3986-validator to 0.1.1nb1 [wiz 2024-08-10]
 	Updated www/py-rfc3987 to 1.3.8nb1 [wiz 2024-08-10]
+	Added devel/py-amaranth version 0.5.1 [js 2024-08-10]
