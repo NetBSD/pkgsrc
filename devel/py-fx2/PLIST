@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/10 14:18:49 js Exp $
+bin/fx2tool
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/fx2/__init__.py
+${PYSITELIB}/fx2/__init__.pyc
+${PYSITELIB}/fx2/__init__.pyo
+${PYSITELIB}/fx2/boot-cypress.ihex
+${PYSITELIB}/fx2/format.py
+${PYSITELIB}/fx2/format.pyc
+${PYSITELIB}/fx2/format.pyo
+${PYSITELIB}/fx2/fx2tool.py
+${PYSITELIB}/fx2/fx2tool.pyc
+${PYSITELIB}/fx2/fx2tool.pyo
