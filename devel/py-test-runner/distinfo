@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.19 2023/12/05 18:21:59 adam Exp $
-
-BLAKE2s (pytest-runner-6.0.1.tar.gz) = 93ae42290491a3fd7be60aaf9ec17d58a4d54546d13f26cb50abc5bebda2a716
-SHA512 (pytest-runner-6.0.1.tar.gz) = 06708acca31649eee1495ddd81f8bb807fe6c5ffde06c437884ac6d3e28b4e0351a202a453fa6660a5fb7dde8609ea2fffefc568c24dbd000d38d984f38e1c94
-Size (pytest-runner-6.0.1.tar.gz) = 16056 bytes
