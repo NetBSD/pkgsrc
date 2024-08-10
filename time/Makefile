@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2024/07/12 06:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.274 2024/08/10 09:12:52 wiz Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -185,6 +185,7 @@ SUBDIR+=	py-relativetimebuilder
 SUBDIR+=	py-rfc3339
 SUBDIR+=	py-rfc3339-validator
 SUBDIR+=	py-snaptime
+SUBDIR+=	py-strict-rfc3339
 SUBDIR+=	py-tempora
 SUBDIR+=	py-time-machine
 SUBDIR+=	py-trading-calendars
