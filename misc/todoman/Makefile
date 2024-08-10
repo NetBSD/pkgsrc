@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/08/14 05:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/10 15:55:21 wiz Exp $
 
 DISTNAME=		todoman-4.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/todoman/}
 #MASTER_SITES=		${MASTER_SITE_GITHUB:=pimutils/}
@@ -12,6 +12,9 @@ HOMEPAGE=	https://github.com/pimutils/todoman
 COMMENT=	Simple CalDav-based todo manager
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log-[0-9]*:../../devel/py-click-log
@@ -23,25 +26,25 @@ DEPENDS+=	${PYPKGPREFIX}-parsedatetime-[0-9]*:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-tabulate-[0-9]*:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 # if zsh completion is used, jq is needed
 #https://github.com/pimutils/todoman/issues/498
 #DEPENDS+=	jq-[0-9]*:../../devel/jq
 
-# TEST_DEPENDS
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flake8-import-order-[0-9]*:../../devel/py-flake8-import-order
-TOOL_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
+TEST_DEPENDS+=	${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
+TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-import-order-[0-9]*:../../devel/py-flake8-import-order
+TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=		bin/todo
 USE_LANGUAGES=			# none
+
+# as of 4.0.0
+# 24 warnings, 2 errors
 
 # overwrite automatically generated file with recommended one, per
 # "Notes for Packagers" in documentation
@@ -49,7 +52,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/todo ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
 # needed due to py-click
 TEST_ENV+=	LC_ALL=en_US.UTF-8
