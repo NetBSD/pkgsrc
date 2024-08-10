@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/04/15 14:32:44 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/08/10 09:34:48 wiz Exp $
 
 DISTNAME=	daphne-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP, HTTP2 and WebSocket protocol server for ASGI
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.5.2:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=22.4.2:../../www/py-autobahn
@@ -22,6 +21,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# test fails with:
+# https://github.com/django/daphne/issues/522
+# ModuleNotFoundError: No module named 'http_strategies'
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
