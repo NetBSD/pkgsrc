@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2023/11/16 09:37:55 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/08/10 15:05:08 wiz Exp $
 
 BLAKE2s (pyte-0.8.2.tar.gz) = a8181bf73f41b84a9c7ae4bdeba334b61e3a531e8e86661a7dd452deb815b9a7
 SHA512 (pyte-0.8.2.tar.gz) = b11df745131bf7d3602629975b9a39baa1f75f3481bd863f2eb429c714c61f2a759aa21f9eee2679d5de2db6fba405354793e0056d6b75fa9aa1ca896f511410
 Size (pyte-0.8.2.tar.gz) = 92301 bytes
+SHA1 (patch-setup.py) = 0b317086f1072454bab36c6002bcfaf2f21d3a31
