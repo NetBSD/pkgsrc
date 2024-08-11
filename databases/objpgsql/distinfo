@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/11 18:12:45 js Exp $
+
+BLAKE2s (objpgsql-1.0.tar.gz) = 1805c478f9a0d5b6537de0e7c4bc3b4c4cb5b7aff354dcc304e716d4991bd1bb
+SHA512 (objpgsql-1.0.tar.gz) = 05ce1ed3c18e003d765296837c72c442e16050037e07f9e682ad68f7266cedd12d42c2f8058ce18f21f3138e68f8c3d3266287af9bd4ebd7b61330bb3d6f9074
+Size (objpgsql-1.0.tar.gz) = 6702 bytes
