@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/07/03 06:49:54 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/08/11 15:44:26 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go121/CONTRIBUTING.md
@@ -214,6 +214,7 @@ go121/src/bytes/boundary_test.go
 go121/src/bytes/buffer.go
 go121/src/bytes/buffer_test.go
 go121/src/bytes/bytes.go
+go121/src/bytes/bytes_js_wasm_test.go
 go121/src/bytes/bytes_test.go
 go121/src/bytes/compare_test.go
 go121/src/bytes/example_test.go
