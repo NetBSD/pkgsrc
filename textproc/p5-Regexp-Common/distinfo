@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 11:22:34 nia Exp $
+$NetBSD: distinfo,v 1.19 2024/08/11 06:17:34 wiz Exp $
 
-BLAKE2s (Regexp-Common-2017060201.tar.gz) = dfcefc9d6c17c7eddde64d4ca7e48553d882d589fb5f40b61e81c003a026801b
-SHA512 (Regexp-Common-2017060201.tar.gz) = fd046d775214bdca42f868557559595360b069121a75fc119f45e064091000968d9d84154f8a0f06072ecff169dccecf68be58f99a7196932fcb4ffcbd678608
-Size (Regexp-Common-2017060201.tar.gz) = 237881 bytes
+BLAKE2s (Regexp-Common-2024080801.tar.gz) = aed1ffc3ccb448a0119adb443a8e1c43efdbd9f754f928b7a44ce5005310155c
+SHA512 (Regexp-Common-2024080801.tar.gz) = dc1b9cc23e5e1ea8fc26e892098a3fe8fe9d25736cce5728364192eb26c8aba2a445c563037e037315d638b48e272e909654b9e27196a0d880e4ce6573937a56
+Size (Regexp-Common-2024080801.tar.gz) = 238498 bytes
