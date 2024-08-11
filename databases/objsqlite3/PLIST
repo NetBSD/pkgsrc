@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/11 12:08:12 js Exp $
+include/ObjSQLite3/ObjSQLite3.h
+include/ObjSQLite3/SL3BindObjectFailedException.h
+include/ObjSQLite3/SL3ClearBindingsFailedException.h
+include/ObjSQLite3/SL3Connection.h
+include/ObjSQLite3/SL3Exception.h
+include/ObjSQLite3/SL3ExecuteStatementFailedException.h
+include/ObjSQLite3/SL3OpenFailedException.h
+include/ObjSQLite3/SL3PrepareStatementFailedException.h
+include/ObjSQLite3/SL3PreparedStatement.h
+include/ObjSQLite3/SL3ResetStatementFailedException.h
+lib/libobjsqlite3.so
+lib/libobjsqlite3.so.1.0.0
+lib/objfw-config/ObjSQLite3.oc

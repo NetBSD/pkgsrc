@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.716 2024/08/05 06:30:26 wiz Exp $
+# $NetBSD: Makefile,v 1.717 2024/08/11 12:08:11 js Exp $
 
 COMMENT=	Databases
 
@@ -125,6 +125,7 @@ SUBDIR+=	mysqltuner
 SUBDIR+=	mytop
 SUBDIR+=	nss-pgsql
 SUBDIR+=	nss_ldap
+SUBDIR+=	objsqlite3
 SUBDIR+=	ocaml-dbm
 SUBDIR+=	ocaml-ldap
 SUBDIR+=	ocaml-mysql
