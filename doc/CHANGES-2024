@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5045 2024/08/11 07:04:25 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5046 2024/08/11 07:09:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7871,3 +7871,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-lxml to 5.3.0 [wiz 2024-08-11]
 	Updated graphics/py-matplotlib to 3.9.1.post1 [wiz 2024-08-11]
 	Updated devel/py-ruff to 0.5.7 [wiz 2024-08-11]
+	Updated devel/jj to 0.20.0 [wiz 2024-08-11]
