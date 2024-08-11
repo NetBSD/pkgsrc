@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2024/07/31 18:11:24 adam Exp $
+# $NetBSD: Makefile,v 1.124 2024/08/11 13:12:08 wiz Exp $
 
 DISTNAME=	numpy-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 
@@ -75,6 +76,11 @@ WHEEL_ARGS+=		-Csetup-args=-Dblas=${BLAS_PC}
 WHEEL_ARGS+=		-Csetup-args=-Dlapack=${LAPACK_PC}
 WHEEL_ARGS+=		-Ccompile-args=-j${MAKE_JOBS:U1}
 
+# disable AVX 512; the support on NetBSD is incomplete, see PR 58539
+# from reports on the Haskell forums, the support on other operating
+# system is troubled too.
+WHEEL_ARGS+=		-Csetup-args=-Dcpu-dispatch="max -avx512f -avx512cd -avx512_knl -avx512_knm -avx512_skx -avx512_clx -avx512_cnl -avx512_icl -avx512_spr"
+
 # Remove invalid __STDC_VERSION__ setting
 BUILDLINK_TRANSFORM.SunOS+=	rm:-D__STDC_VERSION__=0
 
@@ -93,8 +99,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-# as of 1.26.1
-# 28 failed, 38180 passed, 200 skipped, 1304 deselected, 33 xfailed, 1 xpassed, 52 warnings
+# as of 2.0.1
+# 28 failed, 46633 passed, 1721 skipped, 2789 deselected, 59 xfailed, 4 xpassed, 1 warning
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
