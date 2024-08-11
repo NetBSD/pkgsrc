@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:24:29 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/08/11 02:05:09 wen Exp $
 
-BLAKE2s (POSIX-strftime-Compiler-0.44.tar.gz) = 7f4208c1cdc3cc828bfadb14187aa4558c719a4d3ae1e47ca9ecab1165937bc3
-SHA512 (POSIX-strftime-Compiler-0.44.tar.gz) = 34852966a46f55a65e4ee90af3aec6478456d3a7fc8f8b8e8fc4e704a8361f46abfad5fe0f356eb3432fb2e232e65004818b19f298293cc0172d576cfe34c3e1
-Size (POSIX-strftime-Compiler-0.44.tar.gz) = 17027 bytes
+BLAKE2s (POSIX-strftime-Compiler-0.46.tar.gz) = 84c6418feef4fc33601d633a9fa443dd8747c44c32d229c0519d8bf9c696317c
+SHA512 (POSIX-strftime-Compiler-0.46.tar.gz) = cee80a7b2f6b79dbb706898b713a4bb05bc57ecb3ef6c1644bce3682cc35d584c528aced6cd71b926e2fe549c95644ad59ecf780ba064adbb3bc9c54c8d4c459
+Size (POSIX-strftime-Compiler-0.46.tar.gz) = 17189 bytes
