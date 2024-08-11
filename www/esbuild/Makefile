@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/07/03 06:59:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/11 15:57:13 bsiegert Exp $
 
 DISTNAME=	esbuild-0.22.0
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=evanw/}
 
