@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/05/06 04:42:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/08/11 06:45:24 wiz Exp $
 bin/pybabel-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -1088,6 +1088,9 @@ ${PYSITELIB}/babel/localtime/_win32.pyo
 ${PYSITELIB}/babel/messages/__init__.py
 ${PYSITELIB}/babel/messages/__init__.pyc
 ${PYSITELIB}/babel/messages/__init__.pyo
+${PYSITELIB}/babel/messages/_compat.py
+${PYSITELIB}/babel/messages/_compat.pyc
+${PYSITELIB}/babel/messages/_compat.pyo
 ${PYSITELIB}/babel/messages/catalog.py
 ${PYSITELIB}/babel/messages/catalog.pyc
 ${PYSITELIB}/babel/messages/catalog.pyo
