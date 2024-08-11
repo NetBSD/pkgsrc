@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2024/08/11 03:18:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/11 03:31:36 gutteridge Exp $
 
-DISTNAME=	zenity-3.41.0
+DISTNAME=	zenity-3.44.0
 PKGNAME=	${DISTNAME:S/zenity/zenity3/}
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.41/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.44/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
