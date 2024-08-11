@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5021 2024/08/11 01:33:58 wen Exp $
+$NetBSD: CHANGES-2024,v 1.5022 2024/08/11 01:46:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7847,3 +7847,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-IO-Tty to 1.20 [wen 2024-08-11]
 	Updated devel/p5-IPC-Run3 to 0.049 [wen 2024-08-11]
 	Updated devel/p5-JSONSchema-Validator to 0.011 [wen 2024-08-11]
+	Updated devel/p5-Log-Report to 1.37 [wen 2024-08-11]
