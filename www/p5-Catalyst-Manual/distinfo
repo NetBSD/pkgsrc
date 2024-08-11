@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:29:51 nia Exp $
+$NetBSD: distinfo,v 1.21 2024/08/11 02:31:44 wen Exp $
 
-BLAKE2s (Catalyst-Manual-5.9011.tar.gz) = b56b1330dad501fb07a81d51b9cc8dee44498ccc7377ef0b6db32637380e15d9
-SHA512 (Catalyst-Manual-5.9011.tar.gz) = 1ed8dc19f94a63a407cc8b39cd22c39afca89166173f65d7cc75be7fdd2dbe8cd480fe36ee8e09837ff1530f6be82a9282952c048ddac8179b604175662c8a5d
-Size (Catalyst-Manual-5.9011.tar.gz) = 176666 bytes
+BLAKE2s (Catalyst-Manual-5.9013.tar.gz) = 6dc795683d47168afb7806722ff8fa3028d25c80249a6d27362c3b24257af3b9
+SHA512 (Catalyst-Manual-5.9013.tar.gz) = b83a57583bbbb280dcaa9a2b21f3d8d186daf39460e34a55e33d029ef753b022c9d2a0321de67cc666bccfc5959346889d7a2c0cd16a9a898e8d69def65bc157
+Size (Catalyst-Manual-5.9013.tar.gz) = 176896 bytes
