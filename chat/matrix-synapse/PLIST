@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2024/06/18 16:49:41 gdt Exp $
+@comment $NetBSD: PLIST,v 1.54 2024/08/11 15:01:32 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -507,6 +507,9 @@ ${PYSITELIB}/synapse/handlers/send_email.pyo
 ${PYSITELIB}/synapse/handlers/set_password.py
 ${PYSITELIB}/synapse/handlers/set_password.pyc
 ${PYSITELIB}/synapse/handlers/set_password.pyo
+${PYSITELIB}/synapse/handlers/sliding_sync.py
+${PYSITELIB}/synapse/handlers/sliding_sync.pyc
+${PYSITELIB}/synapse/handlers/sliding_sync.pyo
 ${PYSITELIB}/synapse/handlers/sso.py
 ${PYSITELIB}/synapse/handlers/sso.pyc
 ${PYSITELIB}/synapse/handlers/sso.pyo
@@ -963,9 +966,6 @@ ${PYSITELIB}/synapse/rest/client/logout.pyo
 ${PYSITELIB}/synapse/rest/client/media.py
 ${PYSITELIB}/synapse/rest/client/media.pyc
 ${PYSITELIB}/synapse/rest/client/media.pyo
-${PYSITELIB}/synapse/rest/client/models.py
-${PYSITELIB}/synapse/rest/client/models.pyc
-${PYSITELIB}/synapse/rest/client/models.pyo
 ${PYSITELIB}/synapse/rest/client/mutual_rooms.py
 ${PYSITELIB}/synapse/rest/client/mutual_rooms.pyc
 ${PYSITELIB}/synapse/rest/client/mutual_rooms.pyo
@@ -1005,9 +1005,9 @@ ${PYSITELIB}/synapse/rest/client/relations.pyo
 ${PYSITELIB}/synapse/rest/client/rendezvous.py
 ${PYSITELIB}/synapse/rest/client/rendezvous.pyc
 ${PYSITELIB}/synapse/rest/client/rendezvous.pyo
-${PYSITELIB}/synapse/rest/client/report_event.py
-${PYSITELIB}/synapse/rest/client/report_event.pyc
-${PYSITELIB}/synapse/rest/client/report_event.pyo
+${PYSITELIB}/synapse/rest/client/reporting.py
+${PYSITELIB}/synapse/rest/client/reporting.pyc
+${PYSITELIB}/synapse/rest/client/reporting.pyo
 ${PYSITELIB}/synapse/rest/client/room.py
 ${PYSITELIB}/synapse/rest/client/room.pyc
 ${PYSITELIB}/synapse/rest/client/room.pyo
@@ -1101,9 +1101,6 @@ ${PYSITELIB}/synapse/rest/media/v1/media_storage.pyo
 ${PYSITELIB}/synapse/rest/media/v1/storage_provider.py
 ${PYSITELIB}/synapse/rest/media/v1/storage_provider.pyc
 ${PYSITELIB}/synapse/rest/media/v1/storage_provider.pyo
-${PYSITELIB}/synapse/rest/models.py
-${PYSITELIB}/synapse/rest/models.pyc
-${PYSITELIB}/synapse/rest/models.pyo
 ${PYSITELIB}/synapse/rest/synapse/__init__.py
 ${PYSITELIB}/synapse/rest/synapse/__init__.pyc
 ${PYSITELIB}/synapse/rest/synapse/__init__.pyo
@@ -1871,6 +1868,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/85/02_add_instance_names.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/03_new_sequences.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/04_cleanup_device_federation_outbox.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/05_add_instance_names_converted_pos.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/85/06_add_room_reports.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/86/01_authenticate_media.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1919,6 +1918,15 @@ ${PYSITELIB}/synapse/synapse_rust/rendezvous.pyi
 ${PYSITELIB}/synapse/types/__init__.py
 ${PYSITELIB}/synapse/types/__init__.pyc
 ${PYSITELIB}/synapse/types/__init__.pyo
+${PYSITELIB}/synapse/types/handlers/__init__.py
+${PYSITELIB}/synapse/types/handlers/__init__.pyc
+${PYSITELIB}/synapse/types/handlers/__init__.pyo
+${PYSITELIB}/synapse/types/rest/__init__.py
+${PYSITELIB}/synapse/types/rest/__init__.pyc
+${PYSITELIB}/synapse/types/rest/__init__.pyo
+${PYSITELIB}/synapse/types/rest/client/__init__.py
+${PYSITELIB}/synapse/types/rest/client/__init__.pyc
+${PYSITELIB}/synapse/types/rest/client/__init__.pyo
 ${PYSITELIB}/synapse/types/state.py
 ${PYSITELIB}/synapse/types/state.pyc
 ${PYSITELIB}/synapse/types/state.pyo
