@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2024/07/08 05:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/08/11 07:03:21 wiz Exp $
 
-DISTNAME=	matplotlib-3.9.1
+DISTNAME=	matplotlib-3.9.1.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
@@ -53,6 +53,11 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3.2.0:../../devel/py-importlib-res
 # possible additional test dependencies to pass more tests include
 # pikepdf, tex, qt, ghostscript, ...
 # py-test command line comes from https://github.com/matplotlib/matplotlib/issues/28260
+
+# as of 3.9.1.post1:
+# tests/test_triangulation.py ...................F...........Fatal Python error: Segmentation fault
+# backtrace:
+# #2  _mm512_loadu_si512 (__P=0x76a6b95e2ec4) at /usr/include/gcc-12/avx512fintrin.h:6501
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX} -ra -m 'not network' --pyargs matplotlib
 
