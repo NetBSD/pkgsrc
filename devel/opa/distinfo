@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2024/07/28 10:24:25 leot Exp $
+$NetBSD: distinfo,v 1.24 2024/08/11 13:46:42 leot Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -1245,9 +1245,9 @@ Size (honnef.co_go_tools_@v_v0.0.0-20190102054323-c2f93a96b099.mod) = 26 bytes
 BLAKE2s (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 38e66bb2bbbbabd21beff5a5718735267b1611dbdf7da56c7fb6500d6cb784f1
 SHA512 (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = d00ae74b24e7fb3ff351ff68b88e59636153bbcf92b36e81e91556e3e75a7ccfb08ce471f757f92fd7612378944de3d7309c73923812e2df6a26b74e999ca9ce
 Size (honnef.co_go_tools_@v_v0.0.0-20190523083050-ea95bdfd59fc.mod) = 26 bytes
-BLAKE2s (opa-0.67.0.tar.gz) = 84058daa607cbb30c5eb1fac0231f08eb9fca27eef2b54f30644c822788d1301
-SHA512 (opa-0.67.0.tar.gz) = 8539e0ef7d59c610024376666914f883f982e0df7f6ed563f245cdc59bc5c229336e3a0e73a03b4478e7393e6979923b22b65e40f632549540ac058b63e19a84
-Size (opa-0.67.0.tar.gz) = 110823451 bytes
+BLAKE2s (opa-0.67.1.tar.gz) = eb30f16fa7ac81dd420a099c76f902617baf49d3194444639f5d94820dfb2b86
+SHA512 (opa-0.67.1.tar.gz) = 56e876911b3fc2df628624df77de976f0ffafdb89089eb57111c8a18b947ca42309ef7643e34a03b5f46985dafca315075c1f493984c80c8b997284d25b3e2c8
+Size (opa-0.67.1.tar.gz) = 110826149 bytes
 BLAKE2s (oras.land_oras-go_v2_@v_v2.3.1.mod) = 588856bf54ad8738eaf586e991bff9257858cc71e5f0460852d70e6ad64b78c5
 SHA512 (oras.land_oras-go_v2_@v_v2.3.1.mod) = 81b3fddcdceb0afb80f460d5f7dde2f62e619e84cdec8852006ac73f872adc44ba33d187e8a2b92f4ffdcdc584d4756d0ab85c643bb568f7802e67de1a1ee019
 Size (oras.land_oras-go_v2_@v_v2.3.1.mod) = 169 bytes
