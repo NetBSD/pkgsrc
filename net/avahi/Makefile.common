@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1 2021/01/08 14:08:35 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/08/11 22:33:54 wiz Exp $
 # used by net/avahi/Makefile
 # used by net/avahi-ui/Makefile
 
 DISTNAME=		avahi-0.8
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_GITHUB:=lathiat/avahi/releases/download/v${PKGVERSION_NOREV}/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=lathiat/}
+GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 HOMEPAGE=		https://avahi.org/
 LICENSE=		gnu-lgpl-v2.1
