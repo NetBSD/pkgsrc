@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5036 2024/08/11 06:20:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5037 2024/08/11 06:39:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7862,3 +7862,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Scalar-List-Utils to 1.65 [wiz 2024-08-11]
 	Updated devel/p5-Term-Table to 0.022 [wiz 2024-08-11]
 	Updated textproc/p5-Text-CSV_XS to 1.56 [wiz 2024-08-11]
+	Updated graphics/box2d to 2.4.2 [wiz 2024-08-11]
