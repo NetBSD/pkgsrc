@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5026 2024/08/11 02:10:33 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5027 2024/08/11 02:16:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7852,3 +7852,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/p5-Date-ICal to 2.682 [wen 2024-08-11]
 	Updated time/p5-POSIX-strftime-Compiler to 0.46 [wen 2024-08-11]
 	Added x11/zenity3 version 3.41.0 [gutteridge 2024-08-11]
+	Removed archivers/ruby-archive-tar-minitar [taca 2024-08-11]
