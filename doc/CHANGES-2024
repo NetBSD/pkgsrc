@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5065 2024/08/11 18:12:56 js Exp $
+$NetBSD: CHANGES-2024,v 1.5066 2024/08/11 18:14:43 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7896,3 +7896,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/stern to 1.30.0 [leot 2024-08-11]
 	Updated games/augustus to 4.0.0 [nia 2024-08-11]
 	Added databases/objpgsql version 1.0 [js 2024-08-11]
+	Updated chat/matrix-synapse to 1.112.0 [js 2024-08-11]
