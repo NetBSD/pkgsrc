@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 11:29:44 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/08/11 02:29:06 wen Exp $
 
-BLAKE2s (Apache-Test-1.42.tar.gz) = 861a879580f72fa39ba9bd4f53243fe86cb3e1860e3fdf10ed60058352bba7cd
-SHA512 (Apache-Test-1.42.tar.gz) = ecd78dde1b0db562d591990bcd50fe880d724dce9bfb20dceea3a51b81abd89d40889857e5e7714b586a093ad6f101dfd79c6aa33d63c906c41c532305b6584c
-Size (Apache-Test-1.42.tar.gz) = 153621 bytes
+BLAKE2s (Apache-Test-1.43.tar.gz) = 205066f498df4cc319c882bcf3fe1293480fd04078fe0c29ca8b4f546f7374d0
+SHA512 (Apache-Test-1.43.tar.gz) = 910001c1ca01536ec6f364d9fedf2a9a3a38ebbbbab4ec7d43829e1066317168727a50712c5474ae4bcbde53a1eec6f20f052d74c39a63c4f3f5b3202c48c64a
+Size (Apache-Test-1.43.tar.gz) = 153745 bytes
