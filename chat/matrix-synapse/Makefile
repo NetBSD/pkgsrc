@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2024/06/18 16:49:41 gdt Exp $
+# $NetBSD: Makefile,v 1.100 2024/08/11 15:01:32 js Exp $
 
-DISTNAME=	matrix-synapse-1.109.0
+DISTNAME=	matrix-synapse-1.112.0
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -43,9 +43,10 @@ DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.0:../../security/py-signedjson
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=1.5.2:../../devel/py-sortedcontainers
 DEPENDS+=	${PYPKGPREFIX}-treq>=15.1:../../devel/py-treq
 DEPENDS+=	${PYPKGPREFIX}-twisted>=18.9.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0.1:../../devel/py-typing-extensions
-DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=2.1.0:../../devel/py-unpaddedbase64
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-python-multipart>=0.0.9:../../www/py-python-multipart
 # jwt/oidc
 DEPENDS+=	${PYPKGPREFIX}-authlib>=0.15.1:../../security/py-authlib
 # postgres
