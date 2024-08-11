@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/06/09 14:20:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/08/11 06:52:56 wiz Exp $
 ${PYSITELIB}/google/auth/__init__.py
 ${PYSITELIB}/google/auth/__init__.pyc
 ${PYSITELIB}/google/auth/__init__.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/google/auth/_cloud_sdk.pyo
 ${PYSITELIB}/google/auth/_credentials_async.py
 ${PYSITELIB}/google/auth/_credentials_async.pyc
 ${PYSITELIB}/google/auth/_credentials_async.pyo
+${PYSITELIB}/google/auth/_credentials_base.py
+${PYSITELIB}/google/auth/_credentials_base.pyc
+${PYSITELIB}/google/auth/_credentials_base.pyo
 ${PYSITELIB}/google/auth/_default.py
 ${PYSITELIB}/google/auth/_default.pyc
 ${PYSITELIB}/google/auth/_default.pyo
@@ -32,6 +35,12 @@ ${PYSITELIB}/google/auth/_refresh_worker.pyo
 ${PYSITELIB}/google/auth/_service_account_info.py
 ${PYSITELIB}/google/auth/_service_account_info.pyc
 ${PYSITELIB}/google/auth/_service_account_info.pyo
+${PYSITELIB}/google/auth/aio/__init__.py
+${PYSITELIB}/google/auth/aio/__init__.pyc
+${PYSITELIB}/google/auth/aio/__init__.pyo
+${PYSITELIB}/google/auth/aio/credentials.py
+${PYSITELIB}/google/auth/aio/credentials.pyc
+${PYSITELIB}/google/auth/aio/credentials.pyo
 ${PYSITELIB}/google/auth/api_key.py
 ${PYSITELIB}/google/auth/api_key.pyc
 ${PYSITELIB}/google/auth/api_key.pyo
@@ -123,6 +132,9 @@ ${PYSITELIB}/google/auth/transport/_http_client.pyo
 ${PYSITELIB}/google/auth/transport/_mtls_helper.py
 ${PYSITELIB}/google/auth/transport/_mtls_helper.pyc
 ${PYSITELIB}/google/auth/transport/_mtls_helper.pyo
+${PYSITELIB}/google/auth/transport/_requests_base.py
+${PYSITELIB}/google/auth/transport/_requests_base.pyc
+${PYSITELIB}/google/auth/transport/_requests_base.pyo
 ${PYSITELIB}/google/auth/transport/grpc.py
 ${PYSITELIB}/google/auth/transport/grpc.pyc
 ${PYSITELIB}/google/auth/transport/grpc.pyo
