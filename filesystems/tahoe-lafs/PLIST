@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2022/10/03 16:40:21 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/08/11 23:16:41 gdt Exp $
+bin/grid-manager
 bin/tahoe
 ${PYSITELIB}/allmydata/__init__.py
 ${PYSITELIB}/allmydata/__init__.pyc
@@ -6,9 +7,6 @@ ${PYSITELIB}/allmydata/__init__.pyo
 ${PYSITELIB}/allmydata/__main__.py
 ${PYSITELIB}/allmydata/__main__.pyc
 ${PYSITELIB}/allmydata/__main__.pyo
-${PYSITELIB}/allmydata/_auto_deps.py
-${PYSITELIB}/allmydata/_auto_deps.pyc
-${PYSITELIB}/allmydata/_auto_deps.pyo
 ${PYSITELIB}/allmydata/_monkeypatch.py
 ${PYSITELIB}/allmydata/_monkeypatch.pyc
 ${PYSITELIB}/allmydata/_monkeypatch.pyo
@@ -21,6 +19,12 @@ ${PYSITELIB}/allmydata/blacklist.pyo
 ${PYSITELIB}/allmydata/check_results.py
 ${PYSITELIB}/allmydata/check_results.pyc
 ${PYSITELIB}/allmydata/check_results.pyo
+${PYSITELIB}/allmydata/cli/__init__.py
+${PYSITELIB}/allmydata/cli/__init__.pyc
+${PYSITELIB}/allmydata/cli/__init__.pyo
+${PYSITELIB}/allmydata/cli/grid_manager.py
+${PYSITELIB}/allmydata/cli/grid_manager.pyc
+${PYSITELIB}/allmydata/cli/grid_manager.pyo
 ${PYSITELIB}/allmydata/client.py
 ${PYSITELIB}/allmydata/client.pyc
 ${PYSITELIB}/allmydata/client.pyo
@@ -60,6 +64,9 @@ ${PYSITELIB}/allmydata/frontends/auth.pyo
 ${PYSITELIB}/allmydata/frontends/sftpd.py
 ${PYSITELIB}/allmydata/frontends/sftpd.pyc
 ${PYSITELIB}/allmydata/frontends/sftpd.pyo
+${PYSITELIB}/allmydata/grid_manager.py
+${PYSITELIB}/allmydata/grid_manager.pyc
+${PYSITELIB}/allmydata/grid_manager.pyo
 ${PYSITELIB}/allmydata/hashtree.py
 ${PYSITELIB}/allmydata/hashtree.pyc
 ${PYSITELIB}/allmydata/hashtree.pyo
@@ -138,6 +145,9 @@ ${PYSITELIB}/allmydata/introducer/interfaces.pyo
 ${PYSITELIB}/allmydata/introducer/server.py
 ${PYSITELIB}/allmydata/introducer/server.pyc
 ${PYSITELIB}/allmydata/introducer/server.pyo
+${PYSITELIB}/allmydata/listeners.py
+${PYSITELIB}/allmydata/listeners.pyc
+${PYSITELIB}/allmydata/listeners.pyo
 ${PYSITELIB}/allmydata/monitor.py
 ${PYSITELIB}/allmydata/monitor.pyc
 ${PYSITELIB}/allmydata/monitor.pyo
@@ -174,6 +184,9 @@ ${PYSITELIB}/allmydata/node.pyo
 ${PYSITELIB}/allmydata/nodemaker.py
 ${PYSITELIB}/allmydata/nodemaker.pyc
 ${PYSITELIB}/allmydata/nodemaker.pyo
+${PYSITELIB}/allmydata/protocol_switch.py
+${PYSITELIB}/allmydata/protocol_switch.pyc
+${PYSITELIB}/allmydata/protocol_switch.pyo
 ${PYSITELIB}/allmydata/scripts/__init__.py
 ${PYSITELIB}/allmydata/scripts/__init__.pyc
 ${PYSITELIB}/allmydata/scripts/__init__.pyo
@@ -309,9 +322,9 @@ ${PYSITELIB}/allmydata/storage_client.pyo
 ${PYSITELIB}/allmydata/test/__init__.py
 ${PYSITELIB}/allmydata/test/__init__.pyc
 ${PYSITELIB}/allmydata/test/__init__.pyo
-${PYSITELIB}/allmydata/test/_win_subprocess.py
-${PYSITELIB}/allmydata/test/_win_subprocess.pyc
-${PYSITELIB}/allmydata/test/_win_subprocess.pyo
+${PYSITELIB}/allmydata/test/blocking.py
+${PYSITELIB}/allmydata/test/blocking.pyc
+${PYSITELIB}/allmydata/test/blocking.pyo
 ${PYSITELIB}/allmydata/test/certs.py
 ${PYSITELIB}/allmydata/test/certs.pyc
 ${PYSITELIB}/allmydata/test/certs.pyo
@@ -348,6 +361,9 @@ ${PYSITELIB}/allmydata/test/cli/test_create.pyo
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.py
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.pyc
 ${PYSITELIB}/allmydata/test/cli/test_create_alias.pyo
+${PYSITELIB}/allmydata/test/cli/test_grid_manager.py
+${PYSITELIB}/allmydata/test/cli/test_grid_manager.pyc
+${PYSITELIB}/allmydata/test/cli/test_grid_manager.pyo
 ${PYSITELIB}/allmydata/test/cli/test_invite.py
 ${PYSITELIB}/allmydata/test/cli/test_invite.pyc
 ${PYSITELIB}/allmydata/test/cli/test_invite.pyo
@@ -391,11 +407,13 @@ ${PYSITELIB}/allmydata/test/data/lease_checker.history.txt
 ${PYSITELIB}/allmydata/test/data/lease_checker.state.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.pub.txt
 ${PYSITELIB}/allmydata/test/data/openssh-rsa-2048.txt
+${PYSITELIB}/allmydata/test/data/openssl-rsa-2048.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-1024-priv.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-priv.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-pub.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-2048-sig.txt
 ${PYSITELIB}/allmydata/test/data/pycryptopp-rsa-32768-priv.txt
+${PYSITELIB}/allmydata/test/data/spki-hash-test-vectors.yaml
 ${PYSITELIB}/allmydata/test/eliotutil.py
 ${PYSITELIB}/allmydata/test/eliotutil.pyc
 ${PYSITELIB}/allmydata/test/eliotutil.pyo
@@ -534,6 +552,9 @@ ${PYSITELIB}/allmydata/test/test_encodingutil.pyo
 ${PYSITELIB}/allmydata/test/test_filenode.py
 ${PYSITELIB}/allmydata/test/test_filenode.pyc
 ${PYSITELIB}/allmydata/test/test_filenode.pyo
+${PYSITELIB}/allmydata/test/test_grid_manager.py
+${PYSITELIB}/allmydata/test/test_grid_manager.pyc
+${PYSITELIB}/allmydata/test/test_grid_manager.pyo
 ${PYSITELIB}/allmydata/test/test_happiness.py
 ${PYSITELIB}/allmydata/test/test_happiness.pyc
 ${PYSITELIB}/allmydata/test/test_happiness.pyo
@@ -594,9 +615,9 @@ ${PYSITELIB}/allmydata/test/test_observer.pyo
 ${PYSITELIB}/allmydata/test/test_openmetrics.py
 ${PYSITELIB}/allmydata/test/test_openmetrics.pyc
 ${PYSITELIB}/allmydata/test/test_openmetrics.pyo
-${PYSITELIB}/allmydata/test/test_pipeline.py
-${PYSITELIB}/allmydata/test/test_pipeline.pyc
-${PYSITELIB}/allmydata/test/test_pipeline.pyo
+${PYSITELIB}/allmydata/test/test_protocol_switch.py
+${PYSITELIB}/allmydata/test/test_protocol_switch.pyc
+${PYSITELIB}/allmydata/test/test_protocol_switch.pyo
 ${PYSITELIB}/allmydata/test/test_python2_regressions.py
 ${PYSITELIB}/allmydata/test/test_python2_regressions.pyc
 ${PYSITELIB}/allmydata/test/test_python2_regressions.pyo
@@ -654,9 +675,6 @@ ${PYSITELIB}/allmydata/test/test_uri.pyo
 ${PYSITELIB}/allmydata/test/test_util.py
 ${PYSITELIB}/allmydata/test/test_util.pyc
 ${PYSITELIB}/allmydata/test/test_util.pyo
-${PYSITELIB}/allmydata/test/test_windows.py
-${PYSITELIB}/allmydata/test/test_windows.pyc
-${PYSITELIB}/allmydata/test/test_windows.pyo
 ${PYSITELIB}/allmydata/test/web/__init__.py
 ${PYSITELIB}/allmydata/test/web/__init__.pyc
 ${PYSITELIB}/allmydata/test/web/__init__.pyo
@@ -711,15 +729,15 @@ ${PYSITELIB}/allmydata/uri.pyo
 ${PYSITELIB}/allmydata/util/__init__.py
 ${PYSITELIB}/allmydata/util/__init__.pyc
 ${PYSITELIB}/allmydata/util/__init__.pyo
-${PYSITELIB}/allmydata/util/_eliot_updates.py
-${PYSITELIB}/allmydata/util/_eliot_updates.pyc
-${PYSITELIB}/allmydata/util/_eliot_updates.pyo
 ${PYSITELIB}/allmydata/util/abbreviate.py
 ${PYSITELIB}/allmydata/util/abbreviate.pyc
 ${PYSITELIB}/allmydata/util/abbreviate.pyo
 ${PYSITELIB}/allmydata/util/assertutil.py
 ${PYSITELIB}/allmydata/util/assertutil.pyc
 ${PYSITELIB}/allmydata/util/assertutil.pyo
+${PYSITELIB}/allmydata/util/attrs_provides.py
+${PYSITELIB}/allmydata/util/attrs_provides.pyc
+${PYSITELIB}/allmydata/util/attrs_provides.pyo
 ${PYSITELIB}/allmydata/util/base32.py
 ${PYSITELIB}/allmydata/util/base32.pyc
 ${PYSITELIB}/allmydata/util/base32.pyo
@@ -735,6 +753,9 @@ ${PYSITELIB}/allmydata/util/connection_status.pyo
 ${PYSITELIB}/allmydata/util/consumer.py
 ${PYSITELIB}/allmydata/util/consumer.pyc
 ${PYSITELIB}/allmydata/util/consumer.pyo
+${PYSITELIB}/allmydata/util/cputhreadpool.py
+${PYSITELIB}/allmydata/util/cputhreadpool.pyc
+${PYSITELIB}/allmydata/util/cputhreadpool.pyo
 ${PYSITELIB}/allmydata/util/dbutil.py
 ${PYSITELIB}/allmydata/util/dbutil.pyc
 ${PYSITELIB}/allmydata/util/dbutil.pyo
@@ -795,9 +816,6 @@ ${PYSITELIB}/allmydata/util/observer.pyo
 ${PYSITELIB}/allmydata/util/pid.py
 ${PYSITELIB}/allmydata/util/pid.pyc
 ${PYSITELIB}/allmydata/util/pid.pyo
-${PYSITELIB}/allmydata/util/pipeline.py
-${PYSITELIB}/allmydata/util/pipeline.pyc
-${PYSITELIB}/allmydata/util/pipeline.pyo
 ${PYSITELIB}/allmydata/util/pollmixin.py
 ${PYSITELIB}/allmydata/util/pollmixin.pyc
 ${PYSITELIB}/allmydata/util/pollmixin.pyo
