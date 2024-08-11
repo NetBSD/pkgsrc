@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2023/11/07 22:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2024/08/11 23:16:41 gdt Exp $
 
-VERSION_BASE=	1.18.0
+VERSION_BASE=	1.19.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
-PKGREVISION=	2
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -43,6 +42,12 @@ DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-pyutil>=3.3.0:../../devel/py-pyutil
 DEPENDS+=	${PYPKGPREFIX}-distro>=1.4.0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-collections-extended-[0-9]*:../../devel/py-collections-extended
+DEPENDS+=	${PYPKGPREFIX}-klein>=23.5.0:../../www/py-klein
+DEPENDS+=	${PYPKGPREFIX}-cbor2-[0-9]*:../../devel/py-cbor2
+DEPENDS+=	${PYPKGPREFIX}-cddl>=0.6.3:../../devel/py-cddl
+DEPENDS+=	${PYPKGPREFIX}-click>8.1.1:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
