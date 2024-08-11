@@ -1,4 +1,4 @@
-# $NetBSD: xorg.MesaLib,v 1.6 2019/06/12 01:04:40 gutteridge Exp $
+# $NetBSD: xorg.MesaLib,v 1.7 2024/08/11 15:25:19 rjs Exp $
 #
 include/EGL/egl.h
 include/EGL/eglext.h
@@ -23,6 +23,14 @@ include/GL/internal/dri_interface.h
 include/GL/internal/glcore.h
 include/GL/internal/sarea.h
 include/GL/osmesa.h
+include/GLES2/gl2.h
+include/GLES2/gl2ext.h
+include/GLES2/gl2platform.h
+include/GLES3/gl3.h
+include/GLES3/gl31.h
+include/GLES3/gl32.h
+include/GLES3/gl3ext.h
+include/GLES3/gl3platform.h
 include/KHR/khrplatform.h
 include/gbm.h
 lib/libEGL.a
@@ -50,6 +58,9 @@ lib/libGL.so.3
 lib/libGL.so.3.0
 lib/libGL.so.9.0
 lib/libGL.so.9.1
+lib/libGLESv2.so
+lib/libGLESv2.so.2
+lib/libGLESv2.so.2.0
 lib/libGLw.1.0.dylib
 lib/libGLw.1.dylib
 lib/libGLw.a
@@ -70,4 +81,5 @@ lib/pkgconfig/dri.pc
 lib/pkgconfig/egl.pc
 lib/pkgconfig/gbm.pc
 lib/pkgconfig/gl.pc
+lib/pkgconfig/glesv2.pc
 lib/pkgconfig/glw.pc
