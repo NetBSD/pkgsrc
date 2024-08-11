@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 09:57:16 nia Exp $
-
-BLAKE2s (archive-tar-minitar-0.8.gem) = 2359433fb2710e6e15994dc350bac9c75d4873ea9774a39913f8097303b1e6c2
-SHA512 (archive-tar-minitar-0.8.gem) = eabb7b87662753d9a76be240686d57b5430dc1cb9aa3485d912aef9b9f81cdf718af16d22e14da9b1e85050c01070436ebfaac29cf04c52f007410810aaddbc7
-Size (archive-tar-minitar-0.8.gem) = 5120 bytes
