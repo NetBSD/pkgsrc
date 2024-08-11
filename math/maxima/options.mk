@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/08/26 10:21:12 asau Exp $
+# $NetBSD: options.mk,v 1.5 2024/08/11 15:32:43 rjs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.maxima
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=	--enable-sbcl
 DEPENDS+=		ecl-[0-9]*:../../lang/ecl
 CONFIGURE_ARGS+=	--enable-ecl
 .include "../../lang/ecl/buildlink3.mk"
-.include "../../devel/libffi/buildlink3.mk"
 .endif
 
 # Modify PLIST
