@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5057 2024/08/11 13:12:17 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5058 2024/08/11 13:46:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7887,3 +7887,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/k6 to 0.52.0 [leot 2024-08-11]
 	Added databases/objsqlite3 version 1.0 [js 2024-08-11]
 	Updated math/py-numpy to 2.0.1nb1 [wiz 2024-08-11]
+	Updated devel/opa to 0.67.1 [leot 2024-08-11]
