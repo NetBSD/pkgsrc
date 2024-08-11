@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/04/07 07:35:09 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/11 02:19:48 gutteridge Exp $
 
-PKGREVISION= 5
+PKGREVISION=	6
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	marco-${VERSION:R}.2
@@ -12,7 +12,7 @@ USE_LANGUAGES=	c99
 
 TOOL_DEPENDS+=		gdk-pixbuf2-[0-9]*:../../graphics/gdk-pixbuf2
 TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
-DEPENDS+=		zenity-[0-9]*:../../x11/zenity
+DEPENDS+=		zenity3-[0-9]*:../../x11/zenity3
 
 PKGCONFIG_OVERRIDE+=	src/libmarco-private.pc.in
 
