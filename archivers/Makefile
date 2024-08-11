@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2024/05/26 11:11:00 markd Exp $
+# $NetBSD: Makefile,v 1.214 2024/08/11 02:15:03 taca Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -128,7 +128,6 @@ SUBDIR+=	py-zstandard
 SUBDIR+=	quazip
 SUBDIR+=	rar
 SUBDIR+=	rox-archive
-SUBDIR+=	ruby-archive-tar-minitar
 SUBDIR+=	ruby-bz2
 SUBDIR+=	ruby-ffi-libarchive
 SUBDIR+=	ruby-libarchive
