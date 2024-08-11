@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:24:30 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/08/11 02:20:00 wen Exp $
 
-BLAKE2s (Time-Progress-2.12.tar.gz) = 306d7e4fe60875ad2e61f116d2232b687bdc217186b3806fbf75a1aff0ac5db8
-SHA512 (Time-Progress-2.12.tar.gz) = 8abe96a51883ed3ff4c9d6cc06b9d5fe985af582b66dbe8792e7eefd351cab3d2e26b577ad7daaf504f6ccfebb05c35c706a98904cd7b6fad8156630606da236
-Size (Time-Progress-2.12.tar.gz) = 7455 bytes
+BLAKE2s (Time-Progress-2.14.tar.gz) = 38dfbc27031381cd1d90e87e0c0ebeb6b49bb203f0beffb98829116bb3b70248
+SHA512 (Time-Progress-2.14.tar.gz) = e851f06d81f3d5fa1db394db519319209e229ab9cef882a3c36c90529783285d3f606a152131d3f00af227159e6a15c8514e34a0d03514ee22181f1d2cf44a66
+Size (Time-Progress-2.14.tar.gz) = 7875 bytes
