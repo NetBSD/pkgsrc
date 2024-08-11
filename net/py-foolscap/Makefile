@@ -1,17 +1,23 @@
-# $NetBSD: Makefile,v 1.43 2023/11/05 22:50:39 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/08/11 19:44:49 gdt Exp $
 
-DISTNAME=	foolscap-21.7.0
+DISTNAME=	foolscap-23.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	net python
-MASTER_SITES=	${MASTER_SITE_PYPI:=f/foolscap/}
+# pypi lacks a source archive
+# https://github.com/warner/foolscap/issues/107
+GITHUB_PROJECT=	foolscap
+# \todo Hoist this as a fix to github.mk.
+GITHUB_TAG=	refs/tags/${DISTNAME}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=warner/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
-# This homepage is correct, but it is out of date.
-HOMEPAGE=	https://foolscap.lothar.com/trac
-#HOMEPAGE=	https://pypi.org/project/foolscap/
+HOMEPAGE=	https://github.com/warner/foolscap
 COMMENT=	RPC protocol for Twisted
 LICENSE=	mit
+
+# github tarball unpacks to a strange path.
+# https://github.com/warner/foolscap/issues/106
+WRKSRC=		${WRKDIR}/foolscap-${DISTNAME}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted

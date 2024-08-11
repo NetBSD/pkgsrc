@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.23 2023/11/05 22:50:39 wiz Exp $
+$NetBSD: distinfo,v 1.24 2024/08/11 19:44:50 gdt Exp $
 
-BLAKE2s (foolscap-21.7.0.tar.gz) = d89d7e3c2273222e3c3c8cddc71b91a9ad42ca869fdce387eccf2cb94815c17d
-SHA512 (foolscap-21.7.0.tar.gz) = 1456e386b62c5070fdc606d1b6ce3939830ed930d98f542aca758109228bcfe544b7a372cb60df813a70779ea850ad0abca4b33f11f1369292d48cc60d761b86
-Size (foolscap-21.7.0.tar.gz) = 489611 bytes
-SHA1 (patch-versioneer.py) = e4cfc8afea123b14d1c8122745f7cfe03aef6def
+BLAKE2s (foolscap-23.11.0.tar.gz) = 501dfbc4e824a4d435953b8e8d0658d48705cc8ece995246452a4e1a799af2b4
+SHA512 (foolscap-23.11.0.tar.gz) = 1052b00522cf48a191d97882c49b8028088baa4eda2a585e11c17278a76a260f16ff8e219728dca0a28992c9d9af4f732dbaaeb7825ac0d4cdbf5e62fd6d7c4a
+Size (foolscap-23.11.0.tar.gz) = 540667 bytes
