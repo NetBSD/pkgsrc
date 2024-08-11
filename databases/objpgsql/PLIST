@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/11 18:12:44 js Exp $
+include/ObjPgSQL/ObjPgSQL.h
+include/ObjPgSQL/PGSQLConnection.h
+include/ObjPgSQL/PGSQLConnectionFailedException.h
+include/ObjPgSQL/PGSQLException.h
+include/ObjPgSQL/PGSQLExecuteCommandFailedException.h
+include/ObjPgSQL/PGSQLResult.h
+include/ObjPgSQL/PGSQLResultRow.h
+lib/libobjpgsql.so
+lib/libobjpgsql.so.1.0.0
+lib/objfw-config/ObjPgSQL.oc
