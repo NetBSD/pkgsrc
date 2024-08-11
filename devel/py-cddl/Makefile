@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/08/11 22:27:14 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/11 22:38:30 gdt Exp $
 
-DISTNAME=	pycddl-0.6.3
+VERSION=	0.6.3
+DISTNAME=	pycddl-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-cddl-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycddl/}
 
