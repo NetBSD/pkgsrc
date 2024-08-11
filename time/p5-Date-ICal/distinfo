@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/04/11 10:09:22 wen Exp $
+$NetBSD: distinfo,v 1.7 2024/08/11 02:02:26 wen Exp $
 
-BLAKE2s (Date-ICal-2.680.tar.gz) = 00bf3bbcbcb3b63d909b0fd20925b531a93f46d08719fa1d99426d5a0b100db6
-SHA512 (Date-ICal-2.680.tar.gz) = 69081db1cc76481df94ae9022f8052a1d3d11897cdcdb8a82fd2802175cc8fa0415470345f37539a99771c34cdfa28a2dc67a7aa82968d66cd3244d4f2d46897
-Size (Date-ICal-2.680.tar.gz) = 43481 bytes
+BLAKE2s (Date-ICal-2.682.tar.gz) = d5c06e44ee3d833b9cef465f6f7b1549ed1eac2a3f441ae4be5df0ae9142a61e
+SHA512 (Date-ICal-2.682.tar.gz) = 4dd24903ad75b74dfa8e54f80de60bfa4e56dd0436993b6557708cf51c92c36c20ef416fa8316d1254aebe6a800ee7316ecff18533cad37cb554b38cb0f79caa
+Size (Date-ICal-2.682.tar.gz) = 43855 bytes
