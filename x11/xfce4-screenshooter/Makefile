@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2024/08/03 02:06:39 gutteridge Exp $
+# $NetBSD: Makefile,v 1.71 2024/08/11 02:29:40 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
+PKGREVISION=	1
 VERSION=	1.11.1
 DISTNAME=	xfce4-screenshooter-${VERSION}
 CATEGORIES=	x11
@@ -10,7 +11,7 @@ MASTER_SITES=	https://archive.xfce.org/src/apps/xfce4-screenshooter/${VERSION:R}
 HOMEPAGE=	https://archive.xfce.org/src/apps/xfce4-screenshooter/${VERSION:R}/
 COMMENT=	Xfce screenshot application
 
-DEPENDS+=	zenity-[0-9]*:../../x11/zenity
+DEPENDS+=	zenity3-[0-9]*:../../x11/zenity3
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
