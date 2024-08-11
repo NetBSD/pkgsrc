@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.23 2024/07/28 10:24:25 leot Exp $
+# $NetBSD: go-modules.mk,v 1.24 2024/08/11 13:46:42 leot Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
 GO_MODULE_FILES+=	github.com/!ada!logics/go-fuzz-headers/@v/v0.0.0-20230811130428-ced1acdcaa24.mod
