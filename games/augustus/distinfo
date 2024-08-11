@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/11/03 17:25:03 triaxx Exp $
+$NetBSD: distinfo,v 1.3 2024/08/11 17:41:56 nia Exp $
 
-BLAKE2s (augustus-3.2.0.tar.gz) = 40ad030fdf7c3a0c6b0c5b22ea82c5f47936a0afb3ce91d59b22cfc536fc1138
-SHA512 (augustus-3.2.0.tar.gz) = d2276916fdcc6605adfcab7767784f9c345e4cc04804cb79c59ebb0800683fe85fde5dcf3e581297cdc2bbf90e4da9cd0836e272f1b5d7020bdecad8753d93e7
-Size (augustus-3.2.0.tar.gz) = 92034090 bytes
-SHA1 (patch-CMakeLists.txt) = 6483c913532e2f7534cc92a2b517ebe56bcf61e3
+BLAKE2s (augustus-4.0.0.tar.gz) = d216644badf193716feccf534462cf977cd35771da2e7f7d9f3a02c74d10a12a
+SHA512 (augustus-4.0.0.tar.gz) = a7a2dfdbd4aeaf6e14131df0cdc34855e0c557cd6737fbb27e101e97d31508d66ee50ed75ee8182522b46b686c0d1180addaa5a8d5ba83b1fbab27742342b094
+Size (augustus-4.0.0.tar.gz) = 107933184 bytes
+SHA1 (patch-CMakeLists.txt) = 2d88c8fbca34f5bf8ad1e26bfe79ac7ba3e76b65
