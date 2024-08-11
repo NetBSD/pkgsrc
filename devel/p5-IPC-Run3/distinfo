@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:16:48 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/08/11 01:29:57 wen Exp $
 
-BLAKE2s (IPC-Run3-0.048.tar.gz) = eaef3f2a119fc9a5a865b92a73f6564ed0b9d5408b773f0efe95792288733676
-SHA512 (IPC-Run3-0.048.tar.gz) = 50432850d8dccd2e59aa6684d34f3e3242fd7df3eb4d9a5eb02dae389aa46b5fd68cc54114a157c3fe99956e68e74d575ab3db5009b7bf7d5c325f1f109b1262
-Size (IPC-Run3-0.048.tar.gz) = 20312 bytes
+BLAKE2s (IPC-Run3-0.049.tar.gz) = 8eb87a7a10def22a0fef3733eeab4d6fcaf58acac52134fab460d0e6bc8ac0bd
+SHA512 (IPC-Run3-0.049.tar.gz) = 19dbf902666ccb56bfdb02c0c4e9ef585d773e1b8b53d4627367a3c0344d08a6358a733786b8de97e615b6916b716c4e66e73ae263986a2cacf50ab155539c55
+Size (IPC-Run3-0.049.tar.gz) = 20660 bytes
