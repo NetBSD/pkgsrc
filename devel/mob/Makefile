@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2024/07/08 20:46:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.95 2024/08/11 15:57:00 bsiegert Exp $
 
 DISTNAME=		mob-5.0.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=remotemobprogramming/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
