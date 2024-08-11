@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/06 06:41:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/11 06:39:04 wiz Exp $
 include/box2d/b2_api.h
 include/box2d/b2_block_allocator.h
 include/box2d/b2_body.h
@@ -44,4 +44,4 @@ lib/cmake/box2d/box2dConfig.cmake
 lib/cmake/box2d/box2dConfigVersion.cmake
 lib/libbox2d.so
 lib/libbox2d.so.2
-lib/libbox2d.so.${PKGVERSION}
+lib/libbox2d.so.2.4.1

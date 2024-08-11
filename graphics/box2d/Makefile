@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2023/03/05 14:56:36 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/11 06:39:04 wiz Exp $
 
-GITHUB_PROJECT=	box2d
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	box2d-2.4.1
+DISTNAME=	box2d-2.4.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erincatto/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/erincatto/box2d/
