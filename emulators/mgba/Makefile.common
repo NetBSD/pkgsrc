@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/08/07 22:02:48 nia Exp $
+# $NetBSD: Makefile.common,v 1.5 2024/08/11 19:42:57 nia Exp $
 
 # used by emulators/libretro-mgba/Makefile
 # used by emulators/mgba/Makefile
@@ -7,6 +7,7 @@
 DISTNAME=	mgba-0.10.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mgba-emu/}
+GITHUB_PROJECT=	mgba
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE?=	https://mgba.io/
