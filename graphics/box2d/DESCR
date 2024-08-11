@@ -1,6 +1,5 @@
-Box2D is a 2D physics engine for games.
+Box2D is a 2D physics engine for games. It features:
 
-Features:
 Collision
     Continuous collision detection
     Contact callbacks: begin, end, pre-solve, post-solve
@@ -23,8 +22,3 @@ Physics
     Joint limits, motors, and friction
     Momentum decoupled position correction
     Fairly accurate reaction forces/impulses
-
-System
-    Small block and stack allocators
-    Centralized tuning parameters
-    Highly portable C++ with no use of STL containers
