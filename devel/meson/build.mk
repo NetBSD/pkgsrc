@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.27 2024/05/19 05:37:11 wiz Exp $
+# $NetBSD: build.mk,v 1.28 2024/08/11 00:10:31 js Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -139,7 +139,8 @@ meson-configure:
 		--sysconfdir ${PKG_SYSCONFDIR} \
 		--wrap-mode=nodownload \
 		${MESON_CROSS_ARGS} \
-		--buildtype=plain ${MESON_ARGS} . output
+		-Ddebug=false \
+		-Doptimization=2 ${MESON_ARGS} . output
 .endfor
 
 do-build: meson-build
