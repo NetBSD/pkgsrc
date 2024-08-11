@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2024/07/21 09:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/08/11 06:43:02 wiz Exp $
 
-DISTNAME=	astroid-3.2.4
+DISTNAME=	astroid-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
@@ -17,8 +17,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# as of 3.2.4
-# 1 failed, 1599 passed, 77 skipped, 16 xfailed
+# as of 3.3.1
+# 1605 passed, 75 skipped, 16 xfailed
 
 .include "../../lang/python/pyversion.mk"
 
