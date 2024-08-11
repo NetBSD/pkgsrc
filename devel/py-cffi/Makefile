@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2023/11/05 13:44:36 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/08/11 06:51:09 wiz Exp $
 
-DISTNAME=	cffi-1.16.0
+DISTNAME=	cffi-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -19,6 +18,9 @@ USE_LANGUAGES=	c c++ # c++ for testing only
 USE_TOOLS+=	pkg-config
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# as of 1.17.0
+# 8 failed, 1910 passed, 130 skipped, 4 xfailed, 11 warnings
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
