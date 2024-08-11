@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/07/03 06:49:54 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/11 15:44:26 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -215,6 +215,7 @@ go122/src/bytes/boundary_test.go
 go122/src/bytes/buffer.go
 go122/src/bytes/buffer_test.go
 go122/src/bytes/bytes.go
+go122/src/bytes/bytes_js_wasm_test.go
 go122/src/bytes/bytes_test.go
 go122/src/bytes/compare_test.go
 go122/src/bytes/example_test.go
@@ -1909,7 +1910,7 @@ go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.18.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.0.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.1.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.3.linux-amd64.txt
-go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go${PKGVERSION}.linux-amd64.txt
+go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.5.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.7.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22.9.linux-amd64.txt
 go122/src/cmd/go/testdata/mod/golang.org_toolchain_v0.0.1-go1.22rc1.linux-amd64.txt
@@ -11913,6 +11914,7 @@ go122/test/fixedbugs/issue6513.dir/main.go
 go122/test/fixedbugs/issue6513.go
 go122/test/fixedbugs/issue65593.go
 go122/test/fixedbugs/issue6572.go
+go122/test/fixedbugs/issue65808.go
 go122/test/fixedbugs/issue65957.dir/a.go
 go122/test/fixedbugs/issue65957.dir/main.go
 go122/test/fixedbugs/issue65957.go
@@ -11956,6 +11958,7 @@ go122/test/fixedbugs/issue6772.go
 go122/test/fixedbugs/issue6789.dir/a.go
 go122/test/fixedbugs/issue6789.dir/b.go
 go122/test/fixedbugs/issue6789.go
+go122/test/fixedbugs/issue68227.go
 go122/test/fixedbugs/issue6847.go
 go122/test/fixedbugs/issue6866.go
 go122/test/fixedbugs/issue6889.go
