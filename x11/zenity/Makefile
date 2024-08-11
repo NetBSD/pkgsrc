@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/08/10 22:21:23 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2024/08/11 02:12:19 gutteridge Exp $
 
 DISTNAME=	zenity-4.0.1
 CATEGORIES=	x11 gnome
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 LICENSE=	gnu-lgpl-v2.1 # or later
+
+CONFLICTS=	zenity3-[0-9]*
 
 TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
