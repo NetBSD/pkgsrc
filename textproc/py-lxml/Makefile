@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2024/05/29 16:34:39 adam Exp $
+# $NetBSD: Makefile,v 1.108 2024/08/11 06:56:25 wiz Exp $
 
-DISTNAME=	lxml-5.2.2
+DISTNAME=	lxml-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
 
@@ -23,6 +22,9 @@ FORCE_C_STD=		gnu99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# tests fail with
+# ImportError: cannot import name 'etree' from 'lxml'
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
@@ -31,5 +33,3 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9.12
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.34
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-# fix for UnicodeEncodeError: 'ascii' codec can't encode characters
-TEST_ENV+=	LC_ALL=en_US.UTF-8
