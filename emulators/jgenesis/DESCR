@@ -1,0 +1,13 @@
+Cross-platform multi-console emulator supporting a number of 8-bit and 16-bit
+gaming consoles.
+
+Features:
+
+- Emulation for the following consoles:
+  - Sega Genesis / Mega Drive
+  - Sega CD / Mega CD
+  - Sega Master System / Mark III
+  - Game Gear
+  - Nintendo Entertainment System (NES) / Famicom
+  - Super Nintendo Entertainment System (SNES) / Super Famicom
+  - Game Boy / Game Boy Color

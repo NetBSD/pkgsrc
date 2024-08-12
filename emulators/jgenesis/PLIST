@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/12 06:31:49 wiz Exp $
+bin/jgenesis-cli
+bin/jgenesis-gui
+bin/m68000-test-runner
+bin/mos6502-test-runner
+bin/spc700-test-runner
+bin/wdc65816-test-runner
+bin/z80-test-runner
