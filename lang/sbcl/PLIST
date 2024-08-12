@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2023/11/28 15:03:55 rjs Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/08/12 13:45:44 rjs Exp $
 bin/sbcl
 lib/sbcl/contrib/asdf.fasl
 lib/sbcl/contrib/sb-aclrepl.asd
@@ -25,6 +25,8 @@ lib/sbcl/contrib/sb-md5.asd
 lib/sbcl/contrib/sb-md5.fasl
 lib/sbcl/contrib/sb-mpfr.asd
 lib/sbcl/contrib/sb-mpfr.fasl
+${PLIST.linux}lib/sbcl/contrib/sb-perf.asd
+${PLIST.linux}lib/sbcl/contrib/sb-perf.fasl
 lib/sbcl/contrib/sb-posix.asd
 lib/sbcl/contrib/sb-posix.fasl
 lib/sbcl/contrib/sb-queue.asd
