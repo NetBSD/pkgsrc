@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/08/12 10:34:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/12 11:50:24 wiz Exp $
 
 DISTNAME=	textual-0.76.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,13 +17,13 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-it-py-[0-9]*:../../textproc/py-markdown-it-py
 # optional
 #DEPENDS+=	${PYPKGPREFIX}-tree-sitter>=0.20.1:../../wip/py-tree-sitter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=0.4.0:../../devel/py-test-textual-snapshot
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=1.0.0:../../devel/py-test-textual-snapshot
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
 # as of 0.76.0
-# 312 failed, 2573 passed, 1 skipped, 3 xfailed, 2 warnings
+# 37 failed, 2848 passed, 1 skipped, 3 xfailed, 2 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
