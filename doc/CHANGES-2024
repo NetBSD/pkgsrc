@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5069 2024/08/11 23:16:46 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5070 2024/08/12 00:19:02 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7900,3 +7900,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-foolscap to 23.11.0 [gdt 2024-08-11]
 	Added devel/py-cddl version 0.6.3 [gdt 2024-08-11]
 	Updated filesystems/tahoe-lafs to 1.19.0 [gdt 2024-08-11]
+	Updated x11/zenity3 to 3.44.4 [gutteridge 2024-08-12]
