@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5080 2024/08/12 12:34:13 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5081 2024/08/12 14:03:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7911,3 +7911,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added comms/py-textual-dev version 1.5.1 [wiz 2024-08-12]
 	Updated misc/rust-kanban to 0.10.4 [pin 2024-08-12]
 	Updated net/trippy to 0.11.0 [pin 2024-08-12]
+	Updated www/firefox to 129.0 [ryoon 2024-08-12]
