@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1481 2024/08/10 08:13:11 js Exp $
+# $NetBSD: Makefile,v 1.1482 2024/08/12 10:07:47 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -240,6 +240,7 @@ SUBDIR+=	fmtlib
 SUBDIR+=	fop
 SUBDIR+=	freepwing
 SUBDIR+=	freexl
+SUBDIR+=	frogmouth
 SUBDIR+=	fsrx
 SUBDIR+=	gdome2
 SUBDIR+=	git-delta
