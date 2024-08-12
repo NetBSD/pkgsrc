@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/08/11 03:31:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/12 00:18:33 gutteridge Exp $
 
-DISTNAME=	zenity-3.44.0
+DISTNAME=	zenity-3.44.4
 PKGNAME=	${DISTNAME:S/zenity/zenity3/}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/3.44/}
