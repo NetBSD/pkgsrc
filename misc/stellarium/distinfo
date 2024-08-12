@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.67 2024/05/03 12:07:41 wiz Exp $
+$NetBSD: distinfo,v 1.68 2024/08/12 14:06:58 adam Exp $
 
-BLAKE2s (stellarium-24.1.tar.xz) = 36b925cca45bd87db014eaebff3f00166b565052877f95d6c0cc2328e7dc90bf
-SHA512 (stellarium-24.1.tar.xz) = 60e0e2afb214f4e2d9ba6640f4b699d18c97b05b9f33e9990787a87484c6bd1d7bc87685558956e6dc8a80e93abd8d7f677daeb55d38d8f4f8448e7936999246
-Size (stellarium-24.1.tar.xz) = 326391584 bytes
-SHA1 (patch-CMakeLists.txt) = d556dff660e0031a98a3484bbac3b3bd29f4d1e1
+BLAKE2s (stellarium-24.2.tar.xz) = bb5d102f4c84b5934c7f76fe30f443afb1051043150bf657269a7bfb52840884
+SHA512 (stellarium-24.2.tar.xz) = 621d16a70036e2ddea3900c0fcd0d4caadb8f821afda8a5d9818c82d2a846107840e1497a4d79a954ec2a76e434bc99b021e6f15c2af6de2cc4044fb70096929
+Size (stellarium-24.2.tar.xz) = 327084704 bytes
+SHA1 (patch-CMakeLists.txt) = 3dc4e3eed33eb9097527be2e4d16c4ffcfd2e1b2
 SHA1 (patch-data_CMakeLists.txt) = 29a5c1c8eb64baff1ef7bf64e3c0ea6bcdc7704f
-SHA1 (patch-doc_CMakeLists.txt) = 4521054b8915661a4b50cea5e65ed7ccf80ce65e
+SHA1 (patch-doc_CMakeLists.txt) = fa9d28bced331e36bb0b19db2b67d54134a23e91
 SHA1 (patch-plugins_TelescopeControl_src_INDI_INDIConnection.cpp) = 153a3677ca8758a71bcb08b4b380fb2dffba26c5
 SHA1 (patch-plugins_TelescopeControl_src_INDI_INDIConnection.hpp) = ab3a0b572a194333823ecfb681a0df4e8cced0fd
 SHA1 (patch-src_CMakeLists.txt) = aebac5163a125a26ef04008e8ef30d7a07e04991
