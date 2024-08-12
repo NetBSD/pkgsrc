@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2024/06/11 07:00:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.69 2024/08/12 18:25:18 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/bg/man6/wesnoth.6
@@ -18483,6 +18483,7 @@ share/wesnoth/data/test/scenarios/manual_tests/test_relative_dir.cfg
 share/wesnoth/data/test/scenarios/test_tests/empty_test.cfg
 share/wesnoth/data/test/scenarios/test_tests/fire_wml_menu_item.cfg
 share/wesnoth/data/test/scenarios/test_tests/test_assert.cfg
+share/wesnoth/data/test/scenarios/test_tests/test_check_strikes.cfg
 share/wesnoth/data/test/scenarios/test_tests/test_return.cfg
 share/wesnoth/data/test/scenarios/wml_tests/FilterWML/special_id_active_lua_function.cfg
 share/wesnoth/data/test/scenarios/wml_tests/ScenarioWML/AiWML/_main.cfg
@@ -18631,6 +18632,40 @@ share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/attacks/attack
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/attacks/attacks_wfl_self.cfg
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/attacks/attacks_zero.cfg
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/backstab.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_add.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_add_divide.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_add_multiply.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_add_sub.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_affect_allies.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_affect_enemies.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_affect_everybody.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_affect_self_no.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_different_values.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_divide.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_high_fraction.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_low_fraction.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_max_value.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_multiply.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_multiply_divide.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_negative_value.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_no_value.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_overwrite_specials_both_sides.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_overwrite_specials_mixed.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_overwrite_specials_one_side.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_overwrite_specials_two_both_sides.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_overwrite_specials_two_one_side.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_sub.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_sub_divide.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_sub_multiply.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_mixed_same_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_mixed_unique_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_no_same_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_no_unique_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_yes_same_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_two_cumulative_yes_unique_id.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_wfl_other.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_wfl_self.cfg
+share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/berserk/berserk_zero.cfg
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/damage_recalculation_mid_attack.cfg
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/feeding.cfg
 share/wesnoth/data/test/scenarios/wml_tests/UnitsWML/AbilitiesWML/firststrike_and_laststrike.cfg
