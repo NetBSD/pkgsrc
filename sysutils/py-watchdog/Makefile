@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/05/27 10:30:28 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/12 14:28:20 adam Exp $
 
-DISTNAME=	watchdog-4.0.1
+DISTNAME=	watchdog-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchdog/}
