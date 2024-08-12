@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5083 2024/08/12 14:12:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5084 2024/08/12 14:31:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7916,3 +7916,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/QXlsx to 1.4.9 [adam 2024-08-12]
 	Added math/fast_float version 6.1.3 [adam 2024-08-12]
 	Updated misc/stellarium to 24.2 [adam 2024-08-12]
+	Updated sysutils/py-watchdog to 4.0.2 [adam 2024-08-12]
+	Updated math/py-sympy to 1.13.2 [adam 2024-08-12]
