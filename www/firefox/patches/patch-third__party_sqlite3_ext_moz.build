@@ -1,0 +1,13 @@
+$NetBSD: patch-third__party_sqlite3_ext_moz.build,v 1.1 2024/08/12 14:03:32 ryoon Exp $
+
+--- third_party/sqlite3/ext/moz.build.orig	2024-08-06 01:06:04.545236415 +0000
++++ third_party/sqlite3/ext/moz.build
+@@ -20,7 +20,7 @@ SOURCES += [
+     "fts5.c",
+ ]
+ 
+-if CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "Android":
++if CONFIG["OS_TARGET"] == "Linux" or CONFIG["OS_TARGET"] == "Android" or CONFIG["OS_TARGET"] == "FreeBSD" or CONFIG["OS_TARGET"] == "NetBSD" or CONFIG["OS_TARGET"] == "OpenBSD":
+     OS_LIBS += [
+         "m",
+     ]
