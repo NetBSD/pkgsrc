@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2024/08/12 11:19:25 nia Exp $
+
+BLAKE2s (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = 752aabdf207e52c191d90ca89dcd8f6ff637faee89531b59deac5fe8040c0490
+SHA512 (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = f7ef98b28c52ff7e793ca21d532f49fc547bae882ab77ed72fd4b43e80805d738c829be11e13a4f71c74166a0c4e54936a79d3f89ae68edced3cf39dc37c5be5
+Size (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = 2194254 bytes
+BLAKE2s (vcmi-1.5.6.tar.gz) = 410b17366338dab4db609872baea805fc2a9879e1ae7a05a6e8a00010495c6fe
+SHA512 (vcmi-1.5.6.tar.gz) = b5ec4068cc4e176724b1c307e57758b94cc101ccebd7d60bfc620e4386802eec7f382026a6ce03391cd968d7410a3ebf324d84b0a3919c87bd6797fc75599d31
+Size (vcmi-1.5.6.tar.gz) = 9743615 bytes
+BLAKE2s (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = 3fd52b79fd6378c52f00ff3043cff6401dbd832e16977d8645ab6ea8843fe81f
+SHA512 (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = d78d70268afcc99badc62e1ac53f7c90add2af8818c34685e6ae505af8c4141024050fc6c861972cb51a696b62e9d368b77572b3c58ec8eddd1d04d5153a010e
+Size (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = 205354 bytes
+SHA1 (patch-Global.h) = 7a587fa006fb4cb2ab3c9a48c303027a8baa6ed3
+SHA1 (patch-lib_CStopWatch.h) = a5c75887c1fed973a46478de19b9c4f85838cb21
+SHA1 (patch-lib_CThreadHelper.cpp) = bcbbf7c6cedaea3e5a763882618d71e7849289f9
+SHA1 (patch-lib_modding_CModVersion.h) = 470f65e441bb8627e5b0bb53442015fa2cb91bd2
