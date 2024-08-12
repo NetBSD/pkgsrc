@@ -1,9 +1,8 @@
-$NetBSD: patch-doc_CMakeLists.txt,v 1.5 2024/04/03 11:35:49 adam Exp $
+$NetBSD: patch-doc_CMakeLists.txt,v 1.6 2024/08/12 14:06:58 adam Exp $
 
 Install man pages also on Darwin.
-Use correct path to install man pages.
 
---- doc/CMakeLists.txt.orig	2024-02-18 07:16:39.000000000 +0000
+--- doc/CMakeLists.txt.orig	2024-05-13 14:25:38.000000000 +0000
 +++ doc/CMakeLists.txt
 @@ -2,7 +2,7 @@
  # to generate manual page:
@@ -14,16 +13,3 @@ Use correct path to install man pages.
       ADD_CUSTOM_TARGET(ManPages ALL)
  
       CONFIGURE_FILE(
-@@ -22,11 +22,7 @@ IF(UNIX AND NOT WIN32 AND NOT APPLE)
-           DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1
-      )
- 
--     IF(${CMAKE_SYSTEM_NAME} MATCHES "(DragonFly|NetBSD|OpenBSD)")
--          INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION man/man1)
--     ELSE()
--          INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION share/man/man1)
--     ENDIF()
-+     INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/stellarium.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
- ENDIF()
- 
- 
