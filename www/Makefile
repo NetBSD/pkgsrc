@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1806 2024/08/10 14:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.1807 2024/08/12 12:17:32 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -907,6 +907,7 @@ SUBDIR+=	py-swish-e
 SUBDIR+=	py-sydent
 SUBDIR+=	py-telepath
 SUBDIR+=	py-terminado
+SUBDIR+=	py-test-aiohttp
 SUBDIR+=	py-test-django
 SUBDIR+=	py-test-httpbin
 SUBDIR+=	py-test-httpx
