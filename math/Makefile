@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.606 2024/08/06 07:55:23 adam Exp $
+# $NetBSD: Makefile,v 1.607 2024/08/12 14:06:08 adam Exp $
 
 COMMENT=	Mathematics
 
@@ -189,6 +189,7 @@ SUBDIR+=	ess
 SUBDIR+=	eukleides
 SUBDIR+=	eukleides10
 SUBDIR+=	euler
+SUBDIR+=	fast_float
 SUBDIR+=	fftpack
 SUBDIR+=	ffts
 SUBDIR+=	fftw
