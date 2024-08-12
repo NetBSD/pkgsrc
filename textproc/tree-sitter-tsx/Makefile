@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2023/06/03 06:37:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/12 04:31:32 wiz Exp $
 
 DISTNAME=	tree-sitter-typescript-0.20.2
 PKGNAME=	${DISTNAME:S/typescript/tsx/}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
+GITHUB_PROJECT=	tree-sitter-typescript
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
