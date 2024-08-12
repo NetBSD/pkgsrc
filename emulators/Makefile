@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.361 2024/06/27 02:09:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.362 2024/08/12 06:32:08 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -96,6 +96,7 @@ SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	hercules4sdl
 SUBDIR+=	ia64sim
+SUBDIR+=	jgenesis
 SUBDIR+=	kegs
 SUBDIR+=	keystone
 SUBDIR+=	klh10
