@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/12 10:05:10 wiz Exp $
 
 DISTNAME=	markdown-it-py-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown-it-py/}
 
@@ -13,6 +13,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.4:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-mdurl>=0.1:../../www/py-mdurl
+DEPENDS+=	${PYPKGPREFIX}-linkify-it-py>=0:../../textproc/py-linkify-it-py
 
 USE_LANGUAGES=	# none
 
