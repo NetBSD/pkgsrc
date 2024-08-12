@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/12 20:37:08 markd Exp $
+
+BLAKE2s (HTTP-Daemon-SSL-1.04.tar.gz) = 8677ba3e78a79a9ac7d70200e76eddb76ceba33ff33d0ddb6d87bffdfc75934e
+SHA512 (HTTP-Daemon-SSL-1.04.tar.gz) = ff7b1350c376e1c1c743db6becde4c1633ac0dd8da4261d0134a6cad26586b7b296d09f89afa31d529adfe3fc14fad5551ba3c5bba6005f60699fe6b47046c3b
+Size (HTTP-Daemon-SSL-1.04.tar.gz) = 9237 bytes
