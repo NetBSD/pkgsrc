@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1482 2024/08/12 10:07:47 wiz Exp $
+# $NetBSD: Makefile,v 1.1483 2024/08/12 11:59:08 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1207,6 +1207,7 @@ SUBDIR+=	py-toml
 SUBDIR+=	py-tomli
 SUBDIR+=	py-tomli_w
 SUBDIR+=	py-tomlkit
+SUBDIR+=	py-tree-sitter
 SUBDIR+=	py-types-yaml
 SUBDIR+=	py-typogrify
 SUBDIR+=	py-uc-micro-py
