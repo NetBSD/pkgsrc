@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/12 12:16:33 wiz Exp $
+
+BLAKE2s (pytest-aiohttp-1.0.5.tar.gz) = ea78536001c5c5ba9c83ca8aa38ca286103184599ab54dce781e828ef8ae61c6
+SHA512 (pytest-aiohttp-1.0.5.tar.gz) = b8421c63e4d5caa9742a013a6d1fd3c010b5e4a48e4f5c1a07ddfb7b05853ce6a7a0d65ce78493fd607f59c669d31c75d97a9022048e6a60cbc90a19a48dd02c
+Size (pytest-aiohttp-1.0.5.tar.gz) = 12209 bytes
