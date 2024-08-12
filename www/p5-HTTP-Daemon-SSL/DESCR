@@ -1,0 +1,3 @@
+Instances of the HTTP::Daemon::SSL class are HTTP/1.1 servers that listen
+on a socket for incoming requests. The HTTP::Daemon::SSL is a sub-class of
+IO::Socket::SSL, so you can perform socket operations directly on it too.
