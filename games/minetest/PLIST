@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/02 14:18:07 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/08/12 15:16:03 ktnb Exp $
 bin/minetest
 bin/minetestserver
 man/man6/minetest.6
@@ -41,6 +41,7 @@ share/locale/jbo/LC_MESSAGES/minetest.mo
 share/locale/jv/LC_MESSAGES/minetest.mo
 share/locale/kk/LC_MESSAGES/minetest.mo
 share/locale/ko/LC_MESSAGES/minetest.mo
+share/locale/kv/LC_MESSAGES/minetest.mo
 share/locale/ky/LC_MESSAGES/minetest.mo
 share/locale/lt/LC_MESSAGES/minetest.mo
 share/locale/lv/LC_MESSAGES/minetest.mo
@@ -64,6 +65,7 @@ share/locale/sr_Cyrl/LC_MESSAGES/minetest.mo
 share/locale/sr_Latn/LC_MESSAGES/minetest.mo
 share/locale/sv/LC_MESSAGES/minetest.mo
 share/locale/sw/LC_MESSAGES/minetest.mo
+share/locale/tok/LC_MESSAGES/minetest.mo
 share/locale/tr/LC_MESSAGES/minetest.mo
 share/locale/tt/LC_MESSAGES/minetest.mo
 share/locale/uk/LC_MESSAGES/minetest.mo
@@ -71,7 +73,7 @@ share/locale/vi/LC_MESSAGES/minetest.mo
 share/locale/yue/LC_MESSAGES/minetest.mo
 share/locale/zh_CN/LC_MESSAGES/minetest.mo
 share/locale/zh_TW/LC_MESSAGES/minetest.mo
-share/metainfo/net.minetest.minetest.appdata.xml
+share/metainfo/net.minetest.minetest.metainfo.xml
 share/minetest/builtin/async/game.lua
 share/minetest/builtin/async/mainmenu.lua
 share/minetest/builtin/client/chatcommands.lua
@@ -84,15 +86,20 @@ share/minetest/builtin/common/chatcommands.lua
 share/minetest/builtin/common/filterlist.lua
 share/minetest/builtin/common/information_formspecs.lua
 share/minetest/builtin/common/item_s.lua
+share/minetest/builtin/common/metatable.lua
 share/minetest/builtin/common/misc_helpers.lua
 share/minetest/builtin/common/mod_storage.lua
 share/minetest/builtin/common/register.lua
 share/minetest/builtin/common/serialize.lua
 share/minetest/builtin/common/strict.lua
+share/minetest/builtin/common/tests/after_spec.lua
 share/minetest/builtin/common/tests/misc_helpers_spec.lua
 share/minetest/builtin/common/tests/serialize_spec.lua
 share/minetest/builtin/common/tests/vector_spec.lua
 share/minetest/builtin/common/vector.lua
+share/minetest/builtin/emerge/env.lua
+share/minetest/builtin/emerge/init.lua
+share/minetest/builtin/emerge/register.lua
 share/minetest/builtin/fstk/buttonbar.lua
 share/minetest/builtin/fstk/dialog.lua
 share/minetest/builtin/fstk/tabview.lua
@@ -106,6 +113,7 @@ share/minetest/builtin/game/detached_inventory.lua
 share/minetest/builtin/game/falling.lua
 share/minetest/builtin/game/features.lua
 share/minetest/builtin/game/forceloading.lua
+share/minetest/builtin/game/hud.lua
 share/minetest/builtin/game/init.lua
 share/minetest/builtin/game/item.lua
 share/minetest/builtin/game/item_entity.lua
@@ -114,21 +122,28 @@ share/minetest/builtin/game/misc.lua
 share/minetest/builtin/game/misc_s.lua
 share/minetest/builtin/game/privileges.lua
 share/minetest/builtin/game/register.lua
-share/minetest/builtin/game/statbars.lua
 share/minetest/builtin/game/static_spawn.lua
+share/minetest/builtin/game/tests/test_moveaction.lua
 share/minetest/builtin/game/voxelarea.lua
 share/minetest/builtin/init.lua
 share/minetest/builtin/locale/__builtin.de.tr
+share/minetest/builtin/locale/__builtin.eo.tr
+share/minetest/builtin/locale/__builtin.fr.tr
 share/minetest/builtin/locale/__builtin.id.tr
 share/minetest/builtin/locale/__builtin.it.tr
 share/minetest/builtin/locale/__builtin.ms.tr
+share/minetest/builtin/locale/__builtin.pt_BR.tr
 share/minetest/builtin/locale/__builtin.ru.tr
 share/minetest/builtin/locale/template.txt
 share/minetest/builtin/mainmenu/async_event.lua
 share/minetest/builtin/mainmenu/common.lua
-share/minetest/builtin/mainmenu/content/dlg_contentstore.lua
+share/minetest/builtin/mainmenu/content/contentdb.lua
+share/minetest/builtin/mainmenu/content/dlg_contentdb.lua
+share/minetest/builtin/mainmenu/content/dlg_install.lua
+share/minetest/builtin/mainmenu/content/dlg_overwrite.lua
 share/minetest/builtin/mainmenu/content/init.lua
 share/minetest/builtin/mainmenu/content/pkgmgr.lua
+share/minetest/builtin/mainmenu/content/screenshots.lua
 share/minetest/builtin/mainmenu/content/tests/pkgmgr_spec.lua
 share/minetest/builtin/mainmenu/content/update_detector.lua
 share/minetest/builtin/mainmenu/dlg_config_world.lua
@@ -141,7 +156,6 @@ share/minetest/builtin/mainmenu/dlg_rename_modpack.lua
 share/minetest/builtin/mainmenu/dlg_version_info.lua
 share/minetest/builtin/mainmenu/game_theme.lua
 share/minetest/builtin/mainmenu/init.lua
-share/minetest/builtin/mainmenu/misc.lua
 share/minetest/builtin/mainmenu/serverlistmgr.lua
 share/minetest/builtin/mainmenu/settings/components.lua
 share/minetest/builtin/mainmenu/settings/dlg_change_mapgen_flags.lua
@@ -163,6 +177,7 @@ share/minetest/builtin/profiler/sampling.lua
 share/minetest/builtin/settingtypes.txt
 share/minetest/client/shaders/3d_interlaced_merge/opengl_fragment.glsl
 share/minetest/client/shaders/3d_interlaced_merge/opengl_vertex.glsl
+share/minetest/client/shaders/Irrlicht
 share/minetest/client/shaders/bloom_downsample/opengl_fragment.glsl
 share/minetest/client/shaders/bloom_downsample/opengl_vertex.glsl
 share/minetest/client/shaders/bloom_upsample/opengl_fragment.glsl
@@ -171,6 +186,8 @@ share/minetest/client/shaders/blur_h/opengl_fragment.glsl
 share/minetest/client/shaders/blur_h/opengl_vertex.glsl
 share/minetest/client/shaders/blur_v/opengl_fragment.glsl
 share/minetest/client/shaders/blur_v/opengl_vertex.glsl
+share/minetest/client/shaders/cloud_shader/opengl_fragment.glsl
+share/minetest/client/shaders/cloud_shader/opengl_vertex.glsl
 share/minetest/client/shaders/default_shader/opengl_fragment.glsl
 share/minetest/client/shaders/default_shader/opengl_vertex.glsl
 share/minetest/client/shaders/extract_bloom/opengl_fragment.glsl
@@ -197,6 +214,8 @@ share/minetest/client/shaders/stars_shader/opengl_fragment.glsl
 share/minetest/client/shaders/stars_shader/opengl_vertex.glsl
 share/minetest/client/shaders/update_exposure/opengl_fragment.glsl
 share/minetest/client/shaders/update_exposure/opengl_vertex.glsl
+share/minetest/client/shaders/volumetric_light/opengl_fragment.glsl
+share/minetest/client/shaders/volumetric_light/opengl_vertex.glsl
 share/minetest/fonts/Arimo-Bold.ttf
 share/minetest/fonts/Arimo-BoldItalic.ttf
 share/minetest/fonts/Arimo-Italic.ttf
