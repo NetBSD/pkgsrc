@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.162 2024/08/12 07:48:22 wiz Exp $
+# $NetBSD: pyversion.mk,v 1.163 2024/08/12 07:49:50 wiz Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -12,7 +12,7 @@
 #	The preferred Python version to use.
 #
 #	Possible values: 27 310 311 312
-#	Default: 311
+#	Default: 312
 #
 # === Infrastructure variables ===
 #
@@ -67,13 +67,13 @@
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py311
+#	Example: py312
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 3.11
+#	Example: 3.12
 #
 # Keywords: python
 #
@@ -103,7 +103,7 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 .if ${COMPILER_HAS_C11:Uyes} != "no"
-PYTHON_VERSION_DEFAULT?=		311
+PYTHON_VERSION_DEFAULT?=		312
 .else
 PYTHON_VERSION_DEFAULT?=		310
 .endif
