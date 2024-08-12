@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2023/12/30 15:34:49 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2024/08/12 17:45:52 gdt Exp $
 
 DISTNAME=	bup-0.33.3
 CATEGORIES=	sysutils
@@ -47,6 +47,8 @@ TEST_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tornado
 
 DIST_MANPAGES=		${WRKDIR}/${MAN_UNPACK}
+
+ALL_ENV+=	BUP_PYTHON_CONFIG=${LOCALBASE}/bin/python${PYVERSSUFFIX}-config
 
 # Note that tests 1) will fail on a fs mounted noatime and 2) need a
 # lot of space, perhaps 1 GB.
