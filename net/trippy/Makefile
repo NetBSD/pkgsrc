@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/31 19:56:36 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/12 12:33:10 pin Exp $
 
-DISTNAME=	trippy-0.10.0
+DISTNAME=	trippy-0.11.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fujiapple852/}
 
@@ -10,6 +10,8 @@ COMMENT=	Network diagnostic tool
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.75.0
 
 INSTALLATION_DIRS=	bin
 
