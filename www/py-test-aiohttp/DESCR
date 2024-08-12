@@ -1,0 +1,4 @@
+pytest plugin for aiohttp support
+
+The library provides useful fixtures for creation test aiohttp
+server and client.
