@@ -1,0 +1,1 @@
+bin/frogmouth @PREFIX@/bin/frogmouth-@PYVERSSUFFIX@
