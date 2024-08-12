@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2024/08/11 06:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2024/08/12 17:11:34 wiz Exp $
 
 DISTNAME=	lxml-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,17 @@ FORCE_C_STD=		gnu99
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# tests fail with
-# ImportError: cannot import name 'etree' from 'lxml'
+# as of 5.3.0, tests only work if lxml is built in-tree
+# pkgsrc defaults to out-of-src-tree though
+#
+# to manually test:
+# make patch
+# cd ${WRKSRC}
+# python3.12 setup.py build_ext -i
+# python3.12 test.py
+
+# as of 5.3.0 this gives:
+# Ran 1946 tests in 5.044s
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"
