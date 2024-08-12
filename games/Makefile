@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2024/06/20 17:10:29 charlotte Exp $
+# $NetBSD: Makefile,v 1.552 2024/08/12 11:19:25 nia Exp $
 #
 
 COMMENT=	Games
@@ -432,6 +432,7 @@ SUBDIR+=	uqm
 SUBDIR+=	urban
 SUBDIR+=	urbanterror
 SUBDIR+=	valyriatear
+SUBDIR+=	vcmi
 SUBDIR+=	velena
 SUBDIR+=	violetland
 SUBDIR+=	vms-empire
