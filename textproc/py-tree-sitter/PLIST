@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/12 11:58:49 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/tree_sitter/__init__.py
+${PYSITELIB}/tree_sitter/__init__.pyc
+${PYSITELIB}/tree_sitter/__init__.pyi
+${PYSITELIB}/tree_sitter/__init__.pyo
+${PYSITELIB}/tree_sitter/_binding.so
+${PYSITELIB}/tree_sitter/py.typed
