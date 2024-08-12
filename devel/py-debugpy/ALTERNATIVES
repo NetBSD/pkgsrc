@@ -1,0 +1,1 @@
+bin/debugpy @PREFIX@/bin/debugpy-@PYVERSSUFFIX@
