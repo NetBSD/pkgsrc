@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2024/08/11 15:38:42 rjs Exp $
+# $NetBSD: Makefile,v 1.105 2024/08/12 13:45:44 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-2.4.7
@@ -66,7 +66,11 @@ BUILDLINK_DEPMETHOD.ecl=build
 TOOL_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
 .endif
 
-PLIST_VARS+=		simd
+PLIST_VARS+=		linux simd
+
+.if ${OPSYS} == "Linux"
+PLIST.linux=		yes
+.endif
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.simd=		yes
