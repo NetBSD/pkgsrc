@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/11 22:38:30 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/12 17:11:43 gdt Exp $
 
 VERSION=	0.6.3
 DISTNAME=	pycddl-${VERSION}
@@ -12,6 +12,8 @@ COMMENT=	Deserialize CBOR and/or do CDDL schema validation
 LICENSE=	mit
 
 USE_LANGUAGES+=		c
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 
 CARGO_CRATE_DEPENDS+=	abnf-0.12.0
 CARGO_CRATE_DEPENDS+=	abnf-core-0.5.0
