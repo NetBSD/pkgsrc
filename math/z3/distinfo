@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2024/01/23 20:01:03 adam Exp $
+$NetBSD: distinfo,v 1.18 2024/08/13 09:21:07 adam Exp $
 
-BLAKE2s (z3-4.12.5.tar.gz) = 71743227f13c85e7528c3e61aca9042d6f075b5957ce4de54893afb6a30acde3
-SHA512 (z3-4.12.5.tar.gz) = b5055468d1380c54b959f826e10846c323c0ef73cf6bba0970e187c38cabd5869786261cd9b89a89d8369144417180870627782bf705e5494286dfe75053c9a7
-Size (z3-4.12.5.tar.gz) = 5491803 bytes
+BLAKE2s (z3-4.13.0.tar.gz) = 9476e4d41e8264b1370f57d8739140b66f3242078db7b2b9c8df140e6d766b49
+SHA512 (z3-4.13.0.tar.gz) = 8503787fe0b18592b5a131bcec2cacfa5f5096d76386a1c4fda7a836e472924b154433306d27600ff0d0758ddb710c965901fbfc2e5605919b624b9d4d1bc4fd
+Size (z3-4.13.0.tar.gz) = 5520232 bytes
 SHA1 (patch-scripts_mk__util.py) = f092c9aed3c81408a485e9c92d8dddf5db86d6fe
 SHA1 (patch-src_api_python_setup.py) = cfc4a0a388d2a096ce86cbe3ca76b32502ec380e
 SHA1 (patch-src_ast_rewriter_seq__eq__solver.cpp) = 31cf8fc41855a4b3b5b6a10de88f613054719bc0
