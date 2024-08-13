@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.27 2023/03/06 15:11:40 abs Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/13 21:03:49 markd Exp $
 
-DISTNAME=	imapsync-2.229
+DISTNAME=	imapsync-2.264
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GITHUB:=imapsync/}
-GITHUB_TAG=	refs/tags/${DISTNAME}
+MASTER_SITES=	https://imapsync.lamiral.info/dist2/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://github.com/imapsync/imapsync/
 COMMENT=	Incremental recursive IMAP transfer tool
 LICENSE=	public-domain
 
-WRKSRC=		${WRKDIR}/imapsync-${DISTNAME}
 USE_LANGUAGES=	# none
 
 DEPENDS+=	p5-Crypt-OpenSSL-RSA-[0-9]*:../../security/p5-Crypt-OpenSSL-RSA
@@ -19,7 +18,6 @@ DEPENDS+=	p5-Encode-IMAPUTF7-[0-9]*:../../textproc/p5-Encode-IMAPUTF7
 DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-File-Tail-[0-9]*:../../misc/p5-File-Tail
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
-DEPENDS+=	p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-IO-Tee-[0-9]*:../../devel/p5-IO-Tee
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
