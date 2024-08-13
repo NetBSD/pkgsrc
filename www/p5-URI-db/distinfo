@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/08/14 16:52:50 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2024/08/13 00:52:13 wen Exp $
 
-BLAKE2s (URI-db-0.20.tar.gz) = 0a4300e9cf642d202358fa850a9c5d7fdeda132138e96f7e34cda031f7b36ca6
-SHA512 (URI-db-0.20.tar.gz) = 0623f61a5d415e577f50aeedc55c1965c2c4d93c9cffaebd176daf66c626354e785c5f3971ea86bb67ba913962a94ee435bcaa4f64327bc553bc14b04ec444de
-Size (URI-db-0.20.tar.gz) = 23886 bytes
+BLAKE2s (URI-db-0.22.tar.gz) = ae12db7af872dcf892e2951927f3c1fa443ae08337502ae00e1dbd3e89f6c988
+SHA512 (URI-db-0.22.tar.gz) = 0812e692218641040e65defb1775519278eb7c21d7848e888c5202ee2ffd6ecbd2060031dd40329f2e067ebdde4a8f4da6bf5cd473fc02744a4a4847e2f1e3dc
+Size (URI-db-0.22.tar.gz) = 24904 bytes
