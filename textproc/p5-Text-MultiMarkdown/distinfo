@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/17 22:51:41 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/08/13 02:27:37 wen Exp $
 
-BLAKE2s (Text-MultiMarkdown-1.000035.tar.gz) = 24670c58776c7d7e7e1a5fb6362b9826e10253a6e9b2a3115d5932debd0f4ae3
-SHA512 (Text-MultiMarkdown-1.000035.tar.gz) = adb7db3c2293e268761c537d9415c98c3a88808c772618813a21656facf5afab0cbe7d1fa9707f920416a34be1dab13700755594c79ed822ae44420e05da6ab7
-Size (Text-MultiMarkdown-1.000035.tar.gz) = 112893 bytes
+BLAKE2s (Text-MultiMarkdown-1.002.tar.gz) = 84e690d00aba24f81553ebe39aa43b47703eb3092989081fc798b0ff391570a2
+SHA512 (Text-MultiMarkdown-1.002.tar.gz) = f53e08f7f0250d9ecd35198c6f56d656e81194a51abf2865bd5a97b08df456c0ac9185459933caa7a84a75ff01e35431208c15d00c6986f79206168df65cc8e8
+Size (Text-MultiMarkdown-1.002.tar.gz) = 99199 bytes
