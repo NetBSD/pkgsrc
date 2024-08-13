@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/08/08 20:34:11 triaxx Exp $
+# $NetBSD: Makefile,v 1.46 2024/08/13 16:44:39 tnn Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.4
 PKGNAME=	${DISTNAME:S/_7.6-ipv6/-7.6/}
@@ -43,8 +43,8 @@ MAKE_ENV+=	IPV6=-DHAVE_IPV6
 .  endif
 .endif
 
-CFLAGS+=	-D_POSIX_C_SOURCE=200809L	# popen(3)
-CFLAGS+=	-D_XOPEN_SOURCE=500		# endgrent(3)
+CFLAGS.Linux+=	-D_POSIX_C_SOURCE=200809L	# popen(3)
+CFLAGS.Linux+=	-D_XOPEN_SOURCE=500		# endgrent(3)
 CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE
 
 # Default to /etc/hosts.{allow,deny} for the configuration files to match
