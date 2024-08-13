@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.25 2024/07/22 11:11:45 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.26 2024/08/13 08:31:42 nia Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -98,9 +98,9 @@ lib/libgphoto2_port/0.12.2/ptpip.so
 lib/libgphoto2_port/0.12.2/serial.a
 lib/libgphoto2_port/0.12.2/serial.la
 lib/libgphoto2_port/0.12.2/serial.so
-lib/libgphoto2_port/0.12.2/usb1.a
-lib/libgphoto2_port/0.12.2/usb1.la
-lib/libgphoto2_port/0.12.2/usb1.so
+${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.a
+${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.la
+${PLIST.libusb}lib/libgphoto2_port/0.12.2/usb1.so
 lib/pkgconfig/libgphoto2.pc
 lib/pkgconfig/libgphoto2_port.pc
 man/man3/libgphoto2.3
