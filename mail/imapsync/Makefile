@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/08/13 21:03:49 markd Exp $
+# $NetBSD: Makefile,v 1.29 2024/08/13 21:24:52 wiz Exp $
 
 DISTNAME=	imapsync-2.264
 CATEGORIES=	mail
@@ -44,6 +44,10 @@ DEPENDS+=	p5-Sub-Uplevel-[0-9]*:../../devel/p5-Sub-Uplevel
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	imapsync
+
+# as of 2.264
+# FAILED 134/200
+TEST_TARGET=	test
 
 INSTALLATION_DIRS=	bin share/doc
 
