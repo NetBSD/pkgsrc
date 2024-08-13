@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/10 14:18:49 js Exp $
+$NetBSD: distinfo,v 1.2 2024/08/13 15:25:56 js Exp $
 
 BLAKE2s (fx2-0.13.tar.gz) = 79dfdf73bcb50073e80e04ac4c1e802615b0be0246973efd9ba5abcdc28dd64a
 SHA512 (fx2-0.13.tar.gz) = 81cd6fdeaed11ea433278eaf02597acca16e161eb765c50dbf3dca7cf6b5bf1758ebc8055e0f30f96b2c9f6edce4f35cf5ba876452dfff313d9d8d9f53534335
 Size (fx2-0.13.tar.gz) = 87722 bytes
-SHA1 (patch-software-PKG-INFO) = 263a5b5cd9982b0dc6f6c02d41bcbd9ac3db0318
