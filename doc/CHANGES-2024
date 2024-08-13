@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5100 2024/08/13 08:57:07 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5101 2024/08/13 09:21:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7939,3 +7939,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/nodejs18 to 18.20.4 [adam 2024-08-13]
 	Updated lang/nodejs20 to 20.16.0 [adam 2024-08-13]
 	Updated lang/nodejs to 22.6.0 [adam 2024-08-13]
+	Updated math/z3 to 4.13.0 [adam 2024-08-13]
+	Updated math/py-z3 to 4.13.0 [adam 2024-08-13]
