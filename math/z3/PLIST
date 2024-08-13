@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/05/11 06:43:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/08/13 09:21:07 adam Exp $
 bin/z3
 include/z3++.h
 include/z3.h
@@ -19,6 +19,6 @@ lib/cmake/z3/Z3ConfigVersion.cmake
 lib/cmake/z3/Z3Targets-relwithdebinfo.cmake
 lib/cmake/z3/Z3Targets.cmake
 lib/libz3.so
-lib/libz3.so.4.12
+lib/libz3.so.4.13
 lib/libz3.so.${PKGVERSION}.0
 lib/pkgconfig/z3.pc
