@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2024/05/24 10:05:36 gdt Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/08/13 18:06:16 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_mapserver
@@ -3431,6 +3431,7 @@ share/qgis/python/qgis/gui/__init__.py
 share/qgis/python/qgis/processing/__init__.py
 share/qgis/python/qgis/processing/algfactory.py
 share/qgis/python/qgis/server/__init__.py
+share/qgis/python/qgis/sipify.yaml
 share/qgis/python/qgis/testing/__init__.py
 share/qgis/python/qgis/testing/mocked.py
 share/qgis/python/qgis/user.py
