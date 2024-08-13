@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:22 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/08/13 00:50:07 wen Exp $
 
-BLAKE2s (WordPress-XMLRPC-2.12.tar.gz) = 824fcb4df624c341cc962de09ecfc8a23dfc61a28c4aa4dc01a6e08568f7be86
-SHA512 (WordPress-XMLRPC-2.12.tar.gz) = b6b7a558226346893b72ec05ca0dd4504b3b55e0240000848d97a4de537a12979d85826d60adadc18fc7ae44a3dfad5191100f26c76978afda9505fa524e30f4
-Size (WordPress-XMLRPC-2.12.tar.gz) = 72506 bytes
+BLAKE2s (WordPress-XMLRPC-2.13.tar.gz) = e2605615733d2f67943e66a2a161ae2abdb8d61b276e65335d0e24e75e76f0db
+SHA512 (WordPress-XMLRPC-2.13.tar.gz) = 48eb7c6d4461a2ab90bd4f08919857fa2bb00f4728b47b073b4d434320f2a8110efe0f53464f20ec15fe11a85aa85ecedff939a1a6f9fa7a94e4dcf327bcc218
+Size (WordPress-XMLRPC-2.13.tar.gz) = 72961 bytes
