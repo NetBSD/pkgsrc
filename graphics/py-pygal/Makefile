@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/08/10 15:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/13 08:27:26 adam Exp $
 
-DISTNAME=	pygal-3.0.4
+DISTNAME=	pygal-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygal/}
