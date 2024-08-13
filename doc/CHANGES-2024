@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5102 2024/08/13 13:12:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5103 2024/08/13 13:42:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7945,3 +7945,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/sqlite3-docs to 3.46.1 [adam 2024-08-13]
 	Updated databases/sqlite3-tcl to 3.46.1 [adam 2024-08-13]
 	Updated devel/lemon to 1.0.3.46.1 [adam 2024-08-13]
+	Updated graphics/py-tifffile to 2024.8.10 [adam 2024-08-13]
+	Updated security/py-paramiko to 3.4.1 [adam 2024-08-13]
