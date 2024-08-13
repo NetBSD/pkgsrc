@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/23 20:01:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/13 09:21:07 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -34,7 +34,7 @@ ${PYSITELIB}/z3/include/z3_replayer.h
 ${PYSITELIB}/z3/include/z3_spacer.h
 ${PYSITELIB}/z3/include/z3_v1.h
 ${PYSITELIB}/z3/lib/libz3.so
-${PYSITELIB}/z3/lib/libz3.so.4.12
+${PYSITELIB}/z3/lib/libz3.so.4.13
 ${PYSITELIB}/z3/z3.py
 ${PYSITELIB}/z3/z3.pyc
 ${PYSITELIB}/z3/z3.pyo
