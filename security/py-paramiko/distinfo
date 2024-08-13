@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2023/12/18 21:16:04 wiz Exp $
+$NetBSD: distinfo,v 1.35 2024/08/13 13:41:46 adam Exp $
 
-BLAKE2s (paramiko-3.4.0.tar.gz) = ee83ccda4e152dff5acb3bd6834c92436827d1d7a4cf524848936480b8c5bdd9
-SHA512 (paramiko-3.4.0.tar.gz) = fdbc8e45fefc7f9adcc1d576cf8979fe87a9bc403d15e4cedb3f06d1f75a52228f2e368c61ff8941b3c60c1090d4f1bad5adbdcaa50bf19d919a160f871b084b
-Size (paramiko-3.4.0.tar.gz) = 1277306 bytes
+BLAKE2s (paramiko-3.4.1.tar.gz) = 2ae924fc3eaa82612f8a0343bf45f98684ced826ffe3fb96c6df1a6773be502e
+SHA512 (paramiko-3.4.1.tar.gz) = 07b77bb987eaa2a8b87a8b029cada549d867c8dc73034a3fce0c4d8e904ebfd650a0df0da5e42d08e2345fe32d91257ee4ed5d46f97b151a76de8a271fbe8f9d
+Size (paramiko-3.4.1.tar.gz) = 1703011 bytes
