@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/08/13 07:12:39 adam Exp $
+# $NetBSD: Makefile,v 1.100 2024/08/13 12:04:19 wiz Exp $
 
 DISTNAME=	matplotlib-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -47,11 +47,10 @@ PYTHON_FOR_BUILD_ONLY=	no
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3.2.0:../../devel/py-importlib-resources
 .endif
 
-# depends on do-install
-# as of 3.9.1.post1:
-# 929 failed, 6801 passed, 1785 skipped, 33 xfailed
+# as of 3.9.2
+# 929 failed, 6804 passed, 1786 skipped, 33 xfailed
 # possible additional test dependencies to pass more tests include
-# pikepdf, tex, qt, ghostscript, ...
+# pandas, py-qt*, pikepdf, tex, qt, ghostscript, ...
 # py-test command line comes from https://github.com/matplotlib/matplotlib/issues/28260
 
 do-test:
