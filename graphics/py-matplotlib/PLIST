@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2024/07/08 05:51:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2024/08/13 07:12:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1018,6 +1018,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/step_linestyle.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/sticky_tolerance.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/sticky_tolerance_cf.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/symlog.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/symlog2.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/test_alpha.pdf
