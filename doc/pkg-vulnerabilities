@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.244 2024/08/12 13:04:05 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.245 2024/08/13 14:37:31 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26051,3 +26051,4 @@ vim<9.1.0648	double-free	https://github.com/vim/vim/security/advisories/GHSA-46p
 py{37,38,39,310,311,312}-django>=4<4.2.15	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-41991
 py{37,38,39,310,311,312}-django>=5<5.0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-41991
 php{56,74,80,81,82,83}-roundcube<1.6.8	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-42009
+nodejs>=18<18.20.4	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-22020
