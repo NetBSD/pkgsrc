@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/08/12 15:16:03 ktnb Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/13 14:45:28 ktnb Exp $
 
 DISTNAME=	minetest-5.9.0
 CATEGORIES=	games
@@ -28,6 +28,14 @@ CMAKE_ARGS+=	-DENABLE_POSTGRESQL=FALSE
 CMAKE_ARGS+=	-DENABLE_LEVELDB=FALSE
 CMAKE_ARGS+=	-DENABLE_REDIS=FALSE
 CMAKE_ARGS+=	-DENABLE_SPATIAL=FALSE
+
+#.include "../../lang/LuaJIT2/platform.mk"
+#.if ${PLATFORM_SUPPORTS_LUAJIT} == "no"
+#CMAKE_ARGS+=	-DENABLE_LUAJIT=FALSE
+#.endif
+# Binaries built with LuaJIT support have been broken since 2015, see:
+# https://github.com/minetest/minetest/issues/2988
+CMAKE_ARGS+=	-DENABLE_LUAJIT=FALSE
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
