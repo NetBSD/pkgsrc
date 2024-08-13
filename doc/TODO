@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24745 2024/08/12 14:03:49 ryoon Exp $
+$NetBSD: TODO,v 1.24746 2024/08/13 02:11:40 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -1014,6 +1014,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o p5-DBD-DB2-1.86
 	o p5-DBD-Oracle-1.80
 	o p5-DBD-Sybase-1.16
+	o p5-DBD-mysql-5.008
 	o p5-Data-MessagePack-1.05
 	o p5-Dumbbench-0.501
 	o p5-ExtUtils-F77-1.26
