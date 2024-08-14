@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5123 2024/08/14 17:22:06 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5124 2024/08/14 17:25:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7981,3 +7981,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/p5-Playwright to 1.460 [schmonz 2024-08-14]
 	Updated databases/sqlc to 1.26.0 [bsiegert 2024-08-14]
 	Added net/py-rfc6555 version 0.1.0 [wiz 2024-08-14]
+	Updated mail/offlineimap to 7.3.4nb5 [wiz 2024-08-14]
