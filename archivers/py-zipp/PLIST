@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/03/17 14:14:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/14 08:47:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,6 +10,9 @@ ${PYSITELIB}/zipp/__init__.pyo
 ${PYSITELIB}/zipp/compat/__init__.py
 ${PYSITELIB}/zipp/compat/__init__.pyc
 ${PYSITELIB}/zipp/compat/__init__.pyo
+${PYSITELIB}/zipp/compat/overlay.py
+${PYSITELIB}/zipp/compat/overlay.pyc
+${PYSITELIB}/zipp/compat/overlay.pyo
 ${PYSITELIB}/zipp/compat/py310.py
 ${PYSITELIB}/zipp/compat/py310.pyc
 ${PYSITELIB}/zipp/compat/py310.pyo
