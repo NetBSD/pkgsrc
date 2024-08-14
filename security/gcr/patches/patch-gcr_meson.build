@@ -1,0 +1,14 @@
+$NetBSD: patch-gcr_meson.build,v 1.1 2024/08/14 08:58:42 adam Exp $
+
+Remove unused argument: https://gitlab.gnome.org/GNOME/gcr/-/issues/89
+
+--- gcr/meson.build.orig	2024-07-22 06:48:29.011018530 +0000
++++ gcr/meson.build
+@@ -189,7 +189,6 @@ if get_option('introspection')
+     sources: [ gcr_base_public_sources, gcr_base_headers ],
+     namespace: 'Gcr',
+     nsversion: '@0@'.format(gcr_major_version),
+-    packages: gcr_base_deps,
+     export_packages: 'gcr-base-@0@'.format(gcr_major_version),
+     includes: [
+       'GObject-2.0',

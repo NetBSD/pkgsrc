@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/04/07 07:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/14 08:58:42 adam Exp $
 
-DISTNAME=	gcr-3.38.1
-PKGREVISION=	13
+DISTNAME=	gcr-3.40.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gcr/${PKGVERSION_NOREV:R}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,31 +10,26 @@ HOMEPAGE=	https://www.gnome.org/
 COMMENT=	Library for crypto UI and related tasks
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
+TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
+DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
-USE_TOOLS+=		aclocal autoconf automake autopoint
-USE_TOOLS+=		gdbus-codegen readlink
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-gtk-doc
-CONFIGURE_ARGS+=	--enable-vala
+USE_TOOLS+=	gdbus-codegen intltool msgfmt perl pkg-config readlink
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/gck
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/gck
 
 PKGCONFIG_OVERRIDE+=	gck-1.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-base-3.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-ui.pc.in
 PKGCONFIG_OVERRIDE+=	gcr-3.pc.in
 
-TEST_TARGET=		check
-
-pre-configure:
-	cd ${WRKSRC} && NOCONFIGURE=1 ./autogen.sh
+REPLACE_PYTHON=		meson_post_install.py
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/meson/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/p11-kit/buildlink3.mk"
