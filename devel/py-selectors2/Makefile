@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/05/01 09:13:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/14 12:57:04 wiz Exp $
 
 DISTNAME=	selectors2-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,12 +11,17 @@ HOMEPAGE=	https://github.com/sethmlarson/selectors2
 COMMENT=	Back-ported, durable, and portable selectors
 LICENSE=	mit
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.2.2:../../sysutils/py-psutil
-
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_27_ACCEPTED=	yes
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 300
+TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=2.0.0:../../devel/py-mock
+# only supports Python 3
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.2.2:../../sysutils/py-psutil
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
