@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/07/07 09:01:53 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/08/14 07:25:37 nia Exp $
 
 BLAKE2s (bulletphysics-bullet3-3.17.tar.gz) = 6b61aa96a5de28231e644878b28dd155fc9ddbc2e967e4217832bce3064bbde2
 SHA512 (bulletphysics-bullet3-3.17.tar.gz) = a5105bf5f1dd365a64a350755c7d2c97942f74897a18dcdb3651e6732fd55cc1030a096f5808cf50575281f05e3ac09aa50a48d271a47b94cd61f5167a72b7cc
@@ -10,6 +10,7 @@ BLAKE2s (recastnavigation-recastnavigation-e75adf86f91eb3082220085e42dda62679f9a
 SHA512 (recastnavigation-recastnavigation-e75adf86f91eb3082220085e42dda62679f9a3ea.tar.gz) = be6bda2c758c916fab0974bbf8cfe79ba25d0b250edb86bcda25618dd9e1e0a492bd308af5e13f443545e5c9af5f41901d6a6a3836151d1f4a6ac04d2b8a0830
 Size (recastnavigation-recastnavigation-e75adf86f91eb3082220085e42dda62679f9a3ea.tar.gz) = 1542425 bytes
 SHA1 (patch-CMakeLists.txt) = 11f81c9b879bb20b01d2815e2aaf1d111e4fa8a8
+SHA1 (patch-apps_openmw_mwstate_charactermanager.hpp) = 66e4dcb30799f8f3615671ec5a9dc8642a53ea98
 SHA1 (patch-components_crashcatcher_crashcatcher.cpp) = ecb17b1f5a199ddc8b3bd299e0222ebf88c1fdec
 SHA1 (patch-components_crashcatcher_crashcatcher.hpp) = f2810b26463edf56391c4d51348ad834f471ad74
 SHA1 (patch-components_files_fixedpath.hpp) = c4047ee90e1771228ce5179d8a082345a0310e03
