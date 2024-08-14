@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5110 2024/08/14 08:50:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5111 2024/08/14 09:07:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7964,3 +7964,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated archivers/py-zipp to 3.20.0 [adam 2024-08-14]
 	Updated www/py-uvicorn to 0.30.6 [adam 2024-08-14]
 	Updated databases/py-apsw to 3.46.1.0 [adam 2024-08-14]
+	Updated security/gcr to 3.40.0 [adam 2024-08-14]
+	Updated devel/py-test-examples to 0.0.13 [adam 2024-08-14]
