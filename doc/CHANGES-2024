@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5121 2024/08/14 14:36:02 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.5122 2024/08/14 15:29:47 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7979,3 +7979,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/shapelib to 1.6.1 [gdt 2024-08-14]
 	Updated x11/sakura to 3.8.8 [pin 2024-08-14]
 	Updated www/p5-Playwright to 1.460 [schmonz 2024-08-14]
+	Updated databases/sqlc to 1.26.0 [bsiegert 2024-08-14]
