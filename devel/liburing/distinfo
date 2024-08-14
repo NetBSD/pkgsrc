@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/04/17 21:32:54 gutteridge Exp $
+$NetBSD: distinfo,v 1.2 2024/08/14 00:13:20 gutteridge Exp $
 
-BLAKE2s (liburing-2.3.tar.gz) = aabd54efadf054d02718a2b83cf4dfa5bc26e59f613c9c62436b5fa87a1a1edc
-SHA512 (liburing-2.3.tar.gz) = 04d29bd71d2150bbdc68eb937041784676590500cf1d61fb89b25b064c38c899a04ec0b9c06969271b98bc0e677943787844f0c5b7b0a222860a6e3a6fa34ed1
-Size (liburing-2.3.tar.gz) = 263682 bytes
+BLAKE2s (liburing-2.6.tar.gz) = 5aa704f8f5132dfd19d76e8927e5311ad098e399b8e69705a84eb0193a81ecf2
+SHA512 (liburing-2.6.tar.gz) = 5e4b0b347619b4f26218ee851026eb3e5b523be11d1c9a7dcca65d43f07442b03e1520f12cc2fc0d39ee3d1837e266a9ca4974b695900f600705fb8e24630a37
+Size (liburing-2.6.tar.gz) = 334434 bytes
