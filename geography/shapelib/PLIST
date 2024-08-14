@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2022/05/06 00:30:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/14 11:30:45 gdt Exp $
+bin/dbfadd
+bin/dbfcreate
+bin/dbfdump
+bin/shpadd
+bin/shpcreate
+bin/shpdump
+bin/shprewind
+bin/shptreedump
+bin/shputils
 include/shapefil.h
 lib/libshp.la
 lib/pkgconfig/shapelib.pc
