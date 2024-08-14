@@ -1,0 +1,14 @@
+$NetBSD: patch-ui_meson.build,v 1.1 2024/08/14 08:58:42 adam Exp $
+
+Remove unused argument: https://gitlab.gnome.org/GNOME/gcr/-/issues/89
+
+--- ui/meson.build.orig	2024-07-22 06:49:15.437466037 +0000
++++ ui/meson.build
+@@ -152,7 +152,6 @@ if get_option('introspection')
+     export_packages: 'gcr-ui-@0@'.format(gcr_major_version),
+     identifier_prefix: 'Gcr',
+     symbol_prefix: 'gcr',
+-    packages: gcr_ui_deps,
+     includes: [
+       'GObject-2.0',
+       'Gio-2.0',
