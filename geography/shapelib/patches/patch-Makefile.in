@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2024/08/14 11:31:36 gdt Exp $
+
+Don't build or install contrib.
+
+https://github.com/OSGeo/shapelib/issues/151
+
+--- Makefile.in.orig	2024-08-13 08:45:28.000000000 +0000
++++ Makefile.in
+@@ -623,7 +623,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = . contrib
++SUBDIRS = .
+ ACLOCAL_AMFLAGS = -I m4
+ AUTOMAKE_OPTIONS = dist-zip
+ @PLATFORM_WIN32_TRUE@no_undefined = -no-undefined
