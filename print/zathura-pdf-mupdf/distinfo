@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.20 2024/05/04 21:46:48 nikita Exp $
+$NetBSD: distinfo,v 1.21 2024/08/14 06:05:16 adam Exp $
 
-BLAKE2s (zathura-pdf-mupdf-0.4.1.tar.xz) = e061e4c88566dc4b8d7bbc384e5d4760db2c662c85d6a6d6c3c751bf4ce5add2
-SHA512 (zathura-pdf-mupdf-0.4.1.tar.xz) = 26bb28fa15fbbd8dc39b72a01812f424ec02e02af1dcb79b1ae10865c209cc00b8d2f813aa0685e1bef76f6c8ce5f8a461cf51c3a37691face9f84416e0ab31a
-Size (zathura-pdf-mupdf-0.4.1.tar.xz) = 8796 bytes
+BLAKE2s (zathura-pdf-mupdf-0.4.4.tar.xz) = b4392f59089eb70d960b459f191845d475a6ba2b5dd91773e382c3f6d0eef3f3
+SHA512 (zathura-pdf-mupdf-0.4.4.tar.xz) = 32be4b4458547860e28bb90bf8b8f0f2e5c26f369d55f6f25e0e73b9e7c4a82b6110fd42bd55120f1be358b9d7a6c72cc1c883e192d007a05a85f501c504e1a1
+Size (zathura-pdf-mupdf-0.4.4.tar.xz) = 9512 bytes
 SHA1 (patch-document.c) = ad929680aa1de6f21b71cabc06da9ba54491687a
-SHA1 (patch-meson.build) = 4a633e37b539efb7fead1d7675d41954c58d85f9
+SHA1 (patch-meson.build) = 967ef1e92ae95a70474f59bda38035639cedd046
