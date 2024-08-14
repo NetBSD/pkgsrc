@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5122 2024/08/14 15:29:47 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.5123 2024/08/14 17:22:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7980,3 +7980,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/sakura to 3.8.8 [pin 2024-08-14]
 	Updated www/p5-Playwright to 1.460 [schmonz 2024-08-14]
 	Updated databases/sqlc to 1.26.0 [bsiegert 2024-08-14]
+	Added net/py-rfc6555 version 0.1.0 [wiz 2024-08-14]
