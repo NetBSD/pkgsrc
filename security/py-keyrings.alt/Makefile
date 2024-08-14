@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/04/30 10:28:51 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/14 10:52:58 adam Exp $
 
-DISTNAME=	keyrings.alt-5.0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	keyrings_alt-5.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyrings.alt/}
 
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jaraco/keyrings.alt
 COMMENT=	Alternate keyring implementations
 LICENSE=	mit
+
+WHEEL_NAME=	${DISTNAME:S/_/./}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
