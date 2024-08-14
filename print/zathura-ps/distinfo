@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:15:14 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/08/14 05:43:57 adam Exp $
 
-BLAKE2s (zathura-ps-0.2.7.tar.xz) = 9085f34620890cf751952c3485a53c8cc67dffef9640b7b100b09f51800ad356
-SHA512 (zathura-ps-0.2.7.tar.xz) = 86cf4cea8f32e446960c7727745711d6bb6723bb41127ccba335fbdaeb78e9f681ce4104b2be8718a2f19e06aef30d49ae7c90091fa0774b5ffe22303cf37d5f
-Size (zathura-ps-0.2.7.tar.xz) = 4488 bytes
+BLAKE2s (zathura-ps-0.2.8.tar.xz) = e0a48154041ed36241aa715a492c7a6d185b5c8a7591dda81a7a3e698e711bc4
+SHA512 (zathura-ps-0.2.8.tar.xz) = 29ed9d5585df1151af50835daa75a11befbd0fe10e95b4a37c7b548e1442edd3f52a7d0afce8cca93ce70ced6381cdf23311cea004e3e38a6cb323ba13eb7039
+Size (zathura-ps-0.2.8.tar.xz) = 4716 bytes
