@@ -1,0 +1,14 @@
+$NetBSD: patch-gck_meson.build,v 1.1 2024/08/14 08:58:42 adam Exp $
+
+Remove unused argument: https://gitlab.gnome.org/GNOME/gcr/-/issues/89
+
+--- gck/meson.build.orig	2024-07-22 06:47:18.604957655 +0000
++++ gck/meson.build
+@@ -131,7 +131,6 @@ if get_option('introspection')
+     sources: gck_gir_sources,
+     namespace: 'Gck',
+     nsversion: '@0@'.format(gck_major_version),
+-    packages: gck_deps,
+     export_packages: 'gck-@0@'.format(gck_major_version),
+     includes: [ 'GObject-2.0', 'Gio-2.0' ],
+     header: 'gck/gck.h',
