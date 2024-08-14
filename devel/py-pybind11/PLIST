@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/06/30 22:02:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/08/14 06:21:50 adam Exp $
 bin/pybind11-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -31,6 +31,7 @@ ${PYSITELIB}/pybind11/include/pybind11/detail/init.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/internals.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/type_caster_base.h
 ${PYSITELIB}/pybind11/include/pybind11/detail/typeid.h
+${PYSITELIB}/pybind11/include/pybind11/detail/value_and_holder.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen/common.h
 ${PYSITELIB}/pybind11/include/pybind11/eigen/matrix.h
