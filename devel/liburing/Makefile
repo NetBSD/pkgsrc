@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/07/19 15:20:48 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/14 00:13:20 gutteridge Exp $
 
-DISTNAME=	liburing-2.3
+DISTNAME=	liburing-2.6
 CATEGORIES=	devel
 MASTER_SITES=	https://git.kernel.dk/cgit/liburing/snapshot/
 
@@ -26,5 +26,8 @@ ONLY_FOR_PLATFORM=	Linux-*-*
 
 do-build:
 	${RUN} cd ${WRKSRC}/ && ./configure --prefix=${PREFIX} && ${GMAKE}
+
+do-test:
+	${RUN} cd ${WRKSRC}/ && ${GMAKE} runtests
 
 .include "../../mk/bsd.pkg.mk"
