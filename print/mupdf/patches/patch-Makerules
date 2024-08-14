@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.29 2024/05/15 21:00:43 wiz Exp $
+$NetBSD: patch-Makerules,v 1.1 2024/08/14 05:55:32 adam Exp $
 
 - Handle the various operating systems in the same way avoiding hardcoding
 - Avoid to use objcopy by setting HAVE_OBJCOPY to no (if `yes', and with
@@ -82,9 +82,11 @@ $NetBSD: patch-ab,v 1.29 2024/05/15 21:00:43 wiz Exp $
  
    ifeq ($(shell pkg-config --exists freetype2 && echo yes),yes)
  	SYS_FREETYPE_CFLAGS := $(shell pkg-config --cflags freetype2)
-@@ -265,13 +211,8 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
+@@ -263,15 +209,9 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
+ 	SYS_CURL_LIBS := $(shell pkg-config --libs libcurl)
+   endif
  
-   HAVE_GLUT := yes
+-  HAVE_GLUT := yes
    ifeq ($(HAVE_GLUT),yes)
 -    ifeq ($(OS),OpenBSD)
        SYS_GLUT_CFLAGS := $(shell pkg-config --cflags glut gl)
@@ -96,7 +98,7 @@ $NetBSD: patch-ab,v 1.29 2024/05/15 21:00:43 wiz Exp $
    endif
  
    HAVE_X11 := $(shell pkg-config --exists x11 xext && echo yes)
-@@ -294,8 +235,6 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
+@@ -294,8 +234,6 @@ else ifeq ($(LINUX_OR_OPENBSD),yes)
  	PTHREAD_LIBS := -lpthread
    endif
  
