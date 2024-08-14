@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2023/10/21 17:10:24 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2024/08/14 06:14:57 adam Exp $
 
 .include "../../graphics/djvulibre-lib/Makefile.common"
-PKGNAME=		${DISTNAME:S/-/-tools-/}
-PKGREVISION=		3
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+PKGNAME=	${DISTNAME:S/-/-tools-/}
 
-BUILD_DIRS=		tools xmltools
-INSTALL_DIRS=		tools xmltools
+MAINTAINER=	pkgsrc-users@NetBSD.org
 
-USE_TOOLS+=		bash:run
-REPLACE_BASH+=		tools/any2djvu
+BUILD_DIRS=	tools xmltools
+INSTALL_DIRS=	tools xmltools
+
+USE_TOOLS+=	bash:run
+REPLACE_BASH+=	tools/any2djvu
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

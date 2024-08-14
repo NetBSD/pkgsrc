@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2015/09/24 23:05:31 ryoon Exp $
+$NetBSD: patch-tools_Makefile.in,v 1.1 2024/08/14 06:14:57 adam Exp $
+
+Link against external libdjvulibre, as the package is split into lib and tools.
 
 --- tools/Makefile.in.orig	2015-02-12 16:04:02.000000000 +0000
 +++ tools/Makefile.in
