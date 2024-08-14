@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2007/02/05 23:41:50 wiz Exp $
+$NetBSD: patch-libdjvu_miniexp.h,v 1.1 2024/08/14 06:14:56 adam Exp $
+
+Avoid double declaration.
 
 --- libdjvu/miniexp.h.orig	2006-05-12 16:23:36.000000000 +0000
 +++ libdjvu/miniexp.h
@@ -7,7 +9,7 @@ $NetBSD: patch-ab,v 1.2 2007/02/05 23:41:50 wiz Exp $
  
  
 -typedef struct miniexp_s* miniexp_t;
-+#ifndef DDJVUAPI /* avoid double declaration */
++#ifndef DDJVUAPI
 +typedef struct miniexp_s* miniexp_t; 
 +#endif
  
