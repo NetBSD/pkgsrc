@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1576 2024/07/31 08:44:12 adam Exp $
+# $NetBSD: Makefile,v 1.1577 2024/08/14 17:21:56 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -785,6 +785,7 @@ SUBDIR+=	py-pysendfile
 SUBDIR+=	py-python-socks
 SUBDIR+=	py-requestbuilder
 SUBDIR+=	py-responses
+SUBDIR+=	py-rfc6555
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-rt
 SUBDIR+=	py-s3cmd
