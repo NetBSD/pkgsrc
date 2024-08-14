@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5106 2024/08/14 00:13:28 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5107 2024/08/14 00:44:19 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7950,3 +7950,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated geography/qgis to 3.34.9 [gdt 2024-08-13]
 	Updated mail/imapsync to 2.264 [markd 2024-08-13]
 	Updated devel/liburing to 2.6 [gutteridge 2024-08-14]
+	Updated wm/enlightenment16 to 1.0.30 [gutteridge 2024-08-14]
