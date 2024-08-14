@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.41 2023/10/23 06:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/14 17:25:21 wiz Exp $
 
 DISTNAME=	offlineimap-7.3.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OfflineIMAP/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://offlineimap.org/
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 LICENSE=	gnu-gpl-v2 # or later
 
-GITHUB_TAG=	v${PKGVERSION_NOREV}
-
-PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
-
+DEPENDS+=	${PYPKGPREFIX}-rfc6555-[0-9]*:../../net/py-rfc6555
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 INSTALLATION_DIRS=	share/examples/offlineimap
+
+PYTHON_VERSIONS_ACCEPTED=	27 # not yet ported
 
 EGG_NAME=	${PKGNAME_NOREV}
 
