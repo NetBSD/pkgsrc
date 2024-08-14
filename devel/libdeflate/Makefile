@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/08/05 06:47:55 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/14 16:00:02 bsiegert Exp $
 
 DISTNAME=	libdeflate-1.21
 CATEGORIES=	devel
@@ -11,6 +11,7 @@ COMMENT=	Optimized deflate/zlib/gzip library
 LICENSE=	mit
 
 PKGCONFIG_OVERRIDE+=	libdeflate.pc.in
+USE_CC_FEATURES=	c11
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
