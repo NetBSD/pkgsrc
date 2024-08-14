@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2022/06/14 01:50:32 gutteridge Exp $
+$NetBSD: patch-ac,v 1.4 2024/08/14 00:44:07 gutteridge Exp $
 
 Apply pkgsrc-specific paths.
 
---- scripts/e_gen_menu.orig	2022-06-06 10:24:22.000000000 +0000
+--- scripts/e_gen_menu.orig	2024-06-24 10:38:21.000000000 +0000
 +++ scripts/e_gen_menu
 @@ -362,9 +362,7 @@ for opt, val in opts:
          dbg += 1
@@ -12,10 +12,10 @@ Apply pkgsrc-specific paths.
 -Prefixes += ['/opt/kde', '/opt/kde3', getenv('KDEDIR')]
 -Prefixes += ['/opt/gnome']                    # SUSE
 +Prefixes = ['@PREFIX@', '@X11BASE@', '/usr', getenv('KDEDIR')]
- Prefixes += [getenv('HOME') + '/.local']
- D(f'Prefixes = "{Prefixes}"')
- Prefixes = RemoveDuplicates(Prefixes)
-@@ -399,9 +397,9 @@ EdirBin  = getenv('EBIN')
+ Prefixes = MkDirList(Prefixes, ['/share'])
+ XdgHome = getenv('XDG_DATA_HOME', getenv('HOME') + '/.local/share')
+ Prefixes += [XdgHome]
+@@ -403,9 +401,9 @@ EdirBin  = getenv('EBIN')
  if EdirUser == '':
      EdirUser = getenv('HOME') + '/.e16'
  if EdirRoot == '':
