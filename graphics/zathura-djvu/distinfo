@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:47:25 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/08/14 06:15:53 adam Exp $
 
-BLAKE2s (zathura-djvu-0.2.9.tar.xz) = 13ebec8bf815d44418901031b52266741e619b4e50534fe8ce4d627b81417ed7
-SHA512 (zathura-djvu-0.2.9.tar.xz) = 3c2815e7f1cdfb9fc594dc6ad65359245f322e5fa27f018fb9431747e4d474734f5efd134aaeb9dabde09b01de603b1d1dc7aede883b1ef81266e067b0490726
-Size (zathura-djvu-0.2.9.tar.xz) = 8976 bytes
+BLAKE2s (zathura-djvu-0.2.10.tar.xz) = c8965d2b71b4d9eced8acd253fb9449a9bd43710b080d3a01fa90278822abbdd
+SHA512 (zathura-djvu-0.2.10.tar.xz) = c743e60588e07fe18f7da8db1ae9ae997ffb50ef696258f1901523159ff4d29e5649b13d6e52f53cf79f19429083308390c0b4923081451bf5c4bfb9ac6e8903
+Size (zathura-djvu-0.2.10.tar.xz) = 9408 bytes
