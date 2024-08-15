@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/05 16:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/15 13:32:32 pin Exp $
 
-DISTNAME=	diffsitter-0.8.3
+DISTNAME=	diffsitter-0.8.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=afnanenayet/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +14,12 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
+
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 CARGO_NO_DEFAULT_FEATURES=	YES
