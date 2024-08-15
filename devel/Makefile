@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4332 2024/08/10 16:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4333 2024/08/15 03:55:06 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2492,6 +2492,7 @@ SUBDIR+=	py-capturer
 SUBDIR+=	py-case
 SUBDIR+=	py-cattrs
 SUBDIR+=	py-cbor2
+SUBDIR+=	py-cddl
 SUBDIR+=	py-cffi
 SUBDIR+=	py-characteristic
 SUBDIR+=	py-checker
