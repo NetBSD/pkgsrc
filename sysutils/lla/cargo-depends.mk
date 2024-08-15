@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2024/08/14 09:34:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2024/08/15 07:33:42 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
@@ -7,7 +7,7 @@ CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.6.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.16.0
-CARGO_CRATE_DEPENDS+=	cc-1.1.10
+CARGO_CRATE_DEPENDS+=	cc-1.1.11
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.38
 CARGO_CRATE_DEPENDS+=	clap-3.2.25
@@ -30,7 +30,7 @@ CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.60
 CARGO_CRATE_DEPENDS+=	iana-time-zone-haiku-0.1.2
 CARGO_CRATE_DEPENDS+=	indexmap-1.9.3
-CARGO_CRATE_DEPENDS+=	indexmap-2.3.0
+CARGO_CRATE_DEPENDS+=	indexmap-2.4.0
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.70
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
@@ -38,7 +38,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.155
 CARGO_CRATE_DEPENDS+=	libloading-0.8.5
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
-CARGO_CRATE_DEPENDS+=	lla_plugin_interface-0.1.0
+CARGO_CRATE_DEPENDS+=	lla_plugin_interface-0.1.1
 CARGO_CRATE_DEPENDS+=	log-0.4.22
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
@@ -57,6 +57,7 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.207
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.207
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.124
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.7
+CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	syn-2.0.74
 CARGO_CRATE_DEPENDS+=	tempfile-3.12.0
