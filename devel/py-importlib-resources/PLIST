@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/03/24 19:24:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/08/15 07:25:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,6 +13,9 @@ ${PYSITELIB}/importlib_resources/_adapters.pyo
 ${PYSITELIB}/importlib_resources/_common.py
 ${PYSITELIB}/importlib_resources/_common.pyc
 ${PYSITELIB}/importlib_resources/_common.pyo
+${PYSITELIB}/importlib_resources/_functional.py
+${PYSITELIB}/importlib_resources/_functional.pyc
+${PYSITELIB}/importlib_resources/_functional.pyo
 ${PYSITELIB}/importlib_resources/_itertools.py
 ${PYSITELIB}/importlib_resources/_itertools.pyc
 ${PYSITELIB}/importlib_resources/_itertools.pyo
@@ -28,9 +31,6 @@ ${PYSITELIB}/importlib_resources/compat/py38.pyo
 ${PYSITELIB}/importlib_resources/compat/py39.py
 ${PYSITELIB}/importlib_resources/compat/py39.pyc
 ${PYSITELIB}/importlib_resources/compat/py39.pyo
-${PYSITELIB}/importlib_resources/functional.py
-${PYSITELIB}/importlib_resources/functional.pyc
-${PYSITELIB}/importlib_resources/functional.pyo
 ${PYSITELIB}/importlib_resources/future/__init__.py
 ${PYSITELIB}/importlib_resources/future/__init__.pyc
 ${PYSITELIB}/importlib_resources/future/__init__.pyo
@@ -59,32 +59,6 @@ ${PYSITELIB}/importlib_resources/tests/compat/py312.pyo
 ${PYSITELIB}/importlib_resources/tests/compat/py39.py
 ${PYSITELIB}/importlib_resources/tests/compat/py39.pyc
 ${PYSITELIB}/importlib_resources/tests/compat/py39.pyo
-${PYSITELIB}/importlib_resources/tests/data01/__init__.py
-${PYSITELIB}/importlib_resources/tests/data01/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/data01/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/data01/binary.file
-${PYSITELIB}/importlib_resources/tests/data01/subdirectory/__init__.py
-${PYSITELIB}/importlib_resources/tests/data01/subdirectory/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/data01/subdirectory/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/data01/subdirectory/binary.file
-${PYSITELIB}/importlib_resources/tests/data01/utf-16.file
-${PYSITELIB}/importlib_resources/tests/data01/utf-8.file
-${PYSITELIB}/importlib_resources/tests/data02/__init__.py
-${PYSITELIB}/importlib_resources/tests/data02/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/data02/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/data02/one/__init__.py
-${PYSITELIB}/importlib_resources/tests/data02/one/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/data02/one/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/data02/one/resource1.txt
-${PYSITELIB}/importlib_resources/tests/data02/subdirectory/subsubdir/resource.txt
-${PYSITELIB}/importlib_resources/tests/data02/two/__init__.py
-${PYSITELIB}/importlib_resources/tests/data02/two/__init__.pyc
-${PYSITELIB}/importlib_resources/tests/data02/two/__init__.pyo
-${PYSITELIB}/importlib_resources/tests/data02/two/resource2.txt
-${PYSITELIB}/importlib_resources/tests/namespacedata01/binary.file
-${PYSITELIB}/importlib_resources/tests/namespacedata01/subdirectory/binary.file
-${PYSITELIB}/importlib_resources/tests/namespacedata01/utf-16.file
-${PYSITELIB}/importlib_resources/tests/namespacedata01/utf-8.file
 ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.py
 ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.pyc
 ${PYSITELIB}/importlib_resources/tests/test_compatibilty_files.pyo
