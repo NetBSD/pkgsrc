@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/01/16 19:20:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/08/15 20:41:32 markd Exp $
 bin/freerdp-proxy
 bin/freerdp-shadow-cli
 bin/winpr-hash
@@ -149,6 +149,7 @@ include/freerdp2/freerdp/utils/pcap.h
 include/freerdp2/freerdp/utils/profiler.h
 include/freerdp2/freerdp/utils/ringbuffer.h
 include/freerdp2/freerdp/utils/signal.h
+include/freerdp2/freerdp/utils/string.h
 include/freerdp2/freerdp/utils/stopwatch.h
 include/freerdp2/freerdp/version.h
 include/freerdp2/freerdp/window.h
@@ -166,6 +167,7 @@ include/winpr2/winpr/credentials.h
 include/winpr2/winpr/credui.h
 include/winpr2/winpr/crt.h
 include/winpr2/winpr/crypto.h
+include/winpr2/winpr/custom-crypto.h
 include/winpr2/winpr/debug.h
 include/winpr2/winpr/dsparse.h
 include/winpr2/winpr/endian.h
@@ -215,6 +217,7 @@ include/winpr2/winpr/timezone.h
 include/winpr2/winpr/tools/makecert.h
 include/winpr2/winpr/user.h
 include/winpr2/winpr/version.h
+include/winpr2/winpr/wincrypt.h
 include/winpr2/winpr/windows.h
 include/winpr2/winpr/winhttp.h
 include/winpr2/winpr/winpr.h
@@ -264,7 +267,7 @@ lib/libfreerdp2.so.2
 lib/libfreerdp2.so.${PKGVERSION}
 ${PLIST.wayland}lib/libuwac0.so
 ${PLIST.wayland}lib/libuwac0.so.0
-${PLIST.wayland}lib/libuwac0.so.0.1.1
+${PLIST.wayland}lib/libuwac0.so.0.2.0
 lib/libwinpr-tools2.so
 lib/libwinpr-tools2.so.2
 lib/libwinpr-tools2.so.${PKGVERSION}
