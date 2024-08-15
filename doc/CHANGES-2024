@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5136 2024/08/15 21:58:51 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5137 2024/08/15 22:00:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7995,3 +7995,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/freerdp2 to 2.11.7 [markd 2024-08-15]
 	Removed time/py-backports.zoneinfo [wiz 2024-08-15]
 	Removed devel/py-pkgutil_resolve_name [wiz 2024-08-15]
+	Removed math/py-numpy16 [wiz 2024-08-15]
