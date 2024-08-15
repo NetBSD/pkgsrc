@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/07/11 19:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2024/08/15 22:02:25 wiz Exp $
 
 DISTNAME=	crossfire-1.71.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
@@ -22,7 +22,8 @@ CONFIG_SHELL=	ksh
 GNU_CONFIGURE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
-PYTHON_VERSIONS_ACCEPTED=	38 39
+BROKEN=		"Only supports Python < 3.10"
+#PYTHON_VERSIONS_ACCEPTED=	38 39
 
 BUILD_DEFS+=	VARBASE
 
