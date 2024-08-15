@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/06/19 15:22:13 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/08/15 21:55:18 wiz Exp $
 
 DISTNAME=	djangorestframework-3.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,11 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-backports.zoneinfo-[0-9]*:../../time/py-backports.zoneinfo
-.endif
 
 post-extract:
 	${RM} -r ${WRKSRC}/tutorial
