@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/07 07:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/15 22:04:25 wiz Exp $
 
 DISTNAME=	nicotine-plus-2.2.2
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nicotine-plus/}
@@ -18,7 +18,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths+=	setup.py
 SUBST_SED.paths+=	-e "s,share/man/man1,${PKGMANDIR}/man1,g"
 
-PYTHON_VERSIONS_ACCEPTED=	311 310 39 38
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "../../lang/python/egg.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
