@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2024/08/15 18:54:24 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2024/08/15 18:55:27 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql16
 PKG_SUPPORTED_OPTIONS=	bonjour dtrace icu llvm gssapi ldap nls pam lz4
 PKG_SUGGESTED_OPTIONS=	icu nls lz4
 .if ${OPSYS} != "Linux"
-PKG_SUGGESTED_OTIONS+=	gssapi
+PKG_SUGGESTED_OPTIONS+=	gssapi
 .endif
 
 PLIST_VARS+=		gssapi llvm nls
