@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/15 22:16:20 wiz Exp $
 
 DISTNAME=	bulk-test-llvm-20211207
 PKGREVISION=	1
@@ -35,7 +35,7 @@ DEPENDS+=	libcxxabi-[0-9]*:../../lang/libcxxabi
 DEPENDS+=	libunwind-[0-9]*:../../lang/libunwind
 DEPENDS+=	lld-[0-9]*:../../devel/lld
 DEPENDS+=	lldb-[0-9]*:../../devel/lldb
-DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
+#DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
 DEPENDS+=	opencl-clang-[0-9]*:../../parallel/opencl-clang
 DEPENDS+=	openmp-[0-9]*:../../parallel/openmp
 DEPENDS+=	pocl-[0-9]*:../../parallel/pocl
