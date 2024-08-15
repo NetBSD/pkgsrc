@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5130 2024/08/15 11:45:16 he Exp $
+$NetBSD: CHANGES-2024,v 1.5131 2024/08/15 13:32:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7989,3 +7989,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pybind11 to 2.13.4 [adam 2024-08-15]
 	Updated sysutils/lla to 0.2.5 [pin 2024-08-15]
 	Updated net/unbound to 1.21.0 [he 2024-08-15]
+	Updated devel/diffsitter to 0.8.4 [pin 2024-08-15]
