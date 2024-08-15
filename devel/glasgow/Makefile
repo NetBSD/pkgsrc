@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/10 16:01:57 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/15 20:47:14 wiz Exp $
 
 # There are no release tags for glasgow
 GLASGOW_VERSION=	0.0.20240810
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyvcd>=0.2<0.5:../../devel/py-pyvcd
 DEPENDS+=	yosys>=0.31.0.13:../../devel/yosys
 DEPENDS+=	nextpnr-ice40>=0.1:../../devel/nextpnr-ice40
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.0:../../www/py-aiohttp
-DEPENDS+=	${PYPKGPREFIX}-aiohttp-remotes>=1.2<2:../../www/py-aiohttp-remotes
+#DEPENDS+=	${PYPKGPREFIX}-aiohttp-remotes>=1.2<2:../../www/py-aiohttp-remotes
 BUILD_DEPENDS+= ${PYPKGPREFIX}-pdm>=2.3.0<3.0:../../devel/py-pdm
 
 USE_LANGUAGES=	# none
