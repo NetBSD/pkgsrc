@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4333 2024/08/15 03:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4334 2024/08/15 21:58:51 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2792,7 +2792,6 @@ SUBDIR+=	py-pip20
 SUBDIR+=	py-pip2pi
 SUBDIR+=	py-pkgconfig
 SUBDIR+=	py-pkginfo
-SUBDIR+=	py-pkgutil_resolve_name
 SUBDIR+=	py-plaster
 SUBDIR+=	py-pluggy
 SUBDIR+=	py-plumbum
