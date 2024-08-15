@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/10/22 11:37:52 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/15 22:04:25 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-${PY_DISTVERSION}
 PKGREVISION=	1
@@ -9,7 +9,7 @@ HOMEPAGE=	https://docs.python.org/3/library/dbm.html#module-dbm.gnu
 COMMENT=	Python interface to gdbm - GNU database manager
 
 # srcdist.mk needs to be adapted for distutils removal in 3.12
-PYTHON_VERSIONS_ACCEPTED=	311 310 39 38 27
+PYTHON_VERSIONS_ACCEPTED=	311 310 27
 
 .include "../../lang/python/pyversion.mk"
 .if !empty(PYPKGPREFIX:Mpy2?)

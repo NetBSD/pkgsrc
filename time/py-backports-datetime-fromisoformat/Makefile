@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/24 21:49:04 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/15 22:04:25 wiz Exp $
 
 DISTNAME=	backports-datetime-fromisoformat-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
-PYTHON_VERSIONS_ACCEPTED=	310 39 38 # included in Python 3.11
+PYTHON_VERSIONS_ACCEPTED=	310 # included in Python 3.11
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
