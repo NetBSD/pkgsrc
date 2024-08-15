@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/08/11 06:40:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/08/15 17:37:25 tsutsui Exp $
 bin/mbedtls_benchmark
 bin/mbedtls_cert_app
 bin/mbedtls_cert_req
@@ -24,6 +24,7 @@ bin/mbedtls_key_app_writer
 bin/mbedtls_key_ladder_demo
 bin/mbedtls_key_ladder_demo.sh
 bin/mbedtls_load_roots
+bin/mbedtls_metatest
 bin/mbedtls_mini_client
 bin/mbedtls_mpi_demo
 bin/mbedtls_pem2der
@@ -53,6 +54,23 @@ bin/mbedtls_ssl_server2
 bin/mbedtls_strerror
 bin/mbedtls_udp_proxy
 bin/mbedtls_zeroize
+include/everest/Hacl_Curve25519.h
+include/everest/everest.h
+include/everest/kremlib.h
+include/everest/kremlib/FStar_UInt128.h
+include/everest/kremlib/FStar_UInt64_FStar_UInt32_FStar_UInt16_FStar_UInt8.h
+include/everest/kremlin/c_endianness.h
+include/everest/kremlin/internal/builtin.h
+include/everest/kremlin/internal/callconv.h
+include/everest/kremlin/internal/compat.h
+include/everest/kremlin/internal/debug.h
+include/everest/kremlin/internal/target.h
+include/everest/kremlin/internal/types.h
+include/everest/kremlin/internal/wasmsupport.h
+include/everest/vs2010/Hacl_Curve25519.h
+include/everest/vs2010/inttypes.h
+include/everest/vs2010/stdbool.h
+include/everest/x25519.h
 include/mbedtls/aes.h
 include/mbedtls/aesni.h
 include/mbedtls/arc4.h
@@ -161,3 +179,6 @@ lib/libmbedx509.a
 lib/libmbedx509.so
 lib/libmbedx509.so.1
 lib/libmbedx509.so.${PKGVERSION}
+lib/pkgconfig/mbedcrypto.pc
+lib/pkgconfig/mbedtls.pc
+lib/pkgconfig/mbedx509.pc
