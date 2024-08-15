@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/05/29 16:33:51 adam Exp $
+# $NetBSD: Makefile,v 1.47 2024/08/15 20:41:32 markd Exp $
 
-DISTNAME=	freerdp-2.9.0
+DISTNAME=	freerdp-2.11.7
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
-PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	https://pub.freerdp.com/releases/
 
@@ -14,7 +13,8 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-USE_CMAKE=	yes
+.include "../../devel/cmake/build.mk"
+
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -52,7 +52,7 @@ post-install:
 .include "options.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/ffmpeg5/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .if defined(OPSYS_HAS_KQUEUE)
