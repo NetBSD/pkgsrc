@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/11/23 16:30:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2024/08/15 18:05:05 tnn Exp $
 
 DISTNAME=	jack2-1.9.21
 PKGNAME=	${DISTNAME:S/jack2/jack/1}
@@ -53,7 +53,7 @@ post-install:
 
 REPLACE_PYTHON+=	waf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PKGCONFIG_OVERRIDE+=		jack.pc.in
 
