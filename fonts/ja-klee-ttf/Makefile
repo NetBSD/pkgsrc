@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:24:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:24:00 ryoon Exp $
 
-PKGNAME=	ja-klee-ttf-20201216
+PKGNAME=	ja-klee-ttf-20210623
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Klee/2adf612552682fb9336902d0ee727fe22baf187a/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Klee/8b0532731b63ad8a445ca341d8d7d941079b83ab/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	KleeOne-Regular.ttf
 DISTFILES+=	KleeOne-SemiBold.ttf
