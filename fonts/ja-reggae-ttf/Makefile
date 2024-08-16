@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:27:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:25:42 ryoon Exp $
 
-PKGNAME=	ja-reggae-ttf-20201216
+PKGNAME=	ja-reggae-ttf-20210902
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Reggae/3c27761ba6d5329ca5aaadced961501dfbdf32b3/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Reggae/fe9be09d02ad8ba5e71d5ce24efc5249fe77dcfc/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	ReggaeOne-Regular.ttf
 
