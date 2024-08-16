@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_ods-kasp.5.in,v 1.1 2024/08/16 15:29:36 he Exp $
+
+Fix name of xref, it's ods-, not pds-.
+OpenDNSSEC2 doesn't have ods-ksmutil(1), so remove reference.
+
+--- tools/ods-kasp.5.in.orig	2024-08-16 15:00:40.771449708 +0000
++++ tools/ods-kasp.5.in
+@@ -251,7 +251,7 @@ This should be set to the value of the M
+ .SH "SEE ALSO"
+ .LP
+ ods\-control(8), ods\-enforcerd(8), ods\-enforcer(8), 
+-ods\-signerd(8), pds\-signer(8), ods\-ksmutil(1), 
++ods\-signerd(8), ods\-signer(8),
+ ods\-kaspcheck(1), ods\-timing(5), ods\-hsmutil(1),
+ ods\-hsmspeed(1), opendnssec(7),
+ ISO 8601,
