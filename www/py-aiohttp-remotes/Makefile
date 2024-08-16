@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/16 19:08:46 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 19:26:51 wiz Exp $
 
 DISTNAME=	aiohttp_remotes-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,11 +10,12 @@ HOMEPAGE=	https://github.com/aio-libs/aiohttp-remotes
 COMMENT=	Library of useful tools for aiohttp.web server
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.8.1:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
-BUILD_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-aiohttp>=0:../../www/py-test-aiohttp
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
