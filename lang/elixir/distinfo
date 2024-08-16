@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.36 2024/03/20 11:36:49 wiz Exp $
+$NetBSD: distinfo,v 1.37 2024/08/16 09:57:46 adam Exp $
 
-BLAKE2s (elixir-1.16.2.tar.gz) = 865845713c85c14ca8e39baee880daa375e06582c13106665129d1ebbea376b8
-SHA512 (elixir-1.16.2.tar.gz) = 1e90adcd5d0512d4b394276e431f3987fc61a3f6191cd5c1d0f7fdd82baba99747aa553a3583e0813ffb5a48a32ce02a24e27b641f86a61e421722a802a850c1
-Size (elixir-1.16.2.tar.gz) = 3357093 bytes
+BLAKE2s (elixir-1.17.2.tar.gz) = 34f9085a1c996628488135c37ee7435c33d5b4da68389cf36bd722e37301949b
+SHA512 (elixir-1.17.2.tar.gz) = f9d4983c3e7bd054a76bfe0dfa4aea483a4dd84ada432ae5a144167ff8d268499077704214eaaecfda84469c2f747a3594258ca95a7955bffde0c7b0f65985f2
+Size (elixir-1.17.2.tar.gz) = 3255067 bytes
 SHA1 (patch-Makefile) = 9b7a1aeef4367b7315fd7a91c53ff533aeaa0aff
