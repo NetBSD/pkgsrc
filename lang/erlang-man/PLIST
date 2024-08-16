@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/10/23 14:41:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/08/16 09:56:15 adam Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -172,6 +172,7 @@ lib/erlang/man/man3/logger.3
 lib/erlang/man/man3/logger_disk_log_h.3
 lib/erlang/man/man3/logger_filters.3
 lib/erlang/man/man3/logger_formatter.3
+lib/erlang/man/man3/logger_handler.3
 lib/erlang/man/man3/logger_std_h.3
 lib/erlang/man/man3/make.3
 lib/erlang/man/man3/maps.3
@@ -181,9 +182,11 @@ lib/erlang/man/man3/megaco_codec_meas.3
 lib/erlang/man/man3/megaco_codec_mstone1.3
 lib/erlang/man/man3/megaco_codec_mstone2.3
 lib/erlang/man/man3/megaco_codec_transform.3
+lib/erlang/man/man3/megaco_digit_map.3
 lib/erlang/man/man3/megaco_edist_compress.3
 lib/erlang/man/man3/megaco_encoder.3
 lib/erlang/man/man3/megaco_flex_scanner.3
+lib/erlang/man/man3/megaco_sdp.3
 lib/erlang/man/man3/megaco_tcp.3
 lib/erlang/man/man3/megaco_transport.3
 lib/erlang/man/man3/megaco_udp.3
@@ -292,7 +295,9 @@ lib/erlang/man/man3/system_information.3
 lib/erlang/man/man3/systools.3
 lib/erlang/man/man3/tags.3
 lib/erlang/man/man3/tftp.3
+lib/erlang/man/man3/tftp_logger.3
 lib/erlang/man/man3/timer.3
+lib/erlang/man/man3/tprof.3
 lib/erlang/man/man3/ttb.3
 lib/erlang/man/man3/unicode.3
 lib/erlang/man/man3/unix_telnet.3
