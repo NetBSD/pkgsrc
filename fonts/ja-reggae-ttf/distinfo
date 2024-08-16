@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:27:14 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/08/16 15:25:42 ryoon Exp $
 
-BLAKE2s (ja-reggae-ttf-20201216/ReggaeOne-Regular.ttf) = da1adc694afc918fe3469375d42e12d08a66cf7870e712e4573435c1b0a74049
-SHA512 (ja-reggae-ttf-20201216/ReggaeOne-Regular.ttf) = 6cd422ca6ca814e9c19c7957ff0252e26cb69c9f989be6401f694196643212030d01009e7d978dd52cc629d48fb0e9ee9e7634da7637cb187f51b0198f6c7443
-Size (ja-reggae-ttf-20201216/ReggaeOne-Regular.ttf) = 4245552 bytes
+BLAKE2s (ja-reggae-ttf-20210902/ReggaeOne-Regular.ttf) = b45e4e49942de8150be425fb722e3fdbcd5b422867137bccd5b0994c217627fb
+SHA512 (ja-reggae-ttf-20210902/ReggaeOne-Regular.ttf) = b1717575981e60f3e43c8f71057ca47b439333620ca9d9e3d104c99bad44d73d244fb644e55042decb5b45b0ca8d271976beb0b4bd0ea54be396ffcf2229a982
+Size (ja-reggae-ttf-20210902/ReggaeOne-Regular.ttf) = 2153256 bytes
