@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2024/04/20 09:21:33 tsutsui Exp $
+# $NetBSD: Makefile,v 1.135 2024/08/16 11:03:45 wiz Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -166,6 +166,7 @@ SUBDIR+=	uim-mozc
 SUBDIR+=	uim-mozc226
 SUBDIR+=	unicon-im
 SUBDIR+=	xcin
+SUBDIR+=	xmoji
 SUBDIR+=	zinnia
 SUBDIR+=	zinnia-tomoe
 
