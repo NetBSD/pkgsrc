@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2024/05/29 16:34:17 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/16 15:29:36 he Exp $
 #
 
 DISTNAME=	opendnssec-2.1.13
 PKGNAME=	${DISTNAME:S/opendnssec/opendnssec2/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security net
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
@@ -67,6 +67,9 @@ SUBST_STAGE.migrate=	pre-configure
 SUBST_SED.migrate=	-e 's,SCHEMA=../../src/db/,SCHEMA=./,'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+
+# For debugging...
+#CFLAGS.NetBSD+= 	-g
 
 CONF_FILES+=	${EGDIR}/addns.xml.sample \
 			${PKG_SYSCONFDIR}/addns.xml
