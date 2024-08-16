@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/15 22:16:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/16 10:27:57 nia Exp $
 
 DISTNAME=	bulk-test-icu-20240815
 CATEGORIES=	meta-pkgs
@@ -64,7 +64,7 @@ DEPENDS+=	vtk-[0-9]*:../../graphics/vtk
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 DEPENDS+=	ibus-qt-[0-9]*:../../inputmethod/ibus-qt
 DEPENDS+=	mono-[0-9]*:../../lang/mono
-#DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
+DEPENDS+=	mozjs78-[0-9]*:../../lang/mozjs78
 # Testing the latest node.js
 DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 #DEPENDS+=	nodejs18-[0-9]*:../../lang/nodejs18
