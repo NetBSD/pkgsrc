@@ -1,8 +1,11 @@
-$NetBSD: patch-js_public_Utility.h,v 1.2 2024/08/01 15:21:26 ryoon Exp $
+$NetBSD: patch-js_public_Utility.h,v 1.3 2024/08/16 15:15:37 ryoon Exp $
 
---- js/public/Utility.h.orig	2024-07-23 09:35:47.511722387 +0000
+- kludge to build on NetBSD/i386 10.0
+  https://mail-index.netbsd.org/pkgsrc-users/2024/07/16/msg039900.html
+
+--- js/public/Utility.h.orig	2024-07-04 17:04:15.000000000 +0000
 +++ js/public/Utility.h
-@@ -478,9 +478,6 @@ static inline void js_free(void* p) {
+@@ -482,9 +482,6 @@ static inline void js_free(void* p) {
  #define JS_DECLARE_NEW_METHODS(NEWNAME, ALLOCATOR, QUALIFIERS)              \
    template <class T, typename... Args>                                      \
    QUALIFIERS T* MOZ_HEAP_ALLOCATOR NEWNAME(Args&&... args) {                \
@@ -12,7 +15,7 @@ $NetBSD: patch-js_public_Utility.h,v 1.2 2024/08/01 15:21:26 ryoon Exp $
      void* memory = ALLOCATOR(sizeof(T));                                    \
      return MOZ_LIKELY(memory) ? new (memory) T(std::forward<Args>(args)...) \
                                : nullptr;                                    \
-@@ -497,9 +494,6 @@ static inline void js_free(void* p) {
+@@ -501,9 +498,6 @@ static inline void js_free(void* p) {
  #define JS_DECLARE_NEW_ARENA_METHODS(NEWNAME, ALLOCATOR, QUALIFIERS)           \
    template <class T, typename... Args>                                         \
    QUALIFIERS T* MOZ_HEAP_ALLOCATOR NEWNAME(arena_id_t arena, Args&&... args) { \
