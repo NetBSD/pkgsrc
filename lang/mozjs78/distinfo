@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2024/06/10 12:22:09 jperkin Exp $
+$NetBSD: distinfo,v 1.18 2024/08/16 10:20:40 nia Exp $
 
 BLAKE2s (mozjs78_78.15.0.orig.tar.xz) = 43b4d26d730a5b83732d4fad782940f74fa15251aa9d60c39b56237134c95efe
 SHA512 (mozjs78_78.15.0.orig.tar.xz) = 709e60765b93db4ce8cd6fe21f7ed52d3a53806eb096a46dd42847014c56c0329a2a14a19bfe5ca989ccd6fd62992aee7232baaeca02cff4dafb46a9f33e041b
@@ -20,3 +20,9 @@ SHA1 (patch-js_src_vm_JSONPrinter.cpp) = ff89dfe4e73223dda3d5d33e90e8c7bb3ffa3e0
 SHA1 (patch-js_src_vm_JSONPrinter.h) = b9f67b29b16d7163aecc0ce9b6939c1308878a44
 SHA1 (patch-js_src_wasm_WasmSignalHandlers.cpp) = 3517e5da142355f1cbe89facaad47953f1985800
 SHA1 (patch-mfbt_tests_TestVariant.cpp) = 586fb67335b497ccadd3960025c44f8630f5476a
+SHA1 (patch-python_mach_mach_decorators.py) = 4a370fe449c24f22a67e8f7041806117f522a35e
+SHA1 (patch-python_mach_mach_main.py) = 2bfa97a7770c93341c0b7bba216950da7b298b39
+SHA1 (patch-python_mozbuild_mozbuild_backend_configenvironment.py) = 996b9468b9e873793c7d962b440e784003d43643
+SHA1 (patch-python_mozbuild_mozbuild_makeutil.py) = 61f7a5e606ac5fe044c7e6b9175bdad7da46f238
+SHA1 (patch-python_mozbuild_mozbuild_util.py) = 04ff5d151c0af601dd5c6039dbee1098fa9253c8
+SHA1 (patch-testing_mozbase_manifestparser_manifestparser_filters.py) = d1f6ac31c028503a0fe6f64f1e3a9f8029ee51c2

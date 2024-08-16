@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/08/15 22:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/08/16 10:20:40 nia Exp $
 
 DISTNAME=	mozjs78_78.15.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -68,8 +68,7 @@ SUBST_VARS.conf=	PREFIX
 PKGCONFIG_OVERRIDE+=	js/src/build/js.pc.in
 PKGCONFIG_OVERRIDE+=	js/src/ctypes/libffi/libffi.pc.in
 
-BROKEN=		"Needs porting to Python 3.10+"
-#PYTHON_VERSIONS_ACCEPTED=	39 38
+PYTHON_VERSIONS_ACCEPTED=	310
 PYTHON_FOR_BUILD_ONLY=		tool
 
 TEST_DEPENDS+=			${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
