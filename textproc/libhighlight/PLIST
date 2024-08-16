@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/05/25 14:26:41 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/08/16 15:27:59 schmonz Exp $
 lib/libhighlight.la
 share/bash-completion/completions/highlight
 share/doc/highlight/AUTHORS
@@ -153,6 +153,7 @@ share/highlight/langDefs/fx.lang
 share/highlight/langDefs/gambas.lang
 share/highlight/langDefs/gdb.lang
 share/highlight/langDefs/gdscript.lang
+share/highlight/langDefs/gleam.lang
 share/highlight/langDefs/go.lang
 share/highlight/langDefs/graphviz.lang
 share/highlight/langDefs/haml.lang
@@ -302,6 +303,7 @@ share/highlight/langDefs/ttcn3.lang
 share/highlight/langDefs/txt.lang
 share/highlight/langDefs/typescript.lang
 share/highlight/langDefs/upc.lang
+share/highlight/langDefs/v.lang
 share/highlight/langDefs/vala.lang
 share/highlight/langDefs/vb.lang
 share/highlight/langDefs/verilog.lang
@@ -491,6 +493,7 @@ share/highlight/themes/darkplus.theme
 share/highlight/themes/darkslategray.theme
 share/highlight/themes/darkspectrum.theme
 share/highlight/themes/denim.theme
+share/highlight/themes/diff.theme
 share/highlight/themes/duotone-dark-earth.theme
 share/highlight/themes/duotone-dark-forest.theme
 share/highlight/themes/duotone-dark-sea.theme
