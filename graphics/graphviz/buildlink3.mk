@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.39 2024/07/05 10:34:12 micha Exp $
+# $NetBSD: buildlink3.mk,v 1.40 2024/08/16 11:50:39 micha Exp $
 
 BUILDLINK_TREE+=	graphviz
 
 .if !defined(GRAPHVIZ_BUILDLINK3_MK)
 GRAPHVIZ_BUILDLINK3_MK:=
 
-USE_CC_FEATURES+=	c99
-USE_CXX_FEATURES+=	c++11 unique_ptr
+USE_CC_FEATURES+=	c11
+USE_CXX_FEATURES+=	c++17 unique_ptr
 
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=2.26.3
 BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=12.0.0

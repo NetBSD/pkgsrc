@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.288 2024/07/11 19:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.289 2024/08/16 11:50:39 micha Exp $
 
-DISTNAME=	graphviz-12.0.0
-PKGREVISION=	1
+DISTNAME=	graphviz-12.1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 #EXTRACT_SUFX=	.tar.xz
@@ -15,8 +14,8 @@ CHECK_FILES_SKIP+=		${PREFIX}/lib/graphviz/config6
 CHECK_PORTABILITY_SKIP+=	windows/*
 
 USE_LANGUAGES=		c c++
-USE_CC_FEATURES+=	c99
-USE_CXX_FEATURES+=	c++11 unique_ptr
+USE_CC_FEATURES+=	c11
+USE_CXX_FEATURES+=	c++17 unique_ptr
 
 USE_TOOLS+=		automake autoreconf makeinfo bison flex gmake groff pkg-config
 USE_LIBTOOL=		yes
@@ -31,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-javascript
 CONFIGURE_ARGS+=	--disable-man-pdfs
 CONFIGURE_ARGS+=	--disable-ocaml
+CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-python3
@@ -42,9 +42,11 @@ CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--without-ann
 CONFIGURE_ARGS+=	--without-devil
 CONFIGURE_ARGS+=	--without-gdiplus
+CONFIGURE_ARGS+=	--without-gdk
 CONFIGURE_ARGS+=	--without-glade
 CONFIGURE_ARGS+=	--without-glitz
 CONFIGURE_ARGS+=	--without-glut
+CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-gtkgl
 CONFIGURE_ARGS+=	--without-gtkglext
 CONFIGURE_ARGS+=	--without-lasi

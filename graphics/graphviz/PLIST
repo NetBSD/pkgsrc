@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2024/07/05 10:34:12 micha Exp $
+@comment $NetBSD: PLIST,v 1.63 2024/08/16 11:50:39 micha Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -75,9 +75,6 @@ lib/graphviz/libgvplugin_vt.la
 lib/graphviz/libgvplugin_webp.la
 ${PLIST.x11}lib/graphviz/libgvplugin_xlib.la
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
-${PLIST.perl}lib/graphviz/perl/gv.pm
-${PLIST.perl}lib/graphviz/perl/gv.so
-${PLIST.perl}lib/graphviz/perl/libgv_perl.la
 ${PLIST.tcl}${PLIST.x11}lib/graphviz/tcl/libgdtclft.la
 ${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot.la
@@ -91,8 +88,6 @@ lib/libgvpr.la
 lib/libpathplan.la
 lib/libxdot.la
 ${PLIST.lua}lib/lua/gv.so
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.pm
-${PLIST.perl}${PERL5_SUB_INSTALLVENDORARCH}/gv.so
 lib/pkgconfig/libcdt.pc
 lib/pkgconfig/libcgraph.pc
 lib/pkgconfig/libgvc.pc
@@ -146,7 +141,6 @@ man/man3/cgraph.3
 man/man3/expr.3
 ${PLIST.tcl}${PLIST.gd}man/man3/gdtclft.3tcl
 ${PLIST.lua}man/man3/gv.3lua
-${PLIST.perl}man/man3/gv.3perl
 ${PLIST.swig}man/man3/gv.3python
 ${PLIST.tcl}man/man3/gv.3tcl
 man/man3/gvc.3
@@ -196,7 +190,6 @@ ${PLIST.tcl}share/graphviz/demo/entities.tcl.README
 ${PLIST.tcl}share/graphviz/demo/gcat.tcl
 ${PLIST.tcl}share/graphviz/demo/gcat.tcl.README
 ${PLIST.lua}share/graphviz/demo/modgraph.lua
-${PLIST.perl}share/graphviz/demo/modgraph.pl
 ${PLIST.tcl}share/graphviz/demo/modgraph.tcl
 ${PLIST.tcl}share/graphviz/demo/pathplan.tcl
 ${PLIST.tcl}share/graphviz/demo/pathplan.tcl.README

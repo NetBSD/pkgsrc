@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.39 2024/07/05 10:34:12 micha Exp $
+# $NetBSD: options.mk,v 1.40 2024/08/16 11:50:39 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript lua perl poppler svg tcl x11
+PKG_SUPPORTED_OPTIONS=	gd ghostscript lua poppler svg tcl x11
 PKG_SUGGESTED_OPTIONS=	gd
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript lua perl poppler quartz svg swig tcl x11
+PLIST_VARS+=		gd ghostscript lua poppler quartz svg swig tcl x11
 
 # Basic graphic format support, especially GIF
 .if !empty(PKG_OPTIONS:Mgd)
@@ -103,17 +103,6 @@ CONFIGURE_ARGS+=	--with-tclsh=${TCLSH:Q}
 CONFIGURE_ARGS+=	--enable-tcl
 .else
 CONFIGURE_ARGS+=	--disable-tcl
-.endif
-
-# Extension language support
-.if !empty(PKG_OPTIONS:Mperl)
-USING_SWIG=	yes
-.  include "../../lang/perl5/buildlink3.mk"
-PLIST.perl=		yes
-USE_TOOLS+=		perl
-CONFIGURE_ARGS+=	--enable-perl
-.else
-CONFIGURE_ARGS+=	--disable-perl
 .endif
 
 # Required by some of the other options
