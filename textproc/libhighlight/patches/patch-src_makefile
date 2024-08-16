@@ -1,8 +1,8 @@
-$NetBSD: patch-src_makefile,v 1.13 2024/03/18 18:56:40 schmonz Exp $
+$NetBSD: patch-src_makefile,v 1.14 2024/08/16 15:28:00 schmonz Exp $
 
 Use pkgsrc-specified compiler and flags.
 
---- src/makefile.orig	2024-03-15 14:46:32.000000000 +0000
+--- src/makefile.orig	2024-08-11 13:05:37.000000000 +0000
 +++ src/makefile
 @@ -13,11 +13,11 @@
  # See src/gui-qt/highlight.pro for the Qt GUI compilation options
@@ -64,7 +64,7 @@ Use pkgsrc-specified compiler and flags.
 -highlight-gui: libhighlight.a ${GUI_OBJECTS}
 +highlight-gui: ${GUI_OBJECTS}
  	cd gui-qt && \
- 	${QMAKE} 'DEFINES+=DATA_DIR=\\\"${HL_DATA_DIR}\\\" CONFIG_DIR=\\\"${HL_CONFIG_DIR}\\\" DOC_DIR=\\\"${HL_DOC_DIR}\\\" ' && \
+ 	${QMAKE} 'DEFINES+=HL_DATA_DIR=\\\"${HL_DATA_DIR}\\\" HL_CONFIG_DIR=\\\"${HL_CONFIG_DIR}\\\" HL_DOC_DIR=\\\"${HL_DOC_DIR}\\\" ' && \
  	$(MAKE)
 @@ -125,7 +129,7 @@ $(OBJECTFILES) : makefile
  
