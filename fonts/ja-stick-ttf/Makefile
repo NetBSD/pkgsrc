@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:30:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:27:16 ryoon Exp $
 
-PKGNAME=	ja-stick-ttf-20201216
+PKGNAME=	ja-stick-ttf-20210622
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Stick/b77e3fdfc09adb034c79b59fb5ed3acefba9a009/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Stick/069a1101e3fd51e60205710157f8b6a996ffea61/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	Stick-Regular.ttf
 
