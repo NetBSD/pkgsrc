@@ -1,10 +1,10 @@
-$NetBSD: patch-erts_emulator_Makefile.in,v 1.4 2023/11/02 19:20:46 adam Exp $
+$NetBSD: patch-erts_emulator_Makefile.in,v 1.5 2024/08/16 09:56:15 adam Exp $
 
 Properly install shared objects.
 
---- erts/emulator/Makefile.in.orig	2023-11-02 13:47:00.312356819 +0000
+--- erts/emulator/Makefile.in.orig	2024-07-09 11:36:07.000000000 +0000
 +++ erts/emulator/Makefile.in
-@@ -483,7 +483,7 @@ all: $(BINDIR)/$(EMULATOR_EXECUTABLE) $(
+@@ -493,7 +493,7 @@ all: $(BINDIR)/$(EMULATOR_EXECUTABLE) $(
  endif
  
  $(BINDIR)/$(PRIMARY_EXECUTABLE): $(BINDIR)/$(FLAVOR_EXECUTABLE)
@@ -13,3 +13,16 @@ Properly install shared objects.
  ifeq ($(TARGET), win32)
  	$(INSTALL_PROGRAM) $(basename $<).pdb $(basename $@).pdb
  endif
+@@ -547,10 +547,10 @@ release_spec: all
+ 	$(INSTALL_DIR) "$(RELEASE_PATH)/usr/include"
+ 	$(INSTALL_DATA) $(RELEASE_INCLUDES) "$(RELEASE_PATH)/usr/include"
+ 	$(INSTALL_DATA) $(RELEASE_INCLUDES) "$(RELSYSDIR)/include"
+-	$(INSTALL_PROGRAM) $(BINDIR)/$(EMULATOR_EXECUTABLE) "$(RELSYSDIR)/bin"
++	${BSD_INSTALL_LIB} $(BINDIR)/$(EMULATOR_EXECUTABLE) "$(RELSYSDIR)/bin"
+ ifeq ($(RELEASE_LIBBEAM),yes)
+ 	$(INSTALL_DIR) "$(RELSYSDIR)/lib"
+-	$(INSTALL_PROGRAM) $(BINDIR)/$(EMULATOR_LIB) "$(RELSYSDIR)/lib"
++	${BSD_INSTALL_LIB} $(BINDIR)/$(EMULATOR_LIB) "$(RELSYSDIR)/lib"
+ endif
+ ifeq ($(ERLANG_OSTYPE), unix)
+ 	$(INSTALL_PROGRAM) $(BINDIR)/$(CS_EXECUTABLE) "$(RELSYSDIR)/bin"
