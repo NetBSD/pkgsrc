@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5138 2024/08/16 03:35:25 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5139 2024/08/16 03:37:01 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -7997,3 +7997,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-pkgutil_resolve_name [wiz 2024-08-15]
 	Removed math/py-numpy16 [wiz 2024-08-15]
 	Updated graphics/qrrs to 0.1.10 [pin 2024-08-16]
+	Updated sysutils/yazi to 0.3.1 [pin 2024-08-16]
