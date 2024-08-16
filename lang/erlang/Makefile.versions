@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.versions,v 1.73 2024/05/06 06:52:50 wiz Exp $
+# $NetBSD: Makefile.versions,v 1.74 2024/08/16 09:56:14 adam Exp $
 
 # When making any update to the versions below (even patch level),
 # please check to see if the erlang-doc or erlang-man packages also
 # need their distinfo and PLIST files regenerated, as they almost
 # always will.
-DIST_VERSION_MAJOR=	26
-DIST_VERSION_MINOR=	2
-DIST_VERSION_PATCH=	5
+DIST_VERSION_MAJOR=	27
+DIST_VERSION_MINOR=	0
+DIST_VERSION_PATCH=	1
 
 .include "versions.mk"
 
