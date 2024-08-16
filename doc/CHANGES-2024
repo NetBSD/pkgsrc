@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5149 2024/08/16 15:24:12 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.5150 2024/08/16 15:25:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8012,3 +8012,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox-l10n to 129.0.1 [ryoon 2024-08-16]
 	Updated fonts/ja-dotgothic16-ttf to 20211022 [ryoon 2024-08-16]
 	Updated fonts/ja-klee-ttf to 20210623 [ryoon 2024-08-16]
+	Updated fonts/ja-rampart-ttf to 20210623 [ryoon 2024-08-16]
