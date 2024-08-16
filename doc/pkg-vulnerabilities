@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.246 2024/08/15 22:33:53 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.247 2024/08/16 18:16:03 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26054,3 +26054,4 @@ php{56,74,80,81,82,83}-roundcube<1.6.8	cross-site-scripting	https://nvd.nist.gov
 nodejs>=18<18.20.4	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-22020
 dovecot<2.3.21.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23184
 dovecot<2.3.21.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23185
+unbound<1.21.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-43167
