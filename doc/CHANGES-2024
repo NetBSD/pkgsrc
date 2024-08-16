@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5153 2024/08/16 15:27:26 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.5154 2024/08/16 15:28:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8016,3 +8016,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/ja-reggae-ttf to 20210902 [ryoon 2024-08-16]
 	Updated fonts/ja-rocknroll-ttf to 20210904 [ryoon 2024-08-16]
 	Updated fonts/ja-stick-ttf to 20210622 [ryoon 2024-08-16]
+	Updated textproc/libhighlight to 4.13 [schmonz 2024-08-16]
