@@ -1,15 +1,15 @@
-$NetBSD: patch-lib_odbc_c__src_Makefile.in,v 1.1 2023/11/02 19:20:46 adam Exp $
+$NetBSD: patch-lib_odbc_c__src_Makefile.in,v 1.2 2024/08/16 09:56:15 adam Exp $
 
 Pass in proper LDFLAGS. Fixes build with iodbc.
 
---- lib/odbc/c_src/Makefile.in.orig	2010-02-19 20:07:30.000000000 +0200
-+++ lib/odbc/c_src/Makefile.in	2010-06-21 23:28:49.000000000 +0300
-@@ -82,7 +82,7 @@
+--- lib/odbc/c_src/Makefile.in.orig	2024-07-09 11:36:07.000000000 +0000
++++ lib/odbc/c_src/Makefile.in
+@@ -82,7 +82,7 @@ CC =  @CC@
  CFLAGS = $(TYPEFLAGS) @CFLAGS@ @THR_DEFS@ @DEFS@
- EI_LDFLAGS = -L$(EI_ROOT)/obj$(TYPEMARKER)/$(TARGET)
+ EI_LDFLAGS = -L$(EI_ROOT)/obj$(TYPEMARKER)/$(TARGET) $(EI_LIB)
  LD = @LD@
--LDFLAGS =  $(ODBC_LIB) $(EI_LDFLAGS)
-+LDFLAGS = @LDFLAGS@ $(ODBC_LIB) $(EI_LDFLAGS)
- LIBS = @LIBS@ @THR_LIBS@ $(EI_LIB)
+-LDFLAGS =  $(EI_LDFLAGS) $(ODBC_LIB)
++LDFLAGS = @LDFLAGS@ $(EI_LDFLAGS) $(ODBC_LIB)
+ LIBS = @LIBS@ @THR_LIBS@
  INCLUDES = -I. $(ODBC_INCLUDE) $(EI_INCLUDE)
  TARGET_FLAGS =  @TARGET_FLAGS@

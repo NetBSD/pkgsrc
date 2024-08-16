@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/04/25 08:07:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/16 09:56:15 adam Exp $
 
-DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
+# TODO: on update uncomment DIST_VERSION_PATCH, as doc_man is not available for 27.0.1
+DISTNAME=	otp_doc_man_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR} #${!empty(DIST_VERSION_PATCH):?.:}${DIST_VERSION_PATCH}
 PKGNAME=	${DISTNAME:S/otp_doc_man_/erlang-man-/}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=erlang/otp/releases/download/OTP-${PKGVERSION_NOREV}/}
