@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/10 23:14:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/16 09:58:57 nia Exp $
 
-DISTNAME=	bulk-test-python27-20240510
+DISTNAME=	bulk-test-python27-20240816
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -29,6 +29,7 @@ DEPENDS+=	getmail<6:../../mail/getmail
 DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 DEPENDS+=	mailman<3:../../mail/mailman
 DEPENDS+=	offlineimap-[0-9]*:../../mail/offlineimap
+DEPENDS+=	palemoon-[0-9]*:../../www/palemoon
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
 DEPENDS+=	rdiff-backup-[0-9]*:../../sysutils/rdiff-backup
 
