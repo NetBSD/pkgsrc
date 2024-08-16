@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:22:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:23:03 ryoon Exp $
 
-PKGNAME=	ja-dotgothic16-ttf-20201216
+PKGNAME=	ja-dotgothic16-ttf-20211022
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/DotGothic16/65e34c7002c9a74b4be6201bb3a059a5f00580b9/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/DotGothic16/14517183ab2f75e8bccafc5a0bff6685d268c687/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	DotGothic16-Regular.ttf
 
