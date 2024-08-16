@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/08/08 03:54:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/16 15:15:36 ryoon Exp $
 
 FIREFOX_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=		115.14
@@ -95,6 +95,14 @@ SUBST_STAGE.paths=              pre-configure
 SUBST_FILES.paths=              ../firefox.sh
 SUBST_VARS.paths=               PREFIX MOZILLA
 
+SUBST_CLASSES+=			rust178
+SUBST_STAGE.rust178=		pre-configure
+SUBST_MESSAGE.rust178=		Clearing cargo checksums
+SUBST_FILES.rust178=		third_party/rust/bindgen/.cargo-checksum.json
+SUBST_FILES.rust178+=		third_party/rust/any_all_workaround/.cargo-checksum.json
+SUBST_FILES.rust178+=		third_party/rust/encoding_rs/.cargo-checksum.json
+SUBST_SED.rust178=		-e 's/\("files":{\)[^}]*/\1/'
+
 .include "mozilla-common.mk"
 .include "options.mk"
 
@@ -175,6 +183,9 @@ INSTALLATION_DIRS+=	share/applications
 
 post-extract:
 	${CP} ${FILESDIR}/firefox.sh ${WRKDIR}/firefox.sh
+	# patch(1) of NetBSD 9 cannot handle long line.
+	${CP} ${FILESDIR}/third__party_rust_encoding__rs_.cargo-checksum.json \
+		${WRKSRC}/third_party/rust/encoding_rs/.cargo-checksum.json
 
 post-install:
 .if ${OPSYS} == "NetBSD" && ${X11_TYPE} == "native"
