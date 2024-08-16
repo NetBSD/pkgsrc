@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:29:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:26:29 ryoon Exp $
 
-PKGNAME=	ja-rocknroll-ttf-20201216
+PKGNAME=	ja-rocknroll-ttf-20210904
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/RocknRoll/99f160432a3dd5c9234519bd439555ba588b7362/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/RocknRoll/29a2aa8bb7ab10702dee769ee681a9baeeb52ec1/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	RocknRollOne-Regular.ttf
 
