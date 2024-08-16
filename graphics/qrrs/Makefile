@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/11/16 08:04:43 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/16 03:35:04 pin Exp $
 
-DISTNAME=	qrrs-0.1.9
+DISTNAME=	qrrs-0.1.10
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Lenivaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,10 @@ COMMENT=	CLI tool for working with qr-codes
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
