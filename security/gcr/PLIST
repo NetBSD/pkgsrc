@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/14 08:58:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/16 13:29:11 adam Exp $
 bin/gcr-viewer
 include/gck-1/gck/gck-deprecated.h
 include/gck-1/gck/gck-enum-types.h
@@ -65,13 +65,13 @@ lib/girepository-1.0/Gcr-3.typelib
 lib/girepository-1.0/GcrUi-3.typelib
 lib/libgck-1.so
 lib/libgck-1.so.0
-lib/libgcr-3.so
-lib/libgcr-3.so.1
-lib/libgcr-3.so.1.0.0
+lib/libgck-1.so.0.0.0
 lib/libgcr-base-3.so
 lib/libgcr-base-3.so.1
+lib/libgcr-base-3.so.1.0.0
 lib/libgcr-ui-3.so
 lib/libgcr-ui-3.so.1
+lib/libgcr-ui-3.so.1.0.0
 lib/pkgconfig/gck-1.pc
 lib/pkgconfig/gcr-3.pc
 lib/pkgconfig/gcr-base-3.pc
