@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/01/30 14:32:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/16 15:28:28 ryoon Exp $
 
-PKGNAME=	ja-train-ttf-20201216
+PKGNAME=	ja-train-ttf-20210624
 CATEGORIES=	fonts
-MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Train/1771787f91e5750f928d2abc6ad7c5f452d6298f/fonts/ttf/
+MASTER_SITES=	https://raw.githubusercontent.com/fontworks-fonts/Train/2972a9857a8332c2af86b221799558c177ba9012/fonts/ttf/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES+=	TrainOne-Regular.ttf
 
