@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2024/06/27 23:32:31 gdt Exp $
+# $NetBSD: Makefile,v 1.176 2024/08/16 11:58:38 gdt Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -76,19 +76,6 @@ CMAKE_CONFIGURE_ARGS+=	-DNetCDF_DIR=${BUILDLINK_PREFIX.netcdf}
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-inc=${BUILDLINK_PREFIX.xerces-c}/include
 #CMAKE_CONFIGURE_ARGS+=	-Dxerces-lib=-L${BUILDLINK_PREFIX.xerces-c}/lib\ -lxerces-c
 
-# gdal wants to use rtree, which is technically optional in sqlite3.
-# While it is present in pkgsrc and NetBSD 10, it is missing in NetBSD
-# 9.  This is messy because base sqlite3 is linked via heimdal and
-# python links with base by default.  Resolving this is hard; it
-# basically amounts to declaring that NetBSD 9 sqlite3 is not
-# acceptable in pkgsrc, and then avoiding base sqlite3 via base
-# heimdal.  It seems likely consensus would form around "gdal is
-# deficient on NetBSD 9" rather than upheaval.
-
-# Don't try to force new/rtree sqlite3, and accept lack of rtree.
-#BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.36.0
-CMAKE_CONFIGURE_ARGS+=	-DACCEPT_MISSING_SQLITE3_RTREE:BOOL=ON
-
 .include "options.mk"
 
 CHECK_PORTABILITY_SKIP+=	mkbindist.sh
@@ -97,10 +84,6 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 
 # \todo: Support geopdf by including poppler, PoDoFo, or PDFium.
 # https://gdal.org/drivers/raster/pdf.html
-
-# NB: spatialite requires sqlite3, so there is the spectre of base/pkg confusion.
-# Therefore, include it first in the baseless hope that helps.
-.include "../../geography/libspatialite/buildlink3.mk"
 
 # \todo Enable zstd
 # .include "../../archivers/zstd/buildlink3.mk"
@@ -113,6 +96,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
 .include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../geography/libgeotiff/buildlink3.mk"
+.include "../../geography/libspatialite/buildlink3.mk"
 .include "../../math/qhull/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
