@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5161 2024/08/17 00:57:56 nia Exp $
+$NetBSD: CHANGES-2024,v 1.5162 2024/08/17 01:01:52 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8028,3 +8028,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/mariadb1011-client to 10.11.9 [nia 2024-08-17]
 	Updated databases/mariadb105-server to 10.5.26 [nia 2024-08-17]
 	Updated databases/mariadb105-client to 10.5.26 [nia 2024-08-17]
+	Removed databases/mariadb104-client successor databases/mariadb1011-client [nia 2024-08-17]
+	Removed databases/mariadb104-server successor databases/mariadb1011-server [nia 2024-08-17]
