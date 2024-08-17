@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/03/26 13:29:53 imil Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/08/17 15:20:20 bsiegert Exp $
 
 BUILDLINK_TREE+=	LuaJIT2
 
@@ -7,6 +7,7 @@ LUAJIT2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.LuaJIT2+=	LuaJIT2>=2.0.3
 BUILDLINK_PKGSRCDIR.LuaJIT2?=	../../lang/LuaJIT2
+BUILDLINK_INCDIRS.LuaJIT2+=	include/luajit-2.1
 .endif	# LUAJIT2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-LuaJIT2
