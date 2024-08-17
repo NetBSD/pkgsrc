@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 08:29:57 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/17 15:20:21 bsiegert Exp $
 
 DISTNAME=	lua-resty-lrucache-0.13
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openresty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,11 +13,9 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.0
-MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.0.5
-#MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
-#MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1.0-beta3
+MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
+MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1
 
-#.include "../../lang/openresty-luajit2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.LuaJIT2+=	LuaJIT2>=2.1
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.16 2020/11/06 12:15:53 nia Exp $
-#
+# $NetBSD: Makefile,v 1.17 2024/08/17 15:20:20 bsiegert Exp $
 
-DISTNAME=	LuaJIT-2.0.5
+DISTNAME=	LuaJIT-2.1.1713773202	# see .relver
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
-PKGREVISION=	2
 CATEGORIES=	lang lua
-MASTER_SITES=	http://luajit.org/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LuaJIT/}
+GITHUB_PROJECT=	LuaJIT
+GITHUB_TAG=	5790d253972c9d78a0c2aece527eda5b134bbbf7
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mdehling@gmail.com
 HOMEPAGE=	https://luajit.org/
 COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
 
-# LuaJIT 2.1.0 will support mips64 and aarch64.
-ONLY_FOR_PLATFORM+=	*-*-*arm*
-ONLY_FOR_PLATFORM+=	*-*-i386
-ONLY_FOR_PLATFORM+=	*-*-mipseb
-ONLY_FOR_PLATFORM+=	*-*-mipsel
+ONLY_FOR_PLATFORM+=	*-*-aarch64*
+ONLY_FOR_PLATFORM+=	*-*-*arm*	# ARMv5+, ARM9E+
+ONLY_FOR_PLATFORM+=	*-*-i386	# req SSE2
+ONLY_FOR_PLATFORM+=	*-*-mips*
 ONLY_FOR_PLATFORM+=	*-*-powerpc
 ONLY_FOR_PLATFORM+=	*-*-x86_64
 
-# Address pkg/47587 lua not linked to pthread causes issues with modules
+# pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
 
