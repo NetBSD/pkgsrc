@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/06/01 14:17:49 pin Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/17 22:07:06 wiz Exp $
 
 DISTNAME=	four-bar-rs-7.0.0
 CATEGORIES=	math
@@ -19,6 +19,17 @@ INSTALLATION_DIRS=	bin
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
+
+# build.rs tries to run git to get the hash, but the distfile doesn't have
+# a repository included, so this will fail
+SUBST_CLASSES+=		git
+SUBST_SED.git+=		-e 's,env!("GIT_HASH"),"unknown",'
+SUBST_FILES.git+=	four-bar-ui/src/app.rs
+SUBST_MESSAGE.git=	Fixing build problem.
+SUBST_STAGE.git=	post-extract
+
+pre-build:
+	${RM} -f ${WRKSRC}/four-bar-ui/build.rs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/four-bar \
