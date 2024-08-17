@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/10 11:21:18 pin Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/17 22:11:11 wiz Exp $
 
 DISTNAME=	cargo-upgrades-2.1.2
 CATEGORIES=	devel
@@ -20,4 +20,5 @@ RUST_REQ=	1.70.0
 USE_LANGUAGES+=	c c++
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
