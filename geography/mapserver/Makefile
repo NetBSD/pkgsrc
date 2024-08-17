@@ -1,20 +1,37 @@
-# $NetBSD: Makefile,v 1.115 2024/07/11 19:53:34 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2024/08/17 12:54:20 gdt Exp $
 
-DISTNAME=	mapserver-5.6.8
-PKGREVISION=	78
+DISTNAME=	mapserver-8.2.1
 CATEGORIES=	geography www
 MASTER_SITES=	http://download.osgeo.org/mapserver/
 
 MAINTAINER=	hdp@cs.msu.edu
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://mapserver.org/
 COMMENT=	Environment for building spatially enabled Internet apps
-
-MAKE_JOBS_SAFE=		no
+LICENSE=	mit
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+
+.include "../../devel/cmake/build.mk"
+# cmake hides what it is doing; ask it to be like traditional builds.
+MAKE_FLAGS+=		VERBOSE=1
+
+# To find out what can be set in the cmake build.
+# \todo Hoist to cmake/build.mk.
+cmake-options:
+	(cd ${WRKSRC}/cmake-pkgsrc-build && cmake -L ..) > OPTIONS
+
+# \todo Check/explain/gc.
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=		yes
+
+# \todo File an upstream bug, and improve this (DOCDIR).
+INSTALLATION_DIRS+=	share/examples/mapserver
+post-install:
+	mv ${DESTDIR}/${PREFIX}/etc/mapserver-sample.conf ${DESTDIR}/${PREFIX}/share/examples/mapserver/mapserver.conf
+CONF_FILES+=		share/examples/mapserver/mapserver.conf ${PKG_SYSCONFDIR}/mapserver.conf
+
+
+# \todo Convert to cmake or prune.
 CONFIGURE_ARGS+=	--with-cairo
 CONFIGURE_ARGS+=	--with-freetype
 CONFIGURE_ARGS+=	--with-gdal
@@ -28,21 +45,12 @@ CONFIGURE_ARGS+=	--with-wcs
 CONFIGURE_ARGS+=	--with-wfs
 CONFIGURE_ARGS+=	--with-zlib
 
-INSTALLATION_DIRS=	bin lib libexec/cgi-bin
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/libmapserver.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_PROGRAM} ${WRKSRC}/mapserv ${DESTDIR}${PREFIX}/libexec/cgi-bin
-.for f in legend msencrypt scalebar shp2img shp2pdf \
-	shptree shptreetst shptreevis sortshp tile4ms
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
-.endfor
-
 .include "options.mk"
 
+# \todo Adjust to current requirements.
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
@@ -51,5 +59,6 @@ do-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
