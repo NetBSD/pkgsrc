@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/29 16:34:37 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/08/17 09:19:56 wiz Exp $
 
 DISTNAME=	libplist-2.2.0
 PKGREVISION=	6
@@ -23,6 +23,12 @@ PKGCONFIG_OVERRIDE+=		libplist.pc.in
 PY_PATCHPLIST=			yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"
