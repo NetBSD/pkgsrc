@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/05/02 11:25:38 he Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/17 20:54:07 wiz Exp $
 
 DISTNAME=	gerb-0.0.1alpha20230427
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=epilys/}
 GITHUB_PROJECT=	gerb
@@ -36,5 +36,5 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/python311/buildlink3.mk"
+.include "../../lang/python312/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
