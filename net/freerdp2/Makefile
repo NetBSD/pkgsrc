@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/08/15 20:41:32 markd Exp $
+# $NetBSD: Makefile,v 1.48 2024/08/17 00:42:06 markd Exp $
 
 DISTNAME=	freerdp-2.11.7
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
@@ -23,7 +23,7 @@ CMAKE_ARGS+=	-DWITH_CHANNELS=ON
 CMAKE_ARGS+=	-DWITH_JPEG=ON
 CMAKE_ARGS+=	-DWITH_GSTREAMER_1_0=OFF
 
-CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg5/libavcodec.so
+CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg6/libavcodec.so
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
