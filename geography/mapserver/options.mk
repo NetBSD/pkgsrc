@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/08/16 14:43:50 gdt Exp $
+# $NetBSD: options.mk,v 1.7 2024/08/17 12:54:20 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
 PKG_SUPPORTED_OPTIONS=	fastcgi pgsql mysql x11
@@ -6,12 +6,16 @@ PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
+# \todo cope with cmake
+
 #
 # FastCGI support
 #
 .if !empty(PKG_OPTIONS:Mfastcgi)
 .include "../../www/fcgi/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-fastcgi
+.else
+# Remediate cmake looking for things not found with configure tests.
+CMAKE_CONFIGURE_ARGS+=		-DWITH_FCGI=OFF
 .endif
 
 #
