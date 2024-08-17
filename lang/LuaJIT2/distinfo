@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:51:29 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/08/17 15:20:21 bsiegert Exp $
 
-BLAKE2s (LuaJIT-2.0.5.tar.gz) = 54f7b86f27f588160895a8e076bb11d63eb60bdad87c9e573d627ae03ea5319d
-SHA512 (LuaJIT-2.0.5.tar.gz) = 2636675602b4a060b0571c05220db2061dd2f38568e35b2be346a0f5e3128d87057d11d3d0d7567d8cc4e0817b5e4cf2c52a17a48065520962b157816465a9fe
-Size (LuaJIT-2.0.5.tar.gz) = 849845 bytes
-SHA1 (patch-Makefile) = edea30d017c9d2938d951bfdee88020906945aee
-SHA1 (patch-src_Makefile) = d7236260dc17f470d7d6e41a57a22dcd3a501c28
-SHA1 (patch-src_lj__arch.h) = 4c34706db4c678b368bb3e38b07505abde01e590
-SHA1 (patch-src_lj__ccallback.c) = 8032bc451a504ae9538fb0ae4cc1ee729ede3a70
-SHA1 (patch-src_lj__mcode.c) = c150e0b07ab441e983ace21e0e813fd4334290b5
+BLAKE2s (LuaJIT-2.1.1713773202-5790d253972c9d78a0c2aece527eda5b134bbbf7.tar.gz) = dd16b550d8657a6e598e09a3180ffb6d51096b066ff3888551dd0b0815c6ed50
+SHA512 (LuaJIT-2.1.1713773202-5790d253972c9d78a0c2aece527eda5b134bbbf7.tar.gz) = 790c22d32424b7d7c79ebcd70485bc40ed6256b0bcc2a3591df90f471ff9935f33c32a86c239cd087b20580bbe7634d5a81bf9bb0cf32a66dd37339f5e9a8b4d
+Size (LuaJIT-2.1.1713773202-5790d253972c9d78a0c2aece527eda5b134bbbf7.tar.gz) = 1081581 bytes
+SHA1 (patch-Makefile) = 157b24b7f936e93e89e8bb797b939e71fb643d0b
+SHA1 (patch-src_Makefile) = 68f9ce9e42070b0f24ddf35ced92c22746d8d206
