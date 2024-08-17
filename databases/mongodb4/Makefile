@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/06/16 15:28:27 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/17 15:51:43 tnn Exp $
 
 DISTNAME=	mongodb-4.4.29
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 GITHUB_TAG=	r${PKGVERSION_NOREV}
@@ -53,7 +54,7 @@ SCONS_BUILD_ARGS+=	--use-system-zstd
 SCONS_BUILD_ARGS+=	--modules='' # avoid enterprise build
 SCONS_BUILD_ARGS+=	MONGO_VERSION=${PKGVERSION_NOREV} # github source does not include version.json
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 

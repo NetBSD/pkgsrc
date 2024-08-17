@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2024/06/16 15:28:27 tnn Exp $
+$NetBSD: distinfo,v 1.7 2024/08/17 15:51:43 tnn Exp $
 
 BLAKE2s (mongodb-4.4.29.tar.gz) = 53d8f9da9a74edd82a01f4a5dc1fa0a1f08dd79f4a1781e3b2c3d6dd8f3209fb
 SHA512 (mongodb-4.4.29.tar.gz) = 3c32a918c8b5587b04ee9263788c250a9bbd64f34ed2c19939e78607456215697966e596c2cfd160604b629188e4bdf3fff071db268bb3c25de3077a7c2ef335
 Size (mongodb-4.4.29.tar.gz) = 51651007 bytes
 SHA1 (patch-SConstruct) = 2f8402c96d5a94c65a422a063e34785277ef7cc9
+SHA1 (patch-buildscripts_moduleconfig.py) = c88d13662bc30c627184d36690650e61c853dad5
 SHA1 (patch-site__scons_mongo_platform.py) = 6a6daba04876f9779a26c579e6f6a66f55e1cbe6
 SHA1 (patch-site__scons_site__tools_libtool.py) = 5663c0095939fa5404776bfb7b472b27cfe3a254
 SHA1 (patch-src_mongo_base_initializer.h) = efaec2e3b5b8a4bfb15c65c6952924cd1469bdc7
