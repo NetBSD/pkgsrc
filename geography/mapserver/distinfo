@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:45:11 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/08/17 12:54:20 gdt Exp $
 
-BLAKE2s (mapserver-5.6.8.tar.gz) = 33fba665a43cb80f2f78a2fba576c5363f812189ede553d3eb27cd08745d22fe
-SHA512 (mapserver-5.6.8.tar.gz) = 33eb64be8420b04eb6017d0a96da11aa401c6aab670fa9dad59879d5da45b512205896cd1ce42fba5a0b0c7bc68a9cf774a0ce5b639177c8e29b43c66bb03a41
-Size (mapserver-5.6.8.tar.gz) = 2332277 bytes
-SHA1 (patch-aa) = d842afeab3455304236bebbf4ea576c974cafbdd
-SHA1 (patch-ab) = 2fb63f73526fa2a3cdd7728a09cb89c9984a1741
-SHA1 (patch-mapproject.h) = 31b74b3bc240600fd000f37a0f5092cc19baa72c
-SHA1 (patch-mapserver.h) = 82e9f4f90495959190962286f9fae0e4be649d20
-SHA1 (patch-maputil.c) = 4d50919a24af34a74d0e14684e3fab4269582639
-SHA1 (patch-renderers_agg_include_agg__renderer__outline__aa.h) = 84145a73bed1b016c6c13b5c2656b8957da9c71d
-SHA1 (patch-renderers_agg_include_agg__scanline__u.h) = 13a83ce884c47b7f7aebcb4ad81f486725962010
+BLAKE2s (mapserver-8.2.1.tar.gz) = 325560853662f953b41a259cbf0c57f3835e49d1811ab14ecc04a9e97915ecee
+SHA512 (mapserver-8.2.1.tar.gz) = 616c3486212da10ef4e0d024cb4d3260368dae92a4c594248e323ef5e04a01fd427299fad5f553afc8c00ccc9ee228f70bb0fa3959da8a61c0738e9c52d1a20f
+Size (mapserver-8.2.1.tar.gz) = 2965922 bytes
