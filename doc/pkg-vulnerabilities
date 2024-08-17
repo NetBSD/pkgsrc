@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.247 2024/08/16 18:16:03 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.248 2024/08/17 04:49:31 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26055,3 +26055,4 @@ nodejs>=18<18.20.4	code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-2202
 dovecot<2.3.21.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23184
 dovecot<2.3.21.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-23185
 unbound<1.21.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-43167
+webkit-gtk<2.44.3	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2024-4558
