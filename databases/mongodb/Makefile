@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2024/06/16 15:28:27 tnn Exp $
+# $NetBSD: Makefile,v 1.93 2024/08/17 10:00:58 tnn Exp $
 
 DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -53,7 +53,7 @@ SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
