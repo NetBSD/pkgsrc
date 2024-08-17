@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5167 2024/08/17 19:18:01 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5168 2024/08/17 19:21:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8035,3 +8035,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/neovim to 0.10.0 [bsiegert 2024-08-17]
 	Updated sysutils/xfburn to 0.7.2 [gutteridge 2024-08-17]
 	Updated x11/xfce4-notifyd to 0.9.6 [gutteridge 2024-08-17]
+	Updated meta-pkgs/xfce4-extras to 4.18.1nb23 [gutteridge 2024-08-17]
