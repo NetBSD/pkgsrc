@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.125 2024/08/03 02:09:14 gutteridge Exp $
+# $NetBSD: Makefile,v 1.126 2024/08/17 19:20:25 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-extras-${XFCE4_VERSION}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for extra optional items for the Xfce desktop environment
 
@@ -31,7 +31,7 @@ DEPENDS+=	xfce4-mount-plugin>=1.1.6:../../sysutils/xfce4-mount-plugin
 DEPENDS+=	xfce4-mpc-plugin>=0.5.3:../../multimedia/xfce4-mpc-plugin
 DEPENDS+=	xfce4-netload-plugin>=1.4.1:../../sysutils/xfce4-netload-plugin
 DEPENDS+=	xfce4-notes-plugin>=1.11.0:../../x11/xfce4-notes-plugin
-DEPENDS+=	xfce4-notifyd>=0.9.4:../../x11/xfce4-notifyd
+DEPENDS+=	xfce4-notifyd>=0.9.6:../../x11/xfce4-notifyd
 DEPENDS+=	xfce4-places-plugin>=1.8.3:../../x11/xfce4-places-plugin
 DEPENDS+=	xfce4-screenshooter>=1.11.1:../../x11/xfce4-screenshooter
 DEPENDS+=	xfce4-smartbookmark-plugin>=0.5.2:../../misc/xfce4-smartbookmark-plugin
