@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.718 2024/08/11 18:12:44 js Exp $
+# $NetBSD: Makefile,v 1.719 2024/08/17 00:59:45 nia Exp $
 
 COMMENT=	Databases
 
@@ -101,8 +101,6 @@ SUBDIR+=	lua-tokyocabinet
 SUBDIR+=	mariadb1011-client
 SUBDIR+=	mariadb1011-embedded
 SUBDIR+=	mariadb1011-server
-SUBDIR+=	mariadb104-client
-SUBDIR+=	mariadb104-server
 SUBDIR+=	mariadb105-client
 SUBDIR+=	mariadb105-server
 SUBDIR+=	mariadb106-client
