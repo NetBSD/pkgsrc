@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/12/29 18:24:41 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/17 09:18:41 wiz Exp $
 
 DISTNAME=	libftdi1-1.5
 PKGREVISION=	8
@@ -29,12 +29,17 @@ PKGCONFIG_OVERRIDE+=	libftdipp1.pc.in
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
+
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-.include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
