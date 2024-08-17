@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.33 2024/08/17 13:04:41 gdt Exp $
+# $NetBSD: configure.mk,v 1.34 2024/08/17 13:09:46 gdt Exp $
 #
 # = Package-settable variables =
 #
@@ -83,7 +83,7 @@ _BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_ARGS
 .  include "replace-localedir.mk"
 .endif
 .if defined(USE_CMAKE)
-   WARNINGS+= "USE_CMAKE is deprecated; use devel/cmake/build.mk instead."
+WARNINGS+= 		"USE_CMAKE is deprecated; use devel/cmake/build.mk instead."
 .  include "cmake.mk"
 .endif
 .if defined(_CMAKE_CONFIGURE_SETTINGS)
