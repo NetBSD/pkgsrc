@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/09/01 13:06:25 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/17 21:48:02 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.smalltalk
 PKG_SUPPORTED_OPTIONS=	cairo curses expat gdbm gtk opengl readline sdl sqlite tk
@@ -48,19 +48,19 @@ PLIST.blox=		yes
 .  include "../../devel/glib2/buildlink3.mk"
 .  include "../../devel/pango/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-glib --without-gtk
-.endif
-
-.if !empty(PKG_OPTIONS:Mopengl)
+# turning off gtk option also turns off opengl
+.  if !empty(PKG_OPTIONS:Mopengl)
 PLIST.opengl=		yes
-.  include "../../graphics/MesaLib/buildlink3.mk"
-.  include "../../graphics/glu/buildlink3.mk"
-.  include "../../graphics/freeglut/buildlink3.mk"
-.  include "../../x11/libICE/buildlink3.mk"
-.else
+.    include "../../graphics/MesaLib/buildlink3.mk"
+.    include "../../graphics/glu/buildlink3.mk"
+.    include "../../graphics/freeglut/buildlink3.mk"
+.    include "../../x11/libICE/buildlink3.mk"
+.  else
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-glut
+.  endif
+.else
+CONFIGURE_ARGS+=	--without-glib --without-gtk
 .endif
 
 .if !empty(PKG_OPTIONS:Mreadline)
