@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/07/22 19:28:04 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/17 00:19:21 nia Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
-PKGREVISION=	4
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (embedded)
 
 # for the header files needed by the installed header file of this package
@@ -125,6 +124,7 @@ post-install:
 		include/mysql/server/private/lex.h \
 		include/mysql/server/private/lex_charset.h \
 		include/mysql/server/private/lex_hash.h \
+		include/mysql/server/private/lex_ident.h \
 		include/mysql/server/private/lex_string.h \
 		include/mysql/server/private/lex_symbol.h \
 		include/mysql/server/private/lex_token.h \
