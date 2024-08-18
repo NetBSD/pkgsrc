@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5184 2024/08/18 08:26:58 wen Exp $
+$NetBSD: CHANGES-2024,v 1.5185 2024/08/18 09:25:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8052,3 +8052,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Net-Netmask to 2.0002 [wen 2024-08-18]
 	Updated devel/p5-PAR-Packer to 1.063 [wen 2024-08-18]
 	Updated devel/p5-PAR to 1.020 [wen 2024-08-18]
+	Updated devel/p5-Parse-PMFile to 0.47 [wen 2024-08-18]
