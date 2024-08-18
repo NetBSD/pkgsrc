@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24754 2024/08/18 13:09:50 wen Exp $
+$NetBSD: TODO,v 1.24755 2024/08/18 20:36:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -1155,7 +1155,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
-	o py-tomlkit-0.13.2
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
