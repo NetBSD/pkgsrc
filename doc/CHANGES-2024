@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5203 2024/08/18 20:36:48 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5204 2024/08/18 20:41:24 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8076,3 +8076,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/gnutls to 3.8.7.1 [adam 2024-08-18]
 	Updated textproc/py-tomlkit to 0.13.2 [adam 2024-08-18]
 	Updated databases/py-tortoise-orm to 0.21.6 [adam 2024-08-18]
+	Added print/tex-pdfcol version 1.7 [markd 2024-08-18]
+	Added print/tex-pdfcol-doc version 1.7 [markd 2024-08-18]
