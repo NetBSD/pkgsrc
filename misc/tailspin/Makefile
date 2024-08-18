@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/04/01 19:12:44 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/18 11:59:48 pin Exp $
 
-DISTNAME=	tailspin-3.0.1
+DISTNAME=	tailspin-3.0.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bensadeh/}
 
@@ -10,6 +10,8 @@ COMMENT=	Log file highlighter
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.70.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
