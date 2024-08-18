@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/11/26 16:45:02 adam Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/18 11:30:48 tnn Exp $
 
 DISTNAME=	PySolFC-2.21.0
 PKGNAME=	${DISTNAME:tl}
@@ -26,7 +26,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pycotap-[0-9]*:../../devel/py-pycotap
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.4:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=	pax
 
