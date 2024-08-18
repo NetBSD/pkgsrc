@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/18 18:57:36 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/18 19:00:03 gdt Exp $
 
 DISTNAME=		rtl-sdr-2.0.1
 CATEGORIES=		ham
@@ -31,7 +31,7 @@ PAGES=		rtl_adsb.1 rtl_eeprom.1 rtl_fm.1 rtl_power.1 rtl_sdr.1 \
 		rtl_tcp.1 rtl_test.1
 post-install:
 .for i in ${PAGES}
-	${INSTALL} ${WRKSRC}/debian/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/debian/${i} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
 
 .include "../../devel/libusb1/buildlink3.mk"
