@@ -1,0 +1,31 @@
+$NetBSD: patch-toolkit_moz.configure,v 1.1 2024/08/18 15:02:22 leot Exp $
+
+* Enable ALSA for NetBSD too.
+* Support --enable-forkserver on NetBSD.
+
+--- toolkit/moz.configure.orig	2023-08-15 21:10:03.000000000 +0000
++++ toolkit/moz.configure
+@@ -242,6 +242,7 @@ def imply_alsa(values, target):
+         any("alsa" in value for value in values)
+         and target.kernel != "Linux"
+         and target.os != "FreeBSD"
++        and target.os != "NetBSD"
+     ):
+         die("Cannot enable ALSA on %s", target.os)
+     return any("alsa" in value for value in values) or None
+@@ -2816,6 +2817,7 @@ def forkserver_default(target, build_pro
+         (target.os == "GNU" and target.kernel == "Linux")
+         or target.os == "FreeBSD"
+         or target.os == "OpenBSD"
++        or target.os == "NetBSD"
+     )
+ 
+ 
+@@ -2834,6 +2836,7 @@ def forkserver_flag(value, target):
+         or (target.os == "GNU" and target.kernel == "Linux")
+         or target.os == "FreeBSD"
+         or target.os == "OpenBSD"
++        or target.os == "NetBSD"
+     ):
+         return bool(value)
+     pass
