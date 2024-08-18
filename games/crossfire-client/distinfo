@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:43:52 nia Exp $
+$NetBSD: distinfo,v 1.10 2024/08/18 19:48:57 adam Exp $
 
-BLAKE2s (crossfire-client-1.73.0.tar.bz2) = f76dfc0644b524c19be5ee941f5272860a66510156fe7ebaf1dfab2108c6ea9f
-SHA512 (crossfire-client-1.73.0.tar.bz2) = 92b5e13de9b3f15eadaf51dd7edaa47b38ad808870675435fa6684723827b7d899b98dee9c88b0632784f0b4488927ee168b1b87471d49bc34a01419609f96bb
-Size (crossfire-client-1.73.0.tar.bz2) = 842671 bytes
+BLAKE2s (crossfire-client-1.75.3.tar.gz) = 4d827894d6eea4191fbc7c0f6013b197806c5fbf9f29211dcca795d58677b811
+SHA512 (crossfire-client-1.75.3.tar.gz) = e838b3484f9637ccc01678559c7e7a1a7e29cdb37a850fa19b62dc64e2164345cfe3279c073c7b640ccb3ead54e5e6c0f16787d69257c36534730e72b7165a3e
+Size (crossfire-client-1.75.3.tar.gz) = 1052116 bytes

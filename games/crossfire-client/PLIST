@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2019/10/29 17:59:17 nia Exp $
-bin/cfsndserv
+@comment $NetBSD: PLIST,v 1.3 2024/08/18 19:48:57 adam Exp $
 bin/crossfire-client-gtk2
 share/applications/crossfire-client.desktop
 share/crossfire-client/sounds/COPYING
@@ -31,12 +30,15 @@ share/crossfire-client/sounds/gong.wav
 share/crossfire-client/sounds/knife.ogg
 share/crossfire-client/sounds/lightning1.wav
 share/crossfire-client/sounds/magic.wav
+share/crossfire-client/sounds/miss-1.ogg
 share/crossfire-client/sounds/ouch1.wav
 share/crossfire-client/sounds/painb.wav
 share/crossfire-client/sounds/phit2.wav
+share/crossfire-client/sounds/potion.ogg
 share/crossfire-client/sounds/sci_fi_gun.wav
 share/crossfire-client/sounds/sounds.conf
 share/crossfire-client/sounds/squish.wav
+share/crossfire-client/sounds/step_lth1.ogg
 share/crossfire-client/sounds/su-fanf.wav
 share/crossfire-client/sounds/swish.wav
 share/crossfire-client/sounds/sword-1.ogg
