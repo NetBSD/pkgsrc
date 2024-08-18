@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5178 2024/08/18 04:40:56 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5179 2024/08/18 05:16:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8046,3 +8046,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Clone to 0.47 [wiz 2024-08-18]
 	Updated devel/p5-ExtUtils-Config to 0.010 [wiz 2024-08-18]
 	Updated devel/p5-Try-Tiny to 0.32 [wiz 2024-08-18]
+	Updated misc/vym to 2.9.28 [wiz 2024-08-18]
