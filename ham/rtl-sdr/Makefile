@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/04/30 00:37:59 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2024/08/18 18:57:36 gdt Exp $
 
 DISTNAME=		rtl-sdr-2.0.1
 CATEGORIES=		ham
@@ -20,19 +20,12 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
 
-USE_CMAKE=	yes
-CONFIGURE_DIRS=	build
-BUILD_DIRS=	${CONFIGURE_DIRS}
-CMAKE_ARG_PATH=	..
+.include "../../devel/cmake/build.mk"
 
 PKGCONFIG_OVERRIDE+=	librtlsdr.pc.in
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
 
 PAGES=		rtl_adsb.1 rtl_eeprom.1 rtl_fm.1 rtl_power.1 rtl_sdr.1 \
 		rtl_tcp.1 rtl_test.1
