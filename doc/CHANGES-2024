@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5190 2024/08/18 12:00:06 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5191 2024/08/18 12:01:04 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8058,3 +8058,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/broot to 1.42.0 [pin 2024-08-18]
 	Updated textproc/git-delta to 0.18.0 [pin 2024-08-18]
 	Updated misc/tailspin to 3.0.2 [pin 2024-08-18]
+	Updated textproc/xt-rs to 0.19.2 [pin 2024-08-18]
