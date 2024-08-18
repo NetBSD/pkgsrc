@@ -1,0 +1,24 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2024/08/18 07:44:23 pin Exp $
+
+Port to Qt6.
+
+--- src/CMakeLists.txt.orig	2024-01-14 11:02:54.000000000 +0000
++++ src/CMakeLists.txt
+@@ -2,7 +2,7 @@
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_NO_KEYWORDS")
+ 
+ set(QTX_INCLUDE_DIRS "")
+-set(QTX_LIBRARIES Qt5::Widgets Qt5::X11Extras)
++set(QTX_LIBRARIES Qt6::Widgets)
+ 
+ include_directories(
+   ${QTX_INCLUDE_DIRS}
+@@ -31,7 +31,7 @@ set(obconf-qt_UIS
+   obconf.ui
+ )
+ 
+-qt5_wrap_ui(obconf-qt_UI_H ${obconf-qt_UIS})
++qt6_wrap_ui(obconf-qt_UI_H ${obconf-qt_UIS})
+ 
+ set_property(SOURCE ${obconf-qt_UI_H} PROPERTY SKIP_AUTOMOC ON)
+ 
