@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1810 2024/08/18 15:03:00 leot Exp $
+# $NetBSD: Makefile,v 1.1811 2024/08/18 15:05:10 leot Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -124,6 +124,7 @@ SUBDIR+=	firefox102-l10n
 SUBDIR+=	firefox115
 SUBDIR+=	firefox115-l10n
 SUBDIR+=	firefox128
+SUBDIR+=	firefox128-l10n
 SUBDIR+=	firefox52
 SUBDIR+=	firefox52-l10n
 SUBDIR+=	firefox_decrypt
