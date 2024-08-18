@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5199 2024/08/18 19:32:30 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5200 2024/08/18 19:49:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8068,3 +8068,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/lazygit to 0.43.1 [bsiegert 2024-08-18]
 	Updated net/py-aiohappyeyeballs to 2.3.7 [adam 2024-08-18]
 	Updated www/py-aiohttp to 3.10.4 [adam 2024-08-18]
+	Updated games/crossfire-client to 1.75.3 [adam 2024-08-18]
+	Updated games/crossfire-server to 1.75.0 [adam 2024-08-18]
