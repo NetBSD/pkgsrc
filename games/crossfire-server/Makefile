@@ -1,43 +1,37 @@
-# $NetBSD: Makefile,v 1.86 2024/08/15 22:02:25 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2024/08/18 19:48:57 adam Exp $
 
-DISTNAME=	crossfire-1.71.0
+DISTNAME=	crossfire-1.75.0
 PKGNAME=	${DISTNAME:S/crossfire-/crossfire-server-/1}
-PKGREVISION=	33
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME}.arch${EXTRACT_SUFX}
-DISTFILES+=	${DISTNAME}.maps${EXTRACT_SUFX}
-EXTRACT_SUFX=	.tar.bz2
+DISTFILES+=	crossfire-1.71.0.arch.tar.bz2
+DISTFILES+=	${DISTNAME:S/-/-maps-/}${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
-HOMEPAGE=	http://crossfire.real-time.com/
+HOMEPAGE=	https://crossfire.real-time.com/
 COMMENT=	Multi-player graphical arcade and adventure game (server)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/crossfire-server-${PKGVERSION_NOREV}
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake perl:run bash:run csh:run ksh
-CONFIG_SHELL=	ksh
-GNU_CONFIGURE=	yes
+CONFIG_SHELL=		ksh
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake bash:run csh:run ksh perl:run pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-check
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+PKG_SYSCONFSUBDIR=	crossfire
+
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
-BROKEN=		"Only supports Python < 3.10"
-#PYTHON_VERSIONS_ACCEPTED=	38 39
+REPLACE_PYTHON+=	../maps/python/CFReputation/utils/gods2factions
+REPLACE_PYTHON+=	utils/cfdb_convert
+
+PYTHON_VERSIONS_ACCEPTED=	39 # node.h is required
 
 BUILD_DEFS+=	VARBASE
 
 CHECK_PORTABILITY_SKIP+=	utils/get_release.in
-
-# "Collect is already running.
-# If you think this is an error, rmdir collect.lock"
-MAKE_JOBS_SAFE=	no
-
-PKG_SYSCONFSUBDIR=	crossfire
-CONFIGURE_ARGS+=	--disable-check
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		ac_cv_path_GZIP=${GZIP_CMD:Q}
 
 INSTALLATION_DIRS=	share/crossfire/arch
 INSTALLATION_DIRS+=	share/crossfire/maps
@@ -51,12 +45,8 @@ REPLACE_PERL+=	doc/scripts/makeps.pl
 REPLACE_PERL+=	doc/scripts/monster-extract.pl
 REPLACE_PERL+=	lib/adm/archsearch.pl
 REPLACE_PERL+=	lib/adm/collect_images.pl
-REPLACE_PERL+=	lib/adm/map_expand.pl
-REPLACE_PERL+=	lib/adm/mapslitter.pl
 REPLACE_PERL+=	utils/player_dl.pl.in
-REPLACE_PERL+=	utils/metaserver.pl.in
 REPLACE_PERL+=	utils/mktable.script
-REPLACE_PERL+=	lib/adm/map_info
 # arch
 REPLACE_BASH+=	../arch/dev/png_recompress.sh
 REPLACE_CSH+=	../arch/dev/xpmtopng
@@ -90,18 +80,21 @@ CONF_FILES+=	${EGDIR}/news ${PKG_SYSCONFDIR}/news
 CONF_FILES+=	${EGDIR}/rules ${PKG_SYSCONFDIR}/rules
 CONF_FILES+=	${EGDIR}/settings ${PKG_SYSCONFDIR}/settings
 
-pre-build:
-	${LN} -sf ${WRKDIR}/arch ${WRKSRC}/lib
+SUBST_CLASSES+=		py3path
+SUBST_STAGE.py3path=	pre-configure
+SUBST_MESSAGE.py3path=	Fixing path to Python.
+SUBST_FILES.py3path=	configure
+SUBST_SED.py3path=	-e 's,"python3","python-${PYVERSSUFFIX}",g'
 
 post-install:
-	cd ${WRKDIR} && cp -R arch maps ${DESTDIR}${PREFIX}/share/crossfire
+	cd ${WRKDIR} && ${CP} -R arch maps ${DESTDIR}${PREFIX}/share/crossfire
 	cd ${DESTDIR}${PREFIX} && \
 		${FIND} share/crossfire/arch -type f -print >> ${WRKDIR}/PLIST
 	cd ${DESTDIR}${PREFIX} && \
 		${FIND} share/crossfire/maps -type f -print >> ${WRKDIR}/PLIST
 
 .include "../../graphics/gd/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

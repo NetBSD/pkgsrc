@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2024/08/18 19:48:57 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2024-08-18 10:05:05.487966411 +0000
++++ configure
+@@ -14809,7 +14809,7 @@ else
+ fi
+ 
+ 
+-if test "$has_archetypes" == no -a "$has_arch_dir" == no; then :
++if test "$has_archetypes" = no -a "$has_arch_dir" = no; then :
+ 
+        as_fn_error $? "Could not find pre-built or raw archetypes." "$LINENO" 5
+ 
