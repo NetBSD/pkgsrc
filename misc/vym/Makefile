@@ -1,51 +1,80 @@
-# $NetBSD: Makefile,v 1.79 2024/05/29 16:33:40 adam Exp $
+# $NetBSD: Makefile,v 1.80 2024/08/18 05:16:08 wiz Exp $
 #
 
-DISTNAME=		vym-2.7.1
-PKGREVISION=		35
+DISTNAME=		vym-2.9.28
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vym/}
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_GITHUB:=insilmaril/}
+GITHUB_TAG=		8f4e86ca61801ca8a759baa9c6ffb3441b8e8291
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.insilmaril.de/vym/
 COMMENT=		Generate and manipulate maps which show your thoughts
 LICENSE=		gnu-gpl-v2
 
-EXTRACT_USING=		bsdtar
-
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-USE_LANGUAGES=		c++
-USE_TOOLS+=		perl:run bash:run
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:run pkg-config gmake gzip
+USE_CMAKE=		yes
 
-REPLACE_BASH+=		scripts/makedist-vym scripts/vivym
-REPLACE_BASH+=		scripts/getbinaries scripts/screencast
+REPLACE_BASH+=		scripts/vivym
 
-REPLACE_RUBY+=		scripts/jigger
-REPLACE_RUBY+=		scripts/make-qrc.rb
-
-CHECK_INTERPRETER_SKIP=	share/vym/scripts/bugger \
-			share/vym/scripts/vym-addmail.rb
+CHECK_INTERPRETER_SKIP=	share/vym/scripts/vym-addmail.rb
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/vym
 
 SUBST_CLASSES+=		flags
 SUBST_STAGE.flags=	pre-configure
 SUBST_MESSAGE.flags=	Fix path to flags
-SUBST_FILES.flags=	main.cpp
+SUBST_FILES.flags=	src/main.cpp src/mainwindow.cpp
 SUBST_VARS.flags=	PREFIX
 
+SUBST_CLASSES+=		man-gz
+SUBST_STAGE.man-gz=	pre-configure
+SUBST_MESSAGE.man-gz=	Fix installing gzipped man page
+SUBST_FILES.man-gz=	CMakeLists.txt
+SUBST_SED.man-gz=	-e 's;doc/vym.1.gz;doc/vym.1;g'
+
+# 'CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
+SUBST_CLASSES+=			cmake-mandir
+SUBST_STAGE.cmake-mandir=	pre-configure
+SUBST_MESSAGE.cmake-mandir=	Fix man page path
+SUBST_FILES.cmake-mandir=	CMakeLists.txt
+SUBST_SED.cmake-mandir=		-e 's;\$${CMAKE_INSTALL_MANDIR};$$\{CMAKE_INSTALL_PREFIX\}/man/man1;g'
+
+SUBST_CLASSES+=		man-bin
+SUBST_STAGE.man-bin=	post-build
+SUBST_MESSAGE.man-bin=	Fixing bin path in man page
+SUBST_FILES.man-bin=	doc/vym.1
+SUBST_SED.man-bin=	-e 's;/usr/bin/;${PREFIX}/bin/;g'
+
+SUBST_CLASSES+=		man-doc
+SUBST_STAGE.man-doc=	post-build
+SUBST_MESSAGE.man-doc=	Fixing doc path in man page
+SUBST_FILES.man-doc=	doc/vym.1
+SUBST_SED.man-doc=	-e 's;/usr/share/doc/packages/vym;${PREFIX}/share/doc/vym;g'
+
+SUBST_CLASSES+=		pdf-path
+SUBST_STAGE.pdf-path=	pre-configure
+SUBST_MESSAGE.pdf-path=	Fix installing pdf files in share/doc/vym/doc
+SUBST_FILES.pdf-path=	CMakeLists.txt
+SUBST_SED.pdf-path=	-e 's;doc DESTINATION;doc/ DESTINATION;g'
+
+CMAKE_ARG_PATH=		.
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
+CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_ARGS+=		-DCMAKE_INSTALL_DATADIR=share/vym
+CMAKE_ARGS+=		-DCMAKE_INSTALL_DATAROOTDIR=share/vym
+CMAKE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
+#CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR=man/man1
+
 post-extract:
-	${CHMOD} a-x ${WRKSRC}/icons/vym.ico
+	${GZIP_CMD} -d ${WRKSRC}/doc/vym.1.gz
 
-do-configure:
-	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-		${QTDIR}/bin/qmake -unix \
-		PREFIX=${PREFIX} \
-		DATADIR=${PREFIX}/share \
-		DOCDIR=${PREFIX}/doc/vym vym.pro
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
