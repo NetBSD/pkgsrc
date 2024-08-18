@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24752 2024/08/17 12:54:56 gdt Exp $
+$NetBSD: TODO,v 1.24753 2024/08/18 07:10:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -503,6 +503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bos-2.5
 	o botan-3.0.0
 	o bottlerocket-0.05b3
+	o box2d-3.0.0
 	o bugzilla3-3.6.13
 	o byobu-5.133
 	o cacti-1.2.19
@@ -725,6 +726,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o google-benchmark-1.9.0
 	o gossip-0.31
 	o gperiodic-3.0.3
 	o gpick-0.3 [wip]
@@ -1117,17 +1119,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-WebOb-1.8.8
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-cyclonedx-python-lib-7.6.0
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.141.0
+	o py-grpcio-1.65.5
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-markdown-3.7
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1137,14 +1144,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-posting-1.12.0
+	o py-pydantic-core-2.22.0
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.6.1
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-soupsieve-2.6
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
+	o py-tomlkit-0.13.2
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-yubiauth-0.3.10
@@ -1299,6 +1311,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-tsx-0.20.4
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
