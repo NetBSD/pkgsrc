@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24753 2024/08/18 07:10:26 wiz Exp $
+$NetBSD: TODO,v 1.24754 2024/08/18 13:09:50 wen Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
-	o py-markdown-3.7
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
