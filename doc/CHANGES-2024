@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5196 2024/08/18 15:05:21 leot Exp $
+$NetBSD: CHANGES-2024,v 1.5197 2024/08/18 16:15:23 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8064,3 +8064,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/wordpress to 6.6.1 [wen 2024-08-18]
 	Added www/firefox128 version 128.1.0 [leot 2024-08-18]
 	Added www/firefox128-l10n version 128.1.0 [leot 2024-08-18]
+	Updated devel/cargo-modules to 0.16.10 [pin 2024-08-18]
