@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/08/17 22:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/18 06:44:43 wiz Exp $
 
 DISTNAME=	four-bar-rs-7.0.0
 CATEGORIES=	math
@@ -22,6 +22,7 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 
 # build.rs tries to run git to get the hash, but the distfile doesn't have
 # a repository included, so this will fail
+# https://github.com/KmolYuan/four-bar-rs/issues/5
 SUBST_CLASSES+=		git
 SUBST_SED.git+=		-e 's,env!("GIT_HASH"),"unknown",'
 SUBST_FILES.git+=	four-bar-ui/src/app.rs
