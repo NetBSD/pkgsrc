@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/08/18 13:08:45 wen Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/18 19:25:46 adam Exp $
 
 DISTNAME=	markdown-3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://Python-Markdown.github.io/
 COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
+
+WHEEL_NAME=	Markdown-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
