@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2023/09/16 08:07:27 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/18 19:58:53 adam Exp $
 
-DISTNAME=	blosc-1.21.5
+DISTNAME=	blosc-1.21.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Blosc/}
 GITHUB_PROJECT=	c-blosc
@@ -11,12 +11,11 @@ HOMEPAGE=	https://blosc.org/
 COMMENT=	Blocking, shuffling, and lossless compression library
 LICENSE=	modified-bsd
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/blosc
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/blosc
 # For Darwin
-TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/blosc
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/blosc
 TEST_TARGET=	test
 
 CMAKE_ARGS+=	-DPREFER_EXTERNAL_LZ4=ON
@@ -36,6 +35,7 @@ PKGCONFIG_OVERRIDE+=	blosc.pc.in
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
