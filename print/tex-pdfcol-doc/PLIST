@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/18 20:39:59 markd Exp $
+share/texmf-dist/doc/latex/pdfcol/README.md
+share/texmf-dist/doc/latex/pdfcol/pdfcol.pdf

@@ -1,0 +1,5 @@
+Since version 1.40 pdfTeX supports colour stacks. The driver
+file pdftex.def for package color defines and uses a main
+colour stack since version v0.04b. This package is intended for
+package writers. It defines macros for setting and maintaining
+new colour stacks.
