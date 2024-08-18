@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2023/01/08 00:45:21 wen Exp $
+$NetBSD: distinfo,v 1.22 2024/08/18 04:39:29 wiz Exp $
 
-BLAKE2s (Clone-0.46.tar.gz) = 8cb3ddd0ed095ea2a0e720725fa06d9f9bf95f3f3ddcb5038512bf2a4720ab3b
-SHA512 (Clone-0.46.tar.gz) = f8bb1010364e94c7cc8bba25681cd9fd737ec2935a8be960ac53099359729fc679190a115dd082fccd239b35762dee2b3be3adbddce37e4ceae6fe934fbad545
-Size (Clone-0.46.tar.gz) = 138722 bytes
+BLAKE2s (Clone-0.47.tar.gz) = 9945d5b7010c055b1046a080ee90768e33cd0ae65fd87c1df2244d0c4321c36f
+SHA512 (Clone-0.47.tar.gz) = dc5ebde05ecafbd3089cdb978083584ad77e1e4dce2e95e466b1cc8357092422a36489d2e9cda99c8009a8d7a0bd18466e3c21b580b95c29fb9ad843911bb9fe
+Size (Clone-0.47.tar.gz) = 139080 bytes
