@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/10/01 15:14:40 wen Exp $
+$NetBSD: distinfo,v 1.18 2024/08/18 04:40:48 wiz Exp $
 
-BLAKE2s (Try-Tiny-0.31.tar.gz) = 9a885a30168268f1e34926dba40acdc775f2b0ce4919a1da3ccde726db877509
-SHA512 (Try-Tiny-0.31.tar.gz) = 1a3c852e56797d81da60a4f4887cb70fc575eca83d10b8cd12fe5d5d0008a967801218f3a5277a2f1347ade95b9515c1f237333e491742d06614c0beecf44768
-Size (Try-Tiny-0.31.tar.gz) = 35784 bytes
+BLAKE2s (Try-Tiny-0.32.tar.gz) = a6c16edaff544d4cdc87834f0da5b5bc18072854f9ebb722bd5c5e13e63e0e08
+SHA512 (Try-Tiny-0.32.tar.gz) = 18610525e1b754760f41a5d9a836a4e78c22ba1b008f7ac16b2796916ef688b03c7cc3002cfc61b274492455a906e75dbe0e2a06ead4e08b33e1c6a0a8569c4e
+Size (Try-Tiny-0.32.tar.gz) = 36291 bytes
