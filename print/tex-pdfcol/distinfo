@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/18 20:39:59 markd Exp $
+
+BLAKE2s (pdfcol.r64469.tar.xz) = 6d964eba5cbe0b054d13ab10ce1e9af0febaeba725d46e1d65b099340286793a
+SHA512 (pdfcol.r64469.tar.xz) = c9d9350a68513b9c7fd1d99138cf93aad74b76ebac4e5a55de483501bc5a6ac42a366e60e15a6d7e81149355dd6ea87b968bb070e05f04848e4a167422f645c1
+Size (pdfcol.r64469.tar.xz) = 2780 bytes
