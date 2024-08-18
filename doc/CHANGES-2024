@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5189 2024/08/18 11:59:13 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5190 2024/08/18 12:00:06 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8057,3 +8057,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/p5-Email-Send to 2.202 [wen 2024-08-18]
 	Updated sysutils/broot to 1.42.0 [pin 2024-08-18]
 	Updated textproc/git-delta to 0.18.0 [pin 2024-08-18]
+	Updated misc/tailspin to 3.0.2 [pin 2024-08-18]
