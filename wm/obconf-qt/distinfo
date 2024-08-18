@@ -1,5 +1,15 @@
-$NetBSD: distinfo,v 1.9 2024/02/06 02:30:52 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2024/08/18 07:44:23 pin Exp $
 
 BLAKE2s (obconf-qt-0.16.4.tar.xz) = 9a84c9001d75ddd9f5d8503287dfb46113f2e69fee51078158c6a51acfca74f8
 SHA512 (obconf-qt-0.16.4.tar.xz) = 4f75a5275e14cd7e8f0abc1bfcd40b4d860d613bc37c06c0e68d6f622ed126dce2fea98b5dd8e629b5de472ab5e668a5b0af7f6621d09fcb0b2287a11b0fb662
 Size (obconf-qt-0.16.4.tar.xz) = 118780 bytes
+SHA1 (patch-CMakeLists.txt) = 2cc9ba4c9c8bdfd85cbf8831284313e1799b07ef
+SHA1 (patch-src_CMakeLists.txt) = 51852e8bd7a9984a380ca57704e5ae6ee98b48a8
+SHA1 (patch-src_desktops.cpp) = f92c518008645d91494c74d3a63130c1a4a3aa45
+SHA1 (patch-src_dock.cpp) = 5e41b80dc0c0a85be9c60200693fc76ae1cb8dc9
+SHA1 (patch-src_margins.cpp) = bfdcf63b9965f2cb3acdfbb5dbb102372e207086
+SHA1 (patch-src_mouse.cpp) = 898b82fee81e666b7f901097bfb740a491b50455
+SHA1 (patch-src_moveresize.cpp) = ac2a3725ff25f98d9e24fef0b68a96fdbae7d2b4
+SHA1 (patch-src_obconf-qt.cpp) = 86c283ef92bdf4abb0b14a6d7db84fab8068a3a5
+SHA1 (patch-src_tree.cpp) = 687aed57bac907a34db59af748464e27941357c7
+SHA1 (patch-src_windows.cpp) = 2eba8627f4cae786f8e7e15d2ea7329d1233f2dc
