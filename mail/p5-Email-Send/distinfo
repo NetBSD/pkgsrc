@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:54:13 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/08/18 09:42:00 wen Exp $
 
-BLAKE2s (Email-Send-2.201.tar.gz) = f613c0a6d0cbff7d415ef112b21fe8f8dc660ecfdda50c29ed9c9ee49790f473
-SHA512 (Email-Send-2.201.tar.gz) = 4245fc5487f2f4a88ed8c7569572c52214d88e0cf96b727198503914135609c00b3839034e0cdffd32dc84a140eb1148e4de667ba74759d76cf47d7ee49cd1e5
-Size (Email-Send-2.201.tar.gz) = 30041 bytes
+BLAKE2s (Email-Send-2.202.tar.gz) = 8ba44b81ab904cc89a091c7d3dc4611bf98cf9d77f95c1f0c0b5c177b81e4067
+SHA512 (Email-Send-2.202.tar.gz) = f4a1c3ab079a427eedd908ed15bb5d56676a41817fe4e2c4f2d464f8efdeaba055effe761baf54256d3ee0fa9f2d3a501467fadad6e078db52bfa57c78282c5c
+Size (Email-Send-2.202.tar.gz) = 36242 bytes
