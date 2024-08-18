@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.14 2024/08/18 13:08:45 wen Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/08/18 19:25:46 adam Exp $
 bin/markdown_py${PYVERSSUFFIX}
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/LICENSE.md
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/entry_points.txt
-${PYSITELIB}/Markdown-${PKGVERSION}.dist-info/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/markdown/__init__.py
 ${PYSITELIB}/markdown/__init__.pyc
 ${PYSITELIB}/markdown/__init__.pyo
