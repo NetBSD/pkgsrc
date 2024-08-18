@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2024/07/26 09:03:16 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2024/08/18 12:00:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
 CARGO_CRATE_DEPENDS+=	anes-0.1.6
