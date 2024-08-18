@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2024/02/27 23:09:39 morr Exp $
+@comment $NetBSD: PLIST,v 1.54 2024/08/18 13:30:07 wen Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -174,12 +174,6 @@ share/wordpress/wp-admin/erase-personal-data.php
 share/wordpress/wp-admin/export-personal-data.php
 share/wordpress/wp-admin/export.php
 share/wordpress/wp-admin/freedoms.php
-share/wordpress/wp-admin/images/about-header-about.svg
-share/wordpress/wp-admin/images/about-header-background.svg
-share/wordpress/wp-admin/images/about-header-contribute.svg
-share/wordpress/wp-admin/images/about-header-credits.svg
-share/wordpress/wp-admin/images/about-header-freedoms.svg
-share/wordpress/wp-admin/images/about-header-privacy.svg
 share/wordpress/wp-admin/images/about-release-badge.svg
 share/wordpress/wp-admin/images/about-texture.png
 share/wordpress/wp-admin/images/align-center-2x.png
@@ -439,6 +433,8 @@ share/wordpress/wp-admin/js/set-post-thumbnail.js
 share/wordpress/wp-admin/js/set-post-thumbnail.min.js
 share/wordpress/wp-admin/js/site-health.js
 share/wordpress/wp-admin/js/site-health.min.js
+share/wordpress/wp-admin/js/site-icon.js
+share/wordpress/wp-admin/js/site-icon.min.js
 share/wordpress/wp-admin/js/svg-painter.js
 share/wordpress/wp-admin/js/svg-painter.min.js
 share/wordpress/wp-admin/js/tags-box.js
@@ -568,6 +564,7 @@ share/wordpress/wp-admin/user-edit.php
 share/wordpress/wp-admin/user-new.php
 share/wordpress/wp-admin/user/about.php
 share/wordpress/wp-admin/user/admin.php
+share/wordpress/wp-admin/user/contribute.php
 share/wordpress/wp-admin/user/credits.php
 share/wordpress/wp-admin/user/freedoms.php
 share/wordpress/wp-admin/user/index.php
@@ -918,7 +915,6 @@ share/wordpress/wp-content/themes/twentytwentytwo/theme.json
 share/wordpress/wp-cron.php
 share/wordpress/wp-includes/ID3/getid3.lib.php
 share/wordpress/wp-includes/ID3/getid3.php
-share/wordpress/wp-includes/ID3/license.commercial.txt
 share/wordpress/wp-includes/ID3/license.txt
 share/wordpress/wp-includes/ID3/module.audio-video.asf.php
 share/wordpress/wp-includes/ID3/module.audio-video.flv.php
@@ -1063,6 +1059,9 @@ share/wordpress/wp-includes/assets/script-loader-react-refresh-runtime.min.php
 share/wordpress/wp-includes/assets/script-loader-react-refresh-runtime.php
 share/wordpress/wp-includes/atomlib.php
 share/wordpress/wp-includes/author-template.php
+share/wordpress/wp-includes/block-bindings.php
+share/wordpress/wp-includes/block-bindings/pattern-overrides.php
+share/wordpress/wp-includes/block-bindings/post-meta.php
 share/wordpress/wp-includes/block-editor.php
 share/wordpress/wp-includes/block-i18n.json
 share/wordpress/wp-includes/block-patterns.php
@@ -1075,6 +1074,7 @@ share/wordpress/wp-includes/block-patterns/query-standard-posts.php
 share/wordpress/wp-includes/block-patterns/social-links-shared-background-color.php
 share/wordpress/wp-includes/block-supports/align.php
 share/wordpress/wp-includes/block-supports/background.php
+share/wordpress/wp-includes/block-supports/block-style-variations.php
 share/wordpress/wp-includes/block-supports/border.php
 share/wordpress/wp-includes/block-supports/colors.php
 share/wordpress/wp-includes/block-supports/custom-classname.php
@@ -1127,11 +1127,8 @@ share/wordpress/wp-includes/blocks/avatar/style.css
 share/wordpress/wp-includes/blocks/avatar/style.min.css
 share/wordpress/wp-includes/blocks/block.php
 share/wordpress/wp-includes/blocks/block/block.json
-share/wordpress/wp-includes/blocks/block/editor-rtl.css
-share/wordpress/wp-includes/blocks/block/editor-rtl.min.css
-share/wordpress/wp-includes/blocks/block/editor.css
-share/wordpress/wp-includes/blocks/block/editor.min.css
 share/wordpress/wp-includes/blocks/blocks-json.php
+share/wordpress/wp-includes/blocks/button.php
 share/wordpress/wp-includes/blocks/button/block.json
 share/wordpress/wp-includes/blocks/button/editor-rtl.css
 share/wordpress/wp-includes/blocks/button/editor-rtl.min.css
@@ -1380,6 +1377,7 @@ share/wordpress/wp-includes/blocks/latest-posts/style.min.css
 share/wordpress/wp-includes/blocks/legacy-widget.php
 share/wordpress/wp-includes/blocks/legacy-widget/block.json
 share/wordpress/wp-includes/blocks/list-item/block.json
+share/wordpress/wp-includes/blocks/list.php
 share/wordpress/wp-includes/blocks/list/block.json
 share/wordpress/wp-includes/blocks/list/style-rtl.css
 share/wordpress/wp-includes/blocks/list/style-rtl.min.css
@@ -1387,6 +1385,7 @@ share/wordpress/wp-includes/blocks/list/style.css
 share/wordpress/wp-includes/blocks/list/style.min.css
 share/wordpress/wp-includes/blocks/loginout.php
 share/wordpress/wp-includes/blocks/loginout/block.json
+share/wordpress/wp-includes/blocks/media-text.php
 share/wordpress/wp-includes/blocks/media-text/block.json
 share/wordpress/wp-includes/blocks/media-text/editor-rtl.css
 share/wordpress/wp-includes/blocks/media-text/editor-rtl.min.css
@@ -1484,6 +1483,10 @@ share/wordpress/wp-includes/blocks/post-comments-form/style.css
 share/wordpress/wp-includes/blocks/post-comments-form/style.min.css
 share/wordpress/wp-includes/blocks/post-content.php
 share/wordpress/wp-includes/blocks/post-content/block.json
+share/wordpress/wp-includes/blocks/post-content/editor-rtl.css
+share/wordpress/wp-includes/blocks/post-content/editor-rtl.min.css
+share/wordpress/wp-includes/blocks/post-content/editor.css
+share/wordpress/wp-includes/blocks/post-content/editor.min.css
 share/wordpress/wp-includes/blocks/post-date.php
 share/wordpress/wp-includes/blocks/post-date/block.json
 share/wordpress/wp-includes/blocks/post-date/style-rtl.css
@@ -1590,10 +1593,6 @@ share/wordpress/wp-includes/blocks/query/editor-rtl.css
 share/wordpress/wp-includes/blocks/query/editor-rtl.min.css
 share/wordpress/wp-includes/blocks/query/editor.css
 share/wordpress/wp-includes/blocks/query/editor.min.css
-share/wordpress/wp-includes/blocks/query/style-rtl.css
-share/wordpress/wp-includes/blocks/query/style-rtl.min.css
-share/wordpress/wp-includes/blocks/query/style.css
-share/wordpress/wp-includes/blocks/query/style.min.css
 share/wordpress/wp-includes/blocks/query/view.asset.php
 share/wordpress/wp-includes/blocks/query/view.js
 share/wordpress/wp-includes/blocks/query/view.min.asset.php
@@ -1786,6 +1785,7 @@ share/wordpress/wp-includes/category-template.php
 share/wordpress/wp-includes/category.php
 share/wordpress/wp-includes/certificates/ca-bundle.crt
 share/wordpress/wp-includes/class-IXR.php
+share/wordpress/wp-includes/class-avif-info.php
 share/wordpress/wp-includes/class-feed.php
 share/wordpress/wp-includes/class-http.php
 share/wordpress/wp-includes/class-json.php
@@ -1806,6 +1806,8 @@ share/wordpress/wp-includes/class-walker-page.php
 share/wordpress/wp-includes/class-wp-admin-bar.php
 share/wordpress/wp-includes/class-wp-ajax-response.php
 share/wordpress/wp-includes/class-wp-application-passwords.php
+share/wordpress/wp-includes/class-wp-block-bindings-registry.php
+share/wordpress/wp-includes/class-wp-block-bindings-source.php
 share/wordpress/wp-includes/class-wp-block-editor-context.php
 share/wordpress/wp-includes/class-wp-block-list.php
 share/wordpress/wp-includes/class-wp-block-parser-block.php
@@ -1866,6 +1868,7 @@ share/wordpress/wp-includes/class-wp-object-cache.php
 share/wordpress/wp-includes/class-wp-oembed-controller.php
 share/wordpress/wp-includes/class-wp-oembed.php
 share/wordpress/wp-includes/class-wp-paused-extensions-storage.php
+share/wordpress/wp-includes/class-wp-plugin-dependencies.php
 share/wordpress/wp-includes/class-wp-post-type.php
 share/wordpress/wp-includes/class-wp-post.php
 share/wordpress/wp-includes/class-wp-query.php
@@ -1877,6 +1880,7 @@ share/wordpress/wp-includes/class-wp-recovery-mode.php
 share/wordpress/wp-includes/class-wp-rewrite.php
 share/wordpress/wp-includes/class-wp-role.php
 share/wordpress/wp-includes/class-wp-roles.php
+share/wordpress/wp-includes/class-wp-script-modules.php
 share/wordpress/wp-includes/class-wp-scripts.php
 share/wordpress/wp-includes/class-wp-session-tokens.php
 share/wordpress/wp-includes/class-wp-simplepie-file.php
@@ -1896,6 +1900,7 @@ share/wordpress/wp-includes/class-wp-theme-json-resolver.php
 share/wordpress/wp-includes/class-wp-theme-json-schema.php
 share/wordpress/wp-includes/class-wp-theme-json.php
 share/wordpress/wp-includes/class-wp-theme.php
+share/wordpress/wp-includes/class-wp-token-map.php
 share/wordpress/wp-includes/class-wp-user-meta-session-tokens.php
 share/wordpress/wp-includes/class-wp-user-query.php
 share/wordpress/wp-includes/class-wp-user-request.php
@@ -2025,6 +2030,10 @@ share/wordpress/wp-includes/css/dist/patterns/style-rtl.css
 share/wordpress/wp-includes/css/dist/patterns/style-rtl.min.css
 share/wordpress/wp-includes/css/dist/patterns/style.css
 share/wordpress/wp-includes/css/dist/patterns/style.min.css
+share/wordpress/wp-includes/css/dist/preferences/style-rtl.css
+share/wordpress/wp-includes/css/dist/preferences/style-rtl.min.css
+share/wordpress/wp-includes/css/dist/preferences/style.css
+share/wordpress/wp-includes/css/dist/preferences/style.min.css
 share/wordpress/wp-includes/css/dist/reusable-blocks/style-rtl.css
 share/wordpress/wp-includes/css/dist/reusable-blocks/style-rtl.min.css
 share/wordpress/wp-includes/css/dist/reusable-blocks/style.css
@@ -2109,8 +2118,11 @@ share/wordpress/wp-includes/feed-rss2-comments.php
 share/wordpress/wp-includes/feed-rss2.php
 share/wordpress/wp-includes/feed.php
 share/wordpress/wp-includes/fonts.php
+share/wordpress/wp-includes/fonts/class-wp-font-collection.php
 share/wordpress/wp-includes/fonts/class-wp-font-face-resolver.php
 share/wordpress/wp-includes/fonts/class-wp-font-face.php
+share/wordpress/wp-includes/fonts/class-wp-font-library.php
+share/wordpress/wp-includes/fonts/class-wp-font-utils.php
 share/wordpress/wp-includes/fonts/dashicons.eot
 share/wordpress/wp-includes/fonts/dashicons.svg
 share/wordpress/wp-includes/fonts/dashicons.ttf
@@ -2124,14 +2136,17 @@ share/wordpress/wp-includes/general-template.php
 share/wordpress/wp-includes/global-styles-and-settings.php
 share/wordpress/wp-includes/html-api/class-wp-html-active-formatting-elements.php
 share/wordpress/wp-includes/html-api/class-wp-html-attribute-token.php
+share/wordpress/wp-includes/html-api/class-wp-html-decoder.php
 share/wordpress/wp-includes/html-api/class-wp-html-open-elements.php
 share/wordpress/wp-includes/html-api/class-wp-html-processor-state.php
 share/wordpress/wp-includes/html-api/class-wp-html-processor.php
 share/wordpress/wp-includes/html-api/class-wp-html-span.php
+share/wordpress/wp-includes/html-api/class-wp-html-stack-event.php
 share/wordpress/wp-includes/html-api/class-wp-html-tag-processor.php
 share/wordpress/wp-includes/html-api/class-wp-html-text-replacement.php
 share/wordpress/wp-includes/html-api/class-wp-html-token.php
 share/wordpress/wp-includes/html-api/class-wp-html-unsupported-exception.php
+share/wordpress/wp-includes/html-api/html5-named-character-references.php
 share/wordpress/wp-includes/http.php
 share/wordpress/wp-includes/https-detection.php
 share/wordpress/wp-includes/https-migration.php
@@ -2155,14 +2170,23 @@ share/wordpress/wp-includes/images/down_arrow.gif
 share/wordpress/wp-includes/images/icon-pointer-flag-2x.png
 share/wordpress/wp-includes/images/icon-pointer-flag.png
 share/wordpress/wp-includes/images/media/archive.png
+share/wordpress/wp-includes/images/media/archive.svg
 share/wordpress/wp-includes/images/media/audio.png
+share/wordpress/wp-includes/images/media/audio.svg
 share/wordpress/wp-includes/images/media/code.png
+share/wordpress/wp-includes/images/media/code.svg
 share/wordpress/wp-includes/images/media/default.png
+share/wordpress/wp-includes/images/media/default.svg
 share/wordpress/wp-includes/images/media/document.png
+share/wordpress/wp-includes/images/media/document.svg
 share/wordpress/wp-includes/images/media/interactive.png
+share/wordpress/wp-includes/images/media/interactive.svg
 share/wordpress/wp-includes/images/media/spreadsheet.png
+share/wordpress/wp-includes/images/media/spreadsheet.svg
 share/wordpress/wp-includes/images/media/text.png
+share/wordpress/wp-includes/images/media/text.svg
 share/wordpress/wp-includes/images/media/video.png
+share/wordpress/wp-includes/images/media/video.svg
 share/wordpress/wp-includes/images/rss-2x.png
 share/wordpress/wp-includes/images/rss.png
 share/wordpress/wp-includes/images/smilies/frownie.png
@@ -2205,6 +2229,9 @@ share/wordpress/wp-includes/images/wpspin-2x.gif
 share/wordpress/wp-includes/images/wpspin.gif
 share/wordpress/wp-includes/images/xit-2x.gif
 share/wordpress/wp-includes/images/xit.gif
+share/wordpress/wp-includes/interactivity-api/class-wp-interactivity-api-directives-processor.php
+share/wordpress/wp-includes/interactivity-api/class-wp-interactivity-api.php
+share/wordpress/wp-includes/interactivity-api/interactivity-api.php
 share/wordpress/wp-includes/js/admin-bar.js
 share/wordpress/wp-includes/js/admin-bar.min.js
 share/wordpress/wp-includes/js/api-request.js
@@ -2315,6 +2342,10 @@ share/wordpress/wp-includes/js/dist/html-entities.js
 share/wordpress/wp-includes/js/dist/html-entities.min.js
 share/wordpress/wp-includes/js/dist/i18n.js
 share/wordpress/wp-includes/js/dist/i18n.min.js
+share/wordpress/wp-includes/js/dist/interactivity-router.asset.php
+share/wordpress/wp-includes/js/dist/interactivity-router.js
+share/wordpress/wp-includes/js/dist/interactivity-router.min.asset.php
+share/wordpress/wp-includes/js/dist/interactivity-router.min.js
 share/wordpress/wp-includes/js/dist/interactivity.js
 share/wordpress/wp-includes/js/dist/interactivity.min.js
 share/wordpress/wp-includes/js/dist/is-shallow-equal.js
@@ -2371,8 +2402,13 @@ share/wordpress/wp-includes/js/dist/vendor/moment.js
 share/wordpress/wp-includes/js/dist/vendor/moment.min.js
 share/wordpress/wp-includes/js/dist/vendor/react-dom.js
 share/wordpress/wp-includes/js/dist/vendor/react-dom.min.js
+share/wordpress/wp-includes/js/dist/vendor/react-dom.min.js.LICENSE.txt
+share/wordpress/wp-includes/js/dist/vendor/react-jsx-runtime.js
+share/wordpress/wp-includes/js/dist/vendor/react-jsx-runtime.min.js
+share/wordpress/wp-includes/js/dist/vendor/react-jsx-runtime.min.js.LICENSE.txt
 share/wordpress/wp-includes/js/dist/vendor/react.js
 share/wordpress/wp-includes/js/dist/vendor/react.min.js
+share/wordpress/wp-includes/js/dist/vendor/react.min.js.LICENSE.txt
 share/wordpress/wp-includes/js/dist/vendor/regenerator-runtime.js
 share/wordpress/wp-includes/js/dist/vendor/regenerator-runtime.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.js
@@ -2383,6 +2419,8 @@ share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-fetch.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-formdata.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js
+share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-importmap.js
+share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-importmap.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-inert.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js
 share/wordpress/wp-includes/js/dist/vendor/wp-polyfill-node-contains.js
@@ -2698,6 +2736,11 @@ share/wordpress/wp-includes/js/zxcvbn-async.min.js
 share/wordpress/wp-includes/js/zxcvbn.min.js
 share/wordpress/wp-includes/kses.php
 share/wordpress/wp-includes/l10n.php
+share/wordpress/wp-includes/l10n/class-wp-translation-controller.php
+share/wordpress/wp-includes/l10n/class-wp-translation-file-mo.php
+share/wordpress/wp-includes/l10n/class-wp-translation-file-php.php
+share/wordpress/wp-includes/l10n/class-wp-translation-file.php
+share/wordpress/wp-includes/l10n/class-wp-translations.php
 share/wordpress/wp-includes/link-template.php
 share/wordpress/wp-includes/load.php
 share/wordpress/wp-includes/locale.php
@@ -2750,6 +2793,9 @@ share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-blocks-controller.p
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-controller.php
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-edit-site-export-controller.php
+share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-font-collections-controller.php
+share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-font-faces-controller.php
+share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-font-families-controller.php
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-global-styles-revisions-controller.php
 share/wordpress/wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php
@@ -2791,6 +2837,7 @@ share/wordpress/wp-includes/robots-template.php
 share/wordpress/wp-includes/rss-functions.php
 share/wordpress/wp-includes/rss.php
 share/wordpress/wp-includes/script-loader.php
+share/wordpress/wp-includes/script-modules.php
 share/wordpress/wp-includes/session.php
 share/wordpress/wp-includes/shortcodes.php
 share/wordpress/wp-includes/sitemaps.php
@@ -2962,4 +3009,3 @@ share/wordpress/wp-settings.php
 share/wordpress/wp-signup.php
 share/wordpress/wp-trackback.php
 share/wordpress/xmlrpc.php
-@pkgdir share/wordpress/wp-includes/blocks/comments-query-loop
