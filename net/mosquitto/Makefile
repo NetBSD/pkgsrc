@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2023/10/24 22:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/19 19:11:36 wiz Exp $
 
 DISTNAME=	mosquitto-2.0.18
 PKGREVISION=	1
@@ -11,13 +11,9 @@ COMMENT=	Open Source MQTT broker
 LICENSE=	epl-v1.0
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 USE_LANGUAGES+=	c c++
-# Upstream documents that "unix" should use make, but Mac cmake.
-# After asking and receiving no guidance, choose to always use cmake.
-# https://github.com/eclipse/mosquitto/issues/1041
-USE_CMAKE=	yes
-USE_TOOLS+=	gmake
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
@@ -43,10 +39,16 @@ SMF_METHODS=	mosquitto
 FILES_SUBST+=	MOSQUITTO_USER=${MOSQUITTO_USER}
 FILES_SUBST+=	MOSQUITTO_GROUP=${MOSQUITTO_GROUP}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-FILES_SUBST+= VARBASE=${VARBASE}
+FILES_SUBST+=	VARBASE=${VARBASE}
 
+BUILD_DEFS+=	VARBASE
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
+
+# Upstream documents that "unix" should use make, but Mac cmake.
+# After asking and receiving no guidance, choose to always use cmake.
+# https://github.com/eclipse/mosquitto/issues/1041
+.include "../../devel/cmake/build.mk"
 
 # mosquitto's build system is very troubled, and the tests do not
 # currently work.
@@ -58,7 +60,7 @@ PTHREAD_AUTO_VARS=	yes
 TEST_TARGET=	test
 .include "../../devel/cunit/buildlink3.mk"
 
-.include "options.mk"   
+.include "options.mk"
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/uthash/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
