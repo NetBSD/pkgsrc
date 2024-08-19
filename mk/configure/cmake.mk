@@ -1,6 +1,9 @@
-# $NetBSD: cmake.mk,v 1.25 2024/08/17 13:08:07 gdt Exp $
+# $NetBSD: cmake.mk,v 1.26 2024/08/19 17:07:22 gdt Exp $
 
-WARNINGS+= "cmake.mk is deprecated; use devel/cmake/build.mk instead."
+# WARNING: This file is part of "USE_CMAKE", which is deprecated and
+# should not be used.  However, it has not yet been deleted because
+# many packages have not yet migrated.  See the guide, and instead use
+# "../../devel/cmake/build.mk".
 
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
