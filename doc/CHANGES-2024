@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5210 2024/08/19 09:34:02 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5211 2024/08/19 10:10:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8087,3 +8087,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/dovecot2 to 2.3.21.1 [adam 2024-08-19]
 	Updated mail/dovecot2-pigeonhole to 0.5.21.1 [adam 2024-08-19]
 	Updated mail/dovecot2-fts-flatcurve to 1.0.4 [adam 2024-08-19]
+	Updated shells/oh-my-posh to 23.6.6 [pin 2024-08-19]
