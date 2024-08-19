@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2024/06/08 08:35:53 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/19 09:33:37 adam Exp $
 
-DISTNAME=	dovecot-fts-flatcurve-1.0.3
+DISTNAME=	dovecot-fts-flatcurve-1.0.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=slusarz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/slusarz/dovecot-fts-flatcurve/
+HOMEPAGE=	https://github.com/slusarz/dovecot-fts-flatcurve
 COMMENT=	Dovecot FTS Flatcurve plugin (Xapian)
 LICENSE=	gnu-lgpl-v2.1
 
