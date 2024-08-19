@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2024/02/10 14:42:40 taca Exp $
-#
+# $NetBSD: Makefile,v 1.75 2024/08/19 11:55:25 adam Exp $
 
-DISTNAME=	groonga-12.0.2
-PKGREVISION=	2
+DISTNAME=	groonga-14.0.6
 CATEGORIES=	textproc
 MASTER_SITES=	http://packages.groonga.org/source/groonga/
 
@@ -13,10 +11,10 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=	yes
 # for long file name
 EXTRACT_USING=	bsdtar
 
@@ -54,11 +52,9 @@ REPLACE_RUBY+=	data/munin/groonga_query_performance_
 REPLACE_RUBY+=	data/munin/groonga_status_
 REPLACE_RUBY+=	data/munin/groonga_throughput_
 
-post-extract:
-	rm ${WRKSRC}/version
-
-.include "../../lang/ruby/replace.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
