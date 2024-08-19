@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/07/29 07:21:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/08/19 21:41:08 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,6 +24,9 @@ ${PYSITELIB}/posting/commands.pyo
 ${PYSITELIB}/posting/config.py
 ${PYSITELIB}/posting/config.pyc
 ${PYSITELIB}/posting/config.pyo
+${PYSITELIB}/posting/files.py
+${PYSITELIB}/posting/files.pyc
+${PYSITELIB}/posting/files.pyo
 ${PYSITELIB}/posting/help_screen.py
 ${PYSITELIB}/posting/help_screen.pyc
 ${PYSITELIB}/posting/help_screen.pyo
@@ -88,6 +91,9 @@ ${PYSITELIB}/posting/widgets/collection/browser.pyo
 ${PYSITELIB}/posting/widgets/collection/new_request_modal.py
 ${PYSITELIB}/posting/widgets/collection/new_request_modal.pyc
 ${PYSITELIB}/posting/widgets/collection/new_request_modal.pyo
+${PYSITELIB}/posting/widgets/confirmation.py
+${PYSITELIB}/posting/widgets/confirmation.pyc
+${PYSITELIB}/posting/widgets/confirmation.pyo
 ${PYSITELIB}/posting/widgets/datatable.py
 ${PYSITELIB}/posting/widgets/datatable.pyc
 ${PYSITELIB}/posting/widgets/datatable.pyo
