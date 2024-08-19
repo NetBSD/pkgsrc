@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/08/14 00:44:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/19 05:49:46 wiz Exp $
 
 DISTNAME=	e16-1.0.30
 PKGNAME=	${DISTNAME:S/e/enlightenment/}
@@ -23,6 +23,9 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		USER=${SHAREOWN}:${SHAREGRP}
+
+# TOOD: make this an option
+CONFIGURE_ARGS+=	--disable-dbus
 
 INSTALL_MAKE_FLAGS+=	sesmdir=${WRKDIR}/.tmp
 
