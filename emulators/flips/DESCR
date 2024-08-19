@@ -1,0 +1,7 @@
+Floating IPS (or Flips) is a patcher for IPS and BPS files, aiming
+for a simple interface yet plenty of power under the hood.
+
+- Creates the smallest BPS patches of any known tool in existence,
+  and is faster than any other comparable creator
+- Creates the smallest IPS patches of any known tool in existence,
+  too (but only a little smaller, Lunar IPS is quite good)
