@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/07/19 06:49:06 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/19 22:03:38 wiz Exp $
 
-DISTNAME=	benchmark-1.8.5
+DISTNAME=	benchmark-1.9.0
 PKGNAME=	google-${DISTNAME}
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -14,6 +14,8 @@ LICENSE=	apache-2.0
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
+# 1.9.0:
+# 100% tests passed, 0 tests failed out of 67
 TEST_TARGET=		test
 
 CMAKE_ARGS+=	-DBENCHMARK_ENABLE_GTEST_TESTS=OFF
