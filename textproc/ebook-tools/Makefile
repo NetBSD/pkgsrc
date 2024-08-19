@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/05/29 16:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/19 17:31:50 wiz Exp $
 
 # also update lit2epub if you update this package.
 DISTNAME=	ebook-tools-0.2.2
@@ -11,9 +11,9 @@ HOMEPAGE=	http://ebook-tools.sourceforge.net/
 COMMENT=	Tools for accessing and converting various ebook file formats
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
