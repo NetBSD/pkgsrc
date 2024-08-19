@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.957 2024/08/10 23:51:48 js Exp $
+# $NetBSD: Makefile,v 1.958 2024/08/19 23:55:54 wen Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -610,6 +610,7 @@ SUBDIR+=	ruby-rex-zip
 SUBDIR+=	ruby-rotp
 SUBDIR+=	ruby-ruby-openid
 SUBDIR+=	ruby-rubyntlm
+SUBDIR+=	ruby-securerandom
 SUBDIR+=	ruby-shadow
 SUBDIR+=	ruby-simple_oauth
 SUBDIR+=	ruby-snaky_hash
