@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/05/29 16:35:01 adam Exp $
+# $NetBSD: Makefile,v 1.118 2024/08/19 07:00:46 wiz Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -67,6 +67,12 @@ REPLACE_PERL+=		\
 REPLACE_SH+=		libs/plasmagenericshell/widgetsexplorer/package/Messages.sh
 
 PY_PATCHPLIST=	yes
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
