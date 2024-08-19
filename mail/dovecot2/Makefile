@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.111 2023/10/24 22:09:42 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2024/08/19 09:29:56 adam Exp $
 
-PKGREVISION= 1
 .include "../../mail/dovecot2/Makefile.common"
 
 RCD_SCRIPTS=		dovecot
