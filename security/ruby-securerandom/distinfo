@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/19 23:54:16 wen Exp $
+
+BLAKE2s (securerandom-0.3.1.gem) = ff043d0e98c2e311b171c787b08e01a97da205852538b587f7ffabb1004d3b3d
+SHA512 (securerandom-0.3.1.gem) = bcc2528162c692de5fdf3c539b315eb20d19ef7d5b7b4272ac7e7c4e8accfe0ed76da07373fba4148ac660921ec6a170da7a84e60d9c9b479d07d44704bb04e5
+Size (securerandom-0.3.1.gem) = 12800 bytes
