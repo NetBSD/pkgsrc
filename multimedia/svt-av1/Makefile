@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2023/12/17 07:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/19 17:33:37 wiz Exp $
 
 DISTNAME=	svt-av1-1.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITLAB:=AOMediaCodec/}
 EXTRACT_SUFX=	.tar.bz2
-
-GITLAB_PROJECT=	SVT-AV1
-GITLAB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.gnome.org/AOMediaCodec/SVT-AV1
@@ -15,15 +12,14 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
+GITLAB_PROJECT=	SVT-AV1
+GITLAB_TAG=	v${PKGVERSION_NOREV}
+
 WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_TAG}
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-G"Unix Makefiles"
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
-CONFIGURE_DIRS=	Build
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
