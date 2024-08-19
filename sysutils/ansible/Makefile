@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2024/08/19 11:22:28 adam Exp $
+# $NetBSD: Makefile,v 1.79 2024/08/19 16:13:52 tnn Exp $
 
 DISTNAME=	ansible-10.3.0
 CATEGORIES=	sysutils python
@@ -52,6 +52,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/.azure-pipelines/s
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cisco/dnac/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/grafana/hacking/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/hashi_vault/docs/preview/build.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/kubernetes/utils/*.sh
