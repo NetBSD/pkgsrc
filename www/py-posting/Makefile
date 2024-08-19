@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/06 12:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/19 21:41:08 wiz Exp $
 
-DISTNAME=	posting-1.10.1
+DISTNAME=	posting-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/posting/}
@@ -11,24 +11,31 @@ COMMENT=	Modern API client that lives in your terminal
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
-DEPENDS+=	${PYPKGPREFIX}-click-default-group-[0-9]*:../../devel/py-click-default-group
-DEPENDS+=	${PYPKGPREFIX}-dotenv-[0-9]*:../../devel/py-dotenv
-DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
-DEPENDS+=	${PYPKGPREFIX}-pydantic-[0-9]*:../../devel/py-pydantic
-DEPENDS+=	${PYPKGPREFIX}-pydantic-settings-[0-9]*:../../devel/py-pydantic-settings
-DEPENDS+=	${PYPKGPREFIX}-pyperclip-[0-9]*:../../x11/py-pyperclip
-DEPENDS+=	${PYPKGPREFIX}-textual-[0-9]*:../../comms/py-textual
-DEPENDS+=	${PYPKGPREFIX}-textual-autocomplete-[0-9]*:../../comms/py-textual-autocomplete
-DEPENDS+=	${PYPKGPREFIX}-xdg-base-dirs-[0-9]*:../../devel/py-xdg-base-dirs
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot-[0-9]*:../../devel/py-test-textual-snapshot
+DEPENDS+=	${PYPKGPREFIX}-click>=8.1.7:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-click-default-group>=1.2.4:../../devel/py-click-default-group
+DEPENDS+=	${PYPKGPREFIX}-dotenv>=1.0.1:../../devel/py-dotenv
+DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
+DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.7.3:../../devel/py-pydantic
+DEPENDS+=	${PYPKGPREFIX}-pydantic-settings>=2.3.4:../../devel/py-pydantic-settings
+DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.8.2:../../x11/py-pyperclip
+DEPENDS+=	${PYPKGPREFIX}-textual>=0.76.0:../../comms/py-textual
+DEPENDS+=	${PYPKGPREFIX}-textual-autocomplete>=3.0.0alpha9:../../comms/py-textual-autocomplete
+DEPENDS+=	${PYPKGPREFIX}-xdg-base-dirs>=6.0.1:../../devel/py-xdg-base-dirs
+DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.5.1:../../comms/py-textual-dev
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=1.0.0:../../devel/py-test-textual-snapshot
+#TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5.0.0:../../devel/py-test-cov
+#TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.4:../../textproc/py-jinja2
+#    "syrupy>=4.6.1",
+#    "pytest-xdist>=3.6.1",
+#    "mkdocs-material>=9.5.30",
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310
 
-# 32 failed, 1 skipped, 1 warning
+# as of 1.12.0
+# 5 failed, 56 passed, 5 skipped, 1 warning
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} posting posting-${PYVERSSUFFIX}
