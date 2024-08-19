@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.552 2024/08/12 11:19:25 nia Exp $
+# $NetBSD: Makefile,v 1.553 2024/08/19 22:09:32 nia Exp $
 #
 
 COMMENT=	Games
@@ -130,6 +130,7 @@ SUBDIR+=	exult
 SUBDIR+=	exult-audio
 SUBDIR+=	falcons-eye
 SUBDIR+=	fallingtime
+SUBDIR+=	fheroes2
 SUBDIR+=	fillets-ng
 SUBDIR+=	fillets-ng-data
 SUBDIR+=	finalbattle
