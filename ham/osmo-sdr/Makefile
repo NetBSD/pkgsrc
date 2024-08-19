@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/06/28 11:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/19 17:36:06 gdt Exp $
 
 DISTNAME=		osmo-sdr-0.1
 PKGREVISION=		7
@@ -12,17 +12,16 @@ COMMENT=		Small form-factor inexpensive SDR (Software Defined Radio)
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS=		cmake perl pkg-config tar
-USE_CMAKE=		yes
+USE_TOOLS=		perl pkg-config tar
 
-#WRKSRC=		${WRKDIR}/osmo-sdr-0.1
+.include "../../devel/cmake/build.mk"
+CONFIGURE_DIR=		software/libosmosdr
 # Suppress warning for developer
-CMAKE_ARGS+=		-Wno-dev
+CONFIGURE_ARGS+=	-Wno-dev
 
 REPLACE_PERL+=		utils/e4000_distance.pl
 REPLACE_PERL+=		utils/e4000_pl.pl
 
-CONFIGURE_DIRS=		software/libosmosdr
 AUTO_MKDIRS=		yes
 
 post-install:
