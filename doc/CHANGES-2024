@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5215 2024/08/19 13:36:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5216 2024/08/19 15:14:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8095,3 +8095,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added emulators/flips version 181 [wiz 2024-08-19]
 	Updated devel/py-uvloop to 0.20.0 [adam 2024-08-19]
 	Updated net/py-unearth to 0.17.0 [adam 2024-08-19]
+	Updated security/xhash to 3.4.4 [bsiegert 2024-08-19]
