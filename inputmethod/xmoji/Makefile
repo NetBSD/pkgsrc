@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/16 11:03:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/19 05:43:32 wiz Exp $
 
 DISTNAME=	xmoji-0.7
 CATEGORIES=	inputmethod x11
@@ -25,6 +25,7 @@ LDFLAGS+=		-L$$(LIBDIR)
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.14
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
