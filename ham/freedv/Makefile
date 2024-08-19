@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/04/07 07:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/19 17:20:37 gdt Exp $
 
 DISTNAME=	freedv-1.4.2
 PKGREVISION=	13
@@ -15,10 +15,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-USE_CMAKE=	yes
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+.include "../../devel/cmake/build.mk"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 .include "../../mk/bsd.prefs.mk"
 
