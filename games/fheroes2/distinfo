@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/08/19 22:09:32 nia Exp $
+
+BLAKE2s (fheroes2-1.1.1.tar.gz) = a3367c681bef42f168688ac779df92a30b564f0fcb72fdf78a28848e626b0ecd
+SHA512 (fheroes2-1.1.1.tar.gz) = 08aceb9755558516eb747f13b0c4e442786a9a818120e077de6d6921b6fb7e44c440b94447d36c7c735d3670656259b49eac6965656352590d58572756ed7990
+Size (fheroes2-1.1.1.tar.gz) = 12212585 bytes
+SHA1 (patch-src_engine_endian__h2.h) = b8a0e396da4a4915efffd73d52cc09eb258283a3
