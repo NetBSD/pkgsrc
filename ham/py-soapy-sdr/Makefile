@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/26 09:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/19 17:42:58 gdt Exp $
 
 DISTNAME=	soapy-sdr-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,20 +12,24 @@ HOMEPAGE=	https://github.com/pothosware/SoapySDR/wiki/PythonSupport
 COMMENT=	Python bindings for SoapySDR
 LICENSE=	boost-license
 
+USE_LANGUAGES+=		c++
+USE_CXX_FEATURES+=	c++11
+FORCE_CXX_STD=		c++11
+
 TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 
-USE_CMAKE=	yes
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN:Q}
-CMAKE_ARGS+=	-DPYTHON_CONFIG_EXECUTABLE=${PYTHONBIN:Q}-config
-CMAKE_ARGS+=	-DSWIG_EXECUTABLE=${PREFIX:Q}/bin/swig3.0
-CMAKE_ARGS+=	-DPYTHON_INSTALL_DIR=${PREFIX:Q}/${PYSITELIB}
+# Perhaps should be CONFIGURE_DIR, in part.
 WRKSRC=		${WRKDIR}/SoapySDR-${DISTNAME}/python
 
-FORCE_CXX_STD=		c++11
-USE_CXX_FEATURES+=	c++11
+.include "../../devel/cmake/build.mk"
+# \todo Are these really necessary?
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN:Q}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_CONFIG_EXECUTABLE=${PYTHONBIN:Q}-config
+CMAKE_CONFIGURE_ARGS+=	-DSWIG_EXECUTABLE=${PREFIX:Q}/bin/swig3.0
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_INSTALL_DIR=${PREFIX:Q}/${PYSITELIB}
 
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
