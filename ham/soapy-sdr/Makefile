@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2022/10/08 13:25:34 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/19 17:37:32 gdt Exp $
 
 DISTNAME=	soapy-sdr-0.8.1
 CATEGORIES=	ham
@@ -11,11 +11,11 @@ HOMEPAGE=	https://github.com/pothosware/SoapySDR/wiki
 COMMENT=	Vendor and platform neutral SDR support library
 LICENSE=	boost-license
 
-USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
-# Do not use /lib64
+.include "../../devel/cmake/build.mk"
+# Do not use /lib64.  \todo File upstream bug.
 CMAKE_ARGS+=	-DLIB_SUFFIX=""
 
 SUBST_CLASSES+=		getopt
