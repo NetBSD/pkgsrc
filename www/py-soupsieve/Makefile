@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/10/28 19:57:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/19 22:00:26 wiz Exp $
 
-DISTNAME=	soupsieve-2.5
+DISTNAME=	soupsieve-2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soupsieve/}
 
@@ -24,8 +23,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
+# as of 2.6
+# 381 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
