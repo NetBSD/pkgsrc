@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/07/25 11:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/19 18:50:42 rillig Exp $
 
 GITHUB_PROJECT=	racon
 DISTNAME=	racon-v1.4.3
@@ -12,7 +12,6 @@ HOMEPAGE=	https://github.com/isovic/racon/
 COMMENT=	Genomic consensus builder
 LICENSE=	mit
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	vendor/bioparser/vendor/zlib/contrib/minizip/minizip.pc.in
@@ -28,4 +27,5 @@ INSTALLATION_DIRS+=	share/doc/racon
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/racon
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
