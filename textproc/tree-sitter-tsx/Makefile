@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/12 04:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/19 22:01:07 wiz Exp $
 
-DISTNAME=	tree-sitter-typescript-0.20.2
+DISTNAME=	tree-sitter-typescript-0.20.4
 PKGNAME=	${DISTNAME:S/typescript/tsx/}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
