@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2020/01/26 17:31:24 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/19 17:21:40 gdt Exp $
 
 PKGNAME=	libmirisdr-0.1
 PKGREVISION=	2
@@ -14,10 +14,10 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	cmake pkg-config
-USE_CMAKE=	yes
 
+.include "../../devel/cmake/build.mk"
 # Suppress warning for developer
-CMAKE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=		-Wno-dev
 
 # Fix the shared library patchlevel
 SHLIBPATCHLEVEL=		0
