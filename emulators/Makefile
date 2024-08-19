@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2024/08/12 06:32:08 wiz Exp $
+# $NetBSD: Makefile,v 1.363 2024/08/19 13:19:51 wiz Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -65,6 +65,7 @@ SUBDIR+=	e-uae
 SUBDIR+=	emulationstation
 SUBDIR+=	fbneo
 SUBDIR+=	fceu
+SUBDIR+=	flips
 SUBDIR+=	flycast
 SUBDIR+=	fmsx
 SUBDIR+=	free42
