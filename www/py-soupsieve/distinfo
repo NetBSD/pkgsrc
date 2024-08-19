@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2023/09/09 21:35:02 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/08/19 22:00:26 wiz Exp $
 
-BLAKE2s (soupsieve-2.5.tar.gz) = b8d6303558ce1c49606b3fefb4788c889f19eb700e48f747778d9eb9e895d36a
-SHA512 (soupsieve-2.5.tar.gz) = d7b73f78cc37e4047e2e0c50cf2a5871892a8b15694b5e88a443b112cdbda0f3dfcaeef2e194b4bebb3759f06d8bdb00481141d88977cc82169672a5f3d23dfc
-Size (soupsieve-2.5.tar.gz) = 100943 bytes
+BLAKE2s (soupsieve-2.6.tar.gz) = 0340458054aa2295499158ecec3a3a438d89f4fad56e18e04ef804b79ee54c93
+SHA512 (soupsieve-2.6.tar.gz) = 48de3208bcf2402eed284551e090a5ef055e7b69561cd70da8376ca114f25a6542be680631f0b8d3482367af4e93be3a4e34b0dd2769862987e05935efb0d5f9
+Size (soupsieve-2.6.tar.gz) = 101569 bytes
