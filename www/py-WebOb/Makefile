@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2024/08/10 09:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/19 21:09:45 wiz Exp $
 
-DISTNAME=	WebOb-1.8.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+DISTNAME=	webob-1.8.8
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebOb/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/webob/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://webob.org/
@@ -21,8 +20,10 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-# as of 1.8.7
-# 6 failed, 2373 passed, 9 skipped, 1 xfailed, 35 warnings
+WHEEL_NAME=	${DISTNAME:S/webob/WebOb/}
+
+# as of 1.8.8
+# 1 failed, 2379 passed, 9 skipped, 1 xfailed, 35 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
