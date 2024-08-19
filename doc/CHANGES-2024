@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5223 2024/08/19 21:30:29 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5224 2024/08/19 21:32:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8103,3 +8103,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-grpcio to 1.65.5 [wiz 2024-08-19]
 	Updated net/py-grpcio-testing to 1.65.5 [wiz 2024-08-19]
 	Updated net/py-grpcio-tools to 1.65.5 [wiz 2024-08-19]
+	Updated www/py-google-api-python-client to 2.141.0 [wiz 2024-08-19]
