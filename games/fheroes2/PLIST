@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/19 22:09:32 nia Exp $
+bin/fheroes2
+share/applications/fheroes2.desktop
+share/doc/fheroes2/LICENSE
+share/doc/fheroes2/README.txt
+share/doc/fheroes2/changelog.txt
+share/doc/fheroes2/demo/download_demo_version.sh
+share/doc/fheroes2/homm2/extract_homm2_resources.sh
+share/fheroes2/files/data/resurrection.h2d
+share/icons/hicolor/128x128/apps/fheroes2.png
+share/metainfo/fheroes2.metainfo.xml
+@pkgdir share/fheroes2/files/lang
