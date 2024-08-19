@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2023/08/14 05:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/19 19:25:03 wiz Exp $
 
 DISTNAME=	lensfun-0.3.4
 PKGREVISION=	1
@@ -11,11 +11,11 @@ HOMEPAGE=	https://lensfun.github.io/
 COMMENT=	Library for rectifying defects introduced by photographic equipment
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=		yes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
+
 USE_LANGUAGES=		c c++03
 USE_TOOLS+=		gmake pkg-config gsed
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
 EGG_NAME=	${DISTNAME:C/-([^0-9])/_\1/g}
 EGG_INFODIR=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PY_PATCHPLIST=	yes
@@ -33,6 +33,7 @@ CMAKE_ARGS+=		-DBUILD_FOR_SSE=OFF
 CMAKE_ARGS+=		-DBUILD_FOR_SSE2=OFF
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 # png: for test programs only
