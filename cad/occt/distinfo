@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/02/27 16:33:20 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2024/08/19 17:13:49 tnn Exp $
 
 BLAKE2s (opencascade-7.7.0.tgz) = 3ac0f49a8d50e3c5eb86192f3d9d7bb1c52ae58e7f4816d32a9971665bbd0c0b
 SHA512 (opencascade-7.7.0.tgz) = 27ed889bbe95fa40fbb1840788ce0f2c58af67a6fec799f5705f6cad2567fcfeddbe461ba1854b65672392a604f8b41fed1f77b2cc0704f83746a58957d830c7
@@ -16,4 +16,5 @@ SHA1 (patch-src_Standard_Standard__CString.cxx) = d6140961892983cd2df14b881260dc
 SHA1 (patch-src_Standard_Standard__Failure.cxx) = a10c3dcb43837fbb82f16fce8232ebdf5ba9d8f1
 SHA1 (patch-src_Standard_Standard__PrimitiveTypes.hxx) = 868c062a76fd1f77b272ac734f3b0c06eea0be51
 SHA1 (patch-src_Standard_Standard__StackTrace.cxx) = 166ab4d7b79a4fc7361c01196e6aca702f6e15f2
+SHA1 (patch-src_StdPrs_StdPrs__BRepFont.cxx) = 500ce77e5bc9a8577358a17ab14f37c2b8c445db
 SHA1 (patch-src_ViewerTest_ViewerTest__CmdParser.cxx) = d92c768377484a64731940cee387d9054114adab
