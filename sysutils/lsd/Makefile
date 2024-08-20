@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/05/06 05:37:46 pin Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/20 06:34:18 pin Exp $
 
-DISTNAME=	lsd-1.1.2
-PKGREVISION=	1
+DISTNAME=	lsd-1.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lsd-rs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,6 +14,7 @@ TOOL_DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.74.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 # Use go-md2man to generate manpages and install them
