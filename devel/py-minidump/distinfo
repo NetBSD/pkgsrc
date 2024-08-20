@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/11 12:31:13 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/08/20 14:25:41 adam Exp $
 
-BLAKE2s (minidump-0.0.23.tar.gz) = 34de2860b5492fa221d03b9b6e8c2a3b5c76c218355b217ca9bdb5dd42a1f390
-SHA512 (minidump-0.0.23.tar.gz) = a0e93970705f3a664cf57f8180afe5927be11b7d9942c0fc95d61b24091c75cbfc1ba058dbcbbd3699db4bc81da15fd1440d65b6f019eacf4d9abb7fddb9ded7
-Size (minidump-0.0.23.tar.gz) = 58780 bytes
+BLAKE2s (minidump-0.0.24.tar.gz) = aa89f76b40e31827fa8fa06bc4e7e4e31f503fde299f6f3814039c8c3894c7b5
+SHA512 (minidump-0.0.24.tar.gz) = 5cb0401567f37b8174d8b127092d0a11dcef0d643b27005a6a1a2785de4aa65f3b088c137e942a9fd09275e4f1b1729eb27243c7b6f7fd3107727bb0630a421e
+Size (minidump-0.0.24.tar.gz) = 60709 bytes
