@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.4 2024/08/20 02:14:16 wen Exp $
+
+BLAKE2s (io-console-0.7.2.gem) = 8062d235a71a33bb9dc4dd07c615379ebcbcedc557c47ca11ec95516630b27ed
+SHA512 (io-console-0.7.2.gem) = d44bb3f71f2158462932acccb91c25fd13c91f95daf8df8cf030874ca12c44aee1011f5b5e0e8d6963e80a0ee701a409508956b01fbafc2d1833e014287c9104
+Size (io-console-0.7.2.gem) = 24576 bytes
