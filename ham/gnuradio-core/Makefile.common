@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2023/11/14 13:58:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.52 2024/08/20 17:46:17 gdt Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -36,11 +36,12 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnu.org/software/gnuradio/
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_CXX_FEATURES+=	c++20
+
 USE_TOOLS=	gmake perl pkg-config
 
-USE_CXX_FEATURES+=	c++20
+.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -74,8 +75,6 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PKGVER_MICRO=${PKGVER_MICRO}
 PY_PATCHPLIST=	yes
 
-CONFIGURE_DIRS=	build
-
 EGDIR=			share/gnuradio/examples
 PKG_SYSCONFSUBDIR=	gnuradio/conf.d
 
@@ -88,37 +87,36 @@ CXXFLAGS.SunOS+=	-pthreads
 
 INSTALLATION_DIRS+=	${EGDIR}
 
-# --------       R E S E T  CMAKE_ARGS  H E R E  -------------
-CMAKE_ARGS=
+# --------       R E S E T  CMAKE_CONFIGURE_ARGS  H E R E  -------------
+CMAKE_CONFIGURE_ARGS=
 
-CMAKE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
-CMAKE_ARGS+=	-DENABLE_GR_ANALOG=ON
-CMAKE_ARGS+=	-DENABLE_GR_AUDIO=ON
-CMAKE_ARGS+=	-DENABLE_GR_BLOCKS=ON
-CMAKE_ARGS+=	-DENABLE_GR_FFT=ON
-CMAKE_ARGS+=	-DENABLE_GR_FILTER=ON
-CMAKE_ARGS+=	-DENABLE_PYTHON=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_ANALOG=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_AUDIO=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_BLOCKS=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FFT=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FILTER=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PYTHON=ON
 
-CMAKE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
 
 # Default setting (for pkgsrc)
-CMAKE_ARGS+=	-Wno-dev
-CMAKE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
-CMAKE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
-CMAKE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
-CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
-CMAKE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
-CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/portaudio2
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_LIBRARY_PATH=${PREFIX}/lib/portaudio2
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib:${PREFIX}/lib/portaudio2
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=TRUE
+CMAKE_CONFIGURE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
-CMAKE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
-CMAKE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
+CMAKE_CONFIGURE_ARGS+=	-DGR_LIBRARY_DIR=${PREFIX}/lib
+CMAKE_CONFIGURE_ARGS+=	-DGR_PREFSDIR=${PREFIX}/share/gnuradio/examples/
 
 # adhoc setup not to pick non default version (say python3.6)
 # at configure
-#CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PREFIX}/bin/python${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PREFIX}/bin/python${PYVERSSUFFIX}
 
-CMAKE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
-CMAKE_ARG_PATH=	../
+CMAKE_CONFIGURE_ARGS+=	-DZEROMQ_INCLUDE_DIRS=${PREFIX}/include
 
 .include "options.mk"
 
@@ -138,12 +136,6 @@ SUBST_VARS.prefix=	PREFIX
 
 REPLACE_PYTHON=		*/*.py */*/*.py */*/*/*.py */*/*/*/*.py */*/*/*/*/*.py \
 			*/*/*/*/*/*/*.py */*/*/*/*/*/*/*.py */*/*/*/*/*/*/*/*.py
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
-
-do-install:
-	cd ${WRKSRC}/${BUILD_DIRS} && ${GMAKE} DESTDIR=${DESTDIR} ${INSTALL_TARGET}
 
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
