@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/08/02 17:04:18 pin Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/20 06:25:16 pin Exp $
 
 DISTNAME=	qtermwidget-2.0.1
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/qtermwidget/
 COMMENT=	Terminal emulator widget for Qt5
 LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
