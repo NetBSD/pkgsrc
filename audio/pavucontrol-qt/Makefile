@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/08/02 17:02:55 pin Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/20 06:08:41 pin Exp $
 
 DISTNAME=	pavucontrol-qt-2.0.0
 CATEGORIES=	audio
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/pavucontrol-qt/
 COMMENT=	Pulseaudio mixer implemented in Qt
 LICENSE=	gnu-lgpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
