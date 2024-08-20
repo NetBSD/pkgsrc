@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/08/15 07:25:04 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/20 11:14:23 adam Exp $
 
-DISTNAME=	importlib_resources-6.4.2
+DISTNAME=	importlib_resources-6.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib_resources/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-[0-9]*:../../devel/py-test-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-zipp>=3.17:../../archivers/py-zipp
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
