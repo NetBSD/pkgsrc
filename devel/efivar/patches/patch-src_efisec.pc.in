@@ -1,0 +1,15 @@
+$NetBSD: patch-src_efisec.pc.in,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+
+Add -rpath, drop -ldl, add one more include path.
+
+--- src/efisec.pc.in.orig	2022-10-13 22:03:58.467502286 +0000
++++ src/efisec.pc.in
+@@ -6,6 +6,5 @@ includedir=@@INCLUDEDIR@@
+ Name: efisec
+ Description: UEFI Security Features
+ Version: @@VERSION@@
+-Libs: -L${libdir} -lefivar -lefisec
+-Libs.private: -ldl
+-Cflags: -I${includedir}/efivar
++Libs: -Wl,-rpath,${libdir} -L${libdir} -lefivar -lefisec
++Cflags: -I${includedir} -I${includedir}/efivar

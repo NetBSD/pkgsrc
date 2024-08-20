@@ -1,0 +1,14 @@
+$NetBSD: patch-src_efiboot.pc.in,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+
+Add -rpath, drop -ldl, add one more include path.
+
+--- src/efiboot.pc.in.orig	2022-10-05 17:03:05.000000000 +0000
++++ src/efiboot.pc.in
+@@ -7,5 +7,5 @@ Name: efiboot
+ Description: UEFI Boot variable support
+ Version: @@VERSION@@
+ Requires.private: efivar
+-Libs: -L${libdir} -lefiboot
+-Cflags: -I${includedir}/efivar
++Libs: -Wl,-rpath,${libdir} -L${libdir} -lefiboot
++Cflags: -I${includedir} -I${includedir}/efivar

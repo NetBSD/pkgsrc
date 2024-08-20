@@ -1,0 +1,18 @@
+$NetBSD: patch-src_include_gcc.specs,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+
+ld produces this warning:
+
+    warning: guids.lds contains output sections; did you forget -T?
+
+It's harmless and is meant to make user notice lack of -T, but it's not needed
+here. Not clear how to suppress the warning, so removing --fatal-warnings as it
+causes the build to fail.
+
+--- src/include/gcc.specs.orig	2022-09-30 15:19:39.356337220 +0000
++++ src/include/gcc.specs
+@@ -5,4 +5,4 @@
+ + %{!shared:%{!static:%{!r:-pie}}} %{static:-Wl,-no-fatal-warnings -Wl,-static -static -Wl,-z,relro,-z,now} -grecord-gcc-switches
+ 
+ *link:
+-+ %{!static:--fatal-warnings} --no-undefined-version -z now --build-id %{!static:%{!shared:-pie}} %{shared:-z relro} %{static:%<pie}
+++ --no-undefined-version -z now --build-id %{!static:%{!shared:-pie}} %{shared:-z relro} %{static:%<pie}
