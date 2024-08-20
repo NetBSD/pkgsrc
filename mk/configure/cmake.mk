@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.26 2024/08/19 17:07:22 gdt Exp $
+# $NetBSD: cmake.mk,v 1.27 2024/08/20 22:28:01 gdt Exp $
 
 # WARNING: This file is part of "USE_CMAKE", which is deprecated and
 # should not be used.  However, it has not yet been deleted because
@@ -58,6 +58,10 @@ CMAKE_USE_GNU_INSTALL_DIRS?=	yes
 
 CMAKE_INSTALL_PREFIX?=	${PREFIX}
 CMAKE_INSTALL_NAME_DIR?=${PREFIX}/lib
+
+# To accomodate packages that include mk files across a
+# build.mk/USE_CMAKE boundary, merge in any CMAKE_CONFIGURE_ARGS.
+CMAKE_ARGS+=	${CMAKE_CONFIGURE_ARGS}
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
