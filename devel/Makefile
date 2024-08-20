@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4336 2024/08/20 02:58:04 wen Exp $
+# $NetBSD: Makefile,v 1.4337 2024/08/20 06:42:31 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -519,6 +519,7 @@ SUBDIR+=	heirloom-getopt
 SUBDIR+=	heirloom-libcommon
 SUBDIR+=	heirloom-what
 SUBDIR+=	hex
+SUBDIR+=	hexpatch
 SUBDIR+=	hlint
 SUBDIR+=	honggfuzz
 SUBDIR+=	hptools
