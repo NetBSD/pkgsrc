@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.24 2020/09/03 15:26:22 ryoon Exp $
+# $NetBSD: options.mk,v 1.25 2024/08/20 14:11:52 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 
 PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc \
 			official-mozilla-branding pulseaudio
 
-PLIST_VARS+=		branding nobranding debug jemalloc
+PLIST_VARS+=		debug jemalloc
 
 .if ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	alsa pulseaudio mozilla-jemalloc dbus
@@ -56,12 +56,10 @@ CONFIGURE_ARGS+=	--disable-dbus
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
-PLIST.branding=		yes
 LICENSE=		mozilla-trademark-license
 RESTRICTED=		Trademark holder prohibits distribution of modified versions.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .else
 CONFIGURE_ARGS+=	--disable-official-branding
-PLIST.nobranding=	yes
 .endif

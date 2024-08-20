@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.18 2024/08/01 15:27:50 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.19 2024/08/20 14:11:52 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -25,6 +25,8 @@ USE_LANGUAGES+=		c c++
 # XXX: As of 114.0.2
 # For nested constant initializer support in rlbox, requires 8.
 GCC_REQD+=		8
+# To find vscanf, vfscanf, isblank and so on under NetBSD 9.
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 TOOL_DEPENDS+=		cbindgen>=0.24.3:../../devel/cbindgen
 
@@ -90,7 +92,9 @@ CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
 CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--with-system-icu
+#CONFIGURE_ARGS+=	--with-system-icu
+#CONFIGURE_ARGS+=	--with-intl-api
+CONFIGURE_ARGS+=	--without-system-icu
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-nspr
 #CONFIGURE_ARGS+=	--with-system-jpeg
@@ -222,7 +226,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libffi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
+#.include "../../textproc/icu/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.90
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
