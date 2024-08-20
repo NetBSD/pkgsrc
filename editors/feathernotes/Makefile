@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/06/24 06:25:04 pin Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/20 06:10:44 pin Exp $
 
 VERSION=	1.3.0
 DISTNAME=	FeatherNotes-V${VERSION}
@@ -13,7 +13,6 @@ COMMENT=	Lightweight Qt6 hierarchical notes-manager
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/FeatherNotes-${VERSION}
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
