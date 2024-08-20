@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/15 15:09:13 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/20 08:38:46 adam Exp $
 
-DISTNAME=	wcmatch-8.5.2
+DISTNAME=	wcmatch-9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wcmatch/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0.21.1:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-bracex>=2.1.1:../../textproc/py-bracex
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
