@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2024/08/20 17:46:17 gdt Exp $
+# $NetBSD: Makefile.common,v 1.53 2024/08/20 17:49:10 gdt Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -88,6 +88,9 @@ CXXFLAGS.SunOS+=	-pthreads
 INSTALLATION_DIRS+=	${EGDIR}
 
 # --------       R E S E T  CMAKE_CONFIGURE_ARGS  H E R E  -------------
+
+# \todo Explain why this is safe.  Lots of mk fragments add content,
+# and clearing that seems wrong.
 CMAKE_CONFIGURE_ARGS=
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
