@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/20 15:34:50 bsiegert Exp $
 
 DISTNAME=		efivar-38
 CATEGORIES=		devel
@@ -16,8 +16,11 @@ HOMEPAGE=		https://github.com/rhboot/efivar
 COMMENT=		Tools and libraries to work with EFI
 LICENSE=		gnu-lgpl-v2.1 # or later
 
-# Depends on EFI and relevant API in the kernel
-ONLY_FOR_PLATFORM=	*-*-x86_64
+# Depends on EFI and relevant kernel API (/dev/efi) added in NetBSD 10.0
+ONLY_FOR_PLATFORM=	NetBSD-1?.*-i386    \
+			NetBSD-1?.*-x86_64  \
+			NetBSD-1?.*-amd64   \
+			NetBSD-1?.*-aarch64
 
 USE_TOOLS+=		gmake
 
