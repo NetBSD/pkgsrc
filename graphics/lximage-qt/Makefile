@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/08/02 17:50:59 abs Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/20 06:11:34 pin Exp $
 
 DISTNAME=	lximage-qt-2.0.1
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lximage-qt/
 COMMENT=	Image viewer and screenshot tool for the LXQt desktop
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
