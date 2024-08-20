@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/12 13:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/20 06:28:22 pin Exp $
 
 DISTNAME=	herbstluftwm-0.9.5
 PKGREVISION=	3
@@ -12,23 +12,14 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config bash:run
 USE_LANGUAGES=	c c++
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 REPLACE_BASH+=	share/dmenu_run_hlwm
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 PYTHON_FOR_BUILD_ONLY=	tool
-
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/tool.mk"
@@ -38,4 +29,5 @@ pre-configure:
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
