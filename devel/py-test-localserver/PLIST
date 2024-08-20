@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/21 17:48:58 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2024/08/20 13:23:10 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_localserver/__init__.py
 ${PYSITELIB}/pytest_localserver/__init__.pyc
 ${PYSITELIB}/pytest_localserver/__init__.pyo
 ${PYSITELIB}/pytest_localserver/_version.py
 ${PYSITELIB}/pytest_localserver/_version.pyc
 ${PYSITELIB}/pytest_localserver/_version.pyo
+${PYSITELIB}/pytest_localserver/cert.crt
 ${PYSITELIB}/pytest_localserver/http.py
 ${PYSITELIB}/pytest_localserver/http.pyc
 ${PYSITELIB}/pytest_localserver/http.pyo
@@ -21,7 +22,7 @@ ${PYSITELIB}/pytest_localserver/https.pyo
 ${PYSITELIB}/pytest_localserver/plugin.py
 ${PYSITELIB}/pytest_localserver/plugin.pyc
 ${PYSITELIB}/pytest_localserver/plugin.pyo
-${PYSITELIB}/pytest_localserver/server.pem
+${PYSITELIB}/pytest_localserver/server.key
 ${PYSITELIB}/pytest_localserver/smtp.py
 ${PYSITELIB}/pytest_localserver/smtp.pyc
 ${PYSITELIB}/pytest_localserver/smtp.pyo
