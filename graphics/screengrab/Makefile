@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/08/02 17:57:00 pin Exp $
+# $NetBSD: Makefile,v 1.30 2024/08/20 06:12:39 pin Exp $
 
 DISTNAME=	screengrab-2.8.0
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/screengrab/
 COMMENT=	Crossplatform tool for grabbing screenshots of your desktop
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
