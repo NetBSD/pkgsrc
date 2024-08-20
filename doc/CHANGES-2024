@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5246 2024/08/20 08:49:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5247 2024/08/20 09:30:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8131,3 +8131,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/py-pspdfutils to 3.3.5 [adam 2024-08-20]
 	Updated devel/py-pycnite to 2024.7.31 [adam 2024-08-20]
 	Updated security/py-google-auth to 2.34.0 [adam 2024-08-20]
+	Updated net/rclone to 1.67.0 [adam 2024-08-20]
+	Updated devel/catch2 to 3.7.0 [adam 2024-08-20]
