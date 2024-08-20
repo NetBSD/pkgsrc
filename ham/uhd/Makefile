@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2023/12/29 18:24:51 adam Exp $
+# $NetBSD: Makefile,v 1.79 2024/08/20 16:34:32 gdt Exp $
 
 DISTNAME=	uhd-4.6.0.0
 PKGREVISION=	1
@@ -17,18 +17,18 @@ DEPENDS+=	${PYPKGPREFIX}-mako>=0.4.2:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15:../../devel/py-ruamel-yaml
 
-CMAKE_ARGS+=	-DLIB_SUFFIX=""
-CMAKE_ARGS+=	-DENABLE_MAN_PAGE_COMPRESSION=OFF
-CMAKE_ARGS+=	-DPKG_MAN_DIR=${PKGMANDIR}/man1
-CMAKE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
-CMAKE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_MAN_PAGE_COMPRESSION=OFF
+CMAKE_CONFIGURE_ARGS+=	-DPKG_MAN_DIR=${PKGMANDIR}/man1
+CMAKE_CONFIGURE_ARGS+=	-DRST2HTML_EXECUTABLE=${PREFIX}/bin/rst2html-${PYVERSSUFFIX}.py
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
-CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
-CMAKE_ARGS+=	-DENABLE_PYTHON3=ON
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHONBIN}
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PYTHON3=ON
 
 # Upstream says C++11 is required, even though it is not documented.
 # It is documented that gcc 4.8 is required, when using gcc.
@@ -98,5 +98,6 @@ PLIST_SRC+=	PLIST.x4xx
 .include "../../devel/orc/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/atomic64.mk"
+FAKE_NCURSES=		yes
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
