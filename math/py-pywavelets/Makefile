@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/20 14:22:42 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/20 14:24:09 adam Exp $
 
 DISTNAME=	pywavelets-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
 
 do-test:
-	${PYTHONBIN} -c 'import pywt; pywt.test()'
+	cd ${WRKDIR} && ${PYTHONBIN} -c 'import pywt; pywt.test()'
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
