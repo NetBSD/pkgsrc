@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/20 14:18:12 thorpej Exp $
+bin/jttb
