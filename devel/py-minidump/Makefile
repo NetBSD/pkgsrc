@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/01/11 12:31:13 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/20 14:25:41 adam Exp $
 
-DISTNAME=	minidump-0.0.23
+DISTNAME=	minidump-0.0.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minidump/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
