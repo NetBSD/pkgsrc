@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/07/16 10:02:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/20 17:46:18 gdt Exp $
 
 PKGNAME=	gnuradio-pdu-${VERSION}
 PKGREVISION=	4
@@ -9,9 +9,9 @@ COMMENT=	Protocol Data Units for GNU Radio
 # link to libgnuradio-fft.so.${PKGVERSON_NOREV}
 .include "../../ham/gnuradio-core/buildlink3.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
-CMAKE_ARGS+=	-DENABLE_GR_PDU=ON
-CMAKE_ARGS+=	-DENABLE_GRC=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_PDU=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 
