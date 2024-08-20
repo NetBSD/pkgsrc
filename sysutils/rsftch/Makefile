@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/06/19 15:08:39 pin Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/20 06:32:56 pin Exp $
 
-DISTNAME=	rsftch-0.6.6
+DISTNAME=	rsftch-0.7.3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
@@ -12,6 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
@@ -25,7 +28,15 @@ DEPENDS+=	xrandr-[0-9]*:../../x11/xrandr
 CHECK_WRKREF_SKIP+=	bin/rsftch
 
 .include "../../lang/rust/cargo.mk"
+.if ${OPSYS} == "Linux"
 .include "../../sysutils/pciutils/buildlink3.mk"
+# On Linux, this package also uses lm_sensors at runtime.
+# https://hwmon.wiki.kernel.org/lm_sensors
+# https://github.com/lm-sensors/lm-sensors
+# We currently, don't have this in pkgsrc.
+# If, you are on Linux, install lm_sensors from your distro else,
+# this will build but, panic at runtime.
+.endif
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
