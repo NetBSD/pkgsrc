@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/07/25 06:52:06 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/20 08:41:56 adam Exp $
 
-DISTNAME=	pspdfutils-3.3.4
+DISTNAME=	pspdfutils-3.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pspdfutils/}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wand>=0:../../graphics/py-wand
 
 INSTALLATION_DIRS+=	${PKGMANDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 PYTHON_SELF_CONFLICT=		yes
 
 .include "../../mk/bsd.prefs.mk"
