@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/08/02 16:55:39 pin Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/20 06:25:48 pin Exp $
 
 DISTNAME=	qtxdg-tools-4.0.0
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/qtxdg-tools/
 COMMENT=	User tools for LXQt components
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
