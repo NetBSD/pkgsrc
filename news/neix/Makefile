@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/05/29 16:34:07 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/08/20 06:27:17 pin Exp $
 
 DISTNAME=	neix-0.1.5
 PKGREVISION=	9
@@ -11,12 +11,8 @@ HOMEPAGE=	https://github.com/tomschwarz/neix/
 COMMENT=	RSS/Atom feed reader for your terminal
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
@@ -28,9 +24,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix+=	CMakeLists.txt
 SUBST_SED.prefix+=	-e 's,share/man,${PKGMANDIR},g'
 
-pre-configure:
-	${MKDIR} -p ${WRKSRC}/build
-
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
