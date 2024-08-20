@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5255 2024/08/20 14:18:59 thorpej Exp $
+$NetBSD: CHANGES-2024,v 1.5256 2024/08/20 14:25:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8146,3 +8146,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated converters/py-simplejson to 3.19.3 [adam 2024-08-20]
 	Updated net/py-minio to 7.2.8 [adam 2024-08-20]
 	Added lang/jttb version 0.5.1 [thorpej 2024-08-20]
+	Updated www/php-contao-manager to 1.8.7 [taca 2024-08-20]
