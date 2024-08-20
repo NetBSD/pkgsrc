@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/10/12 07:18:29 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/08/20 13:23:10 adam Exp $
 
-BLAKE2s (pytest-localserver-0.8.1.tar.gz) = bf2472343caa3b1277e10561e2eda41795056bf8ff1a2076a39a10e0aeb0fbc5
-SHA512 (pytest-localserver-0.8.1.tar.gz) = d0707d70b3c5caf346c7461cfca203f903277458596839cc2b1d1d48b6d1e6252e51ebcb9c21dc28fd3b98ce8368cb38e771c2a4226a5fc1dec4007f0b243cc2
-Size (pytest-localserver-0.8.1.tar.gz) = 29088 bytes
+BLAKE2s (pytest_localserver-0.9.0.tar.gz) = fa2068dfa6ae0c09fbcf7717628861e7bf71ef0c9278fd5f076e7b9cae24565b
+SHA512 (pytest_localserver-0.9.0.tar.gz) = 15aa2db9d5a9ca841499d455de7002cd2cb6288c165605f44bb88d5ce3e06b9ce02eacd226853734017fe41075e1cfcdd5cd5c422ee240086ef0cf95fc450011
+Size (pytest_localserver-0.9.0.tar.gz) = 30222 bytes
