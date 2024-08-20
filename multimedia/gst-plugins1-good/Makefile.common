@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2023/08/18 10:59:05 nia Exp $
+# $NetBSD: Makefile.common,v 1.48 2024/08/20 13:58:33 adam Exp $
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
 # used by audio/gst-plugins1-lame/Makefile
@@ -44,7 +44,6 @@ FORCE_C_STD=	gnu99
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # grep '^option' meson_options.txt | grep feature | \
