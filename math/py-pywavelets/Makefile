@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/04/08 05:52:10 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/20 14:22:42 adam Exp $
 
-DISTNAME=	pywavelets-1.6.0
+DISTNAME=	pywavelets-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyWavelets/}
@@ -10,12 +10,13 @@ HOMEPAGE=	https://github.com/PyWavelets/pywt/releases
 COMMENT=	Discrete Wavelet Transforms in Python
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.15.0:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.4:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.16.0:../../devel/py-meson_python
 
 REPLACE_PYTHON+=	pywt/data/create_dat.py
 REPLACE_PYTHON+=	pywt/tests/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
