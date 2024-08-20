@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/08/20 06:34:18 pin Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/20 18:14:03 pin Exp $
 
-DISTNAME=	lsd-1.1.3
+DISTNAME=	lsd-1.1.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lsd-rs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

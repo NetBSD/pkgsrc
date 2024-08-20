@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2024/08/20 06:34:18 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2024/08/20 18:14:03 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -133,7 +133,7 @@ CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.23
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.13
 CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
 CARGO_CRATE_DEPENDS+=	url-2.5.0
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
