@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/08/02 17:10:29 pin Exp $
+# $NetBSD: Makefile,v 1.32 2024/08/20 06:20:07 pin Exp $
 
 DISTNAME=	lxqt-about-2.0.0
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-about/
 COMMENT=	LXQt about dialog
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
