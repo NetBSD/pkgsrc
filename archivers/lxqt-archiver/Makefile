@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/08/02 17:58:07 pin Exp $
+# $NetBSD: Makefile,v 1.32 2024/08/20 06:08:03 pin Exp $
 
 DISTNAME=	lxqt-archiver-1.0.0
 CATEGORIES=	archivers
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-archiver/
 COMMENT=	Simple and lightweight Qt file archiver
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config perl bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
 
