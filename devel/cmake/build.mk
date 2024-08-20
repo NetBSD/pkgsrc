@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.15 2024/08/20 12:06:57 gdt Exp $
+# $NetBSD: build.mk,v 1.16 2024/08/20 12:09:55 gdt Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -23,6 +23,10 @@
 # CMAKE_CONFIGURE_ARGS
 #	Arguments to pass to CMake during the configure stage. Defaults
 #	to CMAKE_ARGS for backwards compatibility with USE_CMAKE.
+#       NB: "Defaults to" really means "if not defined", not
+#       "CMAKE_ARGS are merged in".  The point is that with mixed
+#       CMAKE_ARGS and CMAKE_CONFIGURE_ARGS, the value of CMAKE_ARGS
+#       is ignored.
 #
 # CMAKE_BUILD_ARGS
 #	Arguments to pass to CMake during build. Default: empty
