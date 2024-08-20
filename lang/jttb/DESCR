@@ -1,0 +1,3 @@
+Jason's Tiny-ish BASIC is a small, portable BASIC interpreter written in C
+that started as a humble implementation of Tiny BASIC but aspires to feel
+like a classical Microsoft BASIC.
