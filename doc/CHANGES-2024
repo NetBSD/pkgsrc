@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5249 2024/08/20 11:14:39 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5250 2024/08/20 11:25:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8136,3 +8136,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/nextcloud-client to 3.13.2 [plunky 2024-08-20]
 	Updated textproc/py-openapi-core to 0.19.3 [adam 2024-08-20]
 	Updated devel/py-importlib-resources to 6.4.3 [adam 2024-08-20]
+	Updated www/py-django-admin-sortable2 to 2.2.2 [adam 2024-08-20]
+	Updated www/py-django-reversion to 5.1.0 [adam 2024-08-20]
