@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/08/18 06:44:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/20 18:12:20 pin Exp $
 
-DISTNAME=	four-bar-rs-7.0.0
+DISTNAME=	four-bar-rs-7.0.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,9 @@ LICENSE=	gnu-agpl-v3
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
@@ -19,18 +22,6 @@ INSTALLATION_DIRS=	bin
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
-
-# build.rs tries to run git to get the hash, but the distfile doesn't have
-# a repository included, so this will fail
-# https://github.com/KmolYuan/four-bar-rs/issues/5
-SUBST_CLASSES+=		git
-SUBST_SED.git+=		-e 's,env!("GIT_HASH"),"unknown",'
-SUBST_FILES.git+=	four-bar-ui/src/app.rs
-SUBST_MESSAGE.git=	Fixing build problem.
-SUBST_STAGE.git=	post-extract
-
-pre-build:
-	${RM} -f ${WRKSRC}/four-bar-ui/build.rs
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/four-bar \

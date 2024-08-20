@@ -1,15 +1,15 @@
-$NetBSD: patch-four-bar-ui_Cargo.toml,v 1.1 2024/06/01 14:17:49 pin Exp $
+$NetBSD: patch-four-bar-ui_Cargo.toml,v 1.2 2024/08/20 18:12:21 pin Exp $
 
 Don't pull git version of ron.
 
---- four-bar-ui/Cargo.toml.orig	2024-06-01 13:38:57.716816987 +0000
+--- four-bar-ui/Cargo.toml.orig	2024-08-20 16:27:59.340068660 +0000
 +++ four-bar-ui/Cargo.toml
-@@ -26,7 +26,7 @@ smartcore = { version = "0.3", features 
- serde = { version = "1", features = ["derive"] }
- egui_plot = "0.27"
+@@ -27,7 +27,7 @@ serde = { version = "1", features = ["de
+ egui_plot = "0.28"
+ const-str = "0.5"
  rfd = "0.14"
 -ron = { git = "https://github.com/ron-rs/ron" }
-+ron = "0.8"
++ron = "0.8.1"
  
  [dependencies.four-bar]
  version = "7"
