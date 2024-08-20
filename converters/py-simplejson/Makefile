@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2023/10/07 20:10:32 adam Exp $
+# $NetBSD: Makefile,v 1.51 2024/08/20 14:12:08 adam Exp $
 
-DISTNAME=	simplejson-3.19.2
+DISTNAME=	simplejson-3.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simplejson/}
@@ -10,5 +10,8 @@ HOMEPAGE=	https://github.com/simplejson/simplejson
 COMMENT=	Simple, fast, complete and extensible JSON encoder/decoder
 LICENSE=	mit
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
