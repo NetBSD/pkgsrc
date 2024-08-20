@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/08/02 17:31:01 pin Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/20 06:21:40 pin Exp $
 
 DISTNAME=	lxqt-globalkeys-2.0.0
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-globalkeys/
 COMMENT=	Daemon and library for global keyboard shortcuts registration
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
