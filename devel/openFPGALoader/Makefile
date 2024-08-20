@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/25 00:34:41 thorpej Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/20 05:41:18 thorpej Exp $
 
 OFPGAL_VERSION=0.12.1
 
@@ -15,13 +15,13 @@ HOMEPAGE=	https://trabucayre.github.io/openFPGALoader/
 COMMENT=	A universal utility for programming FPGAs
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c++
 USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../comms/libhidapi/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libftdi1/buildlink3.mk"
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
