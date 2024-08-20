@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/08/02 17:32:13 pin Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/20 06:14:33 pin Exp $
 
 DISTNAME=	lxqt-openssh-askpass-2.0.1
 CATEGORIES=	security
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-openssh-askpass/
 COMMENT=	Tool used with openssh to prompt the user for a password
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
