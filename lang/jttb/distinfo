@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/20 14:18:12 thorpej Exp $
+
+BLAKE2s (JTTB-0.5.1.tar.gz) = c2a95abeec8189e911f51551340b4efc2ee403a38c968d61a4789a716b15f11d
+SHA512 (JTTB-0.5.1.tar.gz) = fa3abb0bf46d42e391395580c7dcd6b28e46981b957b962ea52ae3217b001b516ec329f26c507d9ae6cfea1efb7b63677bb25d35207cde745afb4f10447ee388
+Size (JTTB-0.5.1.tar.gz) = 49502 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2024/08/14 10:04:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.732 2024/08/20 14:18:12 thorpej Exp $
 #
 
 COMMENT=	Programming languages
@@ -158,6 +158,7 @@ SUBDIR+=	joker
 SUBDIR+=	joos
 SUBDIR+=	jpm
 SUBDIR+=	js
+SUBDIR+=	jttb
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kali
