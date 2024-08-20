@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/10/12 07:18:29 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/20 13:23:10 adam Exp $
 
-DISTNAME=	pytest-localserver-0.8.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+DISTNAME=	pytest_localserver-0.9.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-localserver/}
 
@@ -13,14 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=0.10:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
