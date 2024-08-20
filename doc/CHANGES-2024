@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5242 2024/08/20 07:23:52 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5243 2024/08/20 07:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8123,3 +8123,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/hexpatch version 1.8.0 [pin 2024-08-20]
 	Updated mail/py-checkdmarc to 5.5.0 [adam 2024-08-20]
 	Updated net/qbittorrent to 4.6.6 [adam 2024-08-20]
+	Updated sysutils/py-ansible-compat to 24.8.0 [adam 2024-08-20]
+	Updated net/py-zmq to 26.1.1 [adam 2024-08-20]
