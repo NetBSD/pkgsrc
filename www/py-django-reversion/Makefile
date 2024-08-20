@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/01/30 23:40:19 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/20 11:24:57 adam Exp $
 
-DISTNAME=	django-reversion-5.0.12
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_reversion-5.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-reversion/}
 
@@ -12,11 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
