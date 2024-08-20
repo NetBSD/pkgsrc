@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/08/02 17:54:16 pin Exp $
+# $NetBSD: Makefile,v 1.49 2024/08/20 06:22:44 pin Exp $
 
 DISTNAME=	lxqt-panel-2.0.1
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-panel/
 COMMENT=	Desktop panel
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
