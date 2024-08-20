@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.320 2024/08/01 15:27:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.321 2024/08/20 14:11:52 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		115.13.0
+TB_VER=		115.14.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -46,8 +46,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/toolkit/content/global/buildconfig.html
-CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/chrome/messenger/content/messenger/buildconfig.html
+CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
 
 #
 # Generate list of subst entries for various .cargo-checksum.json files.  These
@@ -82,8 +81,19 @@ SUBST_STAGE.netbsdtag=	pre-configure
 SUBST_FILES.netbsdtag=	comm/third_party/rnp/src/librekey/key_store_pgp.cpp
 SUBST_SED.netbsdtag=	-e 's/__NetBSD__/__NEVER__/'
 
+SUBST_CLASSES+=			rust178
+SUBST_STAGE.rust178=		pre-configure
+SUBST_MESSAGE.rust178=		Clearing cargo checksums
+SUBST_FILES.rust178=		third_party/rust/bindgen/.cargo-checksum.json
+SUBST_FILES.rust178+=		third_party/rust/any_all_workaround/.cargo-checksum.json
+SUBST_FILES.rust178+=		third_party/rust/encoding_rs/.cargo-checksum.json
+SUBST_SED.rust178=		-e 's/\("files":{\)[^}]*/\1/'
+
 post-extract:
 	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
+	# patch(1) of NetBSD 9 cannot handle long line.
+	${CP} ${FILESDIR}/third__party_rust_encoding__rs_.cargo-checksum.json \
+		${WRKSRC}/third_party/rust/encoding_rs/.cargo-checksum.json
 
 pre-configure:
 	cd ${WRKSRC} && mkdir -p ${OBJDIR}
