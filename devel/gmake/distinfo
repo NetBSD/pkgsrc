@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.46 2024/08/20 07:07:53 mrg Exp $
+$NetBSD: distinfo,v 1.47 2024/08/20 08:28:47 mrg Exp $
 
 BLAKE2s (make-4.4.1.tar.gz) = 7a4c4b3044fc22063849216e62500d329566297dd5a8fbf2ad6e7b888d31206f
 SHA512 (make-4.4.1.tar.gz) = 145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c
 Size (make-4.4.1.tar.gz) = 2348200 bytes
 SHA1 (patch-af) = 8ff060ecba9d664044eabd98741253881d8c9bbe
-SHA1 (patch-src_dir.c) = 31812ce955b9ebb1e16db90bd7a6e0a4258eebc2
 SHA1 (patch-src_hash.c) = 755de04a4f9a63f5bfc2520026344d6dc8654992
 SHA1 (patch-src_job.c) = 848eaafc6dfc5086a3d46f9dae387b39d5c514c6
