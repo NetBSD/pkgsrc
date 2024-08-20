@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2024/03/05 15:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2024/08/20 13:58:32 adam Exp $
 
 .include "version.mk"
 
@@ -13,8 +13,6 @@ COMMENT=	Open source multimedia framework
 USE_TOOLS+=	bison flex perl pkg-config xgettext
 TEST_TARGET=	check
 FLEX_REQD+=	2.5.31
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 LDFLAGS.SunOS+=		-lsocket -lnsl -lrt
 
