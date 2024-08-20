@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/21 18:59:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/20 14:25:41 adam Exp $
 bin/minidump-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -117,6 +117,12 @@ ${PYSITELIB}/minidump/streams/UnloadedModuleListStream.pyo
 ${PYSITELIB}/minidump/streams/__init__.py
 ${PYSITELIB}/minidump/streams/__init__.pyc
 ${PYSITELIB}/minidump/streams/__init__.pyo
+${PYSITELIB}/minidump/structures/__init__.py
+${PYSITELIB}/minidump/structures/__init__.pyc
+${PYSITELIB}/minidump/structures/__init__.pyo
+${PYSITELIB}/minidump/structures/peb.py
+${PYSITELIB}/minidump/structures/peb.pyc
+${PYSITELIB}/minidump/structures/peb.pyo
 ${PYSITELIB}/minidump/utils/__init__.py
 ${PYSITELIB}/minidump/utils/__init__.pyc
 ${PYSITELIB}/minidump/utils/__init__.pyo
