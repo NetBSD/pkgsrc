@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2024/08/11 06:52:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/08/20 08:49:22 adam Exp $
 
-DISTNAME=	google_auth-2.33.0
+DISTNAME=	google_auth-2.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
@@ -25,8 +25,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-localserver-[0-9]*:../../devel/py-test-locals
 TEST_DEPENDS+=	${PYPKGPREFIX}-u2f-[0-9]*:../../security/py-u2f
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # 4 failed due to proxy setting
 # as of 2.33.0
