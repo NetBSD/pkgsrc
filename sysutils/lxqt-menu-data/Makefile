@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/02 16:58:58 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/20 06:17:06 pin Exp $
 
 DISTNAME=	lxqt-menu-data-2.0.0
 CATEGORIES=	sysutils x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-menu-data/
 COMMENT=	freedesktop.org compliant menu files for LXQt
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
