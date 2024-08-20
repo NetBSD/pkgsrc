@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.6 2024/08/20 02:14:16 wen Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/io/console.${RUBY_DLEXT}
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/io/console/console.c
+${GEM_LIBDIR}/ext/io/console/extconf.rb
+${GEM_LIBDIR}/ext/io/console/win32_vk.inc
+${GEM_LIBDIR}/lib/io/console.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/io/console/size.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
