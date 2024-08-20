@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2024/07/16 10:02:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.85 2024/08/20 17:46:17 gdt Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
 PKGREVISION=	4
@@ -15,8 +15,8 @@ TOOL_DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 TOOL_DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 TOOL_DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
-CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOXYGEN=ON
 
 # Doxygen output is never reproducible.
 PLIST_SRC=	${WRKDIR}/PLIST.STATIC

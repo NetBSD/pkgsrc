@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/07/16 10:02:02 prlw1 Exp $
+# $NetBSD: Makefile,v 1.65 2024/08/20 17:46:17 gdt Exp $
 
 PKGNAME=	gnuradio-digital-${VERSION}
 PKGREVISION=	4
@@ -9,9 +9,9 @@ COMMENT=	Digital related algorithms for GNU Radio
 # link to libgnuradio-fft.so.${PKGVERSON_NOREV}
 .include "../../ham/gnuradio-core/buildlink3.mk"
 
-CMAKE_ARGS+=	-DENABLE_DEFAULT=OFF
-CMAKE_ARGS+=	-DENABLE_GR_DIGITAL=ON
-CMAKE_ARGS+=	-DENABLE_GRC=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_DIGITAL=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GRC=ON
 
 PLIST_MINUS+=	companion
 
