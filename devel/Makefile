@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4334 2024/08/15 21:58:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4335 2024/08/20 02:16:59 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -3335,6 +3335,7 @@ SUBDIR+=	ruby-i18n
 SUBDIR+=	ruby-iniparse
 SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-instance_storage
+SUBDIR+=	ruby-io-console
 SUBDIR+=	ruby-io-event
 SUBDIR+=	ruby-io-like
 SUBDIR+=	ruby-iruby
