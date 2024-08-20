@@ -1,4 +1,4 @@
-$NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
+$NetBSD: patch-srs-filter.c,v 1.3 2024/08/20 11:41:13 manu Exp $
 
 - Update pidfile after forking
 - Process addresses with or without enclosing brackets
@@ -210,7 +210,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
  
    if (cd->sender)
      free(cd->sender);
-@@ -669,8 +737,17 @@
+@@ -669,8 +737,23 @@
      syslog(LOG_ERR, "exiting parent process");
      exit(EXIT_SUCCESS);
    }
@@ -219,16 +219,22 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
 +  if (CONFIG_pidfile) {
 +    FILE *f;
 +
-+    f = fopen(CONFIG_pidfile, "w");
-+    fprintf(f, "%i", (int) getpid());
-+    fclose(f);
++    /* Remove stale file */
++    (void)unlink(CONFIG_pidfile);
++
++    if ((f = fopen(CONFIG_pidfile, "w")) != NULL) {
++      fprintf(f, "%i", (int) getpid());
++      fclose(f);
++    } else {
++      syslog(LOG_ERR, "Cannot write PID to %s", CONFIG_pidfile);
++    }
 +  }
 +
    /* Change the file mode mask */
    umask(0);
  
    /* Open any logs here */
-@@ -717,17 +794,27 @@
+@@ -717,17 +800,27 @@
    printf("  -s, --socket\n");
    printf("      {unix|local}:/path/to/file -- a named pipe.\n");
    printf("      inet:port@{hostname|ip-address} -- an IPV4 socket.\n");
@@ -256,7 +262,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
    printf("      our SRS domain name\n");
    printf("  -c, --srs-secret\n");
    printf("      secret string for SRS hashing algorithm\n");
-@@ -770,12 +857,16 @@
+@@ -770,12 +863,16 @@
        {"debug",                  no_argument,       0, 'd'},
        {"verbose",                no_argument,       0, 'v'},
        {"pidfile",                required_argument, 0, 'P'},
@@ -273,7 +279,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
        {"spf-heloname",           required_argument, 0, 'l'},
        {"spf-address",            required_argument, 0, 'a'},
        {"srs-domain",             required_argument, 0, 'o'},
-@@ -791,9 +882,9 @@
+@@ -791,9 +888,9 @@
      };
      /* getopt_long stores the option index here. */
      int option_index = 0;
@@ -284,7 +290,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
  
      /* Detect the end of the options. */
      if (c == -1)
-@@ -823,17 +914,22 @@
+@@ -823,17 +920,22 @@
          CONFIG_verbose = 1;
          break;
  
@@ -308,7 +314,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
          if (optarg == NULL || *optarg == '\0') {
            fprintf(stderr, "ERROR: illegal timeout %s\n", optarg);
            exit(EXIT_FAILURE);
-@@ -851,8 +947,12 @@
+@@ -851,8 +953,12 @@
        case 'r':
          CONFIG_reverse = 1;
          break;
@@ -321,7 +327,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
          i = 0;
          if (!CONFIG_domains) {
            CONFIG_domains = (char **) malloc((i+2)*sizeof(char *));
-@@ -863,8 +963,16 @@
+@@ -863,8 +969,16 @@
          CONFIG_domains[i] = optarg;
          CONFIG_domains[i+1] = NULL;
          break;
@@ -338,7 +344,7 @@ $NetBSD: patch-srs-filter.c,v 1.2 2024/06/13 15:22:14 manu Exp $
          CONFIG_spf_check = 1;
          break;
  
-@@ -941,8 +1049,32 @@
+@@ -941,8 +1055,32 @@
        printf ("%s ", argv[optind++]);
      putchar ('\n');
    }
