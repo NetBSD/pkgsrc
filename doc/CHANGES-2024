@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5241 2024/08/20 06:42:56 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5242 2024/08/20 07:23:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8121,3 +8121,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/rsftch to 0.7.3 [pin 2024-08-20]
 	Updated sysutils/lsd to 1.1.3 [pin 2024-08-20]
 	Added devel/hexpatch version 1.8.0 [pin 2024-08-20]
+	Updated mail/py-checkdmarc to 5.5.0 [adam 2024-08-20]
+	Updated net/qbittorrent to 4.6.6 [adam 2024-08-20]
