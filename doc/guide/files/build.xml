@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.90 2024/05/08 10:34:12 cheusov Exp $ -->
+<!-- $NetBSD: build.xml,v 1.91 2024/08/20 18:02:04 gdt Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -534,6 +534,16 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     You can set the <varname>CONFIGURE_DIRS</varname> variable to the
     directories in which CMake should be run, relative to
     <varname>WRKSRC</varname>. This defaults to to <quote>.</quote>.
+    </para>
+
+    <para>Any package using the now-deprecated
+    <varname>USE_CMAKE=yes</varname> should be converted.
+    Essentially, replace with an include of
+    <filename>../../devel/cmake/build.mk</filename>, change
+    <varname>CMAKE_ARGS</varname> to
+    <varname>CMAKE_CONFIGURE_ARGS</varname>, prune creation of a build
+    directory and settings to use it, and check/fix settings that
+    intend to perform the build in a subdirectory.
     </para>
 
     <para>If there is no configure step at all, set
