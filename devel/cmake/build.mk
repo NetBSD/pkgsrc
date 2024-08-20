@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.16 2024/08/20 12:09:55 gdt Exp $
+# $NetBSD: build.mk,v 1.17 2024/08/20 12:27:39 gdt Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -6,9 +6,7 @@
 # files.  It should be included before all bl3 files, because it sets
 # a variable (BUILD_USES_CMAKE) that can alter bl3 behavior.  The
 # variable CMAKE_GENERATOR must be defined before inclusion (as it is
-# a user-settable variable that should happen automatically).  Note
-# that this file overrides do-foo targets, so particular care must be
-# taken by any package with an override.
+# a user-settable variable that should happen automatically).
 #
 # User-settable variables:
 #
