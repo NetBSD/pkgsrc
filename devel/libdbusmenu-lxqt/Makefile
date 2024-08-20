@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/02 17:45:04 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/20 06:10:04 pin Exp $
 
 DISTNAME=	libdbusmenu-lxqt-0.1.0
 CATEGORIES=	devel
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/libdbusmenu-lxqt/
 COMMENT=	Library providing a Qt implementation of the DBusMenu protocol
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
