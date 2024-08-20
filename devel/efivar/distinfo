@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+
+BLAKE2s (efivar-38.tar.gz) = 2e0821f4373bf99ee6e59ddf98fafb6e9341dc2f7f5f6ba072c9ba5c95b25435
+SHA512 (efivar-38.tar.gz) = 5ac146227e20c845d0cd39d7cb9b8a109a3ddb8f2e3c78a9fdf480c5ac37417360bce815c7d359354a9aa07bfb30be1d6d318a2ffa250e2904f629df6113a430
+Size (efivar-38.tar.gz) = 470176 bytes
+SHA1 (patch-src_efiboot.pc.in) = abcabe3c6d050e7227a42bea674a3352496d58b9
+SHA1 (patch-src_efisec.pc.in) = f5a3ddee2aa3863d4f2b2009ec03bb921a9c28a6
+SHA1 (patch-src_efivar.pc.in) = 7b5f42eab8c6bd71aa69893a8df6e810a65c8f5d
+SHA1 (patch-src_include_defaults.mk) = e79446000ba43eb82ecd6a141de593d9d768d27f
+SHA1 (patch-src_include_efivar_efivar-dp.h) = 8eaeb0a3657a6263e2b19da77c14b29bd7b6f411
+SHA1 (patch-src_include_efivar_efivar-types.h) = efb16792e17e69a3f86db28c61044eeb27a80508
+SHA1 (patch-src_include_gcc.specs) = b63825b96dcedc44404de730683a09f421a07eea

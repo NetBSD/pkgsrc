@@ -1,0 +1,15 @@
+$NetBSD: patch-src_efivar.pc.in,v 1.1 2024/08/20 15:29:32 bsiegert Exp $
+
+Add -rpath, drop -ldl, add one more include path.
+
+--- src/efivar.pc.in.orig	2022-10-05 17:03:05.000000000 +0000
++++ src/efivar.pc.in
+@@ -6,6 +6,5 @@ includedir=@@INCLUDEDIR@@
+ Name: efivar
+ Description: UEFI Variable Management
+ Version: @@VERSION@@
+-Libs: -L${libdir} -lefivar
+-Libs.private: -ldl
+-Cflags: -I${includedir}/efivar
++Libs: -Wl,-rpath,${libdir} -L${libdir} -lefivar
++Cflags: -I${includedir} -I${includedir}/efivar
