@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/08/02 17:51:44 pin Exp $
+# $NetBSD: Makefile,v 1.40 2024/08/20 06:16:31 pin Exp $
 
 DISTNAME=	pcmanfm-qt-2.0.0
 CATEGORIES=	sysutils
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/pcmanfm-qt/
 COMMENT=	LXQt pcmanfm Qt frontend
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
