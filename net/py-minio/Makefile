@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/05/01 05:26:01 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/20 14:13:50 adam Exp $
 
-DISTNAME=	minio-7.2.7
+DISTNAME=	minio-7.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/minio/}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensio
 DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
