@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2024/08/03 12:28:44 nia Exp $
+# $NetBSD: Makefile.common,v 1.49 2024/08/20 13:58:33 adam Exp $
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
 # used by audio/gst-plugins1-faad/Makefile
@@ -43,7 +43,6 @@ USE_CXX_FEATURES+=	c++11
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # grep '^option' meson_options.txt | grep feature | sed -e "s/',.*//g" -e "s/option('//g" | sort | xargs printf 'GST_PLUGINS_SET+=\t%s\n'
