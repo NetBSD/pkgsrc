@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/06/04 15:09:50 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/08/20 13:58:33 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 USE_TOOLS+=	flex pkg-config
 
 PY_PATCHPLIST=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # workaround for build failure
 # https://gitlab.gnome.org/GNOME/json-glib/issues/35

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/18 15:57:04 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/20 13:58:33 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -11,7 +11,6 @@ HOMEPAGE=	https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html
 COMMENT=	GStreamer RTSP server
 LICENSE=	gnu-lgpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 USE_TOOLS+=		pkg-config

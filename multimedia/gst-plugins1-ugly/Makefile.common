@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2024/03/05 14:45:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.42 2024/08/20 13:58:33 adam Exp $
 # used by audio/gst-plugins1-a52/Makefile
 # used by audio/gst-plugins1-sid/Makefile
 # used by multimedia/gst-plugins1-dvdread/Makefile
@@ -20,7 +20,6 @@ PATCHDIR=	${.CURDIR}/../../multimedia/gst-plugins1-ugly/patches
 PKGCONFIG_OVERRIDE=		output/pkgconfig/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 # grep '^option' meson_options.txt | grep feature | sed -e "s/',.*//g" -e "s/option('//g" | sort | xargs printf 'GST_PLUGINS_SET+=\t%s\n'
