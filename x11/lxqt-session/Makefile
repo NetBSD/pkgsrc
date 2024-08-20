@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/08/02 17:49:05 pin Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/20 06:24:17 pin Exp $
 
 DISTNAME=	lxqt-session-2.0.0
 CATEGORIES=	x11
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-session/
 COMMENT=	Session manager
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
