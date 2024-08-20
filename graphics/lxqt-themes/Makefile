@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/08/02 17:01:40 pin Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/20 06:12:05 pin Exp $
 
 DISTNAME=	lxqt-themes-2.0.0
 CATEGORIES=	graphics
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/lxqt/lxqt-themes/
 COMMENT=	Themes, graphics and icons for LXQt
 LICENSE=	gnu-lgpl-v2.1
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
