@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/01 11:32:29 markd Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/08/21 08:40:21 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/canvasapi/__init__.py
 ${PYSITELIB}/canvasapi/__init__.pyc
 ${PYSITELIB}/canvasapi/__init__.pyo
 ${PYSITELIB}/canvasapi/account.py
 ${PYSITELIB}/canvasapi/account.pyc
 ${PYSITELIB}/canvasapi/account.pyo
+${PYSITELIB}/canvasapi/account_calendar.py
+${PYSITELIB}/canvasapi/account_calendar.pyc
+${PYSITELIB}/canvasapi/account_calendar.pyo
 ${PYSITELIB}/canvasapi/appointment_group.py
 ${PYSITELIB}/canvasapi/appointment_group.pyc
 ${PYSITELIB}/canvasapi/appointment_group.pyo
@@ -65,6 +68,9 @@ ${PYSITELIB}/canvasapi/course.pyo
 ${PYSITELIB}/canvasapi/course_epub_export.py
 ${PYSITELIB}/canvasapi/course_epub_export.pyc
 ${PYSITELIB}/canvasapi/course_epub_export.pyo
+${PYSITELIB}/canvasapi/course_event.py
+${PYSITELIB}/canvasapi/course_event.pyc
+${PYSITELIB}/canvasapi/course_event.pyo
 ${PYSITELIB}/canvasapi/current_user.py
 ${PYSITELIB}/canvasapi/current_user.pyc
 ${PYSITELIB}/canvasapi/current_user.pyo
@@ -80,6 +86,9 @@ ${PYSITELIB}/canvasapi/enrollment.pyo
 ${PYSITELIB}/canvasapi/enrollment_term.py
 ${PYSITELIB}/canvasapi/enrollment_term.pyc
 ${PYSITELIB}/canvasapi/enrollment_term.pyo
+${PYSITELIB}/canvasapi/eportfolio.py
+${PYSITELIB}/canvasapi/eportfolio.pyc
+${PYSITELIB}/canvasapi/eportfolio.pyo
 ${PYSITELIB}/canvasapi/exceptions.py
 ${PYSITELIB}/canvasapi/exceptions.pyc
 ${PYSITELIB}/canvasapi/exceptions.pyo
@@ -101,6 +110,9 @@ ${PYSITELIB}/canvasapi/file.pyo
 ${PYSITELIB}/canvasapi/folder.py
 ${PYSITELIB}/canvasapi/folder.pyc
 ${PYSITELIB}/canvasapi/folder.pyo
+${PYSITELIB}/canvasapi/grade_change_log.py
+${PYSITELIB}/canvasapi/grade_change_log.pyc
+${PYSITELIB}/canvasapi/grade_change_log.pyo
 ${PYSITELIB}/canvasapi/gradebook_history.py
 ${PYSITELIB}/canvasapi/gradebook_history.pyc
 ${PYSITELIB}/canvasapi/gradebook_history.pyo
@@ -113,6 +125,9 @@ ${PYSITELIB}/canvasapi/grading_standard.pyo
 ${PYSITELIB}/canvasapi/group.py
 ${PYSITELIB}/canvasapi/group.pyc
 ${PYSITELIB}/canvasapi/group.pyo
+${PYSITELIB}/canvasapi/jwt.py
+${PYSITELIB}/canvasapi/jwt.pyc
+${PYSITELIB}/canvasapi/jwt.pyo
 ${PYSITELIB}/canvasapi/license.py
 ${PYSITELIB}/canvasapi/license.pyc
 ${PYSITELIB}/canvasapi/license.pyo
@@ -122,6 +137,9 @@ ${PYSITELIB}/canvasapi/login.pyo
 ${PYSITELIB}/canvasapi/module.py
 ${PYSITELIB}/canvasapi/module.pyc
 ${PYSITELIB}/canvasapi/module.pyo
+${PYSITELIB}/canvasapi/new_quiz.py
+${PYSITELIB}/canvasapi/new_quiz.pyc
+${PYSITELIB}/canvasapi/new_quiz.pyo
 ${PYSITELIB}/canvasapi/notification_preference.py
 ${PYSITELIB}/canvasapi/notification_preference.pyc
 ${PYSITELIB}/canvasapi/notification_preference.pyo
