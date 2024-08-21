@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.3 2024/06/07 23:57:17 markd Exp $
+# $NetBSD: kf6.mk,v 1.4 2024/08/21 11:21:41 markd Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -74,5 +74,5 @@ PKGNAME?=	kf6-${DISTNAME}
 TOOL_DEPENDS+= extra-cmake-modules>=${KF6VER}:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
 
-CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 .include "../../meta-pkgs/kde/Makefile.common"
