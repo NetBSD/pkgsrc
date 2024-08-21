@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2024/07/01 21:53:07 gutteridge Exp $
+# $NetBSD: Makefile,v 1.59 2024/08/21 21:57:15 gutteridge Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment
@@ -11,7 +11,7 @@ META_PACKAGE=	yes
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DEPENDS+=	atril>=${VERSION:R}.2:../../print/atril
-DEPENDS+=	caja>=${VERSION:R}.3:../../sysutils/caja
+DEPENDS+=	caja>=${VERSION:R}.4:../../sysutils/caja
 DEPENDS+=	caja-dropbox>=${VERSION:R}.0:../../sysutils/caja-dropbox
 DEPENDS+=	caja-extensions>=${VERSION}:../../sysutils/caja-extensions
 DEPENDS+=	engrampa>=${VERSION:R}.2:../../archivers/engrampa
