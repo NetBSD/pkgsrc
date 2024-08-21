@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2024/06/09 00:46:35 markd Exp $
+# $NetBSD: Makefile.common,v 1.11 2024/08/21 11:21:41 markd Exp $
 #
 # used by meta-pkgs/kde/applications.mk
 # used by meta-pkgs/kde/kf5.mk
@@ -14,12 +14,12 @@ USE_LANGUAGES+=	c c++
 CMAKE_BUILD_DIR=	_KDE_build
 .include "../../devel/cmake/build.mk"
 
-CMAKE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
-CMAKE_ARGS+=	-DKDE_INSTALL_LIBEXECDIR=libexec
-CMAKE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_LIBEXECDIR=libexec
+CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
-CMAKE_ARGS+=	-DKDE_INSTALL_XDG_EX_DIR=${PREFIX}/share/examples/kde-xdg
-CMAKE_ARGS+=	-DKDE_INSTALL_AUTOSTARTEXDIR=${PREFIX}/share/examples/kde-xdg/autostart
+CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_XDG_EX_DIR=${PREFIX}/share/examples/kde-xdg
+CMAKE_CONFIGURE_ARGS+=	-DKDE_INSTALL_AUTOSTARTEXDIR=${PREFIX}/share/examples/kde-xdg/autostart
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD"
