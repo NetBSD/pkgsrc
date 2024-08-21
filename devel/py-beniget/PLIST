@@ -1,12 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2021/10/01 19:53:00 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/08/21 08:37:18 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/beniget/__init__.py
 ${PYSITELIB}/beniget/__init__.pyc
 ${PYSITELIB}/beniget/__init__.pyo
+${PYSITELIB}/beniget/__main__.py
+${PYSITELIB}/beniget/__main__.pyc
+${PYSITELIB}/beniget/__main__.pyo
 ${PYSITELIB}/beniget/beniget.py
 ${PYSITELIB}/beniget/beniget.pyc
 ${PYSITELIB}/beniget/beniget.pyo
+${PYSITELIB}/beniget/ordered_set.py
+${PYSITELIB}/beniget/ordered_set.pyc
+${PYSITELIB}/beniget/ordered_set.pyo
+${PYSITELIB}/beniget/version.py
+${PYSITELIB}/beniget/version.pyc
+${PYSITELIB}/beniget/version.pyo
