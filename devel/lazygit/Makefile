@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/08/18 16:23:53 bsiegert Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/21 12:23:57 bsiegert Exp $
 
 DISTNAME=		lazygit-0.43.1
 CATEGORIES=		devel
@@ -11,6 +11,7 @@ COMMENT=		Simple terminal UI for git commands
 LICENSE=		mit
 
 INSTALLATION_DIRS+=	bin
+GO_BUILD_PATTERN=	.
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/lazygit ${DESTDIR}${PREFIX}/bin
