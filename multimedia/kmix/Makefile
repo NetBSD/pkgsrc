@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/08/09 09:42:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2024/08/21 11:33:50 markd Exp $
 
 DISTNAME=	kmix-${KAPPSVER}
 PKGREVISION=	4
@@ -15,7 +15,7 @@ DEPENDS+=	kinit>=5.19.0:../../x11/kinit
 
 USE_TOOLS+=	msgmerge pkg-config
 
-CMAKE_ARGS+=	-DHAVE_SYS_AUDIOIO_H=false
+CMAKE_CONFIGURE_ARGS+=	-DHAVE_SYS_AUDIOIO_H=false
 
 SUBST_CLASSES+=		xdg
 SUBST_STAGE.xdg=	pre-configure
