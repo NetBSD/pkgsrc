@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/09 09:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/21 11:36:41 markd Exp $
 
 DISTNAME=	kwallet-6.2.1
 #DISTNAME=	kwallet-${KF6VER}
@@ -17,7 +17,7 @@ USE_TOOLS+=	msgmerge
 
 LDFLAGS.SunOS+=	-lsocket
 
-CMAKE_ARGS+=	-DBUILD_KWALLET_QUERY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_KWALLET_QUERY=OFF
 
 # remove conflict with kwallet
 post-install:
