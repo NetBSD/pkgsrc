@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/29 16:34:36 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/21 11:39:38 markd Exp $
 
 DISTNAME=	ktextaddons-1.3.2
 PKGREVISION=	6
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND modified-bsd
 
 .include "../../meta-pkgs/kde/applications.mk"
 
-CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 
 USE_TOOLS+=	msgmerge
 
