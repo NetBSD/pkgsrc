@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/08/09 09:42:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2024/08/21 11:32:03 markd Exp $
 
 DISTNAME=	kalgebra-${KAPPSVER}
 PKGREVISION=	4
@@ -21,6 +21,6 @@ USE_TOOLS+=	msgmerge
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
