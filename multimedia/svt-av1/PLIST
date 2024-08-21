@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/04/09 11:13:51 plunky Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/21 16:59:43 wiz Exp $
 bin/SvtAv1DecApp
 bin/SvtAv1EncApp
 include/svt-av1/EbDebugMacros.h
@@ -13,7 +13,7 @@ lib/libSvtAv1Dec.so
 lib/libSvtAv1Dec.so.0
 lib/libSvtAv1Dec.so.0.8.7
 lib/libSvtAv1Enc.so
-lib/libSvtAv1Enc.so.1
+lib/libSvtAv1Enc.so.2
 lib/libSvtAv1Enc.so.${PKGVERSION}
 lib/pkgconfig/SvtAv1Dec.pc
 lib/pkgconfig/SvtAv1Enc.pc
