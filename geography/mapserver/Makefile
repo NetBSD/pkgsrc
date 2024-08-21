@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/08/20 22:21:12 gdt Exp $
+# $NetBSD: Makefile,v 1.118 2024/08/21 19:28:08 wiz Exp $
 
 DISTNAME=	mapserver-8.2.1
 CATEGORIES=	geography www
@@ -10,6 +10,7 @@ COMMENT=	Environment for building spatially enabled Internet apps
 LICENSE=	mit
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 .include "../../devel/cmake/build.mk"
 # cmake hides what it is doing; ask it to be like traditional builds.
