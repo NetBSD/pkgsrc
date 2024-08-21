@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/30 07:28:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/21 15:11:01 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -9,6 +9,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sphinx_gallery/__init__.py
 ${PYSITELIB}/sphinx_gallery/__init__.pyc
 ${PYSITELIB}/sphinx_gallery/__init__.pyo
+${PYSITELIB}/sphinx_gallery/_dummy/__init__.py
+${PYSITELIB}/sphinx_gallery/_dummy/__init__.pyc
+${PYSITELIB}/sphinx_gallery/_dummy/__init__.pyo
+${PYSITELIB}/sphinx_gallery/_dummy/nested.py
+${PYSITELIB}/sphinx_gallery/_dummy/nested.pyc
+${PYSITELIB}/sphinx_gallery/_dummy/nested.pyo
 ${PYSITELIB}/sphinx_gallery/_static/binder_badge_logo.svg
 ${PYSITELIB}/sphinx_gallery/_static/broken_example.png
 ${PYSITELIB}/sphinx_gallery/_static/jupyterlite_badge_logo.svg
@@ -23,6 +29,8 @@ ${PYSITELIB}/sphinx_gallery/backreferences.pyo
 ${PYSITELIB}/sphinx_gallery/block_parser.py
 ${PYSITELIB}/sphinx_gallery/block_parser.pyc
 ${PYSITELIB}/sphinx_gallery/block_parser.pyo
+${PYSITELIB}/sphinx_gallery/components/sg_download_links.html
+${PYSITELIB}/sphinx_gallery/components/sg_launcher_links.html
 ${PYSITELIB}/sphinx_gallery/directives.py
 ${PYSITELIB}/sphinx_gallery/directives.pyc
 ${PYSITELIB}/sphinx_gallery/directives.pyo
@@ -109,7 +117,7 @@ ${PYSITELIB}/sphinx_gallery/tests/test_sorting.py
 ${PYSITELIB}/sphinx_gallery/tests/test_sorting.pyc
 ${PYSITELIB}/sphinx_gallery/tests/test_sorting.pyo
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/index.rst
-${PYSITELIB}/sphinx_gallery/tests/testconfs/src/README.txt
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/GALLERY_HEADER.rst
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.py
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.pyc
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.pyo
@@ -120,6 +128,7 @@ ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.py
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.pyc
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/Makefile
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/_static_nonstandard/broken_example.png
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/_static_nonstandard/demo.png
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/_templates/module.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/binder/requirements.txt
@@ -129,7 +138,7 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/conf.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/index.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/make.bat
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/minigallery.rst
-${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/README.txt
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/GALLERY_HEADER.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/__init__.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/__init__.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/__init__.pyo
@@ -155,6 +164,12 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_command_line_args.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_defer_figures.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_defer_figures.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_defer_figures.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example.py
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example.pyc
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example_thumbnail.py
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example_thumbnail.pyc
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_failing_example_thumbnail.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_log.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_log.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_log.pyo
@@ -185,6 +200,10 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_svg.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_webp.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/README.txt
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/plot_exp.py
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/plot_exp.pyc
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_README_header/plot_exp.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/examp_subdir1/README.txt
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/examp_subdir1/plot_sub1.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/examp_subdir1/plot_sub1.pyc
@@ -197,7 +216,7 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/index.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/plot_examp.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/plot_examp.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_rst_index/plot_examp.pyo
-${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/README.txt
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/GALLERY_HEADER.rst
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/plot_boo.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/plot_boo.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples_with_rst/plot_boo.pyo
