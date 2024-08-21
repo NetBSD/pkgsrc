@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.7 2022/10/15 17:52:42 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2024/08/21 15:00:33 adam Exp $
 
-BLAKE2s (jose-1.11.2.tar.gz) = 4f98c1a3463fc6b4b60c546b7d6e7c539eaf723c5cfb8812424ee6070420caf3
-SHA512 (jose-1.11.2.tar.gz) = 8a9edbda0150b110f1394fb8f4ad57878d2562c6bb1c17938e69b49ff224ed347cb8d325750bae7b61c9cc2ce2c5d089f963e369c8c74f6a2a55cef963f813a5
-Size (jose-1.11.2.tar.gz) = 281313 bytes
+BLAKE2s (jose-1.11.10.tar.gz) = 22adb4da19dd239e39f18502507f00cd8807c101067b4b2bc23ae29c8e4f7e5f
+SHA512 (jose-1.11.10.tar.gz) = cddf868c360126a01727c19ac8bb4de3a0ebba191f84b6907da72666e1d29abaccfa2717527f8ec633c711e84771805b0ec1ad5f5b8f33df16ac2622e4b8e35d
+Size (jose-1.11.10.tar.gz) = 330654 bytes
+SHA1 (patch-erlang.mk) = b613f0b19a1f92caed1b7030b64fb609bea98edf
+SHA1 (patch-mix.exs) = f6072e820cb23d9ec23e5ec76c37a0d78b9fe418
+SHA1 (patch-rebar.config) = 49cecb66bc53d9cde2817e029e1074616ba86538
+SHA1 (patch-src_jose__server.erl) = 1a3a91fc804e45c6e827ca1f672dcc05208ca276
+SHA1 (patch-src_json_jose__json__otp.erl) = d69ba9a02bb954921f5fb4a0cd312f7d873b8946
+SHA1 (patch-test_jose__test.exs) = 1747f7eb5b815292db244791e069c2c970e15a0c

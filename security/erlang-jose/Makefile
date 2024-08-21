@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2022/10/15 17:52:42 triaxx Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/21 15:00:33 adam Exp $
 
-DISTNAME=	jose-1.11.2
+DISTNAME=	jose-1.11.10
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=potatosalad/}
 GITHUB_PROJECT=	erlang-jose
