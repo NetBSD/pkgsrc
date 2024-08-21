@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2024/08/09 09:42:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.129 2024/08/21 11:31:04 markd Exp $
 
 DISTNAME=	akonadi-${KAPPSVER}
 PKGREVISION=	3
@@ -13,9 +13,9 @@ LICENSE=	gnu-lgpl-v2
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 DEPENDS+=	kdesignerplugin-[0-9]*:../../x11/kdesignerplugin
 
-CMAKE_ARGS+=	-DMYSQLD_EXECUTABLE="${PREFIX}/sbin/mysqld"
-CMAKE_ARGS+=	-DPOSTGRES_PATH="${PREFIX}/bin"
-CMAKE_ARGS+=	-DINSTALL_APPARMOR=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DMYSQLD_EXECUTABLE="${PREFIX}/sbin/mysqld"
+CMAKE_CONFIGURE_ARGS+=	-DPOSTGRES_PATH="${PREFIX}/bin"
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_APPARMOR=FALSE
 
 USE_TOOLS+=	gmake msgmerge pkg-config
 
