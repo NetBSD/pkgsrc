@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2024/08/09 09:42:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2024/08/21 11:34:53 markd Exp $
 
 DISTNAME=	kget-${KAPPSVER}
 PKGREVISION=	3
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 USE_TOOLS+=	pkg-config msgmerge
 
 # disable until plasma-workspace is available
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
 
 REPLACE_PERL+=	conf/kget_sensitive.pl conf/kget_limitdownloads.pl
 
