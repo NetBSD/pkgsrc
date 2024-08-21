@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/06/07 23:55:43 markd Exp $
+# $NetBSD: Makefile,v 1.69 2024/08/21 11:22:57 markd Exp $
 
 DISTNAME=	ki18n-${KF5VER}
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ LICENSE=	modified-bsd AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt
 
-CMAKE_ARGS+=	-DLibIntl_INCLUDE_DIRS=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=	-DLibIntl_INCLUDE_DIRS=${BUILDLINK_PREFIX.gettext}/include
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
