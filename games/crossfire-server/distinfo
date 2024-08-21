@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/08/18 19:48:57 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/08/21 19:51:26 wiz Exp $
 
 BLAKE2s (crossfire-1.71.0.arch.tar.bz2) = f67ebbb3b384cc618c2d0eb9650c8f73cf2f3a8a71484746caa5847514ba2153
 SHA512 (crossfire-1.71.0.arch.tar.bz2) = f9707dc5dab24d0ba74654c6433e016a58ab4e99da5dade6614491eca00736965bb7fd9a24db4188c3409a0479a88bb0ea55282e519ffcbabf23d82e6a5b975e
@@ -10,4 +10,5 @@ BLAKE2s (crossfire-maps-1.75.0.tar.gz) = 05b554b0bb927553e9aa1f4f2864cd1ce87f8b9
 SHA512 (crossfire-maps-1.75.0.tar.gz) = 00b7ac1957d85d5f4ea847eaa59a80dda31b0518ecdfd31984349e5d7ca5ac5d526bbb1c7f64a0e5e0d60ec727bfe8f849bad6ad6d36fe570250c7f20c2b1220
 Size (crossfire-maps-1.75.0.tar.gz) = 33892228 bytes
 SHA1 (patch-configure) = 90af323e0626ebe88d7f93b975f8f1ae98186d62
+SHA1 (patch-include_newserver.h) = 7c6a9ecb3d1fe4e51c22ea3215daec85a837c8e6
 SHA1 (patch-lib_Makefile.in) = c9f9f365906f110589390613ee162f1964d72964
