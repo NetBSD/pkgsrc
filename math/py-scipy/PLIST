@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2024/07/31 18:15:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/08/21 10:11:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2665,6 +2665,9 @@ ${PYSITELIB}/scipy/special/tests/test_cdflib.pyo
 ${PYSITELIB}/scipy/special/tests/test_cdft_asymptotic.py
 ${PYSITELIB}/scipy/special/tests/test_cdft_asymptotic.pyc
 ${PYSITELIB}/scipy/special/tests/test_cdft_asymptotic.pyo
+${PYSITELIB}/scipy/special/tests/test_cephes_intp_cast.py
+${PYSITELIB}/scipy/special/tests/test_cephes_intp_cast.pyc
+${PYSITELIB}/scipy/special/tests/test_cephes_intp_cast.pyo
 ${PYSITELIB}/scipy/special/tests/test_cosine_distr.py
 ${PYSITELIB}/scipy/special/tests/test_cosine_distr.pyc
 ${PYSITELIB}/scipy/special/tests/test_cosine_distr.pyo
