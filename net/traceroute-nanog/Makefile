@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/06/25 16:23:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/21 19:23:53 wiz Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
@@ -50,6 +50,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/traceroute-nanog ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/${PKGNAME}/debian/traceroute-nanog.genuine.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/traceroute-nanog.8
+	${INSTALL_MAN} ${WRKSRC}/traceroute-nanog-${PKGVERSION_NOREV}/debian/traceroute-nanog.genuine.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/traceroute-nanog.8
 
 .include "../../mk/bsd.pkg.mk"
