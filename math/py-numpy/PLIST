@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2024/07/31 18:11:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2024/08/21 10:10:48 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -15,6 +15,10 @@ ${PYSITELIB}/numpy/__init__.py
 ${PYSITELIB}/numpy/__init__.pyc
 ${PYSITELIB}/numpy/__init__.pyi
 ${PYSITELIB}/numpy/__init__.pyo
+${PYSITELIB}/numpy/_array_api_info.py
+${PYSITELIB}/numpy/_array_api_info.pyc
+${PYSITELIB}/numpy/_array_api_info.pyi
+${PYSITELIB}/numpy/_array_api_info.pyo
 ${PYSITELIB}/numpy/_configtool.py
 ${PYSITELIB}/numpy/_configtool.pyc
 ${PYSITELIB}/numpy/_configtool.pyo
@@ -149,6 +153,9 @@ ${PYSITELIB}/numpy/_core/numerictypes.pyo
 ${PYSITELIB}/numpy/_core/overrides.py
 ${PYSITELIB}/numpy/_core/overrides.pyc
 ${PYSITELIB}/numpy/_core/overrides.pyo
+${PYSITELIB}/numpy/_core/printoptions.py
+${PYSITELIB}/numpy/_core/printoptions.pyc
+${PYSITELIB}/numpy/_core/printoptions.pyo
 ${PYSITELIB}/numpy/_core/records.py
 ${PYSITELIB}/numpy/_core/records.pyc
 ${PYSITELIB}/numpy/_core/records.pyi
@@ -161,9 +168,6 @@ ${PYSITELIB}/numpy/_core/strings.py
 ${PYSITELIB}/numpy/_core/strings.pyc
 ${PYSITELIB}/numpy/_core/strings.pyi
 ${PYSITELIB}/numpy/_core/strings.pyo
-${PYSITELIB}/numpy/_core/tests/__init__.py
-${PYSITELIB}/numpy/_core/tests/__init__.pyc
-${PYSITELIB}/numpy/_core/tests/__init__.pyo
 ${PYSITELIB}/numpy/_core/tests/_locales.py
 ${PYSITELIB}/numpy/_core/tests/_locales.pyc
 ${PYSITELIB}/numpy/_core/tests/_locales.pyo
@@ -218,6 +222,9 @@ ${PYSITELIB}/numpy/_core/tests/test_api.pyo
 ${PYSITELIB}/numpy/_core/tests/test_argparse.py
 ${PYSITELIB}/numpy/_core/tests/test_argparse.pyc
 ${PYSITELIB}/numpy/_core/tests/test_argparse.pyo
+${PYSITELIB}/numpy/_core/tests/test_array_api_info.py
+${PYSITELIB}/numpy/_core/tests/test_array_api_info.pyc
+${PYSITELIB}/numpy/_core/tests/test_array_api_info.pyo
 ${PYSITELIB}/numpy/_core/tests/test_array_coercion.py
 ${PYSITELIB}/numpy/_core/tests/test_array_coercion.pyc
 ${PYSITELIB}/numpy/_core/tests/test_array_coercion.pyo
@@ -320,6 +327,9 @@ ${PYSITELIB}/numpy/_core/tests/test_memmap.pyo
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.py
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.pyc
 ${PYSITELIB}/numpy/_core/tests/test_multiarray.pyo
+${PYSITELIB}/numpy/_core/tests/test_multithreading.py
+${PYSITELIB}/numpy/_core/tests/test_multithreading.pyc
+${PYSITELIB}/numpy/_core/tests/test_multithreading.pyo
 ${PYSITELIB}/numpy/_core/tests/test_nditer.py
 ${PYSITELIB}/numpy/_core/tests/test_nditer.pyc
 ${PYSITELIB}/numpy/_core/tests/test_nditer.pyo
@@ -413,12 +423,15 @@ ${PYSITELIB}/numpy/_pyinstaller/__init__.pyo
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.py
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.pyc
 ${PYSITELIB}/numpy/_pyinstaller/hook-numpy.pyo
-${PYSITELIB}/numpy/_pyinstaller/pyinstaller-smoke.py
-${PYSITELIB}/numpy/_pyinstaller/pyinstaller-smoke.pyc
-${PYSITELIB}/numpy/_pyinstaller/pyinstaller-smoke.pyo
-${PYSITELIB}/numpy/_pyinstaller/test_pyinstaller.py
-${PYSITELIB}/numpy/_pyinstaller/test_pyinstaller.pyc
-${PYSITELIB}/numpy/_pyinstaller/test_pyinstaller.pyo
+${PYSITELIB}/numpy/_pyinstaller/tests/__init__.py
+${PYSITELIB}/numpy/_pyinstaller/tests/__init__.pyc
+${PYSITELIB}/numpy/_pyinstaller/tests/__init__.pyo
+${PYSITELIB}/numpy/_pyinstaller/tests/pyinstaller-smoke.py
+${PYSITELIB}/numpy/_pyinstaller/tests/pyinstaller-smoke.pyc
+${PYSITELIB}/numpy/_pyinstaller/tests/pyinstaller-smoke.pyo
+${PYSITELIB}/numpy/_pyinstaller/tests/test_pyinstaller.py
+${PYSITELIB}/numpy/_pyinstaller/tests/test_pyinstaller.pyc
+${PYSITELIB}/numpy/_pyinstaller/tests/test_pyinstaller.pyo
 ${PYSITELIB}/numpy/_pytesttester.py
 ${PYSITELIB}/numpy/_pytesttester.pyc
 ${PYSITELIB}/numpy/_pytesttester.pyi
@@ -1441,6 +1454,7 @@ ${PYSITELIB}/numpy/polynomial/_polybase.py
 ${PYSITELIB}/numpy/polynomial/_polybase.pyc
 ${PYSITELIB}/numpy/polynomial/_polybase.pyi
 ${PYSITELIB}/numpy/polynomial/_polybase.pyo
+${PYSITELIB}/numpy/polynomial/_polytypes.pyi
 ${PYSITELIB}/numpy/polynomial/chebyshev.py
 ${PYSITELIB}/numpy/polynomial/chebyshev.pyc
 ${PYSITELIB}/numpy/polynomial/chebyshev.pyi
@@ -1712,6 +1726,7 @@ ${PYSITELIB}/numpy/typing/tests/data/fail/numerictypes.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/random.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/rec.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/scalars.pyi
+${PYSITELIB}/numpy/typing/tests/data/fail/shape.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/shape_base.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/stride_tricks.pyi
 ${PYSITELIB}/numpy/typing/tests/data/fail/strings.pyi
@@ -1802,6 +1817,9 @@ ${PYSITELIB}/numpy/typing/tests/data/pass/random.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.pyo
+${PYSITELIB}/numpy/typing/tests/data/pass/shape.py
+${PYSITELIB}/numpy/typing/tests/data/pass/shape.pyc
+${PYSITELIB}/numpy/typing/tests/data/pass/shape.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/simple.pyo
@@ -1821,6 +1839,7 @@ ${PYSITELIB}/numpy/typing/tests/data/pass/warnings_and_errors.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/warnings_and_errors.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/warnings_and_errors.pyo
 ${PYSITELIB}/numpy/typing/tests/data/reveal/arithmetic.pyi
+${PYSITELIB}/numpy/typing/tests/data/reveal/array_api_info.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/array_constructors.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/arraypad.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/arrayprint.pyi
@@ -1862,9 +1881,13 @@ ${PYSITELIB}/numpy/typing/tests/data/reveal/nested_sequence.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/npyio.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/numeric.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/numerictypes.pyi
+${PYSITELIB}/numpy/typing/tests/data/reveal/polynomial_polybase.pyi
+${PYSITELIB}/numpy/typing/tests/data/reveal/polynomial_polyutils.pyi
+${PYSITELIB}/numpy/typing/tests/data/reveal/polynomial_series.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/random.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/rec.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/scalars.pyi
+${PYSITELIB}/numpy/typing/tests/data/reveal/shape.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/shape_base.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/stride_tricks.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/strings.pyi
