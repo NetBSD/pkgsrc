@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2024/08/09 09:42:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.132 2024/08/21 11:35:19 markd Exp $
 
 DISTNAME=	ktorrent-${KAPPSVER}
 PKGREVISION=	3
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 USE_TOOLS+=	msgmerge pkg-config
 
 # disable until plasma-workspace is available
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibKWorkspace=TRUE
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/kcmutils/buildlink3.mk"
