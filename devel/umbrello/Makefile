@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2024/08/09 09:42:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2024/08/21 11:24:28 markd Exp $
 
 DISTNAME=	umbrello-${KAPPSVER}
 PKGREVISION=	3
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-CMAKE_ARGS+=	-DBUILD_APIDOC=no
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_APIDOC=no
 
 USE_TOOLS+=	msgmerge
 
