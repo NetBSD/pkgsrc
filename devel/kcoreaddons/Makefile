@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/06/07 23:55:42 markd Exp $
+# $NetBSD: Makefile,v 1.75 2024/08/21 11:22:22 markd Exp $
 
 DISTNAME=	kcoreaddons-${KF5VER}
 CATEGORIES=	devel
@@ -9,11 +9,12 @@ LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 
 .include "../../meta-pkgs/kde/kf5.mk"
 
-CMAKE_ARGS.SunOS+=	-DENABLE_INOTIFY=OFF
 LDFLAGS.SunOS+=		-lsocket
 
 .if ${OPSYS} != "SunOS"
 .include "../../devel/libinotify/buildlink3.mk"
+.else
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_INOTIFY=OFF
 .endif
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
