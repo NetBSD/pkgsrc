@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2024/08/21 19:57:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/08/21 20:00:02 wiz Exp $
 
 BLAKE2s (ftgl-2.1.3-rc5.tar.gz) = 213092577301d461b61914d78b94a66c851eeecec230e325df5202dcbb7266d0
 SHA512 (ftgl-2.1.3-rc5.tar.gz) = 77518c4546b53662b45a5c9af2418697b1a4a6250316c1e11ee71ccffc58ce03d5f19c901021b0e1cd05fec8444c84197e4bef77c662513dd6da8c29800cc3cd
 Size (ftgl-2.1.3-rc5.tar.gz) = 841597 bytes
 SHA1 (patch-src_FTFont_FTBufferFont.cpp) = aa24fbd34b394cea3b107d6d55fc07c37d20aaa5
-SHA1 (patch-src_FTVectoriser.cpp) = a94c52638671f9c3d0cf3414055ed62a964ee5a9
+SHA1 (patch-src_FTVectoriser.cpp) = fb3ccf255f5a9b2c1fc60a551775b545eddfecf3

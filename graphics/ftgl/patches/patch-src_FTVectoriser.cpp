@@ -1,6 +1,7 @@
-$NetBSD: patch-src_FTVectoriser.cpp,v 1.1 2024/08/21 19:57:34 wiz Exp $
+$NetBSD: patch-src_FTVectoriser.cpp,v 1.2 2024/08/21 20:00:03 wiz Exp $
 
 Fix build with freetype 2.13.3.
+https://github.com/frankheckenbach/ftgl/issues/18
 
 --- src/FTVectoriser.cpp.orig	2024-08-21 19:55:34.860855515 +0000
 +++ src/FTVectoriser.cpp
