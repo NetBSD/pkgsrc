@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2024/08/14 21:00:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2024/08/21 13:08:37 gdt Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -9,6 +9,7 @@ SUBDIR+=	bulk-large
 SUBDIR+=	bulk-medium
 SUBDIR+=	bulk-small
 SUBDIR+=	bulk-test-boost
+SUBDIR+=	bulk-test-erlang
 SUBDIR+=	bulk-test-essential
 SUBDIR+=	bulk-test-go
 SUBDIR+=	bulk-test-icu
