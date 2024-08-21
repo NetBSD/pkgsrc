@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2024/08/09 09:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2024/08/21 11:30:33 markd Exp $
 
 DISTNAME=		krita-5.2.2
 PKGREVISION=		6
@@ -15,8 +15,7 @@ LICENSE=		gnu-gpl-v3
 USE_TOOLS+=		msgfmt pkg-config perl
 # Uses targets with spaces in the names
 USE_TOOLS+=		gmake
-#CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
-CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_PyQt5:BOOL=true
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_PyQt5:BOOL=true
 
 DEPENDS+=	kitemmodels-[0-9]*:../../devel/kitemmodels
 
