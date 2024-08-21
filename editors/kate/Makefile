@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2024/08/09 09:42:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.94 2024/08/21 11:29:17 markd Exp $
 
 DISTNAME=	kate-${KAPPSVER}
 PKGREVISION=	4
@@ -19,7 +19,7 @@ USE_CXX_FEATURES+=	charconv
 LDFLAGS.SunOS+=	-lsocket
 
 # PCH-enabled builds cause failures with RELRO enabled, e.g., on NetBSD 9.x.
-CMAKE_ARGS+=	-DBUILD_PCH=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PCH=OFF
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
