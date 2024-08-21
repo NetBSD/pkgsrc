@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/08/21 08:06:46 adam Exp $
 
-BLAKE2s (contextlib2-0.6.0.tar.gz) = e12f35d513f084dfe13214da5e5a6b7fb8d6ac88f4bbfc5fe86038ea37a7f3aa
-SHA512 (contextlib2-0.6.0.tar.gz) = 01901ac226c7fca40add00e95cedb2535a802e0114a53ae1315c6dfee20744dbafa7d9619986ad76345ad9b9aa3e364ac01d23f51b5eb70dd2febd5af1f1fc56
-Size (contextlib2-0.6.0.tar.gz) = 29607 bytes
+BLAKE2s (contextlib2-21.6.0.tar.gz) = 4822435a37e2a4c5ffe1c2f1dc4912e73f4079c38fe6046f74584d567bfe2f8a
+SHA512 (contextlib2-21.6.0.tar.gz) = a85cafaaf66c7c6a59a4e9ac757941b1a98c17e5a49e41573dc759fafbbf17928a21f582e8aaa0fdc60636413ec702e198bde19a78ac304237b6da1c3d47b730
+Size (contextlib2-21.6.0.tar.gz) = 43795 bytes
