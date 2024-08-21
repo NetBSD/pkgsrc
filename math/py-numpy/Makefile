@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2024/08/11 13:12:08 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2024/08/21 10:10:48 adam Exp $
 
-DISTNAME=	numpy-2.0.1
+DISTNAME=	numpy-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
 
@@ -13,29 +12,24 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-#TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran
-
+USE_TOOLS+=		pkg-config
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		c99
-
-USE_CXX_FEATURES+=	c++17
-
 # checks for gcc 8.4
 GCC_REQD+=		8
-
-USE_TOOLS+=		pkg-config
 
 .include "../../math/py-numpy/make_env.mk"
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 PLIST_VARS+=		distutils
@@ -99,8 +93,12 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} ${bin} ${bin}-${PYVERSSUFFIX} || ${TRUE}
 .endfor
 
-# as of 2.0.1
-# 28 failed, 46633 passed, 1721 skipped, 2789 deselected, 59 xfailed, 4 xpassed, 1 warning
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_MESSAGE.paths=	Fixing path to numpy-configure (for tests).
+SUBST_FILES.paths=	numpy/tests/test_configtool.py
+SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
+
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
