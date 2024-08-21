@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2022/10/14 19:18:11 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/21 12:33:58 gdt Exp $
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql.app
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql.beam
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_app.beam
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_auth.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_bin.beam
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_conn.beam
 lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_sup.beam
 lib/erlang/lib/p1_mysql-${PKGVERSION}/include/p1_mysql.hrl
