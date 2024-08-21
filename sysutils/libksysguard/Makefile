@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/08/09 09:42:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/21 11:38:22 markd Exp $
 
 DISTNAME=	libksysguard-${PLASMAVER}
 PKGREVISION=	3
@@ -22,10 +22,11 @@ RT_LIB_SCHED=	rt
 .else
 RT_LIB_SCHED=	# empty
 .endif
-CMAKE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
-CMAKE_ARGS.NetBSD+=	-DKVM_LIB=kvm
+CMAKE_CONFIGURE_ARGS+=	-DRT_LIB_SCHED=${RT_LIB_SCHED}
 
-CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/libksysguard
+CMAKE_CONFIGURE_ARGS.NetBSD+=	-DKVM_LIB=kvm
+
+CMAKE_CONFIGURE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/libksysguard
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/dbus-1/system.d
 CONF_FILES+=	${PREFIX}/share/examples/libksysguard/org.kde.ksysguard.processlisthelper.conf \
@@ -37,6 +38,6 @@ INSTALLATION_DIRS+=	share/examples/libksysguard
 .include "../../x11/plasma-framework/buildlink3.mk"
 .include "../../x11/libXres/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
