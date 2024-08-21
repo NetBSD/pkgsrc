@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.18 2024/06/07 23:55:42 markd Exp $
+# $NetBSD: kf5.mk,v 1.19 2024/08/21 11:21:41 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -85,5 +85,5 @@ EXTRACT_SUFX=	.tar.xz
 TOOL_DEPENDS+= extra-cmake-modules>=${KF5VER}:../../devel/extra-cmake-modules
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
 
-CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 .include "../../meta-pkgs/kde/Makefile.common"
