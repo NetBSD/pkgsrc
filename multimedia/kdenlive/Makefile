@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2024/08/09 09:42:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2024/08/21 11:33:13 markd Exp $
 
 DISTNAME=	kdenlive-${KAPPSVER}
 PKGREVISION=	4
@@ -17,8 +17,8 @@ DEPENDS+=	ffplay5-[0-9]*:../../multimedia/ffplay5
 USE_TOOLS+=	msgmerge
 
 CXXFLAGS.NetBSD+=	-DHAVE_LOCALE_H
-CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE
-CMAKE_ARGS+=		-DFFMPEG_SUFFIX=5
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SUFFIX=5
 
 .include "../../devel/kdeclarative/buildlink3.mk"
 .include "../../devel/knotifyconfig/buildlink3.mk"
@@ -34,6 +34,6 @@ CMAKE_ARGS+=		-DFFMPEG_SUFFIX=5
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
