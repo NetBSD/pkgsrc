@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.719 2024/08/17 00:59:45 nia Exp $
+# $NetBSD: Makefile,v 1.720 2024/08/21 21:08:33 nia Exp $
 
 COMMENT=	Databases
 
@@ -105,6 +105,8 @@ SUBDIR+=	mariadb105-client
 SUBDIR+=	mariadb105-server
 SUBDIR+=	mariadb106-client
 SUBDIR+=	mariadb106-server
+SUBDIR+=	mariadb114-client
+SUBDIR+=	mariadb114-server
 SUBDIR+=	metakit-lib
 SUBDIR+=	mimir
 SUBDIR+=	mongo-c-driver
