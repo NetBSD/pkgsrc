@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:33:44 nia Exp $
-
-BLAKE2s (caribou-0.4.21.tar.xz) = 4e6007c30473f7587b9a9348660fa6f2d958369c49f4a75bb42470bb3a18abad
-SHA512 (caribou-0.4.21.tar.xz) = 5fc0cf54a1cad50d41e659adbbb932b51d69d18951562f87497e99aaae17ac72b453b759dd7289ff8f68a79574dfce510b9de6bedc61408c14cb48b83eaf08da
-Size (caribou-0.4.21.tar.xz) = 426516 bytes
-SHA1 (patch-data_Makefile.in) = ee136c589672c9dbfdd18eeae0f76b0e3d0c32c8

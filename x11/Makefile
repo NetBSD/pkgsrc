@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1048 2024/08/11 02:11:53 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1049 2024/08/21 19:25:41 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -18,7 +18,6 @@ SUBDIR+=	beforelight
 SUBDIR+=	bitmap
 SUBDIR+=	blt
 SUBDIR+=	c++-gtk-utils
-SUBDIR+=	caribou
 SUBDIR+=	citron
 SUBDIR+=	clipit
 SUBDIR+=	clipnotify
