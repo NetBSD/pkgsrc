@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/21 20:35:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/21 11:28:44 markd Exp $
 
 DISTNAME=	kwayland-${PLASMAVER}
 CATEGORIES=	devel
@@ -12,9 +12,10 @@ LICENSE=	gnu-lgpl-v2.1
 TOOL_DEPENDS+=	plasma-wayland-protocols>=1.7:../../devel/plasma-wayland-protocols
 
 USE_TOOLS+=	pkg-config
+
 # Don't do autotests.  Some builds are linux specific.
-CMAKE_ARGS+=	-DBUILD_TESTING=no
-CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=no
+CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 
 .include "../../devel/wayland/platform.mk"
 .if empty(PLATFORM_SUPPORTS_WAYLAND:M[Yy][Ee][Ss])
