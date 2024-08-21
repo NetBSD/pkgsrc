@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2022/10/15 17:55:28 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/21 12:30:59 gdt Exp $
 
-DISTNAME=	luerl-1.0
+DISTNAME=	luerl-1.2.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rvirding/}
+# Upstream does not publish NEWS:
+#   https://github.com/rvirding/luerl/issues/178
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rvirding/luerl/
