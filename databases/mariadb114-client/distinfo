@@ -1,0 +1,26 @@
+$NetBSD: distinfo,v 1.1 2024/08/21 21:08:33 nia Exp $
+
+BLAKE2s (mariadb-11.4.3.tar.gz) = a936ee0260f5d9cef998b9ce8b79b39ccaba9bf4090a27ea2a325fac9041fe7a
+SHA512 (mariadb-11.4.3.tar.gz) = 0aef97265a48fdbeee3b802b52854c8ca2b34cd13c4ed33ded9e68e38ff132e8ae14254dda836a4e3804d6ae8810866e0af1c9c968cca0902f6d85742315fb34
+Size (mariadb-11.4.3.tar.gz) = 108166685 bytes
+SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc941f
+SHA1 (patch-CMakeLists.txt) = b41fc869c3ebf0b13138a566a03080a0f3475551
+SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
+SHA1 (patch-client_mysql.cc) = e9c33cd51c11b6be309ee6d1404da2d9ece38efd
+SHA1 (patch-cmake_libfmt.cmake) = 2337c62c19d625b44e5082d0f1cae6afde708601
+SHA1 (patch-extra_mariabackup_xtrabackup.cc) = aaabf5998b29d4c15110d6e968c1c968a69d23a8
+SHA1 (patch-extra_readline_CMakeLists.txt) = 37873deaeccb37e1313179103bb12dcde4a496d6
+SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
+SHA1 (patch-libmariadb_cmake_FindGSSAPI.cmake) = 94b268478e680b82b1c108a12c0f37f3dc68ffce
+SHA1 (patch-mysys_my__gethwaddr.c) = c3f179aa659e16f2fd9b858a718dd1cdd6f93c9f
+SHA1 (patch-plugin_auth__gssapi_cmake_FindGSSAPI.cmake) = 215d48d80fe4dd018678ec7b03fc40ca1caf4f16
+SHA1 (patch-plugin_auth__socket_CMakeLists.txt) = b2fddab1d94ba75c69cbf660f546f8e5821e1d51
+SHA1 (patch-scripts_CMakeLists.txt) = b8a13304e314162ab0a1fc06c5620d6b757975f5
+SHA1 (patch-scripts_mysqld__safe.sh) = 4124e4c8df1527049f5eec9f3d2d4bbe80e7c33f
+SHA1 (patch-sql_mysqld.cc) = 8820f78278ff099e5eb80528e8b501ba770fbe2a
+SHA1 (patch-storage_innobase_include_transactional__lock__guard.h) = d5ff507acdd21858791246ef5a2559e653cb7833
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.cc) = 85ee5007cfda0d3070ec20b2b774738b01f8e083
+SHA1 (patch-storage_rocksdb_rdb__io__watchdog.h) = d790c092d7d35d014c5ef209635c18614c3a8301
+SHA1 (patch-storage_rocksdb_rocksdb_Makefile) = 67ea4d154f4f623fdca739f50b236c973e118a12
+SHA1 (patch-storage_rocksdb_rocksdb_build__tools_fb__compile__mongo.sh) = 3b632521c23765c39f4638dc7a80d04b9e1d58bd
+SHA1 (patch-support-files_mysql.server.sh) = a98d82cdda1dbd5ef8ebb7e457bb51661b5fd275
