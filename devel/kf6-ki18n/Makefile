@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:32:08 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/21 11:26:16 markd Exp $
 
 DISTNAME=	ki18n-${KF6VER}
 PKGREVISION=	1
@@ -10,7 +10,7 @@ LICENSE=	modified-bsd AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt
 
-CMAKE_ARGS+=	-DLibIntl_INCLUDE_DIRS=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=	-DLibIntl_INCLUDE_DIRS=${BUILDLINK_PREFIX.gettext}/include
 
 .include "../../meta-pkgs/kde/kf6.mk"
 
