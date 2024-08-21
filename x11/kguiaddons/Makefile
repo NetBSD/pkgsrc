@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/06/07 23:55:49 markd Exp $
+# $NetBSD: Makefile,v 1.51 2024/08/21 11:40:59 markd Exp $
 
 DISTNAME=	kguiaddons-${KF5VER}
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 .  include "../../devel/plasma-wayland-protocols/buildlink3.mk"
 .  include "../../x11/qt5-qtwayland/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_WAYLAND=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_WAYLAND=OFF
 .endif
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
