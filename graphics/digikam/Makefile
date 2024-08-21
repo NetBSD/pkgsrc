@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2024/08/09 09:42:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.229 2024/08/21 11:29:53 markd Exp $
 
 DISTNAME=	digiKam-8.2.0
 PKGNAME=	${DISTNAME:tl}
@@ -18,9 +18,10 @@ WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 .include "../../meta-pkgs/kde/applications.mk"
 
 REPLACE_PERL=	core/data/scripts/digitaglinktree/digitaglinktree
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
-CMAKE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_KF5AkonadiContact:BOOL=TRUE
+
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_KFILEMETADATASUPPORT=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_KF5AkonadiContact:BOOL=TRUE
 
 USE_TOOLS+=	flex bison msgmerge perl:run pkg-config
 
