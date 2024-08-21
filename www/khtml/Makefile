@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/08/09 09:42:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2024/08/21 11:40:17 markd Exp $
 
 DISTNAME=	khtml-${KF5VER}
 PKGREVISION=	1
@@ -17,7 +17,7 @@ BUILDLINK_TRANSFORM+=	opt:-std=c99:-std=gnu99
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
 
-CMAKE_ARGS.SunOS+=	-DHAVE_ALLOCA_H=1
+CMAKE_CONFIGURE_ARGS.SunOS+=	-DHAVE_ALLOCA_H=1
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=		fix-moc
