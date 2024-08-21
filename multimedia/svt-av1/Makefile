@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/08/21 16:59:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/21 17:21:44 wiz Exp $
 
-DISTNAME=	svt-av1-2.1.0
+DISTNAME=	svt-av1-2.2.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITLAB:=AOMediaCodec/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,9 @@ WRKSRC=		${WRKDIR}/${GITLAB_PROJECT}-${GITLAB_TAG}
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+
+PKGCONFIG_OVERRIDE+=	Source/Lib/pkg-config.pc.in
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
