@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/08/09 09:42:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2024/08/21 11:23:27 markd Exp $
 
 DISTNAME=	ktexteditor-${KF5VER}
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake msgmerge pkg-config perl
 
-CMAKE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/ktexteditor
+CMAKE_CONFIGURE_ARGS+=	-DKAUTH_DBUS_DIR=${PREFIX}/share/examples/ktexteditor
 
 LDFLAGS.SunOS+=	-mimpure-text
 
