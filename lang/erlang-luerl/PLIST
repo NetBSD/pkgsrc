@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/10/15 17:55:28 triaxx Exp $
-lib/erlang/lib/luerl-${PKGVERSION}/ebin/.gitignore
+@comment $NetBSD: PLIST,v 1.5 2024/08/21 12:30:59 gdt Exp $
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/Elixir.Luerl.New.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/Elixir.Luerl.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.app
@@ -23,6 +22,7 @@ lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_debug.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_io.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_math.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_os.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_os_date.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_package.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string_format.beam
@@ -38,3 +38,5 @@ lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_util.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/ttdict.beam
 lib/erlang/lib/luerl-${PKGVERSION}/ebin/ttsets.beam
 lib/erlang/lib/luerl-${PKGVERSION}/include/luerl.hrl
+lib/erlang/lib/luerl-${PKGVERSION}/priv/images/logo-large.png
+lib/erlang/lib/luerl-${PKGVERSION}/priv/images/logo.png
