@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5278 2024/08/21 21:09:04 nia Exp $
+$NetBSD: CHANGES-2024,v 1.5279 2024/08/21 21:55:03 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8177,3 +8177,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed x11/caribou [wiz 2024-08-21]
 	Added databases/mariadb114-client version 11.4.3 [nia 2024-08-21]
 	Added databases/mariadb114-server version 11.4.3 [nia 2024-08-21]
+	Updated sysutils/caja to 1.26.4 [gutteridge 2024-08-21]
