@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2021/01/15 23:47:05 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/21 15:00:33 adam Exp $
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose.app
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_app.beam
-lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_base.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_base64.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_base64url.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_block_encryptor.beam
@@ -12,10 +11,14 @@ lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_chacha20_poly1305_libsodium.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_chacha20_poly1305_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_crypto_compat.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519_crypto.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519_fallback.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519_libdecaf.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519_libsodium.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve25519_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve448.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve448_crypto.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve448_fallback.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve448_libdecaf.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_curve448_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json.beam
@@ -24,9 +27,11 @@ lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_jiffy.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_jsone.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_jsx.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_ojson.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_otp.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_poison.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_poison_compat_encoder.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_poison_lexical_encoder.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_thoas.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_json_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwa.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwa_aes.beam
@@ -59,6 +64,7 @@ lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_c20p_kw.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_dir.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_ecdh_1pu.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_ecdh_es.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_ecdh_ss.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_pbes2.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_rsa.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_jwe_alg_xc20p_kw.beam
@@ -105,6 +111,7 @@ lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_sha3_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_sup.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_xchacha20_poly1305.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_xchacha20_poly1305_crypto.beam
+lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_xchacha20_poly1305_libsodium.beam
 lib/erlang/lib/jose-${PKGVERSION}/ebin/jose_xchacha20_poly1305_unsupported.beam
 lib/erlang/lib/jose-${PKGVERSION}/include/jose.hrl
 lib/erlang/lib/jose-${PKGVERSION}/include/jose_base.hrl
@@ -114,4 +121,4 @@ lib/erlang/lib/jose-${PKGVERSION}/include/jose_jwk.hrl
 lib/erlang/lib/jose-${PKGVERSION}/include/jose_jws.hrl
 lib/erlang/lib/jose-${PKGVERSION}/include/jose_jwt.hrl
 lib/erlang/lib/jose-${PKGVERSION}/include/jose_public_key.hrl
-lib/erlang/lib/jose-${PKGVERSION}/priv/Dockerfile
+lib/erlang/lib/jose-${PKGVERSION}/priv/.keep
