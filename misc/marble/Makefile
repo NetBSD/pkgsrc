@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/08/09 09:42:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2024/08/21 11:32:39 markd Exp $
 
 DISTNAME=	marble-${KAPPSVER}
 PKGREVISION=	4
@@ -14,8 +14,8 @@ TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge perl pkg-config
 
-CMAKE_ARGS+=	-DQT_PLUGINS_DIR=${QTDIR}/plugins
-CMAKE_ARGS+=	-DMARBLE_PRI_INSTALL_USE_QT_SYS_PATHS=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DQT_PLUGINS_DIR=${QTDIR}/plugins
+CMAKE_CONFIGURE_ARGS+=	-DMARBLE_PRI_INSTALL_USE_QT_SYS_PATHS=TRUE
 
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
@@ -35,6 +35,6 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtserialport/buildlink3.mk"
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5WebEngineWidgets:BOOL=TRUE
 #.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
