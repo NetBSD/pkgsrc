@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5273 2024/08/21 15:03:02 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5274 2024/08/21 15:17:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8170,3 +8170,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/erlang-p1_mysql to 1.0.24 [gdt 2024-08-21]
 	Added meta-pkgs/bulk-test-erlang version 20240821 [gdt 2024-08-21]
 	Updated security/erlang-jose to 1.11.10 [adam 2024-08-21]
+	Updated textproc/py-sphinx-gallery to 0.17.1 [adam 2024-08-21]
+	Updated textproc/py-sphinx-astropy to 1.9.1 [adam 2024-08-21]
