@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/14 20:11:27 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2024/08/22 06:09:13 adam Exp $
 
-BLAKE2s (p1_oauth2-0.6.11.tar.gz) = 7c9ef6389e478a52d18932f7274e46563750effd612ee51728aa66807af8996d
-SHA512 (p1_oauth2-0.6.11.tar.gz) = c97fe256ba3d0c3c18d0ad14dd85f28bed7607b0aa8d56a23e1c87694a10669eb1cd6e0abafff7e366974b2160ef5eb8e65dadc60a85963e3aa4334252db8b6e
-Size (p1_oauth2-0.6.11.tar.gz) = 214437 bytes
+BLAKE2s (p1_oauth2-0.6.14.tar.gz) = 76ad848231af9b20bef129c6dea922cb9f0fa506b1be3f6561d054ff5a367bb4
+SHA512 (p1_oauth2-0.6.14.tar.gz) = cda660e2401a951864d365017f508c2e317794a7aec7ee3aae96d476764252b56de516b31ca73da00c4a9ceefeefe22d673b4659e988179aeb9bb3eef0bf66ed
+Size (p1_oauth2-0.6.14.tar.gz) = 19021 bytes
