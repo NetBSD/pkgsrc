@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/08/19 21:57:37 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/22 13:33:16 wiz Exp $
 
 DISTNAME=	ruff-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/astral-sh/ruff
 COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 
 USE_LANGUAGES=	c c++
 
