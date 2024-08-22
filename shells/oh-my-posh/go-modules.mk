@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.66 2024/08/19 10:09:38 pin Exp $
+# $NetBSD: go-modules.mk,v 1.67 2024/08/22 12:21:33 pin Exp $
 
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.mod
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
@@ -25,12 +25,12 @@ GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.mod
 GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v15/@v/v15.0.0.zip
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.18.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.19.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.19.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.27.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v0.27.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.12.1.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.12.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.1.4.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/input/@v/v0.1.2.mod
@@ -100,7 +100,6 @@ GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.zip
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.mod
 GO_MODULE_FILES+=	github.com/mattn/go-localereader/@v/v0.0.1.zip
-GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.12.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.mod
 GO_MODULE_FILES+=	github.com/mattn/go-runewidth/@v/v0.0.16.zip
 GO_MODULE_FILES+=	github.com/mitchellh/copystructure/@v/v1.0.0.mod
@@ -115,8 +114,6 @@ GO_MODULE_FILES+=	github.com/muesli/ansi/@v/v0.0.0-20230316100256-276c6243b2f6.m
 GO_MODULE_FILES+=	github.com/muesli/ansi/@v/v0.0.0-20230316100256-276c6243b2f6.zip
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.mod
 GO_MODULE_FILES+=	github.com/muesli/cancelreader/@v/v0.2.2.zip
-GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.mod
-GO_MODULE_FILES+=	github.com/muesli/reflow/@v/v0.3.0.zip
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.mod
 GO_MODULE_FILES+=	github.com/muesli/termenv/@v/v0.15.2.zip
 GO_MODULE_FILES+=	github.com/pelletier/go-toml/v2/@v/v2.2.2.mod
@@ -125,7 +122,6 @@ GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/pmezard/go-difflib/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.mod
 GO_MODULE_FILES+=	github.com/power-devops/perfstat/@v/v0.0.0-20240221224432-82ca36839d55.zip
-GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.mod
 GO_MODULE_FILES+=	github.com/rivo/uniseg/@v/v0.4.7.zip
