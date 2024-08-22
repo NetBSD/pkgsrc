@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/20 12:53:44 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/22 12:46:39 adam Exp $
 
-DISTNAME=	widgetsnbextension-4.0.11
+DISTNAME=	widgetsnbextension-4.0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/widgetsnbextension/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_packaging>=0.10:../../devel/py-jupyter_pac
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
