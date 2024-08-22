@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.126 2024/05/29 16:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.127 2024/08/22 11:21:57 markd Exp $
 
-DISTNAME=	texworks-0.6.3
-PKGREVISION=	49
+DISTNAME=	texworks-0.6.9
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TeXworks/}
 GITHUB_PROJECT=	texworks
@@ -14,12 +13,14 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
-USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DWITH_LUA:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
-CMAKE_ARGS+=	-DTeXworks_DIC_DIR:PATH=share/hunspell
-CMAKE_ARGS+=	-DTeXworks_MAN_DIR:PATH=${PKGMANDIR}/man1
+.include "../../devel/cmake/build.mk"
+
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LUA:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DTeXworks_DIC_DIR:PATH=share/hunspell
+CMAKE_CONFIGURE_ARGS+=	-DTeXworks_MAN_DIR:PATH=${PKGMANDIR}/man1
+CMAKE_CONFIGURE_ARGS+=	-DTW_BUILD_ID='pkgsrc'
 
 DEPENDS+=	poppler-data>=0.4.5:../../print/poppler-data
 
@@ -27,6 +28,7 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

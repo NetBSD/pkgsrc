@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2020/03/01 12:38:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/22 11:21:57 markd Exp $
 bin/texworks
 man/man1/texworks.1
 share/applications/texworks.desktop
 share/doc/texworks/COPYING
 share/doc/texworks/NEWS
 share/doc/texworks/README.md
+share/icons/hicolor/128x128/apps/TeXworks.png
+share/icons/hicolor/48x48/apps/TeXworks.png
+share/icons/hicolor/512x512/apps/TeXworks.png
+share/icons/hicolor/64x64/apps/TeXworks.png
 share/metainfo/texworks.appdata.xml
-share/pixmaps/TeXworks.png
