@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/04/22 13:44:10 he Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/22 17:01:16 gdt Exp $
 #
 
 DISTNAME=		hmmer-3.0
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		http://eddylab.org/software/hmmer/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 HOMEPAGE=		http://hmmer.org/
 COMMENT=		Implementation of profile HMM software for protein sequence analysis
 LICENSE=		gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 17:30:46 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/22 17:01:17 gdt Exp $
 #
 
 DISTNAME=	gp-0.26
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://www.bioinformatics.org/genpak/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	hdp@cs.nmsu.edu
+MAINTAINER=	pkgsrc-users@NetBDS.org
 HOMEPAGE=	https://www.bioinformatics.org/genpak/
 COMMENT=	Manipulate DNA/RNA sequence in a Unix fashion
 
