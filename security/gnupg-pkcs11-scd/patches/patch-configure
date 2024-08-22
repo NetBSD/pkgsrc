@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2024/08/22 12:49:22 ryoon Exp $
+
+* Support newer libassuan2 too.
+
+--- configure.orig	2024-08-22 03:48:57.780837491 +0000
++++ configure
+@@ -6789,7 +6789,7 @@ if test -z "${LIBASSUAN_LIBS}"; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libassuan" >&5
+ $as_echo_n "checking for libassuan... " >&6; }
+ 	test -x "${with_libassuan_prefix}/bin/libassuan-config" || as_fn_error $? "Cannot locate libassuan" "$LINENO" 5
+-	"${with_libassuan_prefix}/bin/libassuan-config" --version | grep "^2\." > /dev/null || as_fn_error $? "Need assuan-2" "$LINENO" 5
++	"${with_libassuan_prefix}/bin/libassuan-config" --version | grep "^[23]\." > /dev/null || as_fn_error $? "Need assuan-2 or 3" "$LINENO" 5
+ 
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+ $as_echo "found" >&6; }
