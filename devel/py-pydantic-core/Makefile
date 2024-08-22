@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/08/19 21:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/22 13:32:39 wiz Exp $
 
 DISTNAME=	pydantic_core-2.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/pydantic/pydantic-core
 COMMENT=	Core functionality for pydantic
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.1.post0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.92.9:../../devel/py-hypothesis
