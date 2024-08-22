@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2024/04/26 09:18:00 hauke Exp $
+$NetBSD: distinfo,v 1.10 2024/08/22 15:59:21 hauke Exp $
 
-BLAKE2s (hiawatha-v11.5.tar.gz) = d925682455f7c822d0aa5659716fbbf41fc6f04d53883945e0d0fe077794fb18
-SHA512 (hiawatha-v11.5.tar.gz) = c374ce680874aa9aacaa4d8b59cce3209275286e5b8baaabdf53346a0a743cb6decc97136b356c207b33b18db2977a0b1d6e9743cc6f4479860fade389bdd86a
-Size (hiawatha-v11.5.tar.gz) = 1810756 bytes
+BLAKE2s (hiawatha-v11.6.tar.gz) = cb18a61b34c9ae64a1c21bdff6c57562aecddeaa15f6d4da6ab2e278dd81ffa0
+SHA512 (hiawatha-v11.6.tar.gz) = e0b23dd0626ea9850469feefd3f4c69119230e327c63ab4b68442abe695a232c5b4ea4250791cd00fe730c1c6ff3a0a66fafccde38c029d43b4506b1c817dd53
+Size (hiawatha-v11.6.tar.gz) = 1844062 bytes
 SHA1 (patch-CMakeLists.txt) = a96e51545ab31e5ceb4a520bb4757787088c8174
 SHA1 (patch-config_hiawatha.conf.in) = 8a58402b0201ec6cd661f5d949e127edfe4b693a
 SHA1 (patch-extra_letsencrypt_letsencrypt.conf.in) = 718d44e883f8206fd88480c5503d962198992347
+SHA1 (patch-mbedtls_library_ssl_tls13_generic.c) = 292b21dfdb8b19309da8faa807fa200720b5e580
