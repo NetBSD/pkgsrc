@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2024/08/22 17:01:18 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/22 17:05:58 gdt Exp $
 
 DISTNAME=		gpspoint-2.030521
 PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		#http://gpspoint.dnsalias.net/gpspoint2/download/
 
-MAINTAINER=		pkgsrc-users@NetBDS.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://gpspoint.dnsalias.net/gpspoint2/
 COMMENT=		Program to download and upload waypoints to and from your GPS device
 LICENSE=		gnu-gpl-v2
