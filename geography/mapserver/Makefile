@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2024/08/22 15:34:00 gdt Exp $
+# $NetBSD: Makefile,v 1.120 2024/08/22 16:58:00 gdt Exp $
 
 DISTNAME=	mapserver-8.2.1
+PKGREVISION=	1
 CATEGORIES=	geography www
 MASTER_SITES=	http://download.osgeo.org/mapserver/
 
@@ -38,18 +39,39 @@ CONF_FILES+=		share/examples/mapserver/mapserver.conf ${PKG_SYSCONFDIR}/mapserve
 
 .include "options.mk"
 
-# \todo Adjust to current requirements.
-.include "../../converters/fribidi/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/protobuf-c/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+# Mandatory dependencies (ordered by cmake configure status summary).
 .include "../../geography/gdal-lib/buildlink3.mk"
-.include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+# We might need 2.13.2, which seems to have an API break relative to
+# 2.13.0, but there's no NEWS that indicates that, so it is left to
+# anyone using old freetype to address this.
+.include "../../graphics/freetype2/buildlink3.mk"
+
+# Optional dependencies.
+# Lean to including optional features if they don't hurt much, as
+# mapserver is hardly for low-resources systems.
+.include "../../graphics/giflib/buildlink3.mk"
+# mysql: option
+.include "../../converters/fribidi/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+# svgcairo: no
+# rsvg: no
+# curl: no
+# pixman: no
 .include "../../textproc/libxml2/buildlink3.mk"
+# postgis: option
+.include "../../geography/geos/buildlink3.mk"
+# fastcgi: option
+.include "../../devel/protobuf-c/buildlink3.mk"
+# oracle spatial: not in pkgsrc
+# exempi xmp: no (?)
+
+# Dependencies cmake looks for, not listed above
+.include "../../devel/zlib/buildlink3.mk"
+#  found and "enabled" but not clearly present in built objects
+.include "../../converters/libiconv/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
