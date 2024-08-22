@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5301 2024/08/22 13:30:28 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5302 2024/08/22 13:31:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8218,3 +8218,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-numpydoc to 1.8.0 [adam 2024-08-22]
 	Updated www/py-widgetsnbextension to 4.0.12 [adam 2024-08-22]
 	Updated security/py-cryptography to 43.0.0nb1 [wiz 2024-08-22]
+	Updated textproc/py-orjson to 3.10.7nb1 [wiz 2024-08-22]
