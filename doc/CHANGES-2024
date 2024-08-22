@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5296 2024/08/22 12:15:54 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5297 2024/08/22 12:17:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8212,3 +8212,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-aiohappyeyeballs to 2.4.0 [adam 2024-08-22]
 	Updated www/py-aiohttp to 3.10.5 [adam 2024-08-22]
 	Updated chat/iamb to 0.0.10 [pin 2024-08-22]
+	Updated devel/tokei to alpha.3 [pin 2024-08-22]
