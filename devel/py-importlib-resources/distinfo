@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/08/20 11:14:23 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/08/22 07:40:21 adam Exp $
 
-BLAKE2s (importlib_resources-6.4.3.tar.gz) = 4d8eb25c02a9fc5c0bf6695a0e47e6bd05f0be93544bd7a89a8f643e155e3305
-SHA512 (importlib_resources-6.4.3.tar.gz) = 23b6e8d37d2317cfe9d465f8083b6fa8826c34ec114844993556657b943ecca3b3d6e5f4ca958787d980ebd451e174b8e134f35445bdef085ca29b71c76e248e
-Size (importlib_resources-6.4.3.tar.gz) = 42026 bytes
+BLAKE2s (importlib_resources-6.4.4.tar.gz) = dd9a46ef617124aaf16f67f6b22e93da24f656917668415628417fae31178dce
+SHA512 (importlib_resources-6.4.4.tar.gz) = ffdd2cbe56ae308392e9fcadbd5822b68afd5737a78b04416e84a1ca294ce33f4f0df5ff5ee4e403f43064c9bf33df3d2742809d651295b536d0036f7359580c
+Size (importlib_resources-6.4.4.tar.gz) = 42721 bytes
