@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/08/22 17:01:16 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/22 17:06:00 gdt Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.cc.umanitoba.ca/psgendb/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		pkgsrc-users@NetBDS.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
 

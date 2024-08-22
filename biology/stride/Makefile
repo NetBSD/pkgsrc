@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/08/22 17:01:17 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/22 17:05:59 gdt Exp $
 #
 
 DISTNAME=		stride
@@ -6,7 +6,7 @@ PKGNAME=		stride-20030804
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/unix/stride/src/
 
-MAINTAINER=		pkgsrc-users@NetBDS.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://wolf.bi.umist.ac.uk/unix/stride.html
 COMMENT=		Protein secondary structure assignment from atomic coordinates
 
