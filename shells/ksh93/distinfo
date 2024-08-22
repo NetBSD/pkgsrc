@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2024/07/30 15:17:08 vins Exp $
+$NetBSD: distinfo,v 1.11 2024/08/22 17:49:20 vins Exp $
 
-BLAKE2s (ksh93-1.0.9.tar.gz) = 8d00bc64add78397dcbf68eb920fbc4920c80ae33fa2ad8be0c708760e897c34
-SHA512 (ksh93-1.0.9.tar.gz) = 747a9b624ee898c84cf37958add17eee6ee8fcb6112701430f0d12d2913b3af22554a98a9836dee6bbbe62adbdb3cbc1d3fb7f2c654f2ce799805d9b1f407683
-Size (ksh93-1.0.9.tar.gz) = 2084378 bytes
+BLAKE2s (ksh93-1.0.10.tar.gz) = 489a3bdc3f5325c1750cf0056a278a9c8c60037103c9691a28f3c3f6b2c06542
+SHA512 (ksh93-1.0.10.tar.gz) = 055bd2cf188c825ed684e6f95991a70f8b672e31a94a2294b8791de96be7d9dbf49e2d1eddb3490559c15736a2e0f40839529253481f1217e5e134f046cbe41f
+Size (ksh93-1.0.10.tar.gz) = 2019536 bytes
 SHA1 (patch-bin_package) = d536c6b4787ef01b456bcf8436a77ec25b98c3a2
 SHA1 (patch-src_lib_libast_features_syscall) = 3da58a2876db9171378574fcf772978db2cd57e0
