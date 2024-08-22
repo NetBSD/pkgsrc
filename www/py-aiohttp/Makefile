@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2024/08/18 19:31:54 adam Exp $
+# $NetBSD: Makefile,v 1.71 2024/08/22 12:02:03 adam Exp $
 
-DISTNAME=	aiohttp-3.10.4
+DISTNAME=	aiohttp-3.10.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -26,8 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-re-assert-[0-9]*:../../devel/py-re-assert
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
