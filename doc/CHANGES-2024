@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5304 2024/08/22 13:33:25 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5305 2024/08/22 16:03:55 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8221,3 +8221,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-orjson to 3.10.7nb1 [wiz 2024-08-22]
 	Updated devel/py-pydantic-core to 2.23.0nb1 [wiz 2024-08-22]
 	Updated devel/py-ruff to 0.6.1nb1 [wiz 2024-08-22]
+	Updated www/hiawatha to 11.6 [hauke 2024-08-22]
