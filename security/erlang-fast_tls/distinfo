@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2022/10/15 12:01:57 triaxx Exp $
+$NetBSD: distinfo,v 1.21 2024/08/22 05:47:32 adam Exp $
 
-BLAKE2s (fast_tls-1.1.16.tar.gz) = 8ee9512eac5fc40d08b0047fd8ff6ccb7311dfc5af0b19e8c2ce4dc6aaa3576c
-SHA512 (fast_tls-1.1.16.tar.gz) = c143eacf3b36b21c51cbf3c6fbb9327bc9a987ac88ef72f85981352efc3361a703caab970ae3f08bbcb1b99ded89160f9ccf798f718935d6c1950a51231abfbf
-Size (fast_tls-1.1.16.tar.gz) = 83971 bytes
+BLAKE2s (fast_tls-1.1.21.tar.gz) = 176768066b030e36d39e04fecebabef778f3d80fcac9d108359ad524808be773
+SHA512 (fast_tls-1.1.21.tar.gz) = bac8ea634fc401123b565069962c54388996b8e5c54485bbb2f7d4ea7ca8ce1f1a59c19c328863658e9df891708b0383dd95c22541117f8c49a719e90475f125
+Size (fast_tls-1.1.21.tar.gz) = 85145 bytes
