@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/05/11 05:13:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/22 12:45:04 adam Exp $
 
-DISTNAME=	numpydoc-1.7.0
+DISTNAME=	numpydoc-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpydoc/}
@@ -14,20 +14,21 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-tabulate>=0.8.10:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=6:../../textproc/py-sphinx
+TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli-[0-9]*:../../textproc/py-tomli
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 .endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} validate-docstrings validate-docstrings-${PYVERSSUFFIX} || ${TRUE}
+	${MV} numpydoc numpydoc-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

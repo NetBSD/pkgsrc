@@ -1,1 +1,1 @@
-bin/validate-docstrings @PREFIX@/bin/validate-docstrings-@PYVERSSUFFIX@
+bin/numpydoc @PREFIX@/bin/numpydoc-@PYVERSSUFFIX@

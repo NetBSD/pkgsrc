@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/11 05:13:15 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/08/22 12:45:04 adam Exp $
 
-BLAKE2s (numpydoc-1.7.0.tar.gz) = e506374bf6fbd1d3d124c5b2f3f8a1831101260a1c06b501a24b8fd873be10a5
-SHA512 (numpydoc-1.7.0.tar.gz) = 719ab90d981a1c48e332c2bdd8c41074e679bc4170cb6e7f5111dd473ffc758c7d0c297e3a691ad5df0ed000525c5dcb771fc1c39015eb6da8a1343b8d9dc1cb
-Size (numpydoc-1.7.0.tar.gz) = 87575 bytes
+BLAKE2s (numpydoc-1.8.0.tar.gz) = c30cd0ec695aa1a80ccb1a8a6ae2899492ab9eb4481cb9ef174dab4f303e3722
+SHA512 (numpydoc-1.8.0.tar.gz) = a2fe6fc72485b2cef2cb40c231c876209f135177dce034d1617a49712fb24197c224b103967914ff6e0509eb013e4b9647a9cb93794c63f41db63fd1fcc05441
+Size (numpydoc-1.8.0.tar.gz) = 90445 bytes
