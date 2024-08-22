@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.117 2024/07/21 09:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2024/08/22 13:30:17 wiz Exp $
 
 DISTNAME=	cryptography-43.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
 
@@ -13,7 +14,7 @@ LICENSE=	apache-2.0 OR modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.7.0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin-[0-9]*:../../devel/py-maturin
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-${PKGVERSION_NOREV}:../../security/py-cryptography_vectors
 TEST_DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
