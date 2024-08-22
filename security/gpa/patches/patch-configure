@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2024/08/22 12:41:59 ryoon Exp $
+
+* Support newer security/libassuan2.
+
+--- configure.orig	2024-08-22 07:38:59.842998095 +0000
++++ configure
+@@ -8632,7 +8632,7 @@ $as_echo "no" >&6; }
+       if test "$tmp" -gt 0 ; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking LIBASSUAN API version" >&5
+ $as_echo_n "checking LIBASSUAN API version... " >&6; }
+-        if test "$req_libassuan_api" -eq "$tmp" ; then
++        if test "$req_libassuan_api" -le "$tmp" ; then
+           { $as_echo "$as_me:${as_lineno-$LINENO}: result: okay" >&5
+ $as_echo "okay" >&6; }
+         else

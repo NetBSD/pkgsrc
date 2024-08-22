@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 11:17:07 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/08/22 12:41:59 ryoon Exp $
 
 BLAKE2s (gpa-0.10.0.tar.bz2) = 9e2143bfa742ccf130697212606df72ca4a16da6673515262e1a8d8e122af66f
 SHA512 (gpa-0.10.0.tar.bz2) = 87004fb0806e76012bc194f95afe9ef6044aec890b26e845f45c314e1bd8864f056ba5e32f9ef2e15b24b50840235e6e548a5e3006b255b4f1c20e0fd7710a3b
 Size (gpa-0.10.0.tar.bz2) = 782455 bytes
+SHA1 (patch-configure) = 930aea9049f7a2fb6d3465f73f79671f2fc3a331
