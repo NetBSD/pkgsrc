@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5287 2024/08/22 06:00:40 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5288 2024/08/22 06:13:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8194,3 +8194,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/erlang-fast_yaml to 1.0.37 [adam 2024-08-22]
 	Updated textproc/erlang-jiffy to 1.1.2 [adam 2024-08-22]
 	Updated devel/erlang-mqtree to 1.0.17 [adam 2024-08-22]
+	Updated textproc/erlang-yconf to 1.0.16 [adam 2024-08-22]
+	Updated security/erlang-p1_acme to 1.0.23 [adam 2024-08-22]
+	Updated security/erlang-p1_oauth2 to 0.6.14 [adam 2024-08-22]
+	Updated textproc/erlang-stringprep to 1.0.30 [adam 2024-08-22]
