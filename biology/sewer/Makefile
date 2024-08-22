@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2021/04/21 09:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/22 17:01:17 gdt Exp $
 
 DISTNAME=		sewer
 PKGNAME=		sewer-2.6
@@ -7,7 +7,7 @@ CATEGORIES=		biology
 #MASTER_SITES=		ftp://iubio.bio.indiana.edu/molbio/analyze/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 #HOMEPAGE=		http://iubio.bio.indiana.edu/webapps/SeWeR/
 COMMENT=		SEquence Analysis using WEb Resources
 
