@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/15 12:20:55 triaxx Exp $
+$NetBSD: distinfo,v 1.8 2024/08/22 05:57:03 adam Exp $
 
-BLAKE2s (jiffy-1.1.1.tar.gz) = c1c510c8c5f5361be3f3f3370a4c36792e2abcccf7a73434851d47b7f82d5db6
-SHA512 (jiffy-1.1.1.tar.gz) = cfa36d77285e53ccce852640a4c780f2c29ad33c7352e3a5b69fec431d6684bac4bf5ac323379a8bb1d1289afa23b6f73d4d5ecf1b025791fd84198d4c066910
-Size (jiffy-1.1.1.tar.gz) = 1674571 bytes
-SHA1 (patch-Makefile) = 5113cc43fe05c12de2a5f75feb57692695c196c7
+BLAKE2s (jiffy-1.1.2.tar.gz) = 2a4d3aa38debbdec35376897fe46fcc7b7215a30d5ef7fb97388f0c5d0f36c81
+SHA512 (jiffy-1.1.2.tar.gz) = 4f04246f6de11535ce8c5e1361646a7526d12944a08e9a496f5fe8ae8ef3d4afc4524b3ccb5fb5832ebf18fc8acae3283de377986f9bc8dd70e55a9eae7e45ab
+Size (jiffy-1.1.2.tar.gz) = 1675013 bytes
