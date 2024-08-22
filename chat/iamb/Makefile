@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/03/29 20:43:19 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/22 12:14:51 pin Exp $
 
-DISTNAME=	iamb-0.0.9
+DISTNAME=	iamb-0.0.10
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ulyssa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,8 @@ COMMENT=	Matrix client for Vim addicts
 LICENSE=	apache-2.0
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.70.0
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			share/examples/iamb share/icons/hicolor/scalable/apps \
