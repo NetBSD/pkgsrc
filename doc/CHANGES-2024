@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5291 2024/08/22 07:41:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5292 2024/08/22 09:57:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8204,3 +8204,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/erlang-pkix to 1.0.10 [adam 2024-08-22]
 	Updated databases/erlang-sqlite3 to 1.1.15 [adam 2024-08-22]
 	Updated devel/py-importlib-resources to 6.4.4 [adam 2024-08-22]
+	Updated devel/py-maturin to 1.7.1 [adam 2024-08-22]
+	Updated security/py-nvdlib to 0.7.7 [adam 2024-08-22]
