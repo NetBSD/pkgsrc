@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2024/03/04 20:18:12 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/22 12:16:37 pin Exp $
 
-DISTNAME=	v13.0.0-alpha.1
+DISTNAME=	v13.0.0-alpha.3
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
 GITHUB_PROJECT=	tokei
-GITHUB_TAG=	v13.0.0-alpha.1
+GITHUB_TAG=	v13.0.0-alpha.3
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/XAMPPRocky/tokei/
@@ -14,6 +14,9 @@ LICENSE=	apache-2.0 AND mit
 
 .include "cargo-depends.mk"
 
+#RUST_REQ=		1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
 USE_LANGUAGES+=		c c++	# rust, but needs a toolchain to link
 USE_TOOLS+=		pkg-config
 
