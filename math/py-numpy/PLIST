@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2024/08/21 10:10:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/08/22 12:13:32 ryoon Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -596,6 +596,7 @@ ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_neon.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_neon_fp16.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_neon_vfpv4.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_popcnt.c
+${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_rvv.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_sse.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_sse2.c
 ${PLIST.distutils}${PYSITELIB}/numpy/distutils/checks/cpu_sse3.c
