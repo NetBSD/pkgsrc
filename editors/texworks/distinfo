@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:21:42 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/08/22 11:21:57 markd Exp $
 
-BLAKE2s (texworks-0.6.3.tar.gz) = c82934180dcd0bade8686ed7a02a684c8d1002793781d00f740172b23cbbb39f
-SHA512 (texworks-0.6.3.tar.gz) = 389cf54441e74164fc842f2f293cdee45c6ff9fe202f262d32f3fb076de9a29813a62cd75052969293f2f784e0722215bbbf2206e75bc836a13d495bf5aed653
-Size (texworks-0.6.3.tar.gz) = 12082640 bytes
-SHA1 (patch-getDefaultBinPaths.sh) = 3f41dd5c29f581e8bba0bb8dd48576a5619d8d1f
-SHA1 (patch-modules_QtPDF_src_PDFBackend.cpp) = 8dbae61266969249eb9e3c9585a4d10a1ebcf1bf
-SHA1 (patch-src_CompletingEdit.cpp) = e7ce59c97a232dffdf4dc58efc2ab15b46695087
+BLAKE2s (texworks-0.6.9.tar.gz) = 6c790de6c2bc0c76aebff0401297eebf69a94367f70e4bcf9144cd2abfeccb8f
+SHA512 (texworks-0.6.9.tar.gz) = 54677205e7767f377fa66be6b2c43bec2d3c3981ea1a24eb11f45608c1cb3ddc98852c43611680273601eb8e8ae4a6095c9b9a9338ee69ef0475a43f2191551e
+Size (texworks-0.6.9.tar.gz) = 12505487 bytes
