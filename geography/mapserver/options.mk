@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2024/08/22 12:59:14 gdt Exp $
+# $NetBSD: options.mk,v 1.9 2024/08/22 14:51:24 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
 PKG_SUPPORTED_OPTIONS=	fastcgi pgsql mysql x11
@@ -24,7 +24,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_FCGI=OFF
 # sense, given how postgis works.
 .include "../../databases/postgresql-postgis2/buildlink3.mk"
 .else
-CMAKE_CONFIGURE_ARGS+=		-D-DWITH_POSTGIS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWITH_POSTGIS=OFF
 .endif
 
 #
