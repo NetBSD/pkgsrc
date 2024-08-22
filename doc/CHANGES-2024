@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5307 2024/08/22 17:57:25 vins Exp $
+$NetBSD: CHANGES-2024,v 1.5308 2024/08/22 18:03:19 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8224,3 +8224,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/hiawatha to 11.6 [hauke 2024-08-22]
 	Updated shells/ksh93 to 1.0.10 [vins 2024-08-22]
 	Updated security/lastpass-cli to 1.6.0 [vins 2024-08-22]
+	Updated shells/yash to 2.57 [vins 2024-08-22]
