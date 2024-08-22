@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/11 20:32:13 asau Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/22 17:01:16 gdt Exp $
 #
 
 DISTNAME=		pdbalign
@@ -6,7 +6,7 @@ PKGNAME=		pdbalign-20030812
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/unix/pdbalign/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 HOMEPAGE=		#empty
 COMMENT=		Prediction of Protein Secondary Structure and Active Sites
 

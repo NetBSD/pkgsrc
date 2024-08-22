@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 13:24:18 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/22 17:01:17 gdt Exp $
 #
 
 DISTNAME=		GeneSplicer
@@ -6,7 +6,7 @@ PKGNAME=		genesplicer-20030403
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/GeneSplicer/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 HOMEPAGE=		ftp://ftp.tigr.org/pub/software/GeneSplicer/
 COMMENT=		Computational Method for Splice Site Prediction
 

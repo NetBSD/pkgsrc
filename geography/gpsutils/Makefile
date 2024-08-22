@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/08/16 20:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/22 17:01:18 gdt Exp $
 #
 
 DISTNAME=		gpsutils-0.4.0
 CATEGORIES=		geography
 #MASTER_SITES=		http://wombat.ie/gps/
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 #HOMEPAGE=		http://wombat.ie/gps/
 COMMENT=		Capture and convert data from a Garmin GPS receiver
 
