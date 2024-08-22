@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/10/14 16:43:48 triaxx Exp $
+$NetBSD: distinfo,v 1.18 2024/08/22 05:40:28 adam Exp $
 
-BLAKE2s (p1_utils-1.0.25.tar.gz) = 74b42e687858288f00853f161495addefd515d1d97aceaa2458ce1939c5c339f
-SHA512 (p1_utils-1.0.25.tar.gz) = e96bcd309dfaf3f80de573b7ad1b7281ee0cb97b0b91f92a5a9c5b5ccc969dce4d6b1adbaef9ff33bf9deb0da8e6b1738fbe3f69235b51a0069e0fda72a16d74
-Size (p1_utils-1.0.25.tar.gz) = 47802 bytes
+BLAKE2s (p1_utils-1.0.26.tar.gz) = f3db52fda15a1279c73319999f2ae9e4cb9edba70a82b158d5015485ffeb8479
+SHA512 (p1_utils-1.0.26.tar.gz) = 2e17a931302ac6c6c560b92a38f6868f3e2c5863fa9a3724ed7f3339ce149c7be1b8202cafebb26edbf547dfa49a62cae9c4016dd0b0f3aa5bc3d3d918324519
+Size (p1_utils-1.0.26.tar.gz) = 47863 bytes
