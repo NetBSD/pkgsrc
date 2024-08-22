@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2024/08/21 19:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2024/08/22 15:34:00 gdt Exp $
 
 DISTNAME=	mapserver-8.2.1
 CATEGORIES=	geography www
@@ -10,6 +10,8 @@ COMMENT=	Environment for building spatially enabled Internet apps
 LICENSE=	mit
 
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		pkg-config
 
 .include "../../devel/cmake/build.mk"
@@ -30,20 +32,9 @@ post-install:
 	mv ${DESTDIR}/${PREFIX}/etc/mapserver-sample.conf ${DESTDIR}/${PREFIX}/share/examples/mapserver/mapserver.conf
 CONF_FILES+=		share/examples/mapserver/mapserver.conf ${PKG_SYSCONFDIR}/mapserver.conf
 
-
-# \todo Convert to cmake or prune.
-CONFIGURE_ARGS+=	--with-cairo
-CONFIGURE_ARGS+=	--with-freetype
-CONFIGURE_ARGS+=	--with-gdal
-CONFIGURE_ARGS+=	--with-gd=${BUILDLINK_PREFIX.gd}
-CONFIGURE_ARGS+=	--with-geos
-CONFIGURE_ARGS+=	--with-libiconv
-CONFIGURE_ARGS+=	--with-ogr
-CONFIGURE_ARGS+=	--with-png
-CONFIGURE_ARGS+=	--with-proj
-CONFIGURE_ARGS+=	--with-wcs
-CONFIGURE_ARGS+=	--with-wfs
-CONFIGURE_ARGS+=	--with-zlib
+# Upstream does not document dependencies.  Instead they say to try to
+# build and when you see an error guess at what to add until it
+# builds.  (Really!)
 
 .include "options.mk"
 
