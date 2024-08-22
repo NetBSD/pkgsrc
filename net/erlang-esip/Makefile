@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.17 2022/10/14 19:35:38 triaxx Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/22 05:50:41 adam Exp $
 
-DISTNAME=	esip-1.0.48
+DISTNAME=	esip-1.0.54
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
+GITHUB_PROJECT=	esip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/processone/esip/
 COMMENT=	ProcessOne SIP server component in Erlang
 LICENSE=	apache-2.0
 
-DEPENDS+=	erlang-stun>=1.2.6:../../net/erlang-stun
-DEPENDS+=	erlang-fast_tls>=1.1.16:../../security/erlang-fast_tls
-DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
-
-GITHUB_PROJECT=	esip
+DEPENDS+=	erlang-fast_tls>=1.1.21:../../security/erlang-fast_tls
+DEPENDS+=	erlang-p1_utils>=1.0.26:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-stun>=1.2.14:../../net/erlang-stun
 
 GNU_CONFIGURE=	yes
 

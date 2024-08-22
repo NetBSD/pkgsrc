@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2022/10/14 19:35:38 triaxx Exp $
+$NetBSD: distinfo,v 1.19 2024/08/22 05:50:41 adam Exp $
 
-BLAKE2s (esip-1.0.48.tar.gz) = c55b4a56f596e23551de8ef830919b7cf0f4b8b20f065dac88f9ebd2850a7229
-SHA512 (esip-1.0.48.tar.gz) = 9acc47fee89ee99f3de892c568052ad614305dbecfb9742269672772393d95c60440f7c676c62b0b8fc69854332924c3d3f661a5972df4f27f58358e591373aa
-Size (esip-1.0.48.tar.gz) = 91251 bytes
+BLAKE2s (esip-1.0.54.tar.gz) = a7a0af76e22ca9dd2cf04d15fc8f3dcb3bdfbd9f78655671e8c8543eb182b7a9
+SHA512 (esip-1.0.54.tar.gz) = 780a4ab0850826124430d7b30e05c10d5373bff09b1d953aa6953c24176ea3482bbed377cbe1f1dd59fd428b2d561bf4035a696a30e582f5dfeb4a003487bcbc
+Size (esip-1.0.54.tar.gz) = 91296 bytes
