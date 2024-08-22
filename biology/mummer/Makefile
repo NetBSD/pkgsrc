@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/06/28 11:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/08/22 17:01:17 gdt Exp $
 #
 
 DISTNAME=		MUMmer3.20
@@ -7,7 +7,7 @@ PKGREVISION=		10
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 
-MAINTAINER=		hdp@cs.nmsu.edu
+MAINTAINER=		pkgsrc-users@NetBDS.org
 HOMEPAGE=		http://mummer.sourceforge.net/
 COMMENT=		System for aligning whole genome sequences
 
