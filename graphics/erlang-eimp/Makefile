@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.21 2024/07/11 19:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/22 05:44:35 adam Exp $
 
-DISTNAME=	eimp-1.0.22
+DISTNAME=	eimp-1.0.23
 PKGNAME=	erlang-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
+GITHUB_PROJECT=	eimp
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/processone/eimp
 COMMENT=	Erlang Image Manipulation Process
 LICENSE=	apache-2.0
-
-GITHUB_PROJECT=	eimp
 
 DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
 
