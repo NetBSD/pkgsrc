@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/06/09 07:44:54 vins Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/22 18:02:29 vins Exp $
 
-DISTNAME=	yash-2.56.1
+DISTNAME=	yash-2.57
 CATEGORIES=	shells
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=magicant/}
 GITHUB_RELEASE= ${PKGVERSION_NOREV}
