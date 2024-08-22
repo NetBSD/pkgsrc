@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/22 17:01:17 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/22 17:05:59 gdt Exp $
 #
 
 DISTNAME=		glimmer213
@@ -7,7 +7,7 @@ PKGNAME=		glimmer-2.13
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.tigr.org/pub/software/Glimmer/
 
-MAINTAINER=		pkgsrc-users@NetBDS.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.tigr.org/pub/software/Glimmer/
 COMMENT=		System for finding genes in microbial DNA
 
