@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5326 2024/08/23 17:56:20 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5327 2024/08/23 21:38:49 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8251,3 +8251,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/ruby-rrdtool to 1.9.0 [adam 2024-08-23]
 	Updated net/ndpi to 4.10 [adam 2024-08-23]
 	Updated net/ntopng to 6.2 [adam 2024-08-23]
+	Updated sysutils/intel-microcode-netbsd to 20240813 [msaitoh 2024-08-23]
