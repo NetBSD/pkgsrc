@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2023/08/11 13:50:30 manu Exp $
+# $NetBSD: Makefile,v 1.100 2024/08/23 12:59:05 gdt Exp $
 
 DISTNAME=	ejabberd-22.05
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	https://www.process-one.net/downloads/downloads-action.php?file=/${PKGVERSION_NOREV}/
 
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	elixir>=1.4.4:../../lang/elixir
 DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
 DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
@@ -43,9 +42,16 @@ GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		aclocal autoconf automake bash:run gmake patch perl
 
+# Upstream allows building with mix, rebar(2), and rebar3.  As of
+# 22.05, the mix build fails, and both rebar versions work.  Disabling
+# bundled deps seems cleaner with rebar(2).
+TOOL_DEPENDS+=		rebar-[0-9]*:../../devel/rebar
+CONFIGURE_ARGS+=	--with-rebar=rebar
+
 CONFIGURE_ARGS+=	--disable-debug
+# We intend to use the erlang packages DEPENDed on above, rather than having
+# ejabberd's build system build them.  This is a bit messy and fragile.
 CONFIGURE_ARGS+=	--enable-system-deps
-CONFIGURE_ARGS+=	--enable-erlang-version-check=no
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
@@ -59,7 +65,15 @@ CONFIGURE_ARGS+=	--enable-group=${EJABBERD_GROUP}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-MAKE_ENV+=		USE_GLOBAL_DEPS=true
+# rebar crashes; probably this is just objecting to the proxy value
+# being malformed, rather than trying to use the network.  Avoid the
+# issue until pkgsrc fixes the disable method to block access without
+# triggering errors when not used.
+# Uncaught error: {error,{bad_option,https_proxy,
+#                                    {{"downloads-forbidden-except-during-fetch",
+#                                      []},
+#                                     []}}}
+ALLOW_NETWORK_ACCESS=	yes
 
 RCD_SCRIPTS=		ejabberd
 
@@ -115,7 +129,15 @@ SUBST_VARS.paths=	DISTNAME EJABBERD_DB EJABBERD_LOGDIR EJABBERD_PIDDIR
 SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX LOCALBASE
 
 post-extract:
-	cd ${WRKSRC} && ${MKDIR} deps && ${TOUCH} deps/.got deps/.built
+	# Upstream includes rebar(2) and rebar3 built with an old OTP.
+	# Remove both and symlink in the one we are using -- built
+	# with the current OTP.
+	cd ${WRKSRC} && ${RM} rebar rebar3 && ${LN} -s ${LOCALBASE}/bin/rebar .
+	# Building deps is disabled above; this is leftover code to
+	# disable them differently.  It is intentionally left
+	# commented out because it may be necessary with rebar3, which may be
+	# necessary in future ejabberd.
+	#cd ${WRKSRC} && ${MKDIR} deps && ${TOUCH} deps/.got deps/.built
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh

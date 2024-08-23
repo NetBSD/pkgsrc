@@ -1,12 +1,15 @@
-$NetBSD: patch-ae,v 1.22 2022/10/15 18:20:40 triaxx Exp $
+$NetBSD: patch-ae,v 1.23 2024/08/23 12:59:05 gdt Exp $
 
 - Default locations.
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
   and AIX where Erlang relies on $HOME set correctly. Use a portable
   su arg order while at it.
 - At least SunOS has not wheel group.
+  + \todo wheel is not patched out - explain/fix
 - Portable grep calls.
 - Fix spool directory.
+
+\todo File upstream.
 
 --- ejabberdctl.template.orig	2022-05-06 13:12:22.000000000 +0000
 +++ ejabberdctl.template
