@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/08/23 12:59:05 gdt Exp $
+# $NetBSD: Makefile,v 1.101 2024/08/23 13:08:14 gdt Exp $
 
 DISTNAME=	ejabberd-22.05
 PKGREVISION=	3
@@ -9,34 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
-DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
-DEPENDS+=	erlang-eredis>=1.2.0:../../databases/erlang-eredis
-DEPENDS+=	erlang-eimp>=1.0.22:../../graphics/erlang-eimp
-DEPENDS+=	erlang-esip>=1.0.47:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.1.15:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.49:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.33:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
-DEPENDS+=	erlang-jiffy>=1.1.1:../../textproc/erlang-jiffy
-DEPENDS+=	erlang-jose>=1.11.1:../../security/erlang-jose
-DEPENDS+=	erlang-lager>=3.9.1.:../../sysutils/erlang-lager
-DEPENDS+=	erlang-luerl>=1.0:../../lang/erlang-luerl
-DEPENDS+=	erlang-mqtree>=1.0.15:../../devel/erlang-mqtree
-DEPENDS+=	erlang-p1_acme>=1.0.19:../../security/erlang-p1_acme
-DEPENDS+=	erlang-p1_mysql>=1.0.19:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_oauth2>=0.6.11:../../security/erlang-p1_oauth2
-DEPENDS+=	erlang-p1_pgsql>=1.1.18:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-pkix>=1.0.9:../../security/erlang-pkix
-DEPENDS+=	erlang-sqlite3>=1.1.13:../../databases/erlang-sqlite3
-DEPENDS+=	erlang-stringprep>=1.0.28:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.2.2:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.5.8:../../net/erlang-xmpp
-DEPENDS+=	erlang-yconf>=1.0.13:../../textproc/erlang-yconf
 
 GNU_CONFIGURE=		yes
 USE_GCC_RUNTIME=	yes
@@ -74,6 +46,34 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 #                                      []},
 #                                     []}}}
 ALLOW_NETWORK_ACCESS=	yes
+
+DEPENDS+=	erlang-base64url>=1.0.1:../../devel/erlang-base64url
+DEPENDS+=	erlang-cache_tab>=1.0.30:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-epam>=1.0.12:../../security/erlang-epam
+DEPENDS+=	erlang-eredis>=1.2.0:../../databases/erlang-eredis
+DEPENDS+=	erlang-eimp>=1.0.22:../../graphics/erlang-eimp
+DEPENDS+=	erlang-esip>=1.0.47:../../net/erlang-esip
+DEPENDS+=	erlang-ezlib>=1.0.12:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.1.15:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.49:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.33:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-idna>=6.0.0:../../net/erlang-idna
+DEPENDS+=	erlang-jiffy>=1.1.1:../../textproc/erlang-jiffy
+DEPENDS+=	erlang-jose>=1.11.1:../../security/erlang-jose
+DEPENDS+=	erlang-lager>=3.9.1.:../../sysutils/erlang-lager
+DEPENDS+=	erlang-luerl>=1.0:../../lang/erlang-luerl
+DEPENDS+=	erlang-mqtree>=1.0.15:../../devel/erlang-mqtree
+DEPENDS+=	erlang-p1_acme>=1.0.19:../../security/erlang-p1_acme
+DEPENDS+=	erlang-p1_mysql>=1.0.19:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_oauth2>=0.6.11:../../security/erlang-p1_oauth2
+DEPENDS+=	erlang-p1_pgsql>=1.1.18:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.25:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-pkix>=1.0.9:../../security/erlang-pkix
+DEPENDS+=	erlang-sqlite3>=1.1.13:../../databases/erlang-sqlite3
+DEPENDS+=	erlang-stringprep>=1.0.28:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.2.2:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.5.8:../../net/erlang-xmpp
+DEPENDS+=	erlang-yconf>=1.0.13:../../textproc/erlang-yconf
 
 RCD_SCRIPTS=		ejabberd
 
