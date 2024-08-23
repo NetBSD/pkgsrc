@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.16 2024/06/25 06:53:09 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/08/23 17:55:09 adam Exp $
 
-BLAKE2s (ntopng-6.0-httpdocs.tar.gz) = ef953c738bd7119929d9e3874488591ca5378fa45d772e38bd226c8328cad6ae
-SHA512 (ntopng-6.0-httpdocs.tar.gz) = e11c4a25153ab5a85f4393d8ce36308e6d0ca4e16f7aacf676764886607dd3a12168aeca384138626cf23cb23d1f1d42b0f1b67cc5c7715a06217c2f71088432
-Size (ntopng-6.0-httpdocs.tar.gz) = 6833487 bytes
-BLAKE2s (ntopng-6.0.tar.gz) = 9a581ccf56b3923a062df8c7f5c402913f01cb84af5bb7143d0759b7b399211e
-SHA512 (ntopng-6.0.tar.gz) = d9d27bed0706d36c82a5b22b2b918014fed7d614e11c79cc47ee1033ae5fd2f703a67f3c5205c63c014bbd2839eb7c78616137ee6cc11d09ebcf6fafc7a658d2
-Size (ntopng-6.0.tar.gz) = 68289620 bytes
-SHA1 (patch-Makefile.in) = 0c07d15959a8b15b20529ee73c96979fefd15773
+BLAKE2s (ntopng-6.2-httpdocs.tar.gz) = 10448187a0f866291cc83a0f57ba850e5987b56132b360fae557f75d16be080f
+SHA512 (ntopng-6.2-httpdocs.tar.gz) = 32e295740e02f0226f5908aec5427f1b860e170d7ead512868a134a8b683b8ac9e411bf0f22ff7444239f353ef9ac9a5c732a5e446d421c8357f5f24b966e728
+Size (ntopng-6.2-httpdocs.tar.gz) = 6895483 bytes
+BLAKE2s (ntopng-6.2.tar.gz) = f94501396959ca44bbc74ac9ab1485359ef8ccced09b1ab241798065306cf061
+SHA512 (ntopng-6.2.tar.gz) = 00370116dc6ed13b78c5da4338c359abc6a9b24c529c06ce4298df9a6b411d3e5799f29b41543a17d7fc70a3f5b1717306723f5a6899ee2c971ad9eafff602d8
+Size (ntopng-6.2.tar.gz) = 78896001 bytes
 SHA1 (patch-configure.ac.in) = 08ba8383478fe58ce8cedf8c5466bbb6a1be59c3
-SHA1 (patch-httpdocs_misc_ntopng-utils-manage-updates.in) = dd58ec396c6e2471c064307fd9bf1f31b0e0c9cf
+SHA1 (patch-httpdocs_misc_ntopng-utils-manage-updates.in) = c6a4bf93c0464d2c2e8493f3b5de9b5c243a1e52
 SHA1 (patch-include_Redis.h) = cf73f5e53abdeb096d93449327365931ba99ae2b
 SHA1 (patch-include_ntop__includes.h) = 2bf588dba941f25b71381c7848b237d964d77f31
-SHA1 (patch-src_LuaEngineNtop.cpp) = d349bf3bebff575bdfa1c59ef8b751895cfb5201
 SHA1 (patch-src_PacketDumperTuntap.cpp) = baaec78bfbc898fad95e019a28d94490fe278c74
 SHA1 (patch-src_Redis.cpp) = 9b8ad39359107c5a96f72fbd403799a11138fd90
 SHA1 (patch-src_Utils.cpp) = daee7d08960d36f1095a36628738e2c66423883f
