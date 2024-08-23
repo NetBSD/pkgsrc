@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/08/14 06:05:16 adam Exp $
+# $NetBSD: Makefile,v 1.75 2024/08/23 10:17:06 nia Exp $
 
 DISTNAME=	zathura-pdf-mupdf-0.4.4
 CATEGORIES=	print
@@ -13,6 +13,8 @@ LICENSE=	zlib
 USE_TOOLS+=	pkg-config
 
 CPPFLAGS+=	-D_XOPEN_SOURCE=600
+
+USE_CC_FEATURES+=	c17
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
