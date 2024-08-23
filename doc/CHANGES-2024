@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5320 2024/08/23 10:15:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5321 2024/08/23 11:19:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8239,3 +8239,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/nodejs20 to 20.17.0 [adam 2024-08-23]
 	Updated time/py-types-python-dateutil to 2.9.0.20240821 [adam 2024-08-23]
 	Updated textproc/py-types-yaml to 6.0.12.20240808 [adam 2024-08-23]
+	Updated multimedia/gstreamer1 to 1.24.7 [adam 2024-08-23]
+	Updated net/py-lexicon to 3.18.0 [adam 2024-08-23]
