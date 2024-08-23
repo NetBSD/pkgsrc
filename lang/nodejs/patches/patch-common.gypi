@@ -1,10 +1,10 @@
-$NetBSD: patch-common.gypi,v 1.12 2024/05/18 07:05:23 adam Exp $
+$NetBSD: patch-common.gypi,v 1.13 2024/08/23 10:10:35 adam Exp $
 
 Add support for NetBSD.
 
---- common.gypi.orig	2024-05-15 12:34:59.000000000 +0000
+--- common.gypi.orig	2024-08-21 21:12:02.000000000 +0000
 +++ common.gypi
-@@ -482,11 +482,11 @@
+@@ -483,11 +483,11 @@
            'NOMINMAX',
          ],
        }],
@@ -16,5 +16,5 @@ Add support for NetBSD.
 -      [ 'OS in "linux freebsd openbsd solaris android aix os400 cloudabi"', {
 +      [ 'OS in "linux freebsd netbsd openbsd solaris android aix os400 cloudabi"', {
          'cflags': [ '-Wall', '-Wextra', '-Wno-unused-parameter', ],
-         'cflags_cc': [ '-fno-rtti', '-fno-exceptions', '-std=gnu++17' ],
-         'defines': [ '__STDC_FORMAT_MACROS' ],
+         'cflags_cc': [
+           '-fno-rtti',
