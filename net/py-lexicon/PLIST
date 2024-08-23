@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2023/10/28 19:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/08/23 11:19:05 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -215,6 +215,9 @@ ${PYSITELIB}/lexicon/_private/providers/porkbun.pyo
 ${PYSITELIB}/lexicon/_private/providers/powerdns.py
 ${PYSITELIB}/lexicon/_private/providers/powerdns.pyc
 ${PYSITELIB}/lexicon/_private/providers/powerdns.pyo
+${PYSITELIB}/lexicon/_private/providers/qcloud.py
+${PYSITELIB}/lexicon/_private/providers/qcloud.pyc
+${PYSITELIB}/lexicon/_private/providers/qcloud.pyo
 ${PYSITELIB}/lexicon/_private/providers/rackspace.py
 ${PYSITELIB}/lexicon/_private/providers/rackspace.pyc
 ${PYSITELIB}/lexicon/_private/providers/rackspace.pyo
@@ -236,6 +239,9 @@ ${PYSITELIB}/lexicon/_private/providers/sakuracloud.pyo
 ${PYSITELIB}/lexicon/_private/providers/softlayer.py
 ${PYSITELIB}/lexicon/_private/providers/softlayer.pyc
 ${PYSITELIB}/lexicon/_private/providers/softlayer.pyo
+${PYSITELIB}/lexicon/_private/providers/timeweb.py
+${PYSITELIB}/lexicon/_private/providers/timeweb.pyc
+${PYSITELIB}/lexicon/_private/providers/timeweb.pyo
 ${PYSITELIB}/lexicon/_private/providers/transip.py
 ${PYSITELIB}/lexicon/_private/providers/transip.pyc
 ${PYSITELIB}/lexicon/_private/providers/transip.pyo
