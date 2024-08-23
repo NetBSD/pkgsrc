@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/12 11:19:25 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/23 10:08:09 nia Exp $
 
 DISTNAME=	vcmi-1.5.6
 CATEGORIES=	games
@@ -19,6 +19,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config bash:run
+
+TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_CXX_FEATURES+=	c++17
 
