@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/04/10 09:16:24 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/23 10:14:17 adam Exp $
 
-DISTNAME=	types-python-dateutil-2.9.0.20240316
+DISTNAME=	types-python-dateutil-2.9.0.20240821
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-python-dateutil/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
