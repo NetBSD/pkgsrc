@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2023/10/24 22:11:34 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/08/23 15:55:23 pin Exp $
 
-DISTNAME=	so-0.4.9
-PKGREVISION=	1
+DISTNAME=	so-0.4.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtay/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,13 +12,16 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin
+#RUST_REQ=	1.79.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.79.0 on amd64
+#INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/so \
+#do-install:
+#	${INSTALL_PROGRAM} ${WRKSRC}/target/release/so \
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
