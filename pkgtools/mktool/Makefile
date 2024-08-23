@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/08/19 19:15:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/23 06:42:39 pin Exp $
 
-DISTNAME=	mktool-0.1.11
+DISTNAME=	mktool-0.1.14
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jperkin/mktool/
 COMMENT=	pkgsrc mk helper tool
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	isc
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
