@@ -1,0 +1,7 @@
+Websockify is a WebSocket to TCP proxy/bridge. This allows a browser to
+connect to any application/server/service.
+
+At the most basic level, websockify just translates WebSockets traffic to
+normal socket traffic. Websockify accepts the WebSockets handshake, parses
+it, and then begins forwarding traffic between the client and the target in
+both directions.
