@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2024/08/23 06:44:50 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/23 15:26:17 pin Exp $
 
-DISTNAME=	v13.0.0-alpha.4
+DISTNAME=	v13.0.0-alpha.5
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
 GITHUB_PROJECT=	tokei
-GITHUB_TAG=	v13.0.0-alpha.4
+GITHUB_TAG=	v13.0.0-alpha.5
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/XAMPPRocky/tokei/
