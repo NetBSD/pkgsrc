@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/16 14:03:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/08/23 13:15:15 vins Exp $
 bin/toot
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -27,6 +27,9 @@ ${PYSITELIB}/toot/cli/accounts.pyo
 ${PYSITELIB}/toot/cli/auth.py
 ${PYSITELIB}/toot/cli/auth.pyc
 ${PYSITELIB}/toot/cli/auth.pyo
+${PYSITELIB}/toot/cli/diag.py
+${PYSITELIB}/toot/cli/diag.pyc
+${PYSITELIB}/toot/cli/diag.pyo
 ${PYSITELIB}/toot/cli/lists.py
 ${PYSITELIB}/toot/cli/lists.pyc
 ${PYSITELIB}/toot/cli/lists.pyo
@@ -72,6 +75,7 @@ ${PYSITELIB}/toot/output.pyo
 ${PYSITELIB}/toot/settings.py
 ${PYSITELIB}/toot/settings.pyc
 ${PYSITELIB}/toot/settings.pyo
+${PYSITELIB}/toot/tui/NOTES.md
 ${PYSITELIB}/toot/tui/__init__.py
 ${PYSITELIB}/toot/tui/__init__.pyc
 ${PYSITELIB}/toot/tui/__init__.pyo
@@ -87,6 +91,9 @@ ${PYSITELIB}/toot/tui/constants.pyo
 ${PYSITELIB}/toot/tui/entities.py
 ${PYSITELIB}/toot/tui/entities.pyc
 ${PYSITELIB}/toot/tui/entities.pyo
+${PYSITELIB}/toot/tui/images.py
+${PYSITELIB}/toot/tui/images.pyc
+${PYSITELIB}/toot/tui/images.pyo
 ${PYSITELIB}/toot/tui/overlays.py
 ${PYSITELIB}/toot/tui/overlays.pyc
 ${PYSITELIB}/toot/tui/overlays.pyo
@@ -111,9 +118,6 @@ ${PYSITELIB}/toot/tui/utils.pyo
 ${PYSITELIB}/toot/tui/widgets.py
 ${PYSITELIB}/toot/tui/widgets.pyc
 ${PYSITELIB}/toot/tui/widgets.pyo
-${PYSITELIB}/toot/typing_compat.py
-${PYSITELIB}/toot/typing_compat.pyc
-${PYSITELIB}/toot/typing_compat.pyo
 ${PYSITELIB}/toot/utils/__init__.py
 ${PYSITELIB}/toot/utils/__init__.pyc
 ${PYSITELIB}/toot/utils/__init__.pyo
