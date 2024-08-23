@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/23 09:59:22 nia Exp $
+
+BLAKE2s (websockify-0.12.0.tar.gz) = 8f4ba9c2710b51d8169feb52f45a1497730a4fd0ec10718a5cc7786e942c285c
+SHA512 (websockify-0.12.0.tar.gz) = 616619a27b00af6621d9b2e3be415ff958fc226a08714302688b76690976805a22c120ff7f0eaca3d7f26fd5575971a96b5e27e5d20688c6edbb4eb84b896871
+Size (websockify-0.12.0.tar.gz) = 56839 bytes
