@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2022/11/25 10:42:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/08/23 17:48:50 adam Exp $
 # used by databases/rrdtool/Makefile
 # used by databases/py-rrdtool/Makefile
 # used by databases/ruby-rrdtool/Makefile
 
-DISTNAME=	rrdtool-1.8.0
+DISTNAME=	rrdtool-1.9.0
 CATEGORIES=	databases graphics net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 GITHUB_PROJECT=	rrdtool-1.x

@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2024/05/29 16:31:52 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/08/23 17:48:50 adam Exp $
 
-PKGREVISION= 7
 .include "../../databases/rrdtool/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
-EGG_NAME=	rrdtool-0.1.10
+WHEEL_NAME=	rrdtool-0.1.10
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 EXTRACT_ELEMENTS=	${DISTNAME}/bindings/python ${DISTNAME}/src
 WRKSRC=			${WRKDIR}/${DISTNAME}/bindings/python
@@ -15,5 +17,5 @@ pre-configure:
 	${RM} ${WRKDIR}/${DISTNAME}/src/rrd_config.h
 
 .include "../../databases/rrdtool/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
