@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.70 2024/08/23 09:52:36 triaxx Exp $
+# $NetBSD: Makefile,v 1.71 2024/08/23 12:20:05 triaxx Exp $
 
 DISTNAME=	duplicity-3.0.2
 CATEGORIES=	sysutils net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/duplicity/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	triaxx@NetBSD.org
 HOMEPAGE=	https://duplicity.us/
 COMMENT=	Remote encrypting incremental backup utility
 LICENSE=	gnu-gpl-v2
