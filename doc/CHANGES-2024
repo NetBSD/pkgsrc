@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5314 2024/08/23 06:45:10 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5315 2024/08/23 07:31:14 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8231,3 +8231,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated pkgtools/mktool to 0.1.14 [pin 2024-08-23]
 	Updated shells/oh-my-posh to 23.7.2 [pin 2024-08-23]
 	Updated devel/tokei to alpha.4 [pin 2024-08-23]
+	Updated sysutils/fd-find to 10.2.0 [pin 2024-08-23]
