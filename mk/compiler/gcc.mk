@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.282 2024/06/29 13:08:09 wiz Exp $
+# $NetBSD: gcc.mk,v 1.283 2024/08/23 10:33:05 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -230,12 +230,8 @@ GCC_REQD+=	4.9
 .endif
 
 .if !empty(USE_CC_FEATURES:Mc17)
-# \todo Find gcc documentation about c17 support.
-# gcc7 fails with --std=c17
-# gcc8, gcc9 are unknown
-# gcc10 works
-
-# Choose 10 following the limited versions guidance.
+# GCC 8 is the first version that works.  10 is the first version
+# shipped with a NetBSD release.
 GCC_REQD+=	10.0
 .endif
 
