@@ -4,7 +4,7 @@ Use correct paths and tools.
 Do not build nasmdoc.pdf.
 Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2020-07-30 07:19:07.000000000 +0000
+--- doc/Makefile.in.orig	2024-07-30 07:19:07.000000000 +0000
 +++ doc/Makefile.in
 @@ -21,6 +21,6 @@ INSTALL_PROGRAM        = @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
