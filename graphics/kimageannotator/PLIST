@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/29 00:09:28 markd Exp $
-include/kImageAnnotator/KImageAnnotator.h
-include/kImageAnnotator/KImageAnnotatorExport.h
-lib/cmake/kImageAnnotator/kImageAnnotator-targets-noconfig.cmake
-lib/cmake/kImageAnnotator/kImageAnnotator-targets.cmake
-lib/cmake/kImageAnnotator/kImageAnnotatorConfig-version.cmake
-lib/cmake/kImageAnnotator/kImageAnnotatorConfig.cmake
+@comment $NetBSD: PLIST,v 1.2 2024/08/24 04:24:47 markd Exp $
+include/kImageAnnotator-Qt5/kImageAnnotator/KImageAnnotator.h
+include/kImageAnnotator-Qt5/kImageAnnotator/KImageAnnotatorExport.h
+lib/cmake/kImageAnnotator-Qt5/kImageAnnotator-Qt5Config-version.cmake
+lib/cmake/kImageAnnotator-Qt5/kImageAnnotator-Qt5Config.cmake
+lib/cmake/kImageAnnotator-Qt5/kImageAnnotator-targets-noconfig.cmake
+lib/cmake/kImageAnnotator-Qt5/kImageAnnotator-targets.cmake
 lib/libkImageAnnotator.so
 lib/libkImageAnnotator.so.0
 lib/libkImageAnnotator.so.${PKGVERSION}
 share/kImageAnnotator/translations/kImageAnnotator_ar.qm
+share/kImageAnnotator/translations/kImageAnnotator_bg.qm
 share/kImageAnnotator/translations/kImageAnnotator_ca.qm
 share/kImageAnnotator/translations/kImageAnnotator_cs.qm
 share/kImageAnnotator/translations/kImageAnnotator_da.qm
