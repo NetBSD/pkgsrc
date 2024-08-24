@@ -1,15 +1,14 @@
-$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.10 2023/02/13 14:59:36 ryoon Exp $
+$NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.11 2024/08/24 02:57:35 ryoon Exp $
 
 * Support NetBSD
 * Add pkgsrc font path
 
---- external/pdfium/pkgsrc.patch.1.orig	2023-02-02 19:10:27.370091145 +0000
+--- external/pdfium/pkgsrc.patch.1.orig	2024-08-22 13:07:50.547500585 +0000
 +++ external/pdfium/pkgsrc.patch.1
-@@ -0,0 +1,32 @@
-+diff -ur pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp pdfium/core/fpdfapi/page/cpdf_psengine.cpp
-+--- pdfium.orig/core/fpdfapi/page/cpdf_psengine.cpp	2023-02-03 04:06:26.999101009 +0900
-++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp	2023-02-03 04:07:10.917863193 +0900
-+@@ -75,7 +75,7 @@
+@@ -0,0 +1,30 @@
++--- pdfium/core/fpdfapi/page/cpdf_psengine.cpp.orig	2024-04-16 00:00:38.000000000 +0000
+++++ pdfium/core/fpdfapi/page/cpdf_psengine.cpp
++@@ -75,7 +75,7 @@ constexpr PDF_PSOpName kPsOpNames[] = {
 + // Round half up is a nearest integer round with half-way numbers always rounded
 + // up. Example: -5.5 rounds to -5.
 + float RoundHalfUp(float f) {
@@ -18,19 +17,18 @@ $NetBSD: patch-external_pdfium_pkgsrc.patch.1,v 1.10 2023/02/13 14:59:36 ryoon E
 +     return 0;
 +   if (f > std::numeric_limits<float>::max() - 0.5f)
 +     return std::numeric_limits<float>::max();
-+diff -ur pdfium.orig/core/fxge/linux/fx_linux_impl.cpp pdfium/core/fxge/linux/fx_linux_impl.cpp
-+--- pdfium.orig/core/fxge/linux/fx_linux_impl.cpp	2023-02-03 04:06:27.025945382 +0900
-++++ pdfium/core/fxge/linux/fx_linux_impl.cpp	2023-02-03 04:09:36.257147908 +0900
-+@@ -18,7 +18,7 @@
-+ #include "third_party/base/check.h"
++--- pdfium/core/fxge/linux/fx_linux_impl.cpp.orig	2024-04-16 00:00:38.000000000 +0000
+++++ pdfium/core/fxge/linux/fx_linux_impl.cpp
++@@ -17,7 +17,7 @@
++ #include "core/fxge/fx_font.h"
++ #include "core/fxge/systemfontinfo_iface.h"
 + 
-+ #if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_FUCHSIA) && \
-+-    !defined(OS_ASMJS)
-++    !defined(OS_ASMJS) && !defined(OS_NETBSD)
++-#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS)
+++#if !BUILDFLAG(IS_LINUX) && !BUILDFLAG(IS_CHROMEOS) && !defined(OS_ASMJS) && !defined(OS_NETBSD)
 + #error "Included on the wrong platform"
 + #endif
 + 
-+@@ -170,6 +170,7 @@
++@@ -169,6 +169,7 @@ class CLinuxPlatform : public CFX_GEModu
 +       pInfo->AddPath("/usr/share/X11/fonts/Type1");
 +       pInfo->AddPath("/usr/share/X11/fonts/TTF");
 +       pInfo->AddPath("/usr/local/share/fonts");
