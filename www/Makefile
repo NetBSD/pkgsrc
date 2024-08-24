@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1812 2024/08/23 09:59:22 nia Exp $
+# $NetBSD: Makefile,v 1.1813 2024/08/24 06:27:41 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -961,7 +961,6 @@ SUBDIR+=	qutebrowser
 SUBDIR+=	ramaze
 SUBDIR+=	reader
 SUBDIR+=	redlib
-SUBDIR+=	rekonq
 SUBDIR+=	restish
 SUBDIR+=	ruby-actioncable61
 SUBDIR+=	ruby-actioncable70
