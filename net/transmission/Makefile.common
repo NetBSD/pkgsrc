@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.21 2024/02/17 21:13:31 nia Exp $
+# $NetBSD: Makefile.common,v 1.22 2024/08/24 20:49:17 abs Exp $
 #
 # used by net/transmission-common/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
 # used by net/transmission/Makefile
 
-VERSION=	4.0.5
+VERSION=	4.0.6
 DISTNAME=	transmission-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=transmission/}
