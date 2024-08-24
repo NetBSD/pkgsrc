@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1578 2024/08/24 04:54:49 markd Exp $
+# $NetBSD: Makefile,v 1.1579 2024/08/24 04:58:59 markd Exp $
 #
 
 COMMENT=	Networking tools
@@ -305,7 +305,6 @@ SUBDIR+=	kf6-kdnssd
 SUBDIR+=	kf6-knewstuff
 SUBDIR+=	kget
 SUBDIR+=	kismet
-SUBDIR+=	kmldonkey
 SUBDIR+=	knewstuff
 SUBDIR+=	knock
 SUBDIR+=	knot
