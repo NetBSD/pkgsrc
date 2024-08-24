@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.338 2024/08/09 09:42:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.339 2024/08/24 02:57:35 ryoon Exp $
 
-VERREL=		24.2.5
-VERRC=		2
+VERREL=		24.8.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -91,11 +90,11 @@ MORE_DISTFILES= \
 	breakpad-b324760c7f53667af128a6b77b790323da04fcb9.tar.xz \
 	0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz \
 	liberation-narrow-fonts-ttf-1.07.6.tar.gz \
-	liberation-fonts-ttf-2.1.4.tar.gz \
+	liberation-fonts-ttf-2.1.5.tar.gz \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.2.tar.gz \
+	xmlsec1-1.3.5.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -108,16 +107,16 @@ MORE_DISTFILES= \
 	ba2930200c9f019c2d93a8c88c651a0f-flow-engine-0.9.4.zip \
 	db60e4fde8dd6d6807523deb71ee34dc-liblayout-0.2.10.zip \
 	d8bd5eed178db6e2b18eeed243f85aa8-flute-1.1.6.zip \
-	beeca87be45ec87d241ddd0e1bad80c1-bsh-2.0b6-src.zip \
+	bsh-2.1.1-src.zip \
 	e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
 	mariadb-connector-c-3.3.8-src.tar.gz \
-	798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip \
+	rhino-1.7.14.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-13.14.tar.bz2 \
+	postgresql-13.15.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -130,14 +129,14 @@ MORE_DISTFILES= \
 	Scheherazade-2.100.zip \
 	lxml-4.1.1.tgz \
 	Amiri-1.000.zip \
-	ReemKufi-1.2.zip \
-	pdfium-6179.tar.bz2 \
+	ReemKufi-1.7.zip \
+	pdfium-6425.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m116-2ddcf183eb260f63698aa74d1bb380f247ad7ccd.tar.xz \
-	libcmis-0.6.1.tar.xz \
-	Java-WebSocket-1.5.4.tar.gz \
-	NotoSans-v2.012.zip \
-	NotoSerif-v2.012.zip \
+	libcmis-0.6.2.tar.xz \
+	Java-WebSocket-1.5.6.tar.gz \
+	NotoSans-v2.013.zip \
+	NotoSerif-v2.013.zip \
 	NotoSansHebrew-v3.001.zip \
 	NotoSansArabic-v2.010.zip \
 	NotoKufiArabic-v2.109.zip \
@@ -145,7 +144,7 @@ MORE_DISTFILES= \
 	NotoSerifHebrew-v2.004.zip \
 	NotoSansArmenian-v2.008.zip \
 	NotoSerifArmenian-v2.008.zip \
-	NotoSansGeorgian-v2.003.zip \
+	NotoSansGeorgian-v2.005.zip \
 	NotoSerifGeorgian-v2.003.zip \
 	NotoSansLao-v2.003.zip \
 	NotoSerifLao-v2.003.zip \
@@ -182,6 +181,7 @@ WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
 TOOL_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=		xdg-utils-[0-9]*:../../misc/xdg-utils
+DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
 
 LDFLAGS+=		-lboost_system
 
@@ -200,6 +200,7 @@ CXXFLAGS.NetBSD+=	-DNO_CPLUSPLUS_ALLOCA
 # Do not use /tmp, outside of WRKSRC.
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
 CONFIGURE_ENV+=		ANT_LIB=${PREFIX}/lib/java/ant
+CONFIGURE_ENV+=		ac_cv_path_GPG=${PREFIX}/bin/gpg2
 
 MAKE_JOBS_SAFE=		no # --with-parallelism conficts with -jN
 .if !empty(MAKE_JOBS.${PKGPATH})
@@ -232,6 +233,7 @@ CONFIGURE_ARGS+=	--with-system-gpgmepp
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--without-system-postgresql
 CONFIGURE_ARGS+=	--without-system-mariadb
+CONFIGURE_ARGS+=	--without-system-rhino
 CONFIGURE_ARGS+=	--without-system-xmlsec # Needs NSS support
 CONFIGURE_ARGS+=	--with-system-zxing
 CONFIGURE_ENV+=		CPLUS_INCLUDE_PATH=${BUILDLINK_PREFIX.zxing-cpp}/include
