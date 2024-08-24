@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/08/24 04:51:24 markd Exp $
+# $NetBSD: Makefile,v 1.83 2024/08/24 04:55:43 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	36
@@ -102,7 +102,6 @@ DEPENDS+=	kmix>=4.14.3:../../multimedia/kmix
 DEPENDS+=	mplayerthumbs-16.04.0{,nb[0-9]*}:../../multimedia/mplayerthumbs
 DEPENDS+=	kget>=15.12.0:../../net/kget
 DEPENDS+=	kopete>=16.12.0:../../net/kopete
-#DEPENDS+=	kppp-16.12.0{,nb[0-9]*}:../../net/kppp
 DEPENDS+=	krdc>=15.12.0:../../net/krdc
 DEPENDS+=	krfb>=4.14.3:../../net/krfb
 DEPENDS+=	zeroconf-ioslave-4.14.3{,nb[0-9]*}:../../net/zeroconf-ioslave
