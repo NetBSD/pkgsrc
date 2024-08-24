@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5333 2024/08/24 05:02:17 markd Exp $
+$NetBSD: CHANGES-2024,v 1.5334 2024/08/24 05:39:46 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8263,3 +8263,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed misc/superkaramba [markd 2024-08-24]
 	Removed net/kppp [markd 2024-08-24]
 	Removed net/kmldonkey [markd 2024-08-24]
+	Updated sysutils/kcron to 23.08.4 [markd 2024-08-24]
