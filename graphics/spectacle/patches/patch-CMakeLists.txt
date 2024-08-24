@@ -1,0 +1,32 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/08/24 04:27:17 markd Exp $
+
+Build with kImageAnnotator 0.7.1
+
+--- CMakeLists.txt.orig	2022-09-02 22:08:21.000000000 +0000
++++ CMakeLists.txt
+@@ -100,19 +100,19 @@ if(NOT XCB_CURSOR_FOUND)
+ endif()
+ 
+ if (QT_MAJOR_VERSION STREQUAL "5") # For the moment kImageAnnotator is not ported to qt6
+-    find_package(kImageAnnotator)
++    find_package(kImageAnnotator-Qt5)
+ endif()
+-if(kImageAnnotator_FOUND)
++if(kImageAnnotator-Qt5_FOUND)
+     find_package(X11 REQUIRED)
+-    find_package(kColorPicker REQUIRED)
++    find_package(kColorPicker-Qt5 REQUIRED)
+     set(KIMAGEANNOTATOR_FOUND 1)
+-    if(NOT kImageAnnotator_VERSION VERSION_LESS 0.5.0)
++    if(NOT kImageAnnotator-Qt5_VERSION VERSION_LESS 0.5.0)
+         set(KIMAGEANNOTATOR_CAN_LOAD_TRANSLATIONS 1)
+     endif()
+-    if(NOT kImageAnnotator_VERSION VERSION_LESS 0.6.0)
++    if(NOT kImageAnnotator-Qt5_VERSION VERSION_LESS 0.6.0)
+         set(KIMAGEANNOTATOR_HAS_EXTRA_TOOLS 1)
+     endif()
+-    if(NOT kImageAnnotator_VERSION VERSION_LESS 0.6.1)
++    if(NOT kImageAnnotator-Qt5_VERSION VERSION_LESS 0.6.1)
+         set(KIMAGEANNOTATOR_HAS_FIXED_SIZEHINT 1)
+     endif()
+ endif()

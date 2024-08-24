@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/09/29 00:53:12 markd Exp $
+$NetBSD: distinfo,v 1.8 2024/08/24 04:27:17 markd Exp $
 
 BLAKE2s (spectacle-22.08.1.tar.xz) = 17ca1e4f6a2089aa2211fe8c6ac65c72431c3c51cfbfdfde023a59e5e2131225
 SHA512 (spectacle-22.08.1.tar.xz) = 183a02c16ff902ed02c8c4f281cc1ac6c84e5b6ba25cbdfcfb0d943dc2002953eb8a68d452106b1aa2c9b5a1af63dea01e9c417f4813838b88a6e6a21ba2ae2c
 Size (spectacle-22.08.1.tar.xz) = 1254520 bytes
+SHA1 (patch-CMakeLists.txt) = 706561939ff8afa585f286b7deb8259205d23a16
