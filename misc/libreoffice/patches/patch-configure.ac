@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.28 2024/08/24 02:57:35 ryoon Exp $
 
 * Add NetBSD/aarch64 support.
 * Disable freetype2 and fontconfig from pkgsrc explicitly.
@@ -7,9 +7,9 @@ $NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
 * Find devel/apache-ant.
 * Fix broken xinerama detection.
 
---- configure.ac.orig	2024-01-26 11:15:05.000000000 +0000
+--- configure.ac.orig	2024-08-08 20:59:54.000000000 +0000
 +++ configure.ac
-@@ -5428,6 +5428,11 @@ linux-android*)
+@@ -5503,6 +5503,11 @@ linux-android*)
          RTL_ARCH=X86_64
          PLATFORMID=netbsd_x86_64
          ;;
@@ -21,7 +21,7 @@ $NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
      *)
          AC_MSG_ERROR([Unsupported host_cpu $host_cpu for host_os $host_os])
          ;;
-@@ -9723,9 +9728,9 @@ dnl When the minimal version is at least
+@@ -9883,9 +9888,9 @@ dnl When the minimal version is at least
  dnl ===================================================================
  FREETYPE_CFLAGS_internal="${ISYSTEM}${WORKDIR}/UnpackedTarball/freetype/include"
  if test "x$ac_config_site_64bit_host" = xYES; then
@@ -33,7 +33,16 @@ $NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
  fi
  libo_CHECK_SYSTEM_MODULE([freetype],[FREETYPE],[freetype2 >= 9.9.3],,system,TRUE)
  
-@@ -13826,8 +13831,8 @@ if test "$USING_X11" = TRUE; then
+@@ -12893,7 +12898,7 @@ elif test "$enable_mpl_subset" = "yes"; 
+     AC_MSG_RESULT([no (MPL only)])
+ elif test "$enable_fuzzers" = "yes"; then
+     AC_MSG_RESULT([no (oss-fuzz)])
+-elif test \( \( "$_os" = "Linux" -o "$_os" = "Darwin" \) -a "$ENABLE_NSS" = TRUE \) -o "$_os" = "WINNT" ; then
++elif test \( \( "$_os" = "Linux" -o "$_os" = "Darwin" -o "$_os" = "NetBSD" \) -a "$ENABLE_NSS" = TRUE \) -o "$_os" = "WINNT" ; then
+     AC_MSG_RESULT([yes])
+     dnl ===================================================================
+     dnl Check for system gpgme
+@@ -13991,8 +13996,8 @@ if test "$USING_X11" = TRUE; then
          AC_CHECK_HEADER(X11/extensions/Xinerama.h, [],
              [AC_MSG_ERROR(Xinerama header not found.)], [])
          XEXTLIBS=`$PKG_CONFIG --variable=libs xext`
@@ -44,7 +53,7 @@ $NetBSD: patch-configure.ac,v 1.27 2024/02/11 15:31:58 ryoon Exp $
          fi
          XINERAMA_EXTRA_LIBS="$XEXTLIBS"
          if test "$_os" = "FreeBSD"; then
-@@ -14109,8 +14114,8 @@ EOF
+@@ -14283,8 +14288,8 @@ EOF
                      if test -f /usr/share/ant-core/lib/ant.jar; then
                          ANT_LIB=/usr/share/ant-core/lib
                      else
