@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.19 2024/02/11 15:31:58 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.20 2024/08/24 02:57:35 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -220,6 +220,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-zh-CN.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-zh-TW.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description-zu.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/description.xml
+${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/.dir
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/af-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/af.done
 ${PKGNAME}/lib/libreoffice/share/extensions/nlpsolver/help/af/help.db_
@@ -1809,6 +1810,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/filter/math/scripts.x
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/filter/math/tables.xsl
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/filter/math/tokens.xsl
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/filter/odt2mediawiki.xsl
+${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/.dir
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/af-xhp.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/af.done
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/help/af/help.db_
