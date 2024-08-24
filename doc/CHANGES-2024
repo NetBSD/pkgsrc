@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5335 2024/08/24 06:17:31 markd Exp $
+$NetBSD: CHANGES-2024,v 1.5336 2024/08/24 06:24:25 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8265,3 +8265,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed net/kmldonkey [markd 2024-08-24]
 	Updated sysutils/kcron to 23.08.4 [markd 2024-08-24]
 	Updated textproc/dikt to 2v [markd 2024-08-24]
+	Removed misc/kremotecontrol [markd 2024-08-24]
