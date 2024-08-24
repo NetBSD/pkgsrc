@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2024/08/13 18:06:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/08/24 00:07:05 gdt Exp $
 bin/qgis
 bin/qgis_bench
 bin/qgis_mapserver
@@ -3408,6 +3408,7 @@ share/qgis/python/qgis/_gui.so
 share/qgis/python/qgis/_server.pyi
 share/qgis/python/qgis/_server.so
 share/qgis/python/qgis/analysis/__init__.py
+share/qgis/python/qgis/analysis/class_map.yaml
 share/qgis/python/qgis/core/__init__.py
 share/qgis/python/qgis/core/additions/__init__.py
 share/qgis/python/qgis/core/additions/edit.py
@@ -3426,12 +3427,14 @@ share/qgis/python/qgis/core/additions/ranges.py
 share/qgis/python/qgis/core/additions/readwritecontextentercategory.py
 share/qgis/python/qgis/core/additions/runtimeprofiler.py
 share/qgis/python/qgis/core/additions/validitycheck.py
+share/qgis/python/qgis/core/class_map.yaml
 share/qgis/python/qgis/core/contextmanagers.py
 share/qgis/python/qgis/gui/__init__.py
+share/qgis/python/qgis/gui/class_map.yaml
 share/qgis/python/qgis/processing/__init__.py
 share/qgis/python/qgis/processing/algfactory.py
 share/qgis/python/qgis/server/__init__.py
-share/qgis/python/qgis/sipify.yaml
+share/qgis/python/qgis/server/class_map.yaml
 share/qgis/python/qgis/testing/__init__.py
 share/qgis/python/qgis/testing/mocked.py
 share/qgis/python/qgis/user.py
