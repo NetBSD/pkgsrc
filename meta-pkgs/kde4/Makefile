@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/05/29 16:33:29 adam Exp $
+# $NetBSD: Makefile,v 1.80 2024/08/24 04:41:24 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	36
@@ -132,7 +132,6 @@ DEPENDS+=	lokalize>=4.14.3:../../devel/lokalize
 DEPENDS+=	poxml>=4.14.3:../../devel/poxml
 DEPENDS+=	umbrello>=4.14.3:../../devel/umbrello
 DEPENDS+=	kate>=4.14.3:../../editors/kate
-#DEPENDS+=	amor-15.08.3{,nb[0-9]*}:../../games/amor
 #DEPENDS+=	kteatime>=4.14.3:../../misc/kteatime
 #DEPENDS+=	ktux-15.08.3{,nb[0-9]*}:../../misc/ktux
 DEPENDS+=	ark>=4.14.3:../../archivers/ark
