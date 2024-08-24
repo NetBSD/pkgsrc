@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/08/23 15:26:17 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/24 04:19:14 pin Exp $
 
 DISTNAME=	v13.0.0-alpha.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
+PKGNAME=	${GITHUB_PROJECT}-13.0.0.alpha5
 CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=XAMPPRocky/}
 GITHUB_PROJECT=	tokei
