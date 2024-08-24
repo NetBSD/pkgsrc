@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:05:51 nia Exp $
-
-BLAKE2s (kppp-16.12.0.tar.xz) = 4881bcdd2829a62855ad6f1e4468e91d7cefb91bc6cfc561fd2fe78033af3571
-SHA512 (kppp-16.12.0.tar.xz) = 780fbf76f5fadf54eb0c9fc9abb711c4338d577dd02d19384d97530aa5057c129fdaa638e1eae9dc89481a0283a1d043a7973a6df6d3ffd9fbeb57a98f3f8a89
-Size (kppp-16.12.0.tar.xz) = 700920 bytes
