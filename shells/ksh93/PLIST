@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2024/07/30 15:17:08 vins Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/24 13:37:40 vins Exp $
 bin/ksh93
 bin/shcomp
 include/ast/align.h
 include/ast/aso.h
 include/ast/ast.h
 include/ast/ast_api.h
-include/ast/ast_botch.h
 include/ast/ast_ccode.h
 include/ast/ast_common.h
 include/ast/ast_dir.h
@@ -13,7 +12,6 @@ include/ast/ast_dirent.h
 include/ast/ast_fcntl.h
 include/ast/ast_float.h
 include/ast/ast_fs.h
-include/ast/ast_getopt.h
 include/ast/ast_iconv.h
 include/ast/ast_lib.h
 include/ast/ast_limits.h
@@ -44,7 +42,6 @@ include/ast/cmdlist.h
 include/ast/debug.h
 include/ast/dirent.h
 include/ast/dlldefs.h
-include/ast/dt.h
 include/ast/endian.h
 include/ast/error.h
 include/ast/find.h
@@ -53,7 +50,6 @@ include/ast/fnv.h
 include/ast/fts.h
 include/ast/ftw.h
 include/ast/ftwalk.h
-include/ast/getopt.h
 include/ast/glob.h
 include/ast/hash.h
 include/ast/hashkey.h
@@ -98,9 +94,7 @@ include/ast/tm.h
 include/ast/tmx.h
 include/ast/tok.h
 include/ast/tv.h
-include/ast/usage.h
 include/ast/vdb.h
-include/ast/vmalloc.h
 include/ast/wait.h
 include/ast/wchar.h
 include/ast/wctype.h
@@ -180,4 +174,3 @@ man/man3/tmx.3ast
 man/man3/tok.3ast
 man/man3/touch.3ast
 man/man3/tv.3ast
-man/man3/vmalloc.3ast
