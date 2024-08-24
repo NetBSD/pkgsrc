@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2024/05/29 16:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.74 2024/08/24 06:16:06 markd Exp $
 
-DISTNAME=	dikt-2j
-PKGREVISION=	56
+DISTNAME=	dikt-2v
 CATEGORIES=	textproc x11
-#MASTER_SITES=	http://dikt.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=-/project/46530021/uploads/755d2ad7b4979d3206a3a5a49de78141/}
 EXTRACT_SUFX=	.txz
 
 MAINTAINER=	cheusov@NetBSD.org
@@ -11,20 +10,17 @@ HOMEPAGE=	https://www.dikt.tv/
 COMMENT=	Dictionary protocol client for KDE
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-TOOL_DEPENDS+=	xz-[0-9]*:../../archivers/xz
+USE_TOOLS+=	msgmerge
 
-USE_TOOLS+=	tar
-TOOLS_BROKEN+=	perl
-USE_LIBTOOL=	yes
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+.include "../../meta-pkgs/kde/applications.mk"
 
-do-extract:
-	set -e; ${MKDIR} ${WRKDIR}; cd ${WRKDIR}; \
-	${PREFIX}/bin/xz -dc ${DISTDIR}/${DISTNAME}.txz | tar -xf-
-
-.include "../../meta-pkgs/kde4/kde4.mk"
-.include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../devel/kconfig/buildlink3.mk"
+.include "../../devel/kio/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/kiconthemes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/kdbusaddons/buildlink3.mk"
+.include "../../x11/kguiaddons/buildlink3.mk"
+.include "../../x11/kxmlgui/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
