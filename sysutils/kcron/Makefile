@@ -1,14 +1,21 @@
-# $NetBSD: Makefile,v 1.49 2024/05/29 16:34:26 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/24 05:28:59 markd Exp $
 
-DISTNAME=	kcron-${_KDE_VERSION}
-PKGREVISION=	40
+DISTNAME=	kcron-${KAPPSVER}
 CATEGORIES=	sysutils
+
+HOMEPAGE=	https://apps.kde.org/en-gb/kcron/
 COMMENT=	Configure and schedule tasks
+LICENSE=	cc0-1.0-universal AND gnu-gpl-v2
 
-.include "../../meta-pkgs/kde4/Makefile.kde4"
+.include "../../meta-pkgs/kde/applications.mk"
 
-.include "../../meta-pkgs/kde4/kde4.mk"
+TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
-.include "../../x11/kdelibs4/buildlink3.mk"
+USE_TOOLS+=	msgmerge pkg-config
 
+.include "../../devel/kcmutils/buildlink3.mk"
+.include "../../devel/kcoreaddons/buildlink3.mk"
+.include "../../security/kauth/buildlink3.mk"
+.include "../../x11/kconfigwidgets/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
