@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/08/24 04:46:44 markd Exp $
+# $NetBSD: Makefile,v 1.82 2024/08/24 04:51:24 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	36
@@ -142,7 +142,6 @@ DEPENDS+=	kdf>=16.04.0:../../sysutils/kdf
 DEPENDS+=	ktimer>=4.14.3:../../time/ktimer
 DEPENDS+=	kwalletmanager>=4.14.3:../../security/kwalletmanager
 DEPENDS+=	kgpg>=16.08.0:../../security/kgpg
-#DEPENDS+=	superkaramba-15.08.3{,nb[0-9]*}:../../misc/superkaramba
 DEPENDS+=	sweeper-16.12.0{,nb[0-9]*}:../../misc/sweeper
 DEPENDS+=	kimagemapeditor>=19.08.0:../../www/kimagemapeditor
 #DEPENDS+=	baloo-4.14.3{,nb[0-9]*}:../../sysutils/baloo
