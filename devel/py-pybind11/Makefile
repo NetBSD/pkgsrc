@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/08/15 07:26:17 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/08/24 07:07:20 adam Exp $
 
-DISTNAME=	pybind11-2.13.4
+DISTNAME=	pybind11-2.13.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pybind11/}
@@ -14,10 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
