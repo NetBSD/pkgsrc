@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2024/08/19 22:09:32 nia Exp $
+# $NetBSD: Makefile,v 1.554 2024/08/24 04:39:50 markd Exp $
 #
 
 COMMENT=	Games
@@ -26,7 +26,6 @@ SUBDIR+=	ajbsp
 SUBDIR+=	alephone
 SUBDIR+=	amaze
 SUBDIR+=	amnesia-tdd
-SUBDIR+=	amor
 SUBDIR+=	an
 SUBDIR+=	angband
 SUBDIR+=	angband-sdl
