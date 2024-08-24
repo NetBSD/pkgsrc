@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/09/29 00:08:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/08/24 04:19:00 markd Exp $
 
-BLAKE2s (kcolorpicker-0.2.0.tar.gz) = 2d754516111a60662efe72d556f2d2c51a534b7fb8851aeee21078b2beb8d286
-SHA512 (kcolorpicker-0.2.0.tar.gz) = 44f9f317ebe5dd3131a9e44071f9f5b397b0d5cceece566f3ecf19932c8e36dafe1a434e623239421bead9413f0859bc3380174d7f14843770691e4d15a956eb
-Size (kcolorpicker-0.2.0.tar.gz) = 12735 bytes
+BLAKE2s (kcolorpicker-0.3.1.tar.gz) = 57efe94cdc943ff1b0a40ed5fa93b19cb348fa02b67ab48eda95f176ad0301f7
+SHA512 (kcolorpicker-0.3.1.tar.gz) = bb91d8dfa555e60206665453cde8f4f7536154fe7660aeab276c0a509bdb19caf04276eb0935537b390657881db020ecb943de3e5b8d286f3cd7d89bf7010674
+Size (kcolorpicker-0.3.1.tar.gz) = 12861 bytes

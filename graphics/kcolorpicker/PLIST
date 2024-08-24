@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2022/09/29 00:08:22 markd Exp $
-include/kColorPicker/KColorPicker.h
-include/kColorPicker/KColorPickerExport.h
-lib/cmake/kColorPicker/kColorPicker-targets-noconfig.cmake
-lib/cmake/kColorPicker/kColorPicker-targets.cmake
-lib/cmake/kColorPicker/kColorPickerConfig-version.cmake
-lib/cmake/kColorPicker/kColorPickerConfig.cmake
+@comment $NetBSD: PLIST,v 1.2 2024/08/24 04:19:00 markd Exp $
+include/kColorPicker-Qt5/kColorPicker/KColorPicker.h
+include/kColorPicker-Qt5/kColorPicker/KColorPickerExport.h
+lib/cmake/kColorPicker-Qt5/kColorPicker-Qt5Config-version.cmake
+lib/cmake/kColorPicker-Qt5/kColorPicker-Qt5Config.cmake
+lib/cmake/kColorPicker-Qt5/kColorPicker-targets-noconfig.cmake
+lib/cmake/kColorPicker-Qt5/kColorPicker-targets.cmake
 lib/libkColorPicker.so
 lib/libkColorPicker.so.0
 lib/libkColorPicker.so.${PKGVERSION}
