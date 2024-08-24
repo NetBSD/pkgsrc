@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2024/08/24 04:50:35 markd Exp $
+# $NetBSD: Makefile,v 1.654 2024/08/24 06:21:44 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -175,7 +175,6 @@ SUBDIR+=	kontact
 SUBDIR+=	kontactinterface
 SUBDIR+=	kp
 SUBDIR+=	kquickcharts
-SUBDIR+=	kremotecontrol
 SUBDIR+=	kstars
 SUBDIR+=	kteatime
 SUBDIR+=	ktouch
