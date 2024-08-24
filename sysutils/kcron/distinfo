@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:19:44 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/08/24 05:28:59 markd Exp $
 
-BLAKE2s (kcron-4.14.3.tar.xz) = 233bff9936f3e3b66a9625a7c426523966d167934da7a4eb71c3a7b45bbdc5b5
-SHA512 (kcron-4.14.3.tar.xz) = 4e44c826380c3d31933cc4fe97739c2a5d3c6d4c75df12c0d0b7a3e7adb246135be3b5c0e57dfd44580aee24dfb5490363fda8a263dde9af6cb7d489caf9373b
-Size (kcron-4.14.3.tar.xz) = 174656 bytes
+BLAKE2s (kcron-23.08.4.tar.xz) = 0d30016832ea2fd43dc86e51357fc1d67536cdde1a0f757ddf130f5279b93fd9
+SHA512 (kcron-23.08.4.tar.xz) = 446702f4951f44f5be364f2f8b2e58a6797c621f4f9ca92b020effb3908bd0d187a3d67b0c36f3e3464653ea247cbc4e5715fbb8d0b82eafd2fdc213ea65c429
+Size (kcron-23.08.4.tar.xz) = 942500 bytes
