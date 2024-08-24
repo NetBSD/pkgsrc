@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2024/04/10 08:48:44 adam Exp $
+# $NetBSD: Makefile,v 1.53 2024/08/24 06:51:08 adam Exp $
 
-DISTNAME=	taglib-2.0.1
+DISTNAME=	taglib-2.0.2
 CATEGORIES=	audio
 MASTER_SITES=	https://taglib.github.io/releases/
 
@@ -37,9 +37,7 @@ CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 .endif
 
 .include "../../mk/compiler.mk"
-#
 # depends on builtin functions which enabled with i486 and later with GCC.
-#
 .if ${OPSYS} == "NetBSD" && ${CC_VERSION:Mgcc-[4-9]*} && ${MACHINE_ARCH} == i386
 GNU_ARCH.i386=	i486
 CFLAGS+=	-march=i486
