@@ -1,0 +1,24 @@
+$NetBSD: patch-lib_CMakeLists.txt,v 1.4 2024/08/24 04:30:18 markd Exp $
+
+Work with kImageAnnotator 0.7.1
+
+--- lib/CMakeLists.txt.orig	2023-11-30 17:00:43.000000000 +0000
++++ lib/CMakeLists.txt
+@@ -157,7 +157,7 @@ set(gwenviewlib_SRCS
+     touch/touch_helper.cpp
+     ${GV_JPEG_DIR}/transupp.c
+     )
+-if (kImageAnnotator_FOUND)
++if (kImageAnnotator-Qt5_FOUND)
+     set(gwenviewlib_SRCS ${gwenviewlib_SRCS}
+         annotate/annotatedialog.cpp
+         annotate/annotateoperation.cpp
+@@ -338,7 +338,7 @@ if (GWENVIEW_SEMANTICINFO_BACKEND_BALOO)
+         )
+ endif()
+ 
+-if(kImageAnnotator_FOUND)
++if(kImageAnnotator-Qt5_FOUND)
+     target_link_libraries(gwenviewlib kImageAnnotator::kImageAnnotator)
+ endif()
+ 
