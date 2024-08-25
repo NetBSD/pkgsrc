@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5365 2024/08/25 10:57:32 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5366 2024/08/25 11:42:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8298,6 +8298,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-websockets to 13.0 [wiz 2024-08-25]
 	Updated devel/py-ruff to 0.6.2 [wiz 2024-08-25]
 	Updated comms/py-textual to 0.77.0 [wiz 2024-08-25]
-	Updated www/py-posting to 1.12.1 [wiz 2024-08-25]
 	Updated www/py-posting to 1.12.1 [wiz 2024-08-25]
 	Updated textproc/ruby-rexml to 3.3.6 [wiz 2024-08-25]
