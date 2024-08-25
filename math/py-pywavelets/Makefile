@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/08/20 14:24:09 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/25 08:37:56 wiz Exp $
 
 DISTNAME=	pywavelets-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,7 @@ REPLACE_PYTHON+=	pywt/data/create_dat.py
 REPLACE_PYTHON+=	pywt/tests/*.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	38
+USE_CC_FEATURES=		c17
 
 pre-configure:
 	${LN} -sf ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython
