@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.4 2024/08/11 07:04:14 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.5 2024/08/25 10:37:56 wiz Exp $
 
 Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 
@@ -19,8 +19,8 @@ salsa is not really used yet and automatic pkgsrc fetching fails for it.
  rayon = { version = "1.10.0" }
  regex = { version = "1.10.2" }
  rustc-hash = { version = "2.0.0" }
--salsa = { git = "https://github.com/MichaReiser/salsa.git", tag = "red-knot-0.0.1" }
-+#salsa = { git = "https://github.com/MichaReiser/salsa.git", tag = "red-knot-0.0.1" }
+-salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "f608ff8b24f07706492027199f51132244034f29" }
++#salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "f608ff8b24f07706492027199f51132244034f29" }
  schemars = { version = "0.8.16" }
  seahash = { version = "4.1.0" }
  serde = { version = "1.0.197", features = ["derive"] }
