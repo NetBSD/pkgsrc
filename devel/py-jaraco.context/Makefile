@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2024/04/28 09:59:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/25 10:19:16 wiz Exp $
 
-DISTNAME=	jaraco.context-5.3.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	jaraco_context-6.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.context/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco_context/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jaraco/jaraco.context
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:S/_/./}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
