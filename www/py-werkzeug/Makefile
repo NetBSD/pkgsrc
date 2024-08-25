@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/11/05 10:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/08/25 10:31:56 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 COMMENT=	Python WSGI Utility Library
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
@@ -17,6 +15,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ephemeral_port_reserve-[0-9]*:../../net/py-ephemer
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess-[0-9]*:../../devel/py-test-xprocess
+
+# as of 3.0.4
+# 17 failed, 879 passed, 1 skipped, 8 errors
 
 EGDIR=			share/examples/${PKGBASE}
 PLIST_SUBST+=		EGDIR=${EGDIR}
