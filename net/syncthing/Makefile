@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2024/08/11 15:57:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.190 2024/08/25 22:30:50 gdt Exp $
 
 # Protocol breaks require tech-pkg@ discussion and MAINTAINER approval.
 DISTNAME=	syncthing-source-v1.26.1
@@ -13,8 +13,16 @@ HOMEPAGE=	https://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
 
+# This package is broken on NetBSD i386 and probably armv[67], because
+#   github.com/shirou/gopsutil/v3/disk
+#   vendor/github.com/shirou/gopsutil/v3/disk/disk_netbsd.go:45:13: undefined: sizeOfStatvfs
+#   vendor/github.com/shirou/gopsutil/v3/disk/disk_netbsd.go:46:16: undefined: Statvfs
+#   vendor/github.com/shirou/gopsutil/v3/disk/disk_netbsd.go:105:10: undefined: Statvfs
+#   vendor/github.com/shirou/gopsutil/v3/disk/disk_netbsd.go:142:21: undefined: Statvfs
+
 # The 'zillode' dependency calls the compiler on certain archs.
 USE_LANGUAGES=		c
+
 WRKSRC=			${WRKDIR}/syncthing
 NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin share/applications
