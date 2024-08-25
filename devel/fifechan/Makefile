@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/04/06 08:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/25 06:18:33 wiz Exp $
 
 DISTNAME=	fifechan-0.1.5
 PKGREVISION=	10
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build

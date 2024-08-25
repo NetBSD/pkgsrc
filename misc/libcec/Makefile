@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/08/14 05:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	libcec-4.0.4
 PKGREVISION=	3
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
 
-CMAKE_ARGS+=	-DSKIP_PYTHON_WRAPPER=ON
+CMAKE_CONFIGURE_ARGS+=	-DSKIP_PYTHON_WRAPPER=ON
 
 REPLACE_PYTHON+=	src/pyCecClient/pyCecClient.py
 

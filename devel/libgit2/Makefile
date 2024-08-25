@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/05/29 16:32:13 adam Exp $
+# $NetBSD: Makefile,v 1.83 2024/08/25 06:18:35 wiz Exp $
 
 DISTNAME=	libgit2-1.8.1
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99 # src/cli/opt.c uses alloca(3)
 
-CMAKE_ARGS+=	-DREGEX_BACKEND="pcre2"
+CMAKE_CONFIGURE_ARGS+=	-DREGEX_BACKEND="pcre2"
 
 PKGCONFIG_OVERRIDE+=		${CMAKE_BUILD_DIR}/libgit2.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install

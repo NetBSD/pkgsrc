@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/05/29 16:34:37 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/25 06:19:16 wiz Exp $
 
 DISTNAME=	libkolabxml-1.1.6
 PKGREVISION=	14
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake
 
-CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 
 SUBST_CLASSES+=		pathes
 SUBST_STAGE.pathes=	post-install

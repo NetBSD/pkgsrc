@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/05/29 16:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.97 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	kdeartwork-15.08.3
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -9,10 +9,10 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
-CMAKE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver/config
-CMAKE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
-CMAKE_ARGS+=	-DWITH_Eigen3:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_Kexiv2:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DXSCREENSAVER_CONFIG_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver/config
+CMAKE_CONFIGURE_ARGS+=	-DXSCREENSAVER_DIR:PATH=${BUILDLINK_PREFIX.xscreensaver}/libexec/xscreensaver
+CMAKE_CONFIGURE_ARGS+=	-DWITH_Eigen3:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_Kexiv2:BOOL=OFF
 
 #BUILD_MAKE_FLAGS+=	VERBOSE=1
 

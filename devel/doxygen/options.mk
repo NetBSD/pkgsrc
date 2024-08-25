@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.18 2023/06/06 12:40:36 riastradh Exp $
+# $NetBSD: options.mk,v 1.19 2024/08/25 06:18:33 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
 PKG_SUPPORTED_OPTIONS=	latex qt
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	latex qt
 PLIST_VARS+=		latex qt
 
 .if !empty(PKG_OPTIONS:Mlatex)
-CMAKE_ARGS+=	-Dbuild_doc=ON
+CMAKE_CONFIGURE_ARGS+=	-Dbuild_doc=ON
 BUILD_TARGET=	all docs
 PLIST.latex=	yes
 
@@ -67,7 +67,7 @@ DEPENDS+=	tex-xtab-[0-9]*:../../print/tex-xtab
 
 
 .if !empty(PKG_OPTIONS:Mqt)
-CMAKE_ARGS+=	-Dbuild_wizard=ON
+CMAKE_CONFIGURE_ARGS+=	-Dbuild_wizard=ON
 PLIST.qt=	yes
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .endif

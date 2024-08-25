@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2024/05/29 16:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.146 2024/08/25 06:18:23 wiz Exp $
 
 DISTNAME=	kid3-3.9.5
 PKGREVISION=	2
@@ -18,10 +18,10 @@ TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	filesystem
 USE_TOOLS+=		perl:build pkg-config
-CMAKE_ARGS+=		-DQT_QMAKE_EXECUTABLE:PATH=${QTDIR}/bin/qmake
-CMAKE_ARGS+=		-DWITH_DOCBOOKDIR:PATH=${PREFIX}/share/xsl/docbook
-CMAKE_ARGS+=		-DWITH_APPS:STRING="Qt;CLI"
-CMAKE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=		-DQT_QMAKE_EXECUTABLE:PATH=${QTDIR}/bin/qmake
+CMAKE_CONFIGURE_ARGS+=		-DWITH_DOCBOOKDIR:PATH=${PREFIX}/share/xsl/docbook
+CMAKE_CONFIGURE_ARGS+=		-DWITH_APPS:STRING="Qt;CLI"
+CMAKE_CONFIGURE_ARGS+=		-DWITH_MANDIR:STRING=${PKGMANDIR}
 # program-specific rpath is ignored since pkgsrc passes
 # -DCMAKE_SKIP_RPATH:BOOL=TRUE, so re-add it manually
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/kid3

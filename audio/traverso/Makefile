@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/05/29 16:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/25 06:18:25 wiz Exp $
 
 DISTNAME=	traverso-0.49.6
 PKGREVISION=	30
@@ -16,12 +16,12 @@ USE_TOOLS+=	pkg-config
 # note: C++11 'constexpr' only available with -std=c++11 or -std=gnu++11
 USE_LANGUAGES=	c c++11
 
-CMAKE_ARGS+=	-DWANT_MP3_ENCODE=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_MP3_ENCODE=ON
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DWANT_COREAUDIO=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_COREAUDIO=ON
 .endif
 
 INSTALLATION_DIRS+=	share/applications

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2024/01/21 00:53:46 nikita Exp $
+# $NetBSD: options.mk,v 1.25 2024/08/25 06:19:18 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -35,48 +35,48 @@ PKG_SUGGESTED_OPTIONS+=	webkit-jit
 # JIT support
 #
 .if !empty(PKG_OPTIONS:Mwebkit-jit)
-CMAKE_ARGS+=	-DENABLE_JIT=ON
-CMAKE_ARGS+=	-DENABLE_C_LOOP=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_JIT=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_C_LOOP=OFF
 .else
-CMAKE_ARGS+=	-DENABLE_JIT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_JIT=OFF
 .endif
 
 #
 # OpenGL support: enable support for GLX, WebGL and accelerated compositing
 #
 .if !empty(PKG_OPTIONS:Mopengl)
-CMAKE_ARGS+=	-DUSE_OPENGL_OR_ES=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL_OR_ES=ON
 .else
-CMAKE_ARGS+=	-DUSE_OPENGL_OR_ES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL_OR_ES=OFF
 .endif
 
 #
 # Spellcheck support using enchant
 #
 .if !empty(PKG_OPTIONS:Menchant)
-CMAKE_ARGS+=	-DENABLE_SPELLCHECK=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_SPELLCHECK=ON
 .include "../../textproc/enchant2/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DENABLE_SPELLCHECK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_SPELLCHECK=OFF
 .endif
 
 #
 # Debug build
 #
 .if !empty(PKG_OPTIONS:Mdebug)
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 .include "../../lang/ruby/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .endif
 
 #
 # Wayland display server support
 #
 .if !empty(PKG_OPTIONS:Mwayland)
-CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=ON
-CMAKE_ARGS+=	-DUSE_WPE_RENDERER=OFF # TODO
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_WAYLAND_TARGET=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WPE_RENDERER=OFF # TODO
 .include "../../devel/wayland/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DENABLE_WAYLAND_TARGET=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_WAYLAND_TARGET=OFF
 .endif

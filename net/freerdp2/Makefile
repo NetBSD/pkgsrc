@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/08/17 00:42:06 markd Exp $
+# $NetBSD: Makefile,v 1.49 2024/08/25 06:19:06 wiz Exp $
 
 DISTNAME=	freerdp-2.11.7
 PKGNAME=	${DISTNAME:S/freerdp-/freerdp2-/1}
@@ -18,22 +18,22 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DWITH_SERVER=ON
-CMAKE_ARGS+=	-DWITH_CHANNELS=ON
-CMAKE_ARGS+=	-DWITH_JPEG=ON
-CMAKE_ARGS+=	-DWITH_GSTREAMER_1_0=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SERVER=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CHANNELS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_JPEG=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_GSTREAMER_1_0=OFF
 
-CMAKE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg6/libavcodec.so
+CMAKE_CONFIGURE_ARGS+=	-DAVCODEC_LIBRARY=${PREFIX}/lib/ffmpeg6/libavcodec.so
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
-CMAKE_ARGS+=	-DWITH_OSS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OSS=ON
 LDFLAGS+=	${LIBOSSAUDIO}
 .else
-CMAKE_ARGS+=	-DWITH_OSS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OSS=OFF
 .endif
 
 .include "../../mk/bsd.prefs.mk"

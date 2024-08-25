@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/04/07 07:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/25 06:18:48 wiz Exp $
 #
 
 VERSION=	1.6.8
@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 
-CMAKE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
+CMAKE_CONFIGURE_ARGS+=	-DPREFIX:PATH=${PREFIX} -DPREFIX_PLUGINS:PATH=${PREFIX}/lib/opencpn
 CMAKE_MODULE_PATH_OVERRIDE = \
 		cmake/PluginConfigure.cmake \
 		cmake/PluginInstall.cmake \

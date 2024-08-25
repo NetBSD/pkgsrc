@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:35:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:14 wiz Exp $
 #
 
 DISTNAME=	cdrkit-1.1.9
@@ -15,7 +15,7 @@ CONFLICTS=	cdrtools-[0-9]*
 USE_CMAKE=	yes
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	c c++
-CMAKE_ARGS+=	-DMANSUBDIR=${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DMANSUBDIR=${PKGMANDIR}
 
 REPLACE_PERL=	3rd-party/dirsplit/dirsplit
 

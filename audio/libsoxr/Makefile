@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/07/25 11:12:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:24 wiz Exp $
 
 DISTNAME=	soxr-0.1.3-Source
 PKGNAME=	lib${DISTNAME:S/-Source//}
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DBUILD_TESTS=NO
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=NO
 
 PKGCONFIG_OVERRIDE+=	src/soxr.pc.in
 PKGCONFIG_OVERRIDE+=	src/soxr-lsr.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/05/15 13:02:04 ktnb Exp $
+# $NetBSD: Makefile,v 1.40 2024/08/25 06:18:36 wiz Exp $
 
 DISTNAME=	mold-2.31.0
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++20
 
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DMOLD_USE_SYSTEM_MIMALLOC=ON -DMOLD_USE_SYSTEM_TBB=ON
+CMAKE_CONFIGURE_ARGS+=	-DMOLD_USE_SYSTEM_MIMALLOC=ON -DMOLD_USE_SYSTEM_TBB=ON
 
 # Use <stdlib.h> on systems where <alloca.h> doesn't exist
 .if !exists(/usr/include/alloca.h)

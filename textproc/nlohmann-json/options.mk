@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/11/21 17:37:52 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:19:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nlohmann-json
 
@@ -13,7 +13,7 @@ PLIST_VARS+=	tests
 # FIXME: A small number of tests assume that WRKSRC is a git checkout.
 PLIST.tests=	yes
 TEST_TARGET=	test
-CMAKE_ARGS+=	-DJSON_BuildTests=ON
+CMAKE_CONFIGURE_ARGS+=	-DJSON_BuildTests=ON
 .else
-CMAKE_ARGS+=	-DJSON_BuildTests=OFF
+CMAKE_CONFIGURE_ARGS+=	-DJSON_BuildTests=OFF
 .endif

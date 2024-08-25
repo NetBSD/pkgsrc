@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/05/29 16:31:17 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/08/25 06:18:21 wiz Exp $
 
 DISTNAME=		libzip-1.10.1
 PKGREVISION=		4
@@ -17,7 +17,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-nihtest-[0-9]*:../../devel/py-nihtest
 
 TEST_TARGET=		test
 # for tests
-CMAKE_ARGS+=		-DNIHTEST=${PREFIX}/bin/nihtest-${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=		-DNIHTEST=${PREFIX}/bin/nihtest-${PYVERSSUFFIX}
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 # for Darwin
 MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib

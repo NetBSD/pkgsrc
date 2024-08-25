@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/01/15 12:05:06 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.icinga2
 PKG_SUPPORTED_OPTIONS=	debug
@@ -15,33 +15,33 @@ PLIST_VARS+=	mysql pgsql
 
 .if !empty(PKG_OPTIONS:Mmysql)
 PLIST.mysql=	yes
-CMAKE_ARGS+=	-DICINGA2_WITH_MYSQL=ON
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_MYSQL=ON
 .include "../../mk/mysql.buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DICINGA2_WITH_MYSQL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_MYSQL=OFF
 .endif
 .if !empty(PKG_OPTIONS:Mpgsql)
 PLIST.pgsql=	yes
-CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=ON
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_PGSQL=ON
 .include "../../mk/pgsql.buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DICINGA2_WITH_PGSQL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_PGSQL=OFF
 .endif
 
 PLIST_VARS+=	icingadb
 .if !empty(PKG_OPTIONS:Micingadb)
-CMAKE_ARGS+=	-DICINGA2_WITH_ICINGADB=ON
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_ICINGADB=ON
 PLIST.icingadb=	yes
 .else
-CMAKE_ARGS+=	-DICINGA2_WITH_ICINGADB=OFF
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_ICINGADB=OFF
 .endif
 
 .for option in checker compat livestatus notification perfdata
 PLIST_VARS+=		${option}
 .  if !empty(PKG_OPTIONS:Micinga2-${option})
-CMAKE_ARGS+=		-DICINGA2_WITH_${option:tu}=ON
+CMAKE_CONFIGURE_ARGS+=		-DICINGA2_WITH_${option:tu}=ON
 PLIST.${option}=	yes
 .  else
-CMAKE_ARGS+=		-DICINGA2_WITH_${option:tu}=OFF
+CMAKE_CONFIGURE_ARGS+=		-DICINGA2_WITH_${option:tu}=OFF
 .  endif
 .endfor

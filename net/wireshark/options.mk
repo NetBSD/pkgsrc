@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2023/11/20 18:34:49 adam Exp $
+# $NetBSD: options.mk,v 1.35 2024/08/25 06:19:09 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=		http2 http3 ilbc lua spandsp
@@ -13,32 +13,32 @@ PLIST_VARS+=		icons ilbc qt spandsp
 .if !empty(PKG_OPTIONS:Mhttp2)
 .  include "../../www/nghttp2/buildlink3.mk"
 .else
-CMAKE_ARGS+=		-DENABLE_NGHTTP2=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_NGHTTP2=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mhttp3)
 .  include "../../www/nghttp3/buildlink3.mk"
 .else
-CMAKE_ARGS+=		-DENABLE_NGHTTP3=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_NGHTTP3=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Milbc)
 .  include "../../audio/libilbc/buildlink3.mk"
 PLIST.ilbc=		yes
 .else
-CMAKE_ARGS+=		-DENABLE_ILBC=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_ILBC=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 LUA_VERSIONS_ACCEPTED=	52 51
 .  include "../../lang/lua/buildlink3.mk"
 .else
-CMAKE_ARGS+=		-DENABLE_LUA=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_LUA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt5) || !empty(PKG_OPTIONS:Mqt6)
 .  if !empty(PKG_OPTIONS:Mqt5)
-CMAKE_ARGS+=		-DUSE_qt6=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUSE_qt6=OFF
 .    include "../../x11/qt5-qtsvg/buildlink3.mk"
 .    include "../../x11/qt5-qttools/buildlink3.mk"
 .    if ${OPSYS} == "Darwin"
@@ -47,7 +47,7 @@ CMAKE_ARGS+=		-DUSE_qt6=OFF
 .      include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .    endif
 .  elif !empty(PKG_OPTIONS:Mqt6)
-CMAKE_ARGS+=		-DUSE_qt6=ON
+CMAKE_CONFIGURE_ARGS+=		-DUSE_qt6=ON
 .    include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .    include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .    include "../../devel/qt6-qttools/buildlink3.mk"
@@ -83,13 +83,13 @@ install-icons:
 .    endfor
 .  endif
 .else
-CMAKE_ARGS+=		-DBUILD_wireshark=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_wireshark=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mspandsp)
 .include "../../comms/spandsp/buildlink3.mk"
 PLIST.spandsp=		yes
-CMAKE_ARGS+=		-DENABLE_SPANDSP=ON
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_SPANDSP=ON
 .else
-CMAKE_ARGS+=		-DENABLE_SPANDSP=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_SPANDSP=OFF
 .endif

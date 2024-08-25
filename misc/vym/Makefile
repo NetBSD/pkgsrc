@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/08/18 05:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2024/08/25 06:19:03 wiz Exp $
 #
 
 DISTNAME=		vym-2.9.28
@@ -38,7 +38,7 @@ SUBST_MESSAGE.man-gz=	Fix installing gzipped man page
 SUBST_FILES.man-gz=	CMakeLists.txt
 SUBST_SED.man-gz=	-e 's;doc/vym.1.gz;doc/vym.1;g'
 
-# 'CMAKE_ARGS+=	-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
+# 'CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=man/man1' seems to be ignored
 SUBST_CLASSES+=			cmake-mandir
 SUBST_STAGE.cmake-mandir=	pre-configure
 SUBST_MESSAGE.cmake-mandir=	Fix man page path
@@ -64,12 +64,12 @@ SUBST_FILES.pdf-path=	CMakeLists.txt
 SUBST_SED.pdf-path=	-e 's;doc DESTINATION;doc/ DESTINATION;g'
 
 CMAKE_ARG_PATH=		.
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
-CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
-CMAKE_ARGS+=		-DCMAKE_INSTALL_DATADIR=share/vym
-CMAKE_ARGS+=		-DCMAKE_INSTALL_DATAROOTDIR=share/vym
-CMAKE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
-#CMAKE_ARGS+=		-DCMAKE_INSTALL_MANDIR=man/man1
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_DATADIR=share/vym
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_DATAROOTDIR=share/vym
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
+#CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_MANDIR=man/man1
 
 post-extract:
 	${GZIP_CMD} -d ${WRKSRC}/doc/vym.1.gz

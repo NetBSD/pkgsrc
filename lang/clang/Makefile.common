@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2024/07/07 14:00:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.63 2024/08/25 06:18:55 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-tools-extra/Makefile
 
@@ -20,16 +20,16 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 GCC_REQD+=		7
 
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 .include "../../mk/compiler.mk"
 
-CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
+CMAKE_CONFIGURE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 .if defined(OSX_SDK_PATH)
-CMAKE_ARGS.Darwin+=	-DDEFAULT_SYSROOT=${OSX_SDK_PATH:Q}
+CMAKE_CONFIGURE_ARGS.Darwin+=	-DDEFAULT_SYSROOT=${OSX_SDK_PATH:Q}
 .endif
 
 # NetBSD < 10 did not provide ENOTRECOVERABLE
@@ -109,7 +109,7 @@ LIBCPP_CHECK=	NO
 .endif
 
 .if ${OPSYS} == "NetBSD" && ${LIBCPP_CHECK} != YES
-CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+CMAKE_CONFIGURE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
 .endif
 
 # On SunOS use the libraries from the GCC used to build clang rather than
@@ -149,14 +149,14 @@ PKG_SUPPORTED_OPTIONS=	tests z3
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mtests)
-CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
-CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
 TEST_TARGET=		clang-test
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 .  include "../../devel/googletest/buildlink3.mk"
 .else
-CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
-CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
 
 .include "../../lang/llvm/buildlink3.mk"
@@ -166,7 +166,7 @@ CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 PKG_FAIL_REASON+=	"z3 PKG_OPTION must be enabled in lang/llvm"
 .  endif
 .  include "../../math/z3/buildlink3.mk"
-CMAKE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
+CMAKE_CONFIGURE_ARGS+=		-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
 
 post-extract:

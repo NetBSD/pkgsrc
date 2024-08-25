@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/08/02 08:37:43 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:27 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quassel
 PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webkit
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webkit
 # Really just shows a small, difficult to read thumbnail on hover.
 # Using WebEngine for this seems to be preferred.
 .if !empty(PKG_OPTIONS:Mquassel-webkit)
-CMAKE_ARGS+=	-DWITH_WEBKIT=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_WEBKIT=ON
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .endif
 

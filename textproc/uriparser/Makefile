@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/06 05:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/08/25 06:19:17 wiz Exp $
 
 DISTNAME=	uriparser-0.9.8
 CATEGORIES=	textproc
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 USE_FEATURES=		snprintf
 PKGCONFIG_OVERRIDE+=	liburiparser.pc.in
 
-CMAKE_ARGS+=		-DURIPARSER_BUILD_DOCS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DURIPARSER_BUILD_DOCS=OFF
 
 # reallocarray etc
 CFLAGS.NetBSD+=		-D_OPENBSD_SOURCE

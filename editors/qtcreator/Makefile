@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/05/29 16:32:24 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/08/25 06:18:39 wiz Exp $
 
 DISTNAME=	qt-creator-opensource-src-5.0.3
 PKGNAME=	${DISTNAME:S/qt-/qt/:S/-opensource-src//}
@@ -65,7 +65,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 
 # XXX doesn't seem to get built on netbsd. probably results in
 # PLIST differences when it does.
-CMAKE_ARGS.NetBSD+=	-DBUILD_WITH_PCH=OFF
+CMAKE_CONFIGURE_ARGS.NetBSD+=	-DBUILD_WITH_PCH=OFF
 
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
 #LDFLAGS+=	${COMPILER_RPATH_FLAG}${X11BASE}/lib

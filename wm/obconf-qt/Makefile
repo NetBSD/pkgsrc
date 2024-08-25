@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/08/20 06:17:49 pin Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/25 06:19:18 wiz Exp $
 
 DISTNAME=	obconf-qt-0.16.4
 PKGREVISION=	4
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/07/06 16:16:06 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/25 06:19:09 wiz Exp $
 
 DISTNAME=	pocl-6.0
 CATEGORIES=	parallel
@@ -15,10 +15,10 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 TEST_TARGET=		check
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-#CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
-CMAKE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendors"
-CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_CONFIGURE_ARGS+=	-DPOCL_INSTALL_ICD_VENDORDIR="${PREFIX}/share/examples/OpenCL/vendors"
+CMAKE_CONFIGURE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH:Q}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/pocl
 
@@ -30,9 +30,9 @@ GENERATE_PLIST+=	find ${DESTDIR}${PREFIX} \( -type f -o -type l \) -print | \
 
 # "Don't know what CPU variants to use for kernel library on this platform."
 .if ${MACHINE_ARCH:Maarch64*}
-CMAKE_ARGS+=	-DLLC_HOST_CPU="cortex-a53"
+CMAKE_CONFIGURE_ARGS+=	-DLLC_HOST_CPU="cortex-a53"
 .else
-CMAKE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
+CMAKE_CONFIGURE_ARGS+=	-DKERNELLIB_HOST_CPU_VARIANTS="distro"
 .endif
 
 pre-configure:

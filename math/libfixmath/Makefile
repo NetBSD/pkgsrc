@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/03/05 16:08:27 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/25 06:19:01 wiz Exp $
 
 DISTNAME=	libfixmath-0.0.0pre20220623
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++11
 
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 INSTALL_TARGET=	install
 
 BUILDLINK_TRANSFORM+=	rm:-fsanitize=undefined

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/07/06 15:45:06 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/08/25 06:18:56 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -26,10 +26,10 @@ USE_LANGUAGES=		c c++
 SSP_SUPPORTED=		no
 GCC_REQD+=		13	# must be in sync with libcxx
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # "LIBCXXABI_USE_LLVM_UNWINDER is set to ON, but libunwind is not specified in LLVM_ENABLE_RUNTIMES."
-#CMAKE_ARGS+=	-DLLVM_ENABLE_RUNTIMES=libunwind
-CMAKE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
+#CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_RUNTIMES=libunwind
+CMAKE_CONFIGURE_ARGS+=	-DLIBCXXABI_USE_LLVM_UNWINDER=OFF
 
 # avoid conflict with stddef.h
 CXXFLAGS.NetBSD+=	-D__DEFINED_max_align_t=1

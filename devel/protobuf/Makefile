@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/08/06 12:05:29 adam Exp $
+# $NetBSD: Makefile,v 1.82 2024/08/25 06:18:37 wiz Exp $
 #
 # When updating this, please also update devel/py-protobuf.
 #
@@ -25,12 +25,12 @@ USE_LANGUAGES=		c c++
 # Fails with C++14 default language
 FORCE_CXX_STD=		c++14
 
-CMAKE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
+CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_ABSL_PROVIDER=package
 # FIXME: Currently libupd makes net/grpc build fail.
-CMAKE_ARGS+=	-Dprotobuf_BUILD_LIBUPB=OFF
-CMAKE_ARGS+=	-Dprotobuf_BUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_LIBUPB=OFF
+CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_SHARED_LIBS=ON
 # requires googletest to be checked out in third_party/googletest
-CMAKE_ARGS+=	-Dprotobuf_BUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-Dprotobuf_BUILD_TESTS=OFF
 
 # the [[ command will skip a test that would otherwise run
 CHECK_PORTABILITY_SKIP+=	src/google/protobuf/compiler/zip_output_unittest.sh

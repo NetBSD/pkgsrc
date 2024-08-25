@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/09/06 11:21:59 pin Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:21 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.arqiver
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt6)
-CMAKE_ARGS+=	-DENABLE_QT5=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"

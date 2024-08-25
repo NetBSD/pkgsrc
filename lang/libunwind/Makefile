@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/07/26 22:30:47 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/08/25 06:18:56 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -32,7 +32,7 @@ SSP_SUPPORTED=		no
 GCC_REQD+=		10	# must be in sync with libcxx
 .endif
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 INSTALLATION_DIRS=	include
 

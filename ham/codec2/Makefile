@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/08/19 17:19:32 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:54 wiz Exp $
 #
 
 # https://github.com/drowe67/codec2/archive/v0.9.2.tar.gz
@@ -21,7 +21,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 # XXX this creates a circular dependency between
 # lpcnetfreedv and codec2 that requires bootstrapping
 # and causes problems with pkg tools once created.
-#CMAKE_ARGS+=	-DLPCNET=ON
+#CMAKE_CONFIGURE_ARGS+=	-DLPCNET=ON
 #.include "../../ham/lpcnetfreedv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

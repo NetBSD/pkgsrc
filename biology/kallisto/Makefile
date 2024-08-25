@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/07/27 12:22:54 bacon Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:26 wiz Exp $
 
 DISTNAME=	kallisto-0.51.0
 CATEGORIES=	biology
@@ -19,7 +19,7 @@ SUBST_STAGE.test=	pre-configure
 SUBST_FILES.test=	kallisto-test
 SUBST_SED.test=		-e 's|/usr/local/share/kallisto|${DATADIR}|g'
 
-CMAKE_ARGS+=		-DUSE_HDF5:BOOL=ON -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=		-DUSE_HDF5:BOOL=ON -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 # Build fails on 8-core Mac M1
 MAKE_JOBS_SAFE=		no
 INSTALLATION_DIRS+=	${DATADIR}

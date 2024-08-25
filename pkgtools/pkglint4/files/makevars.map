@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.15 2022/04/25 06:25:43 wiz Exp $
+# $NetBSD: makevars.map,v 1.16 2024/08/25 06:19:09 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -233,7 +233,7 @@ CHECK_SHLIBS_SKIP	List of Pathmask [$package_list]
 CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [$package_list]
 CMAKE_ARG_PATH		Pathname [$package]
-CMAKE_ARGS		List of ShellWord [$package_list]
+CMAKE_CONFIGURE_ARGS		List of ShellWord [$package_list]
 COMMENT			Comment [m:as,c:as]
 COMPILER_RPATH_FLAG	{ -Wl,-rpath } [$system]
 CONFIGURE_ARGS		List of ShellWord [$package_list]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/06/09 21:02:56 markd Exp $
+# $NetBSD: Makefile.common,v 1.5 2024/08/25 06:19:13 wiz Exp $
 #
 # used by security/qca2-qt5-gnupg/Makefile
 # used by security/qca2-qt5-ossl/Makefile
@@ -20,9 +20,9 @@ DISTINFO_FILE=	${.CURDIR}/../../security/qca2-qt5/distinfo
 USE_LANGUAGES=	c c++
 
 # install under qt5 prefix to not clash with qca 1.x
-CMAKE_ARGS+=	-DQCA_INSTALL_IN_QT_PREFIX=ON
-CMAKE_ARGS+=	-DOSX_FRAMEWORK=OFF
-CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DQCA_INSTALL_IN_QT_PREFIX=ON
+CMAKE_CONFIGURE_ARGS+=	-DOSX_FRAMEWORK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 
 SUBST_CLASSES+=		certs
 SUBST_STAGE.certs=	pre-configure
