@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/08/22 13:33:16 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/25 10:37:56 wiz Exp $
 
-DISTNAME=	ruff-0.6.1
+DISTNAME=	ruff-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
 
@@ -25,8 +24,6 @@ DISTFILES+=					lsp-types-${LSP_TYPES_REV}.tar.gz
 SITES.lsp-types-${LSP_TYPES_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=astral-sh/}lsp-types/archive/${LSP_TYPES_REV}.tar.gz
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
 	${MV} ${WRKDIR}/lsp-types* ${WRKSRC}
