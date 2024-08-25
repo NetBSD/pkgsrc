@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/08/16 15:29:36 he Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/25 17:15:50 he Exp $
 #
 
-DISTNAME=	opendnssec-2.1.13
+DISTNAME=	opendnssec-2.1.14
 PKGNAME=	${DISTNAME:S/opendnssec/opendnssec2/}
-PKGREVISION=	4
 CATEGORIES=	security net
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
@@ -20,13 +19,14 @@ CONFLICTS+=	opendnssec-1.*
 
 BUILD_DEFS+=	VARBASE
 
-USE_TOOLS+=	bash gmake
-CONFIG_SHELL=	${BASH}
-USE_LANGUAGES=	c99 c++
-USE_LIBTOOL=	yes
+USE_TOOLS+=		bash gmake
+CONFIG_SHELL=		${BASH}
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+#CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
@@ -69,7 +69,8 @@ SUBST_SED.migrate=	-e 's,SCHEMA=../../src/db/,SCHEMA=./,'
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 # For debugging...
-#CFLAGS.NetBSD+= 	-g
+#CFLAGS.NetBSD+=	-g -fsanitize=address
+#CFLAGS.NetBSD+=	-g
 
 CONF_FILES+=	${EGDIR}/addns.xml.sample \
 			${PKG_SYSCONFDIR}/addns.xml
