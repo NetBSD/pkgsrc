@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/07/29 07:29:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/08/25 10:45:47 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -21,6 +21,9 @@ ${PYSITELIB}/textual/_ansi_theme.pyo
 ${PYSITELIB}/textual/_arrange.py
 ${PYSITELIB}/textual/_arrange.pyc
 ${PYSITELIB}/textual/_arrange.pyo
+${PYSITELIB}/textual/_binary_encode.py
+${PYSITELIB}/textual/_binary_encode.pyc
+${PYSITELIB}/textual/_binary_encode.pyo
 ${PYSITELIB}/textual/_border.py
 ${PYSITELIB}/textual/_border.pyc
 ${PYSITELIB}/textual/_border.pyo
@@ -516,9 +519,6 @@ ${PYSITELIB}/textual/widgets/_button.pyo
 ${PYSITELIB}/textual/widgets/_checkbox.py
 ${PYSITELIB}/textual/widgets/_checkbox.pyc
 ${PYSITELIB}/textual/widgets/_checkbox.pyo
-${PYSITELIB}/textual/widgets/_classic_footer.py
-${PYSITELIB}/textual/widgets/_classic_footer.pyc
-${PYSITELIB}/textual/widgets/_classic_footer.pyo
 ${PYSITELIB}/textual/widgets/_collapsible.py
 ${PYSITELIB}/textual/widgets/_collapsible.pyc
 ${PYSITELIB}/textual/widgets/_collapsible.pyo
@@ -540,9 +540,15 @@ ${PYSITELIB}/textual/widgets/_footer.pyo
 ${PYSITELIB}/textual/widgets/_header.py
 ${PYSITELIB}/textual/widgets/_header.pyc
 ${PYSITELIB}/textual/widgets/_header.pyo
+${PYSITELIB}/textual/widgets/_help_panel.py
+${PYSITELIB}/textual/widgets/_help_panel.pyc
+${PYSITELIB}/textual/widgets/_help_panel.pyo
 ${PYSITELIB}/textual/widgets/_input.py
 ${PYSITELIB}/textual/widgets/_input.pyc
 ${PYSITELIB}/textual/widgets/_input.pyo
+${PYSITELIB}/textual/widgets/_key_panel.py
+${PYSITELIB}/textual/widgets/_key_panel.pyc
+${PYSITELIB}/textual/widgets/_key_panel.pyo
 ${PYSITELIB}/textual/widgets/_label.py
 ${PYSITELIB}/textual/widgets/_label.pyc
 ${PYSITELIB}/textual/widgets/_label.pyo
