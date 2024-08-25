@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.46 2024/06/22 12:39:59 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2024/08/25 10:07:51 wiz Exp $
 
-DISTNAME=		enchant-2.8.1
+DISTNAME=		enchant-2.8.2
 PKGNAME=		${DISTNAME:S/enchant/enchant2/}
 CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_GITHUB:=AbiWord/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=rrthomas/}
 GITHUB_PROJECT=		enchant
 GITHUB_RELEASE=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://abiword.github.io/enchant/
+HOMEPAGE=		https://rrthomas.github.io/enchant/
 COMMENT=		Generic spell checking library
 LICENSE=		gnu-lgpl-v2.1
 
