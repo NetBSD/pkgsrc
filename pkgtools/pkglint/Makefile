@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.776 2024/08/11 15:57:08 bsiegert Exp $
+# $NetBSD: Makefile,v 1.777 2024/08/25 21:17:11 rillig Exp $
 
 DISTNAME=	pkglint-23.6.0
 PKGREVISION=	1
@@ -42,6 +42,6 @@ PLIST.maninstall=	yes
 .endif
 
 do-install-man: .PHONY
-	${PLIST.maninstall:D:U\:} ${INSTALL_MAN} ${WRKSRC}/../pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${PLIST.maninstall:D:U\:} ${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/pkglint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"
