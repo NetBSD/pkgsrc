@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/08/25 06:19:03 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.82 2024/08/25 10:23:50 wiz Exp $
 
 DISTNAME=		vym-2.9.28
 CATEGORIES=		misc
@@ -17,7 +16,6 @@ DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bash:run pkg-config gmake gzip
-USE_CMAKE=		yes
 
 REPLACE_BASH+=		scripts/vivym
 
@@ -63,7 +61,9 @@ SUBST_MESSAGE.pdf-path=	Fix installing pdf files in share/doc/vym/doc
 SUBST_FILES.pdf-path=	CMakeLists.txt
 SUBST_SED.pdf-path=	-e 's;doc DESTINATION;doc/ DESTINATION;g'
 
-CMAKE_ARG_PATH=		.
+# installation fails
+# TODO: report upstream
+CMAKE_BUILD_DIR=		.
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE="Release"
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_DATADIR=share/vym
@@ -74,6 +74,7 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_DOCDIR=share/doc/vym
 post-extract:
 	${GZIP_CMD} -d ${WRKSRC}/doc/vym.1.gz
 
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
