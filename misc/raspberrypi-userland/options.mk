@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/11/03 17:04:26 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:03 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.raspberrypi-userland
 PKG_SUPPORTED_OPTIONS=		debug
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=		debug
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 .else
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 .endif

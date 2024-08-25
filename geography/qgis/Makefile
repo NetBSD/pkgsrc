@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2024/08/24 00:07:05 gdt Exp $
+# $NetBSD: Makefile,v 1.220 2024/08/25 06:18:49 wiz Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -62,18 +62,18 @@ SUBST_SED.pyqt+=	-e '/^ *SET/s,pyuic5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/^ *SET/s,pyrcc5,&-${PYVERSSUFFIX},'
 SUBST_SED.pyqt+=	-e '/ *FIND_PROGRAM(__pyuic5 /s,"pyuic5,&-${PYVERSSUFFIX},'
 
-CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
-CMAKE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_INTERNAL_MARKUPSAFE=FALSE
 
 # \todo Understand what draco is and perhaps add to pkgsrc.
-CMAKE_ARGS+=		-DWITH_DRACO=FALSE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_DRACO=FALSE
 # \todo Understand and probably add.
-CMAKE_ARGS+=		-DWITH_3D=FALSE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_3D=FALSE
 
 # Server support is WIP; it has merely been tested that regular use
 # has not been broken.
-CMAKE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
-CMAKE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
+CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
@@ -90,10 +90,10 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 # for metasearch
 DEPENDS+=	${PYPKGPREFIX}-owslib-[0-9]*:../../geography/py-owslib
 
-CMAKE_ARGS+=	-DWITH_QTWEBKIT=FALSE
-CMAKE_ARGS+=	-DQWT_DIR=${QWT_DIR}
+CMAKE_CONFIGURE_ARGS+=	-DWITH_QTWEBKIT=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DQWT_DIR=${QWT_DIR}
 # uncomment to tell cmake not to hide build commands (i.e., to show them)
-#CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=TRUE
 # \todo Hoist this to become a general facility where a variable controls
 # actually showing build output.
 

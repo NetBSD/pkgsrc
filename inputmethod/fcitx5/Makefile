@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/07/16 10:02:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/25 06:18:55 wiz Exp $
 
 DISTNAME=	fcitx5-5.1.7
 PKGREVISION=	3
@@ -39,10 +39,10 @@ REPLACE_BASH+=		data/fcitx5-diagnose.sh
 
 TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-CMAKE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
-CMAKE_ARGS+=		-DUSE_SYSTEMD=off
-CMAKE_ARGS+=		-DLibIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
-CMAKE_ARGS+=		-DLIBUUID_INCLUDE_DIR=${BUILDLINK_PREFIX.libuuid}/include
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
+CMAKE_CONFIGURE_ARGS+=		-DUSE_SYSTEMD=off
+CMAKE_CONFIGURE_ARGS+=		-DLibIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=		-DLIBUUID_INCLUDE_DIR=${BUILDLINK_PREFIX.libuuid}/include
 
 CXXFLAGS.NetBSD+=	-DLIBKVM_FOUND
 

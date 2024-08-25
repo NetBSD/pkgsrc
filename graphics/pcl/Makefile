@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/05/29 16:33:00 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/25 06:18:53 wiz Exp $
 
 DISTNAME=	pcl-1.14.1
 PKGREVISION=	3
@@ -18,9 +18,9 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 # Those could be enabled as options if desired.
-CMAKE_ARGS+=		-DWITH_CUDA=FALSE
+CMAKE_CONFIGURE_ARGS+=		-DWITH_CUDA=FALSE
 # test is missing
-CMAKE_ARGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
+CMAKE_CONFIGURE_ARGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 
 .include "../../mk/bsd.prefs.mk"
 # See LIBATOMIC_NOT_NEEDED in CMakeLists.txt

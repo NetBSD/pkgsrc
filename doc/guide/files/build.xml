@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.91 2024/08/20 18:02:04 gdt Exp $ -->
+<!-- $NetBSD: build.xml,v 1.92 2024/08/25 06:18:39 wiz Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -526,7 +526,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     including <filename>../../devel/cmake/build.mk</filename>.
     You can add variables to cmake's environment by adding them to the
     <varname>CONFIGURE_ENV</varname> variable and arguments to cmake
-    by adding them to the <varname>CMAKE_ARGS</varname> variable.
+    by adding them to the <varname>CMAKE_CONFIGURE_ARGS</varname> variable.
     If you want to add arguments only for particular stages, you can use the
     <varname>CMAKE_CONFIGURE_ARGS</varname>,
     <varname>CMAKE_BUILD_ARGS</varname>, and
@@ -539,9 +539,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <para>Any package using the now-deprecated
     <varname>USE_CMAKE=yes</varname> should be converted.
     Essentially, replace with an include of
-    <filename>../../devel/cmake/build.mk</filename>, change
-    <varname>CMAKE_ARGS</varname> to
-    <varname>CMAKE_CONFIGURE_ARGS</varname>, prune creation of a build
+    <filename>../../devel/cmake/build.mk</filename>, prune creation of a build
     directory and settings to use it, and check/fix settings that
     intend to perform the build in a subdirectory.
     </para>

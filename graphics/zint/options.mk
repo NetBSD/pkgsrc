@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2024/03/14 12:24:54 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zint
 PKG_SUPPORTED_OPTIONS+=	qt5
 PKG_SUGGESTED_OPTIONS+=	qt5
 
 # TODO: add qt6 support
-#CMAKE_ARGS+=	-DZINT_QT6=ON
+#CMAKE_CONFIGURE_ARGS+=	-DZINT_QT6=ON
 
 PLIST_VARS+=	qt5
 

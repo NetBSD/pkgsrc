@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/08/06 12:36:51 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/08/25 06:18:23 wiz Exp $
 
 DISTNAME=	fluidsynth-2.3.6
 CATEGORIES=	audio
@@ -15,9 +15,9 @@ USE_TOOLS+=	pkg-config gmake
 
 CHECK_PORTABILITY_SKIP+=	test-android/convert-tests.sh
 
-CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}/man1
-CMAKE_ARGS+=	-DLIB_SUFFIX=""
-CMAKE_ARGS+=	-Denable-framework=OFF
+CMAKE_CONFIGURE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}/man1
+CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-Denable-framework=OFF
 
 PKGCONFIG_OVERRIDE=	fluidsynth.pc.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/05 11:09:53 nros Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	highway-1.0.7
 PKGNAME=	lib${DISTNAME}
@@ -16,8 +16,8 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 GCC_REQD+=	8 # -latomic and gcc 7 gives internal compiler error
 
-CMAKE_ARGS+=	-DHWY_SYSTEM_GTEST:BOOL=TRUE
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DHWY_SYSTEM_GTEST:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=TRUE
 
 PKGCONFIG_OVERRIDE+=	libhwy-contrib.pc.in
 PKGCONFIG_OVERRIDE+=	libhwy-test.pc.in

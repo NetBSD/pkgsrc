@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/04/21 17:28:32 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/08/25 06:19:16 wiz Exp $
 
 DISTNAME=	lucene++-3.0.9
 CATEGORIES=	textproc
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v3 OR apache-2.0
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DENABLE_DEMO=OFF
-CMAKE_ARGS+=	-DENABLE_TEST=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEMO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TEST=OFF
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/08/20 06:08:03 pin Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/25 06:18:22 wiz Exp $
 
 DISTNAME=	lxqt-archiver-1.0.0
 CATEGORIES=	archivers
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config perl bsdtar:run gzip:run 7za:run gtar:run bzip2:run unzip:run zip:run xz:run
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools

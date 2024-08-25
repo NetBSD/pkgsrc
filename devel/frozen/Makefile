@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/07 09:13:42 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:34 wiz Exp $
 
 DISTNAME=	frozen-1.1.1
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 USE_LANGUAGES=	c++
 
 # constexpr tests fail with at least GCC 12 and 13
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

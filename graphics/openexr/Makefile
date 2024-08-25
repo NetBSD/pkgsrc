@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2024/04/05 10:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/08/25 06:18:52 wiz Exp $
 
 DISTNAME=	openexr-3.2.4
 CATEGORIES=	graphics
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE=	cmake/OpenEXR.pc.in
 PTHREAD_OPTS=	require
 
 # https://github.com/AcademySoftwareFoundation/openexr/issues/1594
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 CHECK_PORTABILITY_SKIP+=	Contrib/DtexToExr/bootstrap
 CHECK_PORTABILITY_SKIP+=	share/util/reformat.sh

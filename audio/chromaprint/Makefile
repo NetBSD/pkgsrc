@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/04/15 17:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:18:22 wiz Exp $
 
 DISTNAME=	chromaprint-1.5.1
 PKGREVISION=	8
@@ -13,8 +13,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 # build and install "fpcalc"
-CMAKE_ARGS+=	-DBUILD_TOOLS=ON
-CMAKE_ARGS+=	-DFFT_LIB=fftw3
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS=ON
+CMAKE_CONFIGURE_ARGS+=	-DFFT_LIB=fftw3
 
 USE_CXX_FEATURES+=	c++11
 
@@ -27,8 +27,8 @@ SOEXT=	so
 .endif
 
 .for lib in AVCODEC AVFORMAT AVUTIL SWRESAMPLE
-CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg7}/include/ffmpeg7
-CMAKE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg7}/lib/ffmpeg7/lib${lib:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_INCLUDE_DIRS=${BUILDLINK_PREFIX.ffmpeg7}/include/ffmpeg7
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg7}/lib/ffmpeg7/lib${lib:tl}.${SOEXT}
 .endfor
 
 PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake

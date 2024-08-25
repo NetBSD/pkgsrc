@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/05/29 16:31:16 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/25 06:18:21 wiz Exp $
 
 DISTNAME=	Arqiver-0.12.0
 PKGNAME=	${DISTNAME:tl}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config bsdtar:run gzip:run 7za:run
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.

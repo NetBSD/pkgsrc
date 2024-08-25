@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/06/27 12:31:32 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/25 06:19:03 wiz Exp $
 
 VERSION=	20240620
 DISTNAME=	XyGrib-${VERSION}
@@ -23,7 +23,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DGNU_PACKAGE=ON -DGEN_TRANSLATIONS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DGNU_PACKAGE=ON -DGEN_TRANSLATIONS=OFF
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 

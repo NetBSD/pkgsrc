@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/07/06 15:49:47 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:18:34 wiz Exp $
 
 DISTNAME=	include-what-you-use-0.22
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
+CMAKE_CONFIGURE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 
 REPLACE_PYTHON=	*.py
 

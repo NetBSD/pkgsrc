@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/23 10:08:09 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:47 wiz Exp $
 
 DISTNAME=	vcmi-1.5.6
 CATEGORIES=	games
@@ -27,7 +27,7 @@ USE_CXX_FEATURES+=	c++17
 .include "../../mk/compiler.mk"
 
 .if ${CC_VERSION:Mgcc-*}
-CMAKE_ARGS+=	-DENABLE_PCH=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"

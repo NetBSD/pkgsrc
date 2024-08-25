@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2023/10/04 16:58:57 rhialto Exp $
+# $NetBSD: Makefile,v 1.44 2024/08/25 06:19:17 wiz Exp $
 #
 
 DISTNAME=	ctwm-4.1.0
@@ -28,8 +28,8 @@ AUTO_MKDIRS=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
 # If M4_CMD is not set, it is autodetected as ${WRKDIR}/.tools/bin/m4
-CMAKE_ARGS+=		-DM4_CMD=${TOOLS_PATH.gm4}
-CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=		-DM4_CMD=${TOOLS_PATH.gm4}
+CMAKE_CONFIGURE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 CMAKE_ARG_PATH=		${WRKSRC}
 
 CONFIGURE_DIRS=		build
@@ -55,13 +55,13 @@ pre-install:
 #TOOL_DEPENDS+=	dblatex-[0-9]*:../../textproc/dblatex
 
 # but for consistent builds, we disable them entirely.
-CMAKE_ARGS+=		-DASCIIDOCTOR=
-CMAKE_ARGS+=		-DASCIIDOC=
-CMAKE_ARGS+=		-DA2X=
-CMAKE_ARGS+=		-DXMLTO=
-CMAKE_ARGS+=		-DDBLATEX=
+CMAKE_CONFIGURE_ARGS+=		-DASCIIDOCTOR=
+CMAKE_CONFIGURE_ARGS+=		-DASCIIDOC=
+CMAKE_CONFIGURE_ARGS+=		-DA2X=
+CMAKE_CONFIGURE_ARGS+=		-DXMLTO=
+CMAKE_CONFIGURE_ARGS+=		-DDBLATEX=
 # disable upstream use of ctfconvert due to gcc12
-CMAKE_ARGS+=		-DCTFCONVERT=0
+CMAKE_CONFIGURE_ARGS+=		-DCTFCONVERT=0
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"

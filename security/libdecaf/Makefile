@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:12 wiz Exp $
 
 PKGNAME=	libdecaf-1.0.2
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++11
-CMAKE_ARGS+=	-DENABLE_TESTS=YES
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTS=YES
 
 # These are required to prevent build breakage when tests are enabled
 # This is probably due to the auto-generated headers clobbering with

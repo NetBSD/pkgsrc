@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2023/11/12 13:24:23 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2024/08/25 06:19:20 wiz Exp $
 
 BUILDLINK_TREE+=	qt4-tools
 
@@ -16,8 +16,8 @@ CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
 MAKE_ENV+=		UIC="${QTDIR}/bin/uic"
 CONFIGURE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
-CMAKE_ARGS+=		-DQT_UIC_EXECUTABLE=${QTDIR}/bin/uic
-CMAKE_ARGS+=		-DQT_QMAKE_EXECUTABLE=${QTDIR}/bin/qmake
+CMAKE_CONFIGURE_ARGS+=		-DQT_UIC_EXECUTABLE=${QTDIR}/bin/uic
+CMAKE_CONFIGURE_ARGS+=		-DQT_QMAKE_EXECUTABLE=${QTDIR}/bin/qmake
 
 # the way the spec files are currently instealled via pkgsrc, they
 # are all identical anyway, so just pick one and point to it.

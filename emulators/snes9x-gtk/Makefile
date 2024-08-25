@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2024/08/10 12:04:36 nia Exp $
+# $NetBSD: Makefile,v 1.110 2024/08/25 06:18:41 wiz Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
@@ -16,9 +16,9 @@ FORCE_CXX_STD=		c++17
 
 USE_PKGLOCALEDIR=	yes
 
-CMAKE_ARGS+=	-DUSE_SYSTEMZIP=ON
-CMAKE_ARGS+=	-DENABLE_PCH=OFF
-CMAKE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR=${PKGLOCALEDIR}/locale
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEMZIP=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PCH=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR=${PKGLOCALEDIR}/locale
 
 TOOL_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
@@ -36,7 +36,7 @@ SUBST_FILES.oss+=	common/audio/s9x_sound_driver_oss.cpp
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 LDFLAGS+=		${LIBOSSAUDIO}
 .else
-CMAKE_ARGS+=		-DUSE_OSS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUSE_OSS=OFF
 .endif
 
 LDFLAGS.SunOS+=		-lsocket -lnsl

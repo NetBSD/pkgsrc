@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2024/07/16 10:02:03 prlw1 Exp $
+# $NetBSD: Makefile,v 1.57 2024/08/25 06:18:54 wiz Exp $
 
 DISTNAME=	gr-osmosdr-0.2.6
 PKGREVISION=	1
@@ -20,10 +20,10 @@ USE_CXX_FEATURES=	c++11 filesystem
 USE_LANGUAGES=		c c++
 
 # Suppress warning for developer
-CMAKE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 # TODO: make it PKG_OPTION
-CMAKE_ARGS+=	-DENABLE_DOXYGEN=OFF
-CMAKE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DOXYGEN=OFF
+CMAKE_CONFIGURE_ARGS+=	-Dpybind11_DIR=${PREFIX}/${PYSITELIB}/pybind11/share/cmake/pybind11
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 

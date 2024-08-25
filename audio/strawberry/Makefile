@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/05/29 16:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.68 2024/08/25 06:18:25 wiz Exp $
 
 DISTNAME=	strawberry-1.0.23
 PKGREVISION=	1
@@ -15,9 +15,9 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DBUILD_WITH_QT5=ON
-CMAKE_ARGS+=	-DBUILD_WITH_QT6=OFF
-CMAKE_ARGS+=	-DUSE_BUNDLE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT5=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_BUNDLE=OFF
 
 DEPENDS+=	gst-plugins1-flac-[0-9]*:../../audio/gst-plugins1-flac
 DEPENDS+=	gst-plugins1-mpg123-[0-9]*:../../audio/gst-plugins1-mpg123
@@ -33,7 +33,7 @@ USE_CXX_FEATURES+=	c++17
 DEPENDS+=	gst-plugins1-alsa-[0-9]*:../../audio/gst-plugins1-alsa
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=TRUE
 .endif
 
 .if ${OPSYS} != "Linux" && ${OSS_TYPE} != "none"

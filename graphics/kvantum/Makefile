@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/07/31 18:05:57 pin Exp $
+# $NetBSD: Makefile,v 1.43 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	Kvantum-1.1.2
 PKGNAME=	${DISTNAME:tl}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Kvantum
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 

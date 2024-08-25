@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2023/10/24 22:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/25 06:19:18 wiz Exp $
 
 DISTNAME=	h2o-2.2.6
 PKGREVISION=	4
@@ -17,10 +17,10 @@ USE_TOOLS+=		perl:run pkg-config
 PKGCONFIG_OVERRIDE+=	libh2o-evloop.pc.in
 PKGCONFIG_OVERRIDE+=	libh2o.pc.in
 
-CMAKE_ARGS+=		-DWITH_BUNDLED_SSL=off
+CMAKE_CONFIGURE_ARGS+=		-DWITH_BUNDLED_SSL=off
 # TODO: make it an option
-CMAKE_ARGS+=		-DWITH_MRUBY=off
-CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=on
+CMAKE_CONFIGURE_ARGS+=		-DWITH_MRUBY=off
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_SHARED_LIBS=on
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		c99

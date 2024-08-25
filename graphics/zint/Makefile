@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/29 16:33:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:54 wiz Exp $
 
 DISTNAME=	zint-2.13.0-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -13,7 +13,7 @@ COMMENT=	Open source barcode generating solution
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"

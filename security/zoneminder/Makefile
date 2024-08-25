@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/05/29 16:34:21 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/08/25 06:19:14 wiz Exp $
 
 #VERSION=	1.36.7
 VERSION=	1.30.5
@@ -67,7 +67,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # turned into cmake, once we are at a zoneminder version that does not
 # support autoconf (which maybe we are at already!).
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CMAKE_ARGS+=		-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
+CMAKE_CONFIGURE_ARGS+=		-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
 
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
 PLIST_SUBST+=		ZM_HTTPD_ROOT=${ZM_HTTPD_ROOT:Q}
@@ -85,22 +85,22 @@ INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
 
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--with-webdir=${PREFIX}/${ZM_HTTPD_ROOT:Q}
-CMAKE_ARGS+=		-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
+CMAKE_CONFIGURE_ARGS+=		-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
 CONFIGURE_ARGS+=	--with-cgidir=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
-CMAKE_ARGS+=		-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
+CMAKE_CONFIGURE_ARGS+=		-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CMAKE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
-CMAKE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
-CMAKE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
-CMAKE_ARGS+=		-DZM_LOGDIR=${VARBASE}/log/zm
+CMAKE_CONFIGURE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
+CMAKE_CONFIGURE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
+CMAKE_CONFIGURE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
+CMAKE_CONFIGURE_ARGS+=		-DZM_LOGDIR=${VARBASE}/log/zm
 
 # PolicyKit doesn't actually seem to be necessary.  This hack disables
 # configure's hunt for PolicyKit, but has no other apparent ill effects.
 # cmake needs an almost identical hack - though resorting to patching might
 # be safer.
 CONFIGURE_ENV+=		POLKIT_CFLAGS=" " POLKIT_LIBS=" "
-CMAKE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
+CMAKE_CONFIGURE_ARGS+=		-DPOLKIT_LIBRARIES=" " -DPOLKIT_INCLUDE_DIR=" "
 
 PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
@@ -118,8 +118,8 @@ SOEXT=	so
 .endif
 
 .for lib in AVFORMAT AVCODEC AVDEVICE AVUTIL SWSCALE
-CMAKE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg2}/include/ffmpeg2
-CMAKE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg2}/lib/ffmpeg2/lib${lib:tl}.${SOEXT}
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_INCLUDE_DIR=${BUILDLINK_PREFIX.ffmpeg2}/include/ffmpeg2
+CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg2}/lib/ffmpeg2/lib${lib:tl}.${SOEXT}
 .endfor
 
 # The backtrace requires Linux's unportable <execinfo.h> header.
@@ -138,10 +138,10 @@ CFLAGS+=		-D__STDC_CONSTANT_MACROS
 # Since MySQL uses openssl, use the same library instead of defaulting to
 # gnutls.
 CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
-CMAKE_ARGS+=		-DGNUTLS_LIBRARIES=""
+CMAKE_CONFIGURE_ARGS+=		-DGNUTLS_LIBRARIES=""
 
 # Make sure cmake doesn't think libgcrypt is available (We have OpenSSL)
-CMAKE_ARGS+=		-DGCRYPT_LIBRARIES=""
+CMAKE_CONFIGURE_ARGS+=		-DGCRYPT_LIBRARIES=""
 
 # Control where run-time state (PID file and sockets) get stored.
 # Default is "/var/run/zm", but we want to conform to VARBASE.
@@ -166,9 +166,9 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 MAKE_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 CONFIGURE_ARGS+=	--with-webuser=${APACHE_USER}
-CMAKE_ARGS+=		-DZM_WEB_USER=${APACHE_USER}
+CMAKE_CONFIGURE_ARGS+=		-DZM_WEB_USER=${APACHE_USER}
 CONFIGURE_ARGS+=	--with-webgroup=${APACHE_GROUP}
-CMAKE_ARGS+=		-DZM_WEB_GROUP=${APACHE_GROUP}
+CMAKE_CONFIGURE_ARGS+=		-DZM_WEB_GROUP=${APACHE_GROUP}
 
 # If we're using Apache we're going to need PHP, and PHP extensions.
 .include "../../lang/php/phpversion.mk"
@@ -185,7 +185,7 @@ OWN_DIRS_PERMS+=	${ZM_CACHE} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 OWN_DIRS_PERMS+=	${ZM_CACHE}/temp ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/images ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${ZM_CACHE}/events ${REAL_ROOT_USER} ${APACHE_GROUP} 775
-CMAKE_ARGS+=		-DZM_CONTENTDIR=${ZM_CACHE}
+CMAKE_CONFIGURE_ARGS+=		-DZM_CONTENTDIR=${ZM_CACHE}
 
 # ZoneMinder scripts needing Perl $PATH patching AND interpreter patching
 ZM_REPLACE_PERL+=	scripts/zmaudit.pl.in
@@ -292,7 +292,7 @@ PERL5_REQD+=		5.6.0
 #PERL5_CONFIGURE_DIRS+=	${WRKSRC}/onvif/modules
 #PERL5_PACKLIST=	auto/ZoneMinder/.packlist
 #PERL5_PACKLIST+=	auto/ONVIF/.packlist
-#CMAKE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
+#CMAKE_CONFIGURE_ARGS+=		-DZM_PERL_MM_PARMS="INSTALLDIRS=vendor"
 #.include "../../lang/perl5/module.mk"
 
 #post-configure: perl5-configure

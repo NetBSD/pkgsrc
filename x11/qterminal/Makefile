@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/08/20 06:24:47 pin Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/25 06:19:20 wiz Exp $
 
 DISTNAME=	qterminal-2.0.1
 CATEGORIES=	x11
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools

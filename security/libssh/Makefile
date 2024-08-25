@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2023/12/18 17:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/25 06:19:12 wiz Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
@@ -19,8 +19,8 @@ USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	libssh.pc.cmake
 TEST_TARGET=		test
 
-CMAKE_ARGS+=		-DUNIT_TESTING=ON
-CMAKE_ARGS+=		-DWITH_EXAMPLES=OFF
+CMAKE_CONFIGURE_ARGS+=		-DUNIT_TESTING=ON
+CMAKE_CONFIGURE_ARGS+=		-DWITH_EXAMPLES=OFF
 
 LDFLAGS.SunOS+=		-lnsl -lsocket
 

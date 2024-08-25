@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/07/25 12:30:28 thor Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/25 06:19:10 wiz Exp $
 
 DISTNAME=	libharu-2.4.3
 CATEGORIES=	print
@@ -13,7 +13,7 @@ LICENSE=	zlib
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DLIBHPDF_STATIC=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLIBHPDF_STATIC=OFF
 
 .include "../../mk/bsd.prefs.mk"
 

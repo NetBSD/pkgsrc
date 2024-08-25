@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2023/12/30 20:56:24 zafer Exp $
+# $NetBSD: Makefile,v 1.59 2024/08/25 06:18:35 wiz Exp $
 
 DISTNAME=	libebml-1.4.5
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++14
-CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=YES
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_SHARED_LIBS=YES
 PKGCONFIG_OVERRIDE=	libebml.pc.in
 
 .include "../../devel/cmake/build.mk"

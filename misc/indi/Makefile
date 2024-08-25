@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/08/05 14:51:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	indi-2.0.9
 CATEGORIES=	misc
@@ -14,7 +14,7 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
-CMAKE_ARGS+=	-DINDI_BUILD_SERVER=NO
+CMAKE_CONFIGURE_ARGS+=	-DINDI_BUILD_SERVER=NO
 
 PKGCONFIG_OVERRIDE=	libindi.pc.cmake
 

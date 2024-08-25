@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/18 08:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/25 06:18:24 wiz Exp $
 
 DISTNAME=	wildmidi-0.4.6
 PKGNAME=	lib${DISTNAME}
@@ -18,18 +18,18 @@ USE_LANGUAGES=	c99
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DWANT_OPENAL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_OPENAL=ON
 .else
-CMAKE_ARGS+=	-DWANT_OPENAL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_OPENAL=OFF
 .endif
 
 .if ${OPSYS} == "Linux"
-CMAKE_ARGS+=	-DWANT_ALSA=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_ALSA=ON
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .else
 .  include "../../mk/oss.buildlink3.mk"
 .  if ${OSS_TYPE} != "none"
-CMAKE_ARGS+=	-DWANT_OSS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_OSS=ON
 .  endif
 .endif
 

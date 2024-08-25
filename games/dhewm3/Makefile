@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/05/29 16:32:33 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/25 06:18:43 wiz Exp $
 
 DISTNAME=	dhewm3-1.5.1-src
 PKGNAME=	${DISTNAME:S/-src//1}
@@ -23,8 +23,8 @@ USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_DIRS+=	neo
 
-CMAKE_ARGS+=	-Wno-dev
-CMAKE_ARGS+=	-DDEDICATED=ON
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DDEDICATED=ON
 
 .include "../../mk/bsd.prefs.mk"
 

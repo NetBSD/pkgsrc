@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/05/16 13:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/08/25 06:18:33 wiz Exp $
 
 DISTNAME=	fifengine-0.4.2
 PKGREVISION=	27
@@ -27,7 +27,7 @@ UNLIMIT_RESOURCES=	datasize virtualsize
 
 PY_PATCHPLIST=	yes
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

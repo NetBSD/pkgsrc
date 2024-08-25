@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2024/07/22 17:48:58 adam Exp $
+# $NetBSD: Makefile,v 1.84 2024/08/25 06:18:32 wiz Exp $
 
 DISTNAME=	ccache-4.10.2
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd AND public-domain AND zlib
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:build pkg-config
-CMAKE_ARGS+=	-DENABLE_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTING=OFF
 TEST_TARGET=	test
 
 USE_CXX_FEATURES+=	filesystem

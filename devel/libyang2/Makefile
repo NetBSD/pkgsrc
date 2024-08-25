@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/09 15:53:59 chopps Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:36 wiz Exp $
 
 GITHUB_PROJECT=	libyang
 GITHUB_TAG=	v2.1.128
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	swig/libyang-cpp.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_ARGS?=	-DENABLE_TESTS=ON -DCMAKE_BUILD_TYPE:String="Release"
+CMAKE_CONFIGURE_ARGS?=	-DENABLE_TESTS=ON -DCMAKE_BUILD_TYPE:String="Release"
 TEST_TARGET?=	test
 
 .include "../../devel/cmocka/buildlink3.mk"

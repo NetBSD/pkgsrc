@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/09/11 23:44:48 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/25 06:18:22 wiz Exp $
 
 DISTNAME=	aften-0.0.8
 CATEGORIES=	audio
@@ -15,8 +15,8 @@ USE_LANGUAGES=	c c++
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DBINDINGS_CXX=ON
-CMAKE_ARGS+=	-DSHARED=ON
+CMAKE_CONFIGURE_ARGS+=	-DBINDINGS_CXX=ON
+CMAKE_CONFIGURE_ARGS+=	-DSHARED=ON
 
 pre-configure:
 	mkdir ${WRKSRC}/build

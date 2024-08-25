@@ -3642,7 +3642,7 @@ SCRIPTS_ENV variable.
 If the program uses cmake for configuration, the appropriate steps can be
 invoked by including ../../devel/cmake/build.mk. You can add variables to
 cmake's environment by adding them to the CONFIGURE_ENV variable and arguments
-to cmake by adding them to the CMAKE_ARGS variable. If you want to add
+to cmake by adding them to the CMAKE_CONFIGURE_ARGS variable. If you want to add
 arguments only for particular stages, you can use the CMAKE_CONFIGURE_ARGS,
 CMAKE_BUILD_ARGS, and CMAKE_INSTALL_ARGS variables. You can set the
 CONFIGURE_DIRS variable to the directories in which CMake should be run,

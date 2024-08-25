@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/06/27 14:50:26 ktnb Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/25 06:19:20 wiz Exp $
 
 DISTNAME=	maim-5.8.0
 CATEGORIES=	x11
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 FORCE_CXX_STD=	c++17
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"

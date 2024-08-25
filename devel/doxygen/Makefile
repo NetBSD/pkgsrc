@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2024/08/20 08:05:29 adam Exp $
+# $NetBSD: Makefile,v 1.190 2024/08/25 06:18:33 wiz Exp $
 
 DISTNAME=	doxygen-1.12.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -24,8 +24,8 @@ USE_TOOLS+=		gmake gs:run perl:run bison flex
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
-CMAKE_ARGS+=		-DDOC_INSTALL_DIR=share/doc/doxygen
-CMAKE_ARGS+=		-DGIT_EXECUTABLE=git # avoid searching for git executable
+CMAKE_CONFIGURE_ARGS+=		-DDOC_INSTALL_DIR=share/doc/doxygen
+CMAKE_CONFIGURE_ARGS+=		-DGIT_EXECUTABLE=git # avoid searching for git executable
 TEST_TARGET=		tests
 
 PYTHON_FOR_BUILD_ONLY=	tool

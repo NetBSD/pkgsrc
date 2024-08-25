@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/05/29 16:32:48 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/08/25 06:18:49 wiz Exp $
 
 DISTNAME=	osm2pgsql-1.3.0
 PKGREVISION=	17
@@ -21,7 +21,7 @@ post-extract:
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}
 
-CMAKE_ARGS+=	-DBUILD_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=ON
 TEST_TARGET=	test
 
 .include "../../geography/proj/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2024/08/16 11:58:38 gdt Exp $
+# $NetBSD: Makefile,v 1.177 2024/08/25 06:18:47 wiz Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -56,12 +56,12 @@ CMAKE_CONFIGURE_ARGS+=	-DGDAL_USE_ZSTD=OFF
 # are to allow multiple python versions, and to remove the dependency
 # on numpy and hence the need for blas and fortran from the base gdal
 # package.
-CMAKE_ARGS+=		-DBUILD_PYTHON_BINDINGS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_PYTHON_BINDINGS=OFF
 
 # Disable things that we don't want to build, more as documentation
 # than them needing to be forced off.
-CMAKE_ARGS+=		-DBUILD_CSHARP_BINDINGS=OFF
-CMAKE_ARGS+=		-DBUILD_JAVA_BINDINGS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_CSHARP_BINDINGS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_JAVA_BINDINGS=OFF
 
 # \todo One would think these are unnnecessary.  Check if these
 # can/should be dropped.  If not, explain why we have some and not

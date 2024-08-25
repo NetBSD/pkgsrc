@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/07/06 15:45:08 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/08/25 06:18:37 wiz Exp $
 
 .include "../../lang/llvm/version.mk"
 
@@ -18,9 +18,9 @@ FORCE_CXX_STD=		c++17
 USE_LANGUAGES=		c c++
 GCC_REQD+=		4.8
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
-CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_COMPILER=${CC:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER=${CXX:Q}
 
 .include "../../devel/cmake/build.mk"
 .include "../../lang/llvm/buildlink3.mk"

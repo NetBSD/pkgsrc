@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2020/06/28 09:29:16 nia Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.solarus
 
@@ -12,9 +12,9 @@ PKG_SUGGESTED_OPTIONS=	luajit
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mluajit)
-CMAKE_ARGS+=	-DSOLARUS_USE_LUAJIT=ON
+CMAKE_CONFIGURE_ARGS+=	-DSOLARUS_USE_LUAJIT=ON
 .  include "../../lang/LuaJIT2/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DSOLARUS_USE_LUAJIT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DSOLARUS_USE_LUAJIT=OFF
 .  include "../../lang/lua51/buildlink3.mk"
 .endif

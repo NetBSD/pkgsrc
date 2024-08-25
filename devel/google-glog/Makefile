@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/07/21 08:16:01 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:34 wiz Exp $
 
 DISTNAME=	glog-0.6.0
 PKGNAME=	google-${DISTNAME}
@@ -16,7 +16,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DWITH_UNWIND=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_UNWIND=OFF
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-pie
 

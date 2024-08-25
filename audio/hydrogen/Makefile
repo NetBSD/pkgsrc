@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2024/05/29 16:31:21 adam Exp $
+# $NetBSD: Makefile,v 1.98 2024/08/25 06:18:23 wiz Exp $
 
 DISTNAME=	hydrogen-1.0.2
 PKGREVISION=	26
@@ -18,16 +18,16 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DWANT_LRDF=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_LRDF=ON
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
-CMAKE_ARGS+=	-DWANT_OSS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWANT_OSS=ON
 .else
-CMAKE_ARGS+=	-DWANT_OSS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_OSS=OFF
 .endif
 
-CMAKE_ARGS+=	-DWANT_CPPUNIT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_CPPUNIT=OFF
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 

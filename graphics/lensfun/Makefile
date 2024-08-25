@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/08/19 19:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	lensfun-0.3.4
 PKGREVISION=	1
@@ -29,8 +29,8 @@ REPLACE_PYTHON+=	apps/lensfun-update-data
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} != "x86_64"
-CMAKE_ARGS+=		-DBUILD_FOR_SSE=OFF
-CMAKE_ARGS+=		-DBUILD_FOR_SSE2=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_FOR_SSE=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_FOR_SSE2=OFF
 .endif
 
 .include "../../devel/cmake/build.mk"

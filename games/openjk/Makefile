@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/04/06 08:05:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:45 wiz Exp $
 
 DISTNAME=	openjk-0.0.0.20191030
 PKGREVISION=	10
@@ -20,13 +20,13 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++11
 
-CMAKE_ARGS+=	-DJK2InstallDir="share/JediAcademy"
+CMAKE_CONFIGURE_ARGS+=	-DJK2InstallDir="share/JediAcademy"
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
 CXXFLAGS+=	-I${BUILDLINK_DIR}/include/GL
 .else
-CMAKE_ARGS+=	-DUseInternalJPEG=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUseInternalJPEG=OFF
 .endif
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "Darwin"

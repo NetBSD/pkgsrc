@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/07/20 18:52:16 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:15 wiz Exp $
 
 DISTNAME=	fmt-11.0.2
 PKGNAME=	${DISTNAME:S/fmt/fmtlib/}
@@ -19,7 +19,7 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}
 TEST_TARGET=		test
 
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

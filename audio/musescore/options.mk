@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2021/11/13 10:48:03 nia Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:24 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.musescore
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio pulseaudio
@@ -20,29 +20,29 @@ PKG_SUGGESTED_OPTIONS+=		jack
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
-CMAKE_ARGS+=	-DBUILD_ALSA=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALSA=ON
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DBUILD_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_ALSA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-CMAKE_ARGS+=	-DBUILD_JACK=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_JACK=ON
 .include "../../audio/jack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DBUILD_JACK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_JACK=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-CMAKE_ARGS+=	-DBUILD_PORTAUDIO=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PORTAUDIO=ON
 .include "../../audio/portaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DBUILD_PORTAUDIO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PORTAUDIO=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CMAKE_ARGS+=	-DBUILD_PULSEAUDIO=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PULSEAUDIO=ON
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DBUILD_PULSEAUDIO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PULSEAUDIO=OFF
 .endif

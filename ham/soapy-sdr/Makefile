@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/08/19 17:37:32 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/25 06:18:54 wiz Exp $
 
 DISTNAME=	soapy-sdr-0.8.1
 CATEGORIES=	ham
@@ -16,7 +16,7 @@ USE_TOOLS+=	pkg-config
 
 .include "../../devel/cmake/build.mk"
 # Do not use /lib64.  \todo File upstream bug.
-CMAKE_ARGS+=	-DLIB_SUFFIX=""
+CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
 
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure

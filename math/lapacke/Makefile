@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2024/01/08 21:28:56 thor Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/25 06:19:01 wiz Exp $
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 COMMENT=	C interface to the reference LAPACK library
 
 LAPACK_COMPONENT=	lapacke
-LAPACK_COMPONENT_CMAKE_ARGS=	\
+LAPACK_COMPONENT_CMAKE_CONFIGURE_ARGS=	\
 	-DUSE_OPTIMIZED_BLAS=ON \
 	-DBLAS_LIBRARIES=-lblas \
 	-DUSE_OPTIMIZED_LAPACK=ON \

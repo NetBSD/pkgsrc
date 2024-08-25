@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/08/11 07:18:22 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:18:22 wiz Exp $
 
 DISTNAME=	zziplib-0.13.78
 CATEGORIES=	archivers
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_TOOLS+=	bash:build
 
-CMAKE_ARGS+=	-DZZIPTEST=NO
+CMAKE_CONFIGURE_ARGS+=	-DZZIPTEST=NO
 
 CHECK_PORTABILITY_SKIP+=	old.configure
 

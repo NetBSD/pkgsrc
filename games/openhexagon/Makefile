@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/12 13:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:45 wiz Exp $
 #
 
 DISTNAME=	openhexagon-2.0
@@ -44,14 +44,14 @@ SUBST_MESSAGE.include=	Fixing hardcoded include path
 SUBST_FILES.include=	extlibs/SSVLuaWrapper/include/SSVLuaWrapper/LuaContext/LuaContext.h
 SUBST_SED.include=	-e 's,lua5.1,lua-${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR},'
 
-CMAKE_ARGS+=	-DPKGBASE=${PKGBASE}
-CMAKE_ARGS+=	-DBUILD_SHARED_LIB:BOOL=OFF
-CMAKE_ARGS+=	-DLUA_LIBRARY=${BUILDLINK_DIR}/lib/liblua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}.so
-CMAKE_ARGS+=	-DLUA_INCLUDE_DIR=${BUILDLINK_DIR}/${LUA_INCDIR}
+CMAKE_CONFIGURE_ARGS+=	-DPKGBASE=${PKGBASE}
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIB:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DLUA_LIBRARY=${BUILDLINK_DIR}/lib/liblua${LUA_VERSION_MAJOR}.${LUA_VERSION_MINOR}.so
+CMAKE_CONFIGURE_ARGS+=	-DLUA_INCLUDE_DIR=${BUILDLINK_DIR}/${LUA_INCDIR}
 
 .for mod in ${MODULES:NSSVOpenHexagon*:C/-.*//}
-CMAKE_ARGS+=	-D${mod:tu}_INCLUDE_DIR=${WRKSRC}/extlibs/${mod}/include
-CMAKE_ARGS+=	-D${mod:tu}_LIBRARY_RELEASE=${WRKSRC}/extlibs/${mod}/lib${mod}-s.a
+CMAKE_CONFIGURE_ARGS+=	-D${mod:tu}_INCLUDE_DIR=${WRKSRC}/extlibs/${mod}/include
+CMAKE_CONFIGURE_ARGS+=	-D${mod:tu}_LIBRARY_RELEASE=${WRKSRC}/extlibs/${mod}/lib${mod}-s.a
 .endfor
 
 CONFIGURE_DIRS+=	${MODULES:NSSVOpenHexagon*:C/-.*//:%=extlibs/%} .

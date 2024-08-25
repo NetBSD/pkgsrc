@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/08/10 11:12:16 nia Exp $
+# $NetBSD: Makefile,v 1.46 2024/08/25 06:18:43 wiz Exp $
 
 .include "Makefile.common"
 
@@ -6,8 +6,8 @@ PKGNAME=	etlegacy-${ETL_VERSION}
 
 COMMENT=	Open source Wolfenstein: Enemy Territory client and server
 
-CMAKE_ARGS+=	-DRENDERER_DYNAMIC=OFF
-CMAKE_ARGS+=	-DFEATURE_RENDERER2=OFF # experimental, buggy
+CMAKE_CONFIGURE_ARGS+=	-DRENDERER_DYNAMIC=OFF
+CMAKE_CONFIGURE_ARGS+=	-DFEATURE_RENDERER2=OFF # experimental, buggy
 
 PLIST_VARS+=	client
 PLIST.client=	yes

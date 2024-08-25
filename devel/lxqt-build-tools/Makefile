@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/08/20 06:09:24 pin Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/25 06:18:36 wiz Exp $
 
 DISTNAME=	lxqt-build-tools-2.0.0
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++ # Needed to satisfy cmake
 
 PKG_SYSCONFSUBDIR=	xdg
-CMAKE_ARGS+=		-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}
+CMAKE_CONFIGURE_ARGS+=		-DLXQT_ETC_XDG_DIR=${PKG_SYSCONFDIR}
 
 BUILDLINK_API_DEPENDS.qt6-qtbase+=	qt6-qtbase>=6.6.0
 .include "../../x11/qt6-qtbase/buildlink3.mk"

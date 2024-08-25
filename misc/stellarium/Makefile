@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2024/08/12 14:06:58 adam Exp $
+# $NetBSD: Makefile,v 1.163 2024/08/25 06:19:03 wiz Exp $
 
 DISTNAME=	stellarium-24.2
 CATEGORIES=	misc
@@ -16,8 +16,8 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt perl pod2man
 GCC_REQD+=		12 # std::from_chars
 
-CMAKE_ARGS+=	-DENABLE_GPS=OFF
-CMAKE_ARGS+=	-DENABLE_SHOWMYSKY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_SHOWMYSKY=OFF
 
 LDFLAGS.SunOS+=	-lnsl -lsocket
 

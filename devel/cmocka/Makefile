@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/01/06 09:07:07 pin Exp $
+# $NetBSD: Makefile,v 1.13 2024/08/25 06:18:32 wiz Exp $
 
 DISTNAME=	cmocka-1.1.7
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 # GCC 4.3/4.4 provides wrong warnings:
 # cmocka.c:3281: error: 'setup_name' may be used uninitialized in this function
-CMAKE_ARGS+=	-DWITH_WERROR_UNINITIALIZED_FLAG=0
+CMAKE_CONFIGURE_ARGS+=	-DWITH_WERROR_UNINITIALIZED_FLAG=0
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

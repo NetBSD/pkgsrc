@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/06/09 21:02:56 markd Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/25 06:19:13 wiz Exp $
 
 PKGNAME=	qca2-qt5-gnupg-${DISTNAME:C/.*-//}
 PKGREVISION=	1
@@ -11,9 +11,9 @@ BUILD_DIRS=	plugins/qca-gnupg
 
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
 
-CMAKE_ARGS+=	-DBUILD_PLUGINS=gnupg
-CMAKE_ARGS+=	-DBUILD_TOOLS=OFF
-CMAKE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca-qt5
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PLUGINS=gnupg
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DINST_QCA_LIB_NAME=-lqca-qt5
 
 SUBST_CLASSES+=		libname
 SUBST_STAGE.libname=	pre-configure

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/29 16:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/25 06:18:34 wiz Exp $
 
 DISTNAME=	hyperscan-5.0.0
 PKGREVISION=	9
@@ -21,7 +21,7 @@ USE_CXX_FEATURES+=	c++11
 USE_TOOLS+=		pkg-config
 PYTHON_FOR_BUILD_ONLY=	yes
 
-CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_SHARED_LIBS=ON
 PKGCONFIG_OVERRIDE+=	libhs.pc.in
 
 .include "../../mk/bsd.prefs.mk"

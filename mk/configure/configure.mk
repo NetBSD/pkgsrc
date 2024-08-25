@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.34 2024/08/17 13:09:46 gdt Exp $
+# $NetBSD: configure.mk,v 1.35 2024/08/25 06:19:03 wiz Exp $
 #
 # = Package-settable variables =
 #
@@ -50,7 +50,7 @@ _PKG_VARS.configure= \
 	CONFIGURE_DIRS CONFIGURE_ENV CONFIG_SHELL CONFIGURE_SCRIPT \
 	CONFIGURE_ARGS OVERRIDE_GNU_CONFIG_SCRIPTS HAS_CONFIGURE \
 	GNU_CONFIGURE PKGCONFIG_OVERRIDE USE_PKGLOCALEDIR \
-	CMAKE_ARGS CMAKE_ARG_PATH
+	CMAKE_CONFIGURE_ARGS CMAKE_ARG_PATH
 _SORTED_VARS.configure=	*_ENV *_OVERRIDE
 _LISTED_VARS.configure=	*_ARGS *_SCRIPTS
 
@@ -59,9 +59,9 @@ CONFIGURE_ENV+=		${ALL_ENV}
 CONFIGURE_ARGS?=	# empty
 CONFIG_SHELL?=		${SH}
 CONFIG_SHELL_FLAGS?=	# none
-CMAKE_ARGS?=		# empty
+CMAKE_CONFIGURE_ARGS?=		# empty
 CMAKE_ARG_PATH?=	.
-_BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_ARGS
+_BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS CMAKE_CONFIGURE_ARGS
 
 .if defined(GNU_CONFIGURE)
 .  include "gnu-configure.mk"
@@ -253,7 +253,7 @@ do-configure-cmake:
 	${RUN}${_ULIMIT_CMD}						\
 	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${PKGSRC_SETENV} ${_CONFIGURE_CMAKE_ENV}			\
-		cmake ${CMAKE_ARGS} ${CMAKE_ARG_PATH}
+		cmake ${CMAKE_CONFIGURE_ARGS} ${CMAKE_ARG_PATH}
 .endfor
 
 ######################################################################

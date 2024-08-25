@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2020/12/18 23:25:59 nia Exp $
+# $NetBSD: options.mk,v 1.6 2024/08/25 06:19:07 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libVNCServer
 PKG_SUPPORTED_OPTIONS=		inet6 libgcrypt sasl
@@ -10,34 +10,34 @@ PKG_OPTIONS_GROUP.ssl=		gnutls openssl
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 .include "../../security/gnutls/buildlink3.mk"
-CMAKE_ARGS+=	-DWITH_GNUTLS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_GNUTLS=ON
 .else
-CMAKE_ARGS+=	-DWITH_GNUTLS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_GNUTLS=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
-CMAKE_ARGS+=	-DWITH_IPv6=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_IPv6=ON
 .else
-CMAKE_ARGS+=	-DWITH_IPv6=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_IPv6=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibgcrypt)
 .include "../../security/libgcrypt/buildlink3.mk"
-CMAKE_ARGS+=		-DWITH_GCRYPT=ON
+CMAKE_CONFIGURE_ARGS+=		-DWITH_GCRYPT=ON
 .else
-CMAKE_ARGS+=		-DWITH_GCRYPT=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWITH_GCRYPT=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
 .include "../../security/openssl/buildlink3.mk"
-CMAKE_ARGS+=	-DWITH_OPENSSL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENSSL=ON
 .else
-CMAKE_ARGS+=	-DWITH_OPENSSL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_OPENSSL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Msasl)
 .include "../../security/cyrus-sasl/buildlink3.mk"
-CMAKE_ARGS+=	-DWITH_SASL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SASL=ON
 .else
-CMAKE_ARGS+=	-DWITH_SASL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SASL=OFF
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/04/06 08:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:46 wiz Exp $
 
 PKGNAME=	srb2-2.2.4
 PKGREVISION=	9
@@ -33,8 +33,8 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DGME_INCLUDE_DIR=${BUILDLINK_DIR}/include
-CMAKE_ARGS+=	-DSDL2_INCLUDE_DIR=${BUILDLINK_DIR}/include
+CMAKE_CONFIGURE_ARGS+=	-DGME_INCLUDE_DIR=${BUILDLINK_DIR}/include
+CMAKE_CONFIGURE_ARGS+=	-DSDL2_INCLUDE_DIR=${BUILDLINK_DIR}/include
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2023/11/20 10:19:01 nia Exp $
+# $NetBSD: options.mk,v 1.7 2024/08/25 06:18:41 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.snes9x-gtk
 PKG_SUPPORTED_OPTIONS=		alsa pulseaudio portaudio wayland
@@ -22,23 +22,23 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .if !empty(PKG_OPTIONS:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_ALSA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_PULSEAUDIO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_PULSEAUDIO=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
 .include "../../audio/portaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_PORTAUDIO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_PORTAUDIO=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
 .include "../../devel/wayland/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WAYLAND=ON
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/08/07 22:02:48 nia Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/25 06:18:41 wiz Exp $
 
 .include "Makefile.common"
 
@@ -6,10 +6,10 @@ COMMENT=	Emulator for running Game Boy Advance games (CLI version)
 
 CONFLICTS+=	mgba-qt-[0-9]*
 
-CMAKE_ARGS+=	-DBUILD_QT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_QT=OFF
 
 # XXX: unsure if any of this is useful with the SDL driver
-CMAKE_ARGS+=	-DUSE_FFMPEG=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"

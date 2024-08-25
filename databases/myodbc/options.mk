@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2019/11/02 15:38:02 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2024/08/25 06:18:30 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.myodbc
 PKG_OPTIONS_REQUIRED_GROUPS=	db
@@ -13,5 +13,5 @@ PKG_SUGGESTED_OPTIONS=		iodbc
 
 .if !empty(PKG_OPTIONS:Munixodbc)
 .  include "../../databases/unixodbc/buildlink3.mk"
-CMAKE_ARGS+=		-DWITH_UNIXODBC=1
+CMAKE_CONFIGURE_ARGS+=		-DWITH_UNIXODBC=1
 .endif

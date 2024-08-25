@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/08/01 18:50:45 vins Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:21 wiz Exp $
 
 DISTNAME=	1e158fb20108
 PKGNAME=	xss-lock-0.3.0
@@ -28,8 +28,8 @@ SUBST_FILES.doc=	doc/CMakeLists.txt
 SUBST_SED.doc=		-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
 WRKSRC=		${WRKDIR}/raymonad-xss-lock-${DISTNAME}
 

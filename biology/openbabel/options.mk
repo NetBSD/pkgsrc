@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/06/07 09:25:22 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openbabel
 PKG_SUPPORTED_OPTIONS=	wxwidgets
@@ -10,8 +10,8 @@ PLIST_VARS+=		wx-gui
 
 .if !empty(PKG_OPTIONS:Mwxwidgets)
 .  include "../../x11/wxGTK32/buildlink3.mk"
-CMAKE_ARGS+=	-DBUILD_GUI=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GUI=ON
 PLIST.wx-gui=	yes
 .else
-CMAKE_ARGS+=	-DBUILD_GUI=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GUI=OFF
 .endif

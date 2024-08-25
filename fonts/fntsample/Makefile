@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/04/07 07:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/25 06:18:42 wiz Exp $
 
 DISTNAME=	fntsample-5.4
 PKGREVISION=	6
@@ -22,7 +22,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-release-/}
 
 REPLACE_PERL=	scripts/pdfoutline.pl scripts/pdf-extract-outline.pl
 
-CMAKE_ARGS+=	-DUNICODE_BLOCKS=${WRKDIR}/${BLOCKS_TXT}
+CMAKE_CONFIGURE_ARGS+=	-DUNICODE_BLOCKS=${WRKDIR}/${BLOCKS_TXT}
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

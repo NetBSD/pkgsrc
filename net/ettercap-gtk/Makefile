@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/05/29 16:33:50 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:05 wiz Exp $
 
 PKGREVISION= 18
 .include "../../net/ettercap/Makefile.common"
@@ -10,8 +10,8 @@ COMMENT=	Suite for man in the middle attacks (with GTK GUI)
 
 CONFLICTS+=	ettercap-[0-9]*
 
-CMAKE_ARGS+=	-DGTK_BUILD_TYPE=GTK3
-CMAKE_ARGS+=	-DENABLE_GTK=ON
+CMAKE_CONFIGURE_ARGS+=	-DGTK_BUILD_TYPE=GTK3
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GTK=ON
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk3/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2024/05/29 16:32:21 adam Exp $
+# $NetBSD: Makefile,v 1.175 2024/08/25 06:18:39 wiz Exp $
 
 DISTNAME=	Sigil-2.0.2
 PKGREVISION=	5
@@ -22,11 +22,11 @@ ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
 USE_LANGUAGES=	c c++0x
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_LIBS=ON
 # upstream defaults to Qt6, but this needs the unpackaged qt6-webengine
-CMAKE_ARGS+=	-DUSE_QT5=1
-CMAKE_ARGS+=	-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
-CMAKE_ARGS+=	-DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=	-DUSE_QT5=1
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
+CMAKE_CONFIGURE_ARGS+=	-DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PYVERSSUFFIX}
 
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c

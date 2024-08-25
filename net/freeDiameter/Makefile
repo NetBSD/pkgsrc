@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/05/29 16:33:51 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:19:06 wiz Exp $
 
 DISTNAME=	1.5.0
 PKGNAME=	freeDiameter-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_SCTP:BOOL=ON
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison flex pkg-config
 FLEX_REQD=	2.5.35

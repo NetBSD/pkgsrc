@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/07/21 08:16:01 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:34 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.google-glog
 
@@ -15,9 +15,9 @@ PKG_SUPPORTED_OPTIONS=	tests
 .if !empty(PKG_OPTIONS:Mtests)
 # googletest requires minimum c++14.
 TEST_TARGET=	test
-CMAKE_ARGS+=	-DBUILD_TESTING=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=ON
 USE_LANGUAGES+=	c++14
 .  include "../../devel/googletest/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 .endif

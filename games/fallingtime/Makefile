@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/06 08:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:18:44 wiz Exp $
 
 DISTNAME=	fallingtime-1.0.2
 PKGREVISION=	13
@@ -20,8 +20,8 @@ USE_LANGUAGES=	c c++
 # Also needed for alloca(), c99 creeps in and overrides otherwise...
 FORCE_C_STD=	gnu99
 
-CMAKE_ARGS+=	-DINSTALL_PREFIX=${PREFIX}/libexec
-CMAKE_ARGS+=	-DINSTALL_DATA_PREFIX=${PREFIX}/share/fallingtime
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_PREFIX=${PREFIX}/libexec
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_DATA_PREFIX=${PREFIX}/share/fallingtime
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/applications
