@@ -1,4 +1,4 @@
-$NetBSD: patch-conf_Makefile.in,v 1.4 2022/11/09 11:39:43 he Exp $
+$NetBSD: patch-conf_Makefile.in,v 1.5 2024/08/25 17:15:50 he Exp $
 
 Install configs in example config directory.
 
@@ -12,7 +12,7 @@ Install configs in example config directory.
  target = @target@
  target_alias = @target_alias@
  target_cpu = @target_cpu@
-@@ -679,18 +680,19 @@ regress: $(RNG)
+@@ -679,18 +680,20 @@ regress: $(RNG)
  		(echo "kasp.xml built")
  
  install-data-hook:
@@ -41,6 +41,7 @@ Install configs in example config directory.
 +	test -f ${DESTDIR}${EGDIR}/kasp.xml || \
 +		${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}
 +	${INSTALL_DATA} kasp.xml ${DESTDIR}${EGDIR}/kasp.xml.sample
++
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
