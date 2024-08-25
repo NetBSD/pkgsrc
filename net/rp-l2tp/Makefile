@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2019/11/03 11:45:52 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.15 2024/08/25 08:46:32 wiz Exp $
 
 DISTNAME=	rp-l2tp-0.3
 PKGREVISION=	1
@@ -20,6 +19,9 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 LDFLAGS.NetBSD+=	-lutil
 
 INSTALL_MAKE_FLAGS+=	RPM_INSTALL_ROOT=${DESTDIR:Q}
+
+# has been seen to compile cmd.o twice at the same time
+MAKE_JOBS_SAFE=		no
 
 post-patch:
 	for f in l2tp.conf.5 l2tpd.8; do				\
