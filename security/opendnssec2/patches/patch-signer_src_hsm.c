@@ -1,4 +1,4 @@
-$NetBSD: patch-signer_src_hsm.c,v 1.1 2023/12/05 12:20:40 he Exp $
+$NetBSD: patch-signer_src_hsm.c,v 1.2 2024/08/25 17:15:50 he Exp $
 
 Work around possible concurrency error and
 "[hsm] hsm_get_dnskey(): Got NULL key"
@@ -6,9 +6,9 @@ Ref. https://issues.opendnssec.org/browse/SUPPORT-278
 
 --- signer/src/hsm.c.orig	2022-11-08 08:46:49.000000000 +0000
 +++ signer/src/hsm.c
-@@ -34,6 +34,10 @@
+@@ -33,6 +33,10 @@
+ #include "hsm.h"
  #include "log.h"
- #include "cryptoki_compat/pkcs11.h"
  
 +#include <pthread.h>
 +
@@ -17,7 +17,7 @@ Ref. https://issues.opendnssec.org/browse/SUPPORT-278
  static const char* hsm_str = "hsm";
  
  /**
-@@ -109,7 +113,9 @@ llibhsm_key_start:
+@@ -108,7 +112,9 @@ llibhsm_key_start:
  
      /* get dnskey */
      if (!key_id->dnskey) {
