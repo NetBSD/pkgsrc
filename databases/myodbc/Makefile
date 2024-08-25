@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2022/12/25 08:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/08/25 06:18:30 wiz Exp $
 
 DISTNAME=	mysql-connector-odbc-8.0.31
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/}
@@ -14,9 +14,9 @@ COMMENT=	ODBC driver (server side) for MySQL
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
-CMAKE_ARGS=		-Wno-dev
-#CMAKE_ARGS+=		-DMYSQL_DIR=${BUILDLINK_PREFIX.mysql-client}
-CMAKE_ARGS+=		-DMYSQL_INCLUDE_DIR=${BUILDLINK_PREFIX.mysql-client}/include/mysql
+CMAKE_CONFIGURE_ARGS=		-Wno-dev
+#CMAKE_CONFIGURE_ARGS+=		-DMYSQL_DIR=${BUILDLINK_PREFIX.mysql-client}
+CMAKE_CONFIGURE_ARGS+=		-DMYSQL_INCLUDE_DIR=${BUILDLINK_PREFIX.mysql-client}/include/mysql
 USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	share/doc/mysql-connector-odbc

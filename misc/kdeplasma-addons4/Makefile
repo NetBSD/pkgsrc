@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2024/05/29 16:33:33 adam Exp $
+# $NetBSD: Makefile,v 1.115 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	kdeplasma-addons-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -10,9 +10,9 @@ COMMENT=	Plasmoids
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-CMAKE_ARGS+=	-D BUILD_ibus:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_Marble:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_Kexiv2:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-D BUILD_ibus:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_Marble:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_Kexiv2:BOOL=OFF
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 

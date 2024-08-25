@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2024/01/08 21:28:55 thor Exp $
+# $NetBSD: Makefile,v 1.47 2024/08/25 06:19:00 wiz Exp $
 
 MAINTAINER=	thomas.orgis@uni-hamburg.de
 COMMENT=	Linear Algebra PACKage (Netlib reference implementation)
 
 LAPACK_COMPONENT=	lapack
-LAPACK_COMPONENT_CMAKE_ARGS= \
+LAPACK_COMPONENT_CMAKE_CONFIGURE_ARGS= \
 	-DUSE_OPTIMIZED_BLAS=ON \
 	-DBLAS_LIBRARIES=-lblas \
 	-DUSE_OPTIMIZED_LAPACK=OFF \

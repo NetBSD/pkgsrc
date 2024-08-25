@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/05/29 16:31:28 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/08/25 06:18:27 wiz Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -35,7 +35,7 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 
-CMAKE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
+CMAKE_CONFIGURE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
 
 SUBST_CLASSES+=		libdxfrw
 SUBST_STAGE.libdxfrw=	pre-configure

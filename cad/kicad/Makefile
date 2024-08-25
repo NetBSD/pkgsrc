@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/08/06 00:54:16 tnn Exp $
+# $NetBSD: Makefile,v 1.97 2024/08/25 06:18:26 wiz Exp $
 #
 
 V=		8.0.4
@@ -23,16 +23,16 @@ USE_CXX_FEATURES+=	charconv filesystem
 USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=		-DKICAD_SCRIPTING_WXPYTHON=OFF
-CMAKE_ARGS+=		-DKICAD_BUILD_I18N=ON
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=		-DKICAD_SCRIPTING_WXPYTHON=OFF
+CMAKE_CONFIGURE_ARGS+=		-DKICAD_BUILD_I18N=ON
 
 # KICAD_USE_EGL must be defined if wxWidgets was compiled with EGL canvas.
 .include "../../graphics/MesaLib/features.mk"
 .if !empty(MESALIB_SUPPORTS_EGL:Myes)
-CMAKE_ARGS+=		-DKICAD_USE_EGL=ON
+CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=ON
 .else
-CMAKE_ARGS+=		-DKICAD_USE_EGL=OFF
+CMAKE_CONFIGURE_ARGS+=		-DKICAD_USE_EGL=OFF
 .endif
 
 PY_PATCHPLIST=		yes

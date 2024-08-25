@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/05/09 09:55:50 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	libjpeg-turbo-3.0.3
 CATEGORIES=	graphics
@@ -27,7 +27,7 @@ TEST_TARGET=		test
 
 # Ask for compatibility with jpeg 8, to get the highest ABI that
 # libjpeg-turbo supports.
-CMAKE_ARGS+=	-DWITH_JPEG8=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_JPEG8=ON
 
 CHECK_PORTABILITY_SKIP+=	release/makemacpkg.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/07 07:34:03 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/08/25 06:18:46 wiz Exp $
 
 DISTNAME=	oshu-2.0.2
 PKGREVISION=	11
@@ -16,7 +16,7 @@ USE_CMAKE=	yes
 
 LDFLAGS+=	-lm # fmaf()
 
-CMAKE_ARGS+=	-DOSHU_SKINS="minimal"
+CMAKE_CONFIGURE_ARGS+=	-DOSHU_SKINS="minimal"
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

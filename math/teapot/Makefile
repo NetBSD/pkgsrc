@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/05/06 08:40:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	teapot-2.3.0
 PKGREVISION=	3
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DENABLE_HELP=NO
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_HELP=NO
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lnsl

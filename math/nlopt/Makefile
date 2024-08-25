@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/07 21:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/25 06:19:01 wiz Exp $
 
 VERSION=		2.7.1
 DISTNAME=		nlopt-${VERSION}
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS+=		-DNLOPT_PYTHON=OFF
+CMAKE_CONFIGURE_ARGS+=		-DNLOPT_PYTHON=OFF
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/gmp/buildlink3.mk"

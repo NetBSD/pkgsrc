@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2024/01/08 21:28:55 thor Exp $
+# $NetBSD: Makefile.common,v 1.20 2024/08/25 06:19:00 wiz Exp $
 # used by math/blas/Makefile
 # used by math/cblas/Makefile
 # used by math/lapacke/Makefile
@@ -9,7 +9,7 @@
 # used by math/lapack64/Makefile
 
 # Common Makefile for packages derived from the Netlib BLAS/LAPACK sources.
-# Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_ARGS to
+# Package Makefile sets LAPACK_COMPONENT and LAPACK_COMPONENT_CMAKE_CONFIGURE_ARGS to
 # choose the library to install.
 # LAPACK_COMPONENT can be "lapack", "lapacke", or "cblas",
 # or any of those with 64 suffix for ILP64 mode (64 bit indexing).
@@ -45,10 +45,10 @@ HEADERDIR=		netlib
 
 # Note: We patch the build to install both static and
 # shared libraries.
-CMAKE_ARGS=	-DBUILD_DEPRECATED=ON \
+CMAKE_CONFIGURE_ARGS=	-DBUILD_DEPRECATED=ON \
 		-DBUILD_SHARED_LIBS=ON \
 		-DCMAKE_INSTALL_INCLUDEDIR=${PREFIX}/include/${HEADERDIR} \
-		${LAPACK_COMPONENT_CMAKE_ARGS}
+		${LAPACK_COMPONENT_CMAKE_CONFIGURE_ARGS}
 
 # The cmake files are not ready for prime time.
 post-install:

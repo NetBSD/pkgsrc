@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/06/02 14:30:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:19:20 wiz Exp $
 
 DISTNAME=	slop-7.5
 PKGREVISION=	9
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 FORCE_CXX_STD=	c++17
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

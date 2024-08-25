@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/08/20 06:10:44 pin Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/25 06:18:39 wiz Exp $
 
 VERSION=	1.3.0
 DISTNAME=	FeatherNotes-V${VERSION}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/FeatherNotes-${VERSION}
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 .include "../../x11/qt6-qtbase/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/07/14 12:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/08/25 06:18:50 wiz Exp $
 
 DISTNAME=	exiv2-0.28.3
 CATEGORIES=	graphics
@@ -19,11 +19,11 @@ USE_CXX_FEATURES+=	filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
-CMAKE_ARGS+=	-DEXIV2_BUILD_SAMPLES:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DEXIV2_BUILD_SAMPLES:BOOL=OFF
 # turn on BMFF support -- will be default as of 1.00
-CMAKE_ARGS+=	-DEXIV2_ENABLE_BMFF:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DEXIV2_ENABLE_BMFF:BOOL=ON
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
 LDFLAGS.Linux+=	-ldl

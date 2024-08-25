@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2022/12/23 13:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/25 06:18:55 wiz Exp $
 
 DISTNAME=	ibus-table-chinese-1.8.12
 CATEGORIES=	inputmethod chinese
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
-CMAKE_ARGS+=	-DDATA_DIR=${PREFIX}/share
+CMAKE_CONFIGURE_ARGS+=	-DDATA_DIR=${PREFIX}/share
 
 .include "../../inputmethod/ibus-table/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

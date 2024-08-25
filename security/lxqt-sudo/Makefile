@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/08/20 06:13:23 pin Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/25 06:19:12 wiz Exp $
 
 DISTNAME=	lxqt-sudo-2.0.0
 CATEGORIES=	security
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
+CMAKE_CONFIGURE_ARGS+=	-DMSK_INSTALL_INCLUDES=/include
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools

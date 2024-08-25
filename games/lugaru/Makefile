@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/04/06 08:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:45 wiz Exp $
 
 DISTNAME=	lugaru-${VERSION}
 VERSION=	1.2
@@ -16,8 +16,8 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DSYSTEM_INSTALL=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DSYSTEM_INSTALL=ON
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"

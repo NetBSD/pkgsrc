@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/12 13:20:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/08/25 06:18:26 wiz Exp $
 
 BUILDLINK_TREE+=	occt
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.occt?=	occt>=7.7.0nb1
 BUILDLINK_PKGSRCDIR.occt?=	../../cad/occt
 
 BUILDLINK_INCDIRS.occt+=	include/opencascade
-CMAKE_ARGS+=			-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.occt}/include/opencascade
+CMAKE_CONFIGURE_ARGS+=			-DOCC_INCLUDE_DIR=${BUILDLINK_PREFIX.occt}/include/opencascade
 
 pkgbase := occt
 .include "../../mk/pkg-build-options.mk"

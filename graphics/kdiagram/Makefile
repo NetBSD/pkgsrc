@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/29 16:32:56 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	kdiagram-2.8.0
 PKGREVISION=	6
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	extra-cmake-modules>=5.60.0:../../devel/extra-cmake-modules
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DECM_MKSPECS_INSTALL_DIR=${QTDIR}/mkspecs/modules
+CMAKE_CONFIGURE_ARGS+=	-DECM_MKSPECS_INSTALL_DIR=${QTDIR}/mkspecs/modules
 
 .include "../../devel/cmake/build.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

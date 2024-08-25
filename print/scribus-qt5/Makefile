@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2024/08/01 21:04:30 markd Exp $
+# $NetBSD: Makefile,v 1.70 2024/08/25 06:19:11 wiz Exp $
 
 DISTNAME=	scribus-1.6.2
 CATEGORIES=	print
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 USE_CXX_FEATURES+=	c++17
-CMAKE_ARGS+=		-DWANT_CPP17=ON
+CMAKE_CONFIGURE_ARGS+=		-DWANT_CPP17=ON
 
 .include "../../devel/cmake/build.mk"
 .include "../../converters/libcdr/buildlink3.mk"

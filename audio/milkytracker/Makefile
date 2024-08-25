@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/04/06 08:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/25 06:18:24 wiz Exp $
 
 DISTNAME=	milkytracker-1.04.00
 PKGREVISION=	2
@@ -20,7 +20,7 @@ USE_LANGUAGES=	c c++11
 # As in docs/CMakeLists.txt, on "BSD", "share/doc/milkytracker" is always used
 # Otherwise, "share/doc/MilkyTracker" is used.
 # This is silly.
-CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR="share/doc/milkytracker"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_DOCDIR="share/doc/milkytracker"
 
 INSTALLATION_DIRS+=	share/appdata
 INSTALLATION_DIRS+=	share/applications

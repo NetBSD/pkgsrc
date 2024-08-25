@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/08/20 06:19:03 pin Exp $
+# $NetBSD: Makefile,v 1.39 2024/08/25 06:19:19 wiz Exp $
 
 DISTNAME=	libfm-qt-2.0.2
 CATEGORIES=	x11
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
 PKG_SYSCONFSUBDIR=	xdg
 

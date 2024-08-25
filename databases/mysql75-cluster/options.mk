@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/04/17 04:07:13 jnemeth Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:30 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-cluster
 
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS+=	dtrace
 
 # Enable DTrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
-CMAKE_ARGS+=		-DENABLE_DTRACE=ON
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_DTRACE=ON
 .else
-CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_DTRACE=OFF
 .endif

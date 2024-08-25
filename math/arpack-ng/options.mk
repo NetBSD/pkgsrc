@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/05/31 21:35:31 adam Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.arpack-ng
 PKG_SUPPORTED_OPTIONS=	mpi
@@ -9,8 +9,8 @@ PKG_SUPPORTED_OPTIONS=	mpi
 PLIST_VARS+=		mpi
 .if !empty(PKG_OPTIONS:Mmpi)
 PLIST.mpi=		yes
-CMAKE_ARGS+=	-DMPI=on
+CMAKE_CONFIGURE_ARGS+=	-DMPI=on
 .include "../../mk/mpi.buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DMPI=off
+CMAKE_CONFIGURE_ARGS+=	-DMPI=off
 .endif

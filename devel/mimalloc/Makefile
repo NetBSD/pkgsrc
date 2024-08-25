@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/07/21 08:25:51 nia Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/25 06:18:36 wiz Exp $
 
 DISTNAME=	mimalloc-2.0.9
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DMI_INSTALL_TOPLEVEL=ON
+CMAKE_CONFIGURE_ARGS+=	-DMI_INSTALL_TOPLEVEL=ON
 
 # Requires stdatomic support.
 USE_CC_FEATURES+=	c11

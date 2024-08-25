@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/08/17 00:19:21 nia Exp $
+# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:29 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-embedded-/}
 COMMENT=	MariaDB 10.11, a free MySQL compatible database (embedded)
@@ -14,8 +14,8 @@ DEPENDS+=	mariadb-client-10.11.*:../../databases/mariadb1011-client
 #
 # This is ugly, so if you know a better solution, please improve this.
 
-CMAKE_ARGS+=		-DCONNECT_WITH_MONGO=NO
-CMAKE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
+CMAKE_CONFIGURE_ARGS+=		-DCONNECT_WITH_MONGO=NO
+CMAKE_CONFIGURE_ARGS+=		-DWITH_EMBEDDED_SERVER=ON
 
 post-install:
 	for file in \

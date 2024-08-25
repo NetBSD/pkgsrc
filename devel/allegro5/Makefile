@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/04/07 07:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/08/25 06:18:31 wiz Exp $
 
 DISTNAME=	allegro-5.2.7.0
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
@@ -17,12 +17,12 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-Wno-dev
-CMAKE_ARGS+=	-DWANT_IMAGE_FREEIMAGE=OFF
+CMAKE_CONFIGURE_ARGS+=	-Wno-dev
+CMAKE_CONFIGURE_ARGS+=	-DWANT_IMAGE_FREEIMAGE=OFF
 # TODO: make this work and turn it into an option
-CMAKE_ARGS+=	-DWANT_DOCS=OFF
-CMAKE_ARGS+=	-DWANT_DEMO=OFF
-CMAKE_ARGS+=	-DWANT_EXAMPLES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_DOCS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_DEMO=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWANT_EXAMPLES=OFF
 
 .include "../../mk/oss.buildlink3.mk"
 .if ${OSS_TYPE} != "none"
@@ -33,7 +33,7 @@ SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
 SUBST_FILES.oss+=	addons/audio/oss.c
 SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .else
-CMAKE_ARGS+=		-DWANT_OSS=OFF
+CMAKE_CONFIGURE_ARGS+=		-DWANT_OSS=OFF
 .endif
 
 PKGCONFIG_OVERRIDE+=	misc/allegro.pc.in

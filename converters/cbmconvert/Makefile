@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2022/05/15 18:39:30 rhialto Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/25 06:18:28 wiz Exp $
 
 DISTNAME=	cbmconvert-2.1.5
 CATEGORIES=	converters archivers
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES+=	c
 
 USE_CMAKE=	yes
-#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/cbmconvert
 

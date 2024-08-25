@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/05/29 16:33:08 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/25 06:18:55 wiz Exp $
 
 DISTNAME=	fcitx5-configtool-5.1.3
 PKGREVISION=	2
@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config
 
 TOOL_DEPENDS+=		extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
-CMAKE_ARGS+=		-DENABLE_KCM=off
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_KCM=off
 
 # CMAKE_INSTALL_RPATH does not work.
 SUBST_CLASSES+=		rpath

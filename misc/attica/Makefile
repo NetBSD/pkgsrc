@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2023/11/12 13:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/08/25 06:19:02 wiz Exp $
 
 DISTNAME=	attica-0.4.2
 PKGREVISION=	11
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DQT4_BUILD=YES
+CMAKE_CONFIGURE_ARGS+=	-DQT4_BUILD=YES
 CONFIGURE_DIRS=	_build
 
 PKGCONFIG_OVERRIDE+=	lib/cmake/libattica.pc.cmake

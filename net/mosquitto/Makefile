@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/08/19 19:11:36 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/25 06:19:07 wiz Exp $
 
 DISTNAME=	mosquitto-2.0.18
 PKGREVISION=	1
@@ -16,8 +16,8 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LANGUAGES+=	c c++
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
-CMAKE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
-CMAKE_ARGS+=	-DWITH_PLUGINS=NO
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PLUGINS=NO
 
 MOSQUITTO_USER=		mosquitto
 MOSQUITTO_GROUP=	mosquitto

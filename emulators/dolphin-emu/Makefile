@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/05/29 16:32:26 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/08/25 06:18:40 wiz Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	49
@@ -18,9 +18,9 @@ USE_LANGUAGES=	c c++
 
 # Since SFML is not available in pkgsrc, make sure the included version
 # is always used.
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SFML=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_SFML=ON
 
-CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
 
 USE_CXX_FEATURES+=	unique_ptr
 
@@ -33,11 +33,11 @@ ONLY_FOR_PLATFORM=	${LITTLEENDIANPLATFORMS}
 BROKEN_ON_PLATFORM+=	SunOS-*-*
 
 .if ${MACHINE_ARCH} != "x86_64"
-CMAKE_ARGS+=		-DENABLE_GENERIC=1
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_GENERIC=1
 .endif
 
 # "Couldn't find libevdev and/or libudev.  Can't build evdev controller backend."
-CMAKE_ARGS.Linux+=	-DENABLE_EVDEV=0
+CMAKE_CONFIGURE_ARGS.Linux+=	-DENABLE_EVDEV=0
 
 # JIT
 NOT_PAX_MPROTECT_SAFE+=	bin/dolphin-emu

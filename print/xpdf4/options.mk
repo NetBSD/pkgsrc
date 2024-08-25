@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2020/11/05 12:24:07 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:11 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xpdf4
 
@@ -12,8 +12,8 @@ PKG_SUGGESTED_OPTIONS=		cups
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-CMAKE_ARGS+=	-DXPDFWIDGET_PRINTING=ON
+CMAKE_CONFIGURE_ARGS+=	-DXPDFWIDGET_PRINTING=ON
 .include "../../print/libcups/buildlink3.mk"
 .elif ${OPSYS} != "Darwin"
-CMAKE_ARGS+=	-DXPDFWIDGET_PRINTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DXPDFWIDGET_PRINTING=OFF
 .endif

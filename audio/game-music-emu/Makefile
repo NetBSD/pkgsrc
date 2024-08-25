@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2020/03/28 17:48:44 nia Exp $
+# $NetBSD: Makefile,v 1.6 2024/08/25 06:18:23 wiz Exp $
 
 DISTNAME=	game-music-emu-0.6.3
 CATEGORIES=	audio
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DENABLE_UBSAN=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_UBSAN=OFF
 
 PKGCONFIG_OVERRIDE+=	gme/libgme.pc.in
 

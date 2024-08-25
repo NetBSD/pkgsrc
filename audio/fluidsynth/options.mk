@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2022/07/17 08:26:57 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2024/08/25 06:18:23 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fluidsynth
 
@@ -23,50 +23,50 @@ PKG_SUGGESTED_OPTIONS+=		ladspa
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
-CMAKE_ARGS+=	-Denable-alsa=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-alsa=ON
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-alsa=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-alsa=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
-CMAKE_ARGS+=	-Denable-dbus=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-dbus=ON
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-dbus=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-dbus=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mjack)
-CMAKE_ARGS+=	-Denable-jack=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-jack=ON
 .include "../../audio/jack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-jack=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-jack=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-CMAKE_ARGS+=	-Denable-portaudio=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-portaudio=ON
 .include "../../audio/portaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-portaudio=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-portaudio=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CMAKE_ARGS+=	-Denable-pulseaudio=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-pulseaudio=ON
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-pulseaudio=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-pulseaudio=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl2)
-CMAKE_ARGS+=	-Denable-sdl2=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-sdl2=ON
 .include "../../devel/SDL2/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-sdl2=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-sdl2=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mladspa)
-CMAKE_ARGS+=	-Denable-ladspa=ON
+CMAKE_CONFIGURE_ARGS+=	-Denable-ladspa=ON
 .include "../../audio/ladspa/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-Denable-ladspa=OFF
+CMAKE_CONFIGURE_ARGS+=	-Denable-ladspa=OFF
 .endif

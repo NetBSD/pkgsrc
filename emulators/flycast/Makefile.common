@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2023/11/17 09:27:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2024/08/25 06:18:40 wiz Exp $
 # used by emulators/flycast/Makefile
 # used by emulators/libretro-flycast/Makefile
 
@@ -22,14 +22,14 @@ USE_LANGUAGES=	c c++
 # core/hw/sh4/sh4_interrupts.cpp:250:1: internal compiler error: in gen_reg_rtx, at emit-rtl.c:1058
 GCC_REQD+=	10
 
-CMAKE_ARGS+=	-DUSE_HOST_LIBZIP=ON
-CMAKE_ARGS+=	-DUSE_HOST_SDL=ON
-CMAKE_ARGS+=	-DUSE_VULKAN=OFF
-CMAKE_ARGS+=	-DUSE_DX9=OFF
-CMAKE_ARGS+=	-DUSE_DX11=OFF
-CMAKE_ARGS+=	-DWITH_SYSTEM_ZLIB=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_HOST_LIBZIP=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_HOST_SDL=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_VULKAN=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_DX9=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_DX11=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_ZLIB=ON
 
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Git=ON
 
 DISTINFO_FILE=	${.CURDIR}/../../emulators/flycast/distinfo
 PATCHDIR=	${.CURDIR}/../../emulators/flycast/patches
