@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2024/08/05 05:33:21 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.94 2024/08/25 10:29:10 wiz Exp $
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -49,6 +43,12 @@ ${PYSITELIB}/pkg_resources/tests/test_resources.pyo
 ${PYSITELIB}/pkg_resources/tests/test_working_set.py
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyc
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -82,6 +82,9 @@ ${PYSITELIB}/setuptools/_distutils/_msvccompiler.pyo
 ${PYSITELIB}/setuptools/_distutils/_vendor/__init__.py
 ${PYSITELIB}/setuptools/_distutils/_vendor/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/_vendor/__init__.pyo
+${PYSITELIB}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE
+${PYSITELIB}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.APACHE
+${PYSITELIB}/setuptools/_distutils/_vendor/packaging-24.0.dist-info/LICENSE.BSD
 ${PYSITELIB}/setuptools/_distutils/_vendor/packaging/__init__.py
 ${PYSITELIB}/setuptools/_distutils/_vendor/packaging/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/_vendor/packaging/__init__.pyo
@@ -747,15 +750,6 @@ ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.py
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyc
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyi
 ${PYSITELIB}/setuptools/_vendor/more_itertools/recipes.pyo
-${PYSITELIB}/setuptools/_vendor/ordered_set-4.1.0.dist-info/INSTALLER
-${PYSITELIB}/setuptools/_vendor/ordered_set-4.1.0.dist-info/METADATA
-${PYSITELIB}/setuptools/_vendor/ordered_set-4.1.0.dist-info/RECORD
-${PYSITELIB}/setuptools/_vendor/ordered_set-4.1.0.dist-info/REQUESTED
-${PYSITELIB}/setuptools/_vendor/ordered_set-4.1.0.dist-info/WHEEL
-${PYSITELIB}/setuptools/_vendor/ordered_set/__init__.py
-${PYSITELIB}/setuptools/_vendor/ordered_set/__init__.pyc
-${PYSITELIB}/setuptools/_vendor/ordered_set/__init__.pyo
-${PYSITELIB}/setuptools/_vendor/ordered_set/py.typed
 ${PYSITELIB}/setuptools/_vendor/packaging-24.1.dist-info/INSTALLER
 ${PYSITELIB}/setuptools/_vendor/packaging-24.1.dist-info/LICENSE
 ${PYSITELIB}/setuptools/_vendor/packaging-24.1.dist-info/LICENSE.APACHE
@@ -1125,12 +1119,14 @@ ${PYSITELIB}/setuptools/compat/py311.pyo
 ${PYSITELIB}/setuptools/compat/py39.py
 ${PYSITELIB}/setuptools/compat/py39.pyc
 ${PYSITELIB}/setuptools/compat/py39.pyo
+${PYSITELIB}/setuptools/config/NOTICE
 ${PYSITELIB}/setuptools/config/__init__.py
 ${PYSITELIB}/setuptools/config/__init__.pyc
 ${PYSITELIB}/setuptools/config/__init__.pyo
 ${PYSITELIB}/setuptools/config/_apply_pyprojecttoml.py
 ${PYSITELIB}/setuptools/config/_apply_pyprojecttoml.pyc
 ${PYSITELIB}/setuptools/config/_apply_pyprojecttoml.pyo
+${PYSITELIB}/setuptools/config/_validate_pyproject/NOTICE
 ${PYSITELIB}/setuptools/config/_validate_pyproject/__init__.py
 ${PYSITELIB}/setuptools/config/_validate_pyproject/__init__.pyc
 ${PYSITELIB}/setuptools/config/_validate_pyproject/__init__.pyo
@@ -1149,6 +1145,7 @@ ${PYSITELIB}/setuptools/config/_validate_pyproject/fastjsonschema_validations.py
 ${PYSITELIB}/setuptools/config/_validate_pyproject/formats.py
 ${PYSITELIB}/setuptools/config/_validate_pyproject/formats.pyc
 ${PYSITELIB}/setuptools/config/_validate_pyproject/formats.pyo
+${PYSITELIB}/setuptools/config/distutils.schema.json
 ${PYSITELIB}/setuptools/config/expand.py
 ${PYSITELIB}/setuptools/config/expand.pyc
 ${PYSITELIB}/setuptools/config/expand.pyo
@@ -1158,6 +1155,7 @@ ${PYSITELIB}/setuptools/config/pyprojecttoml.pyo
 ${PYSITELIB}/setuptools/config/setupcfg.py
 ${PYSITELIB}/setuptools/config/setupcfg.pyc
 ${PYSITELIB}/setuptools/config/setupcfg.pyo
+${PYSITELIB}/setuptools/config/setuptools.schema.json
 ${PYSITELIB}/setuptools/depends.py
 ${PYSITELIB}/setuptools/depends.pyc
 ${PYSITELIB}/setuptools/depends.pyo
