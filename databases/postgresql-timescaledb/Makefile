@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/08/07 09:40:31 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/08/25 06:18:31 wiz Exp $
 
 DISTNAME=	timescaledb-2.16.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -13,8 +13,8 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 
-CMAKE_ARGS+=	-DUSE_OPENSSL=ON
-CMAKE_ARGS+=	-DREGRESS_CHECKS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENSSL=ON
+CMAKE_CONFIGURE_ARGS+=	-DREGRESS_CHECKS=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,7 +35,7 @@ PKG_SUGGESTED_OPTIONS+=		timescale-license
 PLIST_VARS+=		tsl
 .if !empty(PKG_OPTIONS:Mtimescale-license)
 LICENSE+=		AND timescale-license
-CMAKE_ARGS+=		-DAPACHE_ONLY=OFF
+CMAKE_CONFIGURE_ARGS+=		-DAPACHE_ONLY=OFF
 RESTRICTED=		No clear permission granted to distribute
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -43,7 +43,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 PLIST.tsl=		yes
 .else
-CMAKE_ARGS+=		-DAPACHE_ONLY=ON
+CMAKE_CONFIGURE_ARGS+=		-DAPACHE_ONLY=ON
 .endif
 
 .include "../../devel/cmake/build.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2019/10/03 00:07:07 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:08 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.remmina
 
@@ -9,10 +9,10 @@ PKG_SUGGESTED_OPTIONS=		libappindicator
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mavahi)
-CMAKE_ARGS+=	-DWITH_AVAHI=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_AVAHI=ON
 .include "../../net/avahi/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_AVAHI=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_AVAHI=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibappindicator)

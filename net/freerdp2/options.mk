@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2022/08/06 08:02:27 nia Exp $
+# $NetBSD: options.mk,v 1.5 2024/08/25 06:19:06 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freerdp2
 PKG_SUPPORTED_OPTIONS=		alsa pcsc pulseaudio cups wayland x11
@@ -13,30 +13,30 @@ PKG_SUGGESTED_OPTIONS+=		wayland
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Malsa)
-CMAKE_ARGS+=	-DWITH_ALSA=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_ALSA=ON
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_ALSA=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
-CMAKE_ARGS+=	-DWITH_PULSE=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PULSE=ON
 .include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_PULSE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_PULSE=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mcups)
-CMAKE_ARGS+=	-DWITH_CUPS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CUPS=ON
 .include "../../print/libcups/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_CUPS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CUPS=OFF
 .endif
 
 PLIST_VARS+=	x11
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=	yes
-CMAKE_ARGS+=	-DWITH_X11=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_X11=ON
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
@@ -50,15 +50,15 @@ CMAKE_ARGS+=	-DWITH_X11=ON
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_X11=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_X11=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcsc)
 .  include "../../security/pcsc-lite/buildlink3.mk"
-CMAKE_ARGS+=   -DWITH_PCSC=ON
+CMAKE_CONFIGURE_ARGS+=   -DWITH_PCSC=ON
 PLIST.pcsc=    yes
 .else
-CMAKE_ARGS+=   -DWITH_PCSC=OFF
+CMAKE_CONFIGURE_ARGS+=   -DWITH_PCSC=OFF
 .endif
 
 PLIST_VARS+=	wayland
@@ -66,7 +66,7 @@ PLIST_VARS+=	wayland
 .  include "../../devel/wayland/buildlink3.mk"
 .  include "../../x11/libxkbcommon/buildlink3.mk"
 PLIST.wayland=	yes
-CMAKE_ARGS+=   -DWITH_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=   -DWITH_WAYLAND=ON
 .else
-CMAKE_ARGS+=   -DWITH_WAYLAND=OFF
+CMAKE_CONFIGURE_ARGS+=   -DWITH_WAYLAND=OFF
 .endif

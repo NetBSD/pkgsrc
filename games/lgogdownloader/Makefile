@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/06/16 18:57:11 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/08/25 06:18:44 wiz Exp $
 
 DISTNAME=	lgogdownloader-3.14
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	public-domain # actually, dwtfywtpl
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
+CMAKE_CONFIGURE_ARGS+=	-DJSONCPP_INCLUDE_DIR=${BUILDLINK_DIR}/include/json
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

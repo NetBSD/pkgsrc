@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/04/09 11:00:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/25 06:19:00 wiz Exp $
 
 DISTNAME=	kissfft-131.1.0
 CATEGORIES=	math
@@ -13,7 +13,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DKISSFFT_TEST=OFF
+CMAKE_CONFIGURE_ARGS+=	-DKISSFFT_TEST=OFF
 
 PKGCONFIG_OVERRIDE+=	kissfft.pc.in
 PKGCONFIG_OVERRIDE+=	kissfft-float.pc

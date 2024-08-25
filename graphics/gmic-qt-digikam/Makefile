@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/05/29 16:32:53 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/25 06:18:50 wiz Exp $
 
 DISTNAME=	gmic-qt-digikam-3.2.2.20230417
 PKGREVISION=	9
@@ -15,8 +15,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake bash:build
 
-CMAKE_ARGS+=	-DENABLE_SYSTEM_GMIC=OFF
-CMAKE_ARGS+=	-DGMIC_QT_HOST=digikam
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_SYSTEM_GMIC=OFF
+CMAKE_CONFIGURE_ARGS+=	-DGMIC_QT_HOST=digikam
 
 REPLACE_BASH+=	translations/lrelease.sh
 

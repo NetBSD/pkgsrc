@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/10/29 13:28:08 rhialto Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.qmmp
 PKG_SUPPORTED_OPTIONS+=		alsa jack pulseaudio
@@ -13,7 +13,7 @@ PLIST_VARS+=	alsa
 PLIST.alsa=	yes
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_ALSA=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_ALSA=OFF
 .endif
 
 PLIST_VARS+=	pulse
@@ -21,7 +21,7 @@ PLIST_VARS+=	pulse
 PLIST.pulse=	yes
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_PULSE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_PULSE=OFF
 .endif
 
 PLIST_VARS+=	jack
@@ -29,7 +29,7 @@ PLIST_VARS+=	jack
 PLIST.jack=	yes
 .  include "../../audio/jack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_JACK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_JACK=OFF
 .endif
 
 PLIST_VARS+=	ffmpeg
@@ -37,7 +37,7 @@ PLIST_VARS+=	ffmpeg
 PLIST.ffmpeg=	yes
 .  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_FFMPEG=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 .endif
 
 PLIST_VARS+=	mpc
@@ -45,7 +45,7 @@ PLIST_VARS+=	mpc
 PLIST.mpc=	yes
 .  include "../../audio/musepack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_MPC=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_MPC=OFF
 .endif
 
 PLIST_VARS+=	wv
@@ -53,7 +53,7 @@ PLIST_VARS+=	wv
 PLIST.wv=	yes
 .  include "../../audio/wavpack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_WAVPACK=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WAVPACK=OFF
 .endif
 
 PLIST_VARS+=	sid
@@ -61,5 +61,5 @@ PLIST_VARS+=	sid
 PLIST.sid=	yes
 .  include "../../audio/libsidplayfp/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DUSE_SID=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_SID=OFF
 .endif

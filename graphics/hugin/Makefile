@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2024/05/29 16:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.147 2024/08/25 06:18:50 wiz Exp $
 
 DISTNAME=	hugin-2023.0.0
 PKGREVISION=	4
@@ -19,7 +19,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
 
-CMAKE_ARGS+=		-DBUILD_HSI=ON
+CMAKE_CONFIGURE_ARGS+=		-DBUILD_HSI=ON
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	src/hugin_script_interface/*.py

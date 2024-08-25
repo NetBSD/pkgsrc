@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2024/04/07 07:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/08/25 06:19:10 wiz Exp $
 
 PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
@@ -11,24 +11,24 @@ INSTALLATION_DIRS+=	include/poppler share/doc/poppler
 
 .if ${OPSYS} == "Darwin"
 # MacOS Xcode does not provide /usr/include, so be explicit
-CMAKE_ARGS+=	-DGLIB2_INCLUDE_DIRS=${PREFIX}/include
+CMAKE_CONFIGURE_ARGS+=	-DGLIB2_INCLUDE_DIRS=${PREFIX}/include
 .endif
 
 # Don't compile GTK+ test program.
-CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Compile GLib wrapper which also needs gtk2
-CMAKE_ARGS+=	-DENABLE_GLIB=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GLIB=ON
 # Don't build and install the tools
-CMAKE_ARGS+=	-DENABLE_UTILS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_UTILS=OFF
 # Don't compile poppler cpp wrapper.
-CMAKE_ARGS+=	-DENABLE_CPP=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_CPP=OFF
 # Don't compile poppler qt5/6 wrapper.
-CMAKE_ARGS+=	-DENABLE_QT5=OFF
-CMAKE_ARGS+=	-DENABLE_QT6=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6=OFF
 # Don't build libcurl based HTTP support. ## might want to include
-CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_LIBCURL=OFF
 # Don't run gperf if it's present
-CMAKE_ARGS+=	-DRUN_GPERF_IF_PRESENT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DRUN_GPERF_IF_PRESENT=OFF
 
 SUPERSEDES+=	poppler-glib-[0-9]*
 
@@ -36,7 +36,7 @@ SUPERSEDES+=	poppler-glib-[0-9]*
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 ALL_ENV+=	PKG_CONFIG_SYSROOT_DIR=${CROSS_DESTDIR:Q}
-CMAKE_ARGS+=	-DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
 .endif
 
 # Passing "-ansi" turns "long long" support off on FreeBSD/amd64:

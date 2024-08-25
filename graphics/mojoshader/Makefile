@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/07/07 09:59:51 nia Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:52 wiz Exp $
 
 DISTNAME=	mojoshader-0.0.20220415
 PKGREVISION=	5
@@ -16,7 +16,7 @@ USE_LANGUAGES+=	c c++
 USE_CMAKE=	yes
 
 # FLIP_VIEWPORT is needed by some FNA games (FEZ if I recall correctly)
-CMAKE_ARGS=	-DBUILD_SHARED_LIBS=ON \
+CMAKE_CONFIGURE_ARGS=	-DBUILD_SHARED_LIBS=ON \
 		-DFLIP_VIEWPORT=1 \
 		-DPROFILE_METAL=OFF
 

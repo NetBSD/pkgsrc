@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/05/29 16:33:10 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/08/25 06:18:55 wiz Exp $
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -19,7 +19,7 @@ USE_TOOLS+=		pkg-config
 TOOL_DEPENDS+=	doxygen>=1.6:../../devel/doxygen
 
 # avoid lib64
-CMAKE_ARGS+=		-DLIBDIR=lib
+CMAKE_CONFIGURE_ARGS+=		-DLIBDIR=lib
 
 BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.3.7
 .include "../../inputmethod/ibus/buildlink3.mk"

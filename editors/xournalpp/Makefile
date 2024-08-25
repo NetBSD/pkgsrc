@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/05/29 16:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.69 2024/08/25 06:18:40 wiz Exp $
 
 DISTNAME=	xournalpp-1.2.3
 PKGREVISION=	5
@@ -16,7 +16,7 @@ USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	translations xournalpp
-CMAKE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
+CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
 
 USE_CXX_FEATURES+=	c++17 filesystem
 

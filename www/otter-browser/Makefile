@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/05/29 16:34:54 adam Exp $
+# $NetBSD: Makefile,v 1.65 2024/08/25 06:19:18 wiz Exp $
 
 DISTNAME=	otter-browser-1.0.03
 PKGREVISION=	13
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DENABLE_QTWEBENGINE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QTWEBENGINE=OFF
 
 NOT_PAX_MPROTECT_SAFE+=	bin/otter-browser
 

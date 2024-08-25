@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/06/03 15:16:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:18:47 wiz Exp $
 
 DISTNAME=	widelands-build21-source
 PKGNAME=	widelands-21
@@ -21,8 +21,8 @@ FORCE_CXX_STD=	c++17
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
-CMAKE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
-CMAKE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
+CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=shadow
 BUILDLINK_TRANSFORM+=	rm:-Werror=uninitialized

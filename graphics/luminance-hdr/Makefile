@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2024/05/29 16:33:00 adam Exp $
+# $NetBSD: Makefile,v 1.95 2024/08/25 06:18:52 wiz Exp $
 
 DISTNAME=	luminance-hdr-2.6.1.1
 PKGREVISION=	9
@@ -16,8 +16,8 @@ USE_LANGUAGES=	c c++
 FORCE_CXX_STD=	c++14
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DQt5WebEngineCore_FOUND=FALSE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DQt5WebEngineCore_FOUND=FALSE
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cfitsio/buildlink3.mk"

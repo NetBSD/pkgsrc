@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2021/11/13 10:48:03 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:26 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zynaddsubfx
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio
@@ -21,24 +21,24 @@ PKG_SUGGESTED_OPTIONS=		portaudio
 PLIST_VARS+=	alsa
 .if !empty(PKG_OPTIONS:Malsa)
 PLIST.alsa=	yes
-CMAKE_ARGS+=	-DAlsaEnable=ON
+CMAKE_CONFIGURE_ARGS+=	-DAlsaEnable=ON
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DAlsaEnable=OFF
+CMAKE_CONFIGURE_ARGS+=	-DAlsaEnable=OFF
 .endif
 
 PLIST_VARS+=	jack
 .if !empty(PKG_OPTIONS:Mjack)
 PLIST.jack=	yes
-CMAKE_ARGS+=	-DJackEnable=ON
+CMAKE_CONFIGURE_ARGS+=	-DJackEnable=ON
 .  include "../../audio/jack/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DJackEnable=OFF
+CMAKE_CONFIGURE_ARGS+=	-DJackEnable=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mportaudio)
-CMAKE_ARGS+=	-DPaEnable=ON
+CMAKE_CONFIGURE_ARGS+=	-DPaEnable=ON
 .  include "../../audio/portaudio/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DJackEnable=OFF
+CMAKE_CONFIGURE_ARGS+=	-DJackEnable=OFF
 .endif

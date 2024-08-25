@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/06 08:05:15 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/08/25 06:18:40 wiz Exp $
 
 DISTNAME=	cannonball-0.34
 PKGREVISION=	13
@@ -17,7 +17,7 @@ USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}/cmake
-CMAKE_ARGS+=		-DTARGET=linux.cmake
+CMAKE_CONFIGURE_ARGS+=		-DTARGET=linux.cmake
 
 TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 

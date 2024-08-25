@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/06/03 12:22:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2024/08/25 06:19:10 wiz Exp $
 
 .include "../../print/poppler/Makefile.common"
 
@@ -12,8 +12,8 @@ NO_BUILD=	yes
 
 INCDIR=	${DESTDIR}${PREFIX}/include
 
-CMAKE_ARGS+=	-DENABLE_QT5:BOOL=OFF
-CMAKE_ARGS+=	-DENABLE_QT6:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6:BOOL=OFF
 
 .include "../../mk/bsd.prefs.mk"
 

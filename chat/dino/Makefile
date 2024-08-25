@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/08/09 09:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2024/08/25 06:18:27 wiz Exp $
 
 DISTNAME=		dino-0.4.3
 PKGREVISION=		4
@@ -18,7 +18,7 @@ DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS+=		-DUSE_SOUP3:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=		-DUSE_SOUP3:BOOL=ON
 
 BUILDLINK_TRANSFORM+=	opt:-Wno-incompatible-pointer-types-discards-qualifiers:-Wno-incompatible-pointer-types
 

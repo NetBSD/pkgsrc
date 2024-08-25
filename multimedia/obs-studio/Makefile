@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/05/29 16:33:46 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/08/25 06:19:04 wiz Exp $
 
 DISTNAME=	obs-studio-26.1.2
 PKGREVISION=	34
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c gnu++11
 
-CMAKE_ARGS+=	-DDISABLE_LIBFDK=BOOL:ON
-CMAKE_ARGS+=	-DOBS_VERSION_OVERRIDE="${PKGVERSION}"
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_LIBFDK=BOOL:ON
+CMAKE_CONFIGURE_ARGS+=	-DOBS_VERSION_OVERRIDE="${PKGVERSION}"
 
 TOOL_DEPENDS+=	swig3>=3.0:../../devel/swig3
 
@@ -44,7 +44,7 @@ PLIST_VARS+=	lua
 PLIST.lua=	yes
 .  include "../../lang/LuaJIT2/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DDISABLE_LUA=ON
+CMAKE_CONFIGURE_ARGS+=	-DDISABLE_LUA=ON
 .endif
 .include "../../lang/python/pyversion.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"

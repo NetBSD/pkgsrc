@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/05/29 16:34:19 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/08/25 06:19:13 wiz Exp $
 
 PKGNAME=	qca2-qt5-${DISTNAME:C/.*-//}
 PKGREVISION=	1
@@ -11,8 +11,8 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 INSTALLATION_DIRS=	lib/pkgconfig
 
-CMAKE_ARGS+=	-DBUILD_PLUGINS=none
-CMAKE_ARGS+=	-DQCA_MAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PLUGINS=none
+CMAKE_CONFIGURE_ARGS+=	-DQCA_MAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
 
 PKGCONFIG_OVERRIDE=		lib/pkgconfig/qca2-qt5.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure

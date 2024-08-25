@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/29 16:31:27 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/25 06:18:26 wiz Exp $
 
 DISTNAME=		sra-tools-3.0.6
 PKGREVISION=		3
@@ -39,8 +39,8 @@ SUBST_FILES.submoddir+=	CMakeLists.txt
 REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh */*/*/*/*.sh
 
 USE_CMAKE=	yes
-CMAKE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
-CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
 
 EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools

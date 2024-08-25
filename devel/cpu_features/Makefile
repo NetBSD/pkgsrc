@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/31 09:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/25 06:18:32 wiz Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	cpu_features-0.7.0
@@ -11,8 +11,8 @@ COMMENT=	Cross platform C99 library to get CPU features at runtime
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c c++
-CMAKE_ARGS+=	-DCMAKE_POSITION_INDEPENDENT_CODE=ON
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POSITION_INDEPENDENT_CODE=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 .include "../../mk/bsd.prefs.mk"
 

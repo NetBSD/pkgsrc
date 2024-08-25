@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/02/06 11:24:07 markd Exp $
+# $NetBSD: Makefile,v 1.49 2024/08/25 06:18:53 wiz Exp $
 
 DISTNAME=	oxygen-icons-5.114.0
 CATEGORIES=	graphics kde
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 # but this is a hard requirement from the KDE cmake infrastructure.
 USE_CXX_FEATURES+=	c++17
 
-CMAKE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

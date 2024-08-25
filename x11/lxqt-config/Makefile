@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/08/20 06:21:10 pin Exp $
+# $NetBSD: Makefile,v 1.39 2024/08/25 06:19:19 wiz Exp $
 
 DISTNAME=	lxqt-config-2.0.0
 CATEGORIES=	x11
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
 # Requires xorg-libinput, which we lack in pkgsrc.
-CMAKE_ARGS+=	-DWITH_TOUCHPAD=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_TOUCHPAD=OFF
 
 .include "../../mk/bsd.prefs.mk"
 

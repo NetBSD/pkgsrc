@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/08/22 17:56:04 vins Exp $
+# $NetBSD: Makefile,v 1.32 2024/08/25 06:19:11 wiz Exp $
 
 DISTNAME=	lastpass-cli-1.6.0
 CATEGORIES=	security
@@ -19,7 +19,7 @@ USE_TOOLS=	bash:test pkg-config
 REPLACE_BASH+=	test/askpass-wrong.sh test/askpass.sh \
 		test/assert.sh test/include.sh test/tests
 
-CMAKE_ARGS=	-DOPENSSL_ROOT_DIR=${SSLBASE}
+CMAKE_CONFIGURE_ARGS=	-DOPENSSL_ROOT_DIR=${SSLBASE}
 
 INSTALL_TARGET=	install install-doc
 TEST_TARGET=	lpass-test test

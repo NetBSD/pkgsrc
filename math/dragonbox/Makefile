@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/30 08:24:21 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/25 06:19:00 wiz Exp $
 
 DISTNAME=	dragonbox-${GITHUB_TAG}
 CATEGORIES=	math
@@ -13,7 +13,7 @@ LICENSE=	boost-license OR apache-2.0 # with LLVM exceptions
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 USE_CXX_FEATURES+=	c++17
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/07/15 13:08:44 micha Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/25 06:18:44 wiz Exp $
 
 DISTNAME=	eureka-2.0.2
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_CC_FEATURES+=	c11
 # charconv is not used by package, but needs GCC 8 (GCC 7.5 is not good enough)
 USE_CXX_FEATURES+=	c++17 charconv has_include unique_ptr
 
-CMAKE_ARGS+=		-DENABLE_UNIT_TESTS=off
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_UNIT_TESTS=off
 
 # DOOMWADDIR is intentionally shared with other Doom packages
 DOOMWADDIR=		share/doom

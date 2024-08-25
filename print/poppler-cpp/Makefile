@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/04/07 07:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/08/25 06:19:10 wiz Exp $
 
 PKGREVISION= 1
 .include "../../print/poppler/Makefile.common"
@@ -12,18 +12,18 @@ CONFLICTS+=	poppler<0.4.5nb1
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/poppler-cpp.pc.cmake
 
 # Don't compile GTK+ test program.
-CMAKE_ARGS+=	-DBUILD_GTK_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GTK_TESTS=OFF
 # Don't compile GLib wrapper which also needs gtk2
-CMAKE_ARGS+=	-DENABLE_GLIB=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GLIB=OFF
 # Don't build and install the tools
-CMAKE_ARGS+=	-DENABLE_UTILS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_UTILS=OFF
 # Compile poppler cpp wrapper.
-CMAKE_ARGS+=	-DENABLE_CPP=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_CPP=ON
 # Don't compile poppler qt5/6 wrapper.
-CMAKE_ARGS+=	-DENABLE_QT5=OFF
-CMAKE_ARGS+=	-DENABLE_QT6=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6=OFF
 # Don't build libcurl based HTTP support. ## might want to include
-CMAKE_ARGS+=	-DENABLE_LIBCURL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_LIBCURL=OFF
 
 BUILDLINK_API_DEPENDS.poppler+=	poppler-${POPPLER_VERS}{,nb*}
 .include "../../print/poppler/buildlink3.mk"
@@ -40,8 +40,8 @@ CHECK_BUILTIN.iconv:=	yes
 CHECK_BUILTIN.iconv:=	no
 
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
-CMAKE_ARGS+=	-DICONV_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.iconv}/include
-CMAKE_ARGS+=	-DICONV_LIBRARIES:PATH=${BUILDLINK_PREFIX.iconv}/lib
+CMAKE_CONFIGURE_ARGS+=	-DICONV_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.iconv}/include
+CMAKE_CONFIGURE_ARGS+=	-DICONV_LIBRARIES:PATH=${BUILDLINK_PREFIX.iconv}/lib
 LDFLAGS.Darwin+=-liconv
 .endif
 

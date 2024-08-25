@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/05/29 16:32:20 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/08/25 06:18:38 wiz Exp $
 
 DISTNAME=	ucommon-7.0.0
 PKGREVISION=	14
@@ -15,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
 # Incompatible with OpenSSL 1.1
-CMAKE_ARGS+=	-DCRYPTO_OPENSSL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCRYPTO_OPENSSL=OFF
 
 PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in

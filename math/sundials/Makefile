@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/08/14 05:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:01 wiz Exp $
 
 DISTNAME=	sundials-4.1.0
 PKGREVISION=	2
@@ -15,7 +15,7 @@ USE_CMAKE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/build
 
 CMAKE_ARG_PATH=	..
-CMAKE_ARGS+=	-DEXAMPLES_INSTALL_PATH=${PREFIX}/share/examples/sundials
+CMAKE_CONFIGURE_ARGS+=	-DEXAMPLES_INSTALL_PATH=${PREFIX}/share/examples/sundials
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2024/06/17 18:51:37 adam Exp $
+# $NetBSD: Makefile,v 1.148 2024/08/25 06:18:42 wiz Exp $
 
 DISTNAME=	fontforge-20230101
 PKGREVISION=	9
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
 
-CMAKE_ARGS+=		-DENABLE_DOCS=NO
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_DOCS=NO
 
 PY_PATCHPLIST=		yes
 
@@ -28,7 +28,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
 .include "../../devel/cmake/build.mk"

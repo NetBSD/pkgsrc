@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2020/03/19 11:23:53 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:50 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.glfw
 
@@ -13,11 +13,11 @@ PKG_SUGGESTED_OPTIONS=		x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mosmesa)
-CMAKE_ARGS+=	-DGLFW_USE_OSMESA=ON
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_USE_OSMESA=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mwayland)
-CMAKE_ARGS+=	-DGLFW_USE_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=	-DGLFW_USE_WAYLAND=ON
 .  include "../../devel/wayland/buildlink3.mk"
 .  include "../../devel/wayland-protocols/buildlink3.mk"
 .  include "../../x11/libxkbcommon/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/08/20 06:22:44 pin Exp $
+# $NetBSD: Makefile,v 1.50 2024/08/25 06:19:19 wiz Exp $
 
 DISTNAME=	lxqt-panel-2.0.1
 CATEGORIES=	x11
@@ -15,14 +15,14 @@ USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
 # Requires libsensors, unavailable in pkgsrc
-CMAKE_ARGS+=	-DSENSORS_PLUGIN=No
+CMAKE_CONFIGURE_ARGS+=	-DSENSORS_PLUGIN=No
 
 # Requires sysstat-qt6, unavailable in pkgsrc
-CMAKE_ARGS+=	-DSYSSTAT_PLUGIN=No
+CMAKE_CONFIGURE_ARGS+=	-DSYSSTAT_PLUGIN=No
 
 # Appear non-functional on NetBSD currently.
-CMAKE_ARGS+=	-DCPULOAD_PLUGIN=No
-CMAKE_ARGS+=	-DMOUNT_PLUGIN=No
+CMAKE_CONFIGURE_ARGS+=	-DCPULOAD_PLUGIN=No
+CMAKE_CONFIGURE_ARGS+=	-DMOUNT_PLUGIN=No
 
 AUTOSTART_CONF=		share/examples/autostart
 PANEL_CONF=		share/examples/lxqt

@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.17 2024/08/20 12:27:39 gdt Exp $
+# $NetBSD: build.mk,v 1.18 2024/08/25 06:18:32 wiz Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -19,12 +19,7 @@
 # Package-settable variables:
 #
 # CMAKE_CONFIGURE_ARGS
-#	Arguments to pass to CMake during the configure stage. Defaults
-#	to CMAKE_ARGS for backwards compatibility with USE_CMAKE.
-#       NB: "Defaults to" really means "if not defined", not
-#       "CMAKE_ARGS are merged in".  The point is that with mixed
-#       CMAKE_ARGS and CMAKE_CONFIGURE_ARGS, the value of CMAKE_ARGS
-#       is ignored.
+#	Arguments to pass to CMake during the configure stage.
 #
 # CMAKE_BUILD_ARGS
 #	Arguments to pass to CMake during build. Default: empty
@@ -58,7 +53,6 @@ TOOL_DEPENDS+=	cmake>=${version}:../../devel/cmake
 BUILD_USES_CMAKE=	yes
 
 OPSYSVARS+=		CMAKE_CONFIGURE_ARGS
-CMAKE_CONFIGURE_ARGS?=	${CMAKE_ARGS}
 
 # The assumption in pkgsrc is that packages don't download files
 # mid-build.
@@ -138,7 +132,7 @@ _PKG_VARS.cmake+=	CMAKE_BUILD_ARGS BUILD_DIRS BUILD_TARGET
 _PKG_VARS.cmake+=	TEST_DIRS TEST_TARGET
 _PKG_VARS.cmake+=	CMAKE_INSTALL_ARGS INSTALL_DIRS INSTALL_TARGET
 _SYS_VARS.cmake+=	CMAKE_BUILD_DIR
-_USE_VARS.cmake+=	CMAKE_ARGS
+_USE_VARS.cmake+=	CMAKE_CONFIGURE_ARGS
 _USE_VARS.cmake+=	CONFIGURE_ENV MAKE_ENV TEST_ENV INSTALL_ENV
 _IGN_VARS.cmake+=	BUILDLINK_DIR WRKSRC PREFIX
 _IGN_VARS.cmake+=	BUILD_USES_CMAKE SETENV TOOL_DEPENDS

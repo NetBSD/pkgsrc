@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:34:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:19:13 wiz Exp $
 
 DISTNAME=	polkit-qt-1-0.200.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt6-/}
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/polkit-qt-1-v0.200.0-aa1c6c414ec021fd32e30492c00bb13347e228db
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
-CMAKE_ARGS+=	-DQT_MAJOR_VERSION=6
+CMAKE_CONFIGURE_ARGS+=	-DQT_MAJOR_VERSION=6
 
 PKGCONFIG_OVERRIDE+=	polkit-qt6-1.pc.cmake polkit-qt6-agent-1.pc.cmake
 PKGCONFIG_OVERRIDE+=	polkit-qt6-core-1.pc.cmake polkit-qt6-gui-1.pc.cmake

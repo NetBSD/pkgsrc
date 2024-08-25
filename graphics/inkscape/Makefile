@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2024/05/29 16:32:55 adam Exp $
+# $NetBSD: Makefile,v 1.289 2024/08/25 06:18:51 wiz Exp $
 
 DISTNAME=	inkscape-1.3.2
 PKGREVISION=	4
@@ -75,13 +75,13 @@ CHECK_INTERPRETER_SKIP+=	share/inkscape/extensions/simplepath.rb
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/Resources/bin/inkscape
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/ScriptExec/launcher-quartz-no-macintegration.sh
 
-CMAKE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
+CMAKE_CONFIGURE_ARGS+=	-DPACKAGE_LOCALE_DIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 MANCOMPRESSED=	yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
+CMAKE_CONFIGURE_ARGS+=	-DIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
 .endif
 
 # There exists some race condition in create_default_templates.py that

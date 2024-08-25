@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/11/17 09:27:51 nia Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:40 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.flycast
 
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS+=		rpi
 .if !empty(PKG_OPTIONS:Malsa)
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .else
-CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=ON
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
@@ -27,9 +27,9 @@ CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_ALSA=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mrpi)
-CMAKE_ARGS+=	-DUSE_VIDEOCORE=ON
-CMAKE_ARGS+=	-DUSE_GLES2=ON
-CMAKE_ARGS+=	-DUSE_OPENGL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_VIDEOCORE=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_GLES2=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=OFF
 .  include "../../misc/raspberrypi-userland/buildlink3.mk"
 .else
 .  if ${OPSYS} != "Darwin"

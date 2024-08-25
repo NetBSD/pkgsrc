@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/05/29 16:34:09 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/08/25 06:19:10 wiz Exp $
 
 DISTNAME=	dspdfviewer-1.15.1
 PKGREVISION=	60
@@ -16,7 +16,7 @@ DEPENDS+=	qt5-qttools>=5.5.1:../../x11/qt5-qttools
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_CMAKE=		yes
-CMAKE_ARGS+=		-DBuildTests=OFF
+CMAKE_CONFIGURE_ARGS+=		-DBuildTests=OFF
 CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		..
 BUILD_MAKE_FLAGS+=	VERBOSE=1

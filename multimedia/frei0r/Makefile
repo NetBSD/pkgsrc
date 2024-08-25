@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/07 07:34:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/25 06:19:04 wiz Exp $
 
 DISTNAME=	frei0r-plugins-1.8.0
 PKGNAME=	${DISTNAME:S/-plugins//}
@@ -15,11 +15,11 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 # Not in pkgsrc yet
-CMAKE_ARGS+=	-DWITHOUT_GAVL=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITHOUT_GAVL=ON
 # Not compatible with latest version
-CMAKE_ARGS+=	-DWITHOUT_OPENCV=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITHOUT_OPENCV=ON
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

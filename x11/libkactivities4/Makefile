@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/06/07 13:46:29 gdt Exp $
+# $NetBSD: Makefile,v 1.42 2024/08/25 06:19:19 wiz Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGNAME=	libkactivities4-4.13.3
@@ -13,10 +13,10 @@ CONFLICTS+=	kactivities<4.13.3nb4
 
 USE_CXX_FEATURES+=	c++11
 
-CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 
 # The default MACOSX_DEPLOYMENT_TARGET is incompatible with the C++11 tests.
-CMAKE_ARGS.Darwin+=	-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=${OSX_VERSION}
+CMAKE_CONFIGURE_ARGS.Darwin+=	-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=${OSX_VERSION}
 
 PKGCONFIG_OVERRIDE+=	lib/libkactivities.pc.cmake
 

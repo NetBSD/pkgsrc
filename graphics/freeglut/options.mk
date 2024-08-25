@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2019/10/03 11:17:51 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:50 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeglut
 PKG_OPTIONS_REQUIRED_GROUPS=	ui
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=		x11
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mwayland)
-CMAKE_ARGS+=	-DFREEGLUT_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=	-DFREEGLUT_WAYLAND=ON
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .endif

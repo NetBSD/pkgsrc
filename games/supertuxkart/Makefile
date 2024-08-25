@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2024/05/29 16:32:44 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/08/25 06:18:46 wiz Exp $
 
 DISTNAME=	SuperTuxKart-1.4-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -18,15 +18,15 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
 
-CMAKE_ARGS+=	-DUSE_WIIUSE=OFF
-CMAKE_ARGS+=	-DBUILD_RECORDER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_WIIUSE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_RECORDER=OFF
 
 # "error: sorry, unimplemented: non-trivial designated initializers not supported"
 # apparently gcc 8 should work.
 USE_CXX_FEATURES+=	c++20
 
 # Needs linux joystick support.
-CMAKE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_WAYLAND_DEVICE=OFF
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

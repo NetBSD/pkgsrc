@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/04/06 08:05:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/25 06:18:44 wiz Exp $
 
 DISTNAME=	flare-engine-1.12
 PKGREVISION=	13
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
-CMAKE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare" -DBINDIR:STRING=bin -DMANDIR:STRING=${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare" -DBINDIR:STRING=bin -DMANDIR:STRING=${PKGMANDIR}
 
 REPLACE_PYTHON+=	mods/default/languages/xgettext.py
 

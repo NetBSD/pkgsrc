@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/11/12 13:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/08/25 06:19:12 wiz Exp $
 
 DISTNAME=	polkit-qt-1-0.112.0
 PKGNAME=	${DISTNAME:S/-qt-1-/-qt-/}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DUSE_QT4=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_QT4=ON
 
 PKGCONFIG_OVERRIDE+=	polkit-qt-1.pc.cmake polkit-qt-agent-1.pc.cmake
 PKGCONFIG_OVERRIDE+=	polkit-qt-core-1.pc.cmake polkit-qt-gui-1.pc.cmake polkit-qt-1.pc.cmake

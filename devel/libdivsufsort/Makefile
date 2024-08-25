@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/01/20 11:39:32 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:35 wiz Exp $
 
 DISTNAME=	libdivsufsort-2.0.1
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ LICENSE=	mit
 USE_CMAKE=	yes
 
 # Examples do not get installed.
-CMAKE_ARGS+=	-DBUILD_EXAMPLES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXAMPLES=OFF
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/libdivsufsort.pc.cmake
 

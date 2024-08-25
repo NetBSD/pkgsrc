@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2022/09/29 05:35:48 markd Exp $
+# $NetBSD: Makefile.common,v 1.8 2024/08/25 06:19:05 wiz Exp $
 
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.10.3/}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
-CMAKE_ARGS+=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE
 
 .include "../../multimedia/phonon/options.mk"
 

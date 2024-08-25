@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/01/01 09:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/08/25 06:19:17 wiz Exp $
 
 DISTNAME=	utf8-cpp-4.0.5
 CATEGORIES=	textproc
@@ -12,8 +12,8 @@ COMMENT=	UTF-8 header library for C++
 LICENSE=	boost-license
 
 USE_LANGUAGES=	c++
-CMAKE_ARGS+=	-DUTF8_SAMPLES=OFF
-CMAKE_ARGS+=	-DUTF8_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUTF8_SAMPLES=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUTF8_TESTS=OFF
 
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"

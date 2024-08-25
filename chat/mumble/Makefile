@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/05/29 16:31:31 adam Exp $
+# $NetBSD: Makefile,v 1.65 2024/08/25 06:18:27 wiz Exp $
 
 DISTNAME=	mumble-1.4.287
 PKGREVISION=	3
@@ -28,33 +28,33 @@ LDFLAGS.NetBSD+=	-lrt
 
 # Basic sensible stuff for packaging.
 # Requires 0.7.x, pkgsrc version is too new
-#CMAKE_ARGS+=	-Dbundled-celt=off
-CMAKE_ARGS+=	-Dbundled-opus=off
-CMAKE_ARGS+=	-Dbundled-speex=off
-CMAKE_ARGS+=	-Dwarnings-as-errors=off
+#CMAKE_CONFIGURE_ARGS+=	-Dbundled-celt=off
+CMAKE_CONFIGURE_ARGS+=	-Dbundled-opus=off
+CMAKE_CONFIGURE_ARGS+=	-Dbundled-speex=off
+CMAKE_CONFIGURE_ARGS+=	-Dwarnings-as-errors=off
 
 # Compatibility.
 CXXFLAGS+=	-DCELT_SET_VBR_RATE=CELT_SET_BITRATE
 
 # Architecture-specific due to nasty hacks...
-CMAKE_ARGS+=	-Doverlay=off
+CMAKE_CONFIGURE_ARGS+=	-Doverlay=off
 
 # Not available in pkgsrc yet.
-CMAKE_ARGS+=	-Dpipewire=off
+CMAKE_CONFIGURE_ARGS+=	-Dpipewire=off
 
 # support for an old Logitech keyboard - requires missing library
-CMAKE_ARGS+=	-Dg15=off
+CMAKE_CONFIGURE_ARGS+=	-Dg15=off
 
 # requires missing ZeroC utilities
-CMAKE_ARGS+=	-Dice=off
+CMAKE_CONFIGURE_ARGS+=	-Dice=off
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
 LDFLAGS+=	${LIBOSSAUDIO}
-CMAKE_ARGS+=	-Doss=on
+CMAKE_CONFIGURE_ARGS+=	-Doss=on
 .else
-CMAKE_ARGS+=	-Doss=off
+CMAKE_CONFIGURE_ARGS+=	-Doss=off
 .endif
 
 CHECK_PORTABILITY_SKIP+=	3rdparty/opus-src/doc/build_draft.sh

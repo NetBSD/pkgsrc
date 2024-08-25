@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/06/11 19:35:52 adam Exp $
+# $NetBSD: Makefile,v 1.81 2024/08/25 06:18:53 wiz Exp $
 
 DISTNAME=	tesseract-5.4.1
 CATEGORIES=	graphics
@@ -27,7 +27,7 @@ INSTALL_TARGET=		install training-install
 TEST_TARGET=		check
 REPLACE_BASH+=		src/training/*.sh
 
-#CMAKE_ARGS+=	-DUSE_SYSTEM_ICU=ON
+#CMAKE_CONFIGURE_ARGS+=	-DUSE_SYSTEM_ICU=ON
 
 post-extract:
 	${MV} ${WRKDIR}/tessdata_best-${LANGVER}/*.traineddata ${WRKSRC}/tessdata/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/04/07 07:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/08/25 06:19:21 wiz Exp $
 
 VERSION=	2.8.3
 DISTNAME=	xfce4-whiskermenu-plugin-${VERSION}
@@ -18,9 +18,9 @@ USE_TOOLS+=	gmake pkg-config msgfmt perl intltool
 
 # AccountsService is an optional dependency; the version in pkgsrc is too old
 # at present.
-CMAKE_ARGS+=	-DENABLE_ACCOUNTS_SERVICE=No
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_ACCOUNTS_SERVICE=No
 # Wayland support not relevant yet.
-CMAKE_ARGS+=	-DENABLE_GTK_LAYER_SHELL=No
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GTK_LAYER_SHELL=No
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2020/06/15 16:54:38 adam Exp $
+# $NetBSD: options.mk,v 1.5 2024/08/25 06:18:42 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ledger
 PKG_SUPPORTED_OPTIONS+=	python
@@ -9,7 +9,7 @@ PLIST_VARS+=		python
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpython)
-CMAKE_ARGS+=		-DUSE_PYTHON:BOOL=TRUE
+CMAKE_CONFIGURE_ARGS+=		-DUSE_PYTHON:BOOL=TRUE
 PLIST.python=		yes
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 .include "../../devel/py-boost/buildlink3.mk"

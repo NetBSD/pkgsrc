@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/05/29 16:31:25 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/08/25 06:18:25 wiz Exp $
 
 DISTNAME=	spotify-qt-3.11
 PKGREVISION=	2
@@ -13,8 +13,8 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 DEPENDS+=	librespot-[0-9]*:../../audio/librespot
 

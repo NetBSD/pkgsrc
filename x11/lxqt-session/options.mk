@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2023/07/22 08:46:23 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:19:20 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.lxqt-session
 PKG_SUPPORTED_OPTIONS=		udev
@@ -8,5 +8,5 @@ PKG_SUPPORTED_OPTIONS=		udev
 .if !empty(PKG_OPTIONS:Mudev)
 .  include "../../sysutils/libudev/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_LIBUDEV=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LIBUDEV=OFF
 .endif

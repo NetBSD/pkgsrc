@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/07/09 15:39:45 nia Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:40 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-flycast
 
@@ -20,12 +20,12 @@ PKG_SUGGESTED_OPTIONS+=		opengl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mrpi)
-CMAKE_ARGS+=	-DUSE_VIDEOCORE=ON
-CMAKE_ARGS+=	-DUSE_GLES2=ON
-CMAKE_ARGS+=	-DUSE_OPENGL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_VIDEOCORE=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_GLES2=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=OFF
 .  include "../../misc/raspberrypi-userland/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mopengl)
-CMAKE_ARGS+=	-DUSE_OPENGL=ON
+CMAKE_CONFIGURE_ARGS+=	-DUSE_OPENGL=ON
 .  if ${OPSYS} != "Darwin"
 .    include "../../graphics/MesaLib/buildlink3.mk"
 .  endif

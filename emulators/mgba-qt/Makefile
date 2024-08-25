@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/08/07 22:02:48 nia Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:18:41 wiz Exp $
 
 .include "${.CURDIR}/../../emulators/mgba/Makefile.common"
 
@@ -7,20 +7,20 @@ COMMENT=	Emulator for running Game Boy Advance games (GUI version)
 
 CONFLICTS+=	mgba-[0-9]*
 
-CMAKE_ARGS+=	-DBUILD_QT=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_QT=ON
 
 # performance problems...
-CMAKE_ARGS+=	-DBUILD_GL=OFF
-CMAKE_ARGS+=	-DBUILD_GLES2=OFF
-CMAKE_ARGS+=	-DBUILD_GLES3=OFF
-CMAKE_ARGS+=	-DUSE_EPOXY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GLES2=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_GLES3=OFF
+CMAKE_CONFIGURE_ARGS+=	-DUSE_EPOXY=OFF
 
 USE_CXX_FEATURES+=	c++14
 
 # We probably don't actually want Qt5Multimedia.
 # It's an option as an audio output, but SDL supports many more pkgsrc
 # platforms natively, without going via PulseAudio.
-CMAKE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=TRUE
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=TRUE
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/14 20:07:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:38 wiz Exp $
 
 DISTNAME=		tlsh-4.8.2
 CATEGORIES=		devel
@@ -13,7 +13,7 @@ LICENSE=		apache-2.0
 USE_CMAKE=		yes
 CONFIGURE_DIRS=		build/release
 CMAKE_ARG_PATH=		../..
-CMAKE_ARGS+=		-DTLSH_SHARED_LIBRARY=1
+CMAKE_CONFIGURE_ARGS+=		-DTLSH_SHARED_LIBRARY=1
 USE_LANGUAGES=		c c++
 TEST_TARGET=		test
 

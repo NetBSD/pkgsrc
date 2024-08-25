@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2022/07/01 16:21:08 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/08/25 06:19:09 wiz Exp $
 
 DISTNAME=	oneTBB-2021.5.0
 PKGNAME=	${DISTNAME:S/oneTBB-/threadingbuildingblocks-/}
@@ -15,8 +15,8 @@ LICENSE=	apache-2.0
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++11
 # Use one build directory across platforms.
-CMAKE_ARGS+=	-DTBB_OUTPUT_DIR_BASE=pkgsrc
-CMAKE_ARGS+=	-DTBB_STRICT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DTBB_OUTPUT_DIR_BASE=pkgsrc
+CMAKE_CONFIGURE_ARGS+=	-DTBB_STRICT=OFF
 TEST_TARGET=	test
 # For Darwin
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/pkgsrc_relwithdebinfo

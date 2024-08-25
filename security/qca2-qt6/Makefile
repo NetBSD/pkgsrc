@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:34:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:19:13 wiz Exp $
 
 PKGNAME=	qca2-qt6-${DISTNAME:C/.*-//}
 PKGREVISION=	1
@@ -11,9 +11,9 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 INSTALLATION_DIRS=	lib/pkgconfig
 
-CMAKE_ARGS+=	-DQT6=ON
-CMAKE_ARGS+=	-DBUILD_PLUGINS=none
-CMAKE_ARGS+=	-DQCA_MAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
+CMAKE_CONFIGURE_ARGS+=	-DQT6=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_PLUGINS=none
+CMAKE_CONFIGURE_ARGS+=	-DQCA_MAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/qt6-qt5compat/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"

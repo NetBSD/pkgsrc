@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/08/12 11:19:25 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:47 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vcmi
 
@@ -24,8 +24,8 @@ PLIST.qt=	yes
 PLIST.qt=	yes
 .  include "../../x11/qt5-qtbase/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DENABLE_LAUNCHER=OFF
-CMAKE_ARGS+=	-DENABLE_EDITOR=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_LAUNCHER=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_EDITOR=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit)

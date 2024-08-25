@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/12 13:23:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/25 06:19:14 wiz Exp $
 
 DISTNAME=	WCMCommander-0.20.0
 PKGREVISION=	5
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-/-release-/}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
-CMAKE_ARGS+=	-DWITH_SMBCLIENT:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SMBCLIENT:BOOL=OFF
 
 # Needs gnu for alloca builtin
 FORCE_CXX_STD=	gnu++11

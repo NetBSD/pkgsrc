@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/05/29 16:33:09 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/08/25 06:18:55 wiz Exp $
 
 DISTNAME=	fcitx5-qt-5.1.4
 PKGREVISION=	2
@@ -16,9 +16,9 @@ TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 
-CMAKE_ARGS+=		-DENABLE_QT4=off
-CMAKE_ARGS+=		-DENABLE_QT5=on
-CMAKE_ARGS+=		-DENABLE_QT6=off
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_QT4=off
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_QT5=on
+CMAKE_CONFIGURE_ARGS+=		-DENABLE_QT6=off
 
 .include "../../devel/cmake/build.mk"
 .include "../../inputmethod/fcitx5/buildlink3.mk"

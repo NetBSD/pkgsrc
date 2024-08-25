@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/05/29 16:33:46 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/08/25 06:19:04 wiz Exp $
 
 DISTNAME=	olive-editor-0.2.0pre20230924
 PKGREVISION=	12
@@ -22,10 +22,10 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++11
 
-CMAKE_ARGS+=	-DFFMPEG_INCLUDE_ROOT=${BUILDLINK_DIR}/include/ffmpeg6
-CMAKE_ARGS+=	-DFFMPEG_LIB_ROOT=${BUILDLINK_DIR}/lib/ffmpeg6
-CMAKE_ARGS+=	-DPORTAUDIO_INCLUDE_DIR=${BUILDLINK_DIR}/include/portaudio2
-CMAKE_ARGS+=	-DPORTAUDIO_LIBRARY=${BUILDLINK_DIR}/lib/portaudio2/libportaudiocpp.so
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_INCLUDE_ROOT=${BUILDLINK_DIR}/include/ffmpeg6
+CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_LIB_ROOT=${BUILDLINK_DIR}/lib/ffmpeg6
+CMAKE_CONFIGURE_ARGS+=	-DPORTAUDIO_INCLUDE_DIR=${BUILDLINK_DIR}/include/portaudio2
+CMAKE_CONFIGURE_ARGS+=	-DPORTAUDIO_LIBRARY=${BUILDLINK_DIR}/lib/portaudio2/libportaudiocpp.so
 
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

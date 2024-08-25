@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/20 06:10:04 pin Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:35 wiz Exp $
 
 DISTNAME=	libdbusmenu-lxqt-0.1.0
 CATEGORIES=	devel
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 PKGCONFIG_OVERRIDE+=	dbusmenu-lxqt.pc.in
 

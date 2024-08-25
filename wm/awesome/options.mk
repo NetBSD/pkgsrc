@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2019/07/17 22:08:58 nia Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/25 06:19:17 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.awesome
@@ -10,10 +10,10 @@ PKG_SUPPORTED_OPTIONS=		dbus debug
 ### DBus support
 ###
 .if !empty(PKG_OPTIONS:Mdbus)
-CMAKE_ARGS+=	-DWITH_DBUS=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_DBUS=ON
 .  include "../../sysutils/dbus/buildlink3.mk"
 .else
-CMAKE_ARGS+=	-DWITH_DBUS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_DBUS=OFF
 .endif
 
 ###

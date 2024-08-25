@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/20 18:09:45 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/25 06:18:24 wiz Exp $
 
 DISTNAME=	libkeyfinder-2.2.5
 CATEGORIES=	audio
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DBUILD_TESTING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 
 PKGCONFIG_OVERRIDE+=	libkeyfinder.pc.in
 

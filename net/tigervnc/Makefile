@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/05/29 16:34:04 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/08/25 06:19:08 wiz Exp $
 
 DISTNAME=		tigervnc-1.13.1
 PKGNAME=		${DISTNAME}.1.20.13
@@ -40,7 +40,7 @@ INSTALL_DIRS=	. unix/xserver/hw/vnc
 INSTALL_TARGET=	install
 
 # CMake build appends 'tigervnc', so this is not PKG_SYSCONFDIR
-CMAKE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE}
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE}
 
 # for reallocarray()
 CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE

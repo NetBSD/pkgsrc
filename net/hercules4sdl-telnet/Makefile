@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2022/11/27 15:02:17 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:19:06 wiz Exp $
 
 DISTNAME=	hercules4sdl-telnet-1.0.0
 PKGREVISION=	20220201
@@ -19,7 +19,7 @@ USE_CMAKE=	yes
 BLDDIR=		${WRKDIR}/telnet64.Release
 CONFIGURE_DIRS=	${BLDDIR}
 CMAKE_ARG_PATH=	${WRKSRC}
-CMAKE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
+CMAKE_CONFIGURE_ARGS+=	-D INSTALL_PREFIX=${PREFIX}/lib/hercules4sdl
 
 pre-configure:
 	${MKDIR} ${BLDDIR}

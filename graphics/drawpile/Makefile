@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/05/29 16:32:51 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/08/25 06:18:50 wiz Exp $
 
 DISTNAME=	Drawpile-2.1.17
 PKGNAME=	${DISTNAME:tl}
@@ -18,7 +18,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DINITSYS=""
+CMAKE_CONFIGURE_ARGS+=	-DINITSYS=""
 
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"

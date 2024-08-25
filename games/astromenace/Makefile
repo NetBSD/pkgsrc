@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/04/06 08:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/08/25 06:18:43 wiz Exp $
 
 DISTNAME=	astromenace-1.4.1
 PKGREVISION=	14
@@ -19,7 +19,7 @@ OBJDIR=			build
 CONFIGURE_DIRS=		${OBJDIR}
 CMAKE_ARG_PATH=		${WRKSRC}
 
-CMAKE_ARGS+=		-DDATADIR=${PREFIX}/share/astromenace
+CMAKE_CONFIGURE_ARGS+=		-DDATADIR=${PREFIX}/share/astromenace
 
 ICON_SIZES=		64 128
 

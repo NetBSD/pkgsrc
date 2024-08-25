@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2023/11/23 11:11:25 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.binaryen
 
@@ -8,9 +8,9 @@ PKG_SUPPORTED_OPTIONS=	tests
 
 PLIST_VARS+=	test
 .if !empty(PKG_OPTIONS:Mtests)
-CMAKE_ARGS+=	-DBUILD_TESTS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=ON
 .  include "../../devel/googletest/buildlink3.mk"
 PLIST.test=	yes
 .else
-CMAKE_ARGS+=	-DBUILD_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 .endif

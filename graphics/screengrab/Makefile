@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/08/20 06:12:39 pin Exp $
+# $NetBSD: Makefile,v 1.31 2024/08/25 06:18:53 wiz Exp $
 
 DISTNAME=	screengrab-2.8.0
 CATEGORIES=	graphics
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/screengrab \
 		-L${PREFIX}/lib/screengrab/

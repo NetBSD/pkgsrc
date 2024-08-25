@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/05/25 11:44:25 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:38 wiz Exp $
 
 DISTNAME=	tl-expected-1.0.0
 CATEGORIES=	devel
@@ -18,8 +18,8 @@ LICENSE=	cc0-1.0-universal
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DEXPECTED_ENABLE_TESTS=OFF
-CMAKE_ARGS+=	-DFETCHCONTENT_SOURCE_DIR_TL_CMAKE=${WRKSRC}/cmake/tl-cmake
+CMAKE_CONFIGURE_ARGS+=	-DEXPECTED_ENABLE_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DFETCHCONTENT_SOURCE_DIR_TL_CMAKE=${WRKSRC}/cmake/tl-cmake
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC}/cmake/tl-cmake

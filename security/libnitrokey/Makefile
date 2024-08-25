@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/29 22:19:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:12 wiz Exp $
 
 DISTNAME=	libnitrokey-3.8
 PKGREVISION=	3
@@ -22,11 +22,11 @@ USE_TOOLS+=		pkg-config
 #   1. require a connected Nitrokey
 #   2. may kill data on your Nitrokey
 # hence the main testsuite is disabled
-CMAKE_ARGS+=	-DCOMPILE_TESTS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DCOMPILE_TESTS=OFF
 
-CMAKE_ARGS+=	-DHIDAPI_LIBUSB_INCLUDEDIR=${BUILDLINK_PREFIX.libhidapi}/include/hidapi/
-CMAKE_ARGS+=	-DHIDAPI_LIBUSB_LIBDIR=${BUILDLINK_PREFIX.libhidapi}/lib/
-CMAKE_ARGS+=	-DCMAKE_INSTALL_UDEVRULESDIR=${PREFIX}/lib/udev/rules.d/
+CMAKE_CONFIGURE_ARGS+=	-DHIDAPI_LIBUSB_INCLUDEDIR=${BUILDLINK_PREFIX.libhidapi}/include/hidapi/
+CMAKE_CONFIGURE_ARGS+=	-DHIDAPI_LIBUSB_LIBDIR=${BUILDLINK_PREFIX.libhidapi}/lib/
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_UDEVRULESDIR=${PREFIX}/lib/udev/rules.d/
 
 TEST_TARGET=	test
 

@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (developer's guide)         -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-dev-crosscompile,v 1.8 2024/04/25 14:56:30 riastradh Exp $
+$NetBSD: HOWTO-dev-crosscompile,v 1.9 2024/08/25 06:18:38 wiz Exp $
 
 These are some notes on how to make your package cross-compilable.
 There is no single recipe for it -- each package is different, and
@@ -46,7 +46,7 @@ ${USE_CROSS_COMPILE:tl} == "yes" (after including bsd.prefs.mk):
 
 - (pkg-config) ALL_ENV+= PKG_CONFIG_SYSROOT_DIR=${CROSS_DESTDIR:Q}
 - (pkg-config) ALL_ENV+= PKG_CONFIG_FDO_SYSROOT_RULES=1
-- (cmake) CMAKE_ARGS+= -DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
+- (cmake) CMAKE_CONFIGURE_ARGS+= -DCMAKE_SYSROOT:STRING=${CROSS_DESTDIR:Q}
 
 * Tool dependencies
 
