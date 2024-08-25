@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5346 2024/08/25 06:06:14 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5347 2024/08/25 06:08:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8282,3 +8282,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/transmission-gtk to 4.0.6 [abs 2024-08-24]
 	Updated net/transmission-qt to 4.0.6 [abs 2024-08-24]
 	Updated www/curl to 8.9.1nb1 [wiz 2024-08-25]
+	Updated pkgtools/pkg_install to 20240821 [wiz 2024-08-25]
