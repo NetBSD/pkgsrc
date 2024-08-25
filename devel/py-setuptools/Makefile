@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.252 2024/08/14 06:18:49 adam Exp $
+# $NetBSD: Makefile,v 1.253 2024/08/25 10:29:10 wiz Exp $
 
-DISTNAME=	setuptools-72.2.0
+DISTNAME=	setuptools-73.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -28,8 +28,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=13.0.0:../../devel/py-virtualenv
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
+# as of 73.0.1
+# 30 failed, 1137 passed, 49 skipped, 10 xfailed, 2 xpassed, 3 errors
+
 # Pick setuptools.tests which are not built nor installed.
-# 33 failed, 1140 passed, 47 skipped, 10 xfailed, 2 xpassed, 3 errors
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
 
 .include "../../lang/python/batteries-included.mk"
