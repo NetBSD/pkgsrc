@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5368 2024/08/25 14:57:58 osa Exp $
+$NetBSD: CHANGES-2024,v 1.5369 2024/08/25 17:17:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8302,3 +8302,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-rexml to 3.3.6 [wiz 2024-08-25]
 	Updated www/nginx-devel to 1.27.1 [osa 2024-08-25]
 	Updated www/nginx to 1.26.2 [osa 2024-08-25]
+	Updated security/opendnssec2 to 2.1.14 [he 2024-08-25]
