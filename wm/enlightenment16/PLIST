@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/14 00:44:07 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/08/26 23:06:49 gutteridge Exp $
 bin/e16
 bin/edox
 bin/eesh
@@ -41,6 +41,7 @@ share/e16/menus/winops_size.menu
 share/e16/misc/Xclients.e16-gnome.sh
 share/e16/misc/Xclients.e16-kde.sh
 share/e16/misc/Xclients.e16.sh
+${PLIST.dbus}share/e16/misc/e16-dbus-cmd
 share/e16/misc/starte16
 share/e16/misc/starte16-gnome
 share/e16/misc/starte16-kde
