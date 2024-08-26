@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2024/08/20 06:32:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2024/08/26 19:56:31 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	bitflags-2.6.0
@@ -16,6 +16,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.156
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
+CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	option-ext-0.2.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
