@@ -1,14 +1,24 @@
-# $NetBSD: options.mk,v 1.3 2020/08/28 03:12:26 gutteridge Exp $
+# $NetBSD: options.mk,v 1.4 2024/08/26 23:06:49 gutteridge Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.enlightenment16
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	sound
 PKG_OPTIONS_GROUP.sound=	pulseaudio alsa
 
-PKG_SUPPORTED_OPTIONS=		pango vera-ttf
-PKG_SUGGESTED_OPTIONS=		pango pulseaudio vera-ttf
+PKG_SUPPORTED_OPTIONS=		dbus pango vera-ttf
+PKG_SUGGESTED_OPTIONS=		dbus pango pulseaudio vera-ttf
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	dbus
+
+.if !empty(PKG_OPTIONS:Mdbus)
+CONFIGURE_ARGS+=	--enable-dbus
+.include "../../sysutils/dbus/buildlink3.mk"
+PLIST.dbus=		yes
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
 
 .if !empty(PKG_OPTIONS:Mpango)
 CONFIGURE_ARGS+=	--enable-pango
