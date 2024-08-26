@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/07/03 05:36:55 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/08/26 09:51:16 adam Exp $
 
-DISTNAME=	xml2rfc-3.22.0
+DISTNAME=	xml2rfc-3.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xml2rfc/}
@@ -28,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pdf>=3.2.1:../../textproc/py-pdf
 TEST_DEPENDS+=	${PYPKGPREFIX}-weasyprint>=60.1:../../print/py-weasyprint
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
