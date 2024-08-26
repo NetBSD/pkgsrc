@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/08/10 13:20:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/26 15:02:57 adam Exp $
 
-DISTNAME=	pikepdf-9.1.1
+DISTNAME=	pikepdf-9.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pikepdf/}
@@ -24,8 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.5.0:../../devel/py-test-xdist
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../print/qpdf/buildlink3.mk"
 .include "../../devel/py-pybind11/buildlink3.mk"
