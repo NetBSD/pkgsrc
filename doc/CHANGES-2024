@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5373 2024/08/26 06:32:45 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5374 2024/08/26 09:55:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8307,3 +8307,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/objfw to 1.1.7 [js 2024-08-25]
 	Updated devel/ast-grep to 0.26.3 [pin 2024-08-26]
 	Updated net/yaydl to 0.15.3 [pin 2024-08-26]
+	Updated textproc/py-xml2rfc to 3.23.0 [adam 2024-08-26]
+	Updated devel/py-jaraco.path to 3.7.1 [adam 2024-08-26]
