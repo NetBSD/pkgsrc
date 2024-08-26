@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/03/06 13:33:03 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/26 14:58:06 adam Exp $
 
-DISTNAME=	pyparsing-3.1.2
+DISTNAME=	pyparsing-3.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyparsing/}
@@ -11,8 +11,6 @@ COMMENT=	Parsing module for Python
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/bootstrap.mk"
 .include "../../mk/bsd.pkg.mk"
