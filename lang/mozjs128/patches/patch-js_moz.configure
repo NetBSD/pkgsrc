@@ -1,0 +1,15 @@
+$NetBSD: patch-js_moz.configure,v 1.1 2024/08/26 13:53:42 ryoon Exp $
+
+Check ${PREFIX} to allow use of non-builtin readlink libraries.
+
+--- js/moz.configure.orig	2024-08-10 13:08:57.707589518 +0000
++++ js/moz.configure
+@@ -1255,7 +1255,7 @@ option(
+ 
+ has_readline = check_symbol(
+     "readline",
+-    flags=["-lreadline"],
++    flags=["-lreadline", '-L@PREFIX@/lib'],
+     when="--enable-readline",
+     onerror=lambda: die("No system readline library found"),
+ )
