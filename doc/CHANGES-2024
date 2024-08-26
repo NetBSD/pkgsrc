@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5382 2024/08/26 16:16:32 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5383 2024/08/26 19:26:59 morr Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8320,3 +8320,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/py-pikepdf to 9.2.0 [adam 2024-08-26]
 	Updated graphics/py-tifffile to 2024.8.24 [adam 2024-08-26]
 	Updated devel/apr to 1.7.5 [wiz 2024-08-26]
+	Updated editors/vim-share to 9.1.0698 [morr 2024-08-26]
