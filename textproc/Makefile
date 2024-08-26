@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1483 2024/08/12 11:59:08 wiz Exp $
+# $NetBSD: Makefile,v 1.1484 2024/08/26 11:10:57 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -188,6 +188,7 @@ SUBDIR+=	csvtomd
 SUBDIR+=	csvutils
 SUBDIR+=	cwdiff
 SUBDIR+=	dadadodo
+SUBDIR+=	dasel
 SUBDIR+=	db2latex
 SUBDIR+=	dbcat
 SUBDIR+=	dblatex
