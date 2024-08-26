@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.26 2024/08/19 06:38:46 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.27 2024/08/26 06:28:56 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -33,7 +33,7 @@ CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clap-4.5.16
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.15
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.18
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.23
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.13
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
@@ -146,10 +146,10 @@ CARGO_CRATE_DEPENDS+=	schemars-0.8.21
 CARGO_CRATE_DEPENDS+=	schemars_derive-0.8.21
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.23
-CARGO_CRATE_DEPENDS+=	serde-1.0.208
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.208
+CARGO_CRATE_DEPENDS+=	serde-1.0.209
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.209
 CARGO_CRATE_DEPENDS+=	serde_derive_internals-0.29.0
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.125
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.127
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.19
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
