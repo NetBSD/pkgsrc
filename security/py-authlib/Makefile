@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/06/07 20:54:53 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/08/26 14:55:44 adam Exp $
 
-DISTNAME=	authlib-1.3.1
+DISTNAME=	authlib-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Authlib/}
@@ -17,8 +17,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=3.2:../../security/py-cryptography
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
