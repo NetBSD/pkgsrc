@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.251 2024/08/23 08:28:01 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.252 2024/08/26 17:02:01 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26063,3 +26063,4 @@ python39-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 python310-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 python311-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 python312-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
+apr<1.7.5	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-49582
