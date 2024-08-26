@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/08/24 15:58:21 pin Exp $
+$NetBSD: distinfo,v 1.6 2024/08/26 11:32:27 pin Exp $
 
 BLAKE2s (addr2line-0.22.0.crate) = 834589b7006b3b8d1e40e66abf813d18a5e9d6fac9433c24b0b18920c435a58e
 SHA512 (addr2line-0.22.0.crate) = b334f51bd369348b4446805b4f624ec9b4cc8eefcc53ceb57b523ff55bf018d1dfe23259daf48d1878170ad4fcb44181d4738456eb5e35ede6932ff29686268e
@@ -249,9 +249,9 @@ Size (miniz_oxide-0.8.0.crate) = 56343 bytes
 BLAKE2s (mio-1.0.2.crate) = ed6cacdfb37d24b75aaccd0680ff353809bd1068330a06769bd2eb18e95b8313
 SHA512 (mio-1.0.2.crate) = 77eae1170a318d4a53550dda3462ae070d25656cda51db4cb2dbcb28210802f9b7e279900e6d6eba68314a0c814c90eb4af7acc561f611535cb364f75ad4e317
 Size (mio-1.0.2.crate) = 102777 bytes
-BLAKE2s (mktool-0.1.15.tar.gz) = d324b4cebd6fd39e26cbb5cd742af6b8c3494d09715b9d7c95156840cc4664ab
-SHA512 (mktool-0.1.15.tar.gz) = d07b40cfc324e5210f8d1f78768cd52fce2258e89cdd3cadfb40e9f4fa9d072f8c29e8a9e4d87efa2f45b7966e0ba8387d949ba7c3cb292c5c6a376563c37c18
-Size (mktool-0.1.15.tar.gz) = 24460 bytes
+BLAKE2s (mktool-0.1.18.tar.gz) = 2ee960addd33ae038398d600b60e6e5db6442bdecec074f347df1d476fcc5e30
+SHA512 (mktool-0.1.18.tar.gz) = a0dd7b6163d75507995bf0876336012affbd29ff10473c95e5f874ec089d9d02909711da2fae14ed94e2a47679f9db73108e86e6875c7d744cee0c4fd3cc0fa3
+Size (mktool-0.1.18.tar.gz) = 25605 bytes
 BLAKE2s (native-tls-0.2.12.crate) = 9ba267195cb4c6b587346071ee99b39a0594addfe78dd10fddec05b8fbf4a3c6
 SHA512 (native-tls-0.2.12.crate) = 15fbc9d02134d3d55334d2f02fe4f64be50db991d75720b38d802088f06cf5f844cba6b25dfd7beb92f2cd367ba477ec2098e3c7336c4e5a5a7fd39c753fc723
 Size (native-tls-0.2.12.crate) = 29517 bytes
@@ -294,9 +294,9 @@ Size (pin-utils-0.1.0.crate) = 7580 bytes
 BLAKE2s (pkg-config-0.3.30.crate) = 84d1b15765e196eb7337f6b01b66b7358f94e015a57624c7ccad65ee922da843
 SHA512 (pkg-config-0.3.30.crate) = e4bce232e1e1cbb17d1c08c3de4dd12613f5a5238f831c2a765b6ede9b494e647d2416a7d9a0c926104e24066dd1b38df8df98a6c55d62f25060f80eb33d064d
 Size (pkg-config-0.3.30.crate) = 20613 bytes
-BLAKE2s (pkgsrc-0.1.27.crate) = 94811ee409586ce673365faba82bdb1b062c38b8a79d93ff4c29b4cc21fef316
-SHA512 (pkgsrc-0.1.27.crate) = 6c6b8205f1d79bdef527c4a90d36b1020019e403421880bb3620700af18dee8cb80904c4806662522f6433a37ceb50a60e92d76d9575fac3f1c2dc1db6b28f21
-Size (pkgsrc-0.1.27.crate) = 47189 bytes
+BLAKE2s (pkgsrc-0.1.28.crate) = b5bcdddca451e73a9070509b069e062b98bf5d31cd888b80291e533a190e4b37
+SHA512 (pkgsrc-0.1.28.crate) = 3c6d4c0ac348ca106b3eeb38f81bf8c42d24aeac647444c99e78f67d6aab10a3348a591b68f888b0397322ecdc63cd78fe8c8e31760c8d75f6d4ba0c8c432a27
+Size (pkgsrc-0.1.28.crate) = 47033 bytes
 BLAKE2s (portable-atomic-1.7.0.crate) = f2b75c6fe7dd0ef34a96e193fee0683629a8308d14bb71c647768a5664a28f9b
 SHA512 (portable-atomic-1.7.0.crate) = 0849edaa7a1f9ea66182443e31691e7839c857240916521bbd6009b5e692b13f5b315df36e656134651386bc50d895ecf6155a906750009514cad8bfc7e57fe2
 Size (portable-atomic-1.7.0.crate) = 145385 bytes
