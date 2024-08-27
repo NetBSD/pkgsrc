@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2019/10/10 13:54:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/08/27 16:01:30 ryoon Exp $
 bin/minivmac
+bin/minivmac-128K
+bin/minivmac-512Ke
+bin/minivmac-Classic
+bin/minivmac-II
+bin/minivmac-Plus
+bin/minivmac-SE
+bin/minivmac-SEFDHD

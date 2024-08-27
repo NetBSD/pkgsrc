@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2019/11/03 19:24:33 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2024/08/27 16:01:30 ryoon Exp $
 
 DISTNAME=	minivmac-36.04.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.gryphel.com/d/minivmac/minivmac-${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -55,16 +56,30 @@ NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 
 BUILD_TARGET=	minivmac
 
+MODELS=		128K 512Ke Plus SE Classic SEFDHD II
+BUILD_DIRS=	${MODELS}
+
 INSTALLATION_DIRS+=	bin
 
 do-configure:
 	cd ${WRKSRC} && \
-		${CC} setup/tool.c -o setup_t && \
-		./setup_t -t ${MVMTARGET} > ./setup.sh && \
+		${CC} setup/tool.c -o setup_t
+.for d in ${MODELS}
+	${MKDIR} ${WRKSRC}/${d}
+	cd ${WRKSRC}/${d} && \
+		${LN} -sf ../src . && \
+		../setup_t -t ${MVMTARGET} -m ${d} > ./setup.sh && \
 		${SH} ./setup.sh
+.endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/minivmac ${DESTDIR}${PREFIX}/bin
+.for d in ${MODELS}
+	echo $d
+	${INSTALL_PROGRAM} ${WRKSRC}/${d}/minivmac \
+		${DESTDIR}${PREFIX}/bin/minivmac-${d}
+.endfor
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${LN} -sf minivmac-Plus minivmac
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
