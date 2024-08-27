@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/08/27 16:55:15 ryoon Exp $
+
+BLAKE2s (pce-0.2.2.tar.gz) = fe8843fe20f31da5885d57047f2a5ed3ef4aaec514b4015984ca5d7623efad08
+SHA512 (pce-0.2.2.tar.gz) = 4a353e791b0576b1cbe656cd51a8ffd3fda4b02e5ff27c7859d3d1cf1b5137dfffcaa59eef0100b3bf6ca3dab920ca8a5c6aaeaa75702a36262fe3c41c0e3330
+Size (pce-0.2.2.tar.gz) = 1719539 bytes
+SHA1 (patch-Makefile.in) = 4dcddd655c4d2c8203ffe5f3243cd8ef9a4e7d4f
