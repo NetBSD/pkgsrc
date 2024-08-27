@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.5 2021/05/16 21:06:43 wiz Exp $
+$NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.6 2024/08/27 07:31:13 wiz Exp $
 
---- unix/xserver/hw/vnc/Makefile.am.orig	2020-09-08 12:16:08.000000000 +0000
+--- unix/xserver/hw/vnc/Makefile.am.orig	2024-07-23 08:50:25.000000000 +0000
 +++ unix/xserver/hw/vnc/Makefile.am
-@@ -8,6 +8,9 @@ NETWORK_LIB=$(TIGERVNC_BUILDDIR)/common/
- UNIXCOMMON_LIB=$(TIGERVNC_BUILDDIR)/unix/common/libunixcommon.la
- COMMON_LIBS=$(NETWORK_LIB) $(RFB_LIB) $(RDR_LIB) $(OS_LIB) $(UNIXCOMMON_LIB)
+@@ -14,6 +14,9 @@ AM_CPPFLAGS = \
+ 	-I$(TIGERVNC_SRCDIR)/unix/common \
+ 	$(DIX_CFLAGS)
  
 +# Hack to get the C headers to work when included from C++ code
 +AM_CXXFLAGS = -fpermissive
@@ -12,7 +12,7 @@ $NetBSD: patch-unix_xserver_hw_vnc_Makefile.am,v 1.5 2021/05/16 21:06:43 wiz Exp
  noinst_LTLIBRARIES = libvnccommon.la
  
  HDRS = vncExtInit.h vncHooks.h \
-@@ -67,6 +70,6 @@ libvnc_la_CPPFLAGS = $(XVNC_CPPFLAGS) -I
+@@ -78,6 +81,6 @@ libvnc_la_CPPFLAGS = $(AM_CPPFLAGS) \
  
  libvnc_la_LDFLAGS = -module -avoid-version -Wl,-z,now
  
