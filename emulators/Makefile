@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2024/08/19 13:19:51 wiz Exp $
+# $NetBSD: Makefile,v 1.364 2024/08/27 16:56:17 ryoon Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -176,6 +176,7 @@ SUBDIR+=	or1ksim
 SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	palmosemulator
+SUBDIR+=	pce
 SUBDIR+=	pcemu
 SUBDIR+=	pcsx-rearmed
 SUBDIR+=	pearpc
