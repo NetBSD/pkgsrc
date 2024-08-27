@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2022/07/11 19:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/27 05:20:53 wiz Exp $
 
-DISTNAME=		xclipboard-1.1.4
+DISTNAME=		xclipboard-1.1.5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
