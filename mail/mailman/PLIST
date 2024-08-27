@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2021/10/26 18:42:55 tm Exp $
+@comment $NetBSD: PLIST,v 1.32 2024/08/27 16:46:21 gdt Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -2278,6 +2278,7 @@ share/doc/mailman/README-I18N.en
 share/doc/mailman/README.CONTRIB
 share/doc/mailman/README.NETSCAPE
 share/doc/mailman/README.USERAGENT
+share/doc/mailman/README.pkgsrc
 share/doc/mailman/STYLEGUIDE.txt
 share/doc/mailman/TODO
 share/doc/mailman/UPGRADING

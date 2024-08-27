@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2023/08/14 05:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2024/08/27 16:46:21 gdt Exp $
 
 DISTNAME=	mailman-2.1.35
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	https://launchpad.net/mailman/2.1/2.1.35/+download/
 EXTRACT_SUFX=	.tgz
@@ -118,6 +118,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXECDIR}/support
 
 post-install:
+	${INSTALL_DATA} files/README.pkgsrc ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC} && for i in ${DOCFILELIST}; do \
 		${INSTALL_DATA} $$i ${DESTDIR}${DOCDIR}/; \
 	done
