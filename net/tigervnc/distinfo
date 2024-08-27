@@ -1,16 +1,14 @@
-$NetBSD: distinfo,v 1.23 2023/04/18 18:48:14 abs Exp $
+$NetBSD: distinfo,v 1.24 2024/08/27 07:31:12 wiz Exp $
 
-BLAKE2s (tigervnc-1.13.1.tar.gz) = 1173484c18eeac14b668059e13aaf18f5f59a2bb69771ff08d958014d46f6e90
-SHA512 (tigervnc-1.13.1.tar.gz) = 9190dbcd3b57ba52286c158c0675104d68463d7e3ea8e23493514b64451ddb511f3daf0f177339bc231155daea376d9c8dc58216663e10aa12f67468f4559da5
-Size (tigervnc-1.13.1.tar.gz) = 1989081 bytes
+BLAKE2s (tigervnc-1.14.0.tar.gz) = 6706146e17534a9cd53a3b631928a7634e8dc3271b45e07aaba5cdb6ff4de130
+SHA512 (tigervnc-1.14.0.tar.gz) = ee36f0aa40957274fb00fd755624a8bea80432d797d6c183645ed1251058ab30594d2261693b5655c5ca85a22e53f93029eeccc51fe86780398d1a017fa2311c
+Size (tigervnc-1.14.0.tar.gz) = 2090452 bytes
 BLAKE2s (xorg-server-1.20.13.tar.xz) = d5fd79e44b64fb79506673ab2a851b2bfad0ee5dd1bbb6477f645ca05237a9fc
 SHA512 (xorg-server-1.20.13.tar.xz) = 4e0b7bd4e070dc52cb2c51c2056feb133de2c0487d359392ed63abba9702910cd2e2983e9415973d8d6e9672eac78be6f39202687fc56610877914ce722554b3
 Size (xorg-server-1.20.13.tar.xz) = 5122260 bytes
-SHA1 (patch-CMakeLists.txt) = 97fffe92bb6bbd5094a0bef0b6d09f6b153c2563
-SHA1 (patch-common_rfb_util.h) = 73d5fc206e192b936c224cedf5857980fca69eb0
 SHA1 (patch-media_CMakeLists.txt) = e6455ee29679ee99f7457a9471928aa10284e971
-SHA1 (patch-unix_vncserver_vncserver.in) = 715f16a4be6806778fd0a9d781e920771e35d0ca
-SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = df31836e27bb535b307404adb55e239f10bbe6c4
+SHA1 (patch-unix_vncserver_vncserver.in) = 6b72c2b3a23428b2a752d956b83f227247fd8da7
+SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = ef2899e4afb1640cf0c829bd1b41a6e3c0fcec4a
 SHA1 (patch-unix_xserver_hw_vnc_vncBlockHandler.c) = 534a621aab793625c27737d42c5bf12c9574a414
-SHA1 (patch-unix_xserver_hw_vnc_vncModule.c) = 77aff6c2bb19e6936302c783b72d581e7d6388f5
 SHA1 (patch-unix_xserver_os_inputthread.c) = da8f1a6ab905d2569f61e92d8cf9891ed14ec42a
+SHA1 (patch-vncviewer_BaseTouchHandler.h) = 058b4f0a2c9f7240bb745de0eca4de376173ee9d

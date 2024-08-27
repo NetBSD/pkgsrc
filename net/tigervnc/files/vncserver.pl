@@ -43,7 +43,7 @@ if($slashndx>=0) {
 $geometry = "1024x768";
 #$depth = 16;
 
-$vncUserDir = "$ENV{HOME}/.vnc";
+$vncUserDir = "$ENV{HOME}/.config/tigervnc";
 $vncUserConfig = "$vncUserDir/config";
 
 $vncSystemConfigDir = "/etc/tigervnc";

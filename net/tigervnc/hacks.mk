@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2024/04/14 09:14:03 pho Exp $
+# $NetBSD: hacks.mk,v 1.3 2024/08/27 07:31:12 wiz Exp $
 
 .if !defined(TIGERVNC_HACKS_MK)
 TIGERVNC_HACKS_MK=	defined
@@ -18,7 +18,7 @@ TIGERVNC_HACKS_MK=	defined
 ### regression.
 ###
 .if ${MACHINE_PLATFORM:MNetBSD-9.*-aarch64} || \
-	${MACHINE_PLATFORM:MNetBSD-10.0-aarch64}
+	${MACHINE_PLATFORM} == NetBSD-10.0-aarch64
 PKG_HACKS+=	smart-scheduler-workaround
 CONFIGURE_ENV+=	ac_cv_func_setitimer=no
 .endif
