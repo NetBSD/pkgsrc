@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/08/07 09:57:41 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/27 08:54:53 adam Exp $
 
-DISTNAME=	zope.interface-7.0.1
+DISTNAME=	zope.interface-7.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.interface/}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=5.0.3:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
