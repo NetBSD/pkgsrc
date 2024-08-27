@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/14 08:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/08/27 08:53:37 adam Exp $
 
-DISTNAME=	zipp-3.20.0
+DISTNAME=	zipp-3.20.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipp/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertool
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
