@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/07/24 06:49:12 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/27 08:57:59 adam Exp $
 
-DISTNAME=	django_admin_rangefilter-0.13.1
+DISTNAME=	django_admin_rangefilter-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-admin-rangefilter/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
