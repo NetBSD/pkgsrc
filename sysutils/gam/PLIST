@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/31 10:10:17 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/27 16:04:44 sborrill Exp $
 bin/gam
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/gam/auth/oauth.pyo
 ${PYSITELIB}/gam/auth/oauth_test.py
 ${PYSITELIB}/gam/auth/oauth_test.pyc
 ${PYSITELIB}/gam/auth/oauth_test.pyo
+${PYSITELIB}/gam/auth/signjwt.py
+${PYSITELIB}/gam/auth/signjwt.pyc
+${PYSITELIB}/gam/auth/signjwt.pyo
 ${PYSITELIB}/gam/auth/yubikey.py
 ${PYSITELIB}/gam/auth/yubikey.pyc
 ${PYSITELIB}/gam/auth/yubikey.pyo
@@ -78,6 +81,9 @@ ${PYSITELIB}/gam/gapi/cloudidentity/devices.pyo
 ${PYSITELIB}/gam/gapi/cloudidentity/groups.py
 ${PYSITELIB}/gam/gapi/cloudidentity/groups.pyc
 ${PYSITELIB}/gam/gapi/cloudidentity/groups.pyo
+${PYSITELIB}/gam/gapi/cloudidentity/inboundsso.py
+${PYSITELIB}/gam/gapi/cloudidentity/inboundsso.pyc
+${PYSITELIB}/gam/gapi/cloudidentity/inboundsso.pyo
 ${PYSITELIB}/gam/gapi/cloudidentity/orgunits.py
 ${PYSITELIB}/gam/gapi/cloudidentity/orgunits.pyc
 ${PYSITELIB}/gam/gapi/cloudidentity/orgunits.pyo
