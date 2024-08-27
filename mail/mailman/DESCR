@@ -8,4 +8,5 @@ archiving, mail-to-news gateways, spam filters, bounce detection, digest
 delivery, and so on.  See the features page (http://www.list.org/features.html)
 for more detail.
 
-This is Mailman 2, rather than the current version 3.
+This is Mailman 2, rather than the current version 3.  Mailman 2 is no
+longer maintained upstream; the last release was in 2021.
