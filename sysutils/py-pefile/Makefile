@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/05/08 09:13:13 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/27 10:49:47 adam Exp $
 
-DISTNAME=	pefile-2023.2.7
+DISTNAME=	pefile-2024.8.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pefile/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://github.com/erocarrera/pefile
 COMMENT=	Python module to read and work with PE files
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
