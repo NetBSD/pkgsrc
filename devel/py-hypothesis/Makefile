@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.142 2024/08/04 06:39:33 adam Exp $
+# $NetBSD: Makefile,v 1.143 2024/08/27 10:26:19 adam Exp $
 #
 # Changelog: https://hypothesis.readthedocs.io/en/latest/changes.html
 
-DISTNAME=	hypothesis-6.108.6
+DISTNAME=	hypothesis-6.111.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.1.0:../../devel/py-sortedcontainers
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
