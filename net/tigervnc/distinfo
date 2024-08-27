@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2024/08/27 07:31:12 wiz Exp $
+$NetBSD: distinfo,v 1.25 2024/08/27 07:33:11 wiz Exp $
 
 BLAKE2s (tigervnc-1.14.0.tar.gz) = 6706146e17534a9cd53a3b631928a7634e8dc3271b45e07aaba5cdb6ff4de130
 SHA512 (tigervnc-1.14.0.tar.gz) = ee36f0aa40957274fb00fd755624a8bea80432d797d6c183645ed1251058ab30594d2261693b5655c5ca85a22e53f93029eeccc51fe86780398d1a017fa2311c
@@ -11,4 +11,4 @@ SHA1 (patch-unix_vncserver_vncserver.in) = 6b72c2b3a23428b2a752d956b83f227247fd8
 SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = ef2899e4afb1640cf0c829bd1b41a6e3c0fcec4a
 SHA1 (patch-unix_xserver_hw_vnc_vncBlockHandler.c) = 534a621aab793625c27737d42c5bf12c9574a414
 SHA1 (patch-unix_xserver_os_inputthread.c) = da8f1a6ab905d2569f61e92d8cf9891ed14ec42a
-SHA1 (patch-vncviewer_BaseTouchHandler.h) = 058b4f0a2c9f7240bb745de0eca4de376173ee9d
+SHA1 (patch-vncviewer_BaseTouchHandler.h) = f820e37a4087dffc1647f3c80e9e62899cd7905e
