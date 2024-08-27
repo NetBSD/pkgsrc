@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2024/08/25 06:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/08/27 07:31:12 wiz Exp $
 
-DISTNAME=		tigervnc-1.13.1
+DISTNAME=		tigervnc-1.14.0
 PKGNAME=		${DISTNAME}.1.20.13
-PKGREVISION=		8
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
-GITHUB_TAG=		v1.13.1
+GITHUB_TAG=		v${DISTNAME:S/tigervnc-//}
 XORG_SERVER_FILE=	xorg-server-1.20.13
 SITES.${XORG_SERVER_FILE}.tar.xz=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.xz
@@ -38,6 +37,8 @@ USE_TOOLS+=	perl:run bash:run
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 INSTALL_TARGET=	install
+
+BUILD_DEFS+=	PKG_SYSCONFBASE
 
 # CMake build appends 'tigervnc', so this is not PKG_SYSCONFDIR
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_INSTALL_SYSCONFDIR=${PKG_SYSCONFBASE}
