@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/07/31 07:55:06 adam Exp $
+# $NetBSD: Makefile,v 1.54 2024/08/27 08:13:28 adam Exp $
 
-DISTNAME=	mypy-1.11.1
+DISTNAME=	mypy-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
