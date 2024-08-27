@@ -1,5 +1,6 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.6 2011/04/07 15:45:37 hauke Exp $
+$NetBSD: README.pkgsrc,v 1.1 2024/08/27 16:46:21 gdt Exp $
+
+(Probably, all of this is contained in the upstream documemtation.)
 
 Mailman needs to know your mail domain and Web server hostname.  Edit
 ${PREFIX}/lib/mailman/Mailman/mm_cfg.py and insert your hostname
@@ -23,5 +24,3 @@ especially the file ${DOCDIR}/mailman-install.txt.
 
 If you are upgrading an existing mailman installation,
 see ${DOCDIR}/UPGRADING.
-
-===========================================================================
