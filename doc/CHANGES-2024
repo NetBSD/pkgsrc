@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5387 2024/08/26 23:07:36 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5388 2024/08/27 05:21:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8325,3 +8325,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libdrm to 2.4.123 [wiz 2024-08-26]
 	Updated pkgtools/pkg_install to 20240826 [wiz 2024-08-26]
 	Updated wm/enlightenment16 to 1.0.30nb1 [gutteridge 2024-08-26]
+	Updated x11/xclipboard to 1.1.5 [wiz 2024-08-27]
