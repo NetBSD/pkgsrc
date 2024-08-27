@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2024/08/27 16:55:16 ryoon Exp $
+
+* Install configuration files under share/pce.
+  Use CONF_FILES.
+
+--- Makefile.in.orig	2024-08-27 16:19:38.368369426 +0000
++++ Makefile.in
+@@ -112,10 +112,10 @@ endif
+ 
+ install-etc:
+ ifneq "$(ETC)" ""
+-	$(QP)echo "  MKDIR  $(DESTDIR)$(etcdir)"
+-	$(QR)$(INSTALL) -d -m 755 $(DESTDIR)$(etcdir)
++	$(QP)echo "  MKDIR  $(DESTDIR)$(prefix)/share/pce"
++	$(QR)$(INSTALL) -d -m 755 $(DESTDIR)$(prefix)/share/pce
+ 	$(QR)for f in $(ETC) ; do \
+-		dst=$(DESTDIR)$(etcdir)/`basename "$$f"` ; \
++		dst=$(DESTDIR)$(prefix)/share/pce/`basename "$$f"` ; \
+ 		if test x$(V) != x1 ; then echo "  CP     $$dst" ; fi ; \
+ 		$(INSTALL) -m 644 "$$f" "$$dst" ; \
+ 	done
