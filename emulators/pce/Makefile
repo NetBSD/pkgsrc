@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2024/08/27 16:55:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/27 16:57:40 ryoon Exp $
 
 DISTNAME=	pce-0.2.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.hampa.ch/pub/pce/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.hampa.ch/pub/pce/
+HOMEPAGE=	http://www.hampa.ch/pce/
 COMMENT=	PC Emulator
 LICENSE=	gnu-gpl-v2
 
