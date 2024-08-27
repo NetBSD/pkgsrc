@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/06/30 22:08:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/08/27 09:02:00 adam Exp $
 
-DISTNAME=	googleapis-common-protos-1.63.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	googleapis_common_protos-1.64.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
 
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
