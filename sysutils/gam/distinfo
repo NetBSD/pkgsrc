@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2022/10/14 12:01:17 sborrill Exp $
+$NetBSD: distinfo,v 1.3 2024/08/27 16:04:44 sborrill Exp $
 
-BLAKE2s (gam-6.25.tar.gz) = 517324094c8b6a9c44e4eceb705a98c88b832fce559d419a0f1942a4dab625e1
-SHA512 (gam-6.25.tar.gz) = 4b0b73dfb24049c449faaaa8f4127930c94503d0338b9d484a4a477c1ec947631e394e43644092107f314947941f0888819af010da208165b0e043538b927175
-Size (gam-6.25.tar.gz) = 358870 bytes
-SHA1 (patch-src_gam___init.py) = 8d4cf936d0241334dd7128b80ce34374223fef90
+BLAKE2s (gam-6.58.tar.gz) = 2d2cf4f2ca2666efe9aab226f136272e1eb97864361eba5b32370b1174c57678
+SHA512 (gam-6.58.tar.gz) = 65f0cbab7ed181c8d01b5d9dd7238ccca59124117656ad8a76ed8263f0b864dec36b19bcff81ff656a24ec351ab250f75493173d81354f961006d118763a6119
+Size (gam-6.58.tar.gz) = 370216 bytes
+SHA1 (patch-src_gam___init.py) = 376ac13908171f4db9a52a07c211c751caa351c1
+SHA1 (patch-src_gam_var.py) = f64dc26cd4e83a56aca4caced3c0e9d7e4f73c86
