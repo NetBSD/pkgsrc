@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5390 2024/08/27 07:31:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5391 2024/08/27 08:13:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8328,3 +8328,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xclipboard to 1.1.5 [wiz 2024-08-27]
 	Updated security/clusterssh to 4.16 [mef 2024-08-27]
 	Updated net/tigervnc to 1.14.0.1.20.13 [wiz 2024-08-27]
+	Updated textproc/py-parse_type to 0.6.3 [adam 2024-08-27]
+	Updated lang/py-mypy to 1.11.2 [adam 2024-08-27]
