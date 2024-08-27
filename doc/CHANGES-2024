@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5395 2024/08/27 10:50:06 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5396 2024/08/27 16:01:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8338,3 +8338,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pathvalidate to 3.2.1 [adam 2024-08-27]
 	Updated devel/py-hypothesis to 6.111.2 [adam 2024-08-27]
 	Updated sysutils/py-pefile to 2024.8.26 [adam 2024-08-27]
+	Updated emulators/minivmac to 36.04nb1 [ryoon 2024-08-27]
