@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2023/07/06 09:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/08/27 05:30:18 mef Exp $
 
-DISTNAME=	App-ClusterSSH-4.03_06
-PKGNAME=	p5-${DISTNAME:S/_/./}
-PKGREVISION=	8
+DISTNAME=	App-ClusterSSH-4.16
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DU/DUNCS/}
 
@@ -14,6 +13,7 @@ LICENSE=	gnu-gpl-v1
 DEPENDS+=	p5-Exception-Class>=1.32:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Tk>=804.030:../../x11/p5-Tk
 DEPENDS+=	p5-X11-Protocol>=0.56:../../x11/p5-X11-Protocol
+DEPENDS+=	p5-X11-Protocol-Other>=0.31:../../x11/p5-X11-Protocol-Other
 DEPENDS+=	p5-Try-Tiny>=0.11:../../devel/p5-Try-Tiny
 
 TOOL_DEPENDS+=	p5-CPAN-Changes>=0.400002:../../devel/p5-CPAN-Changes
@@ -34,6 +34,7 @@ USE_TOOLS+=		perl
 
 REPLACE_PERL+=		bin_PL/ccon
 REPLACE_PERL+=		bin_PL/crsh
+REPLACE_PERL+=		bin_PL/csftp
 REPLACE_PERL+=		bin_PL/cssh
 REPLACE_PERL+=		bin_PL/ctel
 REPLACE_PERL+=		t/external_cluster_command
