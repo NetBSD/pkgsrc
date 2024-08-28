@@ -1,4 +1,4 @@
-$NetBSD: patch-src_gam___init.py,v 1.2 2024/08/27 16:04:44 sborrill Exp $
+$NetBSD: patch-src_gam___init.py,v 1.3 2024/08/28 13:20:34 sborrill Exp $
 
 Don't check for updates
 

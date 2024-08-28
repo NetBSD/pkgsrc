@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/08/27 16:04:44 sborrill Exp $
+# $NetBSD: Makefile,v 1.7 2024/08/28 13:20:33 sborrill Exp $
 
 DISTNAME=	gam-6.58
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -30,11 +31,24 @@ WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}/src
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	gam/var.py
-SUBST_VARS.paths=	LOCALBASE
+SUBST_FILES.paths+=	README.in
+SUBST_VARS.paths=	LOCALBASE PKG_SYSCONFDIR
 
-INSTALLATION_DIRS=	bin ${PYSITELIB}
+PKG_SYSCONFSUBDIR=	gam
+
+EGDIR=		${PREFIX}/share/examples/gam
+CONF_FILES=	${EGDIR}/README ${PKG_SYSCONFDIR}/README
+
+INSTALLATION_DIRS=	bin ${PYSITELIB} ${EGDIR}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+
+post-extract:
+	${CP} ${FILESDIR}/README.in ${WRKSRC}/README.in
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README.in \
+	${DESTDIR}${EGDIR}/README
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
