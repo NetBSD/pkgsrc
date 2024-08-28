@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2024/08/27 16:04:44 sborrill Exp $
+$NetBSD: distinfo,v 1.4 2024/08/28 13:20:33 sborrill Exp $
 
 BLAKE2s (gam-6.58.tar.gz) = 2d2cf4f2ca2666efe9aab226f136272e1eb97864361eba5b32370b1174c57678
 SHA512 (gam-6.58.tar.gz) = 65f0cbab7ed181c8d01b5d9dd7238ccca59124117656ad8a76ed8263f0b864dec36b19bcff81ff656a24ec351ab250f75493173d81354f961006d118763a6119
 Size (gam-6.58.tar.gz) = 370216 bytes
 SHA1 (patch-src_gam___init.py) = 376ac13908171f4db9a52a07c211c751caa351c1
-SHA1 (patch-src_gam_var.py) = f64dc26cd4e83a56aca4caced3c0e9d7e4f73c86
+SHA1 (patch-src_gam_var.py) = 37470fb6acf56b85b8ffe01a138e33b06abb5073
