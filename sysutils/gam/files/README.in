@@ -1,0 +1,16 @@
+$NetBSD: README.in,v 1.1 2024/08/28 13:20:34 sborrill Exp $
+
+When gam is first run, it will walk you through the steps to create
+a Google project and use oauth2 to grant access to the required
+scope. This setup procedure will generate 3 files (oauth2.txt,
+oauth2service.json and client_secrets.json) which are used by gam
+to access your Google tenancy. It is important that they are kept
+secure as anyone who has access to those files can make changes
+to your Google settings.
+
+The files will be placed in @PKG_SYSCONFDIR@ by default.
+To override this location, set the following environmental variables:
+
+OAUTHFILE = path to oauth2.txt
+OAUTHSERVICEFILE = path to oauth2service.json
+CLIENTSECRETS = path to client_secrets.json
