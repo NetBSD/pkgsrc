@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/08/16 18:10:00 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/08/28 15:31:55 adam Exp $
 
-DISTNAME=	rich-13.7.1
+DISTNAME=	rich-13.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich/}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.2.0:../../textproc/py-markdown-it-py
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.14.0:../../textproc/py-pygments
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
