@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2024/08/21 13:08:37 gdt Exp $
+# $NetBSD: Makefile,v 1.135 2024/08/28 20:07:48 markd Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -25,7 +25,7 @@ SUBDIR+=	gnome
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer1-default-backend
-SUBDIR+=	kde4
+SUBDIR+=	kde
 SUBDIR+=	kf5
 SUBDIR+=	libdbusmenu
 SUBDIR+=	lxde
