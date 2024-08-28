@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/02/21 19:19:34 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/08/28 15:34:30 adam Exp $
 
-DISTNAME=	httpx-0.27.0
+DISTNAME=	httpx-0.27.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx/}
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
