@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68.2.1 2024/08/07 18:37:21 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.68.2.2 2024/08/28 15:17:15 bsiegert Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -862,6 +862,7 @@ share/vim/${VIM_SUBDIR}/indent/php.vim
 share/vim/${VIM_SUBDIR}/indent/postscr.vim
 share/vim/${VIM_SUBDIR}/indent/pov.vim
 share/vim/${VIM_SUBDIR}/indent/prolog.vim
+share/vim/${VIM_SUBDIR}/indent/proto.vim
 share/vim/${VIM_SUBDIR}/indent/ps1.vim
 share/vim/${VIM_SUBDIR}/indent/pyrex.vim
 share/vim/${VIM_SUBDIR}/indent/python.vim
@@ -1309,6 +1310,7 @@ share/vim/${VIM_SUBDIR}/syntax/hollywood.vim
 share/vim/${VIM_SUBDIR}/syntax/hostconf.vim
 share/vim/${VIM_SUBDIR}/syntax/hostsaccess.vim
 share/vim/${VIM_SUBDIR}/syntax/html.vim
+share/vim/${VIM_SUBDIR}/syntax/htmlangular.vim
 share/vim/${VIM_SUBDIR}/syntax/htmlcheetah.vim
 share/vim/${VIM_SUBDIR}/syntax/htmldjango.vim
 share/vim/${VIM_SUBDIR}/syntax/htmlm4.vim
