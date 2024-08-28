@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/02/23 07:54:16 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/08/28 15:23:11 adam Exp $
 
-DISTNAME=	pook-1.4.3
+DISTNAME=	pook-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pook/}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-pook>=0.1.0b0:../../devel/py-test-pook
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-extract:
 	${MKDIR} ${WRKSRC}/src
