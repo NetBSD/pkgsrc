@@ -1,29 +1,12 @@
-# $NetBSD: options.mk,v 1.13 2024/08/25 06:18:54 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2024/08/28 16:53:03 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnuradio
-PKG_SUPPORTED_OPTIONS=	ninja-build filter-design alsa
-# ninja-build is said supported, but not working
+PKG_SUPPORTED_OPTIONS=	filter-design alsa
 # alsa        is said supported, but not good on NetBSD
-
-# Adding ninja-build to following line (now) stops
-# [164/850] cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
-# FAILED: cd /PATH/ham/gnuradio-core/work/gnuradio-3.7.5/build/gr-audio/swig && ""
-# : permission denied
 
 PKG_SUGGESTED_OPTIONS=	filter-design
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mninja-build)
-CMAKE_CONFIGURE_ARGS+=	-GNinja
-TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-
-do-build:
-	(cd ${WRKSRC}/build; ninja)
-.else
-#do-build:
-#	(cd ${WRKSRC}/build; ${BUILD_MAKE_CMD})
-.endif
 
 .if !empty(PKG_OPTIONS:Mfilter-design)
 PYTHON_VERSIONS_INCOMPATIBLE+=	27 38
