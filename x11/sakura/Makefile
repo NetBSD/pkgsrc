@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/08/14 12:09:12 pin Exp $
+# $NetBSD: Makefile,v 1.54 2024/08/28 11:48:10 pin Exp $
 
 DISTNAME=	sakura-3.8.8
 CATEGORIES=	x11
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pod2man xgettext
-USE_CMAKE=	yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.20.0
 .include "../../devel/glib2/buildlink3.mk"
@@ -20,4 +19,5 @@ BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/vte3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
