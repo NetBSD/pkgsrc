@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/08/28 13:20:33 sborrill Exp $
+
+From gam 6.58nb1 onwards, the default location for the generated
+authorisation files has been moved to ${PKG_SYSCONFDIR}.
+
+See ${PKG_SYSCONFDIR}/README for more details.
+
+===========================================================================
