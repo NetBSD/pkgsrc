@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/19 22:09:32 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/29 19:31:43 nia Exp $
 
 DISTNAME=	fheroes2-1.1.1
 CATEGORIES=	games
@@ -13,6 +13,9 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++17
+
+# work with netbsd-9 compiler
+BUILDLINK_TRANSFORM+=	rm:-Wextra-semi
 
 .include "../../devel/cmake/build.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
