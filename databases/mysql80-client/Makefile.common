@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2024/08/25 06:18:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2024/08/29 14:42:13 ryoon Exp $
 #
 # used by databases/mysql80-client/Makefile
 # used by databases/mysql80-server/Makefile
 
-DISTNAME=	mysql-8.0.36
+DISTNAME=	mysql-8.0.39
 CATEGORIES=	databases
 MASTER_SITES=	https://cdn.mysql.com/Downloads/MySQL-8.0/
 DISTFILES=	mysql-boost-${PKGVERSION_NOREV}${EXTRACT_SUFX}
