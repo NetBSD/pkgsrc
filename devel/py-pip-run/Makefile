@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/06/11 09:12:13 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/08/29 08:11:00 adam Exp $
 
-DISTNAME=	pip-run-12.6.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	pip_run-13.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-run/}
 
@@ -28,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-nbformat-[0-9]*:../../www/py-nbformat
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 309
