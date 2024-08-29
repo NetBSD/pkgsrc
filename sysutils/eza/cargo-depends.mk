@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.30 2024/08/04 13:38:50 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.31 2024/08/29 07:37:42 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.0.5
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
@@ -147,7 +147,7 @@ CARGO_CRATE_DEPENDS+=	unicode-width-0.1.13
 CARGO_CRATE_DEPENDS+=	url-2.2.1
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	uutils_term_grid-0.6.0
-CARGO_CRATE_DEPENDS+=	uzers-0.12.0
+CARGO_CRATE_DEPENDS+=	uzers-0.12.1
 CARGO_CRATE_DEPENDS+=	vcpkg-0.2.12
 CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
 CARGO_CRATE_DEPENDS+=	walkdir-2.4.0

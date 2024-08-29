@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2024/08/11 05:41:25 fox Exp $
+$NetBSD: distinfo,v 1.35 2024/08/29 07:37:42 fox Exp $
 
 BLAKE2s (aho-corasick-1.0.5.crate) = 2199caecbc50c93a65ce7d60055f1bcb6885adb15f1153c994432df75aa27240
 SHA512 (aho-corasick-1.0.5.crate) = 6b0a64dbfe0c166341a34cd169bc46d28e40f72db4d599a1aff5327a6e891408f39e8e92e983cf9396a8e8135f93e41550237ff3e5c8c05a5325688746fd814b
@@ -132,9 +132,9 @@ Size (errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza-0.19.0.tar.gz) = f13c6b7b7106b52aca2444396717dee18613531c94486e9e203bb3e4e3056882
-SHA512 (eza-0.19.0.tar.gz) = a859501709a38787481bcd0d6b1a29f29a35f2e5c0fe1e1ce507f852786c840745baf7e52230b35864fb39b3f6300edf2c520615789ce75d572b350464ca10da
-Size (eza-0.19.0.tar.gz) = 1385560 bytes
+BLAKE2s (eza-0.19.1.tar.gz) = 97e0df0b7e0449599040464dc5dfeab2ab609ee0b22d96a869b513c7b775b555
+SHA512 (eza-0.19.1.tar.gz) = d039ad4b099b71adfc4be19fdd1b9ab05b300896f209634089f1a3f34cc1c68b0089d0bc6ed8bb33cd1486171b4ab91da4580bca74b08a2052471187e8bca6ab
+Size (eza-0.19.1.tar.gz) = 1385517 bytes
 BLAKE2s (fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -213,9 +213,9 @@ Size (locale-0.2.2.crate) = 18910 bytes
 BLAKE2s (log-0.4.22.crate) = 9c270d3af5640c9eeb36754e6fd6cf50521e9fd1efad955e0d777716b3d6839a
 SHA512 (log-0.4.22.crate) = bd7baa9c8a5523fd0864a53bcde955d484cacd782412b5b02c890b89dbf62137624da3a27337a310dd8f62bcc6606925a42bbd4ca161a3b7936ea4ff96bc0d71
 Size (log-0.4.22.crate) = 44027 bytes
-BLAKE2s (man-0.19.0.tar.gz) = 40743d0513f6a16861066e16c7b53ed94d4d1c0923b2cc0ba0779a3a9d1ae6a0
-SHA512 (man-0.19.0.tar.gz) = 8bec6df0ab4852d5f8fa87769f67b457d9854d0ea7549045a2e3d23f20fd6d230fbeee37afafa8b590a4895678b9e65b0155490b7cdd991edc6fb01ee061a127
-Size (man-0.19.0.tar.gz) = 8536 bytes
+BLAKE2s (man-0.19.1.tar.gz) = 91d1f80b1070a3bf595458a9783e2feefbcc9ef4fc678cada9c4ddb44d5fec55
+SHA512 (man-0.19.1.tar.gz) = 3cd708df2f2abe38b402b098508efeb079e3f48dca148fd82bb72eb2f35ec01d8a924e536f095ebb54d4e4d13ac2550480a6309d5d0ed52589cd64a74e3404ee
+Size (man-0.19.1.tar.gz) = 8523 bytes
 BLAKE2s (matches-0.1.8.crate) = 0c218f89eda16504ae593d3720fdfe7391e81449a4b227bc7e3beef5051bfe80
 SHA512 (matches-0.1.8.crate) = 98b58f6a2694b03a7dd1be69ebf7e3ad14483fc8e4cb6e6c26a4937e4e660e843efb4dd04a7312dd9659ca02acd3775678f73b8faac44a76ffafaf873c22f590
 Size (matches-0.1.8.crate) = 2216 bytes
@@ -447,9 +447,9 @@ Size (utf8parse-0.2.1.crate) = 13435 bytes
 BLAKE2s (uutils_term_grid-0.6.0.crate) = 7405df905e169a68d0ebc897686f2072318fadc8a2258581f025de134a8b7d9a
 SHA512 (uutils_term_grid-0.6.0.crate) = 9d169a6eacc368824924c49d7f4847927f633c6492d921735deedcefc02c53664b094e8d736fe45b1d9085d5c99ea3ec676f25221a2cf2e81ce4c5f261ad40ab
 Size (uutils_term_grid-0.6.0.crate) = 10904 bytes
-BLAKE2s (uzers-0.12.0.crate) = 43185750bcf780ec43aded42f5a436b6fe159d06e00230722979061a2b0121a6
-SHA512 (uzers-0.12.0.crate) = ad0fae66148d451860e86e1046016bf75b4788f412bae9a40bf895c2c385797f3f69e95f030c28ed50cd42fec1cfff2d66228adef393b034547d3bbcc9e7f554
-Size (uzers-0.12.0.crate) = 29098 bytes
+BLAKE2s (uzers-0.12.1.crate) = 12c80770aa3752e1a7c37c21c511f3c2d779f5033d6bf3deae0fab6eb991b84e
+SHA512 (uzers-0.12.1.crate) = 93c4160bfcbdca57a3c945b73a94d1ba8612e0258950f7c10307dd57c838a0664890cbe34a98649c18fb783744423a7fd240da8b5eabe1e660a533e9b32f6260
+Size (uzers-0.12.1.crate) = 29272 bytes
 BLAKE2s (vcpkg-0.2.12.crate) = a89109b19356f12ef9d7d1dff860c9ae064f4ec4e0a8a35ef0e7fca7c8d9ffeb
 SHA512 (vcpkg-0.2.12.crate) = 33076b42cc83fa614fde2cbcfe1bc5426c99fe3707c129e6c2b7aa16afe3bbf6ada027ac35cc70bc432df25e6a4f6086d251effceae373b6efc23c6a6fb2ff46
 Size (vcpkg-0.2.12.crate) = 15530 bytes
