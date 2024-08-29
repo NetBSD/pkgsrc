@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.32 2024/05/29 16:34:53 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/08/29 10:52:16 adam Exp $
 
-PKGREVISION= 1
 .include "../../www/nghttp2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
@@ -23,8 +22,6 @@ CONFIGURE_ARGS+=	--enable-hpack-tools
 GCC_REQD+=		12
 
 INSTALL_DIRS+=		src script
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	script/fetch-ocsp-response
 
