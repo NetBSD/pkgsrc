@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1813 2024/08/24 06:27:41 markd Exp $
+# $NetBSD: Makefile,v 1.1814 2024/08/29 15:01:23 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -251,6 +251,7 @@ SUBDIR+=	mailman3-web
 SUBDIR+=	make_album
 SUBDIR+=	matcha-sns
 SUBDIR+=	mediawiki
+SUBDIR+=	metabase
 SUBDIR+=	micro_httpd
 SUBDIR+=	midori
 SUBDIR+=	mimetex
