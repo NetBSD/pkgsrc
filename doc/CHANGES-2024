@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5410 2024/08/28 20:10:46 markd Exp $
+$NetBSD: CHANGES-2024,v 1.5411 2024/08/29 07:41:08 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8357,3 +8357,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-widgetsnbextension to 4.0.13 [adam 2024-08-28]
 	Updated www/py-jupyterlab-widgets to 3.0.13 [adam 2024-08-28]
 	Removed meta-pkgs/kde4 successor meta-pkgs/kde [markd 2024-08-28]
+	Updated sysutils/eza to 0.19.1 [fox 2024-08-29]
