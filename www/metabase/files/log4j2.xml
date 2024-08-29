@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+  <Appenders>
+    <File name="LogToFile" fileName="@VARBASE@/log/metabase/metabase.log">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+    </File>
+  </Appenders>
+
+  <Loggers>
+    <Logger name="metabase.sync" level="TRACE"/>
+    <Logger name="metabase.plugins" level="DEBUG"/>
+    <Logger name="metabase.server.middleware" level="DEBUG"/>
+    <Logger name="metabase.query-processor.async" level="DEBUG"/>
+    <Logger name="com.mchange" level="ERROR"/>
+    <Logger name="metabase" level="INFO"/>
+
+    <Root>
+      <AppenderRef ref="LogToFile"/>
+    </Root>
+
+  </Loggers>
+</Configuration>
