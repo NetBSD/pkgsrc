@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/08/25 10:35:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/08/29 08:08:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -101,7 +101,9 @@ ${PYSITELIB}/websockets/py.typed
 ${PYSITELIB}/websockets/server.py
 ${PYSITELIB}/websockets/server.pyc
 ${PYSITELIB}/websockets/server.pyo
+${PYSITELIB}/websockets/speedups.c
 ${PYSITELIB}/websockets/speedups.pyi
+${PYSITELIB}/websockets/speedups.so
 ${PYSITELIB}/websockets/streams.py
 ${PYSITELIB}/websockets/streams.pyc
 ${PYSITELIB}/websockets/streams.pyo
