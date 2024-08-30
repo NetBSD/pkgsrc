@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2024/08/20 07:54:05 adam Exp $
+$NetBSD: distinfo,v 1.38 2024/08/30 08:20:08 adam Exp $
 
-BLAKE2s (pyzmq-26.1.1.tar.gz) = a1628f84e08523dd794585081840a2727e9e4eabeb82d1bd25b0d0cd31a90251
-SHA512 (pyzmq-26.1.1.tar.gz) = b8fd66705a09805687c5c4030ad8e0098226b267cff67c1ec358295b9aafbfd4e226ede1b8c2f295329c03288d01dc81a594e78ce620bc4a4b24acfeab9eb15f
-Size (pyzmq-26.1.1.tar.gz) = 271185 bytes
+BLAKE2s (pyzmq-26.2.0.tar.gz) = 44cb21c1b005f0be3bb1297688cffcc0a45a7e7e7aeeb67550cde41045dccc88
+SHA512 (pyzmq-26.2.0.tar.gz) = be1aca82ed01c4e8f264c3b9bf8c908bab930550b88c82cb59726979d92723d263eb969a4da7af321609939ab20e147c49d39a2494aeebb97113905b7f519f8d
+Size (pyzmq-26.2.0.tar.gz) = 271975 bytes
 SHA1 (patch-CMakeLists.txt) = 5ba2d3ccbd7648132043f35615debaf450ee5bfb

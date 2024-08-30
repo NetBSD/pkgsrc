@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2024/08/20 07:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.46 2024/08/30 08:20:08 adam Exp $
 
-DISTNAME=	pyzmq-26.1.1
+DISTNAME=	pyzmq-26.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyzmq/}
@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-bui
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 PYSETUPBUILDARGS+=	--zmq=${BUILDLINK_PREFIX.zeromq:Q}
 
