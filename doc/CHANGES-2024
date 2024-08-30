@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5417 2024/08/29 15:00:41 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.5418 2024/08/30 07:17:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8367,3 +8367,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/mysql80-client to 8.0.39 [ryoon 2024-08-29]
 	Updated databases/mysql80-server to 8.0.39 [ryoon 2024-08-29]
 	Added www/metabase version 0.50.22 [ryoon 2024-08-29]
+	Updated emulators/mame to 0.269 [wiz 2024-08-30]
