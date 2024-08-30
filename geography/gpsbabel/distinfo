@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.15 2022/08/30 23:47:05 gdt Exp $
+$NetBSD: distinfo,v 1.16 2024/08/30 19:21:46 gdt Exp $
 
-BLAKE2s (gpsbabel_1_8_0.tar.gz) = 7d61335aa50c77d61d4dd418758dfc771cd2d8285945a56489c016948a997940
-SHA512 (gpsbabel_1_8_0.tar.gz) = 93137586cf887e185d96f06f59be4456cf9bae976979b9e5caad6ae8017c148d4c4c0fc182e8bd4c8547c3ed040c46f74e6f3cfb5f7b566d54fbc7fd767e27e4
-Size (gpsbabel_1_8_0.tar.gz) = 15104689 bytes
-SHA1 (patch-GPSBabel.pro) = 5693c3cdec033cf2a1bd02f5f4ec177445548df0
-SHA1 (patch-af) = 8bb5d9392ae682fd098578ef7a25ad84683f68c6
-SHA1 (patch-libusb.pri) = 48ca6d57c45265e1ccb94c42080bf2bf990987a5
+BLAKE2s (gpsbabel_1_9_0.tar.gz) = ad41672c9f488070f97f0b98b3c76a5ebf61387c33832407c3a84cb27bb97afb
+SHA512 (gpsbabel_1_9_0.tar.gz) = e8591aef8015470471ff7ff6a75ab4a71a584f8de2ac00f3957d06ee76145bf1f53c26a12b8d963f1b96ce09270f54fbd5e96c80eccbeb8466ff94a75b72972d
+Size (gpsbabel_1_9_0.tar.gz) = 14514572 bytes
+SHA1 (patch-af) = 219a90ed7c84f2c828c911ad30d7ef215d26ed45
