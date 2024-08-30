@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/06/06 12:40:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.54 2024/08/30 07:30:21 wiz Exp $
 
 DISTNAME=	elasticsearch-6.8.8
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://www.elasticsearch.org/
 COMMENT=	Distributed RESTful Search Engine
+# update may be AGPL
+# https://www.elastic.co/blog/elasticsearch-is-open-source-again
 LICENSE=	apache-2.0
 
 # Uses javah, which doesn't exist in JDK10+ anymore.
