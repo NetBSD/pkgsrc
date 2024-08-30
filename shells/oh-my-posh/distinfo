@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.169 2024/08/27 19:36:58 pin Exp $
+$NetBSD: distinfo,v 1.170 2024/08/30 09:15:49 pin Exp $
 
 BLAKE2s (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 574dbad9c3f38d9ccf476f1ed9a7f1ae9fd6c319709dccd144a62ec5e4c7e072
 SHA512 (dmitri.shuralyov.com_font_woff2_@v_v0.0.0-20180220214647-957792cbbdab.mod) = 5416d8501e504414289d0a89108861278d0909dac49ace875d3826836d26680af2328397ba3e872040b4b73f21fe81606bbd45aa6ec96eba91e9a554987415c4
@@ -81,12 +81,12 @@ Size (github.com_charmbracelet_bubbles_@v_v0.19.0.mod) = 1418 bytes
 BLAKE2s (github.com_charmbracelet_bubbles_@v_v0.19.0.zip) = f61fe8f9e5a3f4561be6eef7416989c95f1e15e7d2c5c35d486b2b4890763cb2
 SHA512 (github.com_charmbracelet_bubbles_@v_v0.19.0.zip) = 5819e85896e317b82ec7509f1af5684c5b0d2f8ed83ac8f6d2d47bf687d8fe694b6e0b49bd88b8528ec98c15241fc7e30a4046c7cf00b4811a3d1fcae60e2754
 Size (github.com_charmbracelet_bubbles_@v_v0.19.0.zip) = 93668 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.27.1.mod) = 6566eb181983db3ef19d9ebcddc73b60b4f4f7bb2e990e52955de2681fd9cfa4
-SHA512 (github.com_charmbracelet_bubbletea_@v_v0.27.1.mod) = 16c38e12b112f58580ec4053a3dde5a8c52cbc1fca911a760439507156d224e0432257fbb035864c607e5b8f3d621e8884a4b4bc8bf03be1309e72a6ab411d14
-Size (github.com_charmbracelet_bubbletea_@v_v0.27.1.mod) = 975 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v0.27.1.zip) = efd96c9f5d0aaa0750329c04e6376d75c4098452484af9fe87c5284d6eaec795
-SHA512 (github.com_charmbracelet_bubbletea_@v_v0.27.1.zip) = eedb8d7b8307aa62d7bde36bb1843d1ad8cd5430c7b1bf7bfbbc7bfe067a05dad076d6d744b047eb57909ff3b4844d02ec9a0e1fb6081b72c6d8b9b176a5f7d3
-Size (github.com_charmbracelet_bubbletea_@v_v0.27.1.zip) = 76415 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.0.0.mod) = 6566eb181983db3ef19d9ebcddc73b60b4f4f7bb2e990e52955de2681fd9cfa4
+SHA512 (github.com_charmbracelet_bubbletea_@v_v1.0.0.mod) = 16c38e12b112f58580ec4053a3dde5a8c52cbc1fca911a760439507156d224e0432257fbb035864c607e5b8f3d621e8884a4b4bc8bf03be1309e72a6ab411d14
+Size (github.com_charmbracelet_bubbletea_@v_v1.0.0.mod) = 975 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.0.0.zip) = e49aa39f9672b04726f74abdf8bd615857da17536aba572df7d37c156412bc75
+SHA512 (github.com_charmbracelet_bubbletea_@v_v1.0.0.zip) = 943f5efeaaddc807913158207f1a312b7bcba19e4b08f20d062e6fd0c406ea6bb9f4f268a9b7348866d0794bce35ab1794661c066f649f3953345a0169e993ab
+Size (github.com_charmbracelet_bubbletea_@v_v1.0.0.zip) = 76329 bytes
 BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 05ac768943d952cbe8c1b64db18533c6db94963ed0bf5984d2129e475f6d0ee6
 SHA512 (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 7e44098e8e2eff01a0d672807b3560df0982f2efc061dc195d3591a75b12760a4d5400ce1490e79075e75d3218bccc8ea54f5e2b0376778dcb3b561f45685a7d
 Size (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 737 bytes
@@ -687,8 +687,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-23.8.0.tar.gz) = e496408d575da4e3a716e0981f08b0decf7e30288657d0ff1b57400803bb39ac
-SHA512 (oh-my-posh-23.8.0.tar.gz) = b366378757b924f7efecdfb41d26fe164f439659d8a78fc433217b78bb6b2d2ee62de62c164eb3e294de71a6313f692959c398ea346aac7c200db31836d46f37
-Size (oh-my-posh-23.8.0.tar.gz) = 6674979 bytes
+BLAKE2s (oh-my-posh-23.9.1.tar.gz) = efc693f54ca4076cbe3dcc9e6deece253b12153b11c239ba39691930cfa5fde7
+SHA512 (oh-my-posh-23.9.1.tar.gz) = 2749745848a8d04c1f472048f475c64d3a1fb7d1600082bb02bc7d66ea0955051e2293aa8f39361dbaffe04d5ae80473d28a6e360bf833d2a7c0df7d4d73df41
+Size (oh-my-posh-23.9.1.tar.gz) = 6675428 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
