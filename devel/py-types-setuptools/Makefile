@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/07/23 05:26:57 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/08/30 12:35:13 adam Exp $
 
-DISTNAME=	types-setuptools-71.1.0.20240723
+DISTNAME=	types-setuptools-74.0.0.20240830
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-setuptools/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
