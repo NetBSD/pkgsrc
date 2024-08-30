@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.98 2024/08/18 11:57:47 pin Exp $
+$NetBSD: distinfo,v 1.99 2024/08/30 09:11:26 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -81,9 +81,9 @@ Size (bitflags-2.6.0.crate) = 45357 bytes
 BLAKE2s (block-0.1.6.crate) = 5482bb36f2842a3fe4fcac084ae4762392ac429ee1f5c30298465df08c610235
 SHA512 (block-0.1.6.crate) = c278e3c0346cae423b533a8f5d6b822e788ec450c92ef0f5f559d5705764a0a11df49f0f66bb1c8af7e89bec8ec802934676b969e43f92255a38b210d0fbd710
 Size (block-0.1.6.crate) = 4077 bytes
-BLAKE2s (broot-1.42.0.tar.gz) = 9f38990e9246fe7599bf8c0b11d8ac2525cab95af54be5b3678c6291b1601550
-SHA512 (broot-1.42.0.tar.gz) = 5a43be1e2fe4e856ba005a5142e3f279a9c86efa2fd0a50ea02e94d9a06b16d50411a38b47aed114b6a1c9df4f886f6839f9a274db942621c03503a5d5e8a595
-Size (broot-1.42.0.tar.gz) = 13911224 bytes
+BLAKE2s (broot-1.43.0.tar.gz) = d9b82131a9377a835f213ba1faf4acba416e6cf871e311ab6b78aa0ab845540a
+SHA512 (broot-1.43.0.tar.gz) = 575752df61ad3aad054e70b0bd8ffa617bdbc6ce3523f0487808c216b9d9d97efd4e77a1db7790aebe87a16861023d4c9f548fefb46e91af2c1e8639353ade6a
+Size (broot-1.43.0.tar.gz) = 13914688 bytes
 BLAKE2s (bstr-1.10.0.crate) = 91abaddad54be08b2e53f8d996f68cad30134322263fe6b56401f69ac5653cda
 SHA512 (bstr-1.10.0.crate) = 823abdbda9b13802facc7d6b1ed9ad809ed3b0b827d26e418348ffb8481b5f5735f129c5a9a8c7b2ab010d7f32ca57cba69a1ee10a64225c54c6ceacd22c05d2
 Size (bstr-1.10.0.crate) = 380426 bytes
@@ -258,6 +258,9 @@ Size (file-size-1.0.3.crate) = 1819 bytes
 BLAKE2s (flate2-1.0.31.crate) = 58ff676f0a7bbb7c712f0137fbba3186926e85737b907373b589433c0012503b
 SHA512 (flate2-1.0.31.crate) = b211254e15b38663f080552598d61d6766d6e7abc45cbac8fbdb5af65b833d2d3fbc00b5748ee12d4fc71726ab84dda9da20b6916121735c7b1c6c9d7a09fa61
 Size (flate2-1.0.31.crate) = 108176 bytes
+BLAKE2s (flex-grow-0.1.0.crate) = 340bada3ddf03b9bd98bd52097a5c58e7e14704f569c28e33e2c7e2d5388c9f4
+SHA512 (flex-grow-0.1.0.crate) = 1ba5ed49d560fce5f12240823968bccd2d50abc7d0195d62656857d784cf2d2a76ea03816294703d6b1161078523a6879e4c88a4b6d51c8a882cd1ed8c674f60
+Size (flex-grow-0.1.0.crate) = 4108 bytes
 BLAKE2s (float-cmp-0.9.0.crate) = 4f12d531ce122b1785eda3125e27ba4b3188f2b4294843329fd7fbcb25fd0c29
 SHA512 (float-cmp-0.9.0.crate) = f8dad12ecf8a278769054fd78794999dae8dedbcfde5e77bdf6cea12fdeaadeeb2f1f3ca62df9aadc1bc3f61457236c4854d6d6923ad6d03ae7f23af600572e8
 Size (float-cmp-0.9.0.crate) = 10102 bytes
@@ -366,12 +369,12 @@ Size (js-sys-0.3.70.crate) = 53863 bytes
 BLAKE2s (kurbo-0.9.5.crate) = 8f65fb1ec48535aa2e5530883d65f476cca95c911a2535997fea217b2afc41ae
 SHA512 (kurbo-0.9.5.crate) = 2f145fd6ee686fbf7156bcd201ff66b6e92c15eb673fe1e3bd49a1f8d89e2b32c944d090d866a4d818fe54a3197d6a805504562a3df835c477aebab2d18e771d
 Size (kurbo-0.9.5.crate) = 108513 bytes
-BLAKE2s (lazy-regex-3.2.0.crate) = a8eb7982ac23c3136b31f26844e17fd9c2b56e018b5d9a5f578144c3ae1ba292
-SHA512 (lazy-regex-3.2.0.crate) = bfd91441644e382756541eb7719a325def0807fe18f44d785255fd458b457312c554d79008b21f0a7a4cb56168f4295d4fcbf43de57131c523b115f0974d91f5
-Size (lazy-regex-3.2.0.crate) = 7547 bytes
-BLAKE2s (lazy-regex-proc_macros-3.2.0.crate) = 46e05b9787186a7ac8fba669524049a3c139689fe0419f12fe9fc5114b174a81
-SHA512 (lazy-regex-proc_macros-3.2.0.crate) = 401d5d086d9c65dcf49934cec9cb882fbe9f30840384c839405bc261ccdb89ee2dc15a6ee97914bf8880556d3dafb2726c67c414fc2d552d087a1f47ebaff9c8
-Size (lazy-regex-proc_macros-3.2.0.crate) = 5665 bytes
+BLAKE2s (lazy-regex-3.3.0.crate) = 4f9cdc4ee1f3c7f0b9a2e41c58e61af7399a357a6a5b42ae412f896e19e02295
+SHA512 (lazy-regex-3.3.0.crate) = 177fe10630054b28b323295471ae2cb5c72e36625033cf77d945c246c534ac954849bff418f608cbf58ce71a38422949ec246ea5cf4f9e405fa9e4d89ba18340
+Size (lazy-regex-3.3.0.crate) = 7509 bytes
+BLAKE2s (lazy-regex-proc_macros-3.3.0.crate) = 1d56d6e8314f0a92567008d527acc345fee601044b02ed2c7c90809d5ee55507
+SHA512 (lazy-regex-proc_macros-3.3.0.crate) = dc61271da716c271311899a547d56f865252412fe2c85295411701164dab7b00e9a14b190b12f8b4bd7c6357566a3050f3d45729c3938bb3b3de919cc046f31c
+Size (lazy-regex-proc_macros-3.3.0.crate) = 5720 bytes
 BLAKE2s (lazy_static-1.5.0.crate) = e1c1f0f38c4bae0138784e2df43c1a683e7dc5a2fb3fc0c9f49e01c04b770b40
 SHA512 (lazy_static-1.5.0.crate) = 6d2f9887cd7f34f019644e42f02f2bf0111accd73aeaa60973ba0b039b6774670debece1ea9a6978e923208ef5d3ab7326473ee3560c078817f0f7ab8ed0f65f
 Size (lazy_static-1.5.0.crate) = 14025 bytes
