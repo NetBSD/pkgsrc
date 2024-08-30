@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/04/08 10:44:27 pin Exp $
+# $NetBSD: Makefile,v 1.11 2024/08/30 09:13:35 pin Exp $
 
-DISTNAME=	inlyne-0.4.2
+DISTNAME=	inlyne-0.4.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.72.1
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
