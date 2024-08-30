@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2024/04/08 10:44:27 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2024/08/30 09:13:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.20.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -90,7 +90,7 @@ CARGO_CRATE_DEPENDS+=	data-url-0.3.0
 CARGO_CRATE_DEPENDS+=	dconf_rs-0.3.0
 CARGO_CRATE_DEPENDS+=	deadpool-0.9.5
 CARGO_CRATE_DEPENDS+=	deadpool-runtime-0.1.2
-CARGO_CRATE_DEPENDS+=	deranged-0.3.8
+CARGO_CRATE_DEPENDS+=	deranged-0.3.11
 CARGO_CRATE_DEPENDS+=	derivative-2.2.0
 CARGO_CRATE_DEPENDS+=	derive_builder-0.12.0
 CARGO_CRATE_DEPENDS+=	derive_builder_core-0.12.0
@@ -258,6 +258,7 @@ CARGO_CRATE_DEPENDS+=	nom-7.1.3
 CARGO_CRATE_DEPENDS+=	notify-6.1.1
 CARGO_CRATE_DEPENDS+=	notify-debouncer-full-0.3.1
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.46.0
+CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	num-integer-0.1.45
 CARGO_CRATE_DEPENDS+=	num-rational-0.4.1
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.16
@@ -306,6 +307,7 @@ CARGO_CRATE_DEPENDS+=	png-0.17.9
 CARGO_CRATE_DEPENDS+=	polling-2.8.0
 CARGO_CRATE_DEPENDS+=	polling-3.3.0
 CARGO_CRATE_DEPENDS+=	pollster-0.3.0
+CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.17
 CARGO_CRATE_DEPENDS+=	precomputed-hash-0.1.1
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.0
@@ -411,9 +413,9 @@ CARGO_CRATE_DEPENDS+=	thiserror-1.0.50
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.50
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.7
 CARGO_CRATE_DEPENDS+=	tiff-0.9.0
-CARGO_CRATE_DEPENDS+=	time-0.3.29
+CARGO_CRATE_DEPENDS+=	time-0.3.36
 CARGO_CRATE_DEPENDS+=	time-core-0.1.2
-CARGO_CRATE_DEPENDS+=	time-macros-0.2.15
+CARGO_CRATE_DEPENDS+=	time-macros-0.2.18
 CARGO_CRATE_DEPENDS+=	tiny-skia-0.11.2
 CARGO_CRATE_DEPENDS+=	tiny-skia-path-0.11.2
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
