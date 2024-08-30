@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 14:09:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/08/30 07:18:11 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cattr/__init__.py
 ${PYSITELIB}/cattr/__init__.pyc
 ${PYSITELIB}/cattr/__init__.pyo
@@ -42,10 +46,6 @@ ${PYSITELIB}/cattr/preconf/ujson.py
 ${PYSITELIB}/cattr/preconf/ujson.pyc
 ${PYSITELIB}/cattr/preconf/ujson.pyo
 ${PYSITELIB}/cattr/py.typed
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cattrs/__init__.py
 ${PYSITELIB}/cattrs/__init__.pyc
 ${PYSITELIB}/cattrs/__init__.pyo
@@ -55,6 +55,9 @@ ${PYSITELIB}/cattrs/_compat.pyo
 ${PYSITELIB}/cattrs/_generics.py
 ${PYSITELIB}/cattrs/_generics.pyc
 ${PYSITELIB}/cattrs/_generics.pyo
+${PYSITELIB}/cattrs/cols.py
+${PYSITELIB}/cattrs/cols.pyc
+${PYSITELIB}/cattrs/cols.pyo
 ${PYSITELIB}/cattrs/converters.py
 ${PYSITELIB}/cattrs/converters.pyc
 ${PYSITELIB}/cattrs/converters.pyo
@@ -103,6 +106,9 @@ ${PYSITELIB}/cattrs/preconf/json.pyo
 ${PYSITELIB}/cattrs/preconf/msgpack.py
 ${PYSITELIB}/cattrs/preconf/msgpack.pyc
 ${PYSITELIB}/cattrs/preconf/msgpack.pyo
+${PYSITELIB}/cattrs/preconf/msgspec.py
+${PYSITELIB}/cattrs/preconf/msgspec.pyc
+${PYSITELIB}/cattrs/preconf/msgspec.pyo
 ${PYSITELIB}/cattrs/preconf/orjson.py
 ${PYSITELIB}/cattrs/preconf/orjson.pyc
 ${PYSITELIB}/cattrs/preconf/orjson.pyo
