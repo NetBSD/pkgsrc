@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2024/07/31 21:37:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.88 2024/08/30 07:17:37 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -98,6 +98,7 @@ share/mame/hash/alphasmart_kapps.xml
 share/mame/hash/alphatro_cart.xml
 share/mame/hash/alphatro_flop.xml
 share/mame/hash/altos5.xml
+share/mame/hash/altos586.xml
 share/mame/hash/altos8600.xml
 share/mame/hash/amiga_a1000.xml
 share/mame/hash/amiga_a3000.xml
@@ -312,6 +313,7 @@ share/mame/hash/hp9831_rom.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
 share/mame/hash/hp9845b_rom.xml
+share/mame/hash/hp98x6_rom.xml
 share/mame/hash/hp9k3xx_cdrom.xml
 share/mame/hash/hp9k3xx_flop.xml
 share/mame/hash/hp9k3xx_hdd.xml
@@ -418,6 +420,7 @@ share/mame/hash/mephisto_mm2.xml
 share/mame/hash/mephisto_mm4.xml
 share/mame/hash/mephisto_mm5.xml
 share/mame/hash/mephisto_smondial2.xml
+share/mame/hash/microbox2_flop.xml
 share/mame/hash/microvision.xml
 share/mame/hash/midi_flop.xml
 share/mame/hash/mikro80.xml
