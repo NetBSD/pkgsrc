@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5419 2024/08/30 07:22:48 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5420 2024/08/30 07:30:48 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8370,3 +8370,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/mame to 0.269 [wiz 2024-08-30]
 	Updated devel/py-cattrs to 24.1.0 [adam 2024-08-30]
 	Updated devel/py-zope.interface to 7.0.3 [adam 2024-08-30]
+	Updated games/warzone2100 to 4.5.2 [triaxx 2024-08-30]
