@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2024/08/25 06:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2024/08/30 07:30:28 triaxx Exp $
 
 DISTNAME=	warzone2100_src
-PKGNAME=	warzone2100-4.4.2
-PKGREVISION=	4
+PKGNAME=	warzone2100-4.5.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Warzone2100/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,7 +13,6 @@ HOMEPAGE=	https://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config zip
 USE_TOOLS+=	msgfmt msgmerge xgettext
@@ -39,11 +37,8 @@ TOOLS_PLATFORM.xgettext=
 .include "../../games/warzone2100/options.mk"
 
 WRKSRC=		${WRKDIR}/warzone2100
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	${WRKSRC}
 
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_MAKE_PROGRAM=${MAKE_PROGRAM} -DWZ_DISTRIBUTOR=pkgsrc
-CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE=1
+CMAKE_CONFIGURE_ARGS+=		-DWZ_DISTRIBUTOR=pkgsrc
 
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 CFLAGS.Darwin+=		-fobjc-arc
@@ -67,9 +62,7 @@ SUBST_SED.rpath=	-e 's|-Wl,-rpath |${COMPILER_RPATH_FLAG},|'
 PLIST_SRC=	PLIST.bundle
 .endif
 
-pre-configure:
-	${RUN}${MKDIR} ${WRKSRC}/build
-
+.include "../../devel/cmake/build.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
