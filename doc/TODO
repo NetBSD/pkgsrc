@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24790 2024/08/30 07:24:39 wiz Exp $
+$NetBSD: TODO,v 1.24791 2024/08/30 09:55:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,6 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o ekiga-4.0.1
+	o elasticsearch-8.15.0
 	o electric-9.07
 	o electricfence-2.4.16
 	o elf-0.11
