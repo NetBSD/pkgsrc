@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.94 2024/08/25 10:29:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.95 2024/08/30 12:33:55 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -43,12 +49,6 @@ ${PYSITELIB}/pkg_resources/tests/test_resources.pyo
 ${PYSITELIB}/pkg_resources/tests/test_working_set.py
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyc
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -206,15 +206,6 @@ ${PYSITELIB}/setuptools/_distutils/command/sdist.pyo
 ${PYSITELIB}/setuptools/_distutils/command/upload.py
 ${PYSITELIB}/setuptools/_distutils/command/upload.pyc
 ${PYSITELIB}/setuptools/_distutils/command/upload.pyo
-${PYSITELIB}/setuptools/_distutils/command/wininst-10.0-amd64.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-10.0.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-14.0-amd64.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-14.0.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-6.0.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-7.1.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-8.0.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-9.0-amd64.exe
-${PYSITELIB}/setuptools/_distutils/command/wininst-9.0.exe
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.py
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyo
@@ -263,12 +254,6 @@ ${PYSITELIB}/setuptools/_distutils/filelist.pyo
 ${PYSITELIB}/setuptools/_distutils/log.py
 ${PYSITELIB}/setuptools/_distutils/log.pyc
 ${PYSITELIB}/setuptools/_distutils/log.pyo
-${PYSITELIB}/setuptools/_distutils/msvc9compiler.py
-${PYSITELIB}/setuptools/_distutils/msvc9compiler.pyc
-${PYSITELIB}/setuptools/_distutils/msvc9compiler.pyo
-${PYSITELIB}/setuptools/_distutils/msvccompiler.py
-${PYSITELIB}/setuptools/_distutils/msvccompiler.pyc
-${PYSITELIB}/setuptools/_distutils/msvccompiler.pyo
 ${PYSITELIB}/setuptools/_distutils/spawn.py
 ${PYSITELIB}/setuptools/_distutils/spawn.pyc
 ${PYSITELIB}/setuptools/_distutils/spawn.pyo
@@ -377,9 +362,6 @@ ${PYSITELIB}/setuptools/_distutils/tests/test_mingwccompiler.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_modified.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_modified.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_modified.pyo
-${PYSITELIB}/setuptools/_distutils/tests/test_msvc9compiler.py
-${PYSITELIB}/setuptools/_distutils/tests/test_msvc9compiler.pyc
-${PYSITELIB}/setuptools/_distutils/tests/test_msvc9compiler.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.pyo
@@ -1193,9 +1175,6 @@ ${PYSITELIB}/setuptools/modified.pyo
 ${PYSITELIB}/setuptools/monkey.py
 ${PYSITELIB}/setuptools/monkey.pyc
 ${PYSITELIB}/setuptools/monkey.pyo
-${PYSITELIB}/setuptools/msvc.py
-${PYSITELIB}/setuptools/msvc.pyc
-${PYSITELIB}/setuptools/msvc.pyo
 ${PYSITELIB}/setuptools/namespaces.py
 ${PYSITELIB}/setuptools/namespaces.pyc
 ${PYSITELIB}/setuptools/namespaces.pyo
@@ -1354,9 +1333,6 @@ ${PYSITELIB}/setuptools/tests/test_logging.pyo
 ${PYSITELIB}/setuptools/tests/test_manifest.py
 ${PYSITELIB}/setuptools/tests/test_manifest.pyc
 ${PYSITELIB}/setuptools/tests/test_manifest.pyo
-${PYSITELIB}/setuptools/tests/test_msvc14.py
-${PYSITELIB}/setuptools/tests/test_msvc14.pyc
-${PYSITELIB}/setuptools/tests/test_msvc14.pyo
 ${PYSITELIB}/setuptools/tests/test_namespaces.py
 ${PYSITELIB}/setuptools/tests/test_namespaces.pyc
 ${PYSITELIB}/setuptools/tests/test_namespaces.pyo
