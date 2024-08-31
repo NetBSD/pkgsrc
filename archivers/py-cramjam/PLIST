@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/24 17:30:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/08/31 08:50:44 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/license_files/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cramjam/__init__.py
 ${PYSITELIB}/cramjam/__init__.pyc
 ${PYSITELIB}/cramjam/__init__.pyo
