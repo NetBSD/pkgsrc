@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/08/31 19:41:34 jakllsch Exp $
+include/libjaylink/libjaylink.h
+include/libjaylink/version.h
+lib/libjaylink.la
+lib/pkgconfig/libjaylink.pc
