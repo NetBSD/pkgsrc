@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/24 15:25:12 thor Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.8 2024/08/31 08:19:49 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/llvmlite/__init__.py
 ${PYSITELIB}/llvmlite/__init__.pyc
 ${PYSITELIB}/llvmlite/__init__.pyo
@@ -58,6 +59,9 @@ ${PYSITELIB}/llvmlite/binding/targets.pyo
 ${PYSITELIB}/llvmlite/binding/transforms.py
 ${PYSITELIB}/llvmlite/binding/transforms.pyc
 ${PYSITELIB}/llvmlite/binding/transforms.pyo
+${PYSITELIB}/llvmlite/binding/typeref.py
+${PYSITELIB}/llvmlite/binding/typeref.pyc
+${PYSITELIB}/llvmlite/binding/typeref.pyo
 ${PYSITELIB}/llvmlite/binding/value.py
 ${PYSITELIB}/llvmlite/binding/value.pyc
 ${PYSITELIB}/llvmlite/binding/value.pyo
