@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.317 2024/08/25 06:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.318 2024/08/31 08:39:32 adam Exp $
 
-DISTNAME=	wireshark-4.2.6
+DISTNAME=	wireshark-4.4.0
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -29,7 +29,6 @@ CHECK_PORTABILITY_SKIP+=	tools/bsd-setup.sh
 
 PTHREAD_OPTS+=		require
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # Python 2.7 is not supported
 PYTHON_FOR_BUILD_ONLY=		yes
 REPLACE_PYTHON+=		tools/asn2deb
 REPLACE_PYTHON+=		tools/asn2wrs.py
@@ -54,9 +53,6 @@ USE_BUILTIN.libpcap=	no
 # Extra post install targets are in options.mk
 post-install: ${POST_INSTALL_TARGETS}
 
-# wireshark no longer builds with NetBSD 3.x provided zlib
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
-
 # wireshark uses gdk_pixbuf_new_from_inline which is deprecated, but asks
 # to hide deprecated prototypes. This leads to pointer truncation.
 # gui_utils.c:514:12: warning: incompatible integer to pointer conversion
@@ -73,6 +69,7 @@ SUBST_SED.lemon=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../archivers/brotli/buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/minizip/buildlink3.mk"
+.include "../../archivers/zlib-ng/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/opencore-amr/buildlink3.mk"
@@ -82,7 +79,6 @@ SUBST_SED.lemon=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/libsmi/buildlink3.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libcares/buildlink3.mk"
