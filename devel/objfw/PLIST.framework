@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST.framework,v 1.5 2023/09/11 00:46:53 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.6 2024/08/31 13:19:34 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
 Library/Frameworks/ObjFW.framework/Resources
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFAAAADNSResourceRecord.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFADNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFAcceptSocketFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFAllocFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFAlreadyOpenException.h
@@ -15,6 +17,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBindSocketFailedExceptio
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBindUNIXSocketFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBlock.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFBroadcastConditionFailedException.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCNAMEDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFChangeCurrentDirectoryFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFCharacterSet.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFChecksumMismatchException.h
@@ -51,6 +54,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFGZIPStream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFGetCurrentDirectoryFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFGetItemAttributesFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFGetOptionFailedException.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHINFODNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHMAC.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHTTPClient.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHTTPCookie.h
@@ -80,6 +84,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFKernelEventObserver.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFKeyValueCoding.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLHAArchive.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLHAArchiveEntry.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLOCDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLinkItemFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFList.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFListenOnSocketFailedException.h
@@ -88,6 +93,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLocale.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLockFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLocking.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMD5Hash.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMXDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMalformedXMLException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMapTable.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMatrix4x4.h
@@ -108,7 +114,9 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableString.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableTarArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableTriple.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableZIPArchiveEntry.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableZooArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutex.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFNSDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFNotImplementedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFNotOpenException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFNotification.h
@@ -124,12 +132,14 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFOptionsParser.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFOutOfMemoryException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFOutOfRangeException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPBKDF2.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPTRDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPair.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPlainCondition.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPlainMutex.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPlainThread.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFPlugin.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFRIPEMD160Hash.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFRPDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFReadFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFReadOrWriteFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFRecursiveMutex.h
@@ -143,6 +153,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSHA256Hash.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSHA384Hash.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSHA384Or512Hash.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSHA512Hash.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSOADNSResourceRecord.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSRVDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFScrypt.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSecureData.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFSeekFailedException.h
@@ -175,6 +187,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTCPSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTLSHandshakeFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTLSKey.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTLSStream.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTXTDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTarArchive.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTarArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFThread.h
@@ -185,6 +198,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTruncatedDataException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUDPSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXDatagramSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXStreamSocket.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFURIDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUUID.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUnboundNamespaceException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUnboundPrefixException.h
@@ -207,6 +221,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFXMLParser.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFXMLProcessingInstruction.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFZIPArchive.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFZIPArchiveEntry.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFZooArchive.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFZooArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/ObjFW.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/macros.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/objfw-defs.h
