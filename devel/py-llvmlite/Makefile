@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/08/25 06:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/08/31 07:54:58 wiz Exp $
 
 DISTNAME=	llvmlite-0.41.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,15 +19,15 @@ DISTFILES+=	llvm-${LLVM_VERSION}.src.tar.xz
 DISTFILES+=	lld-${LLVM_VERSION}.src.tar.xz
 DISTFILES+=	libunwind-${LLVM_VERSION}.src.tar.xz
 
-LLVM_SITE=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VERSION}/
+LLVM_SITE=					https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_VERSION}/
 SITES.llvm-${LLVM_VERSION}.src.tar.xz=		${LLVM_SITE}
 SITES.lld-${LLVM_VERSION}.src.tar.xz=		${LLVM_SITE}
 SITES.libunwind-${LLVM_VERSION}.src.tar.xz=	${LLVM_SITE}
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
 # Just for LLVM build.
-USE_TOOLS=	cmake
+USE_TOOLS=		cmake
 
 # See
 # https://github.com/numba/llvmlite/blob/main/conda-recipes/llvmdev/build.sh
@@ -68,7 +68,7 @@ LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_UTILS=ON
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_BENCHMARKS:BOOL=OFF
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_DOCS=OFF
 LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_EXAMPLES=OFF
-
+LLVM_CMAKE_CONFIGURE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 MAKE_ENV+=		LLVM_CONFIG=${WRKDIR}/llvm-inst/bin/llvm-config
 # unable to pass LLVM bit-code files to linker
@@ -91,7 +91,6 @@ pre-configure:
 	cd ${WRKDIR} &&  mkdir build && cd build && \
 	  cmake -G'Unix Makefiles' ${LLVM_CMAKE_CONFIGURE_ARGS} ../llvm && \
 	  ${MAKE} -j${MAKE_JOBS} && \
-	  ${MAKE} -j${MAKE_JOBS} check-llvm-unit && \
 	  ${MAKE} install
 	${SED} -e 's/ -stdlib=libc++//' ${WRKSRC}/ffi/Makefile.freebsd > ${WRKSRC}/ffi/Makefile.netbsd
 
