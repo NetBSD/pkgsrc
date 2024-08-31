@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2024/08/24 06:21:44 markd Exp $
+# $NetBSD: Makefile,v 1.655 2024/08/31 19:42:10 jakllsch Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -192,6 +192,7 @@ SUBDIR+=	libcdio-paranoia
 SUBDIR+=	libcec
 SUBDIR+=	libdivecomputer
 SUBDIR+=	libgravatar
+SUBDIR+=	libjaylink
 SUBDIR+=	libkdepim
 SUBDIR+=	libkeduvocdocument
 SUBDIR+=	libkkc-data
