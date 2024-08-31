@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/31 19:41:34 jakllsch Exp $
+
+BLAKE2s (libjaylink-0.3.1.tar.bz2) = bc33733c59a642b7641e0c86eb6ece7dc25515342ca271f0010a632a0730d256
+SHA512 (libjaylink-0.3.1.tar.bz2) = 4964e522cb59f59db444ca350529dd3695e2ccb451f7607e2c14074bafe47688f35b2e8b3304170a611db2d21040f3f98c95def179cf4f95733287986811fd78
+Size (libjaylink-0.3.1.tar.bz2) = 61062 bytes
