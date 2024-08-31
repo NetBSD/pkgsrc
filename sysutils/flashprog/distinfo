@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/08/31 19:46:15 jakllsch Exp $
+
+BLAKE2s (flashprog-v1.2.tar.bz2) = 5dedf29fb10f074bd1100a5ad1d0468c17ee6debf2caaa8b749b342e3f7aaf12
+SHA512 (flashprog-v1.2.tar.bz2) = 10d10b3229ecc27d003e0baa55fdfdd724c2229111695400bcbdc99f09b8cb7010e966b748804189491008ac6274a694e984c7951dc75d8f6971bc4d37ae4572
+Size (flashprog-v1.2.tar.bz2) = 422044 bytes
