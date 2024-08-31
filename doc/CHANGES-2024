@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5435 2024/08/31 08:39:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5436 2024/08/31 08:44:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8389,3 +8389,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/fzf to 0.55.0 [iquiw 2024-08-31]
 	Updated devel/py-llvmlite to 0.43.0 [wiz 2024-08-31]
 	Updated math/py-numba to 0.60.0 [wiz 2024-08-31]
+	Updated net/wireshark to 4.4.0 [adam 2024-08-31]
+	Updated multimedia/assimp to 5.4.3 [adam 2024-08-31]
