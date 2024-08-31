@@ -1,0 +1,2 @@
+libjaylink is a shared library written in C to access SEGGER J-Link and
+compatible devices.
