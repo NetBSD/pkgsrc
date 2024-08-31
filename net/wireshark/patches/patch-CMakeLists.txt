@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.9 2023/11/20 18:34:49 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.10 2024/08/31 08:39:32 adam Exp $
 
 Do not make application bundle on Darwin.
 
 editcap needs -lm, like tfshark:
 editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
 
---- CMakeLists.txt.orig	2023-11-15 18:30:18.000000000 +0000
+--- CMakeLists.txt.orig	2024-08-28 18:51:12.000000000 +0000
 +++ CMakeLists.txt
-@@ -1536,7 +1536,7 @@ if(WIN32)
+@@ -1605,7 +1605,7 @@ if(WIN32)
  	set(WIN_WS2_32_LIBRARY   ws2_32.lib)
  endif()
  
@@ -16,17 +16,17 @@ editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
  	#
  	# We assume that APPLE means macOS so that we have the macOS
  	# frameworks.
-@@ -1595,7 +1595,7 @@ else()
+@@ -1669,7 +1669,7 @@ else()
+ 	endif()
  endif()
- set(EXTCAP_INSTALL_FULL_LIBDIR "${CMAKE_INSTALL_PREFIX}/${EXTCAP_INSTALL_LIBDIR}")
  
 -if(APPLE)
 +if(FALSE)
  	#
  	# As https://developer.apple.com/library/archive/technotes/tn2206/_index.html
  	# says,
-@@ -2732,7 +2732,11 @@ if(BUILD_wireshark AND QT_FOUND)
- 		${MINIZIP_LIBRARIES}
+@@ -2846,7 +2846,11 @@ if(BUILD_wireshark AND QT_FOUND)
+ 		${MINIZIPNG_LIBRARIES}
  	)
  
 +	if(ENABLE_APPLICATION_BUNDLE)
@@ -37,7 +37,7 @@ editcap.c:(.text.startup+0x5b8): undefined reference to `modf'
  	if(MSVC)
  		set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT wireshark)
  	endif()
-@@ -3231,6 +3235,7 @@ endif()
+@@ -3352,6 +3356,7 @@ endif()
  
  if(BUILD_editcap)
  	set(editcap_LIBS
