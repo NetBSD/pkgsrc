@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/07 15:10:02 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/08/31 08:47:23 wiz Exp $
 
 DISTNAME=	watchfiles-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.16:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
