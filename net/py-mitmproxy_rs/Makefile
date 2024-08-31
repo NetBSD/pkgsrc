@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/06/10 11:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/08/31 08:43:01 wiz Exp $
 
 DISTNAME=	mitmproxy_rs-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
-# Only for Python 3.10 or newer
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39
 
 .include "cargo-depends.mk"
 
