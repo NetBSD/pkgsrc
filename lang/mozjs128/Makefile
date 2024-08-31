@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/26 13:53:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/08/31 08:42:04 wiz Exp $
 
 MOZVER=		128.1.0esr
 DISTNAME=	firefox-${MOZVER}.source
@@ -16,8 +16,8 @@ WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}
 USE_TOOLS+=	gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
-# "ERROR: Only GCC 7.1 or newer is supported"
-GCC_REQD+=	7
+# "ERROR: Only GCC 8.1 or newer is supported"
+GCC_REQD+=	8
 
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/multinit/multinit.sh
