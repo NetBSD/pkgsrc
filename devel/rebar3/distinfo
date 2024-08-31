@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/12 15:15:25 nikita Exp $
+$NetBSD: distinfo,v 1.10 2024/08/31 07:04:01 nikita Exp $
 
-BLAKE2s (rebar3/rebar3-3.23.0.tar.gz) = 3605dc112d55cbab49c495e0585f8635bad5defcd0a1e159c707f027f699a76b
-SHA512 (rebar3/rebar3-3.23.0.tar.gz) = 4da1db8ed830c59fb322c1a652c2efe28d54e09ad74d12a87381ea7a7f13965b91815f383221831fbc14e6deed1a75db1039164f7df128a977d5b64048540cc3
-Size (rebar3/rebar3-3.23.0.tar.gz) = 807007 bytes
+BLAKE2s (rebar3/rebar3-3.24.0.tar.gz) = fa2797a22585f7658b80cc939200239a5abcd61ed46bfce464f6cd0772f06a4e
+SHA512 (rebar3/rebar3-3.24.0.tar.gz) = f6673d384e9f16b27e940ee738b15088007c1edd4b8cc87e4624ba66aead9fbe790f39797abd3996f4e234ca3536d4d0b9e4166bec6df21ec2ea887cfabcb2a6
+Size (rebar3/rebar3-3.24.0.tar.gz) = 821260 bytes
