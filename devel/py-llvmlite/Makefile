@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/08/31 07:54:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/08/31 08:19:49 wiz Exp $
 
-DISTNAME=	llvmlite-0.41.1
+DISTNAME=	llvmlite-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/llvmlite/}
@@ -10,9 +10,13 @@ HOMEPAGE=	https://llvmlite.readthedocs.io/
 COMMENT=	Lightweight LLVM Python binding for writing JIT compilers
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 # Statically linking in a purpose-built LLVM as upstream urges to do.
 # They support only a certain version of LLVM per release, and that
 # with patches.
+# TODO: As of 0.43.0, this supports llvm 15.
 LLVM_VERSION=	14.0.6
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	llvm-${LLVM_VERSION}.src.tar.xz
@@ -75,9 +79,6 @@ MAKE_ENV+=		LLVM_CONFIG=${WRKDIR}/llvm-inst/bin/llvm-config
 MAKE_ENV.NetBSD+=	CXX_FLTO_FLAGS=
 MAKE_ENV.NetBSD+=	LD_FLTO_FLAGS=
 
-# From 3.8 on is fine.
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # The llvm build detects lots of stuff outside the build sandbox ...
 # a python it likes, git ... just hoping that this does not matter
 # much for the static lib being used by llvmlite.
@@ -102,5 +103,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PYSITELIB}/llvmlite/binding/libllvmlite.dylib
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
