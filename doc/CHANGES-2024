@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5436 2024/08/31 08:44:12 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5437 2024/08/31 09:07:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8391,3 +8391,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-numba to 0.60.0 [wiz 2024-08-31]
 	Updated net/wireshark to 4.4.0 [adam 2024-08-31]
 	Updated multimedia/assimp to 5.4.3 [adam 2024-08-31]
+	Updated cad/klayout to 0.29.6 [mef 2024-08-31]
