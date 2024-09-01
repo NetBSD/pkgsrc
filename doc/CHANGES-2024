@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5449 2024/09/01 09:58:54 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.5450 2024/09/01 13:33:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8405,3 +8405,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/libpcap to 1.10.5 [adam 2024-09-01]
 	Updated net/tcpdump to 4.99.5 [adam 2024-09-01]
 	Updated net/gh to 2.55.0 [bsiegert 2024-09-01]
+	Updated geography/proj to 9.4.1 [gdt 2024-09-01]
