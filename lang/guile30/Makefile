@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/26 22:49:10 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/01 14:53:48 gdt Exp $
 
 DISTNAME=	guile-3.0.10
 PKGNAME=	${DISTNAME:S/guile/guile30/}
@@ -9,6 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/guile/
 COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-lgpl-v3
+
+# 3.0.10 appears to be  broken on all 32-bit CPU types.
+#   https://issues.guix.gnu.org/72215
 
 # Currently, all versions are namespaced.
 GUILE_SUBDIR=	guile/3.0
