@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2024/05/23 13:39:17 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/01 22:23:50 gdt Exp $
 
-DISTNAME=	proj-data-1.9
+VERSION_BASE=	1.18
+VERSION_RC=
+VERSION=	${VERSION_BASE}${VERSION_RC}
+DISTNAME=	proj-data-${VERSION}
 CATEGORIES=	geography
 MASTER_SITES=	https://download.osgeo.org/proj/
 
