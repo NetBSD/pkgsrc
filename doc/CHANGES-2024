@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5452 2024/09/01 15:56:27 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5453 2024/09/01 15:57:33 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8411,3 +8411,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/roundcube-plugin-password to 1.6.9 [taca 2024-09-01]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.9 [taca 2024-09-01]
 	Updated graphics/gradient to 0.4.0 [pin 2024-09-01]
+	Updated pkgtools/mktool to 0.1.20 [pin 2024-09-01]
