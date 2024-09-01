@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/05/23 13:35:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/09/01 13:33:50 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -12,6 +12,7 @@ include/geodesic.h
 include/proj.h
 include/proj/common.hpp
 include/proj/coordinateoperation.hpp
+include/proj/coordinates.hpp
 include/proj/coordinatesystem.hpp
 include/proj/crs.hpp
 include/proj/datum.hpp
@@ -22,7 +23,21 @@ include/proj/util.hpp
 include/proj_constants.h
 include/proj_experimental.h
 include/proj_symbol_rename.h
-lib/libproj.la
+lib/cmake/proj/proj-config-version.cmake
+lib/cmake/proj/proj-config.cmake
+lib/cmake/proj/proj-targets-release.cmake
+lib/cmake/proj/proj-targets.cmake
+lib/cmake/proj/proj4-targets-release.cmake
+lib/cmake/proj/proj4-targets.cmake
+lib/cmake/proj4/proj-targets-release.cmake
+lib/cmake/proj4/proj-targets.cmake
+lib/cmake/proj4/proj4-config-version.cmake
+lib/cmake/proj4/proj4-config.cmake
+lib/cmake/proj4/proj4-targets-release.cmake
+lib/cmake/proj4/proj4-targets.cmake
+lib/libproj.so
+lib/libproj.so.25
+lib/libproj.so.25.9.4.1
 lib/pkgconfig/proj.pc
 man/man1/cct.1
 man/man1/cs2cs.1
