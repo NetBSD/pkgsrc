@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2024/08/25 06:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/01 14:56:36 gdt Exp $
 
 VERSION=	20240620
 DISTNAME=	XyGrib-${VERSION}
 PKGNAME=	XyGrib-devel-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opengribs/}
 GITHUB_PROJECT=	XyGrib
