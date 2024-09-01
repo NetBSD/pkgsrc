@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.33 2024/08/04 14:59:46 leot Exp $
+# $NetBSD: go-modules.mk,v 1.34 2024/09/01 09:58:31 bsiegert Exp $
 
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.mod
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.zip
@@ -46,8 +46,8 @@ GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.17.mod
-GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.21.mod
-GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.21.zip
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.23.mod
+GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.23.zip
 GO_MODULE_FILES+=	github.com/cyberphone/json-canonicalization/@v/v0.0.0-20220623050100-57a0ce2678a7.mod
 GO_MODULE_FILES+=	github.com/cyberphone/json-canonicalization/@v/v0.0.0-20220623050100-57a0ce2678a7.zip
 GO_MODULE_FILES+=	github.com/danieljoos/wincred/@v/v1.2.1.mod
@@ -65,14 +65,12 @@ GO_MODULE_FILES+=	github.com/distribution/reference/@v/v0.5.0.mod
 GO_MODULE_FILES+=	github.com/distribution/reference/@v/v0.5.0.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.4.0.zip
-GO_MODULE_FILES+=	github.com/docker/cli/@v/v24.0.0+incompatible.mod
-GO_MODULE_FILES+=	github.com/docker/cli/@v/v24.0.0+incompatible.zip
+GO_MODULE_FILES+=	github.com/docker/cli/@v/v27.1.1+incompatible.mod
+GO_MODULE_FILES+=	github.com/docker/cli/@v/v27.1.1+incompatible.zip
 GO_MODULE_FILES+=	github.com/docker/distribution/@v/v2.8.2+incompatible.mod
 GO_MODULE_FILES+=	github.com/docker/distribution/@v/v2.8.2+incompatible.zip
 GO_MODULE_FILES+=	github.com/docker/docker-credential-helpers/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/docker/docker-credential-helpers/@v/v0.7.0.zip
-GO_MODULE_FILES+=	github.com/docker/docker/@v/v24.0.9+incompatible.mod
-GO_MODULE_FILES+=	github.com/docker/docker/@v/v24.0.9+incompatible.zip
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.16.0.mod
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.16.0.zip
 GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.7.0.mod
@@ -119,8 +117,8 @@ GO_MODULE_FILES+=	github.com/google/certificate-transparency-go/@v/v1.2.1.mod
 GO_MODULE_FILES+=	github.com/google/certificate-transparency-go/@v/v1.2.1.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.zip
-GO_MODULE_FILES+=	github.com/google/go-containerregistry/@v/v0.20.1.mod
-GO_MODULE_FILES+=	github.com/google/go-containerregistry/@v/v0.20.1.zip
+GO_MODULE_FILES+=	github.com/google/go-containerregistry/@v/v0.20.2.mod
+GO_MODULE_FILES+=	github.com/google/go-containerregistry/@v/v0.20.2.zip
 GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.mod
 GO_MODULE_FILES+=	github.com/google/shlex/@v/v0.0.0-20191202100458-e7afc7fbc510.zip
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
