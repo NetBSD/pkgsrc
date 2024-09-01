@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/01/21 13:06:09 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/09/01 01:36:46 mef Exp $
 
 R_PKGNAME=	ragg
-R_PKGVER=	1.2.7
+R_PKGVER=	1.3.2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
