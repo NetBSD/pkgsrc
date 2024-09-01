@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.8 2023/01/16 08:17:30 adam Exp $
+$NetBSD: patch-configure,v 1.9 2024/09/01 09:47:09 adam Exp $
 
 Ensure consistent manpage locations.
 Correctly detect Mac OS X Leopard.
 
---- configure.orig	2023-01-12 22:04:47.000000000 +0000
+--- configure.orig	2024-08-30 19:34:14.000000000 +0000
 +++ configure
-@@ -10034,10 +10034,6 @@ fi
+@@ -9721,10 +9721,6 @@ fi
  # and daemons in section 8).  Individual cases can override this.
  #
  DYEXT="none"
@@ -16,7 +16,7 @@ Correctly detect Mac OS X Leopard.
  case "$host_os" in
  
  aix*)
-@@ -10156,7 +10152,7 @@ fi
+@@ -9844,7 +9840,7 @@ fi
  			V_PROG_LDFLAGS_FAT="-arch ppc -arch ppc64 -arch i386 -arch x86_64"
  			;;
  
@@ -25,7 +25,7 @@ Correctly detect Mac OS X Leopard.
  			#
  			# Leopard.  Build libraries for 32-bit PowerPC,
  			# 64-bit PowerPC, 32-bit x86, and x86-64, with
-@@ -10525,6 +10521,10 @@ esac
+@@ -10217,6 +10213,10 @@ esac
  
  
  
@@ -34,5 +34,5 @@ Correctly detect Mac OS X Leopard.
 +MAN_ADMIN_COMMANDS=8
 +
  # Check whether --enable-shared was given.
- if test "${enable_shared+set}" = set; then :
-   enableval=$enable_shared;
+ if test ${enable_shared+y}
+ then :

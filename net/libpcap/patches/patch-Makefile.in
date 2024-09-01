@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.in,v 1.4 2023/01/16 08:17:30 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2024/09/01 09:47:09 adam Exp $
 
 Add libtoolization.
 Fix manpage installation.
 
---- Makefile.in.orig	2023-01-12 22:04:47.000000000 +0000
+--- Makefile.in.orig	2024-08-30 19:34:14.000000000 +0000
 +++ Makefile.in
 @@ -46,7 +46,7 @@ VPATH = @srcdir@
  #
@@ -14,7 +14,7 @@ Fix manpage installation.
  AR = @AR@
  LN_S = @LN_S@
  MKDEP = @MKDEP@
-@@ -83,7 +83,8 @@ BISON_BYACC = @BISON_BYACC@
+@@ -82,7 +82,8 @@ BISON_BYACC = @BISON_BYACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -24,29 +24,29 @@ Fix manpage installation.
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -96,7 +97,7 @@ COMMON_C_SRC =	pcap.c gencode.c optimize
+@@ -94,7 +95,7 @@ COMMON_C_SRC =	pcap.c gencode.c optimize
  		savefile.c sf-pcap.c sf-pcapng.c pcap-common.c \
- 		pcap-usb-linux-common.c bpf_image.c bpf_filter.c bpf_dump.c
+ 		bpf_image.c bpf_filter.c bpf_dump.c
  GENERATED_C_SRC = scanner.c grammar.c
 -LIBOBJS = @LIBOBJS@
 +LIBOBJS = @LTLIBOBJS@
  
- SRC =	$(PLATFORM_C_SRC) $(PLATFORM_CXX_SRC) \
+ SRC =	$(PLATFORM_C_SRC) \
  	$(MODULE_C_SRC) $(REMOTE_C_SRC) $(COMMON_C_SRC) \
-@@ -105,9 +106,9 @@ SRC =	$(PLATFORM_C_SRC) $(PLATFORM_CXX_S
+@@ -102,9 +103,9 @@ SRC =	$(PLATFORM_C_SRC) \
+ 
  # We would like to say "OBJ = $(SRC:.c=.o)" but Ultrix's make cannot
- # hack the extra indirection, and we have to handle PLATFORM_CXX_SRC
- # differently from the defines for C source
--OBJ =	$(PLATFORM_C_SRC:.c=.o) $(PLATFORM_CXX_SRC:.cpp=.o) \
+ # hack the extra indirection
+-OBJ =	$(PLATFORM_C_SRC:.c=.o) \
 -	$(MODULE_C_SRC:.c=.o) $(REMOTE_C_SRC:.c=.o) $(COMMON_C_SRC:.c=.o) \
 -	$(GENERATED_C_SRC:.c=.o) \
-+OBJ =	$(PLATFORM_C_SRC:.c=.lo) $(PLATFORM_CXX_SRC:.cpp=.lo) \
++OBJ =	$(PLATFORM_C_SRC:.c=.lo) \
 +	$(MODULE_C_SRC:.c=.lo) $(REMOTE_C_SRC:.c=.lo) $(COMMON_C_SRC:.c=.lo) \
 +	$(GENERATED_C_SRC:.c=.lo) \
  	$(LIBOBJS)
  
  PUBHDR = \
-@@ -429,12 +430,10 @@ RELEASE_FILES = $(COMMON_C_SRC) $(HDR) $
+@@ -426,12 +427,10 @@ RELEASE_FILES = $(COMMON_C_SRC) $(HDR) $
  	$(MAN3PCAP_NOEXPAND) $(MANFILE) $(MANMISC) $(EXTRA_DIST) \
  	$(TEST_DIST)
  
@@ -62,7 +62,7 @@ Fix manpage installation.
  
  shared: libpcap.$(DYEXT)
  
-@@ -521,7 +520,7 @@ scanner.h: scanner.c
+@@ -518,7 +517,7 @@ scanner.h: scanner.c
  		$(MAKE) $(MAKEFLAGS) scanner.c; \
  	fi
  
@@ -71,7 +71,7 @@ Fix manpage installation.
  	$(CC) $(FULL_CFLAGS) -c scanner.c
  
  #
-@@ -552,25 +551,25 @@ grammar.h: grammar.c
+@@ -549,25 +548,25 @@ grammar.h: grammar.c
  		$(MAKE) $(MAKEFLAGS) grammar.c; \
  	fi
  
@@ -104,7 +104,7 @@ Fix manpage installation.
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
  
  #
-@@ -615,7 +614,7 @@ testprogs: FORCE
+@@ -612,7 +611,7 @@ testprogs: FORCE libpcap.a
  
  FORCE:
  
@@ -113,7 +113,7 @@ Fix manpage installation.
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -630,62 +629,60 @@ install: install-shared install-archive 
+@@ -627,62 +626,60 @@ install: install-shared install-archive
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -216,22 +216,18 @@ Fix manpage installation.
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
-@@ -727,15 +724,15 @@ install-shared-shareda: libpcap.shareda
- install-shared-none:
- 
- install-archive: install-archive-$(DYEXT)
+@@ -728,11 +725,11 @@ install-archive: install-archive-$(DYEXT
+ # Most platforms have separate suffixes for shared and
+ # archive libraries, so we install both.
+ #
 -install-archive-so install-archive-dylib install-archive-sl install-archive-none: libpcap.a
 +install-archive-so install-archive-dylib install-archive-sl install-archive-none: libpcap.la
- 	#
- 	# Most platforms have separate suffixes for shared and
- 	# archive libraries, so we install both.
- 	#
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
 -	$(INSTALL_DATA) libpcap.a $(DESTDIR)$(libdir)/libpcap.a
 -	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.a
 +	$(INSTALL_DATA) libpcap.la $(DESTDIR)$(libdir)/libpcap.la
 +	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.la
- install-archive-shareda:
- 	#
- 	# AIX, however, doesn't, so we don't install the archive
+ #
+ # AIX, however, doesn't, so we don't install the archive
+ # library on AIX.
