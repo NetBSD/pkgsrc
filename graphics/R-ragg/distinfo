@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/01/21 08:44:24 mef Exp $
+$NetBSD: distinfo,v 1.4 2024/09/01 01:36:46 mef Exp $
 
-BLAKE2s (R/ragg_1.2.7.tar.gz) = b7fabf0d404cf6aa9497e0336524b1222e41c06082bfdfbaf158bb503b943790
-SHA512 (R/ragg_1.2.7.tar.gz) = 12f18979a4a59f1f2a28a3d8a004c48b90b6afe7acc158639acb308a8f8b4e5e8dcaff429bbdfdd02eccf41b6c058c2c6d13033c94d812098d03ac3cb555ccf8
-Size (R/ragg_1.2.7.tar.gz) = 425500 bytes
+BLAKE2s (R/ragg_1.3.2.tar.gz) = 9035011999bfe45d2732ea4a935bb6b572c9d52f108e5169c746234fea9064f9
+SHA512 (R/ragg_1.3.2.tar.gz) = 614333cb3aa282176dca750bbe37202d174e0c6808f64e91b589cf79fb505b68d70ebc8e9ecd1046a493582d711e3c9cb3a229f2eec1ef59419c47e8657ae74e
+Size (R/ragg_1.3.2.tar.gz) = 430366 bytes
