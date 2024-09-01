@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24795 2024/08/31 18:41:39 wiz Exp $
+$NetBSD: TODO,v 1.24796 2024/09/01 07:23:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -733,12 +733,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.1.4
+	o grafana-11.2.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.66.0
+	o grpc-1.66.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -1108,7 +1108,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o proj-9.2.0
-	o prometheus-2.54.0
+	o prometheus-2.54.1
+	o protobuf-28.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1120,17 +1121,23 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
+	o py-certifi-2024.8.30
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-contourpy-1.3.0
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-grpcio-1.66.0
+	o py-google-api-core-2.19.2
+	o py-google-api-python-client-2.143.0
+	o py-googleapis-common-protos-1.65.0
+	o py-grpcio-1.66.1
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-lsp-server-1.12.0
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
@@ -1140,16 +1147,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-protobuf-5.28.0
+	o py-pydantic-core-2.23.1
+	o py-pylint-3.2.7
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.6.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autoapi-3.3.0
+	o py-sphinx-autodoc-typehints-2.3.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-0.79.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
+	o py-watchdog-5.0.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1254,6 +1269,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
+	o syncstorage-rs-0.17.2
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1301,6 +1317,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.23.0
+	o tree-sitter-php-0.23.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
