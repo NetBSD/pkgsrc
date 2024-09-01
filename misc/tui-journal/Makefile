@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/07/23 08:08:41 pin Exp $
+# $NetBSD: Makefile,v 1.24 2024/09/01 15:58:10 pin Exp $
 
-DISTNAME=	tui-journal-0.9.1
+DISTNAME=	tui-journal-0.10.0
 CATEGORIES=	misc
 MASTER_SITES=	https://static.crates.io/crates/tui-journal/
 EXTRACT_SUFX=	.crate
