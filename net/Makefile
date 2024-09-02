@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1580 2024/09/02 00:34:01 maya Exp $
+# $NetBSD: Makefile,v 1.1581 2024/09/02 16:58:12 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -964,6 +964,7 @@ SUBDIR+=	tcptraceroute
 SUBDIR+=	tcptraceroute6
 SUBDIR+=	teamspeak-client
 SUBDIR+=	teamspeak-server
+SUBDIR+=	tektoncd-cli
 SUBDIR+=	termscp
 SUBDIR+=	terraform
 SUBDIR+=	terraform-provider-archive
