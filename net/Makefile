@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1581 2024/09/02 16:58:12 maya Exp $
+# $NetBSD: Makefile,v 1.1582 2024/09/02 17:14:26 maya Exp $
 #
 
 COMMENT=	Networking tools
@@ -212,6 +212,7 @@ SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
 SUBDIR+=	grive2
 SUBDIR+=	grpc
+SUBDIR+=	grpc-go
 SUBDIR+=	grpcurl
 SUBDIR+=	gsnmp
 SUBDIR+=	gssdp
