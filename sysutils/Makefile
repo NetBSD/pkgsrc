@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1133 2024/08/31 19:46:57 jakllsch Exp $
+# $NetBSD: Makefile,v 1.1134 2024/09/02 17:45:10 maya Exp $
 #
 
 COMMENT=	System utilities
@@ -708,6 +708,7 @@ SUBDIR+=	shc
 SUBDIR+=	shelldap
 SUBDIR+=	shmux
 SUBDIR+=	skill
+SUBDIR+=	skopeo
 SUBDIR+=	slay
 SUBDIR+=	sleepwatcher
 SUBDIR+=	slocate
