@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/09/02 17:44:03 maya Exp $
+
+BLAKE2s (skopeo-1.14.3.tar.gz) = 54cad77434cee5c7f4281d6a49cb48e7b3a35f5581c80d65184acea3586ed865
+SHA512 (skopeo-1.14.3.tar.gz) = 9a0ff46434d10d218d77653234620a007dc68892069d15ecb78c80026476409f67a2d35d9889e84a6e1a161142c0dfebc9c5d31461b01e6913dececa5605023d
+Size (skopeo-1.14.3.tar.gz) = 10564190 bytes
+SHA1 (patch-vendor_github.com_containers_image_v5_signature_policy__paths__common.go) = eaa0f35f2605db3403880b65ddffd19c0ec5c6e0
