@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5466 2024/09/02 16:56:41 maya Exp $
+$NetBSD: CHANGES-2024,v 1.5467 2024/09/02 17:05:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8426,3 +8426,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/oh-my-posh to 23.10.1 [pin 2024-09-02]
 	Added audio/rnnoise version 0.2 [nia 2024-09-02]
 	Added net/tektoncd-cli version 0.37.0 [maya 2024-09-02]
+	Updated devel/libffcall to 2.5 [wiz 2024-09-02]
