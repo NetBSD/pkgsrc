@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/02 16:04:24 nia Exp $
+include/rnnoise.h
+lib/librnnoise.la
+lib/pkgconfig/rnnoise.pc
+share/doc/rnnoise/AUTHORS
+share/doc/rnnoise/COPYING
+share/doc/rnnoise/README
