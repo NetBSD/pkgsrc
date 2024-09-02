@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.702 2024/05/16 10:24:46 wiz Exp $
+# $NetBSD: Makefile,v 1.703 2024/09/02 16:04:24 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -400,6 +400,7 @@ SUBDIR+=	quodlibet
 SUBDIR+=	rexima
 SUBDIR+=	rhythmbox
 SUBDIR+=	rip
+SUBDIR+=	rnnoise
 SUBDIR+=	rosegarden
 SUBDIR+=	rsynth
 SUBDIR+=	rtunes

@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2024/09/02 16:04:24 nia Exp $
+
+BLAKE2s (rnnoise-0.2/rnnoise.tar.gz) = bc32aeda68de39341ffba86a2920e01f20a3d10baae82362e71ebff20b93865e
+SHA512 (rnnoise-0.2/rnnoise.tar.gz) = 930aa892299edbc1d512803df6b845ea6164eb498cacdab9970e5ae799bc6cf3c8c94d2b9576955fb9a2d8aa13a6d255e58fb99d0367a0d0ef842a1cb938e674
+Size (rnnoise-0.2/rnnoise.tar.gz) = 91370 bytes
+BLAKE2s (rnnoise-0.2/rnnoise_data-0b50c45.tar.gz) = fc810e19085f22052cefda7c12be25bc35de257c4d578af44cc3652ba7ee6ccf
+SHA512 (rnnoise-0.2/rnnoise_data-0b50c45.tar.gz) = c15fef7c88d86264a29a3dab14d94bde769da68f255d131d135f6a40d94037b1ffe521f9e0a26339114750dbdd7cf774c3185ba40279c74200fb32732f57db8b
+Size (rnnoise-0.2/rnnoise_data-0b50c45.tar.gz) = 22270507 bytes
+SHA1 (patch-src_common.h) = 4927f49e3366d77580fab3d377128481bb2107ed
+SHA1 (patch-src_vec.h) = 596dbe10d2d896faee574ca414354ea706f04be4
+SHA1 (patch-src_vec__avx.h) = f969a53582e1c08ae166ddf430db273c4f0d6c96
+SHA1 (patch-src_vec__neon.h) = df0c026f889772db389d059b714f67c01558ee78
+SHA1 (patch-src_x86_x86cpu.h) = 4d88011b34d87bbd341993de59c8c0690fe3e215
