@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/08/14 19:02:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2024/09/02 00:51:42 schmonz Exp $
 
-DISTNAME=		swagger-codegen-cli-3.0.61
+DISTNAME=		swagger-codegen-cli-3.0.62
 PKGNAME=		${DISTNAME:S/-cli//}
 CATEGORIES=		devel
 MASTER_SITES=		https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/${PKGVERSION_NOREV}/
