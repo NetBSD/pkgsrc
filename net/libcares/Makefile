@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.46 2024/08/25 06:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/09/02 20:50:42 adam Exp $
 
-DISTNAME=	c-ares-1.28.1
+DISTNAME=	c-ares-1.33.1
 PKGNAME=	${DISTNAME:S/c-/libc/1}
-PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	https://c-ares.haxx.se/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=c-ares/}
+GITHUB_PROJECT=	c-ares
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://c-ares.haxx.se/
