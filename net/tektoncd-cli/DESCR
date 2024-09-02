@@ -1,0 +1,4 @@
+The _Tekton Pipelines CLI_ project provides a command-line interface
+(CLI) for interacting with [Tekton](https://tekton.dev/), an
+open-source framework for Continuous Integration and Delivery (CI/CD)
+systems.
