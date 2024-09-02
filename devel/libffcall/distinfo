@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:19 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/09/02 17:05:03 wiz Exp $
 
-BLAKE2s (libffcall-2.4.tar.gz) = 512dd2f5f06da40265dda83407e60f8ba206faead8679ff3ed9657230b8d1b68
-SHA512 (libffcall-2.4.tar.gz) = c9451662764a888e3be21499c29673bfb0e1df4915814da3506db5d395a2b00ea2f0c08d1c9dffebf030179f9347794876ec6ec9e6710b4fc70fd760960335e6
-Size (libffcall-2.4.tar.gz) = 1253767 bytes
-SHA1 (patch-common_asm-x86__64.h) = cc359d8961e64061883e087ce678ff1714d59147
+BLAKE2s (libffcall-2.5.tar.gz) = af1369a9909c0e5ea695251cc17fc81c824b1a4e38032433d120636afce75377
+SHA512 (libffcall-2.5.tar.gz) = 5e5b1c34b9e66bde00e1deea464099ef09e439070e8180c04f2520442933e369e76632346ae59a5720356128787e88255bd75764736ac9b5334a592eb6cf5878
+Size (libffcall-2.5.tar.gz) = 1451999 bytes
