@@ -1,0 +1,5 @@
+skopeo is a command line utility that performs various operations
+on container images and image repositories.  It does not require
+the user to be running as root to do most operations or a running
+daemon.  It can work with OCI images as well as the original Docker
+v2 images.
