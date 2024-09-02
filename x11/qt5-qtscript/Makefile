@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2024/05/29 16:35:12 adam Exp $
+# $NetBSD: Makefile,v 1.95 2024/09/02 20:53:00 adam Exp $
 
 DISTNAME=	qtscript-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtscript-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	Qt5 module for script
 
 BUILD_TARGET=		sub-src
@@ -10,6 +9,10 @@ MAKE_ENV+=		QTDIR=${QTDIR}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 INSTALLATION_DIRS+=	lib/pkgconfig
+
+# JavaScriptCore uses std::auto_ptr which has been removed in C++17.
+USE_CXX_FEATURES=	c c++11
+FORCE_CXX_STD=		# empty
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 

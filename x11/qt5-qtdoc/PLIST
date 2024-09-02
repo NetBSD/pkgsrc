@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/04/12 19:24:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/09/02 20:52:58 adam Exp $
 qt5/doc/qtcmake.qch
 qt5/doc/qtcmake/cmake-command-reference.html
 qt5/doc/qtcmake/cmake-get-started.html
@@ -75,6 +75,8 @@ qt5/doc/qtdoc/examples-xml.html
 qt5/doc/qtdoc/exceptionsafety.html
 qt5/doc/qtdoc/fdl.html
 qt5/doc/qtdoc/functions.html
+qt5/doc/qtdoc/get-and-install-qt-cli.html
+qt5/doc/qtdoc/get-and-install-qt.html
 qt5/doc/qtdoc/gettingstarted.html
 qt5/doc/qtdoc/gpl.html
 qt5/doc/qtdoc/groups.html
@@ -125,6 +127,7 @@ qt5/doc/qtdoc/images/kernel-settings.png
 qt5/doc/qtdoc/images/layout-examples.png
 qt5/doc/qtdoc/images/logo.png
 qt5/doc/qtdoc/images/mainscreen.png
+qt5/doc/qtdoc/images/maintenancetool.png
 qt5/doc/qtdoc/images/mob-idle.png
 qt5/doc/qtdoc/images/ok.png
 qt5/doc/qtdoc/images/open-project.png
@@ -410,6 +413,7 @@ qt5/doc/qtdoc/qt-embedded-fonts.html
 qt5/doc/qtdoc/qt-embedded-kmap2qmap.html
 qt5/doc/qtdoc/qt-embedded-makeqpf.html
 qt5/doc/qtdoc/qt-gui-concepts.html
+qt5/doc/qtdoc/qt-online-installation.html
 qt5/doc/qtdoc/qt5-intro.html
 qt5/doc/qtdoc/qtconcurrent-mtexamples.html
 qt5/doc/qtdoc/qtconcurrentexamples.html
