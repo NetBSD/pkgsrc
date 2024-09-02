@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4338 2024/08/20 15:29:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4339 2024/09/02 06:14:22 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -3503,6 +3503,7 @@ SUBDIR+=	sdl12-compat
 SUBDIR+=	sds
 SUBDIR+=	semantic
 SUBDIR+=	semi
+SUBDIR+=	serie
 SUBDIR+=	sfsexp
 SUBDIR+=	sgb
 SUBDIR+=	sharness
