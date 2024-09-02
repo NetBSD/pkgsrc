@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5459 2024/09/02 01:01:16 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.5460 2024/09/02 04:59:12 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8418,3 +8418,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/swagger-codegen to 3.0.62 [schmonz 2024-09-02]
 	Updated misc/exercism to 3.5.1 [schmonz 2024-09-02]
 	Updated shells/sheldon to 0.8.0 [schmonz 2024-09-02]
+	Updated audio/fasttracker2 to 1.85 [fox 2024-09-02]
