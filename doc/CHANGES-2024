@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5462 2024/09/02 06:52:13 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5463 2024/09/02 07:59:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8421,3 +8421,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/fasttracker2 to 1.85 [fox 2024-09-02]
 	Added devel/serie version 0.2.0 [pin 2024-09-02]
 	Updated sysutils/xcp to 0.21.3 [pin 2024-09-02]
+	Updated www/py-yarl to 1.9.7 [adam 2024-09-02]
+	Updated devel/py-pylint to 3.2.7 [adam 2024-09-02]
