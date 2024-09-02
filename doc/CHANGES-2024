@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5468 2024/09/02 17:14:08 maya Exp $
+$NetBSD: CHANGES-2024,v 1.5469 2024/09/02 17:15:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8428,3 +8428,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added net/tektoncd-cli version 0.37.0 [maya 2024-09-02]
 	Updated devel/libffcall to 2.5 [wiz 2024-09-02]
 	Added net/grpc-go version 1.66.0 [maya 2024-09-02]
+	Updated editors/mg to 20240709 [gutteridge 2024-09-02]
