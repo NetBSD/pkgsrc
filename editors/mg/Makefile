@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/05/06 08:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2024/09/02 17:02:58 gutteridge Exp $
 
 DISTNAME=	mg-20230501
 PKGREVISION=	2
@@ -10,6 +10,7 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://github.com/hboetes/mg
 COMMENT=	Small, fast, public domain EMACS style editor
+LICENSE=	public-domain
 
 #FAKE_NCURSES=	yes
 USE_TOOLS+=	install gmake pkg-config
