@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24797 2024/09/01 13:33:57 gdt Exp $
+$NetBSD: TODO,v 1.24798 2024/09/02 07:59:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1148,7 +1148,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-postgresql-5.1.2
 	o py-protobuf-5.28.0
 	o py-pydantic-core-2.23.1
-	o py-pylint-3.2.7
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
 	o py-ruff-0.6.3
