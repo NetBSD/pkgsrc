@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/02/19 06:01:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/02 21:04:34 adam Exp $
 
-DISTNAME=	urwidgets-0.2.0
+DISTNAME=	urwidgets-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwidgets/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
