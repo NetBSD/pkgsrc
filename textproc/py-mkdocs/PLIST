@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/05/27 08:09:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/02 21:01:59 adam Exp $
 bin/mkdocs-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -145,6 +145,7 @@ ${PYSITELIB}/mkdocs/themes/mkdocs/locales/id/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/it/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/ja/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/nb/LC_MESSAGES/messages.mo
+${PYSITELIB}/mkdocs/themes/mkdocs/locales/nl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/nn/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/pl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/mkdocs/locales/pt_BR/LC_MESSAGES/messages.mo
@@ -204,6 +205,7 @@ ${PYSITELIB}/mkdocs/themes/readthedocs/locales/fr/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/id/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/it/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/ja/LC_MESSAGES/messages.mo
+${PYSITELIB}/mkdocs/themes/readthedocs/locales/nl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/pl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/pt_BR/LC_MESSAGES/messages.mo
 ${PYSITELIB}/mkdocs/themes/readthedocs/locales/ru/LC_MESSAGES/messages.mo
