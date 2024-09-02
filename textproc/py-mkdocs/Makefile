@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/06/25 06:15:04 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/09/02 21:01:59 adam Exp $
 
-DISTNAME=	mkdocs-1.6.0
+DISTNAME=	mkdocs-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mkdocs/}
@@ -26,8 +26,6 @@ DEPENDS+=	${PYPKGPREFIX}-pyyaml_env_tag>=0.1:../../textproc/py-pyyaml_env_tag
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
