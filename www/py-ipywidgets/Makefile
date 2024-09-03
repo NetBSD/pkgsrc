@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/07/20 12:58:49 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/09/03 13:12:57 adam Exp $
 
-DISTNAME=	ipywidgets-8.1.3
+DISTNAME=	ipywidgets-8.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipywidgets/}
@@ -14,9 +14,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.3:../../net/py-comm
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.1.0:../../devel/py-ipython
-DEPENDS+=	${PYPKGPREFIX}-jupyterlab-widgets>=3.0.11:../../www/py-jupyterlab-widgets
+DEPENDS+=	${PYPKGPREFIX}-jupyterlab-widgets>=3.0.12:../../www/py-jupyterlab-widgets
 DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.3.1:../../devel/py-traitlets
-DEPENDS+=	${PYPKGPREFIX}-widgetsnbextension>=4.0.11:../../www/py-widgetsnbextension
+DEPENDS+=	${PYPKGPREFIX}-widgetsnbextension>=4.0.12:../../www/py-widgetsnbextension
 TEST_DEPENDS+=	${PYPKGPREFIX}-ipykernel-[0-9]*:../../devel/py-ipykernel
 TEST_DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
