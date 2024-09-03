@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/08/07 09:02:04 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/09/03 05:10:25 adam Exp $
 
-DISTNAME=	rapidfuzz-3.9.6
+DISTNAME=	rapidfuzz-3.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
@@ -17,7 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2
