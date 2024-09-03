@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/08/03 15:05:23 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/03 09:22:19 fox Exp $
 
-DISTNAME=	pfetch-1.3.0
+DISTNAME=	pfetch-1.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Un1q32/}
 
