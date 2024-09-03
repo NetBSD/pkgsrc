@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.253 2024/08/26 20:13:42 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.254 2024/09/03 18:33:51 morr Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26065,3 +26065,4 @@ python311-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 python312-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 apr<1.7.5	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-49582
 vim<9.1.0697	heap-buffer-overflow	https://github.com/vim/vim/security/advisories/GHSA-4ghr-c62x-cqfh
+vim<9.1.0707	heap-buffer-overflow	https://github.com/vim/vim/security/advisories/GHSA-wxf9-c5gx-qrwr
