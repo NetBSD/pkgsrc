@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.44 2024/08/21 21:10:34 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.45 2024/09/03 17:46:23 abs Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -38,7 +38,7 @@ _SYS_VARS.mysql=	MYSQL_VERSION MYSQL_VERSION_REQD MYSQL_VERSIONS_ALL
 #
 # Set variables for all possible MySQL variants
 #
-MARIADB_VERSIONS_ALL+=		mariadb1011 mariadb106 mariadb105
+MARIADB_VERSIONS_ALL+=		mariadb114 mariadb1011 mariadb106 mariadb105
 
 MYSQL_VERSIONS_ALL=		80
 MYSQL_VERSIONS_ALL+=		${MARIADB_VERSIONS_ALL}
