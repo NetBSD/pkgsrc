@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/07/20 19:30:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/09/03 13:15:27 adam Exp $
 bin/jupyter-notebook-${PYVERSSUFFIX}
 etc/jupyter/jupyter_server_config.d/notebook.json
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -19,6 +19,7 @@ ${PYSITELIB}/notebook/app.py
 ${PYSITELIB}/notebook/app.pyc
 ${PYSITELIB}/notebook/app.pyo
 ${PYSITELIB}/notebook/custom/custom.css
+${PYSITELIB}/notebook/static/1053.bundle.js
 ${PYSITELIB}/notebook/static/1088.bundle.js
 ${PYSITELIB}/notebook/static/1091.bundle.js
 ${PYSITELIB}/notebook/static/1122.bundle.js
@@ -90,7 +91,6 @@ ${PYSITELIB}/notebook/static/2682.bundle.js
 ${PYSITELIB}/notebook/static/2692.bundle.js
 ${PYSITELIB}/notebook/static/270.bundle.js
 ${PYSITELIB}/notebook/static/2702.bundle.js
-${PYSITELIB}/notebook/static/2756.bundle.js
 ${PYSITELIB}/notebook/static/28.bundle.js
 ${PYSITELIB}/notebook/static/2813.bundle.js
 ${PYSITELIB}/notebook/static/2866.bundle.js
@@ -224,7 +224,6 @@ ${PYSITELIB}/notebook/static/5996.bundle.js
 ${PYSITELIB}/notebook/static/5cda41563a095bd70c78.woff
 ${PYSITELIB}/notebook/static/6017.bundle.js
 ${PYSITELIB}/notebook/static/6061.bundle.js
-${PYSITELIB}/notebook/static/6078.bundle.js
 ${PYSITELIB}/notebook/static/6139.bundle.js
 ${PYSITELIB}/notebook/static/62.bundle.js
 ${PYSITELIB}/notebook/static/6271.bundle.js
@@ -234,6 +233,7 @@ ${PYSITELIB}/notebook/static/6345.bundle.js
 ${PYSITELIB}/notebook/static/6417.bundle.js
 ${PYSITELIB}/notebook/static/647.bundle.js
 ${PYSITELIB}/notebook/static/6521.bundle.js
+${PYSITELIB}/notebook/static/6593.bundle.js
 ${PYSITELIB}/notebook/static/6604.bundle.js
 ${PYSITELIB}/notebook/static/661.bundle.js
 ${PYSITELIB}/notebook/static/6621.bundle.js
@@ -434,10 +434,10 @@ share/jupyter/labextensions/@jupyter-notebook/lab-extension/package.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/interface-switcher.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/launch-tree.json
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/schemas/@jupyter-notebook/lab-extension/package.json.orig
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/568.9cd06af416befd593828.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/678.af323c3ff765541c6aa4.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/928.6d26fccf0ddab13bf5bb.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/42.33f638f0a4239bed9676.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/568.3dd58d88e32a98358776.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/928.bf5955f09ff1e05edfbb.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/93.eae3497dd223d842d198.js
-share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.d04be841d48ffe2a9bdd.js
+share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/remoteEntry.04dfa589925e7e7c6a3d.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/style.js
 share/jupyter/labextensions/@jupyter-notebook/lab-extension/static/third-party-licenses.json
