@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.71 2024/08/26 19:26:31 morr Exp $
+@comment $NetBSD: PLIST,v 1.72 2024/09/03 18:31:21 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -599,6 +599,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/nim.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nix.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nroff.vim
 share/vim/${VIM_SUBDIR}/ftplugin/nsis.vim
+share/vim/${VIM_SUBDIR}/ftplugin/nu.vim
 share/vim/${VIM_SUBDIR}/ftplugin/objc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/objcpp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/objdump.vim
