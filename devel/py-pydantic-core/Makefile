@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/08/22 13:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/03 08:35:34 adam Exp $
 
-DISTNAME=	pydantic_core-2.23.0
+DISTNAME=	pydantic_core-2.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
 
@@ -17,8 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.1.post0:../../devel/py-dirty-equ
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.92.9:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 2.23.0
 # 4467 passed, 62 skipped, 2 xfailed, 1 error
