@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/05/24 08:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.67 2024/09/04 07:14:12 adam Exp $
 
-DISTNAME=	awscli-1.32.112
+DISTNAME=	awscli-1.34.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-botocore>=1.34.83:../../net/py-botocore
+DEPENDS+=	${PYPKGPREFIX}-botocore>=1.35.11:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-rsa>=3.1.2:../../security/py-rsa
@@ -22,8 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
