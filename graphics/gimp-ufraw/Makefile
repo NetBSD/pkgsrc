@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2024/05/29 16:32:53 adam Exp $
+# $NetBSD: Makefile,v 1.146 2024/09/04 23:39:24 gdt Exp $
 
 DISTNAME=		ufraw-0.22
 PKGNAME=		gimp-${DISTNAME}
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 # There have been issues with unstable OPENMP APIs.  Therefore,
 # updates must be tested on NetBSD 9 with gcc.
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://ufraw.sourceforge.net/
+HOMEPAGE=		https://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
 
 LICENSE=		gnu-gpl-v2
