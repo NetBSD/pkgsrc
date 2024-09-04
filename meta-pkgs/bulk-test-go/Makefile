@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/08/31 15:27:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/04 09:01:59 jperkin Exp $
 
 DISTNAME=	bulk-test-go-20240831
 CATEGORIES=	meta-pkgs
@@ -58,7 +58,7 @@ DEPENDS+=	golint-[0-9]*:../../devel/golint
 DEPENDS+=	gomodifytags-[0-9]*:../../devel/gomodifytags
 DEPENDS+=	gopls-[0-9]*:../../devel/gopls
 DEPENDS+=	goredo-[0-9]*:../../devel/goredo
-DEPENDS+=	gotags-[0-9]*:../../devel/gotags
+DEPENDS+=	go-gotags-[0-9]*:../../devel/gotags
 DEPENDS+=	gotelemetry-[0-9]*:../../devel/gotelemetry
 DEPENDS+=	gotests-[0-9]*:../../devel/gotests
 DEPENDS+=	govulncheck-[0-9]*:../../devel/govulncheck
@@ -71,7 +71,7 @@ DEPENDS+=	packr-[0-9]*:../../devel/packr
 DEPENDS+=	protobuf-go-[0-9]*:../../devel/protobuf-go
 DEPENDS+=	reftools-[0-9]*:../../devel/reftools
 DEPENDS+=	regal-[0-9]*:../../devel/regal
-DEPENDS+=	revive-[0-9]*:../../devel/revive
+DEPENDS+=	go-revive-[0-9]*:../../devel/revive
 DEPENDS+=	shfmt-[0-9]*:../../devel/shfmt
 DEPENDS+=	syft-[0-9]*:../../devel/syft
 DEPENDS+=	micro-[0-9]*:../../editors/micro
