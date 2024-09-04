@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/01/14 20:08:31 pin Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/04 09:30:18 pin Exp $
 
-DISTNAME=	monolith-2.8.1
+DISTNAME=	monolith-2.8.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Y2Z/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,8 @@ LICENSE=	cc0-1.0-universal
 
 .include "cargo-depends.mk"
 
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	pkg-config perl gmake
 
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
