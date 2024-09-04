@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/08/11 23:16:41 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2024/09/04 23:38:30 gdt Exp $
 
 VERSION_BASE=	1.19.0
 VERSION_RC=
@@ -7,7 +7,7 @@ CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://tahoe-lafs.org/
+HOMEPAGE=	https://tahoe-lafs.org/trac/tahoe-lafs
 COMMENT=	Distributed fault-tolerant least-authority filesystem
 LICENSE=	gnu-gpl-v2
 
