@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:41:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/04 23:33:34 gdt Exp $
 
 DISTNAME=	Number-Bytes-Human-0.11
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FE/FERREIRA/}
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://metacpan.org/pod/Bytes::Human
+HOMEPAGE=	https://metacpan.org/dist/Number-Bytes-Human
 COMMENT=	Convert byte count to human readable format
 LICENSE=	${PERL5_LICENSE}
 
