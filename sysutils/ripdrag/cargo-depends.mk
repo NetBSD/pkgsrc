@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/07/17 12:06:41 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/09/04 09:29:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.13
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.6
