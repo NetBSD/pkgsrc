@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/09/30 08:25:37 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2024/09/04 12:34:48 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.kermit
 PKG_SUPPORTED_OPTIONS=		kermit-suid-uucp ssl kerberos
@@ -33,6 +33,7 @@ LIBS+=		-L${BUILDLINK_PREFIX.dante}/lib -lsocks
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 BUILD_TARGET_OPTIONS+=	+krb5
+# \todo Change to krb5.buildlink3.mk (allowing heimdal), or document why not.
 .include "../../security/mit-krb5/buildlink3.mk"
 K5INC=		-I${WRKDIR}/.buildlink/include
 K5LIB=		-L${WRKDIR}/.buildlink/lib ${COMPILER_RPATH_FLAG}${WRKDIR}/.buildlink/lib
