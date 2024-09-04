@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/29 16:31:39 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/04 09:31:47 pin Exp $
 
-DISTNAME=	diesel-cli-2.1.5
-PKGREVISION=	1
+DISTNAME=	diesel-cli-2.2.4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diesel-rs/}
 GITHUB_PROJECT=	diesel
@@ -21,6 +20,7 @@ DIESEL_BINARY=		${WRKSRC}/target/release/diesel
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.78.0
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.sqlite3}/lib
