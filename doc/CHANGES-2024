@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5485 2024/09/04 09:32:14 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5486 2024/09/04 09:36:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8460,3 +8460,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/ripdrag to 0.4.10 [pin 2024-09-04]
 	Updated www/monolith to 2.8.2 [pin 2024-09-04]
 	Updated databases/diesel-cli to 2.2.4 [pin 2024-09-04]
+	Updated www/py-test-django to 4.9.0 [adam 2024-09-04]
+	Updated net/py-txtorcon to 24.8.0 [adam 2024-09-04]
