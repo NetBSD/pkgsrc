@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2024/08/16 11:58:38 gdt Exp $
+# $NetBSD: Makefile.common,v 1.30 2024/09/04 19:20:24 gdt Exp $
 #
 # used by geography/gdal-lib/Makefile
 # used by geography/py-gdal/Makefile
@@ -15,7 +15,7 @@ MASTER_SITES=	https://download.osgeo.org/gdal/${VERSION_BASE}/
 
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	brook@nmsu.edu
-HOMEPAGE=	http://gdal.org/
+HOMEPAGE=	https://gdal.org/
 LICENSE=	mit
 
 WRKSRC=		${WRKDIR}/gdal-${VERSION_BASE}
