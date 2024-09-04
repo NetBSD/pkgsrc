@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2024/05/24 08:40:14 adam Exp $
+# $NetBSD: Makefile,v 1.69 2024/09/04 07:09:16 adam Exp $
 
-DISTNAME=	botocore-1.34.112
+DISTNAME=	botocore-1.35.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/botocore/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.5.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
