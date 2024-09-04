@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2024/06/11 12:02:28 gdt Exp $
+$NetBSD: distinfo,v 1.38 2024/09/04 17:43:49 gdt Exp $
 
-BLAKE2s (chirp-20240606.tar.gz) = 5a7527d2519181560fa542c32c14f3f9276655bb2fd342ccac6740eb31dc9997
-SHA512 (chirp-20240606.tar.gz) = 3f89435a33868958b95e95281a6c11b2e483c89b206118aa9366884e3316fa760dbfeaa3545224be06c26bc91eb3fcad28a1d94d2128dd99a8cccdb97c21b740
-Size (chirp-20240606.tar.gz) = 2093782 bytes
+BLAKE2s (chirp-20240901.tar.gz) = d4b3c6073b2d64ee3db5ea3b1930497e65b3b4c505249c9f8abb1b1f38a7daae
+SHA512 (chirp-20240901.tar.gz) = bc2139f26ee8d031dcf1a1f5fe62ff90f98d97c22a30d87c79e7b84bb36a803d6f16d960451ec2ca8e8e50493a1f9c648652000dcd1bdd694984fb1a281f658c
+Size (chirp-20240901.tar.gz) = 2138324 bytes
 SHA1 (patch-chirp_platform.py) = ba7e65bb2f797f1ed9a6dc767ab02cde8b6ed61d

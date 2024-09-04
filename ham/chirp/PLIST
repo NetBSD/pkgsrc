@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/06/11 12:02:28 gdt Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/09/04 17:43:49 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -338,6 +338,9 @@ ${PYSITELIB}/chirp/drivers/kguv980p.pyo
 ${PYSITELIB}/chirp/drivers/kguv9dplus.py
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyc
 ${PYSITELIB}/chirp/drivers/kguv9dplus.pyo
+${PYSITELIB}/chirp/drivers/ksun_m6.py
+${PYSITELIB}/chirp/drivers/ksun_m6.pyc
+${PYSITELIB}/chirp/drivers/ksun_m6.pyo
 ${PYSITELIB}/chirp/drivers/kyd.py
 ${PYSITELIB}/chirp/drivers/kyd.pyc
 ${PYSITELIB}/chirp/drivers/kyd.pyo
@@ -563,6 +566,7 @@ ${PYSITELIB}/chirp/errors.pyo
 ${PYSITELIB}/chirp/import_logic.py
 ${PYSITELIB}/chirp/import_logic.pyc
 ${PYSITELIB}/chirp/import_logic.pyo
+${PYSITELIB}/chirp/locale/bg_BG/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/de/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/el/LC_MESSAGES/CHIRP.mo
 ${PYSITELIB}/chirp/locale/en_US/LC_MESSAGES/CHIRP.mo
@@ -599,8 +603,10 @@ ${PYSITELIB}/chirp/share/chirp.ico
 ${PYSITELIB}/chirp/share/chirp.png
 ${PYSITELIB}/chirp/share/chirp.svg
 ${PYSITELIB}/chirp/share/chirpw.1
+${PYSITELIB}/chirp/share/com.chirpmyradio.CHIRP.metainfo.xml
 ${PYSITELIB}/chirp/share/plus-icon.png
 ${PYSITELIB}/chirp/share/welcome_screen.png
+${PYSITELIB}/chirp/share/welcome_screen_bg.png
 ${PYSITELIB}/chirp/share/welcome_screen_es.png
 ${PYSITELIB}/chirp/share/welcome_screen_fr.png
 ${PYSITELIB}/chirp/share/welcome_screen_it.png
@@ -653,6 +659,9 @@ ${PYSITELIB}/chirp/wxui/__main__.pyo
 ${PYSITELIB}/chirp/wxui/bankedit.py
 ${PYSITELIB}/chirp/wxui/bankedit.pyc
 ${PYSITELIB}/chirp/wxui/bankedit.pyo
+${PYSITELIB}/chirp/wxui/bugreport.py
+${PYSITELIB}/chirp/wxui/bugreport.pyc
+${PYSITELIB}/chirp/wxui/bugreport.pyo
 ${PYSITELIB}/chirp/wxui/clone.py
 ${PYSITELIB}/chirp/wxui/clone.pyc
 ${PYSITELIB}/chirp/wxui/clone.pyo
