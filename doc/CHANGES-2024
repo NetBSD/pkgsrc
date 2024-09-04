@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5479 2024/09/04 05:04:11 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5480 2024/09/04 07:14:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8450,3 +8450,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/vim-share to 9.1.0709 [morr 2024-09-03]
 	Updated security/py-cryptography to 43.0.1 [adam 2024-09-04]
 	Updated security/py-cryptography_vectors to 43.0.1 [adam 2024-09-04]
+	Updated net/py-botocore to 1.35.11 [adam 2024-09-04]
+	Updated net/py-s3transfer to 0.10.2 [adam 2024-09-04]
+	Updated net/py-boto3 to 1.35.11 [adam 2024-09-04]
+	Updated net/py-awscli to 1.34.11 [adam 2024-09-04]
