@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/09/04 17:43:49 gdt Exp $
+# $NetBSD: Makefile,v 1.66 2024/09/04 19:19:10 gdt Exp $
 
 VERSION=	20240901
 DISTNAME=	chirp-${VERSION}
@@ -20,7 +20,7 @@ MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
 
 MAINTAINER=	gdt@NetBSD.org
 #MAINTAINER+=	dbj@NetBSD.org
-HOMEPAGE=	https://chirp.danplanet.com/
+HOMEPAGE=	https://chirpmyradio.com/projects/chirp/wiki/Home
 COMMENT=	Tool for programming Amateur Radio HTs
 LICENSE=	gnu-gpl-v3
 
