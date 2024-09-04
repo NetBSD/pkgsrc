@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/04/12 11:11:51 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/09/04 07:10:54 adam Exp $
 
-DISTNAME=	s3transfer-0.10.1
+DISTNAME=	s3transfer-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/s3transfer/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.33.2:../../net/py-botocore
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
