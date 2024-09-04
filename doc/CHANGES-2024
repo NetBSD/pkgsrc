@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5482 2024/09/04 09:28:19 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5483 2024/09/04 09:29:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8457,3 +8457,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-validators to 0.34.0 [adam 2024-09-04]
 	Updated net/py-unearth to 0.17.2 [adam 2024-09-04]
 	Updated devel/serie to 0.3.0 [pin 2024-09-04]
+	Updated sysutils/ripdrag to 0.4.10 [pin 2024-09-04]
