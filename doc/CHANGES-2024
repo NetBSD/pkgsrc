@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5483 2024/09/04 09:29:38 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5484 2024/09/04 09:30:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8458,3 +8458,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-unearth to 0.17.2 [adam 2024-09-04]
 	Updated devel/serie to 0.3.0 [pin 2024-09-04]
 	Updated sysutils/ripdrag to 0.4.10 [pin 2024-09-04]
+	Updated www/monolith to 2.8.2 [pin 2024-09-04]
