@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2024/07/21 09:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2024/09/04 05:03:35 adam Exp $
 
-DISTNAME=	cryptography_vectors-43.0.0
+DISTNAME=	cryptography_vectors-43.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography_vectors/}
@@ -13,8 +13,6 @@ LICENSE=	apache-2.0 OR modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
