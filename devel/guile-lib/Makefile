@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2022/11/12 09:10:22 nikita Exp $
+# $NetBSD: Makefile,v 1.34 2024/09/04 17:50:57 gdt Exp $
 
-DISTNAME=	guile-lib-0.2.7
-PKGREVISION=	1
+DISTNAME=	guile-lib-0.2.8.1
 CATEGORIES=	devel
 MASTER_SITES=	https://download.savannah.gnu.org/releases/guile-lib/
 # http://download.gna.org/guile-lib/
@@ -9,13 +8,14 @@ MASTER_SITES=	https://download.savannah.gnu.org/releases/guile-lib/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://www.nongnu.org/guile-lib/
 COMMENT=	Library functions for Guile, implemented in Scheme
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-guile-site=yes
 
 USE_TOOLS+=	gmake makeinfo pkg-config
-TEXINFO_REQD=	4.2
+TEXINFO_REQD+=	4.2
 INFO_FILES=	yes
 TEST_TARGET=	check
 
