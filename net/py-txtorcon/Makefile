@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/01/20 08:51:16 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/09/04 09:36:39 adam Exp $
 
-DISTNAME=	txtorcon-23.11.0
+DISTNAME=	txtorcon-24.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/txtorcon/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 USE_LANGUAGES=	# none
 
 CHECK_INTERPRETER_SKIP+=	share/txtorcon/examples/*
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
