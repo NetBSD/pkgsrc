@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/07/14 13:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/09/04 17:59:17 gdt Exp $
 
 DISTNAME=	scons-4.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 EXTRACT_USING=	bsdtar
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
