@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2024/03/14 09:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/09/04 13:08:26 adam Exp $
 
-DISTNAME=	expat-2.6.2
+DISTNAME=	expat-2.6.3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libexpat/}
 GITHUB_PROJECT=	libexpat
@@ -15,11 +15,11 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash:test
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-docbook
 CONFIGURE_ARGS+=	--without-examples
 CONFIGURE_ARGS+=	--without-tests
 # workaround suggested by upstream; xmlwf.1 is in tarball, so docbook not needed
 CONFIGURE_ENV+=		DOCBOOK_TO_MAN=false
-CONFIGURE_ARGS+=	--without-docbook
 
 TEST_TARGET=	check
 REPLACE_BASH=	test-driver-wrapper.sh
