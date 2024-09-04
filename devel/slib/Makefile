@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/02/13 18:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/09/04 23:36:52 gdt Exp $
 
 DISTNAME=	slib-3c1
 #
@@ -13,7 +13,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://groups.csail.mit.edu/mac/ftpdir/scm/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://people.csail.mit.edu/jaffer/SLIB.html
+HOMEPAGE=	https://people.csail.mit.edu/jaffer/SLIB.html
 COMMENT=	Portable Scheme library of compatibility and utility functions
 
 #LICENSE=	TODO: many licenses, all either PD or acceptable, in theory
