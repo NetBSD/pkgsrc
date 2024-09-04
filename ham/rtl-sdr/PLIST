@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/02 22:11:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/04 18:05:41 gdt Exp $
 bin/rtl_adsb
 bin/rtl_biast
 bin/rtl_eeprom
@@ -15,8 +15,8 @@ lib/cmake/rtlsdr/rtlsdrTargets-release.cmake
 lib/cmake/rtlsdr/rtlsdrTargets.cmake
 lib/librtlsdr.a
 lib/librtlsdr.so
-lib/librtlsdr.so.2
-lib/librtlsdr.so.${PKGVERSION}
+lib/librtlsdr.so.0
+lib/librtlsdr.so.2.0.1
 lib/pkgconfig/librtlsdr.pc
 man/man1/rtl_adsb.1
 man/man1/rtl_eeprom.1
