@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2024/08/22 13:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2024/09/04 05:03:35 adam Exp $
 
-DISTNAME=	cryptography-43.0.0
+DISTNAME=	cryptography-43.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
 
@@ -28,8 +27,6 @@ USE_TOOLS+=	pkg-config
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 pre-build:
 	cd ${WRKSRC} && ${LN} -f -s src/rust/.cargo .cargo
