@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5500 2024/09/05 10:41:15 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5501 2024/09/05 10:48:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8479,3 +8479,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/qemu to 9.1.0 [adam 2024-09-05]
 	Updated devel/py-mocket to 3.12.9 [adam 2024-09-05]
 	Updated sysutils/yazi to 0.3.3 [pin 2024-09-05]
+	Added news/lobtui version 0.3 [pin 2024-09-05]
