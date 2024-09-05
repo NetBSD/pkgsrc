@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.348 2024/08/10 07:00:51 adam Exp $
+# $NetBSD: Makefile,v 1.349 2024/09/05 07:40:08 adam Exp $
 
-DISTNAME=	qemu-9.0.2
+DISTNAME=	qemu-9.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -24,7 +24,12 @@ HAS_CONFIGURE=		yes
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39 # py-sphinx
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
+.endif
 
 .include "options.mk"
 
@@ -71,7 +76,6 @@ NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mipsel
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-nios2
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-or1k
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
