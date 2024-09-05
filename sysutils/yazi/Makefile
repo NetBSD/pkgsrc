@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/08/28 06:53:58 pin Exp $
+# $NetBSD: Makefile,v 1.15 2024/09/05 10:40:09 pin Exp $
 
-DISTNAME=	yazi-0.3.2
+DISTNAME=	yazi-0.3.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
