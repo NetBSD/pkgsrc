@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/07/13 15:25:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/05 15:02:42 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -259,6 +259,7 @@ ${RUBY_LIB}/bundler/compact_index_client.rb
 ${RUBY_LIB}/bundler/compact_index_client/cache.rb
 ${RUBY_LIB}/bundler/compact_index_client/cache_file.rb
 ${RUBY_LIB}/bundler/compact_index_client/gem_parser.rb
+${RUBY_LIB}/bundler/compact_index_client/parser.rb
 ${RUBY_LIB}/bundler/compact_index_client/updater.rb
 ${RUBY_LIB}/bundler/constants.rb
 ${RUBY_LIB}/bundler/current_ruby.rb
