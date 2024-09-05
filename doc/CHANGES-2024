@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5497 2024/09/05 01:32:44 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.5498 2024/09/05 07:32:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8475,3 +8475,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-magic-wormhole to 0.15.0 [gdt 2024-09-05]
 	Updated databases/postgresql-postgis2 to 3.4.3 [gdt 2024-09-05]
 	Updated net/qrcp to 0.11.3 [ktnb 2024-09-05]
+	Updated x11/libXi to 1.8.2 [wiz 2024-09-05]
