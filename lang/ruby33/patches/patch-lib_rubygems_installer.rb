@@ -1,10 +1,11 @@
-$NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2024/01/21 08:22:03 taca Exp $
+$NetBSD: patch-lib_rubygems_installer.rb,v 1.2 2024/09/05 15:02:42 taca Exp $
 
 * Add install_root option for pkgsrc's rubygems support.
 * Tweak build_info directory with destdir to store build_args.
+* Fix from "Installer lock file cleanup #7939".
 
---- lib/rubygems/installer.rb.orig	2023-12-25 05:59:38.000000000 +0000
-+++ lib/rubygems/installer.rb
+--- lib/rubygems/installer.rb.orig	2024-09-03 01:09:08.000000000 +0900
++++ lib/rubygems/installer.rb	2024-09-05 23:34:15.179174905 +0900
 @@ -167,6 +167,9 @@ class Gem::Installer
    #                      foo_exec18.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
@@ -15,6 +16,24 @@ $NetBSD: patch-lib_rubygems_installer.rb,v 1.1 2024/01/21 08:22:03 taca Exp $
    # :security_policy:: Use the specified security policy.  See Gem::Security
    # :user_install:: Indicate that the gem should be unpacked into the users
    #                 personal gem directory.
+@@ -538,7 +541,7 @@
+   def generate_bin_script(filename, bindir)
+     bin_script_path = File.join bindir, formatted_program_filename(filename)
+ 
+-    Gem.open_file_with_flock("#{bin_script_path}.lock") do
++    Gem.open_file_with_flock("#{bin_script_path}.lock") do |lock|
+       require "fileutils"
+       FileUtils.rm_f bin_script_path # prior install may have been --no-wrappers
+ 
+@@ -546,6 +549,8 @@
+         file.write app_script_text(filename)
+         file.chmod(options[:prog_mode] || 0o755)
+       end
++    ensure
++      FileUtils.rm_f lock.path
+     end
+ 
+     verbose bin_script_path
 @@ -676,12 +679,20 @@ class Gem::Installer
  
      @build_args = options[:build_args]
