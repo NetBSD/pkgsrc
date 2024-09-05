@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/08/10 13:39:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/09/05 15:11:13 taca Exp $
 share/doc/clamav/html/404.html
 share/doc/clamav/html/FontAwesome/css/font-awesome.css
 share/doc/clamav/html/FontAwesome/fonts/FontAwesome.ttf
@@ -30,6 +30,7 @@ share/doc/clamav/html/faq/faq-cvd.html
 share/doc/clamav/html/faq/faq-eol.html
 share/doc/clamav/html/faq/faq-freshclam.html
 share/doc/clamav/html/faq/faq-ignore.html
+share/doc/clamav/html/faq/faq-malware-fp-reports.html
 share/doc/clamav/html/faq/faq-misc.html
 share/doc/clamav/html/faq/faq-ml.html
 share/doc/clamav/html/faq/faq-pua.html
@@ -57,18 +58,18 @@ share/doc/clamav/html/fonts/open-sans-v17-all-charsets-800italic.woff2
 share/doc/clamav/html/fonts/open-sans-v17-all-charsets-italic.woff2
 share/doc/clamav/html/fonts/open-sans-v17-all-charsets-regular.woff2
 share/doc/clamav/html/fonts/source-code-pro-v11-all-charsets-500.woff2
+share/doc/clamav/html/googled62299e9391332c4.html
 share/doc/clamav/html/highlight.css
 share/doc/clamav/html/highlight.js
 share/doc/clamav/html/images/change-fork-name.png
 share/doc/clamav/html/images/cisco.png
+share/doc/clamav/html/images/clamav-git-workflow.png
 share/doc/clamav/html/images/clone-your-fork.png
 share/doc/clamav/html/images/create-a-fork.png
 share/doc/clamav/html/images/demon.png
 share/doc/clamav/html/images/flamegraph.svg
 share/doc/clamav/html/images/fork-is-behind.png
 share/doc/clamav/html/images/logo.png
-share/doc/clamav/html/images/new-git-workflow.png
-share/doc/clamav/html/images/old-git-workflow.png
 share/doc/clamav/html/index.html
 share/doc/clamav/html/manual/Development.html
 share/doc/clamav/html/manual/Development/Contribute.html
@@ -114,12 +115,14 @@ share/doc/clamav/html/manual/Usage/ReportABug.html
 share/doc/clamav/html/manual/Usage/Scanning.html
 share/doc/clamav/html/manual/Usage/Services.html
 share/doc/clamav/html/manual/Usage/SignatureManagement.html
+share/doc/clamav/html/manual/cisco-talos.gpg
 share/doc/clamav/html/mark.min.js
 share/doc/clamav/html/mode-rust.js
 share/doc/clamav/html/print.html
 share/doc/clamav/html/searcher.js
 share/doc/clamav/html/searchindex.js
 share/doc/clamav/html/searchindex.json
+share/doc/clamav/html/sitemap.xml
 share/doc/clamav/html/theme-dawn.js
 share/doc/clamav/html/theme-tomorrow_night.js
 share/doc/clamav/html/tomorrow-night.css
