@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/08/20 18:12:20 pin Exp $
+$NetBSD: distinfo,v 1.9 2024/09/05 20:46:39 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.28.crate) = c3581af3d474b771792535858a7ec3c79d41e3eca52672ade5e997f9091284b1
 SHA512 (ab_glyph-0.2.28.crate) = ab2e4c2ddbb5a93bc049892e2703086a66eced9bfd267f4ea161ca68b5906d41c1cff1c9d75e4beb8f5cd8674f8e6bcec7eb0278f37285a1beef24015444a3f5
@@ -489,9 +489,10 @@ Size (foreign-types-shared-0.3.1.crate) = 6006 bytes
 BLAKE2s (form_urlencoded-1.2.1.crate) = 9682c681e474ffe84aa961c21cf56d5afe680e43e97824e735546f8383f69e3c
 SHA512 (form_urlencoded-1.2.1.crate) = c65104e2dc08fad572bb31f981700fd43dd29fcff42b01c7ccdbd3d4c23dec12360aed3f1b5fc4766fee386d418a65349b2941b8735f788cb0d35d631a6a8dd1
 Size (form_urlencoded-1.2.1.crate) = 8969 bytes
-BLAKE2s (four-bar-rs-7.0.1.tar.gz) = 83684542e50bc5e17f78bd1dc2122c91b431ecae3cf734809b96f14ccbbc83a5
-SHA512 (four-bar-rs-7.0.1.tar.gz) = c17c57d3e98252afb20badb5113407f625f1b1059e50c9e2ac0a6f35b34c7de6e890cb99a574bac95f1266127589841c158ff26bd3965934b058b5c5446d9153
-Size (four-bar-rs-7.0.1.tar.gz) = 19637280 bytes
+BLAKE2s (four-bar-rs-7.0.1-8f223aac4a07bf0d9cfd2f14e5daff4a1025a609.tar.gz) = 8ead382d3749834ed643af1651b0acdabbb11dcb67a2e9b7ae362e4b37f9ede4
+SHA512 (four-bar-rs-7.0.1-8f223aac4a07bf0d9cfd2f14e5daff4a1025a609.tar.gz) = 90fc372168dc94e26ef10a53901ebba4d629f2b62407bcd91a90ed91db615e0dba6719415a2d7c4026b71709c1b34c5bcbb6aec5ae18204d777a800dc2739f6e
+Size (four-bar-rs-7.0.1-8f223aac4a07bf0d9cfd2f14e5daff4a1025a609.tar.gz) = 19637346 bytes
+SHA1 (patch-four-bar-ui_Cargo.toml) = d47cc2e6788cb0702cfc5f0bc0b6c2369f5ae308
 BLAKE2s (freetype-sys-0.20.1.crate) = 007fa2a06e61ed08ff96a772a9eb589a13a87138ae8031873d929eb0b3f72400
 SHA512 (freetype-sys-0.20.1.crate) = 03b6ad3d9339ecfb75f2b0207281e84325405347d3d6256215db4fc42e4cd5edbf25a6505a12a71d27d43f4ae5f5e35785f7120726232cebbc6738cb94fb0763
 Size (freetype-sys-0.20.1.crate) = 3877697 bytes
