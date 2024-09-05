@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.150 2024/07/11 19:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2024/09/05 00:29:15 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
 MAJOR=		3.4
-DISTNAME=	postgis-${MAJOR}.2
+DISTNAME=	postgis-${MAJOR}.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	8
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -41,7 +40,7 @@ USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
-PGSQL_VERSIONS_ACCEPTED=	15 14 13 12
+PGSQL_VERSIONS_ACCEPTED=	16 15 14 13 12
 
 # This isn't an option, but could be.
 CONFIGURE_ARGS+=	--with-address-standardizer
