@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2024/04/24 07:20:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.90 2024/09/05 07:40:08 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -55,7 +55,6 @@ bin/qemu-system-mips
 bin/qemu-system-mips64
 bin/qemu-system-mips64el
 bin/qemu-system-mipsel
-bin/qemu-system-nios2
 bin/qemu-system-or1k
 bin/qemu-system-ppc
 bin/qemu-system-ppc64
@@ -110,6 +109,7 @@ share/doc/qemu/devel/clocks.html
 share/doc/qemu/devel/code-of-conduct.html
 share/doc/qemu/devel/conflict-resolution.html
 share/doc/qemu/devel/control-flow-integrity.html
+share/doc/qemu/devel/crypto.html
 share/doc/qemu/devel/decodetree.html
 share/doc/qemu/devel/docs.html
 share/doc/qemu/devel/ebpf_rss.html
@@ -122,6 +122,7 @@ share/doc/qemu/devel/index-tcg.html
 share/doc/qemu/devel/index.html
 share/doc/qemu/devel/kconfig.html
 share/doc/qemu/devel/loads-stores.html
+share/doc/qemu/devel/luks-detached-header.html
 share/doc/qemu/devel/maintainers.html
 share/doc/qemu/devel/memory.html
 share/doc/qemu/devel/migration/CPR.html
@@ -133,6 +134,8 @@ share/doc/qemu/devel/migration/index.html
 share/doc/qemu/devel/migration/main.html
 share/doc/qemu/devel/migration/mapped-ram.html
 share/doc/qemu/devel/migration/postcopy.html
+share/doc/qemu/devel/migration/qpl-compression.html
+share/doc/qemu/devel/migration/uadk-compression.html
 share/doc/qemu/devel/migration/vfio.html
 share/doc/qemu/devel/migration/virtio.html
 share/doc/qemu/devel/modules.html
@@ -175,7 +178,10 @@ share/doc/qemu/interop/dbus-vmstate.html
 share/doc/qemu/interop/dbus.html
 share/doc/qemu/interop/index.html
 share/doc/qemu/interop/live-block-operations.html
+share/doc/qemu/interop/nbd.html
+share/doc/qemu/interop/parallels.html
 share/doc/qemu/interop/pr-helper.html
+share/doc/qemu/interop/prl-xml.html
 share/doc/qemu/interop/qemu-ga-ref.html
 share/doc/qemu/interop/qemu-ga.html
 share/doc/qemu/interop/qemu-qmp-ref.html
@@ -211,7 +217,10 @@ share/doc/qemu/specs/ppc-spapr-uv-hcalls.html
 share/doc/qemu/specs/ppc-spapr-xive.html
 share/doc/qemu/specs/ppc-xive.html
 share/doc/qemu/specs/pvpanic.html
+share/doc/qemu/specs/rapl-msr.html
+share/doc/qemu/specs/rocker.html
 share/doc/qemu/specs/sev-guest-firmware.html
+share/doc/qemu/specs/spdm.html
 share/doc/qemu/specs/standard-vga.html
 share/doc/qemu/specs/tpm.html
 share/doc/qemu/specs/virt-ctlr.html
@@ -253,6 +262,7 @@ share/doc/qemu/system/arm/vexpress.html
 share/doc/qemu/system/arm/virt.html
 share/doc/qemu/system/arm/xenpvh.html
 share/doc/qemu/system/arm/xlnx-versal-virt.html
+share/doc/qemu/system/arm/xlnx-zynq.html
 share/doc/qemu/system/arm/xscale.html
 share/doc/qemu/system/authz.html
 share/doc/qemu/system/barrier.html
@@ -353,6 +363,7 @@ share/doc/qemu/tools/qemu-nbd.html
 share/doc/qemu/tools/qemu-pr-helper.html
 share/doc/qemu/tools/qemu-storage-daemon.html
 share/doc/qemu/tools/qemu-trace-stap.html
+share/doc/qemu/tools/qemu-vmsr-helper.html
 share/doc/qemu/tools/virtfs-proxy-helper.html
 share/doc/qemu/user/index.html
 share/doc/qemu/user/main.html
@@ -389,6 +400,8 @@ share/qemu/edk2-i386-code.fd
 share/qemu/edk2-i386-secure-code.fd
 share/qemu/edk2-i386-vars.fd
 share/qemu/edk2-licenses.txt
+share/qemu/edk2-riscv-code.fd
+share/qemu/edk2-riscv-vars.fd
 share/qemu/edk2-x86_64-code.fd
 share/qemu/edk2-x86_64-secure-code.fd
 share/qemu/efi-e1000.rom
