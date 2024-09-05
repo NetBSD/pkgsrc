@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/05 10:46:11 pin Exp $
+bin/lobtui
