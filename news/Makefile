@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/02/19 01:39:29 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2024/09/05 10:47:20 pin Exp $
 #
 
 COMMENT=	Network news
@@ -12,6 +12,7 @@ SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	leafnode
 SUBDIR+=	libcanlock
+SUBDIR+=	lobtui
 SUBDIR+=	moccasin
 SUBDIR+=	multimail
 SUBDIR+=	neix
