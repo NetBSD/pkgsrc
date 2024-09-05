@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2024/03/03 17:00:11 bacon Exp $
+$NetBSD: distinfo,v 1.3 2024/09/05 01:32:14 ktnb Exp $
 
-BLAKE2s (qrcp/0.11.2.tar.gz) = 0fed3802d52b37d854730ab4a894904212dcfa841cfa5544345cc4f4884806d2
-SHA512 (qrcp/0.11.2.tar.gz) = b8611b3b7f3b142e577645fee6ebf4a86ce77870224be232491d87923d3f3c97f03367e9c1d6cc185dc57f804a6b06faa9d47e1c2dbfc1263788e525ec377a23
-Size (qrcp/0.11.2.tar.gz) = 13295519 bytes
+BLAKE2s (qrcp/0.11.3.tar.gz) = 4830815f6b69f949ba5d7dbe49c0c4ee4fc0c1f732571341bfaa9e6f15b82a81
+SHA512 (qrcp/0.11.3.tar.gz) = 576d4953f86ed1808deff95a8ec913993ad74fa5a2844c12535b20c2d137a8bb47bfe8bcb0d9e0a5452c0820af4be39cfefd8aa043fac270e2d2bcdbf7f641d4
+Size (qrcp/0.11.3.tar.gz) = 13295641 bytes
 BLAKE2s (qrcp/github.com_adrg_xdg_@v_v0.4.0.mod) = e6eee94083bb0739d13d66e5d77863c5ebb40d2813c7833231aa35b27a9c5b81
 SHA512 (qrcp/github.com_adrg_xdg_@v_v0.4.0.mod) = 770b1d2df3eefd9827ce9bdf6bb5a2354c6e4e39b196ba59065169f59b690ef2884d964367fc6df0cb7f1c916fad3d878f179a8da8997ca7460152d355d95573
 Size (qrcp/github.com_adrg_xdg_@v_v0.4.0.mod) = 138 bytes
