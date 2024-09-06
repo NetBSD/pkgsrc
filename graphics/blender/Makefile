@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.220 2024/08/25 06:18:49 wiz Exp $
+# $NetBSD: Makefile,v 1.221 2024/09/06 15:43:26 prlw1 Exp $
 
-DISTNAME=	blender-4.1.1
+DISTNAME=	blender-4.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -10,18 +10,17 @@ HOMEPAGE=	https://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
 # GCC 11.0.0 or later is required.
 GCC_REQD+=	12
 
-CXXFLAGS+=	-fpermissive # return value type for __builtin_popcount()
-
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+# uses alloca() but sets -std=c++17
+FORCE_CXX_STD=	gnu++17
+.endif
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_MEM_JEMALLOC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL=OFF
@@ -42,6 +41,8 @@ CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SWSCALE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg6/lib
 CMAKE_CONFIGURE_ARGS+=	-DFFMPEG_SWRESAMPLE_LIBRARY=${BUILDLINK_DIR}/lib/ffmpeg6/libswresample.so
 CMAKE_CONFIGURE_ARGS+=	-D_ffmpeg_INCLUDE_DIR=${BUILDLINK_DIR}/include/ffmpeg6
 CMAKE_CONFIGURE_ARGS+=	-DWITH_CODEC_SNDFILE=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_EIGEN=ON
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_FREETYPE=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SYSTEM_GLEW=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_CYCLES_EMBREE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_POTRACE=OFF
@@ -50,28 +51,18 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_VERSION=${PYVERSSUFFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON
+#CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE=ON
 
-.include "../../graphics/MesaLib/buildlink3.mk"
-.if ${MESALIB_SUPPORTS_EGL} == "yes"
-#CMAKE_CONFIGURE_ARGS+=	-DWITH_GL_EGL=ON
-.endif
+PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
 
-PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:C/[a-z]//}
+REPLACE_PYTHON=		scripts/addons/io_curve_svg/svg_util_test.py \
+			scripts/addons/io_scene_fbx/fbx2json.py	\
+			scripts/addons/io_scene_fbx/json2fbx.py	\
+			scripts/addons/node_wrangler/utils/paths_test.py \
+			scripts/modules/bl_i18n_utils/merge_po.py \
+			scripts/modules/blend_render_info.py
 
-REPLACE_PYTHON=		release/bin/blender-thumbnailer.py		\
-			release/scripts/addons/io_curve_svg/svg_util_test.py \
-			release/scripts/addons/io_scene_fbx/fbx2json.py	\
-			release/scripts/addons/io_scene_fbx/json2fbx.py	\
-			release/scripts/modules/bl_i18n_utils/merge_po.py \
-			release/scripts/modules/blend_render_info.py
-
-INSTALLATION_DIRS=	bin share/blender
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310 312
-
-pre-configure:
-	${MKDIR} ${WRKSRC}/build
+PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310
 
 .include "options.mk"
 .include "../../archivers/minizip-ng/buildlink3.mk"
@@ -80,12 +71,12 @@ pre-configure:
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/pystring/buildlink3.mk"
-BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.12.1nb1
+BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.13.0
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
@@ -98,11 +89,13 @@ BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.12.1nb1
 .include "../../graphics/potrace/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics//libwebp/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
+.include "../../print/libharu/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
