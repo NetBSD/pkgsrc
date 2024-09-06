@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/08/12 22:01:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/06 18:48:45 bsiegert Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-1.2.0
 PKGNAME=		go-${DISTNAME:tl}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=murex/}
 GITHUB_PROJECT=		TCR

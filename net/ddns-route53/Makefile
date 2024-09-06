@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/08/11 15:57:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/06 18:48:49 bsiegert Exp $
 
 DISTNAME=	ddns-route53-2.12.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crazy-max/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

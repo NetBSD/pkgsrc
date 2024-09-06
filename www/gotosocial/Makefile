@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2024/08/11 15:57:14 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2024/09/06 18:49:00 bsiegert Exp $
 
 GOTOVER=	0.16.0
 DISTNAME=	gotosocial-${GOTOVER}-source-code
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	${DISTNAME:S/-source-code//}
 CATEGORIES=	www
 
