@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2024/08/11 06:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/09/06 13:48:57 adam Exp $
 
-DISTNAME=	cffi-1.17.0
+DISTNAME=	cffi-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 USE_LANGUAGES=	c c++ # c++ for testing only
 USE_TOOLS+=	pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 1.17.0
 # 8 failed, 1910 passed, 130 skipped, 4 xfailed, 11 warnings

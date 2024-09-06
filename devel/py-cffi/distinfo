@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.50 2024/08/11 06:51:09 wiz Exp $
+$NetBSD: distinfo,v 1.51 2024/09/06 13:48:57 adam Exp $
 
-BLAKE2s (cffi-1.17.0.tar.gz) = f52fe87fb04b4fb2c4dd1eba819a098b359d891ea7c415631c6fc81ece0218a0
-SHA512 (cffi-1.17.0.tar.gz) = 8516abe177c2acfc31ede401287956cc4dc486b26ed9c4752811be71dc6bc94af3adf1f1f685a94e7242f052b74768bfbbb30ce41a3c23b9259c91449347566e
-Size (cffi-1.17.0.tar.gz) = 516073 bytes
+BLAKE2s (cffi-1.17.1.tar.gz) = 9e933dffa27eed92df37c76f9dc24238a77ea6bab6ffb2120833c99cf6dfeed3
+SHA512 (cffi-1.17.1.tar.gz) = 907129891d56351ca5cb885aae62334ad432321826d6eddfaa32195b4c7b7689a80333e6d14d0aab479a646aba148b9852c0815b80344dfffa4f183a5e74372c
+Size (cffi-1.17.1.tar.gz) = 516621 bytes
 SHA1 (patch-setup.py) = 5d31edc3a7787f04f4e4f18fc4deb25daf338401
 SHA1 (patch-testing_cffi0_test__verify.py) = 91e903aa6aa89f997aba1578cb9452e6ac160f50
 SHA1 (patch-testing_cffi1_test__verify1.py) = 72d564ff8422bc1c8ed8b7058fb95ca669b69529
