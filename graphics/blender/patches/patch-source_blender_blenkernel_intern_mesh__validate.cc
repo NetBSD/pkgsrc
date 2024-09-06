@@ -1,8 +1,8 @@
-$NetBSD: patch-source_blender_blenkernel_intern_mesh__validate.cc,v 1.4 2024/05/03 20:34:37 ryoon Exp $
+$NetBSD: patch-source_blender_blenkernel_intern_mesh__validate.cc,v 1.5 2024/09/06 15:43:27 prlw1 Exp $
 
---- source/blender/blenkernel/intern/mesh_validate.cc.orig	2024-02-07 15:39:40.000000000 +0000
+--- source/blender/blenkernel/intern/mesh_validate.cc.orig	2024-06-05 11:47:56.000000000 +0000
 +++ source/blender/blenkernel/intern/mesh_validate.cc
-@@ -311,7 +311,7 @@ bool BKE_mesh_validate_arrays(Mesh *mesh
+@@ -256,7 +256,7 @@ bool BKE_mesh_validate_arrays(Mesh *mesh
  
    for (i = 0; i < verts_num; i++) {
      for (j = 0; j < 3; j++) {
@@ -11,7 +11,7 @@ $NetBSD: patch-source_blender_blenkernel_intern_mesh__validate.cc,v 1.4 2024/05/
          PRINT_ERR("\tVertex %u: has invalid coordinate", i);
  
          if (do_fixes) {
-@@ -805,7 +805,7 @@ bool BKE_mesh_validate_arrays(Mesh *mesh
+@@ -748,7 +748,7 @@ bool BKE_mesh_validate_arrays(Mesh *mesh
  
        for (j = 0, dw = dv->dw; j < dv->totweight; j++, dw++) {
          /* NOTE: greater than max defgroups is accounted for in our code, but not < 0. */
