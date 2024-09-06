@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2024/09/01 01:36:46 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/09/06 09:08:04 wiz Exp $
 
 BLAKE2s (R/ragg_1.3.2.tar.gz) = 9035011999bfe45d2732ea4a935bb6b572c9d52f108e5169c746234fea9064f9
 SHA512 (R/ragg_1.3.2.tar.gz) = 614333cb3aa282176dca750bbe37202d174e0c6808f64e91b589cf79fb505b68d70ebc8e9ecd1046a493582d711e3c9cb3a229f2eec1ef59419c47e8657ae74e
 Size (R/ragg_1.3.2.tar.gz) = 430366 bytes
+SHA1 (patch-src_agg_src_agg__font__freetype.cpp) = 12a1405f92971f328e1263094c2d8f8bbb9ab4ef
