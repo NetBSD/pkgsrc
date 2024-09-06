@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24805 2024/09/06 07:10:21 adam Exp $
+$NetBSD: TODO,v 1.24806 2024/09/06 13:49:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openslp-2.0.0
-	o openssl-3.3.2
 	o openxenmanager-0.83
 	o opera-26
 	o or1k-none-elf-binutils-2.36.1
