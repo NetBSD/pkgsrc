@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5509 2024/09/06 07:10:21 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5510 2024/09/06 10:06:29 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8489,3 +8489,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/monolith to 2.8.3 [pin 2024-09-06]
 	Updated www/py-django to 5.1.1 [adam 2024-09-06]
 	Updated www/py-django4 to 4.2.16 [adam 2024-09-06]
+	Updated sysutils/eza to 0.19.2 [fox 2024-09-06]
