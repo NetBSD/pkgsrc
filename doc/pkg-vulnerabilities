@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.254 2024/09/03 18:33:51 morr Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.255 2024/09/06 08:49:32 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26066,3 +26066,20 @@ python312-[0-9]*	infinite-loop	https://nvd.nist.gov/vuln/detail/CVE-2024-8088
 apr<1.7.5	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2023-49582
 vim<9.1.0697	heap-buffer-overflow	https://github.com/vim/vim/security/advisories/GHSA-4ghr-c62x-cqfh
 vim<9.1.0707	heap-buffer-overflow	https://github.com/vim/vim/security/advisories/GHSA-wxf9-c5gx-qrwr
+go122<1.22.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34155
+go122<1.22.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34156
+go122<1.22.7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34158
+go123<1.23.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34155
+go123<1.23.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34156
+go123<1.23.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-34158
+expat<2.6.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-45490
+expat<2.6.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-45491
+expat<2.6.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-45492
+python38-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6232
+python39-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6232
+python310-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6232
+python311-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6232
+python312-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6232
+openssl<3.3.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-6119
+py{38,39,310,311,312}-django>=4<4.2.16	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45230
+py{38,39,310,311,312}-django>=5<5.1.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45230
