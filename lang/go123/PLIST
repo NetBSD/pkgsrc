@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/14 10:04:04 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/06 18:38:22 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go123/CONTRIBUTING.md
@@ -6732,6 +6732,8 @@ go123/src/internal/types/testdata/check/go1_19.go
 go123/src/internal/types/testdata/check/go1_19_20.go
 go123/src/internal/types/testdata/check/go1_20_19.go
 go123/src/internal/types/testdata/check/go1_21_19.go
+go123/src/internal/types/testdata/check/go1_21_22.go
+go123/src/internal/types/testdata/check/go1_22_21.go
 go123/src/internal/types/testdata/check/go1_8.go
 go123/src/internal/types/testdata/check/go1_xx_19.go
 go123/src/internal/types/testdata/check/gotos.go
@@ -7008,6 +7010,8 @@ go123/src/internal/types/testdata/fixedbugs/issue67628.go
 go123/src/internal/types/testdata/fixedbugs/issue67683.go
 go123/src/internal/types/testdata/fixedbugs/issue67872.go
 go123/src/internal/types/testdata/fixedbugs/issue67962.go
+go123/src/internal/types/testdata/fixedbugs/issue68903.go
+go123/src/internal/types/testdata/fixedbugs/issue68935.go
 go123/src/internal/types/testdata/fixedbugs/issue6977.go
 go123/src/internal/types/testdata/spec/assignability.go
 go123/src/internal/types/testdata/spec/comparable.go
