@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/08/11 15:57:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/06 18:48:46 bsiegert Exp $
 
 DISTNAME=	humungus-0.9.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://humungus.tedunangst.com/r/humungus/d/
 EXTRACT_SUFX=	.tgz

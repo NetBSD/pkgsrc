@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/08/11 15:57:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.34 2024/09/06 18:48:54 bsiegert Exp $
 
 VERSION=	2.20.0
 DISTNAME=	vultr-cli-${VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vultr/}
 GITHUB_TAG=	v${VERSION}
