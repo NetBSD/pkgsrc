@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2024/02/08 22:43:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2024/09/06 07:08:44 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -175,6 +175,12 @@ ${PYSITELIB}/django/conf/locale/en_AU/__init__.pyo
 ${PYSITELIB}/django/conf/locale/en_AU/formats.py
 ${PYSITELIB}/django/conf/locale/en_AU/formats.pyc
 ${PYSITELIB}/django/conf/locale/en_AU/formats.pyo
+${PYSITELIB}/django/conf/locale/en_CA/__init__.py
+${PYSITELIB}/django/conf/locale/en_CA/__init__.pyc
+${PYSITELIB}/django/conf/locale/en_CA/__init__.pyo
+${PYSITELIB}/django/conf/locale/en_CA/formats.py
+${PYSITELIB}/django/conf/locale/en_CA/formats.pyc
+${PYSITELIB}/django/conf/locale/en_CA/formats.pyo
 ${PYSITELIB}/django/conf/locale/en_GB/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/en_GB/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/en_GB/__init__.py
@@ -1198,6 +1204,7 @@ ${PYSITELIB}/django/contrib/admin/static/admin/css/nav_sidebar.css
 ${PYSITELIB}/django/contrib/admin/static/admin/css/responsive.css
 ${PYSITELIB}/django/contrib/admin/static/admin/css/responsive_rtl.css
 ${PYSITELIB}/django/contrib/admin/static/admin/css/rtl.css
+${PYSITELIB}/django/contrib/admin/static/admin/css/unusable_password_field.css
 ${PYSITELIB}/django/contrib/admin/static/admin/css/vendor/select2/LICENSE-SELECT2.md
 ${PYSITELIB}/django/contrib/admin/static/admin/css/vendor/select2/select2.css
 ${PYSITELIB}/django/contrib/admin/static/admin/css/vendor/select2/select2.min.css
@@ -1234,7 +1241,6 @@ ${PYSITELIB}/django/contrib/admin/static/admin/js/autocomplete.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/calendar.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/cancel.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/change_form.js
-${PYSITELIB}/django/contrib/admin/static/admin/js/collapse.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/core.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/filters.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/inlines.js
@@ -1244,6 +1250,7 @@ ${PYSITELIB}/django/contrib/admin/static/admin/js/popup_response.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/prepopulate.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/prepopulate_init.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/theme.js
+${PYSITELIB}/django/contrib/admin/static/admin/js/unusable_password_field.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/urlify.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/LICENSE.txt
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js
@@ -2640,15 +2647,9 @@ ${PYSITELIB}/django/contrib/gis/gdal/raster/source.pyo
 ${PYSITELIB}/django/contrib/gis/gdal/srs.py
 ${PYSITELIB}/django/contrib/gis/gdal/srs.pyc
 ${PYSITELIB}/django/contrib/gis/gdal/srs.pyo
-${PYSITELIB}/django/contrib/gis/geoip2/__init__.py
-${PYSITELIB}/django/contrib/gis/geoip2/__init__.pyc
-${PYSITELIB}/django/contrib/gis/geoip2/__init__.pyo
-${PYSITELIB}/django/contrib/gis/geoip2/base.py
-${PYSITELIB}/django/contrib/gis/geoip2/base.pyc
-${PYSITELIB}/django/contrib/gis/geoip2/base.pyo
-${PYSITELIB}/django/contrib/gis/geoip2/resources.py
-${PYSITELIB}/django/contrib/gis/geoip2/resources.pyc
-${PYSITELIB}/django/contrib/gis/geoip2/resources.pyo
+${PYSITELIB}/django/contrib/gis/geoip2.py
+${PYSITELIB}/django/contrib/gis/geoip2.pyc
+${PYSITELIB}/django/contrib/gis/geoip2.pyo
 ${PYSITELIB}/django/contrib/gis/geometry.py
 ${PYSITELIB}/django/contrib/gis/geometry.pyc
 ${PYSITELIB}/django/contrib/gis/geometry.pyo
