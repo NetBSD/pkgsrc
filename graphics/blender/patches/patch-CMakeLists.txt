@@ -1,0 +1,16 @@
+$NetBSD: patch-CMakeLists.txt,v 1.7 2024/09/06 15:43:26 prlw1 Exp $
+
+core was moved to _core in numpy 2.0
+This path is added with -I, so looking for a file instead isn't a work around.
+
+--- CMakeLists.txt.orig	2024-08-16 13:50:55.000000000 +0000
++++ CMakeLists.txt
+@@ -2438,7 +2438,7 @@ if(WITH_PYTHON)
+     # Always use numpy bundled in precompiled libs.
+   elseif((WITH_PYTHON_INSTALL AND WITH_PYTHON_INSTALL_NUMPY) OR WITH_PYTHON_NUMPY)
+     if(("${PYTHON_NUMPY_PATH}" STREQUAL "") OR (${PYTHON_NUMPY_PATH} MATCHES NOTFOUND))
+-      find_python_package(numpy "core/include")
++      find_python_package(numpy "_core/include")
+     endif()
+   endif()
+ 

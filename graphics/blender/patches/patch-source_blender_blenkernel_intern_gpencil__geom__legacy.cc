@@ -1,8 +1,8 @@
-$NetBSD: patch-source_blender_blenkernel_intern_gpencil__geom.cc,v 1.3 2024/01/31 21:19:37 ryoon Exp $
+$NetBSD: patch-source_blender_blenkernel_intern_gpencil__geom__legacy.cc,v 1.1 2024/09/06 15:43:27 prlw1 Exp $
 
---- source/blender/blenkernel/intern/gpencil_geom_legacy.cc.orig	2023-10-30 23:57:44.000000000 +0000
+--- source/blender/blenkernel/intern/gpencil_geom_legacy.cc.orig	2024-06-05 11:47:56.000000000 +0000
 +++ source/blender/blenkernel/intern/gpencil_geom_legacy.cc
-@@ -652,7 +652,7 @@ bool BKE_gpencil_stroke_stretch(bGPDstro
+@@ -591,7 +591,7 @@ bool BKE_gpencil_stroke_stretch(bGPDstro
    const bool do_end = ELEM(mode, BOTH, END);
    float used_percent_length = overshoot_fac;
    CLAMP(used_percent_length, 1e-4f, 1.0f);
