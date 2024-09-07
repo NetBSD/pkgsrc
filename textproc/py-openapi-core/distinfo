@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/08/20 11:13:16 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/09/07 05:37:53 adam Exp $
 
-BLAKE2s (openapi_core-0.19.3.tar.gz) = 3470f1449626053140407d8654823a9afe9f5a13fe1f94560c90cb954fb8bc26
-SHA512 (openapi_core-0.19.3.tar.gz) = 87db8e0a1c5998fb4dbe3bfaf5c33b526e291ad96bb4a679fcb68ce21b003a66b40db14c4784f80104d4462c1e958a1b7776fb3d952e68eb4a7308999896c08b
-Size (openapi_core-0.19.3.tar.gz) = 109026 bytes
+BLAKE2s (openapi_core-0.19.4.tar.gz) = 967f7c58eb01d5e52d3a1219e12c06d72cd498b380775e9b3f2dca9c6170c408
+SHA512 (openapi_core-0.19.4.tar.gz) = b21223e6fcea7deb95863335abc7b5079dace585d6418514df9d9e947ac7e7e9d88fc618aeeca3008551838c6fc018f03469722a3b325ad8b0766c422954b4a5
+Size (openapi_core-0.19.4.tar.gz) = 109095 bytes
