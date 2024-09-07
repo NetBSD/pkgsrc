@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/07/07 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/09/07 05:52:59 adam Exp $
 
-DISTNAME=	certifi-2024.7.4
+DISTNAME=	certifi-2024.8.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certifi/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
