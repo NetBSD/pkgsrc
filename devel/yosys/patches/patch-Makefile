@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2024/09/07 02:10:28 thorpej Exp $
+
+Disable the TCL shenanigans and just assume installed-by-pkgsrc.
+
+--- Makefile.orig	2024-09-03 10:28:25
++++ Makefile	2024-09-06 16:50:08
+@@ -432,15 +432,17 @@ TCL_VERSION ?= tcl$(shell bash -c "tclsh <(echo 'puts 
+ 
+ 
+ ifeq ($(ENABLE_TCL),1)
+-TCL_VERSION ?= tcl$(shell bash -c "tclsh <(echo 'puts [info tclversion]')")
+-ifeq ($(OS), $(filter $(OS),FreeBSD OpenBSD NetBSD))
+-# BSDs usually use tcl8.6, but the lib is named "libtcl86"
+-TCL_INCLUDE ?= /usr/local/include/$(TCL_VERSION)
+-TCL_LIBS ?= -l$(subst .,,$(TCL_VERSION))
+-else
+-TCL_INCLUDE ?= /usr/include/$(TCL_VERSION)
+-TCL_LIBS ?= -l$(TCL_VERSION)
+-endif
++#TCL_VERSION ?= tcl$(shell bash -c "tclsh <(echo 'puts [info tclversion]')")
++#ifeq ($(OS), $(filter $(OS),FreeBSD OpenBSD NetBSD))
++## BSDs usually use tcl8.6, but the lib is named "libtcl86"
++#TCL_INCLUDE ?= /usr/local/include/$(TCL_VERSION)
++#TCL_LIBS ?= -l$(subst .,,$(TCL_VERSION))
++#else
++#TCL_INCLUDE ?= /usr/include/$(TCL_VERSION)
++#TCL_LIBS ?= -l$(TCL_VERSION)
++#endif
++TCL_INCLUDE ?= ${PREFIX}/include
++TCL_LIBS ?= -L ${PREFIX}/lib -ltcl86
+ 
+ ifeq ($(CONFIG),mxe)
+ CXXFLAGS += -DYOSYS_ENABLE_TCL
+@@ -734,7 +736,7 @@ $(PROGRAM_PREFIX)yosys$(EXE): $(OBJS)
+ 	@echo ""
+ 
+ $(PROGRAM_PREFIX)yosys$(EXE): $(OBJS)
+-	$(P) $(CXX) -o $(PROGRAM_PREFIX)yosys$(EXE) $(EXE_LINKFLAGS) $(LINKFLAGS) $(OBJS) $(LIBS) $(LIBS_VERIFIC)
++	$(P) $(CXX) -v -o $(PROGRAM_PREFIX)yosys$(EXE) $(EXE_LINKFLAGS) $(LINKFLAGS) $(OBJS) $(LIBS) $(LIBS_VERIFIC)
+ 
+ libyosys.so: $(filter-out kernel/driver.o,$(OBJS))
+ ifeq ($(OS), Darwin)
