@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/07/20 19:21:29 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/07 05:55:11 adam Exp $
 
-DISTNAME=	jupyterlab-4.2.4
+DISTNAME=	jupyterlab-4.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab/}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
