@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5516 2024/09/07 05:34:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5517 2024/09/07 05:44:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8501,3 +8501,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-sphinx-autodoc-typehints to 2.3.0 [adam 2024-09-07]
 	Updated devel/py-pydantic-core to 2.23.2 [adam 2024-09-07]
 	Updated devel/py-pydantic to 2.9.0 [adam 2024-09-07]
+	Updated textproc/py-openapi-core to 0.19.4 [adam 2024-09-07]
+	Updated textproc/py-lxml-html-clean to 0.2.2 [adam 2024-09-07]
+	Updated lang/py-executing to 2.1.0 [adam 2024-09-07]
+	Updated www/py-django-filer to 3.2.1 [adam 2024-09-07]
