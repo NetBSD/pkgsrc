@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/08/07 15:08:28 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/09/07 05:50:29 adam Exp $
 
-DISTNAME=	more-itertools-10.4.0
+DISTNAME=	more-itertools-10.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/more-itertools/}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
