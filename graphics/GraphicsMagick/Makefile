@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2024/09/07 08:53:57 prlw1 Exp $
+# $NetBSD: Makefile,v 1.141 2024/09/07 15:10:31 prlw1 Exp $
 
 PKGREVISION=	3
 .include "Makefile.common"
@@ -28,6 +28,12 @@ PKGCONFIG_OVERRIDE+=	Magick++/lib/GraphicsMagick++.pc.in
 CTF_FILES_SKIP+=	lib/libGraphicsMagick.so.*	# CPU limit exceeded
 
 TEST_TARGET=	check
+
+PRINT_PLIST_AWK+=	{ if (/coders\/x.la/)    $$0 = "$${PLIST.x11}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/coders\/xwd.la/)  $$0 = "$${PLIST.x11}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/coders\/jp2.la/)  $$0 = "$${PLIST.jasper}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/coders\/fpx.la/)  $$0 = "$${PLIST.fpx}" $$0 }
+PRINT_PLIST_AWK+=	{ if (/coders\/heif.la/) $$0 = "$${PLIST.heif}" $$0 }
 
 .include "options.mk"
 
