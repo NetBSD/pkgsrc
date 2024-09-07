@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.12 2023/11/09 20:55:19 nia Exp $
+# $NetBSD: options.mk,v 1.13 2024/09/07 08:53:57 prlw1 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
-PKG_SUPPORTED_OPTIONS=	x11 jasper ghostscript wmf fpx zstd
+PKG_SUPPORTED_OPTIONS=	x11 jasper ghostscript wmf fpx heif zstd
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	fpx jasper x11
+PLIST_VARS+=	fpx heif jasper x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../x11/libSM/buildlink3.mk"
@@ -44,6 +44,14 @@ CONFIGURE_ARGS+=	--with-fpx
 PLIST.fpx=		yes
 .else
 CONFIGURE_ARGS+=	--without-fpx
+.endif
+
+.if !empty(PKG_OPTIONS:Mheif)
+.include "../../graphics/libheif/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-heic
+PLIST.heif=		yes
+.else
+CONFIGURE_ARGS+=	--without-heic
 .endif
 
 .if !empty(PKG_OPTIONS:Mzstd)
