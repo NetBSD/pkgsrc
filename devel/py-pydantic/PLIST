@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/07/04 11:24:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/09/07 05:34:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -48,6 +48,9 @@ ${PYSITELIB}/pydantic/_internal/_generics.pyo
 ${PYSITELIB}/pydantic/_internal/_git.py
 ${PYSITELIB}/pydantic/_internal/_git.pyc
 ${PYSITELIB}/pydantic/_internal/_git.pyo
+${PYSITELIB}/pydantic/_internal/_import_utils.py
+${PYSITELIB}/pydantic/_internal/_import_utils.pyc
+${PYSITELIB}/pydantic/_internal/_import_utils.pyo
 ${PYSITELIB}/pydantic/_internal/_internal_dataclass.py
 ${PYSITELIB}/pydantic/_internal/_internal_dataclass.pyc
 ${PYSITELIB}/pydantic/_internal/_internal_dataclass.pyo
@@ -66,6 +69,9 @@ ${PYSITELIB}/pydantic/_internal/_repr.pyo
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.py
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.pyc
 ${PYSITELIB}/pydantic/_internal/_schema_generation_shared.pyo
+${PYSITELIB}/pydantic/_internal/_serializers.py
+${PYSITELIB}/pydantic/_internal/_serializers.pyc
+${PYSITELIB}/pydantic/_internal/_serializers.pyo
 ${PYSITELIB}/pydantic/_internal/_signature.py
 ${PYSITELIB}/pydantic/_internal/_signature.pyc
 ${PYSITELIB}/pydantic/_internal/_signature.pyo
