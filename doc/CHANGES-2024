@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5518 2024/09/07 05:58:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5519 2024/09/07 08:54:15 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8509,3 +8509,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-certifi to 2024.8.30 [adam 2024-09-07]
 	Updated www/py-jupyterlab to 4.2.5 [adam 2024-09-07]
 	Updated devel/py-requirements-parser to 0.11.0 [adam 2024-09-07]
+	Updated graphics/GraphicsMagick to 1.3.42nb3 [prlw1 2024-09-07]
