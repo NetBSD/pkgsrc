@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/09/07 02:10:28 thorpej Exp $
+# $NetBSD: Makefile,v 1.7 2024/09/08 18:52:41 wiz Exp $
 
 # XXX Yosys changed their release tag format in 0.45 to just a bare
 # XXX number, sigh.
@@ -43,16 +43,12 @@ YOSYS_COMPILER=	gcc
 .endif
 
 USE_TOOLS+=	bash
+USE_TOOLS+=	git
 USE_TOOLS+=	gmake
 USE_TOOLS+=	bison
 USE_TOOLS+=	flex
 USE_TOOLS+=	gawk
-
-# The Apple developer tools include git, so we don't need to
-# depend on it explicitly in that case.
-.if ${OPSYS} != "Darwin"
-TOOL_DEPENDS+=	git-base>=2.39.3:../../devel/git-base
-.endif
+USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	backends/smt2/*.py
 REPLACE_PYTHON+=	docs/source/*.py
@@ -81,6 +77,5 @@ do-configure:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../devel/pkgconf/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
