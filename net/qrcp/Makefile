@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/09/06 18:48:52 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/08 16:32:05 wiz Exp $
 
 DISTNAME=	0.11.3
 PKGNAME=	qrcp-${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/claudiodangelis/qrcp/
 COMMENT=	Transfer files over Wi-Fi via a QR Code
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c
 
 TOOL_DEPENDS+=	go118>=1.18.0:../../lang/go118
