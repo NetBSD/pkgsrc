@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/05/05 07:25:14 wiz Exp $
+$NetBSD: distinfo,v 1.17 2024/09/08 08:26:55 wiz Exp $
 
-BLAKE2s (Module-Build-Tiny-0.048.tar.gz) = 2369890850408e577f47dde8fd97a0939e838f9f02c38475db3808f9809d704f
-SHA512 (Module-Build-Tiny-0.048.tar.gz) = 764a69c7d8ac15c68da82973262c4fa861579cac6417179cc48fb6cdd139242c1d236b1b808552b915dd29a9ef87b3aa07bae3ccdc3158b03ef76a39beff58cb
-Size (Module-Build-Tiny-0.048.tar.gz) = 22698 bytes
+BLAKE2s (Module-Build-Tiny-0.051.tar.gz) = 3df2cf87bbfbe3c307fa4f81020d62fbcb093e308646fdc629224fcd7bc808ad
+SHA512 (Module-Build-Tiny-0.051.tar.gz) = 205e509c752caf284ccf981864b59ee69238b2255c4ece03f06e9f4482922c2b4c1abaf2037d57232b87e70c5f566bab5cd01006a9017b996c91846eee6b7eb2
+Size (Module-Build-Tiny-0.051.tar.gz) = 22872 bytes
