@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24809 2024/09/07 05:58:15 adam Exp $
+$NetBSD: TODO,v 1.24810 2024/09/08 08:11:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -466,6 +466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.27.0
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -728,6 +729,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.16.2
 	o gossip-0.31
 	o gperiodic-3.0.3
 	o gpick-0.3 [wip]
@@ -815,6 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.21.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -877,6 +880,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libslang-2.2.4
 	o libslang2-2.3.2
+	o libspiro-1.5.0
 	o libthai-0.2.2
 	o libtrace-4.0.16
 	o libvirt-10.0
@@ -1120,6 +1124,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-build-1.2.2
+	o py-cairo-1.27.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-contourpy-1.3.0
@@ -1127,40 +1133,54 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-filelock-3.16.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-glad2-2.0.7
 	o py-google-api-core-2.19.2
-	o py-google-api-python-client-2.143.0
+	o py-google-api-python-client-2.144.0
 	o py-googleapis-common-protos-1.65.0
 	o py-grpcio-1.66.1
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-kiwisolver-1.4.7
 	o py-mock-5.0.2
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
+	o py-numpy-2.1.1
 	o py-octoprint-1.9.3
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-platformdirs-4.3.1
 	o py-postgresql-5.1.2
+	o py-posting-1.12.3
 	o py-protobuf-5.28.0
+	o py-pydantic-core-2.23.3
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
-	o py-ruff-0.6.3
+	o py-ruff-0.6.4
 	o py-sbws-1.1.0
 	o py-scgi-2.0
+	o py-setuptools-74.1.2
 	o py-simpletal-5.1
-	o py-sphinx-autoapi-3.3.0
+	o py-sphinx-autoapi-3.3.1
+	o py-sphinx-autodoc-typehints-2.4.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-textual-0.79.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
-	o py-watchdog-5.0.0
+	o py-watchdog-5.0.2
 	o py-yubiauth-0.3.10
+	o python310-3.10.15
+	o python311-3.11.10
+	o python312-3.12.6
+	o python38-3.8.20
+	o python39-3.9.20
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qconf-2.5
@@ -1180,6 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rep-gtk-0.90.8.1
 	o reposurgeon-4.26
 	o resize_image-0.7
+	o restic-0.17.1
 	o rio500-0.8.1
 	o rmtrash-1.14
 	o root-tail-1.2
@@ -1265,7 +1286,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
-	o syncstorage-rs-0.17.2
+	o syncstorage-rs-0.17.4
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1314,7 +1335,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trafficserver-9.0.1
 	o transmission-4.0.4
 	o tree-sitter-0.23.0
-	o tree-sitter-php-0.23.0
+	o tree-sitter-elixir-0.3.0
+	o tree-sitter-php-0.23.2
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
