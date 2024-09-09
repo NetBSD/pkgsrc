@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/04/15 07:45:00 pin Exp $
+# $NetBSD: Makefile,v 1.20 2024/09/09 19:20:52 pin Exp $
 
-DISTNAME=	please-0.5.5
-PKGNAME=	pleaser-0.5.5
+DISTNAME=	please-0.5.6
+PKGNAME=	pleaser-0.5.6
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITLAB:=edneville/}
 GITLAB_PROJECT=	please
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-WRKSRC=			${WRKDIR}/please-v0.5.5-b9feb1931e2f096bdcbc8c5b1be89b27a6c9040a
+WRKSRC=			${WRKDIR}/please-v0.5.6-3ca6938f73ab0885dc442139d7bdf06f13a94105
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing paths.
