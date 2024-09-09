@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/09/08 18:38:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/09 07:51:11 nia Exp $
 
 DISTNAME=		sheldon-0.8.0
 CATEGORIES=		shells
@@ -17,8 +17,8 @@ USE_TOOLS+=		pkg-config
 
 AUTO_MKDIRS=		yes
 
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
+RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
