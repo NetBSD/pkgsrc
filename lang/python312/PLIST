@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/07 20:27:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/09/09 15:51:38 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -3121,6 +3121,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_mem.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_misc.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_number.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_number.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_number.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_run.pyo
@@ -3133,6 +3136,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_structmembers.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_sys.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_sys.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_sys.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_tuple.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_tuple.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_tuple.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_unicode.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_unicode.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_unicode.pyo
