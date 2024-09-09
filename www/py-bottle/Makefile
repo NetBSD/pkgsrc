@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/03/06 09:29:03 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/09/09 16:46:51 adam Exp $
 
-DISTNAME=	bottle-0.12.25
+DISTNAME=	bottle-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
@@ -10,11 +10,14 @@ HOMEPAGE=	https://bottlepy.org/docs/stable/
 COMMENT=	Fast, simple and lightweight WSGI micro web-framework for Python
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} bottle.py bottle-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
