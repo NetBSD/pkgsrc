@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/31 08:42:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/09 10:41:47 nia Exp $
 
 MOZVER=		128.1.0esr
 DISTNAME=	firefox-${MOZVER}.source
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 
 # "ERROR: Only GCC 8.1 or newer is supported"
 GCC_REQD+=	8
+
+TOOL_DEPENDS+=	cbindgen>=0.26.0:../../devel/cbindgen
 
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/multinit/multinit.sh
