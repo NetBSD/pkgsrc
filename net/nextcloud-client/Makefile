@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/08/25 06:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/09 07:52:15 nia Exp $
 #
 
 DISTNAME=	nextcloud-client-3.13.2
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
+
+USE_CXX_FEATURES+=	filesystem
 
 PKG_SYSCONFSUBDIR=	Nextcloud
 
