@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2024/08/23 10:08:24 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/09/09 07:46:20 nia Exp $
 
 BLAKE2s (minetest-5.9.0.tar.gz) = 813c7b0218297236239b2d419bb7390e6b9cc491a8aef74f1215c7961b181702
 SHA512 (minetest-5.9.0.tar.gz) = 12f741ffc4e3b44fd19e98b288f8ed42a5a4c48a02f09a2ea712199815e5393bb50a9b6719c367036041094f8922af9c56a70585e9b26085fe96c70869d3cdbf
 Size (minetest-5.9.0.tar.gz) = 11984514 bytes
 SHA1 (patch-irr_src_CIrrDeviceLinux.cpp) = ef1133760dee61aaee8dc59690b7644ce45a3390
 SHA1 (patch-irr_src_os.cpp) = fe5cf12adf6b4574e97e8cfee46a07401b87ab90
-SHA1 (patch-src_util_string.cpp) = 8f93ef740d29a691c6fdd5194ba1893c6df7fe25
+SHA1 (patch-src_util_string.cpp) = c736bb886ec087ac2fcaf36da4d78dbe0d45e616

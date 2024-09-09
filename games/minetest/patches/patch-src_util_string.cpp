@@ -1,4 +1,4 @@
-$NetBSD: patch-src_util_string.cpp,v 1.8 2024/08/23 10:08:24 nia Exp $
+$NetBSD: patch-src_util_string.cpp,v 1.9 2024/09/09 07:46:20 nia Exp $
 
 Support non-POSIX iconv on NetBSD before 10 and SunOS.
 
@@ -23,7 +23,7 @@ Support non-POSIX iconv on NetBSD before 10 and SunOS.
  	size_t old_size = inbuf_size;
  	while (inbuf_size > 0) {
 +#if (defined(__NetBSD__) && !defined(NETBSD_POSIX_ICONV)) || defined(__sun)
-+		iconv(cd, (const char *)&inbuf_ptr, &inbuf_size, &outbuf_ptr, outbuf_size);
++		iconv(cd, (const char **)&inbuf_ptr, &inbuf_size, &outbuf_ptr, outbuf_size);
 +#else
  		iconv(cd, &inbuf_ptr, &inbuf_size, &outbuf_ptr, outbuf_size);
 +#endif
