@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/06/20 09:03:21 pin Exp $
+# $NetBSD: Makefile,v 1.27 2024/09/09 19:44:38 pin Exp $
 
 DISTNAME=	simp-3.6.1
+# simp-3.7.1 requires Rust >= 1.80.1 to build.
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 # We need these post-release commits to fix functionality on NetBSD.
