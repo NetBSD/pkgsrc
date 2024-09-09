@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2024/08/16 09:56:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2024/09/09 08:26:59 jperkin Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -1816,6 +1816,19 @@ lib/erlang/lib/observer-${VERSION.observer}/src/observer_tv_wx.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/observer_wx.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/ttb.erl
 lib/erlang/lib/observer-${VERSION.observer}/src/ttb_et.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.c
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.h
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.app
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.appup
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc_app.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc_sup.beam
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/include/odbc.hrl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/priv/bin/odbcserver
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_app.erl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_internal.hrl
+${PLIST.odbc}lib/erlang/lib/odbc-${VERSION.odbc}/src/odbc_sup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/cpu_sup.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/disksup.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/memsup.beam
