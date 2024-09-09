@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.215 2024/09/06 18:42:18 bsiegert Exp $
+# $NetBSD: version.mk,v 1.216 2024/09/09 10:31:16 nia Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -30,7 +30,8 @@ GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
 # Build dependency for Go
 GO_PACKAGE_DEP=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf *-*-aarch64
+ONLY_FOR_PLATFORM?=	*-*-i386 *-*-x86_64 *-*-earmv[67]hf *-*-aarch64
+
 NOT_FOR_PLATFORM=	SunOS-*-i386
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=			386
