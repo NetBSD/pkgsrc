@@ -2,3 +2,5 @@ minikube implements a local Kubernetes cluster on macOS, Linux, and
 Windows. minikube's primary goals are to be the best tool for local
 Kubernetes application development and to support all Kubernetes
 features that fit.
+
+Note: this package does not support NetBSD.
