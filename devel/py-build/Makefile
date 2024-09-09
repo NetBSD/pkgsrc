@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/04/02 19:30:22 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/09/09 06:59:21 adam Exp $
 
-DISTNAME=	build-1.2.1
+DISTNAME=	build-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=9.1:../../devel/py-test-rerunf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
