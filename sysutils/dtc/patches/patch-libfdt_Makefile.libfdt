@@ -1,13 +1,13 @@
-$NetBSD: patch-libfdt_Makefile.libfdt,v 1.1 2017/12/05 09:54:18 adam Exp $
+$NetBSD: patch-libfdt_Makefile.libfdt,v 1.2 2024/09/09 19:18:13 adam Exp $
 
 On Darwin, shared libraries have different naming.
 
---- libfdt/Makefile.libfdt.orig	2017-12-05 08:44:44.000000000 +0000
+--- libfdt/Makefile.libfdt.orig	2024-08-17 08:22:16.000000000 +0000
 +++ libfdt/Makefile.libfdt
-@@ -3,7 +3,11 @@
- # This is not a complete Makefile of itself.  Instead, it is designed to
- # be easily embeddable into other systems of Makefiles.
+@@ -6,13 +6,21 @@
  #
+ 
+ LIBFDT_so = libfdt.$(SHAREDLIB_EXT)
 +ifeq ($(HOSTOS),darwin)
 +LIBFDT_soname = libfdt.1.$(SHAREDLIB_EXT)
 +else
@@ -16,3 +16,13 @@ On Darwin, shared libraries have different naming.
  LIBFDT_INCLUDES = fdt.h libfdt.h libfdt_env.h
  LIBFDT_VERSION = version.lds
  LIBFDT_SRCS = fdt.c fdt_ro.c fdt_wip.c fdt_sw.c fdt_rw.c fdt_strerror.c fdt_empty_tree.c \
+ 	fdt_addresses.c fdt_overlay.c fdt_check.c
+ LIBFDT_OBJS = $(LIBFDT_SRCS:%.c=%.o)
++ifeq ($(HOSTOS),darwin)
++LIBFDT_LIB = libfdt.$(DTC_VERSION).$(SHAREDLIB_EXT)
++else
+ LIBFDT_LIB = libfdt.$(SHAREDLIB_EXT).$(DTC_VERSION)
++endif
+ 
+ libfdt_clean:
+ 	@$(VECHO) CLEAN "(libfdt)"
