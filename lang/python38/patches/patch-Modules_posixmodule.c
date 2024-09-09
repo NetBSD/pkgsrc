@@ -1,9 +1,9 @@
-$NetBSD: patch-Modules_posixmodule.c,v 1.1 2020/11/17 19:33:15 sjmulder Exp $
+$NetBSD: patch-Modules_posixmodule.c,v 1.2 2024/09/09 15:47:30 adam Exp $
 
 Support for macOS 11 and Apple Silicon (ARM). Mostly backported from:
 https://github.com/python/cpython/pull/22855
 
---- Modules/posixmodule.c.orig	2020-09-23 12:36:32.000000000 +0000
+--- Modules/posixmodule.c.orig	2024-09-06 20:41:55.000000000 +0000
 +++ Modules/posixmodule.c
 @@ -8,20 +8,6 @@
     of the compiler used.  Different compilers define their own feature
@@ -26,7 +26,7 @@ https://github.com/python/cpython/pull/22855
  #define PY_SSIZE_T_CLEAN
  
  #include "Python.h"
-@@ -53,6 +39,127 @@
+@@ -60,6 +46,127 @@
  
  #include <stdio.h>  /* needed for ctermid() */
  
@@ -154,7 +154,7 @@ https://github.com/python/cpython/pull/22855
  #ifdef __cplusplus
  extern "C" {
  #endif
-@@ -2235,6 +2342,10 @@ posix_do_stat(const char *function_name,
+@@ -2261,6 +2368,10 @@ posix_do_stat(const char *function_name,
      STRUCT_STAT st;
      int result;
  
@@ -165,7 +165,7 @@ https://github.com/python/cpython/pull/22855
  #if !defined(MS_WINDOWS) && !defined(HAVE_FSTATAT) && !defined(HAVE_LSTAT)
      if (follow_symlinks_specified(function_name, follow_symlinks))
          return NULL;
-@@ -2261,15 +2372,27 @@ posix_do_stat(const char *function_name,
+@@ -2287,15 +2398,27 @@ posix_do_stat(const char *function_name,
      else
  #endif /* HAVE_LSTAT */
  #ifdef HAVE_FSTATAT
@@ -196,7 +196,7 @@ https://github.com/python/cpython/pull/22855
      if (result != 0) {
          return path_error(path);
      }
-@@ -2692,6 +2815,10 @@ os_access_impl(PyObject *module, path_t 
+@@ -2718,6 +2841,10 @@ os_access_impl(PyObject *module, path_t
      int result;
  #endif
  
@@ -207,7 +207,7 @@ https://github.com/python/cpython/pull/22855
  #ifndef HAVE_FACCESSAT
      if (follow_symlinks_specified("access", follow_symlinks))
          return -1;
-@@ -2726,17 +2853,40 @@ os_access_impl(PyObject *module, path_t 
+@@ -2752,17 +2879,40 @@ os_access_impl(PyObject *module, path_t
      if ((dir_fd != DEFAULT_DIR_FD) ||
          effective_ids ||
          !follow_symlinks) {
@@ -254,7 +254,7 @@ https://github.com/python/cpython/pull/22855
      return_value = !result;
  #endif
  
-@@ -2923,6 +3073,7 @@ os_chmod_impl(PyObject *module, path_t *
+@@ -2949,6 +3099,7 @@ os_chmod_impl(PyObject *module, path_t *
  
  #ifdef HAVE_FCHMODAT
      int fchmodat_nofollow_unsupported = 0;
@@ -262,7 +262,7 @@ https://github.com/python/cpython/pull/22855
  #endif
  
  #if !(defined(HAVE_FCHMODAT) || defined(HAVE_LCHMOD))
-@@ -2958,42 +3109,56 @@ os_chmod_impl(PyObject *module, path_t *
+@@ -2984,42 +3135,56 @@ os_chmod_impl(PyObject *module, path_t *
      if (path->fd != -1)
          result = fchmod(path->fd, mode);
      else
@@ -342,7 +342,7 @@ https://github.com/python/cpython/pull/22855
          if (fchmodat_nofollow_unsupported) {
              if (dir_fd != DEFAULT_DIR_FD)
                  dir_fd_and_follow_symlinks_invalid("chmod",
-@@ -3003,10 +3168,10 @@ os_chmod_impl(PyObject *module, path_t *
+@@ -3029,10 +3194,10 @@ os_chmod_impl(PyObject *module, path_t *
              return NULL;
          }
          else
@@ -355,7 +355,7 @@ https://github.com/python/cpython/pull/22855
  
      Py_RETURN_NONE;
  }
-@@ -3294,6 +3459,10 @@ os_chown_impl(PyObject *module, path_t *
+@@ -3320,6 +3485,10 @@ os_chown_impl(PyObject *module, path_t *
  {
      int result;
  
@@ -366,7 +366,7 @@ https://github.com/python/cpython/pull/22855
  #if !(defined(HAVE_LCHOWN) || defined(HAVE_FCHOWNAT))
      if (follow_symlinks_specified("chown", follow_symlinks))
          return NULL;
-@@ -3302,19 +3471,6 @@ os_chown_impl(PyObject *module, path_t *
+@@ -3328,19 +3497,6 @@ os_chown_impl(PyObject *module, path_t *
          fd_and_follow_symlinks_invalid("chown", path->fd, follow_symlinks))
          return NULL;
  
@@ -386,7 +386,7 @@ https://github.com/python/cpython/pull/22855
      if (PySys_Audit("os.chown", "OIIi", path->object, uid, gid,
                      dir_fd == DEFAULT_DIR_FD ? -1 : dir_fd) < 0) {
          return NULL;
-@@ -3332,14 +3488,28 @@ os_chown_impl(PyObject *module, path_t *
+@@ -3358,14 +3514,28 @@ os_chown_impl(PyObject *module, path_t *
      else
  #endif
  #ifdef HAVE_FCHOWNAT
@@ -417,7 +417,7 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error(path);
  
-@@ -3585,6 +3755,9 @@ os_link_impl(PyObject *module, path_t *s
+@@ -3611,6 +3781,9 @@ os_link_impl(PyObject *module, path_t *s
  #else
      int result;
  #endif
@@ -427,7 +427,7 @@ https://github.com/python/cpython/pull/22855
  
  #ifndef HAVE_LINKAT
      if ((src_dir_fd != DEFAULT_DIR_FD) || (dst_dir_fd != DEFAULT_DIR_FD)) {
-@@ -3619,15 +3792,43 @@ os_link_impl(PyObject *module, path_t *s
+@@ -3645,15 +3818,43 @@ os_link_impl(PyObject *module, path_t *s
  #ifdef HAVE_LINKAT
      if ((src_dir_fd != DEFAULT_DIR_FD) ||
          (dst_dir_fd != DEFAULT_DIR_FD) ||
@@ -475,7 +475,7 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error2(src, dst);
  #endif /* MS_WINDOWS */
-@@ -3750,6 +3951,7 @@ _posix_listdir(path_t *path, PyObject *l
+@@ -3776,6 +3977,7 @@ _posix_listdir(path_t *path, PyObject *l
      errno = 0;
  #ifdef HAVE_FDOPENDIR
      if (path->fd != -1) {
@@ -483,7 +483,7 @@ https://github.com/python/cpython/pull/22855
          /* closedir() closes the FD, so we duplicate it */
          fd = _Py_dup(path->fd);
          if (fd == -1)
-@@ -3760,6 +3962,11 @@ _posix_listdir(path_t *path, PyObject *l
+@@ -3786,6 +3988,11 @@ _posix_listdir(path_t *path, PyObject *l
          Py_BEGIN_ALLOW_THREADS
          dirp = fdopendir(fd);
          Py_END_ALLOW_THREADS
@@ -495,17 +495,17 @@ https://github.com/python/cpython/pull/22855
      }
      else
  #endif
-@@ -4077,6 +4284,9 @@ os_mkdir_impl(PyObject *module, path_t *
- /*[clinic end generated code: output=a70446903abe821f input=e965f68377e9b1ce]*/
- {
-     int result;
+@@ -4162,6 +4369,9 @@ os_mkdir_impl(PyObject *module, path_t *
+     SECURITY_ATTRIBUTES secAttr = { sizeof(secAttr) };
+     SECURITY_ATTRIBUTES *pSecAttr = NULL;
+ #endif
 +#ifdef HAVE_MKDIRAT
 +    int mkdirat_unavailable = 0;
 +#endif
  
      if (PySys_Audit("os.mkdir", "Oii", path->object, mode,
                      dir_fd == DEFAULT_DIR_FD ? -1 : dir_fd) < 0) {
-@@ -4093,9 +4303,14 @@ os_mkdir_impl(PyObject *module, path_t *
+@@ -4205,9 +4415,13 @@ os_mkdir_impl(PyObject *module, path_t *
  #else
      Py_BEGIN_ALLOW_THREADS
  #if HAVE_MKDIRAT
@@ -514,15 +514,14 @@ https://github.com/python/cpython/pull/22855
 +      if (HAVE_MKDIRAT_RUNTIME) {
          result = mkdirat(dir_fd, path->narrow, mode);
 -    else
-+
 +      } else {
 +        mkdirat_unavailable = 1;
 +      }
-+    } else
++     } else
  #endif
  #if defined(__WATCOMC__) && !defined(__QNX__)
          result = mkdir(path->narrow);
-@@ -4103,6 +4318,14 @@ os_mkdir_impl(PyObject *module, path_t *
+@@ -4215,6 +4429,14 @@ os_mkdir_impl(PyObject *module, path_t *
          result = mkdir(path->narrow, mode);
  #endif
      Py_END_ALLOW_THREADS
@@ -537,18 +536,17 @@ https://github.com/python/cpython/pull/22855
      if (result < 0)
          return path_error(path);
  #endif /* MS_WINDOWS */
-@@ -4212,6 +4435,10 @@ internal_rename(path_t *src, path_t *dst
+@@ -4323,6 +4545,9 @@ internal_rename(path_t *src, path_t *dst
+ {
      const char *function_name = is_replace ? "replace" : "rename";
      int dir_fd_specified;
- 
 +#ifdef HAVE_RENAMEAT
 +    int renameat_unavailable = 0;
 +#endif
-+
+ 
  #ifdef MS_WINDOWS
      BOOL result;
-     int flags = is_replace ? MOVEFILE_REPLACE_EXISTING : 0;
-@@ -4251,13 +4478,25 @@ internal_rename(path_t *src, path_t *dst
+@@ -4363,13 +4588,24 @@ internal_rename(path_t *src, path_t *dst
  
      Py_BEGIN_ALLOW_THREADS
  #ifdef HAVE_RENAMEAT
@@ -556,7 +554,7 @@ https://github.com/python/cpython/pull/22855
 -        result = renameat(src_dir_fd, src->narrow, dst_dir_fd, dst->narrow);
 -    else
 +    if (dir_fd_specified) {
-+        if (HAVE_RENAMEAT_RUNTIME) {
++      if (HAVE_RENAMEAT_RUNTIME) {
 +            result = renameat(src_dir_fd, src->narrow, dst_dir_fd, dst->narrow);
 +        } else {
 +            renameat_unavailable = 1;
@@ -566,7 +564,6 @@ https://github.com/python/cpython/pull/22855
      result = rename(src->narrow, dst->narrow);
      Py_END_ALLOW_THREADS
  
-+
 +#ifdef HAVE_RENAMEAT
 +    if (renameat_unavailable) {
 +        argument_unavailable_error(function_name, "src_dir_fd and dst_dir_fd");
@@ -577,7 +574,7 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error2(src, dst);
  #endif
-@@ -4333,6 +4572,9 @@ os_rmdir_impl(PyObject *module, path_t *
+@@ -4445,6 +4681,9 @@ os_rmdir_impl(PyObject *module, path_t *
  /*[clinic end generated code: output=080eb54f506e8301 input=38c8b375ca34a7e2]*/
  {
      int result;
@@ -587,7 +584,7 @@ https://github.com/python/cpython/pull/22855
  
      if (PySys_Audit("os.rmdir", "Oi", path->object,
                      dir_fd == DEFAULT_DIR_FD ? -1 : dir_fd) < 0) {
-@@ -4345,14 +4587,26 @@ os_rmdir_impl(PyObject *module, path_t *
+@@ -4457,14 +4696,26 @@ os_rmdir_impl(PyObject *module, path_t *
      result = !RemoveDirectoryW(path->wide);
  #else
  #ifdef HAVE_UNLINKAT
@@ -616,7 +613,7 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error(path);
  
-@@ -4496,6 +4750,9 @@ os_unlink_impl(PyObject *module, path_t 
+@@ -4608,6 +4859,9 @@ os_unlink_impl(PyObject *module, path_t
  /*[clinic end generated code: output=621797807b9963b1 input=d7bcde2b1b2a2552]*/
  {
      int result;
@@ -626,14 +623,13 @@ https://github.com/python/cpython/pull/22855
  
      if (PySys_Audit("os.remove", "Oi", path->object,
                      dir_fd == DEFAULT_DIR_FD ? -1 : dir_fd) < 0) {
-@@ -4509,15 +4766,27 @@ os_unlink_impl(PyObject *module, path_t 
+@@ -4621,15 +4875,26 @@ os_unlink_impl(PyObject *module, path_t
      result = !Py_DeleteFileW(path->wide);
  #else
  #ifdef HAVE_UNLINKAT
 -    if (dir_fd != DEFAULT_DIR_FD)
 +    if (dir_fd != DEFAULT_DIR_FD) {
 +      if (HAVE_UNLINKAT_RUNTIME) {
-+
          result = unlinkat(dir_fd, path->narrow, 0);
 -    else
 +      } else {
@@ -656,12 +652,12 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error(path);
  
-@@ -4690,7 +4959,16 @@ typedef struct {
+@@ -4802,7 +5067,16 @@ typedef struct {
  static int
  utime_dir_fd(utime_t *ut, int dir_fd, const char *path, int follow_symlinks)
  {
 -#ifdef HAVE_UTIMENSAT
-+#if defined(__APPLE__) &&  defined(HAVE_UTIMENSAT)
++#if defined(__APPLE__) && defined(HAVE_UTIMENSAT)
 +    if (HAVE_UTIMENSAT_RUNTIME) {
 +        int flags = follow_symlinks ? 0 : AT_SYMLINK_NOFOLLOW;
 +        UTIME_TO_TIMESPEC;
@@ -674,17 +670,14 @@ https://github.com/python/cpython/pull/22855
      int flags = follow_symlinks ? 0 : AT_SYMLINK_NOFOLLOW;
      UTIME_TO_TIMESPEC;
      return utimensat(dir_fd, path, time, flags);
-@@ -4717,11 +4995,30 @@ static int
+@@ -4829,11 +5103,26 @@ static int
  utime_fd(utime_t *ut, int fd)
  {
  #ifdef HAVE_FUTIMENS
-+
-+    if (HAVE_FUTIMENS_RUNTIME) {
-+
++  if (HAVE_FUTIMENS_RUNTIME) {
      UTIME_TO_TIMESPEC;
      return futimens(fd, time);
 -#else
-+
 +    } else
 +#ifndef HAVE_FUTIMES
 +    {
@@ -696,7 +689,6 @@ https://github.com/python/cpython/pull/22855
 +        return -1;
 +    }
 +#endif
-+
 +#endif
 +#ifdef HAVE_FUTIMES
 +    {
@@ -706,7 +698,7 @@ https://github.com/python/cpython/pull/22855
  #endif
  }
  
-@@ -4740,11 +5037,27 @@ static int
+@@ -4852,11 +5141,27 @@ static int
  utime_nofollow_symlinks(utime_t *ut, const char *path)
  {
  #ifdef HAVE_UTIMENSAT
@@ -737,7 +729,7 @@ https://github.com/python/cpython/pull/22855
  #endif
  }
  
-@@ -4755,7 +5068,15 @@ utime_nofollow_symlinks(utime_t *ut, con
+@@ -4867,7 +5172,15 @@ utime_nofollow_symlinks(utime_t *ut, con
  static int
  utime_default(utime_t *ut, const char *path)
  {
@@ -754,20 +746,7 @@ https://github.com/python/cpython/pull/22855
      UTIME_TO_TIMESPEC;
      return utimensat(DEFAULT_DIR_FD, path, time, 0);
  #elif defined(HAVE_UTIMES)
-@@ -4964,9 +5285,10 @@ os_utime_impl(PyObject *module, path_t *
- #endif
- 
- #if defined(HAVE_FUTIMESAT) || defined(HAVE_UTIMENSAT)
--    if ((dir_fd != DEFAULT_DIR_FD) || (!follow_symlinks))
-+    if ((dir_fd != DEFAULT_DIR_FD) || (!follow_symlinks)) {
-         result = utime_dir_fd(&utime, dir_fd, path->narrow, follow_symlinks);
--    else
-+
-+    } else
- #endif
- 
- #if defined(HAVE_FUTIMES) || defined(HAVE_FUTIMENS)
-@@ -4979,6 +5301,14 @@ os_utime_impl(PyObject *module, path_t *
+@@ -5091,6 +5404,14 @@ os_utime_impl(PyObject *module, path_t *
  
      Py_END_ALLOW_THREADS
  
@@ -782,32 +761,31 @@ https://github.com/python/cpython/pull/22855
      if (result < 0) {
          /* see previous comment about not putting filename in error here */
          posix_error();
-@@ -5377,6 +5707,9 @@ parse_posix_spawn_flags(const char *func
+@@ -5489,6 +5810,9 @@ parse_posix_spawn_flags(const char *func
      }
  
      if (setsid) {
 +#ifdef HAVE_POSIX_SPAWN_SETSID_RUNTIME
-+        if (HAVE_POSIX_SPAWN_SETSID_RUNTIME) {
++      if (HAVE_POSIX_SPAWN_SETSID_RUNTIME) {
 +#endif
  #ifdef POSIX_SPAWN_SETSID
          all_flags |= POSIX_SPAWN_SETSID;
  #elif defined(POSIX_SPAWN_SETSID_NP)
-@@ -5385,6 +5718,14 @@ parse_posix_spawn_flags(const char *func
+@@ -5497,6 +5821,13 @@ parse_posix_spawn_flags(const char *func
          argument_unavailable_error(func_name, "setsid");
          return -1;
  #endif
 +
 +#ifdef HAVE_POSIX_SPAWN_SETSID_RUNTIME
-+        } else {
-+            argument_unavailable_error(func_name, "setsid");
-+            return -1;
-+        }
++      } else {
++          argument_unavailable_error(func_name, "setsid");
++          return -1;
++      }
 +#endif /* HAVE_POSIX_SPAWN_SETSID_RUNTIME */
-+
      }
  
     if (setsigmask) {
-@@ -7931,16 +8272,30 @@ os_readlink_impl(PyObject *module, path_
+@@ -8043,16 +8374,30 @@ os_readlink_impl(PyObject *module, path_
  #if defined(HAVE_READLINK)
      char buffer[MAXPATHLEN+1];
      ssize_t length;
@@ -841,7 +819,7 @@ https://github.com/python/cpython/pull/22855
      if (length < 0) {
          return path_error(path);
      }
-@@ -8136,6 +8491,9 @@ os_symlink_impl(PyObject *module, path_t
+@@ -8248,6 +8593,9 @@ os_symlink_impl(PyObject *module, path_t
      static int windows_has_symlink_unprivileged_flag = TRUE;
  #else
      int result;
@@ -851,15 +829,13 @@ https://github.com/python/cpython/pull/22855
  #endif
  
      if (PySys_Audit("os.symlink", "OOi", src->object, dst->object,
-@@ -8198,14 +8556,25 @@ os_symlink_impl(PyObject *module, path_t
-     }
+@@ -8311,13 +8659,24 @@ os_symlink_impl(PyObject *module, path_t
  
      Py_BEGIN_ALLOW_THREADS
--#if HAVE_SYMLINKAT
+ #if HAVE_SYMLINKAT
 -    if (dir_fd != DEFAULT_DIR_FD)
 -        result = symlinkat(src->narrow, dir_fd, dst->narrow);
 -    else
-+#ifdef HAVE_SYMLINKAT
 +    if (dir_fd != DEFAULT_DIR_FD) {
 +        if (HAVE_SYMLINKAT_RUNTIME) {
 +            result = symlinkat(src->narrow, dir_fd, dst->narrow);
@@ -881,7 +857,7 @@ https://github.com/python/cpython/pull/22855
      if (result)
          return path_error2(src, dst);
  #endif
-@@ -8477,6 +8846,9 @@ os_open_impl(PyObject *module, path_t *p
+@@ -8589,6 +8948,9 @@ os_open_impl(PyObject *module, path_t *p
  {
      int fd;
      int async_err = 0;
@@ -891,7 +867,7 @@ https://github.com/python/cpython/pull/22855
  
  #ifdef O_CLOEXEC
      int *atomic_flag_works = &_Py_open_cloexec_works;
-@@ -8501,9 +8873,15 @@ os_open_impl(PyObject *module, path_t *p
+@@ -8613,9 +8975,15 @@ os_open_impl(PyObject *module, path_t *p
          fd = _wopen(path->wide, flags, mode);
  #else
  #ifdef HAVE_OPENAT
@@ -910,7 +886,7 @@ https://github.com/python/cpython/pull/22855
  #endif /* HAVE_OPENAT */
              fd = open(path->narrow, flags, mode);
  #endif /* !MS_WINDOWS */
-@@ -8511,6 +8889,13 @@ os_open_impl(PyObject *module, path_t *p
+@@ -8623,6 +8991,13 @@ os_open_impl(PyObject *module, path_t *p
      } while (fd < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
      _Py_END_SUPPRESS_IPH
  
@@ -924,37 +900,10 @@ https://github.com/python/cpython/pull/22855
      if (fd < 0) {
          if (!async_err)
              PyErr_SetFromErrnoWithFilenameObject(PyExc_OSError, path->object);
-@@ -9081,12 +9466,25 @@ os_preadv_impl(PyObject *module, int fd,
-     } while (n < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
- #else
-     do {
-+#ifdef __APPLE__
-+/* This entire function will be removed from the module dict when the API
-+ * is not available.
-+ */
-+#pragma clang diagnostic push
-+#pragma clang diagnostic ignored "-Wunguarded-availability"
-+#pragma clang diagnostic ignored "-Wunguarded-availability-new"
-+#endif
-         Py_BEGIN_ALLOW_THREADS
-         _Py_BEGIN_SUPPRESS_IPH
-         n = preadv(fd, iov, cnt, offset);
-         _Py_END_SUPPRESS_IPH
+@@ -9192,6 +9567,14 @@ os_preadv_impl(PyObject *module, int fd,
          Py_END_ALLOW_THREADS
      } while (n < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
-+
-+#ifdef __APPLE__
-+#pragma clang diagnostic pop
-+#endif
-+
- #endif
- 
-     iov_cleanup(iov, buf, cnt);
-@@ -9651,6 +10049,15 @@ os_pwritev_impl(PyObject *module, int fd
-         Py_END_ALLOW_THREADS
-     } while (result < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
  #else
-+
 +#ifdef __APPLE__
 +/* This entire function will be removed from the module dict when the API
 + * is not available.
@@ -966,19 +915,42 @@ https://github.com/python/cpython/pull/22855
      do {
          Py_BEGIN_ALLOW_THREADS
          _Py_BEGIN_SUPPRESS_IPH
-@@ -9658,6 +10065,11 @@ os_pwritev_impl(PyObject *module, int fd
+@@ -9199,6 +9582,9 @@ os_preadv_impl(PyObject *module, int fd,
          _Py_END_SUPPRESS_IPH
          Py_END_ALLOW_THREADS
-     } while (result < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
-+
+     } while (n < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
 +#ifdef __APPLE__
 +#pragma clang diagnostic pop
 +#endif
-+
  #endif
  
      iov_cleanup(iov, buf, cnt);
-@@ -10553,13 +10965,6 @@ os_statvfs_impl(PyObject *module, path_t
+@@ -9781,6 +10167,14 @@ os_pwritev_impl(PyObject *module, int fd
+         Py_END_ALLOW_THREADS
+     } while (result < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
+ #else
++#ifdef __APPLE__
++/* This entire function will be removed from the module dict when the API
++ * is not available.
++ */
++#pragma clang diagnostic push
++#pragma clang diagnostic ignored "-Wunguarded-availability"
++#pragma clang diagnostic ignored "-Wunguarded-availability-new"
++#endif
+     do {
+         Py_BEGIN_ALLOW_THREADS
+         _Py_BEGIN_SUPPRESS_IPH
+@@ -9788,6 +10182,9 @@ os_pwritev_impl(PyObject *module, int fd
+         _Py_END_SUPPRESS_IPH
+         Py_END_ALLOW_THREADS
+     } while (result < 0 && errno == EINTR && !(async_err = PyErr_CheckSignals()));
++#ifdef __APPLE__
++#pragma clang diagnostic pop
++#endif
+ #endif
+ 
+     iov_cleanup(iov, buf, cnt);
+@@ -10683,13 +11080,6 @@ os_statvfs_impl(PyObject *module, path_t
      Py_BEGIN_ALLOW_THREADS
  #ifdef HAVE_FSTATVFS
      if (path->fd != -1) {
@@ -992,7 +964,7 @@ https://github.com/python/cpython/pull/22855
          result = fstatvfs(path->fd, &st);
      }
      else
-@@ -12617,12 +13022,16 @@ DirEntry_fetch_stat(DirEntry *self, int 
+@@ -12747,12 +13137,16 @@ DirEntry_fetch_stat(DirEntry *self, int
      const char *path = PyBytes_AS_STRING(ub);
      if (self->dir_fd != DEFAULT_DIR_FD) {
  #ifdef HAVE_FSTATAT
@@ -1011,7 +983,7 @@ https://github.com/python/cpython/pull/22855
      }
      else
  #endif
-@@ -13428,6 +13837,7 @@ os_scandir_impl(PyObject *module, path_t
+@@ -13558,6 +13952,7 @@ os_scandir_impl(PyObject *module, path_t
      errno = 0;
  #ifdef HAVE_FDOPENDIR
      if (path->fd != -1) {
@@ -1019,7 +991,7 @@ https://github.com/python/cpython/pull/22855
          /* closedir() closes the FD, so we duplicate it */
          fd = _Py_dup(path->fd);
          if (fd == -1)
-@@ -13436,6 +13846,11 @@ os_scandir_impl(PyObject *module, path_t
+@@ -13566,6 +13961,11 @@ os_scandir_impl(PyObject *module, path_t
          Py_BEGIN_ALLOW_THREADS
          iterator->dirp = fdopendir(fd);
          Py_END_ALLOW_THREADS
@@ -1031,12 +1003,11 @@ https://github.com/python/cpython/pull/22855
      }
      else
  #endif
-@@ -14425,137 +14840,210 @@ static struct PyModuleDef posixmodule = 
+@@ -14556,137 +14956,205 @@ static struct PyModuleDef posixmodule =
  };
  
  
 -static const char * const have_functions[] = {
-+
 +#define PROBE(name, test) \
 +   static int name(void)  \
 +   {                      \
@@ -1078,7 +1049,7 @@ https://github.com/python/cpython/pull/22855
 +#ifdef HAVE_RENAMEAT
 +PROBE(probe_renameat, HAVE_RENAMEAT_RUNTIME)
 +#endif
-+
+ 
 +#ifdef HAVE_UNLINKAT
 +PROBE(probe_unlinkat, HAVE_UNLINKAT_RUNTIME)
 +#endif
@@ -1103,14 +1074,10 @@ https://github.com/python/cpython/pull/22855
 +PROBE(probe_utimensat, HAVE_UTIMENSAT_RUNTIME)
 +#endif
 +
-+
-+
-+
 +static const struct have_function {
 +    const char * const label;
 +    int (*probe)(void);
 +} have_functions[] = {
- 
  #ifdef HAVE_FACCESSAT
 -    "HAVE_FACCESSAT",
 +    { "HAVE_FACCESSAT", probe_faccessat },
@@ -1272,11 +1239,11 @@ https://github.com/python/cpython/pull/22855
  #endif
  
 -    NULL
-+    { NULL, NULL }
++    { NULL, NULL },
  };
  
  
-@@ -14564,12 +15052,28 @@ INITFUNC(void)
+@@ -14695,12 +15163,28 @@ INITFUNC(void)
  {
      PyObject *m, *v;
      PyObject *list;
@@ -1306,52 +1273,16 @@ https://github.com/python/cpython/pull/22855
      /* Initialize environ dictionary */
      v = convertenviron();
      Py_XINCREF(v);
-@@ -14676,44 +15180,6 @@ INITFUNC(void)
+@@ -14807,7 +15291,7 @@ INITFUNC(void)
      }
      PyModule_AddObject(m, "uname_result", (PyObject *)UnameResultType);
  
 -#ifdef __APPLE__
--    /*
--     * Step 2 of weak-linking support on Mac OS X.
--     *
--     * The code below removes functions that are not available on the
--     * currently active platform.
--     *
--     * This block allow one to use a python binary that was build on
--     * OSX 10.4 on OSX 10.3, without losing access to new APIs on
--     * OSX 10.4.
--     */
--#ifdef HAVE_FSTATVFS
--    if (fstatvfs == NULL) {
--        if (PyObject_DelAttrString(m, "fstatvfs") == -1) {
--            return NULL;
--        }
--    }
--#endif /* HAVE_FSTATVFS */
--
--#ifdef HAVE_STATVFS
--    if (statvfs == NULL) {
--        if (PyObject_DelAttrString(m, "statvfs") == -1) {
--            return NULL;
--        }
--    }
--#endif /* HAVE_STATVFS */
--
--# ifdef HAVE_LCHOWN
--    if (lchown == NULL) {
--        if (PyObject_DelAttrString(m, "lchown") == -1) {
--            return NULL;
--        }
--    }
--#endif /* HAVE_LCHOWN */
--
--
--#endif /* __APPLE__ */
--
-     Py_INCREF(TerminalSizeType);
-     PyModule_AddObject(m, "terminal_size", (PyObject*)TerminalSizeType);
- 
-@@ -14738,14 +15204,17 @@ INITFUNC(void)
++#if 0
+     /*
+      * Step 2 of weak-linking support on Mac OS X.
+      *
+@@ -14869,8 +15353,10 @@ INITFUNC(void)
      list = PyList_New(0);
      if (!list)
          return NULL;
@@ -1364,10 +1295,3 @@ https://github.com/python/cpython/pull/22855
          if (!unicode)
              return NULL;
          if (PyList_Append(list, unicode))
-             return NULL;
-         Py_DECREF(unicode);
-     }
-+
-     PyModule_AddObject(m, "_have_functions", list);
- 
-     Py_INCREF((PyObject *) &DirEntryType);
