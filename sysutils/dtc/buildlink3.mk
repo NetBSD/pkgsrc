@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/08/14 05:25:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/09/09 19:18:13 adam Exp $
 
 BUILDLINK_TREE+=	dtc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dtc
 DTC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dtc+=	dtc>=1.7.0
-BUILDLINK_ABI_DEPENDS.dtc?=	dtc>=1.7.0nb1
+BUILDLINK_ABI_DEPENDS.dtc+=	dtc>=1.7.0nb1
 BUILDLINK_PKGSRCDIR.dtc?=	../../sysutils/dtc
 .endif	# DTC_BUILDLINK3_MK
 
