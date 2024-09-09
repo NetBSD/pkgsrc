@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/29 19:31:43 nia Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/09 07:38:31 nia Exp $
 
 DISTNAME=	fheroes2-1.1.1
 CATEGORIES=	games
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++17 filesystem
 
 # work with netbsd-9 compiler
 BUILDLINK_TRANSFORM+=	rm:-Wextra-semi
