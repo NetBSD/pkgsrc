@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/09/04 09:01:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/09 10:39:21 nia Exp $
 
-DISTNAME=	bulk-test-go-20240831
+DISTNAME=	bulk-test-go-20240909
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -105,7 +105,8 @@ DEPENDS+=	k6-[0-9]*:../../net/k6
 DEPENDS+=	kubectl-[0-9]*:../../net/kubectl
 DEPENDS+=	libquic-[0-9]*:../../net/libquic
 DEPENDS+=	mangos-[0-9]*:../../net/mangos
-DEPENDS+=	minikube-[0-9]*:../../net/minikube
+# Only for specific platforms with Kubernetes support
+#DEPENDS+=	minikube-[0-9]*:../../net/minikube
 DEPENDS+=	nats-server-[0-9]*:../../net/nats-server
 DEPENDS+=	obfs4proxy-[0-9]*:../../net/obfs4proxy
 DEPENDS+=	opentofu-[0-9]*:../../net/opentofu
