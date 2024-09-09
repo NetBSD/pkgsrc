@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/08/04 17:44:24 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/09 19:13:19 pin Exp $
 
-DISTNAME=	bandsnatch-0.3.2
+DISTNAME=	bandsnatch-0.3.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ovyerus/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
