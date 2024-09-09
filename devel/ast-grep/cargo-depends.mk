@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2024/08/26 06:28:56 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2024/09/09 19:12:07 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -50,6 +50,7 @@ CARGO_CRATE_DEPENDS+=	crossterm_winapi-0.9.1
 CARGO_CRATE_DEPENDS+=	crunchy-0.2.2
 CARGO_CRATE_DEPENDS+=	ctor-0.2.8
 CARGO_CRATE_DEPENDS+=	dashmap-5.5.3
+CARGO_CRATE_DEPENDS+=	dashmap-6.0.1
 CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
 CARGO_CRATE_DEPENDS+=	dyn-clone-1.0.17
@@ -200,7 +201,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-sg-0.21.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-0.3.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.1.0
-CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.22.8
+CARGO_CRATE_DEPENDS+=	tree-sitter-php-0.23.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-python-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-ruby-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-rust-0.21.2
@@ -208,6 +209,7 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-scala-0.22.1
 CARGO_CRATE_DEPENDS+=	tree-sitter-sequel-0.3.5
 CARGO_CRATE_DEPENDS+=	tree-sitter-swift-0.5.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-typescript-0.21.2
+CARGO_CRATE_DEPENDS+=	tree-sitter-yaml-0.6.1
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.23
