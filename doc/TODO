@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24811 2024/09/09 07:07:36 adam Exp $
+$NetBSD: TODO,v 1.24812 2024/09/09 15:52:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -1174,11 +1174,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-vdirsyncer-0.19.2 [https://github.com/pimutils/vdirsyncer/issues/1015]
 	o py-watchdog-5.0.2
 	o py-yubiauth-0.3.10
-	o python310-3.10.15
-	o python311-3.11.10
-	o python312-3.12.6
-	o python38-3.8.20
-	o python39-3.9.20
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qconf-2.5
