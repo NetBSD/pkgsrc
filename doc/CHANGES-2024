@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5545 2024/09/10 08:29:09 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5546 2024/09/10 08:45:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8554,3 +8554,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-tox to 4.18.1 [adam 2024-09-10]
 	Updated databases/py-multidict to 6.1.0 [adam 2024-09-10]
 	Updated misc/py-platformdirs to 4.3.2 [adam 2024-09-10]
+	Updated net/rclone to 1.68.0 [adam 2024-09-10]
+	Updated devel/py-filelock to 3.16.0 [adam 2024-09-10]
