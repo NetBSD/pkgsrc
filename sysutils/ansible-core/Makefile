@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/19 11:16:23 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/09/10 06:59:42 adam Exp $
 
-DISTNAME=	ansible_core-2.17.3
+DISTNAME=	ansible_core-2.17.4
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-core/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 
 USE_TOOLS+=	gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
