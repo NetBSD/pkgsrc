@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5542 2024/09/09 19:28:36 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5543 2024/09/10 07:00:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8548,3 +8548,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/dtc to 1.7.1 [adam 2024-09-09]
 	Updated math/fast_float to 6.1.6 [adam 2024-09-09]
 	Updated lang/nodejs to 22.8.0 [adam 2024-09-09]
+	Updated devel/py-importlib-resources to 6.4.5 [adam 2024-09-10]
+	Updated sysutils/ansible-core to 2.17.4 [adam 2024-09-10]
