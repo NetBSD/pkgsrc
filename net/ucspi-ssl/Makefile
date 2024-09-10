@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/08/01 11:48:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.65 2024/09/10 19:56:06 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.12.10
@@ -89,6 +89,7 @@ do-install: do-install-sslperl
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 
+BUILDLINK_API_DEPENDS.fehqlibs+=	fehqlibs>=19
 .include "../../net/fehqlibs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
