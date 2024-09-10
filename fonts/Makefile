@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2024/05/03 20:39:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.427 2024/09/10 13:55:55 ryoon Exp $
 #
 
 COMMENT=	Fonts
@@ -228,6 +228,7 @@ SUBDIR+=	neumeister-otf
 SUBDIR+=	noto-cjk-fonts
 SUBDIR+=	noto-emoji-ttf
 SUBDIR+=	noto-fonts
+SUBDIR+=	noto-hentaigana
 SUBDIR+=	noto-ttf
 SUBDIR+=	ohruri-ttf
 SUBDIR+=	otf2bdf
