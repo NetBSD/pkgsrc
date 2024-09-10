@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2024/06/26 19:44:08 adam Exp $
+# $NetBSD: Makefile,v 1.89 2024/09/10 07:23:40 adam Exp $
 
-DISTNAME=	virtualenv-20.26.3
+DISTNAME=	virtualenv-20.26.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -29,8 +29,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-time-machine>=2.10:../../time/py-time-machine
 USE_LANGUAGES=	c # for tests
 
 REPLACE_PYTHON=	virtualenv.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	# see patches
