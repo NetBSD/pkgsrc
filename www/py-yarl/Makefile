@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/09/04 11:03:02 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/09/10 10:37:54 adam Exp $
 
-DISTNAME=	yarl-1.9.8
+DISTNAME=	yarl-1.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -15,7 +15,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
+TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults-[0-9]*:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
