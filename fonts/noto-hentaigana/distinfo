@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/10 13:54:54 ryoon Exp $
+
+BLAKE2s (NotoSerifHentaigana-v1.000.zip) = 9892a529072fa5df9651971d7afb166703144bc316b85a0ba2fee4a20e05b063
+SHA512 (NotoSerifHentaigana-v1.000.zip) = 70e59b3883f602a0feeb4af34e616217b8f0e16f2dc474d43979f713e3ff319c5145882582fc1abace9c7a56479322e73eb9cb5b5b636e0de9c7bee158049ca9
+Size (NotoSerifHentaigana-v1.000.zip) = 6694755 bytes
