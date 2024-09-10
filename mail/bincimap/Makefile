@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/28 04:14:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/10 20:02:28 schmonz Exp $
 
-DISTNAME=		bincimap-2.0.15
+DISTNAME=		bincimap-2.0.16
 CATEGORIES=		mail
 MASTER_SITES=		https://www.fehcom.de/binc/
 EXTRACT_SUFX=		.tgz
@@ -49,6 +49,9 @@ INSTALLATION_DIRS+=	${EGDIR}
 
 BUILD_DEFS+=		BINCIMAP_LOG_USER UCSPI_SSL_USER UCSPI_SSL_GROUP
 BUILD_DEFS+=		QMAILDIR SSLDIR
+
+post-configure:
+	${ECHO} ${CXX:Q} ${CXXFLAGS:Q} ${CPPFLAGS:Q} > ${DJB_CONFIG_DIR}/conf-cc
 
 post-build:
 	cd ${WRKSRC}/man; for f in *.9; do				\
