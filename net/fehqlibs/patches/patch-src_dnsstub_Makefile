@@ -1,14 +1,15 @@
-$NetBSD: patch-dnsstub_Makefile,v 1.1 2024/04/15 16:24:52 schmonz Exp $
+$NetBSD: patch-src_dnsstub_Makefile,v 1.1 2024/09/10 20:08:29 schmonz Exp $
 
 Libtoolize for portable shared libraries.
 
---- dnsstub/Makefile.orig	2022-07-07 20:34:43.000000000 +0000
-+++ dnsstub/Makefile
-@@ -1,7 +1,17 @@
+--- src/dnsstub/Makefile.orig	2024-07-21 10:43:29.000000000 +0000
++++ src/dnsstub/Makefile
+@@ -1,8 +1,18 @@
+ # dnsstub Makefile
  
 +SHELL=/bin/sh
 +
-+CCFLAGS=-I../include
++CCFLAGS=-I../../include
 +
 +.SUFFIXES: .lo
 +.c.lo:
@@ -17,13 +18,13 @@ Libtoolize for portable shared libraries.
 +OBJS=dns_cname.lo dns_dfd.lo dns_domain.lo dns_dtda.lo dns_ip.lo dns_ipq.lo \
 +     dns_mx.lo dns_name.lo dns_nd.lo dns_packet.lo dns_random.lo dns_rcip.lo \
 +     dns_rcrw.lo dns_resolve.lo dns_sortip.lo dns_transmit.lo dns_txt.lo
- COMPILE=../compile
- MAKELIB=../makelib
--CCFLAGS=-I../include
+ COMPILE=../../compile
+ MAKELIB=../../makelib
+-CCFLAGS=-I../../include
  
  default: clean check dnsresolv.a
  
-@@ -11,13 +21,5 @@ check:
+@@ -12,13 +22,5 @@ check:
  clean:
  	rm -f `cat TARGETS`
  
