@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/08/17 15:51:43 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2024/09/10 01:28:35 gdt Exp $
 
 DISTNAME=	mongodb-4.4.29
 PKGREVISION=	1
@@ -30,7 +30,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++17 filesystem
-GCC_REQD+=		10
 
 USE_TOOLS+=	pkg-config
 
