@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5551 2024/09/10 13:56:12 bouyer Exp $
+$NetBSD: CHANGES-2024,v 1.5552 2024/09/10 13:58:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8565,3 +8565,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xenkernel418 to 20240909 [bouyer 2024-09-10]
 	Updated sysutils/xentools418 to 20240909 [bouyer 2024-09-10]
 	Added fonts/noto-hentaigana version 1.000 [ryoon 2024-09-10]
+	Added editors/wordtsar version 0.3.719 [ryoon 2024-09-10]
