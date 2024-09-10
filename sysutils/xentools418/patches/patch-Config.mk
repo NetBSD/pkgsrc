@@ -1,11 +1,11 @@
-$NetBSD: patch-Config.mk,v 1.1 2023/11/21 11:37:03 bouyer Exp $
+$NetBSD: patch-Config.mk,v 1.2 2024/09/10 12:40:15 bouyer Exp $
 
 Make sure to pass pkgsrc CFLAGS.
 Use -R instead if -rpath, to appease our linker (--enable-rpath bug ?)
 
---- Config.mk.orig	2020-12-08 15:28:31.000000000 +0100
-+++ Config.mk	2020-12-14 11:48:10.669586105 +0100
-@@ -33,7 +33,7 @@
+--- Config.mk.orig	2024-08-14 15:45:06.000000000 +0200
++++ Config.mk	2024-09-10 13:09:54.189244858 +0200
+@@ -37,7 +37,7 @@
  
  # Tools to run on system hosting the build
  HOSTCFLAGS  = -Wall -Werror -Wstrict-prototypes -O2 -fomit-frame-pointer
@@ -14,16 +14,16 @@ Use -R instead if -rpath, to appease our linker (--enable-rpath bug ?)
  
  DISTDIR     ?= $(XEN_ROOT)/dist
  DESTDIR     ?= /
-@@ -188,6 +188,8 @@
+@@ -177,6 +177,8 @@
  
  CFLAGS += -Wall -Wstrict-prototypes
  
 +CFLAGS += ${EXTRA_CFLAGS}
 +
- $(call cc-option-add,HOSTCFLAGS,HOSTCC,-Wdeclaration-after-statement)
- $(call cc-option-add,CFLAGS,CC,-Wdeclaration-after-statement)
  $(call cc-option-add,CFLAGS,CC,-Wno-unused-but-set-variable)
-@@ -198,7 +200,7 @@
+ $(call cc-option-add,CFLAGS,CC,-Wno-unused-local-typedefs)
+ 
+@@ -185,7 +187,7 @@
  LDFLAGS += $(foreach i, $(PREPEND_LIB), -L$(i))
  CFLAGS += $(foreach i, $(PREPEND_INCLUDES), -I$(i))
  ifeq ($(XEN_TOOLS_RPATH),y)
