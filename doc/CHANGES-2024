@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5546 2024/09/10 08:45:56 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5547 2024/09/10 10:39:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8556,3 +8556,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-platformdirs to 4.3.2 [adam 2024-09-10]
 	Updated net/rclone to 1.68.0 [adam 2024-09-10]
 	Updated devel/py-filelock to 3.16.0 [adam 2024-09-10]
+	Updated www/py-yarl to 1.11.1 [adam 2024-09-10]
+	Updated net/py-aiormq to 6.8.1 [adam 2024-09-10]
