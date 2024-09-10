@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/28 04:14:16 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2024/09/10 20:02:28 schmonz Exp $
 
-BLAKE2s (bincimap-2.0.15.tgz) = 885216804bcacee41cf345df3928a5e73f8400c2c00dc90b8d9d5a7897ba80fd
-SHA512 (bincimap-2.0.15.tgz) = 6b6dec279d4c5d835b7468542004e754cef58238c3f80bf89715a4f7cfb00dc1450d0c1c8ae78286a7e8eb6eaac0215944e0a8fdbe637f17f24a5de9af80bdde
-Size (bincimap-2.0.15.tgz) = 153600 bytes
+BLAKE2s (bincimap-2.0.16.tgz) = 653a262ed193c31f0a135e9013694b27312fdce61f7bfb01ecdeef7026655f95
+SHA512 (bincimap-2.0.16.tgz) = 061b6dcd074490ca2bcb5a0fe2ca0b1a55e2794701e02f68f2b001a576e10077554fd9cf499440f30681f98ec5d4a1b869d099a974f4515f157512464e1ef5b3
+Size (bincimap-2.0.16.tgz) = 148286 bytes
