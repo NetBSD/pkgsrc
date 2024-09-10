@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/23 19:47:42 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/09/10 10:38:49 adam Exp $
 
-BLAKE2s (aiormq-6.8.0.tar.gz) = e91032510b488c9e03fdc6b2e7dae37278c1fe681e25052de12b8fe8cf439762
-SHA512 (aiormq-6.8.0.tar.gz) = 8028af7d77e1e52cc442cbf56360fae229490997a8fc612208e28af168a06e0c5c1ab29e0308532c8600ec8b9661970a561c7ae87a03f2c99425fc0cd6fcf5d8
-Size (aiormq-6.8.0.tar.gz) = 26582 bytes
+BLAKE2s (aiormq-6.8.1.tar.gz) = 1c4120353fbacb8320ee08737515a037ae249b30301c25fab140c9d5481caf18
+SHA512 (aiormq-6.8.1.tar.gz) = 4b7387f456321254c389c56c54e14eb4f8ebb7b28ff3eece6ae91682cfba32c6deef308f818c63c4cf07ab099b55723656d6f4a11061d2eae30d52b233cf41e3
+Size (aiormq-6.8.1.tar.gz) = 30528 bytes
