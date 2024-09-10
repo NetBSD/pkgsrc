@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2024/07/31 08:08:29 adam Exp $
+# $NetBSD: Makefile,v 1.132 2024/09/10 12:36:15 adam Exp $
 
-DISTNAME=	pytest-8.3.2
+DISTNAME=	pytest-8.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -27,8 +27,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
