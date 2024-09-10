@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5556 2024/09/10 20:10:02 schmonz Exp $
+$NetBSD: CHANGES-2024,v 1.5557 2024/09/10 20:10:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8571,3 +8571,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/bincimap to 2.0.16 [schmonz 2024-09-10]
 	Updated net/fehqlibs to 25a [schmonz 2024-09-10]
 	Updated net/ucspi-tcp6 to 1.13.00 [schmonz 2024-09-10]
+	Updated net/djbdnscurve6 to 45 [schmonz 2024-09-10]
