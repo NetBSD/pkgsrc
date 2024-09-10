@@ -1,0 +1,15 @@
+$NetBSD: patch-install,v 1.3 2024/09/10 20:08:29 schmonz Exp $
+
+Fix build.
+
+--- install.orig	2024-09-09 01:41:04.749243496 +0000
++++ install
+@@ -2,7 +2,7 @@
+ 
+ . ./conf-build
+ 
+-install_libs() { cp *.a $OFILES "$LIBDIR" ; }
++install_libs() { ( cd src; cp *.a $OFILES "$LIBDIR" ; ) }
+ install_hdrs() { cp include/*.h "$HDRDIR" ; }
+ 
+ echo -n "Installing qlibs ..."
