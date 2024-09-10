@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.257 2024/09/10 07:55:14 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.258 2024/09/10 11:28:08 spz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -5067,7 +5067,7 @@ sudo>=1.7<1.7.4p5	security-bypass		http://www.sudo.ws/sudo/alerts/runas_group_pw
 exim<4.73		privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4345
 asterisk<1.6.2.16.1	buffer-overflow		http://downloads.digium.com/pub/security/AST-2011-001.html
 asterisk>=1.8<1.8.2.2	buffer-overflow		http://downloads.digium.com/pub/security/AST-2011-001.html
-p5-Convert-UUlib<1.34	denial-of-service	http://secunia.com/advisories/42998/
+p5-Convert-UUlib<1.4	denial-of-service	http://secunia.com/advisories/42998/
 pango<1.28.3nb2		denial-of-service	http://secunia.com/advisories/42934/
 fuse>=2.0		denial-of-service	http://secunia.com/advisories/42961/
 maradns<1.4.06		remote-system-access	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0520
