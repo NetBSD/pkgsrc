@@ -1,0 +1,12 @@
+$NetBSD: patch-src_it=d,v 1.1 2024/09/10 20:10:46 schmonz Exp $
+
+Fix build.
+
+--- src/it=d.orig	2024-08-19 21:30:58.000000000 +0000
++++ src/it=d
+@@ -2,4 +2,4 @@ it-server
+ it-clients
+ it-conf
+ it-misc
+-it-sys
++it-setup
