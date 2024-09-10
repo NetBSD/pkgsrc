@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/08/25 06:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2024/09/10 09:02:54 wiz Exp $
 
 DISTNAME=	qbittorrent-4.6.6
 CATEGORIES=	net
@@ -18,8 +18,6 @@ USE_TOOLS+=	pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 # error "Boost.Stacktrace requires `_Unwind_Backtrace` function
 CMAKE_CONFIGURE_ARGS+=	-DSTACKTRACE=OFF
-
-GCC_REQD+=	10 # c++14
 
 LDFLAGS.NetBSD+=	-ljemalloc
 
