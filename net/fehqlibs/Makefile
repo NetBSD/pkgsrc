@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/04/15 16:24:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2024/09/10 20:08:29 schmonz Exp $
 
-DISTNAME=		fehQlibs-23
+DISTNAME=		fehQlibs-25a
 PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-/}
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/fehQlibs/
 EXTRACT_SUFX=		.tgz
@@ -12,10 +11,14 @@ HOMEPAGE=		https://www.fehcom.de/ipnet/qlibs.html
 COMMENT=		State-of-the-art C routines for Internet services
 LICENSE=		public-domain
 
+WRKSRC=			${WRKDIR}/${DISTNAME:C/a$//}
+
 MAKE_JOBS_SAFE=		no
 USE_LIBTOOL=		yes
+HAS_CONFIGURE=		yes
 
 BUILD_TARGET=		libs shared
+BUILD_DIRS=		src
 
 REPLACE_SH=		configure install
 
@@ -27,25 +30,23 @@ SUBST_NOOP_OK.echo=	yes # ECHO_N may be "echo -n"
 
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	do-configure
-SUBST_FILES.etc=	dnsstub/dns_rcrw.c
+SUBST_FILES.etc=	src/dnsstub/dns_rcrw.c
 SUBST_SED.etc=		-e 's|/etc/dnsrewrite|${PKG_SYSCONFBASE}/dnsrewrite|g'
 
 SUBST_CLASSES+=		libtool
 SUBST_STAGE.libtool=	pre-configure
-SUBST_FILES.libtool=	Makefile
+SUBST_FILES.libtool=	src/Makefile
 SUBST_SED.libtool=	-e 's|\$$(MAKELIB) \$$(LDFLAGS) |$$(MAKELIB) |g'
 SUBST_SED.libtool+=	-e 's|\.o|\.lo|g'
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
 
-do-configure:
-	cd ${WRKSRC};								\
+pre-configure:
 	${ECHO} "LIBDIR=${DESTDIR}${PREFIX}/lib/qlibs" >> ${WRKSRC}/conf-build;	\
-	${ECHO} "HDRDIR=${DESTDIR}${PREFIX}/include/qlibs" >> ${WRKSRC}/conf-build; \
-	${MAKE} check
+	${ECHO} "HDRDIR=${DESTDIR}${PREFIX}/include/qlibs" >> ${WRKSRC}/conf-build
 
 post-install:
-	cd ${WRKSRC} && for lib in *.la; do \
+	cd ${WRKSRC}/src && for lib in *.la; do \
 		${LIBTOOL} --mode=install ${INSTALL_LIB} $${lib} \
 			${DESTDIR}${PREFIX}/lib/qlibs; \
 	done
