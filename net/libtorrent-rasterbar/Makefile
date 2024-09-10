@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/02/19 18:16:02 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/09/10 08:55:15 wiz Exp $
 
 DISTNAME=	libtorrent-rasterbar-2.0.10
 CATEGORIES=	net
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 # Use GNU language variant to get builtin alloca definition.
 USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	pkg-config
-
-GCC_REQD+=	6 # c++14
 
 PKGCONFIG_OVERRIDE+=	libtorrent-rasterbar.pc.in
 
