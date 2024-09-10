@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2024/08/22 12:13:32 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.50 2024/09/10 11:43:06 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -974,6 +974,8 @@ ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_fixed.f90
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_free.f90
 ${PYSITELIB}/numpy/f2py/tests/src/modules/gh25337/data.f90
 ${PYSITELIB}/numpy/f2py/tests/src/modules/gh25337/use_data.f90
+${PYSITELIB}/numpy/f2py/tests/src/modules/gh26920/two_mods_with_no_public_entities.f90
+${PYSITELIB}/numpy/f2py/tests/src/modules/gh26920/two_mods_with_one_public_routine.f90
 ${PYSITELIB}/numpy/f2py/tests/src/modules/module_data_docstring.f90
 ${PYSITELIB}/numpy/f2py/tests/src/modules/use_modules.f90
 ${PYSITELIB}/numpy/f2py/tests/src/negative_bounds/issue_20853.f90
