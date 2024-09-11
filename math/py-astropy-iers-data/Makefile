@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/14 10:58:29 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/11 11:43:32 adam Exp $
 
-DISTNAME=	astropy_iers_data-0.2024.8.12.0.32.58
+DISTNAME=	astropy_iers_data-0.2024.9.2.0.33.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy-iers-data/}
@@ -18,8 +18,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata-[0-9]*:../../net/py-test-remotedata
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
