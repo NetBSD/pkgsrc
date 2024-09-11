@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2024/08/24 15:57:19 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2024/09/11 19:45:05 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
@@ -166,7 +166,7 @@ CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.14
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.22
 CARGO_CRATE_DEPENDS+=	unicode-segmentation-1.10.1
-CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
+CARGO_CRATE_DEPENDS+=	unicode-width-0.1.12
 CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.10
 CARGO_CRATE_DEPENDS+=	url-2.5.0
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
