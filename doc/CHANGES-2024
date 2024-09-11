@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5564 2024/09/11 09:46:26 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5565 2024/09/11 11:45:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8581,3 +8581,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-asn1-modules to 0.4.1 [adam 2024-09-11]
 	Updated sysutils/py-watchdog to 5.0.2 [adam 2024-09-11]
 	Updated sysutils/ansible to 10.4.0 [adam 2024-09-11]
+	Updated math/py-astropy-iers-data to 0.2024.9.2.0.33.23 [adam 2024-09-11]
+	Updated math/py-astropy to 6.1.3 [adam 2024-09-11]
