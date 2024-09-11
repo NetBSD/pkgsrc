@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.258 2024/09/10 11:28:08 spz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.259 2024/09/11 06:07:22 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26000,17 +26000,15 @@ vte<0.76.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-37535
 vte3<0.76.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-37535
 libxml2<2.12.5	use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2024-25062
 libxml2<2.12.7	buffer-overread		https://nvd.nist.gov/vuln/detail/CVE-2024-34459
-# https://github.com/python/cpython/commit/29c97287d205bf2f410f4895ebce3f43b5160524
-python38-[0-9]*	race-condition	https://github.com/python/cpython/issues/114572
-# https://github.com/python/cpython/commit/b228655c227b2ca298a8ffac44d14ce3d22f6faa
-python39-[0-9]*	race-condition	https://github.com/python/cpython/issues/114572
+python38<3.8.20	race-condition	https://github.com/python/cpython/issues/114572
+python39<3.9.20	race-condition	https://github.com/python/cpython/issues/114572
 python310<3.10.4	race-condition	https://github.com/python/cpython/issues/114572
 python311<3.11.9	race-condition	https://github.com/python/cpython/issues/114572
 python312<3.12.3	race-condition	https://github.com/python/cpython/issues/114572
-python38-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
-python39-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
-python310-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
-python311-[0-9]*	ip-range-classification	https://github.com/python/cpython/issues/113171
+python38<3.8.20	ip-range-classification	https://github.com/python/cpython/issues/113171
+python39<3.9.20	ip-range-classification	https://github.com/python/cpython/issues/113171
+python310<3.10.15	ip-range-classification	https://github.com/python/cpython/issues/113171
+python311<3.11.10	ip-range-classification	https://github.com/python/cpython/issues/113171
 python312<3.12.4	ip-range-classification	https://github.com/python/cpython/issues/113171
 emacs29<29.4	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
 emacs28-[0-9]*	remote-user-access	https://list.orgmode.org/87sex5gdqc.fsf@localhost/
