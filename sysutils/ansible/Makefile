@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/08/19 16:13:52 tnn Exp $
+# $NetBSD: Makefile,v 1.80 2024/09/11 09:46:06 adam Exp $
 
-DISTNAME=	ansible-10.3.0
+DISTNAME=	ansible-10.4.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -13,11 +13,11 @@ PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	ansible-core>=2.17.2:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.17.4:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_WRKREF_SKIP=	*
