@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5567 2024/09/11 19:32:24 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5568 2024/09/11 19:45:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8586,3 +8586,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/lua-ftcsv to 1.4.0 [yhardy 2024-09-11]
 	Updated textproc/py-sphinx-autodoc-typehints to 2.4.0 [adam 2024-09-11]
 	Updated time/py-pytz to 2024.2 [adam 2024-09-11]
+	Updated textproc/git-delta to 0.18.2 [pin 2024-09-11]
