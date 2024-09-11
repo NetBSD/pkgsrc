@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2024/08/24 15:57:19 pin Exp $
+$NetBSD: distinfo,v 1.17 2024/09/11 19:45:05 pin Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -123,9 +123,9 @@ Size (crc32fast-1.3.2.crate) = 38661 bytes
 BLAKE2s (ctrlc-3.4.2.crate) = 40a8b253d2e556b535bd92d0e3bfc239ccbe5a806143cd173630efa72b175191
 SHA512 (ctrlc-3.4.2.crate) = 99fc52445a51438bbbefefedf6409efc6b9c8db8f8932bde8eebeda3bfa952d116923b6ea9762e3bd28521ddee17ca1c8fb9b24cf8fe287063ec2ffc696ec408
 Size (ctrlc-3.4.2.crate) = 14171 bytes
-BLAKE2s (delta-0.18.1.tar.gz) = 76d283858f44c22c13e7e8194159d931b31fa1650cbfc67ff2a475587abd36ec
-SHA512 (delta-0.18.1.tar.gz) = 545d753b5e9981d87f356e123d3e7f99340adbca5b963e67a2fa5291cc4e6a175462554c50733ad30931e39e7e615bcd0cfb1490c26968b12fe172edddf352e7
-Size (delta-0.18.1.tar.gz) = 531491 bytes
+BLAKE2s (delta-0.18.2.tar.gz) = e0584d3bff9fdf2d99304e0828a6b9080a34889f34a0909d95a88d6d75620e82
+SHA512 (delta-0.18.2.tar.gz) = c096e22e07945f004f4ef8e805d6dfe45ae53a2e9bcb46736f9764d76fcfa556ce1622157ab66021b8fa36a1e322f80fee217e7f3d9d3489ec4df1f8fc61ca67
+Size (delta-0.18.2.tar.gz) = 531261 bytes
 BLAKE2s (deranged-0.3.11.crate) = bfcf1fcac8bda51a4bcfc279f6900ed06df16264aa68c75d3df95db7b83e3e1b
 SHA512 (deranged-0.3.11.crate) = 48485666d3e50eb7976e91bed36bddbaea80fac4ac664723130069bd7d17893b6d1a2b82a4c3dd61677162e4305ba5ea8aec7bc2793d1b8b92dd1666c204fc43
 Size (deranged-0.3.11.crate) = 18043 bytes
@@ -501,9 +501,9 @@ Size (unicode-normalization-0.1.22.crate) = 122604 bytes
 BLAKE2s (unicode-segmentation-1.10.1.crate) = 1fbf059d99b61c44c6434f04b690268876af091fabb9b89bcc26ff83442b14c5
 SHA512 (unicode-segmentation-1.10.1.crate) = e96224bba73fe9a167bbf226bb13fe5bea085765a90f7232cb20b42f3c584242b7291aeba1eb8edbe2ae40e5bee2f4714f434324f79316b22e8437c77a50e86b
 Size (unicode-segmentation-1.10.1.crate) = 98416 bytes
-BLAKE2s (unicode-width-0.1.11.crate) = 07ad83fbcd009e792c80da1e1e4b0773440a5d0721987757d954da86d073829b
-SHA512 (unicode-width-0.1.11.crate) = ee06f4144525424327a17578642565f396802f0eea539b3bebc8d9627376a8bc6c5376d83a6ee577068e99fe75815bd765e6d49fb9ab9b253d00594bb15a5ffe
-Size (unicode-width-0.1.11.crate) = 19187 bytes
+BLAKE2s (unicode-width-0.1.12.crate) = 6ed9327a321e82b81eb7ec8855e172a789175adf65577b9655867eb0bc40bd95
+SHA512 (unicode-width-0.1.12.crate) = 0bafd7a69bdf49c849e7c063ebf0487eca8a76244e3bc18c9a5f4609465dc0e5d482daceb6a9a6f4125b801bf7063cb8225fdb55173e5dc55e7bf278300df1b4
+Size (unicode-width-0.1.12.crate) = 24062 bytes
 BLAKE2s (unsafe-libyaml-0.2.10.crate) = a2c3652ae346cbeeffc9424fc45da76db900eef2447ca575e1958183af14bcad
 SHA512 (unsafe-libyaml-0.2.10.crate) = 9989fd93105ae343ce3ed097fc66e62ad9fcb64b8ace4ac2f7bcd374782f9919082ba0bc0f246a9a7071c35172f08953560a8108553076a819d9d1d7dce9a5aa
 Size (unsafe-libyaml-0.2.10.crate) = 61964 bytes
