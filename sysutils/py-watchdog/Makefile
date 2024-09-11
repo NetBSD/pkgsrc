@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/08/12 14:28:20 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/09/11 09:40:46 adam Exp $
 
-DISTNAME=	watchdog-4.0.2
+DISTNAME=	watchdog-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchdog/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy-[0-9]*:../../lang/py-mypy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0.3:../../devel/py-test-timeout
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
