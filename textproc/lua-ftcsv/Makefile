@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2022/03/06 09:29:28 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/11 19:17:57 yhardy Exp $
 
-DISTNAME=	ftcsv-1.2.1
+DISTNAME=	ftcsv-1.4.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FourierTransformer/}
