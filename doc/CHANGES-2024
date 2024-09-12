@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5578 2024/09/12 15:44:36 sborrill Exp $
+$NetBSD: CHANGES-2024,v 1.5579 2024/09/12 16:15:38 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8598,3 +8598,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/grpc to 1.65.4nb1 [wiz 2024-09-12]
 	Updated www/e2guardian to 5.5.6r [sborrill 2024-09-12]
 	Updated devel/py-google-api-core to 2.19.2 [sborrill 2024-09-12]
+	Updated www/py-google-api-python-client to 2.145.0 [sborrill 2024-09-12]
