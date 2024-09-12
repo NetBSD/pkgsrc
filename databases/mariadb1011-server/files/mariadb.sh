@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mariadb.sh,v 1.1 2023/07/10 22:55:50 nia Exp $
+# $NetBSD: mariadb.sh,v 1.2 2024/09/12 18:59:24 adam Exp $
 #
 # PROVIDE: mariadb mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -10,16 +10,19 @@
 #	mariadb_flags=""		   # additional mariadb startup flags
 #	mariadb_datadir="/path/to/datadir" # path to mariadb datadir
 
-if [ -f /etc/rc.subr ]
-then
-	. /etc/rc.subr
+if [ -f @SYSCONFBASE@/rc.subr ]; then
+  . @SYSCONFBASE@/rc.subr
 fi
 
 name="mariadb"
 rcvar=${name}
-
-load_rc_config $name
 : ${mariadb_datadir:=@MARIADB_DATADIR@}
+
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
+        load_rc_config $name
+elif [ -f @SYSCONFBASE@/rc.conf ]; then
+        . @SYSCONFBASE@/rc.conf
+fi
 
 procname="@PREFIX@/sbin/mariadbd"
 command="@PREFIX@/bin/mariadbd-safe"
@@ -61,4 +64,22 @@ mariadb_prestart() {
 	ulimit -n 4096
 }
 
-run_rc_command "$1"
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
+	run_rc_command "$1"
+else
+	case "$1" in
+	initdb)
+		eval ${initdb_cmd}
+		;;
+	stop)
+		if [ -r "${pidfile}" ]; then
+			@ECHO@ "Stopping ${name}."
+			kill `@CAT@ ${pidfile}`
+		fi
+		;;
+	*)
+		eval ${start_precmd}
+		eval ${command} ${command_args}
+		;;
+	esac
+fi
