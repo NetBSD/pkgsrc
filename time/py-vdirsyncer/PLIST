@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.20 2023/08/07 18:16:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/09/12 09:21:03 wiz Exp $
 bin/vdirsyncer
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/vdirsyncer/__init__.py
 ${PYSITELIB}/vdirsyncer/__init__.pyc
 ${PYSITELIB}/vdirsyncer/__init__.pyo
@@ -51,15 +52,15 @@ ${PYSITELIB}/vdirsyncer/storage/base.pyo
 ${PYSITELIB}/vdirsyncer/storage/dav.py
 ${PYSITELIB}/vdirsyncer/storage/dav.pyc
 ${PYSITELIB}/vdirsyncer/storage/dav.pyo
-${PYSITELIB}/vdirsyncer/storage/etesync.py
-${PYSITELIB}/vdirsyncer/storage/etesync.pyc
-${PYSITELIB}/vdirsyncer/storage/etesync.pyo
 ${PYSITELIB}/vdirsyncer/storage/filesystem.py
 ${PYSITELIB}/vdirsyncer/storage/filesystem.pyc
 ${PYSITELIB}/vdirsyncer/storage/filesystem.pyo
 ${PYSITELIB}/vdirsyncer/storage/google.py
 ${PYSITELIB}/vdirsyncer/storage/google.pyc
 ${PYSITELIB}/vdirsyncer/storage/google.pyo
+${PYSITELIB}/vdirsyncer/storage/google_helpers.py
+${PYSITELIB}/vdirsyncer/storage/google_helpers.pyc
+${PYSITELIB}/vdirsyncer/storage/google_helpers.pyo
 ${PYSITELIB}/vdirsyncer/storage/http.py
 ${PYSITELIB}/vdirsyncer/storage/http.pyc
 ${PYSITELIB}/vdirsyncer/storage/http.pyo
