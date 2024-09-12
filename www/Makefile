@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1814 2024/08/29 15:01:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.1815 2024/09/12 09:18:24 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -692,6 +692,7 @@ SUBDIR+=	py-WebOb
 SUBDIR+=	py-WebTest
 SUBDIR+=	py-aiohttp
 SUBDIR+=	py-aiohttp-cors
+SUBDIR+=	py-aiohttp-oauthlib
 SUBDIR+=	py-aiohttp-remotes
 SUBDIR+=	py-aiohttp-socks
 SUBDIR+=	py-aioquic
