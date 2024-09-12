@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24820 2024/09/12 09:21:18 wiz Exp $
+$NetBSD: TODO,v 1.24821 2024/09/12 15:44:37 sborrill Exp $
 
 Suggested new packages
 ======================
@@ -1135,7 +1135,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-6.0
 	o py-glad2-2.0.7
-	o py-google-api-core-2.19.2
 	o py-google-api-python-client-2.144.0
 	o py-googleapis-common-protos-1.65.0
 	o py-grpcio-1.66.1
