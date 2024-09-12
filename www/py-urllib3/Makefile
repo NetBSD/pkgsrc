@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2024/08/15 21:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2024/09/12 19:38:21 adam Exp $
 
-DISTNAME=	urllib3-2.2.2
+DISTNAME=	urllib3-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4.0":../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 # optional dependencies:
 # "socks"; higher requirement from dev_requirements.txt
@@ -20,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-Socks>=1.7.1:../../net/py-Socks
 #DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../www/py-certify
 # but also needs unpackaged urlib3-secure-extra
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # brotli, zstd
 .include "options.mk"
 
@@ -30,10 +29,10 @@ PYTHON_VERSIONED_DEPENDENCIES+=	cryptography:test
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7.0.4:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.2.2:../../devel/py-freezegun
-TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.2.0:../../devel/py-test
 #TEST_DEPENDS+=	${PYPKGPREFIX}-towncrier>=21.9.0:../../wip/py-towncrier
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
+TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
+TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.26.2:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
 #hypercorn @ git+https://github.com/urllib3/hypercorn@urllib3-changes
 #pytest-memray==1.5.0; sys_platform!="win32" and implementation_name=="cpython"
