@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/12 09:18:00 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENCE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/aiohttp_oauthlib.py
+${PYSITELIB}/aiohttp_oauthlib.pyc
+${PYSITELIB}/aiohttp_oauthlib.pyo
