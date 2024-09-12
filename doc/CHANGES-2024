@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5583 2024/09/12 19:38:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5584 2024/09/12 19:48:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8606,3 +8606,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-regex to 2024.9.11 [adam 2024-09-12]
 	Updated time/py-backports-datetime-fromisoformat to 2.0.2 [adam 2024-09-12]
 	Updated www/py-urllib3 to 2.2.3 [adam 2024-09-12]
+	Updated devel/py-cattrs to 24.1.1 [adam 2024-09-12]
+	Updated devel/py-importlib-metadata to 8.5.0 [adam 2024-09-12]
