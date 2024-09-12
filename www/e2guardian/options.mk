@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2018/07/16 14:12:34 sborrill Exp $
+# $NetBSD: options.mk,v 1.4 2024/09/12 13:58:15 sborrill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e2guardian
-PKG_SUPPORTED_OPTIONS=	debug email commandline clamd ssl icap
-PKG_SUGGESTED_OPTIONS=	email ssl
+PKG_SUPPORTED_OPTIONS=	debug email commandline clamd icap
+PKG_SUGGESTED_OPTIONS=	email
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,14 +25,6 @@ PLIST_VARS+=		icap
 CONFIGURE_ARGS+=	--enable-icap
 PLIST.icap=		yes
 EGFILES_EXTRA+=		contentscanners/icap.conf
-.endif
-
-##
-## Enables ssl MITM
-##
-.if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--enable-sslmitm
-.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 # PLIST.avscan is shared between content scanners
