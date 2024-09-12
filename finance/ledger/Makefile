@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/09/12 17:01:25 riastradh Exp $
+# $NetBSD: Makefile,v 1.35 2024/09/12 19:13:14 riastradh Exp $
 
 DISTNAME=	ledger-3.3.2
 PKGREVISION=	6
@@ -17,6 +17,11 @@ USE_CXX_FEATURES+=	c++11
 
 USE_LANGUAGES=	c c++
 TEST_TARGET=	check
+
+# https://github.com/ledger/ledger/issues/2332
+PYTHON_VERSIONS_INCOMPATIBLE=	312	# PyUnicode_GET_SIZE
+
+CMAKE_CONFIGURE_ARGS+=	-DPython_EXECUTABLE:STRING=${TOOL_PYTHONBIN:Q}
 
 .include "options.mk"
 
