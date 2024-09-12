@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/12 09:18:00 wiz Exp $
+
+BLAKE2s (aiohttp-oauthlib-0.1.0.tar.gz) = 899e80f545e4dda5e08afbd2d91d36ef15fca697a7ff498627c0cbfe2ad24cda
+SHA512 (aiohttp-oauthlib-0.1.0.tar.gz) = 7cb9c05ea14b65a7ab371742d92c9e8bb12dc802e37263ec5d74bf69d273c2e431f1510768fd83a1057f64c0e3421628907ce247b34c31f6a449b88c8a27a715
+Size (aiohttp-oauthlib-0.1.0.tar.gz) = 8007 bytes
