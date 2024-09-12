@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2024/06/27 15:26:23 sborrill Exp $
+$NetBSD: distinfo,v 1.9 2024/09/12 13:58:15 sborrill Exp $
 
-BLAKE2s (e2guardian-5.5.5r.tar.gz) = 0cca95fda6bba23f8602fc7aadedeecbefde0daa6b8a35e306aae45521248903
-SHA512 (e2guardian-5.5.5r.tar.gz) = 25f902a8387a8d3cb3751bb7ef5e7f7e37aa6f377e7d3e3493faa0ff25d933b3dbdc6cff16a6b3427ae9d385f59342330c5692d933e197f25cd5b381d9c170bc
-Size (e2guardian-5.5.5r.tar.gz) = 2149828 bytes
+BLAKE2s (e2guardian-5.5.6r.tar.gz) = 64cfecfe1552f86d14e7c5cb4e1f5e352cda8523477a5683f0fe0e21e1845571
+SHA512 (e2guardian-5.5.6r.tar.gz) = 3446cfa51ee9f1d6bfb897c5dca639c9cbf25d2a3c03f5722dd6c51a542aa830e504bb03b53fe58cb2d4e8354a393b8668391dd97a626f54a7a7d4bdbc2d6634
+Size (e2guardian-5.5.6r.tar.gz) = 2150775 bytes
 SHA1 (patch-src_Logger.cpp) = b1f00a24f12c504781e9afa4637c888395aa0b57
 SHA1 (patch-src_Logger.hpp) = 7b5ad77b4efec717f758be1b243b697c21dbd3c9
