@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2024/06/10 09:27:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.119 2024/09/12 21:39:23 gutteridge Exp $
 
-PKGREVISION= 1
+PKGREVISION=	2
 .include "../../print/texlive/Makefile.common"
 
 PKGNAME=	luatex-1.18.0
@@ -88,7 +88,7 @@ do-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.3.2
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.4.0
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
