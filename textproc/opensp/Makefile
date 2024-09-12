@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/06/06 12:42:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.54 2024/09/12 22:31:17 gutteridge Exp $
 #
 
 DISTNAME=	OpenSP-1.5.2
@@ -25,6 +25,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-http \
 			--enable-default-catalog=${PREFIX}/share/sgml/catalog
 REPLACE_PERL+=		unicode/gensyntax.pl
+
+# Avoid bogus error with GCC 14 on some Linux distros.
+CFLAGS.Linux+=		-fpermissive
 
 TEST_TARGET=		check
 
