@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2024/07/30 03:49:54 adam Exp $
+# $NetBSD: Makefile,v 1.60 2024/09/12 18:58:22 adam Exp $
 
-DISTNAME=	xmlschema-3.3.2
+DISTNAME=	xmlschema-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xmlschema/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-elementpath>=4.4.0:../../textproc/py-elementpath
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in xmlschema-json2xml xmlschema-validate xmlschema-xml2json
