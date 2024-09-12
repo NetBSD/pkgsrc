@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.8 2024/09/11 19:46:35 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.9 2024/09/12 10:57:45 jperkin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -106,12 +106,12 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
 CARGO_CRATE_DEPENDS+=	quote-1.0.37
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
-CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.3
+CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.4
 CARGO_CRATE_DEPENDS+=	reqwest-0.12.7
 CARGO_CRATE_DEPENDS+=	ring-0.17.8
 CARGO_CRATE_DEPENDS+=	ripemd-0.1.3
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.24
-CARGO_CRATE_DEPENDS+=	rustix-0.38.36
+CARGO_CRATE_DEPENDS+=	rustix-0.38.37
 CARGO_CRATE_DEPENDS+=	rustls-0.23.13
 CARGO_CRATE_DEPENDS+=	rustls-pemfile-2.1.3
 CARGO_CRATE_DEPENDS+=	rustls-pki-types-1.8.0
@@ -155,7 +155,7 @@ CARGO_CRATE_DEPENDS+=	tracing-core-0.1.32
 CARGO_CRATE_DEPENDS+=	try-lock-0.2.5
 CARGO_CRATE_DEPENDS+=	typenum-1.17.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
-CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
+CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.13
 CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.23
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.13
 CARGO_CRATE_DEPENDS+=	untrusted-0.9.0
