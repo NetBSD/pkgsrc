@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2024/08/21 06:17:38 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/09/12 19:48:17 adam Exp $
 
-DISTNAME=	importlib_metadata-8.4.0
+DISTNAME=	importlib_metadata-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/importlib-metadata/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-zipp>=0.5:../../archivers/py-zipp
+DEPENDS+=	${PYPKGPREFIX}-zipp>=3.20:../../archivers/py-zipp
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.4:../../devel/py-jaraco.test
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
@@ -22,16 +22,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf-[0-9]*:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 309
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 .endif
-
-# test status as of 8.2.0
-# 1 failed, 107 passed, 1 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
