@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2024/09/12 21:39:23 gutteridge Exp $
+# $NetBSD: Makefile,v 1.120 2024/09/12 21:48:43 gutteridge Exp $
 
 PKGREVISION=	2
 .include "../../print/texlive/Makefile.common"
@@ -16,7 +16,9 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/libs/potrace
 EXTRACT_ELEMENTS+=	${DISTNAME}/libs/pplib
 EXTRACT_ELEMENTS+=	${DISTNAME}/texk/web2c
 
-USE_LANGUAGES=		c99 c++11
+USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
 USE_TOOLS+=		gmake gsed lex perl yacc
 GNU_CONFIGURE_STRICT=	no # libs
 CONFIGURE_ARGS+=	--disable-aleph
