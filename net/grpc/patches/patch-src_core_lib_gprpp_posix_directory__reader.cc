@@ -1,6 +1,7 @@
-$NetBSD: patch-src_core_lib_gprpp_posix_directory__reader.cc,v 1.1 2024/09/12 12:58:54 wiz Exp $
+$NetBSD: patch-src_core_lib_gprpp_posix_directory__reader.cc,v 1.2 2024/09/12 13:14:15 wiz Exp $
 
 Add NetBSD support.
+https://github.com/grpc/grpc/pull/37700
 
 --- src/core/lib/gprpp/posix/directory_reader.cc.orig	2024-09-12 12:38:10.451743828 +0000
 +++ src/core/lib/gprpp/posix/directory_reader.cc
