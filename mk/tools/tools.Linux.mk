@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.71 2024/08/06 03:50:23 tnn Exp $
+# $NetBSD: tools.Linux.mk,v 1.72 2024/09/12 22:12:32 gutteridge Exp $
 #
 # System-supplied tools for the Linux operating system.
 #
@@ -247,6 +247,9 @@ TOOLS_PLATFORM.tsort?=		${_path}/tsort
 .  endif
 .  if exists(${_path}/uniq)
 TOOLS_PLATFORM.uniq?=		${_path}/uniq
+.  endif
+.  if exists(${_path}/unzip)
+TOOLS_PLATFORM.unzip?=		${_path}/unzip
 .  endif
 .  if exists(${_path}/wc)
 TOOLS_PLATFORM.wc?=		${_path}/wc
