@@ -1,8 +1,14 @@
-This is intended to be a collection of utilities to replace parts
-of pkgsrc's mk infrastructure.
+This is a highly-performant collection of utilities that provide
+alternate implementations for parts of the pkgsrc mk infrastructure.
 
-Many targets under `mk/` are implemented using a combination of
+Many targets under pkgsrc/mk are implemented using a combination of
 shell and awk, and can suffer from a lack of performance, especially
-when input sizes grow.
+when the number of input files grows significantly.
 
-This is an alpha version and work-in-progress.
+The replacement tools provided by mktool can be anywhere from 5 times
+up to 500 times faster than the defaults.
+
+Currently pkgsrc requires external patches to enable mktool, from
+https://github.com/TritonDataCenter/pkgsrc/tree/dev/mktool, though it
+is hoped that these will be committed to pkgsrc at some point in the
+future.

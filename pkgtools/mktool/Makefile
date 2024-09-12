@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2024/09/11 19:46:35 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/09/12 10:57:45 jperkin Exp $
 
-DISTNAME=	mktool-0.1.21
+DISTNAME=	mktool-1.0.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jperkin@pkgsrc.org
 HOMEPAGE=	https://github.com/jperkin/mktool/
-COMMENT=	pkgsrc mk helper tool
+COMMENT=	High performance alternatives for pkgsrc/mk
 LICENSE=	isc
 
 USE_LANGUAGES=	c
