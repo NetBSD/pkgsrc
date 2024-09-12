@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/08/08 15:02:57 he Exp $
+# $NetBSD: Makefile,v 1.68 2024/09/12 22:06:19 gutteridge Exp $
 
 DISTNAME=	rust-1.79.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -270,7 +270,7 @@ fix-relative-rpath:
 .  endfor
 # Only Linux builds link these binaries against an LLVM library
 .  if ${OPSYS} == "Linux"
-.    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-nm llvm-objcopy \
+.    for bin in llc llvm-ar llvm-as llvm-cov llvm-dis llvm-link llvm-nm llvm-objcopy \
 	   llvm-objdump llvm-profdata llvm-readobj llvm-size llvm-strip opt \
 	   rust-lld gcc-ld/ld64.lld gcc-ld/ld.lld gcc-ld/lld-link gcc-ld/wasm-ld
 	 ${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath ${RUST_LLVM_RPATH} \
