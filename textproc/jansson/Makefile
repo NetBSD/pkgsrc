@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2023/04/28 18:13:52 nikita Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/12 06:48:47 adam Exp $
 
 DISTNAME=	jansson-2.14
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=akheron/}
-GITHUB_PROJECT=	jansson
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.digip.org/jansson/
+HOMEPAGE=	https://github.com/akheron/jansson
 COMMENT=	C library for encoding, decoding and manipulating JSON data
 LICENSE=	mit
 
