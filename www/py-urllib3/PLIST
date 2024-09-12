@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/01/30 20:04:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/09/12 19:38:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -58,9 +58,15 @@ ${PYSITELIB}/urllib3/fields.pyo
 ${PYSITELIB}/urllib3/filepost.py
 ${PYSITELIB}/urllib3/filepost.pyc
 ${PYSITELIB}/urllib3/filepost.pyo
-${PYSITELIB}/urllib3/http2.py
-${PYSITELIB}/urllib3/http2.pyc
-${PYSITELIB}/urllib3/http2.pyo
+${PYSITELIB}/urllib3/http2/__init__.py
+${PYSITELIB}/urllib3/http2/__init__.pyc
+${PYSITELIB}/urllib3/http2/__init__.pyo
+${PYSITELIB}/urllib3/http2/connection.py
+${PYSITELIB}/urllib3/http2/connection.pyc
+${PYSITELIB}/urllib3/http2/connection.pyo
+${PYSITELIB}/urllib3/http2/probe.py
+${PYSITELIB}/urllib3/http2/probe.pyc
+${PYSITELIB}/urllib3/http2/probe.pyo
 ${PYSITELIB}/urllib3/poolmanager.py
 ${PYSITELIB}/urllib3/poolmanager.pyc
 ${PYSITELIB}/urllib3/poolmanager.pyo

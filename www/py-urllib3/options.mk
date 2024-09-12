@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2024/03/19 10:58:01 nia Exp $
+# $NetBSD: options.mk,v 1.2 2024/09/12 19:38:21 adam Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.py-urllib3
-PKG_SUPPORTED_OPTIONS=		brotli zstd
-PKG_SUGGESTED_OPTIONS=		brotli zstd
+PKG_OPTIONS_VAR=	PKG_OPTIONS.py-urllib3
+PKG_SUPPORTED_OPTIONS=	brotli zstd
+PKG_SUGGESTED_OPTIONS=	brotli zstd
 
 .include "../../mk/bsd.options.mk"
 
