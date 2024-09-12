@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2023/01/22 08:58:24 pin Exp $
+# $NetBSD: Makefile,v 1.52 2024/09/12 04:16:26 pin Exp $
 
-DISTNAME=	macchina-6.1.8
+DISTNAME=	macchina-6.2.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,11 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man7 share/examples/macchina
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man7 share/examples/macchina
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/macchina \
-		${DESTDIR}${PREFIX}/bin
+post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/macchina.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/macchina.1
 	${INSTALL_MAN} ${WRKSRC}/doc/macchina.7 \
