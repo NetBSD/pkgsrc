@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.173 2024/09/11 06:58:42 pin Exp $
+$NetBSD: distinfo,v 1.174 2024/09/12 05:28:49 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -84,12 +84,12 @@ Size (github.com_charmbracelet_bubbles_@v_v0.20.0.mod) = 1238 bytes
 BLAKE2s (github.com_charmbracelet_bubbles_@v_v0.20.0.zip) = 77672e7e7fd8d5d2d689cbad6e357ac17b4ba28b4db63f9fec2c72cba3a38f9c
 SHA512 (github.com_charmbracelet_bubbles_@v_v0.20.0.zip) = 2b224f2803420f257eadcc9d552a19c443dede025ecff92978957ca31dd2b4bf142b742f5e61a6c9a79a4bbf7ee814e07298b3f51db2861a593d76208f9cf142
 Size (github.com_charmbracelet_bubbles_@v_v0.20.0.zip) = 93604 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.1.0.mod) = b71fbd3c31ae7f5e598042d63a09f548e13a1e9e17fecf42113e84ba343c13b0
-SHA512 (github.com_charmbracelet_bubbletea_@v_v1.1.0.mod) = 03353b4e6d2752088a580f122b1ab4afc39444452a989a7e58ccfb98ca655d86e81f5cc48c7087fe8966c81aa3185d92ef8c93262b56772da97520dc5cc4552b
-Size (github.com_charmbracelet_bubbletea_@v_v1.1.0.mod) = 796 bytes
-BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.1.0.zip) = 7dca09d1b4b1ebd2210fcf0727beaac76d17ce2a9a2df01cac7612fb019da36c
-SHA512 (github.com_charmbracelet_bubbletea_@v_v1.1.0.zip) = c427fbf0624d0205ceca5d19d8c7758475a7f34bb4b092a6a4f2865185fb964179a97b6836553f07c07a50774cf6aee7e4d542f2e3fc98b9b57e7a37e4855278
-Size (github.com_charmbracelet_bubbletea_@v_v1.1.0.zip) = 76741 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.1.1.mod) = b71fbd3c31ae7f5e598042d63a09f548e13a1e9e17fecf42113e84ba343c13b0
+SHA512 (github.com_charmbracelet_bubbletea_@v_v1.1.1.mod) = 03353b4e6d2752088a580f122b1ab4afc39444452a989a7e58ccfb98ca655d86e81f5cc48c7087fe8966c81aa3185d92ef8c93262b56772da97520dc5cc4552b
+Size (github.com_charmbracelet_bubbletea_@v_v1.1.1.mod) = 796 bytes
+BLAKE2s (github.com_charmbracelet_bubbletea_@v_v1.1.1.zip) = 02d8f25d63096937aaa88f6a91aa64c661177d30014071b5eccdccb9852b5d89
+SHA512 (github.com_charmbracelet_bubbletea_@v_v1.1.1.zip) = 918ab9af5b9edba3c018a129d88b710c084ca48d10ed9b6b0349ba934143a89489a2da3e7b4b486a63c8a14c9853bd70307fc0dcb5dfacc8f81434d9e9f579f8
+Size (github.com_charmbracelet_bubbletea_@v_v1.1.1.zip) = 74390 bytes
 BLAKE2s (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 05ac768943d952cbe8c1b64db18533c6db94963ed0bf5984d2129e475f6d0ee6
 SHA512 (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 7e44098e8e2eff01a0d672807b3560df0982f2efc061dc195d3591a75b12760a4d5400ce1490e79075e75d3218bccc8ea54f5e2b0376778dcb3b561f45685a7d
 Size (github.com_charmbracelet_lipgloss_@v_v0.13.0.mod) = 737 bytes
@@ -561,8 +561,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-23.12.0.tar.gz) = 43202cf5c23228e9cfea2eaf2cb8a4252a584edc9bd2b6f4d4b65b6dfc277463
-SHA512 (oh-my-posh-23.12.0.tar.gz) = 2bd1255a634c0faa18e2a48450e84a93a3d212b138b2f0513637142664ee2f26275c38e5a055c477769a70db6f7320ac27142a69f1e2ced1754d41ac2a2bcc05
-Size (oh-my-posh-23.12.0.tar.gz) = 6678122 bytes
+BLAKE2s (oh-my-posh-23.13.0.tar.gz) = cdcac538f6e6358acbb64a6de12a926b8f1f2b113448f1b113924f2ecfa365cb
+SHA512 (oh-my-posh-23.13.0.tar.gz) = 955dad4b84390ea7fa072fc0df62ed9d9059eae85674216d259ea9371822484bc8cd6c93b38cf04222791e84d1314d8c9f0283ca195a6294e57df55ed4e448ec
+Size (oh-my-posh-23.13.0.tar.gz) = 6678510 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
