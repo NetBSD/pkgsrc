@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/02/08 06:20:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/09/12 18:55:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,6 +7,12 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/elementpath/__init__.py
 ${PYSITELIB}/elementpath/__init__.pyc
 ${PYSITELIB}/elementpath/__init__.pyo
+${PYSITELIB}/elementpath/_typing.py
+${PYSITELIB}/elementpath/_typing.pyc
+${PYSITELIB}/elementpath/_typing.pyo
+${PYSITELIB}/elementpath/aliases.py
+${PYSITELIB}/elementpath/aliases.pyc
+${PYSITELIB}/elementpath/aliases.pyo
 ${PYSITELIB}/elementpath/collations.py
 ${PYSITELIB}/elementpath/collations.pyc
 ${PYSITELIB}/elementpath/collations.pyo
@@ -43,6 +49,9 @@ ${PYSITELIB}/elementpath/datatypes/untyped.pyo
 ${PYSITELIB}/elementpath/datatypes/uri.py
 ${PYSITELIB}/elementpath/datatypes/uri.pyc
 ${PYSITELIB}/elementpath/datatypes/uri.pyo
+${PYSITELIB}/elementpath/decoder.py
+${PYSITELIB}/elementpath/decoder.pyc
+${PYSITELIB}/elementpath/decoder.pyo
 ${PYSITELIB}/elementpath/etree.py
 ${PYSITELIB}/elementpath/etree.pyc
 ${PYSITELIB}/elementpath/etree.pyo
