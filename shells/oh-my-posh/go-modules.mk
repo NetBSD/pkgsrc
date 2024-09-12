@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.72 2024/09/11 06:58:42 pin Exp $
+# $NetBSD: go-modules.mk,v 1.73 2024/09/12 05:28:49 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -28,8 +28,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.0.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.2.3.mod
