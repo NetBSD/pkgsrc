@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2023/08/07 18:16:15 adam Exp $
+$NetBSD: distinfo,v 1.51 2024/09/12 09:21:03 wiz Exp $
 
-BLAKE2s (vdirsyncer-0.18.0.tar.gz) = 75ef21cdefe1b91319bdcef6e783ad2ab26d21d6cb4c0db7e1300f2c0237e0a5
-SHA512 (vdirsyncer-0.18.0.tar.gz) = 7fb3d0f7d982d8390d278de1a620231e6ead1ec64057c5dbac98dcff491fa3e6b9ed8ba953995458e393aab73b0b9ab8ba14010e06f90a04d8ee2c28c7c7fbfd
-Size (vdirsyncer-0.18.0.tar.gz) = 115125 bytes
+BLAKE2s (vdirsyncer-0.19.3.tar.gz) = 640a1d4a30b0f7d7f46656af63160ab67bb539598845be6eef77cc6823553c58
+SHA512 (vdirsyncer-0.19.3.tar.gz) = 8651282302ad62b2bb6f7655429492dcff959cedc25e932d2e72deb2bb54406c6b5333fecdb14ae8c08ba3c20602856e8466198e24caee298fc9a08545fd3751
+Size (vdirsyncer-0.19.3.tar.gz) = 125478 bytes
