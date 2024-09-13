@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/08/25 10:45:47 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/09/13 09:46:07 wiz Exp $
 
-BLAKE2s (textual-0.77.0.tar.gz) = b98d2ff97df275ffc40251a886da0a2d21971bbf0a274effda787134c589c32a
-SHA512 (textual-0.77.0.tar.gz) = f6f2617026ec68e9a391bcdf8c095d8c25e3713840f876765d62273c199937f9cbdb28f6ccfaf0aa76a4b3000bb094c6a479da1187bc018aef4764fa1b01d5dc
-Size (textual-0.77.0.tar.gz) = 1347925 bytes
+BLAKE2s (textual-0.79.1.tar.gz) = 040b2413fc326e7024ab856d1671903bcb4b4dd8cabaec902cf4a7c6ad15d3fe
+SHA512 (textual-0.79.1.tar.gz) = da75b92972660a25c43e42e25f641288d0be1af6c6907d16ace91257353c879bbd2a4eb87c4d28f8f4f68c8d3968a793276f6ebed8e0c4c02fd66bfaf38ecb5f
+Size (textual-0.79.1.tar.gz) = 1366998 bytes
