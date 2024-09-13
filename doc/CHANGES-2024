@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5599 2024/09/13 09:42:49 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5600 2024/09/13 09:46:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8623,3 +8623,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-sphinx-autoapi to 3.3.1 [wiz 2024-09-13]
 	Updated shells/oh-my-posh to 23.13.1 [pin 2024-09-13]
 	Updated sysutils/zoxide to 0.9.5 [pin 2024-09-13]
+	Updated comms/py-textual to 0.79.1 [wiz 2024-09-13]
