@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/03/24 17:51:05 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/13 19:21:43 adam Exp $
 
-DISTNAME=	progressbar2-4.4.2
+DISTNAME=	progressbar2-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/progressbar2/}
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.6.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mypy-[0-9]*:../../devel/py-test-mypy
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
