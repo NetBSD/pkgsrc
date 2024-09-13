@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/13 18:02:44 jschauma Exp $
+include/oqs/common.h
+include/oqs/kem.h
+include/oqs/kem_bike.h
+include/oqs/kem_classic_mceliece.h
+include/oqs/kem_frodokem.h
+include/oqs/kem_hqc.h
+include/oqs/kem_kyber.h
+include/oqs/kem_ntruprime.h
+include/oqs/oqs.h
+include/oqs/oqsconfig.h
+include/oqs/rand.h
+include/oqs/sig.h
+include/oqs/sig_dilithium.h
+include/oqs/sig_falcon.h
+include/oqs/sig_sphincs.h
+lib/cmake/liboqs/liboqsConfig.cmake
+lib/cmake/liboqs/liboqsConfigVersion.cmake
+lib/cmake/liboqs/liboqsTargets-noconfig.cmake
+lib/cmake/liboqs/liboqsTargets.cmake
+lib/liboqs.a
+lib/pkgconfig/liboqs.pc

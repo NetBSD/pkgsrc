@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2024/09/13 18:02:45 jschauma Exp $
+include/oqs/kem_ml_kem.h
+include/oqs/sig_ml_dsa.h
