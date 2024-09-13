@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2023/08/26 10:54:11 vins Exp $
-bin/fq
+@comment $NetBSD: PLIST,v 1.2 2024/09/13 17:23:56 schmonz Exp $
 bin/nq
-bin/tq
-man/man1/fq
-man/man1/nq
-man/man1/tq
+bin/nqtail
+bin/nqterm
+man/man1/nq.1
+man/man1/nqtail.1
+man/man1/nqterm.1
