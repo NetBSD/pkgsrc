@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/04/05 10:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/13 08:28:55 wiz Exp $
 
-DISTNAME=	glad2-2.0.6
+DISTNAME=	glad2-2.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glad2/}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/glad ${DESTDIR}${PREFIX}/bin/glad${PYVERSSUFFIX} || ${TRUE}
