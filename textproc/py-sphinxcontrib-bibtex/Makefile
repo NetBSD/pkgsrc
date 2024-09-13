@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/08/10 07:57:44 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/13 16:59:49 adam Exp $
 
-DISTNAME=	sphinxcontrib-bibtex-2.6.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	sphinxcontrib_bibtex-2.6.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinxcontrib-bibtex/}
 
@@ -19,7 +19,12 @@ DEPENDS+=	${PYPKGPREFIX}-pybtex-docutils>=1.0.0:../../textproc/py-pybtex-docutil
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39 # py-sphinx
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} >= 312
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
