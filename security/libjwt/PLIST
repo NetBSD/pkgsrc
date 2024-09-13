@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/13 19:35:15 adam Exp $
+bin/jwtauth
+bin/jwtgen
+include/jwt.h
+lib/libjwt.la
+lib/pkgconfig/libjwt.pc
