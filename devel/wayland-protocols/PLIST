@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/18 09:21:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/13 10:03:03 wiz Exp $
 share/pkgconfig/wayland-protocols.pc
 share/wayland-protocols/stable/linux-dmabuf/linux-dmabuf-v1.xml
 share/wayland-protocols/stable/presentation-time/presentation-time.xml
@@ -11,6 +11,8 @@ share/wayland-protocols/staging/cursor-shape/cursor-shape-v1.xml
 share/wayland-protocols/staging/drm-lease/drm-lease-v1.xml
 share/wayland-protocols/staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml
 share/wayland-protocols/staging/ext-idle-notify/ext-idle-notify-v1.xml
+share/wayland-protocols/staging/ext-image-capture-source/ext-image-capture-source-v1.xml
+share/wayland-protocols/staging/ext-image-copy-capture/ext-image-copy-capture-v1.xml
 share/wayland-protocols/staging/ext-session-lock/ext-session-lock-v1.xml
 share/wayland-protocols/staging/ext-transient-seat/ext-transient-seat-v1.xml
 share/wayland-protocols/staging/fractional-scale/fractional-scale-v1.xml
@@ -21,6 +23,7 @@ share/wayland-protocols/staging/tearing-control/tearing-control-v1.xml
 share/wayland-protocols/staging/xdg-activation/xdg-activation-v1.xml
 share/wayland-protocols/staging/xdg-dialog/xdg-dialog-v1.xml
 share/wayland-protocols/staging/xdg-toplevel-drag/xdg-toplevel-drag-v1.xml
+share/wayland-protocols/staging/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml
 share/wayland-protocols/staging/xwayland-shell/xwayland-shell-v1.xml
 share/wayland-protocols/unstable/fullscreen-shell/fullscreen-shell-unstable-v1.xml
 share/wayland-protocols/unstable/idle-inhibit/idle-inhibit-unstable-v1.xml

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2024/04/18 09:21:33 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/09/13 10:03:04 wiz Exp $
 
-BLAKE2s (wayland-protocols-1.35.tar.xz) = 83fd82abd5fcd9f66b9d4b9a1cf9da6c91358723ad0035ddb37c18649477a8ad
-SHA512 (wayland-protocols-1.35.tar.xz) = b4b915e145955f9c844d7ce4564ad13a854a4e7d4355913ef4cae7f09ab3e52ee69dceb6c76c9b7f82f1ab5c01071f0e5b00ce75cc7ab58274201eb4a4639710
-Size (wayland-protocols-1.35.tar.xz) = 95512 bytes
+BLAKE2s (wayland-protocols-1.37.tar.xz) = e7c9949f6937774435a3a1389c6b53f29831eb292449d718ca621fcc338ae57d
+SHA512 (wayland-protocols-1.37.tar.xz) = 57936a23d08957afa9563b51b2b195aa10410fa74176c0503f83b1544e243d4e5b99c3daf5fc14c0a68a78d3f5759e1a5ca9fe4ba22220cbf5328168903c7575
+Size (wayland-protocols-1.37.tar.xz) = 100356 bytes
 SHA1 (patch-stable_xdg-shell_xdg-shell.xml) = 767110b838fefca2aaa34634d1ea770965defc8a
 SHA1 (patch-unstable_xdg-output_xdg-output-unstable-v1.xml) = 919a059ecf7cdb424b37a4d7dac6efe55fbf8f6d
