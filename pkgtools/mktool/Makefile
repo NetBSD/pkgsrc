@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/09/13 10:39:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/13 19:23:30 jperkin Exp $
 
-DISTNAME=	mktool-1.0.1
+DISTNAME=	mktool-1.1.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jperkin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,8 @@ LICENSE=	isc
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
+
+RUST_REQ=	1.74.0
 
 .include "cargo-depends.mk"
 

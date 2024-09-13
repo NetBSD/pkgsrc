@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/09/12 10:57:45 jperkin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/09/13 19:23:30 jperkin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -82,6 +82,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.158
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
 CARGO_CRATE_DEPENDS+=	log-0.4.22
+CARGO_CRATE_DEPENDS+=	md-5-0.10.6
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
 CARGO_CRATE_DEPENDS+=	mime-0.3.17
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.0
@@ -100,7 +101,7 @@ CARGO_CRATE_DEPENDS+=	pin-project-internal-1.1.5
 CARGO_CRATE_DEPENDS+=	pin-project-lite-0.2.14
 CARGO_CRATE_DEPENDS+=	pin-utils-0.1.0
 CARGO_CRATE_DEPENDS+=	pkg-config-0.3.30
-CARGO_CRATE_DEPENDS+=	pkgsrc-0.1.30
+CARGO_CRATE_DEPENDS+=	pkgsrc-0.1.32
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.7.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
 CARGO_CRATE_DEPENDS+=	quote-1.0.37
