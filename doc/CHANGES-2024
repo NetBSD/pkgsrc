@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5617 2024/09/13 18:07:51 jschauma Exp $
+$NetBSD: CHANGES-2024,v 1.5618 2024/09/13 19:18:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8642,3 +8642,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Added security/liboqs version 0.10.1 [jschauma 2024-09-13]
 	Updated math/four-bar-rs to 7.0.2 [pin 2024-09-13]
 	Added security/oqs-provider version 0.6.1 [jschauma 2024-09-13]
+	Updated devel/orc to 0.4.40 [adam 2024-09-13]
+	Updated textproc/py-mdit-py-plugins to 0.4.2 [adam 2024-09-13]
+	Updated devel/py-msgpack to 1.1.0 [adam 2024-09-13]
+	Updated math/py-asteval to 1.0.3 [adam 2024-09-13]
