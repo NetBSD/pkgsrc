@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5591 2024/09/13 08:25:12 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5592 2024/09/13 08:27:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8615,3 +8615,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/libspiro to 1.5.0.20240903 [wiz 2024-09-13]
 	Updated graphics/py-cairo-shared to 1.27.0 [wiz 2024-09-13]
 	Updated graphics/py-cairo to 1.27.0 [wiz 2024-09-13]
+	Updated graphics/py-contourpy to 1.3.0 [wiz 2024-09-13]
