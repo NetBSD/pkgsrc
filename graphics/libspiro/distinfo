@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/04/27 12:29:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/09/13 08:15:40 wiz Exp $
 
-BLAKE2s (libspiro-dist-20221101.tar.gz) = 5f4aab87e534e6f773e1a01f86a678eca27ce55d7baa21a7dc645efc8f833b09
-SHA512 (libspiro-dist-20221101.tar.gz) = a4fd1d225da94f4146b2d086f1c0d0111ca0b1efc1d1a051d4f1d995af424cf573072791118d6e0a5c06462ff1dd58b2ce662dbb6a46c6aa082c1319030899f8
-Size (libspiro-dist-20221101.tar.gz) = 434906 bytes
+BLAKE2s (libspiro-dist-20240903.tar.gz) = a4f346d7afab05a121e9b31f1c8707cac04cd671fd571e24fd287239c9fa2aeb
+SHA512 (libspiro-dist-20240903.tar.gz) = b6d6d408aaf3cc908bbca931a3343b9efc399196b1b46e0b6a7cd83de730ef2b3a63eb64dd8be2c660a9725143d898b949305cea3ab47f1dd1a2774afcb731aa
+Size (libspiro-dist-20240903.tar.gz) = 436645 bytes
