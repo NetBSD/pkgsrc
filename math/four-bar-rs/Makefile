@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2024/09/05 20:46:39 pin Exp $
+# $NetBSD: Makefile,v 1.19 2024/09/13 18:04:02 pin Exp $
 
-DISTNAME=	four-bar-rs-7.0.1
-PKGREVISION=	1
+DISTNAME=	four-bar-rs-7.0.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	8f223aac4a07bf0d9cfd2f14e5daff4a1025a609
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/KmolYuan/four-bar-rs/
 COMMENT=	Simulator and synthesizing tool for four-bar linkage mechanism
 LICENSE=	gnu-agpl-v3
 
+TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
+#RUST_REQ=	1.80.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
+#This package is confirmed to build with Rust 1.80.1 on amd64
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
