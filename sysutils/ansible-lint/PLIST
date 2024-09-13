@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/05/27 11:19:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/09/13 19:39:35 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -120,6 +120,10 @@ ${PYSITELIB}/ansiblelint/rules/galaxy.md
 ${PYSITELIB}/ansiblelint/rules/galaxy.py
 ${PYSITELIB}/ansiblelint/rules/galaxy.pyc
 ${PYSITELIB}/ansiblelint/rules/galaxy.pyo
+${PYSITELIB}/ansiblelint/rules/galaxy_version_incorrect.md
+${PYSITELIB}/ansiblelint/rules/galaxy_version_incorrect.py
+${PYSITELIB}/ansiblelint/rules/galaxy_version_incorrect.pyc
+${PYSITELIB}/ansiblelint/rules/galaxy_version_incorrect.pyo
 ${PYSITELIB}/ansiblelint/rules/ignore_errors.md
 ${PYSITELIB}/ansiblelint/rules/ignore_errors.py
 ${PYSITELIB}/ansiblelint/rules/ignore_errors.pyc
