@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/13 07:04:32 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/09/13 16:59:49 adam Exp $
 
-BLAKE2s (sphinxcontrib-bibtex-2.6.2.tar.gz) = 6e3df02e2a67ae1e5cc435214a492559d4f217bc224db4f6ba01639e4da7bd45
-SHA512 (sphinxcontrib-bibtex-2.6.2.tar.gz) = a2b48306078de902cfdedbcafe94ea8aefcfff5285ec651fd1d0fe2c452818f9383ba486fb64e2ef4a294782445db2854bbdd158ab2aa1a49ed4adef85e9c82b
-Size (sphinxcontrib-bibtex-2.6.2.tar.gz) = 117459 bytes
+BLAKE2s (sphinxcontrib_bibtex-2.6.3.tar.gz) = b1ec53e4eeea348cf6f2b97b414b5c59f9785094cc25316dde96450eedd24317
+SHA512 (sphinxcontrib_bibtex-2.6.3.tar.gz) = 5f5e6ff1616735987c2ff9826853db0ec739f7477100b5abb60208233ccd962fe43946f372c42ace53353a2983b1eeefade0a5020cd848ef8ba1289b533d2248
+Size (sphinxcontrib_bibtex-2.6.3.tar.gz) = 117177 bytes
