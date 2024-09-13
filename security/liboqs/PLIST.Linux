@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2024/09/13 18:02:45 jschauma Exp $
+include/oqs/aes.h
+include/oqs/sha2.h
+include/oqs/sha3.h
+include/oqs/sha3x4.h
