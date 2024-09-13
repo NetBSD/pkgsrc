@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5588 2024/09/13 08:13:55 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5589 2024/09/13 08:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8612,3 +8612,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cbindgen to 0.27.0 [wiz 2024-09-13]
 	Updated devel/gopls to 0.16.2 [wiz 2024-09-13]
 	Updated devel/jj to 0.21.0 [wiz 2024-09-13]
+	Updated graphics/libspiro to 1.5.0.20240903 [wiz 2024-09-13]
