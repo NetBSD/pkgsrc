@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/08/10 08:09:23 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/09/13 19:25:24 adam Exp $
 
-DISTNAME=	sphinx-automodapi-0.17.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	sphinx_automodapi-0.18.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-automodapi/}
 
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39 # py-sphinx
 
 # Filenames with non-ASCII characters are not portable.
 post-extract:
