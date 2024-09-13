@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.254 2024/08/30 12:33:55 adam Exp $
+# $NetBSD: Makefile,v 1.255 2024/09/13 09:35:06 wiz Exp $
 
-DISTNAME=	setuptools-74.0.0
+DISTNAME=	setuptools-74.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -28,8 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.0.0:../../textproc/py-tomli_w
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=13.0.0:../../devel/py-virtualenv
 
-# as of 74.0.0
-# 32 failed, 1141 passed, 45 skipped, 10 xfailed, 2 xpassed, 1 error
+# as of 74.1.2
+# 34 failed, 1141 passed, 41 skipped, 10 xfailed, 2 xpassed, 1 error
 
 # Pick setuptools.tests which are not built nor installed.
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
