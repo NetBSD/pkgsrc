@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile,v 1.4 2024/03/17 14:19:18 wiz Exp $
+$NetBSD: patch-Makefile,v 1.5 2024/09/13 09:59:13 wiz Exp $
 
 - Avoid to possibly pass extra optimization CFLAGS
 - Do not override PCLIBDIR for FreeBSD, NetBSD and DragonFly
 
---- Makefile.orig	2024-03-17 11:31:58.000000000 +0000
+--- Makefile.orig	2024-08-26 13:07:00.000000000 +0000
 +++ Makefile
-@@ -19,7 +19,7 @@ OBJ := $(SRC:.c=.o)
+@@ -23,7 +23,7 @@ OBJ := $(SRC:.c=.o)
  
  # define default flags, and override to append mandatory flags
  ARFLAGS := rcs
@@ -14,9 +14,9 @@ $NetBSD: patch-Makefile,v 1.4 2024/03/17 14:19:18 wiz Exp $
  override CFLAGS += -std=c11 -fPIC -fvisibility=hidden
  override CFLAGS += -Ilib/src -Ilib/src/wasm -Ilib/include
  
-@@ -41,9 +41,6 @@ else
- 	SOEXTVER = so.$(SONAME_MAJOR).$(SONAME_MINOR)
- 	LINKSHARED += -shared -Wl,-soname,libtree-sitter.so.$(SONAME_MAJOR)
+@@ -43,9 +43,6 @@ else
+ 	SOEXTVER = $(SOEXT).$(SONAME_MAJOR).$(SONAME_MINOR)
+ 	LINKSHARED += -shared -Wl,-soname,libtree-sitter.$(SOEXTVER)
  endif
 -ifneq ($(filter $(shell uname),FreeBSD NetBSD DragonFly),)
 -	PCLIBDIR := $(PREFIX)/libdata/pkgconfig
