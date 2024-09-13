@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/08/02 07:36:54 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/09/13 19:17:34 adam Exp $
 
-DISTNAME=	asteval-1.0.2
+DISTNAME=	asteval-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asteval/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
