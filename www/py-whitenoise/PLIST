@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2018/10/11 10:55:56 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/09/13 19:30:23 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/whitenoise/__init__.py
 ${PYSITELIB}/whitenoise/__init__.pyc
 ${PYSITELIB}/whitenoise/__init__.pyo
@@ -13,12 +13,6 @@ ${PYSITELIB}/whitenoise/base.pyo
 ${PYSITELIB}/whitenoise/compress.py
 ${PYSITELIB}/whitenoise/compress.pyc
 ${PYSITELIB}/whitenoise/compress.pyo
-${PYSITELIB}/whitenoise/django.py
-${PYSITELIB}/whitenoise/django.pyc
-${PYSITELIB}/whitenoise/django.pyo
-${PYSITELIB}/whitenoise/httpstatus_backport.py
-${PYSITELIB}/whitenoise/httpstatus_backport.pyc
-${PYSITELIB}/whitenoise/httpstatus_backport.pyo
 ${PYSITELIB}/whitenoise/media_types.py
 ${PYSITELIB}/whitenoise/media_types.pyc
 ${PYSITELIB}/whitenoise/media_types.pyo
@@ -40,9 +34,6 @@ ${PYSITELIB}/whitenoise/runserver_nostatic/management/commands/__init__.pyo
 ${PYSITELIB}/whitenoise/runserver_nostatic/management/commands/runserver.py
 ${PYSITELIB}/whitenoise/runserver_nostatic/management/commands/runserver.pyc
 ${PYSITELIB}/whitenoise/runserver_nostatic/management/commands/runserver.pyo
-${PYSITELIB}/whitenoise/scantree.py
-${PYSITELIB}/whitenoise/scantree.pyc
-${PYSITELIB}/whitenoise/scantree.pyo
 ${PYSITELIB}/whitenoise/storage.py
 ${PYSITELIB}/whitenoise/storage.pyc
 ${PYSITELIB}/whitenoise/storage.pyo

@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2022/01/04 20:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/13 19:30:23 adam Exp $
 
-DISTNAME=	whitenoise-4.1.4
+DISTNAME=	whitenoise-6.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whitenoise/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://whitenoise.evans.io/
+HOMEPAGE=	https://github.com/evansd/whitenoise
 COMMENT=	Simplified static file serving for WSGI applications
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
