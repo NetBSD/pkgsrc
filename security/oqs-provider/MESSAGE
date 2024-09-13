@@ -1,0 +1,28 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/09/13 18:07:51 jschauma Exp $
+
+In order to make the OpenQuantumSafe provider available to your OpenSSL
+commands by default, add the following snippet to your openssl.cnf
+(${PREFIX}/etc/openssl/openssl.cnf if your system OpenSSL is <= 3.x and
+this package pulled in a newer OpenSSL package, /etc/openssl/openssl.cnf
+otherwise):
+
+--------------------------------
+openssl_conf = openssl_init
+
+[openssl_init]
+providers = provider_sect
+
+[provider_sect]
+default = default_sect
+oqsprovider = oqsprovider_sect
+
+[default_sect]
+activate = 1
+
+[oqsprovider_sect]
+activate = 1
+module = ${PREFIX}/lib/ossl-modules/oqsprovider.so
+--------------------------------
+
+===========================================================================
