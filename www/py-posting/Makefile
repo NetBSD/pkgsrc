@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/08/25 10:49:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/09/13 09:50:37 wiz Exp $
 
-DISTNAME=	posting-1.12.1
+DISTNAME=	posting-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/posting/}
@@ -32,12 +32,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=1.0.0:../../devel/py-test-t
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39 310
 
-# as of 1.12.0
-# 5 failed, 56 passed, 5 skipped, 1 warning
-# as of 1.12.1
-# 26 failed, 35 passed, 5 skipped, 1 warning
+# as of 1.13.0
+# 7 failed, 54 passed, 5 skipped, 1 warning
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} posting posting-${PYVERSSUFFIX}
