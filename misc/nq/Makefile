@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/08/26 10:54:11 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/13 17:23:56 schmonz Exp $
 
-DISTNAME=	nq-0.5
+DISTNAME=	nq-1.0
 CATEGORIES=	misc sysutils
-MASTER_SITES=	https://git.vuxu.org/nq/snapshot/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=leahneukirchen/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.vuxu.org/nq/about/
@@ -11,7 +12,7 @@ LICENSE=	public-domain
 
 USE_TOOLS+=	perl:test
 
-REPLACE_SH=	tq
+REPLACE_SH=	nqterm
 
 TEST_TARGET=	check
 
