@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/13 18:07:51 jschauma Exp $
+include/oqsprov/oqs_prov.h
+lib/ossl-modules/oqsprovider.so
+lib/ossl-modules/oqsprovider.so.${VERSION}
