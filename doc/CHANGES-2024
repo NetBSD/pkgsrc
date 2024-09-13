@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5600 2024/09/13 09:46:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5601 2024/09/13 09:50:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8624,3 +8624,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/oh-my-posh to 23.13.1 [pin 2024-09-13]
 	Updated sysutils/zoxide to 0.9.5 [pin 2024-09-13]
 	Updated comms/py-textual to 0.79.1 [wiz 2024-09-13]
+	Updated www/py-posting to 1.13.0 [wiz 2024-09-13]
