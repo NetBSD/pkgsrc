@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/15 05:38:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/13 19:25:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -118,6 +118,12 @@ ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodap
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/api/sphinx_automodapi.tests.example_module.functions.multiply.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodapi
 ${PYSITELIB}/sphinx_automodapi/tests/cases/non_ascii/output/index.rst.automodsumm
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/README.md
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/input/index.rst
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/output/api/sphinx_automodapi.tests.example_module.public.Camelot.rst
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/output/api/sphinx_automodapi.tests.example_module.public.Spam.rst
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/output/index.rst.automodapi
+${PYSITELIB}/sphinx_automodapi/tests/cases/public_from_private/output/index.rst.automodsumm
 ${PYSITELIB}/sphinx_automodapi/tests/cases/slots/README.md
 ${PYSITELIB}/sphinx_automodapi/tests/cases/slots/input/index.rst
 ${PYSITELIB}/sphinx_automodapi/tests/cases/slots/output/api/sphinx_automodapi.tests.example_module.slots.DerivedParam.rst
@@ -157,6 +163,9 @@ ${PYSITELIB}/sphinx_automodapi/tests/duplicated_warning/duplicated/foo/foo.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/__init__.pyo
+${PYSITELIB}/sphinx_automodapi/tests/example_module/_private.py
+${PYSITELIB}/sphinx_automodapi/tests/example_module/_private.pyc
+${PYSITELIB}/sphinx_automodapi/tests/example_module/_private.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/abstract_classes.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/abstract_classes.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/abstract_classes.pyo
@@ -181,6 +190,9 @@ ${PYSITELIB}/sphinx_automodapi/tests/example_module/nonascii.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/other_classes.pyo
+${PYSITELIB}/sphinx_automodapi/tests/example_module/public.py
+${PYSITELIB}/sphinx_automodapi/tests/example_module/public.pyc
+${PYSITELIB}/sphinx_automodapi/tests/example_module/public.pyo
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/slots.py
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/slots.pyc
 ${PYSITELIB}/sphinx_automodapi/tests/example_module/slots.pyo
