@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/08/07 10:42:59 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/09/14 08:03:44 adam Exp $
 
-DISTNAME=	cmudict-1.0.27
+DISTNAME=	cmudict-1.0.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmudict/}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=5.0:../../devel/py-importlib-metada
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
