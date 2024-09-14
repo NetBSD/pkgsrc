@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/08/21 09:04:14 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/09/14 08:12:09 adam Exp $
 
-BLAKE2s (inflect-7.3.1.tar.gz) = e16bf31d64b3cd10f94bc42deb325b5ff2683dacf047e6eebeec4fbaa9ffeb0f
-SHA512 (inflect-7.3.1.tar.gz) = 562107d500ee488a35d809e4b7888af31fb90d7b07b9f6c328f66d8723a171227e639e0cbf43cb9610227faff6690a8af7205bc509f6764c9e22e9160f7ba5e1
-Size (inflect-7.3.1.tar.gz) = 71980 bytes
+BLAKE2s (inflect-7.4.0.tar.gz) = 012b8e70302f1071b7ae29f99ec76322792a457082110a57bc6777ea178c907f
+SHA512 (inflect-7.4.0.tar.gz) = fe3658a2f4c9303db90604268a525112c6a67f66ed37f6fbe76cd04a008658362e682413297dc1fcae6e6a0415098f3adaf0f205b781e1e24a050f59c9dc9021
+Size (inflect-7.4.0.tar.gz) = 72730 bytes
