@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4339 2024/09/02 06:14:22 pin Exp $
+# $NetBSD: Makefile,v 1.4340 2024/09/14 23:48:23 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2743,6 +2743,7 @@ SUBDIR+=	py-minidump
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mixbox
 SUBDIR+=	py-mmh3
+SUBDIR+=	py-mnemonic
 SUBDIR+=	py-mock
 SUBDIR+=	py-mocket
 SUBDIR+=	py-modulegraph

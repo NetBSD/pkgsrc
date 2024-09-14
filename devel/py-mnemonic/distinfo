@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/14 23:48:23 js Exp $
+
+BLAKE2s (mnemonic-0.21.tar.gz) = 8aadcf04a601f9f5505eb202a29a8413b7c305d4994ad464805264f0accd43c6
+SHA512 (mnemonic-0.21.tar.gz) = 595e33968733267a91935de9df2ec4f4a1ef801129ec8aa5f1ae001b671595c569a9ba760d5cb828bdff3b51e50f63c3b5ecd508677dca2f3cc7b54586716b7f
+Size (mnemonic-0.21.tar.gz) = 152462 bytes

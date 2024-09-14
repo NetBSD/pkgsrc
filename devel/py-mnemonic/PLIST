@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/14 23:48:23 js Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/mnemonic/__init__.py
+${PYSITELIB}/mnemonic/__init__.pyc
+${PYSITELIB}/mnemonic/__init__.pyo
+${PYSITELIB}/mnemonic/mnemonic.py
+${PYSITELIB}/mnemonic/mnemonic.pyc
+${PYSITELIB}/mnemonic/mnemonic.pyo
+${PYSITELIB}/mnemonic/py.typed
+${PYSITELIB}/mnemonic/wordlist/chinese_simplified.txt
+${PYSITELIB}/mnemonic/wordlist/chinese_traditional.txt
+${PYSITELIB}/mnemonic/wordlist/czech.txt
+${PYSITELIB}/mnemonic/wordlist/english.txt
+${PYSITELIB}/mnemonic/wordlist/french.txt
+${PYSITELIB}/mnemonic/wordlist/italian.txt
+${PYSITELIB}/mnemonic/wordlist/japanese.txt
+${PYSITELIB}/mnemonic/wordlist/korean.txt
+${PYSITELIB}/mnemonic/wordlist/portuguese.txt
+${PYSITELIB}/mnemonic/wordlist/russian.txt
+${PYSITELIB}/mnemonic/wordlist/spanish.txt
+${PYSITELIB}/mnemonic/wordlist/turkish.txt
