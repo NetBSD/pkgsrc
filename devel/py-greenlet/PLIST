@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/29 16:56:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/14 08:20:21 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -58,6 +58,7 @@ ${PYSITELIB}/greenlet/platform/switch_ppc_macosx.h
 ${PYSITELIB}/greenlet/platform/switch_ppc_unix.h
 ${PYSITELIB}/greenlet/platform/switch_riscv_unix.h
 ${PYSITELIB}/greenlet/platform/switch_s390_unix.h
+${PYSITELIB}/greenlet/platform/switch_sh_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_sparc_sun_gcc.h
 ${PYSITELIB}/greenlet/platform/switch_x32_unix.h
 ${PYSITELIB}/greenlet/platform/switch_x64_masm.asm
