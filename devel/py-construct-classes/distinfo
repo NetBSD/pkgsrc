@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/14 23:56:47 js Exp $
+
+BLAKE2s (construct-classes-0.1.2.tar.gz) = 5ccf749a6e543227c75fcfae982baf608137b9c084cd413bf8bcb2a959eb04a7
+SHA512 (construct-classes-0.1.2.tar.gz) = 325fc1114d672a679323f90893298078f6f9793806da072bacc264856cc97e53b78d94e51b5767fde059eec6a2f520ee0c21d9b508897de716a17a01ea37248f
+Size (construct-classes-0.1.2.tar.gz) = 5018 bytes

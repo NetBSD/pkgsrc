@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/14 23:56:47 js Exp $
+${PYSITELIB}/CHANGELOG.rst
+${PYSITELIB}/LICENSE
+${PYSITELIB}/README.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/construct_classes/__init__.py
+${PYSITELIB}/construct_classes/__init__.pyc
+${PYSITELIB}/construct_classes/__init__.pyo
+${PYSITELIB}/construct_classes/py.typed
