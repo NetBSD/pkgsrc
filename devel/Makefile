@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4340 2024/09/14 23:48:23 js Exp $
+# $NetBSD: Makefile,v 1.4341 2024/09/14 23:56:47 js Exp $
 #
 
 COMMENT=	Development utilities
@@ -2523,6 +2523,7 @@ SUBDIR+=	py-confuse
 SUBDIR+=	py-constantly
 SUBDIR+=	py-constants
 SUBDIR+=	py-construct
+SUBDIR+=	py-construct-classes
 SUBDIR+=	py-contextlib2
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-cooldict
