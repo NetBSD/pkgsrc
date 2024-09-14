@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/31 08:07:24 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/09/14 19:20:45 adam Exp $
 
-DISTNAME=	easy_thumbnails-2.9
+DISTNAME=	easy_thumbnails-2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/easy-thumbnails/}
@@ -15,11 +15,11 @@ PREV_PKGPATH=	www/py-djangoeasy-thumbnails
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
