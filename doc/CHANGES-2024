@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5629 2024/09/14 20:28:48 js Exp $
+$NetBSD: CHANGES-2024,v 1.5630 2024/09/14 22:17:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8672,3 +8672,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-automat to 24.8.1 [adam 2024-09-14]
 	Updated www/py-easy-thumbnails to 2.10 [adam 2024-09-14]
 	Updated chat/matrix-synapse to 1.114.0 [js 2024-09-14]
+	Updated chat/element-web to 1.11.77 [js 2024-09-14]
