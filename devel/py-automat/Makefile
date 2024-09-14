@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/10/28 19:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/14 19:16:35 adam Exp $
 
-DISTNAME=	Automat-22.10.0
+DISTNAME=	automat-24.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=A/Automat/}
 
@@ -11,10 +10,11 @@ HOMEPAGE=	https://github.com/glyph/Automat
 COMMENT=	Self-service finite-state machines for the programmer on the go
 LICENSE=	mit
 
+WHEEL_NAME=	Automat-${PKGVERSION_NOREV}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=35.0.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # visualize option needs both next dependencies
 #DEPENDS+=	${PYPKGPREFIX}-graphviz>=0.5.2:../../graphics/py-graphviz
 # but this one is a circular dependency
@@ -22,7 +22,10 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
+.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

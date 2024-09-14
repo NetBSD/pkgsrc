@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/10/28 19:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/14 19:16:35 adam Exp $
 bin/automat-visualize-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -21,6 +21,9 @@ ${PYSITELIB}/automat/_introspection.pyo
 ${PYSITELIB}/automat/_methodical.py
 ${PYSITELIB}/automat/_methodical.pyc
 ${PYSITELIB}/automat/_methodical.pyo
+${PYSITELIB}/automat/_runtimeproto.py
+${PYSITELIB}/automat/_runtimeproto.pyc
+${PYSITELIB}/automat/_runtimeproto.pyo
 ${PYSITELIB}/automat/_test/__init__.py
 ${PYSITELIB}/automat/_test/__init__.pyc
 ${PYSITELIB}/automat/_test/__init__.pyo
@@ -36,9 +39,16 @@ ${PYSITELIB}/automat/_test/test_methodical.pyo
 ${PYSITELIB}/automat/_test/test_trace.py
 ${PYSITELIB}/automat/_test/test_trace.pyc
 ${PYSITELIB}/automat/_test/test_trace.pyo
+${PYSITELIB}/automat/_test/test_type_based.py
+${PYSITELIB}/automat/_test/test_type_based.pyc
+${PYSITELIB}/automat/_test/test_type_based.pyo
 ${PYSITELIB}/automat/_test/test_visualize.py
 ${PYSITELIB}/automat/_test/test_visualize.pyc
 ${PYSITELIB}/automat/_test/test_visualize.pyo
+${PYSITELIB}/automat/_typed.py
+${PYSITELIB}/automat/_typed.pyc
+${PYSITELIB}/automat/_typed.pyo
 ${PYSITELIB}/automat/_visualize.py
 ${PYSITELIB}/automat/_visualize.pyc
 ${PYSITELIB}/automat/_visualize.pyo
+${PYSITELIB}/automat/py.typed
