@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/07/31 08:07:24 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/09/14 19:20:45 adam Exp $
 
-BLAKE2s (easy_thumbnails-2.9.tar.gz) = 84a9131f9b4101925574d2ece4fe171a6adae589fc0b1d1df19481992968ea23
-SHA512 (easy_thumbnails-2.9.tar.gz) = 659fe283bbf0713f76db9ac04969ed73147919b64537616fb76cf8ceb159ced8ae632dc3e10f87d6f979a2447d1196aa4b21aaeb91d537de4c318a433de8ae9f
-Size (easy_thumbnails-2.9.tar.gz) = 78827 bytes
+BLAKE2s (easy_thumbnails-2.10.tar.gz) = 8e40e2319037f7fab9eb9eb9ae29ecc2f4fb2d5a4250daa56ff03bfacda71a7c
+SHA512 (easy_thumbnails-2.10.tar.gz) = 1ef9d1df6c7750d2bd4e55127b2ebea130a9bcdafd2d8122b0571968bbb89744f1fdf2e96c731452336911cbb50816da47e2bfd34562fd5e014b26c9f3837f6a
+Size (easy_thumbnails-2.10.tar.gz) = 80721 bytes
