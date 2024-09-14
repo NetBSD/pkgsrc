@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2024/08/11 15:01:32 js Exp $
+@comment $NetBSD: PLIST,v 1.55 2024/09/14 20:28:31 js Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -507,9 +507,18 @@ ${PYSITELIB}/synapse/handlers/send_email.pyo
 ${PYSITELIB}/synapse/handlers/set_password.py
 ${PYSITELIB}/synapse/handlers/set_password.pyc
 ${PYSITELIB}/synapse/handlers/set_password.pyo
-${PYSITELIB}/synapse/handlers/sliding_sync.py
-${PYSITELIB}/synapse/handlers/sliding_sync.pyc
-${PYSITELIB}/synapse/handlers/sliding_sync.pyo
+${PYSITELIB}/synapse/handlers/sliding_sync/__init__.py
+${PYSITELIB}/synapse/handlers/sliding_sync/__init__.pyc
+${PYSITELIB}/synapse/handlers/sliding_sync/__init__.pyo
+${PYSITELIB}/synapse/handlers/sliding_sync/extensions.py
+${PYSITELIB}/synapse/handlers/sliding_sync/extensions.pyc
+${PYSITELIB}/synapse/handlers/sliding_sync/extensions.pyo
+${PYSITELIB}/synapse/handlers/sliding_sync/room_lists.py
+${PYSITELIB}/synapse/handlers/sliding_sync/room_lists.pyc
+${PYSITELIB}/synapse/handlers/sliding_sync/room_lists.pyo
+${PYSITELIB}/synapse/handlers/sliding_sync/store.py
+${PYSITELIB}/synapse/handlers/sliding_sync/store.pyc
+${PYSITELIB}/synapse/handlers/sliding_sync/store.pyo
 ${PYSITELIB}/synapse/handlers/sso.py
 ${PYSITELIB}/synapse/handlers/sso.pyc
 ${PYSITELIB}/synapse/handlers/sso.pyo
@@ -1341,6 +1350,9 @@ ${PYSITELIB}/synapse/storage/databases/main/session.pyo
 ${PYSITELIB}/synapse/storage/databases/main/signatures.py
 ${PYSITELIB}/synapse/storage/databases/main/signatures.pyc
 ${PYSITELIB}/synapse/storage/databases/main/signatures.pyo
+${PYSITELIB}/synapse/storage/databases/main/sliding_sync.py
+${PYSITELIB}/synapse/storage/databases/main/sliding_sync.pyc
+${PYSITELIB}/synapse/storage/databases/main/sliding_sync.pyo
 ${PYSITELIB}/synapse/storage/databases/main/state.py
 ${PYSITELIB}/synapse/storage/databases/main/state.pyc
 ${PYSITELIB}/synapse/storage/databases/main/state.pyo
@@ -1870,6 +1882,8 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/85/04_cleanup_device_federation_o
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/05_add_instance_names_converted_pos.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/06_add_room_reports.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/86/01_authenticate_media.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/86/02_receipts_event_id_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/87/02_per_connection_state.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1921,6 +1935,9 @@ ${PYSITELIB}/synapse/types/__init__.pyo
 ${PYSITELIB}/synapse/types/handlers/__init__.py
 ${PYSITELIB}/synapse/types/handlers/__init__.pyc
 ${PYSITELIB}/synapse/types/handlers/__init__.pyo
+${PYSITELIB}/synapse/types/handlers/sliding_sync.py
+${PYSITELIB}/synapse/types/handlers/sliding_sync.pyc
+${PYSITELIB}/synapse/types/handlers/sliding_sync.pyo
 ${PYSITELIB}/synapse/types/rest/__init__.py
 ${PYSITELIB}/synapse/types/rest/__init__.pyc
 ${PYSITELIB}/synapse/types/rest/__init__.pyo
@@ -1984,6 +2001,9 @@ ${PYSITELIB}/synapse/util/daemonize.pyo
 ${PYSITELIB}/synapse/util/distributor.py
 ${PYSITELIB}/synapse/util/distributor.pyc
 ${PYSITELIB}/synapse/util/distributor.pyo
+${PYSITELIB}/synapse/util/events.py
+${PYSITELIB}/synapse/util/events.pyc
+${PYSITELIB}/synapse/util/events.pyo
 ${PYSITELIB}/synapse/util/file_consumer.py
 ${PYSITELIB}/synapse/util/file_consumer.pyc
 ${PYSITELIB}/synapse/util/file_consumer.pyo
