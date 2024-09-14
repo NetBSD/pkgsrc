@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/08/03 07:23:53 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/09/14 08:34:23 adam Exp $
 
-DISTNAME=	xarray-2024.7.0
+DISTNAME=	xarray-2024.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray/}
@@ -13,13 +13,13 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pandas>=2.0:../../math/py-pandas
+DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1:../../math/py-pandas
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
