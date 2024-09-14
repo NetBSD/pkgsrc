@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2024/08/12 18:28:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2024/09/14 08:24:33 adam Exp $
 bin/faker-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -100,6 +100,9 @@ ${PYSITELIB}/faker/providers/address/en_IE/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_IN/__init__.py
 ${PYSITELIB}/faker/providers/address/en_IN/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_IN/__init__.pyo
+${PYSITELIB}/faker/providers/address/en_MS/__init__.py
+${PYSITELIB}/faker/providers/address/en_MS/__init__.pyc
+${PYSITELIB}/faker/providers/address/en_MS/__init__.pyo
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/address/en_NZ/__init__.pyo
@@ -226,6 +229,9 @@ ${PYSITELIB}/faker/providers/address/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/address/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/address/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/address/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/address/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/address/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/address/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/address/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/address/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/address/zh_CN/__init__.pyo
@@ -574,6 +580,9 @@ ${PYSITELIB}/faker/providers/color/th_TH/__init__.pyo
 ${PYSITELIB}/faker/providers/color/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/color/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/color/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/color/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/color/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/color/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/company/__init__.py
 ${PYSITELIB}/faker/providers/company/__init__.pyc
 ${PYSITELIB}/faker/providers/company/__init__.pyo
@@ -691,6 +700,9 @@ ${PYSITELIB}/faker/providers/company/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/company/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/company/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/company/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/company/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/company/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/company/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/company/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/company/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/company/zh_CN/__init__.pyo
@@ -799,6 +811,9 @@ ${PYSITELIB}/faker/providers/currency/th_TH/__init__.pyo
 ${PYSITELIB}/faker/providers/currency/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/currency/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/currency/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/currency/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/currency/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/currency/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/__init__.py
 ${PYSITELIB}/faker/providers/date_time/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/__init__.pyo
@@ -919,6 +934,9 @@ ${PYSITELIB}/faker/providers/date_time/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/tr_TR/__init__.py
 ${PYSITELIB}/faker/providers/date_time/tr_TR/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/tr_TR/__init__.pyo
+${PYSITELIB}/faker/providers/date_time/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/date_time/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/date_time/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/date_time/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/date_time/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/date_time/zh_CN/__init__.pyo
@@ -1108,12 +1126,12 @@ ${PYSITELIB}/faker/providers/isbn/__init__.pyo
 ${PYSITELIB}/faker/providers/isbn/en_US/__init__.py
 ${PYSITELIB}/faker/providers/isbn/en_US/__init__.pyc
 ${PYSITELIB}/faker/providers/isbn/en_US/__init__.pyo
+${PYSITELIB}/faker/providers/isbn/es_ES/__init__.py
+${PYSITELIB}/faker/providers/isbn/es_ES/__init__.pyc
+${PYSITELIB}/faker/providers/isbn/es_ES/__init__.pyo
 ${PYSITELIB}/faker/providers/isbn/isbn.py
 ${PYSITELIB}/faker/providers/isbn/isbn.pyc
 ${PYSITELIB}/faker/providers/isbn/isbn.pyo
-${PYSITELIB}/faker/providers/isbn/rules.py
-${PYSITELIB}/faker/providers/isbn/rules.pyc
-${PYSITELIB}/faker/providers/isbn/rules.pyo
 ${PYSITELIB}/faker/providers/job/__init__.py
 ${PYSITELIB}/faker/providers/job/__init__.pyc
 ${PYSITELIB}/faker/providers/job/__init__.pyo
@@ -1216,6 +1234,9 @@ ${PYSITELIB}/faker/providers/job/tr_TR/__init__.pyo
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/job/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/job/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/job/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/job/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/job/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/job/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/job/zh_CN/__init__.pyo
@@ -1270,6 +1291,9 @@ ${PYSITELIB}/faker/providers/lorem/he_IL/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/hy_AM/__init__.py
 ${PYSITELIB}/faker/providers/lorem/hy_AM/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/hy_AM/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/it_IT/__init__.py
+${PYSITELIB}/faker/providers/lorem/it_IT/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/it_IT/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/ja_JP/__init__.py
 ${PYSITELIB}/faker/providers/lorem/ja_JP/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/ja_JP/__init__.pyo
@@ -1297,6 +1321,9 @@ ${PYSITELIB}/faker/providers/lorem/tl_PH/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/lorem/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/lorem/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/lorem/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/lorem/zh_CN/__init__.pyo
@@ -1378,6 +1405,9 @@ ${PYSITELIB}/faker/providers/person/en_IN/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.py
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_NZ/__init__.pyo
+${PYSITELIB}/faker/providers/person/en_PK/__init__.py
+${PYSITELIB}/faker/providers/person/en_PK/__init__.pyc
+${PYSITELIB}/faker/providers/person/en_PK/__init__.pyo
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.py
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.pyc
 ${PYSITELIB}/faker/providers/person/en_TH/__init__.pyo
@@ -1525,6 +1555,9 @@ ${PYSITELIB}/faker/providers/person/tw_GH/__init__.pyo
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/person/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/person/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/person/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/person/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/person/yo_NG/__init__.py
 ${PYSITELIB}/faker/providers/person/yo_NG/__init__.pyc
 ${PYSITELIB}/faker/providers/person/yo_NG/__init__.pyo
@@ -1711,6 +1744,9 @@ ${PYSITELIB}/faker/providers/phone_number/tw_GH/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/uk_UA/__init__.pyo
+${PYSITELIB}/faker/providers/phone_number/vi_VN/__init__.py
+${PYSITELIB}/faker/providers/phone_number/vi_VN/__init__.pyc
+${PYSITELIB}/faker/providers/phone_number/vi_VN/__init__.pyo
 ${PYSITELIB}/faker/providers/phone_number/zh_CN/__init__.py
 ${PYSITELIB}/faker/providers/phone_number/zh_CN/__init__.pyc
 ${PYSITELIB}/faker/providers/phone_number/zh_CN/__init__.pyo
