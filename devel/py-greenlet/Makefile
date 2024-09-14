@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/01/12 13:19:13 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/09/14 08:20:21 adam Exp $
 
-DISTNAME=	greenlet-3.0.3
+DISTNAME=	greenlet-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/greenlet/}
@@ -22,8 +22,6 @@ USE_LANGUAGES=	c c++
 # explicitly enabled C++11 support.
 FORCE_CXX_STD=		c++11
 USE_CXX_FEATURES+=	c++11
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
