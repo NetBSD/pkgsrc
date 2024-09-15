@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2024/08/25 06:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/09/15 10:32:50 wiz Exp $
 
-DISTNAME=	wxWidgets-3.2.5
+DISTNAME=	wxWidgets-3.2.6
 PKGNAME=	${DISTNAME:S/wxWidgets/wxGTK32/}
-PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxWidgets/}
 GITHUB_PROJECT=	wxWidgets
@@ -105,7 +104,7 @@ SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_VARS.fix-paths=		PREFIX
 .endif
 
-.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[yY][eE][sS])
+.if ${_USE_RPATH:U:tl} == yes
 SUBST_CLASSES+=		wx-rpath
 SUBST_STAGE.wx-rpath=	pre-configure
 SUBST_MESSAGE.wx-rpath=	Setting rpath in wx-config
