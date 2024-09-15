@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4341 2024/09/14 23:56:47 js Exp $
+# $NetBSD: Makefile,v 1.4342 2024/09/15 06:12:27 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2312,6 +2312,7 @@ SUBDIR+=	p5-indirect
 SUBDIR+=	p5-lib-abs
 SUBDIR+=	p5-local-lib
 SUBDIR+=	p5-match-simple
+SUBDIR+=	p5-meta
 SUBDIR+=	p5-multidimensional
 SUBDIR+=	p5-namespace-autoclean
 SUBDIR+=	p5-namespace-clean
