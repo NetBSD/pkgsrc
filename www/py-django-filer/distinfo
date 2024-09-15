@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2024/09/07 05:43:51 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/09/15 07:14:02 adam Exp $
 
-BLAKE2s (django_filer-3.2.1.tar.gz) = 44c776e1cd431887673cbad939531da79c01f41b3d8ba0e31489c88c8c201ce4
-SHA512 (django_filer-3.2.1.tar.gz) = b44397179eb3cefad68fe225efb49de5bb7ca4e0f5e360222dd524e4adca8206447b43d5bb9bebc0ed3f078126c51151eec53e1a8b82179762b4f0124cecc80a
-Size (django_filer-3.2.1.tar.gz) = 1112918 bytes
+BLAKE2s (django_filer-3.2.2.tar.gz) = 1cbaf496a6e629f8d89372a71e6cb638184c1910734305d97ac02008667e0e3d
+SHA512 (django_filer-3.2.2.tar.gz) = 5906c35f782fd7282cc7d1c20c494a63526cf444605666337c47f9361bfcfd4380755866ff3832cd999013521c63dc525587870a2522a8458fbd7cd5c80296cc
+Size (django_filer-3.2.2.tar.gz) = 1113064 bytes
 SHA1 (patch-setup.py) = bff20b3b23f60971dcad4b49b722b4e2317d44d7
