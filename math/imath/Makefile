@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/03/03 11:34:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/15 10:21:44 wiz Exp $
 
-DISTNAME=	imath-3.1.11
+DISTNAME=	imath-3.1.12
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AcademySoftwareFoundation/}
 GITHUB_PROJECT=	Imath
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.openexr.com/
 COMMENT=	2D and 3D vector, matrix, and math operations for computer graphics
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++14
+USE_LANGUAGES=	c c++
 PTHREAD_OPTS=	require
 
 USE_CXX_FEATURES+=	c++14
