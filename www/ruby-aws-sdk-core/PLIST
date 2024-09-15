@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/06/30 16:39:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/09/15 16:56:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -112,6 +112,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/sign.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/signature_v2.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/signature_v4.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/stub_responses.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins/telemetry.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/transfer_encoding.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/user_agent.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/process_credentials.rb
@@ -162,6 +163,12 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rest_xml.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/rpc_v2.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/stub_data.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/xml_error.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry/base.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry/no_op.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry/otel.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry/span_kind.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/telemetry/span_status.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/token_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/token_provider_chain.rb
@@ -270,6 +277,10 @@ ${GEM_LIBDIR}/sig/aws-sdk-core/client_stubs.rbs
 ${GEM_LIBDIR}/sig/aws-sdk-core/errors.rbs
 ${GEM_LIBDIR}/sig/aws-sdk-core/resources/collection.rbs
 ${GEM_LIBDIR}/sig/aws-sdk-core/structure.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/telemetry/base.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/telemetry/otel.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/telemetry/span_kind.rbs
+${GEM_LIBDIR}/sig/aws-sdk-core/telemetry/span_status.rbs
 ${GEM_LIBDIR}/sig/aws-sdk-core/waiters/errors.rbs
 ${GEM_LIBDIR}/sig/seahorse/client/base.rbs
 ${GEM_LIBDIR}/sig/seahorse/client/handler_builder.rbs
