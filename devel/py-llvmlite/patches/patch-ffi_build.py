@@ -1,6 +1,7 @@
-$NetBSD: patch-ffi_build.py,v 1.9 2024/08/27 10:30:35 wiz Exp $
+$NetBSD: patch-ffi_build.py,v 1.10 2024/09/15 10:46:17 wiz Exp $
 
 Add NetBSD support.
+https://github.com/numba/llvmlite/pull/1077
 
 --- ffi/build.py.orig	2020-05-08 14:22:24.000000000 +0000
 +++ ffi/build.py
