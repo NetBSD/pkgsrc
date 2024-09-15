@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/13 16:05:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/15 16:48:58 taca Exp $
 bin/minitar${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Code-of-Conduct.md
 ${GEM_LIBDIR}/Contributing.md
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/Licence.md
