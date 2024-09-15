@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/08/21 17:00:41 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/09/15 15:11:25 ryoon Exp $
 
 DISTNAME=	libheif-1.18.2
 PKGREVISION=	1
@@ -18,6 +18,8 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_RAV1E=OFF
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_TIFF=ON
 
 PKGCONFIG_OVERRIDE+=	libheif.pc.in
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/png/buildlink3.mk"
