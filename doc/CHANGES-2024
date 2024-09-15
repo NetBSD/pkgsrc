@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5653 2024/09/15 13:54:55 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5654 2024/09/15 15:31:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8701,3 +8701,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/mozilla-rootcerts to 1.1.20240827 [wiz 2024-09-15]
 	Updated geography/proj to 9.5.0 [gdt 2024-09-15]
 	Updated geography/proj-data to 1.19 [gdt 2024-09-15]
+	Updated security/sudo to 1.9.16 [adam 2024-09-15]
+	Updated net/rabbitmq to 3.13.7 [adam 2024-09-15]
