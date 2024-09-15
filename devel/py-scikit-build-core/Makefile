@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/08/03 06:31:42 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/15 15:51:54 adam Exp $
 
-DISTNAME=	scikit_build_core-0.9.10
+DISTNAME=	scikit_build_core-0.10.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-build-core/}
@@ -26,8 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 
 # only needed for tests
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 309
