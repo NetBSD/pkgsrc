@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2019/10/22 07:29:24 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/15 16:41:23 taca Exp $
 
-DISTNAME=	minitar-0.9
+DISTNAME=	minitar-1.0.2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
