@@ -1,0 +1,35 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/09/15 09:43:42 adam Exp $
+
+Use correct module directory.
+
+--- pyproject.toml.orig	2020-02-02 00:00:00.000000000 +0000
++++ pyproject.toml
+@@ -41,15 +41,15 @@ update-validation-files = "i18naddress.s
+ 
+ [tool.hatch.build]
+ include = [
+-    "src/i18naddress/**/*.py",
+-    "src/i18naddress/**/*.json",
++    "i18naddress/**/*.py",
++    "i18naddress/**/*.json",
+ ]
+ 
+ [tool.hatch.build.targets.wheel]
+-packages = ["src/i18naddress"]
++packages = ["i18naddress"]
+ 
+ [tool.hatch.build.targets.sdist]
+-packages = ["src/i18naddress"]
++packages = ["i18naddress"]
+ 
+ 
+ [tool.hatch.envs.default]
+@@ -83,7 +83,7 @@ branch = true
+ parallel = true
+ 
+ [tool.coverage.paths]
+-i18naddress = ["src/i18naddress"]
++i18naddress = ["i18naddress"]
+ tests = ["tests"]
+ 
+ [tool.coverage.report]
