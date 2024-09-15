@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/09/02 17:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/15 13:09:51 wiz Exp $
 
 DISTNAME=	libffcall-2.5
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ COMMENT=	Foreign function call libraries
 LICENSE=	gnu-gpl-v2
 
 # make: make: don't know how to make avcall/avcall.lo. Stop
+# https://savannah.gnu.org/bugs/index.php?66220
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
