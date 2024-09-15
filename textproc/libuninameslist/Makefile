@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/06/08 11:55:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/15 10:28:51 wiz Exp $
 
-DISTNAME=	libuninameslist-dist-20240524
+DISTNAME=	libuninameslist-dist-20240910
 PKGNAME=	${DISTNAME:S/-dist//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
