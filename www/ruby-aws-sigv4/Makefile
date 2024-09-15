@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/28 13:45:30 taca Exp $
+# $NetBSD: Makefile,v 1.9 2024/09/15 16:54:34 taca Exp $
 
-DISTNAME=	aws-sigv4-1.9.0
+DISTNAME=	aws-sigv4-1.9.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
