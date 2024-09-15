@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2024 Martin Matuska
+ * Copyright (c) 2003-2023 Tim Kientzle
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,32 +24,42 @@
  */
 #include "test.h"
 
-#define __LIBARCHIVE_BUILD
-
-DEFINE_TEST(test_read_format_xar_doublelink)
+/*
+ * Read a pax formatted tar archive that has an extremely large
+ * (8,000,000 bytes) attribute of unknown type.  The pax reader should simply
+ * skip the attribute.
+ */
+DEFINE_TEST(test_read_format_tar_pax_large_attr)
 {
-	const char *refname = "test_read_format_xar_doublelink.xar";
-	struct archive *a;
+	char name[] = "test_read_format_tar_pax_large_attr.tar.Z";
 	struct archive_entry *ae;
+	struct archive *a;
 
-	extract_reference_file(refname);
-
-	/* Verify with seeking reader. */
 	assert((a = archive_read_new()) != NULL);
 	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_filter_all(a));
-        if(ARCHIVE_OK != archive_read_support_format_xar(a)) {
-                skipping("XAR format unsupported");
-                assertEqualInt(ARCHIVE_OK, archive_read_free(a));
-                return;
-        }
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, refname,
-	    10240));
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_support_format_all(a));
+	extract_reference_file(name);
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_open_filename(a, name, 10240));
 
-	assertA(ARCHIVE_FATAL == archive_read_next_header(a, &ae));
-	assertEqualString(archive_error_string(a),
-		"File with multiple link attributes");
-	assert(archive_errno(a) != 0);
+	/* Read first entry. */
+	assertEqualIntA(a, ARCHIVE_OK, archive_read_next_header(a, &ae));
+	assertEqualString("foo", archive_entry_pathname(ae));
+	assertEqualInt(1, archive_entry_mtime(ae));
+	assertEqualInt(1000, archive_entry_uid(ae));
+	assertEqualString("tim", archive_entry_uname(ae));
+	assertEqualInt(0, archive_entry_gid(ae));
+	assertEqualString("wheel", archive_entry_gname(ae));
+	assertEqualInt(0100644, archive_entry_mode(ae));
+	assertEqualInt(archive_entry_is_encrypted(ae), 0);
+	assertEqualIntA(a, archive_read_has_encrypted_entries(a), ARCHIVE_READ_FORMAT_ENCRYPTION_UNSUPPORTED);
 
-	assertEqualIntA(a, ARCHIVE_OK, archive_read_close(a));
+	/* Verify the end-of-archive. */
+	assertEqualIntA(a, ARCHIVE_EOF, archive_read_next_header(a, &ae));
+
+	/* Verify that the format detection worked. */
+	assertEqualInt(archive_filter_code(a, 0), ARCHIVE_FILTER_COMPRESS);
+	assertEqualInt(archive_format(a), ARCHIVE_FORMAT_TAR_PAX_INTERCHANGE);
+
+	assertEqualInt(ARCHIVE_OK, archive_read_close(a));
 	assertEqualInt(ARCHIVE_OK, archive_read_free(a));
 }
