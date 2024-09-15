@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/13 16:05:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/15 16:41:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Code-of-Conduct.md
 ${GEM_LIBDIR}/Contributing.md
@@ -9,16 +9,16 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/docs/bsdl.txt
 ${GEM_LIBDIR}/docs/ruby.txt
-${GEM_LIBDIR}/lib/archive-tar-minitar.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/input.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/output.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/posix_header.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/reader.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/writer.rb
 ${GEM_LIBDIR}/lib/minitar.rb
+${GEM_LIBDIR}/lib/minitar/input.rb
+${GEM_LIBDIR}/lib/minitar/output.rb
+${GEM_LIBDIR}/lib/minitar/posix_header.rb
+${GEM_LIBDIR}/lib/minitar/reader.rb
+${GEM_LIBDIR}/lib/minitar/writer.rb
 ${GEM_LIBDIR}/test/minitest_helper.rb
 ${GEM_LIBDIR}/test/support/tar_test_helpers.rb
+${GEM_LIBDIR}/test/test_issue_46.rb
+${GEM_LIBDIR}/test/test_minitar.rb
 ${GEM_LIBDIR}/test/test_tar_header.rb
 ${GEM_LIBDIR}/test/test_tar_input.rb
 ${GEM_LIBDIR}/test/test_tar_output.rb
