@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/15 06:11:48 wiz Exp $
+
+BLAKE2s (meta-0.009.tar.gz) = 2ddb9ddbd68d4f02907899c636fb21cf2cf6ff0268eced5ba723e56d003e38c7
+SHA512 (meta-0.009.tar.gz) = 402b609874420fc77356774ab9930bdf5c170250cc768c182c9a825f59639c3be26a4dd712f3f33969b06d1e1828d8e6fc503f134f2704dcbee0b3735dbe369f
+Size (meta-0.009.tar.gz) = 31723 bytes
