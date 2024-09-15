@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/03/17 00:26:52 taca Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/15 16:46:25 taca Exp $
 
-DISTNAME=	powerbar-1.0.18
-CATEGORIES=	time
+DISTNAME=	powerbar-2.0.1
+CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/busyloop/powerbar

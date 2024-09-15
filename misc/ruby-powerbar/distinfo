@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:59:30 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/09/15 16:46:25 taca Exp $
 
-BLAKE2s (powerbar-1.0.18.gem) = f1222566b0965ef1bacecff5857bad5a08b6ad31d0da4ba60e2c76b7c1b0c79c
-SHA512 (powerbar-1.0.18.gem) = 9208f2e70372c4df59371d5dedf227ef80af2c14ec6deba222873cdcba86452120a7013259105a935aa9834116b22febf88871c0824d12a89e314bc3ed3d2af4
-Size (powerbar-1.0.18.gem) = 12288 bytes
+BLAKE2s (powerbar-2.0.1.gem) = ed415bfe81bc449eb69dc6cfaada70c5288d74663526fa4b2bde2c9dbd1b0848
+SHA512 (powerbar-2.0.1.gem) = cf680c0fb4c02fd44ee96461504d18041958f06f59ec355e4ededbfc4de22f32dd0e4c194f422a83ed265fbad0f7fc33b6ad448d21b3e963253d64c5745a35be
+Size (powerbar-2.0.1.gem) = 12288 bytes
