@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.38 2024/04/19 00:09:04 gdt Exp $
+$NetBSD: distinfo,v 1.39 2024/09/15 16:44:27 gdt Exp $
 
-BLAKE2s (gama-2.30.tar.gz) = 7f04cea68f1d4de51a526efa45e6020084ec353def10efcf70375c28c3309148
-SHA512 (gama-2.30.tar.gz) = c205ade7182484819b2b59437d21142fd26531bc8c9ccf75b5177f46f673af6724188358e562d42773996ee9ceed41aff1016e382eddcdb345b173811ed13766
-Size (gama-2.30.tar.gz) = 15438619 bytes
-SHA1 (patch-configure) = fe310c3ddf799e96bcede402e82c8ecd7aef7bee
-SHA1 (patch-lib_gnu__gama_local_deformation.cpp) = 5054f73c7d5bdd66280cf33070c13b4774221b54
-SHA1 (patch-tests_gama-local_src_check__version.cpp) = 34d553ee4e0e614a9bce64420ddc7b97dddf7229
+BLAKE2s (gama-2.31.tar.gz) = 9f671be840262559ce3aa3f1530d6e41fe71b421abcfb37c5734e799354b9998
+SHA512 (gama-2.31.tar.gz) = 3177afbb7de82f566f8ed9f81403308c92d84e3d8328375ce49a1a0f2578f7447e029ad6c616060cc08b9b2b3d49997852d3ac3deb2dfe715697c4dce131e2d5
+Size (gama-2.31.tar.gz) = 15439501 bytes
