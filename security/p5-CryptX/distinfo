@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2023/12/03 02:19:27 wen Exp $
+$NetBSD: distinfo,v 1.23 2024/09/15 06:14:50 wiz Exp $
 
-BLAKE2s (CryptX-0.080.tar.gz) = b5a45bde74668fd61f6eacdcddf37b842a367158da1f57ba2bed3a67d31fe2be
-SHA512 (CryptX-0.080.tar.gz) = 5702f59f28c70858eb2e78046c6415a816d94f45214092d4e2e938c0655a37e58e5295b2a7f753ee42e0fe4c2ce5632c068d80c7b3055cce1ecb0e5784fca475
-Size (CryptX-0.080.tar.gz) = 1651772 bytes
+BLAKE2s (CryptX-0.081.tar.gz) = 31b999c61346589ddef897a576f1741bfc55ea606f31242db3e877c8d925a1d9
+SHA512 (CryptX-0.081.tar.gz) = 7d527bb664e853051cab4d6e0a77a26af8ab705f9d88ecce79352920b497c0c7ff62df371522276a1ad97e8d8f9a7405e2bc77d71df6f5629aab389f67a348fe
+Size (CryptX-0.081.tar.gz) = 1718932 bytes
