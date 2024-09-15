@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/09/01 13:33:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/09/15 12:53:31 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -37,7 +37,7 @@ lib/cmake/proj4/proj4-targets-release.cmake
 lib/cmake/proj4/proj4-targets.cmake
 lib/libproj.so
 lib/libproj.so.25
-lib/libproj.so.25.9.4.1
+lib/libproj.so.25.9.5.0
 lib/pkgconfig/proj.pc
 man/man1/cct.1
 man/man1/cs2cs.1
@@ -46,14 +46,15 @@ man/man1/gie.1
 man/man1/proj.1
 man/man1/projinfo.1
 man/man1/projsync.1
-share/doc/proj/AUTHORS
+share/doc/proj/AUTHORS.md
 share/doc/proj/COPYING
-share/doc/proj/NEWS
+share/doc/proj/NEWS.md
 share/proj/CH
 share/proj/GL27
 share/proj/ITRF2000
 share/proj/ITRF2008
 share/proj/ITRF2014
+share/proj/ITRF2020
 share/proj/deformation_model.schema.json
 share/proj/nad.lst
 share/proj/nad27

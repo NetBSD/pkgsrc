@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2024/09/01 13:33:50 gdt Exp $
+# $NetBSD: Makefile,v 1.42 2024/09/15 12:53:31 gdt Exp $
 
-VERSION_BASE=	9.4.1
+VERSION_BASE=	9.5.0
 # Accommodate testing RCs (names like 9.0RC1, unpacking to 9.0).
 VERSION_RC=
 VERSION=	${VERSION_BASE}${VERSION_RC}
