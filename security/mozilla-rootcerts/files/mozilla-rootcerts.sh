@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.21 2020/06/02 22:32:02 jperkin Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.22 2024/09/15 10:35:01 wiz Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -178,6 +178,12 @@ extract)
 			# Test the result for untrusted status
 			if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NSS_NOT_TRUSTED$/)
 				untrusted = 1
+			if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NSS_MUST_VERIFY_TRUST$/)
+				untrusted = 1
+			# deprecated version of CKT_NSS_MUST_VERIFY_TRUST
+			if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NSS_UNTRUSTED$/)
+				untrusted = 1
+			# even more deprecated version of CKT_NSS_UNTRUSTED (which really is CKT_NSS_MUST_VERIFY_TRUST)
 			if ($0 ~ /^CKA_TRUST_SERVER_AUTH.*CK_TRUST.*CKT_NETSCAPE_UNTRUSTED$/)
 				untrusted = 1
 
