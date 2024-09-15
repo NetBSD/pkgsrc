@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/05/20 06:44:21 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/09/15 06:13:52 wiz Exp $
 
-BLAKE2s (Convert-Color-0.17.tar.gz) = 9e6cad92b51c85c2ea77554f0c89ce72399c4c916df3a6c6e7dafd49277c000e
-SHA512 (Convert-Color-0.17.tar.gz) = edcbdc0d2775b7e5f814fc3fd16d4e089f89a3141a0e8776bf783aade5a7f20fa05cb4a46bd01bf16d2d9f41af46bca72de087c56c02fd088fe8b619bc26cb27
-Size (Convert-Color-0.17.tar.gz) = 35728 bytes
+BLAKE2s (Convert-Color-0.18.tar.gz) = 8a7c2f6ab5f8dbe74d8c3faf97f99b3ec89e7773f2acc166aa3206e7cf064b8e
+SHA512 (Convert-Color-0.18.tar.gz) = 4b790e4c935b4d5a95ae91cb7c8a8f4a4d61ed2d2a8e1669eddbd0aa196e4b05309d87a2dc6d5587f654b4334a618469e731b4eb40d14d80c51fe14d0a49a80c
+Size (Convert-Color-0.18.tar.gz) = 36546 bytes
