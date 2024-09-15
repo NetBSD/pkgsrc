@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/19 19:38:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/09/15 15:51:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -42,6 +42,15 @@ ${PYSITELIB}/scikit_build_core/_version.py
 ${PYSITELIB}/scikit_build_core/_version.pyc
 ${PYSITELIB}/scikit_build_core/_version.pyi
 ${PYSITELIB}/scikit_build_core/_version.pyo
+${PYSITELIB}/scikit_build_core/ast/__init__.py
+${PYSITELIB}/scikit_build_core/ast/__init__.pyc
+${PYSITELIB}/scikit_build_core/ast/__init__.pyo
+${PYSITELIB}/scikit_build_core/ast/ast.py
+${PYSITELIB}/scikit_build_core/ast/ast.pyc
+${PYSITELIB}/scikit_build_core/ast/ast.pyo
+${PYSITELIB}/scikit_build_core/ast/tokenizer.py
+${PYSITELIB}/scikit_build_core/ast/tokenizer.pyc
+${PYSITELIB}/scikit_build_core/ast/tokenizer.pyo
 ${PYSITELIB}/scikit_build_core/build/__init__.py
 ${PYSITELIB}/scikit_build_core/build/__init__.pyc
 ${PYSITELIB}/scikit_build_core/build/__init__.pyo
@@ -189,6 +198,12 @@ ${PYSITELIB}/scikit_build_core/settings/__init__.pyo
 ${PYSITELIB}/scikit_build_core/settings/_load_provider.py
 ${PYSITELIB}/scikit_build_core/settings/_load_provider.pyc
 ${PYSITELIB}/scikit_build_core/settings/_load_provider.pyo
+${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.py
+${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.pyc
+${PYSITELIB}/scikit_build_core/settings/auto_cmake_version.pyo
+${PYSITELIB}/scikit_build_core/settings/auto_requires.py
+${PYSITELIB}/scikit_build_core/settings/auto_requires.pyc
+${PYSITELIB}/scikit_build_core/settings/auto_requires.pyo
 ${PYSITELIB}/scikit_build_core/settings/documentation.py
 ${PYSITELIB}/scikit_build_core/settings/documentation.pyc
 ${PYSITELIB}/scikit_build_core/settings/documentation.pyo
@@ -201,6 +216,9 @@ ${PYSITELIB}/scikit_build_core/settings/skbuild_docs.pyo
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.py
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.pyc
 ${PYSITELIB}/scikit_build_core/settings/skbuild_model.pyo
+${PYSITELIB}/scikit_build_core/settings/skbuild_overrides.py
+${PYSITELIB}/scikit_build_core/settings/skbuild_overrides.pyc
+${PYSITELIB}/scikit_build_core/settings/skbuild_overrides.pyo
 ${PYSITELIB}/scikit_build_core/settings/skbuild_read_settings.py
 ${PYSITELIB}/scikit_build_core/settings/skbuild_read_settings.pyc
 ${PYSITELIB}/scikit_build_core/settings/skbuild_read_settings.pyo
