@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/07/21 10:07:11 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/09/15 09:43:42 adam Exp $
 
-BLAKE2s (google_i18n_address-3.1.0.tar.gz) = b0e5681f4f63a2444cb4da4446e327d98db6f723cb9f50d2fe3b74a344e04e2e
-SHA512 (google_i18n_address-3.1.0.tar.gz) = 0154fb93ff8e277c139fa9746ddf4b18516b6071091f50f7b3c79e0b71d174cda7c817af323fc4a68f895c1128bcef28f9d5bd715794fbb2b8a575e3bb174d0f
-Size (google_i18n_address-3.1.0.tar.gz) = 720252 bytes
+BLAKE2s (google_i18n_address-3.1.1.tar.gz) = aa03dfe3df356446fb626a3d555de6cdd68756f78a7fabf8867f2ee4f1d12bf8
+SHA512 (google_i18n_address-3.1.1.tar.gz) = 841aeebab372ea3a351006bc24a194bc40cacdcc6a897d8b920852a94de70a61980d9cbd323eeb1b5d3ffcdcc37d4e0beaf0ee4a0276463b2773d33ef8b00296
+Size (google_i18n_address-3.1.1.tar.gz) = 721615 bytes
+SHA1 (patch-pyproject.toml) = b95e3c683d912bc041157d37cd48bbcaf71cdcf2
