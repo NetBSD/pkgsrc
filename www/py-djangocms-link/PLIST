@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/05 11:06:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/15 07:19:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -19,6 +19,9 @@ ${PYSITELIB}/djangocms_link/fields_select2.pyo
 ${PYSITELIB}/djangocms_link/forms.py
 ${PYSITELIB}/djangocms_link/forms.pyc
 ${PYSITELIB}/djangocms_link/forms.pyo
+${PYSITELIB}/djangocms_link/helpers.py
+${PYSITELIB}/djangocms_link/helpers.pyc
+${PYSITELIB}/djangocms_link/helpers.pyo
 ${PYSITELIB}/djangocms_link/locale/af/LC_MESSAGES/django.mo
 ${PYSITELIB}/djangocms_link/locale/af/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_link/locale/ar/LC_MESSAGES/django.mo
