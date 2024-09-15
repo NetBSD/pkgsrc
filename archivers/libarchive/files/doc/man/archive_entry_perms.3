@@ -170,6 +170,7 @@ character strings at the same time.
 \fB\%archive_entry_set_XXX\fP()
 is an alias for
 \fB\%archive_entry_copy_XXX\fP().
+The strings are copied, and don't need to outlive the call.
 .SS File Flags
 File flags are transparently converted between a bitmap
 representation and a textual format.

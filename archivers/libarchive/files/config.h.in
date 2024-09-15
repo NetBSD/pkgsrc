@@ -697,9 +697,6 @@
 /* Define to 1 if you have the <libxml/xmlwriter.h> header file. */
 #undef HAVE_LIBXML_XMLWRITER_H
 
-/* Define to 1 if you have the `z' library (-lz). */
-#undef HAVE_LIBZ
-
 /* Define to 1 if you have the `zstd' library (-lzstd). */
 #undef HAVE_LIBZSTD
 
@@ -1121,9 +1118,6 @@
 /* Define to 1 if you have the <sys/poll.h> header file. */
 #undef HAVE_SYS_POLL_H
 
-/* Define to 1 if you have the <sys/queue.h> header file. */
-#undef HAVE_SYS_QUEUE_H
-
 /* Define to 1 if you have the <sys/richacl.h> header file. */
 #undef HAVE_SYS_RICHACL_H
 
@@ -1256,7 +1250,7 @@
 /* Define to 1 if you have a working FS_IOC_GETFLAGS */
 #undef HAVE_WORKING_FS_IOC_GETFLAGS
 
-/* Define to 1 if you have the <zlib.h> header file. */
+/* Define to 1 if you have zlib >= 1.2.1 */
 #undef HAVE_ZLIB_H
 
 /* Define to 1 if you have the <zstd.h> header file. */
