@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.39 2024/04/05 13:45:50 ryoon Exp $
+$NetBSD: distinfo,v 1.40 2024/09/15 08:22:29 adam Exp $
 
-BLAKE2s (x265_3.6/x265_3.6.tar.gz) = 5b0d4e3a05cb0bc5c3b9cef140029e7a93b3637e165381dbd3e866d0e2f8ef1c
-SHA512 (x265_3.6/x265_3.6.tar.gz) = 570429c3f0b560b2f946ac9baba97d66d7d6485e46eb695b17003b5913028f62d35822477633e911cd3ea60e6ce0ecc7d9d82de7d8257272f9ca7b43761438be
-Size (x265_3.6/x265_3.6.tar.gz) = 1655889 bytes
+BLAKE2s (x265_4.0.tar.gz) = 1641cf9bcd8c80475731357eeee3e51141b3e98f92a4caed1b235cee5d9a0b39
+SHA512 (x265_4.0.tar.gz) = 2584a06b2120b53776467cc040322d960d6ebfcb34f66d4c244c48fa3aa809c9cc8e4174237714dbb01e298aec20a8d18e9cdd4d64a80e6e494f1fbf5f86fdae
+Size (x265_4.0.tar.gz) = 1716450 bytes
 SHA1 (patch-CMakeLists.txt) = b69463b742ad1408b96ef2a87162900674a2cc8a
 SHA1 (patch-common_cpu.cpp) = 63c57523ab8b194bcbdddf7ba6cbdc565fa04187
 SHA1 (patch-common_cpu.h) = 000f9b6e40a459db4e3428730c8a9f5eeb6d9449
