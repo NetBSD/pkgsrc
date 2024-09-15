@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/11/09 12:17:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/09/15 15:22:56 adam Exp $
 bin/cvtsudoers
 bin/sudo
 bin/sudoedit
@@ -39,6 +39,7 @@ share/doc/sudo/SECURITY.md
 share/doc/sudo/TROUBLESHOOTING.md
 share/doc/sudo/UPGRADE.md
 ${PLIST.ldap}share/doc/sudo/schema.ActiveDirectory
+${PLIST.ldap}share/doc/sudo/schema.IBM_LDAP
 ${PLIST.ldap}share/doc/sudo/schema.OpenLDAP
 ${PLIST.ldap}share/doc/sudo/schema.iPlanet
 ${PLIST.ldap}share/doc/sudo/schema.olcSudo
@@ -78,6 +79,7 @@ ${PLIST.nls}share/locale/hr/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/id/LC_MESSAGES/sudo.mo
+${PLIST.nls}share/locale/id/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/sudo.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/sudoers.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/sudo.mo
