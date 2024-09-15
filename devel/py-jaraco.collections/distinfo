@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/04/15 08:11:37 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/09/15 09:34:14 adam Exp $
 
-BLAKE2s (jaraco.collections-5.0.1.tar.gz) = 7e9c96c2511ba7e2ee3dc7d3fe55315f35355f09ce691fb85575e3decf73bab1
-SHA512 (jaraco.collections-5.0.1.tar.gz) = 88b0f261acd91d585e643b810818762af7165eaf505099701b99ee3be6955eebcfd1c95690faa3ecb56b25f6982a8cee242e687e50ead56a557a5b2b72ec6dfe
-Size (jaraco.collections-5.0.1.tar.gz) = 17990 bytes
+BLAKE2s (jaraco_collections-5.1.0.tar.gz) = ed2ed138fb5d2c980983c0f079f7ffd05dfa8ba2950971c9d7f5c5156399a5c9
+SHA512 (jaraco_collections-5.1.0.tar.gz) = b03b247657ad25df0b86ad125728e37c8123fdd1834adfc16c7e41fb9c31b9d4c1b168ed40614b965caafc7dd55fd14bba8c355648c8b5cca13b50736bc32883
+Size (jaraco_collections-5.1.0.tar.gz) = 19026 bytes
