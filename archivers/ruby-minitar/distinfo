@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:57:16 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/09/15 16:41:23 taca Exp $
 
-BLAKE2s (minitar-0.9.gem) = 116434a988770e6bc1696daf300656eda479b73fc93a4b276d19d0a2ea638436
-SHA512 (minitar-0.9.gem) = de9d75a2839d7c1bbcfe23eec3d77d2e9fd233b4469d70a9d037f3bca3565102e6978286428e0bcde9748ca635915b73ecaa11356e1d45ccc8521fc663e4925e
-Size (minitar-0.9.gem) = 32768 bytes
+BLAKE2s (minitar-1.0.2.gem) = bfc582ea78c2e34c58190368566dfbf4933412a1308435792bc42ae066a725f3
+SHA512 (minitar-1.0.2.gem) = a0322c79a0190ec4d297189f3c3d41d59623b93c55bcaef4e7d102bd2395785ef2fca1be1c0341eb1b368f5d403c7eade3ab85b3a6f7dcac72f3607753dfed56
+Size (minitar-1.0.2.gem) = 34304 bytes
