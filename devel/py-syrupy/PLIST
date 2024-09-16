@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:28:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/16 16:09:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -49,6 +49,12 @@ ${PYSITELIB}/syrupy/location.pyo
 ${PYSITELIB}/syrupy/matchers.py
 ${PYSITELIB}/syrupy/matchers.pyc
 ${PYSITELIB}/syrupy/matchers.pyo
+${PYSITELIB}/syrupy/patches/__init__.py
+${PYSITELIB}/syrupy/patches/__init__.pyc
+${PYSITELIB}/syrupy/patches/__init__.pyo
+${PYSITELIB}/syrupy/patches/pycharm_diff.py
+${PYSITELIB}/syrupy/patches/pycharm_diff.pyc
+${PYSITELIB}/syrupy/patches/pycharm_diff.pyo
 ${PYSITELIB}/syrupy/py.typed
 ${PYSITELIB}/syrupy/report.py
 ${PYSITELIB}/syrupy/report.pyc
