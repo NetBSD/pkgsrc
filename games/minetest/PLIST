@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/12 15:16:03 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/09/16 14:29:03 ktnb Exp $
 bin/minetest
 bin/minetestserver
 man/man6/minetest.6
@@ -177,7 +177,15 @@ share/minetest/builtin/profiler/sampling.lua
 share/minetest/builtin/settingtypes.txt
 share/minetest/client/shaders/3d_interlaced_merge/opengl_fragment.glsl
 share/minetest/client/shaders/3d_interlaced_merge/opengl_vertex.glsl
-share/minetest/client/shaders/Irrlicht
+share/minetest/client/shaders/Irrlicht/OneTextureBlend.fsh
+share/minetest/client/shaders/Irrlicht/Renderer2D.fsh
+share/minetest/client/shaders/Irrlicht/Renderer2D.vsh
+share/minetest/client/shaders/Irrlicht/Renderer2D_noTex.fsh
+share/minetest/client/shaders/Irrlicht/Solid.fsh
+share/minetest/client/shaders/Irrlicht/Solid.vsh
+share/minetest/client/shaders/Irrlicht/TransparentAlphaChannel.fsh
+share/minetest/client/shaders/Irrlicht/TransparentAlphaChannelRef.fsh
+share/minetest/client/shaders/Irrlicht/TransparentVertexAlpha.fsh
 share/minetest/client/shaders/bloom_downsample/opengl_fragment.glsl
 share/minetest/client/shaders/bloom_downsample/opengl_vertex.glsl
 share/minetest/client/shaders/bloom_upsample/opengl_fragment.glsl
