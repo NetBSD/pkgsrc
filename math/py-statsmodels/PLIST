@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/12/15 09:48:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/09/16 19:25:59 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2083,6 +2083,9 @@ ${PYSITELIB}/statsmodels/tests/test_x13.pyo
 ${PYSITELIB}/statsmodels/tools/__init__.py
 ${PYSITELIB}/statsmodels/tools/__init__.pyc
 ${PYSITELIB}/statsmodels/tools/__init__.pyo
+${PYSITELIB}/statsmodels/tools/_test_runner.py
+${PYSITELIB}/statsmodels/tools/_test_runner.pyc
+${PYSITELIB}/statsmodels/tools/_test_runner.pyo
 ${PYSITELIB}/statsmodels/tools/_testing.py
 ${PYSITELIB}/statsmodels/tools/_testing.pyc
 ${PYSITELIB}/statsmodels/tools/_testing.pyo
