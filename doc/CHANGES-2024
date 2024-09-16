@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5671 2024/09/16 08:21:01 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5672 2024/09/16 08:29:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8724,3 +8724,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-types-setuptools to 74.1.0.20240907 [adam 2024-09-16]
 	Updated devel/git to 2.46.1 [adam 2024-09-16]
 	Updated security/py-paramiko to 3.5.0 [adam 2024-09-16]
+	Updated www/py-python-mimeparse to 2.0.0 [adam 2024-09-16]
+	Updated sysutils/py-reprotest to 0.7.28 [adam 2024-09-16]
