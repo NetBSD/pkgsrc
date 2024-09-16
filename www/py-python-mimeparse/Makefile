@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/09/16 08:25:41 adam Exp $
 
-DISTNAME=	python-mimeparse-1.6.0
+DISTNAME=	python_mimeparse-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
-CATEGORIES=	python www
+CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-mimeparse/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/dbtsai/python-mimeparse
+HOMEPAGE=	https://github.com/falconry/python-mimeparse
 COMMENT=	Module provides basic functions for parsing mime-type names
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
