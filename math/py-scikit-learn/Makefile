@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/08/26 22:45:44 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/09/16 10:39:18 adam Exp $
 
-DISTNAME=	scikit_learn-1.5.1
+DISTNAME=	scikit_learn-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-learn/}
@@ -19,12 +19,11 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.9.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	pkg-config
+GCC_REQD+=	8
 
 REPLACE_PYTHON+=	sklearn/_build_utils/version.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
-
-GCC_REQD+=	8
+PYTHON_VERSIONS_INCOMPATIBLE=	38 39
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/sklearn/preprocessing/_target_encoder_fast.pyx.orig

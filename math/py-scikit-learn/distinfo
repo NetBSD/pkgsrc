@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2024/08/03 07:21:06 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/09/16 10:39:18 adam Exp $
 
-BLAKE2s (scikit_learn-1.5.1.tar.gz) = 35924297e0390125e6b0164e238b545e738f252abc772d984293c8524d51b13f
-SHA512 (scikit_learn-1.5.1.tar.gz) = db19d7b75d0c58adf20218a42ff50909b23dda0d6fc690ff2888bec8afb1cafdb4caebdf2f6fcd78da09f4344033de8f3e72bf4ad72f4c47addc8d51cb90dabf
-Size (scikit_learn-1.5.1.tar.gz) = 6958368 bytes
+BLAKE2s (scikit_learn-1.5.2.tar.gz) = 5ff9f03c49ddebefc100201d51a289b91570a48aa4152e90c2e76b81ceb43bc4
+SHA512 (scikit_learn-1.5.2.tar.gz) = f8e31c733d435e0fb879ae84f253ef036a1586516814350ac752e2133b4ef958e9ae3f3e2b9fd38759bae543a8c767653370f49785014bb47b9767c84cc247bd
+Size (scikit_learn-1.5.2.tar.gz) = 7001680 bytes
 SHA1 (patch-sklearn_preprocessing___target__encoder__fast.pyx) = adbeb1a553182acc8ed7a841343097667cfb2115
 SHA1 (patch-sklearn_tree___tree.pyx) = 447d0e470bae1ab152bee1d922fa369c990adaa7
