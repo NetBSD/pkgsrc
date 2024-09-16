@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/25 20:34:04 fhajny Exp $
-${PYSITELIB}/mimeparse.pyo
-${PYSITELIB}/mimeparse.pyc
+@comment $NetBSD: PLIST,v 1.3 2024/09/16 08:25:41 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mimeparse.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/mimeparse.pyc
+${PYSITELIB}/mimeparse.pyo
