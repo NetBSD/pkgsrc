@@ -849,6 +849,7 @@ socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
 softhsm			Enable SoftHSM for key management.
 softhsm2		Enable SoftHSM version 2 for key management.
+soju-moderncsqlite	Use an alternative SQLite library that does not require CGO.
 sonic			Enable Sonic audio algorithm support.
 spacetime		Enable memory profiling with Spacetime.
 spamassassin		Enable SpamAssassin support.
