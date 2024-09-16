@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2024/09/09 07:46:20 nia Exp $
+$NetBSD: distinfo,v 1.16 2024/09/16 14:29:03 ktnb Exp $
 
-BLAKE2s (minetest-5.9.0.tar.gz) = 813c7b0218297236239b2d419bb7390e6b9cc491a8aef74f1215c7961b181702
-SHA512 (minetest-5.9.0.tar.gz) = 12f741ffc4e3b44fd19e98b288f8ed42a5a4c48a02f09a2ea712199815e5393bb50a9b6719c367036041094f8922af9c56a70585e9b26085fe96c70869d3cdbf
-Size (minetest-5.9.0.tar.gz) = 11984514 bytes
-SHA1 (patch-irr_src_CIrrDeviceLinux.cpp) = ef1133760dee61aaee8dc59690b7644ce45a3390
+BLAKE2s (minetest-5.9.1.tar.gz) = d3f3a120e057a162df2fac05d7aa0c2d6c605f1bd5e26d8b64885b1180b69433
+SHA512 (minetest-5.9.1.tar.gz) = e4a03cd7f0a745f0571dd3e9701ddf48e079c59dc0bf0c59ecf756151d03a82422213e7198f359e93852b83111430e2db8c2f5f92020b3244f64e197fd51c93c
+Size (minetest-5.9.1.tar.gz) = 11957091 bytes
+SHA1 (patch-irr_src_CIrrDeviceLinux.cpp) = 9c5d6b99762343feb0a050354adc33c9a70a4d3e
 SHA1 (patch-irr_src_os.cpp) = fe5cf12adf6b4574e97e8cfee46a07401b87ab90
 SHA1 (patch-src_util_string.cpp) = c736bb886ec087ac2fcaf36da4d78dbe0d45e616
