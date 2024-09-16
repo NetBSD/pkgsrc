@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.2 2024/08/13 19:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/16 09:24:06 adam Exp $
 
-DISTNAME=	amaranth-0.5.1
+DISTNAME=	amaranth-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amaranth/}
 
 MAINTAINER=	js@NetBSD.org
-HOMEPAGE=	https://pypi.org/project/amaranth/
+HOMEPAGE=	https://github.com/amaranth-lang/amaranth
 COMMENT=	Toolchain for developing hardware based on synchronous digital logic
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-DEPENDS+=	${PYPKGPREFIX}-jschon>=0.11<0.12:../../textproc/py-jschon
-DEPENDS+=	${PYPKGPREFIX}-pyvcd>=0.2<0.5:../../devel/py-pyvcd
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=2.3.0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0:../../textproc/py-jinja2
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pdm>=2.3.0<3.0:../../devel/py-pdm
+DEPENDS+=	${PYPKGPREFIX}-jschon>=0.11.1:../../textproc/py-jschon
+DEPENDS+=	${PYPKGPREFIX}-pyvcd>=0.2.2:../../devel/py-pyvcd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 309
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
