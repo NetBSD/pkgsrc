@@ -10,17 +10,17 @@ All file systems but those are read-only, /tmp and /dev need platform
 specific handling either as tmpfs or link. ptyfs helps for /dev.
 
 For parallel builds, /bulklog, /packages and /usr/pkgsrc are supposed to
-be shared (null mounts, NFS). /usr/pkg and /var/db/pkg needs to be
+be shared (null mounts, NFS). /usr/pkg and PKG_DBDIR need to be
 per-node and /scratch should be per-node.
 
-The defaults scripts will remove /usr/pkg and /var/db/pkg on the master
+The defaults scripts will remove /usr/pkg and PKG_DBDIR on the master
 node as well. When using chroot sandboxes for the build, the master can
 share a sandbox with one of the build instances.
 
 Step Two: Preparing pbulk prefix
 
 Install pkgtools/pbulk and possibly helper programs like screen into
-LOCALBASE=/usr/pkg_bulk, PKG_DBDIR=/usr/pkg_bulk/.pkgdb. A full
+LOCALBASE=/usr/pkg_bulk, PKG_DBDIR=/usr/pkg_bulk/pkgdb. A full
 bootstrap is the recommended approach. Copy /usr/pkg_bulk to the client
 nodes for parallel builds.
 
@@ -115,8 +115,9 @@ PKG_DEVELOPER?= yes
 ####
 
 PBULK_CACHE_DIRECTORY when set collects the build options of packages,
-so these need to be extracted only once per pbulk run. This needs to be
-a directory shared between pbulk master and clients (like bulklog).
+so these need to be extracted only once per pbulk run. This may be
+a directory shared between pbulk clients (like bulklog) but doesn't
+have to be.
 You need to clear it between pbulk runs when you updated pkgsrc,
 or packages that change default options or their dependents may stop
 building.
