@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5669 2024/09/16 01:01:03 scole Exp $
+$NetBSD: CHANGES-2024,v 1.5670 2024/09/16 08:08:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8720,3 +8720,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-aws-sdk-kms to 1.91.0 [taca 2024-09-15]
 	Updated www/ruby-aws-sdk-s3 to 1.162.0 [taca 2024-09-15]
 	Updated textproc/split-thai to 2.37 [scole 2024-09-16]
+	Updated time/py-types-python-dateutil to 2.9.0.20240906 [adam 2024-09-16]
+	Updated devel/py-types-setuptools to 74.1.0.20240907 [adam 2024-09-16]
