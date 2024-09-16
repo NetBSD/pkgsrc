@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/01/19 13:13:44 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/16 10:35:13 adam Exp $
 
-DISTNAME=	klein-23.12.0
+DISTNAME=	klein-24.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/klein/}
@@ -22,8 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-treq-[0-9]*:../../devel/py-treq
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
