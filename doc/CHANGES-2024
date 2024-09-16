@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5677 2024/09/16 11:47:37 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5678 2024/09/16 12:56:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8737,3 +8737,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hypothesis to 6.112.1 [adam 2024-09-16]
 	Updated www/py-gunicorn to 23.0.0 [adam 2024-09-16]
 	Updated databases/py-barman to 3.11.1 [adam 2024-09-16]
+	Added chat/soju version 0.8.2 [wiz 2024-09-16]
