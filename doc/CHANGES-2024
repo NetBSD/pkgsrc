@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5672 2024/09/16 08:29:32 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5673 2024/09/16 09:26:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8726,3 +8726,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-paramiko to 3.5.0 [adam 2024-09-16]
 	Updated www/py-python-mimeparse to 2.0.0 [adam 2024-09-16]
 	Updated sysutils/py-reprotest to 0.7.28 [adam 2024-09-16]
+	Updated devel/py-amaranth to 0.5.2 [adam 2024-09-16]
+	Updated www/py-idna to 3.10 [adam 2024-09-16]
