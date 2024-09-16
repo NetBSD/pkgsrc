@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/10 10:56:56 js Exp $
+$NetBSD: distinfo,v 1.2 2024/09/16 09:24:06 adam Exp $
 
-BLAKE2s (amaranth-0.5.1.tar.gz) = 668e8b9987d2dba365a59af45508bd52beff550a4f2d6bd93ec702838a32e13f
-SHA512 (amaranth-0.5.1.tar.gz) = e14f0f8b56758d892e10da64109497e1c63b87a6dd2e98f39fb9ae52bbcdc41561001a42ef4c56e7c9566ae91cf98582dcc043249bf8b94bbd860993c157b413
-Size (amaranth-0.5.1.tar.gz) = 224953 bytes
+BLAKE2s (amaranth-0.5.2.tar.gz) = 17739d67326b01fa1908dbfaefd6b61cf83aead173d42e9b87bdbd75c833be7b
+SHA512 (amaranth-0.5.2.tar.gz) = cf18101b0fab47b5de175e5721c99039c9047896d6d6c7f2742ee4340f06bcd33750e421257d23218b5cd7edbce596b6c651c512f49a2e5295a177e6afec216e
+Size (amaranth-0.5.2.tar.gz) = 225413 bytes
