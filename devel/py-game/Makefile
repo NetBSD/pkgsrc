@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.47 2024/04/06 08:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/09/16 19:14:46 adam Exp $
 
-DISTNAME=	pygame-2.5.2
+DISTNAME=	pygame-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
 CATEGORIES=	devel games python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pygame/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.pygame.org/
+HOMEPAGE=	https://www.pygame.org/
 COMMENT=	Set of Python modules designed for writing games
 LICENSE=	gnu-lgpl-v2.1
 
@@ -18,8 +17,6 @@ USE_TOOLS+=	pkg-config
 
 REPLACE_PYTHON+=	examples/*.py
 REPLACE_PYTHON+=	setup.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		fixpath
 SUBST_STAGE.fixpath=	pre-configure
