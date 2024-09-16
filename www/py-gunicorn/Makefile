@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/05/07 04:03:52 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/09/16 11:41:12 adam Exp $
 
-DISTNAME=	gunicorn-22.0.0
+DISTNAME=	gunicorn-23.0.0
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
