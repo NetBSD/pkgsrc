@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/08/30 12:35:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/09/16 08:08:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -96,6 +96,7 @@ ${PYSITELIB}/setuptools-stubs/command/upload_docs.pyi
 ${PYSITELIB}/setuptools-stubs/compat/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/compat/py310.pyi
 ${PYSITELIB}/setuptools-stubs/compat/py311.pyi
+${PYSITELIB}/setuptools-stubs/compat/py312.pyi
 ${PYSITELIB}/setuptools-stubs/compat/py39.pyi
 ${PYSITELIB}/setuptools-stubs/config/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/config/expand.pyi
@@ -112,6 +113,7 @@ ${PYSITELIB}/setuptools-stubs/launch.pyi
 ${PYSITELIB}/setuptools-stubs/logging.pyi
 ${PYSITELIB}/setuptools-stubs/modified.pyi
 ${PYSITELIB}/setuptools-stubs/monkey.pyi
+${PYSITELIB}/setuptools-stubs/msvc.pyi
 ${PYSITELIB}/setuptools-stubs/namespaces.pyi
 ${PYSITELIB}/setuptools-stubs/package_index.pyi
 ${PYSITELIB}/setuptools-stubs/py.typed
