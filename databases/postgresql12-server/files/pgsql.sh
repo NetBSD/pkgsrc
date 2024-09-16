@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.2 2024/02/09 08:33:13 adam Exp $
+# $NetBSD: pgsql.sh,v 1.3 2024/09/16 12:09:59 adam Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -40,9 +40,7 @@ restart_cmd="pgsql_restart"
 stop_cmd="pgsql_stop"
 reload_cmd="pgsql_reload"
 
-if [ -f @SYSCONFBASE@/rc.subr ] && \
-   [ -d @SYSCONFBASE@/rc.d ] && \
-   [ -f @SYSCONFBASE@/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	load_rc_config $name
 elif [ -f @SYSCONFBASE@/rc.conf ]; then
 	. @SYSCONFBASE@/rc.conf
@@ -103,9 +101,7 @@ pgsql_reload()
 	@SU@ -m ${pgsql_user} -c "${command} reload ${command_args_daemon}"
 }
 
-if [ -f @SYSCONFBASE@/rc.subr ] && \
-   [ -d @SYSCONFBASE@/rc.d ] && \
-   [ -f @SYSCONFBASE@/rc.d/DAEMON ]; then
+if [ -f @SYSCONFBASE@/rc.subr -a -d @SYSCONFBASE@/rc.d -a -f @SYSCONFBASE@/rc.d/DAEMON ]; then
 	run_rc_command "$1"
 else
 	pidfile="${pgsql_home}/data/postmaster.pid"
