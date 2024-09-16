@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/19 13:13:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/16 10:35:13 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -11,6 +11,9 @@ ${PYSITELIB}/klein/__init__.pyo
 ${PYSITELIB}/klein/_app.py
 ${PYSITELIB}/klein/_app.pyc
 ${PYSITELIB}/klein/_app.pyo
+${PYSITELIB}/klein/_attrs_zope.py
+${PYSITELIB}/klein/_attrs_zope.pyc
+${PYSITELIB}/klein/_attrs_zope.pyo
 ${PYSITELIB}/klein/_decorators.py
 ${PYSITELIB}/klein/_decorators.pyc
 ${PYSITELIB}/klein/_decorators.pyo
@@ -102,6 +105,9 @@ ${PYSITELIB}/klein/test/not_hypothesis.pyo
 ${PYSITELIB}/klein/test/test_app.py
 ${PYSITELIB}/klein/test/test_app.pyc
 ${PYSITELIB}/klein/test/test_app.pyo
+${PYSITELIB}/klein/test/test_attrs_zope.py
+${PYSITELIB}/klein/test/test_attrs_zope.pyc
+${PYSITELIB}/klein/test/test_attrs_zope.pyo
 ${PYSITELIB}/klein/test/test_exports.py
 ${PYSITELIB}/klein/test/test_exports.pyc
 ${PYSITELIB}/klein/test/test_exports.pyo
