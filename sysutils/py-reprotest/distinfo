@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/06/11 09:28:46 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/09/16 08:29:06 adam Exp $
 
-BLAKE2s (reprotest-0.7.27.tar.gz) = f3dab0087c54dcb55c3ac92cd0101285c83b3bc4ffb02a4d6bd637ab5006bc60
-SHA512 (reprotest-0.7.27.tar.gz) = 62346f4f3e23ace06feea01a6d21cb7a87121233d33f02e1ab2794e8f09955f9b57853ba30d3bec88059c21063f83e3f3d1e00fc310c0c3571d7476794c9f273
-Size (reprotest-0.7.27.tar.gz) = 89004 bytes
+BLAKE2s (reprotest-0.7.28.tar.gz) = a10dc02b5c4aab8381edc4ec17d15f4e1cc3467bbe45fb23a86b5531de3a60b1
+SHA512 (reprotest-0.7.28.tar.gz) = d1656fc3d97963a3b1c1a16641653def4079fd2bbe63c1440aa3cdf5317f00d895b4e0c007b1c32f8659e895bdb0abfcf72d1fb2d5b4e71d2d2170d4e512dd5d
+Size (reprotest-0.7.28.tar.gz) = 89075 bytes

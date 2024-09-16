@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/06/11 09:28:46 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/09/16 08:29:06 adam Exp $
 
-DISTNAME=	reprotest-0.7.27
+DISTNAME=	reprotest-0.7.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/reprotest/}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-diffoscope>=112:../../sysutils/py-diffoscope
 TEST_DEPENDS+=	dpkg-[0-9]*:../../misc/dpkg
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-chroot
 REPLACE_PYTHON+=	reprotest/virt/autopkgtest-virt-lxc
