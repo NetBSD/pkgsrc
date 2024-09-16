@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5675 2024/09/16 10:39:37 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5676 2024/09/16 11:11:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8732,3 +8732,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-capstone to 5.0.3 [adam 2024-09-16]
 	Updated www/py-klein to 24.8.0 [adam 2024-09-16]
 	Updated math/py-scikit-learn to 1.5.2 [adam 2024-09-16]
+	Updated devel/py-pytype to 2024.9.13 [adam 2024-09-16]
+	Updated geography/py-maxminddb to 2.6.2 [adam 2024-09-16]
+	Updated devel/py-hypothesis to 6.112.1 [adam 2024-09-16]
