@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/06/13 05:04:23 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/09/16 11:47:09 adam Exp $
 
-DISTNAME=	barman-3.10.1
+DISTNAME=	barman-3.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
@@ -20,8 +20,6 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONF_FILES+=		share/examples/barman/barman.conf \
 			${PKG_SYSCONFDIR}/barman.conf
