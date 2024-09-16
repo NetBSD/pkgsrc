@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/16 12:55:50 wiz Exp $
+bin/soju
+bin/soju-casemap-logs.sh
+bin/soju-migrate-db
+bin/soju-migrate-logs
+bin/soju-znc-import
+bin/sojuctl
+bin/sojudb
+man/man1/soju.1
+man/man1/sojuctl.1
+share/doc/soju/certbot.md
+share/doc/soju/clients.md
+share/doc/soju/ext/README.md
+share/doc/soju/ext/account-required.md
+share/doc/soju/ext/bouncer-networks.md
+share/doc/soju/ext/filehost.md
+share/doc/soju/ext/no-implicit-names.md
+share/doc/soju/ext/read.md
+share/doc/soju/ext/search.md
+share/doc/soju/ext/webpush.md
+share/doc/soju/getting-started.md
+share/doc/soju/per-user-ip.md
+share/doc/soju/tlstunnel.md
+share/examples/soju/config
+share/examples/soju/soju.service

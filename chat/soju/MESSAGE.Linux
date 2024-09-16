@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE.Linux,v 1.1 2024/09/16 12:55:50 wiz Exp $
+
+On Linux, if you want to use the built-in identd, you may need to
+assign the CAP_NET_BIND_SERVICE capability in order for soju to be
+able to bind to port 113:
+
+	setcap 'cap_net_bind_service=+ep' ${PREFIX}/bin/soju
+
+setcap can be found in your distribution's libcap or libcap2-bin
+packages, or can be installed from pkgsrc in sysutils/libcap.
+
+===========================================================================
