@@ -111,3 +111,12 @@ SKIP_LICENSE_CHECK=			yes
 ALLOW_VULNERABLE_PACKAGES=	yes
 
 PKG_DEVELOPER?= yes
+
+####
+
+PBULK_CACHE_DIRECTORY when set collects the build options of packages,
+so these need to be extracted only once per pbulk run. This needs to be
+a directory shared between pbulk master and clients (like bulklog).
+You need to clear it between pbulk runs when you updated pkgsrc,
+or packages that change default options or their dependents may stop
+building.
