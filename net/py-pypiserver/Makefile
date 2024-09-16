@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/07/14 13:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/09/16 19:21:38 adam Exp $
 
-DISTNAME=	pypiserver-2.1.1
+DISTNAME=	pypiserver-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypiserver/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twine-[0-9]*:../../net/py-twine
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 312
