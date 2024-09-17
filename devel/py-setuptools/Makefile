@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.255 2024/09/13 09:35:06 wiz Exp $
+# $NetBSD: Makefile,v 1.256 2024/09/17 07:11:37 adam Exp $
 
-DISTNAME=	setuptools-74.1.2
+DISTNAME=	setuptools-75.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -22,14 +22,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=19.1:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs>=2.4:../../devel/py-test-checkdocs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-home>=0.5:../../devel/py-test-home
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-subprocess-[0-9]*:../../devel/py-test-subprocess
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tomli_w>=1.0.0:../../textproc/py-tomli_w
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv>=13.0.0:../../devel/py-virtualenv
 
-# as of 74.1.2
-# 34 failed, 1141 passed, 41 skipped, 10 xfailed, 2 xpassed, 1 error
+# as of 75.1.0
+# 34 failed, 1141 passed, 41 skipped, 10 xfailed, 2 xpassed
 
 # Pick setuptools.tests which are not built nor installed.
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
