@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5696 2024/09/17 12:18:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5697 2024/09/17 15:30:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8767,3 +8767,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/bmake to 20240909 [jperkin 2024-09-17]
 	Updated devel/catch2 to 3.7.1 [adam 2024-09-17]
 	Updated devel/py-jupyter_client to 8.6.3 [adam 2024-09-17]
+	Updated devel/py-sentry-sdk to 2.14.0 [adam 2024-09-17]
+	Updated devel/py-types-setuptools to 75.1.0.20240917 [adam 2024-09-17]
