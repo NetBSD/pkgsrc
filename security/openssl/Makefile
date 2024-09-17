@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.302 2024/09/06 13:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.303 2024/09/17 11:31:52 nia Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
@@ -57,6 +57,10 @@ CONFIGURE_ARGS+=	no-async
 # While it does check for this, it does so using a header that is only
 # available in OS X versions starting with Leopard.
 CFLAGS+=		-DOPENSSL_NO_APPLE_CRYPTO_RANDOM=1
+
+# The "timezone" mktime variable upon which OpenSSL relies
+# is only available when __DARWIN_UNIX03 is defined.
+CFLAGS+=		-DUSE_TIMEGM=1
 .endif
 
 PLIST_VARS+=		devcrypto afalg
