@@ -1,4 +1,4 @@
-# $NetBSD: varmod-quote.mk,v 1.1 2024/07/15 09:10:30 jperkin Exp $
+# $NetBSD: varmod-quote.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :Q variable modifier, which quotes the variable value
 # to be used in a shell program.

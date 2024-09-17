@@ -17,7 +17,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: os.sh,v 1.14 2024/07/15 09:10:06 jperkin Exp $
+#	$Id: os.sh,v 1.15 2024/09/17 11:52:26 jperkin Exp $
 #
 #	@(#) Copyright (c) 1994 Simon J. Gerraty
 #
@@ -227,6 +227,7 @@ x86*64|amd64) MACHINE32_ARCH=i386;;
 *) MACHINE32_ARCH=$MACHINE_ARCH;;
 esac
 HOST_ARCH32=${HOST_ARCH32:-$MACHINE32_ARCH}
+export HOST_ARCH HOST_ARCH32
 # we mount server:/share/arch/$SHARE_ARCH as /usr/local
 SHARE_ARCH_DEFAULT=$OS/$OSMAJOR.X/$HOST_ARCH
 SHARE_ARCH=${SHARE_ARCH:-$SHARE_ARCH_DEFAULT}

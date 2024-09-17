@@ -1,4 +1,4 @@
-# $NetBSD: modmisc.mk,v 1.4 2024/07/15 09:10:22 jperkin Exp $
+# $NetBSD: modmisc.mk,v 1.5 2024/09/17 11:52:32 jperkin Exp $
 #
 # miscellaneous modifier tests
 

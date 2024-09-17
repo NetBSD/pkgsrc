@@ -1,4 +1,4 @@
-# $NetBSD: varmod-l-name-to-value.mk,v 1.1 2024/07/15 09:10:29 jperkin Exp $
+# $NetBSD: varmod-l-name-to-value.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :L modifier, which returns the variable name as the new value.
 

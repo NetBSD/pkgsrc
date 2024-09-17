@@ -1,4 +1,4 @@
-# $NetBSD: varname-dot-make-ppid.mk,v 1.1 2024/07/15 09:10:33 jperkin Exp $
+# $NetBSD: varname-dot-make-ppid.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 #
 # Tests for the special .MAKE.PPID variable, which contains the process ID of
 # make's parent process.

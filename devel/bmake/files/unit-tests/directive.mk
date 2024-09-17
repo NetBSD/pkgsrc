@@ -1,4 +1,4 @@
-# $NetBSD: directive.mk,v 1.1 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: directive.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for the preprocessing directives, such as .if or .info.
 

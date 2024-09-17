@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-delete_on_error.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-delete_on_error.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the special target .DELETE_ON_ERROR in dependency declarations,
 # which controls whether the target is deleted if a shell command fails or

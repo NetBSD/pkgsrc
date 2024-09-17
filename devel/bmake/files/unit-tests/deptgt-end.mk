@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-end.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-end.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the special target .END in dependency declarations,
 # which is run after making the desired targets.

@@ -1,4 +1,4 @@
-# $NetBSD: archive-suffix.mk,v 1.1 2024/07/15 09:10:10 jperkin Exp $
+# $NetBSD: archive-suffix.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Between 2020-08-23 and 2020-08-30, the below code produced an assertion
 # failure in Var_SetWithFlags, triggered by Compat_Make, when setting the

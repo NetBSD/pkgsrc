@@ -1,4 +1,4 @@
-/*	$NetBSD: suff.c,v 1.8 2024/07/15 09:10:07 jperkin Exp $	*/
+/*	$NetBSD: suff.c,v 1.9 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -115,7 +115,7 @@
 #include "dir.h"
 
 /*	"@(#)suff.c	8.4 (Berkeley) 3/21/94"	*/
-MAKE_RCSID("$NetBSD: suff.c,v 1.8 2024/07/15 09:10:07 jperkin Exp $");
+MAKE_RCSID("$NetBSD: suff.c,v 1.9 2024/09/17 11:52:27 jperkin Exp $");
 
 typedef List SuffixList;
 typedef ListNode SuffixListNode;

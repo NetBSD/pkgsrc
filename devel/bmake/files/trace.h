@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.h,v 1.8 2024/07/15 09:10:07 jperkin Exp $	*/
+/*	$NetBSD: trace.h,v 1.9 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Copyright (c) 2000 The NetBSD Foundation, Inc.

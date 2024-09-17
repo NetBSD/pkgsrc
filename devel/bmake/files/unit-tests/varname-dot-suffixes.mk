@@ -1,4 +1,4 @@
-# $NetBSD: varname-dot-suffixes.mk,v 1.1 2024/07/15 09:10:34 jperkin Exp $
+# $NetBSD: varname-dot-suffixes.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 #
 # Tests for the special "variable" .SUFFIXES, which lists the suffixes that
 # have been registered for use in suffix transformation rules.  Suffixes are

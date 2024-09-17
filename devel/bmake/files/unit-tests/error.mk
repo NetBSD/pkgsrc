@@ -1,4 +1,4 @@
-# $NetBSD: error.mk,v 1.4 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: error.mk,v 1.5 2024/09/17 11:52:31 jperkin Exp $
 #
 # Demonstrate that the .error directive exits immediately, without
 # continuing parsing until the end of the file.

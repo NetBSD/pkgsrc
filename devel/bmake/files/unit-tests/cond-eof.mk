@@ -1,4 +1,4 @@
-# $NetBSD: cond-eof.mk,v 1.1 2024/07/15 09:10:11 jperkin Exp $
+# $NetBSD: cond-eof.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Tests for parsing the end of '.if' conditions, which are represented as the
 # token TOK_EOF.
@@ -13,12 +13,12 @@ SIDE_EFFECT2=	${:!echo 'side effect 2' 1>&2!}
 # These syntax errors are an edge case that does not occur during normal
 # operation.  Still, it is easy to avoid evaluating these expressions, just in
 # case they have side effects.
-# expect+1: Malformed conditional (0 ${SIDE_EFFECT} ${SIDE_EFFECT2})
+# expect+1: Malformed conditional '0 ${SIDE_EFFECT} ${SIDE_EFFECT2}'
 .if 0 ${SIDE_EFFECT} ${SIDE_EFFECT2}
 .endif
-# expect+1: Malformed conditional (1 ${SIDE_EFFECT} ${SIDE_EFFECT2})
+# expect+1: Malformed conditional '1 ${SIDE_EFFECT} ${SIDE_EFFECT2}'
 .if 1 ${SIDE_EFFECT} ${SIDE_EFFECT2}
 .endif
-# expect+1: Malformed conditional ((0) ${SIDE_EFFECT} ${SIDE_EFFECT2})
+# expect+1: Malformed conditional '(0) ${SIDE_EFFECT} ${SIDE_EFFECT2}'
 .if (0) ${SIDE_EFFECT} ${SIDE_EFFECT2}
 .endif

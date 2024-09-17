@@ -1,4 +1,4 @@
-# $NetBSD: jobs-empty-commands.mk,v 1.1 2024/07/15 09:10:21 jperkin Exp $
+# $NetBSD: jobs-empty-commands.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # In jobs mode, the shell commands for creating a target are written to a
 # temporary file first, which is then run by the shell.  In chains of

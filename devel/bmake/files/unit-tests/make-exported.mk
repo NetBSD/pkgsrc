@@ -1,4 +1,4 @@
-# $NetBSD: make-exported.mk,v 1.1 2024/07/15 09:10:21 jperkin Exp $
+# $NetBSD: make-exported.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # As of 2020-08-09, the code in Var_Export is shared between the .export
 # directive and the .MAKE.EXPORTED variable.  This leads to non-obvious

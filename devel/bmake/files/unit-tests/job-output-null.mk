@@ -1,4 +1,4 @@
-# $NetBSD: job-output-null.mk,v 1.1 2024/07/15 09:10:21 jperkin Exp $
+# $NetBSD: job-output-null.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Test how null bytes in the output of a command are handled.  Make processes
 # them using null-terminated strings, which may cut off some of the output.

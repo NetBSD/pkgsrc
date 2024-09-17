@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-ignore.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-ignore.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the special target .IGNORE in dependency declarations, which
 # does not stop if a command from this target exits with a non-zero status.

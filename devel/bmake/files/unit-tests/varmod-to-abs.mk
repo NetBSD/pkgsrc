@@ -1,4 +1,4 @@
-# $NetBSD: varmod-to-abs.mk,v 1.1 2024/07/15 09:10:31 jperkin Exp $
+# $NetBSD: varmod-to-abs.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :tA variable modifier, which returns the absolute path for
 # each of the words in the variable value.

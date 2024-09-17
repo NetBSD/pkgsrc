@@ -1,4 +1,4 @@
-# $NetBSD: opt-debug-graph2.mk,v 1.1 2024/07/15 09:10:23 jperkin Exp $
+# $NetBSD: opt-debug-graph2.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the -dg2 command line option, which prints the input
 # graph after making everything, or before exiting on error.

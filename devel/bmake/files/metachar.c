@@ -1,4 +1,4 @@
-/*	$NetBSD: metachar.c,v 1.4 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: metachar.c,v 1.5 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 2015 The NetBSD Foundation, Inc.
@@ -39,7 +39,7 @@
 
 #include "metachar.h"
 
-MAKE_RCSID("$NetBSD: metachar.c,v 1.4 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: metachar.c,v 1.5 2024/09/17 11:52:26 jperkin Exp $");
 
 /*
  * The following array is used to make a fast determination of which

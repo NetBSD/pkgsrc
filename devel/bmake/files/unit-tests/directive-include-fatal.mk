@@ -1,4 +1,4 @@
-# $NetBSD: directive-include-fatal.mk,v 1.1 2024/07/15 09:10:19 jperkin Exp $
+# $NetBSD: directive-include-fatal.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Test for the .include directive combined with fatal errors.
 #
@@ -10,7 +10,7 @@
 # the "fatals" counter.
 
 # Using an undefined variable in a condition generates a fatal error.
-# expect+1: Malformed conditional (${UNDEF})
+# expect+1: Malformed conditional '${UNDEF}'
 .if ${UNDEF}
 .endif
 

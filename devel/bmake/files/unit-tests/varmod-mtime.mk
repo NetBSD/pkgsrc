@@ -1,4 +1,4 @@
-# $NetBSD: varmod-mtime.mk,v 1.1 2024/07/15 09:10:30 jperkin Exp $
+# $NetBSD: varmod-mtime.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the ':mtime' variable modifier, which maps each word of the
 # expression to that file's modification time.
@@ -42,8 +42,8 @@ not_found_mtime:=	${no/such/file:L:mtime}
 
 
 # The fallback timestamp must only be an integer, without trailing characters.
-# expect+2: while evaluating variable "no/such/file" with value "no/such/file": Invalid argument '123x' for modifier ':mtime'
-# expect+1: Malformed conditional (${no/such/file:L:mtime=123x})
+# expect+2: Invalid argument '123x' for modifier ':mtime'
+# expect+1: Malformed conditional '${no/such/file:L:mtime=123x}'
 .if ${no/such/file:L:mtime=123x}
 .  error
 .else
@@ -64,9 +64,9 @@ _!=	rm -f ${COOKIE}
 # If the optional argument of the ':mtime' modifier is the word 'error', the
 # modifier fails with an error message, once for each affected file.
 #
-# expect+3: while evaluating variable "no/such/file1 no/such/file2" with value "no/such/file1 no/such/file2": Cannot determine mtime for 'no/such/file1': <ENOENT>
-# expect+2: while evaluating variable "no/such/file1 no/such/file2" with value "no/such/file1 no/such/file2": Cannot determine mtime for 'no/such/file2': <ENOENT>
-# expect+1: Malformed conditional (${no/such/file1 no/such/file2:L:mtime=error})
+# expect+3: Cannot determine mtime for 'no/such/file1': <ENOENT>
+# expect+2: Cannot determine mtime for 'no/such/file2': <ENOENT>
+# expect+1: Malformed conditional '${no/such/file1 no/such/file2:L:mtime=error}'
 .if ${no/such/file1 no/such/file2:L:mtime=error}
 .  error
 .else
@@ -76,8 +76,8 @@ _!=	rm -f ${COOKIE}
 
 # Only the word 'error' is a special argument to the ':mtime' modifier, all
 # other words result in a parse error.
-# expect+2: while evaluating variable "MAKEFILE" with value "varmod-mtime.mk": Invalid argument 'errorhandler-no' for modifier ':mtime'
-# expect+1: Malformed conditional (${MAKEFILE:mtime=errorhandler-no} > 0)
+# expect+2: Invalid argument 'errorhandler-no' for modifier ':mtime'
+# expect+1: Malformed conditional '${MAKEFILE:mtime=errorhandler-no} > 0'
 .if ${MAKEFILE:mtime=errorhandler-no} > 0
 .else
 .  error
@@ -85,8 +85,8 @@ _!=	rm -f ${COOKIE}
 
 
 # Only the word 'error' can be used as a fallback argument to the modifier.
-# expect+2: while evaluating variable "MAKEFILE" with value "varmod-mtime.mk": Invalid argument 'warn' for modifier ':mtime'
-# expect+1: Malformed conditional (${MAKEFILE:mtime=warn} > 0)
+# expect+2: Invalid argument 'warn' for modifier ':mtime'
+# expect+1: Malformed conditional '${MAKEFILE:mtime=warn} > 0'
 .if ${MAKEFILE:mtime=warn} > 0
 .  error
 .else
@@ -110,8 +110,8 @@ end:=	${%s:L:gmtime}
 
 
 # If there is a typo in the modifier name, it does not match.
-# expect+2: while evaluating variable "anything" with value "anything": Unknown modifier "mtim"
-# expect+1: Malformed conditional (${anything:L:mtim})
+# expect+2: Unknown modifier "mtim"
+# expect+1: Malformed conditional '${anything:L:mtim}'
 .if ${anything:L:mtim}
 .  error
 .else

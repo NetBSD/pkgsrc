@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-silent-jobs.mk,v 1.1 2024/07/15 09:10:16 jperkin Exp $
+# $NetBSD: deptgt-silent-jobs.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Ensure that the special dependency target '.SILENT' only affects the amount
 # of output, but not the kind of error handling.

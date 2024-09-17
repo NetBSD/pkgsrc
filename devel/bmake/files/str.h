@@ -1,4 +1,4 @@
-/*	$NetBSD: str.h,v 1.1 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: str.h,v 1.2 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  Copyright (c) 2021 Roland Illig <rillig@NetBSD.org>

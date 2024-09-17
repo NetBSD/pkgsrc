@@ -1,4 +1,4 @@
-/*	$NetBSD: buf.c,v 1.8 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: buf.c,v 1.9 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -75,7 +75,7 @@
 #include "make.h"
 
 /*	"@(#)buf.c	8.1 (Berkeley) 6/6/93"	*/
-MAKE_RCSID("$NetBSD: buf.c,v 1.8 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: buf.c,v 1.9 2024/09/17 11:52:26 jperkin Exp $");
 
 /* Make space in the buffer for adding at least 16 more bytes. */
 void

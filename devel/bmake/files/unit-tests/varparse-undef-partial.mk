@@ -1,4 +1,4 @@
-# $NetBSD: varparse-undef-partial.mk,v 1.1 2024/07/15 09:10:35 jperkin Exp $
+# $NetBSD: varparse-undef-partial.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 
 # When an undefined variable is expanded in a ':=' assignment, only the
 # initial '$' of the expression is skipped by the parser, while

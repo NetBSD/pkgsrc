@@ -1,4 +1,4 @@
-# $NetBSD: directive-undef.mk,v 1.1 2024/07/15 09:10:19 jperkin Exp $
+# $NetBSD: directive-undef.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for the .undef directive.
 #
@@ -84,7 +84,7 @@ ${DOLLAR}=	dollar
 #
 # As of var.c 1.762, this doesn't happen though because the error handling
 # in Var_Parse and Var_Subst is not done properly.
-# expect+1: while evaluating variable "VARNAMES" with value "VARNAMES": Unknown modifier "Z"
+# expect+1: Unknown modifier "Z"
 .undef ${VARNAMES:L:Z}
 
 

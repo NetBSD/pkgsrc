@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-end-fail-all.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-end-fail-all.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Test whether the commands from the .END target are run even if there is
 # an error before.  The manual page says "after everything else is done",

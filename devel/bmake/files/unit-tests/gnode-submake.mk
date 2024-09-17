@@ -1,4 +1,4 @@
-# $NetBSD: gnode-submake.mk,v 1.1 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: gnode-submake.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Test whether OP_SUBMAKE is determined correctly.  If it is, this node's
 # shell commands are connected to the make process via pipes, to coordinate

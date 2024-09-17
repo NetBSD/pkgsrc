@@ -1,4 +1,4 @@
-# $NetBSD: cmdline-redirect-stdin.mk,v 1.1 2024/07/15 09:10:10 jperkin Exp $
+# $NetBSD: cmdline-redirect-stdin.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Demonstrate that the '!=' assignment operator can read individual lines
 # from make's stdin.

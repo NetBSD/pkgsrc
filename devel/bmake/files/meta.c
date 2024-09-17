@@ -1,4 +1,4 @@
-/*      $NetBSD: meta.c,v 1.7 2024/07/15 09:10:06 jperkin Exp $ */
+/*      $NetBSD: meta.c,v 1.8 2024/09/17 11:52:26 jperkin Exp $ */
 
 /*
  * Implement 'meta' mode.

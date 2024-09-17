@@ -1,3 +1,46 @@
+2024-09-16  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* VERSION (_MAKE_VERSION): 20240909
+
+	* arch.c: fix NetBSD PR 58597
+
+2024-09-01  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* Makefile: use SUBDIR.${MK_TESTS} so that we skip
+	unit-tests for obj and clean when FreeBSD is building WITHOUT_TESTS
+
+	* VERSION (_MAKE_VERSION): 20240901
+	Merge with NetBSD make, pick up
+	o reduce line length in error messages
+	o var.c: simplify printing of an evaluation stack element
+
+2024-08-29  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* VERSION (_MAKE_VERSION): 20240828
+	Merge with NetBSD make, pick up
+	o add more context to error message about recursive variables
+	o treat recursive variables non-fatally - continue parsing to end
+	of makefile
+
+2024-08-12  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* VERSION (_MAKE_VERSION): 20240808
+	Merge with NetBSD make, pick up
+	o improve some error messages for better clarify and readability
+
+2024-07-22  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* VERSION (_MAKE_VERSION): 20240722
+	Merge with NetBSD make, pick up
+	o job.c: remove dead code
+
+2024-07-21  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* VERSION (_MAKE_VERSION): 20240720
+	Merge with NetBSD make, pick up
+	o compat.c: do not run commands that have parse or evaluation errors.
+	o var.c: remove wrong error message about an undefined variable
+
 2024-07-13  Simon J Gerraty  <sjg@beast.crufty.net>
 
 	* cleanup redundant differences from NetBSD make
