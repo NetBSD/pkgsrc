@@ -1,4 +1,4 @@
-# $NetBSD: dep-double-colon.mk,v 1.1 2024/07/15 09:10:13 jperkin Exp $
+# $NetBSD: dep-double-colon.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the '::' operator in dependency declarations, which allows
 # several dependency groups for a single node, each having its own attributes

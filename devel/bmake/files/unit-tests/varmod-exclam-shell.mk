@@ -1,4 +1,4 @@
-# $NetBSD: varmod-exclam-shell.mk,v 1.1 2024/07/15 09:10:29 jperkin Exp $
+# $NetBSD: varmod-exclam-shell.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :!cmd! variable modifier, which evaluates the modifier
 # argument, independent of the value or the name of the original variable.

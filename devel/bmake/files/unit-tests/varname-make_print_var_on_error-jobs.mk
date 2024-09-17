@@ -1,4 +1,4 @@
-# $NetBSD: varname-make_print_var_on_error-jobs.mk,v 1.1 2024/07/15 09:10:34 jperkin Exp $
+# $NetBSD: varname-make_print_var_on_error-jobs.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 #
 # Tests for the special MAKE_PRINT_VAR_ON_ERROR variable, which prints the
 # values of selected variables on error.

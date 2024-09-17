@@ -1,4 +1,4 @@
-# $NetBSD: depsrc-end.mk,v 1.1 2024/07/15 09:10:13 jperkin Exp $
+# $NetBSD: depsrc-end.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Demonstrate an edge case in which .BEGIN depends on .END, which sounds a bit
 # paradox but works since these special nodes are not in the dependency

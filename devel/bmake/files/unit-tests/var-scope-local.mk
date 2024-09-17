@@ -1,4 +1,4 @@
-# $NetBSD: var-scope-local.mk,v 1.1 2024/07/15 09:10:28 jperkin Exp $
+# $NetBSD: var-scope-local.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for target-local variables, such as ${.TARGET} or $@.  These variables
 # are relatively short-lived as they are created just before making the

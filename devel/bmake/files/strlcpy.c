@@ -1,4 +1,4 @@
-/*	$NetBSD: strlcpy.c,v 1.5 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: strlcpy.c,v 1.6 2024/09/17 11:52:27 jperkin Exp $	*/
 /*	$OpenBSD: strlcpy.c,v 1.7 2003/04/12 21:56:39 millert Exp $	*/
 
 /*

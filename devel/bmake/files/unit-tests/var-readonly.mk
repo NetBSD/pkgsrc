@@ -1,4 +1,4 @@
-# $NetBSD: var-readonly.mk,v 1.1 2024/07/15 09:10:28 jperkin Exp $
+# $NetBSD: var-readonly.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 
 # the answer
 N = 42

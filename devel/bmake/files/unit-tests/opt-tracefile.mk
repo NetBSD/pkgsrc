@@ -1,4 +1,4 @@
-# $NetBSD: opt-tracefile.mk,v 1.1 2024/07/15 09:10:25 jperkin Exp $
+# $NetBSD: opt-tracefile.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the command line option '-T', which in jobs mode appends a trace
 # record to a trace log whenever a job is started or completed.

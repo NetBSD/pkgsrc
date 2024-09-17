@@ -1,4 +1,4 @@
-# $NetBSD: directive-ifnmake.mk,v 1.1 2024/07/15 09:10:19 jperkin Exp $
+# $NetBSD: directive-ifnmake.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for the .ifnmake directive, which evaluates to true if its argument
 # is _not_ listed in the command-line targets to be created.

@@ -1,4 +1,4 @@
-# $NetBSD: opt-no-action-runflags.mk,v 1.1 2024/07/15 09:10:24 jperkin Exp $
+# $NetBSD: opt-no-action-runflags.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the -n command line option, which runs almost no commands,
 # combined with the RunFlags '@', '-', '+' for individual commands.

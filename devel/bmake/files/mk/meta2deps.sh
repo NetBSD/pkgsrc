@@ -77,7 +77,7 @@
 
 
 # RCSid:
-#	$Id: meta2deps.sh,v 1.3 2024/07/15 09:10:09 jperkin Exp $
+#	$Id: meta2deps.sh,v 1.4 2024/09/17 11:52:28 jperkin Exp $
 
 # SPDX-License-Identifier: BSD-2-Clause
 #

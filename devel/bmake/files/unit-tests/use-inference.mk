@@ -1,4 +1,4 @@
-# $NetBSD: use-inference.mk,v 1.1 2024/07/15 09:10:27 jperkin Exp $
+# $NetBSD: use-inference.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Demonstrate that .USE rules do not have an effect on inference rules.
 # At least not in the special case where the inference rule does not

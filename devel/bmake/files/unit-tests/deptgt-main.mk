@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-main.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-main.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the special target .MAIN in dependency declarations, which defines
 # the main target.  This main target is built if no target has been specified

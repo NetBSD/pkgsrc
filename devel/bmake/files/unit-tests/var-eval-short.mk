@@ -1,4 +1,4 @@
-# $NetBSD: var-eval-short.mk,v 1.1 2024/07/15 09:10:28 jperkin Exp $
+# $NetBSD: var-eval-short.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for each variable modifier to ensure that they only do the minimum
 # necessary computations.  If the result of the expression is irrelevant,
@@ -41,8 +41,8 @@ FAIL=	${:!echo unexpected 1>&2!}
 # after the loop, when undefining the temporary global loop variable.
 # Since var.c 1.907 from 2021-04-04, a '$' is no longer allowed in the
 # variable name.
-# expect+2: while parsing "${:Uword:@${FAIL}@expr@}": In the :@ modifier, the variable name "${FAIL}" must not contain a dollar
-# expect+1: Malformed conditional (0 && ${:Uword:@${FAIL}@expr@})
+# expect+2: In the :@ modifier, the variable name "${FAIL}" must not contain a dollar
+# expect+1: Malformed conditional '0 && ${:Uword:@${FAIL}@expr@}'
 .if 0 && ${:Uword:@${FAIL}@expr@}
 .endif
 

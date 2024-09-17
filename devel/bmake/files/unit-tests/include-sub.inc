@@ -1,4 +1,4 @@
-# $NetBSD: include-sub.inc,v 1.1 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: include-sub.inc,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 
 .if ${.INCLUDEDFROMFILE} == "include-main.mk"
 .  info sub-before-ok

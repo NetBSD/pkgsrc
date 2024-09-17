@@ -1,4 +1,4 @@
-#	$Id: Makefile,v 1.6 2024/07/15 09:10:06 jperkin Exp $
+#	$Id: Makefile,v 1.7 2024/09/17 11:52:26 jperkin Exp $
 
 PROG=	bmake
 
@@ -76,10 +76,6 @@ COPTS.filemon_ktrace.c += -Wno-error=unused-parameter
 
 .PATH:	${srcdir}
 
-.if make(obj) || make(clean)
-SUBDIR+= unit-tests
-.endif
-
 # start-delete1 for bsd.after-import.mk
 # we skip a lot of this when building as part of FreeBSD etc.
 
@@ -111,7 +107,8 @@ WITH_INSTALL_AS_USER=
 OPTIONS_DEFAULT_YES+= \
 	AUTOCONF_MK \
 	INSTALL_MK \
-	PROG_LINK
+	PROG_LINK \
+	TESTS
 
 OPTIONS_DEFAULT_NO+= \
 	PROG_VERSION
@@ -131,6 +128,10 @@ EXTRACT_MAN=no
 
 MAN= ${PROG}.1
 MAN1= ${MAN}
+
+.if make(obj) || make(clean)
+SUBDIR.${MK_TESTS} += unit-tests
+.endif
 
 .if ${PROG} != "make"
 CLEANFILES+= my.history

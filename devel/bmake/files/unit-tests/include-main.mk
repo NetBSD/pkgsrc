@@ -1,4 +1,4 @@
-# $NetBSD: include-main.mk,v 1.3 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: include-main.mk,v 1.4 2024/09/17 11:52:32 jperkin Exp $
 #
 # Until 2020-09-05, the .INCLUDEDFROMFILE magic variable did not behave
 # as described in the manual page.

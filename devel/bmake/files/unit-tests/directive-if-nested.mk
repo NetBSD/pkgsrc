@@ -1,4 +1,4 @@
-# $NetBSD: directive-if-nested.mk,v 1.1 2024/07/15 09:10:19 jperkin Exp $
+# $NetBSD: directive-if-nested.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for deeply nested .if directives.  By default, memory for 128 nested
 # .if directives is pre-allocated, any deeper nesting is reallocated.

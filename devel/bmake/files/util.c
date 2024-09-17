@@ -1,9 +1,9 @@
-/*	$NetBSD: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $	*/
+/*	$NetBSD: util.c,v 1.19 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $
+ *	$Id: util.c,v 1.19 2024/09/17 11:52:27 jperkin Exp $
  */
 
 #include <sys/param.h>
@@ -13,7 +13,7 @@
 
 #include "make.h"
 
-MAKE_RCSID("$NetBSD: util.c,v 1.18 2024/07/15 09:10:07 jperkin Exp $");
+MAKE_RCSID("$NetBSD: util.c,v 1.19 2024/09/17 11:52:27 jperkin Exp $");
 
 #if !defined(MAKE_NATIVE) && !defined(HAVE_STRERROR)
 extern int errno, sys_nerr;

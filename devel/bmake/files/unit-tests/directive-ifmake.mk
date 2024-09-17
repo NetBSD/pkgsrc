@@ -1,4 +1,4 @@
-# $NetBSD: directive-ifmake.mk,v 1.1 2024/07/15 09:10:19 jperkin Exp $
+# $NetBSD: directive-ifmake.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for the .ifmake directive, which provides a shortcut for asking
 # whether a certain target is requested to be made from the command line.
