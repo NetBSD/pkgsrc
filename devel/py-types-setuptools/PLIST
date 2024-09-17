@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/09/16 08:08:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/09/17 15:30:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -8,6 +8,7 @@ ${PYSITELIB}/distutils-stubs/_modified.pyi
 ${PYSITELIB}/distutils-stubs/archive_util.pyi
 ${PYSITELIB}/distutils-stubs/ccompiler.pyi
 ${PYSITELIB}/distutils-stubs/cmd.pyi
+${PYSITELIB}/distutils-stubs/command/__init__.pyi
 ${PYSITELIB}/distutils-stubs/command/bdist.pyi
 ${PYSITELIB}/distutils-stubs/command/bdist_rpm.pyi
 ${PYSITELIB}/distutils-stubs/command/build.pyi
@@ -17,12 +18,10 @@ ${PYSITELIB}/distutils-stubs/command/build_py.pyi
 ${PYSITELIB}/distutils-stubs/command/install.pyi
 ${PYSITELIB}/distutils-stubs/command/install_lib.pyi
 ${PYSITELIB}/distutils-stubs/command/install_scripts.pyi
-${PYSITELIB}/distutils-stubs/command/register.pyi
+${PYSITELIB}/distutils-stubs/command/py.typed
 ${PYSITELIB}/distutils-stubs/command/sdist.pyi
-${PYSITELIB}/distutils-stubs/command/upload.pyi
 ${PYSITELIB}/distutils-stubs/compat/__init__.pyi
 ${PYSITELIB}/distutils-stubs/compat/py.typed
-${PYSITELIB}/distutils-stubs/config.pyi
 ${PYSITELIB}/distutils-stubs/dep_util.pyi
 ${PYSITELIB}/distutils-stubs/dist.pyi
 ${PYSITELIB}/distutils-stubs/errors.pyi
@@ -44,6 +43,7 @@ ${PYSITELIB}/setuptools-stubs/_distutils/_modified.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/archive_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/ccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cmd.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/command/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/bdist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/bdist_rpm.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build.pyi
@@ -53,11 +53,8 @@ ${PYSITELIB}/setuptools-stubs/_distutils/command/build_py.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_lib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_scripts.pyi
-${PYSITELIB}/setuptools-stubs/_distutils/command/register.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/sdist.pyi
-${PYSITELIB}/setuptools-stubs/_distutils/command/upload.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/compat/__init__.pyi
-${PYSITELIB}/setuptools-stubs/_distutils/config.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dep_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/dist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/errors.pyi
@@ -85,14 +82,11 @@ ${PYSITELIB}/setuptools-stubs/command/install.pyi
 ${PYSITELIB}/setuptools-stubs/command/install_egg_info.pyi
 ${PYSITELIB}/setuptools-stubs/command/install_lib.pyi
 ${PYSITELIB}/setuptools-stubs/command/install_scripts.pyi
-${PYSITELIB}/setuptools-stubs/command/register.pyi
 ${PYSITELIB}/setuptools-stubs/command/rotate.pyi
 ${PYSITELIB}/setuptools-stubs/command/saveopts.pyi
 ${PYSITELIB}/setuptools-stubs/command/sdist.pyi
 ${PYSITELIB}/setuptools-stubs/command/setopt.pyi
 ${PYSITELIB}/setuptools-stubs/command/test.pyi
-${PYSITELIB}/setuptools-stubs/command/upload.pyi
-${PYSITELIB}/setuptools-stubs/command/upload_docs.pyi
 ${PYSITELIB}/setuptools-stubs/compat/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/compat/py310.pyi
 ${PYSITELIB}/setuptools-stubs/compat/py311.pyi
