@@ -1,4 +1,4 @@
-# $NetBSD: recursive.mk,v 1.1 2024/07/15 09:10:25 jperkin Exp $
+# $NetBSD: recursive.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # In -dL mode, a variable may get expanded before it makes sense.
 # This would stop make from doing anything since the "recursive" error

@@ -1,4 +1,4 @@
-/*	$NetBSD: make.c,v 1.9 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: make.c,v 1.10 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -104,7 +104,7 @@
 #include "job.h"
 
 /*	"@(#)make.c	8.1 (Berkeley) 6/6/93"	*/
-MAKE_RCSID("$NetBSD: make.c,v 1.9 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: make.c,v 1.10 2024/09/17 11:52:26 jperkin Exp $");
 
 /* Sequence # to detect recursion. */
 static unsigned int checked_seqno = 1;

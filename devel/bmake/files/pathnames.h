@@ -1,4 +1,4 @@
-/*	$NetBSD: pathnames.h,v 1.8 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: pathnames.h,v 1.9 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1990, 1993
@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)pathnames.h	5.2 (Berkeley) 6/1/90
- *	$Id: pathnames.h,v 1.8 2024/07/15 09:10:06 jperkin Exp $
+ *	$Id: pathnames.h,v 1.9 2024/09/17 11:52:26 jperkin Exp $
  */
 
 #if HAVE_CONFIG_H

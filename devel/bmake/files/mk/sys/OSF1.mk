@@ -1,5 +1,5 @@
-#	$Id: OSF1.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
-#	$NetBSD: OSF1.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
+#	$Id: OSF1.mk,v 1.4 2024/09/17 11:52:29 jperkin Exp $
+#	$NetBSD: OSF1.mk,v 1.4 2024/09/17 11:52:29 jperkin Exp $
 #	@(#)sys.mk	5.11 (Berkeley) 3/13/91
 
 OS ?=		OSF1

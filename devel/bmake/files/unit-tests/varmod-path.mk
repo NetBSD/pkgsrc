@@ -1,4 +1,4 @@
-# $NetBSD: varmod-path.mk,v 1.1 2024/07/15 09:10:30 jperkin Exp $
+# $NetBSD: varmod-path.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :P variable modifier, which looks up the path for a given
 # target.

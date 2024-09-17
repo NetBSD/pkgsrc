@@ -1,4 +1,4 @@
-/*	$NetBSD: make.h,v 1.12 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: make.h,v 1.13 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -1064,7 +1064,7 @@ void Global_Append(const char *, const char *);
 void Global_Delete(const char *);
 void Global_Set_ReadOnly(const char *, const char *);
 
-const char *EvalStack_Details(void);
+void EvalStack_PrintDetails(void);
 
 /* util.c */
 typedef void (*SignalProc)(int);

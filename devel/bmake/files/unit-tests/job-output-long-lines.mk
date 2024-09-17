@@ -1,4 +1,4 @@
-# $NetBSD: job-output-long-lines.mk,v 1.1 2024/07/15 09:10:21 jperkin Exp $
+# $NetBSD: job-output-long-lines.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # The jobs may produce long lines of output.  A practical case are the echoed
 # command lines from compiler invocations, with their many -D options.

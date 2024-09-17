@@ -1,4 +1,4 @@
-# $NetBSD: directive-error.mk,v 1.1 2024/07/15 09:10:17 jperkin Exp $
+# $NetBSD: directive-error.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for the .error directive, which prints an error message and exits
 # immediately, unlike other "fatal" parse errors, which continue to parse

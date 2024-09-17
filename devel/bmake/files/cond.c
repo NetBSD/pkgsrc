@@ -1,4 +1,4 @@
-/*	$NetBSD: cond.c,v 1.11 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: cond.c,v 1.12 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -91,7 +91,7 @@
 #include "dir.h"
 
 /*	"@(#)cond.c	8.2 (Berkeley) 1/2/94"	*/
-MAKE_RCSID("$NetBSD: cond.c,v 1.11 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: cond.c,v 1.12 2024/09/17 11:52:26 jperkin Exp $");
 
 /*
  * Conditional expressions conform to this grammar:
@@ -242,7 +242,6 @@ ParseWord(const char **pp, bool doEval)
 		p++;
 	}
 
-	cpp_skip_hspace(&p);
 	*pp = p;
 
 	return Buf_DoneData(&word);
@@ -252,12 +251,14 @@ ParseWord(const char **pp, bool doEval)
 static char *
 ParseFuncArg(CondParser *par, const char **pp, bool doEval, const char *func)
 {
-	const char *p = *pp;
+	const char *p = *pp, *argStart, *argEnd;
 	char *res;
 
 	p++;			/* skip the '(' */
 	cpp_skip_hspace(&p);
+	argStart = p;
 	res = ParseWord(&p, doEval);
+	argEnd = p;
 	cpp_skip_hspace(&p);
 
 	if (*p++ != ')') {
@@ -266,7 +267,8 @@ ParseFuncArg(CondParser *par, const char **pp, bool doEval, const char *func)
 			len++;
 
 		Parse_Error(PARSE_FATAL,
-		    "Missing closing parenthesis for %.*s()", len, func);
+		    "Missing ')' after argument '%.*s' for '%.*s'",
+		    (int)(argEnd - argStart), argStart, len, func);
 		par->printedError = true;
 		free(res);
 		return NULL;
@@ -734,6 +736,7 @@ CondParser_ComparisonOrLeaf(CondParser *par, bool doEval)
 	 */
 	arg = ParseWord(&p, doEval);
 	assert(arg[0] != '\0');
+	cpp_skip_hspace(&p);
 
 	if (*p == '=' || *p == '!' || *p == '<' || *p == '>') {
 		free(arg);
@@ -939,7 +942,7 @@ CondEvalExpression(const char *cond, bool plain,
 		rval = CR_ERROR;
 
 	if (rval == CR_ERROR && eprint && !par.printedError)
-		Parse_Error(PARSE_FATAL, "Malformed conditional (%s)", cond);
+		Parse_Error(PARSE_FATAL, "Malformed conditional '%s'", cond);
 
 	return rval;
 }

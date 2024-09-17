@@ -1,4 +1,4 @@
-/*	$NetBSD: dirname.c,v 1.5 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: dirname.c,v 1.6 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*-
  * Copyright (c) 1997, 2002 The NetBSD Foundation, Inc.
@@ -36,7 +36,7 @@
 
 #include <sys/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: dirname.c,v 1.5 2024/07/15 09:10:06 jperkin Exp $");
+__RCSID("$NetBSD: dirname.c,v 1.6 2024/09/17 11:52:26 jperkin Exp $");
 #endif /* !LIBC_SCCS && !lint */
 
 #include <sys/param.h>

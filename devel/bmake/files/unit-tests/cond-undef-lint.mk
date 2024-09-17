@@ -1,4 +1,4 @@
-# $NetBSD: cond-undef-lint.mk,v 1.1 2024/07/15 09:10:12 jperkin Exp $
+# $NetBSD: cond-undef-lint.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for defined and undefined variables in .if conditions, in lint mode.
 #
@@ -20,7 +20,7 @@ DEF=		defined
 .endif
 
 # Since the condition fails to evaluate, neither of the branches is taken.
-# expect+2: Malformed conditional (${UNDEF})
+# expect+2: Malformed conditional '${UNDEF}'
 # expect+1: Variable "UNDEF" is undefined
 .if ${UNDEF}
 .  error
@@ -39,7 +39,7 @@ DEF=		defined
 # of the expression must not be evaluated at all.
 # expect+3: Variable "UNDEF" is undefined
 # expect+2: Variable "VAR." is undefined
-# expect+1: Malformed conditional (${VAR.${UNDEF}})
+# expect+1: Malformed conditional '${VAR.${UNDEF}}'
 .if ${VAR.${UNDEF}}
 .  error
 .else
@@ -52,7 +52,7 @@ DEF=		defined
 # debatable.  Or would any practical use of CFLAGS.${OPSYS} be via an indirect
 # expression, as in the next example?
 # expect+2: Variable "VAR.defined" is undefined
-# expect+1: Malformed conditional (${VAR.${DEF}})
+# expect+1: Malformed conditional '${VAR.${DEF}}'
 .if ${VAR.${DEF}}
 .  error
 .else

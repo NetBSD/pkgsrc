@@ -1,4 +1,4 @@
-# $NetBSD: counter.mk,v 1.1 2024/07/15 09:10:12 jperkin Exp $
+# $NetBSD: counter.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Demonstrates how to let make count the number of times a variable
 # is actually accessed, using the ::= variable modifier.

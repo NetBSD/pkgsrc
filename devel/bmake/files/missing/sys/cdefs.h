@@ -1,4 +1,4 @@
-/*	$NetBSD: cdefs.h,v 1.7 2024/07/15 09:10:08 jperkin Exp $	*/
+/*	$NetBSD: cdefs.h,v 1.8 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993

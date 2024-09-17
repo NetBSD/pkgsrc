@@ -1,4 +1,4 @@
-# $NetBSD: var-scope-local-legacy.mk,v 1.1 2024/07/15 09:10:28 jperkin Exp $
+# $NetBSD: var-scope-local-legacy.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for legacy target-local variables, such as ${<F} or ${@D}.
 

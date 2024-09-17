@@ -1,4 +1,4 @@
-# $NetBSD: opt-where-am-i.mk,v 1.1 2024/07/15 09:10:25 jperkin Exp $
+# $NetBSD: opt-where-am-i.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for the -w command line option, which outputs the current directory
 # at the beginning and end of running make.  This is useful when building

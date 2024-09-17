@@ -1,4 +1,4 @@
-# $NetBSD: cond-token-number.mk,v 1.1 2024/07/15 09:10:12 jperkin Exp $
+# $NetBSD: cond-token-number.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for number tokens in .if conditions.
 #
@@ -12,7 +12,7 @@
 # accepted by the condition parser.
 #
 # See the ch_isdigit call in CondParser_String.
-# expect+1: Malformed conditional (-0)
+# expect+1: Malformed conditional '-0'
 .if -0
 .  error
 .else
@@ -23,7 +23,7 @@
 # accepted by the condition parser.
 #
 # See the ch_isdigit call in CondParser_String.
-# expect+1: Malformed conditional (+0)
+# expect+1: Malformed conditional '+0'
 .if +0
 .  error
 .else
@@ -34,7 +34,7 @@
 # accepted by the condition parser.
 #
 # See the ch_isdigit call in CondParser_String.
-# expect+1: Malformed conditional (!-1)
+# expect+1: Malformed conditional '!-1'
 .if !-1
 .  error
 .else
@@ -45,7 +45,7 @@
 # accepted by the condition parser.
 #
 # See the ch_isdigit call in CondParser_String.
-# expect+1: Malformed conditional (!+1)
+# expect+1: Malformed conditional '!+1'
 .if !+1
 .  error
 .else

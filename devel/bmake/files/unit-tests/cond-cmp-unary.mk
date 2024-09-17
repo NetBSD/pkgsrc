@@ -1,4 +1,4 @@
-# $NetBSD: cond-cmp-unary.mk,v 1.1 2024/07/15 09:10:11 jperkin Exp $
+# $NetBSD: cond-cmp-unary.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Tests for unary comparisons in .if conditions, that is, comparisons with
 # a single operand.  If the operand is a number, it is compared to zero,

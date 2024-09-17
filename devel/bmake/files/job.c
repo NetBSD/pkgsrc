@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.22 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: job.c,v 1.23 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -154,7 +154,7 @@
 #include "trace.h"
 
 /*	"@(#)job.c	8.2 (Berkeley) 3/19/94"	*/
-MAKE_RCSID("$NetBSD: job.c,v 1.22 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: job.c,v 1.23 2024/09/17 11:52:26 jperkin Exp $");
 
 /*
  * A shell defines how the commands are run.  All commands for a target are
@@ -1695,6 +1695,8 @@ JobStart(GNode *gn, bool special)
 		 * virtual targets.
 		 */
 
+		int parseErrorsBefore;
+
 		/*
 		 * We're serious here, but if the commands were bogus, we're
 		 * also dead...
@@ -1704,7 +1706,10 @@ JobStart(GNode *gn, bool special)
 			DieHorribly();
 		}
 
+		parseErrorsBefore = parseErrors;
 		JobWriteShellCommands(job, gn, &run);
+		if (parseErrors != parseErrorsBefore)
+			run = false;
 		(void)fflush(job->cmdFILE);
 	} else if (!GNode_ShouldExecute(gn)) {
 		/*
@@ -1953,31 +1958,12 @@ again:
 static void
 JobRun(GNode *targ)
 {
-#if 0
-	/*
-	 * Unfortunately it is too complicated to run .BEGIN, .END, and
-	 * .INTERRUPT job in the parallel job module.  As of 2020-09-25,
-	 * unit-tests/deptgt-end-jobs.mk hangs in an endless loop.
-	 *
-	 * Running these jobs in compat mode also guarantees that these
-	 * jobs do not overlap with other unrelated jobs.
-	 */
-	GNodeList lst = LST_INIT;
-	Lst_Append(&lst, targ);
-	(void)Make_Run(&lst);
-	Lst_Done(&lst);
-	JobStart(targ, true);
-	while (jobTokensRunning != 0) {
-		Job_CatchOutput();
-	}
-#else
+	/* Don't let these special jobs overlap with other unrelated jobs. */
 	Compat_Make(targ, targ);
-	/* XXX: Replace with GNode_IsError(gn) */
-	if (targ->made == ERROR) {
+	if (GNode_IsError(targ)) {
 		PrintOnError(targ, "\n\nStop.\n");
 		exit(1);
 	}
-#endif
 }
 
 /*
@@ -2921,11 +2907,6 @@ Job_RunTarget(const char *target, const char *fname)
 		Var_Set(gn, ALLSRC, fname);
 
 	JobRun(gn);
-	/* XXX: Replace with GNode_IsError(gn) */
-	if (gn->made == ERROR) {
-		PrintOnError(gn, "\n\nStop.\n");
-		exit(1);
-	}
 	return true;
 }
 

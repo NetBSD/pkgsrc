@@ -1,4 +1,4 @@
-# $NetBSD: varfind.mk,v 1.1 2024/07/15 09:10:29 jperkin Exp $
+# $NetBSD: varfind.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Demonstrates variable name aliases in VarFind.
 

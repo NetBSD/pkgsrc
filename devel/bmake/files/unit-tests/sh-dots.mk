@@ -1,4 +1,4 @@
-# $NetBSD: sh-dots.mk,v 1.1 2024/07/15 09:10:25 jperkin Exp $
+# $NetBSD: sh-dots.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for the special shell command line "...", which does not run the
 # commands below it but appends them to the list of commands that are run

@@ -1,4 +1,4 @@
-/*	$NetBSD: parse.c,v 1.14 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: parse.c,v 1.15 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -110,7 +110,7 @@
 #include "pathnames.h"
 
 /*	"@(#)parse.c	8.3 (Berkeley) 3/19/94"	*/
-MAKE_RCSID("$NetBSD: parse.c,v 1.14 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: parse.c,v 1.15 2024/09/17 11:52:26 jperkin Exp $");
 
 /* Detects a multiple-inclusion guard in a makefile. */
 typedef enum {
@@ -400,6 +400,8 @@ PrintStackTrace(bool includingInnermost)
 	const IncludedFile *entries;
 	size_t i, n;
 
+	EvalStack_PrintDetails();
+
 	n = includes.len;
 	if (n == 0)
 		return;
@@ -530,7 +532,6 @@ ParseVErrorInternal(FILE *f, bool useVars, const GNode *gn,
 	PrintLocation(f, useVars, gn);
 	if (level == PARSE_WARNING)
 		(void)fprintf(f, "warning: ");
-	fprintf(f, "%s", EvalStack_Details());
 	(void)vfprintf(f, fmt, ap);
 	(void)fprintf(f, "\n");
 	(void)fflush(f);

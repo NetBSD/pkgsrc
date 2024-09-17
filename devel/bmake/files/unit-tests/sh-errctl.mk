@@ -1,4 +1,4 @@
-# $NetBSD: sh-errctl.mk,v 1.1 2024/07/15 09:10:25 jperkin Exp $
+# $NetBSD: sh-errctl.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Test a shell with error control.  This only works in jobs mode; in compat
 # mode, the default shell is always used, see InitShellNameAndPath.

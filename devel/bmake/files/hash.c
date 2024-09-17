@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.c,v 1.8 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: hash.c,v 1.9 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -74,7 +74,7 @@
 #include "make.h"
 
 /*	"@(#)hash.c	8.1 (Berkeley) 6/6/93"	*/
-MAKE_RCSID("$NetBSD: hash.c,v 1.8 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: hash.c,v 1.9 2024/09/17 11:52:26 jperkin Exp $");
 
 /*
  * The ratio of # entries to # buckets at which we rebuild the table to

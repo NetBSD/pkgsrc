@@ -1,4 +1,4 @@
-# $Id: makefile.in,v 1.5 2024/07/15 09:10:06 jperkin Exp $
+# $Id: makefile.in,v 1.6 2024/09/17 11:52:26 jperkin Exp $
 
 # a simple makefile for those who don't like anything beyond:
 # ./configure; make; make install
