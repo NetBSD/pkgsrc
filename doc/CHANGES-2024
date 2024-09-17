@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5687 2024/09/17 05:25:55 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5688 2024/09/17 06:10:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8751,3 +8751,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/go-md2man to 2.0.5 [pin 2024-09-17]
 	Updated devel/py-pydantic-core to 2.23.4 [adam 2024-09-17]
 	Updated textproc/py-xml2rfc to 3.23.1 [adam 2024-09-17]
+	Updated databases/duckdb to 1.1.0 [ryoon 2024-09-17]
