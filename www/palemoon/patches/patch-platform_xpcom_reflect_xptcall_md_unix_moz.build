@@ -1,0 +1,29 @@
+--- platform/xpcom/reflect/xptcall/md/unix/moz.build.orig	2024-07-10 10:54:53.000000000 +0200
++++ platform/xpcom/reflect/xptcall/md/unix/moz.build	2024-08-05 17:46:31.162024930 +0200
+@@ -136,7 +136,7 @@
+             ]
+ 
+ if CONFIG['OS_TEST'] == 'powerpc':
+-    if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD'):
++    if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD'):
+         SOURCES += [
+             'xptcinvoke_asm_ppc_linux.S',
+             'xptcinvoke_ppc_linux.cpp',
+@@ -145,7 +145,7 @@
+         ]
+ 
+ if CONFIG['OS_TEST'] in ('powerpc64', 'powerpc64le'):
+-    if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD'):
++    if CONFIG['OS_ARCH'] in ('Linux', 'FreeBSD', 'NetBSD'):
+           SOURCES += [
+               'xptcinvoke_asm_ppc64_linux.S',
+               'xptcinvoke_ppc64_linux.cpp',
+@@ -198,7 +198,7 @@
+ # files for 64-bit SPARC with no ill effects, so basically the entire mess that
+ # was there before is no longer needed.
+ 
+-if CONFIG['OS_ARCH'] in ('OpenBSD', 'FreeBSD', 'SunOS', 'Linux') and CONFIG['OS_TEST'] == 'sparc64':
++if CONFIG['OS_ARCH'] in ('NetBSD', 'OpenBSD', 'FreeBSD', 'SunOS', 'Linux') and CONFIG['OS_TEST'] == 'sparc64':
+     SOURCES += [
+         'xptcinvoke_asm_sparc64_openbsd.s',
+         'xptcinvoke_sparc64_openbsd.cpp',

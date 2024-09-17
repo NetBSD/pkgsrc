@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/09/13 13:48:17 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/09/17 06:24:18 martin Exp $
 
 BLAKE2s (palemoon-33.3.1/palemoon.tar.gz) = c62225d8c487edddcfb5c2ea544ea87accc48556351610593a339d1ab765f7d5
 SHA512 (palemoon-33.3.1/palemoon.tar.gz) = b9dc0c0f65afc818fc4b5a5483893a8a87685405df3d8b4bf3b557c237eb8f3c75490e8a61305d367aebbd325bd419ad8dd9798c6a9bc77e48d061febaf31c88
@@ -20,6 +20,7 @@ SHA1 (patch-platform_js_src_vm_ArrayBufferObject.cpp) = 652db4b78ecaba840c0cba94
 SHA1 (patch-platform_media_libaom_config_linux_arm_config_aom__config.h) = 69ef22fe9892c2288accb6eb00b4533d8cee0299
 SHA1 (patch-platform_media_libcubeb_src_cubeb__sun.c) = ce27774d772d65fa60b6be5bee82fbe4f787f3d1
 SHA1 (patch-platform_media_libcubeb_src_moz.build) = 5f9f7656bf9d251edb395cb19fae8cd614c0b287
+SHA1 (patch-platform_media_libjpeg_moz.build) = 99e81b8ef66472588bced49ace1c598d465c3722
 SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8ed693064bc6
 SHA1 (patch-platform_media_libvpx_config_linux_arm_vpx__config.h) = a580208cd342d7dc27985118e1707772e0cccf02
 SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.cfg) = 1dc06ad2dc49eb3297dc0651dce546cff6882f7b
@@ -29,5 +30,6 @@ SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 2a5ccc95fb5860b1be97947f3aee8307f4a25bc1
 SHA1 (patch-platform_toolkit_xre_nsX11ErrorHandler.cpp) = 164d93a5b1aaeba15b524fdaef0483b4a9400ac1
+SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_moz.build) = ba7f59d59a8ddaba353c2049fa274f85d722eef1
 SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 5b6a5c6eea2668cc5eaaf775400c382114876d86
 SHA1 (patch-platform_xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp) = de7188f7ac09fd3d4a65968a12ae324b3a0415c4

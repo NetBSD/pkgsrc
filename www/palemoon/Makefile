@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/09/15 06:15:43 nia Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/17 06:24:18 martin Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
@@ -148,6 +148,7 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+.include "../../mk/atomic64.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
