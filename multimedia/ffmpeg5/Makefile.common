@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.12 2024/01/27 02:54:36 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.13 2024/09/17 07:34:31 adam Exp $
 # used by multimedia/ffmpeg5/Makefile
 # used by multimedia/ffplay5/Makefile
 
-DISTNAME=	ffmpeg-5.1.4
+DISTNAME=	ffmpeg-5.1.6
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +38,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg5
 CONFIGURE_ARGS+=	--enable-cross-compile
 CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
-CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS:Q}
+CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
 .  include "../../mk/endian.mk"
 .  if ${MACHINE_ENDIAN} == "big"
 CONFIGURE_ENV+=		bigendian=yes
@@ -53,12 +53,12 @@ CONFIGURE_ENV+=		bigendian=yes
 # altivec -- and the compiler will quietly take advantage of this,
 # e.g. to zero-initialize objects on the stack.  This doesn't work too
 # well on powerpc CPUs without altivec, so nix the arguments.
-.if !empty(MACHINE_ARCH:Mpowerpc*)
+.if ${MACHINE_ARCH:Mpowerpc*}
 BUILDLINK_TRANSFORM+=	rm:-maltivec
 BUILDLINK_TRANSFORM+=	rm:-mabi=altivec
 .endif
 
-.if !empty(MACHINE_PLATFORM:MDarwin-1[2-9].*-*) || !empty(MACHINE_PLATFORM:MDarwin-2*)
+.if ${MACHINE_PLATFORM:MDarwin-1[2-9].*-*} || ${MACHINE_PLATFORM:MDarwin-2*}
 CONFIGURE_ARGS+=	--enable-opencl
 .endif
 
