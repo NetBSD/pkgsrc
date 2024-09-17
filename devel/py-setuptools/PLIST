@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.96 2024/09/13 09:35:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.97 2024/09/17 07:11:37 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/_distutils_hack/__init__.py
 ${PYSITELIB}/_distutils_hack/__init__.pyc
 ${PYSITELIB}/_distutils_hack/__init__.pyo
@@ -43,12 +49,6 @@ ${PYSITELIB}/pkg_resources/tests/test_resources.pyo
 ${PYSITELIB}/pkg_resources/tests/test_working_set.py
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyc
 ${PYSITELIB}/pkg_resources/tests/test_working_set.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools/__init__.py
 ${PYSITELIB}/setuptools/__init__.pyc
 ${PYSITELIB}/setuptools/__init__.pyo
@@ -58,15 +58,6 @@ ${PYSITELIB}/setuptools/_core_metadata.pyo
 ${PYSITELIB}/setuptools/_distutils/__init__.py
 ${PYSITELIB}/setuptools/_distutils/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/__init__.pyo
-${PYSITELIB}/setuptools/_distutils/_collections.py
-${PYSITELIB}/setuptools/_distutils/_collections.pyc
-${PYSITELIB}/setuptools/_distutils/_collections.pyo
-${PYSITELIB}/setuptools/_distutils/_functools.py
-${PYSITELIB}/setuptools/_distutils/_functools.pyc
-${PYSITELIB}/setuptools/_distutils/_functools.pyo
-${PYSITELIB}/setuptools/_distutils/_itertools.py
-${PYSITELIB}/setuptools/_distutils/_itertools.pyc
-${PYSITELIB}/setuptools/_distutils/_itertools.pyo
 ${PYSITELIB}/setuptools/_distutils/_log.py
 ${PYSITELIB}/setuptools/_distutils/_log.pyc
 ${PYSITELIB}/setuptools/_distutils/_log.pyo
@@ -82,9 +73,6 @@ ${PYSITELIB}/setuptools/_distutils/_msvccompiler.pyo
 ${PYSITELIB}/setuptools/_distutils/archive_util.py
 ${PYSITELIB}/setuptools/_distutils/archive_util.pyc
 ${PYSITELIB}/setuptools/_distutils/archive_util.pyo
-${PYSITELIB}/setuptools/_distutils/bcppcompiler.py
-${PYSITELIB}/setuptools/_distutils/bcppcompiler.pyc
-${PYSITELIB}/setuptools/_distutils/bcppcompiler.pyo
 ${PYSITELIB}/setuptools/_distutils/ccompiler.py
 ${PYSITELIB}/setuptools/_distutils/ccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/ccompiler.pyo
@@ -148,15 +136,9 @@ ${PYSITELIB}/setuptools/_distutils/command/install_lib.pyo
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.py
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/_distutils/command/install_scripts.pyo
-${PYSITELIB}/setuptools/_distutils/command/register.py
-${PYSITELIB}/setuptools/_distutils/command/register.pyc
-${PYSITELIB}/setuptools/_distutils/command/register.pyo
 ${PYSITELIB}/setuptools/_distutils/command/sdist.py
 ${PYSITELIB}/setuptools/_distutils/command/sdist.pyc
 ${PYSITELIB}/setuptools/_distutils/command/sdist.pyo
-${PYSITELIB}/setuptools/_distutils/command/upload.py
-${PYSITELIB}/setuptools/_distutils/command/upload.pyc
-${PYSITELIB}/setuptools/_distutils/command/upload.pyo
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.py
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyo
@@ -166,9 +148,6 @@ ${PYSITELIB}/setuptools/_distutils/compat/py38.pyo
 ${PYSITELIB}/setuptools/_distutils/compat/py39.py
 ${PYSITELIB}/setuptools/_distutils/compat/py39.pyc
 ${PYSITELIB}/setuptools/_distutils/compat/py39.pyo
-${PYSITELIB}/setuptools/_distutils/config.py
-${PYSITELIB}/setuptools/_distutils/config.pyc
-${PYSITELIB}/setuptools/_distutils/config.pyo
 ${PYSITELIB}/setuptools/_distutils/core.py
 ${PYSITELIB}/setuptools/_distutils/core.pyc
 ${PYSITELIB}/setuptools/_distutils/core.pyo
@@ -262,9 +241,6 @@ ${PYSITELIB}/setuptools/_distutils/tests/test_clean.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_cmd.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_cmd.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_cmd.pyo
-${PYSITELIB}/setuptools/_distutils/tests/test_config.py
-${PYSITELIB}/setuptools/_distutils/tests/test_config.pyc
-${PYSITELIB}/setuptools/_distutils/tests/test_config.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_config_cmd.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_config_cmd.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_config_cmd.pyo
@@ -316,9 +292,6 @@ ${PYSITELIB}/setuptools/_distutils/tests/test_modified.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_msvccompiler.pyo
-${PYSITELIB}/setuptools/_distutils/tests/test_register.py
-${PYSITELIB}/setuptools/_distutils/tests/test_register.pyc
-${PYSITELIB}/setuptools/_distutils/tests/test_register.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_sdist.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_sdist.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_sdist.pyo
@@ -334,9 +307,6 @@ ${PYSITELIB}/setuptools/_distutils/tests/test_text_file.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_unixccompiler.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_unixccompiler.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_unixccompiler.pyo
-${PYSITELIB}/setuptools/_distutils/tests/test_upload.py
-${PYSITELIB}/setuptools/_distutils/tests/test_upload.pyc
-${PYSITELIB}/setuptools/_distutils/tests/test_upload.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/test_util.py
 ${PYSITELIB}/setuptools/_distutils/tests/test_util.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/test_util.pyo
@@ -618,6 +588,13 @@ ${PYSITELIB}/setuptools/_vendor/inflect/compat/py38.py
 ${PYSITELIB}/setuptools/_vendor/inflect/compat/py38.pyc
 ${PYSITELIB}/setuptools/_vendor/inflect/compat/py38.pyo
 ${PYSITELIB}/setuptools/_vendor/inflect/py.typed
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/INSTALLER
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/LICENSE
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/METADATA
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/RECORD
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/REQUESTED
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/WHEEL
+${PYSITELIB}/setuptools/_vendor/jaraco.collections-5.1.0.dist-info/top_level.txt
 ${PYSITELIB}/setuptools/_vendor/jaraco.context-5.3.0.dist-info/INSTALLER
 ${PYSITELIB}/setuptools/_vendor/jaraco.context-5.3.0.dist-info/LICENSE
 ${PYSITELIB}/setuptools/_vendor/jaraco.context-5.3.0.dist-info/METADATA
@@ -637,6 +614,10 @@ ${PYSITELIB}/setuptools/_vendor/jaraco.text-3.12.1.dist-info/RECORD
 ${PYSITELIB}/setuptools/_vendor/jaraco.text-3.12.1.dist-info/REQUESTED
 ${PYSITELIB}/setuptools/_vendor/jaraco.text-3.12.1.dist-info/WHEEL
 ${PYSITELIB}/setuptools/_vendor/jaraco.text-3.12.1.dist-info/top_level.txt
+${PYSITELIB}/setuptools/_vendor/jaraco/collections/__init__.py
+${PYSITELIB}/setuptools/_vendor/jaraco/collections/__init__.pyc
+${PYSITELIB}/setuptools/_vendor/jaraco/collections/__init__.pyo
+${PYSITELIB}/setuptools/_vendor/jaraco/collections/py.typed
 ${PYSITELIB}/setuptools/_vendor/jaraco/context.py
 ${PYSITELIB}/setuptools/_vendor/jaraco/context.pyc
 ${PYSITELIB}/setuptools/_vendor/jaraco/context.pyo
@@ -1016,9 +997,6 @@ ${PYSITELIB}/setuptools/command/install_scripts.py
 ${PYSITELIB}/setuptools/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/command/install_scripts.pyo
 ${PYSITELIB}/setuptools/command/launcher manifest.xml
-${PYSITELIB}/setuptools/command/register.py
-${PYSITELIB}/setuptools/command/register.pyc
-${PYSITELIB}/setuptools/command/register.pyo
 ${PYSITELIB}/setuptools/command/rotate.py
 ${PYSITELIB}/setuptools/command/rotate.pyc
 ${PYSITELIB}/setuptools/command/rotate.pyo
@@ -1034,12 +1012,6 @@ ${PYSITELIB}/setuptools/command/setopt.pyo
 ${PYSITELIB}/setuptools/command/test.py
 ${PYSITELIB}/setuptools/command/test.pyc
 ${PYSITELIB}/setuptools/command/test.pyo
-${PYSITELIB}/setuptools/command/upload.py
-${PYSITELIB}/setuptools/command/upload.pyc
-${PYSITELIB}/setuptools/command/upload.pyo
-${PYSITELIB}/setuptools/command/upload_docs.py
-${PYSITELIB}/setuptools/command/upload_docs.pyc
-${PYSITELIB}/setuptools/command/upload_docs.pyo
 ${PYSITELIB}/setuptools/compat/__init__.py
 ${PYSITELIB}/setuptools/compat/__init__.pyc
 ${PYSITELIB}/setuptools/compat/__init__.pyo
@@ -1293,9 +1265,6 @@ ${PYSITELIB}/setuptools/tests/test_namespaces.pyo
 ${PYSITELIB}/setuptools/tests/test_packageindex.py
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyc
 ${PYSITELIB}/setuptools/tests/test_packageindex.pyo
-${PYSITELIB}/setuptools/tests/test_register.py
-${PYSITELIB}/setuptools/tests/test_register.pyc
-${PYSITELIB}/setuptools/tests/test_register.pyo
 ${PYSITELIB}/setuptools/tests/test_sandbox.py
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyc
 ${PYSITELIB}/setuptools/tests/test_sandbox.pyo
@@ -1311,9 +1280,6 @@ ${PYSITELIB}/setuptools/tests/test_setuptools.pyo
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.py
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.pyc
 ${PYSITELIB}/setuptools/tests/test_unicode_utils.pyo
-${PYSITELIB}/setuptools/tests/test_upload.py
-${PYSITELIB}/setuptools/tests/test_upload.pyc
-${PYSITELIB}/setuptools/tests/test_upload.pyo
 ${PYSITELIB}/setuptools/tests/test_virtualenv.py
 ${PYSITELIB}/setuptools/tests/test_virtualenv.pyc
 ${PYSITELIB}/setuptools/tests/test_virtualenv.pyo
