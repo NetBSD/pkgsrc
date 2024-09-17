@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2023/05/28 09:03:03 tnn Exp $
+$NetBSD: distinfo,v 1.10 2024/09/17 07:18:00 adam Exp $
 
-BLAKE2s (fdk-aac-2.0.2.tar.gz) = b9d8334eb496a97c5f4b5a447eb5e2be1df372a0bb6f017ed59a12553efb9166
-SHA512 (fdk-aac-2.0.2.tar.gz) = 8e5a7992869a7e649bee6d41bf7c6e408cec7ba1931a6cd7a9ad8a01e6ac49bd299ddd147b18823e8ee379ce7c6373d7f5a94f0f859ed973a30c61eccd53fa7e
-Size (fdk-aac-2.0.2.tar.gz) = 2886434 bytes
+BLAKE2s (fdk-aac-2.0.3.tar.gz) = 59793af022cce8f85eb0fdaa554b96556632014ba70cff0a884b2274f280d75e
+SHA512 (fdk-aac-2.0.3.tar.gz) = 7494d9cf3814b4abcc8fdf02cc40e8b49d744b1744869389da33d93302799dec9b4d67ce25d912de6d9a635a59a1d4c459c99c9ad2e90186d3af48d0f8282af7
+Size (fdk-aac-2.0.3.tar.gz) = 2906697 bytes
 SHA1 (patch-libFDK_include_FDK__archdef.h) = 44d41ab45ca75ca20a2f9e86b06accd83858d889
