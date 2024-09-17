@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/17 22:13:06 js Exp $
+
+BLAKE2s (bech32-1.2.0.tar.gz) = 3b0ce009e52b6af45ab7806053123d7cad26ba521a82a46b13955c3eeac79285
+SHA512 (bech32-1.2.0.tar.gz) = 8ddf409b9c380771ad7986354172bac5a1adcd674a4d04d313beb57742707826fb2c496498107cdf0a1f5786078ae3cdfd687c16d7cb977b6a0f1491c7b7f6bd
+Size (bech32-1.2.0.tar.gz) = 3695 bytes

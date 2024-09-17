@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/17 22:13:06 js Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/bech32/__init__.py
+${PYSITELIB}/bech32/__init__.pyc
+${PYSITELIB}/bech32/__init__.pyo
+${PYSITELIB}/bech32/py.typed
