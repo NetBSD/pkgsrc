@@ -1,4 +1,4 @@
-# $NetBSD: varmod-subst.mk,v 1.1 2024/07/15 09:10:31 jperkin Exp $
+# $NetBSD: varmod-subst.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the :S,from,to, variable modifier.
 
@@ -252,6 +252,7 @@ mod-subst-chain:
 	# The error message is "make: Unknown modifier 'i'", which is
 	# kind of correct, although it is mixing the terms for variable
 	# modifiers with the matching modifiers.
+# expect: make: Unknown modifier "i"
 	@echo ${:Uvalue:S,a,x,i}.
 
 # No matter how many dollar signs there are, they all get merged

@@ -1,4 +1,4 @@
-#	$Id: SunOS.mk,v 1.3 2024/07/15 09:10:10 jperkin Exp $
+#	$Id: SunOS.mk,v 1.4 2024/09/17 11:52:29 jperkin Exp $
 
 .if ${.PARSEFILE} == "sys.mk"
 .include <host-target.mk>

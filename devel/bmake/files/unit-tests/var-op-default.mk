@@ -1,4 +1,4 @@
-# $NetBSD: var-op-default.mk,v 1.1 2024/07/15 09:10:28 jperkin Exp $
+# $NetBSD: var-op-default.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for the ?= variable assignment operator, which only assigns
 # if the variable is still undefined.

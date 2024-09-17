@@ -1,4 +1,4 @@
-/*	$NetBSD: compat.c,v 1.13 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: compat.c,v 1.14 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -94,7 +94,7 @@
 #include "pathnames.h"
 
 /*	"@(#)compat.c	8.2 (Berkeley) 3/19/94"	*/
-MAKE_RCSID("$NetBSD: compat.c,v 1.13 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: compat.c,v 1.14 2024/09/17 11:52:26 jperkin Exp $");
 
 static GNode *curTarg = NULL;
 static pid_t compatChild;
@@ -251,13 +251,18 @@ Compat_RunCommand(const char *cmdp, GNode *gn, StringListNode *ln)
 	const char *cmd = cmdp;
 	char cmd_file[MAXPATHLEN];
 	size_t cmd_len;
+	int parseErrorsBefore;
 
 	silent = (gn->type & OP_SILENT) != OP_NONE;
 	errCheck = !(gn->type & OP_IGNORE);
 	doIt = false;
 
+	parseErrorsBefore = parseErrors;
 	cmdStart = Var_SubstInTarget(cmd, gn);
-	/* TODO: handle errors */
+	if (parseErrors != parseErrorsBefore) {
+		free(cmdStart);
+		return false;
+	}
 
 	if (cmdStart[0] == '\0') {
 		free(cmdStart);

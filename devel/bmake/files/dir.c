@@ -1,4 +1,4 @@
-/*	$NetBSD: dir.c,v 1.9 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: dir.c,v 1.10 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -132,7 +132,7 @@
 #include "job.h"
 
 /*	"@(#)dir.c	8.2 (Berkeley) 1/2/94"	*/
-MAKE_RCSID("$NetBSD: dir.c,v 1.9 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: dir.c,v 1.10 2024/09/17 11:52:26 jperkin Exp $");
 
 /*
  * A search path is a list of CachedDir structures. A CachedDir has in it the

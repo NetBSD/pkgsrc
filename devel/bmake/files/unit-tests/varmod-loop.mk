@@ -1,4 +1,4 @@
-# $NetBSD: varmod-loop.mk,v 1.1 2024/07/15 09:10:29 jperkin Exp $
+# $NetBSD: varmod-loop.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the expression modifier ':@var@body@', which replaces each word of
 # the expression with the expanded body, which may contain references to the

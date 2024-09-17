@@ -1,4 +1,4 @@
-# $NetBSD: directive-for-break.mk,v 1.1 2024/07/15 09:10:18 jperkin Exp $
+# $NetBSD: directive-for-break.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Tests for .break in .for loops, which immediately terminates processing of
 # the surrounding .for loop.

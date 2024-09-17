@@ -1,4 +1,4 @@
-# $NetBSD: dollar.mk,v 1.3 2024/07/15 09:10:20 jperkin Exp $
+# $NetBSD: dollar.mk,v 1.4 2024/09/17 11:52:31 jperkin Exp $
 #
 # Test the various places where a dollar sign can appear and
 # see what happens.  There are lots of surprises here.

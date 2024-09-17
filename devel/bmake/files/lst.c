@@ -1,4 +1,4 @@
-/* $NetBSD: lst.c,v 1.1 2024/07/15 09:10:06 jperkin Exp $ */
+/* $NetBSD: lst.c,v 1.2 2024/09/17 11:52:26 jperkin Exp $ */
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -34,7 +34,7 @@
 
 #include "make.h"
 
-MAKE_RCSID("$NetBSD: lst.c,v 1.1 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: lst.c,v 1.2 2024/09/17 11:52:26 jperkin Exp $");
 
 static ListNode *
 LstNodeNew(ListNode *prev, ListNode *next, void *datum)

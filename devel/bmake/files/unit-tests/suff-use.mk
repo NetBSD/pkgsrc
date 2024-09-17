@@ -1,4 +1,4 @@
-# $NetBSD: suff-use.mk,v 1.1 2024/07/15 09:10:27 jperkin Exp $
+# $NetBSD: suff-use.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # This test combines a .USE node with suffix rules, trying to add an
 # additional command before and after successful compilation of a .c file.

@@ -1,4 +1,4 @@
-# $NetBSD: varname-makeflags.mk,v 1.1 2024/07/15 09:10:34 jperkin Exp $
+# $NetBSD: varname-makeflags.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 #
 # Tests for the environment variable 'MAKEFLAGS', from which additional
 # command line arguments are read before the actual command line arguments.

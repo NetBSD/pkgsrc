@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.17 2024/07/15 09:10:06 jperkin Exp $
+dnl	$Id: configure.in,v 1.18 2024/09/17 11:52:26 jperkin Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2024/07/15 09:10:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.82 2024/09/17 11:52:26 jperkin Exp $
 
-PKGNAME=	bmake-20240711
+PKGNAME=	bmake-20240909
 CATEGORIES=	devel
 MASTER_SITES=	https://www.crufty.net/ftp/pub/sjg/
 

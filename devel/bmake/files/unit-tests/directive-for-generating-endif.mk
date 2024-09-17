@@ -1,4 +1,4 @@
-# $NetBSD: directive-for-generating-endif.mk,v 1.1 2024/07/15 09:10:18 jperkin Exp $
+# $NetBSD: directive-for-generating-endif.mk,v 1.2 2024/09/17 11:52:31 jperkin Exp $
 #
 # Test whether a .for loop can be used to generate multiple .endif
 # directives to close nested .if directives.  Depending on the exact

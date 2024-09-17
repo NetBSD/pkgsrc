@@ -1,4 +1,4 @@
-/*	$NetBSD: targ.c,v 1.9 2024/07/15 09:10:07 jperkin Exp $	*/
+/*	$NetBSD: targ.c,v 1.10 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -107,7 +107,7 @@
 #include "dir.h"
 
 /*	"@(#)targ.c	8.2 (Berkeley) 3/19/94"	*/
-MAKE_RCSID("$NetBSD: targ.c,v 1.9 2024/07/15 09:10:07 jperkin Exp $");
+MAKE_RCSID("$NetBSD: targ.c,v 1.10 2024/09/17 11:52:27 jperkin Exp $");
 
 /*
  * All target nodes that appeared on the left-hand side of one of the

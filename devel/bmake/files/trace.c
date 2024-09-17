@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.c,v 1.9 2024/07/15 09:10:07 jperkin Exp $	*/
+/*	$NetBSD: trace.c,v 1.10 2024/09/17 11:52:27 jperkin Exp $	*/
 
 /*
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -48,7 +48,7 @@
 #include "job.h"
 #include "trace.h"
 
-MAKE_RCSID("$NetBSD: trace.c,v 1.9 2024/07/15 09:10:07 jperkin Exp $");
+MAKE_RCSID("$NetBSD: trace.c,v 1.10 2024/09/17 11:52:27 jperkin Exp $");
 
 static FILE *trfile;
 static pid_t trpid;

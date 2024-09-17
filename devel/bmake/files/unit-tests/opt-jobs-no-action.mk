@@ -1,4 +1,4 @@
-# $NetBSD: opt-jobs-no-action.mk,v 1.1 2024/07/15 09:10:24 jperkin Exp $
+# $NetBSD: opt-jobs-no-action.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the combination of the options -j and -n, which prints the
 # commands instead of actually running them.

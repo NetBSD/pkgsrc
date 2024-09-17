@@ -1,4 +1,4 @@
-# $NetBSD: cond-func-make.mk,v 1.1 2024/07/15 09:10:11 jperkin Exp $
+# $NetBSD: cond-func-make.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Tests for the make() function in .if conditions, which tests whether
 # the argument has been passed as a target via the command line or later

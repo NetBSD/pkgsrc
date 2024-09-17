@@ -1,4 +1,4 @@
-# $NetBSD: opt-define.mk,v 1.1 2024/07/15 09:10:24 jperkin Exp $
+# $NetBSD: opt-define.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the -D command line option, which defines global variables to the
 # value 1, like in the C preprocessor.

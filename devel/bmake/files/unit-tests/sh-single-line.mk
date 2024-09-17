@@ -1,4 +1,4 @@
-# $NetBSD: sh-single-line.mk,v 1.1 2024/07/15 09:10:26 jperkin Exp $
+# $NetBSD: sh-single-line.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # Tests for running single-line shell commands.
 #

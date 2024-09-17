@@ -1,6 +1,6 @@
-# $Id: Makefile,v 1.3 2024/07/15 09:10:10 jperkin Exp $
+# $Id: Makefile,v 1.4 2024/09/17 11:52:29 jperkin Exp $
 #
-# $NetBSD: Makefile,v 1.3 2024/07/15 09:10:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/17 11:52:29 jperkin Exp $
 #
 # Unit tests for make(1)
 #
@@ -887,6 +887,7 @@ test:	${OUTFILES} .PHONY
 	  if [ "$$have_lua" = "yes" -a -s ${.CURDIR}/check-expect.lua ]; then \
 	    (cd ${.CURDIR} && "$$lua" ./check-expect.lua *.mk); \
 	  fi; \
+	  rm -rf ${TMPDIR}; \
 	fi
 
 accept:

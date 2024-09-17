@@ -1,4 +1,4 @@
-# $NetBSD: opt-debug-loud.mk,v 1.1 2024/07/15 09:10:23 jperkin Exp $
+# $NetBSD: opt-debug-loud.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the -dl command line option, which prints the commands before
 # running them, ignoring the command line option for silent mode (-s) as

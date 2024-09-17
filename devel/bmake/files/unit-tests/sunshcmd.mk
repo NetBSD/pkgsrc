@@ -1,4 +1,4 @@
-# $NetBSD: sunshcmd.mk,v 1.2 2024/07/15 09:10:27 jperkin Exp $
+# $NetBSD: sunshcmd.mk,v 1.3 2024/09/17 11:52:33 jperkin Exp $
 
 BYECMD=		  echo bye
 LATERCMD=	  echo later

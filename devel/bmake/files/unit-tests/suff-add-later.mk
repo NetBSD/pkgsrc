@@ -1,4 +1,4 @@
-# $NetBSD: suff-add-later.mk,v 1.1 2024/07/15 09:10:26 jperkin Exp $
+# $NetBSD: suff-add-later.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # https://gnats.netbsd.org/49086, issue 5:
 # Adding more suffixes does not turn existing rules into suffix rules.

@@ -1,4 +1,4 @@
-# $NetBSD: cond-short.mk,v 1.1 2024/07/15 09:10:12 jperkin Exp $
+# $NetBSD: cond-short.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Demonstrates that in conditions, the right-hand side of an && or ||
 # is only evaluated if it can actually influence the result.

@@ -1,4 +1,4 @@
-# $NetBSD: cond-cmp-string.mk,v 1.1 2024/07/15 09:10:11 jperkin Exp $
+# $NetBSD: cond-cmp-string.mk,v 1.2 2024/09/17 11:52:29 jperkin Exp $
 #
 # Tests for string comparisons in .if conditions.
 
@@ -15,7 +15,7 @@
 
 # The left-hand side of the comparison must be enclosed in quotes.
 # This one is not enclosed in quotes and thus generates an error message.
-# expect+1: Malformed conditional (str != str)
+# expect+1: Malformed conditional 'str != str'
 .if str != str
 .  error
 .endif
@@ -40,7 +40,7 @@
 
 # It is not possible to concatenate two string literals to form a single
 # string.  In C, Python and the shell this is possible, but not in make.
-# expect+1: Malformed conditional ("string" != "str""ing")
+# expect+1: Malformed conditional '"string" != "str""ing"'
 .if "string" != "str""ing"
 .  error
 .else
@@ -48,7 +48,7 @@
 .endif
 
 # There is no = operator for strings.
-# expect+1: Malformed conditional (!("value" = "value"))
+# expect+1: Malformed conditional '!("value" = "value")'
 .if !("value" = "value")
 .  error
 .else
@@ -56,7 +56,7 @@
 .endif
 
 # There is no === operator for strings either.
-# expect+1: Malformed conditional (!("value" === "value"))
+# expect+1: Malformed conditional '!("value" === "value")'
 .if !("value" === "value")
 .  error
 .else

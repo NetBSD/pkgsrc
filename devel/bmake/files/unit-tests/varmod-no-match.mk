@@ -1,4 +1,4 @@
-# $NetBSD: varmod-no-match.mk,v 1.1 2024/07/15 09:10:30 jperkin Exp $
+# $NetBSD: varmod-no-match.mk,v 1.2 2024/09/17 11:52:34 jperkin Exp $
 #
 # Tests for the expression modifier ':N', which filters words that do not
 # match the given pattern.

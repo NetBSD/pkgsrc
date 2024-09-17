@@ -1,14 +1,14 @@
-# $NetBSD: varparse-dynamic.mk,v 1.1 2024/07/15 09:10:34 jperkin Exp $
+# $NetBSD: varparse-dynamic.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 
 # Before 2020-07-27, there was an off-by-one error in Var_Parse that skipped
 # the last character in the variable name.
 # To trigger the bug, the variable had to be undefined.
 .if ${.TARGET}			# exact match, may be undefined
 .endif
-# expect+1: Malformed conditional (${.TARGEX})
+# expect+1: Malformed conditional '${.TARGEX}'
 .if ${.TARGEX}			# 1 character difference, must be defined
 .endif
-# expect+1: Malformed conditional (${.TARGXX})
+# expect+1: Malformed conditional '${.TARGXX}'
 .if ${.TARGXX}			# 2 characters difference, must be defined
 .endif
 

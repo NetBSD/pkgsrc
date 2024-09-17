@@ -1,4 +1,4 @@
-# $NetBSD: deptgt-end-fail.mk,v 1.1 2024/07/15 09:10:15 jperkin Exp $
+# $NetBSD: deptgt-end-fail.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for an errors in the main target, its dependencies,
 # the .END node and its dependencies.

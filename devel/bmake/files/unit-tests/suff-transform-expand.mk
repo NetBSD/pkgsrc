@@ -1,4 +1,4 @@
-# $NetBSD: suff-transform-expand.mk,v 1.1 2024/07/15 09:10:27 jperkin Exp $
+# $NetBSD: suff-transform-expand.mk,v 1.2 2024/09/17 11:52:33 jperkin Exp $
 #
 # https://gnats.netbsd.org/49086, issue 11:
 # Sources from transformation rules are expanded incorrectly.

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 #
 # RCSid:
-#	$Id: ccm.dep.mk,v 1.1 2024/07/15 09:10:09 jperkin Exp $
+#	$Id: ccm.dep.mk,v 1.2 2024/09/17 11:52:27 jperkin Exp $
 #
 #	@(#) Copyright (c) 2024, Simon J. Gerraty
 #

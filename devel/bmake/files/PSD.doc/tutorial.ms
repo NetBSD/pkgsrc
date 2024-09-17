@@ -1,4 +1,4 @@
-.\"	$NetBSD: tutorial.ms,v 1.6 2024/07/15 09:10:07 jperkin Exp $
+.\"	$NetBSD: tutorial.ms,v 1.7 2024/09/17 11:52:27 jperkin Exp $
 .\" Copyright (c) 1988, 1989, 1993
 .\"	The Regents of the University of California.  All rights reserved.
 .\"

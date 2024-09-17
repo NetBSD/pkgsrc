@@ -1,4 +1,4 @@
-# $NetBSD: opt-debug-file.mk,v 1.1 2024/07/15 09:10:22 jperkin Exp $
+# $NetBSD: opt-debug-file.mk,v 1.2 2024/09/17 11:52:32 jperkin Exp $
 #
 # Tests for the -dF command line option, which redirects the debug log
 # to a file instead of writing it to stderr.

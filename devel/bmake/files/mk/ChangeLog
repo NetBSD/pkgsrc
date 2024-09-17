@@ -1,3 +1,16 @@
+2024-08-31  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* subdir.mk: add ${SUBDIR.yes} - allows for SUBDIR.${MK_*}
+	  and handle subdir with '-' in its name.
+
+2024-08-23  Simon J Gerraty  <sjg@beast.crufty.net>
+
+	* install-mk (MK_VERSION): 20240820
+
+	* links.mk: Allow a filter to be applied to SYMLINKS etc.
+	It is up to [BUILD_][SYM]LINKS_FILTER to do something sane.
+	Also only claim we are making a symlink if the value changed.
+
 2024-06-22  Simon J Gerraty  <sjg@beast.crufty.net>
 
 	* install-mk (MK_VERSION): 20240616

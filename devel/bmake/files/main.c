@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.18 2024/07/15 09:10:06 jperkin Exp $	*/
+/*	$NetBSD: main.c,v 1.19 2024/09/17 11:52:26 jperkin Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -111,7 +111,7 @@
 #include "trace.h"
 
 /*	"@(#)main.c	8.3 (Berkeley) 3/19/94"	*/
-MAKE_RCSID("$NetBSD: main.c,v 1.18 2024/07/15 09:10:06 jperkin Exp $");
+MAKE_RCSID("$NetBSD: main.c,v 1.19 2024/09/17 11:52:26 jperkin Exp $");
 #if defined(MAKE_NATIVE)
 __COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993 "
 	    "The Regents of the University of California.  "

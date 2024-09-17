@@ -121,7 +121,7 @@
  *
  */
 #ifndef lint
-static char *RCSid = "$Id: sigaction.c,v 1.1 2024/07/15 09:10:06 jperkin Exp $";
+static char *RCSid = "$Id: sigaction.c,v 1.2 2024/09/17 11:52:26 jperkin Exp $";
 #endif
 
 #undef _ANSI_SOURCE		/* causes problems */

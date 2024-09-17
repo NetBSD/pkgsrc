@@ -1,4 +1,4 @@
-# $NetBSD: depsrc-usebefore.mk,v 1.1 2024/07/15 09:10:14 jperkin Exp $
+# $NetBSD: depsrc-usebefore.mk,v 1.2 2024/09/17 11:52:30 jperkin Exp $
 #
 # Tests for the special source .USEBEFORE in dependency declarations,
 # which allows to prepend common commands to other targets.

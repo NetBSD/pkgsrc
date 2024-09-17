@@ -1,4 +1,4 @@
-# $NetBSD: varname-dot-alltargets.mk,v 1.1 2024/07/15 09:10:31 jperkin Exp $
+# $NetBSD: varname-dot-alltargets.mk,v 1.2 2024/09/17 11:52:35 jperkin Exp $
 #
 # Tests for the special .ALLTARGETS variable.
 
