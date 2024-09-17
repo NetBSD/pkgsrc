@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.43 2023/11/15 15:24:09 nia Exp $
+# $NetBSD: egg.mk,v 1.44 2024/09/17 16:57:10 wiz Exp $
 #
 # The method used in this Makefile fragment is obsolete.
 # Please use wheel.mk instead.
@@ -9,6 +9,9 @@
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../lang/python/pyversion.mk"
 
+.if ${PKG_DEVELOPER:Uno} != "no"
+WARNINGS+=	"lang/python/egg.mk is deprecated; use lang/python/wheel.mk instead."
+.endif
 
 EGG_NAME?=	${DISTNAME:C/-([^0-9])/_\1/g}
 EGG_INFODIR?=	${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
