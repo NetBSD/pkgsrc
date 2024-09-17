@@ -1,0 +1,15 @@
+$NetBSD: patch-driver_XScreenSaver.ad.in,v 1.1 2024/09/17 00:04:07 gutteridge Exp $
+
+Don't capture and display images of the desktop by default.
+
+--- driver/XScreenSaver.ad.in.orig	2023-10-11 00:24:06.551773885 +0000
++++ driver/XScreenSaver.ad.in
+@@ -38,7 +38,7 @@
+ *dpmsStandby:		2:00:00
+ *dpmsSuspend:		2:00:00
+ *dpmsOff:		4:00:00
+-*grabDesktopImages:	True
++*grabDesktopImages:	False
+ *grabVideoFrames:	False
+ *chooseRandomImages:	@DEFAULT_IMAGES_P@
+ ! This can be a local directory name, or the URL of an RSS or Atom feed.
