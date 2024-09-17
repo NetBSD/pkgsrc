@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/06/05 18:22:39 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2024/09/17 06:10:43 ryoon Exp $
 
-BLAKE2s (duckdb-1.0.0.tar.gz) = e26f1daad97d35453ae7ae19f8a8d1ce7bc7bddbc2acdeee2c10cdc761f8093e
-SHA512 (duckdb-1.0.0.tar.gz) = 9f3f470aeaecc65506ec66183bef4b039cf2a23685ce8c876ce9862e9c5746e8150ace3d37acf167f15611f2bf078f85e8ed0b397397d7391fc044a75c59271a
-Size (duckdb-1.0.0.tar.gz) = 80094305 bytes
+BLAKE2s (duckdb-1.1.0.tar.gz) = f2895c73c26b4628a4ef0a0925c406f3ce930213e5c56d0deb9e440cd517698a
+SHA512 (duckdb-1.1.0.tar.gz) = 13c67623fc3cc38e7c2e3986b5a3c7d212a8b315a8914ce9b3777bbdac5cb988c956b0a1a698b0af6e7c7211ca7130ed01595c78c92055bfa52ab85e358fe52a
+Size (duckdb-1.1.0.tar.gz) = 89199327 bytes
