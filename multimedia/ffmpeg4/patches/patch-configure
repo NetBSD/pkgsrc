@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.9 2022/10/10 17:14:02 adam Exp $
+$NetBSD: patch-configure,v 1.10 2024/09/17 07:56:47 adam Exp $
 
 Sun audio support.
 
@@ -7,7 +7,7 @@ to avoid text relocations.
 
 Do not use 'rsync'.
 
---- configure.orig	2022-10-09 19:04:43.000000000 +0000
+--- configure.orig	2024-07-28 22:54:52.000000000 +0000
 +++ configure
 @@ -2139,6 +2139,7 @@ HEADERS_LIST="
      sys_resource_h
@@ -34,16 +34,15 @@ Do not use 'rsync'.
  pulse_indev_deps="libpulse"
  pulse_outdev_deps="libpulse"
  sdl2_outdev_deps="sdl2"
-@@ -5369,6 +5371,8 @@ case $target_os in
-         ;;
+@@ -5370,6 +5372,7 @@ case $target_os in
      netbsd)
          disable symver
-+        enable section_data_rel_ro
+         enable section_data_rel_ro
 +        enable pic
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -5767,10 +5771,13 @@ done
+@@ -5769,10 +5772,13 @@ done
  check_cc pragma_deprecated "" '_Pragma("GCC diagnostic ignored \"-Wdeprecated-declarations\"")'
  
  # The global variable ensures the bits appear unchanged in the object file.
@@ -60,7 +59,7 @@ Do not use 'rsync'.
  
  check_cc const_nan math.h "struct { double d; } static const bar[] = { { NAN } }"
  
-@@ -6170,6 +6177,7 @@ check_headers malloc.h
+@@ -6172,6 +6178,7 @@ check_headers malloc.h
  check_headers mftransform.h
  check_headers net/udplite.h
  check_headers poll.h
@@ -68,7 +67,7 @@ Do not use 'rsync'.
  check_headers sys/param.h
  check_headers sys/resource.h
  check_headers sys/select.h
-@@ -6606,7 +6614,6 @@ enabled makeinfo \
+@@ -6611,7 +6618,6 @@ enabled makeinfo \
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
