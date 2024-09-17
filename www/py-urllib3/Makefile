@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2024/09/12 19:38:21 adam Exp $
+# $NetBSD: Makefile,v 1.64 2024/09/17 17:21:36 jklos Exp $
 
 DISTNAME=	urllib3-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://urllib3.readthedocs.io/
 COMMENT=	HTTP library with thread-safe connection pooling
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4.0":../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4.0:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.6.0:../../devel/py-hatchling
 # optional dependencies:
 # "socks"; higher requirement from dev_requirements.txt
