@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5685 2024/09/17 00:04:25 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5686 2024/09/17 03:33:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8748,3 +8748,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-statsmodels to 0.14.3 [adam 2024-09-16]
 	Updated www/py-django-taggit to 6.0.0 [adam 2024-09-16]
 	Updated x11/xscreensaver to 6.08nb6 [gutteridge 2024-09-17]
+	Updated textproc/go-md2man to 2.0.5 [pin 2024-09-17]
