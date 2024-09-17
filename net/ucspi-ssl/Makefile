@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2024/09/10 19:56:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.66 2024/09/17 15:35:38 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.12.10
+DISTNAME=		ucspi-ssl-0.13.01
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -84,12 +83,11 @@ do-install: do-install-sslperl
 	  ${INSTALL_DATA} ${WRKSRC}/etc/${i} ${DESTDIR}${EGDIR}
 .endfor
 
-.for i in CHAIN-SSL CHANGES TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL
+.for i in CHAIN-SSL CHANGELOG TLSVERSION_CIPHERSUITES TLS_1_3 TODO UCSPI-SSL.md
 	  ${INSTALL_DATA} ${WRKSRC}/doc/${i} \
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
 
-BUILDLINK_API_DEPENDS.fehqlibs+=	fehqlibs>=19
 .include "../../net/fehqlibs/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
