@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/17 06:54:02 adam Exp $
+
+BLAKE2s (pytest_home-0.6.0.tar.gz) = 86477ba110b292c46ac7df307f2584591047e1be7ca3042d647a3149a80579ff
+SHA512 (pytest_home-0.6.0.tar.gz) = 8abb4d3f5ff9c5b90ed5cea3b80c877899c68a53d424cc6785a5664b7df1fa7afcaf435c3f752ee74d911dc7ceb4c95e970d25dfad9225538737779ad0b9bcf8
+Size (pytest_home-0.6.0.tar.gz) = 8073 bytes
