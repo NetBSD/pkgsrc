@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2022/11/20 16:39:06 gdt Exp $
+$NetBSD: distinfo,v 1.18 2024/09/18 14:01:30 gdt Exp $
 
-BLAKE2s (merkaartor-0.19.0.tar.gz) = 0a0ff2676b16b71cde97812096b3515a0fa49162da7248ab9154cd88bfd42e6a
-SHA512 (merkaartor-0.19.0.tar.gz) = 2e832ba14fd89861a4ae2940d281c801d039e09aaf30ada996ac508e084a29d033f8ac3d3e4711c78d1f36df84ab133bd0a901e0e8fa72efa098001724940a6d
-Size (merkaartor-0.19.0.tar.gz) = 5665947 bytes
+BLAKE2s (merkaartor-0.20.0.tar.gz) = 93eb83946bd7905346dc733c8dc54b7a83ed3329d2cb9a21b135ca9f773e3a5e
+SHA512 (merkaartor-0.20.0.tar.gz) = db64c3053618a0bed7984223c9aa8e4175fdf7db2dd70bf3c6ec021b46fae1d095c513c3e151086baf07446c7cf81c49923a2e43e79963d956d29643d7f93910
+Size (merkaartor-0.20.0.tar.gz) = 5592116 bytes

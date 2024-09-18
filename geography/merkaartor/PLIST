@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2022/11/20 16:39:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/09/18 14:01:30 gdt Exp $
 bin/merkaartor
 lib/merkaartor/plugins/background/libMGdalBackgroundPlugin.so
 lib/merkaartor/plugins/background/libMGeoTiffBackgroundPlugin.so
 lib/merkaartor/plugins/background/libMMsBingMapBackgroundPlugin.so
-lib/merkaartor/plugins/background/libMWalkingPapersBackgroundPlugin.so
 share/applications/org.merkaartor.merkaartor.desktop
 share/icons/hicolor/128x128/apps/merkaartor.png
 share/icons/hicolor/16x16/apps/merkaartor.png
