@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5714 2024/09/18 14:01:36 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5715 2024/09/18 14:26:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8796,3 +8796,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated multimedia/gerbera to 2.3.0 [adam 2024-09-18]
 	Updated geography/mapserver to 8.2.2 [gdt 2024-09-18]
 	Updated geography/merkaartor to 0.20.0 [gdt 2024-09-18]
+	Updated mail/squirrelmail to 1.4.23pre15028 [taca 2024-09-18]
