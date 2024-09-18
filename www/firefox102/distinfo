@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2024/05/10 09:14:07 jperkin Exp $
+$NetBSD: distinfo,v 1.19 2024/09/18 09:17:29 wiz Exp $
 
 BLAKE2s (firefox-102.15.1esr.source.tar.xz) = 1dae9aa46405c07d2dcff2c0f74677925b646020c1722ff1034a39c2adb1e5bd
 SHA512 (firefox-102.15.1esr.source.tar.xz) = bdb66b4fb5622af3e60580a3bcd464d98ef13cb38d6ac6c9e5fc046e567a003cf080125d7748950c91c442fde5e8024c50c4180d2f551aa3528160a3c05ae187
@@ -35,6 +35,8 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = 6ae3b0077b4a8c6088c35769fa1972
 SHA1 (patch-mozglue_misc_Uptime.cpp) = daefe25ef1ebc8e4d3735017b9e8ac68c4710a00
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 13e512c7ee9fa1e14ba415d62fa853e5fbfc91c0
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
+SHA1 (patch-servo_components_style__traits_values.rs) = 38b64d5a0edc3e9e94eafa1171cdb7b02e87ba2a
+SHA1 (patch-servo_ports_geckolib_cbindgen.toml) = b2a3b330666e1cd8d1e88fe760a1fea63fcef80c
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__linux.cc) = 2e951d7d91934751608e99628fc144632d8a3b5c
 SHA1 (patch-third__party_libwebrtc_system__wrappers_source_cpu__features__linux.cc) = b90e22b50879f7adcc1da3a993f52c0701b720f8
