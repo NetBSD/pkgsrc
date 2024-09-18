@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/02/08 13:59:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/18 13:11:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -26,6 +26,9 @@ ${PYSITELIB}/django_bootstrap5/forms.pyo
 ${PYSITELIB}/django_bootstrap5/html.py
 ${PYSITELIB}/django_bootstrap5/html.pyc
 ${PYSITELIB}/django_bootstrap5/html.pyo
+${PYSITELIB}/django_bootstrap5/jinja2.py
+${PYSITELIB}/django_bootstrap5/jinja2.pyc
+${PYSITELIB}/django_bootstrap5/jinja2.pyo
 ${PYSITELIB}/django_bootstrap5/renderers.py
 ${PYSITELIB}/django_bootstrap5/renderers.pyc
 ${PYSITELIB}/django_bootstrap5/renderers.pyo
