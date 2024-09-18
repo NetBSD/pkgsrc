@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/07/15 10:28:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/18 12:02:17 adam Exp $
 bin/gerbera
 man/man1/gerbera.1
 share/applications/gerbera.desktop
@@ -12,16 +12,18 @@ share/gerbera/mysql-upgrade.xml
 share/gerbera/mysql.sql
 share/gerbera/sqlite3-upgrade.xml
 share/gerbera/sqlite3.sql
+share/gerbera/web/.gitignore
 share/gerbera/web/README.md
+share/gerbera/web/assets/gerbera-config-expert.json
+share/gerbera/web/assets/gerbera-config-minimal.json
+share/gerbera/web/assets/gerbera-config-standard.json
 share/gerbera/web/assets/theme/colors.css
 share/gerbera/web/assets/theme/gerbera-logo-white.png
 share/gerbera/web/assets/theme/gerbera.css
 share/gerbera/web/assets/theme/home-bg.jpg
+share/gerbera/web/css/upnp.css
 share/gerbera/web/disabled.html
 share/gerbera/web/favicon.ico
-share/gerbera/web/gerbera-config-expert.json
-share/gerbera/web/gerbera-config-minimal.json
-share/gerbera/web/gerbera-config-standard.json
 share/gerbera/web/icons/mt-icon120.bmp
 share/gerbera/web/icons/mt-icon120.jpg
 share/gerbera/web/icons/mt-icon120.png
