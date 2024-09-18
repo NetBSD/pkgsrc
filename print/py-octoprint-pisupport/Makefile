@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2022/01/04 20:54:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/18 08:09:58 adam Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-octoprint-pisupport-2021.3.26.post2
-PKGREVISION=	1
+DISTNAME=	OctoPrint-PiSupport-2023.10.10
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	print python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OctoPrint/}
-GITHUB_PROJECT=	OctoPrint-PiSupport
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint-PiSupport/}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-PiSupport/
+HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-PiSupport
 COMMENT=	OctoPrint plugin providing information about your Pi in the UI
 LICENSE=	gnu-agpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:S/-/_/}
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
+USE_LANGUAGES=	# none
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
