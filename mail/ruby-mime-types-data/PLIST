@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/07/14 07:45:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/18 15:38:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Code-of-Conduct.md
 ${GEM_LIBDIR}/Contributing.md
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/Licence.md
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/data/content_type_mime.db
 ${GEM_LIBDIR}/data/ext_mime.db
 ${GEM_LIBDIR}/data/mime-types.json
