@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.16 2024/09/12 19:19:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2024/09/18 10:49:50 adam Exp $
 # used by www/libcurl-gnutls/Makefile
 
-DISTNAME=	curl-8.10.0
+DISTNAME=	curl-8.10.1
 CATEGORIES=	www
 MASTER_SITES=	https://curl.se/download/
 EXTRACT_SUFX=	.tar.xz
@@ -18,8 +18,6 @@ PATCHDIR?=	${.CURDIR}/../../www/curl/patches
 BUILD_DEFS+=	IPV6_READY
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-impacket-[0-9]*:../../net/py-impacket
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes
