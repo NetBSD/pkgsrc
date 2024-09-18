@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2023/08/26 13:29:48 taca Exp $
+# $NetBSD: Makefile,v 1.26 2024/09/18 15:09:33 taca Exp $
 
-DISTNAME=	flexmock-2.3.8
+DISTNAME=	flexmock-3.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
