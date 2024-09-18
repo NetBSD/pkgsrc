@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2024/09/18 06:51:43 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/09/18 21:24:31 gutteridge Exp $
 
-BLAKE2s (firefox-128.1.0esr.source.tar.xz) = 281774e06fb58430bd45aab1ce9600e4f9aa8ba5784f96988620131da7ac5bf4
-SHA512 (firefox-128.1.0esr.source.tar.xz) = 8055a7f83acf0cab6124ba5809aff1c082e81a0d30ff318ec719f8fd3f4af9aa60e2094c1abd6c981193d751075a9569370176e20e50f3c1959fe27a15511388
-Size (firefox-128.1.0esr.source.tar.xz) = 561953208 bytes
+BLAKE2s (firefox-128.2.0esr.source.tar.xz) = 09e25789b5fd5ee88eefad149cb7ae13e8d2ae48a5a8a922556d8b625dfc756c
+SHA512 (firefox-128.2.0esr.source.tar.xz) = 9a689929f6f86d795ea2c0318bb78f77f72a552f40715a1108dbd6361b0dedc3aaf049f1883424012459899607067d5a8374d895564591ec6679a1ce80708d7d
+Size (firefox-128.2.0esr.source.tar.xz) = 560831528 bytes
 BLAKE2s (nodejs-output-128.0.tgz) = a55b907ebe308948b99b9150d2530204c8fe2a5fda5ac371dd1163a6db43bcbc
 SHA512 (nodejs-output-128.0.tgz) = fba59ec14c43556749cac7a9233278e8dcd7779d5ba530ede67009bf1887c5d72dd31e3f440164b646738b465d852b882522caf7ed9aa4f81f53e588bdd3adec
 Size (nodejs-output-128.0.tgz) = 227482 bytes
@@ -32,8 +32,6 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8c
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 8e1d9a0746b637f5f4259e448e72172cfb08b23f
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
-SHA1 (patch-servo_components_style__traits_values.rs) = c9a7ee7d96dd67ab2c7fe3c3e9175a199bea5130
-SHA1 (patch-servo_ports_geckolib_cbindgen.toml) = ac8e2f3187b8faea74c6c6767de744860e27fd4d
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
