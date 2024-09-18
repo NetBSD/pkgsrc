@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5711 2024/09/18 11:39:42 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5712 2024/09/18 12:04:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8792,3 +8792,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/curl to 8.10.1 [adam 2024-09-18]
 	Updated sysutils/tsm8 to 8.1.23.0 [hauke 2024-09-18]
 	Updated graphics/tiff to 4.7.0 [gdt 2024-09-18]
+	Updated lang/nodejs to 22.9.0 [adam 2024-09-18]
+	Updated multimedia/gerbera to 2.3.0 [adam 2024-09-18]
