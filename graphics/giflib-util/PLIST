@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/01/07 20:25:14 sevan Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/18 23:02:59 nia Exp $
 bin/gif2rgb
 bin/gifbuild
 bin/gifclrmp
@@ -11,10 +11,11 @@ man/man1/gifbuild.1
 man/man1/gifclrmp.1
 man/man1/gifcolor.1
 man/man1/gifecho.1
+man/man1/giffilter.1
 man/man1/giffix.1
 man/man1/gifhisto.1
 man/man1/gifinto.1
-man/man1/giflib.1
+man/man1/gifsponge.1
 man/man1/giftext.1
 man/man1/giftool.1
 man/man1/gifwedge.1
@@ -25,10 +26,12 @@ share/doc/giflib/gifbuild.html
 share/doc/giflib/gifclrmp.html
 share/doc/giflib/gifcolor.html
 share/doc/giflib/gifecho.html
+share/doc/giflib/giffilter.html
 share/doc/giflib/giffix.html
 share/doc/giflib/gifhisto.html
 share/doc/giflib/gifinto.html
 share/doc/giflib/giflib.html
+share/doc/giflib/gifsponge.html
 share/doc/giflib/gifstandard/gif87.txt
 share/doc/giflib/gifstandard/gif89.txt
 share/doc/giflib/giftext.html
@@ -43,8 +46,6 @@ share/doc/giflib/whatsinagif/gif_file_stream.gif
 share/doc/giflib/whatsinagif/global_color_table.gif
 share/doc/giflib/whatsinagif/graphic_control_ext.gif
 share/doc/giflib/whatsinagif/header_block.gif
-share/doc/giflib/whatsinagif/highlight_green.gif
-share/doc/giflib/whatsinagif/highlight_purple.gif
 share/doc/giflib/whatsinagif/image_data_block.gif
 share/doc/giflib/whatsinagif/image_descriptor_block.gif
 share/doc/giflib/whatsinagif/index.html
@@ -58,6 +59,7 @@ share/doc/giflib/whatsinagif/sample_1_enlarged.gif
 share/doc/giflib/whatsinagif/sample_1_trans.gif
 share/doc/giflib/whatsinagif/sample_1_trans_blue.gif
 share/doc/giflib/whatsinagif/sample_1_trans_red.gif
+share/doc/giflib/whatsinagif/sample_2_animation.gif
 share/doc/giflib/whatsinagif/sample_2_animation_green.gif
 share/doc/giflib/whatsinagif/sample_2_animation_red.gif
 share/doc/giflib/whatsinagif/sample_2_animation_yellow.gif
