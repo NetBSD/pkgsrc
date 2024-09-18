@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5741 2024/09/18 21:25:58 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5742 2024/09/18 21:26:13 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8825,3 +8825,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/bind918 to 9.18.30 [taca 2024-09-18]
 	Updated ham/chirp to 20240911 [gdt 2024-09-18]
 	Updated www/firefox128 to 128.2.0 [gutteridge 2024-09-18]
+	Updated www/firefox128-l10n to 128.2.0 [gutteridge 2024-09-18]
