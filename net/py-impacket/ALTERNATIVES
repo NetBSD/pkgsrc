@@ -1,10 +1,14 @@
 bin/Get-GPPPassword.py @PREFIX@/bin/Get-GPPPassword-@PYVERSSUFFIX@.py
+bin/GetADComputers.py @PREFIX@/bin/GetADComputers-@PYVERSSUFFIX@.py
 bin/GetADUsers.py @PREFIX@/bin/GetADUsers-@PYVERSSUFFIX@.py
+bin/GetLAPSPassword.py @PREFIX@/bin/GetLAPSPassword-@PYVERSSUFFIX@.py
 bin/GetNPUsers.py @PREFIX@/bin/GetNPUsers-@PYVERSSUFFIX@.py
 bin/GetUserSPNs.py @PREFIX@/bin/GetUserSPNs-@PYVERSSUFFIX@.py
 bin/addcomputer.py @PREFIX@/bin/addcomputer-@PYVERSSUFFIX@.py
 bin/atexec.py @PREFIX@/bin/atexec-@PYVERSSUFFIX@.py
+bin/dacledit.py @PREFIX@/bin/dacledit-@PYVERSSUFFIX@.py
 bin/dcomexec.py @PREFIX@/bin/dcomexec-@PYVERSSUFFIX@.py
+bin/describeTicket.py @PREFIX@/bin/describeTicket-@PYVERSSUFFIX@.py
 bin/dpapi.py @PREFIX@/bin/dpapi-@PYVERSSUFFIX@.py
 bin/esentutl.py @PREFIX@/bin/esentutl-@PYVERSSUFFIX@.py
 bin/exchanger.py @PREFIX@/bin/exchanger-@PYVERSSUFFIX@.py
@@ -22,9 +26,9 @@ bin/mqtt_check.py @PREFIX@/bin/mqtt_check-@PYVERSSUFFIX@.py
 bin/mssqlclient.py @PREFIX@/bin/mssqlclient-@PYVERSSUFFIX@.py
 bin/mssqlinstance.py @PREFIX@/bin/mssqlinstance-@PYVERSSUFFIX@.py
 bin/netview.py @PREFIX@/bin/netview-@PYVERSSUFFIX@.py
-bin/nmapAnswerMachine.py @PREFIX@/bin/nmapAnswerMachine-@PYVERSSUFFIX@.py
 bin/ntfs-read.py @PREFIX@/bin/ntfs-read-@PYVERSSUFFIX@.py
 bin/ntlmrelayx.py @PREFIX@/bin/ntlmrelayx-@PYVERSSUFFIX@.py
+bin/owneredit.py @PREFIX@/bin/owneredit-@PYVERSSUFFIX@.py
 bin/ping.py @PREFIX@/bin/ping-@PYVERSSUFFIX@.py
 bin/ping6.py @PREFIX@/bin/ping6-@PYVERSSUFFIX@.py
 bin/psexec.py @PREFIX@/bin/psexec-@PYVERSSUFFIX@.py
@@ -41,8 +45,6 @@ bin/secretsdump.py @PREFIX@/bin/secretsdump-@PYVERSSUFFIX@.py
 bin/services.py @PREFIX@/bin/services-@PYVERSSUFFIX@.py
 bin/smbclient.py @PREFIX@/bin/smbclient-@PYVERSSUFFIX@.py
 bin/smbexec.py @PREFIX@/bin/smbexec-@PYVERSSUFFIX@.py
-bin/smbpasswd.py @PREFIX@/bin/smbpasswd-@PYVERSSUFFIX@.py
-bin/smbrelayx.py @PREFIX@/bin/smbrelayx-@PYVERSSUFFIX@.py
 bin/smbserver.py @PREFIX@/bin/smbserver-@PYVERSSUFFIX@.py
 bin/sniff.py @PREFIX@/bin/sniff-@PYVERSSUFFIX@.py
 bin/sniffer.py @PREFIX@/bin/sniffer-@PYVERSSUFFIX@.py
