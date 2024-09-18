@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/05 13:21:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/09/18 14:59:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/async.rb
 ${GEM_LIBDIR}/lib/async/barrier.md
@@ -26,4 +26,5 @@ ${GEM_LIBDIR}/lib/kernel/async.rb
 ${GEM_LIBDIR}/lib/kernel/sync.rb
 ${GEM_LIBDIR}/license.md
 ${GEM_LIBDIR}/readme.md
+${GEM_LIBDIR}/releases.md
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
