@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5709 2024/09/18 10:50:11 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5710 2024/09/18 11:34:38 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8790,3 +8790,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-jaraco.test to 5.5.1 [adam 2024-09-18]
 	Updated archivers/zlib-ng to 2.2.2 [adam 2024-09-18]
 	Updated www/curl to 8.10.1 [adam 2024-09-18]
+	Updated sysutils/tsm8 to 8.1.23.0 [hauke 2024-09-18]
