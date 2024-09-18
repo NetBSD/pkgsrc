@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/02/29 20:56:48 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/09/18 09:13:09 adam Exp $
 
-BLAKE2s (impacket-0.11.0.tar.gz) = 60abdd6728b32110182b08c81778e419bb162d3edc396291947033f13e05fb2e
-SHA512 (impacket-0.11.0.tar.gz) = 8bd7baf3c9c4ca826d9bd472bc1842e4fc1b0a9eae643f247606b05f4b375416550b9e4445414ec51e6524422666ce0c869ee63a2aef59451b827feaccb0db7b
-Size (impacket-0.11.0.tar.gz) = 1502931 bytes
+BLAKE2s (impacket-0.12.0.tar.gz) = c679d61e54cc0aa8c41f5715852f5d29f01778a02d8b00725b982d15a081ae45
+SHA512 (impacket-0.12.0.tar.gz) = 48db5e2973cebc87a84118f2d83202f9583f45b4294e7b17c49da32bd6aedcf4e704447dd9d87e03f754c3947a9759a39624e44c5849718daae9e96b04f9aeb0
+Size (impacket-0.12.0.tar.gz) = 1575482 bytes
 SHA1 (patch-setup.py) = 5b7785ce39692150a0e6eb722ff4e2f710e1f9b2

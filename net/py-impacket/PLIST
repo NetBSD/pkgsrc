@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.9 2024/02/29 20:56:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/09/18 09:13:09 adam Exp $
 bin/DumpNTLMInfo-${PYVERSSUFFIX}.py
 bin/Get-GPPPassword-${PYVERSSUFFIX}.py
+bin/GetADComputers-${PYVERSSUFFIX}.py
 bin/GetADUsers-${PYVERSSUFFIX}.py
+bin/GetLAPSPassword-${PYVERSSUFFIX}.py
 bin/GetNPUsers-${PYVERSSUFFIX}.py
 bin/GetUserSPNs-${PYVERSSUFFIX}.py
 bin/addcomputer-${PYVERSSUFFIX}.py
 bin/atexec-${PYVERSSUFFIX}.py
 bin/changepasswd-${PYVERSSUFFIX}.py
+bin/dacledit-${PYVERSSUFFIX}.py
 bin/dcomexec-${PYVERSSUFFIX}.py
+bin/describeTicket-${PYVERSSUFFIX}.py
 bin/dpapi-${PYVERSSUFFIX}.py
 bin/esentutl-${PYVERSSUFFIX}.py
 bin/exchanger-${PYVERSSUFFIX}.py
@@ -28,9 +32,9 @@ bin/mssqlclient-${PYVERSSUFFIX}.py
 bin/mssqlinstance-${PYVERSSUFFIX}.py
 bin/net-${PYVERSSUFFIX}.py
 bin/netview-${PYVERSSUFFIX}.py
-bin/nmapAnswerMachine-${PYVERSSUFFIX}.py
 bin/ntfs-read-${PYVERSSUFFIX}.py
 bin/ntlmrelayx-${PYVERSSUFFIX}.py
+bin/owneredit-${PYVERSSUFFIX}.py
 bin/ping-${PYVERSSUFFIX}.py
 bin/ping6-${PYVERSSUFFIX}.py
 bin/psexec-${PYVERSSUFFIX}.py
@@ -47,8 +51,6 @@ bin/secretsdump-${PYVERSSUFFIX}.py
 bin/services-${PYVERSSUFFIX}.py
 bin/smbclient-${PYVERSSUFFIX}.py
 bin/smbexec-${PYVERSSUFFIX}.py
-bin/smbpasswd-${PYVERSSUFFIX}.py
-bin/smbrelayx-${PYVERSSUFFIX}.py
 bin/smbserver-${PYVERSSUFFIX}.py
 bin/sniff-${PYVERSSUFFIX}.py
 bin/sniffer-${PYVERSSUFFIX}.py
@@ -157,6 +159,9 @@ ${PYSITELIB}/impacket/dcerpc/v5/even.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/even6.py
 ${PYSITELIB}/impacket/dcerpc/v5/even6.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/even6.pyo
+${PYSITELIB}/impacket/dcerpc/v5/gkdi.py
+${PYSITELIB}/impacket/dcerpc/v5/gkdi.pyc
+${PYSITELIB}/impacket/dcerpc/v5/gkdi.pyo
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.py
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyc
 ${PYSITELIB}/impacket/dcerpc/v5/iphlp.pyo
@@ -235,6 +240,9 @@ ${PYSITELIB}/impacket/dot11.pyo
 ${PYSITELIB}/impacket/dpapi.py
 ${PYSITELIB}/impacket/dpapi.pyc
 ${PYSITELIB}/impacket/dpapi.pyo
+${PYSITELIB}/impacket/dpapi_ng.py
+${PYSITELIB}/impacket/dpapi_ng.pyc
+${PYSITELIB}/impacket/dpapi_ng.pyo
 ${PYSITELIB}/impacket/eap.py
 ${PYSITELIB}/impacket/eap.pyc
 ${PYSITELIB}/impacket/eap.pyo
@@ -364,6 +372,9 @@ ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/config.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/enum.pyo
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.py
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyc
+${PYSITELIB}/impacket/examples/ntlmrelayx/utils/shadow_credentials.pyo
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/ssl.py
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/ssl.pyc
 ${PYSITELIB}/impacket/examples/ntlmrelayx/utils/ssl.pyo
@@ -454,6 +465,9 @@ ${PYSITELIB}/impacket/mapi_constants.pyo
 ${PYSITELIB}/impacket/mqtt.py
 ${PYSITELIB}/impacket/mqtt.pyc
 ${PYSITELIB}/impacket/mqtt.pyo
+${PYSITELIB}/impacket/msada_guids.py
+${PYSITELIB}/impacket/msada_guids.pyc
+${PYSITELIB}/impacket/msada_guids.pyo
 ${PYSITELIB}/impacket/nmb.py
 ${PYSITELIB}/impacket/nmb.pyc
 ${PYSITELIB}/impacket/nmb.pyo
