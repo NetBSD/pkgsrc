@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2024/07/15 10:28:42 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/09/18 12:02:17 adam Exp $
 
-BLAKE2s (gerbera-2.2.0.tar.gz) = f52a48583557f3aba6b562e05b6f09a4bb637615321d3ef271239f84607772dc
-SHA512 (gerbera-2.2.0.tar.gz) = 6e11d3e40c9a95d278ce4c6f0c914a27fed250e9202bb81c0f539d06622738bfa5b2156ca6bd061872e276858eb203f626c997ddc00810f9d816f4ff9198c97e
-Size (gerbera-2.2.0.tar.gz) = 6138157 bytes
+BLAKE2s (gerbera-2.3.0.tar.gz) = 351d25c909bd9229cf059885c59359e94411bc3dd747441e06751ea450cb1941
+SHA512 (gerbera-2.3.0.tar.gz) = 5326a22a244ef572a7a825193f0a8595fd4125295e4d9c7d329966e6d0b2995a48c48b75d1b02e809e2423839709d736e34be0329c5028f23c9af69906dcfae7
+Size (gerbera-2.3.0.tar.gz) = 6255947 bytes
 SHA1 (patch-CMakeLists.txt) = 7b8e0e42547da4545be4fdf19dd27e6b5592f21d
 SHA1 (patch-src_config_grb__runtime.cc) = f3118cbffe4fa13bb3a552f31d86cb9bc486b95f
