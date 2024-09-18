@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2024/09/18 11:34:25 hauke Exp $
+# $NetBSD: Makefile,v 1.15 2024/09/18 16:58:33 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
 PKGVER=		8.1.23.0
 PKGNAME=	${DISTNAME:C/-/8-/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8123/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
@@ -89,6 +90,8 @@ do-extract:
 	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/${DISTFILES:Q}
 
 post-install:
+	test -h ${DESTDIR}${PREFIX}/emul/linux/etc/init.d/dsmcad && \
+		rm ${DESTDIR}${PREFIX}/emul/linux/etc/init.d/dsmcad
 .if empty(PKG_OPTIONS:Mjava)
 	for bb in `${SED} -e '/^[$$]{PLIST\\.java}/!d' -e 's/^[$$]{PLIST\\.java}//g' ${PLIST_SRC}`; do \
 	    ${RM} -f ${DESTDIR}${PREFIX}/$${bb}; \
@@ -96,7 +99,12 @@ post-install:
 .else
 	find ${DESTDIR}${PREFIX} -name \*.jar -exec chmod -x {} \;
 .endif
-	find ${DESTDIR}${PREFIX} -name \*.txt -exec chmod -x {} \;
+	find ${DESTDIR}${PREFIX} \( -name \*.txt -or -name \*.bat -or \
+		-name \*.vbs -or -name \*.lic -or -name \*.properties \) \
+		-exec chmod -x {} \;
+	(cd ${DESTDIR}${PREFIX}/emul/linux/opt/tivoli/tsm/client/ba/bin/ \
+		&& chmod -x *.sh commonFunctions configFile )
+	chmod -x  ${DESTDIR}${PREFIX}/emul/linux/usr/local/ibm/gsk8_64/copyright
 .for lt in ${LICENSE_TEXTS}
 	${INSTALL_DATA} ${DOC_SRCDIR}/${lt} ${DESTDIR}${PREFIX}/${DOC_DIR}
 .endfor
