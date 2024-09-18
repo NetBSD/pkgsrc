@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.57 2023/06/19 19:13:03 riastradh Exp $
+$NetBSD: distinfo,v 1.58 2024/09/18 14:50:12 hauke Exp $
 
 BLAKE2s (heimdal-7.8.0.tar.gz) = 3f2654141605a1f54611c887ec8a7f55e45b00696983207d5779ad830e485cb8
 SHA512 (heimdal-7.8.0.tar.gz) = 0167345aca77d65b7a1113874eee5b65ec6e1fec1f196d57e571265409fa35ef95a673a4fd4aafbb0ab5fb5b246b97412353a68d6613a8aff6393a9f1e72999e
 Size (heimdal-7.8.0.tar.gz) = 10024936 bytes
 SHA1 (patch-lib_gssapi_krb5_arcfour.c) = 7d70da6a8dfffd7f71eae70f1a6fa6fc18d0df3c
 SHA1 (patch-lib_krb5_store-int.c) = ba539b1cce3ac5a1e7e436dfcdcf632aa61e41e3
+SHA1 (patch-lib_roken_version-script.map) = 4b9ae266222d732459ee44f4604b0276f54d892f

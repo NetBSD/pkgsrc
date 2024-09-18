@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_roken_version-script.map,v 1.1 2024/09/18 14:50:12 hauke Exp $
+
+Unbreak netbsd-9
+Cribbed from <https://github.com/heimdal/heimdal/issues/106>
+
+--- lib/roken/version-script.map.orig	2024-09-18 09:39:46.791454770 +0000
++++ lib/roken/version-script.map
+@@ -73,6 +73,7 @@ HEIMDAL_ROKEN_1.0 {
+ 		rk_getipnodebyname;
+ 		rk_getnameinfo;
+ 		rk_getprogname;
++		rk_getpwnam_r;
+ 		rk_glob;
+ 		rk_globfree;
+ 		rk_hex_decode;
