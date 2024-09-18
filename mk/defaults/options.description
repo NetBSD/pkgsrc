@@ -505,6 +505,7 @@ libarchive		Enable libarchive support.
 libchamplain		Enable libchamplain support (map widget).
 libdbi			Enable libdbi support (similar p5-DBI but for C).
 libdrm			Enable libdrm support.
+libgccjit		Enable JIT (just-in-time compilation) support using libgccjit.
 libgcrypt		Use GNU cryptographic library.
 libgme			Enable Game_Music_Emu video game music file library support.
 libgpod			Enable libgpod support.
