@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/03/21 05:52:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/09/18 09:20:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -14,3 +14,4 @@ ${PYSITELIB}/jaraco/test/cpython.pyo
 ${PYSITELIB}/jaraco/test/http.py
 ${PYSITELIB}/jaraco/test/http.pyc
 ${PYSITELIB}/jaraco/test/http.pyo
+${PYSITELIB}/jaraco/test/py.typed

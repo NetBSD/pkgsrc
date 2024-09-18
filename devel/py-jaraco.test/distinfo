@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/03/21 05:52:20 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/09/18 09:20:55 adam Exp $
 
-BLAKE2s (jaraco.test-5.4.0.tar.gz) = b7fd887d15d0842fa1c1c51280d5ec7715310c4f7ee90fb975937758b7f30c79
-SHA512 (jaraco.test-5.4.0.tar.gz) = ab260c3c5ef16e83e8be0821cb735941764c06bb414c3f913bf337b62267b177f3102f7a87241b182ef20760fdcce98f4f9c705335b0744b69f9a296d5215b1b
-Size (jaraco.test-5.4.0.tar.gz) = 8838 bytes
+BLAKE2s (jaraco_test-5.5.1.tar.gz) = 3234827e81445707b55841664e81054cdf0ef3f821a3e1148a403774ad054329
+SHA512 (jaraco_test-5.5.1.tar.gz) = 09b3303657ccd6882835e3c0c8e27a03f7c5cfc923318e7c4736eded0a0aa3461f043ab595af82a0bb0de33381924415fd382706ab0af6cea80554ca74873ee1
+Size (jaraco_test-5.5.1.tar.gz) = 10018 bytes
