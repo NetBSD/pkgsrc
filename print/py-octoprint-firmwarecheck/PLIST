@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2021/05/30 21:27:38 khorben Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/09/18 08:10:38 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/octoprint_firmware_check/__init__.py
 ${PYSITELIB}/octoprint_firmware_check/__init__.pyc
 ${PYSITELIB}/octoprint_firmware_check/__init__.pyo
@@ -18,6 +17,9 @@ ${PYSITELIB}/octoprint_firmware_check/checks/firmware_broken.pyo
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.py
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.pyc
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_development.pyo
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_hostcommands.py
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_hostcommands.pyc
+${PYSITELIB}/octoprint_firmware_check/checks/firmware_hostcommands.pyo
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.py
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.pyc
 ${PYSITELIB}/octoprint_firmware_check/checks/firmware_unsafe.pyo
