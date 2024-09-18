@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/09/13 19:23:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/18 08:57:51 jperkin Exp $
 
 DISTNAME=	mktool-1.1.0
 CATEGORIES=	pkgtools
@@ -14,6 +14,8 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 RUST_REQ=	1.74.0
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 .include "cargo-depends.mk"
 
