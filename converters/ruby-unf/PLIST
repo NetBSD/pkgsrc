@@ -1,19 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2013/09/13 12:37:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/18 14:39:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/.github/workflows/test.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/mkrf_conf.rb
 ${GEM_LIBDIR}/lib/unf.rb
 ${GEM_LIBDIR}/lib/unf/normalizer.rb
 ${GEM_LIBDIR}/lib/unf/normalizer_cruby.rb
 ${GEM_LIBDIR}/lib/unf/normalizer_jruby.rb
 ${GEM_LIBDIR}/lib/unf/version.rb
-${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/normalization-test.txt
-${GEM_LIBDIR}/test/test_unf.rb
 ${GEM_LIBDIR}/unf.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
