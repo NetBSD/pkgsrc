@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/02/03 15:15:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/09/18 15:13:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/bin/test
 ${GEM_LIBDIR}/doc/.cvsignore
 ${GEM_LIBDIR}/examples/ansi_colors.rb
 ${GEM_LIBDIR}/examples/asking_for_arrays.rb
