@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/09/04 19:19:10 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2024/09/18 17:54:58 gdt Exp $
 
-VERSION=	20240901
+VERSION=	20240911
 DISTNAME=	chirp-${VERSION}
 CATEGORIES=	ham
 MASTER_SITES=	https://trac.chirp.danplanet.com/chirp_next/next-${VERSION}/
@@ -47,6 +47,6 @@ DEPENDS+=	${PYPKGPREFIX}-wxPython>=4:../../x11/py-wxPython
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

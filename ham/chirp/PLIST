@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.22 2024/09/04 17:43:49 gdt Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/09/18 17:54:58 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/chirp/__init__.py
 ${PYSITELIB}/chirp/__init__.pyc
 ${PYSITELIB}/chirp/__init__.pyo
