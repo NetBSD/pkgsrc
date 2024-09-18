@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/07/04 10:56:37 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/09/18 10:46:42 adam Exp $
 
-BLAKE2s (zlib-ng-2.2.1.tar.gz) = 6928a95c2aa5736f59567b768ae8e648242682769e740baac1dc36ab9f673335
-SHA512 (zlib-ng-2.2.1.tar.gz) = 6374a673852935468f23a74ce56db6afb27af3923fab2a0ba182a7a95acea93ff2c979612db6cd355d8bd1a44ebb0779900be78bdd05a89374b339d29339647c
-Size (zlib-ng-2.2.1.tar.gz) = 2412427 bytes
+BLAKE2s (zlib-ng-2.2.2.tar.gz) = 7089c7ec4ec8d9d64c195ecf699928687941cd047e1fd38f47747ae0206ff2b9
+SHA512 (zlib-ng-2.2.2.tar.gz) = 3cb3e97ee1d20e1f3cdf0efcdf55aee0e3a192f9a2ae781cd209b1d37620c48f2ada345fb1f4357315b1cb5e09b7ea5fcdfa2fd54f7b4ac5dcb6e73860000aad
+Size (zlib-ng-2.2.2.tar.gz) = 2413349 bytes
