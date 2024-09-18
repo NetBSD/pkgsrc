@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/12/07 10:51:22 khorben Exp $
+$NetBSD: distinfo,v 1.6 2024/09/18 08:12:19 adam Exp $
 
-BLAKE2s (OctoPrint-1.6.1.tar.gz) = 7cef202ac3c03f93060546e177cb6568fbc734224894d4f3bf83517635c846bf
-SHA512 (OctoPrint-1.6.1.tar.gz) = 4b485ea395c9012f79dd772971cfb9c3b90676d147887560bc618597f898af65bae838522a7ead75e08563d7c61a98c8b63d71c605d1c73e7b8dbd51e8090680
-Size (OctoPrint-1.6.1.tar.gz) = 6174286 bytes
-SHA1 (patch-setup.py) = e205a683e90120c94ac7309dd5d8b5eb00a31b2e
-SHA1 (patch-src_octoprint_util_comm.py) = 6f73998c3b51a17436e16b9a86b1e8b368f6cd2c
+BLAKE2s (octoprint-1.10.2.tar.gz) = b2ff6c02043b5b5832a9be2d1a0de29b405c4c6477952529e3ead8ed2e518a80
+SHA512 (octoprint-1.10.2.tar.gz) = e5fb4e7e1269e53ce646a4126c257089d839661d6184b87ae5fffe64b83df69efea6c1eb0e24565944750e21ea7bc19239ddf8596bd85cd3c72456e3e62648c6
+Size (octoprint-1.10.2.tar.gz) = 3127351 bytes
