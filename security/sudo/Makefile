@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.203 2024/09/15 15:22:56 adam Exp $
+# $NetBSD: Makefile,v 1.204 2024/09/18 10:07:35 kim Exp $
 
 DISTNAME=	sudo-1.9.16
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.sudo.ws/dist/
 MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
@@ -25,11 +26,22 @@ CONFIGURE_ARGS+=	--with-nbsdops
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib # for a bunch of shared libs
 CONFIGURE_ARGS+=	--with-rundir=${VARBASE}/run/sudo
 CONFIGURE_ARGS+=	--with-logpath=${VARBASE}/log/sudo.log
+CONFIGURE_ARGS+=	--with-secure-path-value=${SUDO_SECURE_PATH_DIRS:ts:}
 # to always install man instead of cat
 CONFIGURE_ENV+=		NROFFPROG=${CAT:Q}
 CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
 TEST_TARGET=		check
+
+# Append ${PREFIX} directories to the default secure_path
+SUDO_SECURE_PATH_DIRS=	/usr/local/sbin
+SUDO_SECURE_PATH_DIRS+=	/usr/local/bin
+SUDO_SECURE_PATH_DIRS+=	/usr/sbin
+SUDO_SECURE_PATH_DIRS+=	/usr/bin
+SUDO_SECURE_PATH_DIRS+=	/sbin
+SUDO_SECURE_PATH_DIRS+=	/bin
+SUDO_SECURE_PATH_DIRS+=	${PREFIX}/sbin
+SUDO_SECURE_PATH_DIRS+=	${PREFIX}/bin
 
 .include "../../mk/bsd.prefs.mk"
 
