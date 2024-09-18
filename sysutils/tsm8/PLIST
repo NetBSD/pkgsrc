@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2024/09/18 11:34:25 hauke Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/09/18 16:58:33 hauke Exp $
 bin/dsmc
 ${PLIST.java}bin/dsmj
-emul/linux/etc/init.d/dsmcad
 emul/linux/etc/ld.so.conf.d/tsm_ld.so.conf
 emul/linux/opt/tivoli/tsm/client/api/README_api.htm
 emul/linux/opt/tivoli/tsm/client/api/bin64/CS_CZ/dscjres.txt
