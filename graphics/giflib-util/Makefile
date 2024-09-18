@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2023/12/21 10:46:15 nros Exp $
+# $NetBSD: Makefile,v 1.15 2024/09/18 23:02:59 nia Exp $
 
-PKGREVISION= 1
 .include "../../graphics/giflib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-util-/}
@@ -15,13 +14,15 @@ INSTALL_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 HTMLDIR=		share/doc/giflib
 INSTALLATION_DIRS=	${HTMLDIR} ${HTMLDIR}/gifstandard \
-			${HTMLDIR}/whatsinagif
+			${HTMLDIR}/whatsinagif \
+			${PKGMANDIR}/man1
 
 INSTALL_TARGET= 	install-bin
-INSTALL_TARGET+= 	install-man
 post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.html \
 		${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} *.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/doc/gifstandard && ${INSTALL_DATA} *.txt \
 		${DESTDIR}${PREFIX}/${HTMLDIR}/gifstandard
 	cd ${WRKSRC}/doc/whatsinagif && ${INSTALL_DATA} *.html *.gif \
