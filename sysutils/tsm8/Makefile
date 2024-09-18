@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2023/07/17 12:01:50 hauke Exp $
+# $NetBSD: Makefile,v 1.14 2024/09/18 11:34:25 hauke Exp $
 
 DISTNAME=	tsm-${PKGVER}
-PKGVER=		8.1.19.0
+PKGVER=		8.1.23.0
 PKGNAME=	${DISTNAME:C/-/8-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8119/
+MASTER_SITES=	https://public.dhe.ibm.com/storage/tivoli-storage-management/maintenance/client/v8r1/Linux/LinuxX86/BA/v8123/
 DISTFILES=	${PKGVER}-TIV-TSMBAC-LinuxX86.tar
 
 MAINTAINER=	hauke@NetBSD.org
