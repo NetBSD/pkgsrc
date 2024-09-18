@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2022/01/04 20:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/09/18 08:10:38 adam Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	${PYPKGPREFIX}-octoprint-firmwarecheck-2021.2.4
-PKGREVISION=	1
+DISTNAME=	OctoPrint-FirmwareCheck-2021.10.11
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	print python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=OctoPrint/}
-GITHUB_PROJECT=	OctoPrint-FirmwareCheck
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint-FirmwareCheck/}
 
 MAINTAINER=	khorben@defora.org
-HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-FirmwareCheck/
+HOMEPAGE=	https://github.com/OctoPrint/OctoPrint-FirmwareCheck
 COMMENT=	Checks for unsafe or broken printer firmwares
 LICENSE=	gnu-agpl-v3
 
-EGG_NAME=	OctoPrint_FirmwareCheck-2021.2.4
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
