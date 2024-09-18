@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2024/09/18 14:01:30 gdt Exp $
+# $NetBSD: Makefile,v 1.134 2024/09/18 14:03:39 gdt Exp $
 
 DISTNAME=	merkaartor-0.20.0
 CATEGORIES=	geography
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 # Not documented, but in CMakeLists.txt.
-USE_CC_FEATURES+=	c+17
+USE_CC_FEATURES+=	c++17
 
 USE_TOOLS+=	pkg-config
 
