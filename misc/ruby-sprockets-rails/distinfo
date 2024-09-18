@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/08 15:52:49 taca Exp $
+$NetBSD: distinfo,v 1.9 2024/09/18 15:40:07 taca Exp $
 
-BLAKE2s (sprockets-rails-3.5.1.gem) = f86d0a84a75f5cb951d0ac526054ce9b3aecc65dc3c701308e426f33b6f88a19
-SHA512 (sprockets-rails-3.5.1.gem) = b9b60e02373cb586780ecf23b0cfd3a71062eb1a743bc11da3efd9530c709a2708960a6ad94befede88c250ad99d923cdef3dadcf3a01be97eaa4edea5a0502b
-Size (sprockets-rails-3.5.1.gem) = 16384 bytes
+BLAKE2s (sprockets-rails-3.5.2.gem) = 355e5b80ef4f9c62275e96eced480696ecde88133b42128e47842b89d5330798
+SHA512 (sprockets-rails-3.5.2.gem) = 66836aa43360c24f49566d8a0bc4230879ed418428e7bcac3a1d5469dd8cdd23e4198feeed75bc77e019584180b4ee9c385b61f2cee6d767ef5ce1c917a4a145
+Size (sprockets-rails-3.5.2.gem) = 16384 bytes
