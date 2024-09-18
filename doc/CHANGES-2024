@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5738 2024/09/18 15:38:39 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5739 2024/09/18 16:10:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8822,3 +8822,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-zeitwerk to 2.6.18 [taca 2024-09-18]
 	Updated finance/ruby-activemerchant to 1.137.0 [taca 2024-09-18]
 	Updated mail/ruby-mime-types-data to 3.2024.0903 [taca 2024-09-18]
+	Updated net/bind918 to 9.18.30 [taca 2024-09-18]
