@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/07/20 15:20:07 taca Exp $
+# $NetBSD: Makefile,v 1.27 2024/09/18 14:59:00 taca Exp $
 
-DISTNAME=	async-2.14.2
+DISTNAME=	async-2.17.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${RUBY_PKGPREFIX}-console>=1.25.2<2:../../devel/ruby-console
+DEPENDS+=	${RUBY_PKGPREFIX}-console>=1.26<2:../../devel/ruby-console
 DEPENDS+=	${RUBY_PKGPREFIX}-io-event>=1.6.5<2:../../devel/ruby-io-event
 DEPENDS+=	${RUBY_PKGPREFIX}-fiber-annotation>=0:../../devel/ruby-fiber-annotation
 
