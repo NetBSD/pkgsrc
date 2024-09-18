@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:19:49 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/09/18 15:27:01 taca Exp $
 
-BLAKE2s (simplecov-html-0.12.3.gem) = e5d6f63106c35ab6d92214dbd3d4931d9d86375abe067c87cbdda20ea209cb16
-SHA512 (simplecov-html-0.12.3.gem) = 7fd6dad02b16f512d7fb859f62e5e8bd0a277af103c7829143795ccae60a9a057c323728ac36a1c42dbd143a2f0d175648f6e223e6e7e3e6394a52491d3733af
-Size (simplecov-html-0.12.3.gem) = 336896 bytes
+BLAKE2s (simplecov-html-0.13.1.gem) = 91f73639ec6b38538fc860e3bc9c04fe8d7ef47df60ac8093b7ad8cab6a02a0b
+SHA512 (simplecov-html-0.13.1.gem) = 8d3af10289f9435c9b50ed887627d5df0dbba1eec38f47bf2e7d4c85a2993e3a3651a38e80e00587641b7722af16a0432f7f131ae056fa8266faa78f4c7a292a
+Size (simplecov-html-0.13.1.gem) = 133632 bytes
