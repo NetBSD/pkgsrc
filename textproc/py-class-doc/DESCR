@@ -1,0 +1,7 @@
+Small set of helpers aimed to extract class attributes documentation from the
+class definition. This stuff tries to mimic sphinx-autodoc behaviour as closely
+as possible (except instance attributes defined inside __init__ function).
+
+The main advantage of this project over sphinx-autodoc is that it is
+lightweight single-purpose dependency, while autodoc just a small part of
+really heavy project.
