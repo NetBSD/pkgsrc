@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.165 2023/12/17 17:56:37 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2024/09/18 11:39:36 gdt Exp $
 
-VERSION_BASE=	4.6.0
+VERSION_BASE=	4.7.0
 # Accomodate testing unreleased versions.
-#VERSION_RC=	rc3
-PKGREVISION=	3
+VERSION_RC=
 DISTNAME=	tiff-${VERSION_BASE}${VERSION_RC}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.osgeo.org/libtiff/
@@ -32,6 +31,7 @@ CONFIGURE_ARGS+=	--disable-zstd
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
+# NetBSD 10 amd64: pass except 4 cases, because it uses non-POSIX diff -Z
 TEST_TARGET=		check
 
 post-install:
