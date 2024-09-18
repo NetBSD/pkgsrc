@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2024/09/11 05:33:18 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2024/09/18 07:27:42 wiz Exp $
 
 BLAKE2s (firefox-115.15.0esr.source.tar.xz) = 64673bf84111036a5d7efda8fa152356fc71ea195cb14d4b90d7c7f0431fe16b
 SHA512 (firefox-115.15.0esr.source.tar.xz) = 0df4c498c99cce08903004d2e0f9e977a19f7de86240aa82dba179b60f1d67ca3021eb474f56bddc38035e773eeb5d99bb3e1b0756d9f7583dc8e1f747f477ba
@@ -35,6 +35,8 @@ SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8c
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
 SHA1 (patch-rust-1.78.0) = aa83482a831ab2ee8b38f57c1b7873719e5f8b5b
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
+SHA1 (patch-servo_components_style__traits_values.rs) = 335365fd58a71a8e60d93ec0efcb11eeb94d6d09
+SHA1 (patch-servo_ports_geckolib_cbindgen.toml) = 71b4d2432176fbc5b21dc3c70fec7f9a92fb69e1
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8848fb05c1e8b45234f74db71602a8a84c0404a4
