@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5704 2024/09/18 08:14:15 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5705 2024/09/18 08:30:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8780,3 +8780,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/py-octoprint-firmwarecheck to 2021.10.11 [adam 2024-09-18]
 	Updated print/py-octoprint-filecheck to 2024.3.27 [adam 2024-09-18]
 	Updated print/py-octoprint to 1.10.2 [adam 2024-09-18]
+	Updated devel/py-filelock to 3.16.1 [adam 2024-09-18]
+	Updated devel/py-virtualenv to 20.26.5 [adam 2024-09-18]
