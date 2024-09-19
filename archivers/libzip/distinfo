@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.47 2024/09/19 10:07:50 wiz Exp $
+$NetBSD: distinfo,v 1.48 2024/09/19 11:43:57 wiz Exp $
 
-BLAKE2s (libzip-1.11.tar.xz) = 430538eb4764315c3036d6fd046bc2a79380014d14a3e0f9a06c5a1ba8c474f9
-SHA512 (libzip-1.11.tar.xz) = dc1f824af4c4145c33879c7738f0d94cca721992b7ebae451a7e3ee086e04bff6a830bf19a4219fbb693e8161836c2b1dd681d4d728b31ce6f47c65d2565a453
-Size (libzip-1.11.tar.xz) = 786900 bytes
+BLAKE2s (libzip-1.11.1.tar.xz) = 5a5c38e6df53d6a04bd578531952d39f688ede6f4b43059f4b05c0ade861a969
+SHA512 (libzip-1.11.1.tar.xz) = d53a61d99c2e49db8c7be3f33ab0c49482b78fb473fc0c67e49bba210b3db9479f678a39c1369393dc925e9d0352cdd2e7332e56fd79d99e18cd9592c428a5ee
+Size (libzip-1.11.1.tar.xz) = 786592 bytes
 SHA1 (patch-regress_nihtest.conf.in) = 4ba110f2acef8ded4956c1931ee6f7c6e0618cd0
