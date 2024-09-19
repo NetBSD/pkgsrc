@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/29 08:29:57 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/09/19 11:15:48 adam Exp $
 
-BLAKE2s (lua-resty-lrucache-0.13.tar.gz) = da6273d90b66da97e7698e7bb5024aa446c11a127ff04b31dfc3c68689762135
-SHA512 (lua-resty-lrucache-0.13.tar.gz) = d6491acdca5d7b02feef1bf7fafb31798ae3194ad759a9ba87e895ef4e71268a2785291504f73e07e6872bed0d30147ca5e2cd0a0250db11f0a361af43426dfe
-Size (lua-resty-lrucache-0.13.tar.gz) = 17429 bytes
+BLAKE2s (lua-resty-lrucache-0.14.tar.gz) = 791ea49884573855dc3bd5a3bc3fb59c5ab241a66439ef5bad584ca91ae7f750
+SHA512 (lua-resty-lrucache-0.14.tar.gz) = 66bc1ea6e8c42b3eac0ce8fd38b358f09108a3eeb9cadb56dc2ad97291082a46691a4a56f8ed959b50a4106013bf06bc0f705caee52008cbecff90a3291c5378
+Size (lua-resty-lrucache-0.14.tar.gz) = 17848 bytes
