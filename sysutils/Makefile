@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1135 2024/09/18 15:29:36 bouyer Exp $
+# $NetBSD: Makefile,v 1.1136 2024/09/19 21:05:00 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -572,6 +572,7 @@ SUBDIR+=	pscpug
 SUBDIR+=	psftools
 SUBDIR+=	psmisc
 SUBDIR+=	pstree
+SUBDIR+=	pueue
 SUBDIR+=	puppet
 SUBDIR+=	pv
 SUBDIR+=	pwgen
