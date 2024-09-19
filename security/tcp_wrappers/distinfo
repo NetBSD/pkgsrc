@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2024/08/08 20:34:11 triaxx Exp $
+$NetBSD: distinfo,v 1.24 2024/09/19 16:46:44 tnn Exp $
 
 BLAKE2s (tcp_wrappers_7.6-ipv6.4.tar.gz) = d05aa438c87a74553812522d91d4dc3c078ed3d176512fde8fe1094f11915ee7
 SHA512 (tcp_wrappers_7.6-ipv6.4.tar.gz) = b753b2e54fe243fbcb403470b19fa1b08a912a6a65981dc1bf20288379b903701d4b5a477350cb3470cb6d908cf51ef653f44dc17daff17f34e59b6aa1b41c95
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = 6bc6f0523b4e8c31a4b02af948f285e800d5c59b
 SHA1 (patch-ab) = 1d1f4cc9ba21e4599a622b69587732527a1a5166
 SHA1 (patch-ac) = a9cd493a470782e8f6bdd38fde6c746fb1e371c0
 SHA1 (patch-af) = 1bf946174b027880014e64aa9b84dcfa5ca951a0
-SHA1 (patch-ag) = a2c88d1db9b3ec127f7a0889dcb4329ea3eb06a3
+SHA1 (patch-ag) = 425af6288053a89215e94f2dbe720d36496c16de
 SHA1 (patch-ah) = fa829052d466a4597c1cec528ab02c9d2ea98a60
 SHA1 (patch-ai) = 8e27da22c3e52d755749968d07c1e9227c48f417
 SHA1 (patch-aj) = 07f1d068d8e0173fe16ebef5430c0b5d257eac3f
@@ -22,6 +22,7 @@ SHA1 (patch-rfc931.c) = 27bbe7fdbff981dbb6ad50816bd5a23c9d86a2c0
 SHA1 (patch-safe__finger.c) = bb8af8c4919cc016b58a18510c941aea99eb56e1
 SHA1 (patch-setenv.c) = d6b126f99fc2c01eb120b8835c2a2c17469c20a2
 SHA1 (patch-shell__cmd.c) = a003824c8865dd170f7279e561d437fdcc2d4416
+SHA1 (patch-socket.c) = 72b66611e705fd29260557d8a3845b426d4076f0
 SHA1 (patch-tcpd.c) = 6cca01afc932c71d01af8fd4869053395217ee67
 SHA1 (patch-tcpdmatch.c) = 97517e55d41e1004f7c4622aebd010a9d9558f32
 SHA1 (patch-try-from.c) = 7c573da758f2709c9f1be332adffd284b1d64c98
