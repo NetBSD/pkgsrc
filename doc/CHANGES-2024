@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5750 2024/09/19 11:44:08 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5751 2024/09/19 15:06:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8837,3 +8837,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/lua-resty-core to 0.1.29 [adam 2024-09-19]
 	Updated www/lua-resty-lrucache to 0.14 [adam 2024-09-19]
 	Updated archivers/libzip to 1.11.1 [wiz 2024-09-19]
+	Updated net/qbittorrent to 4.6.7 [adam 2024-09-19]
+	Updated devel/py-pydantic to 2.9.2 [adam 2024-09-19]
