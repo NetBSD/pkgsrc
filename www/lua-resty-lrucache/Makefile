@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/17 15:20:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/19 11:15:48 adam Exp $
 
-DISTNAME=	lua-resty-lrucache-0.13
-PKGREVISION=	1
+DISTNAME=	lua-resty-lrucache-0.14
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openresty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +11,7 @@ COMMENT=	Lua-land LRU cache based on the LuaJIT FFI
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake
 
 MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
 MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1
