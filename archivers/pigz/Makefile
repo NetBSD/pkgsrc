@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2021/03/05 10:33:14 nia Exp $
+# $NetBSD: Makefile,v 1.13 2024/09/19 09:23:34 nia Exp $
 
-DISTNAME=	pigz-2.6
+DISTNAME=	pigz-2.8
 CATEGORIES=	archivers
 MASTER_SITES=	https://zlib.net/pigz/
 
