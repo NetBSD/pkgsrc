@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2024/08/25 06:18:21 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/09/19 10:07:50 wiz Exp $
 
-DISTNAME=		libzip-1.10.1
-PKGREVISION=		4
+DISTNAME=		libzip-1.11
 CATEGORIES=		archivers devel
 MASTER_SITES=		https://libzip.org/download/
 MASTER_SITES+=		${MASTER_SITE_GITHUB:=nih-at/}
@@ -17,12 +16,10 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-nihtest-[0-9]*:../../devel/py-nihtest
 
 TEST_TARGET=		test
 # for tests
-CMAKE_CONFIGURE_ARGS+=		-DNIHTEST=${PREFIX}/bin/nihtest-${PYVERSSUFFIX}
+CMAKE_CONFIGURE_ARGS+=	-DNIHTEST=${PREFIX}/bin/nihtest-${PYVERSSUFFIX}
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 # for Darwin
 MAKE_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "options.mk"
 
