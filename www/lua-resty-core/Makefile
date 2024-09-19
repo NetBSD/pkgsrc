@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/17 15:20:21 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2024/09/19 11:17:16 adam Exp $
 
-DISTNAME=	lua-resty-core-0.1.28
+DISTNAME=	lua-resty-core-0.1.29
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openresty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,7 @@ COMMENT=	FFI-based Lua API for nginx modules
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	gmake
 
 MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
 MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1
