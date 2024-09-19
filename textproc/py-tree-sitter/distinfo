@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/09/15 08:06:10 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/09/19 06:39:47 wiz Exp $
 
-BLAKE2s (tree-sitter-0.23.0.tar.gz) = 9a2c486fc82b3683cd27f238855d7d96d39d11f5277f157707e37697ebe9d4ee
-SHA512 (tree-sitter-0.23.0.tar.gz) = efb12b1a64ef75cc01be2094d43c0095f832b15e000d019d264d7cfd4e160dc0e8263f61c55a030088a23dad7c643e4efed7e7c83de37d16f9b4f21434847cc4
-Size (tree-sitter-0.23.0.tar.gz) = 165402 bytes
+BLAKE2s (py-tree-sitter/tree-sitter-0.23.0.tar.gz) = 9a2c486fc82b3683cd27f238855d7d96d39d11f5277f157707e37697ebe9d4ee
+SHA512 (py-tree-sitter/tree-sitter-0.23.0.tar.gz) = efb12b1a64ef75cc01be2094d43c0095f832b15e000d019d264d7cfd4e160dc0e8263f61c55a030088a23dad7c643e4efed7e7c83de37d16f9b4f21434847cc4
+Size (py-tree-sitter/tree-sitter-0.23.0.tar.gz) = 165402 bytes
