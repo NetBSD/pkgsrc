@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile,v 1.8 2024/09/18 23:02:59 nia Exp $
+$NetBSD: patch-Makefile,v 1.9 2024/09/19 09:01:15 nia Exp $
 
 - Libtoolize.
-- Allow override of PREFIX and MANDIR.
+- Allow override of PREFIX.
 - Allow separate installation of utilities.
 - Move quantize.c back into libgif.so to fix various library users.
 
 --- Makefile.orig	2024-02-19 01:01:50.000000000 +0000
 +++ Makefile
-@@ -8,17 +8,17 @@
+@@ -8,13 +8,13 @@
  #
  OFLAGS = -O0 -g
  OFLAGS  = -O2
@@ -23,11 +23,6 @@ $NetBSD: patch-Makefile,v 1.8 2024/09/18 23:02:59 nia Exp $
  BINDIR = $(PREFIX)/bin
  INCDIR = $(PREFIX)/include
  LIBDIR = $(PREFIX)/lib
--MANDIR = $(PREFIX)/share/man
-+MANDIR?= $(PREFIX)/share/man
- 
- # No user-serviceable parts below this line
- 
 @@ -29,13 +29,13 @@ LIBPOINT=0
  LIBVER=$(LIBMAJOR).$(LIBMINOR).$(LIBPOINT)
  
@@ -51,7 +46,7 @@ $NetBSD: patch-Makefile,v 1.8 2024/09/18 23:02:59 nia Exp $
  	gifwedge
  
 -LDLIBS=libgif.a -lm
-+LDLIBS=-L$(PREFIX)/lib $(COMPILER_RPATH_FLAG)$(PREFIX)/lib -lgif -lm
++LDLIBS=-lm
  
  MANUAL_PAGES = \
  	doc/gif2rgb.xml \
@@ -99,7 +94,7 @@ $NetBSD: patch-Makefile,v 1.8 2024/09/18 23:02:59 nia Exp $
  
 -libgif.a: $(OBJECTS) $(HEADERS)
 -	$(AR) rcs libgif.a $(OBJECTS)
-+$(UTILS): .libs/libgif.a .libs/libutil.a
++$(UTILS): .libs/libutil.a .libs/libgif.a
 +
 +$(LIBGIFSO): $(OBJECTS) $(HEADERS)
 +	$(LIBTOOL) --mode=link --tag=CC $(CC) $(CFLAGS) $(LDFLAGS) -version-info $(LIBMAJOR):0:0 -rpath $(PREFIX)/lib -o $(LIBGIFSO) $(OBJECTS)
