@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2024/06/19 02:05:26 gutteridge Exp $
+# $NetBSD: Makefile,v 1.42 2024/09/19 01:49:38 gutteridge Exp $
 #
 
 .include "../../sysutils/u-boot/u-boot-version.mk"
 
 DISTNAME=	u-boot-${UBOOT_VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	sysutils meta-pkgs
 MASTER_SITES=	# empty
 
@@ -22,6 +22,8 @@ DEPENDS+=	u-boot-a20-olinuxino-lime2-[0-9]*:../../sysutils/u-boot-a20-olinuxino-
 DEPENDS+=	u-boot-a20-olinuxino-lime2-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-lime2-emmc
 DEPENDS+=	u-boot-a20-olinuxino-micro-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
 DEPENDS+=	u-boot-a20-olinuxino-micro-emmc-[0-9]*:../../sysutils/u-boot-a20-olinuxino-micro-emmc
+DEPENDS+=	u-boot-a64-olinuxino-[0-9]*:../../sysutils/u-boot-a64-olinuxino
+DEPENDS+=	u-boot-a64-olinuxino-emmc-[0-9]*:../../sysutils/u-boot-a64-olinuxino-emmc
 DEPENDS+=	u-boot-apple-m1-[0-9]*:../../sysutils/u-boot-apple-m1
 DEPENDS+=	u-boot-bananapi-m2-zero-[0-9]*:../../sysutils/u-boot-bananapi-m2-zero
 DEPENDS+=	u-boot-bananapi-m3-[0-9]*:../../sysutils/u-boot-bananapi-m3
