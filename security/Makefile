@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.960 2024/09/15 00:02:12 js Exp $
+# $NetBSD: Makefile,v 1.961 2024/09/19 06:41:16 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -203,6 +203,7 @@ SUBDIR+=	libmerkletree
 SUBDIR+=	libmultigest
 SUBDIR+=	libnetpgpverify
 SUBDIR+=	libnitrokey
+SUBDIR+=	liboqs
 SUBDIR+=	libp11
 SUBDIR+=	libpbc
 SUBDIR+=	libpe
@@ -277,6 +278,7 @@ SUBDIR+=	opensaml
 SUBDIR+=	opensc
 SUBDIR+=	openssh
 SUBDIR+=	openssl
+SUBDIR+=	oqs-provider
 SUBDIR+=	osv-scanner
 SUBDIR+=	otpCalc
 SUBDIR+=	p0f
