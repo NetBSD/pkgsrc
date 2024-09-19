@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5745 2024/09/19 09:17:23 nia Exp $
+$NetBSD: CHANGES-2024,v 1.5746 2024/09/19 09:23:43 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8831,3 +8831,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-ansible-compat to 24.9.1 [adam 2024-09-19]
 	Updated math/py-sympy to 1.13.3 [adam 2024-09-19]
 	Updated sysutils/ytree to 2.09 [nia 2024-09-19]
+	Updated archivers/pigz to 2.8 [nia 2024-09-19]
