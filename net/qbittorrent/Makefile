@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2024/09/10 09:02:54 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/09/19 15:04:08 adam Exp $
 
-DISTNAME=	qbittorrent-4.6.6
+DISTNAME=	qbittorrent-4.6.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qbittorrent/}
 GITHUB_PROJECT=	qBittorrent
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 # https://github.com/qbittorrent/qBittorrent/issues/11425
 USE_LANGUAGES=	c gnu++14
 USE_TOOLS+=	pkg-config
+
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 # error "Boost.Stacktrace requires `_Unwind_Backtrace` function
 CMAKE_CONFIGURE_ARGS+=	-DSTACKTRACE=OFF
