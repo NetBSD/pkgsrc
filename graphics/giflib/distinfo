@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2024/09/18 23:02:59 nia Exp $
+$NetBSD: distinfo,v 1.30 2024/09/19 09:01:15 nia Exp $
 
 BLAKE2s (giflib-5.2.2.tar.gz) = 2a24163a1af876f9241b5971a7e523f054d131661435e4a3ab11b7cf6acc20f1
 SHA512 (giflib-5.2.2.tar.gz) = 0865ab2b1904fa14640c655fdb14bb54244ad18a66e358565c00287875d00912343f9be8bfac7658cc0146200d626f7ec9160d7a339f20ba3be6b9941d73975f
 Size (giflib-5.2.2.tar.gz) = 447175 bytes
-SHA1 (patch-Makefile) = 9c76f45626d7e4a406df89aef051a73dbc56ddb8
+SHA1 (patch-Makefile) = f7dcce252760dfdcafee46513936d6a2a6fcd668
