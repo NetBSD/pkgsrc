@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/04 11:09:57 kim Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/20 06:45:29 kim Exp $
 
 DISTNAME=	wcurl-2024.07.10
 CATEGORIES=	www
@@ -10,7 +10,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Debian/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://salsa.debian.org/wcurl
+HOMEPAGE=	https://salsa.debian.org/debian/wcurl
 COMMENT=	Simple wrapper around curl to easily download files
 # curl license (see ../../www/curl/Makefile)
 # "not completely, but near enough"
