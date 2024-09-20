@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2024/09/20 06:45:29 kim Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/20 07:10:22 kim Exp $
 
 DISTNAME=	wcurl-2024.07.10
 CATEGORIES=	www
-# Not there yet
-#MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wcurl/}
-# Tar file top directory name includes commit hash
-#MASTER_SITES=	https://salsa.debian.org/debian/${PKGBASE}/-/archive/${PKGVERSION_NOREV}/
-# Conventional tar file found here at this mirror
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Debian/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=curl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://salsa.debian.org/debian/wcurl
+HOMEPAGE=	https://curl.se/wcurl/
 COMMENT=	Simple wrapper around curl to easily download files
 # curl license (see ../../www/curl/Makefile)
 # "not completely, but near enough"
