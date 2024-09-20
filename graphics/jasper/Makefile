@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/08/25 06:18:51 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2024/09/20 07:04:56 tnn Exp $
 
 DISTNAME=	jasper-4.2.4
 CATEGORIES=	graphics
@@ -22,6 +22,7 @@ TEST_ENV+=		DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/src/libjasper
 TEST_TARGET=		test
 
 CFLAGS+=	-D_POSIX_C_SOURCE=200112L	# nanosleep(2)
+CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE=1
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
