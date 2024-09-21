@@ -1,6 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2024/05/23 13:58:31 gdt Exp $
+# $NetBSD: Makefile,v 1.9 2024/09/21 23:29:58 gdt Exp $
 
-# \todo See if upstream provides pdf docs, and update if so, or delete if not.
+# \todo Complete rototill because what is packaged here is no longer available.
+# https://github.com/OSGeo/PROJ/archive/refs/tags/9.5.0.tar.gz
+# docs subdir
+# make latexpdf
+# See doc/environment.yml for build requirements.
+
 DISTNAME=		proj-gh-pages
 PKGNAME=		proj-doc-9.1.0
 CATEGORIES=		geography
