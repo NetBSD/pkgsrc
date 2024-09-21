@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.162 2024/04/12 19:41:24 riastradh Exp $
+# $NetBSD: Makefile,v 1.163 2024/09/21 10:15:19 wiz Exp $
 
-DISTNAME=	cairo-1.18.0
-PKGREVISION=	2
+DISTNAME=	cairo-1.18.2
 CATEGORIES=	graphics
 MASTER_SITES=	https://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -11,9 +10,8 @@ HOMEPAGE=	https://cairographics.org/
 COMMENT=	Vector graphics library with cross-device output support
 LICENSE=	gnu-lgpl-v2.1 AND mpl-1.1
 
-# error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=		gnu99
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	c11
 USE_TOOLS+=		pkg-config
 
 # For snprintf() and ctime_r()
@@ -53,7 +51,7 @@ BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.14.0
 .include "../../graphics/png/buildlink3.mk"
 # include?
 #.include "../../print/libspectre/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.36.0
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.40.0
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

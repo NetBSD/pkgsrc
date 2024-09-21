@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2023/11/26 18:45:03 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/09/21 10:15:19 wiz Exp $
 ${PLIST.trace}bin/cairo-trace
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -21,13 +21,13 @@ ${PLIST.trace}lib/cairo/libcairo-fdr.so
 ${PLIST.trace}lib/cairo/libcairo-trace.so
 lib/libcairo-gobject.so
 lib/libcairo-gobject.so.2
-lib/libcairo-gobject.so.2.11800.0
+lib/libcairo-gobject.so.2.11802.2
 lib/libcairo-script-interpreter.so
 lib/libcairo-script-interpreter.so.2
-lib/libcairo-script-interpreter.so.2.11800.0
+lib/libcairo-script-interpreter.so.2.11802.2
 lib/libcairo.so
 lib/libcairo.so.2
-lib/libcairo.so.2.11800.0
+lib/libcairo.so.2.11802.2
 lib/pkgconfig/cairo-fc.pc
 lib/pkgconfig/cairo-ft.pc
 lib/pkgconfig/cairo-gobject.pc
