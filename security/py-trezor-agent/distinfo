@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/09/21 12:45:49 js Exp $
+
+BLAKE2s (trezor-agent-0.15.0.tar.gz) = 04b00c96af84379d23a5b976b003405bdb2d5489fe8fcd4e89341e5ce82ff7a4
+SHA512 (trezor-agent-0.15.0.tar.gz) = af42d5fff527fe0deb35b27d6b77a3abe49df294e5b7dd69e187d32d5668bd72b1c3b0f20bbe40f81aee9d8e12bb836ec8d0c5bd8f3190c771c7aa3b94bb4fb0
+Size (trezor-agent-0.15.0.tar.gz) = 926014 bytes
+SHA1 (patch-setup.py) = de606c1fc9d81b597c7c79fee0c89710c026e0a2

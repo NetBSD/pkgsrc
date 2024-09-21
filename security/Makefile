@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.962 2024/09/21 12:40:17 js Exp $
+# $NetBSD: Makefile,v 1.963 2024/09/21 12:45:49 js Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -533,6 +533,7 @@ SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
 SUBDIR+=	py-tokenlib
 SUBDIR+=	py-trezor
+SUBDIR+=	py-trezor-agent
 SUBDIR+=	py-trustme
 SUBDIR+=	py-truststore
 SUBDIR+=	py-trytond-authentication-sms
