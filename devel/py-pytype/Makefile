@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/16 10:56:43 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/09/21 09:15:33 wiz Exp $
 
 DISTNAME=	pytype-2024.9.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,6 +27,8 @@ DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	c c++
+
+USE_CXX_FEATURES+=	c++20
 
 # Python 3.12 not supported as of 2024.4.11
 # 'Python versions > 3.11 are not yet supported.' when running pytype
