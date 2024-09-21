@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/23 11:25:28 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/09/21 06:39:33 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/glib-enum-types.h
@@ -22,6 +22,8 @@ ${GEM_LIBDIR}/ext/glib2/glib2.def
 ${GEM_LIBDIR}/ext/glib2/rbgcompat.h
 ${GEM_LIBDIR}/ext/glib2/rbglib-bytes.c
 ${GEM_LIBDIR}/ext/glib2/rbglib-gc.c
+${GEM_LIBDIR}/ext/glib2/rbglib-option.c
+${GEM_LIBDIR}/ext/glib2/rbglib-variant-dict.c
 ${GEM_LIBDIR}/ext/glib2/rbglib-variant-type.c
 ${GEM_LIBDIR}/ext/glib2/rbglib-variant.c
 ${GEM_LIBDIR}/ext/glib2/rbglib.c
@@ -151,6 +153,7 @@ ${GEM_LIBDIR}/test/test-iochannel.rb
 ${GEM_LIBDIR}/test/test-key-file.rb
 ${GEM_LIBDIR}/test/test-match-info.rb
 ${GEM_LIBDIR}/test/test-mkenums.rb
+${GEM_LIBDIR}/test/test-option.rb
 ${GEM_LIBDIR}/test/test-pointer.rb
 ${GEM_LIBDIR}/test/test-poll-fd.rb
 ${GEM_LIBDIR}/test/test-regex.rb
@@ -164,6 +167,7 @@ ${GEM_LIBDIR}/test/test-type.rb
 ${GEM_LIBDIR}/test/test-unicode.rb
 ${GEM_LIBDIR}/test/test-utils.rb
 ${GEM_LIBDIR}/test/test-value.rb
+${GEM_LIBDIR}/test/test-variant-dict.rb
 ${GEM_LIBDIR}/test/test-variant-type.rb
 ${GEM_LIBDIR}/test/test-variant.rb
 ${GEM_LIBDIR}/test/test-version.rb
