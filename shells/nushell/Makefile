@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2024/07/31 17:58:46 pin Exp $
+# $NetBSD: Makefile,v 1.62 2024/09/21 21:16:13 pin Exp $
 
-DISTNAME=	nushell-0.96.1
+DISTNAME=	nushell-0.98.0
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nushell/}
 
@@ -13,7 +13,7 @@ SITES.curl-sys-0.4.73+curl-8.8.0.crate=	https://static.crates.io/crates/curl-sys
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.77.2
+RUST_REQ=	1.79.0
 USE_TOOLS+=	pkg-config
 
 PKG_SHELL=	bin/nu
