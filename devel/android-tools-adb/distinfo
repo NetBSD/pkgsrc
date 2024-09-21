@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/09/21 13:14:58 abs Exp $
+
+BLAKE2s (platform_system_core-android-5.1.1_r29.tar.gz) = 8d3017bca117cf35d84ac85bbea89a868e37e5aebd007fb541d5c124735b3894
+SHA512 (platform_system_core-android-5.1.1_r29.tar.gz) = d5097201dd3b535b5322023a1db6d73a9c263322223219a06c7d718eed71b363e85e6ca99ec97b80636e2e48cd21ba6c819cd2b06152ac2e1da335ef42c49c93
+Size (platform_system_core-android-5.1.1_r29.tar.gz) = 1202607 bytes
+SHA1 (patch-adb__auth__host.c) = f0e559f3643e660960c69cd466cf73ec5078b091
+SHA1 (patch-get__my__path__freebsd.c) = 989e47fea3dbf5f0e2b0bd025a03e0cf3f62df2e
+SHA1 (patch-usb__libusb.c) = bde78b96dd4d037287ea7f839dcfb2c50b7d5b0e
