@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2024/08/25 06:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/09/21 06:41:34 triaxx Exp $
 
-PKGNAME=	openrct2-0.4.11
-PKGREVISION=	2
+PKGNAME=	openrct2-0.4.14
 CATEGORIES=	games
 
 DIST_SUBDIR=	openrct2-${PKGVERSION_NOREV}
@@ -15,25 +14,31 @@ DISTFILES+=	replays.zip
 
 EXTRACT_ONLY+=	openrct.tar.gz
 
+TITLE_SEQUENCE_VERSION=	0.4.14
+OBJECTS_VERSION=	1.4.7
+OPENSFX_VERSION=	1.0.5
+OPENMSX_VERSION=	1.6
+REPLAYS_VERSION=	0.0.79
+
 SITES.openrct.tar.gz= \
 	-https://github.com/OpenRCT2/OpenRCT2/archive/refs/tags/v${PKGVERSION_NOREV}.tar.gz
 
 # these versions come from CMakeLists.txt
 
 SITES.title-sequences.zip= \
-	https://github.com/OpenRCT2/title-sequences/releases/download/v0.4.6/
+	https://github.com/OpenRCT2/title-sequences/releases/download/v${TITLE_SEQUENCE_VERSION}/
 
 SITES.objects.zip= \
-	https://github.com/OpenRCT2/objects/releases/download/v1.4.4/
+	https://github.com/OpenRCT2/objects/releases/download/v${OBJECTS_VERSION}/
 
 SITES.opensound.zip= \
-	https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v1.0.5/
+	https://github.com/OpenRCT2/OpenSoundEffects/releases/download/v${OPENSFX_VERSION}/
 
 SITES.openmusic.zip= \
-	https://github.com/OpenRCT2/OpenMusic/releases/download/v1.5/
+	https://github.com/OpenRCT2/OpenMusic/releases/download/v${OPENMSX_VERSION}/
 
 SITES.replays.zip= \
-	https://github.com/OpenRCT2/replays/releases/download/v0.0.79/
+	https://github.com/OpenRCT2/replays/releases/download/v${REPLAYS_VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenRCT2/OpenRCT2/
