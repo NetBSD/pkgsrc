@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.100 2023/11/23 10:57:44 jperkin Exp $
+$NetBSD: distinfo,v 1.101 2024/09/21 10:15:19 wiz Exp $
 
-BLAKE2s (cairo-1.18.0.tar.xz) = d17e3d7a1b32769f02500ff3edaf8a7e18974873a128c61e607f05e5216e8a63
-SHA512 (cairo-1.18.0.tar.xz) = 6366c7d5e3fd3e12df2edc43aa4ed4c3a517de2ef0b1b3b30dfa8b69a7cae1dd55765801228cec308d2e9792037d0704ae49d95b7b12c06f20df092fa0534e1c
-Size (cairo-1.18.0.tar.xz) = 33761148 bytes
+BLAKE2s (cairo-1.18.2.tar.xz) = 09dab059b46717b167a23f2eeb8aba8a38e62b53d06ec92ff79ce324a20aacc0
+SHA512 (cairo-1.18.2.tar.xz) = 9b533ef65da120bdf6ec6e66b76c9a9a489b91951925357c2db9f399ce27fe03d10e500c4c03b72ad43d73bb5beb4d51e36c24443977a52ecfe1d24b07c99bef
+Size (cairo-1.18.2.tar.xz) = 32574256 bytes
 SHA1 (patch-meson.build) = 3187c754af123be69e1b5651165f6310c8786558
 SHA1 (patch-perf_cairo-perf-print.c) = e1330a9b8a13337915c06cba93a7191af4cfe568
 SHA1 (patch-src_cairo-colr-glyph-render.c) = 3dc6dc2b0a808b1bd6e2323645f895e276f0a8af
 SHA1 (patch-src_cairo-image-surface.c) = 3ae5966abf7851dfdb74742c39d2033b4655d7f7
 SHA1 (patch-test_pdf-structure.c) = dd3e5ee2cdbc19e77c2d5a60dab98195ecbe82bb
 SHA1 (patch-util_cairo-missing_getline.c) = a1068a37113b162ccfe14d7f1bd0baa9df7e5530
-SHA1 (patch-util_meson.build) = 344d29f84114b441bbfede8b77d7a2d02d756ce4
