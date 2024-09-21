@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/06/04 09:30:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/09/21 10:23:36 wiz Exp $
 bin/protoc
 bin/protoc-${PKGVERSION}.0
 include/google/protobuf/any.h
@@ -122,8 +122,8 @@ include/google/protobuf/compiler/retention.h
 include/google/protobuf/compiler/ruby/ruby_generator.h
 include/google/protobuf/compiler/rust/accessors/accessor_case.h
 include/google/protobuf/compiler/rust/accessors/accessors.h
+include/google/protobuf/compiler/rust/accessors/default_value.h
 include/google/protobuf/compiler/rust/accessors/generator.h
-include/google/protobuf/compiler/rust/accessors/helpers.h
 include/google/protobuf/compiler/rust/context.h
 include/google/protobuf/compiler/rust/crate_mapping.h
 include/google/protobuf/compiler/rust/enum.h
@@ -271,8 +271,8 @@ lib/libprotobuf.so
 lib/libprotobuf.so.${PKGVERSION}.0
 lib/libprotoc.so
 lib/libprotoc.so.${PKGVERSION}.0
-lib/libutf8_range.a
-lib/libutf8_validity.a
+lib/libutf8_range.so
+lib/libutf8_validity.so
 lib/pkgconfig/protobuf-lite.pc
 lib/pkgconfig/protobuf.pc
 lib/pkgconfig/utf8_range.pc
