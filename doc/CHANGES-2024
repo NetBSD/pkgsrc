@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5771 2024/09/21 13:10:30 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5772 2024/09/21 13:16:23 abs Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8875,3 +8875,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added security/py-libagent version 0.15.0 [js 2024-09-21]
 	Added security/py-trezor-agent version 0.15.0 [js 2024-09-21]
 	Updated www/php-nextcloud to 29.0.7 [gdt 2024-09-21]
+	Added devel/android-tools-adb version 5.1.1.29 [abs 2024-09-21]
