@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2024/09/21 12:45:49 js Exp $
+bin/age-plugin-trezor
+bin/trezor-agent
+bin/trezor-gpg
+bin/trezor-gpg-agent
+bin/trezor-signify
+bin/trezor_agent.py
+${PYSITELIB}/trezor_agent-0.12.0.dist-info/METADATA
+${PYSITELIB}/trezor_agent-0.12.0.dist-info/RECORD
+${PYSITELIB}/trezor_agent-0.12.0.dist-info/WHEEL
+${PYSITELIB}/trezor_agent-0.12.0.dist-info/entry_points.txt
+${PYSITELIB}/trezor_agent-0.12.0.dist-info/top_level.txt
+${PYSITELIB}/trezor_agent.py
+${PYSITELIB}/trezor_agent.pyc
+${PYSITELIB}/trezor_agent.pyo
