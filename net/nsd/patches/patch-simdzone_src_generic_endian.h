@@ -1,7 +1,10 @@
-$NetBSD: patch-simdzone_src_generic_endian.h,v 1.1 2024/09/21 16:09:29 he Exp $
+$NetBSD: patch-simdzone_src_generic_endian.h,v 1.2 2024/09/21 16:37:31 he Exp $
 
 WHen borrowing code from NetBSD, make it build
 *on* NetBSD, and don't cause redefinition issues...
+
+Pull request
+https://github.com/NLnetLabs/simdzone/pull/233
 
 --- simdzone/src/generic/endian.h.orig	2024-09-21 15:58:37.017604378 +0000
 +++ simdzone/src/generic/endian.h
