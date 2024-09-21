@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/05/18 14:49:59 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/21 21:04:39 mef Exp $
 
-DISTNAME=	verilog-10.1.1
+DISTNAME=	verilog-12.0
 # There is confision in naming of this software, use iverilog as it's saner
 PKGNAME=	i${DISTNAME}
 CATEGORIES=	cad
@@ -13,19 +13,20 @@ COMMENT=	Verilog simulation and synthesis tool (stable release version)
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake bison lex
+USE_TOOLS+=		gmake bison lex autoconf
 TEST_TARGET=		check
 
 INSTALLATION_DIRS+=	share/doc/ivl
 
+pre-configure:
+	(cd ${WRKSRC}; autoconf)
 # Additional files
 post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} \
 		QUICK_START.txt \
-		README.txt      \
+		README.md      \
 	${DESTDIR}${PREFIX}/share/doc/ivl
 
 .include "../../devel/gperf/buildlink3.mk"
