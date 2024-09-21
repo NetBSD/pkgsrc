@@ -1,10 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/05/29 16:02:15 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.26 2024/09/21 10:26:33 wiz Exp $
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
@@ -102,9 +96,15 @@ ${PYSITELIB}/google/protobuf/message.pyo
 ${PYSITELIB}/google/protobuf/message_factory.py
 ${PYSITELIB}/google/protobuf/message_factory.pyc
 ${PYSITELIB}/google/protobuf/message_factory.pyo
+${PYSITELIB}/google/protobuf/proto.py
+${PYSITELIB}/google/protobuf/proto.pyc
+${PYSITELIB}/google/protobuf/proto.pyo
 ${PYSITELIB}/google/protobuf/proto_builder.py
 ${PYSITELIB}/google/protobuf/proto_builder.pyc
 ${PYSITELIB}/google/protobuf/proto_builder.pyo
+${PYSITELIB}/google/protobuf/proto_json.py
+${PYSITELIB}/google/protobuf/proto_json.pyc
+${PYSITELIB}/google/protobuf/proto_json.pyo
 ${PYSITELIB}/google/protobuf/pyext/__init__.py
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyc
 ${PYSITELIB}/google/protobuf/pyext/__init__.pyo
@@ -157,3 +157,9 @@ ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
 ${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
