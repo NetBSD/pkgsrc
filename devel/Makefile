@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4345 2024/09/17 22:13:06 js Exp $
+# $NetBSD: Makefile,v 1.4346 2024/09/21 13:14:58 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -130,6 +130,7 @@ SUBDIR+=	alire
 SUBDIR+=	allegro
 SUBDIR+=	allegro5
 SUBDIR+=	amtk
+SUBDIR+=	android-tools-adb
 SUBDIR+=	anjuta
 SUBDIR+=	ant-contrib
 SUBDIR+=	apache-ant
@@ -3082,8 +3083,8 @@ SUBDIR+=	py-test-fixture-config
 SUBDIR+=	py-test-flake8
 SUBDIR+=	py-test-forked
 SUBDIR+=	py-test-freezer
-SUBDIR+=	py-test-httpserver
 SUBDIR+=	py-test-home
+SUBDIR+=	py-test-httpserver
 SUBDIR+=	py-test-isort
 SUBDIR+=	py-test-lazy-fixture
 SUBDIR+=	py-test-lazy-fixtures
