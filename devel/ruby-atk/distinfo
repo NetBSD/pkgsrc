@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/04/20 10:16:52 tsutsui Exp $
+$NetBSD: distinfo,v 1.23 2024/09/21 06:39:33 tsutsui Exp $
 
-BLAKE2s (atk-4.2.2.gem) = e1ee3dcc4eaa1988546720096dfbc380eb466a9bac6116dea4ade3cdc1b5c199
-SHA512 (atk-4.2.2.gem) = ba0d0b8875f97ad54579cf217be13952664ba0cd0770354c45990683e80fc5808e2731f65d53070fa8e3a0fb76fb846370cfcba0cf044056c891d692e37446af
-Size (atk-4.2.2.gem) = 15872 bytes
+BLAKE2s (atk-4.2.3.gem) = 9c99023a3f52696a0c4e310d092ad0fb4772f25be5a3eaa0f128040a4eca622c
+SHA512 (atk-4.2.3.gem) = c36b2b662b10ad92ca679f2b3c845f0f5cebb5cbff25cddf98908afdbcd77ce1845a2335d95428836707125a224320b2b919df934e3374c8d2e4351713b5103e
+Size (atk-4.2.3.gem) = 15872 bytes
