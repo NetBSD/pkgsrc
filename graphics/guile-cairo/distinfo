@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:46:18 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/09/21 13:16:16 gdt Exp $
 
-BLAKE2s (guile-cairo-1.4.1.tar.gz) = 1092fb736ea92bc140aef54e3725b14899b5482882f285341a0cc4d2bdb8c4a0
-SHA512 (guile-cairo-1.4.1.tar.gz) = 66b8aba0d9b2b333465b45b726bf108322a58fdff8b2dc05eb5f155364d9ccc742b328a2c5f7fe6893f40dc85be4d38b9738f6f8f2758f6ae72452b85d57a586
-Size (guile-cairo-1.4.1.tar.gz) = 524114 bytes
+BLAKE2s (guile-cairo-1.11.2.tar.gz) = fff9eb77562bc2adee7f1d71933fe5173276f4012c17f32fbc571470821bb5ca
+SHA512 (guile-cairo-1.11.2.tar.gz) = 6696abbfcc9725079b875e0a0c4774db264cd317d6d48c804e18538d96ce1b2471b8a463745cb3d67fc3d9850398301de37170e928c563a3f34b5d6a35496f25
+Size (guile-cairo-1.11.2.tar.gz) = 674992 bytes
