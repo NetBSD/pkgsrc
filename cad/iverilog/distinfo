@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:04:12 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/09/21 21:04:39 mef Exp $
 
-BLAKE2s (verilog-10.1.1.tar.gz) = 38f2a53161eafb79b460b24ec3087fa85d2c43b5e98e76665ed75e4d90ab1c71
-SHA512 (verilog-10.1.1.tar.gz) = a57fdce3d870be8ce39eb3050dabd5a2d4d491c657b85ccbf775bef7fa9a6889a18bf4d2508341ef2cc17d872b5d6c802d4fd8585e4ec7952526699ebb24bfac
-Size (verilog-10.1.1.tar.gz) = 1684925 bytes
-SHA1 (patch-Makefile.in) = 9e66fedfa8487be3b7f82c152504404545f8bd06
+BLAKE2s (verilog-12.0.tar.gz) = a33ac3b9c33cc7600355da36a64b82411d00eb26c385b717052a0817aa1ee22b
+SHA512 (verilog-12.0.tar.gz) = a8e112f760903335ef2fbf00529e5fe282b83c1f583c4316373b9410d7fad2a53d5c4adb82dd62491c14a620cb5b1fab117cb0cde638c86b65fe5b7b0dd07152
+Size (verilog-12.0.tar.gz) = 2995096 bytes
 SHA1 (patch-aa) = cf075110416f6db0892129796cd83b8ae8de55fa
 SHA1 (patch-cadpli_Makefile.in) = ed21a5f529ac449c26b831cbd5fde052d9ed5466
-SHA1 (patch-tgt-pcb_Makefile.in) = 0ea212a678aabd7e3d131322fd1a867b3e22611f
-SHA1 (patch-vhdlpp_Makefile.in) = feed15f8e8e60c73b0f1f25a62d30fec7fa25a01
-SHA1 (patch-vvp_Makefile.in) = 67bef8f6bbf03c8cf548785f5d8124e03771026a
