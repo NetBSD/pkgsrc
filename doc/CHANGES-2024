@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5776 2024/09/21 15:24:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5777 2024/09/21 17:26:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8880,3 +8880,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated comms/py-esptool to 4.8.0 [gdt 2024-09-21]
 	Updated net/unifi to 8.4.62 [abs 2024-09-21]
 	Updated devel/fq to 0.13.0 [wiz 2024-09-21]
+	Updated devel/gce_metadata_server to 3.91.0 [bsiegert 2024-09-21]
