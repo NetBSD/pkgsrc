@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2024/05/29 16:33:48 adam Exp $
+# $NetBSD: Makefile,v 1.74 2024/09/21 10:24:29 wiz Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 EXTRACT_SUFX=	.tar.xz
