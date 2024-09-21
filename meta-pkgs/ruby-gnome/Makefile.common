@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2024/04/20 10:16:54 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.23 2024/09/21 06:39:35 tsutsui Exp $
 #
 # used by devel/ruby-atk/Makefile
 # used by devel/ruby-gio2/Makefile
@@ -21,4 +21,4 @@
 HOMEPAGE=		https://ruby-gnome.github.io/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		4.2.2
+VERSION=		4.2.3
