@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/09/06 18:48:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/21 17:25:51 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	gce_metadata_server-3.0.0
-PKGREVISION=	6
+DISTNAME=	gce_metadata_server-3.91.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=salrashid123/}
 
@@ -11,7 +10,10 @@ HOMEPAGE=	https://github.com/salrashid123/gce_metadata_server/
 COMMENT=	Emulator for the Google Compute Engine Metadata Server
 LICENSE=	apache-2.0
 
-GO_BUILD_PATTERN=	.
+GO_BUILD_PATTERN=	./cmd
+
+do-install:
+	cd ${WRKDIR}/.gopath/bin && ${INSTALL_PROGRAM} cmd ${DESTDIR}${PREFIX}/bin/gce_metadata_server
 
 .include "go-modules.mk"
 
