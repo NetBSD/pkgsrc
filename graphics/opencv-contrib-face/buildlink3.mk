@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2024/05/29 16:35:18 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2024/09/21 10:24:29 wiz Exp $
 
 BUILDLINK_TREE+=	opencv-contrib-face
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opencv-contrib-face
 OPENCV_CONTRIB_FACE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencv-contrib-face+=	opencv-contrib-face>=3.0.0
-BUILDLINK_ABI_DEPENDS.opencv-contrib-face?=	opencv-contrib-face>=3.4.20nb3
+BUILDLINK_ABI_DEPENDS.opencv-contrib-face?=	opencv-contrib-face>=3.4.20nb4
 BUILDLINK_PKGSRCDIR.opencv-contrib-face?=	../../graphics/opencv-contrib-face
 
 .include "../../graphics/opencv/buildlink3.mk"
