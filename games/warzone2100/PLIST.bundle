@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.bundle,v 1.2 2024/01/21 08:02:00 triaxx Exp $
+@comment $NetBSD: PLIST.bundle,v 1.3 2024/09/21 20:24:43 triaxx Exp $
 Warzone 2100.app/Contents/Info.plist
 Warzone 2100.app/Contents/MacOS/Warzone 2100
 Warzone 2100.app/Contents/Resources/AUTHORS
@@ -110,25 +110,6 @@ Warzone 2100.app/Contents/Resources/docs/js-globals.md
 Warzone 2100.app/Contents/Resources/docs/js-objects.md
 Warzone 2100.app/Contents/Resources/docs/quickstartguide.html
 Warzone 2100.app/Contents/Resources/docs/warzone2100.6.html
-include/fmt/args.h
-include/fmt/chrono.h
-include/fmt/color.h
-include/fmt/compile.h
-include/fmt/core.h
-include/fmt/format-inl.h
-include/fmt/format.h
-include/fmt/os.h
-include/fmt/ostream.h
-include/fmt/printf.h
-include/fmt/ranges.h
-include/fmt/std.h
-include/fmt/xchar.h
-lib/cmake/fmt/fmt-config-version.cmake
-lib/cmake/fmt/fmt-config.cmake
-lib/cmake/fmt/fmt-targets-noconfig.cmake
-lib/cmake/fmt/fmt-targets.cmake
-lib/libfmt.a
-lib/pkgconfig/fmt.pc
 man/man6/warzone2100.6
 share/doc/warzone2100/AUTHORS
 share/doc/warzone2100/COPYING
@@ -192,13 +173,15 @@ share/doc/warzone2100/js-globals.md
 share/doc/warzone2100/js-objects.md
 share/doc/warzone2100/quickstartguide.html
 share/doc/warzone2100/warzone2100.6.html
-share/locale/af_ZA/LC_MESSAGES/warzone2100.mo
 share/locale/ar_SA/LC_MESSAGES/warzone2100.mo
 share/locale/bg_BG/LC_MESSAGES/warzone2100.mo
 share/locale/ca_ES/LC_MESSAGES/warzone2100.mo
+share/locale/ca_ES/LC_MESSAGES/warzone2100_guide.mo
 share/locale/cs/LC_MESSAGES/warzone2100.mo
+share/locale/cs/LC_MESSAGES/warzone2100_guide.mo
 share/locale/da/LC_MESSAGES/warzone2100.mo
 share/locale/de/LC_MESSAGES/warzone2100.mo
+share/locale/de/LC_MESSAGES/warzone2100_guide.mo
 share/locale/el/LC_MESSAGES/warzone2100.mo
 share/locale/en_GB/LC_MESSAGES/warzone2100.mo
 share/locale/eo/LC_MESSAGES/warzone2100.mo
@@ -207,13 +190,14 @@ share/locale/et_EE/LC_MESSAGES/warzone2100.mo
 share/locale/fa_IR/LC_MESSAGES/warzone2100.mo
 share/locale/fi/LC_MESSAGES/warzone2100.mo
 share/locale/fr/LC_MESSAGES/warzone2100.mo
+share/locale/fr/LC_MESSAGES/warzone2100_guide.mo
 share/locale/fy/LC_MESSAGES/warzone2100.mo
 share/locale/ga/LC_MESSAGES/warzone2100.mo
 share/locale/he_IL/LC_MESSAGES/warzone2100.mo
 share/locale/hr/LC_MESSAGES/warzone2100.mo
 share/locale/hu/LC_MESSAGES/warzone2100.mo
+share/locale/hu/LC_MESSAGES/warzone2100_guide.mo
 share/locale/id/LC_MESSAGES/warzone2100.mo
-share/locale/id_ID/LC_MESSAGES/warzone2100.mo
 share/locale/it/LC_MESSAGES/warzone2100.mo
 share/locale/ja_JP/LC_MESSAGES/warzone2100.mo
 share/locale/ko/LC_MESSAGES/warzone2100.mo
@@ -223,23 +207,32 @@ share/locale/my_MM/LC_MESSAGES/warzone2100.mo
 share/locale/nb/LC_MESSAGES/warzone2100.mo
 share/locale/nl/LC_MESSAGES/warzone2100.mo
 share/locale/pl/LC_MESSAGES/warzone2100.mo
+share/locale/pl/LC_MESSAGES/warzone2100_guide.mo
 share/locale/pt/LC_MESSAGES/warzone2100.mo
 share/locale/pt_BR/LC_MESSAGES/warzone2100.mo
+share/locale/pt_BR/LC_MESSAGES/warzone2100_guide.mo
 share/locale/ro/LC_MESSAGES/warzone2100.mo
 share/locale/ru/LC_MESSAGES/warzone2100.mo
+share/locale/ru/LC_MESSAGES/warzone2100_guide.mo
 share/locale/sk/LC_MESSAGES/warzone2100.mo
 share/locale/sl/LC_MESSAGES/warzone2100.mo
 share/locale/tr/LC_MESSAGES/warzone2100.mo
 share/locale/tt_RU/LC_MESSAGES/warzone2100.mo
 share/locale/uk_UA/LC_MESSAGES/warzone2100.mo
 share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
+share/locale/zh_CN/LC_MESSAGES/warzone2100_guide.mo
 share/locale/zh_TW/LC_MESSAGES/warzone2100.mo
+share/locale/zh_TW/LC_MESSAGES/warzone2100_guide.mo
+share/metainfo/net.wz2100.warzone2100.metainfo.xml
 share/warzone2100/base.wz
 share/warzone2100/fonts/DejaVu.LICENSE.txt
 share/warzone2100/fonts/DejaVuSans-Bold.ttf
 share/warzone2100/fonts/DejaVuSans.ttf
 share/warzone2100/fonts/Noto.LICENSE.txt
 share/warzone2100/fonts/NotoSansCJK-VF.otf.ttc
+share/warzone2100/mods/campaign/fractured_kingdom.wz
+share/warzone2100/mods/campaign/reclamation.wz
+share/warzone2100/mods/campaign/wz2100_camclassic.wz
 share/warzone2100/mp.wz
 share/warzone2100/music/albums/aftermath_soundtrack/album.json
 share/warzone2100/music/albums/aftermath_soundtrack/albumcover.png
