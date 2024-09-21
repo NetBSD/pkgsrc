@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.73 2023/07/17 22:00:25 nia Exp $
+# $NetBSD: Makefile,v 1.74 2024/09/21 13:28:43 gdt Exp $
 
 DISTNAME=	xephem-3.7.7
-PKGREVISION=	6
 CATEGORIES=	x11
+# New MASTER_SITES is:
+# https://github.com/XEphem/XEphem/archive/refs/tags/4.2.0.tar.gz
 MASTER_SITES=	http://97.74.56.125/free/
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	https://www.clearskyinstitute.com/xephem/
+HOMEPAGE=	https://www.clearskyinstitute.com/
+#HOMEPAGE+=	https://github.com/XEphem/XEphem
 COMMENT=	Interactive astronomical ephemeris program
+# 4.2.0 appears to be mit-license
 LICENSE=	xephem-license
 
 # Pending adjustment of license wording to clarify the copyright
