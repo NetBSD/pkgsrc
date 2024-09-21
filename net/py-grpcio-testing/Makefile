@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2024/08/19 21:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/09/21 10:57:42 wiz Exp $
 
-DISTNAME=	grpcio_testing-1.65.5
+DISTNAME=	grpcio_testing-1.66.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-testing/}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=5.26.1:../../devel/py-protobuf
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
