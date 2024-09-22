@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/06/26 16:53:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/09/22 16:23:49 wiz Exp $
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
@@ -133,4 +133,5 @@ ${PYSITELIB}/pdm/backend/wheel.pyo
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
