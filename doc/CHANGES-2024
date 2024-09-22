@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5863 2024/09/22 15:42:45 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5864 2024/09/22 15:45:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8970,3 +8970,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-anyio to 4.6.0 [wiz 2024-09-22]
 	Updated devel/py-astroid to 3.3.3 [wiz 2024-09-22]
 	Updated devel/py-configobj to 5.0.9 [wiz 2024-09-22]
+	Updated security/py-cyclonedx-python-lib to 7.6.1 [wiz 2024-09-22]
