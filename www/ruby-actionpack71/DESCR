@@ -11,7 +11,6 @@ It consists of several modules:
   routing as defined by the user, and does advanced processing related to
   HTTP such as MIME-type negotiation, decoding parameters in POST, PATCH,
   or PUT bodies, handling HTTP caching logic, cookies and sessions.
-
 * Action Controller, which provides a base controller class that can be
   subclassed to implement filters and actions to handle requests.
   The result of an action is typically content generated from views.
