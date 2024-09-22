@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/08/29 08:08:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/09/22 16:54:20 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -79,6 +79,9 @@ ${PYSITELIB}/websockets/legacy/auth.pyo
 ${PYSITELIB}/websockets/legacy/client.py
 ${PYSITELIB}/websockets/legacy/client.pyc
 ${PYSITELIB}/websockets/legacy/client.pyo
+${PYSITELIB}/websockets/legacy/exceptions.py
+${PYSITELIB}/websockets/legacy/exceptions.pyc
+${PYSITELIB}/websockets/legacy/exceptions.pyo
 ${PYSITELIB}/websockets/legacy/framing.py
 ${PYSITELIB}/websockets/legacy/framing.pyc
 ${PYSITELIB}/websockets/legacy/framing.pyo
