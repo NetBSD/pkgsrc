@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/09/10 20:08:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2024/09/22 18:22:49 schmonz Exp $
 
-DISTNAME=		fehQlibs-25a
+DISTNAME=		fehQlibs-25b
 PKGNAME=		${DISTNAME:S/Qlibs-/qlibs-/}
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/fehQlibs/
@@ -11,7 +11,7 @@ HOMEPAGE=		https://www.fehcom.de/ipnet/qlibs.html
 COMMENT=		State-of-the-art C routines for Internet services
 LICENSE=		public-domain
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/a$//}
+WRKSRC=			${WRKDIR}/${DISTNAME:C/b$//}
 
 MAKE_JOBS_SAFE=		no
 USE_LIBTOOL=		yes
