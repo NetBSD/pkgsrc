@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/04 15:15:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/09/22 13:24:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/app/javascript/activestorage/ujs.js
 ${GEM_LIBDIR}/app/jobs/active_storage/analyze_job.rb
 ${GEM_LIBDIR}/app/jobs/active_storage/base_job.rb
 ${GEM_LIBDIR}/app/jobs/active_storage/mirror_job.rb
+${GEM_LIBDIR}/app/jobs/active_storage/preview_image_job.rb
 ${GEM_LIBDIR}/app/jobs/active_storage/purge_job.rb
 ${GEM_LIBDIR}/app/jobs/active_storage/transform_job.rb
 ${GEM_LIBDIR}/app/models/active_storage/attachment.rb
