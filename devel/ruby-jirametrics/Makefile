@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/08/19 21:56:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/22 18:11:20 schmonz Exp $
 
-DISTNAME=	jirametrics-2.4
+DISTNAME=	jirametrics-2.5
 CATEGORIES=	devel
 
 MAINTAINER=	schmonz@NetBSD.org
