@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5827 2024/09/22 12:37:53 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5828 2024/09/22 12:39:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8938,3 +8938,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/lldpd to 1.0.18 [wiz 2024-09-22]
 	Updated www/ruby-mechanize to 2.12.1 [taca 2024-09-22]
 	Updated www/ruby-puma to 6.4.3 [taca 2024-09-22]
+	Updated www/ruby-rouge to 4.4.0 [taca 2024-09-22]
