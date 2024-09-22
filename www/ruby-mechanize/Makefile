@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/07/20 15:44:14 taca Exp $
+# $NetBSD: Makefile,v 1.29 2024/09/22 12:34:02 taca Exp $
 
-DISTNAME=	mechanize-2.11.0
+DISTNAME=	mechanize-2.12.1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
