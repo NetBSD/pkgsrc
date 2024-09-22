@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/02/24 23:43:28 mef Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/22 23:44:34 mef Exp $
 
 R_PKGNAME=	callr
-R_PKGVER=	3.7.5
+R_PKGVER=	3.7.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
