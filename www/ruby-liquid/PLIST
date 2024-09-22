@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2020/03/21 16:59:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/09/22 16:03:51 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/LICENSE
@@ -49,7 +49,6 @@ ${GEM_LIBDIR}/lib/liquid/tags/table_row.rb
 ${GEM_LIBDIR}/lib/liquid/tags/unless.rb
 ${GEM_LIBDIR}/lib/liquid/template.rb
 ${GEM_LIBDIR}/lib/liquid/tokenizer.rb
-${GEM_LIBDIR}/lib/liquid/truffle.rb
 ${GEM_LIBDIR}/lib/liquid/utils.rb
 ${GEM_LIBDIR}/lib/liquid/variable.rb
 ${GEM_LIBDIR}/lib/liquid/variable_lookup.rb
@@ -86,7 +85,6 @@ ${GEM_LIBDIR}/test/integration/template_test.rb
 ${GEM_LIBDIR}/test/integration/trim_mode_test.rb
 ${GEM_LIBDIR}/test/integration/variable_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/truffle/truffle_test.rb
 ${GEM_LIBDIR}/test/unit/block_unit_test.rb
 ${GEM_LIBDIR}/test/unit/condition_unit_test.rb
 ${GEM_LIBDIR}/test/unit/context_unit_test.rb

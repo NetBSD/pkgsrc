@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/01/21 09:07:55 taca Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/22 16:03:51 taca Exp $
 
-DISTNAME=	liquid-4.0.3
+DISTNAME=	liquid-4.0.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
