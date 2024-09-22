@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2024/09/19 21:04:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/22 13:29:38 pin Exp $
 
 DISTNAME=	pueue-3.4.1
 CATEGORIES=	sysutils
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=Nukesor/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Nukesor/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=0323pin/}
-GITHUB_TAG=	ddd925165d6f230c742854b43ec71f1d78acb559
+GITHUB_TAG=	7beda35b14d0b45e24669c0bd94a4f967aa1d54d
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Nukesor/pueue/
