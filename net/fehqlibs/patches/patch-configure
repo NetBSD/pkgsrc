@@ -1,9 +1,18 @@
-$NetBSD: patch-configure,v 1.1 2024/04/15 16:24:52 schmonz Exp $
+$NetBSD: patch-configure,v 1.2 2024/09/22 18:22:49 schmonz Exp $
 
 Libtoolize for portable shared libraries.
 
---- configure.orig	2021-09-22 09:36:02.000000000 +0000
+--- configure.orig	2024-09-19 18:58:51.000000000 +0000
 +++ configure
+@@ -2,7 +2,7 @@
+ #********************************************************************************
+ # Very simple configure script for qlibs
+ 
+-. ../conf-build
++. ./conf-build
+ # Add $HDRDIR as include option to default $CFLAGS
+ [ "$HDRDIR" ] && CFLAGS="$CFLAGS -I$HDRDIR"
+ 
 @@ -47,23 +47,20 @@ echo " found!"
  echo -n "Checking for compile ... "
  CC="cc"
