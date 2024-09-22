@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/01/09 07:30:42 taca Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/22 08:14:12 taca Exp $
 
-DISTNAME=	faraday-net_http-1.0.1
+DISTNAME=	faraday-net_http-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/net_http/&1/}
 CATEGORIES=	www
 
