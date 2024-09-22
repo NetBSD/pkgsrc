@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5802 2024/09/22 07:10:46 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5803 2024/09/22 07:11:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8913,3 +8913,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-sanitize to 6.1.3 [taca 2024-09-22]
 	Updated security/p5-Module-Signature to 0.89 [wiz 2024-09-22]
 	Updated net/p5-Net-DNS to 1.47 [wiz 2024-09-22]
+	Updated devel/p5-Scalar-List-Utils to 1.66 [wiz 2024-09-22]
