@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5791 2024/09/22 06:11:21 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5792 2024/09/22 06:21:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8902,3 +8902,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/ruby-train-core to 3.12.7 [taca 2024-09-22]
 	Updated net/ruby-winrm to 2.3.9 [taca 2024-09-22]
 	Updated security/ruby-airbrussh to 1.5.3 [taca 2024-09-22]
+	Updated security/ruby-metasploit-payloads to 2.0.172 [taca 2024-09-22]
