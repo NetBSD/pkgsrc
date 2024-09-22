@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2023/01/09 12:50:54 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/22 08:15:50 taca Exp $
 
-DISTNAME=	faraday-net_http_persistent-2.1.0
+DISTNAME=	faraday-net_http_persistent-2.2.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +9,7 @@ COMMENT=	Faraday adapter for NetHttpPersistent
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-faraday>=2.5<3:../../www/ruby-faraday
-DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=4.0<5:../../www/ruby-net-http-persistent
+DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=4.0.4<5:../../www/ruby-net-http-persistent
 
 USE_LANGUAGES=	# none
 
