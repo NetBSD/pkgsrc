@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5825 2024/09/22 10:35:25 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5826 2024/09/22 12:34:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8936,3 +8936,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-http-cookie to 1.0.7 [taca 2024-09-22]
 	Updated www/ruby-net-http-persistent to 4.0.4 [taca 2024-09-22]
 	Updated net/lldpd to 1.0.18 [wiz 2024-09-22]
+	Updated www/ruby-mechanize to 2.12.1 [taca 2024-09-22]
