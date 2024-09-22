@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/12/17 16:02:18 taca Exp $
+$NetBSD: distinfo,v 1.3 2024/09/22 07:39:59 taca Exp $
 
-BLAKE2s (unicode-scripts-1.9.0.gem) = 0098b6549fc972f67b4c7b82191cea3fcd08848a2ecec695f6a7dccbc5bcda37
-SHA512 (unicode-scripts-1.9.0.gem) = 2f2a7b76ff3dcedd37974265f201d01a9b72a16396676e32ac05accf2b09dd3c9000133ed8a13fda044aad179a5cbd7f03dfd8f247c337f88bd1b303599bf519
-Size (unicode-scripts-1.9.0.gem) = 19968 bytes
+BLAKE2s (unicode-scripts-1.10.0.gem) = c51943fac15cfe742145e333410bb41f38b14785f5673d185d7e4a1c1ca230dd
+SHA512 (unicode-scripts-1.10.0.gem) = 1ef85a1eb462c8543ed44dfe6c88ee861b7dba5bb824064b7434e739666b0f24bd7001cdb8fdde4fa8043a6e2d0d2d48ec3d2353b1f3eb89a6a723c62e4fc3f4
+Size (unicode-scripts-1.10.0.gem) = 20992 bytes
