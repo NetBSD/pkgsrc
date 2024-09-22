@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/04/30 13:51:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/09/22 07:42:53 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -145,6 +145,7 @@ ${GEM_LIBDIR}/lib/yard/i18n/po_parser.rb
 ${GEM_LIBDIR}/lib/yard/i18n/pot_generator.rb
 ${GEM_LIBDIR}/lib/yard/i18n/text.rb
 ${GEM_LIBDIR}/lib/yard/logging.rb
+${GEM_LIBDIR}/lib/yard/open_struct.rb
 ${GEM_LIBDIR}/lib/yard/options.rb
 ${GEM_LIBDIR}/lib/yard/parser/base.rb
 ${GEM_LIBDIR}/lib/yard/parser/c/c_parser.rb
