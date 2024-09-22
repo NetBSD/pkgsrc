@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/07/14 07:52:34 taca Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/22 06:07:58 taca Exp $
 
-DISTNAME=	winrm-2.3.8
+DISTNAME=	winrm-2.3.9
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
