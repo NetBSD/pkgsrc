@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/09/22 13:42:25 taca Exp $
+$NetBSD: distinfo,v 1.17 2024/09/22 14:09:13 taca Exp $
 
-BLAKE2s (cucumber-messages-25.0.1.gem) = ac8fbcfcbab2a5d59113e1ff08e3e942d8e3d026dbf2e46a89a1f8f429ceffe1
-SHA512 (cucumber-messages-25.0.1.gem) = 82b72fd066a5ede68d78ed630a62e7405ba59d73ed39825af38e8ab4adecdfbe953417a156773972e3787ad09127180222b73c971351e5e4641771657395ca2e
-Size (cucumber-messages-25.0.1.gem) = 20480 bytes
+BLAKE2s (cucumber-messages-22.0.0.gem) = be9513581a195ebb6a0bb3a7abb4df6795e0d85eb7a80de8ef46f50e2999a783
+SHA512 (cucumber-messages-22.0.0.gem) = 6b62684b4f4aaa884801c47491a7cb24dd4686ca8080b8dad8b7cf0750794ba6e565af908b7c1068c39b83c35698a24ed0a168446675906afc0dd68151e1e676
+Size (cucumber-messages-22.0.0.gem) = 22016 bytes
