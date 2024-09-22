@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5817 2024/09/22 08:00:52 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5818 2024/09/22 08:01:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8928,3 +8928,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-aws-sdk-s3 to 1.164.0 [taca 2024-09-22]
 	Updated www/ruby-css-parser to 1.19.0 [taca 2024-09-22]
 	Updated www/ruby-faraday to 2.12.0 [taca 2024-09-22]
+	Updated www/ruby-faraday1 to 1.10.4 [taca 2024-09-22]
