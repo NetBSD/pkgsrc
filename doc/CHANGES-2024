@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5833 2024/09/22 13:19:13 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5834 2024/09/22 13:20:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8944,3 +8944,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-jekyll-minima to 2.5.2 [taca 2024-09-22]
 	Updated devel/ruby-activesupport71 to 7.1.4 [taca 2024-09-22]
 	Updated devel/ruby-activemodel71 to 7.1.4 [taca 2024-09-22]
+	Updated devel/ruby-activejob71 to 7.1.4 [taca 2024-09-22]
