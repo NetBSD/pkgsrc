@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5860 2024/09/22 15:26:17 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5861 2024/09/22 15:38:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8967,3 +8967,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/ghostscript-cidfonts-ryumin to 10.04.0 [wiz 2024-09-22]
 	Updated geography/qgis to 3.34.11 [gdt 2024-09-22]
 	Updated devel/meson to 1.5.2 [wiz 2024-09-22]
+	Updated devel/py-anyio to 4.6.0 [wiz 2024-09-22]
