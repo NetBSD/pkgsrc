@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/06/11 15:08:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/09/22 06:00:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -222,6 +222,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/winreg/set_key_security_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_user_enum_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_user_enum_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dialect.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dispatcher.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dispatcher/base.rb
@@ -592,6 +594,9 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/winreg/save_key_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/winreg_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_get_info_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_identity_handle.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_user_enum_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc/netr_wksta_user_enum_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/wkssvc_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dispatcher/base_spec.rb
