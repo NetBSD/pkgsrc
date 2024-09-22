@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2024/05/05 10:39:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/09/22 15:46:42 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
+${PYSITELIB}/google/api_core/_rest_streaming_base.py
+${PYSITELIB}/google/api_core/_rest_streaming_base.pyc
+${PYSITELIB}/google/api_core/_rest_streaming_base.pyo
 ${PYSITELIB}/google/api_core/bidi.py
 ${PYSITELIB}/google/api_core/bidi.pyc
 ${PYSITELIB}/google/api_core/bidi.pyo
@@ -120,6 +123,9 @@ ${PYSITELIB}/google/api_core/rest_helpers.pyo
 ${PYSITELIB}/google/api_core/rest_streaming.py
 ${PYSITELIB}/google/api_core/rest_streaming.pyc
 ${PYSITELIB}/google/api_core/rest_streaming.pyo
+${PYSITELIB}/google/api_core/rest_streaming_async.py
+${PYSITELIB}/google/api_core/rest_streaming_async.pyc
+${PYSITELIB}/google/api_core/rest_streaming_async.pyo
 ${PYSITELIB}/google/api_core/retry/__init__.py
 ${PYSITELIB}/google/api_core/retry/__init__.pyc
 ${PYSITELIB}/google/api_core/retry/__init__.pyo
