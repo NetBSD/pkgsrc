@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24881 2024/09/22 16:19:58 wiz Exp $
+$NetBSD: TODO,v 1.24882 2024/09/22 16:23:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
-	o py-pdm_backend-2.4.1
 	o py-postgresql-5.1.2
 	o py-prometheus_client-0.21.0
 	o py-pydantic-core-2.24.0
