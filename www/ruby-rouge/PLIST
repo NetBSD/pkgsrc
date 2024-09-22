@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/06/15 16:46:32 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2024/09/22 12:39:12 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -132,6 +132,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/mathematica
 ${GEM_LIBDIR}/lib/rouge/demos/matlab
 ${GEM_LIBDIR}/lib/rouge/demos/meson
 ${GEM_LIBDIR}/lib/rouge/demos/minizinc
+${GEM_LIBDIR}/lib/rouge/demos/mojo
 ${GEM_LIBDIR}/lib/rouge/demos/moonscript
 ${GEM_LIBDIR}/lib/rouge/demos/mosel
 ${GEM_LIBDIR}/lib/rouge/demos/msgtrans
@@ -148,6 +149,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/ocaml
 ${GEM_LIBDIR}/lib/rouge/demos/ocl
 ${GEM_LIBDIR}/lib/rouge/demos/openedge
 ${GEM_LIBDIR}/lib/rouge/demos/opentype_feature_file
+${GEM_LIBDIR}/lib/rouge/demos/p4
 ${GEM_LIBDIR}/lib/rouge/demos/pascal
 ${GEM_LIBDIR}/lib/rouge/demos/perl
 ${GEM_LIBDIR}/lib/rouge/demos/php
@@ -383,6 +385,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/matlab/builtins.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/matlab/keywords.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/meson.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/minizinc.rb
+${GEM_LIBDIR}/lib/rouge/lexers/mojo.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/moonscript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/mosel.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/msgtrans.rb
@@ -401,6 +404,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/ocaml/common.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/ocl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/openedge.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/opentype_feature_file.rb
+${GEM_LIBDIR}/lib/rouge/lexers/p4.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/pascal.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/perl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/php.rb
