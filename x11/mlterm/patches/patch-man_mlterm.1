@@ -1,0 +1,21 @@
+$NetBSD: patch-man_mlterm.1,v 1.1 2024/09/22 21:40:32 tsutsui Exp $
+
+- pull upstream fixes to support backward search
+  https://github.com/arakiken/mlterm/commit/64552b10
+  > * ui_copymode.[ch], ui_screen.c:
+  >   Pressing '?' in copy mode searchs for a string backward.
+
+--- man/mlterm.1.orig	2023-04-01 13:54:40.000000000 +0000
++++ man/mlterm.1
+@@ -1400,7 +1400,10 @@ Scroll up one page.
+ Scroll down one page.
+ .TP
+ \fB/\fR
+-Input search string.
++Input search string. (forward)
++.TP
++\fB?\fR
++Input search string. (backward)
+ .TP
+ \fBControl+g\fR
+ Cancel search string.

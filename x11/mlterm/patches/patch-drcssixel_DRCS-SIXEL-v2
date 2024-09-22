@@ -1,0 +1,17 @@
+$NetBSD: patch-drcssixel_DRCS-SIXEL-v2,v 1.1 2024/09/22 21:40:32 tsutsui Exp $
+
+- pull upstream transparent fixes:
+  https://github.com/arakiken/mlterm/commit/51232032
+
+--- drcssixel/DRCS-SIXEL-v2.orig	2023-04-01 13:54:40.000000000 +0000
++++ drcssixel/DRCS-SIXEL-v2
+@@ -19,6 +19,9 @@ from the top-left corner cell.
+  which consists of 96 characters is next to 0x7f of 0x7e set which
+  consists of 94 characters.
+ 
++(*3) P2=1 (Pixel positions specified as 0 remain at their current color) is
++ not supported for now.
++
+ [Appendix]
+ <Original DRCS-SIXEL (rlogin 2.23.0 or before)>
+ o The number of columns and rows of sixel graphic image are calculated
