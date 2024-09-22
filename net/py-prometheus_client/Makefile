@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/02/14 21:52:10 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/09/22 16:25:28 wiz Exp $
 
-DISTNAME=	prometheus_client-0.20.0
+DISTNAME=	prometheus_client-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prometheus_client/}
@@ -15,7 +15,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# 16 due to network access
+# 16 failed, 284 passed, 9 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
