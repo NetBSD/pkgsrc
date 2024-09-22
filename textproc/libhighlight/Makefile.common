@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.32 2024/08/16 15:27:59 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.33 2024/09/22 18:58:12 schmonz Exp $
 # used by textproc/highlight/Makefile
 # used by textproc/libhighlight/Makefile
 # used by textproc/p5-highlight/Makefile
 
 DISTNAME=		highlight-${VERSION}
-VERSION=		4.13
+VERSION=		4.14
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,8 +16,8 @@ LICENSE=		gnu-gpl-v3
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
-FORCE_CXX_STD=		c++17
 USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
 USE_LIBTOOL=		yes
 MAKE_FILE=		makefile
 
