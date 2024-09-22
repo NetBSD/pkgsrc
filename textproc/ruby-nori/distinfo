@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/02/19 15:19:58 taca Exp $
+$NetBSD: distinfo,v 1.5 2024/09/22 06:47:30 taca Exp $
 
-BLAKE2s (nori-2.7.0.gem) = 6ba84b996bcf6ccb2a7202ac2aec688e7df170b7927e22a0acd35aa313ab7b13
-SHA512 (nori-2.7.0.gem) = b5330be1bdb85d0c362ac58c5a3863d7bda121ddb345d26c43ecf4516b5204ea27e38ecd9151f55d1664ddac6f9f45a2ecb4bf9a57911e637e0ad7b419b41e04
-Size (nori-2.7.0.gem) = 24064 bytes
+BLAKE2s (nori-2.7.1.gem) = 9858d0a65de74f9255db146eb2fe961ee569571953ad8cff895be8e808fb22f3
+SHA512 (nori-2.7.1.gem) = e42de719a53886bc06f45199a516830985fa135946d30f7dfab17ddefbb72d2a86a95cca7692878c74e90986ddfb9c9ed50981981b42eca73fc0913a0309cf85
+Size (nori-2.7.1.gem) = 24064 bytes
