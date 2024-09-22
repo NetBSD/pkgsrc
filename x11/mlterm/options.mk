@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2024/02/10 12:41:35 ryoon Exp $
+# $NetBSD: options.mk,v 1.25 2024/09/22 21:40:32 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 gtk ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2 debug
@@ -58,6 +58,8 @@ CONFIGURE_ARGS+=	--disable-fribidi
 CONFIGURE_ARGS+=	--with-imagelib=gdk-pixbuf
 PLIST.gdk_pixbuf2=	yes
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.else
+.include "../../graphics/png/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)

@@ -1,0 +1,31 @@
+$NetBSD: patch-doc_ja_README.ja,v 1.1 2024/09/22 21:40:32 tsutsui Exp $
+
+- pull upstream fixes to use libpng if gdk-pixbuf is not used.
+  https://github.com/arakiken/mlterm/commit/0af65caa
+  > * README, doc/ja/README.ja: Updated.
+  > * uitoolkit/ui_copymode.c: Replace the first character of input text
+  >   by '/' or '?' in starting the copy mode every time.
+  > * configure.in: Check libpng if gdk-pixbuf is not found.
+  > * tool/mlimgloader/libpng.c, stb_image_resize2.h: Added.
+
+--- doc/ja/README.ja.orig	2023-04-01 13:54:40.000000000 +0000
++++ doc/ja/README.ja
+@@ -28,7 +28,7 @@ comment -*- mode: text; tab-width:2; ind
+   o 壁紙、背景透過
+     壁紙を貼ったり背景を擬似的に透過させることができます。
+ 
+-    壁紙を貼るには、gdk-pixbuf (GTK+ 2.x 以上) が必要です。
++    壁紙を貼るには、gdk-pixbuf (GTK+ 2.x 以上) 又は libpng (1.6 以上) が必要です。
+ 
+   o マルチPTY
+     単一プロセス中から、--maxptys オプションで指定した上限数(デフォルトでは 32)
+@@ -1673,7 +1673,8 @@ comment -*- mode: text; tab-width:2; ind
+     h/左                            ... 左移動
+     u/PageUP                        ... ページアップ
+     d/PageDown                      ... ページダウン
+-    /                               ... 検索文字列の入力
++    /                               ... 検索文字列の入力(前方検索)
++    ?                               ... 検索文字列の入力(後方検索)
+     Control+g                       ... 検索文字列の入力の中止
+     Space, Return                   ... 領域選択開始、終了
+     Mod(Alt)+Space, Mod(Alt)+Return ... 矩形領域選択開始

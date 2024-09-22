@@ -1,10 +1,127 @@
-$NetBSD: patch-configure,v 1.21 2023/04/04 16:53:34 tsutsui Exp $
+$NetBSD: patch-configure,v 1.22 2024/09/22 21:40:32 tsutsui Exp $
 
 - setuid root / setgid utmp is handled by SPECIAL_PERMS in pkgsrc
 
+- pull upstream fixes to use libpng if gdk-pixbuf is not used.
+  https://github.com/arakiken/mlterm/commit/0af65caa
+  > * README, doc/ja/README.ja: Updated.
+  > * uitoolkit/ui_copymode.c: Replace the first character of input text
+  >   by '/' or '?' in starting the copy mode every time.
+  > * configure.in: Check libpng if gdk-pixbuf is not found.
+  > * tool/mlimgloader/libpng.c, stb_image_resize2.h: Added.
+
 --- configure.orig	2023-04-01 13:54:40.000000000 +0000
 +++ configure
-@@ -28244,16 +28246,16 @@ if test "$INSTALL_OPT" = ""; then
+@@ -700,6 +700,8 @@ SDL_CFLAGS
+ EMOJI_LIBS
+ EMOJI_CFLAGS
+ MLIMGLOADER_LIB
++LIBPNG_LIBS
++LIBPNG_CFLAGS
+ PERL
+ GTK_LIBS_FOR_MLCONFIG
+ GTK_CFLAGS_FOR_MLCONFIG
+@@ -1055,6 +1057,8 @@ PROTOBUF_CFLAGS
+ PROTOBUF_LIBS
+ VTE_CFLAGS
+ VTE_LIBS
++LIBPNG_CFLAGS
++LIBPNG_LIBS
+ SDL_CFLAGS
+ SDL_LIBS
+ SDLTTF_CFLAGS
+@@ -1829,6 +1833,9 @@ Some influential environment variables:
+               linker flags for PROTOBUF, overriding pkg-config
+   VTE_CFLAGS  C compiler flags for VTE, overriding pkg-config
+   VTE_LIBS    linker flags for VTE, overriding pkg-config
++  LIBPNG_CFLAGS
++              C compiler flags for LIBPNG, overriding pkg-config
++  LIBPNG_LIBS linker flags for LIBPNG, overriding pkg-config
+   SDL_CFLAGS  C compiler flags for SDL, overriding pkg-config
+   SDL_LIBS    linker flags for SDL, overriding pkg-config
+   SDLTTF_CFLAGS
+@@ -21720,7 +21727,79 @@ rm -f core conftest.err conftest.$ac_obj
+ 		elif test "$have_gdk_pixbuf2" = "yes" -o "$have_gdk_pixbuf1" = "yes" ; then
+ 			MLIMGLOADER_LIB=gdk-pixbuf
+ 		else
+-			MLIMGLOADER_LIB=none
++
++pkg_failed=no
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBPNG" >&5
++$as_echo_n "checking for LIBPNG... " >&6; }
++
++if test -n "$LIBPNG_CFLAGS"; then
++    pkg_cv_LIBPNG_CFLAGS="$LIBPNG_CFLAGS"
++ elif test -n "$PKG_CONFIG"; then
++    if test -n "$PKG_CONFIG" && \
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libpng\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libpng") 2>&5
++  ac_status=$?
++  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
++  test $ac_status = 0; }; then
++  pkg_cv_LIBPNG_CFLAGS=`$PKG_CONFIG --cflags "libpng" 2>/dev/null`
++		      test "x$?" != "x0" && pkg_failed=yes
++else
++  pkg_failed=yes
++fi
++ else
++    pkg_failed=untried
++fi
++if test -n "$LIBPNG_LIBS"; then
++    pkg_cv_LIBPNG_LIBS="$LIBPNG_LIBS"
++ elif test -n "$PKG_CONFIG"; then
++    if test -n "$PKG_CONFIG" && \
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libpng\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libpng") 2>&5
++  ac_status=$?
++  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
++  test $ac_status = 0; }; then
++  pkg_cv_LIBPNG_LIBS=`$PKG_CONFIG --libs "libpng" 2>/dev/null`
++		      test "x$?" != "x0" && pkg_failed=yes
++else
++  pkg_failed=yes
++fi
++ else
++    pkg_failed=untried
++fi
++
++
++
++if test $pkg_failed = yes; then
++   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++
++if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
++        _pkg_short_errors_supported=yes
++else
++        _pkg_short_errors_supported=no
++fi
++        if test $_pkg_short_errors_supported = yes; then
++	        LIBPNG_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libpng" 2>&1`
++        else
++	        LIBPNG_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libpng" 2>&1`
++        fi
++	# Put the nasty error message in config.log where it belongs
++	echo "$LIBPNG_PKG_ERRORS" >&5
++
++	MLIMGLOADER_LIB=none
++elif test $pkg_failed = untried; then
++     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++	MLIMGLOADER_LIB=none
++else
++	LIBPNG_CFLAGS=$pkg_cv_LIBPNG_CFLAGS
++	LIBPNG_LIBS=$pkg_cv_LIBPNG_LIBS
++        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++	MLIMGLOADER_LIB=libpng
++fi
++
++
+ 		fi
+ 
+ 
+@@ -28244,16 +28323,16 @@ if test "$INSTALL_OPT" = ""; then
  	if test "$utmp_suid" = "yes" -a "$UTMP_NAME" != "none" -a "$gui" != "quartz"; then
  		has_utmp=`grep utmp /etc/group 2>/dev/null`
  		if test "$has_utmp" ; then
