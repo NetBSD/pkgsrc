@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/05/12 16:28:27 taca Exp $
+# $NetBSD: Makefile,v 1.30 2024/09/22 07:54:34 taca Exp $
 
-DISTNAME=	css_parser-1.17.1
+DISTNAME=	css_parser-1.19.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www
 
