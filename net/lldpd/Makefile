@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.47 2024/05/29 16:33:58 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/09/22 10:35:16 wiz Exp $
 
-DISTNAME=		lldpd-1.0.13
-PKGREVISION=		10
+DISTNAME=		lldpd-1.0.18
 CATEGORIES=		net
-MASTER_SITES=		http://media.luffy.cx/files/lldpd/
+MASTER_SITES=		https://media.luffy.cx/files/lldpd/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://vincentbernat.github.com/lldpd/
+HOMEPAGE=		https://lldpd.github.io/
 COMMENT=		802.1ab (LLDP) implementation
 LICENSE=		isc
-
-# interfaces-bsd.c:45:34: error: net/agr/if_agrioctl.h: No such file or directory
-NOT_FOR_PLATFORM=	NetBSD-5.*-*
 
 USE_TOOLS+=		pkg-config
 
@@ -78,5 +74,4 @@ post-install:
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.5
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
