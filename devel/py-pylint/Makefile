@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2024/09/02 07:59:15 adam Exp $
+# $NetBSD: Makefile,v 1.103 2024/09/22 16:39:11 wiz Exp $
 
-DISTNAME=	pylint-3.2.7
+DISTNAME=	pylint-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
@@ -22,6 +22,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-gitpython>=0:../../devel/py-gitpython
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark>=0:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
+
+# as of 3.3.0
+# 11 failed, 1879 passed, 272 skipped, 5 xfailed
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
