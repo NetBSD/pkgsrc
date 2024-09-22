@@ -1,25 +1,23 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/05 16:55:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/09/22 14:46:34 taca Exp $
 bin/term_cdiff${RUBY_SUFFIX}
 bin/term_colortab${RUBY_SUFFIX}
 bin/term_decolor${RUBY_SUFFIX}
 bin/term_display${RUBY_SUFFIX}
 bin/term_mandel${RUBY_SUFFIX}
+bin/term_plasma${RUBY_SUFFIX}
 bin/term_snow${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.all_images.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.tool-versions
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/bin/term_cdiff
 ${GEM_LIBDIR}/bin/term_colortab
 ${GEM_LIBDIR}/bin/term_decolor
 ${GEM_LIBDIR}/bin/term_display
 ${GEM_LIBDIR}/bin/term_mandel
+${GEM_LIBDIR}/bin/term_plasma
 ${GEM_LIBDIR}/bin/term_snow
 ${GEM_LIBDIR}/examples/example.rb
 ${GEM_LIBDIR}/examples/lambda-red-plain.ppm
@@ -32,6 +30,7 @@ ${GEM_LIBDIR}/lib/term/ansicolor/attribute/color256.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/attribute/color8.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/attribute/intense_color8.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/attribute/text.rb
+${GEM_LIBDIR}/lib/term/ansicolor/attribute/underline.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/hsl_triple.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/hyperlink.rb
 ${GEM_LIBDIR}/lib/term/ansicolor/movement.rb

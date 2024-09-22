@@ -3,4 +3,5 @@ bin/term_colortab @PREFIX@/bin/term_colortab@RUBY_SUFFIX@
 bin/term_decolor @PREFIX@/bin/term_decolor@RUBY_SUFFIX@
 bin/term_display @PREFIX@/bin/term_display@RUBY_SUFFIX@
 bin/term_mandel @PREFIX@/bin/term_mandel@RUBY_SUFFIX@
+bin/term_plasma @PREFIX@/bin/term_plasma@RUBY_SUFFIX@
 bin/term_snow @PREFIX@/bin/term_snow@RUBY_SUFFIX@
