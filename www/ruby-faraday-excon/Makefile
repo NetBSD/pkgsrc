@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2023/01/09 12:44:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/09/22 08:08:46 taca Exp $
 
-DISTNAME=	faraday-excon-2.1.0
+DISTNAME=	faraday-excon-2.2.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/lostisland/faraday-excon
+HOMEPAGE=	https://github.com/excon/faraday-excon
 COMMENT=	Faraday adapter for Excon
 LICENSE=	mit
 
