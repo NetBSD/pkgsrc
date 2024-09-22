@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/06/27 16:03:24 osa Exp $
+# $NetBSD: Makefile,v 1.11 2024/09/22 03:02:36 osa Exp $
 
 DISTNAME=	njs-0.8.5
+PKGREVISION=	1
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
@@ -19,7 +20,7 @@ INSTALLATION_DIRS=	include lib/pkgconfig
 SUBST_CLASSES+=		fix-pc
 SUBST_STAGE.fix-pc=	pre-configure
 SUBST_MESSAGE.fix-pc=	Fix NJS pkg-config
-SUBST_FILES.fix-pc=	auto/make
+SUBST_FILES.fix-pc=	src/njs.pc.in
 SUBST_NOOP_OK.fix-pc=	yes
 SUBST_SED.fix-pc=	-e 's|%%LOCALBASE%%|${LOCALBASE}|'
 
