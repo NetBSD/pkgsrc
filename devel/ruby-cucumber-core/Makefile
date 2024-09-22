@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/03/24 13:43:38 taca Exp $
+# $NetBSD: Makefile,v 1.19 2024/09/22 14:16:03 taca Exp $
 
-DISTNAME=	cucumber-core-13.0.2
+DISTNAME=	cucumber-core-13.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
