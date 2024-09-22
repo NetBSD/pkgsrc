@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.in,v 1.3 2024/09/22 21:40:32 tsutsui Exp $
+
+- pull upstream fixes to use libpng if gdk-pixbuf is not used.
+  https://github.com/arakiken/mlterm/commit/0af65caa
+  > * README, doc/ja/README.ja: Updated.
+  > * uitoolkit/ui_copymode.c: Replace the first character of input text
+  >   by '/' or '?' in starting the copy mode every time.
+  > * configure.in: Check libpng if gdk-pixbuf is not found.
+  > * tool/mlimgloader/libpng.c, stb_image_resize2.h: Added.
+
+--- configure.in.orig	2023-04-01 13:54:40.000000000 +0000
++++ configure.in
+@@ -1187,7 +1187,9 @@ mlimgloader)
+ 		elif test "$have_gdk_pixbuf2" = "yes" -o "$have_gdk_pixbuf1" = "yes" ; then
+ 			MLIMGLOADER_LIB=gdk-pixbuf
+ 		else
+-			MLIMGLOADER_LIB=none
++			PKG_CHECK_MODULES(LIBPNG, libpng, MLIMGLOADER_LIB=libpng, MLIMGLOADER_LIB=none)
++			AC_SUBST(LIBPNG_CFLAGS)
++			AC_SUBST(LIBPNG_LIBS)
+ 		fi
+ 		AC_SUBST(MLIMGLOADER_LIB)
+ 

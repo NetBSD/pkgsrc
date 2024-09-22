@@ -1,0 +1,40 @@
+$NetBSD: patch-tool_mlimgloader_Makefile.in,v 1.1 2024/09/22 21:40:32 tsutsui Exp $
+
+- pull upstream fixes to use libpng if gdk-pixbuf is not used.
+  https://github.com/arakiken/mlterm/commit/0af65caa
+  > * README, doc/ja/README.ja: Updated.
+  > * uitoolkit/ui_copymode.c: Replace the first character of input text
+  >   by '/' or '?' in starting the copy mode every time.
+  > * configure.in: Check libpng if gdk-pixbuf is not found.
+  > * tool/mlimgloader/libpng.c, stb_image_resize2.h: Added.
+
+--- tool/mlimgloader/Makefile.in.orig	2023-04-01 13:54:40.000000000 +0000
++++ tool/mlimgloader/Makefile.in
+@@ -26,6 +26,7 @@ CFLAGS1 = $(CFLAGS_LOCAL) @POBL_CFLAGS@ 
+ 	@X_CFLAGS_AUX@ -I/usr/local/include
+ 
+ CFLAGS2_gdk-pixbuf = @GDK_PIXBUF_CFLAGS@ @X_CFLAGS@ @EMOJI_CFLAGS@
++CFLAGS2_libpng = @LIBPNG_CFLAGS@ @X_CFLAGS@ @EMOJI_CFLAGS@
+ 
+ CFLAGS = $(CFLAGS1) $(CFLAGS2_@MLIMGLOADER_LIB@) -DLIBEXECDIR=\"$(libexecdir)\" \
+ 	-DBINDIR=\"$(bindir)\"
+@@ -33,13 +34,19 @@ CFLAGS = $(CFLAGS1) $(CFLAGS2_@MLIMGLOAD
+ LIBS1 = $(LIBS_LOCAL) $(LPOBL) -L/usr/local/lib -R/usr/local/lib
+ 
+ LIBS2_xlib_gdk-pixbuf = @X_LIBS@ @X_EXTRA_LIBS@ @GDK_PIXBUF_LIBS@ @EMOJI_LIBS@
++LIBS2_xlib_libpng = @X_LIBS@ @X_EXTRA_LIBS@ @LIBPNG_LIBS@ @EMOJI_LIBS@
+ LIBS2_xlib_gdiplus = $(LIBS2_win32_gdiplus)
+ LIBS2_fb_gdk-pixbuf = $(LIBS2_xlib_gdk-pixbuf)
++LIBS2_fb_libpng = $(LIBS2_xlib_libpng)
+ LIBS2_console_gdk-pixbuf = $(LIBS2_xlib_gdk-pixbuf)
++LIBS2_console_libpng = $(LIBS2_xlib_libpng)
+ LIBS2_wayland_gdk-pixbuf = $(LIBS2_xlib_gdk-pixbuf)
++LIBS2_wayland_libpng = $(LIBS2_xlib_libpng)
+ LIBS2_sdl2_gdiplus = $(LIBS2_win32_gdiplus)
++LIBS2_sdl2_libpng = $(LIBS2_xlib_libpng)
+ LIBS2_sdl2_gdk-pixbuf = $(LIBS2_xlib_gdk-pixbuf)
+ LIBS2_beos_gdk-pixbuf = $(LIBS2_xlib_gdk-pixbuf)
++LIBS2_beos_libpng = $(LIBS2_xlib_libpng)
+ 
+ # Segfault in cygwin without them.
+ LIBS2_win32_gdk-pixbuf = -mwindows @GDK_PIXBUF_LIBS@
