@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2023/04/23 09:19:13 wiz Exp $
+# $NetBSD: hacks.mk,v 1.4 2024/09/22 15:22:57 wiz Exp $
 
 ### [Tue Jan  9 15:57:05 EST 2007 : tv]
 ### Interix has u_int64_t, but not uint64_t
@@ -33,6 +33,7 @@ post-patch:
 .if ${X11_TYPE} == "native" && ${MACHINE_PLATFORM:MNetBSD-7.*} && \
 	!exists(/usr/X11R7/include/freetype2/ftttdrv.h)
 BUILDLINK_TARGETS+=	buildlink-freetype2-ftttdrv.h
+.PHONY: buildlink-freetype2-ftttdrv.h
 buildlink-freetype2-ftttdrv.h:
 	${RUN}								\
 	dest=${BUILDLINK_DIR}"/include/freetype2/ftttdrv.h";		\
