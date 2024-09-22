@@ -1,23 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/12 16:08:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/09/22 06:11:09 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.github/release-drafter.yml
-${GEM_LIBDIR}/.github/workflows/ci.yml
-${GEM_LIBDIR}/.github/workflows/push.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.rubocop.yml
-${GEM_LIBDIR}/CHANGELOG.md
-${GEM_LIBDIR}/CODE_OF_CONDUCT.md
-${GEM_LIBDIR}/CONTRIBUTING.md
-${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/UPGRADING-CAP-3.5.md
-${GEM_LIBDIR}/airbrussh.gemspec
-${GEM_LIBDIR}/appveyor.yml
-${GEM_LIBDIR}/bin/console
-${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/lib/airbrussh.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano.rb
 ${GEM_LIBDIR}/lib/airbrussh/capistrano/tasks.rb
