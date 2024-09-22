@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5848 2024/09/22 13:30:37 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5849 2024/09/22 13:42:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8959,3 +8959,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-actiontext71 to 7.1.4 [taca 2024-09-22]
 	Updated www/ruby-rails71 to 7.1.4 [taca 2024-09-22]
 	Updated sysutils/zoxide to 0.9.6 [pin 2024-09-22]
+	Updated devel/ruby-cucumber-messages to 25.0.1 [taca 2024-09-22]
