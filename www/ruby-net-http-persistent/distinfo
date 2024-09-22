@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2023/04/30 14:27:27 taca Exp $
+$NetBSD: distinfo,v 1.19 2024/09/22 08:19:00 taca Exp $
 
-BLAKE2s (net-http-persistent-4.0.2.gem) = 3aa92e61b3f2ee8f286b94d5fa58934ed603e3e47c2bd61a422d18d2e9aad12f
-SHA512 (net-http-persistent-4.0.2.gem) = f74d1a6b081390aba9e36966c417cbe1a87bfe0f4c1a17325ee43f34f3e1d97bf01a4535d286afe5ef099fbee2662b22e27b2ce90a20b0eeec241e1ebf50fcb4
-Size (net-http-persistent-4.0.2.gem) = 26624 bytes
+BLAKE2s (net-http-persistent-4.0.4.gem) = 71d9469448350f203ab6c1161e7095ebed9a24153815a9f68534e7d891433e86
+SHA512 (net-http-persistent-4.0.4.gem) = b9d53b534d0082bc674a2b7db0af93d70bf8e55dfb57eb7a36c6033081c15d8114b62edbb65ec459789c94767295218830cfd39143fec8b1e7dfcb8adff2b283
+Size (net-http-persistent-4.0.4.gem) = 27136 bytes
