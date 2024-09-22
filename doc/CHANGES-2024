@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5789 2024/09/22 06:05:45 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5790 2024/09/22 06:08:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -8900,3 +8900,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/ruby-recog to 3.1.10 [taca 2024-09-22]
 	Updated net/ruby-ruby_smb to 3.3.10 [taca 2024-09-22]
 	Updated net/ruby-train-core to 3.12.7 [taca 2024-09-22]
+	Updated net/ruby-winrm to 2.3.9 [taca 2024-09-22]
