@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/05/18 06:17:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2024/09/22 16:39:11 wiz Exp $
 bin/pylint-${PYVERSSUFFIX}
 bin/pylint-config-${PYVERSSUFFIX}
 bin/pyreverse-${PYVERSSUFFIX}
@@ -136,9 +136,6 @@ ${PYSITELIB}/pylint/checkers/refactoring/recommendation_checker.pyo
 ${PYSITELIB}/pylint/checkers/refactoring/refactoring_checker.py
 ${PYSITELIB}/pylint/checkers/refactoring/refactoring_checker.pyc
 ${PYSITELIB}/pylint/checkers/refactoring/refactoring_checker.pyo
-${PYSITELIB}/pylint/checkers/similar.py
-${PYSITELIB}/pylint/checkers/similar.pyc
-${PYSITELIB}/pylint/checkers/similar.pyo
 ${PYSITELIB}/pylint/checkers/spelling.py
 ${PYSITELIB}/pylint/checkers/spelling.pyc
 ${PYSITELIB}/pylint/checkers/spelling.pyo
@@ -148,6 +145,9 @@ ${PYSITELIB}/pylint/checkers/stdlib.pyo
 ${PYSITELIB}/pylint/checkers/strings.py
 ${PYSITELIB}/pylint/checkers/strings.pyc
 ${PYSITELIB}/pylint/checkers/strings.pyo
+${PYSITELIB}/pylint/checkers/symilar.py
+${PYSITELIB}/pylint/checkers/symilar.pyc
+${PYSITELIB}/pylint/checkers/symilar.pyo
 ${PYSITELIB}/pylint/checkers/threading_checker.py
 ${PYSITELIB}/pylint/checkers/threading_checker.pyc
 ${PYSITELIB}/pylint/checkers/threading_checker.pyo
