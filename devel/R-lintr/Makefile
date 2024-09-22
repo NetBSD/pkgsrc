@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/21 02:37:52 mef Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/22 23:49:25 mef Exp $
 
 R_PKGNAME=	lintr
-R_PKGVER=	3.1.1
+R_PKGVER=	3.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
