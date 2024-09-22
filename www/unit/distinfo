@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2024/09/22 03:30:58 osa Exp $
+$NetBSD: distinfo,v 1.23 2024/09/22 03:36:46 osa Exp $
 
 BLAKE2s (unit-1.33.0.tar.gz) = 2650d25b63a029f68a34d605c32ac2408239236ea2e5fcd839d57b4b12db2287
 SHA512 (unit-1.33.0.tar.gz) = c0b2a7e8ede3fc11b52c6c44d7460c52e35dfed9b9ae6cfb5bd90c24859f601bc462626aa68a24191689bb5406250d391428c06641d84e3cf1d8615e7485fb93
@@ -6,10 +6,7 @@ Size (unit-1.33.0.tar.gz) = 1025455 bytes
 SHA1 (patch-auto_events) = 0556b5d3db6b88d23d686d9da1f3274187079973
 SHA1 (patch-auto_os_conf) = 6d1cd7aef662a60d4288014eb6fadbe8c1268e55
 SHA1 (patch-auto_shmem) = cb37c368c19205c2cc1750f4a847af23be8bfa25
-SHA1 (patch-src_nxt__http__js.c) = 8303ced032074c8902fad49ceca4ee97ed1dcdf5
-SHA1 (patch-src_nxt__js.c) = 659960992fa99b2b5d62ed57715a78bc4be90446
 SHA1 (patch-src_nxt__kqueue__engine.c) = c341425f4b21d4cff6e003958f88a04b53dc4ee1
 SHA1 (patch-src_nxt__php__sapi.c) = 2d5e557ff2066bec78f5bfbca6a64688f60da01b
-SHA1 (patch-src_nxt__script.c) = a7c0851a2686b87b180b77a632a06724d79c7110
 SHA1 (patch-src_nxt__unix.h) = c0db5bc4d9c45a3ead48627567284d8b3041b0a0
 SHA1 (patch-src_nxt__websocket__header.h) = 1b50405b187cc8a662372a1c20ab7737278135ae
