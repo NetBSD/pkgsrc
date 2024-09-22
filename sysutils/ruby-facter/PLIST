@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2024/05/12 16:14:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/09/22 06:41:44 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -125,6 +125,8 @@ ${GEM_LIBDIR}/lib/facter/facts/amzn/os/distro/description.rb
 ${GEM_LIBDIR}/lib/facter/facts/amzn/os/distro/id.rb
 ${GEM_LIBDIR}/lib/facter/facts/amzn/os/distro/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/amzn/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/archlinux/os/release.rb
+${GEM_LIBDIR}/lib/facter/facts/azurelinux/os/release.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/kernelmajversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/kernelversion.rb
 ${GEM_LIBDIR}/lib/facter/facts/bsd/load_averages.rb
@@ -335,6 +337,7 @@ ${GEM_LIBDIR}/lib/facter/facts/linux/path.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processor.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/cores.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/count.rb
+${GEM_LIBDIR}/lib/facter/facts/linux/processors/extensions.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/isa.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/models.rb
 ${GEM_LIBDIR}/lib/facter/facts/linux/processors/physicalcount.rb
@@ -928,6 +931,7 @@ ${GEM_LIBDIR}/lib/facter/util/facts/windows_release_finder.rb
 ${GEM_LIBDIR}/lib/facter/util/file_helper.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/dhcp.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/if_inet6.rb
+${GEM_LIBDIR}/lib/facter/util/linux/proc.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/routing_table.rb
 ${GEM_LIBDIR}/lib/facter/util/linux/socket_parser.rb
 ${GEM_LIBDIR}/lib/facter/util/macosx/system_profile_executor.rb
