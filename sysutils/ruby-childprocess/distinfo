@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/02/03 16:27:32 taca Exp $
+$NetBSD: distinfo,v 1.19 2024/09/22 06:27:35 taca Exp $
 
-BLAKE2s (childprocess-5.0.0.gem) = d509e8ab800c96ae7c5751888e158b6a79b473c0f8db9d0a0972cc89f69933f0
-SHA512 (childprocess-5.0.0.gem) = 9ec340c86f4fd978b7a9925bcf90811ff3443f014469e4ff121e2c4758a4068823029ab413d1a57eb9de4a864435505b1edfa60a611709f2a5f99aaf08da422d
-Size (childprocess-5.0.0.gem) = 21504 bytes
+BLAKE2s (childprocess-5.1.0.gem) = e44a9f81addb35e2f7306e664aaf737eb3854ef641bca8ce4a8f1547d09d3b03
+SHA512 (childprocess-5.1.0.gem) = 487ee82e6e7cc1e81ed6740e3eb54e12e9d1065de92eda71f48039e377db8a827c647ce6c9314157ece577be52519bbe014aadcda4a7a748589fad7dbf19ae3a
+Size (childprocess-5.1.0.gem) = 21504 bytes
