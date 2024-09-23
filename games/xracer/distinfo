@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:44:34 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/09/23 06:44:51 wiz Exp $
 
 BLAKE2s (xracer-0.96.9.tar.gz) = 001cb36d5692b10bd26706bf03f0a661c241ecca34d8cb77a422f4c08ef840d1
 SHA512 (xracer-0.96.9.tar.gz) = e409ca9dfdf1cf196646eb5d7a0f380d8f19ac8f805de3bc44e6030b6580009aa94a7b9d13d303ce7a5daf6a0ec512da40c8f006b0fb09fcc24152932fc889b4
@@ -25,6 +25,7 @@ SHA1 (patch-include_xracer-craft.h) = b53a6f89f29263451ea111a44a5b84eb91721c1f
 SHA1 (patch-include_xracer-player.h) = 6a7f33c926d74c1d2ee9dc21d91acbf269b57f6c
 SHA1 (patch-src_game.c) = cb5a73dde445eec2aa924e61be4f1fd0c3e9135e
 SHA1 (patch-src_jpeg.c) = 8549eccb261e3169381ff6c101895ed2815d6c78
+SHA1 (patch-src_main.c) = eadebf322795adca81859cead43e3cd69f9cf834
 SHA1 (patch-src_math.c) = c358f346184092e1e68f21ec8ba82e253093fb97
 SHA1 (patch-src_mpeg_store.c) = 13cf0c3625be119c68825961282beb50a3aa4a70
 SHA1 (patch-src_player.c) = e2a8305257f38073b03fbd39a95c1a35542506af
