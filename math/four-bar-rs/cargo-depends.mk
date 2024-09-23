@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/09/13 18:04:02 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/09/23 16:24:03 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.28
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -57,7 +57,6 @@ CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	av1-grain-0.2.3
 CARGO_CRATE_DEPENDS+=	avif-serialize-0.8.1
 CARGO_CRATE_DEPENDS+=	base64-0.21.7
-CARGO_CRATE_DEPENDS+=	base64-0.22.1
 CARGO_CRATE_DEPENDS+=	bit_field-0.10.2
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.6.0
@@ -100,7 +99,6 @@ CARGO_CRATE_DEPENDS+=	combine-4.6.7
 CARGO_CRATE_DEPENDS+=	concurrent-queue-2.5.0
 CARGO_CRATE_DEPENDS+=	console-0.15.8
 CARGO_CRATE_DEPENDS+=	console_error_panic_hook-0.1.7
-CARGO_CRATE_DEPENDS+=	const-str-0.5.7
 CARGO_CRATE_DEPENDS+=	core-foundation-0.9.4
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	core-graphics-0.23.2
@@ -340,7 +338,6 @@ CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.4
 CARGO_CRATE_DEPENDS+=	rfd-0.14.1
 CARGO_CRATE_DEPENDS+=	rgb-0.8.50
 CARGO_CRATE_DEPENDS+=	ron-0.8.1
-CARGO_CRATE_DEPENDS+=	ron-0.9.0-alpha.0
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.1
 CARGO_CRATE_DEPENDS+=	rustix-0.37.27
 CARGO_CRATE_DEPENDS+=	rustix-0.38.36
