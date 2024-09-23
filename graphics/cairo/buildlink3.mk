@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.70 2024/04/07 07:33:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.71 2024/09/23 09:30:45 wiz Exp $
 
 BUILDLINK_TREE+=	cairo
 
@@ -32,6 +32,7 @@ pkgbase := cairo
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.40.0
 .include "../../x11/pixman/buildlink3.mk"
 .endif # CAIRO_BUILDLINK3_MK
 
