@@ -1,3 +1,10 @@
+$NetBSD: patch-platform_xpcom_reflect_xptcall_md_unix_moz.build,v 1.2 2024/09/23 11:12:10 martin Exp $
+
+Make NetBSD use the same xptcall glue as other ELF oses do,
+adding powerpc{,64} and sparc64 support.
+
+https://repo.palemoon.org/MoonchildProductions/UXP/commit/c57a1eee66b9d1a157602071a8d13ea8bcaed132
+
 --- platform/xpcom/reflect/xptcall/md/unix/moz.build.orig	2024-07-10 10:54:53.000000000 +0200
 +++ platform/xpcom/reflect/xptcall/md/unix/moz.build	2024-08-05 17:46:31.162024930 +0200
 @@ -136,7 +136,7 @@

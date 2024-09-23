@@ -1,6 +1,8 @@
-$NetBSD: patch-platform_js_src_jit_AtomicOperations.h,v 1.1 2024/09/20 05:45:44 martin Exp $
+$NetBSD: patch-platform_js_src_jit_AtomicOperations.h,v 1.2 2024/09/23 11:12:10 martin Exp $
 
-User powerpc atomic operations on NetBSD/powerpc
+Use powerpc atomic operations on NetBSD/powerpc
+
+https://repo.palemoon.org/MoonchildProductions/UXP/commit/a8fbc1dfbe40f899839371f3cb3bb52ce2a71318
 
 --- platform/js/src/jit/AtomicOperations.h.orig	2024-09-05 10:13:09.000000000 +0200
 +++ platform/js/src/jit/AtomicOperations.h	2024-09-19 20:30:25.512218030 +0200

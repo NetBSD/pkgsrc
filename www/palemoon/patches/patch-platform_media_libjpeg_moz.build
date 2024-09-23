@@ -1,4 +1,4 @@
-$NetBSD: patch-platform_media_libjpeg_moz.build,v 1.1 2024/09/17 06:24:18 martin Exp $
+$NetBSD: patch-platform_media_libjpeg_moz.build,v 1.2 2024/09/23 11:12:10 martin Exp $
 
 Hard-code compiler flags for altivec support to -maltivec
 instead of the undefined config list PPC_VMX_FLAGS.
@@ -6,6 +6,8 @@ instead of the undefined config list PPC_VMX_FLAGS.
 This matches other places where -maltivec is used, like:
 	platform/gfx/cairo/libpixman/src/moz.build
 	platform/gfx/qcms/moz.build
+
+https://repo.palemoon.org/MoonchildProductions/UXP/pulls/2591
 
 --- platform/media/libjpeg/moz.build.orig	2024-09-05 10:13:09.000000000 +0200
 +++ platform/media/libjpeg/moz.build	2024-09-15 20:36:37.420052767 +0200
