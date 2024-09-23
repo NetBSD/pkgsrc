@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/09/19 11:17:16 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/23 12:39:12 wiz Exp $
 
 DISTNAME=	lua-resty-core-0.1.29
 CATEGORIES=	www
@@ -11,7 +11,13 @@ COMMENT=	FFI-based Lua API for nginx modules
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+USE_TOOLS+=	bash:build gmake
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash+=	Makefile
+SUBST_SED.bash+=	-e "s,/bin/bash,${BASH},"
+SUBST_MESSAGE.bash=	Fixing path to bash.
 
 MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
 MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1
