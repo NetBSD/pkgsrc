@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.270 2024/08/20 14:11:52 ryoon Exp $
+$NetBSD: distinfo,v 1.271 2024/09/23 23:55:18 gdt Exp $
 
 BLAKE2s (thunderbird-115.14.0.source.tar.xz) = 2b8644a48ba3afcea1dda9f73fa84ba49e5b85f844fab5bba8f84c712aac4780
 SHA512 (thunderbird-115.14.0.source.tar.xz) = b12e1302d6be94dd88bee6dd069d3fec944bfce95e1afc1d72c14cc188d952fd5a85f0e70575317250701ac89498d876f3384b022957689fabcef61ad7d78c29
@@ -31,6 +31,8 @@ SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 20b208c5ab4bfea5d49d79c19fc6108
 SHA1 (patch-old-configure.in) = d59d276124e1f95d9e144b8f7099abcf6de0489a
 SHA1 (patch-rust-1.78.0) = aa83482a831ab2ee8b38f57c1b7873719e5f8b5b
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = 0cbf185955c77c9438ced0c294fbc8e4824797bf
+SHA1 (patch-servo_components_style__traits_values.rs) = 6e1efb51bd68168abfa960b5e2541b3f46a49bf0
+SHA1 (patch-servo_ports_geckolib_cbindgen.toml) = f87b82cf179651199599f7b8c5d4feaa11b1f781
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 8848fb05c1e8b45234f74db71602a8a84c0404a4
 SHA1 (patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs) = e9378a3868ddb628213c3a37e2177257c2344bc3
 SHA1 (patch-third__party_sqlite3_src_moz.build) = b26856a4b87aa12211575d9982f62dc899474b52
