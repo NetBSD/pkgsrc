@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/09/12 19:45:33 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/09/23 08:10:07 adam Exp $
 
-BLAKE2s (cattrs-24.1.1.tar.gz) = b33127e585dd8289ebc185a16b87f736b3d9a0ba670d6fbbb37146b0071feebd
-SHA512 (cattrs-24.1.1.tar.gz) = d764a73610dc01841d9424ddeff22cf904a1de744093cfc658d8a44f7c537c0f6abea49b8b57f830ae27bec07c72d302590007227bc3b99d0be5b9e3ea14d49f
-Size (cattrs-24.1.1.tar.gz) = 426413 bytes
+BLAKE2s (cattrs-24.1.2.tar.gz) = 9579b463d146f792fd7d339d0c7b7af6a78b70888459448fc7ad862707a8028b
+SHA512 (cattrs-24.1.2.tar.gz) = 2efafbd389fc81d49b48cf833fe94273c4404b1b751d6ae35f1954c44afa3d1a3e85b25e8325c889aefcfe42eb990d15e075e20163db899605ec419a20713cef
+Size (cattrs-24.1.2.tar.gz) = 426462 bytes
