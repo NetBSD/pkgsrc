@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/09/13 18:07:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/23 12:30:56 wiz Exp $
 
 VERSION=	0.6.1
 DISTNAME=	oqs-provider-${VERSION}
@@ -25,6 +25,7 @@ do-install:
 	ln -s oqsprovider.so.${VERSION} ${DESTDIR}${PREFIX}/lib/ossl-modules/oqsprovider.so
 
 .include "../../devel/cmake/build.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/liboqs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
