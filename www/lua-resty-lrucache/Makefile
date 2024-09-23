@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/09/19 11:15:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/09/23 12:38:13 wiz Exp $
 
 DISTNAME=	lua-resty-lrucache-0.14
 CATEGORIES=	www
@@ -11,7 +11,13 @@ COMMENT=	Lua-land LRU cache based on the LuaJIT FFI
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
+USE_TOOLS+=	bash:build gmake
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash+=	Makefile
+SUBST_SED.bash+=	-e "s,/bin/bash,${BASH},"
+SUBST_MESSAGE.bash=	Fixing path to bash.
 
 MAKE_ENV+=	LUA_INCLUDE_DIR=${PREFIX}/include/luajit-2.1
 MAKE_ENV+=	LUA_LIB_DIR=${PREFIX}/share/luajit-2.1
