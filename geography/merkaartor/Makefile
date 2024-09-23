@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.135 2024/09/21 10:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.136 2024/09/23 17:01:43 gdt Exp $
 
 DISTNAME=	merkaartor-0.20.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openstreetmap/}
 GITHUB_PROJECT=	merkaartor
@@ -26,13 +26,13 @@ CMAKE_CONFIGURE_ARGS+=	-DGPSD=ON
 # ordered following pkgsrc conventions.
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk" # Qt5LinguistTools
 # qt5 fragments not searched for but used during the build.
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 # qt5 fragments not searched for and apparently not used, but were
 # listed in earlier versions of the package.  Left as hints for future
 # debugging.
-#.include "../../x11/qt5-qttools/buildlink3.mk"
 #.include "../../x11/qt5-qtconnectivity/buildlink3.mk"
 #.include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 #.include "../../x11/qt5-qtimageformats/buildlink3.mk"
