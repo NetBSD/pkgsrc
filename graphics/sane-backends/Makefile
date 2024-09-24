@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2024/05/29 16:33:03 adam Exp $
+# $NetBSD: Makefile,v 1.93 2024/09/24 15:48:37 triaxx Exp $
 
-PKGREVISION= 4
 .include "Makefile.common"
-MASTER_SITES=	https://gitlab.com/sane-project/backends/uploads/110fc43336d0fb5e514f1fdc7360dd87/
+MASTER_SITES=	${MASTER_SITE_GITLAB:=sane-project/backends/uploads/83bdbb6c9a115184c2d48f1fdc6847db/}
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 
 DISTNAME=	sane-backends-${SANE_VERSION}
@@ -30,7 +29,7 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_inet_pton=yes
 
 PLIST_VARS+=		pint
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 PLIST.pint=		yes
 .endif
 
@@ -58,7 +57,7 @@ test.conf u12.conf umax.conf umax1220u.conf umax_pp.conf xerox_mfp.conf
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .endfor
 
-.if (${OPSYS} == "Linux")
+.if ${OPSYS} == "Linux"
 .  for f in qcam.conf v4l.conf
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .  endfor
@@ -66,7 +65,7 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 
 .include "options.mk"
 .include "../../devel/libusb1/buildlink3.mk"
-.if (${OPSYS} == "Linux")
+.if ${OPSYS} == "Linux"
 .include "../../graphics/libv4l/buildlink3.mk"
 .endif
 .include "../../graphics/tiff/buildlink3.mk"
