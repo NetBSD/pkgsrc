@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2023/09/05 14:38:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2024/09/24 15:48:37 triaxx Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -53,6 +53,7 @@ lib/sane/libsane-kvs20xx.la
 lib/sane/libsane-kvs40xx.la
 lib/sane/libsane-leo.la
 lib/sane/libsane-lexmark.la
+lib/sane/libsane-lexmark_x2600.la
 lib/sane/libsane-ma1509.la
 lib/sane/libsane-magicolor.la
 lib/sane/libsane-matsushita.la
@@ -141,6 +142,7 @@ man/man5/sane-kvs20xx.5
 man/man5/sane-kvs40xx.5
 man/man5/sane-leo.5
 man/man5/sane-lexmark.5
+man/man5/sane-lexmark_x2600.5
 man/man5/sane-ma1509.5
 man/man5/sane-magicolor.5
 man/man5/sane-matsushita.5
@@ -261,6 +263,7 @@ share/doc/sane-backends/sane-backends-external.html
 share/doc/sane-backends/sane-backends.html
 share/doc/sane-backends/sane-mfgs-external.html
 share/doc/sane-backends/sane-mfgs.html
+share/doc/sane-backends/saned/saned.install.md
 share/doc/sane-backends/sceptre/s1200.txt
 share/doc/sane-backends/teco/teco1.txt
 share/doc/sane-backends/teco/teco2.txt
@@ -333,6 +336,7 @@ share/examples/sane/kodakaio.conf
 share/examples/sane/kvs1025.conf
 share/examples/sane/leo.conf
 share/examples/sane/lexmark.conf
+share/examples/sane/lexmark_x2600.conf
 share/examples/sane/ma1509.conf
 share/examples/sane/magicolor.conf
 share/examples/sane/matsushita.conf
@@ -387,6 +391,7 @@ ${PLIST.nls}share/locale/he/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/hu/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/it/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/ja/LC_MESSAGES/sane-backends.mo
+${PLIST.nls}share/locale/ka/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/nb/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/sane-backends.mo
@@ -395,3 +400,9 @@ ${PLIST.nls}share/locale/ru/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/sv/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/sane-backends.mo
 ${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/sane-backends.mo
+@pkgdir var/lock
+@pkgdir share/sane/snapscan
+@pkgdir share/sane/gt68xx
+@pkgdir share/sane/epjitsu
+@pkgdir share/sane/artec_eplus48u
+@pkgdir share/examples/sane/dll.d

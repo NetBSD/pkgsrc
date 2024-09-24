@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2023/09/05 14:31:39 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.38 2024/09/24 15:48:37 triaxx Exp $
 # used by graphics/sane-frontends/Makefile
 
 CATEGORIES?=	graphics
@@ -8,7 +8,7 @@ HOMEPAGE?=	http://www.sane-project.org/
 LICENSE=	gnu-gpl-v2
 
 SANE_MAJOR?=	1
-SANE_MINOR?=	2
+SANE_MINOR?=	3
 SANE_MICRO?=	1
 SANE_VERSION=	${SANE_MAJOR}.${SANE_MINOR}.${SANE_MICRO}
 PLIST_SUBST+=	SANE_MAJOR=${SANE_MAJOR:Q}
