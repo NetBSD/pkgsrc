@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2024/08/06 18:49:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.116 2024/09/24 17:01:30 kre Exp $
 
 BASH_VERSION=		5.2
-BASH_PATCHLEVEL=	26
-PKGREVISION=		1
+BASH_PATCHLEVEL=	37
 
 DISTNAME=	bash-${BASH_VERSION}
 PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
@@ -15,7 +14,9 @@ PATCHFILES+=	bash52-006 bash52-007 bash52-008 bash52-009 bash52-010
 PATCHFILES+=	bash52-011 bash52-012 bash52-013 bash52-014 bash52-015
 PATCHFILES+=	bash52-016 bash52-017 bash52-018 bash52-019 bash52-020
 PATCHFILES+=	bash52-021 bash52-022 bash52-023 bash52-024 bash52-025
-PATCHFILES+=	bash52-026
+PATCHFILES+=	bash52-026 bash52-027 bash52-028 bash52-029 bash52-030
+PATCHFILES+=	bash52-031 bash52-032 bash52-033 bash52-034 bash52-035
+PATCHFILES+=	bash52-036 bash52-037
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/bash/bash.html
