@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/09/10 01:28:35 gdt Exp $
+# $NetBSD: Makefile,v 1.17 2024/09/24 13:29:44 gdt Exp $
 
 DISTNAME=	mongodb-4.4.29
 PKGREVISION=	1
@@ -57,7 +57,15 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "aarch64"
+# On gcc12 as found in NetBSD 10.99.x, on aarch64, there is a static
+# assert related to a c++17 feature about cacheline size.  Adding a
+# param to force the value appears to resolve it.
+# Perhaps, this is for gcc12+ on all arches.
+# On gcc10 as found in NetBSD 10, there is no assert, and the --param
+# flag is unrecognized.
+# \todo File a bug upstream and include the URL
+# \todo Fix this upstream, with a configure test.
+.if ${MACHINE_ARCH} == "aarch64" && ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 109900
 CXXFLAGS+=		--param=destructive-interference-size=64
 .endif
 
