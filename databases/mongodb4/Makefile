@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/09/24 13:29:44 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2024/09/24 13:38:31 gdt Exp $
 
 DISTNAME=	mongodb-4.4.29
 PKGREVISION=	1
@@ -57,14 +57,21 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
-# On gcc12 as found in NetBSD 10.99.x, on aarch64, there is a static
-# assert related to a c++17 feature about cacheline size.  Adding a
-# param to force the value appears to resolve it.
-# Perhaps, this is for gcc12+ on all arches.
-# On gcc10 as found in NetBSD 10, there is no assert, and the --param
-# flag is unrecognized.
+# In c++17, there is a __GCC_DESTRUCTIVE_SIZE which is obtained from
+# -mtune, and used in std::hardware_destructive_interference_size.
+#
+# In gcc12 as found in NetBSD 10.99.x, on aarch64, there is a static
+# assert, perhaps that this value is used without being adequately
+# set, in some contexts.  gcc12 adds
+# --param=destructive-interference-size to set __GCC_DESTRUCTIVE_SIZE.
+#
+# Thus, in NetBSD-current-gcc12, the build fails without --param, and
+# in NetBSD-10-gcc10, it fails with it.
+#
 # \todo File a bug upstream and include the URL
 # \todo Fix this upstream, with a configure test.
+#
+# For now, limit --param to where it is known to be needed.
 .if ${MACHINE_ARCH} == "aarch64" && ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} > 109900
 CXXFLAGS+=		--param=destructive-interference-size=64
 .endif
