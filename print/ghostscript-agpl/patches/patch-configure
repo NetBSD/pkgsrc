@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.11 2024/09/22 15:22:57 wiz Exp $
+$NetBSD: patch-configure,v 1.12 2024/09/25 20:27:24 triaxx Exp $
 
 Use system zlib for linking.
 Add rpath.
@@ -46,11 +46,11 @@ Use correct install_name with path on Darwin.
 -      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(XPS_SONAME_MAJOR)"
 -      PDL_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(GPDL_SONAME_MAJOR)"
 -      PDF_DYNAMIC_LDFLAGS="-dynamiclib -install_name $DARWIN_LDFLAGS_SO_PREFIX\$(PDF_SONAME_MAJOR)"
-+      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)\$(GS_SONAME_MAJOR)"
-+      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)\$(PCL_SONAME_MAJOR)"
-+      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)\$(XPS_SONAME_MAJOR)"
-+      PDL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)\$(GPDL_SONAME_MAJOR)"
-+      PDF_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)\$(PDF_SONAME_MAJOR)"
++      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(GS_SONAME_MAJOR)"
++      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(PCL_SONAME_MAJOR)"
++      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(XPS_SONAME_MAJOR)"
++      PDL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(GPDL_SONAME_MAJOR)"
++      PDF_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(PDF_SONAME_MAJOR)"
        DYNAMIC_LIBS=""
        SO_LIB_EXT=""
        DLL_EXT=".dylib"
