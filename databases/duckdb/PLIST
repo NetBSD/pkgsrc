@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/17 06:10:43 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/09/25 07:32:13 triaxx Exp $
 bin/duckdb
 include/duckdb.h
 include/duckdb.hpp
@@ -1167,7 +1167,6 @@ lib/libduckdb_skiplistlib.a
 lib/libduckdb_static.a
 lib/libduckdb_utf8proc.a
 lib/libduckdb_yyjson.a
-lib/libjemalloc_extension.a
 lib/libparquet_extension.a
 @pkgdir include/duckdb/storage/serialization
 @pkgdir include/duckdb/main/capi/header_generation/functions
