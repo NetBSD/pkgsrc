@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.963 2024/09/21 12:45:49 js Exp $
+# $NetBSD: Makefile,v 1.964 2024/09/25 08:28:59 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -496,7 +496,7 @@ SUBDIR+=	py-keyring
 SUBDIR+=	py-keyrings.alt
 SUBDIR+=	py-krb5
 SUBDIR+=	py-lasso
-SUBDIRS+=	py-libagent
+SUBDIR+=	py-libagent
 SUBDIR+=	py-libnacl
 SUBDIR+=	py-libtaxii
 SUBDIR+=	py-mcrypt
