@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.72 2024/09/22 13:26:33 pin Exp $
+$NetBSD: distinfo,v 1.73 2024/09/25 10:52:58 pin Exp $
 
 BLAKE2s (ab_glyph-0.2.28.crate) = c3581af3d474b771792535858a7ec3c79d41e3eca52672ade5e997f9091284b1
 SHA512 (ab_glyph-0.2.28.crate) = ab2e4c2ddbb5a93bc049892e2703086a66eced9bfd267f4ea161ca68b5906d41c1cff1c9d75e4beb8f5cd8674f8e6bcec7eb0278f37285a1beef24015444a3f5
@@ -1314,9 +1314,9 @@ Size (objc_id-0.1.1.crate) = 3258 bytes
 BLAKE2s (object-0.36.4.crate) = 7254c76e538b5a0e192f889e547e9b2ba8934ce345b3d3916213dfa2527212dc
 SHA512 (object-0.36.4.crate) = b929b3ad9ca32a5830a2ba103e6e14419b145c324b834b453d53f3cbfb5181246b2628baf5fc668c449f5337411d374b56abdd4d1dc4a744f65aaaab284bf77c
 Size (object-0.36.4.crate) = 325802 bytes
-BLAKE2s (oculante-0.9.0.tar.gz) = d1016b41c89c8830cf603a01c737215093b5b47f90c77d0e8908c31e7f0246f4
-SHA512 (oculante-0.9.0.tar.gz) = a12924f4bd3aa31c6545e53de7fd117212422fb0246eefb432cad92d580cbb480e2493ac4c98225c1ec57938711c952fdbe4824160061326dc23c6802f891c4c
-Size (oculante-0.9.0.tar.gz) = 59617742 bytes
+BLAKE2s (oculante-0.9.1.tar.gz) = 3bbb092abfaa9eba807dd84b4c446d16fe4800b7e1e5b5b0105c5bb339a4838f
+SHA512 (oculante-0.9.1.tar.gz) = cbc4442a174de76206accf1c75dbcb1c27cdff81f340e4f2bc1056d544a65780ba29e6e540cc832c9b12a204b356196e247631d4755ab670985e705cbba63a2d
+Size (oculante-0.9.1.tar.gz) = 60739840 bytes
 BLAKE2s (oklab-1.1.2.crate) = 2b19275a511a86f254fa194307593c57f1ab3498cd5e0d1fd8ee7f523d80dbd7
 SHA512 (oklab-1.1.2.crate) = 535b89822eaeb60047f5c16af459520eb6826df7b295de1f686fd6f9731a57d15d1f3c147ec79c6c65f98ab4b5fcaa9933a8a52c055e43966adb123b01f8e410
 Size (oklab-1.1.2.crate) = 6664 bytes
@@ -2301,6 +2301,9 @@ Size (xi-unicode-0.3.0.crate) = 87001 bytes
 BLAKE2s (xml-rs-0.8.22.crate) = 65cac936946164ff6cb9d8b200ece414e68f4a9ac6148b4e0213f8bfae72ed2a
 SHA512 (xml-rs-0.8.22.crate) = f9843de08ab4c95a619da81963d35677b9880a52b29336ced4319b5d09b1e4e025b4781ace2564f8a3daf6f53eed81586cc8ea7cf95138ccb6e6ac18f26913c8
 Size (xml-rs-0.8.22.crate) = 54737 bytes
+BLAKE2s (xmltree-0.11.0.crate) = 37fd2475f17f6280e806d8342e46fb55ed0111042f03e1e313287c11b868d73d
+SHA512 (xmltree-0.11.0.crate) = 73d4a75f4997e8bd4f6e58b84240450c5ac8a9ad7ccf775e794e0f5cc407bd46ec26ebcdbf91fa3b1a3e0263496b30690ba19fd8a4e3e3a2a436a12d29d23148
+Size (xmltree-0.11.0.crate) = 9959 bytes
 BLAKE2s (xmlwriter-0.1.0.crate) = 3b1f6def954abf771cd4d95c93c386f8ac1bdb790c75b35a2839a1eb0d59c1d7
 SHA512 (xmlwriter-0.1.0.crate) = a0d8bfe6e3d220358e8523212cddb84541e9d8208b2aea64a89037e4e9f4de62a7b549c9f1bacbd71e14de16707f061e547d89ba459843be45fa802db297fd58
 Size (xmlwriter-0.1.0.crate) = 6261 bytes
