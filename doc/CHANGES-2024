@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5908 2024/09/25 13:04:16 triaxx Exp $
+$NetBSD: CHANGES-2024,v 1.5909 2024/09/25 20:26:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9015,3 +9015,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/oculante to 0.9.1 [pin 2024-09-25]
 	Updated www/zola to 0.19.2 [pin 2024-09-25]
 	Updated graphics/sane-backends to 1.3.1nb1 [triaxx 2024-09-25]
+	Updated shells/oh-my-posh to 23.14.2 [pin 2024-09-25]
