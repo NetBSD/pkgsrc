@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5903 2024/09/24 21:43:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5904 2024/09/25 10:51:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9010,3 +9010,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/sane-backends to 1.3.1 [triaxx 2024-09-24]
 	Updated shells/bash to 5.2.37 [kre 2024-09-24]
 	Updated security/openssh to 9.9p1 [wiz 2024-09-24]
+	Updated devel/ast-grep to 0.27.3 [pin 2024-09-25]
