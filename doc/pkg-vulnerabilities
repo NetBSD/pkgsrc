@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.260 2024/09/11 21:27:29 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.261 2024/09/25 14:35:10 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26083,3 +26083,4 @@ py{38,39,310,311,312}-django>=4<4.2.16	denial-of-service	https://nvd.nist.gov/vu
 py{38,39,310,311,312}-django>=5<5.1.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-45230
 gtk3+<3.24.43		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-6655
 libcurl-gnutls<8.10.0	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-8096
+webkit-gtk<2.46.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-40857
