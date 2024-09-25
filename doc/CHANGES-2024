@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5906 2024/09/25 10:53:30 pin Exp $
+$NetBSD: CHANGES-2024,v 1.5907 2024/09/25 10:54:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9013,3 +9013,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ast-grep to 0.27.3 [pin 2024-09-25]
 	Updated devel/mise to 2024.9.8 [pin 2024-09-25]
 	Updated graphics/oculante to 0.9.1 [pin 2024-09-25]
+	Updated www/zola to 0.19.2 [pin 2024-09-25]
