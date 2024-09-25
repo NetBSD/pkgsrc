@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.55 2024/09/22 13:26:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.56 2024/09/25 10:52:58 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.28
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -766,6 +766,7 @@ CARGO_CRATE_DEPENDS+=	xcursor-0.3.8
 CARGO_CRATE_DEPENDS+=	xdg-home-1.3.0
 CARGO_CRATE_DEPENDS+=	xi-unicode-0.3.0
 CARGO_CRATE_DEPENDS+=	xml-rs-0.8.22
+CARGO_CRATE_DEPENDS+=	xmltree-0.11.0
 CARGO_CRATE_DEPENDS+=	xmlwriter-0.1.0
 CARGO_CRATE_DEPENDS+=	yuv-0.1.8
 CARGO_CRATE_DEPENDS+=	zbus-4.4.0
