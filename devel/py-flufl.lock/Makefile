@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/10/28 19:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/09/26 07:42:31 wiz Exp $
 
 DISTNAME=	flufl.lock-7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.lock/}
 
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 # unpackaged
 #TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # fixup wrong WHEEL_INFODIR
 post-install:
