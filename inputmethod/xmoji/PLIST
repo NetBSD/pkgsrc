@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/16 11:03:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/09/26 21:05:20 wiz Exp $
 bin/xmoji
 share/applications/xmoji.desktop
 share/doc/xmoji/README.md
+share/doc/xmoji/TRANSLATE.md
 share/icons/hicolor/16x16/apps/xmoji.png
 share/icons/hicolor/256x256/apps/xmoji.png
 share/icons/hicolor/32x32/apps/xmoji.png
 share/icons/hicolor/48x48/apps/xmoji.png
+share/xmoji/translations/xmoji-emojis-de.xct
+share/xmoji/translations/xmoji-ui-de.xct
