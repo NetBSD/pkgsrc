@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.10 2024/07/26 14:22:36 wiz Exp $
+# $NetBSD: eol-packages,v 1.11 2024/09/26 10:35:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1149,4 +1149,8 @@ Description: Upgrade to 8.0 (or newer version).
 Package: MySQL (5.7.x)
 eol date: October 31, 2020
 Description: Upgrade to 8.0 (or newer version).
+
+Package: olm
+eol date: July 31, 2024
+Description: Use vozodemacs.
 
