@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/16 11:03:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/09/26 21:05:20 wiz Exp $
 
-BLAKE2s (xmoji-0.7.tar.xz) = e113796956809c63948c752f1910607e8e74bfce3a119af077bd170d18ec40e3
-SHA512 (xmoji-0.7.tar.xz) = 7dccf344ba9850f201feef2ceced7461e14e7e05dce8f86eb60a5dc0f567673be5d0bd64ce73c8066c232165ade17db3569be3fb56605fd90bc71437a9f02747
-Size (xmoji-0.7.tar.xz) = 277636 bytes
+BLAKE2s (xmoji-0.8.tar.xz) = fbd4b4a92870909100f473383a089a9bfac7bf55eca943906de5ad098840d238
+SHA512 (xmoji-0.8.tar.xz) = a371da903f3d18352467316179dadda667a5722238e4c9af1f14d9293f4fa1213b2419f212fd3d7f23920f77cc77597086c3b752c2398595d9cfa5d7b60c8c0e
+Size (xmoji-0.8.tar.xz) = 356028 bytes
