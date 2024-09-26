@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.261 2024/09/25 14:35:10 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.262 2024/09/26 10:35:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26084,3 +26084,7 @@ py{38,39,310,311,312}-django>=5<5.1.1	denial-of-service	https://nvd.nist.gov/vul
 gtk3+<3.24.43		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-6655
 libcurl-gnutls<8.10.0	improper-certificate-validation	https://nvd.nist.gov/vuln/detail/CVE-2024-8096
 webkit-gtk<2.46.0	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2024-40857
+olm-[0-9]*		observable-timing-discrepancy	https://nvd.nist.gov/vuln/detail/CVE-2024-45191
+olm-[0-9]*		use-of-a-broken-or-risky-cryptographic-algorithm	https://nvd.nist.gov/vuln/detail/CVE-2024-45193
+olm-[0-9]*		convert-timing-channel	https://nvd.nist.gov/vuln/detail/CVE-2024-45192
+olm-[0-9]*		eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
