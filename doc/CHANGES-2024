@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5910 2024/09/26 07:36:37 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5911 2024/09/26 07:37:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9017,3 +9017,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/sane-backends to 1.3.1nb1 [triaxx 2024-09-25]
 	Updated shells/oh-my-posh to 23.14.2 [pin 2024-09-25]
 	Updated devel/py-flufl.i18n to 4.1.1nb3 [wiz 2024-09-26]
+	Updated misc/py-dep-logic to 0.0.4nb1 [wiz 2024-09-26]
