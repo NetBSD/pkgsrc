@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/02/08 22:36:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/26 07:37:44 wiz Exp $
 
 DISTNAME=	dep_logic-0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dep-logic/}
 
@@ -14,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-packaging>=22:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
