@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/07/17 09:18:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/26 07:41:31 wiz Exp $
 
 DISTNAME=	django_mailman3-1.3.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-mailman3/}
 
@@ -19,7 +20,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-django-[0-9]*:../../www/py-test-django
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
