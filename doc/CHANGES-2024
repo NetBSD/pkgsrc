@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.4118.2.2 2024/09/21 16:10:21 he Exp $
+$NetBSD: CHANGES-2024,v 1.4118.2.3 2024/09/26 12:25:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -6558,4 +6558,3 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/traceroute-as to 991603nb1 [ryoon 2024-06-25]
 	Updated security/openssh to 9.7p1 [wiz 2024-06-25]
 	Updated security/opendnssec2 to 2.1.14 [he 2024-08-25]
-	Updated net/nsd to 4.10.1 [he 2024-09-21]
