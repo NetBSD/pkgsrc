@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5917 2024/09/26 21:00:33 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.5918 2024/09/26 21:05:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9024,3 +9024,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/nsd to 4.10.1 [he 2024-09-26]
 	Updated emulators/mame to 0.270 [wiz 2024-09-26]
 	Updated devel/nss to 3.105 [wiz 2024-09-26]
+	Updated inputmethod/xmoji to 0.8 [wiz 2024-09-26]
