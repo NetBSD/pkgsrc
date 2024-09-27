@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2024/05/29 16:31:24 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/09/27 16:50:35 jakllsch Exp $
 
-DISTNAME=	pianobar-2020.04.05
-PKGREVISION=	18
+DISTNAME=	pianobar-2022.04.01
 CATEGORIES=	audio net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=PromyLOPh/}
+MASTER_SITES=	https://6xq.net/pianobar/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://6xq.net/pianobar/
@@ -21,6 +21,6 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
