@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2024/09/27 15:16:22 maya Exp $
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginConfig.cmake
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginConfigVersion.cmake
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginTargets.cmake
+qt6/lib/cmake/Qt6Sensors/Qt6IIOSensorProxySensorPluginTargets-release.cmake
+qt6/plugins/sensors/libqtsensors_iio-sensor-proxy.so
