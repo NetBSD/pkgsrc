@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2023/11/20 10:45:36 nia Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2024/09/27 14:25:56 maya Exp $
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/minimum-linux_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_inotify_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_linux_p.h
 qt6/include/QtDeviceDiscoverySupport/${PKGVERSION}/QtDeviceDiscoverySupport/private/qdevicediscovery_static_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/devicehandlerlist_p.h
 qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qevdevkeyboard_defaultmap_p.h
