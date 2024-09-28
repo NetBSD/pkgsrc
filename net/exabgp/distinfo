@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2024/02/19 12:54:09 he Exp $
+$NetBSD: distinfo,v 1.21 2024/09/28 11:53:52 he Exp $
 
-BLAKE2s (exabgp-4.2.21.tar.gz) = 16efdd84722201dc7dac7297a9367535c1b5184f952728123a856a93ec4e302a
-SHA512 (exabgp-4.2.21.tar.gz) = 0efc7143191e8b557297e9329354c01e2418e0c4c45753941eba3a1f063e77d17a0efa7a14a3062764e45e709f0598f491c10e2c02e751590bb7c0943b61932b
-Size (exabgp-4.2.21.tar.gz) = 2933721 bytes
+BLAKE2s (exabgp-4.2.22.tar.gz) = 399b6e5c60bd23daf1d88cea1de9b49fcda2a2f8a7844be7701bc830409e52d0
+SHA512 (exabgp-4.2.22.tar.gz) = 40536a20dc245bd8442d05d1ff19adfa6ed3113383e0f413c2e11f05fdb52d5fec8ee0d643ed3da32a47400af54975c64d0ae14b12ef6db0e07589ffc11c91bb
+Size (exabgp-4.2.22.tar.gz) = 2935045 bytes
 SHA1 (patch-lib_exabgp_application_healthcheck.py) = af35c59feb16bcf79abbf615d9ed13205127c534
-SHA1 (patch-lib_exabgp_reactor_api_command_limit.py) = 322747424f646d1e1e22bde6baa6e057ace51805

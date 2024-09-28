@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.11 2022/01/10 18:17:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/09/28 11:53:52 he Exp $
 bin/exabgp
 bin/exabgp-cli
 bin/exabgp-healthcheck
 bin/exabgpcli
 etc/exabgp/examples/api-add-remove.run
+etc/exabgp/examples/api-announce-star.run
 etc/exabgp/examples/api-announce.run
 etc/exabgp/examples/api-announcement.run
 etc/exabgp/examples/api-api.nothing.run
 etc/exabgp/examples/api-api.receive.run
+etc/exabgp/examples/api-attributes-path.run
 etc/exabgp/examples/api-attributes-vpn.run
 etc/exabgp/examples/api-attributes.run
 etc/exabgp/examples/api-broken-flow.run
@@ -35,13 +37,12 @@ etc/exabgp/examples/syslog-1.py
 etc/exabgp/examples/watchdog-1.pl
 etc/exabgp/examples/watchdog-1.sh
 etc/exabgp/examples/watchdog.run
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENCE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/exabgp/__init__.py
 ${PYSITELIB}/exabgp/__init__.pyc
 ${PYSITELIB}/exabgp/__init__.pyo
@@ -944,3 +945,4 @@ ${PYSITELIB}/exabgp/version.pyc
 ${PYSITELIB}/exabgp/version.pyo
 man/man1/exabgp.1
 man/man5/exabgp.conf.5
+@pkgdir share/exabgp

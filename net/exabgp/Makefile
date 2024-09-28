@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/02/19 12:54:09 he Exp $
+# $NetBSD: Makefile,v 1.43 2024/09/28 11:53:52 he Exp $
 
-DISTNAME=	exabgp-4.2.21
-PKGREVISION=	2
+DISTNAME=	exabgp-4.2.22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exa-Networks/}
 
@@ -44,7 +43,7 @@ TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
