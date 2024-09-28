@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/09/28 11:53:52 he Exp $
+# $NetBSD: Makefile,v 1.44 2024/09/28 12:47:11 wiz Exp $
 
 DISTNAME=	exabgp-4.2.22
 CATEGORIES=	net
@@ -9,9 +9,7 @@ HOMEPAGE=	https://github.com/Exa-Networks/exabgp/
 COMMENT=	BGP swiss army knife
 LICENSE=	modified-bsd
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-USE_PKG_RESOURCES=	yes
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_TOOLS+=	perl:run
 
