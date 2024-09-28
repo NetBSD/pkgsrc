@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/08/14 05:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/09/28 18:41:03 wiz Exp $
 
 DISTNAME=	glmark2-2023.01
 CATEGORIES=	benchmarks
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd
 USE_LANGUAGES=	c c++14
 
 USE_TOOLS+=	pkg-config
+
+# https://github.com/glmark2/glmark2/issues/234
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "../../mk/dlopen.buildlink3.mk"
 .if ${BUILTIN_LIB_FOUND.dl:U:tl} != yes
