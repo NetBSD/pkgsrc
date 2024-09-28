@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/09/10 13:54:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2024/09/28 09:28:05 ryoon Exp $
 
 DISTNAME=	NotoSerifHentaigana-v1.000
-PKGNAME=	${DISTNAME:S,-v,-,}
+PKGNAME=	${DISTNAME:tl:S,notoserif,noto-,:S,-v,-,}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notofonts/}
 GITHUB_PROJECT=	hentaigana
