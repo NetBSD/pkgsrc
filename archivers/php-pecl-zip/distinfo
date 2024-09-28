@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/11/30 16:27:16 taca Exp $
+$NetBSD: distinfo,v 1.15 2024/09/28 15:25:30 taca Exp $
 
-BLAKE2s (php-zip/zip-1.22.3.tgz) = 31422b70f518fa2e836a38d7b35abd2bc7c55f67a852d08dffe404c74b674d18
-SHA512 (php-zip/zip-1.22.3.tgz) = 5896352717dee850d222a78d617c6f37ccd932ad9e5ccb44ecd90cb7e2070dc1a391fdb7a626b32eb8f5c1565552ca0a375e5f75de483f772f9d5f154a858e85
-Size (php-zip/zip-1.22.3.tgz) = 364307 bytes
+BLAKE2s (php-zip/zip-1.22.4.tgz) = 57349df12edc29d2b3845d45be2c2638cb3d11886f3e34309492b70a153edb62
+SHA512 (php-zip/zip-1.22.4.tgz) = 4d802ad4bd0301e71d4a5c4ee8e3ee6811cb5b30615ae5318d923842aff6ba2e80abcff4a63ccb0d726c28137c9a4115cf4559757247c7ea7e8280613907256b
+Size (php-zip/zip-1.22.4.tgz) = 366749 bytes
