@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2021/09/30 08:33:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/09/28 02:17:55 ktnb Exp $
 
 DISTNAME=	slang-2.2.4
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
@@ -34,6 +34,9 @@ CONF_FILES+=	${EGDIR}/slsh.rc ${PKG_SYSCONFDIR}/slsh.rc
 INSTALL_MAKE_FLAGS+=	DEST_SLSH_CONF_DIR=${DESTDIR}/${EGDIR}
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/slang2
+
+BUILDLINK_TRANSFORM+=	rm:-O2
+CFLAGS+=	-O0
 
 .include "../../mk/termcap.buildlink3.mk"
 
