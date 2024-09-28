@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5922 2024/09/27 16:50:54 jakllsch Exp $
+$NetBSD: CHANGES-2024,v 1.5923 2024/09/28 11:54:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9029,3 +9029,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/garden to 1.8.0 [pin 2024-09-27]
 	Updated shells/oh-my-posh to 23.15.0 [pin 2024-09-27]
 	Updated audio/pianobar to 2022.04.01 [jakllsch 2024-09-27]
+	Updated net/exabgp to 4.2.22 [he 2024-09-28]
