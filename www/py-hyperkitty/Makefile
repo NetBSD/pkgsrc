@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/08/06 11:27:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/09/28 19:29:00 wiz Exp $
 
 DISTNAME=	hyperkitty-1.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperkitty/}
 
