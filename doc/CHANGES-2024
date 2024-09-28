@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5927 2024/09/28 15:25:43 taca Exp $
+$NetBSD: CHANGES-2024,v 1.5928 2024/09/28 15:29:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9034,3 +9034,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/php82 to 8.2.24 [taca 2024-09-28]
 	Updated lang/php81 to 8.1.30 [taca 2024-09-28]
 	Updated archivers/php-pecl-zip to 1.22.4 [taca 2024-09-28]
+	Updated security/ruby-metasploit-payloads to 2.0.173 [taca 2024-09-28]
