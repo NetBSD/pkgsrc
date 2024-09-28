@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/05/17 14:09:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2024/09/28 08:27:55 wiz Exp $
 
 DISTNAME=	QR-Code-generator-1.8.0
 PKGNAME=	${DISTNAME:tl}
@@ -11,7 +11,11 @@ HOMEPAGE=	https://github.com/nayuki/QR-Code-generator
 COMMENT=	High-quality QR Code generator in C/C++
 LICENSE=	mit
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++
+
+USE_CC_FEATURES+=	c99
+USE_CXX_FEATURES+=	c++11
+
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
