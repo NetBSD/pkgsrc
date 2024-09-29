@@ -1,4 +1,4 @@
-$NetBSD: patch-Misc_common.h,v 1.2 2024/03/11 11:35:58 jperkin Exp $
+$NetBSD: patch-Misc_common.h,v 1.3 2024/09/29 09:23:31 adam Exp $
 
 Add NetBSD support and check for _LITTLE_ENDIAN
 
@@ -23,7 +23,7 @@ Add NetBSD support and check for _LITTLE_ENDIAN
  
  /* Intel based machine ? */
 -#if defined(__i386) || defined(_M_X86) || defined(TARGET_OS_VMS)
-+#if defined(__i386) || defined(_M_X86) || defined(TARGET_OS_VMS) || defined(__x86_64__)
++#if defined(__i386) || defined(_M_X86) || defined(TARGET_OS_VMS) || defined(__x86_64__) || defined(__arm64__)
  #undef BIG_ENDIAN
  #undef LITTLE_ENDIAN
  # define LITTLE_ENDIAN
