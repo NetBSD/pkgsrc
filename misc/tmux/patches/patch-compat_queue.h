@@ -1,13 +1,17 @@
-$NetBSD: patch-compat_queue.h,v 1.1 2024/09/19 18:18:08 tnn Exp $
+$NetBSD: patch-compat_queue.h,v 1.2 2024/09/29 16:18:05 schmonz Exp $
 
-Fix build with xcode 16.
+Fix build with xcode 16 and 4.2.
 
 --- compat/queue.h.orig	2022-04-25 08:25:13.000000000 +0000
 +++ compat/queue.h
-@@ -32,6 +32,23 @@
+@@ -32,6 +32,27 @@
   *	@(#)queue.h	8.5 (Berkeley) 8/20/94
   */
  
++#ifndef __has_include
++#define __has_include(x) 0
++#endif
++
 +#if defined(__APPLE__)
 +#  if __has_include(<sys/queue.h>)
 +#    include <sys/queue.h>
