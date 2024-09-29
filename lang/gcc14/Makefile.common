@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2024/07/24 23:01:28 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.4 2024/09/29 16:51:55 adam Exp $
 # used by lang/gcc14-libjit/Makefile
 
 GCC_PKGNAME=		gcc14
@@ -60,8 +60,8 @@ CHECK_PORTABILITY_SKIP+=	gcc/configure.orig_dist
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
 BUILDLINK_TRANSFORM+=	rm:-nodefaultrpaths
 CONFIGURE_ARGS+=	--disable-darwin-at-rpath
-PATCHFILES=		gcc-14.1.0.diff
-PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/82b5c1c/gcc/
+PATCHFILES=		gcc-14.2.0.diff
+PATCH_SITES=		https://raw.githubusercontent.com/Homebrew/formula-patches/d5dcb91/gcc/
 PATCH_DIST_STRIP=	-p1
 .endif
 
