@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.57 2024/09/19 18:18:08 tnn Exp $
+$NetBSD: distinfo,v 1.58 2024/09/29 16:18:05 schmonz Exp $
 
 BLAKE2s (tmux-3.4.tar.gz) = 81f261414c92f6a936204aa9f8e8e57f7e72389433b3ec7a60ff41521959030d
 SHA512 (tmux-3.4.tar.gz) = bd3880211d99d8ee15947000abf8a1832fdfa48b29b2df81b66d5969cf3f4e64e746f984f6139bfc57e3ebee7fe8dc7cbb6bccb779307607de6c376969fecbff
 Size (tmux-3.4.tar.gz) = 707213 bytes
 SHA1 (patch-compat_daemon-darwin.c) = e8feeb4b100e73ab197eb2fd776fa648a1da28e4
-SHA1 (patch-compat_queue.h) = ca8e0287a1752aa47262d85f57184a294a237480
+SHA1 (patch-compat_queue.h) = a226fa09b5dfab6d44a9a6d1a92e46516d6922fc
 SHA1 (patch-osdep-darwin.c) = 715b1e206add7d911edec381942706220ea2fbb6
