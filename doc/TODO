@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24890 2024/09/28 19:29:12 wiz Exp $
+$NetBSD: TODO,v 1.24891 2024/09/29 08:49:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -648,6 +648,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fribidi-1.0.16
 	o fricas-1.3.8
 	o frink-2.3.1a2
 	o ftplibpp-2.0.2
@@ -667,6 +668,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gcombust-0.1.55
 	o gdb-15.1
 	o gdb7-7.12
+	o geeqie-2.5
 	o geneweb-7.0.0
 	o gens-2.15.5
 	o gfract-0.33
@@ -735,11 +737,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.2.0
+	o grafana-11.2.1
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.66.2
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtk4-4.16
@@ -761,6 +764,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o handbrake-1.7.0
 	o hanzim-3.5
 	o happy-2.0.1
+	o harfbuzz-10.0.1
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -880,6 +884,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libslang2-2.3.2
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libuv-1.49
 	o libvirt-10.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -943,6 +948,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o monocypher-3.1.2
 	o mopher-0.6.0
 	o moserial-2.30.0
+	o mpv-0.39.0
 	o mserv-devel-0.41
 	o mtail-1.2.0
 	o multitail-6.4.2
@@ -1117,20 +1123,30 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-FxA-0.7.9
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-aiohappyeyeballs-2.4.2
+	o py-aiohttp-3.10.8
+	o py-astroid-3.3.4
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-fonttools-4.54.1
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.147.0
+	o py-grpcio-1.66.2
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
+	o py-icalendar-6.0.0
 	o py-input-pad-1.4.2
+	o py-jaraco.functools-4.1.0
+	o py-maturin-1.7.4
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
@@ -1138,16 +1154,23 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-puremagic-1.28
+	o py-pylint-3.3.1
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
-	o py-ruff-0.6.7
+	o py-ruff-0.6.8
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autoapi-3.3.2
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-0.81.0
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-uwsgi-2.0.27
+	o py-watchdog-5.0.3
+	o py-yarl-1.13.1
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1157,6 +1180,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qutebrowser-3.0.1
 	o radiance-5.3
 	o rails-6.1.0
+	o raqm-0.10.2
 	o rasmol-2.7.5.2
 	o rat-4.2.25
 	o rav1e-0.7.0
@@ -1255,6 +1279,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o syft-0.68.1
 	o sympa-6.2.72
 	o syncstorage-rs-0.17.7 [wip; needs rust>=1.80]
+	o syncstorage-rs-0.17.9
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
@@ -1304,6 +1329,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-elixir-0.3.1
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1411,6 +1437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
+	o yt-dlp-2024.9.27
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
