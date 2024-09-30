@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.131 2024/09/16 07:20:15 adam Exp $
+# $NetBSD: Makefile,v 1.132 2024/09/30 14:22:27 wiz Exp $
 
-DISTNAME=	geeqie-2.4
-PKGREVISION=	5
+DISTNAME=	geeqie-2.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BestImageViewer/}
 EXTRACT_SUFX=	.tar.xz
@@ -27,7 +26,8 @@ MESON_ARGS+=	-Dyelp-build=disabled
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		bash:run msgfmt pkg-config
+# awk -W
+USE_TOOLS=		bash:run gawk msgfmt pkg-config
 
 REPLACE_BASH+=		plugins/*/*
 REPLACE_BASH+=		doc/*.sh
