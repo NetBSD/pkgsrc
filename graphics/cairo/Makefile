@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2024/09/21 10:15:19 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2024/09/30 10:43:59 jperkin Exp $
 
 DISTNAME=	cairo-1.18.2
 CATEGORIES=	graphics
@@ -32,7 +32,7 @@ SUPERSEDES+=	cairo-gobject-[0-9]*
 
 # see meson.build for systems that support cairo-trace
 PLIST_VARS+=	trace
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST.trace=	yes
 .endif
 
