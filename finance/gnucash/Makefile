@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.354 2024/08/25 06:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.355 2024/09/30 14:11:13 wiz Exp $
 
-DISTNAME=		gnucash-5.8
+DISTNAME=		gnucash-5.9
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 GITHUB_RELEASE=		${PKGVERSION_NOREV}
@@ -35,11 +35,13 @@ CXXFLAGS+=		-Wno-deprecated-declarations
 CFLAGS+=		-Wno-char-subscripts
 
 MAKE_ENV+=		GUILE_AUTO_COMPILE=0
-CMAKE_CONFIGURE_ARGS+=		-DWITH_AQBANKING=OFF
-CMAKE_CONFIGURE_ARGS+=		-DPERL_EXECUTABLE=${PERL5}
-CMAKE_CONFIGURE_ARGS+=		-DCOMPILE_GSCHEMAS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_AQBANKING=OFF
+CMAKE_CONFIGURE_ARGS+=	-DPERL_EXECUTABLE=${PERL5}
+CMAKE_CONFIGURE_ARGS+=	-DCOMPILE_GSCHEMAS=OFF
 
-# test status as of 5.4.1
+# as of 5.9
+# before 'make install'
+# 44% tests passed, 72 tests failed out of 129
 # after 'make install'
 # 89% tests passed, 14 tests failed out of 129
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/lib
