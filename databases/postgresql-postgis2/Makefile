@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.153 2024/09/21 10:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2024/09/30 17:41:54 gdt Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
 # benefit.  So far it looks more likely than not that postgis will not
 # need to be versioned again soon.
-MAJOR=		3.4
-DISTNAME=	postgis-${MAJOR}.3
+MAJOR=		3.5
+DISTNAME=	postgis-${MAJOR}.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	2
+#PKGREVISION=	0
 CATEGORIES=	databases geography
 MASTER_SITES=	https://download.osgeo.org/postgis/source/
 
@@ -27,15 +27,12 @@ CONFLICTS=		postgis-[0-9]*
 # 1. Fix installation use of "install -o root" from pgxs.mk, when postgresql
 #    was built as root and postgis is built/installed as a non-root user.
 #    https://lists.osgeo.org/pipermail/postgis-devel/2015-July/025045.html
-# 2. Recheck and fix or file upstream about MAKE_JOBS_SAFE.
-# 3. Check 2nd make, and file bug about anything that happens.  Check xsltproc
+# 2. Check 2nd make, and file bug about anything that happens.  Check xsltproc
 #    in particular.
 
-# gmake complains about adding + to parent rule
-MAKE_JOBS_SAFE=		no
-
 USE_GCC_RUNTIME=		yes
-USE_LANGUAGES=			c c++ c99
+USE_LANGUAGES=			c c++
+USE_CC_FEATURES+=		c99
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes
@@ -45,9 +42,6 @@ PGSQL_VERSIONS_ACCEPTED=	16 15 14 13 12
 
 # This isn't an option, but could be.
 CONFIGURE_ARGS+=	--with-address-standardizer
-
-# \todo Add sfcgal >=1.3.2 https://gitlab.com/Oslandia/SFCGAL
-# and CGAL >=4.1.
 
 BUILD_TARGET=		all docs
 INSTALL_TARGET=		install docs-install
@@ -92,6 +86,8 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 
 # MISSING DEPEENDS
 # "GNU gettext 0.14" for the loader
+# \todo Add sfcgal >=1.3.2 https://gitlab.com/Oslandia/SFCGAL
+# and CGAL >=4.1.
 
 # OMITTED DEPENDS
 # gtk 2.2.0, for GUI version of shp2pgsql
@@ -99,9 +95,9 @@ MAKE_ENV+=		"XSLTPROCFLAGS=--timing"
 # NORMAL DEPENDS
 .include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.geos+=	geos>=3.6
+BUILDLINK_API_DEPENDS.geos+=	geos>=3.8
 .include "../../geography/geos/buildlink3.mk"
-BUILDLINK_API_DEPENDS.proj+=	proj>=6.1
+# proj >= 6.1, but bl3 is >8 anyway
 .include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
