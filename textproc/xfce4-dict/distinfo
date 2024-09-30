@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/11/26 02:02:27 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2024/09/30 23:04:18 gutteridge Exp $
 
-BLAKE2s (xfce4-dict-0.8.6.tar.bz2) = 2dde6ce2080d8e8b68236a2fc1711f763b3cd33ec5cd5508defd1eb8021e61f9
-SHA512 (xfce4-dict-0.8.6.tar.bz2) = bbb5926121e31c5adbd8f4c3ceb479759ee07b902e690245087213668fade48b92f9ffc7f4cabdfaa3ee1c02db8847468dd0bbd11e240017cd3c2b9901b81485
-Size (xfce4-dict-0.8.6.tar.bz2) = 542993 bytes
+BLAKE2s (xfce4-dict-0.8.7.tar.bz2) = 7e9d0ffb19cbb136d2d1cfe76c21985f4dd3b43f2f2d3498ca3946067c057f3a
+SHA512 (xfce4-dict-0.8.7.tar.bz2) = 607800a9a8b356b0257fbbd5a5b7933f7c23dc70dc60706f26528806e4d72d952b1e3e320be3dbeeccad5c4e8606e4e062f7bfd35e68396c73d726d02206cff7
+Size (xfce4-dict-0.8.7.tar.bz2) = 670207 bytes
