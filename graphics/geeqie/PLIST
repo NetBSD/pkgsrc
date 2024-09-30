@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2024/01/26 14:13:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/09/30 14:22:27 wiz Exp $
 bin/geeqie
 lib/geeqie/downsize
 lib/geeqie/geeqie-camera-import
 lib/geeqie/geeqie-camera-import-hook-script
+lib/geeqie/geeqie-exif-datetime-to-file
 lib/geeqie/geeqie-export-jpeg
 lib/geeqie/geeqie-image-crop
 lib/geeqie/geeqie-random-image
@@ -16,10 +17,12 @@ lib/geeqie/lensID
 lib/geeqie/resize-help.sh
 man/man1/geeqie.1
 share/applications/org.geeqie.Geeqie.desktop
+share/bash-completion/completions/geeqie
 share/doc/geeqie/COPYING
 share/doc/geeqie/README.md
 share/doc/geeqie/TODO
 share/geeqie/applications/org.geeqie.camera-import.desktop
+share/geeqie/applications/org.geeqie.exif-datetime-to-file.desktop
 share/geeqie/applications/org.geeqie.export-jpeg.desktop
 share/geeqie/applications/org.geeqie.image-crop.desktop
 share/geeqie/applications/org.geeqie.open-with.desktop
