@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5940 2024/09/30 17:43:28 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.5941 2024/09/30 17:52:06 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9050,3 +9050,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/yt-dlp to 2024.9.27 [adam 2024-09-30]
 	Updated fonts/nerd-fonts-NerdFontsSymbolsOnly to 3.2.1 [ktnb 2024-09-30]
 	Updated databases/postgresql-postgis2 to 3.5.0 [gdt 2024-09-30]
+	Updated x11/kitty to 0.36.4 [ktnb 2024-09-30]
