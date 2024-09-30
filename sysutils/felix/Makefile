@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2024/04/08 10:40:23 pin Exp $
+# $NetBSD: Makefile,v 1.63 2024/09/30 18:54:18 pin Exp $
 
-DISTNAME=	felix-2.13.0
+DISTNAME=	felix-2.14.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,10 @@ COMMENT=	TUI file manager with vim-like key mapping
 LICENSE=	mit
 
 .include "cargo-depends.mk"
+
+#RUST_REQ=	1.80.1
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.80.1 on amd64
 
 INSTALLATION_DIRS=	share/examples/felix
 
