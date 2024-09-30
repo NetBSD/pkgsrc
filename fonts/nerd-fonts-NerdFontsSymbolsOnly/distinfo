@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/09/30 17:26:30 ktnb Exp $
+
+BLAKE2s (nerd-fonts/3.2.1/NerdFontsSymbolsOnly.tar.xz) = d89592049e79820d7b4f75db79c4b9868639a58379453165b8fa66742f9e51c5
+SHA512 (nerd-fonts/3.2.1/NerdFontsSymbolsOnly.tar.xz) = ac61c1d4153049f1a3009fb6ec4f89073770a09d70b7236b9e0eca07da593e57c14afe2a0c9d7bfb315389c878afcdfdb23c1c19a23c3950e7de52a8ce3099de
+Size (nerd-fonts/3.2.1/NerdFontsSymbolsOnly.tar.xz) = 1752504 bytes
