@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2024/09/22 13:24:33 pin Exp $
+$NetBSD: distinfo,v 1.41 2024/09/30 18:55:25 pin Exp $
 
 BLAKE2s (addr2line-0.24.1.crate) = 6b7b4e5845873018da12292d582de9e8ec0be0edbac314cbbbfb7dad89d7a983
 SHA512 (addr2line-0.24.1.crate) = ffa53fcfbbccdec943410083aa5f44e93122e0b40dc45acfe00b454a02c5575549e9a61807d87080d1677da807fef695b6676036fec3ca079d2b841794dbc0b5
@@ -285,9 +285,9 @@ Size (getrandom-0.2.15.crate) = 37163 bytes
 BLAKE2s (gimli-0.31.0.crate) = 1422bf90a671c76c890da668536b80fd88875fa2404c4e7438c184ff645618aa
 SHA512 (gimli-0.31.0.crate) = 65252d3061e5b0748c9481e7ace7850c9d640b16fdb64e9fd86dad300711f67ceb695ca5d3153ced91f88f3fc4712475721ed2300786155a2f5ed832fa992558
 Size (gimli-0.31.0.crate) = 278951 bytes
-BLAKE2s (git-cliff-2.6.0.tar.gz) = b246129aab88a583af877052c1ced38744723d32993d57c12107a811c47d3bde
-SHA512 (git-cliff-2.6.0.tar.gz) = 4ee0bd099cc9b6f368af76cb0167d2532cd5741b7dc5b8b3d0ab40fba24d39fd9de4cea3c82c03c5d8315eac85554904f7021b380564305b108ac33401f9f68c
-Size (git-cliff-2.6.0.tar.gz) = 10510161 bytes
+BLAKE2s (git-cliff-2.6.1.tar.gz) = 7e0efcdfdbb2f0102891382ffb543bbbc3f63d180db4cb99ce10d04dbccce8f4
+SHA512 (git-cliff-2.6.1.tar.gz) = 6483d903759c0a94317c1cb71cb45de3bf25bd88392d9e35027f89ae977042f77a4138d96118a5e7d8bd24dff2a488c1b720e766c70a38bf2044f24328dbdbf5
+Size (git-cliff-2.6.1.tar.gz) = 10509812 bytes
 BLAKE2s (git-conventional-0.12.7.crate) = c794f817107ad37f3fa72fbd22b6d7494570aa58f520f63c615e155cd5ebc5e3
 SHA512 (git-conventional-0.12.7.crate) = c263ecc4e029e04692dde7c15602b188090c31ba9072d2f7d13c6aaa1f149da9caeda9babcdc496ae44bc9ed18691ab80c52feaadf26d1efe015f3931af80fc0
 Size (git-conventional-0.12.7.crate) = 15962 bytes
@@ -819,12 +819,12 @@ Size (termcolor-1.4.1.crate) = 18773 bytes
 BLAKE2s (terminal_size-0.3.0.crate) = 46276539b18feb5f9380423dbb6bec89a27ec4b11ad75a3b4f69ad9625680573
 SHA512 (terminal_size-0.3.0.crate) = f3bc9144aa8a87556543584a2495df6267ce3bb017f3ed3d00fa43e89b5de783e1285ca62dbad9dd9c3b37e3a476a6f3ab0804eba2411cb594a569bbdb310681
 Size (terminal_size-0.3.0.crate) = 10096 bytes
-BLAKE2s (thiserror-1.0.63.crate) = d66f923c99a39446cd3fe2bd1289861846eb3d80b8ce63386edb660b417d7230
-SHA512 (thiserror-1.0.63.crate) = d5c2360075947cc0fff3253b5532f03f3102d6c9ef52dfeb3b400771116937e466a62ce67ccdf91532bf096f4882322522349a727588fd87b932326c8e758753
-Size (thiserror-1.0.63.crate) = 21537 bytes
-BLAKE2s (thiserror-impl-1.0.63.crate) = 5bb5d9d23853fd4123c18b4fabe8f615c88dc1631b60c1d26ab8d378bf2b16bb
-SHA512 (thiserror-impl-1.0.63.crate) = f93b7f89784d72d8b6e36050c22b88b7fd8de38e9a90fa6fe3f45973ea1566ce8bf82e959951377e3bf584a32afc97812188be25983a028be138b1700bb8c102
-Size (thiserror-impl-1.0.63.crate) = 16047 bytes
+BLAKE2s (thiserror-1.0.64.crate) = 8dab920c609aa1a0e4d8f5b142bb0ed95b37c5b07eaf65331cd3f8ac46ae63bb
+SHA512 (thiserror-1.0.64.crate) = cff21ebd9d5d37e548c35dd1dc0e6e885a47363cbd8ce3cc8508e8e9b5f844c168b9f3d9ab12ca8d5910a53a9e09b4ddc75a0c32f983e27727fc104e4ff77618
+Size (thiserror-1.0.64.crate) = 21574 bytes
+BLAKE2s (thiserror-impl-1.0.64.crate) = aea6717a8e11cc6da70a6d467fdcba8eeaefe250141e28974ef194671930f0d1
+SHA512 (thiserror-impl-1.0.64.crate) = 75e55f204a290eb38b2215fcdfa91f9f1cb002b121ffdf56bd5f6d75476614e3ce06360da7d74b870c45f6b107fa9e61f85ce39c0e65e713f8c191d79f96f443
+Size (thiserror-impl-1.0.64.crate) = 16073 bytes
 BLAKE2s (time-0.3.36.crate) = b563433cc72171e5a5059983b90fa3cba288e0bbc784cce8e815f53e140d5a63
 SHA512 (time-0.3.36.crate) = 83da6e27691d1f0ef37ed276528e927686a06dab4811b6e29d625ef7a0f7c30fbb86896d74a2b087726e7a24a951b0a83aa1f5f22d711ead54f447d36ac47133
 Size (time-0.3.36.crate) = 119805 bytes
