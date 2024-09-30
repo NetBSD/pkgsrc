@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2024/08/25 06:18:42 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2024/09/30 14:11:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnucash
 PKG_SUPPORTED_OPTIONS=	libdbi libofx gnucash-finance-quote python
@@ -29,8 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_SQL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-CMAKE_CONFIGURE_ARGS+=			-DWITH_PYTHON=ON
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+CMAKE_CONFIGURE_ARGS+=		-DWITH_PYTHON=ON
 REPLACE_PYTHON+=		bindings/python/example_scripts/*.py
 REPLACE_PYTHON+=		bindings/python/example_scripts/rest-api/*.py
 REPLACE_PYTHON+=		gnucash/python/pycons/*.py
