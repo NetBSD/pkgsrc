@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2024/04/26 17:24:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.20 2024/09/30 17:53:01 ktnb Exp $
 # used by fonts/nerd-fonts-3270/Makefile
 # used by fonts/nerd-fonts-Agave/Makefile
 # used by fonts/nerd-fonts-AnonymousPro/Makefile
@@ -16,6 +16,7 @@
 # used by fonts/nerd-fonts-JetBrainsMono/Makefile
 # used by fonts/nerd-fonts-SourceCodePro/Makefile
 # used by fonts/nerd-fonts-Hack/Makefile
+# used by fonts/nerd-fonts-NerdFontsSymbolsOnly/Makefile
 
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
