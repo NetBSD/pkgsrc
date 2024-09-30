@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.427 2024/09/10 13:55:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.428 2024/09/30 20:56:19 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -222,6 +222,7 @@ SUBDIR+=	nerd-fonts-Hack
 SUBDIR+=	nerd-fonts-IBMPlexMono
 SUBDIR+=	nerd-fonts-JetBrainsMono
 SUBDIR+=	nerd-fonts-Meslo
+SUBDIR+=	nerd-fonts-NerdFontsSymbolsOnly
 SUBDIR+=	nerd-fonts-SourceCodePro
 SUBDIR+=	nerd-fonts-iA-Writer
 SUBDIR+=	neumeister-otf
