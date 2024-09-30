@@ -1,13 +1,15 @@
-$NetBSD: patch-src_unix_core.c,v 1.1 2022/01/28 21:13:10 schmonz Exp $
+$NetBSD: patch-src_unix_core.c,v 1.2 2024/09/30 17:05:46 adam Exp $
 
 Apply MacPorts patch-libuv-unix-core-close-nocancel.diff for
 - older gcc versions to not error on pragmas
 - 32bit code to link correctly
 - Tiger to work around not having a non-cancellable close function
 
---- src/unix/core.c.orig	2022-01-04 14:18:00.000000000 +0000
+Fix build on NetBSD: https://github.com/libuv/libuv/issues/4552
+
+--- src/unix/core.c.orig	2024-09-25 08:17:20.000000000 +0000
 +++ src/unix/core.c
-@@ -531,18 +531,31 @@ int uv__accept(int sockfd) {
+@@ -595,18 +595,31 @@ int uv__accept(int sockfd) {
   * will unwind the thread when it's in the cancel state. Work around that
   * by making the system call directly. Musl libc is unaffected.
   */
@@ -46,3 +48,19 @@ Apply MacPorts patch-libuv-unix-core-close-nocancel.diff for
  #elif defined(__linux__) && defined(__SANITIZE_THREAD__) && defined(__clang__)
    long rc;
    __sanitizer_syscall_pre_close(fd);
+@@ -1882,13 +1895,13 @@ int uv__search_path(const char* prog, ch
+ #if defined(__linux__) || defined (__FreeBSD__)
+ # define uv__cpu_count(cpuset) CPU_COUNT(cpuset)
+ #elif defined(__NetBSD__)
+-static int uv__cpu_count(cpuset_t *cpuset) {
++static int uv__cpu_count(cpuset_t *set) {
+   int rc;
+   cpuid_t i;
+ 
+   rc = 0;
+   for (i = 0;; i++) {
+-    int r = cpuset_isset(cpu, set);
++    int r = cpuset_isset(i, set);
+     if (r < 0)
+       break;
+     if (r)
