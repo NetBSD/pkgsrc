@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/27 16:57:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2024/10/01 17:50:38 maya Exp $
 
 DISTNAME=	pce-0.2.2
 CATEGORIES=	emulators
@@ -8,6 +8,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.hampa.ch/pce/
 COMMENT=	PC Emulator
 LICENSE=	gnu-gpl-v2
+
+TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
