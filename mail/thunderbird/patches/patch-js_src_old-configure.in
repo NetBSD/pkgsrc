@@ -1,0 +1,13 @@
+$NetBSD: patch-js_src_old-configure.in,v 1.1 2024/10/01 15:01:28 ryoon Exp $
+
+--- js/src/old-configure.in.orig	2024-07-13 07:59:30.318615331 +0000
++++ js/src/old-configure.in
+@@ -257,7 +257,7 @@ case "$target" in
+ 
+ *-android*|*-linuxandroid*)
+     MOZ_OPTIMIZE_FLAGS="-O3"
+-    if test "$CC_TYPE" == gcc ; then
++    if test "$CC_TYPE" = gcc ; then
+        MOZ_OPTIMIZE_FLAGS="-fno-reorder-functions $MOZ_OPTIMIZE_FLAGS"
+     fi
+     ;;

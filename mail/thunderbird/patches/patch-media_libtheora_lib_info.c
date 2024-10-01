@@ -1,6 +1,12 @@
-$NetBSD: patch-media_libtheora_lib_info.c,v 1.1 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-media_libtheora_lib_info.c,v 1.2 2024/10/01 15:01:28 ryoon Exp $
 
---- media/libtheora/lib/info.c.orig	2020-08-28 21:32:52.000000000 +0000
+Fix undefined behavior when calling <ctype.h> functions with illegal values.
+
+media/libtheora/lib/info.c:32:8: error: array subscript is of type 'char' [-Werror,-Wchar-subscripts]
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1642081
+
+--- media/libtheora/lib/info.c.orig	2020-05-07 18:34:12.000000000 +0000
 +++ media/libtheora/lib/info.c
 @@ -29,7 +29,7 @@
  static int oc_tagcompare(const char *_s1,const char *_s2,int _n){
