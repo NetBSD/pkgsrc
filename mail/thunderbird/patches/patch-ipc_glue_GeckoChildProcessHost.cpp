@@ -1,6 +1,9 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2023/02/05 09:05:29 he Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.12 2024/10/01 15:01:28 ryoon Exp $
 
---- ipc/glue/GeckoChildProcessHost.cpp.orig	2020-08-28 21:32:41.000000000 +0000
+* Support Solaris
+* Fix NetBSD linking
+
+--- ipc/glue/GeckoChildProcessHost.cpp.orig	2023-08-17 21:21:29.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -15,4 +18,4 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2023/02/05 09:05:29 he 
 +#endif
  
  #include "base/command_line.h"
- #include "base/process_util.h"
+ #include "base/process.h"

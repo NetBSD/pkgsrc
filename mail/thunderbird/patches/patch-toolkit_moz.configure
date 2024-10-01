@@ -1,22 +1,31 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.4 2023/08/25 10:15:01 pho Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.5 2024/10/01 15:01:29 ryoon Exp $
 
---- toolkit/moz.configure.orig	2023-08-14 18:20:04.000000000 +0000
+* Enable ALSA for NetBSD too.
+* Support --enable-forkserver on NetBSD.
+
+--- toolkit/moz.configure.orig	2023-08-15 21:10:03.000000000 +0000
 +++ toolkit/moz.configure
-@@ -325,8 +325,6 @@ set_config("MOZ_OPENSL", imply_opensl, w
+@@ -242,6 +242,7 @@ def imply_alsa(values, target):
+         any("alsa" in value for value in values)
+         and target.kernel != "Linux"
+         and target.os != "FreeBSD"
++        and target.os != "NetBSD"
+     ):
+         die("Cannot enable ALSA on %s", target.os)
+     return any("alsa" in value for value in values) or None
+@@ -2816,6 +2817,7 @@ def forkserver_default(target, build_pro
+         (target.os == "GNU" and target.kernel == "Linux")
+         or target.os == "FreeBSD"
+         or target.os == "OpenBSD"
++        or target.os == "NetBSD"
+     )
  
- set_config("MOZ_OSS", imply_oss, when="--enable-audio-backends")
  
--imply_option("--enable-pulseaudio", imply_pulseaudio, reason="--enable-audio-backends")
--
- imply_option("--enable-sndio", imply_sndio, reason="--enable-audio-backends")
- 
- set_config("MOZ_SUNAUDIO", imply_sunaudio, when="--enable-audio-backends")
-@@ -1167,7 +1165,7 @@ set_define("MOZ_WEBSPEECH_TEST_BACKEND",
- # ==============================================================
- @depends(target, milestone)
- def skia_pdf_default(target, milestone):
--    return milestone.is_nightly and target.os != "WINNT"
-+    return milestone.is_nightly and target.os != "WINNT" and target.endianness != 'big'
- 
- 
- option("--enable-skia-pdf", default=skia_pdf_default, help="{Enable|Disable} Skia PDF")
+@@ -2834,6 +2836,7 @@ def forkserver_flag(value, target):
+         or (target.os == "GNU" and target.kernel == "Linux")
+         or target.os == "FreeBSD"
+         or target.os == "OpenBSD"
++        or target.os == "NetBSD"
+     ):
+         return bool(value)
+     pass

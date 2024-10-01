@@ -1,6 +1,8 @@
-$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.1 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-media_ffvpx_libavutil_arm_bswap.h,v 1.2 2024/10/01 15:01:28 ryoon Exp $
 
---- media/ffvpx/libavutil/arm/bswap.h.orig	2020-08-28 21:33:11.000000000 +0000
+Fix NetBSD aarch64 build.
+
+--- media/ffvpx/libavutil/arm/bswap.h.orig	2019-10-30 17:35:56.000000000 +0000
 +++ media/ffvpx/libavutil/arm/bswap.h
 @@ -23,6 +23,8 @@
  #include "config.h"

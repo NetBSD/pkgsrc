@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.19 2024/08/20 14:11:52 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.20 2024/10/01 15:01:27 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -15,7 +15,7 @@ REPLACE_PYTHON=		build/cargo-linker
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake gm4 unzip zip # autoconf213
-UNLIMIT_RESOURCES+=	datasize virtualsize
+UNLIMIT_RESOURCES+=	datasize stacksize virtualsize
 
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 OVERRIDE_DIRDEPTH=		4
@@ -28,9 +28,14 @@ GCC_REQD+=		8
 # To find vscanf, vfscanf, isblank and so on under NetBSD 9.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
-TOOL_DEPENDS+=		cbindgen>=0.24.3:../../devel/cbindgen
+TOOL_DEPENDS+=		cbindgen>=0.26.0:../../devel/cbindgen
 
+.if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
+USE_TOOLS+=		diff
+.else
+CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
+.endif
 
 # malloc_usable_size()
 LDFLAGS.NetBSD+=	-ljemalloc
@@ -44,7 +49,7 @@ CFLAGS+=		-msse2
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
 # "i486" when attempting to select the Rust compiler target.
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
 CONFIGURE_ARGS+=	--target=i586-unknown-netbsd
 CONFIGURE_ARGS+=	--host=i586-unknown-netbsd
 .elif ${MACHINE_PLATFORM:MSunOS-*-x86_64}
@@ -103,6 +108,7 @@ CONFIGURE_ARGS+=	--with-system-libevent
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--enable-chrome-format=omni
 CONFIGURE_ARGS+=	--with-system-webp
+CONFIGURE_ARGS+=	--enable-forkserver
 
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-icf
@@ -192,7 +198,14 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	ffvpx
+PLIST_VARS+=	v4l2_decode ffvpx
+
+PLIST_VARS+=		v4l2_decode
+.if ${MACHINE_ARCH} == "aarch64" || \
+    ${MACHINE_ARCH:M*arm*} || \
+    ${MACHINE_ARCH} == riscv64
+PLIST.v4l2_decode=	yes	# see toolkit/moz.configure
+.endif
 
 .if ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH:M*arm*} || \
@@ -204,6 +217,7 @@ PLIST.ffvpx=	yes	# see media/ffvpx/ffvpxcommon.mozbuild
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
 # support is only available when the toolkit is cairo-cocoa.
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
+CONFIGURE_ARGS.NetBSD+=	--disable-sandbox
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -227,7 +241,7 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 #.include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.90
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.101
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
@@ -238,17 +252,17 @@ BUILDLINK_API_DEPENDS.libwebp+=	libwebp>=1.0.2
 .include "../../graphics/libwebp/buildlink3.mk"
 BUILDLINK_DEPMETHOD.clang=	build
 .include "../../lang/clang/buildlink3.mk"
-RUST_REQ=	1.66.0
+RUST_REQ=	1.76.0
 .include "../../lang/rust/rust.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 # TODO: check again, pkgsrc has hunspell 1.7
 # was: textproc/hunspell 1.3 is too old
 #.include "../../textproc/hunspell/buildlink3.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
+BUILDLINK_API_DEPENDS.pixman+= pixman>=0.40
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 PLIST_VARS+=		wayland

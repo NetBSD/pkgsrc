@@ -1,6 +1,8 @@
-$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.4 2023/02/05 09:05:29 he Exp $
+$NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.5 2024/10/01 15:01:29 ryoon Exp $
 
---- toolkit/components/terminator/nsTerminator.cpp.orig	2020-08-28 21:33:46.000000000 +0000
+* Fix segfault on exit under NetBSD
+
+--- toolkit/components/terminator/nsTerminator.cpp.orig	2022-06-16 21:35:58.000000000 +0000
 +++ toolkit/components/terminator/nsTerminator.cpp
 @@ -34,7 +34,7 @@
  #if defined(XP_WIN)
@@ -11,15 +13,14 @@ $NetBSD: patch-toolkit_components_terminator_nsTerminator.cpp,v 1.4 2023/02/05 0
  #endif
  
  #include "mozilla/AppShutdown.h"
-@@ -184,7 +184,11 @@ void RunWatchdog(void* arg) {
+@@ -184,7 +184,10 @@ void RunWatchdog(void* arg) {
  #if defined(XP_WIN)
      Sleep(HEARTBEAT_INTERVAL_MS /* ms */);
  #else
 -    usleep(HEARTBEAT_INTERVAL_MS * 1000 /* usec */);
-+    // usleep(HEARTBEAT_INTERVAL_MS * 1000 /* usec */);
 +    struct timespec tickd;
-+    tickd.tv_sec = 1;
-+    tickd.tv_nsec = 0;
++    tickd.tv_sec = 0;
++    tickd.tv_nsec = HEARTBEAT_INTERVAL_MS * 1000 * 1000;
 +    nanosleep(&tickd, NULL);
  #endif
  

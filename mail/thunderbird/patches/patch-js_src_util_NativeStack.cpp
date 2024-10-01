@@ -1,6 +1,8 @@
-$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.4 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-js_src_util_NativeStack.cpp,v 1.5 2024/10/01 15:01:28 ryoon Exp $
 
---- js/src/util/NativeStack.cpp.orig	2020-08-28 21:32:56.000000000 +0000
+Support SunOS.
+
+--- js/src/util/NativeStack.cpp.orig	2020-04-03 19:34:51.000000000 +0000
 +++ js/src/util/NativeStack.cpp
 @@ -13,7 +13,7 @@
  #  if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
