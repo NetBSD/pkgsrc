@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/10/01 01:08:28 gutteridge Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/01 23:49:29 gutteridge Exp $
 
 DISTNAME=	scapy-2.6.0
 CATEGORIES=	net
@@ -20,18 +20,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-ipython
 
 .include "options.mk"
 
-# Upstream has an unorthodox means of defining the software version for Python
-# packaging, where they advise packagers to force the correct value, as their
-# tooling won't do it correctly for tagged releases.
-SUBST_CLASSES+=		version
-SUBST_STAGE.version=	pre-configure
-SUBST_FILES.version=	scapy/__init__.py
-SUBST_VARS.version+=	PKGVERSION_NOREV
-SUBST_MESSAGE.version=	Fixing version.
-
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 # Upstream mistakenly removed their scripting to install the man page.
+# https://github.com/secdev/scapy/issues/4549
 post-install:
 	${MV} ${WRKSRC}/doc/scapy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scapy.1
 
