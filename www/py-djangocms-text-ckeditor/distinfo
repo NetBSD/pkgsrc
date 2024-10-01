@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2023/12/07 17:47:13 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/10/01 20:20:34 adam Exp $
 
-BLAKE2s (djangocms-text-ckeditor-5.1.5.tar.gz) = dda27a7039449cde93c385c990709e37c5ed858bbf632f4e35e86ce4fd358a79
-SHA512 (djangocms-text-ckeditor-5.1.5.tar.gz) = 69bd4cea56788c65a967fe80fe545fad8a14b8215f8e691fdaf9e70ade5fe4cca68104499d2c63dad66b687b3c51c56abf8d64ff83fa2c920842049ade5e4c3c
-Size (djangocms-text-ckeditor-5.1.5.tar.gz) = 1751569 bytes
+BLAKE2s (djangocms_text_ckeditor-5.1.6.tar.gz) = 1b71a8a6ee66fedcd573d44d3f6034f93c752b0dcdee681a3d8b2e08dfa0c544
+SHA512 (djangocms_text_ckeditor-5.1.6.tar.gz) = 37200a14a850004bc54e6408e16da2f347d86b7a4c3c0f50b4a5b458bccef3243feb979575ab1892c1ea910c3f4f1a61b97e12c47740306d7b057c6b89a3c934
+Size (djangocms_text_ckeditor-5.1.6.tar.gz) = 1751615 bytes
 SHA1 (patch-setup.py) = 8c9d95fc5d4f7c3e9faa0dd32530e02f2f592447
