@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/08/23 17:55:09 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/10/01 10:24:59 nia Exp $
 
 DISTNAME=	ntopng-6.2
 CATEGORIES=	net
@@ -82,6 +82,7 @@ post-install:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
