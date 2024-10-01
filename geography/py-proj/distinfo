@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/09/05 00:01:55 gdt Exp $
+$NetBSD: distinfo,v 1.14 2024/10/01 13:28:27 gdt Exp $
 
-BLAKE2s (pyproj-3.6.1.tar.gz) = d44eb95e18e6ffd7d61dabce6b1c07f97414a806b645d29e82759e63f2274793
-SHA512 (pyproj-3.6.1.tar.gz) = 7f3d62c8e4faf86c519008e874ac2d7983952f382bec0b64dfd9e5448321f55df314725b40a818f9944da7d2aca4daa852270c83438fbfd65f5117e1b74aa276
-Size (pyproj-3.6.1.tar.gz) = 225131 bytes
-SHA1 (patch-setup.py) = 3e2be19263cbecdf843af01fef9ab34c98fb0950
+BLAKE2s (pyproj-3.7.0.tar.gz) = 6f08c4101d461a9504a98d67770d6ea92d8db493714248668055016620914bdd
+SHA512 (pyproj-3.7.0.tar.gz) = aeaf944f80a520c9417ad6acf8d74e217024c366d9ce6462a16ab8f72908c5cb4f4aa6a088deb97467a8eb5f2f33d41e454a16ced2b1c483d1e6ee354799d910
+Size (pyproj-3.7.0.tar.gz) = 225577 bytes
