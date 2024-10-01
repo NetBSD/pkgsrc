@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/09/14 08:20:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/01 20:07:24 adam Exp $
 ${PYINC}/greenlet/greenlet.h
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -7,13 +7,21 @@ ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/greenlet/CObjects.cpp
+${PYSITELIB}/greenlet/PyGreenlet.cpp
+${PYSITELIB}/greenlet/PyGreenlet.hpp
+${PYSITELIB}/greenlet/PyGreenletUnswitchable.cpp
+${PYSITELIB}/greenlet/PyModule.cpp
 ${PYSITELIB}/greenlet/TBrokenGreenlet.cpp
 ${PYSITELIB}/greenlet/TExceptionState.cpp
 ${PYSITELIB}/greenlet/TGreenlet.cpp
+${PYSITELIB}/greenlet/TGreenlet.hpp
 ${PYSITELIB}/greenlet/TGreenletGlobals.cpp
 ${PYSITELIB}/greenlet/TMainGreenlet.cpp
 ${PYSITELIB}/greenlet/TPythonState.cpp
 ${PYSITELIB}/greenlet/TStackState.cpp
+${PYSITELIB}/greenlet/TThreadState.hpp
+${PYSITELIB}/greenlet/TThreadStateCreator.hpp
 ${PYSITELIB}/greenlet/TThreadStateDestroy.cpp
 ${PYSITELIB}/greenlet/TUserGreenlet.cpp
 ${PYSITELIB}/greenlet/__init__.py
@@ -27,12 +35,9 @@ ${PYSITELIB}/greenlet/greenlet_compiler_compat.hpp
 ${PYSITELIB}/greenlet/greenlet_cpython_add_pending.hpp
 ${PYSITELIB}/greenlet/greenlet_cpython_compat.hpp
 ${PYSITELIB}/greenlet/greenlet_exceptions.hpp
-${PYSITELIB}/greenlet/greenlet_greenlet.hpp
 ${PYSITELIB}/greenlet/greenlet_internal.hpp
 ${PYSITELIB}/greenlet/greenlet_refs.hpp
 ${PYSITELIB}/greenlet/greenlet_slp_switch.hpp
-${PYSITELIB}/greenlet/greenlet_thread_state.hpp
-${PYSITELIB}/greenlet/greenlet_thread_state_dict_cleanup.hpp
 ${PYSITELIB}/greenlet/greenlet_thread_support.hpp
 ${PYSITELIB}/greenlet/platform/__init__.py
 ${PYSITELIB}/greenlet/platform/__init__.pyc
