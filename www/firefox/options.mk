@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.75 2023/08/17 20:43:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.76 2024/10/01 12:47:18 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--enable-jemalloc
 CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
+#.include "../../devel/jemalloc/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)

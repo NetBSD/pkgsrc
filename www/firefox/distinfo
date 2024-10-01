@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.540 2024/09/13 21:42:51 wiz Exp $
+$NetBSD: distinfo,v 1.541 2024/10/01 12:47:18 ryoon Exp $
 
-BLAKE2s (firefox-129.0.2.source.tar.xz) = c7c48e7122b14a98e3af30b6032941439636c520dd52e9a5741192c5efe70e8c
-SHA512 (firefox-129.0.2.source.tar.xz) = f6805a87e5cb4e437583916e3ec1b312dc73eec5fc06ce7a038b13bd7c6827b18cf383c30645d96623ce41675351f3023ec6b9f89d676f1c889994eae79f2c13
-Size (firefox-129.0.2.source.tar.xz) = 559547204 bytes
-BLAKE2s (nodejs-output-129.0.tgz) = 79553f02d008686292c9bda2a2f3ec091e80ec757d746c21a705af2c93812504
-SHA512 (nodejs-output-129.0.tgz) = cf7e4833e3dc8da7ac0184bb6db108c33790708b0ba77659c5c097469f1322a95cfdb61347deb67b531551ddcde8593c14ced2bb5f89ec3854eea22defd33695
-Size (nodejs-output-129.0.tgz) = 228598 bytes
+BLAKE2s (firefox-130.0.1.source.tar.xz) = 2aee241b1375f2132fc79c2162d1f29134ff30c24ed23f544b46e2cac30b1ffa
+SHA512 (firefox-130.0.1.source.tar.xz) = 163d1ce9f671a4716686955c43ff23d9f200f6c52dfdabcbb93af6a326c24aa5096404f42447b02b5a3ad02e2f60d17271783638fe027d24865aebb3e70e97fe
+Size (firefox-130.0.1.source.tar.xz) = 566583020 bytes
+BLAKE2s (nodejs-output-130.0.tgz) = 26b8c396956a9616e6fbca147dce077a46f9234e2d5aa28705dab6522ce0efee
+SHA512 (nodejs-output-130.0.tgz) = c084f97e9d0bc33b6ac85957072723833494adeb367ef09c4c9c1ad851b6fdff322dd633308ff5861ee805d52d1b622b4b35d4d659ee931d58bb573d7c3819aa
+Size (nodejs-output-130.0.tgz) = 236896 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -25,17 +25,14 @@ SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
 SHA1 (patch-js_src_old-configure.in) = 589e24765615ede2c3c6abfe0b3529c5645193ed
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
-SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = 65e1dee34fa5e9f9d1424390f3baf6c0c070617b
+SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
 SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9ea5862558a
 SHA1 (patch-media_libpng_pngpriv.h) = 8320a1f7534ed5c4914b597bb3d6117d0060318f
-SHA1 (patch-media_libtheora_lib_info.c) = f6dbf536d73859a1ff78304c2e9f6a6f74dac01f
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = 8e1d9a0746b637f5f4259e448e72172cfb08b23f
 SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
-SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = d95a09c2e7a25888d6009dfe169ba459783dead4
+SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-security_nss_lib_freebl_mpi_mpi.c) = a7cd867916524770609d1c307a65b315b88456f4
-SHA1 (patch-servo_components_style__traits_values.rs) = 6e1efb51bd68168abfa960b5e2541b3f46a49bf0
-SHA1 (patch-servo_ports_geckolib_cbindgen.toml) = f87b82cf179651199599f7b8c5d4feaa11b1f781
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
