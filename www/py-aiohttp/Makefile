@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2024/08/22 12:02:03 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/10/01 07:47:23 adam Exp $
 
-DISTNAME=	aiohttp-3.10.5
+DISTNAME=	aiohttp-3.10.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.1.2:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-frozenlist>=1.1.1:../../devel/py-frozenlist
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.5:../../databases/py-multidict
-DEPENDS+=	${PYPKGPREFIX}-yarl>=1.0:../../www/py-yarl
+DEPENDS+=	${PYPKGPREFIX}-yarl>=1.12.0:../../www/py-yarl
 TEST_DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
