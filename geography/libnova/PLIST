@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/14 12:52:48 is Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/01 09:46:35 adam Exp $
 bin/libnovaconfig
 include/libnova/aberration.h
 include/libnova/airmass.h
@@ -35,5 +35,4 @@ include/libnova/uranus.h
 include/libnova/utility.h
 include/libnova/venus.h
 include/libnova/vsop87.h
-lib/libnova-0.15.so.0
 lib/libnova.la
