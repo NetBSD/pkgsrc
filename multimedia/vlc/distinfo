@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2024/06/18 03:21:12 ryoon Exp $
+$NetBSD: distinfo,v 1.93 2024/10/01 11:27:39 nia Exp $
 
 BLAKE2s (vlc-3.0.21.tar.xz) = 1e82df56f34b84b388ac77137d326ca36b0afa9597fd52b861630b09f5bf7fb2
 SHA512 (vlc-3.0.21.tar.xz) = cb1af76c8056648c331d7e6e0680d161ed1849eb635987504f45eae02531e9b432651034317fa7e02b0722905dfb9f0f5dad67b5924cc62edcaf0d173ac36aee
@@ -10,6 +10,6 @@ SHA1 (patch-lib_video.c) = 362aaf7977c264bb70a79e98cf18da923ae62e39
 SHA1 (patch-m4_dolt.m4) = 6cf8ef04cc09510132a12df16b95a13e90019878
 SHA1 (patch-modules_access_http_Makefile.am) = d91904c6cba1a75a6872d042e4fe87ed9ce65a22
 SHA1 (patch-modules_gui_qt_dialogs_plugins.cpp) = b5cffc0bd54fd07e77f891f6bca58132d333afdd
-SHA1 (patch-modules_meta__engine_taglib.cpp) = af85dd89aba5f9617be873be113d53c442e1a181
+SHA1 (patch-modules_meta__engine_taglib.cpp) = 0d5230627b53e02cf6120fc6457bcfce524b5e8e
 SHA1 (patch-modules_services__discovery_mtp.c) = 5b5b9b341c71a3273178493ae55fccb583f5bd59
 SHA1 (patch-share_Makefile.am) = 4f126948c73159d06aef323b47a702442b5981e8
