@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/12/07 17:47:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/10/01 20:20:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -591,7 +591,7 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor_plu
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/css/cms.ckeditor.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/css/cms.inline-ckeditor.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/cms.ckeditor.js
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-9f0bbac8ec.cms.ckeditor.min.js
+${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/dist/bundle-a9032984d4.cms.ckeditor.min.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/post.js
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/js/pre.js
 ${PYSITELIB}/djangocms_text_ckeditor/templates/cms/plugins/inline.html
