@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/06/26 16:40:59 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/01 05:54:20 adam Exp $
 
 DISTNAME=	qtdeclarative-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtdeclarative-${QTVERSION}
@@ -43,10 +43,6 @@ PLIST_VARS+=	jit
 	  !empty(MACHINE_PLATFORM:MLinux-*-aarch64*)
 PLIST.jit=	yes
 .endif
-
-# installs .cpp.o file that should not be there
-post-install:
-	${RM} -r ${DESTDIR}${QTPREFIX}/qml/Qt/test/controls/objects-Release
 
 .include "../../graphics/qt6-qtimageformats/buildlink3.mk"
 .include "../../graphics/qt6-qtshadertools/buildlink3.mk"
