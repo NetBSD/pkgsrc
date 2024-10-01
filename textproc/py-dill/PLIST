@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/28 13:07:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/01 16:00:38 adam Exp $
 bin/get_gprof-${PYVERSSUFFIX}
 bin/get_objgraph-${PYVERSSUFFIX}
 bin/undill-${PYVERSSUFFIX}
@@ -133,9 +133,15 @@ ${PYSITELIB}/dill/tests/test_session.pyo
 ${PYSITELIB}/dill/tests/test_source.py
 ${PYSITELIB}/dill/tests/test_source.pyc
 ${PYSITELIB}/dill/tests/test_source.pyo
+${PYSITELIB}/dill/tests/test_sources.py
+${PYSITELIB}/dill/tests/test_sources.pyc
+${PYSITELIB}/dill/tests/test_sources.pyo
 ${PYSITELIB}/dill/tests/test_temp.py
 ${PYSITELIB}/dill/tests/test_temp.pyc
 ${PYSITELIB}/dill/tests/test_temp.pyo
+${PYSITELIB}/dill/tests/test_threads.py
+${PYSITELIB}/dill/tests/test_threads.pyc
+${PYSITELIB}/dill/tests/test_threads.pyo
 ${PYSITELIB}/dill/tests/test_weakref.py
 ${PYSITELIB}/dill/tests/test_weakref.pyc
 ${PYSITELIB}/dill/tests/test_weakref.pyo
