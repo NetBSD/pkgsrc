@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/04/03 11:38:27 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/01 20:03:03 adam Exp $
 
-DISTNAME=	httpcore-1.0.5
+DISTNAME=	httpcore-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpcore/}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-h2>=3.0:../../www/py-h2
 TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.22.0:../../devel/py-trio
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
