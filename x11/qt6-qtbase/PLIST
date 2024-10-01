@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/05/20 19:38:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/10/01 05:54:19 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -2752,6 +2752,7 @@ qt6/lib/cmake/Qt6/QtPrecompiledHeadersHelpers.cmake
 qt6/lib/cmake/Qt6/QtPriHelpers.cmake
 qt6/lib/cmake/Qt6/QtPrlHelpers.cmake
 qt6/lib/cmake/Qt6/QtProcessConfigureArgs.cmake
+qt6/lib/cmake/Qt6/QtProperties.cmake
 qt6/lib/cmake/Qt6/QtPublicAppleHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake
