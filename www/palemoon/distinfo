@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2024/09/23 11:12:10 martin Exp $
+$NetBSD: distinfo,v 1.14 2024/10/01 12:20:29 nia Exp $
 
 BLAKE2s (palemoon-33.3.1/palemoon.tar.gz) = c62225d8c487edddcfb5c2ea544ea87accc48556351610593a339d1ab765f7d5
 SHA512 (palemoon-33.3.1/palemoon.tar.gz) = b9dc0c0f65afc818fc4b5a5483893a8a87685405df3d8b4bf3b557c237eb8f3c75490e8a61305d367aebbd325bd419ad8dd9798c6a9bc77e48d061febaf31c88
@@ -27,6 +27,9 @@ SHA1 (patch-platform_media_libtheora_moz.build) = a7bad662dabb87c6a85542a4a50f8e
 SHA1 (patch-platform_media_libvpx_config_linux_arm_vpx__config.h) = a580208cd342d7dc27985118e1707772e0cccf02
 SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.cfg) = 1dc06ad2dc49eb3297dc0651dce546cff6882f7b
 SHA1 (patch-platform_nsprpub_pr_include_md__netbsd.h) = 72de23f42dc38d9cfacf41776e53af613a0c4f19
+SHA1 (patch-platform_nsprpub_pr_include_private_pprthred.h) = eeee6714ba27e6465701bffbc404915ceb0c9e55
+SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptsynch.c) = f99271490a983d0a1d101cb0d2b593a3987549d7
+SHA1 (patch-platform_nsprpub_pr_src_pthreads_ptthread.c) = a04b06e39c289ac32dfbb6cbd79b1d7ecf0b560d
 SHA1 (patch-platform_old-configure.in) = 05711cd91f7adca8c7325d01dc6e6553ce5bedb5
 SHA1 (patch-platform_security_generate__mapfile.py) = ae457a8e85c4ce95014dff442b8afd0e20ded543
 SHA1 (patch-platform_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 73b57772d29b0567c0aa1faea8a3f345dbc0488a
