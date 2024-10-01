@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/08/25 06:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/01 10:23:50 nia Exp $
 
 DISTNAME=	pocl-6.0
 CATEGORIES=	parallel
@@ -57,5 +57,6 @@ PKGCONFIG_OVERRIDE+=	pocl.pc.in.cmake
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../parallel/ocl-icd/buildlink3.mk"
 .include "../../parallel/opencl-headers/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
