@@ -1,16 +1,40 @@
-$NetBSD: patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp,v 1.1 2023/08/28 18:01:47 he Exp $
+$NetBSD: patch-dom_webtransport_api_WebTransportDatagramDuplexStream.cpp,v 1.2 2024/10/01 15:01:28 ryoon Exp $
 
-Make isnan() available via "using std::isnan;", as that's
-apparently needed at least on netbsd-10 to bring isnan() into scope.
-
---- dom/webtransport/api/WebTransportDatagramDuplexStream.cpp.orig	2023-08-14 18:19:46.000000000 +0000
+--- dom/webtransport/api/WebTransportDatagramDuplexStream.cpp.orig	2023-04-23 21:17:18.000000000 +0000
 +++ dom/webtransport/api/WebTransportDatagramDuplexStream.cpp
-@@ -10,6 +10,8 @@
- #include "mozilla/dom/Promise-inl.h"
- #include "mozilla/dom/WebTransportLog.h"
- 
-+using std::isnan;
-+
- namespace mozilla::dom {
- 
- NS_IMPL_CYCLE_COLLECTION_WRAPPERCACHE(WebTransportDatagramDuplexStream, mGlobal,
+@@ -62,7 +62,7 @@ void WebTransportDatagramDuplexStream::S
+                                                          ErrorResult& aRv) {
+   // https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-incomingmaxage
+   // Step 1
+-  if (isnan(aMaxAge) || aMaxAge < 0.) {
++  if (std::isnan(aMaxAge) || aMaxAge < 0.) {
+     aRv.ThrowRangeError("Invalid IncomingMaxAge");
+     return;
+   }
+@@ -78,7 +78,7 @@ void WebTransportDatagramDuplexStream::S
+                                                          ErrorResult& aRv) {
+   // https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-outgoingmaxage
+   // Step 1
+-  if (isnan(aMaxAge) || aMaxAge < 0.) {
++  if (std::isnan(aMaxAge) || aMaxAge < 0.) {
+     aRv.ThrowRangeError("Invalid OutgoingMaxAge");
+     return;
+   }
+@@ -94,7 +94,7 @@ void WebTransportDatagramDuplexStream::S
+     double aWaterMark, ErrorResult& aRv) {
+   // https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-incominghighwatermark
+   // Step 1
+-  if (isnan(aWaterMark) || aWaterMark < 0.) {
++  if (std::isnan(aWaterMark) || aWaterMark < 0.) {
+     aRv.ThrowRangeError("Invalid OutgoingMaxAge");
+     return;
+   }
+@@ -110,7 +110,7 @@ void WebTransportDatagramDuplexStream::S
+     double aWaterMark, ErrorResult& aRv) {
+   // https://w3c.github.io/webtransport/#dom-webtransportdatagramduplexstream-outgoinghighwatermark
+   // Step 1
+-  if (isnan(aWaterMark) || aWaterMark < 0.) {
++  if (std::isnan(aWaterMark) || aWaterMark < 0.) {
+     aRv.ThrowRangeError("Invalid OutgoingHighWaterMark");
+     return;
+   }

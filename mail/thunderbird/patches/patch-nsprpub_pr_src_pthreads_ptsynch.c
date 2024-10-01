@@ -1,6 +1,14 @@
-$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.2 2020/09/03 15:26:22 ryoon Exp $
+$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.3 2024/10/01 15:01:28 ryoon Exp $
 
---- nsprpub/pr/src/pthreads/ptsynch.c.orig	2020-08-28 21:33:00.000000000 +0000
+firefox: Workaround broken pthread_equal() usage
+
+Switch to an internal version of pthread_equal() without sanity checks.
+
+Problems detected on NetBSD 9.99.46.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1718838
+
+--- nsprpub/pr/src/pthreads/ptsynch.c.orig	2020-01-17 21:34:42.000000000 +0000
 +++ nsprpub/pr/src/pthreads/ptsynch.c
 @@ -25,6 +25,13 @@ static pthread_condattr_t _pt_cvar_attr;
  extern PTDebug pt_debug;  /* this is shared between several modules */

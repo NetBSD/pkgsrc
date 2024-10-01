@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.95 2024/08/20 14:11:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.96 2024/10/01 15:01:27 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/chrome/icons/default/calendar-alarm-dialog.png
@@ -24,6 +24,7 @@ lib/thunderbird/isp/DSPAM.sfd
 lib/thunderbird/isp/POPFile.sfd
 lib/thunderbird/isp/SpamAssassin.sfd
 lib/thunderbird/isp/SpamPal.sfd
+lib/thunderbird/libgkcodecs.so
 lib/thunderbird/liblgpllibs.so
 lib/thunderbird/libmozavcodec.so
 lib/thunderbird/libmozavutil.so
@@ -35,7 +36,6 @@ lib/thunderbird/libxul.so
 lib/thunderbird/omni.ja
 lib/thunderbird/pingsender
 lib/thunderbird/platform.ini
-lib/thunderbird/plugin-container
 lib/thunderbird/removed-files
 lib/thunderbird/rnp-cli
 lib/thunderbird/rnpkeys
@@ -44,3 +44,4 @@ lib/thunderbird/thunderbird-bin
 lib/thunderbird/vaapitest
 share/applications/thunderbird.desktop
 share/pixmaps/thunderbird.png
+@pkgdir lib/thunderbird/extensions

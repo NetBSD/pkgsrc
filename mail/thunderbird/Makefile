@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.321 2024/08/20 14:11:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.322 2024/10/01 15:01:27 ryoon Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
-PKGNAME=	thunderbird-${TB_VER}
-TB_VER=		115.14.0
+PKGNAME=	thunderbird-${TB_VER:S/esr//}
+TB_VER=		128.2.3esr
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,24 +17,26 @@ LICENSE=	mpl-1.1
 # overflowing even a biggish tmpfs).
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//:S/esr//}
 MOZILLA_DIR=	# empty
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
 DEPENDS+=	libotr-[0-9]*:../../chat/libotr
 
-ALL_ENV+=	MOZ_APP_NAME=${MOZILLA_NAME}
+ALL_ENV+=	MOZ_APP_NAME=${MOZILLA}
 
 CONFIG_GUESS_OVERRIDE+=	comm/ldap/sdks/c-sdk/config/autoconf/config.guess
 CONFIG_SUB_OVERRIDE+=	comm/ldap/sdks/c-sdk/config/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=comm/mail
-# Disable WebRTC support for Thunderbird unconditionally.
-CONFIGURE_ARGS+=	--disable-webrtc
-CONFIGURE_ARGS+=	--with-app-name=${MOZILLA_NAME}
+CONFIGURE_ARGS+=	--enable-webrtc
+CONFIGURE_ARGS+=	--with-app-name=${MOZILLA}
 
 NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}
 NOT_PAX_MPROTECT_SAFE+=	lib/${MOZILLA_NAME}/${MOZILLA_NAME}-bin
+
+# Do not use uselocale() in third_party/pipewire.
+CFLAGS.NetBSD+=	-D__LOCALE_C_ONLY
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${MOZILLA_NAME}
 
@@ -58,8 +60,8 @@ CHECK_WRKREF_SKIP+=	lib/${MOZILLA_NAME}/omni.ja
 CKSUM_CRATES+=	third_party/rust/libc
 
 # patch-third__party_rust_libc_src_unix_bsd_netbsdlike_netbsd_mod.rs
-CKSUMS+=	107a4aa396b8383c66e0ace2f941450b4b69146558cdc4d9fbe33eeab51760f1
-CKSUMS+=	3aa5bbc6bec675641c8cb02342022256435ea4f958bfa3832344dba6847ba5ea
+#CKSUMS+=	107a4aa396b8383c66e0ace2f941450b4b69146558cdc4d9fbe33eeab51760f1
+#CKSUMS+=	3aa5bbc6bec675641c8cb02342022256435ea4f958bfa3832344dba6847ba5ea
 
 #CKSUM_CRATES+=	third_party/rust/getrandom
 
@@ -67,39 +69,31 @@ CKSUMS+=	3aa5bbc6bec675641c8cb02342022256435ea4f958bfa3832344dba6847ba5ea
 #CKSUMS+=	0e52f6bde42d7bb05c297ce1c25b9879d61b28caba98f6226a152bff538db6c2
 #CKSUMS+=	394425b4ba03c21c494e64d993678f7014575b1e3d590b9ee452b5c2d83ec4ac
 
-SUBST_CLASSES+=		cksum
-SUBST_STAGE.cksum=	pre-configure
-.for crate in ${CKSUM_CRATES}
-SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
-.endfor
-.for from to in ${CKSUMS}
-SUBST_SED.cksum+=	-e 's,${from},${to},g'
-.endfor
+#SUBST_CLASSES+=		cksum
+#SUBST_STAGE.cksum=	pre-configure
+#.for crate in ${CKSUM_CRATES}
+#SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+#.endfor
+#.for from to in ${CKSUMS}
+#SUBST_SED.cksum+=	-e 's,${from},${to},g'
+#.endfor
 
 SUBST_CLASSES+=		netbsdtag
 SUBST_STAGE.netbsdtag=	pre-configure
 SUBST_FILES.netbsdtag=	comm/third_party/rnp/src/librekey/key_store_pgp.cpp
 SUBST_SED.netbsdtag=	-e 's/__NetBSD__/__NEVER__/'
 
-SUBST_CLASSES+=			rust178
-SUBST_STAGE.rust178=		pre-configure
-SUBST_MESSAGE.rust178=		Clearing cargo checksums
-SUBST_FILES.rust178=		third_party/rust/bindgen/.cargo-checksum.json
-SUBST_FILES.rust178+=		third_party/rust/any_all_workaround/.cargo-checksum.json
-SUBST_FILES.rust178+=		third_party/rust/encoding_rs/.cargo-checksum.json
-SUBST_SED.rust178=		-e 's/\("files":{\)[^}]*/\1/'
-
 post-extract:
-	${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
-	# patch(1) of NetBSD 9 cannot handle long line.
-	${CP} ${FILESDIR}/third__party_rust_encoding__rs_.cargo-checksum.json \
-		${WRKSRC}/third_party/rust/encoding_rs/.cargo-checksum.json
+	#${CP} ${FILESDIR}/cubeb_sun.c ${WRKSRC}/media/libcubeb/src/cubeb_sun.c
+
+pre-patch:
+	for f in $$(find ${WRKSRC}/third_party/libwebrtc -name moz.build -type f) ; \
+	do \
+		${AWK} -f ${FILESDIR}/replace-moz.build.awk $$f > $$f.new; mv $$f.new $$f ; \
+	done
 
 pre-configure:
 	cd ${WRKSRC} && mkdir -p ${OBJDIR}
-#	cd ${WRKSRC}${MOZILLA_DIR} && autoconf-2.13 old-configure.in > old-configure
-#	cd ${WRKSRC}${MOZILLA_DIR}/js/src && autoconf-2.13 old-configure.in > old-configure
-	touch ${WRKSRC}/.mozconfig
 
 do-build:
 # XXX for some reason it doesn't work unless -j is explicitly specified
