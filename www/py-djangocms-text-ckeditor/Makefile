@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2023/12/07 17:47:13 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/01 20:20:34 adam Exp $
 
-DISTNAME=	djangocms-text-ckeditor-5.1.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	djangocms_text_ckeditor-5.1.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-text-ckeditor/}
 
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
