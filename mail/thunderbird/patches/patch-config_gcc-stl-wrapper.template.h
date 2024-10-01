@@ -1,6 +1,6 @@
-$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.3 2023/02/05 09:05:29 he Exp $
+$NetBSD: patch-config_gcc-stl-wrapper.template.h,v 1.4 2024/10/01 15:01:28 ryoon Exp $
 
---- config/gcc-stl-wrapper.template.h.orig	2020-08-28 21:32:29.000000000 +0000
+--- config/gcc-stl-wrapper.template.h.orig	2021-09-04 13:24:51.000000000 +0000
 +++ config/gcc-stl-wrapper.template.h
 @@ -32,8 +32,8 @@
  // limits) and bug 1694575 (iosfwd).
