@@ -1,9 +1,9 @@
-$NetBSD: patch-modules_meta__engine_taglib.cpp,v 1.1 2024/01/28 22:40:44 wiz Exp $
+$NetBSD: patch-modules_meta__engine_taglib.cpp,v 1.1.6.1 2024/10/01 17:47:48 maya Exp $
 
 Fix build with taglib 2. From arch.
 https://gitlab.archlinux.org/archlinux/packaging/packages/vlc/-/blob/40b8a8a1fc24f594a0b828fbde521c644964efaf/taglib-2.patch
 
---- modules/meta_engine/taglib.cpp.orig	2023-04-22 23:27:28.000000000 +0000
+--- modules/meta_engine/taglib.cpp.orig	2024-06-05 15:56:07.000000000 +0000
 +++ modules/meta_engine/taglib.cpp
 @@ -185,7 +185,7 @@ public:
          ByteVector res(length, 0);
@@ -14,6 +14,39 @@ https://gitlab.archlinux.org/archlinux/packaging/packages/vlc/-/blob/40b8a8a1fc2
          else if ((size_t)i_read != length)
              res.resize(i_read);
          return res;
+@@ -214,7 +214,7 @@ public:
+         return true;
+     }
+ 
+-    void seek(long offset, Position p)
++    void seek(offset_t offset, Position p)
+     {
+         uint64_t pos = 0;
+         switch (p)
+@@ -237,12 +237,12 @@ public:
+         return;
+     }
+ 
+-    long tell() const
++    offset_t tell() const
+     {
+         return m_previousPos;
+     }
+ 
+-    long length()
++    offset_t length()
+     {
+         uint64_t i_size;
+         if (vlc_stream_GetSize( m_stream, &i_size ) != VLC_SUCCESS)
+@@ -250,7 +250,7 @@ public:
+         return i_size;
+     }
+ 
+-    void truncate(long)
++    void truncate(offset_t)
+     {
+     }
+ 
 @@ -465,7 +465,7 @@ static void ReadMetaFromASF( ASF::Tag* t
  static void ReadMetaFromBasicTag(const Tag* tag, vlc_meta_t *dest)
  {
