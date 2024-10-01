@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/09/09 07:38:31 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/01 10:39:53 nia Exp $
 
 DISTNAME=	fheroes2-1.1.1
 CATEGORIES=	games
@@ -24,4 +24,5 @@ BUILDLINK_TRANSFORM+=	rm:-Wextra-semi
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
