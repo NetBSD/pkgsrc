@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/09/05 00:01:55 gdt Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/10/01 13:28:27 gdt Exp $
 bin/pyproj
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_proj
@@ -17,14 +17,14 @@ ${PYSITELIB}/pyproj/_compat.pxd
 ${PYSITELIB}/pyproj/_compat.pyi
 ${PYSITELIB}/pyproj/_compat.pyx
 ${PYSITELIB}/pyproj/_compat.so
+${PYSITELIB}/pyproj/_context.pxd
+${PYSITELIB}/pyproj/_context.pyi
+${PYSITELIB}/pyproj/_context.pyx
+${PYSITELIB}/pyproj/_context.so
 ${PYSITELIB}/pyproj/_crs.pxd
 ${PYSITELIB}/pyproj/_crs.pyi
 ${PYSITELIB}/pyproj/_crs.pyx
 ${PYSITELIB}/pyproj/_crs.so
-${PYSITELIB}/pyproj/_datadir.pxd
-${PYSITELIB}/pyproj/_datadir.pyi
-${PYSITELIB}/pyproj/_datadir.pyx
-${PYSITELIB}/pyproj/_datadir.so
 ${PYSITELIB}/pyproj/_geod.pxd
 ${PYSITELIB}/pyproj/_geod.pyi
 ${PYSITELIB}/pyproj/_geod.pyx
@@ -42,6 +42,9 @@ ${PYSITELIB}/pyproj/_transformer.pxd
 ${PYSITELIB}/pyproj/_transformer.pyi
 ${PYSITELIB}/pyproj/_transformer.pyx
 ${PYSITELIB}/pyproj/_transformer.so
+${PYSITELIB}/pyproj/_version.pyi
+${PYSITELIB}/pyproj/_version.pyx
+${PYSITELIB}/pyproj/_version.so
 ${PYSITELIB}/pyproj/aoi.py
 ${PYSITELIB}/pyproj/aoi.pyc
 ${PYSITELIB}/pyproj/aoi.pyo
