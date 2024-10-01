@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/04/05 11:00:48 wiz Exp $
+$NetBSD: distinfo,v 1.15 2024/10/01 20:17:02 adam Exp $
 
-BLAKE2s (vobject-0.9.7.tar.gz) = 843f6ee513aed465f61937d665a754f0e1235b2f71a781501890982b370d232d
-SHA512 (vobject-0.9.7.tar.gz) = 7e3704b5c0ccafbb7171a98b45b7448419776b7f4a568ab4fffad905bd9303af55d89ddd6f91c0095083c3d9d53633fcdd3d0bc89aa2b4297d316e4123f56590
-Size (vobject-0.9.7.tar.gz) = 58657 bytes
+BLAKE2s (vobject-0.9.8.tar.gz) = 24ba37018d3c3010e249dcdcb88570234214b282e8370073e51dc7220a6f37c1
+SHA512 (vobject-0.9.8.tar.gz) = 8ba48fdd242c60b256d3a40d0aa1a6af9493a03fbff97870245102e676603d7eecad055db20a5eaa941eadc071fe41b522fc8226d0316c430d87e9331464a823
+Size (vobject-0.9.8.tar.gz) = 61760 bytes
