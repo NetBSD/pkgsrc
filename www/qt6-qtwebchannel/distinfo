@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/06/26 16:41:02 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/10/01 05:54:23 adam Exp $
 
-BLAKE2s (qtwebchannel-everywhere-src-6.7.2.tar.xz) = d9921f35b0c9834437024437e3d6092b19a8bc918aa6034fe00d4912d3eb9bbf
-SHA512 (qtwebchannel-everywhere-src-6.7.2.tar.xz) = 6d9dae2925acfe560c2c1b4382d6e7ce7762f840e76b513f03f5e9e892fb4ad3fb0059ffef725210d88ee4210a8a09678af9b7d3dfbc6d7ff55f3e65396153dc
-Size (qtwebchannel-everywhere-src-6.7.2.tar.xz) = 206584 bytes
+BLAKE2s (qtwebchannel-everywhere-src-6.7.3.tar.xz) = eec6a00b08741ee71d9ea778c201d9e740b2a7023980dc301a1d66ad64fccb9d
+SHA512 (qtwebchannel-everywhere-src-6.7.3.tar.xz) = 4cf329c865f9b9eb30584061a0cc684a014f6bdd8cc1f7cd037416cd6aacb386a8d16fe58b5c1c9854c3df4182fd6117ec6297e8d941d5215f0f86ad51f80180
+Size (qtwebchannel-everywhere-src-6.7.3.tar.xz) = 206716 bytes

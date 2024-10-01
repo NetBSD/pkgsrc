@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/06/26 16:40:59 adam Exp $
+$NetBSD: distinfo,v 1.12 2024/10/01 05:54:20 adam Exp $
 
-BLAKE2s (qthttpserver-everywhere-src-6.7.2.tar.xz) = dbb5d8e086aa58b0717abffe926f4c6741673f5595e97265b9e6627f8516f46b
-SHA512 (qthttpserver-everywhere-src-6.7.2.tar.xz) = 0830fb4c5968ec5e23576f58e117dcca9f012cf742043c8b4786fb7bdcd68cd86f49d15d1ba66ee64e80d5a50d3c797dbffdf6f977ad7c101bb5be1bc02c1323
-Size (qthttpserver-everywhere-src-6.7.2.tar.xz) = 163640 bytes
+BLAKE2s (qthttpserver-everywhere-src-6.7.3.tar.xz) = fdef4037a6309309557ce175c7b972dea164dbfd85f1ce523a318a843eea1e63
+SHA512 (qthttpserver-everywhere-src-6.7.3.tar.xz) = 05238a97b9576f015a741446cfda434355fee8599975b5f4bf062bd28c63127d4bfbf52c4b84ff1f7b88def31200f4c3d298812a7eff5583546a5b925a390edf
+Size (qthttpserver-everywhere-src-6.7.3.tar.xz) = 163692 bytes
