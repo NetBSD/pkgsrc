@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/31 08:44:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/10/01 08:57:45 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/aiohappyeyeballs/__init__.py
 ${PYSITELIB}/aiohappyeyeballs/__init__.pyc
 ${PYSITELIB}/aiohappyeyeballs/__init__.pyo
+${PYSITELIB}/aiohappyeyeballs/_staggered.py
+${PYSITELIB}/aiohappyeyeballs/_staggered.pyc
+${PYSITELIB}/aiohappyeyeballs/_staggered.pyo
 ${PYSITELIB}/aiohappyeyeballs/impl.py
 ${PYSITELIB}/aiohappyeyeballs/impl.pyc
 ${PYSITELIB}/aiohappyeyeballs/impl.pyo
