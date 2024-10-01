@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/17 07:03:00 nikita Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/01 14:48:48 ryoon Exp $
 bin/openjdk17-jar
 bin/openjdk17-jarsigner
 bin/openjdk17-java
@@ -294,6 +294,7 @@ java/openjdk17/legal/java.base/c-libutl.md
 java/openjdk17/legal/java.base/cldr.md
 java/openjdk17/legal/java.base/icu.md
 java/openjdk17/legal/java.base/public_suffix.md
+java/openjdk17/legal/java.base/siphash.md
 java/openjdk17/legal/java.base/unicode.md
 java/openjdk17/legal/java.compiler/ADDITIONAL_LICENSE_INFO
 java/openjdk17/legal/java.compiler/ASSEMBLY_EXCEPTION
