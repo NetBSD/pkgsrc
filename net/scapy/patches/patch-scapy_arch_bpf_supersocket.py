@@ -1,10 +1,10 @@
-$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.6 2023/01/17 01:33:17 gutteridge Exp $
+$NetBSD: patch-scapy_arch_bpf_supersocket.py,v 1.7 2024/10/01 01:08:29 gutteridge Exp $
 
 Add DragonFly support.
 
---- scapy/arch/bpf/supersocket.py.orig	2022-12-24 14:06:26.000000000 +0000
+--- scapy/arch/bpf/supersocket.py.orig	2024-09-28 13:11:32.000000000 +0000
 +++ scapy/arch/bpf/supersocket.py
-@@ -33,7 +33,7 @@ from scapy.arch.bpf.consts import (
+@@ -35,7 +35,7 @@ from scapy.arch.bpf.consts import (
      BPF_T_NANOTIME,
  )
  from scapy.config import conf
@@ -12,16 +12,17 @@ Add DragonFly support.
 +from scapy.consts import DARWIN, FREEBSD, NETBSD, DRAGONFLY
  from scapy.data import ETH_P_ALL, DLT_IEEE802_11_RADIO
  from scapy.error import Scapy_Exception, warning
- from scapy.interfaces import network_name
-@@ -45,6 +45,6 @@ from scapy.compat import raw
+ from scapy.interfaces import network_name, _GlobInterfaceType
+@@ -56,7 +56,7 @@ if TYPE_CHECKING:
+ 
+ # Structures & c types
+ 
 -if FREEBSD or NETBSD:
 +if FREEBSD or NETBSD or DRAGONFLY:
      # On 32bit architectures long might be 32bit.
      BPF_ALIGNMENT = ctypes.sizeof(ctypes.c_long)
  else:
-     # DARWIN, OPENBSD
-     BPF_ALIGNMENT = ctypes.sizeof(ctypes.c_int32)
-@@ -56,7 +56,7 @@ if _NANOTIME:
+@@ -70,7 +70,7 @@ if _NANOTIME:
          # actually a bpf_timespec
          _fields_ = [("tv_sec", ctypes.c_ulong),
                      ("tv_nsec", ctypes.c_ulong)]

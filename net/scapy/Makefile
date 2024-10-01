@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2024/07/20 13:05:14 adam Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/01 01:08:28 gutteridge Exp $
 
-DISTNAME=	scapy-2.5.0
-PKGREVISION=	3
+DISTNAME=	scapy-2.6.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=secdev/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -21,11 +20,20 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-ipython
 
 .include "options.mk"
 
-SUBST_CLASSES+=		config
-SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	setup.py
-SUBST_SED.config+=	-e "s|share/man|${PKGMANDIR}|g"
-SUBST_MESSAGE.config=	Fixing paths.
+# Upstream has an unorthodox means of defining the software version for Python
+# packaging, where they advise packagers to force the correct value, as their
+# tooling won't do it correctly for tagged releases.
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-configure
+SUBST_FILES.version=	scapy/__init__.py
+SUBST_VARS.version+=	PKGVERSION_NOREV
+SUBST_MESSAGE.version=	Fixing version.
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+# Upstream mistakenly removed their scripting to install the man page.
+post-install:
+	${MV} ${WRKSRC}/doc/scapy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scapy.1
 
 DATE_VAL=	${DATE} "+%Y%m%d-%H%M%S"
 
