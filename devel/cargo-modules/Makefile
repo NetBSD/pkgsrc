@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/08/24 03:45:36 pin Exp $
+# $NetBSD: Makefile,v 1.33 2024/10/01 07:54:38 pin Exp $
 
 DISTNAME=	cargo-modules-0.16.10
 # cargo-modules-0.17.0 requires Rust >= 1.80.0 to build.
+# cargo-modules-0.18.0 requires Rust >= 1.81.0 to build.
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=regexident/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
