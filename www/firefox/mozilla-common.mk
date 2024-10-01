@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.286 2024/08/12 16:53:19 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.287 2024/10/01 12:47:18 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -34,9 +34,6 @@ USE_TOOLS+=		diff
 .else
 CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
 .endif
-
-# malloc_usable_size()
-LDFLAGS.NetBSD+=	-ljemalloc
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
@@ -234,10 +231,12 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_clock_monotonic=
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+# See build/moz.configure/nspr.configure
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.34
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nss+=	nss>=3.102
+# See build/moz.configure/nss.configure
+BUILDLINK_API_DEPENDS.nss+=	nss>=3.103
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
