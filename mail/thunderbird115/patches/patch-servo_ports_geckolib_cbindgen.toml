@@ -1,0 +1,20 @@
+$NetBSD: patch-servo_ports_geckolib_cbindgen.toml,v 1.1 2024/10/01 14:21:38 ryoon Exp $
+
+Bug 1912663 - Fix some build issues with cbindgen 0.27. r=firefox-style-system-reviewers,zrhoffman
+
+It updates serde and syn and they are more strict. In particular, syn 2
+doesn't parse the rust 2015 syntax where try is not a keyword, and serde
+rejects duplicate keys.
+
+Differential Revision: https://phabricator.services.mozilla.com/D219025
+
+--- servo/ports/geckolib/cbindgen.toml.orig	2024-08-19 19:21:52.000000000 +0000
++++ servo/ports/geckolib/cbindgen.toml
+@@ -360,7 +360,6 @@ renaming_overrides_prefixing = true
+ "Keyframe" = "Keyframe"
+ "nsChangeHint" = "nsChangeHint"
+ "ServoElementSnapshotTable" = "ServoElementSnapshotTable"
+-"Keyframe" = "Keyframe"
+ "ComputedKeyframeValues" = "ComputedKeyframeValues"
+ "OriginFlags" = "OriginFlags"
+ "ServoTraversalFlags" = "ServoTraversalFlags"
