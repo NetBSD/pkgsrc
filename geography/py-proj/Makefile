@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2024/09/05 00:01:55 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2024/10/01 13:28:27 gdt Exp $
 
-DISTNAME=		pyproj-3.6.1
+DISTNAME=		pyproj-3.7.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_PYPI:=p/pyproj/}
@@ -16,6 +16,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+# tests fail
+# https://github.com/pyproj4/pyproj/issues/1447
 
 .include "../../geography/proj/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
