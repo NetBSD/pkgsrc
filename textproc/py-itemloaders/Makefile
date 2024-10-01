@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/06/04 10:35:29 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/01 07:55:13 adam Exp $
 
-DISTNAME=	itemloaders-1.3.1
+DISTNAME=	itemloaders-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/itemloaders/}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel
 DEPENDS+=	${PYPKGPREFIX}-w3lib>=1.17.0:../../www/py-w3lib
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
