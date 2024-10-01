@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/10/01 09:59:17 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/01 11:48:57 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsQmlModels.pc
@@ -2293,7 +2293,6 @@ qt6/lib/libQt6QuickWidgets.prl
 qt6/lib/libQt6QuickWidgets.so
 qt6/lib/libQt6QuickWidgets.so.${PKGVERSION}
 qt6/lib/libQt6QuickWidgets.so.6
-qt6/lib/objects-Release/QmlTypeRegistrarPrivate_resources_1/.qt/rcc/qrc_jsRootMetaTypes_init.cpp.o
 qt6/lib/pkgconfig/Qt6LabsAnimation.pc
 qt6/lib/pkgconfig/Qt6LabsFolderListModel.pc
 qt6/lib/pkgconfig/Qt6LabsQmlModels.pc
@@ -2550,7 +2549,6 @@ qt6/qml/Qt/labs/wavefrontmesh/plugins.qmltypes
 qt6/qml/Qt/labs/wavefrontmesh/qmldir
 qt6/qml/Qt/test/controls/QuickControlsTestUtilsPrivate.qmltypes
 qt6/qml/Qt/test/controls/libquickcontrolstestutilsprivateplugin.so
-qt6/qml/Qt/test/controls/objects-Release/QuickControlsTestUtilsPrivate_resources_1/.qt/rcc/qrc_qmake_Qt_test_controls_init.cpp.o
 qt6/qml/Qt/test/controls/qmldir
 qt6/qml/QtCore/libqtqmlcoreplugin.so
 qt6/qml/QtCore/plugins.qmltypes
