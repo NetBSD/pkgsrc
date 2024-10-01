@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/09/21 06:41:34 triaxx Exp $
+# $NetBSD: Makefile,v 1.63 2024/10/01 10:39:11 nia Exp $
 
 PKGNAME=	openrct2-0.4.14
 CATEGORIES=	games
@@ -99,4 +99,5 @@ post-extract:
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
