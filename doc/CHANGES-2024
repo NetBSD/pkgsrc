@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5956 2024/10/01 08:59:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.5957 2024/10/01 09:03:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9102,3 +9102,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-maturin to 1.7.4 [adam 2024-10-01]
 	Updated net/py-aiohappyeyeballs to 2.4.3 [adam 2024-10-01]
 	Updated time/py-tzdata to 2024.2 [adam 2024-10-01]
+	Updated net/grpc to 1.66.2 [adam 2024-10-01]
+	Updated net/py-grpcio to 1.66.2 [adam 2024-10-01]
+	Updated net/py-grpcio-testing to 1.66.2 [adam 2024-10-01]
+	Updated net/py-grpcio-tools to 1.66.2 [adam 2024-10-01]
