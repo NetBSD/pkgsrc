@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/06/13 11:40:09 ktnb Exp $
+$NetBSD: distinfo,v 1.5 2024/10/01 01:16:54 ktnb Exp $
 
-BLAKE2s (newsraft-0.25.tar.gz) = a545bcb577d96db22b14bb655f56c5db3c84021964e83fd089e7cd073fb2505e
-SHA512 (newsraft-0.25.tar.gz) = 354f3d5fb0e6d86782538da03408383b74443889aed19ae3599b1f286c76f6814ec406297dcdb505bbca6cf835440161a89066df0f21d52871c57dca288dfa23
-Size (newsraft-0.25.tar.gz) = 153586 bytes
+BLAKE2s (newsraft-0.26.tar.gz) = 5deda199e61728189df53e59068ec6c4b6317cd0162388cc76d675e205fdd94d
+SHA512 (newsraft-0.26.tar.gz) = c4654de4ec8ebd95018fd0bfa0c8a3f40ac67d944e9aa089fb5ad7dc918bfe54a7ba79eecec799e68ff0bb31f2b4b3fc7b5c25513eb76b68e7fb35e4097df397
+Size (newsraft-0.26.tar.gz) = 155572 bytes
