@@ -1,4 +1,16 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.1 2024/09/30 13:55:53 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.2 2024/10/02 06:59:37 bsiegert Exp $
 
-Changes to packages and infrastructure on the $BRANCH branch:
+Changes to packages and infrastructure on the 2024Q3 branch:
+
+Pullup ticket #6895 - requested by nia
+devel/glib: build fix
+
+Pullup ticket #6896 - requested by nia
+Build fix for 32-bit
+
+Pullup ticket #6897 - requested by nia
+Build fix
+
+Pullup ticket #6898 - requested by ryoon
+Build fix
 
