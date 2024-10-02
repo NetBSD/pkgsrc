@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2024/08/10 15:24:44 pin Exp $
+$NetBSD: distinfo,v 1.38 2024/10/02 17:49:02 he Exp $
 
 BLAKE2s (addr2line-0.22.0.crate) = 834589b7006b3b8d1e40e66abf813d18a5e9d6fac9433c24b0b18920c435a58e
 SHA512 (addr2line-0.22.0.crate) = b334f51bd369348b4446805b4f624ec9b4cc8eefcc53ceb57b523ff55bf018d1dfe23259daf48d1878170ad4fcb44181d4738456eb5e35ede6932ff29686268e
@@ -525,3 +525,8 @@ Size (zerocopy-0.7.35.crate) = 152645 bytes
 BLAKE2s (zerocopy-derive-0.7.35.crate) = b80899d1b7a843a5225638171775a0c9643052c9e96f7b88a825150d0725505e
 SHA512 (zerocopy-derive-0.7.35.crate) = dbe23573b62a6267d7bc8c744320b75b2fbda03b908c1d175211f7394374fe182bce58021e25485c10671d726b2007f250565dfe53134d51c89293bb607e9feb
 Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
+SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_mod.rs) = ca83fcd3a2c7aff1828d18a5ca4df1e3ae3557fb
+SHA1 (patch-.._vendor_memchr-2.7.4_src_memchr.rs) = b964579dd7ea479e2f4be41843b5b8161dbc2eae
+SHA1 (patch-.._vendor_memchr-2.7.4_src_memmem_searcher.rs) = 2317e98578bf30ead561a1af1974db454e88a11c
+SHA1 (patch-.._vendor_memchr-2.7.4_src_vector.rs) = 8acec8d16fad3cf64fc66c97cc7717549069ee0e
+SHA1 (patch-.._vendor_zerocopy-0.7.35_src_lib.rs) = 908bf1ca2244c4ca1af6d7c75cbad250fac5ea9c
