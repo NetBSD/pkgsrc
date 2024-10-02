@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/06/26 16:20:55 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/02 06:48:01 nia Exp $
 
 DISTNAME=	OpenColorIO-2.3.2
 PKGNAME=	${DISTNAME:tl}
@@ -27,15 +27,16 @@ CMAKE_CONFIGURE_ARGS+=	-DOCIO_BUILD_PYGLUE:BOOL=OFF
 # Only use pkgsrc dependencies
 CMAKE_CONFIGURE_ARGS+=	-DOCIO_INSTALL_EXT_PACKAGES:STRING=NONE
 
-.if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
-CMAKE_CONFIGURE_ARGS+=	-DOCIO_USE_SSE:BOOL=OFF
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "x86_64"
+CMAKE_CONFIGURE_ARGS+=	-DOCIO_BUILD_ENABLE_OPTIMIZATIONS_SSE:BOOL=OFF
 .endif
 
 PKGCONFIG_OVERRIDE+=	src/OpenColorIO/res/OpenColorIO.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-.include "../../mk/bsd.prefs.mk"
 # Use native macOS OpenGL.
 .if ${OPSYS} == "Darwin"
 # Tries to download sse2neon.h.
