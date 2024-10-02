@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2024/09/06 18:48:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.68 2024/10/02 15:25:58 schmonz Exp $
 
 DISTNAME=		go-dnstap-0.4.0
 PKGREVISION=		41
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=dnstap/}
 GITHUB_PROJECT=		golang-dnstap
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-HOMEPAGE=		https://${GO_SRCPATH}
+HOMEPAGE=		https://github.com/dnstap/golang-dnstap
 COMMENT=		Go language implementation of framestream protocol
 LICENSE=		apache-2.0
 
