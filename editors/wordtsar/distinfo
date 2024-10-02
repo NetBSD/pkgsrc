@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/09/10 13:58:17 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2024/10/02 06:51:35 nia Exp $
 
 BLAKE2s (WordTsar-0.3.719-src.zip) = 7cdcaecdb9310b2821cd5449f88a8e9eaa313afd78f7411c634123252ace876a
 SHA512 (WordTsar-0.3.719-src.zip) = 60ffb855c290f0414160b508c36189489d7b9afed5c2cff36e9d0999ec369849ed3bbf54d4bfbce4aa2852a02df664fa481eb692309befb03eb5b47ec38a4ab5
 Size (WordTsar-0.3.719-src.zip) = 3366105 bytes
+SHA1 (patch-src_third-party_zip_zip.h) = b1109dd61e2a53eea21cea94b3c591021f5f0ffc
