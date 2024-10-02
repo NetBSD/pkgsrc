@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-macho.awk,v 1.11 2023/11/27 12:51:38 jperkin Exp $
+# $NetBSD: check-shlibs-macho.awk,v 1.12 2024/10/02 10:49:01 jperkin Exp $
 
 #
 # Read a list of potential Mach-O binaries from stdin.
@@ -110,7 +110,7 @@ function checkshlib(DSO,	needed, found) {
 				libcache[libfile] = system("test -f " \
 							   shquote(libfile))
 			if (libcache[libfile] == 0) {
-				check_pkg(lib)
+				check_pkg(DSO, lib)
 				found = 1
 				break
 			}
