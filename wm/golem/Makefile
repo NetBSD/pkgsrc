@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2020/03/20 11:58:33 nia Exp $
+# $NetBSD: Makefile,v 1.37.38.1 2024/10/02 13:50:18 maya Exp $
 #
 
 DISTNAME=	golem-0.0.5
@@ -9,12 +9,17 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=golem/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://golem.sourceforge.net/
 COMMENT=	Fast and lightweight yet customizable window manager
+LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake yacc lex
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--enable-i18n
 CONFIGURE_ARGS+=	--disable-sound
+
+# Issues with animtab.h generation - make thinks the header file is
+# ready before it's ready.
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
