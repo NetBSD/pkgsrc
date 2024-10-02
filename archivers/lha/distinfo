@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2024/09/27 15:13:25 gutteridge Exp $
+$NetBSD: distinfo,v 1.18 2024/10/02 22:17:11 gutteridge Exp $
 
 BLAKE2s (lha-1.14i-ac20211125-72b97b87a131e88cc95b9068d521f3ecb56af9db.tar.gz) = f8ee8e52520a0f0fa7fde0b381c7a9370e56853c4422c7b0dd75fe7a8186048f
 SHA512 (lha-1.14i-ac20211125-72b97b87a131e88cc95b9068d521f3ecb56af9db.tar.gz) = 3b3d0f3bc83504f9bf6ed32c76f9164f63847aacb0de25deba8034347f5a00de4f41a20b3b1ceceb2a42942c102e139da124d1a287b0c7909781b1589e38f49e
 Size (lha-1.14i-ac20211125-72b97b87a131e88cc95b9068d521f3ecb56af9db.tar.gz) = 229462 bytes
-SHA1 (patch-src_header.c) = abd00a433d52cf87c57427495968472c6a096b71
+SHA1 (patch-src_header.c) = f68491cecbd1fb9dcba9fbb66f8a6976cc652677
