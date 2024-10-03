@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/09/25 07:30:54 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/03 12:29:52 adam Exp $
 
 MODNAME=		iconv
 CATEGORIES+=		converters
@@ -24,7 +24,7 @@ CHECK_BUILTIN.iconv:=	no
 
 .if ${USE_BUILTIN.iconv:U:tl} == no || ${BUILTIN_LIB_FOUND.iconv:U:tl} == yes
 # Hack: allow building on Darwin without Command Line Tools.
-.  if ${OPSYS} == "Darwin" && ${BUILDLINK_PREFIX.iconv} == "/usr" && !exists(/usr/include/iconv.h)
+.  if ${OPSYS} == "Darwin" && !exists(/usr/include/iconv.h)
 CONFIGURE_ARGS+=	--with-iconv=shared,${OSX_SDK_PATH:Q}/${BUILDLINK_PREFIX.iconv}
 .  else
 CONFIGURE_ARGS+=	--with-iconv=shared,${BUILDLINK_PREFIX.iconv}
