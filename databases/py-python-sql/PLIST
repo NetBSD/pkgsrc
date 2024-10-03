@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/15 08:08:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/10/03 08:40:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -48,12 +48,30 @@ ${PYSITELIB}/sql/tests/test_conditionals.pyo
 ${PYSITELIB}/sql/tests/test_delete.py
 ${PYSITELIB}/sql/tests/test_delete.pyc
 ${PYSITELIB}/sql/tests/test_delete.pyo
+${PYSITELIB}/sql/tests/test_excluded.py
+${PYSITELIB}/sql/tests/test_excluded.pyc
+${PYSITELIB}/sql/tests/test_excluded.pyo
+${PYSITELIB}/sql/tests/test_expression.py
+${PYSITELIB}/sql/tests/test_expression.pyc
+${PYSITELIB}/sql/tests/test_expression.pyo
+${PYSITELIB}/sql/tests/test_flavor.py
+${PYSITELIB}/sql/tests/test_flavor.pyc
+${PYSITELIB}/sql/tests/test_flavor.pyo
 ${PYSITELIB}/sql/tests/test_for.py
 ${PYSITELIB}/sql/tests/test_for.pyc
 ${PYSITELIB}/sql/tests/test_for.pyo
+${PYSITELIB}/sql/tests/test_from.py
+${PYSITELIB}/sql/tests/test_from.pyc
+${PYSITELIB}/sql/tests/test_from.pyo
+${PYSITELIB}/sql/tests/test_from_item.py
+${PYSITELIB}/sql/tests/test_from_item.pyc
+${PYSITELIB}/sql/tests/test_from_item.pyo
 ${PYSITELIB}/sql/tests/test_functions.py
 ${PYSITELIB}/sql/tests/test_functions.pyc
 ${PYSITELIB}/sql/tests/test_functions.pyo
+${PYSITELIB}/sql/tests/test_grouping.py
+${PYSITELIB}/sql/tests/test_grouping.pyc
+${PYSITELIB}/sql/tests/test_grouping.pyo
 ${PYSITELIB}/sql/tests/test_insert.py
 ${PYSITELIB}/sql/tests/test_insert.pyc
 ${PYSITELIB}/sql/tests/test_insert.pyo
@@ -75,6 +93,9 @@ ${PYSITELIB}/sql/tests/test_operators.pyo
 ${PYSITELIB}/sql/tests/test_order.py
 ${PYSITELIB}/sql/tests/test_order.pyc
 ${PYSITELIB}/sql/tests/test_order.pyo
+${PYSITELIB}/sql/tests/test_rollup.py
+${PYSITELIB}/sql/tests/test_rollup.pyc
+${PYSITELIB}/sql/tests/test_rollup.pyo
 ${PYSITELIB}/sql/tests/test_select.py
 ${PYSITELIB}/sql/tests/test_select.pyc
 ${PYSITELIB}/sql/tests/test_select.pyo
