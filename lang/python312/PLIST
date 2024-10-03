@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/09/09 15:51:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/03 10:17:14 ryoon Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -2968,6 +2968,9 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_ssl.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.py
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.pyo
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyo
