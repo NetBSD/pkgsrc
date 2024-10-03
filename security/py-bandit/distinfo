@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/06/13 05:03:15 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/10/03 09:04:01 adam Exp $
 
-BLAKE2s (bandit-1.7.9.tar.gz) = 369475c7803b492722cbe14432a64020f7b4bbc2f57626976f7ff789571faceb
-SHA512 (bandit-1.7.9.tar.gz) = a71e3eb359fad952afc9e210795fb8cc6fe178305bb837e002af83eccc4a958664b69422ba93d7d72b24089ba3142667ca17909d712db1b447e78d6f7f4c9634
-Size (bandit-1.7.9.tar.gz) = 4225771 bytes
+BLAKE2s (bandit-1.7.10.tar.gz) = b1ad0c539dba504dd333010a4022f59639bb73ed57ce2c125f422beeaf2d2887
+SHA512 (bandit-1.7.10.tar.gz) = c9c5d098186a23f856f4bdecdebfe863f7ddce8627608b80c62a537416d2aa91666a95c304f5cdde43ff1a41e1f6a58b30dce1042159a1ea74b8b5c9a8ee381a
+Size (bandit-1.7.10.tar.gz) = 4228540 bytes

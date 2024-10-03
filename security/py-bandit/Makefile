@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/06/13 05:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/03 09:04:01 adam Exp $
 
-DISTNAME=	bandit-1.7.9
+DISTNAME=	bandit-1.7.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bandit/}
@@ -24,7 +24,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.3.0:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
