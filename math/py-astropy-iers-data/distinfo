@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/09/12 06:44:06 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/10/03 11:52:45 adam Exp $
 
-BLAKE2s (astropy_iers_data-0.2024.9.11.18.16.39.tar.gz) = 71fdb86026d5e997187fd3bf4ccbb0f48fd7d4720bcdb882cd7d820fb37805b7
-SHA512 (astropy_iers_data-0.2024.9.11.18.16.39.tar.gz) = 2e6d9788d980f1fd9db436601ae62b3715c5ec7c7b11bdda80051930150321a8d97a5e8fc87158b2943879214b8852e3e86b4bf8a6879a2143e4321a65ef4e7f
-Size (astropy_iers_data-0.2024.9.11.18.16.39.tar.gz) = 1878478 bytes
+BLAKE2s (astropy_iers_data-0.2024.9.30.0.32.59.tar.gz) = 47bd6077e7795f6e35a96db89c4076a5c2775b196b939e54df6301e691784485
+SHA512 (astropy_iers_data-0.2024.9.30.0.32.59.tar.gz) = 0d78016c1cecee68af480308cbc0d0b82bd549a1394b588cd0699c02180452a04fbd746c9a9972d99cbd92506d07577c2fb0b6ee3b1da2388bd23978336e622c
+Size (astropy_iers_data-0.2024.9.30.0.32.59.tar.gz) = 1879551 bytes
