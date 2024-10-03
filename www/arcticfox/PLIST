@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/07/16 08:05:47 nia Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/10/03 20:57:34 nia Exp $
 bin/arcticfox
 lib/${PKGNAME}/application.ini
 lib/${PKGNAME}/arcticfox
@@ -11,12 +11,17 @@ lib/${PKGNAME}/browser/chrome/icons/default/default48.png
 lib/${PKGNAME}/browser/components/components.manifest
 lib/${PKGNAME}/browser/components/libbrowsercomps.so
 lib/${PKGNAME}/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+lib/${PKGNAME}/browser/features/e10srollout@mozilla.org.xpi
+lib/${PKGNAME}/browser/features/firefox@getpocket.com.xpi
+lib/${PKGNAME}/browser/features/loop@mozilla.org.xpi
+lib/${PKGNAME}/browser/features/webcompat@mozilla.org.xpi
 lib/${PKGNAME}/browser/icons/mozicon128.png
 lib/${PKGNAME}/browser/omni.ja
 lib/${PKGNAME}/defaults/pref/channel-prefs.js
 lib/${PKGNAME}/dependentlibs.list
 lib/${PKGNAME}/dictionaries/en-US.aff
 lib/${PKGNAME}/dictionaries/en-US.dic
+lib/${PKGNAME}/icudt58l.dat
 lib/${PKGNAME}/libfreebl3.chk
 lib/${PKGNAME}/libfreebl3.so
 lib/${PKGNAME}/liblgpllibs.so
