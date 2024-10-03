@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2024/09/02 05:58:53 nia Exp $
+# $NetBSD: Makefile,v 1.51 2024/10/03 20:57:34 nia Exp $
 
-DISTNAME=	arcticfox-44.0
-PKGREVISION=	1
+DISTNAME=	arcticfox-45.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -63,19 +62,7 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--disable-precompiled-startupcache
 
 CONFIGURE_ARGS+=	--with-system-bz2
-# Needs libjpeg-turbo.
-# CONFIGURE_ARGS+=	--with-system-jpeg
-# Causes build failures. :-/
-# CONFIGURE_ARGS+=	--with-system-icu
-CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
-#CONFIGURE_ARGS+=	--with-system-nss
-#CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-zlib
-CONFIGURE_ARGS+=	--enable-system-hunspell
-CONFIGURE_ARGS+=	--enable-system-ffi
-CONFIGURE_ARGS+=	--enable-system-pixman
-# error: System SQLite library is not compiled with SQLITE_SECURE_DELETE.
-#CONFIGURE_ARGS+=	--enable-system-sqlite
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 starts, but crashes on some sites
@@ -109,6 +96,7 @@ INSTALLATION_DIRS+=	share/icons/hicolor/32x32/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/48x48/apps
 INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 
+CHECK_PORTABILITY_SKIP+=	browser/extensions/loop/*.sh
 CHECK_PORTABILITY_SKIP+=	js/src/tests/*.sh
 CHECK_PORTABILITY_SKIP+=	memory/jemalloc/src/configure
 CHECK_PORTABILITY_SKIP+=	security/nss/tests/*/*.sh
@@ -145,12 +133,7 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-#.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
-#.include "../../devel/nspr/buildlink3.mk"
-#.include "../../devel/nss/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
-.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
@@ -158,14 +141,8 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-#.include "../../multimedia/ffmpeg2/buildlink3.mk"
-#.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/hunspell/buildlink3.mk"
-#.include "../../textproc/icu/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/pixman/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
