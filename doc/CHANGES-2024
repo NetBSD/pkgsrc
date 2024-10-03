@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.5983 2024/10/02 22:15:52 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.5984 2024/10/03 01:49:11 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9138,3 +9138,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/xfce4-dict to 0.8.8 [gutteridge 2024-10-02]
 	Updated www/firefox115 to 115.16.0 [gutteridge 2024-10-02]
 	Updated www/firefox115-l10n to 115.16.0 [gutteridge 2024-10-02]
+	Updated www/firefox128 to 128.3.0 [gutteridge 2024-10-03]
