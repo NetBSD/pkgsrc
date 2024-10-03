@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2022/05/15 18:39:30 rhialto Exp $
+$NetBSD: distinfo,v 1.10 2024/10/03 13:24:05 rhialto Exp $
 
-BLAKE2s (cbmconvert-2.1.5.tar.gz) = 0e54085af2920690216ef47dae0dc2707642c9f552981ac3a568252993aadaed
-SHA512 (cbmconvert-2.1.5.tar.gz) = a569f0d836c2192fa3e6a84536438d623c2767a60a43cbc0523f4a75ce90a712ae26096a44a49ce88d9f2ebb01c1ca6523c399830ced7527f82a8c2e3070694c
-Size (cbmconvert-2.1.5.tar.gz) = 67801 bytes
+BLAKE2s (cbmconvert-2.1.6.tar.gz) = 5968be7d00608f4106349ff8bda007d76f6a38818bcc3569abc260da5be0db8e
+SHA512 (cbmconvert-2.1.6.tar.gz) = dd5f3c0f25a27eabb25abbbf6516b326edbceb0ce43d972774cb7d951605838be08017c13c759b4cd8456ac22a79167dbc72eb212a713bd87f099296aea80a26
+Size (cbmconvert-2.1.6.tar.gz) = 70633 bytes
