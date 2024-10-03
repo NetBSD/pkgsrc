@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/10/25 22:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/03 05:33:06 adam Exp $
 
-DISTNAME=	tomli-2.0.1
+DISTNAME=	tomli-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tomli/}
 
@@ -12,8 +11,6 @@ COMMENT=	Lil' TOML parser
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/bootstrap.mk"
 .include "../../mk/bsd.pkg.mk"
