@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/09/09 15:51:38 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/03 09:44:50 adam Exp $
 
-VERS=		3.12.6
+VERS=		3.12.7
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py312-html-docs-${VERS}
 CATEGORIES=	lang python
@@ -11,6 +11,8 @@ MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://www.python.org/doc/
 COMMENT=	HTML documentation for Python 3.12
 LICENSE=	python-software-foundation
+
+WRKSRC=		${WRKDIR}/python-3.12-docs-html
 
 USE_TOOLS+=	pax
 
