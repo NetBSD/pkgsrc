@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/06 08:39:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/03 12:03:43 adam Exp $
 bin/fits2bitmap
 bin/fitscheck
 bin/fitsdiff
@@ -2026,7 +2026,7 @@ ${PYSITELIB}/astropy/tests/figures/__init__.pyo
 ${PYSITELIB}/astropy/tests/figures/helpers.py
 ${PYSITELIB}/astropy/tests/figures/helpers.pyc
 ${PYSITELIB}/astropy/tests/figures/helpers.pyo
-${PYSITELIB}/astropy/tests/figures/py310-test-image-mpl334-cov.json
+${PYSITELIB}/astropy/tests/figures/py310-test-image-mpl350-cov.json
 ${PYSITELIB}/astropy/tests/figures/py310-test-image-mpldev-cov.json
 ${PYSITELIB}/astropy/tests/helper.py
 ${PYSITELIB}/astropy/tests/helper.pyc

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/09/11 11:45:20 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/10/03 12:03:43 adam Exp $
 
-DISTNAME=	astropy-6.1.3
+DISTNAME=	astropy-6.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astropy/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2024.7.1.0.34.3:../../math/py-astropy-iers-data
+DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2024.8.27.10.28.29:../../math/py-astropy-iers-data
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.13:../../textproc/py-yaml
