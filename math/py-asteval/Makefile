@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2024/09/15 15:38:42 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/10/03 09:00:49 adam Exp $
 
-DISTNAME=	asteval-1.0.4
+DISTNAME=	asteval-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asteval/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/newville/asteval
+HOMEPAGE=	https://github.com/lmfit/asteval
 COMMENT=	Safe, minimalistic expression evaluator using ast module
 LICENSE=	mit
 
