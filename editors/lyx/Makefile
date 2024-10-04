@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.124 2024/05/29 16:32:24 adam Exp $
+# $NetBSD: Makefile,v 1.125 2024/10/04 03:49:21 ryoon Exp $
 
 DISTNAME=		lyx-2.3.6.1
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.3.x/
 MASTER_SITES+=		ftp://ftp.sdsc.edu/pub/other/lyx/stable/2.3.x/
