@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6006 2024/10/04 03:32:06 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6007 2024/10/04 03:32:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9173,3 +9173,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Log-Report to 1.39 [wen 2024-10-04]
 	Updated devel/boost-build to 1.86.0 [ryoon 2024-10-04]
 	Updated devel/boost-docs to 1.86.0 [ryoon 2024-10-04]
+	Updated devel/boost-headers to 1.86.0 [ryoon 2024-10-04]
