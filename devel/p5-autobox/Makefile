@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2023/07/06 09:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/04 07:00:25 wen Exp $
 
-DISTNAME=	autobox-v3.0.1
+DISTNAME=	autobox-v3.0.2
 PKGNAME=	p5-${DISTNAME:S/v//}
-PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=autobox/}
 
