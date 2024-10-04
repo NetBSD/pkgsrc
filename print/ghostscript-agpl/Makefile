@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/09/22 15:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/10/04 19:34:39 rillig Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -24,6 +24,7 @@ DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
