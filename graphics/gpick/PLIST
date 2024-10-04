@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2021/11/12 16:17:20 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/04 04:17:37 ryoon Exp $
 bin/gpick
-man/man1/gpick.1
-share/applications/gpick.desktop
+share/applications/org.gpick.gpick.desktop
 share/doc/gpick/copyright
+share/gpick/.gpick-data-directory
 share/gpick/color_dictionary_0.txt
 share/gpick/converters.lua
 share/gpick/gpick-falloff-cubic.png
@@ -24,5 +24,6 @@ share/locale/es/LC_MESSAGES/gpick.mo
 share/locale/lt/LC_MESSAGES/gpick.mo
 share/locale/ru/LC_MESSAGES/gpick.mo
 share/locale/sv/LC_MESSAGES/gpick.mo
-share/metainfo/gpick.appdata.xml
-share/mime/packages/gpick.xml
+share/man/man1/gpick.1
+share/metainfo/org.gpick.gpick.metainfo.xml
+share/mime/packages/org.gpick.gpick.xml
