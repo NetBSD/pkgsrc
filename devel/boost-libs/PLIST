@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2024/04/17 16:14:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2024/10/04 03:29:54 ryoon Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${PKGVERSION}
@@ -72,6 +72,9 @@ lib/libboost_nowide.so.${PKGVERSION}
 lib/libboost_prg_exec_monitor.a
 lib/libboost_prg_exec_monitor.so
 lib/libboost_prg_exec_monitor.so.${PKGVERSION}
+lib/libboost_process.a
+lib/libboost_process.so
+lib/libboost_process.so.${PKGVERSION}
 lib/libboost_program_options.a
 lib/libboost_program_options.so
 lib/libboost_program_options.so.${PKGVERSION}
@@ -90,6 +93,9 @@ lib/libboost_stacktrace_addr2line.so.${PKGVERSION}
 lib/libboost_stacktrace_basic.a
 lib/libboost_stacktrace_basic.so
 lib/libboost_stacktrace_basic.so.${PKGVERSION}
+${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.a
+${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.so
+${PLIST.stacktrace_from_exception}lib/libboost_stacktrace_from_exception.so.${PKGVERSION}
 lib/libboost_stacktrace_noop.a
 lib/libboost_stacktrace_noop.so
 lib/libboost_stacktrace_noop.so.${PKGVERSION}
