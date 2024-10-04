@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6020 2024/10/04 13:07:44 wen Exp $
+$NetBSD: CHANGES-2024,v 1.6021 2024/10/04 13:19:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9188,3 +9188,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/rtorrent to 0.10.0 [adam 2024-10-04]
 	Updated www/mediawiki to 1.42.3 [wen 2024-10-04]
 	Updated www/wordpress to 6.6.2 [wen 2024-10-04]
+	Updated devel/p5-CPAN-Changes to 0.500004 [wen 2024-10-04]
