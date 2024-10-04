@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24900 2024/10/03 10:13:40 adam Exp $
+$NetBSD: TODO,v 1.24901 2024/10/04 03:34:38 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o boolean-7.1
-	o boost-1.86.0
 	o bos-2.5
 	o botan-3.0.0
 	o bottlerocket-0.05b3
