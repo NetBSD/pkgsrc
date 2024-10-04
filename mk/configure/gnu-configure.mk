@@ -1,4 +1,4 @@
-# $NetBSD: gnu-configure.mk,v 1.32 2024/04/12 19:54:56 riastradh Exp $
+# $NetBSD: gnu-configure.mk,v 1.33 2024/10/04 19:27:15 rillig Exp $
 #
 # Package-settable variables:
 #
@@ -30,7 +30,14 @@
 #	Default: no
 #	See also: configure-help show-unknown-configure-options
 #
-# Keywords: configure configure_args gnu strict enable disable
+# GNU_CONFIGURE_ICONV
+#	Whether to add --with-libiconv-prefix to CONFIGURE_ARGS.
+#	Should be set to "no" for packages that don't know this option.
+#
+#	Default: yes
+#	See also: ../../converters/libiconv/builtin.mk
+#
+# Keywords: configure configure_args gnu strict enable disable libiconv
 
 _VARGROUPS+=			gnu-configure
 _USER_VARS.gnu-configure=	# none
