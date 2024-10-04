@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2024/06/14 02:03:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.83 2024/10/04 00:25:05 gutteridge Exp $
 
-DISTNAME=	vte-0.76.3
+DISTNAME=	vte-0.76.4
 PKGNAME=	${DISTNAME:S/vte/vte3/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GNOME/}
