@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.98 2024/10/04 03:49:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2024/10/04 04:25:35 ryoon Exp $
 #
 
-V=		8.0.4
+V=		8.0.5
 DISTNAME=	kicad-${V}
-PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/code/}
 GITLAB_PROJECT=	kicad
@@ -21,7 +20,6 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++17
 USE_CXX_FEATURES+=	charconv filesystem
-USE_CMAKE=		yes
 USE_TOOLS+=		pkg-config msgfmt msgmerge xgettext
 
 CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
@@ -53,7 +51,7 @@ NOT_FOR_PLATFORM+=	Darwin-*-*
 .include "../../cad/occt/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/cmake/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libgit2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
