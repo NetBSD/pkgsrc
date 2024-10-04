@@ -1,15 +1,15 @@
-$NetBSD: patch-src_utils_directory.h,v 1.1 2018/06/24 16:59:52 adam Exp $
+$NetBSD: patch-src_utils_directory.h,v 1.2 2024/10/04 09:02:01 adam Exp $
 
 Fix build under Solaris and DragonFly.
 
---- src/utils/directory.h.orig	2012-03-29 14:06:11.000000000 +0100
-+++ src/utils/directory.h	2012-05-14 23:40:30.000000000 +0100
-@@ -50,7 +50,7 @@
+--- src/utils/directory.h.orig	2024-09-07 06:29:21.000000000 +0000
++++ src/utils/directory.h
+@@ -50,7 +50,7 @@ struct directory_entry {
    // The name and types should match POSIX.
-   uint32_t            d_fileno;
-   uint32_t            d_reclen; //Not used. Messes with Solaris.
--  uint8_t             d_type;
-+  uint32_t             d_type;
+   uint32_t            s_fileno;
+   uint32_t            s_reclen; //Not used. Messes with Solaris.
+-  uint8_t             s_type;
++  uint32_t            s_type;
  
-   std::string         d_name;
+   std::string         s_name;
  };
