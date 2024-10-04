@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.94 2024/05/29 16:34:03 adam Exp $
+# $NetBSD: Makefile,v 1.95 2024/10/04 09:02:01 adam Exp $
 
-DISTNAME=	rtorrent-0.9.8
-PKGREVISION=	16
+DISTNAME=	rtorrent-0.10.0
 CATEGORIES=	net
-MASTER_SITES=	https://rtorrent.net/downloads/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rakshasa/rtorrent
@@ -23,12 +23,12 @@ LDFLAGS+=	${PTHREAD_LDFLAGS}
 
 # See http://libtorrent.rakshasa.no/ticket/77
 .include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-4.0.*)
+.if ${CC_VERSION:Mgcc-4.0.*}
 CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 		-fno-inline -fforce-addr
 .endif
 
-.if !empty(CC_VERSION:Mgcc-*) && !empty(MACHINE_ARCH:Mi?86)
+.if ${CC_VERSION:Mgcc-*} && !empty(MACHINE_ARCH:Mi?86)
 CXXFLAGS+=	-march=i486
 .endif
 
