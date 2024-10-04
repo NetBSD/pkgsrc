@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.105 2024/05/29 16:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.106 2024/10/04 03:29:54 ryoon Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		backtrace context fiber log longdbl
+PLIST_VARS+=		backtrace context fiber log longdbl stacktrace_from_exception
 
 .include "../../mk/compiler.mk"
 
@@ -27,6 +26,12 @@ PLIST.context=		yes
 .  if !${MACHINE_PLATFORM:MDarwin-1[0-4].*-*}
 PLIST.fiber=		yes
 .  endif
+.endif
+
+.if ${MACHINE_ARCH} == x86_86 && !empty(PKGSRC_COMPILER:Mgcc)
+PLIST.stacktrace_from_exception=	yes
+.else
+BJAM_BUILD+=		boost.stacktrace.from_exception=off
 .endif
 
 # Darwin GCC is unable to build Boost.Log
