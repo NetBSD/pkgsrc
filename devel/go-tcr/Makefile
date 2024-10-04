@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/06 18:48:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/04 16:26:33 schmonz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-1.2.0
 PKGNAME=		go-${DISTNAME:tl}
@@ -10,7 +10,7 @@ GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/murex/TCR/
-COMMENT=		TCR (Test && Commit || Revert) utility
+COMMENT=		TCR (Test and Commit or Revert) utility
 LICENSE=		mit
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
