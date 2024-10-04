@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.22 2024/04/12 19:57:34 riastradh Exp $
+# $NetBSD: depends.mk,v 1.23 2024/10/04 07:45:59 jperkin Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -83,12 +83,7 @@ _RESOLVE_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
 		HOST_PKG_INFO=${HOST_PKG_INFO:Q} \
 		_DEPENDS_FILE=${_DEPENDS_FILE:Q} \
-		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/resolve-dependencies \
-			" "${BOOTSTRAP_DEPENDS:Q} \
-			" " \
-			" "${TOOL_DEPENDS:Q} \
-			" "${BUILD_DEPENDS:Q} \
-			" "${DEPENDS:Q}
+		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/resolve-dependencies
 
 CROSSTARGETSETTINGS=	${CROSSVARS:@_v_@TARGET_${_v_}=${${_v_}}@}
 
