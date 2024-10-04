@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/02/10 09:54:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2024/10/04 03:49:30 ryoon Exp $
 
 DISTNAME=	librime-1.9.0
+PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rime/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2023/12/29 18:24:38 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2024/10/04 03:49:17 ryoon Exp $
 
 BUILDLINK_TREE+=	libwpg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libwpg
 LIBWPG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libwpg+=	libwpg>=0.1.3
-BUILDLINK_ABI_DEPENDS.libwpg+=	libwpg>=0.3.3nb11
+BUILDLINK_ABI_DEPENDS.libwpg+=	libwpg>=0.3.3nb12
 BUILDLINK_PKGSRCDIR.libwpg?=	../../converters/libwpg
 
 .include "../../converters/libwpd/buildlink3.mk"
