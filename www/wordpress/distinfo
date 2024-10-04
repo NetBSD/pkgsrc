@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.92 2024/08/18 13:30:07 wen Exp $
+$NetBSD: distinfo,v 1.93 2024/10/04 13:07:00 wen Exp $
 
-BLAKE2s (wordpress-6.6.1.tar.gz) = f456c713293f121309760b3fa7c4e51470708b537abdc8113a7885cc61cc657a
-SHA512 (wordpress-6.6.1.tar.gz) = a6fa5e8c6ebe57e6064db04286816a898a7c783adc7ffa3244e12e27af6a4eb0aaf49bec8e025c314bcee9d3f63775277211636d6f99a69c6458f73b103565e2
-Size (wordpress-6.6.1.tar.gz) = 24637199 bytes
+BLAKE2s (wordpress-6.6.2.tar.gz) = 2158cb7631862371f889d3c186fed4b41073cc9cc0b41316af16bc51d2915c54
+SHA512 (wordpress-6.6.2.tar.gz) = 652d20f2d66a62d1dfa0c0e6edb7b80e32e9a50a6bdbfb995510091ed1e3cfe6c42db2b13cb78b69ff09c7e85a14b5b8881738477fa0ade8998967179df851e7
+Size (wordpress-6.6.2.tar.gz) = 24640061 bytes
