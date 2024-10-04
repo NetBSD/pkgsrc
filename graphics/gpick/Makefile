@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2024/10/04 03:49:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/04 04:17:37 ryoon Exp $
 
-DISTNAME=	gpick-0.2.6
-PKGREVISION=	13
+DISTNAME=	gpick-0.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thezbyg/}
-GITHUB_TAG=	${DISTNAME}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/thezbyg/gpick/
@@ -12,32 +11,19 @@ COMMENT=	Advanced color picker
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config msgfmt msgmerge xgettext
+USE_TOOLS+=	gmake pkg-config msgfmt msgmerge xgettext
 
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES+=	filesystem
 
 TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
-PYTHON_VERSIONS_ACCEPTED=	27	# as of 0.2.5
-
-SCONS_ARGS+=	DESTDIR=${DESTDIR}${PREFIX}
-
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	pre-configure
-SUBST_FILES.man+=	SConscript
-SUBST_SED.man+=		-e "s,/share/man/man1,/${PKGMANDIR}/man1,g"
-
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS}
-
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONSBIN} ${SCONS_ARGS} install
+CXXFLAGS+=	-Wno-sign-compare
+LDFLAGS+=	-llua
 
 .include "../../devel/boost-libs/buildlink3.mk"
-PYTHON_FOR_BUILD_ONLY?=	yes
-.include "../../devel/scons/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
