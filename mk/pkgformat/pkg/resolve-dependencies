@@ -9,21 +9,17 @@
 #	resolve-dependencies
 #
 # DESCRIPTION
-#	resolve-dependencies checks all entries in ${DEPENDS_FILE}
+#	resolve-dependencies checks all entries in ${_DEPENDS_FILE}
 #	for existance.  The best matching pattern is printed similiar
 #	to list-dependencies
 #
 ######################################################################
 
-: ${CAT:=cat}
 : ${ECHO:=echo}
 : ${TEST:=test}
 : ${TRUE:=true}
 
 set -e
-
-DEPENDS_FILE=${_DEPENDS_FILE}
-unset _DEPENDS_FILE
 
 error_msg() {
 	${ECHO} "ERROR:" "$*" 1>&2
@@ -38,9 +34,9 @@ find_best() {
 	esac
 }
 
-${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
-	pkg=`find_best "$type" "$pattern"`
+while read type pattern dir; do
 	[ "$type" != test ] || continue
+	pkg=`find_best "$type" "$pattern"`
 	case "$pkg" in
 	"")
 		error_msg "[resolve-dependencies] A package matching \`\`$pattern'' should"
@@ -52,4 +48,4 @@ ${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
 		${ECHO} "$type	$pattern	$pkg"
 		;;
 	esac
-done
+done < ${_DEPENDS_FILE}
