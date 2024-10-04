@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:46:15 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/10/04 04:12:20 ryoon Exp $
 
-BLAKE2s (gource-0.51.tar.gz) = 3dcdb39461275b0530b821cbe533cdb021c5507452e662789c454b71aeec0aa7
-SHA512 (gource-0.51.tar.gz) = f29326ffb2aa6f645fb941e08e41f0cbf8dd894d5a4d607b782caeb12a24e6446198027060b880e0ad14a36efbed19023620dd8c890cfc0c027fc90ac2d5be24
-Size (gource-0.51.tar.gz) = 882783 bytes
-SHA1 (patch-src_dirnode.cpp) = b692c7c3cf9a9cb8e47d32cf7864cbb0a293802c
+BLAKE2s (gource-0.55.tar.gz) = b0b5f1ea4554907442654100902af7439965f97b182e78af9dad87dfc19e4d1b
+SHA512 (gource-0.55.tar.gz) = 6df687441fc04e9bdfcf3620ed6b8a8fc1ac5774d21f51afdb0d518339ea1518914db77c90fb457ada899653c491a3b45c340665c3efa28bddeac65eeb334488
+Size (gource-0.55.tar.gz) = 900907 bytes
