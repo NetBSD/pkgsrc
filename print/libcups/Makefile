@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/06/17 09:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/04 19:32:11 rillig Exp $
 
 .include "../../print/cups/Makefile.common"
 
@@ -22,6 +22,7 @@ USE_LANGUAGES=		c c++	# pdftops is a C++ application
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
