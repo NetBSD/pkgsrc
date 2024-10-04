@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2023/12/29 18:25:01 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2024/10/04 03:49:37 ryoon Exp $
 
 BUILDLINK_TREE+=	libkactivities4
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkactivities4
 LIBKACTIVITIES4_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkactivities4+=	libkactivities4>=4.7.95
-BUILDLINK_ABI_DEPENDS.libkactivities4+=	libkactivities4>=4.13.3nb36
+BUILDLINK_ABI_DEPENDS.libkactivities4+=	libkactivities4>=4.13.3nb38
 BUILDLINK_PKGSRCDIR.libkactivities4?=	../../x11/libkactivities4
 
 .include "../../x11/kdelibs4/buildlink3.mk"

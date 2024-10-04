@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.49 2024/05/16 06:15:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.50 2024/10/04 03:49:31 ryoon Exp $
 
 BUILDLINK_TREE+=	sword
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	sword
 SWORD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sword+=	sword>=1.8.1
-BUILDLINK_ABI_DEPENDS.sword?=	sword>=1.9.0nb12
+BUILDLINK_ABI_DEPENDS.sword?=	sword>=1.9.0nb14
 BUILDLINK_PKGSRCDIR.sword?=	../../misc/sword
 
 .include "../../textproc/icu/buildlink3.mk"

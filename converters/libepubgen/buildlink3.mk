@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2023/12/29 18:24:37 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2024/10/04 03:49:16 ryoon Exp $
 
 BUILDLINK_TREE+=	libepubgen
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libepubgen
 LIBEPUBGEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libepubgen+=	libepubgen>=0.1.0
-BUILDLINK_ABI_DEPENDS.libepubgen?=	libepubgen>=0.1.1nb8
+BUILDLINK_ABI_DEPENDS.libepubgen?=	libepubgen>=0.1.1nb9
 BUILDLINK_PKGSRCDIR.libepubgen?=	../../converters/libepubgen
 
 .include "../../converters/librevenge/buildlink3.mk"

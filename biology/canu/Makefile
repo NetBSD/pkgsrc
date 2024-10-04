@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/02/23 14:30:58 bacon Exp $
+# $NetBSD: Makefile,v 1.26 2024/10/04 03:49:14 ryoon Exp $
 
 DISTNAME=	canu-2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 EXTRACT_SUFX=	.tar.xz
