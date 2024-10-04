@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24901 2024/10/04 03:34:38 ryoon Exp $
+$NetBSD: TODO,v 1.24902 2024/10/04 04:18:08 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -730,7 +730,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o goocanvas-2.0.2
 	o gossip-0.31
 	o gperiodic-3.0.3
-	o gpick-0.3 [wip]
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
