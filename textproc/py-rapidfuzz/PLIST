@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/05 16:35:03 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.8 2024/10/04 13:59:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/rapidfuzz/__init__.pxd
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/rapidfuzz/__init__.py
 ${PYSITELIB}/rapidfuzz/__init__.pyc
 ${PYSITELIB}/rapidfuzz/__init__.pyi
@@ -139,7 +137,6 @@ ${PYSITELIB}/rapidfuzz/process_py.py
 ${PYSITELIB}/rapidfuzz/process_py.pyc
 ${PYSITELIB}/rapidfuzz/process_py.pyo
 ${PYSITELIB}/rapidfuzz/py.typed
-${PYSITELIB}/rapidfuzz/rapidfuzz.h
 ${PYSITELIB}/rapidfuzz/utils.py
 ${PYSITELIB}/rapidfuzz/utils.pyc
 ${PYSITELIB}/rapidfuzz/utils.pyi

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/09/03 05:10:25 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/10/04 13:59:29 adam Exp $
 
-DISTNAME=	rapidfuzz-3.9.7
+DISTNAME=	rapidfuzz-3.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rapidfuzz/}
@@ -11,8 +11,7 @@ COMMENT=	Rapid fuzzy string matching
 LICENSE=	mit
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build>=0.18.0:../../devel/py-scikit-build
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10.7:../../devel/py-scikit-build-core
 # optional dependency, but not optional for testing
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
@@ -39,6 +38,10 @@ USE_LANGUAGES=		c c++
 GCC_REQD+=		10
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fno-fat-lto-objects
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/rapidfuzz/CMakeLists.txt.orig \
+	      ${DESTDIR}${PREFIX}/${PYSITELIB}/rapidfuzz/distance/CMakeLists.txt.orig
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
