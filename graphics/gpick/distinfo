@@ -1,6 +1,22 @@
-$NetBSD: distinfo,v 1.4 2021/11/12 16:17:20 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/10/04 04:17:37 ryoon Exp $
 
-BLAKE2s (gpick-0.2.6.tar.gz) = 26745d0822db138c0f1bbd860c2fe8cac6c501de8e02be6e57b9621d6712e929
-SHA512 (gpick-0.2.6.tar.gz) = 85f4d0978915e0c0b6e412d619a28af62a43547d39c4b97d8dddc4024f9d8b339f09e91f70d929073ebbad7a6e008e174aa76fdc611008ba269dedb403ed6867
-Size (gpick-0.2.6.tar.gz) = 363810 bytes
-SHA1 (patch-SConscript) = b934c7e48eedbc08fcdc38c558ff35e38fb446c8
+BLAKE2s (gpick-0.3.tar.gz) = 1b8ea789b855386643370284bfede925c41b2b76af10e491002c299176f4fabf
+SHA512 (gpick-0.3.tar.gz) = bf782c3be6399439589da9d6c59dc21af9551818412b3c197b375ba93fe9cba6fee0f668b81db653f04a1817e33fc87c8d8faf27d305d26ee61f119b8d4af987
+Size (gpick-0.3.tar.gz) = 368100 bytes
+SHA1 (patch-source_ColorSpaceType.cpp) = 5ce8ef285aca682d952c534a279d6c9257b4a830
+SHA1 (patch-source_Converter.cpp) = 7f96ea22dc179e341f3f893b73b91b8a2c6fb100
+SHA1 (patch-source_GlobalState.cpp) = 7c238a60945191aeedb23623adc73ba520b18827
+SHA1 (patch-source_Paths.cpp) = 3f8a7b7bb62651c49036396292ddc9f7c2a7f40e
+SHA1 (patch-source_dynv_Types.cpp) = 0b0846725dc3301a419cf0537e215eda4a51592c
+SHA1 (patch-source_layout_Layout.cpp) = 81af21d502a46bc8962abfd5e7b55ffccaa740ef
+SHA1 (patch-source_lua_Color.cpp) = c8dea1b5a0351d8a749256805f9411f3639d9568
+SHA1 (patch-source_lua_ColorObject.cpp) = 316ef998da6214c845f5f6054cf1471d04027658
+SHA1 (patch-source_lua_DynvSystem.cpp) = ee17b5b4c75a6ad6614aa3ec82edfd0dec2d7e58
+SHA1 (patch-source_lua_Extensions.cpp) = 8a1ca3fed7edf07e476959c88428a571daf53c48
+SHA1 (patch-source_lua_GlobalState.cpp) = 209885eabeeab02633251e20713108993b191981
+SHA1 (patch-source_lua_I18N.cpp) = ce073b27c5075f5f39019d674530cf4da234c69f
+SHA1 (patch-source_lua_Layout.cpp) = 8133b4511177beb08b4a54a93af2b084d1c548bc
+SHA1 (patch-source_lua_Ref.cpp) = 4ecb3d3e32d176c4e857b4bac0513b8cfc5f8bbb
+SHA1 (patch-source_lua_Script.cpp) = dcecccf7a520042b4c19f14bdc80f91ca7488725
+SHA1 (patch-source_test_Script.cpp) = 57a9b7a161288bee804b38a394901e8fb6bc9ebf
+SHA1 (patch-source_uiDialogOptions.cpp) = 8df28647d30caeb2c3cff461382a0820c7c8bbd9
