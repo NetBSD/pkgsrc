@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2022/07/25 11:12:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/05 07:54:12 nia Exp $
 
 DISTNAME=	libvisual-0.2.0
 PKGNAME=	libvisual0.2-0.2.0
@@ -20,9 +20,11 @@ GNU_CONFIGURE=		yes
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
+.include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/compiler.mk"
 
-.if !empty(CC_VERSION:Mgcc*)
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+    !empty(CC_VERSION:Mgcc*)
 CPPFLAGS+=		-mmmx
 .endif
 
