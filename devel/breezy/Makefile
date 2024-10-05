@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/01/28 12:43:55 rhialto Exp $
+# $NetBSD: Makefile,v 1.22 2024/10/05 13:34:19 rhialto Exp $
 
-DISTNAME=	breezy-3.3.5
+DISTNAME=	breezy-3.3.8
 CATEGORIES=	devel scm
 MASTER_SITES=	https://launchpad.net/brz/${PKGVERSION_NOREV:R}/${PKGVERSION_NOREV}/+download/
 
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
-# Seems to be used in all cases now:
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-dulwich>=0.20.23:../../devel/py-dulwich
@@ -19,7 +18,7 @@ DEPENDS+=		${PYPKGPREFIX}-fastbencode>=0.0.9:../../converters/py-fastbencode
 DEPENDS+=		${PYPKGPREFIX}-fastimport>0:../../devel/py-fastimport
 DEPENDS+=		${PYPKGPREFIX}-merge3>=0.0.14:../../textproc/py-merge3
 DEPENDS+=		${PYPKGPREFIX}-patiencediff>=0.2.2:../../textproc/py-patiencediff
-DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=1.8.1:../../devel/py-setuptools-rust
+#DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=1.8.1:../../devel/py-setuptools-rust
 DEPENDS+=		${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 # Not yet packaged; only needed for lp: shortcuts.
 #DEPENDS+=		${PYPKGPREFIX}-launchpadlib>=1.6.3:../../devel/py-launchpadlib
@@ -62,13 +61,12 @@ post-build:
 post-install:
 	cd ${WRKSRC} && ${INSTALL_MAN} brz.1 breezy/git/git-remote-bzr.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ./target/release/brz selftest -v
+#do-test: "brz selftest -v" needs the installed package.
 
-.include "cargo-depends.mk"
+#.include "cargo-depends.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
-.include "../../lang/rust/cargo.mk"
+#.include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
