@@ -7,3 +7,5 @@ a recent, well-featured implementation written from scratch. Algol
 defined by the Revised Report. The implementation is a hybrid
 compiler-interpreter; units with considerable interpreter-overhead
 can optionally be compiled.
+
+Note: 'a68g --compile' requires <quadmath.h> from gcc 8+.
