@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/05/29 16:33:13 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/05 15:51:02 rhialto Exp $
 
-DISTNAME=	algol68g-3.4.4
-PKGREVISION=	2
+DISTNAME=	algol68g-3.5.5
 CATEGORIES=	lang
 MASTER_SITES=	http://jmvdveer.home.xs4all.nl/
 
@@ -10,7 +9,8 @@ HOMEPAGE=	https://jmvdveer.home.xs4all.nl/en.algol-68-genie.html
 COMMENT=	Algol 68genie compiler
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=		c c17
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c17
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--enable-compiler
