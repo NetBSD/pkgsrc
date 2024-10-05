@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/04/03 20:08:29 pin Exp $
+$NetBSD: distinfo,v 1.13 2024/10/05 04:02:51 pin Exp $
 
 BLAKE2s (aho-corasick-0.7.20.crate) = e435fcd774a78d21bafe7b56bad76b8595dcd87a850c6ef2a41206c7ec6439c5
 SHA512 (aho-corasick-0.7.20.crate) = ad31f3d1b3fe41e593d4ca7e721bbad62936f2e6a17fd1e0997353edb6fc906d1bef2b79f0ac7c7676abe637bbabb23ff22059947be379a2441011f8178983c5
@@ -54,9 +54,9 @@ Size (hermit-abi-0.1.19.crate) = 9979 bytes
 BLAKE2s (js-sys-0.3.60.crate) = 3704bfae29ccb6ae483c2c0ac495fce7ebd7c93cd10ce88623685dc80a598292
 SHA512 (js-sys-0.3.60.crate) = 543dfd444539fad27bafcbbf112366f53d4ccf4bc63f8bb17820d818c3e1804656697ed6268a793f383ddf6b6227f7e9b3a11fb6fbb24e10732fdbd971801665
 Size (js-sys-0.3.60.crate) = 79257 bytes
-BLAKE2s (kalker-2.2.0.tar.gz) = 9aee623bbd54fd50d2a048506261d6c1c045b77c6cb0f9590c364f882ae2039d
-SHA512 (kalker-2.2.0.tar.gz) = 9615e1566f0168226e9b1c9fff58dc01ff8223695e81e1e54f38ba23494d1ed54de980f1a87d49bf34a2501a090e19e42b02ac6b32b1f42b29cb97a557120990
-Size (kalker-2.2.0.tar.gz) = 1333752 bytes
+BLAKE2s (kalker-2.2.1.tar.gz) = 1c8470b66d39072c046d3d12bc21499d390511ef088d8208c6a19a2d8cd4f2c4
+SHA512 (kalker-2.2.1.tar.gz) = fd5eba6a4d2d2ea04cac6eea0921bac430f53279d445d6078cee6737b2595d30eb1a56d106d24f5a08d5a11fb77c896432526846ad6ec9b017046b6569c72ee0
+Size (kalker-2.2.1.tar.gz) = 1349916 bytes
 BLAKE2s (lazy_static-1.4.0.crate) = 0d5f7c2bcfe70610bc27bd6b339ea3e4ca3b7014149714db3a0c199ac6f07cd1
 SHA512 (lazy_static-1.4.0.crate) = e124c0521ec7c950f3c4a066821918da7a9c6e711115d98009ae7c351928fdddead852e7596fea5937a9c30e4e4ce8eee7099b20248b5d6e3b2494b6a6d88cb8
 Size (lazy_static-1.4.0.crate) = 10443 bytes
