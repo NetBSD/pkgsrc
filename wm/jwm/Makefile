@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2024/05/29 16:34:46 adam Exp $
+# $NetBSD: Makefile,v 1.65 2024/10/05 20:37:18 tsutsui Exp $
 
-DISTNAME=		jwm-2.4.3
-PKGREVISION=		10
+DISTNAME=		jwm-2.4.5
 CATEGORIES=		wm x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=joewing/}
 GITHUB_PROJTECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
