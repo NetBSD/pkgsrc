@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.35 2024/09/19 09:25:30 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.36 2024/10/05 10:39:21 bsiegert Exp $
 
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.mod
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.zip
@@ -44,7 +44,8 @@ GO_MODULE_FILES+=	github.com/containerd/stargz-snapshotter/estargz/@v/v0.14.3.mo
 GO_MODULE_FILES+=	github.com/containerd/stargz-snapshotter/estargz/@v/v0.14.3.zip
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.zip
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.mod
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.zip
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.17.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.23.mod
 GO_MODULE_FILES+=	github.com/creack/pty/@v/v1.1.23.zip
@@ -142,8 +143,8 @@ GO_MODULE_FILES+=	github.com/hashicorp/go-version/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/go-version/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/@v/v1.0.0.zip
-GO_MODULE_FILES+=	github.com/henvic/httpretty/@v/v0.1.3.mod
-GO_MODULE_FILES+=	github.com/henvic/httpretty/@v/v0.1.3.zip
+GO_MODULE_FILES+=	github.com/henvic/httpretty/@v/v0.1.4.mod
+GO_MODULE_FILES+=	github.com/henvic/httpretty/@v/v0.1.4.zip
 GO_MODULE_FILES+=	github.com/hinshun/vt10x/@v/v0.0.0-20220119200601-820417d04eec.mod
 GO_MODULE_FILES+=	github.com/in-toto/attestation/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/in-toto/attestation/@v/v1.1.0.zip
@@ -287,8 +288,8 @@ GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/@v/v0.7.0.mod
 GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/@v/v0.7.0.zip
-GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/v2/@v/v2.0.0.mod
-GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/v2/@v/v2.0.0.zip
+GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/v2/@v/v2.0.1.mod
+GO_MODULE_FILES+=	github.com/theupdateframework/go-tuf/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/thlib/go-timezone-local/@v/v0.0.0-20210907160436-ef149e42d28e.mod
 GO_MODULE_FILES+=	github.com/thlib/go-timezone-local/@v/v0.0.0-20210907160436-ef149e42d28e.zip
 GO_MODULE_FILES+=	github.com/titanous/rocacheck/@v/v0.0.0-20171023193734-afe73141d399.mod
