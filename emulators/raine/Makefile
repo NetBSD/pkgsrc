@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/07/07 09:35:49 nia Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/05 08:07:54 nia Exp $
 
 DISTNAME=	raine-0.96.7
 PKGREVISION=	3
@@ -29,7 +29,7 @@ MAKE_FLAGS+=	rainedata=${DESTDIR}${PREFIX}/share/raine
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${MACHINE_ARCH} == "earmv6hf"
-CFLAGS+=		-march=armv6-a -marm
+CFLAGS+=		-march=armv6 -marm
 .endif
 
 .if ${MACHINE_ARCH} == "earmv7hf"

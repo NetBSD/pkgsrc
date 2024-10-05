@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/07/07 09:37:26 nia Exp $
+# $NetBSD: Makefile,v 1.71 2024/10/05 08:07:54 nia Exp $
 
 PKGREVISION= 26
 .include "version.mk"
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--enable-dylib
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "earmv6hf"
-CFLAGS+=		-march=armv6-a -marm
+CFLAGS+=		-march=armv6 -marm
 CONFIGURE_ARGS+=	--enable-floathard
 .endif
 
