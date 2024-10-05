@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6026 2024/10/05 04:04:22 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6027 2024/10/05 04:06:26 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9195,3 +9195,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated pkgtools/pkglint to 23.8.0 [rillig 2024-10-04]
 	Updated math/kalker to 2.2.1 [pin 2024-10-05]
 	Updated misc/wthrr to 1.2.1 [pin 2024-10-05]
+	Updated net/termscp to 0.15.0 [pin 2024-10-05]
