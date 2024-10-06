@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.73 2024/09/12 05:28:49 pin Exp $
+# $NetBSD: go-modules.mk,v 1.74 2024/10/06 17:34:23 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -64,8 +64,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.16.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.16.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.22.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.22.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
