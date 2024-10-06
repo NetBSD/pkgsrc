@@ -1,0 +1,18 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2024/10/06 13:19:15 pin Exp $
+
+Depends on unpublished crate version.
+
+--- Cargo.toml.orig	2024-10-06 12:25:01.433117509 +0000
++++ Cargo.toml
+@@ -50,8 +50,9 @@ zip = "2"
+ 
+ # Fix Glyphon to a version that is built with wgpu 0.20
+ [workspace.dependencies.glyphon]
+-git = "https://github.com/grovesNL/glyphon.git"
+-rev = "47f4126f999753e14728c0862b822677f1b039e2"
++#git = "https://github.com/grovesNL/glyphon.git"
++#rev = "47f4126f999753e14728c0862b822677f1b039e2"
++glyphon = { path = "glyphon-47f4126f999753e14728c0862b822677f1b039e2" }
+ 
+ [profile.dev-fast]
+ # dev profile with debug symbols disabled, which results in significantly faster compile times
