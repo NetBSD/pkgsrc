@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6030 2024/10/05 20:37:35 tsutsui Exp $
+$NetBSD: CHANGES-2024,v 1.6031 2024/10/06 09:07:12 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9199,3 +9199,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/gh to 2.58.0 [bsiegert 2024-10-05]
 	Updated devel/breezy to 3.3.8 [rhialto 2024-10-05]
 	Updated wm/jwm to 2.4.5 [tsutsui 2024-10-05]
+	Updated devel/ast-grep to 0.28.0 [pin 2024-10-06]
