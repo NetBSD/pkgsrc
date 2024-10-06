@@ -1,0 +1,56 @@
+.\" -*- mode: troff; coding: utf-8 -*-
+.TH "btop" "1" "\(lqJanuary 4 2024\(rq" "" "User Commands"
+.SH
+NAME
+.LP
+btop - Resource monitor that shows usage and stats for processor, memory, disks, network, and processes.
+.SH
+SYNOPSIS
+.LP
+\fBbtop\fR [\fB-lc\fR] [\fB-t\fR | \fB+t\fR] [\fB-p\fR \fIid\fR] [\fB--utf-force\fR]
+[\fB--debug\fR] [{\fB-h\fR | \fB--help\fR} | {\fB-v\fR | \fB--version\fR}]
+.SH
+DESCRIPTION
+.LP
+\fBbtop\fR is a program that shows usage and stats for processor, memory, disks, network, and processes.
+.SH
+OPTIONS
+.LP
+The program follows the usual GNU command line syntax, with long options
+starting with two dashes (\(oq-\(cq). A summary of options is included below.
+.TP 3
+\fB-lc\fR, \fB--low-color\fR
+Disable truecolor, converts 24-bit colors to 256-color.
+.TP 3
+\fB-t\fR, \fB--tty_on\fR
+Force (ON) tty mode, max 16 colors and tty-friendly graph symbols.
+.TP 3
+\fB+t\fR, \fB--tty_off\fR
+Force (OFF) tty mode.
+.TP 3
+\fB-p\fR, \fB--preset \f(BIid\fB\fR
+Start with preset, integer value between 0-9.
+.TP 3
+\fB--utf-force\fR
+Force start even if no UTF-8 locale was detected.
+.TP 3
+\fB--debug\fR
+Start in DEBUG mode: shows microsecond timer for information collect and screen draw functions and sets loglevel to DEBUG.
+.TP 3
+\fB-h\fR, \fB--help\fR
+Show summary of options.
+.TP 3
+\fB-v\fR, \fB--version\fR
+Show version of program.
+.SH
+BUGS
+.LP
+The upstream bug tracker can be found at \fIhttps://github.com/aristocratos/btop/issues\fR.
+.SH
+SEE ALSO
+.LP
+\fBtop\fR(1), \fBhtop\fR(1)
+.SH
+AUTHOR
+.LP
+\fBbtop\fR was written by Jakob P. Liljenberg a.k.a. \(lqAristocratos\(rq.
