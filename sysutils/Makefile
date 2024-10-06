@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1136 2024/09/19 21:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.1137 2024/10/06 10:44:25 fox Exp $
 #
 
 COMMENT=	System utilities
@@ -77,6 +77,7 @@ SUBDIR+=	bsdec2-image-upload
 SUBDIR+=	bsdfetch
 SUBDIR+=	bsdinstall
 SUBDIR+=	bsign
+SUBDIR+=	btop
 SUBDIR+=	btpin-qt
 SUBDIR+=	bubblemon
 SUBDIR+=	bup
