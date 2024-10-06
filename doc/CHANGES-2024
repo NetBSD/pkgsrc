@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6037 2024/10/06 13:19:38 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6038 2024/10/06 17:34:45 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9206,3 +9206,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/pfetch to 1.5.0 [fox 2024-10-06]
 	Updated www/jira-cli to 1.5.2 [fox 2024-10-06]
 	Updated emulators/jgenesis to 0.8.0 [pin 2024-10-06]
+	Updated shells/oh-my-posh to 23.16.0 [pin 2024-10-06]
