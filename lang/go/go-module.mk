@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.18 2024/10/03 15:41:00 bsiegert Exp $
+# $NetBSD: go-module.mk,v 1.19 2024/10/06 16:29:39 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -53,7 +53,6 @@ MAKE_ENV+=	GOTOOLCHAIN=local
 
 .if !target(do-build)
 do-build:
-	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} telemetry off
 	${RUN} cd ${WRKSRC} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} ${GO} install -v ${GO_BUILD_PATTERN}
 .endif
 
