@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6043 2024/10/07 12:39:39 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6044 2024/10/07 14:54:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9215,3 +9215,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-frozendict to 2.4.5 [adam 2024-10-07]
 	Updated comms/py-rich to 13.9.2 [adam 2024-10-07]
 	Updated finance/py-braintree to 4.30.0 [adam 2024-10-07]
+	Updated devel/py-ruff to 0.6.9 [pin 2024-10-07]
