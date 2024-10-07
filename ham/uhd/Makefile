@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2024/10/04 03:49:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2024/10/07 20:55:47 mef Exp $
 
-DISTNAME=	uhd-4.6.0.0
-PKGREVISION=	2
+DISTNAME=	uhd-4.7.0.0
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -85,6 +84,9 @@ INSTALLATION_DIRS+=	share/uhd
 INSTALLATION_DIRS+=	share/uhd/firmware
 INSTALLATION_DIRS+=	share/uhd/fpga
 INSTALLATION_DIRS+=	share/uhd/images
+
+MODULE_VERSION=		${PKGVERSION_NOREV:C/\.[0-9]$//}
+PLIST_SUBST+=		MODULE_VERSION=${MODULE_VERSION}
 
 .include "options.mk"
 
