@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/02/17 21:23:57 nia Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/07 14:32:00 nia Exp $
 #
 
 DISTNAME=	dgen-sdl-1.33
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dgen/}
 
@@ -18,9 +18,8 @@ COMMENT=	Genesis/Megadrive emulator for Unix platforms
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 
-.if !empty(MACHINE_ARCH:Mearm*)
 CONFIGURE_ARGS+=	--without-cyclone
-.endif
+CONFIGURE_ARGS+=	--without-drz80
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
