@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24905 2024/10/07 14:54:47 pin Exp $
+$NetBSD: TODO,v 1.24906 2024/10/07 20:03:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -860,6 +860,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
+	o libgsf-1.14.53
 	o libgtop-2.40 [blocking update of mate-system-monitor]
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
@@ -1104,7 +1105,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o postal-0.72
 	o pound-3.0d
 	o povray-3.7.0.0
-	o powerdns-recursor-5.0.2
+	o powerdns-recursor-5.1.2
 	o powerpc-none-elf-binutils-2.36.1
 	o powerpc-none-elf-gcc-9.3.0
 	o powwow-1.2.22
