@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:17:27 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/10/07 20:02:56 wiz Exp $
 
-BLAKE2s (Crypt-OpenPGP-1.12.tar.gz) = 5a16a2a35993141e4a937acbebe4430c2d3095760d4cf96d990a4a28ce171f9d
-SHA512 (Crypt-OpenPGP-1.12.tar.gz) = 7cbdd1e125d686aea6e6de66572e3d2d03f08d048481b757b9fa51f7d3d0b39dce1f4105a18600b4d546001bf39baeefb199c25449be21d038685cb21174caf6
-Size (Crypt-OpenPGP-1.12.tar.gz) = 103125 bytes
+BLAKE2s (Crypt-OpenPGP-1.15.tar.gz) = 73976f355e7709fa501cc20b3a9c05a7fb2bfa9c2244bee9fd8dde33bff0afbb
+SHA512 (Crypt-OpenPGP-1.15.tar.gz) = ee3b074644a568c4adacd65a38dac3871bb0dd06f51bed96207dec720617c259ff71bdd5f29f5932ea99495384854fece98b9bfe6d7adddf991915cc7096db6b
+Size (Crypt-OpenPGP-1.15.tar.gz) = 114938 bytes
