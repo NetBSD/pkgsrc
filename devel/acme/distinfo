@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2022/03/19 16:53:28 rhialto Exp $
+$NetBSD: distinfo,v 1.9 2024/10/07 16:35:59 rhialto Exp $
 
-BLAKE2s (acme-crossass-code-0-r323-trunk.zip) = d2a2fbddc614dff1c55bdd6f9e56bef532da2d45fffd655e4afcdb65e3555198
-SHA512 (acme-crossass-code-0-r323-trunk.zip) = 841fe52c5c13228bacc52f25b7802193864ef6c6f7349ed84d8e4b39c076a1117d93828dec2fd30a2a57116a0308abce73ebc3b7b6a0118e3f5dfb5a10250435
-Size (acme-crossass-code-0-r323-trunk.zip) = 613411 bytes
+BLAKE2s (acme-crossass-code-0-r425-trunk.zip) = efa7ec7c1ee30255af72501dbade13625b650a44b796c33011a794e09ed288c3
+SHA512 (acme-crossass-code-0-r425-trunk.zip) = b9c448365c6b6d67377f27a1931d643523c530ff3dd363763dbfdeeb6b356f44f2276d464d760796cf212547148a873862dddbb8bd4a569bab27050a7c0b775c
+Size (acme-crossass-code-0-r425-trunk.zip) = 667138 bytes
 SHA1 (patch-aa) = caec06051fb65d13e97e6489bb8b74bbd80fb82a
-SHA1 (patch-ab) = 4b82aa131e513953fd404f4b9f025fb0b16d4c14
+SHA1 (patch-src_platform.c) = b38257a5982b0f26bf26a381155892cf6d20ecea
