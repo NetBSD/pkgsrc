@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2024/07/24 06:45:46 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/10/07 12:39:12 adam Exp $
 
-DISTNAME=	braintree-4.29.0
+DISTNAME=	braintree-4.30.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/braintree/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=0.11.1:../../devel/py-requests
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
