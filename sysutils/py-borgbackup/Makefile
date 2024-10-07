@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/04/26 17:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.51 2024/10/07 20:42:01 wiz Exp $
 
 DISTNAME=	borgbackup-1.2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,6 +33,10 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/docs/man/*1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+# TODO: as of 2.x, testing should work using this command line:
+# pytest -v -rs --benchmark-skip --pyargs borg.testsuite
+# see https://github.com/borgbackup/borg/issues/6386
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
