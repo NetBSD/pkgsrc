@@ -1,12 +1,10 @@
-$NetBSD: patch-Cargo.toml,v 1.5 2024/08/25 10:37:56 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.6 2024/10/07 14:54:24 pin Exp $
 
-Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
 
-salsa is not really used yet and automatic pkgsrc fetching fails for it.
-
---- Cargo.toml.orig	1970-01-01 00:00:00.000000000 +0000
+--- Cargo.toml.orig	2024-10-06 15:30:31.988148241 +0000
 +++ Cargo.toml
-@@ -85,7 +85,7 @@ libc = { version = "0.2.153" }
+@@ -89,7 +89,7 @@ libc = { version = "0.2.153" }
  libcst = { version = "1.1.0", default-features = false }
  log = { version = "0.4.17" }
  lsp-server = { version = "0.7.6" }
@@ -15,12 +13,12 @@ salsa is not really used yet and automatic pkgsrc fetching fails for it.
    "proposed",
  ] }
  matchit = { version = "0.8.1" }
-@@ -108,7 +108,7 @@ rand = { version = "0.8.5" }
+@@ -112,7 +112,7 @@ rand = { version = "0.8.5" }
  rayon = { version = "1.10.0" }
  regex = { version = "1.10.2" }
  rustc-hash = { version = "2.0.0" }
--salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "f608ff8b24f07706492027199f51132244034f29" }
-+#salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "f608ff8b24f07706492027199f51132244034f29" }
+-salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "4a7c955255e707e64e43f3ce5eabb771ae067768" }
++salsa = { path = "../salsa-4a7c955255e707e64e43f3ce5eabb771ae067768" }
  schemars = { version = "0.8.16" }
  seahash = { version = "4.1.0" }
  serde = { version = "1.0.197", features = ["derive"] }
