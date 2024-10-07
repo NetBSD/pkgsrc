@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2023/07/06 09:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/10/07 20:02:56 wiz Exp $
 
-DISTNAME=		Crypt-OpenPGP-1.12
+DISTNAME=		Crypt-OpenPGP-1.15
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		9
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
@@ -10,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/Crypt-OpenPGP
 COMMENT=		Pure-Perl OpenPGP implementation
 LICENSE=		${PERL5_LICENSE}
+
+TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 # for /usr/pkg/bin/pgplet -> ../lib/perl5/vendor_perl/bin/pgplet
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
@@ -31,8 +32,11 @@ DEPENDS+=		p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 # contains LWP::UserAgent
 DEPENDS+=		p5-libwww>=5.10:../../www/p5-libwww
-
-TOOL_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+# configure warns about missing these, but the tests work without them
+# TODO: check if they are needed and add them
+#Warning: prerequisite Alt::Crypt::RSA::BigInt 0 not found.
+#Warning: prerequisite Bytes::Random::Secure 0 not found.
+#Warning: prerequisite Crypt::IDEA 0 not found.
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/OpenPGP/.packlist
