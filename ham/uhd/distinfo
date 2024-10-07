@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.39 2024/04/25 12:22:39 tnn Exp $
+$NetBSD: distinfo,v 1.40 2024/10/07 20:55:47 mef Exp $
 
-BLAKE2s (uhd-4.6.0.0.tar.gz) = 190a494d8214eebc93092af93953dbcb002cd1f8f6786f28673a19ee360a9c93
-SHA512 (uhd-4.6.0.0.tar.gz) = de9bb10e5109bd860a9b2f61841e3ade55fbbc7d8000f385fcdf1c831585c9d25999d159a7da95e3e3f0b74330c1512265994e9aacf00b1b0891f9ba6db58e30
-Size (uhd-4.6.0.0.tar.gz) = 41235519 bytes
+BLAKE2s (uhd-4.7.0.0.tar.gz) = 142576ecc2b2acd76416c92b3f20997c4e35873a976d9f206f9019e76e19167c
+SHA512 (uhd-4.7.0.0.tar.gz) = 6f2c48890058620499dc4f9661da1fe26fb711225d8f1f4a84cb9a57b049cccdf87d40480618f37bc2aff23b2538b5323f526985ec25a6a1f58122d39387b0cb
+Size (uhd-4.7.0.0.tar.gz) = 41128157 bytes
 SHA1 (patch-CMakeLists.txt) = 91784faf3eab2eb7f3340a2b05f7f89da1e0fada
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
 SHA1 (patch-examples_rfnoc-example_cmake_Modules_run__testbench.sh.in) = f3c5c350abc82e0821eff45f00f4d1a0a1c7472b
 SHA1 (patch-lib_rfnoc_vector__iir__block__control.cpp) = d0bc32f888a6cfc30f1eb57d7f2d71bb86cdc284
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 5117c7593c4e92ed6bfb86388cc366c41a1dead7
-SHA1 (patch-lib_usrp__clock_octoclock_octoclock__image__loader.cpp) = fe43841f07d0a04bc8bc6ae72338799a1e1c4652
 SHA1 (patch-lib_usrp_common_lmx2592.cpp) = 2828dcf989f1fc43c70e10b8de1e34485066842d
-SHA1 (patch-lib_usrp_mpmd_mpmd__image__loader.cpp) = 9e786317c4b60ab6fc9bd529db60c8da65199b0c
 SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp) = a471808217b56d2175d33c5ca5e4bfc3f8f9f995
 SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.hpp) = 3106d28c4ddc38fd304eb94de5773ff56fed0fd8
-SHA1 (patch-lib_usrp_x300_x300__image__loader.cpp) = 8eb279e3e65ed44c16d5410d62663f781644a1fe
 SHA1 (patch-tests_rfnoc__block__tests_vector__iir__block__test.cpp) = 5d9594ce208acd8668589b117dd58d6b1a09de3a

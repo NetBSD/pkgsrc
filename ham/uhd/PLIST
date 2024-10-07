@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/12/18 22:44:41 mef Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/10/07 20:55:47 mef Exp $
 bin/rfnoc_image_builder
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
@@ -8,7 +8,6 @@ bin/uhd_config_info
 bin/uhd_find_devices
 bin/uhd_image_loader
 bin/uhd_usrp_probe
-bin/usrpctl
 include/uhd.h
 include/uhd/build_info.hpp
 include/uhd/cal/cal_metadata_generated.h
@@ -43,6 +42,7 @@ include/uhd/property_tree.ipp
 include/uhd/rfnoc/actions.hpp
 include/uhd/rfnoc/addsub_block_control.hpp
 include/uhd/rfnoc/block_control.hpp
+include/uhd/rfnoc/block_controller_factory_python.hpp
 include/uhd/rfnoc/block_id.hpp
 include/uhd/rfnoc/blockdef.hpp
 include/uhd/rfnoc/chdr_types.hpp
@@ -58,6 +58,7 @@ include/uhd/rfnoc/fir_filter_block_control.hpp
 include/uhd/rfnoc/fosphor_block_control.hpp
 include/uhd/rfnoc/graph_edge.hpp
 include/uhd/rfnoc/keep_one_in_n_block_control.hpp
+include/uhd/rfnoc/lc_block_control.hpp
 include/uhd/rfnoc/logpwr_block_control.hpp
 include/uhd/rfnoc/mb_controller.hpp
 include/uhd/rfnoc/mock_block.hpp
@@ -188,7 +189,7 @@ lib/cmake/uhd/UHDBoost.cmake
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
 lib/libuhd.so
-lib/libuhd.so.4.6.0
+lib/libuhd.so.${MODULE_VERSION}
 lib/pkgconfig/uhd.pc
 lib/uhd/examples/benchmark_rate
 lib/uhd/examples/gpio
@@ -222,6 +223,7 @@ lib/uhd/examples/usrp_list_sensors
 lib/uhd/tests/actions_test
 lib/uhd/tests/addr_test
 lib/uhd/tests/addsub_block_test
+lib/uhd/tests/adf535x_test
 lib/uhd/tests/block_id_test
 lib/uhd/tests/buffer_test
 lib/uhd/tests/byteswap_test
@@ -236,6 +238,7 @@ lib/uhd/tests/compat_test
 lib/uhd/tests/config_parser_test
 lib/uhd/tests/constrained_device_args_test
 lib/uhd/tests/convert_test
+lib/uhd/tests/custom_reg_test
 lib/uhd/tests/ddc_block_test
 lib/uhd/tests/devtest/benchmark_rate_test.py
 lib/uhd/tests/devtest/bitbang_test.py
@@ -282,11 +285,13 @@ lib/uhd/tests/gain_group_test
 lib/uhd/tests/interpolation_test
 lib/uhd/tests/isatty_test
 lib/uhd/tests/keep_one_in_n_test
+lib/uhd/tests/lc_block_test
 lib/uhd/tests/link_test
 lib/uhd/tests/lmx2572_test
 lib/uhd/tests/log_test
 lib/uhd/tests/logpwr_block_test
 lib/uhd/tests/math_test
+lib/uhd/tests/max287x_test
 lib/uhd/tests/mb_controller_test
 lib/uhd/tests/moving_average_block_test
 lib/uhd/tests/multichan_register_iface_test
@@ -378,6 +383,7 @@ share/uhd/rfnoc/blocks/fft_1x64.yml
 share/uhd/rfnoc/blocks/fir_filter.yml
 share/uhd/rfnoc/blocks/fosphor.yml
 share/uhd/rfnoc/blocks/keep_one_in_n.yml
+share/uhd/rfnoc/blocks/license_check.yml
 share/uhd/rfnoc/blocks/logpwr.yml
 share/uhd/rfnoc/blocks/moving_avg.yml
 share/uhd/rfnoc/blocks/null_src_sink.yml
@@ -399,3 +405,6 @@ share/uhd/rfnoc/core/x300_bsp.yml
 share/uhd/rfnoc/core/x310_bsp.yml
 share/uhd/rfnoc/core/x410_bsp.yml
 share/uhd/rfnoc/core/x440_bsp.yml
+share/uhd/rfnoc/modules/device_dna.yml
+share/uhd/rfnoc/transport_adapters/chdr_dma.yml
+share/uhd/rfnoc/transport_adapters/x4xx_eth.yml
