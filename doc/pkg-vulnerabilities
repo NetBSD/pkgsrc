@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.264 2024/10/03 20:17:10 he Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.265 2024/10/07 19:01:19 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26093,3 +26093,5 @@ cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2
 cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47175
 cups-base<2.4.10nb1	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-47177
 unbound<1.21.1		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8508
+powerdns-recursor<4.9.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-25590
+libgsf<1.14.53		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-42415
