@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/19 16:53:28 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/07 16:35:59 rhialto Exp $
 bin/acme
 share/acme/6502/opcodes.a
 share/acme/6502/rc4.a
@@ -19,6 +19,7 @@ share/acme/cbm/basic7.a
 share/acme/cbm/c128/basic.a
 share/acme/cbm/c128/kernal.a
 share/acme/cbm/c128/kernel.a
+share/acme/cbm/c128/keys.a
 share/acme/cbm/c128/mmu.a
 share/acme/cbm/c128/petscii.a
 share/acme/cbm/c128/vdc.a
@@ -31,6 +32,7 @@ share/acme/cbm/c64/float.a
 share/acme/cbm/c64/georam.a
 share/acme/cbm/c64/kernal.a
 share/acme/cbm/c64/kernel.a
+share/acme/cbm/c64/keys.a
 share/acme/cbm/c64/memcopy.a
 share/acme/cbm/c64/petscii.a
 share/acme/cbm/c64/reu.a
