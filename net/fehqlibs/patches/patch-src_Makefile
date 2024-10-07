@@ -1,33 +1,39 @@
-$NetBSD: patch-src_Makefile,v 1.1 2024/09/10 20:08:29 schmonz Exp $
+$NetBSD: patch-src_Makefile,v 1.2 2024/10/07 00:40:58 schmonz Exp $
 
 Libtoolize for portable shared libraries.
 
---- src/Makefile.orig	2024-08-04 15:23:43.000000000 +0000
+--- src/Makefile.orig	2024-10-05 13:21:14.000000000 +0000
 +++ src/Makefile
-@@ -6,7 +6,11 @@ SHELL=/bin/sh
+@@ -6,10 +6,14 @@ SHELL=/bin/sh
  CCFLAGS=-I../include
  
  SRCS=*.c
 -OBJS=*.o
+-COMPILE=./compile
+-MAKELIB=./makelib
+-SHAREDLIB=./sharedlib
 +.SUFFIXES: .lo
 +.c.lo:
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CCFLAGS) -c -o $@ $<
 +
 +OBJS=*.lo
- COMPILE=../compile
- MAKELIB=../makelib
- SHAREDLIB=../sharedlib
++COMPILE=../compile
++MAKELIB=../makelib
++SHAREDLIB=../sharedlib
+ 
+ default: clean check libs 
+ 
 @@ -25,42 +29,40 @@ clean:
  core: alloc.a buffer.a case.a cdb.a constmap.a env.a \
  fd.a fs.a getln.a getopt.a lock.a logmsg.a ndelay.a open.a \
  seek.a sig.a str.a stralloc.a time.a wait.a \
 -ip.a socket.a dnsresolv.a 
--
--libs: obj core qlibs.a dnsresolv.a
 +ip.a socket.a dnsresolv.a \
 +base64.o pathexec.o prot.o readclose.o \
 +uint128p.o uint16p.o uint32p.o uint64p.o uint8p.o
  
+-libs: obj core qlibs.a dnsresolv.a
+-
 -obj:
 -	@echo Making all in qlibs ...
 -	$(COMPILE) $(CCFLAGS) $(CFLAGS) $(SRCS)
