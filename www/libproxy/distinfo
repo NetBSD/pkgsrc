@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2024/07/20 06:13:42 adam Exp $
+$NetBSD: distinfo,v 1.36 2024/10/07 09:41:24 adam Exp $
 
-BLAKE2s (libproxy-0.5.8.tar.gz) = d617f687cacfc0bec98ead5da351b86d0f7e924e5bfc91aaad3e1b49fc4b7c83
-SHA512 (libproxy-0.5.8.tar.gz) = d074db7b0c9be96e90fe631f0e2ab3abf175dab2ca79f931a8eaba188ee70e38765a8d4139d7f451d725dd8ab276abf5834e540327a86339c33284a13e73be97
-Size (libproxy-0.5.8.tar.gz) = 58009 bytes
+BLAKE2s (libproxy-0.5.9.tar.gz) = 436a0f071c8caa106efe3b6ece83e3fdaf1d35023c2c8badf1ca71197d596c97
+SHA512 (libproxy-0.5.9.tar.gz) = 781fdd51ea8467f603a46dcab8d0e7a97eb4834acfbe57d00b103e2a075dd32eeb16aece88d4e018192eb58fe54f42aefd954873e6d8364836866d0167e063d5
+Size (libproxy-0.5.9.tar.gz) = 58165 bytes
 SHA1 (patch-src_libproxy_meson.build) = 6d5ddacc59db7f770002bc304404c6582865cbf8
