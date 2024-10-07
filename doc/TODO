@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24906 2024/10/07 20:03:08 wiz Exp $
+$NetBSD: TODO,v 1.24907 2024/10/07 21:24:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -818,6 +818,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.22.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -854,6 +855,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libcap-2.49
 	o libcarddav-14.0.13
 	o libcec-6.0.2
+	o libcups-2.4.11
+	o libdeflate-1.22
 	o libdevq-0.0.4
 	o libdsk-1.5.19
 	o libflash-0.4.13
@@ -965,8 +968,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
+	o neomutt-20241002
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp3-1.6.0
+	o ngtcp2-1.8.0
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -1001,6 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-4.10
 	o opendnssec-2.1.8
+	o openexr-3.3.0
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1190,6 +1197,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rspamd-3.10.0
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1317,7 +1325,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.24.2
 	o tree-sitter-elixir-0.3.1
+	o tree-sitter-php-0.23.3
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
