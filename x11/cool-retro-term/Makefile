@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/05/29 16:34:58 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/10/07 18:16:50 rhialto Exp $
 
 DISTNAME=	cool-retro-term-1.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Swordfish90/}
 
@@ -40,6 +40,7 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
