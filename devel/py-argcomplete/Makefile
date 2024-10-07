@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/08/07 15:13:08 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/10/07 10:52:05 adam Exp $
 
-DISTNAME=	argcomplete-3.5.0
+DISTNAME=	argcomplete-3.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
@@ -21,8 +21,6 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:test
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
