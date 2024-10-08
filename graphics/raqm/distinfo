@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/07/11 17:18:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/10/08 15:37:32 wiz Exp $
 
-BLAKE2s (raqm-0.10.1.tar.xz) = 8d13d24f0104e009639eb306c195f03a1b3dba39d0452d6cf846add2460fbf71
-SHA512 (raqm-0.10.1.tar.xz) = 7110bb293bd3daa637826b951207de5f9375213cc81caabb834423d7c7267f302d227140ef27084fb02768b16830b0be5107da8f213d6cd5f93fad343e1dff5e
-Size (raqm-0.10.1.tar.xz) = 216576 bytes
+BLAKE2s (raqm-0.10.2.tar.xz) = 5b37d2d8318140d34012aa41871417fae7004aef590caa7ecb4a85971e27c242
+SHA512 (raqm-0.10.2.tar.xz) = 5dfec231f3a0f9f64d4ff0e3f233d9348c954f77cdf5f0db445c80b5dc26d330d6ebd206432a8fe4d256da7a43a0c1f33e13851dc6d5ec8353687876146eae99
+Size (raqm-0.10.2.tar.xz) = 216932 bytes
