@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/04/18 04:43:38 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/08 18:11:50 adam Exp $
 
-DISTNAME=	pyproject_metadata-0.8.0
+DISTNAME=	pyproject_metadata-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject-metadata/}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
