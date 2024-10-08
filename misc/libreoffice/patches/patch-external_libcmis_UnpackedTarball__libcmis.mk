@@ -1,4 +1,6 @@
-$NetBSD: patch-external_libcmis_UnpackedTarball__libcmis.mk,v 1.1 2024/10/08 05:57:31 ryoon Exp $
+$NetBSD: patch-external_libcmis_UnpackedTarball__libcmis.mk,v 1.2 2024/10/08 06:16:49 wiz Exp $
+
+Support Boost 1.86+
 
 --- external/libcmis/UnpackedTarball_libcmis.mk.orig	2024-09-04 06:27:55.382269717 +0000
 +++ external/libcmis/UnpackedTarball_libcmis.mk
