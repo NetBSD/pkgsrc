@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:46:54 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/10/08 20:43:17 rjs Exp $
 
-BLAKE2s (simage-1.7.0.tar.gz) = ed5d124f1ac957d11139c0169f15b3a9a82822106b0b45baf7aac480af0700b3
-SHA512 (simage-1.7.0.tar.gz) = 944ec009dd7041692073ddd9795fdd633fe3bc9101f1c1234e8be3746487a9431aecf52abde01563e719153fbe1ca7d29f9b64042e4a64ea08d6cb14666dd89f
-Size (simage-1.7.0.tar.gz) = 752602 bytes
-SHA1 (patch-src_simage__png.c) = d511a7c45db46c60ea4aacff748b1325e83e396d
+BLAKE2s (simage-1.8.3.tar.gz) = e5c6deb15b03afc86ba24548d5f758500d853e3a4229a0a6c1d5efb16bfb6d15
+SHA512 (simage-1.8.3.tar.gz) = 42981f1dc67f17bc6bfc49ecbf035444b79ab467d5ece4310841856f5ec87d2b4352d5a7cb5713fb14ac5a25928f7d657fb74c93acdcd86b8b0dd89f26a5008a
+Size (simage-1.8.3.tar.gz) = 812285 bytes
+SHA1 (patch-src_simage__gif.c) = 22a29585cf05ccb3de60dee34057e0a7b6b50b16
+SHA1 (patch-src_simage__tiff.c) = 0fe01b8cf6e8310263cfe05b607533a9c44610c2
