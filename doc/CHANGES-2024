@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6052 2024/10/08 03:33:47 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6053 2024/10/08 05:48:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9224,3 +9224,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated ham/uhd to 4.7.0.0 [mef 2024-10-07]
 	Updated devel/cargo-release to 0.25.12 [pin 2024-10-08]
 	Updated shells/oh-my-posh to 23.17.0 [pin 2024-10-08]
+	Updated mail/thunderbird to 128.3.0 [ryoon 2024-10-08]
