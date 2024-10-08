@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/07/11 17:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/08 15:37:32 wiz Exp $
 
-DISTNAME=	raqm-0.10.1
+DISTNAME=	raqm-0.10.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=HOST-Oman/}
 GITHUB_PROJECT=	libraqm
