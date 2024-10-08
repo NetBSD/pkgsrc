@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.22 2024/09/22 21:40:32 tsutsui Exp $
+$NetBSD: patch-configure,v 1.23 2024/10/08 00:06:09 gutteridge Exp $
 
 - setuid root / setgid utmp is handled by SPECIAL_PERMS in pkgsrc
 
@@ -9,6 +9,8 @@ $NetBSD: patch-configure,v 1.22 2024/09/22 21:40:32 tsutsui Exp $
   >   by '/' or '?' in starting the copy mode every time.
   > * configure.in: Check libpng if gdk-pixbuf is not found.
   > * tool/mlimgloader/libpng.c, stb_image_resize2.h: Added.
+
+- allow bl_cv_pty to be overridden as a configure argument (PR pkg/56936)
 
 --- configure.orig	2023-04-01 13:54:40.000000000 +0000
 +++ configure
@@ -121,7 +123,39 @@ $NetBSD: patch-configure,v 1.22 2024/09/22 21:40:32 tsutsui Exp $
  		fi
  
  
-@@ -28244,16 +28323,16 @@ if test "$INSTALL_OPT" = ""; then
+@@ -25095,12 +25174,16 @@ fi
+ #
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pty/tty type" >&5
+ $as_echo_n "checking for pty/tty type... " >&6; }
+-if test "$bl_cv_win32" = "yes" ; then
+-	bl_cv_pty=none
+-elif test "$bl_cv_mingw" = "yes" ; then
+-	bl_cv_pty=streams
+-elif test "$host" = "$build" ; then
+-	ac_fn_c_check_func "$LINENO" "posix_openpt" "ac_cv_func_posix_openpt"
++if ${bl_cv_pty+:} false; then : 
++  $as_echo_n "(cached) " >&6
++else
++
++	if test "$bl_cv_win32" = "yes" ; then
++		bl_cv_pty=none
++	elif test "$bl_cv_mingw" = "yes" ; then
++		bl_cv_pty=streams
++	elif test "$host" = "$build" ; then
++		ac_fn_c_check_func "$LINENO" "posix_openpt" "ac_cv_func_posix_openpt"
+ if test "x$ac_cv_func_posix_openpt" = xyes; then :
+   if test "$cross_compiling" = yes; then :
+   { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+@@ -25177,6 +25260,8 @@ else
+   bl_cv_pty=bsd
+ fi
+ 
++	fi
++
+ fi
+ # Check whether --enable-pty_helper was given.
+ if test "${enable_pty_helper+set}" = set; then :
+@@ -28244,16 +28329,16 @@ if test "$INSTALL_OPT" = ""; then
  	if test "$utmp_suid" = "yes" -a "$UTMP_NAME" != "none" -a "$gui" != "quartz"; then
  		has_utmp=`grep utmp /etc/group 2>/dev/null`
  		if test "$has_utmp" ; then
