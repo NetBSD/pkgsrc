@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/06/09 13:59:57 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/08 15:38:42 wiz Exp $
 
-DISTNAME=	fribidi-1.0.15
+DISTNAME=	fribidi-1.0.16
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fribidi/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
