@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2021/03/15 13:15:56 nia Exp $
+# $NetBSD: options.mk,v 1.24 2024/10/08 11:51:16 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 
@@ -123,7 +123,7 @@ CONFIGURE_ARGS+=	CONFIG_WAVPACK=n
 # FFMPEG support
 #
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg4/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_FFMPEG=y
 PLIST.ffmpeg=		yes
 .else
