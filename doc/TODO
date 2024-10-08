@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24918 2024/10/08 15:42:31 wiz Exp $
+$NetBSD: TODO,v 1.24919 2024/10/08 15:44:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -965,7 +965,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o nas-auscope-1.9.4
 	o ncview-2.1.8
 	o nedit-5.7
-	o neomutt-20241002
 	o netramet-50
 	o newmail-1.0.2
 	o nghttp3-1.6.0
