@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2023/10/21 17:10:42 gdt Exp $
+# $NetBSD: Makefile,v 1.34 2024/10/08 20:43:17 rjs Exp $
 
-DISTNAME=		simage-1.7.0
-PKGREVISION=		11
+DISTNAME=		simage-1.8.3
 CATEGORIES=		graphics
-MASTER_SITES=		https://bitbucket.org/Coin3D/coin/downloads/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=coin3d/}
+GITHUB_PROJECT=		simage
+GITHUB_TAG=		v1.8.3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.coin3d.org/
