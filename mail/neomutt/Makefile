@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2024/08/09 09:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.99 2024/10/08 15:44:48 wiz Exp $
 
-DISTNAME=		neomutt-20240425
-PKGREVISION=		3
+DISTNAME=		neomutt-20241002
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -31,6 +30,7 @@ CONF_FILES=		${EGDIR}/neomuttrc ${PKG_SYSCONFDIR}/neomuttrc
 INSTALLATION_DIRS+=	${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
 
+USE_CC_FEATURES+=	c11
 GCC_REQD+=		8
 
 .include "../../mk/bsd.prefs.mk"
