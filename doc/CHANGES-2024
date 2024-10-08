@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6071 2024/10/08 18:12:19 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6072 2024/10/08 20:53:24 rjs Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9245,3 +9245,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-django-cms to 4.1.3 [adam 2024-10-08]
 	Updated security/py-gnupg to 0.5.3 [adam 2024-10-08]
 	Updated devel/py-project-metadata to 0.8.1 [adam 2024-10-08]
+	Updated graphics/simage to 1.8.3 [rjs 2024-10-08]
