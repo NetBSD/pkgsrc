@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6069 2024/10/08 17:25:17 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6070 2024/10/08 17:44:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9241,3 +9241,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated news/pan to 0.160 [rhialto 2024-10-08]
 	Updated lang/nodejs20 to 20.18.0 [adam 2024-10-08]
 	Updated net/py-python-socks to 2.5.3 [adam 2024-10-08]
+	Updated www/py-django to 5.1.2 [adam 2024-10-08]
+	Updated www/py-django-cms to 4.1.3 [adam 2024-10-08]
