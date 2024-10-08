@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/09/09 19:15:46 pin Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/08 03:32:11 pin Exp $
 
-DISTNAME=	cargo-release-0.25.11
+DISTNAME=	cargo-release-0.25.12
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crate-ci/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.curl-sys-0.4.74+curl-8.9.0.crate=	https://static.crates.io/crates/curl-sys
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.78.0
+RUST_REQ=	1.79.0
 USE_TOOLS+=	pkg-config perl gmake
 USE_LANGUAGES+=	c c++
 
