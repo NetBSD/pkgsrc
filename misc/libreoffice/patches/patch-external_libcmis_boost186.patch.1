@@ -1,0 +1,28 @@
+$NetBSD: patch-external_libcmis_boost186.patch.1,v 1.1 2024/10/08 05:57:31 ryoon Exp $
+
+--- external/libcmis/boost186.patch.1.orig	2024-09-04 09:36:49.072268052 +0000
++++ external/libcmis/boost186.patch.1
+@@ -0,0 +1,23 @@
++--- libcmis/src/libcmis/xml-utils.cxx.orig	2023-10-09 12:06:53.000000000 +0000
+++++ libcmis/src/libcmis/xml-utils.cxx
++@@ -535,16 +535,17 @@ namespace libcmis
++         boost::uuids::detail::sha1 sha1;
++         sha1.process_bytes( str.c_str(), str.size() );
++ 
++-        unsigned int digest[5];
+++        boost::uuids::detail::sha1::digest_type digest;
++         sha1.get_digest( digest );
+++	const unsigned char* ptr = reinterpret_cast<const unsigned char*>( digest );
++ 
++         stringstream out;
++         // Setup writing mode. Every number must produce eight
++         // hexadecimal digits, including possible leading 0s, or we get
++         // less than 40 digits as result.
++         out << hex << setfill('0') << right;
++-        for ( int i = 0; i < 5; ++i )
++-            out << setw(8) << digest[i];
+++        for ( int i = 0; i < sizeof( digest ); ++ptr, ++i )
+++            out << setw(2) << static_cast<int>( *ptr );
++         return out.str();
++     }
++ 

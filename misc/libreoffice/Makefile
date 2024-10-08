@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.340 2024/10/04 03:49:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.341 2024/10/08 05:57:31 ryoon Exp $
 
-VERREL=		24.8.0
-VERRC=		3
+VERREL=		24.8.2
+VERRC=		1
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -113,11 +112,11 @@ MORE_DISTFILES= \
 	eeb2c7ddf0d302fba4bfc6e97eac9624-libbase-1.1.6.zip \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
-	mariadb-connector-c-3.3.8-src.tar.gz \
+	mariadb-connector-c-3.3.11-src.tar.gz \
 	rhino-1.7.14.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-13.15.tar.bz2 \
+	postgresql-13.16.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
@@ -364,6 +363,7 @@ BUILDLINK_API_DEPENDS.libetonyek+=	libetonyek>=0.1.2
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/frozen/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
+#.include "../../devel/jemalloc/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/liblangtag/buildlink3.mk"
 .include "../../devel/mdds/buildlink3.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2024/08/24 02:57:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.58 2024/10/08 05:57:31 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -135,7 +135,7 @@ ${PKGNAME}/lib/libreoffice/program/libintrospectionlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
-${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PLIST.ldap}${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
 ${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
@@ -6104,6 +6104,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/toolbar/toolba
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/alignmentdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/catalogdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/editwindow.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/embedwindow.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontsizedialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/fonttypedialog.ui
