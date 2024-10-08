@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.74 2024/10/06 17:34:23 pin Exp $
+# $NetBSD: go-modules.mk,v 1.75 2024/10/08 03:33:27 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -156,8 +156,8 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.26.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.26.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20240613232115-7f521ea00fb8.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20240613232115-7f521ea00fb8.zip
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.20.0.mod
-GO_MODULE_FILES+=	golang.org/x/image/@v/v0.20.0.zip
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.21.0.mod
+GO_MODULE_FILES+=	golang.org/x/image/@v/v0.21.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.21.0.mod
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.21.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.8.0.mod
@@ -168,11 +168,11 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210616094352-59db8d763f22.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220811171246-fbc7d0a398ab.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.25.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.25.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.26.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.26.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.18.0.mod
-GO_MODULE_FILES+=	golang.org/x/text/@v/v0.18.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.19.0.mod
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.19.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.5.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.0.0-20180917221912-90fa682c2a6e.mod
 GO_MODULE_FILES+=	golang.org/x/tools/@v/v0.22.0.mod
