@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6066 2024/10/08 15:42:30 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6067 2024/10/08 15:44:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9237,3 +9237,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/tree-sitter to 0.24.2 [wiz 2024-10-08]
 	Updated textproc/tree-sitter-elixir to 0.3.1 [wiz 2024-10-08]
 	Updated textproc/tree-sitter-php to 0.23.3 [wiz 2024-10-08]
+	Updated mail/neomutt to 20241002 [wiz 2024-10-08]
