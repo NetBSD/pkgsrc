@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.157 2024/10/08 05:57:31 ryoon Exp $
+$NetBSD: distinfo,v 1.158 2024/10/08 06:16:49 wiz Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -213,8 +213,8 @@ SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = 2eed9efc4a14
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = e664faa4044feaafe8214fdf42f7d008b9aa29fc
 SHA1 (patch-configure.ac) = c19a8201ddc9a3297ee8ca5a23ac0ba0145686fe
 SHA1 (patch-desktop_scripts_soffice.sh) = 443bbfde1056521901f5f599726053883a98a67d
-SHA1 (patch-external_libcmis_UnpackedTarball__libcmis.mk) = 4a5c178614f80df84482ee4f5cbe1788cc65d6ce
-SHA1 (patch-external_libcmis_boost186.patch.1) = 91304735ecd9f95b3bbf1cb14d2cbce5859896ac
+SHA1 (patch-external_libcmis_UnpackedTarball__libcmis.mk) = b376a15875d031e7b44195716201958caf95a3cd
+SHA1 (patch-external_libcmis_boost186.patch.1) = e31062a779f724289f732cac9422d4eeb86216dc
 SHA1 (patch-external_mariadb-connector-c_UnpackedTarball__mariadb-connector-c.mk) = 0a682ef486310474684ccd279e864f96259a3087
 SHA1 (patch-external_mariadb-connector-c_netbsd.patch) = c8a82ce0c3d293108daa41f81d9cee376ca50a82
 SHA1 (patch-external_pdfium_Library__pdfium.mk) = 8dc7315e8a09234cbb3994443ac8f0b14e549770
