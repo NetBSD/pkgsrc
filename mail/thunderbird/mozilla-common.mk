@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.20 2024/10/01 15:01:27 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.21 2024/10/08 05:48:25 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -30,12 +30,7 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 TOOL_DEPENDS+=		cbindgen>=0.26.0:../../devel/cbindgen
 
-.if defined(FIREFOX_MAINTAINER) && !defined(MAINTAINER_INTERNAL)
 TOOL_DEPENDS+=		nodejs-[0-9]*:../../lang/nodejs
-USE_TOOLS+=		diff
-.else
-CONFIGURE_ENV+=		NODEJS="${FILESDIR}/node-wrapper.sh"
-.endif
 
 # malloc_usable_size()
 LDFLAGS.NetBSD+=	-ljemalloc
@@ -190,11 +185,7 @@ ALL_ENV+=		MOZ_APP_NAME=${MOZILLA}
 
 # Build outside ${WRKSRC}
 # Try to avoid conflict with config/makefiles/xpidl/Makefile.in
-.if ${MAINTAINER_INTERNAL:Uno} == "yes"
-OBJDIR=			../no-node-build
-.else
 OBJDIR=			../build
-.endif
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
