@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2024/09/06 07:08:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.51 2024/10/08 17:42:20 adam Exp $
 bin/django-admin-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -3340,6 +3340,8 @@ ${PYSITELIB}/django/contrib/postgres/locale/fi/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/fi/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/fr/LC_MESSAGES/django.po
+${PYSITELIB}/django/contrib/postgres/locale/ga/LC_MESSAGES/django.mo
+${PYSITELIB}/django/contrib/postgres/locale/ga/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/gd/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/gd/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/gl/LC_MESSAGES/django.mo
