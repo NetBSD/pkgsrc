@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24913 2024/10/08 15:36:53 wiz Exp $
+$NetBSD: TODO,v 1.24914 2024/10/08 15:37:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qutebrowser-3.0.1
 	o radiance-5.3
 	o rails-6.1.0
-	o raqm-0.10.2
 	o rasmol-2.7.5.2
 	o rat-4.2.25
 	o rav1e-0.7.0
