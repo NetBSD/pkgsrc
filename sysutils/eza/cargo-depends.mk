@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.33 2024/10/06 11:20:23 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.34 2024/10/09 19:03:19 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -89,7 +89,7 @@ CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.14
 CARGO_CRATE_DEPENDS+=	number_prefix-0.4.0
 CARGO_CRATE_DEPENDS+=	object-0.36.4
-CARGO_CRATE_DEPENDS+=	once_cell-1.20.1
+CARGO_CRATE_DEPENDS+=	once_cell-1.20.2
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
 CARGO_CRATE_DEPENDS+=	openssl-src-111.26.0+1.1.1u
 CARGO_CRATE_DEPENDS+=	openssl-sys-0.9.61
@@ -109,7 +109,6 @@ CARGO_CRATE_DEPENDS+=	plist-1.7.0
 CARGO_CRATE_DEPENDS+=	plotters-0.3.5
 CARGO_CRATE_DEPENDS+=	plotters-backend-0.3.5
 CARGO_CRATE_DEPENDS+=	plotters-svg-0.3.5
-CARGO_CRATE_DEPENDS+=	portable-atomic-1.9.0
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.83
 CARGO_CRATE_DEPENDS+=	proc-mounts-0.3.0
