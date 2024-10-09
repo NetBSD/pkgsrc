@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6082 2024/10/09 13:18:28 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6083 2024/10/09 14:06:20 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9258,3 +9258,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-aiohttp to 3.10.9 [wiz 2024-10-09]
 	Updated devel/py-astroid to 3.3.5 [wiz 2024-10-09]
 	Updated devel/py-build to 1.2.2.post1 [wiz 2024-10-09]
+	Updated graphics/chafa to 1.14.4 [ktnb 2024-10-09]
