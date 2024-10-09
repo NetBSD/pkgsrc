@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24921 2024/10/09 04:30:25 ryoon Exp $
+$NetBSD: TODO,v 1.24922 2024/10/09 12:51:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o HElib-2.1.0
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-24.2.2
+	o MesaLib-24.2.4
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PageEdit-2.3.1
@@ -1202,6 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
 	o rpc2-2.14
+	o rpm-4.20
 	o rspamd-3.10.0
 	o rsyslog-8.2204.1
 	o rt4-4.4.4
