@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/25 06:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/10/09 04:32:35 ryoon Exp $
 
-DISTNAME=	libaom-3.9.1
+DISTNAME=	libaom-3.10.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://storage.googleapis.com/aom-releases/
 
