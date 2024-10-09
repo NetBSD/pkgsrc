@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.40 2024/08/16 11:50:39 micha Exp $
+# $NetBSD: options.mk,v 1.41 2024/10/09 15:51:32 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript lua poppler svg tcl x11
+PKG_SUPPORTED_OPTIONS=	gd ghostscript lua poppler svg x11
 PKG_SUGGESTED_OPTIONS=	gd
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript lua poppler quartz svg swig tcl x11
+PLIST_VARS+=		gd ghostscript lua poppler quartz svg swig x11
 
 # Basic graphic format support, especially GIF
 .if !empty(PKG_OPTIONS:Mgd)
@@ -85,24 +85,6 @@ PLIST.lua=		yes
 CONFIGURE_ARGS+=	--enable-lua
 .else
 CONFIGURE_ARGS+=	--disable-lua
-.endif
-
-# Extension language support
-.if !empty(PKG_OPTIONS:Mtcl)
-.  if empty(PKG_OPTIONS:Mx11)
-PKG_FAIL_REASON=	"tcl option requires x11 option"
-.  endif
-USING_SWIG=	yes
-.  include "../../lang/tcl/Makefile.version"
-.  include "../../x11/tk/buildlink3.mk"
-PLIST.tcl=		yes
-PLIST_SUBST+=		TCL_BASEVER=${TCL_BASEVER}
-CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
-CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
-CONFIGURE_ARGS+=	--with-tclsh=${TCLSH:Q}
-CONFIGURE_ARGS+=	--enable-tcl
-.else
-CONFIGURE_ARGS+=	--disable-tcl
 .endif
 
 # Required by some of the other options

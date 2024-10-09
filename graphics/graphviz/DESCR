@@ -4,7 +4,5 @@ Laboratories.
 It includes:
 - dot: makes hierarchical layouts of directed graphs
 - neato: makes "spring" model layouts of undirected graphs
-- tcldot: a customizable graphical interface written in TCL
-  (part of "tcl" option)
 - libcgraph: the base library for graph tools
 - various associated utilities
