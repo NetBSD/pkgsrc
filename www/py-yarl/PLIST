@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/09/04 11:03:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/09 08:23:20 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
@@ -8,15 +8,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/yarl/__init__.py
 ${PYSITELIB}/yarl/__init__.pyc
 ${PYSITELIB}/yarl/__init__.pyo
-${PYSITELIB}/yarl/_helpers.py
-${PYSITELIB}/yarl/_helpers.pyc
-${PYSITELIB}/yarl/_helpers.pyo
-${PYSITELIB}/yarl/_helpers_c.pyi
-${PYSITELIB}/yarl/_helpers_c.pyx
-${PYSITELIB}/yarl/_helpers_c.so
-${PYSITELIB}/yarl/_helpers_py.py
-${PYSITELIB}/yarl/_helpers_py.pyc
-${PYSITELIB}/yarl/_helpers_py.pyo
 ${PYSITELIB}/yarl/_quoting.py
 ${PYSITELIB}/yarl/_quoting.pyc
 ${PYSITELIB}/yarl/_quoting.pyo
