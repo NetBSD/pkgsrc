@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.89 2023/12/29 11:30:53 adam Exp $
+# $NetBSD: Makefile.version,v 1.90 2024/10/09 21:15:42 bsiegert Exp $
 
 # When updating subversion, all packages are updated at the same time
 # to have a consistent set of packages.  A particularly tricky aspect
@@ -7,5 +7,5 @@
 # changing the version.
 
 .if !defined(SVNVER)
-SVNVER=		1.14.3
+SVNVER=		1.14.4
 .endif
