@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.703 2024/09/02 16:04:24 nia Exp $
+# $NetBSD: Makefile,v 1.704 2024/10/09 14:25:45 ktnb Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -200,6 +200,7 @@ SUBDIR+=	jack
 SUBDIR+=	jack-keyboard
 SUBDIR+=	jack_umidi
 SUBDIR+=	juke
+SUBDIR+=	kew
 SUBDIR+=	kid3
 SUBDIR+=	ladspa
 SUBDIR+=	lame
