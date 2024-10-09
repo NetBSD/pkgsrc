@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.289 2024/08/16 11:50:39 micha Exp $
+# $NetBSD: Makefile,v 1.290 2024/10/09 15:51:32 micha Exp $
 
-DISTNAME=	graphviz-12.1.0
+DISTNAME=	graphviz-12.1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITLAB:=api/v4/projects/4207231/packages/generic/graphviz-releases/${PKGVERSION_NOREV}/}
 #EXTRACT_SUFX=	.tar.xz
@@ -62,6 +62,7 @@ CONFIGURE_ARGS+=	--with-ipsepcola
 CONFIGURE_ARGS+=	--with-ortho
 CONFIGURE_ARGS+=	--with-pangocairo
 CONFIGURE_ARGS+=	--with-sfdp
+CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--with-visio
 CONFIGURE_ARGS+=	--with-webp
 # build fails when PHP and/or Ruby are also installed
@@ -86,15 +87,7 @@ PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
 # it's serious or not, or what causes it.
 LUA_VERSIONS_INCOMPATIBLE=	51
 
-REPLACE_LUA+=		tclpkg/gv/demo/modgraph.lua
-
-REPLACE_INTERPRETER+=	tclsh
-REPLACE.tclsh.old=	.*tclsh
-REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
-REPLACE_FILES.tclsh=	tclpkg/gv/demo/modgraph.tcl
-
-REPLACE_PERL+=		tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
-			contrib/dirgraph/dirgraph.pl
+REPLACE_PERL+=		contrib/dotmcl.pl contrib/dirgraph/dirgraph.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -129,7 +122,6 @@ post-install:
 .include "options.mk"
 
 DEPENDS+=	urw-fonts-[0-9]*:../../fonts/urw-fonts
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
