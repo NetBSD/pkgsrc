@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2024/10/01 07:47:23 adam Exp $
+# $NetBSD: Makefile,v 1.73 2024/10/09 13:08:17 wiz Exp $
 
-DISTNAME=	aiohttp-3.10.8
+DISTNAME=	aiohttp-3.10.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp/}
@@ -34,8 +34,8 @@ DEPENDS+=	${PYPKGPREFIX}-async-timeout>=4.0.0:../../devel/py-async-timeout
 
 .include "../../lang/python/wheel.mk"
 # need to package: proxy (!?)
-# leads to, as of 3.10.0:
-# 5 failed, 3107 passed, 21 skipped, 6 deselected, 33 xfailed, 37 errors
+# leads to, as of 3.10.9:
+# 4 failed, 3204 passed, 30 skipped, 6 deselected, 25 xfailed, 37 errors
 pre-test:
 	cd ${WRKSRC} && ${RM} -f tests/test_proxy_functional.py tests/autobahn/test_autobahn.py
 
