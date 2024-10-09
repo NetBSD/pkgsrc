@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/09/09 10:41:47 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/09 19:00:32 wiz Exp $
 
 MOZVER=		128.1.0esr
 DISTNAME=	firefox-${MOZVER}.source
@@ -13,7 +13,7 @@ COMMENT=	SpiderMonkey JavaScript library (128.x branch)
 LICENSE=	mpl-1.1
 
 WRKSRC=		${WRKDIR}/firefox-${PKGVERSION_NOREV}
-USE_TOOLS+=	gmake perl pkg-config
+USE_TOOLS+=	gm4 gmake perl pkg-config
 USE_LANGUAGES=	c c++
 
 # "ERROR: Only GCC 8.1 or newer is supported"
