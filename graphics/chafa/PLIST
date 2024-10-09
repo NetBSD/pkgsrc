@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/09 14:05:55 ktnb Exp $
+bin/chafa
+include/chafa/chafa-canvas-config.h
+include/chafa/chafa-canvas.h
+include/chafa/chafa-common.h
+include/chafa/chafa-features.h
+include/chafa/chafa-frame.h
+include/chafa/chafa-image.h
+include/chafa/chafa-placement.h
+include/chafa/chafa-symbol-map.h
+include/chafa/chafa-term-db.h
+include/chafa/chafa-term-info.h
+include/chafa/chafa-term-seq-def.h
+include/chafa/chafa-util.h
+include/chafa/chafa-version-macros.h
+include/chafa/chafa.h
+lib/chafa/include/chafaconfig.h
+lib/libchafa.la
+lib/pkgconfig/chafa.pc
