@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6084 2024/10/09 14:07:55 nia Exp $
+$NetBSD: CHANGES-2024,v 1.6085 2024/10/09 14:26:08 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9260,3 +9260,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-build to 1.2.2.post1 [wiz 2024-10-09]
 	Updated graphics/chafa to 1.14.4 [ktnb 2024-10-09]
 	Updated www/palemoon to 33.4.0 [nia 2024-10-09]
+	Updated audio/kew to 2.8.2 [ktnb 2024-10-09]
