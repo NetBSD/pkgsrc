@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6074 2024/10/09 04:32:47 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6075 2024/10/09 08:09:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9248,3 +9248,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/simage to 1.8.3 [rjs 2024-10-08]
 	Updated multimedia/ffmpeg7 to 7.1 [ryoon 2024-10-09]
 	Updated multimedia/libaom to 3.10.0 [ryoon 2024-10-09]
+	Updated sysutils/ansible to 10.5.0 [adam 2024-10-09]
+	Updated textproc/py-tree-sitter to 0.23.1 [adam 2024-10-09]
