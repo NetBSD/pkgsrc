@@ -1,0 +1,6 @@
+Kew is a command-line music player. With Kew you can:
+Search a music library with partial titles; creates a playlist based
+on a matched directory; control the player with previous, next and
+pause; and edit the playlist by adding and removing songs.
+Kew supports gapless playback (between files of the same format and
+type) and MP3, FLAC, MPEG-4 (AAC, M4A), OPUS, OGG and WAV audio.
