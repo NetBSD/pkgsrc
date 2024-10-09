@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/10/09 14:05:56 ktnb Exp $
+
+BLAKE2s (chafa-1.14.4.tar.gz) = 691e9fbec3c61b31d4d838b47d42cf27be40b89248a9d7657e5eafa3c8c80ea8
+SHA512 (chafa-1.14.4.tar.gz) = 536f5dc031d1732271285e736d920f7313daaa2f82b3c87af588bfdfb9a6a5616140814ba37d22ea3f3704e916863ea6f9f689de2da672acaeaee20bc4728e6e
+Size (chafa-1.14.4.tar.gz) = 1861126 bytes
+SHA1 (patch-configure.ac) = c9a07ed95c162c5b07f0a1403dba8b339a8629e5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1058 2024/07/26 22:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1059 2024/10/09 14:05:55 ktnb Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -81,6 +81,7 @@ SUBDIR+=	camediaplay
 SUBDIR+=	camlimages
 SUBDIR+=	cdlabelgen
 SUBDIR+=	cglm
+SUBDIR+=	chafa
 SUBDIR+=	charls
 SUBDIR+=	cheese
 SUBDIR+=	cinepaint
