@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/09/09 06:59:21 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/09 13:18:15 wiz Exp $
 
-DISTNAME=	build-1.2.2
+DISTNAME=	build-1.2.2.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/build/}
@@ -30,6 +30,9 @@ DEPENDS+=	${PYPKGPREFIX}-tomli>=1.1.0:../../textproc/py-tomli
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} pyproject-build pyproject-build-${PYVERSSUFFIX} || ${TRUE}
+
+# as of 1.2.2.post1
+# 14 failed, 125 passed, 55 skipped, 1 xfailed, 1 error, 10 rerun
 
 # needs 'make install'
 do-test:
