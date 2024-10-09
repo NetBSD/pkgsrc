@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.11 2024/09/26 10:35:12 wiz Exp $
+# $NetBSD: eol-packages,v 1.12 2024/10/09 20:23:07 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1153,4 +1153,9 @@ Description: Upgrade to 8.0 (or newer version).
 Package: olm
 eol date: July 31, 2024
 Description: Use vozodemacs.
+
+Package: python38
+eol date: October 7, 2024
+URL: https://devguide.python.org/versions/#versions
+Description: eol October 2024 by vendor.  Update to newer version.
 
