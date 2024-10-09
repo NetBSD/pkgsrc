@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/07/22 04:51:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/09 20:12:23 adam Exp $
 
-DISTNAME=	aiostream-0.6.2
+DISTNAME=	aiostream-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiostream/}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
