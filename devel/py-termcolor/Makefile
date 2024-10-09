@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/12/02 09:50:25 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/09 20:10:03 adam Exp $
 
-DISTNAME=	termcolor-2.4.0
+DISTNAME=	termcolor-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/termcolor/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
