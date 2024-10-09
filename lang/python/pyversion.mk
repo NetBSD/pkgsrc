@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.165 2024/10/09 19:57:19 adam Exp $
+# $NetBSD: pyversion.mk,v 1.166 2024/10/09 20:00:28 adam Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -36,7 +36,7 @@
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 27 38 39 310 311 312 313
+#	Possible values: 27 39 310 311 312 313
 #	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -61,7 +61,7 @@
 #	Version of python that will be used in this build, as
 #	a three-digit number of major_version * 100 + minor_version.
 #
-#	Examples: 207, 308, 309, 310, 311, 312, 313
+#	Examples: 207, 309, 310, 311, 312, 313
 #
 # PYPKGPREFIX
 #	The prefix to use in PKGNAME for extensions which are meant
