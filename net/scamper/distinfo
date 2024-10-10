@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:06:54 nia Exp $
+$NetBSD: distinfo,v 1.17 2024/10/10 20:33:39 nia Exp $
 
 BLAKE2s (scamper-cvs-20141211d.tar.gz) = 1a789a37bafd250cfa7ccac558efc569887f563e22de6c8d4f7e67d2dc2b1477
 SHA512 (scamper-cvs-20141211d.tar.gz) = b032868470039691c45d90dd99025fd569c1cb63b8d337d4be04fe2ddac3b9c334cd7075a0b2533d093d65d8bb18414db1e74f4fc9719072679021aa7df99b7c
 Size (scamper-cvs-20141211d.tar.gz) = 1465618 bytes
+SHA1 (patch-internal.h) = 3d6e81b0d7da0f8092b51f79ead6eae1345081cc
