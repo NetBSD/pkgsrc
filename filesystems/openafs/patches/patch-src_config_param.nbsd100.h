@@ -1,4 +1,6 @@
-$NetBSD: patch-src_config_param.nbsd100.h,v 1.1 2023/02/16 18:56:44 he Exp $
+$NetBSD: patch-src_config_param.nbsd100.h,v 1.2 2024/10/10 14:04:05 jakllsch Exp $
+
+Add configuration for NetBSD-10.
 
 --- src/config/param.nbsd100.h.orig	2023-02-16 19:16:24.549771760 +0100
 +++ src/config/param.nbsd100.h	2023-02-16 19:23:09.070744023 +0100
