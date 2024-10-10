@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:06:11 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/10/10 21:29:55 nia Exp $
 
 BLAKE2s (ocsync-0.90.4.tar.bz2) = ce238190c3167581c57278d5831a69a7765b5749822d4a6be57f5de7762accec
 SHA512 (ocsync-0.90.4.tar.bz2) = 74bf6b083ae4d4c09e3915d777d916a04ebb19aefb21a5a14a49e2079e02c5c60f1f274aa0cab5c227147883eaf1a5f91b6c0546b818c960cc3575cdcdd93d57
@@ -8,4 +8,4 @@ SHA1 (patch-cmake_Modules_FindLibSSH.cmake) = bf6a8cfaaa559b75636a6e75fa562c6f19
 SHA1 (patch-config_CMakeLists.txt) = b387f38a79d9f85e3f67060a2cb689bb13dd1c28
 SHA1 (patch-src_csync__log.h) = 734978a27fec23b4d84e196c651601959436f188
 SHA1 (patch-src_httpbf_src_httpbf.c) = 79c9ab6e2fb7855db25f7d50860851a5061c5bea
-SHA1 (patch-src_std_c__string.c) = 4f94ae5559fd0c19b11f3bcd751b5de89ad615a4
+SHA1 (patch-src_std_c__string.c) = 0d3947dc382499df4c568196bc1399f978e2bb78
