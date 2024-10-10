@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6111 2024/10/10 15:19:16 jakllsch Exp $
+$NetBSD: CHANGES-2024,v 1.6112 2024/10/10 15:35:45 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9298,3 +9298,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed www/firefox102-l10n [wiz 2024-10-10]
 	Updated filesystems/openafs to 1.8.8.1nb1 [jakllsch 2024-10-10]
 	Updated filesystems/openafs to 1.8.9 [jakllsch 2024-10-10]
+	Updated filesystems/openafs to 1.8.10 [jakllsch 2024-10-10]
