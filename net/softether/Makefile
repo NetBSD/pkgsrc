@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/25 06:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/10 20:28:11 nia Exp $
 
 NAME=		softether
 VERSION=	5.02.5181
@@ -22,7 +22,7 @@ USE_TOOLS+=	pkg-config cmake
 
 USE_CMAKE=	yes
 
-USE_LANGUAGES=	c
+USE_LANGUAGES=	c c++
 
 DOC_FILES=	DISCLAIMER.md README.md SECURITY.md LICENSE AUTHORS.TXT
 
