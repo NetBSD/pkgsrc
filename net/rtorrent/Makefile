@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2024/10/04 09:02:01 adam Exp $
+# $NetBSD: Makefile,v 1.96 2024/10/10 20:40:53 nia Exp $
 
 DISTNAME=	rtorrent-0.10.0
 CATEGORIES=	net
@@ -36,6 +36,8 @@ CXXFLAGS+=	-march=i486
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=		-lexecinfo
 .endif
+
+LIBS.SunOS+=	-lsocket
 
 INSTALLATION_DIRS=	share/examples/rtorrent
 
