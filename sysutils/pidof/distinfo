@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:01 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/10/10 17:55:25 nia Exp $
 
 BLAKE2s (sysvinit-2.96.tar.xz) = f125a3e893d315db42c89b133044ae811c72845d27a5ce6060c3adae9744c27f
 SHA512 (sysvinit-2.96.tar.xz) = 1388398568ebfe53460796f8ab75a3ead6111612888ea36e8f1c0db4d41ef6f45fc217abb7804519ff1143a78d97c95b24e42c8c22c95a47b9436484bfb6f45d
 Size (sysvinit-2.96.tar.xz) = 122164 bytes
-SHA1 (patch-aa) = bf9018fc648438574f246e0cc019492e31648377
+SHA1 (patch-aa) = cbda0f40919f0ad70d1030be8e6a71d69c2046b9
+SHA1 (patch-src_Makefile) = 7835f0674b27a9b08f07dcbcf599085e0ece0c11
