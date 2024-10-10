@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2024/10/10 14:43:25 jakllsch Exp $
+# $NetBSD: Makefile,v 1.22 2024/10/10 15:19:04 jakllsch Exp $
 
-DISTNAME=	openafs-1.8.8.1-src
+DISTNAME=	openafs-1.8.9-src
 PKGNAME=	${DISTNAME:C/-src//}
-PKGREVISION=	1
 CATEGORIES=	filesystems net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.8.8.1/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.8.9/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
