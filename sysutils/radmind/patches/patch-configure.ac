@@ -1,6 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.2 2018/12/18 14:16:18 hauke Exp $
+$NetBSD: patch-configure.ac,v 1.3 2024/10/10 17:33:41 nia Exp $
 
 Fix for Radmind bug #221, accomodating for 64 bit time_t
+
+Test for OpenSSL by testing non-deprecated function.
 
 --- configure.ac.orig	2010-12-13 03:43:38.000000000 +0000
 +++ configure.ac
@@ -12,3 +14,12 @@ Fix for Radmind bug #221, accomodating for 64 bit time_t
  
  # Checks for libraries.
  AC_CHECK_LIB(c, inet_aton, libc_inet_aton=yes) 
+@@ -57,7 +58,7 @@ AC_CHECK_LIB([socket], [socket])
+ AC_CHECK_LIB([ssl], [SSL_accept], , [CHECK_SSL])
+ AC_CHECK_HEADER([openssl/ssl.h], [], [AC_MSG_ERROR([header file <openssl/ssl.h>
+ is required for this software.  You may be running RedHat 9.  If so, see the FAQ or the README for further instructions.])])
+-AC_CHECK_LIB([crypto], [SSLeay_version], , [CHECK_SSL])
++AC_CHECK_LIB([crypto], [OpenSSL_version], , [CHECK_SSL])
+ AC_CHECK_FUNC([X509_VERIFY_PARAM_set_flags], [AC_DEFINE(HAVE_X509_VERIFY_PARAM)], [])
+ 
+ # PAM
