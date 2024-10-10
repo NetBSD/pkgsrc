@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.26 2024/10/10 15:46:19 jakllsch Exp $
+$NetBSD: distinfo,v 1.27 2024/10/10 15:53:21 jakllsch Exp $
 
-BLAKE2s (openafs-1.8.11-src.tar.bz2) = 83efb14fdc4032b8b9f83e2d93d9da55e60e05981ccfe020346bc4c31e43c364
-SHA512 (openafs-1.8.11-src.tar.bz2) = 06ebfdbc728e2172e7a368e02fc12bd10a78ef1cfb507a2d26edcde0567c34eed24a1ea9c1eae486a78cf53264358da9c687f9d77471795d17cce17d4ceb3fb4
-Size (openafs-1.8.11-src.tar.bz2) = 15042304 bytes
+BLAKE2s (openafs-1.8.12-src.tar.bz2) = 0f525310611d9a112b8c59a19c950b24da127e7d0f79097f74c25c20ef90631e
+SHA512 (openafs-1.8.12-src.tar.bz2) = 24fecf29ca5fbfc0e8c903918e21ec11cd9fc8b7c2f323a7779ea3ad20060eb4fc61055044fe66e756662113078224bd843e4d51262ef2ba0e916d9466081e19
+Size (openafs-1.8.12-src.tar.bz2) = 15047621 bytes
 SHA1 (patch-src_cf_osconf.m4) = 6eae9ab0821c496f59ebd611c270b46d511a751f
 SHA1 (patch-src_cf_sysname.m4) = 7f45f6387bf959d2026be369cbbfec1a96ff424b
 SHA1 (patch-src_config_afs__sysnames.h) = b13d5f701e9df3d7bd943a97e4c60632c2df1196
