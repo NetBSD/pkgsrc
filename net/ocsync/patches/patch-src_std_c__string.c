@@ -1,4 +1,4 @@
-$NetBSD: patch-src_std_c__string.c,v 1.2 2019/10/24 22:28:46 kamil Exp $
+$NetBSD: patch-src_std_c__string.c,v 1.3 2024/10/10 21:29:56 nia Exp $
 
 * For NetBSD iconv(3), this should be fixed for GNU iconv and NetBSD case.
 
@@ -24,7 +24,7 @@ $NetBSD: patch-src_std_c__string.c,v 1.2 2019/10/24 22:28:46 kamil Exp $
  
  static char *c_iconv(const char* str, enum iconv_direction dir)
  {
-+#if defined(__NetBSD__) && !NETBSD_POSIX_ICONV
++#if (defined(__NetBSD__) && !NETBSD_POSIX_ICONV) || defined(__sun)
 +  const char *in = (char*)str;
 +#else
    char *in = (char*)str;
