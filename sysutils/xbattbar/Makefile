@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2019/11/04 21:28:58 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/10 17:25:57 nia Exp $
 
 DISTNAME=	xbattbar_1.4.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,7 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://iplab.aist-nara.ac.jp/member/suguru/xbattbar.html
 COMMENT=	X11 battery graph for laptops
 
-NOT_FOR_PLATFORM=	Darwin-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-*
+ONLY_FOR_PLATFORM+=	Linux-*-*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 
