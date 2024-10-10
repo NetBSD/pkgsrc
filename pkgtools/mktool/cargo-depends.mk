@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.13 2024/10/09 11:47:54 jperkin Exp $
+# $NetBSD: cargo-depends.mk,v 1.14 2024/10/10 10:34:31 jperkin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -79,7 +79,7 @@ CARGO_CRATE_DEPENDS+=	instant-0.1.13
 CARGO_CRATE_DEPENDS+=	ipnet-2.10.1
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	itoa-1.0.11
-CARGO_CRATE_DEPENDS+=	js-sys-0.3.70
+CARGO_CRATE_DEPENDS+=	js-sys-0.3.71
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.159
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
@@ -173,13 +173,13 @@ CARGO_CRATE_DEPENDS+=	version_check-0.9.5
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
 CARGO_CRATE_DEPENDS+=	want-0.3.1
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.93
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.93
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.43
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.93
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.93
-CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.93
-CARGO_CRATE_DEPENDS+=	web-sys-0.3.70
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.94
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.94
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.44
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-0.2.94
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-macro-support-0.2.94
+CARGO_CRATE_DEPENDS+=	wasm-bindgen-shared-0.2.94
+CARGO_CRATE_DEPENDS+=	web-sys-0.3.71
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.9
 CARGO_CRATE_DEPENDS+=	windows-registry-0.2.0
 CARGO_CRATE_DEPENDS+=	windows-result-0.2.0
