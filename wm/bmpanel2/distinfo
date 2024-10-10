@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2022/09/06 09:26:27 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/10 17:16:46 nia Exp $
 
 BLAKE2s (bmpanel2-2.1pre1.tar.gz) = d476b095b853c2c75ea7d82ee8919f28a1b164dc14987d9eb1741066c7a57670
 SHA512 (bmpanel2-2.1pre1.tar.gz) = 8c1a4c64b25c04c6858407e8887f35f54d8b9e8e8b5b5c633258467afee77598157dfe3ef957ab7e5358b4a4bb0360032e711aa6cdb825a6e42ea2e5d97f97ef
 Size (bmpanel2-2.1pre1.tar.gz) = 386297 bytes
+SHA1 (patch-args.c) = 2cb11f69c2ad32b338ecc47a168b2fd619d92a30
 SHA1 (patch-extra_py_bmpanel2.py) = 335bb0fe65930f82efdb7759d06ffa9f2cd0bf61
 SHA1 (patch-man_CMakeLists.txt) = a95f82aebf42d31311e5d7bf42d9367253b246e2
 SHA1 (patch-widget-utils.c) = 00ee1d8bb3c5a7c5b8fc6e7994472ce26e318285
