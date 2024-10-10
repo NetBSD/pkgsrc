@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/12/23 09:19:39 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/10 17:36:10 nia Exp $
 
 DISTNAME=		pscpug035
 PKGNAME=		pscpug-0.3.5
@@ -19,6 +19,8 @@ NOT_FOR_PLATFORM=	Interix-*-* # no rusage or procfs stats
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 CFLAGS.NetBSD=	-D_KMEMUSER
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
