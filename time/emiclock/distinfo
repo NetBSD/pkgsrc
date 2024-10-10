@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:24:18 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/10/10 17:21:09 nia Exp $
 
 BLAKE2s (emiclock-2.0.2.tar.gz) = 119a5489a2d697c576ccd364247783acfd5d0a6f417375ff5f4a6af825ca2400
 SHA512 (emiclock-2.0.2.tar.gz) = 5276ec3e7a2333417c362c6779d38da5b6e76427085d41608f10bcc6b78910949427dd292c283e8d31d96eaba12cbb97de98774bd9976f83c55fea5f80ee8e69
@@ -9,5 +9,6 @@ SHA1 (patch-ac) = 4b020ac03c958d1ca44968c17b7d657edda77690
 SHA1 (patch-ad) = 3cde51980c8802a225a6a91291297176fc9dba69
 SHA1 (patch-ae) = ecbc4f169c0fd249ba1cc0c3031922c02f7a6bb2
 SHA1 (patch-af) = f5b6c40f42136ee8953bf259a78fa0d8be048503
-SHA1 (patch-ag) = 43c750de300cbda8cb89917894bbc73b18974c5d
+SHA1 (patch-ag) = c573c4b2a92ec3931c57d50ae3f6df121eab27ae
 SHA1 (patch-ah) = 227494794d7c28620d11800fa6087ab765dd5562
+SHA1 (patch-sys_SunOS_audio.c) = 41c83800218b5305aba7a1c57fd4fcf6ad8211d6
