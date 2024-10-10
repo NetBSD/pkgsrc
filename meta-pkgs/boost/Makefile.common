@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.101 2024/10/04 03:26:53 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.102 2024/10/10 14:44:17 jperkin Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -55,7 +55,6 @@ SUBST_SED.darwin=	-e 's,darwin : @rpath/,darwin : ${PREFIX}/lib/,'
 # On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
 .  if ${OPSYS} == "SunOS"
 TOOLS_PLATFORM.tar=	#empty
-BUILDLINK_TRANSFORM+=	opt:-D_XOPEN_SOURCE=500:-D_XOPEN_SOURCE=600
 .  endif
 
 .  if ${OPSYS} == "Darwin"
