@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/11/12 09:10:24 nikita Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/10 17:55:25 nia Exp $
 
 DISTNAME=	sysvinit-2.96
 PKGNAME=	${DISTNAME:S/sysvinit/pidof/}
@@ -15,6 +15,9 @@ USE_TOOLS+=	gmake
 BUILD_DIRS=	src
 BUILD_TARGET=	killall5
 AUTO_MKDIRS=	yes
+
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/killall5	\
