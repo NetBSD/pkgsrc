@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2006/03/25 17:14:40 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2024/10/10 17:41:19 nia Exp $
 
---- src/iface.c.orig	2006-03-24 20:32:14.000000000 +0000
+--- src/iface.c.orig	2005-08-26 17:23:57.000000000 +0000
 +++ src/iface.c
 @@ -4,10 +4,10 @@
  #include <string.h>
  #include <sys/types.h>
  #include <sys/socket.h>
 -#if __FreeBSD__ || __APPLE__
-+#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__) || defined(__sun)
  #include <ifaddrs.h>
  #endif
 -#if __NetBSD__ || __OpenBSD__
