@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/04/07 07:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/10 16:56:14 nia Exp $
 
 DISTNAME=	i3lock-2.15
 PKGREVISION=	2
@@ -12,12 +12,13 @@ COMMENT=	Slightly improved screen locker based on slock
 LICENSE=	modified-bsd
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c
-FORCE_C_STD=	c99
+
+USE_CC_FEATURES+=	c11
 
 INSTALLATION_DIRS+=	share/examples/i3lock/pam.d
 
-CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 BUILD_DEFS+=	SYSCONFBASE
 
