@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2024/09/13 18:02:44 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/10/10 19:32:27 jschauma Exp $
+include/oqs/aes_ops.h
 include/oqs/common.h
 include/oqs/kem.h
 include/oqs/kem_bike.h
@@ -10,10 +11,16 @@ include/oqs/kem_ntruprime.h
 include/oqs/oqs.h
 include/oqs/oqsconfig.h
 include/oqs/rand.h
+include/oqs/sha2_ops.h
+include/oqs/sha3_ops.h
+include/oqs/sha3x4_ops.h
 include/oqs/sig.h
+include/oqs/sig_cross.h
 include/oqs/sig_dilithium.h
 include/oqs/sig_falcon.h
+include/oqs/sig_mayo.h
 include/oqs/sig_sphincs.h
+include/oqs/sig_stfl.h
 lib/cmake/liboqs/liboqsConfig.cmake
 lib/cmake/liboqs/liboqsConfigVersion.cmake
 lib/cmake/liboqs/liboqsTargets-noconfig.cmake
