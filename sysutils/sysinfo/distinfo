@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:20:16 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/10/10 17:28:48 nia Exp $
 
 BLAKE2s (sysinfo-3.5.1.tar.gz) = 9ada14c01e5f977e64cd779df16a31049f73a23ecfe534bbac12ef97cf6c9a1c
 SHA512 (sysinfo-3.5.1.tar.gz) = e0cca78a09c8bace2767bfc9f6f60111110838f774553575de65c5e81d76a8b1d19c6c552f9f1ed6264f5531b54aaf7871d1ab68c5d37c1cbfdc6a19e04b23ae
 Size (sysinfo-3.5.1.tar.gz) = 259920 bytes
-SHA1 (patch-aa) = 8620270f8c27bd3cc6e0f8fac228624ce41e5f61
+SHA1 (patch-aa) = 92316139bd02b96602830efe6c053dd39a358da5
