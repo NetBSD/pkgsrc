@@ -1,12 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2022/03/19 16:19:02 jakllsch Exp $
+# $NetBSD: options.mk,v 1.6 2024/10/10 14:04:05 jakllsch Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openafs
 PKG_SUPPORTED_OPTIONS+=	server bitmap-later kernel-module supergroups namei
 PKG_SUPPORTED_OPTIONS+=	openafs-kauth
-PKG_SUGGESTED_OPTIONS=	server -bitmap-later namei -kernel-module supergroups
-PKG_SUGGESTED_OPTIONS+=	-openafs-kauth
+PKG_SUGGESTED_OPTIONS=	server namei supergroups
 
 .include "../../mk/bsd.options.mk"
 
