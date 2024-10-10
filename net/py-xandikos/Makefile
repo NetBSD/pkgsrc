@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/04/30 10:14:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/10 07:21:39 adam Exp $
 
-DISTNAME=	xandikos-0.2.11
+DISTNAME=	xandikos-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xandikos/}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-multidict-[0-9]*:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
