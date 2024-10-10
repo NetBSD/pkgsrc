@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.23 2024/10/10 14:04:05 jakllsch Exp $
+$NetBSD: distinfo,v 1.24 2024/10/10 15:19:04 jakllsch Exp $
 
-BLAKE2s (openafs-1.8.8.1-src.tar.bz2) = cfa0eadf49551acae3e14a3b756ce618a30bece455915fde9a7a1311baa0f4c9
-SHA512 (openafs-1.8.8.1-src.tar.bz2) = fb181e0989e9bae714af26de916a96946eea20f98b47154f2de7b5e296cb4f42af5df037ef7b603073e97eafe52d7c401666f03130c1e0c9a6ae1a6c2707c384
-Size (openafs-1.8.8.1-src.tar.bz2) = 14866119 bytes
+BLAKE2s (openafs-1.8.9-src.tar.bz2) = 8cb0d0756ea25f4155a77e5be47b962d33218c9ccf329142a54366032120cb04
+SHA512 (openafs-1.8.9-src.tar.bz2) = e51c7d4956173dfadb50e7312b3cedbc3cfa8d1981122b79c5eb895f569b7b82b53a3197789d5186482a5ebeaaff6b6861a9867b3f183cd6bb248325847423ef
+Size (openafs-1.8.9-src.tar.bz2) = 14875192 bytes
 SHA1 (patch-src_cf_osconf.m4) = 6eae9ab0821c496f59ebd611c270b46d511a751f
 SHA1 (patch-src_cf_sysname.m4) = 7f45f6387bf959d2026be369cbbfec1a96ff424b
 SHA1 (patch-src_comerr_Makefile.in) = 74c20e021192f333912f10cc9c539f8162d4bb11
@@ -12,5 +12,5 @@ SHA1 (patch-src_config_param.nbsd100.h) = 49ba081d163357ade1ad1c409b7276edb6e6e7
 SHA1 (patch-src_config_param.nbsd80.h) = 52335bea3c5ae9becab4d9e8248ecc3c2ac24749
 SHA1 (patch-src_config_param.nbsd90.h) = 0a958172a80e694f0b59c0e5e03c0956740b1ddb
 SHA1 (patch-src_config_param.ppc_nbsd100.h) = 68fbda277f8e1895785b99eee8da36618b7a5d26
-SHA1 (patch-src_lwp_lwp.c) = be963332293d31137a46fb27d1dec25c7fbb120e
+SHA1 (patch-src_lwp_lwp.c) = 6f80b16f5bb73dccc44c0e752be997398bf37f3a
 SHA1 (patch-src_lwp_process.amd64.s) = c0be87a82e201855d9004859e01c90d8016efc7f
