@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/09/13 18:02:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/10 19:32:27 jschauma Exp $
 
-DISTNAME=	liboqs-0.10.1
+DISTNAME=	liboqs-0.11.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-quantum-safe/}
 
