@@ -1,9 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2020/07/23 12:38:44 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/10/10 19:27:38 nia Exp $
 
 - Don't pass -O3 unconditionally
 - Support PKGMANDIR
+- cp -v is non-portable.
 
---- Makefile.orig	2020-07-07 20:26:19.000000000 +0000
+--- Makefile.orig	2020-10-06 12:56:40.000000000 +0000
 +++ Makefile
 @@ -3,9 +3,10 @@ SRC = cfm.c
  CONF = config.h
@@ -17,7 +18,12 @@ $NetBSD: patch-Makefile,v 1.1 2020/07/23 12:38:44 nia Exp $
  CPPFLAGS += -D_XOPEN_SOURCE=700
  
  .PHONY: all install uninstall clean
-@@ -20,13 +21,13 @@ $(CONF):
+@@ -16,17 +17,17 @@ $(TARGET): $(CONF) $(SRC)
+ 	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(SRC) -o $@
+ 
+ $(CONF):
+-	@cp -v $(DEFCONF) $(CONF)
++	@cp $(DEFCONF) $(CONF)
  
  install: $(TARGET)
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
