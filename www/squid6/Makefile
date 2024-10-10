@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/06/28 07:39:28 sborrill Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/10 11:41:53 sborrill Exp $
 
-DISTNAME=	squid-6.10
+DISTNAME=	squid-6.11
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v6/
 EXTRACT_SUFX=	.tar.xz
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 # src/ipc/TypedMsgHdr.h fails with
 # static_assert(std::is_trivially_copyable<Pod>::value, "getPod() used for a POD")
 USE_LANGUAGES=		c c++17
-GCC_REQD+=		8
+GCC_REQD+=		10
 
 USE_TOOLS+=		perl:run gmake
 GNU_CONFIGURE=		yes
