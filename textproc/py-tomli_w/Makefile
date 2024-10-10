@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/10/28 19:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/10 12:26:06 adam Exp $
 
-DISTNAME=	tomli_w-1.0.0
+DISTNAME=	tomli_w-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tomli-w/}
 
@@ -11,11 +10,9 @@ HOMEPAGE=	https://github.com/hukkin/tomli-w
 COMMENT=	Lil' TOML writer
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2.0:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
