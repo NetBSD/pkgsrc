@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/03 00:55:28 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/10 16:43:04 nia Exp $
 
 DISTNAME=	xmenu-4.6.1
 CATEGORIES=	x11
@@ -21,5 +21,6 @@ post-install:
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
