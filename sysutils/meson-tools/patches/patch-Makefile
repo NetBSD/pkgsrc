@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1 2024/10/10 17:38:44 nia Exp $
+
+--- Makefile.orig	2024-10-10 17:37:43.698777300 +0000
++++ Makefile
+@@ -1,7 +1,6 @@
+ all: amlbootsig unamlbootsig amlinfo
+ 
+-CFLAGS = -g
+-LDFLAGS = -lcrypto
++LDFLAGS += -lcrypto
+ 
+ amlbootsig.o unamlbootsig.o amlinfo.o: meson.h fip.h
+ 
