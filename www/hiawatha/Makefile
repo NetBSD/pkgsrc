@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/08/22 17:54:51 hauke Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/10 17:00:18 nia Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
@@ -22,6 +22,8 @@ HIAWATHA_PIDDIR=	${VARBASE}/run
 HIAWATHA_WEBROOT=	${VARBASE}/hiawatha
 
 BUILD_DEFS+=		VARBASE
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # Config file processing
 CMAKE_BUILD_DIR=	.
