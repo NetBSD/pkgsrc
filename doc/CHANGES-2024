@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6094 2024/10/10 02:45:46 gutteridge Exp $
+$NetBSD: CHANGES-2024,v 1.6095 2024/10/10 06:36:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9275,3 +9275,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-test-httpx to 0.32.0 [adam 2024-10-09]
 	Updated devel/subversion to 1.14.4 [bsiegert 2024-10-09]
 	Updated www/firefox115 to 115.16.1 [gutteridge 2024-10-10]
+	Added devel/py-propcache version 0.2.0 [wiz 2024-10-10]
