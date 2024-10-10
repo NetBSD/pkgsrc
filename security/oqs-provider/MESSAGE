@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2024/09/13 18:07:51 jschauma Exp $
+$NetBSD: MESSAGE,v 1.2 2024/10/10 19:34:45 jschauma Exp $
 
 In order to make the OpenQuantumSafe provider available to your OpenSSL
 commands by default, add the following snippet to your openssl.cnf
