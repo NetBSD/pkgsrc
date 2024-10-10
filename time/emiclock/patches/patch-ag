@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
+$NetBSD: patch-ag,v 1.2 2024/10/10 17:21:09 nia Exp $
 
---- EmiClock.c	1999-09-27 01:18:18.000000000 +0900
+--- EmiClock.c.orig	1999-09-26 16:18:18.000000000 +0000
 +++ EmiClock.c
-@@ -509,7 +509,7 @@
+@@ -509,7 +509,7 @@ static void
  EmiClockRandomInit(w)
      EmiClockWidget	w;
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
      struct tm	*tm;
  
      /* 時間を取り出す */
-@@ -567,7 +567,7 @@
+@@ -567,7 +567,7 @@ Realize(w, valueMask, attrs)
      XSetWindowAttributes	*attrs;
  {
      EmiClockWidget	cw = (EmiClockWidget)w;
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
      struct tm		*tm;
  
      XtCreateWindow(w, (unsigned)InputOutput, (Visual *)CopyFromParent,
-@@ -951,7 +951,7 @@
+@@ -951,7 +951,7 @@ static void
  NewTime(w)
      EmiClockWidget	w;
  {
@@ -29,7 +29,19 @@ $NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
      struct tm	*tm;
      int		year;
  
-@@ -1066,7 +1066,7 @@
+@@ -1033,11 +1033,7 @@ NewInterval(w)
+ 
+     /* インターバルの設定 */
+ #ifdef	HAVE_GETTIMEOFDAY
+-#if !(defined(solaris) || (defined(__sony_news) && defined(SVR4)))
+     if (gettimeofday(&tp, &tzp) != 0) {
+-#else
+-    if (gettimeofday(&tp) != 0) {
+-#endif
+ 	FatalError("Can't gettimeofday.");
+     }
+ 
+@@ -1066,7 +1062,7 @@ NewInterval(w)
  				/* 1000 milliseconds == 1 second */
  			(XtTimerCallbackProc)NewTime, w);
      } else {
@@ -38,7 +50,7 @@ $NetBSD: patch-ag,v 1.1 2010/06/04 13:52:21 tsutsui Exp $
  	struct tm	*tm;
  
  	time(&now);
-@@ -1426,7 +1426,7 @@
+@@ -1426,7 +1422,7 @@ static void
  GenPixmapAndDraw(w)
      EmiClockWidget	w;
  {
