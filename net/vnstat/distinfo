@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:07:08 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/10 19:56:01 nia Exp $
 
 BLAKE2s (vnstat-1.14.tar.gz) = eacaf36bd1c84175e265d5879bc644a51db3c8d5bd643d8f2b013f4c34f989df
 SHA512 (vnstat-1.14.tar.gz) = a2aebcdd0c4aa4a821579b751af587af44a5c3f14864d3022a05f65c4df2b9ddece0ed414097346d95124a3ea5fb89ea26bf44c68d3c7ca7237573dd5f1e8239
 Size (vnstat-1.14.tar.gz) = 103281 bytes
+SHA1 (patch-src_common.h) = abd8b9f44cb7b5acc3a0952a7caddaf66a01d4bf
