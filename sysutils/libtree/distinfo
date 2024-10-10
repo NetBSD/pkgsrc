@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2022/12/12 14:10:48 nros Exp $
+$NetBSD: distinfo,v 1.4 2024/10/10 17:59:19 nia Exp $
 
 BLAKE2s (libtree-3.1.1.tar.gz) = 0d7941927f0552a1b89f42c0a325cbc819267f73827cf79dba995317e817ff2c
 SHA512 (libtree-3.1.1.tar.gz) = 6b4b41b16edfcaa83c16b566a3afff1de0ecffdd5f91af2c82db95fca678b993e021ca8fac5fd1d37ad60ea2215100a0889ee457ce08019f3888e32c755ba1ce
 Size (libtree-3.1.1.tar.gz) = 79931 bytes
+SHA1 (patch-Makefile) = 7c15147aef90133b6d4a2a9466c2bcc1c2ab7fe4
