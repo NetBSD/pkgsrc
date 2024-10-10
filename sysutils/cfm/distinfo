@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:19:25 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/10/10 19:27:38 nia Exp $
 
 BLAKE2s (cfm-0.6.6.tar.gz) = 9a38bcae7576c6cad16a43eda57c3d2352df5c0e08f27430cdc5ac53547376a1
 SHA512 (cfm-0.6.6.tar.gz) = 0b34b6f1c9997a0caacabef1a1c60cb1b8078cd35466b1250907500d0750f4a7fc5d9e1b247c4f3f5430ec1a6a74d41fa080be7e04ae728a7a01cfe92a8c42a8
 Size (cfm-0.6.6.tar.gz) = 71472 bytes
-SHA1 (patch-Makefile) = f60dbb3f7c800742ba7ce6d27355d72154b5f3cd
+SHA1 (patch-Makefile) = 4cd8d362b7085df244617cb0bae222f7f25c1442
