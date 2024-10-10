@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6098 2024/10/10 08:46:45 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6099 2024/10/10 09:46:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9281,3 +9281,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-xandikos to 0.2.12 [adam 2024-10-10]
 	Updated www/nghttp3 to 1.6.0 [adam 2024-10-10]
 	Updated net/ngtcp2 to 1.8.0 [adam 2024-10-10]
+	Updated devel/cmake to 3.30.5 [adam 2024-10-10]
+	Updated net/wireshark to 4.4.1 [adam 2024-10-10]
