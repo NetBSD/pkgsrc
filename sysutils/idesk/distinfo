@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2022/07/29 06:02:09 rin Exp $
+$NetBSD: distinfo,v 1.10 2024/10/10 19:21:09 nia Exp $
 
 BLAKE2s (idesk-0.7.5.tar.bz2) = 839bfab1d7974efd3fca4662ab07542deccbd0397ecb6a8161d0c72f11fd6c64
 SHA512 (idesk-0.7.5.tar.bz2) = 42c15cecc6e2cf6546420542fc4480902fd33c26c19ffc32e65eb04d09116d3b80f5539cde4ca86d4bec30ce96417752bfe7416ec83c531235d9064d06ec0475
 Size (idesk-0.7.5.tar.bz2) = 185858 bytes
 SHA1 (patch-aa) = 6eedf7f366552ad626becb66524ddbe21ef8739a
 SHA1 (patch-configure) = 8a14af2671d5ba06dd78db8f098a96e415f4e7e3
+SHA1 (patch-src_Timer.cpp) = 906f524edcb41117aaea14f8417d4120c1f4c82d
