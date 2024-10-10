@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/07/17 14:42:50 adam Exp $
+$NetBSD: distinfo,v 1.14 2024/10/10 12:31:46 adam Exp $
 
-BLAKE2s (trustme-1.1.0.tar.gz) = 73f4fd7bcbf37e033f5564afa8f17d1c9c176f4aca20ad143b0a1cef31e58537
-SHA512 (trustme-1.1.0.tar.gz) = f0ad39ffd9f4074107c90258738412ff8ca8ed1b4138e38edc6edad9a5cb8787a53a47fa78b12eba189774902ee3728961feed54b3b5e944e4737749912627b2
-Size (trustme-1.1.0.tar.gz) = 29611 bytes
+BLAKE2s (trustme-1.2.0.tar.gz) = 6206105bf65b5d2017c3928fca40801e21e4d937526fd4a50c83b155b4efa6ed
+SHA512 (trustme-1.2.0.tar.gz) = 84cfa02cf00bac1a304dacbae8b3d673307d066116e38c396f25fb868174f020c415921d4c56a6a37354e5205f294cf95611a8c4f2b02f82dda2aa9b2e80192b
+Size (trustme-1.2.0.tar.gz) = 26350 bytes
