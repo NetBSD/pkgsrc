@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:19:51 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/10/10 17:38:44 nia Exp $
 
 BLAKE2s (meson-tools-0.1.zip) = e7e6d7d1938383d7fd3a3e131c00eccca4292a952e447b0f394d38e8b162ce1b
 SHA512 (meson-tools-0.1.zip) = ef0e15abafa6f0494ed79e1c2ca3b02bd3d671628d28fa7c39e571f72debcf74dfcc9eac39a57afbf1a87ffc1f798774a5215f48e07bf2366fc68427768aba14
 Size (meson-tools-0.1.zip) = 15057 bytes
+SHA1 (patch-Makefile) = ea173fc7d96f7d2aefff98471870af72243ba34f
