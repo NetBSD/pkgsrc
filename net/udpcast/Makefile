@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2022/06/28 11:35:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/10 20:00:19 nia Exp $
 #
 
 DISTNAME=		udpcast-20060619
@@ -13,6 +13,9 @@ COMMENT=		Send data simultaneously to many destinations on a LAN
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake perl pod2man
+
+# msg_controllen and friends
+CFLAGS.SunOS+=		-D_POSIX_C_SOURCE=200809L -D__EXTENSIONS__
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1
 
