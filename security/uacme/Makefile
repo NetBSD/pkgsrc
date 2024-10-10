@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/29 16:34:21 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/10 19:31:35 nia Exp $
 
 PKGNAME=	uacme-${PKGVER}
 PKGREVISION=	2
@@ -26,6 +26,8 @@ HOOKDIR=		libexec
 DOCDIR=			share/doc/uacme
 UACME_CONFDIR=		${VARBASE}/uacme
 UACME_CHALLENGE_PATH=	${UACME_CONFDIR}/challenge
+
+LDFLAGS.SunOS+=		-lsocket
 
 CONFIGURE_ARGS=		--datadir=${PREFIX}/${HOOKDIR}
 CONFIGURE_ARGS+=	--disable-maintainer-mode
