@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/12/12 14:10:48 nros Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/10 17:59:19 nia Exp $
 
 DISTNAME=	libtree-3.1.1
 CATEGORIES=	sysutils
@@ -10,9 +10,8 @@ HOMEPAGE=	https://github.com/haampie/libtree
 COMMENT=	Show library info in a tree form
 LICENSE=	mit
 
-USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake
 
-MAKE_FLAGS=	SHAREDIR=${PREFIX}
+USE_CC_FEATURES=	c99
 
 .include "../../mk/bsd.pkg.mk"
