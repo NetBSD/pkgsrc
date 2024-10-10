@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.7 2024/04/29 09:27:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/10/10 19:45:21 nia Exp $
 
 BLAKE2s (sslsplit-0.5.5.tar.bz2) = 55a3b02ec676ea789d2235a12dcbd396b7d9b04edccb3fc66b54e8b31525f0c5
 SHA512 (sslsplit-0.5.5.tar.bz2) = 1d4968382659e975cd59692f3de80d79831a7842c9b909bb3cefedb5e2928254394e0f593c3409e3d5b1d0b192d8f8123ae10b08cecfd65584d790437d9f3d2a
 Size (sslsplit-0.5.5.tar.bz2) = 532788 bytes
 SHA1 (patch-GNUmakefile) = ff6cdcddb7e83eed98d5d08ac64cc9a89026c103
 SHA1 (patch-main.c) = 5a0515e7bbda4ffc8592be06d53d0d7b92384563
+SHA1 (patch-nat.c) = 56e395f6a71f6091b537533da3ec3486436fed69
 SHA1 (patch-pxyconn.c) = 913aaf8813ab6c77d84cab479c73a39b1b9a9e4a
