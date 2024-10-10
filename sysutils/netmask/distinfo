@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2021/11/17 17:12:45 sjmulder Exp $
+$NetBSD: distinfo,v 1.2 2024/10/10 17:47:12 nia Exp $
 
 BLAKE2s (netmask-2.4.4.tar.gz) = c628a78bee3f810becb0e65cbfd5b8cf3ce94e4f3383770aada57c6406f34ca1
 SHA512 (netmask-2.4.4.tar.gz) = 57beddd0671dfa8102a68a2e8194d04405358b188b10da215768580f022d040ab990089013816500aafe2090eba8a79aef1fafbd160526c985fbbf09ff69ffce
 Size (netmask-2.4.4.tar.gz) = 45775 bytes
+SHA1 (patch-main.c) = c42f8b8c9ebfa48bd9557fb0e2ac63aa07da3d8b
