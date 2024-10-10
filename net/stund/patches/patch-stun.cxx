@@ -1,8 +1,16 @@
-$NetBSD: patch-stun.cxx,v 1.1 2017/12/06 15:43:48 jmcneill Exp $
+$NetBSD: patch-stun.cxx,v 1.2 2024/10/10 20:18:02 nia Exp $
 
 --- stun.cxx.orig	2012-01-26 11:02:46.000000000 +0000
 +++ stun.cxx
-@@ -673,12 +673,10 @@ stunRand()
+@@ -16,6 +16,7 @@
+ #include <string.h>
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
++#include <sys/sockio.h>
+ #include <sys/time.h>
+ #include <sys/types.h> 
+ #include <arpa/inet.h>
+@@ -673,12 +674,10 @@ stunRand()
        asm("rdtsc" : "=A" (tick));
  #elif defined (__SUNPRO_CC) || defined( __sparc__ )	
        tick = gethrtime();
