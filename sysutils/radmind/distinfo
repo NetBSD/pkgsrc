@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2024/07/12 13:26:40 hauke Exp $
+$NetBSD: distinfo,v 1.29 2024/10/10 17:33:41 nia Exp $
 
 BLAKE2s (radmind-1.14.1.tar.gz) = ecab16cf79583ade0b5064fb8f61e2882017b696f04184c6825b9e2cf8d1c34e
 SHA512 (radmind-1.14.1.tar.gz) = bccf9681a6899be3b500065237dd1e04cd83ffb6f9be0e355412e7b0c556325f7d13435cec65a8a5e156e4411da915744f01a615472f6361d52c4d54d8be20eb
@@ -8,8 +8,8 @@ SHA1 (patch-cksum.c) = 92cc806e8e79e6d4887dba5e838a561e6d59c5d5
 SHA1 (patch-command.c) = 26e93be15a5a1113b8f75eb6eaf1d77892947bc7
 SHA1 (patch-command.h) = 03daa77363c681ef625cf429071f02245689e1e9
 SHA1 (patch-config.h.in) = 89bce7b9d256e81ebb6ce1319183cb346260bcde
-SHA1 (patch-configure) = 8d4c7daab7923da97efe94383278ecd30249e142
-SHA1 (patch-configure.ac) = 12968655962adc00ce095866151d11747ac9b565
+SHA1 (patch-configure) = 8db0105f8d0c06129b798f51a2a17bf39514d5d3
+SHA1 (patch-configure.ac) = 706aba64e3427bda499b9935d8c92922a32d1224
 SHA1 (patch-ktcheck.c) = 83c03e417fc93863a8575b0cb2f93e09cba1d937
 SHA1 (patch-largefile.h) = 806f12878aa628f30355b82ac23a5c92740f42a1
 SHA1 (patch-lcksum.c) = 7b7b4da338bb13f2508c5b22307263eaedb32347
