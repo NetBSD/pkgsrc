@@ -1,19 +1,19 @@
-$NetBSD: patch-src_base_utils_fs.cpp,v 1.3 2022/11/29 16:37:59 adam Exp $
+$NetBSD: patch-src_base_utils_fs.cpp,v 1.4 2024/10/10 13:22:35 adam Exp $
 
 Support NetBSD.
 
---- src/base/utils/fs.cpp.orig	2022-11-26 21:16:23.000000000 +0000
+--- src/base/utils/fs.cpp.orig	2024-09-29 17:53:45.000000000 +0000
 +++ src/base/utils/fs.cpp
-@@ -42,7 +42,7 @@
+@@ -40,7 +40,7 @@
  
  #if defined(Q_OS_WIN)
- #include <Windows.h>
+ #include <windows.h>
 -#elif defined(Q_OS_MACOS) || defined(Q_OS_FREEBSD) || defined(Q_OS_OPENBSD)
-+#elif defined(Q_OS_MACOS) || defined(Q_OS_FREEBSD) || defined(Q_OS_NETBSD) || defined(Q_OS_OPENBSD)
++#elif defined(Q_OS_MACOS) || defined(Q_OS_FREEBSD) || defined(Q_OS_OPENBSD) || defined(Q_OS_NETBSD)
  #include <sys/param.h>
  #include <sys/mount.h>
  #elif defined(Q_OS_HAIKU)
-@@ -52,6 +52,10 @@
+@@ -50,6 +50,10 @@
  #include <unistd.h>
  #endif
  
@@ -21,10 +21,10 @@ Support NetBSD.
 +#define statfs statvfs
 +#endif
 +
+ #include <QCoreApplication>
  #include <QDateTime>
  #include <QDebug>
- #include <QDir>
-@@ -243,7 +247,7 @@ bool Utils::Fs::isNetworkFileSystem(cons
+@@ -242,7 +246,7 @@ bool Utils::Fs::isNetworkFileSystem(cons
      if (statfs(file.toLocal8Bit().constData(), &buf) != 0)
          return false;
  
