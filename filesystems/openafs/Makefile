@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/03/19 16:19:02 jakllsch Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/10 14:43:25 jakllsch Exp $
 
 DISTNAME=	openafs-1.8.8.1-src
 PKGNAME=	${DISTNAME:C/-src//}
+PKGREVISION=	1
 CATEGORIES=	filesystems net sysutils
 MASTER_SITES=	http://www.openafs.org/dl/openafs/1.8.8.1/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,20 +19,17 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	lwp-[0-9]*
 CONFLICTS+=	rx-[0-9]*
 
-# No idea if this is still needed;
-# might also depend on bmake vs. gmake whether this works,
-# seems more likely to work with gmake, but we're using bmake.
-MAKE_JOBS_SAFE=	no
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		lex autoconf automake
+USE_TOOLS+=		gmake # already needed for other build dependencies
 RCD_SCRIPTS+=		bosserver
 
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--without-swig	# avoids missing "EXTERN.h" include on Linux
 
 # Avoid _res in multithreaded on NetBSD
 .include "../../mk/bsd.fast.prefs.mk"
@@ -43,7 +41,7 @@ USE_GNU_CONFIGURE_HOST=	no
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-PLIST_SRC+=		${.CURDIR}/PLIST
+PLIST_SRC+=		${PLIST_SRC_DFLT}
 OWN_DIRS+=		${PKG_SYSCONFDIR}/openafs
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/openafs/server ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 775
 OWN_DIRS_PERMS+=	${VARBASE}/openafs ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 770

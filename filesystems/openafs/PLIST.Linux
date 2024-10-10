@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2024/10/10 14:43:25 jakllsch Exp $
+include/afs/afs_Admin.h
+include/afs/afs_bosAdmin.h
+include/afs/afs_cfgAdmin.h
+include/afs/afs_clientAdmin.h
+include/afs/afs_kasAdmin.h
+include/afs/afs_ptsAdmin.h
+include/afs/afs_utilAdmin.h
+include/afs/afs_vosAdmin.h
+include/afs/osi_vfs.h
+lib/afs/libafsadminutil.a
+lib/afs/libbosadmin.a
+lib/afs/libcfgadmin.a
+lib/afs/libclientadmin.a
+lib/afs/libkasadmin.a
+lib/afs/libptsadmin.a
+lib/afs/libvosadmin.a
+lib/libuafs.a
+lib/libuafs_pic.a
