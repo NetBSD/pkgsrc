@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4346 2024/09/21 13:14:58 abs Exp $
+# $NetBSD: Makefile,v 1.4347 2024/10/10 06:36:13 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2817,6 +2817,7 @@ SUBDIR+=	py-progressbar2
 SUBDIR+=	py-project-api
 SUBDIR+=	py-project-metadata
 SUBDIR+=	py-prompt_toolkit
+SUBDIR+=	py-propcache
 SUBDIR+=	py-proteus
 SUBDIR+=	py-proto-plus
 SUBDIR+=	py-protobuf
