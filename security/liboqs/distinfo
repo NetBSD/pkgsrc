@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/09/13 18:02:45 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2024/10/10 19:32:28 jschauma Exp $
 
-BLAKE2s (liboqs-0.10.1.tar.gz) = be2ee7034329338c50be0a3197191473b6c2d42dd9f5c9b0335e7e207a52cab4
-SHA512 (liboqs-0.10.1.tar.gz) = 7049c084d9bef2064ff5ad4964bf5071b2fe0553c2dfe7522b32b3a441fcdd46f718adeca63a163e95d5f86c3f092b02ffa3190822861f566b498654711c722d
-Size (liboqs-0.10.1.tar.gz) = 4255203 bytes
+BLAKE2s (liboqs-0.11.0.tar.gz) = fd1806d5c1a2333e75c447ecb9748438416b3020182c05bd7546f8299e9c7c85
+SHA512 (liboqs-0.11.0.tar.gz) = 10dc002f148895cc304d6b0db14734d9149aeae43308caee4fe5c39ee18fbd7297c65f5c67df0a39b84534f676f209bbcda591b353128b4bab152cb69177c6ae
+Size (liboqs-0.11.0.tar.gz) = 8225080 bytes
 SHA1 (patch-common.c) = 8841eacb7500a1a589786eb710aa22f603a24af7
