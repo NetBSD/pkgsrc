@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2022/05/18 19:48:23 nikita Exp $
+$NetBSD: distinfo,v 1.10 2024/10/10 17:23:12 nia Exp $
 
 BLAKE2s (9wm-1.4.2.tar.gz) = c0b70605bae374d6bdb8603b1e064bdf95291331425d2bec753697bf9ccfe191
 SHA512 (9wm-1.4.2.tar.gz) = 4ea27b4a0851519fd1a8ccbd9e4c19addd592a2cd0a5dd1b077661564594b1ceb653cd8ec304ee56654cefa922514a02b041ad3d3639ef43efdb830cdec7485e
 Size (9wm-1.4.2.tar.gz) = 22099 bytes
-SHA1 (patch-9wm.c) = 0e3c31b6cd872426a9be8b9e27294eee83da9712
+SHA1 (patch-9wm.c) = 0e6239c352269fe5800a5d9c8fe7eaf449fe84f6
 SHA1 (patch-grab.c) = 931076087bb8ee4b83c7a52ef52ac36ce7b69d22
