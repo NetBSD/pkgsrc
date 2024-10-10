@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2024/08/10 10:14:56 nia Exp $
+# $NetBSD: Makefile,v 1.78 2024/10/10 16:40:46 nia Exp $
 
 DISTNAME=	libgdata-0.18.1
 CATEGORIES=	net www
@@ -11,7 +11,6 @@ COMMENT=	Google Data API based Glib client library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	libgdata.pc.in
