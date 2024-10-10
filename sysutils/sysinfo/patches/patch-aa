@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2012/05/13 15:59:33 hans Exp $
+$NetBSD: patch-aa,v 1.3 2024/10/10 17:28:48 nia Exp $
 
 Don't override PREFIX in the main Makefile, and place the
 configuration files, and the executable binary, in the correct
 directory, according to hier(7).
 
---- Makefile	1999/06/21 10:36:33	1.1
-+++ Makefile	1999/06/21 10:37:26
-@@ -23,7 +23,7 @@
+--- Makefile.orig	1999-03-20 19:56:15.000000000 +0000
++++ Makefile
+@@ -23,7 +23,7 @@ PROG 		= sysinfo
  # The ${PREFIX} variable determines the top level directory that
  # things are installed under.
  #
@@ -104,3 +104,12 @@ directory, according to hier(7).
  	done
  
  clean:
+@@ -358,7 +358,7 @@ sunos5 solaris2:
+ 		OSCFLAGS="$$xarch" \
+ 		OSDEFINES="-Dsunos -DOSMVER=${OSmver} -DOSVER=${OSver}" \
+ 		OSFILES="${SunOS5-OS-Files}" \
+-		OSLDFLAGS="-i -R/usr/lib $$xarch" \
++		OSLDFLAGS="-R/usr/lib $$xarch" \
+ 		OSLIBS="-lsocket -lnsl -lelf -ladm -lresolv -lgen $$OtherLibs" \
+ 		PROG=${PROG} \
+ 		all
