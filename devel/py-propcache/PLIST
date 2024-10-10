@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/10 06:35:58 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/propcache/__init__.py
+${PYSITELIB}/propcache/__init__.pyc
+${PYSITELIB}/propcache/__init__.pyo
+${PYSITELIB}/propcache/_helpers.py
+${PYSITELIB}/propcache/_helpers.pyc
+${PYSITELIB}/propcache/_helpers.pyo
+${PYSITELIB}/propcache/_helpers_c.pyx
+${PYSITELIB}/propcache/_helpers_c.so
+${PYSITELIB}/propcache/_helpers_py.py
+${PYSITELIB}/propcache/_helpers_py.pyc
+${PYSITELIB}/propcache/_helpers_py.pyo
+${PYSITELIB}/propcache/api.py
+${PYSITELIB}/propcache/api.pyc
+${PYSITELIB}/propcache/api.pyo
+${PYSITELIB}/propcache/py.typed
