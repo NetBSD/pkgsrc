@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2021/05/30 00:49:51 khorben Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/10/10 20:24:18 nia Exp $
 #
 # used by security/libpe/Makefile
 # used by security/pev/Makefile
@@ -11,3 +11,7 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://pev.sourceforge.io/
 
 USE_TOOLS+=	gmake
+
+CFLAGS+=	-D_POSIX_C_SOURCE=200112L
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
