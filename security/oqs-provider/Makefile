@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/09/23 12:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/10 19:34:45 jschauma Exp $
 
-VERSION=	0.6.1
+VERSION=	0.7.0
 DISTNAME=	oqs-provider-${VERSION}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-quantum-safe/}
