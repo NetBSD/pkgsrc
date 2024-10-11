@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/09/21 17:25:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/11 09:34:31 bsiegert Exp $
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 DISTNAME=	gce_metadata_server-3.91.0
@@ -17,5 +17,6 @@ do-install:
 
 .include "go-modules.mk"
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
