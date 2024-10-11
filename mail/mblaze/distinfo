@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/09/13 17:08:49 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2024/10/11 06:37:20 nia Exp $
 
 BLAKE2s (mblaze-1.3.tar.gz) = 93be10a08237e537a6ea5feabc29284bcb7e55363c43ad646b80212a681bbe1f
 SHA512 (mblaze-1.3.tar.gz) = 65acc92654fe2f32328b57969930711128138067c9c23def025eb55b82a237d635b5923e9106ada394954b63eb6cd1e4e55f875aafc6201f21f83e8142905470
 Size (mblaze-1.3.tar.gz) = 102829 bytes
+SHA1 (patch-GNUmakefile) = 113883947fabc8b419b23c55c5685e34aeefef47
+SHA1 (patch-rfc2047.c) = 3725b89e1bdfa8eb7b739171c2f3ab908d530e90
