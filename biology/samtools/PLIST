@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/02/25 13:52:39 bacon Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/11 22:38:32 bacon Exp $
 bin/ace2sam
 bin/blast2sam.pl
 bin/bowtie2sam.pl
