@@ -58,8 +58,8 @@ print_entries() {
 	done
 }
 
-if [ $# != 5 ]; then
-	echo "usage: list-dependencies bootstrap_depends test_depends tool_depends build_depends depends" 1>&2
+if [ $# != 7 ]; then
+	echo "usage: list-dependencies bootstrap_depends test_depends tool_depends build_depends depends indirect_build_depends indirect_depends" 1>&2
 	exit 1
 fi
 
@@ -68,3 +68,5 @@ print_entries test "$2"
 print_entries tool "$3"
 print_entries build "$4"
 print_entries full "$5"
+print_entries indirect-build "$6"
+print_entries indirect-full "$7"
