@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/05/24 15:15:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/11 12:40:04 adam Exp $
 
-DISTNAME=	libcst-1.4.0
+DISTNAME=	libcst-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libcst/}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.2:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesmith>=0.0.4:../../devel/py-hypothesmith
 
 USE_LANGUAGES=	c c++	# Rust, but needs toolchain for linking
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CARGO_WRKSRC=	${WRKSRC}/native
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
