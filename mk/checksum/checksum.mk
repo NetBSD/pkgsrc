@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.31 2024/10/11 11:20:23 jperkin Exp $
+# $NetBSD: checksum.mk,v 1.32 2024/10/11 11:40:29 jperkin Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -53,9 +53,13 @@ checksum checksum-phase:
 	fi
 .endif
 
+.if !empty(TOOLS_PLATFORM.mktool)
+_DISTINFO_CMD=	${TOOLS_PLATFORM.mktool} distinfo
+.else
 _DISTINFO_CMD=	${PKGSRC_SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q} \
 			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}	\
 		${AWK} -f ${PKGSRCDIR}/mk/checksum/distinfo.awk --
+.endif
 
 .if exists(${DISTDIR})
 _DISTINFO_ARGS_COMMON+=	-d ${DISTDIR}
