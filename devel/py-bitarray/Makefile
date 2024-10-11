@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/01/22 19:50:30 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/11 12:56:53 adam Exp $
 
-DISTNAME=	bitarray-2.9.2
+DISTNAME=	bitarray-2.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bitarray/}
@@ -12,8 +12,6 @@ LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 
