@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/06 11:50:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/11 13:45:18 adam Exp $
 
 DISTNAME=	jaraco_text-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -23,13 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 DEPENDS+=	${PYPKGPREFIX}-inflect-[0-9]*:../../lang/py-inflect
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
