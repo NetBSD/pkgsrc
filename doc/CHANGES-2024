@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6127 2024/10/11 22:44:44 bacon Exp $
+$NetBSD: CHANGES-2024,v 1.6128 2024/10/11 22:49:12 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9320,3 +9320,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated biology/samtools to 1.21 [bacon 2024-10-11]
 	Updated biology/bcftools to 1.21 [bacon 2024-10-11]
 	Added biology/bio-mocha version 1.20 [bacon 2024-10-11]
+	Added biology/bcf-score version 1.20 [bacon 2024-10-11]
