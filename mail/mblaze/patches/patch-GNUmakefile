@@ -1,0 +1,17 @@
+$NetBSD: patch-GNUmakefile,v 1.1 2024/10/11 06:37:20 nia Exp $
+
+Include necessary libraries for getaddrinfo on SunOS.
+
+--- GNUmakefile.orig	2024-10-11 06:35:31.706884126 +0000
++++ GNUmakefile
+@@ -15,6 +15,10 @@ ifeq ($(OS),Darwin)
+ LDLIBS=-liconv
+ endif
+ 
++ifeq ($(OS),SunOS)
++LDLIBS+=-lsocket -lnsl
++endif
++
+ DESTDIR=
+ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
