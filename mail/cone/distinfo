@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:53:56 nia Exp $
+$NetBSD: distinfo,v 1.15 2024/10/11 06:44:54 nia Exp $
 
 BLAKE2s (cone-0.90.tar.bz2) = e6229f93694dad9024f0ea621edfdb40a81e79be05ab5eeb8a35833fdad28e1e
 SHA512 (cone-0.90.tar.bz2) = 6446f868e07a54bda074e403ce48d590a55e97cf25b7e6172ba02df1242a232ade52840a837dd92e70253159cc637c17876876db01445c60374152262329ae27
@@ -6,7 +6,7 @@ Size (cone-0.90.tar.bz2) = 3906323 bytes
 SHA1 (patch-af) = f2018ee08526ee9e0c9c93e6ff5f83b948fd7067
 SHA1 (patch-cone_cursesmessage.C) = df0d016ffaf546614fb3292368cdcf4b1d895416
 SHA1 (patch-cone_myserverremoteconfig.C) = 7d5449288f4e94806181a5a4fb2bb547ab4174e1
-SHA1 (patch-curses-cursesscreen.C) = 5f825ff97aa7788ea89e1e2fb71d20d62d4281c5
+SHA1 (patch-curses-cursesscreen.C) = 70e49a1e13a854be327fc470186c7a15597b2a4c
 SHA1 (patch-curses_cursescontainer.C) = 3168e56fd5f26b59c22fa4823cd55ef98e8fd7c8
 SHA1 (patch-curses_cursescontainer.H) = 7a81ff321c72d002da8381412da474fbaecb07cb
 SHA1 (patch-libmail-maildir.C) = 724c16cb897667792cbfb769b7c7e81b803a1bd5
