@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6123 2024/10/11 13:49:10 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6124 2024/10/11 22:36:22 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9316,3 +9316,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-bitarray to 2.9.3 [adam 2024-10-11]
 	Updated textproc/py-jsonschema-specifications to 2024.10.1 [adam 2024-10-11]
 	Updated devel/py-debugpy to 1.8.7 [adam 2024-10-11]
+	Updated biology/htslib to 1.21 [bacon 2024-10-11]
