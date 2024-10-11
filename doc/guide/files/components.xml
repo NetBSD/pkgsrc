@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.64 2024/01/05 19:23:53 gdt Exp $ -->
+<!-- $NetBSD: components.xml,v 1.65 2024/10/11 19:46:56 jkoshy Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -602,7 +602,7 @@ FILES_SUBST+=  SOMEVAR="somevalue"
 	    <para>This file is displayed after installation of the package.
 	    While this was used often in the past, it has two
 	    problems: the display will be missed if many packages are
-	    intalled at once, and the person installing the package
+	    installed at once, and the person installing the package
 	    and the one using or configuring it may be different.  It
 	    should therefore be used only in exceptional circumstances
 	    where lasting negative consequences would result from
