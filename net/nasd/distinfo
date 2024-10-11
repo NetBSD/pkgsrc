@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:05 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/11 06:17:28 nia Exp $
 
 BLAKE2s (repackaged-nasd-1.3.tar.gz) = cd51e00b2d4bf37675d9669c59b24bad18f91d1e9dc15ad38c3581d17a2e0768
 SHA512 (repackaged-nasd-1.3.tar.gz) = fbb2d603524cb51e67773c64f00625bfde0d3fd6374e3fb1eeecfa82f55435d5a3d460539fb1020f881afe4232dbe31da5db17422cd78380974d8f9cee48d88c
@@ -48,6 +48,7 @@ SHA1 (patch-bp) = 07d965c0a5b52c3dad54b26ae79a15f8fd39c29c
 SHA1 (patch-bq) = aa8c03f2899feae06d6e7c79d10ceb7371029b28
 SHA1 (patch-br) = 6dd71a647bb99f2facd3ed139bc55dd23d22836e
 SHA1 (patch-bs) = 2244ca43d405cbbd2b2224260d4377b4c6c6a318
+SHA1 (patch-common_generic_nasd__generic__hostlocal.c) = 5d1a876116379b3cd5875779d7aab7210958e9a2
 SHA1 (patch-common_i386_Imakefile) = 71521f0a393e5f4efaae961f9b3d5dc790fa3b10
 SHA1 (patch-common_nasd__srpc__server.c) = df4c3e77e96fdd0027ac14f3f076ee38b1de3da1
 SHA1 (patch-include_nasd_nasd__timer_h) = 887156514a266e75b4bf871907cc6b66785c7aaf
