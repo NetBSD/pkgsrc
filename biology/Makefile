@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/10/11 22:45:05 bacon Exp $
+# $NetBSD: Makefile,v 1.103 2024/10/11 22:49:26 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -9,6 +9,7 @@ SUBDIR+=	arka
 SUBDIR+=	atac-seq
 SUBDIR+=	azara
 SUBDIR+=	balance-tui
+SUBDIR+=	bcf-score
 SUBDIR+=	bcftools
 SUBDIR+=	beagle
 SUBDIR+=	bedtools
