@@ -1,8 +1,8 @@
-$NetBSD: patch-README.md,v 1.1 2019/12/21 23:47:39 joerg Exp $
+$NetBSD: patch-README.md,v 1.2 2024/10/11 10:54:34 adam Exp $
 
-Drop non-ASCII input
+Drop non-ASCII characters.
 
---- README.md.orig	2019-12-21 21:31:20.863530649 +0000
+--- README.md.orig	2024-10-08 17:41:22.000000000 +0000
 +++ README.md
 @@ -86,7 +86,7 @@ True
  >>> xmltodict.parse(GzipFile('discogs_artists.xml.gz'),
@@ -13,8 +13,8 @@ Drop non-ASCII input
  King Crimson
  Chris Potter
  ...
-@@ -173,7 +173,7 @@ You just need to
- $ pip install xmltodict
+@@ -215,7 +215,7 @@ For installing `xmltodict` using Anacond
+ $ conda install -c conda-forge xmltodict
  ```
  
 -### RPM-based distro (Fedora, RHEL, …)
@@ -22,7 +22,7 @@ Drop non-ASCII input
  
  There is an [official Fedora package for xmltodict](https://apps.fedoraproject.org/packages/python-xmltodict).
  
-@@ -189,7 +189,7 @@ There is an [official Arch Linux package
+@@ -231,7 +231,7 @@ There is an [official Arch Linux package
  $ sudo pacman -S python-xmltodict
  ```
  
