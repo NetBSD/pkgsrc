@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/09/22 16:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/11 12:43:58 adam Exp $
 
-DISTNAME=	pypdf-5.0.0
+DISTNAME=	pypdf-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypdf/}
@@ -14,9 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.9:../../devel/py-flit_core
 # full
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
-# tests not included
-# https://github.com/py-pdf/pypdf/issues/2864
-#TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
+TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
 
