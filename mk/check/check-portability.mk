@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.21 2024/04/11 11:44:34 joerg Exp $
+# $NetBSD: check-portability.mk,v 1.22 2024/10/11 10:13:13 jperkin Exp $
 #
 # This file checks that the extracted shell programs don't contain
 # bashisms or other constructs that only work on some platforms.
@@ -42,6 +42,13 @@ CHECK_PORTABILITY_SKIP?=	${REPLACE_BASH}
 .if ${CHECK_PORTABILITY:tl} == yes && ${CHECK_PORTABILITY_SKIP} != "*"
 pre-configure-checks-hook: _check-portability
 .endif
+
+.if !empty(TOOLS_PLATFORM.mktool)
+CHECK_PORTABILITY_PROGRAM=	${TOOLS_PLATFORM.mktool} check-portability
+.else
+CHECK_PORTABILITY_PROGRAM=	${SH} ${PKGSRCDIR}/mk/check/check-portability.sh
+.endif
+
 .PHONY: _check-portability
 _check-portability:
 	${RUN}								\
@@ -53,5 +60,6 @@ _check-portability:
 		PREFIX=${PREFIX}					\
 		PATCHDIR=${PATCHDIR}					\
 		CHECK_PORTABILITY_EXPERIMENTAL=${CHECK_PORTABILITY_EXPERIMENTAL:Uno} \
+		CHECK_PORTABILITY_SKIP=${CHECK_PORTABILITY_SKIP:Q}	\
 		LC_ALL=C \
-		${SH} ${PKGSRCDIR}/mk/check/check-portability.sh
+		${CHECK_PORTABILITY_PROGRAM}
