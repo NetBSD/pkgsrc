@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/08/14 05:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/11 22:41:14 bacon Exp $
 
-DISTNAME=	bcftools-1.17
-PKGREVISION=	1
+DISTNAME=	bcftools-1.21
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -50,7 +49,8 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/vcfutils.pl \
 		${DESTDIR}${PREFIX}/bin/vcfutils
 
-.include "../../biology/htslib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../math/gsl/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../biology/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
