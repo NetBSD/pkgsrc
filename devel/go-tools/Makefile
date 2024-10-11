@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2024/09/06 18:48:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.98 2024/10/11 09:30:16 bsiegert Exp $
 
-DISTNAME=		tools-0.19.0
+DISTNAME=		tools-0.26.0
 PKGNAME=		go-${DISTNAME}
-PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		tools
@@ -58,10 +57,8 @@ CHECK_RELRO_SKIP+=	bin/godex
 CHECK_RELRO_SKIP+=	bin/godoc
 CHECK_RELRO_SKIP+=	bin/goimports
 CHECK_RELRO_SKIP+=	bin/gomvpkg
-CHECK_RELRO_SKIP+=	bin/gorename
 CHECK_RELRO_SKIP+=	bin/gotype
 CHECK_RELRO_SKIP+=	bin/goyacc
-CHECK_RELRO_SKIP+=	bin/guru
 CHECK_RELRO_SKIP+=	bin/html2article
 CHECK_RELRO_SKIP+=	bin/netrcauth
 CHECK_RELRO_SKIP+=	bin/present
@@ -74,9 +71,6 @@ CHECK_RELRO_SKIP+=	bin/stringer
 CHECK_RELRO_SKIP+=	bin/toolstash
 CHECK_RELRO_SKIP+=	bin/bisect
 CHECK_RELRO_SKIP+=	bin/gonew
-
-pre-patch:
-	${RM} -rf ${WRKSRC}/cmd/getgo/server
 
 .include "go-modules.mk"
 
