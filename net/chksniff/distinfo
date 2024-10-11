@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:05:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/10/11 06:58:02 nia Exp $
 
 BLAKE2s (chksniff-0.2.tar.gz) = f8f3b7becaf3fd74a27b10235d0c907589b96491be2bea427e3209fb8a1bbbaf
 SHA512 (chksniff-0.2.tar.gz) = 74f8974094c2077b1441d06d0f948974ee79f64127edf8670c02b32776e2f87dce6ca02746bd408b79ea8f518c3ce7d26c56c8ba260958052346641cdd90eec5
 Size (chksniff-0.2.tar.gz) = 28419 bytes
-SHA1 (patch-aa) = 00392a03d68fecea9a9eb4427a77b0093af70adc
+SHA1 (patch-aa) = 96bf20318c41e8b3d77302857d73742c58f2ef35
+SHA1 (patch-src_chksniff.c) = d4091af046503d077a8fa6cbb60ddc6aa782ad94
