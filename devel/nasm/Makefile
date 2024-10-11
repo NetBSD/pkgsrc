@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2023/02/01 12:40:16 adam Exp $
+# $NetBSD: Makefile,v 1.71 2024/07/30 07:19:00 tempcracks Exp $
 
-DISTNAME=	nasm-2.16.01
+DISTNAME=	nasm-2.16.03
 CATEGORIES=	devel lang
 MASTER_SITES=	http://www.nasm.us/pub/nasm/releasebuilds/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
