@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/02/25 13:56:33 bacon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/10/11 22:41:14 bacon Exp $
 bin/bcftools
 bin/color-chrs
 bin/gff2gff.py
@@ -30,7 +30,6 @@ libexec/bcftools/gvcfz.so
 libexec/bcftools/impute-info.so
 libexec/bcftools/indel-stats.so
 libexec/bcftools/isecGT.so
-libexec/bcftools/mendelian.so
 libexec/bcftools/mendelian2.so
 libexec/bcftools/missing2ref.so
 libexec/bcftools/parental-origin.so
