@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:05:30 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/10/11 07:02:12 nia Exp $
 
 BLAKE2s (dgd-1.2p4.tar.gz) = 34c027ef9828ec946adeb793963ca55d9cc9688c64eb6ffaaaca3fcd31dd2497
 SHA512 (dgd-1.2p4.tar.gz) = 1182eab4b9683a8b070f2a5c22b3bd30c82d4662a614f63d48d840794a0e68072f0446614e2023eaa106ab827c7ca7555f875f9cb9f1495246791fba1fe753fd
 Size (dgd-1.2p4.tar.gz) = 472205 bytes
 SHA1 (patch-aa) = 9253e211eb82fb06ea7771e2dbd37d9c53ea1435
 SHA1 (patch-src-ed-fileio.c) = 0da31dfd142e4ad98f942029e2f1b8c4ff95dd96
+SHA1 (patch-src_host_unix_connect.c) = 49987470f478416099bb3fcad4d5628d88221874
