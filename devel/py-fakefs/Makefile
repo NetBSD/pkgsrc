@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/07/23 05:29:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/11 12:55:10 adam Exp $
 
-DISTNAME=	pyfakefs-5.6.0
+DISTNAME=	pyfakefs-5.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfakefs/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
