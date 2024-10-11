@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/06 20:09:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/10/11 13:48:51 adam Exp $
 bin/debugpy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -168,6 +168,9 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_breakpoints.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils.pyo
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils_py311.py
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils_py311.pyc
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_bytecode_utils_py311.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_code_to_source.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_code_to_source.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_code_to_source.pyo
@@ -204,7 +207,7 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_custom_frames.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.c
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.pxd
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.pyx
-${PLIST.pydevd_cython}${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.so
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython.so
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython_wrapper.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython_wrapper.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_cython_wrapper.pyo
@@ -304,9 +307,6 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_thread_lifecycle.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.pyo
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_api.py
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_api.pyc
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_api.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_dispatch.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_dispatch.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_trace_dispatch.pyo
@@ -408,6 +408,16 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode/tests
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/pydevd_fix_code.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/pydevd_fix_code.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/pydevd_fix_code.pyo
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring.py
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring.pyc
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring.pyo
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.c
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.pxd
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.pyx
+${PLIST.pydevd_cython}${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/_pydevd_sys_monitoring_cython.so
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.py
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.pyc
+${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_sys_monitoring/pydevd_sys_monitoring.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_app_engine_debug_startup.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_app_engine_debug_startup.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/pydev_app_engine_debug_startup.pyo
