@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2024/04/11 18:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2024/10/11 22:45:05 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -12,6 +12,7 @@ SUBDIR+=	balance-tui
 SUBDIR+=	bcftools
 SUBDIR+=	beagle
 SUBDIR+=	bedtools
+SUBDIR+=	bio-mocha
 SUBDIR+=	biolibc
 SUBDIR+=	biolibc-tools
 SUBDIR+=	bioperl
