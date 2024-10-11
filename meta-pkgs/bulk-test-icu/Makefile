@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/16 10:27:57 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/11 08:14:26 jperkin Exp $
 
 DISTNAME=	bulk-test-icu-20240815
 CATEGORIES=	meta-pkgs
@@ -104,7 +104,6 @@ DEPENDS+=	libical-[0-9]*:../../time/libical
 DEPENDS+=	arcticfox-[0-9]*:../../www/arcticfox
 DEPENDS+=	cppcms-[0-9]*:../../www/cppcms
 DEPENDS+=	firefox-[0-9]*:../../www/firefox
-DEPENDS+=	firefox102-[0-9]*:../../www/firefox102
 DEPENDS+=	firefox115-[0-9]*:../../www/firefox115
 # Not built for recent environments
 #DEPENDS+=	firefox52-[0-9]*:../../www/firefox52
