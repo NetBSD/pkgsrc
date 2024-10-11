@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.35 2022/11/23 11:55:43 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.36 2024/10/11 10:22:01 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -57,13 +57,17 @@ _CHECK_SHLIBS_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
     !empty(CHECK_SHLIBS_SUPPORTED:M[Yy][Ee][Ss]) && \
     ${_USE_CHECK_SHLIBS_NATIVE} == "yes"
 CHECK_SHLIBS_NATIVE_ENV=
+.if !empty(TOOLS_PLATFORM.mktool)
+CHECK_SHLIBS_NATIVE?=		${TOOLS_PLATFORM.mktool} check-shlibs
+CHECK_SHLIBS_NATIVE_ENV+=	PKG_ADMIN_CMD=${PKG_ADMIN:Q}
+.endif
 .  if ${OBJECT_FMT} == "ELF"
 USE_TOOLS+=			readelf
-CHECK_SHLIBS_NATIVE=		${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
+CHECK_SHLIBS_NATIVE?=		${AWK} -f ${PKGSRCDIR}/mk/check/check-shlibs-elf.awk
 CHECK_SHLIBS_NATIVE_ENV+=	PLATFORM_RPATH=${_OPSYS_SYSTEM_RPATH:Q}
 CHECK_SHLIBS_NATIVE_ENV+=	READELF=${TOOLS_PATH.readelf:Q}
 .  elif ${OBJECT_FMT} == "Mach-O"
-CHECK_SHLIBS_NATIVE=		${PKGSRCDIR}/mk/check/check-shlibs-macho.awk
+CHECK_SHLIBS_NATIVE?=		${AWK} -f ${PKGSRCDIR}/mk/check/check-shlibs-macho.awk
 .    if defined(DARWIN_NO_SYSTEM_LIBS)
 CHECK_SHLIBS_NATIVE_ENV+=	SKIP_SYSTEM_LIBS=1
 .    endif
@@ -97,5 +101,5 @@ _check-shlibs: error-check .PHONY
 		esac;							\
 		${ECHO} $$file;						\
 	done |								\
-	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${AWK} -f ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
+	${PKGSRC_SETENV} ${CHECK_SHLIBS_NATIVE_ENV} ${CHECK_SHLIBS_NATIVE} > ${ERROR_DIR}/${.TARGET}
 .endif
