@@ -1,4 +1,4 @@
-$NetBSD: patch-curses-cursesscreen.C,v 1.2 2020/03/22 21:24:56 joerg Exp $
+$NetBSD: patch-curses-cursesscreen.C,v 1.3 2024/10/11 06:44:54 nia Exp $
 
 Fix C++ type error.
 
@@ -20,7 +20,7 @@ Fix C++ type error.
  	{
  
 -		char *inbuf=&input_buf[0], *outbuf=&winput_buf[winput_cnt];
-+#if defined(__NetBSD__) && (__NetBSD_Version__-0 < 999001700)
++#if (defined(__NetBSD__) && (__NetBSD_Version__-0 < 999001700)) || defined(__sun)
 +		const char *inbuf=&input_buf[0];
 +#else
 +		char *inbuf=&input_buf[0];
