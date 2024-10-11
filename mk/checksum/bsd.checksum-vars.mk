@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum-vars.mk,v 1.3 2018/01/07 11:23:37 rillig Exp $
+# $NetBSD: bsd.checksum-vars.mk,v 1.4 2024/10/11 12:53:13 jperkin Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -12,6 +12,6 @@
 
 DISTINFO_FILE?=		${PKGDIR}/distinfo
 
-.if !empty(_CKSUMFILES)
+.if !empty(_CKSUMFILES) && empty(TOOLS_PLATFORM.mktool)
 USE_TOOLS+=	digest:bootstrap
 .endif

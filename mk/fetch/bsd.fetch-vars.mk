@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.27 2024/05/13 08:09:30 wiz Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.28 2024/10/11 12:53:13 jperkin Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -106,7 +106,8 @@ NO_SKIP=		# defined
 _BOOTSTRAP_VERBOSE=	# defined
 .endif
 
-.if !empty(_CKSUMFILES) && defined(FAILOVER_FETCH)
+.if !empty(_CKSUMFILES) && defined(FAILOVER_FETCH) \
+  && empty(TOOLS_PLATFORM.mktool)
 USE_TOOLS+=	digest:bootstrap
 .endif
 
