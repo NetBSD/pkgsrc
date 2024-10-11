@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.28 2021/10/26 10:53:55 nia Exp $
+$NetBSD: distinfo,v 1.29 2024/10/11 06:25:22 nia Exp $
 
 BLAKE2s (balsa-2.6.3.tar.xz) = 8057c96ddac839f7657d5e2ec2a982c1663b8b56025eae2b61ed01ca5ad1664f
 SHA512 (balsa-2.6.3.tar.xz) = 7e64f75423dd37536812854e56db1af97c00bc35f640d82c22d86e5212c766926430f1c99423f1a972daf6f20d084d4cf16d89e13deb2f1ce550c016cd132f8d
 Size (balsa-2.6.3.tar.xz) = 3761940 bytes
+SHA1 (patch-libbalsa_misc.c) = f19925b1651271297a75c500df275ac6dc362f74
 SHA1 (patch-sounds_Makefile.in) = 5f0f7daecc5f22dc8733305a547760a73466b37c
