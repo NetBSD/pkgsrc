@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.14 2022/04/13 22:02:36 rillig Exp $
+# $NetBSD: bsd.utils.mk,v 1.15 2024/10/11 08:24:48 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -16,6 +16,7 @@
 #		build		= BOOTSTRAP_DEPENDS
 #				+ TOOL_DEPENDS
 #				+ BUILD_DEPENDS
+#				+ INDIRECT_BUILD_DEPENDS
 #		install		= DEPENDS
 #		package		XXX: same as install?
 #
@@ -25,7 +26,8 @@
 # Keywords: depends dependencies
 DEPENDS_TYPE?=  all
 .if !empty(DEPENDS_TYPE:Mbuild) || !empty(DEPENDS_TYPE:Mall)
-_ALL_DEPENDS+=	${BOOTSTRAP_DEPENDS} ${BUILD_DEPENDS} ${TOOL_DEPENDS}
+_ALL_DEPENDS+=	${BOOTSTRAP_DEPENDS} ${TOOL_DEPENDS}
+_ALL_DEPENDS+=	${BUILD_DEPENDS} ${INDIRECT_BUILD_DEPENDS}
 .  if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
 _ALL_DEPENDS+=	${TEST_DEPENDS}
 .  endif

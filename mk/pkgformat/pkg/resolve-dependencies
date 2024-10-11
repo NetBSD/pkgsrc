@@ -29,7 +29,7 @@ find_best() {
 	case $1 in
 	bootstrap|tool)
 		${HOST_PKG_INFO} -E "$2" || ${TRUE};;
-	build|full)
+	build|full|indirect-build|indirect-full)
 		${PKG_INFO} -E "$2" || ${TRUE};;
 	esac
 }
