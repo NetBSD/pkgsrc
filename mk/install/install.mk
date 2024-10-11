@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.85 2023/10/04 11:39:59 jperkin Exp $
+# $NetBSD: install.mk,v 1.86 2024/10/11 12:39:30 jperkin Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -361,6 +361,26 @@ _DEBUG_SKIP_PATTERNS+=	*.dyn_hi *.hi *.p_hi
 ###
 .PHONY: install-ctf
 install-ctf: plist
+.if !empty(TOOLS_PLATFORM.mktool)
+	${RUN}								\
+	${STEP_MSG} "Generating CTF data";				\
+	${RM} -f ${WRKDIR}/.ctfdata ${WRKDIR}/.ctferr;			\
+	cd ${DESTDIR:Q}${PREFIX:Q};					\
+	while read f; do						\
+		case "$${f}" in						\
+		${_DEBUG_SKIP_PATTERNS:@p@${p}) continue ;;@}		\
+		${CTF_FILES_SKIP:@p@${p}) continue ;;@}			\
+		*) ;;							\
+		esac;							\
+		[ ! -h "$${f}" ] || continue;				\
+		${ECHO} "$${f}";					\
+	done < ${_PLIST_NOKEYWORDS}					\
+	    | ${TOOLS_PLATFORM.mktool} ctfconvert -I -			\
+		-c ${TOOLS_PLATFORM.ctfconvert} -s ${DESTDIR}${PREFIX}	\
+		>${WRKDIR}/.ctfdata 2>${WRKDIR}/.ctferr;		\
+	[ -s ${WRKDIR}/.ctfdata ] || ${RM} -f ${WRKDIR}/.ctfdata;	\
+	[ -s ${WRKDIR}/.ctferr ] || ${RM} -f ${WRKDIR}/.ctferr
+.else
 	${RUN}								\
 	${STEP_MSG} "Generating CTF data";				\
 	cd ${DESTDIR:Q}${PREFIX:Q};					\
@@ -381,6 +401,7 @@ install-ctf: plist
 			${RM} -f "$${tmp_f}";				\
 		fi;							\
 	done < ${_PLIST_NOKEYWORDS}
+.endif
 
 ######################################################################
 ### install-strip-debug (PRIVATE)
