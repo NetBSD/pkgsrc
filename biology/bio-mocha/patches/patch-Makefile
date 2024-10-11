@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2024/10/11 22:44:39 bacon Exp $
+
+# Respect pkgsrc env
+
+--- Makefile.orig	2021-03-19 17:42:33.842623449 +0000
++++ Makefile
+@@ -60,11 +60,11 @@ misc_bindir = $(bindir)
+ 
+ MKDIR_P = mkdir -p
+ INSTALL = install -p
+-INSTALL_DATA    = $(INSTALL) -m 644
+-INSTALL_DIR     = $(MKDIR_P) -m 755
+-INSTALL_MAN     = $(INSTALL_DATA)
+-INSTALL_PROGRAM = $(INSTALL)
+-INSTALL_SCRIPT  = $(INSTALL_PROGRAM)
++INSTALL_DATA    = ${BSD_INSTALL_DATA}
++INSTALL_DIR     = $(MKDIR_P)
++INSTALL_MAN     = ${BSD_INSTALL_MAN}
++INSTALL_PROGRAM = ${BSD_INSTALL_PROGRAM}
++INSTALL_SCRIPT  = ${BSD_INSTALL_SCRIPT}
+ 
+ PROGRAMS = bcftools
+ MISC_SCRIPTS = \
