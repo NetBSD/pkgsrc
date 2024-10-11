@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-resolved-depends.awk,v 1.2 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: reduce-resolved-depends.awk,v 1.3 2024/10/11 08:24:48 jperkin Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,6 +65,8 @@ BEGIN {
 		}
 		if ($1 != "full" &&
 		    $1 != "build" &&
+		    $1 != "indirect-full" &&
+		    $1 != "indirect-build" &&
 		    $1 != "tool" &&
 		    $1 != "bootstrap") {
 			print "ERROR: [" PROGNAME "] invalid dependency line " $0 | ERRCAT
@@ -82,6 +84,8 @@ BEGIN {
 		if (type[i] == "full" && checked_full[pkg[i]] != 1) {
 			checked_full[pkg[i]] = 1
 			checked_build[pkg[i]] = 1
+			checked_indirect_full[pkg[i]] = 1
+			checked_indirect_build[pkg[i]] = 1
 			checked_tool[pkg[i]] = 1
 			checked_bootstrap[pkg[i]] = 1
 			print_line[i] = 1
@@ -139,6 +143,18 @@ BEGIN {
 			close(cmd)
 			if (found == 0)
 				print_line[i] = 1
+		}
+	}
+
+	# Just pass through indirect-* for now.
+	for (i = 0; i < lines; ++i) {
+		if (type[i] == "indirect-build" && checked_indirect_build[pkg[i]] != 1) {
+			checked_indirect_build[pkg[i]] = 1
+			print_line[i] = 1
+		}
+		if (type[i] == "indirect-full" && checked_indirect_full[pkg[i]] != 1) {
+			checked_indirect_full[pkg[i]] = 1
+			print_line[i] = 1
 		}
 	}
 

@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-macho.awk,v 1.12 2024/10/02 10:49:01 jperkin Exp $
+# $NetBSD: check-shlibs-macho.awk,v 1.13 2024/10/11 08:24:48 jperkin Exp $
 
 #
 # Read a list of potential Mach-O binaries from stdin.
@@ -53,16 +53,21 @@ function check_pkg(DSO, lib,	pkg, found) {
 	}
 	if (pkg == "")
 		return 0
-	found=0
+	found = 0
 	while ((getline < depends_file) > 0) {
 		if ($3 == pkg) {
-			found=1
-			if ($1 != "full")
-				continue
-			close(depends_file)
-			return 0
+			found = 1
+			if ($1 == "full" || $1 == "indirect-full") {
+				close(depends_file)
+				return 0
+			}
 		}
 	}
+	# Ideally we would error here if we found a dependency on any pkgsrc
+	# library that isn't listed in the depends file.  However this doesn't
+	# work for a variety of reasons, not least if the package itself is
+	# already installed and its pkgsrc libraries are found before the ones
+	# in DESTDIR.  A package obviously can't depend on itself...
 	if (found)
 		print DSO ": " lib ": " pkg " is not a runtime dependency"
 	close(depends_file)

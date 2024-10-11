@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.23 2024/10/04 07:45:59 jperkin Exp $
+# $NetBSD: depends.mk,v 1.24 2024/10/11 08:24:48 jperkin Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -11,7 +11,8 @@
 #
 #	<depends_type>	<pattern>	<directory>
 #
-# Valid dependency types are "bootstrap", "tool", "build", "test" and "full".
+# Valid dependency types are "bootstrap", "tool", "build", "full",
+# "indirect-build", "indirect-full", and "test".
 #
 # ${_RDEPENDS_FILE} contains the resolved dependency information
 # for the package.  For each line in ${_DEPENDS_FILE}
@@ -65,19 +66,21 @@ _LIST_DEPENDS_CMD=	\
 			" " \
 			" "${TOOL_DEPENDS:Q} \
 			" "${BUILD_DEPENDS:Q} \
-			" "${DEPENDS:Q}
+			" "${DEPENDS:Q} \
+			" "${INDIRECT_BUILD_DEPENDS:Q} \
+			" "${INDIRECT_DEPENDS:Q}
 
 _LIST_DEPENDS_CMD.bootstrap=	\
 	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
-			" "${BOOTSTRAP_DEPENDS:Q} " " " " " " " "
+			" "${BOOTSTRAP_DEPENDS:Q} " " " " " " " " " " " "
 
 _LIST_DEPENDS_CMD.test=	\
 	${PKGSRC_SETENV} AWK=${AWK:Q} PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKGSRCDIR=${PKGSRCDIR:Q} PWD_CMD=${PWD_CMD:Q} SED=${SED:Q} \
 		${SH} ${PKGSRCDIR}/mk/pkgformat/pkg/list-dependencies \
-			" " " "${TEST_DEPENDS:Q} " " " " " "
+			" " " "${TEST_DEPENDS:Q} " " " " " " " " " "
 
 _RESOLVE_DEPENDS_CMD=	\
 	${PKGSRC_SETENV} _PKG_DBDIR=${_PKG_DBDIR:Q} PKG_INFO=${PKG_INFO:Q} \
@@ -94,15 +97,15 @@ CROSSTARGETSETTINGS=	${CROSSVARS:@_v_@TARGET_${_v_}=${${_v_}}@}
 #	@param $dir The pkgsrc directory from which the package can be
 #		built.
 #	@param $type The dependency type. Can be one of bootstrap, tool,
-#		build, test, full.
+#		build, full, indirect-build, indirect-full, and test.
 #
 _DEPENDS_INSTALL_CMD=							\
 	case $$type in							\
-	bootstrap)	Type=Bootstrap;;				\
-	tool)		Type=Tool;;					\
-	build)		Type=Build;;					\
-	test)		Type=Test;;					\
-	full)		Type=Full;;					\
+	bootstrap)		Type=Bootstrap;;			\
+	tool)			Type=Tool;;				\
+	build|indirect-build)	Type=Build;;				\
+	test)			Type=Test;;				\
+	full|indirect-full)	Type=Full;;				\
 	esac;								\
 	case $$type in							\
 	bootstrap|tool)							\
@@ -117,7 +120,7 @@ _DEPENDS_INSTALL_CMD=							\
 		cross=no;						\
 		pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		;;							\
-	build|test|full)						\
+	build|full|indirect-build|indirect-full|test)			\
 		extradep=" ${PKGNAME}";					\
 		crosstargetsettings=;					\
 		cross=${USE_CROSS_COMPILE:Uno};				\
@@ -143,7 +146,7 @@ _DEPENDS_INSTALL_CMD=							\
 		case $$type in						\
 		bootstrap|tool)						\
 			pkg=`${_HOST_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
-		build|test|full)					\
+		build|full|indirect-build|indirect-full|test)		\
 			pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;; \
 		esac;							\
 		case "$$pkg" in						\
@@ -159,7 +162,7 @@ _DEPENDS_INSTALL_CMD=							\
 		bootstrap|tool)						\
 			objfmt=`${HOST_PKG_INFO} -Q OBJECT_FMT "$$pkg"`; \
 			needobjfmt=${NATIVE_OBJECT_FMT:Q};;		\
-		build|test|full)					\
+		build|full|indirect-build|indirect-full|test)		\
 			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;	\
 			needobjfmt=${OBJECT_FMT:Q};;			\
 		esac;							\
