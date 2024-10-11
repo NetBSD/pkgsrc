@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/05/06 08:40:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.81 2024/10/11 14:01:48 wiz Exp $
 
 DISTNAME=	gpsd-3.25
 PKGREVISION=	8
@@ -20,7 +20,6 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c99 c++
 
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # Note that gpsd is documented to use ncurses, not curses.
 FAKE_NCURSES=	yes
