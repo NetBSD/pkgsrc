@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.30 2024/05/15 08:31:35 wiz Exp $
+# $NetBSD: checksum.mk,v 1.31 2024/10/11 11:20:23 jperkin Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -25,11 +25,14 @@ _PATCH_DIGEST_ALGORITHMS?=	SHA1
 #
 _COOKIE.checksum=	${_COOKIE.extract}
 
+.if !empty(TOOLS_PLATFORM.mktool)
+_CHECKSUM_CMD=	${TOOLS_PLATFORM.mktool} checksum
+.else
 _CHECKSUM_CMD=								\
 	${PKGSRC_SETENV}						\
 	    DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_CMDLINE_SED:Q}		\
 	    ${AWK} -f ${PKGSRCDIR}/mk/checksum/checksum.awk --
-
+.endif
 
 .if defined(NO_CHECKSUM) || empty(_CKSUMFILES)
 checksum checksum-phase:
