@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.41 2023/04/22 13:09:28 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.42 2024/10/11 20:21:27 jkoshy Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -92,7 +92,7 @@
 <sect1 id="commit-messages">
   <title>Commit Messages</title>
   <para>For several years, there have been mirrors of pkgsrc in
-  fossil, git, and hg. Standard practise when using these tools is to
+  fossil, git, and hg. Standard practice when using these tools is to
   make the first line of a commit message function as a summary that
   can be read without the rest, such as is commonly done with "git log
   --oneline". For this reason, we have the following guidelines for
