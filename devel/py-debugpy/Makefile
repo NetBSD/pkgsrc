@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/06 20:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/11 13:48:51 adam Exp $
 
-DISTNAME=	debugpy-1.8.5
+DISTNAME=	debugpy-1.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
@@ -14,8 +14,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 PLIST_VARS+=	frame_eval pydevd_cython
 .include "../../lang/python/pyversion.mk"
 
@@ -24,7 +22,7 @@ PLIST_VARS+=	frame_eval pydevd_cython
 .if ${PYTHON_VERSION} < 311
 PLIST.frame_eval=	yes
 .endif
-.if ${PYTHON_VERSION} < 312
+.if ${PYTHON_VERSION} >= 312
 PLIST.pydevd_cython=	yes
 .endif
 
