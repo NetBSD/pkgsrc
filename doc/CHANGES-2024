@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6151 2024/10/12 22:59:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6152 2024/10/12 23:00:55 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9344,3 +9344,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/garden to 1.9.0 [pin 2024-10-12]
 	Updated misc/tailspin to 4.0.0 [pin 2024-10-12]
 	Updated devel/tokei to 13.0.0.alpha6 [pin 2024-10-12]
+	Updated www/xh to 0.23.0 [pin 2024-10-12]
