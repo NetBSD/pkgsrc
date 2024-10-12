@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/09/13 08:28:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/12 09:36:09 wiz Exp $
 
-DISTNAME=	glad2-2.0.7
+DISTNAME=	glad2-2.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glad2/}
