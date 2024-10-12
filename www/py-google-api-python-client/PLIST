@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/08/25 10:14:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2024/10/12 10:42:38 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -276,6 +276,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappcheck.v1beta.j
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebaseappdistribution.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedatabase.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedataconnect.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasedynamiclinks.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/firebasehosting.v1beta1.json
@@ -395,6 +396,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/notebooks.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oauth2.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ondemandscanning.v1beta1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/oracledatabase.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/orgpolicy.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1alpha.json
