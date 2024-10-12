@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/20 10:10:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/12 08:41:09 wiz Exp $
 bin/fxa-client
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/fxa/__init__.py
 ${PYSITELIB}/fxa/__init__.pyc
 ${PYSITELIB}/fxa/__init__.pyo
@@ -45,9 +39,12 @@ ${PYSITELIB}/fxa/profile.pyo
 ${PYSITELIB}/fxa/tests/__init__.py
 ${PYSITELIB}/fxa/tests/__init__.pyc
 ${PYSITELIB}/fxa/tests/__init__.pyo
+${PYSITELIB}/fxa/tests/bad-key.json
+${PYSITELIB}/fxa/tests/jwks.json
 ${PYSITELIB}/fxa/tests/mock_utilities.py
 ${PYSITELIB}/fxa/tests/mock_utilities.pyc
 ${PYSITELIB}/fxa/tests/mock_utilities.pyo
+${PYSITELIB}/fxa/tests/private-key.json
 ${PYSITELIB}/fxa/tests/test_cache.py
 ${PYSITELIB}/fxa/tests/test_cache.pyc
 ${PYSITELIB}/fxa/tests/test_cache.pyo
@@ -87,3 +84,8 @@ ${PYSITELIB}/fxa/tools/create_user.pyo
 ${PYSITELIB}/fxa/tools/unblock.py
 ${PYSITELIB}/fxa/tools/unblock.pyc
 ${PYSITELIB}/fxa/tools/unblock.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
