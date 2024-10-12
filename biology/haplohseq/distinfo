@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/12 12:19:51 bacon Exp $
+
+BLAKE2s (haplohseq-0.1.2.2-e4892945eced075a5bb98f208786cdf85eb3d82a.tar.gz) = dbd48a3854197dbf71189a56bdd0075ce8e6a78bca92b58673ae2770eae3daa6
+SHA512 (haplohseq-0.1.2.2-e4892945eced075a5bb98f208786cdf85eb3d82a.tar.gz) = 8de2c75d4e443eab79f520d43bd2e0c238dca798bf53cc7821d6fe8bdf94f3d3ae3b9319b9b21aae10dab6b52e5c1e81380380c456a240bfcfa8863b83c5feff
+Size (haplohseq-0.1.2.2-e4892945eced075a5bb98f208786cdf85eb3d82a.tar.gz) = 12085199 bytes
