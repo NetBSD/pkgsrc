@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/02/19 06:02:37 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/10/12 09:35:07 wiz Exp $
 
-DISTNAME=	dnspython-2.6.1
+DISTNAME=	dnspython-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnspython/}
@@ -16,7 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 2.7.0
+# 15 failed, 1194 passed, 117 skipped
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
