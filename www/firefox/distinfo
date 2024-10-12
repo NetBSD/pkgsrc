@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.542 2024/10/11 13:55:47 wiz Exp $
+$NetBSD: distinfo,v 1.543 2024/10/12 07:49:07 ryoon Exp $
 
-BLAKE2s (firefox-130.0.1.source.tar.xz) = 2aee241b1375f2132fc79c2162d1f29134ff30c24ed23f544b46e2cac30b1ffa
-SHA512 (firefox-130.0.1.source.tar.xz) = 163d1ce9f671a4716686955c43ff23d9f200f6c52dfdabcbb93af6a326c24aa5096404f42447b02b5a3ad02e2f60d17271783638fe027d24865aebb3e70e97fe
-Size (firefox-130.0.1.source.tar.xz) = 566583020 bytes
-BLAKE2s (nodejs-output-130.0.tgz) = 26b8c396956a9616e6fbca147dce077a46f9234e2d5aa28705dab6522ce0efee
-SHA512 (nodejs-output-130.0.tgz) = c084f97e9d0bc33b6ac85957072723833494adeb367ef09c4c9c1ad851b6fdff322dd633308ff5861ee805d52d1b622b4b35d4d659ee931d58bb573d7c3819aa
-Size (nodejs-output-130.0.tgz) = 236896 bytes
+BLAKE2s (firefox-131.0.2.source.tar.xz) = b84c8196f808f62ac163fc038a5b114c34e24961a3c2ae99367aa00dbeed7e5e
+SHA512 (firefox-131.0.2.source.tar.xz) = fb1a1179a8c62de975c93e1ac6f058cb5492e955bbb7ac2d4b83cdd14ba17bdb2450078bd6f626124b14542f3fda9514bea476aaa34ff4f5a2bee6b1625ec963
+Size (firefox-131.0.2.source.tar.xz) = 567226924 bytes
+BLAKE2s (nodejs-output-131.0.tgz) = 95acb262e5fa4a5a6fa9a228c4ef4d56a61fcb053640fb33167beaddf2025337
+SHA512 (nodejs-output-131.0.tgz) = edeeb8e8ec6579ccc2fbf0010a96e16b99910cf76c341dfa261325b02e4b6a31f0ab0cc45c52b83cba524f4510de4d03d42494f4f5dc6ff8f200ff284f102606
+Size (nodejs-output-131.0.tgz) = 236943 bytes
 SHA1 (patch-browser_app_profile_firefox.js) = bc719edef37d18655ba79b030270438ee166fdaf
 SHA1 (patch-build_moz.configure_init.configure) = 65deb3c233df0aab81eb1fca05d708e5a4ed169a
 SHA1 (patch-build_moz.configure_rust.configure) = 25ddfacd29cebbc6db005dbe61a2a7446d480678
@@ -23,7 +23,6 @@ SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 63fbee04321f7ade20db4ccc1a1218
 SHA1 (patch-js-src-jit-arm64-vixl-MozCpu-vixl.cpp) = d90fca47d79551fd74214d47f8184670b901b792
 SHA1 (patch-js_public_Utility.h) = bb5464a0398b91693ab362e6b9b06d48429b9e7d
 SHA1 (patch-js_src_jit_FlushICache.cpp) = d1e611eaf7d7be22abfac6b39fbcd99df3570e47
-SHA1 (patch-js_src_old-configure.in) = 589e24765615ede2c3c6abfe0b3529c5645193ed
 SHA1 (patch-js_src_tests_lib_results.py) = 5634207e249cab7270b47f4515657740e803d616
 SHA1 (patch-js_src_util_NativeStack.cpp) = a0a16d8d8d78d3cc3f4d2a508586f1a7821f7dba
 SHA1 (patch-js_src_vm_TypedArrayObject-inl.h) = e7913c8d4b2b05b67040baa64dae62d6ba40390e
