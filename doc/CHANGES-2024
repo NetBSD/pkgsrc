@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6146 2024/10/12 11:04:16 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6147 2024/10/12 12:19:58 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9339,3 +9339,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-numpy to 2.1.2 [wiz 2024-10-12]
 	Updated sysutils/py-puremagic to 1.28 [wiz 2024-10-12]
 	Updated devel/py-pyproject_hooks to 1.2.0 [wiz 2024-10-12]
+	Added biology/haplohseq version 0.1.2.2 [bacon 2024-10-12]
