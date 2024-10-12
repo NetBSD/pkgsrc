@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.126 2024/09/10 11:43:06 adam Exp $
+# $NetBSD: Makefile,v 1.127 2024/10/12 10:56:32 wiz Exp $
 
-DISTNAME=	numpy-2.1.1
+DISTNAME=	numpy-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpy/}
@@ -28,8 +28,6 @@ GCC_REQD+=		8
 .include "../../math/py-numpy/make_env.mk"
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 PLIST_VARS+=		distutils
@@ -99,6 +97,8 @@ SUBST_MESSAGE.paths=	Fixing path to numpy-configure (for tests).
 SUBST_FILES.paths=	numpy/tests/test_configtool.py
 SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
 
+# as of 2.1.2
+# 35 failed, 46413 passed, 1713 skipped, 2799 deselected, 34 xfailed, 5 xpassed, 1 warning
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
