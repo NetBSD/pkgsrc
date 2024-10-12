@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/08/19 21:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/12 08:13:13 wiz Exp $
 
 DISTNAME=	webob-1.8.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
@@ -19,6 +19,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+# doesn't really support Python 3.13
+# https://github.com/Pylons/webob/issues/437
 
 WHEEL_NAME=	${DISTNAME:S/webob/WebOb/}
 
