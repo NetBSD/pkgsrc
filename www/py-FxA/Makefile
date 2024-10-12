@@ -1,44 +1,32 @@
-# $NetBSD: Makefile,v 1.3 2024/08/10 09:18:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/12 08:41:09 wiz Exp $
 
-DISTNAME=	PyFxA-0.7.8
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
+DISTNAME=	pyfxa-0.7.9
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyfxa/PyFxa/}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyFxA/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfxa/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla/PyFxA
 COMMENT=	Firefox Accounts client library for Python
 LICENSE=	mpl-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.4.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-BrowserID>=0:../../www/py-BrowserID
 DEPENDS+=	${PYPKGPREFIX}-JWT>=0:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-hawkauthlib>=0:../../security/py-hawkauthlib
-DEPENDS+=	${PYPKGPREFIX}-six>=1.14:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-grequests>=0:../../net/py-grequests
+TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized>=0:../../devel/py-parameterized
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0:../../net/py-responses
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=4.6.4:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8>=0:../../devel/py-test-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-otp>=0:../../security/py-otp
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	ftp:test
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# test status as of 0.7.8
-# 18 failed, 97 passed, 1 skipped, 4 warnings
-# https://github.com/mozilla/PyFxA/issues/95
-
-# missing files in distfile
-pre-test:
-	cd ${WRKSRC}/fxa/tests && ftp https://raw.githubusercontent.com/mozilla/PyFxA/main/fxa/tests/bad-key.json
-	cd ${WRKSRC}/fxa/tests && ftp https://raw.githubusercontent.com/mozilla/PyFxA/main/fxa/tests/jwks.json
-	cd ${WRKSRC}/fxa/tests && ftp https://raw.githubusercontent.com/mozilla/PyFxA/main/fxa/tests/private-key.json
+# test status as of 0.7.9
+# 126 passed, 14 skipped, 2 warnings
+ALLOW_NETWORK_ACCESS=	yes
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
