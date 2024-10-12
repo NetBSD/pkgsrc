@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/12 12:19:51 bacon Exp $
+bin/haplohseq
+bin/haplohseq-example
+share/examples/haplohseq/example/example_input/tumor_exome.vcf
+share/examples/haplohseq/example/example_run.sh
+share/examples/haplohseq/ldmap/hg19.exome.ldmap
+share/examples/haplohseq/scripts/haplohseq_plot.R
+share/examples/haplohseq/scripts/ldmap.py
+share/examples/haplohseq/scripts/simple_phaser.py
