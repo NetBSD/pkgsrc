@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/02/17 10:20:45 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+@comment $NetBSD: PLIST,v 1.21 2024/10/12 09:35:07 wiz Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -244,6 +240,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/OPT.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.py
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/PTR.pyo
+${PYSITELIB}/dns/rdtypes/ANY/RESINFO.py
+${PYSITELIB}/dns/rdtypes/ANY/RESINFO.pyc
+${PYSITELIB}/dns/rdtypes/ANY/RESINFO.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/RP.py
 ${PYSITELIB}/dns/rdtypes/ANY/RP.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/RP.pyo
@@ -280,6 +279,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/TXT.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/URI.py
 ${PYSITELIB}/dns/rdtypes/ANY/URI.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/URI.pyo
+${PYSITELIB}/dns/rdtypes/ANY/WALLET.py
+${PYSITELIB}/dns/rdtypes/ANY/WALLET.pyc
+${PYSITELIB}/dns/rdtypes/ANY/WALLET.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/X25.py
 ${PYSITELIB}/dns/rdtypes/ANY/X25.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/X25.pyo
@@ -430,3 +432,7 @@ ${PYSITELIB}/dns/zonefile.pyo
 ${PYSITELIB}/dns/zonetypes.py
 ${PYSITELIB}/dns/zonetypes.pyc
 ${PYSITELIB}/dns/zonetypes.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
