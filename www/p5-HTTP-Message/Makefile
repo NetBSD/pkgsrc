@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/06/06 07:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/10/13 08:52:39 wiz Exp $
 
-DISTNAME=	HTTP-Message-6.46
+DISTNAME=	HTTP-Message-7.00
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
