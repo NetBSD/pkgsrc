@@ -1,11 +1,9 @@
-$NetBSD: patch-src_unix_core.c,v 1.2 2024/09/30 17:05:46 adam Exp $
+$NetBSD: patch-src_unix_core.c,v 1.3 2024/10/13 07:48:02 wiz Exp $
 
 Apply MacPorts patch-libuv-unix-core-close-nocancel.diff for
 - older gcc versions to not error on pragmas
 - 32bit code to link correctly
 - Tiger to work around not having a non-cancellable close function
-
-Fix build on NetBSD: https://github.com/libuv/libuv/issues/4552
 
 --- src/unix/core.c.orig	2024-09-25 08:17:20.000000000 +0000
 +++ src/unix/core.c
@@ -48,19 +46,3 @@ Fix build on NetBSD: https://github.com/libuv/libuv/issues/4552
  #elif defined(__linux__) && defined(__SANITIZE_THREAD__) && defined(__clang__)
    long rc;
    __sanitizer_syscall_pre_close(fd);
-@@ -1882,13 +1895,13 @@ int uv__search_path(const char* prog, ch
- #if defined(__linux__) || defined (__FreeBSD__)
- # define uv__cpu_count(cpuset) CPU_COUNT(cpuset)
- #elif defined(__NetBSD__)
--static int uv__cpu_count(cpuset_t *cpuset) {
-+static int uv__cpu_count(cpuset_t *set) {
-   int rc;
-   cpuid_t i;
- 
-   rc = 0;
-   for (i = 0;; i++) {
--    int r = cpuset_isset(cpu, set);
-+    int r = cpuset_isset(i, set);
-     if (r < 0)
-       break;
-     if (r)
