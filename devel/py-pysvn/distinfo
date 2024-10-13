@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2023/11/15 09:34:12 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/10/13 20:01:08 wiz Exp $
 
-BLAKE2s (pysvn-1.9.20.tar.gz) = 7ebb6e7f779a0ce19c380c3339d28a9642a3a0a0227dc64e7086a720b5e69d77
-SHA512 (pysvn-1.9.20.tar.gz) = 0611946c634b102e3ef3a25d68136d86622b556b64f86da689f5340eea2b2d7df1c95aba7f7d44ef9549d5bf5b8f2e34c46102e61a92c43e54231c7be2f36d79
-Size (pysvn-1.9.20.tar.gz) = 667756 bytes
+BLAKE2s (pysvn-1.9.22.tar.gz) = dac5442111da773c40a5921fd8b0426549b050d13a9e677d096714748534c989
+SHA512 (pysvn-1.9.22.tar.gz) = 68b4fdb8a5de7cd0fb868ef56ac4d17938561a7f2c37db4089a3a2f4fc256043c80d7331befc013e6141be70722c843665c59c36d455e372ecb3ecc4587cba41
+Size (pysvn-1.9.22.tar.gz) = 669169 bytes
 SHA1 (patch-setup__configure.py) = 51265c394958ae67457f0b5347cd33b706f84d26
