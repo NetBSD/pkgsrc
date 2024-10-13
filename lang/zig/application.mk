@@ -1,8 +1,11 @@
-# $NetBSD: application.mk,v 1.10 2024/04/29 13:22:43 nikita Exp $
+# $NetBSD: application.mk,v 1.11 2024/10/13 07:13:06 nia Exp $
 #
 # Common logic to handle zig packages
 # This is only usable if they include a 'build.zig' file
 #
+
+RELRO_SUPPORTED=	no
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 # https://github.com/ziglang/zig/issues/3382
