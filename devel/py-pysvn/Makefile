@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.62 2024/05/29 16:32:18 adam Exp $
+# $NetBSD: Makefile,v 1.63 2024/10/13 20:01:08 wiz Exp $
 
-VERS=		1.9.20
+VERS=		1.9.22
 DISTNAME=	pysvn-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysvn/}
 
-MAINTAINER=		helgoman@users.sourceforge.net
-HOMEPAGE=		https://pysvn.sourceforge.io/
-COMMENT=		Python interface to Subversion
-LICENSE=		apache-1.1
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	https://pysvn.sourceforge.io/
+COMMENT=	Python interface to Subversion
+LICENSE=	apache-1.1
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=	c c++
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/Source
+WRKSRC=		${WRKDIR}/${DISTNAME}/Source
 
 BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
@@ -23,17 +22,15 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	setup_configure.py
 SUBST_VARS.path+=	PREFIX
 
-PYSETUPCONFIGARGS=	--verbose --pycxx-dir="../Import/pycxx-7.1.5"
+PYSETUPCONFIGARGS=	--verbose --pycxx-dir="../Import/pycxx-7.1.9"
 PYLIBVER=		${PYVERSSUFFIX:S/./_/g}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
 
 INSTALLATION_DIRS+=	${PYSITELIB}/pysvn
 
 PRINT_PLIST_AWK+=	{ gsub(/${PYLIBVER}\.so/, "$${PYLIBVER}.so"); }
 
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
-PLIST_SUBST+=		PYLIBVER=${PYLIBVER:Q}
+PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
+PLIST_SUBST+=	PYLIBVER=${PYLIBVER:Q}
 
 do-configure:
 	${RUN} \
