@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2024/09/30 17:05:46 adam Exp $
+# $NetBSD: Makefile,v 1.84 2024/10/13 07:48:02 wiz Exp $
 
-DISTNAME=	libuv-1.49.0
+DISTNAME=	libuv-1.49.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libuv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ COMMENT=	Cross-platform asychronous I/O
 LICENSE=	mit AND 2-clause-bsd AND isc AND modified-bsd
 
 USE_CC_FEATURES=	c11
-FORCE_CC_STD=		c11 # stdatomic.h
+FORCE_C_STD=		c11 # stdatomic.h
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
