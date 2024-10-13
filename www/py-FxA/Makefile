@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/10/13 08:05:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/13 08:17:08 wiz Exp $
 
 DISTNAME=	pyfxa-0.7.9
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyfxa/PyFxA/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyfxa/FxA/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfxa/}
 
