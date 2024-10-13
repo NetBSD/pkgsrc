@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6154 2024/10/13 07:29:22 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6155 2024/10/13 07:30:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9347,3 +9347,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/xh to 0.23.0 [pin 2024-10-12]
 	Updated x11/xcmsdb to 1.0.7 [wiz 2024-10-13]
 	Updated x11/xkbprint to 1.0.7 [wiz 2024-10-13]
+	Updated x11/xmag to 1.0.8 [wiz 2024-10-13]
