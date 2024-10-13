@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/02/03 16:21:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/10/13 16:48:21 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.dockerignore
 ${GEM_LIBDIR}/.github/FUNDING.yml
@@ -73,12 +73,15 @@ ${GEM_LIBDIR}/lib/net/ssh/test/packet.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/remote_packet.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/script.rb
 ${GEM_LIBDIR}/lib/net/ssh/test/socket.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/aes128_gcm.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/aes256_gcm.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/algorithms.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/chacha20_poly1305_cipher.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/chacha20_poly1305_cipher_loader.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/cipher_factory.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/constants.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/ctr.rb
+${GEM_LIBDIR}/lib/net/ssh/transport/gcm_cipher.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/abstract.rb
 ${GEM_LIBDIR}/lib/net/ssh/transport/hmac/md5.rb
