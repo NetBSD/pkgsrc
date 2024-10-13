@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.10 2023/09/10 09:54:43 yhardy Exp $
+$NetBSD: distinfo,v 1.11 2024/10/13 20:56:41 yhardy Exp $
 
-BLAKE2s (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 45259683a0c68df785f7944d3e331b0fa29858572c58167f37e47e9b73c546ac
-SHA512 (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 2fbc72a6b3f476cb4b854019117bcce6f502ee9234c57b007d8e69fa3b9d84f9591558fe8b4fbc6eefdc2a579ae80f289cf9e853b46cc722850bdcac7e142e05
-Size (REminiscence-0.5.1/REminiscence-0.5.1.tar.bz2) = 167717 bytes
-BLAKE2s (REminiscence-0.5.1/stb_vorbis.c) = 53181653cd536f0eae2e2605cbcbbb935c0e217c621a342cf53529501572dd48
-SHA512 (REminiscence-0.5.1/stb_vorbis.c) = 860d87b37bfc9624544d62e72e3c28075db18a24e81d7cadf622b726bd9b94e5f3485afe0d8ac223a976a2d65cd5ee527a3c4831aae9947168a25cf19bf78c88
-Size (REminiscence-0.5.1/stb_vorbis.c) = 192790 bytes
+BLAKE2s (REminiscence-0.5.2/REminiscence-0.5.2.tar.bz2) = 4cdd3fceaf94700a76c6f1f994b25dec542c06a15a22ad439109981727d28704
+SHA512 (REminiscence-0.5.2/REminiscence-0.5.2.tar.bz2) = ce0219b41ebfc2f58446f6a2a088be28650629b3b4a36778989d16e534b0337a49be615ca899ddfd150cdb82302c0e249d90647c74761eb3456dbf63425221f0
+Size (REminiscence-0.5.2/REminiscence-0.5.2.tar.bz2) = 172015 bytes
+BLAKE2s (REminiscence-0.5.2/opl3.c) = 6697cec23b2694c423b52abf336e505b3a4cd99a147a242bf1072fdee025a4d3
+SHA512 (REminiscence-0.5.2/opl3.c) = 4f506d25707e8e8aab608011e4ef5137a698b89f8bea7098b9f79cce7a02f8296fb24975e8835bf48a48903bf888ab58b24144b8c411c2feedb913c04f485317
+Size (REminiscence-0.5.2/opl3.c) = 42406 bytes
+BLAKE2s (REminiscence-0.5.2/opl3.h) = 7b2f4d6f092fc48ebb2d25fe9b4f54ff6be2c499d00df4746f78ed23c8259577
+SHA512 (REminiscence-0.5.2/opl3.h) = dcab8764205a91e6e0c21c8643c81ee64249cec31bbff26682b8cfc655dd25044b680e43df30464dc676eaf2d953e2344b1bf96d41322d06353ee3de0684047b
+Size (REminiscence-0.5.2/opl3.h) = 4350 bytes
+BLAKE2s (REminiscence-0.5.2/stb_vorbis.c) = 53181653cd536f0eae2e2605cbcbbb935c0e217c621a342cf53529501572dd48
+SHA512 (REminiscence-0.5.2/stb_vorbis.c) = 860d87b37bfc9624544d62e72e3c28075db18a24e81d7cadf622b726bd9b94e5f3485afe0d8ac223a976a2d65cd5ee527a3c4831aae9947168a25cf19bf78c88
+Size (REminiscence-0.5.2/stb_vorbis.c) = 192790 bytes
+SHA1 (patch-Makefile) = 73a2f1f9aaebaf87a1aabdfdeb6a892591e02aa4
+SHA1 (patch-prf_player.cpp) = 28ff499166132ca8042bdd2e3e5b9b145eb85fda
