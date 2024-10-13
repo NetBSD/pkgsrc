@@ -1,24 +1,31 @@
-# $NetBSD: Makefile,v 1.27 2023/11/07 22:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/13 19:48:10 wiz Exp $
 
-DISTNAME=	web.py-0.62
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	webpy-0.70
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webpy/web.py/}
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=w/web.py/}
+# 0.62 is latest on pypi
+#MASTER_SITES=	${MASTER_SITE_PYPI:=w/web.py/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=webpy/}
+GITHUB_PROJECT=	webpy
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://webpy.org/
 COMMENT=	Simple, public domain web publishing system
 LICENSE=	public-domain
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=6.0.0:../../www/py-cheroot
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=5.4.1:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-multipart>=0:../../www/py-multipart
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+WHEEL_NAME=	${DISTNAME:S/web/web_/}
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+# as of 0.70:
+# 57 passed, 132 warnings
+# but sometimes (DiskStoreTest.testStoreConcurrent)
+# 1 failed, 56 passed, 132 warnings
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
