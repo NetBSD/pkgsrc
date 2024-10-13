@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/07 07:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/13 08:56:38 wiz Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,6 +18,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 # For share/kivy-examples
 PYTHON_SELF_CONFLICT=	yes
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
