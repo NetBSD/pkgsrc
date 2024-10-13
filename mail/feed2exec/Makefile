@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/08/10 07:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/13 09:05:24 wiz Exp $
 
 DISTNAME=		feed2exec-0.20.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=		https://feed2exec.readthedocs.io/
 COMMENT=		The programmable feed reader
 LICENSE=		gnu-agpl-v3
 
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=		${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 TOOL_DEPENDS+=		${PYPKGPREFIX}-flakes-[0-9]*:../../devel/py-flakes
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
@@ -33,7 +34,7 @@ TEST_DEPENDS+=		${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure
