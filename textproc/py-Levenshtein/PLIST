@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/29 16:59:20 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.7 2024/10/13 17:59:17 wiz Exp $
 ${PYSITELIB}/Levenshtein/StringMatcher.py
 ${PYSITELIB}/Levenshtein/StringMatcher.pyc
 ${PYSITELIB}/Levenshtein/StringMatcher.pyo
@@ -13,3 +8,7 @@ ${PYSITELIB}/Levenshtein/__init__.pyi
 ${PYSITELIB}/Levenshtein/__init__.pyo
 ${PYSITELIB}/Levenshtein/levenshtein_cpp.so
 ${PYSITELIB}/Levenshtein/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
