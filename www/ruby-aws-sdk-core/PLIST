@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/09/15 16:56:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/13 16:56:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/cbor.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor/cbor_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor/decoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor/encoder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring/publisher.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring/request_metrics.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_stubs.rb
@@ -61,6 +62,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/json/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/json/json_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/json/oj_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/json/parser.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/log.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/formatter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/log/param_filter.rb
@@ -70,6 +72,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/pageable_response.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/pager.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/param_converter.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/param_validator.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/plugins.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/api_key.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/apig_authorizer_token.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/plugins/apig_credentials_configuration.rb
@@ -125,6 +128,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/query/param_builder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/query/param_list.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/refreshing_token.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/resources.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/resources/collection.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/content_type_handler.rb
@@ -151,6 +155,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/sso_credentials.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/sso_token_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/static_token_provider.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/structure.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/stubbing.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/data_applicator.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/empty_stub.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/stubbing/protocols/api_gateway.rb
