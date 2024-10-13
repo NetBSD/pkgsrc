@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2022/11/09 13:14:10 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/13 07:36:55 wiz Exp $
 
-DISTNAME=		bdftopcf-1.1.1
+DISTNAME=		bdftopcf-1.1.2
 CATEGORIES=		fonts
 MASTER_SITES=		https://xorg.freedesktop.org/archive/individual/util/
 EXTRACT_SUFX=		.tar.xz
