@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.27 2022/09/17 02:39:42 mef Exp $
+$NetBSD: distinfo,v 1.28 2024/10/13 22:13:03 mef Exp $
 
-BLAKE2s (tqsl-2.6.5.tar.gz) = 573a7e7420cb3e168d986c010fd06e99c867f3240c0aa4d04fd18553d499a9fe
-SHA512 (tqsl-2.6.5.tar.gz) = 2a4602b827448756e033122c0359651a230fe3122f92ae3ce72c6ed6bb1b1fd6b15804676cca1fef19dd09df6548387772721cc64a4423d8a766b7d27a38e049
-Size (tqsl-2.6.5.tar.gz) = 3521069 bytes
-SHA1 (patch-CMakeLists.txt) = db7383ea82b2cb05abfcd61430c68c90bca1b81b
+BLAKE2s (tqsl-2.7.3.tar.gz) = 5e8a3b6193c224a09471485c59abb9194eb85bfc987b51cd79aab3bb8e28414b
+SHA512 (tqsl-2.7.3.tar.gz) = 302db650dc0f9fcd495fd1e7abe21dcfffc167d1686b276ae0fcbb53bf5eedbc91a797d1a79d8da5bb4384d937c6b66ad44a0355a00ff014de4257c0be84ef74
+Size (tqsl-2.7.3.tar.gz) = 3911547 bytes
