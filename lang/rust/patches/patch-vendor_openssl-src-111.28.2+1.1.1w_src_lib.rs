@@ -1,9 +1,7 @@
-$NetBSD: patch-vendor_openssl-src-111.28.1+1.1.1w_src_lib.rs,v 1.1 2024/07/31 08:05:50 he Exp $
+$NetBSD: patch-vendor_openssl-src-111.28.2+1.1.1w_src_lib.rs,v 1.1 2024/10/13 19:04:40 he Exp $
 
-Provide defaults for the various NetBSD targets.
-
---- vendor/openssl-src-111.28.1+1.1.1w/src/lib.rs.orig	2006-07-24 01:21:28.000000000 +0000
-+++ vendor/openssl-src-111.28.1+1.1.1w/src/lib.rs
+--- vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs.orig	2024-08-29 18:09:29.494697634 +0000
++++ vendor/openssl-src-111.28.2+1.1.1w/src/lib.rs
 @@ -239,6 +239,8 @@ impl Build {
              "aarch64-unknown-freebsd" => "BSD-generic64",
              "aarch64-unknown-linux-gnu" => "linux-aarch64",
@@ -37,9 +35,9 @@ Provide defaults for the various NetBSD targets.
              "i686-unknown-linux-musl" => "linux-elf",
 +            "i686-unknown-netbsd" => "BSD-x86-elf",
              "loongarch64-unknown-linux-gnu" => "linux-generic64",
+             "loongarch64-unknown-linux-musl" => "linux-generic64",
              "mips-unknown-linux-gnu" => "linux-mips32",
-             "mips-unknown-linux-musl" => "linux-mips32",
-@@ -273,9 +279,11 @@ impl Build {
+@@ -274,9 +280,11 @@ impl Build {
              "mips64el-unknown-linux-muslabi64" => "linux64-mips64",
              "mipsel-unknown-linux-gnu" => "linux-mips32",
              "mipsel-unknown-linux-musl" => "linux-mips32",
@@ -51,7 +49,7 @@ Provide defaults for the various NetBSD targets.
              "powerpc64-unknown-freebsd" => "BSD-generic64",
              "powerpc64-unknown-linux-gnu" => "linux-ppc64",
              "powerpc64-unknown-linux-musl" => "linux-ppc64",
-@@ -283,8 +291,10 @@ impl Build {
+@@ -284,8 +292,10 @@ impl Build {
              "powerpc64le-unknown-linux-gnu" => "linux-ppc64le",
              "powerpc64le-unknown-linux-musl" => "linux-ppc64le",
              "riscv64gc-unknown-linux-gnu" => "linux-generic64",
