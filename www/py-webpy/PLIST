@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/11/06 18:34:58 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2024/10/13 19:48:10 wiz Exp $
 ${PYSITELIB}/web/__init__.py
 ${PYSITELIB}/web/__init__.pyc
 ${PYSITELIB}/web/__init__.pyo
@@ -58,3 +53,8 @@ ${PYSITELIB}/web/webapi.pyo
 ${PYSITELIB}/web/wsgi.py
 ${PYSITELIB}/web/wsgi.pyc
 ${PYSITELIB}/web/wsgi.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
