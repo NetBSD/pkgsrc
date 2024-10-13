@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6189 2024/10/13 16:48:35 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6190 2024/10/13 16:50:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9382,3 +9382,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/coccigrep to 1.20nb1 [wiz 2024-10-13]
 	Updated net/ruby-recog to 3.1.11 [taca 2024-10-13]
 	Updated security/ruby-net-ssh to 7.3.0 [taca 2024-10-13]
+	Updated textproc/ruby-rexml to 3.3.8 [taca 2024-10-13]
