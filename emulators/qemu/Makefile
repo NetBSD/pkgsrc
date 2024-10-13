@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2024/09/05 07:40:08 adam Exp $
+# $NetBSD: Makefile,v 1.350 2024/10/13 18:02:44 jakllsch Exp $
 
 DISTNAME=	qemu-9.1.0
 CATEGORIES=	emulators
@@ -118,7 +118,6 @@ UE_ARCHS+=		i386
 UE_ARCHS+=		loongarch64
 UE_ARCHS+=		m68k microblaze microblazeel
 UE_ARCHS+=		mips mips64 mips64el mipsel mipsn32 mipsn32el
-UE_ARCHS+=		nios2
 UE_ARCHS+=		or1k ppc ppc64 ppc64le
 UE_ARCHS+=		riscv32 riscv64
 UE_ARCHS+=		s390x sh4 sh4eb sparc sparc32plus sparc64
@@ -155,6 +154,7 @@ PLIST.bridge-helper=	yes
 PLIST.ga=		yes
 PLIST.nbd=		yes
 PLIST.pr-helper=	yes
+PLIST.vmsr-helper=	yes
 .elif ${MACHINE_PLATFORM:MSunOS-5.11-*}
 PLIST.ga=		yes
 PLIST.nbd=		yes
@@ -169,7 +169,7 @@ CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--disable-plugins
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} bridge-helper ga keymap nbd pr-helper
+PLIST_VARS+=		${UE_ARCHS} bridge-helper ga keymap nbd pr-helper vmsr-helper
 .for pvar in ${USER_EMUL}
 PLIST.${pvar}=		yes
 .endfor
