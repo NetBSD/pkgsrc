@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2024/09/09 19:44:38 pin Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/13 20:22:52 pin Exp $
 
-DISTNAME=	simp-3.6.1
-# simp-3.7.1 requires Rust >= 1.80.1 to build.
+DISTNAME=	simp-3.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
-# We need these post-release commits to fix functionality on NetBSD.
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	289e047448dac285205448493bbe18ac51aa0514
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Kl4rry/simp/
@@ -19,17 +16,12 @@ TOOL_DEPENDS+=	cargo-about-[0-9]*:../../devel/cargo-about
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.80.1
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gtk3}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libxcb}/lib
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/simp.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/simp.1
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		gtk3
