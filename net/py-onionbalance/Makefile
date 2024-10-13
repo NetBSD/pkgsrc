@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/05 22:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/13 10:10:50 wiz Exp $
 
 DISTNAME=	OnionBalance-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -25,7 +25,8 @@ USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312
+# https://gitlab.torproject.org/tpo/onion-services/onionbalance/-/issues/36
+PYTHON_VERSIONS_INCOMPATIBLE=	312 313
 
 SUBST_CLASSES+=		crypto
 SUBST_STAGE.crypto=	pre-configure
