@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2024/08/25 10:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/10/13 09:45:24 bsiegert Exp $
 
-DISTNAME=		vym-2.9.28
+DISTNAME=		vym-2.9.31
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=insilmaril/}
-GITHUB_TAG=		8f4e86ca61801ca8a759baa9c6ffb3441b8e8291
+GITHUB_TAG=		da30b21109544ee0596ebf4d9738b5fed69b3cc4
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.insilmaril.de/vym/
