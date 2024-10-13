@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:21:47 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/10/13 10:10:23 wiz Exp $
 
-BLAKE2s (coccigrep-1.16.tar.gz) = b1cded42f95cd9f9b91664ff08ceb4e4472f4f534de5ce6792fde18562aaf529
-SHA512 (coccigrep-1.16.tar.gz) = 113c308fd05af6ec8765b719ad4eef9d6c39e123c011aedcd0d3f10782b06f3b94e1c8b5e0c609270441d60ef295ab721a40145cc2fe3ebc11afed348f39b269
-Size (coccigrep-1.16.tar.gz) = 32622 bytes
+BLAKE2s (coccigrep-1.20.tar.gz) = 4dbfd55e5b2259a825573779fbb0bf95568fdcb1431052d5cfda3006292b08eb
+SHA512 (coccigrep-1.20.tar.gz) = 35d6a43b515c261ba025b876a72566581f892624eb9f47cde4121f16b2922ead8cd94e2c0ea6e00e4c64a3fe0cdcc4aeadc4c49900a8de8cfc0b589208ecae9c
+Size (coccigrep-1.20.tar.gz) = 33027 bytes
