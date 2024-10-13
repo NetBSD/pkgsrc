@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/07/21 06:03:07 tsutsui Exp $
+# $NetBSD: Makefile,v 1.101 2024/10/13 09:00:19 wiz Exp $
 
 VERSION=		4.2.9
 DISTNAME=		PC6001VX_${VERSION}_src
@@ -10,6 +10,8 @@ MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://eighttails.seesaa.net/
 COMMENT=		Cross platform PC-6001 emulator
 LICENSE=		gnu-lgpl-v2.1
+
+TOOL_DEPENDS+=		qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
