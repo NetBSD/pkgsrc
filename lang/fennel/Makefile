@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/05/30 20:17:34 yhardy Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/13 21:04:52 yhardy Exp $
 
-DISTNAME=	1.4.2
-PKGNAME=	${LUA_PKGPREFIX}-fennel-1.4.2
+DISTNAME=	1.5.1
+PKGNAME=	${LUA_PKGPREFIX}-fennel-1.5.1
 CATEGORIES=	lang
 MASTER_SITES=	https://git.sr.ht/~technomancy/fennel/archive/
 DIST_SUBDIR=	fennel
