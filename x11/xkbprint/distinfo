@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/10/15 23:13:19 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/10/13 07:29:03 wiz Exp $
 
-BLAKE2s (xkbprint-1.0.6.tar.xz) = 4af54986bc98c44cf057fd443e6d523ea8507de7cbbcf3fbbf9e0bc1a07221ae
-SHA512 (xkbprint-1.0.6.tar.xz) = a1c2401b2a2ef4c6bd2efc18923ecb176adcf38b6c5dfdce25f22f1f5ab21e25f494b25dac25b1765fb9a0f6acc24d191cd41b9a098a9e3c6eaf9a9df490be29
-Size (xkbprint-1.0.6.tar.xz) = 156920 bytes
+BLAKE2s (xkbprint-1.0.7.tar.xz) = 1828dd2cab89f02a36845d17eb77b51b48d41514b2d48e90e86842ae01ba59b6
+SHA512 (xkbprint-1.0.7.tar.xz) = 52f803ba85b053408dfff400f47ae9461954430665a12257a99b9775e26dd7192a97b979de949b9c4532936c9bfcc181a773de41514a122973f05d676dee6476
+Size (xkbprint-1.0.7.tar.xz) = 161736 bytes
