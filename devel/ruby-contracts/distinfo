@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/11/29 12:39:05 taca Exp $
+$NetBSD: distinfo,v 1.7 2024/10/13 16:23:45 taca Exp $
 
-BLAKE2s (contracts-0.17.gem) = cac0721c9bcad6822b0cfdd67b8a6354324583fe74df41e412935c4318125e26
-SHA512 (contracts-0.17.gem) = bce1417e7b505ec35b43917d53cbdb175995ff877da2a6122e08b3c7e537d557785987a0110006525dd079f09d574be3f5f4793154f99ac91c32f83662fa311b
-Size (contracts-0.17.gem) = 58368 bytes
+BLAKE2s (contracts-0.17.1.gem) = c4e8503091b29cf87bc242570252abca46c5c6c3c44f00e7717dadc44dcb4931
+SHA512 (contracts-0.17.1.gem) = 94abb7e781e257ce3d04c910836fdf6a3847b1a28581ac7c088ee1bba6c7fc03c133eeefad3f97adab1993c19bb46bee89524165d81a1ece11be9a4f53dbcee5
+Size (contracts-0.17.1.gem) = 58880 bytes
