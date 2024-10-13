@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/28 12:43:55 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/10/13 08:50:21 wiz Exp $
 bin/brz
 bin/bzr-receive-pack
 bin/bzr-upload-pack
@@ -103,7 +103,6 @@ ${PYSITELIB}/breezy/bzr/_rio_py.py
 ${PYSITELIB}/breezy/bzr/_rio_py.pyc
 ${PYSITELIB}/breezy/bzr/_rio_py.pyo
 ${PYSITELIB}/breezy/bzr/_rio_pyx.so
-${PYSITELIB}/breezy/bzr/_rio_rs.so
 ${PYSITELIB}/breezy/bzr/_simple_set_pyx.so
 ${PYSITELIB}/breezy/bzr/_static_tuple_c.so
 ${PYSITELIB}/breezy/bzr/_static_tuple_py.py
@@ -2385,9 +2384,6 @@ ${PYSITELIB}/breezy/tests/test__chunks_to_lines.pyo
 ${PYSITELIB}/breezy/tests/test__known_graph.py
 ${PYSITELIB}/breezy/tests/test__known_graph.pyc
 ${PYSITELIB}/breezy/tests/test__known_graph.pyo
-${PYSITELIB}/breezy/tests/test__walkdirs_win32.py
-${PYSITELIB}/breezy/tests/test__walkdirs_win32.pyc
-${PYSITELIB}/breezy/tests/test__walkdirs_win32.pyo
 ${PYSITELIB}/breezy/tests/test_ancestry.py
 ${PYSITELIB}/breezy/tests/test_ancestry.pyc
 ${PYSITELIB}/breezy/tests/test_ancestry.pyo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/10/05 13:34:19 rhialto Exp $
+# $NetBSD: Makefile,v 1.23 2024/10/13 08:50:21 wiz Exp $
 
 DISTNAME=	breezy-3.3.8
 CATEGORIES=	devel scm
@@ -10,6 +10,7 @@ COMMENT=	Friendly distributed version control system
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
 TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
@@ -18,7 +19,7 @@ DEPENDS+=		${PYPKGPREFIX}-fastbencode>=0.0.9:../../converters/py-fastbencode
 DEPENDS+=		${PYPKGPREFIX}-fastimport>0:../../devel/py-fastimport
 DEPENDS+=		${PYPKGPREFIX}-merge3>=0.0.14:../../textproc/py-merge3
 DEPENDS+=		${PYPKGPREFIX}-patiencediff>=0.2.2:../../textproc/py-patiencediff
-#DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=1.8.1:../../devel/py-setuptools-rust
+DEPENDS+=		${PYPKGPREFIX}-tzlocal>=0:../../time/py-tzlocal
 DEPENDS+=		${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 # Not yet packaged; only needed for lp: shortcuts.
 #DEPENDS+=		${PYPKGPREFIX}-launchpadlib>=1.6.3:../../devel/py-launchpadlib
@@ -34,11 +35,8 @@ MAKE_ENV+=		CIBUILDWHEEL=1
 
 REPLACE_PYTHON+=	breezy/git/bzr-receive-pack
 REPLACE_PYTHON+=	breezy/git/bzr-upload-pack
-REPLACE_PYTHON+=	breezy/git/git-remote-bzr
 REPLACE_PYTHON+=	breezy/git/git_remote_helper.py
-REPLACE_PYTHON+=	breezy/plugins/bash_completion/bashcomp.py
 REPLACE_PYTHON+=	breezy/tests/ssl_certs/create_ssls.py
-REPLACE_PYTHON+=	breezy/version_info_formats/format_python.py
 REPLACE_PYTHON+=	brz
 REPLACE_PYTHON+=	contrib/brz_access
 
