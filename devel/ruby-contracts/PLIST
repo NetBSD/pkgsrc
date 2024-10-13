@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/05/04 08:19:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/13 16:23:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/code_style_checks.yaml
 ${GEM_LIBDIR}/.github/workflows/tests.yaml
@@ -38,6 +38,7 @@ ${GEM_LIBDIR}/features/builtin_contracts/func.feature
 ${GEM_LIBDIR}/features/builtin_contracts/hash_of.feature
 ${GEM_LIBDIR}/features/builtin_contracts/int.feature
 ${GEM_LIBDIR}/features/builtin_contracts/keyword_args.feature
+${GEM_LIBDIR}/features/builtin_contracts/keyword_args_with_optional_positional_args.feature
 ${GEM_LIBDIR}/features/builtin_contracts/maybe.feature
 ${GEM_LIBDIR}/features/builtin_contracts/nat.feature
 ${GEM_LIBDIR}/features/builtin_contracts/nat_pos.feature
