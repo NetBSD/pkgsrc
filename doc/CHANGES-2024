@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6162 2024/10/13 07:38:48 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6163 2024/10/13 07:42:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9355,3 +9355,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xtrans to 1.5.1 [wiz 2024-10-13]
 	Updated fonts/bdftopcf to 1.1.2 [wiz 2024-10-13]
 	Updated textproc/tree-sitter to 0.24.3 [wiz 2024-10-13]
+	Updated fonts/noto-emoji-ttf to 2.047 [wiz 2024-10-13]
