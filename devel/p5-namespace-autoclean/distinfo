@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:17:57 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/10/13 08:57:24 wiz Exp $
 
-BLAKE2s (namespace-autoclean-0.29.tar.gz) = 0505ef154cf857e2bbb282083c73149ff76a4b0ff22089a9d2ca7cffa21b2cc8
-SHA512 (namespace-autoclean-0.29.tar.gz) = 64dee8009c8ab587c1aef504c0b429248a9069e6cfbfcb4062b83ddf56c82121be66f821013f3251e6863935429e0663aec82202352904983db600a79348732c
-Size (namespace-autoclean-0.29.tar.gz) = 38791 bytes
+BLAKE2s (namespace-autoclean-0.31.tar.gz) = e2e72abeb189e6d841db5d07fa62584062b8747f036f795908e3856a592e7b5f
+SHA512 (namespace-autoclean-0.31.tar.gz) = 16f1d473ed87d196812867306996284d1f6817603399e1d67273c2e1c58ba2ba811c84c5e1762675526bfcb808aeece7e3180de189ca9ba951c6b9ff2023d802
+Size (namespace-autoclean-0.31.tar.gz) = 39548 bytes
