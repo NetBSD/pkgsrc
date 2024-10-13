@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6157 2024/10/13 07:33:06 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6158 2024/10/13 07:33:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9350,3 +9350,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/xmag to 1.0.8 [wiz 2024-10-13]
 	Updated x11/xwud to 1.0.7 [wiz 2024-10-13]
 	Updated x11/xf86-video-mach64 to 6.10.0 [wiz 2024-10-13]
+	Updated x11/xf86-video-mga to 2.1.0 [wiz 2024-10-13]
