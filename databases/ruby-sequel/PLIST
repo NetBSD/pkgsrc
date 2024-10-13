@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.122 2024/09/18 14:47:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.123 2024/10/13 16:19:43 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -105,6 +105,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/current_datetime_timestamp.rb
+${GEM_LIBDIR}/lib/sequel/extensions/dataset_run.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/dataset_source_alias.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/date_arithmetic.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/date_parse_input_handler.rb
