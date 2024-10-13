@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2024/08/24 15:59:37 pin Exp $
+# $NetBSD: Makefile,v 1.83 2024/10/13 20:20:14 pin Exp $
 
-DISTNAME=	tp-note-1.24.7
-# tp-note-1.24.8 requires Rust >= 1.80.1 to build.
+DISTNAME=	tp-note-1.24.8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -13,13 +12,12 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.77.2
+RUST_REQ=	1.80.1
 
-WRKSRC=		${WRKDIR}/tp-note-v1.24.7-c81d1f93453fff33e2f61c0e97f61252766dd362
+WRKSRC=		${WRKDIR}/tp-note-v1.24.8-e4b247f5f37df8d51d17331f2a480673d591d064
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/pixmaps
