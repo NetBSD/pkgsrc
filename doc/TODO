@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24941 2024/10/12 11:04:16 wiz Exp $
+$NetBSD: TODO,v 1.24942 2024/10/13 07:22:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -538,6 +538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o colord-1.4.5
 	o colortail-0.3.3
 	o commit-patch-2.6
+	o compiledb-go-1.3.7
 	o compiz-0.9.14.2
 	o cone-0.92
 	o conserver8-8.2.6
@@ -738,6 +739,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.67.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtk4-4.16
@@ -851,6 +853,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcares-1.34.1
 	o libcec-6.0.2
 	o libcups-2.4.11
 	o libdevq-0.0.4
@@ -881,13 +884,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libslang2-2.3.2
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libuv-1.49.1
 	o libvirt-10.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-19.1
+	o llvm-19.1.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -931,6 +935,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mftrace-1.2.20
 	o mgetty+sendfax-1.2.1
 	o milter-regex-2.0
+	o mimir-2.14.0
 	o mingw-binutils-2.36.1
 	o mini_sendmail-1.3.9
 	o miniircd-2.1
@@ -967,6 +972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o newmail-1.0.2
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
+	o noto-emoji-ttf-2.047
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
@@ -1124,6 +1130,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-aiohttp-3.10.10
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-dot-3.0.1
@@ -1132,6 +1139,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-core-2.21.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
@@ -1141,18 +1149,25 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-pdm_backend-2.4.2
 	o py-postgresql-5.1.2
+	o py-pydantic-core-2.24.1
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-8.1.2
 	o py-sphinx-autoapi-3.3.2
+	o py-sphinx-autodoc-typehints-2.5.0
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
-	o py-textual-0.82.0
+	o py-textual-0.83.0
+	o py-textual-autocomplete-3.0.0a12
 	o py-tokyocabinet-0.6
+	o py-trove-classifiers-2024.10.12
 	o py-uliweb-0.6
+	o py-yarl-1.15.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1312,6 +1327,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.24.3
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
