@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2023/12/09 12:31:14 kleink Exp $
+$NetBSD: distinfo,v 1.20 2024/10/13 15:04:05 wiz Exp $
 
 BLAKE2s (geojson-3.1.0.tar.gz) = a48ef22a6b4ea6fe11b40ac07e870c33afc07230fb86bf65b0c35047d029d262
 SHA512 (geojson-3.1.0.tar.gz) = 3804682a14c85cd3d6937b61280fe99b21e00b223abfa76350289c4e1a6db04fd8e1b3f9142286090a82051607bd3fdc6168da351d488afaab3a8a9a6dd06fc9
 Size (geojson-3.1.0.tar.gz) = 24492 bytes
+SHA1 (patch-setup.py) = f72e3515478b015719bd5493f948091fe821c155
