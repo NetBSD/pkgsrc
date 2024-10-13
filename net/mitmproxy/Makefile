@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/03/24 20:00:11 leot Exp $
+# $NetBSD: Makefile,v 1.49 2024/10/13 09:30:48 wiz Exp $
 
 DISTNAME=	mitmproxy-10.2.4
 CATEGORIES=	net
@@ -9,6 +9,7 @@ HOMEPAGE=	https://mitmproxy.org/
 COMMENT=	Interactive TLS-capable intercepting HTTP proxy
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aioquic>=0.9.24:../../www/py-aioquic
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.2.10:../../www/py-asgiref
@@ -37,6 +38,9 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=2.1.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-wsproto>=1.0:../../www/py-wsproto
 DEPENDS+=	${PYPKGPREFIX}-zstandard>=0.11:../../archivers/py-zstandard
 
+# Only for Python >=3.10
+PYTHON_VERSIONS_INCOMPATIBLE=	39
+
 .include "../../lang/python/pyversion.mk"
 
 .if ${PYTHON_VERSION} < 311
@@ -61,9 +65,6 @@ SUBST_SED.pyprojecttomlversions+=	-E -e '/[>=]=/ s/, *<[0-9.]+(",|;)/\1/g'
 REPLACE_SH+=	mitmproxy/contrib/kaitaistruct/make.sh
 
 USE_LANGUAGES=			# none
-
-# Only for Python >=3.10
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
