@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2024/10/09 04:32:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/14 19:08:03 gdt Exp $
 
 DISTNAME=	libaom-3.10.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://storage.googleapis.com/aom-releases/
 
@@ -30,6 +31,8 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_WERROR:BOOL=OFF
 # aom_dsp/x86/synonyms.h:53:29: warning: implicit declaration of function '_mm_loadu_si64'; did you mean '_mm_loadl_epi64'? [-Wimplicit-function-declaration]
 # https://gcc.gnu.org/bugzilla/show_bug.cgi?id=78782
 GCC_REQD+=	9
+# Follow the limited-versions guidance.
+GCC_REQD+=	10
 
 .include "../../mk/bsd.prefs.mk"
 
