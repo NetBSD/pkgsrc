@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/05/13 09:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/14 11:41:41 adam Exp $
 
-DISTNAME=	urwid_readline-0.14
+DISTNAME=	urwid_readline-0.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid_readline/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-urwid>=0:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
