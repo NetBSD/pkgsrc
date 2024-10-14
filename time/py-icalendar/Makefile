@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/10/14 05:27:42 adam Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/14 09:43:57 wiz Exp $
 
 DISTNAME=	icalendar-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,10 @@ USE_LANGUAGES=	# none
 
 REPLACE_SH+=		src/icalendar/tests/fuzzed/generate_python_test_cases_from_downloaded_clusterfuzz_test_cases.sh
 REPLACE_PYTHON+=	src/icalendar/cli.py
+
+# as of 6.0.1:
+# 22 failed, 4543 passed, 3 skipped
+# https://github.com/collective/icalendar/issues/731
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
