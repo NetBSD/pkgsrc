@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/01/25 11:16:11 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/14 09:54:21 adam Exp $
 
-DISTNAME=	billiard-4.2.0
+DISTNAME=	billiard-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
@@ -13,9 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-USE_LANGUAGES=		# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
