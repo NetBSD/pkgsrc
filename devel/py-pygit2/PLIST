@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/01/27 19:01:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/10/14 14:53:17 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -85,6 +85,7 @@ ${PYSITELIB}/pygit2/legacyenums.pyo
 ${PYSITELIB}/pygit2/packbuilder.py
 ${PYSITELIB}/pygit2/packbuilder.pyc
 ${PYSITELIB}/pygit2/packbuilder.pyo
+${PYSITELIB}/pygit2/py.typed
 ${PYSITELIB}/pygit2/references.py
 ${PYSITELIB}/pygit2/references.pyc
 ${PYSITELIB}/pygit2/references.pyo
