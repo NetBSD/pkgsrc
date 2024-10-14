@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/08/03 06:00:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/14 14:02:28 adam Exp $
 bin/asdftool-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -1010,9 +1010,6 @@ ${PYSITELIB}/asdf/_tests/test_lazy_nodes.pyo
 ${PYSITELIB}/asdf/_tests/test_reference.py
 ${PYSITELIB}/asdf/_tests/test_reference.pyc
 ${PYSITELIB}/asdf/_tests/test_reference.pyo
-${PYSITELIB}/asdf/_tests/test_reference_files.py
-${PYSITELIB}/asdf/_tests/test_reference_files.pyc
-${PYSITELIB}/asdf/_tests/test_reference_files.pyo
 ${PYSITELIB}/asdf/_tests/test_resource.py
 ${PYSITELIB}/asdf/_tests/test_resource.pyc
 ${PYSITELIB}/asdf/_tests/test_resource.pyo
