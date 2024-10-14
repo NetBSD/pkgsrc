@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2024/04/07 07:33:50 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/10/14 14:30:00 schmonz Exp $
 
-DISTNAME=		texttest-4.3.1
-GITHUB_TAG=		${PKGVERSION_NOREV}
+DISTNAME=		TextTest-4.4.0.1
 PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		2
 CATEGORIES=		devel python
-MASTER_SITES=		${MASTER_SITE_GITHUB:=texttest/}
+MASTER_SITES=		https://downloads.sourceforge.net/project/texttest/texttest/4.4.0/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://texttest.sourceforge.net/
@@ -28,7 +26,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	texttestlib/default/__init__.py
 SUBST_VARS.prefix=	PREFIX
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
