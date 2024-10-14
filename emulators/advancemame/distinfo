@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/07/03 21:49:20 nia Exp $
+$NetBSD: distinfo,v 1.2 2024/10/14 07:48:14 nia Exp $
 
-BLAKE2s (advancemame-3.9.tar.gz) = 967c6807e8181cfa607ad00e14c546faac352cea6113424b46b3d9cbde28a6a3
-SHA512 (advancemame-3.9.tar.gz) = 43f9ba746f222b17ade2d213d6af7cc8fe6b3ee6008633f02b8877f4c7f75628bdf1cc9718db09f5f9a482d194c8ba94f9047334e8012d23c598454e5dab2eb3
-Size (advancemame-3.9.tar.gz) = 27287755 bytes
+BLAKE2s (advancemame-3.10.tar.gz) = 579f4a0d009b47222b467aaec153b2a853d1f2fb60d5aecdf5b4faa7d6919809
+SHA512 (advancemame-3.10.tar.gz) = cf24a61f5882ef1fb2c907644662b84965b7733c718042bbfb93fb972fbf06b26f16a39b980d54ed6485d2ab8925a228ab3468307aa50b5386eaa61eee441c5f
+Size (advancemame-3.10.tar.gz) = 27381432 bytes
