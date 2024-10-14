@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2022/01/04 20:54:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/14 07:13:41 wiz Exp $
 
 DISTNAME=		Tempita-0.5.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=		mit
 
 post-extract:
 	cd ${WRKSRC} && 2to3-${PYVERSSUFFIX} -w --no-diffs tempita
+
+PYTHON_VERSIONS_INCOMPATIBLE=	313 # 2to3
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
