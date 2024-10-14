@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.32 2024/05/15 08:54:22 adam Exp $
+$NetBSD: distinfo,v 1.33 2024/10/14 15:33:20 nia Exp $
 
 BLAKE2s (dropbear-2024.85.tar.bz2) = 4d779585a043af90981cf294a8cfb946e7abee108d3790766f48c6669e90d4d4
 SHA512 (dropbear-2024.85.tar.bz2) = 09619e9874172658b7fc284823e0a619b6a4346a5db41487d1628768b46c1f8eac962bfd8ef73e2a59e466fc4022395f7a194b4309195c954b0d7e0d13254f67
 Size (dropbear-2024.85.tar.bz2) = 2304594 bytes
+SHA1 (patch-Makefile.in) = 0bb649ed8688666513c35e139e7e349fd83b3a1b
 SHA1 (patch-configure) = b17f647043b212adda53aad7fb8dc7e639be9494
 SHA1 (patch-src_default__options.h) = af60ea91516639e055266b3dd74f100aa6100f0d
