@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:43 nia Exp $
-
-BLAKE2s (nosexcover-1.0.11.tar.gz) = 24c95d88f915631d669eebff9cdbd9f663a77d5aecdc33c34133345436a64f37
-SHA512 (nosexcover-1.0.11.tar.gz) = a4c75aac5095aa8323094b2a4eceb3af26243e6c87dd8720df8cf43ae0f76c28c638fe2c3cbcad621b7c2779115dccbb32e6a2f33a8bc5efb22a0fb0901d64fa
-Size (nosexcover-1.0.11.tar.gz) = 2903 bytes
