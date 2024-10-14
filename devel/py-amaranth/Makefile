@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/09/16 09:24:06 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	amaranth-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,11 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-jschon>=0.11.1:../../textproc/py-jschon
 DEPENDS+=	${PYPKGPREFIX}-pyvcd>=0.2.2:../../devel/py-pyvcd
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/10/03 08:49:45 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	scikit_build_core-0.10.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -28,10 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.40:../../devel/py-wheel
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0:../../devel/py-exceptiongroup
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli

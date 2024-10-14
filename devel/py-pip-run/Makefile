@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/29 08:11:00 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	pip_run-13.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -30,9 +30,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.0.0:../../textproc/py-tomli
 .endif

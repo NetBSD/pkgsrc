@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/08/08 05:48:21 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	alembic-1.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,15 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.3.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
-.endif
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
