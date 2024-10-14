@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2021/11/17 17:12:45 sjmulder Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/14 15:14:02 nia Exp $
 
 DISTNAME=	netmask-2.4.4
 CATEGORIES=	sysutils
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	autoreconf autoconf automake awk gmake digest makeinfo
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
+
+LDFLAGS.SunOS+=	-lsocket -lresolv -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen
