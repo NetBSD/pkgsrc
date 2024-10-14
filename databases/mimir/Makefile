@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2024/09/06 18:48:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 12:51:48 wiz Exp $
 
-GITHUB_PROJECT=	mimir
-DISTNAME=	mimir-2.13.0
-PKGREVISION=	3
-GITHUB_TAG=	${DISTNAME}
+DISTNAME=	mimir-2.14.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/grafana/mimir/
