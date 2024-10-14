@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/25 10:56:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/14 11:40:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,9 +13,6 @@ ${PYSITELIB}/python_utils/__init__.pyo
 ${PYSITELIB}/python_utils/aio.py
 ${PYSITELIB}/python_utils/aio.pyc
 ${PYSITELIB}/python_utils/aio.pyo
-${PYSITELIB}/python_utils/compat.py
-${PYSITELIB}/python_utils/compat.pyc
-${PYSITELIB}/python_utils/compat.pyo
 ${PYSITELIB}/python_utils/containers.py
 ${PYSITELIB}/python_utils/containers.pyc
 ${PYSITELIB}/python_utils/containers.pyo
