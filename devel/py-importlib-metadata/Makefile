@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/09/12 19:48:17 adam Exp $
+# $NetBSD: Makefile,v 1.49 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	importlib_metadata-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -21,11 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-perf-[0-9]*:../../devel/py-test-perf
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

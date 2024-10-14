@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/08/04 09:42:35 kim Exp $
+# $NetBSD: Makefile,v 1.44 2024/10/14 06:08:40 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -22,9 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3.1:../../devel/py-importlib-resources
-.endif
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
 .endif

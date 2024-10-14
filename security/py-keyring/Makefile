@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/09/22 16:15:00 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/10/14 06:08:40 wiz Exp $
 
 DISTNAME=	keyring-25.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,9 +30,6 @@ USE_LANGUAGES=	# none
 
 .if ${PYTHON_VERSION} < 312
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.11.4:../../devel/py-importlib-metadata
-.endif
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=0:../../devel/py-importlib-resources
 .endif
 
 REPLACE_PYTHON+=	keyring/cli.py
