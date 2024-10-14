@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/19 21:46:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/14 07:25:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,6 +10,12 @@ ${PYSITELIB}/treq/__init__.pyo
 ${PYSITELIB}/treq/_agentspy.py
 ${PYSITELIB}/treq/_agentspy.pyc
 ${PYSITELIB}/treq/_agentspy.pyo
+${PYSITELIB}/treq/_multipart.py
+${PYSITELIB}/treq/_multipart.pyc
+${PYSITELIB}/treq/_multipart.pyo
+${PYSITELIB}/treq/_types.py
+${PYSITELIB}/treq/_types.pyc
+${PYSITELIB}/treq/_types.pyo
 ${PYSITELIB}/treq/_version.py
 ${PYSITELIB}/treq/_version.pyc
 ${PYSITELIB}/treq/_version.pyo
@@ -25,9 +31,13 @@ ${PYSITELIB}/treq/client.pyo
 ${PYSITELIB}/treq/content.py
 ${PYSITELIB}/treq/content.pyc
 ${PYSITELIB}/treq/content.pyo
+${PYSITELIB}/treq/cookies.py
+${PYSITELIB}/treq/cookies.pyc
+${PYSITELIB}/treq/cookies.pyo
 ${PYSITELIB}/treq/multipart.py
 ${PYSITELIB}/treq/multipart.pyc
 ${PYSITELIB}/treq/multipart.pyo
+${PYSITELIB}/treq/py.typed
 ${PYSITELIB}/treq/response.py
 ${PYSITELIB}/treq/response.pyc
 ${PYSITELIB}/treq/response.pyo
@@ -73,6 +83,9 @@ ${PYSITELIB}/treq/test/test_client.pyo
 ${PYSITELIB}/treq/test/test_content.py
 ${PYSITELIB}/treq/test/test_content.pyc
 ${PYSITELIB}/treq/test/test_content.pyo
+${PYSITELIB}/treq/test/test_cookies.py
+${PYSITELIB}/treq/test/test_cookies.pyc
+${PYSITELIB}/treq/test/test_cookies.pyo
 ${PYSITELIB}/treq/test/test_multipart.py
 ${PYSITELIB}/treq/test/test_multipart.pyc
 ${PYSITELIB}/treq/test/test_multipart.pyo
