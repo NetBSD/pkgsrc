@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/10/23 06:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/10/14 07:29:32 wiz Exp $
 
 DISTNAME=		newspipe.1.1.9
 PKGNAME=		${DISTNAME:S/./-/}
@@ -17,6 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text-2019.8.11
 WRKSRC=			${WRKDIR}
 
 PYTHON_VERSIONS_ACCEPTED=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 NO_BUILD=	yes
 REPLACE_PYTHON=	*.py
