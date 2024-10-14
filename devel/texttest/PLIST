@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2023/04/18 16:39:08 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/10/14 14:30:00 schmonz Exp $
 bin/interpretcore
 bin/texttest
-${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/TextTest-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyc
 ${PYSITELIB}/texttestlib/__init__.pyo
@@ -27,6 +27,9 @@ ${PYSITELIB}/texttestlib/default/batch/__init__.pyo
 ${PYSITELIB}/texttestlib/default/batch/batchutils.py
 ${PYSITELIB}/texttestlib/default/batch/batchutils.pyc
 ${PYSITELIB}/texttestlib/default/batch/batchutils.pyo
+${PYSITELIB}/texttestlib/default/batch/ci.py
+${PYSITELIB}/texttestlib/default/batch/ci.pyc
+${PYSITELIB}/texttestlib/default/batch/ci.pyo
 ${PYSITELIB}/texttestlib/default/batch/externalreport.py
 ${PYSITELIB}/texttestlib/default/batch/externalreport.pyc
 ${PYSITELIB}/texttestlib/default/batch/externalreport.pyo
@@ -270,15 +273,9 @@ ${PYSITELIB}/texttestlib/images/throbber_inactive.png
 ${PYSITELIB}/texttestlib/jobprocess.py
 ${PYSITELIB}/texttestlib/jobprocess.pyc
 ${PYSITELIB}/texttestlib/jobprocess.pyo
-${PYSITELIB}/texttestlib/libexec/sitecustomize.py
-${PYSITELIB}/texttestlib/libexec/sitecustomize.pyc
-${PYSITELIB}/texttestlib/libexec/sitecustomize.pyo
-${PYSITELIB}/texttestlib/libexec/startWindowManager.py
-${PYSITELIB}/texttestlib/libexec/startWindowManager.pyc
-${PYSITELIB}/texttestlib/libexec/startWindowManager.pyo
-${PYSITELIB}/texttestlib/libexec/startXvfb.py
-${PYSITELIB}/texttestlib/libexec/startXvfb.pyc
-${PYSITELIB}/texttestlib/libexec/startXvfb.pyo
+${PYSITELIB}/texttestlib/libexec/sitecustomize.pyx
+${PYSITELIB}/texttestlib/libexec/startWindowManager.pyx
+${PYSITELIB}/texttestlib/libexec/startXvfb.pyx
 ${PYSITELIB}/texttestlib/log/logconfiggen_setup.py
 ${PYSITELIB}/texttestlib/log/logconfiggen_setup.pyc
 ${PYSITELIB}/texttestlib/log/logconfiggen_setup.pyo
