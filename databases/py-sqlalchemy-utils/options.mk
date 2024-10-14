@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2024/03/06 20:46:56 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2024/10/14 07:19:43 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
-PKG_SUPPORTED_OPTIONS=	arrow babel furl intervals ipaddress json password
+PKG_SUPPORTED_OPTIONS=	arrow babel furl intervals ipaddress password
 PKG_SUPPORTED_OPTIONS+=	phone timezone
 PKG_SUGGESTED_OPTIONS+=	# blank
 
@@ -25,10 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-intervals>=0.2.4:../../math/py-intervals
 
 .if !empty(PKG_OPTIONS:Mipaddress)
 DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
-.endif
-
-.if !empty(PKG_OPTIONS:Mjson)
-DEPENDS+=	${PYPKGPREFIX}-anyjson>=0.3.3:../../textproc/py-anyjson
 .endif
 
 .if !empty(PKG_OPTIONS:Mpassword)
