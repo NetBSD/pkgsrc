@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/05/29 16:31:24 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/14 07:29:32 wiz Exp $
 
 DISTNAME=	quodlibet-4.6.0
 PKGREVISION=	2
@@ -40,7 +40,7 @@ USE_TOOLS+=	msgfmt
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 313
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 || ${TRUE}
