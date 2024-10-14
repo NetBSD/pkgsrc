@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/04/11 14:49:41 bacon Exp $
-#
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:31 wiz Exp $
 
 DISTNAME=	atac-seq-1.5.0
 CATEGORIES=	biology meta-pkgs
@@ -28,9 +27,6 @@ DEPENDS+=	xz>0:../../archivers/xz
 DEPENDS+=	zstd>0:../../archivers/zstd
 
 META_PACKAGE=	yes
-
-# Inherited from py-macs2 dep
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

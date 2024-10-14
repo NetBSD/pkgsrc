@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2024/08/10 06:44:19 adam Exp $
+# $NetBSD: Makefile,v 1.102 2024/10/14 06:46:01 wiz Exp $
 
 DISTNAME=	sphinx-8.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.9:../../devel/py-typing-exten
 USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # as of 8.0.2
 # 37 failed, 2126 passed, 30 skipped, 3 warnings

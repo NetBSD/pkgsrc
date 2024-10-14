@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/04/07 07:34:45 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/10/14 06:45:54 wiz Exp $
 
 DISTNAME=	pitivi-0.999
 PKGREVISION=	18
@@ -30,10 +30,7 @@ SUBST_VARS.py+=		PYVERSSUFFIX
 
 REPLACE_PYTHON+=	bin/pitivi.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 PY_PATCHPLIST=			yes
-# Workaround for Python 3.8
-LDFLAGS+=			-lpython${PYVERSSUFFIX}
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/29 10:32:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:54 wiz Exp $
 
 DISTNAME=	aioresponses-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.4.1:../../devel/py-ddt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

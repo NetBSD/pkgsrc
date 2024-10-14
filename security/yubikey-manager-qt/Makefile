@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/29 16:34:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:45:57 wiz Exp $
 
 DISTNAME=	yubikey-manager-qt-1.2.5
 PKGREVISION=	9
@@ -22,8 +22,6 @@ MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 # https://github.com/Yubico/yubikey-manager-qt/issues/342
 MAKE_ENV+=		SUBLIBS=-lpython${PYVERSSUFFIX}
 INSTALLATION_DIRS+=	bin
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 pre-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${QTDIR}/bin/qmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/01/18 18:21:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:45:38 wiz Exp $
 
 DISTNAME=	falcon-3.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.21:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

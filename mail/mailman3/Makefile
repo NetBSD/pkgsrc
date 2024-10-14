@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/02/12 11:54:05 markd Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:47 wiz Exp $
 
 DISTNAME=	mailman-3.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.2:../../databases/py-alembic

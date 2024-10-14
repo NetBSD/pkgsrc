@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/15 11:36:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:41 wiz Exp $
 
 DISTNAME=	testrepository-0.0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testresources-[0-9]*:../../devel/py-testresources
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} testr testr-${PYVERSSUFFIX} || ${TRUE}

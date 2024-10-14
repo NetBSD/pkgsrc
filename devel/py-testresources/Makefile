@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:41 wiz Exp $
 
 DISTNAME=	testresources-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures
 DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && pytest-${PYVERSSUFFIX}

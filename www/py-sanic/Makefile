@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/07/23 05:33:50 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/14 06:46:08 wiz Exp $
 
 DISTNAME=	sanic-24.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -42,8 +42,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-types-ujson-[0-9]*:../../devel/py-types-ujson
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

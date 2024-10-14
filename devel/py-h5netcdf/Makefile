@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/05 20:37:05 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/14 06:45:36 wiz Exp $
 
 DISTNAME=	h5netcdf-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-netCDF4-[0-9]*:../../math/py-netCDF4
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

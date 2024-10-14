@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/03/03 17:09:22 gutteridge Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/14 06:45:32 wiz Exp $
 
 DISTNAME=	gdstk-0.9.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	cmake
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/08/04 13:05:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:52 wiz Exp $
 
 DISTNAME=	xgboost-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ USE_LANGUAGES+=	c gnu++17
 USE_TOOLS+=	cmake ninja
 GCC_REQD+=	8.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Darwin"

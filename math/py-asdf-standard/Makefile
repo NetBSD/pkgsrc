@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/15 06:05:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 06:45:48 wiz Exp $
 
 DISTNAME=	asdf_standard-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=16.0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml>=0:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

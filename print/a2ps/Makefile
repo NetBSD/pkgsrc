@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2024/03/13 15:07:30 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2024/10/14 06:45:55 wiz Exp $
 
 DISTNAME=		a2ps-4.15.5
 PKGREVISION=		2
@@ -23,8 +23,6 @@ CONFIGURE_ARGS+=	ac_cv_prog_EMACS=no
 CONFIGURE_ENV+=		file_prog=${FILE_CMD:Q}
 
 INFO_FILES=		yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CFLAGS.Darwin+=		-flat_namespace
 

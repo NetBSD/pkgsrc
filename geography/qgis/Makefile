@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2024/10/04 03:49:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.225 2024/10/14 06:45:44 wiz Exp $
 
 # This is intentionally 3.34 Long Term Release.  Please do not update
 # to later branches, and instead discuss whether/how we want multiple
@@ -75,8 +75,6 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_3D=FALSE
 # has not been broken.
 CMAKE_CONFIGURE_ARGS+=		-DWITH_SERVER:BOOL=TRUE
 CMAKE_CONFIGURE_ARGS+=		-DQGIS_CGIBIN_SUBDIR=libexec/cgi-bin
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 # \todo Consider (optional?) dependency on GRASS.
 # \todo Consider (optional?) dependency on SAGA.

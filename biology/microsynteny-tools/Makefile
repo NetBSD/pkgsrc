@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/06 20:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:32 wiz Exp $
 
 DISTNAME=	microsynteny-tools-0.1.0.175
 CATEGORIES=	biology
@@ -17,8 +17,6 @@ DEPENDS+=	auto-admin>0:../../sysutils/auto-admin
 DEPENDS+=	biolibc-tools>0:../../biology/biolibc-tools
 
 REPLACE_PYTHON=	Scripts/*.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../biology/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
