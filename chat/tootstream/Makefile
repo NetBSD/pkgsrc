@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/10/14 06:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/10/14 08:11:12 nia Exp $
 
-DISTNAME=	tootstream-0.3.8.1
-PKGREVISION=	6
+DISTNAME=	tootstream-0.4.0
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magicalraccoon/}
 
@@ -15,8 +14,8 @@ DEPENDS+=	${PYPKGPREFIX}-colored>=1.3.93:../../textproc/py-colored
 DEPENDS+=	${PYPKGPREFIX}-emoji>=0.4.5:../../converters/py-emoji
 DEPENDS+=	${PYPKGPREFIX}-humanize>=0.5.1:../../textproc/py-humanize
 DEPENDS+=	${PYPKGPREFIX}-mastodon>=1.5.0:../../chat/py-mastodon
+DEPENDS+=	${PYPKGPREFIX}-pytimeparse>=0:../../time/py-pytimeparse
 
-EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	# none
 
 USE_PKG_RESOURCES=	yes

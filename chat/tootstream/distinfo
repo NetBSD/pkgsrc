@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:05:27 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/10/14 08:11:12 nia Exp $
 
-BLAKE2s (tootstream-0.3.8.1.tar.gz) = ecd86e8890dfe2a76eee18d62292dc7796bd4e884f8804b98ac40047a7eaa45f
-SHA512 (tootstream-0.3.8.1.tar.gz) = 7082e911d07cfd003a3a9ee25f63972ab0a4441ba00f5ec3f965ba30090e149c7551a97d50cc50832c8288336b23bf2b62216b8aa3bfc6695ed9bf9fad3e4d76
-Size (tootstream-0.3.8.1.tar.gz) = 25509 bytes
+BLAKE2s (tootstream-0.4.0.tar.gz) = 28e9125d830ea52934f0f47152006fb1dfbbec957c1221fb114dc191ce299fe2
+SHA512 (tootstream-0.4.0.tar.gz) = efaa2322be4d0fed3f4f497b779f926e95223ad3e2124422e0802e6a7134592321f24cb9829dd79e8f593aa8b81acf4811c7ec04b387765cd864134d6a2180cd
+Size (tootstream-0.4.0.tar.gz) = 27829 bytes
