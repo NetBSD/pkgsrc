@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2024/09/21 20:28:54 mef Exp $
+# $NetBSD: Makefile,v 1.52 2024/10/14 01:45:33 mef Exp $
 
-DISTNAME=	nqp-2024.08
+DISTNAME=	nqp-2024.09
 CATEGORIES=	lang perl6
 #ASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
