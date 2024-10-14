@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/08/05 19:36:24 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:51 wiz Exp $
 
 DISTNAME=	pymc3-3.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-semver>=2.13.0:../../devel/py-semver
 DEPENDS+=	${PYPKGPREFIX}-theano-pymc>=1.1.2:../../math/py-theano-pymc
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

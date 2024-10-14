@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/21 15:15:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:39 wiz Exp $
 
 DISTNAME=	gidgethub-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,8 +26,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-tornasync-[0-9]*:../../devel/py-test-tornasync
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

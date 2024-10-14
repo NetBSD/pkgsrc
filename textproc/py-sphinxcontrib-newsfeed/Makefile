@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/08/10 08:01:16 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/14 06:46:03 wiz Exp $
 
 DISTNAME=	sphinxcontrib-newsfeed-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
 
 USE_LANGUAGES=	# none
 

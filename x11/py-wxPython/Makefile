@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/04/07 07:35:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 06:46:09 wiz Exp $
 
 DISTNAME=	wxPython-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
 MAKE_ENV+=			WX_CONFIG=wx-config-3.2

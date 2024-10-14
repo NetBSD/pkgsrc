@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/07 19:27:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:53 wiz Exp $
 
 DISTNAME=	asdf_wcs_schemas-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-asdf_coordinates_schemas>=0.3.0:../../math/py-asdf
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

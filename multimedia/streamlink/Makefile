@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/12/25 17:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/10/14 06:45:54 wiz Exp $
 
 DISTNAME=	streamlink-5.5.1
 PKGREVISION=	2
@@ -27,8 +27,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun>=1.0.0:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/flv.py
 REPLACE_PYTHON+=	src/streamlink/packages/flashmedia/tag.py

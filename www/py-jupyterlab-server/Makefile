@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/07/20 19:07:04 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/14 06:46:07 wiz Exp $
 
 DISTNAME=	jupyterlab_server-2.27.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -27,8 +27,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 # TODO: strict_rfc3339
 
 USE_LANGUAGES=		# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/01/16 10:51:00 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:55 wiz Exp $
 
 DISTNAME=	twython-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oauthlib
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

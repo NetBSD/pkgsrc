@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2023/11/07 22:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/14 06:45:54 wiz Exp $
 
 DISTNAME=	CoilMQ-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -20,8 +20,6 @@ DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

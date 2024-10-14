@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/12/25 10:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:32 wiz Exp $
 
 DISTNAME=	MACS2-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macs2-2.2.9.1
@@ -15,9 +15,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-
-# Requires new python features
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 CYTHONIZE=	${PREFIX}/bin/cythonize-${PYVERSSUFFIX}
 

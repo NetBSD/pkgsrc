@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/04/21 13:41:01 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/14 06:45:40 wiz Exp $
 
 DISTNAME=	requests-mock-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-testrepository>=0.0.18:../../devel/py-testrepository
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

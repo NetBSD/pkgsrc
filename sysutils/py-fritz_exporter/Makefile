@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/12/16 08:53:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:59 wiz Exp $
 
 DISTNAME=	fritz_exporter-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}/fritz_exporter-${GITHUB_TAG}
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

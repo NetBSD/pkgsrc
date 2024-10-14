@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/08/07 16:05:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:32 wiz Exp $
 
 DISTNAME=	macs-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-macs3-3.0.1
@@ -22,7 +22,7 @@ TEST_DEPENDS=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 USE_TOOLS+=	bash perl:test
 REPLACE_BASH=	test/cmdlinetest* test/prockreport test/*.py test/pyprofile*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 do-test: install
 	${RM} -rf ${WRKSRC}/temp

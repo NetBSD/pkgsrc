@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/04/07 07:34:17 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2024/10/14 06:45:44 wiz Exp $
 
 DISTNAME=	mypaint-2.0.0
 PKGREVISION=	20
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 TOOL_DEPENDS+=	swig3-[0-9]*:../../devel/swig3
 
 EGG_NAME=	MyPaint-${PKGVERSION_NOREV}a0
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=	c c++
 
