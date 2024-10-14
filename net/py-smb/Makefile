@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2023/03/09 05:26:07 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/14 13:45:15 adam Exp $
 
-DISTNAME=	pysmb-1.2.9.1
+DISTNAME=	pysmb-1.2.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmb/}
@@ -16,7 +16,5 @@ DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # py-tqdm
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
