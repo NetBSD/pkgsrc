@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/25 10:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/10/14 06:46:09 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 COMMENT=	Python WSGI Utility Library (HTML documentation)
@@ -13,7 +13,7 @@ NO_CONFIGURE=	yes
 BUILD_TARGET=	html
 BUILD_DIRS=	docs
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
 
 INSTALLATION_DIRS+=	${DOCDIR}/html
 

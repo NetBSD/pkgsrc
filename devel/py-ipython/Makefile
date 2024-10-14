@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/10/03 10:11:47 adam Exp $
+# $NetBSD: Makefile,v 1.103 2024/10/14 06:45:39 wiz Exp $
 
 DISTNAME=	ipython-8.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-appnope-[0-9]*:../../sysutils/py-appnope
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

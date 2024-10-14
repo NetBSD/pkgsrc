@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/08/06 13:06:28 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:03 wiz Exp $
 
 DISTNAME=	sphinxcontrib_htmlhelp-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,8 +15,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=5:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

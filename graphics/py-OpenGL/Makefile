@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/10/11 08:18:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2024/10/14 06:45:45 wiz Exp $
 
 DISTNAME=	PyOpenGL-3.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	OpenGL/arrays/buffers.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 313
+PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} tests/test_core.py

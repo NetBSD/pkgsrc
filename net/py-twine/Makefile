@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/07/14 13:31:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/14 06:45:55 wiz Exp $
 
 DISTNAME=	twine-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,8 +28,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test_socket-[0-9]*:../../devel/py-test_socket
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

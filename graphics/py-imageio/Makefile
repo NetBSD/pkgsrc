@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/08/19 09:20:12 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/14 06:45:45 wiz Exp $
 
 DISTNAME=	imageio-2.35.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec-[0-9]*:../../sysutils/py-fsspec
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

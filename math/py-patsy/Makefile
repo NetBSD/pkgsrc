@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/01/04 22:07:20 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/14 06:45:50 wiz Exp $
 
 DISTNAME=	patsy-0.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

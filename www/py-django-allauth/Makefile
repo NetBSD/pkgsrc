@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/07/17 09:12:54 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:06 wiz Exp $
 
 DISTNAME=	django_allauth-0.63.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oauthlib
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

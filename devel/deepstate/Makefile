@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/13 19:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/14 06:45:35 wiz Exp $
 
 PKGREVISION=	7
 
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-smt>=0.9.5:../../math/py-smt
 DEPENDS+=	${PYPKGPREFIX}-toolz>=0.9.1:../../devel/py-toolz
 DEPENDS+=	${PYPKGPREFIX}-z3-[0-9]*:../../math/py-z3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 311 312 313
+PYTHON_VERSIONS_INCOMPATIBLE=	39 311 312 313
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	${WRKSRC}

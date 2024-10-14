@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/09/04 23:38:30 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2024/10/14 06:45:43 wiz Exp $
 
 VERSION_BASE=	1.19.0
 VERSION_RC=
@@ -12,8 +12,6 @@ COMMENT=	Distributed fault-tolerant least-authority filesystem
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS=	gmake
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

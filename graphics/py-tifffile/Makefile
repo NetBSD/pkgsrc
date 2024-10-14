@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/10/03 08:56:03 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/14 06:45:46 wiz Exp $
 
 DISTNAME=	tifffile-2024.9.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec-[0-9]*:../../sysutils/py-fsspec
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 post-install:
 .for bin in lsm2bin tiff2fsspec tiffcomment tifffile

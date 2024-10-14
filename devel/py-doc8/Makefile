@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/09/02 21:07:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:38 wiz Exp $
 
 DISTNAME=	doc8-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-restructuredtext_lint>=0.7:../../devel/py-restructuredt
 DEPENDS+=	${PYPKGPREFIX}-stevedore-[0-9]*:../../devel/py-stevedore
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

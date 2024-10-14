@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2024/04/05 08:04:35 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/10/14 06:45:47 wiz Exp $
 #
 # used by mail/notmuch-emacs/Makefile
 # used by mail/py-notmuch2/Makefile
@@ -26,7 +26,6 @@ TEST_TARGET=	check
 USE_CXX_FEATURES+=	c++11
 
 PYTHON_FOR_BUILD_ONLY?=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 REPLACE_BASH+=	emacs/notmuch-emacs-mua
 

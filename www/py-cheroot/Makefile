@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/05/05 18:38:43 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/10/14 06:46:05 wiz Exp $
 
 DISTNAME=	cheroot-10.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,8 +31,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.28.0:../../devel/py-test-xdist
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.4.0:../../security/py-trustme
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

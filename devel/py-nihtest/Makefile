@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/06/07 12:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:40 wiz Exp $
 
 DISTNAME=	nihtest-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 USE_TOOLS+=	cmake:test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 

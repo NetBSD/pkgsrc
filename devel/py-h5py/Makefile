@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/06/18 10:42:30 markd Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:39 wiz Exp $
 
 DISTNAME=	h5py-3.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 #TEST_DEPENDS+=	py-test-mpi
 
 MAKE_ENV=	HDF5_DIR=${PREFIX}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 BUILDLINK_API_DEPENDS.hdf5+=	hdf5>=1.10.4
 .include "../../devel/hdf5/buildlink3.mk"

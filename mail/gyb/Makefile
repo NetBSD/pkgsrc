@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/07 22:38:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:47 wiz Exp $
 
 DISTNAME=	gyb-1.71
 PKGREVISION=	2
@@ -30,8 +30,6 @@ SUBST_FILES.config=	gyb.py
 SUBST_SED.config=	-e 's:PKG_SYSCONFDIR:${PKG_SYSCONFDIR}:'
 
 PKG_SYSCONFSUBDIR=	gyb
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-install:
 	cd ${WRKSRC};								\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/03/21 20:00:52 markd Exp $
+# $NetBSD: Makefile,v 1.22 2024/10/14 06:45:53 wiz Exp $
 
 DISTNAME=	collection-fontutils
 PKGNAME=	texlive-${DISTNAME}-2024
@@ -32,8 +32,6 @@ DEPENDS+=	t1utils-[0-9]*:../../fonts/t1utils
 DEPENDS+=	tex-ttfutils-[0-9]*:../../fonts/tex-ttfutils
 
 META_PACKAGE=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

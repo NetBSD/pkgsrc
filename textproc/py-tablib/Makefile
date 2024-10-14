@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/27 04:59:31 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/14 06:46:04 wiz Exp $
 
 DISTNAME=	tablib-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

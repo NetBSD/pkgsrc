@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/01/28 01:55:30 gutteridge Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:38 wiz Exp $
 
 DISTNAME=	fixtures-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

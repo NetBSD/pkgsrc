@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/07 22:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/14 06:45:37 wiz Exp $
 
 DISTNAME=	buildbot-console-view-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-buildbot-[0-9]*:../../devel/py-buildbot
 TOOL_DEPENDS+=	${PYPKGPREFIX}-buildbot-pkg-[0-9]*:../../devel/py-buildbot-pkg
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

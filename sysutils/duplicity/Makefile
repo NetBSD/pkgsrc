@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/08/23 12:20:05 triaxx Exp $
+# $NetBSD: Makefile,v 1.72 2024/10/14 06:45:58 wiz Exp $
 
 DISTNAME=	duplicity-3.0.2
 CATEGORIES=	sysutils net python
@@ -42,8 +42,6 @@ LFTP=	${PREFIX}/bin/lftp
 
 REPLACE_PYTHON+=	bin/duplicity
 REPLACE_PYTHON+=	bin/rdiffdir
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

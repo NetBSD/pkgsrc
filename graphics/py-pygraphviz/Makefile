@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/10/01 20:11:37 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/10/14 06:45:45 wiz Exp $
 
 DISTNAME=	pygraphviz-1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

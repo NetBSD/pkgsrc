@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/25 16:30:22 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:00 wiz Exp $
 
 DISTNAME=	lunr-0.7.0.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-nltk>=0:../../textproc/py-nltk
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

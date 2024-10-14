@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/08/10 06:52:26 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/10/14 06:45:53 wiz Exp $
 
 DISTNAME=	khard-0.19.1
 CATEGORIES=	misc net python
@@ -19,7 +19,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autoapi-[0-9]*:../../textproc/py-sphinx-autoapi
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-autodoc-typehints>=1.10:../../textproc/py-sphinx-autodoc-typehints
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
 
 USE_PKG_RESOURCES=	yes
 
