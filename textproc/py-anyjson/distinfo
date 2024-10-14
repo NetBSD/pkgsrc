@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/12/06 14:59:35 wiz Exp $
-
-BLAKE2s (anyjson-0.3.3.tar.gz) = f3c7a9d4e674fac19d1399b39c9e04eff269b55b215825f68ed96e16e0d547a0
-SHA512 (anyjson-0.3.3.tar.gz) = 9e70df3cb8bfe2348fdb0eb03cf3c33ca5a1171aca6467787fc28c161354b5ebe89b2f73badfa00708774d6825799860493ddcac7f5da8cc9c251b92b5a343bc
-Size (anyjson-0.3.3.tar.gz) = 8332 bytes
-SHA1 (patch-setup.py) = c7186ca58e4363cda5f4f7e8caccff3909e375fe

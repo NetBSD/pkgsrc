@@ -1,2 +1,0 @@
-Anyjson loads whichever is the fastest JSON module installed and provides
-a uniform API regardless of which JSON implementation is used
