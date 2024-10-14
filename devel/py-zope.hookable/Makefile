@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/10/06 10:50:27 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 10:42:39 adam Exp $
 
-DISTNAME=	zope.hookable-6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	zope_hookable-7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.hookable/}
 
@@ -10,7 +10,10 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.hookable
 COMMENT=	Zope hookable
 LICENSE=	zpl-2.1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:S/_/./}
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
