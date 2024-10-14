@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/10/12 10:50:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/10/14 05:27:42 adam Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -194,6 +194,9 @@ ${PYSITELIB}/icalendar/tests/test_issue_500_vboolean_for_parameter.pyo
 ${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.py
 ${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.pyc
 ${PYSITELIB}/icalendar/tests/test_issue_557_encode_native_parameters.pyo
+${PYSITELIB}/icalendar/tests/test_issue_662_component_properties.py
+${PYSITELIB}/icalendar/tests/test_issue_662_component_properties.pyc
+${PYSITELIB}/icalendar/tests/test_issue_662_component_properties.pyo
 ${PYSITELIB}/icalendar/tests/test_multiple.py
 ${PYSITELIB}/icalendar/tests/test_multiple.pyc
 ${PYSITELIB}/icalendar/tests/test_multiple.pyo
