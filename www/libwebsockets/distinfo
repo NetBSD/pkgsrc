@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2024/02/10 11:01:38 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/10/14 17:19:24 nros Exp $
 
 BLAKE2s (libwebsockets-4.3.3.tar.gz) = 2b78281dfe0dd11f0a4598bbb6d53859a484809a09e66a85c7f6f0a6a0b2febc
 SHA512 (libwebsockets-4.3.3.tar.gz) = 2ffd248ddf283369725097ca7410f947fe0389c360b329c76f0754afab4ba87c20a0687c5e7b8bd991b157f9d20c6faa3049757b3398e66d08662c3aa7ff9658
 Size (libwebsockets-4.3.3.tar.gz) = 15618186 bytes
+SHA1 (patch-lib_CMakeLists.txt) = 26bbb310897fb8c9b24f97e53964e7a7d772d9cf
