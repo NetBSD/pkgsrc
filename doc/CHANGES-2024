@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6232 2024/10/14 09:52:13 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6233 2024/10/14 09:58:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9435,3 +9435,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pkgconfig to 1.5.5nb2 [wiz 2024-10-14]
 	Updated lang/py-spark-parser to 1.9.0 [adam 2024-10-14]
 	Updated net/py-zeep to 4.3.0 [adam 2024-10-14]
+	Updated parallel/py-billiard to 4.2.1 [adam 2024-10-14]
+	Updated time/py-isodate to 0.7.2 [adam 2024-10-14]
