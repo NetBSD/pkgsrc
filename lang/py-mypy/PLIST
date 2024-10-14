@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/07/22 04:53:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2024/10/14 13:24:19 adam Exp $
 bin/dmypy-${PYVERSSUFFIX}
 bin/mypy-${PYVERSSUFFIX}
 bin/mypyc-${PYVERSSUFFIX}
@@ -549,6 +549,9 @@ ${PYSITELIB}/mypy/typeshed/stdlib/_dummy_thread.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_dummy_threading.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_heapq.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_imp.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_interpchannels.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_interpqueues.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/_interpreters.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_json.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_locale.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/_lsprof.pyi
@@ -666,6 +669,7 @@ ${PYSITELIB}/mypy/typeshed/stdlib/dbm/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dbm/dumb.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dbm/gnu.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dbm/ndbm.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/dbm/sqlite3.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/decimal.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/difflib.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/dis.pyi
@@ -791,8 +795,11 @@ ${PYSITELIB}/mypy/typeshed/stdlib/importlib/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/machinery.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/__init__.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/_meta.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/metadata/diagnose.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/readers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/__init__.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/_common.pyi
+${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/_functional.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/abc.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/readers.pyi
 ${PYSITELIB}/mypy/typeshed/stdlib/importlib/resources/simple.pyi
