@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile,v 1.1 2024/10/14 15:03:31 nia Exp $
+
+Honour PKGMANDIR.
+
+--- Makefile.orig	2024-10-14 15:02:09.475986738 +0000
++++ Makefile
+@@ -133,11 +133,11 @@ realclean: clean
+ # Install all target files (binaries, libraries, docs, etc.)
+ 
+ install: all
+-	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/man/man1
++	${MKDIR} -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+ 	${INSTALL} -s -m 0755 ${BIN} ${DESTDIR}${PREFIX}/bin
+ 	${INSTALL} -s -m 0755 ${BIN} ${DESTDIR}${PREFIX}/bin/asroot
+-	${INSTALL} -m 0644 ${MAN} ${DESTDIR}${MANPREFIX}/man/man1
+-	${INSTALL} -m 0644 ${MAN} ${DESTDIR}${MANPREFIX}/man/man1/asroot.1
++	${INSTALL} -m 0644 ${MAN} ${DESTDIR}${MANPREFIX}/${PKGMANDIR}/man1
++	${INSTALL} -m 0644 ${MAN} ${DESTDIR}${MANPREFIX}/${PKGMANDIR}/man1/asroot.1
+ 
+ help:
+ 	@printf "Usage: make [VARIABLE=value ...] all\n\n"
