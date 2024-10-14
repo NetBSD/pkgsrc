@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2024/10/12 10:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2024/10/14 10:00:02 wiz Exp $
 
 DISTNAME=	numpy-2.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python-[0-9]*:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.2.0:../../devel/py-typing-extensions
 
@@ -98,7 +97,7 @@ SUBST_FILES.paths=	numpy/tests/test_configtool.py
 SUBST_SED.paths=	-e 's,'numpy-config','numpy-config-${PYVERSSUFFIX}',g'
 
 # as of 2.1.2
-# 35 failed, 46413 passed, 1713 skipped, 2799 deselected, 34 xfailed, 5 xpassed, 1 warning
+# 32 failed, 46416 passed, 1713 skipped, 2799 deselected, 34 xfailed, 5 xpassed, 1 warning
 do-test:
 	cd ${WRKDIR} && \
 	${SETENV} ${TEST_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
