@@ -1,10 +1,12 @@
-$NetBSD: patch-setup.py,v 1.5 2018/04/27 07:45:09 adam Exp $
+$NetBSD: patch-setup.py,v 1.6 2024/10/14 07:24:52 wiz Exp $
 
 Relax requirements.
 
---- setup.py.orig	2018-04-18 09:28:51.000000000 +0000
+Remove unused anyjson test dependency.
+
+--- setup.py.orig	2018-12-15 19:00:21.000000000 +0000
 +++ setup.py
-@@ -67,21 +67,21 @@ if sys.version_info >= (3, 5):
+@@ -70,26 +70,25 @@ if sys.version_info >= (3, 5):
  tests_require = [
      'bottle',
      'celery>=2.5',
@@ -35,3 +37,8 @@ Relax requirements.
      'tox',
      'webob',
      'webtest',
+     'wheel',
+-    'anyjson',
+     'ZConfig',
+ ] + (
+     flask_requires + flask_tests_requires
