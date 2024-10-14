@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/19 01:19:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/10/14 17:19:56 adam Exp $
 
-BLAKE2s (tinydb-4.8.0.tar.gz) = d77c65097c70497e0c981775ea29d96421814ca1017a97dfbf840fc232b629fd
-SHA512 (tinydb-4.8.0.tar.gz) = 7f1932b766aba34f3721f0fbb7d45b8f39036caf8c41767e21232d4f329f00e440eb93a7284daa7b6df3a6700a5b4fcbdd6a7b79601ffd95480a86065cf7907c
-Size (tinydb-4.8.0.tar.gz) = 32178 bytes
+BLAKE2s (tinydb-4.8.2.tar.gz) = 8af9e1ac926e45b5f5439c1821c9cc854fd840d4fcc1ccae8400dde7df1dac68
+SHA512 (tinydb-4.8.2.tar.gz) = d54fea5899c333d44d189e67c0ed63737f8f5c4cce46c20a260ea73f546e03807610a4d65baad2887715032ce5d81f3fa3a5599d673ebb4e037b34b8e1f26e4a
+Size (tinydb-4.8.2.tar.gz) = 32566 bytes
