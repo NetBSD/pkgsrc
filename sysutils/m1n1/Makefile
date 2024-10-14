@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/06 12:42:21 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 15:17:35 nia Exp $
 
 GITHUB_PROJECT=	m1n1
 GITHUB_TAG=	4df78129aac4547231dbac662d28c3b67b13cc79
@@ -30,7 +30,7 @@ INSTALLATION_DIRS=	share/m1n1
 
 post-extract:
 	# XXX why?
-	mv -v ${WRKSRC}/artwork/artwork-*/* ${WRKSRC}/artwork
+	${MV} ${WRKSRC}/artwork/artwork-*/* ${WRKSRC}/artwork
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/m1n1.macho ${DESTDIR}${PREFIX}/share/m1n1
