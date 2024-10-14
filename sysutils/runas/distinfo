@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2023/10/29 11:46:46 bacon Exp $
+$NetBSD: distinfo,v 1.3 2024/10/14 15:03:31 nia Exp $
 
 BLAKE2s (runas-0.2.0.tar.gz) = f450fcde7f37f2a27e5786c9aa852d23f3333f9746c0d82f2828292c658a4b27
 SHA512 (runas-0.2.0.tar.gz) = c18263364f15251c0ad5c756de886ac4a8e666e9220cfec2f357d1e164e583a2d65c00ee13740f6482e61ced7c1a6f609a7357e6bb1d09a6fdb37b6b782a7011
 Size (runas-0.2.0.tar.gz) = 4920 bytes
+SHA1 (patch-Makefile) = c0b7f3d608b21c4df5ac0759d3064847d5ec96fa
