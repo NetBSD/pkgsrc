@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/10 04:56:16 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 06:08:40 wiz Exp $
 
 DISTNAME=	babelfish-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,12 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.0:../../devel/py-importlib-resources
-.endif
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.6:../../devel/py-importlib-metadata
 .endif

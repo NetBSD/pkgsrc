@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/14 06:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	dirty_equals-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -16,13 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-examples-[0-9]*:../../devel/py-test-examples
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-pytz>=2021.3:../../time/py-pytz
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

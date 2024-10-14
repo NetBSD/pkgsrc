@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/03/02 13:01:17 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/14 06:08:39 wiz Exp $
 
 DISTNAME=	pdm-2.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -36,12 +36,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.31.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
-
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5:../../devel/py-importlib-resources
-.endif
+
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 .endif

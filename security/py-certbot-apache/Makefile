@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/06/06 12:05:45 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/14 06:08:40 wiz Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -10,11 +10,6 @@ COMMENT=	Apache plugin for Certbot
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-augeas-[0-9]*:../../sysutils/py-augeas
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3.1:../../devel/py-importlib-resources
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

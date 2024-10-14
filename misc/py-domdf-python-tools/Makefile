@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/14 09:12:00 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/14 06:08:40 wiz Exp $
 
 DISTNAME=	domdf_python_tools-3.8.0.post2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,13 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4.1:../../devel/py-typing-extens
 #TEST_DEPENDS+=	${PYPKGPREFIX}-coincidence
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6.0:../../devel/py-importlib-metadata
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
