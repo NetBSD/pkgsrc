@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2024/10/14 21:27:44 gdt Exp $
+$NetBSD: distinfo,v 1.33 2024/10/14 21:51:21 gdt Exp $
 
 BLAKE2s (mosquitto-2.0.19.tar.gz) = bed44b4f1a969e997b512adb0ba86078c8cfe43ddd1195531d7b6f5273c5563f
 SHA512 (mosquitto-2.0.19.tar.gz) = ea716c1fd8dd7dc60e2f0bf5c2f0f5b98f73d1ea404420c755aff82ba2e70e54e0fe19bd045be8322971d290111ee556830e7f71da7cdcf27917f393d1fa7238
@@ -9,4 +9,4 @@ SHA1 (patch-lib_CMakeLists.txt) = a1b1327c81eefc13fcb5249697f7a6bc3c94e308
 SHA1 (patch-lib_net__mosq.c) = fdf488984e3b902473f28d6e3482169788c0d517
 SHA1 (patch-lib_strings__mosq.c) = fb290d7766328d6aa1e935adec9c0fad2eb11c4b
 SHA1 (patch-mosquitto.conf) = 3aa9b02d8bfefa140814c2c70e120331a58a5e11
-SHA1 (patch-src_CMakeLists.txt) = aac198d154e85527349302b32f78a7027164422b
+SHA1 (patch-src_CMakeLists.txt) = ad906a507fcd39ac4fdcf98afde75ff715101698
