@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2024/04/07 07:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2024/10/14 00:53:52 mef Exp $
 #
 
-DISTNAME=	xlog-2.0.24
-PKGREVISION=	6
+DISTNAME=	xlog-2.0.25
 CATEGORIES=	ham
 MASTER_SITES=	https://download.savannah.gnu.org/releases/xlog/
 LICENSE=	gnu-gpl-v3
@@ -26,7 +25,7 @@ USE_TOOLS+=		gmake pkg-config
 # Fails with gcc 5.5.0 (netbsd-8), and presumably earlier.
 # OK with gcc 7.4.0.
 # Fails with clang.
-.if !empty(CC_VERSION:Mgcc-[45].*) || !empty(PKGSRC_COMPILER:Mclang)
+.if ${CC_VERSION:Mgcc-[45].*} || !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-stringop-truncation
 .endif
 
@@ -47,6 +46,7 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=uninitialized
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
