@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.77 2024/10/11 11:52:23 jperkin Exp $
+# $NetBSD: fetch.mk,v 1.78 2024/10/14 08:02:40 jperkin Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -290,6 +290,7 @@ _FETCH_CMD.curl=		${PKGSRC_SETENV} \
 				${TOOLS_PATH.curl}
 
 _FETCH_CMD.manual=		${TOOLS_PATH.false}
+_FETCH_CMD.mktool=		${TOOLS_PATH.false}
 
 _FETCH_CMD.custom=		${FETCH_CMD}
 _FETCH_BEFORE_ARGS.custom=	${FETCH_BEFORE_ARGS}
