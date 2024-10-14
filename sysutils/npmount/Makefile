@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/10/28 20:53:25 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 15:08:32 nia Exp $
 
 DISTNAME=	npmount-0.1.1.3
 CATEGORIES=	sysutils
@@ -12,6 +12,8 @@ LICENSE=	2-clause-bsd
 
 EGDIR=		${PREFIX}/share/examples/npmount
 CONF_FILES=	${EGDIR}/npmount.conf.sample ${PREFIX}/etc/npmount.conf
+
+LDFLAGS.SunOS+=	-lsocket -lresolv -lnsl
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
