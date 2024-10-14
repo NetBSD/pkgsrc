@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/09/02 00:54:07 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2024/10/14 13:59:56 schmonz Exp $
 
 BLAKE2s (cloud.google.com_go_@v_v0.26.0.mod) = 53d181aacbf96ec4f9cdd051466576dbb6959ca71a825bc6672046c7c53a2b43
 SHA512 (cloud.google.com_go_@v_v0.26.0.mod) = 5132f3438533427c0ab0fbb7a12112a7830ea9122662ed46019ff89c71d9cf80c02edc32dd5c892da572031b5a2cce100f2602fa6a19bea6be7c02781f701273
@@ -114,9 +114,9 @@ Size (cloud.google.com_go_storage_@v_v1.8.0.mod) = 622 bytes
 BLAKE2s (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 2136184228fc4913040e8abab210d9694fa46310b1073dbb42e1697f8591c1f2
 SHA512 (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 196affe091247f94ceda4b56629bd62d4ee2b397f2c0f56c9534c02e43531b46705ad33543b58c1a4fc7a48e25e5923db087fe0485a93966a4086581c0d1d3e1
 Size (dmitri.shuralyov.com_gpu_mtl_@v_v0.0.0-20190408044501-666a987793e9.mod) = 36 bytes
-BLAKE2s (exercism-cli-3.5.1.tar.gz) = 0c5a4a1566120124024a3e4d28034b44c40134381e17ec7ec822d1000d62ef45
-SHA512 (exercism-cli-3.5.1.tar.gz) = 18ab30693c227a765ce005963684b68dd22ee873f3f7742a3697f1ff63895ba7aaabe7f9d55eff5f0850989db7ad71ec23f8fc7a24526446796e8b5af9e56789
-Size (exercism-cli-3.5.1.tar.gz) = 79386 bytes
+BLAKE2s (exercism-cli-3.5.2.tar.gz) = 130ab060017f0d3f70c1dbd3fafa127fb157bb52c2392cd08e0e4c269c232bf8
+SHA512 (exercism-cli-3.5.2.tar.gz) = 58594f76872cd805db6b19ac12057e205f9c660d7482b5412c0a55dfd5f12d4ca9df693cec48d19086ca9dc2671b714f345477d8596a1efaa62303636eccb974
+Size (exercism-cli-3.5.2.tar.gz) = 79491 bytes
 BLAKE2s (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 1e3e33c00707a3593021eb034c331e03c391be2a8977de8635ddcdd39b13ded4
 SHA512 (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 320941bc3b7fb8bc595e6135cbc513a7583d129f0cd92508055291e141191066303cf75148e25198c21f6c6c539a790ea3210f3ecf5de6a2a03b70c753091146
 Size (github.com__burnt_sushi_toml_@v_v0.3.1.mod) = 34 bytes
