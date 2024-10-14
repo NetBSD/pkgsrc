@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/23 07:58:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/10/14 14:06:45 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -167,6 +167,9 @@ ${PYSITELIB}/tortoise/contrib/postgres/indexes.pyo
 ${PYSITELIB}/tortoise/contrib/postgres/json_functions.py
 ${PYSITELIB}/tortoise/contrib/postgres/json_functions.pyc
 ${PYSITELIB}/tortoise/contrib/postgres/json_functions.pyo
+${PYSITELIB}/tortoise/contrib/postgres/regex.py
+${PYSITELIB}/tortoise/contrib/postgres/regex.pyc
+${PYSITELIB}/tortoise/contrib/postgres/regex.pyo
 ${PYSITELIB}/tortoise/contrib/postgres/search.py
 ${PYSITELIB}/tortoise/contrib/postgres/search.pyc
 ${PYSITELIB}/tortoise/contrib/postgres/search.pyo
