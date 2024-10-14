@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2024/09/10 12:36:15 adam Exp $
+# $NetBSD: Makefile,v 1.133 2024/10/14 09:38:57 wiz Exp $
 
 DISTNAME=	pytest-8.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -20,13 +20,15 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=3.56:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=2.7.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmlschema-[0-9]*:../../textproc/py-xmlschema
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:build
+
+# as of 8.3.3
+# 3621 passed, 112 skipped, 11 xfailed, 1 xpassed
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
