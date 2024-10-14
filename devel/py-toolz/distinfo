@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/24 06:52:31 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/10/14 07:14:42 adam Exp $
 
-BLAKE2s (toolz-0.12.1.tar.gz) = fde4e7d92382e5f994199cc65244588d38cf903094eb39844b5996bfbf0a27b4
-SHA512 (toolz-0.12.1.tar.gz) = c514934d1a8069cd70e4d8b9ca32cd2c96e85b1dabb45bbbe4b0644581eb7e7f9f6a6d9230483f1872695edf25ff77ad7643cffb3041a012ed64424097a23e9e
-Size (toolz-0.12.1.tar.gz) = 66550 bytes
+BLAKE2s (toolz-1.0.0.tar.gz) = 4cca991e3c96bc600ad0fc8459b82a3b739151feacc89dc84ac24e8f48b0e5cf
+SHA512 (toolz-1.0.0.tar.gz) = 90ba917ff06b7c4a4bbeb1d2c64bcb34bbe41607c7cea402f9d96f352c20c53edc53333ba06da9193bc714a2a836e68acd55e581b9f590fe1d962fc4ae8847d9
+Size (toolz-1.0.0.tar.gz) = 66790 bytes
