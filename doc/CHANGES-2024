@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6217 2024/10/14 03:40:30 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6218 2024/10/14 05:13:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9410,3 +9410,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-rack to 3.1.8 [taca 2024-10-14]
 	Updated www/ruby-rack2 to 2.2.10 [taca 2024-10-14]
 	Updated devel/mise to 2024.10.2 [pin 2024-10-14]
+	Updated devel/py-anyio to 4.6.2 [adam 2024-10-14]
+	Updated devel/py-coverage to 7.6.3 [adam 2024-10-14]
+	Updated math/py-bottleneck to 1.4.1 [adam 2024-10-14]
+	Updated textproc/py-lxml-html-clean to 0.3.1 [adam 2024-10-14]
