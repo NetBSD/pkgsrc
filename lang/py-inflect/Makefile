@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/09/14 08:12:09 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/14 06:08:40 wiz Exp $
 
 DISTNAME=	inflect-7.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 309
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
