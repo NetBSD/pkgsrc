@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/28 19:57:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/10/14 17:12:34 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -50,6 +50,9 @@ ${PYSITELIB}/tox/config/loader/ini/replace.pyo
 ${PYSITELIB}/tox/config/loader/memory.py
 ${PYSITELIB}/tox/config/loader/memory.pyc
 ${PYSITELIB}/tox/config/loader/memory.pyo
+${PYSITELIB}/tox/config/loader/replacer.py
+${PYSITELIB}/tox/config/loader/replacer.pyc
+${PYSITELIB}/tox/config/loader/replacer.pyo
 ${PYSITELIB}/tox/config/loader/section.py
 ${PYSITELIB}/tox/config/loader/section.pyc
 ${PYSITELIB}/tox/config/loader/section.pyo
@@ -59,6 +62,18 @@ ${PYSITELIB}/tox/config/loader/str_convert.pyo
 ${PYSITELIB}/tox/config/loader/stringify.py
 ${PYSITELIB}/tox/config/loader/stringify.pyc
 ${PYSITELIB}/tox/config/loader/stringify.pyo
+${PYSITELIB}/tox/config/loader/toml/__init__.py
+${PYSITELIB}/tox/config/loader/toml/__init__.pyc
+${PYSITELIB}/tox/config/loader/toml/__init__.pyo
+${PYSITELIB}/tox/config/loader/toml/_api.py
+${PYSITELIB}/tox/config/loader/toml/_api.pyc
+${PYSITELIB}/tox/config/loader/toml/_api.pyo
+${PYSITELIB}/tox/config/loader/toml/_replace.py
+${PYSITELIB}/tox/config/loader/toml/_replace.pyc
+${PYSITELIB}/tox/config/loader/toml/_replace.pyo
+${PYSITELIB}/tox/config/loader/toml/_validate.py
+${PYSITELIB}/tox/config/loader/toml/_validate.pyc
+${PYSITELIB}/tox/config/loader/toml/_validate.pyo
 ${PYSITELIB}/tox/config/main.py
 ${PYSITELIB}/tox/config/main.pyc
 ${PYSITELIB}/tox/config/main.pyo
@@ -92,6 +107,12 @@ ${PYSITELIB}/tox/config/source/legacy_toml.pyo
 ${PYSITELIB}/tox/config/source/setup_cfg.py
 ${PYSITELIB}/tox/config/source/setup_cfg.pyc
 ${PYSITELIB}/tox/config/source/setup_cfg.pyo
+${PYSITELIB}/tox/config/source/toml_pyproject.py
+${PYSITELIB}/tox/config/source/toml_pyproject.pyc
+${PYSITELIB}/tox/config/source/toml_pyproject.pyo
+${PYSITELIB}/tox/config/source/toml_tox.py
+${PYSITELIB}/tox/config/source/toml_tox.pyc
+${PYSITELIB}/tox/config/source/toml_tox.pyo
 ${PYSITELIB}/tox/config/source/tox_ini.py
 ${PYSITELIB}/tox/config/source/tox_ini.pyc
 ${PYSITELIB}/tox/config/source/tox_ini.pyo
