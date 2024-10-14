@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2024/10/10 09:45:54 adam Exp $
+# $NetBSD: Makefile,v 1.320 2024/10/14 05:32:12 wiz Exp $
 
 DISTNAME=	wireshark-4.4.1
 CATEGORIES=	net
@@ -21,7 +21,7 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_Asciidoctor=TRUE
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config bison lex
-PKGCONFIG_OVERRIDE+=	wireshark.pc.in
+PKGCONFIG_OVERRIDE+=	resources/wireshark.pc.in
 
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/*/*
 CHECK_PORTABILITY_SKIP+=	packaging/macosx/osx-app.sh.in
@@ -37,7 +37,6 @@ REPLACE_PYTHON+=		tools/idl2deb
 REPLACE_PYTHON+=		tools/indexcap.py
 REPLACE_PYTHON+=		tools/msnchat
 REPLACE_PYTHON+=		tools/ncp2222.py
-REPLACE_PYTHON+=		tools/netscreen2dump.py
 REPLACE_PYTHON+=		tools/pkt-from-core.py
 REPLACE_PYTHON+=		tools/rdps.py
 
@@ -81,6 +80,7 @@ SUBST_SED.lemon=	-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.libcares+=	libcares>=1.13.0
 .include "../../net/libcares/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
