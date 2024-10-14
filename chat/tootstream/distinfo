@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2024/10/14 08:11:12 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/10/14 08:24:43 nia Exp $
 
 BLAKE2s (tootstream-0.4.0.tar.gz) = 28e9125d830ea52934f0f47152006fb1dfbbec957c1221fb114dc191ce299fe2
 SHA512 (tootstream-0.4.0.tar.gz) = efaa2322be4d0fed3f4f497b779f926e95223ad3e2124422e0802e6a7134592321f24cb9829dd79e8f593aa8b81acf4811c7ec04b387765cd864134d6a2180cd
 Size (tootstream-0.4.0.tar.gz) = 27829 bytes
+SHA1 (patch-src_tootstream_toot.py) = 1293b70b8ffc4d9031a6c32438943d9b5be0b3e1
