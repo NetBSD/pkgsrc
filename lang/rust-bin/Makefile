@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2024/09/12 22:06:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.69 2024/10/14 20:52:26 wiz Exp $
 
-DISTNAME=	rust-1.79.0
+DISTNAME=	rust-1.80.1
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -24,7 +24,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-x86_64
 
 # he@NetBSD.org provided binaries
 ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64
-#ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64eb
+ONLY_FOR_PLATFORM+=	NetBSD-*-aarch64eb
 ONLY_FOR_PLATFORM+=	NetBSD-*-earmv7hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-earmv6hf
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
@@ -68,39 +68,39 @@ DISTFILES:=	# empty
 
 # Rust upstream provided binaries
 
-.if !empty(MACHINE_PLATFORM:MDarwin-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-apple-darwin
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MDarwin-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-apple-darwin
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if !empty(MACHINE_PLATFORM:MFreeBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MFreeBSD-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-unknown-freebsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MLinux-*-i386} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i686-unknown-linux-gnu
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if (!empty(MACHINE_PLATFORM:MLinux-*-aarch64) && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
+.if (${MACHINE_PLATFORM:MLinux-*-aarch64} && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-linux-gnu
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if (!empty(MACHINE_PLATFORM:MLinux-*-aarch64) && empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
+.if (${MACHINE_PLATFORM:MLinux-*-aarch64} && empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-linux-musl
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if (!empty(MACHINE_PLATFORM:MLinux-*-x86_64) && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
+.if (${MACHINE_PLATFORM:MLinux-*-x86_64} && !empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-unknown-linux-gnu
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if (!empty(MACHINE_PLATFORM:MLinux-*-x86_64) && empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
+.if (${MACHINE_PLATFORM:MLinux-*-x86_64} && empty(GLIBC_VERSION)) || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-unknown-linux-musl
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-x86_64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	x86_64-unknown-netbsd
 DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 .endif
@@ -108,43 +108,40 @@ DISTFILES:=	${DISTFILES} ${DISTNAME}-${RUST_ARCH}.tar.gz
 # NetBSD provided binaries:
 
 NBSUF=
-# Selective for a few targets (rebuilt binaries):
-NB:=		-nb1
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	aarch64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-#.if !empty(MACHINE_PLATFORM:MNetBSD-*-aarch64eb) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	aarch64_be-unknown-netbsd
-#DN:=		${DISTNAME}${NBSUF}
-#EXTRACT_SUFX=	.tar.xz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	${NETBSD_REPO}
-#.endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-aarch64eb} || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	aarch64_be-unknown-netbsd
+DN:=		${DISTNAME}${NBSUF}
+EXTRACT_SUFX=	.tar.xz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	${NETBSD_REPO}
+.endif
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv6hf} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	armv6-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv7hf) || make(distinfo) || make(makesum) || make(mdi)
-NB:=		-nb1
-RUST_ARCH:=	armv7-unknown-netbsd-eabihf${VMOD}
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv7hf} || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	armv7-unknown-netbsd-eabihf
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
-DF:=		${DN}-${RUST_ARCH}${NB}${EXTRACT_SUFX}
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	i586-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -152,8 +149,7 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || make(distinfo) || make(makesum) || make(mdi)
-# Now only supports OS_VERSION >= 9.0
+.if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	powerpc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -161,7 +157,7 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-sparc64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	sparc64-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -169,7 +165,7 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	mipsel-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -177,7 +173,7 @@ DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
 DISTFILES:=	${DISTFILES} ${DF}
 SITES.${DF}=	${NETBSD_REPO}
 .endif
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-riscv64) || make(distinfo) || make(makesum) || make(mdi)
+.if ${MACHINE_PLATFORM:MNetBSD-*-riscv64} || make(distinfo) || make(makesum) || make(mdi)
 RUST_ARCH:=	riscv64gc-unknown-netbsd
 DN:=		${DISTNAME}${NBSUF}
 EXTRACT_SUFX=	.tar.xz
@@ -187,14 +183,14 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 
 # Illumos:
-.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
-RUST_ARCH:=	x86_64-unknown-illumos
-DN:=		${DISTNAME}
-EXTRACT_SUFX=	.tar.gz
-DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-DISTFILES:=	${DISTFILES} ${DF}
-SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
-.endif
+#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+#RUST_ARCH:=	x86_64-unknown-illumos
+#DN:=		${DISTNAME}
+#EXTRACT_SUFX=	.tar.gz
+#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+#DISTFILES:=	${DISTFILES} ${DF}
+#SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+#.endif
 
 
 # Binary still extracts to plain non-nb'ed directory
@@ -251,18 +247,29 @@ RUST_LLVM_RPATH=	${PREFIX}/lib
 FORCE_RPATH=		--force-rpath
 
 # 32-bit NetBSD ports need libatomic
-.  if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-mipsel) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
+.  if ${MACHINE_PLATFORM:MNetBSD-*-powerpc} || \
+      ${MACHINE_PLATFORM:MNetBSD-*-earmv[67]hf} || \
+      ${MACHINE_PLATFORM:MNetBSD-*-mipsel} || \
+      ${MACHINE_PLATFORM:MNetBSD-*-i386}
 .    include "../../devel/libatomic/buildlink3.mk"
 .  endif
 
 .PHONY: fix-relative-rpath
 post-install: fix-relative-rpath
 fix-relative-rpath:
-.  for bin in bin/clippy-driver bin/miri bin/rls bin/rust-analyzer \
-	bin/rustc bin/rustdoc libexec/rust-analyzer-proc-macro-srv
+.  for bin in \
+	bin/cargo \
+	bin/cargo-clippy \
+	bin/cargo-fmt \
+	bin/clippy-driver \
+	bin/miri  \
+	bin/rls \
+	bin/rust-analyzer \
+	bin/rust-demangler \
+	bin/rustc \
+	bin/rustdoc \
+	bin/rustfmt \
+	libexec/rust-analyzer-proc-macro-srv
 	if [ -f ${DESTDIR}${PREFIX}/${bin} ]; then \
 		${PREFIX}/bin/patchelf ${FORCE_RPATH} --set-rpath \
 		    ${PREFIX}/lib ${DESTDIR}${PREFIX}/${bin} ; \
