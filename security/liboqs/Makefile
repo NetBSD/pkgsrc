@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/10/10 19:32:27 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 15:24:03 nia Exp $
 
 DISTNAME=	liboqs-0.11.0
 CATEGORIES=	security
@@ -14,6 +14,8 @@ USE_TOOLS+=		bash:test
 PYTHON_FOR_BUILD_ONLY=	test
 TOOLS_CREATE+=		python3
 TOOLS_PATH.python3=	${TOOL_PYTHONBIN:Q}
+
+CMAKE_CONFIGURE_ARGS+=	-DOQS_PERMIT_UNSUPPORTED_ARCHITECTURE=ON
 
 REPLACE_BASH+=	tests/run_astyle.sh
 REPLACE_BASH+=	tests/test_spdx.sh
