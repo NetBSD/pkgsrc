@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.452 2024/10/14 07:53:56 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.453 2024/10/14 07:58:24 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -836,7 +836,7 @@ USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
 .include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
 
 .if ${FETCH_USING} == "auto"
-.  if defined(TOOLS_PLATFORM.mktool)
+.  if !empty(TOOLS_PLATFORM.mktool)
 FETCH_USING=	mktool
 .  elif defined(TOOLS_PLATFORM.fetch)
 FETCH_USING=	fetch
