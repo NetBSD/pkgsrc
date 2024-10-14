@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2014/12/15 08:36:40 mef Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/10/14 00:53:52 mef Exp $
 bin/xlog
 man/man1/xlog.1
 share/applications/xlog.desktop
@@ -124,8 +124,7 @@ share/doc/xlog/manual/xlog.png
 share/doc/xlog/manual/xlog_manual.css
 share/doc/xlog/manual/xlog_user.doxy
 share/doc/xlog/manual/xlog_user.txt
-share/icons/gnome-mime-text-x-xlog.png
-share/icons/xlog-icon.png
+share/icons/hicolor/scalable/apps/xlog.svg
 share/locale/cs/LC_MESSAGES/xlog.mo
 share/locale/de/LC_MESSAGES/xlog.mo
 share/locale/es/LC_MESSAGES/xlog.mo
@@ -157,12 +156,10 @@ share/pixmaps/xlog/s7.xpm
 share/pixmaps/xlog/s8.xpm
 share/pixmaps/xlog/s9.xpm
 share/pixmaps/xlog/xlog-b4.png
-share/pixmaps/xlog/xlog-icon.png
 share/pixmaps/xlog/xlog-keyer.png
 share/pixmaps/xlog/xlog-map.png
 share/pixmaps/xlog/xlog-scoring.png
 share/pixmaps/xlog/xlog.png
-share/pixmaps/xlog/xlog.svg
 share/pixmaps/xlog/xlog.xpm
 share/xlog/dxcc/area.dat
 share/xlog/dxcc/cty.dat
