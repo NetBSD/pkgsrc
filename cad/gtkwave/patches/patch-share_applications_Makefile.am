@@ -1,0 +1,22 @@
+$NetBSD: patch-share_applications_Makefile.am,v 1.1 2024/10/14 00:39:11 mef Exp $
+
+Disable running /usr/pkg/bin/update-desktop-database,
+it will be handled at
+  .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+
+--- share/applications/Makefile.am.orig	2024-10-06 07:10:37.000000000 +0900
++++ share/applications/Makefile.am	2024-10-14 09:06:10.389036530 +0900
+@@ -4,10 +4,11 @@
+ xdgdatadir=@XDGDATADIR@
+ desktopdir=$(xdgdatadir)/applications
+ desktop_DATA = gtkwave.desktop
++DESTDIR= /tmp/cad/gtkwave/work/.destdir
+ 
+ if FDO_MIME
+-install-data-hook:
+-	$(UPDATE_DESKTOP_DATABASE)
++#install-data-hook:
++#	$(UPDATE_DESKTOP_DATABASE)
+ 
+ uninstall-hook:
+ 	$(UPDATE_DESKTOP_DATABASE)
