@@ -1,0 +1,32 @@
+$NetBSD: patch-doc_sample-ngircd.conf.tmpl,v 1.1 2024/10/14 21:12:55 nia Exp $
+
+Run as ngircd user by default.
+
+--- doc/sample-ngircd.conf.tmpl.orig	2024-10-14 19:52:39.281302704 +0000
++++ doc/sample-ngircd.conf.tmpl
+@@ -72,7 +72,7 @@
+ 	# Note that the pidfile is written AFTER chroot and switching the
+ 	# user ID, e.g. the directory the pidfile resides in must be
+ 	# writable by the ngIRCd user and exist in the chroot directory.
+-	;PidFile = /var/run/ngircd/ngircd.pid
++	PidFile = @VARBASE@/run/ngircd/ngircd.pid
+ 
+ 	# Ports on which the server should listen. There may be more than
+ 	# one port, separated with ",". (Default: 6667)
+@@ -81,14 +81,14 @@
+ 	# Group ID under which the ngIRCd should run; you can use the name
+ 	# of the group or the numerical ID. ATTENTION: For this to work the
+ 	# server must have been started with root privileges!
+-	;ServerGID = 65534
++	ServerGID = @NGIRCD_USER@
+ 
+ 	# User ID under which the server should run; you can use the name
+ 	# of the user or the numerical ID. ATTENTION: For this to work the
+ 	# server must have been started with root privileges! In addition,
+ 	# the configuration and MOTD files must be readable by this user,
+ 	# otherwise RESTART and REHASH won't work!
+-	;ServerUID = 65534
++	ServerUID = @NGIRCD_GROUP@
+ 
+ [Limits]
+ 	# Define some limits and timeouts for this ngIRCd instance. Default
