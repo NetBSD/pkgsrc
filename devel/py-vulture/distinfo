@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/20 08:14:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/10/14 13:07:32 adam Exp $
 
-BLAKE2s (vulture-2.11.tar.gz) = 0cfcd296a096188e944a46119efa90d7cbba2e1ad91b11808322031e14c916a2
-SHA512 (vulture-2.11.tar.gz) = f1d28b673eec37f822583afca662ee8cc8102b44634dc26ae97154170ef91eac11fe8236667267f03b0e87e1b0e4f3a3ca39a2c97654b410e6c21c2843d37fbd
-Size (vulture-2.11.tar.gz) = 55532 bytes
+BLAKE2s (vulture-2.13.tar.gz) = 7739dd29556d89390eaed485fd47dd8f2ea895ce5e1250d2ff4005e80ed8f514
+SHA512 (vulture-2.13.tar.gz) = 8f9206f526d432ba0128ddd67e2dc5f8187e4245c5ade63ff3b3ecd942a64e74e9e46f27e1f08a26542b89ad478fcefbca302023c0abdaf77dc3b3d85e85b27d
+Size (vulture-2.13.tar.gz) = 57066 bytes
