@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2024/10/14 21:12:54 nia Exp $
+
+BLAKE2s (ngircd-27.tar.gz) = 0899b15b916d4cee6aba64361270fc64ef3e37c46cfabbcaa52be1e8f9258395
+SHA512 (ngircd-27.tar.gz) = 54ad38b3f5a9a899106c1163f53f45c5b021f6bad3ea3b7cb9b06e619434d76416d494b046508f588b334daba5b39a451bbf28e6196ef8fffa0408e395ea3839
+Size (ngircd-27.tar.gz) = 554709 bytes
+SHA1 (patch-doc_Makefile.in) = b8561a0a2086854aafd60bb5491d243078d143c1
+SHA1 (patch-doc_sample-ngircd.conf.tmpl) = 55b305aa72e1ef13814a3278645bfbc5f61a47ec

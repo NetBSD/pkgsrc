@@ -1,0 +1,24 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1 2024/10/14 21:12:55 nia Exp $
+
+Let pkgsrc handle configuration files.
+
+--- doc/Makefile.in.orig	2024-04-26 14:54:22.000000000 +0000
++++ doc/Makefile.in
+@@ -618,7 +618,7 @@ maintainer-clean-local:
+ all: $(generated_docs)
+ 
+ install-data-hook: $(static_docs) $(toplevel_docs) $(generated_docs)
+-	$(MKDIR_P) -m 755 $(DESTDIR)$(sysconfdir)
++	#$(MKDIR_P) -m 755 $(DESTDIR)$(sysconfdir)
+ 	@if [ ! -f $(DESTDIR)$(sysconfdir)/ngircd.conf ]; then \
+ 	  ${MAKE} install-config; \
+ 	 fi
+@@ -631,7 +631,7 @@ install-data-hook: $(static_docs) $(topl
+ 	 done
+ 
+ install-config:
+-	$(INSTALL) -m 600 -c sample-ngircd.conf $(DESTDIR)$(sysconfdir)/ngircd.conf
++	#$(INSTALL) -m 600 -c sample-ngircd.conf $(DESTDIR)$(sysconfdir)/ngircd.conf
+ 	@echo; \
+ 	 echo " ** NOTE: Installed sample configuration file:"; \
+ 	 echo " ** \"$(DESTDIR)$(sysconfdir)/ngircd.conf\""; \
