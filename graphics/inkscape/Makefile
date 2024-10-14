@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2024/10/04 03:49:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.291 2024/10/14 06:45:44 wiz Exp $
 
 DISTNAME=	inkscape-1.3.2
 PKGREVISION=	5
@@ -48,8 +48,6 @@ USE_TOOLS+=		msgfmt msgmerge perl pkg-config
 REPLACE_PERL+=		man/fix-roff-punct
 
 UNLIMIT_RESOURCES=	datasize
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 SUBST_CLASSES+=		pypath
 SUBST_STAGE.pypath=	pre-configure

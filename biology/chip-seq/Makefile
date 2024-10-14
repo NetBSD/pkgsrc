@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/12/23 16:35:38 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:31 wiz Exp $
 
 # Update minor version when adding or removing dependencies
 # Update revision for all other changes
@@ -29,9 +29,6 @@ DEPENDS+=	xz>0:../../archivers/xz
 DEPENDS+=	zstd>0:../../archivers/zstd
 
 META_PACKAGE=	yes
-
-# Inherited from py-macs2 dep
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

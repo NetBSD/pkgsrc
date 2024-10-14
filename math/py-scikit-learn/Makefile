@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/09/16 10:39:18 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/10/14 06:45:52 wiz Exp $
 
 DISTNAME=	scikit_learn-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -23,7 +23,7 @@ GCC_REQD+=	8
 
 REPLACE_PYTHON+=	sklearn/_build_utils/version.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/${PYSITELIB}/sklearn/preprocessing/_target_encoder_fast.pyx.orig

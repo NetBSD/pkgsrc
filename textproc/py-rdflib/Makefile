@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/06 11:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/14 06:46:01 wiz Exp $
 
 DISTNAME=	rdflib-7.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 REPLACE_PYTHON+=	rdflib/extras/describer.py
 REPLACE_PYTHON+=	rdflib/extras/infixowl.py

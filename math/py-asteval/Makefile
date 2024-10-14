@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/03 09:00:49 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/10/14 06:45:49 wiz Exp $
 
 DISTNAME=	asteval-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

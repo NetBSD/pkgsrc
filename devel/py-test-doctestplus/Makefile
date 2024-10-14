@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/08 15:04:55 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/14 06:45:41 wiz Exp $
 
 DISTNAME=	pytest-doctestplus-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-remotedata>=0.3.2:../../net/py-test-remotedata
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

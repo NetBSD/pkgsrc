@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/03/24 19:26:46 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/14 06:46:07 wiz Exp $
 
 DISTNAME=	nbclient-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,8 +25,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 TEST_DEPENDS+=	${PYPKGPREFIX}-xmltodict-[0-9]*:../../textproc/py-xmltodict
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

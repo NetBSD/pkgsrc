@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/17 17:52:06 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:54 wiz Exp $
 
 DISTNAME=	python-subunit-1.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 .for f in subunit-1to2 subunit-1to2 subunit-2to1 subunit-filter subunit-ls \

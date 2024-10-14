@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/28 15:42:40 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/14 06:46:05 wiz Exp $
 
 DISTNAME=	jupyterlab_widgets-3.0.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-jupyter_packaging>=0.10:../../devel/py-jupyter_pac
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

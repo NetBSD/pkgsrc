@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/02/19 09:26:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:08 wiz Exp $
 
 DISTNAME=	notebook_shim-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

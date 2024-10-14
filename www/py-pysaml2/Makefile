@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/29 14:09:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 06:46:08 wiz Exp $
 
 DISTNAME=	pysaml2-7.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/03 09:04:01 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:56 wiz Exp $
 
 DISTNAME=	bandit-1.7.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,8 +23,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios>=0.5.0:../../devel/py-testscenarios
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools>=2.3.0:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

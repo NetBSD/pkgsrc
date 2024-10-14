@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/07/14 13:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/14 06:45:47 wiz Exp $
 
 DISTNAME=	postfix_mta_sts_resolver-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -27,8 +27,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 .for bin in mta-sts-daemon mta-sts-query

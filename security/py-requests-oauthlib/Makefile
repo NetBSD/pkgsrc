@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/04/05 10:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/10/14 06:45:57 wiz Exp $
 
 DISTNAME=	requests-oauthlib-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/08/06 11:44:50 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/14 06:45:51 wiz Exp $
 
 DISTNAME=	scikit_image-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
 USE_LANGUAGES=	c c++
 GCC_REQD+=	9
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 pre-configure:
 	${LN} -f -s ${PREFIX}/bin/cython-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/cython

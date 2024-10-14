@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/02/27 14:26:42 taca Exp $
+# $NetBSD: Makefile,v 1.75 2024/10/14 06:45:53 wiz Exp $
 
 DISTNAME=	bulk-large-20240227
 CATEGORIES=	meta-pkgs
@@ -166,7 +166,7 @@ DEPENDS+=	modular-xorg-[0-9]*:../../meta-pkgs/modular-xorg
 #
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 .include "../../lang/php/phpversion.mk" # for PHP_PKG_PREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../lang/ruby/rubyversion.mk" # for RUBY_PKGPREFIX

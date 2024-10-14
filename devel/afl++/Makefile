@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:35 wiz Exp $
 
 DISTNAME=	AFLplusplus-2.62c
 PKGNAME=	${DISTNAME:C/AFLplusplus/afl++/}
@@ -18,11 +18,7 @@ PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_INCLUDE_CMD=	python${PYVERSSUFFIX}-config --includes
 PYTHON_VERSION_CMD=	python${PYVERSSUFFIX} --version
 
-.if ${PYVERSSUFFIX} < 38
 PYTHON_LIB_CMD=	python${PYVERSSUFFIX}-config --ldflags
-.else
-PYTHON_LIB_CMD=	python${PYVERSSUFFIX}-config --libs --embed --ldflags
-.endif
 
 MAKE_FLAGS+=	PYTHON_INCLUDE=${PYTHON_INCLUDE_CMD:sh:Q}
 MAKE_FLAGS+=	PYTHON_VERSION=${PYTHON_VERSION_CMD:sh:Q}

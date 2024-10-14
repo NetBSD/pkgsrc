@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/08/10 06:26:23 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/14 06:45:33 wiz Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
@@ -31,8 +31,6 @@ DEPENDS+=	${PYPKGPREFIX}-Pillow>=4:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-qrcode>=6<8:../../graphics/py-qrcode
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 # py-mautrix
 
 INSTALLATION_DIRS+=	share/mautrix-telegram
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/11/07 22:38:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:43 wiz Exp $
 
 DISTNAME=	gns3-server-2.2.1
 PKGREVISION=	6
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-raven>=5.23.0:../../www/py-raven
 DEPENDS+=	${PYPKGPREFIX}-psutil>=3.0.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0.1:../../devel/py-async-timeout
 DEPENDS+=	${PYPKGPREFIX}-zipstream>=1.1.4:../../archivers/py-zipstream
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_PKG_RESOURCES=	yes
 

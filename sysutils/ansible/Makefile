@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/10/09 08:06:51 adam Exp $
+# $NetBSD: Makefile,v 1.82 2024/10/14 06:45:57 wiz Exp $
 
 DISTNAME=	ansible-10.5.0
 CATEGORIES=	sysutils python
@@ -16,8 +16,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.17.5:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 CHECK_SHLIBS_SUPPORTED=	no
 CHECK_WRKREF_SKIP=	*

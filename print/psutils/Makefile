@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/08/14 05:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/10/14 06:45:56 wiz Exp $
 
 DISTNAME=	psutils-3.0.3
 PKGREVISION=	1
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-pspdfutils-[0-9]*:../../print/py-pspdfutils
 
 META_PACKAGE=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/08/06 11:29:43 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:08 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-rdflib>=6.1.1:../../textproc/py-rdflib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

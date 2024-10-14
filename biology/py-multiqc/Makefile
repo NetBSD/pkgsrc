@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/07 16:06:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 06:45:32 wiz Exp $
 
 DISTNAME=	multiqc-1.14
 PKGNAME=	${PYPKGPREFIX}-multiqc-1.14
@@ -25,8 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-spectra>=0.0.10:../../graphics/py-spectra
 DEPENDS+=	${PYPKGPREFIX}-lzstring>0:../../archivers/py-lzstring
 
-# 27 inherited from py-spectra, 38 from py-matplotlib
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 post-patch:
 	${RM} ${WRKSRC}/multiqc/multiqc.py.orig

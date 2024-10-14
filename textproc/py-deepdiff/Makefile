@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/05/27 10:28:40 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/10/14 06:46:00 wiz Exp $
 
 DISTNAME=	deepdiff-7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=6.0.1:../../textproc/py-yaml
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23.5:../../math/py-numpy
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

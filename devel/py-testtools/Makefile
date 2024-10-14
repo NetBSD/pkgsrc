@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/06/10 19:41:54 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/10/14 06:45:41 wiz Exp $
 
 DISTNAME=	testtools-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-fixtures>=2.0:../../devel/py-fixtures
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testscenarios-[0-9]*:../../devel/py-testscenarios
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

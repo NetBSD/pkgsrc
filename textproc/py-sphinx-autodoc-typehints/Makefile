@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/09/22 16:52:23 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/14 06:46:01 wiz Exp $
 
 DISTNAME=	sphinx_autodoc_typehints-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-ex
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # bug in numpy?
 # 2 warnings, 1 error

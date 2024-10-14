@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/10/01 07:53:48 adam Exp $
+# $NetBSD: Makefile,v 1.60 2024/10/14 06:45:58 wiz Exp $
 
 DISTNAME=	ansible_lint-24.9.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -37,7 +37,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=2.1.0:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

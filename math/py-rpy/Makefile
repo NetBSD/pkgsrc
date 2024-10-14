@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2023/10/23 06:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/10/14 06:45:51 wiz Exp $
 
 DISTNAME=	rpy2-3.4.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -29,8 +29,6 @@ USE_LANGUAGES+=		c fortran77
 LDFLAGS.SunOS+=		-mimpure-text
 
 REPLACE_PYTHON=		rpy/tests.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../lang/python/batteries-included.mk"

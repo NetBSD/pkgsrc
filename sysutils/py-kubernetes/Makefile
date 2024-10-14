@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/07/19 06:57:50 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:58 wiz Exp $
 
 DISTNAME=	kubernetes-30.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-websocket-client>=0.43.0:../../www/py-websocket-client
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.4.1:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

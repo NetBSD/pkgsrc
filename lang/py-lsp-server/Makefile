@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/09/03 12:49:10 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:47 wiz Exp $
 
 DISTNAME=	python_lsp_server-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
@@ -39,7 +39,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 TEST_DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-PYTHON_VERSIONS_INCOMPATIBLE=	38 39 # py-rope -> py-toolconfig -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-rope -> py-toolconfig -> py-sphinx
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

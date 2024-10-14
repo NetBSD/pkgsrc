@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/03/06 20:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/10/14 06:45:34 wiz Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.7.8:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlparse-[0-9]*:../../databases/py-sqlparse
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7.0:../../lang/py-six
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 USE_LANGUAGES=		# none
 

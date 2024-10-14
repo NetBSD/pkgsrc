@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/05/05 10:10:37 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/14 06:45:57 wiz Exp $
 
 DISTNAME=	pip_audit-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,8 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-rich>=12.4:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.10:../../textproc/py-toml
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

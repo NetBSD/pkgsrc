@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/08/01 23:20:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:46 wiz Exp $
 
 DISTNAME=	Js2Py-0.74
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
 TEST_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/21 15:14:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:57 wiz Exp $
 
 DISTNAME=	solo1-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,8 +23,6 @@ DEPENDS+=	${PYPKGPREFIX}-usb>=0:../../devel/py-usb
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/solo && ${RM} -f *.orig */*.orig

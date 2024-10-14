@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/10/04 13:59:29 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/10/14 06:46:01 wiz Exp $
 
 DISTNAME=	rapidfuzz-3.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10.7:../../devel/py-scikit-bu
 # optional dependency, but not optional for testing
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
-
-PYTHON_VERSIONS_INCOMPATIBLE=	38
 
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2

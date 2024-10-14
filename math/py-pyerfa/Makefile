@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/08 12:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:51 wiz Exp $
 
 DISTNAME=	pyerfa-2.0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-doctestplus>=0.7:../../devel/py-test-doctestp
 MAKE_ENV+=	PYERFA_USE_SYSTEM_LIBERFA=1
 
 USE_LIBTOOL=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2024/07/08 07:04:31 nia Exp $
+# $NetBSD: Makefile,v 1.115 2024/10/14 06:45:53 wiz Exp $
 
 DISTNAME=	bulk-medium-20240708
 CATEGORIES=	meta-pkgs
@@ -228,7 +228,6 @@ DEPENDS+=	${LUA_PKGPREFIX}-posix-[0-9]*:../../devel/lua-posix
 #
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 .include "../../lang/lua/luaversion.mk" # for LUA_PKGPREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../mk/bsd.pkg.mk"
