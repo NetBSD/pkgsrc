@@ -1,15 +1,13 @@
-$NetBSD: patch-configure,v 1.4 2023/07/18 06:13:51 adam Exp $
+$NetBSD: patch-configure,v 1.5 2024/10/14 13:04:00 adam Exp $
 
 Skip compiler detection magic.
-
-Fix build https://github.com/rhash/RHash/issues/238
 
 Avoid choosing aligned_alloc() when it's not present, such as CentOS 6
 with lang/gcc7 and older Solaris releases.
 
---- configure.orig	2023-07-14 13:06:29.000000000 +0000
+--- configure.orig	2024-10-13 23:43:50.000000000 +0000
 +++ configure
-@@ -646,8 +646,6 @@ else
+@@ -647,8 +647,6 @@ else
      fi
    done
  fi # icc
@@ -18,24 +16,7 @@ with lang/gcc7 and older Solaris releases.
  
  log_start "compiler working with default options"
  if ! cc_check_cflag; then
-@@ -690,7 +688,6 @@ log_finish
- SHARED_PREFIX="lib"
- STATIC_PREFIX="lib"
- STATIC_EXT=".a"
--SHARED_EXT=".so.${RHASH_VERSION_MAJOR}"
- SO_MAJ_EXT=".so.${RHASH_VERSION_MAJOR}"
- SOLINK_EXT=".so"
- EXEC_EXT=
-@@ -713,7 +710,7 @@ if win32; then
- elif darwin; then
-   SHARED_EXT=".${RHASH_VERSION_MAJOR}.dylib"
-   SOLINK_EXT=".dylib"
--elif linux; then
-+else
-   # use the full library version for the library file extension
-   SHARED_EXT=".so.${RHASH_VERSION}"
- fi
-@@ -755,6 +752,16 @@ elif test "$OPT_OPENSSL" = "auto" || tes
+@@ -758,6 +756,16 @@ elif test "$OPT_OPENSSL" = "auto" || tes
    finish_check "$ALLOW_RUNTIME_LINKING"
  fi
  
