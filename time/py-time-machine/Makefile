@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/08/07 10:31:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/14 05:18:43 adam Exp $
 
-DISTNAME=	time_machine-2.15.0
+DISTNAME=	time_machine-2.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/time-machine/}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
