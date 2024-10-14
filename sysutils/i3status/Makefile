@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/01/30 14:22:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/14 15:20:13 nia Exp $
 
 DISTNAME=	i3status-2.14
 PKGREVISION=	5
@@ -15,6 +15,8 @@ TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_TOOLS+=	pkg-config bash perl
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 
