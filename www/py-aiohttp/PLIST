@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/11/19 13:52:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/10/14 16:56:43 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -81,9 +81,6 @@ ${PYSITELIB}/aiohttp/http_websocket.pyo
 ${PYSITELIB}/aiohttp/http_writer.py
 ${PYSITELIB}/aiohttp/http_writer.pyc
 ${PYSITELIB}/aiohttp/http_writer.pyo
-${PYSITELIB}/aiohttp/locks.py
-${PYSITELIB}/aiohttp/locks.pyc
-${PYSITELIB}/aiohttp/locks.pyo
 ${PYSITELIB}/aiohttp/log.py
 ${PYSITELIB}/aiohttp/log.pyc
 ${PYSITELIB}/aiohttp/log.pyo
