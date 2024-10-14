@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.24 2024/05/14 14:37:47 nia Exp $
+$NetBSD: distinfo,v 1.25 2024/10/14 13:04:00 adam Exp $
 
-BLAKE2s (rhash-1.4.4.tar.gz) = 7812d695fef6e198eb1eccc7440fa63936ec3c2ba559467e7102a7f4adcf35d2
-SHA512 (rhash-1.4.4.tar.gz) = 00a7e5e058b53ce20ae79509815452ed9cb699d1322b678220b72c61dea3ea2f8fa131acfade8bb6d9f6af913f0c3c472330841181b22314b8755166310c946f
-Size (rhash-1.4.4.tar.gz) = 435691 bytes
+BLAKE2s (rhash-1.4.5.tar.gz) = 3a9ec276de596097b4861eecbbbfa9e8e5addbb1db6ca98eeb502d4f77f19de4
+SHA512 (rhash-1.4.5.tar.gz) = 49bd6aa2497efc4871ae31eaca51d2dc78ceb7126311557d5280b14fafe9355eaecad37f0f78f865e4e1dd1aeb506d3301989cd2f9fff7b0091c81978e8c2f2e
+Size (rhash-1.4.5.tar.gz) = 444526 bytes
 SHA1 (patch-Makefile) = 55d3e148db36ab4bcff9fd23add3e32b51a3854c
-SHA1 (patch-configure) = 47136a8817c439b6f3ac4adf6c7a072bb88a7455
-SHA1 (patch-librhash_Makefile) = 763d6416c8ebe32a80a43520e28b869abb7a88e3
+SHA1 (patch-configure) = 7ed3477a93aa321847dc3d84e6493f14be9509a3
+SHA1 (patch-librhash_Makefile) = 7d73616ed7f14e1d41fac2c5c788f6eed8a91b4d
