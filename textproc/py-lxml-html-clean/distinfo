@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/09/07 05:39:07 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/10/14 05:13:13 adam Exp $
 
-BLAKE2s (lxml_html_clean-0.2.2.tar.gz) = 8df02aa5e6e0d08da0b59202ae51e15c88fc622c7bd0a76627b6ec2e365e9783
-SHA512 (lxml_html_clean-0.2.2.tar.gz) = c40aac3453e822c5659252a271071b1e3b61622ce3af78e27763c771147a22a9894ef2512ca38f1d0e67be1d21ce5b860641a2a067e94837cfdcb318610720eb
-Size (lxml_html_clean-0.2.2.tar.gz) = 19619 bytes
+BLAKE2s (lxml_html_clean-0.3.1.tar.gz) = 6052902bc9a022d8ce182a3621f19fe2e1e7a4037b73f1be9a90a86f08b56a71
+SHA512 (lxml_html_clean-0.3.1.tar.gz) = cbbcbec337586024db9b622d5724adc1e645dfe7bb1958be8f8974c7858e9a6443b0e75f09cf0ca83d7331aae944648c6bd644aeedd56307a01269e82d866b36
+Size (lxml_html_clean-0.3.1.tar.gz) = 20851 bytes
