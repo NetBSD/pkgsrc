@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/01/20 08:14:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 13:07:32 adam Exp $
 
-DISTNAME=	vulture-2.11
+DISTNAME=	vulture-2.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vulture/}
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
