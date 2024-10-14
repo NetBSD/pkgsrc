@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/02/02 16:23:11 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/14 05:21:40 adam Exp $
 
-DISTNAME=	poetry_core-1.9.0
+DISTNAME=	poetry_core-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry-core/}
@@ -20,8 +20,6 @@ TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 # for tests only
 USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
