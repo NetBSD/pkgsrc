@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/09/18 09:18:16 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/14 17:06:46 adam Exp $
 
-DISTNAME=	pyproject_api-1.7.2
+DISTNAME=	pyproject_api-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyproject_api/}
