@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/09 09:49:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/10/14 07:48:33 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -90,6 +90,9 @@ ${PYSITELIB}/django_celery_beat/migrations/0017_alter_crontabschedule_month_of_y
 ${PYSITELIB}/django_celery_beat/migrations/0018_improve_crontab_helptext.py
 ${PYSITELIB}/django_celery_beat/migrations/0018_improve_crontab_helptext.pyc
 ${PYSITELIB}/django_celery_beat/migrations/0018_improve_crontab_helptext.pyo
+${PYSITELIB}/django_celery_beat/migrations/0019_alter_periodictasks_options.py
+${PYSITELIB}/django_celery_beat/migrations/0019_alter_periodictasks_options.pyc
+${PYSITELIB}/django_celery_beat/migrations/0019_alter_periodictasks_options.pyo
 ${PYSITELIB}/django_celery_beat/migrations/__init__.py
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyc
 ${PYSITELIB}/django_celery_beat/migrations/__init__.pyo
