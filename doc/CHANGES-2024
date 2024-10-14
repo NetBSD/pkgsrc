@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6225 2024/10/14 07:48:24 nia Exp $
+$NetBSD: CHANGES-2024,v 1.6226 2024/10/14 07:48:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9427,3 +9427,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Removed devel/py-nose-exclude [wiz 2024-10-14]
 	Removed devel/py-nosexcover [wiz 2024-10-14]
 	Updated emulators/advancemame to 3.10 [nia 2024-10-14]
+	Updated www/py-django-celery-beat to 2.7.0 [wiz 2024-10-14]
