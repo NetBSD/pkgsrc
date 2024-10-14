@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2024/07/30 11:48:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2024/10/14 11:16:56 adam Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -189,6 +189,7 @@ libexec/git-core/mergetools/smerge
 libexec/git-core/mergetools/tkdiff
 libexec/git-core/mergetools/tortoisemerge
 libexec/git-core/mergetools/vimdiff
+libexec/git-core/mergetools/vscode
 libexec/git-core/mergetools/winmerge
 libexec/git-core/mergetools/xxdiff
 libexec/git-core/scalar
