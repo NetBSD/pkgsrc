@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2024/08/10 14:37:30 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/10/14 08:08:36 nia Exp $
 
-BLAKE2s (Mastodon.py-1.5.0.tar.gz) = e37aeab3271ed1f37c74bcd5f66cf49af33d2695a0d086600eb894b26b386f7c
-SHA512 (Mastodon.py-1.5.0.tar.gz) = 5c22adc68eb5b122f6b6a43525daadfac19de6c26d0db67135a932f0422c9b9d3700b45070a23b683f92aa41237cdbde5a837c17ce9a7dd0afec3c5ae65eab1b
-Size (Mastodon.py-1.5.0.tar.gz) = 706918 bytes
+BLAKE2s (Mastodon.py-1.8.1.tar.gz) = d953478415044d9817d175ba6a69ca9f69c5e17d5d310d8732347d52ab5ecd78
+SHA512 (Mastodon.py-1.8.1.tar.gz) = 812bfdcb1a59a06376bfb48798b43cac9dc9390781b3949e4b3d751ec0530b25b187e688c7cfc18eff6d5bb23c9bf442bce5f6902727331e8bc550e310dab94c
+Size (Mastodon.py-1.8.1.tar.gz) = 8694359 bytes
 SHA1 (patch-setup.py) = 2d826a9896ff8876841c606038259bce55374e47
