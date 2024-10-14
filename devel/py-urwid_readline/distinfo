@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/13 09:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/10/14 11:41:41 adam Exp $
 
-BLAKE2s (urwid_readline-0.14.tar.gz) = 4ae2b6b5c7c979e896cd9614d9ff7971e05dd0a79d86dc5c77a57a6884fd7c55
-SHA512 (urwid_readline-0.14.tar.gz) = f886a5260c172869fce59513044c2cde7e126c063b2d556f37522754258e789c02cd9cfe600d05d6dc552bb16a3867092c59a6f67ccba34f4e6bc0088b713314
-Size (urwid_readline-0.14.tar.gz) = 8995 bytes
+BLAKE2s (urwid_readline-0.15.1.tar.gz) = 6bd17c3713276db419f2829dc1ad36f4bdee6c9e137b7a5ef58f6552e605481e
+SHA512 (urwid_readline-0.15.1.tar.gz) = 5adb1a1e357255efa95774dade1cff922006b6d9211ec4cd77e773438bdc99c877abd7e8a120c28a5aa030d87d378217005975af90a6971053caf433fed77853
+Size (urwid_readline-0.15.1.tar.gz) = 9007 bytes
