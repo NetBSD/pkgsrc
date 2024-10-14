@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/08/15 21:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/14 07:48:33 wiz Exp $
 
-DISTNAME=	django-celery-beat-2.6.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_celery_beat-2.7.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django_celery_beat/}
 
@@ -18,14 +18,14 @@ DEPENDS+=	${PYPKGPREFIX}-django-timezone-field>=5.0:../../www/py-django-timezone
 DEPENDS+=	${PYPKGPREFIX}-cron-descriptor>=1.2.32:../../sysutils/py-cron-descriptor
 DEPENDS+=	${PYPKGPREFIX}-crontab>=2.3.4:../../sysutils/py-crontab
 DEPENDS+=	${PYPKGPREFIX}-tzdata-[0-9]*:../../time/py-tzdata
-TEST_DEPENDS+=	${PYPKGPREFIX}-case>=1.3.1:../../devel/py-case
 TEST_DEPENDS+=	${PYPKGPREFIX}-ephem-[0-9]*:../../math/py-ephem
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-django-[0-9]*:../../www/py-test-django
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 2.7.0
+# 2 failed, 104 passed, 9 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
