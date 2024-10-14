@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/05 20:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/14 08:16:22 wiz Exp $
 
 DISTNAME=	cookies-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	311 312
+PYTHON_VERSIONS_INCOMPATIBLE=	311 312 313
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
