@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/01/06 09:24:27 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/10/14 13:50:36 adam Exp $
 
-BLAKE2s (qrcode-7.4.2.tar.gz) = bfbd11c6733a69c4c3a0a934cb76c79e249f1570e1a436c01c190b267ec858bc
-SHA512 (qrcode-7.4.2.tar.gz) = a8642845990341034e39c43ef674f5b4ce8d3175a44d6062f711af2c24ffd45bda5f3ecf8a7825b7ebafe734b6396d52a37bb59177c544f921e43eaa9f1f5405
-Size (qrcode-7.4.2.tar.gz) = 535974 bytes
+BLAKE2s (qrcode-8.0.tar.gz) = 4e46e1c15adeef2b9c3066c249e267ad82b8af68ec4abaf8e891e0e4cee7ea13
+SHA512 (qrcode-8.0.tar.gz) = 14d37ef4fe0fca3253c92f39db7948f9d804f600ee3bf9ba053baf4e01488f340cb4977b94a338f448dd4f9007f9f0cb7c5cf1db5405d98a9b38a809c8ed8650
+Size (qrcode-8.0.tar.gz) = 42743 bytes
