@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/06/11 06:33:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/14 11:26:43 adam Exp $
 
-DISTNAME=	zipstream-ng-1.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	zipstream_ng-1.8.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zipstream-ng/}
 
@@ -15,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
