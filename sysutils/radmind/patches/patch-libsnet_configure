@@ -1,0 +1,60 @@
+$NetBSD: patch-libsnet_configure,v 1.1 2024/10/14 15:07:01 nia Exp $
+
+Test for OpenSSL using a non-deprecated function.
+
+--- libsnet/configure.orig	2024-10-14 15:05:13.516808829 +0000
++++ libsnet/configure
+@@ -3090,9 +3090,9 @@ echo "${ECHO_T}yes" >&6; }
+ fi
+ 
+ 
+-{ echo "$as_me:$LINENO: checking for SSLeay_version in -lcrypto" >&5
+-echo $ECHO_N "checking for SSLeay_version in -lcrypto... $ECHO_C" >&6; }
+-if test "${ac_cv_lib_crypto_SSLeay_version+set}" = set; then
++{ echo "$as_me:$LINENO: checking for OpenSSL_version in -lcrypto" >&5
++echo $ECHO_N "checking for OpenSSL_version in -lcrypto... $ECHO_C" >&6; }
++if test "${ac_cv_lib_crypto_OpenSSL_version+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -3110,11 +3110,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char SSLeay_version ();
++char OpenSSL_version ();
+ int
+ main ()
+ {
+-return SSLeay_version ();
++return OpenSSL_version ();
+   ;
+   return 0;
+ }
+@@ -3137,21 +3137,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test ! -s conftest.err
+        } && test -s conftest$ac_exeext &&
+        $as_test_x conftest$ac_exeext; then
+-  ac_cv_lib_crypto_SSLeay_version=yes
++  ac_cv_lib_crypto_OpenSSL_version=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_lib_crypto_SSLeay_version=no
++	ac_cv_lib_crypto_OpenSSL_version=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
+       conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_lib_crypto_SSLeay_version" >&5
+-echo "${ECHO_T}$ac_cv_lib_crypto_SSLeay_version" >&6; }
+-if test $ac_cv_lib_crypto_SSLeay_version = yes; then
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_crypto_OpenSSL_version" >&5
++echo "${ECHO_T}$ac_cv_lib_crypto_OpenSSL_version" >&6; }
++if test $ac_cv_lib_crypto_OpenSSL_version = yes; then
+   cat >>confdefs.h <<_ACEOF
+ #define HAVE_LIBCRYPTO 1
+ _ACEOF
