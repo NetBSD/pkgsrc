@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/19 19:08:23 thorpej Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/14 15:16:17 nia Exp $
 #
 
 NABUD_VERS=	1.3.3
@@ -25,6 +25,8 @@ NABUD_GROUP?=	nabu
 PKG_USERS=		${NABUD_USER}:${NABUD_GROUP}
 PKG_GROUPS=		${NABUD_GROUP}
 PKG_GECOS.${NABUD_USER}=NABU user
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.prefs.mk"
 
