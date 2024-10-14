@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/10/14 06:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/14 09:51:56 adam Exp $
 
-DISTNAME=	zeep-4.2.1
+DISTNAME=	zeep-4.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeep/}
 
