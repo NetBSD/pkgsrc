@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/10/14 06:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/10/14 14:53:17 adam Exp $
 
-DISTNAME=	pygit2-1.15.1
+DISTNAME=	pygit2-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygit2/}
@@ -12,11 +12,13 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.9.1:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.16.0:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 BUILDLINK_API_DEPENDS.libgit2+=	libgit2>=1.8
 .include "../../devel/libgit2/buildlink3.mk"
