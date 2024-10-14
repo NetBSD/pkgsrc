@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/08/03 09:51:10 nia Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/14 15:40:30 nia Exp $
 
 DISTNAME=	ccid-1.6.1
 CATEGORIES=	security
@@ -29,6 +29,8 @@ SOEXT.*=		so
 PLIST_SUBST+=		SOEXT=${SOEXT}
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=		OSNAME=MacOS
+.elif ${OPSYS} == "SunOS"
+PLIST_SUBST+=		OSNAME=Solaris
 .else
 PLIST_SUBST+=		OSNAME=${OPSYS}
 .endif
