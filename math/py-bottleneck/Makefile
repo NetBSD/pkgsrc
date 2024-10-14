@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/08/05 07:44:56 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/14 05:11:33 adam Exp $
 
-DISTNAME=	bottleneck-1.4.0
+DISTNAME=	bottleneck-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=B/Bottleneck/}
@@ -15,8 +15,6 @@ WHEEL_NAME=	Bottleneck-${PKGVERSION_NOREV}
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
