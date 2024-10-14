@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6227 2024/10/14 07:49:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6228 2024/10/14 08:08:47 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9429,3 +9429,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/advancemame to 3.10 [nia 2024-10-14]
 	Updated www/py-django-celery-beat to 2.7.0 [wiz 2024-10-14]
 	Removed devel/py-case [wiz 2024-10-14]
+	Updated chat/py-mastodon to 1.8.1 [nia 2024-10-14]
