@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/14 06:45:34 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/10/14 07:13:40 wiz Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7.0:../../lang/py-six
 
 USE_LANGUAGES=		# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	313 # py-Tempita
 
 REPLACE_PYTHON+=	migrate/tests/changeset/databases/test_ibmdb2.py
 REPLACE_PYTHON+=	migrate/tests/changeset/test_changeset.py
