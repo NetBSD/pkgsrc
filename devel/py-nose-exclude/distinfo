@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:42 nia Exp $
-
-BLAKE2s (nose-exclude-0.5.0.tar.gz) = aa13da72e5253ce4e82e57a18c2d1e626328ae2ad37944faeb7e0e6aac8883c6
-SHA512 (nose-exclude-0.5.0.tar.gz) = 2795f2f42430f8622fdeb46accf4a75853f8202ce1849852ec4b1a6e26aeb20accb8c2ec4faf3dad0ea174570fccd67d51140587ee9f47c905eed5d8a2963356
-Size (nose-exclude-0.5.0.tar.gz) = 7359 bytes

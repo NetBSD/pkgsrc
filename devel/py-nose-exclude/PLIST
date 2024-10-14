@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2024/04/30 14:26:29 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/nose_exclude.py
-${PYSITELIB}/nose_exclude.pyc
-${PYSITELIB}/nose_exclude.pyo
