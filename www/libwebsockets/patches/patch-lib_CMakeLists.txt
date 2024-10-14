@@ -1,0 +1,23 @@
+$NetBSD: patch-lib_CMakeLists.txt,v 1.1 2024/10/14 17:19:24 nros Exp $
+
+* Don't hardcode -ldl use CMAKE_DL_LIBS for compatabiblity
+* Link to dl privtely so that it is not in the list of libs that
+  is linked to if linking to websockets_shared
+
+--- lib/CMakeLists.txt.orig	2023-11-20 06:27:02.000000000 +0000
++++ lib/CMakeLists.txt
+@@ -228,12 +228,8 @@ if (LWS_WITH_SHARED)
+ 
+ 	if (UNIX AND LWS_WITH_PLUGINS_API)
+ 		set (CMAKE_POSITION_INDEPENDENT_CODE ON)
+-		if (NOT((${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD") OR
+-		   (${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD") OR
+-		   (${CMAKE_SYSTEM_NAME} MATCHES "QNX")))
+-		   if (LWS_WITH_SHARED)
+-				target_link_libraries(websockets_shared dl)
+-			endif()
++		if (LWS_WITH_SHARED)
++			target_link_libraries(websockets_shared PRIVATE ${CMAKE_DL_LIBS})
+ 		endif()
+ 	endif()
+ 
