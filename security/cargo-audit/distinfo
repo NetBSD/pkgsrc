@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2024/03/22 12:06:44 pin Exp $
+$NetBSD: distinfo,v 1.8 2024/10/15 03:39:30 pin Exp $
 
 BLAKE2s (abscissa_core-0.7.0.crate) = acc08f957ca4ee049e29f5981c45352e3a170cf1131f82f47b9e12fae7136dcf
 SHA512 (abscissa_core-0.7.0.crate) = 8463c68fcacc01e077f50f47c8912635580de2d804938864d76a7c7ed97c72dd14ee7765f08f6ec0b0474fae31937c4da12d8c8a3f913889b5a34d0897dc1176
@@ -111,9 +111,9 @@ Size (camino-1.1.6.crate) = 30519 bytes
 BLAKE2s (canonical-path-2.0.2.crate) = f2d90742226ec3c1d35d245dcf5f367684414b1844627de47863708ac7349937
 SHA512 (canonical-path-2.0.2.crate) = 8d7bc999da230d3ebc8b6434c0cb2aced6ff2a77bef7225a060af79b9ab169bbf8720c9efe76e5fc2fb8af82a859b9e79b79e17c3c11bce523b4baafdf522877
 Size (canonical-path-2.0.2.crate) = 5536 bytes
-BLAKE2s (cargo-audit-0.20.0.tar.gz) = be3b2240e2794dc9bd8b74bd5862bab6fae02c2c3a37ec14aa863bd2da8990a6
-SHA512 (cargo-audit-0.20.0.tar.gz) = 7fc8a5760b4dd866fad23b12d2dcf7d4f25662ee6cc30b2cc2da5cf37c2680d4066307a754ab4d30db22a93fd0b92bc3d5cbaca1240aaa2b4b76c689538e7899
-Size (cargo-audit-0.20.0.tar.gz) = 1005482 bytes
+BLAKE2s (cargo-audit-0.20.1.tar.gz) = c5b6598997e1d6f4c29c8f37ab713608ba27591ffbb3c62b9563e5580014d17d
+SHA512 (cargo-audit-0.20.1.tar.gz) = a3162a9f82dff5cce50566b9bfea7aae8b9409883ca22e18c4366c7d5760538dd09ea7517b6e5f9efc849e2baa979f653636f523550857db0e9eb965df0a5973
+Size (cargo-audit-0.20.1.tar.gz) = 1005498 bytes
 BLAKE2s (cc-1.0.83.crate) = ab10f33ac9445cf3505988e87c5ead7ffdec771e992b09c9567abc07f680438c
 SHA512 (cc-1.0.83.crate) = 742a248c3a7547bb220a0b9c97b67a831fab9b4ac21daa08c85a3966b9fe576088def33e16132fcabec9a2828a6fc437088bb045bfc98b2cea829df6742565a7
 Size (cc-1.0.83.crate) = 68343 bytes
@@ -804,15 +804,15 @@ Size (thiserror-impl-1.0.56.crate) = 15367 bytes
 BLAKE2s (thread_local-1.1.7.crate) = 30ffa86ff25796622be75de4031e817bf2c927f9c0f1c2331d511abe811a3fe8
 SHA512 (thread_local-1.1.7.crate) = 3772452c2a349fb564d29bb06e13c8ae64807db27c3ee217fa04fd0e9847e94adeea582b82ffc2d9116f31ff478eb088550caf1346c263de49b55fa17b431c31
 Size (thread_local-1.1.7.crate) = 13585 bytes
-BLAKE2s (time-0.3.32.crate) = 0e7a2d632d3b329072a4d290b2925be98d9a00b7c22fd7dcdda4092fb9916052
-SHA512 (time-0.3.32.crate) = d4fb2587296921a37b18eabe4099a07fc1d6e3e5a76220975bddef2b4390f0a3a8bb2e24fc4eb0d69b36262e4eb04e61f8a0cb47037900a3c14a26d6590a6bfc
-Size (time-0.3.32.crate) = 118451 bytes
+BLAKE2s (time-0.3.36.crate) = b563433cc72171e5a5059983b90fa3cba288e0bbc784cce8e815f53e140d5a63
+SHA512 (time-0.3.36.crate) = 83da6e27691d1f0ef37ed276528e927686a06dab4811b6e29d625ef7a0f7c30fbb86896d74a2b087726e7a24a951b0a83aa1f5f22d711ead54f447d36ac47133
+Size (time-0.3.36.crate) = 119805 bytes
 BLAKE2s (time-core-0.1.2.crate) = 5f19f008a2c732ddb06dd2cf74c72bb94bd2bbc85d3e294ae7b6bde1e2ff151d
 SHA512 (time-core-0.1.2.crate) = 3861724c23cb806829a01186deb5217ae8252c20af622975264e6670cff528f42155039e4937756a9eb312a5580ffab07949437d5504d684a0e70755046cac52
 Size (time-core-0.1.2.crate) = 7191 bytes
-BLAKE2s (time-macros-0.2.17.crate) = 0f357645f05dad3b37c6366bb436a5e402b474a7a2674f09668e9f9f2940a0fa
-SHA512 (time-macros-0.2.17.crate) = c81747f0b74e68d3b3f36d378ac5911dece8c6b511e5ac793807f854cc31c812b927d0df941f55ff90d3d67512d0ac6a5f63f2de4322c81b05da42f46b4a661c
-Size (time-macros-0.2.17.crate) = 24443 bytes
+BLAKE2s (time-macros-0.2.18.crate) = 7c68d28225261bf3d2305d45702eebfd8499959dd2800a2f5d1bb060b60486b2
+SHA512 (time-macros-0.2.18.crate) = 557786115add272290be8305ab79c44f5b4425b64eb698492fe300f15879d9e013c66933cae8aa8faad9c109e2917e7a0e43c8a5eed7f4b0f0fdad092089efe4
+Size (time-macros-0.2.18.crate) = 24361 bytes
 BLAKE2s (tinyvec-1.6.0.crate) = 8b80d302f82b55581456246bdd3450b416b691513ffae386fd97d9808c05ebde
 SHA512 (tinyvec-1.6.0.crate) = e5acaf353c58c60ae5556130a934f1048abb79cf6668ae467d308bac44b689d8a9997227ea879f4b5fe50f29cde8761801b088d7149bcd063b973056c381921c
 Size (tinyvec-1.6.0.crate) = 45991 bytes
