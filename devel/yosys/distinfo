@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.5 2024/09/08 15:31:21 thorpej Exp $
+$NetBSD: distinfo,v 1.6 2024/10/15 01:32:59 thorpej Exp $
 
-BLAKE2s (abc-yosys-0.45.tar.gz) = 7d2fe097cb0edd288ed1bd5363f4c41384701cabb1d44870d59eb6660e3979ed
-SHA512 (abc-yosys-0.45.tar.gz) = 817c68a65af049fcc3c7f6f8bede0df921b198c36baaa117329be727f5fc215bc1434ca801fd162e3c4811b6d1e61b735f631d77b83faf5c0ce9507abcba55a7
-Size (abc-yosys-0.45.tar.gz) = 6245551 bytes
-BLAKE2s (yosys-0.45.tar.gz) = 9fce7cc6a50ed13dda709ee35bc187ca17fce6d7bea419c3f23629e6c6a8bb02
-SHA512 (yosys-0.45.tar.gz) = fd0ab67f69e61ea1479b0fbf61f8d860bed58f668ab61c925e8d82fda728b9615188e7bcb0541110d6e6b272feb6420737d19c5e2d6315263e0439f78e6915d1
-Size (yosys-0.45.tar.gz) = 2921074 bytes
-SHA1 (patch-Makefile) = 25314af236374e85faacc4b85625195bb743f83d
+BLAKE2s (abc-yosys-0.46.tar.gz) = dfd05bc9646cf2d97dd655cf2f90ba71b498cd7e7d3be04282084d67ce4bd994
+SHA512 (abc-yosys-0.46.tar.gz) = e2b12c1adf7fbfd477999c791cfe237ab4cf66b2615be0e9fed9070383f0a386fd26031a2f59fea98f53095b109a1421d71c775bdca13f4901d168958fda9fb2
+Size (abc-yosys-0.46.tar.gz) = 6264660 bytes
+BLAKE2s (yosys-0.46.tar.gz) = ee9b8d88b723052bc0dbbbc2ef12a341d58b721dcb630fab33aa878126dcaf01
+SHA512 (yosys-0.46.tar.gz) = cc95c1372db4260fe0241770cd2eb490370ab4249dfd72019fe5f33fc99195081cab80aeb6c7eb3049d6e93eb0e2cad1e8a8d285d79113daa5141e453ed37076
+Size (yosys-0.46.tar.gz) = 3043092 bytes
+SHA1 (patch-Makefile) = db77fa7d0274a1f11290e46ee92dfc80b7d88556
 SHA1 (patch-misc_yosys-config.in) = 4ad255685debcd985b185a4dbe31be2c31117574
