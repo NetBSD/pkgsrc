@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.155 2024/08/25 06:19:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.156 2024/10/15 16:07:00 adam Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -7,7 +7,7 @@
 # used by print/poppler-qt6/Makefile
 # used by print/poppler-utils/Makefile
 
-POPPLER_VERS=	24.03.0
+POPPLER_VERS=	24.10.0
 DISTNAME=	poppler-${POPPLER_VERS}
 CATEGORIES=	print
 MASTER_SITES=	https://poppler.freedesktop.org/
@@ -18,15 +18,15 @@ HOMEPAGE=	https://poppler.freedesktop.org/
 LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=	${.CURDIR}/../../print/poppler/distinfo
-#PATCHDIR=	${.CURDIR}/../../print/poppler/patches
+PATCHDIR=	${.CURDIR}/../../print/poppler/patches
 
-USE_CMAKE=		yes
-USE_LANGUAGES=		c c++17
+USE_CXX_FEATURES=	c++17
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gsed
 GCC_REQD+=		8 # std::optional
 
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPGME:BOOL=OFF
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_NSS3:BOOL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPGME=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_NSS3=OFF
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,5 +45,6 @@ BUILDLINK_TRANSFORM+=   rm:-fno-check-new
 .endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

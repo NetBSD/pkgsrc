@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/10/15 16:07:00 adam Exp $
+
+Boost from pkgsrc doesn't support CONFIG.
+
+--- CMakeLists.txt.orig	2024-10-15 08:19:17.603338492 +0000
++++ CMakeLists.txt
+@@ -225,7 +225,7 @@ find_soft_mandatory_package(ENABLE_QT6 Q
+ # Check for Cairo rendering backend
+ macro_optional_find_package(Cairo ${CAIRO_VERSION})
+ 
+-find_package(Boost 1.74.0 CONFIG)
++find_package(Boost 1.74.0)
+ if(Boost_FOUND)
+   set(USE_BOOST_HEADERS ON)
+ elseif(ENABLE_BOOST)

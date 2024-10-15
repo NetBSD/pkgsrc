@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/08/25 06:19:10 wiz Exp $
-
-.include "../../print/poppler/Makefile.common"
+# $NetBSD: Makefile,v 1.38 2024/10/15 16:07:00 adam Exp $
 
 PKGNAME=	poppler-includes-${POPPLER_VERS}
 
@@ -10,12 +8,10 @@ CONFLICTS+=	poppler-0.5.1{,nb*}
 
 NO_BUILD=	yes
 
-INCDIR=	${DESTDIR}${PREFIX}/include
+INCDIR=		${DESTDIR}${PREFIX}/include
 
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5:BOOL=OFF
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6:BOOL=OFF
-
-.include "../../mk/bsd.prefs.mk"
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6=OFF
 
 do-install:
 	${INSTALL_DATA_DIR} ${INCDIR}
@@ -24,8 +20,10 @@ do-install:
 	  | grep ^poppler/ | { while read f; do				\
 	    ${INSTALL_DATA} ${WRKSRC}/"$$f" ${INCDIR}/poppler;		\
 	done };
-	${INSTALL_DATA} ${WRKSRC}/poppler/poppler-config.h ${INCDIR}/poppler
-	${INSTALL_DATA} ${WRKSRC}/poppler_private_export.h ${INCDIR}/poppler
+	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/poppler/poppler-config.h \
+		${INCDIR}/poppler
+	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/poppler_private_export.h \
+		${INCDIR}/poppler
 	for d in goo fofi splash; do					\
 	    ${INSTALL_DATA_DIR} ${INCDIR}/poppler/"$$d";		\
 	    sed -n -f ${FILESDIR}/extract.sed ${WRKSRC}/CMakeLists.txt	\
@@ -36,6 +34,8 @@ do-install:
 	# do these actually belong here?
 	${INSTALL_DATA} ${WRKSRC}/poppler/SignatureInfo.h ${INCDIR}/poppler
 	${INSTALL_DATA} ${WRKSRC}/goo/NetPBMWriter.h ${INCDIR}/poppler/goo
+
+.include "../../print/poppler/Makefile.common"
 
 BUILDLINK_DEPMETHOD.fontconfig= build
 .include "../../fonts/fontconfig/buildlink3.mk"

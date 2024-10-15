@@ -1,8 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2024/08/25 06:19:11 wiz Exp $
-
-USE_CXX_FEATURES+=	filesystem
-PKGREVISION= 1
-.include "../../print/poppler/Makefile.common"
+# $NetBSD: Makefile,v 1.70 2024/10/15 16:07:01 adam Exp $
 
 PKGNAME=	poppler-utils-${POPPLER_VERS}
 COMMENT=	PDF utilities (from poppler)
@@ -24,13 +20,13 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_CPP=OFF
 # Don't compile poppler qt5/6 wrapper.
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT5=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_QT6=OFF
-# Don't build libcurl based HTTP support. ## might want to include
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_LIBCURL=OFF
+
+BUILD_DIRS=		utils
+.include "../../print/poppler/Makefile.common"
+USE_CXX_FEATURES+=	filesystem
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
-
-INSTALL_DIRS=		utils
 
 .include "../../mk/bsd.prefs.mk"
 
