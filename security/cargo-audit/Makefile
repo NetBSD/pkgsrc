@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/22 12:06:44 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/15 03:39:30 pin Exp $
 
-DISTNAME=	cargo-audit-0.20.0
+DISTNAME=	cargo-audit-0.20.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rustsec/}
 GITHUB_TAG=	cargo-audit/v${PKGVERSION_NOREV}
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0 # or MIT
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.70.0
 WRKSRC=			${WRKDIR}/rustsec-cargo-audit-v${PKGVERSION_NOREV}
 USE_LANGUAGES=		c
 INSTALLATION_DIRS=	bin

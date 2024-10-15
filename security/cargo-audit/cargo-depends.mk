@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2024/03/22 12:06:44 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2024/10/15 03:39:30 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	abscissa_core-0.7.0
 CARGO_CRATE_DEPENDS+=	abscissa_derive-0.7.0
@@ -267,9 +267,9 @@ CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.56
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.56
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.7
-CARGO_CRATE_DEPENDS+=	time-0.3.32
+CARGO_CRATE_DEPENDS+=	time-0.3.36
 CARGO_CRATE_DEPENDS+=	time-core-0.1.2
-CARGO_CRATE_DEPENDS+=	time-macros-0.2.17
+CARGO_CRATE_DEPENDS+=	time-macros-0.2.18
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
 CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
 CARGO_CRATE_DEPENDS+=	tokio-1.36.0
