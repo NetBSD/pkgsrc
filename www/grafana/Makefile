@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2024/09/06 18:49:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.126 2024/10/15 08:53:23 wiz Exp $
 
 DISTNAME=	grafana-11.0.0
 PKGREVISION=	4
@@ -12,6 +12,9 @@ COMMENT=	Metrics dashboard and graph editor
 LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
 DISTFILES=	${DEFAULT_DISTFILES}
+
+# does not build with go 1.23
+GO_VERSION_REQD=	122
 
 # We don't have suitable infrastructure in pkgsrc for generating frontend
 # assets, so we'll extract prebuilt frontend assets.
