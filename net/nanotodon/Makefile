@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/07/21 11:59:05 tsutsui Exp $
+# $NetBSD: Makefile,v 1.23 2024/10/15 20:08:53 nia Exp $
 
 DISTNAME=	nanotodon-0.4.0
 CATEGORIES=	net
@@ -11,6 +11,8 @@ COMMENT=	CUI/C99 mastodon client
 LICENSE=	mit
 
 USE_LANGUAGES=		c
+
+FORCE_C_STD=		gnu99
 USE_CC_FEATURES=	c99
 
 INSTALLATION_DIRS+=	bin share/doc/nanotodon
