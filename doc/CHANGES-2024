@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6264 2024/10/15 12:15:35 bacon Exp $
+$NetBSD: CHANGES-2024,v 1.6265 2024/10/15 16:09:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9488,3 +9488,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-humanize to 4.11.0 [adam 2024-10-15]
 	Updated textproc/py-tablib to 3.7.0 [adam 2024-10-15]
 	Added biology/mca-calling version 0.1.0 [bacon 2024-10-15]
+	Updated print/poppler to 24.10.0 [adam 2024-10-15]
+	Updated databases/py-peewee to 3.17.7 [adam 2024-10-15]
