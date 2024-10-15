@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2022/01/08 11:16:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/10/15 16:07:00 adam Exp $
 include/poppler/Annot.h
 include/poppler/AnnotStampImageHelper.h
 include/poppler/Array.h
@@ -31,6 +31,7 @@ include/poppler/GfxFont.h
 include/poppler/GfxState.h
 include/poppler/GfxState_helpers.h
 include/poppler/GlobalParams.h
+include/poppler/HashAlgorithm.h
 include/poppler/Hints.h
 include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h

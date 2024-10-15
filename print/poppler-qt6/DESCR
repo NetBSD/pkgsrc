@@ -1,4 +1,4 @@
-This is the QT6 wrapper for poppler, a PDF rendering library. It
+This is the Qt6 wrapper for poppler, a PDF rendering library. It
 is a fork of the xpdf 3.0 PDF viewer developed by Derek Noonburg
 of Glyph and Cog, LLC.
 
