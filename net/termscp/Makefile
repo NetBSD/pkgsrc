@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/10/05 04:05:53 pin Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/15 03:38:40 pin Exp $
 
-DISTNAME=	termscp-0.15.0
+DISTNAME=	termscp-0.16.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=veeso/}
 GITHUB_TAG=     v${PKGVERSION_NOREV}
