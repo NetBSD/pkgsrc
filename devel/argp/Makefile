@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/08/06 18:55:26 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/15 01:13:00 mrg Exp $
 
 DISTNAME=	argp-standalone-1.3
 PKGNAME=	argp-1.3
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-FORCE_C_STD=	c99
+FORCE_C_STD=	gnu99
 
 INSTALLATION_DIRS=	include lib
 
