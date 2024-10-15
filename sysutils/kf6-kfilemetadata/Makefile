@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/05/29 16:34:27 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/15 16:15:36 adam Exp $
 
 DISTNAME=	kfilemetadata-${KF6VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
