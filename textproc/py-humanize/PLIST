@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/12/01 19:01:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/10/15 05:54:05 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,12 +6,18 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE
 ${PYSITELIB}/humanize/__init__.py
 ${PYSITELIB}/humanize/__init__.pyc
 ${PYSITELIB}/humanize/__init__.pyo
+${PYSITELIB}/humanize/_version.py
+${PYSITELIB}/humanize/_version.pyc
+${PYSITELIB}/humanize/_version.pyo
 ${PYSITELIB}/humanize/filesize.py
 ${PYSITELIB}/humanize/filesize.pyc
 ${PYSITELIB}/humanize/filesize.pyo
 ${PYSITELIB}/humanize/i18n.py
 ${PYSITELIB}/humanize/i18n.pyc
 ${PYSITELIB}/humanize/i18n.pyo
+${PYSITELIB}/humanize/lists.py
+${PYSITELIB}/humanize/lists.pyc
+${PYSITELIB}/humanize/lists.pyo
 ${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.mo
 ${PYSITELIB}/humanize/locale/ar/LC_MESSAGES/humanize.po
 ${PYSITELIB}/humanize/locale/bn_BD/LC_MESSAGES/humanize.mo
