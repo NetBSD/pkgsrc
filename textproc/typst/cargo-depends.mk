@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.11 2024/05/18 07:03:55 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.12 2024/10/16 22:10:55 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.2
@@ -258,9 +258,9 @@ CARGO_CRATE_DEPENDS+=	tempfile-3.10.1
 CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.57
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.57
-CARGO_CRATE_DEPENDS+=	time-0.3.34
+CARGO_CRATE_DEPENDS+=	time-0.3.36
 CARGO_CRATE_DEPENDS+=	time-core-0.1.2
-CARGO_CRATE_DEPENDS+=	time-macros-0.2.17
+CARGO_CRATE_DEPENDS+=	time-macros-0.2.18
 CARGO_CRATE_DEPENDS+=	tiny-skia-0.11.4
 CARGO_CRATE_DEPENDS+=	tiny-skia-path-0.11.4
 CARGO_CRATE_DEPENDS+=	tinystr-0.7.5
