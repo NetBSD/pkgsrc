@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2024/03/25 11:10:48 markd Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/16 04:37:23 markd Exp $
 
 DISTNAME=	collection-publishers
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70716
+TEXLIVE_REV=	72464
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -74,6 +74,7 @@ DEPENDS+=	tex-classicthesis-[0-9]*:../../print/tex-classicthesis
 # depend ebook
 # depend ebsthesis
 # depend ecothesis
+# depend edmaths
 # depend ejpecp
 # depend ekaia
 # depend elbioimp
@@ -102,6 +103,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend h2020proposal
 # depend hagenberg-thesis
 # depend har2nat
+# depend hduthesis
 # depend hecthese
 # depend hep-paper
 # depend heria
@@ -178,8 +180,10 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 # depend nrc
 # depend nwafuthesis
 # depend nwejm
+# depend nxuthesis
 # depend onrannual
 # depend opteng
+# depend osda
 # depend oststud
 # depend oup-authoring-template
 # depend philosophersimprint
@@ -200,6 +204,7 @@ DEPENDS+=	tex-ieeetran-[0-9]*:../../print/tex-IEEEtran
 DEPENDS+=	tex-revtex-[0-9]*:../../print/tex-revtex
 DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend revtex4-1
+# depend rub-kunstgeschichte
 # depend rutitlepage
 # depend ryersonsgsthesis
 # depend ryethesis
@@ -240,6 +245,7 @@ DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 # depend thucoursework
 # depend thuthesis
 # depend tidyres
+# depend tiet-question-paper
 # depend timbreicmc
 # depend tlc-article
 # depend topletter
@@ -261,6 +267,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend ucthesis
 # depend udepcolor
 # depend udes-genie-these
+# depend udiss
 # depend uestcthesis
 # depend ufrgscca
 # depend uhhassignment
