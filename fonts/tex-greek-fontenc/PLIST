@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/16 02:36:37 markd Exp $
+share/texmf-dist/tex/latex/greek-fontenc/alphabeta.sty
+share/texmf-dist/tex/latex/greek-fontenc/greek-euenc.def
+share/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+share/texmf-dist/tex/latex/greek-fontenc/lgr2licr.lua
+share/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+share/texmf-dist/tex/latex/greek-fontenc/puenc-greek.def
+share/texmf-dist/tex/latex/greek-fontenc/textalpha.sty
+share/texmf-dist/tex/latex/greek-fontenc/tuenc-greek.def
