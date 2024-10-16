@@ -1,0 +1,12 @@
+This bundle contains the two packages svg and svg-extract. The
+svg package is intended for the automated integration of SVG
+graphics into LaTeX documents. Therefore the capabilities
+provided by Inkscape -- or more precisely its command line tool
+-- are used to export the text within an SVG graphic to a
+separate file, which is then rendered by LaTeX. For this
+purpose the two commands \includesvg and \includeinkscape are
+provided which are very similar to the \includegraphics command
+of the graphicx package. In addition, the package svg-extract
+allows the extraction of these graphics into independent files
+in different graphic formats, exactly as it is rendered within
+the LaTeX document, using either ImageMagick or Ghostscript.
