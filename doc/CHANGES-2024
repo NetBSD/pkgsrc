@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6274 2024/10/16 10:14:15 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6275 2024/10/16 10:16:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9510,3 +9510,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/librespot to 0.5.0 [pin 2024-10-16]
 	Updated devel/mise to 2024.10.7 [pin 2024-10-16]
 	Updated audio/ncspot to 1.2.0 [pin 2024-10-16]
+	Updated shells/nushell to 0.99.0 [pin 2024-10-16]
