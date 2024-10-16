@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6268 2024/10/16 08:40:03 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6269 2024/10/16 09:02:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9502,3 +9502,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-grpcio to 1.67.0 [adam 2024-10-16]
 	Updated net/py-grpcio-testing to 1.67.0 [adam 2024-10-16]
 	Updated net/py-grpcio-tools to 1.67.0 [adam 2024-10-16]
+	Updated net/libcares to 1.34.2 [adam 2024-10-16]
+	Updated devel/memcached to 1.6.31 [adam 2024-10-16]
