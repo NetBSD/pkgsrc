@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2024/08/18 20:42:50 markd Exp $
+# $NetBSD: Makefile,v 1.95 2024/10/16 03:31:14 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2024pre3
+PKGNAME=	texlive-${DISTNAME}-2024pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	70717
@@ -1324,7 +1324,7 @@ DEPENDS+=	tex-subfiles-[0-9]*:../../print/tex-subfiles
 DEPENDS+=	tex-substr-[0-9]*:../../print/tex-substr
 DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 # depend suppose
-# depend svg
+DEPENDS+=	tex-svg-[0-9]*:../../graphics/tex-svg
 # depend svgcolor
 # depend svn
 # depend svn-multi
