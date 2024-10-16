@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2024/04/18 07:40:20 markd Exp $
+# $NetBSD: Makefile,v 1.32 2024/10/16 04:01:16 markd Exp $
 
 DISTNAME=	collection-binextra
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70681
+TEXLIVE_REV=	72338
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -92,6 +92,7 @@ DEPENDS+=	tex-pkfix-[0-9]*:../../print/tex-pkfix
 # depend runtexshebang
 DEPENDS+=	seetexk-[0-9]*:../../print/seetexk
 # depend spix
+# depend sqltex
 # depend srcredact
 # depend sty2dtx
 # synctex entirely included in web2c
