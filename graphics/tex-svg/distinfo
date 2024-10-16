@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/16 03:14:43 markd Exp $
+
+BLAKE2s (svg.r70626.tar.xz) = c7ca8434d0dd783904e1166a48f39752d90954aea540dd1aa43fa2477c5ab177
+SHA512 (svg.r70626.tar.xz) = 8175fea013ae1c0c3360a8e4e14044673e0eaff1ede5d7307d4a96f0265290c976662f8ab5f8ea998fe140e22d8df4f6727f8dde36c7d000d4258fc8c4579b3d
+Size (svg.r70626.tar.xz) = 14160 bytes
