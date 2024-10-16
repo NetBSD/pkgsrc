@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2024/03/21 20:00:55 markd Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/16 04:31:46 markd Exp $
 
 DISTNAME=	collection-pictures
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70530
+TEXLIVE_REV=	71947
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -135,6 +135,7 @@ DEPENDS+=	tex-pgfgantt-[0-9]*:../../graphics/tex-pgfgantt
 DEPENDS+=	tex-pgfopts-[0-9]*:../../devel/tex-pgfopts
 # depend pgfornament
 DEPENDS+=	tex-pgfplots-[0-9]*:../../print/tex-pgfplots
+# depend pgfplotsthemebeamer
 DEPENDS+=	tex-picinpar-[0-9]*:../../print/tex-picinpar
 DEPENDS+=	tex-pict2e-[0-9]*:../../print/tex-pict2e
 DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
@@ -145,6 +146,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend pixelarttikz
 # depend pmgraph
 # depend polyhedra
+# depend polyomino
 # depend postage
 # depend postit
 # depend prerex
@@ -250,6 +252,7 @@ DEPENDS+=	tex-tkz-base-[0-9]*:../../graphics/tex-tkz-base
 # depend tkz-euclide
 DEPENDS+=	tex-tkz-fct-[0-9]*:../../graphics/tex-tkz-fct
 # depend tkz-graph
+# depend tkz-grapheur
 # depend tkz-orm
 # depend tkz-tab
 # depend tkzexample
