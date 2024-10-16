@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2024/03/25 11:07:52 markd Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/16 04:28:42 markd Exp $
 
 DISTNAME=	collection-mathscience
 PKGNAME=	texlive-${DISTNAME}-2024pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70730
+TEXLIVE_REV=	72266
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -15,6 +15,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 
 # depend 12many
 DEPENDS+=	tex-accents-[0-9]*:../../print/tex-accents
+# depend aiplans
 # depend alg
 # depend algobox
 DEPENDS+=	tex-algorithm2e-[0-9]*:../../print/tex-algorithm2e
@@ -66,6 +67,7 @@ DEPENDS+=	tex-chemgreek-[0-9]*:../../print/tex-chemgreek
 DEPENDS+=	tex-clrscode-[0-9]*:../../print/tex-clrscode
 # depend clrscode3e
 # depend codeanatomy
+# depend coloredtheorem
 # depend commath
 # depend commutative-diagrams
 # depend complexity
@@ -77,6 +79,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend cryptocode
 # depend cs-techrep
 # depend csassignments
+# depend csthm
 # depend cvss
 # depend decision-table
 # depend delim
@@ -86,6 +89,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend diffcoeff
 # depend digiconfigs
 # depend dijkstra
+# depend domaincoloring
 # depend drawmatrix
 # depend drawstack
 # depend dyntree
@@ -140,9 +144,11 @@ DEPENDS+=	tex-ebproof-[0-9]*:../../print/tex-ebproof
 # depend karnaugh
 # depend karnaugh-map
 # depend karnaughmap
+# depend keytheorems
 # depend kvmap
 # depend letterswitharrows
 # depend lie-hasse
+# depend linearregression
 # depend logicproof
 # depend longdivision
 # depend lpform
@@ -169,6 +175,7 @@ DEPENDS+=	tex-mhchem-[0-9]*:../../print/tex-mhchem
 # depend mhequ
 # depend miller
 # depend mismath
+# depend moremath
 # depend multiobjective
 # depend naive-ebnf
 # depend namedtensor
@@ -212,10 +219,12 @@ DEPENDS+=	tex-physics-[0-9]*:../../math/tex-physics
 # depend rank-2-roots
 # depend rbt-mathnotes
 # depend rec-thy
+# depend reptheorem
 # depend resolsysteme
 # depend rest-api
 # depend revquantum
 # depend ribbonproofs
+# depend rigidnotation
 # depend rmathbr
 # depend sankey
 # depend sasnrdisplay
