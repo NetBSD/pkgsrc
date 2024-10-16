@@ -1,10 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/10/14 22:06:30 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/10/16 08:51:31 adam Exp $
 
-# NOTE: when updating this, also update the version in
-# patches/patch-include_ares__version.h!
-DISTNAME=	c-ares-1.34.1
+DISTNAME=	c-ares-1.34.2
 PKGNAME=	${DISTNAME:S/c-/libc/1}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=c-ares/}
 GITHUB_PROJECT=	c-ares
