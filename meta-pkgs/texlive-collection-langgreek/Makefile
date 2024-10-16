@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/03/21 20:00:54 markd Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/16 03:27:14 markd Exp $
 
 DISTNAME=	collection-langgreek
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	65038
@@ -20,6 +20,7 @@ DEPENDS+=	tex-cbfonts-fd-[0-9]*:../../fonts/tex-cbfonts-fd
 # depend gfsbaskerville
 # depend gfsporson
 # depend greek-fontenc
+DEPENDS+=	tex-greek-fontenc-[0-9]*:../../fonts/tex-greek-fontenc
 DEPENDS+=	tex-greek-inputenc-[0-9]*:../../print/tex-greek-inputenc
 # depend greekdates
 # depend greektex
