@@ -1,10 +1,10 @@
-$NetBSD: patch-src_main.c,v 1.2 2023/11/27 03:21:00 thorpej Exp $
+$NetBSD: patch-src_main.c,v 1.3 2024/10/16 04:25:32 thorpej Exp $
 
 Allow the default location of the X16 ROM to be overridden.
 
---- src/main.c.orig	2023-11-06 03:36:56
-+++ src/main.c	2023-11-27 02:44:32
-@@ -513,9 +513,13 @@ main(int argc, char **argv)
+--- src/main.c.orig	2024-10-16 03:58:55.880047197 +0000
++++ src/main.c	2024-10-16 04:01:17.250721407 +0000
+@@ -570,9 +570,13 @@ main(int argc, char **argv)
  
  	char *base_path = SDL_GetBasePath();
  
