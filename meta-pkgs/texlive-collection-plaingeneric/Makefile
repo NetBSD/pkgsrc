@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2024/03/21 20:00:56 markd Exp $
+# $NetBSD: Makefile,v 1.26 2024/10/16 04:33:29 markd Exp $
 
 DISTNAME=	collection-plaingeneric
 PKGNAME=	texlive-${DISTNAME}-2024pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	68675
+TEXLIVE_REV=	71220
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -57,6 +57,7 @@ DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
 # depend gtl
 # depend hlist
 DEPENDS+=	tex-hyplain-[0-9]*:../../print/tex-hyplain
+# depend ifis-macros
 # depend inputnormalization
 # depend insbox
 DEPENDS+=	tex-js-misc-[0-9]*:../../print/tex-js-misc
