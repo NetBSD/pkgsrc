@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.283 2024/08/23 10:33:05 nia Exp $
+# $NetBSD: gcc.mk,v 1.284 2024/10/16 20:16:25 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -377,6 +377,8 @@ _GCC_PKG=	gcc-${_GCC_VERSION:C/-.*$//}
 # Note that pkgsrc also sets this flag itself for Darwin+clang.
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-function-declaration
 BUILDLINK_TRANSFORM+=	rm:-Wno-error=sign-conversion
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=incompatible-pointer-types
+BUILDLINK_TRANSFORM+=	rm:-Wno-error=implicit-int
 .endif
 
 .if !empty(_GCC_VERSION:M[23].*) || !empty(_GCC_VERSION:M4.[01234].*)
