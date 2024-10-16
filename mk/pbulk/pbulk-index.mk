@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.28 2023/02/12 04:13:33 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.29 2024/10/16 20:30:55 gutteridge Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -75,7 +75,7 @@ _PBULK_SORTED_LIST.${_t}:= \
 pbulk-index: pbulk-index-item
 .else
 #
-# Use an ODE for loop to compute the carthesian product of
+# Use an ODE for loop to compute the Cartesian product of
 # the support settings.  This expands to something like
 #
 #	for php in 4 5; do \
