@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2023/10/04 08:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.59 2024/10/16 17:55:09 adam Exp $
 
-DISTNAME=	psycopg2-2.9.9
+DISTNAME=	psycopg2-2.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/psycopg2/}
@@ -10,9 +10,10 @@ HOMEPAGE=	https://www.psycopg.org/
 COMMENT=	PostgreSQL database adapter for Python
 LICENSE=	gnu-lgpl-v3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
