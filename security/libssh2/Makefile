@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/12/21 07:04:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/10/16 15:38:12 wiz Exp $
 
-DISTNAME=	libssh2-1.11.0
-PKGREVISION=	2
+DISTNAME=	libssh2-1.11.1
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh2.org/download/
 
@@ -16,9 +15,6 @@ CONFIGURE_ARGS+=	--with-libz=${BUILDLINK_PREFIX.zlib:Q}
 CONFIGURE_ARGS+=	--disable-examples-build
 PKGCONFIG_OVERRIDE+=	libssh2.pc.in
 TEST_TARGET=		check
-
-# patched in Makefile.in
-CHECK_PORTABILITY_SKIP+=	Makefile.am
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

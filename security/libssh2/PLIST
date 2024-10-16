@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/06/06 08:05:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/16 15:38:12 wiz Exp $
 include/libssh2.h
 include/libssh2_publickey.h
 include/libssh2_sftp.h
@@ -105,6 +105,7 @@ man/man3/libssh2_session_banner_get.3
 man/man3/libssh2_session_banner_set.3
 man/man3/libssh2_session_block_directions.3
 man/man3/libssh2_session_callback_set.3
+man/man3/libssh2_session_callback_set2.3
 man/man3/libssh2_session_disconnect.3
 man/man3/libssh2_session_disconnect_ex.3
 man/man3/libssh2_session_flag.3
@@ -145,6 +146,8 @@ man/man3/libssh2_sftp_open_ex.3
 man/man3/libssh2_sftp_open_ex_r.3
 man/man3/libssh2_sftp_open_r.3
 man/man3/libssh2_sftp_opendir.3
+man/man3/libssh2_sftp_posix_rename.3
+man/man3/libssh2_sftp_posix_rename_ex.3
 man/man3/libssh2_sftp_read.3
 man/man3/libssh2_sftp_readdir.3
 man/man3/libssh2_sftp_readdir_ex.3
