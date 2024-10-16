@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2024/10/01 09:03:08 adam Exp $
+# $NetBSD: Makefile,v 1.76 2024/10/16 08:39:26 adam Exp $
 
-DISTNAME=	grpcio_tools-1.66.2
+DISTNAME=	grpcio_tools-1.67.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/grpcio-tools/}
@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 CHECK_PORTABILITY_SKIP=	third_party/protobuf/*.sh
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
 
 MAKE_ENV+=	GRPC_PYTHON_LDFLAGS="-lprotoc ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.protobuf}/lib"
 
