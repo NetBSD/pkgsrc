@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24957 2024/10/15 05:57:08 adam Exp $
+$NetBSD: TODO,v 1.24958 2024/10/16 08:40:03 adam Exp $
 
 Suggested new packages
 ======================
@@ -737,7 +737,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
-	o grpc-1.67.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtk4-4.16
