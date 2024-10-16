@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/16 02:36:37 markd Exp $
+
+BLAKE2s (greek-fontenc.doc.r68877.tar.xz) = 66c245543c5e94f36e67768722e8fdad1500325baff6122a3c76e3ad937b5faa
+SHA512 (greek-fontenc.doc.r68877.tar.xz) = 67f22594152f543a1b59e91a49168b92d6e9870f0c362a69746c6d3ac9fa4918980df4708bf1a6697fedcfd519153b9a29d92114b6567a2ec03e65210eba3d7a
+Size (greek-fontenc.doc.r68877.tar.xz) = 3095164 bytes
