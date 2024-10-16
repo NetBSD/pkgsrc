@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/04/06 08:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/16 10:05:03 pin Exp $
 
-DISTNAME=	librespot-0.4.2
-PKGREVISION=	5
+DISTNAME=	librespot-0.5.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=librespot-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,6 +12,8 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.74.0
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
