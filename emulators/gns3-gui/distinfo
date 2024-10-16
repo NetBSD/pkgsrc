@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:23:50 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/10/16 02:15:01 markd Exp $
 
-BLAKE2s (gns3-gui-2.2.1.tar.gz) = bd09aedf88f8c3e4f83d98eeaba28fda71dfb0a8c36f629f3f995678a01974fb
-SHA512 (gns3-gui-2.2.1.tar.gz) = 449abb8ace075fea3398d4bf0aec1504079b868dc49e8fe728771eac884dc713083af79888db3b68a30f44c68952ff26975283e2bf9d3798bffdef4a258d5180
-Size (gns3-gui-2.2.1.tar.gz) = 5077544 bytes
+BLAKE2s (gns3-gui-2.2.49.tar.gz) = 277cbb6b34b56659db6dddf21a89e19cb94fb18b2471fc3a7fc20618d36adcab
+SHA512 (gns3-gui-2.2.49.tar.gz) = f1be5cb0f001bdbff076262b9bb870dafb3ee7c5977983ddb7067d7bbcee8c02327302002d297d3715ffc8127e05ad9055d4807d88e0fe2c3a3517b67dc0f1cd
+Size (gns3-gui-2.2.49.tar.gz) = 4896247 bytes
