@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2023/10/04 08:19:57 adam Exp $
+$NetBSD: distinfo,v 1.49 2024/10/16 17:55:10 adam Exp $
 
-BLAKE2s (psycopg2-2.9.9.tar.gz) = 66b52d74cd2cd1920077ed37b2f7985f3a211fa6b1aad93c60b539dd1bf21ff8
-SHA512 (psycopg2-2.9.9.tar.gz) = a691fd09762221e854861dedce37b05e5354e0701feea470a6d5046960056ef02a8c9ecfa751adeba485271ea7d5834643b7d3a3c3f3270087f5ed9c68509f5f
-Size (psycopg2-2.9.9.tar.gz) = 384926 bytes
+BLAKE2s (psycopg2-2.9.10.tar.gz) = f95c9c6e65fc6d399bc44aff5c0bef8488a24eaaa556454cedbd39a1ed68cbbe
+SHA512 (psycopg2-2.9.10.tar.gz) = d0916f6a645b5e87f89f2463dc22fad78340a85fbff320d099bf429a42557f40d3a4eebdc670768469aef1e9fcee60123767bfe49e1186e8574f95bfd6f46900
+Size (psycopg2-2.9.10.tar.gz) = 385672 bytes
