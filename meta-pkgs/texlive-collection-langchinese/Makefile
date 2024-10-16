@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2024/03/25 11:00:52 markd Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/16 04:10:04 markd Exp $
 
 DISTNAME=	collection-langchinese
 PKGNAME=	texlive-${DISTNAME}-2024pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70738
+TEXLIVE_REV=	72136
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -34,6 +34,7 @@ DEPENDS+=	tex-hyphen-chinese-[0-9]*:../../print/tex-hyphen-chinese
 # depend pgfornament-han
 # depend qyxf-book
 DEPENDS+=	tex-sjtutex-[0-9]*:../../print/tex-sjtutex
+# depend suanpan-l3
 # texlive-zh-cn is documentation only
 # texproposal is documentation only
 # tlmgr-intro-zh-cn is documentation only
