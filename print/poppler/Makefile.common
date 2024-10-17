@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.156 2024/10/15 16:07:00 adam Exp $
+# $NetBSD: Makefile.common,v 1.157 2024/10/17 12:02:53 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -43,6 +43,10 @@ USE_PKGSRC_GCC_RUNTIME=	yes
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=   rm:-fno-check-new
 .endif
+
+# poppler's build infrastructure and our split packages
+# do not work with ninja
+CMAKE_GENERATOR=	make
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
