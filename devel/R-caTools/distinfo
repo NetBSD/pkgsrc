@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:02 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/10/17 14:10:15 mef Exp $
 
-BLAKE2s (R/caTools_1.18.2.tar.gz) = afbd057c6e40246856c24ba14dfcfd9af43a94841c76eb772ee9b41f1ca05003
-SHA512 (R/caTools_1.18.2.tar.gz) = 79f34877a58322857da2595eb977ba047ee97dc25420921ce1a29b5060bc2082f38bc2ec4afd0f3243bc1991c86353e0d12cbf593ad5241623a4abae8b023058
-Size (R/caTools_1.18.2.tar.gz) = 64960 bytes
+BLAKE2s (R/caTools_1.18.3.tar.gz) = 39fddddabc370ca879fdcbfd4aee4afd549c51d7b8c20afe785fa4cd569218e4
+SHA512 (R/caTools_1.18.3.tar.gz) = 6e60ca0bd4a9512cd541f7ce3433080a977866f49a23640dd9d386c73887fca7c4846858fdaba0f70a6a871c632e7923536c4c62737ee83fff43ed95be7e6df7
+Size (R/caTools_1.18.3.tar.gz) = 65825 bytes
