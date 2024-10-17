@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/08/10 12:02:46 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/17 09:22:45 wiz Exp $
 
 DISTNAME=	curtsies-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/curtsies/}
 
@@ -10,18 +11,15 @@ HOMEPAGE=	https://github.com/bpython/curtsies
 COMMENT=	Curses-like terminal wrapper, with colored strings
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-blessed>=1.5:../../devel/py-blessed
 DEPENDS+=	${PYPKGPREFIX}-cwcwidth-[0-9]*:../../devel/py-cwcwidth
-TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyte-[0-9]*:../../devel/py-pyte
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 0.4.2
+# 8 failed, 69 passed, 26 skipped
 
-do-test:
-	cd ${WRKSRC}/tests && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
