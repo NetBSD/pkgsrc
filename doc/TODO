@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24960 2024/10/17 08:29:00 wiz Exp $
+$NetBSD: TODO,v 1.24961 2024/10/17 20:33:55 gutteridge Exp $
 
 Suggested new packages
 ======================
@@ -829,6 +829,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o kdesdk-thumbnailers-20.08.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
+	o kdiff3-1.11.4
 	o kdsoap-1.10.0
 	o keybinder-0.3.2
 	o kfilemetadata-5.81.0
