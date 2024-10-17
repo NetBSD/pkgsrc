@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6291 2024/10/17 14:36:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6292 2024/10/17 17:16:15 morr Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9529,3 +9529,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-caTools to 1.18.3 [mef 2024-10-17]
 	Updated security/oqs-provider to 0.7.0nb1 [jschauma 2024-10-17]
 	Updated devel/py-behave to 1.2.6nb3 [wiz 2024-10-17]
+	Updated editors/vim-share to 9.1.0789 [morr 2024-10-17]
