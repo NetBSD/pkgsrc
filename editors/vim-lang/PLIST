@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/08/06 22:12:04 mef Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/10/17 17:14:55 morr Exp $
 man/da.ISO8859-1/man1/ex.1
 man/da.ISO8859-1/man1/rview.1
 man/da.ISO8859-1/man1/rvim.1
@@ -240,6 +240,7 @@ share/vim/${VIM_SUBDIR}/keymap/vietnamese-viqr_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/vietnamese-vni_utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/README.txt
 share/vim/${VIM_SUBDIR}/lang/af/LC_MESSAGES/vim.mo
+share/vim/${VIM_SUBDIR}/lang/am/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ca/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/cs.cp1250/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/cs/LC_MESSAGES/vim.mo
