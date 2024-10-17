@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/06/05 04:44:57 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/17 14:10:15 mef Exp $
 
 R_PKGNAME=	caTools
-R_PKGVER=	1.18.2
+R_PKGVER=	1.18.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
