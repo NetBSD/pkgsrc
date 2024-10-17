@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/05/29 16:34:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/17 07:04:23 pin Exp $
 
-DISTNAME=	crates-io-cli-4.0.2
-PKGREVISION=	3
+DISTNAME=	crates-io-cli-4.0.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Byron/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Byron/crates-io-cli/
 COMMENT=	Interact with crates.io from the command-line
 LICENSE=	mit
+
+SITES.curl-sys-0.4.77+curl-8.10.1.crate=	https://static.crates.io/crates/curl-sys/
 
 .include "cargo-depends.mk"
 
