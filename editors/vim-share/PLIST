@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2024/09/03 18:31:21 morr Exp $
+@comment $NetBSD: PLIST,v 1.73 2024/10/17 17:14:39 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -31,7 +31,9 @@ share/vim/${VIM_SUBDIR}/autoload/gnat.vim
 share/vim/${VIM_SUBDIR}/autoload/gzip.vim
 share/vim/${VIM_SUBDIR}/autoload/hare.vim
 share/vim/${VIM_SUBDIR}/autoload/haskellcomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/hcl.vim
 share/vim/${VIM_SUBDIR}/autoload/htmlcomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/javaformat.vim
 share/vim/${VIM_SUBDIR}/autoload/javascriptcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/modula2.vim
 share/vim/${VIM_SUBDIR}/autoload/netrw.vim
@@ -110,6 +112,7 @@ share/vim/${VIM_SUBDIR}/compiler/cargo.vim
 share/vim/${VIM_SUBDIR}/compiler/checkstyle.vim
 share/vim/${VIM_SUBDIR}/compiler/cm3.vim
 share/vim/${VIM_SUBDIR}/compiler/context.vim
+share/vim/${VIM_SUBDIR}/compiler/cppcheck.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
 share/vim/${VIM_SUBDIR}/compiler/csslint.vim
 share/vim/${VIM_SUBDIR}/compiler/cucumber.vim
@@ -142,6 +145,7 @@ share/vim/${VIM_SUBDIR}/compiler/gjs.vim
 share/vim/${VIM_SUBDIR}/compiler/gm2.vim
 share/vim/${VIM_SUBDIR}/compiler/gnat.vim
 share/vim/${VIM_SUBDIR}/compiler/go.vim
+share/vim/${VIM_SUBDIR}/compiler/groff.vim
 share/vim/${VIM_SUBDIR}/compiler/haml.vim
 share/vim/${VIM_SUBDIR}/compiler/hare.vim
 share/vim/${VIM_SUBDIR}/compiler/hp_acc.vim
@@ -158,6 +162,7 @@ share/vim/${VIM_SUBDIR}/compiler/jjs.vim
 share/vim/${VIM_SUBDIR}/compiler/jq.vim
 share/vim/${VIM_SUBDIR}/compiler/jshint.vim
 share/vim/${VIM_SUBDIR}/compiler/jsonlint.vim
+share/vim/${VIM_SUBDIR}/compiler/make.vim
 share/vim/${VIM_SUBDIR}/compiler/mcs.vim
 share/vim/${VIM_SUBDIR}/compiler/mips_c.vim
 share/vim/${VIM_SUBDIR}/compiler/mipspro_c89.vim
@@ -493,6 +498,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/gitconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitignore.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitrebase.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gitsendemail.vim
+share/vim/${VIM_SUBDIR}/ftplugin/gleam.vim
 share/vim/${VIM_SUBDIR}/ftplugin/go.vim
 share/vim/${VIM_SUBDIR}/ftplugin/goaccess.vim
 share/vim/${VIM_SUBDIR}/ftplugin/gomod.vim
@@ -508,6 +514,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/hamster.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hare.vim
 share/vim/${VIM_SUBDIR}/ftplugin/haredoc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/haskell.vim
+share/vim/${VIM_SUBDIR}/ftplugin/hcl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/heex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/help.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hgcommit.vim
@@ -518,6 +525,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/hostsaccess.vim
 share/vim/${VIM_SUBDIR}/ftplugin/html.vim
 share/vim/${VIM_SUBDIR}/ftplugin/htmlangular.vim
 share/vim/${VIM_SUBDIR}/ftplugin/htmldjango.vim
+share/vim/${VIM_SUBDIR}/ftplugin/http.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hurl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hyprlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/i3config.vim
@@ -580,6 +588,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/mediawiki.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mermaid.vim
 share/vim/${VIM_SUBDIR}/ftplugin/meson.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mf.vim
+share/vim/${VIM_SUBDIR}/ftplugin/mlir.vim
 share/vim/${VIM_SUBDIR}/ftplugin/mma.vim
 share/vim/${VIM_SUBDIR}/ftplugin/modconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/modula2.vim
@@ -816,6 +825,7 @@ share/vim/${VIM_SUBDIR}/indent/gyp.vim
 share/vim/${VIM_SUBDIR}/indent/haml.vim
 share/vim/${VIM_SUBDIR}/indent/hamster.vim
 share/vim/${VIM_SUBDIR}/indent/hare.vim
+share/vim/${VIM_SUBDIR}/indent/hcl.vim
 share/vim/${VIM_SUBDIR}/indent/hog.vim
 share/vim/${VIM_SUBDIR}/indent/html.vim
 share/vim/${VIM_SUBDIR}/indent/htmldjango.vim
@@ -901,6 +911,7 @@ share/vim/${VIM_SUBDIR}/indent/systemverilog.vim
 share/vim/${VIM_SUBDIR}/indent/tcl.vim
 share/vim/${VIM_SUBDIR}/indent/tcsh.vim
 share/vim/${VIM_SUBDIR}/indent/teraterm.vim
+share/vim/${VIM_SUBDIR}/indent/terraform.vim
 share/vim/${VIM_SUBDIR}/indent/tex.vim
 share/vim/${VIM_SUBDIR}/indent/tf.vim
 share/vim/${VIM_SUBDIR}/indent/thrift.vim
@@ -1299,6 +1310,7 @@ share/vim/${VIM_SUBDIR}/syntax/haskell.vim
 share/vim/${VIM_SUBDIR}/syntax/haste.vim
 share/vim/${VIM_SUBDIR}/syntax/hastepreproc.vim
 share/vim/${VIM_SUBDIR}/syntax/hb.vim
+share/vim/${VIM_SUBDIR}/syntax/hcl.vim
 share/vim/${VIM_SUBDIR}/syntax/help.vim
 share/vim/${VIM_SUBDIR}/syntax/help_ru.vim
 share/vim/${VIM_SUBDIR}/syntax/hercules.vim
@@ -1342,6 +1354,7 @@ share/vim/${VIM_SUBDIR}/syntax/javascript.vim
 share/vim/${VIM_SUBDIR}/syntax/javascriptreact.vim
 share/vim/${VIM_SUBDIR}/syntax/jess.vim
 share/vim/${VIM_SUBDIR}/syntax/jgraph.vim
+share/vim/${VIM_SUBDIR}/syntax/jinja.vim
 share/vim/${VIM_SUBDIR}/syntax/jj.vim
 share/vim/${VIM_SUBDIR}/syntax/jovial.vim
 share/vim/${VIM_SUBDIR}/syntax/jproperties.vim
@@ -1367,6 +1380,7 @@ share/vim/${VIM_SUBDIR}/syntax/ldapconf.vim
 share/vim/${VIM_SUBDIR}/syntax/ldif.vim
 share/vim/${VIM_SUBDIR}/syntax/less.vim
 share/vim/${VIM_SUBDIR}/syntax/lex.vim
+share/vim/${VIM_SUBDIR}/syntax/lf.vim
 share/vim/${VIM_SUBDIR}/syntax/lftp.vim
 share/vim/${VIM_SUBDIR}/syntax/lhaskell.vim
 share/vim/${VIM_SUBDIR}/syntax/libao.vim
@@ -1452,6 +1466,7 @@ share/vim/${VIM_SUBDIR}/syntax/nasm.vim
 share/vim/${VIM_SUBDIR}/syntax/nastran.vim
 share/vim/${VIM_SUBDIR}/syntax/natural.vim
 share/vim/${VIM_SUBDIR}/syntax/ncf.vim
+share/vim/${VIM_SUBDIR}/syntax/neomuttlog.vim
 share/vim/${VIM_SUBDIR}/syntax/neomuttrc.vim
 share/vim/${VIM_SUBDIR}/syntax/netrc.vim
 share/vim/${VIM_SUBDIR}/syntax/netrw.vim
@@ -1572,6 +1587,7 @@ share/vim/${VIM_SUBDIR}/syntax/rst.vim
 share/vim/${VIM_SUBDIR}/syntax/rtf.vim
 share/vim/${VIM_SUBDIR}/syntax/ruby.vim
 share/vim/${VIM_SUBDIR}/syntax/rust.vim
+share/vim/${VIM_SUBDIR}/syntax/salt.vim
 share/vim/${VIM_SUBDIR}/syntax/samba.vim
 share/vim/${VIM_SUBDIR}/syntax/sas.vim
 share/vim/${VIM_SUBDIR}/syntax/sass.vim
@@ -1687,6 +1703,7 @@ share/vim/${VIM_SUBDIR}/syntax/tcsh.vim
 share/vim/${VIM_SUBDIR}/syntax/template.vim
 share/vim/${VIM_SUBDIR}/syntax/teraterm.vim
 share/vim/${VIM_SUBDIR}/syntax/terminfo.vim
+share/vim/${VIM_SUBDIR}/syntax/terraform.vim
 share/vim/${VIM_SUBDIR}/syntax/tex.vim
 share/vim/${VIM_SUBDIR}/syntax/texinfo.vim
 share/vim/${VIM_SUBDIR}/syntax/texmf.vim
