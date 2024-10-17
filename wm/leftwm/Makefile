@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/11/17 07:43:54 pin Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/17 18:35:26 pin Exp $
 
-DISTNAME=	leftwm-0.5.1
+DISTNAME=	leftwm-0.5.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
@@ -12,6 +12,8 @@ LICENSE=	mit
 CONFLICTS=	lefthk-[0-9]*
 
 .include "cargo-depends.mk"
+
+RUST_REQ=	1.74.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/xsessions
 
@@ -39,7 +41,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/xsessions
 
 CARGO_NO_DEFAULT_FEATURES=	YES
-CARGO_FEATURES+=		lefthk file-log
+CARGO_FEATURES+=		lefthk file-log xlib
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "NetBSD" || ${X11_TYPE} == "modular"
