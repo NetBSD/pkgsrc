@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.25 2024/07/20 12:38:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/10/17 08:04:16 wiz Exp $
 bin/ipython-${PYVERSSUFFIX}
 bin/ipython3-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/IPython/__init__.py
 ${PYSITELIB}/IPython/__init__.pyc
 ${PYSITELIB}/IPython/__init__.pyo
@@ -841,4 +835,11 @@ ${PYSITELIB}/IPython/utils/version.pyo
 ${PYSITELIB}/IPython/utils/wildcard.py
 ${PYSITELIB}/IPython/utils/wildcard.pyc
 ${PYSITELIB}/IPython/utils/wildcard.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.rst
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 man/man1/ipython-${PYVERSSUFFIX}.1
