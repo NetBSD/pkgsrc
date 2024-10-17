@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6285 2024/10/17 09:25:58 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6286 2024/10/17 10:11:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9522,3 +9522,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-curtsies to 0.4.2nb1 [wiz 2024-10-17]
 	Removed devel/py-exam [wiz 2024-10-17]
 	Removed devel/py-blessings [wiz 2024-10-17]
+	Updated wm/lefthk to 0.2.2 [pin 2024-10-17]
