@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6288 2024/10/17 14:10:31 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6289 2024/10/17 14:10:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9526,3 +9526,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-sh to 2.1.0 [adam 2024-10-17]
 	Updated net/py-zeep to 4.3.1 [adam 2024-10-17]
 	Updated devel/R-brio to 1.1.5 [mef 2024-10-17]
+	Updated devel/R-caTools to 1.18.3 [mef 2024-10-17]
