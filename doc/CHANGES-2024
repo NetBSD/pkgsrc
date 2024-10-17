@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6279 2024/10/17 05:19:52 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6280 2024/10/17 07:04:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9516,3 +9516,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-psycopg2 to 2.9.10 [adam 2024-10-16]
 	Updated textproc/typst to 0.11.1nb1 [wiz 2024-10-16]
 	Updated sysutils/broot to 1.44.1 [pin 2024-10-17]
+	Updated www/crates-io-cli to 4.0.3 [pin 2024-10-17]
