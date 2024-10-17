@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2024/10/17 18:35:26 pin Exp $
+$NetBSD: distinfo,v 1.14 2024/10/17 20:20:26 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -192,9 +192,9 @@ Size (lazy_static-1.5.0.crate) = 14025 bytes
 BLAKE2s (lefthk-core-0.2.2.crate) = 1b01a154f6983bfaeba912d46dc38e6008d79517118efc6038aa13d0eb5f07d4
 SHA512 (lefthk-core-0.2.2.crate) = c0410c99a3faaf38484c5df568f922e7f8afc87d7c22630b5bf4acd8537f201a6a8fda275d3ed865bc894a8e39a7c863e172aec8010e61610cd8c2c32ccaa9de
 Size (lefthk-core-0.2.2.crate) = 21302 bytes
-BLAKE2s (leftwm-0.5.2.tar.gz) = 35b8171420573d6901359a8d71bfc6674b862cbd20cbe320a8a92ead8a93b14b
-SHA512 (leftwm-0.5.2.tar.gz) = 95870f94a6f5139ef77aa5a4d14fdb9be17bd85629d951fb1532b2274663e95cd497f2de2eed6890af941185fc96782e4c367f010dd4d12cbc62c8b446a7fb38
-Size (leftwm-0.5.2.tar.gz) = 10008724 bytes
+BLAKE2s (leftwm-0.5.2.tar.gz) = e3febcd0be4a333d5ee25764a4bcac3c5b986fe85946fde68e8b569e71c1158a
+SHA512 (leftwm-0.5.2.tar.gz) = af6c4f09459f90c1f2e7cd5be83aa9eab83c1e86e8d871da9d2bfe1294eb7f74f6bbbc0886708693f76793642df933cd5e4ce6d066585c550f2a0047815a3c38
+Size (leftwm-0.5.2.tar.gz) = 10009371 bytes
 BLAKE2s (leftwm-layouts-0.9.1.crate) = 6563c20311a3223e4b25dbdf47b1c4e818ced7a5002245bd4952d3426140f55f
 SHA512 (leftwm-layouts-0.9.1.crate) = b2289f7e2a27b5fa8af5792805601db7685820c261ae8f6e747a86012bdd84a5d79222b90808c1885a81dd06d3619264c40c787185730e0733e1e2a0a1cc7a3c
 Size (leftwm-layouts-0.9.1.crate) = 22269 bytes
