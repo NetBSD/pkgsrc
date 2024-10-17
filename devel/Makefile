@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4351 2024/10/17 09:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4352 2024/10/17 09:25:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2467,7 +2467,6 @@ SUBDIR+=	py-binaryornot
 SUBDIR+=	py-bitarray
 SUBDIR+=	py-bitstring
 SUBDIR+=	py-blessed
-SUBDIR+=	py-blessings
 SUBDIR+=	py-blinker
 SUBDIR+=	py-boltons
 SUBDIR+=	py-boolean.py
