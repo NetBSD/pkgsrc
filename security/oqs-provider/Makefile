@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2024/10/10 19:34:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/17 14:19:06 jschauma Exp $
 
 VERSION=	0.7.0
+PKGREVISION=	1
 DISTNAME=	oqs-provider-${VERSION}
+DIST_SUBDIR=	${PKGNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=open-quantum-safe/}
 
