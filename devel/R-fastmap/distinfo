@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/06/11 10:05:19 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/10/17 20:37:40 mef Exp $
 
-BLAKE2s (R/fastmap_1.1.1.tar.gz) = 898b68f8506355f2b1f68ac206a9fd8686190009b0f32723ad3d27bb37891b08
-SHA512 (R/fastmap_1.1.1.tar.gz) = bdb9fca30a299c496b6e0bb4f05d67ed8d2743d46eeecb14de4ce8ac5623f9c4d9757a63025b97fe09c9289350933d61a7be7241b60f331088da66a33cf2b3db
-Size (R/fastmap_1.1.1.tar.gz) = 46412 bytes
+BLAKE2s (R/fastmap_1.2.0.tar.gz) = 6246ef6d08b95ff9e975913f05b2cac629887f3b6b9cfc84c690e0565ecab05a
+SHA512 (R/fastmap_1.2.0.tar.gz) = c8a01a20f383a350d1bc913d911634a52e7d539e35c9e570047e24eb476afaa829fb31f32819f4df61ba91cc779ca8d09c75452274e31dd4f4f80844661a74eb
+Size (R/fastmap_1.2.0.tar.gz) = 46710 bytes
