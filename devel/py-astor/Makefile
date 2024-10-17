@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/30 14:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/17 14:31:46 wiz Exp $
 
 DISTNAME=	astor-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,11 +13,11 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 0.8.1
+# 2 failed, 51 passed, 2 skipped, 732 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
