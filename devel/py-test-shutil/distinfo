@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2024/08/10 06:24:24 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/10/17 20:16:12 wiz Exp $
 
-BLAKE2s (pytest-shutil-1.7.0.tar.gz) = 18515173e63d9d303b94f421aa54601a6a21c169c524de5682ac22cb78b79980
-SHA512 (pytest-shutil-1.7.0.tar.gz) = 3746c08b17834621a7142ed9d5915b5c348c13367f5b423b258d3471bcb9c9e983c61c25ca936f879b8b82f80512512b7f3ade5555c24a790c72b502e3f3d144
-Size (pytest-shutil-1.7.0.tar.gz) = 23497 bytes
+BLAKE2s (pytest-shutil-1.8.0.tar.gz) = 30b6da748c8d92b5647bd608499780e142a51c626eea50ee9a92b614b7b60065
+SHA512 (pytest-shutil-1.8.0.tar.gz) = df97d0cbbb94dfaf35dabbb51d72feca957ba2cdfb4f802b6519d226ad8836be3f92419f362706695a0cc7279ef3c8d96b58e5dd7ab56b82d0b38f08fe3b4c91
+Size (pytest-shutil-1.8.0.tar.gz) = 37608 bytes
 SHA1 (patch-common_setup.py) = e7507246a99ba99918647e05d0fbec72560eeae8
