@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/09/18 06:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/17 09:28:08 wiz Exp $
 
 DISTNAME=	pyrtl-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-PyRTL-0.11.2
@@ -15,9 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 # as of 0.11.2
 # 2 failed, 1176 passed, 9 skipped
-# 'make test' fails with 2 arithmetic FAILs.
-TEST_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
-TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	c # for test
 
