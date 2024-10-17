@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6293 2024/10/17 18:35:50 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6294 2024/10/17 18:47:42 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9531,3 +9531,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-behave to 1.2.6nb3 [wiz 2024-10-17]
 	Updated editors/vim-share to 9.1.0789 [morr 2024-10-17]
 	Updated wm/leftwm to 0.5.2 [pin 2024-10-17]
+	Updated security/age to 1.2.0 [bsiegert 2024-10-17]
