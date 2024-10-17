@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/10/07 14:54:24 pin Exp $
+# $NetBSD: Makefile,v 1.39 2024/10/17 19:12:26 adam Exp $
 
-DISTNAME=	ruff-0.6.9
+DISTNAME=	ruff-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 LSP_TYPES_REV=	3512a9f33eadc5402cfab1b8f7340824c8ca1439
-SALSA_REV=	4a7c955255e707e64e43f3ce5eabb771ae067768
+SALSA_REV=	b14be5c0392f4c55eca60b92e457a35549372382
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
 DISTFILES+=	salsa-${SALSA_REV}.tar.gz
