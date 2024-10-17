@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/06/11 10:05:19 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/17 20:37:40 mef Exp $
 
 R_PKGNAME=	fastmap
-R_PKGVER=	1.1.1
+R_PKGVER=	1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
