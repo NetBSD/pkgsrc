@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:14 nia Exp $
-
-BLAKE2s (blessings-1.7.tar.gz) = f46ba906a184fa7af90579553b65cbcf67584002f63cbc089fc0ac193d41958c
-SHA512 (blessings-1.7.tar.gz) = 66a8e7af6a8807c8be68f4d71db25ca6c26f46ddfa9a7e4792a2f73033df81d8392633ff75e6fa131039d9136030844ed93b11316b9f7e2e6ea77675f2f3e528
-Size (blessings-1.7.tar.gz) = 28194 bytes
