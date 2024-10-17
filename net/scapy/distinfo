@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2024/10/01 23:49:29 gutteridge Exp $
+$NetBSD: distinfo,v 1.23 2024/10/17 00:51:49 gutteridge Exp $
 
 BLAKE2s (scapy-2.6.0.tar.gz) = cebfa06ccf9c6ab4b06e58b1df71fef7cda63db37b0f330c06ca62db25502f0b
 SHA512 (scapy-2.6.0.tar.gz) = a5543b44411fcc22eb909e806e729605616ce98ab15ff208ee90ad606265c6604ef295bc0b9b130f22711ffed0ad9fd4c52783c8df7ef79849f7db38b97d9e1d
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = c544db1e6d4cf8c42f7c2b0010d898bf61413e22
 SHA1 (patch-scapy_____init____.py) = 9808c8fbe63283862c9e7e65c436b28de19ebe16
 SHA1 (patch-scapy_arch_bpf_supersocket.py) = 7f2ad841643c2e347871b54e476998de403d2a01
 SHA1 (patch-scapy_consts.py) = c897229e444d363e2aeea12cdd7264d3d275f4ab
+SHA1 (patch-setup.py) = 3cb36a40c7b1ca9837e87bc4f63b9bf5b56fcc87
