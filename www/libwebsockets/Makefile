@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/10/14 17:22:54 nros Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/18 18:41:09 nros Exp $
 
 DISTNAME=	libwebsockets-4.3.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=warmcat/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,5 +36,4 @@ PKGCONFIG_OVERRIDE+=		libwebsockets_static.pc
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 .include "../../mk/bsd.pkg.mk"
