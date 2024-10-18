@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/05/16 23:36:00 gutteridge Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/18 00:29:56 gutteridge Exp $
 
-DISTNAME=	elementary-xfce-icon-theme-0.19
+DISTNAME=	elementary-xfce-icon-theme-0.20
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shimmerproject/}
 GITHUB_PROJECT=	elementary-xfce
@@ -21,7 +21,6 @@ INSTALL_TEMPLATES+=	../../graphics/elementary-xfce-icon-theme/files/icon-cache.t
 DEINSTALL_TEMPLATES+=	../../graphics/elementary-xfce-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/elementary-xfce\/icon-theme.cache$$/ { next; }
 PRINT_PLIST_AWK+=	/^share\/icons\/elementary-xfce-dark\/icon-theme.cache$$/ { next; }
-PRINT_PLIST_AWK+=	/^share\/icons\/elemantary-xfce-darker\/icon-theme.cache$$/ { next; }
 
 INSTALLATION_DIRS+=	share/icons
 
