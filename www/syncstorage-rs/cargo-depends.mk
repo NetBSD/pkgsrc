@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2024/07/14 13:59:54 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2024/10/18 14:03:07 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	actix-codec-0.5.2
 CARGO_CRATE_DEPENDS+=	actix-cors-0.7.0
@@ -211,7 +211,7 @@ CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.21.2
 CARGO_CRATE_DEPENDS+=	pyo3-macros-0.21.2
 CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.21.2
 CARGO_CRATE_DEPENDS+=	quinn-0.11.2
-CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.3
+CARGO_CRATE_DEPENDS+=	quinn-proto-0.11.8
 CARGO_CRATE_DEPENDS+=	quinn-udp-0.5.2
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	r2d2-0.8.10
@@ -229,6 +229,7 @@ CARGO_CRATE_DEPENDS+=	ring-0.17.8
 CARGO_CRATE_DEPENDS+=	rust-ini-0.13.0
 CARGO_CRATE_DEPENDS+=	rustc-demangle-0.1.24
 CARGO_CRATE_DEPENDS+=	rustc-hash-1.1.0
+CARGO_CRATE_DEPENDS+=	rustc-hash-2.0.0
 CARGO_CRATE_DEPENDS+=	rustc_version-0.4.0
 CARGO_CRATE_DEPENDS+=	rustix-0.38.34
 CARGO_CRATE_DEPENDS+=	rustls-0.23.10
