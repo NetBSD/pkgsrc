@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2024/03/03 11:32:40 wiz Exp $
+$NetBSD: distinfo,v 1.16 2024/10/18 20:38:24 wiz Exp $
 
 BLAKE2s (xournalpp-1.2.3.tar.gz) = d50e04aaf4c1f7cbed031c50a3c546a76b72584e0084f4513e1746596ab8ee42
 SHA512 (xournalpp-1.2.3.tar.gz) = 17303314d49001f492469d855155a019659cdafc67509d4e176f60a93322f4ee1d4b999e8a25a9a23bde27b878012c06aa11f15bc2a54a730098964053834d1f
@@ -7,3 +7,4 @@ SHA1 (patch-CMakeLists.txt) = 87ba10a924e3eb092dd9816ff38dea8c0b112b10
 SHA1 (patch-po_CMakeLists.txt) = 897b4f9507b48be394409deda8170fe7d39f008c
 SHA1 (patch-src_core_control_DeviceListHelper.cpp) = 069fae3eb58798406e4fa8dbff0d02aa8e0a27ef
 SHA1 (patch-src_core_control_settings_Settings.cpp) = 19cf2b2ceedc3d59c0290ea81727cb0c27e02ba5
+SHA1 (patch-src_core_view_TexImageView.cpp) = b38f4d589d4291e753d66c2d3b0555c86e58ec9f
