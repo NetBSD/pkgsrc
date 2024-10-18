@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6313 2024/10/18 14:23:21 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6314 2024/10/18 14:24:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9553,3 +9553,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/syncstorage-rs to 0.17.9 [wiz 2024-10-18]
 	Updated www/syncstorage-rs to 0.17.9 [wiz 2024-10-18]
 	Updated www/firefox to 131.0.3 [ryoon 2024-10-18]
+	Updated www/firefox-l10n to 131.0.3 [ryoon 2024-10-18]
