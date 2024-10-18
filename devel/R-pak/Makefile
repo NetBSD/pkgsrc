@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/18 23:24:51 mef Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/18 23:50:06 mef Exp $
 
 R_PKGNAME=	pak
 R_PKGVER=	0.8.0
@@ -28,8 +28,6 @@ DEPENDS+=	R-ps>=1.3.0:../../sysutils/R-ps
 DEPENDS+=	R-jsonlite>=1.7.1:../../textproc/R-jsonlite
 DEPENDS+=	R-curl>=3.2:../../www/R-curl
 
-# !pdfTeX error: pdflatex (file tctt1000): Font tctt1000 at 600 not found
-
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-gitcreds-[0-9]*:../../security/R-gitcreds
 TEST_DEPENDS+=	R-mockery-[0-9]*:../../devel/R-mockery
@@ -38,6 +36,14 @@ TEST_DEPENDS+=	R-pkgdepends-[0-9]*:../../devel/R-pkgdepends
 TEST_DEPENDS+=	R-pkgsearch-[0-9]*:../../devel/R-pkgsearch
 TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+
+# !pdfTeX error: pdflatex (file tctt1000): Font tctt1000 at 600 not found
+
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c
 
