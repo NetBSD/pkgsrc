@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.24962 2024/10/17 20:55:14 wiz Exp $
+$NetBSD: TODO,v 1.24963 2024/10/18 14:04:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1199,6 +1199,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.81.0 [in wip]
+	o rust-1.82.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
@@ -1269,8 +1270,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
-	o syncstorage-rs-0.17.7 [wip; needs rust>=1.80]
-	o syncstorage-rs-0.17.9
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
 	o systrace-1.6e
