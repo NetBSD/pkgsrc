@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/12/18 02:06:35 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/10/18 15:24:49 mef Exp $
 
-BLAKE2s (R/globals_0.16.2.tar.gz) = 31a2725fc264f1df036ea21cba9b020873ef20bc00dbaf46238341b4ff8e65d3
-SHA512 (R/globals_0.16.2.tar.gz) = 14aad89b46bc85122f08be2d3f28f28fde937b438a3c528950daae5aa14d4decefa04b22122eb762621e0a929ce37ee2ae4a1e7f7997dce210d6f372e640c20e
-Size (R/globals_0.16.2.tar.gz) = 35764 bytes
+BLAKE2s (R/globals_0.16.3.tar.gz) = 668c778c8916696210d1dbbdcf527392ca74439f32e6b1bb431d6356930ad36a
+SHA512 (R/globals_0.16.3.tar.gz) = b878c5163f2c8430001e1a8dfbfbf1f5e0c4c3bc0d7d299e31783b78b4e4714b8f112080207dcf5dbfa32eddf1b7f1500b415b2a1e0dfd392deca133d6d4fa9e
+Size (R/globals_0.16.3.tar.gz) = 37475 bytes
