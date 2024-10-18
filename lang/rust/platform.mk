@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.27 2024/08/01 15:24:39 tnn Exp $
+# $NetBSD: platform.mk,v 1.28 2024/10/18 08:07:24 nia Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -8,13 +8,22 @@
 .if !defined(PLATFORM_SUPPORTS_RUST)
 
 # Rust needs NetBSD>8
-.for rust_arch in aarch64 earmv7hf i386 powerpc riscv64 sparc64 x86_64
-.  for rust_os in Darwin FreeBSD Linux NetBSD SunOS
-.    if ${OPSYS} != "NetBSD" || empty(OS_VERSION:M[0-8].*)
-RUST_PLATFORMS+=	${rust_os}-*-${rust_arch}
-.    endif
+.if empty(OS_VERSION:M[0-8].*)
+.  for rust_arch in aarch64 earmv7hf i386 powerpc riscv64 sparc64 x86_64
+RUST_PLATFORMS+=	NetBSD-*-${rust_arch}
 .  endfor
 .endfor
+
+.for rust_arch in aarch64 earmv7hf i386 x86_64
+RUST_PLATFORMS+=	Linux-*-${rust_arch}
+. endif
+
+.for rust_arch in aarch64 x86_64
+RUST_PLATFORMS+=	Darwin-*-${rust_arch}
+.endif
+
+RUST_PLATFORMS+=	FreeBSD-*-x86_64
+RUST_PLATFORMS+=	SunOS-*-x86_64
 
 .if ${MACHINE_PLATFORM:MNetBSD-*-earm*} && ${OPSYS_VERSION} < 100000
 RUST_DIR?=	../../lang/rust176
