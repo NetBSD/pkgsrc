@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/01/21 02:14:04 mef Exp $
+$NetBSD: distinfo,v 1.9 2024/10/18 22:33:19 mef Exp $
 
-BLAKE2s (R/glue_1.7.0.tar.gz) = e4e5e95469834ba433beac9c60699c2938aeae9b4eaf777216ec8cd887f387ba
-SHA512 (R/glue_1.7.0.tar.gz) = d0b32a772145926536596a0f37a5d49ae77a2627b3135b3450812fbcef8bd3010ac815940689507eb032c918adf5eca56b729d8452f51273569cdb58b87db7e9
-Size (R/glue_1.7.0.tar.gz) = 105420 bytes
+BLAKE2s (R/glue_1.8.0.tar.gz) = 06f3a2483b83703991e2e35f23914bfe9309cd0d7bb71a09548c951bec57c96b
+SHA512 (R/glue_1.8.0.tar.gz) = 59ef457d8a860b68180e5398bafbf4b08c680bbd9610ae1f63968dbe925db95f765abd1909b8fa5ac1d49d333389b81c47d7b3a06896c231e4732fd45d12d416
+Size (R/glue_1.8.0.tar.gz) = 126682 bytes
