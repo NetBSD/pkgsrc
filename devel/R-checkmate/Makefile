@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/01/20 05:20:07 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/18 11:51:21 mef Exp $
 
 R_PKGNAME=	checkmate
-R_PKGVER=	2.3.1
+R_PKGVER=	2.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,8 +9,6 @@ COMMENT=	Fast and versatile argument checks
 LICENSE=	modified-bsd
 
 DEPENDS+=	R-backports>=1.1.0:../../math/R-backports
-
-# Package suggested but not available: 'fastmatch'
 
 TEST_DEPENDS+=	R-data.table-[0-9]*:../../textproc/R-data.table
 TEST_DEPENDS+=	R-devtools-[0-9]*:../../devel/R-devtools
