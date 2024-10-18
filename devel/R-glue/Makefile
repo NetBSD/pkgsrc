@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2024/01/21 02:14:04 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/18 22:33:18 mef Exp $
 
 R_PKGNAME=	glue
-R_PKGVER=	1.7.0
+R_PKGVER=	1.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Interpreted string literals
 LICENSE=	mit
 
-# Packages suggested but not available:
-#   'rprintf'
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
 TEST_DEPENDS+=	R-DBI>=1.2.0:../../math/R-DBI
