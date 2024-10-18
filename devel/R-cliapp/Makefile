@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/12/13 23:24:45 mef Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/18 12:04:37 mef Exp $
 
 R_PKGNAME=	cliapp
-R_PKGVER=	0.1.1
+R_PKGVER=	0.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,10 +24,10 @@ TEST_DEPENDS+=	R-rstudioapi-[0-9]*:../../math/R-rstudioapi
 
 USE_LANGUAGES=	# none
 
-REPLACE_INTERPRETER+=   r
-REPLACE.r.old=          .*R
-REPLACE.r.new=          ${PREFIX}/bin/R
-REPLACE_FILES.r=        inst/scripts/news.R \
+REPLACE_INTERPRETER+=	r
+REPLACE.r.old=		.*R
+REPLACE.r.new=		${PREFIX}/bin/R
+REPLACE_FILES.r=	inst/scripts/news.R \
 			inst/scripts/outdated.R \
 			inst/scripts/search.R \
 			inst/scripts/up.R
