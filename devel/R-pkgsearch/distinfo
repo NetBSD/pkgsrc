@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/18 23:12:40 mef Exp $
+
+BLAKE2s (R/pkgsearch_3.1.3.tar.gz) = b183e67bad2b227811b78ea85bc64723472d6e2fd9781bb99d2632d509ac9437
+SHA512 (R/pkgsearch_3.1.3.tar.gz) = 51438996c92ae48f7b7d054156cb9306ae6945985f4e862153dab91574c96818e839d987b73974963c9270e4602fab3b1b1de1dc32469763b4fee903a0e11682
+Size (R/pkgsearch_3.1.3.tar.gz) = 59217 bytes
