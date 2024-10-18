@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2024/10/09 19:03:19 fox Exp $
+$NetBSD: distinfo,v 1.39 2024/10/18 12:41:33 fox Exp $
 
 BLAKE2s (addr2line-0.24.1.crate) = 6b7b4e5845873018da12292d582de9e8ec0be0edbac314cbbbfb7dad89d7a983
 SHA512 (addr2line-0.24.1.crate) = ffa53fcfbbccdec943410083aa5f44e93122e0b40dc45acfe00b454a02c5575549e9a61807d87080d1677da807fef695b6676036fec3ca079d2b841794dbc0b5
@@ -147,9 +147,9 @@ Size (errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza-0.20.2.tar.gz) = a0ce61c922ca895d4798d461217342a0b61cf542e0af72fb08fa5b6918316aa6
-SHA512 (eza-0.20.2.tar.gz) = ae8beab5001940cf8c7af8407ed4bc260d2c9ef65969018096328a74b5afeb94839f6a6e75ccebd4cf0b545cbecb87405c94a746b4edeb0beae42513972bb52c
-Size (eza-0.20.2.tar.gz) = 1416059 bytes
+BLAKE2s (eza-0.20.4.tar.gz) = abb6ec5caec21d3e15732459ad9b8ae93fb2ebf4b2964e23b11395d7d2b5e414
+SHA512 (eza-0.20.4.tar.gz) = 7f6af6c5b674016a33fa11489fb487142e6aeae4fd4f3ee1d51d1e7c17da9dbef925eec22ce8cf62b9b2a3fc303362d0f6f17f6469327d252fb5ce1842a2863d
+Size (eza-0.20.4.tar.gz) = 1416250 bytes
 BLAKE2s (fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -237,9 +237,9 @@ Size (locale-0.2.2.crate) = 18910 bytes
 BLAKE2s (log-0.4.22.crate) = 9c270d3af5640c9eeb36754e6fd6cf50521e9fd1efad955e0d777716b3d6839a
 SHA512 (log-0.4.22.crate) = bd7baa9c8a5523fd0864a53bcde955d484cacd782412b5b02c890b89dbf62137624da3a27337a310dd8f62bcc6606925a42bbd4ca161a3b7936ea4ff96bc0d71
 Size (log-0.4.22.crate) = 44027 bytes
-BLAKE2s (man-0.20.2.tar.gz) = 8fcdcbba2dbc48dcbbc069f9729df9c873e00ad8fc56dfb2d78b63745293f50f
-SHA512 (man-0.20.2.tar.gz) = f1a416f5326d2aecd99dd59dc05b756fd05d17f447d458240b815a78538e394c2f3c32442febe3dd7db17b2e4a995eee4bb13a6ecc7e7a492bd39f4c316954ee
-Size (man-0.20.2.tar.gz) = 9641 bytes
+BLAKE2s (man-0.20.4.tar.gz) = 1f966906ef28b83e809ef36a528c3778d9421f47e79f0bd0d2ad073e85f6411f
+SHA512 (man-0.20.4.tar.gz) = 62f386e0e9eaa2dd01c61b82fcda30aadefb98aa7a7d3bf14e8a70401434b0ad0bf2a27faf9a813c8f4053296f55e903d615f725ccd577cc4619d2ba4dd7c29e
+Size (man-0.20.4.tar.gz) = 9592 bytes
 BLAKE2s (matches-0.1.8.crate) = 0c218f89eda16504ae593d3720fdfe7391e81449a4b227bc7e3beef5051bfe80
 SHA512 (matches-0.1.8.crate) = 98b58f6a2694b03a7dd1be69ebf7e3ad14483fc8e4cb6e6c26a4937e4e660e843efb4dd04a7312dd9659ca02acd3775678f73b8faac44a76ffafaf873c22f590
 Size (matches-0.1.8.crate) = 2216 bytes
