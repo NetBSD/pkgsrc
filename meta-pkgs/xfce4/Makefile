@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.143 2024/08/05 01:23:44 gutteridge Exp $
+# $NetBSD: Makefile,v 1.144 2024/10/18 00:32:31 gutteridge Exp $
 
 META_PACKAGE=	yes
 
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for the Xfce desktop environment
 
@@ -21,7 +21,7 @@ DEPENDS+=	xfce4-terminal>=1.1.3:../../x11/xfce4-terminal
 DEPENDS+=	xfce4-thunar>=4.18.11:../../sysutils/xfce4-thunar
 DEPENDS+=	xfce4-wm>=4.18.0:../../wm/xfce4-wm
 DEPENDS+=	xfce4-wm-themes>=4.10.0:../../wm/xfce4-wm-themes
-DEPENDS+=	elementary-xfce-icon-theme>=0.19:../../graphics/elementary-xfce-icon-theme
+DEPENDS+=	elementary-xfce-icon-theme>=0.20:../../graphics/elementary-xfce-icon-theme
 DEPENDS+=	gnome-themes-standard>=3.20.2:../../graphics/gnome-themes-standard
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
