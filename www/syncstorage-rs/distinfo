@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/09/13 09:57:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/10/18 14:03:08 wiz Exp $
 
 BLAKE2s (actix-codec-0.5.2.crate) = dd059989f99593b1f5b01a1b433630ed2121ad1a30854b6de98ef0bca3e9af11
 SHA512 (actix-codec-0.5.2.crate) = 9fc455a3ae36b93b3b9358b1f0915934f7e52ea1486d4d1a943c47759ff7cb6b7733e3c423378725a3da456669dcca02150cf44033707affff756579d5adba15
@@ -636,9 +636,9 @@ Size (pyo3-macros-backend-0.21.2.crate) = 58088 bytes
 BLAKE2s (quinn-0.11.2.crate) = f49cd253d4e67185a6db134fa4e630db17d454634c93ca7e5f8670e234944c21
 SHA512 (quinn-0.11.2.crate) = b6aa9effa35da2d595fb7fb7a91c61d2048a7ba54dd0449c20602c1986b49c80945dd6fda6d84a2a68c1d3be5ebd10c6594192c42976c4994c1c86405cb20063
 Size (quinn-0.11.2.crate) = 73920 bytes
-BLAKE2s (quinn-proto-0.11.3.crate) = fcccf219f864c893161b993a6221082934c8f779190003cde7b5fe3c9f90f7ea
-SHA512 (quinn-proto-0.11.3.crate) = 9e8665eabb27dc3aa06008f3436fd837bf854a45b5852336a6c8a7dc447207c08bb94f4710bd1ce99dbc35aae876d467079547fca2fe79abbd0542c1e2d8e5d6
-Size (quinn-proto-0.11.3.crate) = 202348 bytes
+BLAKE2s (quinn-proto-0.11.8.crate) = 2bedfa5e66f94d59459318da6c6730bcbe0995e06cd9345bab5264591e0bbe25
+SHA512 (quinn-proto-0.11.8.crate) = b62c383cc4add7a19f64dfa63b5cb2b2c60a784f96bacaff6c77fbc9e9f399ccfe7df2df79315701348f56c077973d5a3df4d3d0cbea239aec947a005d6b006c
+Size (quinn-proto-0.11.8.crate) = 204226 bytes
 BLAKE2s (quinn-udp-0.5.2.crate) = 49db4aead39c19d7bbf69a6f2b71f9f5c4fd9b064a06151aeed637e46542620c
 SHA512 (quinn-udp-0.5.2.crate) = 6d0ee17a65175174f6ee542f7dbbfe6dcd80a43a27be4213ec500fb95f59ffb571904f6f3179f67474faac3c1118841df9f42fe769bfbb119363f4707473cb20
 Size (quinn-udp-0.5.2.crate) = 21918 bytes
@@ -690,6 +690,9 @@ Size (rustc-demangle-0.1.24.crate) = 29047 bytes
 BLAKE2s (rustc-hash-1.1.0.crate) = ba3940200a72ad4ee115b0ef61c7c32278f6a3fa5d913220d1bd72362ef63aaf
 SHA512 (rustc-hash-1.1.0.crate) = 84e673ea9b046f7b989d47f2c4505557fbd5de991e6fc9f56a03605d40e0b4ba5427cd566954890153cc033ccbec6c984306634571935bfe0d4cdfbe56f39544
 Size (rustc-hash-1.1.0.crate) = 9331 bytes
+BLAKE2s (rustc-hash-2.0.0.crate) = 442559d81ffd6baf7dd3d2457b5352d6fe386275974370fdb42a34cecfa361f1
+SHA512 (rustc-hash-2.0.0.crate) = 996ad683db2e6839ee28fdc4a31293aecce7baefaf6051220a633a00beddef1be41aef0995d7501e5b92dbc85350ced920bc980d05f5ba235e9a5d1a13464339
+Size (rustc-hash-2.0.0.crate) = 12691 bytes
 BLAKE2s (rustc_version-0.4.0.crate) = 8244e9157b6b8811ae926fc0ed00edeb2b0a0f0f34d6e7b93ad236cbb6ffffba
 SHA512 (rustc_version-0.4.0.crate) = f66da7c6efe431db06cd01180d84ba67fcd38f8cd6ef693762957c00ccc2211f23c08079d7f184776e08f28d2d6ca3bdb5f5016f7de245c6193d4722891ba1db
 Size (rustc_version-0.4.0.crate) = 12175 bytes
@@ -840,9 +843,9 @@ Size (syn-2.0.67.crate) = 265024 bytes
 BLAKE2s (sync_wrapper-1.0.1.crate) = aa78865dbd131016e40ab080e4c84eb7044527da52051ebbf39cb99366f7ca39
 SHA512 (sync_wrapper-1.0.1.crate) = 9b83ff2f3d379ab955c16279227c7bc4f5c00d3f1541e5a525e8f89cb14499a02c0e8e9ccfbfc16bc59213385f837ea206d4c09116d231d143b6f8b3d769002c
 Size (sync_wrapper-1.0.1.crate) = 6939 bytes
-BLAKE2s (syncstorage-rs-0.17.4.tar.gz) = 883f11ae5059aefeb440545e08bd9bacdacddc4d4e1bbc1495a81ff278c5bd11
-SHA512 (syncstorage-rs-0.17.4.tar.gz) = 9c7a73a5026f66a3d6792363ede45f6da4abf6a3ad16cb19051c7ff38d90aca4509159572960981c205a40195c6452c4b4a5dd3904bcd645136aa4232fa40338
-Size (syncstorage-rs-0.17.4.tar.gz) = 340893 bytes
+BLAKE2s (syncstorage-rs-0.17.9.tar.gz) = e7a3ea67b8fa423840f9cb341b77367fe580610425c3af30c9c761eff65ba11e
+SHA512 (syncstorage-rs-0.17.9.tar.gz) = 238d9e6ad768010d14d56f3cd0c84d5f256eb5f854cdbae32bc881047819bd1d1fd5a02cfa53e1c145cbc40b9d652c0d7661c43d3bd3102017bb662b322b32eb
+Size (syncstorage-rs-0.17.9.tar.gz) = 342189 bytes
 BLAKE2s (take_mut-0.2.2.crate) = 4f9e9f0e9bbe70a5a5c695316e01545c06f08716275739eade485c02ce0eaef9
 SHA512 (take_mut-0.2.2.crate) = f75a5ce723e710809130878b0ff5df368f5929201e557661dd0154f3b31ea58d7d30d84672ca5a684fbfcae5f82ab2c21b1b5d9edc4c67d08c221228bd9de814
 Size (take_mut-0.2.2.crate) = 4263 bytes

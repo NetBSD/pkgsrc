@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/11 14:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/18 14:03:07 wiz Exp $
 
-DISTNAME=	syncstorage-rs-0.17.4
+DISTNAME=	syncstorage-rs-0.17.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 
@@ -27,6 +27,8 @@ DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 
 #CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --features=syncstorage-db/mysql,tokenserver-auth/py
 
+RUST_REQ+=	1.80
+
 .include "cargo-depends.mk"
 
 # Depends on an mozilla-modified version of crate
@@ -39,12 +41,6 @@ USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
-
-# as of 0.17.4
-# error: the configured Python interpreter version (3.13) is newer than PyO3's maximum supported version (3.12)
-# = help: please check if an updated version of PyO3 is available. Current version: 0.21.2
-# = help: set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 to suppress this check and build anyway using the stable ABI
-PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 INSTALLATION_DIRS+=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
 INSTALLATION_DIRS+=	lib/tokenserver
