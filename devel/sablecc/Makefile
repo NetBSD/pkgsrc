@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:44 asau Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/18 16:18:04 ryoon Exp $
 #
 
-DISTNAME=	sablecc-2.16.2
-PKGREVISION=	2
+DISTNAME=	sablecc-3.7
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablecc/}
 
 MAINTAINER=	hag@linnaean.org
-HOMEPAGE=	http://sablecc.org/
+HOMEPAGE=	https://sablecc.org/
 COMMENT=	Java based Compiler Compiler
 
 USE_JAVA=	run
 USE_JAVA2=	yes
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin lib/java
 
 do-build:
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
@@ -22,7 +21,6 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/sablecc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/sablecc.jar ${DESTDIR}${PREFIX}/lib/java
 
 .include "../../mk/java-vm.mk"

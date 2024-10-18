@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:53 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/10/18 16:18:04 ryoon Exp $
 
-BLAKE2s (sablecc-2.16.2.tar.gz) = 5cb8c1072ec99e76e4334aac319e0b3cca1e1fb7401800954adde126f519ee64
-SHA512 (sablecc-2.16.2.tar.gz) = 351781cf481bd4eeb7032890b3402c72f090414ce30f70a125b04fb37701f5d530378eed693d4c948e05d872da83fefa2739c13ec4194f2bd8aff9b97e59567d
-Size (sablecc-2.16.2.tar.gz) = 342386 bytes
+BLAKE2s (sablecc-3.7.tar.gz) = 5a9d5673971d01202c00a0a6b8bd8ed20e16020aabfaab210f0e0de6728a6758
+SHA512 (sablecc-3.7.tar.gz) = c53212ae10afc546796a46b8f1d731d3337c1fe184f12a285686b1f876b207a6cddcd789876d5c9d6b378583065bbb8ca7b5c3797d88b4eea3609ffe9a9c8f71
+Size (sablecc-3.7.tar.gz) = 556985 bytes
