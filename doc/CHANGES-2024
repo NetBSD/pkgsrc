@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6325 2024/10/18 22:45:51 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6326 2024/10/18 22:55:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9565,3 +9565,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-glue to 1.8.0 [mef 2024-10-18]
 	Updated devel/R-lpSolve to 5.6.21 [mef 2024-10-18]
 	Updated devel/R-pak to 0.8.0 [mef 2024-10-18]
+	Updated archivers/R-zip to 2.3.1 [mef 2024-10-18]
