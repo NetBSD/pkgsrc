@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2024/10/18 08:53:14 pin Exp $
+$NetBSD: distinfo,v 1.33 2024/10/18 21:11:10 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -786,9 +786,9 @@ Size (serde_derive-1.0.210.crate) = 56020 bytes
 BLAKE2s (serde_derive_internals-0.29.1.crate) = 00f38cdb2e9b80bf7d87b4359554e955e2fe6442b0b093d8d6042d30467ffb36
 SHA512 (serde_derive_internals-0.29.1.crate) = ee7c8a35094b8ee1d8958f4aa177e5c536c6c7706d446e875f1ae1b5249738ecee053a0239e1508114b747797fcd080ee33ed88929ff1f4903988f64f038b771
 Size (serde_derive_internals-0.29.1.crate) = 26189 bytes
-BLAKE2s (serde_json-1.0.128.crate) = a6b8612986d85d32c31d28137670a1ccea64afedf6ec82007f605a9f33c9e27b
-SHA512 (serde_json-1.0.128.crate) = 9e6290d3a6a971b3c37bbc97097b8179e64c655779b43c7b75303a35ef7030f5401b3a5f62cbc95a7bd5f42ecbefb0b469234d78a76c8c1597726d8e08908a7d
-Size (serde_json-1.0.128.crate) = 149520 bytes
+BLAKE2s (serde_json-1.0.129.crate) = 65cf343d12e7638e4a652d3171a878662ae6c960f09119213d6eebff173ddd71
+SHA512 (serde_json-1.0.129.crate) = 7f1f58573c37f35231fee01b500e096a145a7e51745d003451a06e5ebef228fd971b13c79fe6c9c5fa4cf5c891ae7a3a18b6b5479b06ffb12c3f20c65d674cca
+Size (serde_json-1.0.129.crate) = 150181 bytes
 BLAKE2s (serde_repr-0.1.19.crate) = 06d0c5a38d5ede46949394a003c9e690f036c6e44f82c68e3f59b1eba7296895
 SHA512 (serde_repr-0.1.19.crate) = 678216a62702b3300fef850f10ee60d88f31de1fbeb7300e3fbbdc4e4a9cbc95c6890c8e7b9385223ec837d9504edd53e69b620f80609e54579c0994ed1ab0a1
 Size (serde_repr-0.1.19.crate) = 9997 bytes
@@ -840,9 +840,9 @@ Size (slab-0.4.9.crate) = 17108 bytes
 BLAKE2s (smallvec-1.13.2.crate) = b0c6aa90972d031feb8f50aa1562ab0dbce3a027e6a54bea2586c819ef8e369b
 SHA512 (smallvec-1.13.2.crate) = a97c758b668e40ad9eb572e65feeae4954e09200a04ab92e26a13b48894381cd3a3d2571070c4b7a5e181182e1ede9688f990650342ec69ecfe1a264d234c679
 Size (smallvec-1.13.2.crate) = 35216 bytes
-BLAKE2s (starship-1.21.0.tar.gz) = f431c4ec90894002cd5ded115faf238aeec2df207ea4447670595a826ce8a70b
-SHA512 (starship-1.21.0.tar.gz) = 765f71ccb8fe907f6913c3f8c18356d764197ded8fb76ee7c496370be11f5ba49df041d8c5e7f21c5821e6661e01ea70c8ff5baee98ab188012b9106a070ea54
-Size (starship-1.21.0.tar.gz) = 9425169 bytes
+BLAKE2s (starship-1.21.1.tar.gz) = b92549b0e87079cd487f63a166d54f7080d6e127bf54a51e33403bbb45ff83f7
+SHA512 (starship-1.21.1.tar.gz) = f5122888ffc8b263f8da6a6e6d050c43c0437b87a5953ddba6d5c1f0209b8242e02b5922200e4202d0f732f09a39c55329934eb4b528f90e6e741423313d3b0d
+Size (starship-1.21.1.tar.gz) = 9435990 bytes
 BLAKE2s (starship-battery-0.10.0.crate) = 301cf520adcd81ccbbde04d54ba0a30361ff74c13ff39130b440e9e5fb9de724
 SHA512 (starship-battery-0.10.0.crate) = dd271d64afaa785f74bf530c93e50a01e907f6de39fede07101f2ccd013ca8d4ba4d67ea8b10014b3ba7fb5895a702ebc2a4bfdc55a3c0e425a32976d148bb1f
 Size (starship-battery-0.10.0.crate) = 46077 bytes
