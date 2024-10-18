@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.28 2024/10/18 08:07:24 nia Exp $
+# $NetBSD: platform.mk,v 1.29 2024/10/18 08:18:53 abs Exp $
 
 # This file encodes whether a given platform has support for rust.
 
@@ -12,15 +12,15 @@
 .  for rust_arch in aarch64 earmv7hf i386 powerpc riscv64 sparc64 x86_64
 RUST_PLATFORMS+=	NetBSD-*-${rust_arch}
 .  endfor
-.endfor
+.endif
 
 .for rust_arch in aarch64 earmv7hf i386 x86_64
 RUST_PLATFORMS+=	Linux-*-${rust_arch}
-. endif
+.endfor
 
 .for rust_arch in aarch64 x86_64
 RUST_PLATFORMS+=	Darwin-*-${rust_arch}
-.endif
+.endfor
 
 RUST_PLATFORMS+=	FreeBSD-*-x86_64
 RUST_PLATFORMS+=	SunOS-*-x86_64
