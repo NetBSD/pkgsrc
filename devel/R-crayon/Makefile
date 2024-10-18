@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/12/18 01:21:58 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/18 12:10:51 mef Exp $
 
 R_PKGNAME=	crayon
-R_PKGVER=	1.5.2
+R_PKGVER=	1.5.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
