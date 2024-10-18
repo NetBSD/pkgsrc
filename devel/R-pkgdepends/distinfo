@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/18 23:03:23 mef Exp $
+
+BLAKE2s (R/pkgdepends_0.8.0.tar.gz) = f67a7edf92b7c13723796072a2b6e48a63b11cfd6df452ffd721d318d6b2ed18
+SHA512 (R/pkgdepends_0.8.0.tar.gz) = 45705e4b067958b49eb99f0e28f08d98c33a33311851c01e88c8991ce6d3d8524bd58061e9c6bb8e492b247e735d9556d4c7158b413a4bd3206242c7bd8ae88a
+Size (R/pkgdepends_0.8.0.tar.gz) = 548909 bytes
