@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6320 2024/10/18 21:10:14 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6321 2024/10/18 21:11:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9560,3 +9560,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/thunderbird-l10n to 128.3.2 [ryoon 2024-10-18]
 	Updated devel/sablecc to 3.7 [ryoon 2024-10-18]
 	Updated devel/bacon to 3.1.1 [pin 2024-10-18]
+	Updated shells/starship to 1.21.1 [pin 2024-10-18]
