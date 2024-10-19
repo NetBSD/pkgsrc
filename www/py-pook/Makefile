@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 17:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/10/19 05:56:24 adam Exp $
 
-DISTNAME=	pook-2.1.0
+DISTNAME=	pook-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pook/}
