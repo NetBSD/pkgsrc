@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/10/16 10:05:03 pin Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/19 15:32:44 pin Exp $
 
 DISTNAME=	librespot-0.5.0
 CATEGORIES=	audio
@@ -9,6 +9,8 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/librespot-org/librespot/
 COMMENT=	Open Source Spotify client library
 LICENSE=	mit
+
+TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
