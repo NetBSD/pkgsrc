@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2024/03/11 13:16:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2024/10/19 11:53:57 wiz Exp $
 bin/exr2aces
 bin/exrenvmap
 bin/exrheader
@@ -6,6 +6,7 @@ bin/exrinfo
 bin/exrmakepreview
 bin/exrmaketiled
 bin/exrmanifest
+bin/exrmetrics
 bin/exrmultipart
 bin/exrmultiview
 bin/exrstdattr
@@ -28,6 +29,7 @@ include/OpenEXR/IlmThreadForward.h
 include/OpenEXR/IlmThreadMutex.h
 include/OpenEXR/IlmThreadNamespace.h
 include/OpenEXR/IlmThreadPool.h
+include/OpenEXR/IlmThreadProcessGroup.h
 include/OpenEXR/IlmThreadSemaphore.h
 include/OpenEXR/ImfAcesFile.h
 include/OpenEXR/ImfArray.h
@@ -43,6 +45,8 @@ include/OpenEXR/ImfCompositeDeepScanLine.h
 include/OpenEXR/ImfCompression.h
 include/OpenEXR/ImfCompressionAttribute.h
 include/OpenEXR/ImfCompressor.h
+include/OpenEXR/ImfContext.h
+include/OpenEXR/ImfContextInit.h
 include/OpenEXR/ImfConvert.h
 include/OpenEXR/ImfDeepCompositing.h
 include/OpenEXR/ImfDeepFrameBuffer.h
@@ -156,25 +160,25 @@ lib/cmake/OpenEXR/OpenEXRConfig.cmake
 lib/cmake/OpenEXR/OpenEXRConfigVersion.cmake
 lib/cmake/OpenEXR/OpenEXRTargets-release.cmake
 lib/cmake/OpenEXR/OpenEXRTargets.cmake
-lib/libIex-3_2.so
-lib/libIex-3_2.so.31
-lib/libIex-3_2.so.31.${PKGVERSION}
+lib/libIex-3_3.so
+lib/libIex-3_3.so.32
+lib/libIex-3_3.so.32.${PKGVERSION}
 lib/libIex.so
-lib/libIlmThread-3_2.so
-lib/libIlmThread-3_2.so.31
-lib/libIlmThread-3_2.so.31.${PKGVERSION}
+lib/libIlmThread-3_3.so
+lib/libIlmThread-3_3.so.32
+lib/libIlmThread-3_3.so.32.${PKGVERSION}
 lib/libIlmThread.so
-lib/libOpenEXR-3_2.so
-lib/libOpenEXR-3_2.so.31
-lib/libOpenEXR-3_2.so.31.${PKGVERSION}
+lib/libOpenEXR-3_3.so
+lib/libOpenEXR-3_3.so.32
+lib/libOpenEXR-3_3.so.32.${PKGVERSION}
 lib/libOpenEXR.so
-lib/libOpenEXRCore-3_2.so
-lib/libOpenEXRCore-3_2.so.31
-lib/libOpenEXRCore-3_2.so.31.${PKGVERSION}
+lib/libOpenEXRCore-3_3.so
+lib/libOpenEXRCore-3_3.so.32
+lib/libOpenEXRCore-3_3.so.32.${PKGVERSION}
 lib/libOpenEXRCore.so
-lib/libOpenEXRUtil-3_2.so
-lib/libOpenEXRUtil-3_2.so.31
-lib/libOpenEXRUtil-3_2.so.31.${PKGVERSION}
+lib/libOpenEXRUtil-3_3.so
+lib/libOpenEXRUtil-3_3.so.32
+lib/libOpenEXRUtil-3_3.so.32.${PKGVERSION}
 lib/libOpenEXRUtil.so
 lib/pkgconfig/OpenEXR.pc
 share/doc/OpenEXR/examples/deepExamples.cpp
