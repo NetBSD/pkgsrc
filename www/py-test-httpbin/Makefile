@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2023/05/26 19:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/19 16:37:48 adam Exp $
 
-DISTNAME=	pytest-httpbin-2.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+DISTNAME=	pytest_httpbin-2.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-httpbin/}
 
@@ -18,12 +18,5 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# This is not enough; package needs to be installed for testing
-#TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
