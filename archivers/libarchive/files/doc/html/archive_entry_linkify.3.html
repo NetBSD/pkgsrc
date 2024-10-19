@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Sep 13 20:31:04 2024 -->
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sun Oct 13 08:12:08 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,47 +20,45 @@
 <hr>
 
 
-<p>ARCHIVE_ENTRY_LINKIFY(3) BSD Library Functions Manual
-ARCHIVE_ENTRY_LINKIFY(3)</p>
+<p><i>ARCHIVE_ENTRY_LINKIFY</i>(3) Library Functions Manual
+<i>ARCHIVE_ENTRY_LINKIFY</i>(3)</p>
 
 <p style="margin-top: 1em"><b>NAME</b></p>
 
-
-<p style="margin-left:6%;"><b>archive_entry_linkresolver</b>,
-<b>archive_entry_linkresolver_new</b>,
-<b>archive_entry_linkresolver_set_strategy</b>,
-<b>archive_entry_linkresolver_free</b>,
-<b>archive_entry_linkify</b> &mdash; hardlink resolver
-functions</p>
+<p style="margin-left:9%;">archive_entry_linkresolver,
+archive_entry_linkresolver_new,
+archive_entry_linkresolver_set_strategy,
+archive_entry_linkresolver_free, archive_entry_linkify
+&mdash; hardlink resolver functions</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
-<p style="margin-left:6%;">Streaming Archive Library
+<p style="margin-left:9%;">Streaming Archive Library
 (libarchive, -larchive)</p>
 
 <p style="margin-top: 1em"><b>SYNOPSIS</b></p>
 
-<p style="margin-left:6%;"><b>#include
+<p style="margin-left:9%;"><b>#include
 &lt;archive_entry.h&gt;</b></p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>struct
+<p style="margin-left:9%; margin-top: 1em"><i>struct
 archive_entry_linkresolver *</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_entry_linkresolver_new</b>(<i>void</i>);</p>
+<p style="margin-left:14%;"><b>archive_entry_linkresolver_new</b>(<i>void</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>void</i></p>
 
 
 <p><b>archive_entry_linkresolver_set_strategy</b>(<i>struct&nbsp;archive_entry_linkresolver&nbsp;*resolver</i>,
 <i>int&nbsp;format</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>void</i></p>
 
 
 <p><b>archive_entry_linkresolver_free</b>(<i>struct&nbsp;archive_entry_linkresolver&nbsp;*resolver</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>void</i></p>
 
 
 <p><b>archive_entry_linkify</b>(<i>struct&nbsp;archive_entry_linkresolver&nbsp;*resolver</i>,
@@ -69,32 +67,32 @@ archive_entry_linkresolver *</i></p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">Programs that want to create
+<p style="margin-left:9%;">Programs that want to create
 archives have to deal with hardlinks. Hardlinks are handled
 in different ways by the archive formats. The basic
 strategies are:</p>
 
 <p style="margin-top: 1em">1.</p>
 
-<p style="margin-left:13%;">Ignore hardlinks and store the
+<p style="margin-left:15%;">Ignore hardlinks and store the
 body for each reference (old cpio, zip).</p>
 
 <p style="margin-top: 1em">2.</p>
 
-<p style="margin-left:13%;">Store the body the first time
+<p style="margin-left:15%;">Store the body the first time
 an inode is seen (ustar, pax).</p>
 
 <p style="margin-top: 1em">3.</p>
 
-<p style="margin-left:13%;">Store the body the last time an
+<p style="margin-left:15%;">Store the body the last time an
 inode is seen (new cpio).</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
+<p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver</b> functions help by
 providing a unified interface and handling the complexity
 behind the scene.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
+<p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver</b> functions assume that
 <i>archive_entry</i> instances have valid nlinks, inode and
 device values. The inode and device value is used to match
@@ -102,20 +100,21 @@ entries. The nlinks value is used to determined if all
 references have been found and if the internal references
 can be recycled.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
+<p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver_new</b>() function allocates a
 new link resolver. The instance can be freed using
 <b>archive_entry_linkresolver_free</b>(). All deferred
 entries are flushed and the internal storage is freed.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
+<p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkresolver_set_strategy</b>() function
 selects the optimal hardlink strategy for the given format.
-The format code can be obtained from archive_format(3). The
-function can be called more than once, but it is recommended
-to flush all deferred entries first.</p>
+The format code can be obtained from
+<i>archive_format</i>(3). The function can be called more
+than once, but it is recommended to flush all deferred
+entries first.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The
+<p style="margin-left:9%; margin-top: 1em">The
 <b>archive_entry_linkify</b>() function is the core of
 <b>archive_entry_linkresolver</b>. The <b>entry</b>()
 argument points to the <i>archive_entry</i> that should be
@@ -124,13 +123,13 @@ actions is taken:</p>
 
 <p style="margin-top: 1em">1.</p>
 
-<p style="margin-left:13%;">For the simple archive formats
+<p style="margin-left:15%;">For the simple archive formats
 <i>*entry</i> is left unmodified and <i>*sparse</i> is set
 to NULL.</p>
 
 <p style="margin-top: 1em">2.</p>
 
-<p style="margin-left:13%;">For tar like archive formats,
+<p style="margin-left:15%;">For tar like archive formats,
 <i>*sparse</i> is set to NULL. If <i>*entry</i> is NULL, no
 action is taken. If the hardlink count of <i>*entry</i> is
 larger than 1 and the file type is a regular file or
@@ -143,7 +142,7 @@ with a link count reduced by one.</p>
 
 <p style="margin-top: 1em">3.</p>
 
-<p style="margin-left:13%;">For new cpio like archive
+<p style="margin-left:15%;">For new cpio like archive
 formats a value for <i>*entry</i> of NULL is used to flush
 deferred entries. In that case <i>*entry</i> is set to an
 arbitrary deferred entry and the entry itself is removed
@@ -165,32 +164,32 @@ the new entry is also removed from the internal list and
 returned in <i>*sparse</i>. Otherwise <i>*sparse</i> is set
 to NULL.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The general
+<p style="margin-left:9%; margin-top: 1em">The general
 usage is therefore:</p>
 
 <p style="margin-top: 1em">1.</p>
 
-<p style="margin-left:13%;">For each new archive entry,
+<p style="margin-left:15%;">For each new archive entry,
 call <b>archive_entry_linkify</b>().</p>
 
 <p style="margin-top: 1em">2.</p>
 
-<p style="margin-left:13%;">Keep in mind that the entries
+<p style="margin-left:15%;">Keep in mind that the entries
 returned may have a size of 0 now.</p>
 
 <p style="margin-top: 1em">3.</p>
 
-<p style="margin-left:13%;">If <i>*entry</i> is not NULL,
+<p style="margin-left:15%;">If <i>*entry</i> is not NULL,
 archive it.</p>
 
 <p style="margin-top: 1em">4.</p>
 
-<p style="margin-left:13%;">If <i>*sparse</i> is not NULL,
+<p style="margin-left:15%;">If <i>*sparse</i> is not NULL,
 archive it.</p>
 
 <p style="margin-top: 1em">5.</p>
 
-<p style="margin-left:13%;">After all entries have been
+<p style="margin-left:15%;">After all entries have been
 written to disk, call <b>archive_entry_linkify</b>() with
 <i>*entry</i> set to NULL and archive the returned entry as
 long as it is not NULL.</p>
@@ -198,15 +197,13 @@ long as it is not NULL.</p>
 <p style="margin-top: 1em"><b>RETURN VALUES</b></p>
 
 
-<p style="margin-left:6%;"><b>archive_entry_linkresolver_new</b>()
-returns NULL on malloc(3) failures.</p>
+<p style="margin-left:9%;"><b>archive_entry_linkresolver_new</b>()
+returns NULL on <i>malloc</i>(3) failures.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">archive_entry(3)</p>
-
-<p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+<p style="margin-left:9%;"><i>archive_entry</i>(3) Debian
+February 2, 2012 <i>ARCHIVE_ENTRY_LINKIFY</i>(3)</p>
 <hr>
 </body>
 </html>

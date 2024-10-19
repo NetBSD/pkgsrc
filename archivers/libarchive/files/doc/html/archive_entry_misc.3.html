@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Sep 13 20:31:04 2024 -->
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sun Oct 13 08:12:08 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,72 +20,69 @@
 <hr>
 
 
-<p>ARCHIVE_ENTRY_MISC(3) BSD Library Functions Manual
-ARCHIVE_ENTRY_MISC(3)</p>
+<p><i>ARCHIVE_ENTRY_MISC</i>(3) Library Functions Manual
+<i>ARCHIVE_ENTRY_MISC</i>(3)</p>
 
 <p style="margin-top: 1em"><b>NAME</b></p>
 
-
-<p style="margin-left:6%;"><b>archive_entry_symlink_type</b>,
-<b>archive_entry_set_symlink_type</b> &mdash; miscellaneous
+<p style="margin-left:9%;">archive_entry_symlink_type,
+archive_entry_set_symlink_type &mdash; miscellaneous
 functions for manipulating properties of archive_entry</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
-<p style="margin-left:6%;">Streaming Archive Library
+<p style="margin-left:9%;">Streaming Archive Library
 (libarchive, -larchive)</p>
 
 <p style="margin-top: 1em"><b>SYNOPSIS</b></p>
 
-<p style="margin-left:6%;"><b>#include
+<p style="margin-left:9%;"><b>#include
 &lt;archive_entry.h&gt;</b></p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_entry_symlink_type</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>);</p>
+<p style="margin-left:14%;"><b>archive_entry_symlink_type</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>void</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>void</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_entry_set_symlink_type</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
+<p style="margin-left:14%;"><b>archive_entry_set_symlink_type</b>(<i>struct&nbsp;archive_entry&nbsp;*a</i>,
 <i>int</i>);</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
 
-<p style="margin-left:6%;">The function
+<p style="margin-left:9%;">The function
 <b>archive_entry_symlink_type</b>() returns and the function
 <b>archive_entry_set_symlink_type</b>() sets the type of the
 symbolic link stored in an archive entry. These functions
 have special meaning on operating systems that support
 multiple symbolic link types (e.g. Microsoft Windows).</p>
 
-<p style="margin-left:6%; margin-top: 1em">Supported values
+<p style="margin-left:9%; margin-top: 1em">Supported values
 are:</p>
 
 <p>AE_SYMLINK_TYPE_UNDEFINED</p>
 
-<p style="margin-left:41%; margin-top: 1em">Symbolic link
+<p style="margin-left:44%; margin-top: 1em">Symbolic link
 target type is not defined (default on unix systems)</p>
 
 <p>AE_SYMLINK_TYPE_FILE</p>
 
-<p style="margin-left:41%; margin-top: 1em">Symbolic link
+<p style="margin-left:44%; margin-top: 1em">Symbolic link
 points to a file</p>
 
 <p>AE_SYMLINK_TYPE_DIRECTORY</p>
 
-<p style="margin-left:41%; margin-top: 1em">Symbolic link
+<p style="margin-left:44%; margin-top: 1em">Symbolic link
 points to a directory</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">archive_entry(3),
-archive_entry_paths(3), archive_entry_stat(3),
-libarchive(3)</p>
-
-<p style="margin-left:6%; margin-top: 1em">BSD
-April&nbsp;15, 2019 BSD</p>
+<p style="margin-left:9%;"><i>archive_entry</i>(3),
+<i>archive_entry_paths</i>(3), <i>archive_entry_stat</i>(3),
+<i>libarchive</i>(3) Debian April 15, 2019
+<i>ARCHIVE_ENTRY_MISC</i>(3)</p>
 <hr>
 </body>
 </html>

@@ -528,6 +528,7 @@ am_bsdcpio_test_OBJECTS = $(am__objects_10) \
 	cpio/test/bsdcpio_test-test_basic.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_cmdline.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_extract_cpio_Z.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_extract_cpio_bz2.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_extract_cpio_grz.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_extract_cpio_gz.$(OBJEXT) \
@@ -616,6 +617,7 @@ am_bsdtar_test_OBJECTS = $(am__objects_12) \
 	tar/test/bsdtar_test-test_option_H_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_L_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_O_upper.$(OBJEXT) \
+	tar/test/bsdtar_test-test_option_P.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_T_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_U_upper.$(OBJEXT) \
 	tar/test/bsdtar_test-test_option_X_upper.$(OBJEXT) \
@@ -845,8 +847,9 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/archive_disk_acl_freebsd.c test_utils/test_utils.c \
 	test_utils/test_utils.h test_utils/test_main.c \
 	test_utils/test_common.h libarchive/test/read_open_memory.c \
-	libarchive/test/test.h libarchive/test/test_acl_nfs4.c \
-	libarchive/test/test_acl_pax.c \
+	libarchive/test/test.h \
+	libarchive/test/test_7zip_filename_encoding.c \
+	libarchive/test/test_acl_nfs4.c libarchive/test/test_acl_pax.c \
 	libarchive/test/test_acl_platform_nfs4.c \
 	libarchive/test/test_acl_platform_posix1e.c \
 	libarchive/test/test_acl_posix1e.c \
@@ -929,6 +932,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_file_nonexistent.c \
 	libarchive/test/test_read_filter_compress.c \
 	libarchive/test/test_read_filter_grzip.c \
+	libarchive/test/test_read_filter_gzip_recursive.c \
 	libarchive/test/test_read_filter_lrzip.c \
 	libarchive/test/test_read_filter_lzop.c \
 	libarchive/test/test_read_filter_lzop_multiple_parts.c \
@@ -988,6 +992,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_read_format_mtree_crash747.c \
 	libarchive/test/test_read_format_pax_bz2.c \
 	libarchive/test/test_read_format_rar.c \
+	libarchive/test/test_read_format_rar_encryption.c \
 	libarchive/test/test_read_format_rar_encryption_data.c \
 	libarchive/test/test_read_format_rar_encryption_partially.c \
 	libarchive/test/test_read_format_rar_encryption_header.c \
@@ -1061,6 +1066,7 @@ am__libarchive_test_SOURCES_DIST = libarchive/archive_acl.c \
 	libarchive/test/test_write_disk_no_hfs_compression.c \
 	libarchive/test/test_write_disk_perms.c \
 	libarchive/test/test_write_disk_secure.c \
+	libarchive/test/test_write_disk_secure_noabsolutepaths.c \
 	libarchive/test/test_write_disk_secure744.c \
 	libarchive/test/test_write_disk_secure745.c \
 	libarchive/test/test_write_disk_secure746.c \
@@ -1269,6 +1275,7 @@ am__objects_21 = test_utils/libarchive_test-test_utils.$(OBJEXT) \
 	test_utils/libarchive_test-test_main.$(OBJEXT)
 am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-read_open_memory.$(OBJEXT) \
+	libarchive/test/test-test_7zip_filename_encoding.$(OBJEXT) \
 	libarchive/test/test-test_acl_nfs4.$(OBJEXT) \
 	libarchive/test/test-test_acl_pax.$(OBJEXT) \
 	libarchive/test/test-test_acl_platform_nfs4.$(OBJEXT) \
@@ -1354,6 +1361,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_file_nonexistent.$(OBJEXT) \
 	libarchive/test/test-test_read_filter_compress.$(OBJEXT) \
 	libarchive/test/test-test_read_filter_grzip.$(OBJEXT) \
+	libarchive/test/test-test_read_filter_gzip_recursive.$(OBJEXT) \
 	libarchive/test/test-test_read_filter_lrzip.$(OBJEXT) \
 	libarchive/test/test-test_read_filter_lzop.$(OBJEXT) \
 	libarchive/test/test-test_read_filter_lzop_multiple_parts.$(OBJEXT) \
@@ -1413,6 +1421,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_read_format_mtree_crash747.$(OBJEXT) \
 	libarchive/test/test-test_read_format_pax_bz2.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar.$(OBJEXT) \
+	libarchive/test/test-test_read_format_rar_encryption.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_encryption_data.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_encryption_partially.$(OBJEXT) \
 	libarchive/test/test-test_read_format_rar_encryption_header.$(OBJEXT) \
@@ -1486,6 +1495,7 @@ am_libarchive_test_OBJECTS = $(am__objects_20) $(am__objects_21) \
 	libarchive/test/test-test_write_disk_no_hfs_compression.$(OBJEXT) \
 	libarchive/test/test-test_write_disk_perms.$(OBJEXT) \
 	libarchive/test/test-test_write_disk_secure.$(OBJEXT) \
+	libarchive/test/test-test_write_disk_secure_noabsolutepaths.$(OBJEXT) \
 	libarchive/test/test-test_write_disk_secure744.$(OBJEXT) \
 	libarchive/test/test-test_write_disk_secure745.$(OBJEXT) \
 	libarchive/test/test-test_write_disk_secure746.$(OBJEXT) \
@@ -1602,6 +1612,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_basic.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_cmdline.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_Z.Po \
+	cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_bz2.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_grz.Po \
 	cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_gz.Po \
@@ -1909,6 +1920,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/$(DEPDIR)/test-xxhash.Po \
 	libarchive/$(DEPDIR)/xxhash.Plo \
 	libarchive/test/$(DEPDIR)/test-read_open_memory.Po \
+	libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po \
 	libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Po \
 	libarchive/test/$(DEPDIR)/test-test_acl_pax.Po \
 	libarchive/test/$(DEPDIR)/test-test_acl_platform_nfs4.Po \
@@ -1994,6 +2006,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_file_nonexistent.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_filter_compress.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_filter_grzip.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_filter_lzop.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_filter_lzop_multiple_parts.Po \
@@ -2054,6 +2067,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po \
+	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po \
 	libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po \
@@ -2129,6 +2143,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_secure744.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_secure745.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_secure746.Po \
+	libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_sparse.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_symlink.Po \
 	libarchive/test/$(DEPDIR)/test-test_write_disk_times.Po \
@@ -2230,6 +2245,7 @@ am__depfiles_remade = cat/$(DEPDIR)/bsdcat-bsdcat.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po \
+	tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po \
 	tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po \
@@ -2616,6 +2632,7 @@ EGREP = @EGREP@
 ETAGS = @ETAGS@
 EXEEXT = @EXEEXT@
 FGREP = @FGREP@
+FILECMD = @FILECMD@
 GREP = @GREP@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
@@ -3001,6 +3018,7 @@ libarchive_test_SOURCES = \
 	$(test_utils_SOURCES) \
 	libarchive/test/read_open_memory.c \
 	libarchive/test/test.h \
+	libarchive/test/test_7zip_filename_encoding.c \
 	libarchive/test/test_acl_nfs4.c \
 	libarchive/test/test_acl_pax.c \
 	libarchive/test/test_acl_platform_nfs4.c \
@@ -3086,6 +3104,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_file_nonexistent.c \
 	libarchive/test/test_read_filter_compress.c \
 	libarchive/test/test_read_filter_grzip.c \
+	libarchive/test/test_read_filter_gzip_recursive.c \
 	libarchive/test/test_read_filter_lrzip.c \
 	libarchive/test/test_read_filter_lzop.c \
 	libarchive/test/test_read_filter_lzop_multiple_parts.c \
@@ -3145,6 +3164,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_format_mtree_crash747.c \
 	libarchive/test/test_read_format_pax_bz2.c \
 	libarchive/test/test_read_format_rar.c \
+	libarchive/test/test_read_format_rar_encryption.c \
 	libarchive/test/test_read_format_rar_encryption_data.c \
 	libarchive/test/test_read_format_rar_encryption_partially.c \
 	libarchive/test/test_read_format_rar_encryption_header.c \
@@ -3218,6 +3238,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_disk_no_hfs_compression.c \
 	libarchive/test/test_write_disk_perms.c \
 	libarchive/test/test_write_disk_secure.c \
+	libarchive/test/test_write_disk_secure_noabsolutepaths.c \
 	libarchive/test/test_write_disk_secure744.c \
 	libarchive/test/test_write_disk_secure745.c \
 	libarchive/test/test_write_disk_secure746.c \
@@ -3383,6 +3404,7 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_rar_multivolume_uncompressed_files.part09.rar.uu \
 	libarchive/test/test_rar_multivolume_uncompressed_files.part10.rar.uu \
 	libarchive/test/test_read_filter_grzip.tar.grz.uu \
+	libarchive/test/test_read_filter_gzip_recursive.gz.uu \
 	libarchive/test/test_read_filter_lrzip.tar.lrz.uu \
 	libarchive/test/test_read_filter_lzop.tar.lzo.uu \
 	libarchive/test/test_read_filter_lzop_multiple_parts.tar.lzo.uu \
@@ -3512,6 +3534,14 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_rar_subblock.rar.uu \
 	libarchive/test/test_read_format_rar_unicode.rar.uu \
 	libarchive/test/test_read_format_rar_windows.rar.uu \
+	libarchive/test/test_read_format_rar4_encrypted.rar.uu \
+	libarchive/test/test_read_format_rar4_encrypted_filenames.rar.uu \
+	libarchive/test/test_read_format_rar4_solid_encrypted.rar.uu \
+	libarchive/test/test_read_format_rar4_solid_encrypted_filenames.rar.uu \
+	libarchive/test/test_read_format_rar5_encrypted.rar.uu \
+	libarchive/test/test_read_format_rar5_encrypted_filenames.rar.uu \
+	libarchive/test/test_read_format_rar5_solid_encrypted.rar.uu \
+	libarchive/test/test_read_format_rar5_solid_encrypted_filenames.rar.uu \
 	libarchive/test/test_read_format_rar5_arm.rar.uu \
 	libarchive/test/test_read_format_rar5_blake2.rar.uu \
 	libarchive/test/test_read_format_rar5_compressed.rar.uu \
@@ -3718,6 +3748,7 @@ bsdtar_test_SOURCES = \
 	tar/test/test_option_H_upper.c \
 	tar/test/test_option_L_upper.c \
 	tar/test/test_option_O_upper.c \
+	tar/test/test_option_P.c \
 	tar/test/test_option_T_upper.c \
 	tar/test/test_option_U_upper.c \
 	tar/test/test_option_X_upper.c \
@@ -3838,6 +3869,7 @@ bsdcpio_test_SOURCES = \
 	cpio/test/test_basic.c \
 	cpio/test/test_cmdline.c \
 	cpio/test/test_extract_cpio_Z.c \
+	cpio/test/test_extract_cpio_absolute_paths.c \
 	cpio/test/test_extract_cpio_bz2.c \
 	cpio/test/test_extract_cpio_grz.c \
 	cpio/test/test_extract_cpio_gz.c \
@@ -4702,6 +4734,8 @@ cpio/test/bsdcpio_test-test_cmdline.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_extract_cpio_Z.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_extract_cpio_bz2.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_extract_cpio_grz.$(OBJEXT):  \
@@ -4879,6 +4913,8 @@ tar/test/bsdtar_test-test_option_H_upper.$(OBJEXT):  \
 tar/test/bsdtar_test-test_option_L_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_O_upper.$(OBJEXT):  \
+	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_option_P.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
 tar/test/bsdtar_test-test_option_T_upper.$(OBJEXT):  \
 	tar/test/$(am__dirstamp) tar/test/$(DEPDIR)/$(am__dirstamp)
@@ -5443,6 +5479,9 @@ libarchive/test/$(DEPDIR)/$(am__dirstamp):
 libarchive/test/test-read_open_memory.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_7zip_filename_encoding.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_acl_nfs4.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5698,6 +5737,9 @@ libarchive/test/test-test_read_filter_compress.$(OBJEXT):  \
 libarchive/test/test-test_read_filter_grzip.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_filter_gzip_recursive.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_filter_lrzip.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -5873,6 +5915,9 @@ libarchive/test/test-test_read_format_pax_bz2.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_rar.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_read_format_rar_encryption.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_read_format_rar_encryption_data.$(OBJEXT):  \
@@ -6092,6 +6137,9 @@ libarchive/test/test-test_write_disk_perms.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_write_disk_secure.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/test-test_write_disk_secure_noabsolutepaths.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/test-test_write_disk_secure744.$(OBJEXT):  \
@@ -6360,6 +6408,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_basic.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_cmdline.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_Z.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_bz2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_grz.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_gz.Po@am__quote@ # am--include-marker
@@ -6667,6 +6716,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/test-xxhash.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/xxhash.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-read_open_memory.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_acl_pax.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_acl_platform_nfs4.Po@am__quote@ # am--include-marker
@@ -6752,6 +6802,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_file_nonexistent.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_compress.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_grzip.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_lzop.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_filter_lzop_multiple_parts.Po@am__quote@ # am--include-marker
@@ -6812,6 +6863,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po@am__quote@ # am--include-marker
@@ -6887,6 +6939,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_secure744.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_secure745.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_secure746.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_sparse.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_symlink.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/test-test_write_disk_times.Po@am__quote@ # am--include-marker
@@ -6990,6 +7043,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po@am__quote@ # am--include-marker
@@ -7567,6 +7621,20 @@ cpio/test/bsdcpio_test-test_extract_cpio_Z.obj: cpio/test/test_extract_cpio_Z.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='cpio/test/test_extract_cpio_Z.c' object='cpio/test/bsdcpio_test-test_extract_cpio_Z.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_extract_cpio_Z.obj `if test -f 'cpio/test/test_extract_cpio_Z.c'; then $(CYGPATH_W) 'cpio/test/test_extract_cpio_Z.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_extract_cpio_Z.c'; fi`
+
+cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.o: cpio/test/test_extract_cpio_absolute_paths.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Tpo -c -o cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.o `test -f 'cpio/test/test_extract_cpio_absolute_paths.c' || echo '$(srcdir)/'`cpio/test/test_extract_cpio_absolute_paths.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='cpio/test/test_extract_cpio_absolute_paths.c' object='cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.o `test -f 'cpio/test/test_extract_cpio_absolute_paths.c' || echo '$(srcdir)/'`cpio/test/test_extract_cpio_absolute_paths.c
+
+cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.obj: cpio/test/test_extract_cpio_absolute_paths.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Tpo -c -o cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.obj `if test -f 'cpio/test/test_extract_cpio_absolute_paths.c'; then $(CYGPATH_W) 'cpio/test/test_extract_cpio_absolute_paths.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_extract_cpio_absolute_paths.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='cpio/test/test_extract_cpio_absolute_paths.c' object='cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_extract_cpio_absolute_paths.obj `if test -f 'cpio/test/test_extract_cpio_absolute_paths.c'; then $(CYGPATH_W) 'cpio/test/test_extract_cpio_absolute_paths.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_extract_cpio_absolute_paths.c'; fi`
 
 cpio/test/bsdcpio_test-test_extract_cpio_bz2.o: cpio/test/test_extract_cpio_bz2.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_extract_cpio_bz2.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_bz2.Tpo -c -o cpio/test/bsdcpio_test-test_extract_cpio_bz2.o `test -f 'cpio/test/test_extract_cpio_bz2.c' || echo '$(srcdir)/'`cpio/test/test_extract_cpio_bz2.c
@@ -8659,6 +8727,20 @@ tar/test/bsdtar_test-test_option_O_upper.obj: tar/test/test_option_O_upper.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_O_upper.c' object='tar/test/bsdtar_test-test_option_O_upper.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_O_upper.obj `if test -f 'tar/test/test_option_O_upper.c'; then $(CYGPATH_W) 'tar/test/test_option_O_upper.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_O_upper.c'; fi`
+
+tar/test/bsdtar_test-test_option_P.o: tar/test/test_option_P.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo -c -o tar/test/bsdtar_test-test_option_P.o `test -f 'tar/test/test_option_P.c' || echo '$(srcdir)/'`tar/test/test_option_P.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P.c' object='tar/test/bsdtar_test-test_option_P.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P.o `test -f 'tar/test/test_option_P.c' || echo '$(srcdir)/'`tar/test/test_option_P.c
+
+tar/test/bsdtar_test-test_option_P.obj: tar/test/test_option_P.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_P.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo -c -o tar/test/bsdtar_test-test_option_P.obj `if test -f 'tar/test/test_option_P.c'; then $(CYGPATH_W) 'tar/test/test_option_P.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='tar/test/test_option_P.c' object='tar/test/bsdtar_test-test_option_P.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_option_P.obj `if test -f 'tar/test/test_option_P.c'; then $(CYGPATH_W) 'tar/test/test_option_P.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_option_P.c'; fi`
 
 tar/test/bsdtar_test-test_option_T_upper.o: tar/test/test_option_T_upper.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_option_T_upper.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Tpo -c -o tar/test/bsdtar_test-test_option_T_upper.o `test -f 'tar/test/test_option_T_upper.c' || echo '$(srcdir)/'`tar/test/test_option_T_upper.c
@@ -11516,6 +11598,20 @@ libarchive/test/test-read_open_memory.obj: libarchive/test/read_open_memory.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-read_open_memory.obj `if test -f 'libarchive/test/read_open_memory.c'; then $(CYGPATH_W) 'libarchive/test/read_open_memory.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/read_open_memory.c'; fi`
 
+libarchive/test/test-test_7zip_filename_encoding.o: libarchive/test/test_7zip_filename_encoding.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_7zip_filename_encoding.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Tpo -c -o libarchive/test/test-test_7zip_filename_encoding.o `test -f 'libarchive/test/test_7zip_filename_encoding.c' || echo '$(srcdir)/'`libarchive/test/test_7zip_filename_encoding.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Tpo libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_7zip_filename_encoding.c' object='libarchive/test/test-test_7zip_filename_encoding.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_7zip_filename_encoding.o `test -f 'libarchive/test/test_7zip_filename_encoding.c' || echo '$(srcdir)/'`libarchive/test/test_7zip_filename_encoding.c
+
+libarchive/test/test-test_7zip_filename_encoding.obj: libarchive/test/test_7zip_filename_encoding.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_7zip_filename_encoding.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Tpo -c -o libarchive/test/test-test_7zip_filename_encoding.obj `if test -f 'libarchive/test/test_7zip_filename_encoding.c'; then $(CYGPATH_W) 'libarchive/test/test_7zip_filename_encoding.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_7zip_filename_encoding.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Tpo libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_7zip_filename_encoding.c' object='libarchive/test/test-test_7zip_filename_encoding.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_7zip_filename_encoding.obj `if test -f 'libarchive/test/test_7zip_filename_encoding.c'; then $(CYGPATH_W) 'libarchive/test/test_7zip_filename_encoding.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_7zip_filename_encoding.c'; fi`
+
 libarchive/test/test-test_acl_nfs4.o: libarchive/test/test_acl_nfs4.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_acl_nfs4.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Tpo -c -o libarchive/test/test-test_acl_nfs4.o `test -f 'libarchive/test/test_acl_nfs4.c' || echo '$(srcdir)/'`libarchive/test/test_acl_nfs4.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Tpo libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Po
@@ -12706,6 +12802,20 @@ libarchive/test/test-test_read_filter_grzip.obj: libarchive/test/test_read_filte
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_filter_grzip.obj `if test -f 'libarchive/test/test_read_filter_grzip.c'; then $(CYGPATH_W) 'libarchive/test/test_read_filter_grzip.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_filter_grzip.c'; fi`
 
+libarchive/test/test-test_read_filter_gzip_recursive.o: libarchive/test/test_read_filter_gzip_recursive.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_filter_gzip_recursive.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Tpo -c -o libarchive/test/test-test_read_filter_gzip_recursive.o `test -f 'libarchive/test/test_read_filter_gzip_recursive.c' || echo '$(srcdir)/'`libarchive/test/test_read_filter_gzip_recursive.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Tpo libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_filter_gzip_recursive.c' object='libarchive/test/test-test_read_filter_gzip_recursive.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_filter_gzip_recursive.o `test -f 'libarchive/test/test_read_filter_gzip_recursive.c' || echo '$(srcdir)/'`libarchive/test/test_read_filter_gzip_recursive.c
+
+libarchive/test/test-test_read_filter_gzip_recursive.obj: libarchive/test/test_read_filter_gzip_recursive.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_filter_gzip_recursive.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Tpo -c -o libarchive/test/test-test_read_filter_gzip_recursive.obj `if test -f 'libarchive/test/test_read_filter_gzip_recursive.c'; then $(CYGPATH_W) 'libarchive/test/test_read_filter_gzip_recursive.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_filter_gzip_recursive.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Tpo libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_filter_gzip_recursive.c' object='libarchive/test/test-test_read_filter_gzip_recursive.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_filter_gzip_recursive.obj `if test -f 'libarchive/test/test_read_filter_gzip_recursive.c'; then $(CYGPATH_W) 'libarchive/test/test_read_filter_gzip_recursive.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_filter_gzip_recursive.c'; fi`
+
 libarchive/test/test-test_read_filter_lrzip.o: libarchive/test/test_read_filter_lrzip.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_filter_lrzip.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Tpo -c -o libarchive/test/test-test_read_filter_lrzip.o `test -f 'libarchive/test/test_read_filter_lrzip.c' || echo '$(srcdir)/'`libarchive/test/test_read_filter_lrzip.c
 @am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Tpo libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Po
@@ -13531,6 +13641,20 @@ libarchive/test/test-test_read_format_rar.obj: libarchive/test/test_read_format_
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar.c' object='libarchive/test/test-test_read_format_rar.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar.obj `if test -f 'libarchive/test/test_read_format_rar.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar.c'; fi`
+
+libarchive/test/test-test_read_format_rar_encryption.o: libarchive/test/test_read_format_rar_encryption.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar_encryption.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Tpo -c -o libarchive/test/test-test_read_format_rar_encryption.o `test -f 'libarchive/test/test_read_format_rar_encryption.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar_encryption.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar_encryption.c' object='libarchive/test/test-test_read_format_rar_encryption.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar_encryption.o `test -f 'libarchive/test/test_read_format_rar_encryption.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar_encryption.c
+
+libarchive/test/test-test_read_format_rar_encryption.obj: libarchive/test/test_read_format_rar_encryption.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar_encryption.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Tpo -c -o libarchive/test/test-test_read_format_rar_encryption.obj `if test -f 'libarchive/test/test_read_format_rar_encryption.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar_encryption.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar_encryption.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Tpo libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_read_format_rar_encryption.c' object='libarchive/test/test-test_read_format_rar_encryption.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_read_format_rar_encryption.obj `if test -f 'libarchive/test/test_read_format_rar_encryption.c'; then $(CYGPATH_W) 'libarchive/test/test_read_format_rar_encryption.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_read_format_rar_encryption.c'; fi`
 
 libarchive/test/test-test_read_format_rar_encryption_data.o: libarchive/test/test_read_format_rar_encryption_data.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_read_format_rar_encryption_data.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Tpo -c -o libarchive/test/test-test_read_format_rar_encryption_data.o `test -f 'libarchive/test/test_read_format_rar_encryption_data.c' || echo '$(srcdir)/'`libarchive/test/test_read_format_rar_encryption_data.c
@@ -14553,6 +14677,20 @@ libarchive/test/test-test_write_disk_secure.obj: libarchive/test/test_write_disk
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_disk_secure.c' object='libarchive/test/test-test_write_disk_secure.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_disk_secure.obj `if test -f 'libarchive/test/test_write_disk_secure.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk_secure.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk_secure.c'; fi`
+
+libarchive/test/test-test_write_disk_secure_noabsolutepaths.o: libarchive/test/test_write_disk_secure_noabsolutepaths.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_disk_secure_noabsolutepaths.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Tpo -c -o libarchive/test/test-test_write_disk_secure_noabsolutepaths.o `test -f 'libarchive/test/test_write_disk_secure_noabsolutepaths.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_secure_noabsolutepaths.c
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Tpo libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_disk_secure_noabsolutepaths.c' object='libarchive/test/test-test_write_disk_secure_noabsolutepaths.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_disk_secure_noabsolutepaths.o `test -f 'libarchive/test/test_write_disk_secure_noabsolutepaths.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_secure_noabsolutepaths.c
+
+libarchive/test/test-test_write_disk_secure_noabsolutepaths.obj: libarchive/test/test_write_disk_secure_noabsolutepaths.c
+@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_disk_secure_noabsolutepaths.obj -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Tpo -c -o libarchive/test/test-test_write_disk_secure_noabsolutepaths.obj `if test -f 'libarchive/test/test_write_disk_secure_noabsolutepaths.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk_secure_noabsolutepaths.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk_secure_noabsolutepaths.c'; fi`
+@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Tpo libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='libarchive/test/test_write_disk_secure_noabsolutepaths.c' object='libarchive/test/test-test_write_disk_secure_noabsolutepaths.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/test-test_write_disk_secure_noabsolutepaths.obj `if test -f 'libarchive/test/test_write_disk_secure_noabsolutepaths.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk_secure_noabsolutepaths.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk_secure_noabsolutepaths.c'; fi`
 
 libarchive/test/test-test_write_disk_secure744.o: libarchive/test/test_write_disk_secure744.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/test-test_write_disk_secure744.o -MD -MP -MF libarchive/test/$(DEPDIR)/test-test_write_disk_secure744.Tpo -c -o libarchive/test/test-test_write_disk_secure744.o `test -f 'libarchive/test/test_write_disk_secure744.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_secure744.c
@@ -16264,6 +16402,7 @@ distclean: distclean-am
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_basic.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_cmdline.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_Z.Po
+	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_bz2.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_grz.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_gz.Po
@@ -16571,6 +16710,7 @@ distclean: distclean-am
 	-rm -f libarchive/$(DEPDIR)/test-xxhash.Po
 	-rm -f libarchive/$(DEPDIR)/xxhash.Plo
 	-rm -f libarchive/test/$(DEPDIR)/test-read_open_memory.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_pax.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_platform_nfs4.Po
@@ -16656,6 +16796,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_file_nonexistent.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_compress.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_grzip.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lzop.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lzop_multiple_parts.Po
@@ -16716,6 +16857,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po
@@ -16791,6 +16933,7 @@ distclean: distclean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure744.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure745.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure746.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_sparse.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_symlink.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_times.Po
@@ -16894,6 +17037,7 @@ distclean: distclean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po
@@ -17048,6 +17192,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_basic.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_cmdline.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_Z.Po
+	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_absolute_paths.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_bz2.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_grz.Po
 	-rm -f cpio/test/$(DEPDIR)/bsdcpio_test-test_extract_cpio_gz.Po
@@ -17355,6 +17500,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/$(DEPDIR)/test-xxhash.Po
 	-rm -f libarchive/$(DEPDIR)/xxhash.Plo
 	-rm -f libarchive/test/$(DEPDIR)/test-read_open_memory.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_7zip_filename_encoding.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_nfs4.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_pax.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_acl_platform_nfs4.Po
@@ -17440,6 +17586,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_file_nonexistent.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_compress.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_grzip.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_gzip_recursive.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lrzip.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lzop.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_filter_lzop_multiple_parts.Po
@@ -17500,6 +17647,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_pax_bz2.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar5.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_data.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_header.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_read_format_rar_encryption_partially.Po
@@ -17575,6 +17723,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure744.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure745.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure746.Po
+	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_secure_noabsolutepaths.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_sparse.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_symlink.Po
 	-rm -f libarchive/test/$(DEPDIR)/test-test_write_disk_times.Po
@@ -17678,6 +17827,7 @@ maintainer-clean: maintainer-clean-am
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_H_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_L_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_O_upper.Po
+	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_P.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_T_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_U_upper.Po
 	-rm -f tar/test/$(DEPDIR)/bsdtar_test-test_option_X_upper.Po

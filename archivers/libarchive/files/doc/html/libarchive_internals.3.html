@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Sep 13 20:31:06 2024 -->
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sun Oct 13 08:12:10 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,17 +20,17 @@
 <hr>
 
 
-<p>LIBARCHIVE_INTERNALS(3) BSD Library Functions Manual
-LIBARCHIVE_INTERNALS(3)</p>
+<p><i>LIBARCHIVE_INTERNALS</i>(3) Library Functions Manual
+<i>LIBARCHIVE_INTERNALS</i>(3)</p>
 
 <p style="margin-top: 1em"><b>NAME</b></p>
 
-<p style="margin-left:6%;"><b>libarchive_internals</b>
-&mdash; description of libarchive internal interfaces</p>
+<p style="margin-left:9%;">libarchive_internals &mdash;
+description of libarchive internal interfaces</p>
 
 <p style="margin-top: 1em"><b>OVERVIEW</b></p>
 
-<p style="margin-left:6%;">The <b>libarchive</b> library
+<p style="margin-left:9%;">The <b>libarchive</b> library
 provides a flexible interface for reading and writing
 streaming archive files such as tar and cpio. Internally, it
 follows a modular layered design that should make it easy to
@@ -38,23 +38,23 @@ add new archive and compression formats.</p>
 
 <p style="margin-top: 1em"><b>GENERAL ARCHITECTURE</b></p>
 
-<p style="margin-left:6%;">Externally, libarchive exposes
+<p style="margin-left:9%;">Externally, libarchive exposes
 most operations through an opaque, object-style interface.
-The archive_entry(3) objects store information about a
-single filesystem object. The rest of the library provides
-facilities to write archive_entry(3) objects to archive
-files, read them from archive files, and write them to disk.
-(There are plans to add a facility to read archive_entry(3)
-objects from disk as well.)</p>
+The <i>archive_entry</i>(3) objects store information about
+a single filesystem object. The rest of the library provides
+facilities to write <i>archive_entry</i>(3) objects to
+archive files, read them from archive files, and write them
+to disk. (There are plans to add a facility to read
+<i>archive_entry</i>(3) objects from disk as well.)</p>
 
-<p style="margin-left:6%; margin-top: 1em">The read and
+<p style="margin-left:9%; margin-top: 1em">The read and
 write APIs each have four layers: a public API layer, a
 format layer that understands the archive file format, a
 compression layer, and an I/O layer. The I/O layer is
 completely exposed to clients who can replace it entirely
 with their own functions.</p>
 
-<p style="margin-left:6%; margin-top: 1em">In order to
+<p style="margin-left:9%; margin-top: 1em">In order to
 provide as much consistency as possible for clients, some
 public functions are virtualized. Eventually, it should be
 possible for clients to open an archive or disk writer, and
@@ -63,21 +63,22 @@ regardless of the target.</p>
 
 <p style="margin-top: 1em"><b>READ ARCHITECTURE</b></p>
 
-<p style="margin-left:6%;">From the outside, clients use
-the archive_read(3) API to manipulate an <b>archive</b>
-object to read entries and bodies from an archive stream.
-Internally, the <b>archive</b> object is cast to an
-<b>archive_read</b> object, which holds all read-specific
-data. The API has four layers: The lowest layer is the I/O
-layer. This layer can be overridden by clients, but most
-clients use the packaged I/O callbacks provided, for
-example, by archive_read_open_memory(3), and
-archive_read_open_fd(3). The compression layer calls the I/O
-layer to read bytes and decompresses them for the format
-layer. The format layer unpacks a stream of uncompressed
-bytes and creates <b>archive_entry</b> objects from the
-incoming data. The API layer tracks overall state (for
-example, it prevents clients from reading data before
+<p style="margin-left:9%;">From the outside, clients use
+the <i>archive_read</i>(3) API to manipulate an
+<b>archive</b> object to read entries and bodies from an
+archive stream. Internally, the <b>archive</b> object is
+cast to an <b>archive_read</b> object, which holds all
+read-specific data. The API has four layers: The lowest
+layer is the I/O layer. This layer can be overridden by
+clients, but most clients use the packaged I/O callbacks
+provided, for example, by
+<i>archive_read_open_memory</i>(3), and
+<i>archive_read_open_fd</i>(3). The compression layer calls
+the I/O layer to read bytes and decompresses them for the
+format layer. The format layer unpacks a stream of
+uncompressed bytes and creates <b>archive_entry</b> objects
+from the incoming data. The API layer tracks overall state
+(for example, it prevents clients from reading data before
 reading a header) and invokes the format and compression
 layer operations through registered function pointers. In
 particular, the API layer drives the format-detection
@@ -89,20 +90,21 @@ to see which handler is the best for each archive. (Prior to
 2.4.0, the format bidders were invoked for each entry, but
 this design hindered error recovery.)</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>I/O Layer and
-Client Callbacks</b> <br>
-The read API goes to some lengths to be nice to clients. As
-a result, there are few restrictions on the behavior of the
-client callbacks.</p>
+<p style="margin-left:4%; margin-top: 1em"><b>I/O Layer and
+Client Callbacks</b></p>
 
-<p style="margin-left:6%; margin-top: 1em">The client read
+<p style="margin-left:9%;">The read API goes to some
+lengths to be nice to clients. As a result, there are few
+restrictions on the behavior of the client callbacks.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The client read
 callback is expected to provide a block of data on each
 call. A zero-length return does indicate end of file, but
 otherwise blocks may be as small as one byte or as large as
 the entire file. In particular, blocks may be of different
 sizes.</p>
 
-<p style="margin-left:6%; margin-top: 1em">The client skip
+<p style="margin-left:9%; margin-top: 1em">The client skip
 callback returns the number of bytes actually skipped, which
 may be much smaller than the skip requested. The only
 requirement is that the skip not be larger. In particular,
@@ -110,47 +112,49 @@ clients are allowed to return zero for any skip that they
 don&rsquo;t want to handle. The skip callback must never be
 invoked with a negative value.</p>
 
-<p style="margin-left:6%; margin-top: 1em">Keep in mind
+<p style="margin-left:9%; margin-top: 1em">Keep in mind
 that not all clients are reading from disk: clients reading
 from networks may provide different-sized blocks on every
 request and cannot skip at all; advanced clients may use
-mmap(2) to read the entire file into memory at once and
-return the entire file to libarchive as a single block;
+<i>mmap</i>(2) to read the entire file into memory at once
+and return the entire file to libarchive as a single block;
 other clients may begin asynchronous I/O operations for the
 next block on each request.</p>
 
 
-<p style="margin-left:6%; margin-top: 1em"><b>Decompression
-Layer</b> <br>
-The decompression layer not only handles decompression, it
-also buffers data so that the format handlers see a much
-nicer I/O model. The decompression API is a two stage
-peek/consume model. A read_ahead request specifies a minimum
-read amount; the decompression layer must provide a pointer
-to at least that much data. If more data is immediately
-available, it should return more: the format layer handles
-bulk data reads by asking for a minimum of one byte and then
-copying as much data as is available.</p>
+<p style="margin-left:4%; margin-top: 1em"><b>Decompression
+Layer</b></p>
 
-<p style="margin-left:6%; margin-top: 1em">A subsequent
+<p style="margin-left:9%;">The decompression layer not only
+handles decompression, it also buffers data so that the
+format handlers see a much nicer I/O model. The
+decompression API is a two stage peek/consume model. A
+read_ahead request specifies a minimum read amount; the
+decompression layer must provide a pointer to at least that
+much data. If more data is immediately available, it should
+return more: the format layer handles bulk data reads by
+asking for a minimum of one byte and then copying as much
+data as is available.</p>
+
+<p style="margin-left:9%; margin-top: 1em">A subsequent
 call to the <b>consume</b>() function advances the read
 pointer. Note that data returned from a <b>read_ahead</b>()
 call is guaranteed to remain in place until the next call to
 <b>read_ahead</b>(). Intervening calls to <b>consume</b>()
 should not cause the data to move.</p>
 
-<p style="margin-left:6%; margin-top: 1em">Skip requests
+<p style="margin-left:9%; margin-top: 1em">Skip requests
 must always be handled exactly. Decompression handlers that
 cannot seek forward should not register a skip handler; the
 API layer fills in a generic skip handler that reads and
 discards data.</p>
 
-<p style="margin-left:6%; margin-top: 1em">A decompression
+<p style="margin-left:9%; margin-top: 1em">A decompression
 handler has a specific lifecycle:</p>
 
 <p>Registration/Configuration</p>
 
-<p style="margin-left:17%;">When the client invokes the
+<p style="margin-left:19%;">When the client invokes the
 public support function, the decompression handler invokes
 the internal <b>__archive_read_register_compression</b>()
 function to provide bid and initialization functions. This
@@ -161,14 +165,14 @@ customization information.</p>
 
 <p>Bid</p>
 
-<p style="margin-left:17%; margin-top: 1em">The bid
+<p style="margin-left:19%; margin-top: 1em">The bid
 function is invoked with a pointer and size of a block of
 data. The decompressor can access its config data through
 the <i>decompressor</i> element of the <b>archive_read</b>
 object. The bid function is otherwise stateless. In
 particular, it must not perform any I/O operations.</p>
 
-<p style="margin-left:17%; margin-top: 1em">The value
+<p style="margin-left:19%; margin-top: 1em">The value
 returned by the bid function indicates its suitability for
 handling this data stream. A bid of zero will ensure that
 this decompressor is never invoked. Return zero if magic
@@ -182,7 +186,7 @@ correct bidding.)</p>
 
 <p>Initialize</p>
 
-<p style="margin-left:17%;">The winning bidder will have
+<p style="margin-left:19%;">The winning bidder will have
 its init function called. This function should initialize
 the remaining slots of the <i>struct decompressor_t</i>
 object pointed to by the <i>decompressor</i> element of the
@@ -196,31 +200,32 @@ as and when necessary.</p>
 
 <p>Satisfy I/O requests</p>
 
-<p style="margin-left:17%;">The format handler will invoke
+<p style="margin-left:19%;">The format handler will invoke
 the <i>read_ahead</i>, <i>consume</i>, and <i>skip</i>
 functions as needed.</p>
 
 <p>Finish</p>
 
-<p style="margin-left:17%; margin-top: 1em">The finish
+<p style="margin-left:19%; margin-top: 1em">The finish
 method is called only once when the archive is closed. It
 should release anything stored in the <i>data</i> and
 <i>config</i> slots of the <i>decompressor</i> object. It
 should not invoke the client close callback.</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>Format
-Layer</b> <br>
-The read formats have a similar lifecycle to the
-decompression handlers:</p>
+<p style="margin-left:4%; margin-top: 1em"><b>Format
+Layer</b></p>
+
+<p style="margin-left:9%;">The read formats have a similar
+lifecycle to the decompression handlers:</p>
 
 <p>Registration</p>
 
-<p style="margin-left:17%;">Allocate your private data and
+<p style="margin-left:19%;">Allocate your private data and
 initialize your pointers.</p>
 
 <p>Bid</p>
 
-<p style="margin-left:17%; margin-top: 1em">Formats bid by
+<p style="margin-left:19%; margin-top: 1em">Formats bid by
 invoking the <b>read_ahead</b>() decompression method but
 not calling the <b>consume</b>() method. This allows each
 bidder to look ahead in the input stream. Bidders should not
@@ -233,7 +238,7 @@ considered an upper limit.)</p>
 
 <p>Read header</p>
 
-<p style="margin-left:17%;">The header read is usually the
+<p style="margin-left:19%;">The header read is usually the
 most complex part of any format. There are a few strategies
 worth mentioning: For formats such as tar or cpio, reading
 and parsing the header is straightforward since headers
@@ -246,7 +251,7 @@ the file data and return the corresponding header.</p>
 
 <p>Read Data</p>
 
-<p style="margin-left:17%;">The read data interface
+<p style="margin-left:19%;">The read data interface
 supports sparse files; this requires that each call return a
 block of data specifying the file offset and size. This may
 require you to carefully track the location so that you can
@@ -259,7 +264,7 @@ consume for each block just before you return it.</p>
 
 <p>Skip All Data</p>
 
-<p style="margin-left:17%;">The skip data call should skip
+<p style="margin-left:19%;">The skip data call should skip
 over all file data and trailing padding. This is called
 automatically by the API layer just before each header read.
 It is also called in response to the client calling the
@@ -267,48 +272,53 @@ public <b>data_skip</b>() function.</p>
 
 <p>Cleanup</p>
 
-<p style="margin-left:17%;">On cleanup, the format should
+<p style="margin-left:19%;">On cleanup, the format should
 release all of its allocated memory.</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>API Layer</b>
-<br>
-XXX to do XXX</p>
+<p style="margin-left:4%; margin-top: 1em"><b>API
+Layer</b></p>
+
+<p style="margin-left:9%;">XXX to do XXX</p>
 
 <p style="margin-top: 1em"><b>WRITE ARCHITECTURE</b></p>
 
-<p style="margin-left:6%;">The write API has a similar set
+<p style="margin-left:9%;">The write API has a similar set
 of four layers: an API layer, a format layer, a compression
 layer, and an I/O layer. The registration here is much
 simpler because only one format and one compression can be
 registered at a time.</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>I/O Layer and
-Client Callbacks</b> <br>
-XXX To be written XXX</p>
+<p style="margin-left:4%; margin-top: 1em"><b>I/O Layer and
+Client Callbacks</b></p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>Compression
-Layer</b> <br>
-XXX To be written XXX</p>
+<p style="margin-left:9%;">XXX To be written XXX</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>Format
-Layer</b> <br>
-XXX To be written XXX</p>
+<p style="margin-left:4%; margin-top: 1em"><b>Compression
+Layer</b></p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>API Layer</b>
-<br>
-XXX To be written XXX</p>
+<p style="margin-left:9%;">XXX To be written XXX</p>
+
+<p style="margin-left:4%; margin-top: 1em"><b>Format
+Layer</b></p>
+
+<p style="margin-left:9%;">XXX To be written XXX</p>
+
+<p style="margin-left:4%; margin-top: 1em"><b>API
+Layer</b></p>
+
+<p style="margin-left:9%;">XXX To be written XXX</p>
 
 <p style="margin-top: 1em"><b>WRITE_DISK
 ARCHITECTURE</b></p>
 
-<p style="margin-left:6%;">The write_disk API is intended
+<p style="margin-left:9%;">The write_disk API is intended
 to look just like the write API to clients. Since it does
 not handle multiple formats or compression, it is not
 layered internally.</p>
 
 <p style="margin-top: 1em"><b>GENERAL SERVICES</b></p>
 
-<p style="margin-left:6%;">The <b>archive_read</b>,
+<p style="margin-left:9%;">The <b>archive_read</b>,
 <b>archive_write</b>, and <b>archive_write_disk</b> objects
 all contain an initial <b>archive</b> object which provides
 common support for a set of standard services. (Recall that
@@ -321,7 +331,7 @@ for virtualized API functions.</p>
 
 <p style="margin-top: 1em"><b>MISCELLANEOUS NOTES</b></p>
 
-<p style="margin-left:6%;">Connecting existing archiving
+<p style="margin-left:9%;">Connecting existing archiving
 libraries into libarchive is generally quite difficult. In
 particular, many existing libraries strongly assume that you
 are reading from a file; they seek forwards and backwards as
@@ -329,7 +339,7 @@ necessary to locate various pieces of information. In
 contrast, libarchive never seeks backwards in its input,
 which sometimes requires very different approaches.</p>
 
-<p style="margin-left:6%; margin-top: 1em">For example,
+<p style="margin-left:9%; margin-top: 1em">For example,
 libarchive&rsquo;s ISO9660 support operates very differently
 from most ISO9660 readers. The libarchive support utilizes a
 work-queue design that keeps a list of known entries sorted
@@ -341,7 +351,7 @@ the list. This design relies heavily on the ISO9660 image
 being optimized so that directories always occur earlier on
 the disk than the files they describe.</p>
 
-<p style="margin-left:6%; margin-top: 1em">Depending on the
+<p style="margin-left:9%; margin-top: 1em">Depending on the
 specific format, such approaches may not be possible. The
 ZIP format specification, for example, allows archivers to
 store key information only at the end of the file. In
@@ -353,22 +363,20 @@ program.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">archive_entry(3),
-archive_read(3), archive_write(3), archive_write_disk(3),
-libarchive(3)</p>
+<p style="margin-left:9%;"><i>archive_entry</i>(3),
+<i>archive_read</i>(3), <i>archive_write</i>(3),
+<i>archive_write_disk</i>(3), <i>libarchive</i>(3)</p>
 
 <p style="margin-top: 1em"><b>HISTORY</b></p>
 
-<p style="margin-left:6%;">The <b>libarchive</b> library
+<p style="margin-left:9%;">The <b>libarchive</b> library
 first appeared in FreeBSD&nbsp;5.3.</p>
 
 <p style="margin-top: 1em"><b>AUTHORS</b></p>
 
-<p style="margin-left:6%;">The <b>libarchive</b> library
-was written by Tim Kientzle &lt;kientzle@acm.org&gt;.</p>
-
-<p style="margin-left:6%; margin-top: 1em">BSD
-January&nbsp;26, 2011 BSD</p>
+<p style="margin-left:9%;">The <b>libarchive</b> library
+was written by Tim Kientzle &lt;kientzle@acm.org&gt;. Debian
+January 26, 2011 <i>LIBARCHIVE_INTERNALS</i>(3)</p>
 <hr>
 </body>
 </html>
