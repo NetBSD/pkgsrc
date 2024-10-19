@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/01/22 03:29:00 mef Exp $
+$NetBSD: distinfo,v 1.10 2024/10/19 22:13:38 mef Exp $
 
-BLAKE2s (R/pkgcache_2.2.1.tar.gz) = 560a549804ee7dc3251a73b7764374b30392c61d0e32350bc2f109eb3f7ef3a6
-SHA512 (R/pkgcache_2.2.1.tar.gz) = 762d5207dace7a7dff1f467bd4db66f0217249a3c6b46cced98a2b73934bd093de7bc5c632d3072c4ed0a3ee929fe9aa0cfa489e3f34d69cb02a1d8f36ba3d9f
-Size (R/pkgcache_2.2.1.tar.gz) = 268378 bytes
+BLAKE2s (R/pkgcache_2.2.3.tar.gz) = 3d8696703fd822b40fb56b7b5c1ceab622f7629264b673ef2052bb5850b8228a
+SHA512 (R/pkgcache_2.2.3.tar.gz) = ea883d972ad45ef818179efa59607ecf0544dca27cef721a2e2f4d821d3ddeef8a7c677e203eee389b779e8bb03bf8c2b8f749c4c268daa347837f7675567228
+Size (R/pkgcache_2.2.3.tar.gz) = 266662 bytes
