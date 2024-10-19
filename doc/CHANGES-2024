@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6362 2024/10/19 22:41:12 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6363 2024/10/19 22:48:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9617,3 +9617,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-pkgbuild to 1.4.4 [mef 2024-10-19]
 	Updated devel/R-pkgcache to 2.2.3 [mef 2024-10-19]
 	Updated devel/R-pkgload to 1.4.0 [mef 2024-10-19]
+	Updated devel/R-remotes to 2.5.0 [mef 2024-10-19]
