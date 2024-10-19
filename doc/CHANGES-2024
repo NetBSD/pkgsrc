@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6333 2024/10/19 06:03:09 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6334 2024/10/19 08:23:27 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9579,3 +9579,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-pook to 2.1.1 [adam 2024-10-19]
 	Updated textproc/py-xmltodict to 0.14.2 [adam 2024-10-19]
 	Updated devel/R-RUnit to 0.4.33 [mef 2024-10-19]
+	Added emulators/supermodel version 0.2a [nia 2024-10-19]
