@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6354 2024/10/19 16:39:05 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6355 2024/10/19 20:01:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9609,3 +9609,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-httptools to 0.6.4 [adam 2024-10-19]
 	Updated devel/py-amaranth to 0.5.3 [adam 2024-10-19]
 	Updated www/py-test-httpbin to 2.1.0 [adam 2024-10-19]
+	Updated print/cups-base to 2.4.11 [wiz 2024-10-19]
