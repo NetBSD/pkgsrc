@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/09/22 15:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/10/19 10:54:46 wiz Exp $
 ${PYSITELIB}/google/api_core/__init__.py
 ${PYSITELIB}/google/api_core/__init__.pyc
 ${PYSITELIB}/google/api_core/__init__.pyo
@@ -80,6 +80,9 @@ ${PYSITELIB}/google/api_core/operation_async.pyo
 ${PYSITELIB}/google/api_core/operations_v1/__init__.py
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyc
 ${PYSITELIB}/google/api_core/operations_v1/__init__.pyo
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_base_client.py
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_base_client.pyc
+${PYSITELIB}/google/api_core/operations_v1/abstract_operations_base_client.pyo
 ${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.py
 ${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.pyc
 ${PYSITELIB}/google/api_core/operations_v1/abstract_operations_client.pyo
@@ -92,9 +95,18 @@ ${PYSITELIB}/google/api_core/operations_v1/operations_client.pyo
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.py
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.pyc
 ${PYSITELIB}/google/api_core/operations_v1/operations_client_config.pyo
+${PYSITELIB}/google/api_core/operations_v1/operations_rest_client_async.py
+${PYSITELIB}/google/api_core/operations_v1/operations_rest_client_async.pyc
+${PYSITELIB}/google/api_core/operations_v1/operations_rest_client_async.pyo
 ${PYSITELIB}/google/api_core/operations_v1/pagers.py
 ${PYSITELIB}/google/api_core/operations_v1/pagers.pyc
 ${PYSITELIB}/google/api_core/operations_v1/pagers.pyo
+${PYSITELIB}/google/api_core/operations_v1/pagers_async.py
+${PYSITELIB}/google/api_core/operations_v1/pagers_async.pyc
+${PYSITELIB}/google/api_core/operations_v1/pagers_async.pyo
+${PYSITELIB}/google/api_core/operations_v1/pagers_base.py
+${PYSITELIB}/google/api_core/operations_v1/pagers_base.pyc
+${PYSITELIB}/google/api_core/operations_v1/pagers_base.pyo
 ${PYSITELIB}/google/api_core/operations_v1/transports/__init__.py
 ${PYSITELIB}/google/api_core/operations_v1/transports/__init__.pyc
 ${PYSITELIB}/google/api_core/operations_v1/transports/__init__.pyo
@@ -104,6 +116,9 @@ ${PYSITELIB}/google/api_core/operations_v1/transports/base.pyo
 ${PYSITELIB}/google/api_core/operations_v1/transports/rest.py
 ${PYSITELIB}/google/api_core/operations_v1/transports/rest.pyc
 ${PYSITELIB}/google/api_core/operations_v1/transports/rest.pyo
+${PYSITELIB}/google/api_core/operations_v1/transports/rest_asyncio.py
+${PYSITELIB}/google/api_core/operations_v1/transports/rest_asyncio.pyc
+${PYSITELIB}/google/api_core/operations_v1/transports/rest_asyncio.pyo
 ${PYSITELIB}/google/api_core/page_iterator.py
 ${PYSITELIB}/google/api_core/page_iterator.pyc
 ${PYSITELIB}/google/api_core/page_iterator.pyo
