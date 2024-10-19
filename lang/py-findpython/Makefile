@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/04/19 04:42:26 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/19 05:52:53 adam Exp $
 
-DISTNAME=	findpython-0.6.1
+DISTNAME=	findpython-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/findpython/}
@@ -10,12 +10,10 @@ HOMEPAGE=	https://github.com/frostming/findpython
 COMMENT=	Utility to find Python versions on your system
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>=0:../../devel/py-pdm_backend
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend>0:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20:../../devel/py-packaging
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
