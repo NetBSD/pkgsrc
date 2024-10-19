@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2024/08/06 13:17:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2024/10/19 11:01:17 wiz Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
@@ -59,6 +59,9 @@ ${PYSITELIB}/sphinx/builders/html/__init__.pyo
 ${PYSITELIB}/sphinx/builders/html/_assets.py
 ${PYSITELIB}/sphinx/builders/html/_assets.pyc
 ${PYSITELIB}/sphinx/builders/html/_assets.pyo
+${PYSITELIB}/sphinx/builders/html/_build_info.py
+${PYSITELIB}/sphinx/builders/html/_build_info.pyc
+${PYSITELIB}/sphinx/builders/html/_build_info.pyo
 ${PYSITELIB}/sphinx/builders/html/transforms.py
 ${PYSITELIB}/sphinx/builders/html/transforms.pyc
 ${PYSITELIB}/sphinx/builders/html/transforms.pyo
@@ -131,6 +134,12 @@ ${PYSITELIB}/sphinx/directives/patches.pyo
 ${PYSITELIB}/sphinx/domains/__init__.py
 ${PYSITELIB}/sphinx/domains/__init__.pyc
 ${PYSITELIB}/sphinx/domains/__init__.pyo
+${PYSITELIB}/sphinx/domains/_domains_container.py
+${PYSITELIB}/sphinx/domains/_domains_container.pyc
+${PYSITELIB}/sphinx/domains/_domains_container.pyo
+${PYSITELIB}/sphinx/domains/_index.py
+${PYSITELIB}/sphinx/domains/_index.pyc
+${PYSITELIB}/sphinx/domains/_index.pyo
 ${PYSITELIB}/sphinx/domains/c/__init__.py
 ${PYSITELIB}/sphinx/domains/c/__init__.pyc
 ${PYSITELIB}/sphinx/domains/c/__init__.pyo
@@ -858,15 +867,30 @@ ${PYSITELIB}/sphinx/transforms/references.pyo
 ${PYSITELIB}/sphinx/util/__init__.py
 ${PYSITELIB}/sphinx/util/__init__.pyc
 ${PYSITELIB}/sphinx/util/__init__.pyo
+${PYSITELIB}/sphinx/util/_files.py
+${PYSITELIB}/sphinx/util/_files.pyc
+${PYSITELIB}/sphinx/util/_files.pyo
+${PYSITELIB}/sphinx/util/_importer.py
+${PYSITELIB}/sphinx/util/_importer.pyc
+${PYSITELIB}/sphinx/util/_importer.pyo
 ${PYSITELIB}/sphinx/util/_io.py
 ${PYSITELIB}/sphinx/util/_io.pyc
 ${PYSITELIB}/sphinx/util/_io.pyo
+${PYSITELIB}/sphinx/util/_lines.py
+${PYSITELIB}/sphinx/util/_lines.pyc
+${PYSITELIB}/sphinx/util/_lines.pyo
 ${PYSITELIB}/sphinx/util/_pathlib.py
 ${PYSITELIB}/sphinx/util/_pathlib.pyc
 ${PYSITELIB}/sphinx/util/_pathlib.pyo
+${PYSITELIB}/sphinx/util/_serialise.py
+${PYSITELIB}/sphinx/util/_serialise.pyc
+${PYSITELIB}/sphinx/util/_serialise.pyo
 ${PYSITELIB}/sphinx/util/_timestamps.py
 ${PYSITELIB}/sphinx/util/_timestamps.pyc
 ${PYSITELIB}/sphinx/util/_timestamps.pyo
+${PYSITELIB}/sphinx/util/_uri.py
+${PYSITELIB}/sphinx/util/_uri.pyc
+${PYSITELIB}/sphinx/util/_uri.pyo
 ${PYSITELIB}/sphinx/util/build_phase.py
 ${PYSITELIB}/sphinx/util/build_phase.pyc
 ${PYSITELIB}/sphinx/util/build_phase.pyo
