@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/01/22 03:23:15 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/19 22:41:03 mef Exp $
 
 R_PKGNAME=	pkgload
-R_PKGVER=	1.3.4
+R_PKGVER=	1.4.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +10,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-desc>=1.2.0:../../devel/R-desc
 DEPENDS+=	R-fs-[0-9]*:../../devel/R-fs
+DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-pkgbuild>=1.0.4:../../devel/R-pkgbuild
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
 DEPENDS+=	R-rprojroot>=1.3.2:../../devel/R-rprojroot
@@ -25,6 +26,7 @@ TEST_DEPENDS+=	R-mockr-[0-9]*:../../devel/R-mockr
 TEST_DEPENDS+=	R-pak-[0-9]*:../../devel/R-pak
 TEST_DEPENDS+=	R-remotes-[0-9]*:../../devel/R-remotes
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+TEST_DEPENDS+=	R-usethis-[0-9]*:../../devel/R-usethis
 
 # !pdfTeX error: pdflatex (file tctt0900): Font tctt0900 at 600 not found
 TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
