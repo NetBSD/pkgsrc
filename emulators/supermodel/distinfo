@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/10/19 08:23:15 nia Exp $
+
+BLAKE2s (Supermodel_0.2a_Src.zip) = ad64ec39f3d82a693974c30a37e1263bb62f1cd94926a62d1278fd5ea1591a60
+SHA512 (Supermodel_0.2a_Src.zip) = 2dd924453749941df0b5992a94d4d3b73914a1ee7e1955fed10bfa22fbe1e770747ee85d21423a4be696cf3a1d74db967325aca921d679cf6cef045792e82de4
+Size (Supermodel_0.2a_Src.zip) = 1029004 bytes
+SHA1 (patch-Makefiles_Makefile.SDL.UNIX.GCC) = 619306f14497704e25514b100880ee454edc06c2

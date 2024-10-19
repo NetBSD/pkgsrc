@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefiles_Makefile.SDL.UNIX.GCC,v 1.1 2024/10/19 08:23:15 nia Exp $
+
+Respect pkgsrc settings.
+Automate generation of m68k emulation code.
+
+--- Makefiles/Makefile.SDL.UNIX.GCC.orig	2012-01-11 15:47:40.000000000 +0000
++++ Makefiles/Makefile.SDL.UNIX.GCC
+@@ -65,12 +65,11 @@ OUTFILE = $(BIN_DIR)/Supermodel
+ # Compiler and Linker
+ ###############################################################################
+ 
+-CC = gcc
+-LD = gcc
+-COMPILER_FLAGS = $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
+-CFLAGS = $(COMPILER_FLAGS)
+-CPPFLAGS = $(COMPILER_FLAGS)
+-LFLAGS = -o $(OUTFILE) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
++LD = $(CXX)
++COMPILER_FLAGS = $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -std=gnu++98
++CFLAGS += $(COMPILER_FLAGS)
++CPPFLAGS += $(COMPILER_FLAGS)
++LFLAGS = -o $(OUTFILE) $(LDFLAGS) $(SDL_LIBFLAGS) -lGLU -lz -lm
+ 
+ #
+ # Build options...
+@@ -220,3 +219,8 @@ $(OBJ_DIR)/amp_%.o:	Src/Sound/MPEG/%.cpp
+ 	
+ $(OBJ_DIR)/amp_%.o:	Src/Sound/MPEG/%.cpp
+ 	$(CC) $< $(CPPFLAGS) -o $(OBJ_DIR)/amp_$(*F).o
++
++
++$(OBJ_DIR)/m68kops.h $(OBJ_DIR)/m68kops.c $(OBJ_DIR)/m68kopac.c $(OBJ_DIR)/m68kopdm.c $(OBJ_DIR)/m68kopnz.c:	$(OBJ_DIR)/m68kmake Src/CPU/68K/Musashi/m68k_in.c Src/CPU/68K/Musashi/m68k.h Src/CPU/68K/Musashi/m68kconf.h | $(OBJ_DIR)
++	$(info Generating 68K emulator: $@)
++	$(OBJ_DIR)/m68kmake $(OBJ_DIR) Src/CPU/68K/Musashi/m68k_in.c
