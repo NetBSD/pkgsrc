@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/10/14 06:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/19 11:16:08 wiz Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-2.4.4
+DISTNAME=	sphinx_autodoc_typehints-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 # bug in numpy?
 # 2 warnings, 1 error
