@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/10/19 11:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/10/19 11:26:30 wiz Exp $
 
 DISTNAME=	sphinx_autodoc_typehints-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -22,7 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-ex
 
 USE_LANGUAGES=	# none
 
-# bug in numpy?
+# https://github.com/tox-dev/sphinx-autodoc-typehints/issues/496
 # 2 warnings, 1 error
 
 .include "../../lang/python/wheel.mk"
