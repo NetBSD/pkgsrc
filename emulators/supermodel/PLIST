@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/19 08:23:15 nia Exp $
+bin/Supermodel
+share/doc/supermodel/LICENSE.txt
+share/doc/supermodel/README.txt
