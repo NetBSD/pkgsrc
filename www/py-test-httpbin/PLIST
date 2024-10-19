@@ -1,19 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/02 10:46:01 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/10/19 16:37:48 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_httpbin/__init__.py
 ${PYSITELIB}/pytest_httpbin/__init__.pyc
 ${PYSITELIB}/pytest_httpbin/__init__.pyo
 ${PYSITELIB}/pytest_httpbin/certs.py
 ${PYSITELIB}/pytest_httpbin/certs.pyc
 ${PYSITELIB}/pytest_httpbin/certs.pyo
-${PYSITELIB}/pytest_httpbin/certs/cacert.pem
-${PYSITELIB}/pytest_httpbin/certs/cert.pem
-${PYSITELIB}/pytest_httpbin/certs/key.pem
+${PYSITELIB}/pytest_httpbin/certs/README.md
+${PYSITELIB}/pytest_httpbin/certs/client.pem
+${PYSITELIB}/pytest_httpbin/certs/server.key
+${PYSITELIB}/pytest_httpbin/certs/server.pem
 ${PYSITELIB}/pytest_httpbin/plugin.py
 ${PYSITELIB}/pytest_httpbin/plugin.pyc
 ${PYSITELIB}/pytest_httpbin/plugin.pyo
