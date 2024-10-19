@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/13 09:46:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/19 11:34:15 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -573,6 +573,9 @@ ${PYSITELIB}/textual/widgets/_markdown.pyo
 ${PYSITELIB}/textual/widgets/_markdown_viewer.py
 ${PYSITELIB}/textual/widgets/_markdown_viewer.pyc
 ${PYSITELIB}/textual/widgets/_markdown_viewer.pyo
+${PYSITELIB}/textual/widgets/_masked_input.py
+${PYSITELIB}/textual/widgets/_masked_input.pyc
+${PYSITELIB}/textual/widgets/_masked_input.pyo
 ${PYSITELIB}/textual/widgets/_option_list.py
 ${PYSITELIB}/textual/widgets/_option_list.pyc
 ${PYSITELIB}/textual/widgets/_option_list.pyo
@@ -648,6 +651,9 @@ ${PYSITELIB}/textual/widgets/button.pyo
 ${PYSITELIB}/textual/widgets/data_table.py
 ${PYSITELIB}/textual/widgets/data_table.pyc
 ${PYSITELIB}/textual/widgets/data_table.pyo
+${PYSITELIB}/textual/widgets/directory_tree.py
+${PYSITELIB}/textual/widgets/directory_tree.pyc
+${PYSITELIB}/textual/widgets/directory_tree.pyo
 ${PYSITELIB}/textual/widgets/input.py
 ${PYSITELIB}/textual/widgets/input.pyc
 ${PYSITELIB}/textual/widgets/input.pyo
