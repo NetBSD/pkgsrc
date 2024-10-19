@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/09/25 10:52:58 pin Exp $
+# $NetBSD: Makefile,v 1.86 2024/10/19 15:34:40 pin Exp $
 
 DISTNAME=	oculante-0.9.1
 CATEGORIES=	graphics
@@ -52,4 +52,5 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../multimedia/libaom/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
