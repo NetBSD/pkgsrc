@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/07/20 12:28:48 adam Exp $
+$NetBSD: distinfo,v 1.23 2024/10/19 16:27:08 adam Exp $
 
-BLAKE2s (markdown2-2.5.0.tar.gz) = 2fd495561eae44fd471d8636f366a0bbf74fffdeab461878e26cd039e5ad0f5a
-SHA512 (markdown2-2.5.0.tar.gz) = 1fead06f1f1692908f6be3da8f11a010a541cf0c5e38db6744b84aa9b6e2b45ac7a0b3a06427d5dedf0c5bb5eae4636973e625ffbcf066febeb752965c594579
-Size (markdown2-2.5.0.tar.gz) = 138574 bytes
+BLAKE2s (markdown2-2.5.1.tar.gz) = 4ae3acabfc9416fd76f50b67b00fc6be00a508c08829fe4363d3f606f1beeed8
+SHA512 (markdown2-2.5.1.tar.gz) = 758d2f66c157cd709edc3bd4e67839eaae37db7a2c126451c840e32b150792cd11c1cd25ff8c4d46bff2bed290af8a3c7c87361e2d62009b16a00eb8f549af98
+Size (markdown2-2.5.1.tar.gz) = 140957 bytes
