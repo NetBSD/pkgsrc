@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6349 2024/10/19 12:05:05 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6350 2024/10/19 15:35:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9595,3 +9595,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-bit to 4.5.0 [mef 2024-10-19]
 	Updated graphics/openexr to 3.3.0 [wiz 2024-10-19]
 	Updated devel/R-bit64 to 4.5.2 [mef 2024-10-19]
+	Updated shells/oh-my-posh to 23.20.2 [pin 2024-10-19]
