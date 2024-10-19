@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/09/13 09:36:53 wiz Exp $
+$NetBSD: distinfo,v 1.18 2024/10/19 11:14:17 wiz Exp $
 
-BLAKE2s (sphinx_autoapi-3.3.1.tar.gz) = 963caa098509b5120eb08d70bd6e3175d59f35f5da9f7b1951c487879034363c
-SHA512 (sphinx_autoapi-3.3.1.tar.gz) = 33ed02136b56a60c590638b845bf432699dcf8d6f4ad8ea4394fb416e0774c9c910348f567aec25ac4208dcd32ef265e3a96d4d131a97900c5f5ce3f73f8556d
-Size (sphinx_autoapi-3.3.1.tar.gz) = 65351 bytes
+BLAKE2s (sphinx_autoapi-3.3.2.tar.gz) = 20334fb053f32924d5daae5915d84fd56920ffb41f6242361529dc79c4f368e2
+SHA512 (sphinx_autoapi-3.3.2.tar.gz) = 0731140f1c91cea4a477516c34c526e13b32d70a77a60f8c3ab3ef916c4a54c8b663c2d21f5c1b7ba7549e45c3601da14f1e72c6e174f6c4e2c33d42e1e81eac
+Size (sphinx_autoapi-3.3.2.tar.gz) = 66053 bytes
