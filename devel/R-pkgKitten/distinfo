@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/15 11:06:53 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/10/19 21:55:28 mef Exp $
 
-BLAKE2s (R/pkgKitten_0.2.3.tar.gz) = e80c4dc7d6e99ead4ebc1e32a391b63921f3f6f7d6263feeaf983aec1acefba2
-SHA512 (R/pkgKitten_0.2.3.tar.gz) = 013417008699a9efa49905d1149b348dd8941f4b2a991fb7801868316ed706e50702695a8865dcb8a20a4bfbb0a6ddbd49c3540ba7d7978dde5048e1fbb0a3a5
-Size (R/pkgKitten_0.2.3.tar.gz) = 9802 bytes
+BLAKE2s (R/pkgKitten_0.2.4.tar.gz) = e63b892f2441c550f065a9cbe28dd2ec1c527a9971ea8d7a16e3725f3b8dc73d
+SHA512 (R/pkgKitten_0.2.4.tar.gz) = de30e822afcc5c7b99aba10cba4329206ec20ee3626f241000f2e43c2b85215e7dddbebe394eb843ce6cba587d46e7cdff19a057e80713729c861b4d87f8195d
+Size (R/pkgKitten_0.2.4.tar.gz) = 11381 bytes
