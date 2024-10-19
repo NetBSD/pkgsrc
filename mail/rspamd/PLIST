@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/07/14 13:57:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2024/10/19 11:37:53 wiz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -221,6 +221,7 @@ share/rspamd/lualib/lua_verdict.lua
 share/rspamd/lualib/lupa.lua
 share/rspamd/lualib/plugins/dmarc.lua
 share/rspamd/lualib/plugins/neural.lua
+share/rspamd/lualib/plugins/ratelimit.lua
 share/rspamd/lualib/plugins/rbl.lua
 share/rspamd/lualib/plugins_stats.lua
 share/rspamd/lualib/redis_scripts/bayes_cache_check.lua
@@ -253,6 +254,7 @@ share/rspamd/lualib/rspamadm/keypair.lua
 share/rspamd/lualib/rspamadm/mime.lua
 share/rspamd/lualib/rspamadm/neural_test.lua
 share/rspamd/lualib/rspamadm/publicsuffix.lua
+share/rspamd/lualib/rspamadm/secretbox.lua
 share/rspamd/lualib/rspamadm/stat_convert.lua
 share/rspamd/lualib/rspamadm/statistics_dump.lua
 share/rspamd/lualib/rspamadm/template.lua
@@ -383,3 +385,4 @@ share/rspamd/www/js/lib/visibility.min.js
 share/rspamd/www/js/main.js
 share/rspamd/www/mstile-150x150.png
 share/rspamd/www/safari-pinned-tab.svg
+@pkgdir etc
