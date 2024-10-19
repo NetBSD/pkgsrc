@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/02/03 21:53:13 mef Exp $
+# $NetBSD: Makefile,v 1.33 2024/10/19 10:41:44 mef Exp $
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	1.0.12
+R_PKGVER=	1.0.13
 CATEGORIES=	devel
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Seamless R and C++ integration
@@ -18,6 +17,7 @@ TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown
 TEST_DEPENDS+=	R-pkgKitten>=0.1.2:../../devel/R-pkgKitten
 TEST_DEPENDS+=	R-rbenchmark>=1.0.0:../../benchmarks/R-rbenchmark
 TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest
+
 TEST_DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 TEST_DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
 TEST_DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
@@ -25,6 +25,8 @@ TEST_DEPENDS+=	tex-pdflscape-[0-9]*:../../print/tex-pdflscape
 TEST_DEPENDS+=	tex-ae-[0-9]*:../../fonts/tex-ae
 TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES+=		c++
 USE_CXX_FEATURES+=	c++11
