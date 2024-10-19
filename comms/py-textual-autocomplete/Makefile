@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/07/14 12:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/19 10:52:51 wiz Exp $
 
-DISTNAME=	textual_autocomplete-3.0.0a9
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/0a/0alpha/}
+DISTNAME=	textual_autocomplete-3.0.0a12
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual_autocomplete/}
 
