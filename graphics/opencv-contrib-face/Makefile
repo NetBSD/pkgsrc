@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2024/09/21 10:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/10/19 11:55:08 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../graphics/opencv/Makefile.common"
 
 DISTNAME=	opencv_contrib-${OPENCV_VERSION}
