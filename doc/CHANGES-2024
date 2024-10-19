@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6353 2024/10/19 16:31:24 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6354 2024/10/19 16:39:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9607,3 +9607,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pydantic-settings to 2.6.0 [adam 2024-10-19]
 	Updated textproc/py-markdown2 to 2.5.1 [adam 2024-10-19]
 	Updated www/py-httptools to 0.6.4 [adam 2024-10-19]
+	Updated devel/py-amaranth to 0.5.3 [adam 2024-10-19]
+	Updated www/py-test-httpbin to 2.1.0 [adam 2024-10-19]
