@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2023/10/23 11:12:56 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/19 16:30:48 adam Exp $
 
-DISTNAME=	httptools-0.6.1
+DISTNAME=	httptools-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httptools/}
@@ -10,10 +10,8 @@ HOMEPAGE=	https://github.com/MagicStack/httptools
 COMMENT=	Collection of framework independent HTTP protocol utils
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests/test_parser.py
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

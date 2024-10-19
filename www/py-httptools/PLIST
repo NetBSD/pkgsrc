@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/23 11:12:56 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/10/19 16:30:48 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/httptools/__init__.py
 ${PYSITELIB}/httptools/__init__.pyc
 ${PYSITELIB}/httptools/__init__.pyo
@@ -14,8 +13,13 @@ ${PYSITELIB}/httptools/_version.pyo
 ${PYSITELIB}/httptools/parser/__init__.py
 ${PYSITELIB}/httptools/parser/__init__.pyc
 ${PYSITELIB}/httptools/parser/__init__.pyo
+${PYSITELIB}/httptools/parser/cparser.pxd
 ${PYSITELIB}/httptools/parser/errors.py
 ${PYSITELIB}/httptools/parser/errors.pyc
 ${PYSITELIB}/httptools/parser/errors.pyo
+${PYSITELIB}/httptools/parser/parser.pyx
 ${PYSITELIB}/httptools/parser/parser.so
+${PYSITELIB}/httptools/parser/python.pxd
+${PYSITELIB}/httptools/parser/url_cparser.pxd
+${PYSITELIB}/httptools/parser/url_parser.pyx
 ${PYSITELIB}/httptools/parser/url_parser.so
