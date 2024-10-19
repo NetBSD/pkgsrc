@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2024/10/19 11:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/10/19 16:12:30 adam Exp $
 
-DISTNAME=	sphinx-8.1.2
+DISTNAME=	sphinx-8.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -20,11 +20,11 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.17:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.2:../../textproc/py-snowballstemmer
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp-[0-9]*:../../textproc/py-sphinxcontrib-applehelp
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp-[0-9]*:../../textproc/py-sphinxcontrib-devhelp
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.0:../../textproc/py-sphinxcontrib-htmlhelp
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath-[0-9]*:../../textproc/py-sphinxcontrib-jsmath
-DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp-[0-9]*:../../textproc/py-sphinxcontrib-qthelp
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp>=1.0.7:../../textproc/py-sphinxcontrib-applehelp
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp>=1.0.6:../../textproc/py-sphinxcontrib-devhelp
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-htmlhelp>=2.0.6:../../textproc/py-sphinxcontrib-htmlhelp
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jsmath>=1.0.1:../../textproc/py-sphinxcontrib-jsmath
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-qthelp>=1.0.6:../../textproc/py-sphinxcontrib-qthelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-serializinghtml>=1.1.9:../../textproc/py-sphinxcontrib-serializinghtml
 TEST_DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
 TEST_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
