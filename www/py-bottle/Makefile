@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/09/09 16:46:51 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/19 06:31:42 adam Exp $
 
-DISTNAME=	bottle-0.13.1
+DISTNAME=	bottle-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bottle/}
@@ -16,8 +16,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 USE_LANGUAGES=	# none
 
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/bin/bottle.py
 	cd ${DESTDIR}${PREFIX}/bin && \
-	${MV} bottle.py bottle-${PYVERSSUFFIX} || ${TRUE}
+	${MV} bottle bottle-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/09/09 16:46:51 adam Exp $
+$NetBSD: distinfo,v 1.16 2024/10/19 06:31:42 adam Exp $
 
-BLAKE2s (bottle-0.13.1.tar.gz) = 702f74b8fe49ad53e8705f0ba0b96c6cf248d4857422f9402bc57cb83face226
-SHA512 (bottle-0.13.1.tar.gz) = 504704d20712723436c61712e8aa41e603a0f66f74927b4d4122aaea3a090ab910d5daa12217d48b803a66fc3d96d491c2a0b30df236aff50520adb8c115609f
-Size (bottle-0.13.1.tar.gz) = 836422 bytes
+BLAKE2s (bottle-0.13.2.tar.gz) = 88ac010444606f6685fb070021f68d4a714d18c3f45e389eee3f732ce7a9a811
+SHA512 (bottle-0.13.2.tar.gz) = 3923070d3723fa975aaed79a6edc7ec47ce2d3cbc4b3fbddff340e19e3e13215034208c2bd198726b0461008313c4600021bd2766b7f0a0dfae2b12ff988f52d
+Size (bottle-0.13.2.tar.gz) = 98472 bytes
