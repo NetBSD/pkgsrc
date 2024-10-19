@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.364 2024/08/27 16:56:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.365 2024/10/19 08:23:14 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -200,6 +200,7 @@ SUBDIR+=	snes9x-gtk
 SUBDIR+=	softvms
 SUBDIR+=	spim
 SUBDIR+=	stella
+SUBDIR+=	supermodel
 SUBDIR+=	suse100_32_alsa
 SUBDIR+=	suse100_32_aspell
 SUBDIR+=	suse100_32_base
