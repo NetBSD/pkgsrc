@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/09/22 16:23:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/19 10:56:57 wiz Exp $
 ${PYSITELIB}/pdm/backend/__init__.py
 ${PYSITELIB}/pdm/backend/__init__.pyc
 ${PYSITELIB}/pdm/backend/__init__.pyo
@@ -63,7 +63,19 @@ ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/LICENSE
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.py
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.pyc
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/__init__.pyo
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.py
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.pyc
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/constants.pyo
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/errors.py
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/errors.pyc
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/errors.pyo
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/project_table.py
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/project_table.pyc
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/project_table.pyo
 ${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/py.typed
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/pyproject.py
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/pyproject.pyc
+${PYSITELIB}/pdm/backend/_vendor/pyproject_metadata/pyproject.pyo
 ${PYSITELIB}/pdm/backend/_vendor/tomli/LICENSE
 ${PYSITELIB}/pdm/backend/_vendor/tomli/__init__.py
 ${PYSITELIB}/pdm/backend/_vendor/tomli/__init__.pyc
