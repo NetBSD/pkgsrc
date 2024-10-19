@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/08/07 10:00:37 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/19 05:53:56 adam Exp $
 
-DISTNAME=	zope.testrunner-6.5
+DISTNAME=	zope.testrunner-6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.testrunner/}
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
