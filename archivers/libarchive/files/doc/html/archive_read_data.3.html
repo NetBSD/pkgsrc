@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.4 -->
-<!-- CreationDate: Fri Sep 13 20:31:05 2024 -->
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sun Oct 13 08:12:08 2024 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,56 +20,55 @@
 <hr>
 
 
-<p>ARCHIVE_READ_DATA(3) BSD Library Functions Manual
-ARCHIVE_READ_DATA(3)</p>
+<p><i>ARCHIVE_READ_DATA</i>(3) Library Functions Manual
+<i>ARCHIVE_READ_DATA</i>(3)</p>
 
 <p style="margin-top: 1em"><b>NAME</b></p>
 
-<p style="margin-left:6%;"><b>archive_read_data</b>,
-<b>archive_read_data_block</b>,
-<b>archive_read_data_skip</b>,
-<b>archive_read_data_into_fd</b> &mdash; functions for
-reading streaming archives</p>
+<p style="margin-left:9%;">archive_read_data,
+archive_read_data_block, archive_read_data_skip,
+archive_read_data_into_fd &mdash; functions for reading
+streaming archives</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
-<p style="margin-left:6%;">Streaming Archive Library
+<p style="margin-left:9%;">Streaming Archive Library
 (libarchive, -larchive)</p>
 
 <p style="margin-top: 1em"><b>SYNOPSIS</b></p>
 
-<p style="margin-left:6%;"><b>#include
+<p style="margin-left:9%;"><b>#include
 &lt;archive.h&gt;</b></p>
 
 
-<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>la_ssize_t</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_read_data</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<p style="margin-left:14%;"><b>archive_read_data</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>void&nbsp;*buff</i>, <i>size_t&nbsp;len</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
 <p><b>archive_read_data_block</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>const&nbsp;void&nbsp;**buff</i>, <i>size_t&nbsp;*len</i>,
 <i>off_t&nbsp;*offset</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_read_data_skip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+<p style="margin-left:14%;"><b>archive_read_data_skip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:9%; margin-top: 1em"><i>int</i></p>
 
 
-<p style="margin-left:12%;"><b>archive_read_data_into_fd</b>(<i>struct&nbsp;archive&nbsp;*</i>,
+<p style="margin-left:14%;"><b>archive_read_data_into_fd</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>int&nbsp;fd</i>);</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION <br>
 archive_read_data</b>()</p>
 
-<p style="margin-left:17%;">Read data associated with the
+<p style="margin-left:19%;">Read data associated with the
 header just read. Internally, this is a convenience function
 that calls <b>archive_read_data_block</b>() and fills any
 gaps with nulls so that callers see a single continuous
@@ -77,7 +76,7 @@ stream of data.</p>
 
 <p><b>archive_read_data_block</b>()</p>
 
-<p style="margin-left:17%;">Return the next available block
+<p style="margin-left:19%;">Return the next available block
 of data for this entry. Unlike <b>archive_read_data</b>(),
 the <b>archive_read_data_block</b>() function avoids copying
 data and allows you to correctly handle sparse files, as
@@ -89,7 +88,7 @@ compression and internal buffer optimizations.</p>
 
 <p><b>archive_read_data_skip</b>()</p>
 
-<p style="margin-left:17%;">A convenience function that
+<p style="margin-left:19%;">A convenience function that
 repeatedly calls <b>archive_read_data_block</b>() to skip
 all of the data for this archive entry. Note that this
 function is invoked automatically by
@@ -98,13 +97,13 @@ not completely consumed.</p>
 
 <p><b>archive_read_data_into_fd</b>()</p>
 
-<p style="margin-left:17%;">A convenience function that
+<p style="margin-left:19%;">A convenience function that
 repeatedly calls <b>archive_read_data_block</b>() to copy
 the entire entry to the provided file descriptor.</p>
 
 <p style="margin-top: 1em"><b>RETURN VALUES</b></p>
 
-<p style="margin-left:6%;">Most functions return zero on
+<p style="margin-left:9%;">Most functions return zero on
 success, non-zero on error. The possible return codes
 include: <b>ARCHIVE_OK</b> (the operation succeeded),
 <b>ARCHIVE_WARN</b> (the operation succeeded but a
@@ -115,7 +114,7 @@ operation failed but can be retried), and
 should be closed immediately).</p>
 
 
-<p style="margin-left:6%; margin-top: 1em"><b>archive_read_data</b>()
+<p style="margin-left:9%; margin-top: 1em"><b>archive_read_data</b>()
 returns a count of bytes actually read or zero at the end of
 the entry. On error, a value of <b>ARCHIVE_FATAL</b>,
 <b>ARCHIVE_WARN</b>, or <b>ARCHIVE_RETRY</b> is
@@ -123,20 +122,20 @@ returned.</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>
 
-<p style="margin-left:6%;">Detailed error codes and textual
+<p style="margin-left:9%;">Detailed error codes and textual
 descriptions are available from the <b>archive_errno</b>()
 and <b>archive_error_string</b>() functions.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 
-<p style="margin-left:6%;">tar(1), archive_read(3),
-archive_read_extract(3), archive_read_filter(3),
-archive_read_format(3), archive_read_header(3),
-archive_read_open(3), archive_read_set_options(3),
-archive_util(3), libarchive(3), tar(5)</p>
-
-<p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+<p style="margin-left:9%;"><i>tar</i>(1),
+<i>archive_read</i>(3), <i>archive_read_extract</i>(3),
+<i>archive_read_filter</i>(3),
+<i>archive_read_format</i>(3),
+<i>archive_read_header</i>(3), <i>archive_read_open</i>(3),
+<i>archive_read_set_options</i>(3), <i>archive_util</i>(3),
+<i>libarchive</i>(3), <i>tar</i>(5) Debian February 2, 2012
+<i>ARCHIVE_READ_DATA</i>(3)</p>
 <hr>
 </body>
 </html>
