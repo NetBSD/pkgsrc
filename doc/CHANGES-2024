@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6391 2024/10/20 16:31:56 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6392 2024/10/20 20:12:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9648,3 +9648,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/orca to 46.2 [wiz 2024-10-20]
 	Updated devel/R-tidyselect to 1.2.1 [mef 2024-10-20]
 	Updated security/xhash to 3.5.1 [wiz 2024-10-20]
+	Updated graphics/py-Pillow to 11.0.0 [adam 2024-10-20]
+	Updated databases/py-asyncpg to 0.30.0 [adam 2024-10-20]
