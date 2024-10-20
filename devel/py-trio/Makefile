@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/08/08 05:16:49 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/20 08:23:04 adam Exp $
 
-DISTNAME=	trio-0.26.2
+DISTNAME=	trio-0.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -27,8 +27,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 
 # for tests
 USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
