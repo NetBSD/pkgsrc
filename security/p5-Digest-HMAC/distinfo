@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:17:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/10/20 06:26:52 wiz Exp $
 
-BLAKE2s (Digest-HMAC-1.04.tar.gz) = c1845caf63a9fdf909c31b732802c2809b33bd4833d8551325734d6adf5526d2
-SHA512 (Digest-HMAC-1.04.tar.gz) = d30b62e60bfa9f6c0f0c058e190938f13a08a70a816771a0641226c24045cb6dbd622756f1f88593fd3690442a45636bdcaf35457e9dfea6de5f8a342a538a6d
-Size (Digest-HMAC-1.04.tar.gz) = 14279 bytes
+BLAKE2s (Digest-HMAC-1.05.tar.gz) = df5945dbb74b45a4a591f0b9d125f3477f46c4d2630b40a34c18eda319e20b95
+SHA512 (Digest-HMAC-1.05.tar.gz) = 1ee8b30810aa4cfefd5c7ef2049e846946ca1535683e27cbf2d344719b7d2444e88014f68adda4d19ce65af42a413461fd46a7835aefa4e09907fe345b1cd1ac
+Size (Digest-HMAC-1.05.tar.gz) = 14975 bytes
