@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/10/19 15:33:48 pin Exp $
+# $NetBSD: Makefile,v 1.69 2024/10/20 13:19:48 pin Exp $
 
 DISTNAME=	ncspot-1.2.0
 CATEGORIES=	audio
@@ -24,6 +24,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 
@@ -32,4 +33,5 @@ CARGO_NO_DEFAULT_FEATURES=	YES
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
