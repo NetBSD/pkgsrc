@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/10/20 14:03:36 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/10/20 16:53:11 wiz Exp $
 
 DISTNAME=	knotifications-${KF5VER}
 PKGREVISION=	1
@@ -17,6 +17,7 @@ LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 .include "../../multimedia/phonon-qt5/buildlink3.mk"
 .include "../../textproc/kcodecs/buildlink3.mk"
 .include "../../x11/kwindowsystem/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtspeech/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
