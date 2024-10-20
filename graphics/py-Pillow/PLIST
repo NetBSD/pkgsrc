@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/04/02 05:55:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/10/20 20:05:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -218,9 +218,6 @@ ${PYSITELIB}/PIL/PpmImagePlugin.pyo
 ${PYSITELIB}/PIL/PsdImagePlugin.py
 ${PYSITELIB}/PIL/PsdImagePlugin.pyc
 ${PYSITELIB}/PIL/PsdImagePlugin.pyo
-${PYSITELIB}/PIL/PyAccess.py
-${PYSITELIB}/PIL/PyAccess.pyc
-${PYSITELIB}/PIL/PyAccess.pyo
 ${PYSITELIB}/PIL/QoiImagePlugin.py
 ${PYSITELIB}/PIL/QoiImagePlugin.pyc
 ${PYSITELIB}/PIL/QoiImagePlugin.pyo
@@ -285,6 +282,7 @@ ${PYSITELIB}/PIL/_imagingmath.pyi
 ${PYSITELIB}/PIL/_imagingmath.so
 ${PYSITELIB}/PIL/_imagingmorph.pyi
 ${PYSITELIB}/PIL/_imagingmorph.so
+${PYSITELIB}/PIL/_imagingtk.pyi
 ${PYSITELIB}/PIL/_imagingtk.so
 ${PYSITELIB}/PIL/_tkinter_finder.py
 ${PYSITELIB}/PIL/_tkinter_finder.pyc
