@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/08/06 18:55:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/20 16:24:44 wiz Exp $
 
 DISTNAME=	glusterfs-8.2
 PKGREVISION=	17
@@ -21,6 +21,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Make sure we do not attept to link with -lfl
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
+
+# uses 'imp', which was removed in Python 3.12
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	events/src/glustereventsd.py
