@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.25 2021/10/26 10:14:17 nia Exp $
-
-BLAKE2s (at-spi2-atk-2.38.0.tar.xz) = 40da695f85315c5d2728b2b7114b81b29cdf3a44abf20ffce3dcf474eadfafb1
-SHA512 (at-spi2-atk-2.38.0.tar.xz) = 2f40ecbc55b0fbaa57ade952a75583bc8fbfde234cce9248489e9ae06e0597d98c2f4c77d8279758dec29da97e06cde5708d30a1238d91bebd023b2320f38528
-Size (at-spi2-atk-2.38.0.tar.xz) = 97464 bytes
-SHA1 (patch-atk-adaptor_meson.build) = fc7f93cf52b3b7429208bc25819ca2aead86a6ef

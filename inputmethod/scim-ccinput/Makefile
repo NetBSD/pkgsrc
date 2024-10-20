@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2024/04/07 07:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/10/20 14:04:10 wiz Exp $
 #
 
 DISTNAME=		scim-ccinput-0.3.1
-PKGREVISION=		43
+PKGREVISION=		44
 CATEGORIES=		inputmethod chinese
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scim/}
 EXTRACT_SUFX=		.tar.bz2

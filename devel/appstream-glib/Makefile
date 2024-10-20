@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/06/26 16:26:01 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/20 14:03:32 wiz Exp $
 
 DISTNAME=	appstream-glib-0.8.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hughsie/}
 GITHUB_TAG=	${DISTNAME:S/-/_/g:S/./_/g}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/05/13 09:05:55 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/20 14:03:23 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-lv2/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - LV2 support plugin

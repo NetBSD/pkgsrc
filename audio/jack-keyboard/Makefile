@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/08/25 06:18:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/20 14:03:23 wiz Exp $
 
 DISTNAME=	jack-keyboard-2.7.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jack-keyboard/}
 
