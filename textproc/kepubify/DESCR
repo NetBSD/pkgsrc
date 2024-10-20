@@ -1,0 +1,8 @@
+Convert EPUBs to Kobo EPUBs.
+
+Kepubify is the fastest tool for converting EPUBs to Kobo's enhanced
+KEPUB format for use on Kobo eReaders.
+
+It works with malformed e-books, doesn't modify the book's layout more
+than absolutely necessary, doesn't depend on any external software, and
+works from the command-line.
