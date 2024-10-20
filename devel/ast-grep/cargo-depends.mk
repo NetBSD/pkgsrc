@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.30 2024/10/06 09:06:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.31 2024/10/20 05:37:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -31,9 +31,9 @@ CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	ciborium-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
-CARGO_CRATE_DEPENDS+=	clap-4.5.19
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.19
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.32
+CARGO_CRATE_DEPENDS+=	clap-4.5.20
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.20
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.33
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
@@ -107,7 +107,6 @@ CARGO_CRATE_DEPENDS+=	napi-sys-2.4.0
 CARGO_CRATE_DEPENDS+=	newline-converter-0.3.0
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	num-traits-0.2.19
-CARGO_CRATE_DEPENDS+=	num_cpus-1.16.0
 CARGO_CRATE_DEPENDS+=	object-0.32.2
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	oorandom-11.1.3
@@ -126,11 +125,11 @@ CARGO_CRATE_DEPENDS+=	predicates-3.1.2
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.6
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.9
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.82
-CARGO_CRATE_DEPENDS+=	pyo3-0.22.3
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.22.3
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.22.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.22.3
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.22.3
+CARGO_CRATE_DEPENDS+=	pyo3-0.22.4
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.22.4
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.22.4
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.22.4
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.22.4
 CARGO_CRATE_DEPENDS+=	pythonize-0.22.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
