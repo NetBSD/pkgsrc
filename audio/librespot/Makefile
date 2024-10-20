@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/10/19 15:32:44 pin Exp $
+# $NetBSD: Makefile,v 1.30 2024/10/20 13:20:55 pin Exp $
 
 DISTNAME=	librespot-0.5.0
 CATEGORIES=	audio
@@ -20,6 +20,8 @@ USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
 
+RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
+
 CARGO_NO_DEFAULT_FEATURES=	yes
 
 .include "options.mk"
@@ -29,4 +31,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
