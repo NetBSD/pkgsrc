@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2024/10/07 20:02:56 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/20 06:23:32 wiz Exp $
 
-DISTNAME=		Crypt-OpenPGP-1.15
+DISTNAME=		Crypt-OpenPGP-1.18
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
