@@ -1,26 +1,26 @@
-$NetBSD: distinfo,v 1.8 2024/03/24 20:03:50 leot Exp $
+$NetBSD: distinfo,v 1.9 2024/10/20 09:51:28 leot Exp $
 
-BLAKE2s (direnv-2.34.0.tar.gz) = 3defadd348d796e9d384ed60ee08cd8fbda9d5006d152f0630599cc69a7b78fa
-SHA512 (direnv-2.34.0.tar.gz) = daf1b1fcb48ede8b7c25e303c5f9e92508ee46c360618560f740b66f82e64f87c4270777de77fe3dd9e6791e51be423e265f3fcd74b41c0b9893221efad65d0a
-Size (direnv-2.34.0.tar.gz) = 94449 bytes
-BLAKE2s (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = cd3c2cea509a40639fa5501d594ba981c1385767f14e35780d21b8bd313977a4
-SHA512 (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = 0e8cdda81300811f629bce3a9307de05450036f750f8c3c0cd5b70854f8f95bd962ce99bfe1325c8d1bf562a5b7b94afb9e9fd2dbe4dcc45325fac6e27471102
-Size (github.com__burnt_sushi_toml_@v_v1.3.2.mod) = 43 bytes
-BLAKE2s (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 1c9f0c8270856133eafeeb2dadee458e38471a261fd5a2fc7f80e3571b1a6565
-SHA512 (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 6996d01ab26a4afbfa102b1c74ede682c51267278bf0d809590ce3b3d267aef2a3c42e5609f009ff2e235098739feba883372e080ef4f534d580ac20ccd656c5
-Size (github.com__burnt_sushi_toml_@v_v1.3.2.zip) = 303020 bytes
+BLAKE2s (direnv-2.35.0.tar.gz) = 52d7bbac2a463be2fc2af253a763ceefb34d4ce83b26cd547d531c1a21f19752
+SHA512 (direnv-2.35.0.tar.gz) = d46b6d8cd488f9aafe764193386cb177b5d9dd8e7401b3cd89a32deaa4e26778a6e0d889dd7f7b65aa60943a59b4fc75f7d5dbfb822710a0d4c0876240ef0495
+Size (direnv-2.35.0.tar.gz) = 95119 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.4.0.mod) = 26f62b858e9ef333fa0b51b46ce83c2d385ddf010431d6415a115aef9a338b35
+SHA512 (github.com__burnt_sushi_toml_@v_v1.4.0.mod) = fb6b4ae74dfdcc39b915f1b5f84f8e52e830d273d29f9225dc5ed4f26e970d9f61921f6f3588249141a82404c3ba180f735b4f23e700050e76a740fbf541ac78
+Size (github.com__burnt_sushi_toml_@v_v1.4.0.mod) = 43 bytes
+BLAKE2s (github.com__burnt_sushi_toml_@v_v1.4.0.zip) = a46c6f31af2cfbc29dadd059465587c724f2a81e127083dc66ad2db9b6e12aa5
+SHA512 (github.com__burnt_sushi_toml_@v_v1.4.0.zip) = 970de048c55f3de0efb2d1039df45f734f345200d57d4457eeac3c562492ac54c2dd64296c2085e8f10e778932b97780bd02b31ca56609c548538dd9368ac15a
+Size (github.com__burnt_sushi_toml_@v_v1.4.0.zip) = 349150 bytes
 BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 779efb55fdcfefacdd39190c04ee6ce80f51999e7500c46db997722d7af26586
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 9f1baeff279dfddcbc2c93a65b56b432ae90fc360b59809ef755bb13c02b5beb87f8e70e6d4397a85c0f20e1ec50f572558535eb401b1a48d2b40f9f4aa2eaa2
 Size (github.com_mattn_go-isatty_@v_v0.0.20.mod) = 76 bytes
 BLAKE2s (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 2d2cb2dfbdd0ab3966083e41da0935841137086e5ae572048732f45c92b2f532
 SHA512 (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 55d1fca3591dfa9c350a1509c47be776186247adb5b43b6c047743ac265d4cff5252584fa76b4030f9c47bee9eedd610b1c90dbf690b2cdeeabc1f3a95fcd390
 Size (github.com_mattn_go-isatty_@v_v0.0.20.zip) = 8936 bytes
-BLAKE2s (golang.org_x_mod_@v_v0.15.0.mod) = 756609d6566fdcb4fd11633882849e0163d09de134e085f0aa006dcbb10825e0
-SHA512 (golang.org_x_mod_@v_v0.15.0.mod) = d741bbf0270c5cda8ff6abb6c3aeec25f5edadae32df5f146c4c88b9c30abef2f2e9bc69f214757b4702f2df9dc08fbd2073e4fa64e683850d33a60806c8c4ba
-Size (golang.org_x_mod_@v_v0.15.0.mod) = 84 bytes
-BLAKE2s (golang.org_x_mod_@v_v0.15.0.zip) = 71b2488f51454cbee62cbe6fd9b8b372addb15a5cfa6ad2fd4f778edce605e1a
-SHA512 (golang.org_x_mod_@v_v0.15.0.zip) = 6b30ea37549c4e0c07b036a9aafa298b96cc520e4d764931b1cde0b8b296174e29a81c195f1ce266cb9b81e9e66b0b2d7c9b7d672d74ef0451f4dfb266c7d410
-Size (golang.org_x_mod_@v_v0.15.0.zip) = 164698 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.19.0.mod) = 756609d6566fdcb4fd11633882849e0163d09de134e085f0aa006dcbb10825e0
+SHA512 (golang.org_x_mod_@v_v0.19.0.mod) = d741bbf0270c5cda8ff6abb6c3aeec25f5edadae32df5f146c4c88b9c30abef2f2e9bc69f214757b4702f2df9dc08fbd2073e4fa64e683850d33a60806c8c4ba
+Size (golang.org_x_mod_@v_v0.19.0.mod) = 84 bytes
+BLAKE2s (golang.org_x_mod_@v_v0.19.0.zip) = 9a5de6c4a59b97a690c89566e8b73bc32c2e1e6a371d11a6c7dfea23716ff4f6
+SHA512 (golang.org_x_mod_@v_v0.19.0.zip) = 5d80d038b1f4ed1c479a2ad88d04d750c273485c8324029031f209d9b85f4a5a5f8ed36cf6f7efacc065e1a7c37118b216191c00a9b212a054f44df4ebb65390
+Size (golang.org_x_mod_@v_v0.19.0.zip) = 166467 bytes
 BLAKE2s (golang.org_x_sys_@v_v0.6.0.mod) = 66613eb38a59b8a7f75e1aaeb294a1c4ea290d4e9ae699137566025e50ed741c
 SHA512 (golang.org_x_sys_@v_v0.6.0.mod) = 85e511b1261c1935f5ee4754ad31d1d946f9e10f0af9905f44c4348d6ce5104319c03fb38517dde616698f6487b0c62788cfa96bc0ffb3b6db80accd7e552655
 Size (golang.org_x_sys_@v_v0.6.0.mod) = 33 bytes
