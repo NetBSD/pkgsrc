@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/20 09:45:35 leot Exp $
+bin/covergen
+bin/kepubify
+bin/seriesmeta
