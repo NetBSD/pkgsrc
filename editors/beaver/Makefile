@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2024/04/07 07:33:51 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/10/20 14:03:39 wiz Exp $
 
 DISTNAME=	beaver-0.4.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beaver-editor/}
 EXTRACT_SUFX=	.tar.bz2

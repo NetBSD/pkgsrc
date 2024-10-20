@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2024/05/29 16:35:08 adam Exp $
+# $NetBSD: Makefile,v 1.84 2024/10/20 14:04:54 wiz Exp $
 
 GITHUB_PROJECT=	lablgtk
 DISTNAME=	${GITHUB_PROJECT}-2.18.13
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
@@ -48,7 +48,8 @@ PLIST.stubs=	yes
 
 .include "options.mk"
 
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"

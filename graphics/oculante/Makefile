@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.86 2024/10/19 15:34:40 pin Exp $
+# $NetBSD: Makefile,v 1.87 2024/10/20 14:04:00 wiz Exp $
 
 DISTNAME=	oculante-0.9.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=woelper/}
 
@@ -50,7 +51,8 @@ DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

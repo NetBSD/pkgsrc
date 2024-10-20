@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2024/08/09 09:42:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/10/20 14:03:35 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kcmutils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kcmutils
 KF6_KCMUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kcmutils+=	kf6-kcmutils>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kcmutils?=	kf6-kcmutils>=6.2.0nb2
+BUILDLINK_ABI_DEPENDS.kf6-kcmutils?=	kf6-kcmutils>=6.2.0nb3
 BUILDLINK_PKGSRCDIR.kf6-kcmutils?=	../../devel/kf6-kcmutils
 
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"

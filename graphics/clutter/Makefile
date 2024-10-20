@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2024/04/07 07:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/10/20 14:03:53 wiz Exp $
 
 DISTNAME=	clutter-1.26.2
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,8 +38,8 @@ post-install:
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.atk+=	atk>=2.5.3
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5

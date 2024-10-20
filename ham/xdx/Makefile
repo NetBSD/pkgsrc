@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2024/04/07 07:34:25 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2024/10/20 14:04:06 wiz Exp $
 #
 
 DISTNAME=	xdx-2.5.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	ham
 MASTER_SITES=	https://sourceforge.net/projects/xdxclusterclient/files/latest/download
 

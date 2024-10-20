@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/08/09 09:42:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2024/10/20 14:03:29 wiz Exp $
 
 DISTNAME=	profanity-0.14.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=profanity-im/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.185 2024/10/19 11:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2024/10/20 14:05:00 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Like the XLock session-locker/screensaver, but with more

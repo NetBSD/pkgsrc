@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/05/29 16:34:32 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/20 14:04:36 wiz Exp $
 
 DISTNAME=	szyszka-3.0.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=qarmin/}
 
@@ -49,7 +49,8 @@ do-install:
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"

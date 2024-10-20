@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2024/04/07 07:34:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2024/10/20 14:03:58 wiz Exp $
 
 BUILDLINK_TREE+=	gtkglext
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkglext
 GTKGLEXT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkglext+=	gtkglext>=1.2.0
-BUILDLINK_ABI_DEPENDS.gtkglext+=	gtkglext>=1.2.0nb53
+BUILDLINK_ABI_DEPENDS.gtkglext+=	gtkglext>=1.2.0nb54
 BUILDLINK_PKGSRCDIR.gtkglext?=		../../graphics/gtkglext
 
 .include "../../devel/pangox-compat/buildlink3.mk"

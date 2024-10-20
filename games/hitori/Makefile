@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2024/04/07 07:34:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/20 14:03:49 wiz Exp $
 
 DISTNAME=	hitori-3.38.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hitori/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
