@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/20 07:11:24 mef Exp $
+$NetBSD: distinfo,v 1.2 2024/10/20 22:19:11 mef Exp $
 
-BLAKE2s (R/unitizer_1.4.20.tar.gz) = 234fc0165408c59e2ac332b6bf49aea3d8a5e0e14f147b61f72d11a2ef33d21c
-SHA512 (R/unitizer_1.4.20.tar.gz) = 8c6d3e0509e86fc713e6a9b929ad15a9b54747c75698af68dfa3e0727b45e1ed6a7f627bc578aa7cda90e5cd273dfe8b85abdf02c1f5a9e471562f12ab5b855a
-Size (R/unitizer_1.4.20.tar.gz) = 609311 bytes
+BLAKE2s (R/unitizer_1.4.21.tar.gz) = 323c917ad6dd10849a97c166cc500e6baa9041bbc2281a5f441c8389eb1a421f
+SHA512 (R/unitizer_1.4.21.tar.gz) = d6f9a0a63084a9526761bc5ed406663ffa80d23dde3f116f6a07b1488bc809e6814846db6b2ad0bbb954223be37f9591be852908ddaef388cecdd87914e309e5
+Size (R/unitizer_1.4.21.tar.gz) = 609647 bytes
