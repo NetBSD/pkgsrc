@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2023/08/22 06:55:26 adam Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/20 14:02:23 wiz Exp $
 
-DISTNAME=	at-spi2-core-2.44.1
+DISTNAME=	at-spi2-core-2.54.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/at-spi2-core/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,9 +12,10 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt pkg-config
 
-PKGCONFIG_OVERRIDE=		output/meson-private/atspi-2.pc
-PKGCONFIG_OVERRIDE_STAGE=	pre-install
-MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/atspi
+SUPERSEDES+=	at-spi2-atk2-[0-9]*
+SUPERSEDES+=	atk-[0-9]*
+CONFLICTS+=	at-spi2-atk2-[0-9]*
+CONFLICTS+=	atk-[0-9]*
 
 BUILD_DEFS+=		PKG_SYSCONFDIR
 
@@ -30,27 +31,23 @@ CONF_FILES=	${EGDIR}/at-spi2/accessibility.conf \
 		${PKG_SYSCONFDIR}/at-spi2/accessibility.conf
 CONF_FILES+=	${EGDIR}/xdg/autostart/at-spi-dbus-bus.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/at-spi-dbus-bus.desktop
-CONF_FILES+=	${EGDIR}/xdg/Xwayland-session.d/00-at-spi \
-		${PKG_SYSCONFDIR}/xdg/Xwayland-session.d/00-at-spi
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/at-spi2
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/Xwayland-session.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
+PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/xdg/Xwayland-session.d
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/Xwayland-session.d/00-at-spi \
-		${DESTDIR}${EGDIR}/xdg/Xwayland-session.d/00-at-spi
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/xdg/autostart
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/autostart/at-spi-dbus-bus.desktop \
 	      ${DESTDIR}${EGDIR}/xdg/autostart/at-spi-dbus-bus.desktop
 
+.include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/meson/build.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
