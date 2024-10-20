@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6394 2024/10/20 22:19:21 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6395 2024/10/20 22:26:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9652,3 +9652,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-asyncpg to 0.30.0 [adam 2024-10-20]
 	Updated chat/element-web to 1.11.81 [js 2024-10-20]
 	Updated devel/R-unitizer to 1.4.21 [mef 2024-10-20]
+	Updated devel/R-usethis to 3.0.0 [mef 2024-10-20]
