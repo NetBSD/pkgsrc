@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6374 2024/10/20 06:27:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6375 2024/10/20 06:28:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9629,3 +9629,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-Data-Buffer to 0.06 [wiz 2024-10-20]
 	Updated security/p5-Digest-HMAC to 1.05 [wiz 2024-10-20]
 	Updated devel/p5-Scalar-List-Utils to 1.68 [wiz 2024-10-20]
+	Updated devel/p5-meta to 0.012 [wiz 2024-10-20]
