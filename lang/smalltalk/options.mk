@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/08/17 21:48:02 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2024/10/20 14:04:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.smalltalk
 PKG_SUPPORTED_OPTIONS=	cairo curses expat gdbm gtk opengl readline sdl sqlite tk
@@ -44,7 +44,8 @@ CONFIGURE_ARGS+=	--without-gdbm
 .if !empty(PKG_OPTIONS:Mgtk)
 PLIST.gtk=		yes
 PLIST.blox=		yes
-.  include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.  include "../../devel/at-spi2-core/buildlink3.mk"
 .  include "../../devel/glib2/buildlink3.mk"
 .  include "../../devel/pango/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.88 2024/05/29 16:31:31 adam Exp $
+# $NetBSD: Makefile,v 1.89 2024/10/20 14:03:29 wiz Exp $
 
 VERSION=	4.0.2
 DISTNAME=	pidgin-otr-${VERSION}
 # This is present to cope with release candidates where the names do
 # not match (e.g., DISTNAME has rc3, unpack directory doesn't).
 # PKGNAME= pidgin-otr-${VERSION}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 

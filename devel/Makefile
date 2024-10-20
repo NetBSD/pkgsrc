@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4354 2024/10/18 23:15:05 mef Exp $
+# $NetBSD: Makefile,v 1.4355 2024/10/20 14:03:31 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -159,10 +159,8 @@ SUBDIR+=	asm2html
 SUBDIR+=	asmfmt
 SUBDIR+=	ast-grep
 SUBDIR+=	astyle
-SUBDIR+=	at-spi2-atk
 SUBDIR+=	at-spi2-core
 SUBDIR+=	atf
-SUBDIR+=	atk
 SUBDIR+=	atkmm
 SUBDIR+=	atkmm2.36
 SUBDIR+=	autoconf

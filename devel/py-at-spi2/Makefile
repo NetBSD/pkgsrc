@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/04/17 10:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/10/20 14:03:38 wiz Exp $
 
 DISTNAME=	pyatspi-2.38.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyatspi/at-spi2/}
@@ -15,7 +15,6 @@ COMMENT=	Python Assistive Technology Service Provider Interface
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	at-spi2-core>=2.3.90:../../devel/at-spi2-core
-DEPENDS+=	at-spi2-atk-[0-9]*:../../devel/at-spi2-atk
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_LIBTOOL=	yes
@@ -25,8 +24,6 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
 
 CONFLICTS=	py[0-9]*-at-spi-[0-9]*
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/py-gobject3-common/buildlink3.mk"

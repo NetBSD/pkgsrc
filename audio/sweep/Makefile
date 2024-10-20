@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2024/04/07 07:33:35 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/10/20 14:03:26 wiz Exp $
 #
 
 DISTNAME=	sweep-0.9.3
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sweep/}
 

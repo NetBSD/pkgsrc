@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/10/13 20:22:52 pin Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/20 14:04:02 wiz Exp $
 
 DISTNAME=	simp-3.8.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Kl4rry/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -32,7 +33,8 @@ CARGO_FEATURES+=		gtk3
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"

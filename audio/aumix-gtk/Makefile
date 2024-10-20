@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2024/04/07 07:33:28 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/20 14:03:20 wiz Exp $
 
 .include "../../audio/aumix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/aumix/aumix-gtk/}
-PKGREVISION=	29
+PKGREVISION=	30
 
 COMMENT+=	(curses and GTK+ 2.0 interfaces)
 

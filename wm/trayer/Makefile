@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2024/04/07 07:35:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/20 14:04:41 wiz Exp $
 
 DISTNAME=	trayer-1.1.8
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sargon/}
 GITHUB_PROJECT=	trayer-srg

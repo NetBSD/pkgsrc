@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/09/23 16:24:03 pin Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/20 14:04:15 wiz Exp $
 
 DISTNAME=	four-bar-rs-7.0.4
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KmolYuan/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -34,7 +35,8 @@ do-install:
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
