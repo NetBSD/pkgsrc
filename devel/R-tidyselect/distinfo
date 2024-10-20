@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/12/18 05:01:02 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/10/20 14:45:11 mef Exp $
 
-BLAKE2s (R/tidyselect_1.2.0.tar.gz) = fd48267db037ead4ddfe1399f8196d0ad5b56a9310962071a19c219435fa0672
-SHA512 (R/tidyselect_1.2.0.tar.gz) = 0cc9138a05316a95e464616c4799f8b060a41353c2494497c7d4b9f36ca28d44885cfd57c2e7c72117e4839e56eeeb0ae100e8c6d94093c0d8015a6ff214eabb
-Size (R/tidyselect_1.2.0.tar.gz) = 101498 bytes
+BLAKE2s (R/tidyselect_1.2.1.tar.gz) = 9d7aa6843cb5d45fd3232c4422d6438057fd0ee52c9bb46e1a514d9a310f86a0
+SHA512 (R/tidyselect_1.2.1.tar.gz) = 2818babe18224108a77333274d2a3103551afe47bd6b587b6c00b90f0d3863946c6b64ca95632f51a72e3779a2a1f225c37ed0989c3f8cc7848c76f1a4fe9f69
+Size (R/tidyselect_1.2.1.tar.gz) = 103591 bytes
