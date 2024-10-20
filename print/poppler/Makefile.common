@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.157 2024/10/17 12:02:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.158 2024/10/20 19:59:59 nia Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -20,10 +20,9 @@ LICENSE=	gnu-gpl-v2
 DISTINFO_FILE=	${.CURDIR}/../../print/poppler/distinfo
 PATCHDIR=	${.CURDIR}/../../print/poppler/patches
 
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gsed
-GCC_REQD+=		8 # std::optional
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPGME=OFF
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_NSS3=OFF
