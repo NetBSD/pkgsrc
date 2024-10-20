@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:59:18 nia Exp $
+$NetBSD: distinfo,v 1.19 2024/10/20 14:10:55 wiz Exp $
 
-BLAKE2s (orca-3.34.1.tar.xz) = fc4204923965e63ad265a9c4a820c2da10ff6d7bb314a051af33b614eae5b35a
-SHA512 (orca-3.34.1.tar.xz) = 32ab5e3d31e5ddac685d49fa1589e09976b0fdc9fdb811a7b83425dcda9ae713f1055c2767a6ca7a398d5f739809111afeb47d26f43ef5b043434ae7d59969c7
-Size (orca-3.34.1.tar.xz) = 3658324 bytes
+BLAKE2s (orca-46.2.tar.xz) = fa8e26904e02d7b3161f427f43934983aee94d44fa642045f652397dd31e5e1f
+SHA512 (orca-46.2.tar.xz) = e55d5dba18b70ac2b70809f9e0af82e1fad8c72d9f3a7e03c6e4c1da29e133f80b3dabf9ad007873587b4b01a4ff36947e4ea38d7afd60748f8f98219a6a24e0
+Size (orca-46.2.tar.xz) = 3431952 bytes
