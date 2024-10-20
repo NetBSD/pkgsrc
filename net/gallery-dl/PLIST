@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2024/08/11 10:07:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.66 2024/10/20 09:56:27 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -90,6 +90,9 @@ ${PYSITELIB}/gallery_dl/extractor/adultempire.pyo
 ${PYSITELIB}/gallery_dl/extractor/agnph.py
 ${PYSITELIB}/gallery_dl/extractor/agnph.pyc
 ${PYSITELIB}/gallery_dl/extractor/agnph.pyo
+${PYSITELIB}/gallery_dl/extractor/ao3.py
+${PYSITELIB}/gallery_dl/extractor/ao3.pyc
+${PYSITELIB}/gallery_dl/extractor/ao3.pyo
 ${PYSITELIB}/gallery_dl/extractor/architizer.py
 ${PYSITELIB}/gallery_dl/extractor/architizer.pyc
 ${PYSITELIB}/gallery_dl/extractor/architizer.pyo
@@ -117,6 +120,9 @@ ${PYSITELIB}/gallery_dl/extractor/bluesky.pyo
 ${PYSITELIB}/gallery_dl/extractor/booru.py
 ${PYSITELIB}/gallery_dl/extractor/booru.pyc
 ${PYSITELIB}/gallery_dl/extractor/booru.pyo
+${PYSITELIB}/gallery_dl/extractor/boosty.py
+${PYSITELIB}/gallery_dl/extractor/boosty.pyc
+${PYSITELIB}/gallery_dl/extractor/boosty.pyo
 ${PYSITELIB}/gallery_dl/extractor/bunkr.py
 ${PYSITELIB}/gallery_dl/extractor/bunkr.pyc
 ${PYSITELIB}/gallery_dl/extractor/bunkr.pyo
@@ -129,6 +135,12 @@ ${PYSITELIB}/gallery_dl/extractor/chevereto.pyo
 ${PYSITELIB}/gallery_dl/extractor/cien.py
 ${PYSITELIB}/gallery_dl/extractor/cien.pyc
 ${PYSITELIB}/gallery_dl/extractor/cien.pyo
+${PYSITELIB}/gallery_dl/extractor/civitai.py
+${PYSITELIB}/gallery_dl/extractor/civitai.pyc
+${PYSITELIB}/gallery_dl/extractor/civitai.pyo
+${PYSITELIB}/gallery_dl/extractor/cohost.py
+${PYSITELIB}/gallery_dl/extractor/cohost.pyc
+${PYSITELIB}/gallery_dl/extractor/cohost.pyo
 ${PYSITELIB}/gallery_dl/extractor/comicvine.py
 ${PYSITELIB}/gallery_dl/extractor/comicvine.pyc
 ${PYSITELIB}/gallery_dl/extractor/comicvine.pyo
@@ -447,9 +459,6 @@ ${PYSITELIB}/gallery_dl/extractor/pornpics.pyo
 ${PYSITELIB}/gallery_dl/extractor/postmill.py
 ${PYSITELIB}/gallery_dl/extractor/postmill.pyc
 ${PYSITELIB}/gallery_dl/extractor/postmill.pyo
-${PYSITELIB}/gallery_dl/extractor/pururin.py
-${PYSITELIB}/gallery_dl/extractor/pururin.pyc
-${PYSITELIB}/gallery_dl/extractor/pururin.pyo
 ${PYSITELIB}/gallery_dl/extractor/reactor.py
 ${PYSITELIB}/gallery_dl/extractor/reactor.pyc
 ${PYSITELIB}/gallery_dl/extractor/reactor.pyo
@@ -654,6 +663,9 @@ ${PYSITELIB}/gallery_dl/postprocessor/compare.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/exec.py
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/exec.pyo
+${PYSITELIB}/gallery_dl/postprocessor/hash.py
+${PYSITELIB}/gallery_dl/postprocessor/hash.pyc
+${PYSITELIB}/gallery_dl/postprocessor/hash.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.py
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/metadata.pyo
@@ -663,6 +675,9 @@ ${PYSITELIB}/gallery_dl/postprocessor/mtime.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/python.py
 ${PYSITELIB}/gallery_dl/postprocessor/python.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/python.pyo
+${PYSITELIB}/gallery_dl/postprocessor/rename.py
+${PYSITELIB}/gallery_dl/postprocessor/rename.pyc
+${PYSITELIB}/gallery_dl/postprocessor/rename.pyo
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.py
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyc
 ${PYSITELIB}/gallery_dl/postprocessor/ugoira.pyo
