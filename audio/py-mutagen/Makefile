@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2023/09/05 18:51:12 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/10/20 08:17:52 adam Exp $
 
 DISTNAME=	mutagen-1.47.0
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
@@ -10,16 +11,14 @@ HOMEPAGE=	https://github.com/quodlibet/mutagen
 COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=5.0.4:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.50.1:../../devel/py-hypothesis
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.1.2:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-USE_PKG_RESOURCES=	yes
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
@@ -27,8 +26,5 @@ SUBST_MESSAGE.manpath=	Fixing man paths.
 SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
