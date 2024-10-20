@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/02/06 13:05:35 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/20 13:56:43 mef Exp $
 
 R_PKGNAME=	roxygen2
-R_PKGVER=	7.3.1
+R_PKGVER=	7.3.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
