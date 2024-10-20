@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/10/20 14:02:23 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/10/20 19:53:23 wiz Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
 CATEGORIES=	devel gnome
@@ -12,9 +12,9 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	msgfmt pkg-config
 
-SUPERSEDES+=	at-spi2-atk2-[0-9]*
+SUPERSEDES+=	at-spi2-atk-[0-9]*
 SUPERSEDES+=	atk-[0-9]*
-CONFLICTS+=	at-spi2-atk2-[0-9]*
+CONFLICTS+=	at-spi2-atk-[0-9]*
 CONFLICTS+=	atk-[0-9]*
 
 BUILD_DEFS+=		PKG_SYSCONFDIR
