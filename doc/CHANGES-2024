@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6366 2024/10/20 01:42:41 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6367 2024/10/20 05:37:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9621,3 +9621,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-renv to 1.0.11 [mef 2024-10-19]
 	Updated devel/R-repr to 1.1.7 [mef 2024-10-20]
 	Updated devel/R-rio to 1.2.3 [mef 2024-10-20]
+	Updated devel/ast-grep to 0.28.1 [pin 2024-10-20]
