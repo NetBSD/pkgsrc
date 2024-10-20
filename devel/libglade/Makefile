@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2024/05/29 16:32:13 adam Exp $
+# $NetBSD: Makefile,v 1.123 2024/10/20 14:03:36 wiz Exp $
 
 DISTNAME=		libglade-2.6.4
-PKGREVISION=		49
+PKGREVISION=		50
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,13 +23,13 @@ CONFIGURE_ARGS+=	--without-xml-catalog
 XML_ENTRIES=	system https://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
 
-BUILDLINK_API_DEPENDS.atk+=	atk>=1.9.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 INSTALLATION_DIRS+=	lib/libglade/2.0
 
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"

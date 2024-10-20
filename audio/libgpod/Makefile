@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2024/05/29 16:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.89 2024/10/20 14:03:23 wiz Exp $
 
 DISTNAME=	libgpod-0.8.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/04/07 07:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/20 14:04:23 wiz Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	castor-0.9.0
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	net
 MASTER_SITES=	https://git.sr.ht/~julienxx/castor/archive/
 
@@ -41,7 +41,8 @@ do-install:
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.18
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
+BUILDLINK_API_DEPENDS.at-spi2-core+=	at-spi2-core>=2.54
+.include "../../devel/at-spi2-core/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
