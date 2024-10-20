@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1486 2024/10/14 07:25:50 wiz Exp $
+# $NetBSD: Makefile,v 1.1487 2024/10/20 09:46:18 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -486,6 +486,7 @@ SUBDIR+=	kapidox
 SUBDIR+=	kbanner
 SUBDIR+=	kcodecs
 SUBDIR+=	kcompletion
+SUBDIR+=	kepubify
 SUBDIR+=	kf6-kcodecs
 SUBDIR+=	kf6-kcompletion
 SUBDIR+=	kf6-ktexttemplate
