@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.267 2024/10/10 21:48:26 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.268 2024/10/20 21:06:20 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26098,3 +26098,4 @@ libgsf<1.14.53		integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-42415
 python38-[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 libarchive<3.7.5	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-48957
 libarchive<3.7.5	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-48958
+element-web<1.11.81	expose-access-tokens	https://nvd.nist.gov/vuln/detail/CVE-2024-47771
