@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/10/13 08:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/20 06:28:02 wiz Exp $
 
-DISTNAME=	meta-0.011
+DISTNAME=	meta-0.012
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/P/PE/PEVANS/
