@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6387 2024/10/20 14:03:39 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6388 2024/10/20 14:05:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9644,3 +9644,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-roxygen2 to 7.3.2 [mef 2024-10-20]
 	Removed devel/atk successor devel/at-spi2-core [wiz 2024-10-20]
 	Removed devel/at-spi2-atk successor devel/at-spi2-core [wiz 2024-10-20]
+	Updated devel/at-spi2-core to 2.54.0 [wiz 2024-10-20]
