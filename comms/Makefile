@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2024/08/12 12:26:22 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2024/10/21 05:14:06 jnemeth Exp $
 #
 
 COMMENT=	Telephony and serial communication utilities
@@ -10,6 +10,7 @@ SUBDIR+=	asterisk18
 SUBDIR+=	asterisk19
 SUBDIR+=	asterisk20
 SUBDIR+=	asterisk21
+SUBDIR+=	asterisk22
 SUBDIR+=	binkd
 SUBDIR+=	birda
 SUBDIR+=	bthfp
