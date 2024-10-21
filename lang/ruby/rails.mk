@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.166 2024/10/21 14:58:56 taca Exp $
+# $NetBSD: rails.mk,v 1.167 2024/10/21 15:03:21 taca Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -48,7 +48,7 @@ _RUBY_RAILS_MK=	# defined
 # current Ruby on Rails versions.
 #
 RUBY_RAILS61_VERSION?=	6.1.7.9
-RUBY_RAILS70_VERSION?=	7.0.8.4
+RUBY_RAILS70_VERSION?=	7.0.8.5
 RUBY_RAILS71_VERSION?=	7.1.4
 
 RUBY_RAILS_ACCEPTED?=	# empty
