@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2024/10/21 11:26:39 nia Exp $
+# $NetBSD: Makefile.common,v 1.6 2024/10/21 12:16:51 nia Exp $
 # used by multimedia/ffmpeg7/Makefile
 # used by multimedia/ffplay7/Makefile
 
@@ -26,8 +26,6 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--progs-suffix=7
-
-CONFIGURE_ARGS+=	--disable-libv4l2
 
 CONFIGURE_ARGS+=	--enable-runtime-cpudetect
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/ffmpeg7
