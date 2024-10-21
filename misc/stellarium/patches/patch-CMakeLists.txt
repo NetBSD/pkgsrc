@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.12 2024/08/12 14:06:58 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.13 2024/10/21 07:15:32 adam Exp $
 
 Do not use ccache.
 Do not use application bundle on Darwin.
 Do not fetch fast_float.
 
---- CMakeLists.txt.orig	2024-06-23 08:35:58.000000000 +0000
+--- CMakeLists.txt.orig	2024-09-22 13:35:50.000000000 +0000
 +++ CMakeLists.txt
 @@ -198,7 +198,7 @@ IF(OPENGL_DEBUG_LOGGING)
  ENDIF()
@@ -24,16 +24,16 @@ Do not fetch fast_float.
       SET(APPLE 1)
       SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
       # share data location:
-@@ -357,7 +357,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
-      IF(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER 3.3)
-           SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-const-variable -Wno-unused-result")
+@@ -362,7 +362,7 @@ IF("${CMAKE_CXX_COMPILER_ID}" MATCHES "C
+           SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-string-plus-int")
+ 	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-string-plus-int")
       ENDIF()
 -     IF(APPLE)
 +     IF(FALSE)
  	  SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -Wall -Wextra -Wno-unused-parameter -Wno-string-plus-int")
  	  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-common -Wall -Wextra -Wno-unknown-warning-option -Wno-string-plus-int")
       ENDIF()
-@@ -828,7 +828,7 @@ ENDIF()
+@@ -841,7 +841,7 @@ ENDIF()
  
  ########### Set some global variables ###########
  IF(UNIX AND NOT WIN32)
@@ -42,7 +42,7 @@ Do not fetch fast_float.
            SET(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/Stellarium.app/Contents")
       ELSE()
            ADD_DEFINITIONS(-DINSTALL_DATADIR="${CMAKE_INSTALL_PREFIX}/${SDATALOC}")          
-@@ -983,7 +983,7 @@ IF(GENERATE_PACKAGE_TARGET)
+@@ -996,7 +996,7 @@ IF(GENERATE_PACKAGE_TARGET)
  ENDIF()
  
  ########### macOS Bundling ###############
@@ -51,7 +51,7 @@ Do not fetch fast_float.
       MESSAGE(STATUS "macOS deployment target: ${CMAKE_OSX_DEPLOYMENT_TARGET} (${CMAKE_OSX_ARCHITECTURES})")
       SET(PACKAGE_OSX_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
       ADD_DEFINITIONS(-DPACKAGE_OSX_TARGET)
-@@ -1040,10 +1040,7 @@ ENDIF()
+@@ -1053,10 +1053,7 @@ ENDIF()
  
  include("cmake/Check-from_chars.cmake")
  IF(NOT FROM_CHARS_WORKS)
