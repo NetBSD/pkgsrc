@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/05 14:51:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/21 07:14:35 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_activefocuser_focus
@@ -18,7 +18,7 @@ bin/indi_ddw_dome
 bin/indi_deepskydad_af1_focus
 bin/indi_deepskydad_af2_focus
 bin/indi_deepskydad_af3_focus
-bin/indi_deepskydad_fp1
+bin/indi_deepskydad_fp
 bin/indi_deepskydad_fr1
 bin/indi_dmfc_focus
 bin/indi_domepro2_dome
