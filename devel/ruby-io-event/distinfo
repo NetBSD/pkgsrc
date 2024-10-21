@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2024/10/13 16:25:56 taca Exp $
+$NetBSD: distinfo,v 1.19 2024/10/21 13:34:39 taca Exp $
 
-BLAKE2s (io-event-1.7.1.gem) = 04e95122a3de8e54b27f09ab4eeb6b4a20ddab7cfcf04889302927dd4b80b0b6
-SHA512 (io-event-1.7.1.gem) = 2ae127383450f5c570430cdbbc4f63b6a66b1247d24a07ed36db837833d02395827a4749373df8ada7f2cbffd479cc7301dc0a55ea4b413b00a0a06e11350031
-Size (io-event-1.7.1.gem) = 41472 bytes
+BLAKE2s (io-event-1.7.2.gem) = 15ddc697c3633131af284e2667456bce36336057096097fb3a008ce0b1df348c
+SHA512 (io-event-1.7.2.gem) = c9413a47cc3a6ed5f65e865764d97809e47b9b504bd7bf1676b9301cfac2a8a33a9907f8a7403dd4586ab60e73679092de1a167c6fce4ba7a25f7b2f312ab845
+Size (io-event-1.7.2.gem) = 43008 bytes
