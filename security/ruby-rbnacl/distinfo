@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:56 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/21 14:35:19 taca Exp $
 
-BLAKE2s (rbnacl-7.1.1.gem) = 27980287f9545f09769155dd4421a35b35a34e7eed39f6f1e76466a48b049d9e
-SHA512 (rbnacl-7.1.1.gem) = da7e406bd2b5112e51d2c15cab35d955b65091ed745fbd027750eaca8ff1d11d982c82f497fc15b9ee9aa6536dbd21ff9ac285bb2a2d1fb39c3374fd0f3dca5a
-Size (rbnacl-7.1.1.gem) = 226304 bytes
+BLAKE2s (rbnacl-7.1.2.gem) = 6493cc114d8d377c6478bccd4561e239cd664506db62ebcc531e87026b99ce39
+SHA512 (rbnacl-7.1.2.gem) = f32a3b126a2776698e845107313bc7ae695efefdbd272c28a6b29dce453a7f852b6f5b93462edd7c2c586f84109e2cd13f45b88cb648dcf7c82df28696fe3681
+Size (rbnacl-7.1.2.gem) = 43008 bytes
