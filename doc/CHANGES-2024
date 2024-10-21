@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6433 2024/10/21 15:14:13 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6434 2024/10/21 15:23:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9729,3 +9729,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-actiontext71 to 7.1.4.1 [taca 2024-10-21]
 	Updated www/ruby-rails71 to 7.1.4.1 [taca 2024-10-21]
 	Updated mail/rspamd to 3.10.2 [taca 2024-10-21]
+	Updated devel/gtexinfo to 7.1.1 [mef 2024-10-21]
