@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6404 2024/10/21 13:25:16 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6405 2024/10/21 13:30:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9666,3 +9666,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-watchfiles to 0.24.0 [adam 2024-10-21]
 	Updated www/py-uvicorn to 0.32.0 [adam 2024-10-21]
 	Updated net/bind918 to 9.18.31 [taca 2024-10-21]
+	Updated devel/ruby-contracts to 0.17.2 [taca 2024-10-21]
