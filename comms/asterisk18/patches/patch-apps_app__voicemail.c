@@ -1,8 +1,17 @@
-$NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
+$NetBSD: patch-apps_app__voicemail.c,v 1.3 2024/10/21 04:53:15 jnemeth Exp $
 
---- apps/app_voicemail.c.orig	2018-05-01 20:12:26.000000000 +0000
+--- apps/app_voicemail.c.orig	2024-10-17 16:03:29.000000000 +0000
 +++ apps/app_voicemail.c
-@@ -5251,7 +5251,7 @@ static void make_email_file(FILE *p,
+@@ -5256,7 +5256,7 @@ static void prep_email_sub_vars(struct a
+ 	struct ast_config *msg_cfg;
+ 	const char *origcallerid, *origtime;
+ 	char origcidname[80], origcidnum[80], origdate[80];
+-	int inttime;
++	time_t inttime;
+ 	struct ast_flags config_flags = { CONFIG_FLAG_NOCACHE };
+ 
+ 	/* Prepare variables for substitution in email body and subject */
+@@ -5622,7 +5622,7 @@ static void make_email_file(FILE *p,
  		}
  		fprintf(p, "X-Asterisk-VM-Message-Type: %s" ENDL, msgnum > -1 ? "Message" : greeting_attachment);
  		fprintf(p, "X-Asterisk-VM-Orig-date: %s" ENDL, date);
@@ -11,7 +20,16 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  		fprintf(p, "X-Asterisk-VM-Message-ID: %s" ENDL, msg_id);
  	}
  	if (!ast_strlen_zero(cidnum)) {
-@@ -6202,7 +6202,7 @@ static void generate_msg_id(char *dst)
+@@ -5677,7 +5677,7 @@ static void make_email_file(FILE *p,
+ 			/* Forwarded type */
+ 			struct ast_config *msg_cfg;
+ 			const char *v;
+-			int inttime;
++			time_t inttime;
+ 			char fromdir[256], fromfile[256], origdate[80] = "", origcallerid[80] = "";
+ 			struct ast_flags config_flags = { CONFIG_FLAG_NOCACHE };
+ 			/* Retrieve info from VM attribute file */
+@@ -6671,7 +6671,7 @@ static void generate_msg_id(char *dst)
  	 * but only in single system solutions.
  	 */
  	unsigned int unique_counter = ast_atomic_fetchadd_int(&msg_id_incrementor, +1);
@@ -20,7 +38,7 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  }
  
  /*!
-@@ -6324,7 +6324,7 @@ static int msg_create_from_file(struct a
+@@ -6792,7 +6792,7 @@ static int msg_create_from_file(struct a
  			"callerchan=%s\n"
  			"callerid=%s\n"
  			"origdate=%s\n"
@@ -29,7 +47,7 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  			"category=%s\n"
  			"msg_id=%s\n"
  			"flag=\n" /* flags not supported in copy from file yet */
-@@ -6337,7 +6337,7 @@ static int msg_create_from_file(struct a
+@@ -6805,7 +6805,7 @@ static int msg_create_from_file(struct a
  			recdata->call_priority,
  			S_OR(recdata->call_callerchan, "Unknown"),
  			S_OR(recdata->call_callerid, "Unknown"),
@@ -38,7 +56,7 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  			S_OR(category, ""),
  			msg_id,
  			duration);
-@@ -6859,7 +6859,7 @@ static int leave_voicemail(struct ast_ch
+@@ -7371,7 +7371,7 @@ static int leave_voicemail(struct ast_ch
  		/* Store information in real-time storage */
  		if (ast_check_realtime("voicemail_data")) {
  			snprintf(priority, sizeof(priority), "%d", ast_channel_priority(chan));
@@ -47,7 +65,7 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  			get_date(date, sizeof(date));
  			ast_callerid_merge(callerid, sizeof(callerid),
  				S_COR(ast_channel_caller(chan)->id.name.valid, ast_channel_caller(chan)->id.name.str, NULL),
-@@ -6903,7 +6903,7 @@ static int leave_voicemail(struct ast_ch
+@@ -7415,7 +7415,7 @@ static int leave_voicemail(struct ast_ch
  				"callerchan=%s\n"
  				"callerid=%s\n"
  				"origdate=%s\n"
@@ -56,16 +74,7 @@ $NetBSD: patch-apps_app__voicemail.c,v 1.2 2021/06/13 07:57:53 jnemeth Exp $
  				"category=%s\n"
  				"msg_id=%s\n",
  				ext,
-@@ -6915,7 +6915,7 @@ static int leave_voicemail(struct ast_ch
- 				ast_channel_priority(chan),
- 				ast_channel_name(chan),
- 				callerid,
--				date, (long) time(NULL),
-+				date, (intmax_t) time(NULL),
- 				category ? category : "",
- 				msg_id);
- 		} else {
-@@ -11456,7 +11456,7 @@ static int vm_execmain(struct ast_channe
+@@ -12454,7 +12454,7 @@ static int vm_execmain(struct ast_channe
  				play_auto = 1;
  				if (!ast_strlen_zero(opts[OPT_ARG_PLAYFOLDER])) {
  					/* See if it is a folder name first */

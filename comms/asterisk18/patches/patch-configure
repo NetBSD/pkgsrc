@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.5 2024/03/25 03:36:33 jnemeth Exp $
+$NetBSD: patch-configure,v 1.6 2024/10/21 04:53:15 jnemeth Exp $
 
---- configure.orig	2024-03-18 13:18:36.000000000 +0000
+--- configure.orig	2024-10-17 16:03:29.000000000 +0000
 +++ configure
 @@ -10230,12 +10230,12 @@ else $as_nop
  
