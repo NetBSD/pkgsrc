@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/08/25 06:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/21 07:14:35 adam Exp $
 
-DISTNAME=	indi-2.0.9
+DISTNAME=	indi-2.1.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=indilib/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
