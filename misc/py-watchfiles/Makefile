@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/08/31 08:47:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/21 13:06:31 adam Exp $
 
-DISTNAME=	watchfiles-0.23.0
+DISTNAME=	watchfiles-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchfiles/}
@@ -12,6 +12,13 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.16:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
+
+# Depends on an unpublished crate. Can't use cargo.mk to fetch it.
+NOTIFY_REV=	0f87ab12707d231fa44180454d59478d3992eb59
+DISTFILES=	${DEFAULT_DISTFILES}
+DISTFILES+=	notify-${NOTIFY_REV}.tar.gz
+
+SITES.notify-${NOTIFY_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=samuelcolvin/}notify/archive/${NOTIFY_REV}.tar.gz
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
