@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/07/13 15:37:29 taca Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/21 14:48:12 taca Exp $
 
-DISTNAME=	excon-0.111.0
+DISTNAME=	excon-0.112.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/07/13 15:37:29 taca Exp $
+$NetBSD: distinfo,v 1.12 2024/10/21 14:48:12 taca Exp $
 
-BLAKE2s (excon-0.111.0.gem) = 0725e729ed7a9ceac312e9ac0e9842dc91cad912b0042486d474a467ee774417
-SHA512 (excon-0.111.0.gem) = 3dfae43cd8ee1aeb158384b767ecc86ecf1605c3067927792b1d47135d0ad1a4898f060a015f7ce173d745f1f0f29aa3014c50dd36d4bdf65fa89574c0faa16d
-Size (excon-0.111.0.gem) = 173568 bytes
+BLAKE2s (excon-0.112.0.gem) = 04eda9c7ed45d57fc2deb5fd30aab0673548de325b141a523ef79a3e631e0900
+SHA512 (excon-0.112.0.gem) = 56e606d6bcbbf4353d7e4d77ee5829d2068c1d74cc2903f279d637611ab745d2fdab766015ab628e7212efa83c8ec36becb22dbfb3a94353b631a4f112c7eb16
+Size (excon-0.112.0.gem) = 176640 bytes
