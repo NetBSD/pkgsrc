@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2024/10/21 13:06:31 adam Exp $
+
+Depends on unpublished crates. Can't use cargo.mk to fetch it.
+
+--- Cargo.toml.orig	2024-10-21 11:16:37.044734065 +0000
++++ Cargo.toml
+@@ -25,7 +25,7 @@ rust-version = "1.63"
+ 
+ [dependencies]
+ crossbeam-channel = "0.5.12"
+-notify = {git = "https://github.com/samuelcolvin/notify.git", branch = "keep-io-error"}
++notify = {path = "../notify-0f87ab12707d231fa44180454d59478d3992eb59/notify"}
+ pyo3 = { version = "0.22.2", features = ["extension-module", "generate-import-lib"] }
+ 
+ [lib]
