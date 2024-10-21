@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/06/05 16:21:35 taca Exp $
+$NetBSD: distinfo,v 1.23 2024/10/21 14:58:57 taca Exp $
 
-BLAKE2s (activerecord-6.1.7.8.gem) = e19d37ebd4a2da75093250b3a5a27831241e517bb933122fc43f0fe6d072f6d9
-SHA512 (activerecord-6.1.7.8.gem) = e77da94a7532a1810cbd2bd89d6ee3b254e70b4a4cdc08960e6d020754735d3d7ca8311d5a7b45c17fb3141674d2c3a9d67765bdf6d2a0393f66d363f226950d
-Size (activerecord-6.1.7.8.gem) = 434176 bytes
+BLAKE2s (activerecord-6.1.7.9.gem) = e8abc8e5a3ae46a94a8414893008fa9a8f0848375ec88889e60cb362047e8cc3
+SHA512 (activerecord-6.1.7.9.gem) = d7721f2d79c1d3bca82fb043cc87acab378fa56c56ccce57c4b9dab60e27f62b780fecd90877225d632a566a4b5d335039ae1f75eafef70d6c94a36c21c617fc
+Size (activerecord-6.1.7.9.gem) = 434176 bytes
