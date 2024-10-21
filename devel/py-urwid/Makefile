@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/07/07 15:03:44 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/10/21 05:25:37 adam Exp $
 
-DISTNAME=	urwid-2.6.15
+DISTNAME=	urwid-2.6.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
@@ -24,8 +24,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 TEST_DEPENDS+=	${PYPKGPREFIX}-zmq-[0-9]*:../../net/py-zmq
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # two win32 tests error out
 # 27 warnings, 2 errors

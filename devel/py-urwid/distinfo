@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.43 2024/07/07 15:03:44 wiz Exp $
+$NetBSD: distinfo,v 1.44 2024/10/21 05:25:37 adam Exp $
 
-BLAKE2s (urwid-2.6.15.tar.gz) = 1b217e07157a0feca1fa05bf19c7fb6120721d90a9600d67a94cfaa5bdd44780
-SHA512 (urwid-2.6.15.tar.gz) = c9027d4caf490c22ef7bf95c929a62d4f56d4b8d864e5198eb1e82db0414552e4f98caba2e210e8c7bfb91d33c55924acf637f8515c26b89c184e6bbea743ec1
-Size (urwid-2.6.15.tar.gz) = 847872 bytes
+BLAKE2s (urwid-2.6.16.tar.gz) = 1c111dfbd71788fa8eb47f09ce0cfce8ee4789f5947cfb355c5e8e10cfb2e92d
+SHA512 (urwid-2.6.16.tar.gz) = c5caee309bcba9f22d4f3a78bc837c263345762ece5a315ba02ed1cb15ff2502065b20de288495f103b673be4dbee7cac11c535b3edb42edfb04c8ca40a831f3
+Size (urwid-2.6.16.tar.gz) = 848179 bytes
