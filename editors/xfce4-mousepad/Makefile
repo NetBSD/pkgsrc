@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2024/10/20 14:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/10/21 23:20:32 gutteridge Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.6.2
+VERSION=	0.6.3
 DISTNAME=	mousepad-${VERSION}
 PKGNAME=	xfce4-mousepad-${VERSION}
 CATEGORIES=	editors
@@ -23,4 +22,5 @@ CONFIGURE_ARGS+=	--enable-gtksourceview4
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtksourceview4/buildlink3.mk"
+.include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
