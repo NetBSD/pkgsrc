@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2020/03/24 16:08:08 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/21 14:35:18 taca Exp $
 
-DISTNAME=	rbnacl-7.1.1
+DISTNAME=	rbnacl-7.1.2
 CATEGORIES=	security
 
 MAINTAINER=	minskim@NetBSD.org
