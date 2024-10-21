@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/06/10 15:18:44 taca Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/21 14:07:17 taca Exp $
 #
 
-DISTNAME=	parallel-1.25.1
+DISTNAME=	parallel-1.26.3
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
