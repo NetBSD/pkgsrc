@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/13 16:23:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/21 13:29:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/code_style_checks.yaml
 ${GEM_LIBDIR}/.github/workflows/tests.yaml
@@ -22,6 +22,7 @@ ${GEM_LIBDIR}/contracts.gemspec
 ${GEM_LIBDIR}/cucumber.yml
 ${GEM_LIBDIR}/dependabot.yml
 ${GEM_LIBDIR}/features/README.md
+${GEM_LIBDIR}/features/advanced/pattern_matching.feature
 ${GEM_LIBDIR}/features/basics/functype.feature
 ${GEM_LIBDIR}/features/basics/pretty-print.feature
 ${GEM_LIBDIR}/features/basics/simple_example.feature
