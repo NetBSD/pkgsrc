@@ -1,0 +1,17 @@
+$NetBSD: patch-third-party_pjproject_patches_0100-netbsd.patch,v 1.1 2024/10/21 05:12:48 jnemeth Exp $
+
+--- third-party/pjproject/patches/0100-netbsd.patch.orig	2024-03-18 06:26:23.102690730 +0000
++++ third-party/pjproject/patches/0100-netbsd.patch
+@@ -0,0 +1,12 @@
++--- a/build/os-netbsd.mak	2024-03-17 23:06:14.983947255 -0700
+++++ b/build/os-netbsd.mak	2024-03-17 22:10:03.024052147 -0700
++@@ -0,0 +1,9 @@
+++export OS_CFLAGS   := $(CC_DEF)PJ_NETBSD=1
+++
+++export OS_CXXFLAGS := 
+++
+++export OS_LDFLAGS  := -lportaudio-$(TARGET_NAME) -lgsmcodec-$(TARGET_NAME) -lilbccodec-$(TARGET_NAME) -lspeex-$(TARGET_NAME) -lresample-$(TARGET_NAME) $(CC_LIB)pthread$(LIBEXT2) -lm
+++
+++export OS_SOURCES  := 
+++
+++
