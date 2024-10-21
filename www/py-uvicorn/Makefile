@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2024/08/14 08:48:30 adam Exp $
+# $NetBSD: Makefile,v 1.46 2024/10/21 13:07:56 adam Exp $
 
-DISTNAME=	uvicorn-0.30.6
+DISTNAME=	uvicorn-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uvicorn/}
@@ -20,10 +20,10 @@ DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.15.2:../../devel/py-uvloop
 DEPENDS+=	${PYPKGPREFIX}-watchfiles>=0.13:../../misc/py-watchfiles
 DEPENDS+=	${PYPKGPREFIX}-websockets>=10.4:../../www/py-websockets
 DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
+TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.2:../../www/py-httpx
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.14.0:../../devel/py-test-mock
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
@@ -33,6 +33,10 @@ DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.0:../../devel/py-typing-extensions
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} uvicorn uvicorn-${PYVERSSUFFIX} || ${TRUE}
+
+# Needs a2wsgi
+pre-test:
+	${RM} ${WRKSRC}/tests/middleware/test_wsgi.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
