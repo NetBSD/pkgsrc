@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2024/10/14 09:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/10/21 05:23:40 adam Exp $
 
-DISTNAME=	dulwich-0.22.2
+DISTNAME=	dulwich-0.22.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-# 0.22.2 is not on pypi
-#MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=jelmer/}
-GITHUB_PROJECT=	dulwich
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.dulwich.io/
@@ -39,7 +35,7 @@ pre-test:
 # without network access
 # 31 failed, 1274 passed, 272 skipped, 1 xfailed, 113 warnings
 # with
-ALLOW_NETWORK_ACCESS=	yes
+# ALLOW_NETWORK_ACCESS=	yes
 # 1 failed, 1304 passed, 272 skipped, 1 xfailed, 113 warnings
 
 .include "cargo-depends.mk"
