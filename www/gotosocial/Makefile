@@ -1,29 +1,25 @@
-# $NetBSD: Makefile,v 1.42 2024/09/06 18:49:00 bsiegert Exp $
+# $NetBSD: Makefile,v 1.43 2024/10/21 11:18:34 jperkin Exp $
 
-GOTOVER=	0.16.0
-DISTNAME=	gotosocial-${GOTOVER}-source-code
-PKGREVISION=	4
-PKGNAME=	${DISTNAME:S/-source-code//}
+DISTNAME=	gotosocial-0.17.0
 CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_GITHUB:=superseriousbusiness/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	nikita@NetBSD.org
 HOMEPAGE=	https://github.com/superseriousbusiness/gotosocial/
 COMMENT=	Fediverse server written in Go
 LICENSE=	gnu-agpl-v3
+
 USE_TOOLS+=	pax tar
 
-DISTFILES=	gotosocial-${GOTOVER}-source-code.tar.gz
-DISTFILES+=	gotosocial_${GOTOVER}_web-assets.tar.gz
+# It's not clear that the extra assets tarball is actually necessary, as the
+# source code already bundles 99% of the same files.  Verify that the addition
+# of "dist/" and "swagger.yaml" are worth the additional download and setup.
+ASSETS=		${DISTNAME:S/-/_/}_web-assets.tar.gz
+DISTFILES:=	${DEFAULT_DISTFILES} ${ASSETS}
+EXTRACT_ONLY=	${DISTFILES}
 
-SITES.gotosocial-${GOTOVER}-source-code.tar.gz= \
-	-https://github.com/superseriousbusiness/gotosocial/releases/download/v${GOTOVER}/gotosocial-${GOTOVER}-source-code.tar.gz
-
-SITES.gotosocial_${GOTOVER}_web-assets.tar.gz= \
-	-https://github.com/superseriousbusiness/gotosocial/releases/download/v${GOTOVER}/gotosocial_${GOTOVER}_web-assets.tar.gz
-
-# release archive has no toplevel folder.
-EXTRACT_DIR=	${WRKDIR}/${PKGNAME}
-WRKSRC=		${EXTRACT_DIR}
+SITES.${ASSETS}=	${MASTER_SITES:=${GITHUB_PROJECT}/releases/download/${GITHUB_TAG}/}
 
 MAKE_ENV+=	VERSION=${PKGVERSION_NOREV}
 BUILD_DEFS+=	VARBASE
@@ -68,27 +64,8 @@ SUBST_FILES.systemdpaths=	example/gotosocial.service
 SUBST_SED.systemdpaths=		-e 's,/gotosocial/gotosocial,${PREFIX}/bin/gotosocial,g'
 SUBST_SED.systemdpaths+=	-e 's,config.yaml,${PKG_SYSCONFDIR}/config.yaml,g'
 
-# restricted to amd64:
-# https://gitlab.com/cznic/libc/-/issues/15
-# https://gitlab.com/cznic/libc/-/issues/12
-# https://gitlab.com/cznic/libc/-/issues/11
-# https://github.com/superseriousbusiness/gotosocial/issues/1753
-# on FreeBSD, the modernc.org/* packages do not work on arm64:
-# "imports modernc.org/libc/errno: build constraints exclude all Go files in /usr/ports/net-im/gotosocial/work/gotosocial-0.5.2/vendor/modernc.org/libc/errno"
-# BUG: does not build on Sun
-# to unblock: https://github.com/ncruces/go-sqlite3/issues/85
-# Switched to wasmsqlite3, which is maybe still restricted to amd64 + aarch64?
-# There was initially an issue with that driver on the BSD family but that was resolved in the driver before we cut this release.
-# It's safe to use and expected to perform just fine.
-# We're currently keeping it behind a go build tag, wasmsqlite3, and we do consider it slightly experimental.
-# However, the plan is to switch to this Soon™ and a number of people including two of the maintainers run this build on their own instances without any issues.
-# quote from https://github.com/NetBSD/pkgsrc/issues/143
-#ONLY_FOR_PLATFORM=	*-*-x86_64
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} scripts/build.sh
-	# cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} && \
-	# go build -o gotosocial ./cmd/gotosocial
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gotosocial ${DESTDIR}/${PREFIX}/bin/
@@ -96,8 +73,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/gotosocial.service ${DESTDIR}/${EGDIR}/gotosocial.service
-	cd ${WRKSRC} && ${TAR} -xzf ${DISTDIR}/gotosocial_0.15.0_web-assets.tar.gz
 	cd ${WRKSRC} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
+	cd ${WRKDIR} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
 
 do-test:
 	cd ${WRKSRC} && ./gotosocial --version
