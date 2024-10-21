@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/01/24 11:20:40 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/21 09:27:00 adam Exp $
 
-DISTNAME=	textile-4.0.2
+DISTNAME=	textile-4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textile/}
@@ -11,14 +11,13 @@ COMMENT=	XHTML generator using a simple markup
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.0.1:../../textproc/py-html5lib
+DEPENDS+=	${PYPKGPREFIX}-nh3-[0-9]*:../../www/py-nh3
 DEPENDS+=	${PYPKGPREFIX}-regex>=1.1:../../textproc/py-regex
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

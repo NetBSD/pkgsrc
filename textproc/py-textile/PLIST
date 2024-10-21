@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/24 11:20:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/21 09:27:00 adam Exp $
 bin/pytextile-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -30,15 +30,6 @@ ${PYSITELIB}/textile/regex_strings.pyo
 ${PYSITELIB}/textile/textilefactory.py
 ${PYSITELIB}/textile/textilefactory.pyc
 ${PYSITELIB}/textile/textilefactory.pyo
-${PYSITELIB}/textile/tools/__init__.py
-${PYSITELIB}/textile/tools/__init__.pyc
-${PYSITELIB}/textile/tools/__init__.pyo
-${PYSITELIB}/textile/tools/imagesize.py
-${PYSITELIB}/textile/tools/imagesize.pyc
-${PYSITELIB}/textile/tools/imagesize.pyo
-${PYSITELIB}/textile/tools/sanitizer.py
-${PYSITELIB}/textile/tools/sanitizer.pyc
-${PYSITELIB}/textile/tools/sanitizer.pyo
 ${PYSITELIB}/textile/utils.py
 ${PYSITELIB}/textile/utils.pyc
 ${PYSITELIB}/textile/utils.pyo
