@@ -1,0 +1,16 @@
+$NetBSD: patch-third-party_pjproject_patches_0160-netbsd.patch,v 1.1 2024/10/21 05:12:48 jnemeth Exp $
+
+--- third-party/pjproject/patches/0160-netbsd.patch.orig	2024-03-25 05:18:07.047944261 +0000
++++ third-party/pjproject/patches/0160-netbsd.patch
+@@ -0,0 +1,11 @@
++--- a/pjlib/src/pj/os_core_unix.c	2024-03-25 05:09:26.734781518 +0000
+++++ b/pjlib/src/pj/os_core_unix.c
++@@ -655,6 +655,8 @@ static void set_thread_display_name(cons
++ #if defined(PJ_HAS_PTHREAD_SETNAME_NP) && PJ_HAS_PTHREAD_SETNAME_NP != 0
++ #   if defined(PJ_DARWINOS) && PJ_DARWINOS != 0
++     pthread_setname_np(name);
+++#   elif defined(__NetBSD__)
+++    pthread_setname_np(pthread_self(), name, NULL);
++ #   else
++     pthread_setname_np(pthread_self(), name);
++ #   endif
