@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.64 2023/11/07 22:05:01 wiz Exp $
+$NetBSD: distinfo,v 1.65 2024/10/21 15:23:45 mef Exp $
 
-BLAKE2s (texinfo-7.1.tar.gz) = 1d35f2c04728812005a572cc10096d98964881c4cbf9b3dd9a274e967502fc7b
-SHA512 (texinfo-7.1.tar.gz) = 23f91bf9a3994209d25d20d038b154220d35852c2f54a5f734522310cd91f480194c76d3fc9661b78e5b409d38a35cb70e3669c4358491eadc6e75acdc609583
-Size (texinfo-7.1.tar.gz) = 12118819 bytes
+BLAKE2s (texinfo-7.1.1.tar.gz) = 000380367a4f268ddedd48c7def9d97075af3d33b3bf0dfcd7f2870c9646e3e5
+SHA512 (texinfo-7.1.1.tar.gz) = 617e819865efc812e163288b92b72c3693615cb8a42bd4badf8ddc163560166c609b37b479c5c589d3386cd0478e7f0abeebb503f95aeab4585f3bcf3781c203
+Size (texinfo-7.1.1.tar.gz) = 12191267 bytes
 SHA1 (patch-ab) = 080583e20117c34516321f9266f6a2fac1acda33
 SHA1 (patch-ac) = 7f7226ee521fddba9f967be4fe199f6bedcfa148
 SHA1 (patch-gnulib_lib_malloc_dynarray-skeleton.c) = 6e683e689bfc7573bf9d62d2bc9a1abb64d521df
