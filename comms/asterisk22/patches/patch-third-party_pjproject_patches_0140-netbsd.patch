@@ -1,0 +1,17 @@
+$NetBSD: patch-third-party_pjproject_patches_0140-netbsd.patch,v 1.1 2024/10/21 05:12:48 jnemeth Exp $
+
+--- third-party/pjproject/patches/0140-netbsd.patch.orig	2024-03-18 06:27:02.926490447 +0000
++++ third-party/pjproject/patches/0140-netbsd.patch
+@@ -0,0 +1,12 @@
++--- a/third_party/build/os-netbsd.mak	2024-03-17 23:17:19.200264232 -0700
+++++ b/third_party/build/os-netbsd.mak	2024-03-17 22:46:50.961340542 -0700
++@@ -0,0 +1,9 @@
+++DIRS += gsm
+++DIRS += ilbc
+++DIRS += speex
+++DIRS += portaudio
+++DIRS += g7221
+++DIRS += srtp
+++DIRS += resample
+++
+++
