@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/22 20:46:46 markd Exp $
+share/texmf-dist/doc/fonts/baskervaldadf/COPYING
+share/texmf-dist/doc/fonts/baskervaldadf/NOTICE.txt
+share/texmf-dist/doc/fonts/baskervaldadf/README.md
+share/texmf-dist/doc/fonts/baskervaldadf/baskervald-ybv-example.pdf
+share/texmf-dist/doc/fonts/baskervaldadf/baskervald-ybv-example.tex
+share/texmf-dist/doc/fonts/baskervaldadf/baskervaldadf-build.pdf
+share/texmf-dist/doc/fonts/baskervaldadf/baskervaldadf-tables.pdf
+share/texmf-dist/doc/fonts/baskervaldadf/baskervaldadf-tables.tex
+share/texmf-dist/doc/fonts/baskervaldadf/baskervaldadf.pdf
+share/texmf-dist/doc/fonts/baskervaldadf/manifest.txt
+share/texmf-dist/doc/fonts/baskervaldadf/reglyph-ybv.tex
+share/texmf-dist/doc/fonts/baskervaldadf/ybv-drv.tex
+share/texmf-dist/doc/fonts/baskervaldadf/ybv-map.tex

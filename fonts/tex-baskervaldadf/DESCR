@@ -1,0 +1,10 @@
+Baskervald ADF is a serif family with lining figures designed
+as a substitute for Baskerville. The family currently includes
+upright and italic or oblique shapes in each of regular, bold
+and heavy weights. All fonts include the slashed zero and
+additional non-standard ligatures. The support package renames
+them according to the Karl Berry fontname scheme and defines
+two families. One of these primarily provides access to the
+"standard" or default characters while the other supports
+additional ligatures. The included package files provide access
+to these features in LaTeX.
