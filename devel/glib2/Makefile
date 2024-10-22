@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2024/07/26 15:34:43 wiz Exp $
+# $NetBSD: Makefile,v 1.308 2024/10/22 09:50:38 adam Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 .include "options.mk"
 
+# failed: No probe sites found for declared provider
+MESON_ARGS+=	-Ddtrace=disabled
+MESON_ARGS+=	-Dglib_debug=disabled
 MESON_ARGS+=	-Dintrospection=disabled
 MESON_ARGS+=	-Dinstalled_tests=false
 # Avoid linux dependency on libmount-dev
@@ -48,12 +51,6 @@ REPLACE_PYTHON+=	gio/tests/static-link.py
 REPLACE_PYTHON+=	glib/gtester-report.in
 REPLACE_PYTHON+=	glib/update-gtranslit.py
 REPLACE_PYTHON+=	gobject/tests/mkenums.py
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-build
-SUBST_FILES.python+=	output/glib/gtester-report
-SUBST_MESSAGE.python=	Fixing path to Python.
-SUBST_SED.python+=	-e "s,^\(.*\)/usr/bin/env.*,\1${PYTHONBIN},"
 
 SUBST_CLASSES+=		meson
 SUBST_STAGE.meson=	pre-configure
@@ -110,7 +107,7 @@ post-extract:
 .include "../../devel/meson/build.mk"
 .include "../../devel/pcre2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

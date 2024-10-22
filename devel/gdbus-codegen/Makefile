@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/02/09 09:31:45 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/10/22 09:50:39 adam Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
@@ -25,6 +25,6 @@ SUBST_SED.autovars+=	-e 's,@DATADIR@,${PREFIX}/share,'
 REPLACE_PYTHON+=	gdbus-codegen.in
 
 .include "../../devel/meson/build.mk"
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../mk/bsd.pkg.mk"
