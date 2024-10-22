@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6471 2024/10/22 19:00:02 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6472 2024/10/22 21:12:40 markd Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9781,3 +9781,15 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/broot to 1.44.2 [pin 2024-10-22]
 	Updated devel/mise to 2024.10.8 [pin 2024-10-22]
 	Updated net/slumber to 2.2.0 [pin 2024-10-22]
+	Added fonts/tex-baskervaldadf version 1.1 [markd 2024-10-22]
+	Added fonts/tex-baskervaldadf-doc version 1.1 [markd 2024-10-22]
+	Added fonts/tex-electrumadf version 1.1 [markd 2024-10-22]
+	Added fonts/tex-electrumadf-doc version 1.1 [markd 2024-10-22]
+	Added fonts/tex-romandeadf version 2.1 [markd 2024-10-22]
+	Added fonts/tex-romandeadf-doc version 2.1 [markd 2024-10-22]
+	Removed fonts/tex-baskervald successor fonts/tex-baskervaldadf [markd 2024-10-22]
+	Removed fonts/tex-baskervald-doc successor fonts/tex-baskervaldadf-doc [markd 2024-10-22]
+	Removed fonts/tex-electrum successor fonts/tex-electrumadf [markd 2024-10-22]
+	Removed fonts/tex-electrum-doc successor fonts/tex-electrumadf-doc [markd 2024-10-22]
+	Removed fonts/tex-romande successor fonts/tex-romandeadf [markd 2024-10-22]
+	Removed fonts/tex-romande-doc successor fonts/tex-romandeadf-doc [markd 2024-10-22]
