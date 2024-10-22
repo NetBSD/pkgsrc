@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/10/14 05:05:50 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/22 07:52:55 wiz Exp $
 
-DISTNAME=	anyio-4.6.2
+DISTNAME=	anyio-4.6.2.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -27,6 +27,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.17:../../devel/py-uvloop
 USE_LANGUAGES=	# none
 
 # 12 failed, 1511 passed, 184 skipped, 6 xfailed
+# as of 4.6.2.post1
+# Fatal Python error: Aborted
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
