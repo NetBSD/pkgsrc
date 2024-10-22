@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/10/21 11:18:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2024/10/22 06:12:15 jperkin Exp $
 
 DISTNAME=	gotosocial-0.17.0
 CATEGORIES=	www
@@ -12,9 +12,6 @@ LICENSE=	gnu-agpl-v3
 
 USE_TOOLS+=	pax tar
 
-# It's not clear that the extra assets tarball is actually necessary, as the
-# source code already bundles 99% of the same files.  Verify that the addition
-# of "dist/" and "swagger.yaml" are worth the additional download and setup.
 ASSETS=		${DISTNAME:S/-/_/}_web-assets.tar.gz
 DISTFILES:=	${DEFAULT_DISTFILES} ${ASSETS}
 EXTRACT_ONLY=	${DISTFILES}
@@ -73,6 +70,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/example/config.yaml ${DESTDIR}/${EGDIR}/config.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/docker-compose/docker-compose.yaml ${DESTDIR}/${EGDIR}/docker-compose.yaml
 	${INSTALL_DATA} ${WRKSRC}/example/gotosocial.service ${DESTDIR}/${EGDIR}/gotosocial.service
+	# Installs the assets source, may not be necessary
 	cd ${WRKSRC} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
 	cd ${WRKDIR} && ${PAX} -rw web ${DESTDIR}/${EGDIR}
 
