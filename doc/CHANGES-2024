@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6451 2024/10/22 08:32:44 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6452 2024/10/22 09:01:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9750,3 +9750,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-psutil to 6.1.0 [wiz 2024-10-22]
 	Updated lang/nodejs to 22.10.0 [adam 2024-10-22]
 	Updated lang/py-mypy to 1.12.1 [adam 2024-10-22]
+	Updated graphics/inkscape to 1.4 [wiz 2024-10-22]
