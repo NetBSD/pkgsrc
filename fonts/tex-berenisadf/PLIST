@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/10/22 22:16:06 markd Exp $
 share/texmf-dist/fonts/afm/arkandis/berenisadf/ybdb.afm
 share/texmf-dist/fonts/afm/arkandis/berenisadf/ybdbc.afm
 share/texmf-dist/fonts/afm/arkandis/berenisadf/ybdbci.afm
@@ -222,6 +222,13 @@ share/texmf-dist/fonts/type1/arkandis/berenisadf/ybdr.pfb
 share/texmf-dist/fonts/type1/arkandis/berenisadf/ybdrc.pfb
 share/texmf-dist/fonts/type1/arkandis/berenisadf/ybdrci.pfb
 share/texmf-dist/fonts/type1/arkandis/berenisadf/ybdri.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrdd8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrddc8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrddi8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrdr8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrdrc8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrdri8a.pfb
+share/texmf-dist/fonts/type1/arkandis/berenisadf/yrdriw8a.pfb
 share/texmf-dist/tex/latex/berenisadf/berenis.sty
 share/texmf-dist/tex/latex/berenisadf/ly1ybd.fd
 share/texmf-dist/tex/latex/berenisadf/ly1ybd0.fd
@@ -244,4 +251,8 @@ share/texmf-dist/tex/latex/berenisadf/ts1ybd0.fd
 share/texmf-dist/tex/latex/berenisadf/ts1ybd1.fd
 share/texmf-dist/tex/latex/berenisadf/ts1ybd2.fd
 share/texmf-dist/tex/latex/berenisadf/ts1ybd2j.fd
+share/texmf-dist/tex/latex/berenisadf/ts1ybd2jw.fd
+share/texmf-dist/tex/latex/berenisadf/ts1ybd2w.fd
 share/texmf-dist/tex/latex/berenisadf/ts1ybdj.fd
+share/texmf-dist/tex/latex/berenisadf/ts1ybdjw.fd
+share/texmf-dist/tex/latex/berenisadf/ts1ybdw.fd
