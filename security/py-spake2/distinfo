@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/25 10:34:37 wiz Exp $
+$NetBSD: distinfo,v 1.6 2024/10/22 12:40:47 adam Exp $
 
-BLAKE2s (spake2-0.8.tar.gz) = 92ae5e3805861ce50f2589089a7b16a1ca7331dacb8701400995f45de8ecad6a
-SHA512 (spake2-0.8.tar.gz) = 406719ebb9731f7900a8a5c913dd63a81dd6d48da8b8d1f8ebc903fcfca01a8638032a1a757fe402a701a65ecca6be91a42b2271db251c06adfa8bf0daa35973
-Size (spake2-0.8.tar.gz) = 58088 bytes
-SHA1 (patch-versioneer.py) = 137bc2bae0060ad31733830a6fab4b1302ec3d1c
+BLAKE2s (spake2-0.9.tar.gz) = 20ec5cd521cceaf8145f002a6145e02d1ecf419c6ec80f2bbcddc535972f84af
+SHA512 (spake2-0.9.tar.gz) = e484b6301add166623b60b7171658ba34e2643f9353e98e7c3620a70513f7c5ce535e33b28bf381997b9a88ff369f1b4b03a9b1fa6b7714b6f1083fe414f7230
+Size (spake2-0.9.tar.gz) = 55092 bytes
