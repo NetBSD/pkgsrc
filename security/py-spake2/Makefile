@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/11/05 10:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/22 12:40:47 adam Exp $
 
-DISTNAME=	spake2-0.8
+DISTNAME=	spake2-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spake2/}
 
@@ -13,9 +12,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
-DEPENDS+=	${PYPKGPREFIX}-hkdf-[0-9]*:../../security/py-hkdf
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
