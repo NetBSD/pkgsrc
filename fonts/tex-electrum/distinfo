@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:52 nia Exp $
-
-BLAKE2s (tex-electrum-19705/electrum.tar.xz) = e89ff7a712f45f236d99374a7d140ee86611588715ad3a58b3e537c7ecc52ccc
-SHA512 (tex-electrum-19705/electrum.tar.xz) = 0395a61a226ec6eae2cc8447ed90f7472c34549f848be9b7ce626e444304b7e57eb52f38590a3f7a0edfb2aaca4b58bd308356db6f96497781b585858c30a113
-Size (tex-electrum-19705/electrum.tar.xz) = 724352 bytes
