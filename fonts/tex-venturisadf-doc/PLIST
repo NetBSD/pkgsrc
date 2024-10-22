@@ -1,7 +1,29 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/10/22 22:27:12 markd Exp $
 share/texmf-dist/doc/fonts/venturisadf/LICENSE-utopia.txt
 share/texmf-dist/doc/fonts/venturisadf/LIST-Venturis.txt
-share/texmf-dist/doc/fonts/venturisadf/README
+share/texmf-dist/doc/fonts/venturisadf/README.md
 share/texmf-dist/doc/fonts/venturisadf/manifest.txt
+share/texmf-dist/doc/fonts/venturisadf/venturis-example.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturis-example.tex
+share/texmf-dist/doc/fonts/venturisadf/venturis2-example.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturis2-example.tex
+share/texmf-dist/doc/fonts/venturisadf/venturisadf-imp.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturisadf-tables.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturisadf-tables.tex
 share/texmf-dist/doc/fonts/venturisadf/venturisadf.pdf
-share/texmf-dist/doc/fonts/venturisadf/venturisadf.tex
+share/texmf-dist/doc/fonts/venturisadf/venturisold-example.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturisold-example.tex
+share/texmf-dist/doc/fonts/venturisadf/venturissans-example.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturissans-example.tex
+share/texmf-dist/doc/fonts/venturisadf/venturissans2-example.pdf
+share/texmf-dist/doc/fonts/venturisadf/venturissans2-example.tex
+share/texmf-dist/doc/fonts/venturisadf/yv1-drv.tex
+share/texmf-dist/doc/fonts/venturisadf/yv1-map.tex
+share/texmf-dist/doc/fonts/venturisadf/yv2-drv.tex
+share/texmf-dist/doc/fonts/venturisadf/yv2-map.tex
+share/texmf-dist/doc/fonts/venturisadf/yv3-drv.tex
+share/texmf-dist/doc/fonts/venturisadf/yv3-map.tex
+share/texmf-dist/doc/fonts/venturisadf/yvo-drv.tex
+share/texmf-dist/doc/fonts/venturisadf/yvo-map.tex
+share/texmf-dist/doc/fonts/venturisadf/yvt-drv.tex
+share/texmf-dist/doc/fonts/venturisadf/yvt-map.tex
