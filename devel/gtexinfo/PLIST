@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2024/10/21 15:23:45 mef Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/10/22 08:12:04 jperkin Exp $
 bin/info
 bin/install-info
 bin/makeinfo
@@ -26,7 +26,6 @@ man/man1/texi2pdf.1
 man/man1/texindex.1
 man/man5/info.5
 man/man5/texinfo.5
-share/locale/ka/LC_MESSAGES/texinfo_document.mo
 share/texinfo/DebugTexinfo/DebugTree.pm
 share/texinfo/Pod-Simple-Texinfo/Pod/Simple/Texinfo.pm
 share/texinfo/Texinfo/Commands.pm
