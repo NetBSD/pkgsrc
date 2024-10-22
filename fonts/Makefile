@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2024/10/17 08:29:41 wiz Exp $
+# $NetBSD: Makefile,v 1.431 2024/10/22 21:02:33 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -340,8 +340,8 @@ SUBDIR+=	tex-barcodes
 SUBDIR+=	tex-barcodes-doc
 SUBDIR+=	tex-bartel-chess-fonts
 SUBDIR+=	tex-bartel-chess-fonts-doc
-SUBDIR+=	tex-baskervald
-SUBDIR+=	tex-baskervald-doc
+SUBDIR+=	tex-baskervaldadf
+SUBDIR+=	tex-baskervaldadf-doc
 SUBDIR+=	tex-baskervaldx
 SUBDIR+=	tex-baskervaldx-doc
 SUBDIR+=	tex-bbding
@@ -505,8 +505,8 @@ SUBDIR+=	tex-eiad
 SUBDIR+=	tex-eiad-doc
 SUBDIR+=	tex-eiad-ltx
 SUBDIR+=	tex-eiad-ltx-doc
-SUBDIR+=	tex-electrum
-SUBDIR+=	tex-electrum-doc
+SUBDIR+=	tex-electrumadf
+SUBDIR+=	tex-electrumadf-doc
 SUBDIR+=	tex-elvish
 SUBDIR+=	tex-elvish-doc
 SUBDIR+=	tex-epigrafica
@@ -837,8 +837,8 @@ SUBDIR+=	tex-recycle
 SUBDIR+=	tex-recycle-doc
 SUBDIR+=	tex-roboto
 SUBDIR+=	tex-roboto-doc
-SUBDIR+=	tex-romande
-SUBDIR+=	tex-romande-doc
+SUBDIR+=	tex-romandeadf
+SUBDIR+=	tex-romandeadf-doc
 SUBDIR+=	tex-rsfs
 SUBDIR+=	tex-rsfs-doc
 SUBDIR+=	tex-rsfso
