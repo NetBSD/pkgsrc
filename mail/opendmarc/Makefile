@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/10/24 22:09:48 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/10/22 15:21:06 ryoon Exp $
 
 DISTNAME=	rel-${PKGNAME_NOREV:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Switch-[0-9]*:../../lang/p5-Switch
 DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl autoconf automake
+USE_TOOLS+=	perl autoconf automake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
