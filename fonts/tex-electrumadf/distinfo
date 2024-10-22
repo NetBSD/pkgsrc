@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/22 20:50:11 markd Exp $
+
+BLAKE2s (electrumadf.r72484.tar.xz) = a5a0c96867250299605a46968ec513a585b99968aeeb33a9d20fa70073dc15e9
+SHA512 (electrumadf.r72484.tar.xz) = 875ff39b9d507bf8551bc0307ab62ffbaaa32da05e0df4d493ef90b3bda6c831c310ae6c285ec4c67740e3f8a120b146cbfd8a9e47d6492ccbb90a55041e2aeb
+Size (electrumadf.r72484.tar.xz) = 726996 bytes
