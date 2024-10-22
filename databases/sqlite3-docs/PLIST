@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.135 2024/08/13 13:11:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.136 2024/10/22 18:25:28 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -13,6 +13,8 @@ share/doc/sqlite3/asyncvfs.html
 share/doc/sqlite3/atomiccommit.html
 share/doc/sqlite3/autoinc.html
 share/doc/sqlite3/backup.html
+share/doc/sqlite3/base64.html
+share/doc/sqlite3/base85.html
 share/doc/sqlite3/bindptr.html
 share/doc/sqlite3/books.html
 share/doc/sqlite3/bytecodevtab.html
@@ -52,7 +54,7 @@ share/doc/sqlite3/c3ref/c_deterministic.html
 share/doc/sqlite3/c3ref/c_fail.html
 share/doc/sqlite3/c3ref/c_fcntl_begin_atomic_write.html
 share/doc/sqlite3/c3ref/c_index_constraint_eq.html
-share/doc/sqlite3/c3ref/c_index_scan_unique.html
+share/doc/sqlite3/c3ref/c_index_scan_hex.html
 share/doc/sqlite3/c3ref/c_iocap_atomic.html
 share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
@@ -544,6 +546,7 @@ share/doc/sqlite3/onefile.html
 share/doc/sqlite3/opcode.html
 share/doc/sqlite3/optoverview.html
 share/doc/sqlite3/partialindex.html
+share/doc/sqlite3/percentile.html
 share/doc/sqlite3/pgszchng2016.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
@@ -695,6 +698,7 @@ share/doc/sqlite3/releaselog/3_45_2.html
 share/doc/sqlite3/releaselog/3_45_3.html
 share/doc/sqlite3/releaselog/3_46_0.html
 share/doc/sqlite3/releaselog/3_46_1.html
+share/doc/sqlite3/releaselog/3_47_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
@@ -805,6 +809,7 @@ share/doc/sqlite3/rescode.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rowidtable.html
 share/doc/sqlite3/rowvalue.html
+share/doc/sqlite3/rsync.html
 share/doc/sqlite3/rtree.html
 share/doc/sqlite3/schematab.html
 share/doc/sqlite3/search

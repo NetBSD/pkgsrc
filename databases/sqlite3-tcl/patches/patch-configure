@@ -1,0 +1,18 @@
+$NetBSD: patch-configure,v 1.7 2024/10/22 18:25:29 adam Exp $
+
+Fix for error: cannot combine with previous 'int' declaration specifier.
+
+--- configure.orig	2024-10-21 16:48:14.000000000 +0000
++++ configure
+@@ -5098,11 +5098,6 @@ printf "%s\n" "$tcl_cv_cc_pipe" >&6; }
+ 	fi
+     fi
+ 
+-    if test "${TCL_MAJOR_VERSION}" -lt 9 -a "${TCL_MINOR_VERSION}" -lt 7; then
+-
+-printf "%s\n" "#define Tcl_Size int" >>confdefs.h
+-
+-	fi
+ 
+     #--------------------------------------------------------------------
+     # Common compiler flag setup
