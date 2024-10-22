@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6458 2024/10/22 11:57:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6459 2024/10/22 12:41:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9762,3 +9762,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ruamel-yaml-clib to 0.2.12 [adam 2024-10-22]
 	Updated www/py-pylint-django to 2.6.1 [adam 2024-10-22]
 	Updated devel/py-game to 2.6.1 [adam 2024-10-22]
+	Updated graphics/py-imageio to 2.36.0 [adam 2024-10-22]
+	Updated security/py-spake2 to 0.9 [adam 2024-10-22]
