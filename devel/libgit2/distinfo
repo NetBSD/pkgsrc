@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2024/05/16 11:12:00 wiz Exp $
+$NetBSD: distinfo,v 1.41 2024/10/22 09:47:50 adam Exp $
 
-BLAKE2s (libgit2-1.8.1.tar.gz) = d40458653e2fd38823afe527a9ca622a8bd69cdf8bfbab94162e5b95e2e46425
-SHA512 (libgit2-1.8.1.tar.gz) = 7429fbdc46ae44fd359e9260cbe33d9ce9276db810c096f12c43e5d302d01011463cdfd98d604e59780187e020e216e839823a77479dc12f952a37628516af78
-Size (libgit2-1.8.1.tar.gz) = 7608949 bytes
+BLAKE2s (libgit2-1.8.2.tar.gz) = c9243f68fe2d8d8b23c5e161648434d208f881a16fb97227b11b0ffa7edd4a9b
+SHA512 (libgit2-1.8.2.tar.gz) = 568daa01b254acd07624143c1fd949b131f174a0595e4c6031b1eee38afd59ec3917ffc5ade3310d2a17f22bf5062bc6d03603cb952b25cdefd6c1cec9b8033c
+Size (libgit2-1.8.2.tar.gz) = 7610104 bytes
