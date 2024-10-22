@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.120 2024/07/19 07:27:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.121 2024/10/22 09:50:38 adam Exp $
 # used by devel/gdbus-codegen/Makefile
 # used by devel/glib2/Makefile
 # used by devel/glib2-tools/Makefile
 
-DISTNAME=	glib-2.80.4
+DISTNAME=	glib-2.82.2
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,12 +12,9 @@ MAINTAINER=	prlw1@cam.ac.uk
 HOMEPAGE=	https://developer.gnome.org/glib/
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgfmt pkg-config xgettext
-
-USE_CC_FEATURES+=	c99
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		msgfmt pkg-config xgettext
 
 # does snprintf %d with pid_t...
 BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
