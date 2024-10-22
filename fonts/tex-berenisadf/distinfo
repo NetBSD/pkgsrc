@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:27:34 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/10/22 22:16:06 markd Exp $
 
-BLAKE2s (tex-berenisadf-32215/berenisadf.tar.xz) = ff9f87c053152c159c5893aa73d34801865b644cb73d027b40c5994ae163facd
-SHA512 (tex-berenisadf-32215/berenisadf.tar.xz) = 19957b2a1264ff8ed243d9a786ce211bd171e09d93580c858d83684ed2be81a067eaf9a91d19e56b9db0b1a4aaf5ba757bc7e9998d204901212b33f71817d52f
-Size (tex-berenisadf-32215/berenisadf.tar.xz) = 1389624 bytes
+BLAKE2s (berenisadf.r72484.tar.xz) = 8ea5d2e7bdcff0da0e3004825717c2fed9a93c1be911e71786c91bcff4a669fe
+SHA512 (berenisadf.r72484.tar.xz) = 92bf6b7aa9e78f38006c55dcfd905c828338fcb0c6e570d7850003b9d755fe522166722e8c2ee026f14734046c1b3010a4c24b5ea2801577e30ddaf6298b20fe
+Size (berenisadf.r72484.tar.xz) = 1770448 bytes
