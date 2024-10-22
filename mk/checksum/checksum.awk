@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: checksum.awk,v 1.3 2020/10/07 18:09:52 jperkin Exp $
+# $NetBSD: checksum.awk,v 1.4 2024/10/22 06:29:21 jperkin Exp $
 #
 ###########################################################################
 #
@@ -47,6 +47,7 @@ BEGIN {
 	# Retain output compatible with previous "checksum" shell script
 	progname = "checksum"
 
+	arg_count = 0
 	only_alg = ""
 	distinfo = ""
 	exitcode = 0
@@ -57,6 +58,11 @@ BEGIN {
 		opt = ARGV[arg]
 		if (opt == "-a") {
 			only_alg = ARGV[++arg]
+		} else if (opt == "-I") {
+			infile = ARGV[++arg]
+			while (getline < infile) {
+				arg_list[arg_count++] = $0
+			}
 		} else if (opt == "-p") {
 			patch = 1
 		} else if (opt == "-s") {
@@ -93,7 +99,11 @@ BEGIN {
 	# in patch mode (-p).
 	#
 	while (arg < ARGC) {
-		distfile = ARGV[arg++]
+		arg_list[arg_count++] = ARGV[arg++]
+	}
+	i = 0
+	while (i < arg_count) {
+		distfile = arg_list[i++]
 		sfile = distfile
 		if (suffix) {
 			sfile = strip_suffix(sfile)
@@ -168,11 +178,29 @@ BEGIN {
 		}
 
 		#
+		# Due to command line argument limits we sometimes need to
+		# split commands up.  Store a count for each algorithm, which
+		# also serves as a way to iterate over all of the algorithms
+		# we've encountered.
+		#
+		if (!batch[algorithm]) {
+			batch[algorithm] = 0
+		}
+
+		#
 		# If not a patch file, then we're handling a distfile, where we
 		# want to build a list of input files to digest(1) so they can
 		# all be calculated in one go.
 		#
-		distsums[algorithm] = sprintf("%s %s", distsums[algorithm],
+		# Increase the batch number if over 64K.  This is well below the
+		# limits seen in the wild (e.g. NetBSD at 256K), but there are
+		# very minimal improvements above this threshold in testing.
+		#
+		b = batch[algorithm]
+		if (length(distsums[algorithm,b]) > 65536) {
+			batch[algorithm] = ++b
+		}
+		distsums[algorithm,b] = sprintf("%s %s", distsums[algorithm,b],
 		    distfiles[distfile])
 	}
 	close(distinfo)
@@ -182,23 +210,26 @@ BEGIN {
 	# pass them all to a single digest(1) command and parse the checksums
 	# to be compared against distinfo.
 	#
-	for (algorithm in distsums) {
-		cmd = sprintf("%s %s %s", DIGEST, algorithm,
-		    distsums[algorithm])
-		while ((cmd | getline) > 0) {
-			# Should be unnecessary, but just in case.  If we want
-			# to be really paranoid then test that $1 == algorithm.
-			if (NF != 4) {
-				continue
+	for (algorithm in batch) {
+		for (b = 0; b <= batch[algorithm]; b++) {
+			cmd = sprintf("%s %s %s", DIGEST, algorithm,
+			    distsums[algorithm,b])
+			while ((cmd | getline) > 0) {
+				# Should be unnecessary, but just in case.  If
+				# we want to be really paranoid then test that
+				# $1 == algorithm.
+				if (NF != 4) {
+					continue
+				}
+				# strip "(filename)" -> "filename"
+				distfile = substr($2, 2, length($2) - 2)
+				if (suffix) {
+					distfile = strip_suffix(distfile)
+				}
+				checksums[$1, distfile] = $4
 			}
-			# strip "(filename)" -> "filename"
-			distfile = substr($2, 2, length($2) - 2)
-			if (suffix) {
-				distfile = strip_suffix(distfile)
-			}
-			checksums[$1, distfile] = $4
+			close(cmd)
 		}
-		close(cmd)
 	}
 
 	#
