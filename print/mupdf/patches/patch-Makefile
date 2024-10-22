@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.1 2024/08/14 05:55:32 adam Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/10/22 09:34:44 leot Exp $
 
 - Install target cleanup
 - Also install muthreads and mupkcs7 libraries (needed by various tools)
 - Use sh instead of bash
 
---- Makefile.orig	2024-03-19 15:31:58.000000000 +0000
+--- Makefile.orig	2024-10-02 17:10:33.000000000 +0000
 +++ Makefile
-@@ -237,10 +237,10 @@ endif
+@@ -245,10 +245,10 @@ endif
  
  FONT_GEN := $(FONT_BIN:%=generated/%.c)
  
@@ -21,7 +21,7 @@ $NetBSD: patch-Makefile,v 1.1 2024/08/14 05:55:32 adam Exp $
  
  ifeq ($(HAVE_OBJCOPY),yes)
    MUPDF_OBJ += $(FONT_BIN:%=$(OUT)/%.o)
-@@ -465,55 +465,59 @@ tools: $(TOOL_APPS)
+@@ -474,51 +474,55 @@ tools: $(TOOL_APPS)
  apps: $(TOOL_APPS) $(VIEW_APPS)
  
  install-headers:
@@ -91,10 +91,6 @@ $NetBSD: patch-Makefile,v 1.1 2024/08/14 05:55:32 adam Exp $
 -	install -m 644 build/docs/html/_static/*.ico $(DESTDIR)$(docdir)/_static
 -	install -m 644 build/docs/html/_static/*.js $(DESTDIR)$(docdir)/_static
 -	install -m 644 build/docs/html/_static/*.png $(DESTDIR)$(docdir)/_static
--	install -m 644 build/docs/html/_static/*.svg $(DESTDIR)$(docdir)/_static
--	install -m 644 build/docs/html/_static/js/* $(DESTDIR)$(docdir)/_static/js
--	install -m 644 build/docs/html/_static/css/*.css $(DESTDIR)$(docdir)/_static/css
--	install -m 644 build/docs/html/_static/css/fonts/* $(DESTDIR)$(docdir)/_static/css/fonts
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_images
 +	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(docdir)/_static
@@ -109,14 +105,10 @@ $NetBSD: patch-Makefile,v 1.1 2024/08/14 05:55:32 adam Exp $
 +	${BSD_INSTALL_DATA} build/docs/html/_static/*.ico $(DESTDIR)$(docdir)/_static
 +	${BSD_INSTALL_DATA} build/docs/html/_static/*.js $(DESTDIR)$(docdir)/_static
 +	${BSD_INSTALL_DATA} build/docs/html/_static/*.png $(DESTDIR)$(docdir)/_static
-+	${BSD_INSTALL_DATA} build/docs/html/_static/*.svg $(DESTDIR)$(docdir)/_static
-+	${BSD_INSTALL_DATA} build/docs/html/_static/js/* $(DESTDIR)$(docdir)/_static/js
-+	${BSD_INSTALL_DATA} build/docs/html/_static/css/*.css $(DESTDIR)$(docdir)/_static/css
-+	${BSD_INSTALL_DATA} build/docs/html/_static/css/fonts/* $(DESTDIR)$(docdir)/_static/css/fonts
  
  tarball:
  	bash scripts/archive.sh
-@@ -638,23 +642,23 @@ ifneq ($(USE_SYSTEM_LIBS),yes)
+@@ -643,23 +647,23 @@ ifneq ($(USE_SYSTEM_LIBS),yes)
  endif
  
  install-shared-c: install-shared-check shared install-headers
