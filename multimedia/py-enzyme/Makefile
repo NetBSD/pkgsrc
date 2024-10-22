@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/01/04 20:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/22 07:55:12 adam Exp $
 
-DISTNAME=	enzyme-0.4.1
+DISTNAME=	enzyme-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/enzyme/}
 
@@ -11,7 +10,10 @@ HOMEPAGE=	https://github.com/Diaoul/enzyme
 COMMENT=	Python module to parse video metadata
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
