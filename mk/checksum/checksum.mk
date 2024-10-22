@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.32 2024/10/11 11:40:29 jperkin Exp $
+# $NetBSD: checksum.mk,v 1.33 2024/10/22 06:29:21 jperkin Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -39,11 +39,16 @@ checksum checksum-phase:
 	@${DO_NADA}
 .else
 checksum checksum-phase:
+.  if ${USE_TMPFILES} == yes
+	${_CKSUMFILES_INPUT::=${_CKSUMFILES_INPUT_cmd:sh}}
+.    for file in ${_CKSUMFILES}
+	@${ECHO} ${file} >> ${_CKSUMFILES_INPUT}
+.    endfor
 	${RUN} set -e;							\
 	case ${.TARGET:Q} in						\
 	*-phase)	${TEST} ! -f ${_COOKIE.checksum} || exit 0 ;;	\
 	esac;								\
-	if cd ${DISTDIR} && ${_CHECKSUM_CMD} ${DISTINFO_FILE:tA} ${_CKSUMFILES}; then \
+	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -I ${_CKSUMFILES_INPUT} ${DISTINFO_FILE:tA}; then \
 		${TRUE};						\
 	else								\
 		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
@@ -51,6 +56,23 @@ checksum checksum-phase:
 		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 		exit 1;							\
 	fi
+	@${RM} -f ${_CKSUMFILES_INPUT}
+.  else
+	${RUN} set -e;							\
+	case ${.TARGET:Q} in						\
+	*-phase)	${TEST} ! -f ${_COOKIE.checksum} || exit 0 ;;	\
+	esac;								\
+	cd ${DISTDIR};							\
+	if { ${_CKSUMFILES:@f@ ${ECHO} ${f};@} }			\
+	    | ${_CHECKSUM_CMD} -I ${_CKSUMFILES_INPUT} ${DISTINFO_FILE:tA}; then \
+		${TRUE};						\
+	else								\
+		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
+		${ERROR_MSG} "are up to date.  If you want to override this check, type"; \
+		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
+		exit 1;							\
+	fi
+.  endif
 .endif
 
 .if !empty(TOOLS_PLATFORM.mktool)
@@ -77,16 +99,16 @@ _DISTINFO_ARGS_COMMON+=	${_PATCH_DIGEST_ALGORITHMS:S/^/-p /}
 _DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/patch-*
 _DISTINFO_ARGS_PATCHSUM+=	${PATCHDIR}/emul-*-patch-*
 
-_DISTINFO_INPUTFILE=		${DISTINFO_FILE}.filelist
-
 distinfo:
-.for file in ${_CKSUMFILES}
-	@${ECHO} ${file} >> ${_DISTINFO_INPUTFILE}
-.endfor
+.  if ${USE_TMPFILES} == yes
+	${_CKSUMFILES_INPUT::=${_CKSUMFILES_INPUT_cmd:sh}}
+.    for file in ${_CKSUMFILES}
+	@${ECHO} ${file} >> ${_CKSUMFILES_INPUT}
+.    endfor
 	${RUN}set -e;							\
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
-		-I ${_DISTINFO_INPUTFILE} ${_DISTINFO_ARGS_PATCHSUM} > $$newfile;				\
+		-I ${_CKSUMFILES_INPUT} ${_DISTINFO_ARGS_PATCHSUM} > $$newfile; \
 	then								\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: unchanged.";			\
@@ -94,16 +116,32 @@ distinfo:
 		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
-	@rm ${_DISTINFO_INPUTFILE}
+	@${RM} -f ${_CKSUMFILES_INPUT}
+.  else
+	${RUN}set -e;							\
+	newfile=${DISTINFO_FILE}.$$$$;					\
+	if { ${_CKSUMFILES:@f@ ${ECHO} ${f};@} }	\
+	    | ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
+		-I ${_CKSUMFILES_INPUT} ${_DISTINFO_ARGS_PATCHSUM} > $$newfile; \
+	then								\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo: unchanged.";			\
+	else								\
+		${RM} -f ${DISTINFO_FILE};				\
+		${MV} -f $$newfile ${DISTINFO_FILE};			\
+	fi
+.  endif
 
 makesum:
-.for file in ${_CKSUMFILES}
-	@${ECHO} ${file} >> ${_DISTINFO_INPUTFILE}
-.endfor
+.  if ${USE_TMPFILES} == yes
+	${_CKSUMFILES_INPUT::=${_CKSUMFILES_INPUT_cmd:sh}}
+.    for file in ${_CKSUMFILES}
+	@${ECHO} ${file} >> ${_CKSUMFILES_INPUT}
+.    endfor
 	${RUN}set -e;							\
 	newfile=${DISTINFO_FILE}.$$$$;					\
 	if ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
-		-I ${_DISTINFO_INPUTFILE} > $$newfile;			\
+		-I ${_CKSUMFILES_INPUT} > $$newfile;			\
 	then								\
 		${RM} -f $$newfile;					\
 		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
@@ -111,7 +149,21 @@ makesum:
 		${RM} -f ${DISTINFO_FILE};				\
 		${MV} -f $$newfile ${DISTINFO_FILE};			\
 	fi
-	@rm ${_DISTINFO_INPUTFILE}
+	@${RM} -f ${_CKSUMFILES_INPUT}
+.  else
+	${RUN}set -e;							\
+	newfile=${DISTINFO_FILE}.$$$$;					\
+	if { ${_CKSUMFILES:@f@ ${ECHO} ${f};@} }			\
+	    | ${_DISTINFO_CMD} ${_DISTINFO_ARGS_COMMON}			\
+		-I ${_CKSUMFILES_INPUT} > $$newfile;			\
+	then								\
+		${RM} -f $$newfile;					\
+		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
+	else								\
+		${RM} -f ${DISTINFO_FILE};				\
+		${MV} -f $$newfile ${DISTINFO_FILE};			\
+	fi
+.  endif
 
 makepatchsum:
 	${RUN}set -e;							\

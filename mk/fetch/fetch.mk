@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.78 2024/10/14 08:02:40 jperkin Exp $
+# $NetBSD: fetch.mk,v 1.79 2024/10/22 06:29:21 jperkin Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -95,11 +95,25 @@ fetch: ${_FETCH_TARGETS}
 .  if !empty(_ALLFILES)
 do-fetch: ${_ALLFILES:S/^/${DISTDIR}\//}
 .    if ${FETCH_USING} == "mktool" && !empty(TOOLS_PLATFORM.mktool)
+.      if ${USE_TMPFILES} == yes
+	${_FETCHFILES_INPUT::=${_FETCHFILES_INPUT_cmd:sh}}
+.        for file in ${_ALLFILES}
+	${RUN}								\
+	unsorted_sites="${SITES.${file:T}}";				\
+	sites="${_ORDERED_SITES} ${_MASTER_SITE_BACKUP}";		\
+	${ECHO} ${file} ${DISTDIR} $$sites >>${_FETCHFILES_INPUT}
+.        endfor
+	@${TOOLS_PLATFORM.mktool} fetch -I ${_FETCHFILES_INPUT}		\
+		${_MKTOOL_FETCH_ARGS}
+	@${RM} -f ${_FETCHFILES_INPUT}
+.      else
 	@{ ${_ALLFILES:@file@						\
 		unsorted_sites="${SITES.${file:T}}";			\
 		sites="${_ORDERED_SITES} ${_MASTER_SITE_BACKUP}";	\
 		echo ${file} ${DISTDIR} $$sites;			\
-	@} } | ${TOOLS_PLATFORM.mktool} fetch -I - ${_MKTOOL_FETCH_ARGS}
+	@} } | ${TOOLS_PLATFORM.mktool} fetch -I ${_FETCHFILES_INPUT}	\
+		${_MKTOOL_FETCH_ARGS}
+.      endif
 .    else
 	@${DO_NADA}
 .    endif

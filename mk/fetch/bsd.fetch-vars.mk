@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.28 2024/10/11 12:53:13 jperkin Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.29 2024/10/22 06:29:21 jperkin Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -116,6 +116,18 @@ _FETCH_TOOLS.fetch=		fetch
 _FETCH_TOOLS.wget=		wget
 _FETCH_TOOLS.curl=		curl
 _FETCH_TOOLS.manual=		false
+
+# If a package has a number of distfiles that may overflow ARG_MAX then use
+# temporary files, otherwise use pipes.  The temporary files need to live in
+# a known directory and cannot use WRKDIR for example because it is not
+# guaranteed to exist when the target is called.
+#
+.if ${USE_TMPFILES} == yes
+_FETCHFILES_INPUT_cmd=	${MKTEMP} ${TMPDIR:U/tmp:Q}/pkgsrc.fetchfiles.XXXXXXXX
+USE_TOOLS+=		mktemp:bootstrap
+.else
+_FETCHFILES_INPUT=	/dev/stdin
+.endif
 
 .if !empty(_ALLFILES)
 USE_TOOLS+=	${_FETCH_TOOLS.${FETCH_USING}:C/$/:bootstrap/}
