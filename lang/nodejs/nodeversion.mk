@@ -1,4 +1,4 @@
-# $NetBSD: nodeversion.mk,v 1.18 2024/05/22 05:07:10 triaxx Exp $
+# $NetBSD: nodeversion.mk,v 1.19 2024/10/22 08:30:42 adam Exp $
 
 # This file determines which nodejs version is used as a dependency for
 # a package.
@@ -44,11 +44,9 @@ NODEJS_NODEVERSION_MK=	# defined
 
 # derive a node version from the package name if possible
 # optionally handled quoted package names
-.if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mnode[0-9]-*) || \
-    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-node[0-9]-*)
+.if !empty(PKGNAME_REQD:Mnode[0-9]-*) || !empty(PKGNAME_REQD:M*-node[0-9]-*)
 NODE_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)node([0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mnode[0-9]-*) || \
-    defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-node[0-9]-*)
+.elif !empty(PKGNAME_OLD:Mnode[0-9]-*) || !empty(PKGNAME_OLD:M*-node[0-9]-*)
 NODE_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)node([0-9])-.*/\2/}
 .endif
 
