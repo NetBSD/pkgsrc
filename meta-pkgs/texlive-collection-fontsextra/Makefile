@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2024/03/21 20:00:52 markd Exp $
+# $NetBSD: Makefile,v 1.36 2024/10/22 21:08:19 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2024pre1
+PKGNAME=	texlive-${DISTNAME}-2024pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	70633
+TEXLIVE_REV=	72535
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.tug.org/texlive/
@@ -45,7 +45,7 @@ DEPENDS+=	tex-auncial-new-[0-9]*:../../fonts/tex-auncial-new
 DEPENDS+=	tex-aurical-[0-9]*:../../fonts/tex-aurical
 DEPENDS+=	tex-b1encoding-[0-9]*:../../fonts/tex-b1encoding
 DEPENDS+=	tex-barcodes-[0-9]*:../../fonts/tex-barcodes
-DEPENDS+=	tex-baskervald-[0-9]*:../../fonts/tex-baskervald
+DEPENDS+=	tex-baskervaldadf-[0-9]*:../../fonts/tex-baskervaldadf
 DEPENDS+=	tex-baskervaldx-[0-9]*:../../fonts/tex-baskervaldx
 # depend baskervillef
 DEPENDS+=	tex-bbding-[0-9]*:../../fonts/tex-bbding
@@ -62,6 +62,7 @@ DEPENDS+=	tex-bguq-[0-9]*:../../fonts/tex-bguq
 # depend bitter
 DEPENDS+=	tex-blacklettert1-[0-9]*:../../fonts/tex-blacklettert1
 DEPENDS+=	tex-boisik-[0-9]*:../../fonts/tex-boisik
+# depend bonum-otf
 DEPENDS+=	tex-bookhands-[0-9]*:../../fonts/tex-bookhands
 DEPENDS+=	tex-boondox-[0-9]*:../../fonts/tex-boondox
 DEPENDS+=	tex-braille-[0-9]*:../../fonts/tex-braille
@@ -74,6 +75,7 @@ DEPENDS+=	tex-cantarell-[0-9]*:../../fonts/tex-cantarell
 DEPENDS+=	tex-carlito-[0-9]*:../../fonts/tex-carlito
 DEPENDS+=	tex-carolmin-ps-[0-9]*:../../fonts/tex-carolmin-ps
 # depend cascadia-code
+# depend cascadiamono-otf
 DEPENDS+=	tex-ccicons-[0-9]*:../../fonts/tex-ccicons
 DEPENDS+=	tex-cfr-initials-[0-9]*:../../fonts/tex-cfr-initials
 DEPENDS+=	tex-cfr-lm-[0-9]*:../../fonts/tex-cfr-lm
@@ -112,6 +114,7 @@ DEPENDS+=	tex-courier-scaled-[0-9]*:../../fonts/tex-courier-scaled
 DEPENDS+=	tex-cryst-[0-9]*:../../fonts/tex-cryst
 # depend cuprum
 DEPENDS+=	tex-cyklop-[0-9]*:../../fonts/tex-cyklop
+# depend cyrillic-modern
 DEPENDS+=	tex-dancers-[0-9]*:../../fonts/tex-dancers
 DEPENDS+=	tex-dantelogo-[0-9]*:../../fonts/tex-dantelogo
 DEPENDS+=	tex-dejavu-[0-9]*:../../fonts/tex-dejavu
@@ -138,7 +141,7 @@ DEPENDS+=	tex-eco-[0-9]*:../../fonts/tex-eco
 DEPENDS+=	tex-eiad-[0-9]*:../../fonts/tex-eiad
 DEPENDS+=	tex-eiad-ltx-[0-9]*:../../fonts/tex-eiad-ltx
 # depend ektype-tanka
-DEPENDS+=	tex-electrum-[0-9]*:../../fonts/tex-electrum
+DEPENDS+=	tex-electrumadf-[0-9]*:../../fonts/tex-electrumadf
 DEPENDS+=	tex-elvish-[0-9]*:../../fonts/tex-elvish
 DEPENDS+=	tex-epigrafica-[0-9]*:../../fonts/tex-epigrafica
 DEPENDS+=	tex-epsdice-[0-9]*:../../fonts/tex-epsdice
@@ -165,6 +168,7 @@ DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-fontawesome5-[0-9]*:../../fonts/tex-fontawesome5
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
+# depend fontscripts
 # depend forum
 DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
@@ -174,6 +178,7 @@ DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
 DEPENDS+=	tex-garamond-libre-[0-9]*:../../fonts/tex-garamond-libre
 DEPENDS+=	tex-garamond-math-[0-9]*:../../fonts/tex-garamond-math
 # depend gelasio
+# depend gelasiomath
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
 DEPENDS+=	tex-gfsartemisia-[0-9]*:../../fonts/tex-gfsartemisia
@@ -222,7 +227,7 @@ DEPENDS+=	tex-kpfonts-[0-9]*:../../fonts/tex-kpfonts
 # depend kpfonts-otf
 DEPENDS+=	tex-kurier-[0-9]*:../../fonts/tex-kurier
 DEPENDS+=	tex-lato-[0-9]*:../../fonts/tex-lato
-# depend lato-math
+# depend lete-sans-math
 # depend lexend
 DEPENDS+=	tex-lfb-[0-9]*:../../fonts/tex-lfb
 DEPENDS+=	tex-libertine-[0-9]*:../../fonts/tex-libertine
@@ -241,6 +246,7 @@ DEPENDS+=	tex-lineara-[0-9]*:../../fonts/tex-linearA
 # depend linguisticspro
 DEPENDS+=	tex-lobster2-[0-9]*:../../fonts/tex-lobster2
 # depend logix
+# depend luwiantype
 DEPENDS+=	tex-lxfonts-[0-9]*:../../fonts/tex-lxfonts
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
 # depend magra
@@ -252,6 +258,7 @@ DEPENDS+=	tex-mdputu-[0-9]*:../../fonts/tex-mdputu
 DEPENDS+=	tex-mdsymbol-[0-9]*:../../fonts/tex-mdsymbol
 DEPENDS+=	tex-merriweather-[0-9]*:../../fonts/tex-merriweather
 # depend metsymb
+# depend mfb-oldstyle
 # depend miama
 DEPENDS+=	tex-mintspirit-[0-9]*:../../fonts/tex-mintspirit
 # depend missaali
@@ -307,9 +314,10 @@ DEPENDS+=	tex-raleway-[0-9]*:../../fonts/tex-raleway
 DEPENDS+=	tex-recycle-[0-9]*:../../fonts/tex-recycle
 # depend rit-fonts
 DEPENDS+=	tex-roboto-[0-9]*:../../fonts/tex-roboto
-DEPENDS+=	tex-romande-[0-9]*:../../fonts/tex-romande
+DEPENDS+=	tex-romandeadf-[0-9]*:../../fonts/tex-romandeadf
 # depend rosario
 DEPENDS+=	tex-rsfso-[0-9]*:../../fonts/tex-rsfso
+# depend ruscap
 DEPENDS+=	tex-sansmathaccent-[0-9]*:../../fonts/tex-sansmathaccent
 DEPENDS+=	tex-sansmathfonts-[0-9]*:../../fonts/tex-sansmathfonts
 DEPENDS+=	tex-sauter-[0-9]*:../../fonts/tex-sauter
