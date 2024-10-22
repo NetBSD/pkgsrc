@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/22 20:50:11 markd Exp $
+share/texmf-dist/doc/fonts/electrumadf/COPYING
+share/texmf-dist/doc/fonts/electrumadf/NOTICE.txt
+share/texmf-dist/doc/fonts/electrumadf/README.md
+share/texmf-dist/doc/fonts/electrumadf/electrumadf-tables.pdf
+share/texmf-dist/doc/fonts/electrumadf/electrumadf-tables.tex
+share/texmf-dist/doc/fonts/electrumadf/electrumadf.pdf
+share/texmf-dist/doc/fonts/electrumadf/manifest.txt
+share/texmf-dist/doc/fonts/electrumadf/reglyph-yes.tex
+share/texmf-dist/doc/fonts/electrumadf/yes-drv.tex
+share/texmf-dist/doc/fonts/electrumadf/yes-map.tex
