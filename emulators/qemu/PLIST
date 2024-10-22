@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2024/10/13 18:02:44 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.92 2024/10/22 07:24:17 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -69,13 +69,13 @@ bin/qemu-system-tricore
 bin/qemu-system-x86_64
 bin/qemu-system-xtensa
 bin/qemu-system-xtensaeb
+${PLIST.vmsr-helper}bin/qemu-vmsr-helper
 ${PLIST.x86_64}bin/qemu-x86_64
 ${PLIST.xtensa}bin/qemu-xtensa
 ${PLIST.xtensaeb}bin/qemu-xtensaeb
 ${PLIST.plugins}include/qemu-plugin.h
 ${PLIST.bridge-helper}libexec/qemu-bridge-helper
 ${PLIST.virtfs-proxy-helper}libexec/virtfs-proxy-helper
-${PLIST.vmsr-helper}bin/qemu-vmsr-helper
 man/man1/qemu-img.1
 man/man1/qemu-storage-daemon.1
 man/man1/qemu.1
