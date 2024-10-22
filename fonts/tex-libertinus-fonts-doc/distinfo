@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+$NetBSD: distinfo,v 1.2 2024/10/22 22:55:33 markd Exp $
 
-BLAKE2s (libertinus-fonts.doc.r57948.tar.xz) = 6643738a5d956f38a0c45c349124ae9e5c0ddce351daa93cd9ab729b8746b79c
-SHA512 (libertinus-fonts.doc.r57948.tar.xz) = 410edfda953b321c9fa53e99854eea206177e4486c0fdd6ae3cc20eddb31111f28f17dfd725c5f2dc573d82ba5daa1f75c544709accae84292cff45d52b10c18
-Size (libertinus-fonts.doc.r57948.tar.xz) = 553012 bytes
+BLAKE2s (libertinus-fonts.doc.r72484.tar.xz) = aa1cc9848fc411f6a60a8eddd77c04164abcbae2666037fed2c74aa349e99ef7
+SHA512 (libertinus-fonts.doc.r72484.tar.xz) = 77d107e0e6adcadf82b8f07f3753e60066ded292200316639e6185f995bf83090ecd61ea17139d10856041f1e5624d9bba8fc1eb361e75066f6c6f16ad1a7cf8
+Size (libertinus-fonts.doc.r72484.tar.xz) = 488236 bytes
