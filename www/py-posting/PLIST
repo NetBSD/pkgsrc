@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/19 21:41:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/22 18:37:56 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -58,6 +58,9 @@ ${PYSITELIB}/posting/request_headers.pyo
 ${PYSITELIB}/posting/save_request.py
 ${PYSITELIB}/posting/save_request.pyc
 ${PYSITELIB}/posting/save_request.pyo
+${PYSITELIB}/posting/scripts.py
+${PYSITELIB}/posting/scripts.pyc
+${PYSITELIB}/posting/scripts.pyo
 ${PYSITELIB}/posting/suggesters.py
 ${PYSITELIB}/posting/suggesters.pyc
 ${PYSITELIB}/posting/suggesters.pyo
@@ -133,6 +136,9 @@ ${PYSITELIB}/posting/widgets/request/request_metadata.pyo
 ${PYSITELIB}/posting/widgets/request/request_options.py
 ${PYSITELIB}/posting/widgets/request/request_options.pyc
 ${PYSITELIB}/posting/widgets/request/request_options.pyo
+${PYSITELIB}/posting/widgets/request/request_scripts.py
+${PYSITELIB}/posting/widgets/request/request_scripts.pyc
+${PYSITELIB}/posting/widgets/request/request_scripts.pyo
 ${PYSITELIB}/posting/widgets/request/url_bar.py
 ${PYSITELIB}/posting/widgets/request/url_bar.pyc
 ${PYSITELIB}/posting/widgets/request/url_bar.pyo
@@ -151,6 +157,12 @@ ${PYSITELIB}/posting/widgets/response/response_headers.pyo
 ${PYSITELIB}/posting/widgets/response/response_trace.py
 ${PYSITELIB}/posting/widgets/response/response_trace.pyc
 ${PYSITELIB}/posting/widgets/response/response_trace.pyo
+${PYSITELIB}/posting/widgets/response/script_output.py
+${PYSITELIB}/posting/widgets/response/script_output.pyc
+${PYSITELIB}/posting/widgets/response/script_output.pyo
+${PYSITELIB}/posting/widgets/rich_log.py
+${PYSITELIB}/posting/widgets/rich_log.pyc
+${PYSITELIB}/posting/widgets/rich_log.pyo
 ${PYSITELIB}/posting/widgets/select.py
 ${PYSITELIB}/posting/widgets/select.pyc
 ${PYSITELIB}/posting/widgets/select.pyo
