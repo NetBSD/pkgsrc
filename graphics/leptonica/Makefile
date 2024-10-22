@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/08/25 06:18:51 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/10/22 18:37:59 adam Exp $
 
-DISTNAME=	leptonica-1.84.1
-PKGREVISION=	1
+DISTNAME=	leptonica-1.85.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=danbloomberg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,12 +10,11 @@ HOMEPAGE=	http://www.leptonica.org/
 COMMENT=	Software for image processing and image analysis applications
 LICENSE=	2-clause-bsd
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_CC_FEATURES=	c11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_PROG=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
-
-USE_CC_FEATURES=	c17
 
 # Silence console messages
 CPPFLAGS+=		-DNO_CONSOLE_IO=1
