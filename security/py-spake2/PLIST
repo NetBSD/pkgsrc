@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/05 10:59:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/22 12:40:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -40,9 +40,6 @@ ${PYSITELIB}/spake2/parameters/i3072.pyo
 ${PYSITELIB}/spake2/params.py
 ${PYSITELIB}/spake2/params.pyc
 ${PYSITELIB}/spake2/params.pyo
-${PYSITELIB}/spake2/six.py
-${PYSITELIB}/spake2/six.pyc
-${PYSITELIB}/spake2/six.pyo
 ${PYSITELIB}/spake2/spake2.py
 ${PYSITELIB}/spake2/spake2.pyc
 ${PYSITELIB}/spake2/spake2.pyo
