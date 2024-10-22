@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/22 20:53:52 markd Exp $
+
+BLAKE2s (romandeadf.r72484.tar.xz) = 23f90d18507be54814184e2bbb9ae439894d6ae9e82f1ee8061d3723b5f14030
+SHA512 (romandeadf.r72484.tar.xz) = c7562b20f641b961a8b65d3bd54c5347668bd510172238d7f1465e4ef8d391fe5ed4eaf0d8e4882d0b971869b97d7218a323d2950876efec70e5b53e3e1ce71a
+Size (romandeadf.r72484.tar.xz) = 472312 bytes

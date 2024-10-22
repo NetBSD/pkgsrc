@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/22 20:53:52 markd Exp $
+share/texmf-dist/doc/fonts/romandeadf/COPYING
+share/texmf-dist/doc/fonts/romandeadf/NOTICE.txt
+share/texmf-dist/doc/fonts/romandeadf/README.md
+share/texmf-dist/doc/fonts/romandeadf/manifest.txt
+share/texmf-dist/doc/fonts/romandeadf/reglyph-yrd.tex
+share/texmf-dist/doc/fonts/romandeadf/romande-tables.pdf
+share/texmf-dist/doc/fonts/romandeadf/romande-tables.tex
+share/texmf-dist/doc/fonts/romandeadf/romandeadf-build.pdf
+share/texmf-dist/doc/fonts/romandeadf/romandeadf-example.pdf
+share/texmf-dist/doc/fonts/romandeadf/romandeadf-example.tex
+share/texmf-dist/doc/fonts/romandeadf/romandeadf-tables.tex
+share/texmf-dist/doc/fonts/romandeadf/romandeadf.pdf
+share/texmf-dist/doc/fonts/romandeadf/yrd-drv.tex
+share/texmf-dist/doc/fonts/romandeadf/yrd-map.tex
