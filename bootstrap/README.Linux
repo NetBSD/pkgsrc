@@ -1,4 +1,4 @@
-$NetBSD: README.Linux,v 1.14 2022/06/15 20:17:32 schmonz Exp $
+$NetBSD: README.Linux,v 1.15 2024/10/22 11:54:53 nia Exp $
 
 # General
 
@@ -40,8 +40,8 @@ such as GNU's:
 For Debian and derivatives such as Ubuntu the following packages should be
 installed prior to attempting bootstrap:
 
-apt-get install cvs libncurses5 libncurses5-dev gcc g++ zlib1g-dev \
-			zlib1g libssl-dev libudev-dev
+apt install cvs libncurses libncurses-dev gcc g++ zlib1g-dev \
+		zlib1g libssl-dev libudev-dev gawk
 
 # RedHat and derivatives
 
