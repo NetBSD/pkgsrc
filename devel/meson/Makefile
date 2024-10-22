@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2024/09/22 15:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2024/10/22 09:42:05 wiz Exp $
 
-DISTNAME=	meson-1.5.2
+DISTNAME=	meson-1.6.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/meson/}
 
@@ -15,8 +15,6 @@ DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
 CONFLICTS+=	py[0-9]*-meson-[0-9]*
 SUPERSEDES+=	py[0-9]*-meson-[0-9]*
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	c c++ # c++ for tests
 # XXX only needed for tests, but itstool:test didn't work
@@ -38,9 +36,9 @@ REPLACE_PYTHON+=	test\ cases/common/14\ configure\ file/test.py.in
 REPLACE_PYTHON+=	test\ cases/windows/8\ find\ program/test-script
 REPLACE_PYTHON+=	tools/*.py
 
-# Total passed tests:  448
-# Total failed tests:  39
-# Total skipped tests: 95
+# Total passed tests:  476
+# Total failed tests:  38
+# Total skipped tests: 101
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} run_tests.py
 
