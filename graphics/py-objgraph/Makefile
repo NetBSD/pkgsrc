@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/03/23 16:36:15 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/22 13:13:46 adam Exp $
 
-DISTNAME=	objgraph-3.6.1
+DISTNAME=	objgraph-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/objgraph/}
@@ -16,7 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+do-test:
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest tests.py
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
