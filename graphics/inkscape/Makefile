@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2024/10/22 09:00:10 wiz Exp $
+# $NetBSD: Makefile,v 1.295 2024/10/22 09:07:25 adam Exp $
 
 DISTNAME=	inkscape-1.4
 CATEGORIES=	graphics
@@ -11,16 +11,16 @@ COMMENT=	Scalable Vector Graphics (SVG) editor
 LICENSE=	gnu-gpl-v2
 
 .if !exists(/usr/bin/iconv)
-TOOL_DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
+TOOL_DEPENDS+=	libiconv-[0-9]*:../../converters/libiconv
 .endif
-DEPENDS+=		adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
-TOOL_DEPENDS+=		${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-# for inkex.py, needed by most python extension scripts
-DEPENDS+=		${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=		${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
-DEPENDS+=		${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
+DEPENDS+=	adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+# for inkex.py, needed by most Python extension scripts
+DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-scour-[0-9]*:../../graphics/py-scour
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 
-WRKSRC=		${WRKDIR}/inkscape-1.4_2024-10-09_e7c3feb100
+WRKSRC=		${WRKDIR}/${DISTNAME}_2024-10-09_e7c3feb100
 
 CPPFLAGS.NetBSD+=	-Urounddown
 CPPFLAGS.NetBSD+=	-Uroundup
@@ -28,8 +28,8 @@ CPPFLAGS.NetBSD+=	-Uroundup
 # This should be resolved in CMakeLists.txt.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/inkscape
 
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 # GCC 7 is not good enough. It chokes on ${WRKSRC}/src/object/sp-factory.cpp:
@@ -41,8 +41,7 @@ USE_PKGLOCALEDIR=	yes
 # ${WRKSRC}/src/ui/tools/booleans-subitems.cpp.
 GCC_REQD+=		9
 # GNU make (gmake) is required for handling whitespace in filename.
-USE_TOOLS+=		gmake
-USE_TOOLS+=		msgfmt msgmerge perl pkg-config
+USE_TOOLS+=		gmake msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
 
