@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/10/09 13:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/22 07:56:40 wiz Exp $
 
-DISTNAME=	markupsafe-3.0.1
+DISTNAME=	markupsafe-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/MarkupSafe/}
