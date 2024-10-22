@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/02/03 02:48:14 markd Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/22 21:25:48 markd Exp $
 
 DISTNAME=	baskervaldx
-PKGNAME=	tex-${DISTNAME}-1.077
-TEXLIVE_REV=	69273
+PKGNAME=	tex-${DISTNAME}-1.078
+TEXLIVE_REV=	71145
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/baskervaldx
