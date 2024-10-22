@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/03 02:48:14 markd Exp $
+$NetBSD: distinfo,v 1.9 2024/10/22 21:25:48 markd Exp $
 
-BLAKE2s (baskervaldx.r69273.tar.xz) = f6840f7fdfa1cfa68b3007fce51f6a4e9d0fde7982f77862902e00740f4dc809
-SHA512 (baskervaldx.r69273.tar.xz) = f78b61573fc99c6696dd9aac4f108f473996c5e67223e721db88f355b2e55a68f2b8a21c7bf994f2ee36a8fa465b55b970d65407b1ecfe1ffd7e00061bb70753
-Size (baskervaldx.r69273.tar.xz) = 679616 bytes
+BLAKE2s (baskervaldx.r71145.tar.xz) = 68a9782f40f97efb0374c875104bf427a189dc7c9cca5297b3a57977f9a4cb9b
+SHA512 (baskervaldx.r71145.tar.xz) = 8ef914386a6aed11cec27d54020a6f2161f4398cc4b30e6b1095d8800b10d6ceae97bd8e8bd9b8e9b820b121cc19e17c2eb12ff7c17c4a6f62a4f53b5c4d6405
+Size (baskervaldx.r71145.tar.xz) = 679904 bytes
