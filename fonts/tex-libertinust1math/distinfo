@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/04 10:08:44 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/10/22 23:00:24 markd Exp $
 
-BLAKE2s (libertinust1math.r69440.tar.xz) = 11d400035255095c48495750ab5bb3cfd45d8ec34477bcb1e473b75f68c918c7
-SHA512 (libertinust1math.r69440.tar.xz) = ad93607e4accadbc0a429bab7d6bb8ba964a98324a9c65fc1993db025a728dfb8b3e48e3d67552a88bbecad247db573d1b1f7386e1aacce7954b00ace4feacb3
-Size (libertinust1math.r69440.tar.xz) = 1248764 bytes
+BLAKE2s (libertinust1math.r71428.tar.xz) = 4e0cfcb185bf9c05344bfe716c4533373421ce68bd093d7f4c7d5c4293a6a643
+SHA512 (libertinust1math.r71428.tar.xz) = 214589d198031ea0d9cc71b509f9c1e5f6b19984176d1d7952d57346f67a4ba88aed932e5838a57d874d8bbbff0daa296af875969b5c0ffd2c7a6f3830121d5a
+Size (libertinust1math.r71428.tar.xz) = 1248816 bytes

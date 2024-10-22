@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/02/04 10:08:45 markd Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/22 23:00:24 markd Exp $
 
 DISTNAME=	libertinust1math.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.0.4
-TEXLIVE_REV=	69440
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0.6
+TEXLIVE_REV=	71428
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/libertinust1math
