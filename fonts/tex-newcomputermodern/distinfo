@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/02/14 19:48:10 markd Exp $
+$NetBSD: distinfo,v 1.3 2024/10/22 22:40:10 markd Exp $
 
-BLAKE2s (newcomputermodern.r69379.tar.xz) = 1f6389ccbcafb705535877cf9800141344b46635dcb51189152b48eda69987f9
-SHA512 (newcomputermodern.r69379.tar.xz) = 140226a635763be7a407910980664b38323dc3634980452fe9eb4395194e7bdc0144715f13d79b9f108630aebd393073135328c98fa34310e3b8d4150e2a5fea
-Size (newcomputermodern.r69379.tar.xz) = 6250664 bytes
+BLAKE2s (newcomputermodern.r72225.tar.xz) = fd9f2702fba168019c159440826694b995800cfa78796ab23b47acc73ee8bb6b
+SHA512 (newcomputermodern.r72225.tar.xz) = 04ad83bf9ab93abbb6eb9fd6d6ecad166b35c846f113a80c7e0dca2abe35b45c8b408e8d7cb75bcf2d43e3702dde617f5b4b17916e0fb50eb458c61c66f10b5e
+Size (newcomputermodern.r72225.tar.xz) = 7070296 bytes
