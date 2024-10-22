@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/22 22:58:03 markd Exp $
 
 DISTNAME=	libertinus-type1.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2022
-TEXLIVE_REV=	67450
+PKGNAME=	tex-${DISTNAME:S/./-/}-2024
+TEXLIVE_REV=	72354
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/libertinus-type1
