@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/22 20:46:46 markd Exp $
+
+BLAKE2s (baskervaldadf.r72484.tar.xz) = 2548329ab254182df7289849a2c27bbf61c8abfb1df56d5ab1bef29434608be6
+SHA512 (baskervaldadf.r72484.tar.xz) = 4bff5a91dd051b5b1468e192a0139357699e3c690c791ef8e9ffaff4a0534622d75b3d731b27c2501f6f0cd38ecaaa735ef4a7263e1a0e482eaa300ad39d0abd
+Size (baskervaldadf.r72484.tar.xz) = 421520 bytes
