@@ -1,20 +1,20 @@
-$NetBSD: patch-ba,v 1.3 2021/07/01 07:23:00 wiz Exp $
+$NetBSD: patch-ba,v 1.4 2024/10/22 12:52:02 ryoon Exp $
 
 pthread_t may be 64-bit, avoid casting it.
 https://bugzilla.mozilla.org/show_bug.cgi?id=1718835
 
---- nsprpub/pr/include/private/pprthred.h.orig	2009-11-02 22:43:08.000000000 +0100
+--- nspr/pr/include/private/pprthred.h.orig	2024-10-21 11:31:57.000000000 +0000
 +++ nspr/pr/include/private/pprthred.h
-@@ -51,6 +51,8 @@
- #include <os2.h>
- #endif
+@@ -12,6 +12,8 @@
+ */
+ #include "nspr.h"
  
 +#include <pthread.h>
 +
  PR_BEGIN_EXTERN_C
  
  /*---------------------------------------------------------------------------
-@@ -91,7 +93,7 @@ NSPR_API(void) PR_DetachThread(void);
+@@ -52,7 +54,7 @@ NSPR_API(void) PR_DetachThread(void);
  ** Get the id of the named thread. Each thread is assigned a unique id
  ** when it is created or attached.
  */
