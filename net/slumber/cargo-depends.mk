@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.23 2024/10/13 20:21:34 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.24 2024/10/22 18:59:42 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -8,7 +8,7 @@ CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.18
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
 CARGO_CRATE_DEPENDS+=	anstream-0.6.14
-CARGO_CRATE_DEPENDS+=	anstyle-1.0.7
+CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.4
 CARGO_CRATE_DEPENDS+=	anstyle-query-1.0.3
 CARGO_CRATE_DEPENDS+=	anstyle-wincon-3.0.3
@@ -33,9 +33,10 @@ CARGO_CRATE_DEPENDS+=	castaway-0.2.3
 CARGO_CRATE_DEPENDS+=	cc-1.0.98
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.38
-CARGO_CRATE_DEPENDS+=	clap-4.5.11
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.11
-CARGO_CRATE_DEPENDS+=	clap_derive-4.5.11
+CARGO_CRATE_DEPENDS+=	clap-4.5.18
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.18
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.29
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.0
 CARGO_CRATE_DEPENDS+=	cli-clipboard-0.4.0
 CARGO_CRATE_DEPENDS+=	clipboard-win-4.5.0
@@ -107,6 +108,7 @@ CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
 CARGO_CRATE_DEPENDS+=	instability-0.3.2
 CARGO_CRATE_DEPENDS+=	inventory-0.3.15
 CARGO_CRATE_DEPENDS+=	ipnet-2.9.0
+CARGO_CRATE_DEPENDS+=	is_executable-1.0.1
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.0
 CARGO_CRATE_DEPENDS+=	itertools-0.12.1
 CARGO_CRATE_DEPENDS+=	itertools-0.13.0
@@ -221,6 +223,7 @@ CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.7
 CARGO_CRATE_DEPENDS+=	shell-words-1.1.0
 CARGO_CRATE_DEPENDS+=	shellish_parse-2.2.0
+CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.2
