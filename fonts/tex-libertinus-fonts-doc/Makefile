@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2023/10/31 23:20:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2024/10/22 22:55:33 markd Exp $
 
 DISTNAME=	libertinus-fonts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-7.040
-TEXLIVE_REV=	57948
+PKGNAME=	tex-${DISTNAME:S/./-/}-7.051
+TEXLIVE_REV=	72484
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/libertinus-fonts
