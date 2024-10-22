@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6448 2024/10/22 08:04:40 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6449 2024/10/22 08:05:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9745,5 +9745,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-canvasapi to 3.3.0 [adam 2024-10-22]
 	Updated multimedia/py-enzyme to 0.5.2 [adam 2024-10-22]
 	Updated textproc/py-markupsafe to 3.0.2 [wiz 2024-10-22]
-	Updated textproc/py-orjson to 3.10.9nb1 [wiz 2024-10-22]
-	Updated graphics/py-pillow_heif to 0.20.0nb1 [wiz 2024-10-22]
+	Updated textproc/py-orjson to 3.10.9 [wiz 2024-10-22]
+	Updated graphics/py-pillow_heif to 0.20.0 [wiz 2024-10-22]
