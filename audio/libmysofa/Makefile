@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/25 06:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/10/22 07:46:11 wiz Exp $
 
-DISTNAME=	libmysofa-1.3.2
+DISTNAME=	libmysofa-1.3.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hoene/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -18,10 +18,6 @@ USE_TOOLS+=	pkg-config
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 
 PKGCONFIG_OVERRIDE+=	libmysofa.pc.cmake
-
-# 16 test failures as of 1.1
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ctest
 
 .include "../../devel/cmake/build.mk"
 # for tests
