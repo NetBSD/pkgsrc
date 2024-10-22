@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/21 08:40:21 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/10/22 07:50:29 adam Exp $
 
-DISTNAME=	canvasapi-3.2.0
+DISTNAME=	canvasapi-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/canvasapi/}
@@ -13,8 +13,8 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_LANGUAGES=	# none
 
