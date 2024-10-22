@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:01:15 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/10/22 07:55:12 adam Exp $
 
-BLAKE2s (enzyme-0.4.1.tar.gz) = 379fac5472396f5bc094fa82a1faa687ceb21ae58234238de7408662ae8dc246
-SHA512 (enzyme-0.4.1.tar.gz) = 62a85c076a7eb320249a507dcc9dd26572e3a9b9643e0a960ed114a80c75213e6e5028a726fbcdd0c2c46c53af980a69828a54a66af9a17af3210273376395b3
-Size (enzyme-0.4.1.tar.gz) = 47953 bytes
+BLAKE2s (enzyme-0.5.2.tar.gz) = 62234c888ceb42adf1c146215fe4d378e54b192c787fde5a4d319587f927b413
+SHA512 (enzyme-0.5.2.tar.gz) = f85d5ee536f2a60d401bc57640b6c989ec94b325dcc6b2a70c27deab2b7336b0fd6cdd3d93790128d6fb3fa72a783dd7814da8ca3665da19593c065af2b07131
+Size (enzyme-0.5.2.tar.gz) = 50543 bytes
