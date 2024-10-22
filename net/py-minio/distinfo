@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2024/08/20 14:13:50 adam Exp $
+$NetBSD: distinfo,v 1.25 2024/10/22 13:16:07 adam Exp $
 
-BLAKE2s (minio-7.2.8.tar.gz) = 5dffd97f833c3f4e14981365cb17cbba64e61346951c9ee9afa41bdfcc6f4e58
-SHA512 (minio-7.2.8.tar.gz) = d1955b72e4896b0fc7e8f825f98450411305299f6b3bd0cec7e63080010602bd105f1f67b8150d8e755e69d00ddc2cdd8ebc0693140f2d527dc259be37d92dc9
-Size (minio-7.2.8.tar.gz) = 135078 bytes
+BLAKE2s (minio-7.2.9.tar.gz) = 859120b9f7e90be4341a7f9cde837551b1c5976ba110656020a0393232235793
+SHA512 (minio-7.2.9.tar.gz) = ab565423917d87763109dea74a51ba397bf6b42a9b203db1eee839a2b1b73931838dd05788fff562dc91f28e8e67e2a6db008278f1ca5d400841ea8173dbe7f1
+Size (minio-7.2.9.tar.gz) = 135231 bytes
