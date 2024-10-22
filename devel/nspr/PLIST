@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2023/06/27 10:44:01 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/10/22 12:52:02 ryoon Exp $
 ${PLIST.native}bin/compile-et.pl
 bin/nspr-config
 ${PLIST.native}bin/prerr.properties
 include/nspr/md/_aix32.cfg
 include/nspr/md/_aix64.cfg
-include/nspr/md/_bsdi.cfg
 include/nspr/md/_darwin.cfg
 include/nspr/md/_freebsd.cfg
 include/nspr/md/_hpux32.cfg
@@ -13,13 +12,9 @@ include/nspr/md/_linux.cfg
 include/nspr/md/_netbsd.cfg
 include/nspr/md/_nto.cfg
 include/nspr/md/_openbsd.cfg
-include/nspr/md/_os2.cfg
 include/nspr/md/_qnx.cfg
 include/nspr/md/_riscos.cfg
-include/nspr/md/_scoos.cfg
 include/nspr/md/_solaris.cfg
-include/nspr/md/_unixware.cfg
-include/nspr/md/_unixware7.cfg
 include/nspr/md/_win95.cfg
 include/nspr/md/_winnt.cfg
 include/nspr/nspr.h
@@ -76,7 +71,7 @@ include/nspr/prtpool.h
 include/nspr/prtrace.h
 include/nspr/prtypes.h
 include/nspr/prvrsion.h
-include/nspr/prwin16.h
+include/nspr/prwin.h
 lib/nspr/libnspr4.a
 lib/nspr/libnspr4.so
 lib/nspr/libplc4.a
