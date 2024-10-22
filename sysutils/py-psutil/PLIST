@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/01/20 08:05:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/10/22 08:14:48 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -31,8 +31,8 @@ ${PYSITELIB}/psutil/_psposix.pyo
 ${PYSITELIB}/psutil/_pssunos.py
 ${PYSITELIB}/psutil/_pssunos.pyc
 ${PYSITELIB}/psutil/_pssunos.pyo
-${PYSITELIB}/psutil/_psutil_${SYSTEM}.abi3.so
-${PYSITELIB}/psutil/_psutil_posix.abi3.so
+${PYSITELIB}/psutil/_psutil_bsd.so
+${PYSITELIB}/psutil/_psutil_posix.so
 ${PYSITELIB}/psutil/_pswindows.py
 ${PYSITELIB}/psutil/_pswindows.pyc
 ${PYSITELIB}/psutil/_pswindows.pyo
@@ -42,9 +42,6 @@ ${PYSITELIB}/psutil/tests/__init__.pyo
 ${PYSITELIB}/psutil/tests/__main__.py
 ${PYSITELIB}/psutil/tests/__main__.pyc
 ${PYSITELIB}/psutil/tests/__main__.pyo
-${PYSITELIB}/psutil/tests/runner.py
-${PYSITELIB}/psutil/tests/runner.pyc
-${PYSITELIB}/psutil/tests/runner.pyo
 ${PYSITELIB}/psutil/tests/test_aix.py
 ${PYSITELIB}/psutil/tests/test_aix.pyc
 ${PYSITELIB}/psutil/tests/test_aix.pyo
