@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:28:27 nia Exp $
-
-BLAKE2s (tex-romande-19537/romande.doc.tar.xz) = aaf65a9eda3dc1e9449b605e00c4f9f69f64329be56fe23cc6c3e6f6cac5c5cc
-SHA512 (tex-romande-19537/romande.doc.tar.xz) = 65f05171e84b4ab31cd26b0b6edd2b6ca6c7e5e2f8968ded6b780d3edda46713b3e935f9e041e1b3cc0f4b8536973e0e73ae7458e5121f99ea8e5a0c5826484e
-Size (tex-romande-19537/romande.doc.tar.xz) = 279440 bytes
