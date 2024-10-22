@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/04/18 08:55:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/10/22 07:55:51 wiz Exp $
 ${PYSITELIB}/cyclonedx/__init__.py
 ${PYSITELIB}/cyclonedx/__init__.pyc
 ${PYSITELIB}/cyclonedx/__init__.pyo
@@ -14,6 +14,12 @@ ${PYSITELIB}/cyclonedx/_internal/hash.pyo
 ${PYSITELIB}/cyclonedx/_internal/time.py
 ${PYSITELIB}/cyclonedx/_internal/time.pyc
 ${PYSITELIB}/cyclonedx/_internal/time.pyo
+${PYSITELIB}/cyclonedx/builder/__init__.py
+${PYSITELIB}/cyclonedx/builder/__init__.pyc
+${PYSITELIB}/cyclonedx/builder/__init__.pyo
+${PYSITELIB}/cyclonedx/builder/this.py
+${PYSITELIB}/cyclonedx/builder/this.pyc
+${PYSITELIB}/cyclonedx/builder/this.pyo
 ${PYSITELIB}/cyclonedx/exception/__init__.py
 ${PYSITELIB}/cyclonedx/exception/__init__.pyc
 ${PYSITELIB}/cyclonedx/exception/__init__.pyo
@@ -71,6 +77,9 @@ ${PYSITELIB}/cyclonedx/model/release_note.pyo
 ${PYSITELIB}/cyclonedx/model/service.py
 ${PYSITELIB}/cyclonedx/model/service.pyc
 ${PYSITELIB}/cyclonedx/model/service.pyo
+${PYSITELIB}/cyclonedx/model/tool.py
+${PYSITELIB}/cyclonedx/model/tool.pyc
+${PYSITELIB}/cyclonedx/model/tool.pyo
 ${PYSITELIB}/cyclonedx/model/vulnerability.py
 ${PYSITELIB}/cyclonedx/model/vulnerability.pyc
 ${PYSITELIB}/cyclonedx/model/vulnerability.pyo
