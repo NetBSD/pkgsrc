@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/01/20 10:29:17 adam Exp $
+$NetBSD: distinfo,v 1.8 2024/10/23 09:37:28 adam Exp $
 
-BLAKE2s (Flask-DebugToolbar-0.14.1.tar.gz) = 21b2762869068ce97f37124f2c9df376f2e55efad405987f7c658966fe9af3df
-SHA512 (Flask-DebugToolbar-0.14.1.tar.gz) = ff06e75c30b0ed97968d400b43cc92a87150c7d8e1bbf604401ae91c46d6f33716e0234b45321372c76470e0caf6e7a23dc51967841895b959c9e4f332c62213
-Size (Flask-DebugToolbar-0.14.1.tar.gz) = 260432 bytes
+BLAKE2s (flask_debugtoolbar-0.16.0.tar.gz) = 88a238ca4e4cbf6e64fd216fa50dbb70fe52be447021f1a726be44a70859df24
+SHA512 (flask_debugtoolbar-0.16.0.tar.gz) = b9ac6cda69c72d1a67c747464835454c7b94d1756fc34c359c115aa7a408bf461b918c0883e66a42f944621ba8581c1b39acd460eb46f68d3b363bef23d788ec
+Size (flask_debugtoolbar-0.16.0.tar.gz) = 335258 bytes
