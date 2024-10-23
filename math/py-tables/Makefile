@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/10/14 06:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/10/23 22:55:52 wiz Exp $
 
-DISTNAME=	tables-3.9.2
+DISTNAME=	tables-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
 
@@ -11,11 +10,13 @@ HOMEPAGE=	https://www.pytables.org/
 COMMENT=	Database package for large amounts of data
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-numexpr>=2.6.2:../../math/py-numexpr
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	c c++
 
@@ -27,9 +28,10 @@ post-install:
 	${MV} pttree pttree-${PYVERSSUFFIX} || ${TRUE}
 
 # needs to be installed first
-# as of 3.9.2:
-# Ran 6799 tests
-# FAILED (errors=2, skipped=58)
+# as of 3.10.1
+# FAILED (errors=314, skipped=59)
+# many with
+# FileNotFoundError: [Errno 2] No such file or directory: '/home/pbulk/.pytables-cpuinfo.json'
 do-test:
 	${PYTHONBIN} -m tables.tests.test_all
 
@@ -39,6 +41,7 @@ do-test:
 .include "../../devel/blosc2/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=2.0
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
