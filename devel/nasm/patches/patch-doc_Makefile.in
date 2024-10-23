@@ -1,21 +1,20 @@
-$NetBSD: patch-doc_Makefile.in,v 1.4 2020/08/08 18:35:10 nia Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.5 2024/07/30 07:19:00 tempcracks Exp $
 
 Use correct paths and tools.
 Do not build nasmdoc.pdf.
 Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2020-07-18 01:04:07.000000000 +0000
+--- doc/Makefile.in.orig	2024-07-30 07:19:07.000000000 +0000
 +++ doc/Makefile.in
-@@ -20,7 +20,7 @@ INSTALL		= @INSTALL@
- INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+@@ -21,6 +21,6 @@ INSTALL_PROGRAM        = @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
--PERL		= perl -I$(srcdir)
-+PERL		= ${PERL5} -I$(srcdir)
+-PERL		= perl -I$(top_srcdir)/perllib -I$(srcdir)
++PERL		= ${PERL5} -I$(top_srcdir)/perllib -I$(srcdir)
  
  PDFOPT		= @PDFOPT@
  
-@@ -40,8 +40,8 @@ XZFILES         = @XZFILES@
+@@ -40,6 +40,6 @@ XZFILES         = @XZFILES@
  HTMLAUX		= nasmdoc.css local.css nasmlogw.png
  
  SRCS		= nasmdoc.src inslist.src changes.src warnings.src version.src
@@ -24,10 +23,9 @@ Avoid cp -u, it is not portable.
 +OUT		= html nasmdoc.txt $(XZFILES)
 +XZOUT           =
  
- .SUFFIXES:
- .SUFFIXES: .pfa .ph
-@@ -57,7 +57,7 @@ inslist.src: inslist.pl ../x86/insns.dat
- 
+@@ -61,8 +61,8 @@ inslist.src: inslist.pl ../x86/insns.dat
+	$(PERL) $(srcdir)/inslist.pl $(srcdir)/../x86/insns.dat
+
  html: $(HTMLAUX)
  	$(MKDIR_P) html
 -	for f in $(HTMLAUX); do $(CP_UF) "$(srcdir)/$$f" html/; done
@@ -35,7 +33,7 @@ Avoid cp -u, it is not portable.
  	$(MAKE) html/nasmdoc0.html
  
  RDSRC = $(PERL) $(srcdir)/rdsrc.pl -I$(srcdir)/
-@@ -116,7 +116,7 @@ install: all
+@@ -121,6 +121,6 @@ install: all
  	$(MKDIR_P) $(DESTDIR)$(htmldir)
  	$(INSTALL_DATA) html/* $(DESTDIR)$(htmldir)
  	$(MKDIR_P) $(DESTDIR)$(docdir)

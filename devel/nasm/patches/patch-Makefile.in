@@ -1,15 +1,16 @@
-$NetBSD: patch-Makefile.in,v 1.4 2020/08/08 18:35:10 nia Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2024/07/30 07:19:00 tempcracks Exp $
 
 Use correct tools.
 
---- Makefile.in.orig	2020-07-18 01:04:39.000000000 +0000
+--- Makefile.in.orig	2024-07-30 07:19:39.000000000 +0000
 +++ Makefile.in
 @@ -37,7 +37,7 @@ AR		= @AR@
  RANLIB		= @RANLIB@
  STRIP		= @STRIP@
- 
+
+ tools		= $(top_srcdir)/tools
+
 -PERL		= perl
 +PERL		= ${PERL5}
- PERLFLAGS	= -I$(srcdir)/perllib -I$(srcdir)
- RUNPERL         = $(PERL) $(PERLFLAGS)
- 
+ PERLFLAGS	= -I$(top_srcdir)/perllib -I$(srcdir)
+ RUNPERL        = $(PERL) $(PERLFLAGS)
