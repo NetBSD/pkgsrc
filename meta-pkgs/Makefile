@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2024/08/28 20:07:48 markd Exp $
+# $NetBSD: Makefile,v 1.136 2024/10/23 22:02:46 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -6,7 +6,7 @@ COMMENT=	Collections of other packages
 SUBDIR+=	aspell-languages
 SUBDIR+=	boost
 SUBDIR+=	bulk-large
-SUBDIR+=	bulk-medium
+#SUBDIR+=	bulk-medium # has CONFLICTing dependencies
 SUBDIR+=	bulk-small
 SUBDIR+=	bulk-test-boost
 SUBDIR+=	bulk-test-erlang
