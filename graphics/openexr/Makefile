@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/10/22 07:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/10/23 15:18:13 nia Exp $
 
 DISTNAME=	openexr-3.3.1
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++14
+USE_CXX_FEATURES+=	c++17 filesystem
 
 USE_TOOLS+=	pkg-config
 
