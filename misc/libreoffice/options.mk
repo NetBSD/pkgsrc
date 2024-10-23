@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2023/11/18 15:02:53 abs Exp $
+# $NetBSD: options.mk,v 1.27 2024/10/23 14:21:00 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice
 
@@ -21,6 +21,8 @@ PKG_SUGGESTED_OPTIONS+=	java
 
 PLIST_VARS+=	ldap gtk3
 
+PLIST_SRC=		${PLIST_SRC_DFLT:Q}
+
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
 USE_JAVA2=		11
@@ -39,14 +41,17 @@ CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
 			--with-system-hsqldb \
 			--without-system-jfreereport
 CONFIGURE_ARGS+=	--with-export-validation
-PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.java
+PLIST_SRC+=		${PKGDIR}/PLIST.java
+.  if !empty(PKG_OPTIONS:Mdebug)
+PLIST_SRC+=		${PKGDIR}/PLIST.debug-java
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-java
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
-PLIST_SRC=		${PLIST_SRC_DFLT:Q} ${PKGDIR}/PLIST.debug
+PLIST_SRC+=		${PKGDIR}/PLIST.debug
 .else
 CONFIGURE_ARGS+=	--enable-release-build
 .endif
