@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/13 20:18:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/23 22:55:52 wiz Exp $
 bin/pt2to3-${PYVERSSUFFIX}
 bin/ptdump-${PYVERSSUFFIX}
 bin/ptrepack-${PYVERSSUFFIX}
@@ -219,6 +219,9 @@ ${PYSITELIB}/tables/tests/test_carray.pyo
 ${PYSITELIB}/tables/tests/test_create.py
 ${PYSITELIB}/tables/tests/test_create.pyc
 ${PYSITELIB}/tables/tests/test_create.pyo
+${PYSITELIB}/tables/tests/test_direct_chunk.py
+${PYSITELIB}/tables/tests/test_direct_chunk.pyc
+${PYSITELIB}/tables/tests/test_direct_chunk.pyo
 ${PYSITELIB}/tables/tests/test_do_undo.py
 ${PYSITELIB}/tables/tests/test_do_undo.pyc
 ${PYSITELIB}/tables/tests/test_do_undo.pyo
