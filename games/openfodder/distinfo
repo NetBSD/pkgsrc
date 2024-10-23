@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2024/10/23 08:30:30 nia Exp $
+
+BLAKE2s (OpenFodder-data-070a6086c62164e859fc3274b75b5f536fa9d902.tar.gz) = e756a5fa9e8e5be5e2ad34bc115bd62e7e5072c6011771e7bcc993f6ffc6f318
+SHA512 (OpenFodder-data-070a6086c62164e859fc3274b75b5f536fa9d902.tar.gz) = 6944f20c129d2f90f091410984a65d9ae451a26be5e4616a39f5fb65afbb8741b10efd273809a5d7f0c3488795ef9242955ae9d041013c90cae1f5e4ffd533ef
+Size (OpenFodder-data-070a6086c62164e859fc3274b75b5f536fa9d902.tar.gz) = 3352213 bytes
+BLAKE2s (OpenFodder-scripts-dad04730860bcdd1189aa8562860e379b0f5d783.tar.gz) = dfc3f036fd536e90001c4bb3d4dc2d0529b5d1250076024a6dd2d197ceab8bab
+SHA512 (OpenFodder-scripts-dad04730860bcdd1189aa8562860e379b0f5d783.tar.gz) = 7ef896873f3689e1dc11c5b1eeaee7630ceec4cd6bba8575e4ea5afce0d3ed79ff960232b8f6704a26717c2f2816f5743c6861fd8f6b5c4e672836196064bd6d
+Size (OpenFodder-scripts-dad04730860bcdd1189aa8562860e379b0f5d783.tar.gz) = 50794 bytes
+BLAKE2s (openfodder-1.9.2.tar.gz) = c56414f65998cb37e3ab3075dcecaed72e697666b3307fbb494fed54e9f66aea
+SHA512 (openfodder-1.9.2.tar.gz) = 8dd510fc538a11b8aa6831dc2a699b8dcd6cb01c2ef5d4ed96134b67d6bbdf02b28d83f7b3ca763e6fc19179b05549f34c28db7dcdfa7b45ebe37c3e73adedf9
+Size (openfodder-1.9.2.tar.gz) = 1549207 bytes
+SHA1 (patch-Source_ResourceMan.cpp) = 28fe2056342f6758d434c4ef2a454dc426b45332
