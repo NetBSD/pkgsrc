@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/12/13 20:18:36 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/10/23 22:55:52 wiz Exp $
 
-BLAKE2s (tables-3.9.2.tar.gz) = 5d1782c32c1aa358baaa79c6425cb242f96ebe1c7995d18c86cf57c3523182a1
-SHA512 (tables-3.9.2.tar.gz) = 9b416222304b7798585a20d4d7d61934023f151d4262a58a4f0ee969aa365264270c12a734461a194d2c857a13a8e09fb7a1386042267113f601560c041cecd9
-Size (tables-3.9.2.tar.gz) = 4683437 bytes
+BLAKE2s (tables-3.10.1.tar.gz) = 1150b460680ad8bad06e7fbf137cb576e80de0de2d0d5b1d3175df9ec3a7db2b
+SHA512 (tables-3.10.1.tar.gz) = 7590dccefdd718d170ac288d391173ed540760a911f53fd39e37dd74237dc554f9363c8d9d4d518f067da299d71a1d8cb4a40134b1afaf79daa0a17de248caf5
+Size (tables-3.10.1.tar.gz) = 4762413 bytes
