@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/22 18:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/10/23 06:05:41 wiz Exp $
 
 DISTNAME=	syncstorage-rs-0.17.11
 CATEGORIES=	www
@@ -28,6 +28,9 @@ DEPENDS+=	${PYPKGPREFIX}-tokenlib-[0-9]*:../../security/py-tokenlib
 #CARGO_ARGS+=	build --release ${DEFAULT_CARGO_ARGS} --no-default-features --features=syncstorage-db/mysql,tokenserver-auth/py
 
 RUST_REQ+=	1.80
+
+# https://github.com/mozilla-services/syncstorage-rs/issues/1617
+PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
 
