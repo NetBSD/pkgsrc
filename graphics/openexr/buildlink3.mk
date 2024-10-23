@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2024/10/19 11:55:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2024/10/23 15:18:13 nia Exp $
 
 BUILDLINK_TREE+=	openexr
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
 
 PTHREAD_OPTS+=	require
 
-USE_CXX_FEATURES+=		c++14
+USE_CXX_FEATURES+=	c++17 filesystem
 
 .include "../../devel/libdeflate/buildlink3.mk"
 .include "../../math/imath/buildlink3.mk"
