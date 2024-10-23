@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.18 2024/05/08 18:44:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/10/23 07:27:28 adam Exp $
 bin/gtk4-builder-tool
 bin/gtk4-demo
 bin/gtk4-demo-application
 bin/gtk4-encode-symbolic-svg
 bin/gtk4-icon-browser
+bin/gtk4-image-tool
 bin/gtk4-launch
 bin/gtk4-node-editor
 bin/gtk4-path-tool
@@ -17,7 +18,9 @@ include/gtk-4.0/gdk/gdk.h
 include/gtk-4.0/gdk/gdkapplaunchcontext.h
 include/gtk-4.0/gdk/gdkcairo.h
 include/gtk-4.0/gdk/gdkcairocontext.h
+include/gtk-4.0/gdk/gdkcicpparams.h
 include/gtk-4.0/gdk/gdkclipboard.h
+include/gtk-4.0/gdk/gdkcolorstate.h
 include/gtk-4.0/gdk/gdkconfig.h
 include/gtk-4.0/gdk/gdkcontentdeserializer.h
 include/gtk-4.0/gdk/gdkcontentformats.h
@@ -49,6 +52,7 @@ include/gtk-4.0/gdk/gdkgltexturebuilder.h
 include/gtk-4.0/gdk/gdkkeys.h
 include/gtk-4.0/gdk/gdkkeysyms.h
 include/gtk-4.0/gdk/gdkmemorytexture.h
+include/gtk-4.0/gdk/gdkmemorytexturebuilder.h
 include/gtk-4.0/gdk/gdkmonitor.h
 include/gtk-4.0/gdk/gdkpaintable.h
 include/gtk-4.0/gdk/gdkpango.h
@@ -408,7 +412,7 @@ ${PLIST.cups}lib/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so
 lib/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so
 lib/libgtk-4.so
 lib/libgtk-4.so.1
-lib/libgtk-4.so.1.1400.4
+lib/libgtk-4.so.1.1600.3
 lib/pkgconfig/gtk4-atspi.pc
 ${PLIST.quartz}lib/pkgconfig/gtk4-macos.pc
 lib/pkgconfig/gtk4-unix-print.pc
