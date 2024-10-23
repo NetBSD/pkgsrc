@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6480 2024/10/23 13:19:08 osa Exp $
+$NetBSD: CHANGES-2024,v 1.6481 2024/10/23 15:55:48 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9821,3 +9821,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/nginx to 1.26.2nb1 [osa 2024-10-23]
 	Updated www/nginx-devel to 1.27.2nb1 [osa 2024-10-23]
 	Updated www/unit to 1.33.0nb1 [osa 2024-10-23]
+	Updated security/oqs-provider to 0.7.0nb2 [jschauma 2024-10-23]
