@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/07/02 10:27:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/23 18:08:23 khorben Exp $
 bin/bench_bitcoin
 bin/bitcoin-cli
 ${PLIST.qt}bin/bitcoin-qt
@@ -6,7 +6,6 @@ bin/bitcoin-tx
 bin/bitcoin-util
 bin/bitcoin-wallet
 bin/bitcoind
-${PLIST.qt}bin/test_bitcoin-qt
 include/bitcoinconsensus.h
 include/secp256k1.h
 include/secp256k1_ellswift.h
