@@ -1,15 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/20 10:29:17 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2024/10/23 09:37:28 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/flask_debugtoolbar/__init__.py
 ${PYSITELIB}/flask_debugtoolbar/__init__.pyc
 ${PYSITELIB}/flask_debugtoolbar/__init__.pyo
-${PYSITELIB}/flask_debugtoolbar/compat.py
-${PYSITELIB}/flask_debugtoolbar/compat.pyc
-${PYSITELIB}/flask_debugtoolbar/compat.pyo
 ${PYSITELIB}/flask_debugtoolbar/panels/__init__.py
 ${PYSITELIB}/flask_debugtoolbar/panels/__init__.pyc
 ${PYSITELIB}/flask_debugtoolbar/panels/__init__.pyo
@@ -46,6 +42,7 @@ ${PYSITELIB}/flask_debugtoolbar/panels/timer.pyo
 ${PYSITELIB}/flask_debugtoolbar/panels/versions.py
 ${PYSITELIB}/flask_debugtoolbar/panels/versions.pyc
 ${PYSITELIB}/flask_debugtoolbar/panels/versions.pyo
+${PYSITELIB}/flask_debugtoolbar/py.typed
 ${PYSITELIB}/flask_debugtoolbar/static/codemirror/codemirror.css
 ${PYSITELIB}/flask_debugtoolbar/static/codemirror/codemirror.js
 ${PYSITELIB}/flask_debugtoolbar/static/codemirror/mode/clike/clike.js
@@ -189,6 +186,7 @@ ${PYSITELIB}/flask_debugtoolbar/static/img/indicator.png
 ${PYSITELIB}/flask_debugtoolbar/static/img/panel_bg.png
 ${PYSITELIB}/flask_debugtoolbar/static/img/tick-red.png
 ${PYSITELIB}/flask_debugtoolbar/static/img/tick.png
+${PYSITELIB}/flask_debugtoolbar/static/js/jquery-migrate.js
 ${PYSITELIB}/flask_debugtoolbar/static/js/jquery.js
 ${PYSITELIB}/flask_debugtoolbar/static/js/jquery.tablesorter.js
 ${PYSITELIB}/flask_debugtoolbar/static/js/toolbar.js
