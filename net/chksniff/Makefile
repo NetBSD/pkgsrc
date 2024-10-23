@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/08/01 16:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/23 10:00:20 nia Exp $
 #
 
 DISTNAME=	chksniff-0.2
@@ -12,5 +12,7 @@ COMMENT=	Small tool to check for promiscuous interfaces
 INSTALLATION_DIRS=	bin
 
 GNU_CONFIGURE=	YES
+
+LIBS.SunOS+=	-lsocket
 
 .include "../../mk/bsd.pkg.mk"
