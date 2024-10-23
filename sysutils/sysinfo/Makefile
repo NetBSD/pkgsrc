@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/04/25 05:58:18 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/10/23 10:05:13 nia Exp $
 
 DISTNAME=		sysinfo-3.5.1
 CATEGORIES=		sysutils
@@ -19,8 +19,5 @@ BUILD_TARGET=		default
 INSTALL_TARGET=		install install.man
 TEST_TARGET=		test
 MAKE_ENV+=		CPPFLAGS="" CC=${CC:Q} KISA=${MACHINE_ARCH}
-
-post-build:
-	${CHMOD} -R o+rx ${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"
