@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6507 2024/10/24 14:36:23 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6508 2024/10/24 15:27:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9855,3 +9855,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/kvantum to 1.1.3 [pin 2024-10-24]
 	Updated fonts/montserrat to 9.000 [pin 2024-10-24]
 	Removed www/php-nextcloud28 [ryoon 2024-10-24]
+	Added www/php-nextcloud29 version 29.0.8 [ryoon 2024-10-24]
