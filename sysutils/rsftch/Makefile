@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/09/14 13:24:10 pin Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/24 07:52:41 pin Exp $
 
-DISTNAME=	rsftch-0.7.6
+DISTNAME=	rsftch-0.7.7
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/rsftch/
 EXTRACT_SUFX=	.crate
@@ -12,9 +12,9 @@ LICENSE=	gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.80.1
+#RUST_REQ=	1.81.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.80.1 on amd64
+#This package is confirmed to build with Rust 1.81.0 on amd64
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
