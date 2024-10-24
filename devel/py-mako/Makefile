@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/05/15 07:59:03 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/10/24 20:28:47 adam Exp $
 
-DISTNAME=	Mako-1.3.5
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	mako-1.3.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mako/}
 
@@ -10,13 +10,13 @@ HOMEPAGE=	https://www.makotemplates.org/
 COMMENT=	Hyperfast and lightweight templating for the Python platform
 LICENSE=	mit
 
+WHEEL_NAME=	Mako-${PKGVERSION_NOREV}
+
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0.9.2:../../textproc/py-markupsafe
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
