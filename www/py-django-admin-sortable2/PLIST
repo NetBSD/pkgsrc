@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/05/18 06:05:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/24 07:31:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -45,7 +45,38 @@ ${PYSITELIB}/adminsortable2/static/adminsortable2/js/adminsortable2.min.js
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/change_list.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-4.2.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.0.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.1.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/stacked-django-5.1.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-4.2.html.orig
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.0.html
 ${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.0.html.orig
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.1.html
+${PYSITELIB}/adminsortable2/templates/adminsortable2/edit_inline/tabular-django-5.1.html.orig
+${PYSITELIB}/docs/source/conf.py
+${PYSITELIB}/docs/source/conf.pyc
+${PYSITELIB}/docs/source/conf.pyo
+${PYSITELIB}/parler_example/manage.py
+${PYSITELIB}/parler_example/manage.pyc
+${PYSITELIB}/parler_example/manage.pyo
+${PYSITELIB}/parler_example/parler_test_app/__init__.py
+${PYSITELIB}/parler_example/parler_test_app/__init__.pyc
+${PYSITELIB}/parler_example/parler_test_app/__init__.pyo
+${PYSITELIB}/parler_example/parler_test_app/admin.py
+${PYSITELIB}/parler_example/parler_test_app/admin.pyc
+${PYSITELIB}/parler_example/parler_test_app/admin.pyo
+${PYSITELIB}/parler_example/parler_test_app/migrations/0001_initial.py
+${PYSITELIB}/parler_example/parler_test_app/migrations/0001_initial.pyc
+${PYSITELIB}/parler_example/parler_test_app/migrations/0001_initial.pyo
+${PYSITELIB}/parler_example/parler_test_app/migrations/__init__.py
+${PYSITELIB}/parler_example/parler_test_app/migrations/__init__.pyc
+${PYSITELIB}/parler_example/parler_test_app/migrations/__init__.pyo
+${PYSITELIB}/parler_example/parler_test_app/models.py
+${PYSITELIB}/parler_example/parler_test_app/models.pyc
+${PYSITELIB}/parler_example/parler_test_app/models.pyo
+${PYSITELIB}/parler_example/settings.py
+${PYSITELIB}/parler_example/settings.pyc
+${PYSITELIB}/parler_example/settings.pyo
+${PYSITELIB}/parler_example/urls.py
+${PYSITELIB}/parler_example/urls.pyc
+${PYSITELIB}/parler_example/urls.pyo
