@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.27 2024/08/01 17:43:13 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.28 2024/10/24 12:11:11 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -10,7 +10,7 @@ CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
 CARGO_CRATE_DEPENDS+=	bitflags-2.5.0
 CARGO_CRATE_DEPENDS+=	bstr-1.9.1
 CARGO_CRATE_DEPENDS+=	bumpalo-3.14.0
-CARGO_CRATE_DEPENDS+=	cc-1.1.5
+CARGO_CRATE_DEPENDS+=	cc-1.1.30
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	clap-3.2.25
 CARGO_CRATE_DEPENDS+=	clap_lex-0.2.4
@@ -93,6 +93,7 @@ CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.197
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.197
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.114
+CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.3
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.1
@@ -107,7 +108,7 @@ CARGO_CRATE_DEPENDS+=	termtree-0.4.1
 CARGO_CRATE_DEPENDS+=	textwrap-0.16.1
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-0.20.10
-CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.1.4
+CARGO_CRATE_DEPENDS+=	tree_magic_mini-3.1.5
 CARGO_CRATE_DEPENDS+=	typed-arena-2.0.2
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
 CARGO_CRATE_DEPENDS+=	unicode-width-0.1.11
