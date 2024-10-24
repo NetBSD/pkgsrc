@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.187 2024/09/21 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2024/10/24 17:23:43 adam Exp $
 
-DISTNAME=	samba-4.20.5
+DISTNAME=	samba-4.21.1
 CATEGORIES=	net
 MASTER_SITES=	https://download.samba.org/pub/samba/stable/
 
@@ -10,8 +10,6 @@ COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
 CONFLICTS+=	ja-samba-[0-9]* winbind-[0-9]*
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 GCC_REQD+=	4.4
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
@@ -207,9 +205,8 @@ REPLACE_PYTHON+=	source4/scripting/bin/*
 .endif
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ldb+=	ldb>=2.9.1
-.include "../../databases/ldb/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
+.include "../../databases/tdb/buildlink3.mk"
 .include "../../devel/cmocka/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
@@ -218,8 +215,8 @@ BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/tevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
