@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2024/07/29 20:38:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2024/10/24 13:43:09 ryoon Exp $
 
-DISTNAME=	knot-3.3.8
+DISTNAME=	knot-3.4.1
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +10,7 @@ HOMEPAGE=	https://www.knot-dns.cz/
 COMMENT=	Knot (auth) DNS server
 LICENSE=	gnu-gpl-v3
 
-# error: 'for' loop initial declarations are only allowed in C99 mode
-FORCE_C_STD=	c99
+FORCE_C_STD=	c11
 
 BUILD_DEFS+=	VARBASE
 
@@ -57,6 +56,8 @@ CONF_FILES=	${EGDIR}/knot.sample.conf \
 			${PKG_SYSCONFDIR}/knot.conf
 CONF_FILES+=	${EGDIR}/example.com.zone \
 			${PKG_SYSCONFDIR}/example.com.zone
+
+CHECK_WRKREF_SKIP+=	bin/* lib/* sbin/*
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS+=		${VARBASE}/knot
