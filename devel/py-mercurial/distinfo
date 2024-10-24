@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.150 2024/08/08 08:11:10 wiz Exp $
+$NetBSD: distinfo,v 1.151 2024/10/24 10:41:05 wiz Exp $
 
 BLAKE2s (mercurial-6.8.1.tar.gz) = 32f4581344c7ce0a93f76ab4e85ad0d1974fb8059f248d42474d87d2714ebf16
 SHA512 (mercurial-6.8.1.tar.gz) = c638b9c5421320dcae966c7526afcd7743afaa48f72d4202a9b85a68f51ee97755321e75858e128cdb21cc17312701d2481d10a8a8e2f882ec0df189fc1fd194
 Size (mercurial-6.8.1.tar.gz) = 8324749 bytes
+SHA1 (patch-hgdemandimport_____init____.py) = 1d93d06bb71ef07c2b9d866d49bfec7258ac9d56
 SHA1 (patch-mercurial_bundle2.py) = f4612a08effe11fb4b345ea213a148f6fba7118d
 SHA1 (patch-mercurial_exchange.py) = af7ac4719d74d1de731250fe8f5443931e7a15a9
 SHA1 (patch-mercurial_obsolete.py) = 5365f9dab99f68846c4defe1fda8c003248cdcfc
