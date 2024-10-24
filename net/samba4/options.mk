@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.19 2023/04/29 08:01:06 wiz Exp $
+# $NetBSD: options.mk,v 1.20 2024/10/24 17:23:43 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
-PKG_SUPPORTED_OPTIONS=	ads avahi ldap pam winbind cups # cups option is broken for me.
-PKG_SUGGESTED_OPTIONS=	avahi ldap pam winbind
+# As of 4.21.1, samba4 fails to build without "ads" and "ldap" options:
+# error: no member named 'ldap' in 'struct ads_struct'
+PKG_SUPPORTED_OPTIONS=	avahi pam winbind cups # cups option is broken for me.
+PKG_SUGGESTED_OPTIONS=	avahi pam winbind
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -11,9 +13,9 @@ SAMBA_ACL_OPSYS=	AIX Darwin FreeBSD HPUX IRIX Linux NetBSD OSF1 SunOS
 PKG_SUPPORTED_OPTIONS+=	acl
 .endif
 
-.if !${MACHINE_PLATFORM:MDarwin-1[1-9].*}
-PKG_SUGGESTED_OPTIONS+=	ads
-.endif
+#.if !${MACHINE_PLATFORM:MDarwin-1[1-9].*}
+#PKG_SUGGESTED_OPTIONS+=	ads
+#.endif
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=	snapper
@@ -36,13 +38,13 @@ CONFIGURE_ARGS+=	--without-acl-support
 ###
 ### Allow Samba to join as a member server of an Active Directory domain.
 ###
-.if !empty(PKG_OPTIONS:Mads)
-CONFIGURE_ARGS+=	--with-ads
+#.if !empty(PKG_OPTIONS:Mads)
+#CONFIGURE_ARGS+=	--with-ads
 PLIST.ads=		yes
-.else
-CONFIGURE_ARGS+=	--without-ads
-CONFIGURE_ARGS+=	--without-ad-dc
-.endif
+#.else
+#CONFIGURE_ARGS+=	--without-ads
+#CONFIGURE_ARGS+=	--without-ad-dc
+#.endif
 
 ###
 ### Native CUPS support for providing printing services.
@@ -60,13 +62,13 @@ CONFIGURE_ARGS+=	--disable-cups
 ### Support LDAP authentication and storage of Samba account information.
 ###
 # Active Directory requires ldap
-.if !empty(PKG_OPTIONS:Mldap) || !empty(PKG_OPTIONS:Mads)
-.  include "../../databases/openldap-client/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-ldap
+#.if !empty(PKG_OPTIONS:Mldap) || !empty(PKG_OPTIONS:Mads)
+.include "../../databases/openldap-client/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-ldap
 PLIST.ldap=		yes
-.else
-CONFIGURE_ARGS+=	--without-ldap
-.endif
+#.else
+#CONFIGURE_ARGS+=	--without-ldap
+#.endif
 
 ###
 ### Support PAM authentication and build smbpass and winbind PAM modules.
