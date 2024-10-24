@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/05/20 10:21:50 wiz Exp $
+$NetBSD: distinfo,v 1.23 2024/10/24 06:50:47 adam Exp $
 
-BLAKE2s (networkx-3.3.tar.gz) = 6ec7268f800646c37db4bc7248575d78ef27ccee0d9325e88fbae95f15e0d238
-SHA512 (networkx-3.3.tar.gz) = 86306cabd7e15aa79cae4d84a42e8804b1e904fc2127725067a80e3ddf31f0fa72ebb9d21284018e72bdfc662c766a5be55564572aadaf7392dada7ea93d1ea4
-Size (networkx-3.3.tar.gz) = 2126579 bytes
+BLAKE2s (networkx-3.4.2.tar.gz) = ffd5280eae814a3871fb871c09a3abed42ebf9d63887ca1a7a4356f43e86ad69
+SHA512 (networkx-3.4.2.tar.gz) = 910e1400ad18711761c715896c3238b9c7d8914c571ab4db3aaf18a772b5fef90e5378ca435fbfce55b5821f1ddd3863a3cd65030086e80a971df91d9203c637
+Size (networkx-3.4.2.tar.gz) = 2151368 bytes
