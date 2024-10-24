@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.120 2024/10/15 16:15:35 adam Exp $
+# $NetBSD: Makefile,v 1.121 2024/10/24 13:37:47 ryoon Exp $
 
-DISTNAME=	pdf2djvu-0.9.18.2
-PKGREVISION=	18
+DISTNAME=	pdf2djvu-0.9.19
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jwilk/}
+GITHUB_PROJECT=	pdf2djvu
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
@@ -13,6 +13,8 @@ COMMENT=	Creates DjVu files from PDF files
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
+
+FORCE_CXX_STD=		c++20 # For poppler-24.10.0
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
