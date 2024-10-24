@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/11/22 12:57:26 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/24 07:46:54 pin Exp $
 
-DISTNAME=	viu-1.5.0
+DISTNAME=	viu-1.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=atanunq/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
