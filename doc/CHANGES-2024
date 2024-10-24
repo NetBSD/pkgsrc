@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6498 2024/10/24 10:46:08 nia Exp $
+$NetBSD: CHANGES-2024,v 1.6499 2024/10/24 12:12:18 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9846,3 +9846,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/rsftch to 0.7.7 [pin 2024-10-24]
 	Updated devel/py-mercurial to 6.8.1nb1 [wiz 2024-10-24]
 	Added emulators/advancescan version 1.18 [nia 2024-10-24]
+	Updated devel/difftastic to 0.61.0 [pin 2024-10-24]
