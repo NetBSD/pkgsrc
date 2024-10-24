@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/08/13 04:30:25 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/24 14:08:52 pin Exp $
 
-DISTNAME=	Montserrat-7.222
+DISTNAME=	Montserrat-9.000
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JulietaUla/}

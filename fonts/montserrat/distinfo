@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:19 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/10/24 14:08:52 pin Exp $
 
-BLAKE2s (Montserrat-7.222.tar.gz) = 760278e1e1119fff20bd6aaf0946faca51f387b6ae8bfafcba035f15bcb7dab6
-SHA512 (Montserrat-7.222.tar.gz) = 1de20125ba1b40f2acf248f2825ad8d806a6975ae646c5ec62dc4f77821770718e81f720cb9514ab188a498f580bdef2d95cee569c70c00d5554c884f978bfd0
-Size (Montserrat-7.222.tar.gz) = 16318000 bytes
+BLAKE2s (Montserrat-9.000.tar.gz) = a8c60e4c4699fb5dd09fe9cbf1a937aefbf71513798bd78997d8ce821bbebac4
+SHA512 (Montserrat-9.000.tar.gz) = 3d5ca0751cf77760d3d560f30f7f5b8041ef8b0300f8e035495369aa8ce09954d107a1f75b8defe2d8a875030ef69275ab0bebb02d5361e0c856f987aef78648
+Size (Montserrat-9.000.tar.gz) = 30979460 bytes

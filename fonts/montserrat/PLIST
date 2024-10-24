@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/08/06 11:06:42 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/10/24 14:08:52 pin Exp $
 share/doc/montserrat/README.md
 share/fonts/X11/OTF/Montserrat-Black.otf
 share/fonts/X11/OTF/Montserrat-BlackItalic.otf
@@ -36,6 +36,24 @@ share/fonts/X11/OTF/MontserratAlternates-SemiBold.otf
 share/fonts/X11/OTF/MontserratAlternates-SemiBoldItalic.otf
 share/fonts/X11/OTF/MontserratAlternates-Thin.otf
 share/fonts/X11/OTF/MontserratAlternates-ThinItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Black.otf
+share/fonts/X11/OTF/MontserratUnderline-BlackItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Bold.otf
+share/fonts/X11/OTF/MontserratUnderline-BoldItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-ExtraBold.otf
+share/fonts/X11/OTF/MontserratUnderline-ExtraBoldItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-ExtraLight.otf
+share/fonts/X11/OTF/MontserratUnderline-ExtraLightItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Italic.otf
+share/fonts/X11/OTF/MontserratUnderline-Light.otf
+share/fonts/X11/OTF/MontserratUnderline-LightItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Medium.otf
+share/fonts/X11/OTF/MontserratUnderline-MediumItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Regular.otf
+share/fonts/X11/OTF/MontserratUnderline-SemiBold.otf
+share/fonts/X11/OTF/MontserratUnderline-SemiBoldItalic.otf
+share/fonts/X11/OTF/MontserratUnderline-Thin.otf
+share/fonts/X11/OTF/MontserratUnderline-ThinItalic.otf
 share/fonts/X11/TTF/Montserrat-Black.ttf
 share/fonts/X11/TTF/Montserrat-BlackItalic.ttf
 share/fonts/X11/TTF/Montserrat-Bold.ttf
@@ -45,6 +63,8 @@ share/fonts/X11/TTF/Montserrat-ExtraBoldItalic.ttf
 share/fonts/X11/TTF/Montserrat-ExtraLight.ttf
 share/fonts/X11/TTF/Montserrat-ExtraLightItalic.ttf
 share/fonts/X11/TTF/Montserrat-Italic.ttf
+share/fonts/X11/TTF/Montserrat-Italic[wght]-VTT.ttf
+share/fonts/X11/TTF/Montserrat-Italic[wght].ttf
 share/fonts/X11/TTF/Montserrat-Light.ttf
 share/fonts/X11/TTF/Montserrat-LightItalic.ttf
 share/fonts/X11/TTF/Montserrat-Medium.ttf
@@ -63,6 +83,7 @@ share/fonts/X11/TTF/MontserratAlternates-ExtraBoldItalic.ttf
 share/fonts/X11/TTF/MontserratAlternates-ExtraLight.ttf
 share/fonts/X11/TTF/MontserratAlternates-ExtraLightItalic.ttf
 share/fonts/X11/TTF/MontserratAlternates-Italic.ttf
+share/fonts/X11/TTF/MontserratAlternates-Italic[wght].ttf
 share/fonts/X11/TTF/MontserratAlternates-Light.ttf
 share/fonts/X11/TTF/MontserratAlternates-LightItalic.ttf
 share/fonts/X11/TTF/MontserratAlternates-Medium.ttf
@@ -72,3 +93,26 @@ share/fonts/X11/TTF/MontserratAlternates-SemiBold.ttf
 share/fonts/X11/TTF/MontserratAlternates-SemiBoldItalic.ttf
 share/fonts/X11/TTF/MontserratAlternates-Thin.ttf
 share/fonts/X11/TTF/MontserratAlternates-ThinItalic.ttf
+share/fonts/X11/TTF/MontserratAlternates[wght].ttf
+share/fonts/X11/TTF/MontserratUnderline-Black.ttf
+share/fonts/X11/TTF/MontserratUnderline-BlackItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Bold.ttf
+share/fonts/X11/TTF/MontserratUnderline-BoldItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-ExtraBold.ttf
+share/fonts/X11/TTF/MontserratUnderline-ExtraBoldItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-ExtraLight.ttf
+share/fonts/X11/TTF/MontserratUnderline-ExtraLightItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Italic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Italic[wght].ttf
+share/fonts/X11/TTF/MontserratUnderline-Light.ttf
+share/fonts/X11/TTF/MontserratUnderline-LightItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Medium.ttf
+share/fonts/X11/TTF/MontserratUnderline-MediumItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Regular.ttf
+share/fonts/X11/TTF/MontserratUnderline-SemiBold.ttf
+share/fonts/X11/TTF/MontserratUnderline-SemiBoldItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline-Thin.ttf
+share/fonts/X11/TTF/MontserratUnderline-ThinItalic.ttf
+share/fonts/X11/TTF/MontserratUnderline[wght].ttf
+share/fonts/X11/TTF/Montserrat[wght]-VTT.ttf
+share/fonts/X11/TTF/Montserrat[wght].ttf
