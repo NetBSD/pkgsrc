@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2023/01/08 20:40:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2024/10/24 13:43:09 ryoon Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -44,6 +44,8 @@ include/libknot/packet/rrset-wire.h
 include/libknot/packet/wire.h
 include/libknot/probe/data.h
 include/libknot/probe/probe.h
+include/libknot/quic/tls.h
+include/libknot/quic/tls_common.h
 include/libknot/rdata.h
 include/libknot/rdataset.h
 include/libknot/rrset-dump.h
