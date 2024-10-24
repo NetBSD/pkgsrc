@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.75 2024/10/08 03:33:27 pin Exp $
+# $NetBSD: go-modules.mk,v 1.76 2024/10/24 07:40:37 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -30,10 +30,10 @@ GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.1.1.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.2.3.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.2.3.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.1.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v0.13.1.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.3.2.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.3.2.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/x/term/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.4.mod
