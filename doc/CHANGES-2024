@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6489 2024/10/24 07:34:10 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6490 2024/10/24 07:36:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9837,3 +9837,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-networkx to 3.4.2 [adam 2024-10-24]
 	Updated www/py-django-admin-sortable2 to 2.2.3 [adam 2024-10-24]
 	Updated www/py-django-cors-headers to 4.5.0 [adam 2024-10-24]
+	Updated devel/hexpatch to 1.9.1 [pin 2024-10-24]
