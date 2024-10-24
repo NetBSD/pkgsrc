@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/08/06 06:22:18 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/10/24 06:48:23 adam Exp $
 
-BLAKE2s (cloudpickle-3.0.0.tar.gz) = 4c034397be918388c0e3d0232aebcd480468bb28397e1caa4817c7bf078d8e37
-SHA512 (cloudpickle-3.0.0.tar.gz) = c20b5674a710a6011bedecaf1adfc9f85e74b0b61f89b44c93624f4c73a6c1b9f81ab8f82cbc386d637a990b152dacc48ef8abc9c7718ef2e252e504d4b76773
-Size (cloudpickle-3.0.0.tar.gz) = 21231 bytes
+BLAKE2s (cloudpickle-3.1.0.tar.gz) = bdd2d960c225d5498fd905a7b312ce7e15e3c3b5382c31fffbc63b4961a94a83
+SHA512 (cloudpickle-3.1.0.tar.gz) = 08e8c297df744fec57efcd764a6dc0aaa1d34d9c7ee6ab3c39f6392601547dc91a10f7839b9c6d725b15f23468d1459c05b7b30a922c96c566bd952bf75bef87
+Size (cloudpickle-3.1.0.tar.gz) = 66155 bytes
