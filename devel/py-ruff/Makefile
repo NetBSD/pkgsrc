@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/10/17 19:12:26 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/10/24 17:45:57 adam Exp $
 
-DISTNAME=	ruff-0.7.0
+DISTNAME=	ruff-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/ruff/}
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 LSP_TYPES_REV=	3512a9f33eadc5402cfab1b8f7340824c8ca1439
-SALSA_REV=	b14be5c0392f4c55eca60b92e457a35549372382
+SALSA_REV=	254c749b02cde2fd29852a7463a33e800b771758
 DISTFILES=	${DEFAULT_DISTFILES}
 DISTFILES+=	lsp-types-${LSP_TYPES_REV}.tar.gz
 DISTFILES+=	salsa-${SALSA_REV}.tar.gz
@@ -28,9 +28,6 @@ SITES.lsp-types-${LSP_TYPES_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=astral-sh/}lsp-
 SITES.salsa-${SALSA_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=salsa-rs/}salsa/archive/${SALSA_REV}.tar.gz
 
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
-
-post-extract:
-	${MV} ${WRKDIR}/lsp-types* ${WRKSRC}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
