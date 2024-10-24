@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2024/05/29 16:32:50 adam Exp $
+# $NetBSD: Makefile,v 1.77 2024/10/24 13:35:59 ryoon Exp $
 #
 
 DISTNAME=	djview-4.12
 PKGNAME=	${DISTNAME:S/djview/djview4/}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -26,6 +26,7 @@ SUBST_MESSAGE.nsdejavu=	Fixing hardcoded paths.
 SUBST_FILES.nsdejavu=	nsdejavu/nsdejavu.c
 SUBST_SED.nsdejavu=	-e 's:/usr/local/lib:${LOCALBASE}/lib:'
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt5-qttools= build
 .include "../../x11/qt5-qttools/buildlink3.mk"
