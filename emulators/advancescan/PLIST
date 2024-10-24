@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2024/10/24 10:45:54 nia Exp $
+bin/advdiff
+bin/advscan
+man/man1/advdiff.1
+man/man1/advscan.1

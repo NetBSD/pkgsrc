@@ -1,0 +1,16 @@
+AdvanceSCAN is a command line rom manager for AdvanceMAME, AdvanceMESS and
+any other MAME derivative.
+
+The main features are:
+
+ * Directly read, write zip archives without decompressing and
+   recompressing them for the best performance.
+ * Add, copy, move and rename files in the zip archives. Any rom that you
+   have is placed automatically in the correct zip.
+ * Recognize the text files added by rom sites and delete them.
+ * Recognize the text files added by the rom dumpers and keep or delete
+   them.
+ * It's safe. On all the zip operations any file removed or overwritten
+   is saved in the `rom_unknown' `sample_unknown' directories and kept
+   for future uses. This will prevent any unwanted remove operation.
+ * Generate differential rom sets.
