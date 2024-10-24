@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/09/15 08:08:52 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/10/24 17:30:03 adam Exp $
 
-DISTNAME=	zeroconf-0.134.0
+DISTNAME=	zeroconf-0.135.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
