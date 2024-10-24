@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/24 10:45:54 nia Exp $
+
+BLAKE2s (advancescan-1.18.tar.gz) = 3c8db53ea628e4f16ddb1fe38d1a6bdc1ee418dc54a6aa07ec9c0161547b3781
+SHA512 (advancescan-1.18.tar.gz) = ad7529fb2dd625f8d5aa5f5d1cabfbeb5612b1da6e0952a451abd162a95aadf616b74b2bf5b6c4963188cea1267394f2ee84c3f47a323d345d285e9c63622889
+Size (advancescan-1.18.tar.gz) = 319467 bytes
