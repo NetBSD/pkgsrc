@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/10/14 06:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/10/24 13:05:50 jperkin Exp $
 
 DISTNAME=	bulk-large-20240227
 CATEGORIES=	meta-pkgs
@@ -37,7 +37,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # superset of bulk-small, depend on both to avoid needing to think
 # about that in detail.)
 #
-DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
+#DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
 DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 #
