@@ -1,28 +1,25 @@
-# $NetBSD: Makefile,v 1.40 2024/04/26 22:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/10/25 10:55:14 adam Exp $
 
-DISTNAME=	autobahn-23.6.2
+DISTNAME=	autobahn-24.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autobahn/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://crossbar.io/autobahn/
+HOMEPAGE=	https://github.com/crossbario/autobahn-python
 COMMENT=	WebSocket client and server library, WAMP real-time framework
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-txaio>=21.2.1:../../devel/py-txaio
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=21.0.0:../../www/py-hyperlink
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=1.3.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nacl>=0:../../security/py-nacl
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted>=0:../../net/py-twisted
 
 USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_TRANSFORM+=	rm:-march=native
 
