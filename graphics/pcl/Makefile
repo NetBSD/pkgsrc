@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/10/04 03:49:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/25 23:37:44 gdt Exp $
 
 DISTNAME=	pcl-1.14.1
 PKGREVISION=	5
@@ -13,8 +13,12 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/pcl-${DISTNAME}
 
-USE_CXX_FEATURES=	c++14
+# fails with boost 1.86.0
+#   https://github.com/PointCloudLibrary/pcl/issues/6157
+
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+
 USE_TOOLS+=		pkg-config
 
 # Those could be enabled as options if desired.
