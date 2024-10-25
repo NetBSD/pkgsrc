@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/04/05 18:14:46 ktnb Exp $
+# $NetBSD: Makefile,v 1.24 2024/10/25 14:22:42 ryoon Exp $
 
-DISTNAME=	gradle-8.7-bin
+DISTNAME=	gradle-8.10.2-bin
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	https://services.gradle.org/distributions/
