@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6512 2024/10/25 06:44:06 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6513 2024/10/25 07:04:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9866,3 +9866,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-mako to 1.3.6 [adam 2024-10-24]
 	Updated textproc/py-validate-pyproject to 0.22 [adam 2024-10-24]
 	Updated www/php-nextcloud to 30.0.1 [ryoon 2024-10-25]
+	Updated pkgtools/pkg_install to 20241025 [ryoon 2024-10-25]
