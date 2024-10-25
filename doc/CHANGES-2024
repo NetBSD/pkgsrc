@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6517 2024/10/25 11:59:43 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6518 2024/10/25 13:09:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9905,3 +9905,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-test-virtualenv to 1.8.0 [adam 2024-10-25]
 	Updated databases/sqlitebrowser to 3.13.1 [adam 2024-10-25]
 	Updated sysutils/py-fsspec to 2024.10.0 [adam 2024-10-25]
+	Updated www/py-multipart to 1.1.0 [adam 2024-10-25]
+	Updated devel/py-extension-helpers to 1.2.0 [adam 2024-10-25]
