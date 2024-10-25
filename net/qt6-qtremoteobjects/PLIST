@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:41:59 adam Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
@@ -78,6 +78,7 @@ qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsMacros.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets-release.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjects/Qt6RemoteObjectsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfig.cmake
@@ -86,6 +87,7 @@ qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlDependencies.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets-release.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlTargets.cmake
+qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsQml/Qt6RemoteObjectsQmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6RemoteObjectsTools/Qt6RemoteObjectsToolsConfig.cmake
@@ -101,6 +103,7 @@ qt6/lib/cmake/Qt6RepParser/Qt6RepParserConfigVersion.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserDependencies.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserTargets.cmake
+qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6RepParser/Qt6RepParserVersionlessTargets.cmake
 qt6/lib/libQt6RemoteObjects.prl
 qt6/lib/libQt6RemoteObjects.so

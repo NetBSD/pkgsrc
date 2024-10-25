@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:58 adam Exp $
 lib/pkgconfig/Qt6HttpServer.pc
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qabstracthttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserver_p.h
+qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp1protocolhandler_p.h
+qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverhttp2protocolhandler_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverliterals_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrequest_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverresponder_p.h
@@ -11,13 +13,13 @@ qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverrouterrul
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserverstream_p.h
 qt6/include/QtHttpServer/QAbstractHttpServer
 qt6/include/QtHttpServer/QHttpServer
-qt6/include/QtHttpServer/QHttpServerAfterRequestViewTraits
 qt6/include/QtHttpServer/QHttpServerRequest
 qt6/include/QtHttpServer/QHttpServerResponder
 qt6/include/QtHttpServer/QHttpServerResponse
 qt6/include/QtHttpServer/QHttpServerRouter
 qt6/include/QtHttpServer/QHttpServerRouterRule
 qt6/include/QtHttpServer/QHttpServerRouterViewTraits
+qt6/include/QtHttpServer/QHttpServerWebSocketUpgradeResponse
 qt6/include/QtHttpServer/QtHttpServer
 qt6/include/QtHttpServer/QtHttpServerDepends
 qt6/include/QtHttpServer/QtHttpServerVersion
@@ -29,8 +31,8 @@ qt6/include/QtHttpServer/qhttpserverresponse.h
 qt6/include/QtHttpServer/qhttpserverrouter.h
 qt6/include/QtHttpServer/qhttpserverrouterrule.h
 qt6/include/QtHttpServer/qhttpserverrouterviewtraits.h
-qt6/include/QtHttpServer/qhttpserverviewtraits.h
 qt6/include/QtHttpServer/qhttpserverviewtraits_impl.h
+qt6/include/QtHttpServer/qhttpserverwebsocketupgraderesponse.h
 qt6/include/QtHttpServer/qthttpserverexports.h
 qt6/include/QtHttpServer/qthttpserverglobal.h
 qt6/include/QtHttpServer/qthttpserverversion.h
@@ -42,6 +44,7 @@ qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerDependencies.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets-release.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerTargets.cmake
+qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6HttpServer/Qt6HttpServerVersionlessTargets.cmake
 qt6/lib/libQt6HttpServer.prl
 qt6/lib/libQt6HttpServer.so

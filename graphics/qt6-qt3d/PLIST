@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/01 13:40:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/10/25 10:41:57 adam Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -128,6 +128,7 @@ qt6/include/Qt3DAnimation/qmorphinganimation.h
 qt6/include/Qt3DAnimation/qmorphtarget.h
 qt6/include/Qt3DAnimation/qskeletonmapping.h
 qt6/include/Qt3DAnimation/qt3danimation_global.h
+qt6/include/Qt3DAnimation/qt3danimationexports.h
 qt6/include/Qt3DAnimation/qt3danimationversion.h
 qt6/include/Qt3DAnimation/qvertexblendanimation.h
 qt6/include/Qt3DCore/${PKGVERSION}/Qt3DCore/private/aligned_malloc_p.h
@@ -259,6 +260,7 @@ qt6/include/Qt3DCore/qskeleton.h
 qt6/include/Qt3DCore/qskeletonloader.h
 qt6/include/Qt3DCore/qt3dcore-config.h
 qt6/include/Qt3DCore/qt3dcore_global.h
+qt6/include/Qt3DCore/qt3dcoreexports.h
 qt6/include/Qt3DCore/qt3dcoreversion.h
 qt6/include/Qt3DCore/qtransform.h
 qt6/include/Qt3DExtras/${PKGVERSION}/Qt3DExtras/private/areaallocator_p.h
@@ -385,6 +387,7 @@ qt6/include/Qt3DExtras/qspritegrid.h
 qt6/include/Qt3DExtras/qspritesheet.h
 qt6/include/Qt3DExtras/qspritesheetitem.h
 qt6/include/Qt3DExtras/qt3dextras_global.h
+qt6/include/Qt3DExtras/qt3dextrasexports.h
 qt6/include/Qt3DExtras/qt3dextrasversion.h
 qt6/include/Qt3DExtras/qt3dwindow.h
 qt6/include/Qt3DExtras/qtext2dentity.h
@@ -503,6 +506,7 @@ qt6/include/Qt3DInput/qmousedevice.h
 qt6/include/Qt3DInput/qmouseevent.h
 qt6/include/Qt3DInput/qmousehandler.h
 qt6/include/Qt3DInput/qt3dinput_global.h
+qt6/include/Qt3DInput/qt3dinputexports.h
 qt6/include/Qt3DInput/qt3dinputversion.h
 qt6/include/Qt3DLogic/${PKGVERSION}/Qt3DLogic/private/callbackjob_p.h
 qt6/include/Qt3DLogic/${PKGVERSION}/Qt3DLogic/private/executor_p.h
@@ -521,6 +525,7 @@ qt6/include/Qt3DLogic/Qt3DLogicVersion
 qt6/include/Qt3DLogic/qframeaction.h
 qt6/include/Qt3DLogic/qlogicaspect.h
 qt6/include/Qt3DLogic/qt3dlogic_global.h
+qt6/include/Qt3DLogic/qt3dlogicexports.h
 qt6/include/Qt3DLogic/qt3dlogicversion.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qqmlaspectengine_p.h
 qt6/include/Qt3DQuick/${PKGVERSION}/Qt3DQuick/private/qquaternionanimation_p.h
@@ -542,6 +547,7 @@ qt6/include/Qt3DQuick/Qt3DQuickDepends
 qt6/include/Qt3DQuick/Qt3DQuickVersion
 qt6/include/Qt3DQuick/qqmlaspectengine.h
 qt6/include/Qt3DQuick/qt3dquick_global.h
+qt6/include/Qt3DQuick/qt3dquickexports.h
 qt6/include/Qt3DQuick/qt3dquickversion.h
 qt6/include/Qt3DQuickAnimation/${PKGVERSION}/Qt3DQuickAnimation/private/qt3dquickanimation_global_p.h
 qt6/include/Qt3DQuickAnimation/${PKGVERSION}/Qt3DQuickAnimation/private/qt3dquickanimationnodefactory_p.h
@@ -556,6 +562,7 @@ qt6/include/Qt3DQuickAnimation/Qt3DQuickAnimation
 qt6/include/Qt3DQuickAnimation/Qt3DQuickAnimationDepends
 qt6/include/Qt3DQuickAnimation/Qt3DQuickAnimationVersion
 qt6/include/Qt3DQuickAnimation/qt3dquickanimation_global.h
+qt6/include/Qt3DQuickAnimation/qt3dquickanimationexports.h
 qt6/include/Qt3DQuickAnimation/qt3dquickanimationversion.h
 qt6/include/Qt3DQuickExtras/${PKGVERSION}/Qt3DQuickExtras/private/qt3dquickextras_global_p.h
 qt6/include/Qt3DQuickExtras/${PKGVERSION}/Qt3DQuickExtras/private/qt3dquickextrasnodefactory_p.h
@@ -569,6 +576,7 @@ qt6/include/Qt3DQuickExtras/Qt3DQuickExtrasDepends
 qt6/include/Qt3DQuickExtras/Qt3DQuickExtrasVersion
 qt6/include/Qt3DQuickExtras/Qt3DQuickWindow
 qt6/include/Qt3DQuickExtras/qt3dquickextras_global.h
+qt6/include/Qt3DQuickExtras/qt3dquickextrasexports.h
 qt6/include/Qt3DQuickExtras/qt3dquickextrasversion.h
 qt6/include/Qt3DQuickExtras/qt3dquickwindow.h
 qt6/include/Qt3DQuickInput/${PKGVERSION}/Qt3DQuickInput/private/qt3dquickinput_global_p.h
@@ -583,6 +591,7 @@ qt6/include/Qt3DQuickInput/Qt3DQuickInput
 qt6/include/Qt3DQuickInput/Qt3DQuickInputDepends
 qt6/include/Qt3DQuickInput/Qt3DQuickInputVersion
 qt6/include/Qt3DQuickInput/qt3dquickinput_global.h
+qt6/include/Qt3DQuickInput/qt3dquickinputexports.h
 qt6/include/Qt3DQuickInput/qt3dquickinputversion.h
 qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/qt3dquickrender_global_p.h
 qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/qt3dquickrendernodefactory_p.h
@@ -611,6 +620,7 @@ qt6/include/Qt3DQuickRender/Qt3DQuickRender
 qt6/include/Qt3DQuickRender/Qt3DQuickRenderDepends
 qt6/include/Qt3DQuickRender/Qt3DQuickRenderVersion
 qt6/include/Qt3DQuickRender/qt3dquickrender_global.h
+qt6/include/Qt3DQuickRender/qt3dquickrenderexports.h
 qt6/include/Qt3DQuickRender/qt3dquickrenderversion.h
 qt6/include/Qt3DQuickScene2D/${PKGVERSION}/Qt3DQuickScene2D/private/qscene2d_p.h
 qt6/include/Qt3DQuickScene2D/${PKGVERSION}/Qt3DQuickScene2D/private/qt3dquick3dscene2d_p.h
@@ -627,6 +637,7 @@ qt6/include/Qt3DQuickScene2D/Qt3DQuickScene2DDepends
 qt6/include/Qt3DQuickScene2D/Qt3DQuickScene2DVersion
 qt6/include/Qt3DQuickScene2D/qscene2d.h
 qt6/include/Qt3DQuickScene2D/qt3dquickscene2d_global.h
+qt6/include/Qt3DQuickScene2D/qt3dquickscene2dexports.h
 qt6/include/Qt3DQuickScene2D/qt3dquickscene2dversion.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/abstractpickingjob_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/abstractrenderer_p.h
@@ -1084,6 +1095,7 @@ qt6/include/Qt3DRender/qstenciltestarguments.h
 qt6/include/Qt3DRender/qsubtreeenabler.h
 qt6/include/Qt3DRender/qt3drender-config.h
 qt6/include/Qt3DRender/qt3drender_global.h
+qt6/include/Qt3DRender/qt3drenderexports.h
 qt6/include/Qt3DRender/qt3drenderversion.h
 qt6/include/Qt3DRender/qtechnique.h
 qt6/include/Qt3DRender/qtechniquefilter.h
@@ -1104,6 +1116,7 @@ qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationDependencies.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationTargets-release.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationTargets.cmake
+qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DAnimation/Qt63DAnimationVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreConfig.cmake
@@ -1112,6 +1125,7 @@ qt6/lib/cmake/Qt63DCore/Qt63DCoreConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreDependencies.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreTargets-release.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreTargets.cmake
+qt6/lib/cmake/Qt63DCore/Qt63DCoreVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DCore/Qt63DCoreVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasConfig.cmake
@@ -1120,6 +1134,7 @@ qt6/lib/cmake/Qt63DExtras/Qt63DExtrasConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasDependencies.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasTargets-release.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasTargets.cmake
+qt6/lib/cmake/Qt63DExtras/Qt63DExtrasVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DExtras/Qt63DExtrasVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputConfig.cmake
@@ -1129,6 +1144,7 @@ qt6/lib/cmake/Qt63DInput/Qt63DInputDependencies.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputPlugins.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputTargets-release.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputTargets.cmake
+qt6/lib/cmake/Qt63DInput/Qt63DInputVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DInput/Qt63DInputVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicConfig.cmake
@@ -1137,6 +1153,7 @@ qt6/lib/cmake/Qt63DLogic/Qt63DLogicConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicDependencies.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicTargets-release.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicTargets.cmake
+qt6/lib/cmake/Qt63DLogic/Qt63DLogicVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DLogic/Qt63DLogicVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickConfig.cmake
@@ -1145,6 +1162,7 @@ qt6/lib/cmake/Qt63DQuick/Qt63DQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickDependencies.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickTargets-release.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickTargets.cmake
+qt6/lib/cmake/Qt63DQuick/Qt63DQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuick/Qt63DQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationConfig.cmake
@@ -1153,6 +1171,7 @@ qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationDependencies.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationTargets.cmake
+qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickAnimation/Qt63DQuickAnimationVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasConfig.cmake
@@ -1161,6 +1180,7 @@ qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasDependencies.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasTargets.cmake
+qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickExtras/Qt63DQuickExtrasVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputConfig.cmake
@@ -1169,6 +1189,7 @@ qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputDependencies.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputTargets.cmake
+qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickInput/Qt63DQuickInputVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderConfig.cmake
@@ -1177,6 +1198,7 @@ qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderDependencies.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderTargets.cmake
+qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickRender/Qt63DQuickRenderVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DConfig.cmake
@@ -1185,6 +1207,7 @@ qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DConfigVersionImpl.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DDependencies.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets.cmake
+qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderConfig.cmake
@@ -1194,6 +1217,7 @@ qt6/lib/cmake/Qt63DRender/Qt63DRenderDependencies.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderPlugins.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderTargets-release.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderTargets.cmake
+qt6/lib/cmake/Qt63DRender/Qt63DRenderVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt6AssimpSceneImportPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DRender/Qt6AssimpSceneImportPluginConfig.cmake

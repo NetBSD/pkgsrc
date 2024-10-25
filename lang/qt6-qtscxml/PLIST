@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -15,7 +15,6 @@ qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachine_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmlstatemachineinfo_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qscxmltabledata_p.h
 qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qtscxml-config_p.h
-qt6/include/QtScxml/${PKGVERSION}/QtScxml/private/qtscxmlexports_p.h
 qt6/include/QtScxml/QScxmlCompiler
 qt6/include/QtScxml/QScxmlCppDataModel
 qt6/include/QtScxml/QScxmlDataModel
@@ -48,7 +47,6 @@ qt6/include/QtScxml/qtscxmlversion.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/eventconnection_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/invokedservices_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/qscxmlqmlglobals_p.h
-qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/qtscxmlqmlexports_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/statemachineextended_p.h
 qt6/include/QtScxmlQml/${PKGVERSION}/QtScxmlQml/private/statemachineloader_p.h
 qt6/include/QtScxmlQml/QtScxmlQml
@@ -98,7 +96,6 @@ qt6/include/QtStateMachine/qtstatemachineversion.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/childrenprivate_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/finalstate_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/qstatemachineqmlglobals_p.h
-qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/qtstatemachineqmlexports_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/signaltransition_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/state_p.h
 qt6/include/QtStateMachineQml/${PKGVERSION}/QtStateMachineQml/private/statemachine_p.h
@@ -137,6 +134,7 @@ qt6/lib/cmake/Qt6Scxml/Qt6ScxmlMacros.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlPlugins.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets-release.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlTargets.cmake
+qt6/lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Scxml/Qt6ScxmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfig.cmake
@@ -145,6 +143,7 @@ qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlDependencies.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets-release.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlTargets.cmake
+qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ScxmlQml/Qt6ScxmlQmlVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ScxmlTools/Qt6ScxmlToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6ScxmlTools/Qt6ScxmlToolsConfig.cmake
@@ -161,6 +160,7 @@ qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineDependencies.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineTargets-release.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineTargets.cmake
+qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6StateMachine/Qt6StateMachineVersionlessTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfig.cmake
@@ -169,6 +169,7 @@ qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlDependencies.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets-release.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlTargets.cmake
+qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6StateMachineQml/Qt6StateMachineQmlVersionlessTargets.cmake
 qt6/lib/libQt6Scxml.prl
 qt6/lib/libQt6Scxml.so

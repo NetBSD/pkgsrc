@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/25 10:41:59 adam Exp $
 lib/pkgconfig/Qt6Positioning.pc
 lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
@@ -23,7 +23,6 @@ qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qnmeapositioninfos
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qnmeasatelliteinfosource_p.h
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qpositioningglobal_p.h
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qtpositioning-config_p.h
-qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qtpositioningexports_p.h
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qwebmercator_p.h
 qt6/include/QtPositioning/QGeoAddress
 qt6/include/QtPositioning/QGeoAreaMonitorInfo
@@ -77,7 +76,6 @@ qt6/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qpositio
 qt6/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qpositioningquickmodule_p.h
 qt6/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qquickgeocoordinateanimation_p.h
 qt6/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qquickgeocoordinateanimation_p_p.h
-qt6/include/QtPositioningQuick/${PKGVERSION}/QtPositioningQuick/private/qtpositioningquickexports_p.h
 qt6/include/QtPositioningQuick/QtPositioningQuick
 qt6/include/QtPositioningQuick/QtPositioningQuickDepends
 qt6/include/QtPositioningQuick/QtPositioningQuickVersion
@@ -96,6 +94,7 @@ qt6/lib/cmake/Qt6Positioning/Qt6PositioningDependencies.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningPlugins.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningTargets-release.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningTargets.cmake
+qt6/lib/cmake/Qt6Positioning/Qt6PositioningVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Positioning/Qt6PositioningVersionlessTargets.cmake
 ${PLIST.qt6dbus}qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginAdditionalTargetInfo.cmake
 ${PLIST.qt6dbus}qt6/lib/cmake/Qt6Positioning/Qt6QGeoPositionInfoSourceFactoryGeoclue2PluginConfig.cmake
@@ -122,6 +121,7 @@ qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickDependencies.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickTargets-release.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickTargets.cmake
+qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6PositioningQuick/Qt6PositioningQuickVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6positioningquickpluginConfig.cmake

@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:42:00 adam Exp $
 lib/pkgconfig/Qt6ShaderTools.pc
 qt6/bin/qsb
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderrewriter_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvcompiler_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshader_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qspirvshaderremap_p.h
-qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qtshadertoolsexports_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qtshadertoolsglobal_p.h
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/rhi/qshaderbaker.h
 qt6/include/QtShaderTools/QtShaderTools
@@ -22,6 +21,7 @@ qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsDependencies.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsTargets-release.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsTargets.cmake
+qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6ShaderTools/Qt6ShaderToolsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsMacros.cmake
 qt6/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsAdditionalTargetInfo.cmake
