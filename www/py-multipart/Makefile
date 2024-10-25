@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/06/19 05:03:05 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/10/25 13:03:43 adam Exp $
 
-DISTNAME=	multipart-0.2.5
+DISTNAME=	multipart-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multipart/}
@@ -10,12 +10,9 @@ HOMEPAGE=	https://github.com/defnull/multipart
 COMMENT=	Parser for multipart/form-data
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.9:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
