@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:56:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 13:09:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,6 +24,9 @@ ${PYSITELIB}/extension_helpers/src/compiler.c
 ${PYSITELIB}/extension_helpers/tests/__init__.py
 ${PYSITELIB}/extension_helpers/tests/__init__.pyc
 ${PYSITELIB}/extension_helpers/tests/__init__.pyo
+${PYSITELIB}/extension_helpers/tests/py311_backports.py
+${PYSITELIB}/extension_helpers/tests/py311_backports.pyc
+${PYSITELIB}/extension_helpers/tests/py311_backports.pyo
 ${PYSITELIB}/extension_helpers/tests/test_openmp_helpers.py
 ${PYSITELIB}/extension_helpers/tests/test_openmp_helpers.pyc
 ${PYSITELIB}/extension_helpers/tests/test_openmp_helpers.pyo
