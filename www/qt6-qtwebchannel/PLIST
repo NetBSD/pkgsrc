@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/31 19:56:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:42:01 adam Exp $
 lib/pkgconfig/Qt6WebChannel.pc
 lib/pkgconfig/Qt6WebChannelQuick.pc
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qmetaobjectpublisher_p.h
@@ -37,6 +37,7 @@ qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelDependencies.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets-release.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelTargets.cmake
+qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebChannel/Qt6WebChannelVersionlessTargets.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickConfig.cmake
@@ -45,6 +46,7 @@ qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickDependencies.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickTargets-release.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickTargets.cmake
+qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6WebChannelQuick/Qt6WebChannelQuickVersionlessTargets.cmake
 qt6/lib/libQt6WebChannel.prl
 qt6/lib/libQt6WebChannel.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.5 2024/04/27 11:49:40 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.6 2024/10/25 10:41:57 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -17,6 +17,7 @@ qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapture_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qgraphicsframecapturemetal_p_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmacmimeregistry_p.h
+qt6/include/QtGui/${PKGVERSION}/QtGui/private/qmetallayer_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrasterbackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhibackingstore_p.h
 qt6/include/QtGui/${PKGVERSION}/QtGui/private/qrhimetal_p.h
@@ -26,13 +27,12 @@ qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qcocoaprintdevic
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qcocoaprintersupport_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qpaintengine_mac_p.h
 qt6/include/QtPrintSupport/${PKGVERSION}/QtPrintSupport/private/qprintengine_mac_p.h
-qt6/include/QtTest/${PKGVERSION}/QtTest/private/callgrind_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qappletestlogger_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkvalgrind_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qtestutil_macos_p.h
-qt6/include/QtTest/${PKGVERSION}/QtTest/private/valgrind_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qmacgesturerecognizer_p.h
 qt6/lib/cmake/Qt6/macos/Info.plist.app.in
+qt6/lib/cmake/Qt6/macos/PrivacyInfo.xcprivacy
 qt6/lib/cmake/Qt6Core/Qt6CorePlugins.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:59 adam Exp $
 lib/pkgconfig/Qt6NetworkAuth.pc
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth2_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qabstractoauth_p.h
@@ -7,6 +7,8 @@ qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauth1_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauth1signature_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauth2authorizationcodeflow_p.h
 qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauthhttpserverreplyhandler_p.h
+qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qoauthoobreplyhandler_p.h
+qt6/include/QtNetworkAuth/${PKGVERSION}/QtNetworkAuth/private/qtnetworkauth-config_p.h
 qt6/include/QtNetworkAuth/QAbstractOAuth
 qt6/include/QtNetworkAuth/QAbstractOAuth2
 qt6/include/QtNetworkAuth/QAbstractOAuthReplyHandler
@@ -15,6 +17,7 @@ qt6/include/QtNetworkAuth/QOAuth1Signature
 qt6/include/QtNetworkAuth/QOAuth2AuthorizationCodeFlow
 qt6/include/QtNetworkAuth/QOAuthHttpServerReplyHandler
 qt6/include/QtNetworkAuth/QOAuthOobReplyHandler
+qt6/include/QtNetworkAuth/QOAuthUriSchemeReplyHandler
 qt6/include/QtNetworkAuth/QtNetworkAuth
 qt6/include/QtNetworkAuth/QtNetworkAuthDepends
 qt6/include/QtNetworkAuth/QtNetworkAuthVersion
@@ -27,6 +30,8 @@ qt6/include/QtNetworkAuth/qoauth2authorizationcodeflow.h
 qt6/include/QtNetworkAuth/qoauthglobal.h
 qt6/include/QtNetworkAuth/qoauthhttpserverreplyhandler.h
 qt6/include/QtNetworkAuth/qoauthoobreplyhandler.h
+qt6/include/QtNetworkAuth/qoauthurischemereplyhandler.h
+qt6/include/QtNetworkAuth/qtnetworkauth-config.h
 qt6/include/QtNetworkAuth/qtnetworkauthversion.h
 qt6/lib/cmake/Qt6BuildInternals/StandaloneTests/QtNetworkAuthTestsConfig.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthAdditionalTargetInfo.cmake
@@ -36,6 +41,7 @@ qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthDependencies.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets-release.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake
+qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessTargets.cmake
 qt6/lib/libQt6NetworkAuth.prl
 qt6/lib/libQt6NetworkAuth.so

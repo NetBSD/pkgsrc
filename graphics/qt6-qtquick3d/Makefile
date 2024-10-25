@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/06/26 16:41:00 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/25 10:41:59 adam Exp $
 
 DISTNAME=	qtquick3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtquick3d-${QTVERSION}
@@ -24,8 +24,7 @@ PKGCONFIG_OVERRIDE+=	lib/pkgconfig/Qt6Quick3DUtils.pc
  || !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) \
  || !empty(MACHINE_PLATFORM:MLinux-*-aarch64) \
  || !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-PLIST_SRC=	PLIST
-PLIST_SRC+=	PLIST.embree
+PLIST_SRC=	PLIST PLIST.embree PLIST.openxr
 .endif
 
 .include "../../graphics/qt6-qtquicktimeline/buildlink3.mk"

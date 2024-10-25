@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/27 11:49:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/25 10:42:00 adam Exp $
 lib/pkgconfig/Qt6Svg.pc
 lib/pkgconfig/Qt6SvgWidgets.pc
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfilter_p.h
@@ -11,7 +11,6 @@ qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstructure_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgstyle_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgtinydocument_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgvisitor_p.h
-qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgexports_p.h
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qtsvgglobal_p.h
 qt6/include/QtSvg/QSvgGenerator
 qt6/include/QtSvg/QSvgRenderer
@@ -53,6 +52,7 @@ qt6/lib/cmake/Qt6Svg/Qt6SvgConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgDependencies.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgTargets-release.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgTargets.cmake
+qt6/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Svg/Qt6SvgVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfig.cmake
@@ -61,6 +61,7 @@ qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets.cmake
+qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
 qt6/lib/libQt6Svg.prl
 qt6/lib/libQt6Svg.so

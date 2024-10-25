@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/27 11:49:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/25 10:41:59 adam Exp $
 lib/pkgconfig/Qt6Quick3D.pc
 lib/pkgconfig/Qt6Quick3DAssetImport.pc
 lib/pkgconfig/Qt6Quick3DAssetUtils.pc
@@ -67,7 +67,6 @@ qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dtexture_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dtexturedata_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dutils_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qquick3dviewport_p.h
-qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qtquick3dexports_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/private/qtquick3dglobal_p.h
 qt6/include/QtQuick3D/${PKGVERSION}/QtQuick3D/ssg/qquick3dextensionhelpers.h
 qt6/include/QtQuick3D/QQuick3D
@@ -92,7 +91,6 @@ qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qssg
 qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qssgassetimporterfactory_p.h
 qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qssgassetimporterplugin_p.h
 qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qssgassetimportmanager_p.h
-qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qtquick3dassetimportexports_p.h
 qt6/include/QtQuick3DAssetImport/${PKGVERSION}/QtQuick3DAssetImport/private/qtquick3dassetimportglobal_p.h
 qt6/include/QtQuick3DAssetImport/QtQuick3DAssetImport
 qt6/include/QtQuick3DAssetImport/QtQuick3DAssetImportDepends
@@ -104,7 +102,6 @@ qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qssgqm
 qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qssgrtutilities_p.h
 qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qssgscenedesc_p.h
 qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qssgsceneedit_p.h
-qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qtquick3dassetutilsexports_p.h
 qt6/include/QtQuick3DAssetUtils/${PKGVERSION}/QtQuick3DAssetUtils/private/qtquick3dassetutilsglobal_p.h
 qt6/include/QtQuick3DAssetUtils/QtQuick3DAssetUtils
 qt6/include/QtQuick3DAssetUtils/QtQuick3DAssetUtilsDepends
@@ -125,7 +122,6 @@ qt6/include/QtQuick3DGlslParser/${PKGVERSION}/QtQuick3DGlslParser/private/glslsy
 qt6/include/QtQuick3DGlslParser/${PKGVERSION}/QtQuick3DGlslParser/private/glslsymbols_p.h
 qt6/include/QtQuick3DGlslParser/${PKGVERSION}/QtQuick3DGlslParser/private/glsltype_p.h
 qt6/include/QtQuick3DGlslParser/${PKGVERSION}/QtQuick3DGlslParser/private/glsltypes_p.h
-qt6/include/QtQuick3DGlslParser/${PKGVERSION}/QtQuick3DGlslParser/private/qtquick3dglslparserexports_p.h
 qt6/include/QtQuick3DGlslParser/QtQuick3DGlslParser
 qt6/include/QtQuick3DGlslParser/QtQuick3DGlslParserDepends
 qt6/include/QtQuick3DGlslParser/QtQuick3DGlslParserVersion
@@ -139,7 +135,6 @@ qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/lookatnode_p
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/proceduralmesh_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/proceduralskytexturedata_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qquick3dtexturedatafrontend_p.h
-qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qtquick3dhelpersexports_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/qtquick3dhelpersglobal_p.h
 qt6/include/QtQuick3DHelpers/${PKGVERSION}/QtQuick3DHelpers/private/randominstancing_p.h
 qt6/include/QtQuick3DHelpers/QtQuick3DHelpers
@@ -157,7 +152,6 @@ qt6/include/QtQuick3DHelpersImpl/QtQuick3DHelpersImplVersion
 qt6/include/QtQuick3DHelpersImpl/qtquick3dhelpersimplversion.h
 qt6/include/QtQuick3DIblBaker/${PKGVERSION}/QtQuick3DIblBaker/private/qssgiblbaker_p.h
 qt6/include/QtQuick3DIblBaker/${PKGVERSION}/QtQuick3DIblBaker/private/qtquick3diblbaker_p.h
-qt6/include/QtQuick3DIblBaker/${PKGVERSION}/QtQuick3DIblBaker/private/qtquick3diblbakerexports_p.h
 qt6/include/QtQuick3DIblBaker/QtQuick3DIblBaker
 qt6/include/QtQuick3DIblBaker/QtQuick3DIblBakerDepends
 qt6/include/QtQuick3DIblBaker/QtQuick3DIblBakerVersion
@@ -193,7 +187,6 @@ qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qquick3d
 qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qquick3dparticleutils_p.h
 qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qquick3dparticlevectordirection_p.h
 qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qquick3dparticlewander_p.h
-qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qtquick3dparticlesexports_p.h
 qt6/include/QtQuick3DParticles/${PKGVERSION}/QtQuick3DParticles/private/qtquick3dparticlesglobal_p.h
 qt6/include/QtQuick3DParticles/QtQuick3DParticles
 qt6/include/QtQuick3DParticles/QtQuick3DParticlesDepends
@@ -230,7 +223,6 @@ qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderlayer_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderlight_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrenderloadedtexture_p.h
-qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendermaterialshadergenerator_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendermesh_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendermodel_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgrendermorphtarget_p.h
@@ -260,8 +252,8 @@ qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgshadermapkey_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgshadermaterialadapter_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgshaderresourcemergecontext_p.h
+qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgshadowmaphelpers_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qssgvertexpipelineimpl_p.h
-qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qtquick3druntimerenderexports_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/private/qtquick3druntimerenderglobal_p.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/ssg/qssglightmapper.h
 qt6/include/QtQuick3DRuntimeRender/${PKGVERSION}/QtQuick3DRuntimeRender/ssg/qssgrendercontextcore.h
@@ -290,7 +282,6 @@ qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qssgmeshbvhbuild
 qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qssgplane_p.h
 qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qssgrenderbasetypes_p.h
 qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qssgutils_p.h
-qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qtquick3dutilsexports_p.h
 qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/private/qtquick3dutilsglobal_p.h
 qt6/include/QtQuick3DUtils/${PKGVERSION}/QtQuick3DUtils/ssg/qssgrenderbasetypes.h
 qt6/include/QtQuick3DUtils/QtQuick3DUtils
@@ -356,6 +347,7 @@ qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DDependencies.cmake
 qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DMacros.cmake
 qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DTargets.cmake
+qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3D/Qt6Quick3DVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6AssimpImporterPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6AssimpImporterPluginConfig.cmake
@@ -371,6 +363,7 @@ qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportPlugins.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportTargets.cmake
+qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DAssetImport/Qt6Quick3DAssetImportVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsConfig.cmake
@@ -379,6 +372,7 @@ qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsTargets.cmake
+qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DAssetUtils/Qt6Quick3DAssetUtilsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsConfig.cmake
@@ -387,6 +381,7 @@ qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsTargets.cmake
+qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DEffects/Qt6Quick3DEffectsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateConfig.cmake
@@ -395,6 +390,7 @@ qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateConfigVersi
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateTargets.cmake
+qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DGlslParserPrivate/Qt6Quick3DGlslParserPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersConfig.cmake
@@ -403,6 +399,7 @@ qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersTargets.cmake
+qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DHelpers/Qt6Quick3DHelpersVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplConfig.cmake
@@ -411,6 +408,7 @@ qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplTargets.cmake
+qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DHelpersImpl/Qt6Quick3DHelpersImplVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerConfig.cmake
@@ -419,6 +417,7 @@ qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerTargets.cmake
+qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DIblBaker/Qt6Quick3DIblBakerVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsConfig.cmake
@@ -427,6 +426,7 @@ qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsConfigVersionIm
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsTargets.cmake
+qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DParticleEffects/Qt6Quick3DParticleEffectsVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesConfig.cmake
@@ -435,6 +435,7 @@ qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesTargets.cmake
+qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DParticles/Qt6Quick3DParticlesVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderConfig.cmake
@@ -443,6 +444,7 @@ qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderConfigVersionImpl.c
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderTargets.cmake
+qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DRuntimeRender/Qt6Quick3DRuntimeRenderVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Quick3DTools/Qt6Quick3DToolsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Quick3DTools/Qt6Quick3DToolsConfig.cmake
@@ -459,6 +461,7 @@ qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsTargets.cmake
+qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsVersionlessTargets.cmake
 qt6/lib/libQt6Quick3D.prl
 qt6/lib/libQt6Quick3D.so
@@ -910,6 +913,7 @@ qt6/qml/QtQuick3D/designer/BufferInputSpecifics.qml
 qt6/qml/QtQuick3D/designer/BufferSection.qml
 qt6/qml/QtQuick3D/designer/BufferSpecifics.qml
 qt6/qml/QtQuick3D/designer/CameraSection.qml
+qt6/qml/QtQuick3D/designer/CascadesSection.qml
 qt6/qml/QtQuick3D/designer/CubeMapTextureSpecifics.qml
 qt6/qml/QtQuick3D/designer/CustomCameraSpecifics.qml
 qt6/qml/QtQuick3D/designer/CustomMaterialSection.qml

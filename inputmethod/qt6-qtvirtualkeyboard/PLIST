@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/01 13:40:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
 lib/pkgconfig/Qt6VirtualKeyboard.pc
 lib/pkgconfig/Qt6VirtualKeyboardSettings.pc
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/abstractinputpanel_p.h
@@ -17,7 +17,6 @@ qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/inputview_
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/plaininputmethod_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/platforminputcontext_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qtvirtualkeyboard-config_p.h
-qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qtvirtualkeyboardexports_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboard_global_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardabstractinputmethod_p.h
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/qvirtualkeyboardfeatures_namespace_p.h
@@ -152,6 +151,7 @@ qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardDependencies.cmake
 qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardTargets-release.cmake
 qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardTargets.cmake
+qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardVersionlessTargets.cmake
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsConfig.cmake
@@ -160,6 +160,7 @@ qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsConfigVersion
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsDependencies.cmake
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsTargets-release.cmake
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsTargets.cmake
+qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6VirtualKeyboardSettings/Qt6VirtualKeyboardSettingsVersionlessTargets.cmake
 qt6/lib/libQt6VirtualKeyboard.prl
 qt6/lib/libQt6VirtualKeyboard.so

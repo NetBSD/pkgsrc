@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.14 2024/10/01 05:54:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/10/25 10:41:59 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qabstractvideobuffer_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiobufferoutput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodecoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioringbuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
@@ -15,14 +16,18 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcapturablewindow_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qerrorinfo_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qgstreamer_platformspecificinterface_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qhwvideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qimagevideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmaybe_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediacapturesession_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaframeinput_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediainputencoderinterface_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemoryvideobuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimediautils_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiobufferinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiodecoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudioinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiooutput_p.h
@@ -39,6 +44,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaplugin
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformsurfacecapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideodevices_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideoframeinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosource_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
@@ -55,8 +61,11 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotexturehelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideowindow_p.h
+qt6/include/QtMultimedia/QAbstractVideoBuffer
 qt6/include/QtMultimedia/QAudio
 qt6/include/QtMultimedia/QAudioBuffer
+qt6/include/QtMultimedia/QAudioBufferInput
+qt6/include/QtMultimedia/QAudioBufferOutput
 qt6/include/QtMultimedia/QAudioDecoder
 qt6/include/QtMultimedia/QAudioDevice
 qt6/include/QtMultimedia/QAudioFormat
@@ -81,6 +90,7 @@ qt6/include/QtMultimedia/QScreenCapture
 qt6/include/QtMultimedia/QSoundEffect
 qt6/include/QtMultimedia/QVideoFrame
 qt6/include/QtMultimedia/QVideoFrameFormat
+qt6/include/QtMultimedia/QVideoFrameInput
 qt6/include/QtMultimedia/QVideoSink
 qt6/include/QtMultimedia/QWaveDecoder
 qt6/include/QtMultimedia/QWindowCapture
@@ -88,8 +98,11 @@ qt6/include/QtMultimedia/QtAudio
 qt6/include/QtMultimedia/QtMultimedia
 qt6/include/QtMultimedia/QtMultimediaDepends
 qt6/include/QtMultimedia/QtMultimediaVersion
+qt6/include/QtMultimedia/qabstractvideobuffer.h
 qt6/include/QtMultimedia/qaudio.h
 qt6/include/QtMultimedia/qaudiobuffer.h
+qt6/include/QtMultimedia/qaudiobufferinput.h
+qt6/include/QtMultimedia/qaudiobufferoutput.h
 qt6/include/QtMultimedia/qaudiodecoder.h
 qt6/include/QtMultimedia/qaudiodevice.h
 qt6/include/QtMultimedia/qaudioformat.h
@@ -103,7 +116,6 @@ qt6/include/QtMultimedia/qcapturablewindow.h
 qt6/include/QtMultimedia/qimagecapture.h
 qt6/include/QtMultimedia/qmediacapturesession.h
 qt6/include/QtMultimedia/qmediadevices.h
-qt6/include/QtMultimedia/qmediaenumdebug.h
 qt6/include/QtMultimedia/qmediaformat.h
 qt6/include/QtMultimedia/qmediametadata.h
 qt6/include/QtMultimedia/qmediaplayer.h
@@ -119,6 +131,7 @@ qt6/include/QtMultimedia/qtmultimediaversion.h
 qt6/include/QtMultimedia/qtvideo.h
 qt6/include/QtMultimedia/qvideoframe.h
 qt6/include/QtMultimedia/qvideoframeformat.h
+qt6/include/QtMultimedia/qvideoframeinput.h
 qt6/include/QtMultimedia/qvideosink.h
 qt6/include/QtMultimedia/qwavedecoder.h
 qt6/include/QtMultimedia/qwindowcapture.h
@@ -193,10 +206,12 @@ qt6/include/QtQuick3DSpatialAudio/QtQuick3DSpatialAudioDepends
 qt6/include/QtQuick3DSpatialAudio/QtQuick3DSpatialAudioVersion
 qt6/include/QtQuick3DSpatialAudio/qtquick3dspatialaudioexports.h
 qt6/include/QtQuick3DSpatialAudio/qtquick3dspatialaudioversion.h
+qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambientsound_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambisonicdecoder_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qambisonicdecoderdata_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qaudioengine_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qaudioroom_p.h
+qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qspatialsound_p.h
 qt6/include/QtSpatialAudio/${PKGVERSION}/QtSpatialAudio/private/qtspatialaudioglobal_p.h
 qt6/include/QtSpatialAudio/QAmbientSound
 qt6/include/QtSpatialAudio/QAudioEngine
@@ -220,6 +235,7 @@ qt6/lib/cmake/Qt6/FindGObject.cmake
 qt6/lib/cmake/Qt6/FindGStreamer.cmake
 qt6/lib/cmake/Qt6/FindMMRenderer.cmake
 qt6/lib/cmake/Qt6/FindMMRendererCore.cmake
+qt6/lib/cmake/Qt6/FindPipeWire.cmake
 qt6/lib/cmake/Qt6/FindVAAPI.cmake
 qt6/lib/cmake/Qt6/FindWMF.cmake
 qt6/lib/cmake/Qt6/FindWrapBundledResonanceAudioConfigExtra.cmake
@@ -231,15 +247,18 @@ qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioConfigVersion.cma
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioTargets-release.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioTargets.cmake
+qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BundledResonanceAudio/Qt6BundledResonanceAudioVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-release.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
+qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake
 ${PLIST.ffmpeg}qt6/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake
@@ -260,6 +279,7 @@ qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersionIm
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfig.cmake
@@ -268,6 +288,7 @@ qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsDependencies.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets-release.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets.cmake
+qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessTargets.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateAdditionalTargetInfo.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateConfig.cmake
@@ -276,6 +297,7 @@ ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreame
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateDependencies.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateTargets-release.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateTargets.cmake
+${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateVersionlessAliasTargets.cmake
 ${PLIST.gstreamer}qt6/lib/cmake/Qt6QGstreamerMediaPluginImplPrivate/Qt6QGstreamerMediaPluginImplPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3dspatialaudioConfig.cmake
@@ -296,6 +318,7 @@ qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateConfigV
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateDependencies.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateTargets-release.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateTargets.cmake
+qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Quick3DSpatialAudioPrivate/Qt6Quick3DSpatialAudioPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfig.cmake
@@ -304,6 +327,7 @@ qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioDependencies.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets-release.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets.cmake
+qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 qt6/lib/libQt6BundledResonanceAudio.a
 qt6/lib/libQt6Multimedia.prl
