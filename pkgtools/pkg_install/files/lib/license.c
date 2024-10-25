@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.65 2024/08/15 02:43:58 riastradh Exp $	*/
+/*	$NetBSD: license.c,v 1.66 2024/10/25 07:04:09 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -61,7 +61,7 @@ const char *default_acceptable_licenses =
     "cecill-b-v1 "
     "cecill-c-v1 "
     "cpl-1.0 "
-    "epl-v1.0 "
+    "epl-v1.0 epl-v2.0 "
     "eupl-v1.1 "
     "eupl-v1.2 "
     "gfsl "
