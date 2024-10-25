@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/08/03 20:01:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:57 adam Exp $
 lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonarray_p.h
@@ -15,7 +15,6 @@ qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qtsciicodec_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qutfcodec_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qxml_p.h
 qt6/include/QtCore5Compat/QBinaryJson
-qt6/include/QtCore5Compat/QConcatenable
 qt6/include/QtCore5Compat/QLinkedList
 qt6/include/QtCore5Compat/QLinkedListData
 qt6/include/QtCore5Compat/QLinkedListIterator
@@ -61,6 +60,7 @@ qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake
 qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake
 qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets-release.cmake
 qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets.cmake
+qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6Core5Compat/Qt6Core5CompatVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtgraphicaleffectspluginConfig.cmake
