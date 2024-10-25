@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.32 2023/06/19 08:14:43 wiz Exp $
+$NetBSD: distinfo,v 1.33 2024/10/25 10:55:14 adam Exp $
 
-BLAKE2s (autobahn-23.6.2.tar.gz) = c29bf12c429281d305b0b4ea2cea03b0b427253fc3fb4b3f809394590ae6160a
-SHA512 (autobahn-23.6.2.tar.gz) = 5935203277d17aab3f80e6edf700ff173fe7e23622b9d2617f91e080f56b078f947f907289f008b5eb21b1346142274616baad4a36629f49dafe409d6fdb931a
-Size (autobahn-23.6.2.tar.gz) = 480814 bytes
-SHA1 (patch-setup.py) = cae70ed045236b5234bd91026f13c9f89e209f2a
+BLAKE2s (autobahn-24.4.2.tar.gz) = 32a5751c7b9aae0ca0501c893448140ec124d5760a7303d47d04aa1595a3c363
+SHA512 (autobahn-24.4.2.tar.gz) = 2caffa9a49e3661e665a4e2641b96ff48581264654cb35ebc2e8a67620ce81bd330895bb12a098488676ab74c8275e601f45357840ca074c3c6a3d7247e563e9
+Size (autobahn-24.4.2.tar.gz) = 482700 bytes
