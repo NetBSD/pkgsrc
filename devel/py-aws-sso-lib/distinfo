@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/26 02:56:24 schmonz Exp $
+
+BLAKE2s (aws_sso_lib-1.14.0.tar.gz) = 84e73d3a312bd0229b9b3bf7fa58a6866fb1181c21eb504c02ca7b4979e382b5
+SHA512 (aws_sso_lib-1.14.0.tar.gz) = 03bb336bd1e4e81ec5e3d18b47d9681b8886f0c8f054745bf842714c980f287e641398257db3cb7a34ebcef378d463182a42394cf902d10da9539bc013b5d601
+Size (aws_sso_lib-1.14.0.tar.gz) = 29404 bytes
