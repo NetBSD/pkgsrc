@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.55 2024/05/10 06:33:04 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.56 2024/10/26 19:05:45 schmonz Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1056,7 +1056,6 @@ class Adjuster:
 
         self.pkgname_prefix = '${PYPKGPREFIX}-'
         self.categories.append('python')
-        self.extra_vars.append(Var('PYTHON_VERSIONS_INCOMPATIBLE', '=', '27'))
         self.includes.append('../../lang/python/wheel.mk')
 
     def adjust_cargo(self):

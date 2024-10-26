@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.51 2024/01/17 21:01:07 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.52 2024/10/26 19:05:45 schmonz Exp $
 
 # URLs for manual testing:
 #
@@ -1325,8 +1325,6 @@ def test_Adjuster_adjust_python_module(tmp_path: Path):
         'HOMEPAGE=       https://example.org/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
-        '',
-        'PYTHON_VERSIONS_INCOMPATIBLE=   27',
         '',
         '.include "../../lang/python/wheel.mk"',
         '.include "../../mk/bsd.pkg.mk"',
