@@ -1,0 +1,7 @@
+All AWS service exceptions are raised by boto3 as a
+botocore.exceptions.ClientError, with the contents of the exception
+indicating what kind of exception happened. This is not very pythonic,
+and the contents themselves are rather opaque, most being held in dicts
+rather than as properties. The functions in this package help dealing
+with that, to make your code less verbose and require less memorization
+of ClientError contents.
