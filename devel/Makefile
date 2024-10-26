@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4355 2024/10/20 14:03:31 wiz Exp $
+# $NetBSD: Makefile,v 1.4356 2024/10/26 02:50:32 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2454,6 +2454,7 @@ SUBDIR+=	py-atpublic
 SUBDIR+=	py-attrs
 SUBDIR+=	py-automat
 SUBDIR+=	py-autopep8
+SUBDIR+=	py-aws-error-utils
 SUBDIR+=	py-babel
 SUBDIR+=	py-backcall
 SUBDIR+=	py-backports
