@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/01/24 11:37:11 mef Exp $
+$NetBSD: distinfo,v 1.10 2024/10/26 11:55:30 mef Exp $
 
-BLAKE2s (R/RcppEigen_0.3.3.9.4.tar.gz) = 8a8ad315ac7fe1b324142bba6e9841bb3fb2189868ab75cc3c2bb713f8aceea5
-SHA512 (R/RcppEigen_0.3.3.9.4.tar.gz) = 63788b47ae11ea5db7dbff617a19c1fc7072cd3939a920c54d4e0fd4565f645e812be068ac6f52f13653fe14b5cc7bacc4607e3260e841d5e86729b97c000317
-Size (R/RcppEigen_0.3.3.9.4.tar.gz) = 1451521 bytes
+BLAKE2s (R/RcppEigen_0.3.4.0.2.tar.gz) = a5738423b41cd4ad12a315fc64feef701b398c078c5f13625e4ff10f093e0c4d
+SHA512 (R/RcppEigen_0.3.4.0.2.tar.gz) = d593d43e3778d8fcdfa2137e119d5fc4b4004deffa707cb13f3e7b129bd5b4a4af36620042df80a3d1d19834792ee36ebdc8feecfe0dc060faa233d7f2cef345
+Size (R/RcppEigen_0.3.4.0.2.tar.gz) = 1761745 bytes
