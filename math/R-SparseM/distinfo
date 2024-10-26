@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:23 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/26 12:16:54 mef Exp $
 
-BLAKE2s (R/SparseM_1.81.tar.gz) = 767e9f31161e0a2996b0830340f7aef319fc75a7e11b76ee73fa41a390b587f5
-SHA512 (R/SparseM_1.81.tar.gz) = 3fba6796a48a32059e9b7a7a22302c251a57abaca3c8a90dd531a9f7d201cb1156b65382b00b3d9e4dc919031d7adbe9c7744304401974c81063ef23d98fe126
-Size (R/SparseM_1.81.tar.gz) = 735100 bytes
+BLAKE2s (R/SparseM_1.84-2.tar.gz) = 821610aa1ad4d4e7a7b1ea57a5455e6f83b5e55f50a3fb8084c54fc9f3aeec74
+SHA512 (R/SparseM_1.84-2.tar.gz) = b8b0d54a9b18aea11103d000d308eea6cfc0f90c0edc90f7a1652bf69becb809801f0ce2e2fda5ff2296d30bfa8ce7aea7f9e2ed4b5c77911ef94fe08c7d9e50
+Size (R/SparseM_1.84-2.tar.gz) = 553080 bytes
