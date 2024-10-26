@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/06/04 02:54:56 mef Exp $
+$NetBSD: distinfo,v 1.15 2024/10/26 05:36:44 mef Exp $
 
-BLAKE2s (R/knitr_1.43.tar.gz) = b33250c5e1109616f22bb3ec84b86bda22d0d33c2d87d88398ca26afb57e247c
-SHA512 (R/knitr_1.43.tar.gz) = df71ac12cf8d1ef67fe8f659c9712fbe718447b668fa617211417c76929d6199f24bb3c89a043e135575e68f5778e046c8daf4bc59da9e5965f6e53a24637ff9
-Size (R/knitr_1.43.tar.gz) = 895054 bytes
+BLAKE2s (R/knitr_1.48.tar.gz) = a6d71592b27c38c984473e77d0e174724ea2d08975d875186c820bcd986d610b
+SHA512 (R/knitr_1.48.tar.gz) = f7674bf980fbf3291f2f9cd0d5e4ba0cc4df8176bff7a59a629c3f1341e4ad031b88f966b7448f1e5e0e8d8a35474f392084be7f89c9b2715d6876037f2a9cdd
+Size (R/knitr_1.48.tar.gz) = 583007 bytes
