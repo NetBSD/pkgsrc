@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2024/05/29 16:33:26 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/10/26 08:43:56 mef Exp $
 
 R_PKGNAME=	RNetCDF
-R_PKGVER=	2.9-1
+R_PKGVER=	2.9-2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to NetCDF datasets
-PKGREVISION=	2
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3	# OR file LICENSE
 
 TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
