@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.20 2024/02/18 14:22:58 mef Exp $
+# $NetBSD: Makefile,v 1.21 2024/10/26 05:45:17 mef Exp $
 
 R_PKGNAME=	xfun
-R_PKGVER=	0.42
+R_PKGVER=	0.48
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Miscellaneous functions by 'Yihui Xie'
 LICENSE=	mit
 
-# Packages suggested but not available: 'rhub', 'magick'
-TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+# Packages suggested but not available: 'litedown', 'rhub', 'magick', 'qs'
+# VignetteBuilder package required for checking but not installed: 'litedown'
+
+TEST_DEPENDS+=	R-knitr>=1.47:../../print/R-knitr
 TEST_DEPENDS+=	R-pak-[0-9]*:../../devel/R-pak
 TEST_DEPENDS+=	R-remotes-[0-9]*:../../devel/R-remotes
 TEST_DEPENDS+=	R-renv-[0-9]*:../../devel/R-renv
