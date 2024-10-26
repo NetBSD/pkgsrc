@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2024/10/26 07:42:27 nia Exp $
+${PYSITELIB}/psutil/_psutil_linux.abi3.so
+${PYSITELIB}/psutil/_psutil_posix.abi3.so
