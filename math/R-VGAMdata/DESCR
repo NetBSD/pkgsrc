@@ -1,0 +1,9 @@
+Mainly data sets to accompany the VGAM package and the book "Vector
+Generalized Linear and Additive Models: With an Implementation in R"
+(Yee, 2015) <DOI:10.1007/978-1-4939-2818-7>. These are used to
+illustrate vector generalized linear and additive models
+(VGLMs/VGAMs), and associated models (Reduced-Rank VGLMs, Quadratic
+RR-VGLMs, Row-Column Interaction Models, and constrained and
+unconstrained ordination models in ecology). This package now contains
+some old VGAM family functions which have been replaced by newer ones
+(often because they are now special cases).
