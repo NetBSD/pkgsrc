@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/01/23 22:13:44 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/10/26 06:23:38 mef Exp $
 
 R_PKGNAME=	FNN
-R_PKGVER=	1.1.4
+R_PKGVER=	1.1.4.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast nearest neighbor search algorithms and applications
