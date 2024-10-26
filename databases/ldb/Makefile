@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/06/27 09:49:53 adam Exp $
+# $NetBSD: Makefile,v 1.46 2024/10/26 08:26:51 wiz Exp $
 #
 # when updating this, make sure net/samba4 still builds and packages
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+CONFLICTS+=	samba>=4.21.1
 
 .include "../../mk/bsd.prefs.mk"
 
