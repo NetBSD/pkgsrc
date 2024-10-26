@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:22 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/10/26 06:36:16 mef Exp $
 
-BLAKE2s (R/ISwR_2.0-8.tar.gz) = 0a98b72a539f85c005a0e1f690adcb2a7e24b1f3c843bccabf786ccb16078baa
-SHA512 (R/ISwR_2.0-8.tar.gz) = 561a12cd24ff32f29e824c8ce9c7f154404ecb0ff9059c01d13afd151951b1d67a75624512ca4dff8a5c0770bd90c7a80778dccbbefe38bbd030351d7f922879
-Size (R/ISwR_2.0-8.tar.gz) = 164076 bytes
+BLAKE2s (R/ISwR_2.0-9.tar.gz) = bc61eafebfadd12935cc9af6badf1104a15ab25a8eccd00c900212c70ae6a5c1
+SHA512 (R/ISwR_2.0-9.tar.gz) = 12d864f06471b14523268f12f3acdc9386210dc0e1d0f1e8b97485f01c1a5fdb8450079d38792a26d17aa2eb631a7826d80a5ed0015fdebb9dfa9cd6bb17ef49
+Size (R/ISwR_2.0-9.tar.gz) = 214170 bytes
