@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/01/21 01:38:18 mef Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/26 05:54:32 mef Exp $
 
 R_PKGNAME=	DBI
-R_PKGVER=	1.2.1
+R_PKGVER=	1.2.3
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	R database interface
