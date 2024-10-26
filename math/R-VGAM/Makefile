@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/10/26 22:01:48 mef Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/26 22:06:30 mef Exp $
 
 R_PKGNAME=	VGAM
 R_PKGVER=	1.1-12
@@ -9,8 +9,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c fortran
 
-# Package suggested but not available: 'VGAMextra'
-# Package which this enhances but not available for checking: 'VGAMdata'
 TEST_DEPENDS+=	R-VGAMdata-[0-9]*:../../math/R-VGAMdata
 TEST_DEPENDS+=	R-VGAMextra-[0-9]*:../../math/R-VGAMextra
 
