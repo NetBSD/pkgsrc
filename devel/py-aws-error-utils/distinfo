@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/26 02:50:29 schmonz Exp $
+
+BLAKE2s (aws_error_utils-2.7.0.tar.gz) = aa57838f34456a922d3a50cbb5dad0b5363af1d2b7ae534a805c031d9b34a91e
+SHA512 (aws_error_utils-2.7.0.tar.gz) = b8c917da0a703f3e532f10ca084d1428aacc86a7cdcdf8b3059223f7f77ce190a583fd475438d3d9d09c5a1f3da051bbdcaa8fb16a2932ce23d5f8aaf384538c
+Size (aws_error_utils-2.7.0.tar.gz) = 10803 bytes
