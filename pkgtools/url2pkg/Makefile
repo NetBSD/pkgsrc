@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.140 2024/09/17 17:18:13 rillig Exp $
+# $NetBSD: Makefile,v 1.141 2024/10/26 19:05:45 schmonz Exp $
 
-PKGNAME=	url2pkg-23.3.2
+PKGNAME=	url2pkg-23.3.3
 CATEGORIES=	pkgtools
 
 MAINTAINER=	rillig@NetBSD.org
@@ -16,8 +16,6 @@ USE_TOOLS+=	perl:run pax
 AUTO_MKDIRS=	yes
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-extract:
 	${RUN} cd ${FILESDIR} && ${PAX} -rw *.* python/*.py python/*/*.py python/*/*/*.py ${WRKSRC}/
