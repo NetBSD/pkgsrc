@@ -1,0 +1,1 @@
+bin/aws-sso-util @PREFIX@/bin/aws-sso-util-@PYVERSSUFFIX@
