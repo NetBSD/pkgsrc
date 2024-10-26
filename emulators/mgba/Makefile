@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/08/25 06:18:41 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/10/26 07:39:11 nia Exp $
 
 .include "Makefile.common"
 
@@ -13,6 +13,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_FFMPEG=OFF
 
 .include "options.mk"
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
