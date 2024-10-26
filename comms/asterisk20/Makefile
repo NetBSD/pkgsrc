@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2024/10/20 14:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/10/26 13:12:23 ryoon Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-20.5.1
-PKGREVISION=	2
+DISTNAME=	asterisk-20.10.0
 CATEGORIES=	comms net audio
 MASTER_SITES=	https://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	https://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -16,7 +15,7 @@ DISTFILES=	${DEFAULT_DISTFILES}
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
 
-EXTRACT_ONLY=	${DISTNAME}.tar.gz
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.asterisk.org/
 
@@ -163,7 +162,7 @@ CONFIGURE_ARGS+=	--without-unbound
 DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.2.tar.gz
 
 # pjproject
-PJPROJ_VERSION=	2.13.1
+PJPROJ_VERSION=	2.14.1
 SITES.pjproject-${PJPROJ_VERSION}.tar.bz2= \
 	-https://raw.githubusercontent.com/asterisk/third-party/master/pjproject/${PJPROJ_VERSION}/pjproject-${PJPROJ_VERSION}.tar.bz2
 SITES.pjproject-${PJPROJ_VERSION}.md5= \
@@ -181,7 +180,6 @@ SUBST_FILES.configs+=	configs/samples/iax.conf.sample
 SUBST_FILES.configs+=	configs/samples/musiconhold.conf.sample
 SUBST_FILES.configs+=	configs/samples/osp.conf.sample
 SUBST_FILES.configs+=	configs/samples/phoneprov.conf.sample
-SUBST_FILES.configs+=	configs/samples/sla.conf.sample
 SUBST_SED.configs+=	-e 's|doc/|${PREFIX}/share/doc/${PKGBASE}/|'
 SUBST_SED.configs+=	-e 's|/etc/asterisk|${ASTETCDIR}|'
 SUBST_SED.configs+=	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'

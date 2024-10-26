@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/29 14:27:55 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/26 13:12:23 ryoon Exp $
 lib/asterisk/libasteriskpj.so
 lib/asterisk/libasteriskpj.so.2
 lib/asterisk/modules/app_adsiprog.so
@@ -290,7 +290,6 @@ lib/asterisk/modules/res_pjsip_sdp_rtp.so
 lib/asterisk/modules/res_pjsip_send_to_voicemail.so
 lib/asterisk/modules/res_pjsip_session.so
 lib/asterisk/modules/res_pjsip_sips_contact.so
-lib/asterisk/modules/res_pjsip_stir_shaken.so
 lib/asterisk/modules/res_pjsip_t38.so
 lib/asterisk/modules/res_pjsip_transport_websocket.so
 lib/asterisk/modules/res_pjsip_xpidf_body_generator.so
@@ -318,7 +317,6 @@ lib/asterisk/modules/res_stasis_playback.so
 lib/asterisk/modules/res_stasis_recording.so
 lib/asterisk/modules/res_stasis_snoop.so
 lib/asterisk/modules/res_statsd.so
-lib/asterisk/modules/res_stir_shaken.so
 lib/asterisk/modules/res_stun_monitor.so
 ${PLIST.kqueue}lib/asterisk/modules/res_timing_kqueue.so
 lib/asterisk/modules/res_timing_pthread.so
@@ -2438,7 +2436,3 @@ share/examples/asterisk/voicemail.conf
 share/examples/asterisk/xmpp.conf
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/animlogo.gif
 ${PLIST.webvmail}share/httpd/htdocs/_asterisk/play.gif
-@pkgdir libdata/asterisk/third-party/pjproject
-@pkgdir libdata/asterisk/keys/stir_shaken
-@pkgdir libdata/asterisk/firmware/iax
-@pkgdir libdata/asterisk/documentation/thirdparty
