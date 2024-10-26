@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/06/17 11:20:55 mef Exp $
+# $NetBSD: Makefile,v 1.13 2024/10/26 10:50:11 mef Exp $
 
 R_PKGNAME=	RPostgreSQL
-R_PKGVER=	0.7-5
+R_PKGVER=	0.7-7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R interface to the PostgreSQL database system
@@ -16,7 +16,7 @@ TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
 TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_TOOLS+=	sh
-REPLACE_SH+=	${WRKSRC}/inst/devTests/copyTest.sh
+REPLACE_SH+=	inst/devTests/copyTest.sh
 
 CHECK_INTERPRETER_SKIP=	lib/R/library/RPostgreSQL/devTests/*
 
