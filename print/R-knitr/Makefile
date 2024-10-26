@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/06/11 09:42:47 mef Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/26 05:36:44 mef Exp $
 
 R_PKGNAME=	knitr
-R_PKGVER=	1.43
+R_PKGVER=	1.48
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,7 +19,8 @@ DEPENDS+=	R-yaml>=2.1.19:../../textproc/R-yaml
 
 # Packages suggested but not available:
 #   'gifski', 'gridSVG', 'JuliaCall', 'magick', 'reticulate', 'showtext',
-#   'styler', 'targets', 'tikzDevice'
+#   'styler', 'targets', 'tikzDevice', 'svglite'
+
 
 TEST_DEPENDS+=	R-highr-[0-9]*:../../textproc/R-highr
 TEST_DEPENDS+=	R-httr-[0-9]*:../../www/R-httr
