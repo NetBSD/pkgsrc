@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/26 13:16:24 mef Exp $
+
+BLAKE2s (R/VGAMextra_0.0-6.tar.gz) = a7ed374db4b6e7ff04e8522929b5831f91d6e564469988352ee2349fbb372d9a
+SHA512 (R/VGAMextra_0.0-6.tar.gz) = 1f034c9b9e83c4604d42150320ceb009dc62c61add12e4bca1bb240d1ab9fb7d0e1fbf5882c9b8466cc94ead60f01fadd63389d5f2e70ec9cf042c0d6512d2a0
+Size (R/VGAMextra_0.0-6.tar.gz) = 302415 bytes
