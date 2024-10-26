@@ -1,0 +1,11 @@
+AWS IAM Identity Center (formerly AWS SSO) has some rough edges, and
+aws-sso-util is here to smooth them out, hopefully temporarily until AWS
+makes it better.
+
+aws-sso-util contains utilities for the following:
+
+* Configuring .aws/config
+* Logging in/out
+* AWS SDK support
+* Looking up identifiers
+* CloudFormation
