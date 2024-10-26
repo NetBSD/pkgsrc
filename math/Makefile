@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2024/08/15 22:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.609 2024/10/26 13:19:08 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -29,6 +29,8 @@ SUBDIR+=	R-RcppArmadillo
 SUBDIR+=	R-RcppEigen
 SUBDIR+=	R-SparseM
 SUBDIR+=	R-VGAM
+SUBDIR+=	R-VGAMdata
+SUBDIR+=	R-VGAMextra
 SUBDIR+=	R-XML
 SUBDIR+=	R-abind
 SUBDIR+=	R-acepack
