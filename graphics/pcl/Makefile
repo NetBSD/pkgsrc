@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2024/10/25 23:37:44 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2024/10/26 00:06:49 gdt Exp $
 
 DISTNAME=	pcl-1.14.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PointCloudLibrary/}
 GITHUB_TAG=	pcl-${PKGVERSION_NOREV}
@@ -12,9 +12,6 @@ COMMENT=	2D/3D image and point cloud processing
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/pcl-${DISTNAME}
-
-# fails with boost 1.86.0
-#   https://github.com/PointCloudLibrary/pcl/issues/6157
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
