@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/10/13 16:56:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/10/27 14:26:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -21,7 +21,6 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_stream_decoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/binary/event_stream_encoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor.rb
-${GEM_LIBDIR}/lib/aws-sdk-core/cbor/cbor_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor/decoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/cbor/encoder.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/client_side_monitoring.rb
@@ -145,6 +144,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/parser.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rest/response/status_code.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/builder.rb
+${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/cbor_engine.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/content_type_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/error_handler.rb
 ${GEM_LIBDIR}/lib/aws-sdk-core/rpc_v2/handler.rb
