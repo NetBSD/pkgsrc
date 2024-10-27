@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6582 2024/10/27 15:35:19 leot Exp $
+$NetBSD: CHANGES-2024,v 1.6583 2024/10/27 16:52:54 thor Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10008,3 +10008,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-actiontext71 to 7.1.4.2 [taca 2024-10-27]
 	Updated www/ruby-rails71 to 7.1.4.2 [taca 2024-10-27]
 	Updated net/socat to 1.8.0.1 [leot 2024-10-27]
+	Updated audio/mpg123 to 1.32.8 [thor 2024-10-27]
