@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:55:24 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/10/27 08:10:25 mef Exp $
 
-BLAKE2s (R/abind_1.4-5.tar.gz) = 808f9aba5ab3a4f40d0a9536fea2dfbdee56fa18fc994660b9fd1db9fea2a13b
-SHA512 (R/abind_1.4-5.tar.gz) = b1f5d716e04f748b9d189a4a3e15ad00c2b5a7c69425dbf9f36fcb4fe23f6ff5cec2eb22ec626ab194c1eb88bdfd271b535868b00157efd4acf0faa022d16987
-Size (R/abind_1.4-5.tar.gz) = 21810 bytes
+BLAKE2s (R/abind_1.4-8.tar.gz) = efe85404ee3a7d5923c85c607d2370059557dbf1e52d3af534c1234aa284765d
+SHA512 (R/abind_1.4-8.tar.gz) = 2bccda827982129e744867509f76de3ec70ce614a26ff67eb74f6f005ba2f05d42146c9bd7f6432690c675e7cd46851ca32b575e93a0efa5095f5e6667955aa8
+Size (R/abind_1.4-8.tar.gz) = 21974 bytes
