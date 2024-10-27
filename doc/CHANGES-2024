@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6577 2024/10/27 14:25:29 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6578 2024/10/27 14:26:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9967,3 +9967,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ruby-unicode-name to 1.13.4 [taca 2024-10-27]
 	Updated www/ruby-aws-partitions to 1.996.0 [taca 2024-10-27]
 	Updated www/ruby-aws-sigv4 to 1.10.1 [taca 2024-10-27]
+	Updated www/ruby-aws-sdk-core to 3.211.0 [taca 2024-10-27]
