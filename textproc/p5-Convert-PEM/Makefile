@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/10/20 06:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/10/27 09:32:52 wiz Exp $
 
-DISTNAME=		Convert-PEM-0.09
+DISTNAME=		Convert-PEM-0.12
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
@@ -12,6 +12,7 @@ LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Convert-ASN1>=0.10:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-Crypt-DES_EDE3-[0-9]*:../../security/p5-Crypt-DES_EDE3
+DEPENDS+=		p5-CryptX-[0-9]*:../../security/p5-CryptX
 DEPENDS+=		p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
 TEST_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
