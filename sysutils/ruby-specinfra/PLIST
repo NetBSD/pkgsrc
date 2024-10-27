@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/03/24 14:31:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/10/27 14:05:10 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -205,6 +205,7 @@ ${GEM_LIBDIR}/lib/specinfra/command/linuxmint.rb
 ${GEM_LIBDIR}/lib/specinfra/command/linuxmint/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/openrc.rb
+${GEM_LIBDIR}/lib/specinfra/command/module/runit.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/daemontools.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/delegator.rb
 ${GEM_LIBDIR}/lib/specinfra/command/module/service/god.rb
@@ -321,6 +322,10 @@ ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v15/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18.rb
 ${GEM_LIBDIR}/lib/specinfra/command/ubuntu/v18/port.rb
+${GEM_LIBDIR}/lib/specinfra/command/voidlinux.rb
+${GEM_LIBDIR}/lib/specinfra/command/voidlinux/base.rb
+${GEM_LIBDIR}/lib/specinfra/command/voidlinux/base/package.rb
+${GEM_LIBDIR}/lib/specinfra/command/voidlinux/base/service.rb
 ${GEM_LIBDIR}/lib/specinfra/command/vyos.rb
 ${GEM_LIBDIR}/lib/specinfra/command/vyos/base.rb
 ${GEM_LIBDIR}/lib/specinfra/command/windows.rb
@@ -372,6 +377,7 @@ ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/poky.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/redhat.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/solaris.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/detect_os/suse.rb
+${GEM_LIBDIR}/lib/specinfra/helper/detect_os/voidlinux.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/docker.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/host_inventory.rb
 ${GEM_LIBDIR}/lib/specinfra/helper/lxc.rb
@@ -466,6 +472,7 @@ ${GEM_LIBDIR}/spec/command/linux/selinux_module_spec.rb
 ${GEM_LIBDIR}/spec/command/linux/selinux_spec.rb
 ${GEM_LIBDIR}/spec/command/module/service/daemontools_spec.rb
 ${GEM_LIBDIR}/spec/command/module/service/init_spec.rb
+${GEM_LIBDIR}/spec/command/module/service/runit_spec.rb
 ${GEM_LIBDIR}/spec/command/module/service/systemd_spec.rb
 ${GEM_LIBDIR}/spec/command/module/ss_spec.rb
 ${GEM_LIBDIR}/spec/command/module/systemd_spec.rb
@@ -489,6 +496,8 @@ ${GEM_LIBDIR}/spec/command/sles11/user_spec.rb
 ${GEM_LIBDIR}/spec/command/sles15/service_spec.rb
 ${GEM_LIBDIR}/spec/command/solaris11/user_spec.rb
 ${GEM_LIBDIR}/spec/command/ubuntu/ppa_spec.rb
+${GEM_LIBDIR}/spec/command/voidlinux/package_spec.rb
+${GEM_LIBDIR}/spec/command/voidlinux/service_spec.rb
 ${GEM_LIBDIR}/spec/command/windows/registry_key_spec.rb
 ${GEM_LIBDIR}/spec/command/windows/service_spec.rb
 ${GEM_LIBDIR}/spec/configuration_spec.rb
