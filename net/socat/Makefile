@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2024/04/21 11:36:51 nia Exp $
+# $NetBSD: Makefile,v 1.55 2024/10/27 15:35:08 leot Exp $
 
-DISTNAME=	socat-1.8.0.0
+DISTNAME=	socat-1.8.0.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
