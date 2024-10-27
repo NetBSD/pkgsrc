@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/09/22 06:43:33 taca Exp $
+$NetBSD: distinfo,v 1.28 2024/10/27 14:05:10 taca Exp $
 
-BLAKE2s (specinfra-2.90.1.gem) = 9a386369a2b7bbb0e3f62ce0a05b272f38e02b6d7ae8ffb01a55f5e6459471a3
-SHA512 (specinfra-2.90.1.gem) = 9349b24d178cc22f6de572e71c303c4100ce4497c694273153ecb0d4df0231e885bc8046ff3ade110ae0266dd5b391bca5d2461667510cb080041e89757fdb2f
-Size (specinfra-2.90.1.gem) = 94720 bytes
+BLAKE2s (specinfra-2.91.0.gem) = 63399ebab795cf398ede169b7e2164b51409fd52e57c97ab4e2260cb6f7388e9
+SHA512 (specinfra-2.91.0.gem) = 9f796aab42aba6cd2c884a6f75d01996afe4af1ed4f08ccd6a1ecc3ea0803ee684f72067db16b054a8c10093c4cf6b7440f975dae34db4f425453adf0e594bbd
+Size (specinfra-2.91.0.gem) = 95744 bytes
