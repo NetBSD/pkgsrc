@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2021/09/05 15:07:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2024/10/27 20:01:43 jakllsch Exp $
 
 DISTNAME=	gxemul-0.7.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxemul/}
 
