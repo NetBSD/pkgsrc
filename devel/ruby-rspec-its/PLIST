@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2019/05/06 05:32:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/10/27 13:40:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/FUNDING.yml
+${GEM_LIBDIR}/.github/dependabot.yml
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -14,6 +16,7 @@ ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/lib/rspec/its.rb
 ${GEM_LIBDIR}/lib/rspec/its/version.rb
 ${GEM_LIBDIR}/rspec-its.gemspec
+${GEM_LIBDIR}/script/legacy_setup.sh
 ${GEM_LIBDIR}/script/test_all
 ${GEM_LIBDIR}/script/update_rubygems_and_install_bundler
 ${GEM_LIBDIR}/spec/rspec/its_spec.rb
