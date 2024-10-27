@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.39 2024/09/18 14:45:39 taca Exp $
+$NetBSD: distinfo,v 1.40 2024/10/27 13:30:34 taca Exp $
 
-BLAKE2s (pg-1.5.8.gem) = a802976c4c6834119c367e5f4bef1cf45774d2a9fa8aca77d1cf27b32e90f965
-SHA512 (pg-1.5.8.gem) = 0ce5447b61ddad4373b7aded1e1f6184c7bdf86e4e82ea7187039d29abc6be505e50babaf2adb96adbd67061ba116d06714024597b524b02a7c05d2a3df1f92e
-Size (pg-1.5.8.gem) = 223232 bytes
+BLAKE2s (pg-1.5.9.gem) = ffbfeb9571a5f5a133f4a3997be07da8bc7ef8c34e5de8d6ee48a1ee167c70a5
+SHA512 (pg-1.5.9.gem) = f8e85ac798f9bd13c6db6142639011780e503513594d05706a09930befcf6ef6142ac56d65a11778b69f55fad23df7466b049eebff5f0586620e427a90df90c2
+Size (pg-1.5.9.gem) = 207872 bytes
