@@ -1,21 +1,9 @@
-@comment $NetBSD: PLIST,v 1.23 2024/03/03 08:16:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/10/27 13:30:34 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/pg/postgresql_lib_path.rb
 ${GEM_EXTSDIR}/pg_ext.${RUBY_DLEXT}
-${GEM_LIBDIR}/.appveyor.yml
-${GEM_LIBDIR}/.gems
-${GEM_LIBDIR}/.gemtest
-${GEM_LIBDIR}/.github/workflows/binary-gems.yml
-${GEM_LIBDIR}/.github/workflows/source-gem.yml
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.hgsigs
-${GEM_LIBDIR}/.hgtags
-${GEM_LIBDIR}/.irbrc
-${GEM_LIBDIR}/.pryrc
-${GEM_LIBDIR}/.tm_properties
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/Contributors.rdoc
 ${GEM_LIBDIR}/Gemfile
