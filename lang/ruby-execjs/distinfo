@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2023/09/18 17:31:11 taca Exp $
+$NetBSD: distinfo,v 1.17 2024/10/27 13:50:04 taca Exp $
 
-BLAKE2s (execjs-2.9.1.gem) = 1e6654d0051fb41f7e8abf5b12e4b47af694e219339a57a8d3f4f5f907fd546a
-SHA512 (execjs-2.9.1.gem) = e370b9ceba867d43b776a3d77b7eaddf021902385ff060e5278a62cbcb7318edbc69bbd213325fd33b02619091ec760171d1a72d782a545ede6c376ac04abbef
-Size (execjs-2.9.1.gem) = 18944 bytes
+BLAKE2s (execjs-2.10.0.gem) = e4fab072d23093ef974e297e1193e4143aedd83be926b781b3b1f470cd8d5d95
+SHA512 (execjs-2.10.0.gem) = 708c97298b2579e95616e906cbb17b245e0db7397a9a4488fa16281624279398e59400af55462e81cc147cea8570528cac6c31b9a6cce5d1e18f2cca633f9e4a
+Size (execjs-2.10.0.gem) = 18944 bytes
