@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/05/29 00:15:51 wen Exp $
+$NetBSD: distinfo,v 1.6 2024/10/27 09:37:11 mef Exp $
 
-BLAKE2s (R/backports_1.4.1.tar.gz) = 1a60cc8ed58952f8c2faf8e82034b1f959a722428f5821e739d9a8cd28af45d7
-SHA512 (R/backports_1.4.1.tar.gz) = e178c4e9ccf278e3f503e2424d2d60866bb8054b7e10c105cbaa63009e84fc9be2c180f1e9947839f7d5a885a399f7a396cc3c6afe7f13e8f20fd055da43e7ab
-Size (R/backports_1.4.1.tar.gz) = 26201 bytes
+BLAKE2s (R/backports_1.5.0.tar.gz) = fcb10ce990dcce3e60a0a7c15d96675c8236c35f9c52a527f319238f17dfd65f
+SHA512 (R/backports_1.5.0.tar.gz) = 4f9dd2bd7458fec2632c357573da1187d4fa612dc543eab17d0f727a15afe36ce7b51c0e0eb670cd28393c30be1d43ae20dc401d0fd99b5cdbed068f0659e868
+Size (R/backports_1.5.0.tar.gz) = 30687 bytes
