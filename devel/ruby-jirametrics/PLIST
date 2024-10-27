@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/04 14:46:18 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/10/27 19:47:58 schmonz Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -36,6 +36,7 @@ ${GEM_LIBDIR}/lib/jirametrics/exporter.rb
 ${GEM_LIBDIR}/lib/jirametrics/file_config.rb
 ${GEM_LIBDIR}/lib/jirametrics/file_system.rb
 ${GEM_LIBDIR}/lib/jirametrics/fix_version.rb
+${GEM_LIBDIR}/lib/jirametrics/flow_efficiency_scatterplot.rb
 ${GEM_LIBDIR}/lib/jirametrics/groupable_issue_chart.rb
 ${GEM_LIBDIR}/lib/jirametrics/grouping_rules.rb
 ${GEM_LIBDIR}/lib/jirametrics/hierarchy_table.rb
@@ -49,6 +50,7 @@ ${GEM_LIBDIR}/lib/jirametrics/html/daily_wip_chart.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/data_quality_report.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/estimate_accuracy_chart.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/expedited_chart.erb
+${GEM_LIBDIR}/lib/jirametrics/html/flow_efficiency_scatterplot.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/hierarchy_table.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/index.css
 ${GEM_LIBDIR}/lib/jirametrics/html/index.erb
