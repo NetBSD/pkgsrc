@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6573 2024/10/27 14:05:23 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6574 2024/10/27 14:07:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -9963,3 +9963,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/ruby-metasploit-payloads to 2.0.185 [taca 2024-10-27]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.35 [taca 2024-10-27]
 	Updated sysutils/ruby-specinfra to 2.91.0 [taca 2024-10-27]
+	Updated textproc/ruby-rexml to 3.3.9 [taca 2024-10-27]
