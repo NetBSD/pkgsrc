@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.268 2024/10/20 21:06:20 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.269 2024/10/27 16:52:09 thor Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26099,3 +26099,4 @@ python38-[0-9]*	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 libarchive<3.7.5	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-48957
 libarchive<3.7.5	out-of-bounds-access	https://nvd.nist.gov/vuln/detail/CVE-2024-48958
 element-web<1.11.81	expose-access-tokens	https://nvd.nist.gov/vuln/detail/CVE-2024-47771
+mpg123<1.32.8	heap-buffer-overflow	https://mpg123.org/cgi-bin/news.cgi#2024-10-26
