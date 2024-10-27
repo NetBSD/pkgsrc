@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2024/09/04 07:14:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.47 2024/10/27 01:11:59 schmonz Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -4664,16 +4664,6 @@ ${PYSITELIB}/awscli/examples/networkmonitor/tag-resource.rst
 ${PYSITELIB}/awscli/examples/networkmonitor/untag-resource.rst
 ${PYSITELIB}/awscli/examples/networkmonitor/update-monitor.rst
 ${PYSITELIB}/awscli/examples/networkmonitor/update-probe.rst
-${PYSITELIB}/awscli/examples/nimble/get-eula.rst
-${PYSITELIB}/awscli/examples/nimble/get-launch-profile-details.rst
-${PYSITELIB}/awscli/examples/nimble/get-launch-profile.rst
-${PYSITELIB}/awscli/examples/nimble/get-studio.rst
-${PYSITELIB}/awscli/examples/nimble/list-eula-acceptances.rst
-${PYSITELIB}/awscli/examples/nimble/list-eulas.rst
-${PYSITELIB}/awscli/examples/nimble/list-launch-profiles.rst
-${PYSITELIB}/awscli/examples/nimble/list-studio-components.rst
-${PYSITELIB}/awscli/examples/nimble/list-studio-members.rst
-${PYSITELIB}/awscli/examples/nimble/list-studios.rst
 ${PYSITELIB}/awscli/examples/omics/abort-multipart-read-set-upload.rst
 ${PYSITELIB}/awscli/examples/omics/accept-share.rst
 ${PYSITELIB}/awscli/examples/omics/batch-delete-read-set.rst
