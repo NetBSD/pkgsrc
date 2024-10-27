@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/10/21 14:58:57 taca Exp $
+$NetBSD: distinfo,v 1.24 2024/10/27 14:29:40 taca Exp $
 
-BLAKE2s (activestorage-6.1.7.9.gem) = 31e0ee8aa0ddd05c6a9f20c548f6ba0ca5fea117d73894f3cdb3ff630f5d79f4
-SHA512 (activestorage-6.1.7.9.gem) = 9122f2bf35f13e8e4e634a9bb72a8ce048d64df709cab4550421161d33bbeb4be58409e96c7853d2b289f68f27bbf49849019ccfe37de06196279478b3f0cece
-Size (activestorage-6.1.7.9.gem) = 58368 bytes
+BLAKE2s (activestorage-6.1.7.10.gem) = 98a6bcef5c79898c7b7fa030188433ea04aa25cd282d2ecb56c8773a495ff0c1
+SHA512 (activestorage-6.1.7.10.gem) = 37c05feb6a5dee701d3c7ab904d498507776992fc5c49b8690c469a15b31d1661e3185181a6caa409b674d7b237affca5c2734de343467006e507688ef5bacf8
+Size (activestorage-6.1.7.10.gem) = 58368 bytes
