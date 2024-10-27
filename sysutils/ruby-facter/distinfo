@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.58 2024/09/22 06:41:44 taca Exp $
+$NetBSD: distinfo,v 1.59 2024/10/27 14:03:51 taca Exp $
 
-BLAKE2s (facter-4.9.0.gem) = a02c375498eaa33e10bcdca4c978e2f739d135568bd123bd60856a5e74790b00
-SHA512 (facter-4.9.0.gem) = 662ddc180a1cf18a76259cfc54a322c4e94ba1a47c03a429b9ac64af3289d543a88c1cd38ab59a568e80e9a11af8de7fb3b586af1609cbe8fe3d5537712a09c0
-Size (facter-4.9.0.gem) = 172032 bytes
+BLAKE2s (facter-4.10.0.gem) = 9c1de3f9f58a22f2638171b75fda137813c3c98eea2a753f32b406b2eeac6218
+SHA512 (facter-4.10.0.gem) = 2d624aa1b40cf057d36fb52ed884662c306d8e98d9dd00f5f3a4f4e990a1ac2ab54c31b60089c67530f478c4f264444775b15dd0ee6b90f50a5187df3392049e
+Size (facter-4.10.0.gem) = 172032 bytes
