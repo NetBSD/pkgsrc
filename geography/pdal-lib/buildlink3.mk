@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2024/10/04 03:49:24 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2024/10/27 18:57:05 gdt Exp $
 
 BUILDLINK_TREE+=	pdal-lib
 
@@ -16,7 +16,6 @@ BUILDLINK_PKGSRCDIR.pdal-lib?=		../../geography/pdal-lib
 .include "../../geography/laszip/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
-.include "../../graphics/pcl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .endif # PDAL_LIB_BUILDLINK3_MK

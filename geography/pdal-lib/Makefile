@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/10/04 03:49:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2024/10/27 18:57:05 gdt Exp $
 
 DISTNAME=	PDAL-2.7.1-src
 PKGNAME=	${DISTNAME:S/PDAL/pdal-lib/:S/-src//}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PDAL/}
 GITHUB_PROJECT=	PDAL
@@ -58,7 +58,6 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_ZSTD=ON
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/laszip/buildlink3.mk"
 .include "../../geography/libgeotiff/buildlink3.mk"
-.include "../../graphics/pcl/buildlink3.mk"
 .include "../../lang/libunwind/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
