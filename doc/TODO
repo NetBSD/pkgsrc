@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25002 2024/10/23 21:54:06 wiz Exp $
+$NetBSD: TODO,v 1.25003 2024/10/27 09:30:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -632,6 +632,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.3.7
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -778,6 +779,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.12.3
+	o icu-76.1
 	o idzebra-2.2.2
 	o ike-2.0.1 [pkg/37032]
 	o imp-6.2.12
@@ -1110,6 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
+	o prometheus-2.55.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1117,12 +1120,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-Glances-4.2.0
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-WebOb-1.8.9
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
+	o py-cyclonedx-python-lib-8.3.0
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
@@ -1132,24 +1138,38 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
+	o py-keyring-25.5.0
+	o py-license-expression-30.4.0
+	o py-meson_python-0.17.1
 	o py-mitmproxy_rs-0.9.3
 	o py-musicbrainz-0.7.4
 	o py-musicbrainz-ngs-0.7.1
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-orjson-3.10.10
 	o py-pdf-parser-0.7.4
+	o py-pdm_backend-2.4.3
 	o py-postgresql-5.1.2
+	o py-posting-2.0.1
+	o py-pydantic-core-2.25.0
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
+	o py-sphinx-autoapi-3.3.3
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-0.85.1
 	o py-tokyocabinet-0.6
+	o py-trove-classifiers-2024.10.21.16
 	o py-uliweb-0.6
+	o py-uwsgi-2.0.28
+	o py-werkzeug-3.0.6
+	o py-yarl-1.16.0
 	o py-yubiauth-0.3.10
+	o py-zopfli-0.2.3.post1
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qconf-2.5
@@ -1289,6 +1309,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
 	o tfmxplay-1.1.6
+	o tigervnc-1.14.1
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tk-9.0
@@ -1385,6 +1406,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xorp-1.8.5
+	o xournalpp-1.2.4
 	o xpad-5.4.0
 	o xpmroot-2.7.0
 	o xrmap-base-2.33.1
