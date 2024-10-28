@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2024/07/19 09:46:02 pin Exp $
+# $NetBSD: Makefile,v 1.66.2.1 2024/10/28 14:23:40 bsiegert Exp $
 
-DISTNAME=	ncspot-1.1.2
+DISTNAME=	ncspot-1.2.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,11 +10,13 @@ HOMEPAGE=	https://github.com/hrkfdn/ncspot/
 COMMENT=	Cross-platform ncurses Spotify client written in Rust
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
+
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
+#RUST_REQ=	1.80.1
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
+#This package is confirmed to build with Rust 1.80.1 on amd64
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
 PYTHON_VERSIONS_INCOMPATIBLE=	27
@@ -22,6 +24,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 
@@ -30,4 +33,5 @@ CARGO_NO_DEFAULT_FEATURES=	YES
 .include "../../lang/python/tool.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
