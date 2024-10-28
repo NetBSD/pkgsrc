@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6597 2024/10/28 20:47:57 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6598 2024/10/28 22:48:21 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10027,3 +10027,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-tqdm to 4.66.6 [adam 2024-10-28]
 	Updated devel/libgit2 to 1.8.3 [adam 2024-10-28]
 	Updated mail/py-checkdmarc to 5.6.2 [adam 2024-10-28]
+	Updated security/wolfssl to 5.7.4 [fox 2024-10-28]
