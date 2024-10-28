@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.4 2024/10/16 09:02:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.5 2024/10/28 14:26:19 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -30,4 +30,10 @@ www/firefox128: security fix
 
 Pullup ticket #6905 - requested by nia
 www/palemoon: security fix
+
+Pullup ticket #6908 - requested by pin
+audio/librespot: update to restore functionality
+
+Pullup ticket #6909 - requested by pin
+audio/ncspot: update to restore functionality
 
