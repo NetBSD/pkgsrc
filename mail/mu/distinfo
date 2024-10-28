@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/07/29 19:32:58 ktnb Exp $
+$NetBSD: distinfo,v 1.5 2024/10/28 14:44:31 ktnb Exp $
 
-BLAKE2s (mu-1.12.6.tar.gz) = a8d57933d3a3fb09c0ab19d16b4dfe1f690706c62c17c3d18cd28763981567cb
-SHA512 (mu-1.12.6.tar.gz) = dc491bd70a9d5f0843a969490bbde7c78ccde2cb49ae9b6f161571007762e03f418d70960a39dfb4b109d46128126553cbfb054d20996fa028ac98837de42495
-Size (mu-1.12.6.tar.gz) = 963258 bytes
+BLAKE2s (mu-1.12.7.tar.gz) = 9448be82fbf2e3885d5a38b5df47e99f1d2ef56249b6c42bd75a71d4dfa912b8
+SHA512 (mu-1.12.7.tar.gz) = b8b1a7a85eeeffaf4aa018cfd0c516a43afc0ff380b830e79dffea6e7231eadfcf176bcd855282479a91d57405c124b672e9557cb96dc530ec6e0c1bf7f6f58b
+Size (mu-1.12.7.tar.gz) = 966457 bytes
