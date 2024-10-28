@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6596 2024/10/28 14:44:48 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.6597 2024/10/28 20:47:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10023,3 +10023,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/restic to 0.17.2 [adam 2024-10-28]
 	Updated textproc/py-Levenshtein to 0.26.1 [adam 2024-10-28]
 	Updated mail/mu to 1.12.7 [ktnb 2024-10-28]
+	Updated net/tor to 0.4.8.13 [adam 2024-10-28]
+	Updated misc/py-tqdm to 4.66.6 [adam 2024-10-28]
+	Updated devel/libgit2 to 1.8.3 [adam 2024-10-28]
+	Updated mail/py-checkdmarc to 5.6.2 [adam 2024-10-28]
