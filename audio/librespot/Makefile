@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/04/06 08:04:49 wiz Exp $
+# $NetBSD: Makefile,v 1.27.4.1 2024/10/28 14:05:10 bsiegert Exp $
 
-DISTNAME=	librespot-0.4.2
-PKGREVISION=	5
+DISTNAME=	librespot-0.5.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=librespot-org/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,11 +10,17 @@ HOMEPAGE=	https://github.com/librespot-org/librespot/
 COMMENT=	Open Source Spotify client library
 LICENSE=	mit
 
+TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
+
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.74.0
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config
 
 INSTALLATION_DIRS=	bin
+
+RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	yes
 
@@ -26,4 +31,5 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/rust/cargo.mk"
+.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
