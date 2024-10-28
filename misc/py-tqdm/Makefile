@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2024/08/04 07:09:26 adam Exp $
+# $NetBSD: Makefile,v 1.49 2024/10/28 20:40:01 adam Exp $
 
-DISTNAME=	tqdm-4.66.5
+DISTNAME=	tqdm-4.66.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tqdm/}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
