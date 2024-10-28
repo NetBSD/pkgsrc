@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2023/11/19 10:26:36 fox Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/10/28 22:47:51 fox Exp $
 bin/wolfssl-config
 include/wolfssl/callbacks.h
 include/wolfssl/certs_test.h
@@ -50,6 +50,7 @@ include/wolfssl/openssl/rand.h
 include/wolfssl/openssl/rc4.h
 include/wolfssl/openssl/ripemd.h
 include/wolfssl/openssl/rsa.h
+include/wolfssl/openssl/safestack.h
 include/wolfssl/openssl/sha.h
 include/wolfssl/openssl/sha3.h
 include/wolfssl/openssl/srp.h
