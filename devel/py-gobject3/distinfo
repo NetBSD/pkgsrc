@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/04/25 10:06:10 adam Exp $
+$NetBSD: distinfo,v 1.29 2024/10/29 20:03:26 adam Exp $
 
-BLAKE2s (pygobject-3.48.2.tar.xz) = 78f24d543826c57024d6c3228d66464b96503a2d8fbb4c791f52e8a6e6300e10
-SHA512 (pygobject-3.48.2.tar.xz) = 11619f73be5894fae82b261779f33390d1aec51b02bcf285c58f3c76ee46dfc1b3f435e4662176fde5ca899aee5afc453f8f0ba28e15e15330a52354cf737d45
-Size (pygobject-3.48.2.tar.xz) = 556244 bytes
+BLAKE2s (pygobject-3.50.0.tar.xz) = a4def2092097b9049ffb6464024a40fa6f961600b52f11bc5af79cf0e7bbf737
+SHA512 (pygobject-3.50.0.tar.xz) = 59edec92b29f3101e4f1afd83a37f4d490e8d833e0dbba9ae8c30891541767e3738bb748ed939b2baef1041eec88f192188d38a82712f1ebc089005b4d6f03a9
+Size (pygobject-3.50.0.tar.xz) = 929848 bytes
