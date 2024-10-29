@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2024/10/23 22:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2024/10/29 14:37:34 nia Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -15,6 +15,7 @@ SUBDIR+=	bulk-test-go
 SUBDIR+=	bulk-test-icu
 SUBDIR+=	bulk-test-llvm
 SUBDIR+=	bulk-test-php
+SUBDIR+=	bulk-test-poppler
 SUBDIR+=	bulk-test-python27
 SUBDIR+=	bulk-test-rust
 SUBDIR+=	compiz-fusion

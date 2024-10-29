@@ -1,0 +1,2 @@
+Meta-package for testing Poppler updates. Depends on various non-trivial or
+important packages that depend on poppler.
