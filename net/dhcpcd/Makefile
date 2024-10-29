@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/05/24 16:22:48 roy Exp $
+# $NetBSD: Makefile,v 1.122 2024/10/29 12:08:21 riastradh Exp $
 
 DISTNAME=		dhcpcd-10.0.8
 CATEGORIES=		net
@@ -52,6 +52,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-hooks=ntp
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/examples
 CONFIGURE_ARGS+=	--privsepuser=${DHCPCD_USER}
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
+CONFIGURE_ARGS+=	--build=${NATIVE_MACHINE_GNU_PLATFORM:Q}
+.endif
 
 EGDIR=			${PREFIX}/share/examples/dhcpcd
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
