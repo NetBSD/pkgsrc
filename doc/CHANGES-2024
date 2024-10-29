@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6606 2024/10/29 14:33:52 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.6607 2024/10/29 14:34:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10043,3 +10043,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cad/klayout to 0.29.8 [mef 2024-10-29]
 	Updated mail/rspamd to 3.10.2nb1 [taca 2024-10-29]
 	Updated www/firefox to 132.0 [ryoon 2024-10-29]
+	Updated www/firefox-l10n to 132.0 [ryoon 2024-10-29]
