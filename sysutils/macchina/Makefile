@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.53 2024/09/13 18:00:51 pin Exp $
+# $NetBSD: Makefile,v 1.54 2024/10/29 21:04:20 pin Exp $
 
-DISTNAME=	macchina-6.2.1
+DISTNAME=	macchina-6.3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Macchina-CLI/}
+# does not contain the git submodules, please update GITHUB_SUBMODULES below
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/Macchina-CLI/macchina/
 COMMENT=	System information frontend with emphasis on performance
 LICENSE=	mit
+
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
+
+GITHUB_SUBMODULES+=	Macchina-CLI	color-to-tui 	9a1b684d92cc64994889e100575e38316a68670b	vendor/color-to-tui
+GITHUB_SUBMODULES+=	Macchina-CLI	ansi-to-tui 	950d68067ed8c7f74469eb2fd996e04e1b931481	vendor/ansi-to-tui
 
 .include "cargo-depends.mk"
 
