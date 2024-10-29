@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6613 2024/10/29 20:51:27 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6614 2024/10/29 21:04:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10053,3 +10053,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ipython to 8.29.0 [adam 2024-10-29]
 	Updated x11/modular-xorg-server to 21.1.14 [wiz 2024-10-29]
 	Updated x11/modular-xorg-xephyr to 21.1.14 [wiz 2024-10-29]
+	Updated sysutils/macchina to 6.3.1 [pin 2024-10-29]
