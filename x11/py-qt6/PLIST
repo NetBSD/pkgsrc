@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/27 11:54:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/29 07:04:54 wiz Exp $
 bin/pylupdate6-${PYVERSSUFFIX}
 bin/pyuic6-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -297,6 +297,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qpaintengine.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpainter.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpainterpath.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpalette.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qpdfoutputintent.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpdfwriter.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpen.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpicture.sip
@@ -306,6 +307,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qpixmapcache.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpointingdevice.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpolygon.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_qlist.sip
+${PYSITELIB}/PyQt6/bindings/QtGui/qpygui_vulkan.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qquaternion.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qrasterwindow.sip
 ${PYSITELIB}/PyQt6/bindings/QtGui/qrawfont.sip
@@ -342,6 +344,7 @@ ${PYSITELIB}/PyQt6/bindings/QtGui/qwindowdefs.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/QtHelp.toml
 ${PYSITELIB}/PyQt6/bindings/QtHelp/QtHelpmod.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qcompressedhelpinfo.sip
+${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpcontentitem.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpcontentwidget.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpengine.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpenginecore.sip
@@ -351,12 +354,16 @@ ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpfiltersettingswidget.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpindexwidget.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelplink.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpsearchengine.sip
+${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpsearchenginecore.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpsearchquerywidget.sip
+${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpsearchresult.sip
 ${PYSITELIB}/PyQt6/bindings/QtHelp/qhelpsearchresultwidget.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/QtMultimedia.toml
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/QtMultimediamod.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudio.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiobuffer.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiobufferinput.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiobufferoutput.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiodecoder.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudiodevice.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qaudioformat.sip
@@ -381,6 +388,7 @@ ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qsoundeffect.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qtvideo.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframe.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframeformat.sip
+${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideoframeinput.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qvideosink.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimedia/qwindowcapture.sip
 ${PYSITELIB}/PyQt6/bindings/QtMultimediaWidgets/QtMultimediaWidgets.toml
@@ -393,6 +401,7 @@ ${PYSITELIB}/PyQt6/bindings/QtNetwork/qabstractnetworkcache.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qabstractsocket.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qauthenticator.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qdnslookup.sip
+${PYSITELIB}/PyQt6/bindings/QtNetwork/qformdatabuilder.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhostaddress.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhostinfo.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qhstspolicy.sip
@@ -412,11 +421,14 @@ ${PYSITELIB}/PyQt6/bindings/QtNetwork/qnetworkinterface.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qnetworkproxy.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qnetworkreply.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qnetworkrequest.sip
+${PYSITELIB}/PyQt6/bindings/QtNetwork/qnetworkrequestfactory.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qocspresponse.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qpassworddigestor.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qpynetwork_qhash.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qpynetwork_qlist.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qpynetwork_qmap.sip
+${PYSITELIB}/PyQt6/bindings/QtNetwork/qrestaccessmanager.sip
+${PYSITELIB}/PyQt6/bindings/QtNetwork/qrestreply.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qssl.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qsslcertificate.sip
 ${PYSITELIB}/PyQt6/bindings/QtNetwork/qsslcertificateextension.sip
