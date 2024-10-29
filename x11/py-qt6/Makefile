@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2024/07/20 05:59:27 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/29 07:04:54 wiz Exp $
 
-DISTNAME=	PyQt6-6.7.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt6/qt6/}
+DISTNAME=	PyQt6-6.8.0.dev2410211537
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt6/qt6/:S/.dev2410211537/pre1/}
 CATEGORIES=	x11 python
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
+#MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
+MASTER_SITES=	https://riverbankcomputing.com/pypi/packages/PyQt6/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt6
@@ -17,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		x11lib
 SUBST_STAGE.x11lib=	pre-configure
