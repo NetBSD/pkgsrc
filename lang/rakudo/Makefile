@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/10/14 02:01:51 mef Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/29 14:59:25 mef Exp $
 
-DISTNAME=	rakudo-2024.09
+DISTNAME=	rakudo-2024.10
 CATEGORIES=	lang perl6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakudo/}
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS=		--prefix=${PREFIX} --backends=moar
 REPLACE_INTERPRETER+=	raku
 REPLACE.raku.old=	/usr/bin/env raku
 REPLACE.raku.new=	${PREFIX}/bin/raku
-REPLACE_FILES.raku=	tools/install-dist.p6
+REPLACE_FILES.raku=	tools/install-dist.raku
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +53,7 @@ pre-build:
 post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/core/precomp/*
 	${RM} -rf ${DESTDIR}${PREFIX}/share/perl6/precomp/*
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.p6 ${DESTDIR}${PREFIX}/share/perl6/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/install-dist.raku ${DESTDIR}${PREFIX}/share/perl6/bin/
 	${RM} -f ${DESTDIR}${PREFIX}/share/perl6/core/short/38673F0433DE95B90DD16424ED7B5B6520D383C5/E14CAA5C7DE5B1A1BAC1ED1155377A9AF4962C18
 	${RM} -f ${DESTDIR}${PREFIX}/share/perl6/core/sources/85FD80E5C2ED76D28F0A55D85C2F3F0EC168B638
 
