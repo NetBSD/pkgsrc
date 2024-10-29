@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/09/12 18:55:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/10/29 05:43:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -77,12 +77,12 @@ ${PYSITELIB}/elementpath/regex/character_classes.pyo
 ${PYSITELIB}/elementpath/regex/codepoints.py
 ${PYSITELIB}/elementpath/regex/codepoints.pyc
 ${PYSITELIB}/elementpath/regex/codepoints.pyo
-${PYSITELIB}/elementpath/regex/generate_categories.py
-${PYSITELIB}/elementpath/regex/generate_categories.pyc
-${PYSITELIB}/elementpath/regex/generate_categories.pyo
 ${PYSITELIB}/elementpath/regex/patterns.py
 ${PYSITELIB}/elementpath/regex/patterns.pyc
 ${PYSITELIB}/elementpath/regex/patterns.pyo
+${PYSITELIB}/elementpath/regex/unicode_blocks.py
+${PYSITELIB}/elementpath/regex/unicode_blocks.pyc
+${PYSITELIB}/elementpath/regex/unicode_blocks.pyo
 ${PYSITELIB}/elementpath/regex/unicode_categories.py
 ${PYSITELIB}/elementpath/regex/unicode_categories.pyc
 ${PYSITELIB}/elementpath/regex/unicode_categories.pyo
