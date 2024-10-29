@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/10/29 09:35:01 adam Exp $
+
+BLAKE2s (pem-23.1.0.tar.gz) = cbc8f24def35a2792bdcb9c930bc52801d0270b3ffffbb0cd38c23d7a9f14883
+SHA512 (pem-23.1.0.tar.gz) = e742dba55df69736ed5896370da980b25961682a9fd38b6940490cb82332813fc1d7a931fe651716fa31caf6080e6fb047d0ef62d3e61d7e3e1288a00b70051e
+Size (pem-23.1.0.tar.gz) = 43796 bytes
