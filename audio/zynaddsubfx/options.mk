@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:26 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2024/10/29 15:32:27 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zynaddsubfx
 PKG_SUPPORTED_OPTIONS=		alsa jack portaudio
@@ -40,5 +40,5 @@ CMAKE_CONFIGURE_ARGS+=	-DJackEnable=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPaEnable=ON
 .  include "../../audio/portaudio/buildlink3.mk"
 .else
-CMAKE_CONFIGURE_ARGS+=	-DJackEnable=OFF
+CMAKE_CONFIGURE_ARGS+=	-DPaEnable=OFF
 .endif
