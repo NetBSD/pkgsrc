@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/09 12:40:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/10/29 05:41:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -59,6 +59,12 @@ ${PYSITELIB}/taggit/locale/uk/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/uk/LC_MESSAGES/django.po
 ${PYSITELIB}/taggit/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/taggit/locale/zh_Hans/LC_MESSAGES/django.po
+${PYSITELIB}/taggit/management/commands/deduplicate_tags.py
+${PYSITELIB}/taggit/management/commands/deduplicate_tags.pyc
+${PYSITELIB}/taggit/management/commands/deduplicate_tags.pyo
+${PYSITELIB}/taggit/management/commands/remove_orphaned_tags.py
+${PYSITELIB}/taggit/management/commands/remove_orphaned_tags.pyc
+${PYSITELIB}/taggit/management/commands/remove_orphaned_tags.pyo
 ${PYSITELIB}/taggit/managers.py
 ${PYSITELIB}/taggit/managers.pyc
 ${PYSITELIB}/taggit/managers.pyo
@@ -89,6 +95,7 @@ ${PYSITELIB}/taggit/models.pyo
 ${PYSITELIB}/taggit/serializers.py
 ${PYSITELIB}/taggit/serializers.pyc
 ${PYSITELIB}/taggit/serializers.pyo
+${PYSITELIB}/taggit/templates/admin/taggit/merge_tags_form.html
 ${PYSITELIB}/taggit/utils.py
 ${PYSITELIB}/taggit/utils.pyc
 ${PYSITELIB}/taggit/utils.pyo

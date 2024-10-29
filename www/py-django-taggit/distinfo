@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/09/16 19:33:01 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/10/29 05:41:02 adam Exp $
 
-BLAKE2s (django_taggit-6.0.0.tar.gz) = 34c46c18784c43c8a4dffdad99c324d691b7f4202133ed55d86a910337e3398f
-SHA512 (django_taggit-6.0.0.tar.gz) = 329ee2666e58e48288cf20d2043608ea378bf7e004ec468119c5e34e06b933726c9c8a4d6daaf8e9251e4692d0d2b688ddd8693b31975744f7e17bf94d6dc642
-Size (django_taggit-6.0.0.tar.gz) = 67403 bytes
+BLAKE2s (django_taggit-6.1.0.tar.gz) = 1ea737c548ff272b84d2a46bf594720301d5ad4bed4a0866e7cfcde4f6081f8b
+SHA512 (django_taggit-6.1.0.tar.gz) = 2015b2157b252a953e1e7ec6713bb0431d725fc9b263964e8135c1c6c6b70f374f94262e86c84bfc42ff8eb6bd10e335464c1692b2e9e756d4aac9f336476d3b
+Size (django_taggit-6.1.0.tar.gz) = 38151 bytes
 SHA1 (patch-setup.cfg) = 965ff2b06c0804327c4a2a8a3f5873398c0b3361
