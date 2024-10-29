@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.16 2023/04/28 16:33:41 nikita Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/10/29 15:25:58 ryoon Exp $
 ${PLIST.gnutls}bin/dirmngr
 ${PLIST.gnutls}bin/dirmngr-client
 bin/g13
 bin/gpg-agent
 bin/gpg-card
 bin/gpg-connect-agent
+bin/gpg-mail-tube
 bin/gpg-wks-client
 bin/gpg-wks-server
 bin/gpg2
@@ -32,6 +33,7 @@ man/man1/gpg-agent.1
 man/man1/gpg-card.1
 man/man1/gpg-check-pattern.1
 man/man1/gpg-connect-agent.1
+man/man1/gpg-mail-tube.1
 man/man1/gpg-preset-passphrase.1
 man/man1/gpg-wks-client.1
 man/man1/gpg-wks-server.1
@@ -47,6 +49,7 @@ man/man7/gnupg.7
 man/man8/addgnupghome.8
 man/man8/applygnupgdefaults.8
 man/man8/dirmngr.8
+man/manh/gnupg.7.html
 sbin/addgnupghome
 sbin/applygnupgdefaults
 sbin/g13-syshelp
@@ -114,6 +117,7 @@ share/locale/id/LC_MESSAGES/gnupg2.mo
 share/locale/it/LC_MESSAGES/gnupg2.mo
 share/locale/ja/LC_MESSAGES/gnupg2.mo
 share/locale/nb/LC_MESSAGES/gnupg2.mo
+share/locale/nl/LC_MESSAGES/gnupg2.mo
 share/locale/pl/LC_MESSAGES/gnupg2.mo
 share/locale/pt/LC_MESSAGES/gnupg2.mo
 share/locale/ro/LC_MESSAGES/gnupg2.mo
