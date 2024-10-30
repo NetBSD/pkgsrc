@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/05/29 11:38:41 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/10/30 08:52:35 adam Exp $
 
-DISTNAME=	typeguard-4.3.0
+DISTNAME=	typeguard-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/typeguard/}
@@ -18,13 +18,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 pre-test:
 	${LN} -sf ${PREFIX}/bin/mypy-${PYVERSSUFFIX} ${BUILDLINK_DIR}/bin/mypy
 
 .include "../../lang/python/pyversion.mk"
-
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 .endif
