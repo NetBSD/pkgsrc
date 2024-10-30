@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2023/04/05 10:58:40 nikita Exp $
+# $NetBSD: Makefile,v 1.19 2024/10/30 12:50:23 adam Exp $
 
-DISTNAME=	libressl-3.6.2
+DISTNAME=	libressl-4.0.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_OPENBSD:=LibreSSL/}
 
@@ -9,8 +9,8 @@ HOMEPAGE=	https://www.libressl.org/
 COMMENT=	Secure Sockets Layer and cryptography libraries and tools
 LICENSE=	openssl
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	libcrypto.pc.in
 PKGCONFIG_OVERRIDE+=	libssl.pc.in
@@ -40,7 +40,7 @@ TEST_TARGET=	check
 .include "../../mk/bsd.prefs.mk"
 
 post-install:
-	cd ${DESTDIR}${PKG_SYSCONFDIR}; ${INSTALL_DATA} ${CONFS} ${DESTDIR}${EGDIR}
+	cd ${DESTDIR}${PKG_SYSCONFDIR} && ${INSTALL_DATA} ${CONFS} ${DESTDIR}${EGDIR}
 	${RM} -r ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
