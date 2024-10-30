@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/13 14:03:02 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/10/30 21:07:24 mef Exp $
 
 R_PKGNAME=	broom
-R_PKGVER=	1.0.5
+R_PKGVER=	1.0.7
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert Statistical Objects into Tidy Tibbles
@@ -18,6 +18,16 @@ DEPENDS+=	R-tibble>=3.0.0:../../math/R-tibble
 DEPENDS+=	R-tidyr>=1.1.3:../../math/R-tidyr
 DEPENDS+=	R-stringr>=1.4.0:../../textproc/R-stringr
 DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
+
+# Packages suggested but not available:
+#   'AER', 'AUC', 'betareg', 'biglm', 'binGroup', 'btergm', 'caret',
+#   'cmprsk', 'drc', 'emmeans', 'epiR', 'ergm', 'fixest', 'gam', 'gee',
+#   'geepack', 'glmnet', 'glmnetUtils', 'gmm', 'irlba', 'joineRML',
+#   'Kendall', 'ks', 'Lahman', 'lavaan', 'leaps', 'lfe', 'lm.beta',
+#   'lmodel2', 'lsmeans', 'maps', 'margins', 'mclust', 'mediation',
+#   'metafor', 'mfx', 'mlogit', 'modeldata', 'modeltests', 'muhaz',
+#   'multcomp', 'network', 'orcutt', 'ordinal', 'plm', 'poLCA', 'robust',
+#   'rsample', 'spdep', 'spatialreg', 'speedglm', 'systemfit', 'vars'
 
 #EST_DEPENDS+=	R-AER-[0-9]*:
 TEST_DEPENDS+=	R-akima-[0-9]*:../../math/R-akima
