@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/06/05 12:33:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/10/30 04:05:18 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
@@ -151,6 +151,9 @@ ${PYSITELIB}/glances/outputs/__init__.pyo
 ${PYSITELIB}/glances/outputs/glances_bars.py
 ${PYSITELIB}/glances/outputs/glances_bars.pyc
 ${PYSITELIB}/glances/outputs/glances_bars.pyo
+${PYSITELIB}/glances/outputs/glances_colors.py
+${PYSITELIB}/glances/outputs/glances_colors.pyc
+${PYSITELIB}/glances/outputs/glances_colors.pyo
 ${PYSITELIB}/glances/outputs/glances_curses.py
 ${PYSITELIB}/glances/outputs/glances_curses.pyc
 ${PYSITELIB}/glances/outputs/glances_curses.pyo
@@ -215,9 +218,6 @@ ${PYSITELIB}/glances/plugins/containers/engines/docker.pyo
 ${PYSITELIB}/glances/plugins/containers/engines/podman.py
 ${PYSITELIB}/glances/plugins/containers/engines/podman.pyc
 ${PYSITELIB}/glances/plugins/containers/engines/podman.pyo
-${PYSITELIB}/glances/plugins/containers/stats_streamer.py
-${PYSITELIB}/glances/plugins/containers/stats_streamer.pyc
-${PYSITELIB}/glances/plugins/containers/stats_streamer.pyo
 ${PYSITELIB}/glances/plugins/core/__init__.py
 ${PYSITELIB}/glances/plugins/core/__init__.pyc
 ${PYSITELIB}/glances/plugins/core/__init__.pyo
@@ -320,6 +320,15 @@ ${PYSITELIB}/glances/plugins/uptime/__init__.pyo
 ${PYSITELIB}/glances/plugins/version/__init__.py
 ${PYSITELIB}/glances/plugins/version/__init__.pyc
 ${PYSITELIB}/glances/plugins/version/__init__.pyo
+${PYSITELIB}/glances/plugins/vms/__init__.py
+${PYSITELIB}/glances/plugins/vms/__init__.pyc
+${PYSITELIB}/glances/plugins/vms/__init__.pyo
+${PYSITELIB}/glances/plugins/vms/engines/__init__.py
+${PYSITELIB}/glances/plugins/vms/engines/__init__.pyc
+${PYSITELIB}/glances/plugins/vms/engines/__init__.pyo
+${PYSITELIB}/glances/plugins/vms/engines/multipass.py
+${PYSITELIB}/glances/plugins/vms/engines/multipass.pyc
+${PYSITELIB}/glances/plugins/vms/engines/multipass.pyo
 ${PYSITELIB}/glances/plugins/wifi/__init__.py
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyc
 ${PYSITELIB}/glances/plugins/wifi/__init__.pyo
@@ -359,6 +368,9 @@ ${PYSITELIB}/glances/stats_client_snmp.pyo
 ${PYSITELIB}/glances/stats_server.py
 ${PYSITELIB}/glances/stats_server.pyc
 ${PYSITELIB}/glances/stats_server.pyo
+${PYSITELIB}/glances/stats_streamer.py
+${PYSITELIB}/glances/stats_streamer.pyc
+${PYSITELIB}/glances/stats_streamer.pyo
 ${PYSITELIB}/glances/thresholds.py
 ${PYSITELIB}/glances/thresholds.pyc
 ${PYSITELIB}/glances/thresholds.pyo
