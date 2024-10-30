@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/10/19 16:19:41 adam Exp $
+# $NetBSD: Makefile,v 1.43 2024/10/30 14:45:20 wiz Exp $
 
-DISTNAME=	yarl-1.15.5
+DISTNAME=	yarl-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=y/yarl/}
@@ -20,6 +20,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults-[0-9]*:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.3.1:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
+
+# as of 1.17.0
+# 1348 passed, 4 xfailed, 2 errors
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
