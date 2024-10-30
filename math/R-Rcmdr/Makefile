@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/10/26 11:09:53 mef Exp $
+# $NetBSD: Makefile,v 1.17 2024/10/30 12:41:37 mef Exp $
 
 R_PKGNAME=	Rcmdr
-R_PKGVER=	2.9-4
+R_PKGVER=	2.9-5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Platform-independent basic-statistics GUI for R
