@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.124 2024/08/26 22:37:19 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.125 2024/10/30 16:03:38 jperkin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.124 2024/08/26 22:37:19 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.125 2024/10/30 16:03:38 jperkin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1132,18 +1132,33 @@ check_requires(struct pkg_task *pkg)
 			next_line = eol + 1;
 
 		if (strncmp(data, "REQUIRES=", 9) == 0) {
-			char *library_name = dup_value(data, eol);
 			struct stat sb;
-			if (stat(library_name, &sb) != 0 || !S_ISREG(sb.st_mode)) {
-				warnx("Missing required library: %s", library_name);
+			int found = 0;
+			char *libpath = dup_value(data, eol);
+			/*
+			 * Search both the original path as well as inside
+			 * Destdir if enabled, as files may exist in either
+			 * (e.g. system libraries outside, pkgsrc inside).
+			 */
+			if (stat(libpath, &sb) == 0 && S_ISREG(sb.st_mode)) {
+				found = 1;
+			} else if (Destdir != NULL) {
+				char *p = xasprintf("%s/%s", Destdir, libpath);
+				if (stat(p, &sb) == 0 && S_ISREG(sb.st_mode))
+					found = 1;
+				free(p);
+			}
+
+			if (!found) {
+				warnx("Missing required library: %s", libpath);
 #ifdef __NetBSD__
-				if (strncmp(library_name, "/usr/X11R7", 10) == 0) {
+				if (strncmp(libpath, "/usr/X11R7", 10) == 0) {
 					warnx("Please make sure to install the X sets");
 				}
 #endif
 				ret = 1;
 			}
-			free(library_name);
+			free(libpath);
 		}
 	}
 
