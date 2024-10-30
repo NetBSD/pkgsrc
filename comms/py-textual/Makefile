@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/10/19 11:34:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/10/30 14:52:27 wiz Exp $
 
-DISTNAME=	textual-0.83.0
+DISTNAME=	textual-0.85.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/Textualize/textual
 COMMENT=	Modern Text User Interface framework
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.2.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.2.2:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.3.3:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.4.0:../../devel/py-typing-extensions
@@ -25,8 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.2:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-# as of 0.83.0
-# 32 failed, 2984 passed, 1 skipped, 4 xfailed, 2 warnings
+# as of 0.85.1
+# 32 failed, 2989 passed, 1 skipped, 4 xfailed, 81 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

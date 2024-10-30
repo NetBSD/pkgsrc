@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/19 11:34:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/30 14:52:27 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -78,9 +78,6 @@ ${PYSITELIB}/textual/_import_app.pyo
 ${PYSITELIB}/textual/_keyboard_protocol.py
 ${PYSITELIB}/textual/_keyboard_protocol.pyc
 ${PYSITELIB}/textual/_keyboard_protocol.pyo
-${PYSITELIB}/textual/_layout.py
-${PYSITELIB}/textual/_layout.pyc
-${PYSITELIB}/textual/_layout.pyo
 ${PYSITELIB}/textual/_layout_resolve.py
 ${PYSITELIB}/textual/_layout_resolve.pyc
 ${PYSITELIB}/textual/_layout_resolve.pyo
@@ -270,10 +267,27 @@ ${PYSITELIB}/textual/css/transition.pyo
 ${PYSITELIB}/textual/css/types.py
 ${PYSITELIB}/textual/css/types.pyc
 ${PYSITELIB}/textual/css/types.pyo
-${PYSITELIB}/textual/demo.py
-${PYSITELIB}/textual/demo.pyc
-${PYSITELIB}/textual/demo.pyo
-${PYSITELIB}/textual/demo.tcss
+${PYSITELIB}/textual/demo/__main__.py
+${PYSITELIB}/textual/demo/__main__.pyc
+${PYSITELIB}/textual/demo/__main__.pyo
+${PYSITELIB}/textual/demo/data.py
+${PYSITELIB}/textual/demo/data.pyc
+${PYSITELIB}/textual/demo/data.pyo
+${PYSITELIB}/textual/demo/demo_app.py
+${PYSITELIB}/textual/demo/demo_app.pyc
+${PYSITELIB}/textual/demo/demo_app.pyo
+${PYSITELIB}/textual/demo/home.py
+${PYSITELIB}/textual/demo/home.pyc
+${PYSITELIB}/textual/demo/home.pyo
+${PYSITELIB}/textual/demo/page.py
+${PYSITELIB}/textual/demo/page.pyc
+${PYSITELIB}/textual/demo/page.pyo
+${PYSITELIB}/textual/demo/projects.py
+${PYSITELIB}/textual/demo/projects.pyc
+${PYSITELIB}/textual/demo/projects.pyo
+${PYSITELIB}/textual/demo/widgets.py
+${PYSITELIB}/textual/demo/widgets.pyc
+${PYSITELIB}/textual/demo/widgets.pyo
 ${PYSITELIB}/textual/design.py
 ${PYSITELIB}/textual/design.pyc
 ${PYSITELIB}/textual/design.pyo
@@ -373,6 +387,9 @@ ${PYSITELIB}/textual/geometry.pyo
 ${PYSITELIB}/textual/keys.py
 ${PYSITELIB}/textual/keys.pyc
 ${PYSITELIB}/textual/keys.pyo
+${PYSITELIB}/textual/layout.py
+${PYSITELIB}/textual/layout.pyc
+${PYSITELIB}/textual/layout.pyo
 ${PYSITELIB}/textual/layouts/__init__.py
 ${PYSITELIB}/textual/layouts/__init__.pyc
 ${PYSITELIB}/textual/layouts/__init__.pyo
@@ -555,6 +572,9 @@ ${PYSITELIB}/textual/widgets/_key_panel.pyo
 ${PYSITELIB}/textual/widgets/_label.py
 ${PYSITELIB}/textual/widgets/_label.pyc
 ${PYSITELIB}/textual/widgets/_label.pyo
+${PYSITELIB}/textual/widgets/_link.py
+${PYSITELIB}/textual/widgets/_link.pyc
+${PYSITELIB}/textual/widgets/_link.pyo
 ${PYSITELIB}/textual/widgets/_list_item.py
 ${PYSITELIB}/textual/widgets/_list_item.pyc
 ${PYSITELIB}/textual/widgets/_list_item.pyo
