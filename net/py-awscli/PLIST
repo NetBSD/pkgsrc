@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2024/10/27 01:11:59 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.48 2024/10/30 20:09:41 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -4921,6 +4921,16 @@ ${PYSITELIB}/awscli/examples/pinpoint/send-users-messages.rst
 ${PYSITELIB}/awscli/examples/pinpoint/tag-resource.rst
 ${PYSITELIB}/awscli/examples/pinpoint/untag-resource.rst
 ${PYSITELIB}/awscli/examples/pinpoint/update-sms-channel.rst
+${PYSITELIB}/awscli/examples/pipes/create-pipe.rst
+${PYSITELIB}/awscli/examples/pipes/delete-pipe.rst
+${PYSITELIB}/awscli/examples/pipes/describe-pipe.rst
+${PYSITELIB}/awscli/examples/pipes/list-pipes.rst
+${PYSITELIB}/awscli/examples/pipes/list-tags-for-resource.rst
+${PYSITELIB}/awscli/examples/pipes/start-pipe.rst
+${PYSITELIB}/awscli/examples/pipes/stop-pipe.rst
+${PYSITELIB}/awscli/examples/pipes/tag-resource.rst
+${PYSITELIB}/awscli/examples/pipes/untag-resource.rst
+${PYSITELIB}/awscli/examples/pipes/update-pipe.rst
 ${PYSITELIB}/awscli/examples/polly/delete-lexicon.rst
 ${PYSITELIB}/awscli/examples/polly/get-lexicon.rst
 ${PYSITELIB}/awscli/examples/polly/get-speech-synthesis-task.rst
