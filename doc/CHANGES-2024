@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6617 2024/10/30 08:02:41 wen Exp $
+$NetBSD: CHANGES-2024,v 1.6618 2024/10/30 08:06:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10057,3 +10057,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-bdsmatrix to 1.3.7 [mef 2024-10-29]
 	Updated sysutils/py-Glances to 4.2.0 [fox 2024-10-30]
 	Updated www/p5-HTML-Form to 6.12 [wen 2024-10-30]
+	Updated devel/p5-Getopt-Euclid to 0.4.8 [wen 2024-10-30]
