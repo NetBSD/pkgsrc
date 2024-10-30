@@ -1,6 +1,7 @@
-$NetBSD: patch-src_drivers_fluid__alsa.c,v 1.1 2019/10/16 19:25:44 nia Exp $
+$NetBSD: patch-src_drivers_fluid__alsa.c,v 1.2 2024/10/30 14:33:16 wiz Exp $
 
 Support building on non-Linux.
+https://github.com/FluidSynth/fluidsynth/pull/1414
 
 --- src/drivers/fluid_alsa.c.orig	2019-09-27 14:53:27.000000000 +0000
 +++ src/drivers/fluid_alsa.c

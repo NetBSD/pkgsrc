@@ -1,6 +1,7 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2024/04/05 10:26:04 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2024/10/30 14:33:16 wiz Exp $
 
 Allow building ALSA support on more systems.
+https://github.com/FluidSynth/fluidsynth/pull/1414
 
 --- CMakeLists.txt.orig	2024-03-26 17:52:36.000000000 +0000
 +++ CMakeLists.txt
