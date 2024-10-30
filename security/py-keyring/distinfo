@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/09/22 16:15:00 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/10/30 14:36:54 wiz Exp $
 
-BLAKE2s (keyring-25.4.1.tar.gz) = 53906daa1c0e62ddd4bdb32cc48faaeec23731f248a74afe700626c6223d4721
-SHA512 (keyring-25.4.1.tar.gz) = 19df186202220a234ab3d7b3bdb2b31ffc78ccc9c569841a96876048d65d1f7ac5573028f3e6cbf31b598001edf592fa02e19bd036af2f5af9baa7d746175ee7
-Size (keyring-25.4.1.tar.gz) = 62491 bytes
+BLAKE2s (keyring-25.5.0.tar.gz) = 36a5060acce59d7b54580ef65eb0cc1b94af5460eeeb62db9e99995c21887a88
+SHA512 (keyring-25.5.0.tar.gz) = bd8b792781bde9bb5d609acd9516b66486bd785231b81239bf9add483aefaa864ebe541d30c9977216c7a635e3f9161a55da15ba1070d8aab06bb86769fca476
+Size (keyring-25.5.0.tar.gz) = 62675 bytes

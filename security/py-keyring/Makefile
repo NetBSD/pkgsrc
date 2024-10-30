@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/10/14 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/10/30 14:36:54 wiz Exp $
 
-DISTNAME=	keyring-25.4.1
+DISTNAME=	keyring-25.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/keyring/}
@@ -23,8 +23,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 
 USE_LANGUAGES=	# none
 
-# as of 25.4.1
-# 2 failed, 32 passed, 89 skipped
+# as of 25.5.0
+# 2 failed, 32 passed, 95 skipped
 
 .include "../../lang/python/pyversion.mk"
 
