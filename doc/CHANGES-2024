@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6625 2024/10/30 14:35:42 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6626 2024/10/30 14:37:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10067,3 +10067,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-zope.exceptions to 5.2 [adam 2024-10-30]
 	Updated audio/fluidsynth to 2.3.7 [wiz 2024-10-30]
 	Updated security/py-cyclonedx-python-lib to 8.4.0 [wiz 2024-10-30]
+	Updated security/py-keyring to 25.5.0 [wiz 2024-10-30]
