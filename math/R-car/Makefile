@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2023/06/13 14:13:53 mef Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/30 22:12:08 mef Exp $
 
 R_PKGNAME=	car
-R_PKGVER=	3.1-2
+R_PKGVER=	3.1-3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Companion to 'Applied Regression'
@@ -10,15 +10,18 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 DEPENDS+=	R-maptools>=0.9.5:../../geography/R-maptools
 DEPENDS+=	R-abind>=1.4.5:../../math/R-abind
 DEPENDS+=	R-carData>=3.0.0:../../math/R-carData
+DEPENDS+=	R-Formula-[0-9]*:../../math/R-Formula
 DEPENDS+=	R-lme4>=1.1.21:../../math/R-lme4
 DEPENDS+=	R-pbkrtest>=0.4.4:../../math/R-pbkrtest
 DEPENDS+=	R-quantreg>=5.42.1:../../math/R-quantreg
 
 # Packages suggested but not available:
-#   'alr4', 'coxme', 'leaps'
+#  'alr4', 'coxme', 'leaps', 'ordinal', 'plotrix'
+
 TEST_DEPENDS+=	R-lmtest-[0-9]*:../../math/R-lmtest
 TEST_DEPENDS+=	R-effects-[0-9]*:../../graphics/R-effects
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-mvtnorm-[0-9]*:../../math/R-mvtnorm
 TEST_DEPENDS+=	R-rgl-[0-9]*:../../graphics/R-rgl
 TEST_DEPENDS+=	R-rio>=0.5.16:../../devel/R-rio
 TEST_DEPENDS+=	R-sandwich-[0-9]*:../../math/R-sandwich
