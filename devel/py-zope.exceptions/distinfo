@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/06/07 20:57:59 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/10/30 12:51:20 adam Exp $
 
-BLAKE2s (zope.exceptions-5.1.tar.gz) = 45c364a57fe535387325e9fe6e4fadbffccccf113fd4ec351882fb33d9a7aac6
-SHA512 (zope.exceptions-5.1.tar.gz) = 08e0b3b895089b35805519002f11302e6529d12257a5582f682257c4b5313c4e183d2b06241729fe542fcd407b1f29fbd6798605930b759daca335ed3df84652
-Size (zope.exceptions-5.1.tar.gz) = 31416 bytes
+BLAKE2s (zope.exceptions-5.2.tar.gz) = 8cb3ca6b15efba58fdbc91478a77a783c7510258200769f01e3bbfc35b11940a
+SHA512 (zope.exceptions-5.2.tar.gz) = 55174507bfc24a2eb78d32feeaf9775f78e085fedda74ef3b3a10a782daefa2539769a18bc6304d489fe77b3b22a4636a3233641cbd64f2007940ecedeabc8d6
+Size (zope.exceptions-5.2.tar.gz) = 31520 bytes
