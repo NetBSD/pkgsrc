@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6620 2024/10/30 08:52:51 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6621 2024/10/30 12:16:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10061,3 +10061,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/p5-PPI to 1.279 [wen 2024-10-30]
 	Updated devel/py-setuptools to 75.3.0 [adam 2024-10-30]
 	Updated devel/py-typeguard to 4.4.0 [adam 2024-10-30]
+	Updated math/R-bitops to 1.0.9 [mef 2024-10-30]
