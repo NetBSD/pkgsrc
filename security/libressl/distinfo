@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2023/04/05 10:58:40 nikita Exp $
+$NetBSD: distinfo,v 1.14 2024/10/30 12:50:23 adam Exp $
 
-BLAKE2s (libressl-3.6.2.tar.gz) = b6ca4495a01b4460c6391bfe64744fc12663cd87dcdc9df9d1646b62cc74442d
-SHA512 (libressl-3.6.2.tar.gz) = 8fc81e05d1c9f9259d06508ca97d5a1ba5d46b857088c273c20e6b242921f7eac58a1136564ad9831c923758ee63f7b0897c8c6c7b1e53ab8132a995cc559aeb
-Size (libressl-3.6.2.tar.gz) = 4239482 bytes
+BLAKE2s (libressl-4.0.0.tar.gz) = 03c5d80db25f498ec5fdb2b30e0e3b3ac062cbbeaf18eb3d7378afa5177f0e8b
+SHA512 (libressl-4.0.0.tar.gz) = b5ec6d1f4e3842ecb487f9a67d86db658d05cbe8cd3fcba61172affa8c65c5d0823aa244065a7233f06c669d04a5a36517c02a2d99d2f2da3c4df729ac243b37
+Size (libressl-4.0.0.tar.gz) = 4259615 bytes
 SHA1 (patch-configure) = ea5d34736afbb126254e7cbb4b44915b1484b4c9
