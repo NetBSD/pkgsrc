@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.270 2024/10/29 20:52:03 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.271 2024/10/31 11:02:38 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26102,3 +26102,4 @@ element-web<1.11.81	expose-access-tokens	https://nvd.nist.gov/vuln/detail/CVE-20
 mpg123<1.32.8	heap-buffer-overflow	https://mpg123.org/cgi-bin/news.cgi#2024-10-26
 modular-xorg-server<21.1.14	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-9632
 modular-xorg-xwayland<24.1.4	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-9632
+webkit-gtk<2.46.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-44244
