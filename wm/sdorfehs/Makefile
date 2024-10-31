@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/03/11 14:01:13 vins Exp $
+# $NetBSD: Makefile,v 1.14 2024/10/31 10:50:54 pin Exp $
 
-DISTNAME=	sdorfehs-1.5
-PKGREVISION=	3
+DISTNAME=	sdorfehs-1.6
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jcs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
