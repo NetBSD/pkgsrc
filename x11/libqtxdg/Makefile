@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/08/20 06:19:37 pin Exp $
+# $NetBSD: Makefile,v 1.37 2024/10/31 15:21:01 abs Exp $
 
-DISTNAME=	libqtxdg-4.0.0
+DISTNAME=	libqtxdg-4.0.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
