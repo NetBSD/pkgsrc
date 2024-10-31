@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/07/31 07:05:38 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/10/31 07:32:57 pho Exp $
 
 DISTNAME=	libavif-1.1.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AOMediaCodec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +15,7 @@ USE_CC_FEATURES=	c99
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
+CMAKE_CONFIGURE_ARGS+=	-DAVIF_BUILD_GDK_PIXBUF=ON
 CMAKE_CONFIGURE_ARGS+=	-DAVIF_CODEC_AOM=SYSTEM
 CMAKE_CONFIGURE_ARGS+=	-DAVIF_ENABLE_WERROR=OFF
 CMAKE_CONFIGURE_ARGS+=	-DAVIF_LIBYUV=OFF
@@ -21,5 +23,6 @@ CMAKE_CONFIGURE_ARGS+=	-DAVIF_LIBYUV=OFF
 PKGCONFIG_OVERRIDE=	libavif.pc.cmake
 
 .include "../../devel/cmake/build.mk"
+.include "../../graphics/gdk-pixbuf2/loaders.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
