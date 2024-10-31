@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2023/10/24 22:11:10 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/10/31 11:45:13 leot Exp $
 
 DISTNAME=		monit-5.33.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		https://mmonit.com/monit/dist/
 
@@ -40,7 +40,7 @@ CONF_FILES_MODE=	0600
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/monit.d
 
-DOC_SUBDIR=		share/docs/monit
+DOC_SUBDIR=		share/doc/monit
 DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 EG_SUBDIR=		share/examples/monit
 EGDIR=			${PREFIX}/${EG_SUBDIR}
