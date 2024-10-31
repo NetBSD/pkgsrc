@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/10/14 06:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/10/31 13:35:05 leot Exp $
 
 DISTNAME=	khal-0.11.3
+PKGREVISION=	1
 CATEGORIES=	time net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/khal/}
 
@@ -16,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-click>=3.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.2.0:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-DEPENDS+=	${PYPKGPREFIX}-icalendar>=4.0.3:../../time/py-icalendar
+DEPENDS+=	${PYPKGPREFIX}-icalendar>=6.0.0:../../time/py-icalendar
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2018.7:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-tzlocal>=1.0:../../time/py-tzlocal
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.0:../../devel/py-urwid
@@ -46,8 +47,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
 	${INSTALL_MAN} ${WRKSRC}/doc/build/man/khal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-# as of 0.11.3
-# 5 failed, 307 passed, 1 xfailed, 2 xpassed, 15 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
