@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.5 2024/10/28 14:26:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.6 2024/10/31 21:16:20 maya Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -37,3 +37,5 @@ audio/librespot: update to restore functionality
 Pullup ticket #6909 - requested by pin
 audio/ncspot: update to restore functionality
 
+Pullup ticket #6911 - requested by gutteridge
+www/firefox128: security fix
