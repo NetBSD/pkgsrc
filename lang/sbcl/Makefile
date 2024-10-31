@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2024/08/12 13:45:44 rjs Exp $
+# $NetBSD: Makefile,v 1.106 2024/10/31 16:12:16 rjs Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-2.4.7
+PKGNAME=		sbcl-2.4.10
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -66,14 +66,10 @@ BUILDLINK_DEPMETHOD.ecl=build
 TOOL_DEPENDS+=		abcl-[0-9]*:../../lang/abcl
 .endif
 
-PLIST_VARS+=		linux simd
+PLIST_VARS+=		linux
 
 .if ${OPSYS} == "Linux"
 PLIST.linux=		yes
-.endif
-
-.if ${MACHINE_ARCH} == "x86_64"
-PLIST.simd=		yes
 .endif
 
 SUBST_CLASSES+=			fix-paths
