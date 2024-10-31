@@ -1,8 +1,8 @@
-$NetBSD: patch-actions.c,v 1.1 2024/03/10 21:02:21 vins Exp $
+$NetBSD: patch-actions.c,v 1.2 2024/10/31 10:50:55 pin Exp $
 
 Define `TIOCNOTTY' ioctl on SunOS using TTCOMPAT(4M).
 
---- actions.c.orig	2024-03-10 19:16:37.092649863 +0000
+--- actions.c.orig	2024-10-31 10:28:41.500126111 +0000
 +++ actions.c
 @@ -28,6 +28,10 @@
  #include <limits.h>
