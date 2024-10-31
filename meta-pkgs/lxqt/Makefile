@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/10/31 17:24:47 abs Exp $
+# $NetBSD: Makefile,v 1.29 2024/10/31 17:54:13 pin Exp $
 
-PKGNAME=	lxqt-2.0.1
+PKGNAME=	lxqt-2.0.0
+PKGREVISION=	1	
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
