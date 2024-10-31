@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/09/25 07:32:13 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/10/31 14:39:57 ryoon Exp $
 bin/duckdb
 include/duckdb.h
 include/duckdb.hpp
@@ -73,6 +73,7 @@ include/duckdb/common/arrow/arrow_buffer.hpp
 include/duckdb/common/arrow/arrow_converter.hpp
 include/duckdb/common/arrow/arrow_merge_event.hpp
 include/duckdb/common/arrow/arrow_query_result.hpp
+include/duckdb/common/arrow/arrow_util.hpp
 include/duckdb/common/arrow/arrow_wrapper.hpp
 include/duckdb/common/arrow/nanoarrow/nanoarrow.hpp
 include/duckdb/common/arrow/physical_arrow_batch_collector.hpp
@@ -160,6 +161,7 @@ include/duckdb/common/exception/transaction_exception.hpp
 include/duckdb/common/exception_format_value.hpp
 include/duckdb/common/extra_operator_info.hpp
 include/duckdb/common/extra_type_info.hpp
+include/duckdb/common/extra_type_info/enum_type_info.hpp
 include/duckdb/common/fast_mem.hpp
 include/duckdb/common/file_buffer.hpp
 include/duckdb/common/file_open_flags.hpp
@@ -1167,6 +1169,7 @@ lib/libduckdb_skiplistlib.a
 lib/libduckdb_static.a
 lib/libduckdb_utf8proc.a
 lib/libduckdb_yyjson.a
+lib/libjemalloc_extension.a
 lib/libparquet_extension.a
 @pkgdir include/duckdb/storage/serialization
 @pkgdir include/duckdb/main/capi/header_generation/functions
