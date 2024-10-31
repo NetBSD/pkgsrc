@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2022/12/31 12:49:05 leot Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/10/31 11:45:13 leot Exp $
 bin/monit
 man/man1/monit.1
-share/docs/monit/CHANGES
-share/docs/monit/COPYING
+share/doc/monit/CHANGES
+share/doc/monit/COPYING
 share/examples/monit/monitrc.sample
