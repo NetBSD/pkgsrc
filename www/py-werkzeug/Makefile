@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/08/25 10:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/01 00:35:12 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -16,8 +16,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess-[0-9]*:../../devel/py-test-xprocess
 
-# as of 3.0.4
-# 17 failed, 879 passed, 1 skipped, 8 errors
+# as of 3.1.0 - tests hang. interrupt gives:
+# 1 failed, 685 passed
+# previous version:
+# 18 failed, 887 passed, 1 skipped
 
 EGDIR=			share/examples/${PKGBASE}
 PLIST_SUBST+=		EGDIR=${EGDIR}
