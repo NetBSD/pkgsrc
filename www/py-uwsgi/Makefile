@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2024/10/10 19:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2024/11/01 00:27:23 wiz Exp $
 
-DISTNAME=	uwsgi-2.0.27
+DISTNAME=	uwsgi-2.0.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgi/}
@@ -29,9 +29,6 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} uwsgi uwsgi-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
 		${DESTDIR}${PREFIX}/share/examples/${PYPKGPREFIX}-uwsgi
-
-# test status as of 2.0.27
-# 2 failed
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
