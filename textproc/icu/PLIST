@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2024/05/29 15:38:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2024/11/01 00:47:09 wiz Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -222,27 +222,27 @@ lib/icu/pkgdata.inc
 lib/libicudata.a
 lib/libicudata.so
 lib/libicudata.so.${PKGVERSION}
-lib/libicudata.so.75
+lib/libicudata.so.76
 lib/libicui18n.a
 lib/libicui18n.so
 lib/libicui18n.so.${PKGVERSION}
-lib/libicui18n.so.75
+lib/libicui18n.so.76
 lib/libicuio.a
 lib/libicuio.so
 lib/libicuio.so.${PKGVERSION}
-lib/libicuio.so.75
+lib/libicuio.so.76
 lib/libicutest.a
 lib/libicutest.so
 lib/libicutest.so.${PKGVERSION}
-lib/libicutest.so.75
+lib/libicutest.so.76
 lib/libicutu.a
 lib/libicutu.so
 lib/libicutu.so.${PKGVERSION}
-lib/libicutu.so.75
+lib/libicutu.so.76
 lib/libicuuc.a
 lib/libicuuc.so
 lib/libicuuc.so.${PKGVERSION}
-lib/libicuuc.so.75
+lib/libicuuc.so.76
 lib/pkgconfig/icu-i18n.pc
 lib/pkgconfig/icu-io.pc
 lib/pkgconfig/icu-uc.pc
@@ -267,6 +267,7 @@ sbin/gencmn
 sbin/gennorm2
 sbin/gensprep
 sbin/icupkg
+share/icu/${PKGVERSION}/LICENSE
 share/icu/${PKGVERSION}/config/${MH_NAME}
 share/icu/${PKGVERSION}/install-sh
 share/icu/${PKGVERSION}/mkinstalldirs
