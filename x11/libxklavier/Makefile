@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2024/05/29 16:35:06 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/11/01 00:54:20 wiz Exp $
 
 DISTNAME=	libxklavier-5.4
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	x11
 MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/libxklavier/libxklavier-5.4.tar.bz2/13af74dcb6011ecedf1e3ed122bd31fa/
 EXTRACT_SUFX=	.tar.bz2

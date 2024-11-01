@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2024/05/29 16:33:28 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/11/01 00:52:41 wiz Exp $
 #
 
 DISTNAME=	release-0.12.0
 PKGNAME=	${DISTNAME:C/release/speedcrunch/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	math
 MASTER_SITES=	http://bitbucket.org/heldercorreia/speedcrunch/get/
 DIST_SUBDIR=	speedcrunch

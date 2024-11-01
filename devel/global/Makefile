@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2024/05/29 16:32:02 adam Exp $
+# $NetBSD: Makefile,v 1.96 2024/11/01 00:51:19 wiz Exp $
 
 DISTNAME=	global-6.6.2
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=global/}
 

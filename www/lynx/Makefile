@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.151 2024/06/09 05:57:15 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2024/11/01 00:54:06 wiz Exp $
 
 DISTNAME=	lynx2.9.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://invisible-mirror.net/archives/lynx/tarballs/
 EXTRACT_SUFX=	.tar.bz2

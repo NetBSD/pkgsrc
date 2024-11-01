@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/10/10 19:31:35 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/01 00:53:34 wiz Exp $
 
 PKGNAME=	uacme-${PKGVER}
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	v${PKGVER}
 PKGVER=		1.7.5
 CATEGORIES=	security

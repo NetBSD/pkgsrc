@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2024/05/16 06:14:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2024/11/01 00:51:34 wiz Exp $
 
 BUILDLINK_TREE+=	radare2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	radare2
 RADARE2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.radare2+=	radare2>=5.7.8
-BUILDLINK_ABI_DEPENDS.radare2?=	radare2>=5.8.2nb5
+BUILDLINK_ABI_DEPENDS.radare2?=	radare2>=5.8.2nb7
 BUILDLINK_PKGSRCDIR.radare2?=	../../devel/radare2
 
 .include "../../devel/capstone/buildlink3.mk"

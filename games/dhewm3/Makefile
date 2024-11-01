@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2024/08/25 06:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/01 00:51:46 wiz Exp $
 
 DISTNAME=	dhewm3-1.5.1-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dhewm/}
 GITHUB_PROJECT=	dhewm3

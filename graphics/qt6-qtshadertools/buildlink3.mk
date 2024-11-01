@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/10/01 05:54:22 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/11/01 00:52:15 wiz Exp $
 
 BUILDLINK_TREE+=	qt6-qtshadertools
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt6-qtshadertools
 QT6_QTSHADERTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt6-qtshadertools+=	qt6-qtshadertools>=6.4.1
-BUILDLINK_ABI_DEPENDS.qt6-qtshadertools+=	qt6-qtshadertools>=6.6.3nb1
+BUILDLINK_ABI_DEPENDS.qt6-qtshadertools+=	qt6-qtshadertools>=6.8.0nb1
 BUILDLINK_PKGSRCDIR.qt6-qtshadertools?=		../../graphics/qt6-qtshadertools
 
 BUILDLINK_FILES.qt6-qtshadertools+=	bin/qsb

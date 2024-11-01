@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2024/10/20 14:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/11/01 00:52:04 wiz Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
 # from libpeas bl3, so we include it early to ensure a valid version is
 # chosen.  This is not ideal, please fix it properly at some point.
-PKGREVISION= 9
+PKGREVISION= 10
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../meta-pkgs/mate/Makefile.common"
 

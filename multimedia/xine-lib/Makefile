@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.201 2024/05/29 16:33:48 adam Exp $
+# $NetBSD: Makefile,v 1.202 2024/11/01 00:53:00 wiz Exp $
 
-PKGREVISION= 21
+PKGREVISION= 22
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library

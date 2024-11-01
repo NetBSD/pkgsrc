@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2024/08/25 06:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/01 00:51:47 wiz Exp $
 
 EL_VER=		1.9.6.1
 PKGNAME=	eternal-lands-${EL_VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 # latest versions of everything available...

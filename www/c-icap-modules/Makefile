@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/05/29 16:34:48 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/01 00:54:02 wiz Exp $
 
 DISTNAME=	c_icap_modules-0.5.3
 PKGNAME=	${DISTNAME:S/_/-/g}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=c-icap/}
 

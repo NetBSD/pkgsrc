@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2024/10/04 03:49:35 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2024/11/01 00:53:45 wiz Exp $
 
 BUILDLINK_TREE+=	strigi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	strigi
 STRIGI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.6.2
-BUILDLINK_ABI_DEPENDS.strigi?=	strigi>=0.7.8nb58
+BUILDLINK_ABI_DEPENDS.strigi?=	strigi>=0.7.8nb59
 BUILDLINK_PKGSRCDIR.strigi?=	../../sysutils/strigi
 
 .include "../../archivers/bzip2/buildlink3.mk"
