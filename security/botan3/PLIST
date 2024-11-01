@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/25 14:58:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/11/01 07:22:45 nros Exp $
 bin/botan3
 include/botan-3/botan/aead.h
 include/botan-3/botan/allocator.h
@@ -47,8 +47,10 @@ include/botan-3/botan/dilithium.h
 include/botan-3/botan/dl_group.h
 include/botan-3/botan/dlies.h
 include/botan-3/botan/dsa.h
+include/botan-3/botan/ec_apoint.h
 include/botan-3/botan/ec_group.h
 include/botan-3/botan/ec_point.h
+include/botan-3/botan/ec_scalar.h
 include/botan-3/botan/ecc_key.h
 include/botan-3/botan/ecdh.h
 include/botan-3/botan/ecdsa.h
@@ -56,6 +58,7 @@ include/botan-3/botan/ecgdsa.h
 include/botan-3/botan/ecies.h
 include/botan-3/botan/eckcdsa.h
 include/botan-3/botan/ed25519.h
+include/botan-3/botan/ed448.h
 include/botan-3/botan/elgamal.h
 include/botan-3/botan/entropy_src.h
 include/botan-3/botan/exceptn.h
@@ -70,12 +73,15 @@ include/botan-3/botan/gost_3410.h
 include/botan-3/botan/hash.h
 include/botan-3/botan/hex.h
 include/botan-3/botan/hmac_drbg.h
+include/botan-3/botan/hss_lms.h
 include/botan-3/botan/kdf.h
 include/botan-3/botan/kyber.h
 include/botan-3/botan/lzma.h
 include/botan-3/botan/mac.h
 include/botan-3/botan/mceliece.h
 include/botan-3/botan/mem_ops.h
+include/botan-3/botan/ml_dsa.h
+include/botan-3/botan/ml_kem.h
 include/botan-3/botan/mutex.h
 include/botan-3/botan/nist_keywrap.h
 include/botan-3/botan/numthry.h
@@ -120,6 +126,7 @@ include/botan-3/botan/roughtime.h
 include/botan-3/botan/rsa.h
 include/botan-3/botan/scrypt.h
 include/botan-3/botan/secmem.h
+include/botan-3/botan/slh_dsa.h
 include/botan-3/botan/sm2.h
 include/botan-3/botan/sodium.h
 include/botan-3/botan/sp_parameters.h
@@ -163,6 +170,8 @@ include/botan-3/botan/tss.h
 include/botan-3/botan/types.h
 include/botan-3/botan/uuid.h
 include/botan-3/botan/version.h
+include/botan-3/botan/x25519.h
+include/botan-3/botan/x448.h
 include/botan-3/botan/x509_ca.h
 include/botan-3/botan/x509_crl.h
 include/botan-3/botan/x509_ext.h
@@ -180,8 +189,8 @@ lib/cmake/Botan-${PKGVERSION}/botan-config-version.cmake
 lib/cmake/Botan-${PKGVERSION}/botan-config.cmake
 lib/libbotan-3.a
 lib/libbotan-3.so
-lib/libbotan-3.so.3
-lib/libbotan-3.so.3.3.0
+lib/libbotan-3.so.6
+lib/libbotan-3.so.6.6.1
 lib/pkgconfig/botan-3.pc
 share/doc/${PKGNAME}/authors.txt
 share/doc/${PKGNAME}/handbook/abi.rst
@@ -233,6 +242,7 @@ share/doc/${PKGNAME}/handbook/dev_ref/continuous_integration.rst
 share/doc/${PKGNAME}/handbook/dev_ref/contributing.rst
 share/doc/${PKGNAME}/handbook/dev_ref/fuzzing.rst
 share/doc/${PKGNAME}/handbook/dev_ref/mistakes.rst
+share/doc/${PKGNAME}/handbook/dev_ref/next_major.rst
 share/doc/${PKGNAME}/handbook/dev_ref/oids.rst
 share/doc/${PKGNAME}/handbook/dev_ref/os.rst
 share/doc/${PKGNAME}/handbook/dev_ref/reading_list.rst
