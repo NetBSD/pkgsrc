@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/06/07 23:52:41 nikita Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/01 08:34:39 wiz Exp $
 
-PKGNAME=	arti-1.1.3
-PKGREVISION=	1
-DISTNAME=	arti-arti-v${PKGVERSION_NOREV}
+DISTNAME=	arti-arti-v1.3.0
+PKGNAME=	${DISTNAME:S/arti-v//}
 CATEGORIES=	net
 # TODO: modify gitlab fetch to allow hosted gitlab instances
 MASTER_SITES=	https://gitlab.torproject.org/tpo/core/arti/-/archive/arti-v${PKGVERSION_NOREV}/
@@ -42,6 +41,13 @@ FILES_SUBST+=		ARTI_GROUP=${ARTI_GROUP}
 MAKE_DIRS+=		${VARBASE}/chroot/arti
 AUTO_MKDIRS=		yes
 
+SUBST_CLASSES+=		var
+SUBST_FILES.var+=	crates/arti/src/arti-example-config.toml
+SUBST_SED.var+=		-e 's,$${ARTI_CACHE}'",${VARBASE}/chroot/arti/,"
+SUBST_SED.var+=		-e 's,$${ARTI_LOCAL_DATA}'",${VARBASE}/chroot/arti/,"
+SUBST_STAGE.var=	post-patch
+SUBST_MESSAGE.var=	Adapt some paths for pkgsrc.
+
 MAKE_ENV+=		OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
 
 INSTALLATION_DIRS=	${EGDIR}
@@ -50,11 +56,8 @@ INSTALLATION_DIRS=	${EGDIR}
 DEPENDS+=		daemonize-[0-9]*:../../sysutils/daemonize
 .endif
 
-# error: found a virtual manifest at `/usr/work/net/arti/work/arti-arti-v1.1.3/Cargo.toml` instead of a package manifest
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${PKGBASE} ${DESTDIR}${PREFIX}/bin
-
-pre-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/arti ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/crates/arti/src/arti-example-config.toml ${DESTDIR}${EGDIR}/arti.toml
 
 .include "../../lang/rust/cargo.mk"
