@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.13 2015/06/30 11:00:33 ryoon Exp $
+$NetBSD: patch-info_filesys.h,v 1.1 2024/11/01 08:37:29 adam Exp $
+
+Use PKGSRC_INFOPATH.
 
 --- info/filesys.h.orig	2014-12-29 11:29:54.000000000 +0000
 +++ info/filesys.h

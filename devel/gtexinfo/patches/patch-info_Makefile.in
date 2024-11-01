@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.17 2023/11/07 22:05:01 wiz Exp $
+$NetBSD: patch-info_Makefile.in,v 1.1 2024/11/01 08:37:29 adam Exp $
+
+Append PKGSRC_INFOPATH to CPPFLAGS.
 
 --- info/Makefile.in.orig	2023-10-18 13:06:46.000000000 +0000
 +++ info/Makefile.in

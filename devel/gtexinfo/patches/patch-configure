@@ -1,0 +1,39 @@
+$NetBSD: patch-configure,v 1.1 2024/11/01 08:37:29 adam Exp $
+
+Ignore iconv bug check for macOS for the sake of PLIST consistency.
+This check has been introduced in gtexinfo 7.1.1.
+
+--- configure.orig	2024-09-07 17:33:21.000000000 +0000
++++ configure
+@@ -13469,6 +13469,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#if 0
+   /* Test against macOS 14.4 bug: Failures are not distinguishable from
+      successful returns.
+      POSIX:2018 says: "The iconv() function shall ... return the number of
+@@ -13498,6 +13499,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#endif
+   /* Test against Solaris 10 bug: Failures are not distinguishable from
+      successful returns.  */
+   {
+@@ -39577,6 +39579,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#if 0
+   /* Test against macOS 14.4 bug: Failures are not distinguishable from
+      successful returns.
+      POSIX:2018 says: "The iconv() function shall ... return the number of
+@@ -39606,6 +39609,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#endif
+   /* Test against Solaris 10 bug: Failures are not distinguishable from
+      successful returns.  */
+   {
