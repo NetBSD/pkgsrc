@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6656 2024/10/31 22:35:45 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6657 2024/11/01 00:08:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10105,3 +10105,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/sbcl to 2.4.10 [rjs 2024-10-31]
 	Updated audio/ncspot to 1.2.1 [pin 2024-10-31]
 	Updated archivers/libzip to 1.11.2 [wiz 2024-10-31]
+	Added www/py-legacy-cgi version 2.6.1 [wiz 2024-11-01]
