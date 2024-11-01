@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/11/01 00:53:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/01 12:54:33 wiz Exp $
 
 BUILDLINK_TREE+=	vcdimager
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vcdimager
 VCDIMAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=2.0.1
-BUILDLINK_ABI_DEPENDS.vcdimager+=	vcdimager>=2.0.1nb10
+BUILDLINK_ABI_DEPENDS.vcdimager+=	vcdimager>=2.0.1nb11
 BUILDLINK_PKGSRCDIR.vcdimager?=		../../sysutils/vcdimager
 
 .include "../../devel/gettext-lib/buildlink3.mk"

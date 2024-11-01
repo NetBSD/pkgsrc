@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2024/11/01 00:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/11/01 12:53:48 wiz Exp $
 #
 
 DISTNAME=		libbt-1.05
 PKGNAME=		${DISTNAME:S/libbt/btget/}
-PKGREVISION=		35
+PKGREVISION=		36
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libbt/}
 

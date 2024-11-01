@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2024/11/01 00:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/11/01 12:53:03 wiz Exp $
 
 DISTNAME=		veusz-3.5.3
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=veusz/}
 GITHUB_RELEASE=		${DISTNAME}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2024/11/01 00:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/01 12:54:02 wiz Exp $
 
 DISTNAME=	slumber-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

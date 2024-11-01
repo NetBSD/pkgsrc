@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2024/11/01 00:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/11/01 12:52:36 wiz Exp $
 
 DISTNAME=	kbounce-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kbounce/

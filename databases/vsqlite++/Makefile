@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/11/01 00:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/01 12:51:59 wiz Exp $
 
 DISTNAME=	vsqlite++-0.3.13
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	databases
 MASTER_SITES=	http://evilissimo.fedorapeople.org/releases/vsqlite--/0.3.13/
 

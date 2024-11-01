@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/11/01 00:52:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/11/01 12:53:29 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi-search
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-search
 AKONADI_SEARCH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-search+=	akonadi-search>=17.12.1
-BUILDLINK_ABI_DEPENDS.akonadi-search?=	akonadi-search>=23.08.4nb4
+BUILDLINK_ABI_DEPENDS.akonadi-search?=	akonadi-search>=23.08.4nb5
 BUILDLINK_PKGSRCDIR.akonadi-search?=	../../misc/akonadi-search
 
 .include "../../devel/kcmutils/buildlink3.mk"

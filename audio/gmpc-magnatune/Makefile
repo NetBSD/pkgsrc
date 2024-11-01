@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2024/11/01 00:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2024/11/01 12:51:26 wiz Exp $
 
 DISTNAME=	gmpc-magnatune-11.8.16
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	audio
 MASTER_SITES=	https://download.sarine.nl/Programs/gmpc/11.8/
 

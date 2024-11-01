@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/11/01 00:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/01 12:52:56 wiz Exp $
 
 DISTNAME=	kplotting-${KF6VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2024/11/01 00:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/01 12:53:12 wiz Exp $
 
 INSTALL_DIRS=	build/tools/extra
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../lang/clang/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/clang/clang-tools-extra/:S/.src//}

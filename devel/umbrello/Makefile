@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2024/11/01 00:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2024/11/01 12:52:21 wiz Exp $
 
 DISTNAME=	umbrello-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/umbrello/

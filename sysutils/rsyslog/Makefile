@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2024/11/01 00:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/01 12:54:30 wiz Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
 BUILDLINK_DEPMETHOD.libuuid=	full
 
-PKGREVISION= 21
+PKGREVISION= 22
 .include "../../sysutils/rsyslog/Makefile.common"
 
 COMMENT=		The enhanced syslogd for Unix

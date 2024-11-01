@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2024/11/01 00:54:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2024/11/01 12:55:00 wiz Exp $
 
 BUILDLINK_TREE+=	gtkmm3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkmm3
 GTKMM3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkmm3+=	gtkmm3>=3.4.2
-BUILDLINK_ABI_DEPENDS.gtkmm3+=	gtkmm3>=3.24.9nb3
+BUILDLINK_ABI_DEPENDS.gtkmm3+=	gtkmm3>=3.24.9nb4
 BUILDLINK_PKGSRCDIR.gtkmm3?=	../../x11/gtkmm3
 
 .include "../../devel/atkmm/buildlink3.mk"

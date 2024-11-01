@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.47 2024/11/01 00:54:27 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.48 2024/11/01 12:55:14 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtserialport
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtserialport
 QT5_QTSERIALPORT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtserialport+=	qt5-qtserialport>=5.9.1
-BUILDLINK_ABI_DEPENDS.qt5-qtserialport+=	qt5-qtserialport>=5.15.15nb1
+BUILDLINK_ABI_DEPENDS.qt5-qtserialport+=	qt5-qtserialport>=5.15.15nb2
 BUILDLINK_PKGSRCDIR.qt5-qtserialport?=		../../x11/qt5-qtserialport
 
 BUILDLINK_INCDIRS.qt5-qtserialport+=	qt5/include

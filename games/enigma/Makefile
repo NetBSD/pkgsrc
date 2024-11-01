@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2024/11/01 00:51:47 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/11/01 12:52:33 wiz Exp $
 
 DISTNAME=	enigma-1.21
 PKGNAME=	${DISTNAME:S/-r/./}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enigma-game/}
 

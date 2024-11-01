@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2024/11/01 00:53:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2024/11/01 12:54:13 wiz Exp $
 
 BUILDLINK_TREE+=	clamav
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	clamav
 CLAMAV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.clamav+=	clamav>=0.95.3nb1
-BUILDLINK_ABI_DEPENDS.clamav+=	clamav>=0.103.12nb1
+BUILDLINK_ABI_DEPENDS.clamav+=	clamav>=0.103.12nb2
 BUILDLINK_PKGSRCDIR.clamav?=	../../security/clamav
 
 .include "../../archivers/bzip2/buildlink3.mk"

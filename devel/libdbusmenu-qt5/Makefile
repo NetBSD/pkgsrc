@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/11/01 00:51:28 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/01 12:52:15 wiz Exp $
 
-PKGREVISION= 27
+PKGREVISION= 28
 .include "../../devel/libdbusmenu-qt/Makefile.common"
 
 DISTNAME=	libdbusmenu-qt_${_VER}

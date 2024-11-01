@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/11/01 00:50:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/01 12:51:36 wiz Exp $
 
 DISTNAME=	ngircd-27
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	https://arthur.barton.de/pub/ngircd/
 

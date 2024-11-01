@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2024/11/01 00:51:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2024/11/01 12:52:19 wiz Exp $
 
 BUILDLINK_TREE+=	${PYPKGPREFIX}-compizconfig
 
@@ -8,7 +8,7 @@ PY_COMPIZCONFIG_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.6.0
-BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.8.4nb82
+BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-compizconfig+=	${PYPKGPREFIX}-compizconfig>=0.8.4nb83
 BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-compizconfig?=	../../devel/py-compizconfig
 
 .include "../../devel/libcompizconfig/buildlink3.mk"

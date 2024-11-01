@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/11/01 00:53:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/01 12:54:27 wiz Exp $
 
 DISTNAME=	kdbusaddons-${KF6VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.160 2024/11/01 00:53:00 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2024/11/01 12:53:47 wiz Exp $
 
 DISTNAME=	transcode-1.1.7
-PKGREVISION=	77
+PKGREVISION=	78
 CATEGORIES=	multimedia
 MASTER_SITES=	http://bitbucket.org/france/transcode-tcforge/downloads/
 EXTRACT_SUFX=	.tar.bz2

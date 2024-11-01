@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2024/11/01 00:52:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2024/11/01 12:53:33 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kcontacts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kcontacts
 KF6_KCONTACTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kcontacts+=	kf6-kcontacts>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kcontacts?=	kf6-kcontacts>=6.2.0nb2
+BUILDLINK_ABI_DEPENDS.kf6-kcontacts?=	kf6-kcontacts>=6.2.0nb3
 BUILDLINK_PKGSRCDIR.kf6-kcontacts?=	../../misc/kf6-kcontacts
 
 .include "../../devel/kf6-kconfig/buildlink3.mk"
