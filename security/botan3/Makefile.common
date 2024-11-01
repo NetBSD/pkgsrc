@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2024/02/25 14:58:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2024/11/01 07:22:45 nros Exp $
 #
 # used by security/py-botan3/Makefile
 
-DISTNAME=	Botan-3.3.0
+DISTNAME=	Botan-3.6.1
 CATEGORIES=	security
 MASTER_SITES=	https://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tar.xz
