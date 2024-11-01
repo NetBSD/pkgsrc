@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/01/25 22:10:00 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/01 23:32:34 mef Exp $
 
 R_PKGNAME=	compositions
-R_PKGVER=	2.0-7
+R_PKGVER=	2.0-8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Compositional data analysis
