@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/10/12 08:13:13 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/01 00:08:47 wiz Exp $
 
-DISTNAME=	webob-1.8.8
+DISTNAME=	webob-1.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/webob/}
@@ -18,14 +18,16 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-# doesn't really support Python 3.13
-# https://github.com/Pylons/webob/issues/437
-
 WHEEL_NAME=	${DISTNAME:S/webob/WebOb/}
 
-# as of 1.8.8
-# 1 failed, 2379 passed, 9 skipped, 1 xfailed, 35 warnings
+# as of 1.8.9
+# 1 failed, 2379 passed, 9 skipped, 1 xfailed, 34 warnings
+
+.include "../../lang/python/pyversion.mk"
+
+.if ${PYTHON_VERSION} > 312
+DEPENDS+=	${PYPKGPREFIX}-legacy-cgi-[0-9]*:../../www/py-legacy-cgi
+.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
