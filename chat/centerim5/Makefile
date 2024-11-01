@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/05/29 16:31:29 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/01 00:50:48 wiz Exp $
 
 DISTNAME=	centerim5-5.0.1
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	chat
 MASTER_SITES=	http://www.centerim.org/download/cim5/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/05/29 16:34:01 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/01 00:53:14 wiz Exp $
 
 DISTNAME=	pysmbc-1.0.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pysmbc/}
 

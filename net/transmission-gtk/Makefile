@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2024/08/25 06:19:08 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/11/01 00:53:17 wiz Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
+PKGREVISION=	1
 COMMENT=	Free, lightweight BitTorrent client (GTK version)
 
 DEPENDS+=	transmission-common>=${VERSION}:../../net/transmission-common

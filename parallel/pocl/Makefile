@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/10/01 10:23:50 nia Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/01 00:53:20 wiz Exp $
 
 DISTNAME=	pocl-6.0
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pocl/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

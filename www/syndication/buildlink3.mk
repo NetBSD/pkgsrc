@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2024/04/06 08:06:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/11/01 00:54:11 wiz Exp $
 
 BUILDLINK_TREE+=	syndication
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	syndication
 SYNDICATION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.syndication+=	syndication>=5.70.0
-BUILDLINK_ABI_DEPENDS.syndication?=	syndication>=5.114.0nb1
+BUILDLINK_ABI_DEPENDS.syndication?=	syndication>=5.116.0nb1
 BUILDLINK_PKGSRCDIR.syndication?=	../../www/syndication
 
 .include "../../textproc/kcodecs/buildlink3.mk"

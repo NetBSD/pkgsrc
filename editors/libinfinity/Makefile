@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/10/20 14:03:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/01 00:51:38 wiz Exp $
 
 DISTNAME=	libinfinity-0.7.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobby/}
 

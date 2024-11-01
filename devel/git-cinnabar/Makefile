@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2024/06/14 14:13:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/01 00:51:19 wiz Exp $
 
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

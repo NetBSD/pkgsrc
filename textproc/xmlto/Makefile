@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2024/06/20 17:18:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/01 00:53:55 wiz Exp $
 
 DISTNAME=	xmlto-0.0.28
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	textproc
 MASTER_SITES=	https://releases.pagure.org/xmlto/
 EXTRACT_SUFX=	.tar.bz2

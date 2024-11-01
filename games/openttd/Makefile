@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2024/10/01 10:38:00 nia Exp $
+# $NetBSD: Makefile,v 1.128 2024/11/01 00:51:55 wiz Exp $
 
 DISTNAME=	openttd-14.1-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://proxy.binaries.openttd.org/openttd-releases/${PKGVERSION_NOREV}/
 MASTER_SITES+=	https://cdn.openttd.org/openttd-releases/${PKGVERSION_NOREV}/

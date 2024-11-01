@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/08/25 06:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/01 00:51:41 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../emulators/flycast/Makefile.common"
 
 PKGNAME=	libretro-${DISTNAME}

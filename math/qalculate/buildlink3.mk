@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2024/05/16 06:15:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2024/11/01 00:52:41 wiz Exp $
 
 BUILDLINK_TREE+=	qalculate
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qalculate
 QALCULATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qalculate+=	qalculate>=0.8.2
-BUILDLINK_ABI_DEPENDS.qalculate+=	qalculate>=5.0.0nb1
+BUILDLINK_ABI_DEPENDS.qalculate+=	qalculate>=5.1.1nb1
 BUILDLINK_PKGSRCDIR.qalculate?=		../../math/qalculate
 
 .include "../../math/mpfr/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2023/11/08 13:21:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2024/11/01 00:54:05 wiz Exp $
 
 BUILDLINK_TREE+=	librest
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	librest
 LIBREST_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.librest+=	librest07>=0.7
-BUILDLINK_ABI_DEPENDS.librest+=	librest07>=0.7.93nb23
+BUILDLINK_ABI_DEPENDS.librest+=	librest07>=0.7.93nb25
 BUILDLINK_PKGSRCDIR.librest?=	../../www/librest07
 
 .include "../../devel/glib2/buildlink3.mk"

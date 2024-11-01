@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/08/24 14:26:19 vins Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/01 00:52:35 wiz Exp $
 
 DISTNAME=	mailutils-3.17
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNU:=mailutils/}
 

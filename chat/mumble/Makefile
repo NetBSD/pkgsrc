@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2024/10/04 03:49:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2024/11/01 00:50:49 wiz Exp $
 
 DISTNAME=	mumble-1.4.287
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mumble-voip/}
 GITHUB_PROJECT=	mumble

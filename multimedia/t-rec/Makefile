@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/10/19 11:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/01 00:53:00 wiz Exp $
 
 DISTNAME=	t-rec-rs-0.7.6
 PKGNAME=	t-rec-0.7.6
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sassman/}
 GITHUB_PROJECT=	t-rec-rs
