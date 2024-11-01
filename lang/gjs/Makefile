@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/11/01 00:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/01 12:53:12 wiz Exp $
 
 DISTNAME=	gjs-1.68.4
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gjs/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

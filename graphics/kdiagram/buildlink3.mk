@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2024/11/01 00:52:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/11/01 12:52:55 wiz Exp $
 
 BUILDLINK_TREE+=	kdiagram
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kdiagram
 KDIAGRAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdiagram+=	kdiagram>=2.8.0
-BUILDLINK_ABI_DEPENDS.kdiagram?=		kdiagram>=2.8.0nb7
+BUILDLINK_ABI_DEPENDS.kdiagram?=		kdiagram>=2.8.0nb8
 BUILDLINK_PKGSRCDIR.kdiagram?=		../../graphics/kdiagram
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

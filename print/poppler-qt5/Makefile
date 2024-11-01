@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2024/11/01 00:53:24 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/11/01 12:54:11 wiz Exp $
 
 PKGNAME=	poppler-qt5-${POPPLER_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	PDF rendering library (Qt5 wrapper)
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_GTK_TESTS=OFF

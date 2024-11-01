@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.66 2024/11/01 00:52:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2024/11/01 12:53:37 wiz Exp $
 
 BUILDLINK_TREE+=	libkvkontakte
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkvkontakte
 LIBKVKONTAKTE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkvkontakte+=	libkvkontakte>=5.0.0
-BUILDLINK_ABI_DEPENDS.libkvkontakte?=	libkvkontakte>=5.0.0nb34
+BUILDLINK_ABI_DEPENDS.libkvkontakte?=	libkvkontakte>=5.0.0nb35
 BUILDLINK_PKGSRCDIR.libkvkontakte?=	../../misc/libkvkontakte
 
 .include "../../www/kdewebkit/buildlink3.mk"

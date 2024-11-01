@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/11/01 00:51:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/11/01 12:52:24 wiz Exp $
 
 BUILDLINK_TREE+=	libinfinity
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libinfinity
 LIBINFINITY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libinfinity+=	libinfinity>=0.7.2
-BUILDLINK_ABI_DEPENDS.libinfinity?=	libinfinity>=0.7.2nb4
+BUILDLINK_ABI_DEPENDS.libinfinity?=	libinfinity>=0.7.2nb5
 BUILDLINK_PKGSRCDIR.libinfinity?=	../../editors/libinfinity
 
 .include "../../devel/glib2/buildlink3.mk"

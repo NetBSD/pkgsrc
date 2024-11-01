@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/11/01 00:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/01 12:52:25 wiz Exp $
 
 DISTNAME=	tepl-4.4.0
 PKGNAME=	${DISTNAME:S/tepl-/tepl4-/1}
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tepl/4.4/}
 EXTRACT_SUFX=	.tar.xz

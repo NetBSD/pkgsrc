@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2024/11/01 00:51:31 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/11/01 12:52:17 wiz Exp $
 
 DISTNAME=	m17n-lib-1.8.0
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	devel converters editors inputmethod textproc time
 MASTER_SITES=	https://download.savannah.gnu.org/releases/m17n/
 

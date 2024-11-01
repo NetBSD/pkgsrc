@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2024/11/01 00:52:19 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2024/11/01 12:53:06 wiz Exp $
 
 PKGNAME=	gnuradio-video-sdl-${VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	SDL (Simple DirectMedia Layer) bindings for GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

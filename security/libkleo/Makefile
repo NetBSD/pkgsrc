@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/11/01 00:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/01 12:54:16 wiz Exp $
 
 DISTNAME=	libkleo-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 
 HOMEPAGE=	https://kontact.kde.org/

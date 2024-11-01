@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/11/01 00:53:10 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/11/01 12:53:56 wiz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/nice.pc

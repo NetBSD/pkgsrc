@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/11/01 00:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/01 12:53:32 wiz Exp $
 
 DISTNAME=	kcontacts-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

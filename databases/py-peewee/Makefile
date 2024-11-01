@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.110 2024/11/01 00:51:09 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2024/11/01 12:51:56 wiz Exp $
 
 DISTNAME=	peewee-3.17.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/peewee/}
 

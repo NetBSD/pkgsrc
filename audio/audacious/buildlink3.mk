@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2024/11/01 00:50:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2024/11/01 12:51:24 wiz Exp $
 
 BUILDLINK_TREE+=	audacious
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	audacious
 AUDACIOUS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.audacious+=	audacious>=3.10.1
-BUILDLINK_ABI_DEPENDS.audacious+=	audacious>=4.1nb19
+BUILDLINK_ABI_DEPENDS.audacious+=	audacious>=4.1nb20
 BUILDLINK_PKGSRCDIR.audacious?=		../../audio/audacious
 
 .include "../../mk/bsd.fast.prefs.mk"

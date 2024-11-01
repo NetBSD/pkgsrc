@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2024/11/01 00:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/01 12:53:11 wiz Exp $
 #
 
 DISTNAME=	uim-chewing-0.1.0
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://uim.googlecode.com/files/
 

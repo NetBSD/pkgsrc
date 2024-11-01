@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2024/11/01 00:53:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2024/11/01 12:54:18 wiz Exp $
 
 BUILDLINK_TREE+=	pkcs11-helper
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pkcs11-helper
 PKCS11_HELPER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pkcs11-helper+=	pkcs11-helper>=1.06
-BUILDLINK_ABI_DEPENDS.pkcs11-helper+=	pkcs11-helper>=1.30.0nb3
+BUILDLINK_ABI_DEPENDS.pkcs11-helper+=	pkcs11-helper>=1.30.0nb4
 BUILDLINK_PKGSRCDIR.pkcs11-helper?=	../../security/pkcs11-helper
 
 pkgbase := pkcs11-helper
