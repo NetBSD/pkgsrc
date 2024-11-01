@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/08/21 17:21:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/01 08:05:44 wiz Exp $
 
-DISTNAME=	svt-av1-2.2.0
+DISTNAME=	svt-av1-2.3.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITLAB:=AOMediaCodec/}
 EXTRACT_SUFX=	.tar.bz2
