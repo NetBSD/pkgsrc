@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2024/07/14 08:51:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.42 2024/11/01 07:12:59 mef Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -385,20 +385,13 @@ lib/R/library/Matrix/po/lt/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/lt/LC_MESSAGES/R-Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/Matrix.mo
 lib/R/library/Matrix/po/pl/LC_MESSAGES/R-Matrix.mo
-lib/R/library/Matrix/scripts/AMD.patch
-lib/R/library/Matrix/scripts/CAMD.patch
-lib/R/library/Matrix/scripts/CCOLAMD.patch
-lib/R/library/Matrix/scripts/CHOLMOD.patch
-lib/R/library/Matrix/scripts/COLAMD.patch
-lib/R/library/Matrix/scripts/CXSparse.patch
-lib/R/library/Matrix/scripts/SuiteSparse_config.patch
-lib/R/library/Matrix/scripts/api.patch
+lib/R/library/Matrix/scripts/SuiteSparse.patch
+lib/R/library/Matrix/scripts/cholmod.h.patch
 lib/R/library/Matrix/scripts/disclaimer.txt
 lib/R/library/Matrix/scripts/rules.mk
 lib/R/library/Matrix/scripts/rules.sh
 lib/R/library/Matrix/scripts/sources.mk
 lib/R/library/Matrix/scripts/ssget.sh
-lib/R/library/Matrix/scripts/wall.patch
 lib/R/library/Matrix/test-tools-1.R
 lib/R/library/Matrix/test-tools-Matrix.R
 lib/R/library/Matrix/test-tools.R
