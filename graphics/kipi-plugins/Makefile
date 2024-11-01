@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.172 2024/11/01 00:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2024/11/01 10:49:57 wiz Exp $
 
 DISTNAME=	kipi-plugins-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://userbase.kde.org/KIPI/
@@ -23,7 +23,6 @@ SUBST_SED.fix-moc=	-e 's;"${PREFIX}/include",;;g'
 .include "../../devel/kio/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
-.include "../../misc/libkvkontakte/buildlink3.mk"
 .include "../../www/libmediawiki/buildlink3.mk"
 .include "../../x11/kxmlgui/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
