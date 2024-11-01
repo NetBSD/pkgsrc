@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.124 2024/10/21 15:23:45 mef Exp $
+# $NetBSD: Makefile,v 1.125 2024/11/01 08:37:29 adam Exp $
 
-DISTNAME=		texinfo-7.1.1
-PKGNAME=		g${DISTNAME}
-CATEGORIES=		devel sysutils
-MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
+DISTNAME=	texinfo-7.1.1
+PKGNAME=	g${DISTNAME}
+CATEGORIES=	devel sysutils
+MASTER_SITES=	${MASTER_SITE_GNU:=texinfo/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.gnu.org/software/texinfo/texinfo.html
-COMMENT=		GNU info documentation utilities
-LICENSE=		gnu-gpl-v3
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://www.gnu.org/software/texinfo/texinfo.html
+COMMENT=	GNU info documentation utilities
+LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
+TOOL_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 # otherwise, package installs copies of them itself
-DEPENDS+=		p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
-DEPENDS+=		p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
-DEPENDS+=		p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
+DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
+DEPENDS+=	p5-Text-Unidecode-[0-9]*:../../textproc/p5-Text-Unidecode
+DEPENDS+=	p5-Unicode-EastAsianWidth-[0-9]*:../../converters/p5-Unicode-EastAsianWidth
 
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # otherwise MiscXS.pm won't be installed
 CONFIGURE_ARGS+=	--with-external-libintl-perl
@@ -25,17 +27,11 @@ CONFIGURE_ARGS+=	--enable-perl-xs
 CONFIGURE_ARGS+=	PERL_EXT_CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS+=	PERL_EXT_LDFLAGS=${LDFLAGS:Q}
 # embedded into texindex
-CONFIGURE_ARGS+=	ac_cv_path_TI_AWK=${AWK}
-
-# cc1: fatal error: ./parsetexi/Parsetexi.c: No such file or directory
-MAKE_JOBS_SAFE=		no
-
-USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	ac_cv_path_TI_AWK=${AWK:Q}
 
 INFO_FILES=		yes
 TEST_TARGET=		check
 PLIST_SRC=		${PKGDIR}/PLIST
-USE_TOOLS+=		perl:run
 
 # Replace deeply nested config.sub files (in vendored perl libraries)
 OVERRIDE_DIRDEPTH=	4
@@ -49,7 +45,6 @@ REPLACE_SH+=		util/texi2dvi
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"	 # for EXTERN.h in XSParagraph
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

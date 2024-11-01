@@ -1,0 +1,39 @@
+$NetBSD: patch-tp_Texinfo_XS_configure,v 1.1 2024/11/01 08:37:29 adam Exp $
+
+Ignore iconv bug check for macOS for the sake of PLIST consistency.
+This check has been introduced in gtexinfo 7.1.1.
+
+--- tp/Texinfo/XS/configure.orig	2024-09-07 17:27:38.000000000 +0000
++++ tp/Texinfo/XS/configure
+@@ -8597,6 +8597,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#if 0
+   /* Test against macOS 14.4 bug: Failures are not distinguishable from
+      successful returns.
+      POSIX:2018 says: "The iconv() function shall ... return the number of
+@@ -8626,6 +8627,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#endif
+   /* Test against Solaris 10 bug: Failures are not distinguishable from
+      successful returns.  */
+   {
+@@ -11338,6 +11340,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#if 0
+   /* Test against macOS 14.4 bug: Failures are not distinguishable from
+      successful returns.
+      POSIX:2018 says: "The iconv() function shall ... return the number of
+@@ -11367,6 +11370,7 @@ int result = 0;
+         iconv_close (cd_utf8_to_88591);
+       }
+   }
++#endif
+   /* Test against Solaris 10 bug: Failures are not distinguishable from
+      successful returns.  */
+   {
