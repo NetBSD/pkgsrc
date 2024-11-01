@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2021/06/01 05:05:54 adam Exp $
+# $NetBSD: options.mk,v 1.22 2024/11/01 14:10:47 triaxx Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=		alsa cups dbus pulseaudio sane x11
@@ -35,7 +35,9 @@ PLIST.pulse=		yes
 CONFIGURE_ARGS+=	--without-pulse
 .endif
 
+PLIST_VARS+=	sane
 .if !empty(PKG_OPTIONS:Msane)
+PLIST.sane=		yes
 .  include "../../graphics/sane-backends/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-sane

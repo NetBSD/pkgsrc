@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.260 2024/11/01 12:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.261 2024/11/01 14:10:47 triaxx Exp $
 
-DISTNAME=	wine-5.0.5
-PKGREVISION=	29
+DISTNAME=	wine-9.0
 CATEGORIES=	emulators
-MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV:R}/
-MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV}/
+MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,6 +19,7 @@ REPLACE_PERL+=	tools/winemaker/winemaker
 REPLACE_PERL+=	tools/winedump/function_grep.pl
 
 CHECK_PIE_SUPPORTED=	no
+CHECK_SHLIBS_SUPPORTED=	no
 
 ONLY_FOR_PLATFORM+=	*-*-i386 *-*-x86_64
 
@@ -69,7 +69,7 @@ LDFLAGS+=		${LIBOSSAUDIO}
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_MESSAGE.oss=	Correcting the path to the OSS device.
-SUBST_FILES.oss+=	dlls/wineoss.drv/mmdevdrv.c
+SUBST_FILES.oss+=	dlls/wineoss.drv/oss.c
 SUBST_SED.oss+=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .else
 CONFIGURE_ARGS+=	--without-oss
@@ -80,7 +80,7 @@ CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 
 # Wine will use system frameworks on Darwin.
 .if ${OPSYS} != "Darwin"
-PLIST.desktop=	yes
+PLIST.desktop=		yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
