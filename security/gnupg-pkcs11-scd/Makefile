@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/11/01 00:53:27 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/01 12:54:13 wiz Exp $
 
 VERSION=	0.9.2
 DISTNAME=	gnupg-pkcs11-scd-${VERSION}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	security
 GITHUB_PROJECT=	gnupg-pkcs11-scd
 GITHUB_RELEASE=	${DISTNAME}

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/11/01 00:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/01 12:54:30 wiz Exp $
 
 DISTNAME=	qmediamanager-0.1.1.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	2dc5c7b3ad946932cfdaf214630e23aaea4f0b76

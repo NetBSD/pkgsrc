@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/11/01 00:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/01 12:53:22 wiz Exp $
 
 DISTNAME=	v0.8.7
 PKGNAME=	${DISTNAME:S|^v|meli-|}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://git.meli-email.org/meli/meli/archive/

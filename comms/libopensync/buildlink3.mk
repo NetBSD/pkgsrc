@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2024/11/01 00:50:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2024/11/01 12:51:41 wiz Exp $
 
 BUILDLINK_TREE+=	libopensync
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libopensync
 LIBOPENSYNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libopensync+=	libopensync>=0.22
-BUILDLINK_ABI_DEPENDS.libopensync+=	libopensync>=0.22nb37
+BUILDLINK_ABI_DEPENDS.libopensync+=	libopensync>=0.22nb38
 BUILDLINK_PKGSRCDIR.libopensync?=	../../comms/libopensync
 
 .include "../../databases/sqlite3/buildlink3.mk"

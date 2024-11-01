@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/11/01 00:52:20 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/01 12:53:07 wiz Exp $
 
 DISTNAME=	fcitx5-chinese-addons-5.1.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://download.fcitx-im.org/fcitx5/fcitx5-chinese-addons/
 EXTRACT_SUFX=	.tar.xz

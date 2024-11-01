@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.45 2024/11/01 00:53:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.46 2024/11/01 12:53:53 wiz Exp $
 
 BUILDLINK_TREE+=	gupnp-igd
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gupnp-igd
 GUPNP_IGD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gupnp-igd+=	gupnp-igd>=0.2.1
-BUILDLINK_ABI_DEPENDS.gupnp-igd+=	gupnp-igd>=1.6.0nb3
+BUILDLINK_ABI_DEPENDS.gupnp-igd+=	gupnp-igd>=1.6.0nb4
 BUILDLINK_PKGSRCDIR.gupnp-igd?=		../../net/gupnp-igd
 
 .include "../../net/gupnp/buildlink3.mk"

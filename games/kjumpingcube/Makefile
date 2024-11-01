@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2024/11/01 00:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/11/01 12:52:37 wiz Exp $
 
 DISTNAME=	kjumpingcube-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kjumpingcube/

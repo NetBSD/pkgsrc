@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2024/11/01 00:50:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2024/11/01 12:51:44 wiz Exp $
 
 BUILDLINK_TREE+=	SQLiteCpp
 
@@ -7,7 +7,7 @@ SQLITECPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.SQLiteCpp+=	SQLiteCpp>=2.2.0
 BUILDLINK_DEPMETHOD.SQLiteCpp?=		build
-BUILDLINK_ABI_DEPENDS.SQLiteCpp?=	SQLiteCpp>=2.2.0nb14
+BUILDLINK_ABI_DEPENDS.SQLiteCpp?=	SQLiteCpp>=2.2.0nb15
 BUILDLINK_PKGSRCDIR.SQLiteCpp?=		../../databases/SQLiteCpp
 
 .include "../../databases/sqlite3/buildlink3.mk"

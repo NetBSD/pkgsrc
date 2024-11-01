@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2024/11/01 00:53:04 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/11/01 12:53:51 wiz Exp $
 
 DISTNAME=	gnome-online-accounts-3.36.0
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-online-accounts/3.36/}
 EXTRACT_SUFX=	.tar.xz

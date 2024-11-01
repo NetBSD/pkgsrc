@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2024/11/01 00:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/11/01 12:51:27 wiz Exp $
 #
 
 DISTNAME=	herrie-2.2
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	audio
 MASTER_SITES=	http://herrie.info/distfiles/
 EXTRACT_SUFX=	.tar.bz2
