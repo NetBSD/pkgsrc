@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/01/24 23:03:32 mef Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/01 01:20:42 mef Exp $
 
 R_PKGNAME=	circular
-R_PKGVER=	0.5-0
+R_PKGVER=	0.5-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Circular statistics
