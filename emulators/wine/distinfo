@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.99 2021/10/26 10:24:15 nia Exp $
+$NetBSD: distinfo,v 1.100 2024/11/01 14:10:47 triaxx Exp $
 
-BLAKE2s (wine-5.0.5.tar.xz) = c9e1ea3bae279c971e7ce99c650343912171ce0e81df5dbbbe676dd1f3a579b8
-SHA512 (wine-5.0.5.tar.xz) = 3cf0ccb2eac0868f700296a62aeea9b856522ac63861beb49deed50136a334c450f2d1172f9d0195b4fe0bbf8f808f7350a79122726da1cbf5d21161f6dfca36
-Size (wine-5.0.5.tar.xz) = 22501416 bytes
-SHA1 (patch-configure) = c326ade452067d50504a546d2a9b81c822b14ec9
-SHA1 (patch-dlls_wininet_http.c) = 5ca2fa79d4177f8503232c5960220249bdda1b8d
-SHA1 (patch-dlls_ws2__32_socket.c) = 600f8e24c26569354e62a9dfe3434c9da9df5ae4
-SHA1 (patch-programs_wineconsole_Makefile.in) = 73f274eef6759accc0dfae5d5de21c76573b8e7b
-SHA1 (patch-programs_wineconsole_curses.c) = 195be3c65bc272b0e8412d108d75ee3100dc18d9
-SHA1 (patch-tools_winegcc_winegcc.c) = d5db5531e9be56beedeb526dcf2a3be996adec46
+BLAKE2s (wine-9.0.tar.xz) = 50a4cd0fc55ba58dd376ea9804fd7f9001fb9047aa0384ff9d447073de1cae73
+SHA512 (wine-9.0.tar.xz) = 838daf2c4581f83f8573b988036f517d57b84894b090a2a17433255d6d044dfa880e6724cdb83082a36c333df9d2083ab68ae53927622a620edd59f33462ada4
+Size (wine-9.0.tar.xz) = 30007216 bytes
+SHA1 (patch-configure) = b8c29d671a10f1660c118ba4b08c3085e23e96df
+SHA1 (patch-dlls_nsiproxy.sys_ip.c) = 2958989e7f59bc5515e89a2a3980ad0f0b127f4a
+SHA1 (patch-dlls_nsiproxy.sys_ndis.c) = 7a8ac98892306eb6cd6d89c3ef5af48b9c2d70ea
+SHA1 (patch-dlls_ntdll_unix_file.c) = ce826279dcf5aebe74c041d647f6d0b41ddd6630
+SHA1 (patch-dlls_ntdll_unix_signal__x86__64.c) = be196f1b45c92c225f89295aa2caf7d46aea35be
+SHA1 (patch-dlls_wineoss.drv_ossmidi.c) = 066d2eed25c11052fc6c47d29e8fa2dd98f02fb1
+SHA1 (patch-include_config.h.in) = fc0c3f00adcc7f12cce11efeb9c869857c1f1907
+SHA1 (patch-tools_winegcc_winegcc.c) = db786a9f2626c640ffad3ef660f0af34e2e8eb79

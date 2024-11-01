@@ -1,24 +1,19 @@
-$NetBSD: patch-configure,v 1.3 2020/05/23 21:20:39 adam Exp $
+$NetBSD: patch-configure,v 1.4 2024/11/01 14:10:47 triaxx Exp $
 
-pkgsrc doesn't use lib64.
-On Darwin, do not use @rpath.
+Add check for sys/midiio.h.
 
---- configure.orig	2019-11-25 15:10:40.000000000 +0000
+--- configure.orig	2024-01-16 20:55:47.000000000 +0000
 +++ configure
-@@ -5654,7 +5654,6 @@ if test "x$enable_win64" = "xyes"
- then
-     test -z "$with_wine64" || as_fn_error $? "--enable-win64 and --with-wine64 are mutually exclusive.
- --enable-win64 should be used in the 64-bit build tree, --with-wine64 in the 32-bit Wow64 build tree." "$LINENO" 5
--    test "x$libdir" != "x\${exec_prefix}/lib" || libdir="\${exec_prefix}/lib64"
+@@ -8207,6 +8207,12 @@ then :
+   printf "%s\n" "#define HAVE_SYS_LINK_H 1" >>confdefs.h
+ 
  fi
- 
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the directory containing the Wine tools" >&5
-@@ -8947,7 +8946,7 @@ fi
- 
-     LIBWINE_SHAREDLIB="libwine.$libwine_version.dylib"
- 
--    LIBWINE_LDFLAGS="-dynamiclib -install_name @rpath/libwine.$libwine_soversion.dylib -Wl,-rpath,@loader_path/ -compatibility_version $libwine_soversion -current_version $libwine_version"
-+    LIBWINE_LDFLAGS="-dynamiclib -install_name ${libdir}/libwine.$libwine_soversion.dylib -compatibility_version $libwine_soversion -current_version $libwine_version"
- 
-     WINELOADER_DEPENDS="wine_info.plist"
- 
++ac_fn_c_check_header_compile "$LINENO" "sys/midiio.h" "ac_cv_header_sys_midiio_h" "$ac_includes_default"
++if test "x$ac_cv_header_sys_midiio_h" = xyes
++then :
++  printf "%s\n" "#define HAVE_SYS_MIDIIO_H 1" >>confdefs.h
++
++fi
+ ac_fn_c_check_header_compile "$LINENO" "sys/modem.h" "ac_cv_header_sys_modem_h" "$ac_includes_default"
+ if test "x$ac_cv_header_sys_modem_h" = xyes
+ then :
