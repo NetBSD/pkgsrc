@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.125 2024/10/30 16:03:38 jperkin Exp $	*/
+/*	$NetBSD: perform.c,v 1.126 2024/11/01 11:26:46 riastradh Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.125 2024/10/30 16:03:38 jperkin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.126 2024/11/01 11:26:46 riastradh Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -931,8 +931,8 @@ check_platform(struct pkg_task *pkg)
 	if (fatal ||
 	    compatible_platform(effective_opsys, effective_os_version,
 				pkg->buildinfo[BI_OS_VERSION]) != 1) {
-		warnx("Warning: package `%s' was built for a platform:",
-		    pkg->pkgname);
+		warnx("%s: package `%s' was built for a platform:",
+		    !Force && fatal ? "Error" : "Warning", pkg->pkgname);
 		warnx("%s/%s %s (pkg) vs. %s/%s %s (this host)",
 		    pkg->buildinfo[BI_OPSYS],
 		    pkg->buildinfo[BI_MACHINE_ARCH],
@@ -959,13 +959,15 @@ check_pkgtools_version(struct pkg_task *pkg)
 	}
 
 	if (strlen(val) != 8 || strspn(val, "0123456789") != 8) {
-		warnx("Warning: package `%s' contains an invalid pkg_install version",
-		    pkg->pkgname);
+		warnx("%s:"
+		    " package `%s' contains an invalid pkg_install version",
+		    Force ? "Warning" : "Error", pkg->pkgname);
 		return Force ? 0 : -1;
 	}
 	version = atoi(val);
 	if (version > PKGTOOLS_VERSION) {
-		warnx("%s: package `%s' was built with a newer pkg_install version",
+		warnx("%s:"
+		    " package `%s' was built with a newer pkg_install version",
 		    Force ? "Warning" : "Error", pkg->pkgname);
 		return Force ? 0 : -1;
 	}
