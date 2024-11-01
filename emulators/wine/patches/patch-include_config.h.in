@@ -1,0 +1,16 @@
+$NetBSD: patch-include_config.h.in,v 1.1 2024/11/01 14:10:47 triaxx Exp $
+
+Add symbol for sys/midiio.h.
+
+--- include/config.h.in.orig	2024-01-16 20:55:47.000000000 +0000
++++ include/config.h.in
+@@ -522,6 +522,9 @@
+ /* Define to 1 if you have the <sys/link.h> header file. */
+ #undef HAVE_SYS_LINK_H
+ 
++/* Define to 1 if you have the <sys/midiio.h> header file. */
++#undef HAVE_SYS_MIDIIO_H
++
+ /* Define to 1 if you have the <sys/modem.h> header file. */
+ #undef HAVE_SYS_MODEM_H
+ 
