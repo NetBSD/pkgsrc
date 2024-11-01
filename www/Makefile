@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1820 2024/10/24 15:28:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.1821 2024/11/01 00:08:12 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -849,6 +849,7 @@ SUBDIR+=	py-jwcrypto
 SUBDIR+=	py-klein
 SUBDIR+=	py-laces
 SUBDIR+=	py-landslide
+SUBDIR+=	py-legacy-cgi
 SUBDIR+=	py-livereload
 SUBDIR+=	py-lti1p3
 SUBDIR+=	py-mdurl
