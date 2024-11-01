@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2024/05/16 06:14:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2024/11/01 00:51:34 wiz Exp $
 
 BUILDLINK_TREE+=	rudiments
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	rudiments
 RUDIMENTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rudiments+=	rudiments>=1.1.0
-BUILDLINK_ABI_DEPENDS.rudiments+=	rudiments>=1.4.2nb4
+BUILDLINK_ABI_DEPENDS.rudiments+=	rudiments>=1.4.2nb6
 BUILDLINK_PKGSRCDIR.rudiments?=		../../devel/rudiments
 
 .include "../../devel/pcre/buildlink3.mk"

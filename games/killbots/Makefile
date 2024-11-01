@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2024/08/09 09:42:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/01 00:51:51 wiz Exp $
 
 DISTNAME=	killbots-${KAPPSVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/killbots/

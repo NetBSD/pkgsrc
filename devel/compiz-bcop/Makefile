@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2024/05/29 16:31:59 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/01 00:51:16 wiz Exp $
 #
 
 PKGVER=		0.8.8
 DISTNAME=	compiz-bcop-${PKGVER}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel wm x11
 MASTER_SITES=	https://gitlab.com/compiz/compiz-bcop/-/archive/v${PKGVER}/
 

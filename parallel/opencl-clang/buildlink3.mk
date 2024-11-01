@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/11/08 13:20:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2024/11/01 00:53:19 wiz Exp $
 
 BUILDLINK_TREE+=	opencl-clang
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	opencl-clang
 OPENCL_CLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opencl-clang+=	opencl-clang>=10.0.0.1
-BUILDLINK_ABI_DEPENDS.opencl-clang+=	opencl-clang>=15.0.0nb3
+BUILDLINK_ABI_DEPENDS.opencl-clang+=	opencl-clang>=18.1.0nb1
 BUILDLINK_PKGSRCDIR.opencl-clang?=	../../parallel/opencl-clang
 
 .include "../../parallel/spirv-llvm-translator/buildlink3.mk"

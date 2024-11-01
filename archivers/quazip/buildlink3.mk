@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2024/04/06 08:04:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2024/11/01 00:50:37 wiz Exp $
 
 BUILDLINK_TREE+=	quazip
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	quazip
 QUAZIP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.quazip+=	quazip>=0.9
-BUILDLINK_ABI_DEPENDS.quazip?=	quazip>=0.9nb15
+BUILDLINK_ABI_DEPENDS.quazip?=	quazip>=0.9nb17
 BUILDLINK_PKGSRCDIR.quazip?=	../../archivers/quazip
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

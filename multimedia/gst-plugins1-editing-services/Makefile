@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2024/08/20 13:58:33 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/01 00:52:56 wiz Exp $
 
+PKGREVISION= 1
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-editing-services-${GST_VERSION}

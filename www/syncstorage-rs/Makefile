@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/10/23 06:05:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/01 00:54:11 wiz Exp $
 
 DISTNAME=	syncstorage-rs-0.17.11
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 

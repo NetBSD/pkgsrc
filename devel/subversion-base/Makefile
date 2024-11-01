@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.142 2024/10/09 21:15:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.143 2024/11/01 00:51:35 wiz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
+PKGREVISION=	1
 COMMENT=	Version control system, base programs and libraries
 
 # on at least solaris, configure fails to figure out

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/05/29 16:34:34 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/01 00:53:48 wiz Exp $
 
 DISTNAME=	dwdiff-2.1.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	https://os.ghalkes.nl/dist/
 EXTRACT_SUFX=	.tar.bz2

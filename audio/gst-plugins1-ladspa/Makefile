@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/06/04 15:09:51 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/01 00:50:40 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-ladspa/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - LADSPA support plugin

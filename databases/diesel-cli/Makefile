@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/09/04 09:31:47 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/01 00:50:58 wiz Exp $
 
 DISTNAME=	diesel-cli-2.2.4
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diesel-rs/}
 GITHUB_PROJECT=	diesel

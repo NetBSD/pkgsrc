@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2024/10/04 03:49:27 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2024/11/01 00:52:13 wiz Exp $
 
 BUILDLINK_TREE+=	pcl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pcl
 PCL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pcl+=	pcl>=1.10.0
-BUILDLINK_ABI_DEPENDS.pcl+=	pcl>=1.14.1nb5
+BUILDLINK_ABI_DEPENDS.pcl+=	pcl>=1.14.1nb7
 BUILDLINK_PKGSRCDIR.pcl?=	../../graphics/pcl
 
 .include "../../devel/boost-libs/buildlink3.mk"

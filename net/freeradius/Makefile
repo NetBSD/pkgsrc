@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2024/07/24 14:28:05 manu Exp $
+# $NetBSD: Makefile,v 1.126 2024/11/01 00:53:03 wiz Exp $
 
 #PKGREVISION= 1
+PKGREVISION= 1
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-server//}

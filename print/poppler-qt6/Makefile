@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/10/15 16:07:01 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/01 00:53:24 wiz Exp $
 
 PKGNAME=	poppler-qt6-${POPPLER_VERS}
+PKGREVISION=	1
 COMMENT=	PDF rendering library (Qt6 wrapper)
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_GTK_TESTS=OFF

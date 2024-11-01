@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/08/09 09:42:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/01 00:52:56 wiz Exp $
 
 DISTNAME=	kmediaplayer-${KF5VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://community.kde.org/Frameworks

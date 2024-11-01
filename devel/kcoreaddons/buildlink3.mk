@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2024/04/06 08:05:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2024/11/01 00:51:21 wiz Exp $
 
 BUILDLINK_TREE+=	kcoreaddons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcoreaddons
 KCOREADDONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcoreaddons+=	kcoreaddons>=5.18.0
-BUILDLINK_ABI_DEPENDS.kcoreaddons?=	kcoreaddons>=5.114.0nb1
+BUILDLINK_ABI_DEPENDS.kcoreaddons?=	kcoreaddons>=5.116.0nb1
 BUILDLINK_PKGSRCDIR.kcoreaddons?=	../../devel/kcoreaddons
 
 BUILDLINK_FILES.kcoreaddons+=		bin/*

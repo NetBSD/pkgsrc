@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2024/08/09 09:42:13 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2024/11/01 00:51:33 wiz Exp $
 
 BUILDLINK_TREE+=	purpose
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	purpose
 PURPOSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.purpose+=	purpose>=5.70.0
-BUILDLINK_ABI_DEPENDS.purpose?=	purpose>=5.116.0nb1
+BUILDLINK_ABI_DEPENDS.purpose?=	purpose>=5.116.0nb2
 BUILDLINK_PKGSRCDIR.purpose?=	../../devel/purpose
 
 .include "../../devel/kio/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2024/10/20 14:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2024/11/01 00:52:06 wiz Exp $
 
 DISTNAME=	wideangle
 PKGNAME=	gimp2-wideangle-1.0.10
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	http://members.ozemail.com.au/~hodsond/
 EXTRACT_SUFX=	.c

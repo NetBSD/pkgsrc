@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/05/29 16:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/01 00:51:20 wiz Exp $
 
 DISTNAME=	ghcide-2.7.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2024/05/29 16:35:09 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/01 00:54:23 wiz Exp $
 
 DISTNAME=	PyQtWebEngine-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-qt5-webengine-5.15.6
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQtWebEngine/}
 

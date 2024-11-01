@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/05/16 06:15:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2024/11/01 00:53:05 wiz Exp $
 
 BUILDLINK_TREE+=	gnunet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnunet
 GNUNET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnunet+=	gnunet>=0.19.2
-BUILDLINK_ABI_DEPENDS.gnunet?=	gnunet>=0.21.1nb1
+BUILDLINK_ABI_DEPENDS.gnunet?=	gnunet>=0.21.1nb3
 BUILDLINK_PKGSRCDIR.gnunet?=	../../net/gnunet
 
 pkgbase:= gnunet

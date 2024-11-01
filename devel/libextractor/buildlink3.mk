@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2023/11/08 13:18:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2024/11/01 00:51:29 wiz Exp $
 
 BUILDLINK_TREE+=	libextractor
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libextractor
 LIBEXTRACTOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libextractor+=	libextractor>=0.3.10
-BUILDLINK_ABI_DEPENDS.libextractor+=	libextractor>=1.11nb16
+BUILDLINK_ABI_DEPENDS.libextractor+=	libextractor>=1.13nb6
 BUILDLINK_PKGSRCDIR.libextractor?=	../../devel/libextractor
 
 .include "../../devel/libltdl/buildlink3.mk"

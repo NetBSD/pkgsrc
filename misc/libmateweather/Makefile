@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2024/10/20 14:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/11/01 00:52:50 wiz Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	libmateweather-${VERSION:R}.3

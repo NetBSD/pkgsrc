@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/10/09 14:05:55 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/01 00:52:03 wiz Exp $
 
 DISTNAME=	chafa-1.14.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hpjansson/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

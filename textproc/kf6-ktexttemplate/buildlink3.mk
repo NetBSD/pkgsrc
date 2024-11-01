@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/05/26 13:06:41 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/11/01 00:53:49 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-ktexttemplate
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	kf6-ktexttemplate
 KF6_KTEXTTEMPLATE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-ktexttemplate+=	kf6-ktexttemplate>=6.2.0
+BUILDLINK_ABI_DEPENDS.kf6-ktexttemplate?=		kf6-ktexttemplate>=6.2.0nb2
 BUILDLINK_PKGSRCDIR.kf6-ktexttemplate?=		../../textproc/kf6-ktexttemplate
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
