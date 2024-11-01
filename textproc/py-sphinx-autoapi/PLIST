@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/06/08 12:24:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/01 00:24:44 wiz Exp $
 ${PYSITELIB}/autoapi/__init__.py
 ${PYSITELIB}/autoapi/__init__.pyc
 ${PYSITELIB}/autoapi/__init__.pyo
@@ -39,8 +39,6 @@ ${PYSITELIB}/autoapi/templates/python/method.rst
 ${PYSITELIB}/autoapi/templates/python/module.rst
 ${PYSITELIB}/autoapi/templates/python/package.rst
 ${PYSITELIB}/autoapi/templates/python/property.rst
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
