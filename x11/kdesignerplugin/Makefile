@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.72 2024/11/01 00:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/11/01 10:42:04 wiz Exp $
 
 DISTNAME=	kdesignerplugin-${KF5VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -15,8 +15,9 @@ TOOL_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge
 
+.include "../../devel/kconfig/buildlink3.mk"
+.include "../../devel/kcoreaddons/buildlink3.mk"
 .include "../../graphics/kplotting/buildlink3.mk"
-.include "../../www/kdewebkit/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
