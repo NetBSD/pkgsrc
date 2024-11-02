@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/25 01:58:27 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/11/02 21:53:16 mef Exp $
 
-BLAKE2s (R/estimability_1.5.tar.gz) = 8a3aa2f86e6a98e2b93caae70a0790dcb34bdbea7ad5d9f80cc3e5db2b8a1ae0
-SHA512 (R/estimability_1.5.tar.gz) = f1448178dc789fae50ed1ec8e30f226de82d599a8739eb1f1ce261e794d345741eb5fa163fe22087fe875c41f6f3764373a300e9203fea5d0748ba800936fde5
-Size (R/estimability_1.5.tar.gz) = 15781 bytes
+BLAKE2s (R/estimability_1.5.1.tar.gz) = f7df08e29d573794ca19553ad02cee329e707236470529dd284654497c4c34d3
+SHA512 (R/estimability_1.5.1.tar.gz) = 7e7e9dde609b69c2a951d625b5a6dbb6462c9367537236fbf66c650ebb3315d0fd0fcc3986fa1a9ab28f9c833aa4ac111e8e2d6df33d58080c52253f11798e08
+Size (R/estimability_1.5.1.tar.gz) = 15968 bytes
