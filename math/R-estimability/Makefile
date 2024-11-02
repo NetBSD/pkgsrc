@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/02/25 01:58:27 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/02 21:53:16 mef Exp $
 
 R_PKGNAME=	estimability
-R_PKGVER=	1.5
+R_PKGVER=	1.5.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tools for assessing estimability of linear predictions
