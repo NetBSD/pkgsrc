@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/11/01 12:52:18 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/02 20:52:04 js Exp $
 
-DISTNAME=	objfw-1.1.7
-PKGREVISION=	2
+DISTNAME=	objfw-1.2
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -31,11 +30,17 @@ PLIST_SRC+=	PLIST.runtime
 
 .if ${OPSYS} == "NetBSD"
 PLIST_SRC+=	PLIST.ddp
+PLIST_SRC+=	PLIST.sctp
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SRC+=	PLIST.sctp
 .endif
 
 .if ${OPSYS} == "Linux"
 PLIST_SRC+=	PLIST.ddp
 PLIST_SRC+=	PLIST.ipx
+PLIST_SRC+=	PLIST.sctp
 .endif
 
 do-test:
