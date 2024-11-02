@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/02 02:07:46 mef Exp $
+
+BLAKE2s (R/CompQuadForm_1.4.3.tar.gz) = f26c6ff4f94217926d7a49d7c5121ff09a9430148cce66b9905b688198ca8f40
+SHA512 (R/CompQuadForm_1.4.3.tar.gz) = b11e4bb0ff7091f86d129fbb19d8f36d229c8929eac87b88c4f7fd9b7276f83fd17948b5330e1384959b35c09d5bdcf591a28160f920af8b3732fb66afb09cca
+Size (R/CompQuadForm_1.4.3.tar.gz) = 16638 bytes
