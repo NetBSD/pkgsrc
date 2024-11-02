@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.35 2024/10/28 22:50:47 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.36 2024/11/02 02:49:34 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -130,8 +130,8 @@ CARGO_CRATE_DEPENDS+=	rustix-0.38.21
 CARGO_CRATE_DEPENDS+=	ryu-1.0.15
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
-CARGO_CRATE_DEPENDS+=	serde-1.0.210
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.210
+CARGO_CRATE_DEPENDS+=	serde-1.0.214
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.214
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.107
 CARGO_CRATE_DEPENDS+=	serde_norway-0.9.38
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.8
@@ -140,7 +140,7 @@ CARGO_CRATE_DEPENDS+=	similar-2.2.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.11
 CARGO_CRATE_DEPENDS+=	snapbox-0.6.17
 CARGO_CRATE_DEPENDS+=	snapbox-macros-0.3.10
-CARGO_CRATE_DEPENDS+=	syn-2.0.65
+CARGO_CRATE_DEPENDS+=	syn-2.0.85
 CARGO_CRATE_DEPENDS+=	tempfile-3.8.0
 CARGO_CRATE_DEPENDS+=	terminal_size-0.3.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.48
