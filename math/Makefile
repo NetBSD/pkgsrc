@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.609 2024/10/26 13:19:08 mef Exp $
+# $NetBSD: Makefile,v 1.610 2024/11/02 02:10:13 mef Exp $
 
 COMMENT=	Mathematics
 
 SUBDIR+=	QXlsx
 SUBDIR+=	R
 SUBDIR+=	R-CGIwithR
+SUBDIR+=	R-CompQuadForm
 SUBDIR+=	R-DAAG
 SUBDIR+=	R-DBI
 SUBDIR+=	R-DEoptimR
