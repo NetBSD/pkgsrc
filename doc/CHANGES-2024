@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6684 2024/11/02 00:34:29 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6685 2024/11/02 02:10:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10135,3 +10135,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-compositions to 2.0.8 [mef 2024-11-01]
 	Updated math/R-e1071 to 1.7.16 [mef 2024-11-02]
 	Updated math/R-energy to 1.7.12 [mef 2024-11-02]
+	Added math/R-CompQuadForm version 1.4.3 [mef 2024-11-02]
