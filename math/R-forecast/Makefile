@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/01/26 11:20:48 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/02 22:00:23 mef Exp $
 
 R_PKGNAME=	forecast
-R_PKGVER=	8.21.1
+R_PKGVER=	8.23.0
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Forecasting functions for time series and linear models
