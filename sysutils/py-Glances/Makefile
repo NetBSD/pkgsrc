@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/10/30 04:05:18 fox Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/02 02:47:21 fox Exp $
 
-DISTNAME=	glances-4.2.0
+DISTNAME=	glances-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://nicolargo.github.io/glances/
 COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
@@ -25,7 +24,7 @@ WHEEL_NAME=	Glances-${PKGVERSION_NOREV}
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Set correct prefix in setup.py
-SUBST_FILES.prefix=	setup.py
+SUBST_FILES.prefix=	pyproject.toml
 SUBST_SED.prefix=	-e 's,share/man,${PKGMANDIR},'
 
 post-extract:
