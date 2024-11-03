@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6717 2024/11/03 19:35:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6718 2024/11/03 20:02:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10177,3 +10177,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-elastic-transport to 8.15.1 [adam 2024-11-03]
 	Updated databases/py-elasticsearch to 8.15.1 [adam 2024-11-03]
 	Updated devel/py-test-benchmark to 5.1.0 [adam 2024-11-03]
+	Updated textproc/py-pyaml to 24.9.0 [adam 2024-11-03]
+	Updated security/py-truststore to 0.10.0 [adam 2024-11-03]
+	Updated math/py-simpleeval to 1.0.3 [adam 2024-11-03]
