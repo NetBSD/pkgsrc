@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/05 22:43:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/03 07:56:29 adam Exp $
 
-DISTNAME=	pytest-fixture-config-1.7.0
+DISTNAME=	pytest-fixture-config-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-fixture-config/}
 
@@ -16,8 +15,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

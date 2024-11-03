@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2024/08/10 06:24:24 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/11/03 07:56:29 adam Exp $
 
-BLAKE2s (pytest-fixture-config-1.7.0.tar.gz) = f1e7c0fff170086a7222a3bdf7441a941be2757864aa0943364d6a4d648d5ecf
-SHA512 (pytest-fixture-config-1.7.0.tar.gz) = c861bbbb91efff338255734ddb4a8b615880c32a12c981160e9e7575d38adff8c5febad46bb9b4208634e39d4cfa73dec342265ccc1951168c1b12fd334cd746
-Size (pytest-fixture-config-1.7.0.tar.gz) = 9884 bytes
+BLAKE2s (pytest-fixture-config-1.8.0.tar.gz) = c342bcff9ce83ba7d26fd53021131bab376ada7ffe2dd9363345c2d847f8d6ba
+SHA512 (pytest-fixture-config-1.8.0.tar.gz) = 26c1203b206898f57b0027f4afc54fd9c95fb2effe15c69cdaebd28a40f0bb3214b04393550d1c7fd9e85f7b32671e8134d32b5a20856edcce3225828b77cfff
+Size (pytest-fixture-config-1.8.0.tar.gz) = 9975 bytes
 SHA1 (patch-common_setup.py) = 32f5e35d4e7cc5dc95bb175ccbc2db6e48e9212c
