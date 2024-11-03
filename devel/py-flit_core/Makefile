@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/10/25 21:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/03 07:50:30 adam Exp $
 
-DISTNAME=	flit_core-3.9.0
+DISTNAME=	flit_core-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flit-core/}
 
@@ -15,9 +14,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PY_PATCHPLIST=			yes
+PY_PATCHPLIST=	yes
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m flit_core.wheel
@@ -27,7 +24,7 @@ do-install:
 	find ${DESTDIR}${PREFIX}/${PYSITELIB} -name *.py | ${PYTHONBIN} -m py_compile -
 
 do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} flit_core/tests
+	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests_core
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
