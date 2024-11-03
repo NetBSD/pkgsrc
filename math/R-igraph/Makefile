@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2024/11/01 12:53:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/03 12:40:56 mef Exp $
 
 R_PKGNAME=	igraph
-R_PKGVER=	1.6.0
+R_PKGVER=	2.1.1
 CATEGORIES+=	graphics
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Network analysis and visualization
-PKGREVISION=	3
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli
@@ -14,9 +13,10 @@ DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
 DEPENDS+=	R-pkgconfig>=2.0.0:../../devel/R-pkgconfig
 DEPENDS+=	R-rlang-[0-9]*:../../devel/R-rlang
+DEPENDS+=	R-vctrs-[0-9]*:../../math/R-vctrs
 
 # Packages suggested but not available:
-#  'ape', 'decor', 'graph', 'igraphdata', 'vdiffr'
+#   'ape', 'decor', 'igraphdata', 'vdiffr'
 
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rgl-[0-9]*:../../graphics/R-rgl
