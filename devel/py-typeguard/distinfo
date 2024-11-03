@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/10/30 08:52:35 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/11/03 19:07:15 adam Exp $
 
-BLAKE2s (typeguard-4.4.0.tar.gz) = 82b3b7542e1315e8ec3bada74bcf27ec2be37154b4a824a4a618fefbbfec9f51
-SHA512 (typeguard-4.4.0.tar.gz) = 7c15cc724b8e4b0a5b777a14727a45cb0c039be18ade1ba6d8b00cfaaa3c2c7fc0c98320a53e172d07ad069f10b995384894e262a5bd14c00d6a04a7595e26aa
-Size (typeguard-4.4.0.tar.gz) = 74399 bytes
+BLAKE2s (typeguard-4.4.1.tar.gz) = 943a118a5d8fc9d31f36f6d20a2f8589ca6598cf9f692a3e2efffe079a771727
+SHA512 (typeguard-4.4.1.tar.gz) = af862371b22237cc39efad4840bb0bbd632116bee6e095531426dbaff606b6c1b2b58c82ddc083f816c340b4151421ff911ffd689dc3dc2fb7a031c067182aba
+Size (typeguard-4.4.1.tar.gz) = 74959 bytes
