@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/01/14 05:17:27 mef Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/03 01:43:03 mef Exp $
 
 R_PKGNAME=	geoR
-R_PKGVER=	1.9-3
+R_PKGVER=	1.9-4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Analysis of geostatistical data
