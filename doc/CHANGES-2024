@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6716 2024/11/03 19:20:14 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6717 2024/11/03 19:35:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10174,3 +10174,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-typeguard to 4.4.1 [adam 2024-11-03]
 	Updated net/py-zeroconf to 0.136.0 [adam 2024-11-03]
 	Updated textproc/py-orjson to 3.10.11 [adam 2024-11-03]
+	Updated databases/py-elastic-transport to 8.15.1 [adam 2024-11-03]
+	Updated databases/py-elasticsearch to 8.15.1 [adam 2024-11-03]
+	Updated devel/py-test-benchmark to 5.1.0 [adam 2024-11-03]
