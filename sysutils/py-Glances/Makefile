@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/11/02 02:47:21 fox Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/03 08:03:29 wiz Exp $
 
 DISTNAME=	glances-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://nicolargo.github.io/glances/
 COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
@@ -18,7 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 WHEEL_NAME=	Glances-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		prefix
