@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.50 2024/10/29 21:04:20 pin Exp $
+$NetBSD: distinfo,v 1.51 2024/11/03 16:34:15 pin Exp $
 
-BLAKE2s (Macchina-CLI-ansi-to-tui-950d68067ed8c7f74469eb2fd996e04e1b931481.tar.gz) = 791b07b8bb5aa51ce8000233e8b6c6bd2501b48416bf9d4e24a4cd08678e8f8f
-SHA512 (Macchina-CLI-ansi-to-tui-950d68067ed8c7f74469eb2fd996e04e1b931481.tar.gz) = 42d499dd35ca3ca36af91cf109d52f685edaa00a880fc9ae97b407d8cfad2826d9669aadc2714164996494a8ebb540457a6dabe0ef146b619bd5a32914d11a6e
-Size (Macchina-CLI-ansi-to-tui-950d68067ed8c7f74469eb2fd996e04e1b931481.tar.gz) = 34126 bytes
-BLAKE2s (Macchina-CLI-color-to-tui-9a1b684d92cc64994889e100575e38316a68670b.tar.gz) = aefb56f52d488bb45a4cdfe160156686fcaa5fb903ecb162791639ff390b78e4
-SHA512 (Macchina-CLI-color-to-tui-9a1b684d92cc64994889e100575e38316a68670b.tar.gz) = 54490d5b3113c53300a8f40890c47fecf554b5fd60d2f07facd76a8e99fb4debcfa4d24b291b72e6d76b42b0fae05fa9ae042ef976647241d808626e7c944228
-Size (Macchina-CLI-color-to-tui-9a1b684d92cc64994889e100575e38316a68670b.tar.gz) = 3173 bytes
 BLAKE2s (ahash-0.8.11.crate) = b565d757eebd61e61c4bc77b956fab61c32f9c87787bda573646cff2dac812fe
 SHA512 (ahash-0.8.11.crate) = 47d211b2422de0b381dfe32229faa346406eb7a22dff867dc04c22389609a8671ce3218e662000c49891a06c259d82e0ff4413740f007729d80e097a6c3f0d9d
 Size (ahash-0.8.11.crate) = 43607 bytes
@@ -21,6 +15,9 @@ Size (android-tzdata-0.1.1.crate) = 7674 bytes
 BLAKE2s (android_system_properties-0.1.5.crate) = e405a7701baf9817ca6e946b78ab2ae83f4667112c19c5214606cd863ca5c765
 SHA512 (android_system_properties-0.1.5.crate) = b09f51339f9772c0e2e4241b36cf51573c6b96b19ffc1fbbc94b1c1d1d2fdfe8eac3134af54174a675ab05d18ef4f6bcb2c7fcc20114bbeef6e17e3692202191
 Size (android_system_properties-0.1.5.crate) = 5243 bytes
+BLAKE2s (ansi-to-tui-7.0.0.crate) = fe0661964bea27982d821e2df7ae162013fe5aecc5ba9840e7c65bb4d7a8dc94
+SHA512 (ansi-to-tui-7.0.0.crate) = a0ce51f79b12e9c25b613baccdb72c5180779f6e6d93c33c02b984b14362a5e72ba9523e31c1ee828ad741c316b981587286a29e5102fc32ac0d33a387c29eb8
+Size (ansi-to-tui-7.0.0.crate) = 27300 bytes
 BLAKE2s (anstream-0.6.15.crate) = 7c18a227eada44b9790c1377497268aef7354c3d7e6be2468b5e9d017f951f33
 SHA512 (anstream-0.6.15.crate) = 1cb01a0293b4c9bcc010909707e71c464416d3ec6fc9789060b7aa9fe4cc04424fefa8013cc8765ccdae6dfd9a1c50a11f7b30b39a32c4aeaf525f28167ddb92
 Size (anstream-0.6.15.crate) = 29231 bytes
@@ -294,9 +291,9 @@ Size (log-0.4.22.crate) = 44027 bytes
 BLAKE2s (lru-0.12.4.crate) = e6ebd99c91062df7fd2ac1e576ccec994d3c13bd81fecf8681492c880ee7b1ad
 SHA512 (lru-0.12.4.crate) = 1d5becbb538f90414d320fe14d0d6fa8bb14bdce69b2e1855b360287e3dfefabc1f62685190730d11a4ddb843c2180dca964ea4a79606950f087c404cc3798f8
 Size (lru-0.12.4.crate) = 16032 bytes
-BLAKE2s (macchina-6.3.1.tar.gz) = f7e3a1d966a5725044e968ce57626c8b81d7968f12a11ec97cb96860b41d8fad
-SHA512 (macchina-6.3.1.tar.gz) = 354d04f4415166c25c88fbb18f5279efedb325c9e8d6e9f9768503105ea847f78710e5edcaade24d962b46bd0aa6ef63402fac6c2e3b4adc930e267d9d8ebe51
-Size (macchina-6.3.1.tar.gz) = 68294 bytes
+BLAKE2s (macchina-6.4.0.tar.gz) = 0c0fa68eefaf7c45a35c7a68c39675de4c0021011d104c8be1a72d1e16156683
+SHA512 (macchina-6.4.0.tar.gz) = 07babab97a6909e899e0cb6d6e4cbe331cf9b500604707086dad4a451491e0b117ad5a595e882925fe588e9119165fc4c1bc174045308ee0c084f58ebd0fb159
+Size (macchina-6.4.0.tar.gz) = 68309 bytes
 BLAKE2s (mach2-0.4.2.crate) = 7fa4fc916d95b01985c713ed1827ad72b0db99842e483a7a7dbbfb512f608672
 SHA512 (mach2-0.4.2.crate) = 5338254f5b9833d41957715898ab4bc52585f99bc8f8fef3ebe526ea36d8a5cbd191aa07a218ebb6f71b7487418223e4279977294b4a6494aee8d01f34cf447b
 Size (mach2-0.4.2.crate) = 21889 bytes
