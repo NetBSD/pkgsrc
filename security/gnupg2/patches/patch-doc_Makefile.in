@@ -1,8 +1,10 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2024/10/29 15:25:58 ryoon Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2024/11/03 08:54:49 nia Exp $
 
 * Handle --enable-gpg-is-gpg2 case.
+* Disable installation of HTML man pages.
+  pkgsrc cannot handle normalizing the paths.
 
---- doc/Makefile.in.orig	2024-10-29 15:14:22.312728237 +0000
+--- doc/Makefile.in.orig	2024-10-29 12:52:23.000000000 +0000
 +++ doc/Makefile.in
 @@ -517,18 +517,21 @@ AM_MAKEINFOFLAGS = -I $(srcdir) --css-re
  YAT2M_OPTIONS = -I $(srcdir) \
@@ -28,3 +30,12 @@ $NetBSD: patch-doc_Makefile.in,v 1.1 2024/10/29 15:25:58 ryoon Exp $
                  gpg-agent.1.html dirmngr.8.html scdaemon.1.html \
                  watchgnupg.1.html gpgconf.1.html addgnupghome.8.html \
                  gpg-preset-passphrase.1.html \
+@@ -1127,7 +1130,7 @@ install-info-am: $(INFO_DEPS)
+ 	    install-info --info-dir="$(DESTDIR)$(infodir)" "$(DESTDIR)$(infodir)/$$relfile" || :;\
+ 	  done; \
+ 	else : ; fi
+-install-man: install-man1 install-man7 install-man8 install-manh
++install-man: install-man1 install-man7 install-man8
+ 
+ install-pdf: install-pdf-am
+ 
