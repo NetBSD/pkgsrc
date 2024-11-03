@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/10/29 15:25:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/11/03 08:54:48 nia Exp $
 ${PLIST.gnutls}bin/dirmngr
 ${PLIST.gnutls}bin/dirmngr-client
 bin/g13
@@ -49,7 +49,6 @@ man/man7/gnupg.7
 man/man8/addgnupghome.8
 man/man8/applygnupgdefaults.8
 man/man8/dirmngr.8
-man/manh/gnupg.7.html
 sbin/addgnupghome
 sbin/applygnupgdefaults
 sbin/g13-syshelp
