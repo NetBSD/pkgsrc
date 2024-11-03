@@ -1,10 +1,11 @@
-# $NetBSD: cargo-depends.mk,v 1.34 2024/10/29 21:04:20 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.35 2024/11/03 16:34:15 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
 CARGO_CRATE_DEPENDS+=	allocator-api2-0.2.18
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
+CARGO_CRATE_DEPENDS+=	ansi-to-tui-7.0.0
 CARGO_CRATE_DEPENDS+=	anstream-0.6.15
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
 CARGO_CRATE_DEPENDS+=	anstyle-parse-0.2.5
