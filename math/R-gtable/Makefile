@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/01/26 14:00:12 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/03 06:33:55 mef Exp $
 
 R_PKGNAME=	gtable
-R_PKGVER=	0.3.4
+R_PKGVER=	0.3.6
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Arrange 'Grobs' in tables
