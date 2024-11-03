@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6714 2024/11/03 16:36:18 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6715 2024/11/03 19:06:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10169,3 +10169,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/dua-cli to 2.29.4 [pin 2024-11-03]
 	Updated sysutils/macchina to 6.4.0 [pin 2024-11-03]
 	Updated net/ncgopher to 0.7.0 [pin 2024-11-03]
+	Updated audio/mpg123 to 1.32.9 [adam 2024-11-03]
+	Updated textproc/utf8-cpp to 4.0.6 [adam 2024-11-03]
