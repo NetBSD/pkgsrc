@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2024/09/04 17:45:59 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2024/11/03 08:07:03 wiz Exp $
 
 # Author requests that we package only "production" versions.  See
 # https://exiftool.org/history.html for NEWS content and which
 # versions are blessed.   Note that repology gets this wrong.
-DISTNAME=	Image-ExifTool-12.76
+DISTNAME=	Image-ExifTool-13.00
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
@@ -16,6 +16,8 @@ COMMENT=	Perl module and program to read EXIF information
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=	auto/Image/ExifTool/.packlist
+
+REPLACE_PERL+=	exiftool
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
