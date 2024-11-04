@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/10/10 19:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/04 17:32:40 wiz Exp $
 
-DISTNAME=	httpie-3.2.3
+DISTNAME=	httpie-3.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpie/}
@@ -44,8 +44,8 @@ post-install:
 
 # for tests
 ALLOW_NETWORK_ACCESS=1
-# test status as of 3.2.3
-# 19 failed, 1008 passed, 5 skipped, 4 xfailed, 166 warnings
+# as of 3.2.4
+# 8 failed, 1019 passed, 5 skipped, 4 xfailed, 159 warnings
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
