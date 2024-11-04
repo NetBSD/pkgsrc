@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/12/18 09:38:55 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/11/04 08:23:52 adam Exp $
 
-BLAKE2s (diff-match-patch-20230430.tar.gz) = 3e6630fe0008514039dfd267541546f4ce4fc8b1baed4a1b880aed9e7bdffcfa
-SHA512 (diff-match-patch-20230430.tar.gz) = a62d15327de659999e3381215249fb088a9e40368008b91201de3db3d02f22892bbf6d2ac40dc4ea4986d24470dd396eaf69583fabbe9078a5cb1f97bae94000
-Size (diff-match-patch-20230430.tar.gz) = 43324 bytes
+BLAKE2s (diff_match_patch-20241021.tar.gz) = 91cc0cabf7218b317c45529f9bd11eb5ff1ab50df364c8e7663095802415eea6
+SHA512 (diff_match_patch-20241021.tar.gz) = 23bdf81a159358f668e4adb1771780bef6cf14fc1bc90c76700d3339e35a2c00b61a72ef7cdabd0abc079c3aa8606ea91cef4d936c47b95b4fd94483c927daf5
+Size (diff_match_patch-20241021.tar.gz) = 39962 bytes
