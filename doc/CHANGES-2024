@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6729 2024/11/04 12:27:51 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6730 2024/11/04 12:30:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10197,3 +10197,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-dulwich to 0.22.4 [adam 2024-11-04]
 	Updated www/py-rcssmin to 1.1.3 [adam 2024-11-04]
 	Updated net/py-minio to 7.2.10 [adam 2024-11-04]
+	Updated devel/visualvm to 2.1.10 [abs 2024-11-04]
