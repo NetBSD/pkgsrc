@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2024/10/12 10:42:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2024/11/04 17:30:26 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -367,6 +367,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.products_v1be
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.promotions_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.quota_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reports_v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reviews_v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1beta.json
@@ -383,6 +384,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessnotifications.v
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessplaceactions.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessqanda.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/mybusinessverifications.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/netapp.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/netapp.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkconnectivity.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkconnectivity.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/networkmanagement.v1.json
@@ -401,6 +404,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/orgpolicy.v2.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/osconfig.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1beta.json
