@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6742 2024/11/04 18:14:32 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6743 2024/11/04 18:17:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10210,3 +10210,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pydantic-settings to 2.6.1 [wiz 2024-11-04]
 	Updated devel/py-ruff to 0.7.2 [wiz 2024-11-04]
 	Updated comms/py-textual to 0.85.2 [wiz 2024-11-04]
+	Updated sysutils/py-watchdog to 6.0.0 [wiz 2024-11-04]
