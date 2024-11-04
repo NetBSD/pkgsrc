@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/05/08 10:50:04 abs Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/04 12:29:19 abs Exp $
 
-DISTNAME=	visualvm_218
-PKGNAME=	visualvm-2.1.8
+DISTNAME=	visualvm_2110
+PKGNAME=	visualvm-2.1.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oracle/}
 GITHUB_RELEASE=	${PKGNAME:S:visualvm-::}
