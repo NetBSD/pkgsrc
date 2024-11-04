@@ -1,0 +1,15 @@
+$NetBSD: patch-sdl2-config.in,v 1.1 2024/11/04 21:31:46 nia Exp $
+
+Re-add the rpath in the --libs output...
+
+--- sdl2-config.in.orig	2024-11-04 21:22:35.533607872 +0000
++++ sdl2-config.in
+@@ -49,7 +49,7 @@ while test $# -gt 0; do
+       echo -I@includedir@/SDL2 @SDL_CFLAGS@
+       ;;
+ @ENABLE_SHARED_TRUE@    --libs)
+-@ENABLE_SHARED_TRUE@      echo -L@libdir@ @SDL_RLD_FLAGS@ @SDL_LIBS@
++@ENABLE_SHARED_TRUE@      echo -L@libdir@ @COMPILER_RPATH_FLAG@@libdir@ @SDL_RLD_FLAGS@ @SDL_LIBS@
+ @ENABLE_SHARED_TRUE@      ;;
+ @ENABLE_STATIC_TRUE@@ENABLE_SHARED_TRUE@    --static-libs)
+ @ENABLE_STATIC_TRUE@@ENABLE_SHARED_FALSE@    --libs|--static-libs)
