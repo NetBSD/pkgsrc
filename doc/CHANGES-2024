@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6723 2024/11/04 05:12:55 fox Exp $
+$NetBSD: CHANGES-2024,v 1.6724 2024/11/04 08:24:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10185,3 +10185,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/fzf to 0.56.0 [iquiw 2024-11-04]
 	Updated sysutils/pfetch to 1.6.0 [fox 2024-11-04]
 	Updated audio/fasttracker2 to 1.87 [fox 2024-11-04]
+	Updated devel/py-wat-inspector to 0.4.2 [adam 2024-11-04]
+	Updated textproc/py-diff-match-patch to 20241021 [adam 2024-11-04]
