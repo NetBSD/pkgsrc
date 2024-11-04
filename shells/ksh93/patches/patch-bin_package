@@ -1,21 +1,30 @@
-$NetBSD: patch-bin_package,v 1.1 2024/07/30 15:17:08 vins Exp $
+$NetBSD: patch-bin_package,v 1.2 2024/11/04 17:01:47 nia Exp $
 
 install target fixes, for pkgsrc compatibility.
 
---- bin/package.orig	2024-07-02 02:41:19.000000000 +0000
+--- bin/package.orig	2024-08-01 22:54:10.000000000 +0000
 +++ bin/package
-@@ -2666,8 +2666,8 @@ do_install() # dir [ command ... ]
+@@ -356,7 +356,7 @@ verbose=0
+ AUTHORIZE=
+ DEBUG=
+ 
+-unset FIGNORE BINDIR DLLDIR ETCDIR FUNDIR INCLUDEDIR LIBDIR LOCALEDIR MANDIR SHAREDIR 2>/dev/null || true
++unset FIGNORE BINDIR DLLDIR ETCDIR FUNDIR INCLUDEDIR LIBDIR LOCALEDIR SHAREDIR 2>/dev/null || true
+ 
+ while	:
+ do	case $# in
+@@ -2607,8 +2607,8 @@ do_install() # dir [ command ... ]
  	done
  	# set install directories
  	bindir=$dd/bin
 -	fundir=${dd:-/usr}/share/fun
 -	mandir=${dd:-/usr}/share/man
 +	fundir=${dd:-/usr}/libexec/ksh93
-+	mandir=${dd:-/usr}/man
++	mandir=${dd}/${MANDIR}
  	man1dir=$mandir/man1
  	man3dir=$mandir/man3
  	libdir=$dd/lib
-@@ -2686,9 +2686,10 @@ do_install() # dir [ command ... ]
+@@ -2627,9 +2627,10 @@ do_install() # dir [ command ... ]
  		fi
  		# install manual pages and autoloadable functions
  		case $f in
