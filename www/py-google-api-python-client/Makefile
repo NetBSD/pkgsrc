@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.94 2024/10/12 10:42:38 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2024/11/04 17:30:26 wiz Exp $
 
-DISTNAME=	google_api_python_client-2.149.0
+DISTNAME=	google_api_python_client-2.151.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_api_python_client/}
@@ -24,6 +24,7 @@ USE_LANGUAGES=	# none
 
 # as of 2.146.0
 # 2 failed, 310 passed, 9 skipped
+# as of 2.151.0, python dumps core with grpc in the backtrace
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
