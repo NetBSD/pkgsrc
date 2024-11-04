@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.236 2024/11/01 12:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2024/11/04 20:57:41 wiz Exp $
 
-DISTNAME=	digiKam-8.2.0
+DISTNAME=	digiKam-8.4.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	15
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
@@ -54,11 +53,13 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-# does not provide the library libakonadicontact that digikam 8.2.0 is looking for
+# does not provide the library libakonadicontact that digikam 8.4.0 is looking for
 #.include "../../misc/akonadi-contacts/buildlink3.mk"
 .include "../../time/kcalendarcore/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtwebengine/buildlink3.mk"
+# not recognized by configure step
+#.include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 # unpackaged: qtav - libXv is required by qtav
 .include "../../x11/libXv/buildlink3.mk"
