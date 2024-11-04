@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.101 2024/10/22 09:00:10 wiz Exp $
+$NetBSD: distinfo,v 1.102 2024/11/04 10:10:57 jperkin Exp $
 
 BLAKE2s (inkscape-1.4.tar.xz) = 4ff593a28645a46cf060fbcbe6c1275dd1ff331220ef99634588e46471deffd2
 SHA512 (inkscape-1.4.tar.xz) = 3b81306b81416597073e7eda2a103112cee63493bcf96fa737bb1edfbd682ebb329e415bbbbfda877aef2a78dc376460040ebc5c0cc2c90c0fe60db5d7d12368
@@ -7,3 +7,6 @@ SHA1 (patch-CMakeScripts_DefineDependsandFlags.cmake) = 6638a97615ca37bcdc20463b
 SHA1 (patch-src_extension_implementation_script.cpp) = da46549f688da5c9c0ecbeaeac7962e4f261cae4
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 62c3782eeed40d2dadc71aeee4a38af1288534b5
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = 9a8c7daff94c368249ecc53fe7571b2446e8b1e8
+SHA1 (patch-src_path_splinefit_splinefit.c) = 6c4482891567215a9b2cb5b2a4fb63ca54b24f9f
+SHA1 (patch-src_path_splinefit_splinefont.c) = 43f67ea3c25d64d323899718d6adf26225f24da0
+SHA1 (patch-src_path_splinefit_splinefont.h) = 170bec433cfbf98f54717e09433f6def5a7a9afe
