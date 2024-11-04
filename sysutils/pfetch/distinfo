@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/10/06 11:24:36 fox Exp $
+$NetBSD: distinfo,v 1.12 2024/11/04 05:05:27 fox Exp $
 
-BLAKE2s (pfetch-1.5.0.tar.gz) = 2b29a2f6340f6303a9ef96add6e29c1cf356a308783eaacc5399ccfc0d6d67cb
-SHA512 (pfetch-1.5.0.tar.gz) = 4095c634a04380309ce9951f867b86f3987c86e49914f1d5b559ae57b6a7b89e1870332a641420c21241b329f2d29385fccc23ba29c44bb2ff248e82df46612c
-Size (pfetch-1.5.0.tar.gz) = 24948 bytes
+BLAKE2s (pfetch-1.6.0.tar.gz) = d7cd70b47ef5df258e15ae29d903e0d700c0302f2eb8d0d16f18fdca9b69807e
+SHA512 (pfetch-1.6.0.tar.gz) = 6b9b925f64367d94598372c3601ae807b9ded0f530983d6a72839f0a9fc510f13ea64ef8be7b71011eb28eeaffd004e1345ed21c4f641aef696438e4aa438b49
+Size (pfetch-1.6.0.tar.gz) = 25773 bytes
