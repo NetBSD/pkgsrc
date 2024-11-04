@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2024/10/14 12:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.3 2024/11/04 17:21:29 wiz Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.15.0.mod) = bae8e9f9fe569acaf971147cd9b3eb66e6791ca883e04bf0eda13af408f6aff0
 SHA512 (cel.dev_expr_@v_v0.15.0.mod) = a62ecc37ee163eabfaf1a790ca6501dc55f33ac0eedf6c3b295bc99d8a99ada7f351c7ed102cfe9c1627a2d03587d784e92a9307bf07628b9fbe22c3c059815e
@@ -4671,12 +4671,12 @@ Size (github.com_stretchr_testify_@v_v1.9.0.zip) = 124686 bytes
 BLAKE2s (github.com_subosito_gotenv_@v_v1.4.1.mod) = 4fe9ef54aaecad1d49632823e05cbe25a50dd72418bbcd71c8d5f0bab427d1d6
 SHA512 (github.com_subosito_gotenv_@v_v1.4.1.mod) = 9796c8692c0543e79b6442dfecf354126de7405eb187d3f0b8156c8f7b0b2d5c7fc91362897259f0709132bc7fe5c7fbf8c83481e0038b5c2396d35a29a4f63e
 Size (github.com_subosito_gotenv_@v_v1.4.1.mod) = 234 bytes
-BLAKE2s (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.mod) = c8b72d150e5b0d1db898219db0b8977f40d2a187f7c21a830ec05d4a272369ba
-SHA512 (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.mod) = 68d11ddd79b97d83f3f3f95c26a3654d2f3a3183fedb5aa82e62fdc45e834dd48511138aa38942ebdb6dd3ed488c8eb569b35e0052d681733af4264234895928
-Size (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.mod) = 5386 bytes
-BLAKE2s (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.zip) = 30afadf116593b9853f191a5c9f733babd91cb28a4ca23d02fffed2e2e0e5045
-SHA512 (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.zip) = 1488cbeda541dcdb0ae0429dd99ee0bc20554b771a46448315d83c40c1fd20a4390a6445c1016fc67634c367e256cb57a19db2ac1dc871ee2fea9037529cd8c9
-Size (github.com_thanos-io_objstore_@v_v0.0.0-20240913165201-fd105025a2e5.zip) = 152826 bytes
+BLAKE2s (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.mod) = 3e265bcdaec322c1b89f5647abe6050e2e1b6d2049178560a0cf224034ac11f4
+SHA512 (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.mod) = 05ed1a8eb4c3d480a8aa567d1898e914830ac3388269e8219056adc81a07d889a7b00d4e4250d4d291992a53c0dfca49699ee0a9e5e1cdb60a1b7c4e1552db37
+Size (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.mod) = 5431 bytes
+BLAKE2s (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.zip) = 377df228e0477e8767599bd7e9b819e766f51c298f3093c010a6504d77d59cc5
+SHA512 (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.zip) = cb34de76294ec6c1f8c89ef637738f09f54c3f730a2a5213ed32ab797940cd28f306b60ba7d8725d735fc562d74814341e228c7d1939d1158290eaaf54f07b68
+Size (github.com_thanos-io_objstore_@v_v0.0.0-20241010161353-f90c89a0ef90.zip) = 156937 bytes
 BLAKE2s (github.com_tklauser_go-sysconf_@v_v0.3.12.mod) = 6f4768173b6dca1d106575fe631ca5c6ee4d69113036b50dee54c032fa1ddfd3
 SHA512 (github.com_tklauser_go-sysconf_@v_v0.3.12.mod) = 305cbf46fafe5d9ab396254ce2c647fed666f570dad8cb4e323f6c2a387fc0e2577040385f8a6629618fe7c214f2cdb192dbeed1b9bcdef0aa47e876559157e8
 Size (github.com_tklauser_go-sysconf_@v_v0.3.12.mod) = 122 bytes
@@ -7230,9 +7230,9 @@ Size (lukechampine.com_uint128_@v_v1.1.1.mod) = 41 bytes
 BLAKE2s (lukechampine.com_uint128_@v_v1.2.0.mod) = 913102630241efe53aef35246edbe8f9d5ea3df59a4b79d04776df0623141971
 SHA512 (lukechampine.com_uint128_@v_v1.2.0.mod) = 051b75886b77f3badbdc8f64587025acb59521821456f768943ff58db08f25965ac63a5b12574ca97361a53cf5612c9aef2417aaa4fa43738164ce17cb6dc15a
 Size (lukechampine.com_uint128_@v_v1.2.0.mod) = 41 bytes
-BLAKE2s (mimir-2.14.0.tar.gz) = 22dcfcbe251aba90606233cc3cd4f0befb4e610dbe810b8e9173eb52593b6d38
-SHA512 (mimir-2.14.0.tar.gz) = 2673ce48893ac520880d775d78b781775c37ae6928ef14c2245a01f8bdbb0adfad7f6b0eeee4e9318aca6c8ea39a025512834a5f2ea9db3a607407e1192f9124
-Size (mimir-2.14.0.tar.gz) = 29376121 bytes
+BLAKE2s (mimir-2.14.1.tar.gz) = ab3d23fc12ecd1897d32597d78532789e114250a53449f3526b5169bc2baddcd
+SHA512 (mimir-2.14.1.tar.gz) = 9d6d85b3ac98efb650970e1a1689c977a9a5cb6d7039fb434425e130a4b726ae56827c6575f5d4d3c6b60412d0a53553f8ee7028609b6c5415e0482f91784f4c
+Size (mimir-2.14.1.tar.gz) = 29376688 bytes
 BLAKE2s (modernc.org_cc_v3_@v_v3.36.0.mod) = d4d02c07b40ed22a6892f620276b7dd9814d614273dd2827d622e21cd98f9b33
 SHA512 (modernc.org_cc_v3_@v_v3.36.0.mod) = 21d61cd3c34c5253a7eace4a9fcaad1bdfefdb48168f33c247e44f2c706ee38dc275e707d1c28db772ed19dfede728bb82f9aeda57d5fda8c44b06f7da969331
 Size (modernc.org_cc_v3_@v_v3.36.0.mod) = 234 bytes
