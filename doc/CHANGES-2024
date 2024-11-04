@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6740 2024/11/04 18:03:55 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6741 2024/11/04 18:08:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10208,3 +10208,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-numpy to 2.1.3 [wiz 2024-11-04]
 	Updated textproc/py-pdf to 5.1.0 [wiz 2024-11-04]
 	Updated devel/py-pydantic-settings to 2.6.1 [wiz 2024-11-04]
+	Updated devel/py-ruff to 0.7.2 [wiz 2024-11-04]
