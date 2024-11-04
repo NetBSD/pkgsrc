@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/05/08 10:50:04 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/11/04 12:29:19 abs Exp $
 bin/visualvm
 lib/visualvm/LICENSE.txt
 lib/visualvm/THIRDPARTYLICENSE
@@ -83,9 +83,9 @@ lib/visualvm/platform/config/Modules/org-openide-loaders.xml
 lib/visualvm/platform/config/Modules/org-openide-nodes.xml
 lib/visualvm/platform/config/Modules/org-openide-text.xml
 lib/visualvm/platform/config/Modules/org-openide-windows.xml
-lib/visualvm/platform/core/asm-9.5.jar
-lib/visualvm/platform/core/asm-commons-9.5.jar
-lib/visualvm/platform/core/asm-tree-9.5.jar
+lib/visualvm/platform/core/asm-9.7.jar
+lib/visualvm/platform/core/asm-commons-9.7.jar
+lib/visualvm/platform/core/asm-tree-9.7.jar
 lib/visualvm/platform/core/core-base.jar
 lib/visualvm/platform/core/core.jar
 lib/visualvm/platform/core/org-netbeans-libs-asm.jar
@@ -100,19 +100,22 @@ lib/visualvm/platform/lib/org-openide-modules.jar
 lib/visualvm/platform/lib/org-openide-util-lookup.jar
 lib/visualvm/platform/lib/org-openide-util-ui.jar
 lib/visualvm/platform/lib/org-openide-util.jar
-lib/visualvm/platform/modules/ext/flatlaf-3.1.jar
-lib/visualvm/platform/modules/ext/jna-5.12.1.jar
-lib/visualvm/platform/modules/ext/jna-platform-5.12.1.jar
+lib/visualvm/platform/modules/ext/flatlaf-3.3.jar
+lib/visualvm/platform/modules/ext/jna-5.14.0.jar
+lib/visualvm/platform/modules/ext/jna-platform-5.14.0.jar
 lib/visualvm/platform/modules/ext/updater.jar
 lib/visualvm/platform/modules/lib/aarch64/jnidispatch-nb.dll
 lib/visualvm/platform/modules/lib/aarch64/libjnidispatch-nb.jnilib
 lib/visualvm/platform/modules/lib/aarch64/linux/libjnidispatch-nb.so
 lib/visualvm/platform/modules/lib/amd64/jnidispatch-nb.dll
 lib/visualvm/platform/modules/lib/amd64/linux/libjnidispatch-nb.so
+lib/visualvm/platform/modules/lib/flatlaf-windows-arm64.dll
 lib/visualvm/platform/modules/lib/flatlaf-windows-x86.dll
 lib/visualvm/platform/modules/lib/flatlaf-windows-x86_64.dll
 lib/visualvm/platform/modules/lib/i386/linux/libjnidispatch-nb.so
 lib/visualvm/platform/modules/lib/libflatlaf-linux-x86_64.so
+lib/visualvm/platform/modules/lib/libflatlaf-macos-arm64.dylib
+lib/visualvm/platform/modules/lib/libflatlaf-macos-x86_64.dylib
 lib/visualvm/platform/modules/lib/riscv64/linux/libjnidispatch-nb.so
 lib/visualvm/platform/modules/lib/x86/jnidispatch-nb.dll
 lib/visualvm/platform/modules/lib/x86_64/libjnidispatch-nb.jnilib
