@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/09/16 07:20:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2024/11/04 21:07:34 adam Exp $
 
 BUILDLINK_TREE+=	libheif
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.libheif?=	../../graphics/libheif
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
+.include "../../multimedia/openh264/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .endif	# LIBHEIF_BUILDLINK3_MK
 
