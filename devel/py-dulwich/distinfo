@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2024/10/21 05:23:40 adam Exp $
+$NetBSD: distinfo,v 1.59 2024/11/04 12:13:13 adam Exp $
 
 BLAKE2s (autocfg-1.4.0.crate) = ce6aae5b8fe5dadf0c6a182c5940551ded4070c0c0143412d8c8356037ce1dc0
 SHA512 (autocfg-1.4.0.crate) = 3b5e7c30bc73e105e4bfcab584c24fc4016db41fac9c356c6649fd841051704bbe8848e09546eb50d7c1f18ea8ce1cb72fbc268a620d5c609b3472114b5be73c
@@ -6,9 +6,9 @@ Size (autocfg-1.4.0.crate) = 17712 bytes
 BLAKE2s (cfg-if-1.0.0.crate) = fbb02f63b24cc224b045ff2aac3aefd0a77cf7b578df4d5f9da9517a59aaf9bb
 SHA512 (cfg-if-1.0.0.crate) = 0fb16a8882fd30e86b62c5143b1cb18ab564e84e75bd1f28fd12f24ffdc4a42e0d2e012a99abb606c12efe3c11061ff5bf8e24ab053e550ae083f7d90f6576ff
 Size (cfg-if-1.0.0.crate) = 7934 bytes
-BLAKE2s (dulwich-0.22.3.tar.gz) = 44a6053470a461aab6c4d8e98464d030c92c54ec53efedf02988f2f0c283332a
-SHA512 (dulwich-0.22.3.tar.gz) = 2cf9c0cff9d6c820c1003981258d5820fde41f75a1dc9c8d1adfc8e2143bd56e7b3753d392237de86962f4668f57e597ce8b2832f4ca89dbd2a1712616aad355
-Size (dulwich-0.22.3.tar.gz) = 447748 bytes
+BLAKE2s (dulwich-0.22.4.tar.gz) = 297ebe22cb4a5b9dcd78f6e5bf44617e89c25a56fc230b6a5eb698869d9c3a0c
+SHA512 (dulwich-0.22.4.tar.gz) = d84e5b74fc3691593b5d7e4add26956800d71656d60362bca56c12bd44fdcbbd319d6153c31805948322b94d5bce9986ac27f1bc4df26ce45c26fcddd3dfb5b5
+Size (dulwich-0.22.4.tar.gz) = 449939 bytes
 BLAKE2s (heck-0.5.0.crate) = 0bc71a5746c9d1e7c913d096fb68f1d422464744e18adc592540b291882f5660
 SHA512 (heck-0.5.0.crate) = f044fc9c3d22466629fd8f772ec0555350fd611c0cfadca51d99a3d2f10e155f77c1091916c8a95a6b9b499f366c2e99a5fbf45b010f988bfb9b2501bf9f6a76
 Size (heck-0.5.0.crate) = 11517 bytes
@@ -30,9 +30,9 @@ Size (once_cell-1.20.2.crate) = 33394 bytes
 BLAKE2s (portable-atomic-1.9.0.crate) = 2d37880b60443b81f58b3eee1d457b9eaa83843ab93575c20e5bb1dff27cd9de
 SHA512 (portable-atomic-1.9.0.crate) = 1431a4c092f6a0cb50bcc78488d603c8ba8f4ee697f77fdcfcce7002fcb371f52a321089422c76564fbf3277c48e30f889565747951c60360d95a6917bb6adeb
 Size (portable-atomic-1.9.0.crate) = 166365 bytes
-BLAKE2s (proc-macro2-1.0.87.crate) = 98b31363d581142a4edcccf0eb6d1a76fe4c49846c978c33e40c97ca306b8654
-SHA512 (proc-macro2-1.0.87.crate) = 32ce9c8b5bad55cfae537882c3fffc4d56824f6214ea97aede89ad460e3f66956b52af4a268496fc95c2c0eda0baeaaed4b12cd98df2efab24837e23b48b1f0e
-Size (proc-macro2-1.0.87.crate) = 49121 bytes
+BLAKE2s (proc-macro2-1.0.88.crate) = 225e25a14b162c6b3cff7e85b98bb778c791c0e91d48cc853ac841b7702bd3b9
+SHA512 (proc-macro2-1.0.88.crate) = 6aea3482742a2a59aacc3efa4a48f6cef0dbd7ca6aee6aadaadf9fa15ef353430a3a2ae21d15319c1464a48cc70f30e5f9f6d5da5597a380cdfb27d533388d37
+Size (proc-macro2-1.0.88.crate) = 49219 bytes
 BLAKE2s (pyo3-0.22.5.crate) = ab4e777558eebdf7470c650eac51ee378c52bc82ea0b7dae9e846cd1290d448d
 SHA512 (pyo3-0.22.5.crate) = 48b9ada19bb12c6e5f1d41982c3b607f206d88dc078517c45106b631e0ad973145b0b60af06e58013a5189ca8b50e1cfa326c6904bba5aadb791933272ffb277
 Size (pyo3-0.22.5.crate) = 546700 bytes
