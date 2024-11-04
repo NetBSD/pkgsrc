@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/10/14 17:12:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/11/04 10:12:29 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -258,6 +258,9 @@ ${PYSITELIB}/tox/tox_env/python/__init__.pyo
 ${PYSITELIB}/tox/tox_env/python/api.py
 ${PYSITELIB}/tox/tox_env/python/api.pyc
 ${PYSITELIB}/tox/tox_env/python/api.pyo
+${PYSITELIB}/tox/tox_env/python/dependency_groups.py
+${PYSITELIB}/tox/tox_env/python/dependency_groups.pyc
+${PYSITELIB}/tox/tox_env/python/dependency_groups.pyo
 ${PYSITELIB}/tox/tox_env/python/package.py
 ${PYSITELIB}/tox/tox_env/python/package.pyc
 ${PYSITELIB}/tox/tox_env/python/package.pyo
