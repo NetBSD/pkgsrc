@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6731 2024/11/04 17:05:43 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6732 2024/11/04 17:07:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10199,3 +10199,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-minio to 7.2.10 [adam 2024-11-04]
 	Updated devel/visualvm to 2.1.10 [abs 2024-11-04]
 	Updated audio/fluidsynth to 2.4.0 [wiz 2024-11-04]
+	Updated graphics/libheif to 1.19.1 [wiz 2024-11-04]
