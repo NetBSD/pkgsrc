@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2024/10/14 12:51:48 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.3 2024/11/04 17:21:30 wiz Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.15.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.1.mod
@@ -1557,8 +1557,8 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.4.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.9.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/subosito/gotenv/@v/v1.4.1.mod
-GO_MODULE_FILES+=	github.com/thanos-io/objstore/@v/v0.0.0-20240913165201-fd105025a2e5.mod
-GO_MODULE_FILES+=	github.com/thanos-io/objstore/@v/v0.0.0-20240913165201-fd105025a2e5.zip
+GO_MODULE_FILES+=	github.com/thanos-io/objstore/@v/v0.0.0-20241010161353-f90c89a0ef90.mod
+GO_MODULE_FILES+=	github.com/thanos-io/objstore/@v/v0.0.0-20241010161353-f90c89a0ef90.zip
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.12.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.12.zip
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.6.1.mod

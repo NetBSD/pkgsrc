@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 12:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/04 17:21:29 wiz Exp $
 
-DISTNAME=	mimir-2.14.0
+DISTNAME=	mimir-2.14.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grafana/}
 GITHUB_TAG=	${DISTNAME}
