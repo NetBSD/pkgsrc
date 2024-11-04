@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6722 2024/11/04 05:05:50 fox Exp $
+$NetBSD: CHANGES-2024,v 1.6723 2024/11/04 05:12:55 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10184,3 +10184,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-lme4 to 1.1.35.5 [mef 2024-11-04]
 	Updated sysutils/fzf to 0.56.0 [iquiw 2024-11-04]
 	Updated sysutils/pfetch to 1.6.0 [fox 2024-11-04]
+	Updated audio/fasttracker2 to 1.87 [fox 2024-11-04]
