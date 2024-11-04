@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/09/30 17:11:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2024/11/04 11:06:29 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -396,6 +396,9 @@ ${PYSITELIB}/yt_dlp/extractor/blogger.pyo
 ${PYSITELIB}/yt_dlp/extractor/bloomberg.py
 ${PYSITELIB}/yt_dlp/extractor/bloomberg.pyc
 ${PYSITELIB}/yt_dlp/extractor/bloomberg.pyo
+${PYSITELIB}/yt_dlp/extractor/bluesky.py
+${PYSITELIB}/yt_dlp/extractor/bluesky.pyc
+${PYSITELIB}/yt_dlp/extractor/bluesky.pyo
 ${PYSITELIB}/yt_dlp/extractor/bokecc.py
 ${PYSITELIB}/yt_dlp/extractor/bokecc.pyc
 ${PYSITELIB}/yt_dlp/extractor/bokecc.pyo
