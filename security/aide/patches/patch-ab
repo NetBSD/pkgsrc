@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2012/03/12 14:18:44 fhajny Exp $
+$NetBSD: patch-ab,v 1.6 2024/11/04 16:06:12 nia Exp $
 
 * YACC and LEX are passwd as full path.
 * static linking is not supported on MacOS X.  PR#39058.
+* let pkgsrc take care of hardening flags
 * FILE_OFFSET_BITS corrected
 
 --- configure.orig	2010-09-10 17:48:04.000000000 +0000
@@ -38,7 +39,24 @@ $NetBSD: patch-ab,v 1.5 2012/03/12 14:18:44 fhajny Exp $
      *)
  	## pic_flag='-fPIC'
  	;;
-@@ -6435,7 +6430,7 @@ ac_fn_c_check_func "$LINENO" "lstat64" "
+@@ -4694,16 +4689,6 @@ if test "$aide_static_choice" != "yes"; 
+   EXTRA_LDFLAGS=""
+   EXTRA_CFLAGS=""
+   if test x$CC = "xgcc"; then
+-    if ld_supports_flag -z,relro; then
+-      EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-z,relro"
+-    fi
+-    if ld_supports_flag -z,now; then
+-      EXTRA_LDFLAGS="$EXTRA_LDFLAGS -Wl,-z,now"
+-    fi
+-    if cc_supports_flag -fPIE -DPIE; then
+-      EXTRA_CFLAGS="$EXTRA_CFLAGS -fPIE -DPIE"
+-      EXTRA_LDFLAGS="$EXTRA_LDFLAGS -pie"
+-    fi
+         if cc_supports_flag -Wundef; then
+       EXTRA_CFLAGS="$EXTRA_CFLAGS -Wundef"
+     fi
+@@ -6435,7 +6420,7 @@ ac_fn_c_check_func "$LINENO" "lstat64" "
  if test "x$ac_cv_func_lstat64" = x""yes; then :
    ac_fn_c_check_func "$LINENO" "stat64" "ac_cv_func_stat64"
  if test "x$ac_cv_func_stat64" = x""yes; then :

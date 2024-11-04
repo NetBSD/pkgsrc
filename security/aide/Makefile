@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2020/05/09 18:29:24 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2024/11/04 16:06:12 nia Exp $
 #
 
 DISTNAME=	aide-0.15.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
