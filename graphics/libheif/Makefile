@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/11/04 17:07:34 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/04 21:07:34 adam Exp $
 
 DISTNAME=	libheif-1.19.1
 CATEGORIES=	graphics
@@ -25,6 +25,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../multimedia/dav1d/buildlink3.mk"
 .include "../../multimedia/libaom/buildlink3.mk"
 .include "../../multimedia/libde265/buildlink3.mk"
+.include "../../multimedia/openh264/buildlink3.mk"
 .include "../../multimedia/svt-av1/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
