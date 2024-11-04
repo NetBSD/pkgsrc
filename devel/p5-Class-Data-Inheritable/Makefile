@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/11/04 15:38:35 pgoyette Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/04 19:08:16 pgoyette Exp $
 
-EXTRACT_USING=	gtar	# avoid extended attributes in distfile
+EXTRACT_USING=	gtar	# XXX avoid extended attributes in distfile
 
 DISTNAME=	Class-Data-Inheritable-0.10
 PKGNAME=	p5-${DISTNAME}
