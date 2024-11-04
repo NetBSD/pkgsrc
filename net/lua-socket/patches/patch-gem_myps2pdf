@@ -1,0 +1,47 @@
+$NetBSD: patch-gem_myps2pdf,v 1.1 2024/11/04 15:54:00 nia Exp $
+
+Fix shell portability.
+
+--- gem/myps2pdf.orig	2024-11-04 15:52:59.132175237 +0000
++++ gem/myps2pdf
+@@ -39,7 +39,7 @@ case $# in
+ *) echo "$usage" 1>&2 ; exit 1 ;;
+ esac
+ 
+-if [ $best == 1 ]
++if [ $best = 1 ]
+ then
+ 	options="-dPDFSETTINGS=/prepress \
+ 	-r1200 \
+@@ -73,19 +73,19 @@ else
+ 	-dAutoFilterColorImages=true"
+ fi
+ 
+-if [ $rot == 1 ]
++if [ $rot = 1 ]
+ then
+ 	options="$options -dAutoRotatePages=/PageByPage"
+ fi
+ 
+-if [ $eps == 1 ]
++if [ $eps = 1 ]
+ then
+ 	options="$options -dEPSCrop"
+ fi
+ 
+ set -x
+ 
+-if [ $a4 == 1 ]
++if [ $a4 = 1 ]
+ then
+ 	# Resize from A4 to letter size
+ 	psresize -Pa4 -pletter "$ifilename" myps2pdf.temp.ps
+@@ -104,7 +104,7 @@ gs -q -dSAFER -dNOPAUSE -dBATCH  \
+ 	-dPreserveEPSInfo=true \
+ 	-c .setpdfwrite -f "$ifilename"
+ 
+-if [ $do_opt == 1 ]
++if [ $do_opt = 1 ]
+ then
+ 	pdfopt myps2pdf.temp.pdf $ofilename
+ else
