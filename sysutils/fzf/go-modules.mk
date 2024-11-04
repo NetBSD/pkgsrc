@@ -1,7 +1,7 @@
-# $NetBSD: go-modules.mk,v 1.17 2024/08/31 07:06:10 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.18 2024/11/04 01:59:42 iquiw Exp $
 
-GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.8.mod
-GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.8.zip
+GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.9.mod
+GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.9.zip
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.7.4.mod
@@ -36,15 +36,15 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210615035016-665e8c7367d1.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220520151302-bc2c85ada10a.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220722155257-8c9f86f7a55f.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.17.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.24.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.24.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.26.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.26.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.5.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20201126162022-7de9c90e9dd1.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.0.0-20210927222741-03fcf44c2211.mod
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.17.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.23.0.mod
-GO_MODULE_FILES+=	golang.org/x/term/@v/v0.23.0.zip
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.25.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.25.0.zip
 GO_MODULE_FILES+=	golang.org/x/term/@v/v0.5.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.zip
