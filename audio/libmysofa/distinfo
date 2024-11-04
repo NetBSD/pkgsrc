@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.13 2024/10/22 07:46:11 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/11/04 09:18:31 jperkin Exp $
 
 BLAKE2s (libmysofa-1.3.3.tar.gz) = ae75a56db485b4880819db5fdc2f2e08ec805a0067e3c277f3627b74bac2e5ee
 SHA512 (libmysofa-1.3.3.tar.gz) = 83800ce29ae5c98f302ca574fd9a28de4ec0f85f5bc217c5497b690f12abdf72809e60e36412d6457181303ba7d082cb050050cd1164e7cfc9446e8e0783dda0
 Size (libmysofa-1.3.3.tar.gz) = 208753723 bytes
+SHA1 (patch-src_hrtf_portable__endian.h) = cc187f8c3e55ab027984e048d6433773099abdc9
