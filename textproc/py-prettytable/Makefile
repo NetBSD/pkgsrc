@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/13 07:15:31 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/04 19:07:57 adam Exp $
 
-DISTNAME=	prettytable-3.11.0
+DISTNAME=	prettytable-3.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prettytable/}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixtures-[0-9]*:../../devel/py-test-lazy-fixtures
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
