@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/01/27 10:22:20 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/04 00:37:07 mef Exp $
 
 R_PKGNAME=	lme4
-R_PKGVER=	1.1-35.1
+R_PKGVER=	1.1-35.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linear mixed-effects models using Eigen and S4
