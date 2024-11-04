@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/08/22 17:49:20 vins Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/04 17:01:47 nia Exp $
 
 DISTNAME=	ksh93-1.0.10
 CATEGORIES=	shells
@@ -22,6 +22,8 @@ MKPIE_SUPPORTED=	no
 
 MAKE_FLAGS+=		SHELL=${SH:Q} CC=${CC:Q} \
 			CCFLAGS=${CFLAGS:M*:Q}
+
+INSTALL_ENV+=		MANDIR=${PKGMANDIR}
 
 PKG_SHELL=	bin/ksh93
 
