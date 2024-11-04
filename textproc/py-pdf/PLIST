@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/07/17 03:50:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/11/04 17:58:39 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,9 @@ ${PYSITELIB}/pypdf/_cmap.pyo
 ${PYSITELIB}/pypdf/_codecs/__init__.py
 ${PYSITELIB}/pypdf/_codecs/__init__.pyc
 ${PYSITELIB}/pypdf/_codecs/__init__.pyo
+${PYSITELIB}/pypdf/_codecs/_codecs.py
+${PYSITELIB}/pypdf/_codecs/_codecs.pyc
+${PYSITELIB}/pypdf/_codecs/_codecs.pyo
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.py
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyc
 ${PYSITELIB}/pypdf/_codecs/adobe_glyphs.pyo
