@@ -1,9 +1,9 @@
-$NetBSD: patch-bundle__static.cmake,v 1.1 2023/05/11 06:47:11 adam Exp $
+$NetBSD: patch-cmake_bundle__static.cmake,v 1.1 2024/11/04 19:05:18 adam Exp $
 
 Use proper libtool on Darwin.
 
---- bundle_static.cmake.orig	2023-05-10 19:31:11.000000000 +0000
-+++ bundle_static.cmake
+--- cmake/bundle_static.cmake.orig	2023-05-10 19:31:11.000000000 +0000
++++ cmake/bundle_static.cmake
 @@ -44,14 +44,12 @@ function(bundle_static_library tgt_name 
      ${CMAKE_BINARY_DIR}/${CMAKE_STATIC_LIBRARY_PREFIX}${library_name}${CMAKE_STATIC_LIBRARY_SUFFIX})
    

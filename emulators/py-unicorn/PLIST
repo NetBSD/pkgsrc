@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/11 06:47:11 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2024/11/04 19:05:18 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/unicorn/__init__.py
 ${PYSITELIB}/unicorn/__init__.pyc
 ${PYSITELIB}/unicorn/__init__.pyo
@@ -22,6 +21,7 @@ ${PYSITELIB}/unicorn/mips_const.pyo
 ${PYSITELIB}/unicorn/ppc_const.py
 ${PYSITELIB}/unicorn/ppc_const.pyc
 ${PYSITELIB}/unicorn/ppc_const.pyo
+${PYSITELIB}/unicorn/py.typed
 ${PYSITELIB}/unicorn/riscv_const.py
 ${PYSITELIB}/unicorn/riscv_const.pyc
 ${PYSITELIB}/unicorn/riscv_const.pyo
@@ -40,6 +40,30 @@ ${PYSITELIB}/unicorn/unicorn.pyo
 ${PYSITELIB}/unicorn/unicorn_const.py
 ${PYSITELIB}/unicorn/unicorn_const.pyc
 ${PYSITELIB}/unicorn/unicorn_const.pyo
+${PYSITELIB}/unicorn/unicorn_py2.py
+${PYSITELIB}/unicorn/unicorn_py2.pyc
+${PYSITELIB}/unicorn/unicorn_py2.pyo
+${PYSITELIB}/unicorn/unicorn_py3/__init__.py
+${PYSITELIB}/unicorn/unicorn_py3/__init__.pyc
+${PYSITELIB}/unicorn/unicorn_py3/__init__.pyo
+${PYSITELIB}/unicorn/unicorn_py3/arch/__init__.py
+${PYSITELIB}/unicorn/unicorn_py3/arch/__init__.pyc
+${PYSITELIB}/unicorn/unicorn_py3/arch/__init__.pyo
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm.py
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm.pyc
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm.pyo
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm64.py
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm64.pyc
+${PYSITELIB}/unicorn/unicorn_py3/arch/arm64.pyo
+${PYSITELIB}/unicorn/unicorn_py3/arch/intel.py
+${PYSITELIB}/unicorn/unicorn_py3/arch/intel.pyc
+${PYSITELIB}/unicorn/unicorn_py3/arch/intel.pyo
+${PYSITELIB}/unicorn/unicorn_py3/arch/types.py
+${PYSITELIB}/unicorn/unicorn_py3/arch/types.pyc
+${PYSITELIB}/unicorn/unicorn_py3/arch/types.pyo
+${PYSITELIB}/unicorn/unicorn_py3/unicorn.py
+${PYSITELIB}/unicorn/unicorn_py3/unicorn.pyc
+${PYSITELIB}/unicorn/unicorn_py3/unicorn.pyo
 ${PYSITELIB}/unicorn/x86_const.py
 ${PYSITELIB}/unicorn/x86_const.pyc
 ${PYSITELIB}/unicorn/x86_const.pyo
