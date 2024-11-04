@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.33 2024/07/15 20:13:42 adam Exp $
+$NetBSD: distinfo,v 1.34 2024/11/04 21:22:23 adam Exp $
 
-BLAKE2s (OpenImageIO-2.5.13.1.tar.gz) = ab4dd000ba90aa58f5576a84e7dbc95c0bf5651030c84d4d47d2e8da15183721
-SHA512 (OpenImageIO-2.5.13.1.tar.gz) = 3c9eb9a361464e73fae518b704438bbf409c846031f05026d8b9ace91431819ac80674130ccd2300deb9756ae26e150bf5c0a866be3f3fb65bdfba0ba60395ab
-Size (OpenImageIO-2.5.13.1.tar.gz) = 52538869 bytes
+BLAKE2s (OpenImageIO-2.5.17.0.tar.gz) = 5e381a7ef26c5cba138c75ad1eb06e24a182a0e86b63a88b95ff2d0bcd2eec4f
+SHA512 (OpenImageIO-2.5.17.0.tar.gz) = a979d84ce985d80d42058ea9cdc631096ddcd712643eef497425e63f5d747cad0c5acb9a87af47be529f850c902f4bcaf33857fb3adec53e41a3d950d49a59d2
+Size (OpenImageIO-2.5.17.0.tar.gz) = 52548216 bytes
 SHA1 (patch-src_cmake_compiler.cmake) = d4abc010c5016cfcffab51191b5ea37edbfdd9cc
+SHA1 (patch-src_cmake_externalpackages.cmake) = 710f1f66e55fbee5f7e330064db8535e7a1110fe
 SHA1 (patch-src_include_OpenImageIO_strutil.h) = 90efe95bf763881478aea851cce0ea67a9de9c1a
 SHA1 (patch-src_libutil_strutil.cpp) = fd63f4648cd9750d7b9e496c183886d348c2cff5
