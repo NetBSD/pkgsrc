@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6758 2024/11/05 17:15:26 nia Exp $
+$NetBSD: CHANGES-2024,v 1.6759 2024/11/05 17:23:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10236,3 +10236,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Added textproc/py-sphinxygen version 1.0.4 [adam 2024-11-05]
 	Added devel/zix version 0.4.2 [adam 2024-11-05]
 	Updated www/palemoon to 33.4.1 [nia 2024-11-05]
+	Updated textproc/serd to 0.32.2 [adam 2024-11-05]
+	Updated textproc/sord to 0.16.16 [adam 2024-11-05]
