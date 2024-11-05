@@ -1,0 +1,5 @@
+uModbus is a pure Python implementation of the Modbus protocol as
+described in the MODBUS Application Protocol Specification V1.1b3.
+uModbus implements both a Modbus client (both TCP and RTU) and a
+Modbus server (both TCP and RTU). The "u" or "mu" in the name comes
+from the the SI prefix "micro-". uModbus is very small and lightweight.
