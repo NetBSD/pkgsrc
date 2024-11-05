@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2024/11/01 12:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2024/11/05 19:46:48 markd Exp $
 
 DISTNAME=	umbrello-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 HOMEPAGE=	https://kde.org/applications/development/umbrello/
@@ -20,7 +20,6 @@ USE_TOOLS+=	msgmerge
 .include "../../devel/ktexteditor/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kdelibs4support/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
