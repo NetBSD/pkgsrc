@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2023/08/14 05:25:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/05 17:20:04 adam Exp $
 
-DISTNAME=	sord-0.16.10
-PKGREVISION=	1
+DISTNAME=	sord-0.16.16
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.drobilla.net/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://drobilla.net/software/sord/
@@ -14,13 +13,14 @@ LICENSE=	isc
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gsed pkg-config
 
-PYTHON_FOR_BUILD_ONLY=	tool
-PKGCONFIG_OVERRIDE+=	sord.pc.in
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/sord-0.pc
 
 .include "options.mk"
-.include "../../devel/waf/waf.mk"
-.include "../../devel/pcre/buildlink3.mk"
+
+.include "../../devel/meson/build.mk"
+.include "../../devel/pcre2/buildlink3.mk"
+.include "../../devel/zix/buildlink3.mk"
 BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
