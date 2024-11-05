@@ -1,28 +1,36 @@
-# $NetBSD: Makefile,v 1.35 2024/10/20 14:03:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/05 18:18:12 adam Exp $
 
-DISTNAME=	sratom-0.6.10
-PKGREVISION=	10
+DISTNAME=	sratom-0.6.16
 CATEGORIES=	converters
 MASTER_SITES=	https://download.drobilla.net/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://drobilla.net/software/sratom/
+HOMEPAGE=	https://drobilla.net/software/sratom.html
 COMMENT=	Library for serialising LV2 atoms to/from RDF
 LICENSE=	isc
 
-USE_LANGUAGES=	c99
-USE_TOOLS+=	gsed pkg-config
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
+USE_TOOLS+=		gsed pkg-config
 
-PYTHON_FOR_BUILD_ONLY=	tool
-PKGCONFIG_OVERRIDE+=	sratom.pc.in
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/sratom-0.pc
+
+SUBST_CLASSES+=		sphinx
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_FILES.sphinx=	doc/meson.build
+SUBST_MESSAGE.sphinx=	Fixing Python binary names.
+SUBST_SED.sphinx+=	-e "s,'sphinx-build','sphinx-build-${PYVERSSUFFIX}',"
+SUBST_SED.sphinx+=	-e "s,'sphinxygen','sphinxygen-${PYVERSSUFFIX}',"
 
 .include "options.mk"
-.include "../../devel/waf/waf.mk"
-BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
-.include "../../textproc/sord/buildlink3.mk"
+
+.include "../../audio/lv2/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
 BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
 .include "../../textproc/serd/buildlink3.mk"
-BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.10.0
-.include "../../audio/lv2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
+.include "../../textproc/sord/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
