@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1582 2024/09/02 17:14:26 maya Exp $
+# $NetBSD: Makefile,v 1.1583 2024/11/05 11:14:19 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -760,6 +760,7 @@ SUBDIR+=	py-medusa
 SUBDIR+=	py-metar
 SUBDIR+=	py-minio
 SUBDIR+=	py-mitmproxy_rs
+SUBDIR+=	py-modbus-cli
 SUBDIR+=	py-moto
 SUBDIR+=	py-namecheap
 SUBDIR+=	py-ncclient
@@ -810,6 +811,7 @@ SUBDIR+=	py-twisted-docs
 SUBDIR+=	py-twython
 SUBDIR+=	py-txamqp
 SUBDIR+=	py-txtorcon
+SUBDIR+=	py-uModbus
 SUBDIR+=	py-unearth
 SUBDIR+=	py-xandikos
 SUBDIR+=	py-xmm7360
