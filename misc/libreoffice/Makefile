@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2024/11/01 12:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.345 2024/11/05 13:02:36 nia Exp $
 
 VERREL=		24.8.2
 VERRC=		1
@@ -19,12 +19,12 @@ UNLIMIT_RESOURCES+=	cputime
 # configure script checks the version of GCC.
 GCC_REQD+=	12
 
-# Mixture of C++11, C++20 and so on. Do not override standards in Makefiles.
-# Do not define gnu++20. It breaks the build.
-# Do not define gnu++17. It generates non-functional gengal.bin binary.
 USE_LANGUAGES=	c c++
 
+USE_CXX_FEATURES+=	c++20
+
 # Needed to get a proper (builtin) definition of alloca(3) on NetBSD.
+# Mixture of C++11, C++20 and so on. Do not override standards in Makefiles.
 BUILDLINK_TRANSFORM+=	opt:-std=c++17:-std=gnu++17
 BUILDLINK_TRANSFORM+=	opt:-std=c++1z:-std=gnu++1z
 BUILDLINK_TRANSFORM+=	opt:-std=c++2a:-std=gnu++2a
@@ -51,8 +51,6 @@ SUBST_STAGE.font-path=		pre-configure
 SUBST_MESSAGE.font-path=	Use pkgsrc fonts for PDF import
 SUBST_FILES.font-path+=		external/pdfium/pkgsrc.patch.1
 SUBST_VARS.font-path+=		X11BASE
-
-USE_CXX_FEATURES+=	c++17
 
 BUILD_TARGET=	build
 
