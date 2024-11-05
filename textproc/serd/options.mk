@@ -1,27 +1,25 @@
-# $NetBSD: options.mk,v 1.3 2023/06/06 12:42:34 riastradh Exp $
+# $NetBSD: options.mk,v 1.4 2024/11/05 17:16:45 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.serd
-PKG_SUPPORTED_OPTIONS=	debug doc tests valgrind
-PKG_SUGGESTED_OPTIONS+=	# blank
-PLIST_VARS+=		doc
+PKG_SUPPORTED_OPTIONS=	doc tests
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdebug)
-WAF_ARGS+=		--debug
-.endif
+PLIST_VARS+=	doc
 
 .if !empty(PKG_OPTIONS:Mdoc)
-WAF_ARGS+=		--docs
-TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
-PLIST.doc=		yes
+MESON_ARGS+=	-Ddocs=enabled
+TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-lv2-theme>0:../../textproc/py-sphinx-lv2-theme
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxygen>0:../../textproc/py-sphinxygen
+PLIST.doc=	yes
+.else
+MESON_ARGS+=	-Ddocs=disabled
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
-WAF_ARGS+=		--test
-.endif
-
-.if !empty(PKG_OPTIONS:Mvalgrind)
-WAF_ARGS+=		--grind
-TOOL_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
+MESON_ARGS+=	-Dtests=enabled
+.else
+MESON_ARGS+=	-Dtests=disabled
 .endif
