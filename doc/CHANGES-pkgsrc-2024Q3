@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.7 2024/11/05 01:03:07 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.8 2024/11/05 01:16:49 maya Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -41,4 +41,8 @@ Pullup ticket #6911 - requested by gutteridge
 www/firefox128: security fix
 
 Pullup ticket #6912 - requested by nia
+devel/SDL2: portability fix
+
+Pullup ticket #6913 - requested by nia
+emulators/blastem: Runtime functionality fix for NetBSD
 devel/SDL2: portability fix
