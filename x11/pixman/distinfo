@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.78 2024/03/01 15:42:27 wiz Exp $
+$NetBSD: distinfo,v 1.79 2024/11/05 17:23:34 wiz Exp $
 
-BLAKE2s (pixman-0.43.4.tar.xz) = a593dba8f9db518c3e1cda594909fc2bc5b674687a16381c52172f23c0330c68
-SHA512 (pixman-0.43.4.tar.xz) = b40fb05bd58dc78f4e4e9b19c86991ab0611b708657c9a7fb42bfe82d57820a0fde01a34b00a0848a41da6c3fb90c2213942a70f435a0e9467631695d3bc7e36
-Size (pixman-0.43.4.tar.xz) = 636900 bytes
+BLAKE2s (pixman-0.44.0.tar.xz) = 715d823b3476907e8939d0e59b10ba4f28a5d62b32482ca11d133560f704fc5d
+SHA512 (pixman-0.44.0.tar.xz) = 3ea293cd308a4faeb600939df2c98148154cf1faf8e435b9f33df46c33acfeb32572cb0c1e148ee9f6f39f9e8a49fbda627edcac03da2000d89e22941849a04d
+Size (pixman-0.44.0.tar.xz) = 649200 bytes
