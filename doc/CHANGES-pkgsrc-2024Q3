@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.6 2024/10/31 21:16:20 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.7 2024/11/05 01:03:07 maya Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -39,3 +39,6 @@ audio/ncspot: update to restore functionality
 
 Pullup ticket #6911 - requested by gutteridge
 www/firefox128: security fix
+
+Pullup ticket #6912 - requested by nia
+devel/SDL2: portability fix
