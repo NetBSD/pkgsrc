@@ -1,0 +1,11 @@
+Read and write registers of Modbus devices.
+
+Access both TCP and RTU (i.e. serial) devices and encode and decode
+types larger than 16 bits (e.g. floats) into Modbus 16 bits registers.
+
+Optionally access registers by symbolic names, as defined in a
+registers file. Symbolic names for enumerations and bitfields are
+supported too.
+
+Designed to work nicely with other standard UNIX tools (watch,
+socat, etc.), see the examples.
