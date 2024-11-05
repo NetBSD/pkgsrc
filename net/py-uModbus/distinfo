@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/05 11:13:22 wiz Exp $
+
+BLAKE2s (uModbus-1.0.4.tar.gz) = 82007a252871845a8a4d06139eaed2425a89782b483da20b8e9607d48de458d0
+SHA512 (uModbus-1.0.4.tar.gz) = 0e601d22374b8936d9e6e9cfd8d05e405ebf96f6912420f3def2f6dcdabd22ed106e6cdc3b2196522675baf1f9e954f5aae043a316ba4d1d4c249a964a7127df
+Size (uModbus-1.0.4.tar.gz) = 19423 bytes
