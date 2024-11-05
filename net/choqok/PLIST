@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/14 11:31:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/05 19:55:41 markd Exp $
 bin/choqok
 include/choqok/account.h
 include/choqok/accountmanager.h
@@ -103,7 +103,6 @@ qt5/plugins/kcm_choqok_posterous.so
 qt5/plugins/kcm_choqok_tinyarro_ws.so
 qt5/plugins/kcm_choqok_twitgoo.so
 qt5/plugins/kcm_choqok_yourls.so
-qt5/plugins/kf5/parts/konqchoqokplugin.so
 qt5/plugins/kf5/purpose/purposeplugin.so
 share/applications/org.kde.choqok.desktop
 share/choqok/images/splash_screen.png
@@ -218,7 +217,6 @@ share/icons/hicolor/64x64/apps/twitgoo_uploader.png
 share/icons/hicolor/scalable/apps/choqok.svgz
 share/icons/hicolor/scalable/apps/choqok_offline.svgz
 share/knotifications5/choqok.notifyrc
-share/kservices5/ServiceMenus/choqok_share.desktop
 share/kservices5/choqok_accountsconfig.desktop
 share/kservices5/choqok_appearanceconfig.desktop
 share/kservices5/choqok_behaviorconfig.desktop
@@ -261,7 +259,6 @@ share/kservices5/choqok_ur1_ca.desktop
 share/kservices5/choqok_videopreview.desktop
 share/kservices5/choqok_yourls.desktop
 share/kservices5/choqok_yourls_config.desktop
-share/kservices5/konqchoqok.desktop
 share/kservicetypes5/choqokplugin.desktop
 share/kservicetypes5/choqokshortenerplugin.desktop
 share/kservicetypes5/choqokuploaderplugin.desktop
@@ -270,7 +267,6 @@ share/kxmlgui5/choqok_filter/filterui.rc
 share/kxmlgui5/choqok_nowlistening/nowlisteningui.rc
 share/kxmlgui5/choqok_quickfilter/quickfilterui.rc
 share/kxmlgui5/choqok_searchaction/searchactionui.rc
-share/kxmlgui5/konqchoqokplugin/konqchoqok.rc
 share/locale/ar/LC_MESSAGES/choqok.mo
 share/locale/bg/LC_MESSAGES/choqok.mo
 share/locale/bs/LC_MESSAGES/choqok.mo
