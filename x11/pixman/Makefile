@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2024/03/01 15:42:27 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/11/05 17:23:34 wiz Exp $
 
-DISTNAME=	pixman-0.43.4
+DISTNAME=	pixman-0.44.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.xz
