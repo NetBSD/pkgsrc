@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2023/11/16 09:22:51 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/05 20:58:38 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
@@ -13,6 +13,9 @@ COMMENT=	Open source multimedia framework - VA-API plugin
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
+
+# requires libva-wayland
+MESON_ARGS+=	-Dwayland=disabled
 
 PYTHON_FOR_BUILD_ONLY=	tool
 
