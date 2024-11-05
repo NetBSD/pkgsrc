@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.8 2024/11/05 01:16:49 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.9 2024/11/05 01:28:39 maya Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -45,4 +45,6 @@ devel/SDL2: portability fix
 
 Pullup ticket #6913 - requested by nia
 emulators/blastem: Runtime functionality fix for NetBSD
-devel/SDL2: portability fix
+
+Pullup ticket #6910 - requested by nia
+audio/zynaddsubfx: Functionality fix
