@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.9 2024/11/05 01:28:39 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.10 2024/11/05 20:58:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -48,3 +48,7 @@ emulators/blastem: Runtime functionality fix for NetBSD
 
 Pullup ticket #6910 - requested by nia
 audio/zynaddsubfx: Functionality fix
+
+Pullup ticket #6916 - requested by nia
+www/palemoon: security fix
+
