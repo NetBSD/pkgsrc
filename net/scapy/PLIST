@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/10/01 01:08:28 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/11/05 13:24:48 gutteridge Exp $
 bin/scapy
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -739,6 +739,9 @@ ${PYSITELIB}/scapy/layers/msrpce/ept.pyo
 ${PYSITELIB}/scapy/layers/msrpce/msdcom.py
 ${PYSITELIB}/scapy/layers/msrpce/msdcom.pyc
 ${PYSITELIB}/scapy/layers/msrpce/msdcom.pyo
+${PYSITELIB}/scapy/layers/msrpce/msdrsr.py
+${PYSITELIB}/scapy/layers/msrpce/msdrsr.pyc
+${PYSITELIB}/scapy/layers/msrpce/msdrsr.pyo
 ${PYSITELIB}/scapy/layers/msrpce/msnrpc.py
 ${PYSITELIB}/scapy/layers/msrpce/msnrpc.pyc
 ${PYSITELIB}/scapy/layers/msrpce/msnrpc.pyo
@@ -754,6 +757,9 @@ ${PYSITELIB}/scapy/layers/msrpce/raw/ept.pyo
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_dcom.py
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_dcom.pyc
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_dcom.pyo
+${PYSITELIB}/scapy/layers/msrpce/raw/ms_drsr.py
+${PYSITELIB}/scapy/layers/msrpce/raw/ms_drsr.pyc
+${PYSITELIB}/scapy/layers/msrpce/raw/ms_drsr.pyo
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_nrpc.py
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_nrpc.pyc
 ${PYSITELIB}/scapy/layers/msrpce/raw/ms_nrpc.pyo
