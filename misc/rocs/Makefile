@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2024/11/01 12:53:38 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2024/11/05 19:48:54 markd Exp $
 
 DISTNAME=	rocs-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/education/rocs/
@@ -21,5 +21,4 @@ USE_TOOLS+=	msgmerge
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
