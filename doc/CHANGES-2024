@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6752 2024/11/05 11:14:31 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6753 2024/11/05 11:14:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10226,3 +10226,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-cachecontrol to 0.14.1 [adam 2024-11-05]
 	Updated www/py-django-cors-headers to 4.6.0 [adam 2024-11-05]
 	Added net/py-uModbus version 1.0.4 [wiz 2024-11-05]
+	Added net/py-modbus-cli version 0.1.9 [wiz 2024-11-05]
