@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2024/10/24 07:33:51 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/05 09:08:14 adam Exp $
 
-DISTNAME=	django_cors_headers-4.5.0
+DISTNAME=	django_cors_headers-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-cors-headers/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6:../../www/py-asgiref
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
