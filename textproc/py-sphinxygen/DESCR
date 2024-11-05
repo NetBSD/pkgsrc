@@ -1,0 +1,2 @@
+Sphinxygen is a Python module/script that generates Sphinx markup to describe a
+C API, from an XML description extracted by Doxygen.
