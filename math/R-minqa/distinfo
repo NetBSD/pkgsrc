@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/02/03 11:04:04 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/11/05 03:55:41 mef Exp $
 
-BLAKE2s (R/minqa_1.2.6.tar.gz) = 7e9eda4f9a13ed375895223cac6158def0a8a1a04ca27badb8674366cec3bc31
-SHA512 (R/minqa_1.2.6.tar.gz) = 542f2cba9339f871f5d3099f85af4bafff5dc4c6959203dbcde65adceac78d6dfda1241d0a7c465cf452a366c720d9e67453f69d78c72c20f9b46cdf9107ce91
-Size (R/minqa_1.2.6.tar.gz) = 54493 bytes
+BLAKE2s (R/minqa_1.2.8.tar.gz) = 8230b005cfe3f548588b5d2ae546ec16c75a9814e81df2ec1ef3845c444ebd38
+SHA512 (R/minqa_1.2.8.tar.gz) = e26ab71455b4f2b2de443cc4545b556ba88124d1b4057fbd58d123a305df9625149064df6c3ff60e6122ae60b2b70282c4df903c6a00ce719f5949fd89bd48f4
+Size (R/minqa_1.2.8.tar.gz) = 54644 bytes

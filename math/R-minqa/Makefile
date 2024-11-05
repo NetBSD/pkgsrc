@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/02/03 11:04:04 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/05 03:55:41 mef Exp $
 
 R_PKGNAME=	minqa
-R_PKGVER=	1.2.6
+R_PKGVER=	1.2.8
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Derivative-free optimization algorithms by quadratic approximation
