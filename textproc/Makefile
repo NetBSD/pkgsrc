@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1487 2024/10/20 09:46:18 leot Exp $
+# $NetBSD: Makefile,v 1.1488 2024/11/05 16:47:11 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1183,6 +1183,7 @@ SUBDIR+=	py-sphinx-copybutton
 SUBDIR+=	py-sphinx-gallery
 SUBDIR+=	py-sphinx-inline-tabs
 SUBDIR+=	py-sphinx-issues
+SUBDIR+=	py-sphinx-lv2-theme
 SUBDIR+=	py-sphinx-rtd-theme
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-sphinxcontrib-applehelp
@@ -1198,6 +1199,7 @@ SUBDIR+=	py-sphinxcontrib-qthelp
 SUBDIR+=	py-sphinxcontrib-serializinghtml
 SUBDIR+=	py-sphinxcontrib-spelling
 SUBDIR+=	py-sphinxcontrib-websupport
+SUBDIR+=	py-sphinxygen
 SUBDIR+=	py-sphobjinv
 SUBDIR+=	py-tablib
 SUBDIR+=	py-tabulate
