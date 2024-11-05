@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/03/21 09:13:08 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/05 08:37:31 adam Exp $
 
-DISTNAME=	tldextract-5.1.2
+DISTNAME=	tldextract-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tldextract/}
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-pylint-[0-9]*:../../devel/py-test-pylint
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
