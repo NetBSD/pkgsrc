@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4357 2024/10/26 02:56:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.4358 2024/11/05 17:08:40 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3660,6 +3660,7 @@ SUBDIR+=	yosys
 SUBDIR+=	z80-asm
 SUBDIR+=	zeal
 SUBDIR+=	zig-mode
+SUBDIR+=	zix
 SUBDIR+=	zlib
 SUBDIR+=	zls
 SUBDIR+=	zookeeper
