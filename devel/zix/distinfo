@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/05 17:08:41 adam Exp $
+
+BLAKE2s (zix-0.4.2.tar.xz) = 1c06e60a87f8b8df7ba79acca8f3a530a3fde5296ab54b150b2f785a3f89ec85
+SHA512 (zix-0.4.2.tar.xz) = b8fb931a3e9ab5a67f6da57a07bf10b91e7f861c8cf39db14c49c083a9983a0971cc6bc6abcb54a83c00471b386e377cb9bb51e2edd945ba07b9ae43a35964cc
+Size (zix-0.4.2.tar.xz) = 76492 bytes
