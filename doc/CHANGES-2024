@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6749 2024/11/05 03:55:55 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6750 2024/11/05 08:37:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10221,3 +10221,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/openimageio to 2.5.17.0 [adam 2024-11-04]
 	Updated net/unison to 2.53.6 [gdt 2024-11-05]
 	Updated math/R-minqa to 1.2.8 [mef 2024-11-05]
+	Updated www/py-django to 5.1.3 [adam 2024-11-05]
+	Updated net/py-tldextract to 5.1.3 [adam 2024-11-05]
