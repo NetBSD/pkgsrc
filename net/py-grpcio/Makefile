@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/10/29 08:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.86 2024/11/05 17:22:00 wiz Exp $
 
 DISTNAME=	grpcio-1.67.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,11 @@ USE_CC_FEATURES=	c99
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
+
+pre-test:
+	${RM} -f ${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/googlemock/test/*py
+	${RM} -f ${WRKSRC}/third_party/boringssl-with-bazel/src/third_party/googletest/googletest/test/*py
+	${RM} -f ${WRKSRC}/third_party/upb/upb/cmake/*.py
 
 .include "../../devel/abseil/buildlink3.mk"
 .include "../../devel/re2/buildlink3.mk"
