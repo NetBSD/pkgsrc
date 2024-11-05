@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2022/06/11 12:08:21 nia Exp $
+$NetBSD: distinfo,v 1.12 2024/11/05 17:16:45 adam Exp $
 
-BLAKE2s (serd-0.30.12.tar.bz2) = 1e6cdd20b4b976585a2495e61df761755c6018aa4695a3019f12454583644767
-SHA512 (serd-0.30.12.tar.bz2) = c330648eb2c947a6d220f42d0af63fd2744da496301483e58be3cda387da166711d6acd5cee2df8cbb837ab450e1802b3f9a0a2973e5ad6d976b69b863aecb7f
-Size (serd-0.30.12.tar.bz2) = 594475 bytes
+BLAKE2s (serd-0.32.2.tar.xz) = c71c13587830a04aa7891d0599edb031500e775fcbe1dc67a55c7efccf43d42c
+SHA512 (serd-0.32.2.tar.xz) = 052f0765a9af6883a7ef1a31bd90eea3c57d93747dfb989eeda8c4dabbf2ae7d2e868d437aa2a510243f3a535e366739fe266cf82ef0d280472868c87055d50a
+Size (serd-0.32.2.tar.xz) = 168840 bytes
