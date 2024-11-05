@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.261 2024/11/01 14:10:47 triaxx Exp $
+# $NetBSD: Makefile,v 1.262 2024/11/05 12:19:30 triaxx Exp $
 
 DISTNAME=	wine-9.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV}/
@@ -101,6 +102,7 @@ PLIST.desktop=		yes
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
