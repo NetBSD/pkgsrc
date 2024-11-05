@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2024/10/20 14:03:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2024/11/05 18:22:30 adam Exp $
 
 BUILDLINK_TREE+=	lilv
 
@@ -11,8 +11,8 @@ BUILDLINK_PKGSRCDIR.lilv?=	../../audio/lilv
 
 .include "../../audio/lv2/buildlink3.mk"
 .include "../../converters/sratom/buildlink3.mk"
-.include "../../textproc/sord/buildlink3.mk"
 .include "../../textproc/serd/buildlink3.mk"
+.include "../../textproc/sord/buildlink3.mk"
 .endif	# LILV_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-lilv

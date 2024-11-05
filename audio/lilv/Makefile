@@ -1,41 +1,43 @@
-# $NetBSD: Makefile,v 1.44 2024/10/20 14:03:24 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/05 18:22:30 adam Exp $
 
-DISTNAME=	lilv-0.24.14
-PKGREVISION=	10
+DISTNAME=	lilv-0.24.24
 CATEGORIES=	audio
 MASTER_SITES=	https://download.drobilla.net/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://drobilla.net/software/lilv/
+HOMEPAGE=	https://drobilla.net/software/lilv.html
 COMMENT=	C library to make the use of LV2 plugins as simple as possible
 LICENSE=	isc
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	gsed pkg-config
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gsed pkg-config
+FORCE_CXX_STD=		c++11
 
-WAF_ARGS+=	--default-lv2-path="~/.lv2/:${BUILDLINK_PREFIX.lv2}/lib/lv2:/usr/local/lib/lv2"
-WAF_ARGS+=	--no-bindings
+MESON_ARGS+=	-Dbindings_py=disabled
+
+PKGCONFIG_OVERRIDE_STAGE=	pre-install
+PKGCONFIG_OVERRIDE+=		output/meson-private/lilv-0.pc
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	lv2bench
-.if ${OPSYS} != "Darwin" || ${OPSYS_VERSION} >= 101200
-# Darwin doesn't have CLOCK_GETTIME so it doesn't compile this
-PLIST.lv2bench=	yes
-.endif
-
-PYTHON_FOR_BUILD_ONLY=	tool
-PKGCONFIG_OVERRIDE+=	lilv.pc.in
+SUBST_CLASSES+=		sphinx
+SUBST_STAGE.sphinx=	pre-configure
+SUBST_FILES.sphinx=	doc/meson.build
+SUBST_MESSAGE.sphinx=	Fixing Python binary names.
+SUBST_SED.sphinx+=	-e "s,'sphinx-build','sphinx-build-${PYVERSSUFFIX}',"
+SUBST_SED.sphinx+=	-e "s,'sphinxygen','sphinxygen-${PYVERSSUFFIX}',"
 
 .include "options.mk"
-.include "../../devel/waf/waf.mk"
-BUILDLINK_API_DEPENDS.sratom+=	sratom>=0.4.0
-.include "../../converters/sratom/buildlink3.mk"
+
 BUILDLINK_API_DEPENDS.lv2+=	lv2>=1.18.0
 .include "../../audio/lv2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sord+=	sord>=0.14.0
-.include "../../textproc/sord/buildlink3.mk"
-BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.0
+.include "../../converters/sratom/buildlink3.mk"
+.include "../../devel/meson/build.mk"
+.include "../../lang/python/tool.mk"
+BUILDLINK_API_DEPENDS.serd+=	serd>=0.30.10
 .include "../../textproc/serd/buildlink3.mk"
+BUILDLINK_API_DEPENDS.sord+=	sord>=0.16.15
+.include "../../textproc/sord/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

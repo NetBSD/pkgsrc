@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_meson.build,v 1.1 2024/11/05 18:22:30 adam Exp $
+
+Install completions to correct location.
+
+--- tools/meson.build.orig	2024-11-05 16:39:57.297190423 +0000
++++ tools/meson.build
+@@ -29,7 +29,7 @@ endforeach
+ 
+ install_data(
+   files('lilv.bash_completion'),
+-  install_dir: get_option('sysconfdir') / 'bash_completion.d',
++  install_dir: get_option('datadir') / 'bash_completion.d',
+   rename: 'lilv',
+ )
+ 
