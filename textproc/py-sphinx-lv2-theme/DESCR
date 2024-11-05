@@ -1,0 +1,8 @@
+This is a minimal pure-CSS theme for Sphinx that uses the documentation style
+of the LV2 plugin specification and related projects.
+
+This theme is geared toward producing beautiful API documentation for C, C++,
+and Python that is documented using the standard Sphinx domains. The output
+does not use Javascript at all, and some common features are not implemented,
+so this theme should not be considered a drop-in replacement for typical Sphinx
+themes.
