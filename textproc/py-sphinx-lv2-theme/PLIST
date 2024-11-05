@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2024/11/05 16:46:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/sphinx_lv2_theme/__init__.py
+${PYSITELIB}/sphinx_lv2_theme/__init__.pyc
+${PYSITELIB}/sphinx_lv2_theme/__init__.pyo
+${PYSITELIB}/sphinx_lv2_theme/domainindex.html
+${PYSITELIB}/sphinx_lv2_theme/genindex.html
+${PYSITELIB}/sphinx_lv2_theme/globaltoc.html
+${PYSITELIB}/sphinx_lv2_theme/layout.html
+${PYSITELIB}/sphinx_lv2_theme/localtoc.html
+${PYSITELIB}/sphinx_lv2_theme/page.html
+${PYSITELIB}/sphinx_lv2_theme/search.html
+${PYSITELIB}/sphinx_lv2_theme/static/pygments.css
+${PYSITELIB}/sphinx_lv2_theme/static/sphinx_lv2_theme.css_t
+${PYSITELIB}/sphinx_lv2_theme/theme.conf
