@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/03/03 10:06:14 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/11/06 08:45:30 wiz Exp $
 
-BLAKE2s (libXcursor-1.2.2.tar.xz) = 886063ccb4a69e059e69cc0076a610d6a7ce9232c58fe8aea7d576f4f0228373
-SHA512 (libXcursor-1.2.2.tar.xz) = 6550ce1e69b35ef3356f25e31aa2779503d9cea780eff307cb646364993dfaa971304085d32677e68996bd3b8e067436c8fc89aeb4db07a12ce5bc93b735b5b0
-Size (libXcursor-1.2.2.tar.xz) = 289536 bytes
+BLAKE2s (libXcursor-1.2.3.tar.xz) = f7d3bd591162604c47cd10530980fa4c8bd4c9b2de062a40db3a856c573736d7
+SHA512 (libXcursor-1.2.3.tar.xz) = 069a1eb27a0ee1b29b251bb6c2d0688543a791d6862fad643279e86736e1c12ca6fc02b85b8611c225a9735dc00efab84672d42b547baa97304362f0c5ae0b5a
+Size (libXcursor-1.2.3.tar.xz) = 292764 bytes
