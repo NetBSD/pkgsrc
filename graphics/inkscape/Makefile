@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2024/11/01 12:52:54 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2024/11/06 10:30:00 jperkin Exp $
 
 DISTNAME=	inkscape-1.4
 PKGREVISION=	2
@@ -42,7 +42,7 @@ USE_PKGLOCALEDIR=	yes
 # ${WRKSRC}/src/ui/tools/booleans-subitems.cpp.
 GCC_REQD+=		9
 # GNU make (gmake) is required for handling whitespace in filename.
-USE_TOOLS+=		gmake msgfmt msgmerge perl pkg-config
+USE_TOOLS+=		gmake gzip msgfmt msgmerge perl pkg-config
 
 REPLACE_PERL+=		man/fix-roff-punct
 
