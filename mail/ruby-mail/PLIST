@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2018/03/14 14:46:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/11/06 16:14:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
@@ -8,8 +8,6 @@ ${GEM_LIBDIR}/lib/mail/body.rb
 ${GEM_LIBDIR}/lib/mail/check_delivery_params.rb
 ${GEM_LIBDIR}/lib/mail/configuration.rb
 ${GEM_LIBDIR}/lib/mail/constants.rb
-${GEM_LIBDIR}/lib/mail/core_extensions/smtp.rb
-${GEM_LIBDIR}/lib/mail/core_extensions/string.rb
 ${GEM_LIBDIR}/lib/mail/elements.rb
 ${GEM_LIBDIR}/lib/mail/elements/address.rb
 ${GEM_LIBDIR}/lib/mail/elements/address_list.rb
@@ -39,12 +37,10 @@ ${GEM_LIBDIR}/lib/mail/fields.rb
 ${GEM_LIBDIR}/lib/mail/fields/bcc_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/cc_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/comments_field.rb
-${GEM_LIBDIR}/lib/mail/fields/common/address_container.rb
-${GEM_LIBDIR}/lib/mail/fields/common/common_address.rb
-${GEM_LIBDIR}/lib/mail/fields/common/common_date.rb
-${GEM_LIBDIR}/lib/mail/fields/common/common_field.rb
-${GEM_LIBDIR}/lib/mail/fields/common/common_message_id.rb
-${GEM_LIBDIR}/lib/mail/fields/common/parameter_hash.rb
+${GEM_LIBDIR}/lib/mail/fields/common_address_field.rb
+${GEM_LIBDIR}/lib/mail/fields/common_date_field.rb
+${GEM_LIBDIR}/lib/mail/fields/common_field.rb
+${GEM_LIBDIR}/lib/mail/fields/common_message_id_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/content_description_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/content_disposition_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/content_id_field.rb
@@ -57,7 +53,10 @@ ${GEM_LIBDIR}/lib/mail/fields/in_reply_to_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/keywords_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/message_id_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/mime_version_field.rb
+${GEM_LIBDIR}/lib/mail/fields/named_structured_field.rb
+${GEM_LIBDIR}/lib/mail/fields/named_unstructured_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/optional_field.rb
+${GEM_LIBDIR}/lib/mail/fields/parameter_hash.rb
 ${GEM_LIBDIR}/lib/mail/fields/received_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/references_field.rb
 ${GEM_LIBDIR}/lib/mail/fields/reply_to_field.rb
@@ -132,9 +131,9 @@ ${GEM_LIBDIR}/lib/mail/parsers/rfc5322_date_time.rl
 ${GEM_LIBDIR}/lib/mail/parsers/rfc5322_lexical_tokens.rl
 ${GEM_LIBDIR}/lib/mail/part.rb
 ${GEM_LIBDIR}/lib/mail/parts_list.rb
+${GEM_LIBDIR}/lib/mail/smtp_envelope.rb
 ${GEM_LIBDIR}/lib/mail/utilities.rb
 ${GEM_LIBDIR}/lib/mail/values/unicode_tables.dat
 ${GEM_LIBDIR}/lib/mail/version.rb
-${GEM_LIBDIR}/lib/mail/version_specific/ruby_1_8.rb
-${GEM_LIBDIR}/lib/mail/version_specific/ruby_1_9.rb
+${GEM_LIBDIR}/lib/mail/yaml.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
