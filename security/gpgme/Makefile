@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2024/08/09 09:42:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.119 2024/11/06 21:01:45 adam Exp $
 
-DISTNAME=	gpgme-1.23.2
-PKGREVISION=	1
+DISTNAME=	gpgme-1.24.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +10,9 @@ HOMEPAGE=	https://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=		c99 c++
-USE_CXX_FEATURES+=	c++11
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
