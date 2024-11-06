@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.256 2024/11/01 12:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.257 2024/11/06 14:51:41 adam Exp $
 
-DISTNAME=	gnutls-3.8.7.1
-PKGREVISION=	2
+DISTNAME=	gnutls-3.8.8
 CATEGORIES=	security devel
-MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R:R}/
+MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnutls.org/
 COMMENT=	Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
-
-WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
 DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
