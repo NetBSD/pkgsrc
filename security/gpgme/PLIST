@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2022/08/17 17:46:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/11/06 21:01:45 adam Exp $
 bin/gpgme-config
 bin/gpgme-json
 bin/gpgme-tool
@@ -52,6 +52,8 @@ lib/libgpgme.la
 lib/libgpgmepp.la
 lib/pkgconfig/gpgme-glib.pc
 lib/pkgconfig/gpgme.pc
+lib/pkgconfig/gpgmepp.pc
+man/man1/gpgme-json.1
 share/aclocal/gpgme.m4
 share/common-lisp/source/gpgme/gpgme-grovel.lisp
 share/common-lisp/source/gpgme/gpgme-package.lisp

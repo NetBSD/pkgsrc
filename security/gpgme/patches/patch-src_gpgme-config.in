@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2017/03/31 10:31:57 wiz Exp $
+$NetBSD: patch-src_gpgme-config.in,v 1.1 2024/11/06 21:01:45 adam Exp $
+
+Pass PTHREAD_LIBS and PTHREAD_CFLAGS.
 
 --- src/gpgme-config.in.orig	2016-11-10 16:13:34.000000000 +0000
 +++ src/gpgme-config.in
