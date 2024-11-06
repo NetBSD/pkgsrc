@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/02/04 13:37:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/11/06 15:11:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -39,5 +39,40 @@ ${GEM_LIBDIR}/lib/webrick/server.rb
 ${GEM_LIBDIR}/lib/webrick/ssl.rb
 ${GEM_LIBDIR}/lib/webrick/utils.rb
 ${GEM_LIBDIR}/lib/webrick/version.rb
+${GEM_LIBDIR}/sig/accesslog.rbs
+${GEM_LIBDIR}/sig/cgi.rbs
+${GEM_LIBDIR}/sig/compat.rbs
+${GEM_LIBDIR}/sig/config.rbs
+${GEM_LIBDIR}/sig/cookie.rbs
+${GEM_LIBDIR}/sig/htmlutils.rbs
+${GEM_LIBDIR}/sig/httpauth.rbs
+${GEM_LIBDIR}/sig/httpauth/authenticator.rbs
+${GEM_LIBDIR}/sig/httpauth/basicauth.rbs
+${GEM_LIBDIR}/sig/httpauth/digestauth.rbs
+${GEM_LIBDIR}/sig/httpauth/htdigest.rbs
+${GEM_LIBDIR}/sig/httpauth/htgroup.rbs
+${GEM_LIBDIR}/sig/httpauth/htpasswd.rbs
+${GEM_LIBDIR}/sig/httpauth/userdb.rbs
+${GEM_LIBDIR}/sig/httpproxy.rbs
+${GEM_LIBDIR}/sig/httprequest.rbs
+${GEM_LIBDIR}/sig/httpresponse.rbs
+${GEM_LIBDIR}/sig/https.rbs
+${GEM_LIBDIR}/sig/httpserver.rbs
+${GEM_LIBDIR}/sig/httpservlet.rbs
+${GEM_LIBDIR}/sig/httpservlet/abstract.rbs
+${GEM_LIBDIR}/sig/httpservlet/cgi_runner.rbs
+${GEM_LIBDIR}/sig/httpservlet/cgihandler.rbs
+${GEM_LIBDIR}/sig/httpservlet/erbhandler.rbs
+${GEM_LIBDIR}/sig/httpservlet/filehandler.rbs
+${GEM_LIBDIR}/sig/httpservlet/prochandler.rbs
+${GEM_LIBDIR}/sig/httpstatus.rbs
+${GEM_LIBDIR}/sig/httputils.rbs
+${GEM_LIBDIR}/sig/httpversion.rbs
+${GEM_LIBDIR}/sig/log.rbs
+${GEM_LIBDIR}/sig/manifest.yaml
+${GEM_LIBDIR}/sig/server.rbs
+${GEM_LIBDIR}/sig/ssl.rbs
+${GEM_LIBDIR}/sig/utils.rbs
+${GEM_LIBDIR}/sig/version.rbs
 ${GEM_LIBDIR}/webrick.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
