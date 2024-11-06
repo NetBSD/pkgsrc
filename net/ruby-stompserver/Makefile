@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/06/30 06:46:07 taca Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/06 15:31:01 taca Exp $
 
 DISTNAME=	drizztbsd-stompserver-1c7a275
 PKGNAME=	${RUBY_PKGPREFIX}-stompserver-1.0.0
@@ -95,6 +95,11 @@ do-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config/stompserver.conf ${DESTDIR}${EGDIR}
+
+.include "../../lang/ruby/rubyversion.mk"
+.if ${RUBY_VER} == 31
+DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=5.16.0:../../devel/ruby-minitest
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
