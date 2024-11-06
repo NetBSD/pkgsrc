@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/02/03 15:51:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/11/06 14:39:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -66,6 +66,7 @@ ${GEM_LIBDIR}/lib/braintree/granted_payment_instrument_update.rb
 ${GEM_LIBDIR}/lib/braintree/graphql_client.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_completed.rb
+${GEM_LIBDIR}/lib/braintree/local_payment_completed/blik_alias.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_expired.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_funded.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_reversed.rb
