@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6774 2024/11/06 13:49:53 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6775 2024/11/06 14:03:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10255,3 +10255,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/ruby-taglib to 2.0.0 [taca 2024-11-06]
 	Updated databases/ruby-sequel to 5.86.0 [taca 2024-11-06]
 	Updated databases/ruby-sqlite3 to 2.2.0 [taca 2024-11-06]
+	Updated devel/ruby-async to 2.18.0 [taca 2024-11-06]
