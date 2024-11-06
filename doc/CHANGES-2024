@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6775 2024/11/06 14:03:48 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6776 2024/11/06 14:06:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10256,3 +10256,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/ruby-sequel to 5.86.0 [taca 2024-11-06]
 	Updated databases/ruby-sqlite3 to 2.2.0 [taca 2024-11-06]
 	Updated devel/ruby-async to 2.18.0 [taca 2024-11-06]
+	Updated math/R-nloptr to 2.1.1 [mef 2024-11-06]
