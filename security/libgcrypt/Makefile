@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2024/08/25 10:40:35 js Exp $
+# $NetBSD: Makefile,v 1.114 2024/11/06 11:14:15 jperkin Exp $
 
 DISTNAME=	libgcrypt-1.11.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://gnupg.org/ftp/gcrypt/libgcrypt/
 EXTRACT_SUFX=	.tar.bz2
@@ -45,14 +45,12 @@ CONFIGURE_ARGS+=	GPGRT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpgrt-config
 CONFIGURE_ARGS+=	GPG_ERROR_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpg-error-config
 .endif
 
-.if ${OPSYS} == "Darwin" && ${OPSYS_VERSION} < 100500
-.  include "../../devel/macports-legacy-support/buildlink3.mk"
-.endif
-
-.if ${MACHINE_PLATFORM:MDarwin-*-aarch64}
-# Their ASM is broken on Darwin/AArch64 and leads to undefined symbols at
-# runtime.
+.if ${OPSYS} == "Darwin"
+# Their ASM is broken on Darwin and leads to undefined symbols at runtime.
 CONFIGURE_ARGS+=	--disable-asm
+.  if ${OPSYS_VERSION} < 100500
+.    include "../../devel/macports-legacy-support/buildlink3.mk"
+.  endif
 .endif
 
 .if ${MACHINE_PLATFORM:MDarwin-*-powerpc}
