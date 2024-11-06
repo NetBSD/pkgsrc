@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/06/19 11:20:31 taca Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/06 15:56:16 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	5.0.9
+RM_VERSION=	5.0.10
 
 NO_BUILD=	yes
 
@@ -29,9 +29,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-request_store>=1.5.0<1.6:../../www/ruby-request_stor
 # ruby-mail depends it.
 #DEPENDS+=	${RUBY_PKGPREFIX}-mini_mime>=1.1.0<1.2:../../mail/ruby-mini_mime
 DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textproc/ruby-actionpack-xml_parser
-DEPENDS+=	${RUBY_PKGPREFIX}-roadie-rails${RUBY_RAILS}>=3.0.0<3.1:../../mail/ruby-roadie-rails
+DEPENDS+=	${RUBY_PKGPREFIX}-roadie30-rails${RUBY_RAILS}>=3.0.0<3.1:../../mail/ruby-roadie30-rails
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
-DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.7.1<2.8:../../mail/ruby-mail
+DEPENDS+=	${RUBY_PKGPREFIX}-mail27>=2.7.1<2.8:../../mail/ruby-mail27
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.15<2:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.10.0:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.21.3<1.22:../../print/ruby-rbpdf
@@ -41,10 +41,10 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rotp>=6.2.0:../../security/ruby-rotp
 DEPENDS+=	${RUBY_PKGPREFIX}-rqrcode>=1.2.0:../../textproc/ruby-rqrcode
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0:../../net/ruby-net-ldap
 DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=4.11.0:../../graphics/ruby-mini-magick
-DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet>=3.5.1<3.6:../../textproc/ruby-redcarpet
+DEPENDS+=	${RUBY_PKGPREFIX}-redcarpet35>=3.5.1<3.6:../../textproc/ruby-redcarpet35
 DEPENDS+=	${RUBY_PKGPREFIX}-deckar01-task_list>=2.3.2:../../textproc/ruby-deckar01-task_list
 DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pipeline
-DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.1<1:../../textproc/ruby-commonmarker
+DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.8<1:../../textproc/ruby-commonmarker
 DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 
 .include "../../lang/ruby/modules.mk"
