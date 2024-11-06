@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/09/22 08:08:46 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/06 15:04:14 taca Exp $
 
-DISTNAME=	faraday-excon-2.2.0
+DISTNAME=	faraday-excon-2.3.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${RUBY_PKGPREFIX}-excon>=0.27.4:../../www/ruby-excon
-DEPENDS+=	${RUBY_PKGPREFIX}-faraday>=2.0<3:../../www/ruby-faraday
+DEPENDS+=	${RUBY_PKGPREFIX}-excon>=1.0.0:../../www/ruby-excon
+DEPENDS+=	${RUBY_PKGPREFIX}-faraday>=2.11<3:../../www/ruby-faraday
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
