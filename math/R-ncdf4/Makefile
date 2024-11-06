@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/11/01 12:53:25 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/06 13:10:28 mef Exp $
 
 R_PKGNAME=	ncdf4
-R_PKGVER=	1.22
+R_PKGVER=	1.23
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Interface to Unidata netCDF (Version 4 or Earlier) Format Data Files
