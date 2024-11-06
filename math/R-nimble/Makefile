@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/17 12:41:53 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/06 13:43:48 mef Exp $
 
 R_PKGNAME=	nimble
-R_PKGVER=	1.0.1
+R_PKGVER=	1.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MCMC, Particle Filtering, and Programmable Hierarchical Modeling
@@ -12,6 +12,8 @@ DEPENDS+=	R-coda>=0.19.3:../../math/R-coda
 DEPENDS+=	R-igraph>=1.2.4.1:../../math/R-igraph
 DEPENDS+=	R-numDeriv-[0-9]*:../../math/R-numDeriv
 DEPENDS+=	R-pracma-[0-9]*:../../math/R-pracma
+
+# Package suggested but not available: 'mcmcse'
 
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
