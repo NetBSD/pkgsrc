@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2019/02/03 15:34:51 taca Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/06 16:14:53 taca Exp $
 
-DISTNAME=	mail-2.7.1
+DISTNAME=	mail-2.8.1
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
