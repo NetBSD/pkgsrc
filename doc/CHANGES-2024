@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6764 2024/11/06 08:19:38 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6765 2024/11/06 08:20:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10245,3 +10245,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/py-bleach to 6.2.0 [adam 2024-11-05]
 	Updated finance/bitcoin to 27.2 [khorben 2024-11-05]
 	Updated www/curl to 8.11.0 [wiz 2024-11-06]
+	Updated www/libcurl-gnutls to 8.11.0 [wiz 2024-11-06]
