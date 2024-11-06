@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6794 2024/11/06 15:09:23 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6795 2024/11/06 15:11:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10276,3 +10276,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/ruby-loofah to 2.23.1 [taca 2024-11-06]
 	Updated www/ruby-rackup to 2.2.0 [taca 2024-11-06]
 	Updated www/ruby-selenium-webdriver to 4.26.0 [taca 2024-11-06]
+	Updated www/ruby-webrick to 1.9.0 [taca 2024-11-06]
