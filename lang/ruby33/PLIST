@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/09/05 15:02:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/06 13:31:55 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -476,6 +476,8 @@ ${RUBY_LIB}/bundler/vendor/pub_grub/lib/pub_grub/version_constraint.rb
 ${RUBY_LIB}/bundler/vendor/pub_grub/lib/pub_grub/version_range.rb
 ${RUBY_LIB}/bundler/vendor/pub_grub/lib/pub_grub/version_solver.rb
 ${RUBY_LIB}/bundler/vendor/pub_grub/lib/pub_grub/version_union.rb
+${RUBY_LIB}/bundler/vendor/securerandom/lib/random/formatter.rb
+${RUBY_LIB}/bundler/vendor/securerandom/lib/securerandom.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/actions.rb
 ${RUBY_LIB}/bundler/vendor/thor/lib/thor/actions/create_file.rb
@@ -531,6 +533,7 @@ ${RUBY_LIB}/bundler/vendored_fileutils.rb
 ${RUBY_LIB}/bundler/vendored_net_http.rb
 ${RUBY_LIB}/bundler/vendored_persistent.rb
 ${RUBY_LIB}/bundler/vendored_pub_grub.rb
+${RUBY_LIB}/bundler/vendored_securerandom.rb
 ${RUBY_LIB}/bundler/vendored_thor.rb
 ${RUBY_LIB}/bundler/vendored_timeout.rb
 ${RUBY_LIB}/bundler/vendored_tsort.rb
@@ -1004,13 +1007,16 @@ ${RUBY_LIB}/rdoc/top_level.rb
 ${RUBY_LIB}/rdoc/version.rb
 ${RUBY_LIB}/readline.rb
 ${RUBY_LIB}/reline.rb
-${RUBY_LIB}/reline/ansi.rb
 ${RUBY_LIB}/reline/config.rb
 ${RUBY_LIB}/reline/face.rb
-${RUBY_LIB}/reline/general_io.rb
 ${RUBY_LIB}/reline/history.rb
+${RUBY_LIB}/reline/io.rb
+${RUBY_LIB}/reline/io/ansi.rb
+${RUBY_LIB}/reline/io/dumb.rb
+${RUBY_LIB}/reline/io/windows.rb
 ${RUBY_LIB}/reline/key_actor.rb
 ${RUBY_LIB}/reline/key_actor/base.rb
+${RUBY_LIB}/reline/key_actor/composite.rb
 ${RUBY_LIB}/reline/key_actor/emacs.rb
 ${RUBY_LIB}/reline/key_actor/vi_command.rb
 ${RUBY_LIB}/reline/key_actor/vi_insert.rb
@@ -1021,7 +1027,6 @@ ${RUBY_LIB}/reline/terminfo.rb
 ${RUBY_LIB}/reline/unicode.rb
 ${RUBY_LIB}/reline/unicode/east_asian_width.rb
 ${RUBY_LIB}/reline/version.rb
-${RUBY_LIB}/reline/windows.rb
 ${RUBY_LIB}/resolv-replace.rb
 ${RUBY_LIB}/resolv.rb
 ${RUBY_LIB}/rinda/rinda.rb
@@ -1268,6 +1273,8 @@ ${RUBY_LIB}/rubygems/vendor/optparse/lib/optparse/time.rb
 ${RUBY_LIB}/rubygems/vendor/optparse/lib/optparse/uri.rb
 ${RUBY_LIB}/rubygems/vendor/optparse/lib/optparse/version.rb
 ${RUBY_LIB}/rubygems/vendor/resolv/lib/resolv.rb
+${RUBY_LIB}/rubygems/vendor/securerandom/lib/random/formatter.rb
+${RUBY_LIB}/rubygems/vendor/securerandom/lib/securerandom.rb
 ${RUBY_LIB}/rubygems/vendor/timeout/lib/timeout.rb
 ${RUBY_LIB}/rubygems/vendor/tsort/lib/tsort.rb
 ${RUBY_LIB}/rubygems/vendor/uri/lib/uri.rb
@@ -1288,6 +1295,7 @@ ${RUBY_LIB}/rubygems/vendor/uri/lib/uri/wss.rb
 ${RUBY_LIB}/rubygems/vendored_molinillo.rb
 ${RUBY_LIB}/rubygems/vendored_net_http.rb
 ${RUBY_LIB}/rubygems/vendored_optparse.rb
+${RUBY_LIB}/rubygems/vendored_securerandom.rb
 ${RUBY_LIB}/rubygems/vendored_timeout.rb
 ${RUBY_LIB}/rubygems/vendored_tsort.rb
 ${RUBY_LIB}/rubygems/version.rb
