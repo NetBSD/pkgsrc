@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6772 2024/11/06 13:45:59 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6773 2024/11/06 13:47:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10253,3 +10253,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/ruby33 to 3.3.6 [taca 2024-11-06]
 	Updated math/R-nimble to 1.2.1 [mef 2024-11-06]
 	Updated audio/ruby-taglib to 2.0.0 [taca 2024-11-06]
+	Updated databases/ruby-sequel to 5.86.0 [taca 2024-11-06]
