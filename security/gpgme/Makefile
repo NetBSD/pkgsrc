@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2024/11/06 21:01:45 adam Exp $
+# $NetBSD: Makefile,v 1.120 2024/11/06 22:29:57 wiz Exp $
 
 DISTNAME=	gpgme-1.24.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +34,12 @@ BUILDLINK_TRANSFORM+=	rm:-Wsuggest-override
 
 TEST_TARGET=		all
 TEST_DIRS=		tests
+
+PKGCONFIG_OVERRIDE+=	src/gpgme.pc
+PKGCONFIG_OVERRIDE+=	src/gpgme-glib.pc
+PKGCONFIG_OVERRIDE+=	lang/cpp/src/gpgmepp.pc
+
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "options.mk"
 
