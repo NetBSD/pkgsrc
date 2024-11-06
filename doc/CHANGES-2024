@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6787 2024/11/06 14:54:54 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6788 2024/11/06 14:56:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10269,3 +10269,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/gnutls to 3.8.8 [adam 2024-11-06]
 	Updated www/py-werkzeug to 3.1.2 [adam 2024-11-06]
 	Updated textproc/ruby-unicode-name to 1.13.5 [taca 2024-11-06]
+	Updated textproc/ruby-unicode-scripts to 1.11.0 [taca 2024-11-06]
