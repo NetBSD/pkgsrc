@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6800 2024/11/06 16:02:35 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6801 2024/11/06 16:05:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10282,3 +10282,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added textproc/ruby-redcarpet35 version 3.5.1 [taca 2024-11-06]
 	Updated devel/ruby-redmine50 to 5.0.10 [taca 2024-11-06]
 	Updated mail/ruby-roadie-rails to 3.1.0 [taca 2024-11-06]
+	Added mail/ruby-roadie31-rails version 3.1.0 [taca 2024-11-06]
