@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/11/04 21:07:34 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/07 10:56:43 wiz Exp $
 
-DISTNAME=	libheif-1.19.1
+DISTNAME=	libheif-1.19.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=strukturag/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -9,6 +9,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/strukturag/libheif
 COMMENT=	HEIF and AVIF file format decoder and encoder library
 LICENSE=	gnu-lgpl-v3
+
+#TEST_DEPENDS+=	catch2-[0-9]*:../../devel/catch2
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

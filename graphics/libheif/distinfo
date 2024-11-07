@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2024/11/04 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.31 2024/11/07 10:56:44 wiz Exp $
 
-BLAKE2s (libheif-1.19.1.tar.gz) = def9ac6324579bd8909cd1e770a8afd716d1647853f91a9385c2dfd67ec76745
-SHA512 (libheif-1.19.1.tar.gz) = a6c65521ff18db4fa9044edcfb64be5ff9725a44c24353f165bc90e01e466663c6ff027be5af3026d1b6b9b7a6015449de928b8f405319aaac870ce2b5ef87ed
-Size (libheif-1.19.1.tar.gz) = 1649119 bytes
+BLAKE2s (libheif-1.19.2.tar.gz) = ee4f75b2f84445d8555979ebc0e4b46d0b43262b3fb179ef02bd0ff239cfb3c4
+SHA512 (libheif-1.19.2.tar.gz) = fdb4753b57087c3dd8241b6d1378f36ea6c529e22a4b2bef3f87207676ca3aa85e123f49a8f286b15c5d8c6a7d4f38d82a1c75363e555bf2a75a81e4ce6635ab
+Size (libheif-1.19.2.tar.gz) = 1714527 bytes
