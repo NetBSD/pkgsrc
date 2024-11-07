@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2024/11/07 10:48:03 jperkin Exp $
+
+Support SunOS.
+
+--- Makefile.orig	2024-11-07 10:09:16.629799962 +0000
++++ Makefile
+@@ -7,7 +7,7 @@ vpath %.S $(SRC_PATH)
+ vpath %.rc $(SRC_PATH)
+ vpath %.pc.in $(SRC_PATH)
+ 
+-OS=$(shell uname | tr A-Z a-z | tr -d \\-0-9. | sed -E 's/^(net|open|free)bsd/bsd/')
++OS=$(shell uname | tr A-Z a-z | tr -d \\-0-9. | sed -E -e 's/^(net|open|free)bsd/bsd/' -e 's/sunos/bsd/')
+ ARCH=$(shell uname -m)
+ LIBPREFIX=lib
+ LIBSUFFIX=a
