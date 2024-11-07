@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2024/02/22 09:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/07 07:38:56 wiz Exp $
 
-DISTNAME=	babl-0.1.108
+DISTNAME=	babl-0.1.110
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/babl/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,9 @@ COMMENT=	Dynamic pixel conversion library
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
+
+USE_CC_FEATURES+=	c99
 
 MESON_ARGS+=	-Dwith-docs=false
 
@@ -42,7 +44,7 @@ PLIST.arm=		yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.babl
 PKG_SUPPORTED_OPTIONS=
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	mmx
 .endif
 
