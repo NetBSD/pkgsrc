@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/28 19:56:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/11/07 22:49:07 gutteridge Exp $
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/music21-${PKGVERSION}.dist-info/WHEEL
@@ -301,6 +301,9 @@ ${PYSITELIB}/music21/figuredBass/demo.xml
 ${PYSITELIB}/music21/figuredBass/examples.py
 ${PYSITELIB}/music21/figuredBass/examples.pyc
 ${PYSITELIB}/music21/figuredBass/examples.pyo
+${PYSITELIB}/music21/figuredBass/harmony.py
+${PYSITELIB}/music21/figuredBass/harmony.pyc
+${PYSITELIB}/music21/figuredBass/harmony.pyo
 ${PYSITELIB}/music21/figuredBass/notation.py
 ${PYSITELIB}/music21/figuredBass/notation.pyc
 ${PYSITELIB}/music21/figuredBass/notation.pyo
@@ -713,10 +716,14 @@ ${PYSITELIB}/music21/noteworthy/__init__.pyo
 ${PYSITELIB}/music21/noteworthy/binaryTranslate.py
 ${PYSITELIB}/music21/noteworthy/binaryTranslate.pyc
 ${PYSITELIB}/music21/noteworthy/binaryTranslate.pyo
+${PYSITELIB}/music21/noteworthy/constants.py
+${PYSITELIB}/music21/noteworthy/constants.pyc
+${PYSITELIB}/music21/noteworthy/constants.pyo
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1.nwc
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1.nwctxt
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1_uncompressed.nwc
 ${PYSITELIB}/music21/noteworthy/cuthbert_test1_v175.nwc
+${PYSITELIB}/music21/noteworthy/jingle_v175.nwc
 ${PYSITELIB}/music21/noteworthy/translate.py
 ${PYSITELIB}/music21/noteworthy/translate.pyc
 ${PYSITELIB}/music21/noteworthy/translate.pyo

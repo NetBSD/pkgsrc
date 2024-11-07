@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/10/14 06:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/07 22:49:07 gutteridge Exp $
 
-DISTNAME=	music21-noCorpus-9.1.0
+DISTNAME=	music21-noCorpus-9.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-noCorpus//}
-PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cuthbertLab/}
 GITHUB_PROJECT=	music21
@@ -30,11 +29,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-guppy3-[0-9]*:../../devel/py-guppy3
 
 USE_LANGUAGES=	# none
 
-# Only the latest two major versions of released Python are supported,
-# per policy on feature use.
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
-# NB lilypond must be installed in order to run the full test suite.
+# NB lilypond must be installed in order to run the test suite.
 do-test:
 	PYTHONPATH=${WRKSRC} ${PYTHONBIN} -c 'from music21.test.testSingleCoreAll import ciMain as ci; ci()'
 
