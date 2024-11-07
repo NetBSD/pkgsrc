@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6816 2024/11/07 12:56:54 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.6817 2024/11/07 12:57:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10301,3 +10301,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-regex to 2024.11.6 [adam 2024-11-07]
 	Updated graphics/libheif to 1.19.2 [wiz 2024-11-07]
 	Updated geography/gdal-lib to 3.10.0 [gdt 2024-11-07]
+	Updated geography/py-gdal to 3.10.0 [gdt 2024-11-07]
