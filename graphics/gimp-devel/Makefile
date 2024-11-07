@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/11/01 12:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/11/07 07:58:57 wiz Exp $
 
-DISTNAME=	gimp-2.99.18
-PKGNAME=	${DISTNAME:S/gimp/gimp-devel/}
-PKGREVISION=	12
+DISTNAME=	gimp-3.0.0-RC1
+PKGNAME=	${DISTNAME:S/gimp/gimp-devel/:S/-RC/rc/}
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -22,7 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 CONFLICTS+=	gimp-[0-9]*
 
-USE_LANGUAGES+=		c c++14
+USE_LANGUAGES+=		c c++
+USE_CXX_FEATURES+=	c++14
 USE_PKGLOCALEDIR=	yes
 
 USE_TOOLS+=		pkg-config perl
@@ -39,9 +39,9 @@ MESON_ARGS+=	-Dgi-docgen=disabled
 MESON_ARGS+=	-Dg-ir-doc=false
 
 # example files
-CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/extensions/org.gimp.extension.goat-exercises/*
-CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/plug-ins/test-sphere-v3/test-sphere-v3.scm
-CHECK_INTERPRETER_SKIP+=	lib/gimp/2.99/plug-ins/ts-helloworld/ts-helloworld.scm
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/extensions/org.gimp.extension.goat-exercises/*
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/test-sphere-v3/test-sphere-v3.scm
+CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/plug-ins/ts-helloworld/ts-helloworld.scm
 
 REPLACE_PYTHON+=	plug-ins/python/*.py
 REPLACE_PYTHON+=	plug-ins/python/*/*.py
@@ -51,10 +51,10 @@ REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
 # GCC 4.x C++14 support is not new enough.
 GCC_REQD+=	5
 
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/2.99
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
 EGDIR=			${PREFIX}/share/examples/gimp
 .for f in controllerrc gimp.css gimprc sessionrc templaterc toolrc unitrc
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/2.99/${f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/3.0/${f}
 .endfor
 
 # checking for xgettext version (>= 0.19)... no
@@ -70,7 +70,7 @@ TOOLS_PLATFORM.msgfmt=
 INSTALLATION_DIRS=	share/examples
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/gimp/2.99 ${DESTDIR}${PREFIX}/share/examples/gimp
+	${MV} ${DESTDIR}${PREFIX}/etc/gimp/3.0 ${DESTDIR}${PREFIX}/share/examples/gimp
 
 .include "options.mk"
 .include "../../archivers/xz/buildlink3.mk"
@@ -83,9 +83,9 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.98
+BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.110
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.48
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.50
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
