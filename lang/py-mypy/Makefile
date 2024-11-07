@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2024/10/22 08:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/11/07 09:19:37 adam Exp $
 
-DISTNAME=	mypy-1.12.1
+DISTNAME=	mypy-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mypy/}
@@ -14,8 +14,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.30.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
+TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=18.0:../../devel/py-attrs
+TEST_DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
+TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=4.0:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.10.0:../../devel/py-test-cov
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.34.0:../../devel/py-test-xdist
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c # for tests
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
