@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.neon,v 1.1 2024/11/07 08:00:20 wiz Exp $
+lib/gegl-0.4/gegl-common-arm-neon.${SOEXT}
+lib/gegl-0.4/gegl-common-cxx-arm-neon.${SOEXT}
+lib/gegl-0.4/gegl-common-gpl3-arm-neon.${SOEXT}
+lib/gegl-0.4/gegl-generated-arm-neon.${SOEXT}
+lib/gegl-0.4/gegl-transformops-arm-neon.${SOEXT}
