@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 11:34:33 nia Exp $
+$NetBSD: distinfo,v 1.11 2024/11/07 18:44:18 wiz Exp $
 
-BLAKE2s (xbacklight-1.2.3.tar.bz2) = 219f7310c04536dcc47fb58d45bc2d08c9e9ac1eaa16651af2e1f102a41940dc
-SHA512 (xbacklight-1.2.3.tar.bz2) = 717c87ce24634892fc4ac54fc59dcc0a5bc8f206aaf1d13410f95f7e4fe6e3dbc7ff8d951bcd8ea8c5e955357a00fea6ceadd4559e60b1a632e40f71290e12c7
-Size (xbacklight-1.2.3.tar.bz2) = 124611 bytes
+BLAKE2s (xbacklight-1.2.4.tar.xz) = db56d0e9ee72401dad025254f9262158032a81ded92377cc048140beeade0050
+SHA512 (xbacklight-1.2.4.tar.xz) = 6aa39d8f4430b2b9da92afff462aebbd0f3fdef50bf6a4fc3e5c08e45ae18156dc2017b8a46cd3185b2e4b1b836d2bd7379821a6591afa3d6db395247c8193e3
+Size (xbacklight-1.2.4.tar.xz) = 121276 bytes

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2022/11/09 13:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/07 18:44:18 wiz Exp $
 
-DISTNAME=	xbacklight-1.2.3
+DISTNAME=	xbacklight-1.2.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
