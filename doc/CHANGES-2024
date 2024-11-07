@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6809 2024/11/07 07:36:08 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6810 2024/11/07 07:39:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10292,3 +10292,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/gpgme to 1.24.0nb1 [wiz 2024-11-06]
 	Updated sysutils/intel-microcode-netbsd to 20241029 [msaitoh 2024-11-07]
 	Updated graphics/gegl to 0.4.50 [wiz 2024-11-07]
+	Updated graphics/babl to 0.1.110 [wiz 2024-11-07]
