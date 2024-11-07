@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.x86_64,v 1.1 2024/11/07 08:00:20 wiz Exp $
+lib/gegl-0.4/gegl-common-cxx-x86_64-v2.${SOEXT}
+lib/gegl-0.4/gegl-common-cxx-x86_64-v3.${SOEXT}
+lib/gegl-0.4/gegl-common-gpl3-x86_64-v2.${SOEXT}
+lib/gegl-0.4/gegl-common-gpl3-x86_64-v3.${SOEXT}
+lib/gegl-0.4/gegl-common-x86_64-v2.${SOEXT}
+lib/gegl-0.4/gegl-common-x86_64-v3.${SOEXT}
+lib/gegl-0.4/gegl-generated-x86_64-v2.${SOEXT}
+lib/gegl-0.4/gegl-generated-x86_64-v3.${SOEXT}
+lib/gegl-0.4/gegl-transformops-x86_64-v2.${SOEXT}
+lib/gegl-0.4/gegl-transformops-x86_64-v3.${SOEXT}
