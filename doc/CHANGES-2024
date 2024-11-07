@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6820 2024/11/07 14:40:21 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.6821 2024/11/07 14:53:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10305,3 +10305,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/R-Rcpp to 1.0.13.1 [mef 2024-11-07]
 	Updated x11/kitty to 0.37.0 [ktnb 2024-11-07]
 	Updated graphics/chafa to 1.14.5 [ktnb 2024-11-07]
+	Updated devel/meson to 1.6.0nb1 [wiz 2024-11-07]
