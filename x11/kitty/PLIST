@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/09/30 17:51:45 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/11/07 14:18:42 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -503,6 +503,8 @@ lib/kitty/kitty/terminfo.pyc
 lib/kitty/kitty/terminfo.pyo
 lib/kitty/kitty/tint_fragment.glsl
 lib/kitty/kitty/tint_vertex.glsl
+lib/kitty/kitty/trail_fragment.glsl
+lib/kitty/kitty/trail_vertex.glsl
 lib/kitty/kitty/types.py
 lib/kitty/kitty/types.pyc
 lib/kitty/kitty/types.pyo
@@ -627,7 +629,7 @@ share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
 share/doc/kitty/html/_images/social_previews/summary_build_7ee1e14e.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_67e69324.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_c9c504f3.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png
