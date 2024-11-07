@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6825 2024/11/07 18:44:27 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6826 2024/11/07 22:49:16 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10310,3 +10310,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/libheif to 1.19.2nb1 [wiz 2024-11-07]
 	Updated x11/xrandr to 1.5.3 [wiz 2024-11-07]
 	Updated x11/xbacklight to 1.2.4 [wiz 2024-11-07]
+	Updated audio/py-music21 to 9.3.0 [gutteridge 2024-11-07]
