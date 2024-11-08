@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/10/03 15:41:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/11/08 19:46:58 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go122/CONTRIBUTING.md
@@ -3228,6 +3228,7 @@ go122/src/cmd/link/internal/ld/lib.go
 go122/src/cmd/link/internal/ld/link.go
 go122/src/cmd/link/internal/ld/macho.go
 go122/src/cmd/link/internal/ld/macho_combine_dwarf.go
+go122/src/cmd/link/internal/ld/macho_update_uuid.go
 go122/src/cmd/link/internal/ld/main.go
 go122/src/cmd/link/internal/ld/msync_darwin_libc.go
 go122/src/cmd/link/internal/ld/nooptcgolink_test.go
