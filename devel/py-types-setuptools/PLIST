@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.22 2024/09/17 15:30:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/11/08 14:28:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/distutils-stubs/METADATA.toml
+${PYSITELIB}/distutils-stubs/__init__.pyi
 ${PYSITELIB}/distutils-stubs/_modified.pyi
+${PYSITELIB}/distutils-stubs/_msvccompiler.pyi
 ${PYSITELIB}/distutils-stubs/archive_util.pyi
 ${PYSITELIB}/distutils-stubs/ccompiler.pyi
 ${PYSITELIB}/distutils-stubs/cmd.pyi
@@ -16,17 +18,17 @@ ${PYSITELIB}/distutils-stubs/command/build_clib.pyi
 ${PYSITELIB}/distutils-stubs/command/build_ext.pyi
 ${PYSITELIB}/distutils-stubs/command/build_py.pyi
 ${PYSITELIB}/distutils-stubs/command/install.pyi
+${PYSITELIB}/distutils-stubs/command/install_data.pyi
 ${PYSITELIB}/distutils-stubs/command/install_lib.pyi
 ${PYSITELIB}/distutils-stubs/command/install_scripts.pyi
-${PYSITELIB}/distutils-stubs/command/py.typed
 ${PYSITELIB}/distutils-stubs/command/sdist.pyi
 ${PYSITELIB}/distutils-stubs/compat/__init__.pyi
-${PYSITELIB}/distutils-stubs/compat/py.typed
 ${PYSITELIB}/distutils-stubs/dep_util.pyi
 ${PYSITELIB}/distutils-stubs/dist.pyi
 ${PYSITELIB}/distutils-stubs/errors.pyi
 ${PYSITELIB}/distutils-stubs/extension.pyi
 ${PYSITELIB}/distutils-stubs/filelist.pyi
+${PYSITELIB}/distutils-stubs/py.typed
 ${PYSITELIB}/distutils-stubs/sysconfig.pyi
 ${PYSITELIB}/distutils-stubs/util.pyi
 ${PYSITELIB}/pkg_resources-stubs/METADATA.toml
@@ -39,7 +41,9 @@ ${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/version.pyi
 ${PYSITELIB}/pkg_resources-stubs/py.typed
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/_modified.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/_msvccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/archive_util.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/ccompiler.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/cmd.pyi
@@ -51,6 +55,7 @@ ${PYSITELIB}/setuptools-stubs/_distutils/command/build_clib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_ext.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/build_py.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/command/install_data.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_lib.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/install_scripts.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/command/sdist.pyi
