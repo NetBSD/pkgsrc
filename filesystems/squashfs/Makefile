@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/10/03 19:26:20 scole Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/08 09:07:53 tnn Exp $
 
 VERSION=	4.6.1
 DISTNAME=	squashfs-tools-${VERSION}
@@ -35,9 +35,6 @@ SQUASH_DOCS=	ACKNOWLEDGEMENTS ACTIONS-README CHANGES COPYING INSTALL \
 		README-4.6.1 TECHNICAL-INFO USAGE-4.6 USAGE-MKSQUASHFS-4.6 \
 		USAGE-SQFSCAT-4.6 USAGE-SQFSTAR-4.6 USAGE-UNSQUASHFS-4.6
 SQUASH_MAN=	mksquashfs.1 sqfscat.1 sqfstar.1 unsquashfs.1
-
-# xxx no sigtimedwait or sigwaitinfo on mac os?
-BROKEN_ON_PLATFORM=	Darwin-*-*
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
