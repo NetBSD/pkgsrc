@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/06/23 21:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/08 08:59:24 pin Exp $
 
-DISTNAME=	flawz-0.2.2
+DISTNAME=	flawz-0.3.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,7 @@ LICENSE=	mit OR apache-2.0
 
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.74.1
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
