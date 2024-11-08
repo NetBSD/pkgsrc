@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/10/20 14:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/08 23:38:05 gdt Exp $
 
-DISTNAME=	${GITHUB_PROJECT}-0.6.4
-PKGREVISION=	12
+DISTNAME=	${GITHUB_PROJECT}-0.6.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 GITHUB_PROJECT=	ocaml-cairo
@@ -38,6 +37,9 @@ pre-configure:
 # (See options.mk.)  Upstream says that lablgtk is required, but it is
 # not.
 #   https://github.com/Chris00/ocaml-cairo/issues/29
+
+do-test:
+	cd ${WRKSRC} && dune test
 
 .include "options.mk"
 .include "../../lang/ocaml/ocaml.mk"
