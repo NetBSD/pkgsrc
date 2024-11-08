@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.13 2023/03/08 17:43:53 snj Exp $
+$NetBSD: distinfo,v 1.14 2024/11/08 20:10:56 wiz Exp $
 
-BLAKE2s (xf86-video-nouveau-1.0.17.tar.bz2) = dedbf3eb60aa8fabd5c58204bd67d2449726805bceaff2024f92a9172a889f02
-SHA512 (xf86-video-nouveau-1.0.17.tar.bz2) = adba58ba5298d1a5b3f9f8540f9ef2cb2e10e47bba8e374103ec2e1f92e915f5f4393ed0021168cd649646e12315135a1efcdf77e8fb1648e1295914d87279b2
-Size (xf86-video-nouveau-1.0.17.tar.bz2) = 632535 bytes
+BLAKE2s (xf86-video-nouveau-1.0.18.tar.xz) = 135efce820deb43fb56e79d949e2be16dba1fc062b5fa7cf7303ae6962c1f00e
+SHA512 (xf86-video-nouveau-1.0.18.tar.xz) = 1330fa72f76a6fdc13e7bfa932627091d2735ddb277f6a24d4fefa79fad5f354c6bb661093f26b33770275deca435c3b018f451a6e6254fe35892c59c13e28dc
+Size (xf86-video-nouveau-1.0.18.tar.xz) = 548956 bytes
 SHA1 (patch-configure) = 21b8b7b8410fced80aef457cec1c1e3b0fed3f57
-SHA1 (patch-src_nv__driver.c) = fbd21b158bf418769db5d1b2c04f3d285734ab2c
