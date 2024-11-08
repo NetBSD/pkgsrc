@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:24:35 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/11/08 14:07:57 adam Exp $
 
-BLAKE2s (pyRFC3339-1.1.tar.gz) = 00aa70e60f08d420e3bc6509c45bbc0b5c37cd5d46cb21f81e2729cf52bdc83e
-SHA512 (pyRFC3339-1.1.tar.gz) = 958b7761fab590aa42bb57a955c5d834441f717796a452b60df21663099dcf2fc046afe60f8157fd0f1edfd95c5e9c9c5349ab10ca4078d210fc63d848496a2f
-Size (pyRFC3339-1.1.tar.gz) = 5290 bytes
+BLAKE2s (pyrfc3339-2.0.1.tar.gz) = 3220c1cfb98a0aedd31e9134bd83de4cdd0ac61771adc8f96f3cd02cd14cc0f0
+SHA512 (pyrfc3339-2.0.1.tar.gz) = b1c6768842a8fc8917280264e4fa3e2e1223399184bd7639fbb12d3bd4755ea2cadfb291efe2bf1f3b7e89e50fcb1f89a46a9e81a94cca3a5ca0aa8c0b698c69
+Size (pyrfc3339-2.0.1.tar.gz) = 4573 bytes
