@@ -1,16 +1,16 @@
-$NetBSD: patch-autosetup_autosetup-find-tclsh,v 1.2 2024/05/01 16:43:37 js Exp $
+$NetBSD: patch-autosetup_autosetup-find-tclsh,v 1.3 2024/11/08 00:47:43 js Exp $
 
 Treat CC_FOR_BUILD as a single command, not a list of separate possible
 commands.
 
---- autosetup/autosetup-find-tclsh.orig	2024-05-01 16:39:03.614902490 +0000
+--- autosetup/autosetup-find-tclsh.orig	2024-11-06 12:59:09.000000000 +0000
 +++ autosetup/autosetup-find-tclsh
-@@ -9,7 +9,7 @@ for tclsh in $autosetup_tclsh jimsh tcls
- 	{ $tclsh "$d/autosetup-test-tclsh"; } 2>/dev/null && exit 0
+@@ -8,7 +8,7 @@ for tclsh in ./jimsh0 $autosetup_tclsh j
+     { $tclsh "$d/${1-autosetup-test-tclsh}"; } 2>/dev/null && exit 0
  done
  echo 1>&2 "No installed jimsh or tclsh, building local bootstrap jimsh0"
 -for cc in ${CC_FOR_BUILD:-cc} gcc; do
 +for cc in "${CC_FOR_BUILD:-cc}" gcc; do
- 	{ $cc -o "$d/jimsh0" "$d/jimsh0.c"; } >/dev/null 2>&1 || continue
- 	"$d/jimsh0" "$d/autosetup-test-tclsh" && exit 0
+     { $cc -o jimsh0 "$d/jimsh0.c"; } >/dev/null 2>&1 || continue
+     ./jimsh0 "$d/${1-autosetup-test-tclsh}" && exit 0
  done
