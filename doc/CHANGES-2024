@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6841 2024/11/08 19:47:15 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.6842 2024/11/08 19:47:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10329,3 +10329,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated time/py-types-python-dateutil to 2.9.0.20241003 [adam 2024-11-08]
 	Updated devel/py-types-setuptools to 75.3.0.20241107 [adam 2024-11-08]
 	Updated lang/go122 to 1.22.9 [bsiegert 2024-11-08]
+	Updated lang/go123 to 1.23.3 [bsiegert 2024-11-08]
