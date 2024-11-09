@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/10/14 06:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/09 09:26:22 adam Exp $
 
-DISTNAME=	poetry-1.8.3
+DISTNAME=	poetry-1.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -30,7 +30,7 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=1.0.0:../../devel/py-requests-toolbe
 DEPENDS+=	${PYPKGPREFIX}-shellingham>=1.5:../../misc/py-shellingham
 DEPENDS+=	${PYPKGPREFIX}-tomlkit>=0.11.4:../../textproc/py-tomlkit
 DEPENDS+=	${PYPKGPREFIX}-trove-classifiers>=2022.5.19:../../misc/py-trove-classifiers
-DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.23.0:../../devel/py-virtualenv
+DEPENDS+=	${PYPKGPREFIX}-virtualenv>=20.26.6:../../devel/py-virtualenv
 TEST_DEPENDS+=	${PYPKGPREFIX}-deepdiff>=6.3:../../textproc/py-deepdiff
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpretty>=1.0:../../www/py-httpretty
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
