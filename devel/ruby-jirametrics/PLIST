@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/27 19:47:58 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/09 16:53:45 schmonz Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -47,7 +47,6 @@ ${GEM_LIBDIR}/lib/jirametrics/html/collapsible_issues_panel.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/cycletime_histogram.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/cycletime_scatterplot.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/daily_wip_chart.erb
-${GEM_LIBDIR}/lib/jirametrics/html/data_quality_report.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/estimate_accuracy_chart.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/expedited_chart.erb
 ${GEM_LIBDIR}/lib/jirametrics/html/flow_efficiency_scatterplot.erb
