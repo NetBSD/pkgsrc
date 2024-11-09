@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/08/25 06:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/09 18:43:12 prlw1 Exp $
 
-DISTNAME=	oneTBB-2021.5.0
+DISTNAME=	oneTBB-2022.0.0
 PKGNAME=	${DISTNAME:S/oneTBB-/threadingbuildingblocks-/}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oneapi-src/}
@@ -12,11 +12,13 @@ HOMEPAGE=	https://www.threadingbuildingblocks.org/
 COMMENT=	Threading Buildling Blocks
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++11
+
 # Use one build directory across platforms.
 CMAKE_CONFIGURE_ARGS+=	-DTBB_OUTPUT_DIR_BASE=pkgsrc
 CMAKE_CONFIGURE_ARGS+=	-DTBB_STRICT=OFF
+
 TEST_TARGET=	test
 # For Darwin
 TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/pkgsrc_relwithdebinfo
@@ -25,6 +27,8 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/tbb/def/lin64-
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/tbbmalloc/def/lin64-tbbmalloc.def
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/src/tbbmalloc_proxy/def/lin64-proxy.def
 
+.include "../../devel/cmake/build.mk"
+.include "../../parallel/hwloc/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
