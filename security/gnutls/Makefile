@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.257 2024/11/06 14:51:41 adam Exp $
+# $NetBSD: Makefile,v 1.258 2024/11/09 14:51:21 wiz Exp $
 
 DISTNAME=	gnutls-3.8.8
 CATEGORIES=	security devel
@@ -14,8 +14,9 @@ DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PLIST_SRC=	PLIST
 
-USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES=	gnu99
+USE_CXX_FEATURES=	c++11
 GCC_REQD+=		6
 
 USE_LIBTOOL=		yes
