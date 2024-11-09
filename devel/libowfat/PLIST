@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/11/09 19:26:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/11/09 17:05:46 schmonz Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
@@ -242,7 +242,10 @@ man/man3/iob_adds.3
 man/man3/iob_adds_free.3
 man/man3/iob_bytesleft.3
 man/man3/iob_free.3
+man/man3/iob_init.3
+man/man3/iob_init_autofree.3
 man/man3/iob_new.3
+man/man3/iob_new_autofree.3
 man/man3/iob_prefetch.3
 man/man3/iob_reset.3
 man/man3/iob_send.3
@@ -250,6 +253,7 @@ man/man3/iob_write.3
 man/man3/iom_abort.3
 man/man3/iom_add.3
 man/man3/iom_init.3
+man/man3/iom_requeue.3
 man/man3/iom_wait.3
 man/man3/iopause.3
 man/man3/mmap_private.3

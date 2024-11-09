@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2023/11/09 19:26:00 schmonz Exp $
+$NetBSD: distinfo,v 1.15 2024/11/09 17:05:46 schmonz Exp $
 
-BLAKE2s (libowfat-0.33.tar.xz) = 31706dc1a4ba7c3f17498c45b59030581152f4c4fbb680aaeda9ba377fee7230
-SHA512 (libowfat-0.33.tar.xz) = 03a56bcbc1a58e340c473d260877218a35841a6915a8369381d74463244cd754fc736006344814855c4d33598ad811d51b7fff4ba41c5e6d38d56297903dcaf5
-Size (libowfat-0.33.tar.xz) = 213920 bytes
+BLAKE2s (libowfat-0.34.tar.xz) = 033749d597626b35b39d759bc5e019331cee8d5eba823f0a95d12ecd41fcc053
+SHA512 (libowfat-0.34.tar.xz) = 5be668f78d86c8591c8f2b8067f8ce41a38891b977ab239ee64602c37232aa85c396e07fedd378be12c6730080ca2ada08964cebd6e844191fce0c8cff57bb47
+Size (libowfat-0.34.tar.xz) = 223960 bytes
 SHA1 (patch-GNUmakefile) = 5f7cbfd30e151957b18439bb3bacabe17c292d47
 SHA1 (patch-io_io__sendfile.c) = b275fadf236220207cd90e2a44f739d91656b253
 SHA1 (patch-mmap_mmap__readat.c) = bd0c8bb8a9c74e51ad55153ad9e855fb64be6f2e
