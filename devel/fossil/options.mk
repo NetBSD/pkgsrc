@@ -1,16 +1,10 @@
-# $NetBSD: options.mk,v 1.2 2024/04/02 01:09:22 js Exp $
+# $NetBSD: options.mk,v 1.3 2024/11/09 15:59:32 js Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fossil
-PKG_SUPPORTED_OPTIONS=	fossil-system-sqlite fossil-th1-hooks json openssl tcl
+PKG_SUPPORTED_OPTIONS=	fossil-th1-hooks json openssl tcl
 PKG_SUGGESTED_OPTIONS=	openssl
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mfossil-system-sqlite)
-CONFIGURE_ARGS+=	--disable-internal-sqlite
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.20.0
-.include "../../databases/sqlite3/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mfossil-th1-hooks)
 CONFIGURE_ARGS+=	--with-th1-hooks
