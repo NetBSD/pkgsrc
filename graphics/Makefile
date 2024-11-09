@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1060 2024/10/16 03:14:43 markd Exp $
+# $NetBSD: Makefile,v 1.1061 2024/11/09 13:12:08 mef Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -20,6 +20,7 @@ SUBDIR+=	PanoTools
 SUBDIR+=	R-Cairo
 SUBDIR+=	R-colorspace
 SUBDIR+=	R-colourpicker
+SUBDIR+=	R-cowplot
 SUBDIR+=	R-dichromat
 SUBDIR+=	R-effects
 SUBDIR+=	R-farver
