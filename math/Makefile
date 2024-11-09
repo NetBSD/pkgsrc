@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2024/11/09 13:35:10 mef Exp $
+# $NetBSD: Makefile,v 1.612 2024/11/09 13:44:25 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -54,6 +54,7 @@ SUBDIR+=	R-combinat
 SUBDIR+=	R-compositions
 SUBDIR+=	R-conflicted
 SUBDIR+=	R-date
+SUBDIR+=	R-doBy
 SUBDIR+=	R-dplyr
 SUBDIR+=	R-e1071
 SUBDIR+=	R-ellipsis
