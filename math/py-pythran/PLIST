@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/21 08:38:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/09 09:35:28 adam Exp $
 bin/pythran-${PYVERSSUFFIX}
 bin/pythran-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
@@ -2302,6 +2302,9 @@ ${PYSITELIB}/pythran/optimizations/copyto.pyo
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.py
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.pyc
 ${PYSITELIB}/pythran/optimizations/dead_code_elimination.pyo
+${PYSITELIB}/pythran/optimizations/fast_gexpr.py
+${PYSITELIB}/pythran/optimizations/fast_gexpr.pyc
+${PYSITELIB}/pythran/optimizations/fast_gexpr.pyo
 ${PYSITELIB}/pythran/optimizations/forward_substitution.py
 ${PYSITELIB}/pythran/optimizations/forward_substitution.pyc
 ${PYSITELIB}/pythran/optimizations/forward_substitution.pyo
@@ -2350,15 +2353,29 @@ ${PYSITELIB}/pythran/optimizations/tuple_to_shape.pyo
 ${PYSITELIB}/pythran/passmanager.py
 ${PYSITELIB}/pythran/passmanager.pyc
 ${PYSITELIB}/pythran/passmanager.pyo
+${PYSITELIB}/pythran/pythonic/__dispatch__/append.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/clear.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/conjugate.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/copy.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/count.hpp
+${PYSITELIB}/pythran/pythonic/__dispatch__/extend.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/index.hpp
+${PYSITELIB}/pythran/pythonic/__dispatch__/insert.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/pop.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/remove.hpp
+${PYSITELIB}/pythran/pythonic/__dispatch__/reverse.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/sort.hpp
+${PYSITELIB}/pythran/pythonic/__dispatch__/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/__dispatch__/update.hpp
+${PYSITELIB}/pythran/pythonic/array/array.hpp
+${PYSITELIB}/pythran/pythonic/array/array/buffer_info.hpp
+${PYSITELIB}/pythran/pythonic/array/array/byteswap.hpp
+${PYSITELIB}/pythran/pythonic/array/array/count.hpp
+${PYSITELIB}/pythran/pythonic/array/array/extend.hpp
+${PYSITELIB}/pythran/pythonic/array/array/frombytes.hpp
+${PYSITELIB}/pythran/pythonic/array/array/fromfile.hpp
+${PYSITELIB}/pythran/pythonic/array/array/fromlist.hpp
+${PYSITELIB}/pythran/pythonic/array/typecodes.hpp
 ${PYSITELIB}/pythran/pythonic/bisect/bisect.hpp
 ${PYSITELIB}/pythran/pythonic/bisect/bisect_left.hpp
 ${PYSITELIB}/pythran/pythonic/bisect/bisect_right.hpp
@@ -2488,6 +2505,7 @@ ${PYSITELIB}/pythran/pythonic/builtins/pythran/kwonly.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/pythran/len_set.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/pythran/make_shape.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/pythran/or_.hpp
+${PYSITELIB}/pythran/pythonic/builtins/pythran/restrict_assign.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/pythran/static_if.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/pythran/static_list.hpp
 ${PYSITELIB}/pythran/pythonic/builtins/range.hpp
@@ -2558,15 +2576,29 @@ ${PYSITELIB}/pythran/pythonic/cmath/tanh.hpp
 ${PYSITELIB}/pythran/pythonic/core.hpp
 ${PYSITELIB}/pythran/pythonic/functools/partial.hpp
 ${PYSITELIB}/pythran/pythonic/functools/reduce.hpp
+${PYSITELIB}/pythran/pythonic/include/__dispatch__/append.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/clear.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/conjugate.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/copy.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/count.hpp
+${PYSITELIB}/pythran/pythonic/include/__dispatch__/extend.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/index.hpp
+${PYSITELIB}/pythran/pythonic/include/__dispatch__/insert.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/pop.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/remove.hpp
+${PYSITELIB}/pythran/pythonic/include/__dispatch__/reverse.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/sort.hpp
+${PYSITELIB}/pythran/pythonic/include/__dispatch__/tolist.hpp
 ${PYSITELIB}/pythran/pythonic/include/__dispatch__/update.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/buffer_info.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/byteswap.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/count.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/extend.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/frombytes.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/fromfile.hpp
+${PYSITELIB}/pythran/pythonic/include/array/array/fromlist.hpp
+${PYSITELIB}/pythran/pythonic/include/array/typecodes.hpp
 ${PYSITELIB}/pythran/pythonic/include/bisect/bisect.hpp
 ${PYSITELIB}/pythran/pythonic/include/bisect/bisect_left.hpp
 ${PYSITELIB}/pythran/pythonic/include/bisect/bisect_right.hpp
@@ -2696,6 +2728,7 @@ ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/kwonly.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/len_set.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/make_shape.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/or_.hpp
+${PYSITELIB}/pythran/pythonic/include/builtins/pythran/restrict_assign.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/static_if.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/pythran/static_list.hpp
 ${PYSITELIB}/pythran/pythonic/include/builtins/range.hpp
@@ -3356,6 +3389,7 @@ ${PYSITELIB}/pythran/pythonic/include/string/octdigits.hpp
 ${PYSITELIB}/pythran/pythonic/include/time/sleep.hpp
 ${PYSITELIB}/pythran/pythonic/include/time/time.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/NoneType.hpp
+${PYSITELIB}/pythran/pythonic/include/types/array.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/assignable.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/attr.hpp
 ${PYSITELIB}/pythran/pythonic/include/types/bool.hpp
@@ -4033,6 +4067,7 @@ ${PYSITELIB}/pythran/pythonic/string/octdigits.hpp
 ${PYSITELIB}/pythran/pythonic/time/sleep.hpp
 ${PYSITELIB}/pythran/pythonic/time/time.hpp
 ${PYSITELIB}/pythran/pythonic/types/NoneType.hpp
+${PYSITELIB}/pythran/pythonic/types/array.hpp
 ${PYSITELIB}/pythran/pythonic/types/assignable.hpp
 ${PYSITELIB}/pythran/pythonic/types/attr.hpp
 ${PYSITELIB}/pythran/pythonic/types/bool.hpp
