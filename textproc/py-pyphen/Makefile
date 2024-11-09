@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/07/31 07:56:18 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/09 09:28:23 adam Exp $
 
-DISTNAME=	pyphen-0.16.0
+DISTNAME=	pyphen-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphen/}
@@ -17,8 +17,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
