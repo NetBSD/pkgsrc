@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2024/10/27 19:47:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/09 16:53:45 schmonz Exp $
 
-DISTNAME=	jirametrics-2.7
+DISTNAME=	jirametrics-2.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	https://github.com/mikebowler/jirametrics/
+HOMEPAGE=	https://jirametrics.org/
 COMMENT=	Export Jira data and generate reports
 LICENSE=	apache-2.0
 
