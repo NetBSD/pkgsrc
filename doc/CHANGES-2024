@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6864 2024/11/09 19:45:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6865 2024/11/09 19:47:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10356,3 +10356,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/featherpad to 1.5.2 [pin 2024-11-09]
 	Updated devel/hexpatch to 1.9.3 [pin 2024-11-09]
 	Updated shells/oh-my-posh to 24.2.2 [pin 2024-11-09]
+	Updated graphics/simp to 3.9.0 [pin 2024-11-09]
