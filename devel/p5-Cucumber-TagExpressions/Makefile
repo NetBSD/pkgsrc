@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/01/10 17:02:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/09 16:57:29 schmonz Exp $
 
-DISTNAME=	Cucumber-TagExpressions-6.1.0
+DISTNAME=	Cucumber-TagExpressions-6.1.1
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CU/CUKEBOT/}
