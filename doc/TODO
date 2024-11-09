@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25051 2024/11/05 17:43:10 wiz Exp $
+$NetBSD: TODO,v 1.25052 2024/11/09 11:04:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-7.20.0 [requires py-qt6-webengine]
+	o calibre-7.21.0 [requires py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o carbons-purple-0.2.3
@@ -1354,7 +1354,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o whowatch-1.8.5
 	o widelands-1.2
 	o windowlab-1.40
-	o wine-devel-9.20
+	o wine-devel-9.21
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.6
 	o wmi-11
@@ -1366,6 +1366,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xf86-video-fbdev-0.5.1
 	o xfpt-0.11
 	o xfractint-20.04p16
 	o xfs-1.1.1 [wip]
