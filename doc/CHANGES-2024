@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6850 2024/11/09 13:12:08 mef Exp $
+$NetBSD: CHANGES-2024,v 1.6851 2024/11/09 13:35:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10342,3 +10342,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-cached-property to 2.0.1 [adam 2024-11-09]
 	Updated devel/objfw to 1.2.1 [js 2024-11-09]
 	Added graphics/R-cowplot version 1.1.3 [mef 2024-11-09]
+	Added math/R-Deriv version 4.1.6 [mef 2024-11-09]
