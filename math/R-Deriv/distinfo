@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/09 13:33:04 mef Exp $
+
+BLAKE2s (R/Deriv_4.1.6.tar.gz) = c4d7a8219867a0c98191a74f3f03317c5f5e12d4c6091c646166b1988350e856
+SHA512 (R/Deriv_4.1.6.tar.gz) = 8a0352844e0ae78b5dcaace33fdb4f5d8deebfbfc597fb8da35ca4bdf6d4bb74050e6c6b6f509443f19d01c9c51eb9ac4f96c916f8d68668d7b9c770fd99814e
+Size (R/Deriv_4.1.6.tar.gz) = 37831 bytes
