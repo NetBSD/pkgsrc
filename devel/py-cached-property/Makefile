@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/03/29 09:34:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/09 11:24:23 adam Exp $
 
-DISTNAME=	cached-property-1.5.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	cached_property-2.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cached-property/}
 
@@ -11,14 +10,11 @@ HOMEPAGE=	https://github.com/pydanny/cached-property
 COMMENT=	Decorator for caching properties in classes
 LICENSE=	modified-bsd
 
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} != 207
-# freezegun is only available for python 3
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
-.endif
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
