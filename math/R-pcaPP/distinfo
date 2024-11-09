@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/06/08 15:18:36 mef Exp $
+$NetBSD: distinfo,v 1.2 2024/11/09 14:30:04 mef Exp $
 
-BLAKE2s (R/pcaPP_2.0-4.tar.gz) = f5fc59064c40e3e19104c931e620a756ab4ef500c4705c3a8cf12e1fc813b8b0
-SHA512 (R/pcaPP_2.0-4.tar.gz) = ca7647e87ab6dd7646cf0fc93bf38391667192bbc8ab4531f13233d6c389d2c190171e6307228b7906e760234bdef83017cbcdbbf9028604caf66ba85a8e075c
-Size (R/pcaPP_2.0-4.tar.gz) = 199329 bytes
+BLAKE2s (R/pcaPP_2.0-5.tar.gz) = ea46f9e20ffa9fb11ef92cf12d0792511e8bfb6c50a481b2667a70f344e217b1
+SHA512 (R/pcaPP_2.0-5.tar.gz) = d46ed8e2186e633a4e3900f0e6cf0cfe7001fc81f98e06012292768105629e6f2355cb3c114e636fd1cba25d50e35d42e0f7f68e3d21dfaf667508d8ba3c991c
+Size (R/pcaPP_2.0-5.tar.gz) = 200521 bytes
