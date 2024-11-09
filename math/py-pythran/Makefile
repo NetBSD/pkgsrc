@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/09 09:35:28 adam Exp $
 
-DISTNAME=	pythran-0.16.1
+DISTNAME=	pythran-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythran/}
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beniget>=0.4.0:../../devel/py-beniget
-DEPENDS+=	${PYPKGPREFIX}-gast>=0.5.0:../../devel/py-gast
+DEPENDS+=	${PYPKGPREFIX}-gast>=0.6.0:../../devel/py-gast
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-ply>=3.4:../../devel/py-ply
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=62:../../devel/py-setuptools
