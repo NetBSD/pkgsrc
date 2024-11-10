@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2020/03/26 12:46:58 nia Exp $
+$NetBSD: patch-Makefile,v 1.2 2024/11/10 16:23:49 bsiegert Exp $
 
 Respect LDFLAGS.
 
@@ -14,4 +14,4 @@ Respect LDFLAGS.
 +	$(CC) $(CFLAGS) -c sl.c
 +
 +sl: sl.o
-+	$(CC) $(LDFLAGS) -o sl sl.o -lncurses
++	$(CC) $(LDFLAGS) -o sl sl.o -lcurses
