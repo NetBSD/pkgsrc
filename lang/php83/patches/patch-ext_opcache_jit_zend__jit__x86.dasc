@@ -1,0 +1,33 @@
+$NetBSD: patch-ext_opcache_jit_zend__jit__x86.dasc,v 1.1 2024/11/10 22:09:50 prlw1 Exp $
+
+Backport of
+
+https://github.com/php/php-src/commit/2d6bd1644d104fe934a5117d232d3f50ffe9ff28
+
+to fix
+
+Cannot load lib/httpd/mod_php8.so into server: /usr/pkg/lib/httpd/mod_php8.so:
+No space available for static Thread Local Storage
+
+PR pkg/56717
+
+--- ext/opcache/jit/zend_jit_x86.dasc.orig	2024-10-22 18:39:14.000000000 +0000
++++ ext/opcache/jit/zend_jit_x86.dasc
+@@ -2896,7 +2896,7 @@ static int zend_jit_setup(void)
+ # elif defined(__GNUC__) && defined(__x86_64__)
+ 	tsrm_ls_cache_tcb_offset = tsrm_get_ls_cache_tcb_offset();
+ 	if (tsrm_ls_cache_tcb_offset == 0) {
+-#if defined(__has_attribute) && __has_attribute(tls_model) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__MUSL__)
++#if defined(__has_attribute) && __has_attribute(tls_model) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__MUSL__)
+ 		size_t ret;
+ 
+ 		asm ("movq _tsrm_ls_cache@gottpoff(%%rip),%0"
+@@ -2932,7 +2932,7 @@ static int zend_jit_setup(void)
+ # elif defined(__GNUC__) && defined(__i386__)
+ 	tsrm_ls_cache_tcb_offset = tsrm_get_ls_cache_tcb_offset();
+ 	if (tsrm_ls_cache_tcb_offset == 0) {
+-#if !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__MUSL__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__MUSL__)
+ 		size_t ret;
+ 
+ 		asm ("leal _tsrm_ls_cache@ntpoff,%0\n"
