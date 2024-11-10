@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6870 2024/11/10 07:43:45 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6871 2024/11/10 08:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10362,3 +10362,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added devel/task version 3.40.0 [iquiw 2024-11-10]
 	Updated net/p5-Net-DNS to 1.48 [wiz 2024-11-10]
 	Updated www/p5-URI to 5.31 [wiz 2024-11-10]
+	Updated x11/xtrans to 1.5.2 [wiz 2024-11-10]
