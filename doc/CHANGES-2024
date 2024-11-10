@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6878 2024/11/10 20:37:40 triaxx Exp $
+$NetBSD: CHANGES-2024,v 1.6879 2024/11/10 21:27:36 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10373,3 +10373,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake to 3.31.0 [adam 2024-11-10]
 	Updated devel/cmake-gui to 3.31.0 [adam 2024-11-10]
 	Updated emulators/wine to 9.0nb2 [triaxx 2024-11-10]
+	Updated devel/tokei to 13.0.0.alpha7 [pin 2024-11-10]
