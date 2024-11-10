@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.242 2024/10/10 08:56:32 adam Exp $
+$NetBSD: distinfo,v 1.243 2024/11/10 19:58:30 adam Exp $
 
-BLAKE2s (cmake-3.30.5.tar.gz) = a92bbb621e6dc76234835d8c0c1772aeace3149e78110913ff32afc32daeb782
-SHA512 (cmake-3.30.5.tar.gz) = 968ad4769e869378049b1d82ace98db25a6cb234b6362a51737f0d2978b8914ad42967ba112741850b23631e73b8a8876cd4f99dd0285b9da1c2bb5ea4c4ee4e
-Size (cmake-3.30.5.tar.gz) = 11502354 bytes
+BLAKE2s (cmake-3.31.0.tar.gz) = 517b2fba9cc49d11b6f4b6feb800d48632285d41386427b5855ca5fe798749c6
+SHA512 (cmake-3.31.0.tar.gz) = feea7e7e86cfbc228d83c96b84502146516d003a753a2daeeaabb4d2dedefae881c44de7e1e9b424680b0047568c12632472a0030c5ce8413033f94f9b361700
+Size (cmake-3.31.0.tar.gz) = 11699894 bytes
 SHA1 (patch-Auxiliary_CMakeLists.txt) = 7a26ef79be53b9d0370029e83f203440aa0be2a4
 SHA1 (patch-CMakeLists.txt) = 0fb79458828a021a96e350bc4cf12875914f868b
 SHA1 (patch-Modules_Compiler_GNU.cmake) = e06fc41fd7a49ca9f8edaabb95d4ab1cde784112
@@ -10,12 +10,12 @@ SHA1 (patch-Modules_FindCurses.cmake) = 98cac805a6abafcfb8b61e441b50a1d6aec27ad0
 SHA1 (patch-Modules_FindGTK2.cmake) = 51b7520d35fdec2a7bfcf494fe35ce0e3863e4ee
 SHA1 (patch-Modules_FindPythonInterp.cmake) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
 SHA1 (patch-Modules_FindPythonLibs.cmake) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
-SHA1 (patch-Modules_FindPython_Support.cmake) = 1890687ce921e80bafcd9de970183029e6451d02
+SHA1 (patch-Modules_FindPython_Support.cmake) = 1d273ebad939b6917b02c35ce7f1356f9e51e1b1
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_FortranCInterface_CMakeLists.txt) = f5477f5c94ebab82caea6db702b449032ba3dc75
 SHA1 (patch-Modules_Platform_Darwin.cmake) = 7629f034111ff64b144ff41316299d5edcfe081a
 SHA1 (patch-Modules_Platform_UnixPaths.cmake) = 911271546d3ac52be0e8000857bdb236ac50ec1c
-SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 2b9c4a0a230cd7915d1b423f87e4307af2c4cb5f
+SHA1 (patch-Source_Checks_Curses_CMakeLists.txt) = 0575cf1a01c4462fc7271d6d28529d46df291748
 SHA1 (patch-Source_Checks_Curses_CheckCurses.c) = 530ee1300595e64c97630d27792cc2dca3b9049a
 SHA1 (patch-Source_Checks_cm__cxx17__check.cpp) = d5e2708df6fcda078b1b5ea59264c663d2633ced
 SHA1 (patch-Source_Modules_CMakeBuildUtilities.cmake) = 7046fb8a0d2aadb81e027d8e2f1a4bccf2bd79cf
