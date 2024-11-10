@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/08/05 05:34:11 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/10 10:05:59 wiz Exp $
 
-DISTNAME=	wheel-0.44.0
+DISTNAME=	wheel-0.45.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65:../../devel/py-setuptools
 
 USE_LANGUAGES=	c # for tests only
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
