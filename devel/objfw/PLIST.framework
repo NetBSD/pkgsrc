@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.6 2024/08/31 13:19:34 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.7 2024/11/10 20:54:59 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -67,6 +67,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHashAlreadyCalculatedExc
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFHashNotCalculatedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINICategory.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINIFile.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFINISection.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRI.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFIRIHandler.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFInflate64Stream.h
@@ -197,6 +199,8 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTriple.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFTruncatedDataException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUDPSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXDatagramSocket.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXSequencedPacketSocket.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXSequencedPacketSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUNIXStreamSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFURIDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUUID.h
@@ -237,3 +241,28 @@ Library/Frameworks/ObjFW.framework/Versions/1/ObjFW
 Library/Frameworks/ObjFW.framework/Versions/1/Resources/Info.plist
 Library/Frameworks/ObjFW.framework/Versions/1/_CodeSignature/CodeResources
 Library/Frameworks/ObjFW.framework/Versions/Current
+Library/Frameworks/ObjFWHID.framework/Headers
+Library/Frameworks/ObjFWHID.framework/ObjFWHID
+Library/Frameworks/ObjFWHID.framework/Resources
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualSenseGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualShock4Gamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedN64Controller.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameController.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerAxis.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerButton.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerDirectionalPad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerElement.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerProfile.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHJoyConPair.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHLeftJoyCon.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHN64Controller.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHRightJoyCon.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHStadiaGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHXboxGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/ObjFWHID.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/ObjFWHID
+Library/Frameworks/ObjFWHID.framework/Versions/1/Resources/Info.plist
+Library/Frameworks/ObjFWHID.framework/Versions/1/_CodeSignature/CodeResources
+Library/Frameworks/ObjFWHID.framework/Versions/Current
