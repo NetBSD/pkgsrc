@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2024/08/07 10:40:06 adam Exp $
+$NetBSD: distinfo,v 1.34 2024/11/10 15:16:10 ryoon Exp $
 
 BLAKE2s (tdb-1.4.12.tar.gz) = 345b22c273ba283573aa76ba7e6449a3bedc62efb20e7af9fe433b65555df566
 SHA512 (tdb-1.4.12.tar.gz) = f41644ae29da7fed26959e4f2e3664e58ec65681b0b7115fbb296a7a8c5642c8190dac6e16e5704b322469466dd5aa15c1f7f72df8226ac9c695b5b10ac85b66
@@ -7,3 +7,4 @@ SHA1 (patch-buildtools_wafsamba_samba__conftests.py) = 50ff76f5b085f770751ca8bb9
 SHA1 (patch-buildtools_wafsamba_samba__install.py) = d801340617da325e3bb70a90350e45cc8e383c2d
 SHA1 (patch-buildtools_wafsamba_samba__utils.py) = 0a587421870c1974175fadbb02dde215f35938f2
 SHA1 (patch-common_mutex.c) = 4dc326c8a5e7230be8ab3ff9b6cc5548df90430f
+SHA1 (patch-lib_replace_replace.c) = aab0ec843abbbd922ca7fdd740c40a951eba0e40
