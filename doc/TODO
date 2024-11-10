@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25057 2024/11/10 10:06:10 wiz Exp $
+$NetBSD: TODO,v 1.25058 2024/11/10 12:58:45 mef Exp $
 
 Suggested new packages
 ======================
@@ -770,6 +770,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hs-pandoc-3.2
 	o html2wml-0.4.11
 	o http_load-20140814
+	o hwloc-2.11
 	o hyperscan-5.4.2
 	o ibus-hangul-1.5.4
 	o icdprog-0.5
@@ -997,6 +998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
+	o openmpi-5.0.5
 	o openslp-2.0.0
 	o openssl-3.4.0
 	o openxenmanager-0.83
