@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6869 2024/11/10 07:43:14 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6870 2024/11/10 07:43:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10361,3 +10361,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/R-pls to 2.8.5 [mef 2024-11-09]
 	Added devel/task version 3.40.0 [iquiw 2024-11-10]
 	Updated net/p5-Net-DNS to 1.48 [wiz 2024-11-10]
+	Updated www/p5-URI to 5.31 [wiz 2024-11-10]
