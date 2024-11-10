@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2024/11/01 14:10:47 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.75 2024/11/10 19:00:03 wiz Exp $
 bin/function_grep.pl
 bin/msidb
 bin/msiexec
@@ -3016,7 +3016,7 @@ man/man1/winepath.1
 man/man1/wineserver.1
 man/man1/wmc.1
 man/man1/wrc.1
-share/applications/wine.desktop
+${PLIST.desktop}share/applications/wine.desktop
 share/wine/fonts/coue1255.fon
 share/wine/fonts/coue1256.fon
 share/wine/fonts/coue1257.fon
