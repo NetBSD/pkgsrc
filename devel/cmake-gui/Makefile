@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2024/11/01 12:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/11/10 19:58:31 adam Exp $
 
-PKGREVISION= 2
 .include "../../devel/cmake/Makefile.common"
 
 PKGNAME=	cmake-gui-${CMAKE_VERSION}
 
 COMMENT=	CMake GUI
 
-USE_CMAKE=	yes
 BUILD_DIRS=	Source/QtDialog
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_QtDialog=ON
@@ -20,10 +18,12 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_USE_SYSTEM_LIBRHASH=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_USE_SYSTEM_LIBUV=ON
 
 post-build:
-	cd ${WRKSRC}/bin && ${LN} -f -s ${CMAKE} cmake
+	cd ${WRKSRC}/${CMAKE_BUILD_DIR}/bin && \
+		${LN} -f -s ${LOCALBASE}/bin/cmake cmake
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.3.3
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

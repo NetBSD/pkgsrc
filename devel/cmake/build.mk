@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.18 2024/08/25 06:18:32 wiz Exp $
+# $NetBSD: build.mk,v 1.19 2024/11/10 19:58:30 adam Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -64,7 +64,7 @@ CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 CMAKE_BUILD_DIR?=	cmake-pkgsrc-build
 CMAKE_GENERATOR?=	make
 CMAKE_BUILD_ARGS?=	-j ${_MAKE_JOBS_N:U1}
-CMAKE_INSTALL_ARGS?=	# empty
+CMAKE_INSTALL_ARGS?=	-j ${_MAKE_JOBS_N:U1}
 .if ${CMAKE_GENERATOR} == "ninja"
 TOOL_DEPENDS+=		ninja-build-[0-9]*:../../devel/ninja-build
 _CMAKE_BUILD_SYSTEM?=	Ninja
