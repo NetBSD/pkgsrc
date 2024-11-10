@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.75 2024/11/10 19:00:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.76 2024/11/10 20:37:01 triaxx Exp $
 bin/function_grep.pl
 bin/msidb
 bin/msiexec
@@ -2144,6 +2144,8 @@ lib/wine/x86_64-unix/windows.system.profile.systemmanufacturers.dll.so
 lib/wine/x86_64-unix/windows.ui.dll.so
 lib/wine/x86_64-unix/windowscodecs.dll.so
 lib/wine/x86_64-unix/windowscodecsext.dll.so
+${PLIST.alsa}lib/wine/x86_64-unix/winealsa.drv.so
+${PLIST.alsa}lib/wine/x86_64-unix/winealsa.so
 lib/wine/x86_64-unix/wineboot.exe.so
 lib/wine/x86_64-unix/winebrowser.exe.so
 lib/wine/x86_64-unix/winebus.so
@@ -2875,6 +2877,7 @@ lib/wine/x86_64-windows/windows.system.profile.systemmanufacturers.dll
 lib/wine/x86_64-windows/windows.ui.dll
 lib/wine/x86_64-windows/windowscodecs.dll
 lib/wine/x86_64-windows/windowscodecsext.dll
+${PLIST.alsa}lib/wine/x86_64-windows/winealsa.drv
 lib/wine/x86_64-windows/wineboot.exe
 lib/wine/x86_64-windows/winebrowser.exe
 lib/wine/x86_64-windows/winebus.sys
