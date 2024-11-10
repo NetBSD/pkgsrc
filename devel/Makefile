@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4358 2024/11/05 17:08:40 adam Exp $
+# $NetBSD: Makefile,v 1.4359 2024/11/10 05:14:56 iquiw Exp $
 #
 
 COMMENT=	Development utilities
@@ -3557,6 +3557,7 @@ SUBDIR+=	tack
 SUBDIR+=	tailor
 SUBDIR+=	talloc
 SUBDIR+=	taplo-lsp
+SUBDIR+=	task
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tclap
