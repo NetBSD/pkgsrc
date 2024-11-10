@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2024/10/24 17:23:43 adam Exp $
+$NetBSD: distinfo,v 1.110 2024/11/10 07:41:07 wiz Exp $
 
 BLAKE2s (samba-4.21.1.tar.gz) = a32aec50178ecc481ac128996dc1d311cba0ca785030dfd381f2548e2a412af7
 SHA512 (samba-4.21.1.tar.gz) = a3fb57d9dc72e7b924995cc59887535a75f4462d3afb68098321efeb15541e372071e3f8277006f9e792491e25a0f05127c2929fd2f22d9ee7dace3c13088cdb
@@ -11,6 +11,7 @@ SHA1 (patch-buildtools_wafsamba_wscript) = 0ca4c3a9d2e07f9165784e495f6f6b2b21db2
 SHA1 (patch-dynconfig_wscript) = 1858e5fcca913f21aa3e7868d9760b9c40c9f5c4
 SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_pthreadpool_pthreadpool.c) = 4b0c3d49d578b5ab12f5bad1ebeb50efb43e756c
+SHA1 (patch-lib_replace_replace.c) = bd353a060a921cfed1e06c0228f3a76707269d80
 SHA1 (patch-lib_replace_system_passwd.h) = 652be067b2560310ce3a4bbf37c24cb2fa8eb82d
 SHA1 (patch-lib_tdb_common_mutex.c) = 74162bf9dfd440fc0b9782982e83776c9671a983
 SHA1 (patch-lib_tevent_tevent.c) = 109e7a516dc291372e982b9f21c6ce8c0e5d3ca4
