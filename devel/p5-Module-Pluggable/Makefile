@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/11/04 19:08:16 pgoyette Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/10 17:39:40 pgoyette Exp $
 #
 
 EXTRACT_USING=  gtar	# XXX avoid extended attributes in distfile
+			# https://rt.cpan.org/Ticket/Display.html?id=156825
 
 DISTNAME=	Module-Pluggable-6.2
 PKGNAME=	p5-${DISTNAME}
