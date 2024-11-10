@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/11/10 05:12:29 iquiw Exp $
+bin/task
+share/bash-completion/completions/task
+share/zsh/site-functions/_task
