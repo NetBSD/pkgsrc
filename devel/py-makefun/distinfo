@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/07/16 03:41:29 adam Exp $
+$NetBSD: distinfo,v 1.4 2024/11/10 09:16:24 adam Exp $
 
-BLAKE2s (makefun-1.15.4.tar.gz) = 1aee2ddfaf7dec20e1c35369e5b9aa16ca6f8f357502825598fdc9d163b1d94a
-SHA512 (makefun-1.15.4.tar.gz) = eb6ed268137726ed306c7b118307ada365832d6f17a50da2804cc55708d114ad7e630ed4fdbd15a411d92ce601c4cc10d671d1ade7e270349009c10fd82618d7
-Size (makefun-1.15.4.tar.gz) = 72160 bytes
+BLAKE2s (makefun-1.15.6.tar.gz) = 5ee98f968b6b1cf17caa206ac3cee792a3adcbdb028b948d9cd528daf1361f1b
+SHA512 (makefun-1.15.6.tar.gz) = b495d28d838989cd67a219be1d4b8f3a1b5a03aeceb76c6445074d154b1b7c65a9bbc9ae8a3ee0aa6e991a9572f43ba93ed949bfccb97dc557250e4b735f0c2a
+Size (makefun-1.15.6.tar.gz) = 72583 bytes
