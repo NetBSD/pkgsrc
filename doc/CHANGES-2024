@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6907 2024/11/11 22:30:35 adam Exp $
+$NetBSD: CHANGES-2024,v 1.6908 2024/11/11 22:45:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10422,3 +10422,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated parallel/py-ipyparallel to 9.0.0 [adam 2024-11-11]
 	Updated textproc/py-tomli to 2.1.0 [adam 2024-11-11]
 	Updated devel/py-setuptools to 75.4.0 [adam 2024-11-11]
+	Updated devel/py-test-flake8 to 1.3.0 [adam 2024-11-11]
+	Updated devel/py-test-cov to 6.0.0 [adam 2024-11-11]
