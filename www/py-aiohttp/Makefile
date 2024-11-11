@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/10/14 16:56:43 adam Exp $
+# $NetBSD: Makefile,v 1.75 2024/11/11 07:29:15 wiz Exp $
 
 DISTNAME=	aiohttp-3.10.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiohappyeyeballs>=2.3.0:../../net/py-aiohappyeyeballs
 DEPENDS+=	${PYPKGPREFIX}-aiosignal>=1.1.2:../../devel/py-aiosignal
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.3.0:../../devel/py-attrs

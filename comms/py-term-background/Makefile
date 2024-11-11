@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/03/23 06:48:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=	term-background-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/shell-${DISTNAME}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/10/14 06:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:14 wiz Exp $
 
 DISTNAME=	MechanicalSoup-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Library for automating interaction with websites
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.7:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests

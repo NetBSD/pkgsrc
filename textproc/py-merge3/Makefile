@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/05/22 07:04:07 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	merge3-0.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python implementation of 3-way merge
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # or later
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

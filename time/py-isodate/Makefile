@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/14 09:58:31 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:12 wiz Exp $
 
 DISTNAME=	isodate-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2024/10/19 05:47:43 adam Exp $
+# $NetBSD: Makefile,v 1.121 2024/11/11 07:28:54 wiz Exp $
 
 DISTNAME=	cryptography-43.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0 OR modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.7.0:../../devel/py-setuptools-rust
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-${PKGVERSION_NOREV}:../../security/py-cryptography_vectors

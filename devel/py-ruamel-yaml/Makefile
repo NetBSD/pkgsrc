@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/02/07 09:00:10 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/11 07:28:22 wiz Exp $
 
 DISTNAME=	ruamel.yaml-0.18.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1}
@@ -11,7 +11,6 @@ COMMENT=	YAML parser/emitter
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml-clib>=0.2.7:../../devel/py-ruamel-yaml-clib
 
 USE_LANGUAGES=	# none

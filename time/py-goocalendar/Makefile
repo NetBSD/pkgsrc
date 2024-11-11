@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/10/29 20:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/11 07:29:12 wiz Exp $
 
 DISTNAME=	GooCalendar-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Calendar widget using GooCanvas
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-gobject3>=3.20:../../devel/py-gobject3
 
 USE_LANGUAGES=	# none

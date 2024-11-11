@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/09/16 08:29:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	reprotest-0.7.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Build packages and check them for reproducibility
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-distro-[0-9]*:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-rstr-[0-9]*:../../devel/py-rstr
 # compare

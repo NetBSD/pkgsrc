@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/11/27 20:29:30 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:00 wiz Exp $
 
 DISTNAME=	allpairspy-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pairwise test combinations generator
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

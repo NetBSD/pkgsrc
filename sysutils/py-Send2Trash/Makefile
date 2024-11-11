@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/04/08 08:09:14 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:58 wiz Exp $
 
 DISTNAME=	Send2Trash-1.8.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Send file to trash
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

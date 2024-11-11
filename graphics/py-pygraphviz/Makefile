@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/10/14 06:45:45 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	pygraphviz-1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python interface to the Graphviz package
 LICENSE=	original-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	pkg-config
 

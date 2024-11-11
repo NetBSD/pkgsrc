@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=	zulip-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Bindings for the Zulip message API
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-distro>=0:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-matrix-nio>=0:../../chat/py-matrix-nio

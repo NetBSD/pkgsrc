@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/06/26 21:38:02 adam Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/11 07:28:01 wiz Exp $
 
 DISTNAME=	autopep8-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Automatic formatter of Python code to conform to PEP 8
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.12.0:../../devel/py-codestyle
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/10/14 06:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	sphinxcontrib_bibtex-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Sphinx extension for BibTeX style citations
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.5:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-pybtex>=0.24:../../textproc/py-pybtex

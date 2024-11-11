@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/01 16:00:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	dill-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Serialize all of Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/11 13:48:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:06 wiz Exp $
 
 DISTNAME=	debugpy-1.8.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Implementation of the Debug Adapter Protocol for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PLIST_VARS+=	frame_eval pydevd_cython
 .include "../../lang/python/pyversion.mk"

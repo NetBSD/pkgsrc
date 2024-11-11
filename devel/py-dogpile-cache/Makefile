@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/14 06:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:07 wiz Exp $
 
 DISTNAME=	dogpile.cache-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/}
@@ -11,7 +11,6 @@ COMMENT=	Caching front-end based on the Dogpile lock
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-stevedore>=3.0.0:../../devel/py-stevedore
 TEST_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako

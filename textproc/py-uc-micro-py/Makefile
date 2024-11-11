@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/11 16:36:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	uc-micro-py-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Micro subset of unicode data files for linkify-it-py project
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

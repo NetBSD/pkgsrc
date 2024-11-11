@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/09/16 11:41:12 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	gunicorn-23.0.0
 CATEGORIES=	www python
@@ -11,7 +11,6 @@ COMMENT=	Python WSGI HTTP server
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 TEST_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/04/10 09:21:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	types-toml-0.10.8.20240310
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Typing stubs for toml
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

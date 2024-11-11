@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/10/13 08:56:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:14 wiz Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,7 +21,6 @@ PYTHON_SELF_CONFLICT=	yes
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 # \todo Understand upstream's dependency rules and add/fix.
 # (Upstream's docs are very confusing as they are not listed in a

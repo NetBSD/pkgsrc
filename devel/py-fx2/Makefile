@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/13 15:25:56 js Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:09 wiz Exp $
 
 DISTNAME=	fx2-0.13
 PKGREVISION=	2
@@ -16,7 +16,6 @@ LICENSE=	0-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-libusb1-[0-9]*:../../devel/py-libusb1
 
 USE_LANGUAGES=	# none

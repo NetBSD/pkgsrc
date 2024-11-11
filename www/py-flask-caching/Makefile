@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/10 11:16:02 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:22 wiz Exp $
 
 DISTNAME=	flask_caching-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 WHEEL_NAME=	Flask_Caching-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cachelib>=0.9.0:../../devel/py-cachelib
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 TEST_DEPENDS+=	${PYPKGPREFIX}-asgiref-[0-9]*:../../www/py-asgiref

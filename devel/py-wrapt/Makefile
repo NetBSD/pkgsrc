@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/05 22:15:24 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:30 wiz Exp $
 
 DISTNAME=	wrapt-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python module for decorators, wrappers and monkey patching
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

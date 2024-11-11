@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/08/10 09:34:48 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/11 07:29:17 wiz Exp $
 
 DISTNAME=	daphne-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP, HTTP2 and WebSocket protocol server for ASGI
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.5.2:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-autobahn>=22.4.2:../../www/py-autobahn
 DEPENDS+=	${PYPKGPREFIX}-twisted>=22.4:../../net/py-twisted

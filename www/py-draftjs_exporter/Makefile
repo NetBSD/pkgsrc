@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/09 11:57:57 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:21 wiz Exp $
 
 DISTNAME=	draftjs_exporter-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library to convert Draft.js raw ContentState to HTML
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # html5lib
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.4.1:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-html5lib>=0.999:../../textproc/py-html5lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 07:25:52 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	treq-24.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP library for Twisted
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=35.0.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=21.0.0:../../www/py-hyperlink
 DEPENDS+=	${PYPKGPREFIX}-incremental>=21.3.0:../../devel/py-incremental

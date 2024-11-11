@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2024/10/29 08:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.78 2024/11/11 07:28:48 wiz Exp $
 
 DISTNAME=	grpcio_tools-1.67.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	Protobuf code generator for gRPC
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-grpcio>=${PKGVERSION_NOREV}:../../net/py-grpcio
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=5.26.1:../../devel/py-protobuf
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools

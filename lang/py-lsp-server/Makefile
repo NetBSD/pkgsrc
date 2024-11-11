@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:37 wiz Exp $
 
 DISTNAME=	python_lsp_server-1.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docstring-to-markdown-[0-9]*:../../textproc/py-docstring-to-markdown
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.17.2:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-lsp-jsonrpc>=1.1.0:../../textproc/py-lsp-jsonrpc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/05/05 22:19:47 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	poyo-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	YAML Parser for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

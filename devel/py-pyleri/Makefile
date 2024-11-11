@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/17 10:19:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pyleri-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python Left-Right Parser
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

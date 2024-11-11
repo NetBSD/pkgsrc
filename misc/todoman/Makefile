@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/08/10 15:55:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/11 07:28:45 wiz Exp $
 
 DISTNAME=		todoman-4.0.0
 PKGREVISION=		4
@@ -14,7 +14,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log-[0-9]*:../../devel/py-click-log

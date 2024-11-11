@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 06:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:28:39 wiz Exp $
 
 DISTNAME=	arviz-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://python.arviz.org/
 COMMENT=	Exploratory analysis of Bayesian models
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dm-tree>=0.1.8:../../devel/py-dm-tree
 DEPENDS+=	${PYPKGPREFIX}-h5netcdf>=1.0.2:../../devel/py-h5netcdf
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.5:../../graphics/py-matplotlib

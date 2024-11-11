@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/05 20:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:05 wiz Exp $
 
 DISTNAME=	pycparser-2.22
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -12,7 +12,6 @@ COMMENT=	C parser in Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

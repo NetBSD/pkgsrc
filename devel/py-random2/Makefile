@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/12/31 21:51:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:21 wiz Exp $
 
 DISTNAME=	random2-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python 3 compatible port of Python 2 random module
 LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

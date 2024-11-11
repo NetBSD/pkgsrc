@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/14 05:13:13 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	lxml_html_clean-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	HTML cleaner from lxml project
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 .include "../../lang/python/wheel.mk"

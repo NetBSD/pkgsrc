@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/14 06:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	twine-5.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-keyring>=15.1:../../security/py-keyring
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.8.1:../../devel/py-pkginfo

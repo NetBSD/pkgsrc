@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/04/12 07:54:31 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	django-countries-7.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Provides a country field for Django models
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=48:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref-[0-9]*:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions

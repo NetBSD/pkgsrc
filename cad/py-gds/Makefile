@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/10/14 06:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:27:53 wiz Exp $
 
 DISTNAME=	gdspy-1.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ COMMENT=	Python module for creating GDSII stream files
 LICENSE=	boost-license
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 

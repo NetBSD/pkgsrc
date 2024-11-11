@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/09 11:15:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:57 wiz Exp $
 
 DISTNAME=	bashlex-0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python parser for bash
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

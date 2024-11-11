@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/08/23 13:26:10 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:28:24 wiz Exp $
 
 DISTNAME=	pytest_asyncio-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=51.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-test>=8.2.0:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=6.2:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=5.7.1:../../devel/py-hypothesis

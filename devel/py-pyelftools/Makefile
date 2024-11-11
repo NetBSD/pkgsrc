@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/03/23 07:21:47 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pyelftools-0.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library for analyzing ELF files and DWARF debugging information
 LICENSE=	public-domain
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

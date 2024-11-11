@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/10 08:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:06 wiz Exp $
 
 DISTNAME=	odfpy-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python API and tools to manipulate OpenDocument files
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 
 # as of 1.4.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/11/07 14:52:52 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/11 07:27:59 wiz Exp $
 
 DISTNAME=	meson-1.6.0
 PKGREVISION=	1
@@ -11,7 +11,6 @@ COMMENT=	Open source build system meant to be fast and user friendly
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ninja-build>=1.7:../../devel/ninja-build
 
 CONFLICTS+=	py[0-9]*-meson-[0-9]*

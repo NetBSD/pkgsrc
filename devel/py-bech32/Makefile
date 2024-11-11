@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/09/17 22:13:06 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:01 wiz Exp $
 
 DISTNAME=	bech32-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Bech32 reference implementation
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

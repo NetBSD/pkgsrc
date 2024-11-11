@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2024/10/22 08:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2024/11/11 07:28:59 wiz Exp $
 
 DISTNAME=	psutil-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Cross-platform process and system utilities module for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=43:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/22 13:13:46 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:35 wiz Exp $
 
 DISTNAME=	objgraph-3.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Draws Python object reference graphs with graphviz
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/07/20 06:30:18 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:25 wiz Exp $
 
 DISTNAME=	livereload-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python web server for developers
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 USE_LANGUAGES=	# none

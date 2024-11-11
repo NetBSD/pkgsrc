@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/16 14:16:11 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:27:56 wiz Exp $
 
 DISTNAME=	dbf-0.99.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure python package for reading/writing dBase, FoxPro, and Visual FoxPr
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aenum-[0-9]*:../../devel/py-aenum
 
 USE_LANGUAGES=	# none

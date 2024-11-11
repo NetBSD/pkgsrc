@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/22 09:56:57 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:55 wiz Exp $
 
 DISTNAME=	nvdlib-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	National Vulnerability Database CPE/CVE API Library for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.24.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-responses>=0.18:../../net/py-responses
 

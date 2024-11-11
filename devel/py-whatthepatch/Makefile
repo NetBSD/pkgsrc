@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/07/20 06:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:30 wiz Exp $
 
 DISTNAME=	whatthepatch-1.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Patch parsing and application library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

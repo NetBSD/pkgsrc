@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/10/24 07:31:55 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:29:17 wiz Exp $
 
 DISTNAME=	django_admin_sortable2-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Generic drag-and-drop sorting for Views in the Django Admin
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none

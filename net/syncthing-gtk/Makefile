@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/11/01 12:54:02 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.5
 PKGREVISION=	4
@@ -12,7 +12,6 @@ COMMENT=	GTK3 & Python based GUI for Syncthing
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc

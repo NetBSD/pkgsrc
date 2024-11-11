@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/10/14 06:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/11 07:28:17 wiz Exp $
 
 DISTNAME=	pbr-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python Build Reasonableness
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.5:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures>=3.0.0:../../devel/py-fixtures
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pre-commit>=2.6.0:../../wip/py-pre-commit

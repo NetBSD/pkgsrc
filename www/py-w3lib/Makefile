@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/06/12 11:51:00 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:28 wiz Exp $
 
 DISTNAME=	w3lib-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library of web-related functions
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

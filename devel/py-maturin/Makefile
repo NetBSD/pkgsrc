@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/01 08:48:03 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:15 wiz Exp $
 
 DISTNAME=	maturin-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.4.0:../../devel/py-setuptools-rust
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.36.2:../../devel/py-wheel
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311

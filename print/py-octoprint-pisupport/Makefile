@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/09/18 08:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	OctoPrint-PiSupport-2023.10.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	gnu-agpl-v3
 WHEEL_NAME=	${DISTNAME:S/-/_/}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

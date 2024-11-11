@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	twython-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper for the Twitter API
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oauthlib
 

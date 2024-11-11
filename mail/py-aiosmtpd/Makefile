@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/24 15:06:46 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	aiosmtpd-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Asyncio based SMTP server
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.23.6:../../devel/py-test-asyncio

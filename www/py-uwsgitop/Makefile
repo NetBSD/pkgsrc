@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/04/24 08:07:26 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:29:28 wiz Exp $
 
 DISTNAME=	uwsgitop-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Command to interface with the uWSGI stats server
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

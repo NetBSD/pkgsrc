@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/01/30 19:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:21 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -13,7 +13,6 @@ COMMENT=	Python bindings for Valgrind's VEX IR
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=59:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bitstring-[0-9]*:../../devel/py-bitstring
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.3:../../devel/py-cffi
 

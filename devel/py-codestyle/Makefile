@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/07 10:44:44 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:03 wiz Exp $
 
 DISTNAME=	pycodestyle-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Python style guide checker
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

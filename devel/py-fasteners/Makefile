@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 19:56:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:08 wiz Exp $
 
 DISTNAME=	fasteners-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python package providing useful locks
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

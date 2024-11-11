@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/04/30 13:36:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:10 wiz Exp $
 
 DISTNAME=	hyperscan-0.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	CPython extension for hyperscan
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2024/11/01 12:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	asciidoc-10.2.1
 PKGREVISION=	2
@@ -11,7 +11,6 @@ COMMENT=	ASCII to formatted document converter
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 

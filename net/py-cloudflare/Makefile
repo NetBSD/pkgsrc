@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/10 07:10:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	cloudflare-2.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper for the Cloudflare v4 API
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jsonlines-[0-9]*:../../textproc/py-jsonlines
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml

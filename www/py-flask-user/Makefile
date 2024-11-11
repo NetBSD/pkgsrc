@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/01/28 20:34:42 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:29:23 wiz Exp $
 
 DISTNAME=	Flask-User-1.0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Customizable user account management for Flask
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bcrypt>=2.0:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-flask>=0.9:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.2:../../www/py-flask-login

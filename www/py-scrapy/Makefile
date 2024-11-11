@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/05/14 19:15:59 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	scrapy-2.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 WHEEL_NAME=	Scrapy-${PKGVERSION_NOREV}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.9.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7.1:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-itemadapter>=0.1.0:../../textproc/py-itemadapter

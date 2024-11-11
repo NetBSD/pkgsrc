@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/06/11 09:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:56 wiz Exp $
 
 DISTNAME=	requests_ntlm-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	NTLM authentication handler for python-requests
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pyspnego>=0.4.0:../../security/py-pyspnego
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/11/05 16:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	sphinxygen-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Script to generate Sphinx ReST from Doxygen XML
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

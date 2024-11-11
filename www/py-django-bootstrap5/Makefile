@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/09/18 13:11:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	django_bootstrap5-24.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Bootstrap 5 for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none

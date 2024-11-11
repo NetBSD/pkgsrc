@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/10/14 07:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/11 07:27:58 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.41.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Various utility functions for SQLAlchemy
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0:../../databases/py-sqlalchemy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2

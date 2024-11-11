@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/02/23 12:31:30 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pypi-cli-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Command-line interface to the Python Package Index
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click>=3.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.2:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.3.0:../../devel/py-requests

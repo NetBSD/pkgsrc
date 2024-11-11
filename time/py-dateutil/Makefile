@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/04/30 09:40:22 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:29:12 wiz Exp $
 
 DISTNAME=	python-dateutil-2.9.0.post0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//:S/post/0.0./}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=2.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun

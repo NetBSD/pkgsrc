@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/11/05 21:01:40 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/11 07:29:16 wiz Exp $
 
 DISTNAME=	bleach-6.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Easy whitelist-based HTML-sanitizing tool
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-webencodings-[0-9]*:../../textproc/py-webencodings
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/01/15 08:35:39 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:15 wiz Exp $
 
 DISTNAME=	python-memcached-1.62
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
@@ -11,7 +11,6 @@ COMMENT=	Python memcached client
 LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

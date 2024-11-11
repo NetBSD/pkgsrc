@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/10/31 07:57:49 adam Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/11 07:29:30 wiz Exp $
 
 DISTNAME=	yarl-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-expandvars-[0-9]*:../../misc/py-expandvars
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-multidict>=4.0:../../databases/py-multidict
 DEPENDS+=	${PYPKGPREFIX}-propcache>=0.2.0:../../devel/py-propcache

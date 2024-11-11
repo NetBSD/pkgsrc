@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/14 06:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:00 wiz Exp $
 
 .include "version.mk"
 
@@ -30,7 +30,6 @@ MAKE_FLAGS+=	LIBDIR=${LIBDIR:Q}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/${PYSITELIB:Q}/pyvex/lib
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=59:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-CppHeaderParser-[0-9]*:../../devel/py-CppHeaderParser
 DEPENDS+=	${PYPKGPREFIX}-ailment>=${ANGR_VERSION}:../../devel/py-ailment
 DEPENDS+=	${PYPKGPREFIX}-archinfo>=${ANGR_VERSION}:../../devel/py-archinfo

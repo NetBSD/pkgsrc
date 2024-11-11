@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/19 04:27:20 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:35 wiz Exp $
 
 DISTNAME=	matplotlib_inline-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Inline Matplotlib backend for Jupyter
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-traitlets>0:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none

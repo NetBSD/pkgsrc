@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/16 21:10:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	csvtomd-0.2.1
 CATEGORIES=	textproc
@@ -10,7 +10,6 @@ COMMENT=	Convert your CSV files into Markdown tables
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pandocfilters-[0-9]*:../../textproc/py-pandocfilters
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sure-[0-9]*:../../devel/py-sure
 

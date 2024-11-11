@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/30 13:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:29:30 wiz Exp $
 
 DISTNAME=	python-xlib-0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-x/X/}
@@ -14,7 +14,6 @@ COMMENT=	XLib in pure Python
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/10/14 06:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:50 wiz Exp $
 
 DISTNAME=	pypiserver-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Minimal PyPI server for use with pip/easy_install
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.25.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-pip>=7:../../devel/py-pip

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/08/04 07:30:12 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	pyjwt-2.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyjwt/JWT/}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	${DISTNAME:S/pyjwt/PyJWT/}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/10/14 14:53:17 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pygit2-1.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python bindings to libgit2
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.16.0:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 

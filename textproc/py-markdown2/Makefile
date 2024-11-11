@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/10/19 16:27:08 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	markdown2-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fast and complete Python implementation of Markdown
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

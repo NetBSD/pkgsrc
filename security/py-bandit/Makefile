@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:54 wiz Exp $
 
 DISTNAME=	bandit-1.7.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-gitpython>=3.1.30:../../devel/py-gitpython
 DEPENDS+=	${PYPKGPREFIX}-rich-[0-9]*:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-stevedore>=1.20.0:../../devel/py-stevedore

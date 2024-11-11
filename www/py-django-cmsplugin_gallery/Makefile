@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/12/07 17:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	cmsplugin_gallery-2.0.3
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	DjangoCMS image gallery plugin
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django-cms>=3.9.0:../../www/py-django-cms
 DEPENDS+=	${PYPKGPREFIX}-django-filer>=1.2.4:../../www/py-django-filer
 DEPENDS+=	${PYPKGPREFIX}-django-inline-ordering>=1.0.2:../../www/py-django-inline-ordering

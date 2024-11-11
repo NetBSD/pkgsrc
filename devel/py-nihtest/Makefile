@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:16 wiz Exp $
 
 DISTNAME=	nihtest-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Testing tool for command line utilities
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 USE_TOOLS+=	cmake:test

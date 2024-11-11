@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/09/17 15:28:06 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:23 wiz Exp $
 
 DISTNAME=	sentry_sdk-2.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Python SDK for Sentry.io
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi>0:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.26.11:../../www/py-urllib3
 

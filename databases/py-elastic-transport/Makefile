@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/03 19:27:17 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:27:57 wiz Exp $
 
 DISTNAME=	elastic_transport-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Transport classes and utilities shared among Python Elastic libraries
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.26.2:../../www/py-urllib3
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp

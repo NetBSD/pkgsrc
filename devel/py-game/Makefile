@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/10/22 11:57:19 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/11/11 07:28:09 wiz Exp $
 
 DISTNAME=	pygame-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Set of Python modules designed for writing games
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	pkg-config
 

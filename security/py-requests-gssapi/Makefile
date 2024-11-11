@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/02/16 19:13:22 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:56 wiz Exp $
 
 DISTNAME=	requests-gssapi-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python requests GSSAPI authentication library
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-gssapi-[0-9]*:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-requests>=1.1.0:../../devel/py-requests
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/06/07 05:33:07 adam Exp $
+# $NetBSD: Makefile,v 1.37 2024/11/11 07:29:28 wiz Exp $
 
 DISTNAME=	tornado-6.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fast and non-blocking web framework
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

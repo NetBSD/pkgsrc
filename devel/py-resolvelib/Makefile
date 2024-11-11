@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/31 08:39:42 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:22 wiz Exp $
 
 DISTNAME=	resolvelib-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Resolve abstract dependencies into concrete ones
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=62:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 
 USE_LANGUAGES=	# none

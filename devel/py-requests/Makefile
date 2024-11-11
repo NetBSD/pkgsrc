@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/09/29 15:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2024/11/11 07:28:22 wiz Exp $
 
 DISTNAME=	requests-2.32.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	HTTP library, written in Python, for human beings
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi>=2017.4.17:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer>=2:../../converters/py-charset-normalizer
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.5:../../www/py-idna

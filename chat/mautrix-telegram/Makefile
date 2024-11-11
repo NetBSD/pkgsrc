@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/10/16 16:40:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/11 07:27:53 wiz Exp $
 
 DISTNAME=	telegram-0.11.3
 PKGNAME=	mautrix-${DISTNAME}
@@ -14,7 +14,6 @@ COMMENT=	Matrix-Telegram hybrid puppeting/relaybot bridge
 LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15.35:../../devel/py-ruamel-yaml
 DEPENDS+=	${PYPKGPREFIX}-magic>=0.4<0.5:../../sysutils/py-magic

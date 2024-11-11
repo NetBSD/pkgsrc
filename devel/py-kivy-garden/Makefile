@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/08 20:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:14 wiz Exp $
 
 DISTNAME=	Kivy%20Garden-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/%20/-/}
@@ -11,7 +11,6 @@ COMMENT=	Garden tool for kivy flowers
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

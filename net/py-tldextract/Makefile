@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/11/05 08:37:31 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	tldextract-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Accurately separate the TLD from the registered domain and subdomains
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.0.8:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests

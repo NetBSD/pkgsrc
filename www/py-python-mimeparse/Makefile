@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/09/18 09:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	python_mimeparse-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Module provides basic functions for parsing mime-type names
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.34:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

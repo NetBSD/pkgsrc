@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:06 wiz Exp $
 
 DISTNAME=	doc8-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.33.6:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-restructuredtext_lint>=0.7:../../devel/py-restructuredtext_lint

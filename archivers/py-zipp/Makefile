@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/09/13 19:22:58 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/11 07:27:51 wiz Exp $
 
 DISTNAME=	zipp-3.20.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.functools-[0-9]*:../../devel/py-jaraco.functools
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.itertools-[0-9]*:../../devel/py-jaraco.itertools
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test-[0-9]*:../../devel/py-jaraco.test

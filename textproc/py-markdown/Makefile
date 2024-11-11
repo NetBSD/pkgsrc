@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/08/18 19:25:46 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	markdown-3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 WHEEL_NAME=	Markdown-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none

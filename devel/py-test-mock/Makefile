@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/03/24 17:43:21 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/11 07:28:25 wiz Exp $
 
 DISTNAME=	pytest-mock-3.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-test>=6.2.5:../../devel/py-test
 
 USE_LANGUAGES=	# none

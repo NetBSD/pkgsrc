@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/05 09:08:14 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	django_cors_headers-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Django application for handling headers required for CORS
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.6:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 

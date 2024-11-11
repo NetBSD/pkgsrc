@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/10 08:25:42 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:21 wiz Exp $
 
 DISTNAME=	pyvcd-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

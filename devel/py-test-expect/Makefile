@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/30 08:57:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:25 wiz Exp $
 
 DISTNAME=	pytest-expect-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Py.test plugin storing test expectations by saving the set of failing t
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.3:../../devel/py-hatch-vcs
 DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-u-msgpack>=0:../../devel/py-u-msgpack

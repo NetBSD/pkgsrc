@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/10/14 06:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	numexpr-2.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Numerical expression evaluator for NumPy
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 REPLACE_PYTHON=	numexpr/cpuinfo.py

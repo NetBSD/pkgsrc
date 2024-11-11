@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/04/29 08:44:37 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:14 wiz Exp $
 
 DISTNAME=	line_profiler-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python line-by-line profiler
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 # avoid scikit-build

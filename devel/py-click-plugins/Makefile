@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/30 09:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:03 wiz Exp $
 
 DISTNAME=	click-plugins-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	CLI command extension for click
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

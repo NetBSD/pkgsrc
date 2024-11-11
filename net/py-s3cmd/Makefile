@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/01/12 05:32:52 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	s3cmd-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Command line tool for managing Amazon S3 and CloudFront services
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-magic-[0-9]*:../../sysutils/py-magic
 

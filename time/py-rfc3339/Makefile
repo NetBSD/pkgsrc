@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/08 14:07:57 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:13 wiz Exp $
 
 DISTNAME=	pyrfc3339-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	pyRFC3339-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

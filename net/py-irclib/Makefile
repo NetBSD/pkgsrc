@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/21 10:53:24 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:48 wiz Exp $
 
 DISTNAME=	irc-20.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/irc/irclib/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.collections>0:../../devel/py-jaraco.collections
 DEPENDS+=	${PYPKGPREFIX}-jaraco.functools>=1.20:../../devel/py-jaraco.functools
 DEPENDS+=	${PYPKGPREFIX}-jaraco.logging>=0:../../devel/py-jaraco.logging

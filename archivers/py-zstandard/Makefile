@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/07/15 20:17:51 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/11 07:27:51 wiz Exp $
 
 DISTNAME=	zstandard-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Zstandard bindings for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11:../../devel/py-cffi
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 

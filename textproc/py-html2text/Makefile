@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/02/28 12:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2024/11/11 07:29:03 wiz Exp $
 
 DISTNAME=	html2text-2024.2.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Convert HTML into easy-to-read plain ASCII text
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	27

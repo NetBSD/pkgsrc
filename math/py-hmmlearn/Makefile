@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	hmmlearn-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Algorithms for inference of Hidden Markov Models
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.16:../../math/py-scikit-learn
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>0:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-scipy>0.19:../../math/py-scipy

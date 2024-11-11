@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/10 07:21:39 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	xandikos-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Lightweight CalDAV/CardDAV server
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.21.6:../../devel/py-dulwich

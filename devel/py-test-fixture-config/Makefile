@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/11/03 07:56:29 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:25 wiz Exp $
 
 DISTNAME=	pytest-fixture-config-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Fixture configuration utils for py.test
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none

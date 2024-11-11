@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/10/25 10:55:14 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/11/11 07:29:16 wiz Exp $
 
 DISTNAME=	autobahn-24.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/crossbario/autobahn-python
 COMMENT=	WebSocket client and server library, WAMP real-time framework
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-txaio>=21.2.1:../../devel/py-txaio
 DEPENDS+=	${PYPKGPREFIX}-hyperlink>=21.0.0:../../www/py-hyperlink
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools

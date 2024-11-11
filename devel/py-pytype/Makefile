@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:21 wiz Exp $
 
 DISTNAME=	pytype-2024.9.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Static type analyzer for Python code
 LICENSE=	mit AND apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.4.2:../../graphics/py-dot
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=4.1.0:../../devel/py-immutabledict

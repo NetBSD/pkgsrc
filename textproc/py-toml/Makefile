@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/10 09:39:33 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	toml-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python Library for Tom's Obvious, Minimal Language
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

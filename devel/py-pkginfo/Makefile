@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/10/11 12:29:28 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	pkginfo-1.11.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Query metadata from sdists / bdists / installed packages
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:06 wiz Exp $
 
 DISTNAME=	numpydoc-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Sphinx extension to support docstrings in Numpy format
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-tabulate>=0.8.10:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=6:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib

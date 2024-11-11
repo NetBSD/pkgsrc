@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/11/08 14:24:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:14 wiz Exp $
 
 DISTNAME=	types-python-dateutil-2.9.0.20241003
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Typing stubs for python-dateutil
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

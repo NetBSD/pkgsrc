@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/09 09:48:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:58 wiz Exp $
 
 DISTNAME=	cron_descriptor-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Converts cron expressions into human readable strings
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/03/06 21:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:30 wiz Exp $
 
 DISTNAME=	WTForms-Alchemy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Generates WTForms forms from SQLAlchemy models
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils>=0.32.6:../../databases/py-sqlalchemy-utils
 DEPENDS+=	${PYPKGPREFIX}-wtforms>=2.2:../../www/py-wtforms

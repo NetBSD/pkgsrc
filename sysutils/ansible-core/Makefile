@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/10/14 06:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:28:57 wiz Exp $
 
 DISTNAME=	ansible_core-2.17.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 CONFLICTS+=	ansible<2.10
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko

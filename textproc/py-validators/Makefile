@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/09/04 08:44:32 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	validators-0.34.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python data validation for humans
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-eth-hash>=0.7.0:../../finance/py-eth-hash
 
 USE_LANGUAGES=	# none

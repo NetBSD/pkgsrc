@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/04/30 08:55:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:29 wiz Exp $
 
 DISTNAME=	u-msgpack-python-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -11,7 +11,6 @@ COMMENT=	MessagePack serializer and deserializer written in pure Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

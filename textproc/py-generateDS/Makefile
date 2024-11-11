@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/01/06 09:40:40 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	generateDS-2.43.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/0$//}
@@ -11,7 +11,6 @@ COMMENT=	Python XML data binding library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.21.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six

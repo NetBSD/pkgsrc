@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/21 19:29:26 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	grappelli_safe-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Permanent fork of Grapelli admin skin for Mezzanine
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none

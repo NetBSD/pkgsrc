@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/10/28 19:57:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:13 wiz Exp $
 
 DISTNAME=	pytz_deprecation_shim-0.1.0.post0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/post//}
@@ -12,7 +12,6 @@ COMMENT=	Shims to make deprecation of pytz easier
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz

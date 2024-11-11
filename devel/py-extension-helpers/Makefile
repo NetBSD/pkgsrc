@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/25 13:09:31 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:07 wiz Exp $
 
 DISTNAME=	extension_helpers-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Utilities for building and installing packages with extensions
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=43.0.0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 

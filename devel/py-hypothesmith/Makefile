@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/17 02:13:10 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	hypothesmith-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Hypothesis strategies for generating Python programs, like CSmith
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.93.0:../../devel/py-hypothesis
 DEPENDS+=	${PYPKGPREFIX}-lark-parser-[0-9]*:../../lang/py-lark-parser
 DEPENDS+=	${PYPKGPREFIX}-libcst>=1.0.1:../../lang/py-libcst

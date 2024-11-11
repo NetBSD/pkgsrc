@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2024/11/05 08:35:58 adam Exp $
+# $NetBSD: Makefile,v 1.136 2024/11/11 07:29:17 wiz Exp $
 
 DISTNAME=	Django-5.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Django, a high-level Python Web framework
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.8.1:../../www/py-asgiref
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.3.1:../../databases/py-sqlparse
 

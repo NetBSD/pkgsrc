@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/11 16:40:23 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:27:59 wiz Exp $
 
 DISTNAME=	absl-py-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Abseil Python Common Libraries
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

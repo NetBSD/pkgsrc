@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/30 09:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	webencodings-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Character encoding for the web
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# empty
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/07/30 03:50:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	incremental-24.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/hawkowl/incremental
 COMMENT=	Small library that versions your Python projects
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 

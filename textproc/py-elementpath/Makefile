@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/10/29 05:43:25 adam Exp $
+# $NetBSD: Makefile,v 1.42 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	elementpath-4.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	XPath 1.0/2.0 parsers and selectors for ElementTree and lxml
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

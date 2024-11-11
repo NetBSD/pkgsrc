@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:20 wiz Exp $
 
 DISTNAME=	django_sql_explorer-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Pluggable app that allows to execute SQL, view, and export the results
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlparse>=0.4.0:../../databases/py-sqlparse

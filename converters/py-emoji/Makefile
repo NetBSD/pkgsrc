@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/24 15:09:30 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:27:55 wiz Exp $
 
 DISTNAME=	emoji-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	ASCII<->Emoji conversion library for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.7.0:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none

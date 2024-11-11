@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/08/31 08:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	numba-0.60.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	NumPy aware dynamic Python compiler using LLVM
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.41.0:../../devel/py-llvmlite
 
 # TODO: enable OpenMP properly, like other packages.

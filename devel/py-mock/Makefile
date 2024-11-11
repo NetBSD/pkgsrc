@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/09/18 08:05:08 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/11 07:28:16 wiz Exp $
 
 DISTNAME=	mock-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python testing framework
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

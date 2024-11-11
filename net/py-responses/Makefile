@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/06/14 18:55:59 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/11/11 07:28:50 wiz Exp $
 
 DISTNAME=	responses-0.25.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Utility library for mocking out the requests Python library
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-urllib3>=2.0.0:../../www/py-urllib3
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml

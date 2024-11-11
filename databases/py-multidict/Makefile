@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/09/10 08:25:44 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:27:57 wiz Exp $
 
 DISTNAME=	multidict-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Multidict implementation
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 .include "../../lang/python/pyversion.mk"

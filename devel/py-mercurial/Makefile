@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2024/10/24 10:41:05 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2024/11/11 07:28:16 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -14,7 +14,6 @@ COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	gmake msgfmt
 

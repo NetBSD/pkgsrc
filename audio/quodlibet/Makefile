@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/11/01 12:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/11 07:27:52 wiz Exp $
 
 DISTNAME=	quodlibet-4.6.0
 PKGREVISION=	4
@@ -13,7 +13,6 @@ COMMENT=	Ex Falso / Quod Libet - Music Library / Editor / Player
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-feedparser<6.0.0:../../textproc/py-feedparser5
 DEPENDS+=	${PYPKGPREFIX}-gstreamer1-[0-9]*:../../multimedia/py-gstreamer1
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/06/12 06:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:48 wiz Exp $
 
 DISTNAME=	geventhttpclient-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP client library for gevent
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-brotli-[0-9]*:../../archivers/py-brotli
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13:../../net/py-gevent

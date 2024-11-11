@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/28 17:38:32 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:59 wiz Exp $
 
 DISTNAME=	hupper-1.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Integrated process monitor for developing and reloading daemons
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 

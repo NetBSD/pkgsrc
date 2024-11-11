@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/28 16:13:24 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:03 wiz Exp $
 
 DISTNAME=	codespell-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Check code for common misspellings
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

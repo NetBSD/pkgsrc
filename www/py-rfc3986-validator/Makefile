@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/10 09:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	rfc3986_validator-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ COMMENT=	Pure Python RFC3986 validator
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 TEST_DEPENDS+=	${PYPKGPREFIX}-rfc3987-[0-9]*:../../www/py-rfc3987
 

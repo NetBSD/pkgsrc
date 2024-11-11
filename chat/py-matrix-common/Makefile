@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/10/28 19:56:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=	matrix-python-common-${PKGVERSION_NOREV}
 PKGNAME=	${PYPKGPREFIX}-matrix-common-1.3.0
@@ -15,7 +15,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 WHEEL_NAME=	matrix_common-${PKGVERSION_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/26 16:48:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:32 wiz Exp $
 
 DISTNAME=	eth_keys-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Common API for Ethereum key operations
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-eth-typing>=3.0.0:../../finance/py-eth-typing
 DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 # TODO: import

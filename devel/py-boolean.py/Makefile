@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/07 15:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:02 wiz Exp $
 
 DISTNAME=	boolean.py-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Define boolean algebras, create and parse boolean expressions and creat
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

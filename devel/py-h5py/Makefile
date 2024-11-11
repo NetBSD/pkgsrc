@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:10 wiz Exp $
 
 DISTNAME=	h5py-3.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 #TEST_DEPENDS+=	py-test-mpi
 
 MAKE_ENV=	HDF5_DIR=${PREFIX}

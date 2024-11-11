@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/12/31 21:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:06 wiz Exp $
 
 DISTNAME=	distro-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	OS platform information API
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none

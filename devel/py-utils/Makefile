@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 11:40:01 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:29 wiz Exp $
 
 DISTNAME=	python_utils-3.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python_//}
@@ -11,7 +11,6 @@ COMMENT=	Some convenient utilities not included with standard Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>3.10.0.2:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-loguru-[0-9]*:../../sysutils/py-loguru
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio

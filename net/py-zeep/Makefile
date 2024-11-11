@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/17 10:33:56 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	zeep-4.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fast and modern Python SOAP client
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=17.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-isodate>=0.5.4:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.0:../../textproc/py-lxml

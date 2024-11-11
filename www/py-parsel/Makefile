@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/14 14:40:36 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	parsel-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library to extract data from HTML and XML using XPath and CSS
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=1.2.0:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.3:../../textproc/py-lxml

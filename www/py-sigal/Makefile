@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/15 17:22:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	sigal-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Simple static gallery generator
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click

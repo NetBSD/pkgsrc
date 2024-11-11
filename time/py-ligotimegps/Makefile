@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/05 20:25:22 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:13 wiz Exp $
 
 DISTNAME=	ligotimegps-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Pure-python version of lal.LIGOTimeGPS
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

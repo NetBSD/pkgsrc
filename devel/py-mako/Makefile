@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/10/24 20:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/11 07:28:15 wiz Exp $
 
 DISTNAME=	mako-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	Mako-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=47:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=0.9.2:../../textproc/py-markupsafe
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/11/01 00:08:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:29:15 wiz Exp $
 
 DISTNAME=	webob-1.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/webob/WebOb/}
@@ -11,7 +11,6 @@ COMMENT=	Python module providing WSGI request and response objects
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist

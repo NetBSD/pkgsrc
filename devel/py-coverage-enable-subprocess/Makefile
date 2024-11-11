@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/30 14:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:05 wiz Exp $
 
 DISTNAME=	coverage_enable_subprocess-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -12,7 +12,6 @@ COMMENT=	Enable Python coverage for subprocesses
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 USE_LANGUAGES=	# none

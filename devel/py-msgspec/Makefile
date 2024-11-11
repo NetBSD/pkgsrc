@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/12 17:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:16 wiz Exp $
 
 DISTNAME=	msgspec-0.18.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fast serialization and validation library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
 

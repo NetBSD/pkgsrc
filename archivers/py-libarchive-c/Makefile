@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/03/06 18:53:34 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:27:51 wiz Exp $
 
 DISTNAME=	libarchive-c-5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python interface to libarchive
 LICENSE=	cc0-1.0-universal
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

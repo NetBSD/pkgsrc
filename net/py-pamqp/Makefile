@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/01/25 17:13:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	pamqp-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	RabbitMQ Focused AMQP low-level library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

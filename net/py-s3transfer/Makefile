@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/10/30 20:05:54 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	s3transfer-0.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Amazon S3 Transfer Manager
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.33.2:../../net/py-botocore
 
 USE_LANGUAGES=	# none

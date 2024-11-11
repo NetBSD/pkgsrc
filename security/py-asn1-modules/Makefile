@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/09/11 08:07:50 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:54 wiz Exp $
 
 DISTNAME=	pyasn1_modules-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Modules for ITU Abstract Syntax Notification for Python
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.4.6:../../security/py-asn1
 
 USE_LANGUAGES=	# none

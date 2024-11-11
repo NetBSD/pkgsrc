@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/05/14 08:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/11 07:28:23 wiz Exp $
 
 DISTNAME=	setuptools_scm-8.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/pypa/setuptools_scm
 COMMENT=	Manage your versions by scm tags
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=20.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions

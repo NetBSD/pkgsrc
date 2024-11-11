@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/09/18 08:11:22 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	OctoPrint-FileCheck-2024.3.27
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Checks for common issues in uploaded files
 LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

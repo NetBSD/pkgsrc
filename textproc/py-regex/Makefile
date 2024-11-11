@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/11/07 10:44:04 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/11/11 07:29:08 wiz Exp $
 
 DISTNAME=	regex-2024.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 # needs 'make install'
 do-test:

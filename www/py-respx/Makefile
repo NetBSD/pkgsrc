@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/04/02 19:36:49 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	respx-0.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Utility for mocking out the Python HTTPX library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.21.0:../../www/py-httpx
 
 USE_LANGUAGES=	# none

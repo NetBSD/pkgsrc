@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/07/22 05:28:31 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	uncompyle6-3.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python cross-version byte-code decompiler
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=71.0.3:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-spark-parser>=1.8.9:../../lang/py-spark-parser
 DEPENDS+=	${PYPKGPREFIX}-xdis>=6.1.0:../../devel/py-xdis

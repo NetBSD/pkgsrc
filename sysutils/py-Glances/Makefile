@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/11/03 08:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/11 07:28:58 wiz Exp $
 
 DISTNAME=	glances-4.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
@@ -11,7 +11,6 @@ COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging

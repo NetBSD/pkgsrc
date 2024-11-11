@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/19 16:22:16 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:40 wiz Exp $
 
 DISTNAME=	bottleneck-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ WHEEL_NAME=	Bottleneck-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"

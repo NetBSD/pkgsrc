@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/09/18 09:14:26 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	types-PyYAML-6.0.12.20240917
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyYAML/yaml/}
@@ -11,7 +11,6 @@ COMMENT=	Typing stubs for PyYAML
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

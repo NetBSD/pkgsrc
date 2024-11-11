@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/20 08:23:04 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	trio-0.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Friendly Python library for async concurrency and I/O
 LICENSE=	mit OR apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=23.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-outcome-[0-9]*:../../devel/py-outcome

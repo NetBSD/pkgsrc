@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/25 11:00:38 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest-virtualenv-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Virtualenv fixture for py.test
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 DEPENDS+=	${PYPKGPREFIX}-test-fixture-config-[0-9]*:../../devel/py-test-fixture-config

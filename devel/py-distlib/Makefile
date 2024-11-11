@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/10/09 20:08:20 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:06 wiz Exp $
 
 DISTNAME=	distlib-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Distribution utilities
 LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=44:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

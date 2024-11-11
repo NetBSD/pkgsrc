@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/30 08:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	pdfrw-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	PDF file reader/writer pure Python library
 LICENSE=	mit AND modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

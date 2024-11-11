@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/10/20 08:17:52 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/11 07:27:52 wiz Exp $
 
 DISTNAME=	mutagen-1.47.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=5.0.4:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.50.1:../../devel/py-hypothesis
 

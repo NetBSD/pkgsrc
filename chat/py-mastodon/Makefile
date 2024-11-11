@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/10/14 08:08:36 nia Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:27:54 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-mastodon-1.8.1
 DISTNAME=	Mastodon.py-${PKGVERSION_NOREV}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper for the Mastodon API
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-blurhash>=1.1.4:../../graphics/py-blurhash
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/10/14 06:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=	mautrix-0.20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python 3 asyncio Matrix framework
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-attrs>=18.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-yarl>=1.5:../../www/py-yarl

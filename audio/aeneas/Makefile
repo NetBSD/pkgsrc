@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/14 06:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:27:51 wiz Exp $
 
 DISTNAME=	aeneas-1.7.3
 PKGREVISION=	19
@@ -12,7 +12,6 @@ COMMENT=	Automagically synchronize audio and text
 LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	ffmpeg6-[0-9]*:../../multimedia/ffmpeg6

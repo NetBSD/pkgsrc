@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/21 12:57:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:59 wiz Exp $
 
 DISTNAME=	agate-1.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python data analysis library that is optimized for humans
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate

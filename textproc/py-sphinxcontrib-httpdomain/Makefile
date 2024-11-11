@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	sphinxcontrib-httpdomain-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Sphinx domain for documenting HTTP APIs
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.6:../../textproc/py-sphinx
 

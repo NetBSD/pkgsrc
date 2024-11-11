@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:43 wiz Exp $
 
 DISTNAME=	Theano-PyMC-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.14:../../math/py-scipy

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/10/14 06:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:29:25 wiz Exp $
 
 DISTNAME=	Mezzanine-6.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Open source content management platform on Django
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=7:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.5.3:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-bleach>=5:../../www/py-bleach

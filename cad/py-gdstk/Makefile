@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 06:45:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:27:53 wiz Exp $
 
 DISTNAME=	gdstk-0.9.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	C++/Python library for GDSII and OASIS files
 LICENSE=	boost-license
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES+=	c c++

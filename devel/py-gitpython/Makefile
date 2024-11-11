@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/04/08 14:17:45 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:09 wiz Exp $
 
 DISTNAME=	GitPython-3.1.43
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Python Git Library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	${PYPKGPREFIX}-gitdb>=4.0.1:../../devel/py-gitdb
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/19 05:08:23 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	dnsdiag-2.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	DNS Diagnostics and Performance Measurement Tools
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-cymruwhois>=1.6:../../net/py-cymruwhois
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.6.1:../../net/py-dns

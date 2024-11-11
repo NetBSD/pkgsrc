@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/10/19 16:30:48 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	httptools-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Collection of framework independent HTTP protocol utils
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

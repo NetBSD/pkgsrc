@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/01/16 10:18:10 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:19 wiz Exp $
 
 DISTNAME=	process-tests-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Tools for testing processes
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:08 wiz Exp $
 
 DISTNAME=	sphinx-astropy-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-astropy-sphinx-theme-[0-9]*:../../textproc/py-astropy-sphinx-theme
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging

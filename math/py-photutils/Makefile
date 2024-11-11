@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:42 wiz Exp $
 
 DISTNAME=	photutils-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-scikit-image>=0.14.2:../../math/py-scikit-image
 DEPENDS+=	${PYPKGPREFIX}-scikit-learn>=0.19:../../math/py-scikit-learn
 DEPENDS+=	${PYPKGPREFIX}-astropy>=4.2:../../math/py-astropy

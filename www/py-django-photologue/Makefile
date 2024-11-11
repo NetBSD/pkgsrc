@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2023/12/17 08:39:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:29:19 wiz Exp $
 
 DISTNAME=	django-photologue-3.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Plug-in photo management application for the Django framework
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=9:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-sortedm2m>=3.1.1:../../www/py-django-sortedm2m

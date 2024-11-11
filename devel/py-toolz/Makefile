@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/14 07:14:42 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	toolz-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	List processing tools and functional utilities
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

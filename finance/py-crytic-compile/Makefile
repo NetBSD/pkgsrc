@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/29 10:35:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:32 wiz Exp $
 
 DISTNAME=	crytic-compile-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Abstraction layer for smart contract build systems
 LICENSE=	gnu-agpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cbor2-[0-9]*:../../devel/py-cbor2
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.6:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-solc-select>=1.0.4:../../lang/py-solc-select

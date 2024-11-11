@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/07/14 13:21:53 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	pip_api-0.0.34
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Unofficial, importable pip API
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pip>=24.1.1:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend

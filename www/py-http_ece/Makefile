@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/05 20:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	http_ece-1.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python support for the encryped Content-Encoding (RFC 8188)
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

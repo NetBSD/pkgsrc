@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/04/12 09:52:42 adam Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/11 07:28:25 wiz Exp $
 
 DISTNAME=	pytest-cov-5.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Pytest plugin for measuring coverage
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-coverage>=5.2.1:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-test>=4.6:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-fields-[0-9]*:../../devel/py-fields

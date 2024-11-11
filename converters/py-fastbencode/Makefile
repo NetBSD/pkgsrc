@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/08 09:00:10 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:27:55 wiz Exp $
 
 DISTNAME=	fastbencode-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

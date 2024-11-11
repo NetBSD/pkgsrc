@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/02/08 14:46:49 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:19 wiz Exp $
 
 DISTNAME=	django-registration-3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-confusable_homoglyphs>=3.0:../../converters/py-confusable_homoglyphs
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 

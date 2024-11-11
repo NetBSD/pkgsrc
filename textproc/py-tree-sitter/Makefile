@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/10/09 08:08:26 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	tree-sitter-0.23.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Python bindings to the Tree-sitter parsing library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

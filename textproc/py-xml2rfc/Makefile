@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/04 10:28:14 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:11 wiz Exp $
 
 DISTNAME=	xml2rfc-3.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/ietf-tools/xml2rfc
 COMMENT=	IETF RFC 7749 XML-to-RFC conversion tool
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.2.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-country>=22.3.5:../../geography/py-country
 DEPENDS+=	${PYPKGPREFIX}-google-i18n-address>=3.0.0:../../devel/py-google-i18n-address

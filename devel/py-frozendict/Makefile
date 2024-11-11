@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/10/14 14:47:58 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/11 07:28:09 wiz Exp $
 
 DISTNAME=	frozendict-2.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Immutable wrapper around dictionaries
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 MAKE_ENV+=	FROZENDICT_PURE_PY=1
 

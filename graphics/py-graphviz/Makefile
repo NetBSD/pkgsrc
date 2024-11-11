@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/03/23 16:34:07 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:35 wiz Exp $
 
 DISTNAME=	graphviz-0.20.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Create and render graph descriptions in DOT language
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

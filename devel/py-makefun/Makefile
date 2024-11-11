@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/10 09:16:24 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:15 wiz Exp $
 
 DISTNAME=	makefun-1.15.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=39.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

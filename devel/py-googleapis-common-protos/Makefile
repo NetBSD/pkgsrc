@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/09/13 08:30:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:10 wiz Exp $
 
 DISTNAME=	googleapis_common_protos-1.65.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Python support for Public interface definitions of Google APIs
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-protobuf>=4.21.6:../../devel/py-protobuf
 
 USE_LANGUAGES=	# none

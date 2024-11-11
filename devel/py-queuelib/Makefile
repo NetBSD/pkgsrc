@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/05 18:33:30 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:21 wiz Exp $
 
 DISTNAME=	queuelib-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Collection of persistent (disk-based) queues
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:59 wiz Exp $
 
 DISTNAME=	kubernetes-30.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Kubernetes Python client
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi>=14.05.14:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.5.3:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.0.1:../../security/py-google-auth

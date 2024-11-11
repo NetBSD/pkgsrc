@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/08/13 08:27:26 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	pygal-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python SVG graph plotting library
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
 # png
 DEPENDS+=	${PYPKGPREFIX}-cairosvg-[0-9]*:../../converters/py-cairosvg

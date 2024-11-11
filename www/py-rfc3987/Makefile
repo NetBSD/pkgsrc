@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/10 09:48:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	rfc3987-1.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Parsing and validation of URIs (RFC 3986) and IRIs (RFC 3987)
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 
