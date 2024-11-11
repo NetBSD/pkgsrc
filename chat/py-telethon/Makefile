@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/08/08 05:31:00 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=	Telethon-1.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Full-featured Telegram client library for Python 3
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aes-[0-9]*:../../security/py-aes
 DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
 

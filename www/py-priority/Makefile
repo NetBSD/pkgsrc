@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/13 11:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	priority-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure-Python implementation of the HTTP/2 priority tree
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none

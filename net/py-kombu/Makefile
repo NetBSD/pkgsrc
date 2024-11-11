@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/05/08 09:23:43 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	kombu-5.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Messaging framework for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-amqp>=5.1.1:../../net/py-amqp
 DEPENDS+=	${PYPKGPREFIX}-vine-[0-9]*:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis

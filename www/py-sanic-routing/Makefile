@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/01/05 18:17:13 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	sanic-routing-23.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Core routing component for Sanic
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/07/01 07:46:19 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:09 wiz Exp $
 
 DISTNAME=	gast-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python AST that abstracts the underlying Python version
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-astunparse-[0-9]*:../../devel/py-astunparse
 
 USE_LANGUAGES=	# none

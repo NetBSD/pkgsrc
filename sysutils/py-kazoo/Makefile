@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/02/08 10:15:24 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:59 wiz Exp $
 
 DISTNAME=	kazoo-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Higher level Zookeeper client
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 # TODO:

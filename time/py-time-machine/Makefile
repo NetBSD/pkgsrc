@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/14 05:18:43 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:13 wiz Exp $
 
 DISTNAME=	time_machine-2.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Travel through time in your tests
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 .include "../../lang/python/wheel.mk"

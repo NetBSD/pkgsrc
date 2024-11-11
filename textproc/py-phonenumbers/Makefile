@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/08/21 10:55:01 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	phonenumbers-8.13.43
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library for formatting, storing and validating phone numbers
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/02/09 06:32:14 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:23 wiz Exp $
 
 DISTNAME=	python-slugify-8.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -13,7 +13,6 @@ LICENSE=	mit
 PREV_PKGPATH=	devel/py-python-slugify
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-text-unidecode>=1.3:../../textproc/py-text-unidecode
 
 USE_LANGUAGES=	# none

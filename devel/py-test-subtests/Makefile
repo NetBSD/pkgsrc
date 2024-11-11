@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/07/17 03:40:23 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest_subtests-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 

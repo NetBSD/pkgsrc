@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/01/11 13:06:36 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	Unidecode-1.3.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	ASCII transliterations of Unicode text
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

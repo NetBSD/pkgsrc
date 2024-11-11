@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/06/09 21:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:10 wiz Exp $
 
 DISTNAME=	hg-git-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.20.11:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.1:../../devel/py-mercurial
 

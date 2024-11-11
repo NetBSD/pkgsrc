@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/10/13 08:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/11 07:27:59 wiz Exp $
 
 DISTNAME=	breezy-3.3.8
 CATEGORIES=	devel scm
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-rust>=0:../../devel/py-setuptools-rust
-TOOL_DEPENDS+=		${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=		${PYPKGPREFIX}-cython>=0.29:../../devel/py-cython
 DEPENDS+=		${PYPKGPREFIX}-configobj>0:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-dulwich>=0.20.23:../../devel/py-dulwich

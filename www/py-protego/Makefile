@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/08 17:53:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	Protego-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Pure-Python robots.txt parser with support for modern conventions
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

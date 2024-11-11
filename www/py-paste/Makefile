@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/06/11 09:09:28 adam Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	paste-3.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 WHEEL_NAME=	Paste-${PKGVERSION_NOREV}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 

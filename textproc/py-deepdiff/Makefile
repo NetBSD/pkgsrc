@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/10/14 06:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	deepdiff-7.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Deep Difference and Search of any Python object/data
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-ordered-set>=4.1.0:../../devel/py-ordered-set
 # cli
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.7:../../devel/py-click

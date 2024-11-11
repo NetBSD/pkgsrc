@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/05/10 07:57:14 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:01 wiz Exp $
 
 DISTNAME=	atomicwrites-1.4.1
 PKGREVISION=	1
@@ -14,7 +14,6 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

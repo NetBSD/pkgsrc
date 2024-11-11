@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/15 06:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:24 wiz Exp $
 
 DISTNAME=	pytest-astropy-header-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-astropy-[0-9]*:../../math/py-astropy
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 

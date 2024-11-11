@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	pikepdf-9.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Read and write PDFs with Python, powered by qpdf
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.37:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.0.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-deprecated-[0-9]*:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.8:../../textproc/py-lxml

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/05 00:42:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:34 wiz Exp $
 
 DISTNAME=	cycler-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Composable style cycles
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

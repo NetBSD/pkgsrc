@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/10/14 06:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	importlib_metadata-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-zipp>=3.20:../../archivers/py-zipp
 TEST_DEPENDS+=	${PYPKGPREFIX}-fakefs-[0-9]*:../../devel/py-fakefs
 TEST_DEPENDS+=	${PYPKGPREFIX}-jaraco.test>=5.4:../../devel/py-jaraco.test

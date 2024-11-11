@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/01/26 13:52:47 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:15 wiz Exp $
 
 DISTNAME=	WebTest-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Helper to test WSGI applications
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-WebOb>=1.2:../../www/py-WebOb
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4-[0-9]*:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-waitress>=0.8.5:../../www/py-waitress

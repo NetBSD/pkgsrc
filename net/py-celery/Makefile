@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/06/12 17:02:05 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	celery-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Asynchronous task/job queue based on distributed message passing
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-billiard>=4.2.0:../../parallel/py-billiard
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.2:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-didyoumean>=0.3.0:../../devel/py-click-didyoumean

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/07/12 06:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:12 wiz Exp $
 
 DISTNAME=	juliandate-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python module for Julian date conversions
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

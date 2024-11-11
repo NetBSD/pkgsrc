@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/14 20:31:49 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:04 wiz Exp $
 
 DISTNAME=	jsonrpclib-pelix-0.4.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Implementation of the JSON-RPC v2.0 specification
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

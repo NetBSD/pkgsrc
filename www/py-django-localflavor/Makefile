@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/12/02 08:07:41 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:19 wiz Exp $
 
 DISTNAME=	django-localflavor-4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	L18N support for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
 DEPENDS+=	${PYPKGPREFIX}-stdnum>=1.6:../../misc/py-stdnum
 

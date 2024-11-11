@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/01/20 10:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:29:22 wiz Exp $
 
 DISTNAME=	Flask-FlatPages-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Provides flat static pages to a Flask application
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-flask>1.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.10.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown>=2.5:../../textproc/py-markdown

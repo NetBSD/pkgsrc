@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/01 12:53:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	netcdf4-1.7.1.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/cdf/CDF/}
@@ -14,7 +14,6 @@ LICENSE=	mit
 WHEEL_NAME=	netCDF4-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-cftime-[0-9]*:../../time/py-cftime
 

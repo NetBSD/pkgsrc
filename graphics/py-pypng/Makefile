@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/06 09:18:01 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	pypng-0.20220715.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure Python library for saving and loading PNG images
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

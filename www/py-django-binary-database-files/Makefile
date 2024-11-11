@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/02/16 22:07:55 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:17 wiz Exp $
 
 DISTNAME=	django-binary-database-files-1.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	In-database file storage backend for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none

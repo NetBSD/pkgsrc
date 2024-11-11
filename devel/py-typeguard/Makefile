@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/11/03 19:07:15 adam Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	typeguard-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.10.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-mypy>=1.2.0:../../lang/py-mypy
 

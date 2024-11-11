@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/10/14 06:45:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	pspdfutils-3.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ CONFLICTS+=	psutils<3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-argparse-manpage-[0-9]*:../../devel/py-argparse-manpage
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-puremagic>=1.26:../../sysutils/py-puremagic
 DEPENDS+=	${PYPKGPREFIX}-pdf>=4.3.0:../../textproc/py-pdf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-datafiles>=0:../../devel/py-test-datafiles

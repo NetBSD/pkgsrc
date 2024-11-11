@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/05/23 11:50:30 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:28:33 wiz Exp $
 
 DISTNAME=	eth_utils-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Common utility functions for ethereum codebases
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cytoolz>=0.10.1:../../devel/py-cytoolz
 DEPENDS+=	${PYPKGPREFIX}-eth-hash>=0.3.1:../../finance/py-eth-hash
 DEPENDS+=	${PYPKGPREFIX}-eth-typing>=3.0.0:../../finance/py-eth-typing

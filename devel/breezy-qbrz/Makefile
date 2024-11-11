@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/02/24 12:25:15 rhialto Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:27:59 wiz Exp $
 
 WHEEL_NAME=	qbrz-0.5.0
 DISTNAME=	breezy-qbrz-0.5.0.0.${VER}
@@ -13,7 +13,6 @@ COMMENT=	GUI front end for Breezy
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-fastbencode>0:../../converters/py-fastbencode
 DEPENDS+=	${PYPKGPREFIX}-qt5>=5.15:../../x11/py-qt5

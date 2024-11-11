@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2024/10/20 14:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/11/11 07:27:53 wiz Exp $
 
 DISTNAME=	gajim-1.3.3
 PKGREVISION=	12
@@ -11,7 +11,6 @@ COMMENT=	XMPP/Jabber chat client written in Python/GTK3
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.16.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-css-parser-[0-9]*:../../textproc/py-css-parser
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring

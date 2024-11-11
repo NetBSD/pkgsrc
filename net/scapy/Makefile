@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2024/11/05 13:24:48 gutteridge Exp $
+# $NetBSD: Makefile,v 1.53 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	scapy-2.6.1
 CATEGORIES=	net
@@ -11,7 +11,6 @@ COMMENT=	Interactive packet manipulation program
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../devel/py-ipython
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 TEST_DEPENDS+=	tcpreplay-[0-9]*:../../net/tcpreplay

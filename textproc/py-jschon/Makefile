@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/10 15:58:08 js Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:04 wiz Exp $
 
 DISTNAME=	jschon-0.11.1
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	JSON toolkit for Python developers
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-rfc3986-[0-9]*:../../www/py-rfc3986
 
 USE_LANGUAGES=	# none

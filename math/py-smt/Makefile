@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/08/07 19:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:43 wiz Exp $
 
 DISTNAME=	PySMT-0.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PySMT/smt/}
@@ -11,7 +11,6 @@ COMMENT=	Library for SMT formula manipulation and solving
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-z3>=0:../../math/py-z3
 
 USE_LANGUAGES=	c # for testing

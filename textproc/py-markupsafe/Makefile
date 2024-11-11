@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/10/22 07:56:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	markupsafe-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Implements a unicode subclass that supports HTML strings
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 WHEEL_NAME=	MarkupSafe-${PKGVERSION_NOREV}
 

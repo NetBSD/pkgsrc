@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/06/28 08:04:09 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	authheaders-0.16.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library for email authentication header verification and generation
 LICENSE=	zpl-2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-dkim>=0.7.1:../../mail/py-dkim
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns

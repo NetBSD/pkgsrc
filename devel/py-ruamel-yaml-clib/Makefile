@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/22 11:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:22 wiz Exp $
 
 DISTNAME=	ruamel.yaml.clib-0.2.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/./-/1:S/./-/1}
@@ -11,7 +11,6 @@ COMMENT=	C version of reader, parser and emitter for ruamel.yaml
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 CFLAGS+=	-Wno-error=incompatible-pointer-types
 

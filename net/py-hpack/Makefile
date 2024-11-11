@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/08/10 07:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:48 wiz Exp $
 
 DISTNAME=	hpack-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Pure-Python HPACK header compression
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 
 USE_LANGUAGES=	# none

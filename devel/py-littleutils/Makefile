@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/07/17 04:16:51 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:14 wiz Exp $
 
 DISTNAME=	littleutils-0.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

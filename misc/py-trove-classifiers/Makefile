@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/11/01 00:25:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/11 07:28:45 wiz Exp $
 
 DISTNAME=	trove_classifiers-2024.10.21.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-calver-[0-9]*:../../devel/py-calver
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/04/02 19:32:39 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:46 wiz Exp $
 
 DISTNAME=	apache-libcloud-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library for interacting with cloud service providers
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.37.1:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26.0:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-mock-[0-9]*:../../devel/py-requests-mock
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/03 08:40:16 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:27:58 wiz Exp $
 
 DISTNAME=	python_sql-1.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Python library to write SQL queries
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

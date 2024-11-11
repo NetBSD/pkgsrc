@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:31 wiz Exp $
 
 DISTNAME=	pyqtgraph-0.13.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqtgraph/qtgraph-qt5/}
@@ -11,7 +11,6 @@ COMMENT=	Scientific Graphics and GUI Library for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.22:../../math/py-numpy
 # Optional deps
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL

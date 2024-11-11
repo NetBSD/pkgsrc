@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/11/01 12:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/11/11 07:29:28 wiz Exp $
 
 DISTNAME=	uwsgi-2.0.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Feature-rich WSGI server
 LICENSE=	gnu-gpl-v2 # with linking exception
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 
 USE_TOOLS+=	pkg-config

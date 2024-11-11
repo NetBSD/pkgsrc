@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/10/14 06:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:29:19 wiz Exp $
 
 DISTNAME=	django_import_export-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.1.0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-diff-match-patch-[0-9]*:../../textproc/py-diff-match-patch
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-tablib>=3.5.0:../../textproc/py-tablib

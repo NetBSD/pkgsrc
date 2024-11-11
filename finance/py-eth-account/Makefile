@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/02/09 06:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:32 wiz Exp $
 
 DISTNAME=	eth-account-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Sign Ethereum transactions and messages with local private keys
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-bitarray>=2.4.0:../../devel/py-bitarray
 DEPENDS+=	${PYPKGPREFIX}-eth-abi>=4.0.0:../../finance/py-eth-abi
 DEPENDS+=	${PYPKGPREFIX}-eth-keyfile>=0.6.0:../../finance/py-eth-keyfile

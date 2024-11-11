@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/02/21 08:52:51 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	httpbin-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	HTTP Request and Response Service
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-brotlicffi-[0-9]*:../../archivers/py-brotlicffi
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet

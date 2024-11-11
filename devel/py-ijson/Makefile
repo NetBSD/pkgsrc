@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/07/22 15:05:46 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	ijson-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Iterative JSON parser with standard Python iterator interfaces
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

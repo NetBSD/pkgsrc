@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/10 15:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:31 wiz Exp $
 
 DISTNAME=	pynvim-0.5.0
 CATEGORIES=	devel editors
@@ -12,7 +12,6 @@ COMMENT=	Python client for Neovim
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=1.1.3:../../devel/py-greenlet
 TEST_DEPENDS+=	neovim-[0-9]*:../../editors/neovim

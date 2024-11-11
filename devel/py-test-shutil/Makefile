@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/10/17 20:16:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:26 wiz Exp $
 
 DISTNAME=	pytest-shutil-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ COMMENT=	Unix shell and environment tools for py.test
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-execnet-[0-9]*:../../devel/py-execnet
 DEPENDS+=	${PYPKGPREFIX}-path.py-[0-9]*:../../devel/py-path.py
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six

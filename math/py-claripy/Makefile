@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:40 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -13,7 +13,6 @@ COMMENT=	Abstraction layer for constraint solvers
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cachetools-[0-9]*:../../devel/py-cachetools
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-smt>=0.9.5:../../math/py-smt

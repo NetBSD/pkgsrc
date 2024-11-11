@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/30 13:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:50 wiz Exp $
 
 PTTVERS=	1.19.6
 DISTNAME=	twitter-${PTTVERS}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-irclib-[0-9]*:../../net/py-irclib
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 

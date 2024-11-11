@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/06/11 19:54:21 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:04 wiz Exp $
 
 DISTNAME=	cogapp-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Code generator for executing Python snippets in source files
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/26 11:34:55 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:13 wiz Exp $
 
 DISTNAME=	jaraco_stream-3.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -14,7 +14,6 @@ WHEEL_NAME=	${DISTNAME:S/_/./}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertools
 
 USE_LANGUAGES=	# none

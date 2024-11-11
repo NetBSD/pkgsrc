@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/10/14 06:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	tifffile-2024.9.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Read and write TIFF(r) files
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-fsspec-[0-9]*:../../sysutils/py-fsspec
 

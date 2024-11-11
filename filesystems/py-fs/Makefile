@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/08/10 06:55:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:32 wiz Exp $
 
 DISTNAME=	fs-2.4.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python's filesystem abstraction layer
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.3:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz

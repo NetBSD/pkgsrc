@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/10 09:58:01 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:27:55 wiz Exp $
 
 DISTNAME=	charset_normalizer-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Universal Charset Detector
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

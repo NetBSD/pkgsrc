@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/08/10 15:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:21 wiz Exp $
 
 DISTNAME=	pyte-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	VTXXX-compatible terminal emulator library
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.7:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 

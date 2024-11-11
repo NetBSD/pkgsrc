@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/07/16 03:31:38 adam Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:14 wiz Exp $
 
 DISTNAME=	limits-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Rate limiting utilities
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2:../../devel/py-deprecated
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging

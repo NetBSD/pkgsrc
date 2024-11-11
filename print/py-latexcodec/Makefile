@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/04/19 04:33:18 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	latexcodec-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Lexer and codec for LaTeX
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

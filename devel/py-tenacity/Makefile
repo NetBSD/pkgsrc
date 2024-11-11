@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/07/16 03:16:54 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:24 wiz Exp $
 
 DISTNAME=	tenacity-8.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=4.5:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-typeguard-[0-9]*:../../devel/py-typeguard
 

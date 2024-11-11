@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/10/14 06:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	sanic-24.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/sanic-org/sanic
 COMMENT=	Microframework based on uvloop, httptools, and learnings of flask
 LICENSE=	mit AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiofiles>=0.6.0:../../devel/py-aiofiles
 DEPENDS+=	${PYPKGPREFIX}-html5tagger>=1.2.1:../../textproc/py-html5tagger
 DEPENDS+=	${PYPKGPREFIX}-httptools>=0.0.10:../../www/py-httptools

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/11/30 06:16:15 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:56 wiz Exp $
 
 DISTNAME=	python-olm-3.2.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -11,7 +11,6 @@ COMMENT=	Olm bindings for Python
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0.0:../../devel/py-cffi
 
 USE_LANGUAGES=	c c++

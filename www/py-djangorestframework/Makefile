@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/08/15 21:55:18 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/11 07:29:21 wiz Exp $
 
 DISTNAME=	djangorestframework-3.15.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Lightweight REST framework for Django
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
 
 USE_LANGUAGES=	# none

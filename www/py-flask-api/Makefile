@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/01/20 10:14:48 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:22 wiz Exp $
 
 DISTNAME=	Flask-API-3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Browsable web APIs for Flask
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-flask>=2.0.0:../../www/py-flask
 
 USE_LANGUAGES=	# none

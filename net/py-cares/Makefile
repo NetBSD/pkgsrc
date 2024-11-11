@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 23:20:27 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	pycares-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -19,7 +19,6 @@ LICENSE=	mit
 #    Fix py-cares or cffi to work with a packed definition.
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
 
 USE_LANGUAGES=	c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/06/18 12:36:07 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	fastjsonschema-2.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fastest Python implementation of JSON schema
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none

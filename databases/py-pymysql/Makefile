@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/22 07:18:56 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:27:57 wiz Exp $
 
 DISTNAME=	pymysql-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	PyMySQL-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # rsa
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 

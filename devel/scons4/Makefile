@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/09/04 18:02:01 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:31 wiz Exp $
 
 DISTNAME=	scons-4.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

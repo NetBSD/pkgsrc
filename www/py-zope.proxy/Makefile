@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 10:46:48 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:29:30 wiz Exp $
 
 DISTNAME=	zope_proxy-6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -12,7 +12,6 @@ LICENSE=	zpl-2.1
 
 WHEEL_NAME=	${DISTNAME:S/_/./}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 

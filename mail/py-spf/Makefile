@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/30 11:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:39 wiz Exp $
 
 DISTNAME=	pyspf-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -12,7 +12,6 @@ COMMENT=	SPF (Sender Policy Framework) implemented in Python
 LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 

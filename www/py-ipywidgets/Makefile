@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/14 06:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:29:25 wiz Exp $
 
 DISTNAME=	ipywidgets-8.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	IPython HTML widgets for Jupyter
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-comm>=0.1.3:../../net/py-comm
 DEPENDS+=	${PYPKGPREFIX}-ipython>=6.1.0:../../devel/py-ipython
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab-widgets>=3.0.12:../../www/py-jupyterlab-widgets

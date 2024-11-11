@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/02/22 13:20:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	docstring-to-markdown-0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	On-the-fly conversion of Python docstrings to Markdown
 LICENSE=	gnu-lgpl-v2.1 # or later
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8
 

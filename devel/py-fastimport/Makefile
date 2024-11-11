@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/11/30 05:44:15 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:08 wiz Exp $
 
 DISTNAME=	fastimport-0.9.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Fastimport parser and generator in Python
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/01 08:58:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	salt-pepper-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	CLI front-end to a running salt-api system
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	salt-[0-9]*:../../sysutils/salt
 
 USE_LANGUAGES=	c # for tests

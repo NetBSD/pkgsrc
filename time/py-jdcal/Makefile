@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/05/05 22:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:12 wiz Exp $
 
 DISTNAME=	jdcal-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Julian dates from proleptic Gregorian and Julian calendars
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

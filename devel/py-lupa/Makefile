@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/06/03 07:47:27 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:15 wiz Exp $
 
 DISTNAME=	lupa-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.9:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	pkg-config
 

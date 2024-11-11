@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/02/02 13:13:09 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:14 wiz Exp $
 
 DISTNAME=	FormEncode-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	python-software-foundation
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-country-[0-9]*:../../geography/py-country
 TEST_DEPENDS+=	${PYPKGPREFIX}-dns>=2:../../net/py-dns
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/01/22 17:02:47 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:16 wiz Exp $
 
 DISTNAME=	nest_asyncio-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

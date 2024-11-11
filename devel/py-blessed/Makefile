@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/30 11:32:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:02 wiz Exp $
 
 DISTNAME=	blessed-1.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Wrapper around terminal styling, screen positioning, and input
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.1.4:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov

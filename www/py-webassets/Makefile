@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/04/30 14:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:29 wiz Exp $
 
 DISTNAME=	webassets-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Asset management for Python web development
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# empty

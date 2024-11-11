@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 19:57:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	tabulate-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Pretty-print tabular data
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none

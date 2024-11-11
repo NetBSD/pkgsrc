@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/04/30 13:45:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:30 wiz Exp $
 
 DISTNAME=	wasm-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ COMMENT=	WebAssembly decoder & disassembler
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c++
 

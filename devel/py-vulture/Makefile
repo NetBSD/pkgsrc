@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/14 13:07:32 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:29 wiz Exp $
 
 DISTNAME=	vulture-2.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Find dead code
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

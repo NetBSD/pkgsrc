@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/05/05 22:17:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	Whoosh-2.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Fast, featureful full-text indexing and searching library implemented
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

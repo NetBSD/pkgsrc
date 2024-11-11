@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/06/10 11:17:08 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:34 wiz Exp $
 
 DISTNAME=	OWSLib-0.31.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	OGC Web Service utility library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.3.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz

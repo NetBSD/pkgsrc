@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/06/13 07:33:57 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:29:29 wiz Exp $
 
 DISTNAME=	waitress-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Production-quality pure-Python WSGI server
 LICENSE=	zpl-2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=41:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

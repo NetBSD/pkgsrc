@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/02/28 10:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest-testmon-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Selects tests affected by changed files and methods
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-coverage>=6:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-test>=5:../../devel/py-test
 

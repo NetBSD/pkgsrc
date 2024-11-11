@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/02/07 10:21:07 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:27:55 wiz Exp $
 
 DISTNAME=	confusable_homoglyphs-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Detect confusable usage of unicode homoglyphs
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # cli
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 

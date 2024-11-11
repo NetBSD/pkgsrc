@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/04/12 11:34:13 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:32 wiz Exp $
 
 DISTNAME=	eth_abi-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Python utilities for working with Ethereum ABI definitions
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-eth-typing>=3.0.0:../../finance/py-eth-typing
 DEPENDS+=	${PYPKGPREFIX}-eth-utils>=2.0.0:../../finance/py-eth-utils
 DEPENDS+=	${PYPKGPREFIX}-parsimonious>=0.10.0:../../textproc/py-parsimonious

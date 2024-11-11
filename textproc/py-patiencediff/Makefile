@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/11 05:17:28 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:06 wiz Exp $
 
 DISTNAME=	patiencediff-0.2.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python implementation of the patiencediff algorithm
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # or later
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

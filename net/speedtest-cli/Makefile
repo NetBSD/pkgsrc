@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/04/30 13:47:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:52 wiz Exp $
 
 DISTNAME=	speedtest-cli-2.1.3
 PKGREVISION=	5
@@ -12,7 +12,6 @@ COMMENT=	Command line client for use with speedtest.net
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 REPLACE_PYTHON=	*.py
 

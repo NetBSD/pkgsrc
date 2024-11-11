@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/07/12 18:49:07 adam Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:29:31 wiz Exp $
 
 DISTNAME=	pyqt_builder-1.16.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt_/qt-/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6.7:../../x11/py-sip6
 

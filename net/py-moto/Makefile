@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/01/27 19:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	moto-4.1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Mock-up of the boto library
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-boto3>=1.9.201:../../net/py-boto3
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.12.201:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/26 14:37:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:33 wiz Exp $
 
 DISTNAME=	pysol_cards-0.14.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Deal PySol FC Cards
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-random2-[0-9]*:../../devel/py-random2
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 

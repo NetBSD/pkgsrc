@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/10/14 06:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/11 07:28:05 wiz Exp $
 
 DISTNAME=	python-daemon-3.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.10:../../devel/py-lockfile
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=62.4.0:../../devel/py-setuptools

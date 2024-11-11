@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/10/14 06:45:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:39 wiz Exp $
 
 DISTNAME=	asdf_coordinates_schemas-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asdf>=2.12.1:../../math/py-asdf
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
 

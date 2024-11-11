@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/10/08 17:44:26 adam Exp $
+# $NetBSD: Makefile,v 1.60 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	django_cms-4.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.django-cms.org/
 COMMENT=	Django content management system
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-classy-tags>=0.7.2:../../www/py-django-classy-tags
 DEPENDS+=	${PYPKGPREFIX}-django-formtools>=2.1:../../www/py-django-formtools

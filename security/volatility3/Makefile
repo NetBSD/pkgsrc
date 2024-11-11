@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/06/11 10:39:50 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:57 wiz Exp $
 
 DISTNAME=	volatility3-2.7.0
 CATEGORIES=	security
@@ -11,7 +11,6 @@ COMMENT=	Advanced memory forensics framework
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pefile>=2023.2.7:../../sysutils/py-pefile
 # Optional; see requirements.txt
 DEPENDS+=	${PYPKGPREFIX}-capstone>=3.0.5:../../devel/py-capstone

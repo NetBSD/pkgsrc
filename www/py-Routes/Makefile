@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/01/26 13:54:06 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:15 wiz Exp $
 
 DISTNAME=	Routes-2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python re-implementation of the Rails routes system for mapping URLs
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-repoze.lru>=0.3:../../devel/py-repoze.lru
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # middleware

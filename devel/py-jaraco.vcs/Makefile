@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/08/07 10:48:07 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:13 wiz Exp $
 
 DISTNAME=	jaraco_vcs-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -14,7 +14,6 @@ WHEEL_NAME=	${DISTNAME:S/_/./:C/-([^0-9])/_\1/g}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-jaraco.classes-[0-9]*:../../devel/py-jaraco.classes
 DEPENDS+=	${PYPKGPREFIX}-jaraco.path-[0-9]*:../../devel/py-jaraco.path

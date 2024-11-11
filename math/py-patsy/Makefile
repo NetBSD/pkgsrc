@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/17 20:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:42 wiz Exp $
 
 DISTNAME=	patsy-0.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python package for describing statistical models
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/10/28 19:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	pika-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python AMQP Client Library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:24 wiz Exp $
 
 DISTNAME=	pytest_checkdocs-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.15:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jaraco.packaging>=9.5:../../devel/py-jaraco.packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

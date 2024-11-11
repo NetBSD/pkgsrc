@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/10/28 19:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	pygccxml-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ COMMENT=	Python package for easy C++ declarations navigation
 LICENSE=	boost-license
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

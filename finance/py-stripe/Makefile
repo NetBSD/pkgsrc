@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/06/14 15:28:27 adam Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/11 07:28:33 wiz Exp $
 
 DISTNAME=	stripe-9.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Stripe python bindings
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5.0:../../devel/py-typing-extensions
 # tests require stripe-mock

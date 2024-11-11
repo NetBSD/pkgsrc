@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:25 wiz Exp $
 
 DISTNAME=	jupyter-lsp-2.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Multi-Language Server WebSocket proxy for Jupyter Notebook/Lab server
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=1.1.2:../../www/py-jupyter_server
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.1:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-flake8-[0-9]*:../../devel/py-test-flake8

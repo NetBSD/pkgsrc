@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/07/24 06:50:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:18 wiz Exp $
 
 DISTNAME=	django_compressor-4.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Compresses linked and inline javascript or CSS into single cached file
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-appconf>=1.0.3:../../www/py-django-appconf
 DEPENDS+=	${PYPKGPREFIX}-rcssmin>=1.1.2:../../www/py-rcssmin

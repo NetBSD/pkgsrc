@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/03/06 20:35:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:27:58 wiz Exp $
 
 DISTNAME=	SQLAlchemy-i18n-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,8 +10,7 @@ HOMEPAGE=	https://github.com/kvesteri/sqlalchemy-i18n
 COMMENT=	Internationalization extension for SQLAlchemy models
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.3:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils>=0.37.3:../../databases/py-sqlalchemy-utils
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/04 12:25:10 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	rcssmin-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Fast CSS minifier for Python
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/11/05 10:11:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	Wand-0.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Ctypes-based simple ImageMagick binding for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

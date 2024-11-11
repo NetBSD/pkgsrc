@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/05/18 06:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:03 wiz Exp $
 
 DISTNAME=	itemadapter-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Wrapper providing a common interface for objects of different types
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

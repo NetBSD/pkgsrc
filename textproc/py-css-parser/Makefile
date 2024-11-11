@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2023/11/06 20:11:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	css-parser-1.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Cascading Style Sheets parser and library for Python
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

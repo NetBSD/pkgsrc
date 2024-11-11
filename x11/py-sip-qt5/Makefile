@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/07/12 18:53:19 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:31 wiz Exp $
 
 DISTNAME=	PyQt5_sip-12.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5_sip/sip-qt5/}
@@ -11,7 +11,6 @@ COMMENT=	Qt5 support for sip
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 

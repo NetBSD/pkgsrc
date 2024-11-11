@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/10/14 06:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/11/11 07:28:57 wiz Exp $
 
 DISTNAME=	ansible-10.5.0
 CATEGORIES=	sysutils python
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v3
 PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.17.5:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none

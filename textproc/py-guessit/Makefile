@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:08:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:03 wiz Exp $
 
 DISTNAME=	guessit-3.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Extracts as much information as possible from a video filename
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-babelfish>=0.6.0:../../textproc/py-babelfish
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-rebulk>=3.2.0:../../textproc/py-rebulk

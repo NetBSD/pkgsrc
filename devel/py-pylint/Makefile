@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2024/10/01 15:57:38 adam Exp $
+# $NetBSD: Makefile,v 1.105 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pylint-3.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python source code analyzer
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.37.1:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-astroid>=3.3.4:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-dill>=0.3.7:../../textproc/py-dill
 DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.5:../../devel/py-isort

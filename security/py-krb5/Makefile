@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/07/22 05:10:37 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:55 wiz Exp $
 
 DISTNAME=	krb5-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.29:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

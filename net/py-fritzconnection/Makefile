@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/10/13 09:33:44 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	fritzconnection-1.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Communicate with the AVM FRITZ!Box
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.22.0:../../devel/py-requests
 
 USE_LANGUAGES=	# none

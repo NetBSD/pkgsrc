@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/01 12:54:39 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/11 07:29:01 wiz Exp $
 
 DISTNAME=	PyICU-2.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyICU/ICU/}
@@ -14,7 +14,6 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_CXX_FEATURES+=	c++17

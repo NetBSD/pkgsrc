@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/02/21 12:27:04 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:16 wiz Exp $
 
 DISTNAME=	betamax-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	VCR imitation for python-requests
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 
 USE_LANGUAGES=	# none

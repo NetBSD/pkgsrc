@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/22 12:40:47 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:56 wiz Exp $
 
 DISTNAME=	spake2-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure-Python SPAKE2
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 
 .include "../../lang/python/wheel.mk"
