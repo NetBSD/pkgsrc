@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 16:28:04 adam Exp $
 
-DISTNAME=	debugpy-1.8.7
+DISTNAME=	debugpy-1.8.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/debugpy/}
