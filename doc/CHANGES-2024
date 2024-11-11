@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6905 2024/11/11 15:40:09 taca Exp $
+$NetBSD: CHANGES-2024,v 1.6906 2024/11/11 16:38:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10416,3 +10416,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/firefox to 132.0.1 [ryoon 2024-11-11]
 	Updated www/firefox-l10n to 132.0.1 [ryoon 2024-11-11]
 	Updated mail/php-dmarc-srg to 2.2.1 [taca 2024-11-11]
+	Updated devel/py-debugpy to 1.8.8 [adam 2024-11-11]
+	Updated editors/py-jedi to 0.19.2 [adam 2024-11-11]
+	Updated devel/py-hatchling to 1.26.1 [adam 2024-11-11]
+	Updated parallel/py-ipyparallel to 9.0.0 [adam 2024-11-11]
