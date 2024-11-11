@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/11/01 00:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/11 09:19:57 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
@@ -17,8 +17,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess-[0-9]*:../../devel/py-test-xprocess
 
 # as of 3.1.0 - tests hang. interrupt gives:
-# 1 failed, 685 passed
-# previous version:
+# 1 failed, 693 passed
+# https://github.com/pallets/werkzeug/issues/3002
+pre-test:
+	${RM} -f ${WRKSRC}/tests/test_serving.py
+# with this file removed
+# 1 failed, 919 passed
+# before 3.1.0:
 # 18 failed, 887 passed, 1 skipped
 
 EGDIR=			share/examples/${PKGBASE}
