@@ -1,0 +1,17 @@
+inline-snapshot can be used for different things:
+
+* golden master/approval/snapshot testing. The idea is that you
+  have a function with a currently unknown result and you want
+  to write a tests, which ensures that the result does not change
+  during refactoring.
+
+* Compare things which are complex like lists with lot of numbers
+  or complex data structures.
+
+* Things which might change during the development like error
+  messages.
+
+inline-snapshot automates the process of recording, storing and
+updating the value you want to compare with. The value is converted
+with repr() and stored in the source file as argument of the
+snapshot() function.
