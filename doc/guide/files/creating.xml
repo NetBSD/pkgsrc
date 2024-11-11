@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.42 2024/05/10 12:15:23 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.43 2024/11/11 17:02:24 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -174,10 +174,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=       27
 <para>
 If the packaged software is a Python module, include
 <filename>../../lang/python/wheel.mk</filename>.  Note per PEP-518,
-the minimum and default requirements to create .whl files are
-<filename role="pkg">devel/py-setuptools</filename> plus <filename
-role="pkg">devel/py-wheel</filename>; however, there are various other
-possible tools that projects can use. Thus inclusion of
+the minimum and default requirement to create .whl files is <filename
+role="pkg">devel/py-setuptools</filename>; however, there are various
+other possible tools that projects can use. Thus inclusion of
 <filename>wheel.mk</filename> does not imply these defaults are
 defined as <varname>TOOL_DEPENDS</varname>. Whatever the project
 specifically requires as packaging tools must be defined in the
