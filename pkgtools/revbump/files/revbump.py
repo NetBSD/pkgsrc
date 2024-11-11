@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# $NetBSD: revbump.py,v 1.7 2024/01/18 10:11:55 wiz Exp $
+# $NetBSD: revbump.py,v 1.8 2024/11/11 12:59:31 wiz Exp $
 #
 # Copyright (c) 2023 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,6 +46,7 @@ bldir_re = re.compile(r'^BUILDLINK_PKGSRCDIR(.*=[ \t]+)')
 pkgrevision_re = re.compile(r'PKGREVISION=([ \t]+)([0-9]+)$')
 pr_before_re = re.compile(r'(?:CATEGORIES=|\.\s*include)([ \t]+)')
 pr_after_re = re.compile(r'(?:PKGNAME=|COMMENT=)([ \t]+)')
+pgsql_fix_re = re.compile(r'postgresql[0-9]*-')
 python_fix_re = re.compile(r'py[0-9]*-')
 ruby_fix_re = re.compile(r'ruby[0-9]*-')
 
@@ -67,6 +68,8 @@ def bl3bump(path):
     version = version_process.stdout
     last_dash = version.rfind('-')
     version = version[:last_dash] + '>=' + version[last_dash+1:]
+    if pgsql_fix_re.match(version):
+        version = re.sub(pgsql_fix_re, 'postgresql${PGSQL_VERSION}-', version)
     if python_fix_re.match(version):
         version = re.sub(python_fix_re, '${PYPKGPREFIX}-', version)
     if ruby_fix_re.match(version):
