@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/06/03 15:12:19 taca Exp $
+$NetBSD: distinfo,v 1.2 2024/11/11 15:39:56 taca Exp $
 
-BLAKE2s (dmarc-srg-2.1.tar.gz) = daebe45d86a1087277bc62d6a3dd003939f2e91627dd4445ed2812fdde56ce41
-SHA512 (dmarc-srg-2.1.tar.gz) = d2569e8d9593d76c751042e7eb36dfb2d903788f9f8ad92acd62949ab62bf55ae2dea5be2e37a3bd64726e9de76a7a0916d7c4ff1f91a126b1b3cea3105ff898
-Size (dmarc-srg-2.1.tar.gz) = 168814 bytes
+BLAKE2s (dmarc-srg-2.2.1.tar.gz) = 3524acb3393b2f1fcd12386d042544c70020a171a0d9715f50d72069cd1e62fa
+SHA512 (dmarc-srg-2.2.1.tar.gz) = 844ab46d0e0a7e79333718a67733d7ffaa099d187caeb3a5ac81f1f486ba698ad3f017a384d9971f746becd397e07f18226e848b2caa6205a92257da97620548
+Size (dmarc-srg-2.2.1.tar.gz) = 173153 bytes
