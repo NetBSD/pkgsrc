@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25073 2024/11/11 08:14:32 wiz Exp $
+$NetBSD: TODO,v 1.25074 2024/11/11 08:18:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1111,7 +1111,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
-	o prometheus-2.55.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
