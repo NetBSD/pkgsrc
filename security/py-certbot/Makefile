@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2024/10/14 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/11 12:10:44 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
 DISTNAME=	certbot-${CERTBOT_VERSION}
-PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certbot/}
 
 COMMENT=	Client for the Let's Encrypt CA
@@ -11,13 +10,11 @@ COMMENT=	Client for the Let's Encrypt CA
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=1.5.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj>=5.0.6:../../devel/py-configobj
-DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 DEPENDS+=	${PYPKGPREFIX}-josepy>=1.13.0:../../security/py-josepy
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.4:../../time/py-parsedatetime
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2019.3:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
-# Needed for the test target
-# https://github.com/certbot/certbot/issues/2956
+TEST_DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
