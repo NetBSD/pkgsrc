@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2024/11/11 02:03:54 gutteridge Exp $
+# $NetBSD: Makefile,v 1.260 2024/11/11 02:06:05 gutteridge Exp $
 
 DISTNAME=	gnutls-3.8.8
 PKGREVISION=	1
@@ -38,8 +38,8 @@ CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 .include "options.mk"
 
-# one failure as of 3.7.1
-# https://gitlab.com/gnutls/gnutls/-/issues/1190
+# Four failures on NetBSD 9.4_STABLE as of 3.8.8:
+# simple, crq_apis, gnutls-strcodes, system-override-allow-rsa-pkcs1-encrypt.sh
 TEST_TARGET=		check
 
 INFO_FILES=		yes
