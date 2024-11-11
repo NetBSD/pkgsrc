@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2024/10/19 11:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.225 2024/11/11 15:47:14 wiz Exp $
 
 DISTNAME=	blender-4.2.1
 PKGREVISION=	2
@@ -56,14 +56,10 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
 PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:R}
 
-REPLACE_PYTHON=		scripts/addons/io_curve_svg/svg_util_test.py \
-			scripts/addons/io_scene_fbx/fbx2json.py	\
-			scripts/addons/io_scene_fbx/json2fbx.py	\
-			scripts/addons/node_wrangler/utils/paths_test.py \
-			scripts/modules/bl_i18n_utils/merge_po.py \
-			scripts/modules/blend_render_info.py
+REPLACE_PYTHON+=	scripts/modules/bl_i18n_utils/merge_po.py
+REPLACE_PYTHON+=	scripts/modules/blend_render_info.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 313
 
 .include "options.mk"
 .include "../../archivers/minizip-ng/buildlink3.mk"
