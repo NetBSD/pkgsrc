@@ -1,4 +1,4 @@
-# $Id: Makefile.multinode-NetBSD,v 1.4 2012/06/07 21:23:46 ryoon Exp $
+# $Id: Makefile.multinode-NetBSD,v 1.5 2024/11/11 17:58:20 wiz Exp $
 # Source: http://mail-index.NetBSD.org/netbsd-help/2005/03/25/0005.html
 #
 # Starts up two qemu instances and networks bridges them to the local
@@ -27,7 +27,7 @@ netbsd1: bridge
 	ifconfig tap1 create up	     || echo tap1: already there
 	brconfig bridge0 add tap1 up || echo tap1: already on bridge0
 	brconfig bridge0 -learn tap1 # real hub mode, step 1b
-	brconfig bridge0 flush	# real hub more, step 2
+	brconfig bridge0 flush	# real hub mode, step 2
 	qemu \	
 		-m ${QEMU_RAM} \
 		${NETBSD_NOGFX} \
