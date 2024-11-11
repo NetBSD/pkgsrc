@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6880 2024/11/10 21:28:55 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6881 2024/11/11 03:47:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10375,3 +10375,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated emulators/wine to 9.0nb2 [triaxx 2024-11-10]
 	Updated devel/tokei to 13.0.0.alpha7 [pin 2024-11-10]
 	Updated editors/tp-note to 1.24.10 [pin 2024-11-10]
+	Updated www/php-nextcloud to 30.0.2 [ryoon 2024-11-11]
