@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.126 2024/11/07 13:34:45 gdt Exp $
+# $NetBSD: Makefile,v 1.127 2024/11/11 13:07:38 gdt Exp $
 
 DISTNAME=	mapserver-8.2.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	geography www
 MASTER_SITES=	http://download.osgeo.org/mapserver/
 
-MAINTAINER+=	gdt@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://mapserver.org/
 COMMENT=	Environment for building spatially enabled Internet apps
 LICENSE=	mit
@@ -24,17 +24,13 @@ MAKE_FLAGS+=		VERBOSE=1
 cmake-options:
 	(cd ${WRKSRC}/cmake-pkgsrc-build && cmake -L ..) > OPTIONS
 
-# \todo Check/explain/gc.
-USE_PKGLOCALEDIR=	yes
-
-# \todo File an upstream bug, and improve this (DOCDIR).
 INSTALLATION_DIRS+=	share/examples/mapserver
 post-install:
 	mv ${DESTDIR}/${PREFIX}/etc/mapserver-sample.conf ${DESTDIR}/${PREFIX}/share/examples/mapserver/mapserver.conf
 CONF_FILES+=		share/examples/mapserver/mapserver.conf ${PKG_SYSCONFDIR}/mapserver.conf
 
 # Upstream does not document dependencies.  Instead they say to try to
-# build and when you see an error guess at what to add until it
+# build and when you see an error guess, at what to add until it
 # builds.  (Really!)
 
 .include "options.mk"
@@ -71,7 +67,9 @@ CONF_FILES+=		share/examples/mapserver/mapserver.conf ${PKG_SYSCONFDIR}/mapserve
 
 # Dependencies cmake looks for, not listed above
 .include "../../devel/zlib/buildlink3.mk"
-#  found and "enabled" but not clearly present in built objects
+
+# \todo Resolve whether iconv is needed or used.
+# It is found and "enabled" but not clearly present in built objects
 .include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
