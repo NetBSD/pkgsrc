@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/05/12 10:36:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:54:01 wiz Exp $
 
-DISTNAME=	blinker-1.8.2
+DISTNAME=	blinker-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blinker/}
