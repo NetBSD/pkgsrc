@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/12 16:39:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/11 12:10:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,7 +20,4 @@ ${PYSITELIB}/certbot_dns_route53/_internal/tests/__init__.pyo
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.py
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyc
 ${PYSITELIB}/certbot_dns_route53/_internal/tests/dns_route53_test.pyo
-${PYSITELIB}/certbot_dns_route53/authenticator.py
-${PYSITELIB}/certbot_dns_route53/authenticator.pyc
-${PYSITELIB}/certbot_dns_route53/authenticator.pyo
 ${PYSITELIB}/certbot_dns_route53/py.typed
