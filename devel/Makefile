@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4359 2024/11/10 05:14:56 iquiw Exp $
+# $NetBSD: Makefile,v 1.4360 2024/11/11 09:00:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2667,6 +2667,7 @@ SUBDIR+=	py-importlib-metadata
 SUBDIR+=	py-importlib-resources
 SUBDIR+=	py-incremental
 SUBDIR+=	py-iniconfig
+SUBDIR+=	py-inline-snapshot
 SUBDIR+=	py-inquirer
 SUBDIR+=	py-intelhex
 SUBDIR+=	py-intervaltree
