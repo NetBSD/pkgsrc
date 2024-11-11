@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/06/26 16:47:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/11 16:36:28 adam Exp $
 bin/hatchling-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -89,6 +89,9 @@ ${PYSITELIB}/hatchling/cli/build/__init__.pyo
 ${PYSITELIB}/hatchling/cli/dep/__init__.py
 ${PYSITELIB}/hatchling/cli/dep/__init__.pyc
 ${PYSITELIB}/hatchling/cli/dep/__init__.pyo
+${PYSITELIB}/hatchling/cli/dep/core.py
+${PYSITELIB}/hatchling/cli/dep/core.pyc
+${PYSITELIB}/hatchling/cli/dep/core.pyo
 ${PYSITELIB}/hatchling/cli/metadata/__init__.py
 ${PYSITELIB}/hatchling/cli/metadata/__init__.pyc
 ${PYSITELIB}/hatchling/cli/metadata/__init__.pyo
@@ -101,15 +104,6 @@ ${PYSITELIB}/hatchling/dep/__init__.pyo
 ${PYSITELIB}/hatchling/dep/core.py
 ${PYSITELIB}/hatchling/dep/core.pyc
 ${PYSITELIB}/hatchling/dep/core.pyo
-${PYSITELIB}/hatchling/licenses/__init__.py
-${PYSITELIB}/hatchling/licenses/__init__.pyc
-${PYSITELIB}/hatchling/licenses/__init__.pyo
-${PYSITELIB}/hatchling/licenses/parse.py
-${PYSITELIB}/hatchling/licenses/parse.pyc
-${PYSITELIB}/hatchling/licenses/parse.pyo
-${PYSITELIB}/hatchling/licenses/supported.py
-${PYSITELIB}/hatchling/licenses/supported.pyc
-${PYSITELIB}/hatchling/licenses/supported.pyo
 ${PYSITELIB}/hatchling/metadata/__init__.py
 ${PYSITELIB}/hatchling/metadata/__init__.pyc
 ${PYSITELIB}/hatchling/metadata/__init__.pyo
