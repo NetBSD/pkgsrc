@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/10 07:02:34 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:04 wiz Exp $
 
 DISTNAME=	jsonlines-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library with helpers for the jsonlines file format
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.2.0:../../devel/py-attrs
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/07/22 04:56:09 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	softlayer-6.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	SoftLayer-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.4:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-prettytable>=2.5.0:../../textproc/py-prettytable
 DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=2:../../devel/py-prompt_toolkit

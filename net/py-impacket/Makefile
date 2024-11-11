@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/09/18 09:13:09 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:48 wiz Exp $
 
 DISTNAME=	impacket-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://www.secureauth.com/labs/open-source-tools/impacket
 COMMENT=	Collection of Python classes for working with network protocols
 LICENSE=	apache-1.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.2.3:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 DEPENDS+=	${PYPKGPREFIX}-charset-normalizer-[0-9]*:../../converters/py-charset-normalizer

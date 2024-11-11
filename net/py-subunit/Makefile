@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:51 wiz Exp $
 
 DISTNAME=	python-subunit-1.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -11,7 +11,6 @@ COMMENT=	Python implementation of subunit test streaming protocol
 LICENSE=	apache-2.0 OR modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=43.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 DEPENDS+=	${PYPKGPREFIX}-testtools>=0.9.34:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-fixtures-[0-9]*:../../devel/py-fixtures

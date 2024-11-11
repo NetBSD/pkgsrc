@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 06:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:27 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	SPARQL endpoint interface to Python
 LICENSE=	w3c
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=6.1.1:../../textproc/py-rdflib
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/10/14 06:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/11 07:29:14 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ EXTRACT_USING=	bsdtar	# gtar cannot handle pre-1970 timestamps
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites>=0.1.7:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.3.0:../../devel/py-click-log

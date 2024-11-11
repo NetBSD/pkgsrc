@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/01/24 23:49:00 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:27:51 wiz Exp $
 
 DISTNAME=	unrardll-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python bindings for libunrar
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=57.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 

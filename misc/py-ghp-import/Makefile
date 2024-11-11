@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/24 16:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:44 wiz Exp $
 
 DISTNAME=	ghp-import-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Copy your docs directly to the gh-pages branch
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.1:../../time/py-dateutil
 
 USE_LANGUAGES=	# none

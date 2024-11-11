@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/10/14 06:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/11 07:28:45 wiz Exp $
 
 DISTNAME=	streamlink-5.5.1
 PKGREVISION=	2
@@ -13,7 +13,6 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioningit>=1.1.1:../../devel/py-versioningit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-country-[0-9]*:../../geography/py-country
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.3:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-isodate-[0-9]*:../../time/py-isodate

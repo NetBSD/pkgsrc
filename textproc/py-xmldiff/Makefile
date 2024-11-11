@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/06/10 21:00:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:11 wiz Exp $
 
 DISTNAME=	xmldiff-2.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/Shoobx/xmldiff
 COMMENT=	Creates diffs of XML files
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.1.0:../../textproc/py-lxml
 

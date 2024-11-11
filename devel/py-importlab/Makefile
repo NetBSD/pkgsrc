@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	importlab-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Library to calculate python dependency graphs
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-networkx>=2:../../math/py-networkx
 
 USE_LANGUAGES=	# none

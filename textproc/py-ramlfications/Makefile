@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/06/13 05:15:58 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	ramlfications-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python RAML parser
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-inflect-[0-9]*:../../lang/py-inflect

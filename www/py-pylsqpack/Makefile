@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/01/06 23:10:39 leot Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	pylsqpack-0.3.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper for the ls-qpack QPACK library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

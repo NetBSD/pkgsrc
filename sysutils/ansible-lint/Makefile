@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2024/10/14 06:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/11 07:28:57 wiz Exp $
 
 DISTNAME=	ansible_lint-24.9.2
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v3 AND mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.3.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	ansible-core>=2.13.0:../../sysutils/ansible-core
 DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=24.9.1:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-black>=24.3.0:../../textproc/py-black

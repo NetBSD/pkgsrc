@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/06/11 10:29:51 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:57 wiz Exp $
 
 .include "../../security/yara/Makefile.common"
 
@@ -11,7 +11,6 @@ COMMENT=	Yara Python bindings
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests.py

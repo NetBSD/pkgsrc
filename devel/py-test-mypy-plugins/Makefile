@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/04/03 14:52:24 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:25 wiz Exp $
 
 DISTNAME=	pytest-mypy-plugins-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
@@ -11,7 +11,6 @@ COMMENT=	Pytest plugin for writing cmd for mypy plugins
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/05/05 22:35:32 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/11 07:27:53 wiz Exp $
 
 .include "Makefile.common"
 
@@ -8,7 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Hardware description in Python
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

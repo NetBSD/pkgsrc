@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/09/14 08:24:33 adam Exp $
+# $NetBSD: Makefile,v 1.90 2024/11/11 07:28:07 wiz Exp $
 
 DISTNAME=	faker-28.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	Faker-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4:../../time/py-dateutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun

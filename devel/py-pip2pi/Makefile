@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/30 11:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	pip2pi-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Build a PyPI-compatible package repository from pip
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

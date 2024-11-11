@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/14 06:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:29 wiz Exp $
 
 DISTNAME=	wagtailmenus-3.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Menu system for the Wagtail CMS
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django-cogwheels>=0.3:../../www/py-django-cogwheels
 DEPENDS+=	${PYPKGPREFIX}-wagtail>=2.15:../../www/py-wagtail
 TEST_DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.8:../../www/py-beautifulsoup4

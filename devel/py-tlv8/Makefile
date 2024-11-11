@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/28 19:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	tlv8-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Type-Length-Value8 (TLV8) for Python
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

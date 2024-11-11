@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/05/04 23:52:06 jym Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	dkimpy-1.1.6
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	DKIM, ARC, and TLSRPT email signing and verification
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-aiodns-[0-9]*:../../net/py-aiodns
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.2.0:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns

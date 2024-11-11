@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/08/05 07:46:51 adam Exp $
+# $NetBSD: Makefile,v 1.49 2024/11/11 07:27:58 wiz Exp $
 
 DISTNAME=	redis-5.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Redis Python client
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-packaging>=20.4:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 

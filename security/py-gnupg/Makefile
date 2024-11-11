@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/10/08 18:10:00 adam Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/11 07:28:54 wiz Exp $
 
 DISTNAME=	python-gnupg-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -11,7 +11,6 @@ COMMENT=	Wrapper for the Gnu Privacy Guard
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.29.0:../../devel/py-wheel
 DEPENDS+=	gnupg2>=2.2.0:../../security/gnupg2
 
 USE_LANGUAGES=	# none

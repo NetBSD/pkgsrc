@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/11/08 14:28:47 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/11 07:28:28 wiz Exp $
 
 DISTNAME=	types-setuptools-75.3.0.20241107
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Typing stubs for setuptools
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/07/29 07:08:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest-snapshot-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

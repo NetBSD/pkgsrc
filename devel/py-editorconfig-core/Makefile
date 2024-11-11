@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/02/14 21:29:25 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:07 wiz Exp $
 
 DISTNAME=	EditorConfig-0.12.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/EditorConfig/editorconfig-core/}
@@ -11,7 +11,6 @@ COMMENT=	Editorconfig python library
 LICENSE=	python-software-foundation AND modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

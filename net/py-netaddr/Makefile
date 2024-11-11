@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/06/07 11:04:13 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	netaddr-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library for manipulating network addresses
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/07/23 05:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:54 wiz Exp $
 
 DISTNAME=	bcrypt-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-rust>=1.7.0:../../devel/py-setuptools-rust
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

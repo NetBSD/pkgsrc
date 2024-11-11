@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/14 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:28:37 wiz Exp $
 
 DISTNAME=	hy-0.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Lisp and Python love each other
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-funcparserlib>=1.0:../../devel/py-funcparserlib
 
 USE_LANGUAGES=	# none

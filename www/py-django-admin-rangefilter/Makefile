@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/08/27 08:57:59 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/11 07:29:17 wiz Exp $
 
 DISTNAME=	django_admin_rangefilter-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Add the filter by a custom date range on the admin UI
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none

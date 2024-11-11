@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/05/14 13:09:34 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:10 wiz Exp $
 
 DISTNAME=	ujson-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 

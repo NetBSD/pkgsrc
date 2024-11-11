@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/05/01 08:57:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	acme-tiny-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Tiny script to issue and renew TLS certs from Let's Encrypt
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv
 
 USE_LANGUAGES=	# none

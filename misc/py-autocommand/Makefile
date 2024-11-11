@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/11/27 06:55:57 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:44 wiz Exp $
 
 DISTNAME=	autocommand-2.2.2
 PKGREVISION=	1
@@ -12,7 +12,6 @@ COMMENT=	Create a command-line program from a function
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

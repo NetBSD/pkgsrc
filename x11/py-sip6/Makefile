@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/09/04 23:35:25 gdt Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:31 wiz Exp $
 
 # Before updating sip, geography/qgis (as the most demanding sip user
 # currently known) must be tested to build ok.  The 6.8.0 release of
@@ -18,7 +18,6 @@ COMMENT=	Tool to create Python bindings for C++ libraries
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 

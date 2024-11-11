@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/16 19:10:37 js Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:27:59 wiz Exp $
 
 # There are no release tags for glasgow
 GLASGOW_VERSION=	0.0.20240810
@@ -18,7 +18,6 @@ LICENSE=	0-clause-bsd OR apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.8<5:../../devel/py-typing-extensions
 DEPENDS+=	${PYPKGPREFIX}-amaranth>=0.5.1<0.6:../../devel/py-amaranth
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0:../../devel/py-packaging

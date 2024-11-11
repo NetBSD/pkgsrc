@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/11/04 11:09:42 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:02 wiz Exp $
 
 DISTNAME=	boltons-24.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Functionality that should be in the standard library
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

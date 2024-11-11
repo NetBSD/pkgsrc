@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/11/05 16:46:19 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:08 wiz Exp $
 
 DISTNAME=	sphinx_lv2_theme-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Minimal static theme for Sphinx
 LICENSE=	isc
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/08 05:27:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:25 wiz Exp $
 
 DISTNAME=	PyLTI1p3-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl:S/^py//}
@@ -11,7 +11,6 @@ COMMENT=	LTI 1.3 Advantage Tool implementation in Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-JWT>=1.5:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-jwcrypto-[0-9]*:../../www/py-jwcrypto
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 06:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	lieer-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Email synchronization between notmuch and GMail
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-notmuch2-[0-9]*:../../mail/py-notmuch2
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client-[0-9]*:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib-[0-9]*:../../security/py-google-auth-oauthlib

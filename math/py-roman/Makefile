@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/28 10:01:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:42 wiz Exp $
 
 DISTNAME=	roman-4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Integer to Roman numerals converter for Python
 LICENSE=	zpl-2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

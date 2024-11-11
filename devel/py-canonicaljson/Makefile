@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/28 19:56:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:03 wiz Exp $
 
 DISTNAME=	canonicaljson-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Encodes objects and arrays as RFC 7159 JSON
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=3.14.0:../../converters/py-simplejson
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/12/02 08:57:40 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:34 wiz Exp $
 
 DISTNAME=	ExifRead-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Read Exif metadata from TIFF and JPEG files
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

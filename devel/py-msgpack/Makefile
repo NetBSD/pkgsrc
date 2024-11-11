@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/09/13 19:15:28 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/11 07:28:16 wiz Exp $
 
 DISTNAME=	msgpack-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	MessagePack (de)serializer for Python
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.5.1:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	c c++
 

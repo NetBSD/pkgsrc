@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/02/29 20:55:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:27:56 wiz Exp $
 
 DISTNAME=	dsinternals-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Directory Services Internals Library
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 

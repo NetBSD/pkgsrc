@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 11:20:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:29:11 wiz Exp $
 
 DISTNAME=	translate_toolkit-3.13.5
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.3:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-wcwidth>=0.2.10:../../devel/py-wcwidth
 

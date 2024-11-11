@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:27:59 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -13,7 +13,6 @@ COMMENT=	The angr intermediate language
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # Circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-angr-[0-9]*:../../devel/py-angr
 TEST_DEPENDS+=	${PYPKGPREFIX}-archinfo-[0-9]*:../../devel/py-archinfo

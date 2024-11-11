@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/10/22 07:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:00 wiz Exp $
 
 DISTNAME=	anyio-4.6.2.post1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.4:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.8:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio>=1.1:../../misc/py-sniffio
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=7:../../devel/py-coverage

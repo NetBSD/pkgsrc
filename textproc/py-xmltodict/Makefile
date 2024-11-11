@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/19 05:57:41 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:11 wiz Exp $
 
 DISTNAME=	xmltodict-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Simplified XML parser library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

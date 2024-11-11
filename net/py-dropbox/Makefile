@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/08/10 07:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/11 07:28:47 wiz Exp $
 
 DISTNAME=	dropbox-12.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Dropbox Python API
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.16.2:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-stone>=2.0:../../net/py-stone

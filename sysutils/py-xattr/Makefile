@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/02/02 20:20:28 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	xattr-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper for extended filesystem attributes
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.16.0:../../devel/py-cffi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

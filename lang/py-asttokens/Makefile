@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/04/30 11:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:36 wiz Exp $
 
 DISTNAME=	asttokens-2.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six>=1.12.0:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-astroid-[0-9]*:../../devel/py-astroid
 

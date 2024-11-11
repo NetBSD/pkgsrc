@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/10/14 06:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	Markups-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -12,7 +12,6 @@ COMMENT=	Python text markup language wrapper module
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-markdown-math-[0-9]*:../../textproc/py-markdown-math
 # optional
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils

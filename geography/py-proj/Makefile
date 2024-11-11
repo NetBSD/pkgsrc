@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/11/01 12:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/11/11 07:28:34 wiz Exp $
 
 DISTNAME=		pyproj-3.7.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,6 @@ LICENSE=		mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-certifi>=0:../../security/py-certifi
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

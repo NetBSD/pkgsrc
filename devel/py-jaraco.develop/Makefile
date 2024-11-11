@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:12 wiz Exp $
 
 DISTNAME=	jaraco_develop-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -13,7 +13,6 @@ LICENSE=	mit
 WHEEL_NAME=	${DISTNAME:S/_/./}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
 DEPENDS+=	${PYPKGPREFIX}-jaraco.collections-[0-9]*:../../devel/py-jaraco.collections

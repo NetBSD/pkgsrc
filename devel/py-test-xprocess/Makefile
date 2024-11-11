@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/20 07:44:37 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest-xprocess-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2.3:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-test>=2.8:../../devel/py-test
 

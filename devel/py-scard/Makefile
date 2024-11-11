@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 07:21:21 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:23 wiz Exp $
 
 DISTNAME=	pyscard-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/^py//}
@@ -12,7 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	swig3>=0:../../devel/swig3
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.pcsc-lite}/include/PCSC
 

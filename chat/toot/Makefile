@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/08/23 13:15:15 vins Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/11 07:27:54 wiz Exp $
 
 DISTNAME=		toot-0.44.1
 CATEGORIES=		chat net
@@ -18,7 +18,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup4>=4.5:../../www/py-beautifulsoup4
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1:../../devel/py-click

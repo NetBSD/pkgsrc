@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/06/12 07:18:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:46 wiz Exp $
 
 DISTNAME=	asyncio-nats-client-0.11.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	NATS client for Python asyncio
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

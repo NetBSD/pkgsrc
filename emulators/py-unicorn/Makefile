@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/11/04 19:05:18 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:32 wiz Exp $
 
 .include "../../emulators/unicorn/Makefile.common"
 
@@ -10,7 +10,6 @@ COMMENT=	Python bindings for unicorn
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 PYSETUPSUBDIR=	bindings/python

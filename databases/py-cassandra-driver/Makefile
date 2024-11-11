@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/11/15 09:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/11 07:27:56 wiz Exp $
 
 DISTNAME=	python-driver-3.28.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
@@ -12,7 +12,6 @@ COMMENT=	DataStax Python Driver for Apache Cassandra
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.28:../../devel/py-cython
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-geomet>=0:../../geography/py-geomet

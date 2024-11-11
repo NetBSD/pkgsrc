@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/06/17 12:03:10 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	Genshi-0.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Python toolkit for generation of output for the web
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.8:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 

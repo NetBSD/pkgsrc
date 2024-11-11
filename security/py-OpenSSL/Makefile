@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/07/21 09:02:03 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/11 07:28:53 wiz Exp $
 
 DISTNAME=	pyopenssl-24.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyopenssl/OpenSSL/}
@@ -11,7 +11,6 @@ COMMENT=	Python interface to the OpenSSL library
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.5:../../security/py-cryptography
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend

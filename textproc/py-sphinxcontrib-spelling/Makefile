@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/14 06:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:09 wiz Exp $
 
 DISTNAME=	sphinxcontrib-spelling-8.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-enchant>=3.2.2nb1:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=3.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	git-base-[0-9]*:../../devel/git-base

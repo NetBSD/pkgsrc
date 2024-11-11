@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2023/12/01 19:37:47 adam Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/11 07:28:46 wiz Exp $
 
 DISTNAME=	amqp-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Low-level AMQP client for Python
 LICENSE=	gnu-lgpl-v2.1
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-vine>=5.0.0:../../devel/py-vine
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=6.0:../../devel/py-test-rerunfailures
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar

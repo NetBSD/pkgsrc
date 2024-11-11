@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/09/06 13:48:57 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/11/11 07:28:03 wiz Exp $
 
 DISTNAME=	cffi-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Foreign Function Interface for Python calling C code
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 USE_LANGUAGES=	c c++ # c++ for testing only

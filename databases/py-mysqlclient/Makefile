@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/02/09 10:24:18 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:27:57 wiz Exp $
 
 DISTNAME=	mysqlclient-2.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	MySQL database connector for Python
 LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_TOOLS+=	pkg-config
 

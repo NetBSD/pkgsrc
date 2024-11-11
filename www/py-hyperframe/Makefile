@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/10 09:44:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:29:24 wiz Exp $
 
 DISTNAME=	hyperframe-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	HTTP/2 framing layer for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

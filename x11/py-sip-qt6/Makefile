@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/07/16 08:13:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:29:31 wiz Exp $
 
 DISTNAME=	PyQt6_sip-13.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt6_sip/sip-qt6/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/Python-SIP/sip
 COMMENT=	Qt6 support for sip
 LICENSE=	sip-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
 
 USE_LANGUAGES=	c c++

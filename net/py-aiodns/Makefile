@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/21 18:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:46 wiz Exp $
 
 DISTNAME=	aiodns-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Simple DNS resolver for asyncio
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-cares>=4:../../net/py-cares
 
 USE_LANGUAGES=	# none

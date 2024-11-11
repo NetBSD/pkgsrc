@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/10 09:12:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:29:13 wiz Exp $
 
 DISTNAME=	strict-rfc3339-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Strict, simple, lightweight RFC3339 functions
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 #DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/10/17 14:31:46 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 07:28:00 wiz Exp $
 
 DISTNAME=	astor-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Read/rewrite/write Python ASTs
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/12/02 09:01:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:29:20 wiz Exp $
 
 DISTNAME=	django-sortedm2m-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Drop-in replacement for Django's many to many field
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none

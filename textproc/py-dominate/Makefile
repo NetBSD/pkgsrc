@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/01/22 09:14:48 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:02 wiz Exp $
 
 DISTNAME=	dominate-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library for creating and manipulating HTML documents
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

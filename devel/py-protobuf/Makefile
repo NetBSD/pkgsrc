@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2024/10/23 07:37:08 adam Exp $
+# $NetBSD: Makefile,v 1.79 2024/11/11 07:28:19 wiz Exp $
 
 DISTNAME=	protobuf-5.28.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python bindings for protobuf
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES+=		c c++

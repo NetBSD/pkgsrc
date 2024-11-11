@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/07/22 05:48:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:37 wiz Exp $
 
 DISTNAME=	pure_eval-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=41:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

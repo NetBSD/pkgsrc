@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/05/10 09:57:33 adam Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:19 wiz Exp $
 
 DISTNAME=	py-1.11.0
 PKGREVISION=	1
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

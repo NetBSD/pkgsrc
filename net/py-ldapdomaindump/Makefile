@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2023/11/22 14:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:49 wiz Exp $
 
 DISTNAME=	ldapdomaindump-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Collection of Python classes for working with network protocols
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-ldap3>=2.7:../../databases/py-ldap3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/08/13 09:21:07 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:43 wiz Exp $
 
 .include "../../math/z3/Makefile.common"
 
@@ -6,7 +6,6 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 COMMENT=	Efficient SMT solver library
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-importlib-resources-[0-9]*:../../devel/py-importlib-resources
 
 USE_TOOLS+=	cmake ninja

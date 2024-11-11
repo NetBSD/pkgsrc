@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/09 09:35:28 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:42 wiz Exp $
 
 DISTNAME=	pythran-0.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://pythran.readthedocs.io/
 COMMENT=	Ahead of Time compiler for numeric kernels
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-beniget>=0.4.0:../../devel/py-beniget
 DEPENDS+=	${PYPKGPREFIX}-gast>=0.6.0:../../devel/py-gast
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy

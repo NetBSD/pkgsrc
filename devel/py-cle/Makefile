@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:03 wiz Exp $
 
 .include "../../devel/py-angr/version.mk"
 
@@ -13,7 +13,6 @@ COMMENT=	CLE Loads Everything (at least, many binary formats!)
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-archinfo>=${PKGVERSION_NOREV}:../../devel/py-archinfo
 DEPENDS+=	${PYPKGPREFIX}-pefile-[0-9]*:../../sysutils/py-pefile
 DEPENDS+=	${PYPKGPREFIX}-pyelftools>=0.27:../../devel/py-pyelftools

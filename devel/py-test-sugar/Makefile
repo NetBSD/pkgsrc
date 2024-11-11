@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/02/02 16:06:17 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:27 wiz Exp $
 
 DISTNAME=	pytest-sugar-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Py.test plugin that changes the default look and feel
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-termcolor>=2.1.0:../../devel/py-termcolor
 DEPENDS+=	${PYPKGPREFIX}-test>=6.2.0:../../devel/py-test

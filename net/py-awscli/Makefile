@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2024/10/30 20:09:41 adam Exp $
+# $NetBSD: Makefile,v 1.70 2024/11/11 07:28:46 wiz Exp $
 
 DISTNAME=	awscli-1.35.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Universal Command Line Interface for Amazon Web Services
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-botocore>=1.35.52:../../net/py-botocore
 DEPENDS+=	${PYPKGPREFIX}-colorama>=0.3.2:../../comms/py-colorama
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.10:../../textproc/py-docutils

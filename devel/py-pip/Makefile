@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2024/10/31 10:40:06 adam Exp $
+# $NetBSD: Makefile,v 1.79 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	pip-24.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Installs Python packages as an easy_install replacement
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=67.6.1:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/08/07 20:14:11 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:07 wiz Exp $
 
 DISTNAME=	python_rapidjson-1.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python_//}
@@ -11,7 +11,6 @@ COMMENT=	Python wrapper around rapidjson
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/14 06:45:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:43 wiz Exp $
 
 DISTNAME=	xarray-2024.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1:../../math/py-pandas

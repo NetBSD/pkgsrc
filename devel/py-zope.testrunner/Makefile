@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/19 05:53:56 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:31 wiz Exp $
 
 DISTNAME=	zope.testrunner-6.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.testrunner
 COMMENT=	Zope testrunner script
 LICENSE=	zpl-2.1
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-zope.exceptions-[0-9]*:../../devel/py-zope.exceptions
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface

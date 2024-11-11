@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	pip_run-13.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-jaraco.context-[0-9]*:../../devel/py-jaraco.context
 DEPENDS+=	${PYPKGPREFIX}-jaraco.env-[0-9]*:../../devel/py-jaraco.env

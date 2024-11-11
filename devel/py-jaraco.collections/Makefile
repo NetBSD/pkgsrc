@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/09/15 09:34:14 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:12 wiz Exp $
 
 DISTNAME=	jaraco_collections-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
@@ -14,7 +14,6 @@ WHEEL_NAME=	${DISTNAME:S/_/./}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=56:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jaraco.text-[0-9]*:../../textproc/py-jaraco.text
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-checkdocs>=2.4:../../devel/py-test-checkdocs
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov

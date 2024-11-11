@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/07/24 06:44:43 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:56 wiz Exp $
 
 DISTNAME=	pyspnego-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Windows Negotiate Authentication Client and Server
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # kerberos
 DEPENDS+=	${PYPKGPREFIX}-gssapi>=1.6.0:../../security/py-gssapi
 DEPENDS+=	${PYPKGPREFIX}-krb5>=0.3.0:../../security/py-krb5

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/11/07 09:22:32 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:26 wiz Exp $
 
 DISTNAME=	publicsuffixlist-1.0.2.20241107
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Public Suffix List parser implementation
 LICENSE=	mpl-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 # update
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 

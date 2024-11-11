@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/03/20 06:40:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:36 wiz Exp $
 
 VERSION=	0.8
 DISTNAME=	bython-${VERSION}
@@ -12,7 +12,6 @@ COMMENT=	Python with braces. Because Python is awesome, but whitespace is awful
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 USE_TOOLS+=	bash
 REPLACE_BASH+=	scripts/by2py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/10/14 06:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:40 wiz Exp $
 
 DISTNAME=	astropy-6.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-extension-helpers-[0-9]*:../../devel/py-extension-helpers
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-astropy-iers-data>=0.2024.8.27.10.28.29:../../math/py-astropy-iers-data
 DEPENDS+=	${PYPKGPREFIX}-pyerfa>=2.0.0.1:../../math/py-pyerfa
 DEPENDS+=	${PYPKGPREFIX}-packaging>=19.0:../../devel/py-packaging

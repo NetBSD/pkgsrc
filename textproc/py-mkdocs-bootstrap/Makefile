@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/02/10 10:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:29:06 wiz Exp $
 
 DISTNAME=	mkdocs-bootstrap-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Bootstrap theme for MkDocs
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mkdocs>=1.1:../../textproc/py-mkdocs
 
 USE_LANGUAGES=	# none

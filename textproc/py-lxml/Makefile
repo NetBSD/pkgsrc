@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2024/11/01 12:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2024/11/11 07:29:05 wiz Exp $
 
 DISTNAME=	lxml-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7:../../textproc/py-cssselect
 
 USE_CC_FEATURES=	c99

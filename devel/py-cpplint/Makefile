@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/08/10 06:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/11 07:28:05 wiz Exp $
 
 DISTNAME=	cpplint-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Static code checker for C++
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 # tests are broken anyway
 # 196 failed, 12 passed

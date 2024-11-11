@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/03/17 10:06:55 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:08 wiz Exp $
 
 DISTNAME=	flaky-3.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Plugin for nose or py.test that automatically reruns flaky tests
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

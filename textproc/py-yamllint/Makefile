@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/02/16 18:54:58 adam Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/11 07:29:11 wiz Exp $
 
 DISTNAME=	yamllint-1.35.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Linter for YAML files
 LICENSE=	gnu-gpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pathspec>=0.5.3:../../devel/py-pathspec
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 

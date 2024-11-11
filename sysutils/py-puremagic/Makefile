@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/10/12 10:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:00 wiz Exp $
 
 DISTNAME=	puremagic-1.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure python implementation of magic file detection
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

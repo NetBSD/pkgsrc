@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/03/03 15:27:09 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/11 07:29:19 wiz Exp $
 
 DISTNAME=	django-modelcluster-6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Django extension for offline model instances
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django4
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2022.4:../../time/py-pytz
 # taggit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/10/24 06:50:47 adam Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	networkx-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python package for creating and manipulating graphs and networks
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none

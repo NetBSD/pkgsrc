@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 19:57:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:12 wiz Exp $
 
 DISTNAME=	jaraco.envs-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Classes for orchestrating Python (virtual) environments
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-path-[0-9]*:../../devel/py-path
 DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 DEPENDS+=	${PYPKGPREFIX}-virtualenv-[0-9]*:../../devel/py-virtualenv

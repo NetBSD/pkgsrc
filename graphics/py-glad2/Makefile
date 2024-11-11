@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/12 09:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:35 wiz Exp $
 
 DISTNAME=	glad2-2.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=0:../../textproc/py-jinja2
 
 post-install:

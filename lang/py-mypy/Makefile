@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2024/11/07 09:19:37 adam Exp $
+# $NetBSD: Makefile,v 1.58 2024/11/11 07:28:37 wiz Exp $
 
 DISTNAME=	mypy-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Optional static typing for Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.6.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.30.0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mypy_extensions>=1.0.0:../../lang/py-mypy_extensions
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=18.0:../../devel/py-attrs

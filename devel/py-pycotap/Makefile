@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/06/14 19:58:35 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:20 wiz Exp $
 
 DISTNAME=	pycotap-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Tiny test runner that outputs TAP results to standard output
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/09/04 09:33:57 adam Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/11 07:29:28 wiz Exp $
 
 DISTNAME=	pytest_django-4.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -12,7 +12,6 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=5.0.0:../../devel/py-setuptools_scm
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none

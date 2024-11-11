@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2024/10/29 20:11:48 adam Exp $
+# $NetBSD: Makefile,v 1.105 2024/11/11 07:28:11 wiz Exp $
 
 DISTNAME=	ipython-8.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-jedi>=0.16:../../editors/py-jedi
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-inline-[0-9]*:../../graphics/py-matplotlib-inline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 09:48:48 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	spark_parser-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Earley-Algorithm Context-free grammar Parser Toolkit
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-click>=0:../../devel/py-click
 
 USE_LANGUAGES=	# none

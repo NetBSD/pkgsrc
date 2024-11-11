@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/07/02 09:17:11 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:38 wiz Exp $
 
 DISTNAME=	email_validator-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Robust email syntax and deliverability validation library
 LICENSE=	cc0-1.0-universal
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-idna>=2.0.0:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
 

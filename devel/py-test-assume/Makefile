@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/05/05 22:05:39 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:24 wiz Exp $
 
 DISTNAME=	pytest-assume-2.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ COMMENT=	Py.test plugin that allows multiple failures per test
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none

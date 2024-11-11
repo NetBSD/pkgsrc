@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/09/19 08:09:03 adam Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/11 07:28:43 wiz Exp $
 
 DISTNAME=	sympy-1.13.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-mpmath>=1.1.0:../../math/py-mpmath
 
 USE_LANGUAGES=	# none

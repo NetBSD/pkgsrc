@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/28 17:30:04 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:17 wiz Exp $
 
 DISTNAME=	overrides-7.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Ddecorator to automatically detect mismatch when overriding a method
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/08/10 06:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/11 07:28:04 wiz Exp $
 
 DISTNAME=	cookiecutter-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Command-line utility that creates projects from project templates
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-arrow-[0-9]*:../../time/py-arrow
 DEPENDS+=	${PYPKGPREFIX}-binaryornot>=0.4.4:../../devel/py-binaryornot
 DEPENDS+=	${PYPKGPREFIX}-click>=7.0:../../devel/py-click

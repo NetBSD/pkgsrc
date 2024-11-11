@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 06:45:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:41 wiz Exp $
 
 DISTNAME=	jplephem-2.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python module to load a JPL ephemeris for dynamical calculations
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.17.0:../../math/py-numpy
 
 USE_LANGUAGES=	# none

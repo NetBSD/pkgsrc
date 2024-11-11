@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2023/11/15 09:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:33 wiz Exp $
 
 DISTNAME=	geomet-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Pure Python conversion library for common geospatial data formats
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

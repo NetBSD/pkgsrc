@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/06/12 15:42:29 adam Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/11 07:27:52 wiz Exp $
 
 DISTNAME=	beets-2.0.0
 CATEGORIES=	audio python
@@ -10,7 +10,6 @@ COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-confuse>=1.5.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/05 17:24:25 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:44 wiz Exp $
 
 DISTNAME=	lazy_loader-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Load subpackages and functions on demand
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1:../../devel/py-test-cov
 

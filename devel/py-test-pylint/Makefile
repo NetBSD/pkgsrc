@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/10 15:18:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:26 wiz Exp $
 
 DISTNAME=	pytest-pylint-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,6 @@ COMMENT=	Pytest plugin to check source code with Pylint
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-pylint>=2.15.0:../../devel/py-pylint
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
 

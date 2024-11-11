@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/10/14 06:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:29:08 wiz Exp $
 
 DISTNAME=	sphinx_rtd_theme-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -11,7 +11,6 @@ COMMENT=	Sphinx readthedocs.org theme
 LICENSE=	mit AND apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=5:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery>=4:../../textproc/py-sphinxcontrib-jquery

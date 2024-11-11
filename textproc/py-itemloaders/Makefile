@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/01 07:55:13 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/11 07:29:03 wiz Exp $
 
 DISTNAME=	itemloaders-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python library that helps to collect data from HTML and XML sources
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-itemadapter>=0.1.0:../../textproc/py-itemadapter
 DEPENDS+=	${PYPKGPREFIX}-jmespath>=0.9.5:../../textproc/py-jmespath
 DEPENDS+=	${PYPKGPREFIX}-parsel>=1.5.0:../../www/py-parsel

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2024/06/11 16:10:12 adam Exp $
+# $NetBSD: Makefile.common,v 1.22 2024/11/11 07:28:20 wiz Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -160,7 +160,6 @@ HOMEPAGE=	https://pyobjc.readthedocs.io/
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 ONLY_FOR_PLATFORM=	Darwin-*-* # only for macOS
 

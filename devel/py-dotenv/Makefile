@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/01/28 08:14:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:07 wiz Exp $
 
 DISTNAME=	python-dotenv-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^python-//}
@@ -11,7 +11,6 @@ COMMENT=	Add .env support to your django/flask apps
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 # cli
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 TEST_DEPENDS+=	${PYPKGPREFIX}-sh>=2:../../sysutils/py-sh

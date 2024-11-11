@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/04 08:17:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:30 wiz Exp $
 
 DISTNAME=	wat_inspector-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,7 +11,6 @@ COMMENT=	Deep inspection of Python objects
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

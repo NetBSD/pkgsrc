@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/02 23:24:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:23 wiz Exp $
 
 DISTNAME=	semver-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python package to work with Semantic Versioning
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27

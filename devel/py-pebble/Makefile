@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/03/22 06:31:05 adam Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:18 wiz Exp $
 
 DISTNAME=	Pebble-5.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,7 +11,6 @@ COMMENT=	Threading and multiprocessing eye-candy
 LICENSE=	gnu-lgpl-v3
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/11/07 13:32:44 gdt Exp $
+# $NetBSD: Makefile,v 1.76 2024/11/11 07:28:33 wiz Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ USE_CXX_FEATURES+=	c++11
 .include "../../mk/bsd.prefs.mk"
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel>=0:../../devel/py-wheel
 
 WHEEL_NAME=		GDAL-${VERSION_BASE}
 PYSETUPSUBDIR=		build/swig/python

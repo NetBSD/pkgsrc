@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/04/07 21:40:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:37 wiz Exp $
 
 DISTNAME=	parso-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Python Parser
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TEST_DEPENDS+=	${PYPKGPREFIX}-docopt-[0-9]*:../../devel/py-docopt
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
