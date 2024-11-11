@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 16:31:22 adam Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/11 17:00:27 wiz Exp $
 
 DISTNAME=	jedi-0.19.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	mit
 EXTRACT_USING=	bsdtar
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 DEPENDS+=	${PYPKGPREFIX}-parso>=0.8.4:../../lang/py-parso
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
