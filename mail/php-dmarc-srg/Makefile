@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 15:39:56 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/11 15:43:38 wiz Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ GITHUB_TAG=	v${GITHUB_RELEASE}
 GITHUB_RELEASE=	2.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/liuch
+HOMEPAGE=	https://github.com/liuch/dmarc-srg
 COMMENT=	Viewer and summary report generator for DMARC reports
 LICENSE=	gnu-gpl-v3
 
