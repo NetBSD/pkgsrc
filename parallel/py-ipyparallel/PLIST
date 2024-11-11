@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/04/08 05:54:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/11/11 16:37:33 adam Exp $
 bin/ipcluster-${PYVERSSUFFIX}
 bin/ipcontroller-${PYVERSSUFFIX}
 bin/ipengine-${PYVERSSUFFIX}
@@ -88,6 +88,12 @@ ${PYSITELIB}/ipyparallel/cluster/cluster.pyo
 ${PYSITELIB}/ipyparallel/cluster/launcher.py
 ${PYSITELIB}/ipyparallel/cluster/launcher.pyc
 ${PYSITELIB}/ipyparallel/cluster/launcher.pyo
+${PYSITELIB}/ipyparallel/cluster/shellcmd.py
+${PYSITELIB}/ipyparallel/cluster/shellcmd.pyc
+${PYSITELIB}/ipyparallel/cluster/shellcmd.pyo
+${PYSITELIB}/ipyparallel/cluster/shellcmd_receive.py
+${PYSITELIB}/ipyparallel/cluster/shellcmd_receive.pyc
+${PYSITELIB}/ipyparallel/cluster/shellcmd_receive.pyo
 ${PYSITELIB}/ipyparallel/controller/__init__.py
 ${PYSITELIB}/ipyparallel/controller/__init__.pyc
 ${PYSITELIB}/ipyparallel/controller/__init__.pyo
@@ -157,8 +163,8 @@ ${PYSITELIB}/ipyparallel/joblib.pyo
 ${PYSITELIB}/ipyparallel/labextension/package.json
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/package.json.orig
 ${PYSITELIB}/ipyparallel/labextension/schemas/ipyparallel-labextension/plugin.json
-${PYSITELIB}/ipyparallel/labextension/static/296.40eb9377b3b40662f1d8.js
-${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.b3a636e043643255cf30.js
+${PYSITELIB}/ipyparallel/labextension/static/296.87b6a53d1d5b3f17143e.js
+${PYSITELIB}/ipyparallel/labextension/static/remoteEntry.8bfbc894f1978b53b2e2.js
 ${PYSITELIB}/ipyparallel/labextension/static/style.js
 ${PYSITELIB}/ipyparallel/labextension/static/third-party-licenses.json
 ${PYSITELIB}/ipyparallel/logger.py
@@ -191,6 +197,9 @@ ${PYSITELIB}/ipyparallel/serialize/codeutil.pyo
 ${PYSITELIB}/ipyparallel/serialize/serialize.py
 ${PYSITELIB}/ipyparallel/serialize/serialize.pyc
 ${PYSITELIB}/ipyparallel/serialize/serialize.pyo
+${PYSITELIB}/ipyparallel/shellcmd.py
+${PYSITELIB}/ipyparallel/shellcmd.pyc
+${PYSITELIB}/ipyparallel/shellcmd.pyo
 ${PYSITELIB}/ipyparallel/tests/__init__.py
 ${PYSITELIB}/ipyparallel/tests/__init__.pyc
 ${PYSITELIB}/ipyparallel/tests/__init__.pyo
@@ -254,6 +263,9 @@ ${PYSITELIB}/ipyparallel/tests/test_remotefunction.pyo
 ${PYSITELIB}/ipyparallel/tests/test_serialize.py
 ${PYSITELIB}/ipyparallel/tests/test_serialize.pyc
 ${PYSITELIB}/ipyparallel/tests/test_serialize.pyo
+${PYSITELIB}/ipyparallel/tests/test_shellcmd.py
+${PYSITELIB}/ipyparallel/tests/test_shellcmd.pyc
+${PYSITELIB}/ipyparallel/tests/test_shellcmd.pyo
 ${PYSITELIB}/ipyparallel/tests/test_slurm.py
 ${PYSITELIB}/ipyparallel/tests/test_slurm.pyc
 ${PYSITELIB}/ipyparallel/tests/test_slurm.pyo
@@ -278,8 +290,8 @@ ${PYSITELIB}/ipyparallel/util.pyo
 share/jupyter/labextensions/ipyparallel-labextension/package.json
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/package.json.orig
 share/jupyter/labextensions/ipyparallel-labextension/schemas/ipyparallel-labextension/plugin.json
-share/jupyter/labextensions/ipyparallel-labextension/static/296.40eb9377b3b40662f1d8.js
-share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.b3a636e043643255cf30.js
+share/jupyter/labextensions/ipyparallel-labextension/static/296.87b6a53d1d5b3f17143e.js
+share/jupyter/labextensions/ipyparallel-labextension/static/remoteEntry.8bfbc894f1978b53b2e2.js
 share/jupyter/labextensions/ipyparallel-labextension/static/style.js
 share/jupyter/labextensions/ipyparallel-labextension/static/third-party-licenses.json
 share/jupyter/nbextensions/ipyparallel/clusterlist.css
