@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/06/10 05:43:50 adam Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/11 07:57:45 wiz Exp $
 
-DISTNAME=	packaging-24.1
+DISTNAME=	packaging-24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/packaging/}
@@ -16,10 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-# as of 23.0:
-# 26338 passed, 1 skipped
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
