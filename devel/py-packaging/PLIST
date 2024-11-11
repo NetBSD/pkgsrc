@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/25 22:25:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/11/11 07:57:45 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
@@ -26,6 +26,12 @@ ${PYSITELIB}/packaging/_structures.pyo
 ${PYSITELIB}/packaging/_tokenizer.py
 ${PYSITELIB}/packaging/_tokenizer.pyc
 ${PYSITELIB}/packaging/_tokenizer.pyo
+${PYSITELIB}/packaging/licenses/__init__.py
+${PYSITELIB}/packaging/licenses/__init__.pyc
+${PYSITELIB}/packaging/licenses/__init__.pyo
+${PYSITELIB}/packaging/licenses/_spdx.py
+${PYSITELIB}/packaging/licenses/_spdx.pyc
+${PYSITELIB}/packaging/licenses/_spdx.pyo
 ${PYSITELIB}/packaging/markers.py
 ${PYSITELIB}/packaging/markers.pyc
 ${PYSITELIB}/packaging/markers.pyo
