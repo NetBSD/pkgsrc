@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2024/08/22 16:58:00 gdt Exp $
+# $NetBSD: options.mk,v 1.11 2024/11/11 13:03:16 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mapserver
 PKG_SUPPORTED_OPTIONS=	fastcgi pgsql mysql
@@ -21,9 +21,9 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_FCGI=OFF
 # PostgreSQL/PostGIS support
 #
 .if !empty(PKG_OPTIONS:Mpgsql)
-# \todo Explain why this is bl3 rather than DEPENDS.  It doesn't make
-# sense, given how postgis works.
-.include "../../databases/postgresql-postgis2/buildlink3.mk"
+# The server needs postgis, but mapserv needs only postgresql client
+# libraries.
+.include "../../mk/pgsql.buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=		-DWITH_POSTGIS=ON
 .else
 CMAKE_CONFIGURE_ARGS+=		-DWITH_POSTGIS=OFF
