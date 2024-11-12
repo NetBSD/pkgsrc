@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2024/05/22 04:57:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/12 08:02:34 adam Exp $
 bin/ansible
 bin/ansible-config
-bin/ansible-connection
 bin/ansible-console
 bin/ansible-doc
 bin/ansible-galaxy
@@ -11,11 +10,15 @@ bin/ansible-pull
 bin/ansible-test
 bin/ansible-vault
 @pkgdir etc/ansible
+${PYSITELIB}/${WHEEL_INFODIR}/Apache-License.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/MIT-license.txt
+${PYSITELIB}/${WHEEL_INFODIR}/PSF-license.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/simplified_bsd.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ansible/__init__.py
 ${PYSITELIB}/ansible/__init__.pyc
@@ -178,6 +181,7 @@ ${PYSITELIB}/ansible/galaxy/collection/galaxy_api_proxy.pyo
 ${PYSITELIB}/ansible/galaxy/collection/gpg.py
 ${PYSITELIB}/ansible/galaxy/collection/gpg.pyc
 ${PYSITELIB}/ansible/galaxy/collection/gpg.pyo
+${PYSITELIB}/ansible/galaxy/data/COPYING
 ${PYSITELIB}/ansible/galaxy/data/apb/Dockerfile.j2
 ${PYSITELIB}/ansible/galaxy/data/apb/Makefile.j2
 ${PYSITELIB}/ansible/galaxy/data/apb/README.md
@@ -291,6 +295,18 @@ ${PYSITELIB}/ansible/keyword_desc.yml
 ${PYSITELIB}/ansible/module_utils/__init__.py
 ${PYSITELIB}/ansible/module_utils/__init__.pyc
 ${PYSITELIB}/ansible/module_utils/__init__.pyo
+${PYSITELIB}/ansible/module_utils/_internal/__init__.py
+${PYSITELIB}/ansible/module_utils/_internal/__init__.pyc
+${PYSITELIB}/ansible/module_utils/_internal/__init__.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/__init__.py
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/__init__.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/__init__.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.py
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_daemon_threading.pyo
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.py
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.pyc
+${PYSITELIB}/ansible/module_utils/_internal/_concurrent/_futures.pyo
 ${PYSITELIB}/ansible/module_utils/_text.py
 ${PYSITELIB}/ansible/module_utils/_text.pyc
 ${PYSITELIB}/ansible/module_utils/_text.pyo
@@ -581,6 +597,9 @@ ${PYSITELIB}/ansible/module_utils/facts/system/service_mgr.pyo
 ${PYSITELIB}/ansible/module_utils/facts/system/ssh_pub_keys.py
 ${PYSITELIB}/ansible/module_utils/facts/system/ssh_pub_keys.pyc
 ${PYSITELIB}/ansible/module_utils/facts/system/ssh_pub_keys.pyo
+${PYSITELIB}/ansible/module_utils/facts/system/systemd.py
+${PYSITELIB}/ansible/module_utils/facts/system/systemd.pyc
+${PYSITELIB}/ansible/module_utils/facts/system/systemd.pyo
 ${PYSITELIB}/ansible/module_utils/facts/system/user.py
 ${PYSITELIB}/ansible/module_utils/facts/system/user.pyc
 ${PYSITELIB}/ansible/module_utils/facts/system/user.pyo
@@ -784,6 +803,9 @@ ${PYSITELIB}/ansible/modules/lineinfile.pyo
 ${PYSITELIB}/ansible/modules/meta.py
 ${PYSITELIB}/ansible/modules/meta.pyc
 ${PYSITELIB}/ansible/modules/meta.pyo
+${PYSITELIB}/ansible/modules/mount_facts.py
+${PYSITELIB}/ansible/modules/mount_facts.pyc
+${PYSITELIB}/ansible/modules/mount_facts.pyo
 ${PYSITELIB}/ansible/modules/package.py
 ${PYSITELIB}/ansible/modules/package.pyc
 ${PYSITELIB}/ansible/modules/package.pyo
@@ -1501,6 +1523,7 @@ ${PYSITELIB}/ansible/plugins/test/succeeded.yml
 ${PYSITELIB}/ansible/plugins/test/success.yml
 ${PYSITELIB}/ansible/plugins/test/successful.yml
 ${PYSITELIB}/ansible/plugins/test/superset.yml
+${PYSITELIB}/ansible/plugins/test/timedout.yml
 ${PYSITELIB}/ansible/plugins/test/truthy.yml
 ${PYSITELIB}/ansible/plugins/test/unreachable.yml
 ${PYSITELIB}/ansible/plugins/test/uri.py
@@ -1510,6 +1533,7 @@ ${PYSITELIB}/ansible/plugins/test/uri.yml
 ${PYSITELIB}/ansible/plugins/test/url.yml
 ${PYSITELIB}/ansible/plugins/test/urn.yml
 ${PYSITELIB}/ansible/plugins/test/vault_encrypted.yml
+${PYSITELIB}/ansible/plugins/test/vaulted_file.yml
 ${PYSITELIB}/ansible/plugins/test/version.yml
 ${PYSITELIB}/ansible/plugins/test/version_compare.yml
 ${PYSITELIB}/ansible/plugins/vars/__init__.py
@@ -1683,8 +1707,6 @@ ${PYSITELIB}/ansible_test/_data/requirements/sanity.import.plugin.txt
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.import.txt
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.integration-aliases.in
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.integration-aliases.txt
-${PYSITELIB}/ansible_test/_data/requirements/sanity.mypy.in
-${PYSITELIB}/ansible_test/_data/requirements/sanity.mypy.txt
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.pep8.in
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.pep8.txt
 ${PYSITELIB}/ansible_test/_data/requirements/sanity.pslint.ps1
@@ -1992,9 +2014,6 @@ ${PYSITELIB}/ansible_test/_internal/commands/sanity/import.pyo
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/integration_aliases.py
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/integration_aliases.pyc
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/integration_aliases.pyo
-${PYSITELIB}/ansible_test/_internal/commands/sanity/mypy.py
-${PYSITELIB}/ansible_test/_internal/commands/sanity/mypy.pyc
-${PYSITELIB}/ansible_test/_internal/commands/sanity/mypy.pyo
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/pep8.py
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/pep8.pyc
 ${PYSITELIB}/ansible_test/_internal/commands/sanity/pep8.pyo
@@ -2237,10 +2256,6 @@ ${PYSITELIB}/ansible_test/_util/controller/sanity/code-smell/use-compat-six.pyo
 ${PYSITELIB}/ansible_test/_util/controller/sanity/integration-aliases/yaml_to_json.py
 ${PYSITELIB}/ansible_test/_util/controller/sanity/integration-aliases/yaml_to_json.pyc
 ${PYSITELIB}/ansible_test/_util/controller/sanity/integration-aliases/yaml_to_json.pyo
-${PYSITELIB}/ansible_test/_util/controller/sanity/mypy/ansible-core.ini
-${PYSITELIB}/ansible_test/_util/controller/sanity/mypy/ansible-test.ini
-${PYSITELIB}/ansible_test/_util/controller/sanity/mypy/modules.ini
-${PYSITELIB}/ansible_test/_util/controller/sanity/mypy/packaging.ini
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pep8/current-ignore.txt
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pslint/pslint.ps1
 ${PYSITELIB}/ansible_test/_util/controller/sanity/pslint/settings.psd1
