@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2020/05/10 04:31:40 markd Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/12 22:48:53 markd Exp $
 
 DISTNAME=	cfr-lm
-PKGNAME=	tex-${DISTNAME}-1.5
-PKGREVISION=	1
-TEXLIVE_REV=	36195
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	72484
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/cfr-lm
@@ -12,6 +11,5 @@ LICENSE=	lppl-1.3c
 
 TEX_MAP_FILES+=	clm.map
 
-TEXLIVE_UNVERSIONED=	yes
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
