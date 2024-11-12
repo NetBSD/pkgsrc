@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2024/11/11 07:29:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/12 05:52:51 adam Exp $
 
-DISTNAME=	PyICU-2.13.1
+DISTNAME=	PyICU-2.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyICU/ICU/}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyICU/}
 
@@ -19,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_CXX_FEATURES+=	c++17
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../textproc/icu/buildlink3.mk"
