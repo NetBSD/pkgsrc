@@ -1,0 +1,5 @@
+Gradient Projection Algorithms for Factor Rotation. For details see
+?GPArotation. When using this package, please cite: Bernaards and
+Jennrich (2005) <doi:10.1177/0013164404272507>. "Gradient Projection
+Algorithms and Software for Arbitrary Rotation Criteria in Factor
+Analysis".
