@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/12 13:10:50 mef Exp $
+
+BLAKE2s (R/GPArotation_2024.3-1.tar.gz) = 357af7d51d6f0d361b7c0171da15303cfe81e98b9490c380c148add785880d42
+SHA512 (R/GPArotation_2024.3-1.tar.gz) = be4ac420aebf2876bef5afbc74e870e81cd7c954815a8c0eab7e130df1b75b495c153dd9d29e5199f3b5f4cb8b3652c6907e1ba2cd33c44195fc30ac1afbe272
+Size (R/GPArotation_2024.3-1.tar.gz) = 313398 bytes
