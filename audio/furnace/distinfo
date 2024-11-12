@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2024/11/12 21:27:33 nia Exp $
+
+BLAKE2s (fmtlib-fmt-e57ca2e3685b160617d3d95fcd9e789c4e06ca88.tar.gz) = 0c26788aa7386a5754de960f089559616662a09030d4be69004deda6e61f678a
+SHA512 (fmtlib-fmt-e57ca2e3685b160617d3d95fcd9e789c4e06ca88.tar.gz) = b1bcd06c93bfec3f7a41c31a90ea55d653062f12701e1531bcfbbd27b7deddb3429e77655e4586758aa0992a4ccce30af66117f325583268e5f38d3908ae91a3
+Size (fmtlib-fmt-e57ca2e3685b160617d3d95fcd9e789c4e06ca88.tar.gz) = 849695 bytes
+BLAKE2s (furnace-0.6.7.tar.gz) = dce076a2184bb280c6a566f525c0cb6efe6133936146e7c30f3fccf86038b2a6
+SHA512 (furnace-0.6.7.tar.gz) = 8cb2dbd5d9d0933d265d5a56e474034158a719f4dc559f8028af3db789ea3dc4cb56d861bbd774751ecc951e511c19f41a6f16ec64ba408d95dae83fef2ec3d4
+Size (furnace-0.6.7.tar.gz) = 54718123 bytes
+BLAKE2s (superctr-adpcm-ef7a217154badc3b99978ac481b268c8aab67bd8.tar.gz) = 3614dfc72d015f06ac8aa2a77c8bef02e35f42dfa6bd85eab7f3592dd18e59b8
+SHA512 (superctr-adpcm-ef7a217154badc3b99978ac481b268c8aab67bd8.tar.gz) = 40b6f042a56532681e731da8d63c28abd3d824ce660060bc7e296ff9d1ad994d358189fc441458a86eb1506bce47f8364b09ebe1a2d475d308345058b7f4bfb0
+Size (superctr-adpcm-ef7a217154badc3b99978ac481b268c8aab67bd8.tar.gz) = 5497 bytes
+SHA1 (patch-CMakeLists.txt) = e924b30f612f4e1e6e38987ad8365008045e113e
+SHA1 (patch-extern_imgui__patched_backends_imgui__impl__opengl3__loader.h) = 97586b9d39f8dd25ec5631b1251ea8bc33232cf6
