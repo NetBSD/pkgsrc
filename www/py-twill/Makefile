@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 07:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/12 09:56:49 adam Exp $
 
-DISTNAME=	twill-3.2.5
+DISTNAME=	twill-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
@@ -14,13 +14,11 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=3.1:../../devel/py-pyparsing
+TEST_DEPENDS+=	${PYPKGPREFIX}-flask>=3.0:../../www/py-flask
 #TEST_DEPENDS+=	${PYPKGPREFIX}-pytidylib>=0.3
-#TEST_DEPENDS+=	${PYPKGPREFIX}-quixote>=3.6:../../devel/py-quixote
-#TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=4:../../devel/py-tox
+TEST_DEPENDS+=	${PYPKGPREFIX}-tox>=4:../../devel/py-tox
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in twill twill-fork
