@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/11/12 15:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/12 16:01:00 riastradh Exp $
 
 DISTNAME=	cram-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -34,7 +34,7 @@ do-test:
 	${RUN}cd ${WRKSRC:Q} && \
 		${SETENV} ${TEST_ENV} \
 			PYTHON=${PYTHONBIN:Q} \
-			PYTHONPATH="$$(pwd)" \
+			PYTHONPATH=${WRKSRC:Q} \
 			PATH=${PREFIX:Q}/gnu/bin:"$$PATH" \
 		${PYTHONBIN:Q} scripts/cram tests
 
