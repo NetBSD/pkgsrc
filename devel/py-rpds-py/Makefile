@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/08/08 05:23:37 adam Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/12 13:19:18 adam Exp $
 
-DISTNAME=	rpds_py-0.20.0
+DISTNAME=	rpds_py-0.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpds-py/}
@@ -10,9 +10,7 @@ HOMEPAGE=	https://github.com/crate-py/rpds
 COMMENT=	Python bindings to Rust's persistent data structures (rpds)
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.0:../../devel/py-maturin
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.2:../../devel/py-maturin
 
 .include "cargo-depends.mk"
 
