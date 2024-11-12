@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:12:29 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/11/12 22:29:55 markd Exp $
 
-BLAKE2s (atveryend.r53108.tar.xz) = 6820f4a562790dfb0012713335634bb81942b8e04579d5ef0864d17fa64a1011
-SHA512 (atveryend.r53108.tar.xz) = 2a546be6d2109de9db60e94bea3a63a3c7af8ae892c8540a1513fbe4bfa505dcbdde9913b7a4449727df0ccf6957f8010c5b76abd8d6310c118b269bdc7334e4
-Size (atveryend.r53108.tar.xz) = 3908 bytes
+BLAKE2s (atveryend.r72507.tar.xz) = 257594d7aecf4a5232d404e603773d76b20b3602ea751a51bd13908a0a06fad2
+SHA512 (atveryend.r72507.tar.xz) = 7ed1e0c2480b592b4b8350274b57bc2b5549f2e971f9d3e33fb2352c5ca7f0461a6fd74facd67b1e48cb4a5fcba5e6e41fe02595b057dc4d1ca76be50554e16e
+Size (atveryend.r72507.tar.xz) = 1160 bytes
