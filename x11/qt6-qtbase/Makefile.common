@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2024/06/10 21:15:17 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.41 2024/11/12 14:27:30 nros Exp $
 # used by audio/qt6-qtspeech/Makefile
 # used by comms/qt6-qtconnectivity/Makefile
 # used by databases/qt6-odbc/Makefile
@@ -96,13 +96,13 @@ do-configure:
 #do-install:
 #	cd ${WRKSRC}/${QTCONFDIR} && ${SETENV} ${INSTALL_ENV} ninja ${INSTALL_TARGET}
 
-INSTALLATION_DIRS+=		lib/pkgconfig
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 .PHONY: pkgconfig-link
 post-install: pkgconfig-link
 pkgconfig-link:
 	${RUN}	if ${TEST} -d ${DESTDIR}${QTPREFIX}/lib/pkgconfig; then			\
 		${ECHO} -- Linking pkg-config files to pkgconfig dir in prefix;		\
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig;			\
 		${FIND} ${DESTDIR}${QTPREFIX}/lib/pkgconfig -name "*.pc" -print |	\
 			while read pcpath; do						\
 			pcfile=`basename $${pcpath}`;					\
