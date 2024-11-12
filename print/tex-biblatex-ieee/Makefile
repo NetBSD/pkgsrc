@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2022/04/15 00:50:47 markd Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/12 22:33:32 markd Exp $
 
 DISTNAME=	biblatex-ieee
-PKGNAME=	tex-${DISTNAME}-1.3f
-TEXLIVE_REV=	61243
+PKGNAME=	tex-${DISTNAME}-1.3g
+TEXLIVE_REV=	72032
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/biblatex-ieee
