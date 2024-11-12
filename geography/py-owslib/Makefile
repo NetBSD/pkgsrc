@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/11/11 07:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/12 13:17:11 adam Exp $
 
-DISTNAME=	OWSLib-0.31.0
+DISTNAME=	OWSLib-0.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-CATEGORIES=	geography www
+CATEGORIES=	geography www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OWSLib/}
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
