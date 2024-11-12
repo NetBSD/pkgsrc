@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2024/02/03 04:04:52 markd Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/12 22:52:04 markd Exp $
 
 DISTNAME=	changebar.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.7d
-TEXLIVE_REV=	69367
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.7e
+TEXLIVE_REV=	71847
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/changebar
