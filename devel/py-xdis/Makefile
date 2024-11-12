@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2024/11/11 07:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2024/11/12 10:53:53 adam Exp $
 
-DISTNAME=	xdis-6.1.1
+DISTNAME=	xdis-6.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xdis/}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
