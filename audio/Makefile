@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.704 2024/10/09 14:25:45 ktnb Exp $
+# $NetBSD: Makefile,v 1.705 2024/11/12 21:27:33 nia Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -127,6 +127,7 @@ SUBDIR+=	freeswitch-sounds-en
 SUBDIR+=	freeswitch-sounds-fr
 SUBDIR+=	freeswitch-sounds-ru
 SUBDIR+=	freezetag
+SUBDIR+=	furnace
 SUBDIR+=	game-music-emu
 SUBDIR+=	gbemol
 SUBDIR+=	gkrellm-volume

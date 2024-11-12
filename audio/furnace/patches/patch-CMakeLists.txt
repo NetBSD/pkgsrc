@@ -1,0 +1,28 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2024/11/12 21:27:33 nia Exp $
+
+Disable use of precompiled headers.
+
+--- CMakeLists.txt.orig	2024-11-12 21:07:08.187385620 +0000
++++ CMakeLists.txt
+@@ -1232,21 +1232,6 @@ if (PKG_CONFIG_FOUND AND (SYSTEM_FMT OR 
+   endif()
+ endif()
+ 
+-# why 3.16..... why not 3.0?
+-if (NOT "${CMAKE_VERSION}" VERSION_LESS "3.16")
+-  if (BUILD_GUI)
+-  target_precompile_headers(${FURNACE} PUBLIC
+-    $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/src/pch.h>
+-    $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/extern/imgui_patched/imgui.h>
+-    $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/extern/imgui_patched/imgui_internal.h>
+-  )
+-  else()
+-    target_precompile_headers(${FURNACE} PUBLIC
+-      $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/src/pch.h>
+-    )
+-  endif()
+-endif()
+-
+ if (NOT ANDROID OR TERMUX)
+   if (NOT WIN32 AND NOT APPLE)
+     include(GNUInstallDirs)
