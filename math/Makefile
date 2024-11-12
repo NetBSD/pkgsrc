@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2024/11/09 13:44:25 mef Exp $
+# $NetBSD: Makefile,v 1.613 2024/11/12 13:12:38 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -12,6 +12,7 @@ SUBDIR+=	R-DEoptimR
 SUBDIR+=	R-Deriv
 SUBDIR+=	R-FNN
 SUBDIR+=	R-Formula
+SUBDIR+=	R-GPArotation
 SUBDIR+=	R-GRASS
 SUBDIR+=	R-ISLR
 SUBDIR+=	R-ISwR
