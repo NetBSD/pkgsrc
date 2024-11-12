@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2023/09/29 21:12:18 adam Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/12 21:42:53 nros Exp $
 
 DISTNAME=	qt6-${QTVERSION}
+
+PKGREVISION=	1
 
 COMMENT=	"meta-package" for version 6 of the QT GUI C++ toolkit
 
@@ -38,6 +40,7 @@ DEPENDS+=	qt6-qtshadertools-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtshadert
 DEPENDS+=	qt6-qtspeech-${QTVERSION}{,nb[0-9]*}:../../audio/qt6-qtspeech
 DEPENDS+=	qt6-qtsvg-${QTVERSION}{,nb[0-9]*}:../../graphics/qt6-qtsvg
 DEPENDS+=	qt6-qttools-${QTVERSION}{,nb[0-9]*}:../../devel/qt6-qttools
+DEPENDS+=	qt6-qttranslations-${QTVERSION}{,nb[0-9]*}:../../x11/qt6-qttranslations
 DEPENDS+=	qt6-qtvirtualkeyboard-${QTVERSION}{,nb[0-9]*}:../../inputmethod/qt6-qtvirtualkeyboard
 DEPENDS+=	qt6-qtwebchannel-${QTVERSION}{,nb[0-9]*}:../../www/qt6-qtwebchannel
 DEPENDS+=	qt6-qtwebsockets-${QTVERSION}{,nb[0-9]*}:../../net/qt6-qtwebsockets
