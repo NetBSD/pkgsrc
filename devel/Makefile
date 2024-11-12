@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4360 2024/11/11 09:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4361 2024/11/12 15:45:45 riastradh Exp $
 #
 
 COMMENT=	Development utilities
@@ -2537,6 +2537,7 @@ SUBDIR+=	py-coveralls
 SUBDIR+=	py-cparser
 SUBDIR+=	py-cpplint
 SUBDIR+=	py-cppy
+SUBDIR+=	py-cram
 SUBDIR+=	py-crayons
 SUBDIR+=	py-curtsies
 SUBDIR+=	py-cwcwidth

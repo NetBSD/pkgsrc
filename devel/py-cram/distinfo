@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/12 15:45:45 riastradh Exp $
+
+BLAKE2s (cram-0.7.tar.gz) = 54647802aa8e9b46abd4a2d3eacfb777680b637f68de25e638df6f7d43f5f0e0
+SHA512 (cram-0.7.tar.gz) = 9fa57e504abac8fd15bf5ff4a74405cb7acd10fd4c797adee87052a4f1c4e975bbc0f4219afd9485358b2c2939b48b3ffe538ae2abc6eea71e0ba8b458d50103
+Size (cram-0.7.tar.gz) = 33527 bytes
