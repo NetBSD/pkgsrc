@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.7 2024/08/01 21:04:30 markd Exp $
+$NetBSD: distinfo,v 1.8 2024/11/12 21:46:56 markd Exp $
 
 BLAKE2s (scribus-1.6.2.tar.xz) = 8c6fdde69ef6640682894a11bbecaf38e7f16a80afd37736a06302469cbd77e8
 SHA512 (scribus-1.6.2.tar.xz) = 2f691c1f6b7beada89be410a2936b23641913bf26bd2152974bbaa747aeafb05aa797356a85bd55c14f60f0031ce1addedc9a3ce3e92546ebbb45f96a5ff3e62
 Size (scribus-1.6.2.tar.xz) = 73129400 bytes
 SHA1 (patch-CMakeLists__Dependencies.cmake) = 80fc0e787829031da3ec7085724e4b06e6106303
+SHA1 (patch-scribus_plugins_gettext_htmlim_htmlreader.cpp) = 40cee022aaa7dcf8f24f99ae2b574046a5202e85
+SHA1 (patch-scribus_plugins_gettext_sxwim_stylereader.cpp) = ab2f52294cad377dacedcb6793e4de395e3f4756
+SHA1 (patch-scribus_plugins_import_pdf_slaoutput.cpp) = b0c9eb973f74453f65f97f7e51d8491d22ce9ae9
+SHA1 (patch-scribus_plugins_import_pdf_slaoutput.h) = 5a2e197fd5e5e8ce46a1146db21acf4459ff405f
+SHA1 (patch-scribus_scribusapp.cpp) = 54b40fec708559e47c252f9fc3c42dabe1b91b28
