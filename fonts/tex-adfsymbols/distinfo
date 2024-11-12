@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:27:26 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/11/12 22:25:58 markd Exp $
 
-BLAKE2s (adfsymbols.r54512.tar.xz) = b871630bb8ae1ce2ff68f9d02f2877bedc6e2d73178f817496d1f8ff6db382a1
-SHA512 (adfsymbols.r54512.tar.xz) = 7100648956a68719d1a449a3aee0a4acb3788aea7f082a6e7e38c8d8dfa2c712a4b896a9b036e8ae8b2732b11414ab71a49e2f513e7d689f4b0ad9e44c052019
-Size (adfsymbols.r54512.tar.xz) = 26800 bytes
+BLAKE2s (adfsymbols.r72458.tar.xz) = 10d856a3c4b8a66282cad0ad37abe3abd4a6fdc64a26ae5a3db838732fb88cf0
+SHA512 (adfsymbols.r72458.tar.xz) = f2f80ff16e5d2619db6d58ac44d376552913c3c255c04d57c44beb2766709704294be9c90e6887906599e2b1a8757b15734a66eed12a80fc4268273da88a91ec
+Size (adfsymbols.r72458.tar.xz) = 27796 bytes
