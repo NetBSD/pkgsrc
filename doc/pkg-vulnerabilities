@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.273 2024/11/10 08:30:25 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.274 2024/11/12 23:16:37 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26104,5 +26104,5 @@ modular-xorg-server<21.1.14	heap-buffer-overflow	https://nvd.nist.gov/vuln/detai
 modular-xorg-xwayland<24.1.4	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2024-9632
 webkit-gtk<2.46.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-44244
 curl<8.11.0	comparison-using-wrong-factors	https://nvd.nist.gov/vuln/detail/CVE-2024-9681
-libsoup3<3.6.0	request-smuggling		https://gitlab.gnome.org/GNOME/libsoup/-/issues/377
-libsoup3<3.6.1	denial-of-service		https://gitlab.gnome.org/GNOME/libsoup/-/issues/391
+libsoup3<3.6.0	request-smuggling		https://nvd.nist.gov/vuln/detail/CVE-2024-52530
+libsoup3<3.6.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2024-52532
