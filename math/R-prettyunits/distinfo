@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:55:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/11/12 12:24:10 mef Exp $
 
-BLAKE2s (R/prettyunits_1.1.1.tar.gz) = b153fc476ca70e61c59b9e3ebabfddd676a8bc2033e289b926ff179e94fca7de
-SHA512 (R/prettyunits_1.1.1.tar.gz) = 563feed049b4d6afda31ff162348a2d4467c49e3273c21937b049a7c4f47181a8bc278fa0b02acce014aefc98f9cddfdf8d65aa2960f63fb66dd1606d708c545
-Size (R/prettyunits_1.1.1.tar.gz) = 10366 bytes
+BLAKE2s (R/prettyunits_1.2.0.tar.gz) = 1b0aca7b5a9f79ab313b298d89c309193e202b57c9f760183deabd7dd05eefff
+SHA512 (R/prettyunits_1.2.0.tar.gz) = 9df34eb31f9eec04505e9b3539c25605d2b00d2b35dc11485fd776c5c51e758b3b372dd17aa2e1b603ac85df3a1bd998eb41002debc6c323713098e3494aac2b
+Size (R/prettyunits_1.2.0.tar.gz) = 97496 bytes
