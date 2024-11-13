@@ -1,7 +1,7 @@
-$NetBSD: patch-tools_install.py,v 1.10 2024/05/07 17:54:10 adam Exp $
+$NetBSD: patch-tools_install.py,v 1.11 2024/11/13 08:45:17 adam Exp $
 
 Install man pages under the right directory.
- 
+
 --- tools/install.py.orig	2024-05-02 12:49:16.000000000 +0000
 +++ tools/install.py
 @@ -182,10 +182,7 @@ def files(options, action):

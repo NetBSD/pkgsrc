@@ -1,15 +1,15 @@
-$NetBSD: patch-deps_v8_src_base_platform_memory.h,v 1.1 2022/12/03 17:07:13 adam Exp $
+$NetBSD: patch-deps_v8_src_base_platform_memory.h,v 1.2 2024/11/13 08:45:17 adam Exp $
 
 Fix build on NetBSD.
 
---- deps/v8/src/base/platform/memory.h.orig	2022-11-14 11:44:23.528838940 +0000
+--- deps/v8/src/base/platform/memory.h.orig	2024-10-24 12:44:06.000000000 +0000
 +++ deps/v8/src/base/platform/memory.h
-@@ -23,7 +23,7 @@
+@@ -25,7 +25,7 @@
  #include <malloc.h>
- #endif  // !V8_OS_DARWIN
+ #endif
  
--#if (V8_OS_POSIX && !V8_OS_AIX && !V8_OS_SOLARIS) || V8_OS_WIN
-+#if (V8_OS_POSIX && !V8_OS_AIX && !V8_OS_NETBSD && !V8_OS_SOLARIS) || V8_OS_WIN
+-#if (V8_OS_POSIX && !V8_OS_AIX && !V8_OS_SOLARIS && !V8_OS_ZOS) || V8_OS_WIN
++#if (V8_OS_POSIX && !V8_OS_AIX && !V8_OS_SOLARIS && !V8_OS_ZOS && !V8_OS_NETBSD) || V8_OS_WIN
  #define V8_HAS_MALLOC_USABLE_SIZE 1
- #endif  // (V8_OS_POSIX && !V8_OS_AIX && !V8_OS_SOLARIS) || V8_OS_WIN
+ #endif
  
