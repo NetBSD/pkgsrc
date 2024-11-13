@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.108 2024/11/13 11:05:40 jperkin Exp $
+# $NetBSD: options.mk,v 1.109 2024/11/13 11:11:37 jperkin Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -39,6 +39,7 @@ SITES.${NAXSI_DISTFILE}=	${MASTER_SITE_GITHUB:=wargio/naxsi/releases/download/${
 DISTFILES+=			${NAXSI_DISTFILE}
 PLIST.naxsi=			yes
 DSO_EXTMODS+=			naxsi
+NAXSI_SUBDIR=			/naxsi_src
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
