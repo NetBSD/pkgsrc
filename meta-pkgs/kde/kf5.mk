@@ -1,4 +1,4 @@
-# $NetBSD: kf5.mk,v 1.19 2024/08/21 11:21:41 markd Exp $
+# $NetBSD: kf5.mk,v 1.20 2024/11/13 02:28:41 markd Exp $
 # used by archivers/karchive/Makefile
 # used by devel/kbookmarks/Makefile
 # used by devel/kcmutils/Makefile
@@ -52,7 +52,6 @@
 # used by textproc/syntax-highlighting/Makefile
 # used by time/kcalendarcore/Makefile
 # used by time/kholidays/Makefile
-# used by www/kdewebkit/Makefile
 # used by www/kjs/Makefile
 # used by www/kjsembed/Makefile
 # used by www/khtml/Makefile
