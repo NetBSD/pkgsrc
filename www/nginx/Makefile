@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2024/11/13 11:04:05 wiz Exp $
+# $NetBSD: Makefile,v 1.165 2024/11/13 11:17:45 wiz Exp $
 
 DISTNAME=	nginx-1.26.2
 PKGREVISION=	4
@@ -70,7 +70,7 @@ EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 
 .for file in ${EGFILES}
 CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
-.  if !empty(PKG_OPTIONS:Mnaxsi)
+.  if !empty(PKG_OPTIONS:Mnginx-naxsi)
 CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules ${PKG_SYSCONFDIR}/naxsi_core.rules
 .  endif
 .endfor
@@ -107,7 +107,7 @@ SOEXT=		so
 PLIST_SUBST+=	SOEXT=${SOEXT}
 
 post-patch:
-.if !empty(PKG_OPTIONS:Mgssapi)
+.if !empty(PKG_OPTIONS:Mnginx-gssapi)
 	${SED} -i.bak '4d;5d;6d' ${WRKDIR}/${GSSAPI_DISTNAME}/config
 .endif
 
@@ -119,17 +119,17 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/50x.html ${DESTDIR}${EGDIR}/html/50x.html
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 	${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-.if !empty(PKG_OPTIONS:Mnaxsi)
+.if !empty(PKG_OPTIONS:Mnginx-naxsi)
 	${INSTALL_DATA} ${WRKDIR}/naxsi_rules/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
 .endif
-.if !empty(PKG_OPTIONS:Mperl)
+.if !empty(PKG_OPTIONS:Mnginx-perl)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_LIB} ${WRKSRC}/objs/src/http/modules/perl/blib/arch/auto/nginx/nginx.${SOEXT} \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
 	${INSTALL_DATA} ${WRKSRC}/objs/src/http/modules/perl/blib/lib/nginx.pm \
 		${DESTDIR}${PERL5_INSTALLVENDORARCH}
 .endif
-.if !empty(PKG_OPTIONS:Mdso)
+.if !empty(PKG_OPTIONS:Mnginx-dso)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec/nginx
 	(cd ${WRKSRC}/objs/ && ${FIND} . -name '*.so' -maxdepth 1 -type f \
 		-exec ${INSTALL_PROGRAM} {} ${DESTDIR}${PREFIX}/libexec/nginx \;)
