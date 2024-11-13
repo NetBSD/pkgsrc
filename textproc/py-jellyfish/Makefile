@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/20 13:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/13 13:32:26 jperkin Exp $
 
 DISTNAME=	jellyfish-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,10 +10,9 @@ HOMEPAGE=	https://github.com/jamesturk/jellyfish
 COMMENT=	Python library for doing approximate and phonetic matching of strings
 LICENSE=	2-clause-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14:../../devel/py-maturin
-
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

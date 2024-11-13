@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/21 13:06:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/13 13:32:25 jperkin Exp $
 
 DISTNAME=	watchfiles-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/samuelcolvin/watchfiles
 COMMENT=	Simple, modern and high performance file watching and code reload
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14.16:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
@@ -26,6 +25,7 @@ post-install:
 
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/11/11 08:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/11/13 13:32:25 jperkin Exp $
 
 DISTNAME=	ruff-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/astral-sh/ruff
 COMMENT=	Extremely fast Python linter, written in Rust
 LICENSE=	mit
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 
 USE_LANGUAGES=	c c++
 
@@ -35,6 +33,7 @@ post-install:
 
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

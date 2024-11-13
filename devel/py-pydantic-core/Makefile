@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 09:06:10 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/13 13:32:25 jperkin Exp $
 
 DISTNAME=	pydantic_core-2.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/pydantic/pydantic-core
 COMMENT=	Core functionality for pydantic
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=1.7.1:../../devel/py-maturin
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.6.0:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.1.post0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.92.9:../../devel/py-hypothesis
@@ -24,6 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-inline-snapshot>=0:../../devel/py-inline-snapshot
 
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"

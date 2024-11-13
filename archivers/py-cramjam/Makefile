@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/10/23 21:33:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/13 13:32:25 jperkin Exp $
 
 DISTNAME=	cramjam-2.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/milesgranger/cramjam
 COMMENT=	Extremely thin Python bindings to de/compression algorithms in Rust
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-maturin>=0.14:../../devel/py-maturin
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
@@ -24,6 +23,7 @@ USE_LIBTOOL=	yes
 
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
