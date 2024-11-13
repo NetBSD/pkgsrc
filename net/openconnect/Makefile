@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/11/01 12:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/13 01:19:34 simonb Exp $
 
 DISTNAME=		openconnect-9.12
 PKGREVISION=		7
@@ -13,7 +13,7 @@ LICENSE=		gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config bash
+USE_TOOLS+=		gmake pkg-config bash:run
 
 DEPENDS+=		vpnc-script-[0-9]*:../../net/vpnc-script
 
