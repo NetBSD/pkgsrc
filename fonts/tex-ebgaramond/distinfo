@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/04/08 10:06:54 markd Exp $
+$NetBSD: distinfo,v 1.11 2024/11/13 01:36:24 markd Exp $
 
-BLAKE2s (ebgaramond.r66604.tar.xz) = d9c7573d83444d50a6b414e49ec314673ee51ab2fd21f6f840786992b8ee8567
-SHA512 (ebgaramond.r66604.tar.xz) = 4a676d0016c5b3c4e513dca01e7e2f1b5bfbc061e111935380af4937bdfe2493927b226b28972c060ee0c09e7c27c6bf828ea09151eec0b8df67530f62e30aac
-Size (ebgaramond.r66604.tar.xz) = 8393360 bytes
+BLAKE2s (ebgaramond.r71069.tar.xz) = 413771e16e452a051dd92f4eee2ca8099d99488f42f1cf7469d1e70aaf4a8a58
+SHA512 (ebgaramond.r71069.tar.xz) = d02ac16a7ccb8ded53a42c002824791376357db9909c197f1fec6ce62f55d136833c995120e7a077e51b802c8cc2e1c18234d0e7833222fabd1f6bd04933578d
+Size (ebgaramond.r71069.tar.xz) = 8391100 bytes
