@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2024/08/10 13:50:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.40 2024/11/13 09:11:39 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -61,6 +61,9 @@ ${PYSITELIB}/twisted/_version.pyo
 ${PYSITELIB}/twisted/application/__init__.py
 ${PYSITELIB}/twisted/application/__init__.pyc
 ${PYSITELIB}/twisted/application/__init__.pyo
+${PYSITELIB}/twisted/application/_client_service.py
+${PYSITELIB}/twisted/application/_client_service.pyc
+${PYSITELIB}/twisted/application/_client_service.pyo
 ${PYSITELIB}/twisted/application/app.py
 ${PYSITELIB}/twisted/application/app.pyc
 ${PYSITELIB}/twisted/application/app.pyo
@@ -2212,6 +2215,9 @@ ${PYSITELIB}/twisted/trial/util.pyo
 ${PYSITELIB}/twisted/web/__init__.py
 ${PYSITELIB}/twisted/web/__init__.pyc
 ${PYSITELIB}/twisted/web/__init__.pyo
+${PYSITELIB}/twisted/web/_abnf.py
+${PYSITELIB}/twisted/web/_abnf.pyc
+${PYSITELIB}/twisted/web/_abnf.pyo
 ${PYSITELIB}/twisted/web/_auth/__init__.py
 ${PYSITELIB}/twisted/web/_auth/__init__.pyc
 ${PYSITELIB}/twisted/web/_auth/__init__.pyo
@@ -2321,6 +2327,9 @@ ${PYSITELIB}/twisted/web/test/injectionhelpers.pyo
 ${PYSITELIB}/twisted/web/test/requesthelper.py
 ${PYSITELIB}/twisted/web/test/requesthelper.pyc
 ${PYSITELIB}/twisted/web/test/requesthelper.pyo
+${PYSITELIB}/twisted/web/test/test_abnf.py
+${PYSITELIB}/twisted/web/test/test_abnf.pyc
+${PYSITELIB}/twisted/web/test/test_abnf.pyo
 ${PYSITELIB}/twisted/web/test/test_agent.py
 ${PYSITELIB}/twisted/web/test/test_agent.pyc
 ${PYSITELIB}/twisted/web/test/test_agent.pyo

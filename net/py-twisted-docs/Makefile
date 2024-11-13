@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2022/02/13 08:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/13 09:11:39 adam Exp $
 
 PKGNAME=	py-${DISTNAME:S/Twisted/twisted-docs/}
 COMMENT=	Framework for writing networked applications (documentation)
@@ -14,10 +14,8 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 INSTALLATION_DIRS=	${HTMLDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 do-install:
-	cd ${DOC_SRCDIR} && pax -rw -pp * ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR} && ${PAX} -rw -pp * ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
