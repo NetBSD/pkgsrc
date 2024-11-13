@@ -1,28 +1,68 @@
-# $NetBSD: options.mk,v 1.109 2024/11/13 11:11:37 jperkin Exp $
+# $NetBSD: options.mk,v 1.110 2024/11/13 11:17:45 wiz Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	array-var auth-request cache-purge dav debug
-PKG_SUPPORTED_OPTIONS+=	dso echo encrypted-session flv form-input
-PKG_SUPPORTED_OPTIONS+=	geoip geoip2 gssapi gtools gzip headers-more http2
-PKG_SUPPORTED_OPTIONS+=	http3 image-filter luajit mail-proxy memcache
-PKG_SUPPORTED_OPTIONS+=	naxsi njs njs-xml perl push realip redis rtmp
-PKG_SUPPORTED_OPTIONS+=	secure-link set-misc slice ssl status
-PKG_SUPPORTED_OPTIONS+=	stream-ssl-preread sts sub upload uwsgi vts
+PKG_SUPPORTED_OPTIONS=	nginx-array-var nginx-auth-request nginx-cache-purge nginx-dav nginx-debug
+PKG_SUPPORTED_OPTIONS+=	nginx-dso nginx-echo nginx-encrypted-session nginx-flv nginx-form-input
+PKG_SUPPORTED_OPTIONS+=	nginx-geoip nginx-geoip2 nginx-gssapi nginx-gtools nginx-gzip nginx-headers-more nginx-http2
+PKG_SUPPORTED_OPTIONS+=	nginx-http3 nginx-image-filter nginx-luajit nginx-mail-proxy nginx-memcache
+PKG_SUPPORTED_OPTIONS+=	nginx-naxsi nginx-njs nginx-njs-xml nginx-perl nginx-push nginx-realip nginx-redis nginx-rtmp
+PKG_SUPPORTED_OPTIONS+=	nginx-secure-link nginx-set-misc nginx-slice nginx-ssl nginx-status
+PKG_SUPPORTED_OPTIONS+=	nginx-stream-ssl-preread nginx-sts nginx-sub nginx-upload nginx-uwsgi nginx-vts
 
-PKG_SUGGESTED_OPTIONS=	auth-request gzip http2 http3 memcache realip
-PKG_SUGGESTED_OPTIONS+=	slice status ssl uwsgi
-
-PKG_OPTIONS_LEGACY_OPTS+=	v2:http2
+PKG_SUGGESTED_OPTIONS=	nginx-auth-request nginx-gzip nginx-http2 nginx-http3 nginx-memcache nginx-realip
+PKG_SUGGESTED_OPTIONS+=	nginx-slice nginx-status nginx-ssl nginx-uwsgi
 
 PLIST_VARS+=		arrayvar cprg dav dso echo encses forminput geoip2
 PLIST_VARS+=		gssapi headmore imagefilter lua mail naxsi nchan ndk njs
 PLIST_VARS+=		perl redis rtmp setmisc stream sts upload uwsgi vts
 
+PKG_OPTIONS_LEGACY_OPTS+=	array-var:nginx-array-var
+PKG_OPTIONS_LEGACY_OPTS+=	auth-request:nginx-auth-request
+PKG_OPTIONS_LEGACY_OPTS+=	cache-purge:nginx-cache-purge
+PKG_OPTIONS_LEGACY_OPTS+=	dav:nginx-dav
+PKG_OPTIONS_LEGACY_OPTS+=	debug:nginx-debug
+PKG_OPTIONS_LEGACY_OPTS+=	dso:nginx-dso
+PKG_OPTIONS_LEGACY_OPTS+=	echo:nginx-echo
+PKG_OPTIONS_LEGACY_OPTS+=	encrypted-session:nginx-encrypted-session
+PKG_OPTIONS_LEGACY_OPTS+=	flv:nginx-flv
+PKG_OPTIONS_LEGACY_OPTS+=	form-input:nginx-form-input
+PKG_OPTIONS_LEGACY_OPTS+=	geoip:nginx-geoip
+PKG_OPTIONS_LEGACY_OPTS+=	geoip2:nginx-geoip2
+PKG_OPTIONS_LEGACY_OPTS+=	gssapi:nginx-gssapi
+PKG_OPTIONS_LEGACY_OPTS+=	gtools:nginx-gtools
+PKG_OPTIONS_LEGACY_OPTS+=	gzip:nginx-gzip
+PKG_OPTIONS_LEGACY_OPTS+=	headers-more:nginx-headers-more
+PKG_OPTIONS_LEGACY_OPTS+=	http2:nginx-http2
+PKG_OPTIONS_LEGACY_OPTS+=	http3:nginx-http3
+PKG_OPTIONS_LEGACY_OPTS+=	image-filter:nginx-image-filter
+PKG_OPTIONS_LEGACY_OPTS+=	luajit:nginx-luajit
+PKG_OPTIONS_LEGACY_OPTS+=	mail-proxy:nginx-mail-proxy
+PKG_OPTIONS_LEGACY_OPTS+=	memcache:nginx-memcache
+PKG_OPTIONS_LEGACY_OPTS+=	naxsi:nginx-naxsi
+PKG_OPTIONS_LEGACY_OPTS+=	njs:nginx-njs
+PKG_OPTIONS_LEGACY_OPTS+=	njs-xml:nginx-njs-xml
+PKG_OPTIONS_LEGACY_OPTS+=	perl:nginx-perl
+PKG_OPTIONS_LEGACY_OPTS+=	push:nginx-push
+PKG_OPTIONS_LEGACY_OPTS+=	realip:nginx-realip
+PKG_OPTIONS_LEGACY_OPTS+=	redis:nginx-redis
+PKG_OPTIONS_LEGACY_OPTS+=	rtmp:nginx-rtmp
+PKG_OPTIONS_LEGACY_OPTS+=	secure-link:nginx-secure-link
+PKG_OPTIONS_LEGACY_OPTS+=	set-misc:nginx-set-misc
+PKG_OPTIONS_LEGACY_OPTS+=	slice:nginx-slice
+PKG_OPTIONS_LEGACY_OPTS+=	ssl:nginx-ssl
+PKG_OPTIONS_LEGACY_OPTS+=	status:nginx-status
+PKG_OPTIONS_LEGACY_OPTS+=	stream-ssl-preread:nginx-stream-ssl-preread
+PKG_OPTIONS_LEGACY_OPTS+=	sts:nginx-sts
+PKG_OPTIONS_LEGACY_OPTS+=	sub:nginx-sub
+PKG_OPTIONS_LEGACY_OPTS+=	upload:nginx-upload
+PKG_OPTIONS_LEGACY_OPTS+=	uwsgi:nginx-uwsgi
+PKG_OPTIONS_LEGACY_OPTS+=	vts:nginx-vts
+
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mdso)
+.if !empty(PKG_OPTIONS:Mnginx-dso)
 CONFIGURE_ARGS+=	--modules-path=${PREFIX}/libexec/nginx
 _addbasemod=		=dynamic
 _addextmod=		add-dynamic-module
@@ -32,7 +72,7 @@ _addextmod=		add-module
 .endif
 
 # documentation says naxsi must be the first module
-.if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-naxsi) || make(makesum) || make(mdi) || make(distclean)
 NAXSI_VERSION=			1.6
 NAXSI_DISTFILE=			naxsi-${NAXSI_VERSION}-src-with-deps.tar.gz
 SITES.${NAXSI_DISTFILE}=	${MASTER_SITE_GITHUB:=wargio/naxsi/releases/download/${NAXSI_VERSION}/}
@@ -42,11 +82,11 @@ DSO_EXTMODS+=			naxsi
 NAXSI_SUBDIR=			/naxsi_src
 .endif
 
-.if !empty(PKG_OPTIONS:Mdebug)
+.if !empty(PKG_OPTIONS:Mnginx-debug)
 CONFIGURE_ARGS+=	--with-debug
 .endif
 
-.if !empty(PKG_OPTIONS:Mssl)
+.if !empty(PKG_OPTIONS:Mnginx-ssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mail_ssl_module
 CONFIGURE_ARGS+=	--with-http_ssl_module
@@ -57,7 +97,7 @@ SUBST_SED.fix-ssl=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.openssl},g'
 SUBST_NOOP_OK.fix-ssl=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mdav) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-dav) || make(makesum) || make(mdi) || make(distclean)
 DAV_VERSION=		3.0.0
 DAV_DISTNAME=		nginx-dav-ext-module-3.0.0
 DAV_DISTFILE=		${DAV_DISTNAME}.tar.gz
@@ -75,11 +115,11 @@ SUBST_SED.fix-xslt=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.libxslt},g'
 SUBST_NOOP_OK.fix-xslt=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mflv)
+.if !empty(PKG_OPTIONS:Mnginx-flv)
 CONFIGURE_ARGS+=	--with-http_flv_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mgeoip)
+.if !empty(PKG_OPTIONS:Mnginx-geoip)
 .include "../../net/GeoIP/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-http_geoip_module
 SUBST_CLASSES+=		fix-geo
@@ -89,37 +129,37 @@ SUBST_SED.fix-geo=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.GeoIP},g'
 SUBST_NOOP_OK.fix-geo=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mhttp2)
+.if !empty(PKG_OPTIONS:Mnginx-http2)
 CONFIGURE_ARGS+=	--with-http_v2_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mhttp3)
+.if !empty(PKG_OPTIONS:Mnginx-http3)
 CONFIGURE_ARGS+=	--with-http_v3_module
 .endif
 
-.if !empty(PKG_OPTIONS:Msub)
+.if !empty(PKG_OPTIONS:Mnginx-sub)
 CONFIGURE_ARGS+=	--with-http_sub_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtools)
+.if !empty(PKG_OPTIONS:Mnginx-gtools)
 CONFIGURE_ARGS+=	--with-google_perftools_module
 .include "../../devel/gperftools/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mmail-proxy)
+.if !empty(PKG_OPTIONS:Mnginx-mail-proxy)
 DSO_BASEMODS+=		mail
 PLIST.mail=		yes
 .endif
 
-.if empty(PKG_OPTIONS:Mmemcache)
+.if empty(PKG_OPTIONS:Mnginx-memcache)
 CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mrealip)
+.if !empty(PKG_OPTIONS:Mnginx-realip)
 CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mredis) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-redis) || make(makesum) || make(mdi) || make(distclean)
 REDIS_GH_ACCOUNT=		osokin
 REDIS_GH_PROJECT=		ngx_http_redis
 REDIS_VERSION=			59eb1c3
@@ -133,7 +173,7 @@ PLIST.redis=			yes
 
 # NDK must be added once and before 3rd party modules needing it
 .for mod in luajit set-misc array-var form-input encrypted-session
-.  if !defined(NEED_NDK) && !empty(PKG_OPTIONS:M${mod}:O)
+.  if !defined(NEED_NDK) && !empty(PKG_OPTIONS:Mnginx-${mod}:O)
 FIRST_DSO_EXTMODS+=	ndk
 NEED_NDK=		yes
 PLIST.ndk=		yes
@@ -147,7 +187,7 @@ SITES.${NDK_DISTFILE}=	-${MASTER_SITE_GITHUB:=vision5/ngx_devel_kit/archive/}v${
 DISTFILES+=		${NDK_DISTFILE}
 .endif
 
-.if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-luajit) || make(makesum) || make(mdi) || make(distclean)
 LUA_VERSION=		0.10.26
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
@@ -164,7 +204,7 @@ DSO_EXTMODS+=		lua
 PLIST.lua=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mecho) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-echo) || make(makesum) || make(mdi) || make(distclean)
 ECHOMOD_VERSION=		0.63
 ECHOMOD_DISTNAME=		echo-nginx-module-${ECHOMOD_VERSION}
 ECHOMOD_DISTFILE=		${ECHOMOD_DISTNAME}.tar.gz
@@ -174,7 +214,7 @@ DSO_EXTMODS+=			echomod
 PLIST.echo=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mset-misc) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-set-misc) || make(makesum) || make(mdi) || make(distclean)
 SETMISC_VERSION=		0.33
 SETMISC_DISTNAME=		set-misc-nginx-module-${SETMISC_VERSION}
 SETMISC_DISTFILE=		${SETMISC_DISTNAME}.tar.gz
@@ -184,7 +224,7 @@ DSO_EXTMODS+=			setmisc
 PLIST.setmisc=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mgeoip2) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-geoip2) || make(makesum) || make(mdi) || make(distclean)
 GEOIP2_VERSION=			3.4
 GEOIP2_DISTNAME=		ngx_http_geoip2_module-${GEOIP2_VERSION}
 GEOIP2_DISTFILE=		${GEOIP2_DISTNAME}.tar.gz
@@ -195,7 +235,7 @@ PLIST.geoip2=			yes
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Marray-var) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-array-var) || make(makesum) || make(mdi) || make(distclean)
 ARRAYVAR_VERSION=		0.06
 ARRAYVAR_DISTNAME=		array-var-nginx-module-${ARRAYVAR_VERSION}
 ARRAYVAR_DISTFILE=		${ARRAYVAR_DISTNAME}.tar.gz
@@ -205,7 +245,7 @@ DSO_EXTMODS+=			arrayvar
 PLIST.arrayvar=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mencrypted-session) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-encrypted-session) || make(makesum) || make(mdi) || make(distclean)
 ENCSESS_VERSION=		0.09
 ENCSESS_DISTNAME=		encrypted-session-nginx-module-${ENCSESS_VERSION}
 ENCSESS_DISTFILE=		${ENCSESS_DISTNAME}.tar.gz
@@ -215,7 +255,7 @@ DSO_EXTMODS+=			encsess
 PLIST.encses=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mform-input) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-form-input) || make(makesum) || make(mdi) || make(distclean)
 FORMINPUT_VERSION=		0.12
 FORMINPUT_DISTNAME=		form-input-nginx-module-${FORMINPUT_VERSION}
 FORMINPUT_DISTFILE=		${FORMINPUT_DISTNAME}.tar.gz
@@ -225,7 +265,7 @@ DSO_EXTMODS+=			forminput
 PLIST.forminput=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-headers-more) || make(makesum) || make(mdi) || make(distclean)
 HEADMORE_VERSION=		0.37
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
@@ -235,7 +275,7 @@ DSO_EXTMODS+=			headmore
 PLIST.headmore=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Muwsgi)
+.if !empty(PKG_OPTIONS:Mnginx-uwsgi)
 EGFILES+=		uwsgi_params
 PLIST.uwsgi=		yes
 CONFIGURE_ARGS+=	--http-uwsgi-temp-path=${NGINX_DATADIR}/uwsgi_temp
@@ -243,7 +283,7 @@ CONFIGURE_ARGS+=	--http-uwsgi-temp-path=${NGINX_DATADIR}/uwsgi_temp
 CONFIGURE_ARGS+=	--without-http_uwsgi_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mpush) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-push) || make(makesum) || make(mdi) || make(distclean)
 PUSH_VERSION=		1.3.6
 PUSH_DISTNAME=		nchan-${PUSH_VERSION}
 PUSH_DISTFILE=		${PUSH_DISTNAME}.tar.gz
@@ -253,7 +293,7 @@ DSO_EXTMODS+=		push
 PLIST.nchan=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mimage-filter)
+.if !empty(PKG_OPTIONS:Mnginx-image-filter)
 .include "../../graphics/gd/buildlink3.mk"
 DSO_BASEMODS+=		http_image_filter_module
 SUBST_CLASSES+=		fix-gd
@@ -264,15 +304,15 @@ SUBST_NOOP_OK.fix-gd=	yes
 PLIST.imagefilter=	yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mslice)
+.if !empty(PKG_OPTIONS:Mnginx-slice)
 CONFIGURE_ARGS+=	--with-http_slice_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mstatus)
+.if !empty(PKG_OPTIONS:Mnginx-status)
 CONFIGURE_ARGS+=	--with-http_stub_status_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mperl)
+.if !empty(PKG_OPTIONS:Mnginx-perl)
 DSO_BASEMODS+=		http_perl_module
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
 INSTALLATION_DIRS+=	${PERL5_INSTALLVENDORARCH}/auto/nginx
@@ -281,15 +321,15 @@ PLIST.perl=		yes
 .include "../../lang/perl5/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgzip)
+.if !empty(PKG_OPTIONS:Mnginx-gzip)
 CONFIGURE_ARGS+=	--with-http_gzip_static_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mauth-request)
+.if !empty(PKG_OPTIONS:Mnginx-auth-request)
 CONFIGURE_ARGS+=	--with-http_auth_request_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mcache-purge) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-cache-purge) || make(makesum) || make(mdi) || make(distclean)
 CPRG_VERSION=		2.5.1
 CPRG_DISTNAME=		ngx_cache_purge-${CPRG_VERSION}
 CPRG_DISTFILE=		${CPRG_DISTNAME}.tar.gz
@@ -299,17 +339,17 @@ DSO_EXTMODS+=		cprg
 PLIST.cprg=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Msecure-link)
+.if !empty(PKG_OPTIONS:Mnginx-secure-link)
 CONFIGURE_ARGS+=	--with-http_secure_link_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mstream-ssl-preread)
+.if !empty(PKG_OPTIONS:Mnginx-stream-ssl-preread)
 DSO_BASEMODS+=		stream
 CONFIGURE_ARGS+=	--with-stream_ssl_preread_module
 PLIST.stream=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mrtmp) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-rtmp) || make(makesum) || make(mdi) || make(distclean)
 RTMP_VERSION=		1.2.2
 RTMP_DISTNAME=		nginx-rtmp-module-${RTMP_VERSION}
 RTMP_DISTFILE=		${RTMP_DISTNAME}.tar.gz
@@ -319,7 +359,7 @@ DSO_EXTMODS+=		rtmp
 PLIST.rtmp=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mnjs) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean)
 NJS_VERSION=		0.8.7
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
@@ -328,7 +368,7 @@ DISTFILES+=		${NJS_DISTFILE}
 DSO_EXTMODS+=		njs
 NJS_SUBDIR=		/nginx
 PLIST.njs=		yes
-.  if !empty(PKG_OPTIONS:Mnjs-xml)
+.  if !empty(PKG_OPTIONS:Mnginx-njs-xml)
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .  else
@@ -337,7 +377,7 @@ CONFIGURE_ENV+=		NJS_LIBXSLT=NO
 .  endif
 .endif
 
-.if !empty(PKG_OPTIONS:Mupload) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-upload) || make(makesum) || make(mdi) || make(distclean)
 UPLOAD_VERSION=			2.3.0
 UPLOAD_DISTNAME=		nginx-upload-module-${UPLOAD_VERSION}
 UPLOAD_DISTFILE=		${UPLOAD_DISTNAME}.tar.gz
@@ -347,7 +387,7 @@ DSO_EXTMODS+=			upload
 PLIST.upload=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mgssapi) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-gssapi) || make(makesum) || make(mdi) || make(distclean)
 GSSAPI_GH_ACCOUNT=		stnoonan
 GSSAPI_GH_PROJECT=		spnego-http-auth-nginx-module
 GSSAPI_VERSION=			3575542
@@ -359,7 +399,7 @@ DSO_EXTMODS+=			gssapi
 PLIST.gssapi=			yes
 .endif
 
-.if !empty(PKG_OPTIONS:Msts) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-sts) || make(makesum) || make(mdi) || make(distclean)
 STS_GH_ACCOUNT=		vozlt
 STS_GH_PROJECT=		nginx-module-sts
 STS_VERSION=		3c10d42
@@ -371,7 +411,7 @@ DSO_EXTMODS+=		sts
 PLIST.sts=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mvts) || make(makesum) || make(mdi) || make(distclean)
+.if !empty(PKG_OPTIONS:Mnginx-vts) || make(makesum) || make(mdi) || make(distclean)
 VTS_GH_ACCOUNT=		vozlt
 VTS_GH_PROJECT=		nginx-module-vts
 VTS_VERSION=		bf64dbf
