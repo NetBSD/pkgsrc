@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2024/08/25 06:18:27 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2024/11/13 11:36:08 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quassel
-PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webkit
+PKG_SUPPORTED_OPTIONS=	quassel-audio quassel-webengine
 
 .include "../../mk/bsd.options.mk"
 
-# "Support showing previews for URLs in chat (legacy)"
-# Really just shows a small, difficult to read thumbnail on hover.
-# Using WebEngine for this seems to be preferred.
-.if !empty(PKG_OPTIONS:Mquassel-webkit)
-CMAKE_CONFIGURE_ARGS+=	-DWITH_WEBKIT=ON
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+# "Use WebEngine for showing previews of webpages linked in the chat. Requires
+# the QtWebEngine module to be available, and increases the client's RAM usage
+# by *a lot* if enabled at runtime."
+.if !empty(PKG_OPTIONS:Mquassel-webengine)
+CMAKE_CONFIGURE_ARGS+=	-DWITH_WEBENGINE=ON
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .endif
 
 # Required for audio notifications
