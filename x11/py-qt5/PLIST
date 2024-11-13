@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2023/10/29 19:58:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.26 2024/11/13 01:53:12 markd Exp $
 bin/pylupdate5-${PYVERSSUFFIX}
 bin/pyrcc5-${PYVERSSUFFIX}
 bin/pyuic5-${PYVERSSUFFIX}
@@ -28,8 +28,6 @@ ${PYSITELIB}/PyQt5/QtSql.abi3.so
 ${PYSITELIB}/PyQt5/QtSvg.abi3.so
 ${PYSITELIB}/PyQt5/QtTest.abi3.so
 ${PYSITELIB}/PyQt5/QtWebChannel.abi3.so
-${PYSITELIB}/PyQt5/QtWebKit.abi3.so
-${PYSITELIB}/PyQt5/QtWebKitWidgets.abi3.so
 ${PYSITELIB}/PyQt5/QtWebSockets.abi3.so
 ${PYSITELIB}/PyQt5/QtWidgets.abi3.so
 ${PLIST.x11}${PYSITELIB}/PyQt5/QtX11Extras.abi3.so
@@ -645,23 +643,6 @@ ${PYSITELIB}/PyQt5/bindings/QtWebChannel/QtWebChannel.toml
 ${PYSITELIB}/PyQt5/bindings/QtWebChannel/QtWebChannelmod.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebChannel/qwebchannel.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebChannel/qwebchannelabstracttransport.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/QtWebKit.toml
-${PYSITELIB}/PyQt5/bindings/QtWebKit/QtWebKitmod.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebdatabase.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebelement.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebhistory.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebhistoryinterface.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebkitglobal.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebpluginfactory.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebsecurityorigin.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKit/qwebsettings.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/QtWebKitWidgets.toml
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/QtWebKitWidgetsmod.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/qgraphicswebview.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/qwebframe.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/qwebinspector.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/qwebpage.sip
-${PYSITELIB}/PyQt5/bindings/QtWebKitWidgets/qwebview.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebSockets/QtWebSockets.toml
 ${PYSITELIB}/PyQt5/bindings/QtWebSockets/QtWebSocketsmod.sip
 ${PYSITELIB}/PyQt5/bindings/QtWebSockets/qmaskgenerator.sip
