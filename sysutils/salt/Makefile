@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/11/13 11:31:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.86 2024/11/13 11:34:22 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=20.0.0:../../net/py-zmq
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	310
+PYTHON_VERSIONS_ACCEPTED=	310
 
 BUILD_DEFS+=	VARBASE
 
