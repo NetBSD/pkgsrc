@@ -1,0 +1,16 @@
+$NetBSD: patch-config.h.in,v 1.1 2024/11/13 14:37:28 taca Exp $
+
+* Check if struct bpf_timeval is defined.
+
+--- config.h.in.orig	2024-07-25 08:51:15.000000000 +0000
++++ config.h.in
+@@ -69,6 +69,9 @@
+ /* Define to 1 if you have the <botan/botan.h> header file. */
+ #undef HAVE_BOTAN_BOTAN_H
+ 
++/* Define to 1 if you have struct bpf_timeval is defined. */
++#undef HAVE_BPF_TIMEVAL
++
+ /* Define to 1 if getsockopt(IPV6_USE_MIN_MTU) does not work */
+ #undef HAVE_BROKEN_GET_IPV6_USE_MIN_MTU
+ 

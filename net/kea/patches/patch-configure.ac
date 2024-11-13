@@ -1,0 +1,38 @@
+$NetBSD: patch-configure.ac,v 1.1 2024/11/13 14:37:28 taca Exp $
+
+* Fix for portability
+* Check if struct bpf_timeval is defined.
+
+--- configure.ac.orig	2024-07-25 08:51:01.000000000 +0000
++++ configure.ac
+@@ -653,6 +653,21 @@ AC_COMPILE_IFELSE(
+   [AC_MSG_RESULT(no)]
+ )
+ 
++AC_MSG_CHECKING(for struct bpf_timeval)
++AC_COMPILE_IFELSE(
++  [AC_LANG_PROGRAM([[
++    #include <sys/types.h>
++    #include <net/bpf.h>
++  ]], [[
++    struct bpf_timeval btv;
++    btv.tv_sec = 0;
++    return (0);
++  ]])],
++  [AC_MSG_RESULT(yes)
++   AC_DEFINE(HAVE_BPF_TIMEVAL, 1, [Define to 1 if struct bpf_timeval is defined])],
++  [AC_MSG_RESULT(no)]
++)
++
+ usable_regex=
+ AC_MSG_CHECKING(for usable C++11 regex)
+ AC_RUN_IFELSE([AC_LANG_SOURCE([[
+@@ -1374,7 +1389,7 @@ else
+   fi
+   generate_docs_report="no"
+ fi
+-AM_CONDITIONAL(INSTALL_MANS, test "x$install_mans" == "xyes")
++AM_CONDITIONAL(INSTALL_MANS, test "x$install_mans" = "xyes")
+ AM_CONDITIONAL(HAVE_PDFLATEX, test "x$PDFLATEX" != "xno")
+ AM_CONDITIONAL(GENERATE_DOCS, test x$enable_generate_docs != xno)
+ 
