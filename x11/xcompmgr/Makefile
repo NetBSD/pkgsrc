@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2022/11/12 23:32:51 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/13 08:08:56 wiz Exp $
 
-DISTNAME=	xcompmgr-1.1.9
+DISTNAME=	xcompmgr-1.1.10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
