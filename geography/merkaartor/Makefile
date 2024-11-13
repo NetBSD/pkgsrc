@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2024/11/07 13:34:45 gdt Exp $
+# $NetBSD: Makefile,v 1.140 2024/11/13 08:10:12 wiz Exp $
 
 DISTNAME=	merkaartor-0.20.0
 PKGREVISION=	5
@@ -38,7 +38,6 @@ CMAKE_CONFIGURE_ARGS+=	-DGPSD=ON
 #.include "../../x11/qt5-qtimageformats/buildlink3.mk"
 #.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
 #.include "../../x11/qt5-qtserialport/buildlink3.mk"
-#.include "../../x11/qt5-qtwebkit/buildlink3.mk"
 #.include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
 
 .include "../../geography/gdal-lib/buildlink3.mk"
