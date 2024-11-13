@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/08/12 17:52:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/13 13:32:25 jperkin Exp $
 
 DISTNAME=	pycddl-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,7 +10,6 @@ HOMEPAGE=	https://pypi.org/project/pycddl/
 COMMENT=	Deserialize CBOR and/or do CDDL schema validation
 LICENSE=	mit
 
-TOOL_DEPENDS+=		${PYPKGPREFIX}-maturin>=1:../../devel/py-maturin
 TEST_DEPENDS+=		${PYPKGPREFIX}-cbor2>=0:../../devel/py-cbor2
 TEST_DEPENDS+=		${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
 TEST_DEPENDS+=		${PYPKGPREFIX}-psutil>=0:../../sysutils/py-psutil
@@ -23,6 +22,7 @@ USE_LANGUAGES+=		c
 
 .include "cargo-depends.mk"
 
+.include "../../devel/py-maturin/tool.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
