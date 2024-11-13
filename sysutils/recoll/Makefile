@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2024/11/01 12:54:30 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/13 13:55:37 wiz Exp $
 
-DISTNAME=	recoll-1.37.2
-PKGREVISION=	4
+DISTNAME=	recoll-1.40.3
 CATEGORIES=	sysutils
-MASTER_SITES=	https://www.lesbonscomptes.com/recoll/
+MASTER_SITES=	https://www.recoll.org/
 
 MAINTAINER=	slitvinov@gmail.com
-HOMEPAGE=	https://www.lesbonscomptes.com/recoll/
+HOMEPAGE=	https://www.recoll.org/
 COMMENT=	Full text desktop search engine
 LICENSE=	gnu-gpl-v2
 
@@ -26,14 +25,11 @@ DEPENDS+=	${PYPKGPREFIX}-rarfile-[0-9]*:../../archivers/py-rarfile
 # Midi karaoke files need Python and the Midi module
 # Konqueror webarchive format with Python (uses the Tarfile module).
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
 USE_TOOLS+=	perl:run pkg-config unzip:run
 
-CONFIGURE_ARGS+=	--enable-recollq
-CONFIGURE_ARGS+=	--with-aspell=${BUILDLINK_PREFIX.aspell}/bin/aspell
-CONFIGURE_ARGS+=	--with-file-command=${BUILDLINK_PREFIX.file}/bin/file
+MESON_ARGS+=	-Drecollq=true
+MESON_ARGS+=	-Dwebengine=true
 
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/recoll
@@ -51,7 +47,6 @@ SUBST_FILES.base64+=	qtgui/ssearch_w.cpp
 SUBST_FILES.base64+=	rcldb/searchdatatox.cpp
 SUBST_FILES.base64+=	rcldb/searchdataxml.cpp
 SUBST_FILES.base64+=	rcldb/searchdata.cpp
-SUBST_FILES.base64+=	Makefile.in
 #SUBST_FILES.base64+=	Makefile.am
 SUBST_FILES.base64+=	utils/fileudi.cpp
 SUBST_FILES.base64+=	utils/mimeparse.cpp
@@ -62,8 +57,10 @@ SUBST_FILES.base64+=	query/dynconf.h
 SUBST_FILES.base64+=	query/dynconf.cpp
 
 pre-configure:
+	${LN} -sf ${PREFIX}/qt5/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MV} ${WRKSRC}/utils/base64.h ${WRKSRC}/utils/recoll_base64.h
 
+.include "../../devel/meson/build.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/chmlib/buildlink3.mk"
@@ -80,6 +77,6 @@ pre-configure:
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
-.include "../../x11/qt5-qtwebkit/buildlink3.mk"
+.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
