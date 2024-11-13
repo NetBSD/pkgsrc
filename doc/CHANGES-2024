@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6928 2024/11/13 08:42:06 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6929 2024/11/13 08:43:38 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10480,3 +10480,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-mysqlclient to 2.2.6 [adam 2024-11-13]
 	Updated devel/py-hatchling to 1.26.3 [adam 2024-11-13]
 	Updated benchmarks/hyperfine to 1.19.0 [pin 2024-11-13]
+	Updated devel/mise to 2024.11.9 [pin 2024-11-13]
