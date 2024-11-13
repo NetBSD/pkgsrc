@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2024/02/01 09:29:17 wiz Exp $
+$NetBSD: distinfo,v 1.4 2024/11/13 13:55:37 wiz Exp $
 
-BLAKE2s (recoll-1.37.2.tar.gz) = e84f0309537d9af17973d788fa0b198e8418fcd187cbbfdf38683077d8df0502
-SHA512 (recoll-1.37.2.tar.gz) = 88e381ba657614701e95e6923a984f65e3ebdf8341899cf6aea8d62665334372fa0edcde5f7a672f4ebc07a8be52564e06bfca656e720d3bdc6bffef720ea3b1
-Size (recoll-1.37.2.tar.gz) = 3134742 bytes
+BLAKE2s (recoll-1.40.3.tar.gz) = 9f4ce496510e75b007a8a62d6ceb69216f3c5c8b53ba2c5025c826d10dd77b7e
+SHA512 (recoll-1.40.3.tar.gz) = 1f374e2f3ff721cdacd146d96e404d59554587ec30da63ffda8c9075a0b4407f70714e96a2ab3d7963f5d848096e5f295dc80bd7254ad8109e1e93732a8556a2
+Size (recoll-1.40.3.tar.gz) = 3217280 bytes
+SHA1 (patch-qtgui_qmkmk.sh) = 6cc8b508d2844329177e210ff821799a13a77eed
