@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6948 2024/11/13 14:21:38 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.6949 2024/11/13 14:22:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10505,3 +10505,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/qutebrowser to 1.13.1nb25 [wiz 2024-11-13]
 	Removed misc/kchmviewer [wiz 2024-11-13]
 	Updated meta-pkgs/bulk-test-icu to 20241113 [wiz 2024-11-13]
+	Removed x11/qt5-qtwebkit [wiz 2024-11-13]
