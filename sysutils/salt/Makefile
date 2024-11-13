@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.84 2024/02/02 20:17:24 adam Exp $
+# $NetBSD: Makefile,v 1.85 2024/11/13 11:31:26 jperkin Exp $
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 COMMENT=	Remote execution and configuration management system
 
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.9.8:../../security/py-cryptodome
@@ -19,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-zmq>=20.0.0:../../net/py-zmq
 
 USE_PKG_RESOURCES=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	310
 
 BUILD_DEFS+=	VARBASE
 
