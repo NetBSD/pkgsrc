@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/09/01 03:48:22 markd Exp $
+$NetBSD: distinfo,v 1.16 2024/11/13 01:43:05 markd Exp $
 
-BLAKE2s (erewhon.r63312.tar.xz) = fb7e75cb6892e1cc7d403e84adc14aa1d257a724faee7265029f7198c9caac59
-SHA512 (erewhon.r63312.tar.xz) = 760818dc93dc0564680d76c152f6db9f69870008f50c43227b329df3403e7b6b50f241b96822fa63aee6b6c64ae42ecc69369e8e94f43836d6cbb9125f197e94
-Size (erewhon.r63312.tar.xz) = 2596492 bytes
+BLAKE2s (erewhon.r70759.tar.xz) = f36e5504d527bca0fca271a6a65f6d70fe1b934c47ad8e34ef58390278fa8021
+SHA512 (erewhon.r70759.tar.xz) = ac74da8a957b1a3b2f79d42cdd6408c7e590231a857e0c1f6e7a87155e26f337b6ac55d1a924bae65d814e209ceed384857a17606fecabf61425f62080587572
+Size (erewhon.r70759.tar.xz) = 2593924 bytes
