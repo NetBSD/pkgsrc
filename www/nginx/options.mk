@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.106 2024/11/13 10:56:36 wiz Exp $
+# $NetBSD: options.mk,v 1.107 2024/11/13 10:59:55 jperkin Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -33,16 +33,12 @@ _addextmod=		add-module
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
-NAXSI_GH_ACCOUNT=		nbs-system
-NAXSI_GH_PROJECT=		naxsi
-NAXSI_VERSION=			d714f16
-NAXSI_DISTNAME=			${NAXSI_GH_PROJECT}-${NAXSI_VERSION}
-NAXSI_DISTFILE=			${NAXSI_GH_ACCOUNT}-${NAXSI_DISTNAME}_GH.tar.gz
-SITES.${NAXSI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${NAXSI_GH_ACCOUNT}/${NAXSI_GH_PROJECT}/tar.gz/${NAXSI_VERSION}?dummy=${NAXSI_DISTFILE}}
+NAXSI_VERSION=			1.6
+NAXSI_DISTFILE=			naxsi-${NAXSI_VERSION}-src-with-deps.tar.gz
+SITES.${NAXSI_DISTFILE}=	${MASTER_SITE_GITHUB:=wargio/naxsi/releases/download/${NAXSI_VERSION}/}
 DISTFILES+=			${NAXSI_DISTFILE}
 PLIST.naxsi=			yes
 DSO_EXTMODS+=			naxsi
-NAXSI_SUBDIR=			/naxsi_src
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
