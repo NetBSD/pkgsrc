@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.162 2024/11/13 10:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.163 2024/11/13 10:59:55 jperkin Exp $
 
 DISTNAME=	nginx-1.26.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -120,7 +120,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/html/index.html ${DESTDIR}${EGDIR}/html/index.html
 	${INSTALL_MAN} ${WRKSRC}/objs/nginx.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 .if !empty(PKG_OPTIONS:Mnaxsi)
-	${INSTALL_DATA} ${WRKDIR}/${NAXSI_DISTNAME}/naxsi_config/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
+	${INSTALL_DATA} ${WRKDIR}/naxsi_rules/naxsi_core.rules ${DESTDIR}${EGDIR}/conf
 .endif
 .if !empty(PKG_OPTIONS:Mperl)
 	${INSTALL_LIB_DIR} ${DESTDIR}${PERL5_INSTALLVENDORARCH}/auto/nginx
