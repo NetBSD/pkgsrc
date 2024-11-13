@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/07/04 20:26:46 pin Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/13 08:49:25 pin Exp $
 
-DISTNAME=	uair-0.6.1
+DISTNAME=	uair-0.6.2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=metent/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
