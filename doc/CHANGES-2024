@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6931 2024/11/13 08:46:02 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6932 2024/11/13 08:46:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10483,3 +10483,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/mise to 2024.11.9 [pin 2024-11-13]
 	Updated shells/nushell to 0.100.0 [pin 2024-11-13]
 	Updated shells/oh-my-posh to 24.3.0 [pin 2024-11-13]
+	Moved lang/nodejs to lang/nodejs22 [adam 2024-11-13]
+	Updated lang/nodejs to 23.2.0 [adam 2024-11-13]
