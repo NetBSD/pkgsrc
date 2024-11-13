@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/10/11 08:14:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/13 14:21:28 wiz Exp $
 
-DISTNAME=	bulk-test-icu-20240815
+DISTNAME=	bulk-test-icu-20241113
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -115,7 +115,6 @@ DEPENDS+=	webkit-gtk-[0-9]*:../../www/webkit-gtk
 DEPENDS+=	maim-[0-9]*:../../x11/maim
 DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 DEPENDS+=	qt5-qtwebengine-[0-9]*:../../x11/qt5-qtwebengine
-DEPENDS+=	qt5-qtwebkit-[0-9]*:../../x11/qt5-qtwebkit
 DEPENDS+=	qt6-qtbase-[0-9]*:../../x11/qt6-qtbase
 DEPENDS+=	slop-[0-9]*:../../x11/slop
 DEPENDS+=	vte3-[0-9]*:../../x11/vte3
