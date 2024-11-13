@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/08/29 06:16:38 adam Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/13 10:30:59 adam Exp $
 
-DISTNAME=	gssapi-1.8.3
+DISTNAME=	gssapi-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gssapi/}
@@ -11,11 +11,10 @@ COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 # unpackaged: k5test
 TEST_DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,5 +29,5 @@ PLIST.mitkrb=	yes
 .  endif
 .endif
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
