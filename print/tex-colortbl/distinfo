@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/02/25 18:39:58 markd Exp $
+$NetBSD: distinfo,v 1.12 2024/11/13 01:30:10 markd Exp $
 
-BLAKE2s (colortbl.r70034.tar.xz) = db584e032dcc073bc2498d1721e8b336d5f861e1a5fd69c8c24c2273ffc8c3ed
-SHA512 (colortbl.r70034.tar.xz) = 3f1e703d76afea29b9cb9a2e1aed6e130b4be09982898260ef0e40f41eb99e9b948e89307c2d8b605777983bd8be46e874fd40080803d5b724f99f00c7b7a11f
-Size (colortbl.r70034.tar.xz) = 3644 bytes
+BLAKE2s (colortbl.r71883.tar.xz) = f842abb422cd7f8013c7cabcbac79ce6e0e0bc9b0aefbe7931a577051d825dae
+SHA512 (colortbl.r71883.tar.xz) = ad26ae19b376533a73cf162e74a38530a4655338897329756c295832eb0dd8d3f778cbc79f482926b8a134f80bf18e50a6850517f72b83b8b08ee07b7a8ec721
+Size (colortbl.r71883.tar.xz) = 3740 bytes
