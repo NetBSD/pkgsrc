@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_install.py,v 1.11 2024/11/13 08:45:17 adam Exp $
+$NetBSD: patch-tools_install.py,v 1.1 2024/11/13 08:45:18 adam Exp $
 
 Install man pages under the right directory.
 

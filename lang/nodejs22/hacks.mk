@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2024/11/13 08:45:17 adam Exp $
+# $NetBSD: hacks.mk,v 1.1 2024/11/13 08:45:17 adam Exp $
 
 .if !defined(NODEJS_HACKS_MK)
 NODEJS_HACKS_MK=		# defined
