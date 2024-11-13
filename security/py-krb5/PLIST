@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/07/22 05:10:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/11/13 10:30:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,6 +7,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/krb5/__init__.py
 ${PYSITELIB}/krb5/__init__.pyc
 ${PYSITELIB}/krb5/__init__.pyo
+${PYSITELIB}/krb5/_adpi.py
+${PYSITELIB}/krb5/_adpi.pyc
+${PYSITELIB}/krb5/_adpi.pyo
 ${PYSITELIB}/krb5/_ccache.pyi
 ${PYSITELIB}/krb5/_ccache.so
 ${PYSITELIB}/krb5/_ccache_match.pyi
@@ -17,6 +20,7 @@ ${PYSITELIB}/krb5/_ccache_support_switch.pyi
 ${PYSITELIB}/krb5/_ccache_support_switch.so
 ${PYSITELIB}/krb5/_cccol.pyi
 ${PYSITELIB}/krb5/_cccol.so
+${PYSITELIB}/krb5/_chpw_message_mit.pyi
 ${PYSITELIB}/krb5/_context.pyi
 ${PYSITELIB}/krb5/_context.so
 ${PYSITELIB}/krb5/_context_mit.pyi
@@ -55,6 +59,8 @@ ${PYSITELIB}/krb5/_principal.pyi
 ${PYSITELIB}/krb5/_principal.so
 ${PYSITELIB}/krb5/_principal_heimdal.pyi
 ${PLIST.heimdal}${PYSITELIB}/krb5/_principal_heimdal.so
+${PYSITELIB}/krb5/_set_password.pyi
+${PYSITELIB}/krb5/_set_password.so
 ${PYSITELIB}/krb5/_string.pyi
 ${PYSITELIB}/krb5/_string.so
 ${PYSITELIB}/krb5/_string_mit.pyi
