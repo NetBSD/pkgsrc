@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2024/11/09 18:43:12 prlw1 Exp $
+$NetBSD: distinfo,v 1.15 2024/11/13 08:58:55 nros Exp $
 
 BLAKE2s (oneTBB-2022.0.0.tar.gz) = 9019a4d91edd8f52994f3f2e72484dd6919fa6d73eb442603eb897f0c7ca8705
 SHA512 (oneTBB-2022.0.0.tar.gz) = c87b84964b2c323f61895a532968dfa6413a774c177cffbf6e798a07e74e8da5d449144875771df0a1b02657eeb2a7ae4d41c6c432dbf7ea50e3d5a9ea9f8cd3
 Size (oneTBB-2022.0.0.tar.gz) = 2654343 bytes
 SHA1 (patch-test_tbb_test__composite__node.cpp) = 1c48644e8cbee6622e2cf4a91901db217cee2ff3
+SHA1 (patch-test_tbb_test__eh__thread.cpp) = 50c2bbcbdf00cb3ef5fe206a952d30672a5e73c6
