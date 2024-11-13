@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.105 2024/10/23 13:15:19 osa Exp $
+# $NetBSD: options.mk,v 1.106 2024/11/13 10:56:36 wiz Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -123,15 +123,15 @@ CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mredis)
-REDIS_GH_ACCOUNT=	osokin
-REDIS_GH_PROJECT=	ngx_http_redis
-REDIS_VERSION=		59eb1c3
-REDIS_DISTNAME=		${REDIS_GH_PROJECT}-${REDIS_VERSION}
-REDIS_DISTFILE=		${REDIS_GH_ACCOUNT}-${REDIS_DISTNAME}_GH.tar.gz
-SITES.${REDIS_DISTFILE}=-${CODELOAD_SITE_GITHUB:=${REDIS_GH_ACCOUNT}/${REDIS_GH_PROJECT}/tar.gz/${REDIS_VERSION}?dummy=${REDIS_DISTFILE}}
-DISTFILES+=		${REDIS_DISTFILE}
-DSO_EXTMODS+=		redis
-PLIST.redis=		yes
+REDIS_GH_ACCOUNT=		osokin
+REDIS_GH_PROJECT=		ngx_http_redis
+REDIS_VERSION=			59eb1c3
+REDIS_DISTNAME=			${REDIS_GH_PROJECT}-${REDIS_VERSION}
+REDIS_DISTFILE=			${REDIS_GH_ACCOUNT}-${REDIS_DISTNAME}_GH.tar.gz
+SITES.${REDIS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${REDIS_GH_ACCOUNT}/${REDIS_GH_PROJECT}/tar.gz/${REDIS_VERSION}?dummy=${REDIS_DISTFILE}}
+DISTFILES+=			${REDIS_DISTFILE}
+DSO_EXTMODS+=			redis
+PLIST.redis=			yes
 .endif
 
 # NDK must be added once and before 3rd party modules needing it
@@ -341,25 +341,25 @@ CONFIGURE_ENV+=		NJS_LIBXSLT=NO
 .endif
 
 .if !empty(PKG_OPTIONS:Mupload) || make(makesum) || make(mdi) || make(distclean)
-UPLOAD_VERSION=		2.3.0
+UPLOAD_VERSION=			2.3.0
 UPLOAD_DISTNAME=		nginx-upload-module-${UPLOAD_VERSION}
 UPLOAD_DISTFILE=		${UPLOAD_DISTNAME}.tar.gz
 SITES.${UPLOAD_DISTFILE}=	-${MASTER_SITE_GITHUB:=vkholodkov/nginx-upload-module/archive/refs/tags/}${UPLOAD_VERSION}.tar.gz
-DISTFILES+=		${UPLOAD_DISTFILE}
-DSO_EXTMODS+=		upload
-PLIST.upload=		yes
+DISTFILES+=			${UPLOAD_DISTFILE}
+DSO_EXTMODS+=			upload
+PLIST.upload=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mgssapi) || make(makesum) || make(mdi) || make(distclean)
-GSSAPI_GH_ACCOUNT=	stnoonan
-GSSAPI_GH_PROJECT=	spnego-http-auth-nginx-module
-GSSAPI_VERSION=		3575542
+GSSAPI_GH_ACCOUNT=		stnoonan
+GSSAPI_GH_PROJECT=		spnego-http-auth-nginx-module
+GSSAPI_VERSION=			3575542
 GSSAPI_DISTNAME=		${GSSAPI_GH_PROJECT}-${GSSAPI_VERSION}
 GSSAPI_DISTFILE=		${GSSAPI_GH_ACCOUNT}-${GSSAPI_DISTNAME}_GH.tar.gz
 SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI_GH_PROJECT}/tar.gz/${GSSAPI_VERSION}?dummy=${GSSAPI_DISTFILE}}
-DISTFILES+=		${GSSAPI_DISTFILE}
-DSO_EXTMODS+=		gssapi
-PLIST.gssapi=		yes
+DISTFILES+=			${GSSAPI_DISTFILE}
+DSO_EXTMODS+=			gssapi
+PLIST.gssapi=			yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msts) || make(makesum) || make(mdi) || make(distclean)
