@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/07/04 10:06:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/11/13 10:31:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -73,12 +73,12 @@ ${PYSITELIB}/asyncssh/crypto/kdf.pyo
 ${PYSITELIB}/asyncssh/crypto/misc.py
 ${PYSITELIB}/asyncssh/crypto/misc.pyc
 ${PYSITELIB}/asyncssh/crypto/misc.pyo
+${PYSITELIB}/asyncssh/crypto/pq.py
+${PYSITELIB}/asyncssh/crypto/pq.pyc
+${PYSITELIB}/asyncssh/crypto/pq.pyo
 ${PYSITELIB}/asyncssh/crypto/rsa.py
 ${PYSITELIB}/asyncssh/crypto/rsa.pyc
 ${PYSITELIB}/asyncssh/crypto/rsa.pyo
-${PYSITELIB}/asyncssh/crypto/sntrup.py
-${PYSITELIB}/asyncssh/crypto/sntrup.pyc
-${PYSITELIB}/asyncssh/crypto/sntrup.pyo
 ${PYSITELIB}/asyncssh/crypto/umac.py
 ${PYSITELIB}/asyncssh/crypto/umac.pyc
 ${PYSITELIB}/asyncssh/crypto/umac.pyo
