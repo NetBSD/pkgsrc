@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2024/10/23 13:15:19 osa Exp $
+# $NetBSD: options.mk,v 1.33 2024/11/13 11:05:40 jperkin Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -122,7 +122,7 @@ CONFIGURE_ARGS+=	--without-http_memcached_module
 CONFIGURE_ARGS+=	--with-http_realip_module
 .endif
 
-.if !empty(PKG_OPTIONS:Mredis)
+.if !empty(PKG_OPTIONS:Mredis) || make(makesum) || make(mdi) || make(distclean)
 REDIS_GH_ACCOUNT=	osokin
 REDIS_GH_PROJECT=	ngx_http_redis
 REDIS_VERSION=		59eb1c3
