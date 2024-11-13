@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/10/15 03:38:40 pin Exp $
+$NetBSD: distinfo,v 1.13 2024/11/13 13:34:37 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -1077,9 +1077,9 @@ Size (tempfile-3.13.0.crate) = 34910 bytes
 BLAKE2s (termcolor-1.4.1.crate) = 052eddf6925aee94ddd6422f049b834dfc769ebd3b40553e579a82895d10a253
 SHA512 (termcolor-1.4.1.crate) = b66aad157c4fa2985f764321d157dfb1f0325fd633811870db7919b5579bf7bc19fefe99e1c706cdfa67504c37dc2ca3d283e11d1bb516edcfaf1eb7747a778a
 Size (termcolor-1.4.1.crate) = 18773 bytes
-BLAKE2s (termscp-0.16.0.tar.gz) = 9c20e5fe450f41440128a8f01e98c5932faa25ae7b51e10e5ba2f9131af4f16e
-SHA512 (termscp-0.16.0.tar.gz) = b8b5072d58c865cd3bf764fd53a1198da12c76ffb0d0d194baebc84a966d92c7dcfe2e01181a50b9d55e7cbc2198ccf2576e837fc93cef0670f76fb4a1bc382f
-Size (termscp-0.16.0.tar.gz) = 11915056 bytes
+BLAKE2s (termscp-0.16.1.tar.gz) = 2b319c7af262a9f2945b60fb8524b7a19e1c243f0cdeda9e3e2bbfa8f5b7f6c5
+SHA512 (termscp-0.16.1.tar.gz) = ef7fa5b2461ffeac47292f8e9c7c1f9f2344774970c4c49a7cc53efb451a387d62731c1553ab1b15d9e163051742c486da3f6f7614e584836530355ec7e30a22
+Size (termscp-0.16.1.tar.gz) = 11914664 bytes
 BLAKE2s (textwrap-0.16.1.crate) = f01d7b9576d0f644a8dce5926757cab141fa79a00e0c4e9306c37810ac570969
 SHA512 (textwrap-0.16.1.crate) = 3a8d2036c8e4b88866d68b8066a2991756f6bd4ac5c726e63fdffbc894fbdc03bf8b6e0ece4b96684c8e1facb6413190768d51a8539094efe47977c120d31f1b
 Size (textwrap-0.16.1.crate) = 56012 bytes
