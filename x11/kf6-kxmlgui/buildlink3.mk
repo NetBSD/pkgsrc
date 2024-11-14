@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/11/01 12:55:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:22:18 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kxmlgui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kxmlgui
 KF6_KXMLGUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kxmlgui+=	kf6-kxmlgui>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kxmlgui?=	kf6-kxmlgui>=6.2.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kxmlgui?=	kf6-kxmlgui>=6.2.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kxmlgui?=	../../x11/kf6-kxmlgui
 
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"

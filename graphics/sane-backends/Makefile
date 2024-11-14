@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2024/11/01 19:27:58 triaxx Exp $
+# $NetBSD: Makefile,v 1.98 2024/11/14 22:20:17 wiz Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 .include "Makefile.common"
 MASTER_SITES=	${MASTER_SITE_GITLAB:=sane-project/backends/uploads/83bdbb6c9a115184c2d48f1fdc6847db/}
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc

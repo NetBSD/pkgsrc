@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2024/11/01 12:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/14 22:18:53 wiz Exp $
 
 DISTNAME=	swirc-3.4.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	https://www.nifty-networks.net/swirc/releases/
 EXTRACT_SUFX=	.tgz

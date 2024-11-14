@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.108 2024/11/01 12:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2024/11/14 22:19:17 wiz Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2024/11/01 12:54:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2024/11/14 22:22:08 wiz Exp $
 
 BUILDLINK_TREE+=	neon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	neon
 NEON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.neon+=	neon>=0.24.4
-BUILDLINK_ABI_DEPENDS.neon+=	neon>=0.33.0nb4
+BUILDLINK_ABI_DEPENDS.neon+=	neon>=0.33.0nb5
 BUILDLINK_PKGSRCDIR.neon?=	../../www/neon
 
 pkgbase := neon

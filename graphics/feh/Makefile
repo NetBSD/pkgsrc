@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.137 2024/11/01 12:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2024/11/14 22:20:06 wiz Exp $
 
 DISTNAME=	feh-3.10.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	https://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2

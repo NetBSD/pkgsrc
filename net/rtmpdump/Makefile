@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2024/11/01 12:54:01 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/14 22:21:16 wiz Exp $
 
 DISTNAME=	rtmpdump-2.4-git-fa8646daeb19dfd12c181f7d19de708d623704c0
 PKGNAME=	${DISTNAME:S/-git-/.0.0./}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	net multimedia
 #MASTER_SITES=
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/11/01 12:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/14 22:19:31 wiz Exp $
 
 DISTNAME=	libgnt-2.14.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2024/11/01 12:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2024/11/14 22:20:50 wiz Exp $
 
 DISTNAME=	kmousetool-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 
 HOMEPAGE=	https://kde.org/applications/utilities/kmousetool/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/11/01 12:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/14 22:21:02 wiz Exp $
 
 DISTNAME=		aiccu_20070115
 PKGNAME=		${DISTNAME:S/_/-/:S/.//g}
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		net
 MASTER_SITES=		http://www.sixxs.net/archive/sixxs/aiccu/unix/
 

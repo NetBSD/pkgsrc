@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2024/11/01 12:52:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2024/11/14 22:19:23 wiz Exp $
 
 BUILDLINK_TREE+=	kcmutils
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kcmutils
 KCMUTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kcmutils+=	kcmutils>=5.21.0
-BUILDLINK_ABI_DEPENDS.kcmutils?=	kcmutils>=5.116.0nb3
+BUILDLINK_ABI_DEPENDS.kcmutils?=	kcmutils>=5.116.0nb4
 BUILDLINK_PKGSRCDIR.kcmutils?=		../../devel/kcmutils
 
 .include "../../devel/kdeclarative/buildlink3.mk"

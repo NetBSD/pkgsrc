@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2024/11/01 12:54:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2024/11/14 22:21:45 wiz Exp $
 
 BUILDLINK_TREE+=	riemann-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	riemann-client
 RIEMANN_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.riemann-client+=	riemann-client>=2
-BUILDLINK_ABI_DEPENDS.riemann-client?=	riemann-client>=2.2.0nb4
+BUILDLINK_ABI_DEPENDS.riemann-client?=	riemann-client>=2.2.0nb5
 BUILDLINK_PKGSRCDIR.riemann-client?=	../../sysutils/riemann-client
 
 pkgbase := riemann-client

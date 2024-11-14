@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2024/11/01 12:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/14 22:20:16 wiz Exp $
 
 DISTNAME=	qtquick3d-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtquick3d-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	3d engine for Qt6 quick
 CATEGORIES=	graphics
 LICENSE=	gnu-gpl-v3
