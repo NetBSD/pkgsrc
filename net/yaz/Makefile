@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.90 2024/11/01 12:54:05 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.91 2024/11/14 13:22:15 wiz Exp $
 
-DISTNAME=	yaz-4.1.6
 DISTNAME=	yaz-5.16.0
 PKGREVISION=	22
 CATEGORIES=	net
@@ -20,7 +18,6 @@ MAKE_JOBS_SAFE=	no
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config tclsh
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-xml2=${BUILDLINK_PREFIX.libxml2}
 
 # backtrace and backtrace_symbols
