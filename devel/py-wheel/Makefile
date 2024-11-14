@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/11/14 14:45:01 gdt Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/14 15:13:17 jperkin Exp $
 
 DISTNAME=	wheel-0.45.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=w/wheel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pypa/wheel
-COMMENT=	tool for manipulating Python wheel files
+COMMENT=	Tool for manipulating Python wheel files
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
