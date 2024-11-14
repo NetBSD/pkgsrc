@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/04/14 17:38:54 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/14 14:11:55 schmonz Exp $
 bin/background
 bin/backtick
 bin/case
@@ -53,7 +53,7 @@ bin/wait
 bin/withstdinas
 include/execline/config.h
 include/execline/execline.h
-lib/execline/libexecline.a
+lib/libexecline.a
 man/man1/background.1
 man/man1/backtick.1
 man/man1/case.1
