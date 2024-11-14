@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2024/11/01 12:52:49 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/14 22:20:04 wiz Exp $
 
 DISTNAME=	autopano-sift-C-2.5.1
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 

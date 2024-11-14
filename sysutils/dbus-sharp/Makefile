@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2024/11/01 12:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/14 22:21:38 wiz Exp $
 #
 
 DISTNAME=	dbus-sharp-0.7.0
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cloud.github.com/downloads/mono/dbus-sharp/
 

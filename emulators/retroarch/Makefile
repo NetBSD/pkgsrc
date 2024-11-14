@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2024/11/01 12:52:28 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/11/14 22:19:43 wiz Exp $
 
-PKGREVISION= 28
+PKGREVISION= 29
 .include "version.mk"
 
 PKGNAME=	retroarch-${RETROARCH_VERSION}

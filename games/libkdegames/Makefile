@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2024/11/01 12:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/11/14 22:19:55 wiz Exp $
 
 DISTNAME=	libkdegames-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://www.kde.org/applications/games/

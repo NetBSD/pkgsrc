@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2024/11/01 12:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/14 22:21:52 wiz Exp $
 
 DISTNAME=	libxml++-2.40.1
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml++/2.40/}
 EXTRACT_SUFX=	.tar.xz

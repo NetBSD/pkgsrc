@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/11/01 12:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/14 22:19:45 wiz Exp $
 
 DISTNAME=	ori-0.8.2
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	filesystems
 MASTER_SITES=	https://bitbucket.org/orifs/ori/downloads/
 EXTRACT_SUFX=	.tar.xz

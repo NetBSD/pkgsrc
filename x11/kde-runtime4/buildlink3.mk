@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.63 2024/11/01 12:55:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.64 2024/11/14 22:22:16 wiz Exp $
 
 BUILDLINK_TREE+=	kde-runtime
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kde-runtime
 KDE_RUNTIME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kde-runtime+=	kde-runtime4>=4.0.0
-BUILDLINK_ABI_DEPENDS.kde-runtime+=	kde-runtime4>=15.12.0nb99
+BUILDLINK_ABI_DEPENDS.kde-runtime+=	kde-runtime4>=15.12.0nb100
 BUILDLINK_PKGSRCDIR.kde-runtime?=	../../x11/kde-runtime4
 
 .include "../../x11/kdelibs4/buildlink3.mk"

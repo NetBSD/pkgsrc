@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/11/01 12:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/14 22:21:57 wiz Exp $
 
 DISTNAME=	calendarsupport-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	time
 
 HOMEPAGE=	https://kontact.kde.org

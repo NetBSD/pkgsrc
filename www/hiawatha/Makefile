@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2024/11/01 12:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/14 22:22:04 wiz Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
 PKGVER=		11.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=hsleisink/hiawatha/-/archive/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.gz

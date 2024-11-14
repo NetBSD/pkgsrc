@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2024/11/01 12:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2024/11/14 22:21:44 wiz Exp $
 
 DISTNAME=	qdirstat-1.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shundhammer/}
 

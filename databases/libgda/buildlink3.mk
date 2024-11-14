@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2024/11/01 12:51:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2024/11/14 22:19:00 wiz Exp $
 
 BUILDLINK_TREE+=	libgda
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgda
 LIBGDA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgda+=	libgda>=2.99.2
-BUILDLINK_ABI_DEPENDS.libgda+=	libgda>=5.2.9nb14
+BUILDLINK_ABI_DEPENDS.libgda+=	libgda>=5.2.9nb15
 BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
 
 .include "../../mk/bsd.fast.prefs.mk"

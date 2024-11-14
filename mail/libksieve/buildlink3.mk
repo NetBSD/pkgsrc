@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/11/01 12:53:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/14 22:20:37 wiz Exp $
 
 BUILDLINK_TREE+=	libksieve
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libksieve
 LIBKSIEVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libksieve+=	libksieve>=20.04.1
-BUILDLINK_ABI_DEPENDS.libksieve?=		libksieve>=23.08.4nb5
+BUILDLINK_ABI_DEPENDS.libksieve?=		libksieve>=23.08.4nb6
 BUILDLINK_PKGSRCDIR.libksieve?=		../../mail/libksieve
 
 .include "../../mail/kmailtransport/buildlink3.mk"

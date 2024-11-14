@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2024/11/01 12:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/11/14 22:21:28 wiz Exp $
 #
 
 DISTNAME=	dirb220
 PKGNAME=	dirb-2.20
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dirb/}
 

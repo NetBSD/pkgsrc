@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/11/01 12:55:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:22:18 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-ktextwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-ktextwidgets
 KF6_KTEXTWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-ktextwidgets+=	kf6-ktextwidgets>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-ktextwidgets?=		kf6-ktextwidgets>=6.2.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-ktextwidgets?=		kf6-ktextwidgets>=6.2.0nb4
 BUILDLINK_PKGSRCDIR.kf6-ktextwidgets?=		../../x11/kf6-ktextwidgets
 
 .include "../../audio/qt6-qtspeech/buildlink3.mk"

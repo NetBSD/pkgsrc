@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2024/11/01 12:54:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2024/11/14 22:21:36 wiz Exp $
 
 BUILDLINK_TREE+=	augeas
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	augeas
 AUGEAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.augeas+=	augeas>=1.3.0
-BUILDLINK_ABI_DEPENDS.augeas?=	augeas>=1.12.0nb11
+BUILDLINK_ABI_DEPENDS.augeas?=	augeas>=1.12.0nb12
 BUILDLINK_PKGSRCDIR.augeas?=	../../sysutils/augeas
 
 .include "../../textproc/libxml2/buildlink3.mk"

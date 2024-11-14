@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2024/11/01 12:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/11/14 22:19:29 wiz Exp $
 
 DISTNAME=	kpeople-${KF5VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/KTp/libkpeople

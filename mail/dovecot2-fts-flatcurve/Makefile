@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/11/01 12:53:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/14 22:20:34 wiz Exp $
 
 DISTNAME=	dovecot-fts-flatcurve-1.0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=slusarz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2024/11/01 12:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/11/14 22:20:00 wiz Exp $
 #
 
 DISTNAME=	gama-2.31
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GNU:=gama/}
 

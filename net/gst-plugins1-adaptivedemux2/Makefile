@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/11/05 20:58:38 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/14 22:21:07 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-good/-adaptivedemux2/}
+PKGREVISION=	1
 CATEGORIES=	net gnome
 
 COMMENT=	Open source multimedia framework - adaptive format (HLS/DASH) plugin

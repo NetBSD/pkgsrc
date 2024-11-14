@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2024/11/01 12:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2024/11/14 22:19:00 wiz Exp $
 #
 
 DISTNAME=	idzebra-2.0.62
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	databases
 MASTER_SITES=	https://download.indexdata.com/pub/zebra/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2024/11/01 12:52:35 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/11/14 22:19:50 wiz Exp $
 
 DISTNAME=	granatier-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/granatier/

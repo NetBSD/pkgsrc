@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/11/01 12:53:18 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/14 22:20:33 wiz Exp $
 
 BUILDLINK_TREE+=	akonadi-import-wizard
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi-import-wizard
 AKONADI_IMPORT_WIZARD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi-import-wizard+=	akonadi-import-wizard>=20.04.1
-BUILDLINK_ABI_DEPENDS.akonadi-import-wizard?=	akonadi-import-wizard>=23.08.4nb5
+BUILDLINK_ABI_DEPENDS.akonadi-import-wizard?=	akonadi-import-wizard>=23.08.4nb6
 BUILDLINK_PKGSRCDIR.akonadi-import-wizard?=	../../mail/akonadi-import-wizard
 
 .include "../../mail/mailcommon/buildlink3.mk"

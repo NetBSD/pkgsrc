@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.223 2024/11/10 19:58:30 adam Exp $
+# $NetBSD: Makefile,v 1.224 2024/11/14 22:19:17 wiz Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 COMMENT=	Cross platform make

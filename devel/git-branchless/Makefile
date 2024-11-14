@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/01 12:52:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/14 22:19:20 wiz Exp $
 
 DISTNAME=	git-branchless-0.10.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=arxanas/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

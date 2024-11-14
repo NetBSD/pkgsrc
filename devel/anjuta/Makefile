@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.180 2024/11/01 12:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2024/11/14 22:19:16 wiz Exp $
 
 DISTNAME=	anjuta-3.34.0
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/3.34/}
 EXTRACT_SUFX=	.tar.xz

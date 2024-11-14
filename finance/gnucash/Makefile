@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.359 2024/11/01 12:52:30 wiz Exp $
+# $NetBSD: Makefile,v 1.360 2024/11/14 22:19:46 wiz Exp $
 
 DISTNAME=		gnucash-5.9
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gnucash/}
 GITHUB_RELEASE=		${PKGVERSION_NOREV}

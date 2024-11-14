@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/11/01 12:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/14 22:20:58 wiz Exp $
 #
 
 DISTNAME=		libassetml-1.2.1
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		multimedia devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ofset/}
 

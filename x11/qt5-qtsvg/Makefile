@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2024/11/01 12:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/11/14 22:22:28 wiz Exp $
 
 DISTNAME=	qtsvg-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtsvg-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Qt5 module for SVG
 
 BUILD_TARGET=		sub-src

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2024/11/01 12:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/14 22:18:38 wiz Exp $
 #
 
 MODNAME=	zip
 PECL_VERSION=	1.22.4
 PKGNAME=	${PHP_PKG_PREFIX}-pecl-${MODNAME}-${PECL_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

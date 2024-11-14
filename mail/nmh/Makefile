@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2024/11/01 12:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2024/11/14 22:20:38 wiz Exp $
 
 DISTNAME=		nmh-1.8
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		mail
 MASTER_SITES=		https://download.savannah.nongnu.org/releases/nmh/
 

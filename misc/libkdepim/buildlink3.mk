@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/11/01 12:53:37 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/14 22:20:52 wiz Exp $
 
 BUILDLINK_TREE+=	libkdepim
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkdepim
 LIBKDEPIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkdepim+=	libkdepim>=17.12.1
-BUILDLINK_ABI_DEPENDS.libkdepim?=		libkdepim>=23.08.4nb5
+BUILDLINK_ABI_DEPENDS.libkdepim?=		libkdepim>=23.08.4nb6
 BUILDLINK_PKGSRCDIR.libkdepim?=		../../misc/libkdepim
 
 BUILDLINK_FILES.libkdepim+=	share/dbus-1/interfaces/org.kde.*.xml

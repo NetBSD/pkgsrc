@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.134 2024/11/01 12:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2024/11/14 22:21:10 wiz Exp $
 
 DISTNAME=	ktorrent-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 
 HOMEPAGE=	https://apps.kde.org/ktorrent/

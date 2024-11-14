@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/11/01 12:53:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:20:30 wiz Exp $
 
 BUILDLINK_TREE+=	php
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	php
 PHP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.php+=	php>=8.3.0<8.4
-BUILDLINK_ABI_DEPENDS.php+=	php>=8.3.13nb2
+BUILDLINK_ABI_DEPENDS.php+=	php>=8.3.13nb4
 BUILDLINK_PKGSRCDIR.php?=	../../lang/php83
 
 pkgbase := php

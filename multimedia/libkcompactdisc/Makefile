@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2024/11/01 12:53:44 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/14 22:20:59 wiz Exp $
 
 DISTNAME=	libkcompactdisc-${KAPPSVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 
 HOMEPAGE=	https://kde.org/applications/multimedia/
