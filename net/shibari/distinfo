@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2024/06/19 19:01:04 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2024/11/14 14:13:52 schmonz Exp $
 
-BLAKE2s (shibari-0.0.1.1.tar.gz) = 700c922bf0062c9da437ba41c164c1bfb297df8e504790caad81329621d02deb
-SHA512 (shibari-0.0.1.1.tar.gz) = f3fad46135ccd9cf1621bdca8434d3c63f0fffb9d97e6f2184a84df6a6ef20c703f4c7ba080d0e573d774c5d5ddafd971a432c50e3ccf844994e6ef0acb89660
-Size (shibari-0.0.1.1.tar.gz) = 34044 bytes
+BLAKE2s (shibari-0.0.1.2.tar.gz) = 12e6bc4e065a8cf86f6c313622fcf45c3b435e00c1abf9f566b00b257b0d6f6b
+SHA512 (shibari-0.0.1.2.tar.gz) = 3536024d4116d769a6a2718d287b3fef4a71f89e436e5754e3a0ded03b035a48ccaeb6aede3c7799b09fd27fdde8c2855a828a4b8b21083c1a903cf297c8d1d7
+Size (shibari-0.0.1.2.tar.gz) = 49735 bytes
 BLAKE2s (shibari-man-pages-0.0.1.1.1.tar.gz) = 7e2072c1ede632322eff8aa1a9be8491066f005da43b30c4d0d292e3507a7eb7
 SHA512 (shibari-man-pages-0.0.1.1.1.tar.gz) = 206ea19a053c325619c32cc354ea8879655174b40834b0955ffc82b15b90c331e532bf205423c5b52792a9568ce76ca1e500a4ddebb067419889889f10710239
 Size (shibari-man-pages-0.0.1.1.1.tar.gz) = 5543 bytes
