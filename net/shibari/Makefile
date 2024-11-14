@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/06/19 19:01:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/14 14:13:52 schmonz Exp $
 
-DISTNAME=		shibari-0.0.1.1
+DISTNAME=		shibari-0.0.1.2
 CATEGORIES=		net
 MASTER_SITES=		${HOMEPAGE}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
