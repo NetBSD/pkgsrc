@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2016/03/08 13:50:46 nros Exp $
+$NetBSD: patch-aa,v 1.5 2024/11/14 12:10:03 nros Exp $
 * use BSD_INSTALL*
 * use libtool for everything
+* Don't create docsets on OSX
 --- Makefile.in.orig	2014-10-19 17:21:48.000000000 +0000
 +++ Makefile.in
 @@ -28,7 +28,7 @@ DSO		=	@DSO@
@@ -89,7 +90,7 @@ $NetBSD: patch-aa,v 1.4 2016/03/08 13:50:46 nros Exp $
  	@echo Testing library...
  	./testmxml test.xml temp1s.xml >temp1.xml
  	./testmxml temp1.xml temp2s.xml >temp2.xml
-@@ -384,10 +386,10 @@ testmxml.o:	mxml.h
+@@ -384,23 +386,10 @@ testmxml.o:	mxml.h
  # mxml.xml
  #
  
@@ -98,11 +99,24 @@ $NetBSD: patch-aa,v 1.4 2016/03/08 13:50:46 nros Exp $
  	echo Generating API documentation...
  	$(RM) mxml.xml
 -	./mxmldoc-static --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
+-	if test "x`uname`" = xDarwin; then \
+-		./mxmldoc-static --docset org.minixml.docset \
+-			--docversion @VERSION@ --feedname minixml.org \
+-			--feedurl http://www.minixml.org/org.minixml.atom \
+-			--header doc/docset.header --intro doc/docset.intro \
+-			--css doc/docset.css --title "Mini-XML API Reference" \
+-			mxml.xml || exit 1; \
+-		$(RM) org.minixml.atom; \
+-		xcrun docsetutil package --output org.minixml.xar \
+-			--atom org.minixml.atom \
+-			--download-url http://www.minixml.org/org.minixml.xar \
+-			org.minixml.docset || exit 1; \
+-	fi
 +	./mxmldoc --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
- 	if test "x`uname`" = xDarwin; then \
- 		./mxmldoc-static --docset org.minixml.docset \
- 			--docversion @VERSION@ --feedname minixml.org \
-@@ -414,10 +416,10 @@ valgrind:	mxmldoc-static
+ 
+ valgrind:	mxmldoc-static
+ 	echo Doing dynamic code analysis using Valgrind...
+@@ -414,10 +403,10 @@ valgrind:	mxmldoc-static
  # doc/mxml.man
  #
  
