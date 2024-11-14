@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/11/11 11:57:20 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/14 14:12:48 schmonz Exp $
 bin/s6-clockadd
 bin/s6-clockview
 bin/s6-getservbyname
@@ -25,8 +25,8 @@ include/s6-networking/ident.h
 include/s6-networking/s6net.h
 include/s6-networking/sbearssl.h
 include/s6-networking/stls.h
-lib/s6-networking/libs6net.a
-${PLIST.tls}lib/s6-networking/libsbearssl.a
+lib/libs6net.a
+${PLIST.tls}lib/libsbearssl.a
 man/man7/s6-tls.7
 man/man8/s6-clockadd.8
 man/man8/s6-clockview.8
