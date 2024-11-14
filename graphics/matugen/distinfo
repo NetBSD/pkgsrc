@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2024/11/08 10:09:14 pin Exp $
+$NetBSD: distinfo,v 1.17 2024/11/14 10:24:44 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -396,9 +396,9 @@ Size (loop9-0.1.5.crate) = 3406 bytes
 BLAKE2s (material-colors-0.4.2.crate) = fee4442dfc4ffac77471365690383d010f2834f1f41326e05ed4de7869ad14d0
 SHA512 (material-colors-0.4.2.crate) = 23c31f945a5d1bdd821fe9a7da91dbbe14de39046f4affe70f186520ef706afe90f4f4e3f5cbf3e3f2dfafa39bdb5af13756e7f81d85c8282afc6904ec08705a
 Size (material-colors-0.4.2.crate) = 74814 bytes
-BLAKE2s (matugen-2.4.0.tar.gz) = d97c6dce96e087c86487da7e56398c3d70f0ebff0add51994d391a446f74e7b7
-SHA512 (matugen-2.4.0.tar.gz) = 363b23bd6724e755acf2817ab9a151e5350f36e805805d0c24df9c30cc73d2726d685971f6a0977c1e13db7015dacd5f5160170b7d74147f8fa44aed0ca9242f
-Size (matugen-2.4.0.tar.gz) = 1196315 bytes
+BLAKE2s (matugen-2.4.1.tar.gz) = e2fa93f44426027d99052e746eaefc2335994bdd2dc2db70ced16572bdaf25c5
+SHA512 (matugen-2.4.1.tar.gz) = cb2b09db09b479b34708ce9700af10a502810238dd645f2ab4844ea867add3ae123475302986802faebd81a1d076719cb6e058f35060f848db3498fba2c60675
+Size (matugen-2.4.1.tar.gz) = 1196343 bytes
 BLAKE2s (maybe-rayon-0.1.1.crate) = c7b0ccd2e405b4ddeee59f0cf33ae90eaeb17f1409d2302fa74dce08175bab4f
 SHA512 (maybe-rayon-0.1.1.crate) = 6f4e0e2a342fc86b5d0626a08779075c68911ffd3f837ac6ab2c15c821ba96e50617cfc9df9d16bf96ae57fa1802c5549e21d67f79e4e1c3f10bce04b88115e9
 Size (maybe-rayon-0.1.1.crate) = 2901 bytes
