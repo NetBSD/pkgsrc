@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.177 2024/08/18 12:08:38 tnn Exp $
+$NetBSD: distinfo,v 1.178 2024/11/14 22:13:52 wiz Exp $
 
 BLAKE2s (webkitgtk-2.36.8.tar.xz) = 277ba5935bda3e3867083b4c736499d974b9c733dbd05bf574510857dde481a1
 SHA512 (webkitgtk-2.36.8.tar.xz) = 50576f13ea84c0634d174ccf0b70d0eb28752589b2b9ce7a82ffeee1b4b6c849a802f7ae83a3c5a74d0da2b7e3321876ead33e819d8006b8153376074cb57036
@@ -19,6 +19,7 @@ SHA1 (patch-Source_ThirdParty_ANGLE_src_compiler_translator_SymbolTable.h) = 10d
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = ac07d4d8faa6dab606bcea31936340d260fcda33
 SHA1 (patch-Source_WTF_wtf_Assertions.h) = 427de20eba4627578087feaa7de2f23e80b9debf
 SHA1 (patch-Source_WTF_wtf_FileSystem.cpp) = 2fe7b7755646d9a1cc022aec3d01091766378aba
+SHA1 (patch-Source_WTF_wtf_Platform.h) = a11bf103caaecbef9e31923a97495daa22ff4759
 SHA1 (patch-Source_WTF_wtf_PlatformEnable.h) = eb5598c20c8453314daba7897066f15827bbede7
 SHA1 (patch-Source_WTF_wtf_PlatformHave.h) = 4bae0a5b48ab95fbccb1ce09d239d744d274e4eb
 SHA1 (patch-Source_WTF_wtf_PlatformOS.h) = 80aa6ff20f10407d447fdb41606d4bb4989351aa
