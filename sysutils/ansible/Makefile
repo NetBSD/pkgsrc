@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2024/11/12 08:08:51 adam Exp $
+# $NetBSD: Makefile,v 1.85 2024/11/14 17:25:05 adam Exp $
 
 DISTNAME=	ansible-10.6.0
 CATEGORIES=	sysutils python
@@ -59,6 +59,8 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/vmware/tools
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_proxy/files/*.bsx
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/zabbix/roles/zabbix_server/files/*.bsx
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/ci/*
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/conjur-cloud-tools/conjurCloudTenant/*/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/conjur-cloud-tools/conjurCloudTenant/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/dev/*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cyberark/conjur/roles/conjur_host_identity/tests/test.sh*
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/google/cloud/scripts/*.sh
