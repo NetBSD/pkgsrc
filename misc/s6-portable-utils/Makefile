@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/02/29 01:17:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/14 14:13:20 schmonz Exp $
 
-DISTNAME=	s6-portable-utils-2.3.0.3
+DISTNAME=	s6-portable-utils-2.3.0.4
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
