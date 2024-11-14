@@ -1,12 +1,20 @@
-# $NetBSD: wheel.mk,v 1.14 2024/01/23 19:59:25 adam Exp $
+# $NetBSD: wheel.mk,v 1.15 2024/11/14 15:08:25 gdt Exp $
 #
 # Build and install Python wheels
 #
-# Note per PEP-518, the minimum and default requirements to create .whl files
-# are py-setuptools plus py-wheel; however, there are various other possible
-# tools that projects can use. Thus inclusion of this file does not imply these
-# defaults are defined as TOOL_DEPENDS. This must be done in the package Makefile.
+# PEP-518 defines how packages specify their build system
+# requirements, via the build section in pyproject.toml.  The default
+# in the PEP (used when the build section is not present) is
+# setuptools and wheel, but setuptools as of 70.1 has enough wheel
+# functionality that wheel is not required.  Some packages use
+# different build systems, e.g. flit.
 #
+# wheel.mk does not look for and parse pyproject.toml, and does not
+# support variables to declare the needed tools.  Therefore, packages
+# including wheel.mk must TOOL_DEPENDS on the needed build tools.
+# A typical package will need:
+#   TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+
 # Variables:
 #
 # WHEELFILE:		path to the wheelfile to be installed
