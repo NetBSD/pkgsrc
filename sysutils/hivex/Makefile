@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2024/11/01 12:54:26 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/14 22:21:41 wiz Exp $
 
 DISTNAME=	hivex-1.3.18
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.libguestfs.org/hivex/
 

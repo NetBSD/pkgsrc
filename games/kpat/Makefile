@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2024/11/01 12:52:39 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2024/11/14 22:19:54 wiz Exp $
 
 DISTNAME=	kpat-${KAPPSVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kpat/

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2024/11/01 12:52:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2024/11/14 22:19:55 wiz Exp $
 
 BUILDLINK_TREE+=	libggz
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libggz
 LIBGGZ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libggz+=	libggz>=0.0.14.1
-BUILDLINK_ABI_DEPENDS.libggz+=	libggz>=0.0.14.1nb22
+BUILDLINK_ABI_DEPENDS.libggz+=	libggz>=0.0.14.1nb23
 BUILDLINK_PKGSRCDIR.libggz?=	../../games/libggz
 
 .include "../../security/gnutls/buildlink3.mk"

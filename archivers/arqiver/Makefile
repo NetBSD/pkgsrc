@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2024/11/09 19:41:54 pin Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/14 22:18:37 wiz Exp $
 
 DISTNAME=	Arqiver-1.0.0
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}

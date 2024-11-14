@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/11/01 12:52:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/14 22:19:56 wiz Exp $
 #
 
 DISTNAME=	lincity-ng-2.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/lincity-ng/
 EXTRACT_SUFX=	.tar.bz2

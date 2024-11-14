@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/11/01 12:55:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/11/14 22:22:18 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kjobwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kjobwidgets
 KF6_KJOBWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kjobwidgets+=	kf6-kjobwidgets>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kjobwidgets?=	kf6-kjobwidgets>=6.2.0nb4
+BUILDLINK_ABI_DEPENDS.kf6-kjobwidgets?=	kf6-kjobwidgets>=6.2.0nb5
 BUILDLINK_PKGSRCDIR.kf6-kjobwidgets?=	../../x11/kf6-kjobwidgets
 
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"

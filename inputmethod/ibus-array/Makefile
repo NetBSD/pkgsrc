@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2024/11/01 12:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/11/14 22:20:23 wiz Exp $
 
 DISTNAME=	ibus-array-0.2.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lexical/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}

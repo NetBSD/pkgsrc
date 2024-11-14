@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2024/11/01 12:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/14 22:21:15 wiz Exp $
 
 MODNAME=		xmlrpc
 CATEGORIES+=		net
 COMMENT=		PHP extension for XML-RPC support
-PKGREVISION=		11
+PKGREVISION=		12
 
 PHP_VERSIONS_ACCEPTED=	56 74
 

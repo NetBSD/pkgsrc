@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2024/11/11 07:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2024/11/14 22:21:49 wiz Exp $
 
 DISTNAME=	asciidoc-10.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asciidoc/}
 

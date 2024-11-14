@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/11/01 12:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/14 22:19:03 wiz Exp $
 
 DISTNAME=	objsqlite3-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	database
 MASTER_SITES=	https://fl.nil.im/objsqlite3/tarball/${PKGVERSION_NOREV}-release/
 

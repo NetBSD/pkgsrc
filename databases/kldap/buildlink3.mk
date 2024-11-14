@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2024/11/01 12:51:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2024/11/14 22:19:00 wiz Exp $
 
 BUILDLINK_TREE+=	kldap
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kldap
 KLDAP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kldap+=	kldap>=17.12.1
-BUILDLINK_ABI_DEPENDS.kldap?=	kldap>=23.08.4nb5
+BUILDLINK_ABI_DEPENDS.kldap?=	kldap>=23.08.4nb6
 BUILDLINK_PKGSRCDIR.kldap?=	../../databases/kldap
 
 .include "../../textproc/kcompletion/buildlink3.mk"

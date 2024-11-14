@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2024/11/01 12:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/11/14 22:18:49 wiz Exp $
 #
 
 DISTNAME=	centerim-4.22.10
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	chat
 MASTER_SITES=	https://transacid.de/centerim/releases/
 

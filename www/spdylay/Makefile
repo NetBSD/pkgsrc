@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2024/11/01 12:54:57 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/14 22:22:11 wiz Exp $
 
 DISTNAME=	spdylay-1.4.0
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tatsuhiro-t/}
 EXTRACT_SUFX=	.tar.xz

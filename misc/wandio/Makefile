@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/11/01 12:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/14 22:20:54 wiz Exp $
 
 DISTNAME=	wandio-4.2.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	misc
 MASTER_SITES=	#
 

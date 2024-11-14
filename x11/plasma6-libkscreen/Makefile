@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/11/01 12:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/14 22:22:24 wiz Exp $
 
 DISTNAME=	libkscreen-${PLASMAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 
 HOMEPAGE=	https://invent.kde.org/plasma/libkscreen

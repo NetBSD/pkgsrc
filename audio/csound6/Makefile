@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2024/11/01 12:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/11/14 22:18:39 wiz Exp $
 
 DISTNAME=		csound-${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
-PKGREVISION=		37
+PKGREVISION=		38
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=csound/}
 GITHUB_PROJECT=		csound

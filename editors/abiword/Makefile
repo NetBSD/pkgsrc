@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.232 2024/11/01 12:52:22 wiz Exp $
+# $NetBSD: Makefile,v 1.233 2024/11/14 22:19:37 wiz Exp $
 
-PKGREVISION= 	23
+PKGREVISION= 	24
 .include 	"Makefile.common"
 
 DISTNAME=	abiword-${ABIVERSION}

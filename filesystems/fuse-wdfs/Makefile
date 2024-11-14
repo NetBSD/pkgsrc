@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2024/11/01 12:52:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/14 22:19:45 wiz Exp $
 #
 
 DISTNAME=	wdfs-1.4.2
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	25
+PKGREVISION=	26
 CATEGORIES=	filesystems
 MASTER_SITES=	http://noedler.de/projekte/wdfs/
 

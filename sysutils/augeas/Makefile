@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/11/01 12:54:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2024/11/14 22:21:36 wiz Exp $
 
 DISTNAME=	augeas-1.12.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.augeas.net/
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2024/11/01 12:54:28 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/14 22:21:43 wiz Exp $
 
-PKGREVISION= 25
+PKGREVISION= 26
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-system-monitor-1.22.2

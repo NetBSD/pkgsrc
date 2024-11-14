@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/01 12:53:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/14 22:20:48 wiz Exp $
 
 DISTNAME=	kdepim-runtime-${KAPPSVER}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	misc
 
 HOMEPAGE=	https://community.kde.org/KDE_PIM

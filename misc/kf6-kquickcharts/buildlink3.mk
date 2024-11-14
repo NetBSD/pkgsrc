@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/11/01 12:53:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:20:49 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kquickcharts
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kquickcharts
 KF6_KQUICKCHARTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kquickcharts+=	kf6-kquickcharts>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kquickcharts?=		kf6-kquickcharts>=6.2.0nb3
+BUILDLINK_ABI_DEPENDS.kf6-kquickcharts?=		kf6-kquickcharts>=6.2.0nb4
 BUILDLINK_PKGSRCDIR.kf6-kquickcharts?=		../../misc/kf6-kquickcharts
 
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
