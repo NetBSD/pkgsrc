@@ -1,10 +1,19 @@
-$NetBSD: patch-meson.build,v 1.1 2021/02/03 10:43:42 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2024/11/14 22:11:30 wiz Exp $
 
 Install example config file to examples.
 
---- meson.build.orig	2020-12-17 20:30:42.000000000 +0000
+--- meson.build.orig	2024-02-20 22:30:06.000000000 +0000
 +++ meson.build
-@@ -165,7 +165,7 @@ install_data(
+@@ -42,7 +42,7 @@ endif
+ 
+ _unicode = get_option('unicode')
+ if _unicode == 'icu'
+-  unicode_lib = dependency('icu-io')
++  unicode_lib = [dependency('icu-io'), dependency('icu-uc')]
+   add_project_arguments('-DIMV_USE_ICU', language: 'c')
+ elif _unicode == 'grapheme'
+   unicode_lib = cc.find_library('grapheme')
+@@ -203,7 +203,7 @@ endforeach
  
  install_data(
    files('files/imv_config'),
