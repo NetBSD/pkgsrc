@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/06/19 19:00:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/14 14:13:04 schmonz Exp $
 
-DISTNAME=		tipidee-0.0.5.0
+DISTNAME=		tipidee-0.0.5.1
 CATEGORIES=		www
 MASTER_SITES=		${HOMEPAGE}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES_DIST}
@@ -15,7 +15,7 @@ MANPAGES_VERSION=	0.0.5.0.1
 MANPAGES_DIST=		tipidee-man-pages-${MANPAGES_VERSION}.tar.gz
 SITES.${MANPAGES_DIST}=	-https://git.sr.ht/~flexibeast/tipidee-man-pages/archive/v${MANPAGES_VERSION}.tar.gz
 
-DEPENDS+=		s6-networking>=2.7.0.3:../../net/s6-networking
+DEPENDS+=		s6-networking>=2.7.0.4:../../net/s6-networking
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
