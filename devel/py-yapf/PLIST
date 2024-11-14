@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/10/28 19:57:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/14 18:25:21 adam Exp $
 bin/yapf-${PYVERSSUFFIX}
 bin/yapf-diff-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
@@ -14,6 +14,9 @@ ${PYSITELIB}/yapf/__init__.pyo
 ${PYSITELIB}/yapf/__main__.py
 ${PYSITELIB}/yapf/__main__.pyc
 ${PYSITELIB}/yapf/__main__.pyo
+${PYSITELIB}/yapf/_version.py
+${PYSITELIB}/yapf/_version.pyc
+${PYSITELIB}/yapf/_version.pyo
 ${PYSITELIB}/yapf/pyparser/__init__.py
 ${PYSITELIB}/yapf/pyparser/__init__.pyc
 ${PYSITELIB}/yapf/pyparser/__init__.pyo
