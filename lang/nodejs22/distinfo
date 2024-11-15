@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2024/11/13 08:45:17 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/11/15 10:58:31 adam Exp $
 
 BLAKE2s (node-v22.11.0.tar.xz) = 4c7c455d840d56e5e90aefb3843819d40db56b6d9da551648ec4ed0df85072f3
 SHA512 (node-v22.11.0.tar.xz) = f81f0d4a9606d14fcbfb8b73489f156bbbdfa5ece7a8c4036c1887df768324dc58c91b87367c6631b8a96d19fb0d7cd1414fb90ef1bc7b27f07c40f0480a0e8d
 Size (node-v22.11.0.tar.xz) = 47006780 bytes
 SHA1 (patch-common.gypi) = a4dd4ba7e0dfd5838d7241e35447617bdc0f93df
+SHA1 (patch-configure.py) = 983ed01cce632bc286e34c5845e338bf1128f99f
 SHA1 (patch-deps_cares_cares.gyp) = 22b44f2ac59963f694dfe4f4585e08960b3dec32
 SHA1 (patch-deps_uv_common.gypi) = 29f0c382b68f77749a71ce39fa2ca37338ca18ec
 SHA1 (patch-deps_uvwasi_include_wasi__serdes.h) = 32b85ef5824b96b35aba9280bbe7aa7899d9e5cf
