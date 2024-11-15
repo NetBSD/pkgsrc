@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/11/14 22:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/11/15 12:28:33 pin Exp $
 
-DISTNAME=	libfm-qt-2.0.2
-PKGREVISION=	3
+DISTNAME=	libfm-qt-2.1.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -28,7 +27,7 @@ SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
 DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"

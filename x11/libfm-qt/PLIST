@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/08/02 17:00:25 pin Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/11/15 12:28:33 pin Exp $
 include/libfm-qt6/appchoosercombobox.h
 include/libfm-qt6/appchooserdialog.h
 include/libfm-qt6/applaunchcontext.h
@@ -98,8 +98,8 @@ include/libfm-qt6/utilities.h
 include/libfm-qt6/utilities_p.h
 include/libfm-qt6/xdndworkaround.h
 lib/libfm-qt6.so
-lib/libfm-qt6.so.14
-lib/libfm-qt6.so.14.0.0
+lib/libfm-qt6.so.15
+lib/libfm-qt6.so.15.0.0
 lib/pkgconfig/libfm-qt6.pc
 share/cmake/fm-qt6/fm-qt6-config-version.cmake
 share/cmake/fm-qt6/fm-qt6-config.cmake
@@ -123,12 +123,14 @@ share/libfm-qt6/translations/libfm-qt_et.qm
 share/libfm-qt6/translations/libfm-qt_eu.qm
 share/libfm-qt6/translations/libfm-qt_fi.qm
 share/libfm-qt6/translations/libfm-qt_fr.qm
+share/libfm-qt6/translations/libfm-qt_fur.qm
 share/libfm-qt6/translations/libfm-qt_gl.qm
 share/libfm-qt6/translations/libfm-qt_he.qm
 share/libfm-qt6/translations/libfm-qt_hi.qm
 share/libfm-qt6/translations/libfm-qt_hr.qm
 share/libfm-qt6/translations/libfm-qt_hu.qm
 share/libfm-qt6/translations/libfm-qt_id.qm
+share/libfm-qt6/translations/libfm-qt_ie.qm
 share/libfm-qt6/translations/libfm-qt_it.qm
 share/libfm-qt6/translations/libfm-qt_ja.qm
 share/libfm-qt6/translations/libfm-qt_kk.qm
