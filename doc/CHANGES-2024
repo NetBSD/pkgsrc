@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6978 2024/11/15 12:22:00 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6979 2024/11/15 12:23:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10541,3 +10541,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/neomutt to 20241114 [wiz 2024-11-15]
 	Updated devel/lxqt-build-tools to 2.1.0 [pin 2024-11-15]
 	Updated x11/libqtxdg to 4.1.0 [pin 2024-11-15]
+	Updated x11/qtxdg-tools to 4.1.0 [pin 2024-11-15]
