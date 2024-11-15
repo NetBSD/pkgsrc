@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.274 2024/11/12 23:16:37 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.275 2024/11/15 18:05:32 jakllsch Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26106,3 +26106,9 @@ webkit-gtk<2.46.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-44
 curl<8.11.0	comparison-using-wrong-factors	https://nvd.nist.gov/vuln/detail/CVE-2024-9681
 libsoup3<3.6.0	request-smuggling		https://nvd.nist.gov/vuln/detail/CVE-2024-52530
 libsoup3<3.6.1	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2024-52532
+openafs<1.6.25		privilege-escalation	http://openafs.org/pages/security/OPENAFS-SA-2024-001.txt
+openafs>=1.7<1.8.13	privilege-escalation	http://openafs.org/pages/security/OPENAFS-SA-2024-001.txt
+openafs<1.6.25		denial-of-service	http://openafs.org/pages/security/OPENAFS-SA-2024-002.txt
+openafs>=1.7<1.8.13	denial-of-service	http://openafs.org/pages/security/OPENAFS-SA-2024-002.txt
+openafs<1.6.25		buffer-overflow		http://openafs.org/pages/security/OPENAFS-SA-2024-003.txt
+openafs>=1.7<1.8.13	buffer-overflow		http://openafs.org/pages/security/OPENAFS-SA-2024-003.txt
