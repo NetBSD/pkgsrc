@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25082 2024/11/15 13:12:32 pin Exp $
+$NetBSD: TODO,v 1.25083 2024/11/15 22:02:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1353,7 +1353,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o websvn-2.6.0
 	o wgetpaste-2.30
 	o whowatch-1.8.5
-	o widelands-1.2
+	o widelands-1.2.1
 	o windowlab-1.40
 	o wine-devel-9.21
 	o wiredtiger-10.0.0
