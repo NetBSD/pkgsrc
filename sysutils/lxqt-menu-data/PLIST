@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/13 23:13:01 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/11/15 12:26:46 pin Exp $
 share/cmake/lxqt-menu-data/lxqt-menu-data-config-version.cmake
 share/cmake/lxqt-menu-data/lxqt-menu-data-config.cmake
 share/desktop-directories/lxqt-audio-video.directory
@@ -28,6 +28,5 @@ share/desktop-directories/lxqt-utility-accessibility.directory
 share/desktop-directories/lxqt-utility.directory
 share/examples/menus/lxqt-applications-compact.menu
 share/examples/menus/lxqt-applications-fm.menu
-share/examples/menus/lxqt-applications-simple.menu
 share/examples/menus/lxqt-applications.menu
 share/examples/menus/lxqt-config.menu

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/11/14 22:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/15 12:26:46 pin Exp $
 
-DISTNAME=	lxqt-menu-data-2.0.0
-PKGREVISION=	3
+DISTNAME=	lxqt-menu-data-2.1.0
 CATEGORIES=	sysutils x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -23,14 +22,12 @@ CONF_FILES=	${MENU_CONF}/lxqt-applications.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-applications.menu
 CONF_FILES+=	${MENU_CONF}/lxqt-applications-compact.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-applications-compact.menu
-CONF_FILES+=	${MENU_CONF}/lxqt-applications-simple.menu \
-		${PKG_SYSCONFDIR}/menus/lxqt-applications-simple.menu
 CONF_FILES+=	${MENU_CONF}/lxqt-applications-fm.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-applications-fm.menu
 CONF_FILES+=	${MENU_CONF}/lxqt-config.menu \
 		${PKG_SYSCONFDIR}/menus/lxqt-config.menu
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt6-qtbase>=6.6.0
