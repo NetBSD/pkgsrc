@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/11/15 13:02:00 pin Exp $
 
-DISTNAME=	lxqt-panel-2.0.1
-PKGREVISION=	3
+DISTNAME=	lxqt-panel-2.1.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -47,7 +46,7 @@ CONF_FILES+=	${PANEL_CONF}/panel.conf \
 		${PKG_SYSCONFDIR}/lxqt/panel.conf
 
 DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "options.mk"
