@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/08/11 06:23:48 mef Exp $
+$NetBSD: distinfo,v 1.10 2024/11/15 23:25:48 mef Exp $
 
-BLAKE2s (R/quantreg_5.96.tar.gz) = 86e8319d2d5779110485e6f03b0726f6577247416194a93fbfcae6206e94ee72
-SHA512 (R/quantreg_5.96.tar.gz) = de5e07d5a0addc621bac916594a451fa9231263a311159e5649fe4b251c2e19a96625ce98ebda7179f0f498cd32d09df8115b28eea54c92456add56ed85f30db
-Size (R/quantreg_5.96.tar.gz) = 1026000 bytes
+BLAKE2s (R/quantreg_5.99.tar.gz) = 507190eaf1148e2fb30d8a7f32cf4f06c9e00717ef77f6c95308e5b9302f3b38
+SHA512 (R/quantreg_5.99.tar.gz) = 0fcf95c8c90ff87eef6124c27856ad1e75f22fd4c61cac5bab85d70d29aec9cf21306c19a53d58519c044e2292e7fd8197441d5b32120a3a87f42ff6b67a634d
+Size (R/quantreg_5.99.tar.gz) = 1027293 bytes
