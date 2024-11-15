@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/14 22:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/15 13:06:26 pin Exp $
 
-DISTNAME=	obconf-qt-0.16.4
-PKGREVISION=	7
+DISTNAME=	obconf-qt-0.16.5
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ USE_LANGUAGES=	c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
