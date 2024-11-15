@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/10/10 19:49:58 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/15 18:14:42 jakllsch Exp $
 
-DISTNAME=	openafs-1.8.12-src
+DISTNAME=	openafs-1.8.13-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	filesystems net sysutils
 MASTER_SITES=	http://www.openafs.org/dl/openafs/${PKGVERSION_NOREV}/
