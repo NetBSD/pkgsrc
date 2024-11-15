@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/11/14 22:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/15 12:49:36 pin Exp $
 
-DISTNAME=	lxqt-notificationd-2.0.1
-PKGREVISION=	3
+DISTNAME=	lxqt-notificationd-2.1.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -22,7 +21,7 @@ MAKE_DIRS=		${PKG_SYSCONFDIR}/autostart
 CONF_FILES+=	${AUTOSTART_CONF}/lxqt-notifications.desktop \
 		${PKG_SYSCONFDIR}/autostart/lxqt-notifications.desktop
 
-TOOL_DEPENDS+=	lxqt-build-tools>=2.0.0:../../devel/lxqt-build-tools
+TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../x11/qt6-qtbase/buildlink3.mk"
