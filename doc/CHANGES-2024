@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.6989 2024/11/15 12:39:46 pin Exp $
+$NetBSD: CHANGES-2024,v 1.6990 2024/11/15 12:41:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10552,3 +10552,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/qterminal to 2.1.0 [pin 2024-11-15]
 	Updated security/lxqt-policykit to 2.1.0 [pin 2024-11-15]
 	Updated x11/lxqt-admin to 2.1.0 [pin 2024-11-15]
+	Updated devel/libdbusmenu-lxqt to 0.2.0 [pin 2024-11-15]
