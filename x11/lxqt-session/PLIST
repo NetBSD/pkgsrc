@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/08/02 17:49:05 pin Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/11/15 13:08:32 pin Exp $
 bin/lxqt-config-session
 bin/lxqt-leave
 bin/lxqt-session
@@ -158,5 +158,6 @@ share/lxqt/translations/lxqt-session/lxqt-session_tr.qm
 share/lxqt/translations/lxqt-session/lxqt-session_uk.qm
 share/lxqt/translations/lxqt-session/lxqt-session_zh_CN.qm
 share/lxqt/translations/lxqt-session/lxqt-session_zh_TW.qm
+share/lxqt/waylandwindowmanagers.conf
 share/lxqt/windowmanagers.conf
 share/xsessions/lxqt.desktop
