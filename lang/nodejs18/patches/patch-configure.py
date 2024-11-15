@@ -1,8 +1,10 @@
-$NetBSD: patch-configure.py,v 1.1 2023/11/02 13:20:35 adam Exp $
+$NetBSD: patch-configure.py,v 1.2 2024/11/15 10:58:31 adam Exp $
 
 Use packaging instead of deprecated distutils.
 
---- configure.py.orig	2023-10-13 14:42:13.000000000 +0000
+Fix building with ICU 76.
+
+--- configure.py.orig	2024-11-15 10:34:42.874157210 +0000
 +++ configure.py
 @@ -14,7 +14,7 @@ import bz2
  import io
@@ -28,3 +30,12 @@ Use packaging instead of deprecated distutils.
  
      if is_x86 and not openssl110_asm_supported:
        error('''Did not find a new enough assembler, install one or build with
+@@ -1764,7 +1764,7 @@ def configure_intl(o):
+   elif with_intl == 'system-icu':
+     # ICU from pkg-config.
+     o['variables']['v8_enable_i18n_support'] = 1
+-    pkgicu = pkg_config('icu-i18n')
++    pkgicu = pkg_config(['icu-i18n', 'icu-uc'])
+     if not pkgicu[0]:
+       error('''Could not load pkg-config data for "icu-i18n".
+        See above errors or the README.md.''')
