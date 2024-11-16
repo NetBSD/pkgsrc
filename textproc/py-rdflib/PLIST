@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/24 09:32:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/16 20:50:14 adam Exp $
 bin/csv2rdf-${PYVERSSUFFIX}
 bin/rdf2dot-${PYVERSSUFFIX}
 bin/rdfgraphisomorphism-${PYVERSSUFFIX}
@@ -51,6 +51,9 @@ ${PYSITELIB}/rdflib/extras/external_graph_libs.pyo
 ${PYSITELIB}/rdflib/extras/infixowl.py
 ${PYSITELIB}/rdflib/extras/infixowl.pyc
 ${PYSITELIB}/rdflib/extras/infixowl.pyo
+${PYSITELIB}/rdflib/extras/shacl.py
+${PYSITELIB}/rdflib/extras/shacl.pyc
+${PYSITELIB}/rdflib/extras/shacl.pyo
 ${PYSITELIB}/rdflib/graph.py
 ${PYSITELIB}/rdflib/graph.pyc
 ${PYSITELIB}/rdflib/graph.pyo
@@ -174,6 +177,9 @@ ${PYSITELIB}/rdflib/plugins/parsers/nquads.pyo
 ${PYSITELIB}/rdflib/plugins/parsers/ntriples.py
 ${PYSITELIB}/rdflib/plugins/parsers/ntriples.pyc
 ${PYSITELIB}/rdflib/plugins/parsers/ntriples.pyo
+${PYSITELIB}/rdflib/plugins/parsers/patch.py
+${PYSITELIB}/rdflib/plugins/parsers/patch.pyc
+${PYSITELIB}/rdflib/plugins/parsers/patch.pyo
 ${PYSITELIB}/rdflib/plugins/parsers/rdfxml.py
 ${PYSITELIB}/rdflib/plugins/parsers/rdfxml.pyc
 ${PYSITELIB}/rdflib/plugins/parsers/rdfxml.pyo
@@ -204,6 +210,9 @@ ${PYSITELIB}/rdflib/plugins/serializers/nquads.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/nt.py
 ${PYSITELIB}/rdflib/plugins/serializers/nt.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/nt.pyo
+${PYSITELIB}/rdflib/plugins/serializers/patch.py
+${PYSITELIB}/rdflib/plugins/serializers/patch.pyc
+${PYSITELIB}/rdflib/plugins/serializers/patch.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.py
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.pyo
@@ -367,3 +376,6 @@ ${PYSITELIB}/rdflib/util.pyo
 ${PYSITELIB}/rdflib/void.py
 ${PYSITELIB}/rdflib/void.pyc
 ${PYSITELIB}/rdflib/void.pyo
+${PYSITELIB}/rdflib/xsd_datetime.py
+${PYSITELIB}/rdflib/xsd_datetime.pyc
+${PYSITELIB}/rdflib/xsd_datetime.pyo
