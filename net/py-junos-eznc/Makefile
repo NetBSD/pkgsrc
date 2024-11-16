@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/11/11 07:28:49 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/16 10:24:46 adam Exp $
 
-DISTNAME=	junos-eznc-2.7.1
+DISTNAME=	junos-eznc-2.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/junos-eznc/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.7.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-ncclient>=0.6.15:../../net/py-ncclient
-DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.15.2:../../security/py-paramiko
+DEPENDS+=	${PYPKGPREFIX}-paramiko>=3.5.0:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
@@ -24,8 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=5.1:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-yamlordereddictloader-[0-9]*:../../textproc/py-yamlordereddictloader
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

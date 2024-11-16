@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/01/22 19:26:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/11/16 10:24:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -183,6 +183,9 @@ ${PYSITELIB}/jnpr/junos/facts/personality.pyo
 ${PYSITELIB}/jnpr/junos/facts/swver.py
 ${PYSITELIB}/jnpr/junos/facts/swver.pyc
 ${PYSITELIB}/jnpr/junos/facts/swver.pyo
+${PYSITELIB}/jnpr/junos/facts/vmhost.py
+${PYSITELIB}/jnpr/junos/facts/vmhost.pyc
+${PYSITELIB}/jnpr/junos/facts/vmhost.pyo
 ${PYSITELIB}/jnpr/junos/jxml.py
 ${PYSITELIB}/jnpr/junos/jxml.pyc
 ${PYSITELIB}/jnpr/junos/jxml.pyo
