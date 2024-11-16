@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/16 16:32:03 adam Exp $
 
-DISTNAME=	aioresponses-0.7.6
+DISTNAME=	aioresponses-0.7.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioresponses/}
@@ -13,6 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.3.0:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-packaging>=22.0:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-ddt>=1.4.1:../../devel/py-ddt
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
