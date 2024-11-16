@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.276 2024/11/16 08:50:48 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.277 2024/11/16 11:58:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26111,3 +26111,4 @@ openafs<1.6.25		denial-of-service	http://openafs.org/pages/security/OPENAFS-SA-2
 openafs>=1.7<1.8.13	denial-of-service	http://openafs.org/pages/security/OPENAFS-SA-2024-002.txt
 openafs<1.6.25		buffer-overflow		http://openafs.org/pages/security/OPENAFS-SA-2024-003.txt
 openafs>=1.7<1.8.13	buffer-overflow		http://openafs.org/pages/security/OPENAFS-SA-2024-003.txt
+postgresql-server>=12<13	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
