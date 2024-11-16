@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/11/16 10:14:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/11/16 10:13:47 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -423,8 +423,10 @@ include/postgresql/server/foreign/foreign.h
 include/postgresql/server/funcapi.h
 include/postgresql/server/getaddrinfo.h
 include/postgresql/server/getopt_long.h
+include/postgresql/server/jit/SectionMemoryManager.h
 include/postgresql/server/jit/jit.h
 include/postgresql/server/jit/llvmjit.h
+include/postgresql/server/jit/llvmjit_backport.h
 include/postgresql/server/jit/llvmjit_emit.h
 include/postgresql/server/lib/binaryheap.h
 include/postgresql/server/lib/bipartite_match.h
@@ -580,6 +582,7 @@ include/postgresql/server/port/win32_msvc/sys/time.h
 include/postgresql/server/port/win32_msvc/unistd.h
 include/postgresql/server/port/win32_msvc/utime.h
 include/postgresql/server/port/win32_port.h
+include/postgresql/server/port/win32ntdll.h
 include/postgresql/server/portability/instr_time.h
 include/postgresql/server/portability/mem.h
 include/postgresql/server/postgres.h

@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.65 2024/11/08 13:43:36 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.66 2024/11/16 10:13:44 adam Exp $
 #
 # User-settable variables:
 #
@@ -26,7 +26,7 @@ _SYS_VARS.pgsql=	PG_LIB_EXT PGSQL_TYPE PGPKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		14
-PGSQL_VERSIONS_ACCEPTED?=	17 16 15 14 13 12
+PGSQL_VERSIONS_ACCEPTED?=	17 16 15 14 13
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -56,9 +56,6 @@ _PGSQL_VERSION_14_INSTALLED=	yes
 .  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.13.dylib)
 _PGSQL_VERSION_13_INSTALLED=	yes
 .  endif
-.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.6.12.dylib)
-_PGSQL_VERSION_12_INSTALLED=	yes
-.  endif
 .else
 .  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.17)
 _PGSQL_VERSION_17_INSTALLED=	yes
@@ -74,9 +71,6 @@ _PGSQL_VERSION_14_INSTALLED=	yes
 .  endif
 .  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.13)
 _PGSQL_VERSION_13_INSTALLED=	yes
-.  endif
-.  if exists(${_CROSS_DESTDIR:U}${LOCALBASE}/lib/libecpg.so.6.12)
-_PGSQL_VERSION_12_INSTALLED=	yes
 .  endif
 .endif
 
@@ -130,9 +124,6 @@ PGPKGSRCDIR=	../../databases/postgresql14-client
 .elif ${_PGSQL_VERSION} == "13"
 PGSQL_TYPE=	postgresql13-client
 PGPKGSRCDIR=	../../databases/postgresql13-client
-.elif ${_PGSQL_VERSION} == "12"
-PGSQL_TYPE=	postgresql12-client
-PGPKGSRCDIR=	../../databases/postgresql12-client
 .else
 # force an error
 PGSQL_TYPE=		none
