@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/08/11 02:21:22 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/11/16 13:32:27 mef Exp $
 
-BLAKE2s (R/rstudioapi_0.15.0.tar.gz) = 2dd71f7127d264f726c977f91ae4e21fb10367c841d49ddfa8bc8e36a78e7826
-SHA512 (R/rstudioapi_0.15.0.tar.gz) = 304b9448915789d948d08cdef66f8c31d22fd3413de172dfa10cb1ccec53bdb3734b8fd797ef3389674c652106b46784fa47b3bb9e3ab61b1149965210dfcd21
-Size (R/rstudioapi_0.15.0.tar.gz) = 115689 bytes
+BLAKE2s (R/rstudioapi_0.17.1.tar.gz) = 79106696798f106c6ac4ca8488e4328548e8e7dca1fddba8a0ce66964cfd28f0
+SHA512 (R/rstudioapi_0.17.1.tar.gz) = 55e78cacbcc0e85ad69184a252ba0b7b5ea64b858b247ec9f959a3239b9a21ada93c78137954ff2d38a9af5a0a7b39b332c43258d1cf39bf582f1e4baf5c822f
+Size (R/rstudioapi_0.17.1.tar.gz) = 118455 bytes
