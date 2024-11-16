@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.51 2024/10/19 11:44:56 wiz Exp $
+# $NetBSD: Makefile.common,v 1.52 2024/11/16 21:33:56 adam Exp $
 # used by fonts/harfbuzz-icu/Makefile
 
-DISTNAME=	harfbuzz-10.0.1
+DISTNAME=	harfbuzz-10.1.0
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=harfbuzz/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -21,8 +21,9 @@ USE_CXX_FEATURES+=	c++11 is_trivially_copy_constructible
 .include "../../mk/bsd.prefs.mk"
 .include "../../graphics/librsvg/available.mk"
 
-USE_LANGUAGES=	c99 c++
-USE_TOOLS+=	pkg-config
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 # src/meson.build:954:29: ERROR: gnome.generate_gir got unknown keyword arguments "env"
 MESON_REQD+=	1.2.0
@@ -80,7 +81,6 @@ PLIST.coretext=		yes
 
 PYTHON_FOR_BUILD_ONLY=		tool
 REPLACE_TOOL_PYTHON+=		src/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
