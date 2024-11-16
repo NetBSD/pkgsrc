@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2023/12/16 09:13:49 mef Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/16 12:03:45 wiz Exp $
 
 DISTNAME=	Cache-Memcached-Fast-0.28
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Cache/}
 

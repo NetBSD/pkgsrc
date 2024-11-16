@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/07/06 09:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/16 12:06:25 wiz Exp $
 #
 
 DISTNAME=	egd-0.8
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 MASTER_SITES=	http://www.lothar.com/pub/
 

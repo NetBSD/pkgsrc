@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2023/07/06 09:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/16 12:03:32 wiz Exp $
 #
 
 DISTNAME=	Template-DBI-2.65
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

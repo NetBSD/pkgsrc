@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/11/14 22:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/16 12:05:46 wiz Exp $
 
 DISTNAME=		opensmtpd-extras-6.7.1_20240228
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=OpenSMTPD/}
 GITHUB_PROJECT=		OpenSMTPD-extras

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/07/06 09:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/16 12:07:05 wiz Exp $
 
 DISTNAME=	XML-Atom-SimpleFeed-0.905
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

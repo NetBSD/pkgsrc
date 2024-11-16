@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/07/06 09:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/16 12:03:34 wiz Exp $
 #
 
 DISTNAME=	percona-toolkit-3.0.12
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases
 MASTER_SITES=	http://www.percona.com/downloads/percona-toolkit/${PKGVERSION_NOREV}/source/tarball/
 

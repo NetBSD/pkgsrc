@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2024/01/14 20:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2024/11/16 12:06:35 wiz Exp $
 
 DISTNAME=	Net-SSLeay-1.94
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 

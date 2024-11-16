@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2023/07/06 09:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/16 12:03:24 wiz Exp $
 
 DISTNAME=	DBICx-Deploy-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROCKWAY/}
 

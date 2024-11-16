@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2023/07/06 09:40:57 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/16 12:06:03 wiz Exp $
 #
 
 DISTNAME=	beacon-1.3
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	mbone
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 

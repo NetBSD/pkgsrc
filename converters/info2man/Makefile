@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2023/07/06 09:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/16 12:03:15 wiz Exp $
 
 DISTNAME=	info2man_1.1.orig
 PKGNAME=	${DISTNAME:S,_1.1.orig,-1.1,}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	https://deb.debian.org/debian/pool/main/i/info2man/
 DIST_SUBDIR=	info2man

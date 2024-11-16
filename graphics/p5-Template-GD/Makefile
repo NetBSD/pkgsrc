@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2023/07/06 09:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/16 12:05:45 wiz Exp $
 
 DISTNAME=	Template-GD-2.66
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AB/ABW/}
 
