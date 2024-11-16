@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/11/14 22:19:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/16 10:13:52 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/17-server-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL database server programs
 
 # mips has no TAS implementation
@@ -19,14 +18,9 @@ INSTALL_DIRS+=	src/backend/utils/mb/conversion_procs
 INSTALL_DIRS+=	src/backend/snowball
 INSTALL_DIRS+=	src/timezone
 INSTALL_DIRS+=	src/pl
-BUILD_DIRS=	src/port
-BUILD_DIRS+=	src/include/catalog
+BUILD_DIRS=	src/include/catalog
+BUILD_DIRS+=	src/port
 BUILD_DIRS+=	${INSTALL_DIRS}
-
-# MAKE_JOBS=22 failed with:
-# In file included from ../../src/include/postgres.h:46, from chklocale.c:17:
-# ../../src/include/utils/elog.h:79:10: fatal error: utils/errcodes.h: No such file or directory
-MAKE_JOBS_SAFE=      no
 
 # PostgreSQL has loadable server-side language modules.
 #
