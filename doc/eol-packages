@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.12 2024/10/09 20:23:07 wiz Exp $
+# $NetBSD: eol-packages,v 1.13 2024/11/16 11:58:12 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1158,4 +1158,9 @@ Package: python38
 eol date: October 7, 2024
 URL: https://devguide.python.org/versions/#versions
 Description: eol October 2024 by vendor.  Update to newer version.
+
+Package: postgresql12
+eol date: November 14, 2024
+URL: https://www.postgresql.org/support/versioning/
+Description: Update to newer version.
 
