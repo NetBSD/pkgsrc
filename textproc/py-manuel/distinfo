@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/12 18:50:34 adam Exp $
+$NetBSD: distinfo,v 1.5 2024/11/16 18:04:29 adam Exp $
 
-BLAKE2s (manuel-1.12.4.tar.gz) = ffcef0751b131c3d55f562ca0d06127e35be58475ee9d1833fc1a9224b5b92ef
-SHA512 (manuel-1.12.4.tar.gz) = cd65307f2ca94e66d88bc0c7c75702d49f505b358ebb812fd20906036ba10f2d1d11d2d69404b88c5f10b584dea05a988b5dc8ba07210b9d20ebd8a11b701633
-Size (manuel-1.12.4.tar.gz) = 45369 bytes
+BLAKE2s (manuel-1.13.0.tar.gz) = 03d3ad7da5449cb2681f92e03ed2baa7471a1cf726016ffbe45d09141a7d805d
+SHA512 (manuel-1.13.0.tar.gz) = f3da52838d74954bfb9e63abca92ec51eabfe354c54a6cc2508faf4bd97904b14224980d4bb27dd72b418ef3ca0e3de35480f8650bf480840014709bf3863b12
+Size (manuel-1.13.0.tar.gz) = 46185 bytes
