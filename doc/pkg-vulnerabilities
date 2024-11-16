@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.275 2024/11/15 18:05:32 jakllsch Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.276 2024/11/16 08:50:48 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -22184,7 +22184,6 @@ ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20891
 ffmpeg4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-20892
 #redis-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-21468 Disputed, see https://github.com/redis/redis/issues/6633
 #openssh-[0-9]*	information-disclosure 	https://nvd.nist.gov/vuln/detail/CVE-2016-20012	Documented configuration setting
-halibut<4.4.7	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-31819
 tcpreplay<4.3.3	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-23273
 gpac-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-23269
 gpac-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2020-23266
