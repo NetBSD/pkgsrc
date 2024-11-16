@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2024/11/08 08:57:13 pin Exp $
+$NetBSD: distinfo,v 1.15 2024/11/16 20:05:50 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -45,9 +45,9 @@ Size (arrayvec-0.5.2.crate) = 27838 bytes
 BLAKE2s (autocfg-1.4.0.crate) = ce6aae5b8fe5dadf0c6a182c5940551ded4070c0c0143412d8c8356037ce1dc0
 SHA512 (autocfg-1.4.0.crate) = 3b5e7c30bc73e105e4bfcab584c24fc4016db41fac9c356c6649fd841051704bbe8848e09546eb50d7c1f18ea8ce1cb72fbc268a620d5c609b3472114b5be73c
 Size (autocfg-1.4.0.crate) = 17712 bytes
-BLAKE2s (bacon-3.2.0.tar.gz) = 23705328c10fc508db712538c3a47e2f83d4256fa3830f4c64bea7e452d51ddf
-SHA512 (bacon-3.2.0.tar.gz) = 7567c7d115399556b22d6566a03a76771df60d8f9b0b47a791ecff448a4248318190feabb86e6c519fe592ae602c35430fd80717122773f289f02ac836947608
-Size (bacon-3.2.0.tar.gz) = 704414 bytes
+BLAKE2s (bacon-3.3.0.tar.gz) = 74063a20c3663098f174a268afcf589d5e9b4040072c1dd68055cc4385a73755
+SHA512 (bacon-3.3.0.tar.gz) = 8b15aa26a13826520de4ae4b1e74330e5dc348cbf9d202e5959878ca33ca1516bd6f66205350f6cfaf50658e1ea16b5accd2cd979b9aba77fdd9c9df5f67e7f5
+Size (bacon-3.3.0.tar.gz) = 712832 bytes
 BLAKE2s (bitflags-1.3.2.crate) = e3a3b45a4403823875a03dbda329ca16068fa8f847cef81987c6b780101f2415
 SHA512 (bitflags-1.3.2.crate) = 3c698f757b5cc62f815f9a1cce365c3d2dd88e4db71f331dff8bba86c2865f755b81cb4c9bfc59bd86b7643b0943f9e09a7c4f8ad75eb2ab0e714803d0129f62
 Size (bitflags-1.3.2.crate) = 23021 bytes
@@ -291,6 +291,9 @@ Size (gix-validate-0.9.1.crate) = 11930 bytes
 BLAKE2s (gix-worktree-0.37.0.crate) = 83621ee73c00d8502cd28881d9ddd0f2a82c96768a5f2f131df473f09f8d0ae3
 SHA512 (gix-worktree-0.37.0.crate) = 8840d57cb532397d694e552b8ec20bf4108851cadf651bb50599bee58ddabffddb24d1785a574baeefdd9866f15b3a62ce40c6f27eceb3475f3755aaa97c503c
 Size (gix-worktree-0.37.0.crate) = 17549 bytes
+BLAKE2s (glob-0.3.1.crate) = cf1632af0a03d2505ae99d4e4ed0ee695c8383a0cddf1191f7f59e197e9fb17f
+SHA512 (glob-0.3.1.crate) = 29368160138bcb7ea5660f9f30c5711cfca8bc8ba836bbade3fbe8c424e7b4118daf27cffa677962e37e36f025fd2bb5a9c2aea865b0ff155cace455dfbb658b
+Size (glob-0.3.1.crate) = 18880 bytes
 BLAKE2s (hashbrown-0.14.5.crate) = df2dc611777412ee614bffffa4bfd1ffbdb023961c82ec606d14782febc01949
 SHA512 (hashbrown-0.14.5.crate) = 215ea860bd3de80e2dd2d4647c9dd31c0ac895ea7c08b87256dc11d36407e412ffefaebc6cdbec024057dd4f24b3762b4fe427be307e15d1e68ccfde89a99742
 Size (hashbrown-0.14.5.crate) = 141498 bytes
