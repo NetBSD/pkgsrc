@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2024/11/16 01:57:06 ktnb Exp $
+
+BLAKE2s (luanti-5.10.0.tar.gz) = 56c28a6e886146f02736598bcf78b073c6a2c614691ccfbf9b91c8cbcad2bc82
+SHA512 (luanti-5.10.0.tar.gz) = b28ad4dbae543d8b1094c1e49252a3a1851b23928061789cd960614318f42042a651d406b39d4e5cf7b86981f3e79cb62bb329302d5dfeef972999f4bad1458e
+Size (luanti-5.10.0.tar.gz) = 12257502 bytes
+SHA1 (patch-irr_src_CIrrDeviceLinux.cpp) = 57a8e6158ac61a320ec9e086569ff8277f727875
+SHA1 (patch-irr_src_os.cpp) = fe5cf12adf6b4574e97e8cfee46a07401b87ab90
+SHA1 (patch-src_util_string.cpp) = c736bb886ec087ac2fcaf36da4d78dbe0d45e616

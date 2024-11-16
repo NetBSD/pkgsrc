@@ -1,4 +1,4 @@
-$NetBSD: patch-irr_src_os.cpp,v 1.1 2024/08/12 15:16:03 ktnb Exp $
+$NetBSD: patch-irr_src_os.cpp,v 1.1 2024/11/16 01:57:06 ktnb Exp $
 
 Add NetBSD's endian functions
 
