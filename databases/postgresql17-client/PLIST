@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/08 13:43:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/11/16 10:13:52 adam Exp $
 bin/clusterdb
 bin/createdb
 bin/createuser
@@ -468,8 +468,10 @@ include/postgresql/server/foreign/fdwapi.h
 include/postgresql/server/foreign/foreign.h
 include/postgresql/server/funcapi.h
 include/postgresql/server/getopt_long.h
+include/postgresql/server/jit/SectionMemoryManager.h
 include/postgresql/server/jit/jit.h
 include/postgresql/server/jit/llvmjit.h
+include/postgresql/server/jit/llvmjit_backport.h
 include/postgresql/server/jit/llvmjit_emit.h
 include/postgresql/server/lib/binaryheap.h
 include/postgresql/server/lib/bipartite_match.h
@@ -1265,6 +1267,7 @@ ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_amcheck-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_archivecleanup-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_basebackup-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_checksums-17.mo
+${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_combinebackup-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_config-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_controldata-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_ctl-17.mo
@@ -1276,6 +1279,7 @@ ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_test_timing-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_upgrade-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_verifybackup-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_waldump-17.mo
+${PLIST.nls}share/locale/uk/LC_MESSAGES/pg_walsummary-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/pgscripts-17.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/psql-17.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/ecpg-17.mo
