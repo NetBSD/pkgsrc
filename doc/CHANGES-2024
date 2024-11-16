@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7016 2024/11/16 10:16:05 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7017 2024/11/16 10:25:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10584,3 +10584,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/postgresql15 to 15.9 [adam 2024-11-16]
 	Updated databases/postgresql16 to 16.5 [adam 2024-11-16]
 	Updated databases/postgresql17 to 17.1 [adam 2024-11-16]
+	Updated www/py-aiohttp to 3.11.2 [adam 2024-11-16]
+	Updated textproc/py-lxml-html-clean to 0.4.0 [adam 2024-11-16]
+	Updated net/py-rpyc to 6.0.1 [adam 2024-11-16]
+	Updated net/py-junos-eznc to 2.7.2 [adam 2024-11-16]
