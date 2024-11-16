@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2023/07/06 09:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/16 12:07:24 wiz Exp $
 
 DISTNAME=	llgal-0.13.19
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bgoglin/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2023/10/24 22:10:45 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/16 12:06:24 wiz Exp $
 
 DISTNAME=	CSP-0.34
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} cspguide.pdf
 EXTRACT_ONLY=	${DISTFILES:N*.pdf}

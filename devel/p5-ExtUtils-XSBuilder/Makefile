@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2023/07/06 09:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/11/16 12:04:12 wiz Exp $
 
 DISTNAME=	ExtUtils-XSBuilder-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 

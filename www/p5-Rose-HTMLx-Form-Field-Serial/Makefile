@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2023/07/06 09:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/16 12:07:59 wiz Exp $
 
 DISTNAME=	Rose-HTMLx-Form-Field-Serial-0.002
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 

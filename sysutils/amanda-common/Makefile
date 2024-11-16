@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2023/07/06 09:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2024/11/16 12:06:36 wiz Exp $
 
 PKGNAME=		amanda-common-${AMANDA_VERSION}
-PKGREVISION=		10
+PKGREVISION=		11
 
 COMMENT=		Common libraries and binaries for Amanda
 

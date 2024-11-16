@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/30 11:48:45 adam Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/16 12:03:35 wiz Exp $
 
+PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	git-perlscripts-${GIT_VERSION}

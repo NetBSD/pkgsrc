@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2024/08/08 23:57:54 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/16 12:06:24 wiz Exp $
 
 DISTNAME=	biber-2.20
 PKGNAME=	p5-biblatex-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=plk/}
 GITHUB_PROJECT=	biber

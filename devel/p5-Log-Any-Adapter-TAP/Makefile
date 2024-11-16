@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2023/07/06 09:39:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/16 12:04:30 wiz Exp $
 
 DISTNAME=	Log-Any-Adapter-TAP-0.003003
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NE/NERDVANA/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2023/07/06 09:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2024/11/16 12:03:42 wiz Exp $
 
 DISTNAME=	Bit-Vector-7.4
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bit/}
 

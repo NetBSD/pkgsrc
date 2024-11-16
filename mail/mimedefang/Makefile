@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2023/07/06 09:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/11/16 12:05:46 wiz Exp $
 
 DISTNAME=		mimedefang-3.4.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		https://mimedefang.org/releases/
 

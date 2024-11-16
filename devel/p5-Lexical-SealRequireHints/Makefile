@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/12/17 05:43:44 mef Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/16 12:04:29 wiz Exp $
 
 DISTNAME=	Lexical-SealRequireHints-0.012
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Z/ZE/ZEFRAM/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2023/07/06 09:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/16 12:03:21 wiz Exp $
 
 DISTNAME=	Class-DBI-v3.0.17
 PKGNAME=	p5-${DISTNAME:S:-v:-:}
-PKGREVISION=	18
+PKGREVISION=	19
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TM/TMTM/}
 

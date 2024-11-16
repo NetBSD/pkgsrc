@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/07/06 09:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/16 12:04:38 wiz Exp $
 
 DISTNAME=		Module-Runtime-Conflicts-0.003
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Module/}
 

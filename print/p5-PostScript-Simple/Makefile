@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2023/07/06 09:41:18 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/16 12:06:24 wiz Exp $
 
 DISTNAME=	PostScript-Simple-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PostScript/}
 

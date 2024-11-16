@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2023/07/06 09:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/16 12:03:24 wiz Exp $
 #
 
 DISTNAME=	libdbiwrapper-perl-${VERSION}
 PKGNAME=	p5-DBIWrapper-${VERSION}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbiwrapper/}
 

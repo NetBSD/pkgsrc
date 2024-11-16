@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2024/07/29 01:54:28 wen Exp $
+# $NetBSD: Makefile,v 1.59 2024/11/16 12:05:51 wiz Exp $
 
 DISTNAME=		Mail-DKIM-1.20240619
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		mail perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mail/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2023/09/01 17:28:28 osa Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/16 12:08:06 wiz Exp $
 
 PKGNAME=	unit-${LANG}-${UNIT_VERSION}
+PKGREVISION=	1
 COMMENT=	Perl module for NGINX Unit
 
 LANG=		perl

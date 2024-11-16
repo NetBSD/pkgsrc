@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2024/09/08 08:23:34 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2024/11/16 12:03:24 wiz Exp $
 
 DISTNAME=	DBI-1.645
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/H/HM/HMBRAND/}
 EXTRACT_SUFX=	.tgz

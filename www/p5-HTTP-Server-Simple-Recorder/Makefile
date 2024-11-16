@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2023/07/06 09:42:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/16 12:07:47 wiz Exp $
 
 DISTNAME=	HTTP-Server-Simple-Recorder-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 

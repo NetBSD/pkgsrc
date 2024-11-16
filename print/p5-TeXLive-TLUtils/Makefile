@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/08/15 05:39:20 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/16 12:06:24 wiz Exp $
 
 VERSION=	0.66420
 DISTNAME=	TLUtils
 PKGNAME=	p5-TeXLive-${DISTNAME}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://tug.ctan.org/systems/texlive/tlnet/tlpkg/TeXLive/
 EXTRACT_SUFX=	.pm

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2023/07/06 09:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/16 12:07:53 wiz Exp $
 #
 
 DISTNAME=	LWPx-ParanoidAgent-1.12
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWPx/}
 

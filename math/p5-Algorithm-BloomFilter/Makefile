@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/07/06 09:40:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/16 12:05:56 wiz Exp $
 
 DISTNAME=	Algorithm-BloomFilter-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SM/SMUELLER/}
 

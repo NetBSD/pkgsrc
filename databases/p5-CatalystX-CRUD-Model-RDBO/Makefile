@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2023/07/06 09:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/16 12:03:21 wiz Exp $
 
 DISTNAME=	CatalystX-CRUD-Model-RDBO-0.302
 # separate the last digit by '.', like  0.31 > 0.30.2
 #   (if 0.310 will be used for 0.31, no trick is necessary)
 PKGNAME=	p5-${DISTNAME:C/0.([0-9][0-9])([0-9])/0.\1.\2/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 

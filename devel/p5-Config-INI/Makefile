@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/12/16 09:53:06 mef Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/16 12:03:54 wiz Exp $
 
 DISTNAME=	Config-INI-0.029
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 

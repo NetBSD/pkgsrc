@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/07/06 09:42:26 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/16 12:07:31 wiz Exp $
 
 DISTNAME=	Catalyst-Authentication-Store-DBIx-Class-0.1506
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2023/07/06 09:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/16 12:05:24 wiz Exp $
 
 DISTNAME=	Test-TempDir-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 

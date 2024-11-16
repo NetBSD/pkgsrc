@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/07/06 09:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/16 12:08:05 wiz Exp $
 
 DISTNAME=	Web-Machine-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DR/DROLSKY/}
 
