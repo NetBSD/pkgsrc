@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25083 2024/11/15 22:02:12 wiz Exp $
+$NetBSD: TODO,v 1.25084 2024/11/16 11:54:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1053,7 +1053,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pdmenu-1.2.87
 	o pdsh-2.32
 	o pear-SOAP-0.14.0
-	o perl-5.40.0
 	o pgadmin4-6.11
 	o pgbuildfarm-12
 	o pgpdump-0.33
