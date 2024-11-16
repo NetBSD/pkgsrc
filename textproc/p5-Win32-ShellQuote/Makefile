@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/07/06 09:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/16 12:07:05 wiz Exp $
 
 DISTNAME=	Win32-ShellQuote-0.003001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Win32/}
 

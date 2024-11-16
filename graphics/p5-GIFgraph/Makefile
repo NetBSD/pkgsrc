@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2023/07/06 09:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/16 12:05:43 wiz Exp $
 #
 
 DISTNAME=	GIFgraph-1.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GIFgraph/}
 

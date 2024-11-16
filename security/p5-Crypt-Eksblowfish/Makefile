@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2023/07/06 09:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/16 12:06:28 wiz Exp $
 #
 
 DISTNAME=		Crypt-Eksblowfish-0.009
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 

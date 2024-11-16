@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2023/07/06 09:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/16 12:06:23 wiz Exp $
 
 DISTNAME=	LaTeXML-0.8.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc www
 MASTER_SITES=	https://dlmf.nist.gov/LaTeXML/releases/
 

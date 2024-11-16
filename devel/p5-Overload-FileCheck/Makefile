@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/02/10 01:14:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/16 12:04:49 wiz Exp $
 
 DISTNAME=	Overload-FileCheck-0.013
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AT/ATOOMIC/}
 

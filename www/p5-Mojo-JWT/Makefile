@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/07/06 09:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/16 12:07:53 wiz Exp $
 #
 # When updating this package, please upload the distfile
 # since they disappear immediately when new releases happen,
@@ -6,7 +6,7 @@
 
 DISTNAME=	Mojo-JWT-0.09
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mojolicious/JBERGER/}
 

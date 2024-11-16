@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2023/11/09 16:41:16 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/16 12:06:41 wiz Exp $
 
+PKGREVISION= 1
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/p5-UPS-Nut/}

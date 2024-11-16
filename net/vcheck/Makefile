@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2023/12/28 23:22:48 zafer Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/16 12:06:22 wiz Exp $
 #
 
 DISTNAME=		vcheck-1.2.1
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		net perl5
 MASTER_SITES=		#
 

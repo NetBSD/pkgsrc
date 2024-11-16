@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2023/07/06 09:39:40 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/16 12:04:44 wiz Exp $
 #
 
 DISTNAME=	MooseX-Method-Signatures-0.49
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 #MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}

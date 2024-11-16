@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/03/12 07:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/16 12:04:11 wiz Exp $
 
 DISTNAME=	ExtUtils-CChecker-0.12
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PE/PEVANS/}
 

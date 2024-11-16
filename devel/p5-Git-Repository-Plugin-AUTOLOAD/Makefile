@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2023/07/06 09:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/16 12:04:20 wiz Exp $
 
 DISTNAME=	Git-Repository-Plugin-AUTOLOAD-1.003
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
 
