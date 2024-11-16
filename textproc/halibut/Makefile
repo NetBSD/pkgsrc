@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2022/06/28 11:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/11/16 08:48:47 wiz Exp $
 
-DISTNAME=	halibut-1.2
-PKGREVISION=	2
+DISTNAME=	halibut-1.3
 CATEGORIES=	textproc
 MASTER_SITES=	https://www.chiark.greenend.org.uk/~sgtatham/halibut/halibut-${PKGVERSION_NOREV}/
 
@@ -10,22 +9,9 @@ HOMEPAGE=	https://www.chiark.greenend.org.uk/~sgtatham/halibut/
 COMMENT=	Documentation production system
 LICENSE=	mit
 
-MAKE_JOBS_SAFE=	no
+USE_TOOLS+=	perl
 
-USE_TOOLS+=	gmake perl
+INFO_FILES=	yes
 
-BUILD_DIRS+=	. doc
-
-MAKE_FLAGS+=	RELEASE=1
-MAKE_FLAGS+=	VERSION=${PKGVERSION}
-
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/halibut \
-		${DESTDIR}${PREFIX}/bin/halibut
-	${INSTALL_MAN} ${WRKSRC}/doc/halibut.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/halibut.1
-
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
