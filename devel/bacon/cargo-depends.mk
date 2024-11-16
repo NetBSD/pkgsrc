@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2024/11/08 08:57:13 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2024/11/16 20:05:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -96,6 +96,7 @@ CARGO_CRATE_DEPENDS+=	gix-url-0.28.0
 CARGO_CRATE_DEPENDS+=	gix-utils-0.1.13
 CARGO_CRATE_DEPENDS+=	gix-validate-0.9.1
 CARGO_CRATE_DEPENDS+=	gix-worktree-0.37.0
+CARGO_CRATE_DEPENDS+=	glob-0.3.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.0
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
