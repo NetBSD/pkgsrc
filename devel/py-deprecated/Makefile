@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/05/29 08:47:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/16 16:41:41 adam Exp $
 
-DISTNAME=	Deprecated-1.2.14
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+DISTNAME=	deprecated-1.2.15
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deprecated/}
 
@@ -10,15 +10,12 @@ HOMEPAGE=	https://github.com/tantale/deprecated
 COMMENT=	Python decorator to deprecate old python classes, functions or methods
 LICENSE=	mit
 
+WHEEL_NAME=	Deprecated-${PKGVERSION_NOREV}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.10:../../devel/py-wrapt
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
