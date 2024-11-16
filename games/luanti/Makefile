@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.43 2024/11/14 22:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.1 2024/11/16 01:57:06 ktnb Exp $
 
-DISTNAME=	minetest-5.9.1
-PKGREVISION=	3
+DISTNAME=	luanti-5.10.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=minetest/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
+GITHUB_PROJECT=	minetest
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.minetest.net/
-COMMENT=	Infinite-world block sandbox with survival and crafting
+MAINTAINER=	ktnb@NetBSD.org
+HOMEPAGE=	https://www.luanti.org/
+COMMENT=	Open source voxel game-creation platform
 LICENSE=	gnu-lgpl-v2.1 AND cc-by-sa-v3.0 AND apache-2.0
 
 WRKSRC=		${WRKDIR}/minetest-${PKGVERSION_NOREV}
 
-USE_CMAKE=	yes
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
 
@@ -42,6 +41,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_LUAJIT=FALSE
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"

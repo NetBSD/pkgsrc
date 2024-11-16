@@ -1,4 +1,4 @@
-$NetBSD: patch-src_util_string.cpp,v 1.9 2024/09/09 07:46:20 nia Exp $
+$NetBSD: patch-src_util_string.cpp,v 1.1 2024/11/16 01:57:06 ktnb Exp $
 
 Support non-POSIX iconv on NetBSD before 10 and SunOS.
 
