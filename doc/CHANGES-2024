@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7024 2024/11/16 16:46:22 cheusov Exp $
+$NetBSD: CHANGES-2024,v 1.7025 2024/11/16 17:33:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10600,3 +10600,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-coverage to 7.6.7 [adam 2024-11-16]
 	Updated devel/py-deprecated to 1.2.15 [adam 2024-11-16]
 	Updated textproc/dict-server to 1.13.2 [cheusov 2024-11-16]
+	Updated textproc/ugrep to 7.0.4 [adam 2024-11-16]
+	Updated net/rclone to 1.68.2 [adam 2024-11-16]
