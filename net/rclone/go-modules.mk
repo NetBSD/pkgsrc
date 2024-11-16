@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.11 2024/09/10 08:41:58 adam Exp $
+# $NetBSD: go-modules.mk,v 1.12 2024/11/16 17:00:12 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.zip
@@ -242,8 +242,8 @@ GO_MODULE_FILES+=	github.com/gofrs/flock/@v/v0.8.1.mod
 GO_MODULE_FILES+=	github.com/gofrs/flock/@v/v0.8.1.zip
 GO_MODULE_FILES+=	github.com/gogo/protobuf/@v/v1.3.2.mod
 GO_MODULE_FILES+=	github.com/gogo/protobuf/@v/v1.3.2.zip
-GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.0.mod
-GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.0.zip
+GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.1.mod
+GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v4/@v/v4.5.1.zip
 GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.1.mod
 GO_MODULE_FILES+=	github.com/golang-jwt/jwt/v5/@v/v5.2.1.zip
 GO_MODULE_FILES+=	github.com/golang/glog/@v/v0.0.0-20160126235308-23def4e6c14b.mod
@@ -455,8 +455,8 @@ GO_MODULE_FILES+=	github.com/quasilyte/go-ruleguard/dsl/@v/v0.3.22.mod
 GO_MODULE_FILES+=	github.com/quasilyte/go-ruleguard/dsl/@v/v0.3.22.zip
 GO_MODULE_FILES+=	github.com/rasky/go-xdr/@v/v0.0.0-20170124162913-1a41d1a06c93.mod
 GO_MODULE_FILES+=	github.com/rasky/go-xdr/@v/v0.0.0-20170124162913-1a41d1a06c93.zip
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3-0.20240807151802-e80146f8de87.mod
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3-0.20240807151802-e80146f8de87.zip
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3.mod
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3.zip
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/rfjakob/eme/@v/v1.1.2.mod
