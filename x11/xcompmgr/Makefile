@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/11/13 08:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/11/16 21:59:13 nia Exp $
 
 DISTNAME=	xcompmgr-1.1.10
 CATEGORIES=	x11
@@ -12,6 +12,9 @@ COMMENT=	Sample compositing manager for X.org >= 6.8.0
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 USE_FEATURES=	getopt_long
+
+# reallocarray
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE -D_OPENBSD_SOURCE
 
 ### XXX You may play around with these if you like; they're simply
 ###	the #defines from xcompmgr.c placed here for your convenience.
