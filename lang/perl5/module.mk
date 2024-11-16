@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.76 2023/06/06 12:41:45 riastradh Exp $
+# $NetBSD: module.mk,v 1.77 2024/11/16 11:55:57 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -45,31 +45,31 @@ PERL5_MODULE_MK=	# defined
 
 PERL5_MODULE_TYPE?=		MakeMaker
 
-.if (${PERL5_MODULE_TYPE} != "MakeMaker") && \
+.  if (${PERL5_MODULE_TYPE} != "MakeMaker") && \
     (${PERL5_MODULE_TYPE} != "Module::Build") && \
     (${PERL5_MODULE_TYPE} != "Module::Build::Bundled") && \
     (${PERL5_MODULE_TYPE} != "Module::Build::Tiny") && \
     (${PERL5_MODULE_TYPE} != "Module::Install") && \
     (${PERL5_MODULE_TYPE} != "Module::Install::Bundled")
 PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TYPE."
-.endif
+.  endif
 
 # Default test target for Perl modules
 TEST_TARGET?=		test
 
 .include "../../mk/compiler.mk"
 
-.if ${PERL5_MODULE_TYPE} == "Module::Build" || \
+.  if ${PERL5_MODULE_TYPE} == "Module::Build" || \
     ${PERL5_MODULE_TYPE} == "Module::Build::Bundled" || \
     ${PERL5_MODULE_TYPE} == "Module::Build::Tiny"
 PERL5_MODTYPE=		modbuild
 PERL5_MODBUILD_DESTDIR_OPTION= --destdir ${DESTDIR:Q}
-.elif ${PERL5_MODULE_TYPE} == "Module::Install" || \
+.  elif ${PERL5_MODULE_TYPE} == "Module::Install" || \
       ${PERL5_MODULE_TYPE} == "Module::Install::Bundled"
 PERL5_MODTYPE=		modinst
-.elif ${PERL5_MODULE_TYPE} == "MakeMaker"
+.  elif ${PERL5_MODULE_TYPE} == "MakeMaker"
 PERL5_MODTYPE=		makemaker
-.endif
+.  endif
 
 
 ###########################################################################
@@ -81,20 +81,20 @@ PERL5_MODTYPE=		makemaker
 BUILDLINK_DEPMETHOD.perl+=	full
 .include "../../lang/perl5/buildlink3.mk"
 
-.if ${PKGPATH} != devel/p5-Module-Build && \
+.  if ${PKGPATH} != devel/p5-Module-Build && \
     (${PERL5_MODULE_TYPE} == "Module::Build")
 TOOL_DEPENDS+=		p5-Module-Build>=0.42050:../../devel/p5-Module-Build
-.endif
+.  endif
 
-.if ${PKGPATH} != devel/p5-Module-Build-Tiny && \
+.  if ${PKGPATH} != devel/p5-Module-Build-Tiny && \
     (${PERL5_MODULE_TYPE} == "Module::Build::Tiny")
 TOOL_DEPENDS+=		p5-Module-Build-Tiny>=0.23:../../devel/p5-Module-Build-Tiny
-.endif
+.  endif
 
-.if ${PKGPATH} != devel/p5-Module-Install && \
+.  if ${PKGPATH} != devel/p5-Module-Install && \
     (${PERL5_MODULE_TYPE} == "Module::Install")
 TOOL_DEPENDS+=		p5-Module-Install>=0.91:../../devel/p5-Module-Install
-.endif
+.  endif
 
 
 ###########################################################################
@@ -143,7 +143,7 @@ do-modbuild-configure:
 
 .PHONY: do-modinst-configure
 do-modinst-configure:
-.if ${PERL5_MODULE_TYPE} == "Module::Install"
+.  if ${PERL5_MODULE_TYPE} == "Module::Install"
 	${RUN}								\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		cd ${WRKSRC};						\
@@ -156,7 +156,7 @@ do-modinst-configure:
 				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
-.else
+.  else
 	${RUN}								\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		cd ${WRKSRC};						\
@@ -166,14 +166,14 @@ do-modinst-configure:
 				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
-.endif
+.  endif
 
 .PHONY: perl5-configure
 perl5-configure: do-${PERL5_MODTYPE}-configure
 
-.if !empty(PERL5_CONFIGURE:M[yY][eE][sS])
+.  if !empty(PERL5_CONFIGURE:M[yY][eE][sS])
 do-configure: perl5-configure
-.endif
+.  endif
 
 .PHONY: do-modbuild-build
 do-modbuild-build:
@@ -187,13 +187,13 @@ do-modbuild-test:
 do-modbuild-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build install ${PERL5_MODBUILD_DESTDIR_OPTION} ${BUILD_PARAMS}
 
-.if target(do-${PERL5_MODTYPE}-build) && !defined(NO_BUILD)
+.  if target(do-${PERL5_MODTYPE}-build) && !defined(NO_BUILD)
 do-build: do-${PERL5_MODTYPE}-build
 do-test: do-${PERL5_MODTYPE}-test
-.endif
-.if target(do-${PERL5_MODTYPE}-install)
+.  endif
+.  if target(do-${PERL5_MODTYPE}-install)
 do-install: do-${PERL5_MODTYPE}-install
-.endif
+.  endif
 
 
 ###########################################################################
@@ -206,19 +206,19 @@ do-install: do-${PERL5_MODTYPE}-install
 # respectively.
 #
 PERL5_MAKE_FLAGS.makemaker+=	OPTIMIZE=${CFLAGS:Q}" "${CPPFLAGS:Q}
-.if ${OBJECT_FMT} == "a.out"
+.  if ${OBJECT_FMT} == "a.out"
 PERL5_MAKE_FLAGS.makemaker+=	OTHERLDFLAGS=${LDFLAGS:S/-Wl,//g:Q}
-.else
+.  else
 PERL5_MAKE_FLAGS.makemaker+=	OTHERLDFLAGS=${LDFLAGS:Q}
-.endif
+.  endif
 
 # Repoint all of the vendor-specific variables to be under the perl5
 # module's ${PREFIX}.
 #
 .include "../../lang/perl5/vars.mk"
-.for _var_ in ${_PERL5_VARS}
+.  for _var_ in ${_PERL5_VARS}
 PERL5_MAKE_FLAGS.makemaker+=	${_var_}=${PERL5_${_var_}:Q}
-.endfor
+.  endfor
 #
 # The PREFIX in the generated Makefile will point to ${PERL5_PREFIX},
 # so override its value to the module's ${PREFIX}.
@@ -229,10 +229,10 @@ PERL5_MAKE_FLAGS.makemaker+=	PREFIX=${PREFIX:Q} VENDORARCHEXP=${DESTDIR}${PERL5_
 PERL5_MAKE_FLAGS+=	${PERL5_MAKE_FLAGS.${PERL5_MODTYPE}}
 MAKE_FLAGS+=		${PERL5_MAKE_FLAGS}
 
-.if defined(PERL5_LDFLAGS) && !empty(PERL5_LDFLAGS)
+.  if !empty(PERL5_LDFLAGS)
 #FIX_RPATH+=	PERL5_LDFLAGS
 LDFLAGS+=	${PERL5_LDFLAGS}
-.endif
+.  endif
 
 .include "../../lang/perl5/packlist.mk"
 
