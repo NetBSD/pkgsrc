@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2023/07/06 09:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2024/11/16 11:54:24 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -53,10 +53,13 @@ LDFLAGS.QNX+=		-lm
 
 CONFIGURE_ARGS.SunOS+=	-Aundef:csh
 
-# As of 5.38.0
-# Failed 2 tests out of 2610, 99.92% okay.
-#        porting/customized.t
-#        porting/regen.t
+# As of 5.40.0
+# with
+#ALLOW_NETWORK_ACCESS=yes
+# Failed 2 tests out of 2733, 99.93% okay.
+#         porting/customized.t
+#         porting/regen.t
+# https://github.com/Perl/perl5/issues/22751
 TEST_TARGET=		test
 
 # Policy.sh generation
@@ -176,7 +179,7 @@ SUBST_VARS.policysh+=	SYSLIBPATH
 .include "../../mk/dlopen.buildlink3.mk"
 .include "options.mk"
 
-.if ${MACHINE_PLATFORM} == "MirBSD"
+.if ${OPSYS} == "MirBSD"
 SUBST_CLASSES+=			mirbsd-paths
 SUBST_STAGE.mirbsd-paths=	pre-configure
 SUBST_FILES.mirbsd-paths=	hints/mirbsd.sh
@@ -185,7 +188,6 @@ SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 .endif
 
 # Replace our perl as the interpreter
-REPLACE_PERL+=		cpan/Config-Perl-V/V.pm
 REPLACE_PERL+=		cpan/Getopt-Long/lib/Getopt/Long.pm
 REPLACE_PERL+=		cpan/version/lib/version.pm
 REPLACE_PERL+=		dist/ExtUtils-ParseXS/lib/ExtUtils/xsubpp

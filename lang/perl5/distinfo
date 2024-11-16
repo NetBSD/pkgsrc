@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.182 2023/12/05 19:36:26 wiz Exp $
+$NetBSD: distinfo,v 1.183 2024/11/16 11:54:24 wiz Exp $
 
-BLAKE2s (perl-5.38.2.tar.xz) = cdd8729ebe26a804f86236514eefa4520141f82a3167dfb246713b6094b51185
-SHA512 (perl-5.38.2.tar.xz) = 0ca51e447c7a18639627c281a1c7ae6662c773745ea3c86bede46336d5514ecc97ded2c61166e1ac15635581489dc596368907aa3a775b34db225b76d7402d10
-Size (perl-5.38.2.tar.xz) = 13679524 bytes
+BLAKE2s (perl-5.40.0.tar.xz) = 6d1a2dc936370f834497bd6ac1b117c3038925c513a81568e1ba1b6f448ad2bc
+SHA512 (perl-5.40.0.tar.xz) = a2fb1a24c6367b4043f4e929b2d74fc3bad1415e53b791ed1f219f1701064ae21b2bd3164ba95fcf24eaf458bd54433024ccae43725c0bb82a1ec6a98dc7052d
+Size (perl-5.40.0.tar.xz) = 13804184 bytes
 SHA1 (patch-Configure) = f3bd324a90254405b3ce8e29846b4ddc9ebf7d73
 SHA1 (patch-Makefile.SH) = 56203aea57c429a94760f039a978463b8859b0a9
 SHA1 (patch-caretx.c) = e9698f513b6fb5237b627d6a1a56153720654039
@@ -11,6 +11,6 @@ SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 6171a21a24e3bea3
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
 SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
-SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
+SHA1 (patch-hints_netbsd.sh) = cb498170c18f1f429eed9be245cd1df24c7ad628
 SHA1 (patch-hints_solaris__2.sh) = 364a28ca57dbabe1f902b601e336532996db6a0e
 SHA1 (patch-installperl) = b129d64cc17b898b44fe6282b8b1df36e342d0ef
