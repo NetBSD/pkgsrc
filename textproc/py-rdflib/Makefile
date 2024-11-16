@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 06:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/16 20:50:14 adam Exp $
 
-DISTNAME=	rdflib-7.0.0
+DISTNAME=	rdflib-7.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
@@ -11,7 +11,6 @@ COMMENT=	Python library for working with RDF
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.4.0:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-isodate>=0.6.0:../../time/py-isodate
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
 TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 TEST_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
@@ -19,7 +18,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+.include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 311
+DEPENDS+=	${PYPKGPREFIX}-isodate>=0.7.2:../../time/py-isodate
+.endif
 
 REPLACE_PYTHON+=	rdflib/extras/describer.py
 REPLACE_PYTHON+=	rdflib/extras/infixowl.py
