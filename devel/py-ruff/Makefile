@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/11/17 09:55:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/17 12:49:52 adam Exp $
 
 DISTNAME=	ruff-0.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,7 @@ SITES.salsa-${SALSA_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=salsa-rs/}salsa/archiv
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/ruff/__main__.py.orig
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} ruff ruff-${PYVERSSUFFIX} || ${TRUE}
 
