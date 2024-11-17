@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/01 00:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/17 09:44:37 wiz Exp $
 
-DISTNAME=	posting-2.0.1
+DISTNAME=	posting-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/posting/}
@@ -35,8 +35,8 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	310
 
-# as of 2.0.1
-# 8 failed, 64 passed, 1 warning
+# as of 2.1.1
+# 7 failed, 84 passed, 1 warning
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} posting posting-${PYVERSSUFFIX}
