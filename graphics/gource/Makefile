@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/10/04 04:12:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2024/11/17 09:20:02 nia Exp $
 
 DISTNAME=	gource-0.55
 CATEGORIES=	graphics
@@ -19,7 +19,7 @@ CONFIGURE_ARGS=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/pcre2/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
