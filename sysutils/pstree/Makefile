@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.30 2022/09/20 17:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/17 10:14:53 adam Exp $
 
-DISTNAME=	pstree-2.39
+DISTNAME=	pstree-2.40
 CATEGORIES=	sysutils
-#MASTER_SITES=	ftp://ftp.thp.uni-duisburg.de/pub/source/
-#		http://fresh.t-systems-sfr.com/unix/src/misc/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=FredHucht/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/FredHucht/pstree
 COMMENT=	Display processes in a tree
-#HOMEPAGE=	http://www.thp.uni-duisburg.de/pstree/
-LICENSE=	gnu-gpl-v1
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}
-
-INSTALLATION_DIRS=	bin share/doc/proctree
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
-	cd ${WRKSRC}; ${CC} ${CFLAGS} ${LDFLAGS} -o pstree pstree.c
+	cd ${WRKSRC} && ${CC} ${CFLAGS} ${LDFLAGS} -o pstree pstree.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pstree ${DESTDIR}${PREFIX}/bin/proctree
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/proctree
+	${INSTALL_MAN} ${WRKSRC}/pstree.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/proctree.1
 
 .include "../../mk/bsd.pkg.mk"
