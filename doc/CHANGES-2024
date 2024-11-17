@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7035 2024/11/17 03:44:58 dholland Exp $
+$NetBSD: CHANGES-2024,v 1.7036 2024/11/17 07:21:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10615,3 +10615,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/harfbuzz to 10.1.0 [adam 2024-11-16]
 	Updated fonts/harfbuzz-icu to 10.1.0 [adam 2024-11-16]
 	Updated devel/at-spi2-core to 2.54.0nb4 [dholland 2024-11-17]
+	Updated x11/libXt to 1.3.1 [wiz 2024-11-17]
