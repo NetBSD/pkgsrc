@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/11/14 22:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/11/17 00:16:16 dholland Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
 PKGREVISION=	3
@@ -28,11 +28,6 @@ SUBST_FILES.eg+=	bus/meson.build
 SUBST_STAGE.eg=		pre-configure
 SUBST_MESSAGE.eg=	Fixing path to examples directory.
 
-CONF_FILES=	${EGDIR}/at-spi2/accessibility.conf \
-		${PKG_SYSCONFDIR}/at-spi2/accessibility.conf
-CONF_FILES+=	${EGDIR}/xdg/autostart/at-spi-dbus-bus.desktop \
-		${PKG_SYSCONFDIR}/xdg/autostart/at-spi-dbus-bus.desktop
-MAKE_DIRS+=	${PKG_SYSCONFDIR}/at-spi2
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -40,15 +35,11 @@ PYTHON_FOR_BUILD_ONLY=	tool
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/xdg/autostart
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/xdg/autostart/at-spi-dbus-bus.desktop \
-	      ${DESTDIR}${EGDIR}/xdg/autostart/at-spi-dbus-bus.desktop
+.include "options.mk"
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.gobject-introspection=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
