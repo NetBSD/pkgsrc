@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/08/10 11:12:16 nia Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/11/17 09:48:20 nia Exp $
 ${PLIST.client}bin/etl.${ARCH_STRING}
 bin/etlded.${ARCH_STRING}
 man/man6/etl.6
@@ -14,7 +14,7 @@ share/etlegacy/etmain/mapvotecycle.cfg
 share/etlegacy/etmain/mapvoteplayerscount.cfg
 share/etlegacy/etmain/objectivecycle.cfg
 share/etlegacy/legacy/description.txt
-share/etlegacy/legacy/legacy_2.82-dirty.pk3
+share/etlegacy/legacy/legacy_2.83-dirty.pk3
 share/icons/hicolor/scalable/apps/etl.svg
 share/licenses/etlegacy/COPYING.txt
 share/metainfo/com.etlegacy.ETLegacy.metainfo.xml
