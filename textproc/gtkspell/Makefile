@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2024/10/20 14:04:39 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2024/11/17 07:16:45 wiz Exp $
 
 DISTNAME=	gtkspell-2.0.16
-PKGREVISION=	42
+PKGREVISION=	43
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://gtkspell.sourceforge.net/download/
 

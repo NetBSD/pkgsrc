@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/10/20 14:04:53 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/17 07:16:59 wiz Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-desktop-${VERSION:R}.2

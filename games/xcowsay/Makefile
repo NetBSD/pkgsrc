@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2024/10/20 14:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/17 07:15:58 wiz Exp $
 
 DISTNAME=	xcowsay-1.5.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	https://www.nickg.me.uk/files/
 

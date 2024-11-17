@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/10/20 14:03:24 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/17 07:15:33 wiz Exp $
 
-PKGREVISION= 6
+PKGREVISION= 7
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	libmatemixer-${VERSION:R}.1

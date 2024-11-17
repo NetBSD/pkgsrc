@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2024/11/14 22:18:39 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2024/11/17 07:15:30 wiz Exp $
 #
 
 DISTNAME=	bmp-0.9.7.1
-PKGREVISION=	71
+PKGREVISION=	72
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
 

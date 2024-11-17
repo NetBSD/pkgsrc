@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2024/10/20 14:04:45 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/11/17 07:16:51 wiz Exp $
 
 DISTNAME=	libDesktop-0.4.1
 PKGNAME=	deforaos-libdesktop-0.4.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/libDesktop/
 

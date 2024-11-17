@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2024/10/20 14:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2024/11/17 07:15:58 wiz Exp $
 
 DISTNAME=	rftg-0.9.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bnordli/}
 EXTRACT_SUFX=	.zip

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2024/10/20 14:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/11/17 07:16:10 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-icon-theme-4.4.3
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	graphics
 COMMENT=	Xfce icon themes
 

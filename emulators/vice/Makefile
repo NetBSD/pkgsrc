@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.189 2024/11/14 22:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.190 2024/11/17 07:15:53 wiz Exp $
 
 DISTNAME=	vice-3.8
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 

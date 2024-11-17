@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/10/20 14:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2024/11/17 07:15:40 wiz Exp $
 
 DISTNAME=	gbase-0.5
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	converters math
 MASTER_SITES=	http://www.fluxcode.net/
 
