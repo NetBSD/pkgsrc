@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2024/11/17 09:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/17 19:51:50 gutteridge Exp $
 
 DISTNAME=	contourpy-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,6 +25,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
+BUILDLINK_API_DEPENDS.py-pybind11+=	${PYPKGPREFIX}-pybind11>=2.13.2
 .include "../../devel/py-pybind11/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
