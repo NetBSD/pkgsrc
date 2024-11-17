@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25084 2024/11/16 11:54:38 wiz Exp $
+$NetBSD: TODO,v 1.25085 2024/11/17 08:48:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -465,6 +465,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.30.0
 	o audacity-3.5
 	o authelia-4.28.0
 	o autoconvert-0.3.16
@@ -734,6 +735,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.68.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -854,6 +856,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.19.3
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -925,6 +928,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mftrace-1.2.20
 	o mgetty+sendfax-1.2.1
 	o milter-regex-2.0
+	o mimir-2.14.2
 	o mingw-binutils-2.36.1
 	o mini_sendmail-1.3.9
 	o miniircd-2.1
@@ -992,6 +996,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o opencsg-1.4.2
 	o opencv-4.10
 	o opendnssec-2.1.8
+	o openexr-3.3.2
 	o opengrok-1.7.1
 	o openh323-1.19.1
 	o openmortal-0.7.1
@@ -1108,6 +1113,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
+	o prometheus-3.0.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1118,15 +1124,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-acme-3.0.1
+	o py-bumpver-2024.1130
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
+	o py-contourpy-1.3.1
 	o py-cramjam-2.9.0
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
+	o py-flask-3.1.0
+	o py-fonttools-4.55.0
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-core-2.23.0
+	o py-google-api-python-client-2.153.0
+	o py-googleapis-common-protos-1.66.0
+	o py-grpcio-1.68.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
 	o py-input-pad-1.4.2
@@ -1138,15 +1153,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-posting-2.1.1
+	o py-pydantic-core-2.27.0
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.7.4
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-0.86.1
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-whatthepatch-1.0.7
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1303,6 +1323,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-c-sharp-0.23.1
+	o tree-sitter-css-0.23.1
+	o tree-sitter-php-0.23.10
+	o tree-sitter-ruby-0.23.1
+	o tree-sitter-tsx-0.23.2
+	o tree-sitter-typescript-0.23.2
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
