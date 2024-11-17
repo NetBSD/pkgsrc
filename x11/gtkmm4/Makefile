@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/04/15 09:29:24 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/17 10:16:01 adam Exp $
 
-DISTNAME=	gtkmm-4.14.0
+DISTNAME=	gtkmm-4.16.0
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm4/1}
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
@@ -13,8 +13,8 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++11
 USE_TOOLS+=		perl pkg-config
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm.pc.in
 
