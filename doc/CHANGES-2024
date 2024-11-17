@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7039 2024/11/17 09:19:40 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7040 2024/11/17 09:21:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10619,3 +10619,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/p5-Text-CSV_XS to 1.57 [wiz 2024-11-17]
 	Updated graphics/libheif to 1.19.3 [wiz 2024-11-17]
 	Updated databases/mimir to 2.14.2 [wiz 2024-11-17]
+	Updated graphics/openexr to 3.3.2 [wiz 2024-11-17]
