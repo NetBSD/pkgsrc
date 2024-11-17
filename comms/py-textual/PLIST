@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/10/30 14:52:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/17 10:02:25 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -204,6 +204,9 @@ ${PYSITELIB}/textual/constants.pyo
 ${PYSITELIB}/textual/containers.py
 ${PYSITELIB}/textual/containers.pyc
 ${PYSITELIB}/textual/containers.pyo
+${PYSITELIB}/textual/content.py
+${PYSITELIB}/textual/content.pyc
+${PYSITELIB}/textual/content.pyo
 ${PYSITELIB}/textual/coordinate.py
 ${PYSITELIB}/textual/coordinate.pyc
 ${PYSITELIB}/textual/coordinate.pyo
@@ -499,6 +502,9 @@ ${PYSITELIB}/textual/suggestions.pyo
 ${PYSITELIB}/textual/system_commands.py
 ${PYSITELIB}/textual/system_commands.pyc
 ${PYSITELIB}/textual/system_commands.pyo
+${PYSITELIB}/textual/theme.py
+${PYSITELIB}/textual/theme.pyc
+${PYSITELIB}/textual/theme.pyo
 ${PYSITELIB}/textual/timer.py
 ${PYSITELIB}/textual/timer.pyc
 ${PYSITELIB}/textual/timer.pyo
@@ -523,6 +529,9 @@ ${PYSITELIB}/textual/types.pyo
 ${PYSITELIB}/textual/validation.py
 ${PYSITELIB}/textual/validation.pyc
 ${PYSITELIB}/textual/validation.pyo
+${PYSITELIB}/textual/visual.py
+${PYSITELIB}/textual/visual.pyc
+${PYSITELIB}/textual/visual.pyo
 ${PYSITELIB}/textual/walk.py
 ${PYSITELIB}/textual/walk.pyc
 ${PYSITELIB}/textual/walk.pyo
