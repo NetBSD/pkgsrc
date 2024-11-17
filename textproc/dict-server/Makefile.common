@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2024/11/15 18:15:06 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.11 2024/11/17 13:16:34 cheusov Exp $
 # used by textproc/colorit/Makefile
 # used by textproc/dict-server/Makefile
 # used by textproc/dict-client/Makefile
-DISTNAME=	dictd-1.13.2
+DISTNAME=	dictd-1.13.3
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dict/}
 
