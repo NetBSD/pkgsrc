@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/10/20 14:03:22 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/17 07:15:32 wiz Exp $
 
 DISTNAME=	gmpc-alarm-11.8.16
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	audio
 MASTER_SITES=	https://download.sarine.nl/Programs/gmpc/11.8/
 

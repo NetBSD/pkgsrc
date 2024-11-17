@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2024/11/14 22:21:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2024/11/17 07:16:37 wiz Exp $
 
 BUILDLINK_TREE+=	kf6-kwallet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kf6-kwallet
 KF6_KWALLET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kf6-kwallet+=	kf6-kwallet>=6.2.0
-BUILDLINK_ABI_DEPENDS.kf6-kwallet?=	kf6-kwallet>=6.2.1nb6
+BUILDLINK_ABI_DEPENDS.kf6-kwallet?=	kf6-kwallet>=6.2.1nb7
 BUILDLINK_PKGSRCDIR.kf6-kwallet?=	../../security/kf6-kwallet
 
 .include "../../devel/kf6-kcolorscheme/buildlink3.mk"

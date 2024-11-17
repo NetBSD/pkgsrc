@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.134 2024/11/14 22:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2024/11/17 07:16:02 wiz Exp $
 
 DISTNAME=	dia-0.97.3
 PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
-PKGREVISION=	41
+PKGREVISION=	42
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.97/}
 EXTRACT_SUFX=	.tar.xz

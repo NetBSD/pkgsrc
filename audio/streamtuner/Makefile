@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2024/11/14 22:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2024/11/17 07:15:35 wiz Exp $
 
 DISTNAME=	streamtuner-0.99.99
-PKGREVISION=	89
+PKGREVISION=	90
 CATEGORIES=	audio www
 MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 

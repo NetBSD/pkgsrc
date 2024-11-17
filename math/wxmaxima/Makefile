@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2024/11/14 22:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/11/17 07:16:23 wiz Exp $
 
 DISTNAME=	wxmaxima-23.12.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wxMaxima-developers/}
 GITHUB_TAG=	Version-${PKGVERSION_NOREV}

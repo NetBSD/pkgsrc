@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/10/20 14:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/17 07:16:05 wiz Exp $
 
 DISTNAME=	gnome-screenshot-3.38.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics gnome
 EXTRACT_SUFX=	.tar.xz
 

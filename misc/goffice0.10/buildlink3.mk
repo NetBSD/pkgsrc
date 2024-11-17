@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2024/11/14 22:20:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2024/11/17 07:16:25 wiz Exp $
 
 BUILDLINK_TREE+=	goffice0.10
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	goffice0.10
 GOFFICE0.10_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.goffice0.10+=	goffice0.10>=0.10.0
-BUILDLINK_ABI_DEPENDS.goffice0.10+=	goffice0.10>=0.10.57nb4
+BUILDLINK_ABI_DEPENDS.goffice0.10+=	goffice0.10>=0.10.57nb5
 BUILDLINK_PKGSRCDIR.goffice0.10?=	../../misc/goffice0.10
 
 .include "../../devel/glib2/buildlink3.mk"

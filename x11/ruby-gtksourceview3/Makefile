@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2024/11/14 22:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/17 07:17:02 wiz Exp $
 #
 
 DISTNAME=		gtksourceview3-${VERSION}
 COMMENT=		Ruby binding of gtksourceview3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

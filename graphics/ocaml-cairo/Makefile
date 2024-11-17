@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2024/11/08 23:38:05 gdt Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/17 07:16:07 wiz Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-0.6.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 GITHUB_PROJECT=	ocaml-cairo
