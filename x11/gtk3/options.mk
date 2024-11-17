@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.28 2024/10/30 14:05:35 wiz Exp $
+# $NetBSD: options.mk,v 1.29 2024/11/17 03:54:28 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
-PKG_SUPPORTED_OPTIONS+=	cups
+PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups
 PKG_SUPPORTED_OPTIONS+=	wayland x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
@@ -13,7 +13,7 @@ PKG_SUGGESTED_OPTIONS+=	x11
 .if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
-PKG_SUGGESTED_OPTIONS+=	cups
+PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge cups
 
 .include "../../mk/bsd.options.mk"
 
@@ -50,6 +50,12 @@ PLIST_VARS+=	x11
 MESON_ARGS+=	-Dx11_backend=true
 MESON_ARGS+=	-Dxinerama=yes
 PLIST.x11=	yes
+
+.  if !empty(PKG_OPTIONS:Mgtk3-atk-bridge)
+MESON_ARGS+=	-Datk_bridge=true
+.  else
+MESON_ARGS+=	-Datk_bridge=false
+.  endif
 
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
