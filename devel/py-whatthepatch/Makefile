@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/17 09:51:40 wiz Exp $
 
-DISTNAME=	whatthepatch-1.0.6
+DISTNAME=	whatthepatch-1.0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/whatthepatch/}
@@ -14,7 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.0.0:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# as of 1.0.7
+# 1 failed, 53 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
