@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.3 2024/11/04 17:21:30 wiz Exp $
+# $NetBSD: go-modules.mk,v 1.4 2024/11/17 09:19:30 wiz Exp $
 
 GO_MODULE_FILES+=	cel.dev/expr/@v/v0.15.0.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.1.mod
@@ -1199,8 +1199,8 @@ GO_MODULE_FILES+=	github.com/grafana/gomemcache/@v/v0.0.0-20240229205252-cd6a66d
 GO_MODULE_FILES+=	github.com/grafana/gomemcache/@v/v0.0.0-20240229205252-cd6a66d6fb56.zip
 GO_MODULE_FILES+=	github.com/grafana/memberlist/@v/v0.3.1-0.20220714140823-09ffed8adbbe.mod
 GO_MODULE_FILES+=	github.com/grafana/memberlist/@v/v0.3.1-0.20220714140823-09ffed8adbbe.zip
-GO_MODULE_FILES+=	github.com/grafana/mimir-prometheus/@v/v0.0.0-20241009132338-f7ed04967d38.mod
-GO_MODULE_FILES+=	github.com/grafana/mimir-prometheus/@v/v0.0.0-20241009132338-f7ed04967d38.zip
+GO_MODULE_FILES+=	github.com/grafana/mimir-prometheus/@v/v0.0.0-20241113080331-8bca08eae66d.mod
+GO_MODULE_FILES+=	github.com/grafana/mimir-prometheus/@v/v0.0.0-20241113080331-8bca08eae66d.zip
 GO_MODULE_FILES+=	github.com/grafana/opentracing-contrib-go-stdlib/@v/v0.0.0-20230509071955-f410e79da956.mod
 GO_MODULE_FILES+=	github.com/grafana/opentracing-contrib-go-stdlib/@v/v0.0.0-20230509071955-f410e79da956.zip
 GO_MODULE_FILES+=	github.com/grafana/prometheus-alertmanager/@v/v0.25.1-0.20240906122908-60521fae6a42.mod
