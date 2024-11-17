@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/11/04 18:14:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/17 10:02:25 wiz Exp $
 
-DISTNAME=	textual-0.85.2
+DISTNAME=	textual-0.86.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -25,8 +25,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.2:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-# as of 0.85.2
-# 32 failed, 2993 passed, 1 skipped, 4 xfailed, 81 warnings
+# as of 0.86.1
+# 32 failed, 3014 passed, 1 skipped, 4 xfailed, 81 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
