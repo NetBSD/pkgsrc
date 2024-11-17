@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/04 16:09:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/17 09:25:18 wiz Exp $
 bin/bumpver-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -40,6 +40,9 @@ ${PYSITELIB}/bumpver/regexfmt.pyo
 ${PYSITELIB}/bumpver/rewrite.py
 ${PYSITELIB}/bumpver/rewrite.pyc
 ${PYSITELIB}/bumpver/rewrite.pyo
+${PYSITELIB}/bumpver/setuptools_v65_version.py
+${PYSITELIB}/bumpver/setuptools_v65_version.pyc
+${PYSITELIB}/bumpver/setuptools_v65_version.pyo
 ${PYSITELIB}/bumpver/utils.py
 ${PYSITELIB}/bumpver/utils.pyc
 ${PYSITELIB}/bumpver/utils.pyo
