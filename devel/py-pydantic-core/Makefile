@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/11/13 13:32:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/17 09:50:08 wiz Exp $
 
-DISTNAME=	pydantic_core-2.26.0
+DISTNAME=	pydantic_core-2.27.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic-core/}
@@ -18,8 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.2.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-inline-snapshot>=0:../../devel/py-inline-snapshot
 
-# as of 2.26.0
-# 4523 passed, 68 skipped, 2 xfailed
+# as of 2.27.0
+# 4545 passed, 68 skipped, 2 xfailed
 
 .include "cargo-depends.mk"
 
