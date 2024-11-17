@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/14 09:07:28 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/17 12:49:05 adam Exp $
 
-DISTNAME=	pytest_examples-0.0.13
+DISTNAME=	pytest_examples-0.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest_examples/}
@@ -16,12 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-ruff>=0.5.0:../../devel/py-ruff
 DEPENDS+=	${PYPKGPREFIX}-test>=7:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-SUBST_CLASSES+=		ruffpath
-SUBST_STAGE.ruffpath=	pre-configure
-SUBST_MESSAGE.ruffpath=	Fixing path to ruff.
-SUBST_FILES.ruffpath=	pytest_examples/lint.py
-SUBST_SED.ruffpath=	-e "s,args = 'ruff',args = 'ruff-${PYVERSSUFFIX}',"
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
