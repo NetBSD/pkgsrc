@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/04/08 05:11:17 adam Exp $
+# $NetBSD: Makefile,v 1.40 2024/11/17 09:32:22 wiz Exp $
 
-DISTNAME=	flask-3.0.3
+DISTNAME=	flask-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask/}
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-werkzeug>=3.0.0:../../www/py-werkzeug
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
