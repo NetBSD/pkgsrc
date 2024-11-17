@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/22 18:37:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/17 09:44:37 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,9 @@ ${PYSITELIB}/posting/highlight_url.pyo
 ${PYSITELIB}/posting/highlighters.py
 ${PYSITELIB}/posting/highlighters.pyc
 ${PYSITELIB}/posting/highlighters.pyo
+${PYSITELIB}/posting/importing/curl.py
+${PYSITELIB}/posting/importing/curl.pyc
+${PYSITELIB}/posting/importing/curl.pyo
 ${PYSITELIB}/posting/importing/open_api.py
 ${PYSITELIB}/posting/importing/open_api.pyc
 ${PYSITELIB}/posting/importing/open_api.pyo
