@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2024/11/04 17:21:29 wiz Exp $
+$NetBSD: distinfo,v 1.4 2024/11/17 09:19:30 wiz Exp $
 
 BLAKE2s (cel.dev_expr_@v_v0.15.0.mod) = bae8e9f9fe569acaf971147cd9b3eb66e6791ca883e04bf0eda13af408f6aff0
 SHA512 (cel.dev_expr_@v_v0.15.0.mod) = a62ecc37ee163eabfaf1a790ca6501dc55f33ac0eedf6c3b295bc99d8a99ada7f351c7ed102cfe9c1627a2d03587d784e92a9307bf07628b9fbe22c3c059815e
@@ -3597,12 +3597,12 @@ Size (github.com_grafana_memberlist_@v_v0.3.1-0.20220714140823-09ffed8adbbe.mod)
 BLAKE2s (github.com_grafana_memberlist_@v_v0.3.1-0.20220714140823-09ffed8adbbe.zip) = bccaf4d97a8acbc5b2e866e6cb98541f601d91b1d9e66029c6015b44b60ce9ee
 SHA512 (github.com_grafana_memberlist_@v_v0.3.1-0.20220714140823-09ffed8adbbe.zip) = d427e256ae8f749af299740e7735bea50ecfbd72dd2fb7da6d9125f97b341138d059fc3b652c38900716b7d9899fac270a979aff1d17f629f3ddf5a5b4c96b0a
 Size (github.com_grafana_memberlist_@v_v0.3.1-0.20220714140823-09ffed8adbbe.zip) = 125467 bytes
-BLAKE2s (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.mod) = 478752d0141654510c908da253a8cb6405996cde4df1ae46b247b2c1ab2719dd
-SHA512 (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.mod) = a70a897ab093abdf284605a608ac643a684383523c109b52d096be3d9d0b7911893733fe9ca7924cebffbc23ef9dc22ec94f8309e6a32456ef2a091f20d34d10
-Size (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.mod) = 10264 bytes
-BLAKE2s (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.zip) = c28633339f0aaa6aab674dee8a8e7fcc753105e61ea6a9f598c10ffa3e7b0233
-SHA512 (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.zip) = 79d726af8edb0f2cd51e353442f736de2ebc0bb54bb921bfc9a7d80a6c1f6dbd1cfe76f8bd5e42d49d4c26585a7a408072bd80f0fa79dc3f22c2c074533d6857
-Size (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241009132338-f7ed04967d38.zip) = 5169314 bytes
+BLAKE2s (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.mod) = 478752d0141654510c908da253a8cb6405996cde4df1ae46b247b2c1ab2719dd
+SHA512 (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.mod) = a70a897ab093abdf284605a608ac643a684383523c109b52d096be3d9d0b7911893733fe9ca7924cebffbc23ef9dc22ec94f8309e6a32456ef2a091f20d34d10
+Size (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.mod) = 10264 bytes
+BLAKE2s (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.zip) = f1128f53c89be2cc4468a1552a914718ffa20a9b578d3b8705bc8ebe4a2bb67e
+SHA512 (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.zip) = 1f07725120b7d0d820be9fcb1625c64a1fe468b390b97c394d53da91cacb727d0ab7deeffd7188ba6f2aa469fe004c2d8c8c8d414f97b25637d61c0da14569f2
+Size (github.com_grafana_mimir-prometheus_@v_v0.0.0-20241113080331-8bca08eae66d.zip) = 5169883 bytes
 BLAKE2s (github.com_grafana_opentracing-contrib-go-stdlib_@v_v0.0.0-20230509071955-f410e79da956.mod) = eeac601b7e59d2711ecdf5fcc4246d0b54da3c9eeeb1d295ad96e0ed9d24d045
 SHA512 (github.com_grafana_opentracing-contrib-go-stdlib_@v_v0.0.0-20230509071955-f410e79da956.mod) = abb662e11ca6339a327299a8d8b77dd771ea540e2a9cc55df92794a3eefdead33c4ce0f18cbed1185e5042e8bfba93d3d9d1eca60cd2c49e90acaa6a957edf84
 Size (github.com_grafana_opentracing-contrib-go-stdlib_@v_v0.0.0-20230509071955-f410e79da956.mod) = 116 bytes
@@ -7230,9 +7230,9 @@ Size (lukechampine.com_uint128_@v_v1.1.1.mod) = 41 bytes
 BLAKE2s (lukechampine.com_uint128_@v_v1.2.0.mod) = 913102630241efe53aef35246edbe8f9d5ea3df59a4b79d04776df0623141971
 SHA512 (lukechampine.com_uint128_@v_v1.2.0.mod) = 051b75886b77f3badbdc8f64587025acb59521821456f768943ff58db08f25965ac63a5b12574ca97361a53cf5612c9aef2417aaa4fa43738164ce17cb6dc15a
 Size (lukechampine.com_uint128_@v_v1.2.0.mod) = 41 bytes
-BLAKE2s (mimir-2.14.1.tar.gz) = ab3d23fc12ecd1897d32597d78532789e114250a53449f3526b5169bc2baddcd
-SHA512 (mimir-2.14.1.tar.gz) = 9d6d85b3ac98efb650970e1a1689c977a9a5cb6d7039fb434425e130a4b726ae56827c6575f5d4d3c6b60412d0a53553f8ee7028609b6c5415e0482f91784f4c
-Size (mimir-2.14.1.tar.gz) = 29376688 bytes
+BLAKE2s (mimir-2.14.2.tar.gz) = f49f893f2e99418db0ed414526ef3c5acb59629991db1055609954c6a2effc62
+SHA512 (mimir-2.14.2.tar.gz) = 7cf75fd1dd37681b13ac6df52692bd0f253b1a75e9629ed875fa338b3924ac671260e0462ffe77a9ba5b9a2322fb5aea984fee5d1441175e02541ba25793deec
+Size (mimir-2.14.2.tar.gz) = 29378783 bytes
 BLAKE2s (modernc.org_cc_v3_@v_v3.36.0.mod) = d4d02c07b40ed22a6892f620276b7dd9814d614273dd2827d622e21cd98f9b33
 SHA512 (modernc.org_cc_v3_@v_v3.36.0.mod) = 21d61cd3c34c5253a7eace4a9fcaad1bdfefdb48168f33c247e44f2c706ee38dc275e707d1c28db772ed19dfede728bb82f9aeda57d5fda8c44b06f7da969331
 Size (modernc.org_cc_v3_@v_v3.36.0.mod) = 234 bytes
