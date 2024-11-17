@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2024/11/14 22:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/11/17 07:15:44 wiz Exp $
 
 DISTNAME=	knotifications-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

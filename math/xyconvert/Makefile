@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2024/11/14 22:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/11/17 07:16:23 wiz Exp $
 
 .include "../../math/xylib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lib/convert/g}
-PKGREVISION=	13
+PKGREVISION=	14
 COMMENT=	Converter for x-y (powder diffraction) data files
 BUILD_TARGET=	gui/xyconvert
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2024/10/20 14:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/17 07:16:01 wiz Exp $
 #
 
 DISTNAME=	clutter-gtk-0.10.8
 PKGNAME=	${DISTNAME:S/gtk-/gtk0.10-/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter-gtk/0.10/}
 DIST_SUBDIR=	${PKGNAME_NOREV}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2024/10/20 14:04:59 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2024/11/17 07:17:05 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 VERSION=	1.11.1
 DISTNAME=	xfce4-screenshooter-${VERSION}
 CATEGORIES=	x11

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2024/10/20 14:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/17 07:16:23 wiz Exp $
 
 PKGNAME=	mate-${VERSION}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	meta-pkgs
 
 COMMENT=	Meta-package for MATE desktop environment

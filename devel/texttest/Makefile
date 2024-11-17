@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/10/20 14:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/11/17 07:15:47 wiz Exp $
 
 DISTNAME=		TextTest-4.4.0.1
 PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel python
 MASTER_SITES=		https://downloads.sourceforge.net/project/texttest/texttest/4.4.0/
 
