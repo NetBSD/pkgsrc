@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2024/11/17 09:55:01 wiz Exp $
+$NetBSD: distinfo,v 1.43 2024/11/17 12:49:52 adam Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -1219,3 +1219,4 @@ BLAKE2s (zstd-sys-2.0.11+zstd.1.5.6.crate) = ef28ef1724e93ad44aa37661a5c1de7dd16
 SHA512 (zstd-sys-2.0.11+zstd.1.5.6.crate) = 37081282feffee1e78ddd8992ad5d8b2179ed7ec1be340d0cef0ce0aeea4aaa57850050f4b896d02875f0dec04ac1c20d9aa392f01b12e49ed885f4b8929f48d
 Size (zstd-sys-2.0.11+zstd.1.5.6.crate) = 749078 bytes
 SHA1 (patch-Cargo.toml) = fbe2935512dda150595dd366a70d36c5e1414c3c
+SHA1 (patch-python_ruff_____main____.py) = 389d75d66b901f4ae563c6d9175427147b3d1cbf
