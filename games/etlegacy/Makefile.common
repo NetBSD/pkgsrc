@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.11 2024/08/25 06:18:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2024/11/17 09:48:20 nia Exp $
 # used by games/etlegacy/Makefile
 # used by games/etlegacy-server/Makefile
 
-ETL_VERSION=	2.82.1
+ETL_VERSION=	2.83.1
 CATEGORIES=	games
 
 DIST_SUBDIR=	etlegacy-${PKGVERSION_NOREV}
@@ -30,8 +30,12 @@ PLIST_SRC+=	${.CURDIR}/../../games/etlegacy/PLIST.${OPSYS}
 
 WRKSRC=		${WRKDIR}/etlegacy-${ETL_VERSION}
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake # file names contain spaces
+
+.if exists(/usr/lib/libexecinfo.so)
+LDFLAGS+=	-lexecinfo
+.endif
 
 # use libraries from pkgsrc
 CMAKE_CONFIGURE_ARGS+=	-DBUNDLED_CJSON=OFF
@@ -82,7 +86,7 @@ CHECK_PORTABILITY_SKIP+=	libs/jpegturbo/release/makemacpkg.in
 PLIST_SUBST+=	ARCH_STRING="x86_64"
 .elif ${MACHINE_ARCH} == "i386"
 PLIST_SUBST+=	ARCH_STRING="i386"
-.elif !empty(MACHINE_ARCH:M*arm*)
+.elif ${MACHINE_ARCH:M*arm*}
 PLIST_SUBST+=	ARCH_STRING="arm"
 .else
 # maybe architecture-neutral shared objects could be generated
@@ -94,6 +98,7 @@ post-extract:
 	${MV} ${WRKDIR}/etlegacy-libs-${LIBS_TAG}/* \
 	    ${WRKDIR}/etlegacy-${PKGVERSION_NOREV}/libs
 
+.include "../../devel/cmake/build.mk"
 .include "../../archivers/minizip/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/cJSON/buildlink3.mk"

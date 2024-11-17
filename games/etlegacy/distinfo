@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2024/08/10 11:12:16 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/11/17 09:48:20 nia Exp $
 
-BLAKE2s (etlegacy-2.82.1/etlegacy-libs.tar.gz) = 03920fdf9fdfebb424c2875985aad427b5eeb6855a9ed630f0344f3ab25bb00c
-SHA512 (etlegacy-2.82.1/etlegacy-libs.tar.gz) = b6144e8d550884d23f8e8a49a2b221ca18e25761f1d3ac4ce07b19e36545deb8b97c9bfcab2ec81137af808548e7440db64fbc2db9e1988e8d878c187f47cbbb
-Size (etlegacy-2.82.1/etlegacy-libs.tar.gz) = 18024222 bytes
-BLAKE2s (etlegacy-2.82.1/etlegacy.tar.gz) = c3e578bbc3fdc762665b71825848f96d489064cfb21c95c60ad98fc2a8f0e3c4
-SHA512 (etlegacy-2.82.1/etlegacy.tar.gz) = fcae1bae4c5c5e5153fc61ddfcd49e68abc4442191cb64c525eb3cdd640ac7dc5deefd36dbc810853a70e4e3de7c461e4b17435ba4ffea6b47f5f033f1baa4b7
-Size (etlegacy-2.82.1/etlegacy.tar.gz) = 15174508 bytes
+BLAKE2s (etlegacy-2.83.1/etlegacy-libs.tar.gz) = 03920fdf9fdfebb424c2875985aad427b5eeb6855a9ed630f0344f3ab25bb00c
+SHA512 (etlegacy-2.83.1/etlegacy-libs.tar.gz) = b6144e8d550884d23f8e8a49a2b221ca18e25761f1d3ac4ce07b19e36545deb8b97c9bfcab2ec81137af808548e7440db64fbc2db9e1988e8d878c187f47cbbb
+Size (etlegacy-2.83.1/etlegacy-libs.tar.gz) = 18024222 bytes
+BLAKE2s (etlegacy-2.83.1/etlegacy.tar.gz) = a74d83b49267b62b302b7e50b6b137cd790e4a3707e19aea5bf65166796808df
+SHA512 (etlegacy-2.83.1/etlegacy.tar.gz) = 177249dd500347c6484221086e5b21be73ac26931f2a7b87bbda26936ca624e0105b067d48ec3aa1ad4979144ac818d2d7b65b32bcb20fde3aa36da480249367
+Size (etlegacy-2.83.1/etlegacy.tar.gz) = 15611296 bytes
 SHA1 (patch-cmake_ETLInstall.cmake) = a5b2a80b6cef0f28e5d1042fb84ea617d62fec74
 SHA1 (patch-cmake_FindLua.cmake) = b25e7deef2f03f40dfbe577e94717b1bfc0aca59
 SHA1 (patch-src_sdl_sdl__glimp.c) = 6f229c946cba675b8d0b3602500078fb9337367f
