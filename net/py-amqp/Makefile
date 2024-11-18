@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2024/11/11 07:28:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/18 09:11:29 adam Exp $
 
-DISTNAME=	amqp-5.2.0
+DISTNAME=	amqp-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amqp/}
@@ -16,8 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-rerunfailures>=6.0:../../devel/py-test-rerunf
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-sugar>=0.9.1:../../devel/py-test-sugar
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
