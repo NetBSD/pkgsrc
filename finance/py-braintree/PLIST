@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/01/12 13:20:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/11/18 10:39:22 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -49,6 +49,9 @@ ${PYSITELIB}/braintree/authorization_adjustment.pyo
 ${PYSITELIB}/braintree/bin_data.py
 ${PYSITELIB}/braintree/bin_data.pyc
 ${PYSITELIB}/braintree/bin_data.pyo
+${PYSITELIB}/braintree/blik_alias.py
+${PYSITELIB}/braintree/blik_alias.pyc
+${PYSITELIB}/braintree/blik_alias.pyo
 ${PYSITELIB}/braintree/braintree_gateway.py
 ${PYSITELIB}/braintree/braintree_gateway.pyc
 ${PYSITELIB}/braintree/braintree_gateway.pyo
