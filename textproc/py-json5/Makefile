@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/18 17:22:24 adam Exp $
 
-DISTNAME=	json5-0.9.25
+DISTNAME=	json5-0.9.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/json5/}
@@ -13,8 +13,6 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
