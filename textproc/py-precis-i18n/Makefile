@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2023/11/09 14:32:26 adam Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/18 17:25:39 adam Exp $
 
-DISTNAME=	precis_i18n-1.1.0
+DISTNAME=	precis_i18n-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/precis-i18n/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/byllyfish/precis_i18n
 COMMENT=	PRECIS-i18n: Internationalized Usernames and Passwords
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
