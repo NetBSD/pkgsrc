@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2019/04/28 18:47:13 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/11/18 17:33:25 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mmh3.so
+${PYSITELIB}/mmh3/__init__.pyi
+${PYSITELIB}/mmh3/hashlib.h
+${PYSITELIB}/mmh3/mmh3module.c
+${PYSITELIB}/mmh3/murmurhash3.c
+${PYSITELIB}/mmh3/murmurhash3.h
+${PYSITELIB}/mmh3/py.typed
