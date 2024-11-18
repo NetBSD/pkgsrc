@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:44:30 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/11/18 07:58:49 wiz Exp $
 
-BLAKE2s (widelands-build21-source.tar.gz) = a09cd54f47f78231c9e9301971f9331879db52dede20d32b8818d68180a7f3aa
-SHA512 (widelands-build21-source.tar.gz) = 8d36bd0407a72e4e221155121f9ab4ce7fdfb6d81ca70a2772baf12c3397fc6abbcad5006336adb471d2c5127a90b4cda735e941d69cf779be1f923d4a38960e
-Size (widelands-build21-source.tar.gz) = 381374149 bytes
-SHA1 (patch-CMakeLists.txt) = 8b400bc5554964378275d304943e6489c82d9915
-SHA1 (patch-src_CMakeLists.txt) = 184a4240280db8324005c8bb06cbc49f1f7195f5
-SHA1 (patch-src_base_i18n.cc) = e8120008c30dcc3611b12d02f6a6b76d8699e218
-SHA1 (patch-src_network_bufferedconnection.h) = c3b8ced8d90a70da88dcb61ed079bf95ac350a23
-SHA1 (patch-xdg_CMakeLists.txt) = 4fac4da5c8d7d1f528caec5de21a212c03f44932
+BLAKE2s (widelands/v1.2.1.tar.gz) = d3fe7d500d3d997fb0a69320452b55cd8fc1daf957573499b38f4d87d760f977
+SHA512 (widelands/v1.2.1.tar.gz) = eb765367e57bab7d016a0e9ad0f5f2e17e31124cb94a149c87a17ce22169509361f408297233e14001e12a8546cfbea879a21a05e47b7f48ba6924ce1a8080e9
+Size (widelands/v1.2.1.tar.gz) = 458108419 bytes
+SHA1 (patch-src_base_i18n.cc) = 686b13db53cb16cf72f210204c7e622b8b298c6a
+SHA1 (patch-src_base_i18n.h) = 5b7f6070e014e83d5f0a735105361809ea2b117f
+SHA1 (patch-xdg_CMakeLists.txt) = ce08eacbfbf9d32b6c72e411538adb0472d58851

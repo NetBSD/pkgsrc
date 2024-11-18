@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.46 2024/11/14 22:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/11/18 07:58:49 wiz Exp $
 
-DISTNAME=	widelands-build21-source
-PKGNAME=	widelands-21
-PKGREVISION=	31
+PKGVERSION=	1.2.1
+PKGNAME=	widelands-${PKGVERSION}
+DISTNAME=	v${PKGVERSION:C/rc/-rc/}
 CATEGORIES=	games
-MASTER_SITES=	https://launchpad.net/widelands/build${PKGVERSION_NOREV}/build${PKGVERSION_NOREV}/+download/
+MASTER_SITES=	https://codeberg.org/wl/widelands/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.widelands.org/
 COMMENT=	Fantasy real-time strategy game inspired by Settlers II
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
 USE_LANGUAGES=	c c++
 
-FORCE_CXX_STD=	c++17
+USE_CXX_FEATURES+=	c++11
 
 CONFIGURE_DIRS=	build
 CMAKE_ARG_PATH=	..
 
 CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_BASEDIR=${PREFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_DATADIR=${PREFIX}/share/widelands
+CMAKE_CONFIGURE_ARGS+=	-DWL_INSTALL_BINDIR=${PREFIX}/bin
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INCLUDE_PATH=${PREFIX}/include/boost
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=shadow
-BUILDLINK_TRANSFORM+=	rm:-Werror=uninitialized
 
 # too much spam from boost headers
 BUILDLINK_TRANSFORM+=	rm:-Wold-style-cast
@@ -36,7 +36,8 @@ PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/widelands
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
+DIST_SUBDIR=	widelands
+WRKSRC=		${WRKDIR}/widelands
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,21 +51,17 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/build
 
 post-install:
-	${MV}	${DESTDIR}${PREFIX}/widelands \
-		${DESTDIR}${PREFIX}/wl_create_spritesheet \
-		${DESTDIR}${PREFIX}/wl_map_object_info \
-		${DESTDIR}${PREFIX}/wl_map_info \
-		${DESTDIR}${PREFIX}/bin
 	${MV}	${DESTDIR}${PREFIX}/VERSION \
 		${DESTDIR}${PREFIX}/ChangeLog \
 		${DESTDIR}${PREFIX}/CREDITS \
 		${DESTDIR}${PREFIX}/COPYING \
 		${DESTDIR}${PREFIX}/share/doc/widelands
 
+.include "../../archivers/minizip/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/asio/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
