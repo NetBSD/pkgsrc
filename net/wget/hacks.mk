@@ -1,6 +1,6 @@
-# $NetBSD: hacks.mk,v 1.1 2024/03/15 20:31:52 nia Exp $
+# $NetBSD: hacks.mk,v 1.2 2024/11/18 22:59:31 wiz Exp $
 
-.ifndef WGET_HACKS_MK
+.if !defined(WGET_HACKS_MK)
 
 WGET_HACKS_MK=
 
