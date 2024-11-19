@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2024/11/16 11:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.281 2024/11/19 21:02:20 wiz Exp $
 
 .include "license.mk"
 .include "Makefile.common"
@@ -21,7 +21,8 @@ SUPERSEDES+=	p5-experimental<=0.007
 
 # XXX: requires that gcc use an external perl to avoid circular dependencies
 USE_GCC_RUNTIME=	yes
-USE_LANGUAGES=		c c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES+=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -189,11 +190,18 @@ SUBST_MESSAGE.mirbsd-paths=	Do not use non-pkgsrc paths on MirBSD.
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		cpan/Getopt-Long/lib/Getopt/Long.pm
-REPLACE_PERL+=		cpan/version/lib/version.pm
 REPLACE_PERL+=		dist/ExtUtils-ParseXS/lib/ExtUtils/xsubpp
 REPLACE_PERL+=		ext/ExtUtils-Miniperl/lib/ExtUtils/Miniperl.pm
 REPLACE_PERL+=		ext/File-DosGlob/lib/File/DosGlob.pm
-REPLACE_PERL+=		lib/unicore/mktables
+
+# leads to test errors, shebang not necessary according to upstream
+# shebang will be removed in 5.42
+# https://github.com/Perl/perl5/issues/22751#issuecomment-2486616440
+#REPLACE_PERL+=		cpan/version/lib/version.pm
+# this file is not installed, and its checksums are in multiple places, breaking
+# tests, so do not replace the shebang here.
+# https://github.com/Perl/perl5/issues/22751
+#REPLACE_PERL+=		lib/unicore/mktables
 
 .if ${PKGSRC_COMPILER:Mxlc}
 SUBST_CLASSES+=		cpprun
