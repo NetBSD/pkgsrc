@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/11/14 22:20:59 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/19 20:05:39 nros Exp $
 
 DISTNAME=	lightspark-0.8.5
 PKGREVISION=	25
@@ -10,7 +10,6 @@ HOMEPAGE=	https://lightspark.github.io/
 COMMENT=	Open source Flash player
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config msgfmt msgmerge
 USE_LANGUAGES=	c c++
 
@@ -24,6 +23,8 @@ GCC_REQD+=	4.6
 
 CONF_FILES+=	${PREFIX}/share/examples/lightspark/xdg/lightspark.conf \
 		${PKG_SYSCONFDIR}/xdg/lightspark.conf
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
