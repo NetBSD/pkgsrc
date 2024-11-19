@@ -1,9 +1,22 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2024/08/28 13:20:33 sborrill Exp $
+$NetBSD: MESSAGE,v 1.2 2024/11/19 15:35:39 sborrill Exp $
 
-From gam 6.58nb1 onwards, the default location for the generated
-authorisation files has been moved to ${PKG_SYSCONFDIR}.
+GAM 7 uses a different method for locating its client_secrets.json,
+oauth2.txt and oauth2service.json files. Previously they were held in
+${PKG_SYSCONFDIR}/gam, but by default they are now in ~/.gam along with a
+configuration file that allows their locations to be defined.
 
-See ${PKG_SYSCONFDIR}/README for more details.
+To migrate, run the following once:
+env OLDGAMPATH=${PKG_SYSCONFDIR}/gam gam select default verify
+
+This will create a new ~/.gam/gam.cfg file and copy the relevant files.
+
+GAM 7 may also require access to more API scopes which will require you
+to run:
+gam oauth create
+
+For full details see:
+
+https://github.com/GAM-team/GAM/wiki/How-to-Upgrade-Legacy-GAM-to-GAM7
 
 ===========================================================================
