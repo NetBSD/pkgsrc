@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/11/19 13:23:43 nia Exp $
+# $NetBSD: Makefile,v 1.35 2024/11/19 19:23:55 wiz Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
@@ -20,8 +20,6 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	https://www.asterisk.org/
-
-BROKEN=		"Tries to download files during build"
 
 MAKE_JOBS_SAFE=	NO
 
