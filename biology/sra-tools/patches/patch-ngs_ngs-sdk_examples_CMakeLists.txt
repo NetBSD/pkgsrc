@@ -1,0 +1,24 @@
+$NetBSD: patch-ngs_ngs-sdk_examples_CMakeLists.txt,v 1.1 2024/11/19 20:22:32 bacon Exp $
+
+# Canonicalize examples dir
+
+--- ngs/ngs-sdk/examples/CMakeLists.txt.orig	2024-11-18 12:10:46.495627136 +0000
++++ ngs/ngs-sdk/examples/CMakeLists.txt
+@@ -62,14 +62,14 @@ if ( SINGLE_CONFIG )
+     install(
+         FILES FragTest.cpp AlignTest.cpp AlignSliceTest.cpp PileupTest.cpp RefTest.cpp DumpReferenceFASTA.cpp
+               expected.txt
+-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples
++        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/sra-tools
+     )
+     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/Makefile.install
+-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples
++        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/sra-tools
+         RENAME Makefile
+     )
+     install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/README.install
+-        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples
++        DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/sra-tools
+         RENAME README.txt
+     )
+ endif()
