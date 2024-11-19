@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/11/17 07:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/19 09:03:20 nros Exp $
 
-DISTNAME=	qt6gtk2-0.2
-PKGREVISION=	13
+DISTNAME=	qt6gtk2-0.3
 CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trialuser02/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
