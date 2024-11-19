@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.31 2023/11/07 09:54:49 nia Exp $
+# $NetBSD: hacks.mk,v 1.32 2024/11/19 21:02:20 wiz Exp $
 
 .if !defined(PERL5_HACKS_MK)
 PERL5_HACKS_MK=	defined
@@ -48,10 +48,10 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}/usr/sfw/lib/amd64
 ### causes opmini.c to be miscompiled, and perl build fails.
 ###
 .if ${CC_VERSION:Mgcc-4.5.*} && ${OPSYS} == "NetBSD"
-.  if (${MACHINE_ARCH} == "vax" ||	\
-       ${MACHINE_CPU} == "mips" ||	\
-       ${MACHINE_ARCH} == "sparc" ||	\
-       ${MACHINE_ARCH} == "sparc64")
+.  if ${MACHINE_ARCH} == "vax" ||	\
+      ${MACHINE_CPU} == "mips" ||	\
+      ${MACHINE_ARCH} == "sparc" ||	\
+      ${MACHINE_ARCH} == "sparc64"
 PKG_HACKS+=	gcc-4.5-codegen
 CFLAGS+=	-fno-reorder-blocks
 .  endif
