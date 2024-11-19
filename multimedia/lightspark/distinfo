@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 11:01:11 nia Exp $
+$NetBSD: distinfo,v 1.9 2024/11/19 20:05:39 nros Exp $
 
 BLAKE2s (lightspark-0.8.5.tar.gz) = 4dad61856b791bf9bdb7aec592eb9d6b36c09c5eaf5712cac05d32293347f119
 SHA512 (lightspark-0.8.5.tar.gz) = 79e78925f9132b2c6044e4abf326d768c8d45509f85d9123e3dd172b2769772567223676fa7c8ea4d08bc541e9aa7a2b2d5a1062ff9f3a6274234af8798ee11b
 Size (lightspark-0.8.5.tar.gz) = 2490510 bytes
-SHA1 (patch-CMakeLists.txt) = 0303a8e4af91b6db2faf4a9eb6ff98d90368e2c5
+SHA1 (patch-CMakeLists.txt) = 2205972d0b09015fe11f7eb8670744d4b712b7ea
 SHA1 (patch-src_3rdparty_jxrlib_image_decode_segdec.c) = e263288ede1f11a780d438c0be836b0f33fef80e
 SHA1 (patch-src_backends_urlutils.cpp) = bd1e7584703a1045609b13b7379cf3eddcd13ef0
 SHA1 (patch-src_parsing_tags.cpp) = 951f2757ed68f6e0f5964df3fa944aeace4cbda3
