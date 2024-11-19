@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7077 2024/11/19 14:58:45 nia Exp $
+$NetBSD: CHANGES-2024,v 1.7078 2024/11/19 15:36:16 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10685,3 +10685,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/qt6gtk2 to 0.3 [nros 2024-11-19]
 	Updated emulators/libretro-flycast to 2.4 [nia 2024-11-19]
 	Updated emulators/flycast to 2.4 [nia 2024-11-19]
+	Updated sysutils/gam to 7.00.39 [sborrill 2024-11-19]
