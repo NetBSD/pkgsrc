@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2024/11/14 22:19:11 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2024/11/19 22:52:08 adam Exp $
 
-DISTNAME=	apsw-3.46.1.0
+DISTNAME=	apsw-3.47.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-r1//}
-PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rogerbinns/}
 EXTRACT_SUFX=	.zip
@@ -15,8 +14,6 @@ COMMENT=	Python wrapper for SQLite
 LICENSE=	zlib
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=${PKGVERSION_NOREV:R}
 .include "../../databases/sqlite3/buildlink3.mk"

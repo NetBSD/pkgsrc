@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/10/29 17:11:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/19 22:52:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -9,12 +9,26 @@ ${PYSITELIB}/apsw/__init__.so
 ${PYSITELIB}/apsw/__main__.py
 ${PYSITELIB}/apsw/__main__.pyc
 ${PYSITELIB}/apsw/__main__.pyo
+${PYSITELIB}/apsw/_unicode.so
 ${PYSITELIB}/apsw/bestpractice.py
 ${PYSITELIB}/apsw/bestpractice.pyc
 ${PYSITELIB}/apsw/bestpractice.pyo
 ${PYSITELIB}/apsw/ext.py
 ${PYSITELIB}/apsw/ext.pyc
 ${PYSITELIB}/apsw/ext.pyo
+${PYSITELIB}/apsw/fts5.py
+${PYSITELIB}/apsw/fts5.pyc
+${PYSITELIB}/apsw/fts5.pyo
+${PYSITELIB}/apsw/fts5aux.py
+${PYSITELIB}/apsw/fts5aux.pyc
+${PYSITELIB}/apsw/fts5aux.pyo
+${PYSITELIB}/apsw/fts5query.py
+${PYSITELIB}/apsw/fts5query.pyc
+${PYSITELIB}/apsw/fts5query.pyo
+${PYSITELIB}/apsw/fts_test_strings
+${PYSITELIB}/apsw/ftstests.py
+${PYSITELIB}/apsw/ftstests.pyc
+${PYSITELIB}/apsw/ftstests.pyo
 ${PYSITELIB}/apsw/py.typed
 ${PYSITELIB}/apsw/shell.py
 ${PYSITELIB}/apsw/shell.pyc
@@ -28,3 +42,6 @@ ${PYSITELIB}/apsw/tests.pyo
 ${PYSITELIB}/apsw/trace.py
 ${PYSITELIB}/apsw/trace.pyc
 ${PYSITELIB}/apsw/trace.pyo
+${PYSITELIB}/apsw/unicode.py
+${PYSITELIB}/apsw/unicode.pyc
+${PYSITELIB}/apsw/unicode.pyo
