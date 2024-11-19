@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2024/11/14 22:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/19 20:22:31 bacon Exp $
 
-DISTNAME=		sra-tools-3.0.6
-PKGREVISION=		6
+DISTNAME=		sra-tools-3.1.1
 CATEGORIES=		biology
-MASTER_SITES=		${MASTER_SITE_GITHUB:=outpaddling/}
-GITHUB_TAG=		984f1493e8612cd59a269569bf8c06e25e4e604c
-GITHUB_SUBMODULES+=	outpaddling ncbi-vdb 38972fc ncbi-vdb
+MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
+GITHUB_SUBMODULES+=	ncbi ncbi-vdb 3.1.1 ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
@@ -18,9 +16,8 @@ ONLY_FOR_PLATFORM=	*-*-aarch64 *-*-x86_64
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash bison cmake
 
-# The config.c and file-path.posix.cpp substs follow
-# static patches.  Run "make clean patch" before updating
-# those patches so this subst does not get added to them.
+# SUBST edits may follow static patches.  Run "make clean patch" before
+# updating those patches so SUBST changes do not get added to them.
 SUBST_CLASSES+=		etcdir
 SUBST_STAGE.etcdir=	pre-configure
 SUBST_SED.etcdir+=	-e 's|"/etc/ncbi"|"${PREFIX}/etc/ncbi"|g'
@@ -28,7 +25,7 @@ SUBST_FILES.etcdir+=	ncbi-vdb/libs/kfg/config.c
 
 SUBST_CLASSES+=		binpath
 SUBST_STAGE.binpath=	pre-configure
-SUBST_SED.binpath+=	-e 's|/usr/local/bin|${PREFIX}/bin|g'
+SUBST_SED.binpath+=	-e 's|/usr/local|${PREFIX}|g'
 SUBST_FILES.binpath+=	tools/external/driver-tool/file-path.posix.cpp
 
 SUBST_CLASSES+=		submoddir
@@ -38,15 +35,13 @@ SUBST_FILES.submoddir+=	CMakeLists.txt
 
 REPLACE_BASH=	*/*.sh */*/*.sh */*/*/*.sh */*/*/*/*.sh
 
-USE_CMAKE=	yes
-CMAKE_CONFIGURE_ARGS+=	-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_CONFIGURE_ARGS+=		-DVDB_LIBDIR:STRING=${WRKSRC}/ncbi-vdb/build/lib
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-ldl	# ncbi-vdb/CMakeLists.posix.txt
-
-EXAMPLESDIR=	${PREFIX}/share/examples/sra-tools
 
 .include "../../mk/bsd.prefs.mk"
 
+# macOS does not support @rpath
 .if ${OPSYS} == Darwin
 SUBST_CLASSES+=		srarpath
 SUBST_STAGE.srarpath=	post-configure
@@ -58,26 +53,15 @@ pre-configure:
 .if ${OPSYS} == NetBSD
 	# Incorrect gcc/x86_64/byteswap.h found before correct bsd/byteswap.h
 	# Adding #ifndef __NetBSD__ to gcc/x86_64/byteswap.h doesn't work
+	# Still needed as of sra-tools 3.1.1
 	${RM} -f ${WRKSRC}/ncbi-vdb/interfaces/cc/gcc/x86_64/byteswap.h
 .endif
 	cd ${WRKSRC}/ncbi-vdb/build && cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON ..
-.if ${OPSYS} == Darwin
-	# Unsure how to prevent cmake from emitting @rpath in the first place
-	# No instances of @rpath or -install_name in any files before cmake
-	for f in ${WRKSRC}/ncbi-vdb/build/libs/ncbi-vdb/CMakeFiles/*/link.txt; do \
-		${SED} -e 's|@rpath|${PREFIX}/lib|g' $${f} > $${f}.tmp && ${MV} -f $${f}.tmp $${f}; \
-	done
-.endif
 	cd ${WRKSRC}/ncbi-vdb/build && ${MAKE}
 
 post-install:
 	${STRIP} ${DESTDIR}${PREFIX}/bin/*.${PKGVERSION_NOREV}
-	${MV} ${DESTDIR}${PREFIX}/share/examples ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MKDIR} ${DESTDIR}${EXAMPLESDIR}
-	${MV} ${DESTDIR}${PREFIX}/share/examples-sratools/* ${DESTDIR}${EXAMPLESDIR}
-	${RMDIR} ${DESTDIR}${PREFIX}/share/examples-sratools
-	${MV} ${DESTDIR}${PREFIX}/share/examples-python ${DESTDIR}${EXAMPLESDIR}/python
-	# FIXME: Can we prevent build from detecting java?
+	${STRIP} ${DESTDIR}${PREFIX}/lib/*.${PKGVERSION_NOREV}
 	${RM} -rf ${DESTDIR}${PREFIX}/jar
 	${RM} -rf ${DESTDIR}${PREFIX}/share/examples-java
 	${RM} -rf ${DESTDIR}${PREFIX}/share/javadoc

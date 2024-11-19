@@ -1,4 +1,4 @@
-$NetBSD: patch-build_env.cmake,v 1.1 2023/08/29 00:00:25 bacon Exp $
+$NetBSD: patch-build_env.cmake,v 1.2 2024/11/19 20:22:32 bacon Exp $
 
 # static standard libs are not standard nor easy to install on Alma Linux
 

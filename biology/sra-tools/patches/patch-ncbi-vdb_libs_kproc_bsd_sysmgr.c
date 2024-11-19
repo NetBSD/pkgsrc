@@ -1,4 +1,4 @@
-$NetBSD: patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c,v 1.1 2023/08/29 00:00:25 bacon Exp $
+$NetBSD: patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c,v 1.2 2024/11/19 20:22:32 bacon Exp $
 
 # Add NetBSD pthread_main_np() stand-in
 
