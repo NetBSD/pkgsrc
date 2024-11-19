@@ -1,26 +1,56 @@
-$NetBSD: patch-CMakeLists.txt,v 1.3 2020/12/03 22:23:33 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.4 2024/11/19 20:05:40 nros Exp $
 
-Hunk 1:
+Hunk 1 and 2:
+Use CMake:s ASM_NASM instead of the with project shipped
+ASM-NASM LANG identifier, fixes:
+"can't find CMakeASM-NASMLinkerInformation.cmake"
+
+Hunk 3:
 
 Use /lib for "private libs" (liblightspark). This may be evil,
 but currently the private rpath isn't being added properly.
 
-Hunk 2:
+Hunk 4:
 
 Install config file as example.
 
---- CMakeLists.txt.orig	2020-07-05 10:31:09.000000000 +0000
+--- CMakeLists.txt.orig	2021-07-03 15:33:45.000000000 +0000
 +++ CMakeLists.txt
-@@ -112,7 +112,7 @@ IF(CMAKE_SIZEOF_VOID_P STREQUAL "8")
-     ADD_DEFINITIONS(-DLIGHTSPARK_64)
- endif(CMAKE_SIZEOF_VOID_P STREQUAL "8")
- # Some directory shortcuts
--SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/conf)
-+SET (CMAKE_MODULE_PATH "/home/nia/cvs/pkgsrc/multimedia/lightspark/work/.buildlink/cmake-Modules" ${PROJECT_SOURCE_DIR}/conf)
+@@ -116,15 +116,12 @@ SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_D
  INCLUDE(Pack)
  # If we're gcc, then use nasm to get fastpath.  If MSVC, just use inline asm to get around
  # CMake issues 
-@@ -173,10 +173,10 @@ IF(UNIX)
+-IF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-   INCLUDE(CMakeASM-NASMCompiler)
+-ENDIF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+ IF(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^i[3-6]86$|^x86$")
+ 	SET(i386 1)
+ 	SET(LIB_SUFFIX "" CACHE STRING "Choose the suffix of the lib folder (if any) : None 32")
+ 	# nasm for assembly optimizations
+ 	IF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-	   ENABLE_LANGUAGE(ASM-NASM)        
++	   ENABLE_LANGUAGE(ASM_NASM)        
+ 	ENDIF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+ ELSEIF(${CMAKE_SYSTEM_PROCESSOR} MATCHES "unknown" AND ${CMAKE_SYSTEM} MATCHES "GNU-0.3")
+ 	# GNU Hurd is i386
+@@ -132,14 +129,14 @@ ELSEIF(${CMAKE_SYSTEM_PROCESSOR} MATCHES
+ 	SET(LIB_SUFFIX "" CACHE STRING "Choose the suffix of the lib folder (if any) : None 32")
+ 	# nasm for assembly optimizations
+ 	IF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-	   ENABLE_LANGUAGE(ASM-NASM)
++	   ENABLE_LANGUAGE(ASM_NASM)
+ 	ENDIF ()
+ ELSEIF(${CMAKE_SYSTEM_PROCESSOR} MATCHES "^x86_64$|^amd64$")
+ 	SET(x86_64 1)
+ 	SET(LIB_SUFFIX "" CACHE STRING "Choose the suffix of the lib folder (if any) : None 64")
+ 	# nasm for assembly optimizations
+ 	IF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+-	  ENABLE_LANGUAGE(ASM-NASM)
++	  ENABLE_LANGUAGE(ASM_NASM)
+ 	ENDIF(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+ ELSEIF(${CMAKE_SYSTEM_PROCESSOR} MATCHES "ppc")
+ 	SET(ppc 1)
+@@ -173,10 +170,10 @@ IF(UNIX)
     SET(DATADIR "share")
     # Absolute path, because this path is embedded in the binary
     SET(LSDATADIR "${CMAKE_INSTALL_PREFIX}/${DATADIR}/lightspark")
@@ -33,7 +63,7 @@ Install config file as example.
     SET(CMAKE_INSTALL_RPATH "${PRIVATELIBDIR}")
  ELSE()
    SET(ETCDIR ".")
-@@ -552,7 +552,7 @@ GETTEXT_CREATE_TRANSLATIONS(i18n/lightsp
+@@ -539,7 +536,7 @@ GETTEXT_CREATE_TRANSLATIONS(i18n/lightsp
  
  if(UNIX)
  	INSTALL(FILES etc/xdg/lightspark.conf
