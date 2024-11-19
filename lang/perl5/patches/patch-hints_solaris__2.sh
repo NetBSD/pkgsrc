@@ -1,6 +1,7 @@
-$NetBSD: patch-hints_solaris__2.sh,v 1.3 2020/08/31 18:00:37 wiz Exp $
+$NetBSD: patch-hints_solaris__2.sh,v 1.4 2024/11/19 21:17:32 wiz Exp $
 
 Redo PR pkg/44999.
+https://github.com/Perl/perl5/issues/9669
 
 --- hints/solaris_2.sh.orig	2020-06-14 23:01:25.000000000 +0000
 +++ hints/solaris_2.sh
