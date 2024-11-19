@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:40 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2024/11/19 14:58:05 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-flycast
 
@@ -7,11 +7,11 @@ PKG_OPTIONS_VAR=		PKG_OPTIONS.libretro-flycast
 PKG_OPTIONS_REQUIRED_GROUPS+=	gl
 PKG_OPTIONS_GROUP.gl+=		opengl
 
-.if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*arm*)
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH:M*arm*}
 PKG_OPTIONS_GROUP.gl+=		rpi
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-earmv6hf)
+.if ${MACHINE_PLATFORM:MNetBSD-*-earmv6hf}
 PKG_SUGGESTED_OPTIONS+=		rpi
 .elif ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		opengl
