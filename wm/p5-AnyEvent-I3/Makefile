@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/11/20 13:13:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/20 13:18:12 wiz Exp $
 
 DISTNAME=	AnyEvent-I3-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,8 @@ HOMEPAGE=	https://metacpan.org/pod/AnyEvent::I3
 COMMENT=	Perl module to communicate with the i3 window manager
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=	i3-[0-9]*:../../wm/i3
+# i3 depends on this
+#DEPENDS+=	i3-[0-9]*:../../wm/i3
 
 PERL5_PACKLIST=	auto/AnyEvent/I3/.packlist
 
