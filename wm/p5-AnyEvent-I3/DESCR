@@ -1,0 +1,3 @@
+Perl5 module that connects to the I3 window manager using the UNIX
+socket based IPC interface it provides (if enabled in the
+configuration file).

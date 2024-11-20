@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/20 13:13:05 wiz Exp $
+
+BLAKE2s (AnyEvent-I3-0.19.tar.gz) = 5ef5666e0e7327ee8ccff75f43b3527b0b9f622a7050d12109a73331f0385eeb
+SHA512 (AnyEvent-I3-0.19.tar.gz) = 4258a382987c01072d53087d3c004517f3c27781bd5f82dd35c059b4efe8a3f9ef34a4590ea6b4b47e86f53e0602134a8b6c7d2d616cc7b736b26e26ed26bdc5
+Size (AnyEvent-I3-0.19.tar.gz) = 9470 bytes
