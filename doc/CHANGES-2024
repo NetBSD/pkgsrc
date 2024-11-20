@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7082 2024/11/20 01:30:03 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7083 2024/11/20 06:24:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10691,3 +10691,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-apsw to 3.47.0.0 [adam 2024-11-19]
 	Updated cad/kicad-packages3d to 8.0.6 [mef 2024-11-20]
 	Updated cad/kicad to 8.0.6 [mef 2024-11-20]
+	Updated security/py-bcrypt to 4.2.1 [adam 2024-11-20]
+	Updated devel/py-pykka to 4.1.1 [adam 2024-11-20]
+	Updated www/py-publicsuffixlist to 1.0.2.20241120 [adam 2024-11-20]
+	Updated devel/py-types-setuptools to 75.5.0.20241122 [adam 2024-11-20]
