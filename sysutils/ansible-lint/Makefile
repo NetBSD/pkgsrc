@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2024/11/11 07:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2024/11/20 11:48:15 adam Exp $
 
-DISTNAME=	ansible_lint-24.9.2
+DISTNAME=	ansible_lint-24.10.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible-lint/}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 AND mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=65.3.0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7.0.5:../../devel/py-setuptools_scm
 DEPENDS+=	ansible-core>=2.13.0:../../sysutils/ansible-core
-DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=24.9.1:../../sysutils/py-ansible-compat
+DEPENDS+=	${PYPKGPREFIX}-ansible-compat>=24.10.0:../../sysutils/py-ansible-compat
 DEPENDS+=	${PYPKGPREFIX}-black>=24.3.0:../../textproc/py-black
 DEPENDS+=	${PYPKGPREFIX}-filelock>=3.3.0:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata-[0-9]*:../../devel/py-importlib-metadata
