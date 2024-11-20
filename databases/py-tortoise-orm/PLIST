@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/10/14 14:06:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/11/20 12:53:23 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -182,6 +182,9 @@ ${PYSITELIB}/tortoise/contrib/pydantic/base.pyo
 ${PYSITELIB}/tortoise/contrib/pydantic/creator.py
 ${PYSITELIB}/tortoise/contrib/pydantic/creator.pyc
 ${PYSITELIB}/tortoise/contrib/pydantic/creator.pyo
+${PYSITELIB}/tortoise/contrib/pydantic/descriptions.py
+${PYSITELIB}/tortoise/contrib/pydantic/descriptions.pyc
+${PYSITELIB}/tortoise/contrib/pydantic/descriptions.pyo
 ${PYSITELIB}/tortoise/contrib/pydantic/utils.py
 ${PYSITELIB}/tortoise/contrib/pydantic/utils.pyc
 ${PYSITELIB}/tortoise/contrib/pydantic/utils.pyo
