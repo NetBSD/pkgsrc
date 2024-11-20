@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2012/05/07 01:53:53 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/20 17:56:20 hauke Exp $
 
 BUILDLINK_TREE+=	mDNSResponder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mDNSResponder
 MDNSRESPONDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mDNSResponder+=	mDNSResponder>=98
-BUILDLINK_ABI_DEPENDS.mDNSResponder+=	mDNSResponder>=214.3.2
+BUILDLINK_ABI_DEPENDS.mDNSResponder+=	mDNSResponder>=2559.1.1
 BUILDLINK_PKGSRCDIR.mDNSResponder?=	../../net/mDNSResponder
 .endif # MDNSRESPONDER_BUILDLINK3_MK
 
