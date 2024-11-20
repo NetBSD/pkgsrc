@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/23 07:56:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/11/20 12:49:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -33,12 +33,16 @@ ${PYSITELIB}/pypika/dialects/sqlite.pyo
 ${PYSITELIB}/pypika/enums.py
 ${PYSITELIB}/pypika/enums.pyc
 ${PYSITELIB}/pypika/enums.pyo
+${PYSITELIB}/pypika/exceptions.py
+${PYSITELIB}/pypika/exceptions.pyc
+${PYSITELIB}/pypika/exceptions.pyo
 ${PYSITELIB}/pypika/functions.py
 ${PYSITELIB}/pypika/functions.pyc
 ${PYSITELIB}/pypika/functions.pyo
 ${PYSITELIB}/pypika/pseudocolumns.py
 ${PYSITELIB}/pypika/pseudocolumns.pyc
 ${PYSITELIB}/pypika/pseudocolumns.pyo
+${PYSITELIB}/pypika/py.typed
 ${PYSITELIB}/pypika/queries.py
 ${PYSITELIB}/pypika/queries.pyc
 ${PYSITELIB}/pypika/queries.pyo
