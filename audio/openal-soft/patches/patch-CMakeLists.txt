@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2023/02/16 15:15:55 wiz Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2024/11/20 09:33:00 adam Exp $
 
 Disable libsndfile.
 
---- CMakeLists.txt.orig	2023-02-03 14:48:18.000000000 +0000
+--- CMakeLists.txt.orig	2024-11-16 12:20:51.000000000 +0000
 +++ CMakeLists.txt
-@@ -1559,7 +1559,7 @@ if(ALSOFT_UTILS)
+@@ -1626,7 +1626,7 @@ if(ALSOFT_UTILS)
          set(EXTRA_INSTALLS ${EXTRA_INSTALLS} openal-info)
      endif()
  
@@ -13,12 +13,12 @@ Disable libsndfile.
          add_executable(uhjdecoder utils/uhjdecoder.cpp)
          target_compile_definitions(uhjdecoder PRIVATE ${CPP_DEFS})
          target_include_directories(uhjdecoder
-@@ -1645,7 +1645,7 @@ if(ALSOFT_EXAMPLES)
+@@ -1729,7 +1729,7 @@ if(ALSOFT_EXAMPLES)
  
      message(STATUS "Building example programs")
  
 -    if(SNDFILE_FOUND)
 +    if(SNDFILE_FOUND AND False)
          add_executable(alplay examples/alplay.c)
-         target_link_libraries(alplay PRIVATE ${LINKER_FLAGS} SndFile::SndFile ex-common
+         target_link_libraries(alplay PRIVATE ${LINKER_FLAGS} SndFile::SndFile alsoft.excommon
              ${UNICODE_FLAG})
