@@ -1,10 +1,12 @@
-$NetBSD: patch-mDNSShared_uds__daemon.c,v 1.1 2014/05/12 15:06:56 ryoon Exp $
+$NetBSD: patch-mDNSShared_uds__daemon.c,v 1.2 2024/11/20 17:56:21 hauke Exp $
 
-Required for OpenBSD 5.5
+Include required for OpenBSD 5.5
 
---- mDNSShared/uds_daemon.c.orig	2010-08-24 00:28:17.000000000 +0000
+MAX() defined, but not in scope, so do it here
+
+--- mDNSShared/uds_daemon.c.orig	2024-09-24 20:38:46.000000000 +0000
 +++ mDNSShared/uds_daemon.c
-@@ -25,6 +25,7 @@
+@@ -24,6 +24,7 @@
  #include <sys/types.h>
  #include <sys/time.h>
  #include <sys/resource.h>
@@ -12,3 +14,15 @@ Required for OpenBSD 5.5
  #endif
  
  #include <stdlib.h>
+@@ -158,6 +159,11 @@ mDNSexport DNameListElem *AutoBrowseDoma
+ #endif
+ #endif
+ 
++/* From dns_common.h */
++#ifndef MAX
++#define MAX(A, B) (((A) > (B)) ? (A) : (B))
++#endif
++
+ //======================================================================================================================
+ // MARK: - Log macro for request state logging.
+ 
