@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/11/20 09:34:59 adam Exp $
 
-DISTNAME=	libcst-1.5.0
+DISTNAME=	libcst-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libcst/}
