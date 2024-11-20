@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/16 09:50:18 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/20 06:19:30 adam Exp $
 
-DISTNAME=	pykka-4.1.0
+DISTNAME=	pykka-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykka/}
