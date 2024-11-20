@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:26 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2024/11/20 01:29:49 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kicad
-PKG_SUPPORTED_OPTIONS=	ng-spice 
-PKG_SUGGESTED_OPTIONS=	ng-spice 
+PKG_SUPPORTED_OPTIONS=	ng-spice
+PKG_SUGGESTED_OPTIONS=	ng-spice
 
 .include "../../mk/bsd.options.mk"
 
