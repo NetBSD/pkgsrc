@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2024/11/09 19:46:54 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2024/11/20 07:46:47 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.29
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
@@ -228,7 +228,7 @@ CARGO_CRATE_DEPENDS+=	jpegxl-rs-0.11.1+libjxl-0.11.0
 SITES.jpegxl-rs-0.11.1+libjxl-0.11.0.crate=     https://static.crates.io/crates/jpegxl-rs/
 CARGO_CRATE_DEPENDS+=	jpegxl-src-0.11.1
 CARGO_CRATE_DEPENDS+=	jpegxl-sys-0.11.1+libjxl-0.11.0
-SITES.jpegxl-sys-0.11.1+libjxl-0.11.0.crate=    https://static.crates.io/crates/jpegxl-sys
+SITES.jpegxl-sys-0.11.1+libjxl-0.11.0.crate=    https://static.crates.io/crates/jpegxl-sys/
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.72
 CARGO_CRATE_DEPENDS+=	khronos-egl-6.0.0
 CARGO_CRATE_DEPENDS+=	khronos_api-3.1.0
