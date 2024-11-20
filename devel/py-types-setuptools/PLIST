@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.23 2024/11/08 14:28:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/11/20 06:23:42 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -29,6 +30,7 @@ ${PYSITELIB}/distutils-stubs/errors.pyi
 ${PYSITELIB}/distutils-stubs/extension.pyi
 ${PYSITELIB}/distutils-stubs/filelist.pyi
 ${PYSITELIB}/distutils-stubs/py.typed
+${PYSITELIB}/distutils-stubs/spawn.pyi
 ${PYSITELIB}/distutils-stubs/sysconfig.pyi
 ${PYSITELIB}/distutils-stubs/util.pyi
 ${PYSITELIB}/pkg_resources-stubs/METADATA.toml
@@ -65,6 +67,7 @@ ${PYSITELIB}/setuptools-stubs/_distutils/dist.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/errors.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/extension.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/filelist.pyi
+${PYSITELIB}/setuptools-stubs/_distutils/spawn.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/sysconfig.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/util.pyi
 ${PYSITELIB}/setuptools-stubs/archive_util.pyi
