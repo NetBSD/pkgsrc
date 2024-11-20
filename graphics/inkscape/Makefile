@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2024/11/17 07:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.301 2024/11/20 13:39:11 jperkin Exp $
 
 DISTNAME=	inkscape-1.4
 PKGREVISION=	4
@@ -93,15 +93,15 @@ post-build:
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
 	${RUN} cd ${DESTDIR}${PREFIX} && \
-		for f in lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.dylib; do	\
+		for f in lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.0.dylib; do	\
 			install_name_tool -id						\
 			${PREFIX}/$$f $$f;						\
 		done
 	${RUN} cd ${DESTDIR}${PREFIX} && \
 		for f in bin/inkscape bin/inkview; do					\
 			install_name_tool -change					\
-			${PREFIX}/lib/libinkscape_base.${PKGVERSION_NOREV}.0.dylib	\
-			${PREFIX}/lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.dylib	\
+			${PREFIX}/lib/libinkscape_base.${PKGVERSION_NOREV}.0.0.dylib	\
+			${PREFIX}/lib/inkscape/libinkscape_base.${PKGVERSION_NOREV}.0.0.dylib	\
 			$$f;								\
 		done
 .endif
