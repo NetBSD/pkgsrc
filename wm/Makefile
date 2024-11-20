@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2024/06/06 20:20:59 ktnb Exp $
+# $NetBSD: Makefile,v 1.178 2024/11/20 13:13:18 wiz Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -73,6 +73,7 @@ SUBDIR+=	olvwm
 SUBDIR+=	openbox
 SUBDIR+=	oroborox
 SUBDIR+=	oroborus
+SUBDIR+=	p5-AnyEvent-I3
 SUBDIR+=	pekwm
 SUBDIR+=	piewm
 SUBDIR+=	progman
