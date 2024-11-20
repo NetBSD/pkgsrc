@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.32 2023/11/06 11:08:52 nia Exp $
+$NetBSD: distinfo,v 1.33 2024/11/20 13:15:06 wiz Exp $
 
-BLAKE2s (i3-4.23.tar.xz) = 7cba7fdc4ccd2898f5409597ecff55b5045cab6edf2d858ccb79309316f9e2ff
-SHA512 (i3-4.23.tar.xz) = 342bd6e9ff952dd2408c9af6e79e0279cb5e7388a510dd461be84a82a5fbedb92fa35065d4b76fd88e392026f2eb4979160891ae468f421935fe5922f58a66ba
-Size (i3-4.23.tar.xz) = 1354628 bytes
+BLAKE2s (i3-4.24.tar.xz) = 14bd55d76c933b89e58ae786dbbc3d2cf7655022a72ada5f50025e92b64ff9fd
+SHA512 (i3-4.24.tar.xz) = 0fddf0f73025ed784b82d274f147f730abb42a00e70684567943acbe941a3329919c76e9f08888c9ee71cc3aaf55e5be3104682481711a5c6aa112d53e511a23
+Size (i3-4.24.tar.xz) = 1358292 bytes
 SHA1 (patch-etc_config) = d3f649e8d4dc7cae7eb3c1548fa8d81224e4dacb
 SHA1 (patch-etc_config.keycodes) = 6adde0b3a56576805facd951fa9d32bfd6c88011
 SHA1 (patch-meson.build) = 013ac42f10aeb1ad05b5496f6283878e53506c46

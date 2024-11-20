@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2024/04/07 07:35:08 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/20 13:15:06 wiz Exp $
 
-DISTNAME=	i3-4.23
-PKGREVISION=	4
+DISTNAME=	i3-4.24
 CATEGORIES=	wm
 MASTER_SITES=	https://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -11,9 +10,15 @@ HOMEPAGE=	https://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
 
+# for i3-save-tree
+DEPENDS+=	p5-AnyEvent-I3>=0.12:../../wm/p5-AnyEvent-I3
+DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash pkg-config perl:run
-USE_LANGUAGES=	c99
+USE_LANGUAGES=	c
+
+USE_CC_FEATURES+=	c99
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lgen -lsocket
