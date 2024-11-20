@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2010/07/14 09:29:04 sbd Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/20 17:56:20 hauke Exp $
 bin/dns-sd
 bin/mDNSClientPosix
-bin/mDNSIdentify
 bin/mDNSNetMonitor
 bin/mDNSProxyResponderPosix
 bin/mDNSResponderPosix
 include/dns_sd.h
 lib/libdns_sd.${SO_SUFFIX}
 man/man1/dns-sd.1
-man/man8/dnsextd.8
 man/man8/mdnsd.8
-sbin/dnsextd
 sbin/mdnsd

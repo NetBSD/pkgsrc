@@ -1,15 +1,11 @@
-$NetBSD: distinfo,v 1.39 2021/10/26 11:05:58 nia Exp $
+$NetBSD: distinfo,v 1.40 2024/11/20 17:56:20 hauke Exp $
 
-BLAKE2s (mDNSResponder-258.14.tar.gz) = 49856d3a34bf3bb978c1c2a4925a02ce6043b6b766d1b3f75d931ca92bdbdef3
-SHA512 (mDNSResponder-258.14.tar.gz) = 910962e965ae7d82203fda8a962f63ea59d5d28fb514d051364759c6c8b37402a6f0e4f8dafd922077ef25a5d0cc4f5ced8166913ca21cd9deca9c465dd7ea33
-Size (mDNSResponder-258.14.tar.gz) = 1833244 bytes
-SHA1 (patch-Clients_dns-sd.c) = 5adac63ba76497056c1abfd426460560b8a3f012
-SHA1 (patch-aa) = 39aa4cec05844864ec6f8987a1026ecd050a9db6
-SHA1 (patch-ab) = 473db16e4d454899c364fb2d9fa8d344d47ca008
-SHA1 (patch-ac) = 9907f0e55d421fccd3d491d4f0d872f328198c19
-SHA1 (patch-ad) = 2492a26a500ebef3902cbd19f0ab7bc9005588a1
-SHA1 (patch-ae) = 49091d627fd3a800ed027566c728022b901d126b
-SHA1 (patch-af) = c0787da4901a9dd4ff02063e11bcd9daf2a5c6b4
-SHA1 (patch-mDNSShared_dnsextd__parser.y) = dde7eca76c2b5158c2ac96764f91ce773464094a
-SHA1 (patch-mDNSShared_dnssd__clientstub.c) = 591801ae08dce4a44c06dd52a46fcd63807eafcc
-SHA1 (patch-mDNSShared_uds__daemon.c) = df279d3871bb6ead1563c79c99c4d2dc6d91ff79
+BLAKE2s (mDNSResponder-2559.1.1.tar.gz) = e72fbea9df78d0cf811e1af6d08483973487210594e165b7b075f0b32f595d97
+SHA512 (mDNSResponder-2559.1.1.tar.gz) = 1112d78e3a46115ffdae4849d847a6cfe1052d6e4a6af3afa6058eb900ac7f7c8fee20874b479ff3d40af2da95a371241f2c821a193f148f844bf9efc06fcc79
+Size (mDNSResponder-2559.1.1.tar.gz) = 3362635 bytes
+SHA1 (patch-mDNSPosix_Makefile) = 3e91025e5e878d0f2552d3f82839db31c67b31d7
+SHA1 (patch-mDNSPosix_mDNSPosix.c) = bfefa8d1252d0ba9afdf6506dd6686492dd1f10b
+SHA1 (patch-mDNSPosix_mDNSUNP.c) = a900ad9991aaee21fbe9094a65900b1d172c2abc
+SHA1 (patch-mDNSShared_CommonServices.h) = b67ab3e9821cb30406ff5cfb1a394c5b18bb0009
+SHA1 (patch-mDNSShared_dnssd__clientstub.c) = 1c9a7d39101feebdac80f4982f1003da343c60e7
+SHA1 (patch-mDNSShared_uds__daemon.c) = c647c27f82cc80a5576d1c934d978260489311e7

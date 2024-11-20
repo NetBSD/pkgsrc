@@ -1,0 +1,15 @@
+$NetBSD: patch-mDNSPosix_Makefile,v 1.1 2024/11/20 17:56:21 hauke Exp $
+
+Set PID_FILE and MDNS_UDS_SERVERPATH in the package Makefile
+
+--- mDNSPosix/Makefile.orig	2024-11-20 16:54:24.312698073 +0000
++++ mDNSPosix/Makefile
+@@ -62,7 +62,7 @@ SOOPTS = -shared
+ CP = cp
+ RM = rm
+ LN = ln -s -f
+-CFLAGS_COMMON = -I$(COREDIR) -I$(SHAREDDIR) -I$(UTILDIR) -I$(DSODIR) -I$(SERVICEREGISTRATIONDIR) -I$(OBJDIR) -fwrapv -W -Wall -DPOSIX_BUILD -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
++CFLAGS_COMMON = -I$(COREDIR) -I$(SHAREDDIR) -I$(UTILDIR) -I$(DSODIR) -I$(SERVICEREGISTRATIONDIR) -I$(OBJDIR) -fwrapv -W -Wall -DPOSIX_BUILD
+ CFLAGS_PTHREAD =
+ LINKOPTS =
+ LINKOPTS_PTHREAD = -lpthread
