@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7091 2024/11/20 12:53:59 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7092 2024/11/20 13:13:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10706,3 +10706,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/parallel-disk-usage to 0.10.0 [pin 2024-11-20]
 	Updated databases/py-pypika-tortoise to 0.2.2 [adam 2024-11-20]
 	Updated databases/py-tortoise-orm to 0.22.0 [adam 2024-11-20]
+	Added wm/p5-AnyEvent-I3 version 0.19 [wiz 2024-11-20]
