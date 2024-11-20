@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/08/06 00:54:16 tnn Exp $
+$NetBSD: distinfo,v 1.15 2024/11/20 01:22:44 mef Exp $
 
-BLAKE2s (kicad-packages3D-8.0.4.tar.bz2) = 89401f7777c6d8cdf63a5e853badcb0e290dfc30da031f2a4db52c4cd96c5ec3
-SHA512 (kicad-packages3D-8.0.4.tar.bz2) = 258bdbe2c6048c790003c1879c75bd8b1e13e626444a2cfd8832afb7b55be01f8e45f3a050024be2855ea43d6150dd155c7659a25e9fcdf54c28fbc07092e5b1
-Size (kicad-packages3D-8.0.4.tar.bz2) = 785528686 bytes
+BLAKE2s (kicad-packages3D-8.0.6.tar.bz2) = 09146e8d322bffe7bc2d5c8a1db5d9c992f5a4180f3d852772f4025a5d29cb47
+SHA512 (kicad-packages3D-8.0.6.tar.bz2) = df53418bdb527ae92cbe6d3220d1cef784f1da65819b49e21f08e3177b88488ab637c318d45502577f20d1486524bd23f0a8e0a0a661f809705e0ea4a5321865
+Size (kicad-packages3D-8.0.6.tar.bz2) = 790799458 bytes
