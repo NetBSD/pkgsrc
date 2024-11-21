@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/08/11 09:56:20 leot Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/21 15:43:04 leot Exp $
 
 DISTNAME=	entr-5.6
 CATEGORIES=	sysutils
@@ -13,16 +13,7 @@ MAKE_ENV+=	MANPREFIX="${PREFIX}/${PKGMANDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
-# Needs kqueue(2) or inotify(7)
-.if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
-MAKE_FILE=		Makefile.bsd
-.elif ${OPSYS} == "Darwin"
-MAKE_FILE=		Makefile.macos
-.elif ${OPSYS} == "Linux"
-MAKE_FILE=		Makefile.linux
-.else
-NOT_FOR_PLATFORM=	${MACHINE_PLATFORM}
-.endif
+HAS_CONFIGURE=	yes
 
 TEST_TARGET=	test
 USE_TOOLS+=	bash:test
