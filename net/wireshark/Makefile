@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.323 2024/11/14 22:21:19 wiz Exp $
+# $NetBSD: Makefile,v 1.324 2024/11/21 07:48:36 adam Exp $
 
-DISTNAME=	wireshark-4.4.1
-PKGREVISION=	3
+DISTNAME=	wireshark-4.4.2
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.xz
@@ -31,15 +30,16 @@ CHECK_PORTABILITY_SKIP+=	tools/bsd-setup.sh
 PTHREAD_OPTS+=		require
 
 PYTHON_FOR_BUILD_ONLY=		yes
-REPLACE_PYTHON+=		tools/asn2deb
-REPLACE_PYTHON+=		tools/asn2wrs.py
-REPLACE_PYTHON+=		tools/html2text.py
-REPLACE_PYTHON+=		tools/idl2deb
-REPLACE_PYTHON+=		tools/indexcap.py
-REPLACE_PYTHON+=		tools/msnchat
-REPLACE_PYTHON+=		tools/ncp2222.py
-REPLACE_PYTHON+=		tools/pkt-from-core.py
-REPLACE_PYTHON+=		tools/rdps.py
+
+REPLACE_PYTHON+=	tools/asn2deb
+REPLACE_PYTHON+=	tools/asn2wrs.py
+REPLACE_PYTHON+=	tools/html2text.py
+REPLACE_PYTHON+=	tools/idl2deb
+REPLACE_PYTHON+=	tools/indexcap.py
+REPLACE_PYTHON+=	tools/msnchat
+REPLACE_PYTHON+=	tools/ncp2222.py
+REPLACE_PYTHON+=	tools/pkt-from-core.py
+REPLACE_PYTHON+=	tools/rdps.py
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__ # for getc_unlocked(3)
 
