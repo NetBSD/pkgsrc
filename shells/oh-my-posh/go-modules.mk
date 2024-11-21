@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.80 2024/11/14 10:29:31 pin Exp $
+# $NetBSD: go-modules.mk,v 1.81 2024/11/21 07:11:53 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -28,8 +28,8 @@ GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	github.com/aymanbagabas/go-osc52/v2/@v/v2.0.1.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/bubbles/@v/v0.20.0.zip
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.2.2.mod
-GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.2.2.zip
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.2.3.mod
+GO_MODULE_FILES+=	github.com/charmbracelet/bubbletea/@v/v1.2.3.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/charmbracelet/lipgloss/@v/v1.0.0.zip
 GO_MODULE_FILES+=	github.com/charmbracelet/x/ansi/@v/v0.4.5.mod
@@ -66,8 +66,8 @@ GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.mod
 GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.zip
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.22.0.mod
-GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.22.0.zip
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.23.0.mod
+GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.23.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.zip
 GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
