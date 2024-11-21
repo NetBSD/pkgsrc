@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/09/19 15:05:53 adam Exp $
+# $NetBSD: Makefile,v 1.25 2024/11/21 06:04:33 adam Exp $
 
-DISTNAME=	pydantic-2.9.2
+DISTNAME=	pydantic-2.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
@@ -13,7 +13,7 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme>=22.5.0:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-annotated-types>=0.6.0:../../lang/py-annotated-types
-DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.23.3:../../devel/py-pydantic-core
+DEPENDS+=	${PYPKGPREFIX}-pydantic-core>=2.27.0:../../devel/py-pydantic-core
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-extensions
 #TEST_DEPENDS+=	${PYPKGPREFIX}-cloudpickle-[0-9]*
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals-[0-9]*:../../devel/py-dirty-equals

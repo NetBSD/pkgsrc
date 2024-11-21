@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/09/07 05:34:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/11/21 06:04:33 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -63,6 +63,9 @@ ${PYSITELIB}/pydantic/_internal/_mock_val_ser.pyo
 ${PYSITELIB}/pydantic/_internal/_model_construction.py
 ${PYSITELIB}/pydantic/_internal/_model_construction.pyc
 ${PYSITELIB}/pydantic/_internal/_model_construction.pyo
+${PYSITELIB}/pydantic/_internal/_namespace_utils.py
+${PYSITELIB}/pydantic/_internal/_namespace_utils.pyc
+${PYSITELIB}/pydantic/_internal/_namespace_utils.pyo
 ${PYSITELIB}/pydantic/_internal/_repr.py
 ${PYSITELIB}/pydantic/_internal/_repr.pyc
 ${PYSITELIB}/pydantic/_internal/_repr.pyo
