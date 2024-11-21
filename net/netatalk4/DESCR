@@ -1,0 +1,21 @@
+Netatalk is a Free and Open Source file server that implements the
+Apple Filing Protocol (AFP) 3.4 over TCP/IP and AppleTalk ddp.
+
+AFP is the primary file sharing protocol used on Apple II, Traditional
+Mac OS, and Mac OS X, as well as one of several supported protocols on
+macOS.
+
+If you have a local network of macOS, Mac OS X, Traditional Mac OS, or
+even Apple II computers, running a Netatalk AppleShare server allows
+you to share, collaborate on, and back up files comfortably.
+
+The latest macOS at the time of writing ships with an AFP client, so
+Netatalk can act as a seamless bridge between new and old Macs. With
+dnsd support, the Netatalk AFP server will be auto-discoverable via
+Bonjour. It supports Time Machine backups.
+
+Compared to cross-platform file sharing protocols like nfs and sftp,
+Netatalk delivers a Mac-like user experience,
+
+Compared to a Samba setup with macOS support, Netatalk comes with a
+lot less complexity.

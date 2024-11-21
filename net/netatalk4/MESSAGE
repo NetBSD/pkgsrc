@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/11/21 15:26:08 hauke Exp $
+
+For users migrating from Netatalk 2, version 4 comes with substantial
+changes, like an all-new config file format.
+
+You are advised to familiarize yourself with the changes in advance;
+use <https://netatalk.io/stable/htmldocs/upgrade> as a starting point.
+
+AppleTalk will require kernel support.
+
+===========================================================================
