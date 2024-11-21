@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7100 2024/11/21 08:17:21 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7101 2024/11/21 08:18:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10719,3 +10719,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/wireshark to 4.4.2 [adam 2024-11-21]
 	Updated net/py-minio to 7.2.11 [adam 2024-11-21]
 	Updated devel/mise to 2024.11.20 [pin 2024-11-21]
+	Updated misc/less to 668 [pin 2024-11-21]
