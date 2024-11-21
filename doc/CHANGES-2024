@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7097 2024/11/21 06:36:11 fox Exp $
+$NetBSD: CHANGES-2024,v 1.7098 2024/11/21 07:12:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10715,3 +10715,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pydantic to 2.10.0 [adam 2024-11-21]
 	Updated devel/py-faker to 33.0.0 [adam 2024-11-21]
 	Updated sysutils/eza to 0.20.8 [fox 2024-11-21]
+	Updated shells/oh-my-posh to 24.6.5 [pin 2024-11-21]
