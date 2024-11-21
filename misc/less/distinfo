@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2024/08/03 13:38:25 pin Exp $
+$NetBSD: distinfo,v 1.27 2024/11/21 08:18:00 pin Exp $
 
-BLAKE2s (less-661.tar.gz) = e11b7023c10fb878a4c824b0b2ac2cb0258f032684248fbf5d96d00195a3bd85
-SHA512 (less-661.tar.gz) = 49d81ff9e79d43ce0271490e3bffd590b4aed5fcb387bc8eb3128de99e5b5a5ede2e2818b546f6e3a140fa6261f1de3dfba1231f7ff7ef18502bb7030eaea1b5
-Size (less-661.tar.gz) = 648198 bytes
+BLAKE2s (less-668.tar.gz) = 3c53781911125281b7c36be58035b7ed00c071d2793dc54bbfd62867aee81f8c
+SHA512 (less-668.tar.gz) = 6527741a609849ec27b6ab35de46f2c5c2b2771391e3efe263207bee28915946f44331a42f832a7cb42231a19b135cbadc15ae02cd997b83a13cdfbc7213fc27
+Size (less-668.tar.gz) = 649770 bytes
 SHA1 (patch-Makefile.in) = 1cc7782c01fcae1481cd1c738014683c7bb0a67a
