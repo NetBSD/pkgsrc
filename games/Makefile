@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.556 2024/11/16 01:57:06 ktnb Exp $
+# $NetBSD: Makefile,v 1.557 2024/11/21 07:37:55 wiz Exp $
 #
 
 COMMENT=	Games
@@ -280,6 +280,7 @@ SUBDIR+=	love11
 SUBDIR+=	lpairs
 SUBDIR+=	lskat
 SUBDIR+=	ltris
+SUBDIR+=	luanti
 SUBDIR+=	lugaru
 SUBDIR+=	maelstrom-sdl
 SUBDIR+=	majesty-demo
@@ -291,7 +292,6 @@ SUBDIR+=	megaglest
 SUBDIR+=	megaglest-data
 SUBDIR+=	mightymike
 SUBDIR+=	minami
-SUBDIR+=	luanti
 SUBDIR+=	mirrormagic
 SUBDIR+=	monsterz
 SUBDIR+=	moon-buggy
