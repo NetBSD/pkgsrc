@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2024/11/11 07:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2024/11/21 06:08:36 adam Exp $
 
-DISTNAME=	faker-28.4.1
+DISTNAME=	faker-33.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Faker/}
@@ -14,6 +14,7 @@ WHEEL_NAME=	Faker-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.4:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-email_validator>=1.0.0:../../mail/py-email_validator
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-ukpostcodeparser>=1.1.1:../../mail/py-ukpostcodeparser
