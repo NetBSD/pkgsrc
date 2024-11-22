@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/02/10 10:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/22 07:20:50 wiz Exp $
 
 DISTNAME=	yodl-1.31.18
 PKGREVISION=	14
@@ -22,6 +22,9 @@ SUBST_STAGE.python=	pre-configure
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+# parser.tab.c:102:10: fatal error: parser.tab.h: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 .include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
