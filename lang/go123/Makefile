@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/08/14 10:04:04 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/22 07:35:27 wiz Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
@@ -44,8 +44,6 @@ REPLACE_BASH+=	src/crypto/internal/boring/build.sh
 REPLACE_BASH+=	src/crypto/internal/boring/build-boring.sh
 REPLACE_BASH+=	src/crypto/internal/boring/build-goboring.sh
 REPLACE_BASH+=	src/go/doc/comment/mkstd.sh
-REPLACE_BASH+=	src/internal/trace/mkcanned.bash
-REPLACE_BASH+=	src/internal/trace/v2/mkexp.bash
 REPLACE_BASH+=	src/cmp.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/race.bash
