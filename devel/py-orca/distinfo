@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/22 21:37:43 bacon Exp $
+
+BLAKE2s (orca-1.8.tar.gz) = a7137360743fa2fe98e3e6c437d186e3618cecf35ecfedf8cb536c48f61390aa
+SHA512 (orca-1.8.tar.gz) = 1a48aba61d8276ca08b64ca70b2427363fd33f0964094c0e2aab4f32d1d000157ce259106776b9f2c6372a2a19a624bcac0b26c384ccb9ccaa53832fd107b796
+Size (orca-1.8.tar.gz) = 19753 bytes
