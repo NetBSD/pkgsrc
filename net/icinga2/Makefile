@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/10/04 03:49:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/22 15:31:29 ryoon Exp $
 
-DISTNAME=	icinga2-2.12.9
-PKGREVISION=	4
+DISTNAME=	icinga2-2.12.11
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,9 +22,9 @@ PKG_USERS_VARS+=	ICINGA2_USER
 PKG_GROUPS_VARS+=	ICINGA2_GROUP ICINGA2_COMMAND_GROUP
 BUILD_DEFS+=		ICINGA2_USER ICINGA2_GROUP ICINGA2_COMMAND_GROUP VARBASE PKG_SYSCONFBASE
 
-USE_LANGUAGES=	c c++ c++11
-USE_CMAKE=	yes
-USE_TOOLS+=	flex bison
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+USE_TOOLS+=		flex bison
 
 PKG_RCD_SCRIPTS=	YES
 RCD_SCRIPTS=		icinga2
@@ -164,6 +163,7 @@ CHECK_FILES_SKIP+=	${PREFIX}/share/examples/icinga2/features-enabled/notificatio
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/icinga2
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/atomic64.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
