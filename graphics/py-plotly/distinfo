@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/22 21:07:08 bacon Exp $
+
+BLAKE2s (plotly-5.24.1.tar.gz) = 674543d118397f336e5bffe5e20de5f51f4ac712d3aeda695f4c2304d5d7abc7
+SHA512 (plotly-5.24.1.tar.gz) = 29acfda97bfcf7d74bdad87339a2ca1dfd403b7cb88ef9157eb8b9fb8a16456777311e5570678277cce5f336dad837864297f52a003686c176ae29b6a2e4112f
+Size (plotly-5.24.1.tar.gz) = 9479398 bytes
