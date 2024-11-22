@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/07/22 13:18:52 bacon Exp $
+$NetBSD: distinfo,v 1.2 2024/11/22 21:41:43 bacon Exp $
 
-BLAKE2s (multiqc-1.14.tar.gz) = c242a4114ee7e84cb98c646d997d29445ad0886c6345c88a5189be4ebf986d20
-SHA512 (multiqc-1.14.tar.gz) = 4dca7bcc94ae1906812046984c2aee0d48ec58987483b27a29c473798f4ed06ded33d0b7e1a46c71642392c6c39f7cc1cee6d97cfdabd80c42eb519be7c86e9f
-Size (multiqc-1.14.tar.gz) = 1054868 bytes
-SHA1 (patch-multiqc_multiqc.py) = 666b3c1a7af2a05582d38540fbfdc32a264120ff
+BLAKE2s (multiqc-1.25.2.tar.gz) = 16e776d47cbbc78460a481d6403523fffb7b580887238c8e9df18cb12c608330
+SHA512 (multiqc-1.25.2.tar.gz) = 38649171bb51fa39cf9b5969891c7b1b12531d4a5b1b15e5f2d886b242546b967c3847afe485b8e0d411809347c998eff35310ad0cbe806dc7bf967c18eac2d0
+Size (multiqc-1.25.2.tar.gz) = 4326758 bytes
+SHA1 (patch-multiqc_multiqc.py) = 3a81d977f6c773e97b3b87d4f8c658958c31f83f

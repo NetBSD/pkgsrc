@@ -1,13 +1,13 @@
-$NetBSD: patch-multiqc_multiqc.py,v 1.1 2023/07/22 13:18:53 bacon Exp $
+$NetBSD: patch-multiqc_multiqc.py,v 1.2 2024/11/22 21:41:43 bacon Exp $
 
-# Ensure proper terminal output
+# Validate env at run time
 
---- multiqc/multiqc.py.orig	2023-05-11 13:19:10 UTC
+--- multiqc/multiqc.py.orig	2024-11-20 15:21:45.000000000 +0000
 +++ multiqc/multiqc.py
-@@ -24,7 +24,13 @@ from urllib.request import urlopen
+@@ -12,7 +12,13 @@ import time
+ import traceback
+ from typing import Optional, Tuple
  
- import jinja2
- import rich
 -import rich_click as click
 +if 'LC_ALL' in os.environ and 'LANG' in os.environ:
 +    import rich_click as click
@@ -16,6 +16,6 @@ $NetBSD: patch-multiqc_multiqc.py,v 1.1 2023/07/22 13:18:53 bacon Exp $
 +    print('in your environment in order for the click module to function.')
 +    print('E.g. export LC_ALL=en_US.UTF-8 or setenv LC_ALL en_US.UTF-8')
 +    sys.exit()
- from rich.syntax import Syntax
  
- from .plots import table
+ from multiqc import config, report, validation
+ from multiqc.core import log_and_rich, plugin_hooks
