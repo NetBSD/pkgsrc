@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.28 2022/03/23 21:16:44 wiz Exp $
+# $NetBSD: Makefile.extension,v 1.29 2024/11/22 15:28:52 jperkin Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -24,7 +24,7 @@ R_PKGVER?=	${DISTNAME:C/.*_//}
 .else
 DISTNAME?=	${R_PKGNAME}_${R_PKGVER}
 .endif
-PKGNAME?=	R-${R_PKGNAME}-${R_PKGVER:S/-/./}
+PKGNAME?=	R-${R_PKGNAME}-${R_PKGVER:S/-/./g}
 MASTER_SITES?=	${MASTER_SITE_R_CRAN:=contrib/} \
 		${MASTER_SITE_R_CRAN:=contrib/Archive/${R_PKGNAME}/}
 DIST_SUBDIR?=	R
