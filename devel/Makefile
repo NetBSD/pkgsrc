@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4361 2024/11/12 15:45:45 riastradh Exp $
+# $NetBSD: Makefile,v 1.4362 2024/11/22 21:38:02 bacon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2769,6 +2769,7 @@ SUBDIR+=	py-nose2
 SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
+SUBDIR+=	py-orca
 SUBDIR+=	py-ordered-set
 SUBDIR+=	py-outcome
 SUBDIR+=	py-overrides
