@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/11/22 13:45:36 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/22 14:20:02 gdt Exp $
 
 DISTNAME=	xmpppy-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xmpppy/}
 GITHUB_PROJECT=	xmpppy
