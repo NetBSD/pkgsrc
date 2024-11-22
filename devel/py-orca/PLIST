@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2024/11/22 21:37:43 bacon Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/orca/__init__.py
+${PYSITELIB}/orca/__init__.pyc
+${PYSITELIB}/orca/__init__.pyo
+${PYSITELIB}/orca/orca.py
+${PYSITELIB}/orca/orca.pyc
+${PYSITELIB}/orca/orca.pyo
+${PYSITELIB}/orca/utils/__init__.py
+${PYSITELIB}/orca/utils/__init__.pyc
+${PYSITELIB}/orca/utils/__init__.pyo
+${PYSITELIB}/orca/utils/logutil.py
+${PYSITELIB}/orca/utils/logutil.pyc
+${PYSITELIB}/orca/utils/logutil.pyo
+${PYSITELIB}/orca/utils/testing.py
+${PYSITELIB}/orca/utils/testing.pyc
+${PYSITELIB}/orca/utils/testing.pyo
+${PYSITELIB}/orca/utils/utils.py
+${PYSITELIB}/orca/utils/utils.pyc
+${PYSITELIB}/orca/utils/utils.pyo
