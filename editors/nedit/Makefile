@@ -1,31 +1,21 @@
-# $NetBSD: Makefile,v 1.60 2019/06/08 10:40:56 rillig Exp $
+# $NetBSD: Makefile,v 1.61 2024/11/22 17:07:09 gutteridge Exp $
 
-DISTNAME=	nedit-${VERS}-src
-PKGNAME=	nedit-${VERS}
-PKGREVISION=	9
+DISTNAME=	nedit-5.7-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=nedit/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nedit.org/
-# Upstream "info@nedit.org" did not reply to a message send on 22 March 2014
-# asking about patches for modern compilers.
-COMMENT=	Motif based standard GUI style text editor
+COMMENT=	Motif-based standard GUI style text editor
 LICENSE=	gnu-gpl-v2
 
-VERS=		5.5
-MASTER_SITE_NEDIT= \
-		http://www.nedit.org/ftp/			\
-		http://nl.nedit.org/ftp/			\
-		ftp://nl.nedit.org/pub/NEdit/			\
-		ftp://ftp.fu-berlin.de/unix/editors/nedit/	\
-		ftp://cri.univ-tlse1.fr/pub/unix/nedit/NEdit/	\
-		ftp://ftp.chg.ru/pub/unix/editors/nedit/
+USE_TOOLS+=	perl
+
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-BUILD_TARGET=		netbsd
+BUILD_TARGET=		netbsd docs
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/nedit
 
 do-install:

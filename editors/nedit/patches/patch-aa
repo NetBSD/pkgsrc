@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.14 2004/05/21 12:13:05 adam Exp $
+$NetBSD: patch-aa,v 1.15 2024/11/22 17:07:09 gutteridge Exp $
 
---- makefiles/Makefile.netbsd.orig	2003-09-28 15:03:10.000000000 +0000
+Provide correct arguments.
+
+--- makefiles/Makefile.netbsd.orig	2017-02-04 17:46:06.000000000 +0000
 +++ makefiles/Makefile.netbsd
-@@ -10,10 +10,10 @@ AR=ar
+@@ -10,9 +10,9 @@ AR=ar
  # To test if the Motif library exports the runtime version
  # add -DHAVE__XMVERSIONSTRING to CFLAGS
  #
@@ -14,5 +16,3 @@ $NetBSD: patch-aa,v 1.14 2004/05/21 12:13:05 adam Exp $
  
  include Makefile.common
  
--verify_config: check_tif_rule
-+verify_config:
