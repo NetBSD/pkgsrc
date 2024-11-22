@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/07/28 10:01:33 leot Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/11/22 18:29:48 leot Exp $
 bin/jrnl-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -107,6 +107,9 @@ ${PYSITELIB}/jrnl/path.pyo
 ${PYSITELIB}/jrnl/plugins/__init__.py
 ${PYSITELIB}/jrnl/plugins/__init__.pyc
 ${PYSITELIB}/jrnl/plugins/__init__.pyo
+${PYSITELIB}/jrnl/plugins/calendar_heatmap_exporter.py
+${PYSITELIB}/jrnl/plugins/calendar_heatmap_exporter.pyc
+${PYSITELIB}/jrnl/plugins/calendar_heatmap_exporter.pyo
 ${PYSITELIB}/jrnl/plugins/dates_exporter.py
 ${PYSITELIB}/jrnl/plugins/dates_exporter.pyc
 ${PYSITELIB}/jrnl/plugins/dates_exporter.pyo
