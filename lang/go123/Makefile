@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/22 07:49:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/22 10:50:38 wiz Exp $
 
 .include "../../lang/go/version.mk"
 GO_BOOTSTRAP_REQD=	120
@@ -24,7 +24,6 @@ USE_TOOLS+=	bash:run perl:run pax
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
-GOROOT_FINAL=		${PREFIX}/go${GOVERSSUFFIX}
 INSTALLATION_DIRS=	bin go${GOVERSSUFFIX}
 
 REPLACE_BASH+=	lib/time/update.bash
@@ -100,12 +99,11 @@ do-build:
 	cd ${WRKSRC}/src && \
 		env \
 		GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} \
-		GOROOT_FINAL=${GOROOT_FINAL:Q} \
 		${GOOPT} \
 		GOCACHE=${WRKDIR}/.cache/go-build \
 		${BASH} ./make.bash -v
 # for RELRO build:
-#	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
+#	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GO_LDFLAGS="-buildmode=pie" ${GOOPT} ${BASH} ./make.bash
 
 do-install:
 	cd ${WRKSRC} && rm -rf pkg/obj pkg/bootstrap
