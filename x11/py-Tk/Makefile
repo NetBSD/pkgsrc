@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/08/19 15:01:59 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2024/11/23 13:34:20 prlw1 Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	x11 python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	python-software-foundation
 
 USE_GCC_RUNTIME=	yes
 
-TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 PYDISTUTILSPKG=		yes
 PY_SETUP_SUBST+=	BLPREFIX=${LOCALBASE}
@@ -20,7 +20,7 @@ PY_SETUP_SUBST+=	TKRTPREFIX=${BUILDLINK_PREFIX.tk}
 PY_SETUP_SUBST+=	X11BASE=${X11BASE}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
-PYTHON_VERSIONS_ACCEPTED=	312 311 310 27
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 CPPFLAGS+=	-I${PREFIX}/include/python${PYVERSSUFFIX}/internal
 
