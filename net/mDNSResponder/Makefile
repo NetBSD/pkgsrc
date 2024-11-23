@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/20 17:56:20 hauke Exp $
+# $NetBSD: Makefile,v 1.46 2024/11/23 21:52:10 jakllsch Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVER}
 GITHUB_PROJECT=	mDNSResponder
@@ -36,7 +36,7 @@ MAKE_ENV.NetBSD+=	os=netbsd
 MAKE_ENV.FreeBSD+=	os=freebsd
 MAKE_ENV.OpenBSD+=	os=openbsd
 MAKE_ENV.SunOS+=	os=solaris
-MAKE_ENV.Linux+=	os=linux
+MAKE_ENV.Linux+=	os=linux tls=no
 MAKE_ENV.Darwin+=	os=x
 MAKE_ENV.*+=		os=netbsd
 
