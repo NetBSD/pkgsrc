@@ -1,0 +1,20 @@
+$NetBSD: patch-docs_configure,v 1.1 2024/11/23 18:51:19 gdt Exp $
+
+Don't try to find pandoc because if it happens to be installed:
+  - the build fails because of some latex footnote issue
+  - it is not declared as a dependency and therefore should be
+    "--without-pandoc" but I can't come up with a CONFIGURE_ARGS
+    incantation that works
+
+--- docs/configure.orig	2024-08-14 13:45:06.000000000 +0000
++++ docs/configure
+@@ -2260,7 +2260,8 @@ IFS=$as_save_IFS
+   ;;
+ esac
+ fi
+-PANDOC=$ac_cv_path_PANDOC
++# Don't ever find pandoc.
++PANDOC=
+ if test -n "$PANDOC"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PANDOC" >&5
+ $as_echo "$PANDOC" >&6; }

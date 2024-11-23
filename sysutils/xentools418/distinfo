@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2024/09/10 12:40:14 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2024/11/23 18:51:19 gdt Exp $
 
 BLAKE2s (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = 82256e7e5d45980590a6493e17a4e133ff63fa28f00aff1963db96371e702448
 SHA512 (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = e1c11e37f53aab0cc6a3ceaace0b8417f07009b1f20ff8572320895fef24f1a796ade041094a024eb24c988b9bed404c556a1fdde809bba89fb49f0e0ff45a57
@@ -18,6 +18,7 @@ Size (xen418/xen-bd51e57.tar.gz) = 6839432 bytes
 SHA1 (patch-.._seabios-rel-1.16.2_src_string.c) = a8861860e63fb38dee3ebca1fce7f470ec7ff000
 SHA1 (patch-Config.mk) = f2c5d83d4738db706e980fbbd0ae889477d87c7d
 SHA1 (patch-configure) = d52bd51ae234ffd0796b0d3c2453e5e5931c9b63
+SHA1 (patch-docs_configure) = 356bd2a67e9717bc7edc62562f46935f0ac5b0de
 SHA1 (patch-docs_man_xl.1.pod.in) = 280a3717b9f15578d90f85392249ef97844b6765
 SHA1 (patch-docs_man_xl.cfg.5.pod.in) = 5970961552f29c4536a884161a208a27a20dccf4
 SHA1 (patch-docs_man_xlcpupool.cfg.5.pod) = ab3a2529cd10458948557fd7ab032e80df8b1d81
