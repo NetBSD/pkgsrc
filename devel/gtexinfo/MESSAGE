@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/03/07 04:00:04 minskim Exp $
-
-For PDF support, please install pdftex/pdflatex (included in
-print/tex-pdftex and print/tex-latex-bin, respectively).
-
-===========================================================================
