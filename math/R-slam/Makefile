@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/01/26 01:41:53 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/23 13:27:34 mef Exp $
 
 R_PKGNAME=	slam
-R_PKGVER=	0.1-50
+R_PKGVER=	0.1-55
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sparse Lightweight Arrays and Matrices
