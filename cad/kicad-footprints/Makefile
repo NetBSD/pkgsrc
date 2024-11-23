@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/08/06 00:54:16 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2024/11/23 09:42:38 mef Exp $
 
-DISTNAME=	kicad-footprints-8.0.4
+DISTNAME=	kicad-footprints-8.0.6
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kicad/libraries/}
 GITLAB_RELEASE=	${PKGVERSION_NOREV}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.kicad.org/
 COMMENT=	Component footprints for the PCB CAD software
 LICENSE=	cc-by-sa-v4.0
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	# none
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
