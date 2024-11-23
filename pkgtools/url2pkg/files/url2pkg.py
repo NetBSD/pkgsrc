@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.56 2024/10/26 19:05:45 schmonz Exp $
+# $NetBSD: url2pkg.py,v 1.57 2024/11/23 22:30:30 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -688,6 +688,9 @@ class Adjuster:
     tool_depends: List[str]
     test_depends: List[str]
 
+    # the Rust dependencies of the package, in the form "package-version".
+    cargo_crate_depends: List[str]
+
     # .include, interleaved with BUILDLINK3_API_DEPENDS.
     # These lines are added at the bottom of the Makefile.
     bl3_lines: List[str]
@@ -736,6 +739,7 @@ class Adjuster:
         self.build_depends = []
         self.tool_depends = []
         self.test_depends = []
+        self.cargo_crate_depends = []
         self.bl3_lines = []
         self.includes = []
         self.build_vars = []
@@ -862,7 +866,7 @@ class Adjuster:
             self.add_dependency(kind, pkgbase, constraint, dep_dir)
 
     def sort_dependencies(self):
-        def key(d):
+        def key(d: str) -> str:
             a = d.removeprefix('# TODO: ')
             return re.sub('[<>=].*', '', a)
 
@@ -870,6 +874,7 @@ class Adjuster:
         self.build_depends.sort(key=key)
         self.tool_depends.sort(key=key)
         self.test_depends.sort(key=key)
+        self.cargo_crate_depends.sort(key=key)
 
     def set_or_add(self, varname: str, value: str):
         if not self.makefile_lines.set(varname, value):
@@ -1083,9 +1088,7 @@ class Adjuster:
 
                 if re.match(r'^source\s=\s"(\S+)"', line):
                     if name != '' and version != '':
-                        self.build_vars.append(Var(
-                            'CARGO_CRATE_DEPENDS', '+=', f'{name}-{version}'
-                        ))
+                        self.cargo_crate_depends.append(f'{name}-{version}')
                     name = ''
                     version = ''
 
@@ -1229,6 +1232,10 @@ class Adjuster:
         lines.add_vars(*build_vars)
         lines.add_vars(*self.extra_vars)
 
+        if self.cargo_crate_depends:
+            lines.add('.include "cargo-depends.mk"')
+            lines.add('')
+
         lines.add(*self.bl3_lines)
         lines.add(*(f'.include "{include}"' for include in self.includes))
 
@@ -1273,6 +1280,14 @@ class Adjuster:
         self.generate_lines().write_to(self.g.pkgdir / 'Makefile')
         descr = (self.g.pkgdir / 'DESCR')
         descr.is_file() or Lines(*self.descr_lines).write_to(descr)
+
+        if self.cargo_crate_depends:
+            lines = Lines()
+            lines.add('# $NetBSD: url2pkg.py,v 1.57 2024/11/23 22:30:30 rillig Exp $')
+            lines.add('')
+            for dep in self.cargo_crate_depends:
+                lines.add(f'CARGO_CRATE_DEPENDS+=\t{dep}')
+            lines.write_to(self.g.pkgdir / 'cargo-depends.mk')
 
         if self.regenerate_distinfo:
             self.g.bmake('distinfo')
