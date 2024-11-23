@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7132 2024/11/23 13:14:05 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7133 2024/11/23 13:15:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10757,3 +10757,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-wheel to 0.45.1 [adam 2024-11-23]
 	Updated math/R-sandwich to 3.1.1 [mef 2024-11-23]
 	Updated math/R-sets to 1.0.25 [mef 2024-11-23]
+	Updated sysutils/eza to 0.20.9 [fox 2024-11-23]
