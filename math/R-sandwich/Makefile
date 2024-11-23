@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2023/06/08 16:04:37 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/11/23 12:30:52 mef Exp $
 
 R_PKGNAME=	sandwich
-R_PKGVER=	3.0-2
+R_PKGVER=	3.1-1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Robust covariance matrix estimators
