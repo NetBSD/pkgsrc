@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.52 2024/10/26 19:05:45 schmonz Exp $
+# $NetBSD: url2pkg_test.py,v 1.53 2024/11/23 22:30:30 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -1063,7 +1063,7 @@ def test_Adjuster_adjust_cargo__not_found(tmp_path: Path):
 
     adjuster.adjust_cargo()
 
-    assert str_vars(adjuster.build_vars) == []
+    assert adjuster.cargo_crate_depends == []
 
 
 def test_Adjuster_adjust_cargo__before_0_39(tmp_path: Path):
@@ -1089,8 +1089,8 @@ def test_Adjuster_adjust_cargo__before_0_39(tmp_path: Path):
 
     adjuster.adjust_cargo()
 
-    assert str_vars(adjuster.build_vars) == [
-        'CARGO_CRATE_DEPENDS+=aes-ctr-0.3.0',
+    assert adjuster.cargo_crate_depends == [
+        'aes-ctr-0.3.0',
     ]
 
 
@@ -1119,8 +1119,8 @@ def test_Adjuster_adjust_cargo__since_0_39(tmp_path: Path):
 
     adjuster.adjust_cargo()
 
-    assert str_vars(adjuster.build_vars) == [
-        'CARGO_CRATE_DEPENDS+=aes-ctr-0.3.0',
+    assert adjuster.cargo_crate_depends == [
+        'aes-ctr-0.3.0',
     ]
 
 
