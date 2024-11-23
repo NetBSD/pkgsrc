@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/06/08 16:01:40 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/11/23 13:13:55 mef Exp $
 
-BLAKE2s (R/sets_1.0-24.tar.gz) = 3b48ffe7914293d85fc6b144d0a686c7df79a864f36b8b2e09a3e2d2ee2bc009
-SHA512 (R/sets_1.0-24.tar.gz) = 39c8b78daa06ff6d01b30d3f6fb776982a01118e6191c83b8ef864084bdc9bb774a5bd2771a1425a36f97782f72ed3001fe759141378c81029ecd2df078bc585
-Size (R/sets_1.0-24.tar.gz) = 275195 bytes
+BLAKE2s (R/sets_1.0-25.tar.gz) = 1d9fab72e91c722ed6d8480f7bb7e3743b08d5b3b976efe1c7330cf485810293
+SHA512 (R/sets_1.0-25.tar.gz) = aac9df6c0ecdcd9e67c109a5eb9e26a82b41261027fad1de706e11041edabf130bd61020bf8f39f06bba1e0cc4aa2a986b8e541d482187136c445c6804075db4
+Size (R/sets_1.0-25.tar.gz) = 275340 bytes
