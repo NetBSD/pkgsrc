@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7177 2024/11/24 10:37:53 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7178 2024/11/24 10:40:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10806,3 +10806,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-orjson to 3.10.12 [wiz 2024-11-24]
 	Updated comms/py-textual to 0.86.3 [wiz 2024-11-24]
 	Updated comms/py-textual-autocomplete to 3.0.0a13 [wiz 2024-11-24]
+	Updated www/py-yarl to 1.18.0 [wiz 2024-11-24]
