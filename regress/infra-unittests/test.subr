@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: test.subr,v 1.18 2021/09/09 18:23:44 rillig Exp $
+# $NetBSD: test.subr,v 1.19 2024/11/24 08:22:47 rillig Exp $
 #
 # This file defines utilities for testing Makefile fragments and shell
 # programs from the pkgsrc infrastructure. While testing one part of the
@@ -365,7 +365,9 @@ assert_that() {
 		;;
 
 	(*)
-		printf 'usage: assert_that <expr> --equals <expr>\n' 1>&2
+		printf '%s\n' \
+		    'usage: assert_that <expr> <operator> <expr>\n' \
+		    '(see test.subr)' 1>&2
 		exit 1
 	esac
 }
