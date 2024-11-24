@@ -1,52 +1,46 @@
-# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/24 09:26:23 adam Exp $
 
-DISTNAME=	py-sydent-2.5.6
-EGG_NAME=	SynapseIdentityServer-0.1
-PKGREVISION=	4
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
-CATEGORIES=	www
-GITHUB_PROJECT=	sydent
-MASTER_SITES=	${MASTER_SITE_GITHUB:=matrix-org/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+DISTNAME=	matrix_sydent-2.6.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/matrix_//}
+CATEGORIES=	www python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-sydent/}
 
 MAINTAINER=	kethzer.dr@gmail.com
 HOMEPAGE=	https://github.com/matrix-org/sydent
 COMMENT=	Matrix Identity Servers
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
-DEPENDS+=	${PYPKGPREFIX}-daemonize>=2.4.7:../../devel/py-daemonize
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-libnacl-[0-9]*:../../security/py-libnacl
-DEPENDS+=	${PYPKGPREFIX}-matrix-common>=0:../../chat/py-matrix-common
-DEPENDS+=	${PYPKGPREFIX}-mock>=0:../../devel/py-mock
-DEPENDS+=	${PYPKGPREFIX}-nacl-[0-9]*:../../security/py-nacl
-DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
-DEPENDS+=	${PYPKGPREFIX}-parameterized-[0-9]*:../../devel/py-parameterized
-DEPENDS+=	${PYPKGPREFIX}-phonenumbers-[0-9]*:../../textproc/py-phonenumbers
-DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
-DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-setuptools_trial-[0-9]*:../../devel/py-setuptools_trial
-DEPENDS+=	${PYPKGPREFIX}-signedjson-[0-9]*:../../security/py-signedjson
-DEPENDS+=	${PYPKGPREFIX}-sortedcontainers-[0-9]*:../../devel/py-sortedcontainers
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64-[0-9]*:../../devel/py-unpaddedbase64
-DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
+DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-matrix-common>=1.1.0:../../chat/py-matrix-common
+DEPENDS+=	${PYPKGPREFIX}-nacl>=1.2.1:../../security/py-nacl
+DEPENDS+=	${PYPKGPREFIX}-netaddr>=0.7.0:../../net/py-netaddr
+DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=8.12.32:../../textproc/py-phonenumbers
+DEPENDS+=	${PYPKGPREFIX}-prometheus_client>=0.4.0:../../net/py-prometheus_client
+DEPENDS+=	${PYPKGPREFIX}-service_identity>=1.0.0:../../security/py-service_identity
+DEPENDS+=	${PYPKGPREFIX}-signedjson>=1.1.1:../../security/py-signedjson
+DEPENDS+=	${PYPKGPREFIX}-sortedcontainers>=2.1.0:../../devel/py-sortedcontainers
+DEPENDS+=	${PYPKGPREFIX}-twisted>=18.4.0:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-unpaddedbase64>=1.1.0:../../devel/py-unpaddedbase64
+DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-zope.interface>=4.6.0:../../devel/py-zope.interface
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
-#USE_LANGUAGES=	# none
+PYTHON_SELF_CONFLICT=	yes
 
 # Avoid the pyNN- prefix in config, doc, and so on.
 HUMAN_PKGNAME=	sydent
 
 .include "../../mk/bsd.prefs.mk"
 
-SYDENT_USER?=			sydent
-SYDENT_GROUP?=			${SYDENT_USER}
-SYDENT_DATA?=			${VARBASE}/db/${HUMAN_PKGNAME}
-BUILD_DEFS+=			SYDENT_USER SYDENT_GROUP SYDENT_DATA VARBASE
+SYDENT_USER?=		sydent
+SYDENT_GROUP?=		${SYDENT_USER}
+SYDENT_DATA?=		${VARBASE}/db/${HUMAN_PKGNAME}
+BUILD_DEFS+=		SYDENT_USER SYDENT_GROUP SYDENT_DATA VARBASE
 
 OWN_DIRS_PERMS+=	${SYDENT_DATA} ${SYDENT_USER} ${SYDENT_GROUP} 0770
 OWN_DIRS_PERMS+=	${SYDENT_DATA}/res ${SYDENT_USER} ${SYDENT_GROUP} 0770
@@ -79,6 +73,5 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/sydent.conf ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
