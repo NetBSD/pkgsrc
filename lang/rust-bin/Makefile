@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2024/10/14 20:52:26 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2024/11/24 16:50:13 he Exp $
 
-DISTNAME=	rust-1.80.1
+DISTNAME=	rust-1.81.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
 CATEGORIES=	lang
 MASTER_SITES=	https://static.rust-lang.org/dist/
@@ -183,14 +183,14 @@ SITES.${DF}=	${NETBSD_REPO}
 .endif
 
 # Illumos:
-#.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
-#RUST_ARCH:=	x86_64-unknown-illumos
-#DN:=		${DISTNAME}
-#EXTRACT_SUFX=	.tar.gz
-#DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
-#DISTFILES:=	${DISTFILES} ${DF}
-#SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
-#.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make(makesum) || make(mdi)
+RUST_ARCH:=	x86_64-unknown-illumos
+DN:=		${DISTNAME}
+EXTRACT_SUFX=	.tar.gz
+DF:=		${DN}-${RUST_ARCH}${EXTRACT_SUFX}
+DISTFILES:=	${DISTFILES} ${DF}
+SITES.${DF}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+.endif
 
 
 # Binary still extracts to plain non-nb'ed directory
