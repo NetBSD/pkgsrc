@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25116 2024/11/23 13:59:50 wiz Exp $
+$NetBSD: TODO,v 1.25117 2024/11/24 09:27:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -732,7 +732,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.3.0
+	o grafana-11.3.1
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
@@ -858,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libheif-1.19.5
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -885,7 +886,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-19.1.3 [wip]
+	o llvm-19.1.4 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -960,6 +961,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
+	o ngtcp2-1.9.0
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o ns-3.14.1
@@ -1120,20 +1122,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pwlib-1.11.1
 	o pxp-1.2.9
 	o py-HappyDoc-3.0
+	o py-JWT-2.10.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
+	o py-cyclonedx-python-lib-8.5.0
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.154.0
 	o py-grpcio-1.68.0
 	o py-hgview-1.9.0
 	o py-hyperscan-0.7.7
+	o py-icalendar-6.1.0
 	o py-input-pad-1.4.2
 	o py-mitmproxy_rs-0.9.3
 	o py-musicbrainz-0.7.4
@@ -1141,17 +1147,24 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-orjson-3.10.12
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-posting-2.3.0
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.8.0
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-0.86.3
+	o py-textual-autocomplete-3.0.0a13
 	o py-tokyocabinet-0.6
 	o py-uliweb-0.6
+	o py-wat-inspector-0.4.3
+	o py-yarl-1.18.0
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
@@ -1257,6 +1270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o swi-prolog-packages-8.3.22
 	o syft-0.68.1
 	o sympa-6.2.72
+	o syncstorage-0.17.15
 	o syncstorage-rs-0.17.13
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1
@@ -1308,6 +1322,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-c-0.23.2
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
