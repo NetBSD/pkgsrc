@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:29:58 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/11/24 08:37:36 wen Exp $
 
-BLAKE2s (HTML-RewriteAttributes-0.05.tar.gz) = 9b3a7132db74fe67a4533390aa2df2d86739e9bccf7d41f1855d716f7720891c
-SHA512 (HTML-RewriteAttributes-0.05.tar.gz) = 6a654dd2767010781f7fd145110dda4ebe71ed82aa6fea5932fa301b23f885d928c7dc0cea562ab5c5cd4f0881dadd590c4a4ae052285fcd261ac4ee9d25eb70
-Size (HTML-RewriteAttributes-0.05.tar.gz) = 27696 bytes
+BLAKE2s (HTML-RewriteAttributes-0.06.tar.gz) = 22ebe0456839f8d60f20b90c910df8cb4a1e1e99407fbe83a6f03e74899fd62b
+SHA512 (HTML-RewriteAttributes-0.06.tar.gz) = a1791c1179475cf6d303c600c50c44e4df30e00fbe0d52e110eef61def7ab5c76f0bf5090e2b628620ceb5ac779affff5c225021793d08b8e662781037e0238f
+Size (HTML-RewriteAttributes-0.06.tar.gz) = 26989 bytes
 SHA1 (patch-Makefile.PL) = da718e3880c3b0350fa8c9a4232e65bb52eb17a3
