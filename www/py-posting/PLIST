@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/11/17 09:44:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/11/24 10:44:23 wiz Exp $
 bin/posting-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -24,6 +24,9 @@ ${PYSITELIB}/posting/commands.pyo
 ${PYSITELIB}/posting/config.py
 ${PYSITELIB}/posting/config.pyc
 ${PYSITELIB}/posting/config.pyo
+${PYSITELIB}/posting/exit_codes.py
+${PYSITELIB}/posting/exit_codes.pyc
+${PYSITELIB}/posting/exit_codes.pyo
 ${PYSITELIB}/posting/files.py
 ${PYSITELIB}/posting/files.pyc
 ${PYSITELIB}/posting/files.pyo
