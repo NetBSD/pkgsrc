@@ -1,0 +1,5 @@
+The configuration format defined by 'TOML' (which expands to "Tom's
+Obvious Markup Language") specifies an excellent format (described at
+<https://toml.io/en/>) suitable for both human editing as well as the
+common uses of a machine-readable format. This package uses 'Rcpp' to
+connect to the 'toml++' parser written by Mark Gillard to R.
