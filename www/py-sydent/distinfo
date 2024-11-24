@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/09/06 12:01:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/11/24 09:26:23 adam Exp $
 
-BLAKE2s (py-sydent-2.5.6.tar.gz) = 296a96190d92c31185ca9ccef5697204931b3e52ab20737450681238f1dd9628
-SHA512 (py-sydent-2.5.6.tar.gz) = 1e832cf2d25b5bb6b2f3fed62e793eac527c48edd9c7abe90a2aea734c2cc39dd97c76de254a5592523706d43098a77ad943099ab6b968d5244774e9a5acc0ae
-Size (py-sydent-2.5.6.tar.gz) = 173104 bytes
-SHA1 (patch-setup.py) = a03f12998c5ef89be2f0e89266e133eb8b23954b
+BLAKE2s (matrix_sydent-2.6.1.tar.gz) = 725d6444a6c2619cc1d7b797732213a54424b7a2b19b0566e072c021d568ce08
+SHA512 (matrix_sydent-2.6.1.tar.gz) = 004fa79ee85eef76465599e694ac08cd4dfebb0339ae84e2b4426815490feaa8920d229fe0c143c3b6bf9eb83fac73f18f7f677143e70cdbdad840cb5b9b1a06
+Size (matrix_sydent-2.6.1.tar.gz) = 119685 bytes
