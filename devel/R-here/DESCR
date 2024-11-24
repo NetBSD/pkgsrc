@@ -1,0 +1,4 @@
+Constructs paths to your project's files. Declare the relative path of
+a file within your project with 'i_am()'. Use the 'here()' function as
+a drop-in replacement for 'file.path()', it will always locate the
+files relative to your project root.
