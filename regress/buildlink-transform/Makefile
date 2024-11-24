@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/11/24 08:34:45 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/24 08:58:29 rillig Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -78,7 +78,7 @@ TEST_RESULT=	runtest=`${SETENV} ${REGRESS_ENV} regress $$test`;	\
 		${ECHO} "(${.TARGET}) got:      $$runtest";		\
 		${ECHO} "(${.TARGET}) expected: $$expected";		\
 		case $$runtest in					\
-		$$expected)						\
+		$$expected | "$$expected")				\
 			${ECHO} "(${.TARGET}) result:   PASS";		\
 			${ECHO} "${.TARGET}" >> ${PASSED_TESTS};	\
 			;;						\
