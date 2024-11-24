@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/11/11 07:29:16 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/11/24 20:00:42 adam Exp $
 
-DISTNAME=	channels-4.1.0
+DISTNAME=	channels-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/channels/}
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-daphne>=4.0.0:../../www/py-daphne
 DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
