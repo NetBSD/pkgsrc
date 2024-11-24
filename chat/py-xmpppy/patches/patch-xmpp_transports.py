@@ -1,4 +1,4 @@
-$NetBSD: patch-xmpp_transports.py,v 1.4 2024/11/22 14:20:02 gdt Exp $
+$NetBSD: patch-xmpp_transports.py,v 1.5 2024/11/24 00:52:59 gdt Exp $
 
 Adapt to ssl usage in python 3.12 and up.
 
@@ -14,12 +14,11 @@ See
 
 --- xmpp/transports.py.orig	2022-04-10 18:25:44.000000000 +0000
 +++ xmpp/transports.py
-@@ -383,8 +383,14 @@ class TLS(PlugIn):
+@@ -383,8 +383,13 @@ class TLS(PlugIn):
      def _startSSL(self):
          """ Immidiatedly switch socket to TLS mode. Used internally."""
          """ Here we should switch pending_data to hint mode."""
-+        context=ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-+        context.set_default_verify_paths()
++        context=ssl.create_default_context()
 +        # Uncomment if you need to work around trust anchor configuration.
 +        #context.check_hostname = False
 +        #context.verify_mode = ssl.CERT_NONE
