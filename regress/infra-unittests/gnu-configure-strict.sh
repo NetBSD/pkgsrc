@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: gnu-configure-strict.sh,v 1.5 2020/05/23 12:11:33 rillig Exp $
+# $NetBSD: gnu-configure-strict.sh,v 1.6 2024/11/24 08:22:47 rillig Exp $
 #
 # Tests for GNU_CONFIGURE_STRICT handling in mk/configure/gnu-configure.mk.
 #
@@ -23,6 +23,7 @@ test_case_set_up() {
 		GNU_CONFIGURE_PREFIX= unused-GNU_CONFIGURE_PREFIX
 		PREFIX=		unused-PREFIX
 		OPSYS=		NetBSD
+		MACHINE_PLATFORM= NetBSD-10.0-amd64
 		WRKDIR=		$PWD
 		WRKSRC=		$PWD
 
@@ -120,7 +121,7 @@ if test_case_begin 'some unknown options'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"_check-unknown-configure-options\" in $PWD"
 
 	test_case_end
 fi
@@ -164,7 +165,7 @@ if test_case_begin 'unknown options in multiple configures'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"_check-unknown-configure-options\" in $PWD"
 
 	test_case_end
 fi
@@ -394,7 +395,7 @@ if test_case_begin 'realistic example from gettext-tools-0.20.2 as of 2020-05-21
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"_check-unknown-configure-options\" in $PWD"
 
 	test_case_end
 fi

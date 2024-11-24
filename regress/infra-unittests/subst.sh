@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.50 2020/06/20 16:26:11 rillig Exp $
+# $NetBSD: subst.sh,v 1.51 2024/11/24 08:22:47 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -271,7 +271,7 @@ if test_case_begin 'single file noop, noop_ok=no'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-class\" in $PWD"
 	assert_that 'single' --file-is-lines 'already an example'
 	assert_that "$exitcode" --equals '1'
 
@@ -302,7 +302,7 @@ if test_case_begin 'single file nonexistent'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-class\" in $PWD"
 	assert_that "$exitcode" --equals '1'
 
 	test_case_end
@@ -387,7 +387,7 @@ if test_case_begin 'several filename patterns, 1 nonexistent, no-op not ok'; the
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-class\" in $PWD"
 	assert_that 'exists' --file-is-lines 'this example exists'
 	assert_that "$exitcode" --equals '1'
 
@@ -420,7 +420,7 @@ if test_case_begin 'multiple missing files, all are reported at once, no-op not 
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure\" in $PWD"
 	assert_that "$exitcode" --equals '1'
 
 	test_case_end
@@ -482,7 +482,7 @@ if test_case_begin 'multiple no-op files, all are reported at once, no-op not ok
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure\" in $PWD"
 	assert_that "$exitcode" --equals '1'
 
 	test_case_end
@@ -1035,7 +1035,7 @@ if test_case_begin 'pattern matches only directory'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure\" in $PWD"
 	assert_that "$tmpdir/stderr" --file-is-lines \
 		'fail: [subst.mk:dir] The filename pattern "sub*" has no effect.'
 	assert_that "$exitcode" --equals 1
@@ -1073,7 +1073,7 @@ if test_case_begin 'two filename patterns have no effect'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure\" in $PWD"
 
 	test_case_end
 fi
@@ -1133,7 +1133,7 @@ if test_case_begin 'empty SUBST_SED'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-id all\" in $PWD"
 
 	test_case_end
 fi
@@ -1167,7 +1167,7 @@ if test_case_begin 'typo in SUBST_CLASSES'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure all\" in $PWD"
 
 	test_case_end
 fi
@@ -1223,14 +1223,16 @@ if test_case_begin 'unreadable file'; then
 	run_bmake 'testcase.mk' 'pre-configure' 1> "$tmpdir/output" 2>&1 \
 	&& exitcode=0 || exitcode=$?
 
+	awk_cmd='/cannot open unreadable-file/ { sub(/:/, "", $1); print $1; exit }'
+	cmd_file=$(awk "$awk_cmd" "$tmpdir/output")
 	assert_that "$tmpdir/output" --file-is-lines \
 		'=> Substituting "id" in unreadable-file' \
-		'sh: cannot open unreadable-file: permission denied' \
-		'sh: cannot open unreadable-file: permission denied' \
+		"$cmd_file: cannot open unreadable-file: permission denied" \
+		"$cmd_file: cannot open unreadable-file: permission denied" \
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"pre-configure\" in $PWD"
 
 	test_case_end
 fi
@@ -1425,7 +1427,7 @@ if test_case_begin 'identity substitution, not found in file'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-id\" in $PWD"
 
 	test_case_end
 fi
@@ -1486,7 +1488,7 @@ if test_case_begin 'identity + no-op substitution'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-id\" in $PWD"
 	assert_that 'file' --file-is-lines \
 		'other'
 
@@ -1563,7 +1565,7 @@ if test_case_begin 'SUBST_FILTER_CMD + empty SUBST_SED'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"show-pkg-fail-reasons subst-id\" in $PWD"
 
 	test_case_end
 fi
@@ -1617,7 +1619,7 @@ if test_case_begin 'no-op SUBST_FILTER_CMD in NOOP_OK=no mode'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-id\" in $PWD"
 
 	assert_that 'file' --file-is-lines \
 		'only letters'
@@ -1677,7 +1679,7 @@ if test_case_begin 'multiple sed commands with semicolon'; then
 		'*** Error code 1' \
 		'' \
 		'Stop.' \
-		"$make: stopped in $PWD"
+		"$make: stopped making \"subst-id\" in $PWD"
 
 	test_case_end
 fi

@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: extract.sh,v 1.5 2020/05/11 19:13:10 rillig Exp $
+# $NetBSD: extract.sh,v 1.6 2024/11/24 08:22:47 rillig Exp $
 #
 # Test cases for mk/extract/extract.
 #
@@ -43,12 +43,11 @@ if test_case_begin "exclude directory by basename"; then
 	test_case_end
 fi
 
-if test_case_begin "try to exclude directory by pattern with slash"; then
+if test_case_begin "exclude directory by pattern with slash"; then
 
-	# Having exclusion patterns with slash does not work at all for
-	# the default tar extractor. The patterns are matched against
-	# the basename of the file to be extracted, and that basename
-	# obviously cannot contain a slash.
+	# The exclusion patterns may contain slashes. These patterns are
+	# matched against the full pathname to be extracted, but they are
+	# not anchored at the beginning of the pathname.
 
 	create_file_lines "contrib/file"	"content"
 	create_file_lines "other/file"		"content"
@@ -63,9 +62,7 @@ if test_case_begin "try to exclude directory by pattern with slash"; then
 
 	assert_that "$tmpdir/extracted" --file-is-lines \
 		"." \
-		"./contrib" \
 		"./other" \
-		"./other/contrib" \
 		"./other/file"
 
 	test_case_end
