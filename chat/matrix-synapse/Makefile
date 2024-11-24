@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/11/24 13:57:45 js Exp $
+# $NetBSD: Makefile,v 1.103 2024/11/24 14:57:46 gdt Exp $
 
 DISTNAME=	matrix-synapse-1.114.0
 PKGREVISION=	1
@@ -107,7 +107,10 @@ SUBST_VARS.pl=			SYNAPSE_DEFAULT_CREATOR_PL
 BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 
 post-patch:
-	# Otherwise, these files are installed and pollute the PLIST.
+	# synapse apparently installs "*", wrongly putting foo.orig in
+	# the package.  Remove them.  \todo This should be just before
+	# install, so that a "make" and "pkgvi" session followed by
+	# "mkpatches" will still work.
 	cd ${WRKSRC} && find . -name '*.orig' | xargs rm
 
 post-install:
