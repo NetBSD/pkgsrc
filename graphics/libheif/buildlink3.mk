@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/11/04 21:07:34 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2024/11/24 06:59:07 adam Exp $
 
 BUILDLINK_TREE+=	libheif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libheif
 LIBHEIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libheif+=	libheif>=1.8.0
-BUILDLINK_ABI_DEPENDS.libheif+=	libheif>=1.18.2nb2
+BUILDLINK_ABI_DEPENDS.libheif+=	libheif>=1.19.2nb2
 BUILDLINK_PKGSRCDIR.libheif?=	../../graphics/libheif
 
 .include "../../graphics/png/buildlink3.mk"
