@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2024/11/16 12:07:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/24 08:37:36 wen Exp $
 
-DISTNAME=	HTML-RewriteAttributes-0.05
+DISTNAME=	HTML-RewriteAttributes-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	12
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
