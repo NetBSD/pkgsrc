@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.40 2021/10/26 10:54:18 nia Exp $
+$NetBSD: distinfo,v 1.41 2024/11/24 09:19:21 wiz Exp $
 
-BLAKE2s (MailTools-2.21.tar.gz) = edeb2e2216b56812a822a6abc17b4117104155ed19267f92bc93a36907eb0a03
-SHA512 (MailTools-2.21.tar.gz) = 70c7e5760691a1fc0a2812c48a632896db9bf719d3cb07a63c3a4456c5a365855c7f71c7436c84e5085374628f26ad31fcf13e74b3b7242911da59b7916065a0
-Size (MailTools-2.21.tar.gz) = 58013 bytes
+BLAKE2s (MailTools-2.22.tar.gz) = 97e7294439c74b195b07e4280b475af67528f8d7e205104a20279f746fea4e72
+SHA512 (MailTools-2.22.tar.gz) = 5bab5af263cbbf1483ebb210086d101ac1d4517dcb30aaba8124a2cc71e3667c32ca19fc2bc169cd646af1a6bb4f7afee84535d1a93668658e1d74f4dc70c3e0
+Size (MailTools-2.22.tar.gz) = 58647 bytes
