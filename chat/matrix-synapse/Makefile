@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2024/09/14 20:28:31 js Exp $
+# $NetBSD: Makefile,v 1.102 2024/11/24 13:57:45 js Exp $
 
 DISTNAME=	matrix-synapse-1.114.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=element-hq/}
 GITHUB_PROJECT=	synapse
@@ -106,8 +107,8 @@ SUBST_VARS.pl=			SYNAPSE_DEFAULT_CREATOR_PL
 BUILD_DEFS+=			SYNAPSE_DEFAULT_CREATOR_PL
 
 post-patch:
-	# Otherwise, this file is installed and pollutes PLIST.
-	rm ${WRKSRC}/synapse/handlers/room.py.orig
+	# Otherwise, these files are installed and pollute the PLIST.
+	cd ${WRKSRC} && find . -name '*.orig' | xargs rm
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
