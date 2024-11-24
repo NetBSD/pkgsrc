@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7147 2024/11/24 07:29:02 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7148 2024/11/24 07:32:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10774,3 +10774,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-ninja to 1.11.1.2 [adam 2024-11-24]
 	Updated www/py-aiohttp to 3.11.7 [adam 2024-11-24]
 	Updated www/py-aiohttp-socks to 0.9.1 [adam 2024-11-24]
+	Updated math/R-units to 0.8.5 [mef 2024-11-24]
