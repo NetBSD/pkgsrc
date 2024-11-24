@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4362 2024/11/22 21:38:02 bacon Exp $
+# $NetBSD: Makefile,v 1.4363 2024/11/24 10:34:57 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -51,6 +51,7 @@ SUBDIR+=	R-gert
 SUBDIR+=	R-git2r
 SUBDIR+=	R-globals
 SUBDIR+=	R-glue
+SUBDIR+=	R-here
 SUBDIR+=	R-ini
 SUBDIR+=	R-inline
 SUBDIR+=	R-iterators
