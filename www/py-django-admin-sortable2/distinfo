@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/10/24 07:31:55 adam Exp $
+$NetBSD: distinfo,v 1.24 2024/11/24 20:03:42 adam Exp $
 
-BLAKE2s (django_admin_sortable2-2.2.3.tar.gz) = 396ff68999009f7a797caccabafc115ffd5ea60d9b732c02d36e25d20b2955f0
-SHA512 (django_admin_sortable2-2.2.3.tar.gz) = ac77c9a3ff78473cc61e0cd5e658ac989c99f6f152edc4096a915e71ce915246d163deda93b8461c40ee6b915db886a29caf78b21e05179fe399c1d1359035bb
-Size (django_admin_sortable2-2.2.3.tar.gz) = 67637 bytes
+BLAKE2s (django_admin_sortable2-2.2.4.tar.gz) = 5f368c989db14faf8c4101c549b56331a322a0701d4e785d6f37da457e184b54
+SHA512 (django_admin_sortable2-2.2.4.tar.gz) = 9ff5909eb3660edc73fe8401e1ca0cfd90bda9725bb084cb68eb25e9dc0ea8df0c55918b7497805c1962d301beee23bd5a37184b1abca314351877b012ee4d94
+Size (django_admin_sortable2-2.2.4.tar.gz) = 68207 bytes
