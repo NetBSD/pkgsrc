@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/12/18 14:12:22 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/11/24 07:46:25 mef Exp $
 
-BLAKE2s (R/urca_1.3-3.tar.gz) = 60d11104331b8bc85086a8b7ae3e861010314bfe639a6d64f4eaca7333c35168
-SHA512 (R/urca_1.3-3.tar.gz) = 1b393abe615d8f3e4556e7b5a0057d8a0ee9720219fbf266676b0e8a96ef9657845f648063b95ef05f6964cb48138222bfe838413ed4260886a6408126e64687
-Size (R/urca_1.3-3.tar.gz) = 682649 bytes
+BLAKE2s (R/urca_1.3-4.tar.gz) = f77f9405b69cb0a9a812cd8c9ac6e19876422d630b9bf1e1092e2bb697ebbb88
+SHA512 (R/urca_1.3-4.tar.gz) = eaddf543eea9d02586d71eadb80d35a57c3c76a915cc1677f69529178f9b55f51af4c90b4c2a94ec679c6cfcd40e06dfa44aca0aded6d44fc6931075b9dc8456
+Size (R/urca_1.3-4.tar.gz) = 680691 bytes
