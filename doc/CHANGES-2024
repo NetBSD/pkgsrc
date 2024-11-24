@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7161 2024/11/24 08:59:44 wen Exp $
+$NetBSD: CHANGES-2024,v 1.7162 2024/11/24 09:02:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10787,4 +10787,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/p5-HTTP-DAV to 0.50 [wen 2024-11-24]
 	Updated time/p5-DateTime-Format-Flexible to 0.36 [wen 2024-11-24]
 	Updated time/p5-DateTime-Format-HTTP to 0.43 [wen 2024-11-24]
+	Added lang/R-RcppTOML version 0.2.2 [mef 2024-11-24]
 	Updated devel/p5-Perl-Tidy to 20240903 [wen 2024-11-24]
