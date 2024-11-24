@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.57 2024/11/23 22:30:30 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.58 2024/11/24 07:21:58 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1283,7 +1283,7 @@ class Adjuster:
 
         if self.cargo_crate_depends:
             lines = Lines()
-            lines.add('# $NetBSD: url2pkg.py,v 1.57 2024/11/23 22:30:30 rillig Exp $')
+            lines.add('# $NetBSD: url2pkg.py,v 1.58 2024/11/24 07:21:58 rillig Exp $')
             lines.add('')
             for dep in self.cargo_crate_depends:
                 lines.add(f'CARGO_CRATE_DEPENDS+=\t{dep}')
@@ -1327,8 +1327,11 @@ def main(argv: List[str], g: Globals):
                  f'(.../pkgsrc/category[/package])')
 
     initial_lines = Generator(url).generate_package(g)
-    Adjuster(g, url, initial_lines).adjust()
+    adjuster = Adjuster(g, url, initial_lines)
+    adjuster.adjust()
     g.bmake('clean')
+    if adjuster.cargo_crate_depends:
+        g.bmake('distinfo')
     g.bmake('extract')
 
     g.out.write('\n')
