@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2022/08/24 13:54:02 wiz Exp $
-bin/mailparser
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2024/11/24 19:53:46 adam Exp $
+bin/mail-parser-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/mailparser/__init__.py
 ${PYSITELIB}/mailparser/__init__.pyc
 ${PYSITELIB}/mailparser/__init__.pyo
@@ -15,12 +16,12 @@ ${PYSITELIB}/mailparser/__main__.pyo
 ${PYSITELIB}/mailparser/const.py
 ${PYSITELIB}/mailparser/const.pyc
 ${PYSITELIB}/mailparser/const.pyo
+${PYSITELIB}/mailparser/core.py
+${PYSITELIB}/mailparser/core.pyc
+${PYSITELIB}/mailparser/core.pyo
 ${PYSITELIB}/mailparser/exceptions.py
 ${PYSITELIB}/mailparser/exceptions.pyc
 ${PYSITELIB}/mailparser/exceptions.pyo
-${PYSITELIB}/mailparser/mailparser.py
-${PYSITELIB}/mailparser/mailparser.pyc
-${PYSITELIB}/mailparser/mailparser.pyo
 ${PYSITELIB}/mailparser/utils.py
 ${PYSITELIB}/mailparser/utils.pyc
 ${PYSITELIB}/mailparser/utils.pyo

@@ -1,0 +1,1 @@
+bin/mail-parser @PREFIX@/bin/mail-parser-@PYVERSSUFFIX@
