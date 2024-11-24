@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/02 13:49:35 mef Exp $
+$NetBSD: distinfo,v 1.6 2024/11/24 04:24:23 mef Exp $
 
-BLAKE2s (R/stringdist_0.9.10.tar.gz) = c9755fc00a5730717c97cb2829b5324ea564e7b798ad86f09876718f976e1d7c
-SHA512 (R/stringdist_0.9.10.tar.gz) = 633af7fea1fd44504b65e4b520e4bde0a7c492674761d4d52f5a4cb628d47cb0f22ca9596bdc2957fa85c864f8611ffdbba3edc87cc24e986955478bd46d3721
-Size (R/stringdist_0.9.10.tar.gz) = 862221 bytes
+BLAKE2s (R/stringdist_0.9.12.tar.gz) = 7179df7e7b20857454806862cd99a845425928aeedce50053ce90b35e220ec85
+SHA512 (R/stringdist_0.9.12.tar.gz) = 25cde28d8b8fde944f8cca8ed444733a987d620f3c0c33b503113e9ee65ac5efffb5aafe8e608d88442c5b65124ef66f84ec3b6edb300291b8bccf361c839624
+Size (R/stringdist_0.9.12.tar.gz) = 862306 bytes
