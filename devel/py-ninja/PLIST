@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/12 17:45:15 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_Apache_20
+@comment $NetBSD: PLIST,v 1.2 2024/11/24 07:21:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE_Apache_20
 ${PYSITELIB}/ninja/__init__.py
 ${PYSITELIB}/ninja/__init__.pyc
 ${PYSITELIB}/ninja/__init__.pyo
@@ -14,9 +12,11 @@ ${PYSITELIB}/ninja/__main__.pyc
 ${PYSITELIB}/ninja/__main__.pyo
 ${PYSITELIB}/ninja/_version.py
 ${PYSITELIB}/ninja/_version.pyc
+${PYSITELIB}/ninja/_version.pyi
 ${PYSITELIB}/ninja/_version.pyo
 ${PYSITELIB}/ninja/data/bin/ninja
 ${PYSITELIB}/ninja/ninja_syntax.py
 ${PYSITELIB}/ninja/ninja_syntax.pyc
+${PYSITELIB}/ninja/ninja_syntax.pyi
 ${PYSITELIB}/ninja/ninja_syntax.pyo
 ${PYSITELIB}/ninja/py.typed
