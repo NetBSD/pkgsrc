@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.4 2024/10/03 20:13:23 bsiegert Exp $
+# $NetBSD: cargo-depends.mk,v 1.5 2024/11/24 20:04:03 bsiegert Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -53,11 +53,11 @@ CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
 CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.1
 CARGO_CRATE_DEPENDS+=	futures-channel-0.3.30
-CARGO_CRATE_DEPENDS+=	futures-core-0.3.30
-CARGO_CRATE_DEPENDS+=	futures-io-0.3.30
-CARGO_CRATE_DEPENDS+=	futures-sink-0.3.30
-CARGO_CRATE_DEPENDS+=	futures-task-0.3.30
-CARGO_CRATE_DEPENDS+=	futures-util-0.3.30
+CARGO_CRATE_DEPENDS+=	futures-core-0.3.31
+CARGO_CRATE_DEPENDS+=	futures-io-0.3.31
+CARGO_CRATE_DEPENDS+=	futures-sink-0.3.31
+CARGO_CRATE_DEPENDS+=	futures-task-0.3.31
+CARGO_CRATE_DEPENDS+=	futures-util-0.3.31
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.15
 CARGO_CRATE_DEPENDS+=	gimli-0.31.0
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.0
@@ -215,7 +215,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
 CARGO_CRATE_DEPENDS+=	winnow-0.6.20
 CARGO_CRATE_DEPENDS+=	xdg-2.5.2
-CARGO_CRATE_DEPENDS+=	yansi-0.5.1
+CARGO_CRATE_DEPENDS+=	yansi-1.0.1
 CARGO_CRATE_DEPENDS+=	zerocopy-0.7.35
 CARGO_CRATE_DEPENDS+=	zerocopy-derive-0.7.35
 CARGO_CRATE_DEPENDS+=	zeroize-1.8.1
