@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2024/11/16 10:13:44 adam Exp $
+# $NetBSD: Makefile,v 1.723 2024/11/24 09:31:35 adam Exp $
 
 COMMENT=	Databases
 
@@ -69,7 +69,6 @@ SUBDIR+=	kldap
 SUBDIR+=	kyotocabinet
 SUBDIR+=	lbdb
 SUBDIR+=	ldapvi
-SUBDIR+=	ldb
 SUBDIR+=	leveldb
 SUBDIR+=	libcassandra
 SUBDIR+=	libdbh2
