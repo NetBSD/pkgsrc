@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2019/03/24 21:09:21 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/24 08:34:45 rillig Exp $
 
 DISTNAME=	regress-buildlink-libtool-0.0
 CATEGORIES=	regress
@@ -35,8 +35,6 @@ do-regress:
 			${ECHO} "	$$test";			\
 		done;							\
 		exit 1;							\
-	else								\
-		${DO_NADA};						\
 	fi
 
 report-failed:

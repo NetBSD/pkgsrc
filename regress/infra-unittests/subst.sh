@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: subst.sh,v 1.51 2024/11/24 08:22:47 rillig Exp $
+# $NetBSD: subst.sh,v 1.52 2024/11/24 08:34:46 rillig Exp $
 #
 # Tests for mk/subst.mk.
 #
@@ -30,7 +30,6 @@ test_case_set_up() {
 		# Commands that are specific to pkgsrc
 		RUN=		@set -e;
 		STEP_MSG=	echo '=>'
-		DO_NADA=	: do-nada
 		INFO_MSG=	echo 'info:'
 		WARNING_MSG=	echo 'warning:'
 		FAIL_MSG=	sh $pkgsrcdir/mk/scripts/fail echo 'fail:' 1>&2
