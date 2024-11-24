@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.11 2018/01/07 11:23:37 rillig Exp $
+# $NetBSD: bsd.checksum.mk,v 1.12 2024/11/24 07:31:40 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -40,7 +40,7 @@
 #
 #	Default value: undefined
 #
-# Keywords: distinfo
+# Keywords: distinfo makepatchsum mps makedistinfo mdi
 
 .PHONY: checksum checksum-phase
 .PHONY: makesum makepatchsum mps mdi makedistinfo distinfo
