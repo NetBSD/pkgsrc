@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2023/12/18 13:35:44 mef Exp $
+$NetBSD: distinfo,v 1.35 2024/11/24 09:21:38 wiz Exp $
 
-BLAKE2s (Module-ScanDeps-1.35.tar.gz) = b5399fc91947a11188b5c6901e15b79c02fe7a5fb79c6f4067f620d71330b794
-SHA512 (Module-ScanDeps-1.35.tar.gz) = 314a8098883995d876bfae7760b569ade56eed1940e50f92a509fd0f2c0020d57da859bb8848c56a9e1dcb4acd62cd246c39424bc1c30d71c6defc9f491518b9
-Size (Module-ScanDeps-1.35.tar.gz) = 59289 bytes
+BLAKE2s (Module-ScanDeps-1.37.tar.gz) = b7d1b00c6bd95a24cd6dd4c44fb261c6cfad2243ddc17c5719e14938efa48b5f
+SHA512 (Module-ScanDeps-1.37.tar.gz) = 8537c12e4c58bcac22a049af354b68deca0dbb72fbcde9d2abada57766355b5527a3d76224d2710600f9724ea2e7a48ef931d198500eb4ae3e18d0143ac88440
+Size (Module-ScanDeps-1.37.tar.gz) = 60271 bytes
