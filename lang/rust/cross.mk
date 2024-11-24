@@ -1,4 +1,4 @@
-# $NetBSD: cross.mk,v 1.11 2023/07/10 12:01:24 he Exp $
+# $NetBSD: cross.mk,v 1.12 2024/11/24 16:13:42 he Exp $
 
 # These settings may be used to cross-build rust.
 #
@@ -13,6 +13,7 @@
 # to do a cross-build.  The wrapper script assumes dest/ and tools/
 # as a result of a cross-build of NetBSD as subdirectories of this root
 #CROSS_ROOT=		/u/evbarm-armv7hf
+#CROSS_ROOT=		/u/evbarm-armv7hf-10.0
 #CROSS_ROOT=		/u/evbarm-armv6hf
 #CROSS_ROOT=		/u/sparc64
 #CROSS_ROOT=		/u/macppc

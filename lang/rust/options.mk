@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.41 2024/10/13 19:04:39 he Exp $
+# $NetBSD: options.mk,v 1.42 2024/11/24 16:13:43 he Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rust
 PKG_SUPPORTED_OPTIONS+=	rust-cargo-static rust-docs
@@ -29,18 +29,18 @@ PKG_SUGGESTED_OPTIONS+=	rust-cargo-static
 
 .include "../../mk/bsd.options.mk"
 
-#
 # NetBSD/sparc64 when using the internal LLVM needs
 # to not use gcc 10.4 or 10.5 (as found in 10.0_BETA or 10.0), ref.
 # https://github.com/rust-lang/rust/issues/117231
-# (however, gcc from 9.x produces a working LLVM).
+# (however, gcc from 9.x produces a working LLVM, go figure).
 .if ${MACHINE_PLATFORM:MNetBSD-10.*-sparc64}
 .  if !empty(PKG_OPTIONS:Mrust-internal-llvm)
-## Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (17.x).
+# Require GCC 12 (from pkgsrc) to correctly build the embedded LLVM (18.x).
 GCC_REQD+=	12
 .  endif
 .endif
 
+#
 # Use the internal copy of LLVM or the external one?
 #
 .if empty(PKG_OPTIONS:Mrust-internal-llvm)
@@ -49,6 +49,10 @@ GCC_REQD+=	12
 CONFIGURE_ARGS+=	--enable-llvm-link-shared
 CONFIGURE_ARGS+=	--llvm-libunwind=system
 CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+# Also turn off build of the internal LLD, as the external LLVM
+# may be older (e.g. 17) than the internal LLD (now 18.x), ref.
+# https://github.com/rust-lang/rust/issues/131291
+CONFIGURE_ARGS+=	--set rust.lld=false
 .endif
 
 #

@@ -1,4 +1,4 @@
-# $NetBSD: rust.mk,v 1.10 2024/08/10 10:50:42 js Exp $
+# $NetBSD: rust.mk,v 1.11 2024/11/24 16:13:43 he Exp $
 #
 # This file determines the type of rust package to use.
 #

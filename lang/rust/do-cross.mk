@@ -1,4 +1,4 @@
-# $NetBSD: do-cross.mk,v 1.12 2024/10/13 19:04:39 he Exp $
+# $NetBSD: do-cross.mk,v 1.13 2024/11/24 16:13:42 he Exp $
 # Do all the NetBSD cross builds
 # Collect the bootstrap kits in dist/
 

@@ -1,0 +1,14 @@
+$NetBSD: patch-config.example.toml,v 1.1 2024/11/24 16:13:43 he Exp $
+
+Backport https://github.com/rust-lang/rust/pull/130110/
+"make dist vendoring configurable"
+
+--- config.example.toml.orig	2024-09-22 17:59:03.580913638 +0000
++++ config.example.toml
+@@ -918,3 +918,6 @@
+ # Copy the linker, DLLs, and various libraries from MinGW into the Rust toolchain.
+ # Only applies when the host or target is pc-windows-gnu.
+ #include-mingw-linker = true
++
++# Whether to vendor dependencies for the dist tarball.
++#vendor = if "is a tarball source" || "is a git repository" { true } else { false }

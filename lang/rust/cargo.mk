@@ -1,4 +1,4 @@
-# $NetBSD: cargo.mk,v 1.39 2024/10/11 12:42:10 jperkin Exp $
+# $NetBSD: cargo.mk,v 1.40 2024/11/24 16:13:42 he Exp $
 #
 # Common logic that can be used by packages that depend on cargo crates
 # from crates.io. This lets existing pkgsrc infrastructure fetch and verify
