@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7173 2024/11/24 10:25:52 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7174 2024/11/24 10:29:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10802,3 +10802,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-cyclonedx-python-lib to 8.5.0 [wiz 2024-11-24]
 	Updated www/py-google-api-python-client to 2.154.0 [wiz 2024-11-24]
 	Updated time/py-icalendar to 6.1.0 [wiz 2024-11-24]
+	Updated textproc/py-orjson to 3.10.12 [wiz 2024-11-24]
