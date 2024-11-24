@@ -1,4 +1,4 @@
-$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.23 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-src_bootstrap_bootstrap.py,v 1.24 2024/11/24 16:13:43 he Exp $
 
 Use `uname -p` on NetBSD, as that is reliable and sensible there.
 Handle earmv[67]hf for NetBSD.
@@ -6,7 +6,7 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
 
 --- src/bootstrap/bootstrap.py.orig	2023-07-12 03:32:40.000000000 +0000
 +++ src/bootstrap/bootstrap.py
-@@ -271,6 +271,11 @@ def default_build_triple(verbose):
+@@ -270,6 +270,11 @@ def default_build_triple(verbose):
          'GNU': 'unknown-hurd',
      }
  
@@ -18,7 +18,7 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
      # Consider the direct transformation first and then the special cases
      if kernel in kerneltype_mapper:
          kernel = kerneltype_mapper[kernel]
-@@ -374,10 +379,16 @@ def default_build_triple(verbose):
+@@ -373,10 +378,16 @@ def default_build_triple(verbose):
              kernel = 'linux-androideabi'
          else:
              kernel += 'eabihf'
@@ -36,12 +36,11 @@ Also use @PREFIX@ and not $ORIGIN in rpath.
          else:
              kernel += 'eabihf'
      elif cputype == 'mips':
-@@ -735,7 +746,7 @@ class RustBuild(object):
+@@ -734,6 +745,7 @@ class RustBuild(object):
+ 
+         patchelf = "{}/bin/patchelf".format(nix_deps_dir)
          rpath_entries = [
-             # Relative default, all binary and dynamic libraries we ship
-             # appear to have this (even when `../lib` is redundant).
--            "$ORIGIN/../lib",
-+            "@PREFIX@/lib",
++	    "@PREFIX@/lib",
              os.path.join(os.path.realpath(nix_deps_dir), "lib")
          ]
-         patchelf_args = ["--set-rpath", ":".join(rpath_entries)]
+         patchelf_args = ["--add-rpath", ":".join(rpath_entries)]
