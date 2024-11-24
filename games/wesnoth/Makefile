@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.221 2024/11/14 22:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.222 2024/11/24 19:45:10 adam Exp $
 
-DISTNAME=	wesnoth-1.18.2
-PKGREVISION=	4
+DISTNAME=	wesnoth-1.18.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,9 +17,9 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bash msgfmt perl:run pkg-config
 # detects history.h, but does not link against libhistory
-CMAKE_CONFIGURE_ARGS+=		-DENABLE_HISTORY=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_HISTORY=OFF
 # if OPT is set, -O3 will not be added
-CMAKE_CONFIGURE_ARGS+=		-DOPT="${DBG}"
+CMAKE_CONFIGURE_ARGS+=	-DOPT="${DBG}"
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
