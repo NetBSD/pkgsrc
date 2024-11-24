@@ -1,0 +1,16 @@
+$NetBSD: patch-src_dune,v 1.1 2024/11/24 12:20:57 gdt Exp $
+
+Enable debugging on dune_config.  This may break things, once
+dune_config can run pkg-config, but for now it is helpful debugging.
+
+--- src/dune.orig	2022-10-06 07:24:16.000000000 +0000
++++ src/dune
+@@ -10,7 +10,7 @@
+  (targets
+    cflag-gtk+-3.0.sexp
+    clink-gtk+-3.0.sexp)
+- (action (run dune_config -pkg gtk+-3.0 -version 3.18)))
++ (action (run dune_config -verbose -pkg gtk+-3.0 -version 3.18)))
+ 
+ (rule
+  (targets cflag-extraflags.sexp)

@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2024/11/17 07:17:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/24 12:20:57 gdt Exp $
 
 GITHUB_PROJECT=	lablgtk
 GITHUB_TAG=	${VERSION}
 VERSION=	3.1.3
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${GITHUB_PROJECT}3-${VERSION}
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
-MAINTAINER=	jaapb@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/garrigue/lablgtk/
 COMMENT=	GTK+ 3.x bindings for OCaml
 LICENSE=	gnu-lgpl-v2
