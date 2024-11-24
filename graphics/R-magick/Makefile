@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/14 22:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/24 06:59:06 adam Exp $
 
 R_PKGNAME=	magick
 R_PKGVER=	2.8.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
