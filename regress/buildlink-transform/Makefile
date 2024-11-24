@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2020/05/09 22:42:37 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/24 08:34:45 rillig Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -57,8 +57,6 @@ do-regress:
 			${ECHO} "	$$test";			\
 		done;							\
 		exit 1;							\
-	else								\
-		${DO_NADA};						\
 	fi
 
 report-failed:

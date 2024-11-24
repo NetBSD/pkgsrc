@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2020/04/26 13:11:17 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/24 08:34:46 rillig Exp $
 #
 
 DISTNAME=	regress-make-20.04.26
@@ -43,7 +43,6 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	diff printf
 
 do-build: do-regress
-	@${DO_NADA}
 
 do-regress:
 	@printf "Testing bmake(1) version %s\\n" ${NUM_MAKE_VERSION:Q}""
