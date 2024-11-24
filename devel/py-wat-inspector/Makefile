@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/24 10:41:01 wiz Exp $
 
-DISTNAME=	wat_inspector-0.4.2
+DISTNAME=	wat_inspector-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/wat-inspector/}
