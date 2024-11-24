@@ -1,7 +1,9 @@
-$NetBSD: patch-synapse_http_proxy.py,v 1.1 2024/11/24 13:57:45 js Exp $
+$NetBSD: patch-synapse_http_proxy.py,v 1.2 2024/11/24 14:57:46 gdt Exp $
 
 Upstream thinks private Twisted functions are for them to use. And to
-absolutely nobody's surprise, this of course broke when Twised was updated.
+absolutely nobody's surprise, this of course broke when Twisted was updated.
+
+https://github.com/element-hq/synapse/issues/17882#issuecomment-2496000436
 
 --- synapse/http/proxy.py.orig	2024-11-24 13:33:04.649198671 +0000
 +++ synapse/http/proxy.py
