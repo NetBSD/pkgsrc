@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.736 2024/11/13 08:45:16 adam Exp $
+# $NetBSD: Makefile,v 1.737 2024/11/24 09:02:31 mef Exp $
 #
 
 COMMENT=	Programming languages
 
 SUBDIR+=	Cg-compiler
 SUBDIR+=	LuaJIT2
+SUBDIR+=	R-RcppTOML
 SUBDIR+=	R-cpp11
 SUBDIR+=	R-sourcetools
 SUBDIR+=	STk
