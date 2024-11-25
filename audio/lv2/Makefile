@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/11/17 07:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2024/11/25 07:12:11 wiz Exp $
 
 DISTNAME=	lv2-1.18.10
 PKGREVISION=	8
@@ -15,13 +15,12 @@ PLIST_SRC+=	${PLIST_SRC_DFLT}
 
 USE_TOOLS+=	pkg-config
 
-PKGCONFIG_OVERRIDE+=	lv2/lv2plug.in/ns/lv2core/lv2core.pc.in
-PKGCONFIG_OVERRIDE+=	lv2.pc.in
+# header-only-library, so not needed
+#PKGCONFIG_OVERRIDE+=		output/meson-private/lv2.pc
+#PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 REPLACE_PYTHON+=	lv2specgen/lv2specgen.py
 REPLACE_PYTHON+=	scripts/lv2_build_index.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 OPSYSVARS+=	SOEXT
 SOEXT.Darwin=	dylib
