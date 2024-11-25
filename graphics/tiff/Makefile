@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2024/09/18 11:39:36 gdt Exp $
+# $NetBSD: Makefile,v 1.167 2024/11/25 12:17:46 hauke Exp $
 
 VERSION_BASE=	4.7.0
 # Accomodate testing unreleased versions.
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--disable-libdeflate
 CONFIGURE_ARGS+=	--disable-sphinx
 CONFIGURE_ARGS+=	--disable-webp
 CONFIGURE_ARGS+=	--disable-zstd
+CONFIGURE_ARGS+=	--disable-opengl
 
 PKGCONFIG_OVERRIDE=	libtiff-4.pc.in
 
