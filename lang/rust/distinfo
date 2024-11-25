@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.176 2024/11/24 16:13:42 he Exp $
+$NetBSD: distinfo,v 1.177 2024/11/25 14:37:35 tnn Exp $
 
 BLAKE2s (rust-1.80.1-aarch64-apple-darwin.tar.gz) = e8552097f84ea7683be3df74148257cbe54765153550e080d7a107086f394e0f
 SHA512 (rust-1.80.1-aarch64-apple-darwin.tar.gz) = 235810513a0020e712d09b4cc881f5bf093fe31c2e83107ddc0aaa3aa25060a99dc18ad9ec4ea94515bde4ddba6341b45b09f9b896a4aa3cf40c332fb8c4a2c9
@@ -108,7 +108,7 @@ Size (rust-std-1.80.1-x86_64-unknown-netbsd.tar.xz) = 25793560 bytes
 BLAKE2s (rustc-1.81.0-src.tar.gz) = 5b1c5e436800fbd061df9aee740c8bf73d17654d75016eb84a7e3661e9322957
 SHA512 (rustc-1.81.0-src.tar.gz) = ea1f894b56085ab95ff1bdf9ef20e0756c134be8217c8e8934de44651f7cac6339829a198f8770d97050da79711527ff80fae184038fdb2962b741d0f99b71a1
 Size (rustc-1.81.0-src.tar.gz) = 434198596 bytes
-SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = a11f894d87516da6a8e3faaa4425c8212ff5899f
+SHA1 (patch-compiler_rustc__codegen__ssa_src_back_linker.rs) = f2af6e3b4925e8ca21b7cd783f7831b72700384a
 SHA1 (patch-compiler_rustc__llvm_build.rs) = a4a66d449fc9eb99d648d02a041778a68f4f7ce8
 SHA1 (patch-compiler_rustc__target_src_spec_base_netbsd.rs) = 7d910631f49acf2c33fdd191fd3e0f261efae234
 SHA1 (patch-compiler_rustc__target_src_spec_mod.rs) = a22b5d28997ed9a5565deec9c34322165d563d00
