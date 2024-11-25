@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/11/24 14:45:32 gdt Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/25 20:37:17 gdt Exp $
 
 GITHUB_PROJECT=	lablgtk
 GITHUB_TAG=	${VERSION}
@@ -25,6 +25,9 @@ DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
 
 # See the dune sources, otherlibs/configurator/src/v1.ml and look for
 # pkg-config and "which", if trying to understand why this fails.
+
+# See also a perhaps-similar issue in Windows:
+#   https://github.com/bcpierce00/unison/blob/d08a5c35e5a9a2cf9729fff56af0313999aa0c06/.github/workflows/CI.yml#L206-L213
 
 # dune tries to run pkg-config, and this fails under pkgsrc for some reason.
 # But when run in pre-configure, it seems to be ok.
