@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2023/08/24 19:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2024/11/25 11:32:06 adam Exp $
 
-DISTNAME=	async-timeout-4.0.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	async_timeout-5.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/async-timeout/}
 
@@ -10,18 +10,14 @@ HOMEPAGE=	https://github.com/aio-libs/async_timeout
 COMMENT=	Timeout context manager for asyncio programs
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.6.5:../../devel/py-typing-extensions
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
