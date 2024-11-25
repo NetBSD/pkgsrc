@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7205 2024/11/25 19:18:32 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.7206 2024/11/25 20:14:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10843,3 +10843,8 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cargo-modules to 0.19.1 [pin 2024-11-25]
 	Updated shells/oh-my-posh to 24.9.0 [pin 2024-11-25]
 	Updated net/gh to 2.62.0 [bsiegert 2024-11-25]
+	Updated databases/postgresql13 to 13.18 [adam 2024-11-25]
+	Updated databases/postgresql14 to 14.15 [adam 2024-11-25]
+	Updated databases/postgresql15 to 15.10 [adam 2024-11-25]
+	Updated databases/postgresql16 to 16.6 [adam 2024-11-25]
+	Updated databases/postgresql17 to 17.2 [adam 2024-11-25]
