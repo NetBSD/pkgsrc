@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/11/25 12:13:00 hauke Exp $
+# $NetBSD: Makefile,v 1.48 2024/11/25 21:33:23 tnn Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVER}
 GITHUB_PROJECT=	mDNSResponder
@@ -23,9 +23,9 @@ WRKSRC=			${WRKDIR}/mDNSResponder-mDNSResponder-2559.1.1
 BUILD_DIRS=		mDNSPosix
 BUILDDIR=		${WRKSRC}/mDNSPosix/build/prod
 
-CFLAGS+=		-Wno-missing-braces
 CFLAGS+=		-DPID_FILE=\"${VARBASE}/run/mdnsd/mdnsd.pid\"
 CFLAGS+=		-DMDNS_UDS_SERVERPATH=\"${VARBASE}/run/mdnsd/mdnsd\"
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 USE_GCC_RUNTIME=	yes
 
@@ -95,6 +95,12 @@ SUBST_MESSAGE.user=	Fixing unprivileged user name.
 SUBST_FILES.user=	mDNSPosix/PosixDaemon.c
 SUBST_SED.user=		-e 's,nobody,${MDNS_USER},g'
 
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Setting prefix path
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=     Clients/Makefile
+SUBST_VARS.prefix=      PREFIX
+
 .if !empty(PKG_OPTIONS:Minet6)
 MAKE_ENV+=	HAVE_IPV6=1
 .endif
@@ -114,6 +120,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/mDNSShared/mDNSResponder.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/mdnsd.8
 	${INSTALL_DATA} ${WRKSRC}/mDNSShared/dns_sd.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_LIB} ${BUILDDIR}/libdns_sd.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib
+.if ${OPSYS} == "Darwin"
+	cd ${DESTDIR}${PREFIX}/lib && install_name_tool					\
+		-change build/prod/libdns_sd.dylib ${PREFIX}/lib/libdns_sd.dylib	\
+		-id ${PREFIX}/lib/libdns_sd.dylib libdns_sd.dylib
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

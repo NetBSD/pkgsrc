@@ -1,0 +1,23 @@
+$NetBSD: patch-Clients_Makefile,v 1.1 2024/11/25 21:33:23 tnn Exp $
+
+Fix libdns_sd linkage
+
+--- Clients/Makefile.orig	2024-11-25 21:14:43.703499765 +0000
++++ Clients/Makefile
+@@ -37,12 +37,13 @@ DEBUGFLAGS = -Os
+ BUILDDIR = build/prod
+ endif
+ 
+-ifneq "$(wildcard /usr/lib/libSystem.dylib)" ""
+-TARGETS = build/dns-sd build/dns-sd64
++SYSTEM := $(shell uname -s)
++ifeq ($(SYSTEM), Darwin)
++TARGETS = build/dns-sd
+ LIBS =
+ else
+ TARGETS = build/dns-sd
+-LIBS = -L../mDNSPosix/$(BUILDDIR)/ -ldns_sd
++LIBS = -Wl,-R@PREFIX@/lib -L../mDNSPosix/$(BUILDDIR)/ -ldns_sd
+ endif
+ 
+ all: $(TARGETS)
