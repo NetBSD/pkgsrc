@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.81 2024/11/21 07:11:53 pin Exp $
+# $NetBSD: go-modules.mk,v 1.82 2024/11/25 14:52:33 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -136,9 +136,9 @@ GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.mod
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.5.2.zip
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.mod
+GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.10.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.9.0.mod
-GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.9.0.zip
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.14.mod
 GO_MODULE_FILES+=	github.com/tklauser/go-sysconf/@v/v0.3.14.zip
 GO_MODULE_FILES+=	github.com/tklauser/numcpus/@v/v0.8.0.mod
