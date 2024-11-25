@@ -1,0 +1,1 @@
+bin/apsw @PREFIX@/bin/apsw-@PYVERSSUFFIX@
