@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.6 2024/08/06 01:02:35 tnn Exp $
+# $NetBSD: go-modules.mk,v 1.7 2024/11/25 10:33:35 adam Exp $
 
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.mod
 GO_MODULE_FILES+=	github.com/alexbrainman/sspi/@v/v0.0.0-20210105120005-909beea2cc74.zip
@@ -72,24 +72,24 @@ GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20191011191535-87dc89f01550.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20200622213623-75b288015ac9.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20201112155050-0c6587e931a9.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.17.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.17.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.21.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.21.0.zip
 GO_MODULE_FILES+=	golang.org/x/mod/@v/v0.1.1-0.20191105210325-c90efee705ee.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20190404232315-eb5bcb51f2a3.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20190620200207-3b0461eec859.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20191027093000-83d349e8ac1a.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20200114155413-6afb5195e5aa.mod
 GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20201021035429-f5854403a974.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.17.0.mod
-GO_MODULE_FILES+=	golang.org/x/net/@v/v0.17.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.23.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.23.0.zip
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.0.0-20190423024810-112230192c58.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.mod
 GO_MODULE_FILES+=	golang.org/x/sync/@v/v0.1.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190412213103-97732733099d.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20200930185726-fdedc70b468f.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.15.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.18.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.18.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.14.0.zip
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
