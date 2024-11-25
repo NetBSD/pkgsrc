@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7200 2024/11/25 14:34:10 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7201 2024/11/25 14:36:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10838,3 +10838,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/py-pypika-tortoise to 0.3.0 [adam 2024-11-25]
 	Updated databases/py-tortoise-orm to 0.22.1 [adam 2024-11-25]
 	Updated lang/php82 to 8.2.26 [taca 2024-11-25]
+	Updated lang/php83 to 8.3.14 [taca 2024-11-25]
