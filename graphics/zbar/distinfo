@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:47:26 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/11/25 11:59:23 leot Exp $
 
-BLAKE2s (zbar-0.23.90.tar.bz2) = c4b545beea2c299fdec9a8ed7137f0c70a0bf43beecd56c97206aa04e93c07ea
-SHA512 (zbar-0.23.90.tar.bz2) = c4ccac8526acab4e28c6145c5cdb95b6a6c5c81b6d2f883053435794f7c351edee20abdc9599cb0de96db546f584c9479896baa87b01ad409d5e75ea8b48118c
-Size (zbar-0.23.90.tar.bz2) = 1199323 bytes
-SHA1 (patch-configure) = 44674b493227f9689f18a6e1076cc1aa5b959d52
+BLAKE2s (zbar-0.23.93.tar.bz2) = 555b0b0a759a6b2377638005242a1066a8920473934a9d5c3bc41496712a9285
+SHA512 (zbar-0.23.93.tar.bz2) = 8b1d57557cb1c425109b709f0cbe94830939cb4cd9a0cb505d44ba3c7cfb3522560c3bbf2a8b37985da4577b677ad675491f6ef0e9796749382079c0e844e21e
+Size (zbar-0.23.93.tar.bz2) = 1190598 bytes
+SHA1 (patch-configure) = 614604b7a49285c7642220e59dc9cbb775e1d160
 SHA1 (patch-gtk_Makefile.in) = bf32ac312d0d00ed7ac152ddd849dae0fc681e74
 SHA1 (patch-test_test__examples.sh.in) = d5739c5e4670d602b36ac62e7544f25709fc0d61
-SHA1 (patch-zbar_window_x.c) = cd221fc7a1c6ea8fc6f65a23241dff7fddd6e708
+SHA1 (patch-zbar_window_x.c) = 1eef005eaf00172adff7a4701806c76440ee149f
