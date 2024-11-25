@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7197 2024/11/25 12:40:05 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7198 2024/11/25 13:00:14 nros Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10834,3 +10834,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/zbar to 0.23.93 [leot 2024-11-25]
 	Updated net/py-aio-pika to 9.5.0 [adam 2024-11-25]
 	Updated security/py-service_identity to 24.2.0 [adam 2024-11-25]
+	Updated databases/repmgr to 5.5.0 [nros 2024-11-25]
