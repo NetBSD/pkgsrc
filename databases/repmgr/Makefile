@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2024/11/14 22:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/25 13:00:00 nros Exp $
 
-DISTNAME=	repmgr-5.4.1
+DISTNAME=	repmgr-5.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	databases
-MASTER_SITES=	https://repmgr.org/download/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=EnterpriseDB/}
+GITHUB_PROJECT=	repmgr
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://repmgr.org/
