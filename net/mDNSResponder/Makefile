@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/11/23 21:52:10 jakllsch Exp $
+# $NetBSD: Makefile,v 1.47 2024/11/25 12:13:00 hauke Exp $
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVER}
 GITHUB_PROJECT=	mDNSResponder
@@ -16,6 +16,8 @@ LICENSE=	apache-2.0 AND modified-bsd
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=		gmake flex bison
+
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/mDNSResponder-mDNSResponder-2559.1.1
 BUILD_DIRS=		mDNSPosix
