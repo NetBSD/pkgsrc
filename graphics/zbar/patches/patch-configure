@@ -1,34 +1,25 @@
-$NetBSD: patch-configure,v 1.3 2021/03/04 10:34:24 leot Exp $
+$NetBSD: patch-configure,v 1.4 2024/11/25 11:59:23 leot Exp $
 
 - Avoid `${parameter/pattern/string}' bash-ism
 - Only honor `--with-python' configure argument and completely ignore
   possible PYTHON environment variable that could be passed via
   CONFIGURE_ENV by pkgsrc
 
---- configure.orig	2021-02-14 06:54:03.000000000 +0000
+--- configure.orig	2024-01-09 09:15:23.000000000 +0000
 +++ configure
-@@ -24020,6 +24020,7 @@ fi
+@@ -25430,6 +25430,7 @@ fi
  
  
  
 +if false; then
- if test -z "$PYTHON"; then :
-   if test "x$with_python" = "xauto"; then :
-   for ac_prog in python3 python2 python
-@@ -24176,6 +24177,7 @@ else
+ if test -z "$PYTHON"
+ then :
+   if test "x$with_python" = "xauto"
+@@ -25605,6 +25606,7 @@ else $as_nop
    with_python="auto"
  
  fi
 +fi
  
- if test "x$with_python" != "xno"; then :
- 
-@@ -25265,7 +25267,7 @@ else
- fi
- 
- 
--JAVAC=${JAVAC/ecj/ecj -1.5}
-+JAVAC=`echo "$JAVAC" | sed -e 's/ecj/ecj -1.5/'`
- 
- if test -z "$JAVAH"; then :
-   for ac_prog in javah
+ if test "x$with_python" != "xno"
+ then :
