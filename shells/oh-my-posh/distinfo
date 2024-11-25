@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.196 2024/11/24 14:20:22 pin Exp $
+$NetBSD: distinfo,v 1.197 2024/11/25 14:52:33 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -408,15 +408,15 @@ Size (github.com_stretchr_objx_@v_v0.5.2.mod) = 276 bytes
 BLAKE2s (github.com_stretchr_objx_@v_v0.5.2.zip) = d1cff419a3ab3691121bbba6f35238b95c2db337b1ce92d285ca3638cbc2c0ae
 SHA512 (github.com_stretchr_objx_@v_v0.5.2.zip) = c0e841713886347f6d2bdf536b7153d14af8f6f1955f0f56606bb68c9ce796c8dd43c3e2a1759aec283f3a04f99c6803a33c628c75c1899744e7decb4097818b
 Size (github.com_stretchr_objx_@v_v0.5.2.zip) = 43974 bytes
+BLAKE2s (github.com_stretchr_testify_@v_v1.10.0.mod) = 0317549c119eb38810e67f8e8f89fa203792a68baeacdc0c1d3bb886f81d0de5
+SHA512 (github.com_stretchr_testify_@v_v1.10.0.mod) = 8bf7fe5e45d3a607073bae16a3bb3211d2a61bb433519b7ec33e22ff7dc54817881b4940151e72444250d930f766ecb8306072c50697db3282b67c40a6cd58e6
+Size (github.com_stretchr_testify_@v_v1.10.0.mod) = 417 bytes
+BLAKE2s (github.com_stretchr_testify_@v_v1.10.0.zip) = a109dd8729d5f087758cdddcb838a0c2505753afbdffae9016cf1792bd27a384
+SHA512 (github.com_stretchr_testify_@v_v1.10.0.zip) = cf875e0e49c51df6b42f1a8cd7c338ea9c62eba1de77ed757c0e69c7ca39963aa89fa263b71e3f389e54bd789c165ea4844594c98f9349ea4bacc34027f9fa50
+Size (github.com_stretchr_testify_@v_v1.10.0.zip) = 130241 bytes
 BLAKE2s (github.com_stretchr_testify_@v_v1.4.0.mod) = 9179c7414f86e4995f5ca5e59c7c0132f9e4e770bf13a1dbffd4da30787f776a
 SHA512 (github.com_stretchr_testify_@v_v1.4.0.mod) = 243bf1f69c146252164ad72f853773dcc77f15d7c9e9b731bee26a95e7c8f4ce9ed9738db601b01edb82f4b3808873e1f153a6d4a0c97be0babbe65abc0f8d52
 Size (github.com_stretchr_testify_@v_v1.4.0.mod) = 179 bytes
-BLAKE2s (github.com_stretchr_testify_@v_v1.9.0.mod) = 0317549c119eb38810e67f8e8f89fa203792a68baeacdc0c1d3bb886f81d0de5
-SHA512 (github.com_stretchr_testify_@v_v1.9.0.mod) = 8bf7fe5e45d3a607073bae16a3bb3211d2a61bb433519b7ec33e22ff7dc54817881b4940151e72444250d930f766ecb8306072c50697db3282b67c40a6cd58e6
-Size (github.com_stretchr_testify_@v_v1.9.0.mod) = 417 bytes
-BLAKE2s (github.com_stretchr_testify_@v_v1.9.0.zip) = 5e73613a8b7cedaba2b51d1053d1d767507ec131a3d36a675a768bf21c00a439
-SHA512 (github.com_stretchr_testify_@v_v1.9.0.zip) = f2bf5935ad750acdb7cb2bba747c489965e8767c508913680d2c1c4993be3fb4b877a2e009b3518f1da730429bbfdde0bc9c8cad03d8687b222dbf69920808ce
-Size (github.com_stretchr_testify_@v_v1.9.0.zip) = 124686 bytes
 BLAKE2s (github.com_tklauser_go-sysconf_@v_v0.3.14.mod) = 3cd7755211621f163e418710cf690a6d228630e8a30eb541a949460eb42a4f34
 SHA512 (github.com_tklauser_go-sysconf_@v_v0.3.14.mod) = 67280a922b35f9ea5899e4f9f02e41fdd16bc3a0371af90e7da150502cf2488b26e0903964a1296b9cce5ff911b4def84e914a5a1a8b6312370df7577bfee441
 Size (github.com_tklauser_go-sysconf_@v_v0.3.14.mod) = 122 bytes
@@ -561,8 +561,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-24.8.0.tar.gz) = a024d398c127a4fc8e7f4dd608f44f95fc82c4048559d2a74f6a912cd75aa7e9
-SHA512 (oh-my-posh-24.8.0.tar.gz) = ca095602efc5d033ce4dc8966e2a209037b6faef7b48ccbd29b93007ced34663a1ae03c493ef4a9177f94fba2a4febca570ee81e97aa8c1706a267fe5611e0ae
-Size (oh-my-posh-24.8.0.tar.gz) = 6705436 bytes
+BLAKE2s (oh-my-posh-24.9.0.tar.gz) = c389cf3200ec94473fe66ed54d6cde4ae9a0508a551f6cdc0ffd1cf46b825003
+SHA512 (oh-my-posh-24.9.0.tar.gz) = 90b84a618116adf462a8793370ac8322257483a3d0686ab2cedb9b0e265a3733a1d364e69de326efc39908840646dbd3c6212c1c33f9bfe9feb91611caea1da0
+Size (oh-my-posh-24.9.0.tar.gz) = 6703295 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
