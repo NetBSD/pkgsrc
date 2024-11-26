@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/09 11:53:43 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/11/26 11:37:26 adam Exp $
 
-BLAKE2s (willow-1.8.0.tar.gz) = 0b4016994e5ff9e86c4c8eaf699990fe8e176865794b74349f70c732a4325c9c
-SHA512 (willow-1.8.0.tar.gz) = 13f789abfc8f124459c5c9ff641a3aded6db25973af5912851b16454a469f27bd4b11a0ceefee2d83ae37efa99cdf2488c0ec390036a9f16508ba17e28a49b1a
-Size (willow-1.8.0.tar.gz) = 113313 bytes
+BLAKE2s (willow-1.9.0.tar.gz) = 36d0f34185f90a4bd2e2d79819e5915aff5915c218373bed24859379fbbb35a4
+SHA512 (willow-1.9.0.tar.gz) = 046dec64b1363d437f22e2ddc3342dc7649af18b13102f749a0935a5b0c2be431588fbd850bb96878ed42970ff7645605fd05a8ca4f5a01615d1c8243be62637
+Size (willow-1.9.0.tar.gz) = 113373 bytes
