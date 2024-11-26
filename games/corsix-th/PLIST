@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/09/04 11:02:26 nia Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/11/26 06:08:36 triaxx Exp $
 bin/corsix-th
 man/man6/corsix-th.6
 share/applications/com.corsixth.corsixth.desktop
@@ -170,6 +170,8 @@ share/corsix-th/Lua/diseases/transparency.lua
 share/corsix-th/Lua/diseases/tv_personalities.lua
 share/corsix-th/Lua/diseases/uncommon_cold.lua
 share/corsix-th/Lua/diseases/unexpected_swelling.lua
+share/corsix-th/Lua/earthquake.lua
+share/corsix-th/Lua/endconditions.lua
 share/corsix-th/Lua/entities/humanoid.lua
 share/corsix-th/Lua/entities/humanoids/grim_reaper.lua
 share/corsix-th/Lua/entities/humanoids/inspector.lua
@@ -246,6 +248,7 @@ share/corsix-th/Lua/languages/simplified_chinese.lua
 share/corsix-th/Lua/languages/spanish.lua
 share/corsix-th/Lua/languages/swedish.lua
 share/corsix-th/Lua/languages/traditional_chinese.lua
+share/corsix-th/Lua/languages/ukrainian.lua
 share/corsix-th/Lua/map.lua
 share/corsix-th/Lua/movie_player.lua
 share/corsix-th/Lua/objects/analyser.lua
