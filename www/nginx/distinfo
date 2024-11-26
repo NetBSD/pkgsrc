@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.125 2024/11/13 10:59:55 jperkin Exp $
+$NetBSD: distinfo,v 1.126 2024/11/26 20:11:19 osa Exp $
 
 BLAKE2s (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 6c3880dc781886fb1f4190fa9b8f1459246cc5d157aaed3b9a24cc7abaf7c5a1
 SHA512 (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = b780bea19736f5db844f11b0b407c159cc6ba7326b50177cefde6f8ee875238d3618e50d29b132a66fe98103cb5656f33895e5989d98d4cdc26cfeaa7f12865f
@@ -18,9 +18,9 @@ Size (form-input-nginx-module-0.12.tar.gz) = 11090 bytes
 BLAKE2s (headers-more-nginx-module-0.37.tar.gz) = 0c41b4b1f8b3a12c9c55d4e18892592e4fa7499f98525a432ac54cc38951a725
 SHA512 (headers-more-nginx-module-0.37.tar.gz) = 0cc2fffe506194d439e3669644d41b7943e2c3cffa3483eb70b92067930b358d506a14646eff8362b191a11c624db29f6b53d830876929dcb4ce1c9d7b2bc40d
 Size (headers-more-nginx-module-0.37.tar.gz) = 29433 bytes
-BLAKE2s (lua-nginx-module-0.10.26.tar.gz) = a8b1a1209f11e15165db96a8459d5639debaf79e83231cf3d2640b8dcbaae20b
-SHA512 (lua-nginx-module-0.10.26.tar.gz) = 9abf00844ef00ce1dc5ff08d6fe4ddccf843f2ad2de6fd450854b38a66b45add71e814205dba9b19225b9165e67eb93578e83e5fe37af4e0c891e61e6a6bfb3d
-Size (lua-nginx-module-0.10.26.tar.gz) = 745785 bytes
+BLAKE2s (lua-nginx-module-0.10.27.tar.gz) = 783ce4aea55aede8fdfe3626b8207e111cdb6882f0bf03cfaead7baf871279cc
+SHA512 (lua-nginx-module-0.10.27.tar.gz) = ff1f7bb593a91402453709d63c95b304ef14d805f5a7f8e6689e95b93522823b80f76baced70664c9f46e9fc8da3941f153b9cf5d1dfbabfb0ee9d9bcc8151b4
+Size (lua-nginx-module-0.10.27.tar.gz) = 758952 bytes
 BLAKE2s (naxsi-1.6-src-with-deps.tar.gz) = 77344405cc235d38328223d325194eee58d0124271a9fcd785de3477a8db52ce
 SHA512 (naxsi-1.6-src-with-deps.tar.gz) = c41e1a51b5642af1cb640b15e9415e073692d7a3baf4d3fceae260cdf9af2a976b3090b40756ce10e162bec6efc9fbc7306569e173bfbe4aab4ac7bcbdd8a075
 Size (naxsi-1.6-src-with-deps.tar.gz) = 3352718 bytes
