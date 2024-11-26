@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2024/11/13 08:45:16 adam Exp $
+# $NetBSD: Makefile.common,v 1.58 2024/11/26 12:08:11 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -64,14 +64,7 @@ CHECK_INTERPRETER_SKIP+=	lib/node_modules/npm/*
 .if defined(TOOLS_PLATFORM.paxctl)
 SUBST_CLASSES+=		mktools
 SUBST_STAGE.mktools=	post-configure
-# nodejs8
-SUBST_FILES.mktools+=	out/deps/v8/src/mksnapshot.target.mk
-# nodejs10
-SUBST_FILES.mktools+=	out/deps/v8/gypfiles/mksnapshot.target.mk
-# nodejs12
-SUBST_FILES.mktools+=	out/mkcodecache.target.mk
 SUBST_FILES.mktools+=	out/tools/v8_gypfiles/mksnapshot.target.mk
-# nodejs13
 SUBST_FILES.mktools+=	out/node_mksnapshot.target.mk
 SUBST_SED.mktools+=	-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
 SUBST_NOOP_OK.mktools=	yes # because of the different affected files
@@ -94,6 +87,7 @@ paxctl:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../archivers/brotli/buildlink3.mk"
+.include "../../devel/abseil/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.41
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
