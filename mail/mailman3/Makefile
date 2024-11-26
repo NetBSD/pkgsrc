@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/10/14 06:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/11/26 12:42:22 nia Exp $
 
 DISTNAME=	mailman-3.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -74,6 +74,9 @@ CONF_FILES_PERMS=	${EGDIR}/mailman.cfg ${PKG_SYSCONFDIR}/mailman.cfg \
 			${REAL_ROOT_USER} ${MAILMAN_GROUP} 0640
 
 INSTALLATION_DIRS+=	${EGDIR}
+
+# py-falcon
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 post-patch:
 	${CP} ${FILESDIR}/crontab.sample ${WRKSRC}/crontab.sample
