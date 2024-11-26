@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/11/11 07:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/26 07:55:05 adam Exp $
 
-DISTNAME=	s3transfer-0.10.3
+DISTNAME=	s3transfer-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/s3transfer/}
