@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2024/10/24 17:23:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2024/11/26 11:38:09 adam Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/dumpmscat
@@ -213,6 +213,7 @@ ${PYSITELIB}/samba/dcerpc/netlogon.so
 ${PYSITELIB}/samba/dcerpc/ntlmssp.so
 ${PYSITELIB}/samba/dcerpc/preg.so
 ${PYSITELIB}/samba/dcerpc/samr.so
+${PYSITELIB}/samba/dcerpc/schannel.so
 ${PYSITELIB}/samba/dcerpc/security.so
 ${PYSITELIB}/samba/dcerpc/server_id.so
 ${PYSITELIB}/samba/dcerpc/smb3posix.so
