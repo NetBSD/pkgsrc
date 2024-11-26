@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/06/15 11:20:45 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/11/26 13:42:18 mef Exp $
 
-BLAKE2s (R/deldir_1.0-9.tar.gz) = 2c36692e13560f3b1e5db3872c588ffd09aff6f45b7ed863c8a5549bf6a19a4d
-SHA512 (R/deldir_1.0-9.tar.gz) = 3f66977a332e9863599c76b2e46366f3ce79fe7aa194601aa37a5aa65dc43496981547ca42502b5ab2552bc1d34fe6bc58f17cd5738cb80eadaabf0ac1e0408c
-Size (R/deldir_1.0-9.tar.gz) = 127119 bytes
+BLAKE2s (R/deldir_2.0-4.tar.gz) = 06f259f2ef514936ed3ce720cd13afd307fbfe2d98e5bbf1725c5599876ccd5d
+SHA512 (R/deldir_2.0-4.tar.gz) = 9342f8cf9f14df3a1682d1099c498e89922bf7959df8bcf8d0091bc0913b21416b908753980977fdf858b1d1d2ca97991c44e5824586470fcd842c40989e7531
+Size (R/deldir_2.0-4.tar.gz) = 103621 bytes
