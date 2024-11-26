@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/02/25 15:17:29 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/11/26 11:53:30 adam Exp $
 
-BLAKE2s (npth-1.7.tar.bz2) = 75864a32b78be58a45784a64eea6c4e15f27f7d3bebac333c4ad6abd971e1aee
-SHA512 (npth-1.7.tar.bz2) = 8893023bcf953a3f7c490cf8116bed323a9d4af2bea35277e919f437916fda8b8e68ded28ec1777717cf9187c504892556159cbdb8bc02ed4a8b30b3d897d244
-Size (npth-1.7.tar.bz2) = 313213 bytes
+BLAKE2s (npth-1.8.tar.bz2) = 4cbc392c4a822efa818db0396b654b9f2a30ca0f37855a4fe5f5572e8fd647b1
+SHA512 (npth-1.8.tar.bz2) = 34fdeea3d8a7a594d8fdbcc6d5d389b5c8e282e8e84c1491b1e51960c0fa007df6a1d62543f0107f0772f3215557d4b25c2a9c7067cb0ae2f8de7b4d63d09fb4
+Size (npth-1.8.tar.bz2) = 317739 bytes
