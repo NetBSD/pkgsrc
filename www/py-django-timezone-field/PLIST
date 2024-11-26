@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/01/23 07:56:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/11/26 10:23:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -33,3 +33,6 @@ ${PYSITELIB}/timezone_field/models.pyo
 ${PYSITELIB}/timezone_field/rest_framework.py
 ${PYSITELIB}/timezone_field/rest_framework.pyc
 ${PYSITELIB}/timezone_field/rest_framework.pyo
+${PYSITELIB}/timezone_field/utils.py
+${PYSITELIB}/timezone_field/utils.pyc
+${PYSITELIB}/timezone_field/utils.pyo
