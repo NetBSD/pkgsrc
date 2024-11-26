@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2024/10/30 20:04:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2024/11/26 07:52:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
@@ -195,6 +195,10 @@ ${PYSITELIB}/botocore/data/batch/2016-08-10/service-2.json
 ${PYSITELIB}/botocore/data/bcm-data-exports/2023-11-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/bcm-data-exports/2023-11-26/paginators-1.json
 ${PYSITELIB}/botocore/data/bcm-data-exports/2023-11-26/service-2.json
+${PYSITELIB}/botocore/data/bcm-pricing-calculator/2024-06-19/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/bcm-pricing-calculator/2024-06-19/paginators-1.json
+${PYSITELIB}/botocore/data/bcm-pricing-calculator/2024-06-19/service-2.json
+${PYSITELIB}/botocore/data/bcm-pricing-calculator/2024-06-19/waiters-2.json
 ${PYSITELIB}/botocore/data/bedrock-agent-runtime/2023-07-26/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/bedrock-agent-runtime/2023-07-26/paginators-1.json
 ${PYSITELIB}/botocore/data/bedrock-agent-runtime/2023-07-26/service-2.json
@@ -209,6 +213,10 @@ ${PYSITELIB}/botocore/data/bedrock/2023-04-20/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/bedrock/2023-04-20/paginators-1.json
 ${PYSITELIB}/botocore/data/bedrock/2023-04-20/service-2.json
 ${PYSITELIB}/botocore/data/bedrock/2023-04-20/waiters-2.json
+${PYSITELIB}/botocore/data/billing/2023-09-07/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/billing/2023-09-07/paginators-1.json
+${PYSITELIB}/botocore/data/billing/2023-09-07/service-2.json
+${PYSITELIB}/botocore/data/billing/2023-09-07/waiters-2.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/examples-1.json
 ${PYSITELIB}/botocore/data/billingconductor/2021-07-30/paginators-1.json
@@ -488,6 +496,9 @@ ${PYSITELIB}/botocore/data/connect/2017-08-08/service-2.json
 ${PYSITELIB}/botocore/data/connectcampaigns/2021-01-30/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/connectcampaigns/2021-01-30/paginators-1.json
 ${PYSITELIB}/botocore/data/connectcampaigns/2021-01-30/service-2.json
+${PYSITELIB}/botocore/data/connectcampaignsv2/2024-04-23/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/connectcampaignsv2/2024-04-23/paginators-1.json
+${PYSITELIB}/botocore/data/connectcampaignsv2/2024-04-23/service-2.json
 ${PYSITELIB}/botocore/data/connectcases/2022-10-03/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/connectcases/2022-10-03/paginators-1.json
 ${PYSITELIB}/botocore/data/connectcases/2022-10-03/service-2.json
@@ -514,6 +525,7 @@ ${PYSITELIB}/botocore/data/cur/2017-01-06/service-2.json
 ${PYSITELIB}/botocore/data/customer-profiles/2020-08-15/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/customer-profiles/2020-08-15/examples-1.json
 ${PYSITELIB}/botocore/data/customer-profiles/2020-08-15/paginators-1.json
+${PYSITELIB}/botocore/data/customer-profiles/2020-08-15/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/customer-profiles/2020-08-15/service-2.json
 ${PYSITELIB}/botocore/data/databrew/2017-07-25/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/databrew/2017-07-25/examples-1.json
@@ -1122,6 +1134,7 @@ ${PYSITELIB}/botocore/data/mediaconnect/2018-11-14/service-2.json
 ${PYSITELIB}/botocore/data/mediaconnect/2018-11-14/waiters-2.json
 ${PYSITELIB}/botocore/data/mediaconvert/2017-08-29/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/mediaconvert/2017-08-29/paginators-1.json
+${PYSITELIB}/botocore/data/mediaconvert/2017-08-29/paginators-1.sdk-extras.json
 ${PYSITELIB}/botocore/data/mediaconvert/2017-08-29/service-2.json
 ${PYSITELIB}/botocore/data/medialive/2017-10-14/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/medialive/2017-10-14/paginators-1.json
@@ -1222,6 +1235,14 @@ ${PYSITELIB}/botocore/data/networkmonitor/2023-08-01/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/networkmonitor/2023-08-01/paginators-1.json
 ${PYSITELIB}/botocore/data/networkmonitor/2023-08-01/service-2.json
 ${PYSITELIB}/botocore/data/networkmonitor/2023-08-01/waiters-2.json
+${PYSITELIB}/botocore/data/notifications/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/notifications/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/notifications/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/notifications/2018-05-10/waiters-2.json
+${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/paginators-1.json
+${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/service-2.json
+${PYSITELIB}/botocore/data/notificationscontacts/2018-05-10/waiters-2.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/paginators-1.json
 ${PYSITELIB}/botocore/data/oam/2022-06-10/service-2.json
@@ -1263,6 +1284,9 @@ ${PYSITELIB}/botocore/data/panorama/2019-07-24/examples-1.json
 ${PYSITELIB}/botocore/data/panorama/2019-07-24/paginators-1.json
 ${PYSITELIB}/botocore/data/panorama/2019-07-24/service-2.json
 ${PYSITELIB}/botocore/data/partitions.json
+${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/endpoint-rule-set-1.json
+${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/paginators-1.json
+${PYSITELIB}/botocore/data/partnercentral-selling/2022-07-26/service-2.json
 ${PYSITELIB}/botocore/data/payment-cryptography-data/2022-02-03/endpoint-rule-set-1.json
 ${PYSITELIB}/botocore/data/payment-cryptography-data/2022-02-03/paginators-1.json
 ${PYSITELIB}/botocore/data/payment-cryptography-data/2022-02-03/service-2.json
