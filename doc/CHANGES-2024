@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7228 2024/11/26 20:14:53 osa Exp $
+$NetBSD: CHANGES-2024,v 1.7229 2024/11/26 20:30:58 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10885,3 +10885,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/nginx to 1.26.1 [osa 2024-11-26]
 	Updated www/lua-resty-lrucache to 0.15 [adam 2024-11-26]
 	Updated www/lua-resty-core to 0.1.30 [adam 2024-11-26]
+	Updated graphics/vulkan-headers to 1.3.296 [triaxx 2024-11-26]
