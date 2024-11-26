@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/11/11 07:28:21 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/26 12:45:44 nia Exp $
 
 DISTNAME=	pytype-2024.9.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,8 @@ USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++20
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+# py-msgspec
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 post-install:
 .for file in annotate-ast merge-pyi pytd pytype pytype-single pyxref
