@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/08/27 08:59:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/11/26 10:19:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -55,6 +55,9 @@ ${PYSITELIB}/filer/cache.pyo
 ${PYSITELIB}/filer/contrib/__init__.py
 ${PYSITELIB}/filer/contrib/__init__.pyc
 ${PYSITELIB}/filer/contrib/__init__.pyo
+${PYSITELIB}/filer/contrib/clamav/__init__.py
+${PYSITELIB}/filer/contrib/clamav/__init__.pyc
+${PYSITELIB}/filer/contrib/clamav/__init__.pyo
 ${PYSITELIB}/filer/contrib/django_cms/__init__.py
 ${PYSITELIB}/filer/contrib/django_cms/__init__.pyc
 ${PYSITELIB}/filer/contrib/django_cms/__init__.pyo
