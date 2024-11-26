@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.310 2024/11/21 14:40:26 adam Exp $
+# $NetBSD: Makefile,v 1.311 2024/11/26 12:08:11 wiz Exp $
 
 DISTNAME=	node-v23.3.0
 EXTRACT_SUFX=	.tar.xz
@@ -15,8 +15,6 @@ MAKE_ENV+=	LD_LIBRARY_PATH=${PREFIX}/lib
 
 CONFIGURE_ARGS+=	--shared-nghttp3
 CONFIGURE_ARGS+=	--shared-ngtcp2
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CHECK_INTERPRETER_SKIP+=	lib/node_modules/corepack/shims/*.ps1
 CHECK_PORTABILITY_SKIP+=	deps/uv/autogen.sh
