@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/11/26 10:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/26 12:17:22 nia Exp $
 
 DISTNAME=	aubio-0.4.9
 PKGREVISION=	17
@@ -28,11 +28,9 @@ TOOL_DEPENDS+=	txt2man-[0-9]*:../../converters/txt2man
 
 CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 
-# open() flag 'rUb'
-PYTHON_VERSIONS_INCOMPATIBLE+=	311
 # No module named 'imp'
 # https://github.com/aubio/aubio/issues/394
-PYTHON_VERSIONS_INCOMPATIBLE+=	312 313
+PYTHON_VERSIONS_ACCEPTED=	310
 PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "options.mk"
