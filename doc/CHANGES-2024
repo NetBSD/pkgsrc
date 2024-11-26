@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7212 2024/11/26 06:08:57 triaxx Exp $
+$NetBSD: CHANGES-2024,v 1.7213 2024/11/26 08:00:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10857,3 +10857,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/openrct2 to 0.4.16 [triaxx 2024-11-25]
 	Updated textproc/split-thai to 2.38 [scole 2024-11-26]
 	Updated games/corsix-th to 0.68.0 [triaxx 2024-11-26]
+	Updated net/py-botocore to 1.35.69 [adam 2024-11-26]
+	Updated net/py-s3transfer to 0.10.4 [adam 2024-11-26]
+	Updated net/py-boto3 to 1.35.69 [adam 2024-11-26]
+	Updated net/py-awscli to 1.36.10 [adam 2024-11-26]
