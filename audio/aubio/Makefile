@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/02/04 01:33:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2024/11/26 10:46:53 wiz Exp $
 
 DISTNAME=	aubio-0.4.9
 PKGREVISION=	17
@@ -32,8 +32,8 @@ CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -D
 PYTHON_VERSIONS_INCOMPATIBLE+=	311
 # No module named 'imp'
 # https://github.com/aubio/aubio/issues/394
-PYTHON_VERSIONS_INCOMPATIBLE+=	312
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_VERSIONS_INCOMPATIBLE+=	312 313
+PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "options.mk"
 .include "../../devel/waf/waf.mk"
