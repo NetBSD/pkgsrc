@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7219 2024/11/26 12:53:38 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7220 2024/11/26 13:02:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10874,3 +10874,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-types-setuptools to 75.6.0.20241126 [adam 2024-11-26]
 	Updated devel/py-utils to 3.9.1 [adam 2024-11-26]
 	Updated geography/R-cartography to 3.1.4 [mef 2024-11-26]
+	Updated geography/R-countrycode to 1.6.0 [mef 2024-11-26]
