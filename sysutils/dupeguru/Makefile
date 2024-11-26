@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/20 16:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/11/26 12:49:13 nia Exp $
 
 DISTNAME=	dupeguru-src-4.0.4_RC
 PKGNAME=	${DISTNAME:S/-src//:S/_RC/rc1/}
@@ -18,14 +18,13 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.0.0:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-qt5-[0-9]*:../../x11/py-qt5
 DEPENDS+=	${PYPKGPREFIX}-hsaudiotag3k-[0-9]*:../../audio/py-hsaudiotag3k
 DEPENDS+=	${PYPKGPREFIX}-Send2Trash-[0-9]*:../../sysutils/py-Send2Trash
+DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c
 USE_TOOLS=		gmake pax
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
-# ModuleNotFoundError: No module named 'imp'
-PYTHON_VERSIONS_INCOMPATIBLE+=	312 313
+PYTHON_VERSIONS_ACCEPTED=	311 310
 REPLACE_PYTHON+=		run.py
 
 MAKE_ENV+=	PYRCC5=pyrcc5-${PYVERSSUFFIX}
