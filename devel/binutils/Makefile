@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2023/08/28 15:09:33 fcambus Exp $
+# $NetBSD: Makefile,v 1.114 2024/11/26 14:11:40 bacon Exp $
 
 DISTNAME=	binutils-2.41
 CATEGORIES=	devel
@@ -47,7 +47,7 @@ INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
 #
 # Supported utils and libraries differ quite a bit across platforms.
 #
-PLIST_VARS+=	ctf gas gold gprof ld
+PLIST_VARS+=	ctf gas gold gprof ld ldint
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,6 +58,7 @@ PLIST_VARS+=	ctf gas gold gprof ld
 CONFIGURE_ARGS+=	--disable-libctf
 .else
 PLIST.ctf=		yes
+PLIST.ldint=		yes
 .endif
 
 .if ${OPSYS} != "Darwin"

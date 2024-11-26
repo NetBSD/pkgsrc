@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.41 2023/07/31 14:08:34 fcambus Exp $
+@comment $NetBSD: PLIST.common,v 1.42 2024/11/26 14:11:40 bacon Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${PLIST.gas}${MACHINE_GNU_PLATFORM}/bin/as
 ${PLIST.gld}${MACHINE_GNU_PLATFORM}/bin/ld
@@ -81,7 +81,7 @@ info/binutils.info
 ${PLIST.ctf}info/ctf-spec.info
 ${PLIST.gprof}info/gprof.info
 ${PLIST.gld}info/ld.info
-info/ldint.info
+${PLIST.ldint}info/ldint.info
 info/sframe-spec.info
 ${PLIST.gld}lib/bfd-plugins/libdep.so
 lib/libbfd.la
