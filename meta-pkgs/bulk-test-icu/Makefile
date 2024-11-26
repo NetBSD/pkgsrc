@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/13 14:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/26 09:01:17 jperkin Exp $
 
 DISTNAME=	bulk-test-icu-20241113
 CATEGORIES=	meta-pkgs
@@ -73,7 +73,6 @@ DEPENDS+=	parrot-[0-9]*:../../lang/parrot
 DEPENDS+=	dovecot-fts-flatcurve-[0-9]*:../../mail/dovecot2-fts-flatcurve
 DEPENDS+=	evolution-data-server-[0-9]*:../../mail/evolution-data-server
 DEPENDS+=	rspamd-[0-9]*:../../mail/rspamd
-DEPENDS+=	thunderbird102-[0-9]*:../../mail/thunderbird102
 # Rust problem
 #DEPENDS+=	thunderbird68-[0-9]*:../../mail/thunderbird68
 # Python problem
