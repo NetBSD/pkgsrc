@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2024/04/24 07:24:18 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/11/26 10:31:35 adam Exp $
 
-DISTNAME=	django-tastypie-0.14.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	django_tastypie-0.15.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-tastypie/}
 
@@ -10,12 +10,11 @@ HOMEPAGE=	https://github.com/toastdriven/django-tastypie
 COMMENT=	Flexible and capable API layer for Django
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.1:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-python-mimeparse>=0.1.4:../../www/py-python-mimeparse
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
