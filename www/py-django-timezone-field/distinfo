@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/01/23 07:56:20 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/11/26 10:23:29 adam Exp $
 
-BLAKE2s (django_timezone_field-6.1.0.tar.gz) = 3404dbda48391517f3f8de75f1d71ff344362e99c1bf5e65776854ebb209deed
-SHA512 (django_timezone_field-6.1.0.tar.gz) = ae834f92b643463cb670f02ad8ec29506ae161920fe2c1523cff3ff4719791dfa5c2adf777c487699a4026f61509eb004272b18f47db7886e26bbef6373fd632
-Size (django_timezone_field-6.1.0.tar.gz) = 12430 bytes
+BLAKE2s (django_timezone_field-7.0.tar.gz) = c721daba67a5426d11dfc82c19f69446189c9b5f070b9bd686c8814b72255390
+SHA512 (django_timezone_field-7.0.tar.gz) = fbda37267f1b6deb14b63b61f79b7862b15358820d44d7ddfe274559a081b4bec85d85d1f256ba452c4111d859c9ba7c02f8a4ccc397bdd59af5bf15a489370b
+Size (django_timezone_field-7.0.tar.gz) = 13683 bytes
