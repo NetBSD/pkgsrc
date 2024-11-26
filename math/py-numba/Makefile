@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/11/11 07:28:41 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2024/11/26 12:32:41 nia Exp $
 
 DISTNAME=	numba-0.60.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-llvmlite>=0.41.0:../../devel/py-llvmlite
 MAKE_ENV+=	NUMBA_DISABLE_OPENMP=1
 
 USE_LANGUAGES=	c c++
+
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} numba numba-${PYVERSSUFFIX} || ${TRUE}
