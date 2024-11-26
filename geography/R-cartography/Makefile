@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/06/10 13:32:52 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/11/26 12:53:30 mef Exp $
 
 R_PKGNAME=	cartography
-R_PKGVER=	3.1.3
+R_PKGVER=	3.1.4
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,6 +12,7 @@ DEPENDS+=	R-raster>=3.4.13:../../geography/R-raster
 DEPENDS+=	R-png>=0.1.8:../../graphics/R-png
 DEPENDS+=	R-curl>=5.0.0:../../www/R-curl
 
+# Package suggested but not available: 'SpatialPosition'
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest

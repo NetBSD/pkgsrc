@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/06/10 13:32:52 mef Exp $
+$NetBSD: distinfo,v 1.2 2024/11/26 12:53:30 mef Exp $
 
-BLAKE2s (R/cartography_3.1.3.tar.gz) = 66fc7b1ec20da9ace7a13cdc2c854a5328c1a19f76ecdd779beb13b4075bf9e0
-SHA512 (R/cartography_3.1.3.tar.gz) = fddeb1c9cef374e52832584858b672d63e0c87e82750b661830328f8b73992829e1d0536e1eb006b7aa8ba1189416a01477306b2eb16792dc78b859bd9801bef
-Size (R/cartography_3.1.3.tar.gz) = 2109745 bytes
+BLAKE2s (R/cartography_3.1.4.tar.gz) = ed09319bf0daeb33fce5b3c9e425f8706f76fa2cc12dd27342a23925a8ce0782
+SHA512 (R/cartography_3.1.4.tar.gz) = a3cec394efd5e66c23765c7715fe46ce23ddd4e40087f476accea473cad313de74f1cbda6cff99f474696c69d294b4635931af7c43383773b87f8c1a428e5097
+Size (R/cartography_3.1.4.tar.gz) = 2112477 bytes
