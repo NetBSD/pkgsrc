@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2024/11/16 12:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2024/11/26 18:44:56 osa Exp $
 
-DISTNAME=	nginx-1.27.2
-PKGREVISION=	6
+DISTNAME=	nginx-1.27.3
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
@@ -110,6 +109,10 @@ PLIST_SUBST+=	SOEXT=${SOEXT}
 post-patch:
 .if !empty(PKG_OPTIONS:Mgssapi)
 	${SED} -i.bak '4d;5d;6d' ${WRKDIR}/${GSSAPI_DISTNAME}/config
+.endif
+.if !empty(PKG_OPTIONS:Mnaxsi)
+	${SED} -i.bak '308,309s/MSIZE/NAXSI_MSIZE/g' \
+		${WRKSRC}/..${NAXSI_SUBDIR}/libinjection/src/libinjection_sqli.c
 .endif
 
 do-install:
