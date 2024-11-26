@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/26 12:45:44 nia Exp $
 
 DISTNAME=	msgspec-0.18.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+# Uses deprecated internal APIs like _PyUnicode_EQ
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 .include "../../lang/python/pyversion.mk"
 
