@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/11/14 22:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/26 12:27:04 nia Exp $
 
 DISTNAME=	WordTsar-0.3.719-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -14,6 +14,9 @@ LICENSE=	gnu-agpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+# make: don't know how to make ../../src/core/include/version.h. Stop
+MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS+=	bin
 
