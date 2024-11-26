@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7231 2024/11/26 23:25:29 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.7232 2024/11/26 23:32:37 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10888,3 +10888,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/vulkan-headers to 1.3.296 [triaxx 2024-11-26]
 	Updated shells/tcsh to 6.24.14 [kim 2024-11-26]
 	Updated geography/qgis to 3.34.13 [gdt 2024-11-26]
+	Updated chat/element-web to 1.11.86 [js 2024-11-26]
