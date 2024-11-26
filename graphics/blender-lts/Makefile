@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/11/26 12:24:54 nia Exp $
+# $NetBSD: Makefile,v 1.49 2024/11/26 12:54:44 nia Exp $
 
 DISTNAME=	blender-3.6.12
 PKGREVISION=	2
@@ -51,8 +51,8 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_VERSION=${PYVERSSUFFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
-BUILDLINK_TRANSFORM+=	-Werror=float-conversion
-BUILDLINK_TRANSFORM+=	-Werror=double-conversion
+BUILDLINK_TRANSFORM+=	rm:-Werror=float-conversion
+BUILDLINK_TRANSFORM+=	rm:-Werror=double-conversion
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .if ${MESALIB_SUPPORTS_EGL} == "yes"
