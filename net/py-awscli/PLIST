@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2024/10/30 20:09:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/11/26 07:59:34 adam Exp $
 bin/aws
 bin/aws.cmd
 bin/aws_bash_completer
@@ -2693,6 +2693,9 @@ ${PYSITELIB}/awscli/examples/ec2/wait/vpn-connection-deleted.rst
 ${PYSITELIB}/awscli/examples/ec2/withdraw-byoip-cidr.rst
 ${PYSITELIB}/awscli/examples/ecr-public/create-repository.rst
 ${PYSITELIB}/awscli/examples/ecr-public/delete-repository.rst
+${PYSITELIB}/awscli/examples/ecr-public/describe-registries.rst
+${PYSITELIB}/awscli/examples/ecr-public/describe-repository.rst
+${PYSITELIB}/awscli/examples/ecr-public/get-login-password.rst
 ${PYSITELIB}/awscli/examples/ecr-public/get-login-password_description.rst
 ${PYSITELIB}/awscli/examples/ecr/batch-check-layer-availability.rst
 ${PYSITELIB}/awscli/examples/ecr/batch-delete-image.rst
