@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2024/09/14 20:28:31 js Exp $
+@comment $NetBSD: PLIST,v 1.56 2024/11/26 17:42:37 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -411,6 +411,9 @@ ${PYSITELIB}/synapse/handlers/cas.pyo
 ${PYSITELIB}/synapse/handlers/deactivate_account.py
 ${PYSITELIB}/synapse/handlers/deactivate_account.pyc
 ${PYSITELIB}/synapse/handlers/deactivate_account.pyo
+${PYSITELIB}/synapse/handlers/delayed_events.py
+${PYSITELIB}/synapse/handlers/delayed_events.pyc
+${PYSITELIB}/synapse/handlers/delayed_events.pyo
 ${PYSITELIB}/synapse/handlers/device.py
 ${PYSITELIB}/synapse/handlers/device.pyc
 ${PYSITELIB}/synapse/handlers/device.pyo
@@ -745,6 +748,9 @@ ${PYSITELIB}/synapse/replication/http/_base.pyo
 ${PYSITELIB}/synapse/replication/http/account_data.py
 ${PYSITELIB}/synapse/replication/http/account_data.pyc
 ${PYSITELIB}/synapse/replication/http/account_data.pyo
+${PYSITELIB}/synapse/replication/http/delayed_events.py
+${PYSITELIB}/synapse/replication/http/delayed_events.pyc
+${PYSITELIB}/synapse/replication/http/delayed_events.pyo
 ${PYSITELIB}/synapse/replication/http/devices.py
 ${PYSITELIB}/synapse/replication/http/devices.pyc
 ${PYSITELIB}/synapse/replication/http/devices.pyo
@@ -942,6 +948,9 @@ ${PYSITELIB}/synapse/rest/client/auth_issuer.pyo
 ${PYSITELIB}/synapse/rest/client/capabilities.py
 ${PYSITELIB}/synapse/rest/client/capabilities.pyc
 ${PYSITELIB}/synapse/rest/client/capabilities.pyo
+${PYSITELIB}/synapse/rest/client/delayed_events.py
+${PYSITELIB}/synapse/rest/client/delayed_events.pyc
+${PYSITELIB}/synapse/rest/client/delayed_events.pyo
 ${PYSITELIB}/synapse/rest/client/devices.py
 ${PYSITELIB}/synapse/rest/client/devices.pyc
 ${PYSITELIB}/synapse/rest/client/devices.pyo
@@ -1251,6 +1260,9 @@ ${PYSITELIB}/synapse/storage/databases/main/censor_events.pyo
 ${PYSITELIB}/synapse/storage/databases/main/client_ips.py
 ${PYSITELIB}/synapse/storage/databases/main/client_ips.pyc
 ${PYSITELIB}/synapse/storage/databases/main/client_ips.pyo
+${PYSITELIB}/synapse/storage/databases/main/delayed_events.py
+${PYSITELIB}/synapse/storage/databases/main/delayed_events.pyc
+${PYSITELIB}/synapse/storage/databases/main/delayed_events.pyo
 ${PYSITELIB}/synapse/storage/databases/main/deviceinbox.py
 ${PYSITELIB}/synapse/storage/databases/main/deviceinbox.pyc
 ${PYSITELIB}/synapse/storage/databases/main/deviceinbox.pyo
@@ -1883,7 +1895,16 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/85/05_add_instance_names_converte
 ${PYSITELIB}/synapse/storage/schema/main/delta/85/06_add_room_reports.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/86/01_authenticate_media.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/86/02_receipts_event_id_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/87/01_sliding_sync_memberships.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/87/02_per_connection_state.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/87/03_current_state_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/01_add_delayed_events.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/02_fix_sliding_sync_membership_snapshots_forgotten_column.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/03_add_otk_ts_added_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/04_current_state_delta_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.postgres
+${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.sqlite
+${PYSITELIB}/synapse/storage/schema/main/delta/88/05_sliding_sync_room_config_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1947,6 +1968,9 @@ ${PYSITELIB}/synapse/types/rest/client/__init__.pyo
 ${PYSITELIB}/synapse/types/state.py
 ${PYSITELIB}/synapse/types/state.pyc
 ${PYSITELIB}/synapse/types/state.pyo
+${PYSITELIB}/synapse/types/storage/__init__.py
+${PYSITELIB}/synapse/types/storage/__init__.pyc
+${PYSITELIB}/synapse/types/storage/__init__.pyo
 ${PYSITELIB}/synapse/util/__init__.py
 ${PYSITELIB}/synapse/util/__init__.pyc
 ${PYSITELIB}/synapse/util/__init__.pyo
