@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2024/11/12 16:01:00 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/27 15:25:53 riastradh Exp $
 
 DISTNAME=	cram-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cram/}
 
@@ -27,7 +28,7 @@ SUBST_STAGE.bash=	pre-configure
 SUBST_MESSAGE.bash=	Fixing /bin/bash references
 SUBST_FILES.bash+=	tests/setup.sh
 SUBST_FILES.bash+=	tests/test.t
-SUBST_SED.bash+=	-e 's,/bin/bash,'${PREFIX:Q}'/bin/bash,g'
+SUBST_SED.bash+=	-e 's,/bin/bash,'${BASH:Q}',g'
 
 do-test:
 	@${STEP_MSG} Running cram tests
