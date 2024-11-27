@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/14 22:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/27 07:04:55 khorben Exp $
 
 DISTNAME=	quake2-8.20
 PKGNAME=	y${DISTNAME}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c99
 
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	WITH_SYSTEMWIDE=yes
 MAKE_FLAGS+=	WITH_SYSTEMDIR=${PREFIX}/share/yquake2
 
