@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.275 2024/11/21 14:40:26 adam Exp $
+$NetBSD: distinfo,v 1.276 2024/11/27 17:07:15 riastradh Exp $
 
 BLAKE2s (node-v23.3.0.tar.xz) = 972a376f3dce93b0706ad438e45dce1add8373874579412eaa003af5e6c76a22
 SHA512 (node-v23.3.0.tar.xz) = 2305d4b5652b0cc339becb62213e9dcfb113df8960b2485efe6be488217498d82c49749fc3206354345a416010222a545b449fb1dbe0bcf0ccfbed2d8e190455
@@ -17,6 +17,7 @@ SHA1 (patch-deps_v8_src_codegen_arm_cpu-arm.cc) = 84c75d61bc99c2ff9adeac3152f5b1
 SHA1 (patch-deps_v8_src_common_globals.h) = 86637724864389f2b24251904de41669a2f00fbc
 SHA1 (patch-deps_v8_src_compiler_types.h) = 2a212282ab9d71e98ae56827fdb1d9778a6047a5
 SHA1 (patch-deps_v8_src_heap_code-range.cc) = b281f76f4e3d8e562f596235049a6be7c5ff4de2
+SHA1 (patch-deps_v8_third__party_abseil-cpp_absl_debugging_internal_elf__mem__image.h) = d74a2354d9c0fe9a6cce43cffa3d3a5a37c84e03
 SHA1 (patch-deps_v8_tools_profiling_run-llprof.sh) = b19994d3195cc97424a3cc2ffd3ae02eacc6ffa8
 SHA1 (patch-node.gypi) = 4a104dba6c22702211009bc60a6be6f87554e2fa
 SHA1 (patch-src_compile__cache.cc) = 39a85bcb1ebe7c9bf7c431d6dc60dca5b9d63aaf
