@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2024/08/15 07:33:42 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2024/11/27 10:18:18 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
