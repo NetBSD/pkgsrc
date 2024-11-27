@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2024/11/26 12:09:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.60 2024/11/27 21:59:55 riastradh Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -87,7 +87,7 @@ paxctl:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../archivers/brotli/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.41
+BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.49
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/nodejs/application.mk"
