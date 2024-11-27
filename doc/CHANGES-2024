@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7232 2024/11/26 23:32:37 js Exp $
+$NetBSD: CHANGES-2024,v 1.7233 2024/11/27 07:03:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10889,3 +10889,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated shells/tcsh to 6.24.14 [kim 2024-11-26]
 	Updated geography/qgis to 3.34.13 [gdt 2024-11-26]
 	Updated chat/element-web to 1.11.86 [js 2024-11-26]
+	Updated devel/cmake to 3.31.1 [adam 2024-11-27]
+	Updated devel/cmake-gui to 3.31.1 [adam 2024-11-27]
