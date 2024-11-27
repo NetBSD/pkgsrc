@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2024/11/15 13:12:14 pin Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/27 10:28:36 pin Exp $
 
 PKGNAME=	lxqt-2.1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,7 +37,7 @@ DEPENDS+=	lxqt-session>=2.1.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.1.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.1.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.1.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.1.1:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.1.2:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.1.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.9.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.1.0:../../archivers/lxqt-archiver
@@ -44,5 +45,8 @@ DEPENDS+=	lxqt-archiver>=1.1.0:../../archivers/lxqt-archiver
 # theme must be present for the DE to be fully usable.
 DEPENDS+=	breeze-icons-[0-9]*:../../graphics/breeze-icons
 DEPENDS+=	xscreensaver-[0-9]*:../../x11/xscreensaver
+# This pulls in quite a lot of dependencies, but, if translations are wanted,
+# it's needed.
+DEPENDS+=	qt6-qttranslations-[0-9]*:../../x11/qt6-qttranslations
 
 .include "../../mk/bsd.pkg.mk"
