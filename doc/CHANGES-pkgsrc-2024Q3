@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.11 2024/11/07 23:16:02 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.12 2024/11/27 14:37:22 maya Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -54,3 +54,7 @@ www/palemoon: security fix
 
 Pullup ticket #6917 - requested by nia
 sysutils/xfm: Bug fix
+
+Pullup ticket #6919 - requested by bsiegert
+www/firefox115: Security fix
+www/firefox115-l10n: Security fix
