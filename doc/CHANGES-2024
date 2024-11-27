@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7235 2024/11/27 10:21:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7236 2024/11/27 10:23:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10893,3 +10893,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/cmake-gui to 3.31.1 [adam 2024-11-27]
 	Updated sysutils/lla to 0.2.6 [pin 2024-11-27]
 	Updated devel/mise to 2024.11.30 [pin 2024-11-27]
+	Updated shells/oh-my-posh to 24.10.1 [pin 2024-11-27]
