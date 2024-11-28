@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.11 2022/06/17 08:07:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/11/28 18:11:42 adam Exp $
 man/man1/haproxy.1
 sbin/haproxy
-share/doc/haproxy/architecture.txt
-share/doc/haproxy/configuration.txt
 share/examples/haproxy/basic-config-edge.cfg
 share/examples/haproxy/content-sw-sample.cfg
+share/examples/haproxy/mptcp.cfg
 share/examples/haproxy/option-http_proxy.cfg
 share/examples/haproxy/quick-test.cfg
 share/examples/haproxy/socks4.cfg
+share/examples/haproxy/traces.cfg
 share/examples/haproxy/transparent_proxy.cfg
 share/examples/haproxy/wurfl-example.cfg
