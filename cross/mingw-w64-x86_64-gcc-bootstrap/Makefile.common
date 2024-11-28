@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.14 2024/01/31 21:04:14 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.15 2024/11/28 20:17:30 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile
 # used by cross/mingw-w64-i686-gcc-bootstrap/Makefile
 # used by cross/mingw-w64-i686-gcc-bootstrap/Makefile.common
 # used by cross/mingw-w64-x86_64-gcc-bootstrap/Makefile.common
 
-DISTNAME=		gcc-13.2.0
+DISTNAME=		gcc-14.2.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
@@ -16,8 +16,6 @@ HOMEPAGE=		http://mingw-w64.org/
 PATCHDIR=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/patches
 DISTINFO_FILE=		${.CURDIR}/../../cross/mingw-w64-x86_64-gcc/distinfo
 
-#FORTIFY_SUPPORTED=	no # Avoid "undefined reference to `__strcpy_chk'"
-
 # Relocations result in a linker error.
 MKPIE_SUPPORTED=	no
 
@@ -26,12 +24,12 @@ USE_TOOLS+=		gmake
 TOOLS_BROKEN+=		perl
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # has sub-configures
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-bootstrap
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}-bootstrap
 OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 CONFIGURE_ARGS+=	--target=${MINGW_TARGET}
-CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/ld
 CONFIGURE_ARGS+=	--with-as=${PREFIX}/cross/${MINGW_TARGET}/${MINGW_TARGET}/bin/as
 CONFIGURE_ARGS+=	--disable-nls
