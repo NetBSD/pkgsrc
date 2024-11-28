@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2023/08/14 05:24:40 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/11/28 14:55:27 nia Exp $
 #
 
 DISTNAME=	ibus-hangul-1.5.0
@@ -18,6 +18,9 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
 PY_PATCHPLIST=		yes
+
+# uses deprecated imp module
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
