@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.11 2024/01/31 21:10:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.12 2024/11/28 20:09:13 ryoon Exp $
 #
 # used by cross/mingw-w64-x86_64-headers/Makefile
 # used by cross/mingw-w64-i686-headers/Makefile
 # used by cross/mingw-w64-i686-headers/Makefile.common
 # used by cross/mingw-w64-x86_64-headers/Makefile.common
 
-DISTNAME=		mingw-w64-v11.0.1
+DISTNAME=		mingw-w64-v12.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,9 +20,9 @@ USE_GNU_CONFIGURE_HOST=	no
 USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}/mingw
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}/mingw
 CONFIGURE_ARGS+=	--enable-sdk=all
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
-CONFIGURE_ARGS+=	--with-default-msvcrt=ucrt
+CONFIGURE_ARGS+=	--with-default-msvcrt=${CRT_TYPE}
 
 .include "../../cross/mingw-w64/Makefile.common"
