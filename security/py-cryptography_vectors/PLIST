@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/07/21 09:12:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2024/11/28 10:31:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.APACHE
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.BSD
@@ -17,6 +17,7 @@ ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha256.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha384.txt
 ${PYSITELIB}/cryptography_vectors/HMAC/rfc-4231-sha512.txt
 ${PYSITELIB}/cryptography_vectors/KDF/ansx963_2001.txt
+${PYSITELIB}/cryptography_vectors/KDF/argon2id.txt
 ${PYSITELIB}/cryptography_vectors/KDF/hkdf-generated.txt
 ${PYSITELIB}/cryptography_vectors/KDF/nist-800-108-KBKDF-CTR.txt
 ${PYSITELIB}/cryptography_vectors/KDF/rfc-5869-HKDF-SHA1.txt
@@ -84,6 +85,7 @@ ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/Readme.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.rsp
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigGen.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/DSA/FIPS_186-3/SigVer.rsp
+${PYSITELIB}/cryptography_vectors/asymmetric/DSA/custom/nilpotent.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/compressed_points.txt
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_private_key.pem
 ${PYSITELIB}/cryptography_vectors/asymmetric/EC/explicit_parameters_wap_wsg_idm_ecid_wtls11_private_key.pem
@@ -669,6 +671,9 @@ ${PYSITELIB}/cryptography_vectors/pkcs12/no-name-pwd.p12
 ${PYSITELIB}/cryptography_vectors/pkcs12/no-password.p12
 ${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.der
 ${PYSITELIB}/cryptography_vectors/pkcs7/amazon-roots.p7b
+${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-aes-256-cbc.pem
+${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-no-content.der
+${PYSITELIB}/cryptography_vectors/pkcs7/enveloped-rsa-oaep.pem
 ${PYSITELIB}/cryptography_vectors/pkcs7/enveloped.pem
 ${PYSITELIB}/cryptography_vectors/pkcs7/isrg.pem
 ${PYSITELIB}/cryptography_vectors/poly1305/rfc7539.txt
@@ -2249,6 +2254,8 @@ ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.precert.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.with_garbage.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.with_headers.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/admissions_extension_authority_not_provided.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/admissions_extension_optional_data_not_provided.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ca_issuers.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp_ca_issuers.pem
@@ -2304,6 +2311,7 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/dsa_selfsigned_ca.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ec_no_named_curve.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ecdsa_null_alg.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ekucrit-testuser-cert.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/empty-eku.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/extended_key_usage.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/freshestcrl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/ian_uri.pem
@@ -2316,6 +2324,8 @@ ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_signature_crl.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_utf8_common_name.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/invalid_version.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/long-form-name-attribute.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/malformed-ian.pem
+${PYSITELIB}/cryptography_vectors/x509/custom/malformed-san.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/mismatch_inner_outer_sig_algorithm.der
 ${PYSITELIB}/cryptography_vectors/x509/custom/ms-certificate-template.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/nc_excluded.pem
@@ -2424,6 +2434,7 @@ ${PYSITELIB}/cryptography_vectors/x509/requests/san_rsa_sha1.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/two_basic_constraints.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/unsupported_extension.pem
 ${PYSITELIB}/cryptography_vectors/x509/requests/unsupported_extension_critical.pem
+${PYSITELIB}/cryptography_vectors/x509/requests/zero-element-attribute.pem
 ${PYSITELIB}/cryptography_vectors/x509/san_edipartyname.der
 ${PYSITELIB}/cryptography_vectors/x509/san_x400address.der
 ${PYSITELIB}/cryptography_vectors/x509/scottishpower-bitstring-dn.pem
