@@ -1,4 +1,4 @@
-$NetBSD: patch-Clients_Makefile,v 1.1 2024/11/25 21:33:23 tnn Exp $
+$NetBSD: patch-Clients_Makefile,v 1.2 2024/11/28 10:03:32 jperkin Exp $
 
 Fix libdns_sd linkage
 
@@ -17,7 +17,7 @@ Fix libdns_sd linkage
  else
  TARGETS = build/dns-sd
 -LIBS = -L../mDNSPosix/$(BUILDDIR)/ -ldns_sd
-+LIBS = -Wl,-R@PREFIX@/lib -L../mDNSPosix/$(BUILDDIR)/ -ldns_sd
++LIBS = -Wl,-R@PREFIX@/lib -L../mDNSPosix/$(BUILDDIR)/ -ldns_sd $(LDFLAGS)
  endif
  
  all: $(TARGETS)
