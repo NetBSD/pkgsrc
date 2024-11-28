@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2024/01/31 21:10:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.11 2024/11/28 20:01:37 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-crt/Makefile
 # used by cross/mingw-w64-x86_64-crt/Makefile
 
-DISTNAME=		mingw-w64-v11.0.1
+DISTNAME=		mingw-w64-v12.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,14 +26,14 @@ PKGSRC_USE_FORTIFY=	no # Avoid "undefined reference to `__strcpy_chk'"
 USE_GNU_CONFIGURE_HOST=	no
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}/mingw
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}/mingw
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
-CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}
 CONFIGURE_ARGS+=	--enable-wildcard
-CONFIGURE_ARGS+=	--with-default-msvcrt=ucrt
+CONFIGURE_ARGS+=	--with-default-msvcrt=${CRT_TYPE}
 CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
 
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
-PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}-bootstrap/bin
 
 .include "../../cross/mingw-w64/Makefile.common"
