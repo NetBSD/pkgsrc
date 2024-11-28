@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:06 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/11/28 14:09:12 mef Exp $
 
-BLAKE2s (R/rnaturalearthdata_0.1.0.tar.gz) = 6560cd7955c69562e61f7e2f647e277dc52572348d4481db8a682ea369f09fcf
-SHA512 (R/rnaturalearthdata_0.1.0.tar.gz) = 13aa33c22d293c1ebbe41d7fdf3c30efc1dd34e5e734d3636d8c424fa105bb38e3ebd1cf8f6ddc451f6b8228be2aeb8f471a60d6071d8a4f8ccd51ecb6af6062
-Size (R/rnaturalearthdata_0.1.0.tar.gz) = 3219989 bytes
+BLAKE2s (R/rnaturalearthdata_1.0.0.tar.gz) = 56c3c122c7c97ce3274e8ee964ecd2b43bc9548f751ddc7314223a68c37c817e
+SHA512 (R/rnaturalearthdata_1.0.0.tar.gz) = 5afa4f432823886b332b1551c7702f1edbea873c445127bea191a947e9c0855411d02a767747e2ad5d077b97e80d37953c5dbe7d953a86aab546991b8c8a34ea
+Size (R/rnaturalearthdata_1.0.0.tar.gz) = 3313555 bytes
