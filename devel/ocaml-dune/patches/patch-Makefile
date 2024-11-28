@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2024/11/28 12:51:37 bacon Exp $
+
+# Temporary hack: configure --mandir is not respected by the build system
+# https://github.com/ocaml/dune/issues/10229
+
+--- Makefile.orig	2023-10-09 11:08:29.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@
+ PREFIX_ARG := $(if $(PREFIX),--prefix $(PREFIX),)
+ LIBDIR_ARG := $(if $(LIBDIR),--libdir $(LIBDIR),)
+ DESTDIR_ARG := $(if $(DESTDIR),--destdir $(DESTDIR),)
+-INSTALL_ARGS := $(PREFIX_ARG) $(LIBDIR_ARG) $(DESTDIR_ARG)
++INSTALL_ARGS := $(PREFIX_ARG) $(LIBDIR_ARG) $(DESTDIR_ARG) --mandir ${PREFIX}/${PKGMANDIR}
+ BIN := ./_boot/dune.exe
+ 
+ # Dependencies used for testing dune, when developed locally and
