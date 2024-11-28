@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/31 16:45:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/11/28 19:56:34 ryoon Exp $
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-addr2line
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-ar
 cross/x86_64-w64-mingw32/bin/x86_64-w64-mingw32-as
@@ -61,6 +61,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.x
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xa
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xbn
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xe
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xer
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xn
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xr
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pe.xu
@@ -68,6 +69,7 @@ cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.x
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xa
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xbn
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xe
+cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xer
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xn
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xr
 cross/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/ldscripts/i386pep.xu
