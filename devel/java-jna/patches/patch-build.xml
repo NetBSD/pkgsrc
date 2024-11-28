@@ -1,32 +1,22 @@
-$NetBSD: patch-build.xml,v 1.2 2023/02/19 00:22:58 abs Exp $
+$NetBSD: patch-build.xml,v 1.3 2024/11/28 19:53:23 ryoon Exp $
 
 Add support for NetBSD, plus comment out fill zipfileset builds
 
---- build.xml.orig	2023-01-14 12:33:30.000000000 +0000
+--- build.xml.orig	2024-10-28 09:41:50.165148099 +0000
 +++ build.xml
-@@ -305,6 +305,9 @@
-     <condition property="os.prefix" value="freebsd-${jre.arch}">
-       <equals arg1="${build.os.name}" arg2="FreeBSD"/>
-     </condition>
-+    <condition property="os.prefix" value="netbsd-${jre.arch}">
-+      <equals arg1="${build.os.name}" arg2="NetBSD"/>
-+    </condition>
-     <condition property="os.prefix" value="openbsd-${jre.arch}">
- 	<equals arg1="${build.os.name}" arg2="OpenBSD"/>
-     </condition>
-@@ -550,6 +553,11 @@ processor=x86;osname=freebsd,
- com/sun/jna/freebsd-x86-64/libjnidispatch.so;
- processor=x86-64;osname=freebsd,
+@@ -404,6 +404,11 @@ processor=x86;osname=openbsd,
+ com/sun/jna/openbsd-x86-64/libjnidispatch.so;
+ processor=x86-64;osname=openbsd,
  
 +com/sun/jna/netbsd-x86/libjnidispatch.so;
 +processor=x86;osname=netbsd,
 +com/sun/jna/netbsd-x86-64/libjnidispatch.so;
 +processor=x86-64;osname=netbsd,
 +
- com/sun/jna/openbsd-x86/libjnidispatch.so;
- processor=x86;osname=openbsd,
- com/sun/jna/openbsd-x86-64/libjnidispatch.so;
-@@ -596,6 +604,7 @@ osname=macosx;processor=aarch64
+ com/sun/jna/darwin-ppc/libjnidispatch.jnilib;
+ osname=macosx;processor=ppc,
+ com/sun/jna/darwin-ppc64/libjnidispatch.jnilib;
+@@ -445,6 +450,7 @@ osname=macosx;processor=aarch64
        <fileset dir="${classes}" excludes="${jar.omitted}">
          <patternset refid="jar-compiled"/>
        </fileset>
@@ -34,37 +24,37 @@ Add support for NetBSD, plus comment out fill zipfileset builds
        <zipfileset src="${lib.native}/win32-x86.jar"
                    includes="*jnidispatch*"
                    prefix="com/sun/jna/win32-x86"/>
-@@ -680,6 +689,12 @@ osname=macosx;processor=aarch64
-       <zipfileset src="${lib.native}/freebsd-x86-64.jar"
+@@ -541,6 +547,12 @@ osname=macosx;processor=aarch64
+       <zipfileset src="${lib.native}/openbsd-x86-64.jar"
                    includes="*jnidispatch*"
-                   prefix="com/sun/jna/freebsd-x86-64"/>
+                   prefix="com/sun/jna/openbsd-x86-64"/>
 +      <zipfileset src="${lib.native}/netbsd-x86.jar"
 +                  includes="*jnidispatch*"
 +                  prefix="com/sun/jna/netbsd-x86"/>
 +      <zipfileset src="${lib.native}/netbsd-x86-64.jar"
 +                  includes="*jnidispatch*"
 +                  prefix="com/sun/jna/netbsd-x86-64"/>
-       <zipfileset src="${lib.native}/openbsd-x86.jar"
+       <zipfileset src="${lib.native}/win32-x86-64.jar"
                    includes="*jnidispatch*"
-                   prefix="com/sun/jna/openbsd-x86"/>
-@@ -695,6 +710,7 @@ osname=macosx;processor=aarch64
+                   prefix="com/sun/jna/win32-x86-64"/>
+@@ -550,6 +562,7 @@ osname=macosx;processor=aarch64
        <zipfileset src="${lib.native}/w32ce-arm.jar"
                    includes="*jnidispatch*"
                    prefix="com/sun/jna/w32ce-arm"/>
-+/disabled for pkgsrc -->
++disabled for pkgsrc -->
        <zipfileset dir="."
                    includes="LICENSE,LGPL2.1,AL2.0"
                    prefix="META-INF"/>
-@@ -874,6 +890,8 @@ osname=macosx;processor=aarch64
-     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/linux-riscv64.jar" overwrite="true"/>
-     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/freebsd-x86.jar" overwrite="true"/>
-     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/freebsd-x86-64.jar" overwrite="true"/>
-+    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86.jar" overwrite="true"/>
-+    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86-64.jar" overwrite="true"/>
+@@ -727,6 +740,8 @@ osname=macosx;processor=aarch64
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/freebsd-aarch64.jar" overwrite="true"/>
      <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/openbsd-x86.jar" overwrite="true"/>
      <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/openbsd-x86-64.jar" overwrite="true"/>
++    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86.jar" overwrite="true"/>
++    <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/netbsd-x86-64.jar" overwrite="true"/>
      <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/sunos-x86.jar" overwrite="true"/>
-@@ -1174,6 +1192,7 @@ cd ..
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/sunos-x86-64.jar" overwrite="true"/>
+     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/sunos-sparc.jar" overwrite="true"/>
+@@ -1026,6 +1041,7 @@ cd ..
          <attribute name="Specification-Version" value="${jni.version}"/>
        </manifest>
      </jar>

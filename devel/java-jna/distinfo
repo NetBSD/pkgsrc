@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2023/02/19 00:22:58 abs Exp $
+$NetBSD: distinfo,v 1.5 2024/11/28 19:53:23 ryoon Exp $
 
-BLAKE2s (jna-5.13.0.tar.gz) = df4cc4a30733781eef49cfd2ee1f35c19930b2d89b7652d3b0d9c5553435d6b5
-SHA512 (jna-5.13.0.tar.gz) = aefd0becc03bb7fd753e8c5cdcbcb20f6d590125a5fb03048bef0024e826ab0254b750e22a8bb26bea38cc89262ad45e5030b666cb2c857b01b15a6a55379a0f
-Size (jna-5.13.0.tar.gz) = 116027625 bytes
-SHA1 (patch-build.xml) = b903636b980c5d357db61f978d4eae98da95948f
-SHA1 (patch-native-libffi-configure.ac) = 78fe1d829186f6280b0f5e92d680ad5aadf2f1a2
+BLAKE2s (jna-5.15.0.tar.gz) = ee7dcdc1a6b17b31f2b88c745d8259581100b90786aaf5efc07a5730cf6d458f
+SHA512 (jna-5.15.0.tar.gz) = b3329138bbdb5040da7a6b305af37e46ffd02948551f5c9fc2815eb7a66946807c3b9152797808b5a171735d6a1a241f25dc0ef95ecacf897926135727d1d533
+Size (jna-5.15.0.tar.gz) = 117272793 bytes
+SHA1 (patch-build.xml) = 155a678a043a56a4bd76375bc0fa884491fe8da3
+SHA1 (patch-native-libffi-configure.ac) = d88cb25080834bedf2e8a8b53ba2030753944985

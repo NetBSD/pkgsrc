@@ -1,15 +1,15 @@
-$NetBSD: patch-native-libffi-configure.ac,v 1.2 2023/02/19 00:22:58 abs Exp $
+$NetBSD: patch-native-libffi-configure.ac,v 1.3 2024/11/28 19:53:23 ryoon Exp $
 
 Add support for NetBSD
 
---- native/libffi/configure.ac.orig	2023-01-14 12:33:30.000000000 +0000
+--- native/libffi/configure.ac.orig	2024-10-28 09:41:01.674651154 +0000
 +++ native/libffi/configure.ac
 @@ -233,7 +233,7 @@ case "$target" in
                   [Cannot use PROT_EXEC on this target, so, we revert to
                     alternative means])
       ;;
 -     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
-+     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-netbsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android*)
++     *-apple-* | *-*-freebsd* | *-*-kfreebsd* | *-*-openbsd* | *-pc-solaris* | *-linux-android* | *-*-netbsd*)
         AC_DEFINE(FFI_MMAP_EXEC_WRIT, 1,
                   [Cannot use malloc on this target, so, we revert to
                     alternative means])
