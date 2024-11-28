@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/03/14 14:40:00 pin Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/28 10:17:48 pin Exp $
 
-DISTNAME=	cocogitto-6.1.0
+DISTNAME=	cocogitto-6.2.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cocogitto/}
 
@@ -13,6 +13,9 @@ LICENSE=	mit
 
 INSTALLATION_DIRS=	bin
 
+#RUST_REQ=		1.82.0
+#Upstream does not state the required MSRV.
+#This package is confirmed to build with Rust 1.82.0 on amd64
 USE_TOOLS+=	pkg-config
 
 # Rename the binary to avoid potential conflict with devel/py-cogapp.
