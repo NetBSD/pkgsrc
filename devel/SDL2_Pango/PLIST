@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2024/11/28 08:12:53 wiz Exp $
+include/SDL2_Pango.h
+lib/libSDL2_Pango.la
+lib/pkgconfig/SDL2_Pango.pc

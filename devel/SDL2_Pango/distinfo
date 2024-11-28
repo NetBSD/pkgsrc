@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/28 08:12:53 wiz Exp $
+
+BLAKE2s (SDL2_Pango-2.1.5.tar.gz) = 4b23b1ab6368ae2ab37a4dd45a572ac93c8ad8fa853b02560f736353cc6e78c7
+SHA512 (SDL2_Pango-2.1.5.tar.gz) = 381fce666949211f2c25b73e8ccc97e2b96aab725dc5f74135c7e62ffb6fb93053b0323c79f1c32ceab03a4ef335cf407979d82f1ab0778610e7dcbfc42b6e9c
+Size (SDL2_Pango-2.1.5.tar.gz) = 643659 bytes
