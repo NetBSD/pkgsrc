@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2024/11/24 16:50:13 he Exp $
+# $NetBSD: Makefile,v 1.71 2024/11/28 14:49:48 gdt Exp $
 
 DISTNAME=	rust-1.81.0
 PKGNAME=	${DISTNAME:S/rust/rust-bin/1}
@@ -216,6 +216,14 @@ fix-darwin-install-name:
 		install_name_tool -change $$rpath			\
 		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
 		    ${DESTDIR}${PREFIX}/bin/${bin};			\
+	done
+.  endfor
+.  for libexec in rust-analyzer-proc-macro-srv
+	otool -XL ${DESTDIR}${PREFIX}/libexec/${libexec}		\
+	    | ${GREP} '@rpath' | while read rpath rest; do		\
+		install_name_tool -change $$rpath			\
+		    `${ECHO} $$rpath | ${SED} -e 's,@rpath,${PREFIX}/lib,g'` \
+		    ${DESTDIR}${PREFIX}/libexec/${libexec};		\
 	done
 .  endfor
 .  for bin in lldb lldb-mi llvm-nm llvm-objcopy llvm-objdump 	\
