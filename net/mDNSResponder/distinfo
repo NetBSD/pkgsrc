@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.42 2024/11/25 21:33:23 tnn Exp $
+$NetBSD: distinfo,v 1.43 2024/11/28 10:03:32 jperkin Exp $
 
 BLAKE2s (mDNSResponder-2559.1.1.tar.gz) = e72fbea9df78d0cf811e1af6d08483973487210594e165b7b075f0b32f595d97
 SHA512 (mDNSResponder-2559.1.1.tar.gz) = 1112d78e3a46115ffdae4849d847a6cfe1052d6e4a6af3afa6058eb900ac7f7c8fee20874b479ff3d40af2da95a371241f2c821a193f148f844bf9efc06fcc79
 Size (mDNSResponder-2559.1.1.tar.gz) = 3362635 bytes
-SHA1 (patch-Clients_Makefile) = 5a967c6f86132ec42bff7ebf3507971d45073b65
+SHA1 (patch-Clients_Makefile) = 7b3d6da98f8d8bdf1f3b11feafc68aa514e37d7e
+SHA1 (patch-DSO_dso.c) = 12139edda92d9cab01e4acaf707812a1d337124d
 SHA1 (patch-mDNSPosix_Makefile) = 3e91025e5e878d0f2552d3f82839db31c67b31d7
 SHA1 (patch-mDNSPosix_mDNSPosix.c) = bfefa8d1252d0ba9afdf6506dd6686492dd1f10b
 SHA1 (patch-mDNSPosix_mDNSUNP.c) = a900ad9991aaee21fbe9094a65900b1d172c2abc
