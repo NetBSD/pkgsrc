@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2024/01/31 21:10:34 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2024/11/28 20:31:41 ryoon Exp $
 #
 # used by cross/mingw-w64-i686-winpthreads/Makefile
 # used by cross/mingw-w64-x86_64-winpthreads/Makefile
 
-DISTNAME=		mingw-w64-v11.0.1
+DISTNAME=		mingw-w64-v12.0.0
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mingw-w64/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,17 +24,17 @@ USE_TOOLS+=		gmake pax perl:build
 USE_GNU_CONFIGURE_HOST=	no
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-winpthreads/mingw
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross/${MINGW_TARGET}-winpthreads-${CRT_TYPE}/mingw
 CONFIGURE_ARGS+=	--host=${MINGW_TARGET}
-CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}
+CONFIGURE_ARGS+=	--with-sysroot=${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}
 CONFIGURE_ENV+=		ac_cv_prog_CC=${MINGW_TARGET}-gcc
 
 PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}/bin
-PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-bootstrap/bin
+PREPEND_PATH+=		${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}-bootstrap/bin
 
 pre-install:
 	${MKDIR} ${DESTDIR}/${GNU_CONFIGURE_PREFIX}
-	cd ${PREFIX}/cross/${MINGW_TARGET}/mingw && \
+	cd ${PREFIX}/cross/${MINGW_TARGET}-${CRT_TYPE}/mingw && \
 		${FIND} include lib -type f \! -name '*.orig' -print | \
                 pax -rw -pmp ${DESTDIR}${GNU_CONFIGURE_PREFIX}
 
