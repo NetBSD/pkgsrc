@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7256 2024/11/28 14:09:19 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7257 2024/11/28 14:13:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10918,3 +10918,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-pyerfa to 2.0.1.5 [adam 2024-11-28]
 	Updated geography/R-rnaturalearth to 1.0.1 [mef 2024-11-28]
 	Updated geography/R-rnaturalearthdata to 1.0.0 [mef 2024-11-28]
+	Updated geography/R-rnaturalearthhires to 1.0.0 [mef 2024-11-28]
