@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.41 2024/11/24 06:55:24 adam Exp $
+$NetBSD: distinfo,v 1.42 2024/11/28 09:35:34 nia Exp $
 
 BLAKE2s (x265_4.1.tar.gz) = d0b785b8746848f2fd4b62b81218485ad95d87c78ee53c74975059a23cc43857
 SHA512 (x265_4.1.tar.gz) = 5af5b958ff507f96a52813a6b72847c9fbc555bf95af287ae7f011055338266fb647dfea3b7789730c7f5c746f7e6cb7d9395ba10cbe43eb5034d3ed99730c3f
 Size (x265_4.1.tar.gz) = 1725279 bytes
-SHA1 (patch-CMakeLists.txt) = b69463b742ad1408b96ef2a87162900674a2cc8a
+SHA1 (patch-CMakeLists.txt) = a1daf0c0dc40732a475c1a366dc9f7c93d07ed97
+SHA1 (patch-common_common.h) = eece838c76a1f199af29de88d9fc5c5a7a7243c0
 SHA1 (patch-common_cpu.cpp) = 63c57523ab8b194bcbdddf7ba6cbdc565fa04187
 SHA1 (patch-common_cpu.h) = 000f9b6e40a459db4e3428730c8a9f5eeb6d9449
 SHA1 (patch-common_quant.cpp) = 648e21479e7af9007e5aca1db86a7f1de50047ea
