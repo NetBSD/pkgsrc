@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2024/11/09 11:20:09 adam Exp $
+# $NetBSD: Makefile,v 1.129 2024/11/28 18:11:42 adam Exp $
 
-DISTNAME=	haproxy-3.0.6
+DISTNAME=	haproxy-3.1.0
 CATEGORIES=	net www
 MASTER_SITES=	https://www.haproxy.org/download/${PKGVERSION_NOREV:R}/src/
 
@@ -29,9 +29,8 @@ INSTALL_TARGET=		install-bin install-man
 .include "options.mk"
 
 RCD_SCRIPTS=		haproxy
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,8 +49,6 @@ TARGET=	generic
 LIBS.SunOS+=		-lxnet
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/architecture.txt ${DESTDIR}${DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/doc/configuration.txt ${DESTDIR}${DOCDIR}/
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cfg ${DESTDIR}${EGDIR}/
 
 .include "../../devel/zlib/buildlink3.mk"
