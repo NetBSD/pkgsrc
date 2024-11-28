@@ -1,0 +1,14 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/11/28 10:31:24 adam Exp $
+
+Don't install Cargo.toml files.
+
+--- pyproject.toml.orig	2024-11-28 09:55:59.983120519 +0000
++++ pyproject.toml
+@@ -101,7 +101,6 @@ include = [
+     "src/_cffi_src/**/*.c",
+     "src/_cffi_src/**/*.h",
+ 
+-    "**/Cargo.toml",
+     "**/Cargo.lock",
+     "src/rust/**/*.rs",
+ 
