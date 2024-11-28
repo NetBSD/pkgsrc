@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/08/28 15:34:30 adam Exp $
+# $NetBSD: Makefile,v 1.36 2024/11/28 19:51:01 adam Exp $
 
-DISTNAME=	httpx-0.27.2
+DISTNAME=	httpx-0.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpx/}
@@ -17,6 +17,10 @@ DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-httpcore>=1.0.0:../../www/py-httpcore
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
+# cli
+DEPENDS+=	${PYPKGPREFIX}-click>=8:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-rich>=10:../../comms/py-rich
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
 

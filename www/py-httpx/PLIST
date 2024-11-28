@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/10/28 19:57:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/11/28 19:51:01 adam Exp $
 bin/httpx-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,9 +20,6 @@ ${PYSITELIB}/httpx/_auth.pyo
 ${PYSITELIB}/httpx/_client.py
 ${PYSITELIB}/httpx/_client.pyc
 ${PYSITELIB}/httpx/_client.pyo
-${PYSITELIB}/httpx/_compat.py
-${PYSITELIB}/httpx/_compat.pyc
-${PYSITELIB}/httpx/_compat.pyo
 ${PYSITELIB}/httpx/_config.py
 ${PYSITELIB}/httpx/_config.pyc
 ${PYSITELIB}/httpx/_config.pyo
