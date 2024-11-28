@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2024/11/14 22:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/11/28 08:46:12 pin Exp $
 
-DISTNAME=	v0.8.7
+DISTNAME=	v0.8.9
 PKGNAME=	${DISTNAME:S|^v|meli-|}
-PKGREVISION=	3
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://git.meli-email.org/meli/meli/archive/
@@ -23,7 +22,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 CARGO_NO_DEFAULT_FEATURES=	yes
-CARGO_FEATURES=			cli-docs jmap regexp smtp
+CARGO_FEATURES=			cli-docs jmap smtp
 
 .include "options.mk"
 .include "cargo-depends.mk"
@@ -57,16 +56,18 @@ post-patch:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/meli	\
+	${INSTALL_PROGRAM} ${WRKSRC}/target/release/meli		\
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.1		\
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.1			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/meli.1
-	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.7		\
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.7			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/meli.7
-	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli-themes.5	\
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli-themes.5		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli-themes.5
-	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.conf.5		\
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.conf.5			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli.conf.5
+	${INSTALL_MAN} ${WRKSRC}/meli/docs/meli.conf.examples.5		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/meli.conf.examples.5
 
 post-install:
 	${INSTALL_DATA} ${PKG_DOCS:S|^|${WRKSRC}/|}		\
