@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2024/11/20 21:34:33 pin Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/28 08:41:26 pin Exp $
 
-DISTNAME=	chess-tui-1.4.0
+DISTNAME=	chess-tui-1.5.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomas-mauran/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/thomas-mauran/chess-tui/
+HOMEPAGE=	https://thomas-mauran.github.io/chess-tui/
 COMMENT=	Chess TUI implementation in rust
 LICENSE=	mit
 
