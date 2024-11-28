@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/16 19:27:25 vins Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/11/28 08:46:12 pin Exp $
 bin/meli
 man/man1/meli.1
 man/man5/meli-themes.5
 man/man5/meli.conf.5
+man/man5/meli.conf.examples.5
 man/man7/meli.7
 share/doc/meli/README.pkgsrc
 share/doc/meli/external-tools.md
 share/doc/meli/mail.vim
 share/doc/meli/samples/sample-config.toml
+share/doc/meli/samples/themes/ibm-modern.toml
 share/doc/meli/samples/themes/nord.toml
 share/doc/meli/samples/themes/orca.toml
 share/doc/meli/samples/themes/sail.toml
