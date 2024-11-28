@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/02/10 00:53:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2024/11/28 20:36:41 ryoon Exp $
 
-DISTNAME=		mingw-w64-11.0.1
+DISTNAME=		mingw-w64-12.0.0
 CATEGORIES=		cross
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,9 +11,11 @@ COMMENT=		Cross toolchains for win32 and win64 cross-development
 
 META_PACKAGE=		yes
 
-DEPENDS+=		mingw-w64-x86_64-gcc-[0-9]*:../../cross/mingw-w64-x86_64-gcc
-DEPENDS+=		mingw-w64-x86_64-gcc-winpthreads-[0-9]*:../../cross/mingw-w64-x86_64-gcc-winpthreads
-DEPENDS+=		mingw-w64-i686-gcc-[0-9]*:../../cross/mingw-w64-i686-gcc
-DEPENDS+=		mingw-w64-i686-gcc-winpthreads-[0-9]*:../../cross/mingw-w64-i686-gcc-winpthreads
+DEPENDS+=		mingw-w64-x86_64-gcc-ucrt-[0-9]*:../../cross/mingw-w64-x86_64-gcc
+DEPENDS+=		mingw-w64-x86_64-gcc-msvcrt-[0-9]*:../../cross/mingw-w64-x86_64-gcc-msvcrt
+DEPENDS+=		mingw-w64-x86_64-gcc-winpthreads-ucrt-[0-9]*:../../cross/mingw-w64-x86_64-gcc-winpthreads
+DEPENDS+=		mingw-w64-i686-gcc-ucrt-[0-9]*:../../cross/mingw-w64-i686-gcc
+DEPENDS+=		mingw-w64-i686-gcc-msvcrt-[0-9]*:../../cross/mingw-w64-i686-gcc-msvcrt
+DEPENDS+=		mingw-w64-i686-gcc-winpthreads-ucrt-[0-9]*:../../cross/mingw-w64-i686-gcc-winpthreads
 
 .include "../../mk/bsd.pkg.mk"
