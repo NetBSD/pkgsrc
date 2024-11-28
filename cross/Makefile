@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2024/11/28 20:05:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2024/11/28 20:07:30 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -50,6 +50,7 @@ SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	mingw-w64
 SUBDIR+=	mingw-w64-i686-binutils
 SUBDIR+=	mingw-w64-i686-crt
+SUBDIR+=	mingw-w64-i686-crt-msvcrt
 SUBDIR+=	mingw-w64-i686-gcc
 SUBDIR+=	mingw-w64-i686-gcc-bootstrap
 SUBDIR+=	mingw-w64-i686-gcc-winpthreads
