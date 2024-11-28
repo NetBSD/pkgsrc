@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7290 2024/11/28 20:42:53 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.7291 2024/11/28 22:39:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10954,3 +10954,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated cross/mingw-w64-x86_64-gcc-winpthreads to 14.2.0 [ryoon 2024-11-28]
 	Updated cross/mingw-w64-i686-gcc-winpthreads to 14.2.0 [ryoon 2024-11-28]
 	Updated misc/libreoffice to 24.8.3.2 [ryoon 2024-11-28]
+	Updated geography/R-maps to 3.4.2.1 [mef 2024-11-28]
