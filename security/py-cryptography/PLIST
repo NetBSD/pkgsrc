@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/08/22 13:30:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.36 2024/11/28 10:31:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -158,6 +158,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/hmac.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/__init__.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/argon2.py
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/argon2.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/argon2.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/concatkdf.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/concatkdf.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/concatkdf.pyo
