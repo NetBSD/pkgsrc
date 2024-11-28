@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.35 2024/07/21 09:02:03 wiz Exp $
+$NetBSD: distinfo,v 1.36 2024/11/28 13:21:55 adam Exp $
 
-BLAKE2s (pyopenssl-24.2.1.tar.gz) = 5f23745b9ebb22c78b44c637a63e40c1533eb16a973ae79dc362bfdcc3da1618
-SHA512 (pyopenssl-24.2.1.tar.gz) = 4d0cdf71a5ae785644bd466ef094592fbf4ab804de8d153c139a88d3ff9b8cc80d073f3d49d4dc73d8ebf97a867e1560a5308b998f7ef0ccc734dcc56697c831
-Size (pyopenssl-24.2.1.tar.gz) = 184323 bytes
-SHA1 (patch-tests_memdbg.py) = b3dbfcef4bb83185e064a7c7524c16402309dc06
+BLAKE2s (pyopenssl-24.3.0.tar.gz) = 38da46910fec2ecd0680b20fa2f9a8a505d3616a58adf40b1361b587ddcac4e2
+SHA512 (pyopenssl-24.3.0.tar.gz) = ca46a56a5c97ac91d1cbe1cb8b4d9e6d84610785736e925a579560802c1dce6b1cd95c0fed5c25aa775be8a4ae514c5962a86f2db5ecab4506e67ba80ebebd44
+Size (pyopenssl-24.3.0.tar.gz) = 178944 bytes
