@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/29 15:20:31 mef Exp $
+
+BLAKE2s (R/reproj_0.7.0.tar.gz) = 2657ed685b650c81b28041f357fe7fe9b5e664d78ffa62c1a9a258c83111d16f
+SHA512 (R/reproj_0.7.0.tar.gz) = 480d82bcb3fea474e012907ffaba0b27151903893cc9c66e7f51a1cbf389ec8e268b46cc9a6be44c1ac44a649481c146fbb55d2f4fab2ac24a3a9c7adb897ff4
+Size (R/reproj_0.7.0.tar.gz) = 265649 bytes

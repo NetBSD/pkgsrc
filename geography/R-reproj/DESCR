@@ -1,0 +1,12 @@
+Transform coordinates from a specified source to a specified target
+map projection. This uses the 'PROJ' library directly, by wrapping the
+'PROJ' package which leverages 'libproj', otherwise the 'proj4'
+package. The 'reproj()' function is generic, methods may be added to
+remove the need for an explicit source definition. If 'proj4' is in
+use 'reproj()' handles the requirement for conversion of angular units
+where necessary. This is for use primarily to transform generic data
+formats and direct leverage of the underlying 'PROJ' library. (There
+are transformations that aren't possible with 'PROJ' and that are
+provided by the 'GDAL' library, a limitation which users of this
+package should be aware of.) The 'PROJ' library is available at
+<https://proj.org/>.
