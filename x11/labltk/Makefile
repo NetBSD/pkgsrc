@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2024/11/28 15:38:21 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/29 01:23:11 gdt Exp $
 
 DISTNAME=	labltk-8.06.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
 
-# 8.06.13 and 8.06.14 fail to build
+# 8.06.13 and 8.06.14 fail to build, but they are for newer ocaml:
 #   https://github.com/garrigue/labltk/issues/29
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +21,9 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-use-findlib
 CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LD_FLAGS $$TCL_LD_FLAGS $$TK_LIBS $$TCL_LIBS'`"
+
+# Arguably ranlib should be a TOOL, and labltk should search for it.
+INSTALL_ENV+=		RANLIB=ranlib
 
 BUILD_TARGET=		all
 INSTALL_TARGET=		install
