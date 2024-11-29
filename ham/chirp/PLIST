@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/09/18 17:54:58 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/11/29 13:12:30 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -245,6 +245,9 @@ ${PYSITELIB}/chirp/drivers/ic9x_ll.pyo
 ${PYSITELIB}/chirp/drivers/icf.py
 ${PYSITELIB}/chirp/drivers/icf.pyc
 ${PYSITELIB}/chirp/drivers/icf.pyo
+${PYSITELIB}/chirp/drivers/icm710.py
+${PYSITELIB}/chirp/drivers/icm710.pyc
+${PYSITELIB}/chirp/drivers/icm710.pyo
 ${PYSITELIB}/chirp/drivers/icomciv.py
 ${PYSITELIB}/chirp/drivers/icomciv.pyc
 ${PYSITELIB}/chirp/drivers/icomciv.pyo
@@ -610,6 +613,7 @@ ${PYSITELIB}/chirp/share/welcome_screen_bg.png
 ${PYSITELIB}/chirp/share/welcome_screen_es.png
 ${PYSITELIB}/chirp/share/welcome_screen_fr.png
 ${PYSITELIB}/chirp/share/welcome_screen_it.png
+${PYSITELIB}/chirp/share/welcome_screen_zh_CN.png
 ${PYSITELIB}/chirp/sources/__init__.py
 ${PYSITELIB}/chirp/sources/__init__.pyc
 ${PYSITELIB}/chirp/sources/__init__.pyo
@@ -619,9 +623,12 @@ ${PYSITELIB}/chirp/sources/base.pyo
 ${PYSITELIB}/chirp/sources/dmrmarc.py
 ${PYSITELIB}/chirp/sources/dmrmarc.pyc
 ${PYSITELIB}/chirp/sources/dmrmarc.pyo
-${PYSITELIB}/chirp/sources/przemienniki.py
-${PYSITELIB}/chirp/sources/przemienniki.pyc
-${PYSITELIB}/chirp/sources/przemienniki.pyo
+${PYSITELIB}/chirp/sources/przemienniki_eu.py
+${PYSITELIB}/chirp/sources/przemienniki_eu.pyc
+${PYSITELIB}/chirp/sources/przemienniki_eu.pyo
+${PYSITELIB}/chirp/sources/przemienniki_net.py
+${PYSITELIB}/chirp/sources/przemienniki_net.pyc
+${PYSITELIB}/chirp/sources/przemienniki_net.pyo
 ${PYSITELIB}/chirp/sources/radioreference.py
 ${PYSITELIB}/chirp/sources/radioreference.pyc
 ${PYSITELIB}/chirp/sources/radioreference.pyo
@@ -641,6 +648,7 @@ ${PYSITELIB}/chirp/stock_configs/SE NO KDR444.csv
 ${PYSITELIB}/chirp/stock_configs/UK Business Radio Simple Light Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Center).csv
 ${PYSITELIB}/chirp/stock_configs/US 60 meter channels (Dial).csv
+${PYSITELIB}/chirp/stock_configs/US Aviation Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/US CA Railroad Channels.csv
 ${PYSITELIB}/chirp/stock_configs/US Calling Frequencies.csv
 ${PYSITELIB}/chirp/stock_configs/US FRS and GMRS Channels.csv
