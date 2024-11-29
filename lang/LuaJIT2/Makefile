@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/08/17 15:20:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2024/11/29 12:59:55 jperkin Exp $
 
 DISTNAME=	LuaJIT-2.1.1713773202	# see .relver
 PKGNAME=	${DISTNAME:S/LuaJIT/LuaJIT2/}
@@ -24,6 +24,8 @@ ONLY_FOR_PLATFORM+=	*-*-x86_64
 # pkg/47587: lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
 PTHREAD_AUTO_VARS=	yes
+
+CFLAGS.SunOS+=	-DLUAJIT_UNWIND_EXTERNAL=1
 
 .include "../../mk/bsd.prefs.mk"
 
