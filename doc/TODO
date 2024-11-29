@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25134 2024/11/29 07:43:15 pin Exp $
+$NetBSD: TODO,v 1.25135 2024/11/29 12:02:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cacti-spine-1.2.16
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-7.21.0 [requires py-qt6-webengine]
+	o calibre-7.22.0 [requires py-qt6-webengine]
 	o calligra-3.0.1 [in wip; koffice successor]
 	o camlp4-4.12
 	o carbons-purple-0.2.3
@@ -736,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
+	o groff-1.23.0
 	o gromacs-2021.1
 	o grpc-1.68.0
 	o gss-1.0.3
@@ -1190,6 +1191,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.82.0 [wip]
+	o rust-1.83.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
