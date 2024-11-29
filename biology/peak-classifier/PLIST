@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/10/28 20:37:17 bacon Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/11/29 15:17:46 bacon Exp $
 bin/extract-genes
 bin/feature-view
 bin/filter-overlaps
