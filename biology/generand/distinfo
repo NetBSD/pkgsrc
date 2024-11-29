@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:03:39 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/11/29 13:59:36 bacon Exp $
 
-BLAKE2s (generand-0.1.2.tar.gz) = c228282cc6c39531ab2f25e7cc7d10fb1f69c98777af388c3b06912b1a288e3e
-SHA512 (generand-0.1.2.tar.gz) = ca3c0cb0940f7d179c43d608090e5b0caa87256bbe2f391e1e2907a7c80fef90bffe54f37f2e69c3a6a7ef5e757c9a26b5e6ea31c1f1140121cdff95aaa8c0ac
-Size (generand-0.1.2.tar.gz) = 6782 bytes
+BLAKE2s (generand-0.1.2.8-a715a8965d4cb44a9f195dc796c5c0fa871d1fd7.tar.gz) = ac0979290676a128245a979e060b0cb22008c00386c0de96d862bf70c9ba37c7
+SHA512 (generand-0.1.2.8-a715a8965d4cb44a9f195dc796c5c0fa871d1fd7.tar.gz) = f45b7110af9b1ed0da733f48a088e66989f7c05ea17e02f73c7f229ebd8d4c78c65fe3ebd76d757e9e8081bd467ff8b116e550234d18b5a5aa78d4194f73b01f
+Size (generand-0.1.2.8-a715a8965d4cb44a9f195dc796c5c0fa871d1fd7.tar.gz) = 7668 bytes
