@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/29 13:49:17 mef Exp $
+
+BLAKE2s (R/proj4_1.0-14.tar.gz) = 819d97d6e95b38513639febd97dc6566517686ac09c96f90d999bd8fcf7ce217
+SHA512 (R/proj4_1.0-14.tar.gz) = 3a16960aab4c0ed4ea5e23e03fbf8fcf0e128cc27e53ae3db5d92c4224b1da3836af4d7f1ae2b74307215af4004d7d0a8db768d16c76e165ad02af32909b90e3
+Size (R/proj4_1.0-14.tar.gz) = 43038 bytes
