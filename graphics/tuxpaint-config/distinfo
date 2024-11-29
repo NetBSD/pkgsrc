@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:47:21 nia Exp $
+$NetBSD: distinfo,v 1.14 2024/11/29 22:59:41 wiz Exp $
 
-BLAKE2s (tuxpaint-config-0.0.14.tar.gz) = 7b515ff83dcdba017c619a9175e98a5f064cf63e22bd6dc7b1b0d6cdc4af0c62
-SHA512 (tuxpaint-config-0.0.14.tar.gz) = 2e4482189fed81a7a82f41773a527c5b391ed19800279a1684634fdfd25f5c7f19c4ee42f483e0f3b8a683912c163f9846fc32f663e8fac0f7cf6d8a98c6740c
-Size (tuxpaint-config-0.0.14.tar.gz) = 472856 bytes
-SHA1 (patch-Makefile) = 2756de7b3b757420eb7e2b1eca9f39e9c39692b0
+BLAKE2s (tuxpaint-config-0.0.25.tar.gz) = 6734c115e99d3a35eebe90c4c590bfda6d6cf2c38e0cae1cbb14f19b95d18ac8
+SHA512 (tuxpaint-config-0.0.25.tar.gz) = e572f69605e98e862fb89035303c7700ecc03b6401bdbd7340199324d02355aa7f95683bc46cf24a2076ac7bdd27593311b9de9d68ce1e8173dc357898ac6c35
+Size (tuxpaint-config-0.0.25.tar.gz) = 893708 bytes
+SHA1 (patch-Makefile) = 29b063317eb6f2f58dcb4f5e54bf0c259fc1f74a
