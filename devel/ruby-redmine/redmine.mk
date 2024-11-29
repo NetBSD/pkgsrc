@@ -1,4 +1,4 @@
-# $NetBSD: redmine.mk,v 1.10 2023/11/29 16:08:22 taca Exp $
+# $NetBSD: redmine.mk,v 1.11 2024/11/29 14:54:51 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
@@ -12,7 +12,7 @@ _RUBY_REDMINE_MK=	# defined
 #	Select default Redmine version.
 #
 #	Possible values: 50 51
-#	Default: 50
+#	Default: 51
 #
 #
 # === Package-settable variables ===
@@ -20,7 +20,7 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
 #	Possible values: 50 51
-#	Default: 50
+#	Default: 51
 #
 #
 # === Defined variables ===
@@ -28,14 +28,14 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VER
 #	Redmine version.
 #	Possible values: 50 51
-#	Default: 50
+#	Default: 51
 #
 # RM_DIR
 #	Redmine directory.
 #
 
-RM_VERSION_DEFAULT?=	50
-RM_VERSIONS_SUPPORTED?=	50 51
+RM_VERSION_DEFAULT?=	51
+RM_VERSIONS_SUPPORTED?=	51 50
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
