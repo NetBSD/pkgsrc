@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2023/09/09 13:52:56 taca Exp $
+# $NetBSD: Makefile.common,v 1.14 2024/11/29 14:53:13 taca Exp $
 #
 # used by devel/ruby-redmine-flatly-light-theme/Makefile
 # used by devel/ruby-redmine-gitmike-theme/Makefile
@@ -10,7 +10,7 @@
 
 CATEGORIES=	devel
 
-RUBY_VERSIONS_ACCEPTED=	31
+RUBY_VERSIONS_ACCEPTED=	31 32
 
 .include "../../devel/ruby-redmine/redmine.mk"
 
