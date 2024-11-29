@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7303 2024/11/29 14:14:24 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7304 2024/11/29 15:06:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10970,3 +10970,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added www/R-httr2 version 1.0.7 [mef 2024-11-29]
 	Added geography/R-proj4 version 1.0.14 [mef 2024-11-29]
 	Added geography/R-crsmeta version 0.3.0 [mef 2024-11-29]
+	Added geography/R-PROJ version 0.5.0 [mef 2024-11-29]
