@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2023/05/08 14:21:56 gdt Exp $
+@comment $NetBSD: PLIST,v 1.31 2024/11/29 19:57:48 lloyd Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -163,6 +163,8 @@ ${PYSITELIB}/trac/htdocs/js/jquery-ui.js
 ${PYSITELIB}/trac/htdocs/js/jquery.js
 ${PYSITELIB}/trac/htdocs/js/keyboard_nav.js
 ${PYSITELIB}/trac/htdocs/js/log_graph.js
+${PYSITELIB}/trac/htdocs/js/messages/ar.js
+${PYSITELIB}/trac/htdocs/js/messages/bs.js
 ${PYSITELIB}/trac/htdocs/js/messages/ca.js
 ${PYSITELIB}/trac/htdocs/js/messages/cs.js
 ${PYSITELIB}/trac/htdocs/js/messages/da.js
@@ -193,6 +195,7 @@ ${PYSITELIB}/trac/htdocs/js/messages/pt_BR.js
 ${PYSITELIB}/trac/htdocs/js/messages/ro.js
 ${PYSITELIB}/trac/htdocs/js/messages/ru.js
 ${PYSITELIB}/trac/htdocs/js/messages/sl.js
+${PYSITELIB}/trac/htdocs/js/messages/sq.js
 ${PYSITELIB}/trac/htdocs/js/messages/sv.js
 ${PYSITELIB}/trac/htdocs/js/messages/tr.js
 ${PYSITELIB}/trac/htdocs/js/messages/uk.js
@@ -225,6 +228,10 @@ ${PYSITELIB}/trac/htdocs/wiki.png
 ${PYSITELIB}/trac/loader.py
 ${PYSITELIB}/trac/loader.pyc
 ${PYSITELIB}/trac/loader.pyo
+${PYSITELIB}/trac/locale/ar/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/ar/LC_MESSAGES/tracini.mo
+${PYSITELIB}/trac/locale/bs/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/bs/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/ca/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/ca/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/cs/LC_MESSAGES/messages.mo
@@ -285,6 +292,8 @@ ${PYSITELIB}/trac/locale/ru/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/ru/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/sl/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/sl/LC_MESSAGES/tracini.mo
+${PYSITELIB}/trac/locale/sq/LC_MESSAGES/messages.mo
+${PYSITELIB}/trac/locale/sq/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/sv/LC_MESSAGES/messages.mo
 ${PYSITELIB}/trac/locale/sv/LC_MESSAGES/tracini.mo
 ${PYSITELIB}/trac/locale/tr/LC_MESSAGES/messages.mo
