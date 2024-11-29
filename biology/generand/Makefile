@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2024/11/29 13:59:36 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/29 15:14:45 bacon Exp $
 
-DISTNAME=	generand-0.1.2.8
+DISTNAME=	generand-0.1.2.9
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	a715a8965d4cb44a9f195dc796c5c0fa871d1fd7
+GITHUB_TAG=	502772efafca1212922bb6170d4de673df16ecb4
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/generand
