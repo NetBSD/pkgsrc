@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2024/11/17 07:16:20 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2024/11/29 22:06:13 riastradh Exp $
 
-DISTNAME=		racket-8.11.1-src
+DISTNAME=		racket-8.15-src
 PKGNAME=		${DISTNAME:S/-src$//}
-PKGREVISION=		8
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
 MASTER_SITES_PLT+=	https://www-old.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/
@@ -72,6 +71,19 @@ CONF_FILES+=		${EGDIR}/config.rktd \
 post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
+
+PRINT_PLIST_AWK+=	{ sub(/${PREFIX:S,/,\\/,g}/, "$${PREFIX}") }
+
+# https://github.com/racket/racket/issues/4290 `Regression since Racket
+# 8.5: fonts are required to build successfully.'
+#
+# inconsolata-ttf was picked arbitrarily as a not-terribly-large font
+# package with minimal dependencies.
+#
+# Unclear whether in principle this needs to be a native or cross
+# package (tool vs build depends), but in practice I doubt Racket will
+# cross-build today so we'll cross that bridge when we come to it.
+TOOL_DEPENDS+=	inconsolata-ttf>=0:../../fonts/inconsolata-ttf
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"

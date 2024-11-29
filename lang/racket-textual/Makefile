@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2024/03/04 15:38:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.45 2024/11/29 22:06:12 riastradh Exp $
 
-DISTNAME=		racket-minimal-8.11.1-src
+DISTNAME=		racket-minimal-8.15-src
 PKGNAME=		${DISTNAME:S/-src$//}
 CATEGORIES=		lang
 MASTER_SITES_PLT=	https://mirror.racket-lang.org/installers/${PKGVERSION_NOREV}/
@@ -64,6 +64,8 @@ CONF_FILES+=		${EGDIR}/config.rktd \
 post-install:
 	${MV} -f ${DESTDIR:Q}${PKG_SYSCONFDIR:Q}/racket/config.rktd \
 		${DESTDIR:Q}${PREFIX:Q}/${EGDIR:Q}
+
+PRINT_PLIST_AWK+=	{ sub(/${PREFIX:S,/,\\/,g}/, "$${PREFIX}") }
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
