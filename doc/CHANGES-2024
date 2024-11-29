@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7301 2024/11/29 13:35:17 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7302 2024/11/29 13:52:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10968,3 +10968,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/icu to 76.1nb1 [jperkin 2024-11-29]
 	Updated ham/chirp to 20241129 [gdt 2024-11-29]
 	Added www/R-httr2 version 1.0.7 [mef 2024-11-29]
+	Added geography/R-proj4 version 1.0.14 [mef 2024-11-29]
