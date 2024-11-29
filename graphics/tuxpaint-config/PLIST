@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2018/09/02 12:55:25 wiz Exp $
-X11R6/include/X11/pixmaps/tuxpaint-config.xpm
+@comment $NetBSD: PLIST,v 1.8 2024/11/29 22:59:41 wiz Exp $
 bin/tuxpaint-config
+include/X11/pixmaps/tuxpaint-config.xpm
 man/man1/tuxpaint-config.1
+share/applications/tuxpaint-config.desktop
 share/doc/tuxpaint-config/AUTHORS.txt
 share/doc/tuxpaint-config/CHANGES.txt
 share/doc/tuxpaint-config/COPYING.txt
 share/doc/tuxpaint-config/README.txt
 share/doc/tuxpaint-config/TODO.txt
 share/doc/tuxpaint-config/html/README.html
+share/icons/hicolor/16x16/apps/tuxpaint-config.png
+share/icons/hicolor/32x32/apps/tuxpaint-config.png
+share/icons/hicolor/48x48/apps/tuxpaint-config.png
 share/locale/ach/LC_MESSAGES/tuxpaint-config.mo
 share/locale/an/LC_MESSAGES/tuxpaint-config.mo
 share/locale/ar/LC_MESSAGES/tuxpaint-config.mo
@@ -51,6 +55,7 @@ share/locale/sat/LC_MESSAGES/tuxpaint-config.mo
 share/locale/sk/LC_MESSAGES/tuxpaint-config.mo
 share/locale/sl/LC_MESSAGES/tuxpaint-config.mo
 share/locale/son/LC_MESSAGES/tuxpaint-config.mo
+share/locale/sq/LC_MESSAGES/tuxpaint-config.mo
 share/locale/sr/LC_MESSAGES/tuxpaint-config.mo
 share/locale/sr@latin/LC_MESSAGES/tuxpaint-config.mo
 share/locale/sv/LC_MESSAGES/tuxpaint-config.mo
@@ -58,6 +63,7 @@ share/locale/tr/LC_MESSAGES/tuxpaint-config.mo
 share/locale/uk/LC_MESSAGES/tuxpaint-config.mo
 share/locale/vec/LC_MESSAGES/tuxpaint-config.mo
 share/locale/vi/LC_MESSAGES/tuxpaint-config.mo
+share/locale/zh_CN/LC_MESSAGES/tuxpaint-config.mo
 share/locale/zh_TW/LC_MESSAGES/tuxpaint-config.mo
 share/locale/zu/LC_MESSAGES/tuxpaint-config.mo
 share/pixmaps/tuxpaint-config.png
