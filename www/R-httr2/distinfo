@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/29 13:33:23 mef Exp $
+
+BLAKE2s (R/httr2_1.0.7.tar.gz) = 70d1d29e32d751cc58457bfe47f61c5fc4db2d981f67f35f98b78644ffb69807
+SHA512 (R/httr2_1.0.7.tar.gz) = 0df319e8f0a5df99675d46834b4b2d30e80e51412b4d8af34ca6be8861335fdd6c1185c199cee4adc1069eb009779e41967808e595e383c56fa84e84bf18e7f0
+Size (R/httr2_1.0.7.tar.gz) = 241007 bytes
