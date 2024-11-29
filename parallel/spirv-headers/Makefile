@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2024/07/06 15:51:13 adam Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/29 16:25:48 triaxx Exp $
 
 # This version should be kept in sync with what
 # parallel/spirv-llvm-translator's ${WRKSRC}/spirv-headers-tag.conf
 # contains.
-DISTNAME=	SPIRV-Headers-1.3.283.0
+DISTNAME=	SPIRV-Headers-1.3.296.0
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=KhronosGroup/}
 GITHUB_TAG=	vulkan-sdk-${PKGVERSION_NOREV}
