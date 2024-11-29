@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/11/29 09:02:42 adam Exp $
 
-DISTNAME=	fastjsonschema-2.20.0
+DISTNAME=	fastjsonschema-2.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastjsonschema/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
