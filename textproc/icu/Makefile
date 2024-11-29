@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.158 2024/11/14 22:13:25 wiz Exp $
+# $NetBSD: Makefile,v 1.159 2024/11/29 11:03:57 jperkin Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=unicode-org/}
 GITHUB_PROJECT=	icu
@@ -103,6 +104,8 @@ PLIST_SUBST+=		MH_NAME=mh-unknown
 
 PKGCONFIG_OVERRIDE+=		config/icu*.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-build
+
+REPLACE_SH=	config/icu-config-top
 
 # work around ICU-20533 (build failure on big endian machines)
 post-configure:
