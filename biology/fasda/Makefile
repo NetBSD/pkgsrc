@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2023/10/28 20:33:41 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/29 13:14:13 bacon Exp $
 
-DISTNAME=	fasda-0.1.5
+DISTNAME=	fasda-0.1.5.8
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
+GITHUB_TAG=	4ae61db81be44016c34e7ce127f1c63dcbe52a4a
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/fasda
@@ -12,9 +13,7 @@ LICENSE=	2-clause-bsd
 DEPENDS=	stringtie>0:../../biology/stringtie
 
 LDFLAGS.SunOS+=	-lresolv
-
-pre-build:
-	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR} VERSION=${PKGVERSION}
 
 .include "../../biology/biolibc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
