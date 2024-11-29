@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25133 2024/11/28 08:45:59 wiz Exp $
+$NetBSD: TODO,v 1.25134 2024/11/29 07:43:15 pin Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o camlp4-4.12
 	o carbons-purple-0.2.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
-	o cargo-c-0.10.5 [wip, needs rust 1.80]
+	o cargo-c-0.10.6 [wip, needs rust 1.81]
 	o cddbd-1.5.2
 	o cdrdao-1.2.5
 	o cdrkit-1.1.10
