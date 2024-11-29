@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/11/29 14:12:44 mef Exp $
+
+BLAKE2s (R/crsmeta_0.3.0.tar.gz) = 44e25ddd19113949f07bd97651a3f31ca161a37444a901aae0f34858baaab4c7
+SHA512 (R/crsmeta_0.3.0.tar.gz) = 96ec176f493817cccf8fd57dfc5e4b9b538ffe6d1c348df472f19efae1cc7d3a30a13f4f16028b068f4812aab11851a960a6690f83102d7f9b03f2e0d0bb13c2
+Size (R/crsmeta_0.3.0.tar.gz) = 9530 bytes
