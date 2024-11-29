@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1822 2024/11/13 02:23:29 markd Exp $
+# $NetBSD: Makefile,v 1.1823 2024/11/29 13:35:17 mef Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -14,6 +14,7 @@ SUBDIR+=	R-googledrive
 SUBDIR+=	R-htmlwidgets
 SUBDIR+=	R-httpuv
 SUBDIR+=	R-httr
+SUBDIR+=	R-httr2
 SUBDIR+=	R-jquerylib
 SUBDIR+=	R-mathjaxr
 SUBDIR+=	R-miniUI
