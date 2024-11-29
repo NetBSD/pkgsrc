@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/29 01:23:11 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2024/11/29 23:27:32 dholland Exp $
 
 DISTNAME=	labltk-8.06.12
 PKGREVISION=	3
@@ -14,8 +14,11 @@ COMMENT=	Tk bindings for ocaml
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
-MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	BYTECC='cc  -fPIC'
+
+# With 48 jobs, fails in browser/ with "No rule to make target
+# 'dummy.cmi', needed by 'shell.cmo'."
+MAKE_JOBS_SAFE=	no
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-use-findlib
@@ -23,7 +26,7 @@ CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX
 CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LD_FLAGS $$TCL_LD_FLAGS $$TK_LIBS $$TCL_LIBS'`"
 
 # Arguably ranlib should be a TOOL, and labltk should search for it.
-INSTALL_ENV+=		RANLIB=ranlib
+INSTALL_ENV+=		RANLIB=${RANLIB:Q}
 
 BUILD_TARGET=		all
 INSTALL_TARGET=		install
