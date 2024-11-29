@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2024/08/26 23:06:49 gutteridge Exp $
+# $NetBSD: Makefile,v 1.39 2024/11/29 03:05:21 gutteridge Exp $
 
 DISTNAME=	e16-1.0.30
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/e/enlightenment/}
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
@@ -26,6 +26,8 @@ GNU_CONFIGURE=		YES
 MAKE_ENV+=		USER=${SHAREOWN}:${SHAREGRP}
 
 INSTALL_MAKE_FLAGS+=	sesmdir=${WRKDIR}/.tmp
+
+CONFIGURE_ARGS.NetBSD+=	--with-sound-player="/usr/bin/audioplay -q %s"
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2024/11/29 03:05:21 gutteridge Exp $
+
+Actually allow the sound player path to be applied.
+
+--- configure.orig	2024-08-09 15:45:46.000000000 +0000
++++ configure
+@@ -19488,7 +19488,7 @@ fi
+ # Check whether --with-sound_player was given.
+ if test ${with_sound_player+y}
+ then :
+-  withval=$with_sound_player; with_sound_player="$enableval"
++  withval=$with_sound_player
+ else $as_nop
+   with_sound_player="/usr/bin/aplay -q %s"
+ fi
