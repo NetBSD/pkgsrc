@@ -1,0 +1,26 @@
+$NetBSD: patch-dist_validate_s__chk__message__id,v 1.1 2024/11/29 12:18:18 jperkin Exp $
+
+Fix check-portability.
+
+--- dist/validate/s_chk_message_id.orig	2024-11-29 12:08:57.878260346 +0000
++++ dist/validate/s_chk_message_id
+@@ -29,7 +29,7 @@ do
+ 
+ 	# "DB_STR(id" and "DB_STR_A(id" are from macros defination, 
+ 	# should not be regarded as invalid message id.
+-	if [ "$curnum" == "id" ]; then
++	if [ "$curnum" = "id" ]; then
+ 		continue
+ 	fi
+ 
+@@ -44,8 +44,8 @@ do
+ 	fi
+ 	
+ 	# There shouldn't be duplicate message id.
+-	if [ "$curnum" == "$lastnum" ]; then
+-		if [ "$curnum" == "$rep_dup_msg_id" ]; then
++	if [ "$curnum" = "$lastnum" ]; then
++		if [ "$curnum" = "$rep_dup_msg_id" ]; then
+ 			echo "[EXPECTED] duplicate message id: $curnum"
+ 		else
+ 			echo "[ERROR] duplicate message id: $curnum"
