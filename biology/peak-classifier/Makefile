@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2023/10/28 20:37:17 bacon Exp $
+# $NetBSD: Makefile,v 1.14 2024/11/29 15:17:46 bacon Exp $
 
-DISTNAME=	peak-classifier-0.1.4.13
+DISTNAME=	peak-classifier-0.1.4.21
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
-GITHUB_TAG=	fb89af3b2e976c2ccb42d861324aa40591f5cadb
+GITHUB_TAG=	95377771d1d26a6f47a5eddbb61ef2e50fae475b
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/peak-classifier
@@ -14,8 +14,7 @@ DEPENDS+=	bedtools>=0:../../biology/bedtools
 
 REPLACE_PYTHON=	feature-view.py
 
-pre-build:
-	cd ${WRKSRC} && make depend PREFIX=${PREFIX}
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR} VERSION=${PKGVERSION}
 
 .include "../../biology/biolibc/buildlink3.mk"
 .include "../../lang/python/application.mk"
