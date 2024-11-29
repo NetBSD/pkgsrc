@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2021/10/26 10:09:16 nia Exp $
+$NetBSD: distinfo,v 1.19 2024/11/29 12:18:18 jperkin Exp $
 
 BLAKE2s (db-5.3.28.tar.gz) = d2dd2dce59f4383a84dd201d8de5a47a60f56b28cef720186fc9447bc9890de3
 SHA512 (db-5.3.28.tar.gz) = e91bbe550fc147a8be7e69ade86fdb7066453814971b2b0223f7d17712bd029a8eff5b2b6b238042ff6ec1ffa6879d44cb95c5645a922fee305c26c3eeaee090
@@ -8,6 +8,7 @@ SHA1 (patch-ab) = 0bf2bb3270b6fa334f0d4b93e4a28c44e254b935
 SHA1 (patch-ac) = 0a243583ae2b66290fb83b112c539001bf3feef2
 SHA1 (patch-dist_aclocal_libtool.m4) = 2d56b318b4f0d14a9352f6c1eb14a4c2b8315fc0
 SHA1 (patch-dist_config.bin) = e58a4637c079a8e2e7334100b9096dba5f0d6600
+SHA1 (patch-dist_validate_s__chk__message__id) = 8d410ecdf13def4af99f6c123a4bd5d2a79b2085
 SHA1 (patch-src_dbinc_atomic.h) = c4fbe421d2c8ba68dc81aeeda1cad09a2c68fbe5
 SHA1 (patch-src_dbinc_db.in) = d20a8c474485811b2e28d54fa5cf2d340d417992
 SHA1 (patch-src_dbinc_mutex_int.h) = 36f7fd31f5f79fe2c121e8f835c342ec24bda89b
