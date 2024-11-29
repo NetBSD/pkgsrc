@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2024/11/29 18:46:32 nia Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -29,18 +29,15 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
+.if empty(DISPLAY)
+PKG_FAIL_REASON+=	"requires an Xserver to be running"
+.endif
+
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 CFLAGS+=	-DUSE_INTERP_RESULT
-
-pre-install:
-	@if ${TEST} -z "$$DISPLAY"; then				\
-		${ERROR_MSG} "${PKGNAME} runs a binary during installation"; \
-		${ERROR_MSG} "that requires an Xserver to be running.";	\
-		exit 1;							\
-	fi
 
 .include "../../mk/bsd.pkg.mk"
