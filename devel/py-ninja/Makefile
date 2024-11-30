@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/24 07:21:16 adam Exp $
+# $NetBSD: Makefile,v 1.4 2024/11/30 20:13:18 wiz Exp $
 
 DISTNAME=	ninja-1.11.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-fancy-pypi-readme-[0-9]*:../../devel/py-hatch-fancy-pypi-readme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-build-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
 TEST_DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=2.0:../../devel/py-importlib-metadata
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
