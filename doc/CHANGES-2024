@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7320 2024/11/30 14:08:47 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7321 2024/11/30 18:54:36 js Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10995,3 +10995,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-virtualenv to 20.28.0 [adam 2024-11-30]
 	Updated devel/py-test-virtualenv to 1.8.1 [adam 2024-11-30]
 	Updated emulators/mame to 0.272 [wiz 2024-11-30]
+	Updated security/mbedtls3 to 3.6.2 [js 2024-11-30]
