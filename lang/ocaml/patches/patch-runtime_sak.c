@@ -1,15 +1,16 @@
-$NetBSD: patch-runtime_sak.c,v 1.1 2022/05/24 18:25:38 jaapb Exp $
+$NetBSD: patch-runtime_sak.c,v 1.2 2024/11/30 01:10:52 dholland Exp $
 
-Explicit cast to int to eliminate warning
+Fix ctype abuse.
 
---- runtime/sak.c.orig	2022-02-21 15:57:25.000000000 +0000
+--- runtime/sak.c.orig	2024-03-14 16:57:52.000000000 +0000
 +++ runtime/sak.c
-@@ -123,7 +123,7 @@ void add_stdlib_prefix(int count, char_o
-     } else {
-       /* name is a null-terminated string, so an empty string simply has the
-          null-terminator "capitalised". */
--      *name = toupper_os(*name);
-+      *name = toupper_os((int) *name);
-       printf_os(T(" stdlib__%s"), name);
-     }
-   }
+@@ -34,7 +34,8 @@
+ #define printf_os wprintf
+ #else
+ #define strncmp_os strncmp
+-#define toupper_os toupper
++/* Caution: this will not work correctly if passed EOF, but we don't do that */
++#define toupper_os(x) toupper((unsigned char)(x))
+ #define printf_os printf
+ #endif
+ 
