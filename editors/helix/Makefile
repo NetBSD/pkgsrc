@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/03/24 20:06:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/11/30 20:31:07 wiz Exp $
 
 DISTNAME=	helix-23.10-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -10,6 +10,8 @@ HOMEPAGE=	https://helix-editor.com/
 COMMENT=	Modal editor inspired by kakoune / neovim
 # Additionally, the tree-sitter sources have various licenses.
 LICENSE=	mpl-2.0
+
+BROKEN=		"Needs updating to work with rust 1.80"
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 
