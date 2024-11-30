@@ -1,24 +1,27 @@
-$NetBSD: patch-src_plugins_clangformat_clangformatutils.cpp,v 1.2 2023/05/11 13:30:17 nikita Exp $
+$NetBSD: patch-src_plugins_clangformat_clangformatutils.cpp,v 1.3 2024/11/30 17:08:17 nros Exp $
 
 Fix build with llvm 16.
 https://github.com/qt-creator/qt-creator/commit/b97c9494af2d4d6e53bcc87b588f21a4f445ef6f
 and newer
 
---- src/plugins/clangformat/clangformatutils.cpp.orig	2021-11-03 11:14:14.000000000 +0100
-+++ src/plugins/clangformat/clangformatutils.cpp	2023-05-11 15:20:21.554698126 +0200
-@@ -51,7 +51,10 @@
+--- src/plugins/clangformat/clangformatutils.cpp.orig	2021-11-03 10:14:14.000000000 +0000
++++ src/plugins/clangformat/clangformatutils.cpp
+@@ -51,7 +51,13 @@ static clang::format::FormatStyle qtcSty
      style.Language = FormatStyle::LK_Cpp;
      style.AccessModifierOffset = -4;
      style.AlignAfterOpenBracket = FormatStyle::BAS_Align;
 -#if LLVM_VERSION_MAJOR >= 12
-+#if LLVM_VERSION_MAJOR >= 15
++#if LLVM_VERSION_MAJOR >= 18
++    style.AlignConsecutiveAssignments = {false, false, false, false, false, false};
++    style.AlignConsecutiveDeclarations = {false, false, false, false, false, false};
++#elif LLVM_VERSION_MAJOR >= 15
 +    style.AlignConsecutiveAssignments = {false, false, false, false, false};
 +    style.AlignConsecutiveDeclarations = {false, false, false, false, false};
 +#elif LLVM_VERSION_MAJOR >= 12
      style.AlignConsecutiveAssignments = FormatStyle::ACS_None;
      style.AlignConsecutiveDeclarations = FormatStyle::ACS_None;
  #else
-@@ -64,7 +67,11 @@
+@@ -64,7 +70,11 @@ static clang::format::FormatStyle qtcSty
  #else
      style.AlignOperands = true;
  #endif
@@ -30,7 +33,7 @@ and newer
      style.AllowAllParametersOfDeclarationOnNextLine = true;
  #if LLVM_VERSION_MAJOR >= 10
      style.AllowShortBlocksOnASingleLine = FormatStyle::SBS_Never;
-@@ -111,7 +118,11 @@
+@@ -111,7 +121,11 @@ static clang::format::FormatStyle qtcSty
      style.ColumnLimit = 100;
      style.CommentPragmas = "^ IWYU pragma:";
      style.CompactNamespaces = false;
@@ -42,7 +45,19 @@ and newer
      style.ConstructorInitializerIndentWidth = 4;
      style.ContinuationIndentWidth = 4;
      style.Cpp11BracedListStyle = true;
-@@ -154,7 +165,11 @@
+@@ -131,7 +145,11 @@ static clang::format::FormatStyle qtcSty
+     style.IndentWrappedFunctionNames = false;
+     style.JavaScriptQuotes = FormatStyle::JSQS_Leave;
+     style.JavaScriptWrapImports = true;
++#if LLVM_VERSION_MAJOR >= 19
++    style.KeepEmptyLines = {false, false, false}
++#else
+     style.KeepEmptyLinesAtTheStartOfBlocks = false;
++#endif
+     // Do not add QT_BEGIN_NAMESPACE/QT_END_NAMESPACE as this will indent lines in between.
+     style.MacroBlockBegin = "";
+     style.MacroBlockEnd = "";
+@@ -154,12 +172,18 @@ static clang::format::FormatStyle qtcSty
  #else
      style.SortIncludes = true;
  #endif
@@ -54,3 +69,23 @@ and newer
      style.SpaceAfterCStyleCast = true;
      style.SpaceAfterTemplateKeyword = false;
      style.SpaceBeforeAssignmentOperators = true;
+     style.SpaceBeforeParens = FormatStyle::SBPO_ControlStatements;
++#if LLVM_VERSION_MAJOR < 17
+     style.SpaceInEmptyParentheses = false;
++#endif
+     style.SpacesBeforeTrailingComments = 1;
+ #if LLVM_VERSION_MAJOR >= 13
+     style.SpacesInAngles = FormatStyle::SIAS_Never;
+@@ -167,8 +191,12 @@ static clang::format::FormatStyle qtcSty
+     style.SpacesInAngles = false;
+ #endif
+     style.SpacesInContainerLiterals = false;
++#if LLVM_VERSION_MAJOR >= 17
++    style.SpacesInParens = FormatStyle::SIPO_Never;
++#else
+     style.SpacesInCStyleCastParentheses = false;
+     style.SpacesInParentheses = false;
++#endif
+     style.SpacesInSquareBrackets = false;
+     style.StatementMacros.emplace_back("Q_OBJECT");
+     style.StatementMacros.emplace_back("QT_BEGIN_NAMESPACE");
