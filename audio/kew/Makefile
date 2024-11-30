@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/10/24 15:25:27 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2024/11/30 19:36:10 wiz Exp $
 
 DISTNAME=	kew-3.0.0
 CATEGORIES=	audio
@@ -11,6 +11,9 @@ COMMENT=	Terminal music player with album art
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+
+# for "error: initializer element is not constant"
+GCC_REQD+=	8
 
 USE_TOOLS+=	pkg-config gmake
 
