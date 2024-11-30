@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.65 2023/04/09 07:27:48 wiz Exp $
+# $NetBSD: Makefile.common,v 1.66 2024/11/30 01:10:52 dholland Exp $
 
-# used by x11/labltk/Makefile
-DISTNAME=	ocaml-4.14.1
+# not used by anything else these days
+
+DISTNAME=	ocaml-4.14.2
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.14/
 #EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +12,8 @@ HOMEPAGE=	https://ocaml.org/
 COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES+=		c
+USE_CC_FEATURES+=	c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
