@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2024/11/24 06:59:05 adam Exp $
+# $NetBSD: Makefile,v 1.161 2024/11/30 16:06:17 wiz Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
@@ -39,7 +39,7 @@ USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes
 CONFIGURE_ARGS+=		--enable-rpath
 CONFIGURE_ARGS+=		--datadir=${PREFIX}/share/postgresql/contrib
-PGSQL_VERSIONS_ACCEPTED=	16 15 14 13 12
+PGSQL_VERSIONS_ACCEPTED=	16 15 14 13
 
 # This isn't an option, but could be.
 CONFIGURE_ARGS+=	--with-address-standardizer
