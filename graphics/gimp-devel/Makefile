@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/11/24 06:59:07 adam Exp $
+# $NetBSD: Makefile,v 1.51 2024/11/30 20:24:04 wiz Exp $
 
 DISTNAME=	gimp-3.0.0-RC1
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/:S/-RC/rc/}
@@ -26,7 +26,7 @@ USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++14
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		pkg-config perl
+USE_TOOLS+=		pkg-config perl realpath
 USE_TOOLS+=		msgfmt msgmerge xgettext
 USE_TOOLS+=		gdbus-codegen
 
