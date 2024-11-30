@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2024/10/15 08:53:23 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2024/11/30 20:37:00 jperkin Exp $
 
 DISTNAME=	grafana-11.0.0
 PKGREVISION=	4
@@ -11,6 +11,7 @@ HOMEPAGE=	https://grafana.com/
 COMMENT=	Metrics dashboard and graph editor
 LICENSE=	gnu-agpl-v3 AND apache-2.0 AND mit
 
+ARGMAX_REQ=	524288
 DISTFILES=	${DEFAULT_DISTFILES}
 
 # does not build with go 1.23
