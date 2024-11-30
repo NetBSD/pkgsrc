@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2024/08/25 06:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/30 18:52:59 js Exp $
 
-DISTNAME=	mbedtls-3.4.0
+DISTNAME=	mbedtls-3.6.2
 PKGNAME=	${DISTNAME:S/mbedtls/mbedtls3/}
-PKGREVISION=	1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ARMmbed/}
-GITHUB_PROJECT=	mbedtls
-GITHUB_TAG=	${DISTNAME}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${PKGVERSION_NOREV}/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	nia@NetBSD.org
 HOMEPAGE=	https://tls.mbed.org/
 COMMENT=	Lightweight, modular cryptographic and SSL/TLS library (3.x branch)
-LICENSE=	apache-2.0
+LICENSE=	apache-2.0 OR gnu-gpl-v2
 
 CONFLICTS+=	mbedtls-[0-9]*
 CONFLICTS+=	polarssl-[0-9]*
@@ -27,7 +25,7 @@ CMAKE_CONFIGURE_ARGS+=	-DUSE_SHARED_MBEDTLS_LIBRARY=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PROGRAMS=ON
 
 # Fails to build full suite on NetBSD due to strange tricks with stdout
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTING=OFF
+CMAKE_CONFIGURE_ARGS.NetBSD+=	-DENABLE_TESTING=OFF
 
 CMAKE_CONFIGURE_ARGS+=	-DMBEDTLS_FATAL_WARNINGS=OFF
 
