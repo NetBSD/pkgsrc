@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/05/06 08:40:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2024/11/30 19:57:14 wiz Exp $
 
 DISTNAME=	wiki-tui-0.8.2
 PKGREVISION=	2
@@ -10,6 +10,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://builditluc.github.io/wiki-tui/
 COMMENT=	Simple and easy to use Wikipedia TUI
 LICENSE=	mit
+
+# https://github.com/Builditluc/wiki-tui/issues/220
+BROKEN=		"Waiting for a release compatible with rust 1.80+"
 
 .include "cargo-depends.mk"
 
