@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7315 2024/11/29 23:35:54 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7316 2024/11/30 01:12:07 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -10982,3 +10982,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/tuxpaint-config to 0.0.25 [wiz 2024-11-29]
 	Updated geography/R-raster to 3.6.30 [mef 2024-11-29]
 	Updated geography/R-rosm to 0.3.0 [mef 2024-11-29]
+	Updated devel/ocaml-dune-configurator to 3.11.1nb1 [dholland 2024-11-30]
+	Updated lang/ocaml to 4.14.2 [dholland 2024-11-29]
