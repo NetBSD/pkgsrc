@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/12/11 09:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.5 2024/11/30 20:56:01 wiz Exp $
 
-BLAKE2s (wal2json-2.5.tar.gz) = 83c67527adda71614d15cab6f2068587ffecf371010a8b5ed51fa8d0e0086473
-SHA512 (wal2json-2.5.tar.gz) = 09752dbdad82a680495cfd62d5a62ef61ab9f2a7a7ded58a6e21347a5c47f953f2ed89ea5252f65a6d8d989b6eee67916ca99ba14bac703e99c8a03719502597
-Size (wal2json-2.5.tar.gz) = 91040 bytes
+BLAKE2s (wal2json-2.6.tar.gz) = 4f0c97e81f23349ac319ac0656f96bc3e5c87bb64957cc996eb233cb3126b5eb
+SHA512 (wal2json-2.6.tar.gz) = 73c89b1251696fad269019050e1cd479ee114e671714a4aecae12f862fc339b1d30faa44a298da64f972ca028687e0d9e7baaec64b35117bb13702afa8f00ca3
+Size (wal2json-2.6.tar.gz) = 94958 bytes
