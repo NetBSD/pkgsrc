@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/10/25 11:00:38 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/11/30 09:05:18 adam Exp $
 
-BLAKE2s (pytest-virtualenv-1.8.0.tar.gz) = d5ef42be40062f195a936358fd761e7c17012c48b084f3cd5f259cd49f7ae6e9
-SHA512 (pytest-virtualenv-1.8.0.tar.gz) = 083a46b9d7a1c608ecd5cdf5eddf1c924101662b0bb31e6fafda4c2bfd800f6227ecfb3c256861d79a3db1f5e0b5beb48cac3e3282a298546357f5f554716810
-Size (pytest-virtualenv-1.8.0.tar.gz) = 18669 bytes
+BLAKE2s (pytest-virtualenv-1.8.1.tar.gz) = 532acfb37e2dfbfe26416fd6d715a79a15bb1fc564b91394d213ae65b6efd0fa
+SHA512 (pytest-virtualenv-1.8.1.tar.gz) = 1443f206703fbf57cd899fbadbf320cf212b0f6a728d830defe0ddc3473a524d1f64baf87fac72cdc15c5f05b151abdfe8f305e090fa43ff369f946cf3b4ef3c
+Size (pytest-virtualenv-1.8.1.tar.gz) = 18846 bytes
