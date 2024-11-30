@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2024/11/16 20:05:50 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2024/11/30 20:57:25 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -21,7 +21,7 @@ CARGO_CRATE_DEPENDS+=	bstr-1.10.0
 CARGO_CRATE_DEPENDS+=	bumpalo-3.16.0
 CARGO_CRATE_DEPENDS+=	camino-1.1.9
 CARGO_CRATE_DEPENDS+=	cargo-platform-0.1.8
-CARGO_CRATE_DEPENDS+=	cargo_metadata-0.18.1
+CARGO_CRATE_DEPENDS+=	cargo_metadata-0.19.0
 CARGO_CRATE_DEPENDS+=	cc-1.1.33
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	cfg_aliases-0.2.1
@@ -167,7 +167,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.11.1
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.86
 CARGO_CRATE_DEPENDS+=	tempfile-3.13.0
-CARGO_CRATE_DEPENDS+=	termimad-0.31.0
+CARGO_CRATE_DEPENDS+=	termimad-0.31.1
 CARGO_CRATE_DEPENDS+=	terminal-light-1.7.0
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.66
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.66
