@@ -1,13 +1,17 @@
-# $NetBSD: Makefile.common,v 1.66 2024/11/30 01:10:52 dholland Exp $
+# $NetBSD: Makefile.common,v 1.67 2024/11/30 01:34:47 gdt Exp $
 
 # not used by anything else these days
 
+# Please do not update to ocaml 5.x without discussion, as the
+# consensus is mostly that those versions are not yet baked, and will
+# cause hard-to-debug problems.
 DISTNAME=	ocaml-4.14.2
 CATEGORIES=	lang
 MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.14/
 #EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://ocaml.org/
 COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
