@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.30 2024/11/14 22:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2024/11/30 21:20:47 wiz Exp $
 
-DISTNAME=	dhewm3-1.5.1-src
-PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	19
+DISTNAME=	dhewm3-1.5.4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dhewm/}
 GITHUB_PROJECT=	dhewm3
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dhewm3.org/
 COMMENT=	Source port of the original Doom 3
 LICENSE=	gnu-gpl-v3
 
+# https://github.com/dhewm/dhewm3/issues/633
+BROKEN=		"Does not build against openal-soft-1.24"
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c gnu++11
 
 USE_CXX_FEATURES+=	c++11
 
-CONFIGURE_DIRS+=	neo
+CONFIGURE_DIR=	neo
 
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
 CMAKE_CONFIGURE_ARGS+=	-DDEDICATED=ON
@@ -42,6 +41,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/dhewm3.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
