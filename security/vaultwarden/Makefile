@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2024/01/18 20:12:55 hauke Exp $
+# $NetBSD: Makefile,v 1.7 2024/11/30 20:37:53 wiz Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
 PKGVER=		1.30.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 EXTRACT_SUFX=	.tar.gz
-
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/dani-garcia/vaultwarden
 COMMENT=	Bitwarden compatible backend server
-
 LICENSE=	gnu-agpl-v3
+
+BROKEN=		"This version does not support rust 1.80"
 
 # From
 # 'make CARGO_ARGS="build --release --features 
