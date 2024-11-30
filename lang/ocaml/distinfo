@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.146 2023/04/09 07:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.147 2024/11/30 01:10:52 dholland Exp $
 
-BLAKE2s (ocaml-4.14.1.tar.gz) = 5ab5d0aba6f943ce314a69235171236dec6ec5e680afc18c8d1ee3be1db2fd2c
-SHA512 (ocaml-4.14.1.tar.gz) = 8fdeb1b370cb1f8a469a57966ac7dcb64814dd7c098a432c76bc61ba0f59d067e2b36aa29da9b86d048738db230dc5d813b99d577cdeeb4b1aa18ee563528f60
-Size (ocaml-4.14.1.tar.gz) = 5497979 bytes
+BLAKE2s (ocaml-4.14.2.tar.gz) = fecad4db2e91800ae3d676240042adf01f969e2399968bd3e120f580212688fb
+SHA512 (ocaml-4.14.2.tar.gz) = 64df6462a83058e805ab29d58ef2f3597eb0ed52bf1294a9e6303fb783845cde78c7de04d165e77454a440fa2d50ff10ca81f2d1f9294f2dccdfe28824bce028
+Size (ocaml-4.14.2.tar.gz) = 5504138 bytes
 SHA1 (patch-Makefile) = 978156d1e5795615adda840521bf5911a801f6a5
 SHA1 (patch-api__docgen_ocamldoc_Makefile) = cc677bed9d2da3d7eedd2c696ac89085bf2002d2
 SHA1 (patch-check-linker-version_sh) = c90242556207242ac58499d7f42519a10aedcca4
 SHA1 (patch-configure) = 36ddb6f19ce7564889dc48ee290904dce00b04ec
 SHA1 (patch-lex_Makefile) = ba5df45c608fa292732e1acd0d955870e60c972d
-SHA1 (patch-man_Makefile) = 3d55fe5127758566f81a1b4e55e66c6ae3a848f1
+SHA1 (patch-man_Makefile) = c091d8c545a77acbafaf110c6db3f0ed918e8632
 SHA1 (patch-ocamldoc_Makefile) = 5431d357ecbe719efffeb14826a8d79f0590784e
 SHA1 (patch-ocamldoc_odoc__messages.ml) = 77f650a5f34f40b9648a8d5091e9aa31efb5734b
 SHA1 (patch-otherlibs_Makefile.otherlibs.common) = 5518c6b4d8772d995252b6f640323e2602097c4d
-SHA1 (patch-otherlibs_systhreads_Makefile) = 3505469ae2d3cafd7283e984ebbbea47b0d59b32
+SHA1 (patch-otherlibs_systhreads_Makefile) = bf18939da81aad65e54d6b6f154e7daf8472dcae
 SHA1 (patch-otherlibs_systhreads_st__stubs.c) = 3c0aa73f0e128646c01ed3855ee9c5645d5fa3f1
 SHA1 (patch-otherlibs_unix_Makefile) = 9eaf8d561670a765a647b36486ec533c674ee609
 SHA1 (patch-runtime_Makefile) = 4daf1ddb9ce70d99719bcb0aacbaadfc393574b0
 SHA1 (patch-runtime_floats.c) = 584a30d31c7b7da4f8387dc58b90fa1a8078f723
-SHA1 (patch-runtime_sak.c) = 62a0946419b96033497a4a12105bbd9b4ef3aba6
+SHA1 (patch-runtime_sak.c) = 3685a967d462ee298debcf188f594a8d736716f6
 SHA1 (patch-testsuite_tests_lib-systhreads_testyield.ml) = 0f6d35e030de168c6f4aeb126055065ed47878aa
 SHA1 (patch-tools_Makefile) = f71ac6fa7f2ee79c6d531f95eb90d28360c04434
 SHA1 (patch-tools_ocamlmklib.ml) = 66ddab3ae0f6890326a51d315a2516fe4975107d
