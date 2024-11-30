@@ -1,8 +1,17 @@
-$NetBSD: patch-src_plugins_clangformat_clangformatutils.cpp,v 1.3 2024/11/30 17:08:17 nros Exp $
+$NetBSD: patch-src_plugins_clangformat_clangformatutils.cpp,v 1.4 2024/11/30 17:47:50 nros Exp $
 
 Fix build with llvm 16.
 https://github.com/qt-creator/qt-creator/commit/b97c9494af2d4d6e53bcc87b588f21a4f445ef6f
 and newer
+
+Fix build with LLVM 17
+https://github.com/qt-creator/qt-creator/commit/9ad9e49ccf6e0d7f4ba5765cff3af63fbbed60e8
+
+Fix warnings with LLVM 18
+https://github.com/qt-creator/qt-creator/commit/7457b623125f4bcdb7941769a385cfbfc0dcbf2b
+
+Fix build with LLVM 19
+https://github.com/qt-creator/qt-creator/commit/f175ec933f1c5c5d7a345edbaacc8ff90202aee2
 
 --- src/plugins/clangformat/clangformatutils.cpp.orig	2021-11-03 10:14:14.000000000 +0000
 +++ src/plugins/clangformat/clangformatutils.cpp

@@ -1,3 +1,9 @@
+$NetBSD: patch-src_plugins_clangformat_clangformatbaseindenter.cpp,v 1.2 2024/11/30 17:47:50 nros Exp $
+
+Fix build with LLVM 16
+https://github.com/qt-creator/qt-creator/commit/e20bdfae4de90401a518135bc22958549dceda66
+https://github.com/qt-creator/qt-creator/commit/f4545807defdfb493c1d66a19430a69d81afa40b
+
 --- src/plugins/clangformat/clangformatbaseindenter.cpp.orig	2023-05-11 14:22:23.741477809 +0200
 +++ src/plugins/clangformat/clangformatbaseindenter.cpp	2023-05-11 14:29:29.745830013 +0200
 @@ -47,11 +47,19 @@
