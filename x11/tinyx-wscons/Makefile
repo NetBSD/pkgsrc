@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/07/22 02:01:18 nat Exp $
+# $NetBSD: Makefile,v 1.9 2024/11/30 07:34:02 nat Exp $
 
 VERSION=	0.5
 GITHUB_PROJECT=	tinyx-wscons
@@ -26,11 +26,11 @@ USE_LIBTOOL=		yes
 SPECIAL_PERMS+=		sbin/Xwscons ${SETUID_ROOT_PERMS}
 
 pre-configure:
-	cd ${WRKSRC} && ACLOCAL="aclocal -I ${X11BASE}/share/aclocal" \
+	set -e; cd ${WRKSRC} && ACLOCAL="aclocal -I ${X11BASE}/share/aclocal" \
 	sh ./autogen.sh
 
 do-configure:
-	cd ${WRKSRC} && ./configure --prefix ${X11BASE}
+	cd ${WRKSRC} && ./configure --prefix ${X11BASE} ${CONFIGURE_ARGS}
 
 do-install:
 .for f in Xwscons
