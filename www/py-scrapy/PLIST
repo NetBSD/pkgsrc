@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/05/14 19:15:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/11/30 06:56:49 adam Exp $
 bin/scrapy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -248,9 +248,6 @@ ${PYSITELIB}/scrapy/extensions/throttle.pyo
 ${PYSITELIB}/scrapy/http/__init__.py
 ${PYSITELIB}/scrapy/http/__init__.pyc
 ${PYSITELIB}/scrapy/http/__init__.pyo
-${PYSITELIB}/scrapy/http/common.py
-${PYSITELIB}/scrapy/http/common.pyc
-${PYSITELIB}/scrapy/http/common.pyo
 ${PYSITELIB}/scrapy/http/cookies.py
 ${PYSITELIB}/scrapy/http/cookies.pyc
 ${PYSITELIB}/scrapy/http/cookies.pyo
@@ -275,6 +272,9 @@ ${PYSITELIB}/scrapy/http/response/__init__.pyo
 ${PYSITELIB}/scrapy/http/response/html.py
 ${PYSITELIB}/scrapy/http/response/html.pyc
 ${PYSITELIB}/scrapy/http/response/html.pyo
+${PYSITELIB}/scrapy/http/response/json.py
+${PYSITELIB}/scrapy/http/response/json.pyc
+${PYSITELIB}/scrapy/http/response/json.pyo
 ${PYSITELIB}/scrapy/http/response/text.py
 ${PYSITELIB}/scrapy/http/response/text.pyc
 ${PYSITELIB}/scrapy/http/response/text.pyo
@@ -299,12 +299,6 @@ ${PYSITELIB}/scrapy/linkextractors/lxmlhtml.pyo
 ${PYSITELIB}/scrapy/loader/__init__.py
 ${PYSITELIB}/scrapy/loader/__init__.pyc
 ${PYSITELIB}/scrapy/loader/__init__.pyo
-${PYSITELIB}/scrapy/loader/common.py
-${PYSITELIB}/scrapy/loader/common.pyc
-${PYSITELIB}/scrapy/loader/common.pyo
-${PYSITELIB}/scrapy/loader/processors.py
-${PYSITELIB}/scrapy/loader/processors.pyc
-${PYSITELIB}/scrapy/loader/processors.pyo
 ${PYSITELIB}/scrapy/logformatter.py
 ${PYSITELIB}/scrapy/logformatter.pyc
 ${PYSITELIB}/scrapy/logformatter.pyo
@@ -330,6 +324,7 @@ ${PYSITELIB}/scrapy/pipelines/media.pyo
 ${PYSITELIB}/scrapy/pqueues.py
 ${PYSITELIB}/scrapy/pqueues.pyc
 ${PYSITELIB}/scrapy/pqueues.pyo
+${PYSITELIB}/scrapy/py.typed
 ${PYSITELIB}/scrapy/resolver.py
 ${PYSITELIB}/scrapy/resolver.pyc
 ${PYSITELIB}/scrapy/resolver.pyo
