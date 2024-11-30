@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/30 23:02:05 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/11/30 23:02:25 wiz Exp $
 
 DISTNAME=	dhewm3-1.5.4
 CATEGORIES=	games
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dhewm3.org/
 COMMENT=	Source port of the original Doom 3
 LICENSE=	gnu-gpl-v3
-
-# https://github.com/dhewm/dhewm3/issues/633
-#BROKEN=		"Does not build against openal-soft-1.24"
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	pkg-config
