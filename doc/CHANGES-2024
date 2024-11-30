@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7325 2024/11/30 20:57:48 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7326 2024/11/30 20:58:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11000,3 +11000,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/libcmis to 0.6.2 [wiz 2024-11-30]
 	Updated databases/postgresql-wal2json to 2.6 [wiz 2024-11-30]
 	Updated devel/bacon to 3.4.0 [pin 2024-11-30]
+	Updated shells/oh-my-posh to 24.11.2 [pin 2024-11-30]
