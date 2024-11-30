@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/11/30 08:58:07 adam Exp $
 
-DISTNAME=	pytest-shutil-1.8.0
+DISTNAME=	pytest-shutil-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-shutil/}
 
@@ -13,9 +12,9 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-execnet-[0-9]*:../../devel/py-execnet
-DEPENDS+=	${PYPKGPREFIX}-path.py-[0-9]*:../../devel/py-path.py
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-termcolor-[0-9]*:../../devel/py-termcolor
+DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
