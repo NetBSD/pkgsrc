@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/03/23 19:08:38 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/11/30 19:59:42 wiz Exp $
 
 DISTNAME=	cargo-outdated-0.15.0
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/kbknapp/cargo-outdated/
 COMMENT=	Cargo subcommand for displaying when Rust dependencies are out of date
 LICENSE=	mit
+
+# https://github.com/kbknapp/cargo-outdated/issues/401
+BROKEN=		"Waiting for a release supporting rust 1.80+"
 
 .include "cargo-depends.mk"
 
