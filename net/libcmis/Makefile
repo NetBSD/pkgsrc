@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2024/11/14 22:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2024/11/30 20:31:31 wiz Exp $
 
-DISTNAME=	libcmis-0.5.2
-PKGREVISION=	31
+DISTNAME=	libcmis-0.6.2
 CATEGORIES=	net devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tdf/}
 GITHUB_PROJECT=	libcmis
@@ -18,7 +17,6 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
-BUILDLINK_DEPMETHOD.boost-headers?=     build
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
