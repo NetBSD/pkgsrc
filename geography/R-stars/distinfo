@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:08 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/01 14:52:54 mef Exp $
 
-BLAKE2s (R/stars_0.5-3.tar.gz) = 1b75543d10e6b8dcf7a19e419a2d7a9501439adfd133367322052fc47e701c7f
-SHA512 (R/stars_0.5-3.tar.gz) = 158b028f982ca2610c7935635f93bb76b2123eec08b27fe3b6a981ac202cfe3cd0a6749cb307d26e7ba47bece756cbcdafc02c7ff69791f18e9fc0b879cee419
-Size (R/stars_0.5-3.tar.gz) = 5047525 bytes
+BLAKE2s (R/stars_0.6-7.tar.gz) = aa4df6ca1d867a6850360df46db58282f31423534e9a952e343fc45eacdc2aa7
+SHA512 (R/stars_0.6-7.tar.gz) = e4487c9bc2b6f03a5d9bbb478c8e626dfdf7e62de1ea1910679375226bca3f6e927fc425883c0e22e333a34a8b21855817cf7f0f3276919fcd5a1fc2308218f0
+Size (R/stars_0.6-7.tar.gz) = 4033515 bytes
