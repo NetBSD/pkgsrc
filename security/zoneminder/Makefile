@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2024/12/01 13:49:47 gdt Exp $
+# $NetBSD: Makefile,v 1.77 2024/12/01 14:06:17 gdt Exp $
 
 VERSION=	1.36.33
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
@@ -48,7 +48,6 @@ PKG_SUGGESTED_OPTIONS=		apache
 
 ## MAIN BUILD
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl pkg-config
 
@@ -67,20 +66,20 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 # ZoneMinder prefers a subdirectory of etc. Further, it demands a
 # conf.d subdirectory within its config directory, which would be
 # irregular at top level.
-CMAKE_CONFIGURE_ARGS+=		-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}/zm
+CMAKE_CONFIGURE_ARGS+=	-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}/zm
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/zm/conf.d ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # \todo We prepare a webroot, even without the apache option.
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
-CMAKE_CONFIGURE_ARGS+=		-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
+CMAKE_CONFIGURE_ARGS+=	-DZM_WEBDIR=${PREFIX}/${ZM_HTTPD_ROOT:Q}
 PLIST_SUBST+=		ZM_HTTPD_ROOT=${ZM_HTTPD_ROOT:Q}
 PRINT_PLIST_AWK+=	{ gsub(/${ZM_HTTPD_ROOT:S|/|\\/|g}/, "$${ZM_HTTPD_ROOT}") }
 OWN_DIRS+=		${ZM_HTTPD_ROOT:Q}
 INSTALLATION_DIRS+=	share/zoneminder ${ZM_HTTPD_ROOT}
 
 ZM_HTTPD_CGIBIN=	libexec/zoneminder/cgi-bin
-CMAKE_CONFIGURE_ARGS+=		-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
+CMAKE_CONFIGURE_ARGS+=	-DZM_CGIDIR=${PREFIX}/${ZM_HTTPD_CGIBIN:Q}
 PLIST_SUBST+=		ZM_HTTPD_CGIBIN=${ZM_HTTPD_CGIBIN:Q}
 PRINT_PLIST_AWK+=	{ gsub(/${ZM_HTTPD_CGIBIN:S|/|\\/|g}/, "$${ZM_HTTPD_CGIBIN}") }
 BUILD_DEFS+=		ZM_HTTPD_CGIBIN
@@ -88,37 +87,37 @@ OWN_DIRS+=		${ZM_HTTPD_CGIBIN:Q}
 INSTALLATION_DIRS+=	libexec/zoneminder ${ZM_HTTPD_CGIBIN}
 
 BUILD_DEFS+=		VARBASE
-CMAKE_CONFIGURE_ARGS+=		-DZM_RUNDIR=${VARBASE}/run/zm
+CMAKE_CONFIGURE_ARGS+=	-DZM_RUNDIR=${VARBASE}/run/zm
 # \todo Consider a way to clean up on de-install as anything left
 # should just be removed.
 OWN_DIRS_PERMS+=	${VARBASE}/run/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # NB: Startup script must create /var/run/zm.
-CMAKE_CONFIGURE_ARGS+=		-DZM_SOCKDIR=${VARBASE}/run/zm
+CMAKE_CONFIGURE_ARGS+=	-DZM_SOCKDIR=${VARBASE}/run/zm
 # Choose /var/tmp for now.  \todo Revisit.
-CMAKE_CONFIGURE_ARGS+=		-DZM_TMPDIR=${VARBASE}/tmp/zm
+CMAKE_CONFIGURE_ARGS+=	-DZM_TMPDIR=${VARBASE}/tmp/zm
 OWN_DIRS_PERMS+=	${VARBASE}/tmp/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
-CMAKE_CONFIGURE_ARGS+=		-DZM_LOGDIR=${VARBASE}/log/zm
+CMAKE_CONFIGURE_ARGS+=	-DZM_LOGDIR=${VARBASE}/log/zm
 OWN_DIRS_PERMS+=	${VARBASE}/log/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # \todo Define this per-OS; /var/shm is for NetBSD
 ZM_SHM=			/var/shm
-CMAKE_CONFIGURE_ARGS+=		-DZM_PATH_MAP=${ZM_SHM}
+CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_MAP=${ZM_SHM}
 
 # Cache directory is for js files to be served.  For now, use
 # /var/cache/zoneminder.  \todo Consider /tmp/zm instead.
 ZM_CACHE=		${VARBASE}/cache/zoneminder
-CMAKE_CONFIGURE_ARGS+=		-DZM_CACHEDIR=${ZM_CACHE}
+CMAKE_CONFIGURE_ARGS+=	-DZM_CACHEDIR=${ZM_CACHE}
 OWN_DIRS_PERMS+=	${ZM_CACHE} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # Storage of events; this should persist and is hence in /var/db.
 # \todo Understand how and why /images is used.
 ZM_CONTENT=		${VARBASE}/db/zoneminder
-CMAKE_CONFIGURE_ARGS+=		-DZM_CONTENTDIR=${ZM_CONTENT}
+CMAKE_CONFIGURE_ARGS+=	-DZM_CONTENTDIR=${ZM_CONTENT}
 OWN_DIRS_PERMS+=	${ZM_CONTENT} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
-CMAKE_CONFIGURE_ARGS+=		-DZM_DIR_EVENTS=${ZM_CONTENT}/events
+CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_EVENTS=${ZM_CONTENT}/events
 OWN_DIRS_PERMS+=	${ZM_CONTENT}/events ${APACHE_USER} ${APACHE_GROUP} 775
-CMAKE_CONFIGURE_ARGS+=		-DZM_DIR_IMAGES=${ZM_CONTENT}/images
+CMAKE_CONFIGURE_ARGS+=	-DZM_DIR_IMAGES=${ZM_CONTENT}/images
 OWN_DIRS_PERMS+=	${ZM_CONTENT}/images ${APACHE_USER} ${APACHE_GROUP} 775
 
 ## Dependencies other than perl and php.
@@ -140,8 +139,8 @@ CMAKE_CONFIGURE_ARGS+=	-D${lib}_LIBRARIES=${BUILDLINK_PREFIX.ffmpeg6}/lib/ffmpeg
 # \todo Revisit this and see if there is a better way.
 # MySQL uses openssl.  Force zoneminder not to choose otherwise by
 # finding libraries that are present but not buildlinked.
-CMAKE_CONFIGURE_ARGS+=		-DGNUTLS_LIBRARIES=""
-CMAKE_CONFIGURE_ARGS+=		-DGCRYPT_LIBRARIES=""
+CMAKE_CONFIGURE_ARGS+=	-DGNUTLS_LIBRARIES=""
+CMAKE_CONFIGURE_ARGS+=	-DGCRYPT_LIBRARIES=""
 
 # Darwin does have sendfile(), but the API differs from ZoneMinder's
 # expectation.
@@ -188,6 +187,7 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 # A large subset of perl scripts set PATH explicitly and need to patched.
 # See "PATH FIXUPS" below.
+# \todo Teach pkglint that this variable is a list.
 ZM_PERL_PATH=	scripts/zmaudit.pl.in
 ZM_PERL_PATH+=	scripts/zmcamtool.pl.in
 ZM_PERL_PATH+=	scripts/zmcontrol.pl.in
@@ -209,7 +209,7 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 # 83: PHP Fatal error:  Uncaught TypeError: flock(): Argument #1 ($stream) must be of type resource, false given in /usr/pkg/share/zoneminder/htdocs/includes/functions.php:2244
 # In 2022, upstream warned against 82.
 # php-apcu fails with 56, but upstream might support it.
-PHP_VERSIONS_INCOMPATIBLE= 56 83
+PHP_VERSIONS_INCOMPATIBLE=	56 83
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
@@ -230,9 +230,9 @@ PKG_USERS_VARS+=	APACHE_USER
 PKG_GROUPS_VARS+=	APACHE_GROUP
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
-CMAKE_CONFIGURE_ARGS+=		-DZM_WEB_USER=${APACHE_USER}
-CMAKE_CONFIGURE_ARGS+=		-DZM_WEB_GROUP=${APACHE_GROUP}
-CMAKE_CONFIGURE_ARGS+=		-DZM_PATH_ZMS=zm/cgi-bin/nph-zms
+CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_USER=${APACHE_USER}
+CMAKE_CONFIGURE_ARGS+=	-DZM_WEB_GROUP=${APACHE_GROUP}
+CMAKE_CONFIGURE_ARGS+=	-DZM_PATH_ZMS=zm/cgi-bin/nph-zms
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
@@ -246,9 +246,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-fpm-[0-9]*:../../www/php-fpm
 
 ## MYSQL
 
-# 1.36 works with mysql56 on NetBSD
+# 1.36 works with mariadb 10.6 on NetBSD
 # 1.36 works with mariadb 11.2 on GNU/Linux
-# Likely, all versions in pkgsrc are ok.
+# \todo Evaluate and exclude troublesome versions.
 .include "../../mk/mysql.buildlink3.mk"
 
 ## PATH FIXUPS
@@ -316,12 +316,14 @@ INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
 INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/httpd-zoneminder.conf ${DESTDIR}${PREFIX}/${EGDIR}/apache/httpd-zoneminder.conf
-	${INSTALL_DATA} ${WRKSRC}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
+	${INSTALL_DATA} ${WRKSRC}/${CMAKE_BUILD_DIR}/zm.conf ${DESTDIR}${PREFIX}/${EGDIR}/config/zm.conf
 .if ${INIT_SYSTEM} == "rc.d"
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
+	${INSTALL_SCRIPT} ${WRKSRC}/${CMAKE_BUILD_DIR}/scripts/zm ${DESTDIR}${PREFIX}/share/examples/rc.d/zoneminder
 .endif
 	${INSTALL_DATA} ${WRKSRC}/db/*.sql ${DESTDIR}${PREFIX}/share/zoneminder/db/
 	${INSTALL_DATA} files/README-pkgsrc.md ${DESTDIR}${PREFIX}/${DOCDIR}
+
+.include "../../devel/cmake/build.mk"
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
