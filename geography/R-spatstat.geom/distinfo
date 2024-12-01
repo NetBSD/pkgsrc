@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/01/13 22:39:41 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/12/01 14:25:20 mef Exp $
 
-BLAKE2s (R/spatstat.geom_3.2-7.tar.gz) = c54dca2c350df4c3231eac3d66671e54335576c297841151e18534cf5ae4c1ee
-SHA512 (R/spatstat.geom_3.2-7.tar.gz) = d4096a24a1d8a4f073e8e46ed78f585036bd748aab76f567c53b66c236abb53d24ce4ec701b31fb79ea277e4192d758c2daf3116ba702ae8f54ccddc38f6886e
-Size (R/spatstat.geom_3.2-7.tar.gz) = 772736 bytes
+BLAKE2s (R/spatstat.geom_3.3-4.tar.gz) = 12c9b08973128708f145410c61a7e2e4aa4c74cb958ef8cd6e1e88ee806c2e1f
+SHA512 (R/spatstat.geom_3.3-4.tar.gz) = ec98ad746590c2a2ded78055911593583d02b34dcb4479ff6a29d9ee621fbb57e1a72f63c598c358b081e7225bba051c22010f4ccb78cb3ab644046ce9bcd085
+Size (R/spatstat.geom_3.3-4.tar.gz) = 770545 bytes
