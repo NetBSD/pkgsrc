@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/07/07 08:58:41 nia Exp $
+# $NetBSD: Makefile,v 1.60 2024/12/01 16:17:18 taca Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
 PKGREVISION=		11
@@ -6,7 +6,7 @@ COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 
 CONFLICTS=		ap-php-[0-9]*
 
-USE_TOOLS+=		autoconf lex pkg-config bison
+USE_TOOLS+=		lex pkg-config bison
 
 TOOL_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 
@@ -16,6 +16,13 @@ FORTIFY_SUPPORTED=	no
 SSP_SUPPORTED=		no
 
 .include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_MAJOR_VERS} < 7
+USE_TOOLS+=		autoconf269
+.else
+USE_TOOLS+=		autoconf
+.endif
+
 .include "${PHPPKGSRCDIR}/Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
