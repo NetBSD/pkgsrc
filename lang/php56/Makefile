@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2024/11/14 22:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/12/01 16:11:56 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_VERSION}
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		lang
 
 HOMEPAGE=		https://www.php.net/
@@ -13,7 +13,7 @@ LICENSE=		php
 
 TEST_TARGET=		test
 
-USE_TOOLS+=		gmake lex pkg-config
+USE_TOOLS+=		autoconf269 gmake lex pkg-config
 LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
 
@@ -25,6 +25,7 @@ CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
 MESSAGE_SUBST+=		CGIDIR=${CGIDIR}
 
+CONFIGURE_ARGS+=	--enable-cgi
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 
@@ -47,6 +48,9 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 post-install:
 #	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${DESTDIR}${PREFIX}/bin/php
