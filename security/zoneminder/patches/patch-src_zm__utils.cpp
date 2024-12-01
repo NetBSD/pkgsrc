@@ -1,28 +1,35 @@
-$NetBSD: patch-src_zm__utils.cpp,v 1.3 2022/09/27 01:20:39 gdt Exp $
+$NetBSD: patch-src_zm__utils.cpp,v 1.4 2024/12/01 13:49:48 gdt Exp $
 
-\todo Explain
+Avoid assuming linux on arm.  For now, assume neon.
 
---- src/zm_utils.cpp.orig	2019-02-22 15:38:47.000000000 +0000
+Fix time types (sizes).
+
+--- src/zm_utils.cpp.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_utils.cpp
-@@ -76,21 +76,6 @@ const std::string stringtf( const char *
-   return( tempString );
+@@ -183,7 +183,7 @@ std::string TimevalToString(timeval tv) 
+     return "";
+   }
+ 
+-  return stringtf("%s.%06ld", tm_buf.data(), tv.tv_usec);
++  return stringtf("%s.%06ld", tm_buf.data(), (long) tv.tv_usec);
  }
  
--const std::string stringtf( const std::string &format, ... )
--{
--  va_list ap;
--  char tempBuffer[8192];
--  std::string tempString;
--
--  va_start(ap, format );
--  vsnprintf( tempBuffer, sizeof(tempBuffer), format.c_str() , ap );
--  va_end(ap);
--
--  tempString = tempBuffer;
--
--  return( tempString );
--}
--
- bool startsWith( const std::string &haystack, const std::string &needle )
- {
-   return( haystack.substr( 0, needle.length() ) == needle );
+ /* Detect special hardware features, such as SIMD instruction sets */
+@@ -231,13 +231,15 @@ void HwCapsDetect() {
+   unsigned long auxval = 0;
+   elf_aux_info(AT_HWCAP, &auxval, sizeof(auxval));
+   if (auxval & HWCAP_NEON) {
+-  #error Unsupported OS.
+-  #endif
+     Debug(1,"Detected ARM (AArch32) processor with Neon");
+     neonversion = 1;
+   } else {
+     Debug(1,"Detected ARM (AArch32) processor");
+   }
++#  else
++    Debug(1,"!!ASSUMING!! ARM (AArch32) processor with Neon");
++    neonversion = 1;
++#  endif
+ #elif defined(__aarch64__)
+   // ARM processor in 64bit mode
+   // Neon is mandatory, no need to check for it

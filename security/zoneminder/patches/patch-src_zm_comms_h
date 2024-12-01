@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_comms_h,v 1.5 2022/01/12 11:53:26 dsainty Exp $
+$NetBSD: patch-src_zm_comms_h,v 1.6 2024/12/01 13:49:48 gdt Exp $
 
 extern "C" system headers.
 
@@ -7,34 +7,39 @@ Include missing system headers for NetBSD.
 To fix Linux readv/writev, back-port:
 https://github.com/ZoneMinder/zoneminder/commit/417421b1d869d1b71c8ec1a1e3b082fcede6ce58#diff-484f666f58ec13f38fa402143f2f6ad8e63a013909d3941ffbb3d66745b20c8d
 
---- src/zm_comms.h.orig	2016-02-03 18:40:30.000000000 +0000
+--- src/zm_comms.h.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_comms.h
-@@ -22,20 +22,24 @@
+@@ -22,18 +22,30 @@
  
  #include "zm_exception.h"
- 
+ #include "zm_logger.h"
+-#include <cerrno>
++
++/* \todo  Validate that this is still needed. */
 +extern "C" {
- #include <string.h>
- #include <unistd.h>
  #include <netdb.h>
- #include <errno.h>
- #include <sys/un.h>
--
 -#include <set>
+ #include <sys/uio.h>
+ #include <sys/un.h>
+ #include <unistd.h>
 -#include <vector>
++
++#include <errno.h>
++#include <string.h>
++
++/* \todo Validate this addition. */
 +#include <stdlib.h>
 +#include <time.h>
-+#include <sys/uio.h>
  
  #if defined(BSD)
--#include <sys/uio.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
  #endif
 +}
 +
++#include <cerrno>
 +#include <set>
 +#include <vector>
  
- class CommsException : public Exception
- {
+ namespace ZM {
+ 

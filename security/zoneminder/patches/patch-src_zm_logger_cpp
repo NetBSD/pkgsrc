@@ -1,4 +1,4 @@
-$NetBSD: patch-src_zm_logger_cpp,v 1.7 2022/09/27 01:20:39 gdt Exp $
+$NetBSD: patch-src_zm_logger_cpp,v 1.8 2024/12/01 13:49:48 gdt Exp $
 
 Use libgen.h for basename.
 
@@ -9,54 +9,32 @@ to use SYS_gettid.
 
 Fix time types (sizes).
 
---- src/zm_logger.cpp.orig	2019-02-22 15:38:47.000000000 +0000
+--- src/zm_logger.cpp.orig	2023-02-23 21:44:01.000000000 +0000
 +++ src/zm_logger.cpp
-@@ -33,9 +33,11 @@
- #include <errno.h>
- #ifdef __FreeBSD__
- #include <sys/thr.h>
--#include <libgen.h>
+@@ -439,13 +439,13 @@ void Logger::logPrint(bool hex, const ch
+ 
+     subtractTime( &timeVal, &logStart );
+ 
+-    snprintf( timeString, sizeof(timeString), "%ld.%03ld", timeVal.tv_sec, timeVal.tv_usec/1000 );
++    snprintf( timeString, sizeof(timeString), "%jd.%03ld", (intmax_t) timeVal.tv_sec, (long) timeVal.tv_usec/1000 );
+   } else {
  #endif
- 
-+/* POSIX specifies libgen.h for basename() */
-+#include <libgen.h>
-+
- bool Logger::smInitialised = false;
- Logger *Logger::smInstance = 0;
- 
-@@ -515,7 +517,8 @@ void Logger::logPrint( bool hex, const c
-     va_list     argPtr;
-     struct timeval  timeVal;
- 
--    const char * const file = basename(filepath);
-+    /* \todo Verify that the cast is safe. */
-+    const char * const file = basename((char *)filepath);
-     
-     if ( level < PANIC || level > DEBUG9 )
-       Panic( "Invalid logger level %d", level );
-@@ -531,14 +534,14 @@ void Logger::logPrint( bool hex, const c
- 
-       subtractTime( &timeVal, &logStart );
- 
--      snprintf( timeString, sizeof(timeString), "%ld.%03ld", timeVal.tv_sec, timeVal.tv_usec/1000 );
-+      snprintf( timeString, sizeof(timeString), "%jd.%03ld", (intmax_t) timeVal.tv_sec, timeVal.tv_usec/1000 );
-     }
-     else
-     {
-   #endif
-       char *timePtr = timeString;
-       timePtr += strftime( timePtr, sizeof(timeString), "%x %H:%M:%S", localtime(&timeVal.tv_sec) );
--      snprintf( timePtr, sizeof(timeString)-(timePtr-timeString), ".%06ld", timeVal.tv_usec );
-+      snprintf( timePtr, sizeof(timeString)-(timePtr-timeString), ".%06jd", (intmax_t) timeVal.tv_usec );
-   #if 0
-     }
-   #endif
-@@ -615,7 +618,7 @@ void Logger::logPrint( bool hex, const c
- 
-       mysql_real_escape_string( &mDbConnection, escapedString, syslogStart, strlen(syslogStart) );
-       
--      snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, ServerId, Pid, Level, Code, Message, File, Line ) values ( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )", timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line );
-+      snprintf( sql, sizeof(sql), "insert into Logs ( TimeKey, Component, ServerId, Pid, Level, Code, Message, File, Line ) values ( %jd.%06jd, '%s', %d, %d, %d, '%s', '%s', '%s', %d )", (intmax_t) timeVal.tv_sec, (intmax_t) timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString, file, line );
-       if ( mysql_query( &mDbConnection, sql ) )
-       {
-         Level tempDatabaseLevel = mDatabaseLevel;
+     char *timePtr = timeString;
+     tm now_tm = {};
+     timePtr += strftime(timePtr, sizeof(timeString), "%x %H:%M:%S", localtime_r(&timeVal.tv_sec, &now_tm));
+-    snprintf(timePtr, sizeof(timeString)-(timePtr-timeString), ".%06ld", timeVal.tv_usec);
++    snprintf(timePtr, sizeof(timeString)-(timePtr-timeString), ".%06ld", (long) timeVal.tv_usec);
+ #if 0
+   }
+ #endif
+@@ -534,8 +534,8 @@ void Logger::logPrint(bool hex, const ch
+           "INSERT INTO `Logs` "
+           "( `TimeKey`, `Component`, `ServerId`, `Pid`, `Level`, `Code`, `Message`, `File`, `Line` )"
+           " VALUES "
+-          "( %ld.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
+-          timeVal.tv_sec, timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
++          "( %jd.%06ld, '%s', %d, %d, %d, '%s', '%s', '%s', %d )",
++          (intmax_t) timeVal.tv_sec, (long) timeVal.tv_usec, mId.c_str(), staticConfig.SERVER_ID, tid, level, classString, escapedString.c_str(), file, line
+           );
+       dbQueue.push(std::move(sql_string));
+     } else {

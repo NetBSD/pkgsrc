@@ -1,4 +1,4 @@
-$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.3 2022/09/27 01:20:39 gdt Exp $
+$NetBSD: patch-scripts_ZoneMinder_lib_ZoneMinder_General_pm,v 1.4 2024/12/01 13:49:48 gdt Exp $
 
 Perl doesn't really support "> /dev/null", so just capture into $output.
 
@@ -19,14 +19,14 @@ installed on the system, or not in the $PATH.
 
 Use the -m parameter to su, as ZM_WEB_USER shouldn't require a login shell.
 
---- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2019-02-22 15:38:47.000000000 +0000
+--- scripts/ZoneMinder/lib/ZoneMinder/General.pm.orig	2023-02-23 21:44:01.000000000 +0000
 +++ scripts/ZoneMinder/lib/ZoneMinder/General.pm
-@@ -129,7 +129,7 @@ sub getCmdFormat {
-       chomp( $output );
-       Debug( "Test failed, '$output'\n" );
+@@ -92,7 +92,7 @@ sub getCmdFormat {
+     chomp( $output );
+     Debug("Test failed, '$output'");
  
--      $prefix = "su ".$Config{ZM_WEB_USER}." -c '";
-+      $prefix = "su -m ".$Config{ZM_WEB_USER}." -c '";
-       $suffix = "'";
-       $command = $prefix.$null_command.$suffix;
-       Debug( "Testing \"$command\"\n" );
+-    $prefix = 'su '.$Config{ZM_WEB_USER}.q` --shell=/bin/sh --command='`;
++    $prefix = 'su -m'.$Config{ZM_WEB_USER}.q` --shell=/bin/sh --command='`;
+     $suffix = q`'`;
+     $command = $prefix.$null_command.$suffix;
+     Debug("Testing \"$command\"");
