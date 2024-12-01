@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7330 2024/12/01 05:00:50 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7331 2024/12/01 07:16:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11005,3 +11005,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated games/dhewm3 to 1.5.4 [wiz 2024-11-30]
 	Updated security/vaultwarden to 1.32.5 [pin 2024-12-01]
 	Updated geography/R-s2 to 1.1.7 [mef 2024-12-01]
+	Updated geography/R-spData to 2.3.3 [mef 2024-12-01]
