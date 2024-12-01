@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/11/30 20:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/01 00:04:58 pin Exp $
 
 DISTNAME=	vaultwarden-${PKGVER}
-PKGVER=		1.30.1
+PKGVER=		1.32.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
 EXTRACT_SUFX=	.tar.gz
@@ -11,17 +11,6 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/dani-garcia/vaultwarden
 COMMENT=	Bitwarden compatible backend server
 LICENSE=	gnu-agpl-v3
-
-BROKEN=		"This version does not support rust 1.80"
-
-# From
-# 'make CARGO_ARGS="build --release --features 
-#    `make show-var VARNAME=CARGO_FEATURES`" build &&
-#    make print-cargo-depends > cargo-depends.mk'
-#
-# Or generate from FreeBSD security/vaultwarden/Makefile.crates like
-# awk '{ CA = ( NF > 2) ? $2 : $1 ; printf("CARGO_CRATE_DEPENDS+=\t%s\n", CA) }'
-#      < .../Makefile.crates > cargo-depends.mk
 
 .include "cargo-depends.mk"
 
