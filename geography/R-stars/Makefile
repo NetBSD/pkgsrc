@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/12/01 14:52:54 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/01 22:23:45 mef Exp $
 
 R_PKGNAME=	stars
 R_PKGVER=	0.6-7
@@ -34,7 +34,6 @@ TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
 TEST_DEPENDS+=	R-mapdata-[0-9]*:../../geography/R-mapdata
 TEST_DEPENDS+=	R-randomForest-[0-9]*:../../math/R-randomForest
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-spacetime-[0-9]*:../../math/R-spacetime
 TEST_DEPENDS+=	R-spatstat-[0-9]*:../../geography/R-spatstat
