@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/11/29 13:33:23 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/01 18:55:25 wiz Exp $
 
 R_PKGNAME=	httr2
 R_PKGVER=	1.0.7
@@ -17,7 +17,8 @@ DEPENDS+=	R-rlang>=1.1.0:../../devel/R-rlang
 DEPENDS+=	R-withr>=3.0.1:../../devel/R-withr
 DEPENDS+=	R-vctrs>=0.6.3:../../math/R-vctrs
 DEPENDS+=	R-openssl>=2.0.5nb1:../../security/R-openssl
-DEPENDS+=	R-curl>=6.0.1:../../www/R-curl
+#DEPENDS+=	R-curl>=6.0.1:../../www/R-curl
+DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 
 # Packages suggested but not available: 'docopt', 'paws.common'
 #
