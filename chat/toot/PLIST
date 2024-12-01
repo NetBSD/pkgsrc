@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/08/23 13:15:15 vins Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/12/01 17:52:29 vins Exp $
 bin/toot
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -18,6 +18,9 @@ ${PYSITELIB}/toot/api.pyo
 ${PYSITELIB}/toot/auth.py
 ${PYSITELIB}/toot/auth.pyc
 ${PYSITELIB}/toot/auth.pyo
+${PYSITELIB}/toot/cache.py
+${PYSITELIB}/toot/cache.pyc
+${PYSITELIB}/toot/cache.pyo
 ${PYSITELIB}/toot/cli/__init__.py
 ${PYSITELIB}/toot/cli/__init__.pyc
 ${PYSITELIB}/toot/cli/__init__.pyo
