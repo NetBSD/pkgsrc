@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/20 13:01:32 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/01 14:52:54 mef Exp $
 
 R_PKGNAME=	stars
-R_PKGVER=	0.5-3
+R_PKGVER=	0.6-7
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,10 +15,11 @@ DEPENDS+=	R-abind>=1.4.5:../../math/R-abind
 DEPENDS+=	R-units>=0.6.5:../../math/R-units
 
 # Packages suggested but not available:
-#   'PCICt', 'clue', 'cubelyr', 'exactextractr', 'future.apply',
-#   'ggforce', 'ncdfgeom', 'ncmeta', 'pbapply', 'plm', 'starsdata',
-#   'terra'
+#  'OpenStreetMap', 'PCICt', 'clue', 'cubble', 'cubelyr',
+#  'exactextractr', 'future.apply', 'ggforce', 'ncdfgeom', 'ncmeta',
+#  'pbapply', 'plm', 'starsdata', 'tsibble'
 
+TEST_DEPENDS+=	R-Cairo-[0-9]*:../../graphics/R-Cairo
 TEST_DEPENDS+=	R-RNetCDF-[0-9]*:../../math/R-RNetCDF
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-digest-[0-9]*:../../security/R-digest
