@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/15 13:54:50 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/01 23:41:18 gdt Exp $
 share/proj/DK
 share/proj/FO
 share/proj/ISL
@@ -92,6 +92,8 @@ share/proj/de_lgl_bw_BWTA2017.tif
 share/proj/de_lgl_bw_README.txt
 share/proj/de_lgvl_saarland_README.txt
 share/proj/de_lgvl_saarland_SeTa2016.tif
+share/proj/de_tlbg_thueringen_NTv2gridTH.tif
+share/proj/de_tlbg_thueringen_README.txt
 share/proj/dk_sdfe_DK_bornholm.pol
 share/proj/dk_sdfe_DK_bridges.pol
 share/proj/dk_sdfe_DK_general.pol
@@ -184,6 +186,9 @@ share/proj/fr_ign_ggpf10-Tahiti.tif
 share/proj/fr_ign_ggspm06v1.tif
 share/proj/fr_ign_gr3df97a.tif
 share/proj/fr_ign_ntf_r93.tif
+share/proj/hu_bme_README.txt
+share/proj/hu_bme_geoid2014.tif
+share/proj/hu_bme_hd72corr.tif
 share/proj/is_lmi_ISN2004_ISN2016.tif
 share/proj/is_lmi_ISN93_ISN2016.tif
 share/proj/is_lmi_ISN_vel_beta.tif
