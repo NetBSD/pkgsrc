@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7355 2024/12/01 20:18:04 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7356 2024/12/01 21:54:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11043,3 +11043,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/lla to 0.2.10 [pin 2024-12-01]
 	Updated sysutils/parallel-disk-usage to 0.11.0 [pin 2024-12-01]
 	Updated shells/oh-my-posh to 24.11.4 [pin 2024-12-01]
+	Updated audio/spotify-player to 0.20.2 [pin 2024-12-01]
