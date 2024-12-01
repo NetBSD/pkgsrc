@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/08/22 18:08:13 vins Exp $
+# $NetBSD: Makefile,v 1.13 2024/12/01 16:21:32 vins Exp $
 
-DISTNAME=	got-portable-0.102
+DISTNAME=	got-portable-0.106
 PKGNAME=	${DISTNAME:S/-portable//}
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
