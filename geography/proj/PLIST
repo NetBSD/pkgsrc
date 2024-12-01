@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/09/15 12:53:31 gdt Exp $
+@comment $NetBSD: PLIST,v 1.14 2024/12/01 23:29:17 gdt Exp $
 bin/cct
 bin/cs2cs
 bin/geod
@@ -37,7 +37,7 @@ lib/cmake/proj4/proj4-targets-release.cmake
 lib/cmake/proj4/proj4-targets.cmake
 lib/libproj.so
 lib/libproj.so.25
-lib/libproj.so.25.9.5.0
+lib/libproj.so.25.9.5.1
 lib/pkgconfig/proj.pc
 man/man1/cct.1
 man/man1/cs2cs.1
