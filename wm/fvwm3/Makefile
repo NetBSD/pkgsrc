@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/11/14 22:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2024/12/01 17:41:15 vins Exp $
 
-DISTNAME=	fvwm3-1.1.0
-PKGREVISION=	9
+DISTNAME=	fvwm3-1.1.1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -18,6 +17,7 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=	pkg-config perl:run
 USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_TOOLS+=	autoconf automake autoreconf
 USE_TOOLS+=	gmake						# needed for manpages installation
 
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg	# needed by fvwm-menu-desktop
@@ -26,7 +26,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27				# wants python3
 
 .include "../../lang/go/go-vars.mk"				# required by go linker
 
-REPLACE_SH=	utils/*.sh
+#REPLACE_SH=	utils/*.sh
 REPLACE_PERL=	perllib/FVWM/create-commands
 
 SUBST_CLASSES+=		paths
@@ -38,8 +38,8 @@ SUBST_SED.paths=	-e "s:/etc/system.fvwm2rc:${PKG_SYSCONFDIR}/fvwm/system.fvwm2rc
 SUBST_SED.paths+=	-e "s:/usr/local/share/fvwm:${PREFIX}/share/fvwm:g"
 
 # otherwise we get installed scripts that point to the tools directory.
-CONFIGURE_ENV+=	ac_cv_path_PYTHON=${PYTHONBIN}
-CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL5}
+CONFIGURE_ENV+=		ac_cv_path_PYTHON=${PYTHONBIN}
+CONFIGURE_ENV+=		ac_cv_path_PERL=${PERL5}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/fvwm
 CONFIGURE_ARGS+=	--with-x
@@ -50,12 +50,16 @@ CONFIGURE_ARGS+=	--with-iconv-includes=${BUILDLINK_PREFIX.iconv}/${BUILDLINK_INC
 
 .include "options.mk"
 
+pre-configure:
+	set -e; cd ${WRKSRC} && autoreconf -fiv
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../x11/xtrans/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
