@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.40 2024/07/23 09:18:17 jperkin Exp $
+$NetBSD: distinfo,v 1.41 2024/12/01 16:13:14 taca Exp $
 
 BLAKE2s (php-7.4.33.tar.xz) = 11ec78e0a566d33168e9867e60796f25b8edc4efa03868929251a6297021e79d
 SHA512 (php-7.4.33.tar.xz) = 499b63b99e5d8e8082ff89d3a91b4cb9a593ea7553b96e48863414c13d2e50275904ed29070e2232e529ee91160f505e6060a4d129cb5bf098aa5b6ea0928d3d
 Size (php-7.4.33.tar.xz) = 10420144 bytes
 SHA1 (patch-build_libtool.m4) = 3656eb516fb14defd4b0964fe21e117c630be856
-SHA1 (patch-configure) = 5e9c9c06f6d819d5ba2832d648f41363f40f3108
-SHA1 (patch-configure.ac) = 13a720fc341d5b1975e8a91e98f761333319af7d
+SHA1 (patch-build_php.m4) = ade566ac591442ed81a7e95f0c5c679cb148f8e5
+SHA1 (patch-configure.ac) = 1be1a9d15b1c4b602c1c21025e2eea1d09e511a8
 SHA1 (patch-disable-filter-url) = 0a2c19c18f089448a8d842e99738b292ab9e5640
 SHA1 (patch-ext_intl_breakiterator_codepointiterator__internal.cpp) = b0ded220ffa42b77228d66696f00212caf37b4aa
 SHA1 (patch-ext_intl_collator_collator__sort.c) = 7fdb751cabb24eb4097cfb5cf23ba217a9893530

@@ -1,6 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/07/23 09:18:17 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/12/01 16:13:14 taca Exp $
 
-Don't automatically add libgcc on SunOS. Reported upstream as #75941.
+* Don't automatically add libgcc on SunOS. Reported upstream as #75941.
 
 --- configure.ac.orig	2024-07-23 08:44:26.300593600 +0000
 +++ configure.ac
