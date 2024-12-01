@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.24 2023/06/27 10:27:21 riastradh Exp $
+# $NetBSD: autoconf.mk,v 1.25 2024/12/01 16:09:09 taca Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,20 +68,21 @@
 
 # Only allow one of "autoconf" and "autoconf213" in USE_TOOLS.
 .if !empty(USE_TOOLS:C/:.*//:Mautoconf) && \
-    !empty(USE_TOOLS:C/:.*//:Mautoconf213)
-PKG_FAIL_REASON+=	"\`\`autoconf'' and \`\`autoconf213'' conflict in USE_TOOLS."
+    !empty(USE_TOOLS:C/:.*//:Mautoconf213) && \
+    !empty(USE_TOOLS:C/:.*//:Mautoconf269)
+PKG_FAIL_REASON+=	"\`\`autoconf'', \`\`autoconf213'' and \`\`autoconf269'' conflict in USE_TOOLS."
 .endif
 
 # This is an exhaustive list of all of the scripts supplied by GNU
 # autoconf.
 #
-_TOOLS_AC_NAMES=	autoconf	autoconf-2.13
-_TOOLS_AC_NAMES+=	autoheader	autoheader-2.13
-_TOOLS_AC_NAMES+=	autom4te
-_TOOLS_AC_NAMES+=	autoreconf	autoreconf-2.13
-_TOOLS_AC_NAMES+=	autoscan	autoscan-2.13
-_TOOLS_AC_NAMES+=	autoupdate	autoupdate-2.13
-_TOOLS_AC_NAMES+=	ifnames		ifnames-2.13
+_TOOLS_AC_NAMES=	autoconf	autoconf-2.13	autoconf-2.69
+_TOOLS_AC_NAMES+=	autoheader	autoheader-2.13	autoheader-2.69
+_TOOLS_AC_NAMES+=	autom4te			autom4te-2.69
+_TOOLS_AC_NAMES+=	autoreconf	autoreconf-2.13	autoreconf-2.69
+_TOOLS_AC_NAMES+=	autoscan	autoscan-2.13	autoscan-2.69
+_TOOLS_AC_NAMES+=	autoupdate	autoupdate-2.13	autoupdate-2.69
+_TOOLS_AC_NAMES+=	ifnames		ifnames-2.13	ifnames-2.69
 
 .if defined(GNU_CONFIGURE)
 .  for _t_ in ${_TOOLS_AC_NAMES}
@@ -177,6 +178,65 @@ _TOOLS_AC_TYPE.ifnames-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.ifnames=		# empty
 TOOLS_PATH.ifnames-2.13=	${TOOLBASE}/bin/ifnames-2.13
 TOOLS_ALIASES.ifnames-2.13=	ifnames
+
+.    if defined(USE_LIBTOOL)
+pre-configure: tools-libtool-m4-override
+.    endif
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.autoconf269) && !empty(USE_TOOLS:C/:.*//:Mautoconf269)
+.  if ${PKGPATH} == devel/autoconf269
+MAKEFLAGS+=		TOOLS_IGNORE.autoconf269=
+.  else
+AUTOCONF_REQD?=		2.69
+
+.    if !empty(USE_TOOLS:Mautoconf269\:run)
+_TOOLS_DEPMETHOD.autoconf269=	DEPENDS
+.    elif !empty(USE_TOOLS:Mautoconf269\:test)
+_TOOLS_DEPMETHOD.autoconf=	TEST_DEPENDS
+.    else
+_TOOLS_DEPMETHOD.autoconf269=	TOOL_DEPENDS
+.    endif
+TOOLS_DEPENDS.autoconf269?=	autoconf269>=${AUTOCONF_REQD}:../../devel/autoconf269
+.    if empty(${_TOOLS_DEPMETHOD.autoconf269}:M${TOOLS_DEPENDS.autoconf269})
+${_TOOLS_DEPMETHOD.autoconf269}+=	${TOOLS_DEPENDS.autoconf269}
+.    endif
+
+_TOOLS_AC_TYPE.autoconf-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoconf=	# empty
+TOOLS_PATH.autoconf-2.69=	${TOOLBASE}/bin/autoconf-2.69
+TOOLS_ALIASES.autoconf-2.69=	autoconf
+
+_TOOLS_AC_TYPE.autoheader-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoheader=	# empty
+TOOLS_PATH.autoheader-2.69=	${TOOLBASE}/bin/autoheader-2.69
+TOOLS_ALIASES.autoheader-2.69=	autoheader
+
+_TOOLS_AC_TYPE.autom4te-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autom4te=	# empty
+TOOLS_PATH.autom4te-2.69=	${TOOLBASE}/bin/autom4te-2.69
+TOOLS_ALIASES.autom4te-2.69=	autom4te
+
+_TOOLS_AC_TYPE.autoreconf-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoreconf=	# empty
+TOOLS_PATH.autoreconf-2.69=	${TOOLBASE}/bin/autoreconf-2.69
+TOOLS_ALIASES.autoreconf-2.69=	autoreconf
+
+_TOOLS_AC_TYPE.autoscan-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoscan=	# empty
+TOOLS_PATH.autoscan-2.69=	${TOOLBASE}/bin/autoscan-2.69
+TOOLS_ALIASES.autoscan-2.69=	autoscan
+
+_TOOLS_AC_TYPE.autoupdate-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.autoupdate=	# empty
+TOOLS_PATH.autoupdate-2.69=	${TOOLBASE}/bin/autoupdate-2.69
+TOOLS_ALIASES.autoupdate-2.69=	autoupdate
+
+_TOOLS_AC_TYPE.ifnames-2.69=	TOOLS_CREATE
+_TOOLS_AC_TYPE.ifnames=		# empty
+TOOLS_PATH.ifnames-2.69=	${TOOLBASE}/bin/ifnames-2.69
+TOOLS_ALIASES.ifnames-2.69=	ifnames
 
 .    if defined(USE_LIBTOOL)
 pre-configure: tools-libtool-m4-override
