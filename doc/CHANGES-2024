@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7353 2024/12/01 18:13:20 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7354 2024/12/01 18:14:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11041,3 +11041,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated wm/fvwm3 to 1.1.1 [vins 2024-12-01]
 	Updated chat/toot to 0.47.1 [vins 2024-12-01]
 	Updated sysutils/lla to 0.2.10 [pin 2024-12-01]
+	Updated sysutils/parallel-disk-usage to 0.11.0 [pin 2024-12-01]
