@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/06/15 08:26:25 taca Exp $
+# $NetBSD: Makefile,v 1.43 2024/12/01 16:17:37 taca Exp $
 
 PKGNAME=	${PHP_PKG_PREFIX}-fpm-${PHP_VERSION}
 PKGREVISION=	11
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FPM interface for ${PKG_PHP}
 LICENSE=	2-clause-bsd
 
-USE_TOOLS+=	autoconf pkg-config
+USE_TOOLS+=	pkg-config
 
 LIBTOOL_OVERRIDE=	# empty
 
@@ -32,6 +32,12 @@ CONF_FILES=		${EGDIR}/php-fpm.conf ${PKG_SYSCONFDIR}/php-fpm.conf
 AUTO_MKDIRS=		yes
 
 .include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_MAJOR_VERS} < 7
+USE_TOOLS+=		autoconf269
+.else
+USE_TOOLS+=		autoconf
+.endif
 
 PLIST_VARS+=		fpmdotd
 
