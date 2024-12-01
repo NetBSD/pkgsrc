@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7347 2024/12/01 15:49:51 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7348 2024/12/01 16:12:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11035,3 +11035,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-railties71 to 7.1.5 [taca 2024-12-01]
 	Updated textproc/ruby-actiontext71 to 7.1.5 [taca 2024-12-01]
 	Updated www/ruby-rails71 to 7.1.5 [taca 2024-12-01]
+	Updated lang/php56 to 5.6.40nb16 [taca 2024-12-01]
