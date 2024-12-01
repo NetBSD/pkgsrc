@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2024/08/13 07:12:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/12/01 09:43:11 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -454,17 +454,14 @@ ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmr10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf
-${PYSITELIB}/matplotlib/mpl-data/images/back-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/back.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/back.png
 ${PYSITELIB}/matplotlib/mpl-data/images/back.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/back_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/filesave-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.png
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/forward-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.png
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.svg
@@ -472,12 +469,10 @@ ${PYSITELIB}/matplotlib/mpl-data/images/forward_large.png
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.png
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.svg
-${PYSITELIB}/matplotlib/mpl-data/images/help-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/help.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/help.png
 ${PYSITELIB}/matplotlib/mpl-data/images/help.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/help_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/home-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/home.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/home.png
 ${PYSITELIB}/matplotlib/mpl-data/images/home.svg
@@ -486,7 +481,6 @@ ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.png
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/move-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/move.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/move.png
 ${PYSITELIB}/matplotlib/mpl-data/images/move.svg
@@ -495,12 +489,10 @@ ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.png
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/subplots-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.png
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots_large.png
-${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.png
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.svg
@@ -1228,6 +1220,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_contour/contour_manual_labels
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_contour/contour_manual_labels.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_contour/contour_test_label_transforms.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_contour/contour_uneven.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_contour/contourf_hatch_colors.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_dates/DateFormatter_fractionalSeconds.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_dates/RRuleLocator_bounds.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_dates/date_axhline.png
