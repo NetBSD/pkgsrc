@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7335 2024/12/01 08:51:22 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7336 2024/12/01 08:56:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11010,3 +11010,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added geography/R-spatstat.univar version 3.1.1 [mef 2024-12-01]
 	Updated geography/R-spatstat.data to 3.1.4 [mef 2024-12-01]
 	Updated geography/R-spatstat.sparse to 3.1.0 [mef 2024-12-01]
+	Updated geography/R-spatstat.explore to 3.3.3 [mef 2024-12-01]
