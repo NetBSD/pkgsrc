@@ -1,20 +1,39 @@
-$NetBSD: patch-scripts_zmpkg_pl_in,v 1.1 2022/09/27 01:20:39 gdt Exp $
+$NetBSD: patch-scripts_zmpkg_pl_in,v 1.2 2024/12/01 13:49:48 gdt Exp $
 
-The systemd check in zmpkg.pl does not work, even on systems that use systemd.
-It fails to start, eventually timing out, if there is any parent process
-between zmpkg.pl and systemd or init - such as /etc/init.d/zoneminder
+The systemd check in zmpkg.pl does not work, even on systems that use
+systemd.  It fails to start, eventually timing out, if there is any
+parent process between zmpkg.pl and systemd or init - such as
+/etc/init.d/zoneminder.  But everything does seem to work ok from
+systemd without this roundabout code anyway, so just inhibit it.
 
-But everything does seem to work ok from systemd without this roundabout code
-anyway, so just inhibit it.
+Add sleep to avoid suspected race condition.
 
---- scripts/zmpkg.pl.in.orig	2021-09-26 20:28:10.324733138 +1300
-+++ scripts/zmpkg.pl.in	2021-09-26 20:28:30.414613144 +1300
-@@ -168,7 +168,7 @@
- }
+\todo After catching up, actually debug and/or send upstream.
+
+--- scripts/zmpkg.pl.in.orig	2018-12-08 14:22:36.000000000 +0000
++++ scripts/zmpkg.pl.in
+@@ -143,7 +143,7 @@ if ( $command eq 'state' ) {
+ } # end if command = state
  
  # Check if we are running systemd and if we have been called by the system
--if ( $command =~ /^(start|stop|restart)$/ )
-+if ( 0 && $command =~ /^(start|stop|restart)$/ )
- {
-     # We have to detaint to keep perl from complaining
-     $command = $1;
+-if ( $command =~ /^(start|stop|restart)$/ ) {
++if ( 0 && $command =~ /^(start|stop|restart)$/ ) {
+ # We have to detaint to keep perl from complaining
+   $command = $1;
+ 
+@@ -191,6 +191,15 @@ if ( $command =~ /^(?:start|restart)$/ )
+ 
+     zmMemTidy();
+     runCommand('zmdc.pl startup');
++    Info("Sleeping 2 seconds to avoid zmdc.pl race.");
++    # Somehow, on at least NetBSD 9 amd64, a future zmdc.pl start
++    # command succeeds in starting the daemon, but does not exit.
++    # Based on an unsubstantiated theory that the startup invocation
++    # exits before startup is complete, sleep for 2 seconds
++    # afterwards.  Experimentally, this results in normal startup
++    # without hanging.
++    sleep(2);
++    Info("Sleeping complete.");
+ 
+     my $Server = undef;
+     my $sql;

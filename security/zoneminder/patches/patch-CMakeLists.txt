@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2022/09/27 01:20:39 gdt Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2024/12/01 13:49:47 gdt Exp $
 
 Don't have a file called "version", to avoid conflict with C++20 <version>.
 
@@ -12,18 +12,18 @@ exist, so don't insist on librt being present.  Fixes the build on MacOS.
 Let Pkgsrc be responsible for zm.conf into examples, rather than overwriting
 the existing configuration file.
 
---- CMakeLists.txt.orig	2019-02-23 04:38:47.000000000 +1300
-+++ CMakeLists.txt	2022-01-19 22:51:36.000000000 +1300
+--- CMakeLists.txt.orig	2023-02-23 21:44:01.000000000 +0000
++++ CMakeLists.txt
 @@ -4,7 +4,7 @@
  #
- cmake_minimum_required (VERSION 2.8.7)
- project (zoneminder)
--file (STRINGS "version" zoneminder_VERSION)
-+file (STRINGS "version.txt" zoneminder_VERSION)
+ cmake_minimum_required(VERSION 3.5.0)
+ project(zoneminder)
+-file(STRINGS "version" zoneminder_VERSION)
++file(STRINGS "version.txt" zoneminder_VERSION)
  # make API version a minor of ZM version
  set(zoneminder_API_VERSION "${zoneminder_VERSION}.1")
  
-@@ -226,7 +226,9 @@
+@@ -267,7 +267,9 @@ check_include_file("ucontext.h" HAVE_UCO
  check_include_file("sys/sendfile.h" HAVE_SYS_SENDFILE_H)
  check_include_file("sys/syscall.h" HAVE_SYS_SYSCALL_H)
  check_function_exists("syscall" HAVE_SYSCALL)
@@ -33,21 +33,24 @@ the existing configuration file.
  check_function_exists("posix_memalign" HAVE_POSIX_MEMALIGN)
  check_type_size("siginfo_t" HAVE_SIGINFO_T)
  check_type_size("ucontext_t" HAVE_UCONTEXT_T)
-@@ -237,7 +239,7 @@
-     include (CheckLibraryExists)
-     CHECK_LIBRARY_EXISTS(rt clock_gettime "time.h" HAVE_CLOCK_GETTIME)
-     if(NOT HAVE_CLOCK_GETTIME)
--        message(FATAL_ERROR "clock_gettime not found")
-+        #message(FATAL_ERROR "clock_gettime not found")
-     else(NOT HAVE_CLOCK_GETTIME)
-         list(APPEND ZM_BIN_LIBS "-lrt")
-     endif(NOT HAVE_CLOCK_GETTIME)
-@@ -733,7 +735,7 @@
- endif(zmconfgen_result EQUAL 0)
+@@ -278,7 +280,8 @@ if(UNIX)
+   include(CheckLibraryExists)
+   CHECK_LIBRARY_EXISTS(rt clock_gettime "time.h" HAVE_CLOCK_GETTIME)
+   if(NOT HAVE_CLOCK_GETTIME)
+-    message(FATAL_ERROR "clock_gettime not found")
++    # \todo Explain why just skipping this is ok.
++    #message(FATAL_ERROR "clock_gettime not found")
+   else()
+     list(APPEND ZM_BIN_LIBS "-lrt")
+   endif()
+@@ -863,8 +866,8 @@ else()
+ endif()
  
  # Install zm.conf
 -install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
+-install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/conf.d/" DESTINATION "${ZM_CONFIG_SUBDIR}" PATTERN "*.in" EXCLUDE)
 +#install(FILES "${CMAKE_CURRENT_BINARY_DIR}/zm.conf" DESTINATION "${ZM_CONFIG_DIR}")
++#install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/conf.d/" DESTINATION "${ZM_CONFIG_SUBDIR}" PATTERN "*.in" EXCLUDE)
  
  # Uninstall target
  configure_file(

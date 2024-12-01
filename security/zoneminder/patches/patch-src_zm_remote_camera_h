@@ -1,20 +1,17 @@
-$NetBSD: patch-src_zm_remote_camera_h,v 1.4 2015/04/05 08:51:08 dsainty Exp $
+$NetBSD: patch-src_zm_remote_camera_h,v 1.5 2024/12/01 13:49:48 gdt Exp $
 
 Declare sockaddr_in.
 
---- src/zm_remote_camera.h.orig	2015-02-05 15:52:37.000000000 +1300
-+++ src/zm_remote_camera.h	2015-04-01 17:56:10.736361360 +1300
-@@ -23,10 +23,13 @@
- #include "zm_camera.h"
+--- src/zm_remote_camera.h.orig	2023-02-23 21:44:01.000000000 +0000
++++ src/zm_remote_camera.h
+@@ -24,6 +24,10 @@
  #include "zm_rtsp_auth.h"
- 
-+#include <netinet/in.h>
-+
  #include <string>
- #include <sys/types.h>
- #include <sys/socket.h>
- #include <netdb.h>
+ 
++/* \todo Validate if necessary. */
++#include <netinet/in.h>
 +#include <time.h>
++
+ #define SOCKET_BUF_SIZE 8192
  
  //
- // Class representing 'remote' cameras, i.e. those which are
