@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.8 2020/08/01 09:52:51 wiz Exp $
+# $NetBSD: Makefile.php,v 1.9 2024/12/01 16:11:56 taca Exp $
 # used by lang/php56/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -36,7 +36,6 @@ CONFIGURE_ARGS+=	--disable-opcache
 CONFIGURE_ARGS+=	--disable-pdo
 CONFIGURE_ARGS+=	--disable-json
 
-CONFIGURE_ARGS+=	--enable-cgi
 CONFIGURE_ARGS+=	--enable-mysqlnd
 CONFIGURE_ARGS+=	--enable-xml
 CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
