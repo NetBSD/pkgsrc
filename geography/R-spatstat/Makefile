@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/01/14 05:11:18 mef Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/01 09:47:24 mef Exp $
 
 R_PKGNAME=	spatstat
-R_PKGVER=	3.0-7
+R_PKGVER=	3.3-0
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +11,12 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES+=	c c++
 
 DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
+DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
 DEPENDS+=	R-spatstat.data>=2.1.0:../../geography/R-spatstat.data
 DEPENDS+=	R-spatstat.geom>=2.1.0:../../geography/R-spatstat.geom
-DEPENDS+=	R-spatstat.linnet>=2.1.0:../../geography/R-spatstat.linnet
+DEPENDS+=	R-spatstat.linnet>=3.2.2:../../geography/R-spatstat.linnet
+DEPENDS+=	R-spatstat.model-[0-9]*:../../geography/R-spatstat.model
+DEPENDS+=	R-spatstat.univar-[0-9]*:../../geography/R-spatstat.univar
 DEPENDS+=	R-spatstat.utils>=2.1.0:../../geography/R-spatstat.utils
 DEPENDS+=	R-abind>=1.4.0:../../math/R-abind
 DEPENDS+=	R-goftest>=1.0.3:../../math/R-goftest
