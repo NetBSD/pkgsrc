@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/12/01 21:54:05 pin Exp $
 
-DISTNAME=	spotify-player-0.20.1
-PKGREVISION=	1
+DISTNAME=	spotify-player-0.20.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +10,8 @@ HOMEPAGE=	https://github.com/aome510/spotify-player/
 COMMENT=	Command driven spotify player
 LICENSE=	mit
 
-TOOL_DEPENDS+=  cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
 
@@ -26,7 +26,6 @@ INSTALLATION_DIRS=	bin
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=     -C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.clang}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 
@@ -38,5 +37,4 @@ do-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
