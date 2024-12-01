@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/01/30 14:21:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/01 21:56:50 pin Exp $
 
 DISTNAME=	spotifyd-0.3.5
 PKGREVISION=	2
@@ -10,6 +10,9 @@ MAINTAINER=	base@atomicules.co.uk
 HOMEPAGE=	https://github.com/Spotifyd/spotifyd/
 COMMENT=	Open source Spotify client running as a UNIX daemon
 LICENSE=	gnu-gpl-v3
+
+# https://github.com/Spotifyd/spotifyd/issues/1308
+BROKEN=	"Waiting for a release supporting rust 1.80+"
 
 .include "cargo-depends.mk"
 
