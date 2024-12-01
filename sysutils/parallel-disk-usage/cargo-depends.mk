@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/11/20 12:46:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/12/01 18:13:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.11
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.10
@@ -19,6 +19,7 @@ CARGO_CRATE_DEPENDS+=	colorchoice-1.0.0
 CARGO_CRATE_DEPENDS+=	command-extra-1.0.0
 CARGO_CRATE_DEPENDS+=	convert_case-0.4.0
 CARGO_CRATE_DEPENDS+=	convert_case-0.6.0
+CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
 CARGO_CRATE_DEPENDS+=	crossbeam-deque-0.8.5
 CARGO_CRATE_DEPENDS+=	crossbeam-epoch-0.9.18
 CARGO_CRATE_DEPENDS+=	crossbeam-utils-0.8.19
@@ -49,6 +50,7 @@ CARGO_CRATE_DEPENDS+=	libc-0.2.153
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.13
 CARGO_CRATE_DEPENDS+=	maplit-1.0.2
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
+CARGO_CRATE_DEPENDS+=	ntapi-0.4.1
 CARGO_CRATE_DEPENDS+=	pipe-trait-0.4.0
 CARGO_CRATE_DEPENDS+=	ppv-lite86-0.2.17
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.1
@@ -73,6 +75,7 @@ CARGO_CRATE_DEPENDS+=	strsim-0.10.0
 CARGO_CRATE_DEPENDS+=	strsim-0.11.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.86
+CARGO_CRATE_DEPENDS+=	sysinfo-0.32.0
 CARGO_CRATE_DEPENDS+=	terminal_size-0.4.0
 CARGO_CRATE_DEPENDS+=	text-block-macros-0.1.1
 CARGO_CRATE_DEPENDS+=	text-block-macros-0.2.0
@@ -85,6 +88,14 @@ CARGO_CRATE_DEPENDS+=	unicode-xid-0.2.6
 CARGO_CRATE_DEPENDS+=	unsafe-libyaml-0.2.11
 CARGO_CRATE_DEPENDS+=	utf8parse-0.2.1
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
+CARGO_CRATE_DEPENDS+=	winapi-0.3.9
+CARGO_CRATE_DEPENDS+=	winapi-i686-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	winapi-x86_64-pc-windows-gnu-0.4.0
+CARGO_CRATE_DEPENDS+=	windows-0.57.0
+CARGO_CRATE_DEPENDS+=	windows-core-0.57.0
+CARGO_CRATE_DEPENDS+=	windows-implement-0.57.0
+CARGO_CRATE_DEPENDS+=	windows-interface-0.57.0
+CARGO_CRATE_DEPENDS+=	windows-result-0.1.2
 CARGO_CRATE_DEPENDS+=	windows-sys-0.52.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.59.0
 CARGO_CRATE_DEPENDS+=	windows-targets-0.52.6
