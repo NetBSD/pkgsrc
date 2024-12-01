@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.25 2024/11/14 22:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/12/01 16:13:14 taca Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_VERSION:S/RC/rc/}
-PKGREVISION=		8
+PKGREVISION=		9
 
 COMMENT=		PHP Hypertext Preprocessor version 7.4
 LICENSE=		php
 
 TEST_TARGET=		test
 
-USE_TOOLS+=		gmake lex
+USE_TOOLS+=		autoconf gmake lex
 LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
 
@@ -46,7 +46,6 @@ REPLACE_PHP=		ext/phar/phar/phar.php run-tests.php
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	configure
 SUBST_FILES.path+=	php.ini-development php.ini-production
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_VARS.path=	CGIDIR
@@ -65,6 +64,9 @@ INSTALL_UNSTRIPPED=	yes
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 CFLAGS+=	-DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_WITHOUT_ZONEMALLOC
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} php.ini-development php.ini-production \
