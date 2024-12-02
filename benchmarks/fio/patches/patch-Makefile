@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile,v 1.5 2020/04/30 09:42:27 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.6 2024/12/02 07:50:52 nia Exp $
 
-Use pkgsrc install.
+Use pkgsrc install and PKGMANDIR.
 
 --- Makefile.orig	2020-03-12 17:12:50.000000000 +0000
 +++ Makefile
@@ -13,3 +13,18 @@ Use pkgsrc install.
  	INSTALL = ginstall
  else
  	INSTALL = install
+@@ -366,13 +366,8 @@ endif
+ prefix = $(INSTALL_PREFIX)
+ bindir = $(prefix)/bin
+ 
+-ifeq ($(CONFIG_TARGET_OS), Darwin)
+-mandir = /usr/share/man
+-sharedir = /usr/share/fio
+-else
+-mandir = $(prefix)/man
++mandir = $(prefix)/$(PKGMANDIR)
+ sharedir = $(prefix)/share/fio
+-endif
+ 
+ all: $(PROGS) $(T_TEST_PROGS) $(UT_PROGS) $(SCRIPTS) FORCE
+ 
