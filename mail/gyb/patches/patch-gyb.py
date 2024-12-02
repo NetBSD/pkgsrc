@@ -1,11 +1,11 @@
-$NetBSD: patch-gyb.py,v 1.2 2022/10/14 12:26:56 sborrill Exp $
+$NetBSD: patch-gyb.py,v 1.3 2024/12/02 08:44:46 sborrill Exp $
 
 Set default config path to PKG_SYSCONFDIR
 Disable automatic update check
 
---- gyb.py.orig	2022-09-26 19:18:58.000000000 +0100
-+++ gyb.py	2022-10-14 13:19:17.325498099 +0100
-@@ -242,7 +242,7 @@
+--- gyb.py.orig	2024-08-09 12:47:00.000000000 +0100
++++ gyb.py	2024-12-02 08:32:56.843937255 +0000
+@@ -244,7 +244,7 @@
    parser.add_argument('--config-folder',
      dest='config_folder',
      help='Optional: Alternate folder to store config and credentials',
@@ -14,10 +14,10 @@ Disable automatic update check
    parser.add_argument('--cleanup',
            action='store_true',
            dest='cleanup',
-@@ -1964,7 +1964,7 @@
-   options = SetupOptionParser(argv)
+@@ -2069,7 +2069,7 @@
    if options.debug:
      httplib2.debuglevel = 4
+ 
 -  doGYBCheckForUpdates(debug=options.debug)
 +#  doGYBCheckForUpdates(debug=options.debug)
    if options.version:
