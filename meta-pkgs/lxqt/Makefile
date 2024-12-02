@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/11/27 10:28:36 pin Exp $
+# $NetBSD: Makefile,v 1.32 2024/12/02 11:44:53 pin Exp $
 
 PKGNAME=	lxqt-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,7 +29,7 @@ DEPENDS+=	lxqt-admin>=2.1.0:../../x11/lxqt-admin
 DEPENDS+=	lxqt-config>=2.1.0:../../x11/lxqt-config
 DEPENDS+=	lxqt-globalkeys>=2.1.0:../../x11/lxqt-globalkeys
 DEPENDS+=	lxqt-openssh-askpass>=2.1.0:../../security/lxqt-openssh-askpass
-DEPENDS+=	lxqt-notificationd>=2.1.0:../../x11/lxqt-notificationd
+DEPENDS+=	lxqt-notificationd>=2.1.1:../../x11/lxqt-notificationd
 DEPENDS+=	lxqt-powermanagement>=2.1.0:../../sysutils/lxqt-powermanagement
 DEPENDS+=	libdbusmenu-lxqt>=0.2.0:../../devel/libdbusmenu-lxqt
 DEPENDS+=	lxqt-qtplugin>=2.1.0:../../x11/lxqt-qtplugin
@@ -37,7 +37,7 @@ DEPENDS+=	lxqt-session>=2.1.0:../../x11/lxqt-session
 DEPENDS+=	lxqt-sudo>=2.1.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.1.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.1.0:../../x11/qterminal
-DEPENDS+=	lxqt-panel>=2.1.2:../../x11/lxqt-panel
+DEPENDS+=	lxqt-panel>=2.1.3:../../x11/lxqt-panel
 DEPENDS+=	lxqt-runner>=2.1.0:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.9.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.1.0:../../archivers/lxqt-archiver
