@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7368 2024/12/02 14:04:45 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7369 2024/12/02 14:05:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11056,3 +11056,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/lxqt to 2.1.0nb2 [pin 2024-12-02]
 	Added geography/R-spatstat.univar version 3.1.1 [mef 2024-12-02]
 	Updated devel/ast-grep to 0.30.1 [pin 2024-12-02]
+	Updated sysutils/bkt to 0.8.2 [pin 2024-12-02]
