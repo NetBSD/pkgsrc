@@ -1,4 +1,4 @@
-$NetBSD: patch-makefile,v 1.2 2022/05/08 21:24:12 khorben Exp $
+$NetBSD: patch-makefile,v 1.3 2024/12/02 07:57:33 nia Exp $
 
 Fix installation directories and scripts
 
@@ -9,7 +9,7 @@ Fix installation directories and scripts
  SOURCE = $(DESTDIR)$(LIBDIR)/prosody
  DATA = $(DESTDIR)$(DATADIR)
 -MAN = $(DESTDIR)$(PREFIX)/share/man
-+MAN = $(DESTDIR)$(PREFIX)/man
++MAN = $(DESTDIR)$(PREFIX)/$(PKGMANDIR)
  
  INSTALLEDSOURCE = $(LIBDIR)/prosody
  INSTALLEDCONFIG = $(SYSCONFDIR)
