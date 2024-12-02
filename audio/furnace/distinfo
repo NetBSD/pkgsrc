@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/11/12 21:27:33 nia Exp $
+$NetBSD: distinfo,v 1.2 2024/12/02 07:47:47 nia Exp $
 
 BLAKE2s (fmtlib-fmt-e57ca2e3685b160617d3d95fcd9e789c4e06ca88.tar.gz) = 0c26788aa7386a5754de960f089559616662a09030d4be69004deda6e61f678a
 SHA512 (fmtlib-fmt-e57ca2e3685b160617d3d95fcd9e789c4e06ca88.tar.gz) = b1bcd06c93bfec3f7a41c31a90ea55d653062f12701e1531bcfbbd27b7deddb3429e77655e4586758aa0992a4ccce30af66117f325583268e5f38d3908ae91a3
@@ -11,3 +11,4 @@ SHA512 (superctr-adpcm-ef7a217154badc3b99978ac481b268c8aab67bd8.tar.gz) = 40b6f0
 Size (superctr-adpcm-ef7a217154badc3b99978ac481b268c8aab67bd8.tar.gz) = 5497 bytes
 SHA1 (patch-CMakeLists.txt) = e924b30f612f4e1e6e38987ad8365008045e113e
 SHA1 (patch-extern_imgui__patched_backends_imgui__impl__opengl3__loader.h) = 97586b9d39f8dd25ec5631b1251ea8bc33232cf6
+SHA1 (patch-src_engine_export_zsm.cpp) = 9afbf92ff465fdf1ec9e81d3d93831e4872b1309
