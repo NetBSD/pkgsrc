@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/12/28 15:02:17 bacon Exp $
+# $NetBSD: Makefile,v 1.17 2024/12/02 07:52:50 nia Exp $
 
 DISTNAME=	libxtend-0.2.0.2
 CATEGORIES=	devel
@@ -18,6 +18,8 @@ INSTALL_TARGET=	apple-install
 .else
 INSTALL_TARGET=	install-strip
 .endif
+
+LDFLAGS.SunOS+=	-lresolv
 
 MAKE_ENV+=	DYLIB_PATH=${PREFIX}/lib MANDIR=${PREFIX}/${PKGMANDIR}
 
