@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.38 2024/12/01 21:54:05 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.39 2024/12/02 07:20:20 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ab_glyph-0.2.29
 CARGO_CRATE_DEPENDS+=	ab_glyph_rasterizer-0.1.8
