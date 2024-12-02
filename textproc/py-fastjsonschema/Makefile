@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/11/29 09:02:42 adam Exp $
+# $NetBSD: Makefile,v 1.13 2024/12/02 20:33:35 adam Exp $
 
-DISTNAME=	fastjsonschema-2.21.0
+DISTNAME=	fastjsonschema-2.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fastjsonschema/}
