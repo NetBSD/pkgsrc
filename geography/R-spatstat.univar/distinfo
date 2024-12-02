@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/02 12:25:47 mef Exp $
+
+BLAKE2s (R/spatstat.univar_3.1-1.tar.gz) = 4a22519eb0987881dafa33ecf8a19943fe871b052f81fb6ff18eef72ae453266
+SHA512 (R/spatstat.univar_3.1-1.tar.gz) = f36e3530c8335f9e803c15589719c4b5a6e1f83cb51f9332901eaf8ebaa39b7ab98ea6cbd797af944675a02f368b23391a06bfbb0b9d7b4904ede670a5f877f6
+Size (R/spatstat.univar_3.1-1.tar.gz) = 67927 bytes
