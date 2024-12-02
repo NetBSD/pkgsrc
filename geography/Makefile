@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2024/12/01 08:15:03 mef Exp $
+# $NetBSD: Makefile,v 1.137 2024/12/02 09:25:35 jperkin Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -37,7 +37,7 @@ SUBDIR+=	R-spatstat.linnet
 SUBDIR+=	R-spatstat.model
 SUBDIR+=	R-spatstat.random
 SUBDIR+=	R-spatstat.sparse
-SUBDIR+=	R-spatstat.univar
+#SUBDIR+=	R-spatstat.univar
 SUBDIR+=	R-spatstat.utils
 SUBDIR+=	R-stars
 SUBDIR+=	R-terra
