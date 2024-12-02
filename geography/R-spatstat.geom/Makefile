@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/12/02 09:24:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/02 13:09:33 mef Exp $
 
 R_PKGNAME=	spatstat.geom
 R_PKGVER=	3.3-4
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
 DEPENDS+=	R-spatstat.data>=3.0:../../geography/R-spatstat.data
-#DEPENDS+=	R-spatstat.univar-[0-9]*:../../geography/R-spatstat.univar
+DEPENDS+=	R-spatstat.univar-[0-9]*:../../geography/R-spatstat.univar
 DEPENDS+=	R-spatstat.utils>=2.2.0:../../geography/R-spatstat.utils
 DEPENDS+=	R-polyclip>=1.10.0:../../graphics/R-polyclip
 
