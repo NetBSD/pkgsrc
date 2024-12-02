@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ddclient.sh,v 1.7 2019/01/06 16:52:17 schmonz Exp $
+# $NetBSD: ddclient.sh,v 1.8 2024/12/02 17:59:49 abs Exp $
 #
 # Dynamic DNS update client
 #
@@ -13,7 +13,7 @@ fi
 
 name="ddclient"
 rcvar=${name}
-command="@PREFIX@/sbin/${name}"
+command="@PREFIX@/bin/${name}"
 required_files="@PKG_SYSCONFDIR@/${name}.conf"
 extra_commands="reload"
 

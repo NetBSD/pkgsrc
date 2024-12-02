@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2022/06/28 11:34:58 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2024/12/02 17:59:49 abs Exp $
 
-DISTNAME=	ddclient-3.8.3
-PKGREVISION=	9
+DISTNAME=	ddclient-3.11.2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ddclient/}
+GITHUB_TAG=	v${DISTNAME:S/ddclient-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ddclient.sourceforge.net/
@@ -13,42 +12,43 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# empty
+USE_TOOLS+=		autoreconf autoconf automake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE} --sysconfdir=${PKG_SYSCONFDIR}
 
 BUILD_DEFS+=		VARBASE
 DOCDIR=			${PREFIX}/share/doc/ddclient
 EGDIR=			${PREFIX}/share/examples/ddclient
 RCD_SCRIPTS=		ddclient
-CONF_FILES_PERMS=	${EGDIR}/sample-etc_ddclient.conf		\
-			${PKG_SYSCONFDIR}/ddclient.conf			\
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 
+CONF_FILES+=		${EGDIR}/ddclient.conf \
+			${PKG_SYSCONFDIR}/ddclient.conf
+
+DEPENDS+=		curl-[0-9]*:../../www/curl
 DEPENDS+=		p5-JSON-Any>=0.0:../../converters/p5-JSON-Any
 
 REPLACE_INTERPRETER+=	sh
 REPLACE.sh.old=		.*/bin/bash
 REPLACE.sh.new=		/bin/sh
 REPLACE_FILES.sh=	sample-ddclient-wrapper.sh
-REPLACE_FILES.sh+=	sample-etc_rc.d_init.d_ddclient
+REPLACE_FILES.sh+=	sample-get-ip-from-fritzbox
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 
-SUBST_CLASSES+=		config
-SUBST_MESSAGE.config=	Adjust variables: PKG_SYSCONFDIR VARBASE PERL5 (in patch-aa)
-SUBST_FILES.config+=	ddclient
-SUBST_STAGE.config=	post-patch
-SUBST_VARS.config=	PKG_SYSCONFDIR VARBASE PERL5
+pre-configure:
+	${RUN} set -e; cd ${WRKSRC} && autoreconf -fiv
 
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${DESTDIR}${PREFIX}/sbin
+post-install:
+	${RM} -f ${DESTDIR}${PKG_SYSCONFDIR}/ddclient.conf
+	${INSTALL_DATA} ${WRKSRC}/ddclient.conf ${DESTDIR}${EGDIR}/ddclient.conf
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.ssl ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.cisco ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample-* ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample-d* ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample-e* ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/sample-get-ip-from-fritzbox \
+                ${DESTDIR}${PREFIX}/bin/get-ip-from-fritzbox
 
 .include "options.mk"
 

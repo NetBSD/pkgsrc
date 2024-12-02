@@ -1,18 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2016/02/09 12:23:37 mef Exp $
-sbin/ddclient
+@comment $NetBSD: PLIST,v 1.11 2024/12/02 17:59:49 abs Exp $
+bin/ddclient
+bin/get-ip-from-fritzbox
 share/doc/ddclient/COPYING
 share/doc/ddclient/COPYRIGHT
 share/doc/ddclient/README.cisco
 share/doc/ddclient/README.md
-share/doc/ddclient/README.ssl
+share/examples/ddclient/ddclient.conf
 share/examples/ddclient/sample-ddclient-wrapper.sh
 share/examples/ddclient/sample-etc_cron.d_ddclient
-share/examples/ddclient/sample-etc_ddclient.conf
 share/examples/ddclient/sample-etc_dhclient-exit-hooks
 share/examples/ddclient/sample-etc_dhcpc_dhcpcd-eth0.exe
 share/examples/ddclient/sample-etc_ppp_ip-up.local
-share/examples/ddclient/sample-etc_rc.d_init.d_ddclient
-share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.alpine
-share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.lsb
-share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.redhat
-share/examples/ddclient/sample-etc_rc.d_init.d_ddclient.ubuntu
+share/examples/ddclient/sample-etc_systemd.service
