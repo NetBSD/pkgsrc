@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/12/02 13:44:42 abs Exp $
+# $NetBSD: Makefile,v 1.18 2024/12/02 16:52:51 abs Exp $
 
 DISTNAME=	jna-5.15.0
 PKGNAME=	java-${DISTNAME}
@@ -85,7 +85,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${_ULIMIT_CMD:Q}${SETENV:Q} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
+	    ${_ULIMIT_CMD}${SETENV:Q} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/native-*/${JNIPFX}jnidispatch.${JNISFX} \
