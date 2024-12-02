@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/11/28 19:53:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2024/12/02 13:44:42 abs Exp $
 
 DISTNAME=	jna-5.15.0
 PKGNAME=	java-${DISTNAME}
@@ -48,25 +48,19 @@ JNISFX.Cygwin=	dll
 JNISFX.Darwin=	jnilib
 JNISFX.AIX=	a
 JNISFX.*=	so
-PLIST_SUBST+=	JNIPFX=${JNIPFX} JNISFX=${JNISFX}
+
+# Generated support files in ${PREFIX}/doc vary based on the version of java
+# used to build, each of 8, 11, 17 and 21 have significant differences. The
+# documentation is the same, but not the jquery, frame layout and similar files
+GENERATE_PLIST+= \
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} lib share \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/java-vm.mk"
 .if ${OPSYS} == "NetBSD" && ${PKG_JVM} == "openjdk8"
 # openjdk8<1.8.202 uses oldest sigaction on NetBSD.
 DEPENDS+=	openjdk8>=1.8.202:../../lang/openjdk8
-.endif
-
-# JDK 11 or later doesn't generate frames
-PLIST_SRC=	PLIST
-.if !empty(PKG_JVM:M*[a-z]7*) || !empty(PKG_JVM:M*[a-z]8*)
-PLIST_SRC+=	PLIST.java8-javadoc
-.elif !empty(PKG_JVM:M*11*)
-PLIST_SRC+=	PLIST.java11-javadoc
-.elif !empty(PKG_JVM:M*17*)
-PLIST_SRC+=	PLIST.java17-javadoc
-.else
-PLIST_SRC+=	PLIST.java21-javadoc
 .endif
 
 TOOL_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
@@ -91,7 +85,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wno-unknown-warning-option
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${_ULIMIT_CMD}${SETENV} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
+	    ${_ULIMIT_CMD:Q}${SETENV:Q} ${MAKE_ENV} ${PREFIX}/bin/ant ${ANT_ARGS} ${ANT_TARGET}
 
 do-install:
 	${INSTALL_LIB} ${WRKSRC}/build/native-*/${JNIPFX}jnidispatch.${JNISFX} \
