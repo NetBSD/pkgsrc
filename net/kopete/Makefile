@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2024/11/14 22:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2024/12/03 13:43:46 jperkin Exp $
 
 DISTNAME=	kopete-${KAPPSVER}
 PKGREVISION=	9
@@ -43,6 +43,8 @@ REPLACE_PERL+= \
 REPLACE_SH+= \
 	protocols/winpopup/winpopup-install \
 	protocols/winpopup/winpopup-send
+
+LDFLAGS.SunOS+=	-lsocket -lresolv
 
 .include "../../chat/libgadu/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
