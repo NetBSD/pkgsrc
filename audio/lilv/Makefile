@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2024/11/17 07:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2024/12/03 11:21:17 jperkin Exp $
 
 DISTNAME=	lilv-0.24.24
 PKGREVISION=	1
@@ -17,6 +17,8 @@ USE_TOOLS+=		gsed pkg-config
 FORCE_CXX_STD=		c++11
 
 MESON_ARGS+=	-Dbindings_py=disabled
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
 PKGCONFIG_OVERRIDE+=		output/meson-private/lilv-0.pc
