@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/29 12:00:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/03 08:06:52 wiz Exp $
 
 DISTNAME=	blosc2-2.15.1
 CATEGORIES=	devel
@@ -28,7 +28,8 @@ CMAKE_CONFIGURE_ARGS+=	-DPREFER_EXTERNAL_ZSTD=ON
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_C_FLAGS=${CFLAGS:Q}
 
 # Needed to use posix_memalign, see tests/test_common.h
-CFLAGS+=	-D_POSIX_C_SOURCE=200112
+# TODO: as-is, breaks NetBSD
+#CFLAGS+=	-D_POSIX_C_SOURCE=200112
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
