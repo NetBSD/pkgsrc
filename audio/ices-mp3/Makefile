@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.57 2024/11/16 12:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/12/03 09:57:13 kim Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
 PKGNAME=		ices-mp3-${ICES_VERSION}
-PKGREVISION=		38
+PKGREVISION=		39
 ICES_VERSION=		0.4
 CATEGORIES=		audio
 MASTER_SITES=		https://svn.xiph.org/releases/ices/
@@ -57,8 +57,7 @@ do-install:
 	done
 	${INSTALL_DATA_DIR} ${DESTDIR}${MODDIR}
 
-# does not support flac-1.1.3 API
-#.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libshout/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
