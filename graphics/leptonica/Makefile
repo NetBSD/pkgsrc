@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/10/22 18:37:59 adam Exp $
+# $NetBSD: Makefile,v 1.31 2024/12/03 15:08:01 jperkin Exp $
 
 DISTNAME=	leptonica-1.85.0
 CATEGORIES=	graphics
@@ -19,8 +19,8 @@ CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 # Silence console messages
 CPPFLAGS+=		-DNO_CONSOLE_IO=1
 
-# Pass a SunOS that the build relies on
 CPPFLAGS.SunOS+=	-D__SOLARIS__=1
+LDFLAGS.SunOS+=		-lm
 
 .include "../../devel/cmake/build.mk"
 .include "../../graphics/giflib/buildlink3.mk"
