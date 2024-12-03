@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/11/14 22:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/12/03 15:04:54 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
 PKGREVISION=	4
@@ -79,6 +79,8 @@ INSTALLATION_DIRS+=	bin
 TEST_TARGET=		test
 
 CMAKE_CONFIGURE_ARGS+=		-DWITHOUT_CLIENTLIBS=ON
+
+LDFLAGS.SunOS+=		-labsl_string_view
 
 post-extract:
 	${CP} ${FILESDIR}/ffsll.cc ${WRKSRC}/sql/
