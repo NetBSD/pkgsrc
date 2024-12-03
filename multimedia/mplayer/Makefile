@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2024/04/12 19:32:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.116 2024/12/03 14:42:33 jperkin Exp $
 
 PKGNAME=	mplayer-${MPLAYER_VERSION}
 PKGREVISION=	4
@@ -16,6 +16,8 @@ CONFIGURE_ARGS+=	--enable-xvmc
 CONFIGURE_ARGS+=	--with-xvmclib=XvMCW
 
 INSTALLATION_DIRS+=	bin
+
+LDFLAGS.SunOS+=	-lX11 -lXext
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin
