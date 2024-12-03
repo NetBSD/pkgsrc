@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/11/11 07:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2024/12/03 08:20:41 wiz Exp $
 
 DISTNAME=	aeneas-1.7.3
 PKGREVISION=	19
@@ -20,6 +20,12 @@ USE_LANGUAGES=	c c++
 
 MAKE_ENV+=	AENEAS_FORCE_CEW=True
 WHEEL_NAME=	${DISTNAME}.0
+
+# Tries to use deprecated numpy.distuils
+# https://github.com/readbeyond/aeneas/issues/312
+#PYTHON_VERSIONS_ACCEPTED=	310 311
+# does not work either
+BROKEN=		"Removes deprecated numpy.distutils"
 
 .include "../../lang/python/wheel.mk"
 .include "../../audio/espeak-ng/buildlink3.mk"
