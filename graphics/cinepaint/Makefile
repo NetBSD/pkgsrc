@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/11/17 07:16:01 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/12/03 14:16:12 jperkin Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
@@ -22,7 +22,7 @@ USE_TOOLS+=		pkg-config msgfmt gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-python
 
-LDFLAGS.SunOS+=		-lstdc++
+LDFLAGS.SunOS+=		-lstdc++ -lsocket -lX11
 
 PKGCONFIG_OVERRIDE=	cinepaint-gtk.pc.in
 
