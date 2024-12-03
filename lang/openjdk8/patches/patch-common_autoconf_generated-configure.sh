@@ -1,4 +1,6 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.26 2024/11/29 03:29:08 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.27 2024/12/03 10:20:25 jperkin Exp $
+
+Various fixes.
 
 --- common/autoconf/generated-configure.sh.orig	2024-11-11 15:38:40.000000000 +0000
 +++ common/autoconf/generated-configure.sh
@@ -228,7 +230,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.26 2024/11/29 03:29:08
  
              # Extra M4 quote needed to protect [] in grep expression.
              FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
-@@ -25685,16 +25682,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -25685,16 +25682,15 @@ $as_echo_n "checking flags for boot jdk
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -306,6 +308,15 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.26 2024/11/29 03:29:08
    fi
    # The (cross) compiler is now configured, we can now test capabilities
    # of the target platform.
+@@ -42821,7 +42825,7 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+     LEGACY_TARGET_CFLAGS="$LEGACY_TARGET_CFLAGS -fstack-protector"
+     LEGACY_HOST_CXXFLAGS="$LEGACY_HOST_CXXFLAGS -fstack-protector"
+     LEGACY_TARGET_CXXFLAGS="$LEGACY_TARGET_CXXFLAGS -fstack-protector"
+-    if test "x$OPENJDK_TARGET_OS" != xmacosx; then
++    if test "x$OPENJDK_TARGET_OS" != xmacosx -a test "x$OPENJDK_TARGET_OS" != xsolaris; then
+       LDFLAGS_JDK="$LDFLAGS_JDK -Wl,-z,relro"
+       LEGACY_HOST_LDFLAGS="$LEGACY_HOST_LDFLAGS -Wl,-z,relro"
+       LEGACY_TARGET_LDFLAGS="$LEGACY_TARGET_LDFLAGS -Wl,-z,relro"
 @@ -42872,7 +42876,7 @@ $as_echo "$supports" >&6; }
    elif test "x$TOOLCHAIN_TYPE" = xclang; then
      LEGACY_EXTRA_CFLAGS="$LEGACY_EXTRA_CFLAGS -fstack-protector"
@@ -394,7 +405,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.26 2024/11/29 03:29:08
      LIBCXX="${SYSROOT}/usr/lib${OPENJDK_TARGET_CPU_ISADIR}/libCrun.so.1"
    fi
  
-@@ -55724,7 +55733,7 @@ $as_echo_n "checking for memory size... 
+@@ -55724,7 +55733,7 @@ $as_echo_n "checking for memory size...
      FOUND_MEM=yes
    elif test "x$OPENJDK_BUILD_OS" = xbsd && test "x$(uname -s | grep -o BSD)" = xBSD; then
      # Looks like a BSD system
