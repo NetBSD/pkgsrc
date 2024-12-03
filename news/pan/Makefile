@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2024/11/17 07:16:34 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2024/12/03 13:56:02 jperkin Exp $
 
 PKGNAME=		pan-0.160
 PKGREVISION=		5
@@ -34,7 +34,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWANT_GNUTLS=1
 CMAKE_CONFIGURE_ARGS+=	-DWANT_GTKSPELL=1
 CMAKE_CONFIGURE_ARGS+=	-DWANT_NOTIFY=0
 
-LIBS.SunOS+=	-lsocket
+LDFLAGS.SunOS+=	-lsocket
 
 # "Build" these files out of thin air, since base msgfmt doesn't know
 # about --xml --desktop.
