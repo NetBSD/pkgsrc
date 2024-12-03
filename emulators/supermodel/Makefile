@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/19 08:23:15 nia Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/03 14:39:44 jperkin Exp $
 
 DISTNAME=	Supermodel_0.2a_Src
 PKGNAME=	${DISTNAME:tl:S/_src//1:S/_/-/g}
@@ -22,6 +22,8 @@ CFLAGS+=	-DUSE_FILE32API=1
 
 INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/supermodel
+
+LDFLAGS.SunOS+=	-lGL
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/Supermodel \
