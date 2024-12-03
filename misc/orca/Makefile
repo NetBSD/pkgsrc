@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2024/11/17 07:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/12/03 12:10:38 jperkin Exp $
 
 DISTNAME=	orca-46.2
 PKGREVISION=	1
@@ -22,6 +22,11 @@ USE_TOOLS+=	pkg-config itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
 
 CHECK_PORTABILITY_SKIP+=	run_pylint.sh.in
+
+MESON_ARGS+=	--sysconfdir=share/examples
+
+CONF_FILES+=	share/examples/xdg/autostart/orca-autostart.desktop \
+		${PKG_SYSCONFDIR}/xdg/autostart/orca.desktop
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
