@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: TODO,v 1.1 2024/12/03 08:25:16 vins Exp $
+
+Starting with release 7.6.0, OpenSMTPD breaks backward compatibility with
+mail/opensmtpd-extras.
+As a consequence, this package shouldn't be updated to 7.6.0p0 or above
+unless the new table add-ons are imported on pkgsrc first.
+
+For further reference, see:
+https://github.com/OpenSMTPD/OpenSMTPD-extras/blob/master/README.md
+
+===========================================================================
