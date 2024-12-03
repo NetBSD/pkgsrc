@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7374 2024/12/02 23:27:20 rillig Exp $
+$NetBSD: CHANGES-2024,v 1.7375 2024/12/03 08:08:37 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11065,3 +11065,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/py-aio-pika to 9.5.1 [adam 2024-12-02]
 	Updated net/py-aiohappyeyeballs to 2.4.4 [adam 2024-12-02]
 	Updated pkgtools/pkglint to 23.8.1 [rillig 2024-12-02]
+	Updated mail/opensmtpd-extras to 6.7.1_20241022 [vins 2024-12-03]
