@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/11/17 07:15:49 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2024/12/03 13:53:52 jperkin Exp $
 
 DISTNAME=	gobby-0.6.0
 PKGREVISION=	7
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf automake autoreconf
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
+
+LDFLAGS.SunOS+=	-lsocket
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
