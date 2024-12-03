@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2024/12/03 14:16:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.91 2024/12/03 14:20:20 jperkin Exp $
 
 DISTNAME=	cinepaint-1.0-4
 PKGNAME=	cinepaint-1.0.4
@@ -18,7 +18,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config msgfmt gmake
+USE_TOOLS+=		pkg-config msgfmt gmake flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-python
 
