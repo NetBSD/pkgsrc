@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/11/17 07:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2024/12/03 15:18:56 jperkin Exp $
 
 DISTNAME=	ogle_gui-0.9.2
 PKGREVISION=	61
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/ogle
 CONFIGURE_ARGS+=	--enable-gtk2
+
+LDFLAGS.SunOS+=	-lX11
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../multimedia/ogle/buildlink3.mk"
