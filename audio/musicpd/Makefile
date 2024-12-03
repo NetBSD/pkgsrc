@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.317 2024/11/14 22:18:44 wiz Exp $
+# $NetBSD: Makefile,v 1.318 2024/12/03 15:42:59 jperkin Exp $
 
 DISTNAME=	mpd-0.23.15
 PKGNAME=	${DISTNAME:S/mpd/musicpd/}
@@ -97,7 +97,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/mpd/music \
 OWN_DIRS_PERMS+=	${VARBASE}/lib/mpd/playlists \
 			${MPD_USER} ${MPD_GROUP} 0755
 
-LDFLAGS.SunOS+=		-lnsl -lsocket
+LDFLAGS.SunOS+=		-lnsl -lsocket -licuuc
 CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 .include "options.mk"
