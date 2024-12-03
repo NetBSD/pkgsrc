@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/11/05 11:01:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/03 13:46:44 jperkin Exp $
 
 DISTNAME=	wmbattery-2.54
 PKGREVISION=	2
@@ -18,6 +18,8 @@ USE_TOOLS+=	autoreconf autoconf automake gmake pkg-config
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--enable-envsys
 .endif
+
+LDFLAGS.SunOS+=	-lsocket
 
 pre-configure:
 	${CP} \
