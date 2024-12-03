@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/11/29 08:15:59 adam Exp $
+$NetBSD: distinfo,v 1.6 2024/12/03 15:33:24 adam Exp $
 
-BLAKE2s (pypika_tortoise-0.3.1.tar.gz) = e0f01effb927ebac66b592a013ff27d3a55c97238b47fcb067bf2983717576a8
-SHA512 (pypika_tortoise-0.3.1.tar.gz) = 9fb7892af91b3dcdc24ee4696ee22c1ada03b1d172e71f1b8ecde023d1f04b984bc873b8bc168a80aca97dc304879565258c82e4635d9c4461a653fc23f0b700
-Size (pypika_tortoise-0.3.1.tar.gz) = 40304 bytes
+BLAKE2s (pypika_tortoise-0.3.2.tar.gz) = 5460560a45e49186f51d0e6def8d3d1a06bc878485a942142ebf1041b16d07fb
+SHA512 (pypika_tortoise-0.3.2.tar.gz) = cec0aea8074a57afcf4dabab8b4e2ee0ab0561f5699d3bca920e5c557e108f136161f4aa0702495e331ed9f1dac4b1d5a59cca3c09fef6ef2072d1e3d0e820df
+Size (pypika_tortoise-0.3.2.tar.gz) = 40445 bytes
