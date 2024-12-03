@@ -1,7 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/12/03 09:57:13 kim Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/12/03 10:11:35 wiz Exp $
 
 First chunk: automake-1.13 compat.
-Rest: ?
+Second chunk: flac compat.
 
 --- configure.ac.orig	2004-08-28 18:54:44.000000000 +0000
 +++ configure.ac
