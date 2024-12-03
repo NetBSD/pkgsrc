@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/12/02 20:38:49 adam Exp $
+$NetBSD: distinfo,v 1.17 2024/12/03 20:01:23 adam Exp $
 
-BLAKE2s (aio_pika-9.5.1.tar.gz) = fb39f6243293a2d2da1119e6801486cd569fecf985bcde7c3dfa0657cccda8ad
-SHA512 (aio_pika-9.5.1.tar.gz) = 4c921eba5b600ea0a6cd35f0ad95402151a44b832ffd7475d285e324b5c83c88f05e4343f516775d67551f3b934a1bbc4beb65bfe2c4f874e2a1c2cce75d1dac
-Size (aio_pika-9.5.1.tar.gz) = 48296 bytes
+BLAKE2s (aio_pika-9.5.3.tar.gz) = e98ca97a0e7d28d67105edc0b688473098ae71ef1f467e5efba665a7c4ab5e9f
+SHA512 (aio_pika-9.5.3.tar.gz) = 2f2082ed444413703b9d629a0965b3b79a1925f3d4d8aefe005d23f3934fe1871651f6377ac2b254f2ff7b0356c4ab670369bebd4a3e3c67a51d4d07e0f5a43c
+Size (aio_pika-9.5.3.tar.gz) = 48304 bytes
