@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/05/11 06:47:11 adam Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/03 11:51:00 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -7,6 +7,8 @@ COMMENT=	CPU emulator engine framework based on QEMU
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+
+CMAKE_CONFIGURE_ARGS.SunOS+=	-DCMAKE_AR=${PREFIX}/gnu/bin/ar
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
