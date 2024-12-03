@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/11/14 22:20:28 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/12/03 15:15:37 jperkin Exp $
 
 DISTNAME=	mozjs78_78.15.0.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -39,6 +39,7 @@ OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 OVERRIDE_DIRDEPTH=		4
 
 CPPFLAGS.SunOS+=	-DSOLARIS
+LDFLAGS.SunOS+=		-licuuc
 
 # For rustc/cargo detection
 .include "../../mk/bsd.prefs.mk"
