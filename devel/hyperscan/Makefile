@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/14 22:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/03 19:57:51 minskim Exp $
 
 DISTNAME=	hyperscan-5.0.0
 PKGREVISION=	12
@@ -9,7 +9,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://github.com/intel/hyperscan
 COMMENT=	High-performance regular expression matching library
-#LICENSE=	modified-bsd AND more
+LICENSE=	modified-bsd AND 2-clause-bsd AND boost-license
 
 TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
