@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/11/27 23:21:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2024/12/03 13:45:15 jperkin Exp $
 
 DISTNAME=		snac-2.65
 CATEGORIES=		www
@@ -13,6 +13,7 @@ LICENSE=		mit
 WRKSRC=			${WRKDIR}/snac2
 
 LDFLAGS.NetBSD+=	-lrt
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR:Q}${PREFIX:Q}
 INSTALL_MAKE_FLAGS+=	PREFIX_MAN=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
