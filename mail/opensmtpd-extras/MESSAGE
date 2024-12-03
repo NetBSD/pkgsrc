@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/12/03 08:07:43 vins Exp $
+
+IMPORTANT
+
+This package has been deprecated upstream.
+The repository was archived with the following notice:
+
+"With OpenSMTPD 7.6 the table protocol was changed, and existing tables
+ were splitted off to a different repository"
+
+Users updating to OpenSMTPD 7.6.0p0 or above, will be required to manually
+remove this package first. Extra table add-ons for 7.6.0 will be provided
+as standalone packages in the next quarterly pkgsrc release. 
+
+===========================================================================
