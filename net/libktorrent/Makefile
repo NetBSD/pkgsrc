@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2024/11/14 22:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2024/12/03 13:51:43 jperkin Exp $
 
 DISTNAME=	libktorrent-${KAPPSVER}
 PKGREVISION=	6
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 .include "../../meta-pkgs/kde/applications.mk"
 
 USE_TOOLS+=	msgmerge pkg-config
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
