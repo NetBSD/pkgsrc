@@ -1,4 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2024/06/10 09:48:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2024/12/03 08:29:16 wiz Exp $
+#
+# Starting with release 7.6.0, OpenSMTPD breaks backward compatibility with
+# mail/opensmtpd-extras.
+# As a consequence, this package shouldn't be updated to 7.6.0p0 or above
+# unless the new table add-ons are imported on pkgsrc first.
+#
+# For further reference, see:
+# https://github.com/OpenSMTPD/OpenSMTPD-extras/blob/master/README.md
 
 VERSION=	7.5.0p0
 DISTNAME=	opensmtpd-${VERSION}
