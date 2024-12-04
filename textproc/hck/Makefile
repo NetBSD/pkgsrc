@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2024/06/24 06:26:59 pin Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/04 14:15:55 pin Exp $
 
-DISTNAME=	hck-0.10.1
+DISTNAME=	hck-0.11.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	a17eeb927b8a4e5d573c0bfb2e0d0e952c10f930
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/sstadick/hck/
@@ -12,6 +11,8 @@ COMMENT=	Sharp cut(1) clone
 LICENSE=	unlicense OR mit
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
+RUST_REQ=	1.81.0
 
 .include "cargo-depends.mk"
 
