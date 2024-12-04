@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2024/12/04 15:06:58 nia Exp $
+# $NetBSD: Makefile,v 1.266 2024/12/04 23:24:03 nia Exp $
 
 DISTNAME=	wine-9.0
 PKGREVISION=	4
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-hal
 # LDAP causes build failures on NetBSD 9.99.x and newer.
 CONFIGURE_ARGS+=	--without-ldap
-# LDAP causes build failures on NetBSD 10.x and 9.x.
+# PCAP causes build failures on NetBSD 10.x and 9.x.
 CONFIGURE_ARGS+=	--without-pcap
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
