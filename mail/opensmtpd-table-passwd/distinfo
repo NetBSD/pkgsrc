@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:17 vins Exp $
+
+BLAKE2s (table-passwd-1.0.2.tar.gz) = 0e5c5601434231970bdef624259a27c16049792d78e123ba248a7038161d91c0
+SHA512 (table-passwd-1.0.2.tar.gz) = ec889dba37ae87b8fb191583e2d9409db7c0791644fcb557529076a5a225e267e0c891c253b658c4acbe17f2d4e6e85c58a75772bead25e5b95a2bdabcd8b85c
+Size (table-passwd-1.0.2.tar.gz) = 18309 bytes
