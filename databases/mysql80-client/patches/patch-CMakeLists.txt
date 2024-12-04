@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2024/02/16 22:01:10 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2024/12/04 22:13:00 schmonz Exp $
 
 HOMEBREW_HOME is provided by pkgsrc.
 Split configuration between mysql-client and mysql-server.
 Do not install documentation.
 
---- CMakeLists.txt.orig	2023-12-12 18:09:36.000000000 +0000
+--- CMakeLists.txt.orig	2024-07-12 19:15:25.000000000 +0000
 +++ CMakeLists.txt
-@@ -1697,14 +1697,6 @@ SET(SYSTEM_LIBRARIES
+@@ -1711,14 +1711,6 @@ SET(SYSTEM_LIBRARIES
    FIDO      # Homebrew  libfido2
    )
  
@@ -21,7 +21,16 @@ Do not install documentation.
  
  SET(WITH_SYSTEM_LIBS_DEFAULT OFF)
  OPTION(WITH_SYSTEM_LIBS
-@@ -2207,11 +2199,12 @@ ENDIF()
+@@ -1956,7 +1948,7 @@ MYSQL_CHECK_RAPIDJSON()
+ MYSQL_CHECK_FIDO()
+ MYSQL_CHECK_FIDO_DLLS()
+ 
+-IF(APPLE)
++IF(APPLE AND HOMEBREW_HOME)
+   GET_FILENAME_COMPONENT(HOMEBREW_BASE ${HOMEBREW_HOME} DIRECTORY)
+   IF(EXISTS ${HOMEBREW_BASE}/include/boost)
+     FOREACH(SYSTEM_LIB ICU LIBEVENT LZ4 PROTOBUF ZSTD FIDO)
+@@ -2232,11 +2224,12 @@ ENDIF()
  
  ADD_SUBDIRECTORY(client)
  ADD_SUBDIRECTORY(utilities)
@@ -36,7 +45,7 @@ Do not install documentation.
    ADD_SUBDIRECTORY(sql)
  ENDIF()
  
-@@ -2308,7 +2301,7 @@ IF(ENABLE_GCOV)
+@@ -2336,7 +2329,7 @@ IF(ENABLE_GCOV)
    INCLUDE(fastcov)
  ENDIF()
  
@@ -45,7 +54,7 @@ Do not install documentation.
    ADD_SUBDIRECTORY(man)
  ENDIF()
  
-@@ -2342,6 +2335,7 @@ SET_PROPERTY(DIRECTORY APPEND PROPERTY A
+@@ -2370,6 +2363,7 @@ SET_PROPERTY(DIRECTORY APPEND PROPERTY A
    "${CMAKE_BINARY_DIR}/library_output_directory"
    )
  
@@ -53,7 +62,7 @@ Do not install documentation.
  # Handle the "INFO_*" files.
  INCLUDE(${CMAKE_BINARY_DIR}/info_macros.cmake)
  # Source: This can be done during the cmake phase, all information is
-@@ -2355,7 +2349,6 @@ MY_ADD_CUSTOM_TARGET(INFO_SRC ALL
+@@ -2383,7 +2377,6 @@ MY_ADD_CUSTOM_TARGET(INFO_SRC ALL
    COMMENT "Generating Docs/INFO_SRC"
  )
  
@@ -61,7 +70,7 @@ Do not install documentation.
    # Show it by default in pushuild, but not for developers.
    IF(DEFINED ENV{PB2WORKDIR})
      OPTION(SHOW_BUILD_ID "Show mysqld build id as final target" ON)
-@@ -2466,7 +2459,7 @@ ENDIF()
+@@ -2494,7 +2487,7 @@ ENDIF()
  #
  # RPM installs documentation directly from the source tree
  #
