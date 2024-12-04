@@ -1,13 +1,20 @@
-# $NetBSD: Makefile,v 1.13 2024/11/14 22:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/04 22:48:27 mef Exp $
 
 R_PKGNAME=	terra
-R_PKGVER=	1.7-39
-PKGREVISION=	12
+R_PKGVER=	1.7-83
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spatial Data Analysis
 LICENSE=	gnu-gpl-v3
+
+# Package suggested but not available: 'leaflet'
+TEST_DEPENDS+=	R-tinytest-[0-9]*:../../devel/R-tinytest
+TEST_DEPENDS+=	R-ncdf4-[0-9]*:../../math/R-ncdf4
+TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
+TEST_DEPENDS+=	R-deldir-[0-9]*:../../geography/R-deldir
+TEST_DEPENDS+=	R-XML-[0-9]*:../../math/R-XML
+TEST_DEPENDS+=	R-htmlwidgets-[0-9]*:../../www/R-htmlwidgets
 
 USE_LANGUAGES=	c c++
 
