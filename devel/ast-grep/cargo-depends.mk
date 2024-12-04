@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.34 2024/12/02 14:04:26 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.35 2024/12/04 14:13:57 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -125,12 +125,12 @@ CARGO_CRATE_DEPENDS+=	predicates-3.1.2
 CARGO_CRATE_DEPENDS+=	predicates-core-1.0.6
 CARGO_CRATE_DEPENDS+=	predicates-tree-1.0.9
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.89
-CARGO_CRATE_DEPENDS+=	pyo3-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.22.6
-CARGO_CRATE_DEPENDS+=	pythonize-0.22.0
+CARGO_CRATE_DEPENDS+=	pyo3-0.23.2
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.2
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.2
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.2
+CARGO_CRATE_DEPENDS+=	pythonize-0.23.0
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	rayon-1.10.0
 CARGO_CRATE_DEPENDS+=	rayon-core-1.12.1
@@ -195,7 +195,6 @@ CARGO_CRATE_DEPENDS+=	tree-sitter-haskell-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-html-0.20.4
 CARGO_CRATE_DEPENDS+=	tree-sitter-java-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-0.21.4
-CARGO_CRATE_DEPENDS+=	tree-sitter-javascript-sg-0.21.2
 CARGO_CRATE_DEPENDS+=	tree-sitter-json-0.21.0
 CARGO_CRATE_DEPENDS+=	tree-sitter-kotlin-0.3.8
 CARGO_CRATE_DEPENDS+=	tree-sitter-lua-0.1.0
