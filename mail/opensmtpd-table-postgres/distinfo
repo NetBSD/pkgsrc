@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:17 vins Exp $
+
+BLAKE2s (table-postgres-1.1.1.tar.gz) = 0a1f57dd2ccd76c6f2bb60a5d2454b3a594838f28a3f67971775268b9f1f3ede
+SHA512 (table-postgres-1.1.1.tar.gz) = 8870c59c90bd6c137f30a654692278ce0e40f06543c6901007efd6c94420af15779d96dd36ec724e8662af38368a1886c7b6b8e4cec7ca3b234a7d47850e068e
+Size (table-postgres-1.1.1.tar.gz) = 22211 bytes

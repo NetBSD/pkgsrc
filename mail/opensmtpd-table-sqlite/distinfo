@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:18 vins Exp $
+
+BLAKE2s (table-sqlite-1.0.1.tar.gz) = 46c7bbcdab466bfb9ef6065d1c60d569bf1c3208712e3848efda27700609a904
+SHA512 (table-sqlite-1.0.1.tar.gz) = dc977e0a04760ee1e1058826cbd1adb1a0b39dda1b14deae2f9eb42b297eecf21b109ff05e5bd6633e191f3e9a773b500780194f6ebb31e8baa5257eb35a19f3
+Size (table-sqlite-1.0.1.tar.gz) = 21718 bytes

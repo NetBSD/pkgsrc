@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:17 vins Exp $
+
+BLAKE2s (table-mysql-1.2.1.tar.gz) = 06bcf27cd8ff2890444efb2f35b0cb8a9e6658007d82250a57f9c95c1d12b34c
+SHA512 (table-mysql-1.2.1.tar.gz) = 336824ad6d042d206957ebca9f1451a64adce834378416af8fc2822a30e1ff6d9b8d32f83f9fd7cf260a03a95f48ccb09b548f02d2830af867e0dd8718cd234f
+Size (table-mysql-1.2.1.tar.gz) = 22424 bytes
