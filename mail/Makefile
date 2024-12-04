@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2024/11/25 11:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.659 2024/12/04 22:57:47 vins Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -214,6 +214,13 @@ SUBDIR+=	opensmtpd-filter-dkimsign
 SUBDIR+=	opensmtpd-filter-dnsbl
 SUBDIR+=	opensmtpd-filter-rspamd
 SUBDIR+=	opensmtpd-filter-senderscore
+SUBDIR+=	opensmtpd-table-ldap
+SUBDIR+=	opensmtpd-table-mysql
+SUBDIR+=	opensmtpd-table-passwd
+SUBDIR+=	opensmtpd-table-postgres
+SUBDIR+=	opensmtpd-table-redis
+SUBDIR+=	opensmtpd-table-socketmap
+SUBDIR+=	opensmtpd-table-sqlite
 SUBDIR+=	p5-App-Siesh
 SUBDIR+=	p5-Catalyst-View-Email
 SUBDIR+=	p5-Email-Abstract
