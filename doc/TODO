@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25143 2024/12/02 20:40:34 adam Exp $
+$NetBSD: TODO,v 1.25144 2024/12/04 09:00:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o arm-trusted-firmware-rk3328-2.4
 	o arm-trusted-firmware-rk3399-2.4
 	o arm-trusted-firmware-sun50i_a64-2.4
+	o arti-1.3.1
 	o asapm-3.1
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
@@ -881,6 +882,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o librdkafka-1.6.1
 	o librelp-1.10.0
 	o libretro-core-info-1.9.1
+	o librsvg-2.59.2
 	o libslang-2.2.4
 	o libslang2-2.3.2
 	o libthai-0.2.2
@@ -891,7 +893,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
-	o llvm-19.1.4 [wip]
+	o llvm-19.1.5 [wip]
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1095,6 +1097,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pim6sd-20050715a
 	o pinfo-0.6.10
 	o pitivi-2023.03
+	o pixman-0.44.2
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.27
@@ -1173,6 +1176,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pythontidy-1.23
 	o q5go-2.1.1
 	o qconf-2.5
+	o qt6-6.8.1
 	o qtcreator-13.0
 	o quazip-1.1
 	o qutebrowser-3.0.1
