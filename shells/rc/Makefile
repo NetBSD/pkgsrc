@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/08/05 10:45:39 bsiegert Exp $
+# $NetBSD: Makefile,v 1.32 2024/12/04 11:07:19 wiz Exp $
 
 DISTNAME=	rc-1.7.4
 CATEGORIES=	shells plan9
@@ -21,7 +21,7 @@ PKG_SUPPORTED_OPTIONS=	readline
 
 .if !empty(PKG_OPTIONS:Mreadline)
 .include "../../devel/readline/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--with-edit=readline
 .endif
 
 .include "../../mk/bsd.pkg.mk"
