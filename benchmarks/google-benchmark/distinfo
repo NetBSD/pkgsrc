@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/08/19 22:03:38 wiz Exp $
+$NetBSD: distinfo,v 1.28 2024/12/04 11:23:46 adam Exp $
 
-BLAKE2s (benchmark-1.9.0.tar.gz) = 7db74edde853e055f081767e6bcd2becf7103f66b2514bdf8853eeba105c2b7b
-SHA512 (benchmark-1.9.0.tar.gz) = 0e91e0e5a2222d7650fd8bd9cafb2f0e7c1689cd1b87b2cc529c738db12bfef31162aa5a4da78f7b0aa7f0101dc08b626802c58d39862458f82f9fea9316ca25
-Size (benchmark-1.9.0.tar.gz) = 253961 bytes
+BLAKE2s (benchmark-1.9.1.tar.gz) = b9b23592e286b53acf3058c5c0104b96333206d36ecebc423768a0785ff01b3a
+SHA512 (benchmark-1.9.1.tar.gz) = fc787d3d60a55abb3edaa575bf947c72e1ad1404a35bfddf585299411bcd04d32503bba563f9a36dccf128fce6261b97d460d6c293ed2c2d0807cf0154c86aa7
+Size (benchmark-1.9.1.tar.gz) = 255148 bytes
