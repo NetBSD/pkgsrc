@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.43 2024/11/24 10:40:02 wiz Exp $
+$NetBSD: distinfo,v 1.44 2024/12/04 09:24:08 adam Exp $
 
-BLAKE2s (yarl-1.18.0.tar.gz) = b512e3bd8c9372c588d9cc57d263bd755ae77f8f9bf59ec665156706dc77a603
-SHA512 (yarl-1.18.0.tar.gz) = 061b4cdb5d18718e847a45c5fdc854f75294be2198d5d803bf473eae06467a56188e36c672d31f083c7a96f213db831fe79c92479a43b63a40cc4a007062c0aa
-Size (yarl-1.18.0.tar.gz) = 180098 bytes
+BLAKE2s (yarl-1.18.3.tar.gz) = 95430c9067ffc08d1e335a46ea03132d0ad767f7ed2115eef512fa705cde1d9e
+SHA512 (yarl-1.18.3.tar.gz) = 1686c5ef1b5f3e1cebd121abb7916e45f4a9b08d941a80c34861e87f6121187ee7a553a373405a9fef2332177adf55ffe89bc9a3cabbf24e31905357fdeceba3
+Size (yarl-1.18.3.tar.gz) = 181062 bytes
