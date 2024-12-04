@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25144 2024/12/04 09:00:23 wiz Exp $
+$NetBSD: TODO,v 1.25145 2024/12/04 09:26:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -1133,7 +1133,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
-	o py-aiohttp-3.11.8
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cppy-1.3.0
