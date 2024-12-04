@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25145 2024/12/04 09:26:40 adam Exp $
+$NetBSD: TODO,v 1.25146 2024/12/04 11:25:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
-	o google-benchmark-1.9.1
 	o gossip-0.31
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
@@ -1158,7 +1157,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pillow_heif-0.21.0
 	o py-postgresql-5.1.2
 	o py-protobuf-5.29.0
-	o py-pydantic-2.10.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
 	o py-sbws-1.1.0
