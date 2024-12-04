@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7390 2024/12/04 18:52:17 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.7391 2024/12/04 20:21:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11088,3 +11088,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/matrix-synapse to 1.120.2 [gdt 2024-12-04]
 	Updated lang/go122 to 1.22.10 [bsiegert 2024-12-04]
 	Updated lang/go123 to 1.23.4 [bsiegert 2024-12-04]
+	Updated www/py-django to 5.1.4 [adam 2024-12-04]
+	Updated www/py-django4 to 4.2.17 [adam 2024-12-04]
