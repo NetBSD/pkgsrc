@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/02/19 01:51:01 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/12/04 13:46:48 mef Exp $
 
-BLAKE2s (R/Cairo_1.6-0.tar.gz) = 1251972a29eb097f1cc72793af6aa04f509f7d9f9fceee800ff9cf8c6c3261ed
-SHA512 (R/Cairo_1.6-0.tar.gz) = 15a169fe238a7bcf4348462089d87b43e6d8601d2674242a3cdc01404eccdb0ae49d2b97d87d5e6d1b8768b43e1f0a0d6f5341fba3b91d98ebaeb864dce6755a
-Size (R/Cairo_1.6-0.tar.gz) = 98278 bytes
+BLAKE2s (R/Cairo_1.6-2.tar.gz) = 737673caac0b6fa1ac013b7c7d060b86bc7d51237c05c26af7e77449f3f92593
+SHA512 (R/Cairo_1.6-2.tar.gz) = c79217cebe31019950059482767b194cc9bff8c110326accc72d8df8632e73018aaee5ffdc316b1d9a9eb0162319dafdf18ff446f41bec415810bf5c5f83d11e
+Size (R/Cairo_1.6-2.tar.gz) = 99417 bytes
 SHA1 (patch-configure) = 9ab0b88b803c9c09682ee2633fb6024c8f0dcb3f
