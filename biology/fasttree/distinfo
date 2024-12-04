@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 13:38:32 bacon Exp $
+
+BLAKE2s (FastTree-2.1.11.c) = 276512fabf950e9c592f2ca750e2bb0054b8970a997a5751b38f878b7b6a6d34
+SHA512 (FastTree-2.1.11.c) = 2bbb1cc078b04125a55b8c02f65c9fbfb6db894c2fbfdaac8f86cc0084f2579723cdc4f6aa63bf4338b767d0fdaffa8dd503e4126c3f5f700d4f3da9fc085ee5
+Size (FastTree-2.1.11.c) = 395543 bytes
+SHA1 (patch-FastTree-2.1.11.c) = 58b86d03fbc5b535503580222f91b1c1fc12b593
