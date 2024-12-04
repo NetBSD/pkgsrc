@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/27 23:26:16 mef Exp $
+# $NetBSD: Makefile,v 1.33 2024/12/04 13:08:24 mef Exp $
 
 R_PKGNAME=	sf
 R_PKGVER=	1.0-19
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Simple Features for R
 LICENSE=	mit OR gnu-gpl-v2
 
-USE_LANGUAGES+=		c
+USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++11
 
 DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
