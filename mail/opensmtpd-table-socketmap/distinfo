@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:18 vins Exp $
+
+BLAKE2s (table-socketmap-1.1.1.tar.gz) = 212cb2526bc1a2c9abb3c58bdfacbab6babb7a1045502583e4ee84e19bb86512
+SHA512 (table-socketmap-1.1.1.tar.gz) = acca3becfdd27a8dddccb9f1460ee5589e88415279ccc4ad9e577f185ea287fbb99e627f1e6de6e81e22c3b9c6892e7df2cc333a152c0502ac7ad80c0370e6ba
+Size (table-socketmap-1.1.1.tar.gz) = 17351 bytes

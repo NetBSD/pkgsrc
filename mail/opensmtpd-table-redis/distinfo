@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/04 22:54:17 vins Exp $
+
+BLAKE2s (table-redis-1.0.1.tar.gz) = 2e109493dfb49256aba744866c311fcfc92b7ed837f2c3fa89ce75ec582aad82
+SHA512 (table-redis-1.0.1.tar.gz) = 0b2a63cf53f37c28b4e027b33d565ab6d58214c7b57920ee1ad3d704867b1ce4488f75f041f66d092653366bc3a5e7db711f508a35c1f889a5ee4f942bbf7a77
+Size (table-redis-1.0.1.tar.gz) = 20959 bytes
