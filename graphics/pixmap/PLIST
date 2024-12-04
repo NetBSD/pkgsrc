@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/30 08:43:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/04 10:40:37 nros Exp $
 bin/pixmap
 lib/X11/Pixmap/MDown
 lib/X11/Pixmap/MFlipHoriz
@@ -12,3 +12,5 @@ lib/X11/Pixmap/MUp
 lib/X11/Pixmap/Stipple
 lib/X11/app-defaults/Pixmap
 ${IMAKE_MAN_DIR}/pixmap.${IMAKE_MAN_SUFFIX}
+share/doc/pixmap/COPYRIGHT
+share/doc/pixmap/COPYRIGHT.rgb
