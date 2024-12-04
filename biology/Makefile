@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2024/10/15 12:15:55 bacon Exp $
+# $NetBSD: Makefile,v 1.106 2024/12/04 13:38:54 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -32,6 +32,7 @@ SUBDIR+=	fastDNAml
 SUBDIR+=	fastp
 SUBDIR+=	fastq-trim
 SUBDIR+=	fastqc
+SUBDIR+=	fasttree
 SUBDIR+=	fastx-toolkit
 SUBDIR+=	filter-fastq
 SUBDIR+=	fluctuate
