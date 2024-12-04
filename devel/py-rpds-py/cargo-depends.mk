@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/11/12 13:19:18 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/12/04 20:30:31 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	archery-1.2.1
 CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
@@ -11,12 +11,12 @@ CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
-CARGO_CRATE_DEPENDS+=	pyo3-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.22.6
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.22.6
-CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.10
+CARGO_CRATE_DEPENDS+=	pyo3-0.23.3
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.3
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.3
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.3
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.3
+CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.11
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	rpds-1.1.0
 CARGO_CRATE_DEPENDS+=	syn-2.0.69
