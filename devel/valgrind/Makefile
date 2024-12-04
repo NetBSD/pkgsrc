@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2023/08/11 08:45:47 nia Exp $
+# $NetBSD: Makefile,v 1.39 2024/12/04 07:24:59 wiz Exp $
 
 DISTNAME=	valgrind-3.20.0
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 ONLY_FOR_PLATFORM+=	Darwin-[0-9].*-i386 Darwin-[0-9].*-x86_64
 ONLY_FOR_PLATFORM+=	Darwin-1[0-7].*-i386 Darwin-1[0-7].*-x86_64
 ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 FreeBSD-*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-x86_64 Linux-*-i386 Linux-*-arm*
+ONLY_FOR_PLATFORM+=	Linux-*-x86_64 Linux-*-i386 Linux-*-arm* Linux-*-aarch64
 ONLY_FOR_PLATFORM+=	SunOS-*-i386 SunOS-*-x86_64
 
 USE_TOOLS+=		gmake perl:run
@@ -35,6 +35,10 @@ RELRO_SUPPORTED=	no
 
 .if ${MACHINE_ARCH:C/arm.*/arm/} == "arm"
 PLIST_SUBST+=		VGCONF_ARCH_PRI=arm
+.endif
+
+.if ${MACHINE_ARCH} == "aarch64"
+PLIST_SUBST+=          VGCONF_ARCH_PRI=arm64
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
