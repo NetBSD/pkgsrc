@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.264 2024/11/14 22:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.265 2024/12/04 15:06:58 nia Exp $
 
 DISTNAME=	wine-9.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	https://dl.winehq.org/wine/source/${PKGVERSION_NOREV}/
 MASTER_SITES+=	http://mirrors.ibiblio.org/wine/source/${PKGVERSION_NOREV}/
@@ -33,6 +33,8 @@ CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-hal
 # LDAP causes build failures on NetBSD 9.99.x and newer.
 CONFIGURE_ARGS+=	--without-ldap
+# LDAP causes build failures on NetBSD 10.x and 9.x.
+CONFIGURE_ARGS+=	--without-pcap
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-opencl
 CONFIGURE_ARGS+=	--without-udev
@@ -93,6 +95,7 @@ PLIST.desktop=		yes
 .include "../../audio/mpg123/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -102,7 +105,6 @@ PLIST.desktop=		yes
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
