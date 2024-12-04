@@ -1,8 +1,11 @@
-$NetBSD: patch-ac,v 1.7 2024/01/02 20:41:47 nros Exp $
+$NetBSD: patch-ac,v 1.8 2024/12/04 10:40:37 nros Exp $
 
 Use Motif to build pixmap.
 Use rgb.txt from x11/rgb.
 Use pkgsrc libXpm.
+Use bundled version of rgb.c since libxpm
+does make the xpm* function names visible
+anymore.
 
 --- Imakefile.orig	1994-05-13 11:04:38.000000000 +0000
 +++ Imakefile
@@ -43,6 +46,17 @@ Use pkgsrc libXpm.
          BITMAPS = MDown MFlipHoriz MFlipVert MFold  MLeft MRight MRotateLeft \
                    MRotateRight Stipple MUp
  #else
+@@ -56,8 +54,8 @@ LOCAL_LIBRARIES =  -L$(XPM_LIBDIR) -lXpm
+ #endif
+ 
+   SYS_LIBRARIES = -lm
+-           SRCS = PixEdit.c Pixmap.c Dialog.c 
+-           OBJS = PixEdit.o Pixmap.o Dialog.o 
++           SRCS = PixEdit.c Pixmap.c Dialog.c rgb.c
++           OBJS = PixEdit.o Pixmap.o Dialog.o rgb.o
+ 
+ #if ProjectX < 5
+         DEFINES = $(LOCAL_DEFINES) -DXPointer="char *" \
 @@ -70,8 +68,8 @@ LOCAL_LIBRARIES =  -L$(XPM_LIBDIR) -lXpm
  
  ComplexProgramTarget(pixmap)
