@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/29 22:06:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2024/12/05 03:09:45 riastradh Exp $
 
 DISTNAME=		racket-minimal-8.15-src
 PKGNAME=		${DISTNAME:S/-src$//}
@@ -26,6 +26,7 @@ CONFIGURE_DIRS=		src
 CONFIGURE_ARGS=		--enable-pthread
 CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--enable-iconv
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 # On macOS, Racket insists that we choose between Unix-style or
 # Mac-style installation:
