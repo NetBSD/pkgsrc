@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2024/11/29 22:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2024/12/05 07:32:04 wiz Exp $
 
 DISTNAME=	tuxpaint-0.9.34
 CATEGORIES=	graphics
@@ -39,6 +39,10 @@ MAKE_FLAGS.NetBSD+=		linux_ARCH_CFLAGS=-DHAVE_STRCASESTR
 # TODO: still needed?
 LIBS.SunOS+=		-lsocket -lnsl
 LDFLAGS.SunOS+=		-lsocket
+
+# python2, fontforge - will not realistically be run by users
+CHECK_INTERPRETER_SKIP+=	share/tuxpaint/fonts/locale/zh_tw_docs/maketuxfont.py
+CHECK_INTERPRETER_SKIP+=	share/tuxpaint/fonts/locale/zh_tw_docs/tuxpaintsubset.pe
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
