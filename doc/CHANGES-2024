@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7401 2024/12/05 00:43:11 vins Exp $
+$NetBSD: CHANGES-2024,v 1.7402 2024/12/05 01:01:05 vins Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11101,3 +11101,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added mail/opensmtpd-table-socketmap version 1.1.1 [vins 2024-12-04]
 	Added mail/opensmtpd-table-sqlite version 1.0.1 [vins 2024-12-04]
 	Updated mail/opensmtpd to 7.6.0p1 [vins 2024-12-05]
+	Added meta-pkgs/opensmtpd-tables version 1.0 [vins 2024-12-05]
