@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/11/05 20:58:37 adam Exp $
+$NetBSD: distinfo,v 1.29 2024/12/05 09:50:20 adam Exp $
 
-BLAKE2s (gst-editing-services-1.24.9.tar.xz) = f914355b9c061725b1ca2cc08dec9cff0b4a3bfb0a8d34995720717519d7e940
-SHA512 (gst-editing-services-1.24.9.tar.xz) = e5fd0c5751a1c911544b470561d0de5b639f3a29a93c558a111bf5ca0ec46d88935148be070b1b0b6b536633a7fd9351d77f5bc56359273a81b7344c393d25e5
-Size (gst-editing-services-1.24.9.tar.xz) = 852364 bytes
+BLAKE2s (gst-editing-services-1.24.10.tar.xz) = 3f3f9a8522b97b4b069fd5803a87c346c99b1bb7f16a408738b5997270fda78b
+SHA512 (gst-editing-services-1.24.10.tar.xz) = 864c6f03470288bdad2ab9d9c712bc471ae313bad58c08b83aca4b7959d71f7e026b55a8c125fae8abecc89bfb9717e0eaae5bce7c681a82cbd96f1f66684e64
+Size (gst-editing-services-1.24.10.tar.xz) = 854400 bytes
