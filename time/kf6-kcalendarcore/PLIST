@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:15:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:26 markd Exp $
 include/KF6/KCalendarCore/KCalendarCore/Alarm
 include/KF6/KCalendarCore/KCalendarCore/Attachment
 include/KF6/KCalendarCore/KCalendarCore/Attendee
@@ -6,6 +6,7 @@ include/KF6/KCalendarCore/KCalendarCore/CalFilter
 include/KF6/KCalendarCore/KCalendarCore/CalFormat
 include/KF6/KCalendarCore/KCalendarCore/CalStorage
 include/KF6/KCalendarCore/KCalendarCore/Calendar
+include/KF6/KCalendarCore/KCalendarCore/CalendarListModel
 include/KF6/KCalendarCore/KCalendarCore/CalendarPlugin
 include/KF6/KCalendarCore/KCalendarCore/CalendarPluginLoader
 include/KF6/KCalendarCore/KCalendarCore/Conference
@@ -36,6 +37,7 @@ include/KF6/KCalendarCore/kcalendarcore/alarm.h
 include/KF6/KCalendarCore/kcalendarcore/attachment.h
 include/KF6/KCalendarCore/kcalendarcore/attendee.h
 include/KF6/KCalendarCore/kcalendarcore/calendar.h
+include/KF6/KCalendarCore/kcalendarcore/calendarlistmodel.h
 include/KF6/KCalendarCore/kcalendarcore/calendarplugin.h
 include/KF6/KCalendarCore/kcalendarcore/calendarpluginloader.h
 include/KF6/KCalendarCore/kcalendarcore/calfilter.h
@@ -76,5 +78,9 @@ lib/libKF6CalendarCore.so
 lib/libKF6CalendarCore.so.6
 lib/libKF6CalendarCore.so.${PKGVERSION}
 lib/pkgconfig/KF6CalendarCore.pc
+qt6/qml/org/kde/calendarcore/kcalendarcoreqml.qmltypes
+qt6/qml/org/kde/calendarcore/kde-qmlmodule.version
+qt6/qml/org/kde/calendarcore/libkcalendarcoreqml.so
+qt6/qml/org/kde/calendarcore/qmldir
 share/qlogging-categories6/kcalendarcore.categories
 share/qlogging-categories6/kcalendarcore.renamecategories

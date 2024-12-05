@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.51 2024/11/14 22:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/12/05 09:43:29 markd Exp $
 
 DISTNAME=	breeze-icons-${KF6VER}
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Breeze icon themes
 LICENSE=	gnu-lgpl-v2.1 AND gnu-lgpl-v3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../meta-pkgs/kde/kf6.mk"
 
@@ -23,6 +20,5 @@ USE_TOOLS+=	bash gsed
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${QTDIR}/lib
 
-BUILDLINK_DEPMETHOD.qt6-qtbase= build
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
