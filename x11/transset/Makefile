@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2022/12/04 15:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/05 08:01:07 wiz Exp $
 
-DISTNAME=	transset-1.0.3
+DISTNAME=	transset-1.0.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.xz
