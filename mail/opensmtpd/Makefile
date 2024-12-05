@@ -1,14 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/12/03 08:29:16 wiz Exp $
-#
-# Starting with release 7.6.0, OpenSMTPD breaks backward compatibility with
-# mail/opensmtpd-extras.
-# As a consequence, this package shouldn't be updated to 7.6.0p0 or above
-# unless the new table add-ons are imported on pkgsrc first.
-#
-# For further reference, see:
-# https://github.com/OpenSMTPD/OpenSMTPD-extras/blob/master/README.md
+# $NetBSD: Makefile,v 1.29 2024/12/05 00:42:34 vins Exp $
 
-VERSION=	7.5.0p0
+VERSION=	7.6.0p1
 DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
@@ -84,8 +76,8 @@ SPECIAL_PERMS+=		sbin/smtpctl ${SETUID_ROOT_PERMS}
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
-SUBST_FILES.pkgsrc=	mailer.conf README.pkgsrc
-SUBST_VARS.pkgsrc=	PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_DIR VARBASE
+SUBST_FILES.pkgsrc=	mailer.conf README.pkgsrc README.tls
+SUBST_VARS.pkgsrc=	PKG_SYSCONFDIR PREFIX RCD_SCRIPTS_DIR SSLDIR VARBASE
 SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders.
 
 SUBST_CLASSES+=		paths
@@ -105,7 +97,7 @@ SUBST_SED.paths+=	-e "s:/etc/ssl:${SSLDIR}:g"
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 post-extract:
-.for f in mailer.conf README.pkgsrc
+.for f in mailer.conf README.pkgsrc README.tls
 	cp ${FILESDIR}/${f} ${WRKSRC}
 .endfor
 
@@ -120,6 +112,7 @@ pre-configure:
 doc-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/aliases ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.tls ${DESTDIR}${DOCDIR}
 
 .if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"

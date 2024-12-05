@@ -1,0 +1,30 @@
++-----------------------------------------------------------------------
+| OpenSMTPD and TLS
++-----------------------------------------------------------------------
+
+In order send/receive mails over TLS, look at the example below and edit
+your @PKG_SYSCONFDIR@/smtpd.conf accordingly:
+
+________________________________________________________________________
+
+# certificate
+pki "example.com" cert "@SSLDIR@/certs/example.com.pem"
+pki "example.com" key "@SSLDIR@/private/example.com.key"
+
+# tables
+table aliases "@PKG_SYSCONFDIR@/aliases"
+table passwds "@PKG_SYSCONFDIR@/passwd"
+
+# listeners 
+listen on eth0 port 25 tls pki "example.com" 
+listen on eth0 port 465 smtps pki "example.com" auth <passwd>
+listen on eth0 port 587 tls-require pki "example.com" auth <passwd> 
+
+# rules
+match from any for domain "example.com" action "RECV"
+match from any auth for any action "SEND"
+________________________________________________________________________
+
+See smtpd.conf(8) for more information.
+You may obtain a TLS certificate from a trusted authority through 
+security/py-certbot or security/acmesh.

@@ -1,8 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2024/03/01 20:50:05 vins Exp $
+$NetBSD: MESSAGE,v 1.3 2024/12/05 00:42:34 vins Exp $
 
 Sample configuration files have been installed at ${PKG_SYSCONFDIR}.
 
-Check the README available at ${DOCDIR}.
+Check the README(s) available at ${DOCDIR}.
+
+If you're upgrading from 7.5 or earlier, please note that OpenSMTPD-extras
+has been deprecated and the tables need to be replaced with the new ones
+(available in the pkgsrc tree).
 
 ===========================================================================
