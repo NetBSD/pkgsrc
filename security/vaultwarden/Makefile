@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2024/12/01 00:04:58 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/05 14:33:00 jperkin Exp $
 
-DISTNAME=	vaultwarden-${PKGVER}
-PKGVER=		1.32.5
+DISTNAME=	vaultwarden-1.32.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dani-garcia/}
-EXTRACT_SUFX=	.tar.gz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/dani-garcia/vaultwarden
 COMMENT=	Bitwarden compatible backend server
 LICENSE=	gnu-agpl-v3
+
+DISTFILES=	${DEFAULT_DISTFILES}
 
 .include "cargo-depends.mk"
 
@@ -19,6 +18,8 @@ USE_TOOLS+=	perl
 DEPENDS+=	daemonize>=1.7.8:../../sysutils/daemonize
 
 MAKE_ENV+=	OPENSSL_DIR=${SSLBASE:Q}
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -78,10 +79,8 @@ do-install:
 		 ${DESTDIR}${PREFIX}/sbin/vaultwarden
 
 .include "../../devel/capnproto/buildlink3.mk"
-.include "../../security/nettle/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-
 .include "../../lang/rust/cargo.mk"
-
+.include "../../security/nettle/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
