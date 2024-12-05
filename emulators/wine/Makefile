@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2024/12/04 23:24:03 nia Exp $
+# $NetBSD: Makefile,v 1.267 2024/12/05 08:01:22 nia Exp $
 
 DISTNAME=	wine-9.0
 PKGREVISION=	4
@@ -48,10 +48,12 @@ PLIST_VARS+=		desktop lp32 lp64 oss
 
 .if ${MACHINE_ARCH} == "x86_64"
 PLIST.lp64=		yes
+PLIST_SUBST+=		WIN_ARCH="x86_64"
 CONFIGURE_ARGS+=	--enable-win64
 NOT_PAX_MPROTECT_SAFE+=	bin/wine64
 .else
 PLIST.lp32=		yes
+PLIST_SUBST+=		WIN_ARCH="i386"
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
 .endif
 
