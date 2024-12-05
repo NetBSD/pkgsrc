@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2024/11/17 07:16:27 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/12/05 01:34:02 gutteridge Exp $
 
-PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.11.2
+VERSION=	0.11.3
 DISTNAME=	xfce4-weather-plugin-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/${VERSION:R}/
@@ -15,6 +14,7 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "options.mk"
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
