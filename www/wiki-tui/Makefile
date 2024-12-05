@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/11/30 19:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/12/05 07:02:09 pin Exp $
 
-DISTNAME=	wiki-tui-0.8.2
-PKGREVISION=	2
+DISTNAME=	wiki-tui-0.9.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Builditluc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,18 +10,15 @@ HOMEPAGE=	https://builditluc.github.io/wiki-tui/
 COMMENT=	Simple and easy to use Wikipedia TUI
 LICENSE=	mit
 
-# https://github.com/Builditluc/wiki-tui/issues/220
-BROKEN=		"Waiting for a release compatible with rust 1.80+"
-
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.76.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	share/applications share/icons/hicolor/scalable/apps
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.ncurses}/lib
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/wiki-tui.desktop \
@@ -32,6 +28,5 @@ post-install:
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
