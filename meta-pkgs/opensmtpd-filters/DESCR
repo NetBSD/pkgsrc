@@ -5,6 +5,7 @@ OpenSMTPD mail transfer agent. Included filters are:
 * filter-dnsbl
 * filter-rspamd
 * filter-senderscore
+* filter-spfgreylist
 
 This package does not contain anything by itself -- it is a
 "meta-package" that depends on other packages.  Its sole purpose is
