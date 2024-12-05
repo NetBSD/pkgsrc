@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/05 08:37:34 adam Exp $
 
-DISTNAME=	libsoup-3.4.4
+DISTNAME=	libsoup-3.4.5
 PKGNAME=	${DISTNAME:S/soup/soup3/}
-PKGREVISION=	6
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -16,19 +15,24 @@ DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 # not found by meson
 #TOOL_DEPENDS+=	${PYPKGPREFIX}-gi-docgen-[0-9]*:../../devel/py-gi-docgen
 
-USE_LANGUAGES=	c99
-USE_TOOLS+=	pkg-config msgfmt
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
+USE_TOOLS+=		msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/libsoup-3.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	pre-install
-MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/output/${PKGBASE}
 
 # disable vala detection
-MESON_ARGS+=		-Dvapi=disabled
+MESON_ARGS+=	-Dvapi=disabled
 # disable sysprof, not shipped in subprojects and gets git cloned otherwise
-MESON_ARGS+=            -Dsysprof=disabled
+MESON_ARGS+=	-Dsysprof=disabled
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/libsoup
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/output/tests
+# for Darwin
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/libsoup
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/output/tests
+
 PYTHON_FOR_BUILD_ONLY=		tool
 
 .include "options.mk"
