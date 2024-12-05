@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.659 2024/12/04 22:57:47 vins Exp $
+# $NetBSD: Makefile,v 1.660 2024/12/05 09:10:05 vins Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -214,6 +214,7 @@ SUBDIR+=	opensmtpd-filter-dkimsign
 SUBDIR+=	opensmtpd-filter-dnsbl
 SUBDIR+=	opensmtpd-filter-rspamd
 SUBDIR+=	opensmtpd-filter-senderscore
+SUBDIR+=	opensmtpd-filter-spfgreylist
 SUBDIR+=	opensmtpd-table-ldap
 SUBDIR+=	opensmtpd-table-mysql
 SUBDIR+=	opensmtpd-table-passwd
