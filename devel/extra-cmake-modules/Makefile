@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/08/25 06:18:33 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/12/05 09:53:09 markd Exp $
 
-DISTNAME=	extra-cmake-modules-6.2.0
+DISTNAME=	extra-cmake-modules-6.8.0
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,7 +10,7 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Extra modules and scripts for CMake
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c++
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_HTML_DOCS=OFF
