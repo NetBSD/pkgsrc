@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/12/04 15:29:25 wiz Exp $
+$NetBSD: distinfo,v 1.8 2024/12/05 08:01:07 wiz Exp $
 
-BLAKE2s (transset-1.0.3.tar.xz) = 2ec8e875bb4639da3d75c74883ffa6cded5cb51fd969737809782dc7c4fde794
-SHA512 (transset-1.0.3.tar.xz) = 5e46713653f1c50676381aebe6bcb0adaa4c5d51217f54a3e73fec69a3f201871f0d3b65759e30bd871f439eb3ccf037203d5efc9b26a60a4f6fa02d0ffdca41
-Size (transset-1.0.3.tar.xz) = 121592 bytes
+BLAKE2s (transset-1.0.4.tar.xz) = c8a98393e753842fe18a4419f4adee635cde3519a87642ca4f361dce2a07ac22
+SHA512 (transset-1.0.4.tar.xz) = d077753ea3458bf553f2e1ec2c3cd5f75d5c70dfd2969456382ded03a937abde39286f3b647c4f098f883825b5d3b917d835dda9b4d3a4e998db53cbb73458ed
+Size (transset-1.0.4.tar.xz) = 127492 bytes
