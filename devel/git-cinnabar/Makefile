@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/12/05 02:31:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2024/12/05 07:55:56 wiz Exp $
 
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
@@ -49,6 +49,7 @@ do-test-cargo: .PHONY
 	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_TEST_ARGS}
 
 TEST_DEPENDS+=		${PYPKGPREFIX}-cram>=0:../../devel/py-cram
+TEST_DEPENDS+=		${PYPKGPREFIX}-mercurial>=0:../../devel/py-mercurial
 
 # this.cannot.possibly.exist.invalid-tld appears in some tests that
 # check for exact error messages, so let that bypass the fake proxy.
@@ -58,7 +59,7 @@ do-test-cram: .PHONY
 	${RUN} cd ${CARGO_WRKSRC} && \
 	${SETENV} ${MAKE_ENV} PATH=${CARGO_WRKSRC}/target/release:${PATH:Q} \
 	    no_proxy=localhost,this.cannot.possibly.exist.invalid-tld \
-	    ${PREFIX}/bin/cram ${PKG_VERBOSE:D--verbose} tests
+	    ${PREFIX}/bin/cram-${PYVERSSUFFIX} ${PKG_VERBOSE:D--verbose} tests
 
 .include "cargo-depends.mk"
 
