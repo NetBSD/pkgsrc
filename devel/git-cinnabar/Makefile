@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/12/05 07:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/12/05 13:59:31 riastradh Exp $
 
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
@@ -57,7 +57,9 @@ do-test: do-test-cram
 do-test-cram: .PHONY
 	@${STEP_MSG} Running cram tests
 	${RUN} cd ${CARGO_WRKSRC} && \
-	${SETENV} ${MAKE_ENV} PATH=${CARGO_WRKSRC}/target/release:${PATH:Q} \
+	${LN} -sf git-cinnabar target/release/git-remote-hg && \
+	${SETENV} ${MAKE_ENV} \
+	    GIT_EXEC_PATH=${CARGO_WRKSRC}/target/release:"`git --exec-path`" \
 	    no_proxy=localhost,this.cannot.possibly.exist.invalid-tld \
 	    ${PREFIX}/bin/cram-${PYVERSSUFFIX} ${PKG_VERBOSE:D--verbose} tests
 
