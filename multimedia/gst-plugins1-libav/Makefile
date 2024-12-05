@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2024/10/15 09:17:18 prlw1 Exp $
+# $NetBSD: Makefile,v 1.72 2024/12/05 09:50:20 adam Exp $
 
 .include "../../multimedia/gstreamer1/version.mk"
 
 DISTNAME=	gst-libav-${GST_VERSION}
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
-PKGVERSION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	https://gstreamer.freedesktop.org/src/gst-libav/
 EXTRACT_SUFX=	.tar.xz
