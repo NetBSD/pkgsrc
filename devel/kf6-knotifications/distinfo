@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/26 11:46:52 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/12/05 09:43:21 markd Exp $
 
-BLAKE2s (knotifications-6.2.0.tar.xz) = cebc68de08cec2c4ebbfb6a7dd21735412209e3a20e294651b2b5efa648efbb7
-SHA512 (knotifications-6.2.0.tar.xz) = 4a2ebe75c8bddf8fd8bf607a6946e31bbdd86413b0962aaed5576c9c5c758d4cf73193134ba8102774f54aaa1682ab9519abf07d75d2e527321cfd5c38929462
-Size (knotifications-6.2.0.tar.xz) = 2334204 bytes
+BLAKE2s (knotifications-6.8.0.tar.xz) = bba90d86a21f3016e8759be890e3598a1f4f359c2ef00010f490c158809b055b
+SHA512 (knotifications-6.8.0.tar.xz) = aa37847d0d7d2b8df5334532dae6840a36026a73f8ed1941680ff489c06bf35a5000b68e9c3a38db2e1036f4bcfc1e89462f92cd7bea5ce90aaa8ed84d8e8270
+Size (knotifications-6.8.0.tar.xz) = 2334588 bytes

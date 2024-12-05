@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:56:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:22 markd Exp $
 include/KF6/KPeople/KPeople/Actions
 include/KF6/KPeople/KPeople/Global
 include/KF6/KPeople/KPeople/PersonData
@@ -50,6 +50,8 @@ lib/libKF6PeopleWidgets.so
 lib/libKF6PeopleWidgets.so.6
 lib/libKF6PeopleWidgets.so.${PKGVERSION}
 qt6/plugins/kpeople/datasource/KPeopleVCard.so
+qt6/qml/org/kde/people/KF6PeopleDeclarative.qmltypes
+qt6/qml/org/kde/people/kde-qmlmodule.version
 qt6/qml/org/kde/people/libKF6PeopleDeclarative.so
 qt6/qml/org/kde/people/qmldir
 share/locale/ar/LC_MESSAGES/kpeople6.mo

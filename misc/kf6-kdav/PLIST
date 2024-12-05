@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:33:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:24 markd Exp $
 include/KF6/KDAV/KDAV/DavCollection
 include/KF6/KDAV/KDAV/DavCollectionDeleteJob
 include/KF6/KDAV/KDAV/DavCollectionModifyJob
@@ -89,6 +89,7 @@ share/locale/sr@ijekavian/LC_MESSAGES/libkdav6.mo
 share/locale/sr@ijekavianlatin/LC_MESSAGES/libkdav6.mo
 share/locale/sr@latin/LC_MESSAGES/libkdav6.mo
 share/locale/sv/LC_MESSAGES/libkdav6.mo
+share/locale/ta/LC_MESSAGES/libkdav6.mo
 share/locale/tr/LC_MESSAGES/libkdav6.mo
 share/locale/uk/LC_MESSAGES/libkdav6.mo
 share/locale/zh_CN/LC_MESSAGES/libkdav6.mo

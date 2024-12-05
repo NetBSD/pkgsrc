@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/11/14 22:20:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/05 09:43:23 markd Exp $
 
 DISTNAME=	kiconthemes-${KF6VER}
-PKGREVISION=	4
 CATEGORIES=	graphics
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -16,6 +15,7 @@ USE_TOOLS+=	msgmerge
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../devel/kf6-kcolorscheme/buildlink3.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../graphics/breeze-icons/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
 .include "../../x11/kf6-kitemviews/buildlink3.mk"

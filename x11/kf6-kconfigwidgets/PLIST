@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 13:26:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:27 markd Exp $
 include/KF6/KConfigWidgets/KCodecAction
 include/KF6/KConfigWidgets/KColorSchemeMenu
 include/KF6/KConfigWidgets/KCommandBar
@@ -11,6 +11,7 @@ include/KF6/KConfigWidgets/KLanguageButton
 include/KF6/KConfigWidgets/KLanguageName
 include/KF6/KConfigWidgets/KRecentFilesAction
 include/KF6/KConfigWidgets/KStandardAction
+include/KF6/KConfigWidgets/KStyleManager
 include/KF6/KConfigWidgets/KViewStateMaintainer
 include/KF6/KConfigWidgets/kcodecaction.h
 include/KF6/KConfigWidgets/kcolorschememenu.h
@@ -26,6 +27,7 @@ include/KF6/KConfigWidgets/klanguagebutton.h
 include/KF6/KConfigWidgets/klanguagename.h
 include/KF6/KConfigWidgets/krecentfilesaction.h
 include/KF6/KConfigWidgets/kstandardaction.h
+include/KF6/KConfigWidgets/kstylemanager.h
 include/KF6/KConfigWidgets/kviewstatemaintainer.h
 lib/cmake/KF6ConfigWidgets/KF6ConfigWidgetsConfig.cmake
 lib/cmake/KF6ConfigWidgets/KF6ConfigWidgetsConfigVersion.cmake

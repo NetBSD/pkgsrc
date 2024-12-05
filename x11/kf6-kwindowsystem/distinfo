@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/26 13:45:28 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/12/05 09:43:28 markd Exp $
 
-BLAKE2s (kwindowsystem-6.2.0.tar.xz) = 2d1087b4c12bd11742a1897de35219ab5e4c99c4fc78ea7d69b185df32b513c4
-SHA512 (kwindowsystem-6.2.0.tar.xz) = 370b8cdd8e4aa74a9beeb6d95727aba6825812f81bd0ae87de829972364edd3015570581c9e00b8d84e2b4207a62c87647b80360ae1ad82302b9524529531734
-Size (kwindowsystem-6.2.0.tar.xz) = 2385640 bytes
-SHA1 (patch-src_platforms_wayland_shm.cpp) = ff02e14f982bc8f89a46298c7795ee01e8d7a966
+BLAKE2s (kwindowsystem-6.8.0.tar.xz) = b062945354a200565e5173d6dd2cfa2eab0254362cf63e41c453ff5edaab0b7c
+SHA512 (kwindowsystem-6.8.0.tar.xz) = fc4b8d57f51575b7c34052c881acff873226ac775c1d117cddef2e6b37ad2ee618d0d063ed4232a3f8f565240cb4e9b9d071f0e4e8cbec6b742262e3cc4dcdde
+Size (kwindowsystem-6.8.0.tar.xz) = 2385640 bytes

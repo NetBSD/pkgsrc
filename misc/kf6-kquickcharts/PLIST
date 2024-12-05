@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:35:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:24 markd Exp $
 lib/cmake/KF6QuickCharts/KF6QuickChartsConfig.cmake
 lib/cmake/KF6QuickCharts/KF6QuickChartsConfigVersion.cmake
+lib/cmake/KF6QuickCharts/KF6QuickChartsTargets-noconfig.cmake
+lib/cmake/KF6QuickCharts/KF6QuickChartsTargets.cmake
 lib/libQuickCharts.so
 lib/libQuickCharts.so.1
 lib/libQuickCharts.so.${PKGVERSION}

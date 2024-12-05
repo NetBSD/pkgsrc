@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/26 12:11:38 markd Exp $
+$NetBSD: distinfo,v 1.2 2024/12/05 09:43:22 markd Exp $
 
-BLAKE2s (purpose-6.2.0.tar.xz) = 4ef76f61652d9583f2f64e861274fa7069f28671f8d4d3969168b9ce093656af
-SHA512 (purpose-6.2.0.tar.xz) = 6eaf12c4a2c85b201a8cc3fdd321f5c99274b467b3785fcc4ceed1016873433b71bbb14b1d1b97dd81baa94c5dd22a34d41813948d799b4a6a2fdd7ede0d28c6
-Size (purpose-6.2.0.tar.xz) = 177088 bytes
+BLAKE2s (purpose-6.8.0.tar.xz) = fedcd51c59312e2b4feabe60cbe59ee7bb44282e7573bba9eac1a66eeef7961f
+SHA512 (purpose-6.8.0.tar.xz) = b82370a48de4df8d14c44befe2dc6a7a98ea7cfb2e2bee069c5a146e34669c9e28e52d3de4ece0695cbe67fb3692060aca47e44939737ce3e0c9aa19dfcfc61c
+Size (purpose-6.8.0.tar.xz) = 178044 bytes

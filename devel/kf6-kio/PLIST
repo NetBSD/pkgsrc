@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 11:42:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:21 markd Exp $
 bin/ktelnetservice6
 bin/ktrash6
 include/KF6/KIO/kio_version.h
@@ -274,6 +274,7 @@ qt6/plugins/kf6/urifilters/kuriikwsfilter.so
 qt6/plugins/kf6/urifilters/kurisearchfilter.so
 qt6/plugins/kf6/urifilters/localdomainurifilter.so
 share/applications/ktelnetservice6.desktop
+share/applications/org.kde.kiod6.desktop
 share/dbus-1/services/org.kde.kiod6.service
 share/dbus-1/services/org.kde.kioexecd6.service
 share/dbus-1/services/org.kde.kpasswdserver6.service
@@ -454,6 +455,20 @@ share/doc/HTML/ru/kioworker6/http/index.cache.bz2
 share/doc/HTML/ru/kioworker6/http/index.docbook
 share/doc/HTML/ru/kioworker6/webdav/index.cache.bz2
 share/doc/HTML/ru/kioworker6/webdav/index.docbook
+share/doc/HTML/sl/kioworker6/data/index.cache.bz2
+share/doc/HTML/sl/kioworker6/data/index.docbook
+share/doc/HTML/sl/kioworker6/file/index.cache.bz2
+share/doc/HTML/sl/kioworker6/file/index.docbook
+share/doc/HTML/sl/kioworker6/ftp/index.cache.bz2
+share/doc/HTML/sl/kioworker6/ftp/index.docbook
+share/doc/HTML/sl/kioworker6/help/documentationnotfound/index.cache.bz2
+share/doc/HTML/sl/kioworker6/help/documentationnotfound/index.docbook
+share/doc/HTML/sl/kioworker6/help/index.cache.bz2
+share/doc/HTML/sl/kioworker6/help/index.docbook
+share/doc/HTML/sl/kioworker6/http/index.cache.bz2
+share/doc/HTML/sl/kioworker6/http/index.docbook
+share/doc/HTML/sl/kioworker6/webdav/index.cache.bz2
+share/doc/HTML/sl/kioworker6/webdav/index.docbook
 share/doc/HTML/sr/kioworker6/data/index.cache.bz2
 share/doc/HTML/sr/kioworker6/data/index.docbook
 share/doc/HTML/sr/kioworker6/file/index.cache.bz2

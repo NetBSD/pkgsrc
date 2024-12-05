@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:11:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:22 markd Exp $
 include/KF6/Purpose/Purpose/AlternativesModel
 include/KF6/Purpose/Purpose/Configuration
 include/KF6/Purpose/Purpose/Job
@@ -598,6 +598,7 @@ share/locale/sv/LC_MESSAGES/purpose6_phabricator.mo
 share/locale/sv/LC_MESSAGES/purpose6_reviewboard.mo
 share/locale/sv/LC_MESSAGES/purpose6_saveas.mo
 share/locale/sv/LC_MESSAGES/purpose6_youtube.mo
+share/locale/ta/LC_MESSAGES/libpurpose6_quick.mo
 share/locale/ta/LC_MESSAGES/libpurpose6_widgets.mo
 share/locale/ta/LC_MESSAGES/purpose6_bluetooth.mo
 share/locale/ta/LC_MESSAGES/purpose6_fileitemaction.mo

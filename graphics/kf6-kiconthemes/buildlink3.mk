@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:20:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2024/12/05 09:43:23 markd Exp $
 
 BUILDLINK_TREE+=	kf6-kiconthemes
 
@@ -11,6 +11,7 @@ BUILDLINK_PKGSRCDIR.kf6-kiconthemes?=	../../graphics/kf6-kiconthemes
 
 .include "../../archivers/kf6-karchive/buildlink3.mk"
 .include "../../devel/kf6-kcolorscheme/buildlink3.mk"
+.include "../../graphics/breeze-icons/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../x11/kf6-kconfigwidgets/buildlink3.mk"
 .include "../../x11/kf6-kitemviews/buildlink3.mk"
