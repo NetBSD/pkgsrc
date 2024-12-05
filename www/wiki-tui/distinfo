@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2024/12/05 07:02:09 pin Exp $
+$NetBSD: distinfo,v 1.21 2024/12/05 13:31:29 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -750,9 +750,9 @@ Size (wasm-bindgen-shared-0.2.87.crate) = 7248 bytes
 BLAKE2s (web-sys-0.3.64.crate) = 452e9beafd5b3a8fe9424ab0e7c56a1b459545d20f143d5ac041cabca1b0ac4d
 SHA512 (web-sys-0.3.64.crate) = b02b0bc3f1354842b364d2f062ea4f5025edb6e615046750b56a6e2fcacef7e0b46a190eb45e14e590cf297e3ec1a813a81612ac5acfc12d744fe16c5ce041a4
 Size (web-sys-0.3.64.crate) = 725584 bytes
-BLAKE2s (wiki-tui-0.9.0.tar.gz) = a71e114ff1501c6b4900ad4c9f4aad260503330eb7fc5b4ae20bc6eafb28e279
-SHA512 (wiki-tui-0.9.0.tar.gz) = 1f2a770a2df7e3152646032b4b38ed7eaa1e6aef45d9ca0260f3244c262432fe1b937ed342fbede831d5e3b931d5c88ce5b5827a03dd144eaf701e93fcf51782
-Size (wiki-tui-0.9.0.tar.gz) = 796237 bytes
+BLAKE2s (wiki-tui-0.9.1.tar.gz) = 9f0a6ab360036e79f55dbe248561dde311a97628e7488ba8d3c1eb764345881c
+SHA512 (wiki-tui-0.9.1.tar.gz) = 926e43636699e7211a67455ac669b5eaf12ecaccffbd13df392fe1b20d3e9d7b09c8a05414c0144e211ef2d9bea5cb2dcf4a46e216bd0c811bf7fa5106289285
+Size (wiki-tui-0.9.1.tar.gz) = 796134 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
@@ -861,4 +861,3 @@ Size (zerocopy-0.7.35.crate) = 152645 bytes
 BLAKE2s (zerocopy-derive-0.7.35.crate) = b80899d1b7a843a5225638171775a0c9643052c9e96f7b88a825150d0725505e
 SHA512 (zerocopy-derive-0.7.35.crate) = dbe23573b62a6267d7bc8c744320b75b2fbda03b908c1d175211f7394374fe182bce58021e25485c10671d726b2007f250565dfe53134d51c89293bb607e9feb
 Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
-SHA1 (patch-wiki-api_src_languages.rs) = c11d74c352b7014005dd43b7e636650ba795aa41
