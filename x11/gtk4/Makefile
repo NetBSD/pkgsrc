@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/11/16 20:44:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.54 2024/12/05 08:47:28 adam Exp $
 
-DISTNAME=	gtk-4.16.5
+DISTNAME=	gtk-4.16.7
 PKGNAME=	${DISTNAME:S/gtk/gtk4/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk/${PKGVERSION_NOREV:R}/}
