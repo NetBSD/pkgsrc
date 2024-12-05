@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2024/12/05 09:08:30 vins Exp $
+
+BLAKE2s (blitiri.com.ar_go_spf_@v_v1.5.1.mod) = 405e9df4a25d9769c3b6953c5005425076f3bf0905ccd47d5b4ba7cc473b9a01
+SHA512 (blitiri.com.ar_go_spf_@v_v1.5.1.mod) = 2567e2c1bdd37e95f1abbe5aed47411fedb4f7347e62fe104987b1a3cb5be490e980b7258cd20945da94a7cb4af052b8160b8fa827172cde4397bed21ef56e6e
+Size (blitiri.com.ar_go_spf_@v_v1.5.1.mod) = 71 bytes
+BLAKE2s (blitiri.com.ar_go_spf_@v_v1.5.1.zip) = 31b398b9d8795545e00abcbe4388436c4f5b145cc1a228171e6a7cf46c577c37
+SHA512 (blitiri.com.ar_go_spf_@v_v1.5.1.zip) = 73bd9093d4ec514dc2edfe7bc5620815c6fc73bfc247667076c84c6b1b0d4331dd31e8a06fb14acce6c1233a6602eb7a7224d582686bf7109d964e8c393750c0
+Size (blitiri.com.ar_go_spf_@v_v1.5.1.zip) = 279821 bytes
+BLAKE2s (filter-spfgreylist-1.0.0.tar.gz) = 0071e5931584551cf1b653a088d118cbcfef62b3eb9ed3a252dae855bd072867
+SHA512 (filter-spfgreylist-1.0.0.tar.gz) = 597e520b2f9c833491cfcc2910c6fd67d769cd6a64f3ca4be2fd752194da67907edcd3a5b76fbff6122b22332d99534c8cbba67a6c603775189b1d5b8099da33
+Size (filter-spfgreylist-1.0.0.tar.gz) = 5943 bytes
+BLAKE2s (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 35cd1964700502d06b8c987979fb4dbddc41a5cda3368d037211b89d3587521f
+SHA512 (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 9ac0f80ef05881387cb2f48f81560f3207fe586ea16495383662e6d62e43d93fac01dfe72e1d0063d3ab065331dab3a8098d7da4f1830ba1aff6f27f8e1bc1b2
+Size (gopkg.in_check.v1_@v_v0.0.0-20161208181325-20d25e280405.mod) = 25 bytes
+BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 17da54ba1894b4653d4c1ab1ae6e9fe03928a96c69cdc8db6b6ea9e34d673991
+SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 307ca9123efc577ca04828996ee9d8edbb51794ccb4b8d9f169ba689e7276aa5f6ae106a04b22b7fab853ffacfebcbf74468b64eaefd57445864c1fbc77fad9d
+Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
