@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:26:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:23 markd Exp $
 include/KF6/Prison/Prison/Barcode
 include/KF6/Prison/Prison/MeCard
 include/KF6/Prison/Prison/Prison
@@ -8,9 +8,11 @@ include/KF6/Prison/Prison/prison.h
 include/KF6/Prison/Prison/prison_export.h
 include/KF6/Prison/prison_version.h
 include/KF6/PrisonScanner/Prison/Format
+include/KF6/PrisonScanner/Prison/ImageScanner
 include/KF6/PrisonScanner/Prison/ScanResult
 include/KF6/PrisonScanner/Prison/VideoScanner
 include/KF6/PrisonScanner/Prison/format.h
+include/KF6/PrisonScanner/Prison/imagescanner.h
 include/KF6/PrisonScanner/Prison/prisonscanner_export.h
 include/KF6/PrisonScanner/Prison/scanresult.h
 include/KF6/PrisonScanner/Prison/videoscanner.h

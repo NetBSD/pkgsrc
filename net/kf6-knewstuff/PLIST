@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:42:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:24 markd Exp $
 bin/knewstuff-dialog6
 include/KF6/KNewStuff/knewstuff_version.h
 include/KF6/KNewStuffCore/KNSCore/Author
@@ -74,8 +74,11 @@ qt6/qml/org/kde/newstuff/private/Rating.qml
 qt6/qml/org/kde/newstuff/private/Shadow.qml
 qt6/qml/org/kde/newstuff/private/entrygriddelegates/BigPreviewDelegate.qml
 qt6/qml/org/kde/newstuff/private/entrygriddelegates/FeedbackOverlay.qml
-qt6/qml/org/kde/newstuff/private/entrygriddelegates/ThumbDelegate.qml
 qt6/qml/org/kde/newstuff/private/entrygriddelegates/TileDelegate.qml
+qt6/qml/org/kde/newstuff/private/kde-qmlmodule.version
+qt6/qml/org/kde/newstuff/private/libnewstuffqmlpluginprivate.so
+qt6/qml/org/kde/newstuff/private/newstuffqmlpluginprivate.qmltypes
+qt6/qml/org/kde/newstuff/private/qmldir
 qt6/qml/org/kde/newstuff/qmldir
 share/applications/org.kde.knewstuff-dialog6.desktop
 share/locale/af/LC_MESSAGES/knewstuff6.mo

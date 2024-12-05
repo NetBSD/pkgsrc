@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:18:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 09:43:23 markd Exp $
 bin/kiconfinder6
 include/KF6/KIconThemes/KIconColors
 include/KF6/KIconThemes/KIconEffect
@@ -32,7 +32,7 @@ lib/libKF6IconWidgets.so
 lib/libKF6IconWidgets.so.6
 lib/libKF6IconWidgets.so.${PKGVERSION}
 qt6/plugins/designer/kiconthemes6widgets.so
-qt6/plugins/iconengines/KIconEnginePlugin.so
+qt6/plugins/kiconthemes6/iconengines/KIconEnginePlugin.so
 qt6/qml/org/kde/iconthemes/iconthemesplugin.qmltypes
 qt6/qml/org/kde/iconthemes/kde-qmlmodule.version
 qt6/qml/org/kde/iconthemes/libiconthemesplugin.so
