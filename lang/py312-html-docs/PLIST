@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/08/07 20:27:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/05 07:52:32 adam Exp $
 share/doc/python3.12/.buildinfo
 share/doc/python3.12/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
 share/doc/python3.12/_images/hashlib-blake2-tree.png
@@ -105,6 +105,7 @@ share/doc/python3.12/_sources/faq/programming.rst.txt
 share/doc/python3.12/_sources/faq/windows.rst.txt
 share/doc/python3.12/_sources/glossary.rst.txt
 share/doc/python3.12/_sources/howto/annotations.rst.txt
+share/doc/python3.12/_sources/howto/argparse-optparse.rst.txt
 share/doc/python3.12/_sources/howto/argparse.rst.txt
 share/doc/python3.12/_sources/howto/clinic.rst.txt
 share/doc/python3.12/_sources/howto/cporting.rst.txt
@@ -139,6 +140,7 @@ share/doc/python3.12/_sources/library/archiving.rst.txt
 share/doc/python3.12/_sources/library/argparse.rst.txt
 share/doc/python3.12/_sources/library/array.rst.txt
 share/doc/python3.12/_sources/library/ast.rst.txt
+share/doc/python3.12/_sources/library/asynchat.rst.txt
 share/doc/python3.12/_sources/library/asyncio-api-index.rst.txt
 share/doc/python3.12/_sources/library/asyncio-dev.rst.txt
 share/doc/python3.12/_sources/library/asyncio-eventloop.rst.txt
@@ -156,6 +158,7 @@ share/doc/python3.12/_sources/library/asyncio-subprocess.rst.txt
 share/doc/python3.12/_sources/library/asyncio-sync.rst.txt
 share/doc/python3.12/_sources/library/asyncio-task.rst.txt
 share/doc/python3.12/_sources/library/asyncio.rst.txt
+share/doc/python3.12/_sources/library/asyncore.rst.txt
 share/doc/python3.12/_sources/library/atexit.rst.txt
 share/doc/python3.12/_sources/library/audioop.rst.txt
 share/doc/python3.12/_sources/library/audit_events.rst.txt
@@ -209,6 +212,7 @@ share/doc/python3.12/_sources/library/dialog.rst.txt
 share/doc/python3.12/_sources/library/difflib.rst.txt
 share/doc/python3.12/_sources/library/dis.rst.txt
 share/doc/python3.12/_sources/library/distribution.rst.txt
+share/doc/python3.12/_sources/library/distutils.rst.txt
 share/doc/python3.12/_sources/library/doctest.rst.txt
 share/doc/python3.12/_sources/library/email.charset.rst.txt
 share/doc/python3.12/_sources/library/email.compat32-message.rst.txt
@@ -266,6 +270,7 @@ share/doc/python3.12/_sources/library/i18n.rst.txt
 share/doc/python3.12/_sources/library/idle.rst.txt
 share/doc/python3.12/_sources/library/imaplib.rst.txt
 share/doc/python3.12/_sources/library/imghdr.rst.txt
+share/doc/python3.12/_sources/library/imp.rst.txt
 share/doc/python3.12/_sources/library/importlib.metadata.rst.txt
 share/doc/python3.12/_sources/library/importlib.resources.abc.rst.txt
 share/doc/python3.12/_sources/library/importlib.resources.rst.txt
@@ -337,6 +342,7 @@ share/doc/python3.12/_sources/library/quopri.rst.txt
 share/doc/python3.12/_sources/library/random.rst.txt
 share/doc/python3.12/_sources/library/re.rst.txt
 share/doc/python3.12/_sources/library/readline.rst.txt
+share/doc/python3.12/_sources/library/removed.rst.txt
 share/doc/python3.12/_sources/library/reprlib.rst.txt
 share/doc/python3.12/_sources/library/resource.rst.txt
 share/doc/python3.12/_sources/library/rlcompleter.rst.txt
@@ -351,6 +357,7 @@ share/doc/python3.12/_sources/library/shlex.rst.txt
 share/doc/python3.12/_sources/library/shutil.rst.txt
 share/doc/python3.12/_sources/library/signal.rst.txt
 share/doc/python3.12/_sources/library/site.rst.txt
+share/doc/python3.12/_sources/library/smtpd.rst.txt
 share/doc/python3.12/_sources/library/smtplib.rst.txt
 share/doc/python3.12/_sources/library/sndhdr.rst.txt
 share/doc/python3.12/_sources/library/socket.rst.txt
@@ -526,6 +533,7 @@ share/doc/python3.12/_static/pygments_dark.css
 share/doc/python3.12/_static/rtd_switcher.js
 share/doc/python3.12/_static/search-focus.js
 share/doc/python3.12/_static/searchtools.js
+share/doc/python3.12/_static/sidebar-wrap.css
 share/doc/python3.12/_static/sidebar.js
 share/doc/python3.12/_static/sphinx_highlight.js
 share/doc/python3.12/_static/themetoggle.js
@@ -658,6 +666,7 @@ share/doc/python3.12/genindex-all.html
 share/doc/python3.12/genindex.html
 share/doc/python3.12/glossary.html
 share/doc/python3.12/howto/annotations.html
+share/doc/python3.12/howto/argparse-optparse.html
 share/doc/python3.12/howto/argparse.html
 share/doc/python3.12/howto/clinic.html
 share/doc/python3.12/howto/cporting.html
@@ -693,6 +702,7 @@ share/doc/python3.12/library/archiving.html
 share/doc/python3.12/library/argparse.html
 share/doc/python3.12/library/array.html
 share/doc/python3.12/library/ast.html
+share/doc/python3.12/library/asynchat.html
 share/doc/python3.12/library/asyncio-api-index.html
 share/doc/python3.12/library/asyncio-dev.html
 share/doc/python3.12/library/asyncio-eventloop.html
@@ -710,6 +720,7 @@ share/doc/python3.12/library/asyncio-subprocess.html
 share/doc/python3.12/library/asyncio-sync.html
 share/doc/python3.12/library/asyncio-task.html
 share/doc/python3.12/library/asyncio.html
+share/doc/python3.12/library/asyncore.html
 share/doc/python3.12/library/atexit.html
 share/doc/python3.12/library/audioop.html
 share/doc/python3.12/library/audit_events.html
@@ -763,6 +774,7 @@ share/doc/python3.12/library/dialog.html
 share/doc/python3.12/library/difflib.html
 share/doc/python3.12/library/dis.html
 share/doc/python3.12/library/distribution.html
+share/doc/python3.12/library/distutils.html
 share/doc/python3.12/library/doctest.html
 share/doc/python3.12/library/email.charset.html
 share/doc/python3.12/library/email.compat32-message.html
@@ -820,6 +832,7 @@ share/doc/python3.12/library/i18n.html
 share/doc/python3.12/library/idle.html
 share/doc/python3.12/library/imaplib.html
 share/doc/python3.12/library/imghdr.html
+share/doc/python3.12/library/imp.html
 share/doc/python3.12/library/importlib.html
 share/doc/python3.12/library/importlib.metadata.html
 share/doc/python3.12/library/importlib.resources.abc.html
@@ -891,6 +904,7 @@ share/doc/python3.12/library/quopri.html
 share/doc/python3.12/library/random.html
 share/doc/python3.12/library/re.html
 share/doc/python3.12/library/readline.html
+share/doc/python3.12/library/removed.html
 share/doc/python3.12/library/reprlib.html
 share/doc/python3.12/library/resource.html
 share/doc/python3.12/library/rlcompleter.html
@@ -905,6 +919,7 @@ share/doc/python3.12/library/shlex.html
 share/doc/python3.12/library/shutil.html
 share/doc/python3.12/library/signal.html
 share/doc/python3.12/library/site.html
+share/doc/python3.12/library/smtpd.html
 share/doc/python3.12/library/smtplib.html
 share/doc/python3.12/library/sndhdr.html
 share/doc/python3.12/library/socket.html

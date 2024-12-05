@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/10/03 10:17:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/12/05 07:52:32 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
@@ -1034,7 +1034,7 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-24.2-py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-24.3.1-py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2809,6 +2809,9 @@ lib/python${PY_VER_SUFFIX}/test/support/hashlib_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/hypothesis_helper.py
 lib/python${PY_VER_SUFFIX}/test/support/hypothesis_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/support/hypothesis_helper.pyo
+lib/python${PY_VER_SUFFIX}/test/support/i18n_helper.py
+lib/python${PY_VER_SUFFIX}/test/support/i18n_helper.pyc
+lib/python${PY_VER_SUFFIX}/test/support/i18n_helper.pyo
 lib/python${PY_VER_SUFFIX}/test/support/import_helper.py
 lib/python${PY_VER_SUFFIX}/test/support/import_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/support/import_helper.pyo
@@ -2839,6 +2842,9 @@ lib/python${PY_VER_SUFFIX}/test/support/testcase.pyo
 lib/python${PY_VER_SUFFIX}/test/support/threading_helper.py
 lib/python${PY_VER_SUFFIX}/test/support/threading_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/support/threading_helper.pyo
+lib/python${PY_VER_SUFFIX}/test/support/venv.py
+lib/python${PY_VER_SUFFIX}/test/support/venv.pyc
+lib/python${PY_VER_SUFFIX}/test/support/venv.pyo
 lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.py
 lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/support/warnings_helper.pyo
@@ -2969,8 +2975,8 @@ lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_sslproto.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.py
-lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.pyc
+lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_staggered.pyo
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.py
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyc
 lib/python${PY_VER_SUFFIX}/test/test_asyncio/test_streams.pyo
@@ -3329,6 +3335,9 @@ lib/python${PY_VER_SUFFIX}/test/test_ctypes/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/__main__.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/__main__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/__main__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/_support.py
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/_support.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/_support.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_anon.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_anon.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_anon.pyo
@@ -3353,6 +3362,9 @@ lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_bytes.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_byteswap.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_byteswap.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_byteswap.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_c_simple_type_meta.py
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_c_simple_type_meta.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_c_simple_type_meta.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_callbacks.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_callbacks.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_callbacks.pyo
@@ -3479,6 +3491,9 @@ lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_varsize_struct.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32_com_foreign_func.py
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32_com_foreign_func.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_win32_com_foreign_func.pyo
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_wintypes.py
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_wintypes.pyc
 lib/python${PY_VER_SUFFIX}/test/test_ctypes/test_wintypes.pyo
@@ -5271,6 +5286,18 @@ lib/python${PY_VER_SUFFIX}/test/test_tools/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tools/__main__.py
 lib/python${PY_VER_SUFFIX}/test/test_tools/__main__.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tools/__main__.pyo
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/docstrings.pot
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/docstrings.py
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/docstrings.pyc
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/docstrings.pyo
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/fileloc.pot
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/fileloc.py
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/fileloc.pyc
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/fileloc.pyo
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/messages.pot
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/messages.py
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/messages.pyc
+lib/python${PY_VER_SUFFIX}/test/test_tools/i18n_data/messages.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.py
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tools/test_freeze.pyo
@@ -5696,6 +5723,9 @@ lib/python${PY_VER_SUFFIX}/test/tracedmodules/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.py
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.pyc
 lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.pyo
+lib/python${PY_VER_SUFFIX}/test/translationdata/argparse/msgids.txt
+lib/python${PY_VER_SUFFIX}/test/translationdata/getopt/msgids.txt
+lib/python${PY_VER_SUFFIX}/test/translationdata/optparse/msgids.txt
 lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.py
 lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.pyc
 lib/python${PY_VER_SUFFIX}/test/typinganndata/__init__.pyo
