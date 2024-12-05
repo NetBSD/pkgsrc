@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7407 2024/12/05 08:00:35 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7408 2024/12/05 08:01:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11116,3 +11116,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/py312-html-docs to 3.12.8 [adam 2024-12-05]
 	Updated lang/py313-html-docs to 3.13.1 [adam 2024-12-05]
 	Updated time/oclock to 1.0.6 [wiz 2024-12-05]
+	Updated x11/transset to 1.0.4 [wiz 2024-12-05]
