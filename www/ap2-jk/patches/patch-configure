@@ -1,0 +1,72 @@
+$NetBSD: patch-configure,v 1.1 2024/12/05 08:25:31 markd Exp $
+
+build with gcc14
+
+--- configure.orig	2024-12-03 03:37:19.702732038 +0000
++++ configure
+@@ -13048,6 +13048,8 @@ else
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ #include <sys/types.h>
++#include <stdlib.h>
++int
+ main()
+ {
+   FILE *f=fopen("conftestval","w");
+@@ -13099,6 +13101,8 @@ else
+ /* end confdefs.h.  */
+ #include <stdio.h>
+ #include <pthread.h>
++#include <stdlib.h>
++int
+ main()
+ {
+   FILE *f=fopen("conftestval","w");
+@@ -13258,6 +13262,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+@@ -13314,6 +13319,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+@@ -13377,6 +13383,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+@@ -13430,6 +13437,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+@@ -13528,6 +13536,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/time.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
+@@ -13571,6 +13580,7 @@ else
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
++#include <stdlib.h>
+ 
+ int main(void)
+ {
