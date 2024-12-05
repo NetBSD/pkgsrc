@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7411 2024/12/05 09:12:30 vins Exp $
+$NetBSD: CHANGES-2024,v 1.7412 2024/12/05 09:50:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11121,3 +11121,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/libsoup3 to 3.4.5 [adam 2024-12-05]
 	Updated x11/gtk4 to 4.16.7 [adam 2024-12-05]
 	Added mail/opensmtpd-filter-spfgreylist version 1.0.0 [vins 2024-12-05]
+	Updated multimedia/gstreamer1 to 1.24.10 [adam 2024-12-05]
