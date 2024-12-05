@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_type1_objects.h,v 1.1 2022/06/08 19:00:13 chuck Exp $
+$NetBSD: patch-lib_type1_objects.h,v 1.2 2024/12/05 08:21:53 markd Exp $
 
 Point LONGLONG macro at memcpy() rather than using t1lib custom code.
 The t1lib version causes some versions of clang to produce incorrect
@@ -8,7 +8,7 @@ have fixed the issue.  see note in:
 
 --- lib/type1/objects.h.orig	2022-06-08 13:28:14.000000000 -0400
 +++ lib/type1/objects.h	2022-06-08 13:28:29.000000000 -0400
-@@ -152,10 +152,14 @@
+@@ -152,10 +152,15 @@
  /*END SHARED*/
  /*SHARED*/
   
@@ -18,6 +18,7 @@ have fixed the issue.  see note in:
      register int count = (bytes) / sizeof(LONG); \
      while (--count >= 0) *p1++ = *p2++; }
 +#else
++#include <string.h>
 +#define  LONGCOPY(dest,source,bytes) memcpy(dest,source,bytes)
 +#endif
   

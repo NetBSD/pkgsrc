@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2022/06/08 19:00:13 chuck Exp $
+$NetBSD: distinfo,v 1.28 2024/12/05 08:21:53 markd Exp $
 
 BLAKE2s (t1lib-5.1.2.tar.gz) = cab979b401fbc8c24ff30dc580c2b9bb03338681861ec263b5d897df8a686ff2
 SHA512 (t1lib-5.1.2.tar.gz) = 9f424b19c6f35cc4f194ff7351a4c2352216462c7d1b1d9650ad3a05cf48c6e90c89ccbcda5ecc47a4169a39a850cf84a1fcbf88b3b15614860c27364b631ae3
@@ -12,5 +12,5 @@ SHA1 (patch-ai) = 372740d7166ebb999a3c280d7de13df0901d9eb9
 SHA1 (patch-aj) = bb915405fc5d64a74de09d7e4daba8822a08fbe1
 SHA1 (patch-ak) = abfbdb17c60b2068e95c5fe8e61ecfadbd85eea1
 SHA1 (patch-al) = b0f0ab9398ce7e3f3bc3e8e54097fd4dbb566bc8
-SHA1 (patch-lib_type1_objects.h) = bcb1d938d8cd6db5b32e8db2c1a050d39244679a
-SHA1 (patch-lib_type1_regions.c) = 75b12d30f73a649cbd0495a5cd735049a9bc4418
+SHA1 (patch-lib_type1_objects.h) = 6105d7810661a498fd928c2a91d69a2d72a54be5
+SHA1 (patch-lib_type1_regions.c) = 3b5aefcdc9aaf835c01b943ec2766c23cfe2d9b7
