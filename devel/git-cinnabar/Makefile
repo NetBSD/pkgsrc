@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/05 01:19:26 riastradh Exp $
 
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
 
-PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,11 +10,17 @@ COMMENT=	Remote helper to use mercurial repositories with git
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-GITHUB_SUBMODULES=	git-for-windows git v2.41.0.windows.1 git-core
+GITHUB_SUBMODULES=	git-for-windows git v2.46.2.windows.1 git-core
 
 USE_TOOLS+=	gmake pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
+
+CARGO_NO_DEFAULT_FEATURES=	yes
+# version-check is on by default -- disable it for pkgsrc since pkgsrc
+# manages version checks and updates, not the software itself, so no
+# need for git-cinnabar to phone home every time you run it.
+#CARGO_FEATURES+=		version-check
 
 # This has to come before -I/usr/include/krb5 (which comes in on NetBSD
 # via curl with gssapi enabled) because both git-core and krb5 have a
