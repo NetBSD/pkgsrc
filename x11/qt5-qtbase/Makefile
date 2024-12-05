@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2024/11/19 22:46:10 adam Exp $
+# $NetBSD: Makefile,v 1.153 2024/12/05 12:45:34 bacon Exp $
 
 DISTNAME=	qtbase-everywhere-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -60,6 +60,14 @@ CONFIGURE_ARGS+=	-reduce-relocations
 .else
 CONFIGURE_ARGS+=	-no-rpath	# avoid @rpath in dylibs
 QMAKE_CONF=		qmake.conf.mac
+
+# Qt 5.15.16: Check if this is still necessary in later versions
+# qcocoascreen.mm:607:67: error: 'CGDisplayCreateImageForRect' is unavailable:
+# obsoleted in macOS 15.0 - Please use ScreenCaptureKit instead. 
+# https://github.com/macports/macports-ports/pull/25748
+.if ${OPSYS_VERSION} >= 150000
+MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET=14.0
+.endif
 .endif
 
 PLIST_VARS+=		egl
