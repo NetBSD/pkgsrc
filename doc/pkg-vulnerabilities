@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.281 2024/11/28 08:31:24 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.282 2024/12/05 08:04:38 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26113,3 +26113,5 @@ openafs>=1.7<1.8.13	buffer-overflow		http://openafs.org/pages/security/OPENAFS-S
 postgresql-server>=12<13	eol	http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 wget<1.25.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2024-10524
 webkit-gtk<2.46.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2024-44308
+py{38,39,310,311,312}-django>=4<4.2.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53907
+py{38,39,310,311,312}-django>=5<5.1.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53907
