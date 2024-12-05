@@ -1,18 +1,18 @@
-$NetBSD: patch-configure,v 1.1 2024/10/09 19:53:20 adam Exp $
+$NetBSD: patch-configure,v 1.2 2024/12/05 07:54:03 adam Exp $
 
 Fix linking on Darwin; don't use -stack_size.
 Changes for consistency across pkgsrc platforms.
 Simplify _sysconfigdata to include only platform name.
 Disable barrier to cross-compilation.
 
---- configure.orig	2024-10-07 05:02:14.000000000 +0000
+--- configure.orig	2024-12-03 17:59:52.000000000 +0000
 +++ configure
 @@ -3708,7 +3708,7 @@ fi
      fi
          ac_cv_prog_PYTHON_FOR_REGEN=$with_build_python
      PYTHON_FOR_FREEZE="$with_build_python"
--    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) '$with_build_python
-+    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`:)$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) '$with_build_python
+-    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(ABIFLAGS)_$(MACHDEP)_$(MULTIARCH) _PYTHON_SYSCONFIGDATA_PATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`) '$with_build_python
++    PYTHON_FOR_BUILD='_PYTHON_PROJECT_BASE=$(abs_builddir) _PYTHON_HOST_PLATFORM=$(_PYTHON_HOST_PLATFORM) PYTHONPATH=$(srcdir)/Lib _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_$(MACHDEP) _PYTHON_SYSCONFIGDATA_PATH=$(shell test -f pybuilddir.txt && echo $(abs_builddir)/`cat pybuilddir.txt`) '$with_build_python
      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $with_build_python" >&5
  printf "%s\n" "$with_build_python" >&6; }
  
@@ -25,7 +25,7 @@ Disable barrier to cross-compilation.
  	case "$host" in
  	*-*-linux*)
  		case "$host_cpu" in
-@@ -9667,7 +9667,7 @@ fi
+@@ -9670,7 +9670,7 @@ fi
  
  case $GCC in
  yes)
@@ -34,20 +34,20 @@ Disable barrier to cross-compilation.
  
  
  
-@@ -23708,10 +23708,10 @@ if ac_fn_c_try_compile "$LINENO"
+@@ -23719,10 +23719,10 @@ if ac_fn_c_try_link "$LINENO"
  then :
  
  
--if grep noonsees conftest.$ac_objext >/dev/null ; then
+-if grep noonsees conftest$EXEEXT >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
    ax_cv_c_float_words_bigendian=yes
  fi
--if grep seesnoon conftest.$ac_objext >/dev/null ; then
+-if grep seesnoon conftest$EXEEXT >/dev/null ; then
 +if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
    if test "$ax_cv_c_float_words_bigendian" = unknown; then
      ax_cv_c_float_words_bigendian=no
    else
-@@ -24574,7 +24574,7 @@ printf "%s\n" "#define ALT_SOABI \"${ALT
+@@ -24579,7 +24579,7 @@ printf "%s\n" "#define ALT_SOABI \"${ALT
  fi
  
  
@@ -56,7 +56,7 @@ Disable barrier to cross-compilation.
  
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking LDVERSION" >&5
  printf %s "checking LDVERSION... " >&6; }
-@@ -24640,11 +24640,7 @@ fi
+@@ -24645,11 +24645,7 @@ fi
  
  
  

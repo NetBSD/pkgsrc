@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/10/09 19:53:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/05 07:54:03 adam Exp $
 share/doc/python3.13/.buildinfo
 share/doc/python3.13/404.html
 share/doc/python3.13/_downloads/6dc1f3f4f0e6ca13cb42ddf4d6cbc8af/tzinfo_examples.py
@@ -117,6 +117,7 @@ share/doc/python3.13/_sources/faq/programming.rst.txt
 share/doc/python3.13/_sources/faq/windows.rst.txt
 share/doc/python3.13/_sources/glossary.rst.txt
 share/doc/python3.13/_sources/howto/annotations.rst.txt
+share/doc/python3.13/_sources/howto/argparse-optparse.rst.txt
 share/doc/python3.13/_sources/howto/argparse.rst.txt
 share/doc/python3.13/_sources/howto/clinic.rst.txt
 share/doc/python3.13/_sources/howto/cporting.rst.txt
@@ -147,11 +148,13 @@ share/doc/python3.13/_sources/library/__future__.rst.txt
 share/doc/python3.13/_sources/library/__main__.rst.txt
 share/doc/python3.13/_sources/library/_thread.rst.txt
 share/doc/python3.13/_sources/library/abc.rst.txt
+share/doc/python3.13/_sources/library/aifc.rst.txt
 share/doc/python3.13/_sources/library/allos.rst.txt
 share/doc/python3.13/_sources/library/archiving.rst.txt
 share/doc/python3.13/_sources/library/argparse.rst.txt
 share/doc/python3.13/_sources/library/array.rst.txt
 share/doc/python3.13/_sources/library/ast.rst.txt
+share/doc/python3.13/_sources/library/asynchat.rst.txt
 share/doc/python3.13/_sources/library/asyncio-api-index.rst.txt
 share/doc/python3.13/_sources/library/asyncio-dev.rst.txt
 share/doc/python3.13/_sources/library/asyncio-eventloop.rst.txt
@@ -169,7 +172,9 @@ share/doc/python3.13/_sources/library/asyncio-subprocess.rst.txt
 share/doc/python3.13/_sources/library/asyncio-sync.rst.txt
 share/doc/python3.13/_sources/library/asyncio-task.rst.txt
 share/doc/python3.13/_sources/library/asyncio.rst.txt
+share/doc/python3.13/_sources/library/asyncore.rst.txt
 share/doc/python3.13/_sources/library/atexit.rst.txt
+share/doc/python3.13/_sources/library/audioop.rst.txt
 share/doc/python3.13/_sources/library/audit_events.rst.txt
 share/doc/python3.13/_sources/library/base64.rst.txt
 share/doc/python3.13/_sources/library/bdb.rst.txt
@@ -179,6 +184,9 @@ share/doc/python3.13/_sources/library/bisect.rst.txt
 share/doc/python3.13/_sources/library/builtins.rst.txt
 share/doc/python3.13/_sources/library/bz2.rst.txt
 share/doc/python3.13/_sources/library/calendar.rst.txt
+share/doc/python3.13/_sources/library/cgi.rst.txt
+share/doc/python3.13/_sources/library/cgitb.rst.txt
+share/doc/python3.13/_sources/library/chunk.rst.txt
 share/doc/python3.13/_sources/library/cmath.rst.txt
 share/doc/python3.13/_sources/library/cmd.rst.txt
 share/doc/python3.13/_sources/library/cmdline.rst.txt
@@ -198,6 +206,7 @@ share/doc/python3.13/_sources/library/contextlib.rst.txt
 share/doc/python3.13/_sources/library/contextvars.rst.txt
 share/doc/python3.13/_sources/library/copy.rst.txt
 share/doc/python3.13/_sources/library/copyreg.rst.txt
+share/doc/python3.13/_sources/library/crypt.rst.txt
 share/doc/python3.13/_sources/library/crypto.rst.txt
 share/doc/python3.13/_sources/library/csv.rst.txt
 share/doc/python3.13/_sources/library/ctypes.rst.txt
@@ -217,6 +226,7 @@ share/doc/python3.13/_sources/library/dialog.rst.txt
 share/doc/python3.13/_sources/library/difflib.rst.txt
 share/doc/python3.13/_sources/library/dis.rst.txt
 share/doc/python3.13/_sources/library/distribution.rst.txt
+share/doc/python3.13/_sources/library/distutils.rst.txt
 share/doc/python3.13/_sources/library/doctest.rst.txt
 share/doc/python3.13/_sources/library/email.charset.rst.txt
 share/doc/python3.13/_sources/library/email.compat32-message.rst.txt
@@ -273,6 +283,8 @@ share/doc/python3.13/_sources/library/http.server.rst.txt
 share/doc/python3.13/_sources/library/i18n.rst.txt
 share/doc/python3.13/_sources/library/idle.rst.txt
 share/doc/python3.13/_sources/library/imaplib.rst.txt
+share/doc/python3.13/_sources/library/imghdr.rst.txt
+share/doc/python3.13/_sources/library/imp.rst.txt
 share/doc/python3.13/_sources/library/importlib.metadata.rst.txt
 share/doc/python3.13/_sources/library/importlib.resources.abc.rst.txt
 share/doc/python3.13/_sources/library/importlib.resources.rst.txt
@@ -295,6 +307,7 @@ share/doc/python3.13/_sources/library/logging.handlers.rst.txt
 share/doc/python3.13/_sources/library/logging.rst.txt
 share/doc/python3.13/_sources/library/lzma.rst.txt
 share/doc/python3.13/_sources/library/mailbox.rst.txt
+share/doc/python3.13/_sources/library/mailcap.rst.txt
 share/doc/python3.13/_sources/library/markup.rst.txt
 share/doc/python3.13/_sources/library/marshal.rst.txt
 share/doc/python3.13/_sources/library/math.rst.txt
@@ -303,22 +316,27 @@ share/doc/python3.13/_sources/library/mm.rst.txt
 share/doc/python3.13/_sources/library/mmap.rst.txt
 share/doc/python3.13/_sources/library/modulefinder.rst.txt
 share/doc/python3.13/_sources/library/modules.rst.txt
+share/doc/python3.13/_sources/library/msilib.rst.txt
 share/doc/python3.13/_sources/library/msvcrt.rst.txt
 share/doc/python3.13/_sources/library/multiprocessing.rst.txt
 share/doc/python3.13/_sources/library/multiprocessing.shared_memory.rst.txt
 share/doc/python3.13/_sources/library/netdata.rst.txt
 share/doc/python3.13/_sources/library/netrc.rst.txt
+share/doc/python3.13/_sources/library/nis.rst.txt
+share/doc/python3.13/_sources/library/nntplib.rst.txt
 share/doc/python3.13/_sources/library/numbers.rst.txt
 share/doc/python3.13/_sources/library/numeric.rst.txt
 share/doc/python3.13/_sources/library/operator.rst.txt
 share/doc/python3.13/_sources/library/optparse.rst.txt
 share/doc/python3.13/_sources/library/os.path.rst.txt
 share/doc/python3.13/_sources/library/os.rst.txt
+share/doc/python3.13/_sources/library/ossaudiodev.rst.txt
 share/doc/python3.13/_sources/library/pathlib.rst.txt
 share/doc/python3.13/_sources/library/pdb.rst.txt
 share/doc/python3.13/_sources/library/persistence.rst.txt
 share/doc/python3.13/_sources/library/pickle.rst.txt
 share/doc/python3.13/_sources/library/pickletools.rst.txt
+share/doc/python3.13/_sources/library/pipes.rst.txt
 share/doc/python3.13/_sources/library/pkgutil.rst.txt
 share/doc/python3.13/_sources/library/platform.rst.txt
 share/doc/python3.13/_sources/library/plistlib.rst.txt
@@ -338,6 +356,7 @@ share/doc/python3.13/_sources/library/quopri.rst.txt
 share/doc/python3.13/_sources/library/random.rst.txt
 share/doc/python3.13/_sources/library/re.rst.txt
 share/doc/python3.13/_sources/library/readline.rst.txt
+share/doc/python3.13/_sources/library/removed.rst.txt
 share/doc/python3.13/_sources/library/reprlib.rst.txt
 share/doc/python3.13/_sources/library/resource.rst.txt
 share/doc/python3.13/_sources/library/rlcompleter.rst.txt
@@ -352,9 +371,12 @@ share/doc/python3.13/_sources/library/shlex.rst.txt
 share/doc/python3.13/_sources/library/shutil.rst.txt
 share/doc/python3.13/_sources/library/signal.rst.txt
 share/doc/python3.13/_sources/library/site.rst.txt
+share/doc/python3.13/_sources/library/smtpd.rst.txt
 share/doc/python3.13/_sources/library/smtplib.rst.txt
+share/doc/python3.13/_sources/library/sndhdr.rst.txt
 share/doc/python3.13/_sources/library/socket.rst.txt
 share/doc/python3.13/_sources/library/socketserver.rst.txt
+share/doc/python3.13/_sources/library/spwd.rst.txt
 share/doc/python3.13/_sources/library/sqlite3.rst.txt
 share/doc/python3.13/_sources/library/ssl.rst.txt
 share/doc/python3.13/_sources/library/stat.rst.txt
@@ -364,6 +386,7 @@ share/doc/python3.13/_sources/library/string.rst.txt
 share/doc/python3.13/_sources/library/stringprep.rst.txt
 share/doc/python3.13/_sources/library/struct.rst.txt
 share/doc/python3.13/_sources/library/subprocess.rst.txt
+share/doc/python3.13/_sources/library/sunau.rst.txt
 share/doc/python3.13/_sources/library/superseded.rst.txt
 share/doc/python3.13/_sources/library/symtable.rst.txt
 share/doc/python3.13/_sources/library/sys.monitoring.rst.txt
@@ -373,6 +396,7 @@ share/doc/python3.13/_sources/library/sysconfig.rst.txt
 share/doc/python3.13/_sources/library/syslog.rst.txt
 share/doc/python3.13/_sources/library/tabnanny.rst.txt
 share/doc/python3.13/_sources/library/tarfile.rst.txt
+share/doc/python3.13/_sources/library/telnetlib.rst.txt
 share/doc/python3.13/_sources/library/tempfile.rst.txt
 share/doc/python3.13/_sources/library/termios.rst.txt
 share/doc/python3.13/_sources/library/test.rst.txt
@@ -409,6 +433,7 @@ share/doc/python3.13/_sources/library/urllib.parse.rst.txt
 share/doc/python3.13/_sources/library/urllib.request.rst.txt
 share/doc/python3.13/_sources/library/urllib.robotparser.rst.txt
 share/doc/python3.13/_sources/library/urllib.rst.txt
+share/doc/python3.13/_sources/library/uu.rst.txt
 share/doc/python3.13/_sources/library/uuid.rst.txt
 share/doc/python3.13/_sources/library/venv.rst.txt
 share/doc/python3.13/_sources/library/warnings.rst.txt
@@ -419,6 +444,7 @@ share/doc/python3.13/_sources/library/windows.rst.txt
 share/doc/python3.13/_sources/library/winreg.rst.txt
 share/doc/python3.13/_sources/library/winsound.rst.txt
 share/doc/python3.13/_sources/library/wsgiref.rst.txt
+share/doc/python3.13/_sources/library/xdrlib.rst.txt
 share/doc/python3.13/_sources/library/xml.dom.minidom.rst.txt
 share/doc/python3.13/_sources/library/xml.dom.pulldom.rst.txt
 share/doc/python3.13/_sources/library/xml.dom.rst.txt
@@ -523,6 +549,7 @@ share/doc/python3.13/_static/pygments_dark.css
 share/doc/python3.13/_static/rtd_switcher.js
 share/doc/python3.13/_static/search-focus.js
 share/doc/python3.13/_static/searchtools.js
+share/doc/python3.13/_static/sidebar-wrap.css
 share/doc/python3.13/_static/sidebar.js
 share/doc/python3.13/_static/sphinx_highlight.js
 share/doc/python3.13/_static/themetoggle.js
@@ -656,6 +683,7 @@ share/doc/python3.13/genindex-all.html
 share/doc/python3.13/genindex.html
 share/doc/python3.13/glossary.html
 share/doc/python3.13/howto/annotations.html
+share/doc/python3.13/howto/argparse-optparse.html
 share/doc/python3.13/howto/argparse.html
 share/doc/python3.13/howto/clinic.html
 share/doc/python3.13/howto/cporting.html
@@ -687,11 +715,13 @@ share/doc/python3.13/library/__future__.html
 share/doc/python3.13/library/__main__.html
 share/doc/python3.13/library/_thread.html
 share/doc/python3.13/library/abc.html
+share/doc/python3.13/library/aifc.html
 share/doc/python3.13/library/allos.html
 share/doc/python3.13/library/archiving.html
 share/doc/python3.13/library/argparse.html
 share/doc/python3.13/library/array.html
 share/doc/python3.13/library/ast.html
+share/doc/python3.13/library/asynchat.html
 share/doc/python3.13/library/asyncio-api-index.html
 share/doc/python3.13/library/asyncio-dev.html
 share/doc/python3.13/library/asyncio-eventloop.html
@@ -709,7 +739,9 @@ share/doc/python3.13/library/asyncio-subprocess.html
 share/doc/python3.13/library/asyncio-sync.html
 share/doc/python3.13/library/asyncio-task.html
 share/doc/python3.13/library/asyncio.html
+share/doc/python3.13/library/asyncore.html
 share/doc/python3.13/library/atexit.html
+share/doc/python3.13/library/audioop.html
 share/doc/python3.13/library/audit_events.html
 share/doc/python3.13/library/base64.html
 share/doc/python3.13/library/bdb.html
@@ -719,6 +751,9 @@ share/doc/python3.13/library/bisect.html
 share/doc/python3.13/library/builtins.html
 share/doc/python3.13/library/bz2.html
 share/doc/python3.13/library/calendar.html
+share/doc/python3.13/library/cgi.html
+share/doc/python3.13/library/cgitb.html
+share/doc/python3.13/library/chunk.html
 share/doc/python3.13/library/cmath.html
 share/doc/python3.13/library/cmd.html
 share/doc/python3.13/library/cmdline.html
@@ -738,6 +773,7 @@ share/doc/python3.13/library/contextlib.html
 share/doc/python3.13/library/contextvars.html
 share/doc/python3.13/library/copy.html
 share/doc/python3.13/library/copyreg.html
+share/doc/python3.13/library/crypt.html
 share/doc/python3.13/library/crypto.html
 share/doc/python3.13/library/csv.html
 share/doc/python3.13/library/ctypes.html
@@ -757,6 +793,7 @@ share/doc/python3.13/library/dialog.html
 share/doc/python3.13/library/difflib.html
 share/doc/python3.13/library/dis.html
 share/doc/python3.13/library/distribution.html
+share/doc/python3.13/library/distutils.html
 share/doc/python3.13/library/doctest.html
 share/doc/python3.13/library/email.charset.html
 share/doc/python3.13/library/email.compat32-message.html
@@ -813,6 +850,8 @@ share/doc/python3.13/library/http.server.html
 share/doc/python3.13/library/i18n.html
 share/doc/python3.13/library/idle.html
 share/doc/python3.13/library/imaplib.html
+share/doc/python3.13/library/imghdr.html
+share/doc/python3.13/library/imp.html
 share/doc/python3.13/library/importlib.html
 share/doc/python3.13/library/importlib.metadata.html
 share/doc/python3.13/library/importlib.resources.abc.html
@@ -835,6 +874,7 @@ share/doc/python3.13/library/logging.handlers.html
 share/doc/python3.13/library/logging.html
 share/doc/python3.13/library/lzma.html
 share/doc/python3.13/library/mailbox.html
+share/doc/python3.13/library/mailcap.html
 share/doc/python3.13/library/markup.html
 share/doc/python3.13/library/marshal.html
 share/doc/python3.13/library/math.html
@@ -843,22 +883,27 @@ share/doc/python3.13/library/mm.html
 share/doc/python3.13/library/mmap.html
 share/doc/python3.13/library/modulefinder.html
 share/doc/python3.13/library/modules.html
+share/doc/python3.13/library/msilib.html
 share/doc/python3.13/library/msvcrt.html
 share/doc/python3.13/library/multiprocessing.html
 share/doc/python3.13/library/multiprocessing.shared_memory.html
 share/doc/python3.13/library/netdata.html
 share/doc/python3.13/library/netrc.html
+share/doc/python3.13/library/nis.html
+share/doc/python3.13/library/nntplib.html
 share/doc/python3.13/library/numbers.html
 share/doc/python3.13/library/numeric.html
 share/doc/python3.13/library/operator.html
 share/doc/python3.13/library/optparse.html
 share/doc/python3.13/library/os.html
 share/doc/python3.13/library/os.path.html
+share/doc/python3.13/library/ossaudiodev.html
 share/doc/python3.13/library/pathlib.html
 share/doc/python3.13/library/pdb.html
 share/doc/python3.13/library/persistence.html
 share/doc/python3.13/library/pickle.html
 share/doc/python3.13/library/pickletools.html
+share/doc/python3.13/library/pipes.html
 share/doc/python3.13/library/pkgutil.html
 share/doc/python3.13/library/platform.html
 share/doc/python3.13/library/plistlib.html
@@ -878,6 +923,7 @@ share/doc/python3.13/library/quopri.html
 share/doc/python3.13/library/random.html
 share/doc/python3.13/library/re.html
 share/doc/python3.13/library/readline.html
+share/doc/python3.13/library/removed.html
 share/doc/python3.13/library/reprlib.html
 share/doc/python3.13/library/resource.html
 share/doc/python3.13/library/rlcompleter.html
@@ -892,9 +938,12 @@ share/doc/python3.13/library/shlex.html
 share/doc/python3.13/library/shutil.html
 share/doc/python3.13/library/signal.html
 share/doc/python3.13/library/site.html
+share/doc/python3.13/library/smtpd.html
 share/doc/python3.13/library/smtplib.html
+share/doc/python3.13/library/sndhdr.html
 share/doc/python3.13/library/socket.html
 share/doc/python3.13/library/socketserver.html
+share/doc/python3.13/library/spwd.html
 share/doc/python3.13/library/sqlite3.html
 share/doc/python3.13/library/ssl.html
 share/doc/python3.13/library/stat.html
@@ -904,6 +953,7 @@ share/doc/python3.13/library/string.html
 share/doc/python3.13/library/stringprep.html
 share/doc/python3.13/library/struct.html
 share/doc/python3.13/library/subprocess.html
+share/doc/python3.13/library/sunau.html
 share/doc/python3.13/library/superseded.html
 share/doc/python3.13/library/symtable.html
 share/doc/python3.13/library/sys.html
@@ -913,6 +963,7 @@ share/doc/python3.13/library/sysconfig.html
 share/doc/python3.13/library/syslog.html
 share/doc/python3.13/library/tabnanny.html
 share/doc/python3.13/library/tarfile.html
+share/doc/python3.13/library/telnetlib.html
 share/doc/python3.13/library/tempfile.html
 share/doc/python3.13/library/termios.html
 share/doc/python3.13/library/test.html
@@ -949,6 +1000,7 @@ share/doc/python3.13/library/urllib.html
 share/doc/python3.13/library/urllib.parse.html
 share/doc/python3.13/library/urllib.request.html
 share/doc/python3.13/library/urllib.robotparser.html
+share/doc/python3.13/library/uu.html
 share/doc/python3.13/library/uuid.html
 share/doc/python3.13/library/venv.html
 share/doc/python3.13/library/warnings.html
@@ -959,6 +1011,7 @@ share/doc/python3.13/library/windows.html
 share/doc/python3.13/library/winreg.html
 share/doc/python3.13/library/winsound.html
 share/doc/python3.13/library/wsgiref.html
+share/doc/python3.13/library/xdrlib.html
 share/doc/python3.13/library/xml.dom.html
 share/doc/python3.13/library/xml.dom.minidom.html
 share/doc/python3.13/library/xml.dom.pulldom.html
