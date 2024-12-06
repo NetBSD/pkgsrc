@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2024/12/06 11:20:06 micha Exp $
+
+Do not execute binary on build machine.
+
+--- Makefile.orig	2024-12-05 17:45:57.000000000 +0000
++++ Makefile
+@@ -35,7 +35,7 @@ all:
+ 	(cd Xlt;    $(MAKE) -f Makefile.$@ libXlt.a)
+ 	(cd Microline/XmL;    $(MAKE) -f Makefile.$@ libXmL.a)
+ 	(cd source; $(MAKE) -f Makefile.$@ xnedit xnc)
+-	@source/xnedit -V
++#	@source/xnedit -V
+ 
+ # This should not be in the default build, as users may not have Perl
+ # installed.  This is only interesting to developers.

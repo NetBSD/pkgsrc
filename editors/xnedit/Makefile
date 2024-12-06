@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/02/14 16:22:54 micha Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/06 11:20:06 micha Exp $
 
-DISTNAME=	xnedit-1.5.3
+DISTNAME=	xnedit-1.6.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
@@ -9,13 +9,12 @@ HOMEPAGE=	https://sourceforge.net/projects/xnedit/
 COMMENT=	Fork of NEdit with Unicode support and antialiased text
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c99
-USE_TOOLS=	perl pkg-config yacc
+USE_CC_FEATURES=	c99
+USE_TOOLS=		perl pkg-config yacc
 
 # Redefinition of macros bcopy and bzero (at least on NetBSD 9.3)
 FORTIFY_SUPPORTED=	no
 
-WRKSRC=			${WRKDIR}/xnedit
 BUILD_TARGET=		generic
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PREFIX}/share/doc/xnedit
 
@@ -47,7 +46,7 @@ do-install:
 .for f in README.md ReleaseNotes
 	 ${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
-.for f in NEdit.ad faq.txt xnedit.html xnedit.txt
+.for f in NEdit.ad xnedit.html xnedit.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/doc/xnedit
 .endfor
 

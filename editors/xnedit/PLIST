@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/07/12 13:22:10 micha Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/06 11:20:06 micha Exp $
 bin/xnc
 bin/xnedit
 man/man1/xnc.1
@@ -6,6 +6,5 @@ man/man1/xnedit.1
 share/doc/xnedit/NEdit.ad
 share/doc/xnedit/README.md
 share/doc/xnedit/ReleaseNotes
-share/doc/xnedit/faq.txt
 share/doc/xnedit/xnedit.html
 share/doc/xnedit/xnedit.txt
