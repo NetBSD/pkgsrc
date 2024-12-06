@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/13 13:32:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/06 21:32:54 wiz Exp $
 
-DISTNAME=	nh3-0.2.18
+DISTNAME=	nh3-0.2.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nh3/}
@@ -11,8 +11,6 @@ COMMENT=	Python bindings for Ammonia HTML cleaner
 LICENSE=	mit
 
 USE_LANGUAGES=		c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "cargo-depends.mk"
 
