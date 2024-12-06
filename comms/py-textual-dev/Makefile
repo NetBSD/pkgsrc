@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/08/12 12:26:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/06 22:05:31 wiz Exp $
 
-DISTNAME=	textual_dev-1.5.1
+DISTNAME=	textual_dev-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual_dev/}
