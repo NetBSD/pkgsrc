@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2024/07/24 10:54:36 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.25 2024/12/06 15:32:07 schmonz Exp $
 # used by textproc/csharp-xapian/Makefile
 # used by textproc/lua-xapian/Makefile
 # used by textproc/p5-Xapian/Makefile
@@ -9,7 +9,7 @@
 # used by textproc/xapian/Makefile
 # used by textproc/xapian-omega/Makefile
 
-VERSION=		1.4.26
+VERSION=		1.4.27
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/${VERSION}/
 EXTRACT_SUFX=		.tar.xz

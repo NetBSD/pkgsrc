@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2023/11/07 22:32:52 schmonz Exp $
+$NetBSD: patch-configure,v 1.8 2024/12/06 15:32:08 schmonz Exp $
 
 - Remove hackaround for old OpenBSD bugs that break builds with other
   STL implementations.
@@ -6,9 +6,9 @@ $NetBSD: patch-configure,v 1.7 2023/11/07 22:32:52 schmonz Exp $
 - Remove broken cross-compile check (builds a bundle, complains it can't
   run as executable) to fix lua-xapian on Big Sur.
 
---- configure.orig	2023-11-06 04:30:33.000000000 +0000
+--- configure.orig	2024-12-06 03:14:00.000000000 +0000
 +++ configure
-@@ -4713,51 +4713,6 @@ FILE *f = fopen ("conftest.out", "w");
+@@ -4715,51 +4715,6 @@ FILE *f = fopen ("conftest.out", "w");
    return 0;
  }
  _ACEOF
@@ -60,7 +60,7 @@ $NetBSD: patch-configure,v 1.7 2023/11/07 22:32:52 schmonz Exp $
  ac_clean_files=$ac_clean_files_save
  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for suffix of object files" >&5
  printf %s "checking for suffix of object files... " >&6; }
-@@ -19438,7 +19393,7 @@ printf "%s\n" "not found" >&6; }
+@@ -19595,7 +19550,7 @@ printf "%s\n" "not found" >&6; }
  	  for x in "/tcl$tcl_version" "" ; do
  	    TCLCONFIG_SH=$tcl_libdir_runtime$x/tclConfig.sh
  	    if test -r "$TCLCONFIG_SH" ; then
@@ -69,13 +69,3 @@ $NetBSD: patch-configure,v 1.7 2023/11/07 22:32:52 schmonz Exp $
  	      break
  	    fi
  	  done
-@@ -21172,9 +21127,6 @@ SWIG_CXXFLAGS=
- if test yes = "$GXX" ; then
-                     SWIG_CXXFLAGS="-fno-strict-aliasing"
- 
--              XAPIAN_LIBS="$XAPIAN_LIBS -lstdc++"
--
--
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- #ifdef __INTEL_COMPILER
