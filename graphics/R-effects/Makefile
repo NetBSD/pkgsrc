@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2022/05/21 15:33:51 mef Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/06 23:10:19 mef Exp $
 
 R_PKGNAME=	effects
-R_PKGVER=	4.2-1
+R_PKGVER=	4.2-2
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,8 +16,11 @@ DEPENDS+=	R-lme4>=1.1.21:../../math/R-lme4
 DEPENDS+=	R-survey>=3.36:../../math/R-survey
 
 # Packages suggested but not available:
-#   'pbkrtest', 'poLCA', 'heplots', 'ordinal', 'car', 'knitr', 'betareg',
-#   'alr4', 'robustlmm'
+#   'poLCA', 'heplots', 'ordinal', 'betareg', 'alr4', 'robustlmm'
+
+TEST_DEPENDS+=	R-pbkrtest-[0-9]*:../../math/R-pbkrtest
+TEST_DEPENDS+=	R-car-[0-9]*:../../math/R-car
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 
 USE_LANGUAGES=	# none
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/21 15:33:51 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/12/06 23:10:19 mef Exp $
 
-BLAKE2s (R/effects_4.2-1.tar.gz) = aa0591fced2bf740987a2bdc3fd466c73bf9e3215a94ae128be570e5e1a5017d
-SHA512 (R/effects_4.2-1.tar.gz) = 2c8aabc684aeb17ef927e13aa5a0f5e4aaf5568d18f10edd820a7674bf7358fc5eb5ab03071852c95d1bfac7e48056662cd1887879f14c17e36bdd2b817c1c09
-Size (R/effects_4.2-1.tar.gz) = 2350440 bytes
+BLAKE2s (R/effects_4.2-2.tar.gz) = 4c5b902a19b81bd8d50843d1cb05b98f67959acf006667dc4d5ccaf4f8c1e98f
+SHA512 (R/effects_4.2-2.tar.gz) = 90ee9405ca90998bf68bef103563ef4172a96b73e204ab25fb5a1d03e3c3c3fe14031d9c39fa905ba6a21019608cabde5efc56a4416889a4142aa9f94426eba6
+Size (R/effects_4.2-2.tar.gz) = 2200805 bytes
