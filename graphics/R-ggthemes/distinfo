@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/06 23:41:11 mef Exp $
 
-BLAKE2s (R/ggthemes_4.2.4.tar.gz) = 2cfb38c79a01c3a4c13389e1752b896e46200208cbe3e0a42f9043ffed4384f7
-SHA512 (R/ggthemes_4.2.4.tar.gz) = 70aca67975581dc451c03f204637feff5527c7cc170c67b678b0fca8f947f27dedcf541dc56ee6cf6622a05ec10188509a60ec887cb1ef2b7001f221a4706471
-Size (R/ggthemes_4.2.4.tar.gz) = 444642 bytes
+BLAKE2s (R/ggthemes_5.1.0.tar.gz) = bd8f4492416555ce87e959de1e9e6afc2f9929da1c1b82e38ee2fde858485910
+SHA512 (R/ggthemes_5.1.0.tar.gz) = 6505816001201b68f2b840eee09880e82f55d6910af560062ffb5a994d45e78b261c9a1bf44a80da0668a2cbd56178edf8b628c609675a2d1252c134aa69fa4b
+Size (R/ggthemes_5.1.0.tar.gz) = 493992 bytes
