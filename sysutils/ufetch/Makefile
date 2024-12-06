@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2023/07/19 06:02:21 pin Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/06 11:52:58 pin Exp $
 
-DISTNAME=	ufetch-v0.3
+DISTNAME=	ufetch-v0.4
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITLAB:=jschx/}
