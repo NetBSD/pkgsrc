@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7429 2024/12/06 21:25:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7430 2024/12/06 21:28:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11206,3 +11206,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated editors/ait to 1.10 [ktnb 2024-12-06]
 	Updated textproc/tree-sitter-go to 0.23.4 [wiz 2024-12-06]
 	Updated textproc/tree-sitter-rust to 0.23.2 [wiz 2024-12-06]
+	Updated x11/dunst to 1.12.0 [wiz 2024-12-06]
