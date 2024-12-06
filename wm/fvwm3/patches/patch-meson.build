@@ -1,7 +1,7 @@
-$NetBSD: patch-meson.build,v 1.1 2024/12/06 21:10:16 vins Exp $
+$NetBSD: patch-meson.build,v 1.2 2024/12/06 22:24:09 vins Exp $
 
 * Prevent reference to build directory in perl scripts
-* Fix detection of readline library
+* Fix detection of readline and asciidoctor
 
 --- meson.build.orig	2024-11-30 20:43:16.000000000 +0000
 +++ meson.build
@@ -51,3 +51,12 @@ $NetBSD: patch-meson.build,v 1.1 2024/12/06 21:10:16 vins Exp $
  
  # Optional dependencies
  # Tip: 'Feature' types always report 'not found' if disabled
+@@ -389,7 +398,7 @@ endforeach
+ build_docs = false
+ if get_option('htmldoc') or get_option('mandoc')
+     build_docs = true
+-    asciidoc = find_program('asciidoctor', required: build_docs)
++    asciidoc = find_program('@ASCIIDOC@', required: build_docs)
+     grep = find_program('grep')
+     subdir('doc')
+ endif

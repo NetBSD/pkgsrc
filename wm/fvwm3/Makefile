@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2024/12/06 21:10:16 vins Exp $
+# $NetBSD: Makefile,v 1.45 2024/12/06 22:24:09 vins Exp $
 
 DISTNAME=	fvwm3-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -41,6 +41,7 @@ MESON_ARGS+=	-Dreadline=enabled				# required by FvwmConsole
 MESON_ARGS+=	-Dgolang=disabled				# handled locally by options.mk
 MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/fvwm3/locale
 MESON_ARGS+=	-Dnls=enabled
+# otherwise we get installed scripts that point to the tools directory
 MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
 MESON_ARGS+=	-Dperl=${PERL5:Q}
 
