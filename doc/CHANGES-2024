@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7439 2024/12/06 22:55:35 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7440 2024/12/06 23:10:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11216,3 +11216,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated comms/py-textual to 0.89.1 [wiz 2024-12-06]
 	Updated mail/meli to 0.8.10 [vins 2024-12-06]
 	Updated graphics/R-colorspace to 2.1.1 [mef 2024-12-06]
+	Updated graphics/R-effects to 4.2.2 [mef 2024-12-06]
