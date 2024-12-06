@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.133 2024/11/14 22:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.134 2024/12/06 10:09:33 jperkin Exp $
 
-DISTNAME=		pkgin-23.8.1
-PKGREVISION=		7
+DISTNAME=		pkgin-24.12.0
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_GITHUB:=NetBSDfr/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 LICENSE=		modified-bsd
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		${EGDIR}/repositories.conf.example		\
+CONF_FILES=		${EGDIR}/repositories.conf.example \
 			${PKG_SYSCONFDIR}/${PKGBASE}/repositories.conf
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
@@ -31,7 +30,6 @@ CONFIGURE_ARGS+=	--with-machine-arch=${MACHINE_ARCH}
 CONFIGURE_ARGS+=	--with-pkg-install=${PKG_TOOLS_BIN}
 CONFIGURE_ARGS+=	--with-libarchive=${BUILDLINK_PREFIX.libarchive}
 CONFIGURE_ARGS+=	--with-libfetch=${BUILDLINK_PREFIX.libfetch}
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 
 USE_FEATURES=		nbcompat
@@ -49,12 +47,6 @@ CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 DEPENDS+=		pkg_install>=20200701:../../pkgtools/pkg_install
 
 .include "options.mk"
-
-USE_TOOLS+=	autoconf automake
-
-pre-configure:
-	@${STEP_MSG} Regenerating configure
-	${RUN}cd ${WRKSRC} && autoreconf -fiv
 
 # those have official repositories
 .if !empty(PKGIN_REPOSITORY_URL)
@@ -75,5 +67,4 @@ post-install:
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../net/libfetch/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
