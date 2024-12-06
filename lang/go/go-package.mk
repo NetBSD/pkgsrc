@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.28 2024/02/11 19:28:18 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.29 2024/12/06 11:05:48 jperkin Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -70,8 +70,10 @@ GOTOOLDIR=		go${GOVERSSUFFIX}/pkg/tool/${GO_PLATFORM}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 PRINT_PLIST_AWK+=	/^@pkgdir gopkg$$/ { next; }
 
+GO_CACHE_DIR=	${WRKDIR}/.cache/go-build
+
 MAKE_ENV+=	GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg
-MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
+MAKE_ENV+=	GOCACHE=${GO_CACHE_DIR} GOTMPDIR=${GO_CACHE_DIR}
 MAKE_ENV+=	GO111MODULE=off
 MAKE_ENV+=	GOTOOLCHAIN=local
 
@@ -81,6 +83,10 @@ post-extract:
 	${RUN} ${RM} -fr ${WRKDIR}/${GO_DIST_BASE}/.hg
 	${RUN} ${MV} ${WRKDIR}/${GO_DIST_BASE}/* ${WRKSRC}
 .endif
+
+post-extract: ${GO_CACHE_DIR}
+${GO_CACHE_DIR}:
+	@${MKDIR} ${.TARGET}
 
 .if !target(do-build)
 do-build:
@@ -107,7 +113,7 @@ _VARGROUPS+=		go
 _PKG_VARS.go=		GO_SRCPATH GO_DIST_BASE GO_DEPS GO_BUILD_PATTERN
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
-			GOOPT GOTOOLDIR GO_PLATFORM
+			GOOPT GOTOOLDIR GO_PLATFORM GO_CACHE_DIR
 _USE_VARS.go=		GO_PACKAGE_DEP \
 			WRKDIR BUILDLINK_DIR DESTDIR PREFIX \
 			TEST_ENV

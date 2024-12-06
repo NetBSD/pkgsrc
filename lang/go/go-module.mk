@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.21 2024/10/29 13:10:11 jperkin Exp $
+# $NetBSD: go-module.mk,v 1.22 2024/12/06 11:05:48 jperkin Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -47,9 +47,15 @@ USE_TOOLS+=		pax
 TOOL_DEPENDS+=		${GO_PACKAGE_DEP}
 PRINT_PLIST_AWK+=	/^@pkgdir bin$$/ { next; }
 
+GO_CACHE_DIR=	${WRKDIR}/.cache/go-build
+
 MAKE_ENV+=	GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
-MAKE_ENV+=	GOCACHE=${WRKDIR}/.cache/go-build
+MAKE_ENV+=	GOCACHE=${GO_CACHE_DIR} GOTMPDIR=${GO_CACHE_DIR}
 MAKE_ENV+=	GOTOOLCHAIN=local
+
+post-extract: ${GO_CACHE_DIR}
+${GO_CACHE_DIR}:
+	@${MKDIR} ${.TARGET}
 
 .if !target(do-build)
 do-build:
@@ -102,7 +108,7 @@ _VARGROUPS+=		go
 _PKG_VARS.go=		GO_BUILD_PATTERN GO_MODULE_FILES GO_EXTRA_MOD_DIRS
 _USER_VARS.go=		GO_VERSION_DEFAULT
 _SYS_VARS.go=		GO GO_VERSION GOVERSSUFFIX GOARCH GOCHAR \
-			GOOPT GOTOOLDIR GO_PLATFORM
+			GOOPT GOTOOLDIR GO_PLATFORM GO_CACHE_DIR
 _DEF_VARS.go=		GO14_VERSION GO19_VERSION GO110_VERSION \
 			GO111_VERSION INSTALLATION_DIRS MAKE_JOBS_SAFE \
 			NOT_FOR_PLATFORM ONLY_FOR_PLATFORM SSP_SUPPORTED \
