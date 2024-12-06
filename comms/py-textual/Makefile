@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/11/24 10:35:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/06 22:06:50 wiz Exp $
 
-DISTNAME=	textual-0.86.3
+DISTNAME=	textual-0.89.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/textual/}
@@ -19,14 +19,15 @@ DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=2.1.0:../../textproc/py-markdown-it-py
 # https://github.com/grantjenks/py-tree-sitter-languages/issues/76
 #DEPENDS+=	${PYPKGPREFIX}-tree-sitter>=0.20.1:../../textproc/py-tree-sitter
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-textual-snapshot>=1.0.0:../../devel/py-test-textual-snapshot
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
-TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.2:../../comms/py-textual-dev
+TEST_DEPENDS+=	${PYPKGPREFIX}-textual-dev>=1.7:../../comms/py-textual-dev
 
 USE_LANGUAGES=	# none
 
-# as of 0.86.3
-# 35 failed, 3013 passed, 1 skipped, 4 xfailed, 81 warnings
+# as of 0.89.1
+# 348 failed, 2711 passed, 2 skipped, 4 xfailed, 81 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
