@@ -1,0 +1,53 @@
+$NetBSD: patch-meson.build,v 1.1 2024/12/06 21:10:16 vins Exp $
+
+* Prevent reference to build directory in perl scripts
+* Fix detection of readline library
+
+--- meson.build.orig	2024-11-30 20:43:16.000000000 +0000
++++ meson.build
+@@ -221,7 +221,7 @@ else
+ endif
+ 
+ # Perl is a required dependency, we generate shebangs at buildtime
+-perl = find_program('perl', required: true)
++perl = find_program(get_option('perl'), required: true)
+ 
+ golang = find_program('go', required: get_option('golang'))
+ if golang.found()
+@@ -236,19 +236,28 @@ if golang.found()
+     endif
+ else
+     # the readline dependency is only required for FvwmConsole so let's only check for it if we're not building FvwmPrompt
+-    readline = dependency('readline', required: get_option('readline'))
+-    if readline.found()
+-        all_found_deps += readline
+-        conf.set10('HAVE_READLINE', true)
+-        # Check for append_history to determine if we have GNU readline
+-        if cc.has_function('append_history', dependencies: readline)
+-            conf.set10('HAVE_GNU_READLINE', true)
++    readline = cc.find_library(
++		'edit', 
++		dirs: '@BUILDLINK_PREFIX.readline@/lib', 
++		has_headers: 'readline.h')
++    if readline.found() == false
++	readline = cc.find_library(
++		    'readline', 
++		    dirs: '@BUILDLINK_PREFIX.readline@/lib', 
++		    required: get_option('readline'))
++	if readline.found()
++	    all_found_deps += readline
++	    conf.set10('HAVE_READLINE', true)
++	    # Check for append_history to determine if we have GNU readline
++            if cc.has_function('append_history', dependencies: readline)
++		conf.set10('HAVE_GNU_READLINE', true)
++	    endif
+         endif
+     endif
+ endif
+ 
+ # Sed is used for substitution in several configure_file calls
+-sed = find_program('sed', required: true)
++sed = find_program('@SED@', required: true)
+ 
+ # Optional dependencies
+ # Tip: 'Feature' types always report 'not found' if disabled

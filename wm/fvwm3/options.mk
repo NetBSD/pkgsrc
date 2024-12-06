@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2024/06/09 10:06:30 vins Exp $
+# $NetBSD: options.mk,v 1.6 2024/12/06 21:10:16 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fvwm3
 PKG_SUPPORTED_OPTIONS=	doc go svg
-PKG_SUGGESTED_OPTIONS=	doc
+PKG_SUGGESTED_OPTIONS=	doc go
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,20 +13,22 @@ PLIST_VARS+=		doc go
 #
 .if !empty(PKG_OPTIONS:Msvg)
 .  include "../../graphics/librsvg/buildlink3.mk"
+MESON_ARGS+=    -Dsvg=enabled
+.else
+MESON_ARGS+=    -Dsvg=disabled
 .endif
 
 #
-# Build documentation (requires asciidoctor)
+# Build man pages (requires asciidoctor)
 #
 .if !empty(PKG_OPTIONS:Mdoc)
-CONFIGURE_ARGS+=	--enable-mandoc
+MESON_ARGS+=	-Dmandoc=true
 TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 ASCIIDOC=               ${PREFIX}/bin/asciidoctor${RUBY_VER}
-CONFIGURE_ENV+=		ac_cv_prog_ASCIIDOC=${ASCIIDOC:Q}
 .  include "../../lang/ruby/rubyversion.mk"
 PLIST.doc=		yes
 .else
-CONFIGURE_ARGS+=	--disable-mandoc
+MESON_ARGS+=    -Dmandoc=false
 .endif
 
 #
@@ -80,13 +82,13 @@ post-extract:
 
 post-build:
 .  for d in ${GO_MOD_DIRS}
-	${RUN} ${PRINTF} '%s\n' "Making fvwm Go modules in ${d} ... "
+	@${STEP_MSG} "Making fvwm Go modules in ${d} ... "
 	${RUN} cd ${WRKSRC}/${d} && ${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV}	\
 		${GO} ${GOFLAGS} install -v ${GO_BUILD_PATTERN}
 .  endfor
 .  if !empty(PKG_OPTIONS:Mdoc)
 .    for i in ${GO_MOD_DOCS}
-	${RUN} ${PRINTF} '%s\n' "Building documentation for ${i} ... "
+	@${STEP_MSG} "Building documentation for ${i} ... "
 	${RUN} cd ${WRKSRC}/doc && ${ASCIIDOC} -b manpage -a ${i} ${i}.adoc -o ${i}.1
 .    endfor
 .  endif
@@ -100,5 +102,5 @@ post-install:
 pre-clean:
 	${RUN} [ -d ${WRKDIR}/.gopath ] && chmod -R +w ${WRKDIR}/.gopath ||  ${TRUE}
 
-PLIST.go=		yes
+PLIST.go=	yes
 .endif
