@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/12/06 21:10:16 vins Exp $
+# $NetBSD: options.mk,v 1.7 2024/12/06 22:24:09 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fvwm3
 PKG_SUPPORTED_OPTIONS=	doc go svg
@@ -25,10 +25,11 @@ MESON_ARGS+=    -Dsvg=disabled
 MESON_ARGS+=	-Dmandoc=true
 TOOL_DEPENDS+=		${RUBY_PKGPREFIX}-asciidoctor-[0-9]*:../../textproc/ruby-asciidoctor
 ASCIIDOC=               ${PREFIX}/bin/asciidoctor${RUBY_VER}
+SUBST_VARS.paths+=	ASCIIDOC
 .  include "../../lang/ruby/rubyversion.mk"
 PLIST.doc=		yes
 .else
-MESON_ARGS+=    -Dmandoc=false
+MESON_ARGS+=	-Dmandoc=false
 .endif
 
 #
