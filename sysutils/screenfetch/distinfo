@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:20:12 nia Exp $
+$NetBSD: distinfo,v 1.7 2024/12/06 11:51:06 pin Exp $
 
-BLAKE2s (screenFetch-3.9.1.tar.gz) = 96d1af1fb6bb2afcea7a66b88cf45681a096a037e8340501119b585fd2b47de6
-SHA512 (screenFetch-3.9.1.tar.gz) = e186901480dcad57b765052b1b156b7706a196ce0e08b6b88264912a5d2a1250e5014923312353a82ccabd8129d4d2421891f13fd34f0ed76c50ce9633207df0
-Size (screenFetch-3.9.1.tar.gz) = 77350 bytes
+BLAKE2s (screenFetch-3.9.9.tar.gz) = 415bbbd5e6a654fcfe25f14e099124888fc300cf537dbeca0ab4d280d11f6eeb
+SHA512 (screenFetch-3.9.9.tar.gz) = f5df01fab9fb075e709cf12a3fd03b771bb9dcaad7fb5b0a76c464f450f8b016768a91f308bbf36cc8b3cea69e5e5d0a7792d7c4abf7cbe75120d4f5ad4d8874
+Size (screenFetch-3.9.9.tar.gz) = 80102 bytes
