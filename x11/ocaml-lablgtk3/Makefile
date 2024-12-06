@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/11/25 20:37:17 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2024/12/06 16:44:58 gdt Exp $
 
 GITHUB_PROJECT=	lablgtk
 GITHUB_TAG=	${VERSION}
@@ -20,38 +20,6 @@ OCAML_USE_DUNE=		yes
 OCAML_FINDLIB_DIRS=	lablgtk3
 OPAM_INSTALL_FILES=	${OCAML_FINDLIB_DIRS}
 DUNE_BUILD_PACKAGES=	${OCAML_FINDLIB_DIRS}
-
-## BEGIN DUNE/PKG-CONFIG KLUDGES
-
-# See the dune sources, otherlibs/configurator/src/v1.ml and look for
-# pkg-config and "which", if trying to understand why this fails.
-
-# See also a perhaps-similar issue in Windows:
-#   https://github.com/bcpierce00/unison/blob/d08a5c35e5a9a2cf9729fff56af0313999aa0c06/.github/workflows/CI.yml#L206-L213
-
-# dune tries to run pkg-config, and this fails under pkgsrc for some reason.
-# But when run in pre-configure, it seems to be ok.
-test-dune-config:
-	${ECHO} Testing dune calling pkg-config.
-	(cd ${WRKSRC} && \
-		dune exec -- ./_build/default/.bin/dune_config -verbose -pkg gtk+-3.0 -version 3.18) || ${TRUE}
-
-# Undo the wrapper, in the hope that dune finds real pkg-config.  Does not help.
-no-pkgconfig-wrapper:
-	${RM} ${WRKDIR}/.tools/bin/pkg-config
-	${CP} ${PREFIX}/bin/pkg-config ${WRKDIR}/.tools/bin/pkg-config
-
-# This is a huge hack, to undefine PKG_CONFIG in the environment,
-# which apparently breaks dune's searching for pkg-config.  Copied
-# from ocaml/ocaml.mk, to where it should perhaps be hoisted.
-do-build:
-	${RUN} ${_ULIMIT_CMD} \
-		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SETENV} -u PKG_CONFIG \
-		dune build -j ${MAKE_JOBS:U1} \
-		${DUNE_BUILD_FLAGS} -p ${DUNE_BUILD_PACKAGES:ts,} \
-		${DUNE_BUILD_TARGETS}
-
-## END DUNE/PKG-CONFIG KLUDGES
 
 .include "../../lang/ocaml/ocaml.mk"
 
