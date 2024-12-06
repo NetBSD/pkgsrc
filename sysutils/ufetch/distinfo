@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2022/12/19 09:32:36 pin Exp $
+$NetBSD: distinfo,v 1.7 2024/12/06 11:52:58 pin Exp $
 
-BLAKE2s (ufetch-v0.3.tar.gz) = 0752315f6dada30021ece489ce4427cc337ac2cea1198558c808f4cfa61edc1a
-SHA512 (ufetch-v0.3.tar.gz) = 9b72af3e52a32eadc4d2cb91f9784af6cc50de635e582a20328d76b1c26fdf51de92b86fa14d25d5b4059bd8fdfb79b3200d24ab66a9dd2ff69562890f701d9c
-Size (ufetch-v0.3.tar.gz) = 7574 bytes
+BLAKE2s (ufetch-v0.4.tar.gz) = 5ae14f1c793cf48f4f882ef8908a4bd8e20f3f302e739b58a900126dd4dd2128
+SHA512 (ufetch-v0.4.tar.gz) = cf5faf4510d5785f92b8cc9a044c32321ee8afe0dcbef9c40c02accc301f4c76a5341f96485cde5f41a14b0d248f32fb4fd1cf5e59ae8253ff7217412b2e6f79
+Size (ufetch-v0.4.tar.gz) = 7667 bytes
