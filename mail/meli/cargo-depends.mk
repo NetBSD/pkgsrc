@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.9 2024/11/28 08:46:12 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.10 2024/12/06 22:33:56 vins Exp $
 
 CARGO_CRATE_DEPENDS+=	abnf-core-0.6.0
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -52,7 +52,7 @@ CARGO_CRATE_DEPENDS+=	csv-1.3.0
 CARGO_CRATE_DEPENDS+=	csv-core-0.1.11
 CARGO_CRATE_DEPENDS+=	curl-0.4.46
 CARGO_CRATE_DEPENDS+=	curl-sys-0.4.74+curl-8.9.0
-SITES.curl-sys-0.4.74+curl-8.9.0.crate=	https://static.crates.io/crates/curl-sys/
+SITES.curl-sys-0.4.74+curl-8.9.0.crate= https://static.crates.io/crates/curl-sys/
 CARGO_CRATE_DEPENDS+=	data-encoding-2.6.0
 CARGO_CRATE_DEPENDS+=	dbus-0.9.7
 CARGO_CRATE_DEPENDS+=	deranged-0.3.11
@@ -77,7 +77,6 @@ CARGO_CRATE_DEPENDS+=	fnv-1.0.7
 CARGO_CRATE_DEPENDS+=	foreign-types-0.3.2
 CARGO_CRATE_DEPENDS+=	foreign-types-shared-0.1.1
 CARGO_CRATE_DEPENDS+=	form_urlencoded-1.2.1
-CARGO_CRATE_DEPENDS+=	fs_extra-1.3.0
 CARGO_CRATE_DEPENDS+=	fsevent-sys-4.1.0
 CARGO_CRATE_DEPENDS+=	futures-0.3.30
 CARGO_CRATE_DEPENDS+=	futures-channel-0.3.31
@@ -176,12 +175,10 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.4.7
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.4
 CARGO_CRATE_DEPENDS+=	rusqlite-0.29.0
 CARGO_CRATE_DEPENDS+=	rustix-0.38.35
-CARGO_CRATE_DEPENDS+=	rusty-forkfork-0.4.0
+CARGO_CRATE_DEPENDS+=	rusty-fork-0.3.0
 CARGO_CRATE_DEPENDS+=	ryu-1.0.18
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	schannel-0.1.23
-CARGO_CRATE_DEPENDS+=	sealed_test-1.1.0
-CARGO_CRATE_DEPENDS+=	sealed_test_derive-1.1.0
 CARGO_CRATE_DEPENDS+=	security-framework-2.11.1
 CARGO_CRATE_DEPENDS+=	security-framework-sys-2.11.1
 CARGO_CRATE_DEPENDS+=	serde-1.0.209
