@@ -1,0 +1,43 @@
+$NetBSD: patch-doc_meson.build,v 1.1 2024/12/06 21:10:16 vins Exp $
+
+* Always generate FvwmConsole man page.
+* Let pkgsrc handle documentation of go modules.
+
+--- doc/meson.build.orig	2024-11-30 20:43:16.000000000 +0000
++++ doc/meson.build
+@@ -12,6 +12,7 @@ adoc_sources = [
+     'FvwmBacker.adoc',
+     'FvwmButtons.adoc',
+     'FvwmCommand.adoc',
++    'FvwmConsole.adoc',
+     'FvwmEvent.adoc',
+     'FvwmForm.adoc',
+     'FvwmIconMan.adoc',
+@@ -77,27 +78,6 @@ if get_option('htmldoc')
+     # This is done by using sed to remove the lines that contain the module names.
+     index_src = 'index.adoc.in'
+     index_dst = 'index.adoc'
+-    if golang.found()
+-        index = configure_file(
+-            input: index_src,
+-            output: index_dst,
+-            command: [
+-                sed,
+-                '-e', '/FvwmConsole.adoc/d',
+-                '@INPUT@',
+-            ],
+-            capture: true,
+-        )
+-        adoc_sources += ['FvwmPrompt.adoc']
+-    else
+-        index = configure_file(
+-            input: index_src,
+-            output: index_dst,
+-            command: [sed, '-e', '/FvwmPrompt.adoc/d', '@INPUT@'],
+-            capture: true,
+-        )
+-        adoc_sources += ['FvwmConsole.adoc']
+-    endif
+ 
+     html_sources = adoc_sources
+ 
