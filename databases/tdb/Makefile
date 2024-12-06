@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2024/08/07 10:40:06 adam Exp $
+# $NetBSD: Makefile,v 1.57 2024/12/06 09:23:16 nros Exp $
 
 DISTNAME=	tdb-1.4.12
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/tdb/
 
@@ -45,4 +46,6 @@ SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${P
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
