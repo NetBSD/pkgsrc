@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/11/30 20:57:25 pin Exp $
+# $NetBSD: Makefile,v 1.17 2024/12/06 08:15:48 pin Exp $
 
-DISTNAME=	bacon-3.4.0
+DISTNAME=	bacon-3.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Canop/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
