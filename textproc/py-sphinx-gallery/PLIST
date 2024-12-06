@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/21 15:11:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/06 10:52:23 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -179,6 +179,12 @@ ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_matplotlib_alt.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_matplotlib_backend.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_matplotlib_backend.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_matplotlib_backend.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_block_separate.py
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_block_separate.pyc
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_block_separate.pyo
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_separate.py
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_separate.pyc
+${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_multi_image_separate.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_numpy_matplotlib.py
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_numpy_matplotlib.pyc
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/examples/plot_numpy_matplotlib.pyo
