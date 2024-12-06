@@ -1,4 +1,4 @@
-$NetBSD: patch-otherlibs_configurator_src_v1.ml,v 1.1 2024/11/30 01:05:01 dholland Exp $
+$NetBSD: patch-otherlibs_configurator_src_v1.ml,v 1.1 2024/12/06 16:41:16 gdt Exp $
 
 Don't try to "which" absolute paths.
 
