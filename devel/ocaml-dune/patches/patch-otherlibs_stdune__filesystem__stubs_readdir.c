@@ -1,4 +1,8 @@
-$NetBSD: patch-otherlibs_stdune__filesystem__stubs_readdir.c,v 1.1 2023/11/05 21:26:42 jaapb Exp $
+$NetBSD: patch-otherlibs_stdune__filesystem__stubs_readdir.c,v 1.2 2024/12/06 16:41:16 gdt Exp $
+
+Extend conditional for HAIKU to SunOS, for no apparent reason.
+
+\todo File upstream.  
 
 --- otherlibs/stdune/dune_filesystem_stubs/readdir.c.orig	2023-10-09 11:08:29.000000000 +0000
 +++ otherlibs/stdune/dune_filesystem_stubs/readdir.c
