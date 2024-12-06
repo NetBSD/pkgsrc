@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2023/11/05 21:26:41 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.5 2024/12/06 16:41:16 gdt Exp $
 
 # used by devel/ocaml-dune-configurator/Makefile
 
@@ -11,3 +11,4 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 GITHUB_PROJECT=	dune
 
 DISTINFO_FILE=	${PKGDIR}/../../devel/ocaml-dune/distinfo
+PATCHDIR=	${PKGDIR}/../../devel/ocaml-dune/patches
