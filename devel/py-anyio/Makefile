@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:00 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/12/06 08:07:12 adam Exp $
 
-DISTNAME=	anyio-4.6.2.post1
+DISTNAME=	anyio-4.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyio/}
@@ -21,7 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-psutil>=5.9:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.6.1:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 TEST_DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
-TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.17:../../devel/py-uvloop
+TEST_DEPENDS+=	${PYPKGPREFIX}-uvloop>=0.21:../../devel/py-uvloop
 
 USE_LANGUAGES=	# none
 
@@ -32,7 +32,10 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-exceptiongroup>=1.0.2:../../devel/py-exceptiongroup
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.1:../../devel/py-typing-extensions
+DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.5:../../devel/py-typing-extensions
+.endif
+.if ${PYTHON_VERSION} >= 310
+TEST_DEPENDS+=	${PYPKGPREFIX}-truststore>=0.9.1:../../security/py-truststore
 .endif
 
 .include "../../lang/python/wheel.mk"
