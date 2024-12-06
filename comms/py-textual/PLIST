@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/11/17 10:02:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/06 22:06:50 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -279,6 +279,9 @@ ${PYSITELIB}/textual/demo/data.pyo
 ${PYSITELIB}/textual/demo/demo_app.py
 ${PYSITELIB}/textual/demo/demo_app.pyc
 ${PYSITELIB}/textual/demo/demo_app.pyo
+${PYSITELIB}/textual/demo/game.py
+${PYSITELIB}/textual/demo/game.pyc
+${PYSITELIB}/textual/demo/game.pyo
 ${PYSITELIB}/textual/demo/home.py
 ${PYSITELIB}/textual/demo/home.pyc
 ${PYSITELIB}/textual/demo/home.pyo
@@ -309,9 +312,6 @@ ${PYSITELIB}/textual/document/_edit.pyo
 ${PYSITELIB}/textual/document/_history.py
 ${PYSITELIB}/textual/document/_history.pyc
 ${PYSITELIB}/textual/document/_history.pyo
-${PYSITELIB}/textual/document/_languages.py
-${PYSITELIB}/textual/document/_languages.pyc
-${PYSITELIB}/textual/document/_languages.pyo
 ${PYSITELIB}/textual/document/_syntax_aware_document.py
 ${PYSITELIB}/textual/document/_syntax_aware_document.pyc
 ${PYSITELIB}/textual/document/_syntax_aware_document.pyo
@@ -515,13 +515,13 @@ ${PYSITELIB}/textual/tree-sitter/highlights/html.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/java.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/javascript.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/json.scm
-${PYSITELIB}/textual/tree-sitter/highlights/kotlin.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/markdown.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/python.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/regex.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/rust.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/sql.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/toml.scm
+${PYSITELIB}/textual/tree-sitter/highlights/xml.scm
 ${PYSITELIB}/textual/tree-sitter/highlights/yaml.scm
 ${PYSITELIB}/textual/types.py
 ${PYSITELIB}/textual/types.pyc
