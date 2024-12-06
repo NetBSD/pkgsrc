@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/06/20 11:31:57 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/06 21:30:26 wiz Exp $
 
-DISTNAME=	cppy-1.2.1
+DISTNAME=	cppy-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cppy/}
@@ -10,11 +10,10 @@ HOMEPAGE=	https://github.com/nucleic/cppy
 COMMENT=	C++ headers for C extension development
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
