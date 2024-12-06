@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25156 2024/12/06 21:37:13 wiz Exp $
+$NetBSD: TODO,v 1.25157 2024/12/06 21:39:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -979,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o objc-3.3.24
 	o obs-studio-30.2
 	o ocaml-5.2.0 [wip]
+	o ocaml-5.2.1
 	o ocaml-cppo-1.6.9
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
@@ -1162,7 +1163,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-syslog-ng-3.31.2
 	o py-textual-0.88.1
 	o py-tokyocabinet-0.6
-	o py-twine-6.0.0
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
