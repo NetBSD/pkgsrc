@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/28 09:02:31 adam Exp $
+$NetBSD: distinfo,v 1.9 2024/12/06 21:39:43 wiz Exp $
 
-BLAKE2s (twine-5.1.1.tar.gz) = fcd52a2ce5f808f281d06550238f90554255b913cc431bf1fa8bbb94c76575d7
-SHA512 (twine-5.1.1.tar.gz) = 77d45240ef86d812a5e54868f7db0fc114ca31bfc9d90d8ac2183ecba4b52c52d0685b99cf968cf5685c926ed6b884ba72c51566031bb91a976dc0906775d7cf
-Size (twine-5.1.1.tar.gz) = 225531 bytes
+BLAKE2s (twine-6.0.1.tar.gz) = f66b9ec1ea7b34aa524129b2ff03e5d222d715aea80ce9450dd7e3d4154b9ca2
+SHA512 (twine-6.0.1.tar.gz) = 8131917fa2e19b4bc0fc17f3204682662ce78a4e023fbfb596e77163237adb12a9680d7dda85d78bdcbf9280aa2e53141e2b1e6ce998cb0ae2bfce72f9ec76a0
+Size (twine-6.0.1.tar.gz) = 227175 bytes
