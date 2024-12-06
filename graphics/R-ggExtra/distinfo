@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/06 23:32:43 mef Exp $
 
-BLAKE2s (R/ggExtra_0.9.tar.gz) = 81cf398ddcf0bcebd1143d174bb189bb956d3be3d52d744b8c30a814ab34eb83
-SHA512 (R/ggExtra_0.9.tar.gz) = a37ecbed3c9f822e7326e9c28dd705dc6defaca44827ead093cf91e4d02b79ffa4176f4fb3307d21bba65e2cc080899c64fd81188984541b9ba56c6a407d62cf
-Size (R/ggExtra_0.9.tar.gz) = 2218518 bytes
+BLAKE2s (R/ggExtra_0.10.1.tar.gz) = 82b507f0436d4780665805afdc8606371d4aceca5895976dc141ea1db57eaf59
+SHA512 (R/ggExtra_0.10.1.tar.gz) = 0973ecd82293f17112b16ffe6ab8cb45faafa01af12abe92c850199c82bf22cfd675b4f4c433f89712fc53448ff63ab377f97cf08a50d73b2199f3631d9cd30c
+Size (R/ggExtra_0.10.1.tar.gz) = 918679 bytes
