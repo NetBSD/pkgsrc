@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/11/28 08:46:12 pin Exp $
+# $NetBSD: Makefile,v 1.27 2024/12/06 22:33:56 vins Exp $
 
-DISTNAME=	v0.8.9
+DISTNAME=	v0.8.10
 PKGNAME=	${DISTNAME:S|^v|meli-|}
 CATEGORIES=	mail news
 DIST_SUBDIR=	${PKGNAME_NOREV}
