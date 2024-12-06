@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2021/09/20 01:36:24 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/06 23:32:43 mef Exp $
 
 R_PKGNAME=	ggExtra
-R_PKGVER=	0.9
+R_PKGVER=	0.10.1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
