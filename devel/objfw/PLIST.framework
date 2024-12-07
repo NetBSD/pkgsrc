@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.7 2024/11/10 20:54:59 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.8 2024/12/07 16:44:01 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -45,6 +45,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFData.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDatagramSocket.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDate.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFDictionary.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFEmbeddedIRIHandler.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFEnumerationMutationException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFEnumerator.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFException.h
