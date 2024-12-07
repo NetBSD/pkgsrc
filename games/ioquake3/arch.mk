@@ -1,4 +1,4 @@
-# $NetBSD: arch.mk,v 1.1 2024/05/07 21:48:54 nia Exp $
+# $NetBSD: arch.mk,v 1.2 2024/12/07 17:32:16 nia Exp $
 
 .if !defined(QUAKE_ARCH)
 
@@ -10,6 +10,8 @@ QUAKE_ARCH=	arm
 QUAKE_ARCH=	mips
 .elif ${MACHINE_ARCH:M*sh3*}
 QUAKE_ARCH=	sh
+.elif ${MACHINE_ARCH} == "i386"
+QUAKE_ARCH=	x86
 .elif ${MACHINE_ARCH} == "powerpc"
 QUAKE_ARCH=	ppc
 .elif ${MACHINE_ARCH} == "powerpc64"
