@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:45:57 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/12/07 05:05:10 mef Exp $
 
-BLAKE2s (R/polyclip_1.10-0.tar.gz) = 9a50e3fbbb118fa42f54fd6f02cea8a7eca79bf95063dae5d54d63bc961dbef4
-SHA512 (R/polyclip_1.10-0.tar.gz) = 53a1ab0eca17178da415bc9a40b661ab2d5d3341de92a72b02c848ca636a7abc29b66ed9e78c929ec76685a698ef1b83524aaf90d83d4b41b4a1ed2c3e083d03
-Size (R/polyclip_1.10-0.tar.gz) = 79619 bytes
+BLAKE2s (R/polyclip_1.10-7.tar.gz) = 26fc6477db1436413ecbf0b193c2da8fc1eff1deecff68f0b496c9e499435eb5
+SHA512 (R/polyclip_1.10-7.tar.gz) = d7fb1d560651a4687a7f9f06fd19a97fabf93f8356cbdc46c9ab90ca78699f28f7aead6719b2b673ed4387d75105a560197237328e9c5683a3621228183ad2b6
+Size (R/polyclip_1.10-7.tar.gz) = 80102 bytes
