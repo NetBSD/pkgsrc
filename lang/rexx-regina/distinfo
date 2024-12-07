@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/04/02 18:08:37 rhialto Exp $
+$NetBSD: distinfo,v 1.10 2024/12/07 19:42:15 rhialto Exp $
 
 BLAKE2s (regina395.zip) = fa88612a86ebd94c71dab0520478ffd0872514c2bf5c13c9f31b47e0931013ed
 SHA512 (regina395.zip) = 6ad493b7dc63cd110b19f3d25d6bbd96d145a78b7c15c8586ac83e0327ebe9d264ec4fc49848f1630d18141e1c636fe283da6ff5986f07a734b25f0d2e3737de
 Size (regina395.zip) = 2949434 bytes
-SHA1 (patch-aa) = 130d61a03d73bc431008ba54863554ad701de1a3
+SHA1 (patch-aa) = 45f8c23796ca013c03b81334dbf0913cf581d689
 SHA1 (patch-ab) = 2975ea1dabe871650a153cd294a0f23d1f3120a0
