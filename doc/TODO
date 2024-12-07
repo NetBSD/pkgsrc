@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25158 2024/12/06 22:06:59 wiz Exp $
+$NetBSD: TODO,v 1.25159 2024/12/07 03:04:46 mef Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
 	o R-fBasics-3042.89.1
-	o R-labeling-0.4.2
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SOGo5-5.11.1 [wip]
