@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/02/22 17:33:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/12/07 18:03:53 wiz Exp $
 include/libbson-1.0/bson.h
 include/libbson-1.0/bson/bcon.h
 include/libbson-1.0/bson/bson-atomic.h
@@ -95,6 +95,7 @@ lib/cmake/libmongoc-1.0/libmongoc-1.0-config-version.cmake
 lib/cmake/libmongoc-1.0/libmongoc-1.0-config.cmake
 lib/cmake/libmongoc-static-1.0/libmongoc-static-1.0-config-version.cmake
 lib/cmake/libmongoc-static-1.0/libmongoc-static-1.0-config.cmake
+${PLIST.sasl}lib/cmake/mongoc-1.0/3rdParty/FindSASL2.cmake
 lib/cmake/mongoc-1.0/mongoc-1.0-config-version.cmake
 lib/cmake/mongoc-1.0/mongoc-1.0-config.cmake
 lib/cmake/mongoc-1.0/mongoc-targets-relwithdebinfo.cmake
