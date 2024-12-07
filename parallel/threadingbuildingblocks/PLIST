@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/11/09 18:43:12 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/07 16:07:05 nia Exp $
 include/oneapi/tbb.h
 include/oneapi/tbb/blocked_range.h
 include/oneapi/tbb/blocked_range2d.h
@@ -154,5 +154,6 @@ lib/libtbbmalloc.so.2.14
 lib/libtbbmalloc_proxy.so
 lib/libtbbmalloc_proxy.so.2
 lib/libtbbmalloc_proxy.so.2.14
-lib/pkgconfig/tbb.pc
+${PLIST.lp64}lib/pkgconfig/tbb.pc
+${PLIST.lp32}lib/pkgconfig/tbb32.pc
 share/doc/TBB/README.md
