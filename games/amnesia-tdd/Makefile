@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/08/25 06:18:42 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/07 10:27:29 nia Exp $
 
 DISTNAME=	amnesia-tdd-0.3.2
 PKGREVISION=	5
@@ -24,9 +24,9 @@ USE_CXX_FEATURES+=	c++11
 FORCE_CXX_STD=		c++11
 
 .include "../../mk/bsd.prefs.mk"
-.if ${MACHINE_ARCH} != "x86_64"
-# Disables SSE use in HPL2/dependencies/Newton
-CFLAGS+=		-D_SCALAR_ARITHMETIC_ONLY=1
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+# HPL2/dependencies/Newton
+CFLAGS+=		-msse
 .endif
 
 .include "../../audio/openal-soft/buildlink3.mk"
