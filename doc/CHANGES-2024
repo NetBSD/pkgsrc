@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7463 2024/12/07 11:18:41 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7464 2024/12/07 11:19:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11248,3 +11248,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/SDL2 to 2.30.10 [adam 2024-12-07]
 	Updated net/yt-dlp to 2024.12.6 [adam 2024-12-07]
 	Updated security/mozilla-rootcerts to 1.1.20241118 [wiz 2024-12-07]
+	Updated security/mozilla-rootcerts-openssl to 2.18 [wiz 2024-12-07]
