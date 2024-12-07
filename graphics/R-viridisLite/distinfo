@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 07:15:27 mef Exp $
 
-BLAKE2s (R/viridisLite_0.4.0.tar.gz) = 2376c50ae11ea93cf811f94cc54d1a2b0c4378b95ee83ea2632f0b9a5d48b091
-SHA512 (R/viridisLite_0.4.0.tar.gz) = 91fdaed822c6a0dca9e30b8e4baa0d53e751666d4ed743c41a9d76c5efa2370988fec2fda0d37bd8544bb8df543fc318c0ca5757518219237deea6cefe69c7a7
-Size (R/viridisLite_0.4.0.tar.gz) = 1267080 bytes
+BLAKE2s (R/viridisLite_0.4.2.tar.gz) = 29c7de2b94cfcedc05fe34f027cc6fcd15fe3c1ecf8382debe540a9b6eb0f6ab
+SHA512 (R/viridisLite_0.4.2.tar.gz) = e1a3a7675da49bf1b5a13c00ee4c4f865129386f1945932fc6dd6e876fd017b8b721bd11ee33a9a683e91fef6b87f2900f2bfd9782147ae28df21cdc5ba79de9
+Size (R/viridisLite_0.4.2.tar.gz) = 1267121 bytes
