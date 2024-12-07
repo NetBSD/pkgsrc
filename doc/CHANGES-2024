@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7450 2024/12/07 03:54:33 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7451 2024/12/07 04:15:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11227,3 +11227,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/R-biglm to 0.9.3 [mef 2024-12-07]
 	Updated graphics/R-magick to 2.8.5 [mef 2024-12-07]
 	Updated graphics/R-manipulateWidget to 0.11.1 [mef 2024-12-07]
+	Updated sysutils/R-ff to 4.5.0 [mef 2024-12-07]
