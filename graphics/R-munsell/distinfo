@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 04:19:48 mef Exp $
 
-BLAKE2s (R/munsell_0.5.0.tar.gz) = 70411bfc2cf38b8441cd3ba2ef0f7ff084a45e51b4e31bcfeca755f327861b82
-SHA512 (R/munsell_0.5.0.tar.gz) = 12a66c2406bf5aecec52a504549e7beeaff67fb67aab9950c24e9e6300b458cf541c818630814433229c1b406a2830a32dc21e10cabcdb4429245d85ba96f8de
-Size (R/munsell_0.5.0.tar.gz) = 182653 bytes
+BLAKE2s (R/munsell_0.5.1.tar.gz) = 6b6d53717a7c92d81f744e4a297df8c1acc95b8f71dff2bb47b2e645ed86ff76
+SHA512 (R/munsell_0.5.1.tar.gz) = c2f1a6a3816145aa08e2aa4f6d56cfe69a43ab944c0fa844158a3e880a3f2bb6fefa7a6c19107ad4c2fd781ec9cbf0d1d6cd3f1f029b0ee14c8ca16e5e18644e
+Size (R/munsell_0.5.1.tar.gz) = 182310 bytes
