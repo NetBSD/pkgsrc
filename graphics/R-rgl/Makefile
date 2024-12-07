@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2023/03/12 05:58:25 mef Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/07 06:06:28 mef Exp $
 
 R_PKGNAME=	rgl
-R_PKGVER=	1.0.1
+R_PKGVER=	1.3.14
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,12 +19,18 @@ DEPENDS+=	R-mathjaxr-[0-9]*:../../www/R-mathjaxr
 DEPENDS+=	R-shiny>=1.3.2:../../www/R-shiny
 
 # Packages suggested but not available:
-#   'orientlib', 'misc3d', 'magick', 'plotrix', 'tripack', 'interp',
-#   'alphashape3d', 'js', 'webshot2', 'downlit', 'pkgdown', 'extrafont'
-#   'V8', 'chromote'
+#   'orientlib', 'misc3d', 'plotrix', 'tripack', 'alphashape3d', 'js',
+#   'webshot2', 'extrafont', 'V8', 'chromote'
 
-TEST_DEPENDS+=	R-deldir-[0-9]*:../../geography/R-deldir
 TEST_DEPENDS+=	R-akima-[0-9]*:../../math/R-akima
+TEST_DEPENDS+=	R-deldir-[0-9]*:../../geography/R-deldir
+TEST_DEPENDS+=	R-downlit-[0-9]*:../../www/R-downlit
+TEST_DEPENDS+=	R-interp-[0-9]*:../../graphics/R-interp
+TEST_DEPENDS+=	R-jpeg-[0-9]*:../../graphics/R-jpeg
+TEST_DEPENDS+=	R-magick-[0-9]*:../../graphics/R-magick
+TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown
+TEST_DEPENDS+=	R-pkgdown-[0-9]*:../../www/R-pkgdown
+TEST_DEPENDS+=	R-png-[0-9]*:../../graphics/R-png
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 
