@@ -1,0 +1,16 @@
+$NetBSD: patch-contrib_Makefile.in,v 1.1 2024/12/07 06:56:56 tsutsui Exp $
+
+- fix ar(1) error on binutils 2.36 and later
+ https://mail-index.netbsd.org/pkgsrc-users/2023/12/thread1.html#038653
+
+--- contrib/Makefile.in.orig	2024-12-07 06:24:48.514683650 +0000
++++ contrib/Makefile.in
+@@ -20,7 +20,7 @@ all: contrib.a
+ 
+ contrib.a: config.h music.o pcm.o movie.o koedec.o koedec_wpd.o wavfile.o wavmix.o audio.o @AUDIO_IO@.o LittleEndian.o counter.o $(SRC_CDROM:.c=.o)
+ 	rm -f contrib.a
+-	ar clq contrib.a music.o pcm.o movie.o koedec.o koedec_wpd.o  wavfile.o wavmix.o audio.o @AUDIO_IO@.o LittleEndian.o counter.o $(SRC_CDROM:.c=.o)
++	ar cq contrib.a music.o pcm.o movie.o koedec.o koedec_wpd.o  wavfile.o wavmix.o audio.o @AUDIO_IO@.o LittleEndian.o counter.o $(SRC_CDROM:.c=.o)
+ 	ranlib contrib.a
+ 
+ config.h:

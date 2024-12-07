@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:44:33 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/12/07 06:56:56 tsutsui Exp $
 
 BLAKE2s (xkanon-071209.tar.gz) = 665b9106f648cac23395ff6f6c72d1888cc43f20e9e1ac184ea3add6ae2e3afc
 SHA512 (xkanon-071209.tar.gz) = ac5ffabecbe2c34ece074ece1ebe69f426d26f69611aedd1d0660f096908d201550561eee5b2a87c7c8d22bb531a0048f3258c3b60428b3dbdee8293d7dcac0c
@@ -10,6 +10,7 @@ SHA1 (patch-Makefile.in) = d54f8bdba33786b08f6716cacceaba4b31980740
 SHA1 (patch-ayusys__gtk2.ja.po) = 5bfde3e112fee80be85ef2af891b8e28176c52b0
 SHA1 (patch-configure) = 8a93ce6b413ef8850d8c6b6a7cdb45a5cfa812ed
 SHA1 (patch-configure.in) = 9a58bae196eb993c1bce268d035fcf1df8b88c05
+SHA1 (patch-contrib_Makefile.in) = 15519d2c3eb0f01e245de864fa3ca93cb81c58a6
 SHA1 (patch-file.cc) = 7b9de34010f7d2cbf2d21ba9ff94d1a453cfa63a
 SHA1 (patch-file.h) = 0b2467837036b6bcf66ab5263413b55c326dbd9a
 SHA1 (patch-image__di.h) = 93d67c8b14a85c58eaedf5fb61d3c58c819c0fa2
