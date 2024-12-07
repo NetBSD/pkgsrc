@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 03:54:22 mef Exp $
 
-BLAKE2s (R/manipulateWidget_0.11.0.tar.gz) = b24008427b5af2183948e2dbb2f2dcbb3ade56a03e2351c80c326f4be1e7d8f0
-SHA512 (R/manipulateWidget_0.11.0.tar.gz) = 405352443e83b266c6da162fc06bc0e36ba77eb29d494c09c54c8c4af3ce694ea688ea0e64f38a42eec1c50562107612d44f11a6979101a87c8118d928324873
-Size (R/manipulateWidget_0.11.0.tar.gz) = 3961928 bytes
+BLAKE2s (R/manipulateWidget_0.11.1.tar.gz) = d235fedcee21926e11757362b0ca5eea088f369355edf6c6cf9ffa6e211d78e3
+SHA512 (R/manipulateWidget_0.11.1.tar.gz) = ac0ac37f6bd122940577d93149065a4330e83a514d36797042b803119d0659e905fcefaa69fcd6e69740f76359305c0542d7c1560b149d369d80d413052a29b6
+Size (R/manipulateWidget_0.11.1.tar.gz) = 3961851 bytes
