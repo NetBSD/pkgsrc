@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/11/18 08:55:14 adam Exp $
+# $NetBSD: Makefile,v 1.80 2024/12/07 18:12:54 wiz Exp $
 
 DISTNAME=	qbittorrent-5.0.2
 CATEGORIES=	net
@@ -16,6 +16,9 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+
+# error: 'class std::basic_ostream<char>' has no member named 'str'
+GCC_REQD+=		11
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 # error "Boost.Stacktrace requires `_Unwind_Backtrace` function
