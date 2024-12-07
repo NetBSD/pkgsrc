@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:56 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 03:22:45 mef Exp $
 
-BLAKE2s (R/latex2exp_0.5.0.tar.gz) = 45e4b3b65e90c9847d2562cd40fc96a1d8e0e33c9e46913a703a4883d5ed0ccc
-SHA512 (R/latex2exp_0.5.0.tar.gz) = bdaa519fa5f2266fc549ecc1c129b0d4e16ea8c84cb05bbd11b4daac78bcd6d8d6f1c992b409aa122e9fe568a2474f0ab711bb5e8700f3a1bfc57730b5f23ee5
-Size (R/latex2exp_0.5.0.tar.gz) = 237069 bytes
+BLAKE2s (R/latex2exp_0.9.6.tar.gz) = fe5d58afedf7d4c096076ddd2df612ec30e3045a96335227101a3743851a4565
+SHA512 (R/latex2exp_0.9.6.tar.gz) = bd26f2c157e004626806c1dccb9a16acffd3140a6fe1c108948ef49934112c4c81a64b040b0a9473d348ddc99bfe56d971bd709b38686f4f259bf9b0dac985e3
+Size (R/latex2exp_0.9.6.tar.gz) = 1498904 bytes
