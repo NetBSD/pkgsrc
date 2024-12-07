@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/12/04 22:54:17 vins Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/07 20:37:34 vins Exp $
 
 DISTNAME=	table-mysql-1.2.1
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
@@ -22,7 +22,7 @@ GNU_CONFIGURE=	yes
 SUBST_CLASSES+=		dir
 SUBST_STAGE.dir=	pre-configure
 SUBST_MESSAGE.dir=	Fixing smtpdir for pkgsrc.
-SUBST_FILES.dir=	Makefile.am table-mysql.5
+SUBST_FILES.dir=	Makefile.am
 SUBST_SED.dir+=		-e "s:libexec/smtpd:libexec/opensmtpd:g"
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
