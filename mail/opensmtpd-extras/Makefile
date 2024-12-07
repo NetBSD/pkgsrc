@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/12/03 08:07:43 vins Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/07 20:50:08 vins Exp $
 
 DISTNAME=		opensmtpd-extras-6.7.1_20241022
 CATEGORIES=		mail
@@ -13,6 +13,13 @@ COMMENT=	Addons for OpenSMTPD
 LICENSE=	isc
 
 CONFLICTS+=	opensmtpd>=7.6.0
+CONFLICTS=	+ opensmtpd-table-ldap-[0-9]*
+CONFLICTS+=	opensmtpd-table-mysql-[0-9]*
+CONFLICTS+=	opensmtpd-table-passwd-[0-9]*
+CONFLICTS+=	opensmtpd-table-postgres-[0-9]*
+CONFLICTS+=	opensmtpd-table-redis-[0-9]*
+CONFLICTS+=	opensmtpd-table-socketmap-[0-9]*
+CONFLICTS+=	opensmtpd-table-sqlite-[0-9]*
 
 BUILD_DEFS+=		VARBASE
 PTHREAD_AUTO_VARS=	yes
