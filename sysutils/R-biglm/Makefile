@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2022/12/18 00:32:56 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/07 03:28:28 mef Exp $
 
 R_PKGNAME=	biglm
-R_PKGVER=	0.9-2.1
+R_PKGVER=	0.9-3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
