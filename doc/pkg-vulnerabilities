@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.282 2024/12/05 08:04:38 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.283 2024/12/07 06:53:52 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -17409,9 +17409,9 @@ tor-browser<8.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/det
 xpdf<4.2	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-12360
 horde-[0-9]*	remote-file-write	https://nvd.nist.gov/vuln/detail/CVE-2019-9858
 glib2>=2.15.0<2.60.4	security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-12450
-gvfs>=1.29.4	multiple-vulnerabilities	https://nvd.nist.gov/vuln/detail/CVE-2019-12448
-gvfs>=1.29.4	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2019-12447
-gvfs>=1.29.4	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2019-12449
+gvfs<1.41.3	multiple-vulnerabilities	https://nvd.nist.gov/vuln/detail/CVE-2019-12448
+gvfs<1.41.3	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2019-12447
+gvfs<1.41.3	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2019-12449
 apache-roller>=5.1<5.2.2	multiple-vulnerabilities	https://nvd.nist.gov/vuln/detail/CVE-2018-17198
 apache-tomcat>=7.0.0<7.0.94	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-0221
 apache-tomcat>=8.5.0<8.5.40	cross-site-scripting		https://nvd.nist.gov/vuln/detail/CVE-2019-0221
