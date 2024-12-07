@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2024/04/02 18:08:37 rhialto Exp $
+$NetBSD: patch-aa,v 1.5 2024/12/07 19:42:15 rhialto Exp $
 
 - try to defang the building for 32 bits
 - use our $LDFLAGS
 - portability fix of `test ==`
+- enable version numbered shared library on {Net,Open,Free}BSD
 
---- configure.orig	2022-08-10 05:33:51.000000000 +0000
-+++ configure
-@@ -3507,8 +3507,8 @@ fi
+--- configure.orig	2022-08-10 13:33:51.000000000 +0800
++++ configure	2024-12-06 11:33:48.217867627 +0800
+@@ -3507,8 +3507,8 @@
  #
  # Now do platform specific tests
  #
@@ -17,7 +18,7 @@ $NetBSD: patch-aa,v 1.4 2024/04/02 18:08:37 rhialto Exp $
  on_osx="no"
  osis64bit=no
  bitflag="32"
-@@ -3564,7 +3564,7 @@ case "$target" in
+@@ -3564,7 +3564,7 @@
           MACH_ARCH="`cat /etc/apk/arch`"
        fi
        ;;
@@ -26,7 +27,37 @@ $NetBSD: patch-aa,v 1.4 2024/04/02 18:08:37 rhialto Exp $
        mach="`uname -m`"
        if test "$mach" = "amd64"; then
           bitflag="64"
-@@ -9252,13 +9252,13 @@ if { { eval echo "\"\$as_me\":${as_linen
+@@ -9040,21 +9040,14 @@
+       SHLPRE="lib"
+       SHL_LD="ld -assert pure-text -o ${SHLPRE}${SHLFILE}${SHLPST} "'$('SHOFILES')'
+       ;;
+-   *-freebsd* | *openbsd*)
+-      if test "$ac_cv_prog_CC" = "gcc" -o "$ac_cv_prog_CC" = "g++" -o "$ac_cv_prog_CC" = "clang"; then
+-         LD_RXLIB_A1="$ac_cv_prog_CC -shared ${LDFLAGS} -o \$(@)"
+-         LD_RXLIB_A2="$ac_cv_prog_CC -shared ${LDFLAGS} -o \$(@)"
+-         LD_RXLIB_UTILA="$ac_cv_prog_CC -shared ${LDFLAGS} -o \$(@)"
+-         SHL_LD="$ac_cv_prog_CC -shared ${LDFLAGS} -o ${SHLPRE}${SHLFILE}${SHLPST} "'$('SHOFILES')'
+-      else
+-         LD_RXLIB_A1="ld -Bdynamic -Bshareable ${LDFLAGS} -o \$(@)"
+-         LD_RXLIB_A2="ld -Bdynamic -Bshareable ${LDFLAGS} -o \$(@)"
+-         LD_RXLIB_UTILA="ld -Bdynamic -Bshareable ${LDFLAGS} -o \$(@)"
+-         LD_RXLIB_B1="-lc -L. -l${SHLFILE}"
+-         LD_RXLIB_B2="-lc -L. -l${SHLFILE}"
+-         LD_RXLIB_UTILB="-lc -L. -l${SHLFILE}"
+-         SHL_LD="ld -Bdynamic -Bshareable ${LDFLAGS} -o ${SHLPRE}${SHLFILE}${SHLPST} "'$('SHOFILES')'
+-      fi
++   *-freebsd* | *-openbsd* | *-netbsd*)
++      LD_RXLIB_A1="${CC} -shared ${LDFLAGS} -o \$(@)"
++      LD_RXLIB_A2="${CC} -shared ${LDFLAGS} -o \$(@)"
++      LD_RXLIB_UTILA="${CC} -shared ${LDFLAGS} -o \$(@)"
++      SHL_LD="${CC} -o ${SHLPRE}${SHLFILE}${SHLPST}.\$(ABI) -shared ${SHL_SCRIPT} -Wl,-soname=${SHLPRE}${SHLFILE}${SHLPST}.\$(ABI_MAJOR) \$(SHOFILES) -lc"
++      SHL_BASE="${SHLPRE}${SHLFILE}${SHLPST}.\$(ABI)"
++      OTHER_INSTALLS="installabilib"
++      USE_ABI="yes"
+       STATIC_LDFLAGS="-static"
+       SHLPRE="lib"
+       ;;
+@@ -9252,13 +9245,13 @@
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; } && test -s conftest.o; then
@@ -42,7 +73,7 @@ $NetBSD: patch-aa,v 1.4 2024/04/02 18:08:37 rhialto Exp $
     else
        mh_dyn_link='ld -G -o conftest.so.1.0 conftest.o 1>&5'
        if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$mh_dyn_link\""; } >&5
-@@ -9340,15 +9340,15 @@ if { { eval echo "\"\$as_me\":${as_linen
+@@ -9340,15 +9333,15 @@
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; } && test -s conftest.o; then
@@ -62,7 +93,7 @@ $NetBSD: patch-aa,v 1.4 2024/04/02 18:08:37 rhialto Exp $
        LD_RXLIB_B1="-L. -l${SHLFILE}"
        LD_RXLIB_B2="-L. -l${SHLFILE}"
        LD_RXLIB_UTILB="-L. -l${SHLFILE}"
-@@ -9934,7 +9934,7 @@ fi
+@@ -9934,7 +9927,7 @@
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking getting PACKAGE_RELEASE value" >&5
  $as_echo_n "checking getting PACKAGE_RELEASE value... " >&6; }
  PACKAGE_RELEASE=`echo $PACKAGE_RELEASE`

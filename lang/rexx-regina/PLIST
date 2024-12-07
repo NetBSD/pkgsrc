@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/02 18:08:37 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/07 19:42:15 rhialto Exp $
 bin/regina
 bin/regina-config
 bin/rexx
@@ -7,6 +7,8 @@ bin/rxstack
 include/rexxsaa.h
 lib/libregina.a
 lib/libregina.so
+lib/libregina.so.3
+lib/libregina.so.3.9
 lib/pkgconfig/libregina.pc
 lib/regina-rexx/${PKGVERSION}/libregutil.so
 lib/regina-rexx/${PKGVERSION}/librxtest1.so
