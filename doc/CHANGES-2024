@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7459 2024/12/07 06:28:50 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7460 2024/12/07 07:15:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11243,3 +11243,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated mail/postfix-sqlite to 3.9.1nb3 [taca 2024-12-07]
 	Updated graphics/R-thematic to 0.1.6 [mef 2024-12-07]
 	Updated graphics/R-viridis to 0.6.5 [mef 2024-12-07]
+	Updated graphics/R-viridisLite to 0.4.2 [mef 2024-12-07]
