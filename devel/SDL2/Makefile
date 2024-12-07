@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2024/11/04 21:31:46 nia Exp $
+# $NetBSD: Makefile,v 1.99 2024/12/07 10:34:48 adam Exp $
 
-DISTNAME=	SDL2-2.30.9
-PKGREVISION=	1
+DISTNAME=	SDL2-2.30.10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_PROJECT=	SDL
@@ -38,7 +37,7 @@ CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS.NetBSD+=	--disable-oss
 
 SUBST_CLASSES+=		rpath
-SUBST_STAGE.rpath=	pre-configure 
+SUBST_STAGE.rpath=	pre-configure
 SUBST_FILES.rpath=	sdl2-config.in
 SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
