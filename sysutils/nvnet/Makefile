@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2020/01/26 17:32:10 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/07 15:16:33 nia Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -22,6 +22,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/nvnet
+
+USE_TOOLS+=	tar
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
