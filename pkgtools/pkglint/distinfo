@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2024/12/07 11:47:18 rillig Exp $
+$NetBSD: distinfo,v 1.27 2024/12/07 12:25:34 rillig Exp $
 
 BLAKE2s (github.com_kr_pretty_@v_v0.2.1.mod) = c7902e2b218e48371c72208ab3a42754282b425818489f0872c333e1dc01c1f7
 SHA512 (github.com_kr_pretty_@v_v0.2.1.mod) = b920109a2a1f40e2c7bb4dd93d07138228fac3064b780449a38bf5e6cb0630c6b7bd79eaf18b35e0452846e5059b0e192682b0aa93cc563c6120816106b9f11b
@@ -33,6 +33,6 @@ Size (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.mod) = 71 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = 0f65407cbdc610b7d793aabb53ce86f87039d306762692fafe04de7c6669d460
 SHA512 (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = b69b95251b63b6fd0ed1953dae01edefa52126e2168246bc2cdf067879ae5f830df4e610da45f5ac5aa4789f70d79da8a9bfa7af5b3786ef8f1e665a8b397e02
 Size (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = 42835 bytes
-BLAKE2s (pkglint-23.9.0.tar.gz) = bc908e7fcc292e71e73f2a5866776a31eb021f6dad22854a01a6a75c8896dfd2
-SHA512 (pkglint-23.9.0.tar.gz) = 02496b452251fabee8c50869ffd72d8e5f79024196f3050f6e0df19cc9aa646c9a70181a066e70d8d01af2b48b3e36390acf95c608e69b05cad7cc5ca0abb826
-Size (pkglint-23.9.0.tar.gz) = 623134 bytes
+BLAKE2s (pkglint-23.9.1.tar.gz) = 5ba91dc7ea1521139e52eb3ee4d8ebb056be520e3ef0b0196ff9b7cd63e7a408
+SHA512 (pkglint-23.9.1.tar.gz) = eb8f855f8a350847208b5105eda7a31bd47df43b26825b6d31e25021c344d8f96994c8b6263ecbaf9d288c9d25bb24b8583e416b489b5c99dd7c5174c0c983ed
+Size (pkglint-23.9.1.tar.gz) = 623172 bytes
