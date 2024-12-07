@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:45:57 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 06:28:42 mef Exp $
 
-BLAKE2s (R/viridis_0.6.1.tar.gz) = 36e384576bd2b99d7224a52bee1ed309b820570b4052a545ab2299ea6923a784
-SHA512 (R/viridis_0.6.1.tar.gz) = 2686d9db01ec4ba425a94667515c99f1fd1b1256833683e4e5d20ecb090d7f720887bc3c40b7593e896ed4193611747d57f75f2e1d5f23316963b1ef09430352
-Size (R/viridis_0.6.1.tar.gz) = 3054905 bytes
+BLAKE2s (R/viridis_0.6.5.tar.gz) = 8e178c7b50d9e80a05e27b02c0afdfee1da7f31d8de0477d12a7fddb6765ec57
+SHA512 (R/viridis_0.6.5.tar.gz) = 1645ef7887f1cc6b6034568b6ee462f8f4e09e0eb8aece466a3bdc9999dd3d124efad2592bb6b218491e6f4c3388ca81610dc328807cd7d7027e16cec53a718d
+Size (R/viridis_0.6.5.tar.gz) = 3047363 bytes
