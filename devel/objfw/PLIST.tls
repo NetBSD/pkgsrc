@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.tls,v 1.4 2024/04/14 18:00:08 js Exp $
+@comment $NetBSD: PLIST.tls,v 1.5 2024/12/07 16:44:01 js Exp $
 include/ObjFWTLS/ObjFWTLS.h
 lib/libobjfwtls.so
 lib/libobjfwtls.so.1
-lib/libobjfwtls.so.1.0.2
+lib/libobjfwtls.so.1.0.3
 lib/objfw-config/ObjFWTLS.oc
