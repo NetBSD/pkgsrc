@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2024/12/07 20:50:08 vins Exp $
+$NetBSD: MESSAGE,v 1.3 2024/12/07 20:51:56 vins Exp $
 
 IMPORTANT
 
@@ -13,7 +13,7 @@ Users updating to OpenSMTPD 7.6.0p0 or above, will be required to manually
 remove this package first. Extra table add-ons for 7.6.0 are now
 provided as standalone packages.
 
-mail/opensmtpd-extras is to be considered in maintainance mode, and only 
+mail/opensmtpd-extras is to be considered in maintainance mode, and only
 kept to provide long term support for users still running OpenSMTPD 7.5.0
 or below.
 
