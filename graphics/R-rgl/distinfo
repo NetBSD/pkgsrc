@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/03/12 05:58:25 mef Exp $
+$NetBSD: distinfo,v 1.5 2024/12/07 06:06:28 mef Exp $
 
-BLAKE2s (R/rgl_1.0.1.tar.gz) = 9dd0095ce44e82dcc304c7b23c788f3e69ce92fd5d6ce8ba813a388ee917e672
-SHA512 (R/rgl_1.0.1.tar.gz) = 890747b9d8d7d6ccd046e537d2fb61d20b8a65a02d88c499712b7a4a8137e53670cd6a0226cc1ef5f7c970c119f31bf1103ba1e00d27495055cac86baf5f5bd2
-Size (R/rgl_1.0.1.tar.gz) = 2436433 bytes
+BLAKE2s (R/rgl_1.3.14.tar.gz) = 0897a2bfbdfc072d21cf95d36bd5305d90e6237fff946add4d8c6bd471b02313
+SHA512 (R/rgl_1.3.14.tar.gz) = a2bc74a108650bb4b8bbcfd30c36e5ac1ff3352de3deee460930acbeebf4f85eb986685390ada86d25027bc2d6849bc6c9e895f30ad9d8b327e86b2d30392202
+Size (R/rgl_1.3.14.tar.gz) = 4067443 bytes
