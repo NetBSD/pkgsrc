@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2024/02/10 01:17:26 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.42 2024/12/07 18:07:35 wiz Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -28,6 +28,9 @@ GITHUB_SUBMODULES+=	microsoft wil fc5dbf55989fe20351c71d038a8d12de4b397a6d third
 DISTFILES+=	${DEFAULT_DISTFILES}
 
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${_GITHUB_DEFAULT_DISTFILES}
+
+# TODO: This package downloads files during the build. This should be fixed!
+ALLOW_NETWORK_ACCESS=	yes
 
 #MOZC_DISTS+=	bazel-skylib-1.4.1.tar.gz
 #SITES.bazel-skylib-1.4.1.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.4.1/
