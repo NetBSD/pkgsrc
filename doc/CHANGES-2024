@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7444 2024/12/07 02:49:37 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7445 2024/12/07 02:51:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11221,3 +11221,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/R-ggthemes to 5.1.0 [mef 2024-12-06]
 	Updated graphics/R-interp to 1.1.6 [mef 2024-12-06]
 	Updated graphics/R-ggExtra to 0.10.1 [mef 2024-12-07]
+	Updated graphics/R-isoband to 0.2.7 [mef 2024-12-07]
