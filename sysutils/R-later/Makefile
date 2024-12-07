@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/01/20 01:46:16 mef Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/07 05:59:14 mef Exp $
 
 R_PKGNAME=	later
-R_PKGVER=	1.3.2
+R_PKGVER=	1.4.1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,6 +9,8 @@ COMMENT=	Utilities for delaying function execution
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
+
+# Package suggested but not available: 'nanonext'
 
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
