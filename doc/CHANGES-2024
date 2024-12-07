@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7455 2024/12/07 05:59:24 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7456 2024/12/07 06:06:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11232,3 +11232,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated graphics/R-polyclip to 1.10.7 [mef 2024-12-07]
 	Updated graphics/R-ragg to 1.3.3 [mef 2024-12-07]
 	Updated sysutils/R-later to 1.4.1 [mef 2024-12-07]
+	Updated graphics/R-rgl to 1.3.14 [mef 2024-12-07]
