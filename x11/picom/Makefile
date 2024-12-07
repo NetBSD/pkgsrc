@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/08/06 13:39:40 nia Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/07 10:03:50 nia Exp $
 
 DISTNAME=	picom-11.2
 CATEGORIES=	x11
@@ -45,4 +45,5 @@ post-install:
 .include "../../x11/xcb-util/buildlink3.mk"
 .include "../../x11/xcb-util-image/buildlink3.mk"
 .include "../../x11/xcb-util-renderutil/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
