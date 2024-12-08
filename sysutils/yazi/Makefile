@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/09/05 10:40:09 pin Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/08 21:06:45 pin Exp $
 
-DISTNAME=	yazi-0.3.3
+DISTNAME=	yazi-0.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.79.0
+#RUST_REQ=	1.81.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.79.0 on amd64
+#This package is confirmed to build with Rust 1.81.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
@@ -25,11 +25,13 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/ya \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/keymap.toml \
+	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/keymap-default.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi
-	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/theme.toml \
+	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/theme-dark.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi
-	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/yazi.toml \
+	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/theme-light.toml \
+		${DESTDIR}${PREFIX}/share/examples/yazi
+	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/yazi-default.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi
 
 .include "../../lang/rust/cargo.mk"
