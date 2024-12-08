@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7484 2024/12/08 16:27:59 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7485 2024/12/08 16:29:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11269,3 +11269,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-io-event to 1.7.4 [taca 2024-12-08]
 	Updated devel/ruby-async to 2.21.1 [taca 2024-12-08]
 	Added devel/ruby-concurrent-ruby11 version 1.1.10 [taca 2024-12-08]
+	Updated devel/ruby-activesupport61 to 6.1.7.10nb1 [taca 2024-12-08]
