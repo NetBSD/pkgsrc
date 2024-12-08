@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.56 2024/07/29 07:19:01 wen Exp $
+$NetBSD: distinfo,v 1.57 2024/12/08 02:15:50 wen Exp $
 
-BLAKE2s (Dancer2-1.1.1.tar.gz) = c926cf09df09ef7bb928f1d5a1bc60502a40df97f8e45b4c418d04875baef730
-SHA512 (Dancer2-1.1.1.tar.gz) = 4ff302dc94dd06bf662b4fd569596333f8c9f51fc1d894a53db81bb179337f3af46c0c25ce078e3499198d1742f7ce6ce8bef53ac385e482b6c1c65fbb25541c
-Size (Dancer2-1.1.1.tar.gz) = 404091 bytes
+BLAKE2s (Dancer2-1.1.2.tar.gz) = 90beb283fd01f27839f99774ade56081491879ba6ecba4380f560b3a594bdaf6
+SHA512 (Dancer2-1.1.2.tar.gz) = 31123ed31ba4142615ccbb4419b7ab2c72d2fe40018d06e4781a35234cd5ea9d706f8b54687b6fb36fd9c027d435c8061aba2f303c4a9e63991c5c1a3e2962b5
+Size (Dancer2-1.1.2.tar.gz) = 404292 bytes
