@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.284 2024/10/16 20:16:25 nia Exp $
+# $NetBSD: gcc.mk,v 1.285 2024/12/08 10:32:28 nia Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -190,18 +190,17 @@ GCC_REQD+=     14
 # gcc documents that 11 is required, with a few perhaps-obscure
 # features requiring 12.
 
+# 10 is the version included in netbsd-10.
 # We hope that it remains OK for most C++20 in the future...
-# \todo Change to 11 or justify.
 GCC_REQD+=	10
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++17)
 # gcc documents that 7 is required, except for a perhaps-obscure
 # template feature.  However, <charconv> is part of c++17 and that
-# requires gcc 8.
+# requires gcc 8.  7 is the version in netbsd-9.
 
 GCC_REQD+=	7
-# \todo Change to 8 (<charconv> is not so odd) or justify.
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++14)
