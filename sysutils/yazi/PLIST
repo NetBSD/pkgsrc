@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/06 16:51:14 pin Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/08 21:06:45 pin Exp $
 bin/ya
 bin/yazi
-share/examples/yazi/keymap.toml
-share/examples/yazi/theme.toml
-share/examples/yazi/yazi.toml
+share/examples/yazi/keymap-default.toml
+share/examples/yazi/theme-dark.toml
+share/examples/yazi/theme-light.toml
+share/examples/yazi/yazi-default.toml
