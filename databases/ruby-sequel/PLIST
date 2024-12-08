@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.123 2024/10/13 16:19:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.124 2024/12/08 14:19:59 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -153,6 +153,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_range.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_range_ops.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_row_ops.rb
+${GEM_LIBDIR}/lib/sequel/extensions/pg_schema_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_static_cache_updater.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_timestamptz.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
@@ -238,6 +239,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/hook_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/input_transformer.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/insert_conflict.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/insert_returning_select.rb
+${GEM_LIBDIR}/lib/sequel/plugins/inspect_pk.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/instance_filters.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/instance_hooks.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/instance_specific_default.rb
