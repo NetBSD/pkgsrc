@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/08 22:39:14 wiz Exp $
 
 DISTNAME=	configobj-5.0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/configobj/}
 
@@ -11,7 +12,6 @@ COMMENT=	Config file reading, writing and validation
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 USE_LANGUAGES=	# none
 
