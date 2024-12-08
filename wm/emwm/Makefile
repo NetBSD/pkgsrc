@@ -1,39 +1,45 @@
-# $NetBSD: Makefile,v 1.6 2024/02/11 11:12:24 vins Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/08 13:09:43 vins Exp $
 
 DISTNAME=	emwm-src-1.2
 PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	https://fastestcode.org/dl/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.xz
+DISTFILES+=	${DEFAULT_DISTFILES} app-icons.tar.xz	\
+		gtk-configs.tar.xz Xresources-sample
+SITES.Xresources-sample=	${MASTER_SITES:S/dl/misc/}
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Enhanced Motif Window Manager
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	gnu-lgpl-v2.1 AND cc-by-sa-v3.0
 
-MAKEFLAGS+=	PREFIX=${PREFIX}
+USE_BSD_MAKEFILE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+RCDIR=		${PREFIX}/lib/X11
+EGDIR=		share/examples/${PKGBSE}
+EGFILES=	gtk-configs/* Xresources-sample
 
-.if ${OPSYS} != "NetBSD"
-USE_TOOLS+=	gmake
-.endif
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	pre-configure
+SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc
+SUBST_VARS.pkgsrc=	CC CFLAGS LDFLAGS
+SUBST_VARS.pkgsrc+=	PREFIX PKGMANDIR RCDIR
+SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/examples/${PKGBASE}
-INSTALLATION_DIRS+=	lib/X11/app-defaults
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
-pre-install:
-.for f in system.emwmrc
-	${INSTALL_DATA} ${WRKSRC}/src/${f} ${DESTDIR}${PREFIX}/share/examples/emwm/
-.endfor
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/emwm ${DESTDIR}${PREFIX}/bin/emwm
-	${INSTALL_MAN} ${WRKSRC}/src/emwm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/emwm.1
+INSTALLATION_DIRS+=	${EGDIR} share/pixmaps
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/src/Emwm.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Emwm
+	${INSTALL_DATA} ${EGFILES:S|^|${WRKDIR}/|}	\
+		${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/icons/*.xpm		\
+		${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
