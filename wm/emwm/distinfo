@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2024/12/08 13:09:43 vins Exp $
+$NetBSD: distinfo,v 1.7 2024/12/08 14:00:28 vins Exp $
 
 BLAKE2s (emwm-1.2/Xresources-sample) = d55ffa4dbbe4dc218583b7eb7a2cdfaea65ad04b8af16fbb6b3185bfa6007f6d
 SHA512 (emwm-1.2/Xresources-sample) = 363020ad64e0253e09009a198aa285fc1bf8c5c1de834b1a1ca7aeaefd655973fd8bd8c52d327fdb17f9617dcfc13c17effafc1efb92b46efdc18a07bde9f8ac
@@ -14,4 +14,4 @@ SHA512 (emwm-1.2/gtk-configs.tar.xz) = 868d0103db3d59437a43c2f2c93397a6d6af58fc5
 Size (emwm-1.2/gtk-configs.tar.xz) = 1828 bytes
 SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
 SHA1 (patch-mf_Makefile.pkgsrc) = dd5fe15f5951dfacec0fc268d675fc4afa058636
-SHA1 (patch-src_common.mf) = 3afc8e3e06632244122c1df3e4400669219bf8a1
+SHA1 (patch-src_common.mf) = e2b9c0881e5bb555886c89f224dec68340fde511

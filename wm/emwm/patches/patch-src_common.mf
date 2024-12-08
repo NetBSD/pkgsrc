@@ -1,4 +1,4 @@
-$NetBSD: patch-src_common.mf,v 1.1 2024/12/08 13:09:43 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.2 2024/12/08 14:00:28 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
@@ -47,4 +47,4 @@ $NetBSD: patch-src_common.mf,v 1.1 2024/12/08 13:09:43 vins Exp $
 +	$(BSD_INSTALL_MAN) emwmrc.4 $(DESTDIR)$(MANDIR)/man4
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(RCDIR) $(DESTDIR)$(APPLRESDIR)
 +	$(BSD_INSTALL_DATA) system.emwmrc $(DESTDIR)$(RCDIR)/system.emwmrc
-+	$(BSD_INSTALL_MAN) Emwm.ad $(DESTDIR)$(APPLRESDIR)/Emwm
++	$(BSD_INSTALL_DATA) Emwm.ad $(DESTDIR)$(APPLRESDIR)/Emwm
