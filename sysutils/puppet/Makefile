@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2023/04/30 15:37:57 taca Exp $
+# $NetBSD: Makefile,v 1.65 2024/12/08 16:30:11 taca Exp $
 
 DISTNAME=		puppet-7.24.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -8,7 +9,7 @@ HOMEPAGE=		https://puppet.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby>=1.0<1.2.0:../../devel/ruby-concurrent-ruby
+DEPENDS+=	${RUBY_PKGPREFIX}-concurrent-ruby11>=1.0<1.2.0:../../devel/ruby-concurrent-ruby11
 DEPENDS+=	${RUBY_PKGPREFIX}-deep_merge>=1.0<2:../../devel/ruby-deep_merge
 DEPENDS+=	${RUBY_PKGPREFIX}-facter>=2.0.1<5:../../sysutils/ruby-facter
 DEPENDS+=	${RUBY_PKGPREFIX}-fast_gettext>=1.1<3:../../devel/ruby-fast_gettext
