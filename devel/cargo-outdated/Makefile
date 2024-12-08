@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/12/02 20:26:21 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/08 17:21:35 pin Exp $
 
-DISTNAME=	cargo-outdated-0.15.0
+DISTNAME=	cargo-outdated-0.16.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kbknapp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,8 +10,11 @@ HOMEPAGE=	https://github.com/kbknapp/cargo-outdated
 COMMENT=	Cargo subcommand for displaying when Rust dependencies are out of date
 LICENSE=	mit
 
+SITES.curl-sys-0.4.78+curl-8.11.0.crate=	https://static.crates.io/crates/curl-sys/
+
 .include "cargo-depends.mk"
 
+RUST_REQ=	1.81.0
 USE_TOOLS+=	pkg-config
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
