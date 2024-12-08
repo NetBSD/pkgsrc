@@ -1,0 +1,79 @@
+$NetBSD: patch-src_common.mf,v 1.1 2024/12/08 15:09:54 vins Exp $
+
+* Use standard CFLAGS and LDFLAGS.
+* Provide a pkgsrc-compliant install target.
+
+--- src/common.mf.orig	2024-01-03 16:20:35.000000000 +0000
++++ src/common.mf
+@@ -1,6 +1,5 @@
+ # Common Makefile part, included by platform specific makefiles
+ 
+-CFLAGS += -DPREFIX='"$(PREFIX)"' -DRCDIR='"$(RCDIR)"' $(INCDIRS)
+ toolbox_libs =  -lXm -lXt -lX11
+ xmsm_libs = -lXm -lXt -lXss -lXrandr -lXinerama -lX11 $(SYSLIBS)
+ 
+@@ -15,49 +14,37 @@ executables = xmsm xmtoolbox xmsession
+ all: $(executables) $(app_defaults) 
+ 
+ xmtoolbox: $(toolbox_objs) $(common_objs)
+-	$(CC) -o $@ $(LDFLAGS) $(LIBDIRS) $(toolbox_objs) $(common_objs) $(toolbox_libs)
++	$(CC) -o $@ $(LDFLAGS) $(toolbox_objs) $(common_objs) $(toolbox_libs)
+ 
+ xmsm: $(xmsm_objs) $(common_objs)
+-	$(CC) -o $@ $(LDFLAGS) $(LIBDIRS) $(xmsm_objs) $(common_objs) $(xmsm_libs)
++	$(CC) -o $@ $(LDFLAGS) $(xmsm_objs) $(common_objs) $(xmsm_libs)
+ 
+ xmsession: xmsession.src
+-	sed s%PREFIX%$(PREFIX)%g xmsession.src > $@
++	$(SED) s%PREFIX%$(PREFIX)%g xmsession.src > $@
+ 	chmod 775 $@
+ 
+ XmSm.ad: XmSm.ad.src
+-	sed s%PREFIX%$(PREFIX)%g XmSm.ad.src > $@
++	$(SED) s%PREFIX%$(PREFIX)%g XmSm.ad.src > $@
+ 
+ XmToolbox.ad: XmToolbox.ad.src
+-	sed s%PREFIX%$(PREFIX)%g XmToolbox.ad.src > $@
++	$(SED) s%PREFIX%$(PREFIX)%g XmToolbox.ad.src > $@
+ 
+ .PHONY: clean install common_install
+ 
+ common_install:
+-	install -m775 xmsession $(PREFIX)/bin/xmsession
+-	install -m775 xmtoolbox $(PREFIX)/bin/xmtoolbox
+-	install -m4775 xmsm $(PREFIX)/bin/xmsm
+-	install -m775 -d $(MANDIR)/man1
+-	install -m664 xmtoolbox.1 $(MANDIR)/man1/xmtoolbox.1
+-	install -m664 xmsm.1 $(MANDIR)/man1/xmsm.1
+-	install -m775 -d $(APPLRESDIR)
+-	install -m664 XmSm.ad $(APPLRESDIR)/XmSm
+-	install -m664 XmToolbox.ad $(APPLRESDIR)/XmToolbox
+-	install -m664 toolboxrc $(RCDIR)/toolboxrc
+-
+-uninstall:
+-	rm -f $(PREFIX)/bin/xmsm
+-	rm -f $(PREFIX)/bin/xmsession
+-	rm -f $(PREFIX)/bin/xmtoolbox
+-	rm -f $(MANDIR)/man1/xmtoolbox.1
+-	rm -f $(MANDIR)/man1/xmtoolbox.1
+-	rm -f $(APPLRESDIR)/XmSm
+-	rm -f $(APPLRESDIR)/XmToolbox
+-	rm -f $(RCDIR)/toolboxrc
+-	rmdir $(RCDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) xmsm xmtoolbox $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) xmsession $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_MAN) xmtoolbox.1 xmsm.1 $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(RCDIR) $(DESTDIR)$(APPLRESDIR)
++	$(BSD_INSTALL_DATA) toolboxrc $(DESTDIR)$(RCDIR)/toolboxrc
++	$(BSD_INSTALL_DATA) XmSm.ad $(DESTDIR)$(APPLRESDIR)/XmSm
++	$(BSD_INSTALL_DATA) XmToolbox.ad $(DESTDIR)$(APPLRESDIR)/XmToolbox
+ 
+ clean:
+ 	-rm $(toolbox_objs) $(xmsm_objs) $(common_objs) $(executables) $(app_defaults)
+ 	-rm .depend
+ 
+ .depend:
+-	$(CC) -MM $(INCDIRS) $(toolbox_objs:.o=.c) $(xmsm_objs:.o=.c) $(common_objs:.o=.c) > $@
++	$(CC) -MM $(CFLAGS) $(DEFINES) $(toolbox_objs:.o=.c) $(xmsm_objs:.o=.c) $(common_objs:.o=.c) > $@
