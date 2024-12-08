@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/09/18 14:59:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/08 16:23:05 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/async.rb
 ${GEM_LIBDIR}/lib/async/barrier.md
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/lib/async/barrier.rb
 ${GEM_LIBDIR}/lib/async/clock.rb
 ${GEM_LIBDIR}/lib/async/condition.md
 ${GEM_LIBDIR}/lib/async/condition.rb
+${GEM_LIBDIR}/lib/async/console.rb
 ${GEM_LIBDIR}/lib/async/idler.rb
 ${GEM_LIBDIR}/lib/async/list.rb
 ${GEM_LIBDIR}/lib/async/node.rb
@@ -21,9 +22,15 @@ ${GEM_LIBDIR}/lib/async/variable.rb
 ${GEM_LIBDIR}/lib/async/version.rb
 ${GEM_LIBDIR}/lib/async/waiter.md
 ${GEM_LIBDIR}/lib/async/waiter.rb
+${GEM_LIBDIR}/lib/async/worker_pool.rb
 ${GEM_LIBDIR}/lib/async/wrapper.rb
 ${GEM_LIBDIR}/lib/kernel/async.rb
 ${GEM_LIBDIR}/lib/kernel/sync.rb
+${GEM_LIBDIR}/lib/metrics/provider/async.rb
+${GEM_LIBDIR}/lib/metrics/provider/async/task.rb
+${GEM_LIBDIR}/lib/traces/provider/async.rb
+${GEM_LIBDIR}/lib/traces/provider/async/barrier.rb
+${GEM_LIBDIR}/lib/traces/provider/async/task.rb
 ${GEM_LIBDIR}/license.md
 ${GEM_LIBDIR}/readme.md
 ${GEM_LIBDIR}/releases.md

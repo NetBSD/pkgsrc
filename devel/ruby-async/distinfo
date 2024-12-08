@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2024/11/06 14:03:37 taca Exp $
+$NetBSD: distinfo,v 1.26 2024/12/08 16:23:05 taca Exp $
 
-BLAKE2s (async-2.18.0.gem) = 3d56dadcbc8ed45b4b349c7bbdd3a95a2b16fa98b95ccb5f5e9e37a299bdff4b
-SHA512 (async-2.18.0.gem) = bfb08439e84a3192218c852af3365f1f3ce7245f7ab4e4e2d74bd890cde6aad12f69943b7e591c89e67d48e640336b2f97c83bad553d200161c16aeeb06d360e
-Size (async-2.18.0.gem) = 31232 bytes
+BLAKE2s (async-2.21.1.gem) = d531306d7330730e10f299e4897c8dce11d8bd73622d3d168f394d120047d0ec
+SHA512 (async-2.21.1.gem) = ef830e00ed013201d16bb419ab1683189643ffd7f42f674c8b03fd9a85c18a42b1da9453f5869f4763789fa8f1bec5168c01096bf52bcf4ab6b6b84d819d67a5
+Size (async-2.21.1.gem) = 35328 bytes
