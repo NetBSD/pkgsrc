@@ -1,5 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2022/07/04 20:09:05 pin Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/08 13:09:43 vins Exp $
 bin/emwm
 lib/X11/app-defaults/Emwm
+lib/X11/system.emwmrc
 man/man1/emwm.1
-share/examples/emwm/system.emwmrc
+man/man4/emwmrc.4
+share/examples/Xresources-sample
+share/examples/gtk.css
+share/examples/gtkrc-2.0
+share/pixmaps/cdrtool.xpm
+share/pixmaps/emwm.xpm
+share/pixmaps/emwm2.xpm
+share/pixmaps/mailbox.xpm
+share/pixmaps/mplayer.xpm
+share/pixmaps/navigator.xpm
+share/pixmaps/ofwp.xpm
+share/pixmaps/osview.xpm
+share/pixmaps/pdftool.xpm
+share/pixmaps/qemu.xpm
+share/pixmaps/sndmix.xpm
+share/pixmaps/terminal.xpm
+share/pixmaps/textedit.xpm
+share/pixmaps/workstation.xpm

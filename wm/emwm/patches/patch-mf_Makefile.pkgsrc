@@ -1,0 +1,22 @@
+$NetBSD: patch-mf_Makefile.pkgsrc,v 1.1 2024/12/08 13:09:43 vins Exp $
+
+Add custom Makefile for pkgsrc.
+
+--- mf/Makefile.pkgsrc.orig	2024-12-08 10:46:47.852376439 +0000
++++ mf/Makefile.pkgsrc
+@@ -0,0 +1,15 @@
++# EMWM pkgsrc Makefile
++
++PREFIX = @PREFIX@
++BINDIR = @PREFIX@/bin
++MANDIR = @PREFIX@/@PKGMANDIR@
++RCDIR = @RCDIR@
++APPLRESDIR = $(RCDIR)/app-defaults
++
++
++.include "common.mf"
++
++.c.o:
++	$(CC) $(CFLAGS) $(DEFINES) -c -o $(<:.c=.o) $>
++
++install: common_install
