@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2024/12/05 08:01:22 nia Exp $
+# $NetBSD: Makefile,v 1.268 2024/12/08 10:29:36 nia Exp $
 
 DISTNAME=	wine-9.0
 PKGREVISION=	4
@@ -61,6 +61,10 @@ NOT_PAX_MPROTECT_SAFE+=	bin/wine
 .  if ${OPSYS_VERSION} < 090000
 # Disable new_dtags as NetBSD versions prior to 9.0 don't honor DT_RUNPATH
 CONFIGURE_ENV+=		ac_cv_cflags__Wl___enable_new_dtags=no
+.  endif
+.  if ${OPSYS_VERSION} < 100000
+# Requires EVFILT_USER
+CONFIGURE_ENV+=		ac_cv_func_kqueue=no
 .  endif
 # gethostbyname_r is in libc, but has a different calling convention
 CONFIGURE_ENV+=		wine_cv_linux_gethostbyname_r_6=no
