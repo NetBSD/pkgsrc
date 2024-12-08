@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4365 2024/12/04 13:43:55 adam Exp $
+# $NetBSD: Makefile,v 1.4366 2024/12/08 16:27:43 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3292,6 +3292,7 @@ SUBDIR+=	ruby-celluloid-supervision
 SUBDIR+=	ruby-classy_hash
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-concurrent-ruby
+SUBDIR+=	ruby-concurrent-ruby11
 SUBDIR+=	ruby-console
 SUBDIR+=	ruby-contracts
 SUBDIR+=	ruby-corefoundation
