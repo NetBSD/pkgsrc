@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/12/08 13:09:43 vins Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/08 16:34:38 vins Exp $
 
 DISTNAME=	emwm-src-1.2
 PKGNAME=	${DISTNAME:S,-src,,}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -19,7 +19,7 @@ LICENSE=	gnu-lgpl-v2.1 AND cc-by-sa-v3.0
 USE_BSD_MAKEFILE=	yes
 
 RCDIR=		${PREFIX}/lib/X11
-EGDIR=		share/examples/${PKGBSE}
+EGDIR=		share/examples/${PKGBASE}
 EGFILES=	gtk-configs/* Xresources-sample
 
 SUBST_CLASSES+=		pkgsrc

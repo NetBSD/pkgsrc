@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/08 13:09:43 vins Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/08 16:34:38 vins Exp $
 bin/emwm
 lib/X11/app-defaults/Emwm
 lib/X11/system.emwmrc
 man/man1/emwm.1
 man/man4/emwmrc.4
-share/examples/Xresources-sample
-share/examples/gtk.css
-share/examples/gtkrc-2.0
+share/examples/emwm/Xresources-sample
+share/examples/emwm/gtk.css
+share/examples/emwm/gtkrc-2.0
 share/pixmaps/cdrtool.xpm
 share/pixmaps/emwm.xpm
 share/pixmaps/emwm2.xpm
