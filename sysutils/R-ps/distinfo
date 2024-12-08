@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/09/19 21:39:28 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/12/08 03:29:31 mef Exp $
 
-BLAKE2s (R/ps_1.7.7.tar.gz) = 09e9fd19456e857edd8244a1379c376e68ef9c8950b6d1029d36b47edaab3aae
-SHA512 (R/ps_1.7.7.tar.gz) = 148fdb24158efa9434aef381d772a54f9433213ffaa21e8ff80b32fc2aa83981aff708418c65c7debde06fce680863ef6fc11f56b178c2f0ee016e3dab9a34e5
-Size (R/ps_1.7.7.tar.gz) = 128844 bytes
+BLAKE2s (R/ps_1.8.1.tar.gz) = 7cfe714c2534684258f80360a1a2075e24eeeba5142848c82849337672f946a7
+SHA512 (R/ps_1.8.1.tar.gz) = 907d5310b9b9b1367957d3fe30302c2cfbbcc8d15fadc1fc83034bb4149bb112ea31324a0e87f26b4a0708b382ac94927a7e729b144c6ac97299b0718fce275b
+Size (R/ps_1.8.1.tar.gz) = 164392 bytes
