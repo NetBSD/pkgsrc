@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2024/10/13 16:22:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.30 2024/12/08 14:24:40 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -36,4 +36,5 @@ ${GEM_LIBDIR}/lib/sqlite3/sqlite3_native.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/sqlite3/statement.rb
 ${GEM_LIBDIR}/lib/sqlite3/value.rb
 ${GEM_LIBDIR}/lib/sqlite3/version.rb
+${GEM_LIBDIR}/lib/sqlite3/version_info.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
