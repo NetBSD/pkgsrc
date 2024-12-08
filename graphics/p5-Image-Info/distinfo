@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/01/04 10:53:25 wiz Exp $
+$NetBSD: distinfo,v 1.29 2024/12/08 07:17:52 wiz Exp $
 
-BLAKE2s (Image-Info-1.44.tar.gz) = 2fbb2b6187d153f08fd307e4bd563d78641fde5208d554f0362aff6a9d70b098
-SHA512 (Image-Info-1.44.tar.gz) = 893304f4b6ced6752a5588e458eea90ac2e843637eb35379beaed389772bfd5fc2611f4d4a7726454c1c8ad34c75cc6cd696303182ac83597c322619093fe1cc
-Size (Image-Info-1.44.tar.gz) = 334092 bytes
+BLAKE2s (Image-Info-1.45.tar.gz) = 575b07246a5373f56ceeca49fd098c436675f805d10d4f217d736dd6d117c9c8
+SHA512 (Image-Info-1.45.tar.gz) = 362e4b9af59506bf232813e66b49557c7b20a1b6facf3e7ba2e66bc37d0babdf4b714e099eb0bd9a828337a408a79aa3d15a310c53d848977f4c451660f191e8
+Size (Image-Info-1.45.tar.gz) = 365802 bytes
