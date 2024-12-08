@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/10/27 09:32:52 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/12/08 07:11:24 wiz Exp $
 
-BLAKE2s (Convert-PEM-0.12.tar.gz) = 49dc087e9beb43e3677df7a3560e0f7ae34b44700ee5339cf242c8055b70698c
-SHA512 (Convert-PEM-0.12.tar.gz) = 5bb1a969181329fdb9ff70c05654ad32e28ef7339874682bcd812248336ddabc2b06afcb703d9c8ee3960db1d071373a9d2a7822d0f806e33f55108ec4ec5476
-Size (Convert-PEM-0.12.tar.gz) = 47465 bytes
+BLAKE2s (Convert-PEM-0.13.tar.gz) = f7c3f0005cecd336573695a8eb01159a4cfc882fe2198c1adaacd1733da42429
+SHA512 (Convert-PEM-0.13.tar.gz) = 09d5b7e58e5497a92d60b3919c480ded300de77e87a06dd2a764d3716b9da066c51cec917c4c20f5a551e5cc9047cd4b0e9e8408974b01d127f83ccfc5acf970
+Size (Convert-PEM-0.13.tar.gz) = 47570 bytes
