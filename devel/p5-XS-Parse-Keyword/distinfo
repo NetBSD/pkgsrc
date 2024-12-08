@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/09/08 08:31:14 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/12/08 07:18:25 wiz Exp $
 
-BLAKE2s (XS-Parse-Keyword-0.46.tar.gz) = 38b8b6e08b0461ea06eec88bbc6baeb34e13009fd69227715d155b912c647899
-SHA512 (XS-Parse-Keyword-0.46.tar.gz) = 026202ac366fd58d1826bcab7276e46954607da799a340dbeec39bca37d17069bbbac1c83737ad3e4446605bbd5cf4dee9ff002e6e0919c0e1f757b259d2ec48
-Size (XS-Parse-Keyword-0.46.tar.gz) = 93215 bytes
+BLAKE2s (XS-Parse-Keyword-0.47.tar.gz) = fa6e8ed899456e625ca0aaf319c9651384f1c3b15c1c0f193e27035b0bb23fce
+SHA512 (XS-Parse-Keyword-0.47.tar.gz) = 55a469dbd6530e29542737b17fa5fac0960c5df352416f887ad7f3b794503ad7ebd4692cf254e81f52d0f48c0f85e8ee2123bae2456a3c8d9e99fdbd3a42abcf
+Size (XS-Parse-Keyword-0.47.tar.gz) = 93374 bytes
