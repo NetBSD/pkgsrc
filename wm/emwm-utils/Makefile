@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/02/11 11:24:43 vins Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/08 15:09:54 vins Exp $
 
 DISTNAME=	emwm-utils-src-1.2
 PKGNAME=	${DISTNAME:S,-src,,}
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
@@ -11,39 +12,24 @@ HOMEPAGE=	https://fastestcode.org/emwm.html
 COMMENT=	Companion utilies for EMWM
 LICENSE=	mit
 
-MAKEFLAGS+=	PREFIX=${PREFIX}
+USE_TOOLS+=		sed
+USE_BSD_MAKEFILE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+RCDIR=		${PREFIX}/lib/X11
 
-.if ${OPSYS} != "NetBSD"
-USE_TOOLS+=	gmake
-.endif
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	pre-configure
+SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc
+SUBST_VARS.pkgsrc=	PREFIX PKGMANDIR RCDIR
+SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/examples/${PKGBASE}
-INSTALLATION_DIRS+=	lib/X11/app-defaults
+MAKE_FLAGS+=	CC=${CC:Q}
+MAKE_FLAGS+=	SED=${SED:Q}
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${BINGRP} 4755
 SPECIAL_PERMS+=		bin/xmsm ${SETUID_ROOT_PERMS}
-
-do-install:
-.for p in xmtoolbox xmsm
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${p} \
-	${DESTDIR}${PREFIX}/bin
-.endfor
-.for m in xmtoolbox xmsm
-	${INSTALL_MAN} ${WRKSRC}/src/${m}.1 \
-	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/src/xmsession ${DESTDIR}${PREFIX}/bin
-
-post-install:
-.for f in XmSm XmToolbox
-	${INSTALL_DATA} ${WRKSRC}/src/${f}.ad \
-	${DESTDIR}${PREFIX}/lib/X11/app-defaults/${f}
-.endfor
-	${INSTALL_DATA} ${WRKSRC}/src/toolboxrc \
-	${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
 
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
