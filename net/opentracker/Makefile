@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2021/05/14 12:28:10 nia Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/08 23:08:15 hgutch Exp $
 
 DISTNAME=	opentracker-0.0.20180526
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	# https://erdgeist.org/gitweb/opentracker/
 
