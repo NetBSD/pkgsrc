@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2024/08/20 02:14:16 wen Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/08 16:40:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/io/console.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/ext/io/console/console.c
 ${GEM_LIBDIR}/ext/io/console/extconf.rb
