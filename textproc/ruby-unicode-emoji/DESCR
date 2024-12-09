@@ -1,0 +1,14 @@
+Unicode::Emoji
+
+Provides various sophisticated regular expressions to work with Emoji in
+strings, incorporating the latest Unicode / Emoji standards.
+
+Additional features:
+
+- A categorized list of Emoji (RGI: Recommended for General Interchange)
+- Retrieve Emoji properties info about specific codepoints (Emoji_Modifier,
+  Emoji_Presentation, etc.)
+
+Emoji version: 16.0 (September 2024)
+
+CLDR version (used for sub-region flags): 46 (October 2024)
