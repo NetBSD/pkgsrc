@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/08/20 02:54:00 wen Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/09 14:09:11 taca Exp $
 
-DISTNAME=	reline-0.5.9
+DISTNAME=	reline-0.5.12
 CATEGORIES=	devel
 
 MAINTAINER=	wen@NetBSD.org
@@ -10,7 +10,7 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-io-console>=0.5:../../devel/ruby-io-console
 
-#USE_LANGUAGES=	c
+USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
