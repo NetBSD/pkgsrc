@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2024/11/23 13:15:11 fox Exp $
+$NetBSD: distinfo,v 1.45 2024/12/09 07:30:45 fox Exp $
 
 BLAKE2s (eza/addr2line-0.24.1.crate) = 6b7b4e5845873018da12292d582de9e8ec0be0edbac314cbbbfb7dad89d7a983
 SHA512 (eza/addr2line-0.24.1.crate) = ffa53fcfbbccdec943410083aa5f44e93122e0b40dc45acfe00b454a02c5575549e9a61807d87080d1677da807fef695b6676036fec3ca079d2b841794dbc0b5
@@ -147,9 +147,9 @@ Size (eza/errno-0.3.3.crate) = 10543 bytes
 BLAKE2s (eza/errno-dragonfly-0.1.2.crate) = 98b2cbc4374e5c9bec5416a0564feba5e8b0ff6ff565fc69342afb77ee6a1fee
 SHA512 (eza/errno-dragonfly-0.1.2.crate) = f853f1e1b8dd0f359a8f9a0399b3384c1103cd090d96e2b2204f91a40d40a9eb99383d4aa6a11e5470c51557afacf452d4be2049600d4235d27f59870fa3b916
 Size (eza/errno-dragonfly-0.1.2.crate) = 1810 bytes
-BLAKE2s (eza/eza-0.20.9.tar.gz) = 39e973fdf8d1b8c8b0e33ddd3d611823d9b215a803c774bcd686a5c6c1568942
-SHA512 (eza/eza-0.20.9.tar.gz) = 8225ede80708077db9e0a1c1e23177461aa6a6fe60b8c2583325d496d16dedb9690bf378157cba1e547359e69635485f1345e2c3de724dfc25e2f12bcd965227
-Size (eza/eza-0.20.9.tar.gz) = 1416182 bytes
+BLAKE2s (eza/eza-0.20.11.tar.gz) = a4ab26ec741553bb55640f0673e195c947186ecb1dbdb1405868db335055e609
+SHA512 (eza/eza-0.20.11.tar.gz) = fcfacc80ab417aa920980707ab2ba7e7ceefee737562a53aaf0ee4d7fc725836a04c89cd2c3ab16b2d8194ed64c86b649d224e051bc8eaad2cda3b7862e0c721
+Size (eza/eza-0.20.11.tar.gz) = 1416341 bytes
 BLAKE2s (eza/fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (eza/fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (eza/fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -216,9 +216,9 @@ Size (eza/jobserver-0.1.32.crate) = 27549 bytes
 BLAKE2s (eza/js-sys-0.3.64.crate) = c9c7a918f352659c11ba8b6c21204fe8312c3244ac163479631a677caa58b51d
 SHA512 (eza/js-sys-0.3.64.crate) = a4f389a4eb45c2122e7bcf365dccdce8fcf14b1b521b8b839746bba8783296e2f1b959d73bdd874743f49c61a24c4077dec52f63cc7d594cd42e9cd6ea9c2e64
 Size (eza/js-sys-0.3.64.crate) = 80313 bytes
-BLAKE2s (eza/libc-0.2.164.crate) = 96fc8ecd663ba0a08dff718d1580ef04c7b32adc42afc5aec9a35c7c0dc28a8d
-SHA512 (eza/libc-0.2.164.crate) = 614835ee7388c854cacdc179b5700b7de0c696ec0eebca2b997f1039157f737fa79e208832a46f2fa27fcedb6fe7a27faf26079f06ee0e679b6f35d4a5371e3f
-Size (eza/libc-0.2.164.crate) = 769055 bytes
+BLAKE2s (eza/libc-0.2.167.crate) = f0e53a307706a3402bb424f79303e40607b2d361814018e24a2ca64c0dffbecf
+SHA512 (eza/libc-0.2.167.crate) = f6690776266836371e5f9e20ec3a93bb17bc4296219755750e4e70e745016245dab9e247fe564e0f21d10d0c7c97ae97bf54da5068464a48ebfac244cf699166
+Size (eza/libc-0.2.167.crate) = 757723 bytes
 BLAKE2s (eza/libgit2-sys-0.17.0+1.8.1.crate) = 1cd98a99d63ef1e573c02bad5da54396de2d30086f8ea3de7c458bb9d393ba3a
 SHA512 (eza/libgit2-sys-0.17.0+1.8.1.crate) = 4c37c30426dbba1d9981d65ee42210ec07e2dae73ce2d18beee17b161eb96de0c7b1696cc8b97fa514eb9fdcb8b853713cd19174fc55f033b6a9c1e25520f75b
 Size (eza/libgit2-sys-0.17.0+1.8.1.crate) = 1812997 bytes
@@ -237,9 +237,9 @@ Size (eza/locale-0.2.2.crate) = 18910 bytes
 BLAKE2s (eza/log-0.4.22.crate) = 9c270d3af5640c9eeb36754e6fd6cf50521e9fd1efad955e0d777716b3d6839a
 SHA512 (eza/log-0.4.22.crate) = bd7baa9c8a5523fd0864a53bcde955d484cacd782412b5b02c890b89dbf62137624da3a27337a310dd8f62bcc6606925a42bbd4ca161a3b7936ea4ff96bc0d71
 Size (eza/log-0.4.22.crate) = 44027 bytes
-BLAKE2s (eza/man-0.20.9.tar.gz) = 10d1aeac5b792a8f47f933d0283e85260e9404f264e9011e5804513208c19b42
-SHA512 (eza/man-0.20.9.tar.gz) = 8e0ddb2a535262e01548d65a39a41f6c1d6b063c38cf38ff296d227af7b008b22556f8607d5cba59fd4f7cceb4edcda9df05ce4a896e5e7ae44bef0940d10171
-Size (eza/man-0.20.9.tar.gz) = 9593 bytes
+BLAKE2s (eza/man-0.20.11.tar.gz) = 31712a2fc0696fc34bd01631f4be0f298afc5fdd252cd6788efccde25ed9d42d
+SHA512 (eza/man-0.20.11.tar.gz) = 3d0d4b546ef0adba2e6d04f8908af9e0ec831d146d411331ffb2ae6ea50ddd60db4932af36a84c359821e061ae9e77f24d42fee4bdff29c1076db99b3485e70a
+Size (eza/man-0.20.11.tar.gz) = 9659 bytes
 BLAKE2s (eza/matches-0.1.8.crate) = 0c218f89eda16504ae593d3720fdfe7391e81449a4b227bc7e3beef5051bfe80
 SHA512 (eza/matches-0.1.8.crate) = 98b58f6a2694b03a7dd1be69ebf7e3ad14483fc8e4cb6e6c26a4937e4e660e843efb4dd04a7312dd9659ca02acd3775678f73b8faac44a76ffafaf873c22f590
 Size (eza/matches-0.1.8.crate) = 2216 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.39 2024/11/23 13:15:11 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.40 2024/12/09 07:30:44 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.1
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -71,7 +71,7 @@ CARGO_CRATE_DEPENDS+=	itertools-0.10.5
 CARGO_CRATE_DEPENDS+=	itoa-1.0.9
 CARGO_CRATE_DEPENDS+=	jobserver-0.1.32
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.64
-CARGO_CRATE_DEPENDS+=	libc-0.2.164
+CARGO_CRATE_DEPENDS+=	libc-0.2.167
 CARGO_CRATE_DEPENDS+=	libgit2-sys-0.17.0+1.8.1
 CARGO_CRATE_DEPENDS+=	libredox-0.0.1
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.20
