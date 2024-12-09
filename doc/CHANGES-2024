@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7510 2024/12/09 13:54:31 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.7511 2024/12/09 13:55:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11300,3 +11300,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/swtpm to 0.10.0 [ryoon 2024-12-09]
 	Updated devel/ruby-mocha to 2.7.1 [taca 2024-12-09]
 	Updated emulators/qemu to 9.1.2nb1 [ryoon 2024-12-09]
+	Updated devel/ruby-msgpack to 1.7.5 [taca 2024-12-09]
