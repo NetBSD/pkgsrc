@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.37 2024/10/27 13:39:16 taca Exp $
+$NetBSD: distinfo,v 1.38 2024/12/09 13:56:54 taca Exp $
 
-BLAKE2s (pkg-config-1.5.7.gem) = 7825d3679f8d3bf9512b66874f159ea4aaee111cce1e5db47038b9383f10e764
-SHA512 (pkg-config-1.5.7.gem) = 578e38cf6eff03125c5e8f7f53b68782ffb6ede00aae989ddde3cb890caf24093b509fb58113233f7fa54befaf31786d29dd386d912d39d9b55dc9f143319a32
-Size (pkg-config-1.5.7.gem) = 23552 bytes
+BLAKE2s (pkg-config-1.5.8.gem) = 1e4d0464b252bb6bf6ad3f133594daad8175c9c327167219551c4d9991b85d18
+SHA512 (pkg-config-1.5.8.gem) = 4b1d8c68f4ed407788fd265da021efcaa887b9e680cf443eae2b0fb3ca975640621b497d62908d685226f80353d07c562f7d9cec3525abdb738843139476637e
+Size (pkg-config-1.5.8.gem) = 23552 bytes
