@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1489 2024/11/06 15:50:42 taca Exp $
+# $NetBSD: Makefile,v 1.1490 2024/12/09 15:40:39 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1344,6 +1344,7 @@ SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-unicode-blocks
 SUBDIR+=	ruby-unicode-display_width
+SUBDIR+=	ruby-unicode-emoji
 SUBDIR+=	ruby-unicode-name
 SUBDIR+=	ruby-unicode-scripts
 SUBDIR+=	ruby-unicode_utils
