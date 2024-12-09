@@ -1,8 +1,8 @@
-$NetBSD: patch-src_runtime_mach-dep_signal-sysdep.h,v 1.2 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-src_runtime_mach-dep_signal-sysdep.h,v 1.3 2024/12/09 14:07:09 ryoon Exp $
 
 Support for NetBSD, and for NetBSD on PPC.
 
---- src/runtime/mach-dep/signal-sysdep.h.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/mach-dep/signal-sysdep.h.orig	2024-10-25 16:47:18.000000000 +0000
 +++ src/runtime/mach-dep/signal-sysdep.h
 @@ -172,7 +172,7 @@ extern void SetFSR(int);
    /* disable all FP exceptions */
@@ -11,7 +11,7 @@ Support for NetBSD, and for NetBSD on PPC.
 -#  if defined(OPSYS_SOLARIS)
 +#  if defined(OPSYS_SOLARIS) || defined(OPSYS_NETBSD)
      /** SPARC, SOLARIS **/
- #    define SIG_OVERFLOW	SIGFPE
+ #    define SIG_OVERFLOW        SIGFPE
  
 @@ -251,6 +251,21 @@ extern void SetFSR(int);
  
@@ -35,18 +35,31 @@ Support for NetBSD, and for NetBSD on PPC.
  #  endif /* ARCH_PPC */
  
  #elif defined(ARCH_X86)
-@@ -428,12 +443,10 @@ extern void SetFSR(int);
- #    define SIG_OVERFLOW		SIGFPE
+@@ -321,9 +336,9 @@ extern void SetFSR(int);
+ #    define SIG_OVERFLOW                SIGFPE  /* maybe this should be SIGBUS? */
  
- #    define SIG_GetCode(info, scp)	(info)
--#    define SIG_GetPC(scp)		((uc)->uc_mcontext.__gregs[_REG_RIP])
--#    define SIG_SetPC(scp, addr)	{ (uc)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
-+#    define SIG_GetPC(scp)		((scp)->uc_mcontext.__gregs[_REG_RIP])
-+#    define SIG_SetPC(scp, addr)	{ (scp)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
- #    define SIG_ZeroLimitPtr(scp)	{ (scp)->uc_mcontext.__gregs[_REG_R14] = 0; }
+ #    define SIG_GetCode(info, scp)      (info)
+-#    define SIG_GetPC(scp)              ((scp)->sc_pc)
+-#    define SIG_SetPC(scp, addr)        { (scp)->sc_pc = (Addr_t)(addr); }
+-#    define SIG_ZeroLimitPtr(scp)       { ML_X86Frame[LIMITPTR_X86OFFSET] = 0; }
++#    define SIG_GetPC(scp)              ((scp)->uc_mcontext.__gregs[_REG_RIP])
++#    define SIG_SetPC(scp, addr)         { (scp)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
++#    define SIG_ZeroLimitPtr(scp)       { (scp)->uc_mcontext.__gregs[_REG_R14] = 0; }
+ 
+      typedef void SigReturn_t;
+ 
+@@ -428,12 +443,10 @@ extern void SetFSR(int);
+ #    define SIG_OVERFLOW                SIGFPE
+ 
+ #    define SIG_GetCode(info, scp)      (info)
+-#    define SIG_GetPC(scp)              ((uc)->uc_mcontext.__gregs[_REG_RIP])
+-#    define SIG_SetPC(scp, addr)        { (uc)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
++#    define SIG_GetPC(scp)              ((scp)->uc_mcontext.__gregs[_REG_RIP])
++#    define SIG_SetPC(scp, addr)        { (scp)->uc_mcontext.__gregs[_REG_RIP] = (Addr_t)(addr); }
+ #    define SIG_ZeroLimitPtr(scp)       { (scp)->uc_mcontext.__gregs[_REG_R14] = 0; }
  
 -#    error NetBSD/AMD64 not supported yet
 -
  #  elif defined(OPSYS_OPENBSD)
      /** amd64, OpenBSD **/
- #    define SIG_OVERFLOW		SIGFPE
+ #    define SIG_OVERFLOW                SIGFPE

@@ -1,11 +1,11 @@
-$NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.1 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-src_runtime_objs_mk.amd64-darwin,v 1.2 2024/12/09 14:07:09 ryoon Exp $
 
---- src/runtime/objs/mk.amd64-darwin.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/objs/mk.amd64-darwin.orig	2024-10-25 16:47:18.000000000 +0000
 +++ src/runtime/objs/mk.amd64-darwin
-@@ -12,7 +12,7 @@ SHELL =		/bin/sh
- MAKE =		make
- AS =		/usr/bin/as -arch x86_64
- CC =		/usr/bin/clang -m64 -std=c99
+@@ -14,7 +14,7 @@ MAKE =		make
+ # and assembler.
+ AS =		/usr/bin/as -target x86_64-apple-darwin
+ CC =		/usr/bin/clang -m64 -std=c99 -target x86_64-apple-darwin
 -CFLAGS =	-g -O2 -D_DARWIN_C_SOURCE
 +CFLAGS =	@CFLAGS@ -D_DARWIN_C_SOURCE
  CPP =           /usr/bin/clang -x assembler-with-cpp -E -P -std=c99
