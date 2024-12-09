@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/11/14 22:21:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/09 13:48:39 ryoon Exp $
 
 GITHUB_PROJECT=	swtpm
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	swtpm-0.7.0
-PKGREVISION=	9
+DISTNAME=	swtpm-0.10.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stefanberger/}
 
@@ -29,7 +28,7 @@ USE_LANGUAGES+=		c
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 USE_LIBTOOL=		yes
-USE_TOOLS=		automake bash gawk gmake pkg-config
+USE_TOOLS=		automake bash gawk gmake gsed pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	autogen.sh
 CONFIGURE_ARGS+=	--without-cuse
@@ -37,8 +36,10 @@ CONFIGURE_ARGS+=	--with-tss-user=${REAL_ROOT_USER}
 CONFIGURE_ARGS+=	--with-tss-group=${REAL_ROOT_GROUP}
 # Avoid `error: stack protector not protecting local variables: variable length buffer [-Werror=stack-protector]` errors
 CONFIGURE_ARGS+=	--disable-hardening
+CONFIGURE_ARGS+=	--disable-tests
 
 REPLACE_BASH+=		samples/*
+REPLACE_BASH+=		tests/*
 
 EGDIR=		${PREFIX}/share/examples/swtpm
 CONF_FILES+=	${EGDIR}/swtpm-localca.conf \
@@ -50,6 +51,10 @@ CONF_FILES+=	${EGDIR}/swtpm_setup.conf \
 
 OWN_DIRS_PERMS+=	${VARBASE}/lib/swtpm-localca \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
+
+post-install:
+	# Do not install tests.
+	${RM} -rf ${DESTDIR}${PREFIX}/libexec
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
