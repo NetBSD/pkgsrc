@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/11/26 12:54:44 nia Exp $
+# $NetBSD: Makefile,v 1.50 2024/12/09 14:44:18 ryoon Exp $
 
-DISTNAME=	blender-3.6.12
-PKGREVISION=	2
+DISTNAME=	blender-3.6.18
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.blender.org/source/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,6 @@ HOMEPAGE=	https://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
 # GCC 11.0.0 or later is required.
@@ -105,9 +103,11 @@ BUILDLINK_API_DEPENDS.freetype2+=       freetype2>=2.12.1nb1
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../multimedia/ffmpeg6/buildlink3.mk"
 .include "../../parallel/threadingbuildingblocks/buildlink3.mk"
+.include "../../print/libharu/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
