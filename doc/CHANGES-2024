@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7498 2024/12/09 07:25:50 fox Exp $
+$NetBSD: CHANGES-2024,v 1.7499 2024/12/09 07:31:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11283,3 +11283,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libowfat to 0.34nb1 [hgutch 2024-12-08]
 	Updated sysutils/pfetch to 1.7.0 [fox 2024-12-09]
 	Updated audio/fasttracker2 to 1.89 [fox 2024-12-09]
+	Updated sysutils/eza to 0.20.11 [fox 2024-12-09]
