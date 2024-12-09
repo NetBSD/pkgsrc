@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2021/02/13 13:58:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/09 15:21:51 taca Exp $
 bin/pry${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -48,6 +48,7 @@ ${GEM_LIBDIR}/lib/pry/commands/import_set.rb
 ${GEM_LIBDIR}/lib/pry/commands/jump_to.rb
 ${GEM_LIBDIR}/lib/pry/commands/list_inspectors.rb
 ${GEM_LIBDIR}/lib/pry/commands/ls.rb
+${GEM_LIBDIR}/lib/pry/commands/ls/config.rb
 ${GEM_LIBDIR}/lib/pry/commands/ls/constants.rb
 ${GEM_LIBDIR}/lib/pry/commands/ls/formatter.rb
 ${GEM_LIBDIR}/lib/pry/commands/ls/globals.rb
@@ -106,6 +107,7 @@ ${GEM_LIBDIR}/lib/pry/helpers/text.rb
 ${GEM_LIBDIR}/lib/pry/history.rb
 ${GEM_LIBDIR}/lib/pry/hooks.rb
 ${GEM_LIBDIR}/lib/pry/indent.rb
+${GEM_LIBDIR}/lib/pry/input/simple_stdio.rb
 ${GEM_LIBDIR}/lib/pry/input_completer.rb
 ${GEM_LIBDIR}/lib/pry/input_lock.rb
 ${GEM_LIBDIR}/lib/pry/inspector.rb
