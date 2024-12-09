@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.348 2024/11/28 20:42:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.349 2024/12/09 13:40:47 ryoon Exp $
 
 VERREL=		24.8.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -131,7 +132,6 @@ MORE_DISTFILES= \
 	pdfium-6425.tar.bz2 \
 	dtoa-20180411.tgz \
 	skia-m116-2ddcf183eb260f63698aa74d1bb380f247ad7ccd.tar.xz \
-	libcmis-0.6.2.tar.xz \
 	Java-WebSocket-1.5.6.tar.gz \
 	NotoSans-v2.014.zip \
 	NotoSerif-v2.014.zip \
@@ -235,8 +235,7 @@ CONFIGURE_ARGS+=	--without-system-rhino
 CONFIGURE_ARGS+=	--without-system-xmlsec # Needs NSS support
 CONFIGURE_ARGS+=	--with-system-zxing
 CONFIGURE_ENV+=		CPLUS_INCLUDE_PATH=${BUILDLINK_PREFIX.zxing-cpp}/include
-# Internal libcmis-0.5.2 is patched. Do not libcmis-0.5.2nb13 from net/libcmis.
-CONFIGURE_ARGS+=	--without-system-libcmis
+CONFIGURE_ARGS+=	--with-system-libcmis
 CONFIGURE_ARGS+=	--with-compat-oowrappers
 CONFIGURE_ARGS+=	--with-external-tar=${WRKSRC}/src
 CONFIGURE_ARGS+=	--with-fonts
@@ -407,8 +406,7 @@ BUILDLINK_API_DEPENDS.libnumbertext+=	libnumbertext>=1.0.6
 .include "../../math/ltm/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
-# Internal libcmis-0.5.2 is patched. Do not use libcmis-0.5.2nb13 from net/libcmis.
-#.include "../../net/libcmis/buildlink3.mk"
+.include "../../net/libcmis/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 # Use PDFium instead of poppler for PDF import since 6.3.2.2nb1
 #.include "../../print/poppler-cpp/buildlink3.mk"
