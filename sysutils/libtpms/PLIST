@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2022/02/05 03:09:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/09 13:46:47 ryoon Exp $
 include/libtpms/tpm_error.h
 include/libtpms/tpm_library.h
 include/libtpms/tpm_memory.h
@@ -21,10 +21,12 @@ man/man3/TPMLIB_SetBufferSize.3
 man/man3/TPMLIB_SetDebugFD.3
 man/man3/TPMLIB_SetDebugLevel.3
 man/man3/TPMLIB_SetDebugPrefix.3
+man/man3/TPMLIB_SetProfile.3
 man/man3/TPMLIB_SetState.3
 man/man3/TPMLIB_Terminate.3
 man/man3/TPMLIB_ValidateState.3
 man/man3/TPMLIB_VolatileAll_Store.3
+man/man3/TPMLIB_WasManufactured.3
 man/man3/TPM_Free.3
 man/man3/TPM_IO_Hash_Data.3
 man/man3/TPM_IO_Hash_End.3
