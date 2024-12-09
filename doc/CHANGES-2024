@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7525 2024/12/09 15:27:14 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7526 2024/12/09 15:32:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11315,3 +11315,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/ruby-pry to 0.15.0 [taca 2024-12-09]
 	Updated net/ruby-dnsruby to 1.72.3 [taca 2024-12-09]
 	Updated net/ruby-net-imap to 0.5.1 [taca 2024-12-09]
+	Updated net/ruby-net-smtp to 0.5.0 [taca 2024-12-09]
