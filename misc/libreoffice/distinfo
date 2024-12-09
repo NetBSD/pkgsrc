@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.159 2024/11/28 20:42:37 ryoon Exp $
+$NetBSD: distinfo,v 1.160 2024/12/09 13:40:47 ryoon Exp $
 
 BLAKE2s (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 0e0a0ae1eb07e5058749dc1726bc59971c723b4b16c57d83f24b6ac6ddd96d71
 SHA512 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = b9c02d63e9b47a838dbe67c05b9e9e4983d13b9d74794e1c30c73d341c3bc905c9edec3a72fa339ae8c0e06d97e69ac2ea23bf51336b77af14cab7ae67721a46
@@ -153,9 +153,6 @@ Size (libreoffice/harfbuzz-3.3.1.tar.xz) = 14922732 bytes
 BLAKE2s (libreoffice/language-subtag-registry-2021-08-06.tar.bz2) = 0e541b35adca390c01cfeab39320f8b871740de175e58839eab4a0064cbc4e29
 SHA512 (libreoffice/language-subtag-registry-2021-08-06.tar.bz2) = 1f8bf21a3c229f0408000ea63cb34038d0bb1bbb3472e2cdf7d8194b3ff3cf61d7e54c2e1f16a9d45b1539a45b12131fb2c98f38089f4567cf31ca32580bdf5d
 Size (libreoffice/language-subtag-registry-2021-08-06.tar.bz2) = 76972 bytes
-BLAKE2s (libreoffice/libcmis-0.6.2.tar.xz) = f779da8bde0296c857290bd29e6dee0ed5d97ddb22bde1f173d4f01ca7b4271e
-SHA512 (libreoffice/libcmis-0.6.2.tar.xz) = 950c2a506db33249251304b038d4389d230fb707d17866322533c8f9261e0fac864bc901163697e712d5f620e19f26b456d896c9ad45362b8acd1d5cbae5f831
-Size (libreoffice/libcmis-0.6.2.tar.xz) = 488736 bytes
 BLAKE2s (libreoffice/liberation-fonts-ttf-2.1.5.tar.gz) = e217b47a364ca04d01363ce6092eb7c56af8d1378bb1d3352e89ff2fe158ee82
 SHA512 (libreoffice/liberation-fonts-ttf-2.1.5.tar.gz) = b9f178fae43c9214ba6de36c6da613fcf59bd98084058afaaa9151d00f2406942bc360430be0a8f35ea6b5529146eef371c7cf75bdd7910403d449254f943fed
 Size (libreoffice/liberation-fonts-ttf-2.1.5.tar.gz) = 2385008 bytes
