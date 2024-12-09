@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/11/26 12:42:22 nia Exp $
+# $NetBSD: Makefile,v 1.17 2024/12/09 21:11:43 wiz Exp $
 
-DISTNAME=	falcon-3.1.3
+DISTNAME=	falcon-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/falcon/}
@@ -16,8 +16,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 TEST_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
-# uses deprecated cgi module, removed in 3.13
-PYTHON_VERSIONS_ACCEPTED=	312 311 310
+# as of 4.0.2
+# 1 failed, 3677 passed, 360 skipped
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
