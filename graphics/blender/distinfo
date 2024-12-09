@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.76 2024/09/06 15:43:26 prlw1 Exp $
+$NetBSD: distinfo,v 1.77 2024/12/09 14:27:06 ryoon Exp $
 
-BLAKE2s (blender-4.2.1.tar.xz) = cd207578cbe7cc7938d04958f40abdac3456ea3ceedfe6eff8c00b3e4e5ee67f
-SHA512 (blender-4.2.1.tar.xz) = 20162bd1185e34c481a0520f4999f8c76018471b485fa72afa446f590638c564a370d036cc4a941bf204fce821d8305d4244b3ba9ec7f09f1839b8a276dfde39
-Size (blender-4.2.1.tar.xz) = 72789532 bytes
+BLAKE2s (blender-4.2.4.tar.xz) = e33731f186e25dce937c022b447d6a9c769729efdde007a49292800dd072f83b
+SHA512 (blender-4.2.4.tar.xz) = 1f61c1866aaa680c91fc6e3402b1e10533c8cce32572ffb825c53dc7c15ca51f1157a32d10134ca9e612fbf719406421ccc920b2d8ddd2993675784797381c6a
+Size (blender-4.2.4.tar.xz) = 72804204 bytes
 SHA1 (patch-CMakeLists.txt) = 722c852b2c7f804a0fec93cec4e4c8f54d286204
 SHA1 (patch-source_blender_blenkernel_intern_CCGSubSurf__legacy.cc) = 850ba755646ff07b050e0a98c9e4603a97acffc9
 SHA1 (patch-source_blender_blenkernel_intern_customdata.cc) = 32659bbe9de8ac0388664b721f4df89d58af6e92
