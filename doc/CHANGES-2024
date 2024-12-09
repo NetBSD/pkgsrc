@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7520 2024/12/09 14:27:24 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.7521 2024/12/09 14:44:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11310,3 +11310,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-rspec-support to 3.13.2 [taca 2024-12-09]
 	Updated devel/ruby-sexp-processor to 4.17.3 [taca 2024-12-09]
 	Updated graphics/blender to 4.2.4 [ryoon 2024-12-09]
+	Updated graphics/blender-lts to 3.6.18 [ryoon 2024-12-09]
