@@ -1,22 +1,22 @@
-$NetBSD: patch-ao,v 1.4 2023/02/25 17:58:39 ryoon Exp $
+$NetBSD: patch-ao,v 1.5 2024/12/09 14:07:09 ryoon Exp $
 
 - use fgetc correctly
 - fix uninitialized variable detected by gcc5
 
---- src/runtime/kernel/boot.c.orig	2022-07-28 04:55:45.000000000 +0000
+--- src/runtime/kernel/boot.c.orig	2024-10-25 16:47:18.000000000 +0000
 +++ src/runtime/kernel/boot.c
-@@ -134,7 +134,7 @@ PVT ml_val_t BuildFileList (ml_state_t *
-     ml_val_t	fileList;
- # define SIZE_BUF_LEN	128	/* this should be plenty for two numbers */
+@@ -138,7 +138,7 @@ PVT ml_val_t BuildFileList (ml_state_t *
+     ml_val_t    fileList;
+ # define SIZE_BUF_LEN   128     /* this should be plenty for two numbers */
      char        sizeBuf[SIZE_BUF_LEN];
 -    char        c;
 +    int         c;
  
      numFiles = 0;
  
-@@ -179,6 +179,9 @@ PVT ml_val_t BuildFileList (ml_state_t *
- 	}
- 	fclose (listF);
+@@ -188,6 +188,9 @@ PVT ml_val_t BuildFileList (ml_state_t *
+         }
+         fclose (listF);
      }
 +    else {
 +        *mbplp = 0;
