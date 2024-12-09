@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/18 18:21:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/09 21:11:43 wiz Exp $
 bin/falcon-bench-${PYVERSSUFFIX}
 bin/falcon-inspect-app-${PYVERSSUFFIX}
 bin/falcon-print-routes-${PYVERSSUFFIX}
@@ -11,10 +11,10 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/falcon/__init__.py
 ${PYSITELIB}/falcon/__init__.pyc
 ${PYSITELIB}/falcon/__init__.pyo
-${PYSITELIB}/falcon/api_helpers.py
-${PYSITELIB}/falcon/api_helpers.pyc
-${PYSITELIB}/falcon/api_helpers.pyo
-${PYSITELIB}/falcon/api_helpers.so
+${PYSITELIB}/falcon/_typing.py
+${PYSITELIB}/falcon/_typing.pyc
+${PYSITELIB}/falcon/_typing.pyo
+${PYSITELIB}/falcon/_typing.so
 ${PYSITELIB}/falcon/app.py
 ${PYSITELIB}/falcon/app.pyc
 ${PYSITELIB}/falcon/app.pyo
@@ -175,6 +175,9 @@ ${PYSITELIB}/falcon/constants.py
 ${PYSITELIB}/falcon/constants.pyc
 ${PYSITELIB}/falcon/constants.pyo
 ${PYSITELIB}/falcon/constants.so
+${PYSITELIB}/falcon/cyutil/__init__.py
+${PYSITELIB}/falcon/cyutil/__init__.pyc
+${PYSITELIB}/falcon/cyutil/__init__.pyo
 ${PYSITELIB}/falcon/cyutil/misc.pyx
 ${PYSITELIB}/falcon/cyutil/misc.so
 ${PYSITELIB}/falcon/cyutil/reader.pyx
@@ -203,7 +206,6 @@ ${PYSITELIB}/falcon/http_status.so
 ${PYSITELIB}/falcon/inspect.py
 ${PYSITELIB}/falcon/inspect.pyc
 ${PYSITELIB}/falcon/inspect.pyo
-${PYSITELIB}/falcon/inspect.so
 ${PYSITELIB}/falcon/media/__init__.py
 ${PYSITELIB}/falcon/media/__init__.pyc
 ${PYSITELIB}/falcon/media/__init__.pyo
@@ -241,6 +243,7 @@ ${PYSITELIB}/falcon/middleware.py
 ${PYSITELIB}/falcon/middleware.pyc
 ${PYSITELIB}/falcon/middleware.pyo
 ${PYSITELIB}/falcon/middleware.so
+${PYSITELIB}/falcon/py.typed
 ${PYSITELIB}/falcon/redirects.py
 ${PYSITELIB}/falcon/redirects.pyc
 ${PYSITELIB}/falcon/redirects.pyo
@@ -309,6 +312,10 @@ ${PYSITELIB}/falcon/testing/srmock.pyo
 ${PYSITELIB}/falcon/testing/test_case.py
 ${PYSITELIB}/falcon/testing/test_case.pyc
 ${PYSITELIB}/falcon/testing/test_case.pyo
+${PYSITELIB}/falcon/typing.py
+${PYSITELIB}/falcon/typing.pyc
+${PYSITELIB}/falcon/typing.pyo
+${PYSITELIB}/falcon/typing.so
 ${PYSITELIB}/falcon/uri.py
 ${PYSITELIB}/falcon/uri.pyc
 ${PYSITELIB}/falcon/uri.pyo
@@ -320,6 +327,10 @@ ${PYSITELIB}/falcon/util/deprecation.py
 ${PYSITELIB}/falcon/util/deprecation.pyc
 ${PYSITELIB}/falcon/util/deprecation.pyo
 ${PYSITELIB}/falcon/util/deprecation.so
+${PYSITELIB}/falcon/util/mediatypes.py
+${PYSITELIB}/falcon/util/mediatypes.pyc
+${PYSITELIB}/falcon/util/mediatypes.pyo
+${PYSITELIB}/falcon/util/mediatypes.so
 ${PYSITELIB}/falcon/util/misc.py
 ${PYSITELIB}/falcon/util/misc.pyc
 ${PYSITELIB}/falcon/util/misc.pyo
@@ -342,16 +353,6 @@ ${PYSITELIB}/falcon/util/uri.py
 ${PYSITELIB}/falcon/util/uri.pyc
 ${PYSITELIB}/falcon/util/uri.pyo
 ${PYSITELIB}/falcon/util/uri.so
-${PYSITELIB}/falcon/vendor/__init__.py
-${PYSITELIB}/falcon/vendor/__init__.pyc
-${PYSITELIB}/falcon/vendor/__init__.pyo
-${PYSITELIB}/falcon/vendor/mimeparse/__init__.py
-${PYSITELIB}/falcon/vendor/mimeparse/__init__.pyc
-${PYSITELIB}/falcon/vendor/mimeparse/__init__.pyo
-${PYSITELIB}/falcon/vendor/mimeparse/mimeparse.py
-${PYSITELIB}/falcon/vendor/mimeparse/mimeparse.pyc
-${PYSITELIB}/falcon/vendor/mimeparse/mimeparse.pyo
-${PYSITELIB}/falcon/vendor/mimeparse/mimeparse.so
 ${PYSITELIB}/falcon/version.py
 ${PYSITELIB}/falcon/version.pyc
 ${PYSITELIB}/falcon/version.pyo
