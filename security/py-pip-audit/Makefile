@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/10/14 06:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/12/09 08:13:21 wiz Exp $
 
 DISTNAME=	pip_audit-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
 
@@ -13,7 +14,6 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.13.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=5:../../security/py-cyclonedx-python-lib
-DEPENDS+=	${PYPKGPREFIX}-html5lib>=1.1:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pip-api>=0.0.28:../../devel/py-pip-api
 DEPENDS+=	${PYPKGPREFIX}-pip-requirements-parser>=32.0.0:../../devel/py-pip-requirements-parser
