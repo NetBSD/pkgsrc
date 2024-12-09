@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.137 2024/11/25 20:20:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.138 2024/12/09 08:33:51 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -473,6 +473,7 @@ share/doc/sqlite3/images/shane1.jpg
 share/doc/sqlite3/images/shared.gif
 share/doc/sqlite3/images/sqlite370.jpg
 share/doc/sqlite3/images/sqlite370_banner.gif
+share/doc/sqlite3/images/sqlite370_banner.svg
 share/doc/sqlite3/images/sqlitepie.jpg
 share/doc/sqlite3/images/src_logo.gif
 share/doc/sqlite3/images/sschart20221116.jpg
@@ -700,6 +701,7 @@ share/doc/sqlite3/releaselog/3_46_0.html
 share/doc/sqlite3/releaselog/3_46_1.html
 share/doc/sqlite3/releaselog/3_47_0.html
 share/doc/sqlite3/releaselog/3_47_1.html
+share/doc/sqlite3/releaselog/3_47_2.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
