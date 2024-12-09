@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.120 2024/12/09 15:14:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.121 2024/12/09 15:49:13 jperkin Exp $
 
 BRANCHNAME=	1.21
 DISTNAME=	krb5-${BRANCHNAME}.3
 PKGNAME=	mit-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 # It is not clear how stable this URL scheme is.
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${BRANCHNAME}/
@@ -44,11 +45,18 @@ FILES_SUBST+=		MIT_KRB5_STATEDIR=${MIT_KRB5_STATEDIR}
 
 BUILD_DEFS+=		VARBASE
 
+# This argument was added with no explanation back in 2005, and is now
+# actively harmful on at least SunOS, causing core dumps when trying to
+# use threaded clients such as pgbench.  It should probably be removed
+# entirely, or at least limited to NetBSD.
+.if ${OPSYS} != "SunOS"
+CONFIGURE_ARGS+=	--disable-thread-support
+.endif
+
 CONFIGURE_ARGS+=	--localstatedir=${MIT_KRB5_STATEDIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-aesni
 CONFIGURE_ARGS+=	--disable-kdc-lookaside-cache
-CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-dns-for-realm
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
