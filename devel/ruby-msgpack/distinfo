@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2024/10/13 16:27:19 taca Exp $
+$NetBSD: distinfo,v 1.33 2024/12/09 13:54:59 taca Exp $
 
-BLAKE2s (msgpack-1.7.3.gem) = 0f42c859a6686631130a9b54506ad5b61ae2b008c80b8ba2563fa4392883642c
-SHA512 (msgpack-1.7.3.gem) = 9ff2fc59134298c38f5ff16eeae8b8bcd9ca318966d7bcda45d5cf6b276cabef4752bc0e9dfe4f1df3779f0ec927dc1700e0a58d17df8d447a25f939342a11ed
-Size (msgpack-1.7.3.gem) = 60928 bytes
+BLAKE2s (msgpack-1.7.5.gem) = 16fc35c0dd0d994a1002b2490c3880767a0c08605a5780114260e1c88f252f80
+SHA512 (msgpack-1.7.5.gem) = babbdfb18d01efd69af6b970b83cb947fd3d9d489f00cc1830034bf1a78deda344a3554aefb067201dbb921c099c5fbe87bcbc577582075297a033a615890d0b
+Size (msgpack-1.7.5.gem) = 61440 bytes
