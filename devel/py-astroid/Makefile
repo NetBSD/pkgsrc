@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2024/11/11 07:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2024/12/10 11:59:12 adam Exp $
 
-DISTNAME=	astroid-3.3.5
+DISTNAME=	astroid-3.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
