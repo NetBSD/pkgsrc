@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.49 2024/08/23 11:19:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2024/12/10 06:34:37 adam Exp $
 bin/lexicon-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/lexicon/__init__.py
 ${PYSITELIB}/lexicon/__init__.pyc
 ${PYSITELIB}/lexicon/__init__.pyo
@@ -26,6 +26,9 @@ ${PYSITELIB}/lexicon/_private/providers/__init__.pyo
 ${PYSITELIB}/lexicon/_private/providers/aliyun.py
 ${PYSITELIB}/lexicon/_private/providers/aliyun.pyc
 ${PYSITELIB}/lexicon/_private/providers/aliyun.pyo
+${PYSITELIB}/lexicon/_private/providers/arvancloud.py
+${PYSITELIB}/lexicon/_private/providers/arvancloud.pyc
+${PYSITELIB}/lexicon/_private/providers/arvancloud.pyo
 ${PYSITELIB}/lexicon/_private/providers/aurora.py
 ${PYSITELIB}/lexicon/_private/providers/aurora.pyc
 ${PYSITELIB}/lexicon/_private/providers/aurora.pyo
@@ -146,6 +149,9 @@ ${PYSITELIB}/lexicon/_private/providers/internetbs.pyo
 ${PYSITELIB}/lexicon/_private/providers/inwx.py
 ${PYSITELIB}/lexicon/_private/providers/inwx.pyc
 ${PYSITELIB}/lexicon/_private/providers/inwx.pyo
+${PYSITELIB}/lexicon/_private/providers/ionos.py
+${PYSITELIB}/lexicon/_private/providers/ionos.pyc
+${PYSITELIB}/lexicon/_private/providers/ionos.pyo
 ${PYSITELIB}/lexicon/_private/providers/joker.py
 ${PYSITELIB}/lexicon/_private/providers/joker.pyc
 ${PYSITELIB}/lexicon/_private/providers/joker.pyo
@@ -227,6 +233,9 @@ ${PYSITELIB}/lexicon/_private/providers/rage4.pyo
 ${PYSITELIB}/lexicon/_private/providers/rcodezero.py
 ${PYSITELIB}/lexicon/_private/providers/rcodezero.pyc
 ${PYSITELIB}/lexicon/_private/providers/rcodezero.pyo
+${PYSITELIB}/lexicon/_private/providers/regfish.py
+${PYSITELIB}/lexicon/_private/providers/regfish.pyc
+${PYSITELIB}/lexicon/_private/providers/regfish.pyo
 ${PYSITELIB}/lexicon/_private/providers/route53.py
 ${PYSITELIB}/lexicon/_private/providers/route53.pyc
 ${PYSITELIB}/lexicon/_private/providers/route53.pyo
