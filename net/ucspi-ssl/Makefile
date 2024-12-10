@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2024/11/16 12:06:22 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2024/12/10 16:07:24 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.13.03
 PKGNAME=		${DISTNAME:S/-0./-0.999./}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		https://www.fehcom.de/ipnet/ucspi-ssl/
 EXTRACT_SUFX=		.tgz
@@ -41,11 +41,11 @@ DJB_CONFIG_CMDS=							\
 	${ECHO} > conf-ssl;						\
 	${ECHO} ${SSLDIR}/certs > conf-cadir;				\
 	${ECHO} ${PKG_SYSCONFDIR}/dh2048.pem > conf-dhfile;		\
-	${ECHO} ${DEFAULT_MEDIUM_CIPHERS} > conf-ciphers;		\
+	${ECHO} ${DEFAULT_CIPHERS} > conf-ciphers;			\
 	${ECHO} it-base > src/it=d;
 
-# from `postconf -d | grep tls_medium_cipherlist`
-DEFAULT_MEDIUM_CIPHERS=	aNULL:-aNULL:HIGH:MEDIUM:+RC4:@STRENGTH
+# from `conf-ciphers` for TLS 1.3:
+DEFAULT_CIPHERS=	TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man2 share/doc/${PKGBASE} ${EGDIR}
 
