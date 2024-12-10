@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:44:27 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/12/10 14:43:07 nia Exp $
 
-BLAKE2s (taisei-v1.3.2.tar.xz) = 98b4e1b4ccd90afb84d5f7bdb3e0fb90730922cfc2dbcdec25b41d79af131de0
-SHA512 (taisei-v1.3.2.tar.xz) = 9304c082106dfa1ffcf6c8fb7333e64755b1246ef50b9f49d3e64d167eb15575ac667ca658b1d7e247582e164e703e5817384556dd633f5516670d975817717d
-Size (taisei-v1.3.2.tar.xz) = 70481856 bytes
-SHA1 (patch-scripts_meson.build) = 2f646ae68b933cde3763ec16be01fb7bb722dbff
-SHA1 (patch-src_stages_stage2__events.c) = 89c67616a1603d37455e75fc2fb84a2b462a40bb
+BLAKE2s (taisei-1.4.2.tar.xz) = 43ab80213fb17d4e07f49ff4c1a5c1bc876fdd7fa243b54d9544064a5198cb7d
+SHA512 (taisei-1.4.2.tar.xz) = 81cb2e354169eac2495fe5aaf65136580240af6bfaf194b0288352a527e0d12e2e7b2eb2510f8f8cf4fc96ed3b5a66934e3d62c8b53b497e7f2cd8be962a5f98
+Size (taisei-1.4.2.tar.xz) = 219573092 bytes

@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2024/11/14 22:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2024/12/10 14:43:07 nia Exp $
 
-DISTNAME=	taisei-v1.3.2
-PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	21
+DISTNAME=	taisei-1.4.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=taisei-project/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -14,6 +12,7 @@ COMMENT=	Open source Touhou Project fan game
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	c++14
 
@@ -21,20 +20,12 @@ MESON_ARGS+=	-Db_pch=false
 MESON_ARGS+=	-Db_lto=false
 MESON_ARGS+=	-Dstrip=false
 MESON_ARGS+=	-Ddefault_library=shared
-MESON_ARGS+=	-Dversion_fallback=${PKGVERSION_NOREV}
-MESON_ARGS+=	-Ddocs=false
+MESON_ARGS+=	-Ddocs=disabled
 MESON_ARGS+=	-Ddeveloper=false
-MESON_ARGS+=	-Ddebug_opengl=false
-MESON_ARGS+=	-Dmacos_bundle=false
-MESON_ARGS+=	-Dvalidate_glsl=false
-MESON_ARGS+=	-Dinstall_freedesktop=true
-MESON_ARGS+=	-Duse_libcrypto=true
-
-SUBST_CLASSES+=		ver
-SUBST_STAGE.ver=	pre-configure
-SUBST_MESSAGE.ver=	Setting the package verison.
-SUBST_FILES.ver+=	scripts/meson.build
-SUBST_VARS.ver=		PKGVERSION
+MESON_ARGS+=	-Dinstall_macos_bundle=disabled
+MESON_ARGS+=	-Dvalidate_glsl=disabled
+MESON_ARGS+=	-Dinstall_freedesktop=enabled
+MESON_ARGS+=	-Duse_libcrypto=enabled
 
 REPLACE_PYTHON+=	scripts/thunk.py
 REPLACE_PYTHON+=	scripts/configure-file.py
@@ -46,6 +37,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
@@ -56,4 +48,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
