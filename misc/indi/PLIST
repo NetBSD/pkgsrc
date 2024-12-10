@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/21 07:14:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/10 10:07:50 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_activefocuser_focus
 bin/indi_alluna_tcs2
 bin/indi_alto
 bin/indi_arduinost4
+bin/indi_astrolink4
 bin/indi_astrolink4mini2
 bin/indi_astromech_lpm
+bin/indi_astromechfoc
 bin/indi_astrometry
 bin/indi_astrotrac_telescope
 bin/indi_baader_dome
@@ -24,6 +26,7 @@ bin/indi_dmfc_focus
 bin/indi_domepro2_dome
 bin/indi_dragon_light
 bin/indi_dragonlair_dome
+bin/indi_dreamfocuser_focus
 bin/indi_dsc_telescope
 bin/indi_efa_focus
 bin/indi_eq500x_telescope
@@ -46,6 +49,7 @@ bin/indi_ieqlegacy_telescope
 bin/indi_imager_agent
 bin/indi_integra_focus
 bin/indi_ioptronHC8406
+bin/indi_ioptron_wheel
 bin/indi_ioptronv3_telescope
 bin/indi_lacerta_mfoc_fmc_focus
 bin/indi_lacerta_mfoc_focus
@@ -138,6 +142,7 @@ bin/indi_skysafari
 bin/indi_skywatcherAltAzMount
 bin/indi_smartfocus_focus
 bin/indi_snapcap
+bin/indi_spectracyber
 bin/indi_sqm_weather
 bin/indi_star2000
 bin/indi_steeldrive2_focus
