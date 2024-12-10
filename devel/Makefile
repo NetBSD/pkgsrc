@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4367 2024/12/08 16:45:21 taca Exp $
+# $NetBSD: Makefile,v 1.4368 2024/12/10 20:08:20 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3383,7 +3383,6 @@ SUBDIR+=	ruby-msgpack
 SUBDIR+=	ruby-multi_test
 SUBDIR+=	ruby-mustache
 SUBDIR+=	ruby-native-package-installer
-SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-necromancer
 SUBDIR+=	ruby-needle
 SUBDIR+=	ruby-nenv
