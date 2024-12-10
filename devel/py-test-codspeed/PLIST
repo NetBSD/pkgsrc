@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2024/12/04 13:43:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/10 06:29:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pytest_codspeed/__init__.py
 ${PYSITELIB}/pytest_codspeed/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/__init__.pyo
@@ -13,10 +13,12 @@ ${PYSITELIB}/pytest_codspeed/instruments/__init__.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.py
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/__init__.pyo
-${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/.gitignore
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.py
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.pyc
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/__init__.pyo
+${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.py
+${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.pyc
+${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/build.pyo
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.c
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.h
 ${PYSITELIB}/pytest_codspeed/instruments/valgrind/_wrapper/wrapper.pyi
