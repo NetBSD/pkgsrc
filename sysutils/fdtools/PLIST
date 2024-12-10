@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2020/07/07 10:31:31 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/10 14:32:04 schmonz Exp $
 bin/grabconsole
 bin/multitee
 bin/pipecycle
@@ -11,3 +11,15 @@ bin/statfile
 bin/vc-get
 bin/vc-lock
 bin/vc-switch
+man/man1/multitee.1
+man/man1/pipecycle.1
+man/man1/recvfd.1
+man/man1/seek0.1
+man/man1/sendfd.1
+man/man1/setblock.1
+man/man1/setstate.1
+man/man1/statfile.1
+man/man8/grabconsole.8
+man/man8/vc-get.8
+man/man8/vc-lock.8
+man/man8/vc-switch.8
