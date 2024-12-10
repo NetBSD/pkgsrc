@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/11/26 12:42:22 nia Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/10 07:31:19 wiz Exp $
 
 DISTNAME=	mailman-3.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.2:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
@@ -31,11 +33,9 @@ DEPENDS+=	${PYPKGPREFIX}-zope.component-[0-9]*:../../devel/py-zope.component
 DEPENDS+=	${PYPKGPREFIX}-zope.configuration-[0-9]*:../../devel/py-zope.configuration
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0:../../devel/py-zope.interface
-
-# TEST_DEPENDS
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
-TOOL_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
-TOOL_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
+TEST_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
+TEST_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+TEST_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
 
 BUILD_DEFS+=		VARBASE
 
@@ -75,7 +75,8 @@ CONF_FILES_PERMS=	${EGDIR}/mailman.cfg ${PKG_SYSCONFDIR}/mailman.cfg \
 
 INSTALLATION_DIRS+=	${EGDIR}
 
-# py-falcon
+# uses nntplib, removed from Python 3.13
+# https://gitlab.com/mailman/mailman/-/issues/1176
 PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 post-patch:
@@ -85,5 +86,5 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/mailman.cfg ${DESTDIR}${PREFIX}/${EGDIR}/mailman.cfg
 	${INSTALL_DATA} ${WRKSRC}/crontab.sample ${DESTDIR}${PREFIX}/${EGDIR}/crontab.sample
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
