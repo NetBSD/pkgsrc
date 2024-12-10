@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1823 2024/11/29 13:35:17 mef Exp $
+# $NetBSD: Makefile,v 1.1824 2024/12/10 07:54:38 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -906,6 +906,7 @@ SUBDIR+=	py-sigal
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-soupsieve
 SUBDIR+=	py-sparqlwrapper
+SUBDIR+=	py-starlette
 SUBDIR+=	py-swiftclient
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-sydent
