@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.23 2024/05/06 09:35:14 jperkin Exp $
+# $NetBSD: curses.builtin.mk,v 1.24 2024/12/10 20:32:26 wiz Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -12,7 +12,7 @@ BUILTIN_FIND_HEADERS.H_CURSES=			curses.h
 #
 BUILTIN_TEST_CURSES_FUNCS=	chgat getsyx halfdelay putwin
 BUILTIN_TEST_CURSES_FUNCS+=	resize_term resizeterm ripoffline set_escdelay syncok
-BUILTIN_TEST_CURSES_FUNCS+=	wgetnstr wsyncup mvwchgat vw_printw
+BUILTIN_TEST_CURSES_FUNCS+=	wgetnstr wgetscrreg wsyncup mvwchgat vw_printw
 BUILTIN_TEST_CURSES_FUNCS+=	getmouse
 BUILTIN_TEST_CURSES_DEFINES=	WA_NORMAL
 
