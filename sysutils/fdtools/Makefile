@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2023/01/16 21:49:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2024/12/10 14:32:04 schmonz Exp $
 
-DISTNAME=		fdtools-2021.04.30
-PKGREVISION=		1
+DISTNAME=		fdtools-2024.12.07
 CATEGORIES=		sysutils
 MASTER_SITES=		${HOMEPAGE}/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,12 +13,11 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/misc/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
-CPPFLAGS+=		-I ${PREFIX:Q}/include \
-			-Dtain_t=tain
+CPPFLAGS+=		-I ${PREFIX:Q}/include
 LDFLAGS+=		-L ${PREFIX:Q}/lib/skalibs
 LDFLAGS.SunOS+=		-lsocket
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 do-configure:
 	${ECHO} ${PREFIX} > ${WRKSRC}/conf-compile/defaults/package_home
@@ -28,7 +26,13 @@ do-configure:
 do-install:
 	cd ${WRKSRC}/command; \
 	for i in *; do \
-	  ${INSTALL_PROGRAM} $${i} ${DESTDIR}${PREFIX}/bin; \
+		${INSTALL_PROGRAM} $${i} ${DESTDIR}${PREFIX}/bin; \
+	done
+	cd ${WRKSRC}/man; for i in 1 8; do \
+		for j in man$$i/*.$$i; do \
+			${INSTALL_MAN} $$j \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; \
+		done \
 	done
 
 SKALIBS_TOLERATE_TARGET_SKEW=	no
