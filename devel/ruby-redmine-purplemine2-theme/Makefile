@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2021/02/28 16:20:55 taca Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/11 15:01:05 taca Exp $
 
-DISTNAME=	PurpleMine2-2.14.0
+DISTNAME=	PurpleMine2-2.16.2
 PKGNAME=	${RUBY_PKGPREFIX}-redmine${RM_VER}-purplemine2-theme-${DISTNAME:S/PurpleMine2-//}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mrliptontea/}
 GITHUB_PROJECT=	PurpleMine2

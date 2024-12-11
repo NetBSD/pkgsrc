@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:44 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/12/11 15:01:05 taca Exp $
 
-BLAKE2s (PurpleMine2-2.14.0.tar.gz) = b4d46fcb15ba972b8202010c543d6522e78bab70d71235b048b5bcb3fd838114
-SHA512 (PurpleMine2-2.14.0.tar.gz) = 23aca5d1aa9132b57ddf07d9530a3d3a42a1d7b0638726eb33557c2ed266ceb303185852f22a9451b54fb5de28737fb7a79d08d42e5b6709f674004400cd78c4
-Size (PurpleMine2-2.14.0.tar.gz) = 1258058 bytes
+BLAKE2s (PurpleMine2-2.16.2.tar.gz) = 9d2f154939980e2e3210043d3e4915e3467b401f65590c64fe4ce09b0332dc58
+SHA512 (PurpleMine2-2.16.2.tar.gz) = 03956aaa92002792147d6fff796672f3ee063f35a4ec3b2dc9f58ca4fe5fea5e1f7f43c42b6f6c17a1dcd3808c3dba594c77c9b85cbab940ccd05d2c1c512681
+Size (PurpleMine2-2.16.2.tar.gz) = 1322958 bytes
