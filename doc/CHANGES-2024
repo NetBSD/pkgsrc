@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7611 2024/12/11 23:20:26 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7612 2024/12/11 23:27:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11436,3 +11436,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/php-xdebug to 3.4.0 [taca 2024-12-11]
 	Updated sysutils/lla to 0.3.0 [pin 2024-12-11]
 	Updated devel/py-hg-git to 1.1.4 [wiz 2024-12-11]
+	Updated devel/py-mercurial to 6.9 [wiz 2024-12-11]
