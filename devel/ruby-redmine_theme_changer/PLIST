@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/28 16:25:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/11 15:09:28 taca Exp $
 ${RM_PLUGINDIR}/redmine_theme_changer/app/models/theme_changer_user_setting.rb
 ${RM_PLUGINDIR}/redmine_theme_changer/app/views/my/_theme_changer_form.html.erb
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/bg.yml
@@ -8,6 +8,7 @@ ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/en.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/fr.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/ja.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/ko.yml
+${RM_PLUGINDIR}/redmine_theme_changer/config/locales/pl.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/pt-BR.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/ru.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/config/locales/tr.yml
@@ -16,7 +17,7 @@ ${RM_PLUGINDIR}/redmine_theme_changer/db/migrate/0001_create_theme_changer_user_
 ${RM_PLUGINDIR}/redmine_theme_changer/init.rb
 ${RM_PLUGINDIR}/redmine_theme_changer/lib/theme_changer_my_account_hooks.rb
 ${RM_PLUGINDIR}/redmine_theme_changer/lib/theme_changer_themes_patch.rb
-${RM_PLUGINDIR}/redmine_theme_changer/lib/theme_changer_user_patch.rb
+${RM_PLUGINDIR}/redmine_theme_changer/lib/theme_changer_user_preference_patch.rb
 ${RM_PLUGINDIR}/redmine_theme_changer/test/fixtures/theme_changer_user_settings.yml
 ${RM_PLUGINDIR}/redmine_theme_changer/test/test_helper.rb
 ${RM_PLUGINDIR}/redmine_theme_changer/test/unit/theme_changer_user_setting_test.rb
