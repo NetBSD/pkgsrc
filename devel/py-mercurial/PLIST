@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2024/06/20 23:55:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.49 2024/12/11 23:27:33 wiz Exp $
 bin/chg
 bin/hg
 ${PYSITELIB}/hgdemandimport/__init__.py
@@ -478,6 +478,12 @@ ${PYSITELIB}/mercurial/archival.pyo
 ${PYSITELIB}/mercurial/bookmarks.py
 ${PYSITELIB}/mercurial/bookmarks.pyc
 ${PYSITELIB}/mercurial/bookmarks.pyo
+${PYSITELIB}/mercurial/branching/__init__.py
+${PYSITELIB}/mercurial/branching/__init__.pyc
+${PYSITELIB}/mercurial/branching/__init__.pyo
+${PYSITELIB}/mercurial/branching/rev_cache.py
+${PYSITELIB}/mercurial/branching/rev_cache.pyc
+${PYSITELIB}/mercurial/branching/rev_cache.pyo
 ${PYSITELIB}/mercurial/branchmap.py
 ${PYSITELIB}/mercurial/branchmap.pyc
 ${PYSITELIB}/mercurial/branchmap.pyo
@@ -756,6 +762,9 @@ ${PYSITELIB}/mercurial/interfaces/__init__.pyo
 ${PYSITELIB}/mercurial/interfaces/dirstate.py
 ${PYSITELIB}/mercurial/interfaces/dirstate.pyc
 ${PYSITELIB}/mercurial/interfaces/dirstate.pyo
+${PYSITELIB}/mercurial/interfaces/modules.py
+${PYSITELIB}/mercurial/interfaces/modules.pyc
+${PYSITELIB}/mercurial/interfaces/modules.pyo
 ${PYSITELIB}/mercurial/interfaces/repository.py
 ${PYSITELIB}/mercurial/interfaces/repository.pyc
 ${PYSITELIB}/mercurial/interfaces/repository.pyo
@@ -1254,6 +1263,9 @@ ${PYSITELIB}/mercurial/templateutil.pyo
 ${PYSITELIB}/mercurial/testing/__init__.py
 ${PYSITELIB}/mercurial/testing/__init__.pyc
 ${PYSITELIB}/mercurial/testing/__init__.pyo
+${PYSITELIB}/mercurial/testing/ps_util.py
+${PYSITELIB}/mercurial/testing/ps_util.pyc
+${PYSITELIB}/mercurial/testing/ps_util.pyo
 ${PYSITELIB}/mercurial/testing/revlog.py
 ${PYSITELIB}/mercurial/testing/revlog.pyc
 ${PYSITELIB}/mercurial/testing/revlog.pyo
