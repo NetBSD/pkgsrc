@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/11 15:49:06 taca Exp $
+
+BLAKE2s (useragent-0.16.11.gem) = c3f6343ddf1f990d2e2a2dcded646caed689e5be09e060c8e72fbb419e16872b
+SHA512 (useragent-0.16.11.gem) = dda997339ed9b373e5d528661e98ad23f1ffdb6d27a142195e5506448e39f50cac0043aa69349e87ea0443098f271664774664b6f3fb150790f8a0703d6b9d60
+Size (useragent-0.16.11.gem) = 14336 bytes

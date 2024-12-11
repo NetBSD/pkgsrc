@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2024/12/11 15:49:06 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/user_agent.rb
+${GEM_LIBDIR}/lib/user_agent/browsers.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/apple_core_media.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/base.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/chrome.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/edge.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/gecko.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/internet_explorer.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/itunes.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/libavformat.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/opera.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/playstation.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/podcast_addict.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/vivaldi.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/webkit.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/wechat_browser.rb
+${GEM_LIBDIR}/lib/user_agent/browsers/windows_media_player.rb
+${GEM_LIBDIR}/lib/user_agent/comparable.rb
+${GEM_LIBDIR}/lib/user_agent/operating_systems.rb
+${GEM_LIBDIR}/lib/user_agent/version.rb
+${GEM_LIBDIR}/lib/useragent.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
