@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/07 15:31:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/11 15:12:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/lib/jekyll-archives.rb
 ${GEM_LIBDIR}/lib/jekyll-archives/archive.rb
+${GEM_LIBDIR}/lib/jekyll-archives/page_drop.rb
 ${GEM_LIBDIR}/lib/jekyll-archives/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
