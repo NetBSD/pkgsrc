@@ -6,6 +6,7 @@ bin/kramdown-rfc-autolink-iref-cleanup @PREFIX@/bin/kramdown-rfc-autolink-iref-c
 bin/kramdown-rfc-cache-i-d-bibxml @PREFIX@/bin/kramdown-rfc-cache-i-d-bibxml@RUBY_SUFFIX@
 bin/kramdown-rfc-cache-subseries-bibxml @PREFIX@/bin/kramdown-rfc-cache-subseries-bibxml@RUBY_SUFFIX@
 bin/kramdown-rfc-clean-svg-ids @PREFIX@/bin/kramdown-rfc-clean-svg-ids@RUBY_SUFFIX@
+bin/kramdown-rfc-extract-figures-tables @PREFIX@/bin/kramdown-rfc-extract-figures-tables@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-markdown @PREFIX@/bin/kramdown-rfc-extract-markdown@RUBY_SUFFIX@
 bin/kramdown-rfc-extract-sourcecode @PREFIX@/bin/kramdown-rfc-extract-sourcecode@RUBY_SUFFIX@
 bin/kramdown-rfc-lsr @PREFIX@/bin/kramdown-rfc-lsr@RUBY_SUFFIX@
