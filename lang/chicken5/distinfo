@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2024/07/29 17:49:21 ktnb Exp $
+$NetBSD: distinfo,v 1.8 2024/12/11 20:14:58 ktnb Exp $
 
 BLAKE2s (chicken-5.4.0.tar.gz) = 5e145448f4c45113efac8e860097b6460809106f8cc2eb4049697967aa1b209f
 SHA512 (chicken-5.4.0.tar.gz) = 21f5dc4abcfce7be2d8eb6728061728a4a695ac88860e94e114c2bf2839a8a47bbdc368330913edc83d5b81b6b2499c608e47e6659fa7651c82d133abb7e4e3c
 Size (chicken-5.4.0.tar.gz) = 4109135 bytes
+SHA1 (patch-Makefile.macosx) = b43e53c6e2acf435458dc6da6dce998fb920ce06
 SHA1 (patch-tests_runtests.sh) = c2bcee720a56cc399c6acdb1e002dbcd82ea272e
