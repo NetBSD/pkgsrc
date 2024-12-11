@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/12/11 15:27:35 taca Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/11 15:37:32 taca Exp $
 
 DISTNAME=	activerecord-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activerecord${RUBY_RAILS}-${RAILS_VERSION}
-PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
