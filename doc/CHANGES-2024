@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7567 2024/12/11 13:05:12 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7568 2024/12/11 13:36:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11371,3 +11371,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pkginfo to 1.12.0 [adam 2024-12-11]
 	Updated devel/py-poetry to 1.8.5 [adam 2024-12-11]
 	Updated www/syncstorage-rs to 0.18.2 [wiz 2024-12-11]
+	Updated security/ruby-metasploit-payloads to 2.0.189 [taca 2024-12-11]
