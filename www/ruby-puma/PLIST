@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2023/02/23 15:41:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/12/11 14:37:06 taca Exp $
 bin/puma${RUBY_SUFFIX}
 bin/pumactl${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/docs/fork_worker.md
 ${GEM_LIBDIR}/docs/images/puma-connection-flow-no-reactor.png
 ${GEM_LIBDIR}/docs/images/puma-connection-flow.png
 ${GEM_LIBDIR}/docs/images/puma-general-arch.png
+${GEM_LIBDIR}/docs/java_options.md
 ${GEM_LIBDIR}/docs/jungle/README.md
 ${GEM_LIBDIR}/docs/jungle/rc.d/README.md
 ${GEM_LIBDIR}/docs/jungle/rc.d/puma
