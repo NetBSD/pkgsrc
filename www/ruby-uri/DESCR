@@ -1,0 +1,11 @@
+URI
+
+URI is a module providing classes to handle Uniform Resource Identifiers
+(RFC2396: http://tools.ietf.org/html/rfc2396).
+
+Features
+
+* Uniform way of handling URIs.
+* Flexibility to introduce custom URI schemes.
+* Flexibility to have an alternate URI::Parser (or just different patterns
+  and regexp's).
