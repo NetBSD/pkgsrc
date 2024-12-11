@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/09/01 13:46:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/11 14:31:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/bench/capturing.rb
 ${GEM_LIBDIR}/bench/regexp.rb
 ${GEM_LIBDIR}/bench/simple_vs_sinatra.rb
 ${GEM_LIBDIR}/bench/template_vs_addressable.rb
+${GEM_LIBDIR}/bench/uri_parser_object.rb
 ${GEM_LIBDIR}/lib/mustermann.rb
 ${GEM_LIBDIR}/lib/mustermann/ast/boundaries.rb
 ${GEM_LIBDIR}/lib/mustermann/ast/compiler.rb
