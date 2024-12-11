@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.210 2024/11/06 17:05:02 leot Exp $
+$NetBSD: distinfo,v 1.211 2024/12/11 09:24:32 wiz Exp $
 
-BLAKE2s (curl-8.11.0.tar.xz) = 96155a81073d9094d0237e4dc2699dc7e0e79840f8b6e249c15a1284d4d9815c
-SHA512 (curl-8.11.0.tar.xz) = 3a642d421e0a5c09ecb681bea18498f2c6124e9af4d8afdc074dfb85a9b0211d8972ade9cf00ab44b5dfed9303262cd83551dd3b5e0976d11fc19da3c4a0987e
-Size (curl-8.11.0.tar.xz) = 2750684 bytes
-SHA1 (patch-configure) = cd64c90450b7e675eeed06a8ee8f6d13ea105fa8
+BLAKE2s (curl-8.11.1.tar.xz) = 058a2195b969d71c67c22b8882ff1e782185690c12516a022ab3bb865e87d841
+SHA512 (curl-8.11.1.tar.xz) = 7c7c47a49505575b610c56b455f0919ea5082a993bf5483eeb258ead167aadb87078d626b343b417dcfc5439c53556425c8fb4fe3b01b53a87b47c01686a3e57
+Size (curl-8.11.1.tar.xz) = 2751236 bytes
 SHA1 (patch-curl-config.in) = 1f84517a0a2060bb4ba96821d32e873f51722a7f
