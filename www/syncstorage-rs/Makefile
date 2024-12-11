@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/14 22:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/11 13:05:01 wiz Exp $
 
-DISTNAME=	syncstorage-rs-0.17.11
-PKGREVISION=	3
+DISTNAME=	syncstorage-rs-0.18.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mozilla-services/}
 
@@ -9,6 +8,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mozilla-services/syncstorage-rs/
 COMMENT=	Firefox Sync Storage server in Rust
 LICENSE=	mpl-2.0
+
+SITES.curl-sys-0.4.72+curl-8.6.0.crate=	https://static.crates.io/crates/curl-sys/
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
@@ -35,12 +36,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	313
 
 .include "cargo-depends.mk"
 
-# Depends on an mozilla-modified version of crate
-DEADPOOL_REV=				deadpool-v0.7.0
-DISTFILES=				${DEFAULT_DISTFILES}
-DISTFILES+=				deadpool-${DEADPOOL_REV}.tar.gz
-SITES.deadpool-${DEADPOOL_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=mozilla-services/}deadpool/archive/${DEADPOOL_REV}.tar.gz
-
 USE_LANGUAGES=		c c++ # rust, but needs toolchain
 USE_TOOLS+=		pkg-config
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -48,9 +43,6 @@ RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.curl}/lib
 
 INSTALLATION_DIRS+=	bin share/doc/syncstorage-rs share/examples/syncstorage-rs
 INSTALLATION_DIRS+=	lib/tokenserver
-
-post-extract:
-	mv ${WRKDIR}/deadpool* ${WRKDIR}/deadpool
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/syncserver ${DESTDIR}${PREFIX}/bin
