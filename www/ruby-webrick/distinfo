@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/11/06 15:11:05 taca Exp $
+$NetBSD: distinfo,v 1.13 2024/12/11 14:48:41 taca Exp $
 
-BLAKE2s (webrick-1.9.0.gem) = 495ca08db069731a9f3b9c704601dd1aef4ce632502afeb4f9fc258164b1faa4
-SHA512 (webrick-1.9.0.gem) = 2a60f164cef92b9abce491f93b70369a31378bc181fab5de3882e8e4dc9929bd11f310832f53a3e10e4ee23b50c4c0377a8a6037f56979a36d2a80f5564dbce0
-Size (webrick-1.9.0.gem) = 71168 bytes
+BLAKE2s (webrick-1.9.1.gem) = b3b3590916cb6440a8f08bd9d8e03b31a10068fd3497aab7c0ce264a0f2fa994
+SHA512 (webrick-1.9.1.gem) = 2ff6887b2f0290a75d7af9b149f13ddc85f68dbe91193073cd4b6bcdc52f7580fd838941ec5dba1c29e2d3263f3fef6970a4a9425a3eafb7e0a38a288150572d
+Size (webrick-1.9.1.gem) = 71168 bytes
