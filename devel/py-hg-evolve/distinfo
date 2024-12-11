@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2024/08/08 08:12:54 wiz Exp $
+$NetBSD: distinfo,v 1.32 2024/12/11 23:32:48 wiz Exp $
 
-BLAKE2s (hg-evolve-11.1.4.tar.gz) = 28d6a2a6568d9f25a1658bbad5d8866d45dc5a060f34070d92004e2441c3aa3a
-SHA512 (hg-evolve-11.1.4.tar.gz) = b69331888aded8bba7d1e5efed382826b81845f18aff9ee186b6445f3e020bd7480452261c42bf23a010d78e2df0d78515cba71c8b1daf47bd19cc8280832a64
-Size (hg-evolve-11.1.4.tar.gz) = 861472 bytes
+BLAKE2s (hg-evolve-11.1.6.tar.gz) = 09bcba9b76afe883b5250156721b78d56bd83660a53f76ebb6896fd7bed16aac
+SHA512 (hg-evolve-11.1.6.tar.gz) = 1f6c6848d730b083601618f7fb3391105d2e0536d5aeac600c04c13dbb603305b7aa286edff7bb712caa70a9c6a479519821d70e7c093f3a4a8d189ec52776f0
+Size (hg-evolve-11.1.6.tar.gz) = 864773 bytes
