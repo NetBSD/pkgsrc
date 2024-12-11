@@ -1,8 +1,11 @@
-$NetBSD: patch-WORKSPACE.bazel,v 1.1 2024/02/10 01:17:27 ryoon Exp $
+$NetBSD: patch-WORKSPACE.bazel,v 1.2 2024/12/11 03:07:20 maya Exp $
+
+Avoid fetching http_archive files as I dont know how to override
+them being downloaded during the build
 
 --- WORKSPACE.bazel.orig	2023-10-26 12:00:50.000000000 +0000
 +++ WORKSPACE.bazel
-@@ -118,7 +128,7 @@ new_local_repository(
+@@ -118,7 +118,7 @@ new_local_repository(
  # Qt for Linux
  pkg_config_repository(
    name = "qt_linux",
@@ -11,3 +14,29 @@ $NetBSD: patch-WORKSPACE.bazel,v 1.1 2024/02/10 01:17:27 ryoon Exp $
  )
  
  # Qt for macOS
+@@ -200,14 +200,14 @@ http_file(
+ )
+ 
+ # Zip code
+-http_archive(
+-    name = "zip_code_ken_all",
+-    build_file_content = "exports_files([\"KEN_ALL.CSV\"])",
+-    url = "https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip",
+-)
+-
+-http_archive(
+-    name = "zip_code_jigyosyo",
+-    build_file_content = "exports_files([\"JIGYOSYO.CSV\"])",
+-    url = "https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip",
+-)
++#http_archive(
++#    name = "zip_code_ken_all",
++#    build_file_content = "exports_files([\"KEN_ALL.CSV\"])",
++#    url = "https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip",
++#)
++
++#http_archive(
++#    name = "zip_code_jigyosyo",
++#    build_file_content = "exports_files([\"JIGYOSYO.CSV\"])",
++#    url = "https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip",
++#)

@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.95 2024/11/14 22:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2024/12/11 03:07:20 maya Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-server-/}
 PKGREVISION=	5
 
 INSTALLATION_DIRS+=	libexec
+
+post-configure:
+	cd ${WRKSRC}/dist && \
+		unzip -d ../dictionary jigyosyo.zip && \
+		unzip -d ../dictionary ken_all.zip
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -19,6 +24,8 @@ do-build:
 			--sandbox_debug \
 			--verbose_failures \
 			--subcommands \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--config oss_linux --compilation_mode opt
 
 do-install:
