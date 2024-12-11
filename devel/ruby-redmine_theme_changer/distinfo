@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:19:45 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/12/11 15:09:28 taca Exp $
 
-BLAKE2s (redmine_theme_changer-0.4.0.tar.gz) = c8603b16db8133c10e97fd775ef21d7ffb0ac6bb5924a62f97038ee6bdcf3c70
-SHA512 (redmine_theme_changer-0.4.0.tar.gz) = 39c49d2655fa64713572c1876aa5a0e1d5ff0b444ce97625ca6d5881089e6aa534d329065926a1a48bad45d97427b5e358835d4e16df524743c5af5e672b0957
-Size (redmine_theme_changer-0.4.0.tar.gz) = 13142 bytes
+BLAKE2s (redmine_theme_changer-0.7.0.tar.gz) = ae9c762b033485841348449c41a5df6e3db12ef48b7581b766dec386df045ddf
+SHA512 (redmine_theme_changer-0.7.0.tar.gz) = 2d60a267447cf003a98d7d4a40ffb423545ee058dd66aa7212340cc3035b12ec484fe642561c56b3753c6bd2f9e66b9288d0f55cb6560582cdb8e708614d8a2e
+Size (redmine_theme_changer-0.7.0.tar.gz) = 17470 bytes
