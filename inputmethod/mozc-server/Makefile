@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.96 2024/12/11 03:07:20 maya Exp $
+# $NetBSD: Makefile,v 1.97 2024/12/11 03:08:04 maya Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-server-/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 INSTALLATION_DIRS+=	libexec
 
