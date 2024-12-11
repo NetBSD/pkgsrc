@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/11/14 22:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/11 01:05:03 maya Exp $
 
 # Java project does not work as follows:
 # Error: could not find libjava.so
@@ -52,6 +52,7 @@ SUBST_VARS.prefix+=	PREFIX
 
 EXTRA_BAZEL_ARGS+=	--tool_java_runtime_version=local_jdk
 EXTRA_BAZEL_ARGS+=	--subcommands
+EXTRA_BAZEL_ARGS+=	--jobs=${MAKE_JOBS:U1}
 MAKE_ENV+=		EXTRA_BAZEL_ARGS=${EXTRA_BAZEL_ARGS:Q}
 
 INSTALLATION_DIRS+=	bin
