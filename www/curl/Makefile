@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.290 2024/12/11 09:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2024/12/11 12:02:21 ryoon Exp $
 
 .include "Makefile.common"
+PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
