@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/11/27 10:24:50 pin Exp $
+# $NetBSD: Makefile,v 1.30 2024/12/11 09:53:30 pin Exp $
 
-DISTNAME=	tui-journal-0.13.0
+DISTNAME=	tui-journal-0.13.1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ammarabouzor/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
