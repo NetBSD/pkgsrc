@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:21:31 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/12/11 14:27:25 wiz Exp $
 
-BLAKE2s (kakoune-2020.01.16.tar.bz2) = 16a8ed602ec08af24cddbc42a26a2fe9846c8693c478a48d5aa8dadeb96db487
-SHA512 (kakoune-2020.01.16.tar.bz2) = c7b5b2790f3ecaf3a94b72e1d2f75fbbde8a7e8d3696f8a633439eb39a7331809d7fc13290bc781350fd6efe4cd823625438fe719f99bf18cfaff8a9a5773156
-Size (kakoune-2020.01.16.tar.bz2) = 478509 bytes
-SHA1 (patch-src_Makefile) = efdae51f3ae0389c1d6ce39dfe35c95c890ad0be
-SHA1 (patch-src_commands.cc) = 0904deb1b4d14ffc73d4182a61c12f0de82186fa
-SHA1 (patch-src_event__manager.cc) = 8666702d13d416fdb7b7cbaf55615b736f7b09a8
-SHA1 (patch-src_file.cc) = 490872503d1f5b73281095aa7552f6c8819a7969
-SHA1 (patch-src_insert__completer.cc) = 993dc13309483d9a7191f0d9f0cb7e76d6429a2b
-SHA1 (patch-src_normal.cc) = ca7fc93d78bd85614a905a0b945a4bbb7c45ab69
-SHA1 (patch-src_string__utils.cc) = f232d13f3e39124058354c6f9d20ff2936f58ba9
+BLAKE2s (kakoune-2024.05.18.tar.bz2) = 53df8c13b713f0235479b57ad404ed91ed995967625b0c307eced570833fe2db
+SHA512 (kakoune-2024.05.18.tar.bz2) = 4feba6b9a75fd16c1c8151139ac5a98d113f2ab1a5c9e7d03ac194d9d6d67d7dfa25b4e6073546b8dafa241de5db4ddbce4405faa42d710bbc9200f3fab12e4b
+Size (kakoune-2024.05.18.tar.bz2) = 588347 bytes

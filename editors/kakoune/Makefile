@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/05/06 08:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/11 14:27:25 wiz Exp $
 
-DISTNAME=	kakoune-2020.01.16
-PKGREVISION=	1
+DISTNAME=	kakoune-2024.05.18
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mawww/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -12,15 +11,13 @@ HOMEPAGE=	https://kakoune.org/
 COMMENT=	Experimental modal code editor
 LICENSE=	unlicense
 
-BUILD_DIRS=	src
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	c++17
+USE_CXX_FEATURES+=	c++20
 
-CXXFLAGS+=	-D'KAK_BIN_PATH="${PREFIX}/bin/kak"'
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-MAKE_FLAGS+=	gzip_man=no
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
