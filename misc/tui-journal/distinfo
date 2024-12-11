@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2024/11/27 10:24:50 pin Exp $
+$NetBSD: distinfo,v 1.28 2024/12/11 09:53:30 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -804,9 +804,9 @@ Size (tracing-core-0.1.32.crate) = 61221 bytes
 BLAKE2s (tree_magic_mini-3.1.6.crate) = 9cfa74c9afdb58b8fdab07233220337bb168744cd36a71b89578a9b300ebd92d
 SHA512 (tree_magic_mini-3.1.6.crate) = 015d91f180e529b797b665b34288c86e292545450d935d3608964cd2c3d1674310473248fb0c7f9284cea186e2c5adfdb9f0a568741e0a1f73cd187e9ef5ed9a
 Size (tree_magic_mini-3.1.6.crate) = 14869 bytes
-BLAKE2s (tui-journal-0.13.0.tar.gz) = 8003b96ae3f345c806cf0120c4dd773ab4369d0471e528403c96458434fba0c0
-SHA512 (tui-journal-0.13.0.tar.gz) = fca364ea84fef614ec222f6eed1391e7114de304d9e97fd2e7aa59a7159e53e298cef89f0dbd7620032bad20ecbcfcc1ddf072f76181f483431bc8bd322bd936
-Size (tui-journal-0.13.0.tar.gz) = 2001623 bytes
+BLAKE2s (tui-journal-0.13.1.tar.gz) = d719f8176e19c4c3c825f525f104be1e04923abb59a92e86a886831288133756
+SHA512 (tui-journal-0.13.1.tar.gz) = 71d93306788e06f428cef50c1e4a52698a27fda261c53305ace2035ea9094fdd870d19539b436c05bbe045585f01a392ffe92d185502edc16ada9c43ff1c1361
+Size (tui-journal-0.13.1.tar.gz) = 2003751 bytes
 BLAKE2s (tui-textarea-0.7.0.crate) = 8c246290ce0f56869dca870f8bdf1fceef13a444c7a348045970749915d5f7ce
 SHA512 (tui-textarea-0.7.0.crate) = 93fb2687d204b3b671aacb5989ec9095db1110d258862a5cba33d545f59c45ba39700340a987efd3cff9f422e27a020f7440a0205997108436f12062bf4f1a32
 Size (tui-textarea-0.7.0.crate) = 67947 bytes
