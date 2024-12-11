@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/12/11 23:27:33 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2024/12/11 23:32:49 riastradh Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -36,6 +36,7 @@ USE_TOOLS+=		bash:test
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
+TEST_MAKE_FLAGS+=	CARGO=/dev/null
 
 post-build:
 	${RUN} cd ${WRKSRC} && ${BUILD_MAKE_CMD} build-chg
