@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2024/12/11 23:27:33 wiz Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	https://www.mercurial-scm.org/release/
 
@@ -23,20 +22,17 @@ LDFLAGS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	share/doc/mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 PYTHON_SELF_CONFLICT=		yes
 
 .include "version.mk"
 
 USE_TOOLS+=		bash:test
-# Test status as of 6.8.1
-# Ran 941 tests, 83 skipped, 3 failed.
-# test-lfs-serve-access.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6898
-# test-profile.t
-# https://bz.mercurial-scm.org/show_bug.cgi?id=6846
+# Test status as of 6.9
+# Ran 943 tests, 81 skipped, 2 failed.
 # test-revlog-mmapindex.t
 # https://bz.mercurial-scm.org/show_bug.cgi?id=6899
+# test-locale.t
+# https://bz.mercurial-scm.org/show_bug.cgi?id=6948
 
 TEST_TARGET=		tests
 TEST_MAKE_FLAGS+=	PYTHON=${PYTHONBIN} TESTFLAGS=${_MAKE_JOBS:Q}
