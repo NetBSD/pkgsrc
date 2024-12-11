@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.macosx,v 1.1 2024/12/11 20:14:58 ktnb Exp $
+
+Make sure that the dylib is linked to pkgsrc's lib dir
+
+--- Makefile.macosx.orig	2024-12-11 19:25:23.757613008 +0000
++++ Makefile.macosx
+@@ -48,7 +48,7 @@ C_COMPILER_OPTIMIZATION_OPTIONS ?= -Os -
+ endif
+ endif
+ LIBRARIAN ?= ar
+-LINKER_LINK_SHARED_LIBRARY_OPTIONS = -dynamiclib -compatibility_version 1 -current_version 1.0 -install_name $@
++LINKER_LINK_SHARED_LIBRARY_OPTIONS = -dynamiclib -compatibility_version 1 -current_version 1.0 -install_name $(LIBDIR)/$@
+ HERE = $(shell pwd)
+ PREINSTALL_PROGRAM_FIXUP = $(POSTINSTALL_PROGRAM) -change lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO) $(HERE)/lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO)
+ POSTINSTALL_PROGRAM_FLAGS = -change lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO) $(LIBDIR)/lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO) -change $(HERE)/lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO) $(LIBDIR)/lib$(PROGRAM_PREFIX)chicken$(PROGRAM_SUFFIX)$(SO)
