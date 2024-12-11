@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7564 2024/12/11 10:42:07 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7565 2024/12/11 11:35:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11365,3 +11365,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/tree-sitter-python to 0.23.5 [wiz 2024-12-11]
 	Updated editors/xournalpp to 1.2.5 [wiz 2024-12-11]
 	Updated devel/py-ruff to 0.8.2 [wiz 2024-12-11]
+	Updated devel/cmake to 3.31.2 [adam 2024-12-11]
+	Updated devel/cmake-gui to 3.31.2 [adam 2024-12-11]
