@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:59 nia Exp $
+$NetBSD: distinfo,v 1.6 2024/12/11 15:12:17 taca Exp $
 
-BLAKE2s (jekyll-archives-2.2.1.gem) = 6026d442f1bf4b29924902eff8ca8b8423dcc53d0446e71a83d3738c6f40ccd1
-SHA512 (jekyll-archives-2.2.1.gem) = 506450707d61746edd794de2f95a0215c417290a9434c00d0269029ab1e4b118d66456e30f57c607a7e73577c8eeabbf717376767ffc79a6fe2c4421d32bd755
-Size (jekyll-archives-2.2.1.gem) = 6656 bytes
+BLAKE2s (jekyll-archives-2.3.0.gem) = fc62145085fe39da3c8958b6f1969b1d2d64dc194808c769bbbe4b5388b85279
+SHA512 (jekyll-archives-2.3.0.gem) = 2f14a56aeb83ea533a0c7d1f5c2d035c002ab6481d2cbc3ba8f9649a2cbf5b7f0e09d6471748d11176af6db7fa0abaff5d9bed0f23d38ebce269b027fe5787a8
+Size (jekyll-archives-2.3.0.gem) = 7680 bytes
