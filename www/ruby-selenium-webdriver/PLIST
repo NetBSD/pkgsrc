@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/07/20 15:45:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2024/12/11 14:46:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -18,7 +18,6 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/isDisplayed.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/atoms/mutationListener.js
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/browsing_context_info.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/base_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/console_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/filter_by.rb
@@ -26,7 +25,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/generic_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_handler.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
-${GEM_LIBDIR}/lib/selenium/webdriver/bidi/navigate_result.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/struct.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
@@ -104,6 +103,7 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/common/logger.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/logs.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/manager.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/navigation.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/common/network.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/options.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/platform.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/common/port_prober.rb
