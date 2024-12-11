@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7600 2024/12/11 15:12:28 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7601 2024/12/11 15:24:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11401,3 +11401,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ruby-redmine_code_review to 1.2.1 [taca 2024-12-11]
 	Updated devel/ruby-redmine_theme_changer to 0.7.0 [taca 2024-12-11]
 	Updated www/ruby-jekyll-archives to 2.3.0 [taca 2024-12-11]
+	Added time/ruby-timeout version 0.4.2 [taca 2024-12-11]
