@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7554 2024/12/11 09:50:33 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7555 2024/12/11 09:51:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11354,3 +11354,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/chibi-scheme to 0.11.0 [wiz 2024-12-11]
 	Updated devel/ast-grep to 0.31.1 [pin 2024-12-11]
 	Updated textproc/csvlens to 0.11.0 [pin 2024-12-11]
+	Updated mail/himalaya to 1.0.0 [pin 2024-12-11]
