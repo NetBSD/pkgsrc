@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/06/09 21:12:23 wiz Exp $
+$NetBSD: distinfo,v 1.17 2024/12/11 23:20:17 wiz Exp $
 
-BLAKE2s (hg-git-1.1.2.tar.bz2) = cf0ee5311c38984e09946121b257112dad46d9fa44431b128b86b79e8fdb954e
-SHA512 (hg-git-1.1.2.tar.bz2) = 3ab080e69060e7e25efc01a4aa3548fd62582747a0ad2c54681a90be79d0253d2906fa1d8bc020b3d9c541fee5e784c0d547a383270f3bfd3123ff24a045884a
-Size (hg-git-1.1.2.tar.bz2) = 180267 bytes
+BLAKE2s (hg-git-1.1.4.tar.bz2) = 2d2b98931f242f8cad1c3d76ce9eb5d6ba91eb2a2fc5d7bfde3d49d126a70cfb
+SHA512 (hg-git-1.1.4.tar.bz2) = cc716f0a2642a1dd82f30b493cad77e665ea50010c2d56a060eabc4c34a0894ca00b16dc6fe5437a8fc196d0d5d71fe09a5cccd7e8c60ab5ab89d89719873360
+Size (hg-git-1.1.4.tar.bz2) = 180542 bytes
