@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/13 08:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/11 23:15:43 riastradh Exp $
 
 DISTNAME=	ledger-3.2.1
 PKGREVISION=	4
@@ -19,6 +19,8 @@ USE_CXX_FEATURES=	c++11
 
 USE_LANGUAGES=	c c++
 TEST_TARGET=	check
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC:Q}/${CMAKE_BUILD_DIR:Q}
+TEST_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC:Q}/${CMAKE_BUILD_DIR:Q}
 
 # https://github.com/ledger/ledger/issues/2332
 PYTHON_VERSIONS_ACCEPTED=	311 310 # PyUnicode_GET_SIZE
