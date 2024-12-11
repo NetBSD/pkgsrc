@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2023/12/09 01:46:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/12/11 01:19:15 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
@@ -39,6 +39,8 @@ lib/bup/bup/cmd/server.py
 lib/bup/bup/cmd/split.py
 lib/bup/bup/cmd/tag.py
 lib/bup/bup/cmd/tick.py
+lib/bup/bup/cmd/validate_object_links.py
+lib/bup/bup/cmd/validate_ref_links.py
 lib/bup/bup/cmd/version.py
 lib/bup/bup/cmd/web.py
 lib/bup/bup/cmd/xstat.py
