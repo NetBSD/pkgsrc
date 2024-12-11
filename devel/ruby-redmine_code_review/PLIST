@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/02/28 16:24:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/11 15:06:11 taca Exp $
 ${RM_PLUGINDIR}/redmine_code_review/app/controllers/code_review_controller.rb
 ${RM_PLUGINDIR}/redmine_code_review/app/controllers/code_review_settings_controller.rb
 ${RM_PLUGINDIR}/redmine_code_review/app/helpers/code_review_helper.rb
@@ -25,6 +25,10 @@ ${RM_PLUGINDIR}/redmine_code_review/app/views/code_review/_update_revisions.html
 ${RM_PLUGINDIR}/redmine_code_review/app/views/code_review/index.html.erb
 ${RM_PLUGINDIR}/redmine_code_review/app/views/code_review_settings/_filters.html.erb
 ${RM_PLUGINDIR}/redmine_code_review/app/views/code_review_settings/_show.html.erb
+${RM_PLUGINDIR}/redmine_code_review/assets/images/1downarrow.png
+${RM_PLUGINDIR}/redmine_code_review/assets/images/1uparrow.png
+${RM_PLUGINDIR}/redmine_code_review/assets/images/2downarrow.png
+${RM_PLUGINDIR}/redmine_code_review/assets/images/2uparrow.png
 ${RM_PLUGINDIR}/redmine_code_review/assets/images/closed_review.png
 ${RM_PLUGINDIR}/redmine_code_review/assets/images/review.png
 ${RM_PLUGINDIR}/redmine_code_review/assets/javascripts/code_review.js
@@ -204,7 +208,7 @@ ${RM_PLUGINDIR}/redmine_code_review/config/locales/ja.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/ko.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/nl.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/pl.yml
-${RM_PLUGINDIR}/redmine_code_review/config/locales/pt-br.yml
+${RM_PLUGINDIR}/redmine_code_review/config/locales/pt-BR.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/ru.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/sk.yml
 ${RM_PLUGINDIR}/redmine_code_review/config/locales/sv.yml
@@ -232,6 +236,7 @@ ${RM_PLUGINDIR}/redmine_code_review/db/migrate/0018_add_lock_version_to_project_
 ${RM_PLUGINDIR}/redmine_code_review/db/migrate/0019_delete_old_fields.rb
 ${RM_PLUGINDIR}/redmine_code_review/db/migrate/0020_add_tracker_to_review_dialog.rb
 ${RM_PLUGINDIR}/redmine_code_review/db/migrate/0021_add_diff_all.rb
+${RM_PLUGINDIR}/redmine_code_review/db/migrate/20220312104356_add_repository_id_to_code_reviews.rb
 ${RM_PLUGINDIR}/redmine_code_review/init.rb
 ${RM_PLUGINDIR}/redmine_code_review/lib/code_review_application_hooks.rb
 ${RM_PLUGINDIR}/redmine_code_review/lib/code_review_attachment_patch.rb
