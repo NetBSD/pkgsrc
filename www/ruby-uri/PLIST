@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.3 2024/12/11 15:43:58 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/uri.rb
+${GEM_LIBDIR}/lib/uri/common.rb
+${GEM_LIBDIR}/lib/uri/file.rb
+${GEM_LIBDIR}/lib/uri/ftp.rb
+${GEM_LIBDIR}/lib/uri/generic.rb
+${GEM_LIBDIR}/lib/uri/http.rb
+${GEM_LIBDIR}/lib/uri/https.rb
+${GEM_LIBDIR}/lib/uri/ldap.rb
+${GEM_LIBDIR}/lib/uri/ldaps.rb
+${GEM_LIBDIR}/lib/uri/mailto.rb
+${GEM_LIBDIR}/lib/uri/rfc2396_parser.rb
+${GEM_LIBDIR}/lib/uri/rfc3986_parser.rb
+${GEM_LIBDIR}/lib/uri/version.rb
+${GEM_LIBDIR}/lib/uri/ws.rb
+${GEM_LIBDIR}/lib/uri/wss.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
