@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2021/02/28 16:14:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/11 14:56:47 taca Exp $
 ${RM_THEMEDIR}/minimalflat2/favicon/favicon.ico
 ${RM_THEMEDIR}/minimalflat2/fonts/icon.eot
 ${RM_THEMEDIR}/minimalflat2/fonts/icon.svg
@@ -10,8 +10,10 @@ ${RM_THEMEDIR}/minimalflat2/images/loading.gif
 ${RM_THEMEDIR}/minimalflat2/images/openid-bg.gif
 ${RM_THEMEDIR}/minimalflat2/images/sort_asc.png
 ${RM_THEMEDIR}/minimalflat2/images/sort_desc.png
+${RM_THEMEDIR}/minimalflat2/images/tag_blue.png
 ${RM_THEMEDIR}/minimalflat2/images/task_parent_end.png
 ${RM_THEMEDIR}/minimalflat2/images/transparent.png
+${RM_THEMEDIR}/minimalflat2/images/user.png
 ${RM_THEMEDIR}/minimalflat2/javascripts/theme.js
 ${RM_THEMEDIR}/minimalflat2/stylesheets/application.css
 ${RM_THEMEDIR}/minimalflat2/stylesheets/responsive.css
