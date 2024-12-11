@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:51:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/11 09:27:17 wiz Exp $
 
-BLAKE2s (chibi-scheme-0.9.1.tgz) = 52fc077b24f0f69c3e22f1308f4a2a9d988fbafe0e913dd54e0792cc606012ef
-SHA512 (chibi-scheme-0.9.1.tgz) = 64a68e06174e326c3f3c29573483fd2af9aee26e3fb3074ad9dc46a3a46c2ff642ec1ffb07d28850215527fb6a0d1fac25e0e416024bd228328e9ea423dd7324
-Size (chibi-scheme-0.9.1.tgz) = 886984 bytes
+BLAKE2s (chibi-scheme-0.11.0.tgz) = 924c25044cf408489ad16d76d616e35041127c1d9b9d27299f2e39114597057e
+SHA512 (chibi-scheme-0.11.0.tgz) = 9ba629fa7e7ab27ee4edeb66de323a4d8dc92f18d92fe20e4cb3bf0acfa1a6d6a38bd8e990a05058aee3b5e1078c339cf0db4ace59d9890e5535d917d16b677d
+Size (chibi-scheme-0.11.0.tgz) = 1013125 bytes
 SHA1 (patch-Makefile) = 1b5ef838218d71484f3d6ea0ff83d55a0dff7282
