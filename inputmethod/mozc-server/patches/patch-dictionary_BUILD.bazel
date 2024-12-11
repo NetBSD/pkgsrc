@@ -1,0 +1,29 @@
+$NetBSD: patch-dictionary_BUILD.bazel,v 1.1 2024/12/11 03:07:20 maya Exp $
+
+Workaround to avoid fetching http_archive for KEN_ALL and JIGYOSYO files
+
+--- dictionary/BUILD.bazel.orig	2024-12-11 01:55:01.679344522 +0000
++++ dictionary/BUILD.bazel
+@@ -742,8 +742,8 @@ run_binary(
+     srcs = mozc_select(
+         default = [],
+         oss = [
+-            "@zip_code_ken_all//:KEN_ALL.CSV",
+-            "@zip_code_jigyosyo//:JIGYOSYO.CSV",
++            "KEN_ALL.CSV",
++            "JIGYOSYO.CSV",
+         ],
+     ),
+     outs = ["zip_code.tsv"],
+@@ -753,9 +753,9 @@ run_binary(
+     ] + mozc_select(
+         oss = [
+             "--zip_code",
+-            "$(location @zip_code_ken_all//:KEN_ALL.CSV)",
++            "$(location KEN_ALL.CSV)",
+             "--jigyosyo",
+-            "$(location @zip_code_jigyosyo//:JIGYOSYO.CSV)",
++            "$(location JIGYOSYO.CSV)",
+         ],
+         prod = [],
+     ),

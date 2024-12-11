@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2024/12/07 18:07:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.43 2024/12/11 03:07:20 maya Exp $
 
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
@@ -29,51 +29,78 @@ DISTFILES+=	${DEFAULT_DISTFILES}
 
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} ${_GITHUB_DEFAULT_DISTFILES}
 
-# TODO: This package downloads files during the build. This should be fixed!
-ALLOW_NETWORK_ACCESS=	yes
+MOZC_DISTS+=	zlib-1.2.13.tar.xz
+SITES.zlib-1.2.13.tar.xz=	https://github.com/madler/zlib/releases/download/v1.2.13/
 
-#MOZC_DISTS+=	bazel-skylib-1.4.1.tar.gz
-#SITES.bazel-skylib-1.4.1.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.4.1/
-#
-#MOZC_DISTS+=	rules_python-0.0.1.tar.gz
-#SITES.rules_python-0.0.1.tar.gz=	https://github.com/bazelbuild/rules_python/releases/download/0.0.1/
-#
-#MOZC_DISTS+=	rules_apple.1.1.3.tar.gz
-#SITES.rules_apple.1.1.3.tar.gz=		https://github.com/bazelbuild/rules_apple/releases/download/1.1.3/
-#
-#MOZC_DISTS+=	44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip
-#SITES.44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip=	https://github.com/bazelbuild/rules_android_ndk/archive/
-#
-#MOZC_DISTS+=	8fbaae947b87c1e66c0934493168fc6d583ed889.zip
-#SITES.8fbaae947b87c1e66c0934493168fc6d583ed889.zip=	https://github.com/google/google-toolbox-for-mac/archive/
-#
-#MOZC_DISTS+=	dictionary.png
-#SITES.dictionary.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/chrome_reader_mode/materialiconsoutlined/48dp/1x/outline_chrome_reader_mode_black_48dp.png
-#
-#MOZC_DISTS+=	dictionary.svg
-#SITES.dictionary.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/chrome_reader_mode/materialiconsoutlined/24px.svg
-#
-#MOZC_DISTS+=	properties.png
-#SITES.properties.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/settings/materialiconsround/48dp/1x/round_settings_black_48dp.png
-#
-#MOZC_DISTS+=	properties.svg
-#SITES.properties.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/settings/materialiconsround/24px.svg
-#
-#MOZC_DISTS+=	tool.png
-#SITES.tool.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/build/materialicons/48dp/1x/baseline_build_black_48dp.png
-#
-#MOZC_DISTS+=	tool.svg
-#SITES.tool.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/build/materialicons/24px.svg
-#
-#MOZC_DISTS+=	ken_all.zip
-#SITES.ken_all.zip=	https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/
-#
-#MOZC_DISTS+=	jigyosyo.zip
-#SITES.jigyosyo.zip=	https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/
-#
-#.for d in ${MOZC_DISTS}
-#DISTFILES+=	${d}
-#.endfor
+MOZC_DISTS+=	de0b4a8ff9b5d4c98108bdfe723291a33c52c54f.zip
+SITES.de0b4a8ff9b5d4c98108bdfe723291a33c52c54f.zip=	https://github.com/protocolbuffers/utf8_range/archive/
+
+MOZC_DISTS+=	ea4e825d22c9ae0031d59ec5e86dc85bb50cbbcb.zip
+SITES.ea4e825d22c9ae0031d59ec5e86dc85bb50cbbcb.zip=	https://github.com/protocolbuffers/upb/archive/
+
+MOZC_DISTS+=	8fca842a3006c3d637114aba4f6bf9695bb3a432.zip
+SITES.8fca842a3006c3d637114aba4f6bf9695bb3a432.zip=	https://github.com/protocolbuffers/rules_ruby/archive/
+
+MOZC_DISTS+=	rules_pkg-0.7.0.tar.gz
+SITES.rules_pkg-0.7.0.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/rules_pkg/releases/download/0.7.0/
+
+MOZC_DISTS+=	818289e5613731ae410efb54218a4077fb9dbb03.zip
+SITES.818289e5613731ae410efb54218a4077fb9dbb03.zip=	https://github.com/bazelbuild/rules_cc/archive/
+
+MOZC_DISTS+=	rules_java-6.0.0.tar.gz
+SITES.rules_java-6.0.0.tar.gz=	https://github.com/bazelbuild/rules_java/releases/download/6.0.0/
+
+MOZC_DISTS+=	f7a30f6f80006b591fa7c437fe5a951eb10bcbcf.zip
+SITES.f7a30f6f80006b591fa7c437fe5a951eb10bcbcf.zip=	https://github.com/bazelbuild/rules_proto/archive/
+
+MOZC_DISTS+=	rules_swift.1.2.0.tar.gz
+SITES.rules_swift.1.2.0.tar.gz=	https://github.com/bazelbuild/rules_swift/releases/download/1.2.0/
+
+MOZC_DISTS+=	apple_support.1.3.1.tar.gz
+SITES.apple_support.1.3.1.tar.gz=	https://github.com/bazelbuild/apple_support/releases/download/1.3.1/
+
+MOZC_DISTS+=	bazel-skylib-1.4.1.tar.gz
+SITES.bazel-skylib-1.4.1.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.4.1/
+
+MOZC_DISTS+=	rules_python-0.0.1.tar.gz
+SITES.rules_python-0.0.1.tar.gz=	https://github.com/bazelbuild/rules_python/releases/download/0.0.1/
+
+MOZC_DISTS+=	rules_apple.1.1.3.tar.gz
+SITES.rules_apple.1.1.3.tar.gz=		https://github.com/bazelbuild/rules_apple/releases/download/1.1.3/
+
+MOZC_DISTS+=	44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip
+SITES.44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip=	https://github.com/bazelbuild/rules_android_ndk/archive/
+
+MOZC_DISTS+=	8fbaae947b87c1e66c0934493168fc6d583ed889.zip
+SITES.8fbaae947b87c1e66c0934493168fc6d583ed889.zip=	https://github.com/google/google-toolbox-for-mac/archive/
+
+MOZC_DISTS+=	dictionary.png
+SITES.dictionary.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/chrome_reader_mode/materialiconsoutlined/48dp/1x/outline_chrome_reader_mode_black_48dp.png
+
+MOZC_DISTS+=	dictionary.svg
+SITES.dictionary.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/chrome_reader_mode/materialiconsoutlined/24px.svg
+
+MOZC_DISTS+=	properties.png
+SITES.properties.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/settings/materialiconsround/48dp/1x/round_settings_black_48dp.png
+
+MOZC_DISTS+=	properties.svg
+SITES.properties.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/settings/materialiconsround/24px.svg
+
+MOZC_DISTS+=	tool.png
+SITES.tool.png=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/png/action/build/materialicons/48dp/1x/baseline_build_black_48dp.png
+
+MOZC_DISTS+=	tool.svg
+SITES.tool.svg=	-https://raw.githubusercontent.com/google/material-design-icons/4.0.0/src/action/build/materialicons/24px.svg
+
+MOZC_DISTS+=	ken_all.zip
+SITES.ken_all.zip=	https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/
+
+MOZC_DISTS+=	jigyosyo.zip
+SITES.jigyosyo.zip=	https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/
+
+.for d in ${MOZC_DISTS}
+DISTFILES+=	${d}
+.endfor
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
