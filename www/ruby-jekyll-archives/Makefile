@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/09/22 16:02:10 taca Exp $
+# $NetBSD: Makefile,v 1.13 2024/12/11 15:12:17 taca Exp $
 
-DISTNAME=	jekyll-archives-2.2.1
-PKGREVISION=	1
+DISTNAME=	jekyll-archives-2.3.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
