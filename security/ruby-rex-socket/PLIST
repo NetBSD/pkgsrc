@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/17 15:17:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/11 13:50:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/lib/rex/socket/comm.rb
 ${GEM_LIBDIR}/lib/rex/socket/comm/local.rb
 ${GEM_LIBDIR}/lib/rex/socket/ip.rb
 ${GEM_LIBDIR}/lib/rex/socket/parameters.rb
+${GEM_LIBDIR}/lib/rex/socket/proxies.rb
 ${GEM_LIBDIR}/lib/rex/socket/range_walker.rb
 ${GEM_LIBDIR}/lib/rex/socket/sctp.rb
 ${GEM_LIBDIR}/lib/rex/socket/sctp_server.rb
