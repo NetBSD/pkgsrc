@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/09/22 12:39:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/12/11 14:45:18 taca Exp $
 bin/rougify${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/clean
 ${GEM_LIBDIR}/lib/rouge/demos/clojure
 ${GEM_LIBDIR}/lib/rouge/demos/cmake
 ${GEM_LIBDIR}/lib/rouge/demos/cmhg
+${GEM_LIBDIR}/lib/rouge/demos/cobol
 ${GEM_LIBDIR}/lib/rouge/demos/codeowners
 ${GEM_LIBDIR}/lib/rouge/demos/coffeescript
 ${GEM_LIBDIR}/lib/rouge/demos/common_lisp
@@ -108,6 +109,7 @@ ${GEM_LIBDIR}/lib/rouge/demos/jinja
 ${GEM_LIBDIR}/lib/rouge/demos/jsl
 ${GEM_LIBDIR}/lib/rouge/demos/json
 ${GEM_LIBDIR}/lib/rouge/demos/json-doc
+${GEM_LIBDIR}/lib/rouge/demos/json5
 ${GEM_LIBDIR}/lib/rouge/demos/jsonnet
 ${GEM_LIBDIR}/lib/rouge/demos/jsp
 ${GEM_LIBDIR}/lib/rouge/demos/jsx
@@ -278,6 +280,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/clean.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/clojure.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cmake.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/cmhg.rb
+${GEM_LIBDIR}/lib/rouge/lexers/cobol.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/codeowners.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/coffeescript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/common_lisp.rb
@@ -354,6 +357,7 @@ ${GEM_LIBDIR}/lib/rouge/lexers/javascript.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/jinja.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/jsl.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/json.rb
+${GEM_LIBDIR}/lib/rouge/lexers/json5.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/json_doc.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/jsonnet.rb
 ${GEM_LIBDIR}/lib/rouge/lexers/jsp.rb
