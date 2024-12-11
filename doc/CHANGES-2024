@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7547 2024/12/11 03:08:15 maya Exp $
+$NetBSD: CHANGES-2024,v 1.7548 2024/12/11 07:56:17 nia Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11344,3 +11344,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated databases/mariadb106-server to 10.6.20 [nia 2024-12-10]
 	Updated sysutils/bup to 0.33.5 [gdt 2024-12-11]
 	Updated inputmethod/mozc-server to 2.29.5268.102nb6 [maya 2024-12-11]
+	Updated databases/mariadb105-client to 10.5.27 [nia 2024-12-11]
+	Updated databases/mariadb105-server to 10.5.27 [nia 2024-12-11]
