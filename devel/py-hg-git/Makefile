@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2024/11/11 07:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/12/11 23:20:17 wiz Exp $
 
-DISTNAME=	hg-git-1.1.2
+DISTNAME=	hg-git-1.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	https://foss.heptapod.net/mercurial/hg-git/-/archive/${PKGVERSION_NOREV}/
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.20.11:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=6.1:../../devel/py-mercurial
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
