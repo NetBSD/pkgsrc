@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/12/01 15:47:46 taca Exp $
+$NetBSD: distinfo,v 1.10 2024/12/11 15:37:33 taca Exp $
 
-BLAKE2s (actioncable-7.1.5.gem) = 0c7ba4f9673e8cf2555af08463f83c0d1e7c243811b1c8c28e8844b114d233ca
-SHA512 (actioncable-7.1.5.gem) = c510f50d63ff1493738c083d54bf6cc2bb0a29a737cba5e798f467e4e01e49611854a4a0c3170dc928efa16e4c473ee67222c35ea4a766931cf20de8ea2b5cfb
-Size (actioncable-7.1.5.gem) = 48128 bytes
+BLAKE2s (actioncable-7.1.5.1.gem) = fc8f408f171e3ccf4f35cd50535f19b5d97468c9e2c6d27b6e229c1875dbac10
+SHA512 (actioncable-7.1.5.1.gem) = 55cdbed8b2a44c065463fe14a7c3c2571387ff01d0c03e94da81359d6cf7119a7fb07419e9477b4bcc09a248843e151b1130684422ba2c02cbc9aeb08b3d969d
+Size (actioncable-7.1.5.1.gem) = 48128 bytes
