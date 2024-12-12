@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/12/05 13:59:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2024/12/12 16:13:59 riastradh Exp $
 
 # does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Remote helper to use mercurial repositories with git
 
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-
-GITHUB_SUBMODULES=	git-for-windows git v2.46.2.windows.1 git-core
 
 USE_TOOLS+=	gmake pkg-config
 
