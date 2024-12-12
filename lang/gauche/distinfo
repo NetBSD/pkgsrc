@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.42 2021/10/26 10:51:35 nia Exp $
+$NetBSD: distinfo,v 1.43 2024/12/12 15:14:35 ryoon Exp $
 
-BLAKE2s (Gauche-0.9.10.tgz) = 837bdebca2521749d7333ed37315809c662d64f35ca40049b94f59ca9912a3d6
-SHA512 (Gauche-0.9.10.tgz) = f014ec00903fc91b90da8dbdaace04a64d12695c631e923d5cdca3574aaf6701374f5adbed20c395881b047bb5a448352614d4ce7f16b6e38f69382bf8e66ed0
-Size (Gauche-0.9.10.tgz) = 7701616 bytes
-SHA1 (patch-aa) = 41f2160ffdb8ad66e77d9d30950e820dd07b18a8
-SHA1 (patch-af) = 0962445f5eab8d788283455f60386aa1cfd70230
-SHA1 (patch-ag) = 524048e151225dc73d00c31623be25e84206920a
-SHA1 (patch-ext_tls_axTLS_ssl_os__port.h) = 347babc3449082d01e6905a3f6a6016ba3b55652
-SHA1 (patch-ext_zlib_Makefile.in) = 29fab7f300a880d1509fa144ec15612289445a96
+BLAKE2s (Gauche-0.9.15.tgz) = d5df786fd017900356d7732af9f8036479bd10c3ca147263dfb1d37286723c93
+SHA512 (Gauche-0.9.15.tgz) = fc246a9ba937eba642621a5707f0e7a02d62191749360b9b15e2563c9ceb13e18f236c736172d05c177df8b7220ff0e973f568aaf9eb92e92643af0823f0f865
+Size (Gauche-0.9.15.tgz) = 9444756 bytes
+SHA1 (patch-af) = 06811370a51119d90ca6f9181dc7d4811e9c0dcb
+SHA1 (patch-ag) = b9944ee2f3c2b8ea9591f4fa62538e438dbeb96c
+SHA1 (patch-ext_Makefile.ext.in) = 8f8caa432bf56c0b69902cd31ee86ca55d18ecde
+SHA1 (patch-ext_zlib_Makefile.in) = f410916b9aaf62d734e5f4049585adab59f74662

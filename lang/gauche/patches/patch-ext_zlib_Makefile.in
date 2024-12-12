@@ -1,15 +1,13 @@
-$NetBSD: patch-ext_zlib_Makefile.in,v 1.1 2018/07/26 16:55:29 jperkin Exp $
+$NetBSD: patch-ext_zlib_Makefile.in,v 1.2 2024/12/12 15:14:35 ryoon Exp $
 
-Ensure correct zlib library is linked.
-
---- ext/zlib/Makefile.in.orig	2017-04-14 08:07:25.000000000 +0000
+--- ext/zlib/Makefile.in.orig	2024-12-11 14:28:37.613803963 +0000
 +++ ext/zlib/Makefile.in
-@@ -21,7 +21,7 @@ XCLEANFILES = rfc--zlib.c zlib.sci
- all : $(LIBFILES)
+@@ -5,7 +5,7 @@ top_srcdir   = @top_srcdir@
+ include ../Makefile.ext
  
- rfc--zlib.$(SOEXT) : $(OBJECTS)
--	$(MODLINK) rfc--zlib.$(SOEXT) $(OBJECTS) $(EXT_LIBGAUCHE) $(LIBS)
-+	$(MODLINK) rfc--zlib.$(SOEXT) $(OBJECTS) $(EXT_LIBGAUCHE) $(XLDFLAGS) $(LIBS)
+ XCPPFLAGS = @ZLIB_CPPFLAGS@
+-XLDFLAGS  = @ZLIB_LDFLAGS@
++XLDFLAGS += @ZLIB_LDFLAGS@
+ XLIBS     = @ZLIB_LIB@
  
- $(OBJECTS) : gauche-zlib.h
- 
+ SCM_CATEGORY = rfc
