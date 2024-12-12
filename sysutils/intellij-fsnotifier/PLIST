@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2019/03/05 11:24:01 ryoon Exp $
-${INTELLIJCEDIR}/bin/fsnotifier
-${PYCHARMCEDIR}/bin/fsnotifier
+@comment $NetBSD: PLIST,v 1.2 2024/12/12 15:21:57 ryoon Exp $
+bin/fsnotifier
+bin/fsnotifier-static
+include/fsnotifier.h
+lib/fsnotifier/cmake/fsnotifierConfig.cmake
+lib/fsnotifier/cmake/fsnotifierConfigVersion.cmake
+lib/fsnotifier/cmake/fsnotifierTargets-noconfig.cmake
+lib/fsnotifier/cmake/fsnotifierTargets.cmake
+lib/libfsnotifier.a
+lib/libfsnotifier.so
+lib/libfsnotifier.so.1

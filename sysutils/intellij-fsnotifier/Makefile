@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2023/09/11 13:50:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/12 15:21:57 ryoon Exp $
 
-DISTNAME=		fsnotifier-0.0.20190228
-PKGNAME=		intellij-${DISTNAME}
-PKGREVISION=		2
+DISTNAME=		fsnotifier
+PKGNAME=		intellij-${DISTNAME}-20230725
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_GITHUB:=idea4bsd/}
-GITHUB_PROJECT=		fsnotifier
-GITHUB_TAG=		bb7815166319ba46c27809ed8fc0c6b5fa14f869
+MASTER_SITES=		${MASTER_SITE_GITLAB:=worthwhileit/bsd/}
+GITLAB_PROJECT=		fsnotifier
+GITLAB_TAG=		b96f269f637058461df482f4cf55037a5968d7a8
 
 MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		https://github.com/idea4bsd/fsnotifier
+HOMEPAGE=		https://gitlab.com/worthwhileit/bsd/fsnotifier
 COMMENT=		File system monitoring utility for IntelliJ IDEA IDE
 LICENSE=		apache-2.0
+
+WRKSRC=			${WRKDIR}/${DISTNAME}-${GITLAB_TAG}
+
+USE_TOOLS+=		pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DVERSION=1
 
 INTELLIJCEDIR=		intellij-ce-bin
 PYCHARMCEDIR=		pycharm-bin
@@ -20,11 +25,6 @@ INSTALLATION_DIRS=	${INTELLIJCEDIR}/bin ${PYCHARMCEDIR}/bin
 PLIST_SUBST+=		INTELLIJCEDIR=${INTELLIJCEDIR}
 PLIST_SUBST+=		PYCHARMCEDIR=${PYCHARMCEDIR}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fsnotifier \
-		${DESTDIR}${PREFIX}/${INTELLIJCEDIR}/bin/fsnotifier
-	${INSTALL_PROGRAM} ${WRKSRC}/fsnotifier \
-		${DESTDIR}${PREFIX}/${PYCHARMCEDIR}/bin/fsnotifier
-
 .include "../../devel/libinotify/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
