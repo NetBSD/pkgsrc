@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/11/09 19:44:27 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/12 21:57:18 pin Exp $
 
-DISTNAME=	HexPatch-1.9.3
+DISTNAME=	HexPatch-1.9.4
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Etto48/}
@@ -15,11 +15,11 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/HexPatch-1.9.3
+WRKSRC=		${WRKDIR}/HexPatch-1.9.4
 
-#RUST_REQ=	1.82.0
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.82.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config gmake
