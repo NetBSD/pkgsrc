@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/09/12 18:44:09 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2024/12/12 14:45:32 ryoon Exp $
 
-BLAKE2s (clojure-tools-1.11.1.1155.tar.gz) = 50c71649903009b2fa2aac7a22ff7ef6cb2c327d60a19d087db2c5341ad32e9b
-SHA512 (clojure-tools-1.11.1.1155.tar.gz) = e927e83704f14eb76862ef3e2a4eb7c86d9b3260f009b769eebe442d1dd8194de060341c5ba3f1dcb570f8715d8b2de3205c7f23049997dc4249c6823eedf8ec
-Size (clojure-tools-1.11.1.1155.tar.gz) = 17961193 bytes
+BLAKE2s (clojure-tools-1.12.0.1488.tar.gz) = 96fc8f6fe0bd9f7ae1da67783e8741fd2e87a1ca63467a3824c930e5f92be2cc
+SHA512 (clojure-tools-1.12.0.1488.tar.gz) = 007b733973ac3d2c5151b011b1fddc921256e7d91e85ded24511349e552c7577af0746cd04658e9ffa4eaac1448522aa6b64505c2e296f32265b0ae1d2d0bc17
+Size (clojure-tools-1.12.0.1488.tar.gz) = 15180244 bytes
