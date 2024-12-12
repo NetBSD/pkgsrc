@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/01/06 00:19:30 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/12 15:06:15 ryoon Exp $
 
-DISTNAME=	kotlin-compiler-1.8.10
+DISTNAME=	kotlin-compiler-2.1.0
 PKGNAME=	${DISTNAME:S/-compiler//}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JetBrains/}

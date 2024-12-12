@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/20 13:56:27 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2024/12/12 15:06:15 ryoon Exp $
 
-BLAKE2s (kotlin-compiler-1.8.10.zip) = 4f8741b2da1274b7b170d6a84d125cd3cd333765d21ca11a6108d2ccc9b1dcea
-SHA512 (kotlin-compiler-1.8.10.zip) = 8c4c9f1ffd0d952b6335e7f297f1271badb9b6217d96b57e0cf5c1f965764a7d59a1f3d1db14a4407bd38647ad6d3008f3a9f9196224ff81a7bf1576086322f1
-Size (kotlin-compiler-1.8.10.zip) = 74991926 bytes
+BLAKE2s (kotlin-compiler-2.1.0.zip) = 9c5960b8b5be00a877169fc15e1a5228daf7d7491b237535c6a06623198a1f26
+SHA512 (kotlin-compiler-2.1.0.zip) = 1c14213fc10543af09bc031274be7ef9b3cf1b5d0629de3fde731578e2d84d002ab9b3df90c0417d34eaabff7ea9501209e9323662a6c4eb5504f34fcb10c7f0
+Size (kotlin-compiler-2.1.0.zip) = 86409360 bytes
