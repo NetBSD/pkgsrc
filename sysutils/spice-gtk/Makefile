@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/11/17 07:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/12/12 19:12:03 jperkin Exp $
 
 DISTNAME=	spice-gtk-0.41
 PKGREVISION=	14
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 TOOL_DEPENDS+=	gtk-doc-[0-9]*:../../textproc/gtk-doc
 TOOL_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	spice-client-glib-2.0.pc.in
