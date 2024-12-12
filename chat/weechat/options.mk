@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2024/08/25 06:18:28 wiz Exp $
+# $NetBSD: options.mk,v 1.31 2024/12/12 15:45:47 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -41,11 +41,6 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PERL=OFF
 .include "../../lang/ruby/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_RUBY=ON
 PLIST.ruby=	yes
-SUBST_CLASSES+=		ruby
-SUBST_STAGE.ruby=	pre-configure
-SUBST_MESSAGE.ruby=	Adjusting pkg-config ruby checks
-SUBST_FILES.ruby=	cmake/FindRuby.cmake
-SUBST_SED.ruby=		-e 's,ruby-3.0,ruby-${RUBY_VERSION},g'
 #BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
 #BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
 .else
