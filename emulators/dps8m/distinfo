@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/12 15:51:39 ryoon Exp $
+
+BLAKE2s (dps8m-r3.0.1-src.tar.lz) = 6e7c08a87205642042b26d3158fe209aba4813600e7433f09360a06f09918616
+SHA512 (dps8m-r3.0.1-src.tar.lz) = f7b6f9daccc790fd0e289ae4eb6e26158f6c0856ffa05fb123e8fcd02a7bdc728f6de1a2fd5af8eee0c7726e851a11f712e594f7459fd5a8fd6f83bfd6506f39
+Size (dps8m-r3.0.1-src.tar.lz) = 851658 bytes
