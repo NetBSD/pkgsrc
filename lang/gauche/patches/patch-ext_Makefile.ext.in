@@ -1,0 +1,13 @@
+$NetBSD: patch-ext_Makefile.ext.in,v 1.1 2024/12/12 15:14:35 ryoon Exp $
+
+--- ext/Makefile.ext.in.orig	2024-12-11 14:18:52.342355951 +0000
++++ ext/Makefile.ext.in
+@@ -14,6 +14,8 @@ GAUCHE_ABI_VERSION = @GAUCHE_ABI_VERSION
+ BUILD       = @build@
+ HOST        = @host@
+ 
++XLDFLAGS   += $(MBEDTLS_LDFLAGS)
++
+ # These may be overridden by make invocators
+ DESTDIR      =
+ CC           = @CC@
