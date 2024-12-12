@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/12/12 08:25:34 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/12 11:08:18 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -6,7 +6,7 @@ DISTNAME=	netatalk-4-0-6
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -24,7 +24,8 @@ EGDIR=			${PREFIX}/share/examples/netatalk
 CONF_FILES+=		${EGDIR}/afp.conf	${PKG_SYSCONFDIR}/afp.conf
 CONF_FILES+=		${EGDIR}/extmap.conf	${PKG_SYSCONFDIR}/extmap.conf
 
-DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+TOOL_DEPENDS+=		docbook-xsl>=1.79.2:../../textproc/docbook-xsl
 
 CONFLICTS=		netatalk22-[0-9]* netatalk30-[0-9]* netatalk3-[0-9]*
 CONFLICTS+=		netatalk-[0-9]* netatalk-asun-[0-9]* netatalk-umich-[0-9]*
@@ -145,7 +146,6 @@ BUILDLINK_API_DEPENDS.libevent+=        libevent>=2
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../textproc/cmark-gfm/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
 
 .include "../../mk/bdb.buildlink3.mk"
 
