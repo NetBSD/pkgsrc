@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/30 15:07:56 khorben Exp $
-bin/generate_mock_resolution_universe
-bin/osv-reporter
+@comment $NetBSD: PLIST,v 1.4 2024/12/12 10:51:49 leot Exp $
 bin/osv-scanner
