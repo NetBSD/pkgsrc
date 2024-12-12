@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/07/21 08:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/12 10:54:47 wiz Exp $
 
-DISTNAME=	git-filter-repo-2.45.0
+DISTNAME=	git-filter-repo-2.47.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=newren/}
 EXTRACT_SUFX=	.tar.xz
@@ -15,8 +15,7 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-REPLACE_PYTHON+=		git-filter-repo
+REPLACE_PYTHON+=	git-filter-repo
 
 INSTALLATION_DIRS+=	libexec/git-core ${PKGMANDIR}/man1
 
