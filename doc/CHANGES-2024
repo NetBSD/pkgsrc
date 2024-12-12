@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7630 2024/12/12 17:28:18 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7631 2024/12/12 21:56:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11455,3 +11455,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated chat/weechat to 4.4.4 [ryoon 2024-12-12]
 	Added emulators/dps8m version 3.0.1 [ryoon 2024-12-12]
 	Updated mail/neomutt to 20241212 [wiz 2024-12-12]
+	Updated devel/mise to 2024.12.7 [pin 2024-12-12]
