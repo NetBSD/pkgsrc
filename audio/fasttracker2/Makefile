@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2024/12/09 07:24:59 fox Exp $
+# $NetBSD: Makefile,v 1.129 2024/12/12 13:15:47 fox Exp $
 
-DISTNAME=	fasttracker2-1.89
+DISTNAME=	fasttracker2-1.91
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=8bitbubsy/}
 GITHUB_PROJECT=	ft2-clone
@@ -13,7 +13,6 @@ COMMENT=	Portable Fasttracker II clone in C using SDL 2
 LICENSE=	modified-bsd AND cc-by-nc-sa-v4.0-license
 
 USE_LANGUAGES=	c99 c++
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DEXTERNAL_LIBFLAC:BOOL=ON
@@ -60,4 +59,5 @@ BUILDLINK_TRANSFORM+=	rm:-lasound
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
