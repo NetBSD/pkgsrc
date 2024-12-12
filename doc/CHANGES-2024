@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7613 2024/12/11 23:32:57 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7614 2024/12/12 07:27:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11438,3 +11438,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hg-git to 1.1.4 [wiz 2024-12-11]
 	Updated devel/py-mercurial to 6.9 [wiz 2024-12-11]
 	Updated devel/py-hg-evolve to 11.1.6 [wiz 2024-12-11]
+	Updated audio/librespot to 0.6.0nb4 [pin 2024-12-12]
