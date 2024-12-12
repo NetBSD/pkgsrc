@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/12/11 21:44:30 pin Exp $
+$NetBSD: distinfo,v 1.11 2024/12/12 10:24:32 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -147,6 +147,9 @@ Size (heck-0.5.0.crate) = 11517 bytes
 BLAKE2s (hermit-abi-0.1.19.crate) = c731a42a9056a75a3ba26b5ab02c7c60c1fa2f21635d4152de66dc2eb407e097
 SHA512 (hermit-abi-0.1.19.crate) = 1c877fcd562b15d2de9c151fd6c5f3ea4bf48abcb799e6139a180ffad5d64b632f0000d5707bbd92ff23a0e5f349157b9e0f5be8b50f03680b0fa47315dbb78a
 Size (hermit-abi-0.1.19.crate) = 9979 bytes
+BLAKE2s (home-0.5.9.crate) = 3ca501737a66c3e850c8337fb10efe9f3fbadabd3f9219e72e15cd380e788f1c
+SHA512 (home-0.5.9.crate) = 3f1f7b619f1a47694cda92321a11d66ebbb2dc0b0c33446a7a4b886f547ee88231b61c038de04bb82acd50e617f19b5085893b8401206d32cd54502033e04bf1
+Size (home-0.5.9.crate) = 8760 bytes
 BLAKE2s (iana-time-zone-0.1.61.crate) = 5f4a8d500904b04a1506e2a5107b556a782ab53472121661bdef1b85e5c37013
 SHA512 (iana-time-zone-0.1.61.crate) = d16c67f435606334042c3a286350db46ff3409f142c0782509b136150b4069aafff0dc5c2ecfb7519dd8d105b9a2e6649df2a7bec33ee3966dc94034c9d5a1c4
 Size (iana-time-zone-0.1.61.crate) = 27685 bytes
@@ -186,12 +189,12 @@ Size (libredox-0.1.3.crate) = 6068 bytes
 BLAKE2s (linux-raw-sys-0.4.14.crate) = 482c0987b74ea9b40b2e124d3be4a391e59bbfe7c4bdc2415c8cd4506fdf1681
 SHA512 (linux-raw-sys-0.4.14.crate) = 28149660bd975ede05624af3582d5c78f498239f5d89713c2c32f5372fc16f4ca024dec35f81ea973a2cf986098890395dbda06ac6cf4ee29df3f9a0e11eaea7
 Size (linux-raw-sys-0.4.14.crate) = 1826665 bytes
-BLAKE2s (lla-0.3.0.crate) = 5417202579a04e1062cb4ae9bbbea214f813d25ca587b9eafd1b9f360799925e
-SHA512 (lla-0.3.0.crate) = a490ab598c78a3fdd312b6c9617ad61d6d1fa400f4a3a623ab76cb04f9e81bef21d0f8eb6df0173220249544a245df2e8457663402052c5a20e256d199802ea9
-Size (lla-0.3.0.crate) = 43696 bytes
-BLAKE2s (lla_plugin_interface-0.3.0.crate) = de7e4662d236200ee4bfe21d80f0d953759efad1a8c86d2b5fa6f1886096aa83
-SHA512 (lla_plugin_interface-0.3.0.crate) = bd410c479d72543dbbf998b03e2de0ebd3ddfade4c72ba523c028a08ef33d9f6d5f5ac1957c40e38f865a7ae60268500b8a484769320513ab385ee275d9c73ae
-Size (lla_plugin_interface-0.3.0.crate) = 4923 bytes
+BLAKE2s (lla-0.3.1.crate) = a5a7c64cc4838cf32329dade9ea215499f7c208f033bb15cded9537bcc9ee2e0
+SHA512 (lla-0.3.1.crate) = 7a7a04b3045df497cfcf03f46e0695314d4402f537cb5c7b2968f34562b4c3457ab454832abc5fe5d592a6c99943c6bbf8ee2be6792a4ba8b109486d2560af37
+Size (lla-0.3.1.crate) = 43808 bytes
+BLAKE2s (lla_plugin_interface-0.3.1.crate) = bb41d58e4e10f659f2456e9b4a7af59c268f86aed76b655ff738d25f03a1fd1c
+SHA512 (lla_plugin_interface-0.3.1.crate) = 1137b2ff484dcbc8e2f66930ced341d08ce18e475004da6aefd3fa79851c3232efcdf93eaf70ea1dfbe8cb0f91b0ebc0f21e40618bad96340ed8c33039e5ae6a
+Size (lla_plugin_interface-0.3.1.crate) = 5975 bytes
 BLAKE2s (lock_api-0.4.12.crate) = 15ae57312deba2e9aa3df7a4a7e61ace84bf1faad6c5701eb862da9c11b40f2a
 SHA512 (lock_api-0.4.12.crate) = 525d971f495449bbd02eb70fcd84d4aab05ca582142144a5f314f9aa67ad4c5b4c98dc919a416d0ed2e555063eab037a441d671d56b633f2cb75dfab5d99bcf7
 Size (lock_api-0.4.12.crate) = 27591 bytes
@@ -423,6 +426,9 @@ Size (wasm-bindgen-shared-0.2.95.crate) = 7649 bytes
 BLAKE2s (web-time-1.1.0.crate) = 9c36644abce7ba1ddc0bdc98622e1ef801daa6ae7f862e033f2c446162686892
 SHA512 (web-time-1.1.0.crate) = 73e4ef9851de089fde9381a595cb9e37a434f563f1fd350e345f2617b701caf57a9aef739b922b5b10cda131cdf2fd0af42c55603f8973a623a8b6ae70f6cc9f
 Size (web-time-1.1.0.crate) = 18026 bytes
+BLAKE2s (which-4.4.2.crate) = f92749eb4b4a60770558c4588afec96999bef0531d46a01073dbd1f27f27ce1e
+SHA512 (which-4.4.2.crate) = 2d12aa1d4c2dbc140e39c8f15bd4ee1eeb8e8de71bcdf579479ef4be860fb0839eaf4cdb818addba242d50420f6e08acaf2bfc979a889e092c83644819246fd5
+Size (which-4.4.2.crate) = 15953 bytes
 BLAKE2s (winapi-0.3.9.crate) = 295083bd8c53c7decc4187da324a1284ad05cbccc9198d31facb6a42e34867ce
 SHA512 (winapi-0.3.9.crate) = ff8b7b78065f3d8999ec03c725a0460ebc059771bf071c7a3df3f0ecd733edf3b0a2450024d4e24e1aedddaecd9038ce1376c0d8bbf45132068cf45cf4a53a97
 Size (winapi-0.3.9.crate) = 1200382 bytes
