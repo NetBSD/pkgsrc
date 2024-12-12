@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.8 2016/10/13 00:30:13 enami Exp $
+$NetBSD: patch-ag,v 1.9 2024/12/12 15:14:35 ryoon Exp $
 
 Honor pkgsrc LDFLAGS.
 
---- ext/charconv/Makefile.in.orig	2016-01-09 11:15:43.000000000 +0000
+--- ext/charconv/Makefile.in.orig	2024-04-23 23:27:26.000000000 +0000
 +++ ext/charconv/Makefile.in
-@@ -9,7 +9,7 @@ PRE_PACKAGE_FILES = eucj2ucs.c guess_tab
+@@ -12,7 +12,7 @@ PRE_PACKAGE_FILES = eucj2ucs.c guess_tab
  include ../Makefile.ext
  
  XCPPFLAGS = @ICONV_CPPFLAGS@
 -XLDFLAGS  = @ICONV_LDFLAGS@
-+XLDFLAGS  = @ICONV_LDFLAGS@ $(ICONV_LDFLAGS)
++XLDFLAGS  = @ICONV_LDFLAGS@ $(ICONV_LDFLAGS) $(MBEDTLS_LDFLAGS)
  XLIBS     = @ICONV_LIB@
  
  SCM_CATEGORY = gauche
