@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7629 2024/12/12 15:51:55 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.7630 2024/12/12 17:28:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11454,3 +11454,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/putty to 0.82 [ryoon 2024-12-12]
 	Updated chat/weechat to 4.4.4 [ryoon 2024-12-12]
 	Added emulators/dps8m version 3.0.1 [ryoon 2024-12-12]
+	Updated mail/neomutt to 20241212 [wiz 2024-12-12]
