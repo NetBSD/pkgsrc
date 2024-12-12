@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7626 2024/12/12 15:22:10 ryoon Exp $
+$NetBSD: CHANGES-2024,v 1.7627 2024/12/12 15:29:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11451,3 +11451,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated lang/sbcl to 2.4.11 [ryoon 2024-12-12]
 	Updated lang/gauche to 0.9.15 [ryoon 2024-12-12]
 	Updated sysutils/intellij-fsnotifier to 20230725 [ryoon 2024-12-12]
+	Updated security/putty to 0.82 [ryoon 2024-12-12]
