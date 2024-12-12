@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7615 2024/12/12 07:29:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7616 2024/12/12 07:31:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11440,3 +11440,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-hg-evolve to 11.1.6 [wiz 2024-12-11]
 	Updated audio/librespot to 0.6.0nb4 [pin 2024-12-12]
 	Updated audio/ncspot to 1.2.1nb4 [pin 2024-12-12]
+	Updated audio/spotify-qt to 3.12 [pin 2024-12-12]
