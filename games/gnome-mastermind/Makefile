@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2024/11/17 07:15:56 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2024/12/12 18:47:52 jperkin Exp $
 
 DISTNAME=	gnome-mastermind-0.4.0
 PKGREVISION=	6
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake itstool intltool pkg-config # msgfmt
+USE_TOOLS+=	gmake itstool intltool msgfmt pkg-config
 
 .include "../../devel/glib2/schemas.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
