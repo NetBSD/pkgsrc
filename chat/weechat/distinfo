@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.82 2024/08/09 14:34:35 ryoon Exp $
+$NetBSD: distinfo,v 1.83 2024/12/12 15:45:47 ryoon Exp $
 
-BLAKE2s (weechat-4.3.5.tar.xz) = feb418fa63551a43b4cd710061a99bcab92d250f5a0caa3f131524115cdadafe
-SHA512 (weechat-4.3.5.tar.xz) = 39c98a07a410334b423bba5ade36912f3687a17879bd126c740f64bfb24472b324deaa0181ded744002406a7cc50cf9bdb6ae0123f2e6f04754d37d8ce96bc86
-Size (weechat-4.3.5.tar.xz) = 2694424 bytes
+BLAKE2s (weechat-4.4.4.tar.xz) = 651e2b338db53ba45ec4efcecc5513888bbf3fa73035fb4b95c51780dcd7901f
+SHA512 (weechat-4.4.4.tar.xz) = 519c0ce68081a256f78e5a04ee7518393719c8b0cd6edcbeac58ef952d08bebf5b0b2173b0bf103afe09f5e0eb27e2790d0ab3a6475ad346d0056f97069176d4
+Size (weechat-4.4.4.tar.xz) = 2730520 bytes
 SHA1 (patch-cmake_FindNcurses.cmake) = 73d4bc9551c79ee967abe06eba09cfe1b10129d4
 SHA1 (patch-po_CMakeLists.txt) = b5a186dc5e135ef2e1ec5f01f75152fc769867be
 SHA1 (patch-src_plugins_lua_CMakeLists.txt) = 08a1b7dfca5dbbdf45a10b466eeac42671fe9edc
 SHA1 (patch-src_plugins_perl_weechat-perl.c) = 49e61419ea82157fa54a7847a653625944d3b341
-SHA1 (patch-src_plugins_ruby_CMakeLists.txt) = e4dc80bd1f8a0b6ba10802fea9d121c4c9faaa15
