@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2024/11/17 07:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2024/12/12 18:50:53 jperkin Exp $
 
 DISTNAME=		gnome-desktop-44.0
 PKGREVISION=		6
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 TOOL_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 #USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
-USE_TOOLS+=		itstool pkg-config
+USE_TOOLS+=		itstool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-desktop-4.pc
 PKGCONFIG_OVERRIDE+=	output/meson-private/gnome-bg-4.pc
