@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/12/12 15:14:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2024/12/13 15:33:22 ryoon Exp $
 #
 
 DISTNAME=	Gauche-0.9.15
-PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=shirok/}
 GITHUB_PROJECT=	Gauche
