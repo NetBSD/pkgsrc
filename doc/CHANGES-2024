@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7635 2024/12/13 13:34:16 sborrill Exp $
+$NetBSD: CHANGES-2024,v 1.7636 2024/12/13 13:39:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11460,3 +11460,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/mise to 2024.12.8 [pin 2024-12-13]
 	Updated devel/cargo-release to 0.25.14 [pin 2024-12-13]
 	Updated sysutils/gam to 7.02.00 [sborrill 2024-12-13]
+	Updated ham/chirp to 20241213 [gdt 2024-12-13]
