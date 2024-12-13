@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.284 2024/12/11 09:43:45 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.285 2024/12/13 22:06:35 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26116,3 +26116,4 @@ webkit-gtk<2.46.4	remote-code-execution	https://nvd.nist.gov/vuln/detail/CVE-202
 py{38,39,310,311,312}-django>=4<4.2.17	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53907
 py{38,39,310,311,312}-django>=5<5.1.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53907
 curl<8.11.1	credential-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-11053
+gstreamer-1.24.10	multiple-vulnerabilities	https://discourse.gstreamer.org/t/gstreamer-1-24-10-stable-bug-fix-release/3683
