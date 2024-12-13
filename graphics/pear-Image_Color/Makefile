@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/02/28 14:41:44 taca Exp $
+# $NetBSD: Makefile,v 1.15 2024/12/13 17:22:10 taca Exp $
 
-DISTNAME=	Image_Color-1.0.6
+DISTNAME=	Image_Color-1.0.7
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
