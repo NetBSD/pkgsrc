@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/03/10 15:22:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/13 16:31:18 taca Exp $
 bin/redmine51_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine51_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine51_migrate_db${RUBY_SUFFIX}.sh
@@ -2098,6 +2098,7 @@ share/${RUBY_NAME}-redmine51/test/system/my_page_test.rb
 share/${RUBY_NAME}-redmine51/test/system/quick_jump_test.rb
 share/${RUBY_NAME}-redmine51/test/system/sudo_mode_test.rb
 share/${RUBY_NAME}-redmine51/test/system/timelog_test.rb
+share/${RUBY_NAME}-redmine51/test/system/versions_test.rb
 share/${RUBY_NAME}-redmine51/test/test_helper.rb
 share/${RUBY_NAME}-redmine51/test/unit/activity_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/attachment_test.rb
