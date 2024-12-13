@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_isc_netmgr_netmgr.c,v 1.2 2024/02/13 13:50:39 taca Exp $
+$NetBSD: patch-lib_isc_netmgr_netmgr.c,v 1.3 2024/12/13 17:29:56 taca Exp $
 
 * Take from NetBSD base.
 
---- lib/isc/netmgr/netmgr.c.orig	2024-02-11 10:42:55.700991300 +0000
+--- lib/isc/netmgr/netmgr.c.orig	2024-12-03 13:00:51.590934387 +0000
 +++ lib/isc/netmgr/netmgr.c
-@@ -314,7 +314,7 @@ isc__netmgr_create(isc_mem_t *mctx, uint
+@@ -323,7 +323,7 @@ isc__netmgr_create(isc_mem_t *mctx, uint
  		mgr->workers_running++;
  		isc_thread_create(nm_thread, &mgr->workers[i], &worker->thread);
  
@@ -13,8 +13,8 @@ $NetBSD: patch-lib_isc_netmgr_netmgr.c,v 1.2 2024/02/13 13:50:39 taca Exp $
  		isc_thread_setname(worker->thread, name);
  	}
  
-@@ -1910,6 +1910,13 @@ isc_nmhandle_getdata(isc_nmhandle_t *han
- 	return (handle->opaque);
+@@ -1928,6 +1928,13 @@ isc_nmhandle_getdata(isc_nmhandle_t *han
+ 	return handle->opaque;
  }
  
 +int
