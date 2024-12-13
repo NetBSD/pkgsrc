@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2024/11/24 09:31:35 adam Exp $
+# $NetBSD: Makefile,v 1.724 2024/12/13 16:46:11 taca Exp $
 
 COMMENT=	Databases
 
@@ -435,6 +435,7 @@ SUBDIR+=	ruby-activerecord-odbc
 SUBDIR+=	ruby-activerecord61
 SUBDIR+=	ruby-activerecord70
 SUBDIR+=	ruby-activerecord71
+SUBDIR+=	ruby-activerecord72
 SUBDIR+=	ruby-arel
 SUBDIR+=	ruby-arel-helpers
 SUBDIR+=	ruby-awesome_nested_set
