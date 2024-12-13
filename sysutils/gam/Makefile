@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2024/11/19 15:35:39 sborrill Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/13 13:33:44 sborrill Exp $
 
-DISTNAME=	gam-7.00.39
+DISTNAME=	gam-7.02.00
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 # The version internally sometimes has leading zeros removed
-VERSION_TRIM=	${PKGVERSION_NOREV:C/\.0([0-9])\./.\1./}
+VERSION_TRIM=	${PKGVERSION_NOREV:C/\.0([0-9])/.\1/g}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/GAM-team/GAM
