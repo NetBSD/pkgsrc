@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/11/16 20:07:06 pin Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/13 09:20:56 pin Exp $
 
-DISTNAME=	cargo-release-0.25.13
+DISTNAME=	cargo-release-0.25.14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=crate-ci/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
