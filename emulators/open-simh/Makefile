@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/03 12:42:53 rhialto Exp $
+# $NetBSD: Makefile,v 1.21 2024/12/13 20:50:45 abs Exp $
 
 DISTNAME=	open-simh-4.1.0
 PKGNAME=	open-simh-4.1.0.20240904
@@ -19,6 +19,9 @@ USE_TOOLS+=	gmake
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9
 
 .include "../../mk/bsd.prefs.mk"
+
+SIMHPREFIX?=	simh-
+PLIST_SUBST+=	SIMHPREFIX=${SIMHPREFIX:Q}
 
 .if ${OPSYS} == "Darwin"
 # Doesn't seem to work with pkgsrc pcap, and dylib path is hardcoded.
@@ -87,7 +90,7 @@ post-extract:
 do-install:
 	(cd ${WRKSRC}/BIN && for BIN in *; do \
 		if [ -f $$BIN ] ; then \
-		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN; \
+		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/${SIMHPREFIX}$$BIN; \
 		fi ; \
 	done)
 
