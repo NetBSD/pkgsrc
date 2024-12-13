@@ -1,0 +1,46 @@
+$NetBSD: patch-Gemfile,v 1.1 2024/12/13 17:19:29 taca Exp $
+
+* Relax dependency.
+* Do not load gem for developemt and test.
+
+--- Gemfile.orig	2024-11-12 19:25:01.000000000 +0000
++++ Gemfile
+@@ -2,7 +2,7 @@ source 'https://rubygems.org'
+ 
+ ruby '>= 3.1.0', '< 3.4.0'
+ 
+-gem 'rails', '7.2.2'
++gem 'rails', '~>7.2.2'
+ gem 'rouge', '~> 4.5'
+ gem 'mini_mime', '~> 1.1.0'
+ gem "actionpack-xml_parser"
+@@ -31,17 +31,17 @@ gem 'rotp', '>= 5.0.0'
+ gem 'rqrcode'
+ 
+ # HTML pipeline and sanitization
+-gem "html-pipeline", "~> 2.13.2"
++gem "html-pipeline", ">= 2.13.2"
+ gem "sanitize", "~> 6.0"
+ 
+ # Optional gem for LDAP authentication
+ group :ldap do
+-  gem 'net-ldap', '~> 0.17.0'
++  gem 'net-ldap', '>= 0.17.0'
+ end
+ 
+ # Optional gem for exporting the gantt to a PNG file
+ group :minimagick do
+-  gem 'mini_magick', '~> 5.0.1'
++  gem 'mini_magick', '>= 5.0.1'
+ end
+ 
+ # Optional CommonMark support, not for JRuby
+@@ -68,7 +68,7 @@ if File.exist?(database_file)
+       when /postgresql/
+         gem 'pg', '~> 1.5.3'
+       when /sqlite3/
+-        gem 'sqlite3', '~> 1.7.0'
++        gem 'sqlite3', '>= 1.7.0'
+       when /sqlserver/
+         gem 'tiny_tds', '~> 2.1.2'
+         gem 'activerecord-sqlserver-adapter', '~> 7.2.0'

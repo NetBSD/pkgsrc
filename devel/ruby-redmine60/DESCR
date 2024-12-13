@@ -1,0 +1,16 @@
+Redmine is a flexible project management web application using the
+Ruby on Rails framework, it is cross-platform and cross-database.
+
+Redmine 6.0 introduces these new features in these categories:
+
+* Redmine 6 has been upgraded to Rails 7.2
+* Ruby 3.3 is now supported and support for Ruby 2.7 and 3.0 has been dropped
+* Asset pipeline integration using Propshaft has been enabled
+* Support for Markdown has been removed
+* Icons have been replaced with SVG icons provided by Tabler
+* UI tweaks
+* New features and enhancements, some of them being long awaited features
+* API changes
+* Security improvement:
+  User visibility changed from "all" to "member of visible projects" for new
+  roles and existing builtin roles (#38853)
