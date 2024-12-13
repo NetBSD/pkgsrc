@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.13 2024/11/27 17:32:54 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q3,v 1.1.2.14 2024/12/13 20:43:41 bsiegert Exp $
 
 Changes to packages and infrastructure on the 2024Q3 branch:
 
@@ -62,3 +62,10 @@ www/firefox128-l10n: Security fix
 Pullup ticket #6919 - requested by bsiegert
 www/firefox115: Security fix
 www/firefox115-l10n: Security fix
+
+Pullup ticket #6920 - requested by maya
+inputmethod/mozc-server: build fix (prevent network access during build)
+
+Pullup ticket #6921 - requested by nia
+www/palemoon: security fix
+
