@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/12/11 14:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/13 07:34:14 wiz Exp $
 
 DISTNAME=	kakoune-2024.05.18
 CATEGORIES=	editors
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 USE_CXX_FEATURES+=	c++20
 
 MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	CXXFLAGS-debug-no=
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
