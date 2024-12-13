@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_isc_time.c,v 1.2 2023/02/08 00:13:44 taca Exp $
+$NetBSD: patch-lib_isc_time.c,v 1.3 2024/12/13 17:29:56 taca Exp $
 
 * More check time_t range.
 
---- lib/isc/time.c.orig	2023-01-12 22:21:15.270402532 +0000
+--- lib/isc/time.c.orig	2024-12-03 13:00:51.595934467 +0000
 +++ lib/isc/time.c
 @@ -318,7 +318,7 @@ isc_time_seconds(const isc_time_t *t) {
  
@@ -30,6 +30,6 @@ $NetBSD: patch-lib_isc_time.c,v 1.2 2023/02/08 00:13:44 taca Exp $
 +		 * (Let's hope the compiler got the actual test right.)
 +		 */
 +		UNUSED(i);
- 		return (ISC_R_RANGE);
+ 		return ISC_R_RANGE;
  	}
  

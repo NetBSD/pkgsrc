@@ -1,11 +1,11 @@
-$NetBSD: patch-bin_named_server.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
+$NetBSD: patch-bin_named_server.c,v 1.2 2024/12/13 17:29:56 taca Exp $
 
 * Take from NetBSD base, especially disable checking working directory
   is writable as BIND_USER in NetBSD base system.
 
---- bin/named/server.c.orig	2020-05-06 09:59:35.000000000 +0000
+--- bin/named/server.c.orig	2024-12-03 13:00:51.226928524 +0000
 +++ bin/named/server.c
-@@ -6667,12 +6667,14 @@ directory_callback(const char *clausenam
+@@ -7161,12 +7161,14 @@ directory_callback(const char *clausenam
  			    directory);
  	}
  
@@ -14,13 +14,13 @@ $NetBSD: patch-bin_named_server.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
  		isc_log_write(named_g_lctx, NAMED_LOGCATEGORY_GENERAL,
  			      NAMED_LOGMODULE_SERVER, ISC_LOG_ERROR,
  			      "directory '%s' is not writable", directory);
- 		return (ISC_R_NOPERM);
+ 		return ISC_R_NOPERM;
  	}
 +#endif
  
  	result = isc_dir_chdir(directory);
  	if (result != ISC_R_SUCCESS) {
-@@ -9110,6 +9112,7 @@ load_configuration(const char *filename,
+@@ -9560,6 +9562,7 @@ load_configuration(const char *filename,
  		named_os_changeuser();
  	}
  
@@ -28,7 +28,7 @@ $NetBSD: patch-bin_named_server.c,v 1.1 2022/12/11 01:57:55 sekiya Exp $
  	/*
  	 * Check that the working directory is writable.
  	 */
-@@ -9120,7 +9123,7 @@ load_configuration(const char *filename,
+@@ -9570,7 +9573,7 @@ load_configuration(const char *filename,
  		result = ISC_R_NOPERM;
  		goto cleanup;
  	}

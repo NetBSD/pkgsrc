@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/04/24 13:48:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/13 17:29:56 taca Exp $
 bin/arpaname
 bin/delv
 bin/dig
@@ -296,7 +296,6 @@ sbin/named
 sbin/rndc
 sbin/rndc-confgen
 sbin/tsig-keygen
-share/doc/bind9/CHANGES
 share/doc/bind9/OPTIONS.md
 share/doc/bind9/README.md
 share/examples/bind9/bind.keys
