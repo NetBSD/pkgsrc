@@ -1,14 +1,14 @@
-# $NetBSD: options.mk,v 1.1 2024/10/09 14:25:45 ktnb Exp $
+# $NetBSD: options.mk,v 1.2 2024/12/13 15:12:57 ktnb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kew
-PKG_SUPPORTED_OPTIONS=	libnotify
+PKG_SUPPORTED_OPTIONS=	dbus
 PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
 ###
-###  Include the libnotify library
+###  Include dbus
 ###
-.if !empty(PKG_OPTIONS:Mlibnotify)
-.include "../../sysutils/libnotify/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus/buildlink3.mk"
 .endif
