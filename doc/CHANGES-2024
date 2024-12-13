@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7650 2024/12/13 16:53:54 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7651 2024/12/13 16:55:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11475,3 +11475,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Added www/ruby-actionview72 version 7.2.2.1 [taca 2024-12-13]
 	Added www/ruby-actionpack72 version 7.2.2.1 [taca 2024-12-13]
 	Added www/ruby-actioncable72 version 7.2.2.1 [taca 2024-12-13]
+	Added devel/ruby-railties72 version 7.2.2.1 [taca 2024-12-13]
