@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7637 2024/12/13 15:13:13 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.7638 2024/12/13 16:21:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11462,3 +11462,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/gam to 7.02.00 [sborrill 2024-12-13]
 	Updated ham/chirp to 20241213 [gdt 2024-12-13]
 	Updated audio/kew to 3.0.2 [ktnb 2024-12-13]
+	Updated devel/ruby-irb to 1.14.2 [taca 2024-12-13]
