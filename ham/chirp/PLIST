@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/11/29 13:12:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/12/13 13:38:59 gdt Exp $
 bin/chirp
 bin/chirpc
 bin/experttune
@@ -374,6 +374,9 @@ ${PYSITELIB}/chirp/drivers/radioddity_r2.pyo
 ${PYSITELIB}/chirp/drivers/radtel_rt490.py
 ${PYSITELIB}/chirp/drivers/radtel_rt490.pyc
 ${PYSITELIB}/chirp/drivers/radtel_rt490.pyo
+${PYSITELIB}/chirp/drivers/radtel_rt620.py
+${PYSITELIB}/chirp/drivers/radtel_rt620.pyc
+${PYSITELIB}/chirp/drivers/radtel_rt620.pyo
 ${PYSITELIB}/chirp/drivers/radtel_t18.py
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyc
 ${PYSITELIB}/chirp/drivers/radtel_t18.pyo
@@ -691,6 +694,9 @@ ${PYSITELIB}/chirp/wxui/main.pyo
 ${PYSITELIB}/chirp/wxui/memedit.py
 ${PYSITELIB}/chirp/wxui/memedit.pyc
 ${PYSITELIB}/chirp/wxui/memedit.pyo
+${PYSITELIB}/chirp/wxui/memquery.py
+${PYSITELIB}/chirp/wxui/memquery.pyc
+${PYSITELIB}/chirp/wxui/memquery.pyo
 ${PYSITELIB}/chirp/wxui/printing.py
 ${PYSITELIB}/chirp/wxui/printing.pyc
 ${PYSITELIB}/chirp/wxui/printing.pyo
