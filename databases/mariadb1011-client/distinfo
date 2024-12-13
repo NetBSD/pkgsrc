@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/12/10 18:23:08 nia Exp $
+$NetBSD: distinfo,v 1.13 2024/12/13 14:07:45 nia Exp $
 
 BLAKE2s (mariadb-10.11.10.tar.gz) = 07830db81c463489dc3b005ab899b1aa29bc445806bc862ee6cb59ca2b1c9a4e
 SHA512 (mariadb-10.11.10.tar.gz) = 3a8655384813ba515ce185e8a03427785fbea75b3226e2a1db02839dd66c22622ba27eeb2ca7b3d840bba43720a4393bbf71eb4b2b9e41ab837629e89a8b5976
@@ -7,6 +7,7 @@ SHA1 (patch-BUILD_compile-pentium32-gcov) = 89a7da728f94f19c153b4d2d2d6ba5462acc
 SHA1 (patch-CMakeLists.txt) = b41fc869c3ebf0b13138a566a03080a0f3475551
 SHA1 (patch-client_CMakeLists.txt) = 8fdd8a182304f0b84e120ce95334ace23d02ce88
 SHA1 (patch-client_mysql.cc) = e9c33cd51c11b6be309ee6d1404da2d9ece38efd
+SHA1 (patch-cmake_libfmt.cmake) = 5b33ee5491bfd02ae0d255e372df497e4257aff6
 SHA1 (patch-extra_readline_CMakeLists.txt) = 37873deaeccb37e1313179103bb12dcde4a496d6
 SHA1 (patch-include_my__global.h) = a3b831f91ba2efea9f78e70ab4f706da23b80403
 SHA1 (patch-libmariadb_cmake_FindGSSAPI.cmake) = 94b268478e680b82b1c108a12c0f37f3dc68ffce
