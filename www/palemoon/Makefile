@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11.2.2 2024/11/05 20:58:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11.2.3 2024/12/13 20:43:13 bsiegert Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PKGNAME=	palemoon-33.4.1
+PKGNAME=	palemoon-33.5.0
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PKGVERSION_NOREV}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20241105.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20241204.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
@@ -155,7 +155,7 @@ post-install:
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
