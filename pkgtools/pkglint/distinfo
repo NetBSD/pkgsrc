@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2024/12/07 12:25:34 rillig Exp $
+$NetBSD: distinfo,v 1.28 2024/12/14 23:12:48 rillig Exp $
 
 BLAKE2s (github.com_kr_pretty_@v_v0.2.1.mod) = c7902e2b218e48371c72208ab3a42754282b425818489f0872c333e1dc01c1f7
 SHA512 (github.com_kr_pretty_@v_v0.2.1.mod) = b920109a2a1f40e2c7bb4dd93d07138228fac3064b780449a38bf5e6cb0630c6b7bd79eaf18b35e0452846e5059b0e192682b0aa93cc563c6120816106b9f11b
@@ -15,24 +15,24 @@ Size (github.com_kr_text_@v_v0.1.0.mod) = 64 bytes
 BLAKE2s (github.com_kr_text_@v_v0.1.0.zip) = 4bef0ff8ec566270582dcd66cd961e217cf0e869c864ef19d535ee2639332a95
 SHA512 (github.com_kr_text_@v_v0.1.0.zip) = 3f0d00b0545769ad882e25a9a6f30b96ce4b72a8a46bb3c064907c94e2dda4e499eb32354c149f89752f9bc5d1ee5cb2ee5cafa46e2f65ea329fb432d0c0029f
 Size (github.com_kr_text_@v_v0.1.0.zip) = 12591 bytes
-BLAKE2s (golang.org_x_crypto_@v_v0.22.0.mod) = f363a40b8b63d73ea8dd38e8ca9d4fb0e9af905d5fadbf35c2ac1a98b959d5d5
-SHA512 (golang.org_x_crypto_@v_v0.22.0.mod) = 1a02abf900a90f4a0633f097cc76b525261deadfc34dcb5c5eddd9a99520fa0bddea64f75ec528f531f81e6b9cabdcab2da67f6ce287f56ded9a6ef0f040b259
-Size (golang.org_x_crypto_@v_v0.22.0.mod) = 190 bytes
-BLAKE2s (golang.org_x_crypto_@v_v0.22.0.zip) = ce2e89b2a8e5609a7cbdb05a85ea1a313f00a612c04597c6d66de9a4beddd74b
-SHA512 (golang.org_x_crypto_@v_v0.22.0.zip) = 934f875db43e255be064176c480e82b42983f7d0611927e9b19ee233de7338eeb960649b912a57a0e541ebd954eb3327c391611d929f4415f64e3ba1f426cdc5
-Size (golang.org_x_crypto_@v_v0.22.0.zip) = 1803076 bytes
-BLAKE2s (golang.org_x_sys_@v_v0.19.0.mod) = 546db01fa3b030f3f3b5f8d3674bc29d1f026a60a57e474fff3e1cd44fe694a1
-SHA512 (golang.org_x_sys_@v_v0.19.0.mod) = ec229018bf6fa169913d0c66821fc296766b8a71720123e8d8cfcf5b8b8da110e338d03b8233b1224b8586ea9d9e4231b9720c1f806d4be2523413c521acf97b
-Size (golang.org_x_sys_@v_v0.19.0.mod) = 33 bytes
-BLAKE2s (golang.org_x_sys_@v_v0.19.0.zip) = c2215893613d4acb6a013cb6b96e4598dfda4b3505619fac4adef4e0d360f77a
-SHA512 (golang.org_x_sys_@v_v0.19.0.zip) = cf2310bc70fd779e926f05745843a7ee7f387b597862d3b4ba5552d5ac143a59abbd55b428e9432448674dc60102b58bdd1d4bafbca039757026a35028906b26
-Size (golang.org_x_sys_@v_v0.19.0.zip) = 1908409 bytes
+BLAKE2s (golang.org_x_crypto_@v_v0.31.0.mod) = 0c14c2988d288083929b22d16bf5c5fd21aea893d336c601ec5836ea0d789f6b
+SHA512 (golang.org_x_crypto_@v_v0.31.0.mod) = 01aca682c661d1ec32993d2f38eec5061de99e228d5bed029dfdfdbf3461604bcd34b7ca2632fc59a7f523b015827f98711bcdd5be689e186f7521df58621f76
+Size (golang.org_x_crypto_@v_v0.31.0.mod) = 190 bytes
+BLAKE2s (golang.org_x_crypto_@v_v0.31.0.zip) = 0d770b219853631410939d1ecf4a71c02d6a437a55512008b00b2a97cf748b39
+SHA512 (golang.org_x_crypto_@v_v0.31.0.zip) = f0050d10e304c002232a288bb491038045a1f9ee520128ea8631368143e2d14e4ea16bc64415687abcfb7c33a90e53e11132600b55c3d9776f92f9646c66c864
+Size (golang.org_x_crypto_@v_v0.31.0.zip) = 1792511 bytes
+BLAKE2s (golang.org_x_sys_@v_v0.28.0.mod) = 546db01fa3b030f3f3b5f8d3674bc29d1f026a60a57e474fff3e1cd44fe694a1
+SHA512 (golang.org_x_sys_@v_v0.28.0.mod) = ec229018bf6fa169913d0c66821fc296766b8a71720123e8d8cfcf5b8b8da110e338d03b8233b1224b8586ea9d9e4231b9720c1f806d4be2523413c521acf97b
+Size (golang.org_x_sys_@v_v0.28.0.mod) = 33 bytes
+BLAKE2s (golang.org_x_sys_@v_v0.28.0.zip) = b848c74c304a4e29158514d90a8bcc1535296bc4d44cb1eb2f78d4c10b7590e8
+SHA512 (golang.org_x_sys_@v_v0.28.0.zip) = 713c73ae6a90b0cbddebaec4247a226ee369852a5e5740dbbb8475c7c4a7a72dadd5253f4b670fc9d2240b5989e2c91b2c4e5ef94d0d73843c57bd9e3df474f7
+Size (golang.org_x_sys_@v_v0.28.0.zip) = 1983555 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.mod) = 535d854a3208e5345eb291d48f401669a53e91c1d94a7a383a10a2cadd71e823
 SHA512 (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.mod) = a2f9fd465e2e0c735ca80e04f2002e31cad434c5a3771a3adcdc7f9502f0caa7b27a5f17ec2cd95bcb214e12ac1200a78139db063d4384b864bd290cb6815e87
 Size (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.mod) = 71 bytes
 BLAKE2s (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = 0f65407cbdc610b7d793aabb53ce86f87039d306762692fafe04de7c6669d460
 SHA512 (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = b69b95251b63b6fd0ed1953dae01edefa52126e2168246bc2cdf067879ae5f830df4e610da45f5ac5aa4789f70d79da8a9bfa7af5b3786ef8f1e665a8b397e02
 Size (gopkg.in_check.v1_@v_v1.0.0-20201130134442-10cb98267c6c.zip) = 42835 bytes
-BLAKE2s (pkglint-23.9.1.tar.gz) = 5ba91dc7ea1521139e52eb3ee4d8ebb056be520e3ef0b0196ff9b7cd63e7a408
-SHA512 (pkglint-23.9.1.tar.gz) = eb8f855f8a350847208b5105eda7a31bd47df43b26825b6d31e25021c344d8f96994c8b6263ecbaf9d288c9d25bb24b8583e416b489b5c99dd7c5174c0c983ed
-Size (pkglint-23.9.1.tar.gz) = 623172 bytes
+BLAKE2s (pkglint-23.10.0.tar.gz) = c3953d1d0b5827942e0ab30761642b434955f27bd849cf4068fc74d2c1dd13f5
+SHA512 (pkglint-23.10.0.tar.gz) = 52b3fb0468aa3e3e7aec0268572575f9eac073bb5920991fcb07e430b3eb4c1500f35f0249a3d36cf25ae51662fcac054aaab02fc185527e72070b4e2c6858b5
+Size (pkglint-23.10.0.tar.gz) = 625050 bytes
