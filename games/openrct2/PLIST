@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/11/25 22:06:30 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/12/14 20:47:52 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -8,6 +8,7 @@ share/applications/openrct2-savegame.desktop
 share/applications/openrct2-scenario.desktop
 share/applications/openrct2-uri.desktop
 share/applications/openrct2.desktop
+share/doc/openrct2/PRIVACY.md
 share/doc/openrct2/changelog.txt
 share/doc/openrct2/contributors.md
 share/doc/openrct2/licence.txt
@@ -41,6 +42,7 @@ share/openrct2/language/es-ES.txt
 share/openrct2/language/fi-FI.txt
 share/openrct2/language/fr-CA.txt
 share/openrct2/language/fr-FR.txt
+share/openrct2/language/gl-ES.txt
 share/openrct2/language/hu-HU.txt
 share/openrct2/language/it-IT.txt
 share/openrct2/language/ja-JP.txt
@@ -214,6 +216,7 @@ share/openrct2/object/rct1/ride/rct1aa.ride.suspended_monorail_trains.parkobj
 share/openrct2/object/rct1/ride/rct1aa.ride.twister_trains.parkobj
 share/openrct2/object/rct1/ride/rct1aa.ride.vintage_cars.parkobj
 share/openrct2/object/rct1/ride/rct1aa.ride.virginia_reel_tubs.parkobj
+share/openrct2/object/rct1/ride/rct1aa.ride.wooden_articulated_trains.parkobj
 share/openrct2/object/rct1/ride/rct1ll.ride.4_across_inverted_trains.parkobj
 share/openrct2/object/rct1/ride/rct1ll.ride.air_powered_trains.parkobj
 share/openrct2/object/rct1/ride/rct1ll.ride.coaster_boats.parkobj
@@ -2536,6 +2539,7 @@ share/openrct2/scenario_patches/0153987.parkpatch
 share/openrct2/scenario_patches/020ed74.parkpatch
 share/openrct2/scenario_patches/081feb1.parkpatch
 share/openrct2/scenario_patches/0844655.parkpatch
+share/openrct2/scenario_patches/0b8cc95.parkpatch
 share/openrct2/scenario_patches/0d53bdc.parkpatch
 share/openrct2/scenario_patches/0dcee48.parkpatch
 share/openrct2/scenario_patches/100dc43.parkpatch
@@ -2554,6 +2558,7 @@ share/openrct2/scenario_patches/229cf57.parkpatch
 share/openrct2/scenario_patches/2594e15.parkpatch
 share/openrct2/scenario_patches/2696a05.parkpatch
 share/openrct2/scenario_patches/287e87d.parkpatch
+share/openrct2/scenario_patches/2980c28.parkpatch
 share/openrct2/scenario_patches/2bf0b3c.parkpatch
 share/openrct2/scenario_patches/2ca68df.parkpatch
 share/openrct2/scenario_patches/32716c0.parkpatch
@@ -2568,6 +2573,7 @@ share/openrct2/scenario_patches/3ff5604.parkpatch
 share/openrct2/scenario_patches/41c7297.parkpatch
 share/openrct2/scenario_patches/43b5d61.parkpatch
 share/openrct2/scenario_patches/47e5512.parkpatch
+share/openrct2/scenario_patches/4a762ae.parkpatch
 share/openrct2/scenario_patches/4b1cc0e.parkpatch
 share/openrct2/scenario_patches/4ec6b38.parkpatch
 share/openrct2/scenario_patches/5112db4.parkpatch
@@ -2609,6 +2615,8 @@ share/openrct2/scenario_patches/a8a2299.parkpatch
 share/openrct2/scenario_patches/aaad3e7.parkpatch
 share/openrct2/scenario_patches/adffe2f.parkpatch
 share/openrct2/scenario_patches/aead175.parkpatch
+share/openrct2/scenario_patches/b080197.parkpatch
+share/openrct2/scenario_patches/b20bd80.parkpatch
 share/openrct2/scenario_patches/b2cebe1.parkpatch
 share/openrct2/scenario_patches/b43b07e.parkpatch
 share/openrct2/scenario_patches/b4728d2.parkpatch
@@ -2630,6 +2638,7 @@ share/openrct2/scenario_patches/db352d3.parkpatch
 share/openrct2/scenario_patches/e57112f.parkpatch
 share/openrct2/scenario_patches/e72d720.parkpatch
 share/openrct2/scenario_patches/e93677f.parkpatch
+share/openrct2/scenario_patches/eabcb3d.parkpatch
 share/openrct2/scenario_patches/ed85bec.parkpatch
 share/openrct2/scenario_patches/ef0c020.parkpatch
 share/openrct2/scenario_patches/f4b1675.parkpatch
