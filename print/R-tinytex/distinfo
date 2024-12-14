@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/02/18 10:53:56 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/12/14 10:45:43 mef Exp $
 
-BLAKE2s (R/tinytex_0.44.tar.gz) = 57ece0915cd3797eb5abc60cd9d84a3b5b8026be0fa8ab46506923707306a7f4
-SHA512 (R/tinytex_0.44.tar.gz) = 8973383ffa327d20aa70f3f10e3be8803c0572851d36c80c46a0f8ac0323d073441428b8ddd381d9c7d31239762fbb201201e097898b29eb462bd4ed2d39225b
-Size (R/tinytex_0.44.tar.gz) = 32980 bytes
+BLAKE2s (R/tinytex_0.54.tar.gz) = a764eb0cc9d511322d7547b0b4e21e900a5e169b7d6c827d44805c93c26fe7ea
+SHA512 (R/tinytex_0.54.tar.gz) = f4e4517070ab57ae647231449ef49bc5235f1efd876885c67c78df3c6ee9a5cae52ba4a004f174f0e84a9ae5b096bcf081f6fee2cb8940a9c8e21c28f591f8f0
+Size (R/tinytex_0.54.tar.gz) = 35584 bytes
