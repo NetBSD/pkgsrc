@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.613 2024/11/12 13:12:38 mef Exp $
+# $NetBSD: Makefile,v 1.614 2024/12/14 08:41:48 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -24,8 +24,6 @@ SUBDIR+=	R-RArcInfo
 SUBDIR+=	R-RColorBrewer
 SUBDIR+=	R-RNetCDF
 SUBDIR+=	R-RPostgreSQL
-SUBDIR+=	R-RandomFields
-SUBDIR+=	R-RandomFieldsUtils
 SUBDIR+=	R-Rcmdr
 SUBDIR+=	R-RcmdrMisc
 SUBDIR+=	R-RcppArmadillo
