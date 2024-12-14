@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/12/08 23:33:26 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/12/14 12:41:26 wiz Exp $
 
-BLAKE2s (libXau-1.0.11.tar.xz) = 044f3ca30b70ff5e6e89a02e3f627d53b974887ea619fcc3b02a5dbcae187a30
-SHA512 (libXau-1.0.11.tar.xz) = f56abba3bef3fdd4739dfa69367a4251b5fab7c89194c9aece9efa66b9ebbf0736690cc9bd654aab19d9db377e4b9a5268c9c020b3d293bb5351bff5fe75a4dd
-Size (libXau-1.0.11.tar.xz) = 274108 bytes
+BLAKE2s (libXau-1.0.12.tar.xz) = 9ccfbed1d5894061d451faff458fef82cd41ccd7824529cf3fe7a01a2c67637b
+SHA512 (libXau-1.0.12.tar.xz) = 4bbe8796f4a14340499d5f75046955905531ea2948944dfc3d6069f8b86c1710042bfc7918d459320557883e6631359d48e6173c69c62ff572314e864ff97c5e
+Size (libXau-1.0.12.tar.xz) = 282624 bytes
