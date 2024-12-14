@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/11/03 12:19:20 mef Exp $
+$NetBSD: distinfo,v 1.10 2024/12/14 01:09:20 mef Exp $
 
-BLAKE2s (R/cpp11_0.5.0.tar.gz) = 3ef7e9a9b39f34810c909190b3ad6b566b3050955c9f0b469558e7ed34e15453
-SHA512 (R/cpp11_0.5.0.tar.gz) = aa27ce7ebd6b1bd79354baf99694537236d709152c612baf619af0b2e39fa6cd61a1ea169970c13acfdbc2070821465d350694065c02bba777994d4801ce5b5e
-Size (R/cpp11_0.5.0.tar.gz) = 275693 bytes
+BLAKE2s (R/cpp11_0.5.1.tar.gz) = fc655bd94c471904962b109424699d4ca904136d2c09de90da74cf10951b2e31
+SHA512 (R/cpp11_0.5.1.tar.gz) = 0a33f3a07d4aaf06e91b5c9c8d8fe1d1e44fcbd5ed66e50520f16f799f48838ae5892340b4f7f5ca906ca3b622e8490eac213558d1ecf24a0bfe11d4fde773ee
+Size (R/cpp11_0.5.1.tar.gz) = 291870 bytes
