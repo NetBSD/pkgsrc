@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/12/26 22:11:05 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/12/14 12:41:03 wiz Exp $
 
-BLAKE2s (libSM-1.2.4.tar.xz) = d4f3329ad433f6eff9a0f0fbf9d0d237a05211e4f4fa436fe6d48fc94b75bed3
-SHA512 (libSM-1.2.4.tar.xz) = 7f1d41b7b6c5dd456c49ccad7740c3ba9791a2793fa50fd94814a4164ce2e20c4a0a0ad42a87708e494ed5c23f611be6d3ccd9ef1e9add6d46ac545e2b0f6f86
-Size (libSM-1.2.4.tar.xz) = 306944 bytes
+BLAKE2s (libSM-1.2.5.tar.xz) = 1144ad1709a8cf213337639a7b764231b6fd94a295c162085a2fe87c4a904302
+SHA512 (libSM-1.2.5.tar.xz) = f2e58503a7cd144a610621104b4727878dd5ba0cdf8220e72f27a3474c9b49c01dc514c60cbdfb35a9318f307b27a601580725cef0f6b5091d4c4ea57cef8c91
+Size (libSM-1.2.5.tar.xz) = 312708 bytes
