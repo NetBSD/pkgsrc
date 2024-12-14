@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/12/05 08:53:14 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/12/14 12:42:14 wiz Exp $
 
-BLAKE2s (libXv-1.0.12.tar.xz) = f239d7ec8ff6a8150833867b505445855c99af46e2b370a2ce608a61d5829b84
-SHA512 (libXv-1.0.12.tar.xz) = bdd00de1ce6a8911056181ab4de32f9e319a68567389162d4bc2e3c9946d5f3c60f87eb6c53f74c9b6a342255e591d5fef4a445a4ac8ca3c1b6fe87d42c51c1e
-Size (libXv-1.0.12.tar.xz) = 276020 bytes
+BLAKE2s (libXv-1.0.13.tar.xz) = 7721d13536c8d4cb8ff46f45426d662e873d46d890a795be08773e99d098109f
+SHA512 (libXv-1.0.13.tar.xz) = 80d7a11e6415fbe0fc50c3c2a1abf8f0f2ec38446c9c8d88ff48875cd94b8949cb1028f2ab37476c4b25cbd7eac34dde9132dd998c4e04ea576b95ae411ba946
+Size (libXv-1.0.13.tar.xz) = 281460 bytes
