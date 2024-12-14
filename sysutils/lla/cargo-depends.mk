@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.10 2024/12/12 10:24:32 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.11 2024/12/14 21:10:14 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -62,8 +62,8 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.166
 CARGO_CRATE_DEPENDS+=	libloading-0.8.5
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
+CARGO_CRATE_DEPENDS+=	lla_plugin_interface-0.3.3
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
-CARGO_CRATE_DEPENDS+=	lla_plugin_interface-0.3.1
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.12
 CARGO_CRATE_DEPENDS+=	log-0.4.22
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
