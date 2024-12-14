@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/06/08 20:00:16 mef Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/14 08:49:46 wiz Exp $
 
 R_PKGNAME=	chemometrics
 R_PKGVER=	1.4.4
@@ -9,7 +9,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-e1071>=1.7.14:../../math/R-e1071
 DEPENDS+=	R-lars-[0-9]*:../../math/R-lars
-DEPENDS+=	R-mclust>=4.0nb1:../../math/R-chemometrics
+DEPENDS+=	R-mclust>=4.0nb1:../../math/R-mclust
 DEPENDS+=	R-pcaPP-[0-9]*:../../math/R-pcaPP
 DEPENDS+=	R-pls-[0-9]*:../../math/R-pls
 DEPENDS+=	R-robustbase>=0.99.0:../../math/R-robustbase
