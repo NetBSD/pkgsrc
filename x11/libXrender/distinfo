@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2022/10/22 16:54:53 wiz Exp $
+$NetBSD: distinfo,v 1.13 2024/12/14 12:41:51 wiz Exp $
 
-BLAKE2s (libXrender-0.9.11.tar.xz) = 0bf2dc51df3d1938a31a82f820cbc333dc13d9d29162be0f6402be3aea0340b2
-SHA512 (libXrender-0.9.11.tar.xz) = 2327cc1b530382d81df29b8d579f801f1f990202107cc84506986bcf5d15010d414e9418987b200e3f222d188afce46f0d7754febcdca62a5fc1e541b3bb82de
-Size (libXrender-0.9.11.tar.xz) = 302900 bytes
+BLAKE2s (libXrender-0.9.12.tar.xz) = 5da48a98ac4ff16e05dc2401459c75beed2228c5cfd7092ddc0fb727f893a052
+SHA512 (libXrender-0.9.12.tar.xz) = 3d24a6877b500608e3e2a393532a99d4fd54fc343375d8fb51dfbb1b50cedf002c7722f771cf7776f93cb6e0421ca5966ce45435cb402d5f12a398f9ea743474
+Size (libXrender-0.9.12.tar.xz) = 310432 bytes
