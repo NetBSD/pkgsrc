@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7671 2024/12/14 12:40:52 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7672 2024/12/14 12:41:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11497,3 +11497,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated print/R-knitr to 1.49 [mef 2024-12-14]
 	Updated print/R-tinytex to 0.54 [mef 2024-12-14]
 	Updated x11/libICE to 1.1.2 [wiz 2024-12-14]
+	Updated x11/libSM to 1.2.5 [wiz 2024-12-14]
