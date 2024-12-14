@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/01/23 13:33:38 mef Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/14 09:34:02 mef Exp $
 
 R_PKGNAME=	lifecycle
 R_PKGVER=	1.0.4
@@ -9,8 +9,8 @@ COMMENT=	Manage the Life Cycle of your Package Functions
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	R-glue>=1.3.1:../../devel/R-glue
-DEPENDS+=	R-rlang>=0.4.0:../../devel/R-rlang
-DEPENDS+=	R-cli-[0-9]*:../../devel/R-cli
+DEPENDS+=	R-rlang>=l.1.0:../../devel/R-rlang
+DEPENDS+=	R-cli>=3.4.0:../../devel/R-cli
 
 # Package suggested but not available: 'tidyverse'
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
