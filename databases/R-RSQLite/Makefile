@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/01/01 06:00:20 mef Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/14 01:29:33 mef Exp $
 
 R_PKGNAME=	RSQLite
-R_PKGVER=	2.2.20
+R_PKGVER=	2.3.9
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,8 @@ DEPENDS+=	R-memoise>=1.1.0:../../devel/R-memoise
 DEPENDS+=	R-pkgconfig>=2.0.2:../../devel/R-pkgconfig
 DEPENDS+=	R-DBI>=1.1.0:../../math/R-DBI
 
-# Package suggested but not available: 'DBItest'
+# Packages suggested but not available: 'DBItest', 'decor'
+
 TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
 TEST_DEPENDS+=	R-blob-[0-9]*:../../devel/R-blob
 TEST_DEPENDS+=	R-DBI-[0-9]*:../../math/R-DBI
@@ -34,6 +35,6 @@ USE_LANGUAGES+=	c c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/R-BH/buildlink3.mk"
-.include "../../devel/R-Rcpp/buildlink3.mk"
+.include "../../lang/R-cpp11/buildlink3.mk"
 .include "../../devel/R-plogr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
