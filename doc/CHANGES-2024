@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7675 2024/12/14 12:42:24 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7676 2024/12/14 12:42:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11501,3 +11501,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/libXau to 1.0.12 [wiz 2024-12-14]
 	Updated x11/libXrender to 0.9.12 [wiz 2024-12-14]
 	Updated x11/libXv to 1.0.13 [wiz 2024-12-14]
+	Updated x11/libXxf86vm to 1.1.6 [wiz 2024-12-14]
