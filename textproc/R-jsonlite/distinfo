@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/08/14 21:39:10 mef Exp $
+$NetBSD: distinfo,v 1.9 2024/12/14 09:58:50 mef Exp $
 
-BLAKE2s (R/jsonlite_1.8.7.tar.gz) = 82b6152f07de320b255a9ec6a981625b3a0e60183fa225e25a3a46f192f829ff
-SHA512 (R/jsonlite_1.8.7.tar.gz) = f251ac8787b89622b6a8f0b79d0e958848009ea41eabe933a8de9187c68f50bbb62a6c245e3546ad6d82b297a94617c713380b6cc501e809fca7a1ca971ab5d3
-Size (R/jsonlite_1.8.7.tar.gz) = 1053075 bytes
+BLAKE2s (R/jsonlite_1.8.9.tar.gz) = 87cbfad79da78574512711f656703bd0f5691d914be46af3023e51c47f27179e
+SHA512 (R/jsonlite_1.8.9.tar.gz) = 1ad7ebb9b4405d194d6a6335d663928ef9ea485280ec9441ddd502e3588dae1c3912a0d17bcfbe2699dac7010dc82d3c34e720463bb7282b749eac549659d47b
+Size (R/jsonlite_1.8.9.tar.gz) = 1055633 bytes
