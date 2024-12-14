@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/06/17 13:24:56 mef Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/14 13:38:41 mef Exp $
 
 R_PKGNAME=	dbplyr
-R_PKGVER=	2.3.2
+R_PKGVER=	2.5.0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Database backend for dplyr
@@ -34,14 +34,17 @@ TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-RSQLite-[0-9]*:../../databases/R-RSQLite
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-tidyr-[0-9]*:../../math/R-tidyr
-TEST_DEPENDS+=	tex-texlive.infra-[0-9]*:../../print/tex-texlive.infra
+
+# !pdfTeX error: pdflatex (file tctt1000): Font tctt1000 at 600 not found
+
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	c c++
 
-# Packages suggested but not available:
-# 'bit64', 'covr', 'Lahman', 'nycflights13', 'odbc',
-# 'RMariaDB', 'rmarkdown', 'RPostgres', 'RPostgreSQL', 'RSQLite',
-# 'testthat', 'tidyr'
 TEST_ENV+=	_R_CHECK_FORCE_SUGGESTS_=0
 
 .include "../../math/R/Makefile.extension"
