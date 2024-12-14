@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/11/16 12:04:22 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/14 16:02:51 rillig Exp $
 
 DISTNAME=	Hash-Ordered-0.014
 PKGNAME=	p5-${DISTNAME}
@@ -11,9 +11,9 @@ HOMEPAGE=	https://metacpan.org/release/Hash-Ordered
 COMMENT=	Fast, pure-Perl ordered hash class
 LICENSE=	${PERL5_LICENSE}
 
-TEST_DEPENDS+=	p5-Test-Deep>=0:devel/p5-Test-Deep \
-TEST_DEPENDS+=	p5-Test-FailWarnings>=0:devel/p5-Test-FailWarnings \
-TEST_DEPENDS+=	p5-Test-Fatal>=0:devel/p5-Test-Fatal
+TEST_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
+TEST_DEPENDS+=	p5-Test-FailWarnings>=0:../../devel/p5-Test-FailWarnings
+TEST_DEPENDS+=	p5-Test-Fatal>=0:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Hash/Ordered/.packlist
