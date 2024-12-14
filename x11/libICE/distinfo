@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2022/12/08 23:36:29 wiz Exp $
+$NetBSD: distinfo,v 1.14 2024/12/14 12:40:39 wiz Exp $
 
-BLAKE2s (libICE-1.1.1.tar.xz) = 4d7a4cc84e7e14a8d959178b5c22ca1d8e7722cf4cea06c66d3e9c192a8b0c46
-SHA512 (libICE-1.1.1.tar.xz) = 2f7833a25f31cc743ca95cb88f9a8403b50e19ffb5bf43bfef87ba405857d359789daaa9ec2391351237d958f16d35dbf082adb76d301e46d3a54162a6b452d3
-Size (libICE-1.1.1.tar.xz) = 335960 bytes
+BLAKE2s (libICE-1.1.2.tar.xz) = f481971f96e1eec51cca2484cec7e02a2dcc201c4cb3cb7f0d033d7880d076b7
+SHA512 (libICE-1.1.2.tar.xz) = 340f51ffa1f14ed442ab8bcea92dd63df147c48242e232e818cafe02f43de7ab6e99c5430b9cb8d0dc661295239d2b3f6bdb6a092ce51a98afa06235257e9b1f
+Size (libICE-1.1.2.tar.xz) = 342900 bytes
