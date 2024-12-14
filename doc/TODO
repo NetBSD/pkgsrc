@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25191 2024/12/14 12:43:34 wiz Exp $
+$NetBSD: TODO,v 1.25192 2024/12/14 12:43:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libtrace-4.0.16
 	o libvirt-10.0
 	o libxdg-basedir-1.2.3
-	o libxshmfence-1.3.3
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o liquidwar-6.0.0.11
