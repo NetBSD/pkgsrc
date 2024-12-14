@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7682 2024/12/14 17:11:20 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7683 2024/12/14 21:10:43 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11508,3 +11508,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/pixman to 0.44.2 [wiz 2024-12-14]
 	Updated databases/R-dbplyr to 2.5.0 [mef 2024-12-14]
 	Updated games/monsterz to 0.8 [wiz 2024-12-14]
+	Updated sysutils/lla to 0.3.3 [pin 2024-12-14]
