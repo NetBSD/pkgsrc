@@ -1,0 +1,23 @@
+$NetBSD: patch-libgcc_config_t-darwin-libgccs1,v 1.1 2024/12/15 03:12:17 brook Exp $
+
+libgcc, Darwin: Drop the legacy library build for macOS >= 15 [PR116809].
+
+We have been building a legacy libgcc_s.1 DSO to support code that
+was built with older compilers.
+
+From macOS 15,  the unwinder no longer exports some of the symbols used
+in that library which (a) cuases bootstrap fail and (b) means that the
+legacy library is no longer useful.
+
+No open branch of GCC emits references to this library - and any already
+-built code that depends on the symbols would need rework anyway.
+
+	PR target/116809
+
+See https://github.com/gcc-mirror/gcc/blob/master/libgcc/config/t-darwin-libgccs1.
+
+--- libgcc/config/t-darwin-libgccs1.orig	2024-12-09 03:35:09.522148209 +0000
++++ libgcc/config/t-darwin-libgccs1
+@@ -0,0 +1,2 @@
++# Build a legacy libgcc_s.1
++BUILD_LIBGCCS1 = YES
