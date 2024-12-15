@@ -1,0 +1,20 @@
+$NetBSD: patch-doc_latex-mk.texi,v 1.1 2024/12/15 03:24:40 brook Exp $
+
+Remove an obsolete texinfo command; see
+
+     https://www.gnu.org/software/texinfo/manual/texinfo/html_node/Obsolete-_0040_002dCommands.html
+
+Reported upstream as
+
+     https://sourceforge.net/p/latex-mk/bugs/27/
+
+--- doc/latex-mk.texi.orig	2010-12-28 21:50:27.000000000 +0000
++++ doc/latex-mk.texi
+@@ -3,7 +3,6 @@
+ @c %**start of header
+ @setfilename latex-mk.info
+ @settitle LaTeX-Mk
+-@setcontentsaftertitlepage
+ @c %**end of header
+ 
+ @include version.texi
