@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/10/18 22:29:06 mef Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/15 02:10:20 mef Exp $
 
 R_PKGNAME=	waldo
-R_PKGVER=	0.5.3
+R_PKGVER=	0.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +15,9 @@ DEPENDS+=	R-rematch2>=2.1.2:../../devel/R-rematch2
 DEPENDS+=	R-rlang>=0.4.7:../../devel/R-rlang
 DEPENDS+=	R-tibble>=2.1.3:../../math/R-tibble
 
+# Package suggested but not available: 'S7'
+
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
 TEST_DEPENDS+=	R-rematch2-[0-9]*:../../devel/R-rematch2
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-xml2-[0-9]*:../../textproc/R-xml2
