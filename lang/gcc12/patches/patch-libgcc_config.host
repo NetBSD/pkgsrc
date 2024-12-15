@@ -1,11 +1,72 @@
-$NetBSD: patch-libgcc_config.host,v 1.1 2022/06/16 15:43:55 adam Exp $
+$NetBSD: patch-libgcc_config.host,v 1.2 2024/12/15 03:05:12 brook Exp $
 
-This is needed for arm64 to get Out-of-line LSE atomics linked into libgcc.
+Part 1: drop legacy library build for macOS >= 14 [PR116809].
+
+This is a mixture of two upstream patches.  See
+
+     https://github.com/gcc-mirror/gcc/blob/master/libgcc/config.host
+
+libgcc, Darwin: Drop the legacy library build for macOS >= 15 [PR116809].
+
+We have been building a legacy libgcc_s.1 DSO to support code that
+was built with older compilers.
+
+From macOS 15,  the unwinder no longer exports some of the symbols used
+in that library which (a) cuases bootstrap fail and (b) means that the
+legacy library is no longer useful.
+
+No open branch of GCC emits references to this library - and any already
+-built code that depends on the symbols would need rework anyway.
+
+	PR target/116809
+
+libgcc, Darwin: Don't build legacy libgcc_s.1 on macOS 14 [PR116809]
+
+d9cafa0 stopped building libgcc_s.1 on macOS >= 15, in part because
+that is required to bootstrap the compiler using the macOS 15 SDK. The
+macOS 15 SDK ships in Xcode 16, which also runs on macOS 14. libgcc_s.1
+can no longer be built on macOS 14 using Xcode 16 by the same logic that
+the previous change disabled it for macOS 15.
+
+	PR target/116809
+
+Parts 2-3: This is needed for arm64 to get Out-of-line LSE atomics linked into libgcc.
 libsupc++ fails to link without this, and for arm to build.
 
---- libgcc/config.host.orig	2021-04-08 04:56:29.805761640 -0700
-+++ libgcc/config.host	2022-02-02 04:08:51.653635705 -0800
-@@ -377,6 +377,7 @@
+--- libgcc/config.host.orig	2024-06-20 08:08:09.000000000 +0000
++++ libgcc/config.host
+@@ -243,19 +243,25 @@ case ${host} in
+   tmake_file="$tmake_file t-slibgcc-darwin"
+   # newer toolsets produce warnings when building for unsupported versions.
+   case ${host} in
+-    *-*-darwin1[89]* | *-*-darwin2* )
+-      tmake_file="t-darwin-min-8 $tmake_file"
++    x86_64-*-darwin2[0-2]*)
++      tmake_file="t-darwin-min-11 t-darwin-libgccs1 $tmake_file"
++      ;;
++    *-*-darwin2*)
++      tmake_file="t-darwin-min-11 $tmake_file"
++      ;;
++    *-*-darwin1[89]*)
++      tmake_file="t-darwin-min-8 t-darwin-libgccs1 $tmake_file"
+       ;;
+     *-*-darwin9* | *-*-darwin1[0-7]*)
+-      tmake_file="t-darwin-min-5 $tmake_file"
++      tmake_file="t-darwin-min-5 t-darwin-libgccs1 $tmake_file"
+       ;;
+     *-*-darwin[4-8]*)
+-      tmake_file="t-darwin-min-1 $tmake_file"
++      tmake_file="t-darwin-min-1 t-darwin-libgccs1 $tmake_file"
+       ;;
+     *)
+       # Fall back to configuring for the oldest system known to work with
+       # all archs and the current sources.
+-      tmake_file="t-darwin-min-5 $tmake_file"
++      tmake_file="t-darwin-min-5 t-darwin-libgccs1 $tmake_file"
+       echo "Warning: libgcc configured to support macOS 10.5" 1>&2
+       ;;
+   esac
+@@ -412,6 +418,7 @@ aarch64*-*-freebsd*)
  aarch64*-*-netbsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
@@ -13,7 +74,7 @@ libsupc++ fails to link without this, and for arm to build.
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
  	md_unwind_header=aarch64/aarch64-unwind.h
  	;;
-@@ -463,7 +464,8 @@
+@@ -499,7 +506,8 @@ arm*-*-netbsdelf*)
  	case ${host} in
  	  arm*-*-netbsdelf-*eabi*)
  	    tmake_file="${tmake_file} arm/t-netbsd-eabi"
