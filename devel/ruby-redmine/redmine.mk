@@ -1,9 +1,7 @@
-# $NetBSD: redmine.mk,v 1.11 2024/11/29 14:54:51 taca Exp $
+# $NetBSD: redmine.mk,v 1.12 2024/12/15 12:37:35 taca Exp $
 
 .if !defined(_RUBY_REDMINE_MK)
 _RUBY_REDMINE_MK=	# defined
-
-.include "../../lang/ruby/rubyversion.mk"
 
 #
 # === User-settable variables ===
@@ -11,7 +9,7 @@ _RUBY_REDMINE_MK=	# defined
 # RM_VERSION_DEFAULT
 #	Select default Redmine version.
 #
-#	Possible values: 50 51
+#	Possible values: 50 51 60
 #	Default: 51
 #
 #
@@ -19,7 +17,7 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VERSIONS_SUPPORTED
 #	Supported Redmine version.
-#	Possible values: 50 51
+#	Possible values: 50 51 60
 #	Default: 51
 #
 #
@@ -27,15 +25,21 @@ _RUBY_REDMINE_MK=	# defined
 #
 # RM_VER
 #	Redmine version.
-#	Possible values: 50 51
+#	Possible values: 50 51 60
 #	Default: 51
 #
 # RM_DIR
 #	Redmine directory.
 #
 
+PRINT_PLIST_AWK+=	/^${RM_PLUGINDIR:S|/|\\/|g}/ { gsub(/^${RM_PLUGINDIR:S|/|\\/|g}/, "$${RM_PLUGINDIR}"); }
+PRINT_PLIST_AWK+=	/^${RM_THEMEDIR:S|/|\\/|g}/ { gsub(/^${RM_THEMEDIR:S|/|\\/|g}/, "$${RM_THEMEDIR}"); }
+PRINT_PLIST_AWK+=	/^${RM_DIR:S|/|\\/|g}/ { gsub(/^${RM_DIR:S|/|\\/|g}/, "$${RM_DIR}"); }
+
+.include "../../lang/ruby/rubyversion.mk"
+
 RM_VERSION_DEFAULT?=	51
-RM_VERSIONS_SUPPORTED?=	51 50
+RM_VERSIONS_SUPPORTED?=	51 50 60
 
 RM_VERSION?=	# empty
 RM_VER?=	# empty
@@ -74,8 +78,5 @@ PRINT_PLIST_AWK+=	/^${GEM_EXTSDIR:S|/|\\/|g}/ \
 .endif
 PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g}/ \
 				{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}") }
-PRINT_PLIST_AWK+=	/^${RM_PLUGINDIR:S|/|\\/|g}/ { gsub(/^${RM_PLUGINDIR:S|/|\\/|g}/, "$${RM_PLUGINDIR}"); }
-PRINT_PLIST_AWK+=	/^${RM_THEMEDIR:S|/|\\/|g}/ { gsub(/^${RM_THEMEDIR:S|/|\\/|g}/, "$${RM_THEMEDIR}"); }
-PRINT_PLIST_AWK+=	/^${RM_DIR:S|/|\\/|g}/ { gsub(/^${RM_DIR:S|/|\\/|g}/, "$${RM_DIR}"); }
 
 .endif	# _RUBY_REDMINE_MK
