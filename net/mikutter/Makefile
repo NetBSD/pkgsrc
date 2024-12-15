@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.223 2024/11/17 07:16:33 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2024/12/15 15:12:01 tsutsui Exp $
 
-DISTNAME=	mikutter-5.0.7
+DISTNAME=	mikutter-5.0.8
 DIST_SUBDIR=	${DISTNAME}	# for a pending patch in upstream Redmine
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
 
