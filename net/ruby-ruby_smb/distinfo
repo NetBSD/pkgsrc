@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.29 2024/09/22 06:00:30 taca Exp $
+$NetBSD: distinfo,v 1.30 2024/12/15 14:08:35 taca Exp $
 
-BLAKE2s (ruby_smb-3.3.10.gem) = 1cd1bb05ed1e94b373facc1e60bd1e5ae440644d2b1b7e032d91f0cbcc0dadfb
-SHA512 (ruby_smb-3.3.10.gem) = 3f1d6bcb2c8f83024cecff79c28aea9ed93c3a2d1df17ca093ed46d80a1bb84efe473b146caaab8e4ca9b384559d9b5754f55c62a512dd287d481db524137dda
-Size (ruby_smb-3.3.10.gem) = 393216 bytes
+BLAKE2s (ruby_smb-3.3.13.gem) = d78d5c05453e3b004ae888b3e8370b179277f89d4656aeae3ddd660e769f2d5e
+SHA512 (ruby_smb-3.3.13.gem) = 6f258c1e012fb0dc3d1f9db8602426f0aed70fd32878c9e10439767cb5d918004c8efceef1bf536876682d5028c6e9279b1e1624f9a07e8b62234d879bf5c3ee
+Size (ruby_smb-3.3.13.gem) = 397312 bytes
