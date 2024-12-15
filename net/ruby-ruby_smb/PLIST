@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.20 2024/09/22 06:00:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2024/12/15 14:08:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/metasploit-framework_acceptance.yml
 ${GEM_LIBDIR}/.github/workflows/verify.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -139,6 +140,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/rrp_rpc_unicode_string.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/rpc_sid.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/sampr_domain_info_buffer.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_change_password_user_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_change_password_user_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_close_handle_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_close_handle_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_connect_request.rb
@@ -155,12 +158,16 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_alias_membership_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_alias_membership_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_groups_for_user_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_groups_for_user_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_members_in_group_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_get_members_in_group_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_lookup_domain_in_sam_server_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_lookup_domain_in_sam_server_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_lookup_names_in_domain_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_lookup_names_in_domain_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_domain_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_domain_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_group_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_group_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_user_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_open_user_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_query_information_domain_request.rb
@@ -169,6 +176,8 @@ ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_response.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_request.rb
+${GEM_LIBDIR}/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_response.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/sec_trailer.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/srvsvc.rb
 ${GEM_LIBDIR}/lib/ruby_smb/dcerpc/srvsvc/net_share_enum_all.rb
@@ -286,7 +295,6 @@ ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/nbss/session_request.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm.rb
 ${GEM_LIBDIR}/lib/ruby_smb/ntlm/client.rb
-${GEM_LIBDIR}/lib/ruby_smb/ntlm/custom/string_encoder.rb
 ${GEM_LIBDIR}/lib/ruby_smb/peer_info.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server.rb
 ${GEM_LIBDIR}/lib/ruby_smb/server/cli.rb
@@ -467,7 +475,6 @@ ${GEM_LIBDIR}/lib/ruby_smb/smb2/pipe.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/smb2_header.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb2/tree.rb
 ${GEM_LIBDIR}/lib/ruby_smb/smb_error.rb
-${GEM_LIBDIR}/lib/ruby_smb/utils.rb
 ${GEM_LIBDIR}/lib/ruby_smb/version.rb
 ${GEM_LIBDIR}/ruby_smb.gemspec
 ${GEM_LIBDIR}/spec/lib/ruby_smb/client_spec.rb
@@ -522,7 +529,11 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/rpc_auth3_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/rpc_security_attributes_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/rrp_rpc_unicode_string_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/encrypted_nt_owf_password_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/rpc_sid_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/sampr_encrypted_user_password_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_change_password_user_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_change_password_user_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_close_handle_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_close_handle_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_connect_request_spec.rb
@@ -545,6 +556,8 @@ ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_rid_to_sid_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_request_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_set_information_user2_response_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_request_spec.rb
+${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr/samr_unicode_change_password_user2_response_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/samr_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/sec_trailer_spec.rb
 ${GEM_LIBDIR}/spec/lib/ruby_smb/dcerpc/srvsvc/net_share_enum_all_spec.rb
