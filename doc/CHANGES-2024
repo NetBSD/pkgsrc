@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7693 2024/12/15 13:26:16 taca Exp $
+$NetBSD: CHANGES-2024,v 1.7694 2024/12/15 13:27:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11522,3 +11522,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/yt-dlp to 2024.12.13 [adam 2024-12-15]
 	Updated devel/ruby-redmine51 to 5.1.5nb1 [taca 2024-12-15]
 	Updated devel/ruby-io-event to 1.7.5 [taca 2024-12-15]
+	Updated devel/ruby-tins to 1.37.1 [taca 2024-12-15]
