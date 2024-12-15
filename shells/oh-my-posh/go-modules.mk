@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.84 2024/12/07 21:36:53 pin Exp $
+# $NetBSD: go-modules.mk,v 1.85 2024/12/15 21:54:31 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -54,8 +54,8 @@ GO_MODULE_FILES+=	github.com/fogleman/gg/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.2.6.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/go-ole/go-ole/@v/v1.3.0.zip
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.3.mod
-GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.3.zip
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.4.mod
+GO_MODULE_FILES+=	github.com/goccy/go-json/@v/v0.10.4.zip
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.mod
 GO_MODULE_FILES+=	github.com/golang/freetype/@v/v0.0.0-20170609003504-e2365dfdc4a0.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
@@ -64,8 +64,8 @@ GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.mod
 GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.6.0.zip
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.mod
 GO_MODULE_FILES+=	github.com/gookit/color/@v/v1.5.4.zip
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.mod
-GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.17.zip
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.18.mod
+GO_MODULE_FILES+=	github.com/gookit/goutil/@v/v0.6.18.zip
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.23.0.mod
 GO_MODULE_FILES+=	github.com/hashicorp/hcl/v2/@v/v2.23.0.zip
 GO_MODULE_FILES+=	github.com/huandu/xstrings/@v/v1.5.0.mod
@@ -152,8 +152,8 @@ GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.mod
 GO_MODULE_FILES+=	github.com/yusufpapurcu/wmi/@v/v1.2.4.zip
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.14.4.mod
 GO_MODULE_FILES+=	github.com/zclconf/go-cty/@v/v1.14.4.zip
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.26.0.mod
-GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.26.0.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.31.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.31.0.zip
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20240613232115-7f521ea00fb8.mod
 GO_MODULE_FILES+=	golang.org/x/exp/@v/v0.0.0-20240613232115-7f521ea00fb8.zip
 GO_MODULE_FILES+=	golang.org/x/image/@v/v0.23.0.mod
