@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/12/07 16:44:01 js Exp $
+# $NetBSD: Makefile,v 1.40 2024/12/15 22:58:24 js Exp $
 
-DISTNAME=	objfw-1.2.2
+DISTNAME=	objfw-1.2.3
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
@@ -18,6 +18,10 @@ CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:M*:Q}
 PKGSRC_COMPILER=	clang
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+BUILD_DEPENDS+=		clang>=3.2:../../lang/clang
+.endif
 
 PLIST_SRC=	PLIST
 
@@ -48,7 +52,4 @@ do-test:
 
 .include "options.mk"
 
-.if ${OPSYS} != "Darwin"
-.include "../../lang/clang/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
