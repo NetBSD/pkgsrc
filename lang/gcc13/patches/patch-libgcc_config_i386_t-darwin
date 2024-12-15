@@ -1,0 +1,27 @@
+$NetBSD: patch-libgcc_config_i386_t-darwin,v 1.1 2024/12/15 03:07:57 brook Exp $
+
+libgcc, Darwin: Drop the legacy library build for macOS >= 15 [PR116809].
+
+We have been building a legacy libgcc_s.1 DSO to support code that
+was built with older compilers.
+
+From macOS 15,  the unwinder no longer exports some of the symbols used
+in that library which (a) cuases bootstrap fail and (b) means that the
+legacy library is no longer useful.
+
+No open branch of GCC emits references to this library - and any already
+-built code that depends on the symbols would need rework anyway.
+
+	PR target/116809
+
+See https://github.com/gcc-mirror/gcc/blob/master/libgcc/config/i386/t-darwin.
+
+--- libgcc/config/i386/t-darwin.orig	2024-05-21 07:47:41.000000000 +0000
++++ libgcc/config/i386/t-darwin
+@@ -4,6 +4,3 @@ LIB2FUNCS_EXCLUDE = _fixtfdi _fixunstfdi
+ 
+ # Extra symbols for this port.
+ SHLIB_MAPFILES += $(srcdir)/config/i386/libgcc-darwin.ver
+-
+-# Build a legacy libgcc_s.1
+-BUILD_LIBGCCS1 = YES
