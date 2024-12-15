@@ -1,6 +1,6 @@
 #!/bin/sh
 
-@SYSCONFBASE@/rc.d/redmine50_unicorn.sh status > /dev/null 2>&1
+@SYSCONFBASE@/rc.d/redmine51_unicorn.sh status > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
 	echo 'Please, stop Redmine unicorn before running this script.'
