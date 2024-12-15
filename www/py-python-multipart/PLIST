@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/14 16:58:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/15 09:45:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -15,4 +15,16 @@ ${PYSITELIB}/multipart/exceptions.pyo
 ${PYSITELIB}/multipart/multipart.py
 ${PYSITELIB}/multipart/multipart.pyc
 ${PYSITELIB}/multipart/multipart.pyo
-${PYSITELIB}/multipart/py.typed
+${PYSITELIB}/python_multipart/__init__.py
+${PYSITELIB}/python_multipart/__init__.pyc
+${PYSITELIB}/python_multipart/__init__.pyo
+${PYSITELIB}/python_multipart/decoders.py
+${PYSITELIB}/python_multipart/decoders.pyc
+${PYSITELIB}/python_multipart/decoders.pyo
+${PYSITELIB}/python_multipart/exceptions.py
+${PYSITELIB}/python_multipart/exceptions.pyc
+${PYSITELIB}/python_multipart/exceptions.pyo
+${PYSITELIB}/python_multipart/multipart.py
+${PYSITELIB}/python_multipart/multipart.pyc
+${PYSITELIB}/python_multipart/multipart.pyo
+${PYSITELIB}/python_multipart/py.typed
