@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/12/15 09:47:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/15 11:38:40 wiz Exp $
 
 DISTNAME=	starlette-0.42.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,6 +24,9 @@ USE_LANGUAGES=	# none
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
+.else
+# TODO: shouldn't be necessary, report upstream
+TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.10.0:../../devel/py-typing-extensions
 .endif
 
 .include "../../lang/python/wheel.mk"
