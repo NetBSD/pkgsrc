@@ -1,0 +1,19 @@
+$NetBSD: patch-config_pam_meson.build,v 1.1 2024/12/16 15:40:54 hauke Exp $
+
+Leave installation of config files to pkgsrc framework
+
+--- config/pam/meson.build.orig	2024-12-16 15:29:40.082881669 +0000
++++ config/pam/meson.build
+@@ -3,12 +3,3 @@ netatalk_pamd = configure_file(
+     output: 'netatalk',
+     configuration: cdata,
+ )
+-
+-if (
+-    fs.exists(pam_confdir / 'netatalk')
+-    and not get_option('with-overwrite')
+-)
+-    message('will not replace existing', pam_confdir / 'netatalk')
+-else
+-    install_data(netatalk_pamd, install_dir: pam_confdir)
+-endif
