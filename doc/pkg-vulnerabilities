@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.286 2024/12/16 18:17:23 prlw1 Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.287 2024/12/16 18:30:08 prlw1 Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26117,4 +26117,8 @@ py{38,39,310,311,312}-django>=4<4.2.17	denial-of-service	https://nvd.nist.gov/vu
 py{38,39,310,311,312}-django>=5<5.1.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-53907
 curl<8.11.1	credential-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-11053
 gstreamer-1.24.10	multiple-vulnerabilities	https://discourse.gstreamer.org/t/gstreamer-1-24-10-stable-bug-fix-release/3683
-firefox<131.0.2		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+firefox<131.0.2			remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+firefox128<128.3.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+firefox128-l10n<128.3.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+firefox115<115.16.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+firefox115-l10n<115.16.1	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
