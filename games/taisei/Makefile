@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2024/12/10 14:43:07 nia Exp $
+# $NetBSD: Makefile,v 1.40 2024/12/16 08:25:29 wiz Exp $
 
 DISTNAME=	taisei-1.4.2
 CATEGORIES=	games
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://taisei-project.org/
 COMMENT=	Open source Touhou Project fan game
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-zstandard-[0-9]*:../../archivers/py-zstandard
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
@@ -33,7 +35,6 @@ REPLACE_PYTHON+=	scripts/configure-file.py
 BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
 
 PYTHON_FOR_BUILD_ONLY=		tool
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
