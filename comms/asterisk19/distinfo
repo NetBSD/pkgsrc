@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2024/07/08 05:03:01 jnemeth Exp $
+$NetBSD: distinfo,v 1.4 2024/12/16 05:00:42 jnemeth Exp $
 
 BLAKE2s (asterisk-19.8.1/asterisk-19.8.1.tar.gz) = f364feff8ef0d9cc0efe33ff45327c3875e5b6e450ef7e0bdb0b8a98289adcb7
 SHA512 (asterisk-19.8.1/asterisk-19.8.1.tar.gz) = cad372034d6e6e76e223aa641b9068294cc2411a7c63241812954cc8989559d7c78f50eafcdeddf1da7c6f385ae3e5e5398ea547b4f4ffa36718cca5d76120b3
@@ -6,12 +6,12 @@ Size (asterisk-19.8.1/asterisk-19.8.1.tar.gz) = 28103942 bytes
 BLAKE2s (asterisk-19.8.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f7e5fe212d7e7cdca14c52527a2552311ab7762c3f1464b09ddedc7c66aebde
 SHA512 (asterisk-19.8.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 3f2f7bf3d5bce3544bc013f913c352f0204a3ce96239987403eb9dce8bc87e64a61d437762323a422a87b2fad1f3bf3e7a5f3d0d340f912a1b1dbfea9479d41d
 Size (asterisk-19.8.1/asterisk-extra-sounds-en-gsm-1.5.2.tar.gz) = 4253587 bytes
-BLAKE2s (asterisk-19.8.1/pjproject-2.10.md5) = 6739f51daf24d0567304f773bd49648c1be3a7a4a33c0f3353279fb349168e7e
-SHA512 (asterisk-19.8.1/pjproject-2.10.md5) = bd24048c9c2fdaf06468e44bceca92bd02848d759ef98285d20b50174f865b1aec2928f1ce6c092862397ba83dd1a74da4a7e479eca881df1e9f9d1c211a7054
-Size (asterisk-19.8.1/pjproject-2.10.md5) = 110 bytes
-BLAKE2s (asterisk-19.8.1/pjproject-2.10.tar.bz2) = fac6400fa94cde09a848314b754062364c021e8c13d3fe28493634d4415959f7
-SHA512 (asterisk-19.8.1/pjproject-2.10.tar.bz2) = fe29edccc63a8e72323e1b6f955a8c3475e26aba9cb8f5125546da4409fecc19a09a7950eee6b8e4a3c908943bc043d95130f878ad52958c5eccc617e3bcfb4e
-Size (asterisk-19.8.1/pjproject-2.10.tar.bz2) = 7339188 bytes
+BLAKE2s (asterisk-19.8.1/pjproject-2.12.1.md5) = c177f86181d54770ea4b5bc73677c546de594f29a008470fede47c23035a3cce
+SHA512 (asterisk-19.8.1/pjproject-2.12.1.md5) = 6a25e243c3b846c871e6a5f9e14072256cbaa9e0da1782fec376643b55eaa8dbfb982e75cff6163753b0442563fecd60322ff0d7ce83fe15921f9d32d5135a10
+Size (asterisk-19.8.1/pjproject-2.12.1.md5) = 172 bytes
+BLAKE2s (asterisk-19.8.1/pjproject-2.12.1.tar.bz2) = b97e9a8024e347c095a6443baebbab5fc6ae2de53717f440be605a0212564d83
+SHA512 (asterisk-19.8.1/pjproject-2.12.1.tar.bz2) = ee0eabb9772862ed728f5a819b4e767273a0718fd19e1a9c69d22ee8df2d8eeb23b2adce836d4dcfd6ccebc76a6ab4346f088a21fbc6ae17edbfb2ab9ffa6b34
+Size (asterisk-19.8.1/pjproject-2.12.1.tar.bz2) = 7842268 bytes
 SHA1 (patch-Makefile) = 5cf3b6937ec23a82e4d056b91e493a36bc1089b9
 SHA1 (patch-addons_chan__ooh323.c) = 1775da7ca2129a962ed460bd1e78ba3ce6afa62c
 SHA1 (patch-apps_app__adsiprog.c) = 031139e5cd1ef6bb2afb0a74fee3d752eded0a2c
