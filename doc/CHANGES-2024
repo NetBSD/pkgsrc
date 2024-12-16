@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7705 2024/12/16 04:25:32 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7706 2024/12/16 04:39:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11534,3 +11534,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/objfw to 1.2.3 [js 2024-12-15]
 	Updated x11/tinyx-wscons to 0.6 [nat 2024-12-16]
 	Updated cad/klayout to 0.29.10 [mef 2024-12-16]
+	Updated www/R-bslib to 0.8.0 [mef 2024-12-16]
