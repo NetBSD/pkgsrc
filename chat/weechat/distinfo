@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.83 2024/12/12 15:45:47 ryoon Exp $
+$NetBSD: distinfo,v 1.84 2024/12/16 10:55:22 jperkin Exp $
 
 BLAKE2s (weechat-4.4.4.tar.xz) = 651e2b338db53ba45ec4efcecc5513888bbf3fa73035fb4b95c51780dcd7901f
 SHA512 (weechat-4.4.4.tar.xz) = 519c0ce68081a256f78e5a04ee7518393719c8b0cd6edcbeac58ef952d08bebf5b0b2173b0bf103afe09f5e0eb27e2790d0ab3a6475ad346d0056f97069176d4
@@ -7,3 +7,4 @@ SHA1 (patch-cmake_FindNcurses.cmake) = 73d4bc9551c79ee967abe06eba09cfe1b10129d4
 SHA1 (patch-po_CMakeLists.txt) = b5a186dc5e135ef2e1ec5f01f75152fc769867be
 SHA1 (patch-src_plugins_lua_CMakeLists.txt) = 08a1b7dfca5dbbdf45a10b466eeac42671fe9edc
 SHA1 (patch-src_plugins_perl_weechat-perl.c) = 49e61419ea82157fa54a7847a653625944d3b341
+SHA1 (patch-src_plugins_relay_api_relay-api-msg.c) = 8d5670c6e0ddb1d70e29f23015f0f1422fb63f65
