@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/12/11 15:23:21 taca Exp $
+$NetBSD: distinfo,v 1.2 2024/12/16 09:06:59 taca Exp $
 
-BLAKE2s (timeout-0.4.2.gem) = ad93afcc6bb536af53b7a5af6c71079e76e5b76fa002ff7518cac71b99470e2b
-SHA512 (timeout-0.4.2.gem) = 32a4c2aa1fc59eb4c586d2f4ca6fad842f0596fa3f561f732e8256acff8fef1f75599fc97ceea3dcc399895abcf92c1020be58428af8d458be1ff5906b531ad8
-Size (timeout-0.4.2.gem) = 9216 bytes
+BLAKE2s (timeout-0.4.3.gem) = 65bdbde4b6ad0da0bc9855901d4b2b40129f1d2edb0c955a0e5b638adadba1f8
+SHA512 (timeout-0.4.3.gem) = 4735aa96df796e5747a870f45fec561e0fdd66b839639c6660786de1be5c4009b706e453958639065287c8f6c6bc1a5e56d2b0ec654b1ce012f907a7ffcec098
+Size (timeout-0.4.3.gem) = 9216 bytes
