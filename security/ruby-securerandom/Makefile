@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/11 13:52:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/16 09:09:11 taca Exp $
 
-DISTNAME=	securerandom-0.4.0
+DISTNAME=	securerandom-0.4.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-user@NetBSD.org
