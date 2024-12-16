@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/12/16 15:40:54 hauke Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/16 17:34:45 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -65,6 +65,12 @@ SUBST_FILES.perlpath+=	contrib/shell_utils/afpstats.in
 SUBST_FILES.perlpath+=	contrib/shell_utils/apple_dump.in
 SUBST_FILES.perlpath+=	contrib/shell_utils/asip-status.in
 SUBST_SED.perlpath=	-e 's|@PERL@|${PERL5}|g'
+
+# Keep Meson from installing rc.d files
+SUBST_CLASSES+=		init
+SUBST_STAGE.init+=	pre-configure
+SUBST_FILES.init+=	distrib/initscripts/meson.build
+SUBST_SED.init+=	-E -e 's|(install): true|\1: false|g'
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 OWN_DIRS+=		${VARBASE}/db/netatalk/CNID ${REAL_ROOT_USER} ${REAL_ROOT_GROUP}
