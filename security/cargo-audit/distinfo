@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/11/21 09:39:06 pin Exp $
+$NetBSD: distinfo,v 1.10 2024/12/16 19:12:17 adam Exp $
 
 BLAKE2s (abscissa_core-0.8.1.crate) = 254eca48dcf6a33ebb1825c4c9a718641a5add4f0cf2f2a2e9e3d8b45e98b51e
 SHA512 (abscissa_core-0.8.1.crate) = 1b43ca9cecfd790293b65a26c4ee443b21c016004c2a1c44193c8f33e851bdbf53fa2c9321365c69a66ab14ab4f596b8c05bc6bcc4568c3e0cc2e4533377f559
@@ -1065,3 +1065,4 @@ Size (zerocopy-derive-0.7.35.crate) = 37829 bytes
 BLAKE2s (zeroize-1.8.1.crate) = 5a10298ca4d45f2d0a2cefc2ee481fc2341b0355e78a4b0940c31f776e5b2d38
 SHA512 (zeroize-1.8.1.crate) = dd40ebe98b98fd742608d4066b5ab66caba94b2e679428fcaff9fe547d8cd6ff2360dc85d671ee9183e32fb79cb554d00d6aef9eb8f3d8ad0ec92d0435aa4ebe
 Size (zeroize-1.8.1.crate) = 20029 bytes
+SHA1 (patch-admin_src_lib.rs) = 5db02862f668a2756b9c64da34c59b54ee747fe9
