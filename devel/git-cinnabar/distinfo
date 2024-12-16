@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2024/12/05 02:31:30 riastradh Exp $
+$NetBSD: distinfo,v 1.9 2024/12/16 00:41:41 riastradh Exp $
 
 BLAKE2s (addr2line-0.24.1.crate) = 6b7b4e5845873018da12292d582de9e8ec0be0edbac314cbbbfb7dad89d7a983
 SHA512 (addr2line-0.24.1.crate) = ffa53fcfbbccdec943410083aa5f44e93122e0b40dc45acfe00b454a02c5575549e9a61807d87080d1677da807fef695b6676036fec3ca079d2b841794dbc0b5
@@ -412,5 +412,7 @@ BLAKE2s (zstd-sys-2.0.13+zstd.1.5.6.crate) = df71c3b7a2dd396817e8e71eee920caccb9
 SHA512 (zstd-sys-2.0.13+zstd.1.5.6.crate) = c1f0176ebd0914879d0060796776c7fe376293ce9bc9f8f07ee3b809932a75aa033881d59a1bc99b6cd9af85b8e225fc09bcfc96013e556d7c11f155b759ecbf
 Size (zstd-sys-2.0.13+zstd.1.5.6.crate) = 749090 bytes
 SHA1 (patch-git-core_ci_run-test-slice.sh) = 9c7bc2b52c677d96d77a4d842650828a23c3eccc
+SHA1 (patch-src_main.rs) = 13681decb7b9f1a4bd5876a2c651320660fb2935
 SHA1 (patch-tests_cinnabarclone.t) = 054754e932eb52a04001da5cae96c5582dfacddc
 SHA1 (patch-tests_push-refs.t) = c6de59558337c8fe193df7166a9a4179cf3e14ca
+SHA1 (patch-tests_push.t) = e95d39ba32fcd0921da4e59be5bbc71df6355fee
