@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.20 2024/12/12 16:13:59 riastradh Exp $
+# $NetBSD: Makefile,v 1.21 2024/12/16 00:41:11 riastradh Exp $
 
-# does not contain the git submodules, please update GITHUB_SUBMODULES below
 .include "Makefile.common"
 
 CATEGORIES=	devel
