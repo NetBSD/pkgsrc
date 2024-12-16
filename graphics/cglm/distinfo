@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:46:01 nia Exp $
+$NetBSD: distinfo,v 1.4 2024/12/16 07:59:07 wiz Exp $
 
-BLAKE2s (cglm-0.8.2.tar.gz) = 3a1361a46b86958aca22668e02f2532c593d31f71e65f5be6e7c783078eca356
-SHA512 (cglm-0.8.2.tar.gz) = 9ed9661f69fc46c7f0fe8468ec7cdf4071118adaa06b97f99134f5d04a0f7b21158df479f678f78e927c6e4a5d2e6f38c2e8d38ef40ab1f04b2b721af3e7a152
-Size (cglm-0.8.2.tar.gz) = 231038 bytes
+BLAKE2s (cglm-0.9.4.tar.gz) = d68f1b5239709fb9bc095ccc1703b36458f41cb971f08451613a6b771586e514
+SHA512 (cglm-0.9.4.tar.gz) = cfa836d5100912866d0678babca51e0ca818c1424ac8320c49ee55e5f9091403947a0d7b5c633bb0fb5df594d2b4fb01c2f634cc20cbe6266db5f7879488b02f
+Size (cglm-0.9.4.tar.gz) = 690840 bytes
