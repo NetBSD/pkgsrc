@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/12/09 21:20:52 bsiegert Exp $
+# $NetBSD: options.mk,v 1.5 2024/12/16 07:44:51 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kicad
 PKG_SUPPORTED_OPTIONS=	ng-spice wayland
@@ -15,7 +15,7 @@ CMAKE_CONFIGURE_ARGS+=		-DKICAD_SPICE=OFF
 
 .if !empty(PKG_OPTIONS:Mwayland)
 .  include "../../devel/wayland/buildlink3.mk"
-CMAKE_ARGS+=   -DKICAD_WAYLAND=ON
+CMAKE_CONFIGURE_ARGS+=   -DKICAD_WAYLAND=ON
 # This conditional matches the conditional in Makefile
 # so that it's effectively a test for whether
 # KICAD_USE_EGL is enabled.
@@ -25,5 +25,5 @@ PKG_FAIL_REASON+= "KICAD_WAYLAND CMake option. See the cmake_dependent_option() 
 PKG_FAIL_REASON+= "for KICAD_WAYLAND in CMakeLists.txt."
 .  endif
 .else
-CMAKE_ARGS+=   -DKICAD_WAYLAND=OFF
+CMAKE_CONFIGURE_ARGS+=   -DKICAD_WAYLAND=OFF
 .endif
