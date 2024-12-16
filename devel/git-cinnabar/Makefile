@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/12/16 00:41:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/16 00:41:19 riastradh Exp $
 
 .include "Makefile.common"
 
@@ -34,10 +34,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/git-cinnabar
 
 CARGO_TEST_ARGS=	test ${DEFAULT_CARGO_ARGS}
-
-do-test:
-	${RUN} cd ${CARGO_WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${PREFIX}/bin/cargo ${CARGO_TEST_ARGS}
 
 do-test: do-test-cargo
 do-test-cargo: .PHONY
