@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2024/11/24 07:21:16 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/12/16 05:45:04 adam Exp $
 
-BLAKE2s (ninja-1.11.1.2.tar.gz) = b196b8a7ea6a8aefa980ef8fc584af03bff464e33772f33548240413936dd02b
-SHA512 (ninja-1.11.1.2.tar.gz) = 5e9a7bbfa000187e256301075198c90c84b8b7f9926c2a1ef90e3922a58641fa9addd7569a7d804976bda41212fc7377f44fad0f8dce6256bee97e45d0a16550
-Size (ninja-1.11.1.2.tar.gz) = 129009 bytes
+BLAKE2s (ninja-1.11.1.3.tar.gz) = dd22780dd51d5edc29ba96ba70a4f0042eeb4d9fdf7bd8c650223c858c68446f
+SHA512 (ninja-1.11.1.3.tar.gz) = caaf45220a63a785e3d56650e62e4197f90cba532b8182e7b001c7e25d427f2774ffebf8c30a9e969a1bdb7686efa36d483e1c4644952eb94f78d14d98bed0ab
+Size (ninja-1.11.1.3.tar.gz) = 129532 bytes
 BLAKE2s (ninja-1.11.1.tar.gz) = 31edc9a8845b6b1c0f54b8db714d2927b84cf2d0af15754838fcd7c646834a95
 SHA512 (ninja-1.11.1.tar.gz) = 1bca38877c70ee6613f347ffccef5adc02ba0a3947c62ae004ea97f918442b5a3de92378e4f820ae2a7676bc7609d25fbc7d41f6cfb3a61e5e4b26ec3639e403
 Size (ninja-1.11.1.tar.gz) = 229479 bytes
