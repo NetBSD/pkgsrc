@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7708 2024/12/16 05:00:48 jnemeth Exp $
+$NetBSD: CHANGES-2024,v 1.7709 2024/12/16 05:51:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11537,3 +11537,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/R-bslib to 0.8.0 [mef 2024-12-16]
 	Updated www/R-diffviewer to 0.1.2 [mef 2024-12-16]
 	Updated comms/asterisk19 to 19.8.1nb6 [jnemeth 2024-12-16]
+	Updated devel/py-ninja to 1.11.1.3 [adam 2024-12-16]
+	Updated www/py-publicsuffixlist to 1.0.2.20241216 [adam 2024-12-16]
+	Updated devel/py-test-asyncio to 0.25.0 [adam 2024-12-16]
+	Updated time/py-types-python-dateutil to 2.9.0.20241206 [adam 2024-12-16]
