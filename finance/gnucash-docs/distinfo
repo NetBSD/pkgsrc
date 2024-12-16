@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2024/09/30 14:11:32 wiz Exp $
+$NetBSD: distinfo,v 1.49 2024/12/16 10:06:33 wiz Exp $
 
-BLAKE2s (gnucash-docs-5.9.tar.gz) = a78bc53730c28806646f601e03abac0c073c2498f453024d6970a4a5fcbbe27c
-SHA512 (gnucash-docs-5.9.tar.gz) = 358509caf776224b6de733bea2d735b594ff6c84dcfb24acb61f8977eb0971bf3cec9219e05153b56bef7b48903ca39a649a5af45c23bd3d4425ca6b92d18513
-Size (gnucash-docs-5.9.tar.gz) = 115751579 bytes
+BLAKE2s (gnucash-docs-5.10.tar.gz) = 146cb7e3a7c76bff30529a0febb0bfcb335cac79b4e1f1f00e2de22f726236e0
+SHA512 (gnucash-docs-5.10.tar.gz) = 37d91826a1a6964396041a208743f1ad712e4489f4320df08e745c71e0ac2f85fccf59f1ac27abec5bc941179f93743b81a88c002303320d9d6337db3d36fba2
+Size (gnucash-docs-5.10.tar.gz) = 117763170 bytes
