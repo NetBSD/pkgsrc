@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.36 2024/12/11 09:49:03 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.37 2024/12/17 19:55:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -33,7 +33,7 @@ CARGO_CRATE_DEPENDS+=	ciborium-io-0.2.2
 CARGO_CRATE_DEPENDS+=	ciborium-ll-0.2.2
 CARGO_CRATE_DEPENDS+=	clap-4.5.23
 CARGO_CRATE_DEPENDS+=	clap_builder-4.5.23
-CARGO_CRATE_DEPENDS+=	clap_complete-4.5.38
+CARGO_CRATE_DEPENDS+=	clap_complete-4.5.39
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.18
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	codespan-reporting-0.11.1
@@ -146,8 +146,8 @@ CARGO_CRATE_DEPENDS+=	schemars-0.8.21
 CARGO_CRATE_DEPENDS+=	schemars_derive-0.8.21
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	semver-1.0.23
-CARGO_CRATE_DEPENDS+=	serde-1.0.215
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.215
+CARGO_CRATE_DEPENDS+=	serde-1.0.216
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.216
 CARGO_CRATE_DEPENDS+=	serde_derive_internals-0.29.0
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.133
 CARGO_CRATE_DEPENDS+=	serde_repr-0.1.19
@@ -166,8 +166,8 @@ CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.14
 CARGO_CRATE_DEPENDS+=	tempfile-3.14.0
 CARGO_CRATE_DEPENDS+=	termcolor-1.4.1
 CARGO_CRATE_DEPENDS+=	termtree-0.4.1
-CARGO_CRATE_DEPENDS+=	thiserror-2.0.5
-CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.5
+CARGO_CRATE_DEPENDS+=	thiserror-2.0.6
+CARGO_CRATE_DEPENDS+=	thiserror-impl-2.0.6
 CARGO_CRATE_DEPENDS+=	thread_local-1.1.8
 CARGO_CRATE_DEPENDS+=	tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=	tinyvec-1.6.0
