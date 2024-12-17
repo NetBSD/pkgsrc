@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2024/11/14 22:21:00 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2024/12/17 01:21:17 js Exp $
 
 DISTNAME=	mpv-0.39.0
 PKGREVISION=	3
@@ -50,6 +50,11 @@ CFLAGS.SunOS+=		-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	desktop
+.if ${OPSYS} != "Darwin"
+PLIST.desktop=	yes
+.endif
 
 #
 # At some point this should be consolidated into mk/platform/Darwin.mk, it is

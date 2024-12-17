@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/05/15 20:37:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/12/17 01:21:17 js Exp $
 bin/mpv
 include/mpv/client.h
 include/mpv/render.h
@@ -9,7 +9,7 @@ lib/libmpv.so.2
 lib/libmpv.so.2.3.0
 lib/pkgconfig/mpv.pc
 man/man1/mpv.1
-share/applications/mpv.desktop
+${PLIST.desktop}share/applications/mpv.desktop
 share/bash-completion/completions/mpv
 share/doc/mpv/input.conf
 share/doc/mpv/mplayer-input.conf
