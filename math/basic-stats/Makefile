@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2023/10/28 20:50:39 bacon Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/17 23:22:08 bacon Exp $
 
 DISTNAME=	basic-stats-0.1.2.8
 CATEGORIES=	math
@@ -11,6 +11,8 @@ COMMENT=	Command-line tool to perform basic statistics on tabular data
 LICENSE=	2-clause-bsd
 
 INSTALL_TARGET=	install-strip
+
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} LOCALBASE=${LOCALBASE} depend

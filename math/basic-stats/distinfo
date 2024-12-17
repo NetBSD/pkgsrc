@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2023/10/28 20:50:39 bacon Exp $
+$NetBSD: distinfo,v 1.3 2024/12/17 23:22:08 bacon Exp $
 
 BLAKE2s (basic-stats-0.1.2.8-338a259d9fb411f7217f5e3348c2c1bbef834f47.tar.gz) = 7456b9a145ed1e704c86499a1095a06be174ea14ced26dd3a0a00ceed6c6c8c6
 SHA512 (basic-stats-0.1.2.8-338a259d9fb411f7217f5e3348c2c1bbef834f47.tar.gz) = 1eca5c0c45fa262abc94edc69e075ad8ea261663c97558d62a72f205d405550fd61a196661b30ad99f2d08e76b8328bfbf05c304d7dd804bf8a93381468bfb6c

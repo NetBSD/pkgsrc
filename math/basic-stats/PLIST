@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 20:50:39 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/17 23:22:08 bacon Exp $
 bin/basic-stats
 include/basic-stats-protos.h
 include/basic-stats.h
