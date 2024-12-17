@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7718 2024/12/17 08:04:48 jperkin Exp $
+$NetBSD: CHANGES-2024,v 1.7719 2024/12/17 13:35:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11553,3 +11553,4 @@ Changes to the packages collection and infrastructure in 2024:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2024Q4 branch [jperkin 2024-12-16]
 	Updated games/openrct2 to 0.4.17 [triaxx 2024-12-16]
 	Updated net/ddclient to 3.11.2nb1 [jperkin 2024-12-17]
+	Updated www/w3m to 0.5.3.0.20230121nb5 [ryoon 2024-12-17]
