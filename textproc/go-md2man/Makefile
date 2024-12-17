@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/09/17 03:33:00 pin Exp $
+# $NetBSD: Makefile,v 1.80 2024/12/17 19:32:57 pin Exp $
 
-DISTNAME=	go-md2man-2.0.5
+DISTNAME=	go-md2man-2.0.6
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cpuguy83/}
 CATEGORIES=	textproc
 GITHUB_TAG=	v${PKGVERSION_NOREV}
