@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.39 2024/04/08 06:01:21 wiz Exp $
+$NetBSD: distinfo,v 1.40 2024/12/17 13:35:09 ryoon Exp $
 
 BLAKE2s (w3m-0.5.3+git20230121.tar.gz) = 8dd724d95a676c9831ea20599767c6fec0a27e02b6487af970f749768b41967f
 SHA512 (w3m-0.5.3+git20230121.tar.gz) = f220aabf69cf11ca7560c1519a971bdb1cc0baa443b1b46cd8fca2a4defb614653dd9ba637afbf9315f3b63a349f972436348c2f93d06665573057e4232eab1c
 Size (w3m-0.5.3+git20230121.tar.gz) = 2322709 bytes
 SHA1 (patch-etc.c) = af69b43ceba1e2ffd8c602dacd9272a3fb2ec5b0
+SHA1 (patch-file.c) = a93d207e25dc055d7f3fd931581790bf90e6edfa
