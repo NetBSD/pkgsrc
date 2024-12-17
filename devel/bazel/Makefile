@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/12/11 01:05:03 maya Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/17 15:06:37 maya Exp $
 
 # Java project does not work as follows:
 # Error: could not find libjava.so
@@ -10,7 +10,7 @@
 .if UPSTREAM
 DISTNAME=	bazel-6.4.0-dist
 PKGNAME=	${DISTNAME:S/-dist//}
-PKGREVISION=	4
+PKGREVISION=	5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bazelbuild/}
 GITHUB_PROJECT=	bazel
 GITHUB_RELEASE= ${PKGVERSION_NOREV}
@@ -30,7 +30,7 @@ LICENSE=	apache-2.0
 BROKEN_ON_PLATFORM=	${LP32PLATFORMS}
 
 WRKSRC=		${WRKDIR}
-USE_TOOLS+=	bash pkg-config unzip zip
+USE_TOOLS+=	bash:run pkg-config unzip zip
 USE_LANGUAGES=	c c++
 
 CHECK_PIE_SUPPORTED=	no
