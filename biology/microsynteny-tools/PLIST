@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/05 17:59:23 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/17 14:56:54 bacon Exp $
 bin/ms-add-ortho
 bin/ms-blast
 bin/ms-blast-dbs
