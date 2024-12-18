@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2024/10/13 09:45:24 bsiegert Exp $
+$NetBSD: distinfo,v 1.14 2024/12/18 12:31:30 nia Exp $
 
 BLAKE2s (vym-2.9.31-da30b21109544ee0596ebf4d9738b5fed69b3cc4.tar.gz) = 56d8316213f5e1c33302900150351ed402fc8eb43a7cc764c7d5e2bb9c39224e
 SHA512 (vym-2.9.31-da30b21109544ee0596ebf4d9738b5fed69b3cc4.tar.gz) = f5b87e6d3d3a3047fb7c9355b4549bc4668d8d24a3a33ffa024b40d6f8d970a575ab5db81c718811eebed2a1ea7422fc170568dd568a8a5374ae305d0e58fe99
 Size (vym-2.9.31-da30b21109544ee0596ebf4d9738b5fed69b3cc4.tar.gz) = 8741639 bytes
+SHA1 (patch-CMakeLists.txt) = 684be5b9b8123ac2866f9fab050d22a6d082d271
 SHA1 (patch-src_main.cpp) = dd6fe34545ccec49a10152da98c250ae411f5062
 SHA1 (patch-src_mainwindow.cpp) = d33e76b358591aace24b7c55ff55ce1ab7601658
