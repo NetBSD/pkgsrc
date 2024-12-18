@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2024/12/01 22:30:06 hauke Exp $
+$NetBSD: distinfo,v 1.12 2024/12/18 16:44:36 hauke Exp $
 
 BLAKE2s (hiawatha-v11.6.tar.gz) = cb18a61b34c9ae64a1c21bdff6c57562aecddeaa15f6d4da6ab2e278dd81ffa0
 SHA512 (hiawatha-v11.6.tar.gz) = e0b23dd0626ea9850469feefd3f4c69119230e327c63ab4b68442abe695a232c5b4ea4250791cd00fe730c1c6ff3a0a66fafccde38c029d43b4506b1c817dd53
@@ -7,4 +7,5 @@ SHA1 (patch-CMakeLists.txt) = a96e51545ab31e5ceb4a520bb4757787088c8174
 SHA1 (patch-config_hiawatha.conf.in) = 8a58402b0201ec6cd661f5d949e127edfe4b693a
 SHA1 (patch-extra_letsencrypt_letsencrypt.conf.in) = 718d44e883f8206fd88480c5503d962198992347
 SHA1 (patch-mbedtls_library_ssl_tls13_generic.c) = 292b21dfdb8b19309da8faa807fa200720b5e580
+SHA1 (patch-src_hiawatha.c) = 4302f7f959799fc79bda6eda63901fb5b0fc3993
 SHA1 (patch-src_tls.c) = de1631f6ceff7a903964bcf5171e7ea24e933e71
