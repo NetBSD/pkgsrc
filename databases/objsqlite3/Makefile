@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/14 22:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/18 10:31:34 wiz Exp $
 
 DISTNAME=	objsqlite3-1.0
 PKGREVISION=	3
-CATEGORIES=	database
+CATEGORIES=	databases
 MASTER_SITES=	https://fl.nil.im/objsqlite3/tarball/${PKGVERSION_NOREV}-release/
 
 MAINTAINER=	js@NetBSD.org
@@ -13,6 +13,12 @@ LICENSE=	isc
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 PKGSRC_COMPILER=	clang	# Needs to be the same as devel/objfw
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
+.endif
 
 .include "../../devel/objfw/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
