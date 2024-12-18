@@ -1,0 +1,12 @@
+$NetBSD: patch-goodies_helpc_Makefile.in,v 1.3 2024/12/18 20:23:09 nros Exp $
+
+Ensure libraries are found.
+
+--- goodies/helpc/Makefile.in.orig	2024-12-18 20:10:50.144993948 +0000
++++ goodies/helpc/Makefile.in
+@@ -14,4 +14,4 @@ ocphhc.o: ocphhc.c
+ 	$(CC_FOR_BUILD) -I../../ ocphhc.c -o $@ -c
+ 
+ ocphhc: ocphhc.o
+-	$(CC_FOR_BUILD) -o $@ $^ -lz @EFENCE_LIBS@ @DUMA_LIBS@
++	$(CC_FOR_BUILD) -o $@ $^ $(LDFLAGS) -lz @EFENCE_LIBS@ @DUMA_LIBS@
