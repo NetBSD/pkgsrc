@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2024/11/14 22:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2024/12/18 01:27:03 maya Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-tool-/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 INSTALLATION_DIRS+=	libexec
 
@@ -12,6 +12,8 @@ do-build:
 			--client_debug \
 			build \
 			gui/tool:mozc_tool \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--subcommands \
 			--host_action_env=PATH=${PATH} \
 			--action_env=PATH=${PATH} \
