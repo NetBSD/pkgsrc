@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.288 2024/12/16 18:33:59 prlw1 Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.289 2024/12/18 21:36:40 jschauma Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26120,3 +26120,5 @@ gstreamer-1.24.10	multiple-vulnerabilities	https://discourse.gstreamer.org/t/gst
 firefox<131.0.2			remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
 firefox128<128.3.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
 firefox115<115.16.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2024-9680
+liboqs<0.12.0		incorrect-decapsulation		https://nvd.nist.gov/vuln/detail/CVE-2024-54137
+
