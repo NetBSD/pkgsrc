@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2024/11/14 22:20:27 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2024/12/18 02:44:32 maya Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/uim-mozc-/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 TOOL_DEPENDS+=	bazel-[0-9]*:../../devel/bazel
 
@@ -20,6 +20,8 @@ do-build:
 			--action_env=PATH=${PATH} \
 			--sandbox_debug \
 			--verbose_failures \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--subcommands \
 			--config oss_linux --compilation_mode opt \
 			--experimental_cc_shared_library
