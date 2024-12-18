@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/08/11 12:08:12 js Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/12/18 10:31:34 wiz Exp $
 
 BUILDLINK_TREE+=	objsqlite3
 
@@ -7,7 +7,7 @@ OBJSQLITE3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.objsqlite3+=	objsqlite3>=1.0
 BUILDLINK_ABI_DEPENDS.objsqlite3+=	objsqlite3>=1.0
-BUILDLINK_PKGSRCDIR.objsqlite3?=	../../database/objsqlite3
+BUILDLINK_PKGSRCDIR.objsqlite3?=	../../databases/objsqlite3
 .endif
 
 BUILDLINK_TREE+=	-objsqlite3
