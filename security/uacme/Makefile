@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/11/14 22:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/18 16:22:57 hauke Exp $
 
 PKGNAME=	uacme-${PKGVER}
 PKGREVISION=	5
@@ -27,6 +27,7 @@ DOCDIR=			share/doc/uacme
 UACME_CONFDIR=		${VARBASE}/uacme
 UACME_CHALLENGE_PATH=	${UACME_CONFDIR}/challenge
 
+CFLAGS.SunOS+=		-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
 
 CONFIGURE_ARGS=		--datadir=${PREFIX}/${HOOKDIR}
