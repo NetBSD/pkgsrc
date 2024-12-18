@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2024/11/17 07:15:29 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2024/12/18 11:32:34 nia Exp $
 
 DISTNAME=	amsynth-1.12.2
 PKGREVISION=	16
@@ -48,6 +48,13 @@ SUBST_FILES.sr+=	data/rc
 SUBST_FILES.sr+=	src/Configuration.cpp
 SUBST_SED.sr+=		-e "s,44100,48000,g"
 .endif
+
+PLIST_VARS+=		vst
+.if ${OPSYS} == "Linux" && ${OPSYS} == "NetBSD"
+PLIST.vst=		yes
+.else
+CONFIGURE_ARGS+=	--without-vst
+.endif	
 
 .include "options.mk"
 .include "../../audio/dssi/buildlink3.mk"

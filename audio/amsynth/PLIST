@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2020/11/23 10:58:54 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/18 11:32:34 nia Exp $
 bin/amsynth
 lib/dssi/amsynth_dssi.so
 lib/dssi/amsynth_dssi/amsynth_dssi_gtk
@@ -32,7 +32,7 @@ lib/lv2/amsynth.lv2/amsynth_factory.bank.ttl
 lib/lv2/amsynth.lv2/amsynth_lv2.so
 lib/lv2/amsynth.lv2/amsynth_lv2_gtk.so
 lib/lv2/amsynth.lv2/manifest.ttl
-lib/vst/amsynth_vst.so
+${PLIST.vst}lib/vst/amsynth_vst.so
 share/amsynth/banks/BriansBank01.amSynth.bank
 share/amsynth/banks/BriansBank02.amSynth.bank
 share/amsynth/banks/BriansBank03.amSynth.bank
