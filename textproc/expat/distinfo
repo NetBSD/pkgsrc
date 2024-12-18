@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.51 2024/09/04 13:08:26 adam Exp $
+$NetBSD: distinfo,v 1.52 2024/12/18 15:03:58 brook Exp $
 
 BLAKE2s (expat-2.6.3.tar.gz) = fcc81c1c25ef679e6c93fe93c7c1b0cc5a306f94163d3e53b506917cb6537185
 SHA512 (expat-2.6.3.tar.gz) = 0c0f0df947bbe7084ba2bffce082bc40e061cbf02363f3043e8e6be33b71277dbf13fd54dcc0f641b704293e3faea5b8c1d3c752737db4c908097bf5df8bd02d
 Size (expat-2.6.3.tar.gz) = 764617 bytes
+SHA1 (patch-cmake_autotools_expat-noconfig____macos.cmake.in) = 21411931ba40ca89435a3a41b3c329039540bfa2
