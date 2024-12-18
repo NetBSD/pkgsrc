@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/08/09 09:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/18 10:58:03 nros Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../mail/notmuch/Makefile.common"
 PKGNAME=		${DISTNAME:S/notmuch-/notmuch-emacs-/}
 
