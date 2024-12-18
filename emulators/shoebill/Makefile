@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/04/06 08:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2024/12/18 11:25:12 hauke Exp $
 
 DISTNAME=	shoebill-0.0.5
 PKGREVISION=	18
@@ -27,6 +27,8 @@ LDFLAGS+=		-framework OpenGL
 .else
 LDFLAGS+=		-lGL
 .endif
+
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 
 do-build:
 	( cd ${WRKSRC}/sdl-gui && \
