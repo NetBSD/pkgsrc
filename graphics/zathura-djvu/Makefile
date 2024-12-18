@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/11/17 07:16:10 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/12/18 11:37:32 nia Exp $
 
 DISTNAME=	zathura-djvu-0.2.10
 PKGREVISION=	2
@@ -12,6 +12,8 @@ COMMENT=	Add DjVu support to zathura using djvulibre library
 LICENSE=	zlib
 
 USE_TOOLS+=	pkg-config
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 USE_CC_FEATURES=	c17
 
