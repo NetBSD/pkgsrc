@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2023/11/24 12:56:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/18 16:12:34 nros Exp $
 
 DISTNAME=	bc-1.07.1
 CATEGORIES=	math
@@ -8,10 +8,12 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	https://www.gnu.org/software/bc/bc.html
 COMMENT=	Arbitrary precision calculator language
 
-USE_TOOLS+=		flex
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
 INFO_FILES=		yes
 
 .include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "readline"
+USE_TOOLS+=	flex:run
+.endif
 .include "../../mk/bsd.pkg.mk"
