@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/08/11 18:12:44 js Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/18 10:30:56 wiz Exp $
 
 DISTNAME=	objpgsql-1.0
-CATEGORIES=	database
+CATEGORIES=	databases
 MASTER_SITES=	https://fl.nil.im/objpgsql/tarball/${PKGVERSION_NOREV}-release/
 
 MAINTAINER=	js@NetBSD.org
@@ -12,6 +12,12 @@ LICENSE=	isc
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config
 PKGSRC_COMPILER=	clang	# Needs to be the same as devel/objfw
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
+.endif
 
 .include "../../devel/objfw/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
