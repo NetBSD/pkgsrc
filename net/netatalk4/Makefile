@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/12/18 10:58:03 nros Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/18 13:28:04 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -32,9 +32,11 @@ CONFLICTS+=		netatalk-[0-9]* netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "NetBSD"
 RCD_SCRIPTS=		netatalk
 ATALK_RCD_SCRIPTS=	a2boot atalkd macipgw papd timelord
 RCD_SCRIPT_SRC.netatalk= ${WRKSRC}/output/distrib/initscripts/netatalk
+.endif
 
 SMF_SRCDIR=		${WRKSRC}/distrib/initscripts
 SMF_METHODS=		netatalk_smf
@@ -55,6 +57,7 @@ MESON_ARGS+=		-Dwith-bdb-path=${BDBBASE}
 MESON_ARGS+=		-Dwith-tcp-wrappers=true
 MESON_ARGS+=		-Dwith-statedir-path=${VARBASE}/db
 MESON_ARGS+=		-Dwith-spooldir=${VARBASE}/spool/netatalk
+MESON_ARGS+=		-Dwith-init-hooks=false
 
 # Meson will look for perl(1), but then substitute the buildlink path
 # into scripts, so replace manually
