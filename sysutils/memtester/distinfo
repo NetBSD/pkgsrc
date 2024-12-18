@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2024/11/29 18:34:50 schmonz Exp $
+$NetBSD: distinfo,v 1.24 2024/12/18 04:02:15 schmonz Exp $
 
-BLAKE2s (memtester-4.7.0.tar.gz) = 0a812860a96d5de5e991da6df96310562f91a9d36b70ab2876e5dbf50860ef92
-SHA512 (memtester-4.7.0.tar.gz) = b89d2fb0ec1ee7f063e537ba53e69b85937ed9ed9ad6efbadfdb1631bd8c1d7746a19571d4c4e9aab12817166984ae622bbfc59c7d5f6ded3ff436dc48da8147
-Size (memtester-4.7.0.tar.gz) = 24536 bytes
+BLAKE2s (memtester-4.7.1.tar.gz) = 3acf7ae4f3e9aaa5e911c8c4332b235590eac4251b00bcd81d7b87f027f05fa4
+SHA512 (memtester-4.7.1.tar.gz) = afe630a36b617825b33485c0404deaa32586caa19a0a3f3d46dead164ad0b4fcdd766e8a92be5037f7fa547d79eb510689e7bd18f96db4a8a956f55cf9ead455
+Size (memtester-4.7.1.tar.gz) = 24590 bytes
