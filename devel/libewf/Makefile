@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 22:08:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/18 10:34:48 wiz Exp $
 
 DISTNAME=	libewf-experimental-20150126
 PKGNAME=	libewf-20150126
@@ -19,6 +19,7 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libewf.pc.in
 
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3
 .include "../../security/openssl/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../filesystems/fuse/buildlink3.mk"
