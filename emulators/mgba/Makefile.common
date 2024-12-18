@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2024/08/25 06:18:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2024/12/18 11:35:42 nia Exp $
 
 # used by emulators/libretro-mgba/Makefile
 # used by emulators/mgba/Makefile
@@ -16,6 +16,8 @@ LICENSE=	mpl-2.0
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 CMAKE_CONFIGURE_ARGS+=	-DUSE_DISCORD_RPC=OFF
 CMAKE_CONFIGURE_ARGS+=	-DUSE_MINIZIP=OFF
