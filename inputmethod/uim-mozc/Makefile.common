@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/02/10 02:20:18 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/12/18 02:44:32 maya Exp $
 
 # used by inputmethod/uim-mozc/Makefile
 
@@ -34,6 +34,48 @@ SITES.uim-mozc_mozc.patch-2.29.5268.102+=	-https://aur.archlinux.org/cgit/aur.gi
 
 MOZC_DISTS+=	uim-mozc_bazel.patch-2.29.5268.102
 SITES.uim-mozc_bazel.patch-2.29.5268.102+=	-https://aur.archlinux.org/cgit/aur.git/plain/bazel.patch?h=uim-mozc&id=4e4d6df2a67f754d8ba68c21d32bc303f76db20a
+
+MOZC_DISTS+=	bazel-skylib-1.4.1.tar.gz
+SITES.bazel-skylib-1.4.1.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.4.1/
+
+MOZC_DISTS+=	rules_python-0.0.1.tar.gz
+SITES.rules_python-0.0.1.tar.gz=	https://github.com/bazelbuild/rules_python/releases/download/0.0.1/ 
+
+MOZC_DISTS+=	rules_apple.1.1.3.tar.gz
+SITES.rules_apple.1.1.3.tar.gz=		https://github.com/bazelbuild/rules_apple/releases/download/1.1.3/
+
+MOZC_DISTS+=	44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip
+SITES.44dcd014f4b126f8941c29ff1b25e1584bd3eb26.zip=	https://github.com/bazelbuild/rules_android_ndk/archive/
+
+MOZC_DISTS+=	apple_support.1.3.1.tar.gz
+SITES.apple_support.1.3.1.tar.gz=	https://github.com/bazelbuild/apple_support/releases/download/1.3.1/
+
+MOZC_DISTS+=	rules_swift.1.2.0.tar.gz
+SITES.rules_swift.1.2.0.tar.gz= https://github.com/bazelbuild/rules_swift/releases/download/1.2.0/
+
+MOZC_DISTS+=	f7a30f6f80006b591fa7c437fe5a951eb10bcbcf.zip
+SITES.f7a30f6f80006b591fa7c437fe5a951eb10bcbcf.zip=	https://github.com/bazelbuild/rules_proto/archive/
+
+MOZC_DISTS+=	rules_java-6.0.0.tar.gz
+SITES.rules_java-6.0.0.tar.gz=	https://github.com/bazelbuild/rules_java/releases/download/6.0.0/
+
+MOZC_DISTS+=	818289e5613731ae410efb54218a4077fb9dbb03.zip
+SITES.818289e5613731ae410efb54218a4077fb9dbb03.zip=	https://github.com/bazelbuild/rules_cc/archive/
+
+MOZC_DISTS+=	rules_pkg-0.7.0.tar.gz
+SITES.rules_pkg-0.7.0.tar.gz=	https://mirror.bazel.build/github.com/bazelbuild/rules_pkg/releases/download/0.7.0/
+
+MOZC_DISTS+=	8fca842a3006c3d637114aba4f6bf9695bb3a432.zip
+SITES.8fca842a3006c3d637114aba4f6bf9695bb3a432.zip=	https://github.com/protocolbuffers/rules_ruby/archive/
+
+MOZC_DISTS+=	ea4e825d22c9ae0031d59ec5e86dc85bb50cbbcb.zip
+SITES.ea4e825d22c9ae0031d59ec5e86dc85bb50cbbcb.zip=	https://github.com/protocolbuffers/upb/archive/
+
+MOZC_DISTS+=	de0b4a8ff9b5d4c98108bdfe723291a33c52c54f.zip
+SITES.de0b4a8ff9b5d4c98108bdfe723291a33c52c54f.zip=	https://github.com/protocolbuffers/utf8_range/archive/
+
+MOZC_DISTS+=	zlib-1.2.13.tar.xz
+SITES.zlib-1.2.13.tar.xz=	https://github.com/madler/zlib/releases/download/v1.2.13/
 
 .for d in ${MOZC_DISTS}
 DISTFILES+=	${d}
