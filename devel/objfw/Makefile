@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/12/15 22:58:24 js Exp $
+# $NetBSD: Makefile,v 1.41 2024/12/18 08:32:01 wiz Exp $
 
 DISTNAME=	objfw-1.2.3
 CATEGORIES=	devel
@@ -20,7 +20,7 @@ PKGSRC_COMPILER=	clang
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
-BUILD_DEPENDS+=		clang>=3.2:../../lang/clang
+TOOL_DEPENDS+=		clang>=3.2:../../lang/clang
 .endif
 
 PLIST_SRC=	PLIST
