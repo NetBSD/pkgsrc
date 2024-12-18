@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/01/31 17:40:00 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2024/12/18 10:58:03 nros Exp $
 
 BUILDLINK_TREE+=	talloc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	talloc
 TALLOC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.1.0
-BUILDLINK_ABI_DEPENDS.talloc+=	talloc>=2.4.1nb1
+BUILDLINK_ABI_DEPENDS.talloc+=	talloc>=2.4.2nb1
 BUILDLINK_PKGSRCDIR.talloc?=	../../devel/talloc
 .endif	# TALLOC_BUILDLINK3_MK
 
