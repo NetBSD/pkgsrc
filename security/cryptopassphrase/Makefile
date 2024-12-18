@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/11 09:11:04 js Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/18 08:34:06 wiz Exp $
 
 DISTNAME=	cryptopassphrase-1.0.1
 CATEGORIES=	security
@@ -8,6 +8,12 @@ MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://fl.nil.im/cryptopassphrase
 COMMENT=	Deterministic password generator based on scrypt
 LICENSE=	isc
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
+.endif
 
 USE_LANGUAGES=		objc
 PKGSRC_COMPILER=	clang	# Needs to be the same as devel/objfw
