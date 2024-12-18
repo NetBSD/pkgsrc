@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2024/01/31 17:40:00 adam Exp $
+# $NetBSD: Makefile,v 1.50 2024/12/18 10:40:03 nros Exp $
 
 DISTNAME=	talloc-2.4.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/talloc/
 
@@ -42,6 +43,9 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
