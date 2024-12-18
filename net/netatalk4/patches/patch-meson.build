@@ -1,12 +1,14 @@
-$NetBSD: patch-meson.build,v 1.1 2024/11/21 15:26:08 hauke Exp $
+$NetBSD: patch-meson.build,v 1.2 2024/12/18 13:28:05 hauke Exp $
 
 While NetBSD has libwrap, the meson code doesn't find it. The test
 cond still succeeds, so add a branch that does not require the
 library.
 
---- meson.build.orig	2024-11-09 23:29:31.000000000 +0000
+Install at.h on Linux, we do it on NetBSD, too
+ 
+--- meson.build.orig	2024-11-15 06:52:12.000000000 +0000
 +++ meson.build
-@@ -1993,7 +1993,11 @@ int main(void) {
+@@ -2010,7 +2010,11 @@ int main(void) {
  }
  '''
  
@@ -19,3 +21,11 @@ library.
      if not have_tcpwrap
          have_tcpwrap = cc.links(tcpwrap_code, args: ['-lwrap', '-lnsl'])
      endif
+@@ -2077,7 +2081,6 @@ if host_os.contains('freebsd')
+     cdata.set('FREEBSD', 1)
+     cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
+ elif host_os.contains('linux')
+-    use_glibc_at_header = cc.has_header('netatalk/at.h')
+     cdata.set('_GNU_SOURCE', 1)
+     if cc.compiles(
+         '''
