@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.205 2024/12/19 09:46:22 pin Exp $
+$NetBSD: distinfo,v 1.206 2024/12/19 22:38:20 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -561,8 +561,8 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-24.15.1.tar.gz) = 9b94f6dd74bad8a4b8e145f83d33c440e6539647f2a1f3ff30070896857c6b93
-SHA512 (oh-my-posh-24.15.1.tar.gz) = 9e09d23ef422177338435b828af1f6d64df0f3f70fcc15fa0b57b981c67813e85bd382676bf910111d6dfef62497567956aea0ebc58a7b2dad375bb3f94684e2
-Size (oh-my-posh-24.15.1.tar.gz) = 6704660 bytes
+BLAKE2s (oh-my-posh-24.16.0.tar.gz) = 7997110731f04857efc4e36e774235a11d154a4668c01c4e19bc1e38dd2126f7
+SHA512 (oh-my-posh-24.16.0.tar.gz) = d69e078b2e75e3d09f28428eac681c8803795849c3f974531a01f6b71216e3457df4817b9fdb353fbc4832168c7cab1a4c76aef90e70e0e1b35b18dc6660e5b3
+Size (oh-my-posh-24.16.0.tar.gz) = 6704762 bytes
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
