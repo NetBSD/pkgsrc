@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/10/14 15:08:32 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/19 17:01:09 bacon Exp $
 
 DISTNAME=	npmount-0.1.1.3
 CATEGORIES=	sysutils
@@ -19,6 +19,8 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 SUBST_FILES.prefix=	npmount.c
+
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 SPECIAL_PERMS+=		bin/npmount ${SETUID_ROOT_PERMS}
 INSTALLATION_DIRS=	bin
