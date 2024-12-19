@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/30 20:45:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/19 21:35:27 maya Exp $
 
 DISTNAME=	skopeo-1.14.3
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -32,5 +32,6 @@ SUBST_FILES.fix-paths=		vendor/github.com/containers/image/v5/signature/policy_p
 SUBST_VARS.fix-paths+=		PKG_SYSCONFDIR
 
 TOOL_DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
+TOOL_DEPENDS+=	${GO_PACKAGE_DEP}
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
