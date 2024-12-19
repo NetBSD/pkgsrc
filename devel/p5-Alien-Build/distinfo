@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.32 2024/12/19 01:23:39 gutteridge Exp $
+$NetBSD: distinfo,v 1.33 2024/12/19 03:16:24 gutteridge Exp $
 
 BLAKE2s (Alien-Build-2.84.tar.gz) = 94dbd66df164bacd55752e8767facbb498b264940b7bc58df1ec548e91602b0a
 SHA512 (Alien-Build-2.84.tar.gz) = 48f67543e44651f73d4f7668ea4e34d2b522cf8ca6cf4eb0713f13809d5876ed1c1439340e3f0277cac989e17bc03fc0d7671bc26272a39e7fbeb7cef5862784
 Size (Alien-Build-2.84.tar.gz) = 548423 bytes
-SHA1 (patch-lib_Alien_Build_Plugin_PkgConfig_Negotiate.pm) = fa311323a321d8d0e9f1517c5789bbbc463b6cab
+SHA1 (patch-lib_Alien_Build_Plugin_PkgConfig_Negotiate.pm) = 8773e68e2633d26655f56ae96d6d83cba7de45f8
