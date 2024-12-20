@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/12/15 03:05:12 brook Exp $
+$NetBSD: distinfo,v 1.10 2024/12/20 09:29:10 jperkin Exp $
 
 BLAKE2s (gcc-12.4.0.diff) = ff17898717cb3781dd802a3376ce9a659df97d7d4a3ec3c4bd26279755ab752b
 SHA512 (gcc-12.4.0.diff) = 1e5df17525c13ff3b79117ffb426726c47a9bbb1ffb8555a75083eff5b2134c728decf765be24e4e0bb21685e60973211e359027e9b90f298e24b501cbc899aa
@@ -24,11 +24,7 @@ SHA1 (patch-gcc_targhooks.cc) = 3bd54b7c3efc310aa2277f33cbd87b4a877cafea
 SHA1 (patch-isl_configure) = 5523c76d95b229b3cd25461b4c2b7af24bf2534e
 SHA1 (patch-libffi_configure) = 919bbe094e3ce547a0186eeaddb20a662595f79a
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 89e2dd6aaf2c1f75726f02362d8a8bf7178694ea
-SHA1 (patch-libgcc_config.host) = 9f7c7571408bb2112d77257dfaea3558c6ed9e06
-SHA1 (patch-libgcc_config_i386_t-darwin) = bf59366eec8a9210ccdf9e79ab770263961c92e5
-SHA1 (patch-libgcc_config_rs6000_t-darwin) = c428d1e58617f55fcf93e2672b4956ce79433834
-SHA1 (patch-libgcc_config_t-darwin-libgccs1) = 2924a8e5ca8baf72003ee8f832a7bb73eca26ba0
-SHA1 (patch-libgcc_config_t-darwin-min-11) = 4264fa3e974819daf6bb1641f066db3faea9224c
+SHA1 (patch-libgcc_config.host) = d40d4d08c807eeff98cc246d1ea756b5b2c749b0
 SHA1 (patch-libgcc_crtstuff.c) = a16d465039de00c195cf0694560140a9c38f3a25
 SHA1 (patch-libgfortran_io_io.h) = d44676239a7f45e42054d24bd5224f43c20055c0
 SHA1 (patch-libquadmath_printf_quadmath-printf.c) = 78e09f1e6d61ee57cee83275093cf46b2335d204
