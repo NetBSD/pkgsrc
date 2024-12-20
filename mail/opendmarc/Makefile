@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2024/10/22 15:21:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2024/12/20 16:05:09 ryoon Exp $
 
 DISTNAME=	rel-${PKGNAME_NOREV:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 GITHUB_PROJECT=	OpenDMARC
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.trusteddomain.org/opendmarc/
 COMMENT=	Open source DMARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd
 
+DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Switch-[0-9]*:../../lang/p5-Switch
