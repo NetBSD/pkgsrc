@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 11:30:24 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/12/20 14:35:01 manu Exp $
 
-BLAKE2s (piwigo-2.9.1.zip) = 6c6ced8b30dd198ddb680f877142aa5292de1a8a9c8a6fb00c572f386c0ab4c9
-SHA512 (piwigo-2.9.1.zip) = 5fee3e96a5a9a4d70cc1528f40569b45c1898e71245ca7fcfdf529d39ee79ae0d419ef38b61c536dfb5150d1f9fe683ceabf8393455d51539253d0010ccc2fff
-Size (piwigo-2.9.1.zip) = 7777925 bytes
+BLAKE2s (piwigo-15.1.0.zip) = 6d093c47a89ff7890b73528e344d7b11d683cc7899e3854dd8908440bd09988e
+SHA512 (piwigo-15.1.0.zip) = e82ca793ba42946929931c2f285ae380c67d839ebdc97dd02560b4c0a2dc21ca53a08d47289039c8bc8fb5292af97e7063de8a2c96696062fef0e20f8579be0c
+Size (piwigo-15.1.0.zip) = 18651677 bytes
