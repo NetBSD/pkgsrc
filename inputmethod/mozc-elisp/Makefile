@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2024/11/14 22:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2024/12/21 01:15:31 tsutsui Exp $
 
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/mozc-/mozc-elisp-/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod editors
 
 EMACS_MODULES=	base leim
@@ -17,6 +17,8 @@ do-build:
 			--client_debug \
 			build \
 			unix/emacs:mozc_emacs_helper \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--host_action_env=PATH=${PATH} \
