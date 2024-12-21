@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/11/16 12:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/12/21 22:15:52 gutteridge Exp $
 
 DISTNAME=	Crypt-X509-0.55
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Convert-ASN1-[0-9]*:../../textproc/p5-Convert-ASN1
 PERL5_PACKLIST=	auto/Crypt/X509/.packlist
 
 # Cannot restore extended attributes: com.apple.*
-USE_TOOLS+=					bsdtar
+EXTRACT_USING=					bsdtar
 EXTRACT_OPTS_TAR.Crypt-X509-0.55.tar.gz=	--no-xattr
 
 .include "../../lang/perl5/module.mk"
