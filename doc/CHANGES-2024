@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7743 2024/12/21 16:10:07 bouyer Exp $
+$NetBSD: CHANGES-2024,v 1.7744 2024/12/21 16:31:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11580,3 +11580,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xenkernel418 to 20241221 [bouyer 2024-12-21]
 	Updated sysutils/xentools418 to 20241221 [bouyer 2024-12-21]
 	Updated sysutils/xenstoretools to 20241221 [bouyer 2024-12-21]
+	Updated devel/difftastic to 0.62.0 [pin 2024-12-21]
