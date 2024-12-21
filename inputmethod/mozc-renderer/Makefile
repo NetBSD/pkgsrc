@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2024/11/14 22:20:25 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2024/12/21 01:15:02 tsutsui Exp $
 
 PKGNAME=	${DISTNAME:S/mozc-/mozc-renderer-/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 CONFLICTS+=	ibus-mozc<=1.13.1651.102
 
@@ -17,6 +17,8 @@ do-build:
 			--client_debug \
 			build \
 			renderer/qt:mozc_renderer \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--host_action_env=PATH=${PATH} \
