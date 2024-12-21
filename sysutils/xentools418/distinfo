@@ -1,20 +1,20 @@
-$NetBSD: distinfo,v 1.5 2024/11/23 18:51:19 gdt Exp $
+$NetBSD: distinfo,v 1.6 2024/12/21 16:01:48 bouyer Exp $
 
 BLAKE2s (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = 82256e7e5d45980590a6493e17a4e133ff63fa28f00aff1963db96371e702448
 SHA512 (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = e1c11e37f53aab0cc6a3ceaace0b8417f07009b1f20ff8572320895fef24f1a796ade041094a024eb24c988b9bed404c556a1fdde809bba89fb49f0e0ff45a57
 Size (xen418/ipxe-1d1cf74a5e58811822bee4b3da3cff7282fcdfca.tar.gz) = 4079541 bytes
-BLAKE2s (xen418/qemu-xen-20240909.tar.gz) = 7023a7245b966272fb00dc4444da651ac31aad4874ef85057bea9babf718e55c
-SHA512 (xen418/qemu-xen-20240909.tar.gz) = 4e12b4c6d3c3bb3f1f7398d7ce419a527c0a95713e14b32b8d5a54c5f87a588550d02ef9226e2abaa71ac87df203cd8f4d1548f4d5021e4554277b803b39b031
-Size (xen418/qemu-xen-20240909.tar.gz) = 101725263 bytes
+BLAKE2s (xen418/qemu-xen-20241221.tar.gz) = 6c99c1a74e61e63ab39378b1a077ed4be024cf0cf1a1e8e780139ce9bd2465be
+SHA512 (xen418/qemu-xen-20241221.tar.gz) = 7fa561a089c9be24ae2b429952e4d287dd9f7b7fe9c998dcf183d959564fe3a7d1c060328b33cc93ea235af832c1f95f0aa50e61dfd9746c22f56412896e38ac
+Size (xen418/qemu-xen-20241221.tar.gz) = 40722452 bytes
 BLAKE2s (xen418/qemu-xen-traditional-3d273dd.tar.gz) = 451316ac6d33cd349aa4eb06e56b5c05685b533867b9729a2749e18d7049060d
 SHA512 (xen418/qemu-xen-traditional-3d273dd.tar.gz) = 46a3d7054f8ccd211a9c984385bf33ed763247b94626eb09f962086307dbc7e2d058942c16622e09ae782a7e7ea357524b29ea410ac53a70b9fa26b60e8a37ef
 Size (xen418/qemu-xen-traditional-3d273dd.tar.gz) = 3733225 bytes
 BLAKE2s (xen418/seabios-1.16.2.tar.gz) = 5c61373b373fe039436fb73e6459ce48c1b18a11cd48df157ebffa3e91001cef
 SHA512 (xen418/seabios-1.16.2.tar.gz) = 4e6ede3cc614617e57f1a288e105e09d84aeaa47e53b03a20ba75124a4fac18f68ba0665c5661f7bfb75b57623866e2d0faf6da8270890b4da2cf7e0e8d1f534
 Size (xen418/seabios-1.16.2.tar.gz) = 635922 bytes
-BLAKE2s (xen418/xen-bd51e57.tar.gz) = cc12f497140f71ae2726a575d365a1c19c24315b20d80beff5b0ebbf0a8b2c89
-SHA512 (xen418/xen-bd51e57.tar.gz) = 752fb65b69c43410b04ad5ca34eba320f7afb8de7edac26b807fb7258b2571dc1fff71c271a3f834283ddbe0429b6d6c190fda9e33d9e048cdb97d6dc7ae71dc
-Size (xen418/xen-bd51e57.tar.gz) = 6839432 bytes
+BLAKE2s (xen418/xen-e77ff547385861c72108aa380ab279e35d0f4735.tar.gz) = e64d4db0928bf8feb2114bf05d0dcf79861c723544f40384e4dc3c626e014ae0
+SHA512 (xen418/xen-e77ff547385861c72108aa380ab279e35d0f4735.tar.gz) = 6e16924f00ae082271d3428db9265ba0f6458546f96862c52c9a8a0a8b8c4edc12521baabdded143746f55b65e725dfa699e7c91689fb264ea1595cd7c049c5a
+Size (xen418/xen-e77ff547385861c72108aa380ab279e35d0f4735.tar.gz) = 6847288 bytes
 SHA1 (patch-.._seabios-rel-1.16.2_src_string.c) = a8861860e63fb38dee3ebca1fce7f470ec7ff000
 SHA1 (patch-Config.mk) = f2c5d83d4738db706e980fbbd0ae889477d87c7d
 SHA1 (patch-configure) = d52bd51ae234ffd0796b0d3c2453e5e5931c9b63
@@ -41,7 +41,7 @@ SHA1 (patch-tools_libs_foreignmemory_netbsd.c) = d744017cd730ff4c3cea7d1c327d371
 SHA1 (patch-tools_libxl_libxl_dom.c) = 4aa62de9adbc1eb659ba22d03e3fed42619e5a21
 SHA1 (patch-tools_libxl_libxl_event.c) = 9446c88d01b419cc7531b6f6d959816410e74024
 SHA1 (patch-tools_libxl_libxl_internal.h) = abcfaec70521b3ada6b4eae743119c24f141ea8f
-SHA1 (patch-tools_ocaml_common.make) = 305994b93fe29fb42e4aa57e19a039abef4e76fe
+SHA1 (patch-tools_ocaml_common.make) = 87172fa5b9805f89b4ecdeceafc31539bb7f8b6f
 SHA1 (patch-tools_ocaml_xenstored_Makefile) = b267702cf4090c7b45bba530e60327fced24e3e5
 SHA1 (patch-tools_ocaml_xenstored_utils.ml) = 4933684e759609e728c1764ca14766128b2a7730
 SHA1 (patch-tools_pygrub_Makefile) = ed9e471c70047bb1b8bfe0265b8cfecbc293937b
