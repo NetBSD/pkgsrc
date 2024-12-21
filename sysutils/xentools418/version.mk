@@ -1,14 +1,14 @@
-# $NetBSD: version.mk,v 1.3 2024/09/10 12:40:14 bouyer Exp $
+# $NetBSD: version.mk,v 1.4 2024/12/21 16:01:48 bouyer Exp $
 #
 # Version number is used by xenkernel418, xentools418 and xenstoretools
 
-VERSION=		20240909
-XEN_COMMIT=		bd51e573a730efc569646379cd59ccba967cde97
-XEN_SHORTCOMMIT=	bd51e57
+VERSION=		20241221
+XEN_COMMIT=		e77ff547385861c72108aa380ab279e35d0f4735
+XEN_SHORTCOMMIT=	e77ff54
 
 DIST_SUBDIR=		xen418
-DISTNAME=		xen-${XEN_SHORTCOMMIT}
-MASTER_SITES=		-https://xenbits.xen.org/gitweb/?p=xen.git;a=snapshot;h=${XEN_COMMIT};sf=tgz
+DISTNAME=		xen-${XEN_COMMIT}
+MASTER_SITES=		-${MASTER_SITE_GITHUB:=xen-project/}xen/archive/${XEN_COMMIT}.tar.gz
 DISTFILES=		${DISTNAME}.tar.gz
 
 .if !defined(XENKERNEL)
