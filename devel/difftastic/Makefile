@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/10/24 12:11:11 pin Exp $
+# $NetBSD: Makefile,v 1.38 2024/12/21 16:30:53 pin Exp $
 
-DISTNAME=	difftastic-0.61.0
+DISTNAME=	difftastic-0.62.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Wilfred/}
 
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.66.0
+RUST_REQ=	1.74.1
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES+=	c c++17
