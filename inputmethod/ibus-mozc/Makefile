@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2024/11/14 22:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2024/12/21 01:16:03 tsutsui Exp $
 
 PKGNAME=	ibus-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 
 INSTALLATION_DIRS+=	libexec share/ibus share/ibus/component \
 			share/ibus-mozc
@@ -18,6 +18,8 @@ do-build:
 			--client_debug \
 			build \
 			unix/ibus:ibus_mozc unix/icons \
+			--distdir=${WRKSRC}/dist \
+			--jobs=${MAKE_JOBS:U1} \
 			--host_action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--action_env=CWRAPPERS_CONFIG_DIR=${CWRAPPERS_CONFIG_DIR} \
 			--host_action_env=PATH=${PATH} \
