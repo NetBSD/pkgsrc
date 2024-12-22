@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/12/03 12:10:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.75 2024/12/22 12:54:39 nia Exp $
 
 DISTNAME=	orca-46.2
 PKGREVISION=	1
@@ -27,6 +27,9 @@ MESON_ARGS+=	--sysconfdir=share/examples
 
 CONF_FILES+=	share/examples/xdg/autostart/orca-autostart.desktop \
 		${PKG_SYSCONFDIR}/xdg/autostart/orca.desktop
+
+# depends on deprecated imp module, removed in 3.12
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/schemas.mk"
