@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2023/10/24 22:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2024/12/22 21:39:12 nia Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGREVISION=		22
@@ -16,6 +16,8 @@ WRKSRC=			${WRKDIR}/vnc_unixsrc
 USE_IMAKE=		yes
 USE_TOOLS+=		perl:run
 MAKE_JOBS_SAFE=		no
+
+FORCE_C_STD=		gnu89
 
 BUILD_TARGET=		World
 
