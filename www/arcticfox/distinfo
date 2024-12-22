@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2024/10/03 20:57:34 nia Exp $
+$NetBSD: distinfo,v 1.18 2024/12/22 21:31:44 nia Exp $
 
 BLAKE2s (arcticfox-45.1.tar.gz) = 23e423d2903208f1abe04d13fa62f4d71d3588ad178327663908c4f2f9cce127
 SHA512 (arcticfox-45.1.tar.gz) = 0b24bc8cf201a78517c7934c119b1e21d511068e8ea06c8b7f5ce65e5867e9f091cc0c8c65b0f8c78e8637d27dd3d505126d355c8ca5693f1b0417020b838800
@@ -12,6 +12,8 @@ SHA1 (patch-media_libcubeb_src_cubeb.c) = b3c4bd8146e2f7146baf1c2050260f7629cdb0
 SHA1 (patch-media_libcubeb_src_moz.build) = e98b39b6272b58d4183c526f36987ea239fadd5d
 SHA1 (patch-media_libtheora_moz.build) = 363ce4e49fdac54b7fd3c3e454edae635e3ccfcb
 SHA1 (patch-media_libyuv_source_scale__argb.cc) = 2522d5a448c521acbb28ea027142c6ebc0e568eb
+SHA1 (patch-nsprpub_pr_include_md___netbsd.cfg) = cf3afcd707440055d945363839fa38b7ec72d561
+SHA1 (patch-nsprpub_pr_include_md___netbsd.h) = 0d9129445fae852d3a9d5015a5634f3a9eb232e7
 SHA1 (patch-old-configure.in) = 6cfeb1cc72cb23122bd83e91a64d0c9b5a410324
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = eef34a9539f5ef2666bb26b175e3787ce4e50677
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 0ce774c5dc9f53a858d4b9f490ec25d548b4bb96
