@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/04/06 08:05:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/22 12:16:45 nia Exp $
 
 DISTNAME=	FBNeo-1.0.0.2
 PKGNAME=	${DISTNAME:tl}
@@ -17,6 +17,8 @@ USE_TOOLS+=	gmake perl
 MAKE_FILE=	makefile
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+
+FORCE_CXX_STD+=	gnu++98
 
 BUILD_TARGET=	sdl2
 
