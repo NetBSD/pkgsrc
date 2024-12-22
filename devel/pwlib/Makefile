@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2023/10/24 22:08:56 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2024/12/22 12:57:17 nia Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -15,6 +15,9 @@ COMMENT=	Portable Windows Library
 # Very fundamentally 32-bit only; fixing it would require a complete
 # incompatible rework. That rework is (or is subsumed by) "ptlib".
 NOT_FOR_PLATFORM+=	${LP64PLATFORMS}
+
+# Depends on deprecated std::auto_ptr, etc
+FORCE_CXX_STD+=		gnu++03
 
 PKG_DESTDIR_SUPPORT=	destdir
 
