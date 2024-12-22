@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2022/05/14 22:25:32 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2024/12/22 12:40:26 gdt Exp $
 
 DISTNAME=	epg-0.0.16
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/epg/EasyPG/}
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	security mail
 MASTER_SITES=	${MASTER_SITE_OSDN:=epg/29289/}
 
-MAINTAINER=	gdt@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.easypg.org/
 COMMENT=	GnuPG interface for emacs
 
