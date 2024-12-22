@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2024/11/14 22:19:43 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2024/12/22 13:31:54 nia Exp $
 
 PKGREVISION= 29
 .include "version.mk"
@@ -60,12 +60,16 @@ CONFIGURE_ARGS+=	--enable-dylib
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "earmv6hf"
-CFLAGS+=		-march=armv6 -marm
+CFLAGS+=		-mfpu=vfp -march=armv6 -marm
+# workaround for netbsd-10 toolchain issues
+CFLAGS+=		-fno-use-linker-plugin
 CONFIGURE_ARGS+=	--enable-floathard
 .endif
 
 .if ${MACHINE_ARCH} == "earmv7hf"
-CFLAGS+=		-march=armv7-a -marm
+CFLAGS+=		-mfpu=neon -march=armv7-a -marm
+# workaround for netbsd-10 toolchain issues
+CFLAGS+=		-fno-use-linker-plugin
 CONFIGURE_ARGS+=	--enable-floathard
 .endif
 
