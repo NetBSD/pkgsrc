@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2024/04/26 09:04:31 nia Exp $
+# $NetBSD: Makefile.common,v 1.2 2024/12/22 13:31:54 nia Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -6,7 +6,7 @@ NOT_FOR_PLATFORM=	${BIGENDIANPLATFORMS}
 
 .if ${MACHINE_ARCH} == "earmv7hf"
 # Avoid mixing in Thumb code with Picodrive's ARM asm.
-CFLAGS+=	-marm
+CFLAGS+=	-marm -mfpu=vfp -march=armv6 -fno-use-linker-plugin
 MAKE_FLAGS+=	ARCH=arm
 MAKE_FLAGS+=	ARM_ASM=1
 MAKE_FLAGS+=	use_cyclone=0
@@ -16,7 +16,7 @@ MAKE_FLAGS+=	use_cz80=1
 MAKE_FLAGS+=	use_sh2drc=1
 MAKE_FLAGS+=	use_svpdrc=1
 .elif ${MACHINE_ARCH} == "earmv6hf"
-CFLAGS+=	-marm
+CFLAGS+=	-marm -mfpu=neon -march=armv7-a -fno-use-linker-plugin
 MAKE_FLAGS+=	ARCH=arm
 MAKE_FLAGS+=	ARM_ASM=1
 MAKE_FLAGS+=	asm_memory=1
