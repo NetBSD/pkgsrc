@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/12/14 20:47:52 triaxx Exp $
+# $NetBSD: Makefile,v 1.69 2024/12/23 23:22:04 mef Exp $
 
 PKGNAME=	openrct2-0.4.17
 CATEGORIES=	games
@@ -50,6 +50,16 @@ WRKSRC=		${WRKDIR}/OpenRCT2-${PKGVERSION_NOREV}
 USE_TOOLS+=	gmake pkg-config unzip
 USE_LANGUAGES=	c c++
 
+#    upstream
+#    https://github.com/OpenRCT2/OpenRCT2/wiki/Building-OpenRCT2-on-Linux
+#    Says GCC>=12. or clang >=8.0. (C++20 support required)
+GCC_REQD+=	12
+#    But this line should be removed after 2024 Q4 branch
+#    And below is the right thing (if gcc.mk works correctly)
+USE_CXX_FEATURES+=	c++20
+#    See the thread:
+#    https://mail-index.netbsd.org/pkgsrc-users/2024/12/20/msg040707.html
+
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_CXX_COMPILER_AR="/usr/bin/ar"
 CMAKE_CONFIGURE_ARGS+=	-DDISABLE_DISCORD_RPC=ON
@@ -64,7 +74,6 @@ CMAKE_CONFIGURE_ARGS+=	-DDOWNLOAD_OPENMSX=OFF
 
 CXXFLAGS+=	-DORCT2_RESOURCE_DIR=\"${PREFIX}/share/openrct2\"
 
-USE_CXX_FEATURES=	c++20
 
 CHECK_WRKREF_SKIP+=	share/*
 
