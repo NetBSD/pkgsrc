@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2024/11/10 09:14:10 adam Exp $
+# $NetBSD: Makefile,v 1.52 2024/12/24 15:43:03 adam Exp $
 
-DISTNAME=	c-ares-1.34.3
+DISTNAME=	c-ares-1.34.4
 PKGNAME=	${DISTNAME:S/c-/libc/1}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=c-ares/}
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	c-ares
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://c-ares.haxx.se/
+HOMEPAGE=	https://c-ares.org/
 COMMENT=	Asynchronous resolver library, c-ares
 LICENSE=	mit
 
