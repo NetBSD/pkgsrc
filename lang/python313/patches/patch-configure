@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.2 2024/12/05 07:54:03 adam Exp $
+$NetBSD: patch-configure,v 1.3 2024/12/24 10:47:51 wiz Exp $
 
-Fix linking on Darwin; don't use -stack_size.
-Changes for consistency across pkgsrc platforms.
-Simplify _sysconfigdata to include only platform name.
-Disable barrier to cross-compilation.
+Chunks 1, 4, 5: Changes for consistency across pkgsrc platforms.
+Chunk 1: Simplify _sysconfigdata to include only platform name.
+Chunk 2: Disable barrier to cross-compilation.
+Chunk 3: should probably be handled in the Makefile instead
 
 --- configure.orig	2024-12-03 17:59:52.000000000 +0000
 +++ configure
@@ -34,19 +34,6 @@ Disable barrier to cross-compilation.
  
  
  
-@@ -23719,10 +23719,10 @@ if ac_fn_c_try_link "$LINENO"
- then :
- 
- 
--if grep noonsees conftest$EXEEXT >/dev/null ; then
-+if strings -a conftest.$ac_objext | grep noonsees >/dev/null ; then
-   ax_cv_c_float_words_bigendian=yes
- fi
--if grep seesnoon conftest$EXEEXT >/dev/null ; then
-+if strings -a conftest.$ac_objext | grep seesnoon >/dev/null ; then
-   if test "$ax_cv_c_float_words_bigendian" = unknown; then
-     ax_cv_c_float_words_bigendian=no
-   else
 @@ -24579,7 +24579,7 @@ printf "%s\n" "#define ALT_SOABI \"${ALT
  fi
  

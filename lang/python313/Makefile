@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/12/06 06:19:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/24 10:47:51 wiz Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 .include "dist.mk"
 
 PKGNAME=	python313-${PY_DISTVERSION}
@@ -47,13 +47,6 @@ CONFIGURE_ENV+=		py_cv_module__gdbm="n/a"
 # example module
 CONFIGURE_ENV+=		py_cv_module_xxlimited="n/a"
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in Misc/python-embed.pc.in
-
-# libpanelw seems to be a Linux thing?
-SUBST_CLASSES+=		panel
-SUBST_MESSAGE.panel=	Replacing panelw with panel.
-SUBST_STAGE.panel=	pre-configure
-SUBST_FILES.panel+=	configure
-SUBST_SED.panel+=	-e "s,panelw,panel,"
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
@@ -147,7 +140,6 @@ REPLACE.python.old=	.*python[^ ]*
 REPLACE.python.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.python+=	Lib/base64.py
 REPLACE_FILES.python+=	Lib/cProfile.py
-REPLACE_FILES.python+=	Lib/cgi.py
 REPLACE_FILES.python+=	Lib/encodings/rot_13.py
 REPLACE_FILES.python+=	Lib/idlelib/pyshell.py
 REPLACE_FILES.python+=	Lib/pdb.py
@@ -180,7 +172,6 @@ REPLACE_FILES.python+=	Lib/turtledemo/planet_and_moon.py
 REPLACE_FILES.python+=	Lib/turtledemo/sorting_animate.py
 REPLACE_FILES.python+=	Lib/turtledemo/tree.py
 REPLACE_FILES.python+=	Lib/turtledemo/yinyang.py
-REPLACE_FILES.python+=	Lib/uu.py
 REPLACE_FILES.python+=	Lib/webbrowser.py
 
 # XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
@@ -209,18 +200,6 @@ CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/_sysconfigdata*
 CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/__pycache__/_sysconfigdata*
 CHECK_WRKREF_SKIP+=	lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Makefile
 
-# Avoid error: Cannot generate ./Include/opcode.h, python not found !
-post-configure:
-	touch ${WRKSRC}/Include/opcode.h
-
-.if ${OPSYS} == "HPUX"
-post-install: hpux-postinstall
-.PHONY: hpux-postinstall
-hpux-postinstall:
-	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.13.sl \
-		${DESTDIR}${PREFIX}/lib/libpython3.13.sl.1.0
-.endif
-
 INSTALLATION_DIRS+=	lib/python${PY_VER_SUFFIX}/site-packages
 
 pre-install: setuptools-preinstall
@@ -228,6 +207,9 @@ pre-install: setuptools-preinstall
 setuptools-preinstall:
 	${INSTALL_DATA} ${.CURDIR}/../../devel/py-setuptools/files/_distutils_system_mod \
 		${DESTDIR}${PREFIX}/lib/python${PY_VER_SUFFIX}/site-packages/_distutils_system_mod.py
+
+# for testing
+ALLOW_NETWORK_ACCESS=	yes
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/gdbm_compat/buildlink3.mk"
@@ -242,6 +224,7 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+#.include "../../wip/mpdecimal/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bdb.buildlink3.mk"
