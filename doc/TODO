@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25208 2024/12/24 15:46:56 adam Exp $
+$NetBSD: TODO,v 1.25209 2024/12/24 16:08:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
-	o meson-1.6.1
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -1135,8 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-OTXv2-1.5.2
 	o py-aiohttp-3.11.11
 	o py-aiosignal-1.3.2
-	o py-astroid-3.3.7
-	o py-attrs-24.3.0
 	o py-cassa-1.11.0
 	o py-certifi-2024.12.14
 	o py-click-8.1.8
