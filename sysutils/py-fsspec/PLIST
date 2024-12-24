@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/06/06 05:03:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/24 17:53:54 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -54,6 +54,9 @@ ${PYSITELIB}/fsspec/implementations/__init__.pyo
 ${PYSITELIB}/fsspec/implementations/arrow.py
 ${PYSITELIB}/fsspec/implementations/arrow.pyc
 ${PYSITELIB}/fsspec/implementations/arrow.pyo
+${PYSITELIB}/fsspec/implementations/asyn_wrapper.py
+${PYSITELIB}/fsspec/implementations/asyn_wrapper.pyc
+${PYSITELIB}/fsspec/implementations/asyn_wrapper.pyo
 ${PYSITELIB}/fsspec/implementations/cache_mapper.py
 ${PYSITELIB}/fsspec/implementations/cache_mapper.pyc
 ${PYSITELIB}/fsspec/implementations/cache_mapper.pyo
@@ -147,6 +150,12 @@ ${PYSITELIB}/fsspec/tests/abstract/get.pyo
 ${PYSITELIB}/fsspec/tests/abstract/mv.py
 ${PYSITELIB}/fsspec/tests/abstract/mv.pyc
 ${PYSITELIB}/fsspec/tests/abstract/mv.pyo
+${PYSITELIB}/fsspec/tests/abstract/open.py
+${PYSITELIB}/fsspec/tests/abstract/open.pyc
+${PYSITELIB}/fsspec/tests/abstract/open.pyo
+${PYSITELIB}/fsspec/tests/abstract/pipe.py
+${PYSITELIB}/fsspec/tests/abstract/pipe.pyc
+${PYSITELIB}/fsspec/tests/abstract/pipe.pyo
 ${PYSITELIB}/fsspec/tests/abstract/put.py
 ${PYSITELIB}/fsspec/tests/abstract/put.pyc
 ${PYSITELIB}/fsspec/tests/abstract/put.pyo
