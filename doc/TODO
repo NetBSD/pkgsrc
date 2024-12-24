@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25207 2024/12/24 15:36:07 adam Exp $
+$NetBSD: TODO,v 1.25208 2024/12/24 15:46:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -856,7 +856,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
-	o libcares-1.34.4
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
@@ -869,7 +868,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
-	o libjpeg-turbo-3.1.0
 	o libkactivities4-5.81.0
 	o liblzo-2.10
 	o libmcs-0.7.2
