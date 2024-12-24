@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/12/24 10:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/24 14:22:51 wiz Exp $
 
 PKGREVISION=	2
 .include "dist.mk"
@@ -224,7 +224,7 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-#.include "../../wip/mpdecimal/buildlink3.mk"
+#.include "../../math/mpdecimal/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bdb.buildlink3.mk"
