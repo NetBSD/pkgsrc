@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/24 10:51:18 wiz Exp $
 
-DISTNAME=	nihtest-1.8.0
+DISTNAME=	nihtest-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nihtest/}
@@ -26,11 +26,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/manpages/${man}.mdoc ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/${man}-${PYVERSSUFFIX}.5
 .endfor
 
-# as of 1.5.1
-# 91% tests passed, 5 tests failed out of 54
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/tests
 do-test:
 	${MKDIR} ${WRKSRC}/build
-	cd ${WRKSRC}/build && cmake .. && ${MAKE} && ctest
+	cd ${WRKSRC}/build && cmake .. && ${MAKE} && ${SETENV} ${TEST_ENV} ctest
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,14 @@
+$NetBSD: patch-tests_nihtest-conf.in,v 1.1 2024/12/24 10:51:18 wiz Exp $
+
+Needed for running tests in pkgsrc framework.
+
+--- tests/nihtest-conf.in.orig	2024-12-17 15:26:09.980148365 +0000
++++ tests/nihtest-conf.in
+@@ -6,6 +6,7 @@ program-directories = @PROJECT_BINARY_DI
+ test-input-directories = input
+     @CMAKE_CURRENT_SOURCE_DIR@
+ default-stderr-replace = "^default: " ""
++environment-passthrough = LD_LIBRARY_PATH
+ 
+ [environment]
+ TEST_ENV_CONFIG = This is another successful test.
