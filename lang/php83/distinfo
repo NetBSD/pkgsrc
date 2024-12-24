@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2024/11/25 14:36:20 taca Exp $
+$NetBSD: distinfo,v 1.16 2024/12/24 14:35:10 taca Exp $
 
-BLAKE2s (php-8.3.14.tar.xz) = 1ff4d97ae5d0fa3a1019cb986df86a92833c2fe4a46307b1759fb4695cb33c4a
-SHA512 (php-8.3.14.tar.xz) = 48a995a5095626dc1b8bb40641e86f01e6806ce10a8c159a402f3b081f8464429ef2d33c3a288cb0f7c643c9236601220dfc604d36b3c2a572cd9f30e5359752
-Size (php-8.3.14.tar.xz) = 12519488 bytes
+BLAKE2s (php-8.3.15.tar.xz) = a94ce86342e2a59006d8c3cfb38520c84febabc3d9d36521f167fda7d28c4d62
+SHA512 (php-8.3.15.tar.xz) = 43057cca0a6c2187f7991dfbf9743495784f0fa4d0336f08392036ecc2b6f83c7155737ebef3af6144a79eca557bf84cba4aedd34e0d19c701249ca4e8fa86d0
+Size (php-8.3.15.tar.xz) = 12525028 bytes
 SHA1 (patch-TSRM_TSRM.c) = 278007810b74fa7a9cd971dac051d6a2ea0ad90d
 SHA1 (patch-TSRM_TSRM.h) = 70ebc03a611124d76d6813f619ff18b3a8fbf1e8
 SHA1 (patch-build_php.m4) = c85864ae22556c0a5f14b323d2cf031523625e9b
