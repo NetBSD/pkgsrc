@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2024/12/24 10:52:58 wiz Exp $
+
+BLAKE2s (mpdecimal-4.0.0.tar.gz) = 02a10248bfe5df47a25edde34604c7b26c8e51429e57992cd0e459c605591d6b
+SHA512 (mpdecimal-4.0.0.tar.gz) = 7610ac53ac79f7a8a33fa7a3e61515810444ec73ebca859df7a9ddc18e96b990c99323172810c9cc7f6d6e1502c0be308cd443d6c2d5d0c871648e4842e05d59
+Size (mpdecimal-4.0.0.tar.gz) = 315325 bytes
+SHA1 (patch-configure) = 202dca254c5e015d8364f29584d45e1c06440c92

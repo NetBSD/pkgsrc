@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2024/12/24 10:52:58 wiz Exp $
+include/decimal.hh
+include/mpdecimal.h
+lib/libmpdec++.a
+lib/libmpdec++.so
+lib/libmpdec++.so.4
+lib/libmpdec++.so.${PKGVERSION}
+lib/libmpdec.a
+lib/libmpdec.so
+lib/libmpdec.so.4
+lib/libmpdec.so.${PKGVERSION}
+lib/pkgconfig/libmpdec++.pc
+lib/pkgconfig/libmpdec.pc
+man/man3/libmpdec++.3
+man/man3/libmpdec.3
+man/man3/mpdecimal.3
+share/doc/mpdecimal/COPYRIGHT.txt

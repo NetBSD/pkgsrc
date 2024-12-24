@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2024/12/24 10:52:58 wiz Exp $
+
+Fix dynamic library install name on Darwin.
+
+--- configure.orig	2024-12-22 07:39:18.885702870 +0000
++++ configure
+@@ -2843,7 +2843,7 @@ case $host in
+     LIBNAME="libmpdec.dylib"
+     LIBSONAME="libmpdec.4.dylib"
+     LIBSHARED="libmpdec.4.0.0.dylib"
+-    CONFIGURE_LDFLAGS="-dynamiclib $FPIC -install_name @rpath/$LIBSONAME -compatibility_version 4.0 -current_version 4.0.0"
++    CONFIGURE_LDFLAGS="-dynamiclib $FPIC -install_name ${PREFIX}/lib/$LIBSONAME -compatibility_version 4.0 -current_version 4.0.0"
+     ;;
+   *-*-aix*)
+     LIBNAME=
+@@ -2887,7 +2887,7 @@ case $host in
+     LIBNAME_CXX="libmpdec++.dylib"
+     LIBSONAME_CXX="libmpdec++.4.dylib"
+     LIBSHARED_CXX="libmpdec++.4.0.0.dylib"
+-    CONFIGURE_LDXXFLAGS="-dynamiclib $FPIC -install_name @rpath/$LIBSONAME_CXX -compatibility_version 4.0 -current_version 4.0.0"
++    CONFIGURE_LDXXFLAGS="-dynamiclib $FPIC -install_name ${PREFIX}/lib/$LIBSONAME_CXX -compatibility_version 4.0 -current_version 4.0.0"
+     ;;
+   *-*-aix*)
+     LIBNAME_CXX=
