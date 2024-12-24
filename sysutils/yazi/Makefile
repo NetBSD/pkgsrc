@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2024/12/11 09:54:31 pin Exp $
+# $NetBSD: Makefile,v 1.18 2024/12/24 18:31:57 pin Exp $
 
-DISTNAME=	yazi-0.4.1
+DISTNAME=	yazi-0.4.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,9 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.81.0
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.81.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
