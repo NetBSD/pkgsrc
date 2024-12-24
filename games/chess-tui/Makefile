@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/11/28 08:41:26 pin Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/24 18:27:10 pin Exp $
 
-DISTNAME=	chess-tui-1.5.0
+DISTNAME=	chess-tui-1.6.0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=thomas-mauran/}
 
