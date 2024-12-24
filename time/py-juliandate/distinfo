@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/07/12 06:19:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/12/24 22:12:17 adam Exp $
 
-BLAKE2s (juliandate-1.0.4.tar.gz) = 24683d43882cfbeaee4d57c9ff0631c3db2bebe6f32b0084227f532a2c59127a
-SHA512 (juliandate-1.0.4.tar.gz) = 33e5d39b55c7e3643fd0cc7eb211ca7bbbcaa0fe356c5c0a43aac90adfe436e3b275099ed069ac8f1c71852cef73a05879256ac610545abf8be53d946736c3bc
-Size (juliandate-1.0.4.tar.gz) = 18306 bytes
+BLAKE2s (juliandate-1.0.5.tar.gz) = ea70300eceeff37b1dc14bcf4626e89e65a7307a43c5251170ec64cd650def4b
+SHA512 (juliandate-1.0.5.tar.gz) = a3738ee6513fd8b76ffe3a5996e174805ff6e358d9fb927579f4433dadbf9d7f3386dd293bb6ccc1d07dd108359f3ab5551cf161986944d30f3441af759c6b2d
+Size (juliandate-1.0.5.tar.gz) = 18542 bytes
