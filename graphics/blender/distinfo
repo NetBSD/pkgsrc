@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.77 2024/12/09 14:27:06 ryoon Exp $
+$NetBSD: distinfo,v 1.78 2024/12/24 14:05:17 ryoon Exp $
 
 BLAKE2s (blender-4.2.4.tar.xz) = e33731f186e25dce937c022b447d6a9c769729efdde007a49292800dd072f83b
 SHA512 (blender-4.2.4.tar.xz) = 1f61c1866aaa680c91fc6e3402b1e10533c8cce32572ffb825c53dc7c15ca51f1157a32d10134ca9e612fbf719406421ccc920b2d8ddd2993675784797381c6a
 Size (blender-4.2.4.tar.xz) = 72804204 bytes
 SHA1 (patch-CMakeLists.txt) = 722c852b2c7f804a0fec93cec4e4c8f54d286204
+SHA1 (patch-build__files_cmake_Modules_FindOpenColorIO.cmake) = 142b0860abeae94deda0dfdcc985e4b4696cf93a
 SHA1 (patch-source_blender_blenkernel_intern_CCGSubSurf__legacy.cc) = 850ba755646ff07b050e0a98c9e4603a97acffc9
 SHA1 (patch-source_blender_blenkernel_intern_customdata.cc) = 32659bbe9de8ac0388664b721f4df89d58af6e92
 SHA1 (patch-source_blender_blenkernel_intern_dynamicpaint.cc) = 67c567322009668479b53475ac63ea9cfeb06185
