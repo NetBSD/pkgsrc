@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/12/14 21:10:14 pin Exp $
+# $NetBSD: Makefile,v 1.13 2024/12/24 18:30:03 pin Exp $
 
-DISTNAME=	lla-0.3.3
+DISTNAME=	lla-0.3.7
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lla/
 EXTRACT_SUFX=	.crate
@@ -22,5 +22,4 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 .include "../../lang/rust/cargo.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
