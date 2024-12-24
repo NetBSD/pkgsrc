@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2024/12/14 08:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.615 2024/12/24 10:53:11 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -300,6 +300,7 @@ SUBDIR+=	metis
 SUBDIR+=	minisat
 SUBDIR+=	minpack
 SUBDIR+=	mpcomplex
+SUBDIR+=	mpdecimal
 SUBDIR+=	mpfi
 SUBDIR+=	mpfr
 SUBDIR+=	mprime-bin
