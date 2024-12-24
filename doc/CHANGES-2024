@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7763 2024/12/24 12:02:41 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7764 2024/12/24 13:55:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11602,3 +11602,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/yt-dlp to 2024.12.23 [adam 2024-12-24]
 	Updated archivers/bkcrack to 1.7.1 [adam 2024-12-24]
 	Updated devel/libdeflate to 1.23 [adam 2024-12-24]
+	Updated devel/cmake to 3.31.3 [adam 2024-12-24]
+	Updated devel/cmake-gui to 3.31.3 [adam 2024-12-24]
