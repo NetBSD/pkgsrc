@@ -8,7 +8,10 @@ when the number of input files grows significantly.
 The replacement tools provided by mktool can be anywhere from 5 times
 up to 500 times faster than the defaults.
 
-Currently pkgsrc requires external patches to enable mktool, from
-https://github.com/TritonDataCenter/pkgsrc/tree/dev/mktool, though it
-is hoped that these will be committed to pkgsrc at some point in the
-future.
+To enable, install this package or 'cargo install mktool', and then
+add the following lines to your mk.conf:
+
+	TOOLS_PLATFORM.mktool=	/path/to/mktool
+	FETCH_USING=		mktool
+
+pkgsrc will then use mktool for all targets where it is supported.
