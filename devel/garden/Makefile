@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2024/11/08 09:01:39 pin Exp $
+# $NetBSD: Makefile,v 1.18 2024/12/24 18:29:06 pin Exp $
 
-DISTNAME=	garden-1.9.1
+DISTNAME=	garden-1.10.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v1.9.1/}
+MASTER_SITES=	${MASTER_SITE_GITLAB:=garden-rs/garden/-/archive/v1.10.0/}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://garden-rs.gitlab.io/
@@ -11,11 +11,11 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.82.0
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.82.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 
-WRKSRC=		${WRKDIR}/garden-v1.9.1-59ab73065cc7df69fc063f4d50aa7160ebdeeb41
+WRKSRC=		${WRKDIR}/garden-v1.10.0-341784ebe8215f51b141472317ffc6bf4c85573b
 
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
