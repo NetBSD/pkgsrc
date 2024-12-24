@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.303 2024/09/17 11:31:52 nia Exp $
+# $NetBSD: Makefile,v 1.304 2024/12/24 15:30:30 adam Exp $
 
 # Remember to upload-distfiles when updating OpenSSL -- otherwise it
 # is not possible for users who have bootstrapped without OpenSSL
 # to install it and enable HTTPS fetching.
-DISTNAME=	openssl-3.3.2
+DISTNAME=	openssl-3.4.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openssl/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -85,9 +85,9 @@ CONFIGURE_ENV+=		KERNEL_BITS=${ABI}
 OPENSSL_ARCH.aarch64=	arm64
 OPENSSL_ARCH.x86_64=	amd64
 CONFIGURE_ENV+=		MACHINE=${OPENSSL_ARCH.${MACHINE_ARCH}:U${MACHINE_GNU_ARCH}:Q}
-CONFIGURE_ENV+=		RELEASE=${OS_VERSION:Q}
-CONFIGURE_ENV+=		SYSTEM=${OPSYS:Q}
-CONFIGURE_ENV+=		BUILD=${OPSYS:Q}\ ${OS_VERSION:Q}
+CONFIGURE_ENV+=		RELEASE=${OS_VERSION}
+CONFIGURE_ENV+=		SYSTEM=${OPSYS}
+CONFIGURE_ENV+=		BUILD=${OPSYS}\ ${OS_VERSION}
 
 # We don't carry a runtime dependency on Perl, but OpenSSL does provide
 # a Perl script that you can use if you do install Perl.
@@ -97,7 +97,7 @@ SUBST_STAGE.perlcross=		pre-install
 SUBST_FILES.perlcross+=		tools/c_rehash
 SUBST_FILES.perlcross+=		apps/CA.pl
 SUBST_FILES.perlcross+=		apps/tsget.pl
-SUBST_SED.perlcross=		-e s,${PERL5:Q},${LOCALBASE:Q}/bin/perl5,g
+SUBST_SED.perlcross=		-e s,${PERL5:Q},${LOCALBASE}/bin/perl5,g
 CHECK_INTERPRETER_SKIP+=	bin/c_rehash
 
 .endif                         # USE_CROSS_COMPILE
