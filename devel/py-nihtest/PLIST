@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/10 09:31:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/24 10:51:18 wiz Exp $
 bin/nihtest-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -15,6 +15,9 @@ ${PYSITELIB}/nihtest/CompareArrays.pyo
 ${PYSITELIB}/nihtest/Configuration.py
 ${PYSITELIB}/nihtest/Configuration.pyc
 ${PYSITELIB}/nihtest/Configuration.pyo
+${PYSITELIB}/nihtest/Directory.py
+${PYSITELIB}/nihtest/Directory.pyc
+${PYSITELIB}/nihtest/Directory.pyo
 ${PYSITELIB}/nihtest/Environment.py
 ${PYSITELIB}/nihtest/Environment.pyc
 ${PYSITELIB}/nihtest/Environment.pyo

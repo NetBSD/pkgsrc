@@ -1,0 +1,11 @@
+$NetBSD: patch-tests_nihtest.conf.in,v 1.1 2024/12/24 10:51:18 wiz Exp $
+
+Needed for running tests in pkgsrc framework.
+
+--- tests/nihtest.conf.in.orig	2024-12-17 14:43:32.000000000 +0000
++++ tests/nihtest.conf.in
+@@ -6,3 +6,4 @@ program-directories = @PROJECT_BINARY_DI
+     @PROJECT_BINARY_DIR@/Debug
+     @VENV_BIN_DIR@
+ default-stderr-replace = "^([A-Za-z]:)?[^: ]*: " ""
++environment-passthrough = LD_LIBRARY_PATH
