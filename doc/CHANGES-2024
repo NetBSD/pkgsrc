@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7770 2024/12/24 16:08:34 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7771 2024/12/24 17:55:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11617,3 +11617,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/meson to 1.6.1 [adam 2024-12-24]
 	Updated devel/py-attrs to 24.3.0 [adam 2024-12-24]
 	Updated devel/py-astroid to 3.3.8 [adam 2024-12-24]
+	Updated devel/py-types-setuptools to 75.6.0.20241223 [adam 2024-12-24]
+	Updated textproc/py-types-yaml to 6.0.12.20241221 [adam 2024-12-24]
+	Updated sysutils/py-fsspec to 2024.12.0 [adam 2024-12-24]
+	Updated sysutils/py-psutil to 6.1.1 [adam 2024-12-24]
