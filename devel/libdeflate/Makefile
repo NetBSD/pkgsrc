@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/10/08 15:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2024/12/24 12:02:23 adam Exp $
 
-DISTNAME=	libdeflate-1.22
+DISTNAME=	libdeflate-1.23
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ebiggers/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/10/08 15:36:45 wiz Exp $
+$NetBSD: distinfo,v 1.7 2024/12/24 12:02:23 adam Exp $
 
-BLAKE2s (libdeflate-1.22.tar.gz) = 9ba11ab1596ae059c977e8f2246185a12dfe0a6f0b69821cb9e500cf393aea8c
-SHA512 (libdeflate-1.22.tar.gz) = ca3ec7eb3e44da13164f33e56c856dbffc4ccc7b86d995afca6a23fa3f201b766d08a047871407e14a7964dd3da843be23c316e51d981cdd98f25166092de3a9
-Size (libdeflate-1.22.tar.gz) = 197720 bytes
+BLAKE2s (libdeflate-1.23.tar.gz) = f53147d8c885964b3b84f5f2c96a5def883b680ea2bedb415786f4465204f3cc
+SHA512 (libdeflate-1.23.tar.gz) = c1effb9c5ee8d65bc12ae3d0669a4a394acace13cc146300ed24a7f12a0ec058f66729e1ffbae268711bdcc4151143752ab2d56a099dd6394b2735e8e2f1b671
+Size (libdeflate-1.23.tar.gz) = 197519 bytes
