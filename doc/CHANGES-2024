@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7773 2024/12/24 18:28:27 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7774 2024/12/24 18:29:25 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11623,3 +11623,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-psutil to 6.1.1 [adam 2024-12-24]
 	Updated games/chess-tui to 1.6.0 [pin 2024-12-24]
 	Updated sysutils/dusage to 0.4.0 [pin 2024-12-24]
+	Updated devel/garden to 1.10.0 [pin 2024-12-24]
