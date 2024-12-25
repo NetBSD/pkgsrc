@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/04/03 21:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2024/12/25 08:25:35 wiz Exp $
 
 DISTNAME=	libpciaccess-0.18.1
 CATEGORIES=	sysutils x11
@@ -17,6 +17,9 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pciaccess.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
+
+# ../src/common_init.c:73:3: error: "Unsupported OS"
+NOT_FOR_PLATFORM+=	Darwin-*-*
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/zlib/buildlink3.mk"
