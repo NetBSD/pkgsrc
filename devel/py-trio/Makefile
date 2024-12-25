@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:28 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/25 21:57:13 adam Exp $
 
-DISTNAME=	trio-0.27.0
+DISTNAME=	trio-0.28.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trio/}
@@ -21,6 +21,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-async_generator-[0-9]*:../../devel/py-async_genera
 TEST_DEPENDS+=	${PYPKGPREFIX}-black-[0-9]*:../../textproc/py-black
 TEST_DEPENDS+=	${PYPKGPREFIX}-jedi-[0-9]*:../../editors/py-jedi
 TEST_DEPENDS+=	${PYPKGPREFIX}-pylint-[0-9]*:../../devel/py-pylint
+# circular dependency
 #TEST_DEPENDS+=	${PYPKGPREFIX}-test-trio-[0-9]*:../../devel/py-test-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
 
