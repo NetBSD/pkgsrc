@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/06/02 02:10:36 wen Exp $
+$NetBSD: distinfo,v 1.20 2024/12/25 01:40:15 wen Exp $
 
-BLAKE2s (Test-MockModule-v0.178.0.tar.gz) = c439aa78f56789db891d0080040d60bd24305ea79a7a8ff124d710f3ae261d2a
-SHA512 (Test-MockModule-v0.178.0.tar.gz) = 5f3169819475d251cc266fe018d98b8a744d9a030fab40f72334ee17f561f4602d4ca9759a70438cb897195e4757df0103cce30e7241191b13fbba57b6c03700
-Size (Test-MockModule-v0.178.0.tar.gz) = 24111 bytes
+BLAKE2s (Test-MockModule-v0.179.0.tar.gz) = 697ffcdd0d48ef7e8892cbd4129cd0978ea4f39043248e8d0ad4358d02982ec6
+SHA512 (Test-MockModule-v0.179.0.tar.gz) = e2b7a6ca8b5efcd9e2cec60a11e1293aac6a3b0c4d400fc7ee82f0837bb294df099c581bf4d31eec91f93832e236bcdaf1a5250b0ba3fa28f3c38c6f6a26c39a
+Size (Test-MockModule-v0.179.0.tar.gz) = 24888 bytes
