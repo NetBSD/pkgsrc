@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2022/12/30 17:16:56 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10 2024/12/25 11:07:01 bsiegert Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
@@ -8,6 +8,7 @@ include/xfce4/xfconf-0/xfconf/xfconf.h
 lib/gio/modules/libxfconfgsettingsbackend.la
 lib/libxfconf-0.la
 lib/pkgconfig/libxfconf-0.pc
+lib/systemd/user/xfconfd.service
 lib/xfce4/xfconf/xfconfd
 share/bash-completion/completions/xfconf-query
 share/dbus-1/services/org.xfce.Xfconf.service
@@ -46,6 +47,7 @@ share/locale/en_AU/LC_MESSAGES/xfconf.mo
 share/locale/en_CA/LC_MESSAGES/xfconf.mo
 share/locale/en_GB/LC_MESSAGES/xfconf.mo
 share/locale/es/LC_MESSAGES/xfconf.mo
+share/locale/et/LC_MESSAGES/xfconf.mo
 share/locale/eu/LC_MESSAGES/xfconf.mo
 share/locale/fi/LC_MESSAGES/xfconf.mo
 share/locale/fr/LC_MESSAGES/xfconf.mo
