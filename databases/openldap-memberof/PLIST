@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/12/25 09:40:30 bouyer Exp $
+lib/openldap/memberof.la
