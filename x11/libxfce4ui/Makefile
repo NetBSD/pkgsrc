@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2024/11/17 07:16:58 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2024/12/25 11:09:04 bsiegert Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	libxfce4ui-4.18.6
+DISTNAME=	libxfce4ui-4.20.0
 CATEGORIES=	x11
 MASTER_SITES+=	https://archive.xfce.org/src/xfce/libxfce4ui/${PKGVERSION_NOREV:R}/
 
@@ -31,6 +30,7 @@ MAKE_DIRS+=	${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml \
 USE_LANGUAGES=	c99
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
