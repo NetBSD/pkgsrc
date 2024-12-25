@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/10/22 07:57:53 wen Exp $
+$NetBSD: distinfo,v 1.15 2024/12/25 01:29:27 wen Exp $
 
-BLAKE2s (CGI-Compile-0.26.tar.gz) = a12a4561b36507a59efc455ade9a32f93a2466f271f9a110c4e894c05e861881
-SHA512 (CGI-Compile-0.26.tar.gz) = d4fe9f6a0a68e231e3cb4de2d1626084d1e9c1e8df6a9025393c5623a85604374ede97d6deee520141759e438105fcfabbd24c5559b97695f5eda32cb29f9da9
-Size (CGI-Compile-0.26.tar.gz) = 23151 bytes
+BLAKE2s (CGI-Compile-0.27.tar.gz) = eed04d2e85c529f651abd577370483851af335499660f110845eb086d5c331c8
+SHA512 (CGI-Compile-0.27.tar.gz) = 812e9b6474ed08560784fbb9aa24c9d4fdd57409296b5fcb06ab8d2ffc5d81c9a6728294c44c019b445181d0ce0f2d3e668dbee459b60f6408249bcb80378ea2
+Size (CGI-Compile-0.27.tar.gz) = 23225 bytes
