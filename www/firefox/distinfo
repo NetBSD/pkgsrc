@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.547 2024/11/22 14:54:42 ryoon Exp $
+$NetBSD: distinfo,v 1.548 2024/12/25 13:30:10 ryoon Exp $
 
-BLAKE2s (firefox-132.0.2.source.tar.xz) = 9f3a645cd26edb7fb6fc830138a15752fc8819b390fe1a437555bd8b3b8f514c
-SHA512 (firefox-132.0.2.source.tar.xz) = 9ea95d9fb1a941ac5a5b50da67e224f3ccf8c401f26cb61bb74ad7f4e1e8706d469c4b6325714f2cb9cdf50c32710377d6bca18dd65b55db2c39ef2b27a57fae
-Size (firefox-132.0.2.source.tar.xz) = 570535648 bytes
+BLAKE2s (firefox-133.0.3.source.tar.xz) = 92b62c1a1fa8e7034cbefbf470e8d40fbc75a542a00ff78f07fe2a0e9ab875ac
+SHA512 (firefox-133.0.3.source.tar.xz) = ce48beaa5bb1717d9b6dbfff035b1bb5de1456df14b6a91adfaf3ccfb7ac550ab7ee854546231424a920e01d981825253609fce2ec326c4aa1ca316bbbdb31f8
+Size (firefox-133.0.3.source.tar.xz) = 580071280 bytes
 BLAKE2s (nodejs-output-132.0.tgz) = df80a8b098b4d9eb831e249054acf45b7ea5e3d9797782515819532490d83153
 SHA512 (nodejs-output-132.0.tgz) = 9af2e28ad6f02606c3b2ba8a07dbb813d80a88088092d76e474220d9db2c963f22d0d98f3e58b2a275d7ceb84ba8de55e9ae5e7f65f6bd9b61667c3237dcc3f0
 Size (nodejs-output-132.0.tgz) = 242465 bytes
@@ -30,18 +30,11 @@ SHA1 (patch-media_ffvpx_libavutil_arm_bswap.h) = de58daa0fd23d4fec50426602b65c9e
 SHA1 (patch-media_libpng_pngpriv.h) = 8320a1f7534ed5c4914b597bb3d6117d0060318f
 SHA1 (patch-modules_fdlibm_src_math__private.h) = e20b6c23011d7123cbbd64a500eb8ce8c426620e
 SHA1 (patch-netwerk_protocol_http_nsHttpHandler.cpp) = ff6df620e9da46d58350e8330e31b345dd867e99
-SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = b0d1f6a6e0eb852b0fd0238ad3f8ed3166c60a50
-SHA1 (patch-python_mozbuild_mozbuild_action_node.py) = eece38efe4ee1eb51de6cca89fa1c479ef02d60c
+SHA1 (patch-nsprpub_pr_src_pthreads_ptsynch.c) = 753fd4d62088c870aefe7c4b739286259848446e
 SHA1 (patch-python_mozbuild_mozbuild_backend_recursivemake.py) = 5be4183d9075f5a3a3c6b3e0338473af185fb50e
 SHA1 (patch-testing_mozbase_mozdevice_mozdevice_adb.py) = 14d5107ce2c945d8b8d60a8edc968443a9970291
 SHA1 (patch-testing_xpcshell_runxpcshelltests.py) = 1c42e8794da0bdd6248bd53d1450b982616aa536
 SHA1 (patch-third__party_js_cfworker_build.sh) = 46cdf97b99cf01080f290ae8d9a33b5f869fc3e4
-SHA1 (patch-third__party_libwebrtc_build_android_apk__operations.py) = a74d8c87746420f29d1be49af6a5c5e191897e3f
-SHA1 (patch-third__party_libwebrtc_build_android_gyp_util_build__utils.py) = aaf39184e25aa3f97c02dd29c4877e0f9b172063
-SHA1 (patch-third__party_libwebrtc_build_chromeos_test__runner.py) = 36f902daff9d98bcbd12c725ee49373e583f6cd5
-SHA1 (patch-third__party_libwebrtc_build_env__dump.py) = a8cdb9fc5baf15454019f9011fafa1d5967f9eda
-SHA1 (patch-third__party_libwebrtc_build_print__python__deps.py) = cbb5917cc9d82f3a0d16684dff1ecee3e83e0f56
-SHA1 (patch-third__party_libwebrtc_build_vs__toolchain.py) = 265412d8da2497c1e8893edfaf5d78abf96620df
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_desktop__capture__gn_moz.build) = d0454784eb72be49162f619579e060a0de3c480f
 SHA1 (patch-third__party_libwebrtc_modules_desktop__capture_linux_wayland_egl__dmabuf.cc) = 455be625b5de2f6f1f4b2dbb6c8cb33ca16c2583
 SHA1 (patch-third__party_libwebrtc_modules_video__capture_linux_device__info__v4l2.cc) = 4cb0e1c88dc83370024ed1aac7f75445b9f98df8
