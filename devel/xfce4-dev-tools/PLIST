@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2021/11/30 13:59:54 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/12/25 19:57:44 bsiegert Exp $
 bin/xdt-autogen
+bin/xdt-check-abi
 bin/xdt-csource
+bin/xdt-gen-visibility
 bin/xfce-build
 bin/xfce-do-release
 bin/xfce-get-release-notes
