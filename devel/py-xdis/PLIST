@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/11/12 10:53:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2024/12/25 21:59:39 adam Exp $
 bin/pydisasm-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -47,9 +47,6 @@ ${PYSITELIB}/xdis/codetype/code310.pyo
 ${PYSITELIB}/xdis/codetype/code311.py
 ${PYSITELIB}/xdis/codetype/code311.pyc
 ${PYSITELIB}/xdis/codetype/code311.pyo
-${PYSITELIB}/xdis/codetype/code313.py
-${PYSITELIB}/xdis/codetype/code313.pyc
-${PYSITELIB}/xdis/codetype/code313.pyo
 ${PYSITELIB}/xdis/codetype/code38.py
 ${PYSITELIB}/xdis/codetype/code38.pyc
 ${PYSITELIB}/xdis/codetype/code38.pyo
@@ -152,9 +149,6 @@ ${PYSITELIB}/xdis/opcodes/opcode_26.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_26pypy.py
 ${PYSITELIB}/xdis/opcodes/opcode_26pypy.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_26pypy.pyo
-${PYSITELIB}/xdis/opcodes/opcode_27-next.py
-${PYSITELIB}/xdis/opcodes/opcode_27-next.pyc
-${PYSITELIB}/xdis/opcodes/opcode_27-next.pyo
 ${PYSITELIB}/xdis/opcodes/opcode_27.py
 ${PYSITELIB}/xdis/opcodes/opcode_27.pyc
 ${PYSITELIB}/xdis/opcodes/opcode_27.pyo
