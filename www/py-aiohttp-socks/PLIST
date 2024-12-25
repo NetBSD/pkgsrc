@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/07/31 09:06:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/25 10:02:36 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,6 +13,7 @@ ${PYSITELIB}/aiohttp_socks/_deprecated.pyo
 ${PYSITELIB}/aiohttp_socks/connector.py
 ${PYSITELIB}/aiohttp_socks/connector.pyc
 ${PYSITELIB}/aiohttp_socks/connector.pyo
+${PYSITELIB}/aiohttp_socks/py.typed
 ${PYSITELIB}/aiohttp_socks/utils.py
 ${PYSITELIB}/aiohttp_socks/utils.pyc
 ${PYSITELIB}/aiohttp_socks/utils.pyo
