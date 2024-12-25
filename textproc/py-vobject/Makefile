@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2024/11/11 07:29:10 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/12/25 22:01:28 adam Exp $
 
-DISTNAME=	vobject-0.9.8
+DISTNAME=	vobject-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vobject/}
