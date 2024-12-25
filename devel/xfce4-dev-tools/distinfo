@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/01/01 20:28:08 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2024/12/25 19:57:44 bsiegert Exp $
 
-BLAKE2s (xfce4-dev-tools-4.18.0.tar.bz2) = 6cc08bb4cf06584bca16321433368de8950eec5d365863fdaa1a2353043aa421
-SHA512 (xfce4-dev-tools-4.18.0.tar.bz2) = 59f858b633d95585a74c9b9515a0994744f4355ab3813e582e10c776454ac41c86296a9fbd935d5dae88929ec09ec9c30f48629c7addb5729e6bea108d304f7c
-Size (xfce4-dev-tools-4.18.0.tar.bz2) = 349125 bytes
+BLAKE2s (xfce4-dev-tools-4.20.0.tar.bz2) = 158f264b084b6fa261f7f11b2c232ee72b0c83c1fd508f4e85836405cdb4ec94
+SHA512 (xfce4-dev-tools-4.20.0.tar.bz2) = 2ee8d0e4512c326ad404310f15081a8c6eec026634bcc2e76873cecc5b4356c3425d883c07f05e5a76a500c135d62809e6323f318ac6fc33d16023a9c5bd5441
+Size (xfce4-dev-tools-4.20.0.tar.bz2) = 380344 bytes
