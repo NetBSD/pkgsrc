@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/19 16:34:14 adam Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/25 10:05:29 adam Exp $
 
-DISTNAME=	amaranth-0.5.3
+DISTNAME=	amaranth-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/amaranth/}
