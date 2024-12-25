@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2024/12/25 09:40:30 bouyer Exp $
+
+In order to enable the use of this module, add this directive to slapd.conf:
+
+  moduleload      memberof.la
+===========================================================================
