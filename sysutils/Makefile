@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1137 2024/10/06 10:44:25 fox Exp $
+# $NetBSD: Makefile,v 1.1138 2024/12/25 21:12:38 pin Exp $
 #
 
 COMMENT=	System utilities
@@ -254,6 +254,7 @@ SUBDIR+=	gam
 SUBDIR+=	gamin
 SUBDIR+=	gcombust
 SUBDIR+=	gdmap
+SUBDIR+=	gemfetch
 SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
 SUBDIR+=	geteltorito
