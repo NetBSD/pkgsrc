@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7782 2024/12/25 01:32:58 wen Exp $
+$NetBSD: CHANGES-2024,v 1.7783 2024/12/25 01:35:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11636,3 +11636,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-pydantic to 2.10.4 [adam 2024-12-24]
 	Updated www/p5-CGI-Compile to 0.27 [wen 2024-12-25]
 	Updated devel/p5-Tie-Cycle to 1.228 [wen 2024-12-25]
+	Updated devel/p5-Test-utf8 to 1.03 [wen 2024-12-25]
