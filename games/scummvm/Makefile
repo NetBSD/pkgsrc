@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.124 2024/11/14 22:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2024/12/25 10:53:46 adam Exp $
 
-DISTNAME=	scummvm-2.8.1
-PKGREVISION=	5
+DISTNAME=	scummvm-2.9.0
 CATEGORIES=	games
 MASTER_SITES=	https://www.scummvm.org/frs/scummvm/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -17,6 +16,7 @@ USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--disable-seq-midi # not portable
 CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
