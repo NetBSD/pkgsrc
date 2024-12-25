@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/25 11:04:36 bsiegert Exp $
+
+BLAKE2s (libxfce4windowing-4.20.0.tar.bz2) = 6b065cca7a0ef4127495eeeb069883f793ec962d79823aa9802b9e20aa40bff7
+SHA512 (libxfce4windowing-4.20.0.tar.bz2) = 4db76eacd25200a50619839eb7b0f7fbfc901b8641b40acfc2aa34b88b449212e13b8946a8f5fd43ab89f021ba5bab67384e616163efb06b11603faf6913ba90
+Size (libxfce4windowing-4.20.0.tar.bz2) = 596847 bytes

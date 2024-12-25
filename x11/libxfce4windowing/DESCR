@@ -1,0 +1,8 @@
+libxfce4windowing is an abstraction library that attempts to present
+windowing concepts (screens, toplevel windows, workspaces, etc.) in a
+windowing-system-independent manner.
+
+Currently, X11 is fully supported, via libwnck.  Wayland is partially
+supported, through various Wayland protocol extensions.  However, the
+full range of operations available on X11 is not available on Wayland,
+due to missing features in these protocol extensions.
