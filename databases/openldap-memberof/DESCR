@@ -1,0 +1,3 @@
+The memberof overlay updates an attribute (by default memberOf) whenever
+changes occur to the membership attribute (by default member) of entries
+of the objectclass (by default groupOfNames) configured to trigger updates.
