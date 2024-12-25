@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/02/15 04:31:18 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/12/25 11:09:04 bsiegert Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcut-dialog.h
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-editor-dialog.h
@@ -9,7 +9,9 @@ include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts-xfwm4.h
 include/xfce4/libxfce4kbd-private-3/libxfce4kbd-private/xfce-shortcuts.h
 include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui-config.h
 include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui-enum-types.h
+include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui-enums.h
 include/xfce4/libxfce4ui-2/libxfce4ui/libxfce4ui.h
+include/xfce4/libxfce4ui-2/libxfce4ui/xfce-clipboard-manager.h
 include/xfce4/libxfce4ui-2/libxfce4ui/xfce-dialogs.h
 include/xfce4/libxfce4ui-2/libxfce4ui/xfce-filename-input.h
 include/xfce4/libxfce4ui-2/libxfce4ui/xfce-gdk-extensions.h
@@ -24,6 +26,7 @@ lib/pkgconfig/libxfce4kbd-private-3.pc
 lib/pkgconfig/libxfce4ui-2.pc
 share/applications/xfce4-about.desktop
 share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+share/gtk-doc/html/libxfce4ui/XfceClipboardManager.html
 share/gtk-doc/html/libxfce4ui/XfceFilenameInput.html
 share/gtk-doc/html/libxfce4ui/XfceSMClient.html
 share/gtk-doc/html/libxfce4ui/XfceScreensaver.html
@@ -34,6 +37,7 @@ share/gtk-doc/html/libxfce4ui/api-index-4-12.html
 share/gtk-doc/html/libxfce4ui/api-index-4-14.html
 share/gtk-doc/html/libxfce4ui/api-index-4-16.html
 share/gtk-doc/html/libxfce4ui/api-index-4-18.html
+share/gtk-doc/html/libxfce4ui/api-index-4-20.html
 share/gtk-doc/html/libxfce4ui/api-index-deprecated.html
 share/gtk-doc/html/libxfce4ui/api-index-full.html
 share/gtk-doc/html/libxfce4ui/home.png
