@@ -1,4 +1,4 @@
-$NetBSD: patch-pango_pangocoretext.c,v 1.3 2021/04/08 08:38:55 adam Exp $
+$NetBSD: patch-pango_pangocoretext.c,v 1.4 2024/12/26 05:54:35 pin Exp $
 
 From 60df2b006e5d4553abc7bb5fe9a99539c91b0022 Mon Sep 17 00:00:00 2001
 From: Tom Schoonjans <Tom.Schoonjans%diamond.ac.uk@localhost>
@@ -7,16 +7,12 @@ Subject: [PATCH] Revert "Restore scaling of CoreText fonts."
 
 This reverts commit f661cdbf8cfbdb2ba7241d8dfa4a579c6dfe0a94.
 
---- pango/pangocoretext.c.orig	2019-08-04 01:59:02.000000000 +0000
+--- pango/pangocoretext.c.orig	2024-12-06 11:13:47.621384791 +0000
 +++ pango/pangocoretext.c
-@@ -204,7 +204,10 @@ pango_core_text_font_class_init (PangoCo
-   object_class->finalize = pango_core_text_font_finalize;
+@@ -244,6 +244,7 @@ pango_core_text_font_class_init (PangoCo
  
    font_class->describe = pango_core_text_font_describe;
--  /* font_class->describe_absolute is left virtual for PangoCairoCoreTextFont. */
-+  /* In CoreText the device unit is points so describe_absoulute and
-+   * describe are the same.
-+   */
+   /* font_class->describe_absolute is left virtual for PangoCairoCoreTextFont. */
 +  font_class->describe_absolute = pango_core_text_font_describe;
    font_class->get_coverage = pango_core_text_font_get_coverage;
    font_class->get_font_map = pango_core_text_font_get_font_map;
