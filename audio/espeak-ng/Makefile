@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2024/03/25 17:18:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2024/12/26 11:45:00 wiz Exp $
 
-DISTNAME=	espeak-ng-1.51
+DISTNAME=	espeak-ng-1.52.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=espeak-ng/}
-GITHUB_TAG=	refs/tags/1.51
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/espeak-ng/espeak-ng/
@@ -31,12 +31,6 @@ CFLAGS+=	-D_NETBSD_SOURCE
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:M*:Q}
 
 PKGCONFIG_OVERRIDE+=	espeak-ng.pc.in
-
-SUBST_CLASSES+=		mbrola
-SUBST_STAGE.mbrola=	pre-configure
-SUBST_FILES.mbrola=	src/libespeak-ng/synth_mbrola.c
-SUBST_SED.mbrola=	-e s,/usr/share/mbrola/%s/%s,${PREFIX}/share/mbrola/voices/%s/%s,g
-SUBST_MESSAGE.mbrola=	Fixing hardcoded mbrola path.
 
 # Makefile.am: error: required file './AUTHORS' not found
 pre-configure:
