@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2024/09/21 10:24:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2024/12/26 23:57:20 adam Exp $
 
 BUILDLINK_TREE+=	protobuf-c
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	protobuf-c
 PROTOBUF_C_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.protobuf-c+=	protobuf-c>=1.1.1
-BUILDLINK_ABI_DEPENDS.protobuf-c+=	protobuf-c>=1.5.0nb7
+BUILDLINK_ABI_DEPENDS.protobuf-c+=	protobuf-c>=1.5.0nb8
 BUILDLINK_PKGSRCDIR.protobuf-c?=	../../devel/protobuf-c
 
 .include "../../devel/protobuf/buildlink3.mk"

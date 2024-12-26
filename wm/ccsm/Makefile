@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2024/11/14 22:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2024/12/26 23:57:23 adam Exp $
 
 PKGVER=			0.8.4
 DISTNAME=		ccsm-${PKGVER}
-PKGREVISION=		30
+PKGREVISION=		31
 CATEGORIES=		wm gnome
 MASTER_SITES=		#
 
