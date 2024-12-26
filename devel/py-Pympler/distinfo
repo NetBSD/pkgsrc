@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/02/20 05:00:15 adam Exp $
+$NetBSD: distinfo,v 1.7 2024/12/26 21:43:01 adam Exp $
 
-BLAKE2s (Pympler-1.0.1.tar.gz) = 57b5c700a366beeef73abaca6cefbc6dfe69460ead6879f4c0818831916644a0
-SHA512 (Pympler-1.0.1.tar.gz) = caee8d66ba6651929c11c36e9d106fded2bac445bfbbf1233e878736f58291989c595fe6e2017ab2f8725d5a17f527c45db2ec6adb68b66da622b45e177a2cbc
-Size (Pympler-1.0.1.tar.gz) = 676983 bytes
+BLAKE2s (pympler-1.1.tar.gz) = 7431ca141fae0ac7cd106dd00a773e56a10df00ee1028d4424922ebab2573655
+SHA512 (pympler-1.1.tar.gz) = b29477f63a88904e0edeadb1d3c6754e2da2d3f52ee4b964dd207dc0b31301a7d4a714548cfd384d9ee352b908f3d26dbbb265f5729cf9d12b81dde3b826ece2
+Size (pympler-1.1.tar.gz) = 179954 bytes
