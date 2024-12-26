@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/12/26 22:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/12/26 23:24:10 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -60,8 +60,8 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversio
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotexturehelper_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideowindow_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotransformation_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideowindow_p.h
 qt6/include/QtMultimedia/QAbstractVideoBuffer
 qt6/include/QtMultimedia/QAudio
 qt6/include/QtMultimedia/QAudioBuffer
@@ -180,12 +180,15 @@ qt6/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 qt6/include/QtMultimediaWidgets/qtmultimediawidgetsversion.h
 qt6/include/QtMultimediaWidgets/qvideowidget.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qglist_helper_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_bus_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_bus_observer_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_debug_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_discoverer_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_handle_types_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstappsource_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgst_play_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstpipeline_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamer_qiodevice_handler_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamer_qrc_handler_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreameraudiodecoder_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreameraudiodevice_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreameraudioinput_p.h
@@ -193,11 +196,10 @@ ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstre
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamerbufferprobe_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamercamera_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamerformatinfo_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamerimagecapture_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamerintegration_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermediacapture_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermediaencoder_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermediacapturesession_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermediaplayer_p.h
+${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermediarecorder_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermessage_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermetadata_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamervideodevices_p.h
