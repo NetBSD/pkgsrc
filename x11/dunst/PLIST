@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/06 21:28:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 11:04:35 wiz Exp $
 bin/dunst
 bin/dunstctl
 bin/dunstify
 man/man1/dunst.1
 man/man1/dunstctl.1
+man/man1/dunstify.1
 man/man5/dunst.5
 share/bash-completion/completions/dunst
 share/bash-completion/completions/dunstctl
