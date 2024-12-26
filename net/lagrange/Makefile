@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/08/08 17:30:39 pin Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/26 17:49:20 pin Exp $
 
-DISTNAME=	lagrange-1.17.6
+DISTNAME=	lagrange-1.18.4
 CATEGORIES=	net
 MASTER_SITES=	https://git.skyjake.fi/gemini/lagrange/releases/download/v${PKGVERSION_NOREV}/
 
@@ -9,7 +9,6 @@ HOMEPAGE=	https://gmi.skyjake.fi/lagrange/
 COMMENT=	Desktop GUI client for browsing Gemini
 LICENSE=	2-clause-bsd
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 
 USE_CC_FEATURES+=	c11
@@ -26,4 +25,5 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libunistring/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
