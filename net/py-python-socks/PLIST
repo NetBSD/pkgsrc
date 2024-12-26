@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/12/17 16:07:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/26 09:03:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -181,6 +181,7 @@ ${PYSITELIB}/python_socks/async_/trio/v2/_proxy.pyo
 ${PYSITELIB}/python_socks/async_/trio/v2/_stream.py
 ${PYSITELIB}/python_socks/async_/trio/v2/_stream.pyc
 ${PYSITELIB}/python_socks/async_/trio/v2/_stream.pyo
+${PYSITELIB}/python_socks/py.typed
 ${PYSITELIB}/python_socks/sync/__init__.py
 ${PYSITELIB}/python_socks/sync/__init__.pyc
 ${PYSITELIB}/python_socks/sync/__init__.pyo
