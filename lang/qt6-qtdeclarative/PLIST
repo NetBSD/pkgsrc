@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/12/26 22:20:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/12/26 23:03:35 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -2760,7 +2760,6 @@ qt6/plugins/qmltooling/libqmldbg_server.so
 qt6/plugins/qmltooling/libqmldbg_tcp.so
 qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.a
 qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.prl
-qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
 qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Assets_Downloader_init.cpp.o
 qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
 qt6/qml/Assets/Downloader/plugins.qmltypes
