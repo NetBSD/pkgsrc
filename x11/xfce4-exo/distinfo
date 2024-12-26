@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2022/12/30 17:16:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.31 2024/12/26 18:28:45 bsiegert Exp $
 
-BLAKE2s (exo-4.18.0.tar.bz2) = 39b674675bbfcf12cf12f6d0ea8f274e6fef83d79d21d71f5782ada27a5d2cce
-SHA512 (exo-4.18.0.tar.bz2) = 32f3a319ff31a37cdaf8e2e7bdbdbaa9b797d6731a27854838b47d6078f45af83ed1a664aef4663f616fd9abcae9233c6f68ab2cc18599f1b2ced487602c51ce
-Size (exo-4.18.0.tar.bz2) = 896849 bytes
+BLAKE2s (exo-4.20.0.tar.bz2) = b3f1c5155f8b8a50ea6f6e6ab9a21260c2d92cfbd0c1ad2405dbdddec61ec27e
+SHA512 (exo-4.20.0.tar.bz2) = 7481f47bb0c8eb5cdc8d7db3e67c1cdaa81e3ef0833281b5380f3eab41e3c2f7112a22b37a3ce305a052b261444fd9f11c130150663deb1b4a220a998321284b
+Size (exo-4.20.0.tar.bz2) = 1100703 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2022/12/30 17:16:56 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/12/26 18:28:45 bsiegert Exp $
 bin/exo-desktop-item-edit
 bin/exo-open
 include/exo-2/exo/exo-binding.h
@@ -120,6 +120,7 @@ share/locale/ug/LC_MESSAGES/exo.mo
 share/locale/uk/LC_MESSAGES/exo.mo
 share/locale/ur/LC_MESSAGES/exo.mo
 share/locale/ur_PK/LC_MESSAGES/exo.mo
+share/locale/uz/LC_MESSAGES/exo.mo
 share/locale/vi/LC_MESSAGES/exo.mo
 share/locale/zh_CN/LC_MESSAGES/exo.mo
 share/locale/zh_HK/LC_MESSAGES/exo.mo
