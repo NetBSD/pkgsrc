@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/27 13:20:33 pin Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/26 17:48:11 pin Exp $
 
-DISTNAME=	jgenesis-0.8.2
+DISTNAME=	jgenesis-0.8.3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jsgroth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +14,9 @@ DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.80.1
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.82.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 USE_TOOLS+=	pkg-config
 
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
