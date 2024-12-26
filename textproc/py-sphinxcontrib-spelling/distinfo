@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/22 16:17:25 adam Exp $
+$NetBSD: distinfo,v 1.2 2024/12/26 22:14:08 adam Exp $
 
-BLAKE2s (sphinxcontrib-spelling-8.0.0.tar.gz) = 1887cd83d374f756d34f07253a297cd3ce44a8b6d263248f03a6c8f1c7f66637
-SHA512 (sphinxcontrib-spelling-8.0.0.tar.gz) = 0d8c21ea660516238c43fabb505666dfee15abb39f538c40c6b61f91e20c246b16aa170cd444263507dd51913a27fc7719cddb28f30eab26825b565f70dd3ab6
-Size (sphinxcontrib-spelling-8.0.0.tar.gz) = 37610 bytes
+BLAKE2s (sphinxcontrib_spelling-8.0.1.tar.gz) = 50fced7bcc21dfd9e0f4d6b60dd9900755ba23f9238183cb47d30135ca3fa838
+SHA512 (sphinxcontrib_spelling-8.0.1.tar.gz) = 8d1e98e50f040b773d117422582315f9535a8a3ccee3984012b3b21e70e8600b325f39579583cace1cd8d3eed096b187eba5e2e9b1ba0f32e5f554ac4b43d48f
+Size (sphinxcontrib_spelling-8.0.1.tar.gz) = 36005 bytes
