@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/11/12 05:55:25 adam Exp $
+$NetBSD: distinfo,v 1.11 2024/12/26 09:26:54 adam Exp $
 
-BLAKE2s (cytoolz-1.0.0.tar.gz) = 1450141549afde5566a9e200d0591bcd63a4c3b514681e0810a072e6de7a12e7
-SHA512 (cytoolz-1.0.0.tar.gz) = 4edf016e8027c646d85170de418acedd4f254e8e684f249160e79c892d8cf19c6ab897f32e55a02d4b936c8a2e150ec27bde125336325a07af06d1715b4e1208
-Size (cytoolz-1.0.0.tar.gz) = 626708 bytes
+BLAKE2s (cytoolz-1.0.1.tar.gz) = 2f80110cc556ca3125455cedcd4ae4766a06bc5538a8f4fd00fdb1b7cf166b8e
+SHA512 (cytoolz-1.0.1.tar.gz) = 6c3cbeb4234249aca9915c44d9b67ab99e13c595cf6ddb4d0c60dc0c9619afabb0225969d56fb166dc90ccc697e9773f0227af66e26977adc7ce68499c9b6b2d
+Size (cytoolz-1.0.1.tar.gz) = 626652 bytes
