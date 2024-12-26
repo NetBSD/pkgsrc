@@ -1,19 +1,19 @@
-$NetBSD: patch-src_symbolize.cc,v 1.1 2019/11/28 12:19:58 bouyer Exp $
+$NetBSD: patch-src_symbolize.cc,v 1.2 2024/12/26 17:17:42 adam Exp $
 
 Get program pathname from sysctl on NetBSD
 
---- src/symbolize.cc.orig	2017-12-09 17:29:18.000000000 +0100
-+++ src/symbolize.cc	2019-11-27 18:40:56.000000000 +0100
-@@ -60,7 +60,7 @@
- #include "base/commandlineflags.h"
+--- src/symbolize.cc.orig	2024-09-23 18:10:35.000000000 +0000
++++ src/symbolize.cc
+@@ -61,7 +61,7 @@
  #include "base/logging.h"
  #include "base/sysinfo.h"
+ #include "base/proc_maps_iterator.h"
 -#if defined(__FreeBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
  #include <sys/sysctl.h>
  #endif
  
-@@ -97,7 +97,7 @@
+@@ -141,7 +141,7 @@ static const char* GetProgramInvocationN
        return NULL;
    }
    return program_invocation_name;

@@ -1,15 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2023/08/25 16:38:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/26 17:17:42 adam Exp $
 bin/pprof
 bin/pprof-symbolize
-include/google/heap-checker.h
-include/google/heap-profiler.h
-include/google/malloc_extension.h
-include/google/malloc_extension_c.h
-include/google/malloc_hook.h
-include/google/malloc_hook_c.h
-include/google/profiler.h
-include/google/stacktrace.h
-include/google/tcmalloc.h
 include/gperftools/heap-checker.h
 include/gperftools/heap-profiler.h
 include/gperftools/malloc_extension.h
