@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.26 2024/09/21 10:26:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2024/12/26 23:40:35 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/google/_upb/_message.so
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
+${PYSITELIB}/google/protobuf/any.py
+${PYSITELIB}/google/protobuf/any.pyc
+${PYSITELIB}/google/protobuf/any.pyo
 ${PYSITELIB}/google/protobuf/any_pb2.py
 ${PYSITELIB}/google/protobuf/any_pb2.pyc
 ${PYSITELIB}/google/protobuf/any_pb2.pyo
@@ -27,6 +36,9 @@ ${PYSITELIB}/google/protobuf/descriptor_pb2.pyo
 ${PYSITELIB}/google/protobuf/descriptor_pool.py
 ${PYSITELIB}/google/protobuf/descriptor_pool.pyc
 ${PYSITELIB}/google/protobuf/descriptor_pool.pyo
+${PYSITELIB}/google/protobuf/duration.py
+${PYSITELIB}/google/protobuf/duration.pyc
+${PYSITELIB}/google/protobuf/duration.pyo
 ${PYSITELIB}/google/protobuf/duration_pb2.py
 ${PYSITELIB}/google/protobuf/duration_pb2.pyc
 ${PYSITELIB}/google/protobuf/duration_pb2.pyo
@@ -141,6 +153,9 @@ ${PYSITELIB}/google/protobuf/text_encoding.pyo
 ${PYSITELIB}/google/protobuf/text_format.py
 ${PYSITELIB}/google/protobuf/text_format.pyc
 ${PYSITELIB}/google/protobuf/text_format.pyo
+${PYSITELIB}/google/protobuf/timestamp.py
+${PYSITELIB}/google/protobuf/timestamp.pyc
+${PYSITELIB}/google/protobuf/timestamp.pyo
 ${PYSITELIB}/google/protobuf/timestamp_pb2.py
 ${PYSITELIB}/google/protobuf/timestamp_pb2.pyc
 ${PYSITELIB}/google/protobuf/timestamp_pb2.pyo
@@ -157,9 +172,3 @@ ${PYSITELIB}/google/protobuf/wrappers_pb2.py
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyc
 ${PYSITELIB}/google/protobuf/wrappers_pb2.pyo
 ${PYSITELIB}/protobuf-${PKGVERSION}-py${PYVERSSUFFIX}-nspkg.pth
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
