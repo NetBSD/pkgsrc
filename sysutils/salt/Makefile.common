@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2024/03/06 19:11:53 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2024/12/26 22:16:45 adam Exp $
 # used by sysutils/salt/Makefile
 # used by sysutils/salt-docs/Makefile
 
-DISTNAME=	salt-3006.7
+DISTNAME=	salt-3007.1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -13,4 +13,29 @@ LICENSE=	apache-2.0
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/salt/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/salt/patches
 
+DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24.0.0:../../security/py-OpenSSL
+DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.9.8:../../security/py-cryptodome
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.0:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.9.0:../../www/py-aiohttp
+DEPENDS+=	${PYPKGPREFIX}-cherrypy>=18.6.1:../../www/py-cherrypy
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.8.1:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-distro>=1.0.1:../../devel/py-distro
+DEPENDS+=	${PYPKGPREFIX}-gnupg>=0.4.7:../../security/py-gnupg
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.3.0:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-jmespath-[0-9]*:../../textproc/py-jmespath
+DEPENDS+=	${PYPKGPREFIX}-looseversion-[0-9]*:../../devel/py-looseversion
+DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.0:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-packaging>=21.3:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-psutil>=5.0.0:../../sysutils/py-psutil
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.25.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-setproctitle>=1.2.3:../../sysutils/py-setproctitle
+DEPENDS+=	${PYPKGPREFIX}-timelib>=0.2.5:../../time/py-timelib
+DEPENDS+=	${PYPKGPREFIX}-tornado>=6.3.3:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-zmq>=25.1.2:../../net/py-zmq
+
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 313
