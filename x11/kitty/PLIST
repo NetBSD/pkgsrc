@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/11/07 14:18:42 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/12/26 16:50:43 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -212,6 +212,9 @@ lib/kitty/kitty/client.pyo
 lib/kitty/kitty/clipboard.py
 lib/kitty/kitty/clipboard.pyc
 lib/kitty/kitty/clipboard.pyo
+lib/kitty/kitty/colors.py
+lib/kitty/kitty/colors.pyc
+lib/kitty/kitty/colors.pyo
 lib/kitty/kitty/conf/__init__.py
 lib/kitty/kitty/conf/__init__.pyc
 lib/kitty/kitty/conf/__init__.pyo
@@ -671,6 +674,7 @@ share/doc/kitty/html/_images/social_previews/summary_launch_717c78bb.png
 share/doc/kitty/html/_images/social_previews/summary_layouts_49b07683.png
 share/doc/kitty/html/_images/social_previews/summary_mapping_aea5afa6.png
 share/doc/kitty/html/_images/social_previews/summary_marks_66066db1.png
+share/doc/kitty/html/_images/social_previews/summary_misc-protocol_baba0cc2.png
 share/doc/kitty/html/_images/social_previews/summary_open_actions_c69b3759.png
 share/doc/kitty/html/_images/social_previews/summary_overview_249bd848.png
 share/doc/kitty/html/_images/social_previews/summary_performance_76c80d2e.png
@@ -734,6 +738,7 @@ share/doc/kitty/html/_sources/launch.rst.txt
 share/doc/kitty/html/_sources/layouts.rst.txt
 share/doc/kitty/html/_sources/mapping.rst.txt
 share/doc/kitty/html/_sources/marks.rst.txt
+share/doc/kitty/html/_sources/misc-protocol.rst.txt
 share/doc/kitty/html/_sources/open_actions.rst.txt
 share/doc/kitty/html/_sources/overview.rst.txt
 share/doc/kitty/html/_sources/performance.rst.txt
@@ -826,6 +831,7 @@ share/doc/kitty/html/launch.html
 share/doc/kitty/html/layouts.html
 share/doc/kitty/html/mapping.html
 share/doc/kitty/html/marks.html
+share/doc/kitty/html/misc-protocol.html
 share/doc/kitty/html/objects.inv
 share/doc/kitty/html/open_actions.html
 share/doc/kitty/html/overview.html
