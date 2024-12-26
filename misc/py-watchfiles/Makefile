@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/11/26 10:40:44 adam Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/26 12:01:54 wiz Exp $
 
-DISTNAME=	watchfiles-1.0.0
+DISTNAME=	watchfiles-1.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=w/watchfiles/}
@@ -11,6 +11,8 @@ COMMENT=	Simple, modern and high performance file watching and code reload
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-anyio>=3.0.0:../../devel/py-anyio
+TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0:../../devel/py-dirty-equals
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=0:../../devel/py-test-timeout
 
 # Depends on an unpublished crate. Can't use cargo.mk to fetch it.
 NOTIFY_REV=	0f87ab12707d231fa44180454d59478d3992eb59

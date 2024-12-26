@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.2 2024/11/26 10:40:44 adam Exp $
+$NetBSD: patch-Cargo.toml,v 1.3 2024/12/26 12:01:54 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch it.
 
@@ -10,6 +10,6 @@ Depends on unpublished crates. Can't use cargo.mk to fetch it.
  crossbeam-channel = "0.5.12"
 -notify = {git = "https://github.com/samuelcolvin/notify.git", branch = "keep-io-error"}
 +notify = {path = "../notify-0f87ab12707d231fa44180454d59478d3992eb59/notify"}
- pyo3 = { version = "=0.23", features = ["extension-module", "generate-import-lib"] }
+ pyo3 = { version = "0.23.3", features = ["extension-module", "generate-import-lib"] }
  
  [lib]
