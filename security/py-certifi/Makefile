@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/11 07:28:54 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/12/26 23:28:40 adam Exp $
 
-DISTNAME=	certifi-2024.8.30
+DISTNAME=	certifi-2024.12.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/certifi/}
