@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25229 2024/12/26 23:09:32 adam Exp $
+$NetBSD: TODO,v 1.25230 2024/12/26 23:32:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -1129,7 +1129,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
 	o py-cassa-1.11.0
-	o py-certifi-2024.12.14
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
 	o py-dot-3.0.1
