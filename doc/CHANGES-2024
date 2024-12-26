@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7820 2024/12/26 12:55:59 gdt Exp $
+$NetBSD: CHANGES-2024,v 1.7821 2024/12/26 13:17:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11689,3 +11689,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/py-watchfiles to 1.0.3 [wiz 2024-12-26]
 	Updated audio/fasttracker2 to 1.93 [fox 2024-12-26]
 	Updated databases/postgresql-postgis2 to 3.5.1nb6 [gdt 2024-12-26]
+	Updated ham/hamlib to 4.6 [gdt 2024-12-26]
