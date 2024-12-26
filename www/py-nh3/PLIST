@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/05 01:04:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/26 11:50:22 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/nh3/__init__.py
 ${PYSITELIB}/nh3/__init__.pyc
 ${PYSITELIB}/nh3/__init__.pyi
