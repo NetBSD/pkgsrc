@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/06/30 13:34:09 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 23:08:15 adam Exp $
 bin/sip-build
 bin/sip-distinfo
 bin/sip-install
@@ -71,9 +71,12 @@ ${PYSITELIB}/sipbuild/generator/outputs/__init__.pyo
 ${PYSITELIB}/sipbuild/generator/outputs/api.py
 ${PYSITELIB}/sipbuild/generator/outputs/api.pyc
 ${PYSITELIB}/sipbuild/generator/outputs/api.pyo
-${PYSITELIB}/sipbuild/generator/outputs/code.py
-${PYSITELIB}/sipbuild/generator/outputs/code.pyc
-${PYSITELIB}/sipbuild/generator/outputs/code.pyo
+${PYSITELIB}/sipbuild/generator/outputs/code/__init__.py
+${PYSITELIB}/sipbuild/generator/outputs/code/__init__.pyc
+${PYSITELIB}/sipbuild/generator/outputs/code/__init__.pyo
+${PYSITELIB}/sipbuild/generator/outputs/code/code.py
+${PYSITELIB}/sipbuild/generator/outputs/code/code.pyc
+${PYSITELIB}/sipbuild/generator/outputs/code/code.pyo
 ${PYSITELIB}/sipbuild/generator/outputs/extracts.py
 ${PYSITELIB}/sipbuild/generator/outputs/extracts.pyc
 ${PYSITELIB}/sipbuild/generator/outputs/extracts.pyo
@@ -183,7 +186,7 @@ ${PYSITELIB}/sipbuild/module/source/12/apiversions.c
 ${PYSITELIB}/sipbuild/module/source/12/descriptors.c
 ${PYSITELIB}/sipbuild/module/source/12/int_convertors.c
 ${PYSITELIB}/sipbuild/module/source/12/objmap.c
-${PYSITELIB}/sipbuild/module/source/12/pyproject.toml
+${PYSITELIB}/sipbuild/module/source/12/pyproject.toml.in
 ${PYSITELIB}/sipbuild/module/source/12/qtlib.c
 ${PYSITELIB}/sipbuild/module/source/12/setup.cfg.in
 ${PYSITELIB}/sipbuild/module/source/12/setup.py.in
@@ -199,7 +202,7 @@ ${PYSITELIB}/sipbuild/module/source/12/voidptr.c
 ${PYSITELIB}/sipbuild/module/source/13/LICENSE
 ${PYSITELIB}/sipbuild/module/source/13/MANIFEST.in
 ${PYSITELIB}/sipbuild/module/source/13/README.in
-${PYSITELIB}/sipbuild/module/source/13/pyproject.toml
+${PYSITELIB}/sipbuild/module/source/13/pyproject.toml.in
 ${PYSITELIB}/sipbuild/module/source/13/setup.cfg.in
 ${PYSITELIB}/sipbuild/module/source/13/setup.py.in
 ${PYSITELIB}/sipbuild/module/source/13/sip.h.in
