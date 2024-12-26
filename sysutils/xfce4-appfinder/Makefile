@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.76 2024/11/17 07:16:43 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2024/12/26 18:25:45 bsiegert Exp $
 
-PKGREVISION= 7
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-appfinder-4.18.1
+DISTNAME=	xfce4-appfinder-4.20.0
 CATEGORIES=	sysutils
 MASTER_SITES+=	https://archive.xfce.org/src/xfce/xfce4-appfinder/${PKGVERSION_NOREV:R}/
 
 HOMEPAGE=	https://docs.xfce.org/xfce/xfce4-appfinder/start
 COMMENT=	Xfce application finder
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
