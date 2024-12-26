@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2024/10/29 08:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.104 2024/12/26 23:48:22 adam Exp $
 
-DISTNAME=	grpc-1.67.1
+DISTNAME=	grpc-1.68.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://grpc.io/
 COMMENT=	High performance, open-source universal RPC framework
 LICENSE=	apache-2.0
 
+USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
-USE_CXX_FEATURES=	c++14
 
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 # use cmake's find_package() to locate a pre-installed dependency
@@ -24,16 +24,14 @@ CMAKE_CONFIGURE_ARGS+=	-DgRPC_RE2_PROVIDER=package
 CMAKE_CONFIGURE_ARGS+=	-DgRPC_SSL_PROVIDER=package
 CMAKE_CONFIGURE_ARGS+=	-DgRPC_ZLIB_PROVIDER=package
 
-SUBST_CLASSES+=		vars
-SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	cmake/protobuf.cmake
-SUBST_VARS.vars=	BUILDLINK_PREFIX.protobuf
-
 # This should be included in the distfile, but it's not,
 # so CMakeFile.txt will try to download it.
 CENSUS_VER=		0.3.0
 CENSUS_DIST=		opencensus-proto-${CENSUS_VER}.tar.gz
 SITES.${CENSUS_DIST}=	-${MASTER_SITE_GITHUB:=census-instrumentation/opencensus-proto/archive/}/v${CENSUS_VER}.tar.gz
+
+ENVOY_DIST=		envoy-api-f8b75d1efa92bbf534596a013d9ca5873f79dd30..tar.gz
+SITES.${ENVOY_DIST}=	-${MASTER_SITE_GITHUB:=envoyproxy/data-plane-api/}
 
 DISTFILES=	${DEFAULT_DISTFILES} ${CENSUS_DIST}
 
