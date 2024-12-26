@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2024/12/26 22:15:19 adam Exp $
+
+BLAKE2s (timelib-0.3.0.tar.gz) = f96ba5fe0ae1740e5a4e9849ed5f88811ea73928bf7c0be00327627e477048ef
+SHA512 (timelib-0.3.0.tar.gz) = ce3b7efd1ee9ae09ef398eda8870fa4e2c642047c15599aec6ce0fe5f19381dccc940d4b461aafbe9161896377eb962c27c47fb99700212299d05629a870ffe6
+Size (timelib-0.3.0.tar.gz) = 308768 bytes
