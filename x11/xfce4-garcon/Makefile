@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2024/11/17 07:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2024/12/26 18:23:47 bsiegert Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	garcon-4.18.2
+DISTNAME=	garcon-4.20.0
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/garcon/${PKGVERSION_NOREV:R}/
@@ -21,6 +20,7 @@ MAKE_DIRS+=		${EGDIR} ${EGDIR}/menus ${PKG_SYSCONFDIR}/menus
 CONF_FILES=		${EGDIR}/menus/xfce-applications.menu \
 			${PKG_SYSCONFDIR}/menus/xfce-applications.menu
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
