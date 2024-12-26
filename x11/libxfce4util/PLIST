@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/12/25 11:05:57 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/12/26 18:30:26 bsiegert Exp $
 include/xfce4/libxfce4util/libxfce4util-config.h
 include/xfce4/libxfce4util/libxfce4util.h
 include/xfce4/libxfce4util/xfce-consolekit.h
@@ -16,9 +16,11 @@ include/xfce4/libxfce4util/xfce-resource.h
 include/xfce4/libxfce4util/xfce-string.h
 include/xfce4/libxfce4util/xfce-systemd.h
 include/xfce4/libxfce4util/xfce-utf8.h
+lib/girepository-1.0/Libxfce4util-1.0.typelib
 lib/libxfce4util.la
 lib/pkgconfig/libxfce4util-1.0.pc
 sbin/xfce4-kiosk-query
+share/gir-1.0/Libxfce4util-1.0.gir
 share/gtk-doc/html/libxfce4util/XfceConsolekit.html
 share/gtk-doc/html/libxfce4util/XfceSystemd.html
 share/gtk-doc/html/libxfce4util/annotation-glossary.html
