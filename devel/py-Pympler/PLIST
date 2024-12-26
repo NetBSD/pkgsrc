@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/02/20 05:00:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 21:43:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
@@ -35,6 +35,7 @@ ${PYSITELIB}/pympler/panels.pyo
 ${PYSITELIB}/pympler/process.py
 ${PYSITELIB}/pympler/process.pyc
 ${PYSITELIB}/pympler/process.pyo
+${PYSITELIB}/pympler/py.typed
 ${PYSITELIB}/pympler/refbrowser.py
 ${PYSITELIB}/pympler/refbrowser.pyc
 ${PYSITELIB}/pympler/refbrowser.pyo
