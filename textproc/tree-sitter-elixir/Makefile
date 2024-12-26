@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/10/08 15:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/26 10:58:54 wiz Exp $
 
-DISTNAME=	tree-sitter-elixir-0.3.1
+DISTNAME=	tree-sitter-elixir-0.3.3
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elixir-lang/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
