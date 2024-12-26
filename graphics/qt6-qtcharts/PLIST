@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:15 adam Exp $
 lib/pkgconfig/Qt6Charts.pc
 lib/pkgconfig/Qt6ChartsQml.pc
 qt6/include/QtCharts/${PKGVERSION}/QtCharts/private/abstractbarchartitem_p.h
@@ -384,3 +384,4 @@ qt6/qml/QtCharts/designer/qtcharts.metainfo
 qt6/qml/QtCharts/libqtchartsqml2plugin.so
 qt6/qml/QtCharts/plugins.qmltypes
 qt6/qml/QtCharts/qmldir
+qt6/sbom/qtcharts-${PKGVERSION}.spdx

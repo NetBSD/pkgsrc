@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:16 adam Exp $
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qhttpmessagestreamparser_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p.h
 qt6/include/QtJsonRpc/${PKGVERSION}/QtJsonRpc/private/qjsonrpcprotocol_p_p.h
@@ -54,3 +54,4 @@ qt6/mkspecs/modules/qt_lib_jsonrpc_private.pri
 qt6/mkspecs/modules/qt_lib_languageserver_private.pri
 qt6/modules/JsonRpcPrivate.json
 qt6/modules/LanguageServerPrivate.json
+qt6/sbom/qtlanguageserver-${PKGVERSION}.spdx
