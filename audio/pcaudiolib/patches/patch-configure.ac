@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.1 2024/02/29 14:15:41 bsiegert Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/12/26 11:36:55 wiz Exp $
 
 Add NetBSD native audio support
 
---- configure.ac.orig	2021-07-30 12:08:56.000000000 +0000
+--- configure.ac.orig	2024-12-12 14:16:30.000000000 +0000
 +++ configure.ac
-@@ -152,6 +152,29 @@ else
+@@ -142,6 +142,29 @@ else
  fi
  
  dnl ================================================================
@@ -34,9 +34,9 @@ Add NetBSD native audio support
  dnl Generate output.
  dnl ================================================================
  
-@@ -172,4 +195,5 @@ AC_MSG_NOTICE([
+@@ -162,4 +185,5 @@ AC_MSG_NOTICE([
  	QSA support:                   ${have_qsa}
- 	Coreaudio support:             ${have_coreaudio} 
+ 	Coreaudio support:             ${have_coreaudio}
  	OSS support:                   ${have_oss}
 +	NetBSD support:                ${have_netbsd}
  ])
