@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/10/25 10:42:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/26 23:06:53 adam Exp $
 lib/pkgconfig/Qt6WaylandClient.pc
 lib/pkgconfig/Qt6WaylandCompositor.pc
 lib/pkgconfig/Qt6WaylandCompositorIviapplication.pc
@@ -55,6 +55,7 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandinputd
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandinputmethodcontext_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandintegration_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandnativeinterface_p.h
+qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandplatformservices_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandpointergestures_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandprimaryselectionv1_p.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/qwaylandqtkey_p.h
@@ -100,7 +101,6 @@ qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-wp-pri
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-output-unstable-v1-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-shell-client-protocol.h
 qt6/include/QtWaylandClient/${PKGVERSION}/QtWaylandClient/private/wayland-xdg-toplevel-drag-v1-client-protocol.h
-qt6/include/QtWaylandClient/6.8.0/QtWaylandClient/private/qwaylandplatformservices_p.h
 qt6/include/QtWaylandClient/QWaylandClientExtension
 qt6/include/QtWaylandClient/QWaylandClientExtensionTemplate
 qt6/include/QtWaylandClient/QtWaylandClient
@@ -129,6 +129,7 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayla
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-viewporter.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-wayland.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-xdg-decoration-unstable-v1.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-xdg-dialog-v1.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-xdg-output-unstable-v1.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayland-server-xdg-shell.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandcompositor_p.h
@@ -157,6 +158,7 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayla
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandquicksurface_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandseat_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandshell_p.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandshellsurface_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandsurface_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinput_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandtextinputmanager_p.h
@@ -169,6 +171,7 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwayla
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandwlshell_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandwlshellintegration_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandxdgdecorationv1_p.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandxdgdialogv1_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandxdgoutputv1_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandxdgshell_p.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/qwaylandxdgshellintegration_p.h
@@ -209,12 +212,9 @@ qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/waylan
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-viewporter-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-wayland-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-xdg-decoration-unstable-v1-server-protocol.h
+qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-xdg-dialog-v1-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-xdg-output-unstable-v1-server-protocol.h
 qt6/include/QtWaylandCompositor/${PKGVERSION}/QtWaylandCompositor/private/wayland-xdg-shell-server-protocol.h
-qt6/include/QtWaylandCompositor/6.8.0/QtWaylandCompositor/private/qwayland-server-xdg-dialog-v1.h
-qt6/include/QtWaylandCompositor/6.8.0/QtWaylandCompositor/private/qwaylandshellsurface_p.h
-qt6/include/QtWaylandCompositor/6.8.0/QtWaylandCompositor/private/qwaylandxdgdialogv1_p.h
-qt6/include/QtWaylandCompositor/6.8.0/QtWaylandCompositor/private/wayland-xdg-dialog-v1-server-protocol.h
 qt6/include/QtWaylandCompositor/QWaylandBufferRef
 qt6/include/QtWaylandCompositor/QWaylandClient
 qt6/include/QtWaylandCompositor/QWaylandCompositor
@@ -320,22 +320,22 @@ qt6/include/QtWaylandCompositor/qwaylandwlshell.h
 qt6/include/QtWaylandCompositor/qwaylandxdgdecorationv1.h
 qt6/include/QtWaylandCompositor/qwaylandxdgoutputv1.h
 qt6/include/QtWaylandCompositor/qwaylandxdgshell.h
-qt6/include/QtWaylandCompositorIviapplication/6.8.0/QtWaylandCompositorIviapplication/private/qwaylandcompositoriviapplicationforeign_p.h
+qt6/include/QtWaylandCompositorIviapplication/${PKGVERSION}/QtWaylandCompositorIviapplication/private/qwaylandcompositoriviapplicationforeign_p.h
 qt6/include/QtWaylandCompositorIviapplication/QtWaylandCompositorIviapplication
 qt6/include/QtWaylandCompositorIviapplication/QtWaylandCompositorIviapplicationDepends
 qt6/include/QtWaylandCompositorIviapplication/QtWaylandCompositorIviapplicationVersion
 qt6/include/QtWaylandCompositorIviapplication/qtwaylandcompositoriviapplicationversion.h
-qt6/include/QtWaylandCompositorPresentationTime/6.8.0/QtWaylandCompositorPresentationTime/private/qwaylandcompositorpresentationtimeforeign_p.h
+qt6/include/QtWaylandCompositorPresentationTime/${PKGVERSION}/QtWaylandCompositorPresentationTime/private/qwaylandcompositorpresentationtimeforeign_p.h
 qt6/include/QtWaylandCompositorPresentationTime/QtWaylandCompositorPresentationTime
 qt6/include/QtWaylandCompositorPresentationTime/QtWaylandCompositorPresentationTimeDepends
 qt6/include/QtWaylandCompositorPresentationTime/QtWaylandCompositorPresentationTimeVersion
 qt6/include/QtWaylandCompositorPresentationTime/qtwaylandcompositorpresentationtimeversion.h
-qt6/include/QtWaylandCompositorWLShell/6.8.0/QtWaylandCompositorWLShell/private/qwaylandcompositorwlshell_p.h
+qt6/include/QtWaylandCompositorWLShell/${PKGVERSION}/QtWaylandCompositorWLShell/private/qwaylandcompositorwlshell_p.h
 qt6/include/QtWaylandCompositorWLShell/QtWaylandCompositorWLShell
 qt6/include/QtWaylandCompositorWLShell/QtWaylandCompositorWLShellDepends
 qt6/include/QtWaylandCompositorWLShell/QtWaylandCompositorWLShellVersion
 qt6/include/QtWaylandCompositorWLShell/qtwaylandcompositorwlshellversion.h
-qt6/include/QtWaylandCompositorXdgShell/6.8.0/QtWaylandCompositorXdgShell/private/qwaylandcompositorxdgshell_p.h
+qt6/include/QtWaylandCompositorXdgShell/${PKGVERSION}/QtWaylandCompositorXdgShell/private/qwaylandcompositorxdgshell_p.h
 qt6/include/QtWaylandCompositorXdgShell/QtWaylandCompositorXdgShell
 qt6/include/QtWaylandCompositorXdgShell/QtWaylandCompositorXdgShellDepends
 qt6/include/QtWaylandCompositorXdgShell/QtWaylandCompositorXdgShellVersion
@@ -641,20 +641,20 @@ qt6/lib/libQt6WaylandCompositor.so.${PKGVERSION}
 qt6/lib/libQt6WaylandCompositor.so.6
 qt6/lib/libQt6WaylandCompositorIviapplication.prl
 qt6/lib/libQt6WaylandCompositorIviapplication.so
+qt6/lib/libQt6WaylandCompositorIviapplication.so.${PKGVERSION}
 qt6/lib/libQt6WaylandCompositorIviapplication.so.6
-qt6/lib/libQt6WaylandCompositorIviapplication.so.6.8.0
 qt6/lib/libQt6WaylandCompositorPresentationTime.prl
 qt6/lib/libQt6WaylandCompositorPresentationTime.so
+qt6/lib/libQt6WaylandCompositorPresentationTime.so.${PKGVERSION}
 qt6/lib/libQt6WaylandCompositorPresentationTime.so.6
-qt6/lib/libQt6WaylandCompositorPresentationTime.so.6.8.0
 qt6/lib/libQt6WaylandCompositorWLShell.prl
 qt6/lib/libQt6WaylandCompositorWLShell.so
+qt6/lib/libQt6WaylandCompositorWLShell.so.${PKGVERSION}
 qt6/lib/libQt6WaylandCompositorWLShell.so.6
-qt6/lib/libQt6WaylandCompositorWLShell.so.6.8.0
 qt6/lib/libQt6WaylandCompositorXdgShell.prl
 qt6/lib/libQt6WaylandCompositorXdgShell.so
+qt6/lib/libQt6WaylandCompositorXdgShell.so.${PKGVERSION}
 qt6/lib/libQt6WaylandCompositorXdgShell.so.6
-qt6/lib/libQt6WaylandCompositorXdgShell.so.6.8.0
 qt6/lib/libQt6WaylandEglClientHwIntegration.prl
 qt6/lib/libQt6WaylandEglClientHwIntegration.so
 qt6/lib/libQt6WaylandEglClientHwIntegration.so.${PKGVERSION}
@@ -752,3 +752,4 @@ qt6/qml/QtWayland/Compositor/libqwaylandcompositorplugin.so
 qt6/qml/QtWayland/Compositor/qmldir
 qt6/qml/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml
 qt6/qml/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml
+qt6/sbom/qtwayland-${PKGVERSION}.spdx
