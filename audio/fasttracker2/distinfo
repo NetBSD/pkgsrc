@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.116 2024/12/24 11:52:13 fox Exp $
+$NetBSD: distinfo,v 1.117 2024/12/26 12:07:06 fox Exp $
 
-BLAKE2s (fasttracker2-1.92.tar.gz) = 90e0409cde5f7cf01026969b4bbb1e02b6ca5a5b77def99b2c6c7a3090b8b05d
-SHA512 (fasttracker2-1.92.tar.gz) = 7bf76f5121c5e1c0291b323a0d386112b7f696e48d4580f74e37db80412e2039f4bc895ef3e91db487a4c7ff987a6a459ee644539c87a7cb969fd74fe109a0d1
-Size (fasttracker2-1.92.tar.gz) = 5231673 bytes
+BLAKE2s (fasttracker2-1.93.tar.gz) = f45dba1195fad2cfe9020a3883311dbd150064c5c792b154aa86bc54d84e3c89
+SHA512 (fasttracker2-1.93.tar.gz) = 445867e61dd0a8fbd6c5c15853d12c0fd2c590d9ee858516f591518b8e90faac2a7c10dacdb6bcf8e31f612c186eee97e80a83b5a17043352b1016aaace32b8c
+Size (fasttracker2-1.93.tar.gz) = 5232004 bytes
 SHA1 (patch-CMakeLists.txt) = 95b3f8e836a98d2c75b9ae6db91bc528eeb9f17f
