@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/09/23 08:15:57 adam Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/26 08:07:09 adam Exp $
 
-DISTNAME=	pg_repack-1.5.1
+DISTNAME=	pg_repack-1.5.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=reorg/}
