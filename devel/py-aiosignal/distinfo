@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/11/09 08:51:49 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/12/26 11:53:45 wiz Exp $
 
-BLAKE2s (aiosignal-1.3.1.tar.gz) = ce4719dec6491c9eeab58c5d26bea5bcb5b3b0b790b67a1eddc35b3e1505ff8a
-SHA512 (aiosignal-1.3.1.tar.gz) = 577cda11ffc3a343fadda81e7a037ab4de9cf16e9913124228b53a5e2fd6be4d9b7b3e1d92d61cbc5c472f318eccfa9fae580ca32aad25f42a05231ebea9caa6
-Size (aiosignal-1.3.1.tar.gz) = 19422 bytes
+BLAKE2s (aiosignal-1.3.2.tar.gz) = dd1f2a27cf5679313eed688786936b72d7137daf38f253572f0431825db0b240
+SHA512 (aiosignal-1.3.2.tar.gz) = ce4b234023580fc8a521d33a117205f2c602cea72bf7bf943e08c5bf28b63d72242a14cbedc0c64d83ab02579f9a2c6d59e5094f02061d1a60243abef66e7012
+Size (aiosignal-1.3.2.tar.gz) = 19424 bytes
