@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7837 2024/12/26 18:38:00 bsiegert Exp $
+$NetBSD: CHANGES-2024,v 1.7838 2024/12/26 18:38:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11712,3 +11712,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/xfce4-appfinder to 4.20.0 [bsiegert 2024-12-26]
 	Updated x11/xfce4-exo to 4.20.0 [bsiegert 2024-12-26]
 	Added sysutils/hwdata version 0.390 [bsiegert 2024-12-26]
+	Added x11/libdisplay-info version 0.2.0 [bsiegert 2024-12-26]
