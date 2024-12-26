@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2024/01/22 16:17:25 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
+@comment $NetBSD: PLIST,v 1.2 2024/12/26 22:14:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sphinxcontrib/spelling/__init__.py
 ${PYSITELIB}/sphinxcontrib/spelling/__init__.pyc
