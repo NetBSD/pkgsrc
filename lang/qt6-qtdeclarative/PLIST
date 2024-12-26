@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/10/25 10:41:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2024/12/26 22:20:15 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -1560,6 +1560,7 @@ qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginAdditionalTargetInfo.
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginDependencies.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets-release.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlAssetDownloaderpluginTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6QmlNetworkpluginAdditionalTargetInfo.cmake
@@ -2757,8 +2758,11 @@ qt6/plugins/qmltooling/libqmldbg_profiler.so
 qt6/plugins/qmltooling/libqmldbg_quickprofiler.so
 qt6/plugins/qmltooling/libqmldbg_server.so
 qt6/plugins/qmltooling/libqmldbg_tcp.so
+qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.a
+qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.prl
 qt6/qml/Assets/Downloader/libqmlassetdownloaderplugin.so
 qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloader_resources_1/.qt/rcc/qrc_qmake_Assets_Downloader_init.cpp.o
+qt6/qml/Assets/Downloader/objects-Release/QmlAssetDownloaderplugin_init/QmlAssetDownloaderplugin_init.cpp.o
 qt6/qml/Assets/Downloader/plugins.qmltypes
 qt6/qml/Assets/Downloader/qmldir
 qt6/qml/QML/plugins.qmltypes
@@ -4224,3 +4228,4 @@ qt6/qml/QtTest/qmldir
 qt6/qml/QtTest/testlogger.js
 qt6/qml/builtins.qmltypes
 qt6/qml/jsroot.qmltypes
+qt6/sbom/qtdeclarative-${PKGVERSION}.spdx

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/11/14 22:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/12/26 22:20:14 adam Exp $
 
 DISTNAME=	qtbase-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-psql-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt6 PostgreSQL driver
 CATEGORIES=	databases
 
@@ -15,6 +14,7 @@ CONFIGURE_ARGS+=	-no-sql-mysql
 CONFIGURE_ARGS+=	-no-sql-oci
 CONFIGURE_ARGS+=	-no-sql-odbc
 CONFIGURE_ARGS+=	-no-sql-sqlite
+CMAKE_CONFIGURE_ARGS+=	-DQT_GENERATE_SBOM=NO
 
 QTCONFDIR=		src/plugins/sqldrivers
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:42:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:19 adam Exp $
 lib/pkgconfig/Qt6WebChannel.pc
 lib/pkgconfig/Qt6WebChannelQuick.pc
 qt6/include/QtWebChannel/${PKGVERSION}/QtWebChannel/private/qmetaobjectpublisher_p.h
@@ -69,3 +69,4 @@ qt6/modules/WebChannelQuick.json
 qt6/qml/QtWebChannel/libwebchannelquickplugin.so
 qt6/qml/QtWebChannel/plugins.qmltypes
 qt6/qml/QtWebChannel/qmldir
+qt6/sbom/qtwebchannel-${PKGVERSION}.spdx

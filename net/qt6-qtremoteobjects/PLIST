@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:17 adam Exp $
 lib/pkgconfig/Qt6RemoteObjects.pc
 lib/pkgconfig/Qt6RemoteObjectsQml.pc
 lib/pkgconfig/Qt6RepParser.pc
@@ -137,3 +137,4 @@ qt6/modules/RepParser.json
 qt6/qml/QtRemoteObjects/libdeclarative_remoteobjectsplugin.so
 qt6/qml/QtRemoteObjects/plugins.qmltypes
 qt6/qml/QtRemoteObjects/qmldir
+qt6/sbom/qtremoteobjects-${PKGVERSION}.spdx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:18 adam Exp $
 lib/pkgconfig/Qt6Scxml.pc
 lib/pkgconfig/Qt6ScxmlQml.pc
 lib/pkgconfig/Qt6StateMachine.pc
@@ -216,3 +216,4 @@ qt6/qml/QtQml/StateMachine/qmldir
 qt6/qml/QtScxml/libdeclarative_scxmlplugin.so
 qt6/qml/QtScxml/plugins.qmltypes
 qt6/qml/QtScxml/qmldir
+qt6/sbom/qtscxml-${PKGVERSION}.spdx

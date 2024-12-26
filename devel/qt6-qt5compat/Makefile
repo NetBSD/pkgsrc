@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/11/14 22:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2024/12/26 22:20:14 adam Exp $
 
 DISTNAME=	qt5compat-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qt5compat-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt6 module for Qt5 portability
 CATEGORIES=	devel x11
 

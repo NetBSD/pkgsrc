@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/11/14 22:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2024/12/26 22:20:17 adam Exp $
 
 DISTNAME=	qtnetworkauth-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtnetworkauth-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt6 module with auth libraries
 CATEGORIES=	security net
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2024/12/26 22:20:17 adam Exp $
 lib/pkgconfig/Qt6Positioning.pc
 lib/pkgconfig/Qt6PositioningQuick.pc
 qt6/include/QtPositioning/${PKGVERSION}/QtPositioning/private/qclipperutils_p.h
@@ -153,3 +153,4 @@ qt6/plugins/position/libqtposition_positionpoll.so
 qt6/qml/QtPositioning/libpositioningquickplugin.so
 qt6/qml/QtPositioning/plugins.qmltypes
 qt6/qml/QtPositioning/qmldir
+qt6/sbom/qtpositioning-${PKGVERSION}.spdx

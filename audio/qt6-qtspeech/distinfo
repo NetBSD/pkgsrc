@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2024/10/25 10:42:00 adam Exp $
+$NetBSD: distinfo,v 1.14 2024/12/26 22:20:18 adam Exp $
 
-BLAKE2s (qtspeech-everywhere-src-6.8.0.tar.xz) = 3a142424f53d26611c06b86fcc64271516ba9b142d474c9acfc9d8e2f77fd046
-SHA512 (qtspeech-everywhere-src-6.8.0.tar.xz) = d1e2597f5407775750378844a6daecb27da2c6ffe720e4008e11ade07f183ec4d64c0bd25845bef81d6d0c31f6dafe0df160265f952a050b72d88715379b7720
-Size (qtspeech-everywhere-src-6.8.0.tar.xz) = 262308 bytes
+BLAKE2s (qtspeech-everywhere-src-6.8.1.tar.xz) = 8e4cb7a36a431ef59e011008031307539850b043b733135cb6931dc893ab5610
+SHA512 (qtspeech-everywhere-src-6.8.1.tar.xz) = a20d89c5bcad354d1896c87bf9c0a401e824b5dcbf0e5c86a72381e8f7f9d5946f10536b7a54d899c2fd6b84018ccd9159be4ffdc84cf2e568b54c688aa1101d
+Size (qtspeech-everywhere-src-6.8.1.tar.xz) = 262512 bytes
 SHA1 (patch-cmake_FindFlite.cmake) = 871495c2082dcbd020a80bc30ebe12a41afd6350

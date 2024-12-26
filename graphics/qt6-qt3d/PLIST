@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2024/12/26 22:20:14 adam Exp $
 lib/pkgconfig/Qt63DAnimation.pc
 lib/pkgconfig/Qt63DCore.pc
 lib/pkgconfig/Qt63DExtras.pc
@@ -10,6 +10,7 @@ lib/pkgconfig/Qt63DQuickExtras.pc
 lib/pkgconfig/Qt63DQuickInput.pc
 lib/pkgconfig/Qt63DQuickRender.pc
 lib/pkgconfig/Qt63DQuickScene2D.pc
+lib/pkgconfig/Qt63DQuickScene3D.pc
 lib/pkgconfig/Qt63DRender.pc
 qt6/include/Qt3DAnimation/${PKGVERSION}/Qt3DAnimation/private/abstractevaluateclipanimatorjob_p.h
 qt6/include/Qt3DAnimation/${PKGVERSION}/Qt3DAnimation/private/additiveclipblend_p.h
@@ -593,6 +594,7 @@ qt6/include/Qt3DQuickInput/Qt3DQuickInputVersion
 qt6/include/Qt3DQuickInput/qt3dquickinput_global.h
 qt6/include/Qt3DQuickInput/qt3dquickinputexports.h
 qt6/include/Qt3DQuickInput/qt3dquickinputversion.h
+qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/qt3dquick3drenderforeign_p.h
 qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/qt3dquickrender_global_p.h
 qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/qt3dquickrendernodefactory_p.h
 qt6/include/Qt3DQuickRender/${PKGVERSION}/Qt3DQuickRender/private/quick3deffect_p.h
@@ -639,6 +641,17 @@ qt6/include/Qt3DQuickScene2D/qscene2d.h
 qt6/include/Qt3DQuickScene2D/qt3dquickscene2d_global.h
 qt6/include/Qt3DQuickScene2D/qt3dquickscene2dexports.h
 qt6/include/Qt3DQuickScene2D/qt3dquickscene2dversion.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3ditem_p.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3dlogging_p.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3drenderer_p.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3dsgmaterial_p.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3dsgmaterialshader_p.h
+qt6/include/Qt3DQuickScene3D/${PKGVERSION}/Qt3DQuickScene3D/private/scene3dsgnode_p.h
+qt6/include/Qt3DQuickScene3D/Qt3DQuickScene3D
+qt6/include/Qt3DQuickScene3D/Qt3DQuickScene3DDepends
+qt6/include/Qt3DQuickScene3D/Qt3DQuickScene3DVersion
+qt6/include/Qt3DQuickScene3D/qt3dquickscene3dexports.h
+qt6/include/Qt3DQuickScene3D/qt3dquickscene3dversion.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/abstractpickingjob_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/abstractrenderer_p.h
 qt6/include/Qt3DRender/${PKGVERSION}/Qt3DRender/private/apishadermanager_p.h
@@ -1209,6 +1222,15 @@ qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets-release.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DTargets.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt63DQuickScene2D/Qt63DQuickScene2DVersionlessTargets.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfig.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfigVersion.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DConfigVersionImpl.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DDependencies.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DTargets-release.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DTargets.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt63DQuickScene3D/Qt63DQuickScene3DVersionlessTargets.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderConfig.cmake
 qt6/lib/cmake/Qt63DRender/Qt63DRenderConfigVersion.cmake
@@ -1360,6 +1382,10 @@ qt6/lib/libQt63DQuickScene2D.prl
 qt6/lib/libQt63DQuickScene2D.so
 qt6/lib/libQt63DQuickScene2D.so.${PKGVERSION}
 qt6/lib/libQt63DQuickScene2D.so.6
+qt6/lib/libQt63DQuickScene3D.prl
+qt6/lib/libQt63DQuickScene3D.so
+qt6/lib/libQt63DQuickScene3D.so.${PKGVERSION}
+qt6/lib/libQt63DQuickScene3D.so.6
 qt6/lib/libQt63DRender.prl
 qt6/lib/libQt63DRender.so
 qt6/lib/libQt63DRender.so.${PKGVERSION}
@@ -1375,6 +1401,7 @@ qt6/lib/pkgconfig/Qt63DQuickExtras.pc
 qt6/lib/pkgconfig/Qt63DQuickInput.pc
 qt6/lib/pkgconfig/Qt63DQuickRender.pc
 qt6/lib/pkgconfig/Qt63DQuickScene2D.pc
+qt6/lib/pkgconfig/Qt63DQuickScene3D.pc
 qt6/lib/pkgconfig/Qt63DRender.pc
 qt6/metatypes/qt63danimation_release_metatypes.json
 qt6/metatypes/qt63dcore_release_metatypes.json
@@ -1387,6 +1414,7 @@ qt6/metatypes/qt63dquickextras_release_metatypes.json
 qt6/metatypes/qt63dquickinput_release_metatypes.json
 qt6/metatypes/qt63dquickrender_release_metatypes.json
 qt6/metatypes/qt63dquickscene2d_release_metatypes.json
+qt6/metatypes/qt63dquickscene3d_release_metatypes.json
 qt6/metatypes/qt63drender_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_3danimation.pri
 qt6/mkspecs/modules/qt_lib_3danimation_private.pri
@@ -1410,6 +1438,8 @@ qt6/mkspecs/modules/qt_lib_3dquickrender.pri
 qt6/mkspecs/modules/qt_lib_3dquickrender_private.pri
 qt6/mkspecs/modules/qt_lib_3dquickscene2d.pri
 qt6/mkspecs/modules/qt_lib_3dquickscene2d_private.pri
+qt6/mkspecs/modules/qt_lib_3dquickscene3d.pri
+qt6/mkspecs/modules/qt_lib_3dquickscene3d_private.pri
 qt6/mkspecs/modules/qt_lib_3drender.pri
 qt6/mkspecs/modules/qt_lib_3drender_private.pri
 qt6/modules/3DAnimation.json
@@ -1423,6 +1453,7 @@ qt6/modules/3DQuickExtras.json
 qt6/modules/3DQuickInput.json
 qt6/modules/3DQuickRender.json
 qt6/modules/3DQuickScene2D.json
+qt6/modules/3DQuickScene3D.json
 qt6/modules/3DRender.json
 qt6/plugins/geometryloaders/libdefaultgeometryloader.so
 qt6/plugins/geometryloaders/libgltfgeometryloader.so
@@ -1456,3 +1487,4 @@ qt6/qml/QtQuick/Scene2D/qmldir
 qt6/qml/QtQuick/Scene3D/libqtquickscene3dplugin.so
 qt6/qml/QtQuick/Scene3D/plugins.qmltypes
 qt6/qml/QtQuick/Scene3D/qmldir
+qt6/sbom/qt3d-${PKGVERSION}.spdx

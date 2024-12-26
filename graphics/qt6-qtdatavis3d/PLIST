@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:15 adam Exp $
 lib/pkgconfig/Qt6DataVisualization.pc
 lib/pkgconfig/Qt6DataVisualizationQml.pc
 qt6/include/QtDataVisualization/${PKGVERSION}/QtDataVisualization/private/abstract3dcontroller_p.h
@@ -234,3 +234,4 @@ qt6/qml/QtDataVisualization/designer/qtdatavisualization.metainfo
 qt6/qml/QtDataVisualization/libdatavisualizationqmlplugin.so
 qt6/qml/QtDataVisualization/plugins.qmltypes
 qt6/qml/QtDataVisualization/qmldir
+qt6/sbom/qtdatavisualization-${PKGVERSION}.spdx

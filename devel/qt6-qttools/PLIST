@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2024/12/26 22:20:19 adam Exp $
 lib/pkgconfig/Qt6Designer.pc
 lib/pkgconfig/Qt6Help.pc
 lib/pkgconfig/Qt6Linguist.pc
@@ -463,3 +463,4 @@ qt6/phrasebooks/spanish.qph
 qt6/phrasebooks/swedish.qph
 qt6/plugins/designer/libqquickwidget.so
 qt6/plugins/help/libhelpplugin.so
+qt6/sbom/qttools-${PKGVERSION}.spdx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:18 adam Exp $
 lib/pkgconfig/Qt6TextToSpeech.pc
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qtexttospeech_p.h
 qt6/include/QtTextToSpeech/${PKGVERSION}/QtTextToSpeech/private/qttexttospeech-config_p.h
@@ -69,3 +69,4 @@ qt6/plugins/texttospeech/libqtexttospeech_speechd.so
 qt6/qml/QtTextToSpeech/libtexttospeechqmlplugin.so
 qt6/qml/QtTextToSpeech/plugins.qmltypes
 qt6/qml/QtTextToSpeech/qmldir
+qt6/sbom/qtspeech-${PKGVERSION}.spdx

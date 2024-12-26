@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:18 adam Exp $
 lib/pkgconfig/Qt6SerialPort.pc
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialport_p.h
 qt6/include/QtSerialPort/${PKGVERSION}/QtSerialPort/private/qserialportinfo_p.h
@@ -33,3 +33,4 @@ qt6/metatypes/qt6serialport_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_serialport.pri
 qt6/mkspecs/modules/qt_lib_serialport_private.pri
 qt6/modules/SerialPort.json
+qt6/sbom/qtserialport-${PKGVERSION}.spdx

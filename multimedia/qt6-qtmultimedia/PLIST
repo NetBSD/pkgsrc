@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/12/26 22:20:16 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
@@ -61,6 +61,7 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotexturehelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideowindow_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotransformation_p.h
 qt6/include/QtMultimedia/QAbstractVideoBuffer
 qt6/include/QtMultimedia/QAudio
 qt6/include/QtMultimedia/QAudioBuffer
@@ -150,6 +151,23 @@ qt6/include/QtMultimediaQuick/QtMultimediaQuickDepends
 qt6/include/QtMultimediaQuick/QtMultimediaQuickVersion
 qt6/include/QtMultimediaQuick/qtmultimediaquickexports.h
 qt6/include/QtMultimediaQuick/qtmultimediaquickversion.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/audiogenerationutils_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/capturesessionfixture_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/framegenerator_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediabackendutils_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediafileselector_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/mediainfo_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qcolorutil_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qfileutil_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qmockiodevice_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qscopedenvironmentvariable_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qsequentialfileadaptor_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/qsinewavevalidator_p.h
+qt6/include/QtMultimediaTestLib/${PKGVERSION}/QtMultimediaTestLib/private/testvideosink_p.h
+qt6/include/QtMultimediaTestLib/QtMultimediaTestLib
+qt6/include/QtMultimediaTestLib/QtMultimediaTestLibDepends
+qt6/include/QtMultimediaTestLib/QtMultimediaTestLibVersion
+qt6/include/QtMultimediaTestLib/qtmultimediatestlibversion.h
 qt6/include/QtMultimediaWidgets/${PKGVERSION}/QtMultimediaWidgets/private/qvideowidget_p.h
 qt6/include/QtMultimediaWidgets/QGraphicsVideoItem
 qt6/include/QtMultimediaWidgets/QVideoWidget
@@ -281,6 +299,15 @@ qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets-release
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessTargets.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateAdditionalTargetInfo.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateConfig.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateConfigVersion.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateDependencies.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateTargets-release.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateTargets.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateVersionlessAliasTargets.cmake
+qt6/lib/cmake/Qt6MultimediaTestLibPrivate/Qt6MultimediaTestLibPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfig.cmake
 qt6/lib/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersion.cmake
@@ -338,6 +365,8 @@ qt6/lib/libQt6MultimediaQuick.prl
 qt6/lib/libQt6MultimediaQuick.so
 qt6/lib/libQt6MultimediaQuick.so.${PKGVERSION}
 qt6/lib/libQt6MultimediaQuick.so.6
+qt6/lib/libQt6MultimediaTestLib.a
+qt6/lib/libQt6MultimediaTestLib.prl
 qt6/lib/libQt6MultimediaWidgets.prl
 qt6/lib/libQt6MultimediaWidgets.so
 qt6/lib/libQt6MultimediaWidgets.so.${PKGVERSION}
@@ -357,6 +386,7 @@ qt6/lib/pkgconfig/Qt6MultimediaWidgets.pc
 qt6/lib/pkgconfig/Qt6SpatialAudio.pc
 qt6/metatypes/qt6multimedia_release_metatypes.json
 qt6/metatypes/qt6multimediaquickprivate_release_metatypes.json
+qt6/metatypes/qt6multimediatestlibprivate_release_metatypes.json
 qt6/metatypes/qt6multimediawidgets_release_metatypes.json
 ${PLIST.gstreamer}qt6/metatypes/qt6qgstreamermediapluginimplprivate_release_metatypes.json
 qt6/metatypes/qt6quick3dspatialaudioprivate_release_metatypes.json
@@ -364,6 +394,7 @@ qt6/metatypes/qt6spatialaudio_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_multimedia.pri
 qt6/mkspecs/modules/qt_lib_multimedia_private.pri
 qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri
+qt6/mkspecs/modules/qt_lib_multimediatestlibprivate_private.pri
 qt6/mkspecs/modules/qt_lib_multimediawidgets.pri
 qt6/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 ${PLIST.gstreamer}qt6/mkspecs/modules/qt_lib_qgstreamermediapluginimpl_private.pri
@@ -372,6 +403,7 @@ qt6/mkspecs/modules/qt_lib_spatialaudio.pri
 qt6/mkspecs/modules/qt_lib_spatialaudio_private.pri
 qt6/modules/Multimedia.json
 qt6/modules/MultimediaQuickPrivate.json
+qt6/modules/MultimediaTestLibPrivate.json
 qt6/modules/MultimediaWidgets.json
 ${PLIST.gstreamer}qt6/modules/QGstreamerMediaPluginImplPrivate.json
 qt6/modules/Quick3DSpatialAudioPrivate.json
@@ -385,3 +417,4 @@ qt6/qml/QtMultimedia/qmldir
 qt6/qml/QtQuick3D/SpatialAudio/libquick3dspatialaudioplugin.so
 qt6/qml/QtQuick3D/SpatialAudio/plugins.qmltypes
 qt6/qml/QtQuick3D/SpatialAudio/qmldir
+qt6/sbom/qtmultimedia-${PKGVERSION}.spdx

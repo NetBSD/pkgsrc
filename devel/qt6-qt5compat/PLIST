@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:14 adam Exp $
 lib/pkgconfig/Qt6Core5Compat.pc
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjson_p.h
 qt6/include/QtCore5Compat/${PKGVERSION}/QtCore5Compat/private/qbinaryjsonarray_p.h
@@ -121,3 +121,4 @@ qt6/qml/Qt5Compat/GraphicalEffects/private/libqtgraphicaleffectsprivateplugin.so
 qt6/qml/Qt5Compat/GraphicalEffects/private/plugins.qmltypes
 qt6/qml/Qt5Compat/GraphicalEffects/private/qmldir
 qt6/qml/Qt5Compat/GraphicalEffects/qmldir
+qt6/sbom/qt5compat-${PKGVERSION}.spdx

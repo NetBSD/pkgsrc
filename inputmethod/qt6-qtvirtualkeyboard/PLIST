@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:19 adam Exp $
 lib/pkgconfig/Qt6VirtualKeyboard.pc
 lib/pkgconfig/Qt6VirtualKeyboardSettings.pc
 qt6/include/QtVirtualKeyboard/${PKGVERSION}/QtVirtualKeyboard/private/abstractinputpanel_p.h
@@ -258,3 +258,4 @@ qt6/qml/QtQuick/VirtualKeyboard/Styles/qmldir
 qt6/qml/QtQuick/VirtualKeyboard/libqtvkbplugin.so
 qt6/qml/QtQuick/VirtualKeyboard/plugins.qmltypes
 qt6/qml/QtQuick/VirtualKeyboard/qmldir
+qt6/sbom/qtvirtualkeyboard-${PKGVERSION}.spdx

@@ -1,14 +1,5 @@
-@comment $NetBSD: PLIST.openxr,v 1.1 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST.openxr,v 1.2 2024/12/26 22:20:17 adam Exp $
 lib/pkgconfig/Qt6Quick3DXr.pc
-qt6/include/QtOpenXR/QtOpenXRDepends
-qt6/include/QtOpenXR/openxr/CMakeLists.txt
-qt6/include/QtOpenXR/openxr/openxr.h
-qt6/include/QtOpenXR/openxr/openxr_loader_negotiation.h
-qt6/include/QtOpenXR/openxr/openxr_platform.h
-qt6/include/QtOpenXR/openxr/openxr_platform_defines.h
-qt6/include/QtOpenXR/openxr/openxr_reflection.h
-qt6/include/QtOpenXR/openxr/openxr_reflection_parent_structs.h
-qt6/include/QtOpenXR/openxr/openxr_reflection_structs.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qabstractopenxrgraphics_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrhelpers_p.h
 qt6/include/QtQuick3DXr/${PKGVERSION}/QtQuick3DXr/private/qopenxrinputmanager_p.h
@@ -48,13 +39,6 @@ qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRTargets-release.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRTargets.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRVersionlessAliasTargets.cmake
 qt6/lib/cmake/Qt6BundledOpenXR/Qt6BundledOpenXRVersionlessTargets.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateAdditionalTargetInfo.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateConfig.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateConfigVersion.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateConfigVersionImpl.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateTargets.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateVersionlessAliasTargets.cmake
-qt6/lib/cmake/Qt6OpenXRPrivate/Qt6OpenXRPrivateVersionlessTargets.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginConfig.cmake
 qt6/lib/cmake/Qt6Qml/QmlPlugins/Qt6Quick3DXrpluginConfigVersion.cmake
@@ -78,10 +62,8 @@ qt6/lib/libQt6Quick3DXr.so.6
 qt6/lib/pkgconfig/Qt6Quick3DXr.pc
 qt6/metatypes/qt6quick3dxr_release_metatypes.json
 qt6/mkspecs/modules/qt_ext_openxr_loader.pri
-qt6/mkspecs/modules/qt_lib_openxr_private.pri
 qt6/mkspecs/modules/qt_lib_quick3dxr.pri
 qt6/mkspecs/modules/qt_lib_quick3dxr_private.pri
-qt6/modules/OpenXRPrivate.json
 qt6/modules/Quick3DXr.json
 qt6/qml/QtQuick3D/Xr/XrErrorDialog.qml
 qt6/qml/QtQuick3D/Xr/libquick3dxrplugin.so

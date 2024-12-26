@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:16 adam Exp $
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/beziereasing_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbase_p.h
 qt6/include/QtBodymovin/${PKGVERSION}/QtBodymovin/private/bmbasictransform_p.h
@@ -57,3 +57,4 @@ qt6/modules/BodymovinPrivate.json
 qt6/qml/Qt/labs/lottieqt/liblottieqtplugin.so
 qt6/qml/Qt/labs/lottieqt/plugins.qmltypes
 qt6/qml/Qt/labs/lottieqt/qmldir
+qt6/sbom/qtlottie-${PKGVERSION}.spdx

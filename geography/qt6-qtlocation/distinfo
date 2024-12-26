@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/10/25 10:41:58 adam Exp $
+$NetBSD: distinfo,v 1.13 2024/12/26 22:20:16 adam Exp $
 
-BLAKE2s (qtlocation-everywhere-src-6.8.0.tar.xz) = 4f05ea72ff6a6c05f2fcc4667e08fb994aa11331bae601ad4bd3bcef137b1411
-SHA512 (qtlocation-everywhere-src-6.8.0.tar.xz) = dcbeb6306c58b8809054be070fdcb00c8b3397c934bbd433d3e3152275cbbd662d67c9316a5724a229ec6e2874d5a2d33fa9693f1a0f0c4ffb294b92a0387d49
-Size (qtlocation-everywhere-src-6.8.0.tar.xz) = 3166076 bytes
+BLAKE2s (qtlocation-everywhere-src-6.8.1.tar.xz) = 1ce2a6433cab30e10155d1b34273727d82dc4bb6467f669fc51c3045b53fd932
+SHA512 (qtlocation-everywhere-src-6.8.1.tar.xz) = 0d002e99b1e7434814a58e560a0730f0b1f9cc81cfe7d01001b2a2bd213b5ceaa4deaf6693f210f8576d7e76ac32fe22e758bc9c03888e7acfd4440902d454ac
+Size (qtlocation-everywhere-src-6.8.1.tar.xz) = 3164180 bytes

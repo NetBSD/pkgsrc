@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:18 adam Exp $
 lib/pkgconfig/Qt6ShaderTools.pc
 qt6/bin/qsb
 qt6/include/QtShaderTools/${PKGVERSION}/QtShaderTools/private/qshaderrewriter_p.h
@@ -41,3 +41,4 @@ qt6/metatypes/qt6shadertools_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_shadertools.pri
 qt6/mkspecs/modules/qt_lib_shadertools_private.pri
 qt6/modules/ShaderTools.json
+qt6/sbom/qtshadertools-${PKGVERSION}.spdx
