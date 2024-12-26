@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.79 2024/10/22 06:29:21 jperkin Exp $
+# $NetBSD: fetch.mk,v 1.80 2024/12/26 20:23:07 maya Exp $
 
 .if empty(INTERACTIVE_STAGE:Mfetch) && empty(FETCH_MESSAGE:U)
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -219,6 +219,9 @@ fetch-check-interactive: .USEBEFORE
 #	to try to resume interrupted file transfers to avoid downloading
 #	the whole file.  The default is set in pkgsrc/mk/defaults/mk.conf.
 #
+# FETCH_INSECURE, if defined, will cause the fetch command to not validate
+#	TLS certificates.
+#
 # FETCH_TIMEOUT, if defined, will cause the fetch command to quit on stalled
 #	connections after the given amount of seconds.
 #       The specific behavior depends on the command used.
@@ -267,7 +270,7 @@ _FETCH_CMD.fetch=		${PKGSRC_SETENV} \
 				${TOOLS_PATH.fetch}
 
 _FETCH_BEFORE_ARGS.wget=	${PASSIVE_FETCH:D--passive-ftp} \
-				--no-check-certificate \
+				${FETCH_INSECURE:D--no-check-certificate} \
 				${FETCH_TIMEOUT:D--timeout=${FETCH_TIMEOUT}} \
 				${FETCH_USE_IPV4_ONLY:D--inet4-only}
 _FETCH_AFTER_ARGS.wget=		# empty
@@ -289,7 +292,8 @@ _FETCH_CMD.ofhttp=		${PKGSRC_SETENV} ofhttp
 # Generic FETCH_PROXY is passed via the --proxy argument to support
 # other protocols like socks4/socks5.
 _FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv} \
-				--fail --insecure --location --remote-time \
+				--fail --location --remote-time \
+				${FETCH_INSECURE:D--insecure} \
 				${FETCH_TIMEOUT:D--connect-timeout ${FETCH_TIMEOUT}} \
 				${FETCH_TIMEOUT:D--speed-time ${FETCH_TIMEOUT}} \
 				${FETCH_PROXY:D--proxy ${FETCH_PROXY:Q}} \
