@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.50 2024/03/06 19:11:53 adam Exp $
+$NetBSD: distinfo,v 1.51 2024/12/26 22:16:45 adam Exp $
 
-BLAKE2s (salt-3006.7.tar.gz) = 9ac97c113636811eb9bcc51dca7c2cab55bcf18411e7432c460ab1d1615961a8
-SHA512 (salt-3006.7.tar.gz) = 9d1759a7c0dfc9ad4fdc94460f0f3799483737207bfdc8ddd1424e5c6083ea74ef520f13c323d5cbd7f65c1d9bb13bbbeb5f2cafe6dcacbc2689e733794aef2d
-Size (salt-3006.7.tar.gz) = 20562663 bytes
+BLAKE2s (salt-3007.1.tar.gz) = 4c90e6d067fcad3a253c95b5c4c913dbd8269edde4eea39a87d778edf0e08481
+SHA512 (salt-3007.1.tar.gz) = 732820bae98ce2eb74175a2c37c986076572e0e60d04a270861fd3b0b6871cd2cc703683a8c0d97ffc43b2f7fffb76ae709a1aea839d10abc9f5d0837eaade4b
+Size (salt-3007.1.tar.gz) = 19401831 bytes
 SHA1 (patch-salt_utils_rsax931.py) = 989e24088a55a983f7e404dc29cbffc7ec2f6aa6
 SHA1 (patch-salt_version.py) = 45f9552d286ec03a38efe9e6655ff520334f31db

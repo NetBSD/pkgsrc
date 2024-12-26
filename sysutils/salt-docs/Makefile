@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/10/14 06:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/12/26 22:16:45 adam Exp $
 
 .include "../../sysutils/salt/Makefile.common"
 
@@ -25,8 +25,6 @@ HTMLDIR=	share/doc/salt
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 INSTALLATION_DIRS=	${HTMLDIR}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	39 312
 
 # Contains hardcoded paths that may refer to paths used during the build, for
 # example /opt/tools on SmartOS.
