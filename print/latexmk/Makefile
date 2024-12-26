@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2024/12/17 19:28:58 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2024/12/26 18:16:57 riastradh Exp $
 
-DISTNAME=	latexmk-465
+DISTNAME=	latexmk-486
 CATEGORIES=	print
-MASTER_SITES=	http://users.phys.psu.edu/~collins/software/latexmk/
+MASTER_SITES=	https://www.cantab.net/users/johncollins/latexmk/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://users.phys.psu.edu/~collins/software/latexmk/
+HOMEPAGE=	https://www.cantab.net/users/johncollins/latexmk/index.html
 COMMENT=	Tool to completely automate generating output from LaTeX documents
 LICENSE=	gnu-gpl-v2
 
