@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.109 2024/11/14 22:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2024/12/26 21:52:48 triaxx Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
@@ -29,7 +29,7 @@ PLIST.fiber=		yes
 .  endif
 .endif
 
-.if ${MACHINE_ARCH} == x86_86 && !empty(PKGSRC_COMPILER:Mgcc)
+.if ${MACHINE_ARCH} == x86_64 && !empty(PKGSRC_COMPILER:Mgcc)
 PLIST.stacktrace_from_exception=	yes
 .else
 BJAM_BUILD+=		boost.stacktrace.from_exception=off
@@ -52,7 +52,7 @@ PLIST.longdbl=		yes
 # being available in the toolchain (not easy to detect beforehand).
 GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX}; \
 			for f in lib/libboost_stacktrace_backtrace.*; do \
-			if [ -f "$$f" ]; then echo "$$f"; fi; \
+			if [ -f "$$f" ]; then ${ECHO} "$$f"; fi; \
 			done;
 
 UNLIMIT_RESOURCES+=	stacksize
@@ -67,12 +67,13 @@ CONFIGURE_ENV+=	ZLIB_LIBRARY_PATH=${BUILDLINK_PREFIX.zlib}/lib
 
 do-build: bjam-build
 
-do-install: boost-install-libs
+do-install: boost-install-libs boost-install-cmake
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
