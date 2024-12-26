@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7812 2024/12/26 11:45:15 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7813 2024/12/26 11:48:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11681,3 +11681,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/dunst to 1.12.1 [wiz 2024-12-26]
 	Updated audio/pcaudiolib to 1.3 [wiz 2024-12-26]
 	Updated audio/espeak-ng to 1.52.0 [wiz 2024-12-26]
+	Updated devel/re2c to 4.0.2 [wiz 2024-12-26]
