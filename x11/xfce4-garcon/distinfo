@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2024/02/15 01:35:33 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2024/12/26 18:23:47 bsiegert Exp $
 
-BLAKE2s (garcon-4.18.2.tar.bz2) = 1437fc31a6460e5a6aac62dcd9e601cd95bd806de0b2c90a9a548131ac73d6bc
-SHA512 (garcon-4.18.2.tar.bz2) = f74547a29dbf47469e9448ea0fb89a297d02c7a5d2f7ec1a1f05706f89160730e04743ce84de29de21f32a2d2e4e4410f6c12fd14777c65944529f5104973cee
-Size (garcon-4.18.2.tar.bz2) = 579345 bytes
+BLAKE2s (garcon-4.20.0.tar.bz2) = 5e9404fa2f4087feafe6f30c7524bdc692c2399c290616965872e13dca370e24
+SHA512 (garcon-4.20.0.tar.bz2) = 5ed8b031cceb5943af56d006b05dc9f8ac28695a35d17a8f27f8bde1a0a75067fc4d307c87250a436d1b317f92d501f01ce4078b5c961e4e9daccd175f2f261a
+Size (garcon-4.20.0.tar.bz2) = 659796 bytes
 SHA1 (patch-data_xfce_Makefile.in) = 80264dc6736b1be4ff64f135107b8dff9100a097
 SHA1 (patch-garcon-gtk_Makefile.am) = ec605a013e2e3494f68903806ab6af56be3f33e8
 SHA1 (patch-garcon_Makefile.in) = 875699bf7dfa7138712caa93c2bf5be2f07841ed

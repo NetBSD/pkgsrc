@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/02/15 01:35:33 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/12/26 18:23:47 bsiegert Exp $
 include/garcon-1/garcon/garcon-config.h
 include/garcon-1/garcon/garcon-environment.h
 include/garcon-1/garcon/garcon-marshal.h
@@ -125,6 +125,7 @@ share/locale/pt/LC_MESSAGES/garcon.mo
 share/locale/pt_BR/LC_MESSAGES/garcon.mo
 share/locale/ro/LC_MESSAGES/garcon.mo
 share/locale/ru/LC_MESSAGES/garcon.mo
+share/locale/si/LC_MESSAGES/garcon.mo
 share/locale/sk/LC_MESSAGES/garcon.mo
 share/locale/sl/LC_MESSAGES/garcon.mo
 share/locale/sq/LC_MESSAGES/garcon.mo
