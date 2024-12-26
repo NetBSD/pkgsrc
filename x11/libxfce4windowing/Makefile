@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2024/12/25 11:04:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2024/12/26 18:40:14 bsiegert Exp $
 
+PKGREVISION=	1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	libxfce4windowing-4.20.0
@@ -10,6 +11,8 @@ COMMENT=	Xfce window management library
 
 USE_TOOLS+=		pkg-config
 
+MESON_ARGS+=		-Dx11=enabled
+
 PKGCONFIG_OVERRIDE+=	libxfce4windowing/libxfce4windowing-0.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4windowing/libxfce4windowing-x11-0.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4windowingui/libxfce4windowingui-0.pc.in
@@ -18,4 +21,6 @@ BUILD_DEPENDS+=	xfce4-dev-tools>=4.20.0:../../devel/xfce4-dev-tools
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
+.include "../../x11/libdisplay-info/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
