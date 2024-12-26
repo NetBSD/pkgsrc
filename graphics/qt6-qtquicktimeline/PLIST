@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/25 10:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:17 adam Exp $
 lib/pkgconfig/Qt6QuickTimeline.pc
 lib/pkgconfig/Qt6QuickTimelineBlendTrees.pc
 qt6/include/QtQuickTimeline/${PKGVERSION}/QtQuickTimeline/private/qquickkeyframe_p.h
@@ -77,3 +77,4 @@ qt6/qml/QtQuick/Timeline/BlendTrees/qmldir
 qt6/qml/QtQuick/Timeline/libqtquicktimelineplugin.so
 qt6/qml/QtQuick/Timeline/plugins.qmltypes
 qt6/qml/QtQuick/Timeline/qmldir
+qt6/sbom/qtquicktimeline-${PKGVERSION}.spdx

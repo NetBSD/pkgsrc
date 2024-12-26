@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/25 10:41:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/26 22:20:16 adam Exp $
 lib/pkgconfig/Qt6HttpServer.pc
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qabstracthttpserver_p.h
 qt6/include/QtHttpServer/${PKGVERSION}/QtHttpServer/private/qhttpserver_p.h
@@ -55,3 +55,4 @@ qt6/metatypes/qt6httpserver_release_metatypes.json
 qt6/mkspecs/modules/qt_lib_httpserver.pri
 qt6/mkspecs/modules/qt_lib_httpserver_private.pri
 qt6/modules/HttpServer.json
+qt6/sbom/qthttpserver-${PKGVERSION}.spdx

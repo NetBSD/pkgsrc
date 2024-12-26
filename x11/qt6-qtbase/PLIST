@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2024/12/26 22:20:15 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -192,7 +192,6 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcollator_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qconfig_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcore_unix_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcoreapplication_p.h
-qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcorecmdlineargs_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcoreevent_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdatastream_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qdataurl_p.h
@@ -298,6 +297,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsharedmemory_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsimd_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsimd_x86_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsingleshottimer_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/qsmallbytearray_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qspan_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstorageinfo_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qstringalgorithms_p.h
@@ -324,6 +324,7 @@ qt6/include/QtCore/${PKGVERSION}/QtCore/private/qtransposeproxymodel_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qunicodetables_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qunicodetools_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/quniquehandle_p.h
+qt6/include/QtCore/${PKGVERSION}/QtCore/private/quniquehandle_types_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qurl_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qvariant_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qvariantanimation_p.h
@@ -2646,6 +2647,7 @@ qt6/include/QtXml/qtxmlexports.h
 qt6/include/QtXml/qtxmlglobal.h
 qt6/include/QtXml/qtxmlversion.h
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/COPYING-CMAKE-SCRIPTS
+qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/REUSE.toml
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/ECMFindModuleHelpersStub.cmake
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindEGL.cmake
 qt6/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules/FindGLIB2.cmake
@@ -2661,6 +2663,7 @@ qt6/lib/cmake/Qt6/3rdparty/kwin/FindLibdrm.cmake
 qt6/lib/cmake/Qt6/3rdparty/kwin/FindLibinput.cmake
 qt6/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake
 qt6/lib/cmake/Qt6/3rdparty/kwin/Findgbm.cmake
+qt6/lib/cmake/Qt6/3rdparty/kwin/REUSE.toml
 qt6/lib/cmake/Qt6/3rdparty/kwin/qt_attribution.json
 qt6/lib/cmake/Qt6/FindATSPI2.cmake
 qt6/lib/cmake/Qt6/FindDB2.cmake
@@ -2740,6 +2743,7 @@ qt6/lib/cmake/Qt6/QtBuildOptionsHelpers.cmake
 qt6/lib/cmake/Qt6/QtBuildPathsHelpers.cmake
 qt6/lib/cmake/Qt6/QtBuildRepoExamplesHelpers.cmake
 qt6/lib/cmake/Qt6/QtBuildRepoHelpers.cmake
+qt6/lib/cmake/Qt6/QtBuildStaticDocToolsScript.cmake
 qt6/lib/cmake/Qt6/QtCMakeHelpers.cmake
 qt6/lib/cmake/Qt6/QtCMakePackageVersionFile.cmake.in
 qt6/lib/cmake/Qt6/QtCMakeVersionHelpers.cmake
@@ -2847,6 +2851,8 @@ qt6/lib/cmake/Qt6/libexec/qt-internal-ninja.in
 qt6/lib/cmake/Qt6/libexec/qt-internal-strip.in
 qt6/lib/cmake/Qt6/modulecppexports.h.in
 qt6/lib/cmake/Qt6/platforms/FindIntegrityPlatformGraphics.cmake
+qt6/lib/cmake/Qt6/platforms/FindPlatformGraphics.cmake
+qt6/lib/cmake/Qt6/platforms/FindVxWorksPlatformGraphics.cmake
 qt6/lib/cmake/Qt6/platforms/Platform/Integrity.cmake
 qt6/lib/cmake/Qt6/qbatchedtestrunner.in.cpp
 qt6/lib/cmake/Qt6/qt.toolchain.cmake
@@ -3344,6 +3350,7 @@ qt6/libexec/cmake_automoc_parser
 qt6/libexec/ensure_pro_file.cmake
 qt6/libexec/moc
 qt6/libexec/qlalr
+qt6/libexec/qt-android-runner.py
 qt6/libexec/qt-cmake-private
 qt6/libexec/qt-cmake-private-install.cmake
 qt6/libexec/qt-cmake-standalone-test
@@ -3379,6 +3386,7 @@ qt6/metatypes/qt6test_release_metatypes.json
 qt6/metatypes/qt6widgets_release_metatypes.json
 ${PLIST.x11}qt6/metatypes/qt6xcbqpaprivate_release_metatypes.json
 qt6/metatypes/qt6xml_release_metatypes.json
+qt6/mkspecs/REUSE.toml
 qt6/mkspecs/aix-g++-64/qmake.conf
 qt6/mkspecs/aix-g++-64/qplatformdefs.h
 qt6/mkspecs/aix-g++/qmake.conf
@@ -3909,3 +3917,4 @@ qt6/plugins/tls/libqcertonlybackend.so
 qt6/plugins/tls/libqopensslbackend.so
 ${PLIST.egl}qt6/plugins/xcbglintegrations/libqxcb-egl-integration.so
 qt6/plugins/xcbglintegrations/libqxcb-glx-integration.so
+qt6/sbom/qtbase-${PKGVERSION}.spdx

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/11/14 22:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2024/12/26 22:20:19 adam Exp $
 
 DISTNAME=	qttools-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qttools-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	Qt6 development tools
 CATEGORIES=	devel
 LICENSE=	gnu-lgpl-v3 OR gnu-gpl-v2 OR gnu-gpl-v3

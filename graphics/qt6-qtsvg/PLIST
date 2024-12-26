@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/10/25 10:42:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/26 22:20:18 adam Exp $
 lib/pkgconfig/Qt6Svg.pc
 lib/pkgconfig/Qt6SvgWidgets.pc
 qt6/include/QtSvg/${PKGVERSION}/QtSvg/private/qsvgfilter_p.h
@@ -83,3 +83,4 @@ qt6/modules/Svg.json
 qt6/modules/SvgWidgets.json
 qt6/plugins/iconengines/libqsvgicon.so
 qt6/plugins/imageformats/libqsvg.so
+qt6/sbom/qtsvg-${PKGVERSION}.spdx
