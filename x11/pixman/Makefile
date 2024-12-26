@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2024/12/14 12:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2024/12/26 19:18:55 adam Exp $
 
 DISTNAME=	pixman-0.44.2
 CATEGORIES=	x11
@@ -10,10 +10,13 @@ HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Library of low-level pixel manipulation routines
 LICENSE=	mit
 
+# gcc: fatal error: cannot read spec file 'libgomp.spec': No such file or directory
+MESON_ARGS+=	-Dopenmp=disabled
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == i386
-MESON_ARGS+=		-Dsse2=disabled
+MESON_ARGS+=	-Dsse2=disabled
 .endif
 
 .if ${PKGSRC_COMPILER:Mclang} && ${MACHINE_ARCH} == "aarch64"
