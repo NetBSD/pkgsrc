@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/08/03 07:23:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/12/26 23:20:42 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -122,6 +122,9 @@ ${PYSITELIB}/xarray/core/concat.pyo
 ${PYSITELIB}/xarray/core/coordinates.py
 ${PYSITELIB}/xarray/core/coordinates.pyc
 ${PYSITELIB}/xarray/core/coordinates.pyo
+${PYSITELIB}/xarray/core/dask_array_compat.py
+${PYSITELIB}/xarray/core/dask_array_compat.pyc
+${PYSITELIB}/xarray/core/dask_array_compat.pyo
 ${PYSITELIB}/xarray/core/dask_array_ops.py
 ${PYSITELIB}/xarray/core/dask_array_ops.pyc
 ${PYSITELIB}/xarray/core/dask_array_ops.pyo
@@ -140,9 +143,6 @@ ${PYSITELIB}/xarray/core/datatree_io.pyo
 ${PYSITELIB}/xarray/core/datatree_mapping.py
 ${PYSITELIB}/xarray/core/datatree_mapping.pyc
 ${PYSITELIB}/xarray/core/datatree_mapping.pyo
-${PYSITELIB}/xarray/core/datatree_ops.py
-${PYSITELIB}/xarray/core/datatree_ops.pyc
-${PYSITELIB}/xarray/core/datatree_ops.pyo
 ${PYSITELIB}/xarray/core/datatree_render.py
 ${PYSITELIB}/xarray/core/datatree_render.pyc
 ${PYSITELIB}/xarray/core/datatree_render.pyo
@@ -173,9 +173,6 @@ ${PYSITELIB}/xarray/core/indexes.pyo
 ${PYSITELIB}/xarray/core/indexing.py
 ${PYSITELIB}/xarray/core/indexing.pyc
 ${PYSITELIB}/xarray/core/indexing.pyo
-${PYSITELIB}/xarray/core/iterators.py
-${PYSITELIB}/xarray/core/iterators.pyc
-${PYSITELIB}/xarray/core/iterators.pyo
 ${PYSITELIB}/xarray/core/merge.py
 ${PYSITELIB}/xarray/core/merge.pyc
 ${PYSITELIB}/xarray/core/merge.pyo
@@ -230,9 +227,6 @@ ${PYSITELIB}/xarray/core/variable.pyo
 ${PYSITELIB}/xarray/core/weighted.py
 ${PYSITELIB}/xarray/core/weighted.pyc
 ${PYSITELIB}/xarray/core/weighted.pyo
-${PYSITELIB}/xarray/datatree_/datatree/__init__.py
-${PYSITELIB}/xarray/datatree_/datatree/__init__.pyc
-${PYSITELIB}/xarray/datatree_/datatree/__init__.pyo
 ${PYSITELIB}/xarray/groupers.py
 ${PYSITELIB}/xarray/groupers.pyc
 ${PYSITELIB}/xarray/groupers.pyo
@@ -515,6 +509,9 @@ ${PYSITELIB}/xarray/tests/test_weighted.pyo
 ${PYSITELIB}/xarray/tutorial.py
 ${PYSITELIB}/xarray/tutorial.pyc
 ${PYSITELIB}/xarray/tutorial.pyo
+${PYSITELIB}/xarray/ufuncs.py
+${PYSITELIB}/xarray/ufuncs.pyc
+${PYSITELIB}/xarray/ufuncs.pyo
 ${PYSITELIB}/xarray/util/__init__.py
 ${PYSITELIB}/xarray/util/__init__.pyc
 ${PYSITELIB}/xarray/util/__init__.pyo
