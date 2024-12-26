@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7829 2024/12/26 17:34:38 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7830 2024/12/26 17:48:41 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11704,3 +11704,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/py-zope.testrunner to 6.6.1 [adam 2024-12-26]
 	Updated devel/py-pylint to 3.3.3 [adam 2024-12-26]
 	Updated devel/py-coverage to 7.6.10 [adam 2024-12-26]
+	Updated emulators/jgenesis to 0.8.3 [pin 2024-12-26]
