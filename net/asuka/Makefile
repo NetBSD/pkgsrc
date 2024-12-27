@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/05/06 08:40:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/27 21:27:19 pin Exp $
 
 DISTNAME=	0.8.5
 PKGNAME=	asuka-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://git.sr.ht/~julienxx/asuka/archive/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~julienxx/asuka/
 COMMENT=	Gemini Project client written in rust with ncurses
 LICENSE=	mit
