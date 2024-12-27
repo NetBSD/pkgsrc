@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.23 2023/04/11 05:45:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/12/27 08:47:57 wiz Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/rsvg-cairo.h
 include/librsvg-2.0/librsvg/rsvg-features.h
+include/librsvg-2.0/librsvg/rsvg-pixbuf.h
 include/librsvg-2.0/librsvg/rsvg-version.h
 include/librsvg-2.0/librsvg/rsvg.h
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
+lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so
 lib/girepository-1.0/Rsvg-2.0.typelib
-lib/librsvg-2.la
+lib/librsvg-2.so
+lib/librsvg-2.so.2
+lib/librsvg-2.so.${PKGVERSION}
 lib/pkgconfig/librsvg-2.0.pc
 man/man1/rsvg-convert.1
 share/doc/Rsvg-2.0/RedHatDisplay-Black.woff
@@ -44,6 +47,9 @@ share/doc/Rsvg-2.0/SourceCodePro-Semibold.ttf.woff
 share/doc/Rsvg-2.0/callback.SizeFunc.html
 share/doc/Rsvg-2.0/class.Handle.html
 share/doc/Rsvg-2.0/classes_hierarchy.html
+share/doc/Rsvg-2.0/const.HAVE_CSS.html
+share/doc/Rsvg-2.0/const.HAVE_PIXBUF.html
+share/doc/Rsvg-2.0/const.HAVE_SVGZ.html
 share/doc/Rsvg-2.0/const.MAJOR_VERSION.html
 share/doc/Rsvg-2.0/const.MICRO_VERSION.html
 share/doc/Rsvg-2.0/const.MINOR_VERSION.html
@@ -58,6 +64,7 @@ share/doc/Rsvg-2.0/enum.Unit.html
 share/doc/Rsvg-2.0/error.Error.html
 share/doc/Rsvg-2.0/flags.HandleFlags.html
 share/doc/Rsvg-2.0/fonts.css
+share/doc/Rsvg-2.0/func.CHECK_FEATURE.html
 share/doc/Rsvg-2.0/func.CHECK_VERSION.html
 share/doc/Rsvg-2.0/func.DEPRECATED_FOR.html
 share/doc/Rsvg-2.0/func.cleanup.html
@@ -88,6 +95,7 @@ share/doc/Rsvg-2.0/method.Handle.get_intrinsic_dimensions.html
 share/doc/Rsvg-2.0/method.Handle.get_intrinsic_size_in_pixels.html
 share/doc/Rsvg-2.0/method.Handle.get_metadata.html
 share/doc/Rsvg-2.0/method.Handle.get_pixbuf.html
+share/doc/Rsvg-2.0/method.Handle.get_pixbuf_and_error.html
 share/doc/Rsvg-2.0/method.Handle.get_pixbuf_sub.html
 share/doc/Rsvg-2.0/method.Handle.get_position_sub.html
 share/doc/Rsvg-2.0/method.Handle.get_title.html
@@ -101,6 +109,7 @@ share/doc/Rsvg-2.0/method.Handle.render_element.html
 share/doc/Rsvg-2.0/method.Handle.render_layer.html
 share/doc/Rsvg-2.0/method.Handle.set_base_gfile.html
 share/doc/Rsvg-2.0/method.Handle.set_base_uri.html
+share/doc/Rsvg-2.0/method.Handle.set_cancellable_for_rendering.html
 share/doc/Rsvg-2.0/method.Handle.set_dpi.html
 share/doc/Rsvg-2.0/method.Handle.set_dpi_x_y.html
 share/doc/Rsvg-2.0/method.Handle.set_size_callback.html
@@ -130,7 +139,5 @@ share/doc/Rsvg-2.0/struct.Rectangle.html
 share/doc/Rsvg-2.0/style.css
 share/doc/Rsvg-2.0/type_func.Error.quark.html
 share/doc/Rsvg-2.0/urlmap.js
-share/doc/librsvg/README.md
-share/doc/librsvg/code-of-conduct.md
 share/gir-1.0/Rsvg-2.0.gir
 share/thumbnailers/librsvg.thumbnailer
