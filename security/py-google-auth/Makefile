@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2024/11/11 07:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2024/12/27 08:55:09 wiz Exp $
 
-DISTNAME=	google_auth-2.36.0
+DISTNAME=	google_auth-2.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google_auth/}
@@ -31,9 +31,10 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-urllib3-[0-9]*:../../www/py-urllib3
 
 USE_LANGUAGES=	# none
 
-# 4 failed due to proxy setting
 # as of 2.35.0
 # 4 failed, 1223 passed, 52 warnings
+# as of 2.37.0
+# core dump in Python 3.13
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography OpenSSL
