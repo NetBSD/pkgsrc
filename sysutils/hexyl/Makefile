@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/10/30 18:49:29 pin Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/27 21:25:14 pin Exp $
 
-DISTNAME=	hexyl-0.15.0
+DISTNAME=	hexyl-0.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sharkdp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	go-md2man-[0-9]*:../../textproc/go-md2man
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.74.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 # Use go-md2man to generate manpages and install them
