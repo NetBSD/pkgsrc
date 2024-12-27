@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/11/17 07:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2024/12/27 08:21:06 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-indicator-plugin-2.4.2
