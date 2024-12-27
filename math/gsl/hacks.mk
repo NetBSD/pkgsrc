@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2021/05/31 10:35:17 wiz Exp $
+# $NetBSD: hacks.mk,v 1.3 2024/12/27 17:21:13 adam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -7,7 +7,7 @@
 ### with -mcpu=v9 on a solaris/sparc system.
 ###
 .if (${OPSYS} == "SunOS") && ${MACHINE_ARCH} == sparc && \
-    !empty(CC_VERSION:M*gcc*)
+    ${CC_VERSION:M*gcc*}
 PKG_HACKS+=		solaris-sparc-ice
 BUILDLINK_TRANSFORM+=	rm:-mcpu=v9
 .endif
