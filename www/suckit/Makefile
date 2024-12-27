@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/10/24 22:11:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/27 21:35:36 pin Exp $
 
 DISTNAME=	suckit-0.2.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Skallwar/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Skallwar/suckit/
 COMMENT=	Suck the InTernet
 LICENSE=	apache-2.0 OR mit
