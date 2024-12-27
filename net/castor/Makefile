@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/12/27 08:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2024/12/27 21:29:12 pin Exp $
 
 DISTNAME=	0.9.0
 PKGNAME=	castor-0.9.0
@@ -6,7 +6,7 @@ PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	https://git.sr.ht/~julienxx/castor/archive/
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~julienxx/castor/
 COMMENT=	Client for plain-text protocols like Gemini, Gopher and Finger
 LICENSE=	mit
