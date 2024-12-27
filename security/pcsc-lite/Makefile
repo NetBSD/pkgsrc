@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2024/12/27 12:37:28 gdt Exp $
+# $NetBSD: Makefile,v 1.51 2024/12/27 14:39:53 gdt Exp $
 
 DISTNAME=	pcsc-lite-2.3.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://pcsclite.apdu.fr/files/
 EXTRACT_SUFX=	.tar.xz
@@ -40,16 +41,6 @@ REPLACE_PYTHON+=	src/spy/pcsc-spy
 
 BUILD_DEFS+=		VARBASE
 RCD_SCRIPTS=		pcscd
-
-# Reported upstream by email 20241227.  New "default" config file
-# installed in Linuxy place.  For now, hackily move it to be an
-# example,
-post-install:
-	${MKDIR} -p ${DESTDIR}${PREFIX}/share/examples/pcsc-lite
-	${MV} ${DESTDIR}${PREFIX}/etc/default/pcscd \
-	      ${DESTDIR}${PREFIX}/share/examples/pcsc-lite
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/default
-	${RMDIR} ${DESTDIR}${PREFIX}/etc
 
 .include "../../devel/libusb1/buildlink3.mk"
 .include "../../devel/meson/build.mk"
