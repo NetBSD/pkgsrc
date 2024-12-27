@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/06/14 10:30:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/27 11:09:00 riastradh Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
+PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (gitk)
 
 CONFLICTS+=	git-base<1.7.12nb1
@@ -35,6 +36,17 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_iconv_omits_bom=no
 CONFIGURE_ENV.NetBSD+=	ac_cv_fread_reads_directories=yes
 CONFIGURE_ENV.NetBSD+=	ac_cv_snprintf_returns_bogus=no
 .endif
+
+# Fix the exec path in bin/gitk:
+#
+#	#!/bin/sh
+#	# single-line sh comment, multi-line tcl comment \
+#	exec wish "$0" -- ${1+"$@"}
+#
+SUBST_CLASSES+=		wish
+SUBST_STAGE.wish=	post-build
+SUBST_FILES.wish+=	gitk-git/gitk-wish
+SUBST_SED.wish+=	-e '\|^\#! */bin/sh|,+2s|^exec wish |exec ${WISH} |'
 
 .include "../../devel/git/Makefile.common"
 
