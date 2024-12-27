@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2024/11/17 07:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2024/12/27 08:20:53 wiz Exp $
 
 DISTNAME=	gnome-desktop-40.5
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

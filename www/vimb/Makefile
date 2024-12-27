@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2024/11/17 07:16:50 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2024/12/27 08:20:51 wiz Exp $
 
 DISTNAME=	vimb-3.6.0
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 

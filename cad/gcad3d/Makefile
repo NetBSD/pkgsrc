@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/11/17 07:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/27 08:19:25 wiz Exp $
 #
 
 #
@@ -8,7 +8,7 @@
 #
 
 DISTNAME=	gcad3d-2.46.24
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	cad editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gcad3d/}
 GITHUB_PROJECT=	gcad3d

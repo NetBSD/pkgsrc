@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2024/11/17 07:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2024/12/27 08:20:14 wiz Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/kaffe/kaffe-x11/}
-PKGREVISION=	51
+PKGREVISION=	52
 
 COMMENT+=	(AWT support through X11)
 

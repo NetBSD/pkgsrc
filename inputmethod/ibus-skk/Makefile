@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2024/11/17 07:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2024/12/27 08:20:09 wiz Exp $
 #
 
 DISTNAME=	ibus-skk-1.4.3
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ueno/}
 GITHUB_PROJECT=	${PKGBASE}
