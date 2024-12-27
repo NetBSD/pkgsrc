@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2022/09/04 19:56:39 pin Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/27 21:30:14 pin Exp $
 
 DISTNAME=	cchmod-0.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirryi/}
 GITHUB_TAG=	45a65a239ea007210d99d00c1d771cf8d64daede
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mirryi/cchmod/
 COMMENT=	Chmod calculator
 LICENSE=	mit
