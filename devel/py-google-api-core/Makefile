@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2024/11/17 09:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2024/12/27 08:51:59 wiz Exp $
 
-DISTNAME=	google_api_core-2.23.0
+DISTNAME=	google_api_core-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-core/}
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# none
 
 # test status as of 2.20.0
 # 24 failed, 912 passed, 42 skipped, 90 warnings
-# as of 2.23.0, python3.13 dumps core with grpc in the backtrace
+# as of 2.24.0, python3.13 dumps core with grpc in the backtrace
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
