@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.360 2024/12/27 08:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.361 2024/12/27 11:16:42 adam Exp $
 
-DISTNAME=	qemu-9.1.2
-PKGREVISION=	2
+DISTNAME=	qemu-9.2.0
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
@@ -18,7 +17,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-r
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		bison flex makeinfo perl:build pod2man pkg-config
+USE_TOOLS+=		bison gdbus-codegen flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
@@ -67,7 +66,6 @@ CONFIGURE_ARGS+=	--enable-stack-protector
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-arm
-NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-cris
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-hppa
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-i386
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-m68k
@@ -223,6 +221,7 @@ post-install:
 .include "../../lang/python/tool.mk"
 .include "../../net/libslirp/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/dtc/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
