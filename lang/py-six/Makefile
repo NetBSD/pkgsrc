@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2024/08/10 07:01:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/12/27 09:02:13 wiz Exp $
 
-DISTNAME=	six-1.16.0
+DISTNAME=	six-1.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/six/}
 
@@ -12,8 +11,6 @@ COMMENT=	Python 2 and 3 compatibility utilities
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PYSETUPTESTTARGET=	pytest
 
 PYTHON_27_ACCEPTED=	yes
 
