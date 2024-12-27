@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/11/17 07:17:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/27 08:21:06 wiz Exp $
 
 DISTNAME=	xfce4-docklike-plugin-0.4.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-docklike-plugin/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2

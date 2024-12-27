@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.63 2024/11/17 07:17:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.64 2024/12/27 08:21:02 wiz Exp $
 
 BUILDLINK_TREE+=	ocaml-lablgtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-lablgtk
 OCAML_LABLGTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.6.0nb3
-BUILDLINK_ABI_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.18.13nb16
+BUILDLINK_ABI_DEPENDS.ocaml-lablgtk+=	ocaml-lablgtk>=2.18.13nb17
 BUILDLINK_PKGSRCDIR.ocaml-lablgtk?=	../../x11/ocaml-lablgtk
 
 .include "../../x11/gtk2/buildlink3.mk"
