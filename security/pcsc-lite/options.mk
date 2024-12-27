@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2024/12/27 12:37:29 gdt Exp $
+# $NetBSD: options.mk,v 1.6 2024/12/27 14:39:53 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pcsc-lite
 
 PKG_SUPPORTED_OPTIONS=		polkit
-# Do not suggest polkit, because pcsc-lite fails to build on NetBSD if it
-# is present.  Reported upstream by email 20241227. -gdt
-PKG_SUGGESTED_OPTIONS=
+# polkit is only used on systems that support LOCALCRED (but not
+# LOCAL_CREDS).  \todo Don't suggest on systems where it doesn't help,
+# to reduce bloat.
+PKG_SUGGESTED_OPTIONS=		polkit
 
 .include "../../mk/bsd.options.mk"
 

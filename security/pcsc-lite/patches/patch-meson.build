@@ -1,10 +1,26 @@
-$NetBSD: patch-meson.build,v 1.1 2024/05/08 18:47:37 adam Exp $
+$NetBSD: patch-meson.build,v 1.2 2024/12/27 14:39:53 gdt Exp $
+
+Do not install file to set environment variables for systemd.
+Reported upstream by email 20241227 (as a bug that systemd files are
+installed on systems without systemd).
 
 Make sure dependencies (opensc) do not get -pthread.
+\todo Report upstream.
 
---- meson.build.orig	2024-05-08 15:33:12.267694241 +0000
+--- meson.build.orig	2024-12-24 10:16:27.000000000 +0000
 +++ meson.build
-@@ -267,7 +267,6 @@ endif
+@@ -264,10 +264,6 @@ install_data('etc/fr.apdu.pcsclite.metai
+   install_dir : 'share/metainfo'
+   )
+ 
+-install_data('etc/pcscd',
+-  install_dir : get_option('sysconfdir') / 'default'
+-  )
+-
+ # generate config.h
+ configure_file(output : 'config.h',
+   configuration : conf_data)
+@@ -308,7 +304,6 @@ endif
  pkg = import('pkgconfig')
  pkg.generate(
    libraries : '-L${libdir} -lpcsclite',
