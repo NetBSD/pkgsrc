@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/11/11 07:29:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2024/12/27 20:51:09 adam Exp $
 
-DISTNAME=	markdown2-2.5.1
+DISTNAME=	markdown2-2.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/markdown2/}
