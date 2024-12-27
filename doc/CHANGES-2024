@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7866 2024/12/27 22:01:18 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7867 2024/12/27 22:46:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11799,3 +11799,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated x11/py-sip-qt5 to 12.16.1 [adam 2024-12-27]
 	Updated www/py-respx to 0.22.0 [adam 2024-12-27]
 	Updated security/py-bandit to 1.8.0 [adam 2024-12-27]
+	Updated devel/py-msgspec to 0.19.0 [wiz 2024-12-27]
