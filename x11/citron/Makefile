@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2022/08/17 11:28:46 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/27 21:31:16 pin Exp $
 
 DISTNAME=	citron-v0.15.0
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	x11
 MASTER_SITES=	-https://git.sr.ht/~grtcdr/citron/archive/v${PKGVERSION_NOREV}.tar.gz
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://git.sr.ht/~grtcdr/citron/
 COMMENT=	System data via on-demand notifications
 LICENSE=	mit
