@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.51 2024/11/17 07:16:34 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2024/12/27 08:20:30 wiz Exp $
 #
 
 .include "../../net/wistumbler2/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/wistumbler2-/wistumbler2-gtk-/}
-PKGREVISION=		44
+PKGREVISION=		45
 
 CONFLICTS+=		wistumbler2-[0-9]*
 

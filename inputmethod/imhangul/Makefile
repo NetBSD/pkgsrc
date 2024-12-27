@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2024/11/17 07:16:15 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2024/12/27 08:20:10 wiz Exp $
 
 DISTNAME=	imhangul-2.0.0
-PKGREVISION=	34
+PKGREVISION=	35
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	http://kldp.net/frs/download.php/5924/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2024/11/17 07:16:12 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/12/27 08:20:06 wiz Exp $
 
 PKGNAME=	gnuradio-vocoder-${VERSION}
-PKGREVISION=	10
+PKGREVISION=	11
 COMMENT=	All available vocoders in GNU Radio
 
 .include "../../ham/gnuradio-core/Makefile.common"

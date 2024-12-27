@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2024/12/26 18:25:45 bsiegert Exp $
+# $NetBSD: Makefile,v 1.78 2024/12/27 08:20:41 wiz Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-appfinder-4.20.0

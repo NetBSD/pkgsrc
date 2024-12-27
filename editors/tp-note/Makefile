@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2024/12/25 21:43:37 pin Exp $
+# $NetBSD: Makefile,v 1.90 2024/12/27 08:19:41 wiz Exp $
 
 DISTNAME=	tp-note-1.24.12
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}

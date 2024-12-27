@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/11/17 07:15:44 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2024/12/27 08:19:34 wiz Exp $
 
 DISTNAME=	libdazzle-3.38.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libdazzle/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz

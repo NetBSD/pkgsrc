@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/17 07:16:44 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2024/12/27 08:20:43 wiz Exp $
 
-PKGREVISION= 7
+PKGREVISION= 8
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-verve-plugin-2.0.3

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2024/11/17 07:15:51 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2024/12/27 08:19:41 wiz Exp $
 
 DISTNAME=	zim-0.74.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	editors
 MASTER_SITES=	https://zim-wiki.org/downloads/
 

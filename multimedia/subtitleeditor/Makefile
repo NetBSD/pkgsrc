@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/11/17 07:16:29 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2024/12/27 08:20:25 wiz Exp $
 
 DISTNAME=	subtitleeditor-0.54.0
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kitone/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
