@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2021/08/10 05:35:28 pin Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/27 21:33:24 pin Exp $
 
 DISTNAME=	jpeg-to-pdf-0.2.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Quantaly/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Quantaly/jpeg-to-pdf/
 COMMENT=	Creates pdfs from jpeg images
 LICENSE=	apache-2.0 OR mit
