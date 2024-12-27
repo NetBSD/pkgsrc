@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/12/27 12:37:28 gdt Exp $
+@comment $NetBSD: PLIST,v 1.17 2024/12/27 14:39:53 gdt Exp $
 bin/pcsc-spy
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
@@ -19,5 +19,5 @@ man/man5/reader.conf.5
 man/man8/pcscd.8
 sbin/pcscd
 share/doc/pcsc-lite/setup_spy.sh
-share/examples/pcsc-lite/pcscd
 share/metainfo/fr.apdu.pcsclite.metainfo.xml
+${PLIST.polkit}share/polkit-1/actions/org.debian.pcsc-lite.policy
