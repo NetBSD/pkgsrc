@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/11/24 06:59:09 adam Exp $
+# $NetBSD: Makefile,v 1.28 2024/12/27 21:36:40 pin Exp $
 
 DISTNAME=	t-rec-rs-0.7.6
 PKGNAME=	t-rec-0.7.6
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=sassman/}
 GITHUB_PROJECT=	t-rec-rs
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sassman/t-rec-rs/
 COMMENT=	Terminal recorder
 LICENSE=	gnu-gpl-v3
