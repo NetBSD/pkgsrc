@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2024/11/04 17:30:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.38 2024/12/27 08:53:11 wiz Exp $
 ${PYSITELIB}/apiclient/__init__.py
 ${PYSITELIB}/apiclient/__init__.pyc
 ${PYSITELIB}/apiclient/__init__.pyo
@@ -371,6 +371,9 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/merchantapi.reviews_v1bet
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v1beta.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v2alpha.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/metastore.v2beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/migrationcenter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/migrationcenter.v1alpha1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/ml.v1.json
@@ -409,6 +412,8 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1alpha.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/oslogin.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/pagespeedonline.v5.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/parallelstore.v1.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/parallelstore.v1beta.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/paymentsresellersubscription.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/people.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/places.v1.json
@@ -474,6 +479,7 @@ ${PYSITELIB}/googleapiclient/discovery_cache/documents/secretmanager.v1beta2.jso
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/securitycenter.v1beta2.json
+${PYSITELIB}/googleapiclient/discovery_cache/documents/securityposture.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/serviceconsumermanagement.v1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/serviceconsumermanagement.v1beta1.json
 ${PYSITELIB}/googleapiclient/discovery_cache/documents/servicecontrol.v1.json
