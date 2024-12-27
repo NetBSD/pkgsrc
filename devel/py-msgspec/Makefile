@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/11/26 12:45:44 nia Exp $
+# $NetBSD: Makefile,v 1.4 2024/12/27 22:45:50 wiz Exp $
 
-DISTNAME=	msgspec-0.18.6
+DISTNAME=	msgspec-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/msgspec/}
@@ -13,9 +13,6 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-tomli_w-[0-9]*:../../textproc/py-tomli_w
-
-# Uses deprecated internal APIs like _PyUnicode_EQ
-PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 .include "../../lang/python/pyversion.mk"
 
