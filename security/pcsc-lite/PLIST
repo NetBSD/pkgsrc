@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2024/08/07 09:39:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2024/12/27 12:37:28 gdt Exp $
 bin/pcsc-spy
 include/PCSC/debuglog.h
 include/PCSC/ifdhandler.h
@@ -6,6 +6,7 @@ include/PCSC/pcsclite.h
 include/PCSC/reader.h
 include/PCSC/winscard.h
 include/PCSC/wintypes.h
+lib/libpcsclite.a
 lib/libpcsclite.so
 lib/libpcsclite.so.1
 lib/libpcsclite_real.so
@@ -18,5 +19,5 @@ man/man5/reader.conf.5
 man/man8/pcscd.8
 sbin/pcscd
 share/doc/pcsc-lite/setup_spy.sh
+share/examples/pcsc-lite/pcscd
 share/metainfo/fr.apdu.pcsclite.metainfo.xml
-${PLIST.polkit}share/polkit-1/actions/org.debian.pcsc-lite.policy
