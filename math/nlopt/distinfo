@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/08/11 08:31:20 mef Exp $
+$NetBSD: distinfo,v 1.7 2024/12/27 17:22:12 adam Exp $
 
-BLAKE2s (nlopt-2.7.1.tar.gz) = cd2c3ab540c794c8e1804fc29b1d0b6804cff226522e3f748d0c083ef579f0ea
-SHA512 (nlopt-2.7.1.tar.gz) = e23cb522fc696010574c14b72be85acc0f8ccf0bf208bf2b8789c57d6c5a6e6d419ee10330581518b1c1567018ae909b626ce7761d4fbd5bf112916871e420e2
-Size (nlopt-2.7.1.tar.gz) = 2044180 bytes
+BLAKE2s (nlopt-2.9.1.tar.gz) = f1b1f536146b8ff7a3a979f85739a4cdace81268cc393d20f2e25fee79fa3764
+SHA512 (nlopt-2.9.1.tar.gz) = 17cf0bea185657f63ac73d5626609cbe06f47e694c134ebf3c0fb04f06a8e35a77c8128eff999b8b98d13b728696f3d33ae0c68831cfc0abb730afc806191123
+Size (nlopt-2.9.1.tar.gz) = 2054775 bytes
