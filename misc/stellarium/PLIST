@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2024/10/21 07:15:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2024/12/27 18:19:27 adam Exp $
 bin/stellarium
 man/man1/stellarium.1
 ${PLIST.desktop}share/applications/org.stellarium.Stellarium.desktop
@@ -956,7 +956,6 @@ share/stellarium/nebulae/default/m97dumont.png
 share/stellarium/nebulae/default/m98.png
 share/stellarium/nebulae/default/m99.png
 share/stellarium/nebulae/default/n1023.png
-share/stellarium/nebulae/default/n104.png
 share/stellarium/nebulae/default/n1042.png
 share/stellarium/nebulae/default/n1055.png
 share/stellarium/nebulae/default/n1097.png
@@ -3983,7 +3982,7 @@ share/stellarium/webroot/js/api/updatequeue.js
 share/stellarium/webroot/js/api/viewcontrol.js
 share/stellarium/webroot/js/api/viewoptions.js
 share/stellarium/webroot/js/globalize.js
-share/stellarium/webroot/js/jquery-3.6.0.js
+share/stellarium/webroot/js/jquery-3.7.1.js
 share/stellarium/webroot/js/jquery-ui.js
 share/stellarium/webroot/js/jquery.ui.touch-punch.js
 share/stellarium/webroot/js/main.js
