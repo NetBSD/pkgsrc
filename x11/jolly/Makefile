@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2023/11/12 13:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/27 21:32:09 pin Exp $
 
 DISTNAME=	jolly-0.3.0
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apgoetz/}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/apgoetz/jolly/
 COMMENT=	Small bookmarking launcher for desktop usage
 LICENSE=	mit OR apache-2.0
