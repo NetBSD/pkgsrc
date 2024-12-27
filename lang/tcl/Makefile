@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2024/11/14 22:20:32 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2024/12/27 11:08:30 riastradh Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -47,6 +47,17 @@ SUBST_STAGE.tcl-config=	post-build
 SUBST_FILES.tcl-config=	unix/tclConfig.sh
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
+
+# Fix the exec path in bin/sqlite3_analyzer:
+#
+#	#! /bin/sh
+#	# single-line sh comment, multi-line tcl comment \
+#	exec tclsh "$0" ${1+"$@"}
+#
+SUBST_CLASSES+=		tclsh
+SUBST_STAGE.tclsh=	post-build
+SUBST_FILES.tclsh+=	pkgs/sqlite*/compat/sqlite3/spaceanal.tcl
+SUBST_SED.tclsh+=	-e '\|^\#! */bin/sh|,+2s|^exec tclsh |exec ${PREFIX}/bin/tclsh |'
 
 PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
