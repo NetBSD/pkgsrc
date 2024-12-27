@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2024/11/17 07:16:37 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2024/12/27 08:20:35 wiz Exp $
 
 DISTNAME=		amtterm-1.6
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.kraxel.org/releases/amtterm/
 

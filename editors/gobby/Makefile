@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2024/12/03 13:53:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.91 2024/12/27 08:19:39 wiz Exp $
 
 DISTNAME=	gobby-0.6.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gobby/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2024/11/17 07:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2024/12/27 08:19:25 wiz Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	gtk2-${DISTNAME}
-PKGREVISION=	44
+PKGREVISION=	45
 
 COMMENT=	GTK2 Based Transmission Line Analysis/Synthesis Calculator
 

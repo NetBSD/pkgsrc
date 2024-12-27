@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2024/11/17 07:16:05 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2024/12/27 08:19:57 wiz Exp $
 #
 
 BUILDLINK_TREE+=	goocanvas2
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	goocanvas2
 GOOCANVAS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.goocanvas2+=	goocanvas2>=2.0
-BUILDLINK_ABI_DEPENDS.goocanvas2?=	goocanvas2>=2.0.4nb15
+BUILDLINK_ABI_DEPENDS.goocanvas2?=	goocanvas2>=2.0.4nb16
 BUILDLINK_PKGSRCDIR.goocanvas2?=	../../graphics/goocanvas2
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/11/17 07:16:46 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2024/12/27 08:20:44 wiz Exp $
 
 DISTNAME=	gnome-calendar-40.0
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/${PKGBASE}/${PKGVERSION_NOREV:R}/}
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	time gnome
 EXTRACT_SUFX=	.tar.xz
 
