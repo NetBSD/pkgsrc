@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/09/13 19:39:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2024/12/27 08:20:58 adam Exp $
 bin/ansible-lint
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -34,9 +34,6 @@ ${PYSITELIB}/ansiblelint/app.pyo
 ${PYSITELIB}/ansiblelint/cli.py
 ${PYSITELIB}/ansiblelint/cli.pyc
 ${PYSITELIB}/ansiblelint/cli.pyo
-${PYSITELIB}/ansiblelint/color.py
-${PYSITELIB}/ansiblelint/color.pyc
-${PYSITELIB}/ansiblelint/color.pyo
 ${PYSITELIB}/ansiblelint/config.py
 ${PYSITELIB}/ansiblelint/config.pyc
 ${PYSITELIB}/ansiblelint/config.pyo
@@ -63,6 +60,9 @@ ${PYSITELIB}/ansiblelint/loaders.pyo
 ${PYSITELIB}/ansiblelint/logger.py
 ${PYSITELIB}/ansiblelint/logger.pyc
 ${PYSITELIB}/ansiblelint/logger.pyo
+${PYSITELIB}/ansiblelint/output.py
+${PYSITELIB}/ansiblelint/output.pyc
+${PYSITELIB}/ansiblelint/output.pyo
 ${PYSITELIB}/ansiblelint/py.typed
 ${PYSITELIB}/ansiblelint/requirements.py
 ${PYSITELIB}/ansiblelint/requirements.pyc
