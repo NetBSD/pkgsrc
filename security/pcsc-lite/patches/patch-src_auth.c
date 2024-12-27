@@ -1,4 +1,4 @@
-$NetBSD: patch-src_auth.c,v 1.1 2024/12/27 15:10:09 gdt Exp $
+$NetBSD: patch-src_auth.c,v 1.2 2024/12/27 22:32:04 adam Exp $
 
 Upstream code blurs checking for libraries (POLKIT), features
 (PEERCRED), and OS, when guarding code that uses the library and
@@ -6,6 +6,8 @@ features.  Change to a single guard, and using the fallback allow
 function otherwise.
 
 Sent upstream 20241227.
+
+On Darwin, cr_pid is not defined.
 
 --- src/auth.c.orig	2024-12-24 10:16:27.000000000 +0000
 +++ src/auth.c
@@ -16,7 +18,7 @@ Sent upstream 20241227.
 -#ifdef HAVE_POLKIT
 -
 -#if defined(SO_PEERCRED) || defined(LOCAL_PEERCRED)
-+#if defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED)
++#if defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED) && !defined(__APPLE__)
  
  #include <polkit/polkit.h>
  #include <stdbool.h>
@@ -50,7 +52,7 @@ Sent upstream 20241227.
 -#endif
 -
 -#else
-+#else /* defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED) */
++#else /* defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED) && !defined(__APPLE__) */
  
  unsigned IsClientAuthorized(int socket, const char* action, const char* reader)
  {
@@ -59,4 +61,4 @@ Sent upstream 20241227.
  }
  
 -#endif
-+#endif /* defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED) */
++#endif /* defined(POLKIT) && defined(SO_PEERCRED) || defined(LOCAL_PEERCRED) && !defined(__APPLE__) */
