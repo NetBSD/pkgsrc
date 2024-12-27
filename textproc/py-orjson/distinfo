@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2024/11/24 10:28:57 wiz Exp $
+$NetBSD: distinfo,v 1.10 2024/12/27 08:50:44 wiz Exp $
 
 BLAKE2s (associative-cache-2.0.0.crate) = 337d054dfd3e0ae9dc1c811f0159d65e30fc578bb756a7e0104481c5158810b3
 SHA512 (associative-cache-2.0.0.crate) = 854f5130f286aaa76ffa2f4cbe27ca57c8220ec517c0d6fac46e5a505a3cb5fdc9ab60818db9f890b63ce2f44d243594d44747f7a87af9f304aaab3f4a4e8567
@@ -105,3 +105,4 @@ Size (version_check-0.9.5.crate) = 15554 bytes
 BLAKE2s (xxhash-rust-0.8.12.crate) = 6f340fa3848f6f727e6a799c1d9d4d76953c31d498b1e2beda7011350df92a25
 SHA512 (xxhash-rust-0.8.12.crate) = 6fd17ec65be94b58f109b6aa9bb283e51092621e8af624f8c2c2c95558a3d0461d743cb8a65a0da5853ff7fd98273daec0dcc5b632440868524f99894beeff3d
 Size (xxhash-rust-0.8.12.crate) = 21329 bytes
+SHA1 (patch-pyproject.toml) = 944332634d062a1898f0427b770daa7cfebe9929

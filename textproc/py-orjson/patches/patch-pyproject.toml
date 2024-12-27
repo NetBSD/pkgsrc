@@ -1,0 +1,14 @@
+$NetBSD: patch-pyproject.toml,v 1.1 2024/12/27 08:50:44 wiz Exp $
+
+Fix build with maturin 1.8.0
+https://github.com/ijl/orjson/pull/542
+
+--- pyproject.toml.orig	2024-12-27 08:49:44.708879474 +0000
++++ pyproject.toml
+@@ -1,5 +1,6 @@
+ [project]
+ name = "orjson"
++dynamic = ["version"]
+ repository = "https://github.com/ijl/orjson"
+ requires-python = ">=3.8"
+ classifiers = [
