@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25232 2024/12/27 08:48:12 wiz Exp $
+$NetBSD: TODO,v 1.25233 2024/12/27 08:52:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1134,7 +1134,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
-	o py-google-api-core-2.24.0
 	o py-google-api-python-client-2.156.0
 	o py-google-auth-2.37.0
 	o py-hgview-1.9.0
