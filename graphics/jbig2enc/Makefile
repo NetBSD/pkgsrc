@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2023/10/21 17:10:32 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/28 09:09:47 adam Exp $
 
-DISTNAME=	jbig2enc-0.29
-PKGREVISION=	1
+DISTNAME=	jbig2enc-0.30
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=agl/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -17,6 +16,8 @@ USE_TOOLS+=		aclocal autoconf autoheader automake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 
+REPLACE_PYTHON=		jbig2topdf.py
+
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
@@ -26,4 +27,5 @@ pre-configure:
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
