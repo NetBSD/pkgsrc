@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7882 2024/12/28 21:58:29 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7883 2024/12/28 21:59:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11817,3 +11817,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated math/py-kiwisolver to 1.4.8 [adam 2024-12-28]
 	Updated devel/bacon to 3.7.0 [pin 2024-12-28]
 	Updated textproc/csview to 1.3.4 [pin 2024-12-28]
+	Updated sysutils/lla to 0.3.8 [pin 2024-12-28]
