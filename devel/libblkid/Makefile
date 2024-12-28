@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2019/04/04 07:34:07 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/28 14:10:56 wiz Exp $
 
 .include "../../devel/libuuid/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/util-linux/libblkid/}
-PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Library to handle device identification and token extraction
 LICENSE=	gnu-lgpl-v2.1
