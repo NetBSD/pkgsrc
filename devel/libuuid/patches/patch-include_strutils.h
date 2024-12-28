@@ -1,10 +1,10 @@
-$NetBSD: patch-include_strutils.h,v 1.3 2022/04/02 21:00:54 riastradh Exp $
+$NetBSD: patch-include_strutils.h,v 1.4 2024/12/28 14:10:24 wiz Exp $
 
 Fix ctype(3) abuse.
 
---- include/strutils.h.orig	2018-06-04 07:57:02.792445890 +0000
+--- include/strutils.h.orig	2024-07-04 07:54:41.223242118 +0000
 +++ include/strutils.h
-@@ -162,14 +162,14 @@ static inline const char *endswith(const
+@@ -276,14 +276,14 @@ static inline const char *endswith(const
   */
  static inline const char *skip_space(const char *p)
  {

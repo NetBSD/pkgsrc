@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_config-gen,v 1.1 2024/12/28 14:10:24 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- tools/config-gen.orig	2024-01-31 10:02:15.850809328 +0000
++++ tools/config-gen
+@@ -30,7 +30,7 @@ fi
+ 
+ while [ -n "$1" ]; do
+ 	opts="$opts $(ul_get_configuration tools/config-gen.d/$1.conf)"
+-	if [ "$1" == "fuzz" ]; then
++	if [ "$1" = "fuzz" ]; then
+ 		export CC=${CC:-clang}
+ 		export CXX=${CXX:-clang++}
+ 	fi

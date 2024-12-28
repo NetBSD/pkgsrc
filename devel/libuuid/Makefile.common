@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2023/03/08 03:13:32 charlotte Exp $
+# $NetBSD: Makefile.common,v 1.10 2024/12/28 14:10:23 wiz Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
 
-DISTNAME=	util-linux-2.32.1
+DISTNAME=	util-linux-2.40.2
 MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	bsdtar
@@ -16,7 +16,6 @@ PATCHDIR=	${.CURDIR}/../../devel/libuuid/patches
 
 USE_GCC_RUNTIME=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-all-programs
 CONFIGURE_ARGS+=	--disable-bash-completion
@@ -29,19 +28,3 @@ CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--disable-nls
 
 TEST_TARGET=		check
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-# XXX PR pkg/52877: configure is broken on netbsd6
-.if (${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 070000)
-USE_TOOLS+=	ksh
-CONFIG_SHELL=	ksh
-.endif
-
-# DragonFly has a cpu_set_t (not to be confused with cpuset_t), but util-linux
-# incorrectly assumes that its contents are identical to those on Linux.
-# Therefore, behave like NetBSD et al. and assume we *don't* have cpu_set_t
-# after all.
-.if (${OPSYS} == "DragonFly")
-CONFIGURE_ARGS+=	ac_cv_type_cpu_set_t=no
-.endif

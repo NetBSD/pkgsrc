@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2024/03/11 18:06:05 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.15 2024/12/28 14:10:23 wiz Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -29,7 +29,7 @@ MAKEVARS+=		IS_BUILTIN.libuuid
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.libuuid) && \
-    !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
+    ${IS_BUILTIN.libuuid:tl} == yes
 .  if empty(UUID_PC:M__nonexistent__)
 BUILTIN_VERSION.libuuid!=	\
 	${SED} -n -e 's/Version: //p' ${_CROSS_DESTDIR:U:Q}${UUID_PC:Q}
@@ -49,11 +49,11 @@ USE_BUILTIN.libuuid=	no
 .  else
 USE_BUILTIN.libuuid=	${IS_BUILTIN.libuuid}
 .    if defined(BUILTIN_PKG.libuuid) && \
-        !empty(IS_BUILTIN.libuuid:M[yY][eE][sS])
+        ${IS_BUILTIN.libuuid:tl} == yes
 USE_BUILTIN.libuuid=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.libuuid}
-.        if !empty(USE_BUILTIN.libuuid:M[yY][eE][sS])
-USE_BUILTIN.libuuid!=      \
+.        if ${USE_BUILTIN.libuuid:tl} == yes
+USE_BUILTIN.libuuid!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libuuid:Q}; then \
 		${ECHO} yes;						\
 	else								\
@@ -71,8 +71,8 @@ MAKEVARS+=		USE_BUILTIN.libuuid
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.libuuid?=	no
-.if !empty(CHECK_BUILTIN.libuuid:M[nN][oO])
-.  if !empty(USE_BUILTIN.libuuid:M[yY][eE][sS])
+.if ${CHECK_BUILTIN.libuuid:tl} == no
+.  if ${USE_BUILTIN.libuuid:tl} == yes
 BUILDLINK_TARGETS+=	libuuid-fake-pc
 
 .    if ${OPSYS} == "SunOS"
@@ -84,6 +84,7 @@ LIBUUID_LDADD=			-L/lib
 BUILDLINK_TRANSFORM+=		rm:-luuid
 .    endif
 
+.PHONY: libuuid-fake-pc
 libuuid-fake-pc:
 	${RUN}						\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;	\

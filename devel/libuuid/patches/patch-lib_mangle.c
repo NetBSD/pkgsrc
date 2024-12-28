@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_mangle.c,v 1.1 2022/04/02 21:00:54 riastradh Exp $
+$NetBSD: patch-lib_mangle.c,v 1.2 2024/12/28 14:10:24 wiz Exp $
 
 Fix ctype(3) abuse.
 
---- lib/mangle.c.orig	2018-06-04 07:57:02.793445882 +0000
+--- lib/mangle.c.orig	2024-01-31 10:02:15.457811585 +0000
 +++ lib/mangle.c
-@@ -80,9 +80,11 @@ size_t unhexmangle_to_buffer(const char 
+@@ -81,9 +81,11 @@ size_t unhexmangle_to_buffer(const char 
  
  	while(*s && sz < len - 1) {
  		if (*s == '\\' && sz + 3 < len - 1 && s[1] == 'x' &&
