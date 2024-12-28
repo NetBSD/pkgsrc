@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/11/07 07:58:57 wiz Exp $
+$NetBSD: distinfo,v 1.9 2024/12/28 09:45:58 wiz Exp $
 
-BLAKE2s (gimp-3.0.0-RC1.tar.xz) = f17db4233c5718f2fefa7d1359972a1298d2ed8b1c49a17936a03da7b63a6d9c
-SHA512 (gimp-3.0.0-RC1.tar.xz) = 844896976b66b0498ba9149c7176f5442b2305fd3dc51fce7ff92eb05b7b0f86f16d0bd16e50a3c43ab2c6b9be4e610dbbfc50a99c84a62a4de80a6937d43985
-Size (gimp-3.0.0-RC1.tar.xz) = 28863948 bytes
+BLAKE2s (gimp-3.0.0-RC2.tar.xz) = 38d28010ad52cf31acc80daf42aa24303ad8168bea1257b1f3ed924ed9cc99bc
+SHA512 (gimp-3.0.0-RC2.tar.xz) = c0a6e096d954f3048cb68fe4ff71dd2f49c802f800014ab8a3089a0e097e7d6f595e5716230c06e7edfddba948f0d01da14800935aa6ceb9dc2e12fb7f19d7e6
+Size (gimp-3.0.0-RC2.tar.xz) = 26980968 bytes
