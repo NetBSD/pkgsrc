@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/04/28 09:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2024/12/28 21:56:22 adam Exp $
 
 DISTNAME=	libdiscid-0.6.4
 CATEGORIES=	audio
@@ -9,9 +9,10 @@ HOMEPAGE=	https://musicbrainz.org/doc/libdiscid
 COMMENT=	Library for creating MusicBrainz DiscIDs
 LICENSE=	gnu-lgpl-v2.1
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 PKGCONFIG_OVERRIDE+=	libdiscid.pc.in
 
