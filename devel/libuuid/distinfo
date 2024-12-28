@@ -1,28 +1,20 @@
-$NetBSD: distinfo,v 1.26 2022/04/02 21:00:54 riastradh Exp $
+$NetBSD: distinfo,v 1.27 2024/12/28 14:10:23 wiz Exp $
 
-BLAKE2s (util-linux-2.32.1.tar.xz) = 396ab70d86492b47f63c0e2b2447d5a95169046b8f37ac0f9480166c09167847
-SHA512 (util-linux-2.32.1.tar.xz) = 267fedae24a874ee4dc558081f6b8d07b33b955b0635f3348f021c111c17f2e95c01b2cbf909fe13c6ca448cbcf23c658c75f72f25749aa65e99f68fabb94698
-Size (util-linux-2.32.1.tar.xz) = 4561088 bytes
-SHA1 (patch-Makefile.am) = a3470f6d286ca7c7ddebf27f9a205507b67f836d
-SHA1 (patch-Makefile.in) = a415bb922d7154387f71882b1f1fa06c9e49c174
-SHA1 (patch-configure) = 400904ae2e58b717e990ba26c111b90bc8f240d1
-SHA1 (patch-include_c.h) = 4596369e4b742329be513952c66d1fa3705de017
-SHA1 (patch-include_randutils.h) = d28ade8554d218f2af4a815a611b833b2036a5eb
-SHA1 (patch-include_strutils.h) = abb960a2ce6fe9f22ef178aea4db17aac5e0df70
-SHA1 (patch-include_ttyutils.h) = fa2b253d568e5aface99727c397d3c4c892b2c93
-SHA1 (patch-lib_canonicalize.c) = 8e05ead75f6cef89e02b4915f6128a1ebd97bcc0
-SHA1 (patch-lib_colors.c) = a7f6c7700bcf1352037253486d16657dfa2804d3
-SHA1 (patch-lib_ismounted.c) = 11f5148020dba2a22e1fbe4882fe423dfb11ad73
-SHA1 (patch-lib_mangle.c) = b0acd6dbb28e429ca55d33cdccfb71a525d86b5d
-SHA1 (patch-lib_pager.c) = 3d4b65f9ccb6437bcc0777634660b5ae3150d14e
-SHA1 (patch-lib_randutils.c) = aece9cb8ec033966d535955654cc27263b3c4976
-SHA1 (patch-lib_signames.c) = ed5939c887c90bd5c9eeb6df047e5d7d22cb34f3
-SHA1 (patch-lib_sysfs.c) = a55660f82b6f88938eae0cd185d9db048a73d4ed
-SHA1 (patch-lib_ttyutils.c) = 093fe0d8755366e5e5ede3f3b4df193918c424db
-SHA1 (patch-libblkid_docs_Makefile.in) = 97a1559dad77e32d78bd504d8d3523b9cc403c36
-SHA1 (patch-libfdisk_docs_Makefile.in) = def97b85e8760cd18af736ab331e2f476f0c9c67
-SHA1 (patch-libmount_docs_Makefile.in) = a55063e89161221cecda661039d0a62174592669
-SHA1 (patch-libsmartcols_docs_Makefile.in) = aa44d1a9ffd9bf4422ed8892d91b4e0e72e50407
-SHA1 (patch-libuuid_src_gen__uuid.c) = 94d190ffca4357e62c6b0ae90fdc9a7456e10468
-SHA1 (patch-libuuid_src_parse.c) = 39396e6d96d0402ce8b0cf739641a73a467a4dd2
-SHA1 (patch-misc-utils_mcookie.c) = 1456f47881552162b1ba6218c620f23648eceb6c
+BLAKE2s (util-linux-2.40.2.tar.xz) = e83f6b7f6b202ca27e8829ed7d70c4a37054925652f72de810908c4590f9ae68
+SHA512 (util-linux-2.40.2.tar.xz) = ffe20b915a518a150401d429b0338bc7022190e4ca0ef91a6d9eea345db8c1e11ad01784163b8fcf978506f3f5cad473f29d5d4ef93a4c66a5ae0ebd9fb0c8f2
+Size (util-linux-2.40.2.tar.xz) = 8854820 bytes
+SHA1 (patch-Makefile.in) = 0d581288a8415719722cd095e71cf36a3d8cbf6a
+SHA1 (patch-configure) = 578db2e08fa28066732079d4efff3aa97837a7e5
+SHA1 (patch-include_strutils.h) = e993e6a5665b759c596bd1a46217f4c05fdcb120
+SHA1 (patch-lib_canonicalize.c) = 1eee2273016ed673f062f38e80f8a30f1304a7d5
+SHA1 (patch-lib_ismounted.c) = ee9b3ea5dc4173790e3fc5207f860e8b6fbc29d5
+SHA1 (patch-lib_mangle.c) = cad7b1fbb51205b973f963b9c372f0884b882db7
+SHA1 (patch-lib_signames.c) = 51b09ef417d96534849f34b97b4057c286ceeca7
+SHA1 (patch-lib_sysfs.c) = d981fb4418197cb2cc9b9fb2a706935827ae9893
+SHA1 (patch-lib_ttyutils.c) = 0d84094920b632669c7198b1f1be07880d613e74
+SHA1 (patch-libblkid_docs_Makefile.in) = 9c73547eb2dd921193ebd092bf2eb5d80f58df26
+SHA1 (patch-libfdisk_docs_Makefile.in) = 9b6b61aa33833b57159f81b3c662e3d097870515
+SHA1 (patch-libmount_docs_Makefile.in) = cba6e071e4b26896ca6bae47ae47ebe662b2da4a
+SHA1 (patch-libsmartcols_docs_Makefile.in) = c3a77d42252be62b979467f0ad84ed0f44ef6f30
+SHA1 (patch-libuuid_src_gen__uuid.c) = 05dd91d2fe44f4cfd82120e52a7be1dab80d0ea2
+SHA1 (patch-tools_config-gen) = f36e05c517d625e5b0b3fce1d5a8b3f2b02c7def

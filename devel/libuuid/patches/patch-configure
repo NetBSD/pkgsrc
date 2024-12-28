@@ -1,71 +1,26 @@
-$NetBSD: patch-configure,v 1.8 2018/08/29 12:25:52 adam Exp $
+$NetBSD: patch-configure,v 1.9 2024/12/28 14:10:23 wiz Exp $
 
-Add --disable-uuidgen and --disable-mcookie.
-Shell portability.
+Add option for enabling/disabling mcookie.
 
---- configure.orig	2017-10-19 11:10:01.000000000 +0000
+--- configure.orig	2024-07-04 08:01:06.791975965 +0000
 +++ configure
-@@ -1250,6 +1250,7 @@ enable_zramctl
- enable_fsck
- enable_partx
- enable_uuidd
-+enable_uuidgen
- enable_mountpoint
- enable_fallocate
- enable_unshare
-@@ -1269,6 +1270,7 @@ enable_lslogins
+@@ -1440,6 +1440,7 @@ enable_lslogins
  enable_wdctl
  enable_cal
  enable_logger
 +enable_mcookie
- enable_switch_root
- enable_pivot_root
- enable_lsmem
-@@ -2024,6 +2026,7 @@ Optional Features:
-   --disable-fsck          do not build fsck
-   --disable-partx         do not build addpart, delpart, partx
-   --disable-uuidd         do not build the uuid daemon
-+  --disable-uuidgen       do not build uuidgen
-   --disable-mountpoint    do not build mountpoint
-   --disable-fallocate     do not build fallocate
-   --disable-unshare       do not build unshare
-@@ -2043,6 +2046,7 @@ Optional Features:
+ enable_whereis
+ enable_pipesz
+ enable_waitpid
+@@ -2274,6 +2275,7 @@ Optional Features:
    --disable-wdctl         do not build wdctl
    --disable-cal           do not build cal
    --disable-logger        do not build logger
 +  --disable-mcookie       do not build mcookie
-   --disable-switch_root   do not build switch_root
-   --disable-pivot_root    do not build pivot_root
-   --disable-lsmem         do not build lsmem
-@@ -23311,17 +23315,22 @@ fi
- 
- 
- 
-+# Check whether --enable-uuidgen was given.
-+if test "${enable_uuidgen+set}" = set; then :
-+  enableval=$enable_uuidgen;
-+else
- 
-   if test "x$ul_default_estate" != x; then
-   enable_uuidgen=$ul_default_estate
--  build_uuidgen=yes
--  if test "x$ul_default_estate" = xno; then
--    build_uuidgen=no
-+  else
-+  enable_uuidgen=check
-   fi
--else
-+fi
- 
-+if test "x$enable_uuidgen" = xno; then
-+  build_uuidgen=no
-+else
-   build_uuidgen=yes
--  enable_uuidgen=check
- fi
- 
- 
-@@ -25956,17 +25965,23 @@ fi
+   --disable-whereis       do not build whereis
+   --disable-pipesz        do not build pipesz
+   --disable-waitpid       do not build waitpid
+@@ -36220,17 +36222,23 @@ fi
  
  
  

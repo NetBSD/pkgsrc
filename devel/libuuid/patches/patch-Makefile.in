@@ -1,58 +1,20 @@
-$NetBSD: patch-Makefile.in,v 1.4 2020/03/12 10:11:34 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2024/12/28 14:10:23 wiz Exp $
 
-Linker script depends on non-portable constructs.
-Do not compile setproctitle; it conflicts with NetBSD and is not needed.
-Do not build common libraries.
 Do not install terminal-colors.d.5.
+Fix unportable test(1) operator.
 
---- Makefile.in.orig	2018-07-16 10:34:43.896171527 +0000
+--- Makefile.in.orig	2024-07-04 08:01:08.682964852 +0000
 +++ Makefile.in
-@@ -186,7 +186,7 @@ check_PROGRAMS = test_blkdev$(EXEEXT) te
- 
- @BUILD_LIBUUID_TRUE@am__append_15 = test_uuid_parser
- @BUILD_LIBUUID_TRUE@am__append_16 = libuuid.la
--@BUILD_LIBUUID_TRUE@@HAVE_VSCRIPT_TRUE@am__append_17 = libuuid_la_LDFLAGS += $(VSCRIPT_LDFLAGS),$(top_srcdir)/libuuid/src/libuuid.sym
-+@BUILD_LIBUUID_TRUE@@HAVE_VSCRIPT_COMPLEX_TRUE@am__append_17 = libuuid_la_LDFLAGS += $(VSCRIPT_LDFLAGS),$(top_srcdir)/libuuid/src/libuuid.sym
- @BUILD_LIBUUID_TRUE@am__append_18 = libuuid/src/libuuid.sym \
- @BUILD_LIBUUID_TRUE@	libuuid/COPYING
- @BUILD_LIBUUID_TRUE@am__append_19 = install-exec-hook-libuuid
-@@ -204,7 +204,7 @@ check_PROGRAMS = test_blkdev$(EXEEXT) te
- 
- @BUILD_LIBBLKID_TRUE@@BUILD_LIBUUID_TRUE@am__append_25 = libuuid.la
- @BUILD_LIBBLKID_TRUE@@BUILD_LIBUUID_TRUE@am__append_26 = -I$(ul_libuuid_incdir)
--@BUILD_LIBBLKID_TRUE@@HAVE_VSCRIPT_TRUE@am__append_27 = $(VSCRIPT_LDFLAGS),$(top_srcdir)/libblkid/src/libblkid.sym
-+@BUILD_LIBBLKID_TRUE@@HAVE_VSCRIPT_COMPLEX_TRUE@am__append_27 = $(VSCRIPT_LDFLAGS),$(top_srcdir)/libblkid/src/libblkid.sym
- @BUILD_LIBBLKID_TRUE@am__append_28 = libblkid/src/libblkid.sym \
- @BUILD_LIBBLKID_TRUE@	libblkid/COPYING
- @BUILD_LIBBLKID_TESTS_TRUE@@BUILD_LIBBLKID_TRUE@am__append_29 = \
-@@ -1032,7 +1032,7 @@ am__libcommon_la_SOURCES_DIST = lib/blkd
- 	lib/fileutils.c lib/ismounted.c lib/color-names.c lib/mangle.c \
- 	lib/match.c lib/mbsalign.c lib/mbsedit.c lib/md5.c lib/pager.c \
- 	lib/parse-date.y lib/path.c lib/pwdutils.c lib/randutils.c \
--	lib/setproctitle.c lib/strutils.c lib/timeutils.c \
-+	lib/strutils.c lib/timeutils.c \
- 	lib/ttyutils.c lib/exec_shell.c lib/strv.c lib/sha1.c \
- 	lib/signames.c lib/linux_version.c lib/loopdev.c \
- 	lib/plymouth-ctrl.c lib/langinfo.c lib/cpuset.c \
-@@ -1055,7 +1055,7 @@ am_libcommon_la_OBJECTS = lib/libcommon_
- 	lib/libcommon_la-md5.lo lib/libcommon_la-pager.lo \
- 	lib/libcommon_la-parse-date.lo lib/libcommon_la-path.lo \
- 	lib/libcommon_la-pwdutils.lo lib/libcommon_la-randutils.lo \
--	lib/libcommon_la-setproctitle.lo lib/libcommon_la-strutils.lo \
-+	lib/libcommon_la-strutils.lo \
- 	lib/libcommon_la-timeutils.lo lib/libcommon_la-ttyutils.lo \
- 	lib/libcommon_la-exec_shell.lo lib/libcommon_la-strv.lo \
- 	lib/libcommon_la-sha1.lo lib/libcommon_la-signames.lo \
-@@ -3827,7 +3827,7 @@ dist_noinst_HEADERS = include/all-io.h i
- 	include/timer.h include/timeutils.h include/ttyutils.h \
- 	include/widechar.h include/xalloc.h
- noinst_LTLIBRARIES = libcommon.la libtcolors.la
--dist_man_MANS = lib/terminal-colors.d.5 $(am__append_14) \
-+dist_man_MANS = $(am__append_14) \
- 	$(am__append_38) $(am__append_78) $(am__append_80) \
- 	$(am__append_82) $(am__append_84) $(am__append_86) \
- 	$(am__append_88) $(am__append_90) $(am__append_92) \
-@@ -12816,7 +12816,7 @@ checkusage:
+@@ -5782,7 +5782,7 @@ ADOCFILES_COMMON = man-common/bugreports
+ 	man-common/footer-lib.adoc man-common/help-version.adoc \
+ 	man-common/in-bytes.adoc man-common/manpage-stub.adoc \
+ 	man-common/translation.adoc
+-MANPAGES = lib/terminal-colors.d.5 $(am__append_21) $(am__append_32) \
++MANPAGES = $(am__append_21) $(am__append_32) \
+ 	$(am__append_56) $(am__append_90) $(am__append_107) \
+ 	$(am__append_110) $(am__append_113) $(am__append_116) \
+ 	$(am__append_119) $(am__append_122) $(am__append_125) \
+@@ -19005,7 +19005,7 @@ checklibdoc:
  	echo $(VERSION) > $@-t && mv $@-t $@
  
  $(CHANGELOG_FILE):

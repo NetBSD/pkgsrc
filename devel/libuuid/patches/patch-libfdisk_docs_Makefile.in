@@ -1,8 +1,10 @@
-$NetBSD: patch-libfdisk_docs_Makefile.in,v 1.1 2020/03/12 10:11:34 ryoon Exp $
+$NetBSD: patch-libfdisk_docs_Makefile.in,v 1.2 2024/12/28 14:10:24 wiz Exp $
 
---- libfdisk/docs/Makefile.in.orig	2018-07-16 10:34:43.952171193 +0000
+Fix unportable test(1) operator.
+
+--- libfdisk/docs/Makefile.in.orig	2024-07-04 08:01:08.750964452 +0000
 +++ libfdisk/docs/Makefile.in
-@@ -803,7 +803,7 @@ distclean-local:
+@@ -844,7 +844,7 @@ distclean-local:
  	rm -rf xml html $(REPORT_FILES) *.stamp \
  	       $(DOC_MODULE)-overrides.txt \
  	       $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
