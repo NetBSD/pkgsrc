@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/10/30 04:05:18 fox Exp $
+@comment $NetBSD: PLIST,v 1.15 2024/12/28 11:25:11 fox Exp $
 bin/glances-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
@@ -40,9 +40,6 @@ ${PYSITELIB}/glances/amps_list.pyo
 ${PYSITELIB}/glances/attribute.py
 ${PYSITELIB}/glances/attribute.pyc
 ${PYSITELIB}/glances/attribute.pyo
-${PYSITELIB}/glances/autodiscover.py
-${PYSITELIB}/glances/autodiscover.pyc
-${PYSITELIB}/glances/autodiscover.pyo
 ${PYSITELIB}/glances/client.py
 ${PYSITELIB}/glances/client.pyc
 ${PYSITELIB}/glances/client.pyo
@@ -287,6 +284,9 @@ ${PYSITELIB}/glances/plugins/processcount/__init__.pyo
 ${PYSITELIB}/glances/plugins/processlist/__init__.py
 ${PYSITELIB}/glances/plugins/processlist/__init__.pyc
 ${PYSITELIB}/glances/plugins/processlist/__init__.pyo
+${PYSITELIB}/glances/plugins/programlist/__init__.py
+${PYSITELIB}/glances/plugins/programlist/__init__.pyc
+${PYSITELIB}/glances/plugins/programlist/__init__.pyo
 ${PYSITELIB}/glances/plugins/psutilversion/__init__.py
 ${PYSITELIB}/glances/plugins/psutilversion/__init__.pyc
 ${PYSITELIB}/glances/plugins/psutilversion/__init__.pyo
@@ -347,15 +347,21 @@ ${PYSITELIB}/glances/secure.pyo
 ${PYSITELIB}/glances/server.py
 ${PYSITELIB}/glances/server.pyc
 ${PYSITELIB}/glances/server.pyo
+${PYSITELIB}/glances/servers_list.py
+${PYSITELIB}/glances/servers_list.pyc
+${PYSITELIB}/glances/servers_list.pyo
+${PYSITELIB}/glances/servers_list_dynamic.py
+${PYSITELIB}/glances/servers_list_dynamic.pyc
+${PYSITELIB}/glances/servers_list_dynamic.pyo
+${PYSITELIB}/glances/servers_list_static.py
+${PYSITELIB}/glances/servers_list_static.pyc
+${PYSITELIB}/glances/servers_list_static.pyo
 ${PYSITELIB}/glances/snmp.py
 ${PYSITELIB}/glances/snmp.pyc
 ${PYSITELIB}/glances/snmp.pyo
 ${PYSITELIB}/glances/standalone.py
 ${PYSITELIB}/glances/standalone.pyc
 ${PYSITELIB}/glances/standalone.pyo
-${PYSITELIB}/glances/static_list.py
-${PYSITELIB}/glances/static_list.pyc
-${PYSITELIB}/glances/static_list.pyo
 ${PYSITELIB}/glances/stats.py
 ${PYSITELIB}/glances/stats.pyc
 ${PYSITELIB}/glances/stats.pyo
