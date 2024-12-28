@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/12/24 18:30:03 pin Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/28 21:59:21 pin Exp $
 
-DISTNAME=	lla-0.3.7
+DISTNAME=	lla-0.3.8
 CATEGORIES=	sysutils
 MASTER_SITES=	https://static.crates.io/crates/lla/
 EXTRACT_SUFX=	.crate
