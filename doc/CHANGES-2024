@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7877 2024/12/28 14:53:12 ktnb Exp $
+$NetBSD: CHANGES-2024,v 1.7878 2024/12/28 18:58:58 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11811,3 +11811,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/libblkid to 2.40.2 [wiz 2024-12-28]
 	Updated x11/mcookie to 2.40.2 [wiz 2024-12-28]
 	Updated net/qrcp to 0.11.4 [ktnb 2024-12-28]
+	Updated devel/swagger-codegen to 3.0.66 [schmonz 2024-12-28]
