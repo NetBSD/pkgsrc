@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7869 2024/12/28 09:10:42 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7870 2024/12/28 09:40:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11803,3 +11803,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated misc/libreoffice to 24.8.4.2 [ryoon 2024-12-28]
 	Updated security/opensc to 0.26.0 [adam 2024-12-28]
 	Updated graphics/jbig2enc to 0.30 [adam 2024-12-28]
+	Updated graphics/gegl to 0.4.52 [wiz 2024-12-28]
