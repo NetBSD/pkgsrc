@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2024/10/19 11:37:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.34 2024/12/28 09:53:11 wiz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -20,7 +20,9 @@ share/examples/rspamd/common.conf
 share/examples/rspamd/composites.conf
 share/examples/rspamd/groups.conf
 share/examples/rspamd/lang_detection.inc
+share/examples/rspamd/local.d/module.conf.example
 share/examples/rspamd/logging.inc
+share/examples/rspamd/lua.local.d/module.lua.example
 share/examples/rspamd/maps.d/dmarc_whitelist.inc
 share/examples/rspamd/maps.d/exe_clickbait.inc
 share/examples/rspamd/maps.d/maillist.inc
@@ -82,7 +84,9 @@ share/examples/rspamd/modules.d/surbl.conf
 share/examples/rspamd/modules.d/trie.conf
 share/examples/rspamd/modules.d/url_redirector.conf
 share/examples/rspamd/modules.d/whitelist.conf
+share/examples/rspamd/modules.local.d/module.conf.example
 share/examples/rspamd/options.inc
+share/examples/rspamd/override.d/module.conf.example
 share/examples/rspamd/rspamd.conf
 share/examples/rspamd/scores.d/content_group.conf
 share/examples/rspamd/scores.d/fuzzy_group.conf
@@ -104,8 +108,6 @@ share/examples/rspamd/worker-fuzzy.inc
 share/examples/rspamd/worker-normal.inc
 share/examples/rspamd/worker-proxy.inc
 share/rspamd/effective_tld_names.dat
-share/rspamd/elastic/kibana.json
-share/rspamd/elastic/rspamd_template.json
 share/rspamd/languages/af.json
 share/rspamd/languages/an.json
 share/rspamd/languages/ar.json
@@ -254,6 +256,7 @@ share/rspamd/lualib/rspamadm/keypair.lua
 share/rspamd/lualib/rspamadm/mime.lua
 share/rspamd/lualib/rspamadm/neural_test.lua
 share/rspamd/lualib/rspamadm/publicsuffix.lua
+share/rspamd/lualib/rspamadm/ratelimit.lua
 share/rspamd/lualib/rspamadm/secretbox.lua
 share/rspamd/lualib/rspamadm/stat_convert.lua
 share/rspamd/lualib/rspamadm/statistics_dump.lua
@@ -385,4 +388,3 @@ share/rspamd/www/js/lib/visibility.min.js
 share/rspamd/www/js/main.js
 share/rspamd/www/mstile-150x150.png
 share/rspamd/www/safari-pinned-tab.svg
-@pkgdir etc
