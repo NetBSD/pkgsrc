@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/12/01 09:43:11 adam Exp $
+# $NetBSD: Makefile,v 1.103 2024/12/28 21:39:48 adam Exp $
 
 DISTNAME=	matplotlib-3.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -39,11 +39,8 @@ WHEEL_ARGS+=	-Cinstall-args="--tags=data,python-runtime,runtime,tests"
 # used by packages that only have a build dependency on it.  Therefore we need
 # to ensure that we set it to "no" first to get accurate dependencies.
 PYTHON_FOR_BUILD_ONLY=	no
-.include "../../lang/python/pyversion.mk"
 
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=3.2.0:../../devel/py-importlib-resources
-.endif
+PYTHON_VERSIONS_INCOMPATIBLE=	39	# py-kiwisolver
 
 # as of 3.9.2
 # 929 failed, 6804 passed, 1786 skipped, 33 xfailed
