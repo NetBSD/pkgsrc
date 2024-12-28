@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ttyutils.c,v 1.1 2022/04/02 21:00:54 riastradh Exp $
+$NetBSD: patch-lib_ttyutils.c,v 1.2 2024/12/28 14:10:24 wiz Exp $
 
 Fix ctype(3) abuse.
 
---- lib/ttyutils.c.orig	2018-07-11 13:34:54.228003727 +0000
+--- lib/ttyutils.c.orig	2024-05-28 08:12:08.105260290 +0000
 +++ lib/ttyutils.c
-@@ -104,7 +104,7 @@ int get_terminal_name(const char **path,
+@@ -144,7 +144,7 @@ int get_terminal_name(const char **path,
  		*name = tty;
  	if (number) {
  		for (p = tty; p && *p; p++) {

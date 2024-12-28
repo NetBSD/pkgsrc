@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2024/12/28 14:10:23 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
-PKGREVISION=	2
 CATEGORIES=	devel
 COMMENT=	Generate unique identifiers for objects
 LICENSE=	modified-bsd
