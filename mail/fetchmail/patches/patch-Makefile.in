@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile.in,v 1.6 2022/09/29 19:26:56 triaxx Exp $
+$NetBSD: patch-Makefile.in,v 1.7 2024/12/28 22:09:58 triaxx Exp $
 
 Even with disabled python, wrapper around fetchmailconf.py and its
 manpage is installed.
 
---- Makefile.in.orig	2022-08-27 07:08:21.000000000 +0000
+--- Makefile.in.orig	2024-11-12 23:44:51.000000000 +0000
 +++ Makefile.in
-@@ -828,10 +828,10 @@ AM_YFLAGS = -t -d
- # without building a few dozen other files first.
- BUILT_SOURCES = rcfile_y.h socket.$(OBJEXT)
+@@ -784,10 +784,10 @@ ACLOCAL_AMFLAGS = -I m4 -I m4-local
+ AM_YFLAGS = -t -d -Wno-yacc
+ BUILT_SOURCES = rcfile_y.h rcfile_l.h
  dist_noinst_SCRIPTS = specgen.sh
 -dist_man1_MANS = fetchmail.man $(pym)
 +dist_man1_MANS = fetchmail.man
