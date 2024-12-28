@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/11/15 21:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2024/12/28 22:13:42 pin Exp $
 
 DISTNAME=	sd-1.0.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chmln/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/chmln/sd/
 COMMENT=	Intuitive find and replace CLI
 LICENSE=	mit
