@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/28 21:37:37 adam Exp $
 
-DISTNAME=	kiwisolver-1.4.7
+DISTNAME=	kiwisolver-1.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kiwisolver/}
@@ -10,12 +10,14 @@ HOMEPAGE=	https://github.com/nucleic/kiwi
 COMMENT=	Fast implementation of the Cassowary constraint solver
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.3:../../devel/py-setuptools_scm
 
 USE_LANGUAGES=	c c++
 
-BUILDLINK_API_DEPENDS.py-cppy+=	${PYPKGPREFIX}-cppy>=1.2.1
+PYTHON_VERSIONS_INCOMPATIBLE=	39
+
+BUILDLINK_API_DEPENDS.py-cppy+=	${PYPKGPREFIX}-cppy>=1.3.0
 .include "../../devel/py-cppy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
