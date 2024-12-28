@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7881 2024/12/28 21:57:15 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7882 2024/12/28 21:58:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11816,3 +11816,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated audio/py-musicbrainz-ngs to 0.7.1 [adam 2024-12-28]
 	Updated math/py-kiwisolver to 1.4.8 [adam 2024-12-28]
 	Updated devel/bacon to 3.7.0 [pin 2024-12-28]
+	Updated textproc/csview to 1.3.4 [pin 2024-12-28]
