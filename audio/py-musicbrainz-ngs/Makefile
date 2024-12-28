@@ -1,24 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2023/10/23 06:37:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/28 21:30:15 adam Exp $
 
-DISTNAME=	python-musicbrainzngs-0.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//:S/ngs/-ngs/}
-PKGREVISION=	2
-CATEGORIES=	audio net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=alastair/}
+DISTNAME=	musicbrainzngs-0.7.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ngs/-ngs/}
+CATEGORIES=	audio net python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/musicbrainzngs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alastair/python-musicbrainzngs
-COMMENT=	Python bindings for Musicbrainz' NGS service
+COMMENT=	Python bindings for Musicbrainz NGS service
 LICENSE=	2-clause-bsd
 
-GITHUB_PROJECT=	python-musicbrainzngs
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-EGG_NAME=	${DISTNAME:S/python-//}
+USE_LANGUAGES=	# none
 
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} setup.py test
-
-.include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
