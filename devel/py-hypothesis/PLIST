@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2024/06/12 09:00:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2024/12/29 09:12:05 adam Exp $
 bin/hypothesis-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -114,9 +114,9 @@ ${PYSITELIB}/hypothesis/internal/compat.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.py
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/__init__.pyo
-${PYSITELIB}/hypothesis/internal/conjecture/choicetree.py
-${PYSITELIB}/hypothesis/internal/conjecture/choicetree.pyc
-${PYSITELIB}/hypothesis/internal/conjecture/choicetree.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/choice.py
+${PYSITELIB}/hypothesis/internal/conjecture/choice.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/choice.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/data.py
 ${PYSITELIB}/hypothesis/internal/conjecture/data.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/data.pyo
@@ -153,6 +153,9 @@ ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/__init__.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/bytes.pyo
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/choicetree.py
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/choicetree.pyc
+${PYSITELIB}/hypothesis/internal/conjecture/shrinking/choicetree.pyo
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.py
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.pyc
 ${PYSITELIB}/hypothesis/internal/conjecture/shrinking/collection.pyo
