@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.25 2024/12/27 08:21:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2024/12/29 15:53:10 tsutsui Exp $
 
 BUILDLINK_TREE+=	ruby-gtk3
 
 .if !defined(RUBY_GTK3_BUILDLINK3_MK)
 RUBY_GTK3_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ruby-gtk3+=	${RUBY_PKGPREFIX}-gtk3>=4.2.3
-BUILDLINK_ABI_DEPENDS.ruby-gtk3+=	${RUBY_PKGPREFIX}-gtk3>=4.2.3nb3
+BUILDLINK_API_DEPENDS.ruby-gtk3+=	${RUBY_PKGPREFIX}-gtk3>=4.2.5
+BUILDLINK_ABI_DEPENDS.ruby-gtk3+=	${RUBY_PKGPREFIX}-gtk3>=4.2.5
 BUILDLINK_PKGSRCDIR.ruby-gtk3?=		../../x11/ruby-gtk3
 
 .include "../../graphics/ruby-gdk3/buildlink3.mk"
