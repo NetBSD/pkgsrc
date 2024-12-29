@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:21:59 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2024/12/29 20:54:01 wiz Exp $
 
-DISTNAME=	libical-3.0.18
-PKGREVISION=	4
+DISTNAME=	libical-3.0.19
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libical/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -29,7 +28,8 @@ DEPENDS+=	zonetab-[0-9]*:../../time/zonetab
 
 # C++ is only needed for test
 USE_LANGUAGES=	c c++
-#TEST_TARGET=	check
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+TEST_TARGET=	test
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
