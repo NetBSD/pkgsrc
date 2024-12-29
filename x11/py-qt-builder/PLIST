@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/26 22:28:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/29 09:04:49 adam Exp $
 bin/pyqt-bundle-${PYVERSSUFFIX}
 bin/pyqt-qt-wheel-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -85,7 +85,8 @@ ${PYSITELIB}/pyqtbuild/bundle/qt_metadata.pyo
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel.py
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel.pyc
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel.pyo
-${PYSITELIB}/pyqtbuild/bundle/qt_wheel_distinfo/LICENSE
+${PYSITELIB}/pyqtbuild/bundle/qt_wheel_distinfo/LICENSE.gpl3
+${PYSITELIB}/pyqtbuild/bundle/qt_wheel_distinfo/LICENSE.lgpl3
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel_distinfo/METADATA
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel_distinfo/WHEEL
 ${PYSITELIB}/pyqtbuild/bundle/qt_wheel_main.py
