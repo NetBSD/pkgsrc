@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2024/09/17 17:21:36 jklos Exp $
+# $NetBSD: Makefile,v 1.65 2024/12/29 21:03:41 wiz Exp $
 
-DISTNAME=	urllib3-2.2.3
+DISTNAME=	urllib3-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -34,6 +34,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 TEST_DEPENDS+=	${PYPKGPREFIX}-trio>=0.26.2:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme>=0.9.0:../../security/py-trustme
+# quart
 #hypercorn @ git+https://github.com/urllib3/hypercorn@urllib3-changes
 #pytest-memray==1.5.0; sys_platform!="win32" and implementation_name=="cpython"
 
