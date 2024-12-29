@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/01/05 15:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/29 09:45:33 adam Exp $
 
-DISTNAME=	unittest2pytest-0.4
+DISTNAME=	unittest2pytest-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/unittest2pytest/}
 
@@ -11,13 +10,13 @@ HOMEPAGE=	https://github.com/pytest-dev/unittest2pytest
 COMMENT=	Tool to rewrite Python unittest into pytest test cases
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	# none
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-USE_PKG_RESOURCES=	yes
+USE_LANGUAGES=	# none
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} unittest2pytest unittest2pytest-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
