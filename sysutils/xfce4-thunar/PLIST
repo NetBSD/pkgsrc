@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2022/12/30 17:32:35 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.24 2024/12/29 19:10:42 bsiegert Exp $
 bin/thunar
 bin/thunar-settings
 include/thunarx-3/thunarx/thunarx-config.h
@@ -56,7 +56,6 @@ share/gtk-doc/html/thunar/ThunarDevice.html
 share/gtk-doc/html/thunar/ThunarDeviceMonitor.html
 share/gtk-doc/html/thunar/ThunarEmblemChooser.html
 share/gtk-doc/html/thunar/ThunarFile.html
-share/gtk-doc/html/thunar/ThunarFileMonitor.html
 share/gtk-doc/html/thunar/ThunarFolder.html
 share/gtk-doc/html/thunar/ThunarHistory.html
 share/gtk-doc/html/thunar/ThunarIconFactory.html
