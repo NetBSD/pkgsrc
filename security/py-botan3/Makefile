@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/04 03:49:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/29 15:09:59 adam Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "../../security/botan3/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Botan/botan3/}

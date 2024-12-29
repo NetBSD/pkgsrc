@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2024/10/04 03:49:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2024/12/29 15:09:42 adam Exp $
 
 DISTNAME=	librevenge-0.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.xz
