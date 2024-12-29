@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7895 2024/12/29 16:17:21 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7896 2024/12/29 16:51:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11864,3 +11864,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated net/p5-Net-DNS to 1.49 [wiz 2024-12-29]
 	Updated devel/p5-Specio to 0.49 [wiz 2024-12-29]
 	Updated devel/p5-Term-Table to 0.024 [wiz 2024-12-29]
+	Updated textproc/fmtlib to 11.1.1 [adam 2024-12-29]
+	Updated multimedia/mkvtoolnix to 89.0 [adam 2024-12-29]
