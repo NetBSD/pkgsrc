@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/09/16 10:56:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2024/12/29 16:58:49 adam Exp $
 bin/annotate-ast-${PYVERSSUFFIX}
 bin/merge-pyi-${PYVERSSUFFIX}
 bin/pytd-${PYVERSSUFFIX}
@@ -179,9 +179,6 @@ ${PYSITELIB}/pytype/directors/directors_test.pyo
 ${PYSITELIB}/pytype/directors/parser.py
 ${PYSITELIB}/pytype/directors/parser.pyc
 ${PYSITELIB}/pytype/directors/parser.pyo
-${PYSITELIB}/pytype/directors/parser_libcst.py
-${PYSITELIB}/pytype/directors/parser_libcst.pyc
-${PYSITELIB}/pytype/directors/parser_libcst.pyo
 ${PYSITELIB}/pytype/errors/__init__.py
 ${PYSITELIB}/pytype/errors/__init__.pyc
 ${PYSITELIB}/pytype/errors/__init__.pyo
@@ -227,6 +224,9 @@ ${PYSITELIB}/pytype/imports/typeshed.pyo
 ${PYSITELIB}/pytype/imports/typeshed_test.py
 ${PYSITELIB}/pytype/imports/typeshed_test.pyc
 ${PYSITELIB}/pytype/imports/typeshed_test.pyo
+${PYSITELIB}/pytype/imports_map.py
+${PYSITELIB}/pytype/imports_map.pyc
+${PYSITELIB}/pytype/imports_map.pyo
 ${PYSITELIB}/pytype/imports_map_loader.py
 ${PYSITELIB}/pytype/imports_map_loader.pyc
 ${PYSITELIB}/pytype/imports_map_loader.pyo
@@ -918,6 +918,20 @@ ${PYSITELIB}/pytype/tools/merge_pyi/test_data/defaults.py
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/defaults.pyc
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/defaults.pyi
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/defaults.pyo
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pep484.py
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pep484.pyc
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pep484.pyo
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.py
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pyc
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pyi
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/enum_annot.pyo
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pep484.py
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pep484.pyc
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pep484.pyo
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.py
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pyc
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pyi
+${PYSITELIB}/pytype/tools/merge_pyi/test_data/func_annot.pyo
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/heuristics.pep484.py
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/heuristics.pep484.pyc
 ${PYSITELIB}/pytype/tools/merge_pyi/test_data/heuristics.pep484.pyo

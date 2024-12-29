@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/12/27 22:47:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/29 16:58:48 adam Exp $
 
-DISTNAME=	pytype-2024.9.13
+DISTNAME=	pytype-2024.10.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytype/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://google.github.io/pytype
 COMMENT=	Static type analyzer for Python code
 LICENSE=	mit AND apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-attrs>=21.4.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-dot>=1.4.2:../../graphics/py-dot
 DEPENDS+=	${PYPKGPREFIX}-immutabledict>=4.1.0:../../devel/py-immutabledict
@@ -18,16 +18,17 @@ DEPENDS+=	${PYPKGPREFIX}-importlab>=0.8:../../devel/py-importlab
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-libcst>=1.0.1:../../lang/py-libcst
 DEPENDS+=	${PYPKGPREFIX}-msgspec>=0.18.6:../../devel/py-msgspec
-DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-networkx>=2.8:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-ninja>=1.10.1:../../devel/py-ninja
 DEPENDS+=	${PYPKGPREFIX}-pycnite>=2024.7.31:../../devel/py-pycnite
 DEPENDS+=	${PYPKGPREFIX}-tabulate>=0.8.10:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.10.2:../../textproc/py-toml
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.3.0:../../devel/py-typing-extensions
 
-USE_LANGUAGES=	c c++
+USE_CXX_FEATURES=	c++20
+USE_LANGUAGES=		c c++
 
-USE_CXX_FEATURES+=	c++20
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 post-install:
 .for file in annotate-ast merge-pyi pytd pytype pytype-single pyxref
