@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/09/16 10:56:43 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/12/29 16:58:49 adam Exp $
 
-BLAKE2s (pytype-2024.9.13.tar.gz) = b561aeefacd5da67724a22a57ee4921a87718e3d4dcf975629a51c8fb23c83b6
-SHA512 (pytype-2024.9.13.tar.gz) = cbce88a802aa883230eaa6fe581ffca88d5ae3309fe5a9899dc243de99bba786251e562831dd05bcfee4c439b0880e2bf45e96862cbfe4c8bd81cea71314d14c
-Size (pytype-2024.9.13.tar.gz) = 2787479 bytes
+BLAKE2s (pytype-2024.10.11.tar.gz) = c4eaf6a2b7eae251583dca7b5d6117a7ed094b0d01ce80af06fd00b8746979ea
+SHA512 (pytype-2024.10.11.tar.gz) = abb63db6f0a27ea87ea974ab85a2ec3913d66de5363b79a9ce522c9cb14cab4a2a9bd02191bdb87a666881d3b870969329a86dfce179a3625eda8cc7def74162
+Size (pytype-2024.10.11.tar.gz) = 2789497 bytes
