@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/11/13 13:32:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2024/12/29 22:34:36 leot Exp $
 
 DISTNAME=	mitmproxy_rs-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mitmproxy_rs/}
 
