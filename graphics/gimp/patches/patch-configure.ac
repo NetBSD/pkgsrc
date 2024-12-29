@@ -1,13 +1,13 @@
-$NetBSD: patch-configure.ac,v 1.1 2021/11/15 22:13:56 nia Exp $
+$NetBSD: patch-configure.ac,v 1.2 2024/12/29 10:23:26 wiz Exp $
 
 CC_VERSION_OPTS for gcc is modified to avoid going through the link
 stage. If pkgsrc appends or prepends any linker flags through
 CWRAPPERS (e.g. for MKRELRO), getting the version of the compiler may
 fail because GCC will try to link the nonexistent program.
 
---- configure.ac.orig	2021-09-14 15:53:08.000000000 +0000
+--- configure.ac.orig	2024-05-03 00:33:34.000000000 +0000
 +++ configure.ac
-@@ -576,11 +576,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
+@@ -589,11 +589,11 @@ WARNING: GCC 7.2.0 has a serious bug aff
           See https://bugzilla.gnome.org/show_bug.cgi?id=787222"
    fi
    # For GCC, use -v which has more information than --version.
@@ -21,3 +21,12 @@ fail because GCC will try to link the nonexistent program.
  fi
  
  for CC_VERSION_OPT in $CC_VERSION_OPTS; do
+@@ -2505,7 +2505,7 @@ if test "x$enable_vector_icons" != "xno"
+     # So let's test files the shell way.
+     if (test "x$platform_win32" = "xyes" &&
+         test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.dll") ||
+-       test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.so"; then
++       test -f "$gdk_pixbuf_moduledir/libpixbufloader_svg.so"; then
+       # We must not use $PKG_CONFIG nor PKG_CHECK_* macros because we need
+       # to make sure we use the native pkg-config (in case we cross-compile).
+       if pkg-config --atleast-version=glib_required_version glib-2.0 &&

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.45 2024/07/15 11:39:40 ryoon Exp $
+$NetBSD: patch-ab,v 1.46 2024/12/29 10:23:26 wiz Exp $
 
 CC_VERSION_OPTS for gcc is modified to avoid going through the link
 stage. If pkgsrc appends or prepends any linker flags through
@@ -7,6 +7,8 @@ fail because GCC will try to link the nonexistent program.
 
 As of libheif-1.18.0, builtin_h265_decoder and so on are not available
 anymore.
+
+Fix gdkpixbufloader name for svg.
 
 --- configure.orig	2024-05-03 00:36:33.000000000 +0000
 +++ configure
@@ -42,6 +44,15 @@ anymore.
    if test "x$can_import_avif" = xyes; then
      MIME_TYPES="$MIME_TYPES;image/avif"
    fi
+@@ -33906,7 +33906,7 @@ fi
+     # So let's test files the shell way.
+     if (test "x$platform_win32" = "xyes" &&
+         test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.dll") ||
+-       test -f "$gdk_pixbuf_moduledir/libpixbufloader-svg.so"; then
++       test -f "$gdk_pixbuf_moduledir/libpixbufloader_svg.so"; then
+       # We must not use $PKG_CONFIG nor PKG_CHECK_* macros because we need
+       # to make sure we use the native pkg-config (in case we cross-compile).
+       if pkg-config --atleast-version=2.56.2 glib-2.0 &&
 @@ -34799,7 +34799,7 @@ esac
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
