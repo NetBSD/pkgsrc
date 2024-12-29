@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2023/11/05 22:40:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/12/29 09:34:52 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
@@ -23,6 +23,9 @@ ${PYSITELIB}/ncclient/devices/__init__.pyo
 ${PYSITELIB}/ncclient/devices/alu.py
 ${PYSITELIB}/ncclient/devices/alu.pyc
 ${PYSITELIB}/ncclient/devices/alu.pyo
+${PYSITELIB}/ncclient/devices/ciena.py
+${PYSITELIB}/ncclient/devices/ciena.pyc
+${PYSITELIB}/ncclient/devices/ciena.pyo
 ${PYSITELIB}/ncclient/devices/csr.py
 ${PYSITELIB}/ncclient/devices/csr.pyc
 ${PYSITELIB}/ncclient/devices/csr.pyo
@@ -179,6 +182,9 @@ ${PYSITELIB}/ncclient/transport/third_party/junos/parser.pyo
 ${PYSITELIB}/ncclient/transport/tls.py
 ${PYSITELIB}/ncclient/transport/tls.pyc
 ${PYSITELIB}/ncclient/transport/tls.pyo
+${PYSITELIB}/ncclient/transport/unixSocket.py
+${PYSITELIB}/ncclient/transport/unixSocket.pyc
+${PYSITELIB}/ncclient/transport/unixSocket.pyo
 ${PYSITELIB}/ncclient/xml_.py
 ${PYSITELIB}/ncclient/xml_.pyc
 ${PYSITELIB}/ncclient/xml_.pyo
