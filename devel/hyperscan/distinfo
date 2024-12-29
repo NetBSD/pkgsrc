@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:15:05 nia Exp $
+$NetBSD: distinfo,v 1.8 2024/12/29 14:56:38 adam Exp $
 
-BLAKE2s (hyperscan-5.0.0.tar.gz) = 5624dc6f9c72e6e10130250c8517f1f3709cbc52c9fbc56a89bfa99e4b00c9c8
-SHA512 (hyperscan-5.0.0.tar.gz) = 2a942832ab6908ea4b17342428188d635d1db0a57ac6452abbbcdadcf972be0174edeec67d03d925ce92d969c767e9933fdc636c4e3df0067aade659337692a5
-Size (hyperscan-5.0.0.tar.gz) = 1801219 bytes
-SHA1 (patch-CMakeLists.txt) = 6b6b8f4ed47132c2df593f108246ed129dd73240
-SHA1 (patch-src_nfa_limex__compile.cpp) = 7301935120e523e8e9490c3ccc1f37e9c9e5f317
+BLAKE2s (hyperscan-5.4.2.tar.gz) = 56eb9b80011ec253c3a2543d19ae3bb12d66b66d6be7a3942f798a3a1ec5430f
+SHA512 (hyperscan-5.4.2.tar.gz) = 328f21133161d16b36ebdc7f8b80a7afe7ca9e7e7433348e9bfa9acb5f3641522e8314beea1b219891f4e95f1392ff8036ebb87780fe808b8b4bd15a535e9509
+Size (hyperscan-5.4.2.tar.gz) = 1848851 bytes
+SHA1 (patch-CMakeLists.txt) = 09b5f2653d233faa10ed83c3a3def6ea66e4f3ce
+SHA1 (patch-chimera_CMakeLists.txt) = 8c762191adb5088a31e884ff0745f7c05995eb14
+SHA1 (patch-chimera_ch__runtime.c) = a3e89529a4397eeaea2db358f2676cf03e66a91e
 SHA1 (patch-src_util_popcount.h) = 3d30d412318c474c9d7a5b7fc45ea3148e6ed4b4
 SHA1 (patch-tools_hsbench_CMakeLists.txt) = 69ea565ee36811a632e8bc521901c4cdd0a91ca3
 SHA1 (patch-tools_hscollider_CMakeLists.txt) = ee22d83890ca7bf010dd751469d90dcb4930dd08

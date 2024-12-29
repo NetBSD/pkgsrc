@@ -1,0 +1,15 @@
+$NetBSD: patch-chimera_CMakeLists.txt,v 1.1 2024/12/29 14:56:38 adam Exp $
+
+Do not leak work dir in pkg-config file.
+
+--- chimera/CMakeLists.txt.orig	2024-12-29 14:09:56.883237585 +0000
++++ chimera/CMakeLists.txt
+@@ -41,7 +41,7 @@ if (NOT WIN32)
+             set(PRIVATE_LIBS "${PRIVATE_LIBS} -l${LIB}")
+         endif()
+     endforeach()
+-    set(PRIVATE_LIBS "${PRIVATE_LIBS} -L${LIBDIR} -lpcre")
++    set(PRIVATE_LIBS "${PRIVATE_LIBS} -lpcre")
+ 
+     configure_file(libch.pc.in libch.pc @ONLY) # only replace @ quoted vars
+     install(FILES ${CMAKE_BINARY_DIR}/chimera/libch.pc
