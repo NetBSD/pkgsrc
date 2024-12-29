@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7890 2024/12/29 14:58:27 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7891 2024/12/29 15:55:18 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11843,3 +11843,20 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated meta-pkgs/boost to 1.87.0 [adam 2024-12-29]
 	Updated devel/hyperscan to 5.4.2 [adam 2024-12-29]
 	Updated devel/py-hyperscan to 0.7.8 [adam 2024-12-29]
+	Updated devel/ruby-atk to 4.2.5 [tsutsui 2024-12-29]
+	Updated devel/ruby-gio2 to 4.2.5 [tsutsui 2024-12-29]
+	Updated devel/ruby-glib2 to 4.2.5 [tsutsui 2024-12-29]
+	Updated devel/ruby-gobject-introspection to 4.2.5 [tsutsui 2024-12-29]
+	Updated devel/ruby-pango to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-cairo-gobject to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-clutter to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-clutter-gdk to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-clutter-gtk to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-gdk3 to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.2.5 [tsutsui 2024-12-29]
+	Updated graphics/ruby-rsvg2 to 4.2.5 [tsutsui 2024-12-29]
+	Updated multimedia/ruby-clutter-gstreamer to 4.2.5 [tsutsui 2024-12-29]
+	Updated multimedia/ruby-gstreamer to 4.2.5 [tsutsui 2024-12-29]
+	Updated print/ruby-poppler to 4.2.5 [tsutsui 2024-12-29]
+	Updated x11/ruby-gtk3 to 4.2.5 [tsutsui 2024-12-29]
+	Updated x11/ruby-gtksourceview3 to 4.2.5 [tsutsui 2024-12-29]
