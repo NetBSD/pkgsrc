@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/03/13 09:25:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2024/12/29 20:59:59 wiz Exp $
 
-BLAKE2s (tree-sitter-heex-0.6.0.tar.gz) = 32e6c62b4fbc692eb8d966b0e7f617147289b83848c146a3ee8a6657e95f7b87
-SHA512 (tree-sitter-heex-0.6.0.tar.gz) = 994ed19e6049fe66878a891bacc70757c74e9e18f49d699b218ef49810fb791c22802effeb0348df6e93153885fbdfd7464a9ec4a62375a8d215a9866c04e11c
-Size (tree-sitter-heex-0.6.0.tar.gz) = 24951 bytes
+BLAKE2s (tree-sitter-heex-0.7.0.tar.gz) = 1513f3979741f3f19ad705167b15b76ba238ea798a4f34abe614a5758138b81e
+SHA512 (tree-sitter-heex-0.7.0.tar.gz) = 3264da3796f0b52c5c61df074c3291bc99e4f0349c2981d59c1cfa625ea415146dcc4fac3a6a606a11182d9ae6dfa55e8b47710273f1abd0cfb65d62fc206bff
+Size (tree-sitter-heex-0.7.0.tar.gz) = 26011 bytes
