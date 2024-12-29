@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:18:33 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/29 14:58:01 adam Exp $
 
-BLAKE2s (hyperscan-0.0.2.tar.gz) = c47b22445eb8b2ca44fb198d2f7b69f09b4d9eca5132832f24db1429f833f874
-SHA512 (hyperscan-0.0.2.tar.gz) = d8a9d22cc266059d023bd45d195456b063ad58fd6e484a69f612f6487f898f736ae74e498cd3e52a7af260336ea8b5a2b2060bfbe7c93ffe695e419607b30334
-Size (hyperscan-0.0.2.tar.gz) = 15598 bytes
+BLAKE2s (hyperscan-0.7.8.tar.gz) = e9bafd922d5673331fadfeca8364a5a801c4c3939bc2c66168fef8d67739559f
+SHA512 (hyperscan-0.7.8.tar.gz) = cfd26d137b7f79598236926d89c0f62ce0ca0f605088ee4942c48e2aaf701c1952d404a32dfb1bf3864194174d858657459a77423b88ec4be34cf4cb20691320
+Size (hyperscan-0.7.8.tar.gz) = 74532 bytes
+SHA1 (patch-setup.py) = d7a29b8d25102e8283216517094dde65beee7d0a
