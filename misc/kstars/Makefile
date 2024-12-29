@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2024/11/14 22:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2024/12/29 15:09:55 adam Exp $
 
 DISTNAME=	kstars-${_KDE_VERSION}
-PKGREVISION=	45
+PKGREVISION=	46
 CATEGORIES=	misc
 COMMENT=	KDE desktop planetarium
 

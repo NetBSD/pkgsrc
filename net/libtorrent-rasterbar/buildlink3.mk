@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2024/10/04 03:49:33 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2024/12/29 15:09:57 adam Exp $
 
 BUILDLINK_TREE+=	libtorrent-rasterbar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libtorrent-rasterbar
 LIBTORRENT_RASTERBAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libtorrent-rasterbar+=	libtorrent-rasterbar>=2.0.6
-BUILDLINK_ABI_DEPENDS.libtorrent-rasterbar+=	libtorrent-rasterbar>=2.0.10nb1
+BUILDLINK_ABI_DEPENDS.libtorrent-rasterbar+=	libtorrent-rasterbar>=2.0.10nb2
 BUILDLINK_PKGSRCDIR.libtorrent-rasterbar?=	../../net/libtorrent-rasterbar
 
 .include "../../devel/boost-libs/buildlink3.mk"
