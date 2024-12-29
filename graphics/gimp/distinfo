@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.118 2024/07/15 11:39:40 ryoon Exp $
+$NetBSD: distinfo,v 1.119 2024/12/29 10:23:26 wiz Exp $
 
 BLAKE2s (gimp-2.10.38.tar.bz2) = 337d56b37f1153ed939203be9b26b12152c628b63327da1cb7510c6e06959a5c
 SHA512 (gimp-2.10.38.tar.bz2) = 343bf1c3bd14bf8e7c7af79c05920faca213da68549127c1d8af53e2e872e55aeaf39a3cfcf578183a34fdc4f98e1c859be63956b0611067186eefd1fdee2aaa
 Size (gimp-2.10.38.tar.bz2) = 31698453 bytes
 SHA1 (patch-aa) = 403c46d7070de208769e99e512922ba3a5b7129b
-SHA1 (patch-ab) = 684bc8868561ab96db0a6a56afdcc7cdcdc5f26b
+SHA1 (patch-ab) = fe1c19be8ff9d528cd12bcebdf0c34eb0f35826b
 SHA1 (patch-app_core_gimpbrush-transform.cc) = 3bd3f69401ee7dabb53f7ebf533870ee9add856c
 SHA1 (patch-app_gui_gui.c) = 781a44f0779305b9d39deb14f4b8ef1cf06137ff
-SHA1 (patch-configure.ac) = c7e89bc9fd576eb95a9288eccea8959cbe1ee6de
+SHA1 (patch-configure.ac) = b018c44183d47131e1d7d282cc41e1131ecefa1a
 SHA1 (patch-plug-ins_common_file-mng.c) = 8ed244997cdef7125e1aa5da4d0fac5068ad5159
 SHA1 (patch-plug-ins_pygimp_py-compile) = 59dcdd00073b737f8f52e6a56832722033ee5703
 SHA1 (patch-plug-ins_script-fu_script-fu-server.c) = c424b1a8e345ec3d0763ac2cf1f8535da9e10797
