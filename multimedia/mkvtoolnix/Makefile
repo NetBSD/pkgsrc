@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.244 2024/12/29 15:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.245 2024/12/29 16:50:59 adam Exp $
 
-DISTNAME=	mkvtoolnix-88.0
-PKGREVISION=	4
+DISTNAME=	mkvtoolnix-89.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://mkvtoolnix.download/sources/
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +31,8 @@ CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_PREFIX.boost-libs}/lib
 CONFIGURE_ARGS+=	--with-docbook-xsl-root=${PREFIX}/share/xsl/docbook
 CONFIGURE_ARGS+=	--with-qmake=${QTDIR}/bin/qmake
 CONFIGURE_ENV+=		QMAKE6=${QTDIR}/bin/qmake6
+# Hack: do not let configure override -std flag, or boost compilation will fail.
+CONFIGURE_ENV+=		ac_cv_prog_cxx_cxx11=-std=c++17
 
 REPLACE_LOCALEDIR_PATTERNS=	build-config.in
 
