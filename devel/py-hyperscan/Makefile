@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2024/12/29 14:58:01 adam Exp $
 
-DISTNAME=	hyperscan-0.0.2
+DISTNAME=	hyperscan-0.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperscan/}
 
@@ -11,13 +10,20 @@ HOMEPAGE=	https://github.com/darvid/python-hyperscan
 COMMENT=	CPython extension for hyperscan
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-USE_LANGUAGES=	c
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.12.0:../../devel/py-test-mock
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=3.5.0:../../devel/py-test-xdist
+
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/.gitignore
+	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/hyperscan/hyperscanmodule.c
 
 .include "../../devel/hyperscan/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
