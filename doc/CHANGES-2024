@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7889 2024/12/29 09:45:57 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7890 2024/12/29 14:58:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11833,3 +11833,13 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated security/py-authlib to 1.4.0 [adam 2024-12-29]
 	Updated lang/py-asttokens to 3.0.0 [adam 2024-12-29]
 	Updated devel/py-unittest2pytest to 0.5 [adam 2024-12-29]
+	Updated devel/boost-build to 1.87.0 [adam 2024-12-29]
+	Updated devel/boost-docs to 1.87.0 [adam 2024-12-29]
+	Updated devel/boost-headers to 1.87.0 [adam 2024-12-29]
+	Updated devel/boost-jam to 1.87.0 [adam 2024-12-29]
+	Updated devel/boost-libs to 1.87.0 [adam 2024-12-29]
+	Updated devel/boost-mpi to 1.87.0 [adam 2024-12-29]
+	Updated devel/py-boost to 1.87.0 [adam 2024-12-29]
+	Updated meta-pkgs/boost to 1.87.0 [adam 2024-12-29]
+	Updated devel/hyperscan to 5.4.2 [adam 2024-12-29]
+	Updated devel/py-hyperscan to 0.7.8 [adam 2024-12-29]
