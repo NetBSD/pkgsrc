@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/10/21 20:26:13 bacon Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/29 21:05:44 bacon Exp $
 
-DISTNAME=	vsearch-2.29.0
+DISTNAME=	vsearch-2.29.2
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
