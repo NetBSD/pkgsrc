@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2024/12/29 09:09:32 adam Exp $
 
-DISTNAME=	path-17.0.0
+DISTNAME=	path-17.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/path/}
@@ -16,8 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-more-itertools-[0-9]*:../../devel/py-more-itertool
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
