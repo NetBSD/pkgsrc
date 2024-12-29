@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.19 2024/12/26 22:28:31 adam Exp $
+# $NetBSD: Makefile,v 1.20 2024/12/29 09:04:49 adam Exp $
 
-DISTNAME=	pyqt_builder-1.17.0
+DISTNAME=	pyqt_builder-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt_/qt-/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt-builder/}
 
 MAINTAINER=	rhialto@NetBSD.org
-HOMEPAGE=	https://www.riverbankcomputing.com/software/pyqt-builder/
+HOMEPAGE=	https://pyqt-builder.readthedocs.io/
 COMMENT=	PyQt-world build tool (sip extension)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+
+WHEEL_NAME=	${DISTNAME:S/pyqt_/PyQt_/}
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=30.3:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-sip6>=6.7:../../x11/py-sip6
-
-WHEEL_NAME=	${DISTNAME:S/pyqt_/PyQt_/:C/-([^0-9])/_\1/g}
 
 USE_LANGUAGES=	c c++
 
