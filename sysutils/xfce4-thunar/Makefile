@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.103 2024/12/27 08:20:42 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2024/12/29 19:10:42 bsiegert Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	thunar-4.18.11
+DISTNAME=	thunar-4.20.0
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/xfce/thunar/${PKGVERSION_NOREV:R}/
@@ -24,6 +23,7 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 
 .include "options.mk"
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

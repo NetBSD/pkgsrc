@@ -1,10 +1,10 @@
-$NetBSD: patch-thunar_Makefile.in,v 1.5 2018/05/15 22:25:31 youri Exp $
+$NetBSD: patch-thunar_Makefile.in,v 1.6 2024/12/29 19:10:42 bsiegert Exp $
 
 Don't link Thunar to thunar.
 
---- thunar/Makefile.in.orig	2018-04-05 20:34:19.000000000 +0000
+--- thunar/Makefile.in.orig	2024-12-15 09:04:33.000000000 +0000
 +++ thunar/Makefile.in
-@@ -2551,7 +2551,7 @@ install-dvi-am:
+@@ -2750,7 +2750,7 @@ install-dvi-am:
  
  install-exec-am: install-binPROGRAMS install-binSCRIPTS
  	@$(NORMAL_INSTALL)
@@ -13,16 +13,15 @@ Don't link Thunar to thunar.
  install-html: install-html-am
  
  install-html-am:
-@@ -2617,9 +2617,9 @@ uninstall-am: uninstall-binPROGRAMS unin
- @INTLTOOL_DESKTOP_RULE@
+@@ -2908,11 +2908,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ %.desktop: %.desktop.in Makefile
+ 	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
  
- # install symlink to 'thunar'
+-# install symlink to 'thunar'
 -install-exec-hook:
 -	$(mkinstalldirs) $(DESTDIR)$(bindir)
 -	-( cd $(DESTDIR)$(bindir) ; test -x Thunar || ln -sf thunar Thunar )
-+#install-exec-hook:
-+#	$(mkinstalldirs) $(DESTDIR)$(bindir)
-+#	-( cd $(DESTDIR)$(bindir) ; test -x Thunar || ln -sf thunar Thunar )
- 
+-
  uninstall-local:
  	-( cd $(DESTDIR)$(bindir) ; test -h Thunar && rm -f Thunar )
+ 
