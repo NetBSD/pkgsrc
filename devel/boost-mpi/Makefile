@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/04/17 16:14:01 adam Exp $
+# $NetBSD: Makefile,v 1.5 2024/12/29 14:53:13 adam Exp $
 
 BOOST_PACKAGE=		mpi
 BOOST_COMMENT=		(Boost.MPI binary library)
@@ -21,8 +21,10 @@ do-build: bjam-build
 
 do-install: boost-install-libs
 
-# boost_serialization already in boost-libs
+# These are already in boost-libs
 post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*container.*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*graph.*
 	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*serialization.*
 
 .include "../../devel/boost-libs/buildlink3.mk"

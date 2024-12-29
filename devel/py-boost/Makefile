@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/10/14 06:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2024/12/29 14:53:13 adam Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -29,6 +29,11 @@ do-install: boost-install-libs
 PLIST_SUBST+=	PYVER=${_PYTHON_VERSION}
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
+
+# These are already in boost-libs
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*container.*
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*graph.*
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
