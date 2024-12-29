@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2024/10/20 09:56:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.67 2024/12/29 19:04:11 leot Exp $
 bin/gallery-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -111,6 +111,9 @@ ${PYSITELIB}/gallery_dl/extractor/bbc.pyo
 ${PYSITELIB}/gallery_dl/extractor/behance.py
 ${PYSITELIB}/gallery_dl/extractor/behance.pyc
 ${PYSITELIB}/gallery_dl/extractor/behance.pyo
+${PYSITELIB}/gallery_dl/extractor/bilibili.py
+${PYSITELIB}/gallery_dl/extractor/bilibili.pyc
+${PYSITELIB}/gallery_dl/extractor/bilibili.pyo
 ${PYSITELIB}/gallery_dl/extractor/blogger.py
 ${PYSITELIB}/gallery_dl/extractor/blogger.pyc
 ${PYSITELIB}/gallery_dl/extractor/blogger.pyo
@@ -171,9 +174,15 @@ ${PYSITELIB}/gallery_dl/extractor/e621.pyo
 ${PYSITELIB}/gallery_dl/extractor/erome.py
 ${PYSITELIB}/gallery_dl/extractor/erome.pyc
 ${PYSITELIB}/gallery_dl/extractor/erome.pyo
+${PYSITELIB}/gallery_dl/extractor/everia.py
+${PYSITELIB}/gallery_dl/extractor/everia.pyc
+${PYSITELIB}/gallery_dl/extractor/everia.pyo
 ${PYSITELIB}/gallery_dl/extractor/exhentai.py
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyc
 ${PYSITELIB}/gallery_dl/extractor/exhentai.pyo
+${PYSITELIB}/gallery_dl/extractor/facebook.py
+${PYSITELIB}/gallery_dl/extractor/facebook.pyc
+${PYSITELIB}/gallery_dl/extractor/facebook.pyo
 ${PYSITELIB}/gallery_dl/extractor/fanbox.py
 ${PYSITELIB}/gallery_dl/extractor/fanbox.pyc
 ${PYSITELIB}/gallery_dl/extractor/fanbox.pyo
@@ -327,6 +336,9 @@ ${PYSITELIB}/gallery_dl/extractor/lightroom.pyo
 ${PYSITELIB}/gallery_dl/extractor/livedoor.py
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyc
 ${PYSITELIB}/gallery_dl/extractor/livedoor.pyo
+${PYSITELIB}/gallery_dl/extractor/lofter.py
+${PYSITELIB}/gallery_dl/extractor/lofter.pyc
+${PYSITELIB}/gallery_dl/extractor/lofter.pyo
 ${PYSITELIB}/gallery_dl/extractor/lolisafe.py
 ${PYSITELIB}/gallery_dl/extractor/lolisafe.pyc
 ${PYSITELIB}/gallery_dl/extractor/lolisafe.pyo
@@ -375,6 +387,9 @@ ${PYSITELIB}/gallery_dl/extractor/misskey.pyo
 ${PYSITELIB}/gallery_dl/extractor/moebooru.py
 ${PYSITELIB}/gallery_dl/extractor/moebooru.pyc
 ${PYSITELIB}/gallery_dl/extractor/moebooru.pyo
+${PYSITELIB}/gallery_dl/extractor/motherless.py
+${PYSITELIB}/gallery_dl/extractor/motherless.pyc
+${PYSITELIB}/gallery_dl/extractor/motherless.pyo
 ${PYSITELIB}/gallery_dl/extractor/myhentaigallery.py
 ${PYSITELIB}/gallery_dl/extractor/myhentaigallery.pyc
 ${PYSITELIB}/gallery_dl/extractor/myhentaigallery.pyo
@@ -399,6 +414,9 @@ ${PYSITELIB}/gallery_dl/extractor/nijie.pyo
 ${PYSITELIB}/gallery_dl/extractor/nitter.py
 ${PYSITELIB}/gallery_dl/extractor/nitter.pyc
 ${PYSITELIB}/gallery_dl/extractor/nitter.pyo
+${PYSITELIB}/gallery_dl/extractor/noop.py
+${PYSITELIB}/gallery_dl/extractor/noop.pyc
+${PYSITELIB}/gallery_dl/extractor/noop.pyo
 ${PYSITELIB}/gallery_dl/extractor/nozomi.py
 ${PYSITELIB}/gallery_dl/extractor/nozomi.pyc
 ${PYSITELIB}/gallery_dl/extractor/nozomi.pyo
@@ -465,6 +483,9 @@ ${PYSITELIB}/gallery_dl/extractor/reactor.pyo
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.py
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyc
 ${PYSITELIB}/gallery_dl/extractor/readcomiconline.pyo
+${PYSITELIB}/gallery_dl/extractor/realbooru.py
+${PYSITELIB}/gallery_dl/extractor/realbooru.pyc
+${PYSITELIB}/gallery_dl/extractor/realbooru.pyo
 ${PYSITELIB}/gallery_dl/extractor/recursive.py
 ${PYSITELIB}/gallery_dl/extractor/recursive.pyc
 ${PYSITELIB}/gallery_dl/extractor/recursive.pyo
@@ -477,12 +498,24 @@ ${PYSITELIB}/gallery_dl/extractor/redgifs.pyo
 ${PYSITELIB}/gallery_dl/extractor/rule34us.py
 ${PYSITELIB}/gallery_dl/extractor/rule34us.pyc
 ${PYSITELIB}/gallery_dl/extractor/rule34us.pyo
+${PYSITELIB}/gallery_dl/extractor/rule34vault.py
+${PYSITELIB}/gallery_dl/extractor/rule34vault.pyc
+${PYSITELIB}/gallery_dl/extractor/rule34vault.pyo
+${PYSITELIB}/gallery_dl/extractor/rule34xyz.py
+${PYSITELIB}/gallery_dl/extractor/rule34xyz.pyc
+${PYSITELIB}/gallery_dl/extractor/rule34xyz.pyo
+${PYSITELIB}/gallery_dl/extractor/saint.py
+${PYSITELIB}/gallery_dl/extractor/saint.pyc
+${PYSITELIB}/gallery_dl/extractor/saint.pyo
 ${PYSITELIB}/gallery_dl/extractor/sankaku.py
 ${PYSITELIB}/gallery_dl/extractor/sankaku.pyc
 ${PYSITELIB}/gallery_dl/extractor/sankaku.pyo
 ${PYSITELIB}/gallery_dl/extractor/sankakucomplex.py
 ${PYSITELIB}/gallery_dl/extractor/sankakucomplex.pyc
 ${PYSITELIB}/gallery_dl/extractor/sankakucomplex.pyo
+${PYSITELIB}/gallery_dl/extractor/scrolller.py
+${PYSITELIB}/gallery_dl/extractor/scrolller.pyc
+${PYSITELIB}/gallery_dl/extractor/scrolller.pyo
 ${PYSITELIB}/gallery_dl/extractor/seiga.py
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyc
 ${PYSITELIB}/gallery_dl/extractor/seiga.pyo
@@ -621,6 +654,9 @@ ${PYSITELIB}/gallery_dl/extractor/xhamster.pyo
 ${PYSITELIB}/gallery_dl/extractor/xvideos.py
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyc
 ${PYSITELIB}/gallery_dl/extractor/xvideos.pyo
+${PYSITELIB}/gallery_dl/extractor/yiffverse.py
+${PYSITELIB}/gallery_dl/extractor/yiffverse.pyc
+${PYSITELIB}/gallery_dl/extractor/yiffverse.pyo
 ${PYSITELIB}/gallery_dl/extractor/ytdl.py
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyc
 ${PYSITELIB}/gallery_dl/extractor/ytdl.pyo
