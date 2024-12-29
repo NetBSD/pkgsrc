@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2022/12/08 15:22:02 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2024/12/29 15:53:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -259,7 +259,6 @@ ${GEM_LIBDIR}/sample/gtk-demo/old_demos/tree_store.rb
 ${GEM_LIBDIR}/sample/gtk-demo/org.gtk.Demo.gschema.xml
 ${GEM_LIBDIR}/sample/gtk-demo/overlay.rb
 ${GEM_LIBDIR}/sample/gtk-demo/overlay2.rb
-${GEM_LIBDIR}/sample/gtk-demo/panes.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pickers.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pixbufs.rb
 ${GEM_LIBDIR}/sample/gtk-demo/pointer_cursor.png

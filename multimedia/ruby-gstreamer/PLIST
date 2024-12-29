@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/02/23 11:25:30 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.7 2024/12/29 15:53:09 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gstreamer.${RUBY_DLEXT}
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/lib/gst/version.rb
 ${GEM_LIBDIR}/lib/gstreamer.rb
 ${GEM_LIBDIR}/lib/gstreamer.${RUBY_DLEXT}
 ${GEM_LIBDIR}/sample/audio-example.rb
+${GEM_LIBDIR}/sample/audio-extract.rb
 ${GEM_LIBDIR}/sample/framestep1.rb
 ${GEM_LIBDIR}/sample/gst-inspect.rb
 ${GEM_LIBDIR}/sample/gtk-video.rb
