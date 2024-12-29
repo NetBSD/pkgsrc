@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/10/26 13:09:46 adam Exp $
+$NetBSD: distinfo,v 1.20 2024/12/29 09:43:30 adam Exp $
 
-BLAKE2s (asttokens-2.4.1.tar.gz) = 32c0ad7e76ccde945e18af85d27a0756019f6036761fa609f53ef227c42ef41f
-SHA512 (asttokens-2.4.1.tar.gz) = 5b60293e40afc42baab346b2367485f2a4dda6210bbbda53e3080ce86b05c96f928ad1eea00a2b81a2afcce626a18c8166add26bbf8b320d4f71b6fc4aa9083a
-Size (asttokens-2.4.1.tar.gz) = 62284 bytes
+BLAKE2s (asttokens-3.0.0.tar.gz) = 0217418b3facf59fd25ac887494edea8c753ef0685b02e6a4c47cc54bbf06efe
+SHA512 (asttokens-3.0.0.tar.gz) = e4cab19517597c446043eab8e8eddd192fc4743dadf338720733f9dd1647829310a01386c2345a346ab242cabceb3454832ea5671cb252f434c59e3866460157
+Size (asttokens-3.0.0.tar.gz) = 61978 bytes
