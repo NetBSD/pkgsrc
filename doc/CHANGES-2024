@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7908 2024/12/29 21:00:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7909 2024/12/29 21:01:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11879,3 +11879,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/tree-sitter to 0.24.6 [wiz 2024-12-29]
 	Updated textproc/tree-sitter-c to 0.23.4 [wiz 2024-12-29]
 	Updated textproc/tree-sitter-heex to 0.7.0 [wiz 2024-12-29]
+	Updated textproc/tree-sitter-python to 0.23.6 [wiz 2024-12-29]
