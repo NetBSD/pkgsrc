@@ -1,13 +1,14 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2020/11/29 20:27:28 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2024/12/29 14:56:38 adam Exp $
 
 Avoid conflicts with pkgsrc's CMAKE_MODULE_PATH override.
 Disable examples as they require Linux specific headers.
 Do not try to use -march/-mtune.
+Build Chimera without PCRE sources.
 
---- CMakeLists.txt.orig	2018-07-09 16:45:44.000000000 +0000
+--- CMakeLists.txt.orig	2023-04-19 09:34:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -6,7 +6,6 @@ set (HS_MINOR_VERSION 0)
- set (HS_PATCH_VERSION 0)
+@@ -6,7 +6,6 @@ set (HS_MINOR_VERSION 4)
+ set (HS_PATCH_VERSION 2)
  set (HS_VERSION ${HS_MAJOR_VERSION}.${HS_MINOR_VERSION}.${HS_PATCH_VERSION})
  
 -set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
@@ -25,7 +26,7 @@ Do not try to use -march/-mtune.
  
  find_package(PkgConfig QUIET)
  
-@@ -68,7 +67,7 @@ include_directories(${PROJECT_SOURCE_DIR
+@@ -69,7 +68,7 @@ include_directories(${PROJECT_SOURCE_DIR
  include_directories(${PROJECT_BINARY_DIR})
  include_directories(SYSTEM include)
  
@@ -34,7 +35,7 @@ Do not try to use -march/-mtune.
  
  # -- make this work? set(python_ADDITIONAL_VERSIONS 2.7 2.6)
  find_package(PythonInterp)
-@@ -83,7 +82,7 @@ endif()
+@@ -84,7 +83,7 @@ endif()
  # allow for reproducible builds - python for portability
  if (DEFINED ENV{SOURCE_DATE_EPOCH})
        execute_process(
@@ -43,7 +44,7 @@ Do not try to use -march/-mtune.
            OUTPUT_VARIABLE BUILD_DATE
            OUTPUT_STRIP_TRAILING_WHITESPACE)
  else ()
-@@ -179,35 +178,6 @@ else()
+@@ -182,36 +181,6 @@ else()
          string(REGEX REPLACE "-O[^ ]*" "" CMAKE_CXX_FLAGS_${CONFIG} "${CMAKE_CXX_FLAGS_${CONFIG}}")
      endforeach ()
  
@@ -59,7 +60,9 @@ Do not try to use -march/-mtune.
 -        set (EXEC_ARGS ${CC_ARG1} -c -Q --help=target -march=native -mtune=native)
 -        execute_process(COMMAND ${CMAKE_C_COMPILER} ${EXEC_ARGS}
 -            OUTPUT_VARIABLE _GCC_OUTPUT)
--        string(REGEX REPLACE ".*march=[ \t]*([^ \n]*)[ \n].*" "\\1"
+-        string(FIND "${_GCC_OUTPUT}" "march" POS)
+-        string(SUBSTRING "${_GCC_OUTPUT}" ${POS} -1 _GCC_OUTPUT)
+-        string(REGEX REPLACE "march=[ \t]*([^ \n]*)[ \n].*" "\\1"
 -            GNUCC_ARCH "${_GCC_OUTPUT}")
 -
 -        # test the parsed flag
@@ -75,11 +78,10 @@ Do not try to use -march/-mtune.
 -    else ()
 -        set(TUNE_FLAG native)
 -    endif()
--
+ 
      # compiler version checks TODO: test more compilers
      if (CMAKE_COMPILER_IS_GNUCXX)
-         set(GNUCXX_MINVER "4.8.1")
-@@ -246,14 +216,6 @@ else()
+@@ -251,14 +220,6 @@ else()
          set(EXTRA_CXX_FLAGS "${EXTRA_CXX_FLAGS} -DNDEBUG")
      endif()
  
@@ -94,7 +96,7 @@ Do not try to use -march/-mtune.
      if(CMAKE_COMPILER_IS_GNUCC)
          # spurious warnings?
          set(EXTRA_C_FLAGS "${EXTRA_C_FLAGS} -Wno-array-bounds -Wno-maybe-uninitialized")
-@@ -320,7 +282,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+@@ -326,7 +287,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
          message (STATUS "Building the fat runtime requires the Unix Makefiles generator, or Ninja with CMake v3.0 or higher")
          set (FAT_RUNTIME_REQUISITES FALSE)
      else()
@@ -103,8 +105,8 @@ Do not try to use -march/-mtune.
          if (NOT HAS_C_ATTR_IFUNC)
              message(STATUS "Compiler does not support ifunc attribute, cannot build fat runtime")
              set (FAT_RUNTIME_REQUISITES FALSE)
-@@ -331,7 +293,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
-     CMAKE_DEPENDENT_OPTION(FAT_RUNTIME "Build a library that supports multiple microarchitecures" ${RELEASE_BUILD} "FAT_RUNTIME_REQUISITES" OFF)
+@@ -337,7 +298,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+     CMAKE_DEPENDENT_OPTION(FAT_RUNTIME "Build a library that supports multiple microarchitectures" ${RELEASE_BUILD} "FAT_RUNTIME_REQUISITES" OFF)
  endif ()
  
 -include (${CMAKE_MODULE_PATH}/arch.cmake)
@@ -112,16 +114,23 @@ Do not try to use -march/-mtune.
  
  # testing a builtin takes a little more work
  CHECK_C_SOURCE_COMPILES("void *aa_test(void *x) { return __builtin_assume_aligned(x, 16);}\nint main(void) { return 0; }" HAVE_CC_BUILTIN_ASSUME_ALIGNED)
-@@ -454,7 +416,7 @@ if (NOT WIN32)
+@@ -486,13 +447,13 @@ if (NOT WIN32)
  set(PCRE_REQUIRED_MAJOR_VERSION 8)
  set(PCRE_REQUIRED_MINOR_VERSION 41)
  set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
 -include (${CMAKE_MODULE_PATH}/pcre.cmake)
 +include (${PROJECT_SOURCE_DIR}/cmake/pcre.cmake)
  if (NOT CORRECT_PCRE_VERSION)
-     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
+     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} or above not found")
  endif()
-@@ -474,7 +436,7 @@ endif()
+ 
+ # we need static libs for Chimera - too much deep magic for shared libs
+-if (CORRECT_PCRE_VERSION AND PCRE_BUILD_SOURCE AND BUILD_STATIC_LIBS)
++if (CORRECT_PCRE_VERSION)
+     set(BUILD_CHIMERA TRUE)
+ endif()
+ 
+@@ -506,7 +467,7 @@ endif()
  endif()
  
  # do substitutions
@@ -130,16 +139,16 @@ Do not try to use -march/-mtune.
  configure_file(src/hs_version.h.in ${PROJECT_BINARY_DIR}/hs_version.h)
  
  if (NOT WIN32)
-@@ -506,7 +468,7 @@ if (WIN32)
+@@ -538,7 +499,7 @@ if (WIN32)
  set(PCRE_REQUIRED_MAJOR_VERSION 8)
  set(PCRE_REQUIRED_MINOR_VERSION 41)
  set(PCRE_REQUIRED_VERSION ${PCRE_REQUIRED_MAJOR_VERSION}.${PCRE_REQUIRED_MINOR_VERSION})
 -include (${CMAKE_MODULE_PATH}/pcre.cmake)
 +include (${PROJECT_SOURCE_DIR}/cmake/pcre.cmake)
  if (NOT CORRECT_PCRE_VERSION)
-     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} not found")
+     message(STATUS "PCRE ${PCRE_REQUIRED_VERSION} or above not found")
  endif()
-@@ -1195,28 +1157,28 @@ else (FAT_RUNTIME)
+@@ -1230,28 +1191,28 @@ else (FAT_RUNTIME)
         list(APPEND RUNTIME_LIBS $<TARGET_OBJECTS:hs_exec_core2>)
         set_target_properties(hs_exec_core2 PROPERTIES
             COMPILE_FLAGS "-march=core2"
@@ -171,8 +180,8 @@ Do not try to use -march/-mtune.
 +               RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
                 )
         endif (BUILD_AVX512)
- 
-@@ -1251,21 +1213,21 @@ else (FAT_RUNTIME)
+        if (BUILD_AVX512VBMI)
+@@ -1294,21 +1255,21 @@ else (FAT_RUNTIME)
          set_target_properties(hs_exec_shared_core2 PROPERTIES
              COMPILE_FLAGS "-march=core2"
              POSITION_INDEPENDENT_CODE TRUE
@@ -197,7 +206,7 @@ Do not try to use -march/-mtune.
              )
  
          if (BUILD_AVX512)
-@@ -1274,7 +1236,7 @@ else (FAT_RUNTIME)
+@@ -1317,7 +1278,7 @@ else (FAT_RUNTIME)
              set_target_properties(hs_exec_shared_avx512 PROPERTIES
                  COMPILE_FLAGS "${SKYLAKE_FLAG}"
                  POSITION_INDEPENDENT_CODE TRUE
@@ -205,13 +214,4 @@ Do not try to use -march/-mtune.
 +                RULE_LAUNCH_COMPILE "${BUILD_WRAPPER} avx512 ${PROJECT_SOURCE_DIR}/cmake/keep.syms.in"
                  )
          endif (BUILD_AVX512)
-         add_library(hs_exec_common_shared OBJECT
-@@ -1367,8 +1329,3 @@ if (NOT BUILD_STATIC_LIBS)
-     # use shared lib without having to change all the targets
-     add_library(hs ALIAS hs_shared)
- endif ()
--
--
--if(NOT WIN32)
--    add_subdirectory(examples)
--endif()
+         if (BUILD_AVX512VBMI)

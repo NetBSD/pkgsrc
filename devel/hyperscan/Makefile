@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/12/03 19:57:51 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2024/12/29 14:56:38 adam Exp $
 
-DISTNAME=	hyperscan-5.0.0
-PKGREVISION=	12
+DISTNAME=	hyperscan-5.4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=intel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -15,13 +14,17 @@ TOOL_DEPENDS+=	ragel-[0-9]*:../../devel/ragel
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-USE_CMAKE=		yes
-USE_LANGUAGES=		c99 c++
-USE_CXX_FEATURES+=	c++11
+USE_CC_FEATURES=	c99
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PYTHON_FOR_BUILD_ONLY=	yes
 
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_SHARED_LIBS=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_EXAMPLES=OFF
+# Static libs are needed to build Chimera.
+# Chimera is required for py-hyperscan.
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_STATIC_AND_SHARED=ON
+PKGCONFIG_OVERRIDE+=	chimera/libch.pc.in
 PKGCONFIG_OVERRIDE+=	libhs.pc.in
 
 .include "../../mk/bsd.prefs.mk"
@@ -32,5 +35,7 @@ CFLAGS+=	-march=core2
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
