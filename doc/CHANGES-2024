@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7914 2024/12/30 06:09:01 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7915 2024/12/30 07:14:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11888,3 +11888,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-orjson to 3.10.13 [adam 2024-12-30]
 	Updated devel/py-fakefs to 5.7.3 [adam 2024-12-30]
 	Updated www/py-livereload to 2.7.1 [adam 2024-12-30]
+	Downgraded fonts/cantarell-fonts to 0.301 [pin 2024-12-30]
