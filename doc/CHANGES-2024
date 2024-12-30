@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7922 2024/12/30 13:44:27 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7923 2024/12/30 13:57:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11896,3 +11896,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated devel/ast-grep to 0.32.3 [pin 2024-12-30]
 	Updated www/R-gh to 1.4.1 [mef 2024-12-30]
 	Updated www/R-googledrive to 2.1.1 [mef 2024-12-30]
+	Updated www/R-htmlwidgets to 1.6.4 [mef 2024-12-30]
