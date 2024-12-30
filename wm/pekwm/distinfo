@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2024/12/04 14:17:48 pin Exp $
+$NetBSD: distinfo,v 1.27 2024/12/30 21:50:52 pin Exp $
 
-BLAKE2s (pekwm-0.3.1.tar.gz) = 4bc5e7efd976a560e28c567625cc0770ed0b1c3f415ad086afae6839dc0f5ddc
-SHA512 (pekwm-0.3.1.tar.gz) = 8aca26b92ffafb6d0fffd0eac46edd71f29c5a1798bb86c65e06321f0b65d30d2023473dc716e490be00789b2bea3e897f32f5ee77c18e585ac03a1fa8ba5b13
-Size (pekwm-0.3.1.tar.gz) = 1212846 bytes
+BLAKE2s (release-0.3.2.tar.gz) = ed372cfcbab107758e6fe0166c84c35917560daf7130a2a663edd972b869cf9f
+SHA512 (release-0.3.2.tar.gz) = b0378792c01ad979a2aed2a4815d477ab37e2bbe99e6664512b2516e89ffff248d1198aaf7f91b59a2b8f35d2d10a92cbfa0f6edb89783938993afb6ec3f15a7
+Size (release-0.3.2.tar.gz) = 1213773 bytes
