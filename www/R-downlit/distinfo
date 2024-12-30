@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/18 09:25:53 mef Exp $
+$NetBSD: distinfo,v 1.2 2024/12/30 10:26:11 mef Exp $
 
-BLAKE2s (R/downlit_0.4.0.tar.gz) = c43c9b2b66ea03d0a590429df9c1d5c4129ab8105106ce07b01dc211c3db77d6
-SHA512 (R/downlit_0.4.0.tar.gz) = c83eaaa3f5e39e79ac68f9433364c8e05e00f2cef7dff1ba818ba4fab91a2b70b11f795417cf1301504ab7328323577dc6ad920eada317effa40e7aced1db069
-Size (R/downlit_0.4.0.tar.gz) = 35489 bytes
+BLAKE2s (R/downlit_0.4.4.tar.gz) = de7ed6fea2c43aef2062ceb947091734eeccade909ecc343db0ac13190f7abff
+SHA512 (R/downlit_0.4.4.tar.gz) = 86b2511866d028cb53d82125c2de1cb2bdbb2ea56997beb10928c99fef5ffb6b50d5c4ea57fe6020aed994674948d999d707095ff1dd97effc2b3fe230d96e05
+Size (R/downlit_0.4.4.tar.gz) = 37162 bytes
