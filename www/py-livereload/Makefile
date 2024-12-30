@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/11/11 07:29:25 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/30 06:08:32 adam Exp $
 
-DISTNAME=	livereload-2.7.0
+DISTNAME=	livereload-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/livereload/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
