@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2024/12/30 14:44:35 adam Exp $
 
-DISTNAME=	limits-3.13.0
+DISTNAME=	limits-3.14.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/limits/}
@@ -12,13 +12,10 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-deprecated>=1.2:../../devel/py-deprecated
-DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=1.3:../../devel/py-importlib-resources
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
