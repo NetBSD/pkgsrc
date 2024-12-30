@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1491 2024/12/13 17:03:24 taca Exp $
+# $NetBSD: Makefile,v 1.1492 2024/12/30 21:55:09 pin Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -172,6 +172,7 @@ SUBDIR+=	choose
 SUBDIR+=	cityhash
 SUBDIR+=	cjose
 SUBDIR+=	cldr-emoji-annotation
+SUBDIR+=	clicsv
 SUBDIR+=	cmark
 SUBDIR+=	cmark-gfm
 SUBDIR+=	cmigemo
