@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/07/20 06:30:18 adam Exp $
+$NetBSD: distinfo,v 1.10 2024/12/30 06:08:32 adam Exp $
 
-BLAKE2s (livereload-2.7.0.tar.gz) = 469b94fc0b050ce5cfee602bcdeb65d58265575db275238a1fe392a459ffd6b1
-SHA512 (livereload-2.7.0.tar.gz) = 4630424ba1671c1151c62fde0efb4b5fcff56ebffad295ffc94b32c325f52f83cd63ff017367f673bb0b45e91bfec2de8b479f27452ff8fe44eae41b6b7afd13
-Size (livereload-2.7.0.tar.gz) = 22143 bytes
+BLAKE2s (livereload-2.7.1.tar.gz) = b8688bce585cc2503769a9ba1452e0ed56d35a12568ae30261df5746a4a8793d
+SHA512 (livereload-2.7.1.tar.gz) = bc4616ad9ebb243f010612465eda68018b60454d5d4269b2e9aaf14051a46dad3b04c5e95f049bef7d62dafa73762fad8e2d2481c9b59104f9b0cfb8109327be
+Size (livereload-2.7.1.tar.gz) = 22255 bytes
