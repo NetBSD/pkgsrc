@@ -1,3 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/03 14:12:53 pin Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/30 07:13:26 pin Exp $
+share/fonts/X11/OTF/Cantarell-Bold.otf
+share/fonts/X11/OTF/Cantarell-ExtraBold.otf
+share/fonts/X11/OTF/Cantarell-Light.otf
+share/fonts/X11/OTF/Cantarell-Regular.otf
+share/fonts/X11/OTF/Cantarell-Thin.otf
+share/fonts/X11/OTF/Cantarell-VF.otf
 @pkgdir share/fonts/X11/TTF
-@pkgdir share/fonts/X11/OTF
