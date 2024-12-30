@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/12/27 08:50:44 wiz Exp $
+$NetBSD: distinfo,v 1.11 2024/12/30 06:05:44 adam Exp $
 
 BLAKE2s (associative-cache-2.0.0.crate) = 337d054dfd3e0ae9dc1c811f0159d65e30fc578bb756a7e0104481c5158810b3
 SHA512 (associative-cache-2.0.0.crate) = 854f5130f286aaa76ffa2f4cbe27ca57c8220ec517c0d6fac46e5a505a3cb5fdc9ab60818db9f890b63ce2f44d243594d44747f7a87af9f304aaab3f4a4e8567
@@ -48,9 +48,9 @@ Size (memchr-2.7.4.crate) = 96670 bytes
 BLAKE2s (once_cell-1.20.2.crate) = b9ddff0586561ff5cefe206f725a20e083af1b8293f03a60b2dd9a821aa30e65
 SHA512 (once_cell-1.20.2.crate) = bc6005bdab7a154c01e2203fb553a68695727475a9a882cf906d49c054ce886ad92cb491d380b6b9fe71a81b2fd690ce91c9a6cf8dfa8508470ac9acfc8a31c8
 Size (once_cell-1.20.2.crate) = 33394 bytes
-BLAKE2s (orjson-3.10.12.tar.gz) = 7febb2342e20223a7d1bbf3ab9dfd23c89dd5bc9156e519ccb24c08ab1795bae
-SHA512 (orjson-3.10.12.tar.gz) = 089420645ef4a54674436ebc4f49ba67fda4fff716c949e03a4af402fdd817decd066c508b18c19ac24b634e7173b37924ac1c2180679a92551884957d4b11ae
-Size (orjson-3.10.12.tar.gz) = 5438647 bytes
+BLAKE2s (orjson-3.10.13.tar.gz) = f3a75356c7479e4796c15a6c4acbe08b1a2bf5ce8e6519f2e71f61165bc21eb0
+SHA512 (orjson-3.10.13.tar.gz) = 84ee3a42654e5576190dd115483db1e3a9a151b22de79b99b497c2e181adbd5e33a4aa77bb5f72394e0947887e657c5dc6380e852dddb4a5e95b47e72486b18c
+Size (orjson-3.10.13.tar.gz) = 5438389 bytes
 BLAKE2s (proc-macro2-1.0.92.crate) = 83c281b97fc4d86cc4a005bf09b645948db9ae773e71fd00448e271334dabc73
 SHA512 (proc-macro2-1.0.92.crate) = e614f08acc0a7e97ef580479cf5b682378df1ca16f09bfb2296ebb3490a435229dea9d682c621c54ce57e8e1d3b7803eb8ff83c88bd02e07228dba6d02f14aee
 Size (proc-macro2-1.0.92.crate) = 52353 bytes
