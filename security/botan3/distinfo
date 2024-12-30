@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.7 2024/11/01 07:22:45 nros Exp $
+$NetBSD: distinfo,v 1.8 2024/12/30 09:40:19 wiz Exp $
 
 BLAKE2s (Botan-3.6.1.tar.xz) = b3168adf972bcd88107fe963edce95a4503f911e0037c4ee0ddc522109194361
 SHA512 (Botan-3.6.1.tar.xz) = 06327c55bee5e0d2e142f81b997dd8a1ef98f61ef920b57f6eb4e80ebf6b3de1c62373b889d4a32e62509495792e0b46d5dcc82a6446266974b4d4ead8d9f287
 Size (Botan-3.6.1.tar.xz) = 7581864 bytes
+SHA1 (patch-src_cli_tls__proxy.cpp) = ae02215325e9f4093aa0da6293a72e063817c683
+SHA1 (patch-src_lib_utils_socket_socket.cpp) = cb478f2e81b4b1eb58c95400f975a3db71276d5e
+SHA1 (patch-src_lib_utils_socket_socket__udp.cpp) = 402015e2b6f79e88b80f8b6da7b4fd3fac44f417
 SHA1 (patch-src_scripts_install.py) = c8ac2a6315e0e53a0292447e8e6b967572de9d24
