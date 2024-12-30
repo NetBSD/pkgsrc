@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/06/13 13:20:46 mef Exp $
+$NetBSD: distinfo,v 1.8 2024/12/30 13:56:56 mef Exp $
 
-BLAKE2s (R/htmlwidgets_1.6.2.tar.gz) = 1b31a3d8c7a4c0a4edd8ae5d2468ecc8c6397719b4a639ce789e5eb6ccdd2aca
-SHA512 (R/htmlwidgets_1.6.2.tar.gz) = 7bb16823ea388d21a283a3ab33a913b3a7839b93ddf2b7c750fa197963654e3b2574fac82fad539b312ea8281c760f719209f2dd7ce2d98b7b4e17f465052a91
-Size (R/htmlwidgets_1.6.2.tar.gz) = 867472 bytes
+BLAKE2s (R/htmlwidgets_1.6.4.tar.gz) = 7e8a1eaeac7a6e47ee6efaadcef19725479551f0115c9ec8501a24906f07b404
+SHA512 (R/htmlwidgets_1.6.4.tar.gz) = d2d292fb4705a48629d649fdb93e8dd368bed44d907259c1addf445c7bfad5eccc8c5bd2d4b966fa0475d026b4690b87461df8ea1a5efae5d4495d7217f9d4d1
+Size (R/htmlwidgets_1.6.4.tar.gz) = 868895 bytes
