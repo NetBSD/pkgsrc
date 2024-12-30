@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7921 2024/12/30 12:32:44 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7922 2024/12/30 13:44:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11895,3 +11895,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated www/R-gargle to 1.5.2 [mef 2024-12-30]
 	Updated devel/ast-grep to 0.32.3 [pin 2024-12-30]
 	Updated www/R-gh to 1.4.1 [mef 2024-12-30]
+	Updated www/R-googledrive to 2.1.1 [mef 2024-12-30]
