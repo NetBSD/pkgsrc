@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2024/12/30 21:53:48 pin Exp $
+bin/clicsv

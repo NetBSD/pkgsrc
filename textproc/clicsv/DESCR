@@ -1,0 +1,4 @@
+I was tired of having to open up a spreadsheet editor when working with data in
+the terminal and wanted to get more familiar with the rust programming language
+so I decided to make this. It's a command-line csv text editor written in rust.
+Currently a work in progress and needs refactoring, but is functional.
