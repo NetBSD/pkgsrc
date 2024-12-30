@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2024/12/27 08:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2024/12/30 21:50:52 pin Exp $
 
-DISTNAME=	pekwm-0.3.1
-PKGREVISION=	1
+DISTNAME=	release-0.3.2
+GITHUB_PROJECT=	pekwm
+GITHUB_TAG=	refs/tags/release-0.3.2
+PKGNAME=	${GITHUB_PROJECT}-0.3.2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pekdon/}
 
@@ -10,6 +12,8 @@ HOMEPAGE=	https://www.pekwm.se/
 COMMENT=	Light, unobtrusive, and configurable window manager
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/pekwm-release-0.3.2
+
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -17,7 +21,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_SYSCONFDIR=${PREFIX}/share/examples
 CMAKE_CONFIGURE_ARGS+=	-DAWK=${AWK}
 CMAKE_CONFIGURE_ARGS+=	-DSED=${SED}
 CMAKE_CONFIGURE_ARGS+=	-DSH=${SH}
-CMAKE_ARG_PATH=	${WRKSRC}
+CMAKE_ARG_PATH=		${WRKSRC}
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
