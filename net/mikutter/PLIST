@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2024/03/16 07:01:26 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.55 2024/12/30 20:41:28 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -8,9 +8,10 @@ share/mikutter/core/boot/delayer.rb
 share/mikutter/core/boot/load_plugin.rb
 share/mikutter/core/boot/mainloop.rb
 share/mikutter/core/boot/option.rb
+share/mikutter/core/boot/prelude.rb
+share/mikutter/core/boot/prepare_plugin.rb
 share/mikutter/core/boot/shell/generate.rb
 share/mikutter/core/boot/shell/makepot.rb
-share/mikutter/core/boot/shell/plugin_depends.rb
 share/mikutter/core/boot/shell/spec.rb
 share/mikutter/core/config.rb
 share/mikutter/core/configloader.rb
@@ -19,7 +20,6 @@ share/mikutter/core/lib/diva_hacks.rb
 share/mikutter/core/lib/diva_hacks/entity.rb
 share/mikutter/core/lib/diva_hacks/entity/blank_entity.rb
 share/mikutter/core/lib/diva_hacks/entity/regexp_entity.rb
-share/mikutter/core/lib/diva_hacks/entity/segment.rb
 share/mikutter/core/lib/diva_hacks/entity/url_entity.rb
 share/mikutter/core/lib/diva_hacks/mixin.rb
 share/mikutter/core/lib/diva_hacks/mixin/message_mixin.rb
@@ -30,6 +30,7 @@ share/mikutter/core/lib/diva_hacks/model.rb
 share/mikutter/core/lib/diva_hacks/model/identity.rb
 share/mikutter/core/lib/diva_hacks/model/memory.rb
 share/mikutter/core/lib/lazy.rb
+share/mikutter/core/lib/log_formatter.rb
 share/mikutter/core/lib/piapro.rb
 share/mikutter/core/lib/reserver.rb
 share/mikutter/core/lib/test_unit_extensions.rb
@@ -54,6 +55,10 @@ share/mikutter/core/miku/primitive.rb
 share/mikutter/core/miku/symbol.rb
 share/mikutter/core/miku/symboltable.rb
 share/mikutter/core/miku/to_ruby.rb
+share/mikutter/core/miku/to_ruby/compiled_code.rb
+share/mikutter/core/miku/to_ruby/generic_proc.rb
+share/mikutter/core/miku/to_ruby/operator.rb
+share/mikutter/core/miku/to_ruby/type.rb
 share/mikutter/core/miku/yamlisp.rb
 share/mikutter/core/miquire.rb
 share/mikutter/core/miquire_plugin.rb
@@ -539,6 +544,9 @@ share/mikutter/plugin/mastodon_sse_streaming/middleware/connection_keeping_strea
 share/mikutter/plugin/mastodon_sse_streaming/middleware/server_sent_events_json_parser.rb
 share/mikutter/plugin/mastodon_sse_streaming/raw_server_sent_events_stream.rb
 share/mikutter/plugin/mastodon_sse_streaming/splitter.rb
+share/mikutter/plugin/mixi2/mixi2.rb
+share/mikutter/plugin/mixi2/model/post.rb
+share/mikutter/plugin/mixi2/model/user.rb
 share/mikutter/plugin/modelviewer/.mikutter.yml
 share/mikutter/plugin/modelviewer/modelviewer.rb
 share/mikutter/plugin/notification/.mikutter.yml
@@ -594,6 +602,9 @@ share/mikutter/plugin/photo/photo.rb
 share/mikutter/plugin/photo_support/.mikutter.yml
 share/mikutter/plugin/photo_support/Gemfile
 share/mikutter/plugin/photo_support/photo_support.rb
+share/mikutter/plugin/plugin_depends/.mikutter.yml
+share/mikutter/plugin/plugin_depends/plugin_depends.rb
+share/mikutter/plugin/plugin_depends/prelude.rb
 share/mikutter/plugin/profile/po/ar/profile.po
 share/mikutter/plugin/profile/po/de/profile.po
 share/mikutter/plugin/profile/po/el/profile.po

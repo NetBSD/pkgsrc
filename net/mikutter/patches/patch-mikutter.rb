@@ -1,4 +1,4 @@
-$NetBSD: patch-mikutter.rb,v 1.11 2024/03/16 07:01:26 tsutsui Exp $
+$NetBSD: patch-mikutter.rb,v 1.12 2024/12/30 20:41:28 tsutsui Exp $
 
 - pkgsrc can handle location of ruby binary
   https://dev.mikutter.hachune.net/issues/889
@@ -8,7 +8,7 @@ $NetBSD: patch-mikutter.rb,v 1.11 2024/03/16 07:01:26 tsutsui Exp $
 @@ -1,7 +1,5 @@
 -#!/bin/sh
 +#! /usr/bin/ruby
- # -*- coding: utf-8 -*-
+ # -*- coding: utf-8; mode: ruby -*-
 -exec ruby -x "$0" "$@"
 -#!ruby
  =begin rdoc

@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.225 2024/12/27 08:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.226 2024/12/30 20:41:28 tsutsui Exp $
 
-DISTNAME=	mikutter-5.0.8
-DIST_SUBDIR=	${DISTNAME}	# for a pending patch in upstream Redmine
+DISTNAME=	mikutter-5.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	https://mikutter.hachune.net/bin/
-
-PATCHFILES=		1585-use-own-blowfish-impl.patch
-PATCH_SITES=		https://dev.mikutter.hachune.net/attachments/download/813/
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://mikutter.hachune.net/
