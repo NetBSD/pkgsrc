@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2024/11/22 03:48:50 mef Exp $
+# $NetBSD: Makefile,v 1.55 2024/12/30 22:12:38 mef Exp $
 
-DISTNAME=	nqp-2024.10
+DISTNAME=	nqp-2024.12
 CATEGORIES=	lang perl6
 #ASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
-PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rakudo.org/
@@ -13,7 +12,8 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	MoarVM>=2022.03:../../devel/MoarVM
 
-MAKE_JOBS_SAFE=	no
+# Is this necessary ? Trying to drop (2024.12, set in 2020)
+#AKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
