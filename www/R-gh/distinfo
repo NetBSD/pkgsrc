@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:29:14 nia Exp $
+$NetBSD: distinfo,v 1.5 2024/12/30 12:32:34 mef Exp $
 
-BLAKE2s (R/gh_1.3.0.tar.gz) = be9bf34e0cb21e662145f9fb47bd72613a93a0693741f7147a36cb25a0218d02
-SHA512 (R/gh_1.3.0.tar.gz) = 61d576923817fafc8dee522e35caa60508b29f4a6ae994b30651de01efcc3ac3caae114ffa7e85ed5f90bf5de83121ab04db5f653893c3d9e4f1d0735b4f6cf4
-Size (R/gh_1.3.0.tar.gz) = 45619 bytes
+BLAKE2s (R/gh_1.4.1.tar.gz) = 69847b8f8c00ffd0645d0304a5a5dc3f3c5e0bdfb393aa499ab8e9481cab2688
+SHA512 (R/gh_1.4.1.tar.gz) = 8f57785397d3aa5fc7177d28a176bfff531f6f0e203f38bc83ff08e424c7697abe4f79f57d71f1c3df72039f350eea7a890ce8be39cfca4a006f7570506521c3
+Size (R/gh_1.4.1.tar.gz) = 46164 bytes
