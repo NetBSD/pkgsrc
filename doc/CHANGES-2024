@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7913 2024/12/29 21:06:11 wiz Exp $
+$NetBSD: CHANGES-2024,v 1.7914 2024/12/30 06:09:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11884,3 +11884,7 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/py-Glances to 4.3.0.5 [wiz 2024-12-29]
 	Updated biology/vsearch to 2.29.2 [bacon 2024-12-29]
 	Updated security/py-keyring to 25.6.0 [wiz 2024-12-29]
+	Updated devel/xxhash to 0.8.3 [adam 2024-12-30]
+	Updated textproc/py-orjson to 3.10.13 [adam 2024-12-30]
+	Updated devel/py-fakefs to 5.7.3 [adam 2024-12-30]
+	Updated www/py-livereload to 2.7.1 [adam 2024-12-30]
