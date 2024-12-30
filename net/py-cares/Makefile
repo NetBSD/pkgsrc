@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2024/12/30 14:31:58 adam Exp $
 
-DISTNAME=	pycares-4.4.0
+DISTNAME=	pycares-4.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycares/}
@@ -20,10 +20,6 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.5.0:../../devel/py-cffi
-
-USE_LANGUAGES=	c
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
