@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/05/20 11:45:55 nia Exp $
+# $NetBSD: Makefile,v 1.10 2024/12/30 06:03:24 adam Exp $
 
-DISTNAME=	xxhash-0.8.2
-PKGREVISION=	2
+DISTNAME=	xxhash-0.8.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 GITHUB_PROJECT=	xxHash
@@ -21,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	libxxhash.pc.in
 pre-configure:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}/Makefile
 
-test:
+do-test:
 	cd ${WRKSRC} && ./xxhsum -b
 
 .include "../../mk/bsd.pkg.mk"
