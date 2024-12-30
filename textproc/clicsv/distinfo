@@ -1,0 +1,32 @@
+$NetBSD: distinfo,v 1.1 2024/12/30 21:53:48 pin Exp $
+
+BLAKE2s (bitflags-2.6.0.crate) = 98cdd527fa35fc9bc6f4357adc0f645eeee21e4528adf03aab79eb6158070793
+SHA512 (bitflags-2.6.0.crate) = f9bb3c48931ed7e7e05ec6d13305af5da6b6c18861ff307d7dc17c658f63972c87b70b0527287b3625c8592befc207cfe15550654995faf3862bb12a6d95bacf
+Size (bitflags-2.6.0.crate) = 45357 bytes
+BLAKE2s (clicsv-1.0.4.crate) = e84d6fa93ca0d8faa862e13e9fb547adef1edccd7119dde1b2f28eeabe5f6427
+SHA512 (clicsv-1.0.4.crate) = 52c3889f476f8386e4c57171ee2d2be9ef7a11d44dc92102f4182b1e5f8d66d6397acd88879eebb55e745fe41e77590f2dc343a8e8ecbb84485bac457caaa03a
+Size (clicsv-1.0.4.crate) = 41837 bytes
+BLAKE2s (libc-0.2.169.crate) = 2a4aa1b409bfdcd544082bdece61f482252806c43a5ddb9081203416a7c65f85
+SHA512 (libc-0.2.169.crate) = c4566330a7967efc211edf31a23647d1a33aa51fc25aa4e9337716748c8fd4be0ae63679220ff2cf6e892f37d03bc5264c55e8f082eb82574a6ec1fa8e5e45ce
+Size (libc-0.2.169.crate) = 757901 bytes
+BLAKE2s (libredox-0.1.3.crate) = ae27a63978ca8c5f11172bb4bb7d13fb10b078273ae2fa634873f413d2225055
+SHA512 (libredox-0.1.3.crate) = c62142fdca92388664eef83fc89b8607e2df318cbadff6edf9e3d927837853d5cfeb54445299a82054a0ca81853b0a33536966ab26f1f2e0fa43b39aaaf67c49
+Size (libredox-0.1.3.crate) = 6068 bytes
+BLAKE2s (numtoa-0.2.4.crate) = 9341d9d5355da0d67d01a1735a816ec5198614a3302fe16902e71062d401e437
+SHA512 (numtoa-0.2.4.crate) = d627d2ea465c81b768545a1ed1770d5a567f0cd6fb19e819717ba31d795c47296f1575c56d767a7f7535c83c65d81482cbfda8d1c8e711c209e76ab813065b4a
+Size (numtoa-0.2.4.crate) = 9167 bytes
+BLAKE2s (redox_syscall-0.5.8.crate) = d972ec376f9f01b1411a6026e33e900552389e7b89348a1490bb266efc1bbf4d
+SHA512 (redox_syscall-0.5.8.crate) = 5f9632f1f89f4963c36ede4da9b955c3474b673c3414d81cdbb61f46c08eff67167f703a0b06b239beeb2d720f8fa592a5493c0f7e872728b5b95f561ff11348
+Size (redox_syscall-0.5.8.crate) = 26319 bytes
+BLAKE2s (redox_termios-0.1.3.crate) = 09ef08eef359b060c534295d84073a630ff9b26506039764a109eaa808d27cac
+SHA512 (redox_termios-0.1.3.crate) = a221afea8eb1c7efe848e270a6ad5b65a97af945b4f64d3aa5346f5a61a9daaac1993446ddd78c1923b798e1659518856d7260d9d30651d91897850b0a1950d8
+Size (redox_termios-0.1.3.crate) = 3240 bytes
+BLAKE2s (termion-4.0.3.crate) = 5c2d3c34e38bce5451ce081562c7b123eabaeda9f57482eddf7d9cef679803b9
+SHA512 (termion-4.0.3.crate) = 5f27ade9f7f67032786e3f1aa8c4f6ea605905e488df0a7e1fad0b2fc17613b28c7bf04f9cc16ed72e223ecaf378d9257ab24ab06d93aa3c7cbf4b61f5e000f5
+Size (termion-4.0.3.crate) = 24393 bytes
+BLAKE2s (unicode-segmentation-1.12.0.crate) = 3d04e3c357ab02dafaed776ea28c8624842529ea831bd4b7eee685172e6b9900
+SHA512 (unicode-segmentation-1.12.0.crate) = 55eebfe5e9972b39d7c0011d80eb5f517d636de37870999119a3d8f064f21f67b66a5ba9761d562738b05f220e21d56b5be7bbd9cc51662994e40dd67c38f946
+Size (unicode-segmentation-1.12.0.crate) = 106323 bytes
+BLAKE2s (unicode-width-0.1.14.crate) = 4ddc2fd3ee5bc866c828ff462007c04eaa776733703945469968ce59e6433fa9
+SHA512 (unicode-width-0.1.14.crate) = 3c58a18776aa82cc13c761789a47901616cd98a30356f93d7eb05ae457314209d0a66213e2bbfa5eb8b59be6beacf62438234ce8daafa31b128dbf7d5d6fcadb
+Size (unicode-width-0.1.14.crate) = 271615 bytes
