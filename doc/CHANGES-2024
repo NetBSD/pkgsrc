@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7937 2024/12/31 09:32:05 adam Exp $
+$NetBSD: CHANGES-2024,v 1.7938 2024/12/31 09:42:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11914,3 +11914,4 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated sysutils/felix to 2.15.0 [pin 2024-12-31]
 	Updated math/QXlsx to 1.5.0 [adam 2024-12-31]
 	Updated textproc/ugrep to 7.1.2 [adam 2024-12-31]
+	Updated emulators/mame to 0.273 [wiz 2024-12-31]
