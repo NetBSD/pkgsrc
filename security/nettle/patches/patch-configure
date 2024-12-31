@@ -1,4 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2024/06/18 10:45:53 adam Exp $
+$NetBSD: patch-configure,v 1.2 2024/12/31 17:42:57 adam Exp $
+
+Support NetBSD.
+Portability fix.
 
 --- configure.orig	2013-05-28 16:21:53.000000000 +0200
 +++ configure	2013-11-26 10:12:32.000000000 +0100
