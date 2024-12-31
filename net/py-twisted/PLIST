@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2024/11/13 09:11:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2024/12/31 09:54:06 adam Exp $
 bin/cftp-${PYVERSSUFFIX}
 bin/ckeygen-${PYVERSSUFFIX}
 bin/conch-${PYVERSSUFFIX}
@@ -469,6 +469,9 @@ ${PYSITELIB}/twisted/internet/_glibbase.pyo
 ${PYSITELIB}/twisted/internet/_idna.py
 ${PYSITELIB}/twisted/internet/_idna.pyc
 ${PYSITELIB}/twisted/internet/_idna.pyo
+${PYSITELIB}/twisted/internet/_multicast.py
+${PYSITELIB}/twisted/internet/_multicast.pyc
+${PYSITELIB}/twisted/internet/_multicast.pyo
 ${PYSITELIB}/twisted/internet/_newtls.py
 ${PYSITELIB}/twisted/internet/_newtls.pyc
 ${PYSITELIB}/twisted/internet/_newtls.pyo
@@ -1397,9 +1400,6 @@ ${PYSITELIB}/twisted/python/compat.pyo
 ${PYSITELIB}/twisted/python/components.py
 ${PYSITELIB}/twisted/python/components.pyc
 ${PYSITELIB}/twisted/python/components.pyo
-${PYSITELIB}/twisted/python/constants.py
-${PYSITELIB}/twisted/python/constants.pyc
-${PYSITELIB}/twisted/python/constants.pyo
 ${PYSITELIB}/twisted/python/context.py
 ${PYSITELIB}/twisted/python/context.pyc
 ${PYSITELIB}/twisted/python/context.pyo
@@ -1490,9 +1490,6 @@ ${PYSITELIB}/twisted/python/test/test_appdirs.pyo
 ${PYSITELIB}/twisted/python/test/test_components.py
 ${PYSITELIB}/twisted/python/test/test_components.pyc
 ${PYSITELIB}/twisted/python/test/test_components.pyo
-${PYSITELIB}/twisted/python/test/test_constants.py
-${PYSITELIB}/twisted/python/test/test_constants.pyc
-${PYSITELIB}/twisted/python/test/test_constants.pyo
 ${PYSITELIB}/twisted/python/test/test_deprecate.py
 ${PYSITELIB}/twisted/python/test/test_deprecate.pyc
 ${PYSITELIB}/twisted/python/test/test_deprecate.pyo
