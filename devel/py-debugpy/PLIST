@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/11/11 16:28:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2024/12/31 17:46:22 adam Exp $
 bin/debugpy-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -350,14 +350,6 @@ ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_modify_bytecode.
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_modify_bytecode.pyc
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/pydevd_modify_bytecode.pyo
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/release_mem.h
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/COPYING
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/INSTALLER
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/METADATA
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/RECORD
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/REQUESTED
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/WHEEL
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/direct_url.json
-${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/bytecode-0.13.0.dev0.dist-info/top_level.txt
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/README.txt
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/__init__.py
 ${PYSITELIB}/debugpy/_vendored/pydevd/_pydevd_frame_eval/vendored/__init__.pyc
