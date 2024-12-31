@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/12/31 14:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2024/12/31 17:15:30 wiz Exp $
 
 DISTNAME=	re2c-4.0.2
 PKGREVISION=	1
@@ -27,6 +27,11 @@ SUBST_FILES.man+=	CMakeLists.txt
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page path.
 .endif
+
+.include "../../mk/bsd.prefs.mk"
+
+# can't use ninja, since ninja tool-depends on this
+CMAKE_GENERATOR=	make
 
 .include "../../lang/python/tool.mk"
 .include "../../devel/cmake/build.mk"
