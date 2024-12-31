@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2024/08/08 08:27:53 wiz Exp $
+# $NetBSD: builtin.mk,v 1.22 2024/12/31 02:53:56 markd Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -97,6 +97,33 @@ MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
 
 .  if ${USE_BUILTIN.heimdal:tl} == yes
+BUILDLINK_TARGETS+=	fake-heimdal-gssapi-pc
+
+.PHONY:	fake-heimdal-gssapi-pc
+fake-heimdal-gssapi-pc:
+	${RUN}	\
+        for ff in heimdal-gssapi heimdal-krb5 heimdal-kadm-client heimdal-kadm-server; do\
+	sedsrc=../../security/heimdal/files/$${ff}.pc.in;		\
+	src=${BUILDLINK_PREFIX.heimdal:Q}/lib${LIBABISUFFIX}/pkgconfig/$${ff}.pc;\
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/$${ff}.pc;			\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;\
+	if [ ! -f $${dst} ]; then	\
+		if [ -f $${src} ]; then	\
+			${ECHO_BUILDLINK_MSG} "Symlinking $${src}";	\
+			${LN} -sf $${src} $${dst};			\
+		else	\
+			${ECHO_BUILDLINK_MSG} "Creating $${dst}";	\
+			${SED}  -e s,@prefix@,${BUILDLINK_PREFIX.heimdal:Q},\
+					-e s,@exec_prefix@,${BUILDLINK_PREFIX.heimdal:Q},\
+					-e s,@libdir@,${BUILDLINK_PREFIX.heimdal:Q}/lib${LIBABISUFFIX},\
+					-e s,@VERSION@,${BUILTIN_VERSION.heimdal},\
+					-e s,@includedir@,${BUILDLINK_PREFIX.heimdal:Q}/include,\
+					-e s,@sharedlibdir@,${BUILDLINK_PREFIX.heimdal:Q}/lib,\
+				$${sedsrc} > $${dst};			\
+		fi	\
+	fi;	\
+	done
+
 .    if !empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILDLINK_TARGETS+=	fake-krb5-config
 
