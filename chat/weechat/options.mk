@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2024/12/12 15:45:47 ryoon Exp $
+# $NetBSD: options.mk,v 1.32 2024/12/31 15:57:36 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	python lua wide-curses perl ruby
 PLIST_VARS+=		lua python perl ruby
 
 .if !empty(PKG_OPTIONS:Mpython)
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 313
 .include "../../lang/python/extension.mk"
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PYTHON=ON
 PLIST.python=	yes
