@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile.PL,v 1.7 2022/11/17 14:55:39 schmonz Exp $
+$NetBSD: patch-Makefile.PL,v 1.8 2024/12/31 14:31:09 schmonz Exp $
 
 Remove build instructions for the local copy of libdiscount.
 
---- Makefile.PL.orig	2022-11-14 20:57:56.000000000 +0000
+--- Makefile.PL.orig	2024-12-31 06:14:33.000000000 +0000
 +++ Makefile.PL
 @@ -4,78 +4,6 @@ use warnings;
  use ExtUtils::MakeMaker;
  use File::Spec;
  
--my $extdir = 'discount-2.2.7';
+-my $extdir = 'discount-2.2.7d';
 -my $myextlib = File::Spec->catfile($extdir, 'libmarkdown.a');
 -my $clean_files = join (" ",
 -                  map{ File::Spec->catfile($extdir, $_) }
@@ -77,7 +77,7 @@ Remove build instructions for the local copy of libdiscount.
 -    return sprintf('
 -$(MYEXTLIB):
 -	%s
--', qq{( cd $extdir; CC='cc -fPIC' sh configure.sh --with-fenced-code --with-dl=both; make )\n});
+-', qq{( cd $extdir; CC='cc -fPIC' sh configure.sh; make )\n});
 -}
 -
  WriteMakefile(
