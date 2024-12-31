@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7939 2024/12/31 09:56:42 mef Exp $
+$NetBSD: CHANGES-2024,v 1.7940 2024/12/31 10:00:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11916,3 +11916,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/ugrep to 7.1.2 [adam 2024-12-31]
 	Updated emulators/mame to 0.273 [wiz 2024-12-31]
 	Updated www/R-mathjaxr to 1.6.0 [mef 2024-12-31]
+	Updated net/py-twisted to 24.11.0 [adam 2024-12-31]
+	Updated www/py-uvicorn to 0.34.0 [adam 2024-12-31]
+	Updated textproc/py-sphobjinv to 2.3.1.2 [adam 2024-12-31]
