@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/06/29 09:28:02 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2024/12/31 17:53:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
+${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/sdl2/__init__.py
 ${PYSITELIB}/sdl2/__init__.pyc
 ${PYSITELIB}/sdl2/__init__.pyo
@@ -340,6 +342,7 @@ ${PYSITELIB}/sdl2/test/render_test.py
 ${PYSITELIB}/sdl2/test/render_test.pyc
 ${PYSITELIB}/sdl2/test/render_test.pyo
 ${PYSITELIB}/sdl2/test/resources/animationtest.gif
+${PYSITELIB}/sdl2/test/resources/animationtest.webp
 ${PYSITELIB}/sdl2/test/resources/font.bmp
 ${PYSITELIB}/sdl2/test/resources/resources.tar.gz
 ${PYSITELIB}/sdl2/test/resources/resources.zip
