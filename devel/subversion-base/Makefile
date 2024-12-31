@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.145 2024/11/14 22:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.146 2024/12/31 17:33:16 adam Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
-PKGREVISION=	3
 COMMENT=	Version control system, base programs and libraries
 
 # on at least solaris, configure fails to figure out
@@ -76,8 +75,9 @@ post-install:
 #   commit the update to ../subversion/files/build-outputs.mk along with the version change
 #
 svn-build-outputs-hack:
-	cd ${WRKSRC} && ./gen-make.py --release --installed-libs libsvn_client,libsvn_delta,libsvn_diff,libsvn_fs,libsvn_ra,libsvn_repos,libsvn_subr,libsvn_wc
+	cd ${WRKSRC} && ${PYTHONBIN} ./gen-make.py --release --installed-libs libsvn_client,libsvn_delta,libsvn_diff,libsvn_fs,libsvn_ra,libsvn_repos,libsvn_subr,libsvn_wc
 	${MV} -f ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk
 
 .include "../../devel/apr/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
