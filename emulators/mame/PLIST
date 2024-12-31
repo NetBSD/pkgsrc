@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2024/11/30 14:08:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.92 2024/12/31 09:42:30 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -192,6 +192,7 @@ share/mame/hash/camplynx_flop.xml
 share/mame/hash/carbeena.xml
 share/mame/hash/casio_rompack.xml
 share/mame/hash/casloopy.xml
+share/mame/hash/cassvisn_cart.xml
 share/mame/hash/cbm2_cart.xml
 share/mame/hash/cbm2_flop.xml
 share/mame/hash/cbm8096_flop.xml
