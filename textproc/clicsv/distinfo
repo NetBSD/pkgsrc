@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1 2024/12/30 21:53:48 pin Exp $
+$NetBSD: distinfo,v 1.2 2024/12/31 16:53:11 pin Exp $
 
 BLAKE2s (bitflags-2.6.0.crate) = 98cdd527fa35fc9bc6f4357adc0f645eeee21e4528adf03aab79eb6158070793
 SHA512 (bitflags-2.6.0.crate) = f9bb3c48931ed7e7e05ec6d13305af5da6b6c18861ff307d7dc17c658f63972c87b70b0527287b3625c8592befc207cfe15550654995faf3862bb12a6d95bacf
 Size (bitflags-2.6.0.crate) = 45357 bytes
-BLAKE2s (clicsv-1.0.4.crate) = e84d6fa93ca0d8faa862e13e9fb547adef1edccd7119dde1b2f28eeabe5f6427
-SHA512 (clicsv-1.0.4.crate) = 52c3889f476f8386e4c57171ee2d2be9ef7a11d44dc92102f4182b1e5f8d66d6397acd88879eebb55e745fe41e77590f2dc343a8e8ecbb84485bac457caaa03a
-Size (clicsv-1.0.4.crate) = 41837 bytes
+BLAKE2s (clicsv-1.0.6.crate) = 87f03f46ff6153a492fe81c6e5bceeb81570750a01c01dc19f150fdf38399560
+SHA512 (clicsv-1.0.6.crate) = 6199bdea143888a33fd5fdc30b72e62af239192bcd6318a04ad639ba9890509d4d1df705b911dc25e7bf8986deac0d21312f8c897654e606d0859f9217b7295c
+Size (clicsv-1.0.6.crate) = 11252 bytes
 BLAKE2s (libc-0.2.169.crate) = 2a4aa1b409bfdcd544082bdece61f482252806c43a5ddb9081203416a7c65f85
 SHA512 (libc-0.2.169.crate) = c4566330a7967efc211edf31a23647d1a33aa51fc25aa4e9337716748c8fd4be0ae63679220ff2cf6e892f37d03bc5264c55e8f082eb82574a6ec1fa8e5e45ce
 Size (libc-0.2.169.crate) = 757901 bytes
