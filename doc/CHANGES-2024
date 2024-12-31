@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7945 2024/12/31 16:53:32 pin Exp $
+$NetBSD: CHANGES-2024,v 1.7946 2024/12/31 17:37:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -11926,3 +11926,5 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated textproc/py-elementpath to 4.7.0 [adam 2024-12-31]
 	Updated devel/py-ruamel-yaml to 0.18.7 [adam 2024-12-31]
 	Updated textproc/clicsv to 1.0.6 [pin 2024-12-31]
+	Updated devel/subversion to 1.14.5 [adam 2024-12-31]
+	Updated devel/py-pydantic-settings to 2.7.1 [adam 2024-12-31]

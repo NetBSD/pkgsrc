@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25257 2024/12/31 09:42:47 wiz Exp $
+$NetBSD: TODO,v 1.25258 2024/12/31 17:37:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o subversion-1.14.5
 	o sudo-1.9.16p2
 	o sup-0.4
 	o swapd-1.0.5
