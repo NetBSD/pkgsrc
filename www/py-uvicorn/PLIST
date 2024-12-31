@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/01/10 10:33:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2024/12/31 09:56:42 adam Exp $
 bin/uvicorn-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -117,9 +117,6 @@ ${PYSITELIB}/uvicorn/supervisors/statreload.pyo
 ${PYSITELIB}/uvicorn/supervisors/watchfilesreload.py
 ${PYSITELIB}/uvicorn/supervisors/watchfilesreload.pyc
 ${PYSITELIB}/uvicorn/supervisors/watchfilesreload.pyo
-${PYSITELIB}/uvicorn/supervisors/watchgodreload.py
-${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyc
-${PYSITELIB}/uvicorn/supervisors/watchgodreload.pyo
 ${PYSITELIB}/uvicorn/workers.py
 ${PYSITELIB}/uvicorn/workers.pyc
 ${PYSITELIB}/uvicorn/workers.pyo
