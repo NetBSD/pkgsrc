@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/10/14 06:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2024/12/31 17:53:39 adam Exp $
 
-DISTNAME=	PySDL2-0.9.16
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
-PKGREVISION=	3
+DISTNAME=	pysdl2-0.9.17
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySDL2/}
 
@@ -11,7 +10,9 @@ HOMEPAGE=	https://github.com/py-sdl/py-sdl2
 COMMENT=	Python SDL2 bindings
 LICENSE=	cc0-1.0-universal OR zlib
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+WHEEL_NAME=	${DISTNAME:S/pysdl/PySDL/}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 USE_LANGUAGES=	# none
@@ -28,5 +29,5 @@ BUILDLINK_API_DEPENDS.SDL2_ttf+=	SDL2_ttf>=2.0.14
 BUILDLINK_API_DEPENDS.SDL2_image+=	SDL2_image>=2.0.1
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/SDL2_gfx/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
