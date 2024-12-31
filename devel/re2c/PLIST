@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/26 11:47:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2024/12/31 14:56:27 wiz Exp $
 bin/re2c
 bin/re2d
 bin/re2go
 bin/re2hs
+bin/re2java
 bin/re2js
 bin/re2ocaml
 bin/re2py
@@ -13,6 +14,7 @@ man/man1/re2c.1
 man/man1/re2d.1
 man/man1/re2go.1
 man/man1/re2hs.1
+man/man1/re2java.1
 man/man1/re2js.1
 man/man1/re2ocaml.1
 man/man1/re2py.1
