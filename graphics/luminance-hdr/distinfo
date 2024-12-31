@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2024/05/30 18:40:15 wiz Exp $
+$NetBSD: distinfo,v 1.12 2024/12/31 02:46:43 markd Exp $
 
 BLAKE2s (luminance-hdr-2.6.1.1.tar.bz2) = 4ce7ce6bbc9833a8eaa336249871710d5ccbbd21e34a26a6372d0647ca9487d4
 SHA512 (luminance-hdr-2.6.1.1.tar.bz2) = 9006339037aa3a0b7332cf71e1cf143d9e700eaae1102dfb8eccea8a9d97a5bcb6331202684adf76542116927dd9a69169882518af6ebb25c85d08057fdc552e
 Size (luminance-hdr-2.6.1.1.tar.bz2) = 11569153 bytes
-SHA1 (patch-CMakeLists.txt) = 2d574a78666838aac75431359885335f0f9df2ea
+SHA1 (patch-CMakeLists.txt) = 01bcde6d91082fbd307fbd92f1f69a52d8e5b8b5
 SHA1 (patch-build__files_Modules_CompilerSettings.cmake) = b53861203acd0804cb59560fd6ab8b8152d4fe1b
 SHA1 (patch-src_Exif_ExifOperations.cpp) = e1adceb033db85f7e59e18f42685ff9d0f5948bd
 SHA1 (patch-src_Libpfs_CMakeLists.txt) = 6cf7b440fdf22d72e2d9abbc328c715e711a15a6
