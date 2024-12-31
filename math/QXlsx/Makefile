@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/14 22:20:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2024/12/31 09:30:27 adam Exp $
 
-DISTNAME=	QXlsx-1.4.9
-PKGREVISION=	3
+DISTNAME=	QXlsx-1.5.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=QtExcel/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +13,7 @@ LICENSE=	mit
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
 CONFIGURE_DIR=		QXlsx
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=ON
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/qt6-qttools/buildlink3.mk"

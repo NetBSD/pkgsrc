@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/08/12 14:03:25 adam Exp $
+$NetBSD: distinfo,v 1.3 2024/12/31 09:30:27 adam Exp $
 
-BLAKE2s (QXlsx-1.4.9.tar.gz) = 1b25db3de71eedd2465d836bc640c4bc61be1d77236f7862f611dba9d5441246
-SHA512 (QXlsx-1.4.9.tar.gz) = c7b06728001b1fd8aaa5f2c881379e02717b5a63c94f491f51ba7057eace30e3a3034c0445daff25ec8a926fbaa4b0b21c833c48fe56520b0ed849308733f46f
-Size (QXlsx-1.4.9.tar.gz) = 4705247 bytes
-SHA1 (patch-QXlsx_source_xlsxworkbook.cpp) = 3f9da4ae7fe2312b2e4aed452b7730c6e8be8a55
+BLAKE2s (QXlsx-1.5.0.tar.gz) = c67e7c0568443c4e843c3a1e1db66f40cc196dc11cf2e140589794139efdbaa0
+SHA512 (QXlsx-1.5.0.tar.gz) = 6aa2bc848ce6a34d35e7483cd44f0503aa8be7c1a0087e3f6b4cb425501b79d636efca5ebf970a06bdc9c9a90c073f6fdcc5917eaff7751e238597393c49f038
+Size (QXlsx-1.5.0.tar.gz) = 4714070 bytes
