@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2024/12/26 23:57:22 adam Exp $
+# $NetBSD: Makefile,v 1.88 2024/12/31 02:39:48 markd Exp $
 
 DISTNAME=	kopete-${KAPPSVER}
 PKGREVISION=	10
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2 AND gnu-fdl-v1.2
 TOOL_DEPENDS+=	kdoctools>=5.19.0:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_LibV4L2=TRUE
 
 SUBST_CLASSES+=		fix-moc
 SUBST_STAGE.fix-moc=	post-configure
