@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/03 10:09:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2024/12/31 09:30:27 adam Exp $
 include/QXlsxQt6/xlsxabstractooxmlfile.h
 include/QXlsxQt6/xlsxabstractsheet.h
 include/QXlsxQt6/xlsxabstractsheet_p.h
@@ -22,4 +22,6 @@ lib/cmake/QXlsxQt6/QXlsxQt6Config.cmake
 lib/cmake/QXlsxQt6/QXlsxQt6ConfigVersion.cmake
 lib/cmake/QXlsxQt6/QXlsxQt6Targets-noconfig.cmake
 lib/cmake/QXlsxQt6/QXlsxQt6Targets.cmake
-lib/libQXlsxQt6.a
+lib/libQXlsxQt6.so
+lib/libQXlsxQt6.so.1
+lib/libQXlsxQt6.so.1.5.0

@@ -1,11 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/05/03 10:09:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2024/12/31 09:30:27 adam Exp $
 
 BUILDLINK_TREE+=	QXlsx
 
 .if !defined(QXLSX_BUILDLINK3_MK)
 QXLSX_BUILDLINK3_MK:=
-
-BUILDLINK_DEPMETHOD.QXlsx?=	build
 
 BUILDLINK_API_DEPENDS.QXlsx+=	QXlsx>=1.4.7
 BUILDLINK_PKGSRCDIR.QXlsx?=	../../math/QXlsx
