@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:29:16 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/01/01 14:28:57 mef Exp $
 
-BLAKE2s (R/webshot_0.5.2.tar.gz) = 305263e69baae989dfc99b48bec1140f14316fd9992ae9a8ff6f3db580a9c973
-SHA512 (R/webshot_0.5.2.tar.gz) = fc378cfb53895f4eb1dc063c5b7aac2c213920738fc83af3fe8e474f4a6940f6888b86e09a03a4f00bc4be8d8171f9a0e9f2a1c7951a460337b1fedf9f8e18bb
-Size (R/webshot_0.5.2.tar.gz) = 157837 bytes
+BLAKE2s (R/webshot_0.5.5.tar.gz) = 871f79e6cbb7752513965e6b52cb9c657ccf0ab2109c1b98de9008267a7f072d
+SHA512 (R/webshot_0.5.5.tar.gz) = 7cfde3a9e1e62b8081ca486921d707e7f6d74acf60bae53db4fa332dce7c36e876130040587bf4d81634cbde27824bd3bca74c949a58f1c2f038188ed7841173
+Size (R/webshot_0.5.5.tar.gz) = 160015 bytes

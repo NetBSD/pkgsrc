@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/05 14:39:08 mef Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/01 14:28:57 mef Exp $
 
 R_PKGNAME=	webshot
-R_PKGVER=	0.5.2
+R_PKGVER=	0.5.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +16,13 @@ DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-httpuv-[0-9]*:../../www/R-httpuv
 TEST_DEPENDS+=	R-shiny-[0-9]*:../../www/R-shiny
+TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
+
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	# none
 
