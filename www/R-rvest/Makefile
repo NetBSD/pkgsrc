@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2022/05/04 12:38:54 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/01 11:38:16 mef Exp $
 
 R_PKGNAME=	rvest
-R_PKGVER=	1.0.1
+R_PKGVER=	1.0.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +16,8 @@ DEPENDS+=	R-lifecycle>=1.0.0:../../devel/R-lifecycle
 DEPENDS+=	R-rlang>=0.4.10:../../devel/R-rlang
 DEPENDS+=	R-tibble-[0-9]*:../../math/R-tibble
 
-# Packages suggested but not available: 'repurrrsive', 'webfakes'
+# Package suggested but not available: 'chromote'
+
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-glue-[0-9]*:../../devel/R-glue
 TEST_DEPENDS+=	R-httr-[0-9]*:../../www/R-httr
