@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2024/11/14 22:19:31 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/01/01 12:57:21 ryoon Exp $
 
 DISTNAME=	libgphoto2-2.5.31
 PKGREVISION=	3
@@ -18,6 +18,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		DOXYGEN=
+CONFIGURE_ARGS+=	ac_cv_path_DOXYGEN=no
 CONFIGURE_ARGS+=	--with-gdlib=no
 # Build very old camera libraries (outdated set)
 CONFIGURE_ARGS+=	--with-camlibs=standard,outdated
