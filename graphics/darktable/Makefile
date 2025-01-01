@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.168 2024/12/27 08:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2025/01/01 14:06:17 ryoon Exp $
 
-DISTNAME=	darktable-4.4.2
-PKGREVISION=	21
+DISTNAME=	darktable-5.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -34,6 +33,7 @@ REPLACE_BASH+=	tools/purge_non_existing_images.sh
 REPLACE_BASH+=	tools/purge_unused_tags.sh
 
 CFLAGS+=	-Wno-reserved-id-macro
+CFLAGS.NetBSD+=	-D__MATH_C99_FEATURES
 
 CMAKE_CONFIGURE_ARGS+=	-DLENSFUN_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include/lensfun
 CMAKE_CONFIGURE_ARGS+=	-DGTHREAD_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.glib2}/include
