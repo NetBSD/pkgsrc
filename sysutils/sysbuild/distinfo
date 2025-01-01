@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:20:15 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/01 08:11:18 jmmv Exp $
 
-BLAKE2s (sysbuild-2.7.tar.gz) = 1ea1622e1139102f8254828c10a4000487fe83a0895b50c89e0404fb600a204f
-SHA512 (sysbuild-2.7.tar.gz) = af5bef2e6e47bef2a93920dbf995485db534d8e6e0b26b5cd5e918cac24786f49b7f848259e54900c6bdea6697a489dcf8c191b3e94583f26eda308dd1e70130
-Size (sysbuild-2.7.tar.gz) = 76479 bytes
-SHA1 (patch-Makefile.in) = 154a7dc47b76abdff0c8acac8510e3b33fd0c56a
+BLAKE2s (sysbuild-2.8.tar.gz) = 3d7208e3bbd20f6d48a9ac12f1b6f74b692d81fdea169af78a881a95ba523258
+SHA512 (sysbuild-2.8.tar.gz) = 4a8d71ffb9d63c8ab2ce0d31ecb4cbc08290f8ac160342250409c5b5aa78799ee75f94ba9ceff9ca49415cb86b284cfcb9f2cdf1b93f08fe167e80ee436bf2e0
+Size (sysbuild-2.8.tar.gz) = 88592 bytes
