@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.41 2024/04/23 22:12:04 wiz Exp $
+$NetBSD: distinfo,v 1.42 2025/01/01 14:06:17 ryoon Exp $
 
-BLAKE2s (darktable-4.4.2.tar.xz) = 83f500f5a2c0d83bcfa03a1f91b556a78b547862911f3c673a42e1896fb2abaa
-SHA512 (darktable-4.4.2.tar.xz) = 7b87879e865001491bbeaa12b9ac42b006bfa3fbcb50e73384c76cce0ee5d87200be3ce9b11f56d669d5eaf9b1add0a018ec5a021653bb84dfb6a0b379cb5594
-Size (darktable-4.4.2.tar.xz) = 6033932 bytes
-SHA1 (patch-src_external_rawspeed_cmake_src-dependencies.cmake) = 41733d3ad6d440782fb5c8f790668ab18a53f934
-SHA1 (patch-src_external_rawspeed_data_cameras.xsd) = 3b1f8b432847841e270fd4aada54e898895e4806
+BLAKE2s (darktable-5.0.0.tar.xz) = 8dcc388c98d77ff3ca06958f9bfb7274a75d54824707c7f5dadd070404a7f0c4
+SHA512 (darktable-5.0.0.tar.xz) = 84ccf8e30911d2d8c3d2fc2e5bd51962701a1d755ff3859da3e630d0d405d00c03ae8a3968ede33ec53a3de5f8b185ffcb9063355f09149573ce01ede15039de
+Size (darktable-5.0.0.tar.xz) = 6928316 bytes
+SHA1 (patch-src_common_dttypes.h) = f1bd3bed14f29ca734020bf5b47fa414af9d6a0b
+SHA1 (patch-src_common_math.h) = da7ff6dbb6565e8ba39f04f44e72b72eadc5f0c1
+SHA1 (patch-src_common_utility.c) = bd7c5b2855eb36b75cf93fc928dabf5baaa8b552
