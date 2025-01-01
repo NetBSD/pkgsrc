@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.14 2025/01/01 15:06:42 mef Exp $
+$NetBSD: CHANGES-2025,v 1.15 2025/01/01 19:38:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -15,3 +15,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/fluidsynth to 2.4.2 [ryoon 2025-01-01]
 	Updated www/R-webshot to 0.5.5 [mef 2025-01-01]
 	Updated textproc/R-DT to 0.33 [mef 2025-01-01]
+	Updated sysutils/broot to 1.44.4 [pin 2025-01-01]
