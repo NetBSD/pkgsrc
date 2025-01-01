@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.16 2025/01/01 19:40:09 pin Exp $
+$NetBSD: CHANGES-2025,v 1.17 2025/01/01 19:41:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -17,3 +17,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-DT to 0.33 [mef 2025-01-01]
 	Updated sysutils/broot to 1.44.4 [pin 2025-01-01]
 	Updated devel/cargo-release to 0.25.15 [pin 2025-01-01]
+	Updated textproc/clicsv to 1.0.8 [pin 2025-01-01]
