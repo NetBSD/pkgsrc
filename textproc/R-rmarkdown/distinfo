@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2022/12/18 04:44:47 mef Exp $
+$NetBSD: distinfo,v 1.8 2025/01/01 02:13:05 mef Exp $
 
-BLAKE2s (R/rmarkdown_2.19.tar.gz) = f2daa66f9ccef373318dd1c990ab28e994ea255623a44177cbb9cd2985f44dd6
-SHA512 (R/rmarkdown_2.19.tar.gz) = 8a265c96ec1be4659fd3973652a31fe1e23b8fbf494e1dcb568213ed678a73c7b695f314581b37ccd42769b1c6773d83e3d41d520fe2e2e007ec6fb720c67aa2
-Size (R/rmarkdown_2.19.tar.gz) = 3243575 bytes
+BLAKE2s (R/rmarkdown_2.29.tar.gz) = 667a84d150f4c7ca6a83e3e8cda14946ff7cd3380884b7724baceb5fa2fa92ef
+SHA512 (R/rmarkdown_2.29.tar.gz) = 6f27384cf509d2bcb2eb8a0e03b917a081cef14fdb34122c9206ad00b5f78eee8647d373c1fc5b7852813a2a74a8f66d11a28ce06a4f8c5103baefef9ce760a4
+Size (R/rmarkdown_2.29.tar.gz) = 2194660 bytes
