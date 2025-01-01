@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.12 2025/01/01 14:28:14 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.13 2025/01/01 14:29:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -13,3 +13,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/R-shiny to 1.10.0 [mef 2025-01-01]
 	Updated graphics/darktable to 5.0.0 [ryoon 2025-01-01]
 	Updated audio/fluidsynth to 2.4.2 [ryoon 2025-01-01]
+	Updated www/R-webshot to 0.5.5 [mef 2025-01-01]
