@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/09/22 13:28:28 pin Exp $
+# $NetBSD: Makefile,v 1.35 2025/01/01 19:42:30 pin Exp $
 
-DISTNAME=	onefetch-2.22.0
+DISTNAME=	onefetch-2.23.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=o2sh/}
 
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 .include "cargo-depends.mk"
 
 USE_TOOLS+=		pkg-config
+RUST_REQ=		1.81.0
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
