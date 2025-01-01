@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.1 2023/06/11 10:47:04 mef Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/01 22:19:36 mef Exp $
 
 R_PKGNAME=	brotli
-R_PKGVER=	1.3.0
+R_PKGVER=	1.3.1
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Compression Format Optimized for the Web
 LICENSE=	mit	# + file LICENSE
+
+# Package suggested but not available: 'R.rsp'
 
 TEST_DEPENDS+=	R-spelling-[0-9]*:../../textproc/R-spelling
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
