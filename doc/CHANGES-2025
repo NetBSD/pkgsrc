@@ -1,1 +1,5 @@
+$NetBSD: CHANGES-2025,v 1.2 2025/01/01 02:22:56 wiz Exp $
+
+Changes to the packages collection and infrastructure in 2025:
+
 	Updated textproc/R-rmarkdown to 2.29 [mef 2025-01-01]
