@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/06/08 13:02:38 mef Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/01 12:40:24 mef Exp $
 
 R_PKGNAME=	shiny
-R_PKGVER=	1.8.1.1
+R_PKGVER=	1.10.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,14 +29,20 @@ DEPENDS+=	R-glue-[0-9]*:../../devel/R-glue
 DEPENDS+=	R-ellipsis-[0-9]*:../../math/R-ellipsis
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 
-# Packages required but not available:
-#  'httpuv', 'mime', 'xtable', 'fontawesome', 'htmltools',
-#  'sourcetools', 'later', 'promises', 'fastmap', 'commonmark', 'bslib',
-#  'cachem'
-#
 # Packages suggested but not available:
-#  'DT', 'Cairo', 'knitr', 'markdown', 'rmarkdown', 'ggplot2',
-#  'reactlog', 'yaml', 'future', 'dygraphs', 'ragg', 'showtext', 'sass'
+#   'coro', 'reactlog', 'future', 'dygraphs', 'showtext'
+
+# Package required and available but unsuitable version: 'fontawesome'
+
+TEST_DEPENDS+=	R-DT-[0-9]*:../../textproc/R-DT
+TEST_DEPENDS+=	R-Cairo-[0-9]*:../../graphics/R-Cairo
+#EST_DEPENDS+=	R-future-[0-9]*:../../wip/R-future
+TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown
+TEST_DEPENDS+=	R-ragg-[0-9]*:../../graphics/R-ragg
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
+TEST_DEPENDS+=	R-yaml-[0-9]*:../../textproc/R-yaml
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 
