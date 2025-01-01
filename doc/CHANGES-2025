@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-2025,v 1.4 2025/01/01 08:12:17 jmmv Exp $
+$NetBSD: CHANGES-2025,v 1.5 2025/01/01 10:17:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
 	Updated textproc/R-rmarkdown to 2.29 [mef 2025-01-01]
 	Updated www/R-pkgdown to 2.1.1 [mef 2025-01-01]
 	Updated sysutils/sysbuild to 2.8 [jmmv 2025-01-01]
+	Updated mail/thunderbird to 128.5.2 [ryoon 2025-01-01]
