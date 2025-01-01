@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/29 15:20:06 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/01/01 22:47:27 mef Exp $
 
-BLAKE2s (R/brew_1.0-7.tar.gz) = e4ae735ccbb1168c3c7fe5530e8d76c647d0182a3eeb432d40cbca2087cedc76
-SHA512 (R/brew_1.0-7.tar.gz) = 3613919a3072df74fc782a16cf69c7f8d4a16ef5deec5b0ff7b70be311f5f428b597322f87a029f48b9799b1c05cbd5608f8967a6e40cae7c3a050106c125652
-Size (R/brew_1.0-7.tar.gz) = 55517 bytes
+BLAKE2s (R/brew_1.0-10.tar.gz) = fde652415f7610e88969e87e0713abc51c71de8d3977a6a575d2f478ff7706b8
+SHA512 (R/brew_1.0-10.tar.gz) = 270ab8e06928d1e56788bcfe4ed0631ce39b851a9df9985b97bf3b7527a99564956f39df80662976c04a99a523c194deb284668f4d94926310b355b6d6d43d32
+Size (R/brew_1.0-10.tar.gz) = 71087 bytes
