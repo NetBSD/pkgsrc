@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/03/19 13:30:19 taca Exp $
+$NetBSD: distinfo,v 1.12 2025/01/02 06:12:08 taca Exp $
 
-BLAKE2s (rack-test-2.1.0.gem) = 4beaac993dd4854fe8a5a87d1e66802f3a6534a6d284fadf07afebd39b728da2
-SHA512 (rack-test-2.1.0.gem) = e349ce61c3d787e0a772980db697e92212d4d9592ce33f55516d1f85fba55cbe666496c76392679b057786d6dab603d74b83e7bb773ab54940343e36dbf05d6f
-Size (rack-test-2.1.0.gem) = 20992 bytes
+BLAKE2s (rack-test-2.2.0.gem) = 2bc2caac7c8c56eeb7202a9c619c475e55b99eb274f32f4046ef9b3d2e1f356f
+SHA512 (rack-test-2.2.0.gem) = 9c758151d89d86f04a92ba20c43221c4346b8d23f62accb955e759f85910c0e179a5c2e1ff74f131f337afd6b6ae72c36f5d53f600649480769a29468e14f44a
+Size (rack-test-2.2.0.gem) = 20992 bytes
