@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.62 2025/01/02 08:41:01 mef Exp $
+$NetBSD: CHANGES-2025,v 1.63 2025/01/02 09:20:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -64,3 +64,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/zlib-ng to 2.2.3 [adam 2025-01-02]
 	Updated mail/p5-Mail-DKIM to 1.2024023 [wen 2025-01-02]
 	Updated textproc/R-crosstalk to 1.2.1 [mef 2025-01-02]
+	Updated security/py-trustme to 1.2.1 [adam 2025-01-02]
+	Updated devel/py-pyparsing to 3.2.1 [adam 2025-01-02]
