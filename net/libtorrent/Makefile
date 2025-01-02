@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2024/10/04 09:00:05 adam Exp $
+# $NetBSD: Makefile,v 1.66 2025/01/02 19:54:36 adam Exp $
 
-DISTNAME=	libtorrent-0.14.0
+DISTNAME=	libtorrent-0.15.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rakshasa/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/rakshasa/libtorrent
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
+USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf gmake pkg-config
-USE_CXX_FEATURES+=	c++11
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 LDFLAGS+=		-lz
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--disable-instrumentation
 .if !exists(${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/openssl.pc)
 OPENSSL_CFLAGS=	-I${BUILDLINK_PREFIX.openssl}/include
 OPENSSL_LIBS=	-L${BUILDLINK_PREFIX.openssl}/lib \
-		-Wl,-R${BUILDLINK_PREFIX.openssl}/lib
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 
 CONFIGURE_ENV+=	OPENSSL_CFLAGS=${OPENSSL_CFLAGS:M*:Q}
 CONFIGURE_ENV+=	OPENSSL_LIBS=${OPENSSL_LIBS:Q}
