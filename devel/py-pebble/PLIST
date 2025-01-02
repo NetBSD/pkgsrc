@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/11/26 14:59:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/02 10:48:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -16,9 +16,18 @@ ${PYSITELIB}/pebble/asynchronous/process.pyo
 ${PYSITELIB}/pebble/asynchronous/thread.py
 ${PYSITELIB}/pebble/asynchronous/thread.pyc
 ${PYSITELIB}/pebble/asynchronous/thread.pyo
-${PYSITELIB}/pebble/common.py
-${PYSITELIB}/pebble/common.pyc
-${PYSITELIB}/pebble/common.pyo
+${PYSITELIB}/pebble/common/__init__.py
+${PYSITELIB}/pebble/common/__init__.pyc
+${PYSITELIB}/pebble/common/__init__.pyo
+${PYSITELIB}/pebble/common/process.py
+${PYSITELIB}/pebble/common/process.pyc
+${PYSITELIB}/pebble/common/process.pyo
+${PYSITELIB}/pebble/common/shared.py
+${PYSITELIB}/pebble/common/shared.pyc
+${PYSITELIB}/pebble/common/shared.pyo
+${PYSITELIB}/pebble/common/types.py
+${PYSITELIB}/pebble/common/types.pyc
+${PYSITELIB}/pebble/common/types.pyo
 ${PYSITELIB}/pebble/concurrent/__init__.py
 ${PYSITELIB}/pebble/concurrent/__init__.pyc
 ${PYSITELIB}/pebble/concurrent/__init__.pyo
