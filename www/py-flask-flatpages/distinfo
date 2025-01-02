@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/01/20 10:24:33 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/01/02 14:23:32 adam Exp $
 
-BLAKE2s (Flask-FlatPages-0.8.2.tar.gz) = 7d8e4bc6be30ae23c5d4121bd11fa1450d5d5bb263d1ccb541df6c50249f984c
-SHA512 (Flask-FlatPages-0.8.2.tar.gz) = b46d32df54b08a91a5f0a8f9c311bb1d86a6f88270125f251c6b22d2c5c59ecf72c2cb52e9257d9ed2a3f64c324d087b7d2f93154ced832ff28837bc6c22a919
-Size (Flask-FlatPages-0.8.2.tar.gz) = 25744 bytes
+BLAKE2s (flask_flatpages-0.8.3.tar.gz) = def9acbcc12b643a17d147eff9e51cf4ed32fda432dac6b591c132e8ba88d2fe
+SHA512 (flask_flatpages-0.8.3.tar.gz) = f8662ed41b2a81f6e77e1c484bb738433ccc70736922201c4daf3a8a6ad785915d78b3f1bf4623b30c59736b519b4181aa3c828550826ee9830fe86aa685b6bc
+Size (flask_flatpages-0.8.3.tar.gz) = 26070 bytes
