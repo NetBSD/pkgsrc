@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/06/12 15:37:45 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/01/02 10:12:07 adam Exp $
 
-BLAKE2s (mediafile-0.12.0.tar.gz) = 38d65169faf9eaf343dfb6e7b6bef06d4899efdef74d789d3da02f980c97c613
-SHA512 (mediafile-0.12.0.tar.gz) = 64c4328cf703e862b3772b8a0e2f4585c8c8a0e8d91a4794ff1fa50a8b5d36990f12aeb96366c674b06642c7a8d8ea4f1269ed5dac15d8001d2877f3a63c5bcc
-Size (mediafile-0.12.0.tar.gz) = 563534 bytes
+BLAKE2s (mediafile-0.13.0.tar.gz) = 577ae1c81d3995a83bb13393b4972097f12c4e0fbeeb6ada3bab5703ed2d1e3f
+SHA512 (mediafile-0.13.0.tar.gz) = 29c74aa9a37d4b7cdec94ca17938b31614c3301a6de97ac795291c49228267d51339dee5f85fa241cf93eead91f21c5272f32584060ab7b96bce99465fd7a9a0
+Size (mediafile-0.13.0.tar.gz) = 562194 bytes
