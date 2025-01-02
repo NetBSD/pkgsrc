@@ -1,0 +1,4 @@
+A command-line tool that scans your Cargo.toml for direct dependencies
+(optionally including dev-dependencies and build-dependencies), fetches
+their license info from crates.io, and generates a concise license report
+in either Markdown or JSON.
