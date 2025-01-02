@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/06/17 20:59:29 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/02 20:15:48 rjs Exp $
 
 UBOOT_TARGET=		visionfive2
-UBOOT_VERSION=		2024.04
+UBOOT_VERSION=		2024.10
 UBOOT_CONFIG=		starfive_visionfive2_defconfig
 UBOOT_BIN=		spl/u-boot-spl.bin.normal.out u-boot.itb
 
@@ -13,6 +13,8 @@ post-build:
 
 MAKE_ENV+=	OPENSBI=${WRKSRC}/fw_dynamic.bin
 
+.include "../../devel/libuuid/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/opensbi-visionfive2/buildlink3.mk"
 .include "../../sysutils/u-boot/u-boot-riscv64.mk"
 .include "../../mk/bsd.pkg.mk"
