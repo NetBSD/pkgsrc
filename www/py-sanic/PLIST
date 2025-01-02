@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/07/23 05:33:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/01/02 14:13:34 adam Exp $
 bin/sanic-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -72,6 +72,9 @@ ${PYSITELIB}/sanic/cli/base.pyo
 ${PYSITELIB}/sanic/cli/console.py
 ${PYSITELIB}/sanic/cli/console.pyc
 ${PYSITELIB}/sanic/cli/console.pyo
+${PYSITELIB}/sanic/cli/executor.py
+${PYSITELIB}/sanic/cli/executor.pyc
+${PYSITELIB}/sanic/cli/executor.pyo
 ${PYSITELIB}/sanic/cli/inspector.py
 ${PYSITELIB}/sanic/cli/inspector.pyc
 ${PYSITELIB}/sanic/cli/inspector.pyo
@@ -180,6 +183,9 @@ ${PYSITELIB}/sanic/mixins/__init__.pyo
 ${PYSITELIB}/sanic/mixins/base.py
 ${PYSITELIB}/sanic/mixins/base.pyc
 ${PYSITELIB}/sanic/mixins/base.pyo
+${PYSITELIB}/sanic/mixins/commands.py
+${PYSITELIB}/sanic/mixins/commands.pyc
+${PYSITELIB}/sanic/mixins/commands.pyo
 ${PYSITELIB}/sanic/mixins/exceptions.py
 ${PYSITELIB}/sanic/mixins/exceptions.pyc
 ${PYSITELIB}/sanic/mixins/exceptions.pyo
