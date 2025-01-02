@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/10/13 16:29:51 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/02 05:23:46 taca Exp $
 
-DISTNAME=	rake-compiler-1.2.8
+DISTNAME=	rake-compiler-1.2.9
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
