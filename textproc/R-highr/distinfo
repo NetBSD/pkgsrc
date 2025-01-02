@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/03 13:58:21 mef Exp $
+$NetBSD: distinfo,v 1.10 2025/01/02 11:56:16 mef Exp $
 
-BLAKE2s (R/highr_0.10.tar.gz) = 72871de751c66b426f8123eeb6ef5e7d33c0b8e7b577875207a99af2bc8f88a1
-SHA512 (R/highr_0.10.tar.gz) = dcc3a7f6e2599ee5a06e61bf699782ce6c2fac5e45eac2eb08b4d2d684a4691d9e3e83ddcc3f31bc4d5e12b40e847b9a6ad4ba821c8477d21055c6aca483b304
-Size (R/highr_0.10.tar.gz) = 15084 bytes
+BLAKE2s (R/highr_0.11.tar.gz) = a85d7cd33863c7cb485df4864b9503773f03af7ee2de6ea774fbc4733f07296d
+SHA512 (R/highr_0.11.tar.gz) = 2cf2c38c67231658e4a7c1809d1f59a6d23dc34e802d60c004b1e4bb392069cba128151929e361d76713a317e74f250570068f36af6889b08c5ab07cb4c8d872
+Size (R/highr_0.11.tar.gz) = 13851 bytes
