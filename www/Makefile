@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1832 2025/01/02 07:11:30 taca Exp $
+# $NetBSD: Makefile,v 1.1833 2025/01/02 07:12:52 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -967,6 +967,7 @@ SUBDIR+=	ruby-actioncable61
 SUBDIR+=	ruby-actioncable70
 SUBDIR+=	ruby-actioncable71
 SUBDIR+=	ruby-actioncable72
+SUBDIR+=	ruby-actioncable80
 SUBDIR+=	ruby-actionpack61
 SUBDIR+=	ruby-actionpack70
 SUBDIR+=	ruby-actionpack71
