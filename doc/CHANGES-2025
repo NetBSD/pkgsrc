@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.81 2025/01/02 14:25:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.82 2025/01/02 15:04:47 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -91,3 +91,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-asyncio to 0.25.1 [adam 2025-01-02]
 	Updated www/py-flask-flatpages to 0.8.3 [adam 2025-01-02]
 	Updated www/py-flask-limiter to 3.9.2 [adam 2025-01-02]
+	Updated devel/glibmm2.68 to 2.82.0 [prlw1 2025-01-02]
