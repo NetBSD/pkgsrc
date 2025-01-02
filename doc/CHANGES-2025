@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.31 2025/01/02 05:29:39 taca Exp $
+$NetBSD: CHANGES-2025,v 1.32 2025/01/02 05:36:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-rake-compiler to 1.2.9 [taca 2025-01-02]
 	Updated devel/ruby-reline to 0.6.0 [taca 2025-01-02]
 	Updated devel/ruby-regexp_parser to 2.10.0 [taca 2025-01-02]
+	Updated misc/ruby-pry to 0.15.2 [taca 2025-01-02]
