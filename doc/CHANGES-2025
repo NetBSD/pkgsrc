@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.24 2025/01/02 04:59:00 taca Exp $
+$NetBSD: CHANGES-2025,v 1.25 2025/01/02 05:01:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -25,3 +25,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-commonmark to 1.9.2 [mef 2025-01-01]
 	Updated mail/p5-Mail-Message to 3.016 [wen 2025-01-02]
 	Updated databases/ruby-sequel to 5.88.0 [taca 2025-01-02]
+	Updated databases/ruby-sqlite3 to 2.5.0 [taca 2025-01-02]
