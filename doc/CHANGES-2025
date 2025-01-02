@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.71 2025/01/02 12:11:16 fox Exp $
+$NetBSD: CHANGES-2025,v 1.72 2025/01/02 12:13:11 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -77,3 +77,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-highr to 0.11 [mef 2025-01-02]
 	Updated www/wordpress to 6.7.1 [wen 2025-01-02]
 	Updated sysutils/py-Glances to 4.3.0.6 [fox 2025-01-02]
+	Updated sysutils/eza to 0.20.15 [fox 2025-01-02]
