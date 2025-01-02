@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4377 2025/01/02 07:03:18 taca Exp $
+# $NetBSD: Makefile,v 1.4378 2025/01/02 07:05:15 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3264,6 +3264,7 @@ SUBDIR+=	ruby-activemodel61
 SUBDIR+=	ruby-activemodel70
 SUBDIR+=	ruby-activemodel71
 SUBDIR+=	ruby-activemodel72
+SUBDIR+=	ruby-activemodel80
 SUBDIR+=	ruby-activestorage61
 SUBDIR+=	ruby-activestorage70
 SUBDIR+=	ruby-activestorage71
