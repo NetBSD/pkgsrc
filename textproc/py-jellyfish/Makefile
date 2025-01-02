@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/13 13:32:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/02 13:59:17 adam Exp $
 
-DISTNAME=	jellyfish-1.1.0
+DISTNAME=	jellyfish-1.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jellyfish/}
