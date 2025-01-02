@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4379 2025/01/02 07:06:56 taca Exp $
+# $NetBSD: Makefile,v 1.4380 2025/01/02 07:14:25 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -3420,6 +3420,7 @@ SUBDIR+=	ruby-railties61
 SUBDIR+=	ruby-railties70
 SUBDIR+=	ruby-railties71
 SUBDIR+=	ruby-railties72
+SUBDIR+=	ruby-railties80
 SUBDIR+=	ruby-rake-compiler
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rb-fsevent
