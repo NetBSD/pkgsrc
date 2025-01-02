@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2024/12/27 08:19:37 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/01/02 12:25:36 nia Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -17,6 +17,8 @@ REPLACE_BASH+=		helpers/xfce-get-release-notes
 REPLACE_BASH+=		helpers/xfce-get-translations helpers/xfce-update-news
 REPLACE_BASH+=		scripts/xdt-check-abi
 REPLACE_PYTHON+=	scripts/xdt-gen-visibility
+
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=	yes
 
