@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.54 2025/01/02 07:14:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.55 2025/01/02 07:16:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -55,3 +55,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ruby-actionpack80 version 8.0.1 [taca 2025-01-02]
 	Added www/ruby-actioncable80 version 8.0.1 [taca 2025-01-02]
 	Added devel/ruby-railties80 version 8.0.1 [taca 2025-01-02]
+	Added devel/ruby-activestorage80 version 8.0.1 [taca 2025-01-02]
