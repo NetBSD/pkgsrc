@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/11/08 19:46:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/02 19:53:12 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go123/CONTRIBUTING.md
@@ -7862,6 +7862,7 @@ go123/src/os/executable.go
 go123/src/os/executable_darwin.go
 go123/src/os/executable_dragonfly.go
 go123/src/os/executable_freebsd.go
+go123/src/os/executable_netbsd.go
 go123/src/os/executable_path.go
 go123/src/os/executable_plan9.go
 go123/src/os/executable_procfs.go
