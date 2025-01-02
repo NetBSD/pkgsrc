@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.60 2025/01/02 08:00:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.61 2025/01/02 08:19:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -62,3 +62,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ruby-rails80 version 8.0.1 [taca 2025-01-02]
 	Updated devel/SDL2 to 2.30.11 [adam 2025-01-02]
 	Updated archivers/zlib-ng to 2.2.3 [adam 2025-01-02]
+	Updated mail/p5-Mail-DKIM to 1.2024023 [wen 2025-01-02]
