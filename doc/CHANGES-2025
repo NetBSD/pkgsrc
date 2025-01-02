@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.75 2025/01/02 13:30:56 mef Exp $
+$NetBSD: CHANGES-2025,v 1.76 2025/01/02 13:49:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -81,3 +81,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/wolfssl to 5.7.6 [fox 2025-01-02]
 	Updated textproc/R-htmlTable to 2.4.3 [mef 2025-01-02]
 	Updated textproc/R-hunspell to 3.0.5 [mef 2025-01-02]
+	Updated graphics/py-Pillow to 11.1.0 [adam 2025-01-02]
+	Updated devel/py-argcomplete to 3.5.3 [adam 2025-01-02]
