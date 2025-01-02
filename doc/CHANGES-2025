@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.43 2025/01/02 06:09:53 taca Exp $
+$NetBSD: CHANGES-2025,v 1.44 2025/01/02 06:12:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -44,3 +44,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-core to 3.214.1 [taca 2025-01-02]
 	Updated www/ruby-faraday-multipart to 1.1.0 [taca 2025-01-02]
 	Updated www/ruby-loofah to 2.24.0 [taca 2025-01-02]
+	Updated www/ruby-rack-test to 2.2.0 [taca 2025-01-02]
