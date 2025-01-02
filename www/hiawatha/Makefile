@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2024/12/01 22:30:06 hauke Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/02 21:22:19 hauke Exp $
 
 PKGNAME=	hiawatha-${PKGVER}
 DISTNAME=	hiawatha-v${PKGVER}
 PKGVER=		11.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=hsleisink/hiawatha/-/archive/v${PKGVER}/}
 EXTRACT_SUFX=	.tar.gz
@@ -77,9 +77,24 @@ SUBST_SED.path=		-e 's,/usr,${PREFIX},g'
 
 SUBST_CLASSES+=		uid
 SUBST_STAGE.uid=	pre-configure
-SUBST_MESSAGE.uid=	Configure Hiawatha user & group
+SUBST_MESSAGE.uid=	Configure Hiawatha user and group
 SUBST_FILES.uid=	config/hiawatha.conf.in
 SUBST_VARS.uid=		HIAWATHA_USER HIAWATHA_GROUP
+
+.if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
+SUBST_CLASSES+=		mbopt
+SUBST_STAGE.mbopt=	pre-configure
+SUBST_MESSAGE.mbopt=	Setting options for updated mbedtls library
+SUBST_FILES.mbopt=	mbedtls/include/mbedtls/mbedtls_config.h
+# Enable threading support
+SUBST_SED.mbopt=	-E -e 's,^//(\#define MBEDTLS_THREADING_PTHREAD),\1,g'
+SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_THREADING_C),\1,g'
+SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_SSL_PROTO_TLS1_3),\1,g'
+SUBST_SED.mbopt+=	-e 's,^//(\#define MBEDTLS_SSL_TLS1_3_COMPATIBILITY_MODE),\1,g'
+# Disable secp192r1 and secp192k1
+SUBST_SED.mbopt+=	-e 's,(^\#define MBEDTLS_ECP_DP_SECP192R1_ENABLED),//\1,g'
+SUBST_SED.mbopt+=	-e 's,(^\#define MBEDTLS_ECP_DP_SECP192K1_ENABLED),//\1,g'
+.endif
 
 # mbedtls-private
 PRINT_PLIST_AWK+=	{ gsub(/^lib\/hiawatha\/libmbed.+$$/, "$${PLIST.mbedtls-private}&"); }
@@ -103,6 +118,15 @@ CONF_FILES+=	${EGDIR}/letsencrypt.conf ${PKG_SYSCONFDIR}/letsencrypt.conf
 CONF_FILES+=	${EGDIR}/index.html.sample ${HIAWATHA_WEBROOT}/index.html
 
 .include "../../mk/bsd.prefs.mk"
+
+post-extract:
+.if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
+.for sdir in cmake include library
+	rm -r ${WRKSRC}/mbedtls/${sdir}
+	cp -R ${WRKDIR}/mbedtls-${MTVER}/${sdir} ${WRKSRC}/mbedtls/
+.endfor
+	cp ${WRKDIR}/mbedtls-${MTVER}/ChangeLog ${WRKSRC}/mbedtls/
+.endif
 
 post-install:
 .if !empty(PKG_OPTIONS:Mmbedtls-private)
@@ -135,6 +159,7 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.pkg.mk"
