@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/12/29 08:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/02 09:58:21 wiz Exp $
 
 PKGREVISION=	2
 .include "dist.mk"
@@ -36,8 +36,6 @@ PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_CC_FEATURES+=	c11
-# error: initializer element is not constant
-GCC_REQD+=		8
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
