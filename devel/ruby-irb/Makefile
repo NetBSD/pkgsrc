@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/12/13 16:21:24 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/02 05:21:12 taca Exp $
 
-DISTNAME=	irb-1.14.2
+DISTNAME=	irb-1.14.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,8 +10,10 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 USE_LANGUAGES=	# none
 
-RUBYGEM_MANPAGES=	yes
+# Ruby 3.4.1 has irb 1.14.3 gem.
+RUBY_VERSIONS_ACCEPTED=	31 32 33
 
+RUBYGEM_MANPAGES=	yes
 RUBYGEM_OPTIONS+=	--format-executable
 
 #
