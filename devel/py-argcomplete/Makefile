@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2024/12/24 18:55:47 adam Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/02 13:48:57 adam Exp $
 
-DISTNAME=	argcomplete-3.5.2
+DISTNAME=	argcomplete-3.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/argcomplete/}
@@ -20,9 +20,11 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:test
 
 PYTHON_SELF_CONFLICT=	yes
+REPLACE_PYTHON+=	argcomplete/scripts/*.py
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -v
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
