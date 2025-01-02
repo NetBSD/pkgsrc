@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2024/11/06 15:06:16 taca Exp $
+$NetBSD: distinfo,v 1.26 2025/01/02 06:09:41 taca Exp $
 
-BLAKE2s (loofah-2.23.1.gem) = 050326387e6f9489406631b12154c9cfd0bb2a8ea3323f8a42f023aa62a7e719
-SHA512 (loofah-2.23.1.gem) = 056f6b2b7304d4797acff7ed30ae4104d50a01c57e9ad0b43f0327b3bfd6b92ac4c068bf8c0beb99fb2ac7cc173766c752135951b7c32f06a3ca0d654ecc6794
-Size (loofah-2.23.1.gem) = 33792 bytes
+BLAKE2s (loofah-2.24.0.gem) = 860dc87da2c1a2d5ec20d9aa4ee679bf3e811e8c329d88d0aa6438e809490189
+SHA512 (loofah-2.24.0.gem) = 7fa43a1b35bba223054fb4c7842acae3c844520dfe16a4ef3f9c9755df7439cff75cfcb2af6dec3519016b835c6c3e002a97c828a45649ccb80d9218781011b1
+Size (loofah-2.24.0.gem) = 34304 bytes
