@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.66 2025/01/02 10:48:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.67 2025/01/02 11:14:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -72,3 +72,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-beets to 2.2.0 [adam 2025-01-02]
 	Updated audio/py-discogs-client to 2.7.1 [adam 2025-01-02]
 	Updated devel/py-pebble to 5.1.0 [adam 2025-01-02]
+	Updated textproc/R-dtplyr to 1.3.1 [mef 2025-01-02]
