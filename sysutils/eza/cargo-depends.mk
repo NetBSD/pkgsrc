@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.43 2024/12/26 18:25:21 fox Exp $
+# $NetBSD: cargo-depends.mk,v 1.44 2025/01/02 12:12:52 fox Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -93,7 +93,7 @@ CARGO_CRATE_DEPENDS+=	locale-0.2.2
 CARGO_CRATE_DEPENDS+=	log-0.4.22
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
 CARGO_CRATE_DEPENDS+=	miniz_oxide-0.8.2
-CARGO_CRATE_DEPENDS+=	natord-1.0.9
+CARGO_CRATE_DEPENDS+=	natord-plus-plus-2.0.0
 CARGO_CRATE_DEPENDS+=	normalize-line-endings-0.3.0
 CARGO_CRATE_DEPENDS+=	nu-ansi-term-0.50.1
 CARGO_CRATE_DEPENDS+=	num-conv-0.1.0
