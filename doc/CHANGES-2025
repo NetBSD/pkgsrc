@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.26 2025/01/02 05:09:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.27 2025/01/02 05:18:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -27,3 +27,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-sequel to 5.88.0 [taca 2025-01-02]
 	Updated databases/ruby-sqlite3 to 2.5.0 [taca 2025-01-02]
 	Updated databases/ruby-tiny_tds to 3.0.0 [taca 2025-01-02]
+	Updated devel/ruby-ffi to 1.17.1 [taca 2025-01-02]
