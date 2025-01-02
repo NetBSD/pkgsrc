@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.63 2025/01/02 09:20:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.64 2025/01/02 10:07:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -66,3 +66,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-crosstalk to 1.2.1 [mef 2025-01-02]
 	Updated security/py-trustme to 1.2.1 [adam 2025-01-02]
 	Updated devel/py-pyparsing to 3.2.1 [adam 2025-01-02]
+	Updated textproc/R-data.table to 1.16.4 [mef 2025-01-02]
