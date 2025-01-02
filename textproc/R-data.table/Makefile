@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/01/21 10:55:57 mef Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/02 10:06:55 mef Exp $
 
 R_PKGNAME=	data.table
-R_PKGVER=	1.14.10
+R_PKGVER=	1.16.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +21,13 @@ TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-xts-[0-9]*:../../math/R-xts
 TEST_DEPENDS+=	R-yaml-[0-9]*:../../textproc/R-yaml
 TEST_DEPENDS+=	R-zoo-[0-9]*:../../math/R-zoo
+
+# !pdfTeX error: pdflatex (file tctt0900): Font tctt0900 at 600 not found
+TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+TEST_DEPENDS+=	tex-inconsolata-[0-9]*:../../fonts/tex-inconsolata
+TEST_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+TEST_DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
+TEST_DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
 
 USE_LANGUAGES=	c
 
