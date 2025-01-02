@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 09:59:24 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/02 10:44:20 adam Exp $
 
-BLAKE2s (discogs-client-2.3.0.tar.gz) = 66c078a91ae744ae54e5639fb65f4bd36969838c9e85bf8d633738d1569007e7
-SHA512 (discogs-client-2.3.0.tar.gz) = 1912c0b9a3ff5ef33bcea92e322580458b78c5ad280cfde1f1e180a096bd2afe8f0d22059b985a8efd6fe5a84b54fecbeee521ccc698c694b3d6d3e66f976afc
-Size (discogs-client-2.3.0.tar.gz) = 24716 bytes
+BLAKE2s (python3_discogs_client-2.7.1.tar.gz) = c045a745d6af2328a67876f8c429b6fd716781bd8fae611931e815c2c744a1f4
+SHA512 (python3_discogs_client-2.7.1.tar.gz) = 4b9ca0fb1498319f814b88f2df6a1bd3d7c02f44bea8a13aa6b640d3d87def825dcc79181afddb173fedb7448f99a8f4a244915ebfaf26dd2411db8d151b054c
+Size (python3_discogs_client-2.7.1.tar.gz) = 36930 bytes
