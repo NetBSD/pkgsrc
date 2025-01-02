@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2024/12/26 18:25:21 fox Exp $
+$NetBSD: distinfo,v 1.49 2025/01/02 12:12:52 fox Exp $
 
 BLAKE2s (eza/addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (eza/addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -147,9 +147,9 @@ Size (eza/equivalent-1.0.1.crate) = 6615 bytes
 BLAKE2s (eza/errno-0.3.10.crate) = 6d5794ad801783e79353e834928c4ae077a9074bded5c27e5affd01ce60710d1
 SHA512 (eza/errno-0.3.10.crate) = fa4b9a368f254cd90c6f69f6883af4c579829a6da6f31481a1b527ac9602c8ffcb5e9518cdc32c39b5589c151a20e75a7300c8a907d178346185ecc6e8749f3f
 Size (eza/errno-0.3.10.crate) = 11824 bytes
-BLAKE2s (eza/eza-0.20.14.tar.gz) = 1882891c8f4838d8ac6a30ede03e0e8bdcb2208cdbe9f0609aabaa399b863c56
-SHA512 (eza/eza-0.20.14.tar.gz) = ea1065584b38b0582a4da4d7b58fddcf48a7054805ba93fa01cd835f60302a94f56c6244c6549d3477149ffa75a24f80da71ca645b4c00489201d6af86130833
-Size (eza/eza-0.20.14.tar.gz) = 1419010 bytes
+BLAKE2s (eza/eza-0.20.15.tar.gz) = 40de0405b6edff285b038a234291c544c3659f0c3c7d3cbf863605e0d3e9a542
+SHA512 (eza/eza-0.20.15.tar.gz) = 64cf0e52f192a86f3793bfe475906f4540a40e88c74af27fde171b9d4627a14b16b66567dfac47700b628960b259b6f8549217df7ac6d2103e538395d68a42c8
+Size (eza/eza-0.20.15.tar.gz) = 1419483 bytes
 BLAKE2s (eza/fast-srgb8-1.0.0.crate) = fe992d55b46b07c59a2244449a6f946e6ad4fba5d8e211359649c1090ff9d9fd
 SHA512 (eza/fast-srgb8-1.0.0.crate) = 834edef5eb4ec23b9e627b5e879a1649af19a17a1af0bae97c040869dbd14751ff3b29a606c52e5fe07b60f07fb695f328409c39788a4e74af0ab7b716688a0b
 Size (eza/fast-srgb8-1.0.0.crate) = 17214 bytes
@@ -276,18 +276,18 @@ Size (eza/locale-0.2.2.crate) = 18910 bytes
 BLAKE2s (eza/log-0.4.22.crate) = 9c270d3af5640c9eeb36754e6fd6cf50521e9fd1efad955e0d777716b3d6839a
 SHA512 (eza/log-0.4.22.crate) = bd7baa9c8a5523fd0864a53bcde955d484cacd782412b5b02c890b89dbf62137624da3a27337a310dd8f62bcc6606925a42bbd4ca161a3b7936ea4ff96bc0d71
 Size (eza/log-0.4.22.crate) = 44027 bytes
-BLAKE2s (eza/man-0.20.14.tar.gz) = 208101080c40d83c2e1ac563dfcfe0670c4f3f45439d1c07e730c5b1c2bde547
-SHA512 (eza/man-0.20.14.tar.gz) = 22decf34dc16086c1ba76243fbc64a3f715954b80fc974332718403f279fa21bb84e036f7a7886b67d26d07094dd2032aa6b411e1952e73cc6c03d8d30663196
-Size (eza/man-0.20.14.tar.gz) = 9561 bytes
+BLAKE2s (eza/man-0.20.15.tar.gz) = 5abacf56bce004fcb77318fede2a4095c54b38c811daba89c4c7b5e27345ec03
+SHA512 (eza/man-0.20.15.tar.gz) = 8c887adaa24818d23b8fd8a8262a486a641749c0a365db52d775e3fb7c2fd0f2581ebb3dbca149d690dab8f72f4ebcdbfd245cde9bb574fc95716d4144cd6da2
+Size (eza/man-0.20.15.tar.gz) = 9548 bytes
 BLAKE2s (eza/memchr-2.7.4.crate) = 87799dee61c273cba812d73b67f6ccaf05d8f18d4cc33e0f70986a1485ee0d64
 SHA512 (eza/memchr-2.7.4.crate) = 8d0e8b9c30208897d4b1b920f1bdcccd0c2b75d92a06abe4a1b2407938768abb6487d63de56c6a80419798fe69517210643dfaf11f5f5540185f0eccf220adb2
 Size (eza/memchr-2.7.4.crate) = 96670 bytes
 BLAKE2s (eza/miniz_oxide-0.8.2.crate) = 4ab43f84299d37e2b673b9281ade82b8ea1ecdac1c54e08f2c9deff72f712afd
 SHA512 (eza/miniz_oxide-0.8.2.crate) = e58802e332a72123954ba1751cdb59509789bf930ad74da3d06e2c1c3737547fc0b9848be816a66b6585830786b7a0fce7c9fb574789e15f3b540709563cf854
 Size (eza/miniz_oxide-0.8.2.crate) = 59068 bytes
-BLAKE2s (eza/natord-1.0.9.crate) = 0e3a2b5077d1f66f232fcd853c5d90cb8f4542783661fafa384bb66dbb44546e
-SHA512 (eza/natord-1.0.9.crate) = bf58eda54c759fecca1fd310bece370f26555bde1096081adc5bb1e9446a538f1652fb3049a52f898f4f62a2608805b72cb72dd52ff3fc9b88fe0a7c9071025a
-Size (eza/natord-1.0.9.crate) = 3866 bytes
+BLAKE2s (eza/natord-plus-plus-2.0.0.crate) = 837154c3cf1af40b631397e11a271deb6fffb80b334eed3a1c947116f04d5123
+SHA512 (eza/natord-plus-plus-2.0.0.crate) = a8f7fc75b4191e0788f7d65959a020a1707faa9674982c22f67459b0c3ecb07683637ef3f7a8823f080744c29d6ec424405f903665235e0ab71b082f632db921
+Size (eza/natord-plus-plus-2.0.0.crate) = 4308 bytes
 BLAKE2s (eza/normalize-line-endings-0.3.0.crate) = d148e24dadfbeccefd806b3d8f5426498c5118471813392b089158daffe2c77f
 SHA512 (eza/normalize-line-endings-0.3.0.crate) = f8e2a6e333b0e8972febe8b9cf058c8d899c384fd177e0b6ef1c5f94e0fa18192963970cb1a2ba80e3135a8cca66cdae6796e4d84ac6b325bb369575bdfc6eea
 Size (eza/normalize-line-endings-0.3.0.crate) = 5737 bytes
