@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.22 2025/01/01 22:59:02 mef Exp $
+$NetBSD: CHANGES-2025,v 1.23 2025/01/02 02:59:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-Rdpack to 2.6.2 [mef 2025-01-01]
 	Updated textproc/R-brew to 1.0.10 [mef 2025-01-01]
 	Updated textproc/R-commonmark to 1.9.2 [mef 2025-01-01]
+	Updated mail/p5-Mail-Message to 3.016 [wen 2025-01-02]
