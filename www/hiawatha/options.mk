@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/08/22 17:54:51 hauke Exp $
+# $NetBSD: options.mk,v 1.3 2025/01/02 21:22:19 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hiawatha
 PKG_SUPPORTED_OPTIONS=		cache letsencrypt monitor rproxy tomahawk
@@ -55,13 +55,18 @@ CONF_FILES+=	${EGDIR}/letsencrypt.conf ${PKG_SYSCONFDIR}/letsencrypt.conf
 .include "../../security/mbedtls3/buildlink3.mk"
 .endif
 .if !empty(PKG_OPTIONS:Mmbedtls-private)
+# Should the enclosed mbedtls be replaced by an update?
+HIAWATHA_REPLACE_MBEDTLS=	yes
+.if !empty(HIAWATHA_REPLACE_MBEDTLS:Myes)
+MTVER=		3.6.2
+DISTFILES+=	mbedtls-${MTVER}.tar.bz2
+SITES.mbedtls-${MTVER}.tar.bz2= \
+		${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${MTVER}/}
+.endif
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_TLS=on
 CMAKE_CONFIGURE_ARGS+=		-DUSE_SYSTEM_MBEDTLS=off
 CMAKE_CONFIGURE_ARGS+=		-DUSE_SHARED_MBEDTLS_LIBRARY=OFF
 CMAKE_CONFIGURE_ARGS+=		-DUSE_STATIC_MBEDTLS_LIBRARY=ON
-##LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/hiawatha
-##CONFIGURE_ENV+=		LDFLAGS=${LDFLAGS:Q}
-##INSTALLATION_DIRS+=	lib/hiawatha
 .endif
 .if empty(PKG_OPTIONS:Mmbedtls) && empty(PKG_OPTIONS:Mmbedtls-private)
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_TLS=off
