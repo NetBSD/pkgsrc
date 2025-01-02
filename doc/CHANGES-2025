@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.33 2025/01/02 05:41:39 taca Exp $
+$NetBSD: CHANGES-2025,v 1.34 2025/01/02 05:44:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-regexp_parser to 2.10.0 [taca 2025-01-02]
 	Updated misc/ruby-pry to 0.15.2 [taca 2025-01-02]
 	Updated net/ruby-net-imap to 0.5.4 [taca 2025-01-02]
+	Updated security/ruby-rex-mime to 0.1.10 [taca 2025-01-02]
