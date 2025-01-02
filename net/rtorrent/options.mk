@@ -1,12 +1,11 @@
-# $NetBSD: options.mk,v 1.3 2018/09/14 21:06:42 maya Exp $
+# $NetBSD: options.mk,v 1.4 2025/01/02 20:00:05 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rtorrent
 PKG_SUPPORTED_OPTIONS=	xmlrpc
-PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mxmlrpc)
-CONFIGURE_ARGS+=       --with-xmlrpc-c=${PREFIX}/bin/xmlrpc-c-config
-.  include "../../textproc/xmlrpc-c/buildlink3.mk"
+CONFIGURE_ARGS+=       --with-xmlrpc-tinyxml2
+.  include "../../textproc/tinyxml2/buildlink3.mk"
 .endif
