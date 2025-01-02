@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/06/12 15:37:45 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/02 10:12:07 adam Exp $
 
-DISTNAME=	mediafile-0.12.0
+DISTNAME=	mediafile-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mediafile/}
@@ -11,12 +11,10 @@ COMMENT=	Handles low-level interfacing for files' tags. Wraps Mutagen to
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
-DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.45:../../audio/py-mutagen
-DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-filetype>=1.2.0:../../sysutils/py-filetype
+DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.46:../../audio/py-mutagen
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
