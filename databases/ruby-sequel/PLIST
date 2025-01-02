@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.124 2024/12/08 14:19:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.125 2025/01/02 04:58:50 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -277,6 +277,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/static_cache_cache.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/string_stripper.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/subclasses.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/subset_conditions.rb
+${GEM_LIBDIR}/lib/sequel/plugins/subset_static_cache.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/table_select.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/tactical_eager_loading.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/throw_failures.rb
