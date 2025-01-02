@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.87 2025/01/02 21:41:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.88 2025/01/02 21:45:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -99,3 +99,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-markdown to 1.13 [mef 2025-01-02]
 	Updated sysutils/broot to 1.44.5 [pin 2025-01-02]
 	Updated www/xh to 0.23.1 [pin 2025-01-02]
+	Added devel/cargo-licenses version 0.2.0 [pin 2025-01-02]
