@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/12/11 14:04:58 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/02 06:02:01 taca Exp $
 
-DISTNAME=	unicode-display_width-3.1.2
+DISTNAME=	unicode-display_width-3.1.3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
