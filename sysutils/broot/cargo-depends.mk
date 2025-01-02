@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.88 2025/01/01 19:38:12 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.89 2025/01/02 21:40:08 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -283,7 +283,7 @@ CARGO_CRATE_DEPENDS+=	svgtypes-0.12.0
 CARGO_CRATE_DEPENDS+=	syn-1.0.109
 CARGO_CRATE_DEPENDS+=	syn-2.0.93
 CARGO_CRATE_DEPENDS+=	synstructure-0.13.1
-CARGO_CRATE_DEPENDS+=	syntect-5-no-panic-5.2.0
+CARGO_CRATE_DEPENDS+=	syntect-no-panic-5.2.0
 CARGO_CRATE_DEPENDS+=	system-deps-6.2.2
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.16
 CARGO_CRATE_DEPENDS+=	tempfile-3.14.0
