@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.18 2024/06/12 15:42:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/01/02 10:21:02 adam Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/beets/__init__.py
 ${PYSITELIB}/beets/__init__.pyc
 ${PYSITELIB}/beets/__init__.pyo
@@ -86,12 +85,6 @@ ${PYSITELIB}/beets/util/artresizer.pyo
 ${PYSITELIB}/beets/util/bluelet.py
 ${PYSITELIB}/beets/util/bluelet.pyc
 ${PYSITELIB}/beets/util/bluelet.pyo
-${PYSITELIB}/beets/util/confit.py
-${PYSITELIB}/beets/util/confit.pyc
-${PYSITELIB}/beets/util/confit.pyo
-${PYSITELIB}/beets/util/enumeration.py
-${PYSITELIB}/beets/util/enumeration.pyc
-${PYSITELIB}/beets/util/enumeration.pyo
 ${PYSITELIB}/beets/util/functemplate.py
 ${PYSITELIB}/beets/util/functemplate.pyc
 ${PYSITELIB}/beets/util/functemplate.pyo
@@ -352,3 +345,5 @@ ${PYSITELIB}/beetsplug/web/templates/index.html
 ${PYSITELIB}/beetsplug/zero.py
 ${PYSITELIB}/beetsplug/zero.pyc
 ${PYSITELIB}/beetsplug/zero.pyo
+${PYSITELIB}/man/beet.1
+${PYSITELIB}/man/beetsconfig.5
