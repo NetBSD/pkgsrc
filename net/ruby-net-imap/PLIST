@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/09 15:27:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/02 05:41:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
@@ -15,8 +15,10 @@ ${GEM_LIBDIR}/lib/net/imap/config/attr_accessors.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_inheritance.rb
 ${GEM_LIBDIR}/lib/net/imap/config/attr_type_coercion.rb
 ${GEM_LIBDIR}/lib/net/imap/data_encoding.rb
+${GEM_LIBDIR}/lib/net/imap/data_lite.rb
 ${GEM_LIBDIR}/lib/net/imap/deprecated_client_options.rb
 ${GEM_LIBDIR}/lib/net/imap/errors.rb
+${GEM_LIBDIR}/lib/net/imap/esearch_result.rb
 ${GEM_LIBDIR}/lib/net/imap/fetch_data.rb
 ${GEM_LIBDIR}/lib/net/imap/flags.rb
 ${GEM_LIBDIR}/lib/net/imap/response_data.rb
@@ -48,6 +50,7 @@ ${GEM_LIBDIR}/lib/net/imap/stringprep/saslprep.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/saslprep_tables.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/tables.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/trace.rb
+${GEM_LIBDIR}/lib/net/imap/vanished_data.rb
 ${GEM_LIBDIR}/net-imap.gemspec
 ${GEM_LIBDIR}/rakelib/benchmarks.rake
 ${GEM_LIBDIR}/rakelib/rdoc.rake
