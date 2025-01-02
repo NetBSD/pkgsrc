@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.12 2024/08/07 15:13:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/01/02 13:48:57 adam Exp $
 bin/activate-global-python-argcomplete
 bin/python-argcomplete-check-easy-install-script
 bin/register-python-argcomplete
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/NOTICE
 ${PYSITELIB}/argcomplete/__init__.py
 ${PYSITELIB}/argcomplete/__init__.pyc
 ${PYSITELIB}/argcomplete/__init__.pyo
