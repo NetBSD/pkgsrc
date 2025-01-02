@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2024/12/27 08:47:57 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2025/01/02 16:26:36 tnn Exp $
 
 DISTNAME=	librsvg-2.59.2
 CATEGORIES=	graphics gnome
@@ -34,6 +34,16 @@ SUBST_MESSAGE.rst2man=	Fixing rst2man name used by pkgsrc due to versioning.
 SUBST_STAGE.rst2man=	pre-configure
 SUBST_FILES.rst2man=	meson.build
 SUBST_SED.rst2man=	-e 's,rst2man.py,rst2man-${PYVERSSUFFIX},g'
+
+.include "../../mk/bsd.prefs.mk"
+
+post-install:
+.if ${OPSYS} == "Darwin"
+	install_name_tool			\
+	  -change @rpath/librsvg-2.2.dylib	\
+	  ${PREFIX}/lib/librsvg-2.2.dylib	\
+	  ${DESTDIR}${PREFIX}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.dylib
+.endif
 
 .include "cargo-depends.mk"
 
