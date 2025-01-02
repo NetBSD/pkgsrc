@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.13 2022/05/17 00:42:33 gutteridge Exp $
+# $NetBSD: platform.mk,v 1.14 2025/01/02 06:44:20 taca Exp $
 #
 
 #
@@ -23,7 +23,7 @@ t:=RUBY_${s:tu:S/-/_/g}_VER
 v:=${${t}}
 .  if !empty(v)
 _RUBY_PLIST_SUBST:=	${_RUBY_PLIST_SUBST}  ${t}=${v}
-_RUBY_PLIST_AWK:=	${_RUBY_PLIST_AWK} { sub(/${s}-${v}/, "${s}-$${${t}}"); }
+_RUBY_PLIST_AWK:=	${_RUBY_PLIST_AWK} { sub(/${s}-${v:S/./\\./g}/, "${s}-$${${t}}"); }
 .  endif
 .endfor
 
@@ -35,16 +35,6 @@ FILES_SUBST+=	DATE=${DATE:Q}
 
 REQD_DIRS+=	${GEM_HOME}/cache
 REQD_DIRS+=	${GEM_HOME}/doc
-
-#
-# substitute path in rubygems.
-#
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	lib/rubygems/config_file.rb
-SUBST_VARS.conf=	PKG_SYSCONFDIR
-SUBST_MESSAGE.conf=	Fixing configuration files.
-SUBST_NOOP_OK.conf=	yes # not needed for ruby-base>=2.6
 
 #
 # Don't reference pkgsrc's INSTALL macro since Ruby expects it could
