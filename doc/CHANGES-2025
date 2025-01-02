@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.85 2025/01/02 21:28:13 mef Exp $
+$NetBSD: CHANGES-2025,v 1.86 2025/01/02 21:40:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -97,3 +97,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-smmap to 5.0.2 [adam 2025-01-02]
 	Updated textproc/py-pyaml to 25.1.0 [adam 2025-01-02]
 	Updated textproc/R-markdown to 1.13 [mef 2025-01-02]
+	Updated sysutils/broot to 1.44.5 [pin 2025-01-02]
