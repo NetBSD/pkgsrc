@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.64 2025/01/02 10:07:12 mef Exp $
+$NetBSD: CHANGES-2025,v 1.65 2025/01/02 10:21:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -67,3 +67,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-trustme to 1.2.1 [adam 2025-01-02]
 	Updated devel/py-pyparsing to 3.2.1 [adam 2025-01-02]
 	Updated textproc/R-data.table to 1.16.4 [mef 2025-01-02]
+	Updated devel/py-scard to 2.2.0 [adam 2025-01-02]
+	Updated audio/py-mediafile to 0.13.0 [adam 2025-01-02]
+	Updated audio/py-beets to 2.2.0 [adam 2025-01-02]
