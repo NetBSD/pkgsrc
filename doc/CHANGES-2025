@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.65 2025/01/02 10:21:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.66 2025/01/02 10:48:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -70,3 +70,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-scard to 2.2.0 [adam 2025-01-02]
 	Updated audio/py-mediafile to 0.13.0 [adam 2025-01-02]
 	Updated audio/py-beets to 2.2.0 [adam 2025-01-02]
+	Updated audio/py-discogs-client to 2.7.1 [adam 2025-01-02]
+	Updated devel/py-pebble to 5.1.0 [adam 2025-01-02]
