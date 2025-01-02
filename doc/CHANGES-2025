@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.76 2025/01/02 13:49:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.77 2025/01/02 13:51:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -83,3 +83,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-hunspell to 3.0.5 [mef 2025-01-02]
 	Updated graphics/py-Pillow to 11.1.0 [adam 2025-01-02]
 	Updated devel/py-argcomplete to 3.5.3 [adam 2025-01-02]
+	Updated audio/pavucontrol to 6.1 [ryoon 2025-01-02]
