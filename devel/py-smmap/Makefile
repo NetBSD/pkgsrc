@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/09/17 17:58:49 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/02 20:15:13 adam Exp $
 
-DISTNAME=	smmap-5.0.1
+DISTNAME=	smmap-5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/smmap/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/Byron/smmap
 COMMENT=	Git implementation of a sliding window memory map manager
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
