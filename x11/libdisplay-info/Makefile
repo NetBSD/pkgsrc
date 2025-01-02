@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/12/26 18:37:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/02 09:52:42 nia Exp $
 
 DISTNAME=	libdisplay-info-0.2.0
 CATEGORIES=	x11
@@ -14,4 +14,5 @@ USE_TOOLS+=	pkg-config
 
 .include "../../devel/meson/build.mk"
 .include "../../sysutils/hwdata/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
