@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.83 2025/01/02 20:00:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.84 2025/01/02 20:19:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -94,3 +94,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/glibmm2.68 to 2.82.0 [prlw1 2025-01-02]
 	Updated net/libtorrent to 0.15.1 [adam 2025-01-02]
 	Updated net/rtorrent to 0.15.1 [adam 2025-01-02]
+	Updated devel/py-smmap to 5.0.2 [adam 2025-01-02]
+	Updated textproc/py-pyaml to 25.1.0 [adam 2025-01-02]
