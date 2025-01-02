@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/03 14:10:00 mef Exp $
+$NetBSD: distinfo,v 1.10 2025/01/02 21:28:05 mef Exp $
 
-BLAKE2s (R/markdown_1.7.tar.gz) = 0d309abc046684861ad79dd0eb8e8cbb509c30d88d4517cc24c58d156bb0dd92
-SHA512 (R/markdown_1.7.tar.gz) = 5bcdb9392c387ba06613585958196899294c633285159c261b66ca958fbd39e0063b4e6e15ab295e3a9ddbd7e1075bbf3cabc5b295132d65f3c0411b00035ef6
-Size (R/markdown_1.7.tar.gz) = 107936 bytes
+BLAKE2s (R/markdown_1.13.tar.gz) = 60f4f98dd6675bbdb18018d14355b311e9ed53edb3e73ac80a5801030348202a
+SHA512 (R/markdown_1.13.tar.gz) = 157ae50b320552792d65b595da2fc61f94c6c16aefcf68c3f6da6e0b1a4470aaedc2916cbf6758144d6373e6873feb2a923b0036b9c32e9dfb8e4f9e43b3c8c6
+Size (R/markdown_1.13.tar.gz) = 39609 bytes
