@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2025/01/01 19:38:12 pin Exp $
+$NetBSD: distinfo,v 1.105 2025/01/02 21:40:08 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -108,9 +108,9 @@ Size (bitstream-io-2.6.0.crate) = 38256 bytes
 BLAKE2s (block2-0.5.1.crate) = f3e6a09a4c152a29eb9708eccc0fc7f0c1a2c021c1c6312958eb9799b0c60717
 SHA512 (block2-0.5.1.crate) = 084b15f06d005c9d4b78b20a85ed804ca10143e3bfc6b52c4c90f72b4b3455fd27bb02577a01f7c21e58a60d174c1b5d29b662da05b9e35688dcd266a988e045
 Size (block2-0.5.1.crate) = 24191 bytes
-BLAKE2s (broot-1.44.4.tar.gz) = bf7388dfcc4ef3c80d2d4e6450b6c15cc684b3dacaa606a61b794ec1593d83c9
-SHA512 (broot-1.44.4.tar.gz) = 60c417f6f599664e690fc3e90af554c69c57d3f5207070d248ba4fe46d54dfe69a08df5e7f76c19954e4c08afe632b34bf52ec52812ce4f0c02f95f68b75d969
-Size (broot-1.44.4.tar.gz) = 15295019 bytes
+BLAKE2s (broot-1.44.5.tar.gz) = c79f226874d912cde100584cb0355925077e92475762cc8ea66ce6b515a6c57d
+SHA512 (broot-1.44.5.tar.gz) = 8e8ca7df12cc5805ced360d07a3402edf69f80a48d40e6ba0b0b63792bf06a682931f5f7d08c8712466418578f3ce00982e2000cef20d3ddc3cae9299b350988
+Size (broot-1.44.5.tar.gz) = 15295011 bytes
 BLAKE2s (bstr-1.11.1.crate) = 3c38f88803590df997da99fb78b21b35499b4a365cc4111a021e1dc4a6c393e0
 SHA512 (bstr-1.11.1.crate) = 04c28eab447ee13e8d3af12fd165947c26086e8cb990840226197c16b4716bc018a48c6dbdd055f837a7d64eeb3c594b0b3629103ce7f910af0c3c7d3cc79edb
 Size (bstr-1.11.1.crate) = 351485 bytes
@@ -852,9 +852,9 @@ Size (syn-2.0.93.crate) = 293925 bytes
 BLAKE2s (synstructure-0.13.1.crate) = d3d7339947cbd052275986623e3eca89eab21bc2d620216d3451f1d733b5488d
 SHA512 (synstructure-0.13.1.crate) = 09024193b44fc9a8901bda845b9f86c57dad65d0f53e309b2e7e968538fab6f67db1c86e5e52a2eb8fd116dc073e3ad10983bd60764662ec6ba94fee22a958aa
 Size (synstructure-0.13.1.crate) = 18327 bytes
-BLAKE2s (syntect-5-no-panic-5.2.0.crate) = 16febd0b04c2c009f8791323c5409f9691033abf1abee73a664a26d0783ffddf
-SHA512 (syntect-5-no-panic-5.2.0.crate) = 4f72464b621790a1ec50fc59c108e9c1ffc03eaa0cbe59ecdea93bc9ab68e4cc94826ecd36b2e6defd11ba928fd03562eff8112a849d61b5b7356b6e6405bea5
-Size (syntect-5-no-panic-5.2.0.crate) = 817503 bytes
+BLAKE2s (syntect-no-panic-5.2.0.crate) = 175865799e9a77634c539009648b70f744a558f582b03290c544275bb667b1d2
+SHA512 (syntect-no-panic-5.2.0.crate) = 2609b94d606a377956b4191eb899918edfaabc5bd16395a31bfdfbfff866f2bb596bb166a3a724f81a6568944f5092b45e57d2a23cad69b5b85ab0b02965b938
+Size (syntect-no-panic-5.2.0.crate) = 817473 bytes
 BLAKE2s (system-deps-6.2.2.crate) = 3fc14328e709c008c7900f99059b2991cd9868834ec8ee3831033d64858dbb8a
 SHA512 (system-deps-6.2.2.crate) = a81020d5cbccab3c618f17d691d76a058c634ff9e3615cafdc95ec002d8f1533586ce9ea1ad5da8ae3945be7dfd3d962cd7dbdcc95f0614ed5156bfb3c6c9c42
 Size (system-deps-6.2.2.crate) = 25546 bytes
