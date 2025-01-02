@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/02 12:55:27 mef Exp $
 
-BLAKE2s (R/htmlTable_2.2.1.tar.gz) = 375017c7072914db74f7f1ff85ce531d2a3eec1b04f8146f1f5100a1273a53cd
-SHA512 (R/htmlTable_2.2.1.tar.gz) = 4b03ebf23a064554a009a34c7b2ab2a004977f5ce4522318ebb7f2c57c539ce56d543cb762d3641cfd518326b715157638efcb6ac4000d9bbcc3e7ebb67b91c6
-Size (R/htmlTable_2.2.1.tar.gz) = 422456 bytes
+BLAKE2s (R/htmlTable_2.4.3.tar.gz) = 9b95d6bfda3ba40731c900cb9f744e330a6f86bc01ea351aaf7de2c3c2cb94f2
+SHA512 (R/htmlTable_2.4.3.tar.gz) = 3174b14db267b0f3a1f17cd2de4139a2250c1d862b83ed522b8c1838bdb20c399194f6f2c52bec70ff230ca865fde0c23453f7d3a4a884903c116a27ddbf5a5b
+Size (R/htmlTable_2.4.3.tar.gz) = 432827 bytes
