@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/03/12 08:12:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/02 09:58:45 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,9 +28,6 @@ ${PYSITELIB}/smartcard/CardConnectionObserver.pyo
 ${PYSITELIB}/smartcard/CardMonitoring.py
 ${PYSITELIB}/smartcard/CardMonitoring.pyc
 ${PYSITELIB}/smartcard/CardMonitoring.pyo
-${PYSITELIB}/smartcard/CardNames.py
-${PYSITELIB}/smartcard/CardNames.pyc
-${PYSITELIB}/smartcard/CardNames.pyo
 ${PYSITELIB}/smartcard/CardRequest.py
 ${PYSITELIB}/smartcard/CardRequest.pyc
 ${PYSITELIB}/smartcard/CardRequest.pyo
@@ -40,9 +37,6 @@ ${PYSITELIB}/smartcard/CardService.pyo
 ${PYSITELIB}/smartcard/CardType.py
 ${PYSITELIB}/smartcard/CardType.pyc
 ${PYSITELIB}/smartcard/CardType.pyo
-${PYSITELIB}/smartcard/ClassLoader.py
-${PYSITELIB}/smartcard/ClassLoader.pyc
-${PYSITELIB}/smartcard/ClassLoader.pyo
 ${PYSITELIB}/smartcard/Exceptions.py
 ${PYSITELIB}/smartcard/Exceptions.pyc
 ${PYSITELIB}/smartcard/Exceptions.pyo
@@ -100,12 +94,6 @@ ${PYSITELIB}/smartcard/pcsc/PCSCReaderGroups.pyo
 ${PYSITELIB}/smartcard/pcsc/__init__.py
 ${PYSITELIB}/smartcard/pcsc/__init__.pyc
 ${PYSITELIB}/smartcard/pcsc/__init__.pyo
-${PYSITELIB}/smartcard/pyro/PyroReader.py
-${PYSITELIB}/smartcard/pyro/PyroReader.pyc
-${PYSITELIB}/smartcard/pyro/PyroReader.pyo
-${PYSITELIB}/smartcard/pyro/__init__.py
-${PYSITELIB}/smartcard/pyro/__init__.pyc
-${PYSITELIB}/smartcard/pyro/__init__.pyo
 ${PYSITELIB}/smartcard/reader/Reader.py
 ${PYSITELIB}/smartcard/reader/Reader.pyc
 ${PYSITELIB}/smartcard/reader/Reader.pyo
