@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.286 2024/11/06 13:31:55 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.287 2025/01/02 06:48:18 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferred Ruby version to use.
 #
-#		Possible values: 31 32 33
+#		Possible values: 31 32 33 34
 #		Default: 32
 #
 # RUBY_BUILD_DOCUMENT
@@ -34,13 +34,13 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 31 32 33
-#		Default: 32 31 33
+#		Possible values: 31 32 33 34
+#		Default: 32 31 33 34
 #
 # RUBY_VERSIONS_INCOMPATIBLE
 #	The Ruby versions that are incompatible for the package.
 #
-#		Possible values: 31 32 33
+#		Possible values: 31 32 33 34
 #		Default: empty
 #
 # RUBY_NOVERSION
@@ -68,7 +68,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 31 32 33
+#		Possible values: 31 32 33 34
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,7 +77,7 @@
 #	use RUBY_PKGPREFIX with Ruby-related packages since you can supply
 #	different binary packages for each version of Ruby.
 #
-#		Possible values: ruby31 ruby32 ruby33
+#		Possible values: ruby31 ruby32 ruby33 ruby34
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -106,7 +106,7 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 31 32 33
+#		Possible values: 31 32 33 34
 #
 # RUBY_VERSION
 #	Version of Ruby's version.
@@ -216,19 +216,21 @@ RUBY_VERSION_REQD?=	${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 RUBY31_VERSION=		3.1.6
 RUBY32_VERSION=		3.2.6
 RUBY33_VERSION=		3.3.6
+RUBY34_VERSION=		3.4.1
 
 # current API compatible version; used for version of shared library
 RUBY31_API_VERSION=	3.1.0
 RUBY32_API_VERSION=	3.2.0
 RUBY33_API_VERSION=	3.3.0
+RUBY34_API_VERSION=	3.4.0
 
 #
 RUBY_VERSION_DEFAULT?=	32
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED=	31 32 33
+RUBY_VERSIONS_SUPPORTED=	31 32 33 34
 
-RUBY_VERSIONS_ACCEPTED?=	32 31 33
+RUBY_VERSIONS_ACCEPTED?=	32 31 33 34
 RUBY_VERSIONS_INCOMPATIBLE?=
 
 .if empty(RUBY_VERSIONS_SUPPORTED:M${RUBY_VERSION_DEFAULT})
@@ -554,6 +556,105 @@ RUBY_RSS_VER=			0.3.1
 RUBY_TEST_UNIT_VER=		3.6.1
 RUBY_TYPEPROF_VER=		0.21.9
 
+.elif ${RUBY_VER} == 34
+RUBY_VERSION=		${RUBY34_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+RUBY_SUFFIX=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
+RUBY_RUBYGEMS_VER=		3.5.22
+
+# default gems
+RUBY_BENCHMARK_VER=		0.4.0
+RUBY_BUNDLER_VER=		2.6.2
+RUBY_CGI_VER=			0.4.1
+RUBY_DELEGATE_VER=		0.4.0
+RUBY_DID_YOU_MEAN_VER=		2.0.0
+RUBY_ENGLISH_VER=		0.8.0
+RUBY_ERB_VER=			4.0.4
+RUBY_ERROR_HIGHLIGHT_VER=	0.7.0
+RUBY_FILEUTILS_VER=		1.7.3
+RUBY_FIND_VER=			0.2.0
+RUBY_FORWARDABLE_VER=		1.3.3
+RUBY_IPADDR_VER=		1.2.7
+RUBY_IRB_VER=			1.14.3
+RUBY_LOGGER_VER=		1.6.4
+RUBY_NET_HTTP_VER=		0.6.0
+RUBY_NET_PROTOCOL_VER=		0.2.2
+RUBY_OPEN_URI_VER=		0.5.0
+RUBY_OPEN3_VER=			0.2.1
+RUBY_OPTPARSE_VER=		0.6.0
+RUBY_OSTRUCT_VER=		0.6.1
+RUBY_PP_VER=			0.6.2
+RUBY_PRETTYPRINT_VER=		0.2.0
+RUBY_PRISM_VER=			1.2.0
+RUBY_PSTORE_VER=		0.1.4
+RUBY_RDOC_VER=			6.10.0
+RUBY_READLINE_VER=		0.0.4
+RUBY_RELINE_VER=		0.6.0
+RUBY_RESOLV_VER=		0.6.0
+RUBY_RUBY2_KEYWORDS_VER=	0.0.5
+RUBY_SECURERANDOM_VER=		0.4.1
+RUBY_SET_VER=			1.1.1
+RUBY_SHELLWORDS_VER=		0.2.2
+RUBY_SINGLETON_VER=		0.3.0
+RUBY_SYNTAX_SUGGEST_VER=	2.0.2
+RUBY_TEMPFILE_VER=		0.3.1
+RUBY_TIME_VER=			0.4.1
+RUBY_TIMEOUT_VER=		0.4.3
+RUBY_TMPDIR_VER=		0.3.1
+RUBY_TSORT_VER=			0.2.0
+RUBY_UN_VER=			0.3.0
+RUBY_URI_VER=			1.0.2
+RUBY_WEAKREF_VER=		0.1.3
+RUBY_YAML_VER=			0.4.0
+
+# default gems from ext
+RUBY_DATE_VER=			3.4.1
+RUBY_DIGEST_VER=		3.2.0
+RUBY_ETC_VER=			1.4.5
+RUBY_FCNTL_VER=			1.2.0
+RUBY_FIDDLE_VER=		1.1.6
+RUBY_IO_CONSOLE_VER=		0.8.0
+RUBY_IO_NONBLOCK_VER=		0.3.1
+RUBY_IO_WAIT_VER=		0.3.1
+RUBY_JSON_VER=			2.9.1
+RUBY_OPENSSL_VER=		3.3.0
+RUBY_PATHNAME_VER=		0.4.0
+RUBY_PSYCH_VER=			5.2.2
+RUBY_STRINGIO_VER=		3.1.2
+RUBY_STRSCAN_VER=		3.1.2
+RUBY_ZLIB_VER=			3.2.1
+
+# bundled gems
+RUBY_MINITEST_VER=		5.25.4
+RUBY_POWER_ASSERT_VER=		2.0.5
+RUBY_RAKE_VER=			13.2.1
+RUBY_TEST_UNIT_VER=		3.6.7
+RUBY_REXML_VER=			3.4.0
+RUBY_RSS_VER=			0.3.1
+RUBY_NET_FTP_VER=		0.3.8
+RUBY_NET_IMAP_VER=		0.5.4
+RUBY_NET_POP_VER=		0.1.2
+RUBY_NET_SMTP_VER=		0.5.0
+RUBY_MATRIX_VER=		0.4.2
+RUBY_PRIME_VER=			0.1.3
+RUBY_RBS_VER=			3.8.0
+RUBY_TYPEPROF_VER=		0.30.1
+RUBY_DEBUG_VER=			1.10.0
+RUBY_RACC_VER=			1.8.1
+RUBY_MUTEX_M_VER=		0.3.0
+RUBY_GETOPTLONG_VER=		0.2.1
+RUBY_BASE64_VER=		0.2.0
+RUBY_BIGDECIMAL_VER=		3.1.8
+RUBY_OBSERVER_VER=		0.1.2
+RUBY_ABBREV_VER=		0.1.2
+RUBY_RESOLV_REPLACE_VER=	0.1.1
+RUBY_RINDA_VER=			0.2.0
+RUBY_DRB_VER=			2.2.1
+RUBY_NKF_VER=			0.2.0
+RUBY_SYSLOG_VER=		0.2.0
+RUBY_CSV_VER=			3.3.2
+RUBY_REPL_TYPE_COMPLETOR_VER=	0.1.9
 .else
 PKG_FAIL_REASON+=	"Unknown Ruby version specified: ${RUBY_VER}."
 .endif
@@ -749,11 +850,11 @@ RUBY_BUNDLE_MODULES= \
 	net-protocol net-smtp net-telnet nkf observer open-uri open3 \
 	openssl optparse ostruct pathname power_assert pp prettyprint \
 	prime prism pstore psych racc rake rbs rdoc readline reline resolv \
-	resolv-replace rexml rinda rss ruby2_keywords scanf sdbm \
-	securerandom set shell shellwords singleton syntax_suggest \
-	stringio strscan sync syslog tempfile test-unit thwait time \
-	timeout tmpdir tracer tsort typeprof un uri sync weakref webrick \
-	xmlrpc yaml zlib
+	repl_type_completor resolv-replace rexml rinda rss ruby2_keywords \
+	scanf sdbm securerandom set shell shellwords singleton \
+	syntax_suggest stringio strscan sync syslog tempfile test-unit \
+	thwait time timeout tmpdir tracer tsort typeprof un uri sync \
+	weakref webrick xmlrpc yaml zlib
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
 			RUBY_LIB_BASE=${RUBY_LIB_BASE:Q} \
@@ -892,8 +993,7 @@ PRINT_PLIST_AWK+=	/^${RUBY_SYSRIDIR:S|/|\\/|g}\// \
 			{ next; }
 
 _RUBY_PRINT_PLIST_GEM+=	/^${GEM_EXTSBASE:S|/|\\/|g}/ \
-			{ gsub(/${GEM_EXTSBASE:S|/|\\/|g}/, "$${GEM_EXTSBASE}"); \
-			print; next; }
+			{ gsub(/${GEM_EXTSBASE:S|/|\\/|g}/, "$${GEM_EXTSBASE}"); }
 
 # Insert part of PRINT_PLIST_AWK from gem.mk
 PRINT_PLIST_AWK+=	${_RUBY_PRINT_PLIST_GEM}
