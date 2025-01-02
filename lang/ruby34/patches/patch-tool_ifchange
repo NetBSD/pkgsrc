@@ -1,0 +1,15 @@
+$NetBSD: patch-tool_ifchange,v 1.1 2025/01/02 06:51:05 taca Exp $
+
+Do not show color default.
+
+--- tool/ifchange.orig	2024-12-12 01:10:13.000000000 +0000
++++ tool/ifchange
+@@ -19,7 +19,7 @@ set -e
+ timestamp=
+ keepsuffix=
+ srcavail=f
+-color=auto
++color=never
+ until [ $# -eq 0 ]; do
+     case "$1" in
+ 	--)
