@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.48 2025/01/02 07:05:32 taca Exp $
+$NetBSD: CHANGES-2025,v 1.49 2025/01/02 07:07:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/ruby34 version 3.4.1 [taca 2025-01-02]
 	Added devel/ruby-activesupport80 version 8.0.1 [taca 2025-01-02]
 	Added devel/ruby-activemodel80 version 8.0.1 [taca 2025-01-02]
+	Added devel/ruby-activejob80 version 8.0.1 [taca 2025-01-02]
