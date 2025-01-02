@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.74 2025/01/02 12:55:36 mef Exp $
+$NetBSD: CHANGES-2025,v 1.75 2025/01/02 13:30:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -80,3 +80,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/eza to 0.20.15 [fox 2025-01-02]
 	Updated security/wolfssl to 5.7.6 [fox 2025-01-02]
 	Updated textproc/R-htmlTable to 2.4.3 [mef 2025-01-02]
+	Updated textproc/R-hunspell to 3.0.5 [mef 2025-01-02]
