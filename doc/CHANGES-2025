@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.79 2025/01/02 14:00:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.80 2025/01/02 14:17:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -87,3 +87,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/utf8proc to 2.10.0 [micha 2025-01-02]
 	Updated devel/py-ruamel-yaml to 0.18.8 [adam 2025-01-02]
 	Updated textproc/py-jellyfish to 1.1.3 [adam 2025-01-02]
+	Updated www/py-sanic to 24.12.0 [adam 2025-01-02]
+	Updated devel/py-test-asyncio to 0.25.1 [adam 2025-01-02]
