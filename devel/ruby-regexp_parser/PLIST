@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/02/03 15:36:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/01/02 05:29:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
@@ -24,6 +24,8 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/posix_class.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/root.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/classes/unicode_property.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/construct.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/escape_sequence_char.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/escape_sequence_codepoint.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/human_name.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/match_length.rb
@@ -31,6 +33,7 @@ ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/negative.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/options.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/parts.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/printing.rb
+${GEM_LIBDIR}/lib/regexp_parser/expression/methods/referenced_expressions.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/strfregexp.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/tests.rb
 ${GEM_LIBDIR}/lib/regexp_parser/expression/methods/traverse.rb
