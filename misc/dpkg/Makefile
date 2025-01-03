@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2024/11/16 12:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/01/03 13:41:51 adam Exp $
 
-DISTNAME=	dpkg_1.22.11
+DISTNAME=	dpkg_1.22.12
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
