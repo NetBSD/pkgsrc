@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.93 2025/01/03 10:16:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.94 2025/01/03 10:42:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-rbibutils to 2.3 [mef 2025-01-03]
 	Updated devel/py-usb to 1.3.0 [adam 2025-01-03]
 	Updated devel/py-virtualenv to 20.28.1 [adam 2025-01-03]
+	Updated textproc/R-readr to 2.1.5 [mef 2025-01-03]
