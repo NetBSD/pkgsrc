@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2024/11/27 21:59:55 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.61 2025/01/03 04:06:53 gutteridge Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs18/Makefile
 # used by lang/nodejs20/Makefile
@@ -94,6 +94,7 @@ BUILDLINK_API_DEPENDS.libuv+=	libuv>=1.49
 .include "../../lang/python/application.mk"
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
+BUILDLINK_API_DEPENDS.libcares+=	libcares>=1.28.0
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 # Requires nghttp2_option_set_max_settings
