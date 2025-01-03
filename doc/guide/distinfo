@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.36 2023/09/27 20:25:53 leot Exp $
+$NetBSD: distinfo,v 1.37 2025/01/03 21:17:48 leot Exp $
 
-BLAKE2s (pkgsrc-guide/htdocs-share-20230927.tar.gz) = fc31daed25770f8a12930c7c45e927e760aadb7c1110e6f67390e4bd9b29f069
-SHA512 (pkgsrc-guide/htdocs-share-20230927.tar.gz) = a40765d42e98df361d3003ae93c1d9aac07ff97fa267a3477ffb262f9ce9a18e2b49a66c27b243737b73986b1826af12c1135f86d94d21f0a22c7cab58b0c5b0
-Size (pkgsrc-guide/htdocs-share-20230927.tar.gz) = 104226 bytes
+BLAKE2s (pkgsrc-guide/htdocs-share-20250103.tar.gz) = f143a6e1a83a7b0a9dd810f493a008cb02c0c06127a34c184866b53840032d7a
+SHA512 (pkgsrc-guide/htdocs-share-20250103.tar.gz) = 56e454194a2afdba0022d6d10e33fdd5a8e2f969101beb30724ec5f0e62472208a72aa77edecc6362b7a7f7f41eb6286fab2bb340f8ed4493348837069f2afd0
+Size (pkgsrc-guide/htdocs-share-20250103.tar.gz) = 104816 bytes
