@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2025/01/02 12:25:36 nia Exp $
+# $NetBSD: Makefile,v 1.63 2025/01/03 04:14:02 gutteridge Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -19,6 +19,10 @@ REPLACE_BASH+=		scripts/xdt-check-abi
 REPLACE_PYTHON+=	scripts/xdt-gen-visibility
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+# This looks unorthodox, because meson isn't actually required to build
+# this package; rather, the configure script expects it to be present in
+# the environment as a validation, and will fail without it.
+TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 
 GNU_CONFIGURE=	yes
 
