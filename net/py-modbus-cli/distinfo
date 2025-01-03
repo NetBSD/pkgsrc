@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/11/05 11:14:10 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/01/03 12:00:45 adam Exp $
 
-BLAKE2s (modbus_cli-0.1.9.tar.gz) = f54cce6f0672a7f321d65bb4209d433db9da328762ae9914549e184f8dbb698a
-SHA512 (modbus_cli-0.1.9.tar.gz) = c61177a88ca963bebe7bb0ece2b527150ba83d1d2964e82583bc95d566e8838da1b8d560ee7d21cc04bbe755e7559ff1b3c72b348b136b43b0d76f975b90f365
-Size (modbus_cli-0.1.9.tar.gz) = 20687 bytes
+BLAKE2s (modbus_cli-0.1.10.tar.gz) = aeb3104ad16486675986a95e7a84aacbd1e8700614d5ddb023529086b17b88c7
+SHA512 (modbus_cli-0.1.10.tar.gz) = 5aa672a9eb373f481e076dec825bc53ff77f95982b4adece65056c297b87837653eed916abd693ea2b51b92c26773fb6774e6d26a473a653d0eccca2d2d20429
+Size (modbus_cli-0.1.10.tar.gz) = 21311 bytes
