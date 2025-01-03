@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2024/12/21 16:32:57 pin Exp $
+$NetBSD: distinfo,v 1.13 2025/01/03 17:05:55 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -570,12 +570,12 @@ Size (serde_json-1.0.133.crate) = 150739 bytes
 BLAKE2s (serde_spanned-0.6.8.crate) = 4f4aab362ec36d17f552fef9497103db99ec4dfb3c9f27ac526bf73544190d2e
 SHA512 (serde_spanned-0.6.8.crate) = 2343a2fda35ff57ed8ff7d8eeadd651821fce7e22f91c2d5797c6af7db9e009b7d637382f6f390c17911912865a5aea1ce87a86fbe36f4b6aeccb065a4c8942d
 Size (serde_spanned-0.6.8.crate) = 9330 bytes
-BLAKE2s (serde_with-3.11.0.crate) = 09c68dd428911fe598608662450e93df563ab30e16d757fa439b776ad50f8deb
-SHA512 (serde_with-3.11.0.crate) = d2a6d5e8075194f82e42ca676307b1456dbf75cf59172a7abe84f5398ba37f7217c86c8f71b954161a5f7c7f5163ab10ac322eef4b5fe6fbbf86550f3f37ea0b
-Size (serde_with-3.11.0.crate) = 145979 bytes
-BLAKE2s (serde_with_macros-3.11.0.crate) = 46b0ee94146b4f6c32d786b79980c4b48f12c1784aec83a0f7778ff55c19a6c2
-SHA512 (serde_with_macros-3.11.0.crate) = 222aec6c50a7b758ea15e1192c71dc19fbde3a99062beee12e24ff7691e0858fb84a0245ac86d96d818a877a89834c188f864dab1aaaeab22ae6cdd7bb416036
-Size (serde_with_macros-3.11.0.crate) = 32054 bytes
+BLAKE2s (serde_with-3.12.0.crate) = e4fe7494b9cdc1dbba625057c325c4ec6b10aa5b331c235efc4618f3328853d1
+SHA512 (serde_with-3.12.0.crate) = 243b4aacf9f0aa9c3915274650c2b70ebb389ef0b1e607afba35f0144199073b573703f8b66bcaa875aeb434301ec2ad209c3d54160f6fe25dc2e4a9fe48a53d
+Size (serde_with-3.12.0.crate) = 148666 bytes
+BLAKE2s (serde_with_macros-3.12.0.crate) = f07d4a0d39d1510644817fb322a888017bac14ce807cd4c34f68d307051f87b6
+SHA512 (serde_with_macros-3.12.0.crate) = feb186b9c51325a19643217ca2bfafc6f7e5433e2e059683ac2f271d11641a7feab728c5e7e37a99310ef259faf862b6a42ec41e77ff9b3349cb04333e008907
+Size (serde_with_macros-3.12.0.crate) = 32089 bytes
 BLAKE2s (sharded-slab-0.1.7.crate) = 9576009750684906d49fa0c0e054d2643356a3f566f5df957df31b1c817bd49f
 SHA512 (sharded-slab-0.1.7.crate) = 3be7438d4a75debb14463477f34de6db1ac38abe958ada5d5dae7ae8d5993e245da69fcb989d91aaaffda5f2b085d4bcc88d10e07ec567b7f40a21437de6d4cb
 Size (sharded-slab-0.1.7.crate) = 58227 bytes
@@ -708,9 +708,9 @@ Size (tracing-serde-0.2.0.crate) = 7755 bytes
 BLAKE2s (tracing-subscriber-0.3.19.crate) = f0cc548e9285ff640958f7efb4c4e1e5cff5d7c782160454bb8b2aec2b47fed5
 SHA512 (tracing-subscriber-0.3.19.crate) = 840e35103f1152e94ef9138d0f03f157b296def538bab6c7464fa7d363aef7734feed196091782dd3aa9bf06c7dc181a2c37149a23f5be036f00c00b5200686c
 Size (tracing-subscriber-0.3.19.crate) = 198345 bytes
-BLAKE2s (trippy-0.12.1.tar.gz) = 05df743e347d951e421080be4ef57b159b97d2230e67d3dc2b4dad49b55d267c
-SHA512 (trippy-0.12.1.tar.gz) = e1f3178fafb7f2af726ce776f87f13edb5300f40061ee3df9ee9d8a2f876d11e020c7c1b2e5b3b22a772e498e0e85b5ef9147ec899f5f51e9f4a45510b084346
-Size (trippy-0.12.1.tar.gz) = 18961273 bytes
+BLAKE2s (trippy-0.12.2.tar.gz) = daef9f4325e33b65b09f5878f83ffb6bd14b7c5a311e3ee5dc657e31a4c61542
+SHA512 (trippy-0.12.2.tar.gz) = 703db726d28f555061dae415ca684e15ea342a733ca3318410b424ab4e45e9b411ca0956449050e8026b0db3ffa09d5ae9a7e724db7ccfeff054511ee4705586
+Size (trippy-0.12.2.tar.gz) = 20922811 bytes
 BLAKE2s (tun2-4.0.0.crate) = 240b013e5ccc4afb3a5180f56491a5b4cc87e068a2903c2bad803ca3f77b475b
 SHA512 (tun2-4.0.0.crate) = 77fd0e9ddaec79c71a9081f223d3e03a20dd669329a190a22fe1df2c96e691e1455cb96fb25650276896bef5116926df43b6c359f6f76c68698242e1db98f0bc
 Size (tun2-4.0.0.crate) = 34496 bytes
