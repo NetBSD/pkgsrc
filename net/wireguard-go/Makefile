@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/09/06 18:48:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/03 11:44:40 adam Exp $
 
 DISTNAME=	wireguard-go-0.0.20230223
 PKGREVISION=	8
@@ -18,6 +18,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/wireguard-go
 
 GO_BUILD_PATTERN=	.
+GO_VERSION_REQD+=	122
 
 pre-patch:
 	cd ${WRKSRC}/tun && ${LN} tun_openbsd.go tun_netbsd.go
