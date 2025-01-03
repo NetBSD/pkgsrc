@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.99 2025/01/03 13:49:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.100 2025/01/03 16:51:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -116,3 +116,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/fping to 5.3 [adam 2025-01-03]
 	Updated devel/py-pathvalidate to 3.2.2 [adam 2025-01-03]
 	Updated textproc/py-html-sanitizer to 2.5.0 [adam 2025-01-03]
+	Removed x11/tk85 [gdt 2025-01-03]
+	Removed lang/tcl85 [gdt 2025-01-03]
