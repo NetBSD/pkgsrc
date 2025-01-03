@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.88 2025/01/02 21:45:09 pin Exp $
+$NetBSD: CHANGES-2025,v 1.89 2025/01/03 00:38:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -100,3 +100,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/broot to 1.44.5 [pin 2025-01-02]
 	Updated www/xh to 0.23.1 [pin 2025-01-02]
 	Added devel/cargo-licenses version 0.2.0 [pin 2025-01-02]
+	Updated sysutils/bup to 0.33.6 [gdt 2025-01-03]
