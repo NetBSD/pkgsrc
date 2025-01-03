@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:21:31 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/03 11:14:49 mef Exp $
 
-BLAKE2s (R/readstata13_0.10.0.tar.gz) = c52d86178da3fa1b700a57bf6782c1c894d899fc411335675ef6a852052c9b48
-SHA512 (R/readstata13_0.10.0.tar.gz) = b17cd615cb1c17727d75e05c0c93aa325fa313b84d12b1e09e3887ae88cd70e699131bcab98718a430572ef39a8973622651ea00a9c4780010d97d4b76d7d8cd
-Size (R/readstata13_0.10.0.tar.gz) = 64282 bytes
+BLAKE2s (R/readstata13_0.10.1.tar.gz) = 6b39c2df89803d16690f31c9e46780a563c8501c610848de2bd2c7a5aa91377c
+SHA512 (R/readstata13_0.10.1.tar.gz) = b60e9df1598bae9abca5a5d4e3729c9fb7025625ccf9959d338e5ff5fa984ddeae24a7f2fb7502ed6bd87600d2f50baa973f0414da0426835a7f86a33dde94ae
+Size (R/readstata13_0.10.1.tar.gz) = 64795 bytes
