@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.102 2025/01/03 23:44:34 mef Exp $
+$NetBSD: CHANGES-2025,v 1.103 2025/01/03 23:57:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/tcl85 [gdt 2025-01-03]
 	Updated net/trippy to 0.12.2 [pin 2025-01-03]
 	Updated textproc/R-reprex to 2.1.1 [mef 2025-01-03]
+	Updated textproc/R-rjson to 0.2.23 [mef 2025-01-03]
