@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2023/06/10 12:28:29 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/01/03 23:57:17 mef Exp $
 
-BLAKE2s (R/rjson_0.2.21.tar.gz) = 3b3de5202357a632cfe65c434afa19dfa8284db201d3fe10d4de897b3d71b176
-SHA512 (R/rjson_0.2.21.tar.gz) = 554759e9f9c0022dea293c904249e8c1afd77f79a3517f5bd36e2275d988bf6cd4e1f1287723889ac154718ae02294e668ac7b68c81031cbb80112c2915be562
-Size (R/rjson_0.2.21.tar.gz) = 116509 bytes
+BLAKE2s (R/rjson_0.2.23.tar.gz) = d19efb645631ff5bf37d1ecb43be5095260909d39ed8d641342bd9dfe294515a
+SHA512 (R/rjson_0.2.23.tar.gz) = 09df562d4be105df954558b60f1d300d94a5a1aa3cdd184df29b19c499e22d5dc975b1c6a447cac448847e53db41ae814d1517ce7a1e295fa59f7738e81422a1
+Size (R/rjson_0.2.23.tar.gz) = 79159 bytes
