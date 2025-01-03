@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/06/11 08:52:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/03 10:53:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -36,6 +36,9 @@ ${PYSITELIB}/pikepdf/canvas.pyo
 ${PYSITELIB}/pikepdf/codec.py
 ${PYSITELIB}/pikepdf/codec.pyc
 ${PYSITELIB}/pikepdf/codec.pyo
+${PYSITELIB}/pikepdf/exceptions.py
+${PYSITELIB}/pikepdf/exceptions.pyc
+${PYSITELIB}/pikepdf/exceptions.pyo
 ${PYSITELIB}/pikepdf/jbig2.py
 ${PYSITELIB}/pikepdf/jbig2.pyc
 ${PYSITELIB}/pikepdf/jbig2.pyo
