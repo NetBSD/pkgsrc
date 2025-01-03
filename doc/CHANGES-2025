@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.100 2025/01/03 16:51:27 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.101 2025/01/03 17:06:19 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-html-sanitizer to 2.5.0 [adam 2025-01-03]
 	Removed x11/tk85 [gdt 2025-01-03]
 	Removed lang/tcl85 [gdt 2025-01-03]
+	Updated net/trippy to 0.12.2 [pin 2025-01-03]
