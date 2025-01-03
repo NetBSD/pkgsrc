@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2021/09/08 13:38:35 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/03 08:09:58 mef Exp $
 
 R_PKGNAME=	openxlsx
-R_PKGVER=	4.2.4
+R_PKGVER=	4.2.7.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,6 +11,9 @@ LICENSE=	mit
 DEPENDS+=	R-zip>=2.0.3:../../archivers/R-zip
 DEPENDS+=	R-stringi-[0-9]*:../../textproc/R-stringi
 
+# Packages suggested but not available: 'formula.tools'
+
+TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-roxygen2-[0-9]*:../../devel/R-roxygen2

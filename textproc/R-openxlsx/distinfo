@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:21:31 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/03 08:09:58 mef Exp $
 
-BLAKE2s (R/openxlsx_4.2.4.tar.gz) = d5f59cae8fab2276b3f03c2962d38c812d3c13f4aa3707ca7ef11f4e0edc54ce
-SHA512 (R/openxlsx_4.2.4.tar.gz) = 72832cc23c4dd920298078715d337e1b950ca6dd85a96f607fe11dc5a1b01092415cb118106fe441f63deb68b35d6f4c541f5ecefa2ee2e604cbe02a23673f67
-Size (R/openxlsx_4.2.4.tar.gz) = 1322279 bytes
+BLAKE2s (R/openxlsx_4.2.7.1.tar.gz) = 1e1b6ebbeaed5977dd17d670097b6d234426dbbe49f174aa69571c5b7edaaf9f
+SHA512 (R/openxlsx_4.2.7.1.tar.gz) = b4a87b2f9f1b2ef26c873dfadf3e2ce5f291010233782ba4501101b0ac61c3d4bde2e4107ea9a0f71c1deeef6b055821fe1f8c83945ddc182da160bbd7fbfdfb
+Size (R/openxlsx_4.2.7.1.tar.gz) = 1389194 bytes
