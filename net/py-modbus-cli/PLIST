@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/05 11:14:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/03 12:00:45 adam Exp $
 bin/modbus-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/modbus/__init__.py
+${PYSITELIB}/modbus/__init__.pyc
+${PYSITELIB}/modbus/__init__.pyo
+${PYSITELIB}/modbus/__main__.py
+${PYSITELIB}/modbus/__main__.pyc
+${PYSITELIB}/modbus/__main__.pyo
 ${PYSITELIB}/modbus_cli/__init__.py
 ${PYSITELIB}/modbus_cli/__init__.pyc
 ${PYSITELIB}/modbus_cli/__init__.pyo
