@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/24 15:09:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/03 11:58:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -20,3 +20,17 @@ ${PYSITELIB}/emoji/unicode_codes/__init__.pyo
 ${PYSITELIB}/emoji/unicode_codes/data_dict.py
 ${PYSITELIB}/emoji/unicode_codes/data_dict.pyc
 ${PYSITELIB}/emoji/unicode_codes/data_dict.pyo
+${PYSITELIB}/emoji/unicode_codes/emoji.json
+${PYSITELIB}/emoji/unicode_codes/emoji_ar.json
+${PYSITELIB}/emoji/unicode_codes/emoji_de.json
+${PYSITELIB}/emoji/unicode_codes/emoji_es.json
+${PYSITELIB}/emoji/unicode_codes/emoji_fa.json
+${PYSITELIB}/emoji/unicode_codes/emoji_fr.json
+${PYSITELIB}/emoji/unicode_codes/emoji_id.json
+${PYSITELIB}/emoji/unicode_codes/emoji_it.json
+${PYSITELIB}/emoji/unicode_codes/emoji_ja.json
+${PYSITELIB}/emoji/unicode_codes/emoji_ko.json
+${PYSITELIB}/emoji/unicode_codes/emoji_pt.json
+${PYSITELIB}/emoji/unicode_codes/emoji_ru.json
+${PYSITELIB}/emoji/unicode_codes/emoji_tr.json
+${PYSITELIB}/emoji/unicode_codes/emoji_zh.json
