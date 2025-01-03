@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.12 2024/12/21 16:32:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.13 2025/01/03 17:05:55 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -190,8 +190,8 @@ CARGO_CRATE_DEPENDS+=	serde-1.0.216
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.216
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.133
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.8
-CARGO_CRATE_DEPENDS+=	serde_with-3.11.0
-CARGO_CRATE_DEPENDS+=	serde_with_macros-3.11.0
+CARGO_CRATE_DEPENDS+=	serde_with-3.12.0
+CARGO_CRATE_DEPENDS+=	serde_with_macros-3.12.0
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.7
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
