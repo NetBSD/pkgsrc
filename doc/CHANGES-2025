@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.91 2025/01/03 08:10:06 mef Exp $
+$NetBSD: CHANGES-2025,v 1.92 2025/01/03 09:09:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/bup to 0.33.6 [gdt 2025-01-03]
 	Updated devel/ruby-railties72 to 7.2.2.1nb1 [taca 2025-01-03]
 	Updated textproc/R-openxlsx to 4.2.7.1 [mef 2025-01-03]
+	Updated textproc/R-rbibutils to 2.3 [mef 2025-01-03]
