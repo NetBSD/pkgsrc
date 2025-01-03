@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_dpkg_buffer.c,v 1.1 2023/06/13 15:44:29 adam Exp $
+$NetBSD: patch-lib_dpkg_buffer.c,v 1.2 2025/01/03 13:41:51 adam Exp $
 
 Use md5 from OpenSSL.
 
---- lib/dpkg/buffer.c.orig	2023-03-27 00:41:09.000000000 +0000
+--- lib/dpkg/buffer.c.orig	2024-12-31 20:28:41.000000000 +0000
 +++ lib/dpkg/buffer.c
 @@ -26,7 +26,7 @@
  #include <sys/types.h>
@@ -22,7 +22,7 @@ Use md5 from OpenSSL.
  }
  
  static off_t
-@@ -75,7 +75,7 @@ buffer_digest_update(struct buffer_data 
+@@ -75,7 +75,7 @@ buffer_digest_update(struct buffer_data
  	case BUFFER_DIGEST_NULL:
  		break;
  	case BUFFER_DIGEST_MD5:
@@ -38,5 +38,5 @@ Use md5 from OpenSSL.
 -	MD5Final(digest, &ctx->ctx);
 +	MD5_Final(digest, &ctx->ctx);
  	for (i = 0; i < 16; ++i) {
- 		sprintf(hash, "%02x", *p++);
+ 		snprintf(hash, 3, "%02x", *p++);
  		hash += 2;

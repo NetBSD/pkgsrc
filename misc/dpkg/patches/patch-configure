@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2024/03/09 07:56:51 adam Exp $
+$NetBSD: patch-configure,v 1.3 2025/01/03 13:41:51 adam Exp $
 
 Allow libdpkg being a shared library.
 Use md5 from OpenSSL.
 
---- configure.orig	2024-02-27 03:28:03.000000000 +0000
+--- configure.orig	2025-01-01 22:27:27.000000000 +0000
 +++ configure
-@@ -17074,12 +17074,6 @@ CC=$lt_save_CC
+@@ -17349,12 +17349,6 @@ CC=$lt_save_CC
  
  
  
@@ -18,7 +18,7 @@ Use md5 from OpenSSL.
  
  
    { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for --as-needed linker flag" >&5
-@@ -23971,16 +23965,16 @@ fi
+@@ -24372,16 +24366,16 @@ fi
  
  
    have_libmd="no"
@@ -39,12 +39,12 @@ Use md5 from OpenSSL.
  if test ${ac_cv_search_MD5Init+y}
  then :
    printf %s "(cached) " >&6
-@@ -23992,16 +23986,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
- /* Override any GCC internal prototype to avoid an error.
-    Use char because int might match the return type of a GCC
-    builtin and then its argument prototype would still apply.  */
--char MD5Init ();
-+char MD5_Init ();
+@@ -24399,16 +24393,16 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+ #ifdef __cplusplus
+ extern "C"
+ #endif
+-char MD5Init (void);
++char MD5_Init (void);
  int
  main (void)
  {

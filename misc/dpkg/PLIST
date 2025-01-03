@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/07/21 10:13:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/01/03 13:41:51 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -247,7 +247,6 @@ man/de/man5/dsc.5
 man/de/man5/dselect.cfg.5
 man/de/man7/deb-version.7
 man/de/man7/dpkg-build-api.7
-man/de/man8/dpkg-fsys-usrunmess.8
 man/de/man8/start-stop-daemon.8
 man/es/man1/dpkg-distaddfile.1
 man/es/man5/deb-old.5
@@ -277,7 +276,6 @@ man/fr/man1/dpkg-trigger.1
 man/fr/man1/dpkg-vendor.1
 man/fr/man1/dselect.1
 man/fr/man1/update-alternatives.1
-man/fr/man5/deb-buildinfo.5
 man/fr/man5/deb-changelog.5
 man/fr/man5/deb-changes.5
 man/fr/man5/deb-conffiles.5
@@ -306,7 +304,6 @@ man/fr/man5/dpkg.cfg.5
 man/fr/man5/dsc.5
 man/fr/man5/dselect.cfg.5
 man/fr/man7/deb-version.7
-man/fr/man8/dpkg-fsys-usrunmess.8
 man/fr/man8/start-stop-daemon.8
 man/it/man1/dpkg-distaddfile.1
 man/it/man5/deb-old.5
@@ -465,7 +462,6 @@ man/man5/dselect.cfg.5
 man/man7/deb-version.7
 man/man7/dpkg-build-api.7
 man/man7/libdpkg.7
-man/man8/dpkg-fsys-usrunmess.8
 man/man8/start-stop-daemon.8
 man/nl/man1/dpkg-architecture.1
 man/nl/man1/dpkg-buildapi.1
@@ -527,7 +523,6 @@ man/nl/man5/dsc.5
 man/nl/man5/dselect.cfg.5
 man/nl/man7/deb-version.7
 man/nl/man7/dpkg-build-api.7
-man/nl/man8/dpkg-fsys-usrunmess.8
 man/nl/man8/start-stop-daemon.8
 man/pl/man1/dpkg-distaddfile.1
 man/pl/man5/deb-old.5
@@ -593,7 +588,6 @@ man/pt/man5/dsc.5
 man/pt/man5/dselect.cfg.5
 man/pt/man7/deb-version.7
 man/pt/man7/dpkg-build-api.7
-man/pt/man8/dpkg-fsys-usrunmess.8
 man/pt/man8/start-stop-daemon.8
 man/sv/man1/dpkg-architecture.1
 man/sv/man1/dpkg-buildapi.1
@@ -655,9 +649,7 @@ man/sv/man5/dsc.5
 man/sv/man5/dselect.cfg.5
 man/sv/man7/deb-version.7
 man/sv/man7/dpkg-build-api.7
-man/sv/man8/dpkg-fsys-usrunmess.8
 man/sv/man8/start-stop-daemon.8
-sbin/dpkg-fsys-usrunmess
 sbin/start-stop-daemon
 share/aclocal/dpkg-arch.m4
 share/aclocal/dpkg-build.m4
