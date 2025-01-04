@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:21:32 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/04 00:47:31 mef Exp $
 
-BLAKE2s (R/utf8_1.2.1.tar.gz) = 168733b458240652b94b4a05c2209bcf7d0335c2e45597cda1351e6146494f05
-SHA512 (R/utf8_1.2.1.tar.gz) = c91b1000366c44cea0956100cb0c5681466b9f4fd4511c8b4ebf6fb5d14bd71a49b1e4cb082a776af49de05e51c3deb0ba688a9bd740e5e722d41dd9b1eab282
-Size (R/utf8_1.2.1.tar.gz) = 239463 bytes
+BLAKE2s (R/utf8_1.2.4.tar.gz) = 5e61d106dfa98be1265ae283cc1bfb8851b53c5951f3a3ed8d7939d189a46b46
+SHA512 (R/utf8_1.2.4.tar.gz) = e4cde56f89dedb46a80e823d28cb01e6eb64eb1883b1f020035dd1b8091e57a7ef77709ff51ce5fd6802064e9dc4ac3d4287f52b7f6104021a875e78698f2ba9
+Size (R/utf8_1.2.4.tar.gz) = 241081 bytes
