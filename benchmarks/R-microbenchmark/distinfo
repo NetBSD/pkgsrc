@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/30 15:18:25 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/01/04 01:15:45 mef Exp $
 
-BLAKE2s (R/microbenchmark_1.4.9.tar.gz) = ab528365b986fbce1b5aec4ac29d55f8acada2811f4ced36e0045cd48d5f35dd
-SHA512 (R/microbenchmark_1.4.9.tar.gz) = f6ffd90f2642aedc17991c306eb7078d096e3a7a882c9fa1154d8e4c97a58dd91324495714171becf58a61db18eea42edd2e02a9b8dd4378bc5c6462e0a4edea
-Size (R/microbenchmark_1.4.9.tar.gz) = 59607 bytes
+BLAKE2s (R/microbenchmark_1.5.0.tar.gz) = ca353e867dee960d063eaaaa4502328127444b7f9d3f768d0dfaea45eab0d365
+SHA512 (R/microbenchmark_1.5.0.tar.gz) = 0c5c1438414d59b9707372a5a516edb58c65c2ac110734da965c2764d8a108c41912f3d7228db9789fc319446ddc70afb6f2de70ee2ddec23858ce2552bda0e3
+Size (R/microbenchmark_1.5.0.tar.gz) = 61673 bytes
