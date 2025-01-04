@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/18 09:25:00 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/01/04 14:58:21 mef Exp $
 
-BLAKE2s (R/profvis_0.3.7.tar.gz) = ccb0c8218ce3659e3af0079a7f5812ef512cbcd35b4bfae0995b0fcee7483f0e
-SHA512 (R/profvis_0.3.7.tar.gz) = 9ae232def68e2d8a9ddd2e5fc20cee3ea05941a68bff6441ebe15e2f8eb14293d128056f01d46c662c680a86129822ab417356a5a73336bb08e4e6fad82f8483
-Size (R/profvis_0.3.7.tar.gz) = 142546 bytes
+BLAKE2s (R/profvis_0.4.0.tar.gz) = f287ed5a3470ab1c587ce1ed01d9dad17627546fdae5572d32ed3752757acf71
+SHA512 (R/profvis_0.4.0.tar.gz) = 3bbe3596f2e826fd6d04bee84f5643fe5d11d6ecab37310490465fadcfbf9699308cd113ac08bef993120e0d7bbd50e95d4caf2853837d58860b7f1e27c97e2c
+Size (R/profvis_0.4.0.tar.gz) = 301123 bytes
