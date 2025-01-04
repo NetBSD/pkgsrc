@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.113 2025/01/04 06:40:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.114 2025/01/04 13:50:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-importlib-resources to 6.5.2 [adam 2025-01-04]
 	Updated devel/py-pathvalidate to 3.2.3 [adam 2025-01-04]
 	Updated print/py-pikepdf to 9.5.1 [adam 2025-01-04]
+	Updated finance/R-TTR to 0.24.4 [mef 2025-01-04]
