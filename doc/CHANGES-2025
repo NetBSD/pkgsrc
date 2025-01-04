@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.123 2025/01/04 22:28:42 mef Exp $
+$NetBSD: CHANGES-2025,v 1.124 2025/01/04 22:38:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -145,3 +145,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/pdmenu to 1.3.6 [ktnb 2025-01-04]
 	Added graphics/py-japanize-matplotlib version 1.1.3 [ryoon 2025-01-04]
 	Updated finance/R-fBasics to 4041.97 [mef 2025-01-04]
+	Updated finance/R-quantmod to 0.4.26 [mef 2025-01-04]
