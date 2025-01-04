@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.118 2025/01/04 14:58:28 mef Exp $
+$NetBSD: CHANGES-2025,v 1.119 2025/01/04 15:06:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -139,3 +139,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/R-bayesm to 3.1.6 [mef 2025-01-04]
 	Updated time/R-timeDate to 4041.110 [mef 2025-01-04]
 	Updated benchmarks/R-profvis to 0.4.0 [mef 2025-01-04]
+	Updated finance/R-timeSeries to 4041.111 [mef 2025-01-04]
