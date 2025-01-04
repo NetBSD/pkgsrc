@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/01/20 12:43:54 mef Exp $
+$NetBSD: distinfo,v 1.12 2025/01/04 00:33:27 mef Exp $
 
-BLAKE2s (R/stringi_1.8.3.tar.gz) = 76555bcf37cd3bd8e583c17ed12c0d9300a821b8360a69a9d8174009ebcf028e
-SHA512 (R/stringi_1.8.3.tar.gz) = d83c82326be0324476fb4d13bf850a0c4026c59c882fdcf64c19d2dbfdf248f9bc158115f83312dfdb97ea25b64d206a46d3784f81a43274bb82c2050c338dd2
-Size (R/stringi_1.8.3.tar.gz) = 11917752 bytes
+BLAKE2s (R/stringi_1.8.4.tar.gz) = 5881c26f33b891cc90db20f2b3afda0f9eecdd0ecdfcd08ff25cec129147ee77
+SHA512 (R/stringi_1.8.4.tar.gz) = 31558ca27e975de6a4612ab42f573f15cc0e04b4b96e27f128dcde64c4df0220a712d35ac6e6ea306474442563bed83a91de4eac007e224b481143dab62a3be7
+Size (R/stringi_1.8.4.tar.gz) = 11917497 bytes
