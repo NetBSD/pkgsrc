@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.112 2025/01/04 04:53:22 pin Exp $
+$NetBSD: CHANGES-2025,v 1.113 2025/01/04 06:40:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -130,3 +130,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated benchmarks/R-microbenchmark to 1.5.0 [mef 2025-01-04]
 	Updated benchmarks/R-mlbench to 2.1.6 [mef 2025-01-04]
 	Updated shells/oh-my-posh to 24.18.0 [pin 2025-01-04]
+	Updated devel/py-faker to 33.3.0 [adam 2025-01-04]
+	Updated devel/py-importlib-resources to 6.5.2 [adam 2025-01-04]
+	Updated devel/py-pathvalidate to 3.2.3 [adam 2025-01-04]
+	Updated print/py-pikepdf to 9.5.1 [adam 2025-01-04]
