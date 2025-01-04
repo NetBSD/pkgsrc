@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.119 2025/01/04 15:06:56 mef Exp $
+$NetBSD: CHANGES-2025,v 1.120 2025/01/04 15:27:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -140,3 +140,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/R-timeDate to 4041.110 [mef 2025-01-04]
 	Updated benchmarks/R-profvis to 0.4.0 [mef 2025-01-04]
 	Updated finance/R-timeSeries to 4041.111 [mef 2025-01-04]
+	Updated www/py-nbclient to 0.10.2 [adam 2025-01-04]
+	Updated www/py-nbconvert to 7.16.5 [adam 2025-01-04]
