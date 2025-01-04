@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/08/15 07:25:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/01/04 06:37:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -25,9 +25,6 @@ ${PYSITELIB}/importlib_resources/abc.pyo
 ${PYSITELIB}/importlib_resources/compat/__init__.py
 ${PYSITELIB}/importlib_resources/compat/__init__.pyc
 ${PYSITELIB}/importlib_resources/compat/__init__.pyo
-${PYSITELIB}/importlib_resources/compat/py38.py
-${PYSITELIB}/importlib_resources/compat/py38.pyc
-${PYSITELIB}/importlib_resources/compat/py38.pyo
 ${PYSITELIB}/importlib_resources/compat/py39.py
 ${PYSITELIB}/importlib_resources/compat/py39.pyc
 ${PYSITELIB}/importlib_resources/compat/py39.pyo
@@ -89,6 +86,9 @@ ${PYSITELIB}/importlib_resources/tests/test_reader.pyo
 ${PYSITELIB}/importlib_resources/tests/test_resource.py
 ${PYSITELIB}/importlib_resources/tests/test_resource.pyc
 ${PYSITELIB}/importlib_resources/tests/test_resource.pyo
+${PYSITELIB}/importlib_resources/tests/test_util.py
+${PYSITELIB}/importlib_resources/tests/test_util.pyc
+${PYSITELIB}/importlib_resources/tests/test_util.pyo
 ${PYSITELIB}/importlib_resources/tests/util.py
 ${PYSITELIB}/importlib_resources/tests/util.pyc
 ${PYSITELIB}/importlib_resources/tests/util.pyo
