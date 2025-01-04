@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2022/05/30 15:18:25 mef Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/04 01:15:45 mef Exp $
 
 R_PKGNAME=	microbenchmark
-R_PKGVER=	1.4.9
+R_PKGVER=	1.5.0
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
