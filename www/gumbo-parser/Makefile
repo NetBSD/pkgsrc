@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/10 16:03:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/04 14:28:09 mef Exp $
 
-VERSION=	0.12.2
+VERSION=	0.13.0
 PKGNAME=	gumbo-parser-${VERSION}
 DISTNAME=	${VERSION}
 CATEGORIES=	www
