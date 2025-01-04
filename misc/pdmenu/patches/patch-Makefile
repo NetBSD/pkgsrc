@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2025/01/04 15:34:52 ktnb Exp $
+
+Include the LDFLAGS
+
+--- Makefile.orig	2025-01-04 14:54:12.329285706 +0000
++++ Makefile
+@@ -13,7 +13,7 @@ all: pdmenu $(POTFILE) $(MOS)
+ include makeinfo
+ 
+ pdmenu: .dep $(OBJFILES)
+-	${CC} -o pdmenu $(OBJFILES) $(CFLAGS) $(LIBS)
++	${CC} -o pdmenu $(OBJFILES) $(CFLAGS) $(LIBS) $(LDFLAGS)
+ 
+ depend: .dep
+ dep: .dep

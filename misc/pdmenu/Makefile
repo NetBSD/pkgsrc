@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.40 2025/01/03 09:15:15 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/01/04 15:34:52 ktnb Exp $
 
-DISTNAME=	pdmenu_1.2.65
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	13
+DISTNAME=	pdmenu-1.3.6
 CATEGORIES=	misc
-#MASTER_SITES=	http://www.kitenet.net/programs/pdmenu/
+MASTER_SITES=	https://git.kitenet.net/index.cgi/pdmenu.git/snapshot/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://www.kitenet.net/~joey/code/pdmenu.html
+HOMEPAGE=	https://joeyh.name/code/pdmenu/
 COMMENT=	Simple console menu program
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/pdmenu
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake perl:run
 
 REPLACE_PERL=	examples/showdir.pl
+REPLACE_PERL+=	examples/editdir.pl
 
+CONFIGURE_ENV+=	SLANG_LIB_LOC=${BUILDLINK_PREFIX.libslang}/lib
+CONFIGURE_ENV+=	SLANG_H_LOC=${BUILDLINK_PREFIX.libslang}/include/slang.h
 
-CONFIGURE_ENV+=	SLANG_LIB_LOC=${BUILDLINK_PREFIX.libslang:Q}/lib
-CONFIGURE_ENV+=	SLANG_H_LOC=${BUILDLINK_PREFIX.libslang:Q}/include/slang.h
+LDFLAGS+=	-lintl
 
-INSTALLATION_DIRS=	lib/pdmenu share/doc/pdmenu \
+INSTALLATION_DIRS=	share/doc/pdmenu \
 			share/examples/pdmenu/newbie
 
 INSTALL_MAKE_FLAGS+=	INSTALL_PREFIX=${DESTDIR}
+INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${DESTDIR}/${PKG_SYSCONFDIR}
+INSTALL_MAKE_FLAGS+=	DATADIR=${DESTDIR}/share/examples/pdmenu
 
 pre-install:
 	${SED} "s,.B /etc/pdmenurc,.B ${PREFIX}/etc/pdmenurc,g"		\
@@ -34,11 +36,13 @@ post-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} ANNOUNCE BUGS TODO \
 		${DESTDIR}${PREFIX}/share/doc/pdmenu
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} README ba.lpd pdmenurc \
-		pdmenurc.complex pdmenurc.monitor showdir.pl \
+		pdmenurc.complex pdmenurc.monitor showdir.pl editdir.pl\
 		${DESTDIR}${PREFIX}/share/examples/pdmenu
 	cd ${WRKSRC}/examples/newbie && ${INSTALL_DATA} modem-check \
 		pdmenurc.newbie	rpm-info-on-command \
 		${DESTDIR}${PREFIX}/share/examples/pdmenu/newbie
+
+CONF_FILES=	${DESTDIR}${PREFIX}/share/examples/pdmenu/pdmenurc ${PKG_SYSCONFDIR}/pdmenurc
 
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

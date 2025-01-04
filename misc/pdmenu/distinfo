@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:59:21 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/01/04 15:34:52 ktnb Exp $
 
-BLAKE2s (pdmenu_1.2.65.tar.gz) = f0670f04fea97f3adfb45c9f372ff274421ad3e362baf64f65f0bb53af24e08e
-SHA512 (pdmenu_1.2.65.tar.gz) = 2757c08d3d0c8dfd5f6eb8000b5ee6ab0ba4d31a373175709f4c328536226bfcf8cffd19f37c9b448f85b4107f3bde9837697b904bece95042500c58cc39eff0
-Size (pdmenu_1.2.65.tar.gz) = 88453 bytes
-SHA1 (patch-aa) = b5d2d0620e466ab2b13a530b0611e15d517b452d
+BLAKE2s (pdmenu-1.3.6.tar.gz) = af5606e3f3f3fec6e10b12b319ad3c327015d31d50124c64327fff86a991e667
+SHA512 (pdmenu-1.3.6.tar.gz) = 2a930f98f49c3c94687fb403eb186ddc51fec67068c6b4b8dd6694cadb9fefb6802f878efe6e2caed62ddf68aeae36ec80fc9e56ca268021e32dee819f001fb5
+Size (pdmenu-1.3.6.tar.gz) = 160265 bytes
+SHA1 (patch-Makefile) = 5fd308e74397124522c3330b0a55aa26bc1e7440
