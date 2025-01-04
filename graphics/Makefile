@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1063 2024/11/30 21:08:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1064 2025/01/04 16:34:58 ryoon Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -518,6 +518,7 @@ SUBDIR+=	py-graphviz
 SUBDIR+=	py-imageio
 SUBDIR+=	py-imagesize
 SUBDIR+=	py-imaging
+SUBDIR+=	py-japanize-matplotlib
 SUBDIR+=	py-leather
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-inline
