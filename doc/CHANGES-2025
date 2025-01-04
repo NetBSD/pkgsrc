@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.107 2025/01/04 00:47:40 mef Exp $
+$NetBSD: CHANGES-2025,v 1.108 2025/01/04 01:00:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -125,3 +125,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/R-stringi to 1.8.4 [mef 2025-01-04]
 	Updated textproc/R-stringr to 1.5.1 [mef 2025-01-04]
 	Updated textproc/R-utf8 to 1.2.4 [mef 2025-01-04]
+	Updated textproc/R-writexl to 1.5.1 [mef 2025-01-04]
