@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25263 2025/01/04 15:35:06 ktnb Exp $
+$NetBSD: TODO,v 1.25264 2025/01/04 22:28:42 mef Exp $
 
 Suggested new packages
 ======================
@@ -402,7 +402,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o QuantLib-1.22
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
-	o R-fBasics-3042.89.1
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SOGo5-5.11.1 [wip]
