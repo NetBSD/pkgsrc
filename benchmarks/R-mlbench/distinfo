@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/18 12:50:30 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/01/04 01:23:21 mef Exp $
 
-BLAKE2s (R/mlbench_2.1-3.tar.gz) = 2ca2b14d708b0be6faba1814b5eb679f1eece25aa747b20df557b5fe0a3a88c5
-SHA512 (R/mlbench_2.1-3.tar.gz) = d6514667c213131535b65e1c4d7f3a5d8e8d659ba63e5588f7012db4dbe23bd6640451dd23e2ef6ea1218e3cecfc767cde4da4058cf4eacca0f059514f193b08
-Size (R/mlbench_2.1-3.tar.gz) = 922103 bytes
+BLAKE2s (R/mlbench_2.1-6.tar.gz) = cdc4fd67f87bd97c44d41edf8dbd1a99d209414e349f3712114e2a8db7f0d4c0
+SHA512 (R/mlbench_2.1-6.tar.gz) = 0721a0f2b2a2e381d71430d2b9285814932f91852c63a4cbe1dafe3f781552abbfa125c1f491dfc134ba97eb037c037468bd71e663826b9d5712d3677d491850
+Size (R/mlbench_2.1-6.tar.gz) = 921024 bytes
