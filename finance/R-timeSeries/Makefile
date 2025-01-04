@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.5 2022/04/02 03:10:26 wen Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/04 15:06:50 mef Exp $
 
 R_PKGNAME=	timeSeries
-R_PKGVER=	3062.100
+R_PKGVER=	4041.111
 CATEGORIES=	finance
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Financial time series objects
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-DEPENDS+=	R-timeDate>=2150.95:../../time/R-timeDate
+DEPENDS+=	R-timeDate>=4041.110:../../time/R-timeDate
+
+# Packages suggested but not available:
+#   'xts', 'zoo', 'PerformanceAnalytics', 'fTrading'
+
+TEST_DEPENDS+=	R-RUnit-[0-9]*:../../devel/R-RUnit
+TEST_DEPENDS+=	R-robustbase-[0-9]*:../../math/R-robustbase
 
 USE_LANGUAGES=	# none
 
