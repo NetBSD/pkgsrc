@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/03/12 08:54:41 mef Exp $
+$NetBSD: distinfo,v 1.10 2025/01/04 00:39:28 mef Exp $
 
-BLAKE2s (R/stringr_1.5.0.tar.gz) = 75efc391f7fde0c54d0771ef4e4e1ddb68934a63a539811a99142701f381913a
-SHA512 (R/stringr_1.5.0.tar.gz) = 515c6d24b2057ebe94253131dad78d71e03074bd613f4360d432a89c790c25f2d6f704b4602cbf7974522f9838b3a47039ace2bbe752515cda146c51d5e805cf
-Size (R/stringr_1.5.0.tar.gz) = 175699 bytes
+BLAKE2s (R/stringr_1.5.1.tar.gz) = b8d5ae3526fc04a4201dcf3d032f114f70bee65ecb255f35aa0a2b2ef500b150
+SHA512 (R/stringr_1.5.1.tar.gz) = de985ada08e9095cd264b86bd5bda1ae416822c4a808a271ed8994c44b85f0edaf204f0de94fc51abfbafa0e9b2ca4116d7fb97133fe96885dbf812565db326e
+Size (R/stringr_1.5.1.tar.gz) = 176599 bytes
