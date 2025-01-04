@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.117 2025/01/04 14:53:51 mef Exp $
+$NetBSD: CHANGES-2025,v 1.118 2025/01/04 14:58:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/gumbo-parser to 0.13.0 [mef 2025-01-04]
 	Updated finance/R-bayesm to 3.1.6 [mef 2025-01-04]
 	Updated time/R-timeDate to 4041.110 [mef 2025-01-04]
+	Updated benchmarks/R-profvis to 0.4.0 [mef 2025-01-04]
