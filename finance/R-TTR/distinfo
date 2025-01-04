@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2022/05/29 00:46:45 wen Exp $
+$NetBSD: distinfo,v 1.6 2025/01/04 13:49:52 mef Exp $
 
-BLAKE2s (R/TTR_0.24.3.tar.gz) = 37f09ddd28b2d8d3094fe9ad7ece26ec3d07a89abe6f922f83fff16273094fd4
-SHA512 (R/TTR_0.24.3.tar.gz) = 0911fa13164ed7883606ec7ca56e4cda43e2f1eb5c6ae6cb418606df6f9e55b78dcca1ba4717fdbce1006e313e25694935735029ed69e9cdfc060cf441fc207f
-Size (R/TTR_0.24.3.tar.gz) = 317338 bytes
+BLAKE2s (R/TTR_0.24.4.tar.gz) = 700d17e934b059a1a1b6abe854a7a1a301dfdc1541492fab0f9ccb52a2c116f3
+SHA512 (R/TTR_0.24.4.tar.gz) = 9018a79eaf8ecdb216443824b454fab35a37974ec4340d2b235a1616a16482c5560a8dfa881b7b88f8af89bd1d325f46ffd54cf81b81f97600969ef750b4a20b
+Size (R/TTR_0.24.4.tar.gz) = 318965 bytes
