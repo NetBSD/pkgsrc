@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/04 16:33:55 ryoon Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/japanize_matplotlib/__init__.py
+${PYSITELIB}/japanize_matplotlib/__init__.pyc
+${PYSITELIB}/japanize_matplotlib/__init__.pyo
+${PYSITELIB}/japanize_matplotlib/fonts/IPA_Font_License_Agreement_v1.0.txt
+${PYSITELIB}/japanize_matplotlib/fonts/Readme_ipaexg00301.txt
+${PYSITELIB}/japanize_matplotlib/fonts/ipaexg.ttf
+${PYSITELIB}/japanize_matplotlib/japanize_matplotlib.py
+${PYSITELIB}/japanize_matplotlib/japanize_matplotlib.pyc
+${PYSITELIB}/japanize_matplotlib/japanize_matplotlib.pyo
