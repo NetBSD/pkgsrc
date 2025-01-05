@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2023/12/18 02:11:00 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/05 13:50:37 bsiegert Exp $
 bin/xfce4-power-manager
 bin/xfce4-power-manager-settings
 man/man1/xfce4-power-manager-settings.1
 man/man1/xfce4-power-manager.1
-sbin/xfce4-pm-helper
-sbin/xfpm-power-backlight-helper
 share/applications/xfce4-power-manager-settings.desktop
 share/examples/xfce4/autostart/xfce4-power-manager.desktop
 share/icons/hicolor/128x128/apps/org.xfce.powermanager.png
@@ -138,4 +136,3 @@ share/locale/zh_CN/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/xfce4-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-power-manager.mo
 share/metainfo/xfce4-power-manager.appdata.xml
-share/polkit-1/actions/org.xfce.power.policy
