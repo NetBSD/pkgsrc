@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/01/05 11:17:56 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/05 11:18:28 wiz Exp $
 
-PKGREVISION=	2
+PKGREVISION=	3
 .include "dist.mk"
 
 PKGNAME=	python313-${PY_DISTVERSION}
@@ -220,7 +220,7 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_textdomain=yes
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-#.include "../../math/mpdecimal/buildlink3.mk"
+.include "../../math/mpdecimal/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/atomic64.mk"
 .include "../../mk/bdb.buildlink3.mk"
