@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.133 2025/01/05 09:45:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.134 2025/01/05 10:59:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-Text-CSV_XS to 1.58 [wiz 2025-01-05]
 	Updated graphics/gnuplot to 6.0.2 [adam 2025-01-05]
 	Updated math/liblinear to 2.48 [adam 2025-01-05]
+	Added textproc/hs-diff3 version 0.3.1 [pho 2025-01-05]
