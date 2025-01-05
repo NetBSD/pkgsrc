@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25265 2025/01/05 08:59:09 adam Exp $
+$NetBSD: TODO,v 1.25266 2025/01/05 09:20:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -815,6 +815,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
+	o jj-0.25.0
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
@@ -987,6 +988,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o odbc-postgresql-9.06.0500
 	o ogre-2.3
 	o olvwm-4.5
+	o oniguruma-6.9.10
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o openblas-0.3.28
@@ -1111,7 +1113,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o predict-2.2.7
 	o privoxy-3.0.33
 	o profit-2.5.3
-	o prometheus-3.0.1
+	o prometheus-3.1.0
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1119,6 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pvs-6.0
 	o pwlib-1.11.1
 	o pxp-1.2.9
+	o py-Glances-4.3.0.8
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
@@ -1131,6 +1134,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-python-client-2.157.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-mailman-3.3.10
@@ -1140,10 +1144,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
+	o py-poetry-core-2.0.0
 	o py-postgresql-5.1.2
 	o py-pspdfutils-3.3.7
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.8.6
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
@@ -1232,6 +1238,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o skype-4.3
 	o smproxy-1.0.3
 	o snd-21.3
+	o snmp_exporter-0.27.0
 	o snobol-2.1.5
 	o snoopy-2.4.14
 	o snort-2.9.17.1
