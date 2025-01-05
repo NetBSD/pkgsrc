@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2024/09/29 02:21:41 ktnb Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/05 16:35:09 ktnb Exp $
 
-DISTNAME=	slang-2.2.4
+DISTNAME=	slang-2.3.3
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
-PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/
-MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v2.2/
+MASTER_SITES=	https://www.jedsoft.org/releases/slang/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,13 +33,6 @@ INSTALL_MAKE_FLAGS+=	DEST_SLSH_CONF_DIR=${DESTDIR}/${EGDIR}
 
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/slang2
 
-# Supposedly there is a bug when compiling libslang with -O2.
-# The following fixes issues with editors/jed not being able
-# to open things.
-# https://bugzilla.redhat.com/show_bug.cgi?id=843109#c2
-BUILDLINK_TRANSFORM+=	rm:-O2
-CFLAGS+=	-O0
-
 .include "../../mk/termcap.buildlink3.mk"
 
 .if ${TERMCAP_TYPE} == "termcap"
@@ -57,7 +48,8 @@ REPLACE.slsh.old=	slsh
 REPLACE.slsh.new=	${PREFIX}/bin/slsh
 REPLACE_FILES.slsh=	slsh/scripts/jpegsize slsh/scripts/lsrpm \
 			slsh/scripts/sldb slsh/scripts/slprof \
-			slsh/scripts/svnsh slsh/scripts/slstkchk
+			slsh/scripts/svnsh slsh/scripts/slstkchk \
+			slsh/scripts/slcov
 
 USE_FEATURES=		# empty (used in options.mk)
 .include "options.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2025/01/05 16:35:09 ktnb Exp $
+
+Use slang2 since slang1 still exists in pkgsrc
+
+--- src/Makefile.in.orig	2022-08-05 10:33:27.000000000 +0000
++++ src/Makefile.in
+@@ -81,7 +81,7 @@ CP 		= cp
+ #---------------------------------------------------------------------------
+ # There should be no need to change anything below here.
+ #---------------------------------------------------------------------------
+-THIS_LIB		= slang#
++THIS_LIB		= slang2#
+ DLL_IMPLIB_NAME		= @DLL_IMPLIB_NAME@
+ OTHERSTUFF 		=
+ THIS_LIB_DEFINES	= -DSLANG

@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:15:28 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/01/05 16:35:09 ktnb Exp $
 
-BLAKE2s (slang-2.2.4.tar.bz2) = b86e9fd2f6927981462cc60634a07185756add7f5fcebe2eed4148f44df25b9f
-SHA512 (slang-2.2.4.tar.bz2) = aaf0dcea5f1583487732098bd9dfe47f4fd968d81783955f58ed7bbffb852c217cde8999f2a515d77c22d44efc79047fc841eea6fecc48f18b402461ce6a848f
-Size (slang-2.2.4.tar.bz2) = 1427363 bytes
-SHA1 (patch-aa) = a323b479be021fe229a8f17684a6e3b9ba1323f9
+BLAKE2s (slang-2.3.3.tar.bz2) = d8ba51ad216a71ec3da2ee5ea994f73223c632c8197a87b5cb1e53b8b9463e61
+SHA512 (slang-2.3.3.tar.bz2) = f882f09e3fcd53427de0f233c9fc3ab15497f2323007be9a084696c8cf810ffe2726cd003149e757df26198b390b9f8c1ff411dc6473513457bd0f94722f8490
+Size (slang-2.3.3.tar.bz2) = 1646311 bytes
 SHA1 (patch-ab) = 1f5743569c43bcfebb925b275d7032f853a34943
 SHA1 (patch-ac) = 1181b6ce5de5c7c149aa8692dbcded981bda688e
 SHA1 (patch-ad) = 9ab953b8d850832f49f8af9bdb397f474af209eb
-SHA1 (patch-ae) = 85cc759196617a81cee65460e5aabb3a966a6a77
-SHA1 (patch-af) = 15ae3f27d727492c3bebcbfbca005a78455b8774
 SHA1 (patch-ag) = 25be7b526b2adb90d7b83645cc93fa67743fe86f
-SHA1 (patch-autoconf_slangpc.in) = face2e156e75854bb9ce07882ee02bbdc077aba5
-SHA1 (patch-src_slproc.c) = 297723830b85ebed124ec4ff7bd6608bf2e23f29
+SHA1 (patch-autoconf_slangpc.in) = 543e41ebb2a364d7869f4a1fac1d7c90332333d0
+SHA1 (patch-src_Makefile.in) = ed771bffaf4133b18a783218d7983eb68b3a8f03
+SHA1 (patch-src_slproc.c) = 5e321481cd983c0c03a4938c6b66dd194f5badb3
