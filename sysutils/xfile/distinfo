@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2025/01/05 21:38:21 vins Exp $
+
+BLAKE2s (xfile-1.0beta/xfile-slanted-icons.tar.xz) = 05d15677163ae69cd7184af0f96006303129d70ab4bebecf5187399f4b6b2761
+SHA512 (xfile-1.0beta/xfile-slanted-icons.tar.xz) = 0598f553d8f45487ceedd0495a115d0f1618e2fb18657e3d9ce7ae3ef0040c9b06aa9bf7224eeb59856f9e9f1258a666a4c52f46ca5edd25f8e29e4105387d50
+Size (xfile-1.0beta/xfile-slanted-icons.tar.xz) = 1772 bytes
+BLAKE2s (xfile-1.0beta/xfile-src-1.0-beta.tar.xz) = aa42deedabd1da7ca1b2b69da578dc23cfcc362ebf206b9ad4629b18a1874e6f
+SHA512 (xfile-1.0beta/xfile-src-1.0-beta.tar.xz) = 9362f1c1f940221ec1dd609b4b82a42c325283c824908aa41bac33de5d5928ec756397dd5579f793df660e029d9f3dd139555d83ffab76caea1e4c3694030f7d
+Size (xfile-1.0beta/xfile-src-1.0-beta.tar.xz) = 111280 bytes
+BLAKE2s (xfile-1.0beta/xfile-xdgsvc-src.tar.xz) = 17134f7556d67f1d340733e106c2b17903306ec07ad760fcd418f09b8f35df93
+SHA512 (xfile-1.0beta/xfile-xdgsvc-src.tar.xz) = df53d6db5eef47d3c1252d2a9346f0c56ec474622c54ebe0f3cb39ce45cca876315fa9e2ac333295f0be46e812b21b8d2e14bc08f9dc5914cd3aee2cdfac87b4
+Size (xfile-1.0beta/xfile-xdgsvc-src.tar.xz) = 3616 bytes
+SHA1 (patch-Makefile) = 1316be75730b7823d5f0f00adb243bc5b9100f26
+SHA1 (patch-addon_types_archive.db) = 62a95a0fc05a86771e9a0f9ab4c0c9be3e42eba7
+SHA1 (patch-mf_Makefile.pkgsrc) = 4f10424911a8216d2aa5362d30b38689bb0880d0
+SHA1 (patch-src_common.mf) = 52e5dcac5c82c61d1a7b34ed23e95a44ea7be9a4
+SHA1 (patch-src_mkicons.sh) = fba5d7bd304d14bdbbee39146302f8c427601b1a
+SHA1 (patch-src_xfile.service) = 5e412271706f83715e8b410162639852623c55f5

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=XFile/Open
+GenericName=File Manager
+Comment=File manager for Unix/X11
+Exec=xfile-open %f%
+MimeType=inode/directory;
+Icon=xfile_48x48
+Terminal=false
+Categories=FileManager;Utility;System;
+MimeType=inode/directory;
+StartupNotify=false
