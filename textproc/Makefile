@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1493 2025/01/02 07:20:10 taca Exp $
+# $NetBSD: Makefile,v 1.1494 2025/01/05 11:00:02 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -325,6 +325,7 @@ SUBDIR+=	hs-commonmark-extensions
 SUBDIR+=	hs-commonmark-pandoc
 SUBDIR+=	hs-css-text
 SUBDIR+=	hs-csv
+SUBDIR+=	hs-diff3
 SUBDIR+=	hs-djot
 SUBDIR+=	hs-doclayout
 SUBDIR+=	hs-doctemplates
