@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.25 2024/06/05 13:56:14 adam Exp $
+# $NetBSD: options.mk,v 1.26 2025/01/05 09:08:55 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnuplot
 PKG_SUPPORTED_OPTIONS=		cairo cerf gd gnuplot-pdf-doc lua wxwidgets x11
@@ -72,6 +72,7 @@ CONFIGURE_ARGS+=	--with-qt=qt5
 .    include "../../x11/qt5-qttools/buildlink3.mk"
 .  elif !empty(PKG_OPTIONS:Mqt6)
 USE_CXX_FEATURES=	c++17
+FORCE_CXX_STD=		c++17
 CONFIGURE_ARGS+=	--with-qt=qt6
 .    include "../../devel/qt6-qt5compat/buildlink3.mk"
 .    include "../../devel/qt6-qttools/buildlink3.mk"
