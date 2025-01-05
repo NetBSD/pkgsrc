@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.134 2025/01/05 10:59:50 pho Exp $
+$NetBSD: CHANGES-2025,v 1.135 2025/01/05 11:15:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -158,3 +158,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gnuplot to 6.0.2 [adam 2025-01-05]
 	Updated math/liblinear to 2.48 [adam 2025-01-05]
 	Added textproc/hs-diff3 version 0.3.1 [pho 2025-01-05]
+	Updated math/py-statsmodels to 0.14.4 [adam 2025-01-05]
+	Updated math/py-quadprog to 0.1.13 [adam 2025-01-05]
+	Updated devel/py-test-subprocess to 1.5.3 [adam 2025-01-05]
+	Updated devel/py-test-testmon to 2.1.3 [adam 2025-01-05]
