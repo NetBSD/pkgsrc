@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/11/11 07:28:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/05 11:14:45 adam Exp $
 
-DISTNAME=	pytest-testmon-2.1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+DISTNAME=	pytest_testmon-2.1.3
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-testmon/}
 
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-coverage>=6:../../devel/py-coverage
 DEPENDS+=	${PYPKGPREFIX}-test>=5:../../devel/py-test
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
