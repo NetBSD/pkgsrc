@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/05 11:46:47 pho Exp $
+
+BLAKE2s (tar-conduit-0.4.1.tar.gz) = c8944dd1a12bcc98de5e4d97553e4154bf8e8fe782ca18aded300f39d3f8c210
+SHA512 (tar-conduit-0.4.1.tar.gz) = cf11bdd4dee3666673a18a0e045524a9c697d9be6c631d0745ee4d791fbad334fc7291d735f972bce5c38996fc59ff365d59ebfdf3a71764d15837fa684524e0
+Size (tar-conduit-0.4.1.tar.gz) = 48682 bytes
