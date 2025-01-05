@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/04/02 22:01:23 bouyer Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/05 16:59:55 rillig Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 PKGREVISION=        4
@@ -47,7 +47,8 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR}
 USE_TOOLS+=		pod2man gmake pkg-config makeinfo perl bash cmake gsed bison
 USE_LANGUAGES=		c c++
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-rpath --disable-golang
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
@@ -185,21 +186,6 @@ post-install:
 	${INSTALL_MAN} ${WRKDIR}/xl.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKDIR}/xl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKDIR}/xlcpupool.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-.for f in \
-    gamd-ucode-container.txt       gqemu-backends.txt \
-    gblock-scripts.txt             gqemu-deprivilege.txt \
-    gconsole.txt                   gstubdom.txt \
-    gcrashdb.txt                   gvtd-pi.txt \
-    gdistro_mapping.txt            gvtd.txt \
-    gdump-core-format.txt          gvtpm-platforms.txt \
-    ggrant-tables.txt              gxen-error-handling.txt \
-    gkconfig-language.txt          gxenmon.txt \
-    gkconfig.txt                   gxenpaging.txt \
-    gkexec_and_kdump.txt           gxenstore-ring.txt \
-    glibxl_memory.txt              gxenstore.txt \
-    gprintk-formats.txt            gxsm-flask.txt \
-	${INSTALL_DATA} ${WRKSRC}/docs/misc/$f ${DESTDIR}${PREFIX}/share/doc/xen
-.endfor
 
 .if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 069900
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
