@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.129 2025/01/05 09:06:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.130 2025/01/05 09:06:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -152,3 +152,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-scipy to 1.15.0 [adam 2025-01-05]
 	Updated security/p5-Crypt-URandom to 0.46 [wiz 2025-01-05]
 	Updated devel/p5-Test-Manifest to 2.025 [wiz 2025-01-05]
+	Updated devel/p5-Test-Output to 1.035 [wiz 2025-01-05]
