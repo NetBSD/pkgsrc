@@ -1,16 +1,16 @@
-$NetBSD: patch-src_slproc.c,v 1.1 2018/05/17 10:35:59 jperkin Exp $
+$NetBSD: patch-src_slproc.c,v 1.2 2025/01/05 16:35:09 ktnb Exp $
 
 Set _XOPEN_SOURCE correctly on SunOS.
 
---- src/slproc.c.orig	2011-04-11 02:37:07.000000000 +0000
+--- src/slproc.c.orig	2022-08-05 10:33:27.000000000 +0000
 +++ src/slproc.c
-@@ -20,12 +20,14 @@ Foundation, Inc., 59 Temple Place - Suit
- USA.
- */
+@@ -28,12 +28,14 @@ USA.
+ # define _DEFAULT_SOURCE 1
+ #endif
  
 +#if !defined(__sun) || (!defined(_XOPEN_SOURCE) && (__STDC_VERSION__-0 < 199901L))
  #ifndef _XOPEN_SOURCE
- # define _XOPEN_SOURCE
+ # define _XOPEN_SOURCE 1
  #endif
  #ifndef _XOPEN_SOURCE_EXTENDED
  # define _XOPEN_SOURCE_EXTENDED 1
