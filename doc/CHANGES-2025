@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.125 2025/01/04 22:46:58 mef Exp $
+$NetBSD: CHANGES-2025,v 1.126 2025/01/05 05:02:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/R-fBasics to 4041.97 [mef 2025-01-04]
 	Updated finance/R-quantmod to 0.4.26 [mef 2025-01-04]
 	Updated finance/R-tseries to 0.10.58 [mef 2025-01-04]
+	Updated geography/R-terra to 1.8.5 [mef 2025-01-05]
