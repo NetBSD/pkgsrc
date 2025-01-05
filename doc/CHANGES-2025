@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.143 2025/01/05 16:35:33 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.144 2025/01/05 18:18:35 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -170,3 +170,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lla to 0.3.9 [pin 2025-01-05]
 	Updated editors/tp-note to 1.25.0 [pin 2025-01-05]
 	Updated devel/libslang2 to 2.3.3 [ktnb 2025-01-05]
+	Updated devel/libnjs to 0.8.8 [osa 2025-01-05]
+	Updated lang/njs to 0.8.8 [osa 2025-01-05]
+	Updated www/nginx to 1.26.2nb8 [osa 2025-01-05]
+	Updated www/nginx-devel to 1.27.3nb2 [osa 2025-01-05]
