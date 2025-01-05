@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.149 2025/01/05 22:41:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.150 2025/01/05 22:42:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruamel-yaml to 0.18.9 [adam 2025-01-05]
 	Added sysutils/xfile version 1.0beta [vins 2025-01-05]
 	Updated x11/xinit to 1.4.3 [wiz 2025-01-05]
+	Updated x11/xf86-video-ast to 1.2.0 [wiz 2025-01-05]
