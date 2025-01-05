@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/02 12:40:15 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/01/05 01:52:04 mef Exp $
 
-BLAKE2s (R/geosphere_1.5-14.tar.gz) = 89c6d69e2cce630d9ed628fc0471c1c0874cc6d4d463fd2a512e24f017557369
-SHA512 (R/geosphere_1.5-14.tar.gz) = e3d0c97d77a5713a3b60d95f86e7e25535ee6a46dd89edee680ea582dcfc039bc350ccf74dc96160827ee085486470e66710f9cca016035422b8727c5b8cf652
-Size (R/geosphere_1.5-14.tar.gz) = 797724 bytes
+BLAKE2s (R/geosphere_1.5-20.tar.gz) = 617313eeeceebdbed1b99e9c454444eb61fe0f3356370d0952a71704f1b23bbe
+SHA512 (R/geosphere_1.5-20.tar.gz) = ad730b8c4d0a692c4bc2c494bfd9b80611a2b8b27a0b31e4c0f0f9ce223d7dc62bfeed31ae50863893e36adaca3379ef0d16596f93e889daf8dea8d397ad0da3
+Size (R/geosphere_1.5-20.tar.gz) = 1121053 bytes
