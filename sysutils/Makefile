@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1139 2024/12/26 18:33:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1140 2025/01/05 21:41:56 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -964,6 +964,7 @@ SUBDIR+=	xfce4-thunar-vcs
 SUBDIR+=	xfce4-verve-plugin
 SUBDIR+=	xfce4-xkb-plugin
 SUBDIR+=	xfe
+SUBDIR+=	xfile
 SUBDIR+=	xfm
 SUBDIR+=	xfsprogs
 SUBDIR+=	xhfs
