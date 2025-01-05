@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25268 2025/01/05 16:35:33 ktnb Exp $
+$NetBSD: TODO,v 1.25269 2025/01/05 20:49:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -1138,7 +1138,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-mailman-3.3.10
-	o py-matplotlib-3.10.0
 	o py-mitmproxy_rs-0.9.3
 	o py-newt-0.52.21
 	o py-omniORBpy-3.7
