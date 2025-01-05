@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.146 2025/01/05 20:49:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.147 2025/01/05 21:22:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -182,3 +182,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/unit-ruby to 1.34.0 [osa 2025-01-05]
 	Updated math/octave to 9.3.0 [adam 2025-01-05]
 	Updated graphics/py-matplotlib to 3.10.0 [adam 2025-01-05]
+	Updated devel/py-setuptools to 75.7.0 [adam 2025-01-05]
+	Updated devel/py-ruamel-yaml to 0.18.9 [adam 2025-01-05]
