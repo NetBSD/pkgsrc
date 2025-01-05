@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2024/12/06 06:19:12 riastradh Exp $
+# $NetBSD: options.mk,v 1.3 2025/01/05 11:17:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python313
 PKG_SUPPORTED_OPTIONS=	dtrace pymalloc tkinter x11 readline
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	x11 readline
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dtrace readline
+PLIST_VARS+=		dtrace readline tkinter
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
