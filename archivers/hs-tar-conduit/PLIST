@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/05 11:46:47 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Types.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Types.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Types.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Unix.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Unix.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Tar/Unix.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/tar-conduit-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tar-conduit-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/Data-Conduit-Tar-Types.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/Data-Conduit-Tar.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/tar-conduit-${PKGVERSION}/html/tar-conduit.haddock
