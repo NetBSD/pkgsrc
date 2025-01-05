@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2024/12/27 08:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2025/01/05 14:49:39 pin Exp $
 
-DISTNAME=	tp-note-1.24.12
-PKGREVISION=	1
+DISTNAME=	tp-note-1.25.0
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITLAB:=getreu/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ LICENSE=	mit OR apache-2.0
 
 RUST_REQ=	1.80.1
 
-WRKSRC=		${WRKDIR}/tp-note-v1.24.12-492ee0cc326c363856e1dfd5dbed6ef938836721
+WRKSRC=		${WRKDIR}/tp-note-v1.25.0-f5f0ff12bee7a6115bd5a3493a3e825f9291c6b1
 
 USE_TOOLS+=	pkg-config
 
