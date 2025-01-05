@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.5 2024/02/05 21:11:45 adam Exp $
+$NetBSD: patch-Makefile,v 1.6 2025/01/05 09:12:32 adam Exp $
 
 Use LIBTOOL.
 Add support for LDFLAGS.
@@ -12,7 +12,7 @@ Add support for LDFLAGS.
 -LIBS = blas/blas.a
 +LIBS = blas/libblas.la
  #LIBS = -lblas
- SHVER = 5
+ SHVER = 6
 -OS = $(shell uname)
 -ifeq ($(OS),Darwin)
 -	SHARED_LIB_FLAG = -dynamiclib -Wl,-install_name,liblinear.so.$(SHVER)
