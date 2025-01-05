@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.98 2024/11/11 22:30:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.99 2025/01/05 21:20:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -142,9 +142,6 @@ ${PYSITELIB}/setuptools/_distutils/command/sdist.pyo
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.py
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/compat/__init__.pyo
-${PYSITELIB}/setuptools/_distutils/compat/py38.py
-${PYSITELIB}/setuptools/_distutils/compat/py38.pyc
-${PYSITELIB}/setuptools/_distutils/compat/py38.pyo
 ${PYSITELIB}/setuptools/_distutils/compat/py39.py
 ${PYSITELIB}/setuptools/_distutils/compat/py39.pyc
 ${PYSITELIB}/setuptools/_distutils/compat/py39.pyo
@@ -196,9 +193,9 @@ ${PYSITELIB}/setuptools/_distutils/tests/__init__.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/compat/__init__.py
 ${PYSITELIB}/setuptools/_distutils/tests/compat/__init__.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/compat/__init__.pyo
-${PYSITELIB}/setuptools/_distutils/tests/compat/py38.py
-${PYSITELIB}/setuptools/_distutils/tests/compat/py38.pyc
-${PYSITELIB}/setuptools/_distutils/tests/compat/py38.pyo
+${PYSITELIB}/setuptools/_distutils/tests/compat/py39.py
+${PYSITELIB}/setuptools/_distutils/tests/compat/py39.pyc
+${PYSITELIB}/setuptools/_distutils/tests/compat/py39.pyo
 ${PYSITELIB}/setuptools/_distutils/tests/support.py
 ${PYSITELIB}/setuptools/_distutils/tests/support.pyc
 ${PYSITELIB}/setuptools/_distutils/tests/support.pyo
@@ -631,7 +628,6 @@ ${PYSITELIB}/setuptools/_vendor/platformdirs/version.pyo
 ${PYSITELIB}/setuptools/_vendor/platformdirs/windows.py
 ${PYSITELIB}/setuptools/_vendor/platformdirs/windows.pyc
 ${PYSITELIB}/setuptools/_vendor/platformdirs/windows.pyo
-${PYSITELIB}/setuptools/_vendor/ruff.toml
 ${PYSITELIB}/setuptools/_vendor/tomli-2.0.1.dist-info/INSTALLER
 ${PYSITELIB}/setuptools/_vendor/tomli-2.0.1.dist-info/LICENSE
 ${PYSITELIB}/setuptools/_vendor/tomli-2.0.1.dist-info/METADATA
