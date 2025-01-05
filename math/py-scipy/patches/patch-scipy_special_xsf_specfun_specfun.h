@@ -1,9 +1,9 @@
-$NetBSD: patch-scipy_special_special_specfun_specfun.h,v 1.1 2024/07/31 18:15:38 adam Exp $
+$NetBSD: patch-scipy_special_xsf_specfun_specfun.h,v 1.1 2025/01/05 08:58:47 adam Exp $
 
 Prefer C++ copysign().
 
---- scipy/special/special/specfun/specfun.h.orig	2024-07-31 10:16:24.693973249 +0000
-+++ scipy/special/special/specfun/specfun.h
+--- scipy/special/xsf/specfun/specfun.h.orig	2024-07-31 10:16:24.693973249 +0000
++++ scipy/special/xsf/specfun/specfun.h
 @@ -2096,7 +2096,7 @@ std::complex<T> e1z(std::complex<T> z) {
          if ((x <= 0.0) && (z.imag() == 0.0)) {
              //Careful on the branch cut -- use the sign of the imaginary part
