@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.126 2025/01/05 05:02:46 mef Exp $
+$NetBSD: CHANGES-2025,v 1.127 2025/01/05 08:59:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -148,3 +148,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/R-quantmod to 0.4.26 [mef 2025-01-04]
 	Updated finance/R-tseries to 0.10.58 [mef 2025-01-04]
 	Updated geography/R-terra to 1.8.5 [mef 2025-01-05]
+	Updated math/py-numpy to 2.2.1 [adam 2025-01-05]
+	Updated math/py-scipy to 1.15.0 [adam 2025-01-05]
