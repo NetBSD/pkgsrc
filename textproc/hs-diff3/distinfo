@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/05 10:59:43 pho Exp $
+
+BLAKE2s (diff3-0.3.1.tar.gz) = 7d6e3cdb9a8961775c41a8f8709446f36234cabf99dcb36739c2ea03bf4a3484
+SHA512 (diff3-0.3.1.tar.gz) = 361a7d516612a52a47d6a335de55808288afa43e8f3bc39e7af2702c1082e21f71367374bbb4c2ee3a6d0cf5830f5b19376c07770ee4a6b0d91c06578004acc9
+Size (diff3-0.3.1.tar.gz) = 3889 bytes

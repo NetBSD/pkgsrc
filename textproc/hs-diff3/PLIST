@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/05 10:59:43 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Algorithm/Diff3.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Algorithm/Diff3.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Algorithm/Diff3.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/diff3-${PKGVERSION}/${HS_VERSION}/package-description
+lib/diff3-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/Data-Algorithm-Diff3.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/diff3.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/diff3-${PKGVERSION}/html/synopsis.png
