@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/05 13:11:31 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/05 14:32:42 taca Exp $
 
 DISTNAME=	mod_upload-1.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
@@ -11,6 +11,8 @@ COMMENT=	High performance file upload helper for PHP
 LICENSE=	gnu-gpl-v2
 
 APACHE_MODULE_NAME=	${DISTNAME:C/-.*//}.la
+
+PHP_VERSIONS_INCOMPATIBLE=	56
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_APXS2=	no
