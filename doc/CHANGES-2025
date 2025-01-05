@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.132 2025/01/05 09:10:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.133 2025/01/05 09:45:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -155,3 +155,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Output to 1.035 [wiz 2025-01-05]
 	Updated devel/p5-Test-Warnings to 0.036 [wiz 2025-01-05]
 	Updated textproc/p5-Text-CSV_XS to 1.58 [wiz 2025-01-05]
+	Updated graphics/gnuplot to 6.0.2 [adam 2025-01-05]
+	Updated math/liblinear to 2.48 [adam 2025-01-05]
