@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.111 2024/11/26 20:11:19 osa Exp $
+# $NetBSD: options.mk,v 1.112 2025/01/05 18:13:19 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -360,7 +360,7 @@ PLIST.rtmp=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mnginx-njs) || make(makesum) || make(mdi) || make(distclean)
-NJS_VERSION=		0.8.7
+NJS_VERSION=		0.8.8
 NJS_DISTNAME=		njs-${NJS_VERSION}
 NJS_DISTFILE=		${NJS_DISTNAME}.tar.gz
 SITES.${NJS_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx/njs/archive/}${NJS_VERSION}.tar.gz

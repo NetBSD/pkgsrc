@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/05 18:13:19 osa Exp $
 
-DISTNAME=	njs-0.8.7
+DISTNAME=	njs-0.8.8
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nginx/}
 GITHUB_PROJECT=	njs
@@ -12,8 +11,15 @@ HOMEPAGE=	https://nginx.org/en/docs/njs/
 COMMENT=	NGINX JavaScript static library
 LICENSE=	2-clause-bsd
 
-HAS_CONFIGURE=	yes
 USE_LANGUAGES+=	c
+
+HAS_CONFIGURE=	yes
+# lang/quickjs needs to be update to a recent snapshot, so
+# disable it for now
+#CONFIGURE_ARGS+=	--cc-opt="-I${LOCALBASE}/include/quickjs"
+#CONFIGURE_ARGS+=	--ld-opt="-L${LOCALBASE}/lib"
+#CONFIGURE_ARGS+=	--with-quickjs
+CONFIGURE_ARGS+=	--no-quickjs
 
 INSTALLATION_DIRS=	include lib/pkgconfig
 
