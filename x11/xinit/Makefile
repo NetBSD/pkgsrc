@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2023/06/27 10:28:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.34 2025/01/05 22:41:18 wiz Exp $
 
-DISTNAME=		xinit-1.4.2
+DISTNAME=		xinit-1.4.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.xz
