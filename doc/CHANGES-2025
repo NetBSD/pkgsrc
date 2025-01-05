@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.141 2025/01/05 14:48:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.142 2025/01/05 14:50:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-power-manager to 4.20.0 [bsiegert 2025-01-05]
 	Updated devel/ast-grep to 0.33.0 [pin 2025-01-05]
 	Updated sysutils/lla to 0.3.9 [pin 2025-01-05]
+	Updated editors/tp-note to 1.25.0 [pin 2025-01-05]
