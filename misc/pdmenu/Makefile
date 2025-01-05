@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2025/01/04 15:34:52 ktnb Exp $
+# $NetBSD: Makefile,v 1.42 2025/01/05 14:29:15 ktnb Exp $
 
 DISTNAME=	pdmenu-1.3.6
 CATEGORIES=	misc
@@ -45,4 +45,5 @@ post-install:
 CONF_FILES=	${DESTDIR}${PREFIX}/share/examples/pdmenu/pdmenurc ${PKG_SYSCONFDIR}/pdmenurc
 
 .include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
