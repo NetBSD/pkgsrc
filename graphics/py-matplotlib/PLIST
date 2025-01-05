@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2024/12/01 09:43:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2025/01/05 20:49:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -29,9 +29,15 @@ ${PYSITELIB}/matplotlib/_c_internal_utils.so
 ${PYSITELIB}/matplotlib/_cm.py
 ${PYSITELIB}/matplotlib/_cm.pyc
 ${PYSITELIB}/matplotlib/_cm.pyo
+${PYSITELIB}/matplotlib/_cm_bivar.py
+${PYSITELIB}/matplotlib/_cm_bivar.pyc
+${PYSITELIB}/matplotlib/_cm_bivar.pyo
 ${PYSITELIB}/matplotlib/_cm_listed.py
 ${PYSITELIB}/matplotlib/_cm_listed.pyc
 ${PYSITELIB}/matplotlib/_cm_listed.pyo
+${PYSITELIB}/matplotlib/_cm_multivar.py
+${PYSITELIB}/matplotlib/_cm_multivar.pyc
+${PYSITELIB}/matplotlib/_cm_multivar.pyo
 ${PYSITELIB}/matplotlib/_color_data.py
 ${PYSITELIB}/matplotlib/_color_data.pyc
 ${PYSITELIB}/matplotlib/_color_data.pyi
@@ -83,8 +89,6 @@ ${PYSITELIB}/matplotlib/_tight_layout.pyc
 ${PYSITELIB}/matplotlib/_tight_layout.pyo
 ${PYSITELIB}/matplotlib/_tri.pyi
 ${PYSITELIB}/matplotlib/_tri.so
-${PYSITELIB}/matplotlib/_ttconv.pyi
-${PYSITELIB}/matplotlib/_ttconv.so
 ${PYSITELIB}/matplotlib/_type1font.py
 ${PYSITELIB}/matplotlib/_type1font.pyc
 ${PYSITELIB}/matplotlib/_type1font.pyo
@@ -284,6 +288,10 @@ ${PYSITELIB}/matplotlib/colorbar.py
 ${PYSITELIB}/matplotlib/colorbar.pyc
 ${PYSITELIB}/matplotlib/colorbar.pyi
 ${PYSITELIB}/matplotlib/colorbar.pyo
+${PYSITELIB}/matplotlib/colorizer.py
+${PYSITELIB}/matplotlib/colorizer.pyc
+${PYSITELIB}/matplotlib/colorizer.pyi
+${PYSITELIB}/matplotlib/colorizer.pyo
 ${PYSITELIB}/matplotlib/colors.py
 ${PYSITELIB}/matplotlib/colors.pyc
 ${PYSITELIB}/matplotlib/colors.pyi
@@ -325,6 +333,10 @@ ${PYSITELIB}/matplotlib/image.py
 ${PYSITELIB}/matplotlib/image.pyc
 ${PYSITELIB}/matplotlib/image.pyi
 ${PYSITELIB}/matplotlib/image.pyo
+${PYSITELIB}/matplotlib/inset.py
+${PYSITELIB}/matplotlib/inset.pyc
+${PYSITELIB}/matplotlib/inset.pyi
+${PYSITELIB}/matplotlib/inset.pyo
 ${PYSITELIB}/matplotlib/layout_engine.py
 ${PYSITELIB}/matplotlib/layout_engine.pyc
 ${PYSITELIB}/matplotlib/layout_engine.pyi
@@ -454,14 +466,17 @@ ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmr10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmss10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf
 ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf
+${PYSITELIB}/matplotlib/mpl-data/images/back-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/back.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/back.png
 ${PYSITELIB}/matplotlib/mpl-data/images/back.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/back_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/filesave-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.png
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/filesave_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/forward-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.png
 ${PYSITELIB}/matplotlib/mpl-data/images/forward.svg
@@ -469,10 +484,12 @@ ${PYSITELIB}/matplotlib/mpl-data/images/forward_large.png
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.png
 ${PYSITELIB}/matplotlib/mpl-data/images/hand.svg
+${PYSITELIB}/matplotlib/mpl-data/images/help-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/help.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/help.png
 ${PYSITELIB}/matplotlib/mpl-data/images/help.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/help_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/home-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/home.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/home.png
 ${PYSITELIB}/matplotlib/mpl-data/images/home.svg
@@ -481,6 +498,7 @@ ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.png
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/matplotlib_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/move-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/move.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/move.png
 ${PYSITELIB}/matplotlib/mpl-data/images/move.svg
@@ -489,10 +507,12 @@ ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.png
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/qt4_editor_options_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/subplots-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.png
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/subplots_large.png
+${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.pdf
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.png
 ${PYSITELIB}/matplotlib/mpl-data/images/zoom_to_rect.svg
@@ -526,6 +546,7 @@ ${PYSITELIB}/matplotlib/mpl-data/stylelib/fast.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/fivethirtyeight.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/ggplot.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/grayscale.mplstyle
+${PYSITELIB}/matplotlib/mpl-data/stylelib/petroff10.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-v0_8-bright.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-v0_8-colorblind.mplstyle
 ${PYSITELIB}/matplotlib/mpl-data/stylelib/seaborn-v0_8-dark-palette.mplstyle
@@ -1031,6 +1052,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/twin_axis_locators_forma
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/twin_axis_locators_formatters.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/twin_spines.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/twin_spines_on_top.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/use_colorizer_keyword.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/vertex_markers.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/violinplot_horiz_baseline.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_axes/violinplot_horiz_custompoints_10.png
@@ -1060,7 +1082,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pdf/kerning.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pdf/multi_font_type3.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pdf/multi_font_type42.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pdf/pdf_use14corefonts.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pdf/truetype-conversion.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pgf/pgf_bbox_inches.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pgf/pgf_document_font_size.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pgf/pgf_mixedmode.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pgf/pgf_pdflatex.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_backend_pgf/pgf_rcupdate1.pdf
@@ -1251,6 +1275,8 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_figure/tightbbox_box_aspect.s
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/bbox_image_inverted.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/bbox_image_inverted.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/bbox_image_inverted.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_image/downsampling.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_image/downsampling_speckle.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/figimage.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/figimage.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_alpha.pdf
@@ -1268,16 +1294,10 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_composite_alpha.s
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_composite_background.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_composite_background.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_composite_background.svg
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_interps.pdf
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_interps.png
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_interps.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_placement.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_placement.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_shift.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/image_shift.svg
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow.pdf
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow.png
-${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow_bignumbers.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow_bignumbers_real.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/imshow_endianess.png
@@ -1299,6 +1319,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/no_interpolation_origin
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/no_interpolation_origin.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/no_interpolation_origin.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/nonuniform_and_pcolor.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_image/nonuniform_logscale.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rasterize_10dpi.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rasterize_10dpi.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rgba_antialias.png
@@ -1306,7 +1327,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rotate_image.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rotate_image.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/rotate_image.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/uint16.tif
+${PYSITELIB}/matplotlib/tests/baseline_images/test_image/upsampling.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_image/zoom_and_clip_upper_origin.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_inset/zoom_inset_connector_styles.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_legend/fancy.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_legend/fancy.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_legend/fancy.svg
@@ -1880,6 +1903,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_81.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_82.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_82.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_82.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_83.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_83.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_cm_83.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_00.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_00.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_00.svg
@@ -2111,6 +2137,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_82.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_82.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_82.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_83.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_83.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavusans_83.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_00.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_00.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_00.svg
@@ -2342,6 +2371,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_82.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_82.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_82.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_83.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_83.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_dejavuserif_83.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_00.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_00.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_00.svg
@@ -2573,6 +2605,9 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_81.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_82.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_82.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_82.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_83.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_83.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stix_83.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_00.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_00.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_00.svg
@@ -2804,6 +2839,11 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_81
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_82.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_82.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_82.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_83.pdf
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_83.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_mathtext/mathtext_stixsans_83.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_multivariate_colormaps/bivariate_cmap_shapes.png
+${PYSITELIB}/matplotlib/tests/baseline_images/test_multivariate_colormaps/multivar_alpha_mixing.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_offsetbox/anchoredtext_align.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_offsetbox/offsetbox_clipping.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_offsetbox/offsetbox_clipping.png
@@ -2868,6 +2908,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_axes.svg
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_coords.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_coords.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_coords.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_errorbar.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_invertedylim.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_invertedylim_rorigin.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_log.png
@@ -3039,7 +3080,6 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_transforms/pre_transform_data
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_triangulation/tri_smooth_contouring.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_triangulation/tri_smooth_gradient.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_triangulation/tripcolor1.png
-${PYSITELIB}/matplotlib/tests/baseline_images/test_ttconv/truetype-conversion.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_units/jpl_bar_units.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_units/jpl_barh_units.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_units/plot_masked_units.png
@@ -3093,6 +3133,9 @@ ${PYSITELIB}/matplotlib/tests/test_backend_cairo.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.py
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_gtk3.pyo
+${PYSITELIB}/matplotlib/tests/test_backend_inline.py
+${PYSITELIB}/matplotlib/tests/test_backend_inline.pyc
+${PYSITELIB}/matplotlib/tests/test_backend_inline.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_macosx.py
 ${PYSITELIB}/matplotlib/tests/test_backend_macosx.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_macosx.pyo
@@ -3111,6 +3154,9 @@ ${PYSITELIB}/matplotlib/tests/test_backend_ps.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_qt.py
 ${PYSITELIB}/matplotlib/tests/test_backend_qt.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_qt.pyo
+${PYSITELIB}/matplotlib/tests/test_backend_registry.py
+${PYSITELIB}/matplotlib/tests/test_backend_registry.pyc
+${PYSITELIB}/matplotlib/tests/test_backend_registry.pyo
 ${PYSITELIB}/matplotlib/tests/test_backend_svg.py
 ${PYSITELIB}/matplotlib/tests/test_backend_svg.pyc
 ${PYSITELIB}/matplotlib/tests/test_backend_svg.pyo
@@ -3135,6 +3181,9 @@ ${PYSITELIB}/matplotlib/tests/test_basic.pyo
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.py
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.pyc
 ${PYSITELIB}/matplotlib/tests/test_bbox_tight.pyo
+${PYSITELIB}/matplotlib/tests/test_bezier.py
+${PYSITELIB}/matplotlib/tests/test_bezier.pyc
+${PYSITELIB}/matplotlib/tests/test_bezier.pyo
 ${PYSITELIB}/matplotlib/tests/test_category.py
 ${PYSITELIB}/matplotlib/tests/test_category.pyc
 ${PYSITELIB}/matplotlib/tests/test_category.pyo
@@ -3219,6 +3268,9 @@ ${PYSITELIB}/matplotlib/tests/test_matplotlib.pyo
 ${PYSITELIB}/matplotlib/tests/test_mlab.py
 ${PYSITELIB}/matplotlib/tests/test_mlab.pyc
 ${PYSITELIB}/matplotlib/tests/test_mlab.pyo
+${PYSITELIB}/matplotlib/tests/test_multivariate_colormaps.py
+${PYSITELIB}/matplotlib/tests/test_multivariate_colormaps.pyc
+${PYSITELIB}/matplotlib/tests/test_multivariate_colormaps.pyo
 ${PYSITELIB}/matplotlib/tests/test_nbagg_01.ipynb
 ${PYSITELIB}/matplotlib/tests/test_offsetbox.py
 ${PYSITELIB}/matplotlib/tests/test_offsetbox.pyc
@@ -3307,9 +3359,6 @@ ${PYSITELIB}/matplotlib/tests/test_transforms.pyo
 ${PYSITELIB}/matplotlib/tests/test_triangulation.py
 ${PYSITELIB}/matplotlib/tests/test_triangulation.pyc
 ${PYSITELIB}/matplotlib/tests/test_triangulation.pyo
-${PYSITELIB}/matplotlib/tests/test_ttconv.py
-${PYSITELIB}/matplotlib/tests/test_ttconv.pyc
-${PYSITELIB}/matplotlib/tests/test_ttconv.pyo
 ${PYSITELIB}/matplotlib/tests/test_type1font.py
 ${PYSITELIB}/matplotlib/tests/test_type1font.pyc
 ${PYSITELIB}/matplotlib/tests/test_type1font.pyo
@@ -3446,7 +3495,6 @@ ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/image
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/imagegrid_cbar_mode.png
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/inset_axes.png
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/inset_locator.png
-${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/insetposition.png
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/inverted_zoomed_axes.png
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/rgb_axes.png
 ${PYSITELIB}/mpl_toolkits/axes_grid1/tests/baseline_images/test_axes_grid1/twin_axes_empty_and_removed.png
@@ -3466,12 +3514,6 @@ ${PYSITELIB}/mpl_toolkits/axisartist/angle_helper.pyo
 ${PYSITELIB}/mpl_toolkits/axisartist/axes_divider.py
 ${PYSITELIB}/mpl_toolkits/axisartist/axes_divider.pyc
 ${PYSITELIB}/mpl_toolkits/axisartist/axes_divider.pyo
-${PYSITELIB}/mpl_toolkits/axisartist/axes_grid.py
-${PYSITELIB}/mpl_toolkits/axisartist/axes_grid.pyc
-${PYSITELIB}/mpl_toolkits/axisartist/axes_grid.pyo
-${PYSITELIB}/mpl_toolkits/axisartist/axes_rgb.py
-${PYSITELIB}/mpl_toolkits/axisartist/axes_rgb.pyc
-${PYSITELIB}/mpl_toolkits/axisartist/axes_rgb.pyo
 ${PYSITELIB}/mpl_toolkits/axisartist/axis_artist.py
 ${PYSITELIB}/mpl_toolkits/axisartist/axis_artist.pyc
 ${PYSITELIB}/mpl_toolkits/axisartist/axis_artist.pyo
@@ -3575,6 +3617,8 @@ ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/contourf3d_f
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/equal_box_aspect.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/errorbar3d.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/errorbar3d_errorevery.png
+${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/fill_between_polygon.png
+${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/fill_between_quad.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/grid_off.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/invisible_ticks_axis.png
 ${PYSITELIB}/mpl_toolkits/mplot3d/tests/baseline_images/test_axes3d/lines3d.png
