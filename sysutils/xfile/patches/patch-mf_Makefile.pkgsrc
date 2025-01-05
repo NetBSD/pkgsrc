@@ -1,0 +1,31 @@
+$NetBSD: patch-mf_Makefile.pkgsrc,v 1.1 2025/01/05 21:38:22 vins Exp $
+
+Add custom Makefile for pkgsrc.
+
+--- mf/Makefile.pkgsrc.orig	2025-01-05 16:52:21.386683075 +0000
++++ mf/Makefile.pkgsrc
+@@ -0,0 +1,24 @@
++# XFile pkgsrc Makefile
++
++PREFIX = @PREFIX@
++BINDIR = @PREFIX@/bin
++MANDIR = @PREFIX@/@PKGMANDIR@
++
++SHAREDIR = @SHAREDIR@
++APPLRESDIR = @PREFIX@/lib/X11/app-defaults
++PIXMAPDIR = @PREFIX@/share/pixmaps
++DOCDIR = @PREFIX@/share/doc/@PKGBASE@
++
++DBUS_INCDIRS = -I@PREFIX@/include/dbus-1.0 -I@PREFIX@/lib/dbus-1.0/include
++
++.include "common.mf"
++
++# Set to APPDEFS_CORE for core fonts
++APPDEFS = $(APPDEFS_XFT)
++
++DEFINES = -DPREFIX='"$(PREFIX)"'
++
++.c.o:
++	$(CC) $(CFLAGS) $(DEFINES) -c -o $(<:.c=.o) $>
++
++install: common_install

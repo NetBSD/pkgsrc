@@ -1,0 +1,96 @@
+$NetBSD: patch-src_common.mf,v 1.1 2025/01/05 21:38:22 vins Exp $
+
+* Use standard CFLAGS and LDFLAGS.
+* Point to default awk implementation path.
+* Provide a pkgsrc-compliant install target.
+* Build and install DBus support.
+
+--- src/common.mf.orig	2024-12-28 23:18:37.000000000 +0000
++++ src/common.mf
+@@ -3,8 +3,7 @@
+ 
+ X_LIBS = -lX11 -lXinerama -lXm -lXt -lXpm
+ SYS_LIBS = -lm -lc
+-
+-CFLAGS += -DPREFIX='"$(PREFIX)"' $(INCDIRS)
++DBUS_LIBS = -ldbus-1
+ 
+ XFILE_OBJS = main.o menu.o defaults.o comdlgs.o guiutil.o typedb.o \
+ 	path.o listw.o pathw.o filemgr.o graphics.o cbproc.o exec.o \
+@@ -13,10 +12,10 @@ XFILE_OBJS = main.o menu.o defaults.o co
+ 
+ .PHONY: clean install uninstall
+ 
+-all: .depend xfile.ad xfile.1 xfile
++all: .depend xfile.ad xfile.1 xfile xfile-xdgsvc
+ 
+ xfile: icons.h $(XFILE_OBJS)
+-	$(CC) $(LDFLAGS) $(LIBDIRS) -o $@ $(XFILE_OBJS) $(X_LIBS) $(SYS_LIBS)
++	$(CC) $(LDFLAGS) -o $@ $(XFILE_OBJS) $(X_LIBS) $(SYS_LIBS)
+ 
+ # Built-in icons
+ icons.h: mkicons.sh icons/*.xpm
+@@ -31,7 +30,13 @@ xfile.ad: $(APPDEFS)
+ 
+ # Default (fallback) resources
+ defaults.c: xfile.ad
+-	awk -f adtoc.awk xfile.ad > $@
++	$(AWK) -f adtoc.awk xfile.ad > $@
++
++# XDG shim (DBus support)
++xfile-xdg.o: xfile-xdg.c
++	$(CC) $(CFLAGS) $(DBUS_INCDIRS) -c $< -o $@
++xfile-xdgsvc: xfile-xdg.o
++	$(CC) $(LDFLAGS) -o $@ xfile-xdg.o $(DBUS_LIBS)
+ 
+ # Manpage
+ MANUAL = man/intro.man man/gui.man man/db.man man/res.man man/footer.man
+@@ -43,29 +48,32 @@ clean:
+ 	-rm defaults.c icons.h
+ 	-rm xfile.ad
+ 	-rm xfile.1
++	-rm xfile-xdg
+ 	-rm .depend
+ 	-rm $(XFILE_OBJS) xfile
+ 
+ # Dependencies
+ .depend: $(XFILE_OBJS:.o=.c) icons.h
+-	$(CC) -MM $(INCDIRS) $(XFILE_OBJS:.o=.c) > .depend
++	$(CC) -MM $(CFLAGS) $(DEFINES) $(XFILE_OBJS:.o=.c) > .depend
+ 
+ # Install
+-common_install: xfile xfile.ad xfile.1
+-	install -o 0 -g 0 -m755 -d $(PREFIX)
+-	install -o 0 -g 0 -m755 xfile $(PREFIX)/bin/xfile
+-	-ln -s $(PREFIX)/bin/xfile $(PREFIX)/bin/xfile-open
+-	install -o 0 -g 0 -m 755 -d $(MANDIR)/man1
+-	install -o 0 -g 0 -m 644 xfile.1 $(MANDIR)/man1/xfile.1
+-	install -o 0 -g 0 -m 755 -d $(APPLRESDIR)
+-	install -o 0 -g 0 -m 644 xfile.ad $(APPLRESDIR)/XFile
+-	install -o 0 -g 0 -m 755 -d $(SHAREDIR)/types
+-	install -o 0 -g 0 -m 644 default.db $(SHAREDIR)/types/system.db
+-	install -o 0 -g 0 -m 755 -d $(SHAREDIR)/icons
+-	for n in icons/*.xpm; do install -o 0 -g 0 -m 664 $$n $(SHAREDIR)/$$n; done
+-	install -o 0 -g 0 -m 644 icons/README $(SHAREDIR)/README.icons
+-	install -o 0 -g 0 -m 644 xbm/cabinet.xpm $(PREFIX)/share/pixmaps/xfile_48x48.xpm
+-
++common_install: xfile xfile.ad xfile.1 xfile-xdgsvc
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) xfile xfile-xdgsvc $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_MAN) xfile.1 $(DESTDIR)$(MANDIR)/man1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(SHAREDIR) $(DESTDIR)$(APPLRESDIR)
++	$(BSD_INSTALL_DATA) xfile.ad $(DESTDIR)$(APPLRESDIR)/XFile
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(SHAREDIR)/icons $(DESTDIR)$(SHAREDIR)/types
++	$(BSD_INSTALL_DATA) default.db $(DESTDIR)$(SHAREDIR)/types/system.db
++	for n in icons/*.xpm; do $(BSD_INSTALL_DATA) $$n $(DESTDIR)$(SHAREDIR)/$$n; done
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/dbus-1/services
++	$(BSD_INSTALL_DATA) xfile.service $(DESTDIR)$(PREFIX)/share/dbus-1/services
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PIXMAPDIR) $(DESTDIR)$(DOCDIR)
++	$(BSD_INSTALL_DATA) xbm/cabinet.xpm $(DESTDIR)$(PIXMAPDIR)/xfile_48x48.xpm
++	$(BSD_INSTALL_DATA) ../README $(DESTDIR)$(DOCDIR)
++	$(BSD_INSTALL_DATA) icons/README $(DESTDIR)$(DOCDIR)/README.icons
++	
+ # Removal
+ uninstall:
+ 	rm -f $(PREFIX)/bin/xfile

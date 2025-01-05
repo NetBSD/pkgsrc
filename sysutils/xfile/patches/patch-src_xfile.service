@@ -1,0 +1,11 @@
+$NetBSD: patch-src_xfile.service,v 1.1 2025/01/05 21:38:22 vins Exp $
+
+pkgsrc prefix support
+
+--- src/xfile.service.orig	2024-07-19 19:11:18.000000000 +0000
++++ src/xfile.service
+@@ -1,3 +1,3 @@
+ [D-BUS Service]
+ Name=org.freedesktop.FileManager1
+-Exec=/usr/bin/xfile-xdgsvc
++Exec=@PREFIX@/bin/xfile-xdgsvc
