@@ -1,0 +1,35 @@
+$NetBSD: patch-addon_types_archive.db,v 1.1 2025/01/05 21:38:22 vins Exp $
+
+Fix runtime warning: 'Cannot parse file type database'
+
+--- addon/types/archive.db.orig	2024-12-28 23:18:37.000000000 +0000
++++ addon/types/archive.db
+@@ -6,8 +6,8 @@ ZIP Archive {
+ 		*.zip
+ 		*.ZIP
+ 	}
+-	&List: %terminal "unzip -l %n | less"
+-	&Extract: %terminalHold unzip %n
++	action &List: %terminal "unzip -l %n | less"
++	action &Extract: %terminalHold unzip %n
+ }
+ 
+ RAR Archive {
+@@ -16,8 +16,8 @@ RAR Archive {
+ 		*.rar
+ 		*.RAR
+ 	}
+-	&List: %terminal "unrar l %n | less"
+-	&Extract: %terminalHold unrar e %n
++	action &List: %terminal "unrar l %n | less"
++	action &Extract: %terminalHold unrar e %n
+ }
+ 
+ 7ZIP Archive {
+@@ -26,5 +26,5 @@ RAR Archive {
+ 		*.7z
+ 		*.7Z
+ 	}
+-	&Extract: %terminalHold p7zip -d %n
++	action &Extract: %terminalHold p7zip -d %n
+ }
