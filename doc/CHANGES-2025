@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.162 2025/01/06 19:18:08 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.163 2025/01/06 19:27:59 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/qgis to 3.34.14 [gdt 2025-01-06]
 	Updated x11/xfce4-settings to 4.20.0 [bsiegert 2025-01-06]
 	Updated geography/osm2pgsql to 1.9.2 [gdt 2025-01-06]
+	Updated x11/xfce4-session to 4.20.0 [bsiegert 2025-01-06]
