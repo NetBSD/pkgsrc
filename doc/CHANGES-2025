@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.164 2025/01/06 19:38:20 vins Exp $
+$NetBSD: CHANGES-2025,v 1.165 2025/01/06 20:33:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/osm2pgsql to 1.9.2 [gdt 2025-01-06]
 	Updated x11/xfce4-session to 4.20.0 [bsiegert 2025-01-06]
 	Added sysutils/fastfetch version 2.33.0 [vins 2025-01-06]
+	Updated devel/goredo to 2.6.4 [schmonz 2025-01-06]
