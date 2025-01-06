@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:45:13 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/01/06 19:18:00 gdt Exp $
 
-BLAKE2s (osm2pgsql-1.3.0.tar.gz) = cd5553b762a7ae15e03102e73473f5e38e6043b154e67c87a76a38b00638f421
-SHA512 (osm2pgsql-1.3.0.tar.gz) = e643f3a1987ead36763c96d34b5dd7e170273b77a521106c21311dc7b01d2b34470b2e00e3214050f2cbdd3d89703a1827ee6c35928ed77cc7f35fc4e20331f3
-Size (osm2pgsql-1.3.0.tar.gz) = 2460451 bytes
-SHA1 (patch-CMakeLists.txt) = a33fcf5b935c515a82817fe233a9d9bb6b9e7372
+BLAKE2s (osm2pgsql-1.9.2.tar.gz) = 3ff365887a93410bc40d2a6c46037a505e5934e0ff1d4f591132f4d11c27ad82
+SHA512 (osm2pgsql-1.9.2.tar.gz) = b8685ad564be43cf7c4ea9e1bacb6cb00c88fb894f13888e802d86bf7912ade582b30eb05c53bb66119b7f14e4db0c8acced55e74ee4dc6c7c35fc96b8effc9f
+Size (osm2pgsql-1.9.2.tar.gz) = 2598971 bytes
+SHA1 (patch-docs_CMakeLists.txt) = 9b1d0e80cdaa2174328081a1d5e076e5d5d9e007
