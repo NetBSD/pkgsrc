@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.151 2025/01/05 22:45:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.152 2025/01/06 04:49:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -188,3 +188,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xinit to 1.4.3 [wiz 2025-01-05]
 	Updated x11/xf86-video-ast to 1.2.0 [wiz 2025-01-05]
 	Updated x11/xf86-video-suncg14 to 1.2.0 [wiz 2025-01-05]
+	Updated audio/musicpd to 0.23.16 [pho 2025-01-06]
