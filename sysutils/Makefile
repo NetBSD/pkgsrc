@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1140 2025/01/05 21:41:56 vins Exp $
+# $NetBSD: Makefile,v 1.1141 2025/01/06 19:37:32 vins Exp $
 #
 
 COMMENT=	System utilities
@@ -223,6 +223,7 @@ SUBDIR+=	f3
 SUBDIR+=	fabric
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
+SUBDIR+=	fastfetch
 SUBDIR+=	fastfs
 SUBDIR+=	fatback
 SUBDIR+=	fclones
