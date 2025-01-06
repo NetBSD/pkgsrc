@@ -1,34 +1,51 @@
-# $NetBSD: Makefile,v 1.74 2020/01/26 17:30:59 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.75 2025/01/06 21:36:24 ktnb Exp $
 
-DISTNAME=	slang-1.4.9
+DISTNAME=	slang-2.3.3
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	devel
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/
-MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v1.4/
+MASTER_SITES=	https://www.jedsoft.org/releases/slang/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.s-lang.org/
+HOMEPAGE=	https://www.jedsoft.org/slang/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-DLOPEN_REQUIRE_PTHREADS= no
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-z=${BUILDLINK_PREFIX.zlib}
+
+PKGCONFIG_OVERRIDE+=	autoconf/slangpc.in
+
+DLOPEN_REQUIRE_PTHREADS=	no
+
+EGDIR=		${PREFIX}/share/examples/libslang
+CONF_FILES+=	${EGDIR}/slsh.rc ${PKG_SYSCONFDIR}/slsh.rc
+
+INSTALL_MAKE_FLAGS+=	DEST_SLSH_CONF_DIR=${DESTDIR}/${EGDIR}
 
 .include "../../mk/termcap.buildlink3.mk"
 
-.if ${TERMCAP_TYPE} == "termcap"
-CONFIGURE_ENV+=		TERMCAP=${BUILDLINK_LDADD.termcap:Q}
-CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${PREFIX:Q}/share/terminfo
-.else
-CONFIGURE_ENV+=		TERMCAP=
-CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap:Q}/share/terminfo
-.endif
+#CONFIGURE_ENV+=		TERMCAP=
+CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap}/share/terminfo
 
+REPLACE_INTERPRETER+=	slsh
+REPLACE.slsh.old=	slsh
+REPLACE.slsh.new=	${PREFIX}/bin/slsh
+REPLACE_FILES.slsh=	slsh/scripts/jpegsize slsh/scripts/lsrpm \
+			slsh/scripts/sldb slsh/scripts/slprof \
+			slsh/scripts/svnsh slsh/scripts/slstkchk \
+			slsh/scripts/slcov
+
+USE_FEATURES=		# empty (used in options.mk)
+.include "options.mk"
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
