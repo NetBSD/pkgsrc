@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.155 2025/01/06 10:31:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.156 2025/01/06 10:57:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -195,3 +195,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-gitpython to 3.1.44 [adam 2025-01-06]
 	Added devel/py-orderly-set version 5.2.3 [adam 2025-01-06]
 	Updated textproc/py-deepdiff to 8.1.1 [adam 2025-01-06]
+	Updated math/py-xarray to 2025.1.0 [adam 2025-01-06]
+	Updated math/py-xarray-einstats to 0.8.0 [adam 2025-01-06]
