@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2023/10/19 14:44:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/06 07:51:02 adam Exp $
 
-DISTNAME=	onig-6.9.9
+DISTNAME=	onig-6.9.10
 PKGNAME=	${DISTNAME:S/onig/oniguruma/}
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kkos/}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kkos/oniguruma
 COMMENT=	Regular expressions library
 LICENSE=	2-clause-bsd
-
-#WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
