@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/02 09:52:42 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/06 18:15:53 gutteridge Exp $
 
 DISTNAME=	libdisplay-info-0.2.0
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ COMMENT=	EDID and DisplayID library
 LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/libdisplay-info.map
 
 .include "../../devel/meson/build.mk"
 .include "../../sysutils/hwdata/buildlink3.mk"
