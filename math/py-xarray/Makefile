@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/12/26 23:20:42 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/06 10:55:38 adam Exp $
 
-DISTNAME=	xarray-2024.11.0
+DISTNAME=	xarray-2025.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xarray/}
@@ -13,7 +13,7 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=7:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
-DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
+DEPENDS+=	${PYPKGPREFIX}-packaging>=23.2:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pandas>=2.1:../../math/py-pandas
 
 USE_LANGUAGES=	# none
