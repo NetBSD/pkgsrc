@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.40 2024/06/28 19:37:01 gutteridge Exp $
+$NetBSD: distinfo,v 1.41 2025/01/06 19:27:40 bsiegert Exp $
 
-BLAKE2s (xfce4-session-4.18.4.tar.bz2) = dc04702c4446253be4ea18e332beab8cc9137050d0676237d131d87559ca29c2
-SHA512 (xfce4-session-4.18.4.tar.bz2) = dec5006cf69cd44d39c0923d512bfd07123c923627b33a9f232134468cf8a160e329afcf0e61619e7f9a91a453845cbc55a355b6ca9c02e15f55eb7876c8bfc1
-Size (xfce4-session-4.18.4.tar.bz2) = 922274 bytes
+BLAKE2s (xfce4-session-4.20.0.tar.bz2) = c65d407dd0ba272ebf46f30f6c0cb31644d317d92d68cc12ca3f5dff30b58d0f
+SHA512 (xfce4-session-4.20.0.tar.bz2) = 2e3b1280830fe3b26d39e87fcc26fd2be6df5f1328b64529c46cc51fe80abcc07b2996fd07af331ee2a502f025f40576cfb49a7ddaa9cc82b1f3cf17484f1dd6
+Size (xfce4-session-4.20.0.tar.bz2) = 1185603 bytes
 SHA1 (patch-ac) = acbb27c79b5b6f37ff106c6cbbc87d00ecfe19f5
 SHA1 (patch-config.h.in) = d88c22147d46387494d5be929dce810a6c6d8778
 SHA1 (patch-configure) = 94ec4aa0e528ec835929def8d9d401b123982efa
 SHA1 (patch-libxfsm_xfsm-shutdown-common.h) = 965398a21b5b37a064fb00abf7c4dcb3a4208708
-SHA1 (patch-scripts_Makefile.in) = 042c3d9c632a57f9acfc8dab43aa6bca8ec69097
+SHA1 (patch-scripts_Makefile.in) = 3d52c2e302831101a48e3bf39c2cf49e88288529
 SHA1 (patch-settings_xfce4-session.xml) = 7e990e73d8dab022f3ebd2d4daa24ebc8dcf95a1
-SHA1 (patch-xfce4-session_xfsm-shutdown-fallback.c) = bd3133e9f1dc4a2069203d75058710fe66623c0e
-SHA1 (patch-xfsm-shutdown-helper_main.c) = db2dc4a7ce729b72092fa2777fd178cb3b7be258
+SHA1 (patch-xfce4-session_xfsm-shutdown-fallback.c) = 69649cb99423961f2b02f608c8c7253c4caae226
+SHA1 (patch-xfsm-shutdown-helper_main.c) = b5b4bd71d6998a677031b43243005845e7b52f67
