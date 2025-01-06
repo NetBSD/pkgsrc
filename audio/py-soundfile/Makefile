@@ -1,25 +1,21 @@
-# $NetBSD: Makefile,v 1.10 2024/10/14 06:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/06 11:40:13 adam Exp $
 
-DISTNAME=	soundfile-0.12.1
+DISTNAME=	soundfile-0.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/soundfile/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pysoundfile.readthedocs.io/
+HOMEPAGE=	https://github.com/bastibe/python-soundfile
 COMMENT=	Audio library based on libsndfile, CFFI and NumPy
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.0:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
