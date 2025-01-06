@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2025/01/03 13:41:51 adam Exp $
+# $NetBSD: Makefile,v 1.69 2025/01/06 07:54:18 adam Exp $
 
-DISTNAME=	dpkg_1.22.12
+DISTNAME=	dpkg_1.22.13
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
@@ -21,7 +21,7 @@ BUILD_DEFS+=	VARBASE
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake msgfmt perl:run gtar:run pod2man
+USE_TOOLS+=		gmake gtar:run msgfmt perl:run pkg-config pod2man
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-admindir=${VARBASE}/db/dpkg
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
