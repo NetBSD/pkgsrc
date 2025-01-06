@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.69 2025/01/05 14:49:39 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.70 2025/01/06 12:28:54 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -427,7 +427,7 @@ CARGO_CRATE_DEPENDS+=	toml-0.8.19
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.8
 CARGO_CRATE_DEPENDS+=	toml_edit-0.19.15
 CARGO_CRATE_DEPENDS+=	toml_edit-0.22.22
-CARGO_CRATE_DEPENDS+=	tpnote-lib-0.38.0
+CARGO_CRATE_DEPENDS+=	tpnote-lib-0.39.0
 CARGO_CRATE_DEPENDS+=	tracing-0.1.41
 CARGO_CRATE_DEPENDS+=	tracing-attributes-0.1.28
 CARGO_CRATE_DEPENDS+=	tracing-core-0.1.33
