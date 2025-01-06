@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/06 21:49:08 ktnb Exp $
 
 DISTNAME=	unscii-2.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://viznut.fi/unscii/
 

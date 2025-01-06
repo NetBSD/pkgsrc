@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2020/01/26 17:31:19 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/06 21:49:19 ktnb Exp $
 #
 
 DISTNAME=	GUIlib-1.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/projects/GUIlib/src/
 

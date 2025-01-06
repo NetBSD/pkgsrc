@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2024/05/06 08:40:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2025/01/06 21:49:21 ktnb Exp $
 
 DISTNAME=	libcaca-0.99.beta19
 PKGNAME=	${DISTNAME:S/beta//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://caca.zoy.org/files/libcaca/
 

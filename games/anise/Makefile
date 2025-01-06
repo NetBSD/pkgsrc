@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/04/25 14:22:52 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/06 21:49:09 ktnb Exp $
 #
 
 DISTNAME=	anise-beta10-20040307-linux
 PKGNAME=	anise-0beta10
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://kldp.net/download.php/1051/
 

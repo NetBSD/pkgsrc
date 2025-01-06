@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/01/06 21:36:24 ktnb Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/01/06 21:49:03 ktnb Exp $
 
 BUILDLINK_TREE+=	libslang
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libslang
 LIBSLANG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libslang+=	libslang>=2.1.3
-BUILDLINK_ABI_DEPENDS.libslang+=	libslang>=2.2.4nb3
+BUILDLINK_ABI_DEPENDS.libslang+=	libslang>=2.3.3
 BUILDLINK_PKGSRCDIR.libslang?=	../../devel/libslang
 pkgbase:=	libslang
 .include "../../mk/pkg-build-options.mk"

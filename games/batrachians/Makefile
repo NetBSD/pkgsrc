@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/12 12:14:16 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/06 21:49:09 ktnb Exp $
 
 DISTNAME=	batrachians-0.1.7
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	#
 

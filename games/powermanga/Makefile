@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2020/05/21 11:22:43 nia Exp $
+# $NetBSD: Makefile,v 1.33 2025/01/06 21:49:16 ktnb Exp $
 
 DISTNAME=	powermanga-0.93.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://linux.tlk.fr/games/Powermanga/download/
 EXTRACT_SUFX=	.tgz

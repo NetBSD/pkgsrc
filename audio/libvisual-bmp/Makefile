@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2024/12/27 08:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/01/06 21:49:01 ktnb Exp $
 #
 
 DISTNAME=		libvisual-bmp-0.2.0
-PKGREVISION=		49
+PKGREVISION=		50
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2023/11/12 13:21:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/06 21:49:19 ktnb Exp $
 #
 
 DISTNAME=	xye-0.12.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xye/0.12.1/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2023/11/12 13:21:12 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/06 21:49:04 ktnb Exp $
 
 DISTNAME=	rubysdl-2.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel audio graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

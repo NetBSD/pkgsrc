@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2023/11/12 13:21:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/01/06 21:49:04 ktnb Exp $
 
 BUILDLINK_TREE+=	py-game
 
@@ -8,7 +8,7 @@ PY_GAME_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=1.9.1
-BUILDLINK_ABI_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=1.9.6nb4
+BUILDLINK_ABI_DEPENDS.py-game+=	${PYPKGPREFIX}-game>=1.9.6nb5
 BUILDLINK_PKGSRCDIR.py-game?=	../../devel/py27-game
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

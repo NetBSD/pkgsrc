@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2023/05/22 16:40:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/06 21:49:04 ktnb Exp $
 
 DISTNAME=	newt-0.52.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://releases.pagure.org/newt/
 
@@ -35,7 +35,7 @@ SUBST_STAGE.inst-po=	pre-build
 SUBST_FILES.inst-po=	po/Makefile
 SUBST_VARS.inst-po=	INSTALL PKGLOCALEDIR
 
-.include "../../devel/libslang2/buildlink3.mk"
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/python/extension.mk"

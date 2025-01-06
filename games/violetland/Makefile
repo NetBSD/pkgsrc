@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2024/12/29 15:09:49 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:18 ktnb Exp $
 
 DISTNAME=	violetland-0.5-source-with-dependencies
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 PKGNAME=	${DISTNAME:S/-source-with-dependencies//}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ooxi/}
 

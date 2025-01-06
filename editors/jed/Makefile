@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2023/12/19 23:56:00 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:04 ktnb Exp $
 #
 PKGNAME=		jed-0.99.19
+PKGREVISION=	2
 LICENSE=		gnu-gpl-v2
 
 .include "../../editors/jed/Makefile.common"
