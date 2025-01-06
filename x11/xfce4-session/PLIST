@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/06/28 19:37:01 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/01/06 19:27:40 bsiegert Exp $
 bin/startxfce4
 bin/xfce4-session
 bin/xfce4-session-logout
@@ -10,7 +10,6 @@ man/man1/xfce4-session.1
 share/applications/xfce-session-settings.desktop
 share/applications/xfce4-session-logout.desktop
 share/examples/xfce4/Xft.xrdb
-share/examples/xfce4/autostart/xscreensaver.desktop
 share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 share/examples/xfce4/xinitrc
 share/icons/hicolor/128x128/apps/org.xfce.session.png
