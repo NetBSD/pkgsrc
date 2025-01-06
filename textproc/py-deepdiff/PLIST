@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/28 21:00:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/06 10:30:17 adam Exp $
 bin/deep-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
@@ -47,6 +47,7 @@ ${PYSITELIB}/deepdiff/operator.pyo
 ${PYSITELIB}/deepdiff/path.py
 ${PYSITELIB}/deepdiff/path.pyc
 ${PYSITELIB}/deepdiff/path.pyo
+${PYSITELIB}/deepdiff/py.typed
 ${PYSITELIB}/deepdiff/search.py
 ${PYSITELIB}/deepdiff/search.pyc
 ${PYSITELIB}/deepdiff/search.pyo
