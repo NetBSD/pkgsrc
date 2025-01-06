@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.158 2025/01/06 11:50:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.159 2025/01/06 12:29:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -201,3 +201,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-soundfile to 0.13.0 [adam 2025-01-06]
 	Updated math/py-numexpr to 2.10.2 [adam 2025-01-06]
 	Updated devel/py-line_profiler to 4.2.0 [adam 2025-01-06]
+	Updated editors/tp-note to 1.25.1 [pin 2025-01-06]
