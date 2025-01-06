@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.166 2025/01/06 20:35:23 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.167 2025/01/06 21:36:45 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -209,3 +209,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/fastfetch version 2.33.0 [vins 2025-01-06]
 	Updated devel/goredo to 2.6.4 [schmonz 2025-01-06]
 	Updated chat/twitch-tui to 2.6.18 [schmonz 2025-01-06]
+	Updated devel/libslang to 2.3.3 [ktnb 2025-01-06]
