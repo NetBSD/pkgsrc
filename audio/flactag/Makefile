@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2024/11/14 22:18:40 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/01/06 21:49:01 ktnb Exp $
 #
 
 DISTNAME=	flactag-2.0.4
-PKGREVISION=	27
+PKGREVISION=	29
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flactag/}
 
@@ -31,6 +31,6 @@ do-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../textproc/unac/buildlink3.mk"
 .include "../../audio/libmusicbrainz5/buildlink3.mk"
-.include "../../devel/libslang2/buildlink3.mk"
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

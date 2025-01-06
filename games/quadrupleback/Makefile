@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2020/01/08 11:46:27 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/06 21:49:17 ktnb Exp $
 
 DISTNAME=	quadrupleback-0.1.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
 

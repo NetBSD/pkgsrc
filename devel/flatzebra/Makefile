@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/08/02 19:30:56 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/06 21:49:03 ktnb Exp $
 
 DISTNAME=	flatzebra-0.1.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2020/03/20 11:57:46 nia Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/06 21:49:19 ktnb Exp $
 
 DISTNAME=	aalib-1.4rc5
 PKGNAME=	${DISTNAME:S/rc5/.0.5/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 

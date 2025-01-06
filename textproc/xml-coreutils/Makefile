@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2020/03/20 11:58:30 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/06 21:49:24 ktnb Exp $
 #
 
 DISTNAME=	xml-coreutils-0.8a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xml-coreutils/}
 

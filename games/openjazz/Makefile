@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/03/02 03:44:39 charlotte Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:16 ktnb Exp $
 
 DISTNAME=	openjazz-20190106
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AlisterT/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

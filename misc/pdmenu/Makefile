@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2025/01/05 14:29:15 ktnb Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/06 21:49:22 ktnb Exp $
 
 DISTNAME=	pdmenu-1.3.6
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	https://git.kitenet.net/index.cgi/pdmenu.git/snapshot/
 

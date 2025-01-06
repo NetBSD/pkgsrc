@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2024/05/06 08:40:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/06 21:49:12 ktnb Exp $
 #
 
 DISTNAME=		freesci-0.3.5
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		games
 MASTER_SITES=		#
 

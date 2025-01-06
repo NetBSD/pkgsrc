@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2023/11/12 13:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/06 21:49:11 ktnb Exp $
 
 DISTNAME=	einstein-puzzle-2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jordan-evens/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

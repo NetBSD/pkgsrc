@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2021/11/09 09:59:27 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/06 21:49:07 ktnb Exp $
 
 DISTNAME=	realboy-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=realboy/}
 EXTRACT_SUFX=	.tar.bz2

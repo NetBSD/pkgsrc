@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2020/01/26 17:31:47 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2025/01/06 21:49:23 ktnb Exp $
 
 DISTNAME=	smpeg-0.4.5
+PKGREVISION=	1
 CATEGORIES=	devel multimedia
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.xz

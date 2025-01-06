@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2024/12/27 08:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2025/01/06 21:49:05 ktnb Exp $
 
 DISTNAME=	BasiliskII-20190405
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cebix/}
 GITHUB_PROJECT=	macemu

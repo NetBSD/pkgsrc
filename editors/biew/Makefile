@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2017/08/01 17:40:10 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/01/06 21:49:04 ktnb Exp $
 #
 
 DISTNAME=	biew-${BIEWVER:S/.//g}-src
 PKGNAME=	biew-${BIEWVER}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beye/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2018/07/04 13:40:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2025/01/06 21:49:11 ktnb Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
 PKGNAME=		falcons-eye-1.9.3
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=falconseye/}
 EXTRACT_SUFX=		.zip

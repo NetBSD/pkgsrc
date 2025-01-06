@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/02/12 08:24:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:07 ktnb Exp $
 
 DISTNAME=	quasi88-0.6.4
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.eonet.ne.jp/~showtime/quasi88/release/
 EXTRACT_SUFX=	.tgz

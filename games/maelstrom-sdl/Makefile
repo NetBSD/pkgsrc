@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2023/08/02 19:21:52 nia Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/06 21:49:15 ktnb Exp $
 
 DISTNAME=	Maelstrom-3.0.6
 PKGNAME=	maelstrom-sdl-3.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.libsdl.org/projects/Maelstrom/src/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/11/17 09:55:14 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/06 21:49:05 ktnb Exp $
 
 DISTNAME=	advancemame-4.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=amadvance/}
 GITHUB_PROJECT=	advancemame

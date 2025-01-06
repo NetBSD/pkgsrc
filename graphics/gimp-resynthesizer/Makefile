@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2024/12/27 08:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/01/06 21:49:21 ktnb Exp $
 
 DISTNAME=	resynthesizer-0.16
 PKGNAME=	gimp-${DISTNAME}
-PKGREVISION=	60
+PKGREVISION=	61
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.logarithmic.net/pfh-files/resynthesizer/
 
