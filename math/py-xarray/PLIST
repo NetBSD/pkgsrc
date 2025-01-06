@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/12/26 23:20:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/01/06 10:55:38 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -419,6 +419,9 @@ ${PYSITELIB}/xarray/tests/test_dtypes.pyo
 ${PYSITELIB}/xarray/tests/test_duck_array_ops.py
 ${PYSITELIB}/xarray/tests/test_duck_array_ops.pyc
 ${PYSITELIB}/xarray/tests/test_duck_array_ops.pyo
+${PYSITELIB}/xarray/tests/test_duck_array_wrapping.py
+${PYSITELIB}/xarray/tests/test_duck_array_wrapping.pyc
+${PYSITELIB}/xarray/tests/test_duck_array_wrapping.pyo
 ${PYSITELIB}/xarray/tests/test_error_messages.py
 ${PYSITELIB}/xarray/tests/test_error_messages.pyc
 ${PYSITELIB}/xarray/tests/test_error_messages.pyo
