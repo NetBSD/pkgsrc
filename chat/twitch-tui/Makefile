@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/11/13 23:39:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/06 20:35:18 schmonz Exp $
 
-DISTNAME=	twitch-tui-2.6.17
+DISTNAME=	twitch-tui-2.6.18
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Xithrius/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
