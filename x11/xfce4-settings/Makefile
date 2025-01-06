@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2024/12/27 08:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/01/06 18:42:51 bsiegert Exp $
 
-PKGREVISION= 6
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-settings-4.18.6
+DISTNAME=	xfce4-settings-4.20.0
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/xfce/xfce4-settings/${PKGVERSION_NOREV:R}/
 
@@ -17,6 +16,8 @@ CONFIGURE_ARGS+=	--enable-sound-settings
 CONFIGURE_ARGS+=	--enable-pluggable-dialogs
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+USE_TOOLS+=	gdbus-codegen
 
 REPLACE_PYTHON=	dialogs/mime-settings/helpers/xfce4-compose-mail
 
@@ -37,6 +38,7 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus \
 		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml
 
 .include "../../audio/libcanberra/buildlink3.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
