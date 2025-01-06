@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/04/21 15:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/06 21:49:10 ktnb Exp $
 
 DISTNAME=		circuslinux-1.0.3
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.tuxpaint.org/unix/x/circus-linux/src/
 

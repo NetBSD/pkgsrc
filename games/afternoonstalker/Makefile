@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2020/01/08 11:43:42 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/06 21:49:08 ktnb Exp $
 
 DISTNAME=	afternoonstalker-1.1.6
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://perso.b2b2c.ca/~sarrazip/dev/
 

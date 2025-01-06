@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2021/12/13 13:26:39 nia Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/06 21:49:18 ktnb Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 MASTER_SITES=		http://spaceracer.sourceforge.net/
 EXTRACT_SUFX=		.tgz

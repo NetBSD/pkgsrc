@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2023/11/12 13:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/06 21:49:08 ktnb Exp $
 #
 
 DISTNAME=	LostPixels-0.5.3-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blinkensisters/}
 

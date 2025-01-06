@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2024/01/10 17:57:15 adam Exp $
+# $NetBSD: Makefile,v 1.59 2025/01/06 21:49:05 ktnb Exp $
 
 DISTNAME=		atari800-5.2.0-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_GITHUB:=atari800/}
 GITHUB_RELEASE=		ATARI800_${PKGVERSION_NOREV:S/./_/g}

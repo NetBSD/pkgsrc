@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/05/06 08:40:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/06 21:49:16 ktnb Exp $
 #
 
 DISTNAME=	pag-0.92
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/10/01 13:29:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/06 21:49:07 ktnb Exp $
 
 DISTNAME=	pce-0.2.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.hampa.ch/pub/pce/
 

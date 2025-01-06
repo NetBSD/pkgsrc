@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/02/03 16:09:25 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:16 ktnb Exp $
 
 DISTNAME=	pinball-0.3.20201218
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pinball/}
 

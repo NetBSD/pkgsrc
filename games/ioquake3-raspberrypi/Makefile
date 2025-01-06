@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2018/01/14 17:33:59 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/06 21:49:13 ktnb Exp $
 
 DISTNAME=	ioquake3-raspberrypi-20150118
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.invisible.ca/packages/distfiles/
 EXTRACT_SUFX=	.zip

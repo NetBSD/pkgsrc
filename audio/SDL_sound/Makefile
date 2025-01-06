@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/04/20 07:35:24 nia Exp $
+# $NetBSD: Makefile,v 1.35 2025/01/06 21:49:01 ktnb Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.3
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		audio
 MASTER_SITES=		http://icculus.org/SDL_sound/downloads/
 

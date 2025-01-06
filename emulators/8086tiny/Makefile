@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/07/30 22:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/06 21:49:05 ktnb Exp $
 
 DISTNAME=	8086tiny_125
 PKGNAME=	${DISTNAME:S/tiny_1/tiny-1./}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	# http://www.megalith.co.uk/8086tiny/downloads/
 EXTRACT_SUFX=	.tar.bz2

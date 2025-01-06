@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2017/08/01 14:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/01/06 21:49:09 ktnb Exp $
 
 DISTNAME=		bomberclone-0.11.9
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2018/01/07 13:04:25 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2025/01/06 21:49:23 ktnb Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	mjpegtools
 MJPEGTOOLS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mjpegtools+=	mjpegtools>=1.8.0
-BUILDLINK_ABI_DEPENDS.mjpegtools+=	mjpegtools>=2.0.0nb4
+BUILDLINK_ABI_DEPENDS.mjpegtools+=	mjpegtools>=2.1.0nb2
 BUILDLINK_PKGSRCDIR.mjpegtools?=	../../multimedia/mjpegtools
 
 .include "../../audio/lame/buildlink3.mk"

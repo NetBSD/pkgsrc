@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2023/10/24 22:10:39 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/01/06 21:49:24 ktnb Exp $
 
 DISTNAME=	slrn-1.0.3a
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	news
 MASTER_SITES=	http://jedsoft.org/releases/slrn/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,14 +25,14 @@ CONFIGURE_ARGS+=	--enable-grouplens
 CONFIGURE_ARGS+=	--enable-mid-cache
 CONFIGURE_ARGS+=	--with-slrnpull
 CONFIGURE_ARGS+=	--with-libdir=${PREFIX}/lib/slrn
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang2}
+CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 CONFIGURE_ARGS+=	--with-localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 
 .include "options.mk"
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-BUILDLINK_API_DEPENDS.libslang2+=	libslang2>=2.2.3
-.include "../../devel/libslang2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libslang+=	libslang>=2.2.3
+.include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

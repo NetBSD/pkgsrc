@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/01/12 12:11:18 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/06 21:49:10 ktnb Exp $
 
 DISTNAME=	cosmosmash-1.4.8
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	#
 

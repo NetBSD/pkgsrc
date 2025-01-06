@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2020/01/26 05:26:21 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/06 21:49:03 ktnb Exp $
 #
 
 DISTNAME=	SDLmm-0.1.8
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlmm/}
 
