@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/23 15:54:52 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/06 20:58:01 jschauma Exp $
 
-VERSION=	0.7.0
-PKGREVISION=	2
+VERSION=	0.8.0
 DISTNAME=	oqs-provider-${VERSION}
 DIST_SUBDIR=	${PKGNAME}
 CATEGORIES=	security
