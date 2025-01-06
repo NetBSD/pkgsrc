@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2023/10/19 14:44:45 wiz Exp $
+$NetBSD: distinfo,v 1.26 2025/01/06 07:51:02 adam Exp $
 
-BLAKE2s (onig-6.9.9.tar.gz) = af663b1b94a7f4927b2e2d65d8ee0dbc4a1fcf8359b63b8c6033ab620582e83d
-SHA512 (onig-6.9.9.tar.gz) = 14d2afd0d2cf86012c9959f221e9a77e7787e709c9dd7295d159e0a9ba89df52fa3edc59f95a6d859c34181e2e2e53e21b932b3eceb4d6ddeb2a3445ef951e95
-Size (onig-6.9.9.tar.gz) = 957444 bytes
+BLAKE2s (onig-6.9.10.tar.gz) = dd99b25b0d14e4ce7372f8a2f9ef9caf82ac5686545fe55820a3bed29d71f650
+SHA512 (onig-6.9.10.tar.gz) = f7cf33008ca0181322fb8efc8e6bb67a1f81677095a33d88134781b804e6a9fbf675f05789d762fdd3d9f0171f8dc4c2e960c2b6a09ddd03bfd35a5ab0920317
+Size (onig-6.9.10.tar.gz) = 979159 bytes
