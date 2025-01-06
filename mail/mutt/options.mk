@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2024/05/06 13:33:23 wiz Exp $
+# $NetBSD: options.mk,v 1.39 2025/01/06 21:56:34 wiz Exp $
 
 # Global and legacy options
 
@@ -60,8 +60,8 @@ CONFIGURE_ARGS+=	--without-gnutls
 ### Slang
 ###
 .if !empty(PKG_OPTIONS:Mslang)
-.  include "../../devel/libslang2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang2}
+.  include "../../devel/libslang/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .endif
 
 ###
