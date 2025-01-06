@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.154 2025/01/06 08:32:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.155 2025/01/06 10:31:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -193,3 +193,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/dpkg to 1.22.13 [adam 2025-01-06]
 	Updated devel/py-gitdb to 4.0.12 [adam 2025-01-06]
 	Updated devel/py-gitpython to 3.1.44 [adam 2025-01-06]
+	Added devel/py-orderly-set version 5.2.3 [adam 2025-01-06]
+	Updated textproc/py-deepdiff to 8.1.1 [adam 2025-01-06]
