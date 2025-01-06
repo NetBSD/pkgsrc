@@ -1,0 +1,31 @@
+$NetBSD: patch-configure,v 1.1 2025/01/06 21:36:25 ktnb Exp $
+
+--- configure.orig	2011-04-11 02:37:07.000000000 +0000
++++ configure
+@@ -6787,6 +6787,7 @@ fi
+ 
+ 
+ fi
++if false; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for terminfo" >&5
+ $as_echo_n "checking for terminfo... " >&6; }
+ if test "$nc5config" != "no"
+@@ -6812,6 +6813,7 @@ $as_echo "yes" >&6; }
+       break
+    fi
+ done
++fi
+ if test "$TERMCAP"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+@@ -6857,8 +6859,8 @@ then
+   fi
+ fi
+ 
+-OBJDIR=$SRCDIR/"\$(ARCH)"objs
+-ELFDIR=$SRCDIR/"\$(ARCH)"elfobjs
++OBJDIR=$SRCDIR/
++ELFDIR=$OBJDIR
+ 
+ 
+ missingmodules=""

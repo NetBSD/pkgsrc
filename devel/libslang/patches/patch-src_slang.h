@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2006/09/08 19:23:01 kristerw Exp $
+$NetBSD: patch-src_slang.h,v 1.1 2025/01/06 21:36:25 ktnb Exp $
 
---- src/slang.h.orig	Sun Jan  9 03:08:35 2000
-+++ src/slang.h	Sun Jan  9 03:09:44 2000
-@@ -24,6 +24,11 @@
+--- src/slang.h.orig	2007-10-28 18:37:14.000000000 -0400
++++ src/slang.h
+@@ -43,6 +43,11 @@ USA.  
  # endif
  #endif /* __watcomc__ */
  
