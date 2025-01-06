@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.157 2025/01/06 11:40:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.158 2025/01/06 11:50:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -199,3 +199,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-xarray-einstats to 0.8.0 [adam 2025-01-06]
 	Updated math/py-xgboost to 2.1.3 [adam 2025-01-06]
 	Updated audio/py-soundfile to 0.13.0 [adam 2025-01-06]
+	Updated math/py-numexpr to 2.10.2 [adam 2025-01-06]
+	Updated devel/py-line_profiler to 4.2.0 [adam 2025-01-06]
