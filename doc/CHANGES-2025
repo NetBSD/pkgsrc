@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.175 2025/01/07 12:39:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.176 2025/01/07 12:45:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -222,3 +222,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-trove-classifiers to 2025.1.6.15 [adam 2025-01-07]
 	Updated devel/py-poetry-core to 2.0.0 [wiz 2025-01-07]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.0.0 [wiz 2025-01-07]
+	Updated sysutils/py-Glances to 4.3.0.8 [wiz 2025-01-07]
