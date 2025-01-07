@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/07 08:08:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/07 11:56:36 riastradh Exp $
 
 DISTNAME=		chezscheme-10.0.0
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cisco/}
 GITHUB_PROJECT=		ChezScheme
@@ -30,16 +31,30 @@ CONFIGURE_ARGS+=	--temproot=${DESTDIR:Q}
 CONFIGURE_ARGS+=	--installschemename=${PKGBASE}
 CONFIGURE_ARGS+=	--installscriptname=${PKGBASE}-script
 CONFIGURE_ARGS+=	--as-is # skip Git submodule update
+CONFIGURE_ARGS+=	--workarea=pkgsrc-build
 
 CONFIGURE_ENV.NetBSD+=	PAXCTL=${PAXCTL:Q}
 
 BUILD_TARGET=	build
 TEST_TARGET=	test
 
-# Chez Scheme uses a very weird scheme of machine type identifier in file
-# paths, and we don't want to replicate the logic in ${WRKSRC/configure
-# here.
-PLIST_TYPE=	dynamic
+# Chez uses its own idiosyncratic platform nomenclature, like ta6nb for:
+#
+# - t: threaded
+# - a: amd64
+# - 6: 64-bit
+# - nb: NetBSD
+#
+# Rather than copy the logic mapping OPSYS/MACHINE_ARCH to it, read it
+# out of the file where Chez stores it after configure.
+#
+# XXX There are three possible variables: m, defaultm, and mboot.
+# mboot is probably wrong; not clear whether to use m or defaultm here.
+PLIST_SUBST+=		CHEZ_PLATFORM=${CHEZ_PLATFORM}
+CHEZ_PLATFORM=		${CHEZ_PLATFORM_sh:sh}
+CHEZ_PLATFORM_sh=	\
+	cd ${WRKSRC:Q} && \
+	${AWK} -F= '$$1 == "m" { print $$2 }' <pkgsrc-build/Mf-config
 
 .include "../../mk/pax.mk"
 .include "../../mk/bsd.pkg.mk"
