@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.60 2025/01/07 08:08:42 riastradh Exp $
+# $NetBSD: plist.mk,v 1.61 2025/01/07 08:43:58 riastradh Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -235,7 +235,7 @@ GENERATE_PLIST?=	${TRUE};
 .if ${PLIST_TYPE} == "dynamic"
 _GENERATE_PLIST=							\
 	${FIND} ${DESTDIR}${PREFIX} \! -type d -print | ${SORT} |	\
-		${SED} -e "s|^${DESTDIR}${PREFIX}/||"
+		${SED} -e "s|^${DESTDIR}${PREFIX}/||";
 .else
 _GENERATE_PLIST=	${CAT} /dev/null ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
