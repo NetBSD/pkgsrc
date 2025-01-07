@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.178 2025/01/07 12:50:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.179 2025/01/07 12:55:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -225,3 +225,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-Glances to 4.3.0.8 [wiz 2025-01-07]
 	Updated www/py-google-api-python-client to 2.157.0 [wiz 2025-01-07]
 	Updated audio/alsa-lib to 1.2.13 [wiz 2025-01-07]
+	Updated sysutils/snmp_exporter to 0.27.0 [wiz 2025-01-07]
