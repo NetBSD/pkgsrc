@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2024/11/11 07:28:45 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/07 11:56:20 adam Exp $
 
-DISTNAME=	trove_classifiers-2024.10.21.16
+DISTNAME=	trove_classifiers-2025.1.6.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/trove-classifiers/}
