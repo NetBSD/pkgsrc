@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/06/06 12:41:43 riastradh Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/07 19:56:45 riastradh Exp $
 
 GCC_PKGNAME=	gcc7
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC7_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc7 package so that with the dependence pattern
 ## '{gcc7,gcc7-libs}>=7.5.*' pkg_add will choose gcc7-libs over gcc7.
-PKGREVISION=	7
+PKGREVISION=	8
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -35,6 +35,10 @@ LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Workaround for PR pkg/58966: mk: REQUIRES/PROVIDES analysis is wrong
+# for self-libraries.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib

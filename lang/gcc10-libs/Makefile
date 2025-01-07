@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/07 19:54:31 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/07 19:56:45 riastradh Exp $
 
 GCC_PKGNAME=	gcc10
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC10_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc10 package so that with the dependence pattern
 ## '{gcc10,gcc10-libs}>=10.2.*' pkg_add will choose gcc10-libs over gcc10.
-PKGREVISION=	4
+PKGREVISION=	5
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -35,6 +35,10 @@ LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Workaround for PR pkg/58966: mk: REQUIRES/PROVIDES analysis is wrong
+# for self-libraries.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib
