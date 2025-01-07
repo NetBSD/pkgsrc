@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2025/01/07 08:08:54 riastradh Exp $
+
+Allow path to paxctl(8) to be passed through the environment so the
+build need not have /usr/sbin in PATH.
+
+--- configure.orig	2024-02-05 22:52:07.000000000 +0000
++++ configure
+@@ -988,7 +988,7 @@ esac
+ # pre- and post-link-executable step for c/Mf-unix
+ case "${flagsmuni}" in
+     *nb)
+-        exePostStep='paxctl +m'
++        exePostStep="${PAXCTL:-paxctl} +m"
+         ;;
+     em)
+         if [ "$empetite" = yes ]; then
