@@ -1,7 +1,8 @@
-$NetBSD: patch-gcc_Makefile.in,v 1.1 2022/03/13 08:34:04 nia Exp $
+$NetBSD: patch-gcc_Makefile.in,v 1.2 2025/01/07 19:54:31 riastradh Exp $
 
-Add gcc libdir to a programs rpath so that _this gcc's_ support libraries
-are found.
+Ensure libgcc from this GCC is found before others.  Note that there must
+not be a whitespace between $(LINKER_RPATH_FLAG) and the path.  Otherwise
+the flag may be misinterpreted by the linker (e.g. Apple ld).
 
 --- gcc/Makefile.in.orig	2017-04-18 18:10:27.000000000 +0000
 +++ gcc/Makefile.in
@@ -9,7 +10,7 @@ are found.
  # Language-independent files.
  
  DRIVER_DEFINES = \
-+  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(prefix)//lib/%M $(LINKER_RPATH_FLAG) $(libdir)/%M \"" \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG)$(prefix)/@GCC_TARGET_MACHINE@/lib/%M $(LINKER_RPATH_FLAG)$(libdir)/%M \"" \
    -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
    -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
    -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \

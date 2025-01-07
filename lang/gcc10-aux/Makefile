@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/08/15 13:49:17 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/07 19:54:31 riastradh Exp $
 
 GCC_PKGNAME=		gcc10-aux
-PKGREVISION=		1
+PKGREVISION=		2
 .include		"version.mk"
 
 DISTNAME=	gcc-${GCC10_DIST_VERSION}
@@ -183,6 +183,22 @@ SUBST_STAGE.ccs=	pre-configure
 SUBST_FILES.ccs=	contrib/make_sunver.pl
 SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
 .endif
+
+# DO NOT REMOVE THIS SUBST.  If it fails, the corruption to
+# patch-gcc_Makefile.in chronicled in PR pkg/58963 `gcc:
+# LINK_LIBGCC_SPEC snafu' <https://gnats.NetBSD.org/58963> probably got
+# replicated yet again.  You must make sure that LINK_LIBGCC_SPEC is
+# appropriately set with @GCC_TARGET_MACHINE@ in patch-gcc_Makefile.in
+# or similar, or confirm with a discussion on tech-pkg@ that it is no
+# longer relevant before you remove this SUBST.
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
+
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 CTF_FILES_SKIP+=	*/gengtype	# CPU limit exceeded
 
