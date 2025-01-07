@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/01/07 19:40:21 vins Exp $
+
+BLAKE2s (hwdata-0.391.tar.gz) = 5575f37ce09c40dd2a684da627c0fc01f3a977c88a8cd829aa2039b8bf7e0c1d
+SHA512 (hwdata-0.391.tar.gz) = 9b831a7546ac6ca457b92bf438ba84d6487980b15a304af78ba8738cc456e02a62b1d19a849573ed596c85a3fbbc88ca305e5e4c665f27e8d75454be41d708f0
+Size (hwdata-0.391.tar.gz) = 2479872 bytes
+SHA1 (patch-Makefile) = 2b56fd5ae425f7ad5a38a7d6dea9e3b51299cfe2
