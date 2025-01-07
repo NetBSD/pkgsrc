@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25271 2025/01/06 21:36:45 ktnb Exp $
+$NetBSD: TODO,v 1.25272 2025/01/07 11:56:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -1146,7 +1146,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-pspdfutils-3.3.7
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
-	o py-ruff-0.8.6
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
