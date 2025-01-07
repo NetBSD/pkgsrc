@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.193 2025/01/07 19:45:21 vins Exp $
+$NetBSD: CHANGES-2025,v 1.194 2025/01/07 20:02:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -242,3 +242,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/xfce4-wm to 4.20.0 [bsiegert 2025-01-07]
 	Added time/clock-rs version 0.1.212 [pin 2025-01-07]
 	Added misc/hwdata version 0.391 [vins 2025-01-07]
+	Updated textproc/py-markups to 4.1.0 [adam 2025-01-07]
+	Updated devel/py-syrupy to 4.8.0 [adam 2025-01-07]
+	Updated math/py-tables to 3.10.2 [adam 2025-01-07]
