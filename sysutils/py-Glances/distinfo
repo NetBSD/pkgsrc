@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2025/01/02 12:10:56 fox Exp $
+$NetBSD: distinfo,v 1.33 2025/01/07 12:45:13 wiz Exp $
 
-BLAKE2s (glances-4.3.0.6.tar.gz) = d26282e12e7f6e6669f720e4d2fd6f6f3e6981e0667c1b4636e7d1b3941de8c3
-SHA512 (glances-4.3.0.6.tar.gz) = c78017a692dae2b7d818d227e05536098b13bd41a56e8908bacab9a2d406eb73ee2360fc54f7bf10cb119439b7010f68f1fb84768fcb93cf3b9b3f1598428668
-Size (glances-4.3.0.6.tar.gz) = 6985557 bytes
+BLAKE2s (glances-4.3.0.8.tar.gz) = 1cfd2411205ab22f4c6601e01fb026b6886283f6ce81e05dda6fc451700c1808
+SHA512 (glances-4.3.0.8.tar.gz) = 4dbd260988a2fb89a4cc6fdbafd63c243e23dcd5054732faec810974a3a8484cd89c7f2b146f3cd703109752df052ea6cb9062ab18e372fcf6c4aa41b1d5430c
+Size (glances-4.3.0.8.tar.gz) = 6987616 bytes
