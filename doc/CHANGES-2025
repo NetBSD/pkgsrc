@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.170 2025/01/07 09:21:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.171 2025/01/07 11:38:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -214,3 +214,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated news/newsraft to 0.28 [ktnb 2025-01-07]
 	Updated sysutils/ansible to 11.1.0 [adam 2025-01-07]
 	Updated net/py-pypiserver to 2.3.2 [adam 2025-01-07]
+	Updated net/samba4 to 4.21.3 [adam 2025-01-07]
+	Updated devel/py-dash to 8.0.4 [adam 2025-01-07]
