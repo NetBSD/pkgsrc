@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.657 2024/11/13 14:20:41 wiz Exp $
+# $NetBSD: Makefile,v 1.658 2025/01/07 19:44:05 vins Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -124,6 +124,7 @@ SUBDIR+=	hs-cabal-install-solver
 SUBDIR+=	hs-extra
 SUBDIR+=	hs-magic
 SUBDIR+=	hs-pager
+SUBDIR+=	hwdata
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	incidenceeditor
 SUBDIR+=	indi
