@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.189 2025/01/07 17:27:12 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.190 2025/01/07 19:31:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -238,3 +238,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox115 to 115.19.0 [bsiegert 2025-01-07]
 	Updated www/firefox128-l10n to 128.6.0 [bsiegert 2025-01-07]
 	Updated www/firefox128 to 128.6.0 [bsiegert 2025-01-07]
+	Updated x11/xfce4-terminal to 1.1.4 [bsiegert 2025-01-07]
