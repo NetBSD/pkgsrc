@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/01/07 11:56:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/07 13:03:20 riastradh Exp $
 
 DISTNAME=		chezscheme-10.0.0
 PKGREVISION=		1
@@ -51,6 +51,9 @@ TEST_TARGET=	test
 # XXX There are three possible variables: m, defaultm, and mboot.
 # mboot is probably wrong; not clear whether to use m or defaultm here.
 PLIST_SUBST+=		CHEZ_PLATFORM=${CHEZ_PLATFORM}
+PRINT_PLIST_AWK+=	\
+	/^lib\/csv[0-9.]*\// \
+		{ sub(/${CHEZ_PLATFORM}/, "$${CHEZ_PLATFORM}") }
 CHEZ_PLATFORM=		${CHEZ_PLATFORM_sh:sh}
 CHEZ_PLATFORM_sh=	\
 	cd ${WRKSRC:Q} && \
