@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/01/02 12:10:56 fox Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/07 12:45:13 wiz Exp $
 
-DISTNAME=	glances-4.3.0.6
+DISTNAME=	glances-4.3.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
@@ -15,6 +15,16 @@ DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-orjson>=0:../../textproc/py-orjson
+TEST_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+TEST_DEPENDS+=	${PYPKGPREFIX}-selenium-[0-9]*:../../www/py-selenium
+# DEPENDS for WebUI/RestFull API
+#TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
+#TEST_DEPENDS+=	${PYPKGPREFIX}-uvicorn-[0-9]*:../../www/py-uvicorn
+
+# for testing
+ALLOW_NETWORK_ACCESS=	yes
+# as of 4.3.0.8
+# 35 failed, 35 passed, 2 skipped, 5 errors
 
 USE_LANGUAGES=	# none
 
