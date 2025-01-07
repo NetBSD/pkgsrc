@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2025/01/05 08:58:47 adam Exp $
+# $NetBSD: Makefile,v 1.88 2025/01/07 15:35:30 jperkin Exp $
 
 DISTNAME=	scipy-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -29,7 +29,7 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		ATLAS=None
-GCC_REQD+=		14
+GCC_REQD+=		13
 
 SUBST_CLASSES+=		f2py
 SUBST_STAGE.f2py=	pre-configure
