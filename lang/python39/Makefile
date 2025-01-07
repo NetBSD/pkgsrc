@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/12/05 07:49:52 adam Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/07 19:34:41 riastradh Exp $
 
 .include "dist.mk"
 
@@ -56,7 +56,8 @@ PTHREAD_OPTS+=	require
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
-CONFIGURE_ARGS+=	PYTHON_FOR_BUILD=${TOOLBASE:Q}/bin/python3.9
+CONFIGURE_ARGS+=	\
+	PYTHON_FOR_BUILD=${TOOLBASE:Q}/bin/python${PY_VER_SUFFIX}
 CONFIGURE_ARGS+=	MACHDEP=${PY_PLATNAME}
 CONFIGURE_ARGS+=	ac_sys_system=${OPSYS}
 .  if ${OPSYS} == "OSF1"
