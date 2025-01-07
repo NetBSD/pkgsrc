@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.38 2024/06/04 13:10:45 cheusov Exp $
+# $NetBSD: print-plist.mk,v 1.39 2025/01/07 08:23:23 riastradh Exp $
 #
 # Automatic PLIST generation
 #  - files & symlinks first
@@ -138,6 +138,7 @@ print-PLIST:
 		/^man\// { sub("\\.gz$$", ""); }			\
 		{ print $$0; }'
 	${RUN}\
+	saveIFS=$$IFS; IFS=$$(printf '\n.'); IFS=$${IFS%.};		\
 	for i in `${_PRINT_PLIST_DIRS_CMD}				\
 			| ${AWK} '					\
 				${EARLY_PRINT_PLIST_AWK}		\
@@ -154,8 +155,9 @@ print-PLIST:
 				/^${PKGINFODIR:S|/|\\/|g}$$/ { next; }	\
 				{ print $$0; }'` ;			\
 	do								\
-		if [ `${LS} -la ${DESTDIR}${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
-			${ECHO} @pkgdir $$i | ${AWK} '			\
+		IFS=$$saveIFS;						\
+		if [ `${LS} -la ${DESTDIR}${PREFIX}/"$$i" | ${WC} -l` = 3 ]; then	\
+			${ECHO} @pkgdir "$$i" | ${AWK} '		\
 			${PRINT_PLIST_AWK}				\
 			{ print $$0; }' ;				\
 		fi ;							\
