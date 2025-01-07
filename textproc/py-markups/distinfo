@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/07/31 21:58:36 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2025/01/07 19:47:21 adam Exp $
 
-BLAKE2s (Markups-4.0.0.tar.gz) = c965ceae3161ff1f7f32b4e025cedd217661481bb7fad7e91b964f90c548d96e
-SHA512 (Markups-4.0.0.tar.gz) = 5868b480debad480100ce632223aeca62ef22a6d9b2af6b4911d3477c94bcd99b88b5bc56f990d24d92de0d2665340e0fce37721f7979938ba947fab2c65900c
-Size (Markups-4.0.0.tar.gz) = 22968 bytes
+BLAKE2s (markups-4.1.0.tar.gz) = 064d8b3fb4993506d96f621c13b104a557780f39e2562ac5619d8166c975d8a3
+SHA512 (markups-4.1.0.tar.gz) = f87a2c25e8d27d8f2502980b2a9810fa895ba37731b38579d01766bd390497fe86eab5285b6d5e7ec6aa177f3019995bfce570fb7431bd7eafa71a5c5f91254b
+Size (markups-4.1.0.tar.gz) = 23072 bytes
