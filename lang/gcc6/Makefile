@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/06/23 15:47:17 tsutsui Exp $
+# $NetBSD: Makefile,v 1.48 2025/01/07 19:56:15 riastradh Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -57,6 +57,13 @@ FORCE_C_STD=		gnu99
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
+# DO NOT REMOVE THIS SUBST.  If it fails, the corruption to
+# patch-gcc_Makefile.in chronicled in PR pkg/58963 `gcc:
+# LINK_LIBGCC_SPEC snafu' <https://gnats.NetBSD.org/58963> probably got
+# replicated yet again.  You must make sure that LINK_LIBGCC_SPEC is
+# appropriately set with @GCC_TARGET_MACHINE@ in patch-gcc_Makefile.in
+# or similar, or confirm with a discussion on tech-pkg@ that it is no
+# longer relevant before you remove this SUBST.
 SUBST_CLASSES+=		vars
 SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
 SUBST_STAGE.vars=	pre-configure
