@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2025/01/02 16:26:36 tnn Exp $
+# $NetBSD: Makefile,v 1.170 2025/01/07 15:48:51 jperkin Exp $
 
 DISTNAME=	librsvg-2.59.2
 CATEGORIES=	graphics gnome
@@ -25,6 +25,7 @@ PYTHON_FOR_BUILD_ONLY=		tool
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cairo}/lib
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
+LDFLAGS.SunOS+=			-lsocket
 
 PKGCONFIG_OVERRIDE=		output/meson-private/librsvg-2.0.pc
 PKGCONFIG_OVERRIDE_STAGE=	post-configure
