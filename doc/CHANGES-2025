@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.186 2025/01/07 16:12:20 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.187 2025/01/07 16:38:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/slumber to 2.5.0 [pin 2025-01-07]
 	Updated net/sniffnet to 1.3.2 [pin 2025-01-07]
 	Updated www/snac to 2.68 [schmonz 2025-01-07]
+	Updated security/ssh-audit to 3.3.0 [he 2025-01-07]
