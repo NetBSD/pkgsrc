@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/07 19:37:36 pin Exp $
+bin/clock-rs
