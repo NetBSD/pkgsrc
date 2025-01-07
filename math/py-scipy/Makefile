@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2025/01/07 15:35:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.89 2025/01/07 15:58:01 riastradh Exp $
 
 DISTNAME=	scipy-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,7 @@ COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.8:../../devel/py-cython
-# Package directly expresses a meson minimum; we need higher to pick up our
-# multi-version build fixes.
-TOOL_DEPENDS+=	meson>=1.2.2nb1:../../devel/meson
+TOOL_DEPENDS+=	meson>=1.5.0:../../devel/meson
 TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.15.0:../../devel/py-meson_python
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wheel-[0-9]*:../../devel/py-wheel
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pythran>=0.14.0:../../math/py-pythran
@@ -29,7 +27,7 @@ USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		ATLAS=None
-GCC_REQD+=		13
+GCC_REQD+=		9
 
 SUBST_CLASSES+=		f2py
 SUBST_STAGE.f2py=	pre-configure
