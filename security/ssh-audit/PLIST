@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/11/15 15:08:22 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/07 16:36:43 he Exp $
 bin/ssh-audit
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -23,6 +23,12 @@ ${PYSITELIB}/ssh_audit/auditconf.pyo
 ${PYSITELIB}/ssh_audit/banner.py
 ${PYSITELIB}/ssh_audit/banner.pyc
 ${PYSITELIB}/ssh_audit/banner.pyo
+${PYSITELIB}/ssh_audit/builtin_policies.py
+${PYSITELIB}/ssh_audit/builtin_policies.pyc
+${PYSITELIB}/ssh_audit/builtin_policies.pyo
+${PYSITELIB}/ssh_audit/dheat.py
+${PYSITELIB}/ssh_audit/dheat.pyc
+${PYSITELIB}/ssh_audit/dheat.pyo
 ${PYSITELIB}/ssh_audit/exitcodes.py
 ${PYSITELIB}/ssh_audit/exitcodes.pyc
 ${PYSITELIB}/ssh_audit/exitcodes.pyo
@@ -92,9 +98,6 @@ ${PYSITELIB}/ssh_audit/timeframe.pyo
 ${PYSITELIB}/ssh_audit/utils.py
 ${PYSITELIB}/ssh_audit/utils.pyc
 ${PYSITELIB}/ssh_audit/utils.pyo
-${PYSITELIB}/ssh_audit/versionvulnerabilitydb.py
-${PYSITELIB}/ssh_audit/versionvulnerabilitydb.pyc
-${PYSITELIB}/ssh_audit/versionvulnerabilitydb.pyo
 ${PYSITELIB}/ssh_audit/writebuf.py
 ${PYSITELIB}/ssh_audit/writebuf.pyc
 ${PYSITELIB}/ssh_audit/writebuf.pyo
