@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/03/13 08:34:04 nia Exp $
+$NetBSD: distinfo,v 1.2 2025/01/07 19:54:31 riastradh Exp $
 
 BLAKE2s (gcc-10.3.0.tar.xz) = 6d7c42f9386e5e32a3148122471cb207e5f65d7b5f53b3c9adba2d45a4f28715
 SHA512 (gcc-10.3.0.tar.xz) = 2b2dd7453d48a398c29eaebd1422b70341001b8c90a62aee51e83344e7fdd8a8e45f82a4a9165bd7edc76dada912c932f4b6632c5636760fec4c5d7e402b3f86
@@ -8,7 +8,7 @@ SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf4130
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
 SHA1 (patch-contrib_download__prerequisites) = 9cdcde21ab174052911447d20762ddfd40aa8791
 SHA1 (patch-fixincludes_inclhack.def) = 7b00974d3f52a8364190a607f52a5d7e8a6db41a
-SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
+SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_ada_Makefile.rtl) = 1b6a18dce5ffe752be942f6e328d487692f3b33a
 SHA1 (patch-gcc_ada_adaint.c) = 465b3e3d6db193b2729f1d4e1c74eefcc3dc85bf
 SHA1 (patch-gcc_ada_adaint.h) = 57befa67b18f97345db05672f1e53e8ec70e1935
