@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.5 2025/01/07 04:17:20 riastradh Exp $
+
+Avoid `env -u', which isn't available on all platforms.
+
+--- Makefile.orig	2024-05-10 15:37:14.000000000 +0000
++++ Makefile
+@@ -182,10 +182,10 @@ err_if_empty = $(if $(strip $($(1))),$(s
+ # Windows and Mac (both podman-remote client only) require CGO_ENABLED=0.
+ CGO_ENABLED ?= 1
+ # Default to the native OS type and architecture unless otherwise specified
+-NATIVE_GOOS := $(shell env -u GOOS $(GO) env GOOS)
++NATIVE_GOOS := $(shell unset GOOS; $(GO) env GOOS)
+ GOOS ?= $(call err_if_empty,NATIVE_GOOS)
+ # Default to the native architecture type
+-NATIVE_GOARCH := $(shell env -u GOARCH $(GO) env GOARCH)
++NATIVE_GOARCH := $(shell unset GOARCH; $(GO) env GOARCH)
+ GOARCH ?= $(NATIVE_GOARCH)
+ ifeq ($(call err_if_empty,GOOS),windows)
+ BINSFX := .exe

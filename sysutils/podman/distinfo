@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.10 2024/06/03 02:07:44 maya Exp $
+$NetBSD: distinfo,v 1.11 2025/01/07 04:17:19 riastradh Exp $
 
 BLAKE2s (podman-5.0.3.tar.gz) = 7afdfd82acc64c7308fbc92294dbcea42d12a92f082dda12d8579195827cfb53
 SHA512 (podman-5.0.3.tar.gz) = c605a52cc5aba43d485796c4986f2d1be704e5c931473bf5ba1cf77f703cdb3d16f41d33da0b25287e8d001077f77caf117d3ea5dbd7c56a744274025d9ab07d
 Size (podman-5.0.3.tar.gz) = 23814179 bytes
+SHA1 (patch-Makefile) = 10b1873cf6aaacaf479cf40f076dd02b45d2dbac
 SHA1 (patch-cmd_podman_registry_config.go) = 80b0f940c59f0c0f258c2240bac30af6a0cb21dd
 SHA1 (patch-pkg_machine_ignition__netbsd.go) = f5b4640d77c6152aa51c0c0e68de47fded340869
 SHA1 (patch-pkg_machine_qemu_machine.go) = c2ca6388e0517c5485ff532fd7027326ba017edc
