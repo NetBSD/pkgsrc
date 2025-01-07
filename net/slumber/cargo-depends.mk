@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.26 2024/12/28 22:00:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.27 2025/01/07 14:50:50 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -61,7 +61,7 @@ CARGO_CRATE_DEPENDS+=	dirs-5.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.4.1
 CARGO_CRATE_DEPENDS+=	displaydoc-0.2.5
 CARGO_CRATE_DEPENDS+=	downcast-rs-1.2.1
-CARGO_CRATE_DEPENDS+=	editor-command-0.1.1
+CARGO_CRATE_DEPENDS+=	editor-command-1.0.0
 CARGO_CRATE_DEPENDS+=	either-1.13.0
 CARGO_CRATE_DEPENDS+=	encode_unicode-1.0.0
 CARGO_CRATE_DEPENDS+=	env-lock-0.1.2
@@ -199,6 +199,7 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.4.9
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
 CARGO_CRATE_DEPENDS+=	relative-path-1.9.3
 CARGO_CRATE_DEPENDS+=	reqwest-0.12.11
+CARGO_CRATE_DEPENDS+=	rest_parser-0.1.6
 CARGO_CRATE_DEPENDS+=	ring-0.17.8
 CARGO_CRATE_DEPENDS+=	rmp-0.8.14
 CARGO_CRATE_DEPENDS+=	rmp-serde-1.3.0
@@ -237,7 +238,6 @@ CARGO_CRATE_DEPENDS+=	serde_urlencoded-0.7.1
 CARGO_CRATE_DEPENDS+=	serde_yaml-0.9.34+deprecated
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.7
 CARGO_CRATE_DEPENDS+=	shell-words-1.1.0
-CARGO_CRATE_DEPENDS+=	shellish_parse-2.2.0
 CARGO_CRATE_DEPENDS+=	shlex-1.3.0
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
