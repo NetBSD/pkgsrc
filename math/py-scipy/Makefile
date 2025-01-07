@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/01/07 15:58:01 riastradh Exp $
+# $NetBSD: Makefile,v 1.90 2025/01/07 16:54:12 gdt Exp $
 
 DISTNAME=	scipy-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,10 +23,17 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
 USE_CC_FEATURES=	c99
+USE_C_FEATURES=		c17
 USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		ATLAS=None
+# Upstream explicitly checks for 9; see meson.build.
+# gcc does not clearly document what version is needed for c17, but
+# our gcc.mk says 8 works and chooses 10.
+# gcc documents that 8 is suitable for c++17; our gcc.mk chooses 10.
+# Thus, this GCC_REQD is a no-op at the moment, but required for
+# correctness.
 GCC_REQD+=		9
 
 SUBST_CLASSES+=		f2py
