@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2024/11/14 22:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/07 13:55:08 sborrill Exp $
 
-DISTNAME=	squid-6.11
-PKGREVISION=	3
+VERSION=	6.12
+DISTNAME=	squid-${VERSION}
+
 CATEGORIES=	www
-MASTER_SITES=	http://www.squid-cache.org/Versions/v6/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=squid-cache/}squid/releases/download/SQUID_${VERSION:S/./_/g}/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +15,8 @@ LICENSE=	gnu-gpl-v2
 # GCC 7 fails even with c++17
 # src/ipc/TypedMsgHdr.h fails with
 # static_assert(std::is_trivially_copyable<Pod>::value, "getPod() used for a POD")
-USE_LANGUAGES=		c c++17
+USE_CXX_FEATURES+=	c++17
+USE_LANGUAGES+=		c c++
 GCC_REQD+=		10
 
 USE_TOOLS+=		perl:run gmake
@@ -35,6 +37,8 @@ CONFIGURE_ARGS+=	--enable-translation
 CONFIGURE_ARGS+=	--with-aio
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
+
+BUILD_DEFS=		VARBASE
 
 # Let 'purge' find correct config file by default.
 CPPFLAGS+=		-DDEFAULT_SQUID_CONF=\"${PKG_SYSCONFDIR}/squid.conf\"
