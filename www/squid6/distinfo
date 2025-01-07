@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2024/10/10 11:41:53 sborrill Exp $
+$NetBSD: distinfo,v 1.11 2025/01/07 13:55:09 sborrill Exp $
 
-BLAKE2s (squid-6.11.tar.xz) = 6a6fb934c3761f66baabb2ad9f9ec30a556a7bd51353e38a912232550e519ac3
-SHA512 (squid-6.11.tar.xz) = 669f658b0a58514f98c2b33df874706d40b9ed0837e1f32e08e274c79617063e06e706932011a34b115dcc96d43125f9cea30fba459cd31a88e3afd9b6076d7a
-Size (squid-6.11.tar.xz) = 2547824 bytes
+BLAKE2s (squid-6.12.tar.xz) = 906451612899f5c20a37c6eeb0c1a7f5cec13d828864dd801b006ce6f2922e77
+SHA512 (squid-6.12.tar.xz) = 7ab61f19416426fb8284de7bddc1ea9a5a7b3148fc54c018a243071ba5854610ef38a248f6a22634a2acb7d3ea408b582af1f48818dfe698ade0b7b8c00fd183
+Size (squid-6.12.tar.xz) = 2548220 bytes
 SHA1 (patch-compat_compat.h) = 839381a5e1f46e7d9b822bbb53d82a53c996ddc0
 SHA1 (patch-configure) = 66bf56c83876452ba12727d5d957619d75f4d1bc
 SHA1 (patch-errors_Makefile.in) = e7ba371bb24e40eeb9dd10dc6fe12d208e681d72
