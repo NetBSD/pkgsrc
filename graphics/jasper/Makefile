@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2024/09/20 07:04:56 tnn Exp $
+# $NetBSD: Makefile,v 1.82 2025/01/07 19:36:10 riastradh Exp $
 
 DISTNAME=	jasper-4.2.4
 CATEGORIES=	graphics
@@ -23,6 +23,13 @@ TEST_TARGET=		test
 
 CFLAGS+=	-D_POSIX_C_SOURCE=200112L	# nanosleep(2)
 CFLAGS.Darwin+=	-D_DARWIN_C_SOURCE=1
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CMAKE_CONFIGURE_ARGS+=	-DJAS_CROSSCOMPILING:BOOL=YES
+CMAKE_CONFIGURE_ARGS+=	-DJAS_STDC_VERSION:STRING=199901L	# C99
+.endif
 
 .include "options.mk"
 .include "../../devel/cmake/build.mk"
