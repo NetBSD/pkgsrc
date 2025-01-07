@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.277 2024/12/26 22:15:19 adam Exp $
+# $NetBSD: Makefile,v 1.278 2025/01/07 19:38:21 pin Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -25,6 +25,7 @@ SUBDIR+=	calcurse
 SUBDIR+=	calendarsupport
 SUBDIR+=	cardboard-schedule
 SUBDIR+=	catclock
+SUBDIR+=	clock-rs
 SUBDIR+=	dateutils
 SUBDIR+=	dclock
 SUBDIR+=	ddate
