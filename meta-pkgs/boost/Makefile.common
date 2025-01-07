@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.104 2024/12/29 14:53:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.105 2025/01/07 15:32:44 jperkin Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -52,9 +52,11 @@ SUBST_MESSAGE.darwin=	Fixing install_name for Darwin.
 SUBST_FILES.darwin=	tools/build/src/tools/gcc.jam
 SUBST_SED.darwin=	-e 's,darwin : @rpath/,darwin : ${PREFIX}/lib/,'
 
-# On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar.
+# On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar,
+# and force use of GNU find to support {} as required later in this file.
 .  if ${OPSYS} == "SunOS"
-TOOLS_PLATFORM.tar=	#empty
+TOOLS_PLATFORM.find=	# empty
+TOOLS_PLATFORM.tar=	# empty
 .  endif
 
 .  if ${OPSYS} == "Darwin"
