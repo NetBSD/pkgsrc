@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/01/07 20:24:32 vins Exp $
+# $NetBSD: options.mk,v 1.3 2025/01/07 22:32:24 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.server=	wayland x11
 
 PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl \
 			osmesa pulseaudio python sqlite3 threads wayland x11 xfce4-wm
-PKG_SUGGESTED_OPTIONS=	glib2 libdrm opencl osmesa x11
+PKG_SUGGESTED_OPTIONS=	dbus glib2 libdrm opencl osmesa x11
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
@@ -14,6 +14,12 @@ CHECK_BUILTIN.pthread:= no
 
 .if ${USE_BUILTIN.pthread:tl} == yes
 PKG_SUGGESTED_OPTIONS+=	threads
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if  ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS+=	pulseaudio
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -131,6 +137,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_PULSE=OFF
 ##
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=   27
 .endif
 
 ##
