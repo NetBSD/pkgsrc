@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/11/07 09:22:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/07 12:36:50 wiz Exp $
 ${PYSITELIB}/poetry/core/__init__.py
 ${PYSITELIB}/poetry/core/__init__.pyc
 ${PYSITELIB}/poetry/core/__init__.pyo
@@ -168,6 +168,12 @@ ${PYSITELIB}/poetry/core/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/poetry/core/_vendor/packaging/_tokenizer.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/_tokenizer.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/_tokenizer.pyo
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/__init__.py
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/__init__.pyc
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/__init__.pyo
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/_spdx.py
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/_spdx.pyc
+${PYSITELIB}/poetry/core/_vendor/packaging/licenses/_spdx.pyo
 ${PYSITELIB}/poetry/core/_vendor/packaging/markers.py
 ${PYSITELIB}/poetry/core/_vendor/packaging/markers.pyc
 ${PYSITELIB}/poetry/core/_vendor/packaging/markers.pyo
@@ -278,15 +284,13 @@ ${PYSITELIB}/poetry/core/json/__init__.py
 ${PYSITELIB}/poetry/core/json/__init__.pyc
 ${PYSITELIB}/poetry/core/json/__init__.pyo
 ${PYSITELIB}/poetry/core/json/schemas/poetry-schema.json
+${PYSITELIB}/poetry/core/json/schemas/project-schema.json
 ${PYSITELIB}/poetry/core/masonry/__init__.py
 ${PYSITELIB}/poetry/core/masonry/__init__.pyc
 ${PYSITELIB}/poetry/core/masonry/__init__.pyo
 ${PYSITELIB}/poetry/core/masonry/api.py
 ${PYSITELIB}/poetry/core/masonry/api.pyc
 ${PYSITELIB}/poetry/core/masonry/api.pyo
-${PYSITELIB}/poetry/core/masonry/builder.py
-${PYSITELIB}/poetry/core/masonry/builder.pyc
-${PYSITELIB}/poetry/core/masonry/builder.pyo
 ${PYSITELIB}/poetry/core/masonry/builders/__init__.py
 ${PYSITELIB}/poetry/core/masonry/builders/__init__.pyc
 ${PYSITELIB}/poetry/core/masonry/builders/__init__.pyo
