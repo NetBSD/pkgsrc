@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/12/05 00:42:34 vins Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/07 05:24:43 vins Exp $
 
 VERSION=	7.6.0p1
+PKGREVISION=	1
 DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
@@ -12,6 +13,7 @@ LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
 BUILD_DEFS+=	VARBASE
 SMTPD_HOME=	${VARBASE}/smtpd/empty
+SMTPD_QUEUE=	_smtpq
 
 GNU_CONFIGURE=	yes
 USE_DB185=	yes
@@ -64,14 +66,15 @@ DOCDIR=			${PREFIX}/share/doc/opensmtpd
 CONF_FILES+=		${EGDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
 CONF_FILES+=		${EGDIR}/aliases ${PKG_SYSCONFDIR}/aliases
 
-OWN_DIRS+=	${SMTPD_HOME} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+OWN_DIRS+=		${SMTPD_HOME}
+OWN_DIRS_PERMS+=	${SMTPD_HOME} ${REAL_ROOT_USER} ${SMTPD_QUEUE} 0755
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
 RCD_SCRIPTS=	opensmtpd
 
-SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} _smtpq 2555
+SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${SMTPD_QUEUE} 2755
 SPECIAL_PERMS+=		sbin/smtpctl ${SETUID_ROOT_PERMS}
 
 SUBST_CLASSES+=		pkgsrc
