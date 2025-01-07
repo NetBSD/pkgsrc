@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2024/05/02 13:22:34 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/07 08:08:54 riastradh Exp $
 
 BLAKE2s (chezscheme-10.0.0.tar.gz) = afbfc3f246ba79b266b63d3c921d01d93f174e666a0d00b9016445eac070709c
 SHA512 (chezscheme-10.0.0.tar.gz) = 0efece61e2b820b8e06e5dd6bf25e14de9915f8bfea1f98d1f28a356913047d4f11ea687bb57383c62701bcb2251a911da862246154144b14c80488d9b8973de
@@ -19,3 +19,4 @@ BLAKE2s (racket-zuo-ebdc0451c39c70ce88b3b6ab9ba2b8e389ec519a.tar.gz) = e8589ff64
 SHA512 (racket-zuo-ebdc0451c39c70ce88b3b6ab9ba2b8e389ec519a.tar.gz) = 08e6814c6cd3c78005e2b6d0530ecce665b5fb07b10609e9645e4fd72cc8fde01e72d6065ed41daf734788f4bd44cee741c73d93fc2fa26226089606cd824483
 Size (racket-zuo-ebdc0451c39c70ce88b3b6ab9ba2b8e389ec519a.tar.gz) = 206251 bytes
 SHA1 (patch-c_self-exe.c) = ac4b3860a21507130f3fd21a4feff0f1be5fb8b6
+SHA1 (patch-configure) = 37679165befcca65ec8257b6684ba7b756902d6b
