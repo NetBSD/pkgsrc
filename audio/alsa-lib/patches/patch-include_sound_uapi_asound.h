@@ -1,22 +1,22 @@
-$NetBSD: patch-include_sound_uapi_asound.h,v 1.2 2023/12/11 15:41:35 jperkin Exp $
+$NetBSD: patch-include_sound_uapi_asound.h,v 1.3 2025/01/07 12:49:52 wiz Exp $
 
 SunOS needs sys/byteorder.h
 
---- include/sound/uapi/asound.h.orig	2023-09-01 15:35:48.000000000 +0000
+--- include/sound/uapi/asound.h.orig	2024-11-12 09:36:52.000000000 +0000
 +++ include/sound/uapi/asound.h
-@@ -28,7 +28,11 @@
+@@ -12,7 +12,11 @@
  #include <linux/types.h>
  #include <asm/byteorder.h>
  #else
 +#ifdef __sun
 +#include <sys/byteorder.h>
 +#else
- #include <sys/endian.h>
+ #include <endian.h>
 +#endif
  #include <sys/ioctl.h>
  #endif
  
-@@ -549,12 +553,12 @@ struct __snd_pcm_sync_ptr {
+@@ -550,12 +554,12 @@ struct __snd_pcm_sync_ptr {
  	} c;
  };
  
