@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/12/20 09:29:10 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2025/01/07 19:55:37 riastradh Exp $
 
 BLAKE2s (gcc-12.4.0.diff) = ff17898717cb3781dd802a3376ce9a659df97d7d4a3ec3c4bd26279755ab752b
 SHA512 (gcc-12.4.0.diff) = 1e5df17525c13ff3b79117ffb426726c47a9bbb1ffb8555a75083eff5b2134c728decf765be24e4e0bb21685e60973211e359027e9b90f298e24b501cbc899aa
@@ -9,7 +9,7 @@ Size (gcc-12.4.0.tar.xz) = 83377372 bytes
 BLAKE2s (isl-0.16.1.tar.bz2) = 01c3fc657326e81414986eb7ede6f73e540b97009745ced125cdf7f4a8d80f61
 SHA512 (isl-0.16.1.tar.bz2) = c188667a84dc5bdddb4ab7c35f89c91bf15a8171f4fcaf41301cf285fb7328846d9a367c096012fec4cc69d244f0bc9e95d84c09ec097394cd4093076f2a041b
 Size (isl-0.16.1.tar.bz2) = 1626446 bytes
-SHA1 (patch-gcc_Makefile.in) = c0f97c75ba1d37eae894141edd58bb36b734f651
+SHA1 (patch-gcc_Makefile.in) = a31ddc27f1092cfdf5ac896ca79c8590b5aceb47
 SHA1 (patch-gcc_config.gcc) = 260f187048260e539e928bb04594b6394bb03912
 SHA1 (patch-gcc_config.host) = bf95dd21bfdf79d173e745fbd35c9bb99fdf4087
 SHA1 (patch-gcc_config_aarch64_aarch64-netbsd.h) = abf19e2445bce1773162bddef16cd7f41eb36827
