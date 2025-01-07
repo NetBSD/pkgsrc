@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/10/05 05:15:36 gutteridge Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/07 19:56:45 riastradh Exp $
 
 GCC_PKGNAME=	gcc8
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC8_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc8 package so that with the dependence pattern
 ## '{gcc8,gcc8-libs}>=8.2.*' pkg_add will choose gcc8-libs over gcc8.
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -35,6 +35,10 @@ LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Workaround for PR pkg/58966: mk: REQUIRES/PROVIDES analysis is wrong
+# for self-libraries.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib

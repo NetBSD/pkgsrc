@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/10/05 05:20:10 gutteridge Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/07 19:56:45 riastradh Exp $
 
 GCC_PKGNAME=	gcc6
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC6_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc6 package so that with the dependence pattern
 ## '{gcc6,gcc6-libs}>=6.1.*' pkg_add will choose gcc6-libs over gcc6.
-PKGREVISION=	10
+PKGREVISION=	11
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -35,6 +35,10 @@ LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Workaround for PR pkg/58966: mk: REQUIRES/PROVIDES analysis is wrong
+# for self-libraries.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 .if ${SHLIB_TYPE} == "dylib"
