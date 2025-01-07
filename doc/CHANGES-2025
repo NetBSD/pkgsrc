@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.191 2025/01/07 19:31:57 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.192 2025/01/07 19:38:48 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128 to 128.6.0 [bsiegert 2025-01-07]
 	Updated x11/xfce4-terminal to 1.1.4 [bsiegert 2025-01-07]
 	Updated wm/xfce4-wm to 4.20.0 [bsiegert 2025-01-07]
+	Added time/clock-rs version 0.1.212 [pin 2025-01-07]
