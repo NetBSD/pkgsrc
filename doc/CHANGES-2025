@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.168 2025/01/06 21:40:13 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.169 2025/01/07 02:11:52 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/twitch-tui to 2.6.18 [schmonz 2025-01-06]
 	Updated devel/libslang to 2.3.3 [ktnb 2025-01-06]
 	Removed devel/libslang2 [ktnb 2025-01-06]
+	Updated news/newsraft to 0.28 [ktnb 2025-01-07]
