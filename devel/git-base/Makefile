@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/11/25 10:29:57 adam Exp $
+# $NetBSD: Makefile,v 1.122 2025/01/07 19:35:16 riastradh Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -73,10 +73,7 @@ SUBST_VARS.paths=	PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
-CONFIGURE_ENV.NetBSD+=	ac_cv_iconv_omits_bom=no
-CONFIGURE_ENV.NetBSD+=	ac_cv_fread_reads_directories=yes
-CONFIGURE_ENV.NetBSD+=	ac_cv_snprintf_returns_bogus=no
+.if ${USE_CROSS_COMPILE:tl} == "yes"
 # Needed to skip calling out to curl-config, which we can't do when
 # cross-compiling.  XXX Consider teaching curl's buildlink3.mk to set
 # BUILDLINK_LIBS.curl=-lcurl so we can use it here.
