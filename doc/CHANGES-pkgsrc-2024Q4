@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.2 2025/01/02 12:41:31 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.3 2025/01/07 07:55:43 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -8,3 +8,5 @@ lang/python313: build fix
 Pullup ticket #6923 - requested by wiz
 lang/python312: build fix
 
+Pullup ticket #6924 - requested by bsiegert
+lang/go123: build fix
