@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.183 2025/01/07 14:49:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.184 2025/01/07 14:51:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -230,3 +230,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/binwalk to 3.1.0 [tnn 2025-01-07]
 	Updated www/squid6 to 6.12 [sborrill 2025-01-07]
 	Updated sysutils/lla to 0.3.10 [pin 2025-01-07]
+	Updated net/slumber to 2.5.0 [pin 2025-01-07]
