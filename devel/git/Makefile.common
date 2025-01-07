@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2024/02/25 22:24:13 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/01/07 19:35:16 riastradh Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-contrib/Makefile
@@ -33,5 +33,11 @@ CONFIGURE_ARGS+=	--with-shell=${SH:Q}
 CONFIGURE_ARGS+=	TAR=${TAR:Q}
 CONFIGURE_ARGS+=	--mandir=${${PREFIX}/${PKGMANDIR}:L:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ENV.NetBSD+=	ac_cv_iconv_omits_bom=no
+CONFIGURE_ENV.NetBSD+=	ac_cv_fread_reads_directories=yes
+CONFIGURE_ENV.NetBSD+=	ac_cv_snprintf_returns_bogus=no
+.endif
 
 CHECK_PORTABILITY_SKIP+=	ci/run-test-slice.sh
