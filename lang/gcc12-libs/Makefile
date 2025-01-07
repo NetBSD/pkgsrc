@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/06/28 17:55:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/07 19:55:37 riastradh Exp $
 
 GCC_PKGNAME=	gcc12
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC12_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc12 package so that with the dependence pattern
 ## '{gcc12,gcc12-libs}>=12.1.*' pkg_add will choose gcc12-libs over gcc12.
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
