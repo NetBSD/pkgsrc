@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.173 2025/01/07 11:56:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.174 2025/01/07 12:36:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-xattr to 1.1.4 [adam 2025-01-07]
 	Updated devel/py-ruff to 0.8.6 [adam 2025-01-07]
 	Updated misc/py-trove-classifiers to 2025.1.6.15 [adam 2025-01-07]
+	Updated devel/py-poetry-core to 2.0.0 [wiz 2025-01-07]
