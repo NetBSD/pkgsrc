@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.263 2025/01/07 19:19:33 riastradh Exp $
+# $NetBSD: Makefile,v 1.264 2025/01/07 20:12:53 riastradh Exp $
 
 DISTNAME=	gnutls-3.8.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security devel
 MASTER_SITES=	https://www.gnupg.org/ftp/gcrypt/gnutls/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +11,7 @@ HOMEPAGE=	https://www.gnutls.org/
 COMMENT=	Transport Layer Security library
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
-.include "../../mk/ssl.mk"
+DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 
 PLIST_SRC=	PLIST
 
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-openssl-compatibility
 CONFIGURE_ARGS+=	--without-idn
 CONFIGURE_ARGS+=	--without-tpm
 CONFIGURE_ARGS+=	--disable-valgrind-tests
-CONFIGURE_ARGS+=	${empty(SSLCERTBUNDLE):?:--with-default-trust-store-file=${SSLCERTBUNDLE:Q}}
+CONFIGURE_ARGS+=	--with-default-trust-store-file=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 
 # Assembler support is broken for SunOS in 3.2.9.
