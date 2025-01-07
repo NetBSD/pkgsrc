@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/07 19:40:21 vins Exp $
+lib/modprobe.d/dist-blacklist.conf
+lib/pkgconfig/hwdata.pc
+share/hwdata/iab.txt
+share/hwdata/oui.txt
+share/hwdata/pci.ids
+share/hwdata/pnp.ids
+share/hwdata/usb.ids
