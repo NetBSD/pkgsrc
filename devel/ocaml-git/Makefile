@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/01/07 05:03:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/07 08:22:25 wiz Exp $
 
 GITHUB_PROJECT=	ocaml-git
 DISTNAME=	${GITHUB_PROJECT}-2.0.0
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/mirage/ocaml-git/
 COMMENT=	Pure-language git bindings for OCaml
 LICENSE=	isc
 
-BROKEN=		Fails to build since archiveres/ocaml-decompress 1.4.3 update
+BROKEN=		"Fails to build since archiveres/ocaml-decompress 1.4.3 update"
 
 USE_LANGUAGES=	# none
 
