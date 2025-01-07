@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/11/11 07:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/07 20:01:35 adam Exp $
 
-DISTNAME=	tables-3.10.1
+DISTNAME=	tables-3.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tables/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.pytables.org/
 COMMENT=	Database package for large amounts of data
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
+TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.11:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.0.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cpuinfo-[0-9]*:../../sysutils/py-cpuinfo
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
