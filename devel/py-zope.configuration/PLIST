@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/02/12 14:11:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/07 11:45:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -109,9 +109,6 @@ ${PYSITELIB}/zope/configuration/tests/test_xmlconfig.pyo
 ${PYSITELIB}/zope/configuration/tests/test_zopeconfigure.py
 ${PYSITELIB}/zope/configuration/tests/test_zopeconfigure.pyc
 ${PYSITELIB}/zope/configuration/tests/test_zopeconfigure.pyo
-${PYSITELIB}/zope/configuration/tests/unicode_all/__init__.py
-${PYSITELIB}/zope/configuration/tests/unicode_all/__init__.pyc
-${PYSITELIB}/zope/configuration/tests/unicode_all/__init__.pyo
 ${PYSITELIB}/zope/configuration/tests/victim.py
 ${PYSITELIB}/zope/configuration/tests/victim.pyc
 ${PYSITELIB}/zope/configuration/tests/victim.pyo
