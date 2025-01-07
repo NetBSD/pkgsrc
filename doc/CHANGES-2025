@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.187 2025/01/07 16:38:14 he Exp $
+$NetBSD: CHANGES-2025,v 1.188 2025/01/07 17:18:13 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -234,3 +234,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/sniffnet to 1.3.2 [pin 2025-01-07]
 	Updated www/snac to 2.68 [schmonz 2025-01-07]
 	Updated security/ssh-audit to 3.3.0 [he 2025-01-07]
+	Updated www/firefox115-l10n to 115.19.0 [bsiegert 2025-01-07]
+	Updated www/firefox115 to 115.19.0 [bsiegert 2025-01-07]
