@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/07 12:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/01/07 12:43:47 wiz Exp $
 
 DISTNAME=	sphinx_autodoc_typehints-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -13,8 +13,6 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs>=0.4:../../devel/py-hatch-vcs
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.25:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=8.0.2:../../textproc/py-sphinx
-# optional
-DEPENDS+=	${PYPKGPREFIX}-nptyping>=2.5:../../math/py-nptyping
 TEST_DEPENDS+=	${PYPKGPREFIX}-covdefaults>=2.3:../../devel/py-covdefaults
 TEST_DEPENDS+=	${PYPKGPREFIX}-sphobjinv>=2.3.1:../../textproc/py-sphobjinv
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=5:../../devel/py-test-cov
