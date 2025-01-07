@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.44 2024/09/17 16:57:10 wiz Exp $
+# $NetBSD: egg.mk,v 1.45 2025/01/07 19:35:08 riastradh Exp $
 #
 # The method used in this Makefile fragment is obsolete.
 # Please use wheel.mk instead.
@@ -65,7 +65,7 @@ DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:${SETUPTOOLS_PATH}
 .endif
 
-.if ${USE_CROSS_COMPILE:U:tl} == "yes"
+.if ${USE_CROSS_COMPILE:tl} == "yes"
 .if ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "no" || \
     ${PYTHON_FOR_BUILD_ONLY:Uno:tl} == "build"
 _COOKIE.pysetupcross=	${WRKDIR}/.pysetupcross_done
