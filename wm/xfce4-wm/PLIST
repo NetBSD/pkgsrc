@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2021/11/30 14:13:29 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/01/07 19:31:33 bsiegert Exp $
 bin/xfwm4
 bin/xfwm4-settings
 bin/xfwm4-tweaks-settings
@@ -75,6 +75,7 @@ share/locale/ja/LC_MESSAGES/xfwm4.mo
 share/locale/ka/LC_MESSAGES/xfwm4.mo
 share/locale/kk/LC_MESSAGES/xfwm4.mo
 share/locale/ko/LC_MESSAGES/xfwm4.mo
+share/locale/ku/LC_MESSAGES/xfwm4.mo
 share/locale/lt/LC_MESSAGES/xfwm4.mo
 share/locale/lv/LC_MESSAGES/xfwm4.mo
 share/locale/ms/LC_MESSAGES/xfwm4.mo
