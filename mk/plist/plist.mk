@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.59 2023/11/05 08:23:31 pho Exp $
+# $NetBSD: plist.mk,v 1.60 2025/01/07 08:08:42 riastradh Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -232,23 +232,10 @@ GENERATE_PLIST?=	${ECHO} "@comment "${PKGNAME:Q}" has no files.";
 GENERATE_PLIST?=	${TRUE};
 .endif
 
-_BUILD_DEFS+=		_PLIST_IGNORE_FILES
-
 .if ${PLIST_TYPE} == "dynamic"
-_PLIST_IGNORE_CMD=							\
-	( while read i; do						\
-		ignore=no;						\
-		for p in ${_PLIST_IGNORE_FILES}; do			\
-	  		case "$$i" in					\
-			$$p)	ignore=yes; break ;;			\
-			esac;						\
-		done;							\
-		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
-	  done )
 _GENERATE_PLIST=							\
 	${FIND} ${DESTDIR}${PREFIX} \! -type d -print | ${SORT} |	\
-		${SED} -e "s|^${DESTDIR}${PREFIX}/||" | 		\
-		${_PLIST_IGNORE_CMD}
+		${SED} -e "s|^${DESTDIR}${PREFIX}/||"
 .else
 _GENERATE_PLIST=	${CAT} /dev/null ${PLIST_SRC}; ${GENERATE_PLIST}
 .endif
