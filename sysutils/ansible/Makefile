@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2024/11/14 17:25:05 adam Exp $
+# $NetBSD: Makefile,v 1.86 2025/01/07 09:16:08 adam Exp $
 
-DISTNAME=	ansible-10.6.0
+DISTNAME=	ansible-11.1.0
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/ansible/}
 
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 PREV_PKGPATH=	sysutils/ansible2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	ansible-core>=2.17.5:../../sysutils/ansible-core
+DEPENDS+=	ansible-core>=2.18.1:../../sysutils/ansible-core
 
 USE_LANGUAGES=	# none
 
@@ -49,6 +49,7 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/.azure-pipelines/s
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/*/*/tests/*/*/*/*.sh
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/amazon/aws/check_mypy.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/cisco/dnac/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/grafana/hacking/*.sh
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/ansible_collections/community/hashi_vault/docs/preview/build.sh
