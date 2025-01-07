@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.169 2025/01/07 02:11:52 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.170 2025/01/07 09:21:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -212,3 +212,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libslang to 2.3.3 [ktnb 2025-01-06]
 	Removed devel/libslang2 [ktnb 2025-01-06]
 	Updated news/newsraft to 0.28 [ktnb 2025-01-07]
+	Updated sysutils/ansible to 11.1.0 [adam 2025-01-07]
+	Updated net/py-pypiserver to 2.3.2 [adam 2025-01-07]
