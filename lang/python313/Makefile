@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/01/07 19:34:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/07 19:35:09 riastradh Exp $
 
 PKGREVISION=	3
 .include "dist.mk"
@@ -60,7 +60,7 @@ USE_CURSES=		getsyx update_panels wide
 FAKE_NCURSES=		yes
 .endif
 
-.if ${USE_CROSS_COMPILE:U:tl} == yes
+.if ${USE_CROSS_COMPILE:tl} == yes
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 CONFIGURE_ARGS+=	\
 	--with-build-python=${TOOLBASE:Q}/bin/python${PY_VER_SUFFIX}

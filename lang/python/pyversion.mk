@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.166 2024/10/09 20:00:28 adam Exp $
+# $NetBSD: pyversion.mk,v 1.167 2025/01/07 19:35:08 riastradh Exp $
 
 # This file should be included by packages as a way to depend on
 # python when none of the other methods are appropriate, e.g. a
@@ -206,7 +206,7 @@ TEST_DEPENDS+=			${PYDEPENDENCY}
 BUILDLINK_DEPMETHOD.python?=	build
 .    endif
 .    include "${PYPKGSRCDIR}/buildlink3.mk"
-.    if ${USE_CROSS_COMPILE:U:tl} == "yes"
+.    if ${USE_CROSS_COMPILE:tl} == "yes"
 TOOL_DEPENDS+=			${PYDEPENDENCY}
 MAKE_ENV+=			PYTHONPATH=${WRKDIR:Q}/.pysite:${_CROSS_DESTDIR:Q}${LOCALBASE:Q}/${PYLIB:Q}
 pre-configure: ${WRKDIR}/.pysite/sitecustomize.py

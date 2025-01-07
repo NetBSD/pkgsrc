@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.65 2023/10/29 17:07:15 wiz Exp $
+# $NetBSD: extension.mk,v 1.66 2025/01/07 19:35:08 riastradh Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -22,7 +22,7 @@ PYSETUPBUILDARGS?=	# empty
 PYSETUPBUILDARGS+=	-j${MAKE_JOBS}
 .    endif
 .  endif
-.  if ${USE_CROSS_COMPILE:U:tl} == "yes"
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
 PYSETUPBUILDARGS+=	--executable=${PYTHONBIN:Q}
 .  endif
 PYSETUPARGS?=		# empty
