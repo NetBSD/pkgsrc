@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/02 13:22:34 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/07 08:08:54 riastradh Exp $
 
 DISTNAME=		chezscheme-10.0.0
 CATEGORIES=		lang
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--installschemename=${PKGBASE}
 CONFIGURE_ARGS+=	--installscriptname=${PKGBASE}-script
 CONFIGURE_ARGS+=	--as-is # skip Git submodule update
 
+CONFIGURE_ENV.NetBSD+=	PAXCTL=${PAXCTL:Q}
+
 BUILD_TARGET=	build
 TEST_TARGET=	test
 
@@ -39,4 +41,5 @@ TEST_TARGET=	test
 # here.
 PLIST_TYPE=	dynamic
 
+.include "../../mk/pax.mk"
 .include "../../mk/bsd.pkg.mk"
