@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/06/07 10:28:55 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/07 19:55:52 riastradh Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC13_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc13-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
+PKGREVISION=	1
 COMMENT=	The GNU Compiler Collection (GCC) - 13.0 Release Series
 
 LANGS=		c
