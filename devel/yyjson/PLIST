@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/08 18:00:04 vins Exp $
+include/yyjson.h
+lib/cmake/yyjson/yyjson-config-release.cmake
+lib/cmake/yyjson/yyjson-config.cmake
+lib/libyyjson.a
+lib/pkgconfig/yyjson.pc

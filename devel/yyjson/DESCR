@@ -1,0 +1,16 @@
+A high performance JSON library written in ANSI C.
+
+Features:
+* Fast: can read or write gigabytes per second JSON data on modern CPUs.
+* Portable: complies with ANSI C (C89) for cross-platform compatibility.
+* Strict: complies with RFC 8259 JSON standard, ensuring strict number
+  format and UTF-8 validation.
+* Extendable: offers options to allow comments, trailing commas,
+  NaN/Inf, and custom memory allocator.
+* Accuracy: can accurately read and write int64, uint64, and double
+  numbers.
+* Flexible: supports unlimited JSON nesting levels, \u0000 characters,
+  and non null-terminated strings.
+* Manipulation: supports querying and modifying using JSON Pointer, JSON
+  Patch and JSON Merge Patch.
+* Developer-Friendly: easy integration with only one h and one c file.
