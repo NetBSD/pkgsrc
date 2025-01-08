@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.208 2025/01/08 12:43:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.209 2025/01/08 14:32:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -281,3 +281,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio to 1.69.0 [adam 2025-01-08]
 	Updated net/py-grpcio-testing to 1.69.0 [adam 2025-01-08]
 	Updated net/py-grpcio-tools to 1.69.0 [adam 2025-01-08]
+	Updated devel/py-cachecontrol to 0.14.2 [adam 2025-01-08]
+	Updated net/py-geventhttpclient to 2.3.3 [adam 2025-01-08]
