@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4385 2025/01/06 21:40:14 ktnb Exp $
+# $NetBSD: Makefile,v 1.4386 2025/01/08 18:01:53 vins Exp $
 #
 
 COMMENT=	Development utilities
@@ -3677,6 +3677,7 @@ SUBDIR+=	yajl
 SUBDIR+=	yarn
 SUBDIR+=	yasm
 SUBDIR+=	yosys
+SUBDIR+=	yyjson
 SUBDIR+=	z80-asm
 SUBDIR+=	zeal
 SUBDIR+=	zig-mode
