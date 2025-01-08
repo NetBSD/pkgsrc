@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.40 2024/10/07 20:55:47 mef Exp $
+$NetBSD: distinfo,v 1.41 2025/01/08 15:30:27 tnn Exp $
 
-BLAKE2s (uhd-4.7.0.0.tar.gz) = 142576ecc2b2acd76416c92b3f20997c4e35873a976d9f206f9019e76e19167c
-SHA512 (uhd-4.7.0.0.tar.gz) = 6f2c48890058620499dc4f9661da1fe26fb711225d8f1f4a84cb9a57b049cccdf87d40480618f37bc2aff23b2538b5323f526985ec25a6a1f58122d39387b0cb
-Size (uhd-4.7.0.0.tar.gz) = 41128157 bytes
-SHA1 (patch-CMakeLists.txt) = 91784faf3eab2eb7f3340a2b05f7f89da1e0fada
+BLAKE2s (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = cd639ebceb7928d482041d935a3d35a3d49e8b0ce1a51191e48d286a5dc2c7af
+SHA512 (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = 21e788f013b2829ddb905432255b258cd34604218b9fd26b5095c9e58f4a4a6ac05a7c8ea1b2ef948838c2f9b39895e45b00dd895e772c7062bcd1b6a006ef27
+Size (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = 41266560 bytes
+SHA1 (patch-CMakeLists.txt) = e53b04bff05f14583349e855e85b1a3f52b91f9a
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
-SHA1 (patch-examples_rfnoc-example_cmake_Modules_run__testbench.sh.in) = f3c5c350abc82e0821eff45f00f4d1a0a1c7472b
 SHA1 (patch-lib_rfnoc_vector__iir__block__control.cpp) = d0bc32f888a6cfc30f1eb57d7f2d71bb86cdc284
 SHA1 (patch-lib_transport_nirio_lvbitx_process-lvbitx.py) = 5117c7593c4e92ed6bfb86388cc366c41a1dead7
 SHA1 (patch-lib_usrp_common_lmx2592.cpp) = 2828dcf989f1fc43c70e10b8de1e34485066842d
