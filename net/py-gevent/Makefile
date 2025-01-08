@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/11/11 07:28:48 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/08 20:40:12 adam Exp $
 
-DISTNAME=	gevent-24.2.1
+DISTNAME=	gevent-24.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gevent/}
@@ -11,8 +11,8 @@ COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cffi>=1.12.3:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.0.0:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-greenlet>=3.1.1:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface-[0-9]*:../../devel/py-zope.interface
 
@@ -22,8 +22,6 @@ MAKE_ENV+=	GEVENTSETUP_EMBED=0
 CHECK_PORTABILITY_SKIP=	deps/libuv/autogen.sh
 
 USE_LANGUAGES=	c c++
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # Explicitly disable inotify on SunOS, assumes Linux statfs.
 MAKE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
