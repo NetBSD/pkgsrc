@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.211 2025/01/08 15:30:03 jschauma Exp $
+$NetBSD: CHANGES-2025,v 1.212 2025/01/08 16:38:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-cachecontrol to 0.14.2 [adam 2025-01-08]
 	Updated net/py-geventhttpclient to 2.3.3 [adam 2025-01-08]
 	Updated devel/boost-libs to 1.87.0nb1 [wiz 2025-01-08]
+	Updated www/caddy to 2.9.1 [bsiegert 2025-01-08]
