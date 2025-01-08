@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/03/03 20:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/08 10:30:03 jperkin Exp $
 
 DISTNAME=		mkfontscale-1.2.3
 CATEGORIES=		fonts x11
@@ -15,6 +15,9 @@ USE_FEATURES+=		vsnprintf
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 CONFIGURE_ARGS+=	--with-bzip2
+
+CONFLICTS+=		mkfontdir-[0-9]*
+SUPERSEDES+=		mkfontdir-[0-9]*
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
