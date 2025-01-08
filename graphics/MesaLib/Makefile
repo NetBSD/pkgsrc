@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2024/04/10 10:12:01 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2025/01/08 19:17:40 js Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -185,7 +185,7 @@ PKGCONFIG_OVERRIDE+=		output/meson-private/gl.pc
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/drirc.d/00-mesa-defaults.conf ${DESTDIR}${EGDIR}
-.if ${OPSYS} == "Darwin"
+.if ${OPSYS} == "Darwin" && !empty(PKG_OPTIONS:Mx11)
 	install_name_tool -id ${PREFIX}/lib/dri/swrast_dri.so \
 	    ${DESTDIR}${PREFIX}/lib/dri/swrast_dri.so
 .endif

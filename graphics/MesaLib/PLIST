@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2022/08/02 20:36:51 tnn Exp $
+@comment $NetBSD: PLIST,v 1.50 2025/01/08 19:17:40 js Exp $
 ${PLIST.kms}include/EGL/egl.h
 ${PLIST.kms}include/EGL/eglext.h
 ${PLIST.kms}include/EGL/eglextchromium.h
@@ -9,7 +9,7 @@ include/GL/glcorearb.h
 include/GL/glext.h
 ${PLIST.glx}include/GL/glx.h
 ${PLIST.glx}include/GL/glxext.h
-include/GL/internal/dri_interface.h
+${PLIST.glx}include/GL/internal/dri_interface.h
 include/GL/osmesa.h
 include/GLES/egl.h
 include/GLES/gl.h
@@ -70,7 +70,7 @@ ${PLIST.arm}lib/dri/st7586_dri.so
 ${PLIST.arm}lib/dri/st7735r_dri.so
 ${PLIST.arm}lib/dri/stm_dri.so
 ${PLIST.arm}lib/dri/sun4i-drm_dri.so
-lib/dri/swrast_dri.so
+${PLIST.glx}lib/dri/swrast_dri.so
 ${PLIST.arm}lib/dri/tegra_dri.so
 ${PLIST.arm}lib/dri/vc4_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
@@ -103,7 +103,7 @@ ${PLIST.vulkan}lib/libvulkan_radeon.so
 ${PLIST.xa}lib/libxatracker.so
 ${PLIST.xa}lib/libxatracker.so.2
 ${PLIST.xa}lib/libxatracker.so.2.5.0
-lib/pkgconfig/dri.pc
+${PLIST.glx}lib/pkgconfig/dri.pc
 ${PLIST.kms}lib/pkgconfig/egl.pc
 ${PLIST.kms}lib/pkgconfig/gbm.pc
 ${PLIST.glx}lib/pkgconfig/gl.pc
