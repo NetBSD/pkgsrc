@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2024/12/27 08:21:04 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/01/08 15:58:20 tnn Exp $
 
 DISTNAME=		tint2-v17.0.2
 PKGNAME=		${DISTNAME:S/-v/-/}
@@ -33,6 +33,9 @@ CMAKE_CONFIGURE_ARGS.*=		-DENABLE_BATTERY=OFF
 
 CFLAGS.SunOS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 CFLAGS.SunOS+=		-Du_int8_t=uint8_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
+
+# For sqrt(3). Needed on at least Linux and should be harmless elsewhere.
+LDFLAGS+=		-lm
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/themes/tint2rc \
