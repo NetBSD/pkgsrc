@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/01/05 09:05:08 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/01/08 07:00:30 wen Exp $
 
-BLAKE2s (Crypt-URandom-0.46.tar.gz) = ae3d164c692196fb32189c5be6f5a8a87a6d793dd9c3a7513de53080a907d984
-SHA512 (Crypt-URandom-0.46.tar.gz) = ffc4f46315dcd6d080805604fafac294c98161b57a6dd5f8359d885b4f571c38c7717841a41891d6f77b0548c991b61e91893956205cff05a0ae3c83443dd0eb
-Size (Crypt-URandom-0.46.tar.gz) = 13931 bytes
+BLAKE2s (Crypt-URandom-0.49.tar.gz) = ad9b44f1fa8a9cb7e5cabd40aa81268cfc8ec531a9411a1baa5e7852c4959308
+SHA512 (Crypt-URandom-0.49.tar.gz) = b11e1d806e6cd9b83040fa40adce0771ecf992bc3e8100a8b3cf6d7ae66890f2869bbcb9b46bf680f670c1a0b8f86a058c0ceb9e024b93bcdd89d7c622e2e5da
+Size (Crypt-URandom-0.49.tar.gz) = 20848 bytes
