@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.82 2024/12/29 15:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.83 2025/01/08 15:30:27 tnn Exp $
 
 DISTNAME=	uhd-4.7.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EttusResearch/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	e75629c3cfb4d0a654648f775e65e79375cf4f13
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/EttusResearch/uhd
@@ -44,7 +45,7 @@ USE_TOOLS+=		pkg-config
 GCC_REQD+=		4.8
 # to avoid extra pax_global_header
 EXTRACT_USING=		gtar
-WRKSRC=			${WRKDIR}/${DISTNAME}/host
+WRKSRC=			${WRKDIR}/uhd-${GITHUB_TAG}/host
 
 # The files with their name uhd-xxxx, are moved down from uhd/xxxx for this process.
 REPLACE_PYTHON+=	utils/convert_cal_data.py
@@ -59,6 +60,7 @@ REPLACE_PYTHON+=	utils/usrp2_card_burner_gui.py
 REPLACE_PYTHON+=	utils/usrp2_recovery.py
 REPLACE_PYTHON+=	utils/usrpctl.py
 REPLACE_PYTHON+=	tests/devtest/benchmark_rate_test.py
+REPLACE_PYTHON+=	tests/devtest/multi_usrp_clock_test.py
 REPLACE_PYTHON+=	tests/devtest/multi_usrp_test.py
 REPLACE_PYTHON+=	tests/devtest/python_api_test.py
 REPLACE_PYTHON+=	tests/devtest/python_rx_stability_test.py
