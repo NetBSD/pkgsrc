@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.200 2025/01/08 07:10:45 wen Exp $
+$NetBSD: CHANGES-2025,v 1.201 2025/01/08 07:34:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -267,3 +267,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Crypt-URandom to 0.49 [wen 2025-01-08]
 	Updated print/p5-Text-Transliterator to 1.04 [wen 2025-01-08]
 	Updated net/p5-XML-RPC to 2.1 [wen 2025-01-08]
+	Updated devel/p5-Modern-Perl to 1.20241001 [wen 2025-01-08]
