@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/19 13:53:32 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/08 21:21:39 wiz Exp $
 
 DISTNAME=	anytree-2.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/c0fec0de/anytree
 COMMENT=	Powerful and Lightweight Python Tree Data Structure
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
