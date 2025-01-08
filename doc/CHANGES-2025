@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.195 2025/01/08 01:58:10 wen Exp $
+$NetBSD: CHANGES-2025,v 1.196 2025/01/08 02:36:56 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -246,3 +246,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-syrupy to 4.8.0 [adam 2025-01-07]
 	Updated math/py-tables to 3.10.2 [adam 2025-01-07]
 	Added www/drupal11 version 11.1.0 [wen 2025-01-08]
+	Updated lang/sigscheme to 0.9.1 [ktnb 2025-01-08]
