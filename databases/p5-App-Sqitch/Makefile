@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2024/11/16 12:03:20 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/01/08 18:03:23 schmonz Exp $
 
-DISTNAME=		App-Sqitch-v1.4.1
+DISTNAME=		App-Sqitch-v1.5.0
 PKGNAME=		p5-${DISTNAME:S/-v/-/}
-PKGREVISION=		1
 CATEGORIES=		databases perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=App/}
 
