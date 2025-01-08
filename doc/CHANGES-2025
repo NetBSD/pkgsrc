@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.214 2025/01/08 18:03:28 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.215 2025/01/08 18:10:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -288,3 +288,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/caddy to 2.9.1 [bsiegert 2025-01-08]
 	Added devel/yyjson version 0.10.0 [vins 2025-01-08]
 	Updated databases/p5-App-Sqitch to 1.5.0 [schmonz 2025-01-08]
+	Updated textproc/libhighlight to 4.15 [schmonz 2025-01-08]
