@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/01/05 09:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/08 07:00:30 wen Exp $
 
-DISTNAME=	Crypt-URandom-0.46
+DISTNAME=	Crypt-URandom-0.49
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://metacpan.org/release/Crypt-URandom
 COMMENT=	Perl5 module to provide non blocking randomness
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Crypt/URandom/.packlist
 
 .include "../../lang/perl5/module.mk"
