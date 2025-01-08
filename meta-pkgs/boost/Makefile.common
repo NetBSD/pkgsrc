@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.107 2025/01/08 14:22:55 nros Exp $
+# $NetBSD: Makefile.common,v 1.108 2025/01/08 15:20:51 wiz Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -106,6 +106,7 @@ boost-install-cmake:
 	cd ${WRKSRC}/stage/lib/${dir} && \
 	${FIND} . -type f -name "*.cmake" \
 	| while read f; do \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${dir}/"$${f%/*}"; \
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/lib/${dir}/"$$f"; \
 	done
 .  endfor
