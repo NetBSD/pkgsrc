@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2024/11/24 08:59:01 wen Exp $
+# $NetBSD: Makefile,v 1.57 2025/01/08 07:59:48 wen Exp $
 
-DISTNAME=	Perl-Tidy-20240903
+DISTNAME=	Perl-Tidy-20250105
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Perl/}
