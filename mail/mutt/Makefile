@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.284 2025/01/08 11:30:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.285 2025/01/08 11:32:16 jperkin Exp $
 
 DISTNAME=		mutt-2.2.13
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		http://ftp.mutt.org/pub/mutt/
 
@@ -40,8 +40,6 @@ REPLACE_PYTHON+=	contrib/markdown2html
 # support mailwrapper.
 CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
-
-CONFIGURE_ARGS.SunOS+=	--without-wc-funcs
 
 .include "options.mk"
 
