@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/01/07 22:32:24 vins Exp $
+# $NetBSD: options.mk,v 1.4 2025/01/08 18:08:30 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.server=	wayland x11
 
 PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl \
 			osmesa pulseaudio python sqlite3 threads wayland x11 xfce4-wm
-PKG_SUGGESTED_OPTIONS=	dbus glib2 libdrm opencl osmesa x11
+PKG_SUGGESTED_OPTIONS=	glib2 libdrm opencl osmesa x11
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
@@ -18,8 +18,8 @@ PKG_SUGGESTED_OPTIONS+=	threads
 
 .include "../../mk/bsd.prefs.mk"
 
-.if  ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	pulseaudio
+.if  ${OPSYS} == "Linux"
+PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
 .endif
 
 .include "../../mk/bsd.options.mk"
