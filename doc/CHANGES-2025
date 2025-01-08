@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.212 2025/01/08 16:38:25 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.213 2025/01/08 18:02:42 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -286,3 +286,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-geventhttpclient to 2.3.3 [adam 2025-01-08]
 	Updated devel/boost-libs to 1.87.0nb1 [wiz 2025-01-08]
 	Updated www/caddy to 2.9.1 [bsiegert 2025-01-08]
+	Added devel/yyjson version 0.10.0 [vins 2025-01-08]
