@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.207 2025/01/08 11:55:03 jun Exp $
+$NetBSD: CHANGES-2025,v 1.208 2025/01/08 12:43:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -277,3 +277,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-itemadapter to 0.10.0 [adam 2025-01-08]
 	Updated mail/mutt to 2.2.13nb7 [jperkin 2025-01-08]
 	Updated emulators/nono to 1.1.1 [jun 2025-01-08]
+	Updated net/grpc to 1.69.0 [adam 2025-01-08]
+	Updated net/py-grpcio to 1.69.0 [adam 2025-01-08]
+	Updated net/py-grpcio-testing to 1.69.0 [adam 2025-01-08]
+	Updated net/py-grpcio-tools to 1.69.0 [adam 2025-01-08]
