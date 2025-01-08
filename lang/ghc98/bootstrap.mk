@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.5 2024/06/20 12:49:39 jperkin Exp $
+# $NetBSD: bootstrap.mk,v 1.6 2025/01/08 10:17:27 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -107,18 +107,13 @@ TOOLS_PLATFORM.cpp=	/usr/lib/cpp
 # Install a bootstrapping (stage-0) compiler directly into TOOLS_DIR so
 # that ./configure can find it.
 #
-USE_TOOLS+=	xzcat xz cpp patch # patch is for bootstrap.py
-
-# We must avoid gtar on Darwin because it ends up pulling in libiconv (see
-# Makefile for why that breaks things).  It's possible this is no longer
-# required anyway and has just been cargo-culted around since 2019.
-#
-.if ${OPSYS} == "Darwin"
-GHC_TAR=	${TAR}
-.else
-USE_TOOLS+=	gtar
-GHC_TAR=	${GTAR}
-.endif
+USE_TOOLS+=	xzcat xz cpp gtar patch
+# - patch is for bootstrap.py
+# - gtar isn't strictly necessary, but we need a tar(1) implementation
+#   supporting --use-compress-program (see
+#   patches/patch-hadrian_src_Rules_BinaryDist.hs). Since the option isn't
+#   guaranteed to be available everywhere, it's safer to explicitly pull in
+#   gtar.
 
 BOOT_ARCHIVE_TOP_DIR=	${BOOT_ARCHIVE:C/\.tar\..z$//}
 pre-configure:
@@ -129,7 +124,7 @@ pre-configure:
 	${RUN}${MKDIR} ${WRKDIR}/bootkit-dist
 	${RUN}cd ${WRKDIR}/bootkit-dist && \
 		${XZCAT} ${DISTDIR}/${DIST_SUBDIR}/${BOOT_ARCHIVE} | \
-		${GHC_TAR} -xf -
+		${GTAR} -xf -
 
 	@${PHASE_MSG} "Preparing bootstrapping compiler for ${PKGNAME}"
 # <kludge>
@@ -148,6 +143,21 @@ pre-configure:
 		${PKGSRC_SETENV} ${CONFIGURE_ENV} ${SH} ./configure \
 			--prefix=${TOOLS_DIR:Q} ${CONFIGURE_ARGS.boot} && \
 		${PKGSRC_SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
+# <kludge>
+# A workaround for possible native iconv vs. GNU libiconv mismatch between
+# bootkits and the user's choice. See comments in ./files/iconv-bridge.c
+	${RUN}${PKGSRC_SETENV} ${ALL_ENV} \
+		${CC} -c ${FILESDIR}/iconv-bridge.c -o ${WRKDIR}/iconv-bridge-native.o -DNATIVE; \
+		${CC} -c ${FILESDIR}/iconv-bridge.c -o ${WRKDIR}/iconv-bridge-gnu.o; \
+		${AR} cr ${WRKDIR}/libiconv-bridge.a \
+			${WRKDIR}/iconv-bridge-native.o \
+			${WRKDIR}/iconv-bridge-gnu.o; \
+		${RANLIB} ${WRKDIR}/libiconv-bridge.a
+	${RUN}${AWK} -v WRKDIR=${WRKDIR} -f ${FILESDIR}/inject-iconv-bridge.awk \
+		< ${TOOLS_DIR}/bin/ghc > ${TOOLS_DIR}/bin/ghc.tmp
+	${RUN}${MV} -f ${TOOLS_DIR}/bin/ghc.tmp ${TOOLS_DIR}/bin/ghc
+	${RUN}${CHMOD} +x ${TOOLS_DIR}/bin/ghc
+# </kludge>
 
 
 # -----------------------------------------------------------------------------

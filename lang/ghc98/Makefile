@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/07/30 11:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/08 10:17:27 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -32,14 +32,6 @@ BROKEN_EXCEPT_ON_PLATFORM+=	SunOS-*-x86_64
 PKGSRC_OVERRIDE_MKPIE=	yes
 
 .include "options.mk"
-
-# The bootstrap kits are built with native iconv, and unfortunately ghc looks
-# in places it should not, so we have to do everything we can to avoid libiconv
-# being installed as it breaks the build due to iconv_*() vs libiconv_*().
-#
-.if ${OPSYS} == "Darwin"
-PREFER.iconv=	native
-.endif
 
 # -----------------------------------------------------------------------------
 # Distfiles
