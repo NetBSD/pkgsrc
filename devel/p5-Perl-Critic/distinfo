@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2023/12/19 12:25:23 mef Exp $
+$NetBSD: distinfo,v 1.33 2025/01/08 07:51:32 wen Exp $
 
-BLAKE2s (Perl-Critic-1.152.tar.gz) = 24d1bfaba857816625c93ddce121b972b8958a83ce4fd9d075aeb243cce1286e
-SHA512 (Perl-Critic-1.152.tar.gz) = 273aeb46617cf614b044c76c4307faf80c8ee4702f115f4baa7d23306164a70e70394fd64e3d89e43650a7314a3bd21ab96ee6daba28f1a12d9d32bd5032779c
-Size (Perl-Critic-1.152.tar.gz) = 662426 bytes
+BLAKE2s (Perl-Critic-1.156.tar.gz) = b0e21277cc906d7d73ce45a0c9edc7ac29c8fa75835ac6ed94dfee79c691da8b
+SHA512 (Perl-Critic-1.156.tar.gz) = c5aa84e6dca89f2af3e1afff920bd36a71ac69e1c5b5f3260e1a50b6cb6e6b88cecae28200e54d9ff98540a97ad6a7755c6e1b468d1a1d642d73b6e05e468c34
+Size (Perl-Critic-1.156.tar.gz) = 663818 bytes
