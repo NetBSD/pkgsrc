@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2057 2024/10/22 06:29:21 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2058 2025/01/08 10:19:35 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -632,7 +632,7 @@ ${WRKDIR}:
 # include files. See also checkarg_sane_absolute_path in bootstrap/bootstrap.
 .PHONY: _check-wrkdir-canonical
 _check-wrkdir-canonical: ${WRKDIR}
-	${RUN} cd ${WRKDIR}; d=`exec pwd`; ${TEST} "$$d" = ${WRKDIR}	\
+	${RUN} cd ${WRKDIR}; d=`exec pwd -P`; ${TEST} "$$d" = ${WRKDIR}	\
 	|| ${FAIL_MSG} "[bsd.pkg.mk] The path to WRKDIR ${WRKDIR} must be canonical ($$d)."
 
 # Create a symlink from ${WRKDIR} to the package directory if
