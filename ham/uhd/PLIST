@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2024/10/07 20:55:47 mef Exp $
-bin/rfnoc_image_builder
+@comment $NetBSD: PLIST,v 1.27 2025/01/08 15:30:27 tnn Exp $
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
@@ -7,7 +6,9 @@ bin/uhd_cal_tx_iq_balance
 bin/uhd_config_info
 bin/uhd_find_devices
 bin/uhd_image_loader
+bin/uhd_images_downloader
 bin/uhd_usrp_probe
+bin/usrp2_card_burner
 include/uhd.h
 include/uhd/build_info.hpp
 include/uhd/cal/cal_metadata_generated.h
@@ -188,6 +189,8 @@ include/uhd/version.hpp
 lib/cmake/uhd/UHDBoost.cmake
 lib/cmake/uhd/UHDConfig.cmake
 lib/cmake/uhd/UHDConfigVersion.cmake
+lib/cmake/uhd/UHDMinDepVersions.cmake
+lib/cmake/uhd/UHDPython.cmake
 lib/libuhd.so
 lib/libuhd.so.${MODULE_VERSION}
 lib/pkgconfig/uhd.pc
@@ -251,6 +254,7 @@ lib/uhd/tests/devtest/devtest_x410.py
 lib/uhd/tests/devtest/devtest_x440.py
 lib/uhd/tests/devtest/gpio_test.py
 lib/uhd/tests/devtest/list_sensors_test.py
+lib/uhd/tests/devtest/multi_usrp_clock_test.py
 lib/uhd/tests/devtest/multi_usrp_test.py
 lib/uhd/tests/devtest/python_api_test.py
 lib/uhd/tests/devtest/python_rx_stability_test.py
@@ -354,11 +358,16 @@ lib/uhd/utils/latency/responder
 lib/uhd/utils/latency/run_tests.py
 lib/uhd/utils/octoclock_burn_eeprom
 lib/uhd/utils/query_gpsdo_sensors
+lib/uhd/utils/uhd-usrp.rules
 lib/uhd/utils/uhd_images_downloader.py
 lib/uhd/utils/uhd_power_cal.py
 lib/uhd/utils/usrp2_card_burner.py
+lib/uhd/utils/usrp2_recovery.py
 lib/uhd/utils/usrp_burn_db_eeprom
 lib/uhd/utils/usrp_burn_mb_eeprom
+man/man1/rfnoc_image_builder.1
+man/man1/rfnoc_modtool.1
+man/man1/uhd_adc_self_cal.1
 man/man1/uhd_cal_rx_iq_balance.1
 man/man1/uhd_cal_tx_dc_offset.1
 man/man1/uhd_cal_tx_iq_balance.1
