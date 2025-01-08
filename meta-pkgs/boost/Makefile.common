@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.106 2025/01/08 12:24:22 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.107 2025/01/08 14:22:55 nros Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -21,7 +21,7 @@ PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
 PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
 
-MASTER_SITES=	https://boostorg.jfrog.io/artifactory/main/release/${BOOST_VERSION}/source/
+MASTER_SITES=	https://archives.boost.io/release/${BOOST_VERSION}/source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
