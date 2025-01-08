@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.205 2025/01/08 10:06:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.206 2025/01/08 11:35:12 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -275,3 +275,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-gnupg to 0.5.4 [adam 2025-01-08]
 	Updated devel/py-test-asyncio to 0.25.2 [adam 2025-01-08]
 	Updated textproc/py-itemadapter to 0.10.0 [adam 2025-01-08]
+	Updated mail/mutt to 2.2.13nb7 [jperkin 2025-01-08]
