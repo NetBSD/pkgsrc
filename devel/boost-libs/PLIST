@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2024/12/26 21:52:48 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.48 2025/01/08 15:23:21 wiz Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -72,6 +72,8 @@ ${PLIST.log}lib/cmake/boost_log_setup-${PKGVERSION}/boost_log_setup-config-versi
 ${PLIST.log}lib/cmake/boost_log_setup-${PKGVERSION}/boost_log_setup-config.cmake
 ${PLIST.log}lib/cmake/boost_log_setup-${PKGVERSION}/libboost_log_setup-variant-shared.cmake
 ${PLIST.log}lib/cmake/boost_log_setup-${PKGVERSION}/libboost_log_setup-variant-static.cmake
+lib/cmake/boost_math-${PKGVERSION}/boost_math-config-version.cmake
+lib/cmake/boost_math-${PKGVERSION}/boost_math-config.cmake
 lib/cmake/boost_math_c99-${PKGVERSION}/boost_math_c99-config-version.cmake
 lib/cmake/boost_math_c99-${PKGVERSION}/boost_math_c99-config.cmake
 lib/cmake/boost_math_c99-${PKGVERSION}/libboost_math_c99-variant-shared.cmake
@@ -98,6 +100,8 @@ ${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-varia
 ${PLIST.longdbl}lib/cmake/boost_math_tr1l-${PKGVERSION}/libboost_math_tr1l-variant-static.cmake
 lib/cmake/boost_mpi-${PKGVERSION}/boost_mpi-config-version.cmake
 lib/cmake/boost_mpi-${PKGVERSION}/boost_mpi-config.cmake
+lib/cmake/boost_mpi_python-${PKGVERSION}/boost_mpi_python-config-version.cmake
+lib/cmake/boost_mpi_python-${PKGVERSION}/boost_mpi_python-config.cmake
 lib/cmake/boost_nowide-${PKGVERSION}/boost_nowide-config-version.cmake
 lib/cmake/boost_nowide-${PKGVERSION}/boost_nowide-config.cmake
 lib/cmake/boost_nowide-${PKGVERSION}/libboost_nowide-variant-shared.cmake
@@ -134,6 +138,10 @@ lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config-ver
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/libboost_stacktrace_basic-variant-shared.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/libboost_stacktrace_basic-variant-static.cmake
+${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/boost_stacktrace_from_exception-config-version.cmake
+${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/boost_stacktrace_from_exception-config.cmake
+${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/libboost_stacktrace_from_exception-variant-shared.cmake
+${PLIST.stacktrace_from_exception}lib/cmake/boost_stacktrace_from_exception-${PKGVERSION}/libboost_stacktrace_from_exception-variant-static.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config-version.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/boost_stacktrace_noop-config.cmake
 lib/cmake/boost_stacktrace_noop-${PKGVERSION}/libboost_stacktrace_noop-variant-shared.cmake
