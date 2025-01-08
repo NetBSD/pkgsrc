@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2024/11/16 12:06:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/01/08 07:10:04 wen Exp $
 
-DISTNAME=	XML-RPC-1.1
+DISTNAME=	XML-RPC-2.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	perl5 net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CA/CAVAC/}
 
