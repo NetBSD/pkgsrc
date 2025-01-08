@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2024/02/22 13:55:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/01/08 20:40:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -167,9 +167,36 @@ ${PYSITELIB}/gevent/local.pyo
 ${PYSITELIB}/gevent/lock.py
 ${PYSITELIB}/gevent/lock.pyc
 ${PYSITELIB}/gevent/lock.pyo
-${PYSITELIB}/gevent/monkey.py
-${PYSITELIB}/gevent/monkey.pyc
-${PYSITELIB}/gevent/monkey.pyo
+${PYSITELIB}/gevent/monkey/__init__.py
+${PYSITELIB}/gevent/monkey/__init__.pyc
+${PYSITELIB}/gevent/monkey/__init__.pyo
+${PYSITELIB}/gevent/monkey/__main__.py
+${PYSITELIB}/gevent/monkey/__main__.pyc
+${PYSITELIB}/gevent/monkey/__main__.pyo
+${PYSITELIB}/gevent/monkey/_errors.py
+${PYSITELIB}/gevent/monkey/_errors.pyc
+${PYSITELIB}/gevent/monkey/_errors.pyo
+${PYSITELIB}/gevent/monkey/_main.py
+${PYSITELIB}/gevent/monkey/_main.pyc
+${PYSITELIB}/gevent/monkey/_main.pyo
+${PYSITELIB}/gevent/monkey/_patch_thread_common.py
+${PYSITELIB}/gevent/monkey/_patch_thread_common.pyc
+${PYSITELIB}/gevent/monkey/_patch_thread_common.pyo
+${PYSITELIB}/gevent/monkey/_patch_thread_gte313.py
+${PYSITELIB}/gevent/monkey/_patch_thread_gte313.pyc
+${PYSITELIB}/gevent/monkey/_patch_thread_gte313.pyo
+${PYSITELIB}/gevent/monkey/_patch_thread_lt313.py
+${PYSITELIB}/gevent/monkey/_patch_thread_lt313.pyc
+${PYSITELIB}/gevent/monkey/_patch_thread_lt313.pyo
+${PYSITELIB}/gevent/monkey/_state.py
+${PYSITELIB}/gevent/monkey/_state.pyc
+${PYSITELIB}/gevent/monkey/_state.pyo
+${PYSITELIB}/gevent/monkey/_util.py
+${PYSITELIB}/gevent/monkey/_util.pyc
+${PYSITELIB}/gevent/monkey/_util.pyo
+${PYSITELIB}/gevent/monkey/api.py
+${PYSITELIB}/gevent/monkey/api.pyc
+${PYSITELIB}/gevent/monkey/api.pyo
 ${PYSITELIB}/gevent/os.py
 ${PYSITELIB}/gevent/os.pyc
 ${PYSITELIB}/gevent/os.pyo
