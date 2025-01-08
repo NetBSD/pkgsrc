@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2024/10/08 18:10:00 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/01/08 10:02:35 adam Exp $
 
-BLAKE2s (python-gnupg-0.5.3.tar.gz) = a948714abe7fa166e7ecd53cd186748b098c72d63cb08a623f35205875c23753
-SHA512 (python-gnupg-0.5.3.tar.gz) = 88a2d754df7265aefac6b9a0651c7e933125ba7f8170bda7e867f5dd8bb54272609c26d0ce17a15afa7710baebe06fa3ab211e2af1d1d84eb1f1c65ba7a1dd6a
-Size (python-gnupg-0.5.3.tar.gz) = 65457 bytes
+BLAKE2s (python-gnupg-0.5.4.tar.gz) = 4184a7291c5cc4ecb93ea3b2c9da551de08e9e0ebd90c7e8d917ca76a43cd7a1
+SHA512 (python-gnupg-0.5.4.tar.gz) = 7136c423d388f0b7e77c55272be4b80a273468e02b576753183ae93ebe82182143662ee92c264982c3ad62d8465da49800706af76c400af578341d2b8bc0008f
+Size (python-gnupg-0.5.4.tar.gz) = 65705 bytes
 SHA1 (patch-gnupg.py) = e3557b796978b1ca830bd1221821c08f3fbc5769
