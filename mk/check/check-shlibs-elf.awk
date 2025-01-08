@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.21 2024/10/11 08:24:48 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.22 2025/01/08 10:28:09 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -135,6 +135,14 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 	for (lib in needed) {
 		found = 0
 		for (p = 1; p <= nrpath; p++) {
+			libfile = destdir rpath[p] "/" lib
+			if (!(libfile in libcache)) {
+				libcache[libfile] = system("test -f " shquote(libfile))
+			}
+			if (!libcache[libfile]) {
+				found = 1
+				break
+			}
 			libfile = cross_destdir rpath[p] "/" lib
 			if (!(libfile in libcache)) {
 				libcache[libfile] = system("test -f " shquote(libfile))
@@ -152,14 +160,6 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 						print DSO ": rpath " rpath[p] " relative to CHECK_WRKREF_EXTRA_DIRS directory " edirs[e]
 					}
 				}
-				found = 1
-				break
-			}
-			libfile = destdir rpath[p] "/" lib
-			if (!(libfile in libcache)) {
-				libcache[libfile] = system("test -f " shquote(libfile))
-			}
-			if (!libcache[libfile]) {
 				found = 1
 				break
 			}
