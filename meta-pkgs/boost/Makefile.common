@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.105 2025/01/07 15:32:44 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.106 2025/01/08 12:24:22 riastradh Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -103,7 +103,11 @@ boost-install-libs:
 boost-install-cmake:
 .  for dir in ${BOOST_CMAKE_DIRS}
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${dir}
-	cd ${WRKSRC}/stage/lib/${dir} && ${FIND} . -type f -name "*.cmake" -exec ${INSTALL_DATA} '{}' ${DESTDIR}${PREFIX}/lib/${dir}/'{}' \;
+	cd ${WRKSRC}/stage/lib/${dir} && \
+	${FIND} . -type f -name "*.cmake" \
+	| while read f; do \
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/lib/${dir}/"$$f"; \
+	done
 .  endfor
 
 .endif # ${BOOST_PACKAGE} == "meta-pkg"
