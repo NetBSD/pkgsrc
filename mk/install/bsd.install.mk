@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.18 2022/11/23 11:26:51 jperkin Exp $
+# $NetBSD: bsd.install.mk,v 1.19 2025/01/08 10:21:47 jperkin Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -18,15 +18,10 @@ _COOKIE.install=	${WRKDIR}/.install_done
 ### install (PUBLIC)
 ######################################################################
 ### install is a public target to install the package by depending
-### on stage-package-install or package-install. The difference is
-### a package is created in the public PACKAGES directory.
+### on package-install.
 ###
 .PHONY: install
-.if ${_KEEP_BIN_PKGS} == "no"
-install: stage-package-install
-.else
 install: package-install
-.endif
 
 ######################################################################
 ### stage-install (PUBLIC)
