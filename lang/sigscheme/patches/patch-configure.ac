@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/01/08 02:36:37 ktnb Exp $
+
+Needs higher XOPEN_SOURCE.
+
+--- configure.ac.orig	2025-01-07 20:03:56.570703797 +0000
++++ configure.ac
+@@ -227,7 +227,7 @@ AC_CHECK_FUNCS(memalign)
+ AC_CHECK_FUNCS(strdup,
+   [
+     # Overrides _POSIX_C_SOURCE
+-    AC_DEFINE(_XOPEN_SOURCE, 500)
++    AC_DEFINE(_XOPEN_SOURCE, 600)
+   ])
+ AH_VERBATIM(_XOPEN_SOURCE,
+ [/* Define to 500 to enable strdup(3). */
