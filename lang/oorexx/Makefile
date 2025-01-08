@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/08/25 06:18:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/08 14:37:36 rhialto Exp $
 #
 
 DISTNAME=	oorexx-5.0.0-12583
@@ -17,7 +17,6 @@ LICENSE=	gnu-gpl-v2 AND cpl-1.0
 
 CONFLICTS=	rexx-imc-[0-9]* rexx-regina-[0-9]*
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	sh:run
 MAKE_JOBS_SAFE=	no
@@ -25,8 +24,8 @@ MAKE_JOBS_SAFE=	no
 WRKSRC=		${WRKDIR}
 
 # Runs the built executable bin/rexx during build.
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/lib
-MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 CMAKE_CONFIGURE_ARGS+=	-DORX_SHEBANG=${PREFIX}/bin/rexx
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Subversion:BOOL=TRUE
@@ -51,4 +50,5 @@ PREFER.curses=	pkgsrc
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
