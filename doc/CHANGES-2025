@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.196 2025/01/08 02:36:56 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.197 2025/01/08 06:34:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -247,3 +247,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-tables to 3.10.2 [adam 2025-01-07]
 	Added www/drupal11 version 11.1.0 [wen 2025-01-08]
 	Updated lang/sigscheme to 0.9.1 [ktnb 2025-01-08]
+	Updated security/py-acme to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-apache to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-cloudflare to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-digitalocean to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-dnsimple to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-dnsmadeeasy to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-gehirn to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-google to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-linode to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-luadns to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-nsone to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-ovh to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-rfc2136 to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-route53 to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-dns-sakuracloud to 3.1.0 [adam 2025-01-08]
+	Updated security/py-certbot-nginx to 3.1.0 [adam 2025-01-08]
