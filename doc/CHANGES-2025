@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.215 2025/01/08 18:10:38 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.216 2025/01/08 20:40:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -289,3 +289,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/yyjson version 0.10.0 [vins 2025-01-08]
 	Updated databases/p5-App-Sqitch to 1.5.0 [schmonz 2025-01-08]
 	Updated textproc/libhighlight to 4.15 [schmonz 2025-01-08]
+	Updated devel/py-logbook to 1.8.0 [adam 2025-01-08]
+	Updated net/py-gevent to 24.11.1 [adam 2025-01-08]
