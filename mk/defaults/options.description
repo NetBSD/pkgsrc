@@ -99,6 +99,7 @@ cdparanoia		Use cdparanoia to rip CDDA media.
 cerf			Enable libcerf support.
 cg			Add support for the Cg compiler.
 cgi			Enable CGI support.
+chafa			Use libchafa to output images as ascii art.
 chasen			Use ChaSen as the Japanese Morphological Analzer.
 chromaprint		Enable chromaprint (audio fingerprinting) support.
 cjk			Enable Chinese/Japanese/Korean support.
@@ -143,6 +144,7 @@ dbh			Enable DBH support.
 dblatex-fig		Enable fig support in dblatex.
 dbus			Enable dbus (desktop bus) support.
 dca			Enable DTS Coherent Acoustics support using libdca.
+dconf			Use dconf as backend for GSettings.
 debug			Enable debugging facilities in the package.
 debug-info		Enable debug info in generated binaries (e.g. for crash analysis), but not full scale debugging.
 deliver-suid		Install deliver executable setuid root.
@@ -299,6 +301,7 @@ glade			Enable Glade support
 glesv1			Enable OpenGL ES 1.0 support.
 glesv2			Enable OpenGL ES 2.0 support.
 glfw			Enable GLFW support
+glib2			Enable libGIO support.
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
@@ -505,6 +508,7 @@ libarchive		Enable libarchive support.
 libchamplain		Enable libchamplain support (map widget).
 libdbi			Enable libdbi support (similar p5-DBI but for C).
 libdrm			Enable libdrm support.
+libelf			Enable libelf support.
 libgccjit		Enable JIT (just-in-time compilation) support using libgccjit.
 libgcrypt		Use GNU cryptographic library.
 libgme			Enable Game_Music_Emu video game music file library support.
@@ -685,6 +689,7 @@ online-tests		Requiring Internet connectivity for "make test".
 onscripter-pda		Enable PDA_AUTOSIZE option to fit window size to screen
 openal			Enable OpenAL support.
 openbox			Use Openbox as the window manager.
+opencl			Enable OpenCL framework support.
 opencore-amr		Enable OpenCORE Adaptive Multi-Rate speech codecs.
 opendkim-filter		Build opendkim-filter support.
 openexr			Use OpenEXR as imaging library.
