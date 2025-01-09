@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2015/02/13 04:44:40 rodent Exp $
+$NetBSD: patch-utmp-netbsd.c,v 1.1 2025/01/09 20:07:04 ktnb Exp $
 
 Code to handle the login slot in utmp when utmpx is available.
 Daemons shipped with NetBSD tend to write to both, while 3rd

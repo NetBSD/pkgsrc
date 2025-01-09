@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2023/09/06 16:00:15 vins Exp $
+# $NetBSD: Makefile,v 1.124 2025/01/09 20:07:03 ktnb Exp $
 
-DISTNAME=	screen-4.9.1
+DISTNAME=	screen-5.0.0
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
@@ -20,24 +20,22 @@ EXTRACT_USING=	bsdtar
 
 NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
-PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/screenrc
+CONFIGURE_ARGS+=	--with-sys_screenrc=${PKG_SYSCONFDIR}/screenrc
 CONFIGURE_ARGS+=	--enable-telnet
-CONFIGURE_ARGS+=	--enable-colors256
 
 PKG_SHELL=		bin/screen
 
-USE_TOOLS+=		automake autoconf autoreconf makeinfo
+USE_TOOLS+=		automake autoconf autoreconf makeinfo gmake
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	etc/etcscreenrc doc/screen.1
-SUBST_VARS.paths=	PKG_SYSCONFDIR
-SUBST_SED.paths+=	-e 's,@EXAMPLES@,${PREFIX}/share/examples/screen,g'
+SUBST_VARS.paths=	PKG_SYSCONFDIR PREFIX
 SUBST_STAGE.paths=	pre-configure
 
 PLIST_VARS+=		terminfo
