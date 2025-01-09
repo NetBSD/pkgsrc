@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:42 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/09 23:15:15 wiz Exp $
 
 DISTNAME=	gridtables-0.1.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
