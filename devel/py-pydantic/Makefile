@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/12/24 22:20:19 adam Exp $
+# $NetBSD: Makefile,v 1.29 2025/01/09 14:23:14 adam Exp $
 
-DISTNAME=	pydantic-2.10.4
+DISTNAME=	pydantic-2.10.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydantic/}
