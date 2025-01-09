@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:36 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/09 08:55:23 wiz Exp $
 
 DISTNAME=	Wand-0.6.13
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -13,9 +13,10 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	c
+
+# 'make test' doesn't work, but running 'pytest' in ${WRKSRC} gives
+# 2 failed, 562 passed, 6 skipped, 2 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
