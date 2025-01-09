@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2024/10/21 12:16:51 nia Exp $
+# $NetBSD: Makefile.common,v 1.7 2025/01/09 10:16:04 jperkin Exp $
 # used by multimedia/ffmpeg7/Makefile
 # used by multimedia/ffplay7/Makefile
 
@@ -35,7 +35,9 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg7
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg7
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg7
 # https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
+.if ${CC_VERSION:Mclang-15.*}
 LDFLAGS.Darwin+=	-Wl,-ld_classic
+.endif
 
 .if ${USE_CROSS_COMPILE:tl} == yes
 CONFIGURE_ARGS+=	--enable-cross-compile
