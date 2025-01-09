@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.222 2025/01/09 10:35:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.223 2025/01/09 12:17:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -300,3 +300,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/durs version 0.1.7 [pin 2025-01-09]
 	Updated devel/py-inline-snapshot to 0.18.2 [adam 2025-01-09]
 	Updated devel/py-dulwich to 0.22.7 [adam 2025-01-09]
+	Updated print/py-pspdfutils to 3.3.9 [wiz 2025-01-09]
