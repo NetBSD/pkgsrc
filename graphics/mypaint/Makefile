@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2024/12/27 08:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/01/09 21:05:49 ktnb Exp $
 
-DISTNAME=	mypaint-2.0.0
+DISTNAME=	mypaint-2.0.1
 PKGREVISION=	23
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mypaint/}
