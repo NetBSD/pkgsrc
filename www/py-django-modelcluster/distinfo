@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/03/03 15:27:09 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/01/09 13:21:07 adam Exp $
 
-BLAKE2s (django-modelcluster-6.3.tar.gz) = fa5de529be02a8995c1ac0f6bcb6082f5ed24a4da610e9332b1c4b808c215ed0
-SHA512 (django-modelcluster-6.3.tar.gz) = d98dd78919df620540c8616c73d7f838ad996eb6306fcb9d4ffa4e53c4d8b1041bf141d230665de8955da95fc87dacf2d9d733e06fda385ae0b9dd0d9bc9f74c
-Size (django-modelcluster-6.3.tar.gz) = 28903 bytes
+BLAKE2s (django-modelcluster-6.4.tar.gz) = 7b6e960033ab2452e5ded40b17f7bd3b5b8987f78936e014c02d49f586a5bd5b
+SHA512 (django-modelcluster-6.4.tar.gz) = dc49c93d77a41e4e8f2768b31ee990806b5bbf0bc96e702839d8ccdead9880aa917a261efdffe34917c57ac8bf1012836fbe33c86a534175f3f89e2ce19ffd1c
+Size (django-modelcluster-6.4.tar.gz) = 28966 bytes
