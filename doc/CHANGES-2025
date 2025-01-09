@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.240 2025/01/09 23:47:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.241 2025/01/09 23:57:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-doctemplates to 0.11.0.1 [wiz 2025-01-09]
 	Updated graphics/png to 1.6.45 [wiz 2025-01-09]
 	Updated textproc/hs-hslua-module-doclayout to 1.2.0 [wiz 2025-01-09]
+	Updated mail/neomutt to 20250109 [wiz 2025-01-09]
