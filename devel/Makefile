@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4386 2025/01/08 18:01:53 vins Exp $
+# $NetBSD: Makefile,v 1.4387 2025/01/09 23:01:13 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -513,6 +513,7 @@ SUBDIR+=	guile22-slib
 SUBDIR+=	guile30-slib
 SUBDIR+=	gyp
 SUBDIR+=	happy
+SUBDIR+=	happy-lib
 SUBDIR+=	haskell-language-server
 SUBDIR+=	haskell-mode
 SUBDIR+=	hasktags
