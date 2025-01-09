@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.232 2025/01/09 21:06:09 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.233 2025/01/09 21:11:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -313,4 +313,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/clock-rs to 0.1.213 [pin 2025-01-09]
 	Updated x11/xterm to 397 [pin 2025-01-09]
 	Updated misc/screen to 5.0.0 [ktnb 2025-01-09]
-	Updated graphics/mypaint to 2.0.1nb23 [ktnb 2025-01-09]
+	Updated graphics/mypaint to 2.0.1 [ktnb 2025-01-09]
