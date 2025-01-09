@@ -1,0 +1,14 @@
+Durs quickly shows which directories are using the most disk space without
+needing extra commands like sort or head. If there's a folder you don't have
+permission to access, Durs will display just one message 'Did not have
+permissions message' for it and continue scanning.
+
+It displays the largest files or folders that can fit on your terminal screen,
+going deep into the file structure to find the biggest items automatically.
+This removes the need for -d or -h flags, keeping things simple. The largest
+directories are highlighted with color for easy identification.
+
+The color bars reflect both the directory structure and disk usage, with shades
+of gray to show folder hierarchy. For example, if .steam is a large folder
+using 44% of space, lighter gray lines from .steam show subfolders inside it.
+This helps you see that deleting .steam would also remove everything inside it.

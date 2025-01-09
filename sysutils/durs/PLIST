@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/09 10:17:06 pin Exp $
+bin/durs
+man/man1/durs.1
+share/examples/durs/config.toml
