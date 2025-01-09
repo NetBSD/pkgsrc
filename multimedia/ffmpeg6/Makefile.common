@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2025/01/09 10:16:04 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2025/01/09 10:22:14 wiz Exp $
 # used by multimedia/ffmpeg6/Makefile
 # used by multimedia/ffplay6/Makefile
 
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg6
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg6
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg6
 # https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
+.include "../../mk/compiler.mk"
 .if ${CC_VERSION:Mclang-15.*}
 LDFLAGS.Darwin+=	-Wl,-ld_classic
 .endif
