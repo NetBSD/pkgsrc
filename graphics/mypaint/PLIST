@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2020/03/04 13:51:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/09 21:05:49 ktnb Exp $
 bin/mypaint
 bin/mypaint-ora-thumbnailer
 lib/mypaint/${EGG_INFODIR}/PKG-INFO
@@ -346,9 +346,9 @@ lib/mypaint/lib/gettext.pyo
 lib/mypaint/lib/gettext_setup.py
 lib/mypaint/lib/gettext_setup.pyc
 lib/mypaint/lib/gettext_setup.pyo
-lib/mypaint/lib/gichecks.py
-lib/mypaint/lib/gichecks.pyc
-lib/mypaint/lib/gichecks.pyo
+lib/mypaint/lib/gibindings.py
+lib/mypaint/lib/gibindings.pyc
+lib/mypaint/lib/gibindings.pyo
 lib/mypaint/lib/glib.py
 lib/mypaint/lib/glib.pyc
 lib/mypaint/lib/glib.pyo
@@ -433,12 +433,14 @@ lib/mypaint/lib/surface.pyo
 lib/mypaint/lib/tiledsurface.py
 lib/mypaint/lib/tiledsurface.pyc
 lib/mypaint/lib/tiledsurface.pyo
+lib/mypaint/lib/validation.py
+lib/mypaint/lib/validation.pyc
+lib/mypaint/lib/validation.pyo
 lib/mypaint/lib/xml.py
 lib/mypaint/lib/xml.pyc
 lib/mypaint/lib/xml.pyo
 share/applications/mypaint.desktop
 share/icons/hicolor/16x16/actions/mypaint-tool-color-palette.png
-share/icons/hicolor/16x16/actions/mypaint-tool-color-rgb.png
 share/icons/hicolor/16x16/actions/mypaint-tool-component-sliders.png
 share/icons/hicolor/16x16/actions/mypaint-tool-crossed-bowl-color-changer.png
 share/icons/hicolor/16x16/actions/mypaint-tool-hcywheel.png
@@ -449,7 +451,6 @@ share/icons/hicolor/16x16/actions/mypaint-tool-hue-wheel.png
 share/icons/hicolor/16x16/actions/mypaint-tool-rings-color-changer.png
 share/icons/hicolor/16x16/actions/mypaint-tool-wash-color-changer.png
 share/icons/hicolor/22x22/actions/mypaint-tool-color-palette.png
-share/icons/hicolor/22x22/actions/mypaint-tool-color-rgb.png
 share/icons/hicolor/22x22/actions/mypaint-tool-component-sliders.png
 share/icons/hicolor/22x22/actions/mypaint-tool-crossed-bowl-color-changer.png
 share/icons/hicolor/22x22/actions/mypaint-tool-hcywheel.png
@@ -497,7 +498,6 @@ share/icons/hicolor/24x24/actions/mypaint-target-brush-symbolic.svg
 share/icons/hicolor/24x24/actions/mypaint-target-layer-symbolic.svg
 share/icons/hicolor/24x24/actions/mypaint-target-stroke-symbolic.svg
 share/icons/hicolor/24x24/actions/mypaint-tool-color-palette.png
-share/icons/hicolor/24x24/actions/mypaint-tool-color-rgb.png
 share/icons/hicolor/24x24/actions/mypaint-tool-component-sliders.png
 share/icons/hicolor/24x24/actions/mypaint-tool-crossed-bowl-color-changer.png
 share/icons/hicolor/24x24/actions/mypaint-tool-hcywheel.png
@@ -522,7 +522,6 @@ share/icons/hicolor/24x24/actions/mypaint-view-zoom-less-symbolic.svg
 share/icons/hicolor/24x24/actions/mypaint-view-zoom-more-symbolic.svg
 share/icons/hicolor/24x24/actions/mypaint-view-zoom-symbolic.svg
 share/icons/hicolor/32x32/actions/mypaint-tool-color-palette.png
-share/icons/hicolor/32x32/actions/mypaint-tool-color-rgb.png
 share/icons/hicolor/32x32/actions/mypaint-tool-component-sliders.png
 share/icons/hicolor/32x32/actions/mypaint-tool-crossed-bowl-color-changer.png
 share/icons/hicolor/32x32/actions/mypaint-tool-hcywheel.png
@@ -533,7 +532,6 @@ share/icons/hicolor/32x32/actions/mypaint-tool-hue-wheel.png
 share/icons/hicolor/32x32/actions/mypaint-tool-rings-color-changer.png
 share/icons/hicolor/32x32/actions/mypaint-tool-wash-color-changer.png
 share/icons/hicolor/48x48/actions/mypaint-tool-color-palette.png
-share/icons/hicolor/48x48/actions/mypaint-tool-color-rgb.png
 share/icons/hicolor/48x48/actions/mypaint-tool-component-sliders.png
 share/icons/hicolor/48x48/actions/mypaint-tool-crossed-bowl-color-changer.png
 share/icons/hicolor/48x48/actions/mypaint-tool-hcywheel.png
@@ -605,7 +603,6 @@ share/icons/hicolor/scalable/actions/mypaint-left-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-line-sequence-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-lines-and-curves-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-lock-alpha-symbolic.svg
-share/icons/hicolor/scalable/actions/mypaint-normal-paint-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-object-hidden-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-object-locked-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-object-move-symbolic.svg
@@ -632,7 +629,6 @@ share/icons/hicolor/scalable/actions/mypaint-scrap-save-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-scratchpad-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-stroke-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-symmetry-symbolic.svg
-share/icons/hicolor/scalable/actions/mypaint-symmetry.svg
 share/icons/hicolor/scalable/actions/mypaint-tab-options-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-tab-sidebar-swap-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-target-brush-symbolic.svg
@@ -640,7 +636,6 @@ share/icons/hicolor/scalable/actions/mypaint-target-layer-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-target-stroke-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-target-symbolic.svg
 share/icons/hicolor/scalable/actions/mypaint-tool-color-palette.svg
-share/icons/hicolor/scalable/actions/mypaint-tool-color-rgb.svg
 share/icons/hicolor/scalable/actions/mypaint-tool-component-sliders.svg
 share/icons/hicolor/scalable/actions/mypaint-tool-hcywheel.svg
 share/icons/hicolor/scalable/actions/mypaint-tool-hsvcube.svg
@@ -882,3 +877,4 @@ share/mypaint/pixmaps/layers.png
 share/mypaint/pixmaps/mypaint_logo.png
 share/mypaint/pixmaps/plus.png
 share/thumbnailers/mypaint-ora.thumbnailer
+@pkgdir lib/python${PYVERSSUFFIX}/site-packages

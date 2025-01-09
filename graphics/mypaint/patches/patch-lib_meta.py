@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_meta.py,v 1.1 2020/03/04 13:51:51 wiz Exp $
+$NetBSD: patch-lib_meta.py,v 1.2 2025/01/09 21:05:49 ktnb Exp $
 
 Fix error with python-3.7:
 
@@ -8,14 +8,14 @@ Fix error with python-3.7:
     exec(relinfo_fp, relinfo)
 TypeError: exec() arg 1 must be a string, bytes or code object
 
---- lib/meta.py.orig	2020-02-15 15:05:22.000000000 +0000
+--- lib/meta.py.orig	2020-05-29 16:40:02.000000000 +0000
 +++ lib/meta.py
-@@ -263,8 +263,7 @@ def _get_versions(gitprefix="gitexport")
+@@ -272,8 +272,7 @@ def _get_versions(gitprefix="gitexport")
      if os.path.isfile("release_info"):
          # If release information from release.sh exists, use that
          relinfo = {}
 -        with open("release_info", "rb") as relinfo_fp:
--            exec(relinfo_fp, relinfo)
+-            exec(relinfo_fp.read(), relinfo)
 +        exec(open("release_info").read())
          base_version = relinfo.get(
              "MYPAINT_VERSION_BASE",
