@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.108 2025/01/08 15:20:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.109 2025/01/09 07:52:24 wiz Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -52,10 +52,8 @@ SUBST_MESSAGE.darwin=	Fixing install_name for Darwin.
 SUBST_FILES.darwin=	tools/build/src/tools/gcc.jam
 SUBST_SED.darwin=	-e 's,darwin : @rpath/,darwin : ${PREFIX}/lib/,'
 
-# On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar,
-# and force use of GNU find to support {} as required later in this file.
+# On SunOS, extract using pkgsrc nbtar to avoid warnings from native gtar
 .  if ${OPSYS} == "SunOS"
-TOOLS_PLATFORM.find=	# empty
 TOOLS_PLATFORM.tar=	# empty
 .  endif
 
@@ -95,20 +93,14 @@ pre-configure:
 #.  endif
 
 boost-install-libs:
-	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib
-	cd ${WRKSRC}/stage/lib && pax -rw -p p libboost* ${DESTDIR}${PREFIX}/lib
-
-.include "cmake-dirs.mk"
+	@${STEP_MSG} Installing boost libraries
+	${RUN}cd ${WRKSRC}/stage/lib && \
+	${PAX} -rw -p p libboost* ${DESTDIR}${PREFIX}/lib
 
 boost-install-cmake:
-.  for dir in ${BOOST_CMAKE_DIRS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${dir}
-	cd ${WRKSRC}/stage/lib/${dir} && \
-	${FIND} . -type f -name "*.cmake" \
-	| while read f; do \
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${dir}/"$${f%/*}"; \
-		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/lib/${dir}/"$$f"; \
-	done
-.  endfor
+	@${STEP_MSG} Installing boost cmake files
+	${RUN}cd ${WRKSRC}/stage/lib && \
+	${FIND} cmake -type f -name '*.cmake' \
+	| pax -rw -p p ${DESTDIR}${PREFIX}/lib
 
 .endif # ${BOOST_PACKAGE} == "meta-pkg"
