@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.230 2025/01/09 19:01:42 pin Exp $
+$NetBSD: CHANGES-2025,v 1.231 2025/01/09 20:07:17 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic to 2.10.5 [adam 2025-01-09]
 	Updated time/clock-rs to 0.1.213 [pin 2025-01-09]
 	Updated x11/xterm to 397 [pin 2025-01-09]
+	Updated misc/screen to 5.0.0 [ktnb 2025-01-09]
