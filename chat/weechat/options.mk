@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2024/12/31 15:57:36 ryoon Exp $
+# $NetBSD: options.mk,v 1.33 2025/01/09 09:43:45 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 # mk/curses will handle wide-curses
@@ -41,8 +41,8 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_PERL=OFF
 .include "../../lang/ruby/buildlink3.mk"
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_RUBY=ON
 PLIST.ruby=	yes
-#BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
-#BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
+BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
+BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
 .else
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_RUBY:BOOL=OFF
 .endif
