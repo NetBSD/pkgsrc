@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2024/01/28 08:19:18 wiz Exp $
+$NetBSD: distinfo,v 1.15 2025/01/09 21:05:49 ktnb Exp $
 
-BLAKE2s (mypaint-2.0.0.tar.xz) = b12a8e163e3f362b079a4e672502e0b2f2e0ca0ccd360942cb9a36f8fee3892d
-SHA512 (mypaint-2.0.0.tar.xz) = 118d905f4d7ce6adb9779b59d6b3f51b94a9937778b8fe3ed1b31c9b5b77d63110134bdc74849a91d8095e905664227ff43ffe183ad9c7c7ba18fa954ade8a84
-Size (mypaint-2.0.0.tar.xz) = 7316680 bytes
+BLAKE2s (mypaint-2.0.1.tar.xz) = e2f8fb826f5c727fe61d0a18e388508cae1a7bb960c6454870ac1f3512b3053b
+SHA512 (mypaint-2.0.1.tar.xz) = 449beddcc6da5d720c9efbeac94a466ed0057bd1962d42ebb419190e8b7fd8ffd341327408467fc5da47920f9d0da1fd6d78233a0dda88de5f5d52d53d9ab562
+Size (mypaint-2.0.1.tar.xz) = 7295048 bytes
 SHA1 (patch-lib_gettext__setup.py) = 08a93e37a410f7a7392e575fa06c10bdd13e6ef6
-SHA1 (patch-lib_meta.py) = 1c8832ff06154255d7ea14037dc728d1fa0ba50e
-SHA1 (patch-setup.py) = 399bed73657bb7abf1a949e83f39ca0e0e9821fb
+SHA1 (patch-lib_meta.py) = 1295dbaf9096ef2d483063ad8a0a38d7c2462c77
+SHA1 (patch-setup.py) = 18cc4b286550bf142a2769c45f53762367d114fe
