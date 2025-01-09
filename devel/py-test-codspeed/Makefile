@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/15 08:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/09 14:22:12 adam Exp $
 
-DISTNAME=	pytest_codspeed-3.1.0
+DISTNAME=	pytest_codspeed-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-codspeed/}
@@ -12,11 +12,13 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.17.1:../../devel/py-cffi
-DEPENDS+=	${PYPKGPREFIX}-filelock>=3.12.2:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.8.1:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-test>=3.8:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
+
+MAKE_ENV+=	PYTEST_CODSPEED_SKIP_EXTENSION_BUILD=1
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
