@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/12/06 11:20:06 micha Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/09 13:08:59 micha Exp $
 
-DISTNAME=	xnedit-1.6.0
+DISTNAME=	xnedit-1.6.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnedit/}
 
