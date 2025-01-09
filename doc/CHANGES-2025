@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.218 2025/01/09 09:53:53 markd Exp $
+$NetBSD: CHANGES-2025,v 1.219 2025/01/09 10:08:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -294,3 +294,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-pspdfutils to 3.3.8 [wiz 2025-01-09]
 	Updated print/tex-latex to 20240601.2 [markd 2025-01-09]
 	Updated print/tex-latex-doc to 20240601.2 [markd 2025-01-09]
+	Updated net/arti to 1.3.2 [wiz 2025-01-09]
