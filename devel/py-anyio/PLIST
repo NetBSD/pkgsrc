@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/06 08:07:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/09 10:13:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -114,6 +114,9 @@ ${PYSITELIB}/anyio/streams/text.pyo
 ${PYSITELIB}/anyio/streams/tls.py
 ${PYSITELIB}/anyio/streams/tls.pyc
 ${PYSITELIB}/anyio/streams/tls.pyo
+${PYSITELIB}/anyio/to_interpreter.py
+${PYSITELIB}/anyio/to_interpreter.pyc
+${PYSITELIB}/anyio/to_interpreter.pyo
 ${PYSITELIB}/anyio/to_process.py
 ${PYSITELIB}/anyio/to_process.pyc
 ${PYSITELIB}/anyio/to_process.pyo
