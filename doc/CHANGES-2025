@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.226 2025/01/09 13:21:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.227 2025/01/09 13:35:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -306,3 +306,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/xnedit to 1.6.1 [micha 2025-01-09]
 	Updated net/haproxy to 3.1.2 [adam 2025-01-09]
 	Updated www/py-django-modelcluster to 6.4 [adam 2025-01-09]
+	Updated devel/shfmt to 3.10.0 [adam 2025-01-09]
+	Updated net/wireshark to 4.4.3 [adam 2025-01-09]
