@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.109 2025/01/09 07:52:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.110 2025/01/09 09:25:14 riastradh Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -101,6 +101,6 @@ boost-install-cmake:
 	@${STEP_MSG} Installing boost cmake files
 	${RUN}cd ${WRKSRC}/stage/lib && \
 	${FIND} cmake -type f -name '*.cmake' \
-	| pax -rw -p p ${DESTDIR}${PREFIX}/lib
+	| ${PAX} -rw -p p ${DESTDIR}${PREFIX}/lib
 
 .endif # ${BOOST_PACKAGE} == "meta-pkg"
