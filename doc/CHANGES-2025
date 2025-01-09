@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.217 2025/01/09 08:56:45 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.218 2025/01/09 09:53:53 markd Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -292,3 +292,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-logbook to 1.8.0 [adam 2025-01-08]
 	Updated net/py-gevent to 24.11.1 [adam 2025-01-08]
 	Updated print/py-pspdfutils to 3.3.8 [wiz 2025-01-09]
+	Updated print/tex-latex to 20240601.2 [markd 2025-01-09]
+	Updated print/tex-latex-doc to 20240601.2 [markd 2025-01-09]
