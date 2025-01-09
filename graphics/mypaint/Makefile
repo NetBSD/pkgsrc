@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2025/01/09 21:05:49 ktnb Exp $
+# $NetBSD: Makefile,v 1.74 2025/01/09 21:10:20 wiz Exp $
 
 DISTNAME=	mypaint-2.0.1
 PKGREVISION=	23
@@ -28,7 +28,7 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libmypaint+=	libmypaint>=1.5.0
+BUILDLINK_API_DEPENDS.libmypaint+=	libmypaint>=1.6.0
 .include "../../graphics/libmypaint/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mypaint-brushes+=	mypaint-brushes>=2.0
 .include "../../graphics/mypaint-brushes/buildlink3.mk"
