@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.224 2025/01/09 13:09:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.225 2025/01/09 13:12:24 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -303,3 +303,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-pspdfutils to 3.3.9 [wiz 2025-01-09]
 	Updated devel/protobuf to 29.3 [adam 2025-01-09]
 	Updated devel/py-protobuf to 5.29.3 [adam 2025-01-09]
+	Updated editors/xnedit to 1.6.1 [micha 2025-01-09]
