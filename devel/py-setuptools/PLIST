@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.99 2025/01/05 21:20:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.100 2025/01/09 09:27:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -358,6 +358,9 @@ ${PYSITELIB}/setuptools/_reqs.pyo
 ${PYSITELIB}/setuptools/_shutil.py
 ${PYSITELIB}/setuptools/_shutil.pyc
 ${PYSITELIB}/setuptools/_shutil.pyo
+${PYSITELIB}/setuptools/_static.py
+${PYSITELIB}/setuptools/_static.pyc
+${PYSITELIB}/setuptools/_static.pyo
 ${PYSITELIB}/setuptools/_vendor/autocommand-2.2.2.dist-info/INSTALLER
 ${PYSITELIB}/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE
 ${PYSITELIB}/setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA
