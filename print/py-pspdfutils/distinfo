@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2025/01/09 08:56:36 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/01/09 12:16:59 wiz Exp $
 
-BLAKE2s (psutils-3.3.8.tar.gz) = c4c10b014e53ce7c9c014843e6b49eed5f66884e78fd95e02b43319268d945fc
-SHA512 (psutils-3.3.8.tar.gz) = f13685d719eb22f3622d4277a076dd5783871752fbd992ea4b583b432d7880f663d63984b12bba8bafc168e7ab9a1ad2d70e41352227af0c00ec29ed91773847
-Size (psutils-3.3.8.tar.gz) = 1247611 bytes
+BLAKE2s (psutils-3.3.9.tar.gz) = fed3c81a36f8a4222eaaad954d9c82bb0630b54e6e637c4bdff10db531e5c11a
+SHA512 (psutils-3.3.9.tar.gz) = 8031df006e11ce9a0d3c5db6b440bbe4be16ee170c6422d2e664c4b8f3395095114a62d19f93f813b5f0c4eb61e3c0d7b5fa0ad05d508f522b410ec9de5e96ad
+Size (psutils-3.3.9.tar.gz) = 1244653 bytes
