@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:31:40 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/09 23:13:41 wiz Exp $
 
-DISTNAME=	emojis-0.1.3
-PKGREVISION=	2
+DISTNAME=	emojis-0.1.4.1
 CATEGORIES=	converters
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/29 03:08:35 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/09 23:13:41 wiz Exp $
+lib/emojis-${PKGVERSION}/${HS_VERSION}/package-description
+lib/emojis-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Emoji.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Trie.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Trie.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Trie.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
-lib/emojis-${PKGVERSION}/${HS_VERSION}/package-description
-lib/emojis-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/Text-Emoji.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/emojis-${PKGVERSION}/html/doc-index.html
