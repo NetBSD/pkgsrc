@@ -1,0 +1,16 @@
+Happy is a parser generator for Haskell. Given a grammar specification
+in BNF, Happy generates Haskell code to parse the grammar. Happy
+works in a similar way to the yacc tool for C.
+
+This library provides the following functionality:
+
+* Data type definitions for the Grammar AST type, capturing the
+  information in .y-files
+* A parser for happy grammar files (.y) to produce a Grammar
+* Implementations of the text book algorithms that compute the LR
+  action and goto tables for the given Grammar
+* An LALR code generator to produce table-driven, deterministic
+  parsing code in Haskell
+* A (less maintained) GLR code generator to produce
+  table-driven, non-deterministic parsing code in Haskell, where
+  ambiguous parses produce multiple parse trees

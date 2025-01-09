@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/09 22:59:22 wiz Exp $
+
+BLAKE2s (happy-lib-2.1.3.tar.gz) = 99e7b8695566f2edafaae714baf8768783bb3e322bef621de7ae336d0ad07675
+SHA512 (happy-lib-2.1.3.tar.gz) = e095f7a827c0f1c93f6c07b0f4880118fdcdd592a73a2b14d6de622544bdf2cb22fce3ef69e4c3748bd15e0e155678f0264c3a5ef2dbe46d68efdaee8604b958
+Size (happy-lib-2.1.3.tar.gz) = 93310 bytes
