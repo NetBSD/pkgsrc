@@ -1,10 +1,10 @@
-$NetBSD: patch-doc_screen.texinfo,v 1.3 2023/09/06 16:00:15 vins Exp $
+$NetBSD: patch-doc_screen.texinfo,v 1.4 2025/01/09 20:07:03 ktnb Exp $
 
 Fix: Node `Window Settings' lacks menu item for `Mousetrack'
 
---- doc/screen.texinfo.orig	2023-08-16 00:29:26.000000000 +0000
+--- doc/screen.texinfo.orig	2024-08-28 19:55:03.000000000 +0000
 +++ doc/screen.texinfo
-@@ -2414,6 +2414,7 @@ terminal emulation itself.
+@@ -2417,6 +2417,7 @@ terminal emulation itself.
  * Login::                       Control @file{/etc/utmp} logging
  * Mode::                        Control the file mode of the pty
  * Monitor::                     Watch for activity or inactivity in a window
@@ -12,3 +12,56 @@ Fix: Node `Window Settings' lacks menu item for `Mousetrack'
  * Windows::			List the active windows
  * Hardstatus::			Set a window's hardstatus line
  @end menu
+@@ -5248,7 +5249,7 @@ Exchanges windows positions on window li
+ Changes windows numbers, so there is no gaps between them.
+ @end deffn
+ 
+-@node License, Collapse, Miscellaneous
++@node License, Nonblock, Collapse, Miscellaneous
+ @section License
+ @kindex ,
+ @deffn Command license
+@@ -5257,7 +5258,7 @@ Display the disclaimer page. This is don
+ started without options, which should be often enough.
+ @end deffn
+ 
+-@node Nonblock, Number, Miscellaneous
++@node Nonblock, Number, License, Miscellaneous
+ @section Nonblock
+ @deffn Command nonblock [@var{state}|@var{numsecs}]
+ Tell screen how to deal with user interfaces (displays) that cease to
+@@ -5277,7 +5278,7 @@ Same as the @code{nonblock} command exce
+ displays is changed. Initial setting is @code{off}.
+ @end deffn
+ 
+-@node Number, Nonblock, Miscellaneous
++@node Number, Verbose, Nonblock, Miscellaneous
+ @section Number
+ @kindex N
+ @deffn Command number [[+|-]@var{n}]
+@@ -5289,7 +5290,7 @@ plus (`+') or minus (`-') will change th
+ amount specified.
+ @end deffn
+ 
+-@node Verbose, Version, Miscellaneous
++@node Verbose, Version, Number, Miscellaneous
+ @section Verbose
+ @deffn Command verbose [on|off]
+ If verbose is switched on, the command name is echoed, whenever a window
+@@ -5412,14 +5413,14 @@ The default is @code{on}, of course. Thi
+ only in rare circumstances.
+ @end deffn
+ 
+-@node Eval, , Setsid, Miscellaneous
++@node Eval, Backtick, Setsid, Miscellaneous
+ @section Eval
+ @deffn Command eval @var{command1} [@var{command2} ...]
+ (none)@*
+ Parses and executes each argument as separate command.
+ @end deffn
+ 
+-@node Backtick, Screen Saver, , Miscellaneous
++@node Backtick, Screen Saver, Eval, Miscellaneous
+ @section Backtick
+ @deffn Command backtick @var{id} @var{lifespan} @var{autorefresh} @var{command} [@var{args}]
+ @deffnx Command backtick @var{id}

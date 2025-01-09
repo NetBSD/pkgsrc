@@ -1,10 +1,10 @@
-$NetBSD: patch-ap,v 1.10 2020/03/24 07:04:37 rillig Exp $
+$NetBSD: patch-doc_screen.1,v 1.1 2025/01/09 20:07:03 ktnb Exp $
 
-Replace configurable paths with tags.
+Update the man page with pkgsrc paths
 
---- doc/screen.1.orig	2017-07-10 19:26:25.000000000 +0000
-+++ doc/screen.1	2017-07-18 22:44:38.000000000 +0000
-@@ -712,7 +712,7 @@
+--- doc/screen.1.orig	2025-01-09 02:42:26.792251218 +0000
++++ doc/screen.1
+@@ -767,7 +767,7 @@ _
  
  .SH CUSTOMIZATION
  The \*Qsocket directory\*U defaults either to $HOME/.screen or simply to
@@ -13,7 +13,7 @@ Replace configurable paths with tags.
  .I screen
  is installed setuid-root, then the administrator
  should compile
-@@ -725,7 +725,7 @@
+@@ -780,7 +780,7 @@ in the environment variable $SCREENDIR.
  When
  .I screen
  is invoked, it executes initialization commands from the files
@@ -22,19 +22,10 @@ Replace configurable paths with tags.
  \*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
  defaults\*U that can be overridden in the following ways: for the
  global screenrc file 
-@@ -755,7 +755,7 @@
- protected from variable substitution.
- .PP
- Two configuration files are shipped as examples with your screen distribution:
--\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
-+\*Q@EXAMPLES@/screenrc\*U and \*Q@EXAMPLES@/etcscreenrc\*U. They contain a number of
- useful examples for various commands.
- .PP
- Customization can also be done 'on-line'. To enter the command mode type
-@@ -5017,14 +5017,14 @@
+@@ -5194,12 +5194,12 @@ Examples in the 
  .I screen
  distribution package for private and global initialization files.
- .IP $SYSSCREENRC 
+ .IP $SYSSCREENRC
 -.IP /usr/local/etc/screenrc
 +.IP @PKG_SYSCONFDIR@/screenrc
  .I screen
@@ -44,8 +35,14 @@ Replace configurable paths with tags.
 -Read in after /usr/local/etc/screenrc
 +Read in after @PKG_SYSCONFDIR@/screenrc
  .IP $SCREENDIR/S\-<login>
--.IP /local/screens/S\-<login>
-+.IP /tmp/screens/S\-<login>
+ .IP $HOME/.screen
  Socket directories (default)
- .IP /usr/tmp/screens/S\-<login>
- Alternate socket directories.
+@@ -5216,7 +5216,7 @@ or
+ Screen images created by the hardcopy function
+ .IP screenlog.[0-9]
+ Output log files created by the log function
+-.IP /usr/lib/terminfo/?/*
++.IP @PREFIX@/lib/terminfo/?/*
+ or
+ .IP /etc/termcap
+ Terminal capability databases

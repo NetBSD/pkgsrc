@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.7 2020/03/24 06:55:34 rillig Exp $
+$NetBSD: patch-etc_etcscreenrc,v 1.1 2025/01/09 20:07:03 ktnb Exp $
 
 Replace configurable paths with tags.
 
