@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2024/02/04 09:44:51 markd Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/09 09:51:56 markd Exp $
 
 DISTNAME=	latex
-PKGNAME=	tex-${DISTNAME}-20231101.1
-TEXLIVE_REV=	69443
+PKGNAME=	tex-${DISTNAME}-20240601.2
+TEXLIVE_REV=	71629
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://ctan.org/pkg/latex
