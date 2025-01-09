@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/02/04 09:44:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/01/09 09:51:56 markd Exp $
 share/texmf-dist/doc/latex/base/README.md
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -137,6 +137,8 @@ share/texmf-dist/doc/latex/base/ltnews37.pdf
 share/texmf-dist/doc/latex/base/ltnews37.tex
 share/texmf-dist/doc/latex/base/ltnews38.pdf
 share/texmf-dist/doc/latex/base/ltnews38.tex
+share/texmf-dist/doc/latex/base/ltnews39.pdf
+share/texmf-dist/doc/latex/base/ltnews39.tex
 share/texmf-dist/doc/latex/base/ltpara-code.pdf
 share/texmf-dist/doc/latex/base/ltpara-code.tex
 share/texmf-dist/doc/latex/base/ltpara-doc.pdf
