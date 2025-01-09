@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2025/01/09 10:22:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/01/09 10:29:19 jperkin Exp $
 # used by multimedia/ffmpeg6/Makefile
 # used by multimedia/ffplay6/Makefile
 
@@ -33,8 +33,10 @@ CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg6
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg6
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg6
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg6
-# https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
+
 .include "../../mk/compiler.mk"
+
+# https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
 .if ${CC_VERSION:Mclang-15.*}
 LDFLAGS.Darwin+=	-Wl,-ld_classic
 .endif
@@ -74,8 +76,6 @@ CONFIG_SHELL=	${TOOLS_PATH.bash}
 
 # Let's not put garbage into /tmp
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
-
-.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=		sunwspro

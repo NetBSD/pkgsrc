@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2025/01/09 10:20:50 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.9 2025/01/09 10:29:19 jperkin Exp $
 # used by multimedia/ffmpeg7/Makefile
 # used by multimedia/ffplay7/Makefile
 
@@ -34,8 +34,10 @@ CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg7
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg7
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg7
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/ffmpeg7
-# https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
+
 .include "../../mk/compiler.mk"
+
+# https://github.com/homebrew-ffmpeg/homebrew-ffmpeg/issues/140
 .if ${CC_VERSION:Mclang-15.*}
 LDFLAGS.Darwin+=	-Wl,-ld_classic
 .endif
@@ -75,8 +77,6 @@ CONFIG_SHELL=	${TOOLS_PATH.bash}
 
 # Let's not put garbage into /tmp
 CONFIGURE_ENV+=		TMPDIR=${WRKSRC}/tmp
-
-.include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 SUBST_CLASSES+=		sunwspro
