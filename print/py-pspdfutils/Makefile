@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/01/09 08:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/09 12:16:59 wiz Exp $
 
-DISTNAME=	psutils-3.3.8
+DISTNAME=	psutils-3.3.9
 # renamed from pspdfutils to psutils in 3.3.7
 # TODO: follow suit
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ps/pspdf/}
@@ -31,8 +31,6 @@ post-install:
 .if ${PKGMANDIR} != "share/man"
 	cd ${DESTDIR}${PREFIX}/share/man && ${MV} * ${DESTDIR}${PREFIX}/${PKGMANDIR}
 .endif
-# https://github.com/rrthomas/psutils/issues/75
-	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/psutils-${PKGVERSION_NOREV}.dist-info/.bak.*
 
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
