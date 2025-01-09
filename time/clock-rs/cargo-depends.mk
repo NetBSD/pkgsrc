@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.1 2025/01/07 19:37:36 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.2 2025/01/09 16:42:28 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	android-tzdata-0.1.1
 CARGO_CRATE_DEPENDS+=	android_system_properties-0.1.5
@@ -13,9 +13,9 @@ CARGO_CRATE_DEPENDS+=	bumpalo-3.16.0
 CARGO_CRATE_DEPENDS+=	cc-1.2.7
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.39
-CARGO_CRATE_DEPENDS+=	clap-4.5.23
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.23
-CARGO_CRATE_DEPENDS+=	clap_derive-4.5.18
+CARGO_CRATE_DEPENDS+=	clap-4.5.25
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.25
+CARGO_CRATE_DEPENDS+=	clap_derive-4.5.24
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	colorchoice-1.0.3
 CARGO_CRATE_DEPENDS+=	core-foundation-sys-0.8.7
@@ -35,7 +35,7 @@ CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.1
 CARGO_CRATE_DEPENDS+=	js-sys-0.3.76
 CARGO_CRATE_DEPENDS+=	libc-0.2.169
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
-CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
+CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.15
 CARGO_CRATE_DEPENDS+=	lock_api-0.4.12
 CARGO_CRATE_DEPENDS+=	log-0.4.22
 CARGO_CRATE_DEPENDS+=	memchr-2.7.4
@@ -49,7 +49,7 @@ CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.92
 CARGO_CRATE_DEPENDS+=	quote-1.0.38
 CARGO_CRATE_DEPENDS+=	redox_syscall-0.5.8
 CARGO_CRATE_DEPENDS+=	redox_users-0.4.6
-CARGO_CRATE_DEPENDS+=	rustix-0.38.42
+CARGO_CRATE_DEPENDS+=	rustix-0.38.43
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
 CARGO_CRATE_DEPENDS+=	serde-1.0.217
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.217
@@ -60,7 +60,7 @@ CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.2
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
-CARGO_CRATE_DEPENDS+=	syn-2.0.94
+CARGO_CRATE_DEPENDS+=	syn-2.0.95
 CARGO_CRATE_DEPENDS+=	thiserror-1.0.69
 CARGO_CRATE_DEPENDS+=	thiserror-impl-1.0.69
 CARGO_CRATE_DEPENDS+=	toml-0.8.19
