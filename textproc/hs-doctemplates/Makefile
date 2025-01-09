@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2025/01/09 23:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/09 23:29:14 wiz Exp $
 
-DISTNAME=	doctemplates-0.11
-PKGREVISION=	6
+DISTNAME=	doctemplates-0.11.0.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Pandoc-style document templates
 LICENSE=	modified-bsd
 
+.include "../../devel/hs-safe/buildlink3.mk"
+.include "../../converters/hs-text-conversions/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../textproc/hs-doclayout/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
