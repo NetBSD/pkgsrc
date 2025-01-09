@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/01/09 23:15:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/01/09 23:24:41 wiz Exp $
 
 BUILDLINK_TREE+=	hs-doctemplates
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-doctemplates
 HS_DOCTEMPLATES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-doctemplates+=	hs-doctemplates>=0.11
-BUILDLINK_ABI_DEPENDS.hs-doctemplates+=	hs-doctemplates>=0.11nb5
+BUILDLINK_ABI_DEPENDS.hs-doctemplates+=	hs-doctemplates>=0.11nb6
 BUILDLINK_PKGSRCDIR.hs-doctemplates?=	../../textproc/hs-doctemplates
 
 .include "../../converters/hs-aeson/buildlink3.mk"
