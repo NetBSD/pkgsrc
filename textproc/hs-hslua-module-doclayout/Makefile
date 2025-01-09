@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/01/09 23:24:41 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/09 23:47:29 wiz Exp $
 
-DISTNAME=	hslua-module-doclayout-1.1.1
-PKGREVISION=	3
+DISTNAME=	hslua-module-doclayout-1.2.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
