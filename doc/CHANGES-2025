@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.238 2025/01/09 23:29:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.239 2025/01/09 23:37:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/hs-emojis to 0.1.4.1 [wiz 2025-01-09]
 	Updated textproc/hs-doclayout to 0.5 [wiz 2025-01-09]
 	Updated textproc/hs-doctemplates to 0.11.0.1 [wiz 2025-01-09]
+	Updated graphics/png to 1.6.45 [wiz 2025-01-09]
