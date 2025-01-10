@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/06/28 18:35:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1.4.1 2025/01/10 17:08:36 maya Exp $
 
 GCC_PKGNAME=	gcc14
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC14_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc14 package so that with the dependence pattern
 ## '{gcc14,gcc14-libs}>=14.1.*' pkg_add will choose gcc14-libs over gcc14.
-PKGREVISION=	1
+PKGREVISION=	3
 
 CATEGORIES=	lang
 MASTER_SITES=	# empty
@@ -35,6 +35,10 @@ LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
 LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
+
+# Workaround for PR pkg/58966: mk: REQUIRES/PROVIDES analysis is wrong
+# for self-libraries.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib
