@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2023/05/10 13:32:48 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/01/10 21:29:37 schmonz Exp $
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_ajp13.la
 lib/lighttpd/mod_auth.la
@@ -92,8 +92,8 @@ share/examples/lighttpd/conf.d/ssi.conf
 share/examples/lighttpd/conf.d/status.conf
 share/examples/lighttpd/conf.d/userdir.conf
 share/examples/lighttpd/conf.d/webdav.conf
+share/examples/lighttpd/lighttpd.annotated.conf
 share/examples/lighttpd/lighttpd.conf
 share/examples/lighttpd/modules.conf
 share/examples/lighttpd/rrdtool-graph.sh
-share/examples/lighttpd/spawn-php.sh
 share/examples/lighttpd/vhosts.d/vhosts.template

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2024/11/14 22:22:07 wiz Exp $
+# $NetBSD: Makefile,v 1.135 2025/01/10 21:29:37 schmonz Exp $
 
-DISTNAME=	lighttpd-1.4.76
-PKGREVISION=	5
+DISTNAME=	lighttpd-1.4.77
 CATEGORIES=	www
 MASTER_SITES=	https://download.lighttpd.net/lighttpd/releases-1.4.x/
 EXTRACT_SUFX=	.tar.xz
@@ -61,7 +60,7 @@ OWN_DIRS+=		${LIGHTTPD_STATEDIR}
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing config file paths
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	doc/config/lighttpd.conf doc/lighttpd.8
+SUBST_FILES.path=	doc/config/lighttpd.annotated.conf doc/lighttpd.8
 SUBST_VARS.path=	LIGHTTPD_LOGDIR LIGHTTPD_STATEDIR LIGHTTPD_USER \
 			LIGHTTPD_CACHEDIR LIGHTTPD_HOMEDIR              \
 			LIGHTTPD_GROUP PKG_SYSCONFDIR VARBASE
