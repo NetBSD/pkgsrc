@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.249 2025/01/10 10:38:02 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.250 2025/01/10 15:48:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/hs-pandoc to 3.6.1 [wiz 2025-01-10]
 	Updated converters/pandoc-cli to 3.6.1nb1 [wiz 2025-01-10]
 	Updated converters/pandoc to 3.6.1 [wiz 2025-01-10]
+	Updated devel/php-xdebug to 3.4.1 [taca 2025-01-10]
