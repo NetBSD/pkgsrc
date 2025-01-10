@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25289 2025/01/10 03:21:39 ktnb Exp $
+$NetBSD: TODO,v 1.25290 2025/01/10 10:36:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -768,7 +768,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o horde-5.2.9
 	o howm-1.4.7
 	o hplip-3.22.2
-	o hs-pandoc-3.2
 	o html2wml-0.4.11
 	o http_load-20140814
 	o hwloc-2.11
