@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2024/12/28 14:10:23 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/01/10 11:04:51 jperkin Exp $
 # used by devel/libblkid/Makefile
 # used by devel/libuuid/Makefile
 # used by x11/mcookie/Makefile
@@ -26,5 +26,8 @@ CONFIGURE_ARGS+=	--without-python
 # netbsd libintl lacks _nl_expand_alias, resulting in NLS being
 # disabled. for consistency, disable for all
 CONFIGURE_ARGS+=	--disable-nls
+
+CONFIGURE_ARGS.SunOS+=	--disable-symvers
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_vfs_h=no
 
 TEST_TARGET=		check
