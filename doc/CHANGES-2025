@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.242 2025/01/10 03:21:38 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.243 2025/01/10 08:51:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -323,3 +323,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-hslua-module-doclayout to 1.2.0 [wiz 2025-01-09]
 	Updated mail/neomutt to 20250109 [wiz 2025-01-09]
 	Updated textproc/groff to 1.23.0 [ktnb 2025-01-10]
+	Updated time/py-aniso8601 to 10.0.0 [adam 2025-01-10]
+	Updated time/py-relativetimebuilder to 3.0.1 [adam 2025-01-10]
