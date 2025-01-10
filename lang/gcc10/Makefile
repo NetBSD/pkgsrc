@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2024/04/01 18:08:48 js Exp $
+# $NetBSD: Makefile,v 1.25.6.1 2025/01/10 17:08:35 maya Exp $
 
 PKGNAME=	${GCC_PKGNAME}-${GCC10_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc10-libs needs to be bumped to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	The GNU Compiler Collection (GCC) - 10.0 Release Series
 
