@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST.x11,v 1.5 2009/06/14 21:36:31 joerg Exp $
+@comment $NetBSD: PLIST.x11,v 1.6 2025/01/10 03:21:20 ktnb Exp $
 bin/gxditview
 bin/xtotroff
 lib/X11/app-defaults/GXditview
 lib/X11/app-defaults/GXditview-color
 man/man1/gxditview.1
 man/man1/xtotroff.1
+share/groff/${PKGVERSION}/font/FontMap-X11
 share/groff/${PKGVERSION}/font/devX100-12/CB
 share/groff/${PKGVERSION}/font/devX100-12/CBI
 share/groff/${PKGVERSION}/font/devX100-12/CI
