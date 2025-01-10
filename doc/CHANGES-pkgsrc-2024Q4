@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.5 2025/01/09 18:08:59 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.6 2025/01/10 17:11:06 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -18,3 +18,18 @@ www/firefox115-l10n: security fix
 Pullup ticket #6927 - requested by bsiegert
 www/firefox128: security fix
 www/firefox128-l10n: security fix
+
+Pullup ticket #6928 - requested by riastradh
+lang/gcc10-aux: install fix
+lang/gcc10-libs: install fix
+lang/gcc10: install fix
+lang/gcc12: install fix
+lang/gcc13-gnat: install fix
+lang/gcc13-libs: install fix
+lang/gcc13: install fix
+lang/gcc14-libs: install fix
+lang/gcc14: install fix
+lang/gcc6: install fix
+lang/gcc7-libs: install fix
+lang/gcc8-libs: install fix
+lang/gcc9-libs: install fix
