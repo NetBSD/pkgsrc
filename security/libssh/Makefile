@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/12/27 11:15:39 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/01/10 11:33:07 jperkin Exp $
 #
 # history: upstream renamed 0.11 to 0.1.1;
 # we have to use the old-style convention so that version compares work.
@@ -22,6 +22,7 @@ TEST_TARGET=		test
 CMAKE_CONFIGURE_ARGS+=	-DUNIT_TESTING=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EXAMPLES=OFF
 
+CFLAGS.SunOS+=		-D_POSIX_PTHREAD_SEMANTICS
 LDFLAGS.SunOS+=		-lnsl -lsocket
 
 BUILDLINK_TRANSFORM+=	rm:-Werror=strict-overflow
