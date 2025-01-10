@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/04 13:37:11 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/10 10:16:42 wiz Exp $
+lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua.hi
@@ -6,6 +8,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Custom.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Custom.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Custom.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Engine.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Engine.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Engine.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Filter.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Filter.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Filter.p_hi
@@ -27,6 +32,12 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Context.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Format.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Format.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Format.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/ImageSize.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/ImageSize.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/ImageSize.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/LogMessage.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/LogMessage.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/LogMessage.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/PandocError.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/PandocError.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/PandocError.p_hi
@@ -45,15 +56,24 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Template.p_h
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/WriterOptions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/WriterOptions.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/WriterOptions.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/CLI.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/CLI.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/CLI.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Format.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Image.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Image.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Image.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/JSON.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Log.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Log.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/Log.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Module/MediaBag.p_hi
@@ -87,6 +107,12 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Orphans.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/PandocLua.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/PandocLua.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/PandocLua.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Run.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Run.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Run.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/SourcePos.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/SourcePos.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/SourcePos.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Classic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Classic.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Classic.p_hi
@@ -95,8 +121,6 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Writer/Scaffolding.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-description
-lib/pandoc-lua-engine-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/COPYING.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/Text-Pandoc-Lua.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-engine-${PKGVERSION}/html/doc-index.html

@@ -1,15 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/01/10 10:13:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/01/10 10:16:42 wiz Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-lua-engine
 
 .if !defined(HS_PANDOC_LUA_ENGINE_BUILDLINK3_MK)
 HS_PANDOC_LUA_ENGINE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.2.1.4nb6
+BUILDLINK_API_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.4.1
+BUILDLINK_ABI_DEPENDS.hs-pandoc-lua-engine+=	hs-pandoc-lua-engine>=0.4.1
 BUILDLINK_PKGSRCDIR.hs-pandoc-lua-engine?=	../../converters/hs-pandoc-lua-engine
 
 .include "../../converters/hs-aeson/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../textproc/hs-citeproc/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../textproc/hs-doclayout/buildlink3.mk"
