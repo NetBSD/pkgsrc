@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/03 09:41:05 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/10 10:12:25 wiz Exp $
 
-BLAKE2s (pandoc-lua-marshal-0.2.6.tar.gz) = f45eb1af9c60c4a8b09f92df6e07b98aff32fbe6e77841da515df247f7e248bb
-SHA512 (pandoc-lua-marshal-0.2.6.tar.gz) = 22035a8e3ea5f854ecaab116e11c46321818ce85e063574546bab6134037ee2bbcd984a9236b3ff1b013f47f5fd5df2d0ceca9a8ffddb2ed3c374fbf1f8a7a05
-Size (pandoc-lua-marshal-0.2.6.tar.gz) = 38722 bytes
+BLAKE2s (pandoc-lua-marshal-0.3.0.tar.gz) = 64886d5e8972915f44ec73dda21b981b8dd3b68a633caa1730e62d812fc01a79
+SHA512 (pandoc-lua-marshal-0.3.0.tar.gz) = 5ba49e9ed0a17e7091331bfae1e8fcc34b42e3863d1f3e7d9eed3053c587197ccbaa278d7e109cce4572cd30b44e5a9971bc7608fc657787bfcc980ef4c99639
+Size (pandoc-lua-marshal-0.3.0.tar.gz) = 42833 bytes

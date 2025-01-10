@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/03 09:41:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/10 10:12:25 wiz Exp $
+lib/pandoc-lua-marshal-${PKGVERSION}/${HS_VERSION}/package-description
+lib/pandoc-lua-marshal-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/AST.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/AST.hi
@@ -12,6 +14,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Attr.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Block.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Block.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Block.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Caption.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Caption.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Caption.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Cell.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Cell.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Marshal/Cell.p_hi
@@ -80,8 +85,6 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Walk.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Pandoc/Lua/Walk.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/pandoc-lua-marshal-${PKGVERSION}/${HS_VERSION}/package-description
-lib/pandoc-lua-marshal-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/README.md
@@ -89,6 +92,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Alignment.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Attr.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Block.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Caption.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Cell.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-Citation.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/pandoc-lua-marshal-${PKGVERSION}/html/Text-Pandoc-Lua-Marshal-CitationMode.html
