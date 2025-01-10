@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.252 2025/01/10 21:29:42 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.253 2025/01/10 22:50:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -335,3 +335,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/php-xdebug to 3.4.1 [taca 2025-01-10]
 	Updated www/drupal7 to 7.103 [taca 2025-01-10]
 	Updated www/lighttpd to 1.4.77 [schmonz 2025-01-10]
+	Updated cad/kicad to 8.0.6nb3 [wiz 2025-01-10]
