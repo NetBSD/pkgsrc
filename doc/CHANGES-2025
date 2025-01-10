@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.248 2025/01/10 10:37:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.249 2025/01/10 10:38:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -331,3 +331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/hs-pandoc-lua-engine to 0.4.1 [wiz 2025-01-10]
 	Updated converters/hs-pandoc to 3.6.1 [wiz 2025-01-10]
 	Updated converters/pandoc-cli to 3.6.1nb1 [wiz 2025-01-10]
+	Updated converters/pandoc to 3.6.1 [wiz 2025-01-10]
