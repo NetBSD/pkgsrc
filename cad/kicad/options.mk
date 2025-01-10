@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.5 2024/12/16 07:44:51 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2025/01/10 22:49:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kicad
 PKG_SUPPORTED_OPTIONS=	ng-spice wayland
-PKG_SUGGESTED_OPTIONS=	ng-spice wayland
+PKG_SUGGESTED_OPTIONS=	ng-spice
+
+.include "../../devel/wayland/platform.mk"
+
+.if ${PLATFORM_SUPPORTS_WAYLAND} == "yes"
+PKG_SUGGESTED_OPTIONS+=	wayland
+.endif
 
 .include "../../mk/bsd.options.mk"
 
