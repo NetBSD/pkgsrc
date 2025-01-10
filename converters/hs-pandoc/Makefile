@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2025/01/09 23:30:11 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/10 10:35:57 wiz Exp $
 
-PKGREVISION= 4
 .include "../../converters/hs-pandoc/version.mk"
 DISTNAME=	pandoc-${PANDOC_VERSION}
 CATEGORIES=	converters
@@ -17,9 +16,21 @@ LICENSE=	gnu-gpl-v2
 HASKELL_OPTIMIZATION_LEVEL=	1
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	network
+	citeproc	\
+	commonmark	\
+	commonmark-extensions	\
+	commonmark-pandoc	\
+	djot	\
+	doclayout	\
+	emojis	\
+	skylighting	\
+	skylighting-core	\
+	texmath	\
+	typst
 
 # lib:pandoc
+.include "../../textproc/hs-Glob/buildlink3.mk"
+.include "../../graphics/hs-JuicyPixels/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
@@ -31,6 +42,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 .include "../../textproc/hs-commonmark/buildlink3.mk"
 .include "../../textproc/hs-commonmark-extensions/buildlink3.mk"
 .include "../../textproc/hs-commonmark-pandoc/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../security/hs-crypton-x509-system/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
@@ -72,6 +84,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml/buildlink3.mk"
 .include "../../textproc/hs-yaml/buildlink3.mk"
+.include "../../textproc/hs-libyaml/buildlink3.mk"
 .include "../../archivers/hs-zip-archive/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
 

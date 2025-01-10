@@ -1,15 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/01/09 23:30:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/01/10 10:35:57 wiz Exp $
 
 BUILDLINK_TREE+=	hs-pandoc
 
 .if !defined(HS_PANDOC_BUILDLINK3_MK)
 HS_PANDOC_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-pandoc+=	hs-pandoc>=3.1.13
-BUILDLINK_ABI_DEPENDS.hs-pandoc+=	hs-pandoc>=3.1.13nb4
+BUILDLINK_API_DEPENDS.hs-pandoc+=	hs-pandoc>=3.6.1
+BUILDLINK_ABI_DEPENDS.hs-pandoc+=	hs-pandoc>=3.6.1
 BUILDLINK_PKGSRCDIR.hs-pandoc?=		../../converters/hs-pandoc
 
 # lib:pandoc
+.include "../../textproc/hs-Glob/buildlink3.mk"
+.include "../../graphics/hs-JuicyPixels/buildlink3.mk"
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../converters/hs-aeson-pretty/buildlink3.mk"
 .include "../../textproc/hs-attoparsec/buildlink3.mk"
@@ -21,6 +23,7 @@ BUILDLINK_PKGSRCDIR.hs-pandoc?=		../../converters/hs-pandoc
 .include "../../textproc/hs-commonmark/buildlink3.mk"
 .include "../../textproc/hs-commonmark-extensions/buildlink3.mk"
 .include "../../textproc/hs-commonmark-pandoc/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
 .include "../../net/hs-crypton-connection/buildlink3.mk"
 .include "../../security/hs-crypton-x509-system/buildlink3.mk"
 .include "../../devel/hs-data-default/buildlink3.mk"
@@ -62,6 +65,7 @@ BUILDLINK_PKGSRCDIR.hs-pandoc?=		../../converters/hs-pandoc
 .include "../../devel/hs-vector/buildlink3.mk"
 .include "../../textproc/hs-xml/buildlink3.mk"
 .include "../../textproc/hs-yaml/buildlink3.mk"
+.include "../../textproc/hs-libyaml/buildlink3.mk"
 .include "../../archivers/hs-zip-archive/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
 

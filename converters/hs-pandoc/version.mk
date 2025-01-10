@@ -1,6 +1,6 @@
-# $NetBSD: version.mk,v 1.1 2024/05/04 12:25:21 pho Exp $
+# $NetBSD: version.mk,v 1.2 2025/01/10 10:35:57 wiz Exp $
 #
 # Included by ../../converters/hs-pandoc/Makefile
 # Included by ../../converters/pandoc/Makefile
 
-PANDOC_VERSION=	3.1.13
+PANDOC_VERSION=	3.6.1
