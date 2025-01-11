@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/01/14 13:26:35 mef Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/11 11:55:00 mef Exp $
 
 R_PKGNAME=	digest
-R_PKGVER=	0.6.34
+R_PKGVER=	0.6.37
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
