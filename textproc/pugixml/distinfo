@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2023/10/01 16:57:45 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/01/11 20:31:28 adam Exp $
 
-BLAKE2s (pugixml-1.14.tar.gz) = 75bd703d7f42faa0cdfc6043c5ed2e1c53a2585952317b4a37bd71cc22eca874
-SHA512 (pugixml-1.14.tar.gz) = 730d203829eb24d6e1c873f9b921ae97cf7a157fd45504151bc2e61adea5c536eaf33ff38c5ad61629b54a6686135ff1834a61102b4660fbb9ead4ecf20dfd34
-Size (pugixml-1.14.tar.gz) = 576683 bytes
+BLAKE2s (pugixml-1.15.tar.gz) = 53d0f01c54ac45613bf083f2fef5e304b66147abdcc8159b977ef9533f9b2a07
+SHA512 (pugixml-1.15.tar.gz) = b8a70f1f230b0902b719346ce0a551eafe534f81262280dceeb92d5ad90ea4e635173e08e225bf66eb5f4724ac4568bd40dc923f184571f02502dac49bc0b7f5
+Size (pugixml-1.15.tar.gz) = 582786 bytes
