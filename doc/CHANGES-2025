@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.274 2025/01/11 14:31:35 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.275 2025/01/11 14:32:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -357,3 +357,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/R-nanotime to 0.3.10 [mef 2025-01-11]
 	Updated time/R-sftime to 0.3.0 [mef 2025-01-11]
 	Updated textproc/json-c to 0.18 [ryoon 2025-01-11]
+	Removed sysutils/durs [wiz 2025-01-11]
