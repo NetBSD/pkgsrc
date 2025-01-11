@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.267 2025/01/11 13:43:24 mef Exp $
+$NetBSD: CHANGES-2025,v 1.268 2025/01/11 13:55:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -350,3 +350,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/age to 1.2.1 [mef 2025-01-11]
 	Updated time/R-RcppCCTZ to 0.2.13 [mef 2025-01-11]
 	Updated time/R-RcppDate to 0.0.4 [mef 2025-01-11]
+	Updated time/R-timechange to 0.3.0 [mef 2025-01-11]
