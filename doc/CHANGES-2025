@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.276 2025/01/11 14:43:47 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.277 2025/01/11 14:47:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -359,3 +359,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/json-c to 0.18 [ryoon 2025-01-11]
 	Removed sysutils/durs [wiz 2025-01-11]
 	Updated net/nanotodon to 0.5.0 [tsutsui 2025-01-11]
+	Updated wm/vtwm to 5.5.0nb4 [wiz 2025-01-11]
