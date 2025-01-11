@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25295 2025/01/11 17:53:08 pin Exp $
+$NetBSD: TODO,v 1.25296 2025/01/11 18:08:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o MesaLib-24.3.1
 	o OdfConverter-4.0
 	o PACK-0.0.4
-	o PageEdit-2.3.1
+	o PageEdit-2.4.0
 	o QuantLib-1.22
 	o R-GRASS-0.3.9
 	o R-RSQLite-2.6
@@ -407,7 +407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o SOGo5-5.11.1 [wip]
 	o SOPE5-5.11.1 [wip]
 	o SQLiteCpp-2.5.0
-	o Sigil-2.3.1
+	o Sigil-2.4.0
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
@@ -1039,7 +1039,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o packagekit-0.5.3
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
-	o pango-1.56.0
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
 	o passenger-6.0.20
