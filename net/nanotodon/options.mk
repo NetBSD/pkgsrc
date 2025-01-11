@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2024/07/21 12:07:40 tsutsui Exp $
+# $NetBSD: options.mk,v 1.2 2025/01/11 14:43:31 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nanotodon
 PKG_SUPPORTED_OPTIONS=	libwebp sixel
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	libwebp sixel
 
 .include "../../mk/bsd.options.mk"
 
