@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:16:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/01/11 11:39:34 mef Exp $
 
-BLAKE2s (R/askpass_1.1.tar.gz) = 84a38a8b8345876ef088e1a2f52da85c0c0acc68add16c81be778be5dad9d437
-SHA512 (R/askpass_1.1.tar.gz) = eac868a7bf63d5aa204889157acc4bd39ed0c358c824a376b5adbfd1125bc557d081b7c2717799ddf7ccda4e23b16854a2e68dbf1c8c54b0c5535511cad4da83
-Size (R/askpass_1.1.tar.gz) = 5730 bytes
+BLAKE2s (R/askpass_1.2.1.tar.gz) = af30a926fed0a1371306d757c95e2d69ee5d13304158b13635fba764183d711f
+SHA512 (R/askpass_1.2.1.tar.gz) = c0b43a6afc62ccb989462ea4d9e59b8536280cfcdd5b977dbbc26f67860bf5fc639e44bf9f90c08dd11b1d67dc0a7d79140dea525611651d1f15ce0f221da82b
+Size (R/askpass_1.2.1.tar.gz) = 6058 bytes
