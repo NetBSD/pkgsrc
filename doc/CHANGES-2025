@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.257 2025/01/11 11:39:43 mef Exp $
+$NetBSD: CHANGES-2025,v 1.258 2025/01/11 11:48:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -340,3 +340,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/cgal to 5.6.2 [mef 2025-01-11]
 	Updated sysutils/disk-filltest to 0.8.2 [scole 2025-01-11]
 	Updated security/R-askpass to 1.2.1 [mef 2025-01-11]
+	Updated security/R-credentials to 2.0.2 [mef 2025-01-11]
