@@ -1,0 +1,37 @@
+# $NetBSD: go-modules.mk,v 1.1 2025/01/11 18:22:37 wiz Exp $
+
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.2.mod
+GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.15.0.mod
+GO_MODULE_FILES+=	github.com/fatih/color/@v/v1.15.0.zip
+GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.3.0.mod
+GO_MODULE_FILES+=	github.com/google/uuid/@v/v1.3.0.zip
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.mod
+GO_MODULE_FILES+=	github.com/inconshreveable/mousetrap/@v/v1.1.0.zip
+GO_MODULE_FILES+=	github.com/mattn/go-colorable/@v/v0.1.13.mod
+GO_MODULE_FILES+=	github.com/mattn/go-colorable/@v/v0.1.13.zip
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.16.mod
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.19.mod
+GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.19.zip
+GO_MODULE_FILES+=	github.com/pin/tftp/v3/@v/v3.0.0.mod
+GO_MODULE_FILES+=	github.com/pin/tftp/v3/@v/v3.0.0.zip
+GO_MODULE_FILES+=	github.com/russross/blackfriday/v2/@v/v2.1.0.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.7.0.mod
+GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.7.0.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20190308221718-c2843e01d9a2.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.12.0.mod
+GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.12.0.zip
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.0.0-20200202094626-16171245cfb2.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.11.0.mod
+GO_MODULE_FILES+=	golang.org/x/net/@v/v0.11.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190215142949-d0b11bdaac8a.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20220811171246-fbc7d0a398ab.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.11.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.11.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.11.0.mod
+GO_MODULE_FILES+=	golang.org/x/term/@v/v0.11.0.zip
+GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
+GO_MODULE_FILES+=	gopkg.in/check.v1/@v/v0.0.0-20161208181325-20d25e280405.mod
+GO_MODULE_FILES+=	gopkg.in/yaml.v3/@v/v3.0.1.mod
