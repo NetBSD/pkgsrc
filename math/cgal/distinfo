@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2021/10/26 10:55:37 nia Exp $
+$NetBSD: distinfo,v 1.11 2025/01/11 03:23:02 mef Exp $
 
-BLAKE2s (CGAL-4.14.tar.xz) = fcccf67188745fde1b1da8788470e0dfc9e578e334019f29e3ea2d8889ed9a92
-SHA512 (CGAL-4.14.tar.xz) = 1f22da098a136c26fd51c7ac401212865dce7cc5110ca6a083ef6f09ead5c03a002bfd16752cb298427b84bd5b4900b52c6514f97ccd0e199ffb28e9fe640c43
-Size (CGAL-4.14.tar.xz) = 15602228 bytes
+BLAKE2s (CGAL-5.6.2.tar.xz) = beb5c6c25cfbed5a3b116571c67fecf5a62ce7705af74950ef4c29f11dd246ec
+SHA512 (CGAL-5.6.2.tar.xz) = 5f47c69320fdf4cea53df9c2ebfe27080cc919b2be2b2aeeacabdd2820c71600a1dc0def53b7436bd7e20b391f7d23e77461779beb3ba34e8d856f6714ff85bd
+Size (CGAL-5.6.2.tar.xz) = 24489156 bytes

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.94 2024/12/29 15:09:54 adam Exp $
+# $NetBSD: Makefile,v 1.95 2025/01/11 03:23:02 mef Exp $
 
-DISTNAME=	CGAL-4.14
+DISTNAME=	CGAL-5.6.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	49
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=CGAL/}
-GITHUB_RELEASE=	releases/${DISTNAME}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reinoud@NetBSD.org
@@ -13,24 +12,17 @@ HOMEPAGE=	https://www.cgal.org/
 COMMENT=	Computational Geometry Algorithms Library
 LICENSE=	gnu-lgpl-v3
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DCGAL_INSTALL_MAN_DIR=${PREFIX}/${PKGMANDIR}/man1
 
 REPLACE_SH+=	scripts/cgal_create_CMakeLists
 REPLACE_SH+=	scripts/cgal_create_cmake_script
 
-SUBST_CLASSES+=			cmakeworkdir
-SUBST_STAGE.cmakeworkdir=	post-install
-SUBST_MESSAGE.cmakeworkdir=	Removing $$WRKDIR from cmake files
-SUBST_FILES.cmakeworkdir=	${DESTDIR}${PREFIX}/lib/cmake/CGAL/*.cmake
-SUBST_SED.cmakeworkdir=		-e 's%${WRKDIR}/.buildlink%${PREFIX}%g'
-
-pre-install:
-	find ${WRKSRC} -name \*.orig -exec rm {} \;
-
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
