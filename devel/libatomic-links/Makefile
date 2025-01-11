@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/01/03 18:28:05 he Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/11 11:00:13 riastradh Exp $
 
 PKGNAME=		libatomic-links-1.0
 CATEGORIES=		devel
@@ -9,6 +9,7 @@ LICENSE=		2-clause-bsd
 
 ONLY_FOR_PLATFORM+=	NetBSD-*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-*-riscv*
 
 DEPENDS+=		libatomic-[0-9]*:../../devel/libatomic
 
