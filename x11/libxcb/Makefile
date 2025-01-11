@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/04/15 16:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/01/11 11:22:24 riastradh Exp $
 
 DISTNAME=	libxcb-1.17.0
 CATEGORIES=	x11
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--without-doxygen
 #
 # XXX This needs to match the version of xcb-proto we get for the
 # target by buildlink3.
-TOOL_DEPENDS+=		xcb-proto-[0-9]*:../../x11/xcb-proto
+TOOL_DEPENDS+=		xcb-proto>=1.17:../../x11/xcb-proto
 SUBST_CLASSES+=		xcbproto
 SUBST_FILES.xcbproto=	src/Makefile
 SUBST_MESSAGE.xcbproto=	Fixing xcb-proto paths dir for cross-compile.
