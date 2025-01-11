@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/03 23:31:41 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/11 13:34:03 mef Exp $
 
 R_PKGNAME=	RcppCCTZ
-R_PKGVER=	0.2.12
+R_PKGVER=	0.2.13
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +20,7 @@ USE_LANGUAGES=		c c++
 .include "../../mk/bsd.prefs.mk"
 
 # https://mail-index.netbsd.org/pkgsrc-users/2025/01/02/msg040775.html
-# See  
+# See
 #   /usr/include/wchar.h
 #   /usr/pkg/gcc7/lib/gcc/x86_64--netbsd/7.5.0/include-fixed/wchar.h
 .if ${OPSYS} == "NetBSD"
