@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.271 2025/01/11 14:06:10 mef Exp $
+$NetBSD: CHANGES-2025,v 1.272 2025/01/11 14:14:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -354,3 +354,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/gdbm to 1.24 [ryoon 2025-01-11]
 	Updated databases/gdbm_compat to 1.24 [ryoon 2025-01-11]
 	Updated time/R-lubridate to 1.9.4 [mef 2025-01-11]
+	Updated time/R-nanotime to 0.3.10 [mef 2025-01-11]
