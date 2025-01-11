@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.263 2025/01/11 12:50:54 mef Exp $
+$NetBSD: CHANGES-2025,v 1.264 2025/01/11 12:59:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/R-jose to 1.2.1 [mef 2025-01-11]
 	Updated security/R-openssl to 2.3.0 [mef 2025-01-11]
 	Updated security/R-oskeyring to 0.1.6 [mef 2025-01-11]
+	Updated security/R-sodium to 1.4.0 [mef 2025-01-11]
