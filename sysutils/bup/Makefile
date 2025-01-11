@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2025/01/03 00:38:37 gdt Exp $
+# $NetBSD: Makefile,v 1.69 2025/01/11 01:48:17 gdt Exp $
 
-DISTNAME=	bup-0.33.6
+DISTNAME=	bup-0.33.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # bup has two problems that make packaging difficult.  One is that
@@ -17,7 +17,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bup/}
 # Upstream should have a tag, but doesn't.
 # EXTRACT_SUFX default value is set too late, so using it in SITES.* fails.
 EXTRACT_SUFX=		.tar.gz
-MAN_TAG=		e1ed3d645eadc9b01a69fbd4d11bbb03682a0d17
+MAN_TAG=		0d2bd796c937f347dd830753f82eedd2b7ad6595
 MAN_UNPACK=		bup-${MAN_TAG}
 MAN_DISTFILE=		bup-man-${MAN_TAG}${EXTRACT_SUFX}
 SITES.${MAN_DISTFILE}=	-${MASTER_SITE_GITHUB:=bup/bup/archive/}${MAN_TAG}${EXTRACT_SUFX}
