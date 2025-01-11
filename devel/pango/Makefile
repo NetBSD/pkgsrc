@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.267 2024/12/26 05:54:35 pin Exp $
+# $NetBSD: Makefile,v 1.268 2025/01/11 18:08:24 wiz Exp $
 
-DISTNAME=	pango-1.55.5
+DISTNAME=	pango-1.56.0
 CATEGORIES=	devel fonts
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pango/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,9 +10,8 @@ HOMEPAGE=	https://pango.gnome.org/
 COMMENT=	Library for layout and rendering of text
 LICENSE=	gnu-lgpl-v2
 
-TOOL_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
-
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c11
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
@@ -27,15 +26,11 @@ MESON_REQD+=		1.2.0
 MESON_ARGS+=		-Dcairo=enabled
 MESON_ARGS+=		-Dfontconfig=enabled
 
-PLIST_VARS+=		native
-
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
 MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
 MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
 MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
-.else
-PLIST.native=				yes
 .endif
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
@@ -66,7 +61,7 @@ post-install:
 
 BUILDLINK_API_DEPENDS.fribidi+=	fribidi>=1.0.6
 .include "../../converters/fribidi/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.60
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.80
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.15.0
