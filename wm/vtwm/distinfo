@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:25:19 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/01/11 14:47:07 wiz Exp $
 
 BLAKE2s (vtwm-5.5.0.tar.gz) = 006e9411bce75339fa158270ce6df39eeddcc28c2ce497031c916fb539957780
 SHA512 (vtwm-5.5.0.tar.gz) = cf0b7bc2c007fea9df909d695098cc5ab5ab9fbb83b58264a3fc380aa5db83411c3ebec9f238fb23fdfcacdf9ae289ece7c14831d6839e606031d587fc7d73af
 Size (vtwm-5.5.0.tar.gz) = 1141664 bytes
+SHA1 (patch-events.c) = da40cffecbf8af629ff16c32341476f048700dc5
+SHA1 (patch-menus.c) = 1fc10cc7b8d74cd939eed8f3dd73e0acefd8668f
