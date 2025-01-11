@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/11/26 10:23:29 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/11 20:26:36 adam Exp $
 
-DISTNAME=	django_timezone_field-7.0
+DISTNAME=	django_timezone_field-7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-timezone-field/}
