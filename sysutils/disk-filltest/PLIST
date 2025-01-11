@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2014/05/31 22:04:35 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/11 06:39:48 scole Exp $
 bin/disk-filltest
+man/man1/disk-filltest.1
 share/doc/disk-filltest/README
