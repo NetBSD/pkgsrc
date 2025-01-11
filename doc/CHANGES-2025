@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.261 2025/01/11 12:33:55 mef Exp $
+$NetBSD: CHANGES-2025,v 1.262 2025/01/11 12:43:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/R-digest to 0.6.37 [mef 2025-01-11]
 	Updated security/R-getPass to 0.2.4 [mef 2025-01-11]
 	Updated security/R-jose to 1.2.1 [mef 2025-01-11]
+	Updated security/R-openssl to 2.3.0 [mef 2025-01-11]
