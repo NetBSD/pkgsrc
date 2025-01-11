@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.279 2025/01/11 18:08:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.280 2025/01/11 18:22:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -362,3 +362,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/vtwm to 5.5.0nb4 [wiz 2025-01-11]
 	Updated shells/starship to 1.22.0 [pin 2025-01-11]
 	Updated devel/pango to 1.56.0 [wiz 2025-01-11]
+	Added security/gobuster version 3.6.0 [wiz 2025-01-11]
