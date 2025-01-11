@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/01/11 01:48:17 gdt Exp $
+# $NetBSD: Makefile,v 1.70 2025/01/11 01:50:31 gdt Exp $
 
 DISTNAME=	bup-0.33.7
 CATEGORIES=	sysutils
@@ -65,7 +65,7 @@ post-configure:
 	cd ${WRKSRC}/config/bin && rm -f make && ln -s ${TOOLS_PATH.gmake} make
 	cd ${WRKSRC} && cp -pf GNUmakefile Makefile
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	PREFIX=${LOCALBASE}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
