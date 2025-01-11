@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/05/11 14:22:23 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/01/11 11:47:54 mef Exp $
 
-BLAKE2s (R/credentials_1.3.2.tar.gz) = a9d901245d094ac0c4bbead52dc162b8eecb45a4144f7d1973ac09682032ea63
-SHA512 (R/credentials_1.3.2.tar.gz) = c12ed0435a5804cdca50783a1aa9d718222c2611a7e5cd7994dcedfe506b871a19a56c30c92c0f609c46203595dc0575824550bd5b482a4d9e22d35a07d109f1
-Size (R/credentials_1.3.2.tar.gz) = 230070 bytes
+BLAKE2s (R/credentials_2.0.2.tar.gz) = 70428288ec7c91a2e4718665f1bfd20d6f6386c0722dd3a7348416bf5aea17b6
+SHA512 (R/credentials_2.0.2.tar.gz) = acd2508b38a8b4ec765eb623606a4fd5112bf1c605b795d68b2885b4aad3d0a428966c4e70a20c7b203be1073a2cf57ceff46829f2908831261adeff50622232
+Size (R/credentials_2.0.2.tar.gz) = 283111 bytes
