@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:19:30 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/11 06:39:48 scole Exp $
 
-BLAKE2s (disk-filltest-0.7.1.tar.bz2) = 65361121af51d57fb8c78dc0d540427d1562c1b17f890ccdfda5bd40fab85877
-SHA512 (disk-filltest-0.7.1.tar.bz2) = 55becf839a938fa0461fd06d903579a413cb6d17c50e10b3bf55f01c442f660e289402d593c9820b240de1ae9196b120ca9d14bf9d4d6f09010db5e6faa3568d
-Size (disk-filltest-0.7.1.tar.bz2) = 14434 bytes
+BLAKE2s (disk-filltest-0.8.2.tar.gz) = a099506481226dc7f13cd057de72c110286839a75730b18447f3e15ec0976419
+SHA512 (disk-filltest-0.8.2.tar.gz) = a0358f44645e88d8b22847f20631db9812a082928969b402c88696b649abb502a37b7feca7c8701c103cec232d58dab6a0d7b9e948b6232b83de41c96e12f090
+Size (disk-filltest-0.8.2.tar.gz) = 17583 bytes
