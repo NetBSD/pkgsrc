@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2024/12/27 08:20:55 wiz Exp $
+# $NetBSD: Makefile,v 1.209 2025/01/12 20:33:36 riastradh Exp $
 
 DISTNAME=	gtk+-3.24.43
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -24,7 +24,6 @@ PTHREAD_AUTO_VARS=	yes
 # tests need M_PI, ISO C unacceptable on illumos
 FORCE_C_STD=	gnu99
 
-MESON_ARGS+=	-Dgtk_doc=true
 MESON_ARGS+=	-Dman=true
 MESON_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MESON_ARGS+=	--sysconfdir=${PREFIX}/libdata
@@ -50,6 +49,29 @@ INSTALLATION_DIRS+=	lib/gtk-3.0/3.0.0/filesystems
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+
+TOOL_DEPENDS+=		glib2>=0:../../devel/glib2
+MESON_CROSS_BINARIES+=	glib-compile-resources glib-compile-schemas
+MESON_CROSS_BINARY.glib-compile-resources=	\
+			${TOOLBASE}/bin/glib-compile-resources
+MESON_CROSS_BINARY.glib-compile-schemas=	\
+			${TOOLBASE}/bin/glib-compile-schemas
+
+TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
+MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
+MESON_CROSS_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
+MESON_CROSS_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
+
+MESON_CROSS_BINARIES+=			gdbus-codegen
+MESON_CROSS_BINARY.gdbus-codegen=	${TOOLS_CMD.gdbus-codegen}
+
+# wayland-protocols abuses pc_sysrootdir in its .pc files, causing the
+# cross-destdir to be prefixed twice to paths.
+ALL_ENV+=		PKG_CONFIG_FDO_SYSROOT_RULES=1
+
+.endif
+
 # We remove the module databases during post-install since we create them
 # anew in the +INSTALL script as part of the POST-INSTALL action.
 #
@@ -72,8 +94,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.57.2
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.30.0
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
-.include "../../devel/gobject-introspection/buildlink3.mk"
 
 .include "options.mk"
 
