@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.6 2024/12/26 12:01:54 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.7 2025/01/12 07:44:49 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	autocfg-1.3.0
 CARGO_CRATE_DEPENDS+=	bitflags-1.3.2
@@ -16,13 +16,13 @@ CARGO_CRATE_DEPENDS+=	inotify-sys-0.1.5
 CARGO_CRATE_DEPENDS+=	instant-0.1.13
 CARGO_CRATE_DEPENDS+=	kqueue-1.0.8
 CARGO_CRATE_DEPENDS+=	kqueue-sys-1.0.4
-CARGO_CRATE_DEPENDS+=	libc-0.2.154
+CARGO_CRATE_DEPENDS+=	libc-0.2.169
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	log-0.4.22
 CARGO_CRATE_DEPENDS+=	memoffset-0.9.1
-CARGO_CRATE_DEPENDS+=	mio-0.8.11
-#CARGO_CRATE_DEPENDS+=	notify-6.1.1
-#CARGO_CRATE_DEPENDS+=	notify-types-1.0.0
+CARGO_CRATE_DEPENDS+=	mio-1.0.3
+CARGO_CRATE_DEPENDS+=	notify-7.0.0
+CARGO_CRATE_DEPENDS+=	notify-types-1.0.1
 CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.81
@@ -42,23 +42,14 @@ CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	winapi-util-0.1.9
-CARGO_CRATE_DEPENDS+=	windows-sys-0.48.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.52.0
 CARGO_CRATE_DEPENDS+=	windows-sys-0.59.0
-CARGO_CRATE_DEPENDS+=	windows-targets-0.48.5
 CARGO_CRATE_DEPENDS+=	windows-targets-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_aarch64_gnullvm-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_aarch64_msvc-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_i686_gnu-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_i686_gnullvm-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_i686_msvc-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnu-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.6
-CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
