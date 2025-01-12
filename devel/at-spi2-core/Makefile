@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/11/17 03:43:29 dholland Exp $
+# $NetBSD: Makefile,v 1.54 2025/01/12 19:20:26 riastradh Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
 PKGREVISION=	4
@@ -30,6 +30,15 @@ SUBST_MESSAGE.eg=	Fixing path to examples directory.
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
+MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
+MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
+MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+.endif
+
 PYTHON_FOR_BUILD_ONLY=	tool
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/*.pc
@@ -39,7 +48,5 @@ PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gobject-introspection=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

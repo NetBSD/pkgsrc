@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/11/17 00:16:16 dholland Exp $
+# $NetBSD: options.mk,v 1.2 2025/01/12 19:20:26 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.at-spi2-core
 
@@ -13,13 +13,13 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.at-spi2-core
 # However, anything that actually needs at-spi2 will not work with
 # dbus turned off, and probably not build either.
 #
-PKG_SUPPORTED_OPTIONS=	dbus
-PKG_SUGGESTED_OPTIONS=	dbus
+PKG_SUPPORTED_OPTIONS=	dbus introspection
+PKG_SUGGESTED_OPTIONS=	dbus ${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	dbus
-
+PLIST_VARS+=	introspection
 
 .if !empty(PKG_OPTIONS:Mdbus)
 PLIST.dbus=	yes
@@ -41,6 +41,12 @@ post-install:
 
 .else
 MESON_ARGS+=	-Datk_only=true
+.endif
+
+.if ${PKG_OPTIONS:Mintrospection}
+PLIST.introspection=	yes
+BUILDLINK_DEPMETHOD.gobject-introspection=	build
+.  include "../../devel/gobject-introspection/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.prefs.mk"
