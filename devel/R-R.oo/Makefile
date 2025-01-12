@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/02/06 12:10:19 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/12 11:44:52 mef Exp $
 
 R_PKGNAME=	R.oo
-R_PKGVER=	1.26.0
+R_PKGVER=	1.27.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
