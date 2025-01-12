@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.305 2025/01/12 10:33:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.306 2025/01/12 11:08:19 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -394,3 +394,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.9.1 [wiz 2025-01-12]
 	Updated textproc/tree-sitter-css to 0.23.2 [wiz 2025-01-12]
 	Updated graphics/zxing-cpp to 2.3.0 [wiz 2025-01-12]
+	Updated sysutils/fastfetch to 2.34.0 [vins 2025-01-12]
