@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2025/01/03 10:13:58 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/01/12 07:42:16 adam Exp $
 
-BLAKE2s (pyusb-1.3.0.tar.gz) = 2755307654926b322f2c30eefc664275b1b8c2fd76e635ed386b505ba622f40d
-SHA512 (pyusb-1.3.0.tar.gz) = 05bef80aad0cee8145333fca0ae0312d9bd9198a25fc6afa4aca2a7cebe5ff2ffb82c85e7265026dc7b6f5c7b5864f0c99f12d2d1ec9d15157aca9287859cf0d
-Size (pyusb-1.3.0.tar.gz) = 78852 bytes
+BLAKE2s (pyusb-1.3.1.tar.gz) = f73bdecbba8ef2ab4550926ab4c0add65d4b9f5d9e0b9971c81a84c8eed3907e
+SHA512 (pyusb-1.3.1.tar.gz) = 91dad112b928133f7439c25ba473bfa8b214fc15daa37c8992304032766498694da5a84c8451d1ae007d0eeb9e840f700d071579324fb96d95302a1e6042e208
+Size (pyusb-1.3.1.tar.gz) = 77281 bytes

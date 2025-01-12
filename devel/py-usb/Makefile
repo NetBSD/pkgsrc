@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2025/01/03 10:13:58 adam Exp $
+# $NetBSD: Makefile,v 1.26 2025/01/12 07:42:16 adam Exp $
 
-DISTNAME=	pyusb-1.3.0
+DISTNAME=	pyusb-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyusb/}
