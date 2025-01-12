@@ -1,4 +1,4 @@
-$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.4 2025/01/12 15:02:35 pho Exp $
+$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.5 2025/01/12 17:37:30 pho Exp $
 
 Hunk #0, #1:
     bootstrap.py assumes that GHC always has a threaded RTS but our
@@ -23,11 +23,21 @@ Hunk #1-#7:
  
  #logging.basicConfig(level=logging.INFO)
  
-@@ -180,24 +181,42 @@ def resolve_dep(dep : BootstrapDep) -> P
+@@ -180,24 +181,55 @@ def resolve_dep(dep : BootstrapDep) -> P
      return sdist_dir
  
  
 -def install_dep(dep: BootstrapDep, ghc: Compiler) -> None:
++def dos2unix(path: Path):
++    with open(path, 'rb') as f:
++        content = f.read()
++
++    content = content.replace(b'\r\n', b'\n')
++
++    with open(path, 'wb') as f:
++        f.write(content)
++
++
 +def install_dep(dep: BootstrapDep, ghc: Compiler, jobs: int) -> None:
      dist_dir = (DISTDIR / f'{dep.package}-{dep.version}').resolve()
  
@@ -42,10 +52,13 @@ Hunk #1-#7:
 +    # hadrian.
 +    patch_path = Path(os.environ['FILESDIR']) / f'hadrian-{dep.package}.patch'
 +    if patch_path.is_file():
++        # But some .cabal files annoyingly use CRLF. We must convert them
++        # before applying patches.
++        dos2unix(sdist_dir / f'{dep.package}.cabal')
 +        with open(patch_path) as patch_file:
 +            patch = patch_file.read()
 +        subprocess_run(
-+            ['patch', '-p1', '-b', '-l'], cwd=sdist_dir, input=patch, check=True, encoding='UTF-8')
++            ['patch', '-p1', '-b'], cwd=sdist_dir, input=patch, check=True, encoding='UTF-8')
 +
 +    # If it's from Hackage and we've already installed it, don't do it
 +    # twice. That only wastes time.
@@ -71,7 +84,7 @@ Hunk #1-#7:
          f'--package-db={PKG_DB.resolve()}',
          f'--prefix={prefix}',
          f'--bindir={BINDIR.resolve()}',
-@@ -207,6 +226,12 @@ def install_sdist(dist_dir: Path, sdist_
+@@ -207,6 +239,12 @@ def install_sdist(dist_dir: Path, sdist_
          f'--flags={flags_option}',
      ]
  
@@ -84,7 +97,7 @@ Hunk #1-#7:
      def check_call(args: List[str]) -> None:
          subprocess_run(args, cwd=sdist_dir, check=True)
  
-@@ -223,7 +248,7 @@ def install_sdist(dist_dir: Path, sdist_
+@@ -223,7 +261,7 @@ def install_sdist(dist_dir: Path, sdist_
      check_call([str(ghc.ghc_path), '--make', '-package-env=-', '-i', f'-odir={setup_dist_dir}', f'-hidir={setup_dist_dir}', '-o', setup, 'Setup'])
      check_call([setup, 'configure'] + configure_args)
      check_call([setup, 'build'] + build_args)
@@ -93,7 +106,7 @@ Hunk #1-#7:
  
  def hash_file(h, f: BinaryIO) -> SHA256Hash:
      while True:
-@@ -238,7 +263,7 @@ def hash_file(h, f: BinaryIO) -> SHA256H
+@@ -238,7 +276,7 @@ def hash_file(h, f: BinaryIO) -> SHA256H
  UnitId = NewType('UnitId', str)
  PlanUnit = NewType('PlanUnit', dict)
  
@@ -102,7 +115,7 @@ Hunk #1-#7:
      if not PKG_DB.exists():
          print(f'Creating package database {PKG_DB}')
          PKG_DB.parent.mkdir(parents=True, exist_ok=True)
-@@ -248,7 +273,7 @@ def bootstrap(info: BootstrapInfo, ghc: 
+@@ -248,7 +286,7 @@ def bootstrap(info: BootstrapInfo, ghc: 
          check_builtin(dep, ghc)
  
      for dep in info.dependencies:
@@ -111,7 +124,7 @@ Hunk #1-#7:
  
  # Steps
  #######################################################################
-@@ -374,6 +399,8 @@ def main() -> None:
+@@ -374,6 +412,8 @@ def main() -> None:
                         help='produce a Hadrian distribution archive (default)')
      parser.add_argument('--no-archive', dest='want_archive', action='store_false',
                         help='do not produce a Hadrian distribution archive')
@@ -120,7 +133,7 @@ Hunk #1-#7:
      parser.set_defaults(want_archive=True)
  
      subparsers = parser.add_subparsers(dest="command")
-@@ -480,7 +507,8 @@ Alternatively, you could use `bootstrap.
+@@ -480,7 +520,8 @@ Alternatively, you could use `bootstrap.
            plan = gen_fetch_plan(info)
            fetch_from_plan(plan, TARBALLS)
  

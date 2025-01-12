@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2025/01/12 15:02:34 pho Exp $
+$NetBSD: distinfo,v 1.13 2025/01/12 17:37:29 pho Exp $
 
 BLAKE2s (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = c771cfa45f5635bdf8175775cf7a67c9541bd5b4d4927ed9b5189e3dcefcd2ba
 SHA512 (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 3d50e4c6605ebfa7eef018d3e9e11e8115cf2f97e24a5adfc05fd1bab152c726e240f9a213d73e220dc7fc5b9358df74eee0d4cb1b77bd5491f28899c831b1a4
@@ -34,7 +34,7 @@ SHA1 (patch-compiler_GHC_Driver_Pipeline_Execute.hs) = 8a86aabddfa4cc5dcff3bb981
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = ceb26657516e207e22d555ec6f87f735344b0d08
 SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
 SHA1 (patch-hadrian_bindist_Makefile) = 3a91d56be4f1b59c6534eceb5b1a4f8e86d49c68
-SHA1 (patch-hadrian_bootstrap_bootstrap.py) = 968830b0bf97cd59c7dddd4b5a6d77197963f94e
+SHA1 (patch-hadrian_bootstrap_bootstrap.py) = acbb67f77bb3e75bc7c1aef4c1769839d1f60c8e
 SHA1 (patch-hadrian_bootstrap_src_Main.hs) = 2e0a7ae2ef195013ca07313c150a7e48b6985e32
 SHA1 (patch-hadrian_hadrian.cabal) = c1b41c7ea96afb6f64d6a1043ef5d302dba49a77
 SHA1 (patch-hadrian_src_Builder.hs) = bbfb1ddc30af900c89ca3cf649a32da2a1c83174
