@@ -1,0 +1,17 @@
+A small C library with that portably invokes native file open,
+folder select and file save dialogs.  Write dialog code once and
+have itpop up native dialogs on all supported platforms.  Avoid
+linking large dependencies like wxWidgets and Qt.
+
+- Lean C API, static library &mdash; no C++/ObjC runtime needed
+- Supports Windows (MSVC, MinGW, Clang), macOS (Clang), and Linux
+  (GTK, portal) (GCC, Clang)
+- Zlib licensed
+- Friendly names for filters (e.g. `C/C++ Source files (*.c;*.cpp)`
+  instead of `(*.c;*.cpp)`) on platforms that support it
+- Automatically append file extension on platforms where users
+  expect it
+- Support for setting a default folder path
+- Support for setting a default file name (e.g. `Untitled.c`)
+- Consistent UTF-8 support on all platforms
+- Native character set (UTF-16 `wchar_t`) support on Windows
