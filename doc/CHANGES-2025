@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.308 2025/01/12 11:36:05 mef Exp $
+$NetBSD: CHANGES-2025,v 1.309 2025/01/12 11:53:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -397,3 +397,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fastfetch to 2.34.0 [vins 2025-01-12]
 	Updated biology/R-popbio to 2.8 [mef 2025-01-12]
 	Updated devel/R-BH to 1.87.0.1 [mef 2025-01-12]
+	Updated devel/R-bindr to 0.1.2 [mef 2025-01-12]
