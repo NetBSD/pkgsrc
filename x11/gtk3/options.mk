@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2025/01/12 20:33:36 riastradh Exp $
+# $NetBSD: options.mk,v 1.31 2025/01/12 20:34:54 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
 PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
@@ -79,7 +79,7 @@ MESON_ARGS+=	-Dx11_backend=false
 
 PLIST_VARS+=	doc
 .if ${PKG_OPTIONS:Mdoc}
-PLIST.doc=	true
+PLIST.doc=	yes
 MESON_ARGS+=	-Dgtk_doc=true
 .else
 MESON_ARGS+=	-Dgtk_doc=false
@@ -87,7 +87,7 @@ MESON_ARGS+=	-Dgtk_doc=false
 
 PLIST_VARS+=	introspection
 .if ${PKG_OPTIONS:Mintrospection}
-PLIST.introspection=	true
+PLIST.introspection=	yes
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .  include "../../devel/gobject-introspection/buildlink3.mk"
 .else
