@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/10/18 22:37:51 mef Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/12 13:12:40 mef Exp $
 
 R_PKGNAME=	lpSolve
-R_PKGVER=	5.6.21
+R_PKGVER=	5.6.23
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
