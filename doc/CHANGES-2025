@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.312 2025/01/12 12:15:00 fox Exp $
+$NetBSD: CHANGES-2025,v 1.313 2025/01/12 12:18:33 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-R.oo to 1.27.0 [mef 2025-01-12]
 	Updated devel/R-bit to 4.5.0.1 [mef 2025-01-12]
 	Updated sysutils/pfetch to 1.7.1 [fox 2025-01-12]
+	Updated sysutils/eza to 0.20.16 [fox 2025-01-12]
