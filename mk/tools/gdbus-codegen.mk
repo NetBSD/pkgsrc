@@ -1,9 +1,9 @@
-# $NetBSD: gdbus-codegen.mk,v 1.2 2021/05/02 14:11:40 ryoon Exp $
+# $NetBSD: gdbus-codegen.mk,v 1.3 2025/01/12 20:35:13 riastradh Exp $
 
 .if !empty(USE_TOOLS:Mgdbus-codegen)
 TOOLS_CREATE+=			gdbus-codegen
 TOOLS_DEPENDS.gdbus-codegen?=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
-TOOLS_PATH.gdbus-codegen=	${PREFIX}/bin/gdbus-codegen
+TOOLS_PATH.gdbus-codegen=	${TOOLBASE}/bin/gdbus-codegen
 .else
 #
 # If a package doesn't explicitly say it uses gdbus-codegen, then create a "broken"
