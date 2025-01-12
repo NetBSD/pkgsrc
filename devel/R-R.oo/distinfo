@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/06 12:10:19 mef Exp $
+$NetBSD: distinfo,v 1.6 2025/01/12 11:44:52 mef Exp $
 
-BLAKE2s (R/R.oo_1.26.0.tar.gz) = 678e75bc247f4573f68a17412a1b0b7498c570a7cdf0eedd5dba3e34e8e5e542
-SHA512 (R/R.oo_1.26.0.tar.gz) = f6f02e0ca59a3add5c45bcebadf981ca443463cb95ed50a347a7572e96c3b752a54ced8af77786e148f0204eb9e019f7811d640677e9bbce5cbdf0e1724dc35f
-Size (R/R.oo_1.26.0.tar.gz) = 383646 bytes
+BLAKE2s (R/R.oo_1.27.0.tar.gz) = 6022e19fc9cc40a19b5e27b28ed345b4dc3cecba3cde5f9492cad8ca2700187f
+SHA512 (R/R.oo_1.27.0.tar.gz) = a6ffa32f439bccf0e8d96eb3d8884126a3e4136108ff2eff8b25d222d4ea7b781b6b6f7cbb5b1b4e02e7bca8a3fe35e948d1a9f623822fcbedfd1afa97f3524c
+Size (R/R.oo_1.27.0.tar.gz) = 384222 bytes
