@@ -1,17 +1,16 @@
-$NetBSD: README.macOS,v 1.11.8.1 2025/01/12 01:19:02 gdt Exp $
+$NetBSD: README.macOS,v 1.11.8.2 2025/01/12 01:24:37 gdt Exp $
 
 Please read the general README file as well.
 
-Binary packages are available for macOS arm64 and x86_64, provided by
-MNX Cloud. More info: <https://pkgsrc.smartos.org/install-on-macos/>
+# Building from source
 
-If these don't suffice for your needs, you'll want to build your own.
 First, install either the full Xcode environment (if that's something
 you want to have) or else just its Command Line Tools.  For the latter:
 
 	$ xcode-select --install
 
-While this is often sufficient, see below for dealing with issues.
+While this is often sufficient, see the XCode section below for
+dealing with issues.
 
 Next, if you haven't already done so, fetch and extract pkgsrc:
 
@@ -24,7 +23,16 @@ Once bootstrapped, install `devel/scmcvs` so you can update pkgsrc via
 anonymous CVS. Alternatively, swap out your CVS checkout for a clone
 from this git mirror: <https://github.com/NetBSD/pkgsrc/>
 
+# Binary packages
+
+Binary packages are available for macOS arm64 and x86_64, provided by
+MNX Cloud. More info: <https://pkgsrc.smartos.org/install-on-macos/>
+
+# Hints for operating on macOS
+
 For a local X11 display server, install `x11/modular-xorg-xquartz`.
+
+# Hints for fixing packages
 
 For any particular package that doesn't build, macOS fixes are often in
 MacPorts or Homebrew waiting to be borrowed.
@@ -33,7 +41,7 @@ Patches to support older systems will generally get merged, provided
 they don't break newer systems and aren't too much trouble to maintain.
 Tigerbrew is a good place to look for such fixes.
 
-## XCode
+# XCode
 
 XCode and Command Line Tools are essentially cross compilers, even
 when build host and target are the same, similar to NetBSD's build.sh.
