@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.293 2025/01/12 10:01:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.294 2025/01/12 10:01:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -382,3 +382,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Test-Warnings to 0.037 [wiz 2025-01-12]
 	Updated textproc/p5-Text-CSV to 2.05 [wiz 2025-01-12]
 	Updated textproc/p5-Text-CSV_XS to 1.59 [wiz 2025-01-12]
+	Updated devel/p5-XS-Parse-Keyword to 0.48 [wiz 2025-01-12]
