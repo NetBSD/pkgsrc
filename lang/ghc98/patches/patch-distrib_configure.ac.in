@@ -1,0 +1,18 @@
+$NetBSD: patch-distrib_configure.ac.in,v 1.1 2025/01/12 18:04:33 pho Exp $
+
+Fix an issue on Darwin where GHC fails to invoke the C++ compiler, clang++,
+on this platform. Already fixed in upstream:
+https://gitlab.haskell.org/ghc/ghc/-/merge_requests/12026
+
+--- distrib/configure.ac.in.orig	2025-01-12 16:16:58.729097284 +0000
++++ distrib/configure.ac.in
+@@ -103,6 +103,9 @@ dnl ** Which gcc to use?
+ dnl --------------------------------------------------------------
+ AC_PROG_CC([gcc clang])
+ AC_PROG_CXX([g++ clang++ c++])
++# Work around #24324
++MOVE_TO_FLAGS([CC],[CFLAGS])
++MOVE_TO_FLAGS([CXX],[CXXFLAGS])
+ 
+ dnl ** figure out how to invoke the C preprocessor (i.e. `gcc -E`)
+ AC_PROG_CPP
