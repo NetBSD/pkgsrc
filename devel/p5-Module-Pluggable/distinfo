@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/10/27 09:37:46 wiz Exp $
+$NetBSD: distinfo,v 1.16 2025/01/12 09:58:11 wiz Exp $
 
-BLAKE2s (Module-Pluggable-6.2.tar.gz) = a3b0a4213bbafc86df19a1ba558fecbb91925cf060c2913f577f9e1a985c2a83
-SHA512 (Module-Pluggable-6.2.tar.gz) = 3d4b046d105406b7b4cbf66387603321f28cb7e1df6bf9d90c3762f1a1d44b8aed532591098fb158c49678a23d2ee8166d58b0badcaa072ba7bb96b4deb5e07c
-Size (Module-Pluggable-6.2.tar.gz) = 28427 bytes
+BLAKE2s (Module-Pluggable-6.3.tar.gz) = 18870509f655442f071dafa7521a8fb9138c1ebfe91c0e82a3189296ab8f3426
+SHA512 (Module-Pluggable-6.3.tar.gz) = 6ea3ffe30dcbc73300ded186d8237435d539056f90790834cc53d73f1e01397dc8935c892891bf7320a4c92be34ddf3a1412fca0f2451ec0058a964a9da58fd9
+Size (Module-Pluggable-6.3.tar.gz) = 29053 bytes
