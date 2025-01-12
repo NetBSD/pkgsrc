@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.327 2025/01/12 15:50:25 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.328 2025/01/12 16:18:02 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -421,3 +421,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/nativefiledialog-extended version 1.2.1 [ktnb 2025-01-12]
 	Updated x11/kwindowsystem to 5.116.0nb4 [wiz 2025-01-12]
 	Updated games/naev to 0.12.2 [ktnb 2025-01-12]
+	Updated x11/deskmenu to 1.4.5 [ktnb 2025-01-12]
