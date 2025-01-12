@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2025/01/12 20:33:36 riastradh Exp $
+# $NetBSD: Makefile,v 1.210 2025/01/12 20:35:04 riastradh Exp $
 
 DISTNAME=	gtk+-3.24.43
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -81,6 +81,18 @@ post-install:
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons"
 INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
+
+PRINT_PLIST_AWK+=	/quartz/ || /themes\/Mac\// \
+					{ $$0 = "$${PLIST.quartz}"$$0 }
+PRINT_PLIST_AWK+=	/wayland/	{ $$0 = "$${PLIST.wayland}"$$0 }
+PRINT_PLIST_AWK+=	/gdkx/ || /x11/ || /GdkX/ || /im-xim/ \
+					{ $$0 = "$${PLIST.x11}"$$0 }
+
+PRINT_PLIST_AWK+=	/cups/		{ $$0 = "$${PLIST.cups}"$$0 }
+
+PRINT_PLIST_AWK+=	/girepository/ || /\.gir$$/ \
+					{ $$0 = "$${PLIST.introspection}"$$0 }
+PRINT_PLIST_AWK+=	/gtk-doc/	{ $$0 = "$${PLIST.doc}"$$0 }
 
 _BUILDING_GTK3=	yes
 .include "modules.mk"
