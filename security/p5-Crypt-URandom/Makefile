@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/01/08 07:00:30 wen Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/12 09:51:44 wiz Exp $
 
-DISTNAME=	Crypt-URandom-0.49
+DISTNAME=	Crypt-URandom-0.50
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Crypt/}
