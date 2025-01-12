@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.300 2025/01/12 10:22:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.301 2025/01/12 10:23:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/libmaxminddb to 1.12.2 [wiz 2025-01-12]
 	Updated www/R-curl to 6.1.0 [mef 2025-01-12]
 	Updated databases/mimir to 2.15.0 [wiz 2025-01-12]
+	Updated www/py-google-api-python-client to 2.158.0 [wiz 2025-01-12]
