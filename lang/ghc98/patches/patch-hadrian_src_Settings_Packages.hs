@@ -1,15 +1,11 @@
-$NetBSD: patch-hadrian_src_Settings_Packages.hs,v 1.3 2025/01/12 15:02:35 pho Exp $
+$NetBSD: patch-hadrian_src_Settings_Packages.hs,v 1.4 2025/01/12 19:06:27 pho Exp $
 
-Hunk #1, #3:
+Hunk #0, #1:
   Don't assume we always build the threaded RTS. We can't upstream this
   until they adopt this change to Haddock:
   https://github.com/haskell/haddock/commit/75a94e010fb5b0236c670d22b04f5472397dc15d
 
-Hunk #0, #1, #2:
-  Fix build with GHC >= 9.8.1:
-  https://gitlab.haskell.org/ghc/ghc/-/merge_requests/11541
-
-Hunk #4:
+Hunk #2:
   Hadrian does something unholy on i386 to gain speed but it seems to be
   incompatible with LLD. Disable the speed hack to work around a linkage
   failure. Ideally we should do this by detecting the type of linker but
@@ -17,33 +13,15 @@ Hunk #4:
 
 --- hadrian/src/Settings/Packages.hs.orig	2024-02-22 20:59:45.000000000 +0000
 +++ hadrian/src/Settings/Packages.hs
-@@ -6,6 +6,7 @@ import Oracles.Setting
- import Oracles.Flag
- import Packages
- import Settings
-+import Data.Version.Extra
- 
- -- | Package-specific command-line arguments.
- packageArgs :: Args
-@@ -29,6 +30,8 @@ packageArgs = do
+@@ -29,6 +29,7 @@ packageArgs = do
      cursesLibraryDir <- getSetting CursesLibDir
      ffiIncludeDir  <- getSetting FfiIncludeDir
      ffiLibraryDir  <- getSetting FfiLibDir
-+    stageVersion     <- readVersion <$> (expr $ ghcVersionStage stage)
 +    rtsWays          <- getRtsWays
  
      mconcat
          --------------------------------- base ---------------------------------
-@@ -79,7 +82,7 @@ packageArgs = do
-             -- not being fixed to `ghc`, when building stage0, we must set
-             -- -this-unit-id to `ghc` because the boot compiler expects that.
-             -- We do it through a cabal flag in ghc.cabal
--            , stage0 ? arg "+hadrian-stage0"
-+            , stageVersion < makeVersion [9, 8, 1] ? arg "+hadrian-stage0"
-             , flag StaticLibzstd `cabalFlag` "static-libzstd"
-             ]
- 
-@@ -166,7 +169,17 @@ packageArgs = do
+@@ -166,7 +167,17 @@ packageArgs = do
  
          -------------------------------- haddock -------------------------------
          , package haddock ?
@@ -62,7 +40,7 @@ Hunk #4:
  
          ---------------------------------- text --------------------------------
          , package text ? mconcat
-@@ -441,7 +454,7 @@ rtsPackageArgs = package rts ? do
+@@ -441,7 +452,7 @@ rtsPackageArgs = package rts ? do
  speedHack :: Action Bool
  speedHack = do
      i386   <- anyTargetArch ["i386"]
