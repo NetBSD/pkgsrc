@@ -1,0 +1,11 @@
+$NetBSD: patch-linters_lint-commit-msg_lint-commit-msg.cabal,v 1.1 2025/01/12 15:02:35 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- linters/lint-commit-msg/lint-commit-msg.cabal.orig	2025-01-12 04:45:24.345305599 +0000
++++ linters/lint-commit-msg/lint-commit-msg.cabal
+@@ -26,4 +26,3 @@ executable lint-commit-msg
+     base
+        >= 4.14 && < 5,
+     text
+-       >= 1.2  && < 2.1
