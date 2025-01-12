@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2024/11/17 07:15:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/01/12 19:23:00 riastradh Exp $
 
 BUILDLINK_TREE+=	at-spi2-core
 
@@ -14,7 +14,7 @@ pkgbase:= at-spi2-core
 
 .include "../../devel/glib2/buildlink3.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.at-spi2-core:Mdbus)
+.if ${PKG_BUILD_OPTIONS.at-spi2-core:Mdbus}
 .include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
