@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.291 2025/01/12 09:59:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.292 2025/01/12 10:00:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -380,3 +380,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/p5-Locale-libintl to 1.34 [wiz 2025-01-12]
 	Updated devel/p5-Module-Pluggable to 6.3 [wiz 2025-01-12]
 	Updated devel/p5-Test-Warnings to 0.037 [wiz 2025-01-12]
+	Updated textproc/p5-Text-CSV to 2.05 [wiz 2025-01-12]
