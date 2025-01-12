@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/03 11:50:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/12 07:40:00 adam Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -80,6 +80,9 @@ ${PYSITELIB}/poetry/console/commands/debug/resolve.pyo
 ${PYSITELIB}/poetry/console/commands/env/__init__.py
 ${PYSITELIB}/poetry/console/commands/env/__init__.pyc
 ${PYSITELIB}/poetry/console/commands/env/__init__.pyo
+${PYSITELIB}/poetry/console/commands/env/activate.py
+${PYSITELIB}/poetry/console/commands/env/activate.pyc
+${PYSITELIB}/poetry/console/commands/env/activate.pyo
 ${PYSITELIB}/poetry/console/commands/env/info.py
 ${PYSITELIB}/poetry/console/commands/env/info.pyc
 ${PYSITELIB}/poetry/console/commands/env/info.pyo
@@ -95,9 +98,6 @@ ${PYSITELIB}/poetry/console/commands/env/use.pyo
 ${PYSITELIB}/poetry/console/commands/env_command.py
 ${PYSITELIB}/poetry/console/commands/env_command.pyc
 ${PYSITELIB}/poetry/console/commands/env_command.pyo
-${PYSITELIB}/poetry/console/commands/export.py
-${PYSITELIB}/poetry/console/commands/export.pyc
-${PYSITELIB}/poetry/console/commands/export.pyo
 ${PYSITELIB}/poetry/console/commands/group_command.py
 ${PYSITELIB}/poetry/console/commands/group_command.pyc
 ${PYSITELIB}/poetry/console/commands/group_command.pyo
@@ -152,12 +152,12 @@ ${PYSITELIB}/poetry/console/commands/self/show/__init__.pyo
 ${PYSITELIB}/poetry/console/commands/self/show/plugins.py
 ${PYSITELIB}/poetry/console/commands/self/show/plugins.pyc
 ${PYSITELIB}/poetry/console/commands/self/show/plugins.pyo
+${PYSITELIB}/poetry/console/commands/self/sync.py
+${PYSITELIB}/poetry/console/commands/self/sync.pyc
+${PYSITELIB}/poetry/console/commands/self/sync.pyo
 ${PYSITELIB}/poetry/console/commands/self/update.py
 ${PYSITELIB}/poetry/console/commands/self/update.pyc
 ${PYSITELIB}/poetry/console/commands/self/update.pyo
-${PYSITELIB}/poetry/console/commands/shell.py
-${PYSITELIB}/poetry/console/commands/shell.pyc
-${PYSITELIB}/poetry/console/commands/shell.pyo
 ${PYSITELIB}/poetry/console/commands/show.py
 ${PYSITELIB}/poetry/console/commands/show.pyc
 ${PYSITELIB}/poetry/console/commands/show.pyo
@@ -173,6 +173,9 @@ ${PYSITELIB}/poetry/console/commands/source/remove.pyo
 ${PYSITELIB}/poetry/console/commands/source/show.py
 ${PYSITELIB}/poetry/console/commands/source/show.pyc
 ${PYSITELIB}/poetry/console/commands/source/show.pyo
+${PYSITELIB}/poetry/console/commands/sync.py
+${PYSITELIB}/poetry/console/commands/sync.pyc
+${PYSITELIB}/poetry/console/commands/sync.pyo
 ${PYSITELIB}/poetry/console/commands/update.py
 ${PYSITELIB}/poetry/console/commands/update.pyc
 ${PYSITELIB}/poetry/console/commands/update.pyo
@@ -279,9 +282,6 @@ ${PYSITELIB}/poetry/layouts/layout.pyo
 ${PYSITELIB}/poetry/layouts/src.py
 ${PYSITELIB}/poetry/layouts/src.pyc
 ${PYSITELIB}/poetry/layouts/src.pyo
-${PYSITELIB}/poetry/layouts/standard.py
-${PYSITELIB}/poetry/layouts/standard.pyc
-${PYSITELIB}/poetry/layouts/standard.pyo
 ${PYSITELIB}/poetry/locations.py
 ${PYSITELIB}/poetry/locations.pyc
 ${PYSITELIB}/poetry/locations.pyo
@@ -321,21 +321,6 @@ ${PYSITELIB}/poetry/mixology/result.pyo
 ${PYSITELIB}/poetry/mixology/set_relation.py
 ${PYSITELIB}/poetry/mixology/set_relation.pyc
 ${PYSITELIB}/poetry/mixology/set_relation.pyo
-${PYSITELIB}/poetry/mixology/solutions/__init__.py
-${PYSITELIB}/poetry/mixology/solutions/__init__.pyc
-${PYSITELIB}/poetry/mixology/solutions/__init__.pyo
-${PYSITELIB}/poetry/mixology/solutions/providers/__init__.py
-${PYSITELIB}/poetry/mixology/solutions/providers/__init__.pyc
-${PYSITELIB}/poetry/mixology/solutions/providers/__init__.pyo
-${PYSITELIB}/poetry/mixology/solutions/providers/python_requirement_solution_provider.py
-${PYSITELIB}/poetry/mixology/solutions/providers/python_requirement_solution_provider.pyc
-${PYSITELIB}/poetry/mixology/solutions/providers/python_requirement_solution_provider.pyo
-${PYSITELIB}/poetry/mixology/solutions/solutions/__init__.py
-${PYSITELIB}/poetry/mixology/solutions/solutions/__init__.pyc
-${PYSITELIB}/poetry/mixology/solutions/solutions/__init__.pyo
-${PYSITELIB}/poetry/mixology/solutions/solutions/python_requirement_solution.py
-${PYSITELIB}/poetry/mixology/solutions/solutions/python_requirement_solution.pyc
-${PYSITELIB}/poetry/mixology/solutions/solutions/python_requirement_solution.pyo
 ${PYSITELIB}/poetry/mixology/term.py
 ${PYSITELIB}/poetry/mixology/term.pyc
 ${PYSITELIB}/poetry/mixology/term.pyo
@@ -357,6 +342,9 @@ ${PYSITELIB}/poetry/packages/locker.pyo
 ${PYSITELIB}/poetry/packages/package_collection.py
 ${PYSITELIB}/poetry/packages/package_collection.pyc
 ${PYSITELIB}/poetry/packages/package_collection.pyo
+${PYSITELIB}/poetry/packages/transitive_package_info.py
+${PYSITELIB}/poetry/packages/transitive_package_info.pyc
+${PYSITELIB}/poetry/packages/transitive_package_info.pyo
 ${PYSITELIB}/poetry/plugins/__init__.py
 ${PYSITELIB}/poetry/plugins/__init__.pyc
 ${PYSITELIB}/poetry/plugins/__init__.pyo
@@ -378,6 +366,9 @@ ${PYSITELIB}/poetry/poetry.pyo
 ${PYSITELIB}/poetry/publishing/__init__.py
 ${PYSITELIB}/poetry/publishing/__init__.pyc
 ${PYSITELIB}/poetry/publishing/__init__.pyo
+${PYSITELIB}/poetry/publishing/hash_manager.py
+${PYSITELIB}/poetry/publishing/hash_manager.pyc
+${PYSITELIB}/poetry/publishing/hash_manager.pyo
 ${PYSITELIB}/poetry/publishing/publisher.py
 ${PYSITELIB}/poetry/publishing/publisher.pyc
 ${PYSITELIB}/poetry/publishing/publisher.pyo
@@ -511,6 +502,9 @@ ${PYSITELIB}/poetry/utils/env/mock_env.pyo
 ${PYSITELIB}/poetry/utils/env/null_env.py
 ${PYSITELIB}/poetry/utils/env/null_env.pyc
 ${PYSITELIB}/poetry/utils/env/null_env.pyo
+${PYSITELIB}/poetry/utils/env/python_manager.py
+${PYSITELIB}/poetry/utils/env/python_manager.pyc
+${PYSITELIB}/poetry/utils/env/python_manager.pyo
 ${PYSITELIB}/poetry/utils/env/script_strings.py
 ${PYSITELIB}/poetry/utils/env/script_strings.pyc
 ${PYSITELIB}/poetry/utils/env/script_strings.pyo
@@ -529,6 +523,9 @@ ${PYSITELIB}/poetry/utils/extras.pyo
 ${PYSITELIB}/poetry/utils/helpers.py
 ${PYSITELIB}/poetry/utils/helpers.pyc
 ${PYSITELIB}/poetry/utils/helpers.pyo
+${PYSITELIB}/poetry/utils/isolated_build.py
+${PYSITELIB}/poetry/utils/isolated_build.pyc
+${PYSITELIB}/poetry/utils/isolated_build.pyo
 ${PYSITELIB}/poetry/utils/password_manager.py
 ${PYSITELIB}/poetry/utils/password_manager.pyc
 ${PYSITELIB}/poetry/utils/password_manager.pyo
@@ -538,15 +535,6 @@ ${PYSITELIB}/poetry/utils/patterns.pyo
 ${PYSITELIB}/poetry/utils/pip.py
 ${PYSITELIB}/poetry/utils/pip.pyc
 ${PYSITELIB}/poetry/utils/pip.pyo
-${PYSITELIB}/poetry/utils/setup_reader.py
-${PYSITELIB}/poetry/utils/setup_reader.pyc
-${PYSITELIB}/poetry/utils/setup_reader.pyo
-${PYSITELIB}/poetry/utils/shell.py
-${PYSITELIB}/poetry/utils/shell.pyc
-${PYSITELIB}/poetry/utils/shell.pyo
-${PYSITELIB}/poetry/utils/source.py
-${PYSITELIB}/poetry/utils/source.pyc
-${PYSITELIB}/poetry/utils/source.pyo
 ${PYSITELIB}/poetry/utils/wheel.py
 ${PYSITELIB}/poetry/utils/wheel.pyc
 ${PYSITELIB}/poetry/utils/wheel.pyo

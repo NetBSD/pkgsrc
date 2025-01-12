@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/12/11 12:34:56 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/12 07:40:00 adam Exp $
 
-DISTNAME=	poetry-1.8.5
+DISTNAME=	poetry-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/poetry/}
@@ -10,20 +10,18 @@ HOMEPAGE=	https://python-poetry.org/
 COMMENT=	Python dependency management and packaging made easy
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-build>=1.0.3:../../devel/py-build
+DEPENDS+=	${PYPKGPREFIX}-build>=1.2.1:../../devel/py-build
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.14.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-cleo>=2.1.0:../../comms/py-cleo
 DEPENDS+=	${PYPKGPREFIX}-crashtest>=0.4.1:../../misc/py-crashtest
-DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.21.2:../../devel/py-dulwich
+DEPENDS+=	${PYPKGPREFIX}-dulwich>=0.22.6:../../devel/py-dulwich
 DEPENDS+=	${PYPKGPREFIX}-fastjsonschema>=2.18.0:../../textproc/py-fastjsonschema
 DEPENDS+=	${PYPKGPREFIX}-installer>=0.7.0:../../misc/py-installer
-DEPENDS+=	${PYPKGPREFIX}-keyring>=24.0.0:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-packaging>=23.1:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-pexpect>=4.7.0:../../devel/py-pexpect
+DEPENDS+=	${PYPKGPREFIX}-keyring>=25.1.0:../../security/py-keyring
+DEPENDS+=	${PYPKGPREFIX}-packaging>=24.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.12:../../devel/py-pkginfo
 DEPENDS+=	${PYPKGPREFIX}-platformdirs>=3.0.0:../../misc/py-platformdirs
-DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.9.1:../../devel/py-poetry-core
-DEPENDS+=	${PYPKGPREFIX}-poetry-plugin-export>=1.6.0:../../devel/py-poetry-plugin-export
+DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pyproject_hooks>=1.0.0:../../devel/py-pyproject_hooks
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.26:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=1.0.0:../../devel/py-requests-toolbelt
