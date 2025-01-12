@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/12 10:33:18 wiz Exp $
 
-DISTNAME=	zxing-cpp-2.2.1
+DISTNAME=	zxing-cpp-2.3.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nu-book/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
