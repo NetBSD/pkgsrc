@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/12 00:21:47 jakllsch Exp $
+
+BLAKE2s (spampd/2.62.tar.gz) = ac20167770e8f0c585b75794963c9d76a7d66cdb87518a2e0a6a037bb42ba81f
+SHA512 (spampd/2.62.tar.gz) = a4caa96f379f7f85f60e68d4ca91fd2999ca3538e0a3dc62e15a8638bdc43e0ba6ef82bfba8e58121e9723ea2a12399febaa55afe13334ec34867ee3296fc424
+Size (spampd/2.62.tar.gz) = 249062 bytes
