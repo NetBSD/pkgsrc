@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.316 2025/01/12 13:12:49 mef Exp $
+$NetBSD: CHANGES-2025,v 1.317 2025/01/12 13:40:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-fs to 1.6.5 [mef 2025-01-12]
 	Updated devel/R-inline to 0.3.21 [mef 2025-01-12]
 	Updated devel/R-lpSolve to 5.6.23 [mef 2025-01-12]
+	Updated devel/R-pkgbuild to 1.4.5 [mef 2025-01-12]
