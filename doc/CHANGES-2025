@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.283 2025/01/12 00:22:56 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.284 2025/01/12 00:51:25 morr Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -370,3 +370,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/pugixml to 1.15 [adam 2025-01-11]
 	Updated archivers/minizip-ng to 4.0.8 [adam 2025-01-11]
 	Added mail/spampd version 2.62 [jakllsch 2025-01-12]
+	Updated editors/vim-share to 9.1.1004 [morr 2025-01-12]
