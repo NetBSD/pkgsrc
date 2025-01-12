@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.319 2025/01/12 14:12:16 mef Exp $
+$NetBSD: CHANGES-2025,v 1.320 2025/01/12 14:22:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-pkgbuild to 1.4.5 [mef 2025-01-12]
 	Updated devel/R-usethis to 3.1.0 [mef 2025-01-12]
 	Updated devel/R-withr to 3.0.2 [mef 2025-01-12]
+	Updated devel/R-xfun to 0.50 [mef 2025-01-12]
