@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/01/12 19:20:26 riastradh Exp $
+# $NetBSD: options.mk,v 1.3 2025/01/12 19:23:00 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.at-spi2-core
 
@@ -21,7 +21,7 @@ PKG_SUGGESTED_OPTIONS=	dbus ${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 PLIST_VARS+=	dbus
 PLIST_VARS+=	introspection
 
-.if !empty(PKG_OPTIONS:Mdbus)
+.if ${PKG_OPTIONS:Mdbus}
 PLIST.dbus=	yes
 
 #
