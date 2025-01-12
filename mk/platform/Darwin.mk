@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.140.6.1 2025/01/12 01:06:41 gdt Exp $
+# $NetBSD: Darwin.mk,v 1.140.6.2 2025/01/12 02:10:25 gdt Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -100,9 +100,13 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 .endif
 
 #
-# If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap time) to
-# select a specific SDK then we prefer that.
-#
+# If the user has set MACOSX_DEPLOYMENT_TARGET (ideally at bootstrap
+# time) to select a specific SDK then we prefer that.  An example of
+# an sdk name acceptable to xcrun is "macosx15.1".  Because the code
+# prepends macosx, one would invoke
+#   bmake MACOSX_DEPLOYMENT_TARGET=14.5 package
+# (SDK names are not directory names, and need to be the full version,
+# rather than major only; "MacOSX15" will fail.)
 .if defined(MACOSX_DEPLOYMENT_TARGET)
 .  if !defined(OSX_SDK_PATH)
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${MACOSX_DEPLOYMENT_TARGET} \
