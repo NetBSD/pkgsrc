@@ -1,0 +1,15 @@
+$NetBSD: patch-src_logo_ascii_netbsd__small.txt,v 1.1 2025/01/12 11:07:38 vins Exp $
+
+Add 'netbsd_small' logo.
+
+--- src/logo/ascii/netbsd_small.txt.orig	2025-01-12 10:51:25.096441370 +0000
++++ src/logo/ascii/netbsd_small.txt
+@@ -0,0 +1,8 @@
++$2 \\$1`-______,----__
++$2  \\       $1 __,---`_
++$2   \\      $1 `.____
++$2    \\$1-______,----`-
++$2     \\
++$2      \\
++$2       \\
++$2        \\
