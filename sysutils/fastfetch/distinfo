@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.2 2025/01/07 21:01:15 vins Exp $
+$NetBSD: distinfo,v 1.3 2025/01/12 11:07:38 vins Exp $
 
-BLAKE2s (fastfetch-2.33.0.tar.gz) = 82e265189b919cd41b15c689b2d2a1243bfaab9962abbe71fc65c278e6c57799
-SHA512 (fastfetch-2.33.0.tar.gz) = f9d824f908e36e3dc1b7784f2da818d764be6bbc6baa77d6b26ea6776acb5f101c4c39267fa42d1c9ae735c9889badc7b3a65170d81308de852a178e50140154
-Size (fastfetch-2.33.0.tar.gz) = 1161845 bytes
-SHA1 (patch-src_detection_battery_battery__nbsd.c) = a6850a4fbd848df3f1b23c0a46fca45c79d6eacd
+BLAKE2s (fastfetch-2.34.0.tar.gz) = 68a21e6b2e7df430190cf5ef93c9f79baf8ddfccc0b7340eb4f28dd2896d04ac
+SHA512 (fastfetch-2.34.0.tar.gz) = 8a2bbcd1f612e1fd4649cd64b0a1b52fe52012adb89cf42f56d16d677ff407a88c1e3992c58fdbbccacb668456fa1288e1667eb631791b37ba2267b2d3021cc5
+Size (fastfetch-2.34.0.tar.gz) = 1166632 bytes
+SHA1 (patch-CMakeLists.txt) = a440d81fa17de272654da37d0ca8ae680b8d776f
+SHA1 (patch-src_detection_memory_memory__nbsd.c) = 658a4b61a0b80edb79d59a14a2038e5f35e418e0
+SHA1 (patch-src_logo_ascii_netbsd__small.txt) = f339c1e985be6d2fe3d7c522e8cfa9a7ceefd430
+SHA1 (patch-src_logo_builtin.c) = 449ef2d350db6c5e70bf974859a0f6f39252242a
