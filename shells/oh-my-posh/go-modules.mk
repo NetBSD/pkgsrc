@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.86 2025/01/04 04:53:00 pin Exp $
+# $NetBSD: go-modules.mk,v 1.87 2025/01/12 07:32:49 pin Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -6,8 +6,8 @@ GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-95779
 GO_MODULE_FILES+=	dmitri.shuralyov.com/font/woff2/@v/v0.0.0-20180220214647-957792cbbdab.zip
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20250102033503-faa5f7b0171c.mod
 GO_MODULE_FILES+=	github.com/!azure/go-ansiterm/@v/v0.0.0-20250102033503-faa5f7b0171c.zip
-GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20240627033111-8567075b2bfe.mod
-GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.0.0-20240627033111-8567075b2bfe.zip
+GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.2.1.mod
+GO_MODULE_FILES+=	github.com/!conrad!irwin/font/@v/v0.2.1.zip
 GO_MODULE_FILES+=	github.com/!masterminds/goutils/@v/v1.1.1.mod
 GO_MODULE_FILES+=	github.com/!masterminds/goutils/@v/v1.1.1.zip
 GO_MODULE_FILES+=	github.com/!masterminds/semver/v3/@v/v3.3.1.mod
@@ -162,8 +162,8 @@ GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201204225414-ed752295db88.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210616094352-59db8d763f22.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20210809222454-d867a43fc93e.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.1.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.28.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.28.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.6.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.21.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.21.0.zip
