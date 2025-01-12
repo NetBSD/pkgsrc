@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.12 2019/03/27 03:18:47 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.13 2025/01/12 02:18:40 gutteridge Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -165,7 +165,6 @@ ${PLIST.native}java/oracle-8/lib/i386/libasound.so.2
 java/oracle-8/lib/i386/libavplugin-53.so
 java/oracle-8/lib/i386/libavplugin-54.so
 java/oracle-8/lib/i386/libavplugin-55.so
-java/oracle-8/lib/i386/libavplugin-56.so
 java/oracle-8/lib/i386/libavplugin-56.so
 java/oracle-8/lib/i386/libavplugin-57.so
 java/oracle-8/lib/i386/libavplugin-ffmpeg-56.so
