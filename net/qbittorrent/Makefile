@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2024/12/29 15:09:57 adam Exp $
+# $NetBSD: Makefile,v 1.83 2025/01/12 17:43:20 wiz Exp $
 
 DISTNAME=	qbittorrent-5.0.3
 PKGREVISION=	1
@@ -29,6 +29,7 @@ LDFLAGS.NetBSD+=	-ljemalloc
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
