@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.282 2025/01/11 20:34:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.283 2025/01/12 00:22:56 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-trove-classifiers to 2025.1.10.15 [adam 2025-01-11]
 	Updated textproc/pugixml to 1.15 [adam 2025-01-11]
 	Updated archivers/minizip-ng to 4.0.8 [adam 2025-01-11]
+	Added mail/spampd version 2.62 [jakllsch 2025-01-12]
