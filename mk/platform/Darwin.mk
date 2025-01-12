@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.140 2024/04/29 13:57:55 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.140.6.1 2025/01/12 01:06:41 gdt Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -28,7 +28,8 @@
 #	Big Sur		11.x		20.x.y	12.x	(llvm clang 12)
 #	Monterey	12.x		21.x.y	13.x	(llvm clang 13)
 #	Ventura		13.x		22.x.y	14.1+	(llvm clang 14)
-#
+#	Sonoma		14.x		23.x.y	?	(llvm clang ?)
+#	Sequoia		15.x		24.x.y	?	(llvm clang 15)
 
 # Tiger (and earlier) use Xfree 4.4.0 (and earlier)
 .if ${OPSYS_VERSION} < 100500
