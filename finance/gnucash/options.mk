@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2024/09/30 14:11:13 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2025/01/12 14:48:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnucash
 PKG_SUPPORTED_OPTIONS=	libdbi libofx gnucash-finance-quote python
@@ -22,7 +22,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_OFX=OFF
 .if !empty(PKG_OPTIONS:Mlibdbi)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SQL=ON
 PLIST_SRC+=	PLIST.dbi
-TOOL_DEPENDS+=	libdbi-driver-sqlite3-[0-9]*:../../databases/libdbi-driver-sqlite3
+CMAKE_CONFIGURE_ARGS+=	-DLIBDBI_DRIVERS=${PREFIX}/lib/dbd
 .include "../../databases/libdbi/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_SQL=OFF
