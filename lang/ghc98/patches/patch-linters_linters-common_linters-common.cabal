@@ -1,0 +1,16 @@
+$NetBSD: patch-linters_linters-common_linters-common.cabal,v 1.1 2025/01/12 15:02:35 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- linters/linters-common/linters-common.cabal.orig	2025-01-12 03:08:26.258934584 +0000
++++ linters/linters-common/linters-common.cabal
+@@ -15,8 +15,7 @@ library
+       ^>= 1.6,
+     base
+        >= 4.14 && < 5,
+-    text
+-       >= 1.2  && < 2.1,
++    text,
+     deepseq
+        >= 1.1,
+ 

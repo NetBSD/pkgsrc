@@ -1,4 +1,4 @@
-$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.3 2024/05/11 14:55:51 pho Exp $
+$NetBSD: patch-hadrian_bootstrap_bootstrap.py,v 1.4 2025/01/12 15:02:35 pho Exp $
 
 Hunk #0, #1:
     bootstrap.py assumes that GHC always has a threaded RTS but our
@@ -45,7 +45,7 @@ Hunk #1-#7:
 +        with open(patch_path) as patch_file:
 +            patch = patch_file.read()
 +        subprocess_run(
-+            ['patch', '-p1', '-b'], cwd=sdist_dir, input=patch, check=True, encoding='UTF-8')
++            ['patch', '-p1', '-b', '-l'], cwd=sdist_dir, input=patch, check=True, encoding='UTF-8')
 +
 +    # If it's from Hackage and we've already installed it, don't do it
 +    # twice. That only wastes time.

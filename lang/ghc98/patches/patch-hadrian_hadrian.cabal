@@ -1,0 +1,15 @@
+$NetBSD: patch-hadrian_hadrian.cabal,v 1.1 2025/01/12 15:02:35 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- hadrian/hadrian.cabal.orig	2025-01-12 03:00:29.789011438 +0000
++++ hadrian/hadrian.cabal
+@@ -151,7 +151,7 @@ executable hadrian
+                        , TypeOperators
+     other-extensions:    MultiParamTypeClasses
+                        , TypeFamilies
+-    build-depends:       Cabal                >= 3.2     && < 3.9
++    build-depends:       Cabal
+                        , base                 >= 4.11    && < 5
+                        , bytestring           >= 0.10    && < 0.13
+                        , containers           >= 0.5     && < 0.7
