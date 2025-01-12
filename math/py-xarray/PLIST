@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/01/06 10:55:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/01/12 14:34:47 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -53,6 +53,9 @@ ${PYSITELIB}/xarray/backends/store.pyo
 ${PYSITELIB}/xarray/backends/zarr.py
 ${PYSITELIB}/xarray/backends/zarr.pyc
 ${PYSITELIB}/xarray/backends/zarr.pyo
+${PYSITELIB}/xarray/coders.py
+${PYSITELIB}/xarray/coders.pyc
+${PYSITELIB}/xarray/coders.pyo
 ${PYSITELIB}/xarray/coding/__init__.py
 ${PYSITELIB}/xarray/coding/__init__.pyc
 ${PYSITELIB}/xarray/coding/__init__.pyo
