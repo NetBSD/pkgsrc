@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/11/17 00:16:16 dholland Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/01/12 19:20:26 riastradh Exp $
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-accessible.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-action.h
 ${PLIST.dbus}include/at-spi-2.0/atspi/atspi-application.h
@@ -66,7 +66,7 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 include/atk-1.0/atk/atkversion.h
 include/atk-1.0/atk/atkwindow.h
-lib/girepository-1.0/Atk-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/Atk-1.0.typelib
 ${PLIST.dbus}lib/girepository-1.0/Atspi-2.0.typelib
 ${PLIST.dbus}lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 ${PLIST.dbus}lib/gtk-2.0/modules/libatk-bridge.so
@@ -89,7 +89,7 @@ ${PLIST.dbus}share/dbus-1/accessibility-services/org.a11y.atspi.Registry.service
 ${PLIST.dbus}share/dbus-1/services/org.a11y.Bus.service
 ${PLIST.dbus}share/examples/at-spi2-core/at-spi2/accessibility.conf
 ${PLIST.dbus}share/examples/at-spi2-core/xdg/autostart/at-spi-dbus-bus.desktop
-share/gir-1.0/Atk-1.0.gir
+${PLIST.introspection}share/gir-1.0/Atk-1.0.gir
 ${PLIST.dbus}share/gir-1.0/Atspi-2.0.gir
 share/locale/ab/LC_MESSAGES/at-spi2-core.mo
 share/locale/af/LC_MESSAGES/at-spi2-core.mo
