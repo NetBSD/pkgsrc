@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.320 2025/01/12 14:22:20 mef Exp $
+$NetBSD: CHANGES-2025,v 1.321 2025/01/12 14:39:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -409,3 +409,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-usethis to 3.1.0 [mef 2025-01-12]
 	Updated devel/R-withr to 3.0.2 [mef 2025-01-12]
 	Updated devel/R-xfun to 0.50 [mef 2025-01-12]
+	Updated net/py-zeroconf to 0.139.0 [adam 2025-01-12]
+	Updated math/py-xarray to 2025.1.1 [adam 2025-01-12]
+	Updated graphics/py-tifffile to 2025.1.10 [adam 2025-01-12]
+	Updated devel/py-types-setuptools to 75.8.0.20250110 [adam 2025-01-12]
