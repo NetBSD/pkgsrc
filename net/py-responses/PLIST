@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/16 17:54:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/12 14:42:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -17,21 +17,3 @@ ${PYSITELIB}/responses/py.typed
 ${PYSITELIB}/responses/registries.py
 ${PYSITELIB}/responses/registries.pyc
 ${PYSITELIB}/responses/registries.pyo
-${PYSITELIB}/responses/tests/__init__.py
-${PYSITELIB}/responses/tests/__init__.pyc
-${PYSITELIB}/responses/tests/__init__.pyo
-${PYSITELIB}/responses/tests/test_matchers.py
-${PYSITELIB}/responses/tests/test_matchers.pyc
-${PYSITELIB}/responses/tests/test_matchers.pyo
-${PYSITELIB}/responses/tests/test_multithreading.py
-${PYSITELIB}/responses/tests/test_multithreading.pyc
-${PYSITELIB}/responses/tests/test_multithreading.pyo
-${PYSITELIB}/responses/tests/test_recorder.py
-${PYSITELIB}/responses/tests/test_recorder.pyc
-${PYSITELIB}/responses/tests/test_recorder.pyo
-${PYSITELIB}/responses/tests/test_registries.py
-${PYSITELIB}/responses/tests/test_registries.pyc
-${PYSITELIB}/responses/tests/test_registries.pyo
-${PYSITELIB}/responses/tests/test_responses.py
-${PYSITELIB}/responses/tests/test_responses.pyc
-${PYSITELIB}/responses/tests/test_responses.pyo
