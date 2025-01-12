@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.285 2025/01/12 07:33:08 pin Exp $
+$NetBSD: CHANGES-2025,v 1.286 2025/01/12 07:46:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -372,3 +372,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/spampd version 2.62 [jakllsch 2025-01-12]
 	Updated editors/vim-share to 9.1.1004 [morr 2025-01-12]
 	Updated shells/oh-my-posh to 24.18.1 [pin 2025-01-12]
+	Updated devel/py-poetry to 2.0.1 [adam 2025-01-12]
+	Updated devel/py-usb to 1.3.1 [adam 2025-01-12]
+	Updated misc/py-watchfiles to 1.0.4 [adam 2025-01-12]
