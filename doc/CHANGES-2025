@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.297 2025/01/12 10:18:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.298 2025/01/12 10:19:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -386,3 +386,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/bat to 0.25.0 [wiz 2025-01-12]
 	Updated fonts/harfbuzz to 10.2.0 [wiz 2025-01-12]
 	Updated fonts/harfbuzz-icu to 10.2.0 [wiz 2025-01-12]
+	Updated geography/libmaxminddb to 1.12.2 [wiz 2025-01-12]
