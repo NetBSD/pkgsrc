@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/10/18 22:37:51 mef Exp $
+$NetBSD: distinfo,v 1.8 2025/01/12 13:12:40 mef Exp $
 
-BLAKE2s (R/lpSolve_5.6.21.tar.gz) = 6bda931508bfe7adfb73d2f7f4ee9e75864a3d1d9081ec4b5d11fc62892a13f4
-SHA512 (R/lpSolve_5.6.21.tar.gz) = a5d7c75efab6efacd9069e72082ac24243064c25f042c6489718aeccb2d04458e50fe17a635d26ffe72b953887d94d1acbf5d1864defc43d34f82dc9b3b95fd0
-Size (R/lpSolve_5.6.21.tar.gz) = 467619 bytes
+BLAKE2s (R/lpSolve_5.6.23.tar.gz) = 764e679b00ff237a93c70bf468fcf51e8cbc84fe060b9c6568e4cb7629a0f605
+SHA512 (R/lpSolve_5.6.23.tar.gz) = 71bf65f5a9de4b4cabfc5437bcf8094bd731d636cce934b1ccfd7d48a89b852bd2f420252179d7ccc01a466a2f27163eadb110f40dde4ba10d33dc0d3a9666e0
+Size (R/lpSolve_5.6.23.tar.gz) = 467586 bytes
