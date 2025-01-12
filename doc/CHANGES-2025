@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.328 2025/01/12 16:18:02 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.329 2025/01/12 17:43:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -422,3 +422,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kwindowsystem to 5.116.0nb4 [wiz 2025-01-12]
 	Updated games/naev to 0.12.2 [ktnb 2025-01-12]
 	Updated x11/deskmenu to 1.4.5 [ktnb 2025-01-12]
+	Updated net/qbittorrent to 5.0.3nb2 [wiz 2025-01-12]
