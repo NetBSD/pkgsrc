@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2023/06/06 12:40:18 riastradh Exp $
+# $NetBSD: Makefile,v 1.60 2025/01/12 11:23:35 wiz Exp $
 #
 DISTNAME=	dinotrace-9.4f
 PKGREVISION=	2
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 TOOL_DEPENDS+=	gtexinfo-[0-9]*:../../devel/gtexinfo
 TOOL_DEPENDS+=	web2c>=2020:../../print/web2c
 TOOL_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
+TOOL_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 
 GNU_CONFIGURE=		YES
 INFO_FILES=		YES
