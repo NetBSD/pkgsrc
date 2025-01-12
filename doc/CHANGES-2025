@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.310 2025/01/12 11:54:14 mef Exp $
+$NetBSD: CHANGES-2025,v 1.311 2025/01/12 12:06:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-BH to 1.87.0.1 [mef 2025-01-12]
 	Updated devel/R-bindr to 0.1.2 [mef 2025-01-12]
 	Updated devel/R-R.oo to 1.27.0 [mef 2025-01-12]
+	Updated devel/R-bit to 4.5.0.1 [mef 2025-01-12]
