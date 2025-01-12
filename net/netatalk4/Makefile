@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/12/18 13:28:04 hauke Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/12 16:13:10 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -6,7 +6,7 @@ DISTNAME=	netatalk-4-0-6
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -56,7 +56,6 @@ MESON_ARGS+=		-Dwith-bdb-path=${BDBBASE}
 
 MESON_ARGS+=		-Dwith-tcp-wrappers=true
 MESON_ARGS+=		-Dwith-statedir-path=${VARBASE}/db
-MESON_ARGS+=		-Dwith-spooldir=${VARBASE}/spool/netatalk
 MESON_ARGS+=		-Dwith-init-hooks=false
 
 # Meson will look for perl(1), but then substitute the buildlink path
@@ -71,9 +70,14 @@ SUBST_SED.perlpath=	-e 's|@PERL@|${PERL5}|g'
 
 # Keep Meson from installing rc.d files
 SUBST_CLASSES+=		init
-SUBST_STAGE.init+=	pre-configure
+SUBST_STAGE.init=	pre-configure
 SUBST_FILES.init+=	distrib/initscripts/meson.build
 SUBST_SED.init+=	-E -e 's|(install): true|\1: false|g'
+
+SUBST_CLASSES+=		varbase
+SUBST_STAGE.varbase=	pre-configure
+SUBST_FILES.varbase+=	meson.build
+SUBST_SED.varbase+=	-e 's,/var/,${VARBASE}/,g'
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 OWN_DIRS+=		${VARBASE}/db/netatalk/CNID ${REAL_ROOT_USER} ${REAL_ROOT_GROUP}
