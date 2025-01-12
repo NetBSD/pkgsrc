@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2024/11/14 22:22:20 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/01/12 15:23:28 wiz Exp $
 
 DISTNAME=	kwindowsystem-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -21,6 +21,13 @@ PLIST.mac=	yes
 .  include "../../x11/qt5-qtmacextras/buildlink3.mk"
 .else
 PLIST.x11=	yes
+
+SUBST_CLASSES+=		path
+SUBST_SED.path+=	-e "s,${BUILDLINK_DIR}/include,${BUILDLINK_PREFIX.libX11}/include,"
+SUBST_FILES.path+=	_KDE_build/CMakeFiles/Export/*/KF5WindowSystemTargets.cmake
+SUBST_MESSAGE.path=	Fixing path to libX11 in installed file.
+SUBST_STAGE.path=	post-build
+
 .  include "../../x11/qt5-qtx11extras/buildlink3.mk"
 .endif
 BUILDLINK_DEPMETHOD.qt5-qttools= build
