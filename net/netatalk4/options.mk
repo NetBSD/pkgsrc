@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2024/11/21 15:26:08 hauke Exp $
+# $NetBSD: options.mk,v 1.2 2025/01/12 16:13:10 hauke Exp $
 #
 PKG_OPTIONS_VAR=		PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=		debug dnssd kerberos ldap pam
@@ -23,6 +23,7 @@ PLIST_VARS+=			appletalk gssapi ldap pam spotlight
 .include "../../print/cups-base/buildlink3.mk"
 PLIST.appletalk=	yes
 MESON_ARGS+=		-Dwith-appletalk=true
+MESON_ARGS+=		-Dwith-spooldir=${VARBASE}/spool/netatalk
 CONF_FILES+=		${EGDIR}/atalkd.conf	${PKG_SYSCONFDIR}/atalkd.conf
 CONF_FILES+=		${EGDIR}/papd.conf	${PKG_SYSCONFDIR}/papd.conf
 RCD_SCRIPTS+=		${ATALK_RCD_SCRIPTS}
