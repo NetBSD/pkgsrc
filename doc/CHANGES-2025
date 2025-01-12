@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.302 2025/01/12 10:25:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.303 2025/01/12 10:30:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -391,3 +391,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mimir to 2.15.0 [wiz 2025-01-12]
 	Updated www/py-google-api-python-client to 2.158.0 [wiz 2025-01-12]
 	Updated devel/py-ruamel-yaml to 0.18.10 [wiz 2025-01-12]
+	Updated devel/py-ruff to 0.9.1 [wiz 2025-01-12]
