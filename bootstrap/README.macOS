@@ -1,16 +1,15 @@
-$NetBSD: README.macOS,v 1.11.8.2 2025/01/12 01:24:37 gdt Exp $
+$NetBSD: README.macOS,v 1.11.8.3 2025/01/12 14:29:20 gdt Exp $
 
 Please read the general README file as well.
 
-# Building from source
+Binary packages are available for macOS arm64 and x86_64, provided by
+MNX Cloud. More info: <https://pkgsrc.smartos.org/install-on-macos/>
 
+If these don't suffice for your needs, you'll want to build your own.
 First, install either the full Xcode environment (if that's something
-you want to have) or else just its Command Line Tools.  For the latter:
+you want to have) or else just its Command Line Tools. For the latter:
 
 	$ xcode-select --install
-
-While this is often sufficient, see the XCode section below for
-dealing with issues.
 
 Next, if you haven't already done so, fetch and extract pkgsrc:
 
@@ -23,16 +22,7 @@ Once bootstrapped, install `devel/scmcvs` so you can update pkgsrc via
 anonymous CVS. Alternatively, swap out your CVS checkout for a clone
 from this git mirror: <https://github.com/NetBSD/pkgsrc/>
 
-# Binary packages
-
-Binary packages are available for macOS arm64 and x86_64, provided by
-MNX Cloud. More info: <https://pkgsrc.smartos.org/install-on-macos/>
-
-# Hints for operating on macOS
-
 For a local X11 display server, install `x11/modular-xorg-xquartz`.
-
-# Hints for fixing packages
 
 For any particular package that doesn't build, macOS fixes are often in
 MacPorts or Homebrew waiting to be borrowed.
@@ -41,20 +31,14 @@ Patches to support older systems will generally get merged, provided
 they don't break newer systems and aren't too much trouble to maintain.
 Tigerbrew is a good place to look for such fixes.
 
-# XCode
+Occasionally, after updating to a freshly released macOS version, you'll
+see "No suitable Xcode SDK or Command Line Tools installed." This
+usually means a pkgsrc developer needs to add another `OSX_SDK_MAP`
+entry to `mk/platform/Darwin.mk`.
 
-XCode and Command Line Tools are essentially cross compilers, even
-when build host and target are the same, similar to NetBSD's build.sh.
-There are typically multiple "SDKs" for various macOS versions, and
-generally later macOS versions run binaries built for earlier ones.
-For CLT, see /Library/Developer/CommandLineTools/SDKs, and inspect
-defaults with `xcrun`.
-
-New macOS versions usually lead to new XCode versions, and sometimes
-they are troubled.  To choose a specific SDK, set
-MACOSX_DEPLOYMENT_TARGET to [perhaps the SDK version, e.g. 14.2]
-during bootstrap.  The bootstrap tools and all subsequent packages
-built with those tools will use the specified SDK.
+To target a specific SDK, assuming it's available on your build host,
+set MACOSX_DEPLOYMENT_TARGET during bootstrap. The bootstrap tools and
+all subsequent packages built with those tools will use the specified SDK.
 
 -----
 
