@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.7 2025/01/12 15:02:34 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.8 2025/01/12 18:04:33 pho Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -35,7 +35,7 @@ HADRIAN_BOOT_SOURCE=	ghc-${BOOT_VERSION}-boot-hadrian-ghc9.8.tar.gz
 # one. [2024-04-27; pho]
 
 .if ${MACHINE_PLATFORM:MDarwin-*-aarch64} || make(distinfo) || make (makesum) || make(mdi)
-BOOT_VERSION:=	9.4.7
+BOOT_VERSION:=	9.8.2
 BOOT_ARCHIVE:=	ghc-${BOOT_VERSION}-boot-aarch64-apple-darwin.tar.xz
 DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in LOCAL_PORTS
 .endif

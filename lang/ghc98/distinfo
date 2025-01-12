@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/12 17:37:29 pho Exp $
+$NetBSD: distinfo,v 1.14 2025/01/12 18:04:33 pho Exp $
 
-BLAKE2s (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = c771cfa45f5635bdf8175775cf7a67c9541bd5b4d4927ed9b5189e3dcefcd2ba
-SHA512 (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 3d50e4c6605ebfa7eef018d3e9e11e8115cf2f97e24a5adfc05fd1bab152c726e240f9a213d73e220dc7fc5b9358df74eee0d4cb1b77bd5491f28899c831b1a4
-Size (ghc-9.4.7-boot-aarch64-apple-darwin.tar.xz) = 109805384 bytes
 BLAKE2s (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = ac74fdc6f8a5d4a75bda0c6501902c2c160d3780b41b739129b5a36773c295cd
 SHA512 (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = e086a40eb6b655fcb22744a32247ab596adf649179681d6203514d66cbc0989e6b59430de5f02e18419b27584e2dbac5a418fb40f66bcdc76e8776d1e315a332
 Size (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = 1527081 bytes
@@ -21,6 +18,9 @@ Size (ghc-9.4.7-boot-x86_64-unknown-netbsd.tar.xz) = 77029664 bytes
 BLAKE2s (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 82abea5431d6d106c7eb4388c196594a050446f8164aecd5c76e263a96114a03
 SHA512 (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = c6dd73fce67dd8a4933a7f31318af662bc3fd873e3d96fa6aa2e0c72282c554cc2e13abdecc29919231c3cf346d878f5f738bb72f2db53d63dd79bf07a1e2d91
 Size (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 128747936 bytes
+BLAKE2s (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = 45867db56f03b0c25a13f034dd3eca3a91cc1b031790e457a55f599b023827ba
+SHA512 (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = c9b8717b0e37fd7c0fcff4f3dac603673fabe235bc8257cc24200ca926b7d2a226f656b8ffd13c1e6c0260f73a162d81b19a4f866b7c34d1ea54cdddef3aa406
+Size (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = 119596964 bytes
 BLAKE2s (ghc-9.8.2-boot-aarch64-unknown-netbsd.tar.xz) = 8595c7115a7c7d131c16806fbb7156de3595ae35122db0a95bb9d525fd80a5ee
 SHA512 (ghc-9.8.2-boot-aarch64-unknown-netbsd.tar.xz) = 6ae7c3a75b5794aa3ab890ad29f575754f6c0b674f7f7111255018ace0f7c07610ce5bb5687fdfde371a024322de35fea6d5248ba02ab47ba235a6a8b5e9d8ae
 Size (ghc-9.8.2-boot-aarch64-unknown-netbsd.tar.xz) = 91507768 bytes
@@ -33,6 +33,7 @@ Size (ghc-9.8.2-src.tar.xz) = 32432564 bytes
 SHA1 (patch-compiler_GHC_Driver_Pipeline_Execute.hs) = 8a86aabddfa4cc5dcff3bb9812010696fb6a16df
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = ceb26657516e207e22d555ec6f87f735344b0d08
 SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
+SHA1 (patch-distrib_configure.ac.in) = 14f60847c3d17e831d23846fd3cb11bd8f0228b2
 SHA1 (patch-hadrian_bindist_Makefile) = 3a91d56be4f1b59c6534eceb5b1a4f8e86d49c68
 SHA1 (patch-hadrian_bootstrap_bootstrap.py) = acbb67f77bb3e75bc7c1aef4c1769839d1f60c8e
 SHA1 (patch-hadrian_bootstrap_src_Main.hs) = 2e0a7ae2ef195013ca07313c150a7e48b6985e32
@@ -61,7 +62,6 @@ SHA1 (patch-linters_lint-commit-msg_lint-commit-msg.cabal) = 05fc63a1350197b3189
 SHA1 (patch-linters_lint-submodule-refs_lint-submodule-refs.cabal) = 77ae34a0b58d4213c9e82a71db4b05d47a34862a
 SHA1 (patch-linters_lint-whitespace_lint-whitespace.cabal) = 61941f07cc350cba1ef39a5fe2fb5a61875c4966
 SHA1 (patch-linters_linters-common_linters-common.cabal) = aefc902558b4c03525048103f074d3d94430bb52
-SHA1 (patch-m4_fp__find__cxx__std__lib.m4) = 67a86c6eaf4ce1cabb87080651ec4b42f3b7a914
 SHA1 (patch-m4_fptools__set__haskell__platform__vars.m4) = 8c7a7ab965f4df8a68bedb35c32ee32c59ac2c94
 SHA1 (patch-rts_rts.cabal.in) = d6805ed0669d73ad68488283c579e1e41eb0536e
 SHA1 (patch-utils_haddock_driver_Main.hs) = 26b015d3aef9fdff66e66c8e3d9a370a2dbd7067
