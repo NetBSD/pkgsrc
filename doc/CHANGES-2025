@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.289 2025/01/12 09:57:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.290 2025/01/12 09:58:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Crypt-URandom to 0.50 [wiz 2025-01-12]
 	Updated databases/p5-DBI to 1.646 [wiz 2025-01-12]
 	Updated misc/p5-Locale-libintl to 1.34 [wiz 2025-01-12]
+	Updated devel/p5-Module-Pluggable to 6.3 [wiz 2025-01-12]
