@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.29 2024/11/17 03:54:28 dholland Exp $
+# $NetBSD: options.mk,v 1.30 2025/01/12 20:33:36 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk3
-PKG_SUPPORTED_OPTIONS+=	gtk3-atk-bridge cups
+PKG_SUPPORTED_OPTIONS+=	doc introspection gtk3-atk-bridge cups
 PKG_SUPPORTED_OPTIONS+=	wayland x11
 .if exists(/System/Library/Frameworks/Quartz.framework)
 PKG_SUPPORTED_OPTIONS+=	quartz
@@ -14,6 +14,8 @@ PKG_SUGGESTED_OPTIONS+=	x11
 PKG_SUGGESTED_OPTIONS+=	wayland
 .endif
 PKG_SUGGESTED_OPTIONS+=	gtk3-atk-bridge cups
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:doc}
+PKG_SUGGESTED_OPTIONS+=	${${USE_CROSS_COMPILE:tl} == "yes":?:introspection}
 
 .include "../../mk/bsd.options.mk"
 
@@ -73,4 +75,21 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 .include "../../x11/libXcomposite/buildlink3.mk"
 .else
 MESON_ARGS+=	-Dx11_backend=false
+.endif
+
+PLIST_VARS+=	doc
+.if ${PKG_OPTIONS:Mdoc}
+PLIST.doc=	true
+MESON_ARGS+=	-Dgtk_doc=true
+.else
+MESON_ARGS+=	-Dgtk_doc=false
+.endif
+
+PLIST_VARS+=	introspection
+.if ${PKG_OPTIONS:Mintrospection}
+PLIST.introspection=	true
+BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
+.  include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+MESON_ARGS+=	-Dintrospection=false
 .endif
