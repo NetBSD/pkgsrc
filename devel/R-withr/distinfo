@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2024/09/22 23:56:16 mef Exp $
+$NetBSD: distinfo,v 1.12 2025/01/12 14:12:10 mef Exp $
 
-BLAKE2s (R/withr_3.0.1.tar.gz) = 7f630401b88904eaa0bcf943495da3bd1be5c06ac46aeee578fbac1b8591a888
-SHA512 (R/withr_3.0.1.tar.gz) = 56577feecb0483696624ebec4c6bb7e7f2e5af82b0f25ec68ad76ebd7f3712bc1d79e04c1692e3ac7abe8c4be9058d3a269945dbcfc264f1d8a0a3ac0f4515d2
-Size (R/withr_3.0.1.tar.gz) = 103375 bytes
+BLAKE2s (R/withr_3.0.2.tar.gz) = 4539d9858d3583d359b42d9c52d61bb2937806b8b6427bfd2f8b176e7b5849b4
+SHA512 (R/withr_3.0.2.tar.gz) = 3c03059c3ab4bc7501fa1eaba04bc64ad588e8a08ceeac5e6962af0dbd5aa59ab7680c21da73b6d6a844e14b3108ceeba9857373fbfacd3b89a8028787fb7e17
+Size (R/withr_3.0.2.tar.gz) = 103240 bytes
