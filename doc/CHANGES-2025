@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.324 2025/01/12 15:17:33 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.325 2025/01/12 15:18:47 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -418,4 +418,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-responses to 0.25.5 [adam 2025-01-12]
 	Updated sysutils/py-sh to 2.2.1 [adam 2025-01-12]
 	Updated security/R-openssl to 2.3.1 [mef 2025-01-12]
-	Updated x11/nativefiledialog-extended to 1.2.1 [ktnb 2025-01-12]
+	Added x11/nativefiledialog-extended version 1.2.1 [ktnb 2025-01-12]
