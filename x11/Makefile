@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1054 2025/01/03 15:30:14 gdt Exp $
+# $NetBSD: Makefile,v 1.1055 2025/01/13 11:30:23 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -263,6 +263,7 @@ SUBDIR+=	mowitz
 SUBDIR+=	mozo
 SUBDIR+=	mrxvt
 SUBDIR+=	mxterm
+SUBDIR+=	nativefiledialog-extended
 SUBDIR+=	neXtaw
 SUBDIR+=	numlockx
 SUBDIR+=	nx-libs
