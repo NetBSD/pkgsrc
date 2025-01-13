@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:55:36 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/01/13 14:31:56 ktnb Exp $
 
-BLAKE2s (bc-3.3.0.tar.xz) = 2a83bf29af764eb4863db207f19db5b81ec53a9bf31546bc914404b4cdb43b42
-SHA512 (bc-3.3.0.tar.xz) = b8d0b6d6d9c5d4fc62df62d1b9b7e7006a8b430e063fe0d5f646cfaeb4c6fc9c7037b644e853b7ae7d5c5f42f079221e9cdc32564d70c9ddd6bb867ddc7056de
-Size (bc-3.3.0.tar.xz) = 229580 bytes
+BLAKE2s (bc-7.0.3.tar.gz) = 591bebda8f2bd4ec266faa830717b584bdcdc32e7f8cf8028d8e4b549a5250f8
+SHA512 (bc-7.0.3.tar.gz) = 65e2675972b6f74c6c97ebaf22fb53ab06f8561d745c3172589c8d438c97a56a02327b2bfab978942b2e91a341bd02683273bc78f13a646eceb21531a27da21b
+Size (bc-7.0.3.tar.gz) = 1158074 bytes
