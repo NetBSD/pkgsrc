@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/01/08 01:55:28 wen Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/13 00:07:29 wiz Exp $
 
 DISTNAME=	drupal-11.1.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=8.3.0:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.3.0:../../archivers/php-zlib
 
-PHP_VERSIONS_ACCEPTED=	83 84
+PHP_VERSIONS_ACCEPTED=	83 # 84
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
