@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.70 2024/05/08 12:12:28 pho Exp $
+# $NetBSD: haskell.mk,v 1.71 2025/01/13 03:10:07 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -330,7 +330,7 @@ CONFIGURE_ARGS+=	--ghc-options=-optlm\ -r
 # /tmp/ghc_* must be protected from getting removed by our wrappers. We
 # also want to be explicit about the path to be chosen for temporary files.
 CONFIGURE_ARGS+=		--ghc-options=-tmpdir\ ${TMPDIR:U/tmp:Q}
-BUILDLINK_PASSTHRU_DIRS+=	${TMPDIR:U/tmp}
+BUILDLINK_PASSTHRU_DIRS+=	${TMPDIR:U/tmp:S,/$$,,}
 
 # Some packages lack PLIST but they may have things like PLIST.common.
 .if empty(PLIST_SRC)
