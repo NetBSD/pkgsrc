@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25314 2025/01/13 14:36:41 ktnb Exp $
+$NetBSD: TODO,v 1.25315 2025/01/13 16:42:15 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -1383,7 +1383,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xsc-1.6
 	o xteddy-2.2
 	o xtermcontrol-3.7
-	o xtrace-1.4.0
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xu4-1.4
