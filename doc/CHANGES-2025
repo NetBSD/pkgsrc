@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.361 2025/01/13 23:02:56 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.362 2025/01/13 23:34:33 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -459,3 +459,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fastfetch to 2.34.1 [vins 2025-01-13]
 	Updated mail/neomutt to 20250113 [wiz 2025-01-13]
 	Updated ham/freedv to 1.9.9.2 [gdt 2025-01-13]
+	Updated devel/py-guppy3 to 3.1.5 [gutteridge 2025-01-13]
