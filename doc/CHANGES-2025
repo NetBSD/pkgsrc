@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.335 2025/01/13 11:03:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.336 2025/01/13 11:03:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -433,3 +433,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mimalloc to 3.0.1 [adam 2025-01-13]
 	Updated devel/mold to 2.36.0 [adam 2025-01-13]
 	Updated pkgtools/pbulk-base to 0.58 [wiz 2025-01-13]
+	Updated pkgtools/pbulk to 0.74 [wiz 2025-01-13]
