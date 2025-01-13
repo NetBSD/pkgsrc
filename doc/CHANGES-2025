@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.355 2025/01/13 20:32:37 pin Exp $
+$NetBSD: CHANGES-2025,v 1.356 2025/01/13 20:33:30 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -453,3 +453,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/felix to 2.16.0 [pin 2025-01-13]
 	Updated mail/himalaya to 1.1.0 [pin 2025-01-13]
 	Updated graphics/oculante to 0.9.2 [pin 2025-01-13]
+	Updated devel/serie to 0.4.2 [pin 2025-01-13]
