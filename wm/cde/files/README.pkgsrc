@@ -28,12 +28,16 @@ Place the file inside either:
   - /etc/X11/xorg.conf.d            # native X11
   - @PREFIX@/etc/X11/xorg.conf.d    # modular X11
 
+NB: Create the xorg.conf.d target directory if it doesn't exist already.
+
 -----------------------------------------------------------------------
 
-To better access CDE applications, adjust your environment as follows:
+To better access CDE applications:
 
+ * Add dt/bin to your shell PATH:
 	$ export PATH=$PATH:${PREFIX}/dt/bin
-	$ export MANPATH=$MANPATH:${PREFIX}/dt/man
+
+ * Add ${PREFIX}/dt/man to /etc/man.conf and run `makemandb'.
 
 -----------------------------------------------------------------------
 
