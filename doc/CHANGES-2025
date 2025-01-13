@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.337 2025/01/13 14:29:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.338 2025/01/13 14:32:09 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -436,3 +436,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pbulk to 0.74 [wiz 2025-01-13]
 	Updated devel/git to 2.48.0 [adam 2025-01-13]
 	Updated devel/py-dirty-equals to 0.9.0 [adam 2025-01-13]
+	Updated math/bc-gh to 7.0.3 [ktnb 2025-01-13]
