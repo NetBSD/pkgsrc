@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.353 2025/01/13 20:28:37 pin Exp $
+$NetBSD: CHANGES-2025,v 1.354 2025/01/13 20:31:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.33.1 [pin 2025-01-13]
 	Updated sysutils/broot to 1.44.6 [pin 2025-01-13]
 	Updated sysutils/felix to 2.16.0 [pin 2025-01-13]
+	Updated mail/himalaya to 1.1.0 [pin 2025-01-13]
