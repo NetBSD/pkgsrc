@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/10/03 12:45:52 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/13 23:34:20 gutteridge Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -117,9 +117,6 @@ ${PYSITELIB}/guppy/heapy/Doc.pyo
 ${PYSITELIB}/guppy/heapy/ImpSet.py
 ${PYSITELIB}/guppy/heapy/ImpSet.pyc
 ${PYSITELIB}/guppy/heapy/ImpSet.pyo
-${PYSITELIB}/guppy/heapy/Monitor.py
-${PYSITELIB}/guppy/heapy/Monitor.pyc
-${PYSITELIB}/guppy/heapy/Monitor.pyo
 ${PYSITELIB}/guppy/heapy/OutputHandling.py
 ${PYSITELIB}/guppy/heapy/OutputHandling.pyc
 ${PYSITELIB}/guppy/heapy/OutputHandling.pyo
@@ -132,18 +129,9 @@ ${PYSITELIB}/guppy/heapy/Path.pyo
 ${PYSITELIB}/guppy/heapy/Prof.py
 ${PYSITELIB}/guppy/heapy/Prof.pyc
 ${PYSITELIB}/guppy/heapy/Prof.pyo
-${PYSITELIB}/guppy/heapy/RM.py
-${PYSITELIB}/guppy/heapy/RM.pyc
-${PYSITELIB}/guppy/heapy/RM.pyo
 ${PYSITELIB}/guppy/heapy/RefPat.py
 ${PYSITELIB}/guppy/heapy/RefPat.pyc
 ${PYSITELIB}/guppy/heapy/RefPat.pyo
-${PYSITELIB}/guppy/heapy/Remote.py
-${PYSITELIB}/guppy/heapy/Remote.pyc
-${PYSITELIB}/guppy/heapy/Remote.pyo
-${PYSITELIB}/guppy/heapy/RemoteConstants.py
-${PYSITELIB}/guppy/heapy/RemoteConstants.pyc
-${PYSITELIB}/guppy/heapy/RemoteConstants.pyo
 ${PYSITELIB}/guppy/heapy/Spec.py
 ${PYSITELIB}/guppy/heapy/Spec.pyc
 ${PYSITELIB}/guppy/heapy/Spec.pyo
