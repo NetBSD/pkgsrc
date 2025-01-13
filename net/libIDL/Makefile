@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2021/12/08 16:02:28 adam Exp $
+# $NetBSD: Makefile,v 1.65 2025/01/13 16:45:35 riastradh Exp $
 
 DISTNAME=	libIDL-0.8.14
 PKGREVISION=	6
@@ -21,6 +21,14 @@ INFO_FILES=		yes
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# XXX Needs to be adapted on platforms where long long is not formatted
+# with ll.
+CONFIGURE_ARGS+=	libIDL_cv_long_long_format=ll
 .endif
 
 TEST_TARGET=		check
