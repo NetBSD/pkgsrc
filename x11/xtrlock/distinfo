@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2022/11/05 18:18:13 pin Exp $
+$NetBSD: distinfo,v 1.2 2025/01/13 18:36:15 vins Exp $
 
-BLAKE2s (xtrlock_2.15.tar.xz) = 78fa4bbc9f0ab0999db7fc6cb5330aabff241f2b8c0e6c2f5189640adf8034c0
-SHA512 (xtrlock_2.15.tar.xz) = 3047ca57f04c58426c55c68cf711dffe124ba6c221a3659112339b01ec0f1a411d965277bb366bd39d8155fd82f8e49cb00e728a911aa67b4e46fcfcc489f0b1
-Size (xtrlock_2.15.tar.xz) = 21316 bytes
+BLAKE2s (xtrlock_2.16.tar.xz) = c3a39f94f9d4d73ef3a8af598eff54d795bfdef650b46ef0fa81f2fd7a30462d
+SHA512 (xtrlock_2.16.tar.xz) = 69142f39f4f2268724b75a80f1c995fc05556fec79633c941b0bceb5f1e2bc1dcac3ad0b4b1a5d922032ab8a41f5186d40622db0afe74a654e7ea6f978b673c9
+Size (xtrlock_2.16.tar.xz) = 21628 bytes
 SHA1 (patch-xtrlock.c) = 2fdef6890a285883c82a03ff53dea2cfc22fdaf5
