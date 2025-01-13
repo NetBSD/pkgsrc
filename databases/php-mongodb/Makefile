@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2024/02/28 16:22:25 taca Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/13 16:42:20 taca Exp $
 
 MODNAME=	mongodb
-PECL_VERSION=	1.17.2
+PECL_VERSION=	1.20.1
 CATEGORIES+=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com

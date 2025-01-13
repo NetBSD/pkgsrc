@@ -1,11 +1,11 @@
-$NetBSD: patch-src_libmongocrypt_src_os__posix_os__dll.c,v 1.1 2024/02/28 16:22:25 taca Exp $
+$NetBSD: patch-src_libmongocrypt_src_os__posix_os__dll.c,v 1.2 2025/01/13 16:42:20 taca Exp $
 
 Add support for NetBSD.
 
---- src/libmongocrypt/src/os_posix/os_dll.c.orig	2024-02-25 06:40:43.615857808 +0000
+--- src/libmongocrypt/src/os_posix/os_dll.c.orig	2024-11-27 14:34:48.000000000 +0000
 +++ src/libmongocrypt/src/os_posix/os_dll.c
-@@ -95,7 +95,7 @@ mcr_dll_path_result mcr_dll_path(mcr_dll
-     return (mcr_dll_path_result){.error_string = mstr_copy_cstr("Handle not found in loaded modules")};
+@@ -99,7 +99,7 @@ bool mcr_dll_path_supported(void) {
+     return true;
  }
  
 -#elif defined(__linux__) || defined(__FreeBSD__)
