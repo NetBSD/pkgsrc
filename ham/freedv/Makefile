@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2024/12/27 08:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/01/13 23:02:50 gdt Exp $
 
-DISTNAME=	freedv-1.4.2
-PKGREVISION=	16
+DISTNAME=	freedv-1.9.9.2
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drowe67/}
 GITHUB_PROJECT=	freedv-gui
@@ -44,7 +43,8 @@ pre-configure:
 .include "../../ham/codec2/buildlink3.mk"
 .include "../../ham/lpcnetfreedv/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
-# freedv 1.4.2 seems to only use included static sox
+# \todo Fix build using vendored sox instead of bl3 sox.
+# See CMakeFile line 211, "${PROJECT_SOURCE_DIR}/cmake/soxconfig.h.in"
 #.include "../../audio/sox/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
