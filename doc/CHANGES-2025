@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.345 2025/01/13 18:40:57 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.346 2025/01/13 18:41:02 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -443,3 +443,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xtrlock to 2.16 [vins 2025-01-13]
 	Added devel/CLI11 version 2.4.2 [gdt 2025-01-13]
 	Updated geography/gdal-lib to 3.10.1 [gdt 2025-01-13]
+	Updated geography/py-gdal to 3.10.1 [gdt 2025-01-13]
