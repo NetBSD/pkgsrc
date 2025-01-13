@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2024/11/15 12:28:33 pin Exp $
+# $NetBSD: Makefile,v 1.44 2025/01/13 16:51:56 riastradh Exp $
 
 DISTNAME=	libfm-qt-2.1.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,8 +14,6 @@ LICENSE=	gnu-lgpl-v2.1 AND modified-bsd
 
 USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
-
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${PREFIX}/qt6
 
 PKG_SYSCONFSUBDIR=	xdg
 
