@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.342 2025/01/13 18:37:18 vins Exp $
+$NetBSD: CHANGES-2025,v 1.343 2025/01/13 18:37:23 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -441,3 +441,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xtrace to 1.4.0 [ktnb 2025-01-13]
 	Updated databases/php-mongodb to 1.20.1 [taca 2025-01-13]
 	Updated x11/xtrlock to 2.16 [vins 2025-01-13]
+	Updated devel/CLI11 to 2.4.2 [gdt 2025-01-13]
