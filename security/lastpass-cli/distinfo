@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2024/08/22 17:56:04 vins Exp $
+$NetBSD: distinfo,v 1.7 2025/01/13 19:27:14 vins Exp $
 
-BLAKE2s (lastpass-cli-1.6.0.tar.gz) = daa483615191a497b0c8b1b4b4c2ef84d6ff8ad2c1c782d193b030c0229e845d
-SHA512 (lastpass-cli-1.6.0.tar.gz) = 1edf93b9dcb928d37a163f2ac6422acae4a1437f95ff09d9135033e757c07b547d0a385b4ac4b3a6accee2552527b6def9c0289fc91ba81e6a76e65f68e10f93
-Size (lastpass-cli-1.6.0.tar.gz) = 119590 bytes
+BLAKE2s (lastpass-cli-1.6.1.tar.gz) = b7e5f2846500ac728127d6e8465e5b414b3e29f866100262528cdabb94c09faf
+SHA512 (lastpass-cli-1.6.1.tar.gz) = 7accba731be1df29e40bab478b45a8e879e23ad041cf0df589d580b057eaff76b7929a4a8d65229aa76b8a74b758b368548b8304805252ab34232b8e1dd79d47
+Size (lastpass-cli-1.6.1.tar.gz) = 119766 bytes
 SHA1 (patch-CMakeLists.txt) = 8d63af2f977ce8271c6a01b96a460581af6b673f
 SHA1 (patch-agent.c) = 2e04b136da6116f80d1a1bfa9b831ccba3e3f215
 SHA1 (patch-clipboard.c) = a184652b0626c340475f0f23825f24466e810e02

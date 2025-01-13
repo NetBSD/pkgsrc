@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2024/11/14 22:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/13 19:27:14 vins Exp $
 
-DISTNAME=	lastpass-cli-1.6.0
-PKGREVISION=	3
+DISTNAME=	lastpass-cli-1.6.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lastpass/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	asciidoc>=0:../../textproc/asciidoc
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS=	bash:test pkg-config
 
@@ -28,4 +26,5 @@ TEST_TARGET=	lpass-test test
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
