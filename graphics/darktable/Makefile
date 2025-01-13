@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2025/01/01 14:06:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.170 2025/01/13 23:01:37 wiz Exp $
 
 DISTNAME=	darktable-5.0.0
 CATEGORIES=	graphics
@@ -84,6 +84,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 .include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
