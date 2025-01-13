@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.359 2025/01/13 20:46:53 vins Exp $
+$NetBSD: CHANGES-2025,v 1.360 2025/01/13 22:05:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/starship to 1.22.1 [pin 2025-01-13]
 	Updated graphics/stitchy to 0.1.8 [pin 2025-01-13]
 	Updated sysutils/fastfetch to 2.34.1 [vins 2025-01-13]
+	Updated mail/neomutt to 20250113 [wiz 2025-01-13]
