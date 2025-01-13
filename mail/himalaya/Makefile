@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/12/11 09:51:18 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/13 20:30:50 pin Exp $
 
-DISTNAME=	himalaya-1.0.0
+DISTNAME=	himalaya-1.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pimalaya/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,9 +14,9 @@ USE_LANGUAGES+=	c c++
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.81.0
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.81.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
