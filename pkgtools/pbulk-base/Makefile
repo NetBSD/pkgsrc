@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2023/02/12 21:17:24 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2025/01/13 11:03:03 wiz Exp $
 
-DISTNAME=	pbulk-base-0.57
+DISTNAME=	pbulk-base-0.58
 COMMENT=	Core components of the modular bulk build framework
 
 .include "../../pkgtools/pbulk/Makefile.common"
