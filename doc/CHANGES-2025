@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.344 2025/01/13 18:39:47 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.345 2025/01/13 18:40:57 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -442,3 +442,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/php-mongodb to 1.20.1 [taca 2025-01-13]
 	Updated x11/xtrlock to 2.16 [vins 2025-01-13]
 	Added devel/CLI11 version 2.4.2 [gdt 2025-01-13]
+	Updated geography/gdal-lib to 3.10.1 [gdt 2025-01-13]
