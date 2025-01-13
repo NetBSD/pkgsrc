@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25313 2025/01/13 14:32:09 ktnb Exp $
+$NetBSD: TODO,v 1.25314 2025/01/13 14:36:41 ktnb Exp $
 
 Suggested new packages
 ======================
@@ -559,7 +559,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ddd-3.4.1
 	o dega-1.12
 	o delegate-9.9.13
-	o desklaunch-1.1.7
 	o diction-1.14
 	o direvent-5.2
 	o distcc-pump-3.3.5
