@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 11:34:58 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/13 16:41:55 ktnb Exp $
 
-BLAKE2s (xtrace_1.3.1.orig.tar.gz) = b4dc7905aa7ca218a16eff77228024df808555c0d1da777c6afe4a39e7181b31
-SHA512 (xtrace_1.3.1.orig.tar.gz) = a05c2ba7ee5adf73d1dfb3fc6693456cf24347b136654efc6dd2a6a36fae130ee67f130ee3db693483e50f492b577cedf0dde7d4d64c3aea3d49be8f27d9f4f1
-Size (xtrace_1.3.1.orig.tar.gz) = 185308 bytes
-SHA1 (patch-Makefile.in) = 4a592285a74b19f9e8e747ca2c75d15c79a5e84e
+BLAKE2s (xtrace_1.4.0.orig.tar.xz) = a722c8497e38d7fe4d5bcaf34092a54df66de50492863c987d421f78efb43339
+SHA512 (xtrace_1.4.0.orig.tar.xz) = b3ff8fbeb2d12b3a431e144f3f7fd9abf6b2fb2e3fc872b428522bf8da81697e90b636b59f62eb7a43461848e4c8e32748c8ee54b88d63b01713cc990b421047
+Size (xtrace_1.4.0.orig.tar.xz) = 151268 bytes
+SHA1 (patch-Makefile.in) = a10dbea97b59dc1707b4265f6189ea91e00d6634

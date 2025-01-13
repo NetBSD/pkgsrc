@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/27 11:21:41 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/13 16:41:55 ktnb Exp $
 bin/xtrace
 man/man1/xtrace.1
 share/xtrace/all.proto
@@ -9,12 +9,14 @@ share/xtrace/damage.proto
 share/xtrace/dga.proto
 share/xtrace/dpms.proto
 share/xtrace/dri2.proto
+share/xtrace/dri3.proto
 share/xtrace/errors.proto
 share/xtrace/events.proto
 share/xtrace/fixes.proto
 share/xtrace/genericevents.proto
 share/xtrace/glx.proto
 share/xtrace/mitshm.proto
+share/xtrace/present.proto
 share/xtrace/randr.proto
 share/xtrace/render.proto
 share/xtrace/requests.proto
