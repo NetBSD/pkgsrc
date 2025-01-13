@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2024/10/04 12:52:57 wen Exp $
+# $NetBSD: Makefile,v 1.95 2025/01/13 17:24:36 taca Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 PKGREVISION=	1
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.3.0:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.3.0:../../converters/php-mbstring
+
+PHP_VERSION_ACCEPTED=	81 82 83
 
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
