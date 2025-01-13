@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.331 2025/01/13 06:36:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.332 2025/01/13 08:41:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -425,3 +425,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/qbittorrent to 5.0.3nb2 [wiz 2025-01-12]
 	Updated math/bc to 1.08.1 [ktnb 2025-01-13]
 	Updated devel/alex to 3.5.2.0 [wiz 2025-01-13]
+	Updated time/py-backports-datetime-fromisoformat to 2.0.3 [adam 2025-01-13]
+	Updated devel/py-poetry-plugin-export to 1.9.0 [adam 2025-01-13]
+	Updated security/py-OpenSSL to 25.0.0 [adam 2025-01-13]
