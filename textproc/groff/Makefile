@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2025/01/10 03:21:20 ktnb Exp $
+# $NetBSD: Makefile,v 1.101 2025/01/13 06:31:28 wiz Exp $
 
 DISTNAME=	groff-1.23.0
 CATEGORIES=	textproc
@@ -14,8 +14,6 @@ MAKE_JOBS_SAFE=		NO
 OVERRIDE_DIRDEPTH=	4
 
 DEPENDS+=		urw-fonts-[0-9]*:../../fonts/urw-fonts
-
-INSTALLATION_DIRS=	share/groff/site-tmac
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
@@ -77,6 +75,7 @@ SYMLINK_MANFILES=	chem.1 eqn.1 grn.1 indxbib.1 lookbib.1 neqn.1 nroff.1 \
 			pic.1 refer.1 soelim.1 tbl.1 troff.1
 
 INSTALLATION_DIRS=	${PKGGNUDIR}bin ${PKGGNUDIR}${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/groff/site-tmac
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mdoc.local \
