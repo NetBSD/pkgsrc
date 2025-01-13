@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.7 2023/06/09 12:05:14 riastradh Exp $
+$NetBSD: patch-Makefile,v 1.8 2025/01/13 14:24:43 adam Exp $
 
 Do not override compiler/linker flags.
 Provide proper path for Perl module.
@@ -6,9 +6,9 @@ New target for building Perl libraries.
 Do not install git-p4 (requires Python).
 Fix tar operations.
 
---- Makefile.orig	2023-06-01 07:03:05.000000000 +0000
+--- Makefile.orig	2025-01-10 17:43:46.000000000 +0000
 +++ Makefile
-@@ -612,7 +612,7 @@ mergetoolsdir = $(gitexecdir)/mergetools
+@@ -619,7 +619,7 @@ mergetoolsdir = $(gitexecdir)/mergetools
  sharedir = $(prefix)/share
  gitwebdir = $(sharedir)/gitweb
  gitwebstaticdir = $(gitwebdir)/static
@@ -17,7 +17,7 @@ Fix tar operations.
  localedir = $(sharedir)/locale
  template_dir = share/git-core/templates
  htmldir = $(prefix)/share/doc/git-doc
-@@ -633,13 +633,9 @@ perllibdir_relative = $(patsubst $(prefi
+@@ -640,13 +640,9 @@ perllibdir_relative = $(patsubst $(prefi
  export prefix bindir sharedir sysconfdir perllibdir localedir
  
  # Set our default programs
@@ -31,7 +31,7 @@ Fix tar operations.
  TCL_PATH = tclsh
  TCLTK_PATH = wish
  XGETTEXT = xgettext
-@@ -744,7 +740,6 @@ clean-python-script:
+@@ -754,7 +750,6 @@ clean-python-script:
  
  SCRIPTS = $(SCRIPT_SH_GEN) \
  	  $(SCRIPT_PERL_GEN) \
@@ -39,7 +39,7 @@ Fix tar operations.
  	  git-instaweb
  
  ETAGS_TARGET = TAGS
-@@ -2304,8 +2299,8 @@ ifdef DEFAULT_HELP_FORMAT
+@@ -2379,8 +2374,8 @@ ifdef DEFAULT_HELP_FORMAT
  BASIC_CFLAGS += -DDEFAULT_HELP_FORMAT='"$(DEFAULT_HELP_FORMAT)"'
  endif
  
@@ -50,15 +50,15 @@ Fix tar operations.
  
  export DIFF TAR INSTALL DESTDIR SHELL_PATH
  
-@@ -3018,6 +3013,7 @@ endif
+@@ -3079,6 +3074,7 @@ endif
  NO_PERL_CPAN_FALLBACKS_SQ = $(subst ','\'',$(NO_PERL_CPAN_FALLBACKS))
  endif
  
 +build-perl-libs: $(LIB_PERL_GEN) $(LIB_CPAN_GEN)
- perl/build/lib/%.pm: perl/%.pm GIT-PERL-DEFINES
+ perl/build/lib/%.pm: perl/%.pm generate-perl.sh GIT-BUILD-OPTIONS GIT-VERSION-FILE GIT-PERL-DEFINES
  	$(call mkdir_p_parent_template)
- 	$(QUIET_GEN) \
-@@ -3457,12 +3453,12 @@ endif
+ 	$(QUIET_GEN)$(SHELL_PATH) generate-perl.sh ./GIT-BUILD-OPTIONS ./GIT-VERSION-FILE GIT-PERL-HEADER "$<" "$@"
+@@ -3512,12 +3508,12 @@ endif
  ifndef NO_GETTEXT
  	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(localedir_SQ)'
  	(cd po/build/locale && $(TAR) cf - .) | \
@@ -73,7 +73,7 @@ Fix tar operations.
  endif
  ifndef NO_TCLTK
  	$(MAKE) -C gitk-git install
-@@ -3529,7 +3525,7 @@ install-man: install-man-perl
+@@ -3584,7 +3580,7 @@ install-man: install-man-perl
  install-man-perl: man-perl
  	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(mandir_SQ)/man3'
  	(cd perl/build/man/man3 && $(TAR) cf - .) | \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/06 12:40:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/13 14:24:44 adam Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -17,5 +17,9 @@ MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	XMLTO_EXTRA=--skip-validation
 
 INSTALL_TARGET=	install install-man
+
+pre-build:
+	cd ${WRKSRC}/Documentation && \
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} asciidoc.conf
 
 .include "../../mk/bsd.pkg.mk"
