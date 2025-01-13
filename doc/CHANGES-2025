@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.330 2025/01/13 02:23:00 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.331 2025/01/13 06:36:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/deskmenu to 1.4.5 [ktnb 2025-01-12]
 	Updated net/qbittorrent to 5.0.3nb2 [wiz 2025-01-12]
 	Updated math/bc to 1.08.1 [ktnb 2025-01-13]
+	Updated devel/alex to 3.5.2.0 [wiz 2025-01-13]
