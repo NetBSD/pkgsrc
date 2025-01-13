@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.4 2025/01/08 18:08:30 vins Exp $
+# $NetBSD: options.mk,v 1.5 2025/01/13 20:46:08 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
-PKG_OPTIONS_OPTIONAL_GROUPS=	server
+PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
 PKG_OPTIONS_GROUP.server=	wayland x11
+PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
-PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl \
-			osmesa pulseaudio python sqlite3 threads wayland x11 xfce4-wm
+PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl osmesa \
+			oss pulseaudio python sqlite3 threads wayland x11 xfce4-wm
 PKG_SUGGESTED_OPTIONS=	glib2 libdrm opencl osmesa x11
 
 CHECK_BUILTIN.pthread:= yes
@@ -19,7 +20,9 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .include "../../mk/bsd.prefs.mk"
 
 .if  ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
+PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio sqlite3
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=	oss sqlite3
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -119,6 +122,14 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OSMESA=OFF
 .  include "../../parallel/ocl-icd/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=  -DENABLE_OPENCL=OFF
+.endif
+
+##
+## OSS
+## Provides sound device detection.
+##
+.if !empty(PKG_OPTIONS:Mdbus)
+.  include ".include "../../mk/oss.buildlink3.mk"
 .endif
 
 ##
