@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.31 2025/01/11 18:08:00 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.32 2025/01/13 20:34:35 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -188,7 +188,7 @@ CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	lazycell-1.3.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.169
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
-CARGO_CRATE_DEPENDS+=	libz-ng-sys-1.1.20
+CARGO_CRATE_DEPENDS+=	libz-ng-sys-1.1.16
 CARGO_CRATE_DEPENDS+=	libz-sys-1.1.20
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
 CARGO_CRATE_DEPENDS+=	litemap-0.7.4

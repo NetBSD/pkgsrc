@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2025/01/11 18:08:00 pin Exp $
+$NetBSD: distinfo,v 1.35 2025/01/13 20:34:35 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -564,9 +564,9 @@ Size (libc-0.2.169.crate) = 757901 bytes
 BLAKE2s (libredox-0.1.3.crate) = ae27a63978ca8c5f11172bb4bb7d13fb10b078273ae2fa634873f413d2225055
 SHA512 (libredox-0.1.3.crate) = c62142fdca92388664eef83fc89b8607e2df318cbadff6edf9e3d927837853d5cfeb54445299a82054a0ca81853b0a33536966ab26f1f2e0fa43b39aaaf67c49
 Size (libredox-0.1.3.crate) = 6068 bytes
-BLAKE2s (libz-ng-sys-1.1.20.crate) = 6c9757b9a783de391ed12a350a8a9b8c395a6af491bea1a23e29da57cc29caed
-SHA512 (libz-ng-sys-1.1.20.crate) = 0872172be069a612b3c95c42a18f17b5e7d13b1ddd7e200321d2d330234a7546045b50a54a5b949c655981afab83868c2c1ef772a4a4e0d786f1e747d4f57bf8
-Size (libz-ng-sys-1.1.20.crate) = 485127 bytes
+BLAKE2s (libz-ng-sys-1.1.16.crate) = 40b002233935de58cd9b5d43f61aaa1443a6d570317db017e45335283948ea0e
+SHA512 (libz-ng-sys-1.1.16.crate) = c7d1b062a06b283ee2d398ff456f13634ed1d2d436ea2b8a55f19fbbad47bc419e068b0f9e805221321062b8c5ad309dd3e5d466741780549ae3e5299eee06e1
+Size (libz-ng-sys-1.1.16.crate) = 478122 bytes
 BLAKE2s (libz-sys-1.1.20.crate) = e2badde57256a3a40d48325fb3c72a87444e024a5204f94ef7f2fff3e5db5aa3
 SHA512 (libz-sys-1.1.20.crate) = 9b537e7c01553e782be145223c6d174601ade3a950bfd0eb4ea09658da5b8910cf0d0c5984672f9d198f73d5aa63d21e0c20c4c44ff7d0a017ee11ae4ecf4859
 Size (libz-sys-1.1.20.crate) = 830422 bytes
@@ -915,9 +915,9 @@ Size (smallvec-1.13.2.crate) = 35216 bytes
 BLAKE2s (stable_deref_trait-1.2.0.crate) = 4ccf524130eadac6b21106564de56e582d0f308b32442552d70bb9d313c53920
 SHA512 (stable_deref_trait-1.2.0.crate) = a13cfb22723f1f2cf089b2d07d657846f50c37bc0438d1a76096bea30214cad226b7a422c21f9e191ce87071da8a141d61882aedf9e0203a5fffdfda86a5fb03
 Size (stable_deref_trait-1.2.0.crate) = 8054 bytes
-BLAKE2s (starship-1.22.0.tar.gz) = 4fae74f64cfa4b2ffffd6126aa01af9a178921a085f5292fea148e157a2aff26
-SHA512 (starship-1.22.0.tar.gz) = df1a8f567bfcface6a12c6a415294b9b60a92f7a73e3befcb1cf405824a6c63a20f788d4827699bd65911bf15f80c0befc8ffb62848ab5c308e38f48617662d2
-Size (starship-1.22.0.tar.gz) = 9442656 bytes
+BLAKE2s (starship-1.22.1.tar.gz) = 4badbad15308c9b91bda4d2882238371b341f29470156b92d21b4a7023cf0873
+SHA512 (starship-1.22.1.tar.gz) = 97377922ae0b4e702ddf36534abc9b2fdfbfac50c5f0d4a483a06135f5efef6585abd1fd335ed28f9b0e43b5a0197b724ab1385d3adeef2c75046f5a29fe4ff6
+Size (starship-1.22.1.tar.gz) = 9444990 bytes
 BLAKE2s (starship-battery-0.10.0.crate) = 301cf520adcd81ccbbde04d54ba0a30361ff74c13ff39130b440e9e5fb9de724
 SHA512 (starship-battery-0.10.0.crate) = dd271d64afaa785f74bf530c93e50a01e907f6de39fede07101f2ccd013ca8d4ba4d67ea8b10014b3ba7fb5895a702ebc2a4bfdc55a3c0e425a32976d148bb1f
 Size (starship-battery-0.10.0.crate) = 46077 bytes
