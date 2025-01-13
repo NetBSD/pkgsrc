@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/06/06 10:48:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.52 2025/01/13 11:24:46 jperkin Exp $
 
 DISTNAME=	irssi-icb-0.17
 CATEGORIES=	chat
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mglocker/}
 GITHUB_TAG=	c4e2ea8939b5b75d1941ebe3335475482d218838
 DISTFILES=	${DISTNAME}-${GITHUB_TAG}.tar.gz
 
-MAINTAINER=	jperkin@pkgsrc.org
+MAINTAINER=	pkgsrc-users@pkgsrc.org
 HOMEPAGE=	http://www.irssi.org/
 COMMENT=	Irssi plugin to access ICB networks
 LICENSE=	gnu-gpl-v2

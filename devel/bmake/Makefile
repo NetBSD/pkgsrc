@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.82 2024/09/17 11:52:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2025/01/13 11:24:46 jperkin Exp $
 
 PKGNAME=	bmake-20240909
 CATEGORIES=	devel
 MASTER_SITES=	https://www.crufty.net/ftp/pub/sjg/
 
-MAINTAINER=	jperkin@pkgsrc.org
+MAINTAINER=	pkgsrc-users@pkgsrc.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	modified-bsd

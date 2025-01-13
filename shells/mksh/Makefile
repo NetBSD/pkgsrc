@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2023/05/04 10:15:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2025/01/13 11:24:46 jperkin Exp $
 
 DISTNAME=		mksh-R59b
 PKGNAME=		${DISTNAME:S/-R/-/}
@@ -7,7 +7,7 @@ CATEGORIES=		shells
 MASTER_SITES=		# maintained locally
 DISTFILES=		# empty
 
-MAINTAINER=		jperkin@pkgsrc.org
+MAINTAINER=		pkgsrc-users@pkgsrc.org
 HOMEPAGE=		http://mirbsd.de/mksh
 COMMENT=		MirBSD Korn Shell
 LICENSE=		miros
