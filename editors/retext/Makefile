@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/13 22:29:51 gutteridge Exp $
 
 DISTNAME=	ReText-8.0.2
 PKGNAME=	${DISTNAME:tl}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39  # py-markups
 
 USE_PKG_RESOURCES=	yes
 
