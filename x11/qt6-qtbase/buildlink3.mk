@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2024/12/26 22:20:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/01/13 16:56:25 riastradh Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -12,6 +12,15 @@ BUILDLINK_PKGSRCDIR.qt6-qtbase?=	../../x11/qt6-qtbase
 BUILDLINK_INCDIRS.qt6-qtbase+=	qt6/include
 BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/lib
 BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
+
+# XXX This is wrong -- we should get build-time executables via
+# TOOL_DEPENDS, not via buildlink3.  See
+# https://mail-index.netbsd.org/tech-pkg/2025/01/12/msg030374.html for
+# details.  We do this anyway for now as an expedient workaround for a
+# bug unearthed by hiding files in LOCALBASE from cmake and limiting it
+# to buildlink3.
+BUILDLINK_FILES.qt6-qtbase+=	qt6/bin/*
+BUILDLINK_FILES.qt6-qtbase+=	qt6/libexec/*
 
 # \todo Fix duplication with prefix coded in Makefile.common
 QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
