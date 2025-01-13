@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.128 2024/12/07 13:56:46 martin Exp $	*/
+/*	$NetBSD: perform.c,v 1.129 2025/01/13 11:16:19 martin Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.128 2024/12/07 13:56:46 martin Exp $");
+__RCSID("$NetBSD: perform.c,v 1.129 2025/01/13 11:16:19 martin Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -693,6 +693,7 @@ extract_files(struct pkg_task *pkg)
 	plist_t *p;
 	const char *last_file;
 	char *fullpath;
+	int workdir;
 
 	if (Fake)
 		return 0;
@@ -704,6 +705,15 @@ extract_files(struct pkg_task *pkg)
 
 	if (!NoRecord && !pkgdb_open(ReadWrite)) {
 		warn("Can't open pkgdb for writing");
+		return -1;
+	}
+
+#ifndef O_DIRECTORY
+#define	O_DIRECTORY	0
+#endif
+	workdir = open(".", O_RDONLY|O_CLOEXEC|O_DIRECTORY);
+	if (workdir == -1) {
+		warn("Can't open current working directory");
 		return -1;
 	}
 
@@ -832,6 +842,9 @@ out:
 	if (!NoRecord)
 		pkgdb_close();
 	archive_write_free(writer);
+
+	fchdir(workdir);
+	close(workdir);
 
 	return r;
 }
