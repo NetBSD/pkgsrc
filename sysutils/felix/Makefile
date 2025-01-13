@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2024/12/31 06:25:45 pin Exp $
+# $NetBSD: Makefile,v 1.65 2025/01/13 20:28:18 pin Exp $
 
-DISTNAME=	felix-2.15.0
+DISTNAME=	felix-2.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kyoheiu/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,9 +12,7 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.83.0
-#Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.83.0 on amd64
+RUST_REQ=	1.78.0
 
 INSTALLATION_DIRS=	share/examples/felix
 
