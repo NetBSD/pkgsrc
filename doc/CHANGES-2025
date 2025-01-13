@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.349 2025/01/13 19:48:52 vins Exp $
+$NetBSD: CHANGES-2025,v 1.350 2025/01/13 19:57:30 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -447,3 +447,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/hw-probe to 1.6.6 [vins 2025-01-13]
 	Updated devel/got to 0.107 [vins 2025-01-13]
 	Updated mail/mailutils to 3.18 [vins 2025-01-13]
+	Updated security/sudo to 1.9.16p2 [vins 2025-01-13]

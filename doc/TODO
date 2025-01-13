@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25315 2025/01/13 16:42:15 ktnb Exp $
+$NetBSD: TODO,v 1.25316 2025/01/13 19:57:30 vins Exp $
 
 Suggested new packages
 ======================
@@ -1235,7 +1235,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o strace-4.23
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
-	o sudo-1.9.16p2
 	o sup-0.4
 	o swapd-1.0.5
 	o swi-prolog-9.2.9
