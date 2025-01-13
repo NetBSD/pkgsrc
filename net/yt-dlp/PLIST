@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2024/11/18 08:36:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/01/13 09:52:06 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -762,6 +762,9 @@ ${PYSITELIB}/yt_dlp/extractor/dropbox.pyo
 ${PYSITELIB}/yt_dlp/extractor/dropout.py
 ${PYSITELIB}/yt_dlp/extractor/dropout.pyc
 ${PYSITELIB}/yt_dlp/extractor/dropout.pyo
+${PYSITELIB}/yt_dlp/extractor/drtalks.py
+${PYSITELIB}/yt_dlp/extractor/drtalks.pyc
+${PYSITELIB}/yt_dlp/extractor/drtalks.pyo
 ${PYSITELIB}/yt_dlp/extractor/drtuber.py
 ${PYSITELIB}/yt_dlp/extractor/drtuber.pyc
 ${PYSITELIB}/yt_dlp/extractor/drtuber.pyo
@@ -2004,6 +2007,9 @@ ${PYSITELIB}/yt_dlp/extractor/pluralsight.pyo
 ${PYSITELIB}/yt_dlp/extractor/plutotv.py
 ${PYSITELIB}/yt_dlp/extractor/plutotv.pyc
 ${PYSITELIB}/yt_dlp/extractor/plutotv.pyo
+${PYSITELIB}/yt_dlp/extractor/plvideo.py
+${PYSITELIB}/yt_dlp/extractor/plvideo.pyc
+${PYSITELIB}/yt_dlp/extractor/plvideo.pyo
 ${PYSITELIB}/yt_dlp/extractor/podbayfm.py
 ${PYSITELIB}/yt_dlp/extractor/podbayfm.pyc
 ${PYSITELIB}/yt_dlp/extractor/podbayfm.pyo
@@ -2919,9 +2925,6 @@ ${PYSITELIB}/yt_dlp/extractor/vimeo.pyo
 ${PYSITELIB}/yt_dlp/extractor/vimm.py
 ${PYSITELIB}/yt_dlp/extractor/vimm.pyc
 ${PYSITELIB}/yt_dlp/extractor/vimm.pyo
-${PYSITELIB}/yt_dlp/extractor/vine.py
-${PYSITELIB}/yt_dlp/extractor/vine.pyc
-${PYSITELIB}/yt_dlp/extractor/vine.pyo
 ${PYSITELIB}/yt_dlp/extractor/viously.py
 ${PYSITELIB}/yt_dlp/extractor/viously.pyc
 ${PYSITELIB}/yt_dlp/extractor/viously.pyo
