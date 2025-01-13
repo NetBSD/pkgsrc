@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2024/11/29 11:03:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.160 2025/01/13 06:37:56 riastradh Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -27,6 +27,52 @@ CONFIGURE_ENV+=		U_MAKE=${TOOLS_GMAKE}
 # Avoid Python; not really needed for build.
 # Fixes circular dependency on Python and Sqlite3 with ICU.
 CONFIGURE_ENV+=		ac_cv_prog_PYTHON=""
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
+
+CONFIGURE_ARGS+=	--with-cross-build=${ICU_CROSS_DIR}
+pre-configure: ${ICU_CROSS_COOKIE}
+
+ICU_CROSS_DIR=		${WRKDIR}/.icu_cross
+ICU_CROSS_COOKIE=	${ICU_CROSS_DIR}/.cookie
+ICU_CROSS_TOOLS=	\
+	${HOST_PKG_INFO} -qL ${PKGNAME} \
+	| ${GREP} -e '^'${TOOLBASE}/bin -e '^'${TOOLBASE}/sbin
+
+show-icu-cross-tools: .PHONY
+	@${ICU_CROSS_TOOLS}
+
+icu-cross-clean: .PHONY
+	${RUN}${RM} -f ${ICU_CROSS_COOKIE}
+icu-cross-tools: .PHONY ${ICU_CROSS_COOKIE}
+${ICU_CROSS_COOKIE}:
+	@${STEP_MSG} Faking ICU cross-build directory
+	${RUN}${TEST} -d ${ICU_CROSS_DIR} || ${MKDIR} ${ICU_CROSS_DIR}
+.  for d in bin config lib
+	${RUN}${TEST} -d ${ICU_CROSS_DIR}/${d} || \
+		${MKDIR} ${ICU_CROSS_DIR}/${d}
+.  endfor
+	${RUN}cd ${ICU_CROSS_DIR} && ${ICU_CROSS_TOOLS} \
+	| while read f; do \
+		${LN} -sfn "$$f" bin/; \
+	done
+	${RUN} {							\
+		${ECHO} CROSS_ICU_VERSION=${PKGREVISION_NOREV};		\
+		${ECHO} TOOLEXEEXT=;					\
+		${ECHO} TOOLBINDIR='$$(cross_buildroot)/bin';		\
+		${ECHO} TOOLLIBDIR='$$(cross_buildroot)/lib';		\
+		${ECHO} INVOKE=;					\
+		${ECHO} PKGDATA_INVOKE=;				\
+	} >${ICU_CROSS_DIR}/config/icucross.mk
+	${RUN}${ECHO} ${:UCURR_FULL_DIR?=$$(shell pwd | sed 's/ /\\ /g'):Q} \
+		>${ICU_CROSS_DIR}/config/icucross.inc
+	${RUN}${ECHO} > ${.TARGET}
+
+.endif
 
 # error: 'max_align_t' in namespace 'std' does not name a type
 GCC_REQD+=		4.9
