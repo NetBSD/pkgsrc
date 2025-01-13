@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2025/01/12 16:17:49 ktnb Exp $
+# $NetBSD: Makefile,v 1.51 2025/01/13 16:46:27 ktnb Exp $
 #
 
 VERSION=	1.4.5
 DISTNAME=	deskmenu_${VERSION}
 PKGNAME=	deskmenu-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://deb.debian.org/debian/pool/main/d/deskmenu/
+MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/deskmenu/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://web.archive.org/web/20191129172107/https://www.oroborus.org/
