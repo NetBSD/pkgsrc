@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2022/07/06 05:03:09 dbj Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/13 11:24:47 jperkin Exp $
 
 PKGNAME=		mktools-20220614
 CATEGORIES=		pkgtools sysutils
 
-MAINTAINER=		jperkin@pkgsrc.org
+MAINTAINER=		pkgsrc-users@pkgsrc.org
 HOMEPAGE=		https://www.NetBSD.org/
 COMMENT=		Collection of pkgsrc mk infrastructure tools
 LICENSE=		modified-bsd
