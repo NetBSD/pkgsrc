@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:29:12 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/13 08:35:58 adam Exp $
 
-DISTNAME=	backports_datetime_fromisoformat-2.0.2
+DISTNAME=	backports_datetime_fromisoformat-2.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports-datetime-fromisoformat/}
