@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2024/02/19 15:43:35 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/13 17:20:48 taca Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/zabbix50-server/Makefile.common"
@@ -9,6 +9,8 @@ COMMENT=	Zabbix PHP 7.4 frontend
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix50-server/distinfo
 
 CONFLICTS+=	zabbix-frontend-[0-9]*
+
+PHP_VERSIONS_ACCEPTED=	74
 
 EGDIR=		share/examples/${PKGBASE}
 
@@ -49,6 +51,5 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/httpd-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/php-fpm-zabbix.conf ${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../lang/php/json.mk"
-.include "../../mk/configure/replace-interpreter.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
