@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/30 06:56:19 ryoon Exp $
-libexec/cgi-bin/gitweb.cgi
-share/doc/gitweb/README
+@comment $NetBSD: PLIST,v 1.5 2025/01/13 14:24:44 adam Exp $
 share/examples/gitweb/gitweb.conf
-share/examples/gitweb/htdocs/git-favicon.png
-share/examples/gitweb/htdocs/git-logo.png
-share/examples/gitweb/htdocs/gitweb.css
-share/examples/gitweb/htdocs/gitweb.js
+share/gitweb/gitweb.cgi
+share/gitweb/static/git-favicon.png
+share/gitweb/static/git-logo.png
+share/gitweb/static/gitweb.css
+share/gitweb/static/gitweb.js

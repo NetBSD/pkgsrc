@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/12/27 11:15:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/13 14:24:44 adam Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
-PKGREVISION=	1
 COMMENT=	GIT Tree History Storage Tool (gitk)
 
 CONFLICTS+=	git-base<1.7.12nb1
