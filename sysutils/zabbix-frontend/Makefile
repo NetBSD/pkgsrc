@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2024/02/19 15:43:35 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/13 17:17:18 taca Exp $
 
 PKGREVISION= 3
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
 COMMENT=	Zabbix PHP frontend
+
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_TOOLS+=		pax
 NO_BUILD=		yes
