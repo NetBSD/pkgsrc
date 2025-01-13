@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/01/07 13:35:55 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/13 21:28:07 tnn Exp $
 
 DISTNAME=	binwalk-3.1.0
 CATEGORIES=	sysutils
@@ -12,8 +12,12 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.fontconfig}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.freetype2}/lib
+
 .include "cargo-depends.mk"
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/rust/cargo.mk"
 .include "../../mk/bsd.pkg.mk"
