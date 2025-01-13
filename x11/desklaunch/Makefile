@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2022/08/19 09:58:30 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/13 14:36:29 ktnb Exp $
 #
 
-VERSION=	1.1.5
+VERSION=	1.1.8
 DISTNAME=	desklaunch_${VERSION}
 PKGNAME=	desklaunch-${VERSION}
 CATEGORIES=	x11
-#MASTER_SITES=	https://www.oroborus.org/debian/dists/sid/main/source/x11/
+MASTER_SITES=	http://deb.debian.org/debian/pool/main/d/desklaunch/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://web.archive.org/web/20191129172107/https://www.oroborus.org/
