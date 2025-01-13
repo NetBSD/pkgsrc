@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.10 2020/01/08 15:12:01 joerg Exp $
+# $NetBSD: scan,v 1.11 2025/01/13 11:03:03 wiz Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -47,6 +47,10 @@ else
 	extra_pscan_args=""
 fi
 
+if [ -n "${ignore_missing_dependencies}" ]; then
+	echo "The 'ignore_missing_dependencies' configuration variable is obsolete and has no effect." >&2
+fi
+
 if [ -z "${limited_list}" ]; then
 	echo "Scanning..."
 	case "${master_mode}" in
@@ -62,20 +66,7 @@ if [ -z "${limited_list}" ]; then
 		;;
 	esac
 	echo "Resolving..."
-	if ! ${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve-err.log; then
-		echo "Global dependency resolution failed, check ${loc}/presolve-err.log for details" >&2
-		case "${ignore_missing_dependencies}" in
-		[nN][oO])
-			exit 1
-			;;
-		[yY][eE][sS])
-			${presolve} -p -v ${loc}/pscan > ${loc}/presolve 2> /dev/null
-			;;
-		*)
-			echo "Unsupported value for ignore_missing_dependencies."
-			;;
-		esac
-	fi
+	${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve-err.log
 else
 	initial=1
 	mkdir -p ${loc}
@@ -108,9 +99,10 @@ else
 	done
 
 	if [ -s ${loc}/missing ]; then
-		echo "Unresolvable dependencies found, exiting:"
+		echo "Unresolvable dependencies found, marking packages depending on them as broken:"
 		cat ${loc}/missing
-		exit 1
+		${presolve} -v ${loc}/presolve ${loc}/pscan > ${loc}/presolve.new
+		mv ${loc}/presolve.new ${loc}/presolve
 	fi
 fi
 date '+SCAN_END_EPOCHE=%s' >> ${loc}/status

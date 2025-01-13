@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.4 2008/09/16 18:21:30 joerg Exp $ */
+/* $NetBSD: presolve.c,v 1.5 2025/01/13 11:03:03 wiz Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,13 +46,13 @@
 
 #include "pbulk.h"
 
-static int partial, verbosity;
+static int verbosity;
 static FILE *incremental = NULL;
 
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "usage: pbulk-resolve [ -pv ] [ -i <missing> ] <pscan output> [ ... ]\n");
+	(void)fprintf(stderr, "usage: pbulk-resolve [-v] [-i missing] <pscan output> [ ... ]\n");
 	exit(1);
 }
 
@@ -63,7 +63,7 @@ struct pkg_entry {
 	char *depends;
 	char *pkglocation;
 	int active;
-	int broken; /* Entry has missing dependencies */
+	char *broken; /* Entry has missing dependencies */
 	const char *begin;
 	const char *end;
 	SLIST_ENTRY(pkg_entry) hash_link;
@@ -95,9 +95,6 @@ main(int argc, char **argv)
 			if ((incremental = fopen(optarg, "w")) == NULL)
 				err(1, "Cannot open output file");
 			break;
-		case 'p':
-			++partial;
-			break;
 		case 'v':
 			++verbosity;
 			break;
@@ -109,10 +106,7 @@ main(int argc, char **argv)
 	argc -= optind;
 	argv += optind;
 
-	if (argc == 0 || (incremental == NULL && argc > 1))
-		usage();
-
-	if (partial && incremental != NULL)
+	if (argc == 0)
 		usage();
 
 	read_entries(argv[0], 1);
@@ -286,6 +280,10 @@ resolve_entry(struct pkg_entry *pkg)
 
 		if (best_match == NULL) {
 			ret = 1;
+			if (incremental == NULL && pkg->broken == NULL) {
+				/* only keep first broken dependency */
+				pkg->broken = xstrndup(pattern_begin, pattern_end - pattern_begin);
+			}
 			continue;
 		}
 
@@ -308,10 +306,6 @@ resolve_entry(struct pkg_entry *pkg)
 	if (ret == 1) {
 		free(pkg->depends);
 		pkg->depends = NULL;
-		if (incremental != NULL || partial)
-			return 0;
-		else
-			return 1;
 	}
 	return 0;
 }
@@ -376,6 +370,7 @@ read_entries(const char *input_file, int def_active)
 		pkgs[len_pkgs].begin = input_iter;
 		pkgs[len_pkgs].end = pbulk_item_end(input_iter);
 		pkgs[len_pkgs].depends = NULL;
+		pkgs[len_pkgs].broken = NULL;
 		if (pkgs[len_pkgs].end == NULL)
 			errx(1, "Invalid input");
 		input_iter = pkgs[len_pkgs].end;
@@ -397,15 +392,35 @@ read_entries(const char *input_file, int def_active)
 		errx(1, "Invalid input");
 }
 
+#define PKG_FAIL_REASON "PKG_FAIL_REASON="
 static void
 write_entries(void)
 {
 	size_t i;
+	const char *line, *line_end;
 
 	for (i = 0; i < len_pkgs; ++i) {
 		if (pkgs[i].active == 0)
 			continue;
-		(void)fwrite(pkgs[i].begin, 1, pkgs[i].end - pkgs[i].begin, stdout);
+		/* if package is ok, just print existing entry */
+		if (pkgs[i].broken == NULL) {
+			(void)fwrite(pkgs[i].begin, 1, pkgs[i].end - pkgs[i].begin, stdout);
+		} else {
+			/* otherwise, replace PKG_FAIL_REASON line with reason for brokenness */
+			line = strstr(pkgs[i].begin, PKG_FAIL_REASON);
+			if (line == NULL) {
+				(void)fwrite(pkgs[i].begin, 1, pkgs[i].end -
+					     pkgs[i].begin, stdout); continue;
+			}
+			(void)fwrite(pkgs[i].begin, 1, line - pkgs[i].begin,
+			    stdout);
+			line_end = strchr(line, '\n');
+			(void)printf(PKG_FAIL_REASON
+			    "\"could not resolve dependency \"%s\"\"\n",
+				     pkgs[i].broken);
+			(void)fwrite(line_end + 1,
+				     1, pkgs[i].end - (line_end + 1), stdout);
+		}
 		if (pkgs[i].depends != NULL)
 			(void)printf("DEPENDS=%s\n", pkgs[i].depends);
 	}
