@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.339 2025/01/13 14:36:41 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.340 2025/01/13 16:42:15 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -438,3 +438,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dirty-equals to 0.9.0 [adam 2025-01-13]
 	Updated math/bc-gh to 7.0.3 [ktnb 2025-01-13]
 	Updated x11/desklaunch to 1.1.8 [ktnb 2025-01-13]
+	Updated x11/xtrace to 1.4.0 [ktnb 2025-01-13]
