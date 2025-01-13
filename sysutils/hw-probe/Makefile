@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2024/11/14 22:21:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/13 19:20:34 vins Exp $
 
-PKGVER=		1.6.5_20230812
-DISTNAME=	hw-probe-${PKGVER}
-PKGREVISION=	8
+DISTNAME=	hw-probe-1.6.6
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=linuxhw/}
-GITHUB_TAG=	b895b77b7e03f4b1b0a5fb177118373ee0328a25
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://bsd-hardware.info/
@@ -19,8 +17,15 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-* Linux-*-*
 USE_TOOLS+=	perl:run
 
 DEPENDS+=	usbutil-[0-9]*:../../sysutils/usbutil
-DEPENDS+=	mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
 DEPENDS+=	smartmontools-[0-9]*:../../sysutils/smartmontools
+
+CHECK_BUILTIN.openssl:= yes
+.include "../../security/openssl/buildlink3.mk"
+CHECK_BUILTIN.openssl:= no
+.if ${USE_BUILTIN.openssl:U:tl} != yes
+DEPENDS+=
+mozilla-rootcerts-[0-9]*:../../security/mozilla-rootcerts
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,11 +34,21 @@ DEPENDS+=	dmidecode-[0-9]*:../../sysutils/dmidecode
 .endif
 
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64")
-.  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
-DEPENDS+=	cpuid-[0-9]*:../../sysutils/cpuid
-.  else
+.  if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 DEPENDS+=	lscpu-[0-9]*:../../sysutils/lscpu
+.  else
+DEPENDS+=	cpuid-[0-9]*:../../sysutils/cpuid
 .  endif
+.endif
+
+.if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
+SUBST_CLASSES+=		fetch
+SUBST_STAGE.fetch=	pre-configure
+SUBST_MESSAGE.fetch=	Using bsdfetch on *BSD.
+SUBST_FILES.fetch=	hw-probe.pl
+SUBST_SED.fetch+=	-e 's|neofetch|bsdfetch|g'
+
+DEPENDS+=	bsdfetch-[0-9]*:../../sysutils/bsdfetch
 .endif
 
 DOCDIR=		share/doc/${PKGBASE}
