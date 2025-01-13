@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2023/08/02 16:17:20 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/13 18:36:15 vins Exp $
 
-DISTNAME=	xtrlock-2.15
-PKGREVISION=	1
+DISTNAME=	xtrlock-2.16
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/x/xtrlock/}
 EXTRACT_SUFX=	.tar.xz
-DISTFILES=	xtrlock_2.15.tar.xz
+DISTFILES=	${DEFAULT_DISTFILES:S/-/_/}
 
 MAINTAINER=	vins@NetBSD.org
 COMMENT=	Simple X11 screen lock tool
