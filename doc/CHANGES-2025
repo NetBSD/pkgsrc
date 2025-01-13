@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.347 2025/01/13 19:23:04 vins Exp $
+$NetBSD: CHANGES-2025,v 1.348 2025/01/13 19:37:35 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/gdal-lib to 3.10.1 [gdt 2025-01-13]
 	Updated geography/py-gdal to 3.10.1 [gdt 2025-01-13]
 	Updated sysutils/hw-probe to 1.6.6 [vins 2025-01-13]
+	Updated devel/got to 0.107 [vins 2025-01-13]
