@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4387 2025/01/09 23:01:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4388 2025/01/13 18:37:07 gdt Exp $
 #
 
 COMMENT=	Development utilities
 
+SUBDIR+=	CLI11
 SUBDIR+=	ETL
 SUBDIR+=	GConf
 SUBDIR+=	GConf-ui
