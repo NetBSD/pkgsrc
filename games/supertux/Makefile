@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2024/12/29 15:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.59 2025/01/13 23:21:41 wiz Exp $
 
 PKGNAME=		supertux-0.6.3
 PKGREVISION=		14
@@ -12,9 +12,9 @@ HOMEPAGE=		https://www.supertux.org/
 COMMENT=		2D jump and run game in the style of the Super Mario ones
 LICENSE=		gnu-gpl-v2
 
-USE_CMAKE=		yes
-CMAKE_CONFIGURE_ARGS+=		-DINSTALL_SUBDIR_BIN=bin
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_SHARED_LIBS=off
+CMAKE_CONFIGURE_ARGS+=	-DINSTALL_SUBDIR_BIN=bin
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=off
+CMAKE_CONFIGURE_ARGS+=	-DBoost_INCLUDE_DIR=${BUILDLINK_DIR}/include/boost
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++14
 
@@ -23,8 +23,10 @@ USE_CXX_FEATURES+=	c++14
 # We already patch 'configure'...
 CHECK_PORTABILITY_SKIP+=	external/SDL_ttf/configure.in
 
+.include "../../devel/cmake/build.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
