@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2024/05/12 08:37:05 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/13 20:35:58 pin Exp $
 
-DISTNAME=	Stitchy-0.1.7
+DISTNAME=	Stitchy-0.1.8
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=grimace87/}
 GITHUB_PROJECT=	Stitchy
-GITHUB_TAG=	a9fd5f00817af20f1381cf0649a5b228b0208338
+GITHUB_TAG=	ddf5651b3acf833fa76e51f04c0140e66b917231
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/grimace87/Stitchy/
