@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.116 2025/01/05 18:13:19 osa Exp $
+$NetBSD: distinfo,v 1.117 2025/01/14 17:36:28 osa Exp $
 
 BLAKE2s (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = 6c3880dc781886fb1f4190fa9b8f1459246cc5d157aaed3b9a24cc7abaf7c5a1
 SHA512 (1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch) = b780bea19736f5db844f11b0b407c159cc6ba7326b50177cefde6f8ee875238d3618e50d29b132a66fe98103cb5656f33895e5989d98d4cdc26cfeaa7f12865f
@@ -24,9 +24,9 @@ Size (lua-nginx-module-0.10.27.tar.gz) = 758952 bytes
 BLAKE2s (naxsi-1.6-src-with-deps.tar.gz) = 77344405cc235d38328223d325194eee58d0124271a9fcd785de3477a8db52ce
 SHA512 (naxsi-1.6-src-with-deps.tar.gz) = c41e1a51b5642af1cb640b15e9415e073692d7a3baf4d3fceae260cdf9af2a976b3090b40756ce10e162bec6efc9fbc7306569e173bfbe4aab4ac7bcbdd8a075
 Size (naxsi-1.6-src-with-deps.tar.gz) = 3352718 bytes
-BLAKE2s (nchan-1.3.6.tar.gz) = 1409be69d5589d3643a7cb1f3dd1e4bc8d58c4be801234d52738090c04469255
-SHA512 (nchan-1.3.6.tar.gz) = 0f1c25d460dcf4e3407a1ef4bfcefe17eba7b0ff250f267e5bde0eb4298e9596c1e6992fc58fe35d8420888065353bf3883a1f1bbc5e607a00128992eb1ee6d2
-Size (nchan-1.3.6.tar.gz) = 761436 bytes
+BLAKE2s (nchan-1.3.7.tar.gz) = 27da0a52c9123186a321a01b02cb004eed0623110aafa6737dd43ceeff766010
+SHA512 (nchan-1.3.7.tar.gz) = 585c6f9107b84354e7f6c587f85cf554dd5c213b1e3baa75e0aee0b28520afb9cffff1812c32e81541a1f25773fc58d1b92ce6bd9d85accc12f37841633eb79b
+Size (nchan-1.3.7.tar.gz) = 665133 bytes
 BLAKE2s (nginx-1.27.3.tar.gz) = ce5c314c3acc202e57f8fad321651e80f5a6f6024f645a55c86ae339d1ebe81b
 SHA512 (nginx-1.27.3.tar.gz) = 5536d41ead0da71b6593cb361fd3da79707362919e6b6e71ec64816b5c2205903af0cd151796c942b32dfca0f8e8e3ffd9dcb3acf993144342ca671330b1a0dc
 Size (nginx-1.27.3.tar.gz) = 1271526 bytes
