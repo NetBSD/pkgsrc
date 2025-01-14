@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/14 09:35:09 wiz Exp $
 
 DISTNAME=	fritz_exporter-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pdreker/}
 # latest pypi distfile is older
@@ -13,7 +14,7 @@ HOMEPAGE=	https://github.com/pdreker/fritz_exporter/
 COMMENT=	Prometheus exporter for Fritz!Box home routers
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core-[0-9]*:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-attrs-[0-9]*:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-fritzconnection-[0-9]*:../../net/py-fritzconnection
 DEPENDS+=	${PYPKGPREFIX}-prometheus_client-[0-9]*:../../net/py-prometheus_client
