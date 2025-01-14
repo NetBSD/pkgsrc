@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/05/24 15:15:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/14 08:40:57 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -476,12 +476,18 @@ ${PYSITELIB}/libcst/codemod/commands/convert_percent_format_to_fstring.pyo
 ${PYSITELIB}/libcst/codemod/commands/convert_type_comments.py
 ${PYSITELIB}/libcst/codemod/commands/convert_type_comments.pyc
 ${PYSITELIB}/libcst/codemod/commands/convert_type_comments.pyo
+${PYSITELIB}/libcst/codemod/commands/convert_union_to_or.py
+${PYSITELIB}/libcst/codemod/commands/convert_union_to_or.pyc
+${PYSITELIB}/libcst/codemod/commands/convert_union_to_or.pyo
 ${PYSITELIB}/libcst/codemod/commands/ensure_import_present.py
 ${PYSITELIB}/libcst/codemod/commands/ensure_import_present.pyc
 ${PYSITELIB}/libcst/codemod/commands/ensure_import_present.pyo
 ${PYSITELIB}/libcst/codemod/commands/fix_pyre_directives.py
 ${PYSITELIB}/libcst/codemod/commands/fix_pyre_directives.pyc
 ${PYSITELIB}/libcst/codemod/commands/fix_pyre_directives.pyo
+${PYSITELIB}/libcst/codemod/commands/fix_variadic_callable.py
+${PYSITELIB}/libcst/codemod/commands/fix_variadic_callable.pyc
+${PYSITELIB}/libcst/codemod/commands/fix_variadic_callable.pyo
 ${PYSITELIB}/libcst/codemod/commands/noop.py
 ${PYSITELIB}/libcst/codemod/commands/noop.pyc
 ${PYSITELIB}/libcst/codemod/commands/noop.pyo
@@ -494,6 +500,9 @@ ${PYSITELIB}/libcst/codemod/commands/remove_unused_imports.pyo
 ${PYSITELIB}/libcst/codemod/commands/rename.py
 ${PYSITELIB}/libcst/codemod/commands/rename.pyc
 ${PYSITELIB}/libcst/codemod/commands/rename.pyo
+${PYSITELIB}/libcst/codemod/commands/rename_typing_generic_aliases.py
+${PYSITELIB}/libcst/codemod/commands/rename_typing_generic_aliases.pyc
+${PYSITELIB}/libcst/codemod/commands/rename_typing_generic_aliases.pyo
 ${PYSITELIB}/libcst/codemod/commands/strip_strings_from_types.py
 ${PYSITELIB}/libcst/codemod/commands/strip_strings_from_types.pyc
 ${PYSITELIB}/libcst/codemod/commands/strip_strings_from_types.pyo
@@ -518,12 +527,18 @@ ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_percent_format_to_fstrin
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_type_comments.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_type_comments.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_convert_type_comments.pyo
+${PYSITELIB}/libcst/codemod/commands/tests/test_convert_union_to_or.py
+${PYSITELIB}/libcst/codemod/commands/tests/test_convert_union_to_or.pyc
+${PYSITELIB}/libcst/codemod/commands/tests/test_convert_union_to_or.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_ensure_import_present.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_ensure_import_present.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_ensure_import_present.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_fix_pyre_directives.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_fix_pyre_directives.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_fix_pyre_directives.pyo
+${PYSITELIB}/libcst/codemod/commands/tests/test_fix_variadic_callable.py
+${PYSITELIB}/libcst/codemod/commands/tests/test_fix_variadic_callable.pyc
+${PYSITELIB}/libcst/codemod/commands/tests/test_fix_variadic_callable.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_noop.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_noop.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_noop.pyo
@@ -536,6 +551,9 @@ ${PYSITELIB}/libcst/codemod/commands/tests/test_remove_unused_imports.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_rename.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_rename.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_rename.pyo
+${PYSITELIB}/libcst/codemod/commands/tests/test_rename_typing_generic_aliases.py
+${PYSITELIB}/libcst/codemod/commands/tests/test_rename_typing_generic_aliases.pyc
+${PYSITELIB}/libcst/codemod/commands/tests/test_rename_typing_generic_aliases.pyo
 ${PYSITELIB}/libcst/codemod/commands/tests/test_strip_strings_from_types.py
 ${PYSITELIB}/libcst/codemod/commands/tests/test_strip_strings_from_types.pyc
 ${PYSITELIB}/libcst/codemod/commands/tests/test_strip_strings_from_types.pyo
