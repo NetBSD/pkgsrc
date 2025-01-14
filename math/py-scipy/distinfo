@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2025/01/14 08:10:40 adam Exp $
+$NetBSD: distinfo,v 1.58 2025/01/14 18:18:06 gdt Exp $
 
 BLAKE2s (scipy-1.15.1.tar.gz) = 5ec6b4743ca6bfab9c01acb2ac0a6eef61688904c3af6b18c85395c6a82bf705
 SHA512 (scipy-1.15.1.tar.gz) = 92cb6a2cdb5a305eef0aa81baea4b90c14c0084c09ffbf62f2d6ee8dd5a08791a838838e2d4907356b5b07d0b4f74a81a8e861f81628bd9e5c7e0216e3f77b17
@@ -9,6 +9,7 @@ SHA1 (patch-scipy_spatial_ckdtree_src_ckdtree__decl.h) = f05aa0f0ebbf49f119b17ce
 SHA1 (patch-scipy_special_Faddeeva.hh) = 9f6c0bb808fc9be0a1c1b7e65395d29f13821233
 SHA1 (patch-scipy_special_boost__special__functions.h) = 9a345a5e81c090d16c6394e641624c504efbf4ea
 SHA1 (patch-scipy_special_meson.build) = db22da79b31a0fb8dbdac96f398463f4d24adfe0
+SHA1 (patch-scipy_special_stirling2.h) = 0aee0ba3de639f7bb87ecb6ae5bf9bd6d583d2b0
 SHA1 (patch-scipy_special_wright.hh) = 56d65f9ed4bec96f0b927bbe42edd30fc6546454
 SHA1 (patch-scipy_special_xsf_amos_amos.h) = 4d757b98ab6c98bac2d6e3b6f01f4ad5d02c2afb
 SHA1 (patch-scipy_special_xsf_specfun_specfun.h) = 67fa2ad7980bb836a0d490a8bc7891b535c9bf35
