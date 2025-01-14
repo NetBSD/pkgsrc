@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.382 2025/01/14 16:47:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.383 2025/01/14 16:52:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -495,3 +495,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake-gui to 3.31.4 [adam 2025-01-14]
 	Updated devel/py-autopep8 to 2.3.2 [adam 2025-01-14]
 	Updated net/py-smbc to 1.0.25.1 [adam 2025-01-14]
+	Updated math/py-pywavelets to 1.8.0 [adam 2025-01-14]
+	Updated math/py-patsy to 1.0.1 [adam 2025-01-14]
+	Updated textproc/py-relatorio to 0.11.1 [adam 2025-01-14]
