@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2024/07/11 19:53:39 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2025/01/14 14:13:30 sborrill Exp $
 
 DISTNAME=		apcupsd-3.14.14
 PKGREVISION=		6
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
 LICENSE=		gnu-gpl-v2
 
-USE_TOOLS+=		gmake msgfmt sh makedepend
+USE_TOOLS+=		gmake msgfmt sh
 USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
