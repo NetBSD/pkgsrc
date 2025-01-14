@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.363 2025/01/14 06:45:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.364 2025/01/14 08:15:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -464,3 +464,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-license-expression to 30.4.1 [adam 2025-01-14]
 	Updated security/py-nvdlib to 0.7.9 [adam 2025-01-14]
 	Updated devel/py-hypothesis to 6.123.17 [adam 2025-01-14]
+	Updated math/py-scipy to 1.15.1 [adam 2025-01-14]
+	Updated www/py-django-debug-toolbar to 5.0.1 [adam 2025-01-14]
