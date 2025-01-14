@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2025/01/08 02:36:37 ktnb Exp $
+$NetBSD: distinfo,v 1.11 2025/01/14 20:42:55 ktnb Exp $
 
-BLAKE2s (sigscheme-0.9.1.tar.gz) = 5a72cffd9d847fd9c99e8fbdd6e31b2cc1bbcdc300ed4063830ed097bc7159c5
-SHA512 (sigscheme-0.9.1.tar.gz) = 9340ab608a8f34a8367b3590c9890369e2d1b5aed2ad9ad6e6b701d6208626c9e65d6f49bc11289e3c8f229aa00e1b5583719048b94857d98c57b8dfd7399a66
-Size (sigscheme-0.9.1.tar.gz) = 570686 bytes
+BLAKE2s (sigscheme-0.9.1.tar.gz) = 76425ed35165fcc594ff1df1bb9443ff165c25b6b62cebc554ee4b9ba1b114af
+SHA512 (sigscheme-0.9.1.tar.gz) = 4454299f21f6ed831681782411b0ec7e0cd47cc192774bde75471aa62e1ec7937f98c33a5754279dcf71d3dfd30aa3f6620393ea35d96490293a656b117e05db
+Size (sigscheme-0.9.1.tar.gz) = 1476166 bytes
 SHA1 (patch-configure.ac) = 9349387423c110aa1211c2f0165c3ea6a5a80a74
