@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.291 2024/12/28 03:18:27 gutteridge Exp $
+# $NetBSD: mozilla-common.mk,v 1.292 2025/01/14 13:36:15 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -40,6 +40,20 @@ TOOL_DEPENDS+=		nasm>=2.14:../../devel/nasm
 TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 CFLAGS+=		-msse2
 .endif
+
+CKSUM_CRATES+=	third_party/rust/quinn-udp
+
+CKSUMS+=	b8e595499055115d15bfb95259c0c585934adf55f61e365bcc9fc47ab8fa9cdd
+CKSUMS+=	7be04be65b1606fd2560d572ba5a6238a645075555085d5e9cef15d10b0b8024
+
+SUBST_CLASSES+=		cksum
+SUBST_STAGE.cksum=	pre-configure
+.for crate in ${CKSUM_CRATES}
+SUBST_FILES.cksum+=	${crate}/.cargo-checksum.json
+.endfor
+.for from to in ${CKSUMS}
+SUBST_SED.cksum+=	-e 's,${from},${to},g'
+.endfor
 
 # This is to work around build failures where an upstream configuration script
 # is confused by having more than one approximate match to MACHINE_GNU_PLATFORM
