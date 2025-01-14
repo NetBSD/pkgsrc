@@ -1,25 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2024/10/14 06:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/14 17:19:21 adam Exp $
 
-DISTNAME=	nltk-3.8.1
+DISTNAME=	nltk-3.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nltk/}
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.nltk.org/
 COMMENT=	Natural Language Toolkit (NLTK)
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-click-[0-9]*:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-joblib-[0-9]*:../../devel/py-joblib
-DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-regex>=2021.8.3:../../textproc/py-regex
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
-TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	nltk_data-averaged_perceptron_tagger-[0-9]*:../../textproc/nltk_data-averaged_perceptron_tagger
 TEST_DEPENDS+=	nltk_data-averaged_perceptron_tagger_ru-[0-9]*:../../textproc/nltk_data-averaged_perceptron_tagger_ru
@@ -53,8 +50,6 @@ TEST_DEPENDS+=	nltk_data-words-[0-9]*:../../textproc/nltk_data-words
 
 REPLACE_PYTHON=		nltk/corpus/reader/knbc.py
 
-USE_PKG_RESOURCES=	yes
-
 post-extract:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} g-w,o-w {} +
 
@@ -62,10 +57,7 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} nltk nltk-${PYVERSSUFFIX} || ${TRUE}
 
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
-
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

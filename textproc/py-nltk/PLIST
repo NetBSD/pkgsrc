@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2022/12/15 23:15:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/14 17:19:21 adam Exp $
 bin/nltk-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.md
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/README.md
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/nltk/VERSION
 ${PYSITELIB}/nltk/__init__.py
 ${PYSITELIB}/nltk/__init__.pyc
@@ -644,6 +645,9 @@ ${PYSITELIB}/nltk/stem/util.pyo
 ${PYSITELIB}/nltk/stem/wordnet.py
 ${PYSITELIB}/nltk/stem/wordnet.pyc
 ${PYSITELIB}/nltk/stem/wordnet.pyo
+${PYSITELIB}/nltk/tabdata.py
+${PYSITELIB}/nltk/tabdata.pyc
+${PYSITELIB}/nltk/tabdata.pyo
 ${PYSITELIB}/nltk/tag/__init__.py
 ${PYSITELIB}/nltk/tag/__init__.pyc
 ${PYSITELIB}/nltk/tag/__init__.pyo
