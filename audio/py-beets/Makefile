@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2025/01/02 10:21:02 adam Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/14 09:15:24 wiz Exp $
 
 DISTNAME=	beets-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/beets/}
 
@@ -10,7 +11,8 @@ HOMEPAGE=	https://beets.io/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+# https://github.com/beetbox/beets/issues/5596
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=1.3.6:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-confuse>=1.5.0:../../devel/py-confuse
 DEPENDS+=	${PYPKGPREFIX}-jellyfish-[0-9]*:../../textproc/py-jellyfish
