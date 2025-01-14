@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/08/20 14:22:42 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/01/14 16:49:13 adam Exp $
 
-BLAKE2s (pywavelets-1.7.0.tar.gz) = 269b05a55016e38b2f354f38b4c2e0d2a50d187609ada823e2a542d071a73ae8
-SHA512 (pywavelets-1.7.0.tar.gz) = 5e6838f3f992710d8c2eb1d06df4dd07c10d2b6f53fce2226d668b791aabec1f33eee1fae906eeda2cd53695cb3f6e22269b9051ae8f93605710a4e10aa3a39a
-Size (pywavelets-1.7.0.tar.gz) = 3934767 bytes
+BLAKE2s (pywavelets-1.8.0.tar.gz) = 56b61ca3750c6a397b6407fd6252b7880ac0c8444773185be9ed33491b7c8235
+SHA512 (pywavelets-1.8.0.tar.gz) = ef6cce59b16473f147dc85ad07cc225670b84b7d90ed251de2084ab10a1661d5fb2a4fd7d634a11299f6924c0fb8278fc5f70154e6011bdad0247ffdf0c8c4c2
+Size (pywavelets-1.8.0.tar.gz) = 3935274 bytes
