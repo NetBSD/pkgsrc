@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/04/03 00:55:28 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/14 18:50:15 ktnb Exp $
 
 DISTNAME=	mle-1.7.2
 CATEGORIES=	editors
@@ -9,6 +9,10 @@ MAINTAINER=	ktnb@NetBSD.org
 HOMEPAGE=	https://github.com/adsr/mle/
 COMMENT=	Termbox-based text editor
 LICENSE=	apache-2.0
+
+# termbox doesn't compile on these systems
+BROKEN_ON_PLATFORM=	SmartOS-*-*
+BROKEN_ON_PLATFORM+=	OpenBSD-*-*
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
