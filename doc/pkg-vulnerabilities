@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.292 2025/01/12 01:01:55 morr Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.293 2025/01/14 13:26:59 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -20715,10 +20715,10 @@ apache-tomcat>=9.0<9.0.43	sensitive-information-disclosure	https://nvd.nist.gov/
 apache-tomcat>=7.0<7.0.108	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25329
 apache-tomcat>=8.5<8.5.63	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25329
 apache-tomcat>=9.0<9.0.43	remote-command-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-25329
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-28601
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-28636
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35628
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35636
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-28601
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-28636
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35628
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35636
 dropbear<2020.79	validation-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-36254
 grub2<2.06	input-validation		https://nvd.nist.gov/vuln/detail/CVE-2020-14372
 grub2<2.06	use-after-free			https://nvd.nist.gov/vuln/detail/CVE-2020-25632
@@ -21974,9 +21974,9 @@ fetchmail<6.4.22	side-channel	https://nvd.nist.gov/vuln/detail/CVE-2021-39272
 tor>=0.4.6<0.4.6.7	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-38385
 tor<0.4.5.10	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-38385
 mc<4.8.27	verification-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-36370
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35634
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35633
-cgal-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35635
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35634
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35633
+cgal<5.1.3	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2020-35635
 git-base<2.30.1	input-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-40330
 mosquitto-[0-9]*	security-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-34434
 matrix-synapse<1.41.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-39164
