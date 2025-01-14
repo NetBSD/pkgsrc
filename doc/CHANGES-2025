@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.375 2025/01/14 11:59:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.376 2025/01/14 12:59:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -483,3 +483,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-typogrify to 2.1.0 [adam 2025-01-14]
 	Updated devel/py-pathable to 0.4.4 [adam 2025-01-14]
 	Updated www/py-whitenoise to 6.8.2 [adam 2025-01-14]
+	Updated x11/gtk4 to 4.16.12 [adam 2025-01-14]
+	Updated www/py-publicsuffixlist to 1.0.2.20250111 [adam 2025-01-14]
