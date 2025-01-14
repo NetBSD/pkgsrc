@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/07/14 12:31:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/14 09:53:45 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,4 +7,3 @@ ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/pytest_textual_snapshot.py
 ${PYSITELIB}/pytest_textual_snapshot.pyc
 ${PYSITELIB}/pytest_textual_snapshot.pyo
-${PYSITELIB}/resources/snapshot_report_template.jinja2
