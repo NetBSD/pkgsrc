@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2023/07/18 15:46:27 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/01/14 16:58:59 adam Exp $
 
-BLAKE2s (icecream-2.1.3.tar.gz) = 655b73dd8d0279406a2538c90c89275c1f7067cb07fb502fff4933fd8512b68f
-SHA512 (icecream-2.1.3.tar.gz) = cbed12fd9b49511f10fd36813c386bb468a6a2c81610414e4753a35733209c93684fcc10889e8917a0584c72ef624d2298664b44a8dd4e733edf5464321c2b95
-Size (icecream-2.1.3.tar.gz) = 14722 bytes
+BLAKE2s (icecream-2.1.4.tar.gz) = b8d1384a32428e7ffd1891cb0af42af45864be903aabbbc5c3b8d6b1e4e6164f
+SHA512 (icecream-2.1.4.tar.gz) = 86024feae0e04fdef1869a1eaa18753e4a4bcdd24ccc4d732c8902c0e4c28aa2a70abe069345b89b7c52cdea05cdec54a48a45ce155e6953ec98ac7ee0a3a65b
+Size (icecream-2.1.4.tar.gz) = 15872 bytes
+SHA1 (patch-setup.py) = 04b3a7fbde7773a626caaf441b074098bfa22958
