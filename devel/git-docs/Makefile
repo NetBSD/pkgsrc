@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2023/06/06 12:40:37 riastradh Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/14 21:41:39 adam Exp $
 
 PKGNAME=	git-docs-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (documentation)
 
-CONFLICTS+=		scmgit-docs-[0-9]*
-SUPERSEDES+=		scmgit-docs-[0-9]*
-
-DISTINFO_FILE=		../../devel/git-base/distinfo
+CONFLICTS+=	scmgit-docs-[0-9]*
+SUPERSEDES+=	scmgit-docs-[0-9]*
 
 TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 TOOL_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
