@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/07/17 09:14:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/14 08:12:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/debug_toolbar/__init__.py
 ${PYSITELIB}/debug_toolbar/__init__.pyc
 ${PYSITELIB}/debug_toolbar/__init__.pyo
+${PYSITELIB}/debug_toolbar/_compat.py
+${PYSITELIB}/debug_toolbar/_compat.pyc
+${PYSITELIB}/debug_toolbar/_compat.pyo
 ${PYSITELIB}/debug_toolbar/_stubs.py
 ${PYSITELIB}/debug_toolbar/_stubs.pyc
 ${PYSITELIB}/debug_toolbar/_stubs.pyo
@@ -18,6 +21,8 @@ ${PYSITELIB}/debug_toolbar/decorators.pyo
 ${PYSITELIB}/debug_toolbar/forms.py
 ${PYSITELIB}/debug_toolbar/forms.pyc
 ${PYSITELIB}/debug_toolbar/forms.pyo
+${PYSITELIB}/debug_toolbar/locale/bg/LC_MESSAGES/django.mo
+${PYSITELIB}/debug_toolbar/locale/bg/LC_MESSAGES/django.po
 ${PYSITELIB}/debug_toolbar/locale/ca/LC_MESSAGES/django.mo
 ${PYSITELIB}/debug_toolbar/locale/ca/LC_MESSAGES/django.po
 ${PYSITELIB}/debug_toolbar/locale/cs/LC_MESSAGES/django.mo
@@ -42,6 +47,8 @@ ${PYSITELIB}/debug_toolbar/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/debug_toolbar/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/debug_toolbar/locale/ja/LC_MESSAGES/django.mo
 ${PYSITELIB}/debug_toolbar/locale/ja/LC_MESSAGES/django.po
+${PYSITELIB}/debug_toolbar/locale/ko/LC_MESSAGES/django.mo
+${PYSITELIB}/debug_toolbar/locale/ko/LC_MESSAGES/django.po
 ${PYSITELIB}/debug_toolbar/locale/nl/LC_MESSAGES/django.mo
 ${PYSITELIB}/debug_toolbar/locale/nl/LC_MESSAGES/django.po
 ${PYSITELIB}/debug_toolbar/locale/pl/LC_MESSAGES/django.mo
