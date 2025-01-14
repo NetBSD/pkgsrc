@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.378 2025/01/14 13:36:29 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.379 2025/01/14 13:37:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gobject-introspection to 1.82.0 [adam 2025-01-14]
 	Updated net/gupnp to 1.6.7 [adam 2025-01-14]
 	Updated www/firefox to 134.0 [ryoon 2025-01-14]
+	Updated www/firefox-l10n to 134.0 [ryoon 2025-01-14]
