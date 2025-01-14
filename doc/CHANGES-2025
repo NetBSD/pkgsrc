@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.383 2025/01/14 16:52:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.384 2025/01/14 17:05:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -498,3 +498,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-pywavelets to 1.8.0 [adam 2025-01-14]
 	Updated math/py-patsy to 1.0.1 [adam 2025-01-14]
 	Updated textproc/py-relatorio to 0.11.1 [adam 2025-01-14]
+	Updated devel/py-flexmock to 0.12.2 [adam 2025-01-14]
+	Updated net/py-minio to 7.2.14 [adam 2025-01-14]
+	Updated misc/py-icecream to 2.1.4 [adam 2025-01-14]
+	Updated databases/py-mysqlclient to 2.2.7 [adam 2025-01-14]
