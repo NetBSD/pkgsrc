@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2025/01/06 21:49:04 ktnb Exp $
+$NetBSD: distinfo,v 1.9 2025/01/14 19:26:51 wiz Exp $
 
 BLAKE2s (lpe-1.2.6.tar.gz) = f5bd25a9781ccd7027a525978fe9cedc363495a1adc0701a949e8da81485af44
 SHA512 (lpe-1.2.6.tar.gz) = f48eb07e338c3ef7bdfabc46b69a3dd96a91fae83681b5b0b77be07958a5e8c38c1afc4f6f00bdf558dd78e8a025d4c499fd9e1b4d8757721da8659151483dad
@@ -16,5 +16,5 @@ SHA1 (patch-aj) = cf72e180187e3eef42323bda6421cfe74d8cf543
 SHA1 (patch-ak) = 06db8f684a0b88e8f7daeb2293c2e20c95001c81
 SHA1 (patch-al) = 3ecafa7fd047edf3e9373c6ea27f181a826d33a4
 SHA1 (patch-am) = 9336642f8b643bb4f92c97dfaba47ed0c0586cb9
-SHA1 (patch-src_cfg.c) = 8803fb43dede5d97dee754f47b53bdfce4a4c175
-SHA1 (patch-src_input.c) = 00e4ce51768f62581a6520149d0e28ff9ceb04a3
+SHA1 (patch-src_cfg.c) = ef64095bc9b7cd30f32082f68e80350dbf47995b
+SHA1 (patch-src_input.c) = c80e99488ef5a41d297b0545859938364e0c2c94
