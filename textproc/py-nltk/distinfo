@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/05/02 20:45:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/01/14 17:19:21 adam Exp $
 
-BLAKE2s (nltk-3.8.1.zip) = 1b0b830c1aef2e564e6308d70be35303dc9aab3855e6c3437d78e3c10859e1f6
-SHA512 (nltk-3.8.1.zip) = ddf35091e9b3f570c64f469357989265c82d2c827cb2f8ec7bb61293342f23f01005d020389a568acf709e9d72e76970b5a6744ad3b0bf101620237488cc2be8
-Size (nltk-3.8.1.zip) = 4620388 bytes
+BLAKE2s (nltk-3.9.1.tar.gz) = a3a188cfe1cc2caa1782fca196ace63e5d6d10b7fc4f76b22260fd354db9e4e7
+SHA512 (nltk-3.9.1.tar.gz) = dad570b3a6728f22b55438a159b56009676f4fbdfc293673eaae0b0ed55dd2db91c32f59b3f89ff6d38101b3c3af9ea81f3519b578c83c17c1a9f3f716bc3ff4
+Size (nltk-3.9.1.tar.gz) = 2904691 bytes
