@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/14 06:40:18 adam Exp $
 
-DISTNAME=	license_expression-30.4.0
+DISTNAME=	license_expression-30.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/license-expression/}
