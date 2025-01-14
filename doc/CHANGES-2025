@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.370 2025/01/14 09:49:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.371 2025/01/14 09:53:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -475,3 +475,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fritz_exporter to 2.3.1nb1 [wiz 2025-01-14]
 	Updated www/py-sydent to 2.6.1nb1 [wiz 2025-01-14]
 	Added security/p5-Crypt-PKCS10 version 2.005 [wiz 2025-01-14]
+	Updated devel/py-test-textual-snapshot to 1.0.0nb1 [wiz 2025-01-14]
