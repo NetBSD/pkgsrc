@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2023/12/04 06:07:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/14 17:20:33 adam Exp $
 bin/pydoctor-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -183,6 +183,9 @@ ${PYSITELIB}/pydoctor/test/epydoc/test_restructuredtext.pyo
 ${PYSITELIB}/pydoctor/test/test_astbuilder.py
 ${PYSITELIB}/pydoctor/test/test_astbuilder.pyc
 ${PYSITELIB}/pydoctor/test/test_astbuilder.pyo
+${PYSITELIB}/pydoctor/test/test_astutils.py
+${PYSITELIB}/pydoctor/test/test_astutils.pyc
+${PYSITELIB}/pydoctor/test/test_astutils.pyo
 ${PYSITELIB}/pydoctor/test/test_attrs.py
 ${PYSITELIB}/pydoctor/test/test_attrs.pyc
 ${PYSITELIB}/pydoctor/test/test_attrs.pyo
@@ -254,6 +257,7 @@ ${PYSITELIB}/pydoctor/themes/__init__.pyc
 ${PYSITELIB}/pydoctor/themes/__init__.pyo
 ${PYSITELIB}/pydoctor/themes/base/ajax.js
 ${PYSITELIB}/pydoctor/themes/base/all-documents.html
+${PYSITELIB}/pydoctor/themes/base/apidocs-help.html
 ${PYSITELIB}/pydoctor/themes/base/apidocs.css
 ${PYSITELIB}/pydoctor/themes/base/attribute-child.html
 ${PYSITELIB}/pydoctor/themes/base/common.html
@@ -290,7 +294,6 @@ ${PYSITELIB}/pydoctor/themes/readthedocs/fonts/minus-square-o.svg
 ${PYSITELIB}/pydoctor/themes/readthedocs/fonts/plus-square-o.svg
 ${PYSITELIB}/pydoctor/themes/readthedocs/footer.html
 ${PYSITELIB}/pydoctor/themes/readthedocs/head.html
-${PYSITELIB}/pydoctor/themes/readthedocs/nav.html
 ${PYSITELIB}/pydoctor/themes/readthedocs/readthedocstheme.css
 ${PYSITELIB}/pydoctor/utils.py
 ${PYSITELIB}/pydoctor/utils.pyc
