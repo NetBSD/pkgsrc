@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.380 2025/01/14 15:56:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.381 2025/01/14 16:13:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -491,3 +491,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 134.0 [ryoon 2025-01-14]
 	Updated www/py-django to 5.1.5 [adam 2025-01-14]
 	Updated www/py-django4 to 4.2.18 [adam 2025-01-14]
+	Updated devel/cmake to 3.31.4 [adam 2025-01-14]
+	Updated devel/cmake-gui to 3.31.4 [adam 2025-01-14]
