@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.365 2025/01/14 08:41:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.366 2025/01/14 09:15:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/py-stripe to 11.4.1 [adam 2025-01-14]
 	Updated devel/py-inline-snapshot to 0.19.1 [adam 2025-01-14]
 	Updated lang/py-libcst to 1.6.0 [adam 2025-01-14]
+	Updated audio/py-beets to 2.2.0nb1 [wiz 2025-01-14]
