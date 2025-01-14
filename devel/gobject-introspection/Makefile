@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2024/09/04 06:05:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.96 2025/01/14 13:17:12 adam Exp $
 
-DISTNAME=	gobject-introspection-1.80.1
-PKGREVISION=	3
+DISTNAME=	gobject-introspection-1.82.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gi.readthedocs.io/en/latest/
 COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 
@@ -48,7 +45,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/output/gir/*.typelib ${DESTDIR}${PREFIX}/lib/girepository-1.0
 	${INSTALL_DATA} ${WRKSRC}/output/gir/*.gir ${DESTDIR}${PREFIX}/share/gir-1.0
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.79
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.82
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
