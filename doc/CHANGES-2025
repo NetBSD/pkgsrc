@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.364 2025/01/14 08:15:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.365 2025/01/14 08:41:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -466,3 +466,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-hypothesis to 6.123.17 [adam 2025-01-14]
 	Updated math/py-scipy to 1.15.1 [adam 2025-01-14]
 	Updated www/py-django-debug-toolbar to 5.0.1 [adam 2025-01-14]
+	Updated math/py-netCDF4 to 1.7.2 [adam 2025-01-14]
+	Updated finance/py-stripe to 11.4.1 [adam 2025-01-14]
+	Updated devel/py-inline-snapshot to 0.19.1 [adam 2025-01-14]
+	Updated lang/py-libcst to 1.6.0 [adam 2025-01-14]
