@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2024/12/05 08:47:28 adam Exp $
+$NetBSD: distinfo,v 1.26 2025/01/14 12:57:17 adam Exp $
 
-BLAKE2s (gtk-4.16.7.tar.xz) = 218fcc620bb73f2c51d958debdc0cc19591db50ce7d33019e76a47430a4d14ce
-SHA512 (gtk-4.16.7.tar.xz) = 152fdaaa80c1ce4829eb30f948d46fd6e84e66d48812a6b2a2cc1f72a9eb2aeb1f4abf43de263f251e613ae7136fba099f31fb0509a6b804f7f983f40bcfe26d
-Size (gtk-4.16.7.tar.xz) = 18660288 bytes
+BLAKE2s (gtk-4.16.12.tar.xz) = 8c6238e7e82e995e2419545303d69c3689a8b15206651ef1e9c94116ffb44170
+SHA512 (gtk-4.16.12.tar.xz) = ca6deabe0447524ef021ddf367e28a40f7571d1efcd11890dc54e20d944a4c6173c6c98da6a5902ddd8b393369f9f5e843deda667b7333916ac103daf2e283d1
+Size (gtk-4.16.12.tar.xz) = 14620652 bytes
 SHA1 (patch-meson.build) = a9db17787c70631896315fb2c825e62977cfbb9b
