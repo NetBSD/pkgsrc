@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2024/11/11 07:28:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/14 16:40:22 adam Exp $
 
-DISTNAME=	autopep8-2.3.1
+DISTNAME=	autopep8-2.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/autopep8/}
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-codestyle>=2.12.0:../../devel/py-codestyle
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
