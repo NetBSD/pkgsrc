@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/01/09 10:32:25 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/14 08:38:20 adam Exp $
 
-DISTNAME=	inline_snapshot-0.18.2
+DISTNAME=	inline_snapshot-0.19.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inline_snapshot/}
@@ -12,11 +12,8 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-asttokens>=2.0.5:../../lang/py-asttokens
-DEPENDS+=	${PYPKGPREFIX}-black>=23.3.0:../../textproc/py-black
-DEPENDS+=	${PYPKGPREFIX}-click>=8.1.4:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-executing>=2.1.0:../../lang/py-executing
 DEPENDS+=	${PYPKGPREFIX}-rich>=13.7.1:../../comms/py-rich
-DEPENDS+=	${PYPKGPREFIX}-typing-extensions-[0-9]*:../../devel/py-typing-extensions
 TEST_DEPENDS+=	${PYPKGPREFIX}-attrs>=24.3.0:../../devel/py-attrs
 TEST_DEPENDS+=	${PYPKGPREFIX}-dirty-equals>=0.7.0:../../devel/py-dirty-equals
 TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=6.75.5:../../devel/py-hypothesis
