@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/14 09:49:01 wiz Exp $
+
+BLAKE2s (Crypt-PKCS10-2.005.tar.gz) = c39038215bfa9837ea21510c1342af3739b07fbbea3670a5f3039925a39309d7
+SHA512 (Crypt-PKCS10-2.005.tar.gz) = 8addc189b96339eef14a353cb04b7dd02c46de4c0070b77b87eade7fec223db64ef4a7e5387dddd5452df9a906bd21de67f92600c7b5acc0be965667d9700e64
+Size (Crypt-PKCS10-2.005.tar.gz) = 75975 bytes
