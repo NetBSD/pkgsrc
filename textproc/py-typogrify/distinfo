@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/06 06:00:11 wiz Exp $
+$NetBSD: distinfo,v 1.2 2025/01/14 11:52:48 adam Exp $
 
-BLAKE2s (typogrify-2.0.7.tar.gz) = 0c0096a3cff73c4a923da251d007bbb4617386211694d2536edc5bf71273dba7
-SHA512 (typogrify-2.0.7.tar.gz) = 6212024a88372f1b14e5932c0541ec4d5a2ada7514c1327dc8f3775cd7adf3372cae0037c4310ed4a03fd0657a91eb4c0d114b74172190f7f84d82908441ddd0
-Size (typogrify-2.0.7.tar.gz) = 12903 bytes
+BLAKE2s (typogrify-2.1.0.tar.gz) = 9c2a40954a7607ff3100515440f3dcece52efffbe42281c9e13bf317d540ecba
+SHA512 (typogrify-2.1.0.tar.gz) = 25d7e52f370928b542d5202bd64dfd461f4ba81a92c8ca74423faa8bf852ad859fc5291847a0b3c69252d671257249474aa4639f032c6a9635f42e35b82af48e
+Size (typogrify-2.1.0.tar.gz) = 28622 bytes
