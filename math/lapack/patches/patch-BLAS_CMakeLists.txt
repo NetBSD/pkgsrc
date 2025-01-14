@@ -1,0 +1,21 @@
+$NetBSD: patch-BLAS_CMakeLists.txt,v 1.1 2025/01/14 11:41:00 wiz Exp $
+
+A changeset that I pushed upstream in a PR, to enable separate libblas build,
+un-break standalone CBLAS build with included BLAS, not unconditionally
+require unnecessary C++ compiler.
+
+See: https://github.com/Reference-LAPACK/lapack/pull/972
+
+diff --git a/BLAS/CMakeLists.txt b/BLAS/CMakeLists.txt
+index a33f38f25..8e34fa858 100644
+--- BLAS/CMakeLists.txt.orig	2024-12-03 11:39:11.000000000 +0000
++++ BLAS/CMakeLists.txt
+@@ -14,3 +14,8 @@ install(FILES
+   DESTINATION ${PKG_CONFIG_DIR}
+   COMPONENT Development
+   )
++
++install(EXPORT ${BLASLIB}-targets
++  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${BLASLIB}-${LAPACK_VERSION}
++  COMPONENT Development
++  )
