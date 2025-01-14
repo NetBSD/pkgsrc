@@ -1,10 +1,10 @@
-$NetBSD: patch-giscanner_ast.py,v 1.3 2024/04/09 17:55:46 wiz Exp $
+$NetBSD: patch-giscanner_ast.py,v 1.4 2025/01/14 14:40:52 ryoon Exp $
 
 - add double underscore versions
 
---- giscanner/ast.py.orig	2022-09-17 18:52:38.000000000 +0000
+--- giscanner/ast.py.orig	2024-09-13 13:08:54.000000000 +0000
 +++ giscanner/ast.py
-@@ -307,6 +307,16 @@ type_names['uint32_t'] = TYPE_UINT32
+@@ -351,6 +351,20 @@ type_names['uint32_t'] = TYPE_UINT32
  type_names['int64_t'] = TYPE_INT64
  type_names['uint64_t'] = TYPE_UINT64
  
@@ -17,6 +17,10 @@ $NetBSD: patch-giscanner_ast.py,v 1.3 2024/04/09 17:55:46 wiz Exp $
 +type_names['__int64_t'] = TYPE_INT64
 +type_names['__uint64_t'] = TYPE_UINT64
 +type_names['__off_t'] = TYPE_OFF_T
++type_names['__gid_t'] = TYPE_GID_T
++type_names['__uid_t'] = TYPE_UID_T
++type_names['__pid_t'] = TYPE_PID_T
++type_names['__socklen_t'] = TYPE_SOCKLEN_T
 +
  # A few additional GLib type aliases
  type_names['guchar'] = TYPE_UINT8
