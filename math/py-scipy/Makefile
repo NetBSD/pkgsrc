@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2025/01/14 08:10:40 adam Exp $
+# $NetBSD: Makefile,v 1.93 2025/01/14 18:06:55 gdt Exp $
 
 DISTNAME=	scipy-1.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,9 +22,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout-[0-9]*:../../devel/py-test-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
+USE_LANGUAGES=		c c++ fortran
 USE_CC_FEATURES=	c17
 USE_CXX_FEATURES=	c++17
-USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		pkg-config
 MAKE_ENV+=		ATLAS=None
 # Upstream explicitly checks for 9; see meson.build.
