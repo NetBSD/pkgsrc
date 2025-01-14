@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2024/11/11 07:28:33 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/01/14 08:34:43 adam Exp $
 
-DISTNAME=	stripe-9.11.0
+DISTNAME=	stripe-11.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/stripe/}
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=1.7:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist>=1.22:../../devel/py-test-xdist
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
