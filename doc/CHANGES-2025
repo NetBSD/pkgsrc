@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.385 2025/01/14 17:20:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.386 2025/01/14 17:37:40 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -504,3 +504,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-mysqlclient to 2.2.7 [adam 2025-01-14]
 	Updated textproc/py-nltk to 3.9.1 [adam 2025-01-14]
 	Updated devel/py-doctor to 24.11.2 [adam 2025-01-14]
+	Updated www/nginx to 1.26.2nb9 [osa 2025-01-14]
+	Updated www/nginx-devel to 1.27.3nb3 [osa 2025-01-14]
