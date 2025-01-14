@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.372 2025/01/14 09:54:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.373 2025/01/14 10:21:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -477,3 +477,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/p5-Crypt-PKCS10 version 2.005 [wiz 2025-01-14]
 	Updated devel/py-test-textual-snapshot to 1.0.0nb1 [wiz 2025-01-14]
 	Updated databases/py-pypika-tortoise to 0.3.2nb1 [wiz 2025-01-14]
+	Updated multimedia/gstreamer1 to 1.24.11 [adam 2025-01-14]
+	Updated net/rclone to 1.69.0 [adam 2025-01-14]
