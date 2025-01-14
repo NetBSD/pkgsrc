@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/24 09:26:23 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/14 09:46:21 wiz Exp $
 
 DISTNAME=	matrix_sydent-2.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/matrix_//}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/matrix-sydent/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/matrix-org/sydent
 COMMENT=	Matrix Identity Servers
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=16.0.0:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-attrs>=19.1.0:../../devel/py-attrs
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.0.0:../../textproc/py-jinja2
