@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.389 2025/01/14 19:30:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.390 2025/01/14 20:47:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -518,3 +518,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/unit-python to 1.34.1 [osa 2025-01-14]
 	Updated www/unit-ruby to 1.34.1 [osa 2025-01-14]
 	Updated net/rsync to 3.4.0 [wiz 2025-01-14]
+	Updated pkgtools/mktool to 1.4.2 [wiz 2025-01-14]
