@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.367 2025/01/14 09:28:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.368 2025/01/14 09:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -472,3 +472,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-libcst to 1.6.0 [adam 2025-01-14]
 	Updated audio/py-beets to 2.2.0nb1 [wiz 2025-01-14]
 	Updated devel/py-construct-classes to 0.1.2nb1 [wiz 2025-01-14]
+	Updated sysutils/py-fritz_exporter to 2.3.1nb1 [wiz 2025-01-14]
