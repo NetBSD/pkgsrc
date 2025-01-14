@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/10/26 12:48:29 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/01/14 11:57:10 adam Exp $
 
-BLAKE2s (pathable-0.4.3.tar.gz) = e3b8f276b3df8fe9620413132b0556afdda4fefa5fecd9ad392334ec8596d09d
-SHA512 (pathable-0.4.3.tar.gz) = 98fd70efb86202403bdc52a90ca469f91cd7c954e827473e035fdc269c9a400a2f130bde656b8bfad16403decca27fa4716e17061f182f865b6925ca9d8fac90
-Size (pathable-0.4.3.tar.gz) = 8679 bytes
+BLAKE2s (pathable-0.4.4.tar.gz) = 4aba22e13f4e4df265c56b03da03e3f5596c3e7c7ec9704ac6e95af14af9b0ff
+SHA512 (pathable-0.4.4.tar.gz) = 5cc0946614f8b1bcbe399cfdec3b6146795c5fdf48e14ac7c25f5287d6224b3b4aa3e0beb1fb80d720aeb1e937bfbcbefcb0710cd3ba8afb8436de4fc385c01c
+Size (pathable-0.4.4.tar.gz) = 8124 bytes
