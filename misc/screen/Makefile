@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2025/01/09 20:07:03 ktnb Exp $
+# $NetBSD: Makefile,v 1.125 2025/01/14 18:36:16 ktnb Exp $
 
 DISTNAME=	screen-5.0.0
 CATEGORIES=	misc shells
@@ -15,6 +15,8 @@ EXTRACT_USING=	bsdtar
 # In file included from ./screen.h:150:
 # ./display.h:154:19: error: use of undeclared identifier 'T_N'
 #MAKE_JOBS_SAFE=	no
+
+USE_CC_FEATURES=	c17
 
 .include "options.mk"
 
