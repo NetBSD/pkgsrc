@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.381 2025/01/14 16:13:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.382 2025/01/14 16:47:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -493,3 +493,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django4 to 4.2.18 [adam 2025-01-14]
 	Updated devel/cmake to 3.31.4 [adam 2025-01-14]
 	Updated devel/cmake-gui to 3.31.4 [adam 2025-01-14]
+	Updated devel/py-autopep8 to 2.3.2 [adam 2025-01-14]
+	Updated net/py-smbc to 1.0.25.1 [adam 2025-01-14]
