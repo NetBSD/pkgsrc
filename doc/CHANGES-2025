@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.391 2025/01/14 21:42:04 adam Exp $
+$NetBSD: CHANGES-2025,v 1.392 2025/01/14 22:51:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -521,3 +521,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/mktool to 1.4.2 [wiz 2025-01-14]
 	Updated textproc/json-glib to 1.10.6 [adam 2025-01-14]
 	Updated devel/git to 2.48.1 [adam 2025-01-14]
+	Updated security/py-bandit to 1.8.2 [adam 2025-01-14]
+	Updated devel/git-lfs to 3.6.1 [adam 2025-01-14]
+	Updated converters/py-cloudpickle to 3.1.1 [adam 2025-01-14]
+	Updated databases/py-lmdb to 1.6.2 [adam 2025-01-14]
