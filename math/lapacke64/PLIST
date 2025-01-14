@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/08 21:28:56 thor Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/14 11:41:35 wiz Exp $
 include/netlib64/lapack.h
 include/netlib64/lapacke.h
 include/netlib64/lapacke_config.h
@@ -6,5 +6,5 @@ include/netlib64/lapacke_mangling.h
 include/netlib64/lapacke_utils.h
 lib/liblapacke64.so
 lib/liblapacke64.so.3
-lib/liblapacke64.so.${PKGVERSION}
+lib/liblapacke64.so.3.12.0
 lib/pkgconfig/lapacke64.pc
