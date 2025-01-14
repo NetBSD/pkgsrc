@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2024/11/24 09:26:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/14 09:46:21 wiz Exp $
 bin/sydent
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
-${PYSITELIB}/matrix-sydent.service
 ${PYSITELIB}/sydent/__init__.py
 ${PYSITELIB}/sydent/__init__.pyc
 ${PYSITELIB}/sydent/__init__.pyo
