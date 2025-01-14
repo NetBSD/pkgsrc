@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.376 2025/01/14 12:59:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.377 2025/01/14 13:22:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -485,3 +485,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-whitenoise to 6.8.2 [adam 2025-01-14]
 	Updated x11/gtk4 to 4.16.12 [adam 2025-01-14]
 	Updated www/py-publicsuffixlist to 1.0.2.20250111 [adam 2025-01-14]
+	Updated devel/gobject-introspection to 1.82.0 [adam 2025-01-14]
+	Updated net/gupnp to 1.6.7 [adam 2025-01-14]
