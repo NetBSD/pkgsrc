@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/01/14 11:52:48 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/14 12:33:36 wiz Exp $
 
 DISTNAME=	typogrify-2.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mintchaos/typogrify
 COMMENT=	Filters to enhance web typography
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-smartypants>=1.8.3:../../textproc/py-smartypants
 # no tests in the distfile
 #TEST_DEPENDS+=	${PYPKGPREFIX}-invoke>=2.2.0:../../sysutils/py-invoke
