@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.362 2025/01/13 23:34:33 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.363 2025/01/14 06:45:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -460,3 +460,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/neomutt to 20250113 [wiz 2025-01-13]
 	Updated ham/freedv to 1.9.9.2 [gdt 2025-01-13]
 	Updated devel/py-guppy3 to 3.1.5 [gutteridge 2025-01-13]
+	Updated net/py-responses to 0.25.6 [adam 2025-01-14]
+	Updated devel/py-license-expression to 30.4.1 [adam 2025-01-14]
+	Updated security/py-nvdlib to 0.7.9 [adam 2025-01-14]
+	Updated devel/py-hypothesis to 6.123.17 [adam 2025-01-14]
