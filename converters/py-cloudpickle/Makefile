@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/10/24 06:48:23 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/14 22:48:21 adam Exp $
 
-DISTNAME=	cloudpickle-3.1.0
+DISTNAME=	cloudpickle-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cloudpickle/}
