@@ -1,0 +1,10 @@
+Crypt::PKCS10 parses PKCS #10 certificate requests (CSRs) and provides
+ccessor methods to extract the data in usable form.
+
+Common object identifiers will be translated to their corresponding names.
+Additionally, accessor methods allow extraction of single data fields.
+The format of returned data varies by accessor.
+
+The access methods return the value corresponding to their name. If called
+in scalar context, they return the first value (or an empty string). If called
+in array context, they return all values.
