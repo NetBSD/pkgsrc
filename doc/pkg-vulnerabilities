@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.293 2025/01/14 13:26:59 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.294 2025/01/14 20:42:02 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26123,3 +26123,6 @@ firefox115<115.16.1		remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE
 liboqs<0.12.0		incorrect-decapsulation		https://nvd.nist.gov/vuln/detail/CVE-2024-54137
 webkit-gtk<2.46.5	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2024-54505
 vim<9.1.1003	heap-buffer-overflow	https://github.com/vim/vim/security/advisories/GHSA-5rgf-26wj-48v8
+rsync<3.4.0	file-leak	https://nvd.nist.gov/vuln/detail/CVE-2024-12086
+rsync<3.4.0	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2024-12087
+git-base<2.48.1	missing-url-sanitizing	https://nvd.nist.gov/vuln/detail/CVE-2024-50349
