@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.392 2025/01/14 22:51:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.393 2025/01/15 06:05:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-lfs to 3.6.1 [adam 2025-01-14]
 	Updated converters/py-cloudpickle to 3.1.1 [adam 2025-01-14]
 	Updated databases/py-lmdb to 1.6.2 [adam 2025-01-14]
+	Updated net/kea to 2.6.1nb2 [wiz 2025-01-15]
