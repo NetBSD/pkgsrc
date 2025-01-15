@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/11/26 14:47:09 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/01/15 09:31:34 adam Exp $
 
-BLAKE2s (SDL2_sound-2.0.2.tar.gz) = aa2ae66605864a15612dca8c39436a27c007295be1a6082eaa5d1a13a368ffa7
-SHA512 (SDL2_sound-2.0.2.tar.gz) = aec2bb6d0bd9941bb84533443310af4a0d9a1477f38fdf0ec348574d31b0e4ab3b631ca7d14d72fe03d4ce5669f6878999f2a5fa58cd2beb48c8591b9590a982
-Size (SDL2_sound-2.0.2.tar.gz) = 459893 bytes
+BLAKE2s (SDL2_sound-2.0.4.tar.gz) = 0fc80ebe9755855c5f81c7084f17e0774094c7f37562d89545857310d7571ddb
+SHA512 (SDL2_sound-2.0.4.tar.gz) = 63bcd55498ab209b65c276ab450811e82a56ba8078d2ca895d69cb8b53524e588c1bfdfda71a43c1147eda1a577f46ff390bdc4f3a5a4a41aa0e123579d927d0
+Size (SDL2_sound-2.0.4.tar.gz) = 460808 bytes
