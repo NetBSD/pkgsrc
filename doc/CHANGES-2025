@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.401 2025/01/15 13:50:02 leot Exp $
+$NetBSD: CHANGES-2025,v 1.402 2025/01/15 14:13:39 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -540,3 +540,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 33.3.1 [adam 2025-01-15]
 	Added net/openbfdd 0.5.3 [manu 2025-01-15]
 	Updated devel/regal to 0.30.0 [leot 2025-01-15]
+	Added net/coturn-4.6.3 [manu 2025-01-15]
