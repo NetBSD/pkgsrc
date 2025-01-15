@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.178 2024/11/14 22:13:52 wiz Exp $
+$NetBSD: distinfo,v 1.179 2025/01/15 12:51:47 wiz Exp $
 
 BLAKE2s (webkitgtk-2.36.8.tar.xz) = 277ba5935bda3e3867083b4c736499d974b9c733dbd05bf574510857dde481a1
 SHA512 (webkitgtk-2.36.8.tar.xz) = 50576f13ea84c0634d174ccf0b70d0eb28752589b2b9ce7a82ffeee1b4b6c849a802f7ae83a3c5a74d0da2b7e3321876ead33e819d8006b8153376074cb57036
 Size (webkitgtk-2.36.8.tar.xz) = 26610100 bytes
+SHA1 (patch-Source_JavaScriptCore_API_glib_JSCClass.cpp) = f0817f6f7917fb587445d54334ef46be84a55b47
+SHA1 (patch-Source_JavaScriptCore_API_glib_JSCContext.cpp) = d79e18a5a42160785f3d9d4062279cbdf85845e9
+SHA1 (patch-Source_JavaScriptCore_API_glib_JSCValue.cpp) = 5ae0268e6e93493b169030ae98b4b97985159fba
 SHA1 (patch-Source_JavaScriptCore_Scripts_check-xcfilelists.sh) = f4f117e6c1cd8eb8e4905f74946e0367156ed528
 SHA1 (patch-Source_JavaScriptCore_Scripts_generate-unified-sources.sh) = 308a7c8f687253b4fc75de0c66016dd18666e697
 SHA1 (patch-Source_JavaScriptCore_assembler_ARM64Assembler.h) = 79c282ca90d0ba2ef4769da40d4648f5f709951b
@@ -48,6 +51,16 @@ SHA1 (patch-Source_WebKit_Platform_IPC_unix_ConnectionUnix.cpp) = f2ee81bf200fe1
 SHA1 (patch-Source_WebKit_Platform_classifier_ResourceLoadStatisticsClassifier.cpp) = 920376ec8697780637f376b2fff312b7e214a7f6
 SHA1 (patch-Source_WebKit_Scripts_check-xcfilelists.sh) = 22cc5ba1ababc6395aa0ef467db0c27c2fbf6878
 SHA1 (patch-Source_WebKit_Scripts_generate-unified-sources.sh) = def930cf3f706ac657b2f8835c8c0278ade8f663
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitCookieManager.cpp) = c2d8377f696f531e89be3e88ec10a125aece96a1
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitFaviconDatabase.cpp) = 059389ac71c145c86adaf0fc7ef4208fc80cf09a
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitUserContentFilterStore.cpp) = cf73e666e70cf1153eda95917c038db691f0b5d8
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitWebContext.cpp) = d85cd89cba8f484dd18891babc833eed9874f8fd
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitWebResource.cpp) = 59de08fa03f9e9cde829e1160851bb27ffa0e27d
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitWebView.cpp) = 72c2f1a5cd37ebeb91cdb5d9458ca54295e55caa
+SHA1 (patch-Source_WebKit_UIProcess_API_glib_WebKitWebsiteDataManager.cpp) = 4721e0159d9af93bf8c20d16b58a91d6bda1a258
+SHA1 (patch-Source_WebKit_WebProcess_InjectedBundle_API_glib_WebKitWebExtension.cpp) = 20985d35c8a68596c5ac270daafa72e2a1e89521
+SHA1 (patch-Source_WebKit_WebProcess_InjectedBundle_API_glib_WebKitWebPage.cpp) = 19914d52fe64e8a17a50e74d51cafc9c6bf287cb
+SHA1 (patch-Source_WebKit_WebProcess_InjectedBundle_API_gtk_DOM_WebKitDOMEventTarget.h) = 288e0d71bc3e2b2902599a8f0f21cd4a6920589a
 SHA1 (patch-Source_WebKit_WebProcess_WebPage_CoordinatedGraphics_LayerTreeHost.h) = 91a3002d47c469375e70fcde7d575ec352f642f9
 SHA1 (patch-Source_bmalloc_bmalloc_AvailableMemory.cpp) = 18915c691d6f4e2a8870f8fee0909bd1a609cc05
 SHA1 (patch-Source_bmalloc_bmalloc_BPlatform.h) = 28d1f657fde427062a729b26398e96825082fc4d
