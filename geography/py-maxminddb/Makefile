@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/15 15:12:36 adam Exp $
 
-DISTNAME=	maxminddb-2.6.2
+DISTNAME=	maxminddb-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/maxminddb/}
@@ -10,8 +10,8 @@ HOMEPAGE=	https://github.com/maxmind/MaxMind-DB-Reader-python
 COMMENT=	Reader for the MaxMind DB format
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=68.2.2:../../devel/py-setuptools
 
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
