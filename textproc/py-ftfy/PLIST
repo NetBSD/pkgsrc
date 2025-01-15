@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/26 20:10:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/15 12:46:12 adam Exp $
 bin/ftfy-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/ftfy/__init__.py
 ${PYSITELIB}/ftfy/__init__.pyc
 ${PYSITELIB}/ftfy/__init__.pyo
