@@ -1,18 +1,18 @@
-$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.2 2018/04/29 05:14:37 wiz Exp $
+$NetBSD: patch-src_polkitbackend_polkitd.c,v 1.3 2025/01/15 08:41:38 adam Exp $
 
 Avoid %m usage in printf.
 
---- src/polkitbackend/polkitd.c.orig	2018-04-03 18:16:17.000000000 +0000
+--- src/polkitbackend/polkitd.c.orig	2025-01-13 14:54:22.000000000 +0000
 +++ src/polkitbackend/polkitd.c
-@@ -22,6 +22,7 @@
- #include "config.h"
+@@ -20,6 +20,7 @@
+  */
  
  #include <signal.h>
 +#include <errno.h>
  #include <stdlib.h>
  
  #include <glib-unix.h>
-@@ -110,20 +111,20 @@ become_user (const gchar  *user,
+@@ -148,7 +149,7 @@ become_user (const gchar  *user,
    if (pw == NULL)
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
@@ -21,6 +21,7 @@ Avoid %m usage in printf.
        goto out;
      }
  
+@@ -163,13 +164,13 @@ become_user (const gchar  *user,
    if (setgroups (0, NULL) != 0)
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
@@ -36,7 +37,7 @@ Avoid %m usage in printf.
        goto out;
      }
  
-@@ -133,16 +134,16 @@ become_user (const gchar  *user,
+@@ -179,16 +180,16 @@ become_user (const gchar  *user,
        (getegid () != pw->pw_gid) || (getgid () != pw->pw_gid))
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
@@ -47,17 +48,17 @@ Avoid %m usage in printf.
        goto out;
      }
  
-   if (chdir (pw->pw_dir) != 0)
+   if (chdir ("/") != 0)
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
--                   "Error changing to home directory %s: %m",
+-                   "Error changing to root directory %s: %m",
 -                   pw->pw_dir);
-+                   "Error changing to home directory %s: %s",
++                   "Error changing to root directory %s: %s",
 +                   pw->pw_dir, g_strerror(errno));
        goto out;
      }
  
-@@ -198,7 +199,7 @@ main (int    argc,
+@@ -245,7 +246,7 @@ main (int    argc,
          }
        else
          {

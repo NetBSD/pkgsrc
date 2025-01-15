@@ -1,10 +1,10 @@
-$NetBSD: patch-src_polkitbackend_polkitbackendinteractiveauthority.c,v 1.3 2023/06/07 15:36:40 wiz Exp $
+$NetBSD: patch-src_polkitbackend_polkitbackendinteractiveauthority.c,v 1.4 2025/01/15 08:41:38 adam Exp $
 
 * for *BSD netgroup functions
 
---- src/polkitbackend/polkitbackendinteractiveauthority.c.orig	2022-07-11 08:46:06.000000000 +0000
+--- src/polkitbackend/polkitbackendinteractiveauthority.c.orig	2024-08-08 13:12:35.000000000 +0000
 +++ src/polkitbackend/polkitbackendinteractiveauthority.c
-@@ -26,8 +26,13 @@
+@@ -25,8 +25,13 @@
  #ifdef HAVE_NETGROUP_H
  #include <netgroup.h>
  #else
@@ -18,11 +18,11 @@ $NetBSD: patch-src_polkitbackend_polkitbackendinteractiveauthority.c,v 1.3 2023/
  #include <string.h>
  #include <glib/gstdio.h>
  #include <locale.h>
-@@ -2250,7 +2255,7 @@ get_users_in_net_group (PolkitIdentity  
-   ret = NULL;
+@@ -2255,7 +2260,7 @@ get_users_in_net_group (PolkitIdentity
+ #ifdef HAVE_SETNETGRENT
    name = polkit_unix_netgroup_get_name (POLKIT_UNIX_NETGROUP (group));
  
--#ifdef HAVE_SETNETGRENT_RETURN
+-# ifdef HAVE_SETNETGRENT_RETURN
 +#if defined(HAVE_SETNETGRENT_RETURN) && !defined(__NetBSD__)
    if (setnetgrent (name) == 0)
      {
