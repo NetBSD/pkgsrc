@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/11/22 17:53:40 leot Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/15 13:49:57 leot Exp $
 
-DISTNAME=	regal-0.29.2
+DISTNAME=	regal-0.30.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=StyraInc/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
