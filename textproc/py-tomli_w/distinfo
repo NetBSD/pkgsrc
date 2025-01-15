@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/10/10 12:26:06 adam Exp $
+$NetBSD: distinfo,v 1.3 2025/01/15 12:29:08 adam Exp $
 
-BLAKE2s (tomli_w-1.1.0.tar.gz) = cad49ac65006380b8f1f15337ad80a127b631c554ba1d12be0c6b28adbd35346
-SHA512 (tomli_w-1.1.0.tar.gz) = 2be5c15966bddc6e1a91011e0783cf85105cdee4bd81c26f61ad5d4066d1ff646b76d3d152c67920a80a569188976f1e2dbaef6def95a5611dfc9a905f544ff9
-Size (tomli_w-1.1.0.tar.gz) = 6929 bytes
+BLAKE2s (tomli_w-1.2.0.tar.gz) = a6e44f728c91b079c385668b111b3a59cb717343f17709546a45776d04a924b8
+SHA512 (tomli_w-1.2.0.tar.gz) = d2ed913a941fa5a9b2df176b3723809ae98b44bff77a8973cf23654dbea440d6a2810c4b3adae9a3318af387a00974598ef8cba3af09af8e5048f7be869a0042
+Size (tomli_w-1.2.0.tar.gz) = 7184 bytes
