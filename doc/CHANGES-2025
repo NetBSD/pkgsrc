@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.407 2025/01/15 21:18:17 pin Exp $
+$NetBSD: CHANGES-2025,v 1.408 2025/01/15 21:19:31 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-apsw to 3.48.0.0 [adam 2025-01-15]
 	Updated devel/lemon to 1.0.3.48.0 [adam 2025-01-15]
 	Updated devel/garden to 1.10.1 [pin 2025-01-15]
+	Updated devel/gitui to 0.27.0 [pin 2025-01-15]
