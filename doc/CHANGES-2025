@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.399 2025/01/15 12:47:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.400 2025/01/15 13:28:29 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fakefs to 5.7.4 [adam 2025-01-15]
 	Updated textproc/py-ftfy to 6.3.1 [adam 2025-01-15]
 	Updated devel/py-faker to 33.3.1 [adam 2025-01-15]
+	Added net/openbfdd 0.5.3 [manu 2025-01-15]
