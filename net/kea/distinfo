@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.3 2024/11/13 14:37:28 taca Exp $
+$NetBSD: distinfo,v 1.4 2025/01/15 06:05:13 wiz Exp $
 
 BLAKE2s (kea-2.6.1.tar.gz) = fbc82aa775b8cb7624d6051ba6276283b387d1e5273e4737e56ad96f380ae890
 SHA512 (kea-2.6.1.tar.gz) = 23a4c431117097538a15afd8a28016b49db5490f866aa03abd2bdfef5eaab5031491320acdf3097899d4b071cccff4b53c032ff076b13cab853e063aaa2810ec
 Size (kea-2.6.1.tar.gz) = 10467190 bytes
 SHA1 (patch-config.h.in) = 854ce1d2685f378ee4dcc06d1901e0c7a371bc32
 SHA1 (patch-configure.ac) = 9d70489a402e91fa9db9d576860bcf152d773249
+SHA1 (patch-src_lib_asiolink_io__address.cc) = 9f4d36fe5dd84a47d10f77059e934ec14bf477d7
+SHA1 (patch-src_lib_asiolink_io__service.cc) = 0b64596b9903cb2872866ae92cd7844479be0519
+SHA1 (patch-src_lib_asiolink_tcp__endpoint.h) = 7d4df393abf0a636f40037f723160eacbcb328df
+SHA1 (patch-src_lib_asiolink_udp__endpoint.h) = d1b0e39cc005cfebb25b89b01018bebd75c6baf2
+SHA1 (patch-src_lib_asiolink_unix__domain__socket.cc) = aff0cc2b9c240d7064d966bc287d93e88968d4a8
+SHA1 (patch-src_lib_dhcp_iface__mgr.cc) = 82bb7a4518bc4f8468d41d1f1e38c51a4155b6b3
 SHA1 (patch-src_lib_dhcp_pkt__filter__bpf.cc) = 42f0e2c23a6dc8467dd28669b032f63fa11566d4
