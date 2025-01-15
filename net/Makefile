@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1585 2025/01/15 13:28:29 manu Exp $
+# $NetBSD: Makefile,v 1.1586 2025/01/15 14:13:39 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -81,6 +81,7 @@ SUBDIR+=	coda
 SUBDIR+=	connect
 SUBDIR+=	corebird
 SUBDIR+=	corkscrew
+SUBDIR+=	coturn
 SUBDIR+=	couriertcpd
 SUBDIR+=	coursera-dl
 SUBDIR+=	cppzmq
