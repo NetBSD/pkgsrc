@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.18 2024/12/24 18:29:06 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.19 2025/01/15 21:17:59 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	anstream-0.6.18
@@ -30,6 +30,7 @@ CARGO_CRATE_DEPENDS+=	difflib-0.4.0
 CARGO_CRATE_DEPENDS+=	dirs-5.0.1
 CARGO_CRATE_DEPENDS+=	dirs-sys-0.4.1
 CARGO_CRATE_DEPENDS+=	doc-comment-0.3.3
+CARGO_CRATE_DEPENDS+=	dunce-1.0.5
 CARGO_CRATE_DEPENDS+=	either-1.13.0
 CARGO_CRATE_DEPENDS+=	encoding_rs-0.8.35
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.1
