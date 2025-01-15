@@ -1,12 +1,12 @@
-$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.6 2018/08/16 12:30:43 wiz Exp $
+$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.7 2025/01/15 08:41:38 adam Exp $
 
 Fix SunOS includes.
 Fix pid_t type.
 
---- src/polkit/polkitunixprocess.c.orig	2018-06-25 13:55:45.000000000 +0000
+--- src/polkit/polkitunixprocess.c.orig	2024-08-08 13:12:35.000000000 +0000
 +++ src/polkit/polkitunixprocess.c
-@@ -24,6 +24,11 @@
- #endif
+@@ -20,6 +20,11 @@
+  */
  
  #include <sys/types.h>
 +#ifdef HAVE_SOLARIS
@@ -17,7 +17,7 @@ Fix pid_t type.
  #ifdef HAVE_FREEBSD
  #include <sys/param.h>
  #include <sys/sysctl.h>
-@@ -95,7 +100,7 @@ enum
+@@ -175,7 +180,7 @@ enum
  
  static void subject_iface_init (PolkitSubjectIface *subject_iface);
  
