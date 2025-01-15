@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/08/06 06:28:26 adam Exp $
+$NetBSD: distinfo,v 1.10 2025/01/15 12:46:12 adam Exp $
 
-BLAKE2s (ftfy-6.2.3.tar.gz) = c99ade2882882c43b618a54553ce34cbe715c8126c6cd10d944ea091695cc5a8
-SHA512 (ftfy-6.2.3.tar.gz) = 6711dbe9750db6bc25c57d5d600d1db52eff6f22caa7ff89c06615bbd7dd612cca56f9e9a35c633648747c421f2e710a6e24ee1f9a6d6df0ac6f6049a5189e8e
-Size (ftfy-6.2.3.tar.gz) = 64165 bytes
+BLAKE2s (ftfy-6.3.1.tar.gz) = 0e0ca87414901d61bcf010028ec6e29ed8d9c558779fedac3f230800dc9c23a3
+SHA512 (ftfy-6.3.1.tar.gz) = a6ef2fb906ad9bc91638a7427defdffafb8116991e20aa421b34b7151862edec7ae15cc1427a8d753b849ba929bfa8e64a97243fb69d1f4a1f2f7617ad71ed23
+Size (ftfy-6.3.1.tar.gz) = 308927 bytes
