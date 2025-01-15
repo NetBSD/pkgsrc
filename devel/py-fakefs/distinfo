@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2024/12/30 06:07:09 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/01/15 12:40:01 adam Exp $
 
-BLAKE2s (pyfakefs-5.7.3.tar.gz) = a5f0f5ca56d2722b99ac68166a750e10ad665bfb26379844ac34327570c0ab3d
-SHA512 (pyfakefs-5.7.3.tar.gz) = 2d69af2842d0a2ad84fdb3b9d05cb6231926a6c4b41e784e8206570c11c3e49a77ad46eba4aad1c4f3f5e9e0d48d13747134bf8a75b8bd12f6f85f1475024c1f
-Size (pyfakefs-5.7.3.tar.gz) = 212705 bytes
+BLAKE2s (pyfakefs-5.7.4.tar.gz) = b3116edea94b69c18108b1b168ccf6e9fd0432d377b6509cd09832785d984961
+SHA512 (pyfakefs-5.7.4.tar.gz) = 2eaabd5adf72ad456bcdb5858b662174c3213fdcfa14c88c378eb43329e43d61fb75e33f2708dde29ebc2a9943cb539569848e944b058ad78973f209b59c2d3d
+Size (pyfakefs-5.7.4.tar.gz) = 213382 bytes
