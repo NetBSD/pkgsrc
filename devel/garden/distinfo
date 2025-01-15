@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2024/12/24 18:29:06 pin Exp $
+$NetBSD: distinfo,v 1.19 2025/01/15 21:17:59 pin Exp $
 
 BLAKE2s (ahash-0.8.11.crate) = b565d757eebd61e61c4bc77b956fab61c32f9c87787bda573646cff2dac812fe
 SHA512 (ahash-0.8.11.crate) = 47d211b2422de0b381dfe32229faa346406eb7a22dff867dc04c22389609a8671ce3218e662000c49891a06c259d82e0ff4413740f007729d80e097a6c3f0d9d
@@ -90,6 +90,9 @@ Size (dirs-sys-0.4.1.crate) = 10719 bytes
 BLAKE2s (doc-comment-0.3.3.crate) = 3c6c0c2b176af73b7f930c90bde1054195adccd234d74431050b27bcfefff615
 SHA512 (doc-comment-0.3.3.crate) = e98ff9646a3612bd41bb6f278e7b6e9a0c58747f8b82524da814cf51b7f06c76ad4d65b502ac5740e818744abb295f78f15f8262d0b50ced1523f6d1a26939ba
 Size (doc-comment-0.3.3.crate) = 4123 bytes
+BLAKE2s (dunce-1.0.5.crate) = 7f72598a5d04e4d5cc63e25fa0c215cf532e09f04b63f92b72f8da1f8118de2f
+SHA512 (dunce-1.0.5.crate) = 36d7d75217d629185a9a9187f7d2e2dc346a28be0ad1c21b1b6bcbe3991e9cd11797e53d745c0b3b5ae94cf1e4cf141cdb2322bab86d97cc258b4145e3b97a56
+Size (dunce-1.0.5.crate) = 8244 bytes
 BLAKE2s (either-1.13.0.crate) = 39690a936f9bb5b6204ee0373b0763a091d8555824fe1bab2881a1544511818a
 SHA512 (either-1.13.0.crate) = 72e803079bae621d282136ab1e423ba71415bf12038b6f386f294cae68a67ad9ff16e4fdf4344eb3fee4418e853f9cac344c248f6befa3006d1c954668b36322
 Size (either-1.13.0.crate) = 19169 bytes
@@ -108,9 +111,9 @@ Size (function_name-0.3.0.crate) = 4017 bytes
 BLAKE2s (function_name-proc-macro-0.3.0.crate) = 332c12a25e3b58f43e02373637d2bfe78f820a9ddd27db2e1dd3359fa8a47441
 SHA512 (function_name-proc-macro-0.3.0.crate) = 180fb4cdd32c32c81464aab5722fc5d12877d82600f09d74c8fef88cdd2f18c692ebc1c693d0324a3be36247a4a65db4c5b156c62b1c428fd055ce98e9da014f
 Size (function_name-proc-macro-0.3.0.crate) = 2020 bytes
-BLAKE2s (garden-1.10.0.tar.gz) = 4b1afc8a445bd4a5a97ffd7911932f2d00be31062fa89ace588ad6c5985ec76d
-SHA512 (garden-1.10.0.tar.gz) = ce533160535e181da43f1bb685497b41a22fe7e33df7cc93039b5f707c029449197d560fc19930309275e09b11c36ef034f5394371591f9d1c112358a22c3fac
-Size (garden-1.10.0.tar.gz) = 145336 bytes
+BLAKE2s (garden-1.10.1.tar.gz) = bcd57c769fae49f6166f4d64c04d83ac76792adf1575ea2e44bf27866de4f091
+SHA512 (garden-1.10.1.tar.gz) = 9c24cbe3e1a1283252b1a25711b4c9c75c7640c82a00efd7f0ec488c89f9adb7810d0b9018efd8e908f37d55636051330c6d5418d35711fded6bca71093b6141
+Size (garden-1.10.1.tar.gz) = 145781 bytes
 BLAKE2s (getrandom-0.2.15.crate) = ac18905cf81fcf1cf0ad0b35776937b646a061e9c99c3ff7ab72cae34b8361f4
 SHA512 (getrandom-0.2.15.crate) = 04789a53d3f4a84862e1e8b2113641af67e471b468de1222470d5e6cef0015232463a2cf3c3518dc2a533b3983b175a7c8922da00665bcf71c1e4e279b67e6fb
 Size (getrandom-0.2.15.crate) = 37163 bytes
