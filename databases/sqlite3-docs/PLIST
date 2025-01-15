@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.138 2024/12/09 08:33:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.139 2025/01/15 15:23:41 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
 share/doc/sqlite3/aff_short.html
 share/doc/sqlite3/affcase1.html
+share/doc/sqlite3/amalg-v-canon.html
 share/doc/sqlite3/amalgamation.html
 share/doc/sqlite3/appfileformat.html
 share/doc/sqlite3/appfunc.html
@@ -60,7 +61,7 @@ share/doc/sqlite3/c3ref/c_limit_attached.html
 share/doc/sqlite3/c3ref/c_lock_exclusive.html
 share/doc/sqlite3/c3ref/c_mutex_fast.html
 share/doc/sqlite3/c3ref/c_open_autoproxy.html
-share/doc/sqlite3/c3ref/c_prepare_normalize.html
+share/doc/sqlite3/c3ref/c_prepare_dont_log.html
 share/doc/sqlite3/c3ref/c_scanstat_complex.html
 share/doc/sqlite3/c3ref/c_scanstat_est.html
 share/doc/sqlite3/c3ref/c_serialize_nocopy.html
@@ -702,6 +703,7 @@ share/doc/sqlite3/releaselog/3_46_1.html
 share/doc/sqlite3/releaselog/3_47_0.html
 share/doc/sqlite3/releaselog/3_47_1.html
 share/doc/sqlite3/releaselog/3_47_2.html
+share/doc/sqlite3/releaselog/3_48_0.html
 share/doc/sqlite3/releaselog/3_4_0.html
 share/doc/sqlite3/releaselog/3_4_1.html
 share/doc/sqlite3/releaselog/3_4_2.html
