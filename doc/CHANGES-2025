@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.406 2025/01/15 15:26:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.407 2025/01/15 21:18:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/sqlite3-tcl to 3.48.0 [adam 2025-01-15]
 	Updated databases/py-apsw to 3.48.0.0 [adam 2025-01-15]
 	Updated devel/lemon to 1.0.3.48.0 [adam 2025-01-15]
+	Updated devel/garden to 1.10.1 [pin 2025-01-15]
