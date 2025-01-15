@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/15 13:28:29 manu Exp $
+bin/bfdd-beacon
+bin/bfdd-control
+man/man8/bfdd-beacon.8
+man/man8/bfdd-control.8
+share/examples/bfdd.conf
