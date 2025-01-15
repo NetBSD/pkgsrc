@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/06/02 17:34:54 pin Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/15 21:19:09 pin Exp $
 
-DISTNAME=	gitui-0.26.3
+DISTNAME=	gitui-0.27.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=extrawurst/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.70.0
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		pkg-config perl gmake
 
