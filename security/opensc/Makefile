@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.51 2024/12/28 08:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/01/15 12:36:53 adam Exp $
 
-DISTNAME=	opensc-0.26.0
+DISTNAME=	opensc-0.26.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSC/}
+GITHUB_PROJECT=	OpenSC
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/OpenSC/OpenSC/wiki
 COMMENT=	Smart Card drivers and middleware
 LICENSE=	gnu-lgpl-v2.1
-
-WRKSRC=		${WRKDIR}/OpenSC-${PKGVERSION_NOREV}
 
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
