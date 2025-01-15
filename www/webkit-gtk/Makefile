@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2024/12/27 08:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.269 2025/01/15 12:51:47 wiz Exp $
 
 DISTNAME=	webkitgtk-2.36.8
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk/}
@@ -17,8 +17,9 @@ NOT_FOR_PLATFORM=	NetBSD-[1-6].*-*
 
 TOOL_DEPENDS+=	gettext-tools>=0.18:../../devel/gettext-tools
 
-USE_LANGUAGES=	c c++17
-USE_TOOLS+=	automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++17
+USE_TOOLS+=		automake bash bison flex gdbus-codegen gmake perl pkg-config msgfmt
 
 # Enabling -gdwarf-2 hits GNU ar limits on file size.
 CTF_SUPPORTED=	no
