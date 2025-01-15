@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.405 2025/01/15 15:19:47 pho Exp $
+$NetBSD: CHANGES-2025,v 1.406 2025/01/15 15:26:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -545,3 +545,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-maxminddb to 2.6.3 [adam 2025-01-15]
 	Updated geography/py-geojson to 3.2.0 [adam 2025-01-15]
 	Updated pkgtools/pkgchkxx to 0.2.2 [pho 2025-01-15]
+	Updated databases/sqlite3 to 3.48.0 [adam 2025-01-15]
+	Updated databases/sqlite3-docs to 3.48.0 [adam 2025-01-15]
+	Updated databases/sqlite3-tcl to 3.48.0 [adam 2025-01-15]
+	Updated databases/py-apsw to 3.48.0.0 [adam 2025-01-15]
+	Updated devel/lemon to 1.0.3.48.0 [adam 2025-01-15]
