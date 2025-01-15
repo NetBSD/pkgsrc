@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.396 2025/01/15 09:32:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.397 2025/01/15 12:30:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -532,3 +532,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-scard to 2.2.1 [adam 2025-01-15]
 	Updated audio/SDL2_sound to 2.0.4 [adam 2025-01-15]
 	Updated multimedia/libvpx to 1.15.0 [adam 2025-01-15]
+	Updated textproc/py-tomli_w to 1.2.0 [adam 2025-01-15]
+	Updated devel/py-more-itertools to 10.6.0 [adam 2025-01-15]
