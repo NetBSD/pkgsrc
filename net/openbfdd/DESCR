@@ -1,0 +1,9 @@
+OpenBFDD is an open source package that provides a software based
+implantation of the Bidirectional Forwarding Detection (BFD)
+protocol. It is designed to run on a server. Its primary purpose
+is to allow the administrator to quickly take the server off-line
+when the core service, such as a bind or unbound server, goes down.
+This is done by providing a BFD "beacon", bfdd-beacon, that can
+communicate with a properly configured, BFD enabled, router. A
+control utility, bfdd-control, can be used to configure the running
+bfdd-beacon daemon, and to change the state of its BFD sessions.
