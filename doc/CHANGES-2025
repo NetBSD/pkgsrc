@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.404 2025/01/15 15:15:17 adam Exp $
+$NetBSD: CHANGES-2025,v 1.405 2025/01/15 15:19:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -544,3 +544,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/freedv to 1.4.2nb16 [gdt 2025-01-15]
 	Updated geography/py-maxminddb to 2.6.3 [adam 2025-01-15]
 	Updated geography/py-geojson to 3.2.0 [adam 2025-01-15]
+	Updated pkgtools/pkgchkxx to 0.2.2 [pho 2025-01-15]
