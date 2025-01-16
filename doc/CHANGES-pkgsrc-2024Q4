@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.6 2025/01/10 17:11:06 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.7 2025/01/16 19:34:27 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -33,3 +33,13 @@ lang/gcc6: install fix
 lang/gcc7-libs: install fix
 lang/gcc8-libs: install fix
 lang/gcc9-libs: install fix
+
+Pullup ticket #6929 - requested by morr
+editors/vim-share: security fix (heap buffer overflow)
+
+Pullup ticket #6930 - requested by gutteridge
+emulators/picodrive: build fix
+
+Pullup ticket #6931 - requested by leot
+net/rsync: security fix
+
