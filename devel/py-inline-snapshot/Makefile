@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/01/14 08:38:20 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/16 08:31:43 adam Exp $
 
-DISTNAME=	inline_snapshot-0.19.1
+DISTNAME=	inline_snapshot-0.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/inline_snapshot/}
