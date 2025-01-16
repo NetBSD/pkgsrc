@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2025/01/13 20:46:08 vins Exp $
+# $NetBSD: options.mk,v 1.6 2025/01/16 19:51:21 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -128,7 +128,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OPENCL=OFF
 ## OSS
 ## Provides sound device detection.
 ##
-.if !empty(PKG_OPTIONS:Mdbus)
+.if !empty(PKG_OPTIONS:Moss)
 .  include ".include "../../mk/oss.buildlink3.mk"
 .endif
 
