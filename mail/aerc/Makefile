@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/09/06 18:48:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/16 14:24:36 ktnb Exp $
 
-DISTNAME=	0.18.2
+DISTNAME=	0.19.0
 PKGNAME=	aerc-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	https://git.sr.ht/~rjarry/aerc/archive/
 DIST_SUBDIR=	aerc
@@ -13,6 +12,7 @@ COMMENT=	Terminal email client written in Go
 LICENSE=	mit
 
 TOOL_DEPENDS+=	scdoc-[0-9]*:../../textproc/scdoc
+DEPENDS+=	w3m-[0-9]*:../../www/w3m
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
