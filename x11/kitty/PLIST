@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/12/26 16:50:43 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/01/16 15:43:02 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -345,6 +345,9 @@ lib/kitty/kitty/options/utils.pyo
 lib/kitty/kitty/os_window_size.py
 lib/kitty/kitty/os_window_size.pyc
 lib/kitty/kitty/os_window_size.pyo
+lib/kitty/kitty/progress.py
+lib/kitty/kitty/progress.pyc
+lib/kitty/kitty/progress.pyo
 lib/kitty/kitty/rc/__init__.py
 lib/kitty/kitty/rc/__init__.pyc
 lib/kitty/kitty/rc/__init__.pyo
