@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.411 2025/01/16 01:06:37 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.412 2025/01/16 01:11:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/tokei to 13.0.0.alpha8 [pin 2025-01-15]
 	Updated multimedia/t-rec to 0.7.8 [pin 2025-01-15]
 	Updated biology/ncbi-blast+ to 2.16.0 [bacon 2025-01-16]
+	Updated net/rsync to 3.4.1 [tnn 2025-01-16]
