@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.413 2025/01/16 06:31:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.414 2025/01/16 08:14:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -558,3 +558,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rsync to 3.4.1 [tnn 2025-01-16]
 	Updated devel/libuv to 1.50.0 [adam 2025-01-16]
 	Updated net/openvpn to 2.6.13 [adam 2025-01-16]
+	Updated net/py-pynng to 0.8.1 [adam 2025-01-16]
+	Updated devel/py-zope.deprecation to 5.1 [adam 2025-01-16]
