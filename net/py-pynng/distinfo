@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2024/08/10 07:34:38 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/01/16 08:11:29 adam Exp $
 
-BLAKE2s (pynng-0.8.0.tar.gz) = 2c288366e7d835a96c91069129c09d1253f9ace406d1d48a1d14a4ea96500a47
-SHA512 (pynng-0.8.0.tar.gz) = f4ad5fa1a35a78b47672feb2047c91c4cc84109e37c74dbceee9db99e388534c1dfad510620307e64b981b590569f704b8041d144bf785e08489eb5a148e525a
-Size (pynng-0.8.0.tar.gz) = 6365314 bytes
+BLAKE2s (pynng-0.8.1.tar.gz) = 712036126d8541d8aa108c38a8117d622547a6fcc69096f9808cdeb255d4bb8b
+SHA512 (pynng-0.8.1.tar.gz) = b150a83b65169aa67aaf99d963ae43ede29ccf22f1ddc9989a0d999f32dd93412bbf464ad0c3eed7aa645e0f5e2726743d131e48276955dad034e219b23c93c4
+Size (pynng-0.8.1.tar.gz) = 6364925 bytes
 SHA1 (patch-mbedtls_library_net__sockets.c) = 31452021d414ed621cb5cf223883b98afa4643b6
 SHA1 (patch-nng_src_platform_posix_posix__thread.c) = 2cf9f0c291a0d5ca285479ce9bbd6b739011affc

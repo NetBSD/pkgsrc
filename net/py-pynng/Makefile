@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/16 08:11:29 adam Exp $
 
-DISTNAME=	pynng-0.8.0
+DISTNAME=	pynng-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pynng/}
@@ -13,15 +13,17 @@ LICENSE=	mit
 USE_TOOLS+=	cmake
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-cffi-[0-9]*:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-sniffio-[0-9]*:../../misc/py-sniffio
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-trio-[0-9]*:../../devel/py-test-trio
-# unpackaged: py-test-curio
-# unpackaged: py-curio
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
+.include "../../mk/compiler.mk"
+.if empty(PKGSRC_COMPILER:Mclang)
 .include "../../devel/libatomic/buildlink3.mk"
+.endif
+
 .include "../../lang/python/wheel.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
