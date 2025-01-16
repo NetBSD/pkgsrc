@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/04/26 09:04:31 nia Exp $
+# $NetBSD: Makefile,v 1.1.6.1 2025/01/16 19:31:12 bsiegert Exp $
 
 DISTNAME=	PicoDrive_1.93
 PKGNAME=	${DISTNAME:tl:S/_/-/1}
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notaz/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
@@ -58,6 +59,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/picodrive/skin
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/dlopen.buildlink3.mk"
