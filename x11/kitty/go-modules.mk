@@ -1,9 +1,9 @@
-# $NetBSD: go-modules.mk,v 1.6 2024/12/26 16:50:43 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.7 2025/01/16 15:43:03 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.zip
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.14.0.mod
-GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.14.0.zip
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.15.0.mod
+GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.15.0.zip
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.7.1.mod
 GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.7.1.zip
 GO_MODULE_FILES+=	github.com/disintegration/imaging/@v/v1.6.2.mod
@@ -54,8 +54,8 @@ GO_MODULE_FILES+=	golang.org/x/image/@v/v0.23.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20190916202348-b4ddaad3f8a3.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.0.0-20201204225414-ed752295db88.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.11.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.28.0.mod
-GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.28.0.zip
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.mod
+GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.29.0.zip
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.5.0.mod
 GO_MODULE_FILES+=	golang.org/x/sys/@v/v0.8.0.mod
 GO_MODULE_FILES+=	golang.org/x/text/@v/v0.3.0.mod
