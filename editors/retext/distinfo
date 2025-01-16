@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/03/20 13:56:10 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2025/01/16 23:17:40 gutteridge Exp $
 
-BLAKE2s (ReText-8.0.2.tar.gz) = 61328e2ed53392fa380861cd2970a6dc942566610ec1c83ee8a586003fd1db77
-SHA512 (ReText-8.0.2.tar.gz) = c7b543d91290c007c820751f39c009c1e5fb86eb59590d0c13610c9c7f13b6023ffee3d6aebc4665addacbefad0d17937a29e8201d08457cc1641a6d5c0019b0
-Size (ReText-8.0.2.tar.gz) = 546236 bytes
+BLAKE2s (retext-8.1.0.tar.gz) = 06a26c372d6f4120da18562f7f3fff9b47ad39389f1aa1d1e2c3ff443b40572a
+SHA512 (retext-8.1.0.tar.gz) = d4bdb39608b9cd74773255a95c940060b79fe578b045d00b1224d49a94f45e4ffcf8163fc3e9778b92509b7fe425a59d444054814dc2c5f70998dc865b7c7f8d
+Size (retext-8.1.0.tar.gz) = 569692 bytes

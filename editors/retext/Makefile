@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2025/01/13 22:29:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/16 23:17:40 gutteridge Exp $
 
-DISTNAME=	ReText-8.0.2
-PKGNAME=	${DISTNAME:tl}
+DISTNAME=	retext-8.1.0
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/ReText/}
 
@@ -15,17 +14,22 @@ DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-markups-[0-9]*:../../textproc/py-markups
 DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39  # py-markups
 
-USE_PKG_RESOURCES=	yes
+WHEEL_NAME=	ReText-${PKGVERSION_NOREV}
+
+INSTALLATION_DIRS+=	share/applications
 
 .include "../../mk/bsd.prefs.mk"
 
-# Workaround for PR#57445/50277 for netbsd-9 & netbsd-10 pre 2023-08-05
 post-install:
+# Upstream egg to wheel definition lost the installation of the desktop file.
+	${INSTALL_DATA} ${WRKSRC}/data/me.mitya57.ReText.desktop ${DESTDIR}${PREFIX}/share/applications/
+# Workaround for PR#57445/50277 for netbsd-9 & netbsd-10 pre 2023-08-05.
 .if ${OPSYS} == "NetBSD"
 	${MV} ${DESTDIR}${PREFIX}/bin/retext ${DESTDIR}${PREFIX}/bin/retext-py
 	${INSTALL_SCRIPT} ${FILESDIR}/retext.sh ${DESTDIR}${PREFIX}/bin/retext
@@ -33,5 +37,5 @@ post-install:
 .endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
