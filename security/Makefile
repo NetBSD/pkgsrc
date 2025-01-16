@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.968 2025/01/14 09:49:13 wiz Exp $
+# $NetBSD: Makefile,v 1.969 2025/01/16 18:00:00 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -316,6 +316,7 @@ SUBDIR+=	p5-Crypt-HSXKPasswd
 SUBDIR+=	p5-Crypt-IDEA
 SUBDIR+=	p5-Crypt-JWT
 SUBDIR+=	p5-Crypt-Juniper
+SUBDIR+=	p5-Crypt-LE
 SUBDIR+=	p5-Crypt-OpenPGP
 SUBDIR+=	p5-Crypt-OpenSSL-AES
 SUBDIR+=	p5-Crypt-OpenSSL-Bignum
