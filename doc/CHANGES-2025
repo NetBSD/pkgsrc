@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.424 2025/01/16 14:01:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.425 2025/01/16 14:24:51 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/fehqlibs to 26b [schmonz 2025-01-16]
 	Updated www/py-cherrypy to 18.10.0 [adam 2025-01-16]
 	Updated converters/py-emoji to 2.14.1 [adam 2025-01-16]
+	Updated mail/aerc to 0.19.0 [ktnb 2025-01-16]
