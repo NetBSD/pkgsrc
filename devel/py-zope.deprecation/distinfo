@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/06/18 12:29:13 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/01/16 08:13:56 adam Exp $
 
-BLAKE2s (zope.deprecation-5.0.tar.gz) = 2c22979ae84dafb43797404b6b14595749d71361c1896992bef869e63ba6464f
-SHA512 (zope.deprecation-5.0.tar.gz) = 11313626e4141c2f92805c7c533b32160f88bf45667cd5a53a867daad3172947e5ac80433893c515243276030400a8a8e3d3a623ea51cb2b15bd5a5a0927bc46
-Size (zope.deprecation-5.0.tar.gz) = 23353 bytes
+BLAKE2s (zope_deprecation-5.1.tar.gz) = ffb633de6fb6ad62eb9d321d84669a163c415d53a6ce6d2aeae2d8ef599d87eb
+SHA512 (zope_deprecation-5.1.tar.gz) = 77b32d3456c5456ffc36eec936b176cdec365fd4561dd2ac06c3222dd4360ef6339ba34601abb29e273eabc3562b6bcdac5627c35b8b95f083015ba118be7979
+Size (zope_deprecation-5.1.tar.gz) = 24453 bytes

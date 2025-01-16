@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2023/06/18 12:29:13 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/16 08:13:56 adam Exp $
 
-DISTNAME=	zope.deprecation-5.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	zope_deprecation-5.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.deprecation/}
 
@@ -10,9 +10,11 @@ HOMEPAGE=	https://github.com/zopefoundation/zope.deprecation
 COMMENT=	Zope hookable
 LICENSE=	zpl-2.1
 
+WHEEL_NAME=	${DISTNAME:S/_/./}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
