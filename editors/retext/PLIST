@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/08/10 14:10:40 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/16 23:17:40 gutteridge Exp $
 bin/retext
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE_GPL
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ReText/__init__.py
 ${PYSITELIB}/ReText/__init__.pyc
 ${PYSITELIB}/ReText/__init__.pyo
@@ -27,12 +27,16 @@ ${PYSITELIB}/ReText/editor.pyo
 ${PYSITELIB}/ReText/fakevimeditor.py
 ${PYSITELIB}/ReText/fakevimeditor.pyc
 ${PYSITELIB}/ReText/fakevimeditor.pyo
+${PYSITELIB}/ReText/filesystemmodel.py
+${PYSITELIB}/ReText/filesystemmodel.pyc
+${PYSITELIB}/ReText/filesystemmodel.pyo
 ${PYSITELIB}/ReText/highlighter.py
 ${PYSITELIB}/ReText/highlighter.pyc
 ${PYSITELIB}/ReText/highlighter.pyo
 ${PYSITELIB}/ReText/icons/application-exit.png
 ${PYSITELIB}/ReText/icons/application-pdf.png
 ${PYSITELIB}/ReText/icons/document-new.png
+${PYSITELIB}/ReText/icons/document-open-folder.png
 ${PYSITELIB}/ReText/icons/document-open-recent.png
 ${PYSITELIB}/ReText/icons/document-open.png
 ${PYSITELIB}/ReText/icons/document-preview.png
@@ -72,6 +76,7 @@ ${PYSITELIB}/ReText/locale/retext_eu.qm
 ${PYSITELIB}/ReText/locale/retext_fa.qm
 ${PYSITELIB}/ReText/locale/retext_fi.qm
 ${PYSITELIB}/ReText/locale/retext_fr.qm
+${PYSITELIB}/ReText/locale/retext_ga.qm
 ${PYSITELIB}/ReText/locale/retext_hr.qm
 ${PYSITELIB}/ReText/locale/retext_hu.qm
 ${PYSITELIB}/ReText/locale/retext_it.qm
@@ -120,4 +125,4 @@ ${PYSITELIB}/ReText/xsettings.pyc
 ${PYSITELIB}/ReText/xsettings.pyo
 share/applications/me.mitya57.ReText.desktop
 share/icons/hicolor/scalable/apps/retext.svg
-share/metainfo/me.mitya57.ReText.appdata.xml
+share/metainfo/me.mitya57.ReText.metainfo.xml
