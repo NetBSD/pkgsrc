@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/05/06 08:13:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/01/16 09:39:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -14,6 +14,9 @@ ${PYSITELIB}/import_export/_version.pyo
 ${PYSITELIB}/import_export/admin.py
 ${PYSITELIB}/import_export/admin.pyc
 ${PYSITELIB}/import_export/admin.pyo
+${PYSITELIB}/import_export/command_utils.py
+${PYSITELIB}/import_export/command_utils.pyc
+${PYSITELIB}/import_export/command_utils.pyo
 ${PYSITELIB}/import_export/declarative.py
 ${PYSITELIB}/import_export/declarative.pyc
 ${PYSITELIB}/import_export/declarative.pyo
@@ -77,6 +80,18 @@ ${PYSITELIB}/import_export/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/import_export/locale/zh_Hans/LC_MESSAGES/django.mo
 ${PYSITELIB}/import_export/locale/zh_Hans/LC_MESSAGES/django.po
+${PYSITELIB}/import_export/management/__init__.py
+${PYSITELIB}/import_export/management/__init__.pyc
+${PYSITELIB}/import_export/management/__init__.pyo
+${PYSITELIB}/import_export/management/commands/__init__.py
+${PYSITELIB}/import_export/management/commands/__init__.pyc
+${PYSITELIB}/import_export/management/commands/__init__.pyo
+${PYSITELIB}/import_export/management/commands/export.py
+${PYSITELIB}/import_export/management/commands/export.pyc
+${PYSITELIB}/import_export/management/commands/export.pyo
+${PYSITELIB}/import_export/management/commands/import.py
+${PYSITELIB}/import_export/management/commands/import.pyc
+${PYSITELIB}/import_export/management/commands/import.pyo
 ${PYSITELIB}/import_export/mixins.py
 ${PYSITELIB}/import_export/mixins.pyc
 ${PYSITELIB}/import_export/mixins.pyo
