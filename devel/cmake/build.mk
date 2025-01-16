@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.19 2024/11/10 19:58:30 adam Exp $
+# $NetBSD: build.mk,v 1.20 2025/01/16 07:48:08 pho Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -42,6 +42,8 @@
 # INSTALL_DIRS
 #	Directories relative to WRKSRC/CMAKE_BUILD_DIR in which to run the
 #	'install' step. Defaults to BUILD_DIRS.
+
+.include "../../mk/bsd.fast.prefs.mk"
 
 CMAKE_REQD?=	0
 .for version in ${CMAKE_REQD}
