@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.15 2024/11/14 15:08:25 gdt Exp $
+# $NetBSD: wheel.mk,v 1.16 2025/01/16 23:21:51 gutteridge Exp $
 #
 # Build and install Python wheels
 #
@@ -7,7 +7,7 @@
 # in the PEP (used when the build section is not present) is
 # setuptools and wheel, but setuptools as of 70.1 has enough wheel
 # functionality that wheel is not required.  Some packages use
-# different build systems, e.g. flit.
+# different build systems, e.g., flit.
 #
 # wheel.mk does not look for and parse pyproject.toml, and does not
 # support variables to declare the needed tools.  Therefore, packages
@@ -17,13 +17,17 @@
 
 # Variables:
 #
-# WHEELFILE:		path to the wheelfile to be installed
-#			only needs to be set if do-build is redefined
+# WHEELFILE:		Path to the wheelfile to be installed.
+#			Only needs to be set if do-build is redefined.
 #
 # USE_PYTEST:		If set to yes, depend on py-test and use it for testing.
 #			Default: yes
 #
-# WHEEL_ARGS:		additional arguments to pass during build of the wheel
+# WHEEL_ARGS:		Additional arguments to pass during build of the wheel.
+#
+# WHEEL_NAME:		Name that appears in paths to installed package metadata.
+#			Can be set if DISTNAME is not the same as the project
+#			name defined in pyproject.toml.
 
 PY_PATCHPLIST?=	yes
 PYSETUPSUBDIR?=	# empty
