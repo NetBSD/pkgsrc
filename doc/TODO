@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25318 2025/01/15 12:28:38 wiz Exp $
+$NetBSD: TODO,v 1.25319 2025/01/16 16:30:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o blur6ex-0.3.462
 	o boolean-7.1
 	o bos-2.5
-	o botan-3.0.0
+	o botan-2.19.5
 	o bottlerocket-0.05b3
 	o box2d-3.0.0
 	o bugzilla3-3.6.13
@@ -870,7 +870,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
 	o libtrace-4.0.16
-	o libvirt-10.0
+	o libvirt-11.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
 	o lincvs-2.1.4 [now called CrossVC]
