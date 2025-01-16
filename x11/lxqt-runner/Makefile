@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/15 12:55:31 pin Exp $
+# $NetBSD: Makefile,v 1.38 2025/01/16 13:40:19 pin Exp $
 
-DISTNAME=	lxqt-runner-2.1.0
+DISTNAME=	lxqt-runner-2.1.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
