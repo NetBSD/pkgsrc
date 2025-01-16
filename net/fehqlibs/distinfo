@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2024/10/07 00:40:58 schmonz Exp $
+$NetBSD: distinfo,v 1.28 2025/01/16 13:42:41 schmonz Exp $
 
-BLAKE2s (fehQlibs-26.tgz) = 518fc3931d692123d737876022ebea3e6cbcb1a3186ea9b0269cf9ff840288a7
-SHA512 (fehQlibs-26.tgz) = c25cd15228e0ddabbc24644c1e28c6499364b7e29e2271a8d30656a81cdd174ea44c27fc763ca629d22ca2923688b609b9dd583697cf56b81890402ff9bad19d
-Size (fehQlibs-26.tgz) = 88167 bytes
+BLAKE2s (fehQlibs-26b.tgz) = 6dc7ea09fce2cb240282aa185839a7a12dc18256ae8ba714d75d601445ea6b14
+SHA512 (fehQlibs-26b.tgz) = de9b97cba13b050cf3ae866f2bc902ec50c324108e683c7020104dc65432ddd516a5304763ca231772fb674aa806890ce09a1c78430107c00b621f8c98722c4f
+Size (fehQlibs-26b.tgz) = 88278 bytes
 SHA1 (patch-configure) = 0c61cf65135d2f874c6f2f9dcb456ead5cad1d30
 SHA1 (patch-install) = e95782d6864e854494f750562a48ebd238e59b71
 SHA1 (patch-src_Makefile) = fa1b3e11238280169c0b89464ffdce55b36003b5
