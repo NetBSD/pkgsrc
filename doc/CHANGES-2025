@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.414 2025/01/16 08:14:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.415 2025/01/16 08:31:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -560,3 +560,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/openvpn to 2.6.13 [adam 2025-01-16]
 	Updated net/py-pynng to 0.8.1 [adam 2025-01-16]
 	Updated devel/py-zope.deprecation to 5.1 [adam 2025-01-16]
+	Updated net/yt-dlp to 2025.1.15 [adam 2025-01-16]
+	Updated devel/py-inline-snapshot to 0.19.3 [adam 2025-01-16]
