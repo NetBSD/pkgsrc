@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.416 2025/01/16 08:48:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.417 2025/01/16 09:40:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -564,3 +564,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-inline-snapshot to 0.19.3 [adam 2025-01-16]
 	Updated devel/py-syrupy to 4.8.1 [adam 2025-01-16]
 	Updated textproc/py-phonenumbers to 8.13.52 [adam 2025-01-16]
+	Updated www/py-django-cms to 4.1.4 [adam 2025-01-16]
+	Updated www/py-django-import-export to 4.3.4 [adam 2025-01-16]
