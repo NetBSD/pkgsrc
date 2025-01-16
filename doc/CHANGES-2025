@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.429 2025/01/16 18:00:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.430 2025/01/16 22:26:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -579,3 +579,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kitty to 0.39.0 [ktnb 2025-01-16]
 	Updated www/palemoon to 33.5.1 [nia 2025-01-16]
 	Added security/p5-Crypt-LE version 0.39 [wiz 2025-01-16]
+	Updated textproc/py-sphinx-autodoc-typehints to 3.0.1 [adam 2025-01-16]
+	Updated textproc/py-sphinxygen to 1.0.6 [adam 2025-01-16]
+	Updated devel/py-ruff to 0.9.2 [adam 2025-01-16]
