@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.423 2025/01/16 13:42:45 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.424 2025/01/16 14:01:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -572,3 +572,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-runner to 2.1.1 [pin 2025-01-16]
 	Updated meta-pkgs/lxqt to 2.1.0nb4 [pin 2025-01-16]
 	Updated net/fehqlibs to 26b [schmonz 2025-01-16]
+	Updated www/py-cherrypy to 18.10.0 [adam 2025-01-16]
+	Updated converters/py-emoji to 2.14.1 [adam 2025-01-16]
