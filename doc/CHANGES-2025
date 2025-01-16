@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.428 2025/01/16 17:47:05 nia Exp $
+$NetBSD: CHANGES-2025,v 1.429 2025/01/16 18:00:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkgchkxx to 0.2.3 [pho 2025-01-16]
 	Updated x11/kitty to 0.39.0 [ktnb 2025-01-16]
 	Updated www/palemoon to 33.5.1 [nia 2025-01-16]
+	Added security/p5-Crypt-LE version 0.39 [wiz 2025-01-16]
