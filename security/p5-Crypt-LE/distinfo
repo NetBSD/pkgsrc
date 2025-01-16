@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/16 17:59:42 wiz Exp $
+
+BLAKE2s (Crypt-LE-0.39.tar.gz) = 02ab3d916a988ef5f36aaba1312c1da2a39b7351d094c0915ecf040606639151
+SHA512 (Crypt-LE-0.39.tar.gz) = 9963b637151706d8dd99b7f8ebda4012a9b547b3302e12d022d5368618e2be5ad5aa01fae95d376a31a2e3e26e6d16d6f2f7aab08a873b9ecb2f48a19efce615
+Size (Crypt-LE-0.39.tar.gz) = 71427 bytes
