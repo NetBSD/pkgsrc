@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/02/07 06:26:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/01/16 13:59:58 adam Exp $
 bin/cherryd-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -94,6 +94,9 @@ ${PYSITELIB}/cherrypy/lib/encoding.pyo
 ${PYSITELIB}/cherrypy/lib/gctools.py
 ${PYSITELIB}/cherrypy/lib/gctools.pyc
 ${PYSITELIB}/cherrypy/lib/gctools.pyo
+${PYSITELIB}/cherrypy/lib/headers.py
+${PYSITELIB}/cherrypy/lib/headers.pyc
+${PYSITELIB}/cherrypy/lib/headers.pyo
 ${PYSITELIB}/cherrypy/lib/httputil.py
 ${PYSITELIB}/cherrypy/lib/httputil.pyc
 ${PYSITELIB}/cherrypy/lib/httputil.pyo
