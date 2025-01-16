@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.417 2025/01/16 09:40:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.418 2025/01/16 13:10:14 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-phonenumbers to 8.13.52 [adam 2025-01-16]
 	Updated www/py-django-cms to 4.1.4 [adam 2025-01-16]
 	Updated www/py-django-import-export to 4.3.4 [adam 2025-01-16]
+	Updated biology/py-bcbio-gff to 0.7.1 [bacon 2025-01-16]
