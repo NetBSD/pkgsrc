@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2025/01/02 13:46:13 adam Exp $
+# $NetBSD: Makefile,v 1.87 2025/01/16 20:47:42 he Exp $
 
 DISTNAME=	pillow-11.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^p/P/}
@@ -32,4 +32,5 @@ DISTUTILS_BUILDDIR_IN_TEST_ENV=	yes
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
