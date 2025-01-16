@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/05 17:51:31 bacon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/16 13:10:08 bacon Exp $
 ${PYSITELIB}/BCBio/GFF/GFFOutput.py
 ${PYSITELIB}/BCBio/GFF/GFFOutput.pyc
 ${PYSITELIB}/BCBio/GFF/GFFOutput.pyo
