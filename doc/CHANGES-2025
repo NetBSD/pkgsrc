@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.426 2025/01/16 14:52:33 pho Exp $
+$NetBSD: CHANGES-2025,v 1.427 2025/01/16 15:43:20 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -576,3 +576,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/py-emoji to 2.14.1 [adam 2025-01-16]
 	Updated mail/aerc to 0.19.0 [ktnb 2025-01-16]
 	Updated pkgtools/pkgchkxx to 0.2.3 [pho 2025-01-16]
+	Updated x11/kitty to 0.39.0 [ktnb 2025-01-16]
