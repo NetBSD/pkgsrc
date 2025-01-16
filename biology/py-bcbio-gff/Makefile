@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2023/11/05 17:51:31 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/16 13:10:08 bacon Exp $
 
-DISTNAME=	bcbio-gff-0.7.0
-PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.7.0
+DISTNAME=	bcbio-gff-${PKGVERSION_NOREV}
+PKGNAME=	${PYPKGPREFIX}-bcbio-gff-0.7.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcbio-gff/}
 
