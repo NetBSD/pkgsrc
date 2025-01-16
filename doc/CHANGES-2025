@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.420 2025/01/16 13:39:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.421 2025/01/16 13:40:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/py-bcbio-gff to 0.7.1 [bacon 2025-01-16]
 	Updated x11/alacritty to 0.15.0 [pin 2025-01-16]
 	Updated x11/lxqt-panel to 2.1.4 [pin 2025-01-16]
+	Updated x11/lxqt-runner to 2.1.1 [pin 2025-01-16]
