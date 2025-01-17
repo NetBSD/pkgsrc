@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.441 2025/01/17 20:18:33 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.442 2025/01/17 22:40:17 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -597,3 +597,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-bugzilla to 3.3.0 [adam 2025-01-17]
 	Updated devel/py-debugpy to 1.8.12 [adam 2025-01-17]
 	Updated x11/xteddy to 2.2 [ktnb 2025-01-17]
+	Updated comms/asterisk19 to 19.8.1nb9 [gavan 2025-01-17]
+	Updated comms/asterisk21 to 21.5.0nb4 [gavan 2025-01-17]
+	Updated comms/asterisk22 to 22.0.0nb4 [gavan 2025-01-17]
+	Updated comms/asterisk19 to 19.8.1nb9 [gavan 2025-01-17]
