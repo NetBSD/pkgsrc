@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/12/05 16:54:05 nia Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2025/01/17 10:11:52 bsiegert Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PKGNAME=	palemoon-33.5.0
+PKGNAME=	palemoon-33.5.1
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PKGVERSION_NOREV}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20241204.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20250115.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
