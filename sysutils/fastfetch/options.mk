@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2025/01/17 15:32:01 vins Exp $
+# $NetBSD: options.mk,v 1.8 2025/01/17 16:28:09 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -16,8 +16,6 @@ CHECK_BUILTIN.pthread:= no
 .if ${USE_BUILTIN.pthread:tl} == yes
 PKG_SUGGESTED_OPTIONS+=	threads
 .endif
-
-.include "../../mk/bsd.prefs.mk"
 
 .if  ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio sqlite3
