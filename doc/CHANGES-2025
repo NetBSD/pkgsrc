@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.435 2025/01/17 10:19:56 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.436 2025/01/17 10:33:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/gping to 1.19.0 [pin 2025-01-17]
 	Updated devel/rust-bindgen to 0.71.1 [pin 2025-01-17]
 	Updated lang/go-bin to 1.22.10 [bsiegert 2025-01-17]
+	Updated lang/go122 to 1.22.11 [bsiegert 2025-01-17]
