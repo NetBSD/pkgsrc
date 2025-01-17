@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/02/29 14:23:09 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/17 09:59:08 pin Exp $
 
-DISTNAME=	rust-bindgen-0.69.4
+DISTNAME=	rust-bindgen-0.71.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rust-lang/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 
 .include "cargo-depends.mk"
 
+RUST_REQ=		1.70.0
 INSTALLATION_DIRS=	bin
 
 do-install:
