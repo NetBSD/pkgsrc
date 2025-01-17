@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2025/01/08 14:37:36 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/17 17:44:22 rhialto Exp $
 #
 
 DISTNAME=	oorexx-5.0.0-12583
 PKGNAME=	${DISTNAME:C/-[0-9]*$//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx/${PKGVERSION_NOREV}/}
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=oorexx/oorexx-docs/${PKGVERSION_NOREV}/}
