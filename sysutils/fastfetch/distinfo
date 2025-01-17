@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/01/13 20:46:08 vins Exp $
+$NetBSD: distinfo,v 1.5 2025/01/17 15:32:01 vins Exp $
 
 BLAKE2s (fastfetch-2.34.1.tar.gz) = a5e6fc60ee3376e5f054e12ce209bc3e4f4b7d2118b76d5ede064873e85620d7
 SHA512 (fastfetch-2.34.1.tar.gz) = 026b71c8d6ad5d5683ededf173d4cb2e936b3e934c7f27227fa7c5f665b9628717e90413626a4fab25fa5f5fde50cae6cdeb75621d6a2cac1ca6368c943293de
 Size (fastfetch-2.34.1.tar.gz) = 1168310 bytes
-SHA1 (patch-CMakeLists.txt) = a440d81fa17de272654da37d0ca8ae680b8d776f
-SHA1 (patch-src_detection_memory_memory__nbsd.c) = 658a4b61a0b80edb79d59a14a2038e5f35e418e0
-SHA1 (patch-src_logo_ascii_netbsd__small.txt) = f339c1e985be6d2fe3d7c522e8cfa9a7ceefd430
-SHA1 (patch-src_logo_builtin.c) = 449ef2d350db6c5e70bf974859a0f6f39252242a
