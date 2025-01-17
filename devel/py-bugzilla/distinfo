@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/29 18:57:35 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2025/01/17 19:29:03 adam Exp $
 
-BLAKE2s (python-bugzilla-3.2.0.tar.gz) = d92cf6d3e3defd7f44349756507f631041851581395b3a303159d692201f441d
-SHA512 (python-bugzilla-3.2.0.tar.gz) = 215945a0ffd637be5567839303a738a0eef74427838bf0074a5f0ab6022306f47fc0dd5c43a3513b627fb458711f38046321ee9c2c3d43b61ffc577d6dd12375
-Size (python-bugzilla-3.2.0.tar.gz) = 114279 bytes
-SHA1 (patch-bugzilla___session.py) = 134ed66dae860195941dfc9c908b525a11112246
+BLAKE2s (python_bugzilla-3.3.0.tar.gz) = d7bfce4a6e448a3f7592235e095600762e897d8bddb8f7cc3f339b58e413c461
+SHA512 (python_bugzilla-3.3.0.tar.gz) = e8e015575a4d2540e351628099642d586bfeefdc8fca0b1e2de802db4ef91b26952d84b5073ef39a6e3a54b181b1937f169c4477267f777f5a9551a5757cacbf
+Size (python_bugzilla-3.3.0.tar.gz) = 120711 bytes
