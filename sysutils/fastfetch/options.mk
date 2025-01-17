@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2025/01/16 19:51:21 vins Exp $
+# $NetBSD: options.mk,v 1.7 2025/01/17 15:32:01 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.server=	wayland x11
 PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
 PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl osmesa \
-			oss pulseaudio python sqlite3 threads wayland x11 xfce4-wm
+			python sqlite3 threads xfce4-wm
 PKG_SUGGESTED_OPTIONS=	glib2 libdrm opencl osmesa x11
 
 CHECK_BUILTIN.pthread:= yes
@@ -129,7 +129,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OPENCL=OFF
 ## Provides sound device detection.
 ##
 .if !empty(PKG_OPTIONS:Moss)
-.  include ".include "../../mk/oss.buildlink3.mk"
+.  include "../../mk/oss.buildlink3.mk"
 .endif
 
 ##
