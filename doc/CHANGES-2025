@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.431 2025/01/16 23:17:58 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.432 2025/01/17 08:27:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -583,3 +583,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinxygen to 1.0.6 [adam 2025-01-16]
 	Updated devel/py-ruff to 0.9.2 [adam 2025-01-16]
 	Updated editors/retext to 8.1.0 [gutteridge 2025-01-16]
+	Updated textproc/py-referencing to 0.36.1 [adam 2025-01-17]
+	Updated www/py-djangocms-attributes-field to 4.0.0 [adam 2025-01-17]
+	Updated www/py-djangocms-link to 5.0.0 [adam 2025-01-17]
