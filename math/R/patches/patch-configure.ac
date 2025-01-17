@@ -1,10 +1,10 @@
-$NetBSD: patch-configure.ac,v 1.9 2024/05/27 20:45:14 mef Exp $
+$NetBSD: patch-configure.ac,v 1.10 2025/01/17 22:12:09 brook Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
 
---- configure.ac.orig	2024-03-27 08:02:03.000000000 +0900
-+++ configure.ac	2024-04-29 00:00:51.788804133 +0900
+--- configure.ac.orig	2024-03-26 23:02:03.000000000 +0000
++++ configure.ac
 @@ -33,6 +33,7 @@ m4_define([R_VERSION],
  AC_INIT([R],[R_VERSION],[https://bugs.r-project.org],[R],[https://www.r-project.org])
  AC_CONFIG_SRCDIR([src/include/Defn.h])
@@ -27,7 +27,7 @@ NetBSD, FreeBSD, DragonFly, Darwin and Solaris fixes
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
 -  LIBR0="-L\"\$(R_HOME)/lib\$(R_ARCH)\""
-+  LIBR0="-Wl,-R${prefix}/lib/R/lib\$(R_ARCH) -L\"\$(R_HOME)/lib\$(R_ARCH)\""
++  LIBR0="${COMPILER_RPATH_FLAG}\"\$(R_HOME)/lib\$(R_ARCH)\" -L\"\$(R_HOME)/lib\$(R_ARCH)\""
    LIBR1=-lR
  else
    LIBR0=
