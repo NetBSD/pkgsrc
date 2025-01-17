@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.439 2025/01/17 19:21:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.440 2025/01/17 19:30:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -594,3 +594,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/bacon to 3.8.0 [pin 2025-01-17]
 	Updated devel/catch2 to 3.8.0 [adam 2025-01-17]
 	Updated devel/bpython to 0.25 [adam 2025-01-17]
+	Updated devel/py-bugzilla to 3.3.0 [adam 2025-01-17]
+	Updated devel/py-debugpy to 1.8.12 [adam 2025-01-17]
