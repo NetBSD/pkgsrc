@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2024/10/21 05:12:44 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2025/01/17 22:39:53 gavan Exp $
 
 BLAKE2s (asterisk-22.0.0/asterisk-22.0.0.tar.gz) = 2447fca0966c8d19d71c11a9271c6a4aa28fbba36aaff0afacc0fa778fc643ee
 SHA512 (asterisk-22.0.0/asterisk-22.0.0.tar.gz) = fa2c530a81f7351369229b2a36ac229a75d7a1ce8c3cdae0340be331979246ecee1e4f90c31fb6bc645cc2066280d40e2385027aedc6bd2c205426b2164e1fc5
@@ -23,7 +23,7 @@ SHA1 (patch-apps_app__minivm.c) = 22ee6ebfbe205baf0acf46ab16c94fea1750f2fb
 SHA1 (patch-apps_app__queue.c) = fdf7cf202b60e24cd9227f7e461bbd541565d602
 SHA1 (patch-apps_app__sms.c) = ad65b3cb2a30489551101f7534c691cd1155d18f
 SHA1 (patch-apps_app__voicemail.c) = 5276457466fde27494bf43fd6d306397bc4ff97f
-SHA1 (patch-build__tools_make__xml__documentation) = b909cac9a847e8d0a0c30d9ee97d6d8de5f43a12
+SHA1 (patch-build__tools_make__xml__documentation) = 2c617cfdc96b1ddf51736205b83e1b737c110ad9
 SHA1 (patch-build__tools_mkpkgconfig) = 7fab8fcf46d9f8a3b98455674fec6307ec472b23
 SHA1 (patch-cdr_cdr__pgsql.c) = 82b002a1f5ed3b7361a98e2bffb5cea8833949b8
 SHA1 (patch-cel_cel__pgsql.c) = b280efab2b035ce60be268bac9bc8824910b2b8f
