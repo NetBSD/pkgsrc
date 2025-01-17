@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2023/05/07 12:46:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/17 19:21:09 adam Exp $
 bin/bpdb
 bin/bpython
-bin/bpython-curses
 bin/bpython-urwid
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bpdb/__init__.py
 ${PYSITELIB}/bpdb/__init__.pyc
 ${PYSITELIB}/bpdb/__init__.pyo
@@ -39,9 +38,6 @@ ${PYSITELIB}/bpython/args.pyo
 ${PYSITELIB}/bpython/autocomplete.py
 ${PYSITELIB}/bpython/autocomplete.pyc
 ${PYSITELIB}/bpython/autocomplete.pyo
-${PYSITELIB}/bpython/cli.py
-${PYSITELIB}/bpython/cli.pyc
-${PYSITELIB}/bpython/cli.pyo
 ${PYSITELIB}/bpython/config.py
 ${PYSITELIB}/bpython/config.pyc
 ${PYSITELIB}/bpython/config.pyo
@@ -216,14 +212,11 @@ ${PYSITELIB}/bpython/test/test_simpleeval.pyo
 ${PYSITELIB}/bpython/translations/__init__.py
 ${PYSITELIB}/bpython/translations/__init__.pyc
 ${PYSITELIB}/bpython/translations/__init__.pyo
-${PYSITELIB}/bpython/translations/de/LC_MESSAGES/bpython.mo
-${PYSITELIB}/bpython/translations/es_ES/LC_MESSAGES/bpython.mo
-${PYSITELIB}/bpython/translations/fr_FR/LC_MESSAGES/bpython.mo
-${PYSITELIB}/bpython/translations/it_IT/LC_MESSAGES/bpython.mo
-${PYSITELIB}/bpython/translations/nl_NL/LC_MESSAGES/bpython.mo
 ${PYSITELIB}/bpython/urwid.py
 ${PYSITELIB}/bpython/urwid.pyc
 ${PYSITELIB}/bpython/urwid.pyo
+man/man1/bpython.1
+man/man5/bpython-config.5
 share/applications/org.bpython-interpreter.bpython.desktop
 share/metainfo/org.bpython-interpreter.bpython.metainfo.xml
 share/pixmaps/bpython.png
