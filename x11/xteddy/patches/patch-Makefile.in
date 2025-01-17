@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/01/17 20:18:18 ktnb Exp $
+
+Include the X libs
+
+--- Makefile.in.orig	2025-01-13 17:59:27.720893995 +0000
++++ Makefile.in
+@@ -58,9 +58,10 @@ DEFAULT_INCLUDES = -I.@am__isrc@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
++	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) $(X_CFLAGS)
+ CCLD = $(CC)
+-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
++LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@ \
++	${X_LIBS} ${X_EXTRA_LIBS} ${X_PRE_LIBS}
+ SOURCES = $(xteddy_SOURCES)
+ DIST_SOURCES = $(xteddy_SOURCES)
+ RECURSIVE_TARGETS = all-recursive check-recursive dvi-recursive \
