@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/08/03 19:28:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/17 10:19:43 bsiegert Exp $
 
-PKGNAME=	go-bin-1.21.5
+PKGNAME=	go-bin-1.22.10
 CATEGORIES=	lang
 MASTER_SITES=	https://dl.google.com/go/
 
@@ -19,8 +19,8 @@ WRKSRC=		${WRKDIR}/go
 
 REPLACE_PERL+=			src/*/*.pl src/*/*/*.pl
 REPLACE_PERL+=			src/net/http/cgi/testdata/test.cgi
-REPLACE_BASH+=			*/*.bash */*/*.bash */*/*/*.bash */*/*/*/*/*/*.bash
-REPLACE_BASH+=			*/*/*/*/*/*/*/*.bash
+REPLACE_BASH+=			*/*.bash */*/*.bash */*/*/*.bash */*/*/*/*.bash
+REPLACE_BASH+=			*/*/*/*/*/*/*.bash */*/*/*/*/*/*/*.bash
 REPLACE_BASH+=			*/*/*.sh */*/*/*.sh */*/*/*/*.sh */*/*/*/*/*/*/*.sh
 REPLACE_BASH+=			misc/arm/a misc/wasm/go_js_wasm_exec
 REPLACE_BASH+=			misc/wasm/go_wasip1_wasm_exec
