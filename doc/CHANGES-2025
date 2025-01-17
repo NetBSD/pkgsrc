@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.434 2025/01/17 09:59:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.435 2025/01/17 10:19:56 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -588,3 +588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-djangocms-link to 5.0.0 [adam 2025-01-17]
 	Updated net/gping to 1.19.0 [pin 2025-01-17]
 	Updated devel/rust-bindgen to 0.71.1 [pin 2025-01-17]
+	Updated lang/go-bin to 1.22.10 [bsiegert 2025-01-17]
