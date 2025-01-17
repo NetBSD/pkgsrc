@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/01/02 19:53:12 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/17 10:33:08 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go123/CONTRIBUTING.md
@@ -475,6 +475,7 @@ go123/src/cmd/cgo/internal/test/testx.go
 go123/src/cmd/cgo/internal/test/typeparam.go
 go123/src/cmd/cgo/internal/testcarchive/carchive_test.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo/libgo.go
+go123/src/cmd/cgo/internal/testcarchive/testdata/libgo10/a.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo2/libgo2.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo3/libgo3.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo4/libgo4.go
@@ -483,6 +484,7 @@ go123/src/cmd/cgo/internal/testcarchive/testdata/libgo7/sink.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo8/a.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/libgo9/a.go
 go123/src/cmd/cgo/internal/testcarchive/testdata/main.c
+go123/src/cmd/cgo/internal/testcarchive/testdata/main10.c
 go123/src/cmd/cgo/internal/testcarchive/testdata/main2.c
 go123/src/cmd/cgo/internal/testcarchive/testdata/main3.c
 go123/src/cmd/cgo/internal/testcarchive/testdata/main4.c
@@ -796,6 +798,7 @@ go123/src/cmd/compile/internal/importer/gcimporter_test.go
 go123/src/cmd/compile/internal/importer/iimport.go
 go123/src/cmd/compile/internal/importer/support.go
 go123/src/cmd/compile/internal/importer/testdata/a.go
+go123/src/cmd/compile/internal/importer/testdata/alias.go
 go123/src/cmd/compile/internal/importer/testdata/b.go
 go123/src/cmd/compile/internal/importer/testdata/exports.go
 go123/src/cmd/compile/internal/importer/testdata/generics.go
@@ -7685,6 +7688,7 @@ go123/src/net/sendfile_linux.go
 go123/src/net/sendfile_stub.go
 go123/src/net/sendfile_test.go
 go123/src/net/sendfile_unix_alt.go
+go123/src/net/sendfile_unix_test.go
 go123/src/net/sendfile_windows.go
 go123/src/net/server_test.go
 go123/src/net/smtp/auth.go
