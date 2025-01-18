@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/09/13 19:25:48 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/18 19:52:47 he Exp $
 
 DISTNAME=	zopfli-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,4 +23,5 @@ do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/egg.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
