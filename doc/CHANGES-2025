@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.443 2025/01/17 22:41:24 gavan Exp $
+$NetBSD: CHANGES-2025,v 1.444 2025/01/18 01:26:10 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -600,3 +600,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/asterisk19 to 19.8.1nb9 [gavan 2025-01-17]
 	Updated comms/asterisk21 to 21.5.0nb4 [gavan 2025-01-17]
 	Updated comms/asterisk22 to 22.0.0nb4 [gavan 2025-01-17]
+	Updated devel/ruby-jirametrics to 2.9 [schmonz 2025-01-18]
