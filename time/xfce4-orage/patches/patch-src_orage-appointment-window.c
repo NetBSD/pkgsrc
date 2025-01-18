@@ -1,10 +1,10 @@
-$NetBSD: patch-src_appointment.c,v 1.2 2023/02/11 01:26:12 gutteridge Exp $
+$NetBSD: patch-src_orage-appointment-window.c,v 1.1 2025/01/18 16:59:13 bsiegert Exp $
 
 Set _XOPEN_SOURCE correctly on SunOS.
 
---- src/appointment.c.orig	2023-01-27 10:02:10.000000000 +0000
-+++ src/appointment.c
-@@ -25,7 +25,9 @@
+--- src/orage-appointment-window.c.orig	2025-01-18 16:23:05.743471042 +0000
++++ src/orage-appointment-window.c
+@@ -24,7 +24,9 @@
  #  include <config.h>
  #endif
  
