@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.446 2025/01/18 09:34:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.447 2025/01/18 13:52:28 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/py-crytic-compile to 0.3.8 [adam 2025-01-18]
 	Updated misc/py-trove-classifiers to 2025.1.15.22 [adam 2025-01-18]
 	Updated textproc/py-openapi-schema-validator to 0.6.3 [adam 2025-01-18]
+	Updated biology/stacks to 2.68 [bacon 2025-01-18]
