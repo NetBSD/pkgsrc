@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.450 2025/01/18 16:59:53 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.451 2025/01/18 17:23:25 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -609,3 +609,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkgchkxx to 0.2.4 [pho 2025-01-18]
 	Updated net/wget2 to 2.2.0 [ryoon 2025-01-18]
 	Updated time/xfce4-orage to 4.20.0 [bsiegert 2025-01-18]
+	Updated meta-pkgs/xfce4 to 4.20.0 [bsiegert 2025-01-18]
