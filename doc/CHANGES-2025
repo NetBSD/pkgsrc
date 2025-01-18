@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.449 2025/01/18 15:10:40 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.450 2025/01/18 16:59:53 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -608,3 +608,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/stacks to 2.68 [bacon 2025-01-18]
 	Updated pkgtools/pkgchkxx to 0.2.4 [pho 2025-01-18]
 	Updated net/wget2 to 2.2.0 [ryoon 2025-01-18]
+	Updated time/xfce4-orage to 4.20.0 [bsiegert 2025-01-18]
