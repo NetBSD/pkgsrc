@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2023/08/14 05:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/18 13:52:23 bacon Exp $
 
-DISTNAME=	stacks-2.60
-PKGREVISION=	3
+DISTNAME=	stacks-2.68
 CATEGORIES=	biology
 MASTER_SITES=	http://catchenlab.life.illinois.edu/stacks/source/
 
@@ -10,17 +9,19 @@ HOMEPAGE=	http://catchenlab.life.illinois.edu/stacks/
 COMMENT=	Software pipeline for building loci from short-read sequences
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=	c c++14
-USE_TOOLS+=	bash perl:run
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++14
+USE_TOOLS+=		bash perl:run
+GNU_CONFIGURE=		yes
 
 REPLACE_BASH+=		scripts/stacks-count-reads-per-sample-per-locus
-REPLACE_BASH+=		scripts/stacks-dist-extract
 REPLACE_BASH+=		scripts/stacks-gdb
 REPLACE_BASH+=		scripts/stacks-samtools-tview
 REPLACE_PERL=		scripts/*.pl
 REPLACE_PYTHON+=	scripts/*.py
+REPLACE_PYTHON+=	scripts/stacks-dist-extract
 REPLACE_PYTHON+=	scripts/stacks-integrate-alignments
+REPLACE_PYTHON+=	scripts/stacks-private-alleles
 
 REPLACE_INTERPRETER+=	Rscript
 REPLACE.Rscript.old=	.*Rscript
@@ -35,6 +36,9 @@ SUBST_CLASSES+=		sed
 SUBST_STAGE.sed=	pre-configure
 SUBST_FILES.sed=	Makefile.in
 SUBST_SED.sed=		-e 's|sed -i.bkp|/usr/bin/sed -i .bkp|'
+CFLAGS+=		-Xpreprocessor -fopenmp
+
+.include "../../parallel/openmp/buildlink3.mk"
 .else
 # macOS clang lacks OpenMP
 CFLAGS+=		-fopenmp
