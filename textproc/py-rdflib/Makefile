@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/11/16 20:50:14 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/18 09:26:27 adam Exp $
 
-DISTNAME=	rdflib-7.1.1
+DISTNAME=	rdflib-7.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
@@ -12,8 +12,6 @@ LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.4.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1.0:../../devel/py-pyparsing
-TEST_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-TEST_DEPENDS+=	${PYPKGPREFIX}-networkx-[0-9]*:../../math/py-networkx
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
