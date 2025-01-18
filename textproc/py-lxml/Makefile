@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2024/11/14 22:21:55 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2025/01/18 19:36:41 he Exp $
 
 DISTNAME=	lxml-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -41,4 +41,5 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.9.12
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.34
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
