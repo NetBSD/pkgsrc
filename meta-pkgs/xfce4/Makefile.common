@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2025/01/03 04:08:13 gutteridge Exp $
+# $NetBSD: Makefile.common,v 1.79 2025/01/18 17:22:50 bsiegert Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by devel/xfce4-conf/Makefile
@@ -60,7 +60,7 @@ MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://www.xfce.org/
 LICENSE=		gnu-gpl-v2
 
-XFCE4_VERSION=		4.18.1
+XFCE4_VERSION=		4.20.0
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.148 2024/12/27 08:20:18 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2025/01/18 17:22:50 bsiegert Exp $
 
 META_PACKAGE=	yes
 
 .include "Makefile.common"
 
 DISTNAME=	xfce4-${XFCE4_VERSION}
-PKGREVISION=	22
 CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for the Xfce desktop environment
 
-DEPENDS+=	xfce4-tumbler>=4.18.2:../../x11/xfce4-tumbler
-DEPENDS+=	xfce4-appfinder>=4.18.1:../../sysutils/xfce4-appfinder
-DEPENDS+=	xfce4-desktop>=4.18.1:../../x11/xfce4-desktop
+DEPENDS+=	xfce4-tumbler>=4.20.0:../../x11/xfce4-tumbler
+DEPENDS+=	xfce4-appfinder>=4.20.0:../../sysutils/xfce4-appfinder
+DEPENDS+=	xfce4-desktop>=4.20.0:../../x11/xfce4-desktop
 DEPENDS+=	xfce4-mousepad>=0.6.3:../../editors/xfce4-mousepad
-DEPENDS+=	xfce4-panel>=4.18.6:../../x11/xfce4-panel
-DEPENDS+=	xfce4-power-manager>=4.18.4:../../sysutils/xfce4-power-manager
-DEPENDS+=	xfce4-settings>=4.18.6:../../x11/xfce4-settings
-DEPENDS+=	xfce4-session>=4.18.4:../../x11/xfce4-session
+DEPENDS+=	xfce4-panel>=4.20.0:../../x11/xfce4-panel
+DEPENDS+=	xfce4-power-manager>=4.20.0:../../sysutils/xfce4-power-manager
+DEPENDS+=	xfce4-settings>=4.20.0:../../x11/xfce4-settings
+DEPENDS+=	xfce4-session>=4.20.0:../../x11/xfce4-session
 DEPENDS+=	xfce4-terminal>=1.1.3:../../x11/xfce4-terminal
-DEPENDS+=	xfce4-thunar>=4.18.11:../../sysutils/xfce4-thunar
-DEPENDS+=	xfce4-wm>=4.18.0:../../wm/xfce4-wm
+DEPENDS+=	xfce4-thunar>=4.20.01:../../sysutils/xfce4-thunar
+DEPENDS+=	xfce4-wm>=4.20.0:../../wm/xfce4-wm
 DEPENDS+=	xfce4-wm-themes>=4.10.0:../../wm/xfce4-wm-themes
 DEPENDS+=	elementary-xfce-icon-theme>=0.20:../../graphics/elementary-xfce-icon-theme
 DEPENDS+=	gnome-themes-standard>=3.20.2:../../graphics/gnome-themes-standard
