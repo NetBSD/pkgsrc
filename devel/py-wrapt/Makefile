@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/01/14 11:32:05 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/18 19:45:20 he Exp $
 
 DISTNAME=	wrapt-1.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,4 +13,5 @@ LICENSE=	2-clause-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
