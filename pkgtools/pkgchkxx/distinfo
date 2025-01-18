@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2025/01/16 14:52:17 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/18 14:15:56 pho Exp $
 
-BLAKE2s (pkgchkxx-0.2.3.tar.gz) = 3f1432ea5a3a3baba655dcc22a5a646d37f68aced4588c28ac938f7fe8e7a731
-SHA512 (pkgchkxx-0.2.3.tar.gz) = 2c8ec19a4dc2b2ec4869d23840984cf9995d16e490a06a5253030bf5348f9bda44f53c4bff9cc24ac7e7eb2a94d7511e716d90820c0ce0a31c2e7600eeb771a8
-Size (pkgchkxx-0.2.3.tar.gz) = 537500 bytes
+BLAKE2s (pkgchkxx-0.2.4.tar.gz) = ed9d0ea8aebd9828f21c383af24ef61ae7b006180167748a0547b5b9c1b618cd
+SHA512 (pkgchkxx-0.2.4.tar.gz) = 6ed68a0ef7a80f7a0cc568adec4b5c440be80d0e2c69806fa9578e84e1e693731a413910fb92d25bcb8e45a228f5085a3e1e42e9be3390f03f8c078faa17c777
+Size (pkgchkxx-0.2.4.tar.gz) = 545636 bytes
