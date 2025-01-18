@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/29 10:35:50 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/01/18 09:29:10 adam Exp $
 
-BLAKE2s (crytic-compile-0.3.7.tar.gz) = 186b9985916650bcff6300afdc480f44aa41df5851404ff56a88f92e88a5e93a
-SHA512 (crytic-compile-0.3.7.tar.gz) = d3dcdcf74ae43c0a7a0a1b1a8a21ce7467404ad7e4c357eae58bc027d2f0baffab4b2012ea55bd77f8e729b097736ae47f2f3a729daee1683cc2a59c1bc260b0
-Size (crytic-compile-0.3.7.tar.gz) = 77788 bytes
+BLAKE2s (crytic_compile-0.3.8.tar.gz) = f6ad62985115ab462918c197824040cd585b1e0d0f5ca989a4705aa084f63fda
+SHA512 (crytic_compile-0.3.8.tar.gz) = edc6c28805c4a8387e70088f973001d1a794315b77684fb6156a758d406b97293fef76689fe39ed9edf45dd7bb0d41ef8ed0056567c0e7a84ba8f09b405bc573
+Size (crytic_compile-0.3.8.tar.gz) = 78650 bytes
