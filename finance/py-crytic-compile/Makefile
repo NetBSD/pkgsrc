@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/11/11 07:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/18 09:29:10 adam Exp $
 
-DISTNAME=	crytic-compile-0.3.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	crytic_compile-0.3.8
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	finance python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/crytic-compile/}
 
@@ -14,8 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cbor2-[0-9]*:../../devel/py-cbor2
 DEPENDS+=	${PYPKGPREFIX}-cryptodome>=3.4.6:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-solc-select>=1.0.4:../../lang/py-solc-select
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
