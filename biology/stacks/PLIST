@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2022/03/17 23:49:08 bacon Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/18 13:52:23 bacon Exp $
 bin/clone_filter
 bin/cstacks
 bin/denovo_map.pl
@@ -15,6 +15,7 @@ bin/stacks-dist-extract
 bin/stacks-gdb
 bin/stacks-hist2d-loci-samples-coverage
 bin/stacks-integrate-alignments
+bin/stacks-private-alleles
 bin/stacks-samtools-tview
 bin/tsv2bam
 bin/ustacks
