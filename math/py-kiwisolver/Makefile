@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/12/28 21:37:37 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/18 19:03:28 he Exp $
 
 DISTNAME=	kiwisolver-1.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,4 +20,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	39
 BUILDLINK_API_DEPENDS.py-cppy+=	${PYPKGPREFIX}-cppy>=1.3.0
 .include "../../devel/py-cppy/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
