@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/11/11 07:29:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/18 18:59:41 he Exp $
 
 DISTNAME=	Genshi-0.7.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -21,4 +21,5 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
