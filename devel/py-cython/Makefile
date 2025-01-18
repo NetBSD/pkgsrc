@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/11/11 07:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/01/18 18:55:08 he Exp $
 
 DISTNAME=	cython-3.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -41,4 +41,5 @@ pre-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
