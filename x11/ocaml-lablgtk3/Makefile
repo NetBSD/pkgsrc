@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2024/12/27 08:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/19 19:01:22 wiz Exp $
 
-GITHUB_PROJECT=	lablgtk
-GITHUB_TAG=	${VERSION}
-VERSION=	3.1.3
-DISTNAME=	${GITHUB_PROJECT}-${VERSION}
-PKGNAME=	ocaml-${GITHUB_PROJECT}3-${VERSION}
-PKGREVISION=	19
+DISTNAME=	lablgtk-3.1.5
+PKGNAME=	ocaml-${DISTNAME:S/lablgtk/lablgtk3/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=garrigue/}
+GITHUB_PROJECT=	lablgtk
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/garrigue/lablgtk/
