@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2023/10/23 14:55:11 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/19 16:56:52 taca Exp $
 
-DISTNAME=	rack-session-2.0.0
+DISTNAME=	rack-session-2.1.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
