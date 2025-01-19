@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.14 2025/01/15 13:49:57 leot Exp $
+# $NetBSD: go-modules.mk,v 1.15 2025/01/19 17:39:31 leot Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.1.zip
@@ -12,8 +12,8 @@ GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.1.3.mod
 GO_MODULE_FILES+=	github.com/!proton!mail/go-crypto/@v/v1.1.3.zip
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/agnivade/levenshtein/@v/v1.2.0.zip
-GO_MODULE_FILES+=	github.com/anderseknert/roast/@v/v0.5.0.mod
-GO_MODULE_FILES+=	github.com/anderseknert/roast/@v/v0.5.0.zip
+GO_MODULE_FILES+=	github.com/anderseknert/roast/@v/v0.6.0.mod
+GO_MODULE_FILES+=	github.com/anderseknert/roast/@v/v0.6.0.zip
 GO_MODULE_FILES+=	github.com/apparentlymart/go-textseg/v13/@v/v13.0.0.mod
 GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.mod
 GO_MODULE_FILES+=	github.com/beorn7/perks/@v/v1.0.1.zip

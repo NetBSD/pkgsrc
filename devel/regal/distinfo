@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2025/01/15 13:49:57 leot Exp $
+$NetBSD: distinfo,v 1.15 2025/01/19 17:39:31 leot Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -36,12 +36,12 @@ Size (github.com_agnivade_levenshtein_@v_v1.2.0.mod) = 190 bytes
 BLAKE2s (github.com_agnivade_levenshtein_@v_v1.2.0.zip) = 9d2cbf7019e0d368c1a1b0405dc6cfaf01ac30176356f73218a21e088107d273
 SHA512 (github.com_agnivade_levenshtein_@v_v1.2.0.zip) = 9325e7118637a01d5b63d2501387a39c38a984245dc4941ffe3ee58049b5944b7175a8fb7bf314fecbbec4a15dbaf5cf7ed4dc1420897c2c74da5b2f468c9971
 Size (github.com_agnivade_levenshtein_@v_v1.2.0.zip) = 1826579 bytes
-BLAKE2s (github.com_anderseknert_roast_@v_v0.5.0.mod) = 4988ae42e97d7dda61d67f2e1d0bed5f23d8f18ea08eadc5937a75f26839f056
-SHA512 (github.com_anderseknert_roast_@v_v0.5.0.mod) = 3a18c7c68b612ea92d9d97a1852a97b1f554a76f17a567b6bfbc3d60a8d35db325a1a9caaa8799fd2a9f2d5b3e13e4755922747404f611317f010bb5ba059941
-Size (github.com_anderseknert_roast_@v_v0.5.0.mod) = 852 bytes
-BLAKE2s (github.com_anderseknert_roast_@v_v0.5.0.zip) = 5fcc2023b01457bf18ad9af5d52dde492a17fef1fc59e02f8f484aaf46875b2c
-SHA512 (github.com_anderseknert_roast_@v_v0.5.0.zip) = a0c476e549e919817f4f16790e73e6e4217449ccfa1e5bb68f6590fb233b187c7ddcd9cb44b59503a23d219d223ebebc79d0c95c62a803eeb55ca6332dbd9f04
-Size (github.com_anderseknert_roast_@v_v0.5.0.zip) = 41222 bytes
+BLAKE2s (github.com_anderseknert_roast_@v_v0.6.0.mod) = 5653ea5d83247a63cc36029d6de720c5e55561dd13884d845d23f031a86fefc6
+SHA512 (github.com_anderseknert_roast_@v_v0.6.0.mod) = 5242ee307fd0e37dde395e37917cbef6191e222da97aa72422792da7940698511e1a5cc70b3e255d5f919de44dc1c86d0a961cf2aca6542d29cff66025304b2d
+Size (github.com_anderseknert_roast_@v_v0.6.0.mod) = 871 bytes
+BLAKE2s (github.com_anderseknert_roast_@v_v0.6.0.zip) = 62d563f37ef1ac288bc87170f4d6505dffba649ae40d7e6477193f09370fa41e
+SHA512 (github.com_anderseknert_roast_@v_v0.6.0.zip) = 8108e8a3239d9b63533c8df42d0a6130a4279e1f5cb9eeb31deac27f7a0783539511925470e30849c9607970503fad44b5d0de6ccc4daabbf9c7c7f1982f87e9
+Size (github.com_anderseknert_roast_@v_v0.6.0.zip) = 42407 bytes
 BLAKE2s (github.com_apparentlymart_go-textseg_v13_@v_v13.0.0.mod) = 31ae6fef8f1932f7dd1648241c532ffd355be7bf0301aea378e50814e1ffa75c
 SHA512 (github.com_apparentlymart_go-textseg_v13_@v_v13.0.0.mod) = 1357c0adcd02495b531d9211b9de107fcd5ee8032de2daa538924af522b3c8d29c9da8d84a573abfd7747b48078d7b762f77bdb28f97d663b28e993e1625fdbb
 Size (github.com_apparentlymart_go-textseg_v13_@v_v13.0.0.mod) = 57 bytes
@@ -708,9 +708,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (regal-0.30.0.tar.gz) = 58428305872b43bdbdb5f8b0ad78b77255e05b7e9db0aafc3176aa81129298c7
-SHA512 (regal-0.30.0.tar.gz) = b3fc8e21fda57f64ab70ce61b69eb8bf85612ddb1da5160074e71e6c9ad4b2d6420fe6b2cd866fba55174ad9cfa41d8794f2a506355181bbff0cd4bbc92a7f26
-Size (regal-0.30.0.tar.gz) = 3594739 bytes
+BLAKE2s (regal-0.30.2.tar.gz) = 0bc85000db2e82f9940cf92e6344fb3ff54f90f3dfa4c851b1b4e025a729eb59
+SHA512 (regal-0.30.2.tar.gz) = 7d908cf8c2fa257337509af052b3b6a692d7daf6135d7f93c47fb1427da8d16e46669f22d936eef1dbe04e7cb0ebe608ea7d95d3f1ba0ec2ae9a7106cdcd7fe7
+Size (regal-0.30.2.tar.gz) = 3597885 bytes
 BLAKE2s (sigs.k8s.io_yaml_@v_v1.4.0.mod) = 3c2615cf1ff5d0af786a1a56f80147464b37539db03e4f80226afa91ab302f3f
 SHA512 (sigs.k8s.io_yaml_@v_v1.4.0.mod) = 82766964fa0bee72f04a3034bcf52119eceb5c32352c2bb810650152a0a0e69510ff9e62446e5faf31aaa354ed0c63da6fcd4c2e5eb5e43f10a73a57a26b5244
 Size (sigs.k8s.io_yaml_@v_v1.4.0.mod) = 133 bytes
