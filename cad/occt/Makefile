@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/01/19 13:42:28 mef Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/19 23:37:49 mef Exp $
 
 VERSION=	7.8.0
 DISTNAME=	opencascade-${VERSION}
@@ -48,7 +48,7 @@ OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_32.sh
 .endif
 
 PLIST_SUBST=	OCCT_CUSTOM_COMPILER_DRIVER=${OCCT_CUSTOM_COMPILER_DRIVER:Q}
-PLIST_SUBST+=	MAJOR_VERSION=${VERSION:S/[0-9]$//}
+PLIST_SUBST+=	MINOR_VERSION=${VERSION:C/.[0-9]$//}
 
 .include "../../devel/cmake/build.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
