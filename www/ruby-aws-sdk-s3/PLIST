@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/10/13 17:00:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/19 16:50:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -85,6 +85,7 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/access_grants.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/arn.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/bucket_dns.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/bucket_name_restrictions.rb
+${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/checksum_algorithm.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/dualstack.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/endpoints.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/expect_100_continue.rb
@@ -97,7 +98,6 @@ ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/md5s.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/redirects.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/s3_host_id.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/s3_signer.rb
-${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/skip_whole_multipart_get_checksums.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/sse_cpk.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/streaming_retry.rb
 ${GEM_LIBDIR}/lib/aws-sdk-s3/plugins/url_encoded_keys.rb
