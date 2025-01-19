@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.87 2024/09/21 16:37:31 he Exp $
+$NetBSD: distinfo,v 1.88 2025/01/19 16:23:17 he Exp $
 
-BLAKE2s (nsd-4.10.1.tar.gz) = e736a4afd563714e706fcb716c34750479c7abd5b6966370f0e807a274a4f50b
-SHA512 (nsd-4.10.1.tar.gz) = b0f4bdca8a1c6fbbe99096abc8c5f8b34ef2e66dc0da44da253ab164b35ad0aaef5d05eb682b88cc68d8b1671f7b80abafee242a784ed6deb785adee7f6a53a9
-Size (nsd-4.10.1.tar.gz) = 1404799 bytes
+BLAKE2s (nsd-4.11.1.tar.gz) = 4091686c610cda82c92919d6ed4b15b698ea9650a740f64b27d17dde49fd7742
+SHA512 (nsd-4.11.1.tar.gz) = 50b7d93485f3b9903e0d7ee5ec326f47c8a603d3c143899aa46e7865413f8b7f0ed2edcdae5ac054b3c709ab50acfbe8816e1be41dd008803ef83fa9bc370944
+Size (nsd-4.11.1.tar.gz) = 1527949 bytes
 SHA1 (patch-aa) = d9a423d5faa8da9a213b21fd2712225ac9645091
-SHA1 (patch-simdzone_src_generic_endian.h) = 6e8ab4de36781af1a994d8476b9bd9b20a85dc7e
