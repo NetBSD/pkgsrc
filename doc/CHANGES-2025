@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.477 2025/01/19 16:12:38 taca Exp $
+$NetBSD: CHANGES-2025,v 1.478 2025/01/19 16:14:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -636,3 +636,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-tins to 1.38.0 [taca 2025-01-19]
 	Updated graphics/ruby-RMagick to 6.1.0 [taca 2025-01-19]
 	Updated graphics/ruby-mini-magick to 5.1.0 [taca 2025-01-19]
+	Updated mail/ruby-mime-types-data to 3.2025.0107 [taca 2025-01-19]
