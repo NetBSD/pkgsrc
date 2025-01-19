@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.470 2025/01/19 15:04:30 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.471 2025/01/19 15:35:07 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-concurrent-ruby to 1.3.5 [taca 2025-01-19]
 	Updated databases/postgresql-postgis2 to 3.5.2 [gdt 2025-01-19]
 	Updated audio/kew to 3.0.3 [ktnb 2025-01-19]
+	Updated www/dillo to 3.2.0 [ktnb 2025-01-19]
