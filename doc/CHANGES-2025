@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.459 2025/01/19 13:49:13 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.460 2025/01/19 13:49:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby33 to 3.3.7 [taca 2025-01-19]
 	Updated cad/occt to 7.8.0 [mef 2025-01-19]
 	Updated www/firefox to 134.0.1 [ryoon 2025-01-19]
+	Updated www/firefox-l10n to 134.0.1 [ryoon 2025-01-19]
