@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2024/08/20 14:38:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/19 14:10:02 taca Exp $
 ${CC_DOCDIR}/README
 ${CC_WEBDIR}/LICENSE.TXT
 ${CC_WEBDIR}/application/bootstrap/app.php
 ${CC_WEBDIR}/application/bootstrap/autoload.php
 ${CC_WEBDIR}/application/bootstrap/start.php
 ${CC_WEBDIR}/application/files/index.html
+${CC_WEBDIR}/application/images/countries/.gitkeep
 ${CC_WEBDIR}/application/index.html
 ${CC_WEBDIR}/composer.json
 ${CC_WEBDIR}/composer.lock
@@ -884,7 +885,6 @@ ${CC_WEBDIR}/concrete/blocks/survey/db.xml
 ${CC_WEBDIR}/concrete/blocks/survey/edit.php
 ${CC_WEBDIR}/concrete/blocks/survey/icon.png
 ${CC_WEBDIR}/concrete/blocks/survey/option.php
-${CC_WEBDIR}/concrete/blocks/survey/poll_view.php
 ${CC_WEBDIR}/concrete/blocks/survey/survey_list.php
 ${CC_WEBDIR}/concrete/blocks/survey/view.php
 ${CC_WEBDIR}/concrete/blocks/switch_language/add.php
@@ -1911,6 +1911,7 @@ ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/express/entries.p
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/export_options.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/external_file_provider.php
+${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/file_chooser.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/file_manager.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/filetypes.php
 ${CC_WEBDIR}/concrete/controllers/single_page/dashboard/system/files/image_editor.php
@@ -7028,6 +7029,7 @@ ${CC_WEBDIR}/concrete/single_pages/dashboard/system/express/entries.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/express/view.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/export_options.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/external_file_provider.php
+${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/file_chooser.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/file_manager.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/filetypes.php
 ${CC_WEBDIR}/concrete/single_pages/dashboard/system/files/image_editor.php
@@ -7438,8 +7440,10 @@ ${CC_WEBDIR}/concrete/src/Asset/CssLocalizedAsset.php
 ${CC_WEBDIR}/concrete/src/Asset/Group/CoreConversationAssetGroup.php
 ${CC_WEBDIR}/concrete/src/Asset/JavascriptAsset.php
 ${CC_WEBDIR}/concrete/src/Asset/JavascriptConditionalAsset.php
+${CC_WEBDIR}/concrete/src/Asset/JavascriptImportmapAsset.php
 ${CC_WEBDIR}/concrete/src/Asset/JavascriptInlineAsset.php
 ${CC_WEBDIR}/concrete/src/Asset/JavascriptLocalizedAsset.php
+${CC_WEBDIR}/concrete/src/Asset/JavascriptModuleAsset.php
 ${CC_WEBDIR}/concrete/src/Asset/Output/FormatterInterface.php
 ${CC_WEBDIR}/concrete/src/Asset/Output/JavascriptFormatter.php
 ${CC_WEBDIR}/concrete/src/Asset/Output/StandardFormatter.php
@@ -9524,6 +9528,7 @@ ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/SitemapDisplayOrderColumn
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/Column/UrlPathColumn.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/ColumnSet.php
 ${CC_WEBDIR}/concrete/src/Page/Search/ColumnSet/DefaultSet.php
+${CC_WEBDIR}/concrete/src/Page/Search/Field/Field/CacheSettingField.php
 ${CC_WEBDIR}/concrete/src/Page/Search/Field/Field/ContainsBlockTypeField.php
 ${CC_WEBDIR}/concrete/src/Page/Search/Field/Field/ContainsContainerField.php
 ${CC_WEBDIR}/concrete/src/Page/Search/Field/Field/DateAddedField.php
@@ -10655,6 +10660,8 @@ ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240508000000.ph
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240515173142.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240618202000.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240711000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20240910000000.php
+${CC_WEBDIR}/concrete/src/Updater/Migrations/Migrations/Version20241115093300.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/RepeatableMigrationInterface.php
 ${CC_WEBDIR}/concrete/src/Updater/Migrations/Routine/AddPageDraftsBooleanTrait.php
 ${CC_WEBDIR}/concrete/src/Updater/RemoteApplicationUpdate.php
@@ -13894,6 +13901,7 @@ ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Driver/InfoProvider.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Effects/EffectsInterface.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/Exception.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/InvalidArgumentException.php
+${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/NotFoundException.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/NotSupportedException.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/OutOfBoundsException.php
 ${CC_WEBDIR}/concrete/vendor/imagine/imagine/src/Exception/RuntimeException.php
@@ -17134,6 +17142,7 @@ ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/Insufficien
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/InvalidPacketLengthException.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/NoKeyLoadedException.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/NoSupportedAlgorithmsException.php
+${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/TimeoutException.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/UnableToConnectException.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/UnsupportedAlgorithmException.php
 ${CC_WEBDIR}/concrete/vendor/phpseclib/phpseclib/phpseclib/Exception/UnsupportedCurveException.php
@@ -18509,8 +18518,8 @@ ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Util/Path.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/ValueConverter.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Version.php
 ${CC_WEBDIR}/concrete/vendor/scssphp/scssphp/src/Warn.php
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.github/FUNDING.yml
-${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.github/workflows/phpunit.yml
+${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.forgejo/FUNDING.yml
+${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/.forgejo/workflows/phpunit.yml
 ${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/license.md
 ${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/psalm.xml
 ${CC_WEBDIR}/concrete/vendor/ssddanbrown/htmldiff/src/Action.php
