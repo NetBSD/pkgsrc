@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.486 2025/01/19 16:39:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.487 2025/01/19 16:45:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -645,3 +645,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-tilt to 2.6.0 [taca 2025-01-19]
 	Updated textproc/ruby-unicode-display_width to 3.1.4 [taca 2025-01-19]
 	Updated time/ruby-tzinfo-data to 1.2025.1 [taca 2025-01-19]
+	Updated www/ruby-aws-partitions to 1.1040.0 [taca 2025-01-19]
