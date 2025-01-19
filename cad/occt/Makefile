@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/08/25 06:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/19 13:42:28 mef Exp $
 
-DISTNAME=	opencascade-7.7.0
+VERSION=	7.8.0
+DISTNAME=	opencascade-${VERSION}
 PKGNAME=	${DISTNAME:S/opencascade/occt/}
-PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	https://distfiles.macports.org/opencascade/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run
-WRKSRC=		${WRKDIR}/occt-V7_7_0
+WRKSRC=		${WRKDIR}/occt-V${VERSION:S/./_/g}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -48,6 +48,7 @@ OCCT_CUSTOM_COMPILER_DRIVER=	custom_gcc_32.sh
 .endif
 
 PLIST_SUBST=	OCCT_CUSTOM_COMPILER_DRIVER=${OCCT_CUSTOM_COMPILER_DRIVER:Q}
+PLIST_SUBST+=	MAJOR_VERSION=${VERSION:S/[0-9]$//}
 
 .include "../../devel/cmake/build.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

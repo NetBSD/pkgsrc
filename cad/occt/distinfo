@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2024/08/19 17:13:49 tnn Exp $
+$NetBSD: distinfo,v 1.6 2025/01/19 13:42:28 mef Exp $
 
-BLAKE2s (opencascade-7.7.0.tgz) = 3ac0f49a8d50e3c5eb86192f3d9d7bb1c52ae58e7f4816d32a9971665bbd0c0b
-SHA512 (opencascade-7.7.0.tgz) = 27ed889bbe95fa40fbb1840788ce0f2c58af67a6fec799f5705f6cad2567fcfeddbe461ba1854b65672392a604f8b41fed1f77b2cc0704f83746a58957d830c7
-Size (opencascade-7.7.0.tgz) = 48391263 bytes
+BLAKE2s (opencascade-7.8.0.tgz) = 4ce03bb4bdb8781c85ea17e727f83b323eaf4bb33f9a646bdacb337d034dfbd9
+SHA512 (opencascade-7.8.0.tgz) = bf119c2963a69dfad58ddef064e3f2df15f6e8fa660db56b4c94a7d69f83eb238ed3ff06b9431b1e758829cd0e3ae6d4757fb68368b8531099499f6dd6c0cb17
+Size (opencascade-7.8.0.tgz) = 48431454 bytes
 SHA1 (patch-CMakeLists.txt) = d6f533f8a54881b060e05ed816cb6e9bbfe0c5a8
 SHA1 (patch-adm_cmake_occt__macros.cmake) = 9f17527238443cc770d2def9ad8211f410fae7f4
 SHA1 (patch-adm_cmake_occt_csf.cmake) = df33048718a1ff1f490d1a566dc99573713d3677
