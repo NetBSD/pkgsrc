@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2024/02/28 15:49:09 taca Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/19 14:29:08 taca Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
-VERSION=		6.4.3
+VERSION=		6.7.1
 CATEGORIES=		www
 MASTER_SITES=		https://ja.wordpress.org/
 
