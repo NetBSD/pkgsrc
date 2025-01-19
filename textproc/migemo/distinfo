@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:22:22 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/19 11:24:43 taca Exp $
 
 BLAKE2s (migemo-0.40.tar.gz) = 20cb308c357f103f36044416fc1095a6684af7197a06ae57a9c8bedcb7e9be96
 SHA512 (migemo-0.40.tar.gz) = 8ba4960361035fc570bef533724c82b20fbc2384aa69469bf79791c00732643423aa6725717e4e518e461f9313101f0f2c49ad93dd007984699ad94cb92959ea
 Size (migemo-0.40.tar.gz) = 1674941 bytes
-SHA1 (patch-aa) = a83ce755f3751b9bea6c2e4b4c09d94d2c9a932c
-SHA1 (patch-ab) = 1f0062c64e694e465803e4b4c2bd89855b071ac0
-SHA1 (patch-genchars.sh) = 33afe99f246d5c896a32023116d5621021b5adae
-SHA1 (patch-migemo) = 9aa65760f9c130049a7252af9cf9c67d2edddd00
-SHA1 (patch-migemo-cache.rb) = 21deacfc7a7e82db33507c2d43145bdb53b91a14
-SHA1 (patch-migemo-client) = b7c3033aeb39bc6926a33f3a8c2b48554874a560
-SHA1 (patch-migemo-convert.rb) = 8a894c045aab9447e5c09f5ccfd34715cf3e8813
-SHA1 (patch-migemo-grep) = d8686169a9d4787c1056ca5d9838a00bca06a60f
-SHA1 (patch-migemo-index.rb) = 84b9c571c2d1c9bfdbd207043c6c7bb2a78b72da
-SHA1 (patch-migemo-server) = 8fff0f4e40f90a7ec0202a0cec9fd0d866d0fce4
-SHA1 (patch-migemo.rb.in) = 007f1595b098e517d28e35a6fa9db8e2ba1618f4
-SHA1 (patch-tests_Makefile.am) = b50396a22695baa66011ed18d89528f630214241
+SHA1 (patch-aa) = 615428424bd0bf3bc9a332c985af6d2aebe1364c
+SHA1 (patch-ab) = e7916462555bc6d8a80a5b3956ac202213876226
+SHA1 (patch-genchars.sh) = 0831237efac6debb1f51f033fa84bac8521c2627
+SHA1 (patch-migemo) = 82de85ac29ce56b483c06d4cab2669f75b0b95b7
+SHA1 (patch-migemo-cache.rb) = b15f59fa96c957f7e33a388bcc7fceddc0c090f7
+SHA1 (patch-migemo-client) = 97df12bdae3c9bbed7086bd80cfc16ce4c22b29b
+SHA1 (patch-migemo-convert.rb) = 09a368f1d0c65726721426d45bf58a772cd92799
+SHA1 (patch-migemo-grep) = f2db5edd9efde880f5681eafc12ea32a0e40fa2d
+SHA1 (patch-migemo-index.rb) = 139ad7e84ad30cc0164a85aaabbd3d7cb78a1d0f
+SHA1 (patch-migemo-server) = 3a475b5fa7b4fe0224def2ecd97761b3c9d8ff84
+SHA1 (patch-migemo.rb.in) = 38191b78f2182bbd3d9d40283168f522ec581dd3
+SHA1 (patch-tests_Makefile.am) = bad7ba4f059e32cfc3afa0624ac816c9ede35d35
