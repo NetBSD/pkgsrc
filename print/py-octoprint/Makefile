@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/09/18 08:12:19 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/19 16:13:21 adam Exp $
 
-DISTNAME=	octoprint-1.10.2
+DISTNAME=	octoprint-1.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint/}
@@ -71,8 +71,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=5.1.0:../../devel/py-mock
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/octoprint \
-		${DESTDIR}${PREFIX}/bin/octoprint-${PYVERSSUFFIX} || ${TRUE}
+	cd ${DESTDIR}${PREFIX}/bin && \
+	${MV} octoprint octoprint-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
