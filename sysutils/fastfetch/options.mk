@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2025/01/19 11:59:51 vins Exp $
+# $NetBSD: options.mk,v 1.10 2025/01/19 15:59:08 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -7,7 +7,7 @@ PKG_OPTIONS_GROUP.sound=	oss pulseaudio
 
 PKG_SUPPORTED_OPTIONS=	chafa dconf dbus glib2 imagemagick libdrm libelf opencl osmesa \
 			python sqlite3 threads xfce4-wm
-PKG_SUGGESTED_OPTIONS=	glib2 libdrm opencl osmesa x11
+PKG_SUGGESTED_OPTIONS=	glib2 libdrm osmesa x11
 
 CHECK_BUILTIN.pthread:= yes
 .include "../../mk/pthread.builtin.mk"
@@ -17,17 +17,22 @@ CHECK_BUILTIN.pthread:= no
 PKG_SUGGESTED_OPTIONS+=	threads
 .endif
 
-.if  ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio sqlite3
-.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+=	oss sqlite3
+.if ${OPSYS} != "SunOS"
+# parallel/ocl-icd is currently broken on SunOS
+PKG_SUGGESTED_OPTIONS+=	opencl
 .endif
+
+PKG_SUGGESTED_OPTIONS.SunOS+=		pulseaudio
+PKG_SUGGESTED_OPTIONS.Linux+=		dbus pulseaudio sqlite3
+PKG_SUGGESTED_OPTIONS.FreeBSD+=		oss sqlite3
+PKG_SUGGESTED_OPTIONS.DragonFly+=	oss sqlite3
 
 .include "../../mk/bsd.options.mk"
 
 ##
 ## D-Bus
-## Supports NetworkManager (Linux), Player & Media detection.
+## * NetworkManager support (Linux)
+## * Enables media player detection.
 ##
 .if !empty(PKG_OPTIONS:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
@@ -37,8 +42,8 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_DBUS=OFF
 
 ##
 ## DConf
-## Needed for values that are only stored in DConf;
-## (+ Fallback for GSettings)
+## * Needed for values that are only stored in DConf
+## * Fallback for GSettings
 ##
 .if !empty(PKG_OPTIONS:Mdconf)
 .  include "../../devel/dconf/buildlink3.mk"
@@ -58,8 +63,8 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_CHAFA=OFF
 
 ##
 ## libdrm
-## Fallback if both wayland and x11 are not available
-## (+ AMD GPU properties detection)
+## * Fallback if both wayland and x11 are not available
+## * AMD GPU properties detection)
 ##
 .if !empty(PKG_OPTIONS:Mlibdrm)
 .  include "../../x11/libdrm/buildlink3.mk"
@@ -144,8 +149,8 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_PULSE=OFF
 
 ##
 ## Python
-## Needed for zsh and fish shell completions.
-## (+ man page generation and embedded pciids)
+## * Needed for zsh and fish shell completions.
+## * Needed for man page generation and embedded pciids
 ##
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/batteries-included.mk"
