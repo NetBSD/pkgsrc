@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.38 2024/10/27 15:35:08 leot Exp $
+$NetBSD: distinfo,v 1.39 2025/01/19 17:46:10 leot Exp $
 
-BLAKE2s (socat-1.8.0.1.tar.gz) = bad807327629b9babd170bd55447f4971164fa3ffa111c05fb21531acce0283a
-SHA512 (socat-1.8.0.1.tar.gz) = 2a327b4c2e00fc6afda503548d5bc285d4f120892c75ec6633201825e39e3003a8b8d827053364dc444b72ff728a82381769941c023d8b0a66d955417162b735
-Size (socat-1.8.0.1.tar.gz) = 723747 bytes
+BLAKE2s (socat-1.8.0.2.tar.gz) = ef101a0bb643ddddc87396f1ca57fc30cf4b4be1113bdbb4664950e9733b3408
+SHA512 (socat-1.8.0.2.tar.gz) = c0a04e697f03da35d8c630de038e837c544e4dc77dd5bfbe73198d88b2d21727d9062114c1c50925daa264178f3317bc11c5504d1358ab7b3e8bce15e3e2dff9
+Size (socat-1.8.0.2.tar.gz) = 724311 bytes
