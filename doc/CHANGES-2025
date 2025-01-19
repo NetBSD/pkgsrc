@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.516 2025/01/19 19:29:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.517 2025/01/19 19:34:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/cpp-httplib to 0.18.5 [wiz 2025-01-19]
 	Updated devel/ocamlbuild to 0.15.0 [wiz 2025-01-19]
 	Updated devel/cbindgen to 0.28.0 [wiz 2025-01-19]
+	Updated x11/py-qt-builder to 1.17.2 [wiz 2025-01-19]
