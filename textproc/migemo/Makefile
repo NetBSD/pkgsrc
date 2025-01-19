@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2019/11/04 21:43:39 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/19 11:24:43 taca Exp $
 
 .include "../../textproc/migemo/Makefile.common"
 
@@ -12,10 +12,9 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=		${RUBY_PKGPREFIX}-bsearch-[0-9]*:../../devel/ruby-bsearch
 DEPENDS+=		${RUBY_PKGPREFIX}-romkan-[0-9]*:../../converters/ruby-romkan
 
-USE_TOOLS+=		autoconf automake aclocal
+USE_TOOLS+=		autoconf213 automake14 aclocal
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
-MAKE_ENV+=		RUBYOPT=-Ke
 
 REPLACE_RUBY=		migemo migemo-client migemo-grep migemo-server
 

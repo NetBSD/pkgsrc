@@ -1,10 +1,16 @@
-$NetBSD: patch-tests_Makefile.am,v 1.1 2012/08/12 11:52:27 obache Exp $
+$NetBSD: patch-tests_Makefile.am,v 1.2 2025/01/19 11:24:44 taca Exp $
+
+* Set default external encoding to EUC-JP.
+* Explictly specify $_.
 
 --- tests/Makefile.am.orig	2001-08-13 17:12:57.000000000 +0000
 +++ tests/Makefile.am
-@@ -10,7 +10,7 @@ test-dict.idx: test-dict ../migemo-index
+@@ -8,9 +8,9 @@ test-dict.idx: test-dict ../migemo-index
+ 	ruby -I.. ../migemo-index.rb test-dict > test-dict.idx
+ 
  test-dict.cache: test-dict test-dict.idx ../migemo-cache.rb
- 	ruby -rromkan -ne 'puts $$1.to_roma if /^(.+?)	/' test-dict |\
+-	ruby -rromkan -ne 'puts $$1.to_roma if /^(.+?)	/' test-dict |\
++	ruby -rromkan -ne 'Encoding.default_external = Encoding::EUC_JP; puts $$1.to_roma if /^(.+?)	/' test-dict |\
  	while read line; do\
 -	    echo $$line | ruby -ne 'chomp!;1.upto($$_.length) do |x| puts $$_[0,x] end';\
 +	    echo $$line | ruby -ne '$$_.chomp!;1.upto($$_.length) do |x| puts $$_[0,x] end';\

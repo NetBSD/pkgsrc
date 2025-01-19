@@ -1,4 +1,8 @@
-$NetBSD: patch-migemo-cache.rb,v 1.1 2012/08/12 11:52:26 obache Exp $
+$NetBSD: patch-migemo-cache.rb,v 1.2 2025/01/19 11:24:44 taca Exp $
+
+* Use bytesize instead of length.
+* set output encoding.
+* Remove $KCODE.
 
 --- migemo-cache.rb.orig	2001-07-14 17:38:56.000000000 +0000
 +++ migemo-cache.rb
