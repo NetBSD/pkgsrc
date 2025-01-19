@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.497 2025/01/19 17:23:47 leot Exp $
+$NetBSD: CHANGES-2025,v 1.498 2025/01/19 17:28:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-mechanize to 2.14.0 [taca 2025-01-19]
 	Updated www/ruby-rack-session to 2.1.0 [taca 2025-01-19]
 	Updated net/k6 to 0.56.0 [leot 2025-01-19]
+	Updated misc/moreutils to 0.70 [leot 2025-01-19]
