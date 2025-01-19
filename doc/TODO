@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25331 2025/01/19 18:44:19 wiz Exp $
+$NetBSD: TODO,v 1.25332 2025/01/19 18:46:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1128,7 +1128,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-gammu-3.1
 	o py-gcovr-6.0
 	o py-hgview-1.9.0
-	o py-icalendar-6.1.1
 	o py-input-pad-1.4.2
 	o py-mailman-3.3.10
 	o py-mitmproxy_rs-0.9.3
