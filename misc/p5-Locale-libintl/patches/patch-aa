@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2012/11/07 23:41:01 adam Exp $
+$NetBSD: patch-aa,v 1.3 2025/01/19 06:51:01 wiz Exp $
+
+Honor LDFLAGS.
 
 --- gettext_xs/Makefile.PL.orig	2009-07-08 08:55:07.000000000 +0000
 +++ gettext_xs/Makefile.PL	2009-07-08 08:55:29.000000000 +0000
