@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.504 2025/01/19 18:33:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.505 2025/01/19 18:35:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -664,3 +664,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/sops to 3.9.3 [leot 2025-01-19]
 	Updated devel/compiledb-go to 1.4.0 [wiz 2025-01-19]
 	Updated devel/govulncheck to 1.1.4 [wiz 2025-01-19]
+	Updated graphics/libexif to 0.6.25 [wiz 2025-01-19]
