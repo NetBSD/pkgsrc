@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2023/12/17 14:26:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/01/19 16:05:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -23,7 +23,6 @@ ${GEM_LIBDIR}/lib/generators/rspec/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/install_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/install/templates/spec/rails_helper.rb
-${GEM_LIBDIR}/lib/generators/rspec/integration/integration_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/job_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/job/templates/job_spec.rb.erb
 ${GEM_LIBDIR}/lib/generators/rspec/mailbox/mailbox_generator.rb
