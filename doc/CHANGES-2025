@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.473 2025/01/19 15:57:31 taca Exp $
+$NetBSD: CHANGES-2025,v 1.474 2025/01/19 16:05:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -632,3 +632,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/dillo to 3.2.0 [ktnb 2025-01-19]
 	Updated devel/ruby-mixlib-shellout to 3.3.6 [taca 2025-01-19]
 	Updated devel/ruby-pkg-config to 1.5.9 [taca 2025-01-19]
+	Updated devel/ruby-rspec-rails to 7.1.0 [taca 2025-01-19]
