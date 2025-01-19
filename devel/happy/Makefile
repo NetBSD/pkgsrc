@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2025/01/09 23:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/19 18:39:32 wiz Exp $
 
-DISTNAME=	happy-2.1.3
+DISTNAME=	happy-2.1.4
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	esg@sdf.lonestar.org
 COMMENT=	Parser generator for Haskell
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 .include "../../devel/happy-lib/buildlink3.mk"
 .include "../../mk/haskell.mk"
