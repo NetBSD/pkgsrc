@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/12/13 15:12:57 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2025/01/19 15:04:16 ktnb Exp $
 
-BLAKE2s (kew-3.0.2.tar.gz) = 308b493d4adb5e7421cac0e7f27ae9c3291c73d0bc35663f717bebc5bcb4b53e
-SHA512 (kew-3.0.2.tar.gz) = 0fe3bc5d014c8eb66b4b8f996484a416a277cd39ed7fb8019ef063d56f2e02c636c3462a5c2752e225ebdf45ef2b3a764a395b6586091b1e0ed2bf9242fa02cd
-Size (kew-3.0.2.tar.gz) = 1117749 bytes
+BLAKE2s (kew-3.0.3.tar.gz) = f837ef0ba6ceb6cf4af9a68fe1bcb53390bf41c8bb66be2eb5332abac54582dd
+SHA512 (kew-3.0.3.tar.gz) = 9e14c6b7d12e93cf1f7cd9e930d81f903d5013e22bb183e4f2a9b4ddba70e74b030a61febcf3e149823b492294cca402f4f8382b2088264aa4f3be7786fcf41a
+Size (kew-3.0.3.tar.gz) = 1117990 bytes
