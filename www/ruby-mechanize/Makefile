@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2024/10/21 14:52:17 taca Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/19 16:53:03 taca Exp $
 
-DISTNAME=	mechanize-2.12.2
+DISTNAME=	mechanize-2.14.0
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -11,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.8<3:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5.20190701:../../net/ruby-domain_name
 DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0.3<2:../../www/ruby-http-cookie
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.0<4:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=3.3<4:../../mail/ruby-mime-types
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.4.1<2:../../www/ruby-net-http-digest_auth
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5.2<5:../../www/ruby-net-http-persistent
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.11.2<2:../../textproc/ruby-nokogiri
