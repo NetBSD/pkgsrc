@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.67 2024/12/29 19:04:11 leot Exp $
+@comment $NetBSD: PLIST,v 1.68 2025/01/19 16:29:06 leot Exp $
 bin/gallery-dl
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/gallery_dl/__init__.py
 ${PYSITELIB}/gallery_dl/__init__.pyc
 ${PYSITELIB}/gallery_dl/__init__.pyo
@@ -432,6 +432,9 @@ ${PYSITELIB}/gallery_dl/extractor/paheal.pyo
 ${PYSITELIB}/gallery_dl/extractor/patreon.py
 ${PYSITELIB}/gallery_dl/extractor/patreon.pyc
 ${PYSITELIB}/gallery_dl/extractor/patreon.pyo
+${PYSITELIB}/gallery_dl/extractor/pexels.py
+${PYSITELIB}/gallery_dl/extractor/pexels.pyc
+${PYSITELIB}/gallery_dl/extractor/pexels.pyo
 ${PYSITELIB}/gallery_dl/extractor/philomena.py
 ${PYSITELIB}/gallery_dl/extractor/philomena.pyc
 ${PYSITELIB}/gallery_dl/extractor/philomena.pyo
@@ -636,6 +639,9 @@ ${PYSITELIB}/gallery_dl/extractor/webmshare.pyo
 ${PYSITELIB}/gallery_dl/extractor/webtoons.py
 ${PYSITELIB}/gallery_dl/extractor/webtoons.pyc
 ${PYSITELIB}/gallery_dl/extractor/webtoons.pyo
+${PYSITELIB}/gallery_dl/extractor/weebcentral.py
+${PYSITELIB}/gallery_dl/extractor/weebcentral.pyc
+${PYSITELIB}/gallery_dl/extractor/weebcentral.pyo
 ${PYSITELIB}/gallery_dl/extractor/weibo.py
 ${PYSITELIB}/gallery_dl/extractor/weibo.pyc
 ${PYSITELIB}/gallery_dl/extractor/weibo.pyo
