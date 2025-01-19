@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2023/11/08 16:49:02 bacon Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/01/19 21:32:46 fox Exp $
 bin/din
 share/applications/din.desktop
 share/din/factory/2600
 share/din/factory/2600.help.tcl
 share/din/factory/2600.patch.tcl
+share/din/factory/CDGB
 share/din/factory/Makefile.am
 share/din/factory/Sine_Mixer
 share/din/factory/all_notes
@@ -12,7 +13,6 @@ share/din/factory/attack.crv
 share/din/factory/attack.ed
 share/din/factory/attack.lib
 share/din/factory/audio_prefs
-share/din/factory/bd.ins
 share/din/factory/binaural-drone.help.tcl
 share/din/factory/binaural-drones-waveform.crv
 share/din/factory/binaural-drones-waveform.ed
@@ -359,8 +359,6 @@ share/din/factory/get-selection.help.tcl
 share/din/factory/get-style.help.tcl
 share/din/factory/get-var.help.tcl
 share/din/factory/globals
-share/din/factory/gravmod.crv
-share/din/factory/gravmod.ed
 share/din/factory/harmonics
 share/din/factory/harmonics.help.tcl
 share/din/factory/harmonics.patch.tcl
@@ -371,7 +369,6 @@ share/din/factory/inner.crv
 share/din/factory/inner_space.crv
 share/din/factory/jag.fnt
 share/din/factory/just-intonation.tuning
-share/din/factory/kbkb.ins
 share/din/factory/key.help.tcl
 share/din/factory/keyboard-keyboard-waveform.crv
 share/din/factory/keyboard-keyboard-waveform.ed
@@ -384,13 +381,11 @@ share/din/factory/list-audio.help.tcl
 share/din/factory/list-patches.help.tcl
 share/din/factory/load-patch.help.tcl
 share/din/factory/load-scale.help.tcl
-share/din/factory/major-chord
 share/din/factory/make-interval-note-vars.tcl
 share/din/factory/microtonal-keyboard-waveform.crv
 share/din/factory/microtonal-keyboard-waveform.ed
 share/din/factory/midimap.help.tcl
 share/din/factory/midimap.patch.tcl
-share/din/factory/mkb.ins
 share/din/factory/modulation.ed
 share/din/factory/modv.crv
 share/din/factory/modv.ed

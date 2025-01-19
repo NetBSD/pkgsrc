@@ -1,16 +1,16 @@
-$NetBSD: patch-src_Makefile.am,v 1.16 2024/02/18 01:00:05 fox Exp $
+$NetBSD: patch-src_Makefile.am,v 1.17 2025/01/19 21:32:47 fox Exp $
 
 Removed tcl8.6, asound and jack flags, this is now handled in the pkgsrc
 script.
 
---- src/Makefile.am.orig	2024-01-12 06:34:36.000000000 +0000
+--- src/Makefile.am.orig	2024-09-15 12:03:12.000000000 +0000
 +++ src/Makefile.am
 @@ -1,7 +1,7 @@
  #dinincludedir = $(pkgsrcdir)
  
--AM_CXXFLAGS = -I /usr/include/tcl8.6 -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D__SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\"
+-AM_CXXFLAGS = -I /usr/include/tcl8.6 -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D__SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\" 
 -LIBS +=  -ltcl8.6 -lSDL -lGL -lpthread -lasound
-+AM_CXXFLAGS = -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D__SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\"
++AM_CXXFLAGS = -Wall -D_THREAD_SAFE -DHAVE_OPENGL -D__LICENSED__ -D__SVG__ -D__GPL20__ -DPREFIX=\"@prefix@\" 
 +LIBS +=  @LIBS@
  
  bin_PROGRAMS = din
