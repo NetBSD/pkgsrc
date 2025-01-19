@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2024/11/11 07:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/19 18:48:28 wiz Exp $
 
-DISTNAME=	roman-4.2
+DISTNAME=	roman-5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/roman/}
@@ -13,8 +13,6 @@ LICENSE=	zpl-2.1
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
