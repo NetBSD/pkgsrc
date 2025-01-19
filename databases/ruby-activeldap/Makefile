@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/02/24 07:08:14 taca Exp $
+# $NetBSD: Makefile,v 1.29 2025/01/19 14:45:52 taca Exp $
 
-DISTNAME=	activeldap-7.0.0
+DISTNAME=	activeldap-7.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/activeldap-/activeldap${RUBY_RAILS}-/}
 CATEGORIES=	databases
 
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-builder>=0:../../textproc/ruby-builder
 
 USE_LANGUAGES=	# none
 
-RUBY_RAILS_ACCEPTED=	# empty
+RUBY_RAILS_ACCEPTED=	70 71 72
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
