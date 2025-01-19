@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.465 2025/01/19 14:36:12 taca Exp $
+$NetBSD: CHANGES-2025,v 1.466 2025/01/19 14:46:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -624,3 +624,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-concrete-cms to 9.3.9 [taca 2025-01-19]
 	Updated www/php-ja-wordpress to 6.7.1 [taca 2025-01-19]
 	Updated devel/php-gearman to 2.1.4 [taca 2025-01-19]
+	Updated databases/ruby-activeldap to 7.2.1 [taca 2025-01-19]
