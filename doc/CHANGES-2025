@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.500 2025/01/19 17:46:15 leot Exp $
+$NetBSD: CHANGES-2025,v 1.501 2025/01/19 18:13:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/moreutils to 0.70 [leot 2025-01-19]
 	Updated devel/regal to 0.30.2 [leot 2025-01-19]
 	Updated net/socat to 1.8.0.2 [leot 2025-01-19]
+	Updated audio/SDL2_mixer to 2.8.0 [wiz 2025-01-19]
