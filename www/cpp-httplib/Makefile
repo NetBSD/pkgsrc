@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/12/06 21:37:04 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/19 19:25:18 wiz Exp $
 
-DISTNAME=	cpp-httplib-0.18.3
+DISTNAME=	cpp-httplib-0.18.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=yhirose/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
