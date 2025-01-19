@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1143 2025/01/11 14:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.1144 2025/01/19 02:27:52 rxg Exp $
 #
 
 COMMENT=	System utilities
@@ -846,6 +846,7 @@ SUBDIR+=	u-boot-pinebook-pro
 SUBDIR+=	u-boot-pinecube
 SUBDIR+=	u-boot-pinephone
 SUBDIR+=	u-boot-pocketchip
+SUBDIR+=	u-boot-riotboard
 SUBDIR+=	u-boot-roc-rk3328-cc
 SUBDIR+=	u-boot-rock64
 SUBDIR+=	u-boot-rockpro64
