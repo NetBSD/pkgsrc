@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.472 2025/01/19 15:55:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.473 2025/01/19 15:57:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/kew to 3.0.3 [ktnb 2025-01-19]
 	Updated www/dillo to 3.2.0 [ktnb 2025-01-19]
 	Updated devel/ruby-mixlib-shellout to 3.3.6 [taca 2025-01-19]
+	Updated devel/ruby-pkg-config to 1.5.9 [taca 2025-01-19]
