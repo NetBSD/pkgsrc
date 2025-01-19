@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2024/06/13 13:21:08 ktnb Exp $
+$NetBSD: distinfo,v 1.45 2025/01/19 15:34:43 ktnb Exp $
 
-BLAKE2s (dillo-3.1.1.tar.gz) = 972d69ffbf4eee631535a164baea24e2971139e4ee15800a032fe5f2749b0f4d
-SHA512 (dillo-3.1.1.tar.gz) = 3b67baa74a273ddc9ca1e92e32e268aec5cd393449678764eda4dfc64cab2f0ca9727dabf1d84aecd84c2c5f8063c5e9f938593430324fcd35e889b84079c08c
-Size (dillo-3.1.1.tar.gz) = 1516060 bytes
+BLAKE2s (dillo-3.2.0.tar.gz) = 5316ef138218567801d7ed9491f69c8f30393f91f976ee6980ca9f47e764a2e1
+SHA512 (dillo-3.2.0.tar.gz) = ff6aa64c79a5dac3bd5152e7501a20c129924c20df712003fc2cd0f18ab55886b0959aea4765f3c893e450e9f95781c10d393108cae8240804d4740f8121f066
+Size (dillo-3.2.0.tar.gz) = 1459110 bytes

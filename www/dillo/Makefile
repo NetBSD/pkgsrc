@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2024/06/13 13:21:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.93 2025/01/19 15:34:43 ktnb Exp $
 
-DISTNAME=	dillo-3.1.1
+DISTNAME=	dillo-3.2.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
