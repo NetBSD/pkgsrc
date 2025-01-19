@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.468 2025/01/19 14:50:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.469 2025/01/19 15:02:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -627,3 +627,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-activeldap to 7.2.1 [taca 2025-01-19]
 	Updated databases/ruby-tiny_tds to 3.1.0 [taca 2025-01-19]
 	Updated devel/ruby-concurrent-ruby to 1.3.5 [taca 2025-01-19]
+	Updated databases/postgresql-postgis2 to 3.5.2 [gdt 2025-01-19]
