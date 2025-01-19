@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.453 2025/01/19 06:51:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.454 2025/01/19 06:52:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -612,3 +612,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4 to 4.20.0 [bsiegert 2025-01-18]
 	Added sysutils/u-boot-riotboard version 2021.01 [rxg 2025-01-19]
 	Updated misc/p5-Locale-libintl to 1.35 [wiz 2025-01-19]
+	Updated time/p5-DateTime-TimeZone to 2.64 [wiz 2025-01-19]
