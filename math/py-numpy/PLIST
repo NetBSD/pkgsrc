@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2025/01/05 08:58:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.52 2025/01/19 18:56:03 wiz Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -1003,6 +1003,7 @@ ${PYSITELIB}/numpy/f2py/tests/src/regression/f77fixedform.f95
 ${PYSITELIB}/numpy/f2py/tests/src/regression/f90continuation.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/incfile.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/inout.f90
+${PYSITELIB}/numpy/f2py/tests/src/regression/lower_f2py_fortran.f90
 ${PYSITELIB}/numpy/f2py/tests/src/return_character/foo77.f
 ${PYSITELIB}/numpy/f2py/tests/src/return_character/foo90.f90
 ${PYSITELIB}/numpy/f2py/tests/src/return_complex/foo77.f
@@ -1878,7 +1879,6 @@ ${PYSITELIB}/numpy/typing/tests/data/reveal/datasource.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/dtype.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/einsumfunc.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/emath.pyi
-${PYSITELIB}/numpy/typing/tests/data/reveal/false_positives.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/fft.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/flatiter.pyi
 ${PYSITELIB}/numpy/typing/tests/data/reveal/fromnumeric.pyi
