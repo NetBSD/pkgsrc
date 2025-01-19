@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.510 2025/01/19 18:48:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.511 2025/01/19 18:56:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -670,3 +670,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-google-api-python-client to 2.159.0 [wiz 2025-01-19]
 	Updated time/py-icalendar to 6.1.1 [wiz 2025-01-19]
 	Updated math/py-roman to 5.0 [wiz 2025-01-19]
+	Updated math/py-numpy to 2.2.2 [wiz 2025-01-19]
