@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.492 2025/01/19 16:50:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.493 2025/01/19 16:51:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -651,3 +651,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-sdk-secretsmanager to 1.111.0 [taca 2025-01-19]
 	Updated www/ruby-aws-sdk-kms to 1.97.0 [taca 2025-01-19]
 	Updated www/ruby-aws-sdk-s3 to 1.178.0 [taca 2025-01-19]
+	Updated print/py-octoprint to 1.10.3 [adam 2025-01-19]
+	Updated print/py-octoprint-filecheck to 2024.11.12 [adam 2025-01-19]
