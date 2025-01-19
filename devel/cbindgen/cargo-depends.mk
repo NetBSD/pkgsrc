@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2024/09/13 08:05:10 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2025/01/19 19:29:38 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	anstream-0.6.15
 CARGO_CRATE_DEPENDS+=	anstyle-1.0.8
@@ -46,7 +46,7 @@ CARGO_CRATE_DEPENDS+=	serial_test-2.0.0
 CARGO_CRATE_DEPENDS+=	serial_test_derive-2.0.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
-CARGO_CRATE_DEPENDS+=	syn-2.0.72
+CARGO_CRATE_DEPENDS+=	syn-2.0.85
 CARGO_CRATE_DEPENDS+=	tempfile-3.12.0
 CARGO_CRATE_DEPENDS+=	toml-0.8.19
 CARGO_CRATE_DEPENDS+=	toml_datetime-0.6.8
