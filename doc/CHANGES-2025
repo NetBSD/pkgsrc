@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.463 2025/01/19 14:10:19 taca Exp $
+$NetBSD: CHANGES-2025,v 1.464 2025/01/19 14:29:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -622,3 +622,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/php-contao-manager to 1.8.10 [taca 2025-01-19]
 	Updated lang/php83 to 8.3.16 [taca 2025-01-19]
 	Updated www/php-concrete-cms to 9.3.9 [taca 2025-01-19]
+	Updated www/php-ja-wordpress to 6.7.1 [taca 2025-01-19]
