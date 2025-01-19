@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2024/11/24 10:25:40 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/01/19 18:46:34 wiz Exp $
 
-DISTNAME=	icalendar-6.1.0
+DISTNAME=	icalendar-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/icalendar/}
@@ -23,8 +23,8 @@ USE_LANGUAGES=	# none
 REPLACE_SH+=		src/icalendar/tests/fuzzed/generate_python_test_cases_from_downloaded_clusterfuzz_test_cases.sh
 REPLACE_PYTHON+=	src/icalendar/cli.py
 
-# as of 6.0.1:
-# 22 failed, 4543 passed, 3 skipped
+# as of 6.1.1:
+# 1143 failed, 6888 passed, 15 skipped
 # https://github.com/collective/icalendar/issues/731
 
 post-install:

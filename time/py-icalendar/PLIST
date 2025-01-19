@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2024/11/24 10:25:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/01/19 18:46:34 wiz Exp $
 bin/icalendar-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -175,6 +175,9 @@ ${PYSITELIB}/icalendar/tests/prop/test_vDatetime.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_vPeriod.py
 ${PYSITELIB}/icalendar/tests/prop/test_vPeriod.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_vPeriod.pyo
+${PYSITELIB}/icalendar/tests/prop/test_vWeekday.py
+${PYSITELIB}/icalendar/tests/prop/test_vWeekday.pyc
+${PYSITELIB}/icalendar/tests/prop/test_vWeekday.pyo
 ${PYSITELIB}/icalendar/tests/prop/test_windows_to_olson_mapping.py
 ${PYSITELIB}/icalendar/tests/prop/test_windows_to_olson_mapping.pyc
 ${PYSITELIB}/icalendar/tests/prop/test_windows_to_olson_mapping.pyo
