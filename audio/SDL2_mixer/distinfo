@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 09:58:44 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/01/19 18:13:51 wiz Exp $
 
-BLAKE2s (SDL2_mixer-2.0.4.tar.gz) = 6e431787bc662aec5112a22f27925c9a23f096a632f81f899c34b1d2697d79f7
-SHA512 (SDL2_mixer-2.0.4.tar.gz) = 98c56069640668aaececa63748de21fc8f243c7d06386c45c43d0ee472bbb2595ccda644d9886ce5b95c3a3dee3c0a96903cf9a89ddc18d38f041133470699a3
-Size (SDL2_mixer-2.0.4.tar.gz) = 11125077 bytes
-SHA1 (patch-configure) = 1666d97f82c5f3dca03eb45dad6b9e73dc61dffd
-SHA1 (patch-music__fluidsynth.c) = affe25cbb8fc21afe80ef3f5fd0e98853addff20
+BLAKE2s (SDL2_mixer-2.8.0.tar.gz) = afde1df2fb6855b5fc0a93abd2b76be28cacc2b1cb5cd1689cf4549b99676ea6
+SHA512 (SDL2_mixer-2.8.0.tar.gz) = 5ddbc4b0b5fad2e0844a503daa79564b912654192599ef8fa7698531f08323ce01801f6bb17b2b3905020a3df362a967b7566ae725eb085da991578cc0807aad
+Size (SDL2_mixer-2.8.0.tar.gz) = 10874471 bytes
