@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/05/21 03:03:00 taca Exp $
+$NetBSD: distinfo,v 1.10 2025/01/19 16:21:01 taca Exp $
 
-BLAKE2s (connection_pool-2.4.1.gem) = b497b6191b0b3d7f0a226e9bd43549e3efd888bdc1f26d4aa446eba10471ceb4
-SHA512 (connection_pool-2.4.1.gem) = 32a86ae3c11cf233038eb3d72ba24523b4ae2c21eab8cc9502806a768841b70d2fe98405e3fccb1c62df91ff06214d3a778353a8b76aa7e4e29659cf7aa72837
-Size (connection_pool-2.4.1.gem) = 11776 bytes
+BLAKE2s (connection_pool-2.5.0.gem) = 7130d619fb62bb1686e5565c1efabdac38e41c803e65a725feb013d9fd760a29
+SHA512 (connection_pool-2.5.0.gem) = cc0589634a5609cf22b5a1c7635d063ad5958bdc1b6805b90bf70d471be245e6271d2ff8867b7cbd166fe35afb8baee9d7806e1759ed474c004ea84376622fe9
+Size (connection_pool-2.5.0.gem) = 12288 bytes
