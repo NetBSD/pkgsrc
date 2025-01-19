@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.461 2025/01/19 13:50:22 taca Exp $
+$NetBSD: CHANGES-2025,v 1.462 2025/01/19 13:57:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -620,3 +620,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox to 134.0.1 [ryoon 2025-01-19]
 	Updated www/firefox-l10n to 134.0.1 [ryoon 2025-01-19]
 	Updated www/php-contao-manager to 1.8.10 [taca 2025-01-19]
+	Updated lang/php83 to 8.3.16 [taca 2025-01-19]
