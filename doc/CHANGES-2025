@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.514 2025/01/19 19:25:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.515 2025/01/19 19:27:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ocaml-findlib to 1.9.8 [wiz 2025-01-19]
 	Updated x11/ocaml-lablgtk3 to 3.1.5 [wiz 2025-01-19]
 	Updated www/cpp-httplib to 0.18.5 [wiz 2025-01-19]
+	Updated devel/ocamlbuild to 0.15.0 [wiz 2025-01-19]
