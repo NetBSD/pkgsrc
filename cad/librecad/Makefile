@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2024/12/29 15:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.87 2025/01/19 16:59:12 riastradh Exp $
 
 DISTNAME=	LibreCAD-2.2.0-rc2
 PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
@@ -17,18 +17,19 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 EXTRACT_USING=	bsdtar
 
-USE_LANGUAGES=	c c++11
+USE_LANGUAGES=	c c++14
+FORCE_CXX_STD=	-std=c++14
 USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
 
-USE_CXX_FEATURES+=	c++11
+BUILDLINK_TRANSFORM+=	rm:-std=gnu++11
+USE_CXX_FEATURES+=	c++14
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
 SUBST_MESSAGE.qtdir=	Set qt5/bin
 SUBST_FILES.qtdir+=	scripts/postprocess-unix.sh
 SUBST_VARS.qtdir+=	QTDIR
-
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
