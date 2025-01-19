@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/04/26 16:15:25 wiz Exp $
+$NetBSD: distinfo,v 1.12 2025/01/19 19:27:18 wiz Exp $
 
-BLAKE2s (ocamlbuild-0.14.2.tar.gz) = 0f58e636001f209904935ef3d8bf821f8bf42dab29554ea1092d3b4783ca83ad
-SHA512 (ocamlbuild-0.14.2.tar.gz) = f568bf10431a1f701e8bd7554dc662400a0d978411038bbad93d44dceab02874490a8a5886a9b44e017347e7949997f13f5c3752f74e1eb5e273d2beb19a75fd
-Size (ocamlbuild-0.14.2.tar.gz) = 199293 bytes
+BLAKE2s (ocamlbuild-0.15.0.tar.gz) = 533f1aad2207f4e145f11c10ddbb94f075da47fa0d88e1c7e27a5aedfe1bf1d9
+SHA512 (ocamlbuild-0.15.0.tar.gz) = c8311a9a78491bf759eb27153d6ba4692d27cd935759a145f96a8ba8f3c2e97cef54e7d654ed1c2c07c74f60482a4fef5224e26d0f04450e69cdcb9418c762d3
+Size (ocamlbuild-0.15.0.tar.gz) = 201971 bytes
