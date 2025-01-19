@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/02 15:39:01 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/19 18:13:51 wiz Exp $
 include/SDL2/SDL_mixer.h
+lib/cmake/SDL2_mixer/sdl2_mixer-config-version.cmake
+lib/cmake/SDL2_mixer/sdl2_mixer-config.cmake
 lib/libSDL2_mixer.la
 lib/pkgconfig/SDL2_mixer.pc
