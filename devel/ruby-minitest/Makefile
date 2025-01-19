@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/12/09 13:47:16 taca Exp $
+# $NetBSD: Makefile,v 1.42 2025/01/19 11:07:21 taca Exp $
 
 DISTNAME=	minitest-5.25.4
 CATEGORIES=	devel
@@ -9,6 +9,9 @@ COMMENT=	Complete suite of testing facilities for Ruby
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+
+# Ruby 3.4.1 has the same version as bundled gem.
+RUBY_VERSIONS_ACCEPTED=	31 32 33
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
