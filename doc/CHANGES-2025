@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.506 2025/01/19 18:39:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.507 2025/01/19 18:39:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/govulncheck to 1.1.4 [wiz 2025-01-19]
 	Updated graphics/libexif to 0.6.25 [wiz 2025-01-19]
 	Updated devel/happy-lib to 2.1.4 [wiz 2025-01-19]
+	Updated devel/happy to 2.1.4 [wiz 2025-01-19]
