@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/11/22 08:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/19 16:56:06 he Exp $
 
 DISTNAME=	tornado-6.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,4 +13,5 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
