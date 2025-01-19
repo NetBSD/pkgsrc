@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/12/13 15:12:57 ktnb Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/19 15:04:16 ktnb Exp $
 
-DISTNAME=	kew-3.0.2
+DISTNAME=	kew-3.0.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ravachol/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
