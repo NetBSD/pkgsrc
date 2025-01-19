@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/12/08 08:26:13 iquiw Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/19 07:58:49 iquiw Exp $
 
-PKGNAME=	task-3.40.1
+PKGNAME=	task-3.41.0
 
 DISTNAME=	task-${GITHUB_TAG}
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ EXTRACT_USING=	bsdtar
 .include "go-modules.mk"
 
 # go module checksum calcuated from the extracted source.
-TASK_GO_SUM=		h1:Q/TjPh5SAI+XK2fBravDPZXNGm6mvnwrLJqCXfhZ3Wc=
+TASK_GO_SUM=		h1:giUddhe0XZLbEWIQ/MuTPipR9ek+teulIA5xf/2IHXg=
 
 GO_BUILD_PATTERN+=	-ldflags ' \
 			-X github.com/go-task/task/v3/internal/version.version=${GITHUB_TAG} \
