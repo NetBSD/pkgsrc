@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2025/01/17 16:28:09 vins Exp $
+# $NetBSD: options.mk,v 1.9 2025/01/19 11:59:51 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -59,7 +59,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_CHAFA=OFF
 ##
 ## libdrm
 ## Fallback if both wayland and x11 are not available
-## AMD GPU properties detection
+## (+ AMD GPU properties detection)
 ##
 .if !empty(PKG_OPTIONS:Mlibdrm)
 .  include "../../x11/libdrm/buildlink3.mk"
@@ -114,7 +114,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OSMESA=OFF
 
 ##
 ## OpenCL
-## Build OpenCL module.
+## OpenCL framework support.
 ##
 .if !empty(PKG_OPTIONS:Mopencl)
 .  include "../../parallel/ocl-icd/buildlink3.mk"
@@ -125,6 +125,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OPENCL=OFF
 ##
 ## OSS
 ## Provides sound device detection.
+## (through the Open Sound System Library)
 ##
 .if !empty(PKG_OPTIONS:Moss)
 .  include "../../mk/oss.buildlink3.mk"
@@ -133,6 +134,7 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_OPENCL=OFF
 ##
 ## Pulseaudio
 ## Provides sound device detection.
+## (through the PulseAudio sound server)
 ##
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .  include "../../audio/pulseaudio/buildlink3.mk"
@@ -142,11 +144,20 @@ CMAKE_CONFIGURE_ARGS+=  -DENABLE_PULSE=OFF
 
 ##
 ## Python
-## Needed for zsh and fish completions.
+## Needed for zsh and fish shell completions.
+## (+ man page generation and embedded pciids)
 ##
 .if !empty(PKG_OPTIONS:Mpython)
-.  include "../../lang/python/application.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=   27
+.  include "../../lang/python/batteries-included.mk"
+PYTHON_FOR_BUILD_ONLY=	no
+
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_MESSAGE.python=	Replacing python interpreter.
+SUBST_FILES.python+=	completions/fastfetch.fish completions/fastfetch.zsh
+SUBST_SED.python+=	-e "s:python3:${PYTHONBIN:Q}:g"
+.else
+PYTHON_FOR_BUILD_ONLY=	tool
 .endif
 
 ##
