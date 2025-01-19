@@ -1,16 +1,22 @@
-$NetBSD: patch-migemo-client,v 1.1 2012/08/12 11:52:26 obache Exp $
+$NetBSD: patch-migemo-client,v 1.2 2025/01/19 11:24:44 taca Exp $
+
+* Set default external encoding to EUC-JP.
+* Add specifying script encoding to EUC-JP.
+* Remove $KCODE.
 
 --- migemo-client.orig	2001-08-13 09:30:48.000000000 +0000
 +++ migemo-client
-@@ -1,4 +1,4 @@
--#!/usr/bin/env ruby
-+#!/usr/bin/env ruby -Ke
+@@ -1,4 +1,5 @@
+ #!/usr/bin/env ruby
++# coding: euc-jp
  #
  # migemo-client - a client to communicate with migemo-server.
  #
-@@ -10,7 +10,6 @@
+@@ -9,8 +10,8 @@
+ # You can redistribute it and/or modify it under the terms of 
  # the GNU General Public License version 2.
  #
++Encoding.default_external = Encoding::EUC_JP
  
 -$KCODE = "e"
  require 'net/http'

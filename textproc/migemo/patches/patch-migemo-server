@@ -1,22 +1,28 @@
-$NetBSD: patch-migemo-server,v 1.1 2012/08/12 11:52:27 obache Exp $
+$NetBSD: patch-migemo-server,v 1.2 2025/01/19 11:24:44 taca Exp $
+
+* Set default external encoding to EUC-JP.
+* Add specifying script encoding to EUC-JP.
+* Remove $KCODE.
 
 --- migemo-server.orig	2001-08-13 09:30:51.000000000 +0000
 +++ migemo-server
-@@ -1,4 +1,4 @@
--#! /usr/bin/env ruby
-+#! /usr/bin/env ruby -Ke
+@@ -1,4 +1,5 @@
+ #! /usr/bin/env ruby
++# coding: euc-jp
  #
  # migemo-server
  #
-@@ -10,7 +10,6 @@
+@@ -9,8 +10,8 @@
+ # You can redistribute it and/or modify it under the terms of 
  # the GNU General Public License version 2.
  #
++Encoding.default_external = Encoding::EUC_JP
  
 -$KCODE = "e"
  require 'migemo'
  require 'cgi'
  require 'socket'
-@@ -73,7 +72,7 @@ class MigemoServer
+@@ -73,7 +74,7 @@ class MigemoServer
    end
  
    def print_form (socket)
@@ -25,7 +31,7 @@ $NetBSD: patch-migemo-server,v 1.1 2012/08/12 11:52:27 obache Exp $
  		['HTTP/1.0 200', 
  		  'Content-type: text/html'], 
  		<<"EOF")
-@@ -111,7 +110,7 @@ EOF
+@@ -111,7 +112,7 @@ EOF
  
    def print_http (socket, header, body)
      header.each { |h| socket.syswrite h + CRLF }
