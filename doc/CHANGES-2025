@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.456 2025/01/19 11:24:55 taca Exp $
+$NetBSD: CHANGES-2025,v 1.457 2025/01/19 13:41:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -615,3 +615,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/p5-DateTime-TimeZone to 2.64 [wiz 2025-01-19]
 	Updated devel/task to 3.41.0 [iquiw 2025-01-19]
 	Updated textproc/migemo to 0.40nb2 [taca 2025-01-19]
+	Updated lang/ruby33 to 3.3.7 [taca 2025-01-19]
