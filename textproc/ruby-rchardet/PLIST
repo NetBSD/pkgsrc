@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2023/01/09 05:24:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/19 16:33:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LGPL-LICENSE.txt
 ${GEM_LIBDIR}/lib/rchardet.rb
 ${GEM_LIBDIR}/lib/rchardet/big5freq.rb
 ${GEM_LIBDIR}/lib/rchardet/big5prober.rb
