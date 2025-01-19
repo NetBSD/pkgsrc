@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.508 2025/01/19 18:44:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.509 2025/01/19 18:46:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/happy-lib to 2.1.4 [wiz 2025-01-19]
 	Updated devel/happy to 2.1.4 [wiz 2025-01-19]
 	Updated www/py-google-api-python-client to 2.159.0 [wiz 2025-01-19]
+	Updated time/py-icalendar to 6.1.1 [wiz 2025-01-19]
