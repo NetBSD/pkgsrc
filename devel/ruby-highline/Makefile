@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/09/18 15:13:34 taca Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/19 14:51:31 taca Exp $
 
-DISTNAME=	highline-3.1.1
+DISTNAME=	highline-3.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
