@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2025/01/19 16:59:12 riastradh Exp $
+# $NetBSD: Makefile,v 1.88 2025/01/19 16:59:20 riastradh Exp $
 
 DISTNAME=	LibreCAD-2.2.0-rc2
 PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
@@ -56,7 +56,7 @@ QMAKE_OPTIONS+=	QMAKE_LFLAGS_RELEASE=
 QMAKE_OPTIONS+=	DISABLE_POSTSCRIPT=true
 
 do-configure:
-	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake ${QMAKE_OPTIONS:Q}
+	${RUN} cd ${WRKSRC} && ${QTDIR}/bin/qmake ${QMAKE_OPTIONS}
 	${RUN} cd ${WRKSRC}/plugins && ${QTDIR}/bin/qmake \
 		INSTALLS+=target target.path=${PREFIX}/lib/librecad/plugins
 
