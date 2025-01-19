@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2025/01/12 09:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/19 06:51:00 wiz Exp $
 
-DISTNAME=	libintl-perl-1.34
+DISTNAME=	libintl-perl-1.35
 PKGNAME=	p5-${DISTNAME:S/libintl-perl/Locale-libintl/}
 CATEGORIES=	misc devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/G/GU/GUIDO/}
