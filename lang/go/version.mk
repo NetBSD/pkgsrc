@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.221 2025/01/17 10:33:08 bsiegert Exp $
+# $NetBSD: version.mk,v 1.222 2025/01/19 19:50:03 riastradh Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -25,7 +25,7 @@ GOVERSSUFFIX=		${GO_VERSION_DEFAULT}
 .endif
 
 # How to find the Go tool
-GO=			${PREFIX}/go${GOVERSSUFFIX}/bin/go
+GO=			${TOOLBASE}/go${GOVERSSUFFIX}/bin/go
 
 # Build dependency for Go
 GO_PACKAGE_DEP=		go${GOVERSSUFFIX}-${GO${GOVERSSUFFIX}_VERSION}*:../../lang/go${GOVERSSUFFIX}
