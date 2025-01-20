@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/25 11:28:24 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/20 08:23:35 adam Exp $
 
-DISTNAME=	tree-sitter-0.23.2
+DISTNAME=	tree-sitter-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/tree-sitter/}
