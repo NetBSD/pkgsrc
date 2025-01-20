@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.525 2025/01/20 10:24:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.526 2025/01/20 11:07:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -692,3 +692,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zconfig to 4.2 [adam 2025-01-20]
 	Updated audio/libmikmod to 3.3.12 [adam 2025-01-20]
 	Updated audio/mikmod to 3.2.9 [adam 2025-01-20]
+	Updated archivers/libzip to 1.11.3 [wiz 2025-01-20]
