@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 09:59:12 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/01/20 10:24:10 adam Exp $
 
-BLAKE2s (mikmod-3.2.8.tar.gz) = 5830c1dec3950d3bd00c1bdf476c3f189b882a550e4597bca86e9bedb76b254d
-SHA512 (mikmod-3.2.8.tar.gz) = fbccfd31c49fc1faa159e7174fb0886dc3742ef935b596176fafeb953498ceb04475bebf9b0a948f1e2de1b11a01b130d2f11f4f034199b501ca08823a3ea620
-Size (mikmod-3.2.8.tar.gz) = 279763 bytes
+BLAKE2s (mikmod-3.2.9.tar.gz) = d5e8f2f393365893abcd99b1bb4c7e6422c15b3a4077acb99b8b5dceb94d9882
+SHA512 (mikmod-3.2.9.tar.gz) = 0740f0dcc05f9d8ce9697e5a141c1525fd5c6baa7102bfb3b9fcb16f1257f0829e06ee4e8638af82230e34035e87bb24ebc05728d5cb0ae33ddb7695df242c32
+Size (mikmod-3.2.9.tar.gz) = 277032 bytes
