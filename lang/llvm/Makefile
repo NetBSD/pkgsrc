@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/11/14 22:20:28 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/01/20 14:27:22 riastradh Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -23,7 +23,7 @@
 # Always update all */buildlink3.mk to require the latest stable release
 # version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility.
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "version.mk"
 
 DISTNAME=	llvm-${LLVM_VERSION}.src
@@ -38,7 +38,7 @@ LICENSE=	apache-2.0
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c c++
 GCC_REQD+=		7
-PYTHON_FOR_BUILD_ONLY=	tool
+PYTHON_FOR_BUILD_ONLY=	no
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
@@ -84,6 +84,14 @@ SUBST_SED.linkmap=	-e '/^LLVM/d'
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# Fix the runtime Python path.
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-build
+SUBST_FILES.python=	${CMAKE_BUILD_DIR}/bin/llvm-lit
+SUBST_SED.python+=	'1s,\#!.*python.*,\#!${PYTHONBIN},'
+.endif
 
 PLIST_VARS+=	notdylib
 .if ${SHLIB_TYPE} == "dylib"
