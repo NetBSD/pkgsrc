@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2025/01/20 14:27:22 riastradh Exp $
+# $NetBSD: Makefile,v 1.104 2025/01/20 14:30:05 riastradh Exp $
 #
 # When updating this, please also update:
 # devel/include-what-you-use
@@ -90,7 +90,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
 SUBST_FILES.python=	${CMAKE_BUILD_DIR}/bin/llvm-lit
-SUBST_SED.python+=	'1s,\#!.*python.*,\#!${PYTHONBIN},'
+SUBST_SED.python=	-e '1s,\#!.*python.*,\#!${PYTHONBIN},'
 .endif
 
 PLIST_VARS+=	notdylib
@@ -138,7 +138,7 @@ CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_LLVM_PTHREADLIB=-lpthread
 .endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
-TOOL_DEPENDS+=	${PKGNAME}:../../${PKGPATH}
+TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 CMAKE_CONFIGURE_ARGS+=	-DLLVM_TABLEGEN:STRING=${TOOLBASE:Q}/bin/llvm-tblgen
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2024/08/25 06:18:56 wiz Exp $
+# $NetBSD: options.mk,v 1.21 2025/01/20 14:30:05 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -52,7 +52,7 @@ LLVM_TARGETS_TO_BUILD+=	${tgt}
 
 .for tgt in ${LLVM_EXPERIMENTAL_TARGETS}
 .  if !empty(PKG_OPTIONS:Mllvm-target-${tgt:tl})
-PLIST.${tgt}=	yes
+PLIST.${tgt}=		yes
 LLVM_EXPERIMENTAL_TARGETS_TO_BUILD+=	${tgt}
 .  endif
 .endfor
@@ -72,11 +72,11 @@ CMAKE_CONFIGURE_ARGS+=	-DLLVM_ENABLE_Z3_SOLVER=ON
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-RELEASE_TYPE?=	debug
+RELEASE_TYPE?=		debug
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 .else
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
-RELEASE_TYPE?=	release
+RELEASE_TYPE?=		release
 .endif
 
 .if !empty(PKG_OPTIONS:Mtests)
