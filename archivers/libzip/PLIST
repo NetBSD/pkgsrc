@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/06/26 11:37:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/01/20 11:07:32 wiz Exp $
 bin/zipcmp
 bin/zipmerge
 bin/ziptool
@@ -37,6 +37,7 @@ man/man3/zip_error_get_sys_type.3
 man/man3/zip_error_init.3
 man/man3/zip_error_init_with_code.3
 man/man3/zip_error_set.3
+man/man3/zip_error_set_from_source.3
 man/man3/zip_error_strerror.3
 man/man3/zip_error_system_type.3
 man/man3/zip_error_to_data.3
