@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.519 2025/01/19 22:07:53 fox Exp $
+$NetBSD: CHANGES-2025,v 1.520 2025/01/20 06:12:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -679,3 +679,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/py-qt-builder to 1.17.2 [wiz 2025-01-19]
 	Updated audio/din to 59 [fox 2025-01-19]
 	Updated sysutils/eza to 0.20.17 [fox 2025-01-19]
+	Updated www/py-websockets to 14.2 [adam 2025-01-20]
+	Updated math/py-asteval to 1.0.6 [adam 2025-01-20]
+	Updated net/py-aioresponses to 0.7.8 [adam 2025-01-20]
+	Updated graphics/py-imageio to 2.37.0 [adam 2025-01-20]
