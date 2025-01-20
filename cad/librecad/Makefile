@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2025/01/20 19:27:51 riastradh Exp $
+# $NetBSD: Makefile,v 1.91 2025/01/20 23:09:47 gdt Exp $
 
 DISTNAME=	LibreCAD-2.2.0-rc2
 PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LibreCAD/}
 GITHUB_PROJECT=	LibreCAD
@@ -17,22 +17,24 @@ TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 EXTRACT_USING=	bsdtar
 
-USE_LANGUAGES=	c c++14
-FORCE_CXX_STD=	-std=c++14
-USE_TOOLS+=	pax pkg-config
-USE_LIBTOOL=	yes
-
-# Upstream declares a requirement of C++11 and uses -std=gnu++11 (at
-# least on NetBSD; can't figure out in 30sec of searching where the
-# argument comes from in the source code), but it uses boost.math,
-# which as of boost>=1.82 requires C++14:
+USE_LANGUAGES=	c c++
+# Upstream declares a requirement of C++11 and uses --std=c++11
+# (top-level Makefile) and -std=gnu++11 (several subdirectories).
+# However it uses boost.math, which as of boost>=1.82 requires C++14:
 #
 # https://web.archive.org/web/20241120103157/https://www.boost.org/doc/libs/1_82_0/?view=category_math#lib-math
 #
-# So we explicitly delete the -std=gnu++11 argument and replace it by
-# -std=c++14 with FORCE_CXX_STD.
+# So we explicitly delete the -std=c++11 and -std=gnu++11 arguments
+# and replace then by -std=gnu++14, via FORCE_CXX_STD.  (We assume
+# that the implication of gnu++11 and c++14 is gnu++14, without
+# proof.)
+USE_CXX_FEATURES+=	gnu++14
+BUILDLINK_TRANSFORM+=	rm:-std=c++11
 BUILDLINK_TRANSFORM+=	rm:-std=gnu++11
-USE_CXX_FEATURES+=	c++14
+FORCE_CXX_STD=		gnu++14
+
+USE_TOOLS+=	pax pkg-config
+USE_LIBTOOL=	yes
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
