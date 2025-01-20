@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2022/05/31 11:51:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/20 14:48:21 wiz Exp $
 bin/ckmame
+bin/ckstatus
 bin/dumpgame
 bin/mkmamedb
 man/man1/ckmame.1
+man/man1/ckstatus.1
 man/man1/dumpgame.1
 man/man1/mkmamedb.1
 man/man5/ckmamerc.5

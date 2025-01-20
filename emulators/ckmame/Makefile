@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2024/11/14 22:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2025/01/20 14:48:21 wiz Exp $
 
-DISTNAME=		ckmame-2.1
-PKGREVISION=		5
+DISTNAME=		ckmame-3.0
 CATEGORIES=		emulators
 MASTER_SITES=		https://www.nih.at/ckmame/
 EXTRACT_SUFX=		.tar.xz
@@ -12,7 +11,7 @@ COMMENT=		Check ROM sets for MAME
 LICENSE=		modified-bsd
 
 # detected at configure time, and tests not run if not installed
-BUILD_DEPENDS+=		${PYPKGPREFIX}-nihtest>=1.5:../../devel/py-nihtest
+BUILD_DEPENDS+=		${PYPKGPREFIX}-nihtest>=1.9.1:../../devel/py-nihtest
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -26,7 +25,7 @@ pre-configure:
 .include "../../devel/cmake/build.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.8
+BUILDLINK_API_DEPENDS.libzip+=	libzip>=1.10
 .include "../../archivers/libzip/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
