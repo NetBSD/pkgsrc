@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.520 2025/01/20 06:12:42 adam Exp $
+$NetBSD: CHANGES-2025,v 1.521 2025/01/20 06:24:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -683,3 +683,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-asteval to 1.0.6 [adam 2025-01-20]
 	Updated net/py-aioresponses to 0.7.8 [adam 2025-01-20]
 	Updated graphics/py-imageio to 2.37.0 [adam 2025-01-20]
+	Updated misc/dpkg to 1.22.14 [adam 2025-01-20]
+	Updated sysutils/dtc to 1.7.2 [adam 2025-01-20]
