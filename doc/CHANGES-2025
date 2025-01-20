@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.533 2025/01/20 17:30:08 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.534 2025/01/20 21:26:43 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -703,3 +703,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/doxygen to 1.13.2 [adam 2025-01-20]
 	Updated net/py-minio to 7.2.15 [adam 2025-01-20]
 	Added biology/subread version 2.0.8 [bacon 2025-01-20]
+	Updated math/R to 4.4.2nb4 [he 2025-01-20]
