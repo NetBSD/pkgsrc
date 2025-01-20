@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2024/12/04 13:38:54 bacon Exp $
+# $NetBSD: Makefile,v 1.107 2025/01/20 17:30:20 bacon Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -92,6 +92,7 @@ SUBDIR+=	sra-tools
 SUBDIR+=	stacks
 SUBDIR+=	stride
 SUBDIR+=	stringtie
+SUBDIR+=	subread
 SUBDIR+=	trimmomatic
 SUBDIR+=	vcf-split
 SUBDIR+=	vcf2hap
