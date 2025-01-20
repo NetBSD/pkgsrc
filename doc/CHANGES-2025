@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.531 2025/01/20 14:48:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.532 2025/01/20 16:00:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -700,3 +700,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added converters/aklomp-base64 version 0.5.2 [wiz 2025-01-20]
 	Updated devel/ruby-redmine60 to 6.0.2nb1 [taca 2025-01-20]
 	Updated emulators/ckmame to 3.0 [wiz 2025-01-20]
+	Updated devel/doxygen to 1.13.2 [adam 2025-01-20]
+	Updated net/py-minio to 7.2.15 [adam 2025-01-20]
