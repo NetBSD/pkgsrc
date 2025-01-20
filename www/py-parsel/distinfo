@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/05/14 14:40:36 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/01/20 13:25:04 adam Exp $
 
-BLAKE2s (parsel-1.9.1.tar.gz) = f9b8c07a64dae8bf0c55627661994e88e05c462c6c8cce75c6b0594b6b07e4e0
-SHA512 (parsel-1.9.1.tar.gz) = 90aefdb7758b4cb30c6b06c2aa8a08b618e86fd34322b40559cc03b4f3f785d013fbcd54dbbd3831136d408ab9b348e32b367627d2880c599210012040f878bb
-Size (parsel-1.9.1.tar.gz) = 51225 bytes
+BLAKE2s (parsel-1.10.0.tar.gz) = 589bc8ff1d843b257880b4c0abaac9af7b1cbadfd3ec904c50606acae0969932
+SHA512 (parsel-1.10.0.tar.gz) = aa0c3de6f8e8453ac942fd86221b6ed44c15874735af49fcef56bbd3c6aa9676b9642ea896924ac551cd4acabe2ea5d6124dc907b11ac26781da05e236f33109
+Size (parsel-1.10.0.tar.gz) = 51421 bytes
