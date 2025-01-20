@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.530 2025/01/20 14:29:33 taca Exp $
+$NetBSD: CHANGES-2025,v 1.531 2025/01/20 14:48:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -699,3 +699,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-parsel to 1.10.0 [adam 2025-01-20]
 	Added converters/aklomp-base64 version 0.5.2 [wiz 2025-01-20]
 	Updated devel/ruby-redmine60 to 6.0.2nb1 [taca 2025-01-20]
+	Updated emulators/ckmame to 3.0 [wiz 2025-01-20]
