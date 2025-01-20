@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/01/20 14:05:16 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/01/20 13:22:18 adam Exp $
 
-BLAKE2s (cpplint-1.6.1.tar.gz) = 50c9f69d80f26156255474353beed36e8c61c0c9027c0c437ed00864dbd00de2
-SHA512 (cpplint-1.6.1.tar.gz) = 22d7b18be5386ec6203aed090f8805fe671b57f6da56f451e77f98bfaf294a152d6f91bf286fa173ebe56016ff0553f4818a261beb727be0c5ce5996495b43c5
-Size (cpplint-1.6.1.tar.gz) = 364487 bytes
-SHA1 (patch-test-requirements) = a4bb24dc8a5f069772d6ed1296dedbcf001a046f
+BLAKE2s (cpplint-2.0.0.tar.gz) = 9ad862f3bf8113dbbc4c71a5fa7d86f53517a7fc251c3f5067b617f6bc647dc8
+SHA512 (cpplint-2.0.0.tar.gz) = 4a3d53ca3e26b9f68ba55348c622e95547bf5a75f06a91a2787a9b2459bd4381ea1b3170d5b83c14f8cfb9981de1514c41a41aecd03516ab3ac0157291269844
+Size (cpplint-2.0.0.tar.gz) = 372823 bytes
