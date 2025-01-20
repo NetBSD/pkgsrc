@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.536 2025/01/20 23:29:32 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.537 2025/01/20 23:39:33 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/R to 4.4.2nb4 [he 2025-01-20]
 	Updated net/ncdc to 1.24.1 [wiz 2025-01-20]
 	Updated cad/librecad to 2.2.0 [gdt 2025-01-20]
+	Updated cad/librecad to 2.2.0.2 [gdt 2025-01-20]
