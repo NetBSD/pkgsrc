@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/20 17:29:58 bacon Exp $
+bin/detectionCall
+bin/exactSNP
+bin/featureCounts
+bin/flattenGTF
+bin/genRandomReads
+bin/propmapped
+bin/qualityScores
+bin/removeDup
+bin/repair
+bin/subindel
+bin/subjunc
+bin/sublong
+bin/subread-align
+bin/subread-buildindex
+bin/subread-fullscan
+bin/txUnique
