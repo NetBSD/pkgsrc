@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/16 16:32:03 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/20 06:10:08 adam Exp $
 
-DISTNAME=	aioresponses-0.7.7
+DISTNAME=	aioresponses-0.7.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aioresponses/}
