@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/12/13 17:19:28 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/20 14:29:19 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://www.redmine.org/releases/
 
@@ -41,7 +42,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zip>=2.3.0<2.4:../../archivers/ruby-zip
 DEPENDS+=	${RUBY_PKGPREFIX}-rotp>=6.2.0:../../security/ruby-rotp
 DEPENDS+=	${RUBY_PKGPREFIX}-rqrcode>=1.2.0:../../textproc/ruby-rqrcode
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ldap>=0.17.0:../../net/ruby-net-ldap
-DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=5.0.1<5.1:../../graphics/ruby-mini-magick
+DEPENDS+=	${RUBY_PKGPREFIX}-mini-magick>=5.0.1<6:../../graphics/ruby-mini-magick
 DEPENDS+=	${RUBY_PKGPREFIX}-deckar01-task_list>=2.3.2:../../textproc/ruby-deckar01-task_list
 DEPENDS+=	${RUBY_PKGPREFIX}-html-pipeline>=2.13.2<3:../../textproc/ruby-html-pipeline
 DEPENDS+=	${RUBY_PKGPREFIX}-commonmarker>=0.23.8<1:../../textproc/ruby-commonmarker
