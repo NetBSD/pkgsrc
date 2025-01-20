@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.524 2025/01/20 08:25:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.525 2025/01/20 10:24:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -690,3 +690,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinxygen to 1.0.10 [adam 2025-01-20]
 	Updated textproc/py-tree-sitter to 0.24.0 [adam 2025-01-20]
 	Updated devel/py-zconfig to 4.2 [adam 2025-01-20]
+	Updated audio/libmikmod to 3.3.12 [adam 2025-01-20]
+	Updated audio/mikmod to 3.2.9 [adam 2025-01-20]
