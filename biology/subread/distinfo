@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1 2025/01/20 17:29:58 bacon Exp $
+
+BLAKE2s (subread-2.0.8-source.tar.gz) = ddf9b8e627210aa133e019496deb90fdba8a387585ca9403fa630192f44211ee
+SHA512 (subread-2.0.8-source.tar.gz) = 740c14243fbf24ccd7316966788575f8f310a442acd8bb978e330797805b9568fb719cde28afb9e747170c92835b1661c12ce045e3bf1452a71e0286d73a0ad7
+Size (subread-2.0.8-source.tar.gz) = 26074498 bytes
+SHA1 (patch-HelperFunctions.c) = fac250be541ec76fef1cb439a4849050fd8be420
+SHA1 (patch-core-junction.c) = 481cd069aa42d673bbc10c80bb9548547e808b0c
+SHA1 (patch-gene-algorithms.c) = 35667746d92a3060a70229d69cdefd862da1a4c1
+SHA1 (patch-input-files.c) = 5058ff5d00b2afb57ff4127a7ba737753cb47c58
+SHA1 (patch-long-hashtable.c) = 794139ee464a313a424ca929e3009df99d57dbf6
+SHA1 (patch-longread-one_LRMsorted-hashtable.c) = d46ea9b73dee4f0531a002c22099865e3cce1034
+SHA1 (patch-longread-one_Makefile) = 138e6cf370a1b566738eb98793d40a61b4837320
+SHA1 (patch-longread-one_longread-mapping.c) = de09092da544f2286f4a5fee7a70c08135e44b40
+SHA1 (patch-read-repair.c) = 4d7085ec8558647c7d92f5d0697b04b526496a75
+SHA1 (patch-sambam-file.c) = 16d3bf05718db64518cfd94e6574b2c3a0794c79
+SHA1 (patch-sorted-hashtable.c) = 36d4668a3fac89b7b8fa750197962d17deaa4ed5
+SHA1 (patch-subread.h) = b3d27a6f964ffece4b51ec59d5fd95fbd6ead160
