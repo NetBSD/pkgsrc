@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.193 2024/11/14 22:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.194 2025/01/20 15:55:29 adam Exp $
 
-DISTNAME=	doxygen-1.12.0.src
+DISTNAME=	doxygen-1.13.2.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://doxygen.nl/files/
 
@@ -19,14 +18,14 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES+=	datasize
 # doxygen changelog says at least this version of flex is required
 FLEX_REQD+=		2.6.4
+USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
-CMAKE_CONFIGURE_ARGS+=		-DDOC_INSTALL_DIR=share/doc/doxygen
-CMAKE_CONFIGURE_ARGS+=		-DGIT_EXECUTABLE=git # avoid searching for git executable
+CMAKE_CONFIGURE_ARGS+=	-DDOC_INSTALL_DIR=share/doc/doxygen
+CMAKE_CONFIGURE_ARGS+=	-DGIT_EXECUTABLE=git # avoid searching for git executable
 TEST_TARGET=		tests
 
 PYTHON_FOR_BUILD_ONLY=	tool
@@ -54,9 +53,9 @@ SUBST_SED.changelog+=		-e 's,$$(HOME,(HOME,g'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-PLIST.ci=		yes	# case-insensitive
+PLIST.ci=	yes	# case-insensitive
 .else
-PLIST.cs=		yes	# case-sensitive
+PLIST.cs=	yes	# case-sensitive
 .endif
 
 CONFIGURE_ARGS.DragonFly+=	-platform freebsd-g++
