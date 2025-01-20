@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 10:04:13 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/01/20 23:29:25 gdt Exp $
 
-BLAKE2s (LibreCAD-2.2.0-rc2.tar.gz) = e0ed6497160a4d98ad64ab28036d235b02a121d7e96d878a15f67acb122d2fee
-SHA512 (LibreCAD-2.2.0-rc2.tar.gz) = e4f6041ea9685f57d08a2e33f7202341f31698e7faa860b2710109ad650be4a3f93f368044d5d7175dedd852e2a81d4de2a5d4949b559d74e41ecc9ad502b652
-Size (LibreCAD-2.2.0-rc2.tar.gz) = 13561381 bytes
-SHA1 (patch-librecad_src_lib_engine_rs__ellipse.cpp) = 0d236bb0047007bb994d93399360ed8dcdc33f3f
-SHA1 (patch-librecad_src_lib_engine_rs__system.cpp) = 38ceb3cde81042a1eeb6c68ead874e1a3a3512bb
+BLAKE2s (LibreCAD-2.2.0.tar.gz) = 336e387eb0c95fed9412b85cf8a0d1fb00f5754fb018326911848a1ef01934fa
+SHA512 (LibreCAD-2.2.0.tar.gz) = df33eac311b5232d6fc0480be1b1c9d257a33ba22f9b7897af4c1761978c87c07a962ae3ea37e8728661a788152157fc621aae65d60d44ae37b2028919cc96a2
+Size (LibreCAD-2.2.0.tar.gz) = 13837301 bytes
 SHA1 (patch-librecad_src_main_qc__applicationwindow.cpp) = 1234b3b4e087c651da76c1d8d7770bebaa71dddc
-SHA1 (patch-scripts_postprocess-unix.sh) = dfa529bff1251967764c1a21654976844cc7e19a
+SHA1 (patch-scripts_postprocess-unix.sh) = 16f2768867da15b6309bd1e1368b3bf833eec6d7

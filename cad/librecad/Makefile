@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2025/01/20 23:09:47 gdt Exp $
+# $NetBSD: Makefile,v 1.92 2025/01/20 23:29:25 gdt Exp $
 
-DISTNAME=	LibreCAD-2.2.0-rc2
-PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
-PKGREVISION=	24
+DISTNAME=	LibreCAD-2.2.0
+PKGNAME=	${DISTNAME:tl}
+#PKGNAME=	${DISTNAME:tl:S/-rc2/.rc2/g}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LibreCAD/}
 GITHUB_PROJECT=	LibreCAD
@@ -41,12 +41,6 @@ SUBST_STAGE.qtdir=	pre-configure
 SUBST_MESSAGE.qtdir=	Set qt5/bin
 SUBST_FILES.qtdir+=	scripts/postprocess-unix.sh
 SUBST_VARS.qtdir+=	QTDIR
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Fix hardcoded path
-SUBST_FILES.prefix+=	librecad/src/lib/engine/rs_system.cpp
-SUBST_VARS.prefix+=	PREFIX
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mclang*)
