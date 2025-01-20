@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.521 2025/01/20 06:24:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.522 2025/01/20 07:50:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-imageio to 2.37.0 [adam 2025-01-20]
 	Updated misc/dpkg to 1.22.14 [adam 2025-01-20]
 	Updated sysutils/dtc to 1.7.2 [adam 2025-01-20]
+	Updated time/p5-DateTime-Format-Flexible to 0.37 [wen 2025-01-20]
