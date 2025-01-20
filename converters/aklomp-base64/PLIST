@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/20 13:35:04 wiz Exp $
+bin/aklomp-base64
+include/libbase64.h
+lib/cmake/base64/base64-config-version.cmake
+lib/cmake/base64/base64-config.cmake
+lib/cmake/base64/base64-targets-noconfig.cmake
+lib/cmake/base64/base64-targets.cmake
+lib/libbase64.a
