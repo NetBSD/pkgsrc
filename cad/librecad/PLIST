@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2021/05/22 10:18:23 nia Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/20 23:39:20 gdt Exp $
 bin/librecad
 bin/ttf2lff
-lib/librecad/fonts/OpenGostTypeA-Regular.lff
-lib/librecad/fonts/OpenGostTypeB-Regular.lff
 lib/librecad/fonts/amiri-regular.lff
 lib/librecad/fonts/azomix.lff
 lib/librecad/fonts/azomix_i.lff
@@ -27,6 +25,8 @@ lib/librecad/fonts/kochimincho.lff
 lib/librecad/fonts/kst32b.lff
 lib/librecad/fonts/lc_opengost-ar.lff
 lib/librecad/fonts/lc_opengost-br.lff
+lib/librecad/fonts/opengosttypea-regular.lff
+lib/librecad/fonts/opengosttypeb-regular.lff
 lib/librecad/fonts/romanc.lff
 lib/librecad/fonts/romancs.lff
 lib/librecad/fonts/romand.lff
@@ -51,7 +51,6 @@ lib/librecad/plugins/libalign.so
 lib/librecad/plugins/libasciifile.so
 lib/librecad/plugins/libdivide.so
 lib/librecad/plugins/libgear.so
-lib/librecad/plugins/libimportshp.so
 lib/librecad/plugins/liblist.so
 lib/librecad/plugins/libpicfile.so
 lib/librecad/plugins/libplotequation.so
