@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.528 2025/01/20 13:25:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.529 2025/01/20 13:35:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -697,3 +697,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-virtualenv to 20.29.1 [adam 2025-01-20]
 	Updated devel/py-cpplint to 2.0.0 [adam 2025-01-20]
 	Updated www/py-parsel to 1.10.0 [adam 2025-01-20]
+	Added converters/aklomp-base64 version 0.5.2 [wiz 2025-01-20]
