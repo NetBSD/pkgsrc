@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/15 11:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/21 14:15:01 adam Exp $
 
-DISTNAME=	starlette-0.42.0
+DISTNAME=	starlette-0.45.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/starlette/}
@@ -11,7 +11,7 @@ COMMENT=	Little ASGI library that shines
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
-DEPENDS+=	${PYPKGPREFIX}-anyio>=3.4.0:../../devel/py-anyio
+DEPENDS+=	${PYPKGPREFIX}-anyio>=3.6.2:../../devel/py-anyio
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 TEST_DEPENDS+=	${PYPKGPREFIX}-itsdangerous-[0-9]*:../../security/py-itsdangerous
 TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
