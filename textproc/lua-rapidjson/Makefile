@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/08/25 06:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/21 14:35:47 nia Exp $
 
 DISTNAME=	lua-rapidjson-0.7.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=xpol/}
 GITHUB_PROJECT=	lua-rapidjson
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/xpol/lua-rapidjson
 COMMENT=	JSON module for Lua, based on the very fast RapidJSON C++ library
 LICENSE=	mit

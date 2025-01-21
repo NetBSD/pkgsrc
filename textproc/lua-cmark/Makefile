@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/10 12:43:26 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 14:35:46 nia Exp $
 
 DISTNAME=	lua-cmark-0.31.1
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -6,7 +6,7 @@ CATEGORIES=	textproc lua
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jgm/}
 GITHUB_PROJECT=	cmark-lua
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jgm/cmark-lua
 COMMENT=	Lua wrapper for libcmark, the CommonMark parsing and rendering library
 LICENSE=	2-clause-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2022/02/19 20:55:31 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/21 14:35:46 nia Exp $
 
 DISTNAME=	lustache-1.3.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
 GITHUB_PROJECT=	lustache
 GITHUB_TAG=	v${PKGVERSION_NOREV}-0
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://olivinelabs.com/lustache/
 COMMENT=	Logic-less mustache templates with Lua
 LICENSE=	mit
