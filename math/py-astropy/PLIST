@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/10/03 12:03:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/21 01:18:25 wen Exp $
 bin/fits2bitmap
 bin/fitscheck
 bin/fitsdiff
@@ -19,6 +19,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/NUMPY_LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/PLY_LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/POSITIONAL_DEFAULTS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/PYFITS.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/PYTHON.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/README.rst
@@ -463,6 +464,9 @@ ${PYSITELIB}/astropy/coordinates/tests/test_icrs_observed_transformations.pyo
 ${PYSITELIB}/astropy/coordinates/tests/test_intermediate_transformations.py
 ${PYSITELIB}/astropy/coordinates/tests/test_intermediate_transformations.pyc
 ${PYSITELIB}/astropy/coordinates/tests/test_intermediate_transformations.pyo
+${PYSITELIB}/astropy/coordinates/tests/test_masked.py
+${PYSITELIB}/astropy/coordinates/tests/test_masked.pyc
+${PYSITELIB}/astropy/coordinates/tests/test_masked.pyo
 ${PYSITELIB}/astropy/coordinates/tests/test_matching.py
 ${PYSITELIB}/astropy/coordinates/tests/test_matching.pyc
 ${PYSITELIB}/astropy/coordinates/tests/test_matching.pyo
@@ -622,6 +626,11 @@ ${PYSITELIB}/astropy/cosmology/_io/utils.pyo
 ${PYSITELIB}/astropy/cosmology/_io/yaml.py
 ${PYSITELIB}/astropy/cosmology/_io/yaml.pyc
 ${PYSITELIB}/astropy/cosmology/_io/yaml.pyo
+${PYSITELIB}/astropy/cosmology/_signature_deprecations.c
+${PYSITELIB}/astropy/cosmology/_signature_deprecations.so
+${PYSITELIB}/astropy/cosmology/_typing.py
+${PYSITELIB}/astropy/cosmology/_typing.pyc
+${PYSITELIB}/astropy/cosmology/_typing.pyo
 ${PYSITELIB}/astropy/cosmology/_utils.py
 ${PYSITELIB}/astropy/cosmology/_utils.pyc
 ${PYSITELIB}/astropy/cosmology/_utils.pyo
@@ -662,12 +671,15 @@ ${PYSITELIB}/astropy/cosmology/flrw/tests/data/cosmo_open.ecsv
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_base.py
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_base.pyc
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_base.pyo
-${PYSITELIB}/astropy/cosmology/flrw/tests/test_init.py
-${PYSITELIB}/astropy/cosmology/flrw/tests/test_init.pyc
-${PYSITELIB}/astropy/cosmology/flrw/tests/test_init.pyo
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_flrw.py
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_flrw.pyc
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_flrw.pyo
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_lambdacdm.py
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_lambdacdm.pyc
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_lambdacdm.pyo
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_parameters.py
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_parameters.pyc
+${PYSITELIB}/astropy/cosmology/flrw/tests/test_parameters.pyo
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_w.py
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_w.pyc
 ${PYSITELIB}/astropy/cosmology/flrw/tests/test_w.pyo
@@ -743,6 +755,9 @@ ${PYSITELIB}/astropy/cosmology/parameters.pyo
 ${PYSITELIB}/astropy/cosmology/realizations.py
 ${PYSITELIB}/astropy/cosmology/realizations.pyc
 ${PYSITELIB}/astropy/cosmology/realizations.pyo
+${PYSITELIB}/astropy/cosmology/setup_package.py
+${PYSITELIB}/astropy/cosmology/setup_package.pyc
+${PYSITELIB}/astropy/cosmology/setup_package.pyo
 ${PYSITELIB}/astropy/cosmology/tests/__init__.py
 ${PYSITELIB}/astropy/cosmology/tests/__init__.pyc
 ${PYSITELIB}/astropy/cosmology/tests/__init__.pyo
@@ -773,9 +788,6 @@ ${PYSITELIB}/astropy/cosmology/tests/test_utils.pyo
 ${PYSITELIB}/astropy/cosmology/units.py
 ${PYSITELIB}/astropy/cosmology/units.pyc
 ${PYSITELIB}/astropy/cosmology/units.pyo
-${PYSITELIB}/astropy/cosmology/utils.py
-${PYSITELIB}/astropy/cosmology/utils.pyc
-${PYSITELIB}/astropy/cosmology/utils.pyo
 ${PYSITELIB}/astropy/extern/README.rst
 ${PYSITELIB}/astropy/extern/__init__.py
 ${PYSITELIB}/astropy/extern/__init__.pyc
@@ -908,6 +920,7 @@ ${PYSITELIB}/astropy/io/ascii/tests/data/cds/multi/lp944-20.dat
 ${PYSITELIB}/astropy/io/ascii/tests/data/cds/null/ReadMe
 ${PYSITELIB}/astropy/io/ascii/tests/data/cds/null/ReadMe1
 ${PYSITELIB}/astropy/io/ascii/tests/data/cds/null/table.dat
+${PYSITELIB}/astropy/io/ascii/tests/data/cds/null/table1.dat
 ${PYSITELIB}/astropy/io/ascii/tests/data/cds2.dat
 ${PYSITELIB}/astropy/io/ascii/tests/data/cdsFunctional.dat
 ${PYSITELIB}/astropy/io/ascii/tests/data/cdsFunctional2.dat
@@ -1059,6 +1072,9 @@ ${PYSITELIB}/astropy/io/fits/hdu/compressed/_quantization.pyo
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/_tiled_compression.py
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/_tiled_compression.pyc
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/_tiled_compression.pyo
+${PYSITELIB}/astropy/io/fits/hdu/compressed/compbintable.py
+${PYSITELIB}/astropy/io/fits/hdu/compressed/compbintable.pyc
+${PYSITELIB}/astropy/io/fits/hdu/compressed/compbintable.pyo
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/compressed.py
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/compressed.pyc
 ${PYSITELIB}/astropy/io/fits/hdu/compressed/compressed.pyo
@@ -1284,6 +1300,7 @@ ${PYSITELIB}/astropy/io/misc/pickle_helpers.pyo
 ${PYSITELIB}/astropy/io/misc/tests/__init__.py
 ${PYSITELIB}/astropy/io/misc/tests/__init__.pyc
 ${PYSITELIB}/astropy/io/misc/tests/__init__.pyo
+${PYSITELIB}/astropy/io/misc/tests/data/gaia_source_dr3_select_1_result.vot
 ${PYSITELIB}/astropy/io/misc/tests/data/old_meta_example.hdf5
 ${PYSITELIB}/astropy/io/misc/tests/test_hdf5.py
 ${PYSITELIB}/astropy/io/misc/tests/test_hdf5.pyc
@@ -1294,6 +1311,9 @@ ${PYSITELIB}/astropy/io/misc/tests/test_pandas.pyo
 ${PYSITELIB}/astropy/io/misc/tests/test_parquet.py
 ${PYSITELIB}/astropy/io/misc/tests/test_parquet.pyc
 ${PYSITELIB}/astropy/io/misc/tests/test_parquet.pyo
+${PYSITELIB}/astropy/io/misc/tests/test_parquet_votable.py
+${PYSITELIB}/astropy/io/misc/tests/test_parquet_votable.pyc
+${PYSITELIB}/astropy/io/misc/tests/test_parquet_votable.pyo
 ${PYSITELIB}/astropy/io/misc/tests/test_pickle_helpers.py
 ${PYSITELIB}/astropy/io/misc/tests/test_pickle_helpers.pyc
 ${PYSITELIB}/astropy/io/misc/tests/test_pickle_helpers.pyo
@@ -1353,6 +1373,7 @@ ${PYSITELIB}/astropy/io/votable/data/VOTable.v1.1.xsd
 ${PYSITELIB}/astropy/io/votable/data/VOTable.v1.2.xsd
 ${PYSITELIB}/astropy/io/votable/data/VOTable.v1.3.xsd
 ${PYSITELIB}/astropy/io/votable/data/VOTable.v1.4.xsd
+${PYSITELIB}/astropy/io/votable/data/VOTable.v1.5.xsd
 ${PYSITELIB}/astropy/io/votable/data/ucd1p-words.txt
 ${PYSITELIB}/astropy/io/votable/exceptions.py
 ${PYSITELIB}/astropy/io/votable/exceptions.pyc
@@ -1370,6 +1391,7 @@ ${PYSITELIB}/astropy/io/votable/tests/__init__.py
 ${PYSITELIB}/astropy/io/votable/tests/__init__.pyc
 ${PYSITELIB}/astropy/io/votable/tests/__init__.pyo
 ${PYSITELIB}/astropy/io/votable/tests/data/binary2_masked_strings.xml
+${PYSITELIB}/astropy/io/votable/tests/data/coosys.xml
 ${PYSITELIB}/astropy/io/votable/tests/data/custom_datatype.xml
 ${PYSITELIB}/astropy/io/votable/tests/data/empty_table.xml
 ${PYSITELIB}/astropy/io/votable/tests/data/gemini.xml
@@ -1398,12 +1420,18 @@ ${PYSITELIB}/astropy/io/votable/tests/data/validation.txt
 ${PYSITELIB}/astropy/io/votable/tests/test_converter.py
 ${PYSITELIB}/astropy/io/votable/tests/test_converter.pyc
 ${PYSITELIB}/astropy/io/votable/tests/test_converter.pyo
+${PYSITELIB}/astropy/io/votable/tests/test_coosys.py
+${PYSITELIB}/astropy/io/votable/tests/test_coosys.pyc
+${PYSITELIB}/astropy/io/votable/tests/test_coosys.pyo
 ${PYSITELIB}/astropy/io/votable/tests/test_exception.py
 ${PYSITELIB}/astropy/io/votable/tests/test_exception.pyc
 ${PYSITELIB}/astropy/io/votable/tests/test_exception.pyo
 ${PYSITELIB}/astropy/io/votable/tests/test_resource.py
 ${PYSITELIB}/astropy/io/votable/tests/test_resource.pyc
 ${PYSITELIB}/astropy/io/votable/tests/test_resource.pyo
+${PYSITELIB}/astropy/io/votable/tests/test_schema_versions.py
+${PYSITELIB}/astropy/io/votable/tests/test_schema_versions.pyc
+${PYSITELIB}/astropy/io/votable/tests/test_schema_versions.pyo
 ${PYSITELIB}/astropy/io/votable/tests/test_table.py
 ${PYSITELIB}/astropy/io/votable/tests/test_table.pyc
 ${PYSITELIB}/astropy/io/votable/tests/test_table.pyo
@@ -1456,6 +1484,9 @@ ${PYSITELIB}/astropy/logger.pyo
 ${PYSITELIB}/astropy/modeling/__init__.py
 ${PYSITELIB}/astropy/modeling/__init__.pyc
 ${PYSITELIB}/astropy/modeling/__init__.pyo
+${PYSITELIB}/astropy/modeling/_fitting_parallel.py
+${PYSITELIB}/astropy/modeling/_fitting_parallel.pyc
+${PYSITELIB}/astropy/modeling/_fitting_parallel.pyo
 ${PYSITELIB}/astropy/modeling/bounding_box.py
 ${PYSITELIB}/astropy/modeling/bounding_box.pyc
 ${PYSITELIB}/astropy/modeling/bounding_box.pyo
@@ -1548,6 +1579,9 @@ ${PYSITELIB}/astropy/modeling/tests/test_core.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.py
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_fitters.pyo
+${PYSITELIB}/astropy/modeling/tests/test_fitting_parallel.py
+${PYSITELIB}/astropy/modeling/tests/test_fitting_parallel.pyc
+${PYSITELIB}/astropy/modeling/tests/test_fitting_parallel.pyo
 ${PYSITELIB}/astropy/modeling/tests/test_functional_models.py
 ${PYSITELIB}/astropy/modeling/tests/test_functional_models.pyc
 ${PYSITELIB}/astropy/modeling/tests/test_functional_models.pyo
@@ -1816,6 +1850,9 @@ ${PYSITELIB}/astropy/stats/info_theory.pyo
 ${PYSITELIB}/astropy/stats/jackknife.py
 ${PYSITELIB}/astropy/stats/jackknife.pyc
 ${PYSITELIB}/astropy/stats/jackknife.pyo
+${PYSITELIB}/astropy/stats/nanfunctions.py
+${PYSITELIB}/astropy/stats/nanfunctions.pyc
+${PYSITELIB}/astropy/stats/nanfunctions.pyo
 ${PYSITELIB}/astropy/stats/setup_package.py
 ${PYSITELIB}/astropy/stats/setup_package.pyc
 ${PYSITELIB}/astropy/stats/setup_package.pyo
@@ -1912,6 +1949,9 @@ ${PYSITELIB}/astropy/table/mixins/tests/test_registry.pyo
 ${PYSITELIB}/astropy/table/ndarray_mixin.py
 ${PYSITELIB}/astropy/table/ndarray_mixin.pyc
 ${PYSITELIB}/astropy/table/ndarray_mixin.pyo
+${PYSITELIB}/astropy/table/notebook_backends.py
+${PYSITELIB}/astropy/table/notebook_backends.pyc
+${PYSITELIB}/astropy/table/notebook_backends.pyo
 ${PYSITELIB}/astropy/table/np_utils.py
 ${PYSITELIB}/astropy/table/np_utils.pyc
 ${PYSITELIB}/astropy/table/np_utils.pyo
@@ -2026,8 +2066,8 @@ ${PYSITELIB}/astropy/tests/figures/__init__.pyo
 ${PYSITELIB}/astropy/tests/figures/helpers.py
 ${PYSITELIB}/astropy/tests/figures/helpers.pyc
 ${PYSITELIB}/astropy/tests/figures/helpers.pyo
-${PYSITELIB}/astropy/tests/figures/py310-test-image-mpl350-cov.json
-${PYSITELIB}/astropy/tests/figures/py310-test-image-mpldev-cov.json
+${PYSITELIB}/astropy/tests/figures/py311-test-image-mpl360-cov.json
+${PYSITELIB}/astropy/tests/figures/py311-test-image-mpldev-cov.json
 ${PYSITELIB}/astropy/tests/helper.py
 ${PYSITELIB}/astropy/tests/helper.pyc
 ${PYSITELIB}/astropy/tests/helper.pyo
@@ -2337,6 +2377,9 @@ ${PYSITELIB}/astropy/units/deprecated.pyo
 ${PYSITELIB}/astropy/units/equivalencies.py
 ${PYSITELIB}/astropy/units/equivalencies.pyc
 ${PYSITELIB}/astropy/units/equivalencies.pyo
+${PYSITELIB}/astropy/units/errors.py
+${PYSITELIB}/astropy/units/errors.pyc
+${PYSITELIB}/astropy/units/errors.pyo
 ${PYSITELIB}/astropy/units/format/__init__.py
 ${PYSITELIB}/astropy/units/format/__init__.pyc
 ${PYSITELIB}/astropy/units/format/__init__.pyo
@@ -2527,9 +2570,6 @@ ${PYSITELIB}/astropy/utils/collections.pyo
 ${PYSITELIB}/astropy/utils/compat/__init__.py
 ${PYSITELIB}/astropy/utils/compat/__init__.pyc
 ${PYSITELIB}/astropy/utils/compat/__init__.pyo
-${PYSITELIB}/astropy/utils/compat/misc.py
-${PYSITELIB}/astropy/utils/compat/misc.pyc
-${PYSITELIB}/astropy/utils/compat/misc.pyo
 ${PYSITELIB}/astropy/utils/compat/numpycompat.py
 ${PYSITELIB}/astropy/utils/compat/numpycompat.pyc
 ${PYSITELIB}/astropy/utils/compat/numpycompat.pyo
@@ -2642,6 +2682,9 @@ ${PYSITELIB}/astropy/utils/src/compiler.c
 ${PYSITELIB}/astropy/utils/state.py
 ${PYSITELIB}/astropy/utils/state.pyc
 ${PYSITELIB}/astropy/utils/state.pyo
+${PYSITELIB}/astropy/utils/system_info.py
+${PYSITELIB}/astropy/utils/system_info.pyc
+${PYSITELIB}/astropy/utils/system_info.pyo
 ${PYSITELIB}/astropy/utils/tests/__init__.py
 ${PYSITELIB}/astropy/utils/tests/__init__.pyc
 ${PYSITELIB}/astropy/utils/tests/__init__.pyo
@@ -2741,6 +2784,9 @@ ${PYSITELIB}/astropy/version.pyo
 ${PYSITELIB}/astropy/visualization/__init__.py
 ${PYSITELIB}/astropy/visualization/__init__.pyc
 ${PYSITELIB}/astropy/visualization/__init__.pyo
+${PYSITELIB}/astropy/visualization/basic_rgb.py
+${PYSITELIB}/astropy/visualization/basic_rgb.pyc
+${PYSITELIB}/astropy/visualization/basic_rgb.pyo
 ${PYSITELIB}/astropy/visualization/hist.py
 ${PYSITELIB}/astropy/visualization/hist.pyc
 ${PYSITELIB}/astropy/visualization/hist.pyo
@@ -2774,6 +2820,9 @@ ${PYSITELIB}/astropy/visualization/stretch.pyo
 ${PYSITELIB}/astropy/visualization/tests/__init__.py
 ${PYSITELIB}/astropy/visualization/tests/__init__.pyc
 ${PYSITELIB}/astropy/visualization/tests/__init__.pyo
+${PYSITELIB}/astropy/visualization/tests/test_basic_rgb.py
+${PYSITELIB}/astropy/visualization/tests/test_basic_rgb.pyc
+${PYSITELIB}/astropy/visualization/tests/test_basic_rgb.pyo
 ${PYSITELIB}/astropy/visualization/tests/test_histogram.py
 ${PYSITELIB}/astropy/visualization/tests/test_histogram.pyc
 ${PYSITELIB}/astropy/visualization/tests/test_histogram.pyo
@@ -2807,6 +2856,9 @@ ${PYSITELIB}/astropy/visualization/units.pyo
 ${PYSITELIB}/astropy/visualization/wcsaxes/__init__.py
 ${PYSITELIB}/astropy/visualization/wcsaxes/__init__.pyc
 ${PYSITELIB}/astropy/visualization/wcsaxes/__init__.pyo
+${PYSITELIB}/astropy/visualization/wcsaxes/_auto.py
+${PYSITELIB}/astropy/visualization/wcsaxes/_auto.pyc
+${PYSITELIB}/astropy/visualization/wcsaxes/_auto.pyo
 ${PYSITELIB}/astropy/visualization/wcsaxes/axislabels.py
 ${PYSITELIB}/astropy/visualization/wcsaxes/axislabels.pyc
 ${PYSITELIB}/astropy/visualization/wcsaxes/axislabels.pyo
