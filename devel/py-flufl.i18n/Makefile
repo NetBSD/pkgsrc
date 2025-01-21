@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/09/26 07:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/21 15:50:17 adam Exp $
 
-DISTNAME=	flufl.i18n-4.1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
-CATEGORIES=	devel
+DISTNAME=	flufl_i18n-5.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.i18n/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,13 +10,11 @@ HOMEPAGE=	https://flufli18n.readthedocs.io/
 COMMENT=	High level API for Python internationalization
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
+TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
 
-# fixup wrong WHEEL_INFODIR
-post-install:
-	mv ${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME:S/./_/}.dist-info \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME}.dist-info
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
