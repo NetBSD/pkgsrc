@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2025/01/21 13:29:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.617 2025/01/21 13:37:48 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -456,6 +456,7 @@ SUBDIR+=	py-sympy
 SUBDIR+=	py-tables
 SUBDIR+=	py-tensorboard
 SUBDIR+=	py-theano-pymc
+SUBDIR+=	py-torch
 SUBDIR+=	py-uncertainties
 SUBDIR+=	py-xarray
 SUBDIR+=	py-xarray-einstats
