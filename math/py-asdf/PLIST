@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/10/14 14:02:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/01/21 09:34:07 adam Exp $
 bin/asdftool-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -1049,9 +1049,6 @@ ${PYSITELIB}/asdf/_tests/test_yaml.pyo
 ${PYSITELIB}/asdf/_version.py
 ${PYSITELIB}/asdf/_version.pyc
 ${PYSITELIB}/asdf/_version.pyo
-${PYSITELIB}/asdf/asdf.py
-${PYSITELIB}/asdf/asdf.pyc
-${PYSITELIB}/asdf/asdf.pyo
 ${PYSITELIB}/asdf/commands/__init__.py
 ${PYSITELIB}/asdf/commands/__init__.pyc
 ${PYSITELIB}/asdf/commands/__init__.pyo
@@ -1139,9 +1136,6 @@ ${PYSITELIB}/asdf/schema.pyo
 ${PYSITELIB}/asdf/search.py
 ${PYSITELIB}/asdf/search.pyc
 ${PYSITELIB}/asdf/search.pyo
-${PYSITELIB}/asdf/stream.py
-${PYSITELIB}/asdf/stream.pyc
-${PYSITELIB}/asdf/stream.pyo
 ${PYSITELIB}/asdf/tagged.py
 ${PYSITELIB}/asdf/tagged.pyc
 ${PYSITELIB}/asdf/tagged.pyo
