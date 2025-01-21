@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2022/06/28 11:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/21 22:56:58 wiz Exp $
 
 DISTNAME=		mintlib-CVS-20131219
 PKGNAME=		cross-freemint-${DISTNAME:S/CVS-//}
@@ -56,6 +56,7 @@ INFO_FILES=		yes
 
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
+PKGSRC_USE_STACK_CHECK=	no
 
 INSTALLATION_DIRS+=	bin
 
