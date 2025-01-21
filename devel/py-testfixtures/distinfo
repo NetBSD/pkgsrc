@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/21 15:27:30 adam Exp $
+
+BLAKE2s (testfixtures-8.3.0.tar.gz) = 3a697cc48ac880afd7d4d49d172f76dc81edd092d7f61c7e025b1d2b90eea050
+SHA512 (testfixtures-8.3.0.tar.gz) = b2c18a35c44b90bce50cc68ca9bf9909ac8f75287c7188eeddfa855aec1db3bd14f3fccb4c5ef0e44b19c683ad4bd6be4876554ce9127698e8e20cbfa4191800
+Size (testfixtures-8.3.0.tar.gz) = 137420 bytes
