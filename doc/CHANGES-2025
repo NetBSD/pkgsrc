@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.548 2025/01/21 13:37:05 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.549 2025/01/21 14:15:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -721,3 +721,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-asdf_astropy to 0.7.0 [adam 2025-01-21]
 	Added math/py-huggingface-hub version 0.26.1 [ryoon 2025-01-21]
 	Added math/py-torch version 2.5.1 [ryoon 2025-01-21]
+	Updated math/py-huggingface-hub to 0.27.1 [adam 2025-01-21]
+	Updated www/py-starlette to 0.45.2 [adam 2025-01-21]
