@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2017/12/08 08:12:58 adam Exp $
+$NetBSD: patch-ac,v 1.7 2025/01/21 18:13:57 triaxx Exp $
 
 DragonFly Support
 
@@ -14,7 +14,7 @@ DragonFly Support
  #ifdef HAVE_SYS_DISK_H
  #include <sys/disk.h>
  #endif
-@@ -134,8 +137,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
+@@ -137,8 +140,13 @@ blkid_loff_t blkid_get_dev_size(int fd)
  #if defined(HAVE_SYS_DISKLABEL_H) && defined(DIOCGDINFO)
  	{
  		int part = -1;
@@ -28,7 +28,7 @@ DragonFly Support
  		char ch;
  		struct stat st;
  
-@@ -151,8 +159,11 @@ blkid_loff_t blkid_get_dev_size(int fd)
+@@ -154,8 +162,11 @@ blkid_loff_t blkid_get_dev_size(int fd)
  		if (fstat(fd, &st) >= 0 &&
  		    blkidP_is_disk_device(st.st_mode))
  			part = st.st_rdev & 7;

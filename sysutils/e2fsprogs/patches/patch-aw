@@ -1,10 +1,10 @@
-$NetBSD: patch-aw,v 1.4 2017/12/08 08:12:58 adam Exp $
+$NetBSD: patch-aw,v 1.5 2025/01/21 18:13:57 triaxx Exp $
 
 Don't gzip info file
 
 --- doc/Makefile.in.orig	2017-10-16 05:45:45.000000000 +0000
 +++ doc/Makefile.in
-@@ -27,8 +27,6 @@ install-doc-libs: libext2fs.info libext2
+@@ -28,8 +28,6 @@ install-doc-libs: libext2fs.info libext2
  		echo "	INSTALL_DATA $(infodir)/$$i" ; \
  		$(INSTALL_DATA) $$i $(DESTDIR)$(infodir)/$$i ; \
  	done
