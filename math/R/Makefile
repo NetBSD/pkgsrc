@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2025/01/21 14:48:08 he Exp $
+# $NetBSD: Makefile,v 1.265 2025/01/21 15:09:05 wiz Exp $
 
 #
 # If updating this package, please try to ensure PLIST.Darwin is kept in sync
@@ -157,8 +157,6 @@ SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
-BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
-
 # failed to convert strong functions and variables: Invalid type identifier
 CTF_FILES_SKIP+=	lib/R/library/mgcv/libs/mgcv.so
 
@@ -184,6 +182,7 @@ fix-darwin-install-name:
 post-install:
 	${RM}	-f ${DESTDIR}${PREFIX}/lib/R/library/survival/NEWS.Rd.orig
 
+BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
