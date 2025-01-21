@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.553 2025/01/21 18:14:20 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.554 2025/01/21 19:08:49 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flufl.i18n to 5.1.0 [adam 2025-01-21]
 	Updated devel/py-flufl.lock to 8.1.0 [adam 2025-01-21]
 	Updated sysutils/e2fsprogs to 1.47.2 [triaxx 2025-01-21]
+	Updated devel/hexpatch to 1.9.5 [pin 2025-01-21]
