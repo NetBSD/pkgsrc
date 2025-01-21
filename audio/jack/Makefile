@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2024/08/15 18:05:05 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2025/01/21 11:00:09 nia Exp $
 
 DISTNAME=	jack2-1.9.21
 PKGNAME=	${DISTNAME:S/jack2/jack/1}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jackaudio/}
 GITHUB_PROJECT=	jack2
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://jackaudio.org/
 COMMENT=	Low-latency audio server
 LICENSE=	gnu-gpl-v2

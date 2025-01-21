@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2024/10/14 08:11:12 nia Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/21 11:00:10 nia Exp $
 
 DISTNAME=	tootstream-0.4.0
 CATEGORIES=	chat www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=magicalraccoon/}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/magicalraccoon/tootstream
 COMMENT=	Command line interface for interacting with Mastodon instances
 LICENSE=	mit

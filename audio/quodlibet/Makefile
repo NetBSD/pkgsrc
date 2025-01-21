@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/11/14 22:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/01/21 11:00:09 nia Exp $
 
 DISTNAME=	quodlibet-4.6.0
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=quodlibet/}
 GITHUB_PROJECT=	quodlibet
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://quodlibet.readthedocs.io/
 COMMENT=	Ex Falso / Quod Libet - Music Library / Editor / Player
 LICENSE=	gnu-gpl-v2

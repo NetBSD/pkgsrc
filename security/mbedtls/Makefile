@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2024/08/25 06:19:12 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/21 11:00:17 nia Exp $
 
 DISTNAME=	mbedtls-2.28.8
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ARMmbed/}
 GITHUB_TAG=	${DISTNAME}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tls.mbed.org/
 COMMENT=	Lightweight, modular cryptographic and SSL/TLS library (2.x branch)
 LICENSE=	apache-2.0 OR gnu-gpl-v2

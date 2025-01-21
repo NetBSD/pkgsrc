@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/19 14:58:04 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/21 11:00:12 nia Exp $
 
 .include "Makefile.common"
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sega Dreamcast/Naomi/Atomiswave emulator
 
 NOT_PAX_MPROTECT_SAFE+=	bin/flycast

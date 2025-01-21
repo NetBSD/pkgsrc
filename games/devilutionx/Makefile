@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/08/25 06:18:43 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/01/21 11:00:15 nia Exp $
 
 DISTNAME=	devilutionx-1.2.1
 PKGREVISION=	12
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=diasurgical/}
 GITHUB_PROJECT=	devilutionX
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/diasurgical/devilutionX
 COMMENT=	Port of the RPG Diablo for modern operating systems
 LICENSE=	unlicense
