@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/11 10:23:23 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:15 nia Exp $
 
 DISTNAME=	openarena-0.8.8
 PKGREVISION=	2
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oarena/}
 CATEGORIES=	games
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openarena.ws/
 COMMENT=	Community-produced deathmatch FPS
 LICENSE=	gnu-gpl-v2

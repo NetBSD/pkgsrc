@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/05/31 20:35:55 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/21 11:00:13 nia Exp $
 
 DISTNAME=	libretro-desmume-20190426
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_PROJECT=	desmume
 GITHUB_TAG=	3069551c2e1de633c333739cca8bb7108ca3d3e9
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/desmume/
 COMMENT=	Libretro core based on the DeSmuME Nintendo DS emulator
 LICENSE=	gnu-gpl-v2

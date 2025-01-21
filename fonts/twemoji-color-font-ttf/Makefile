@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2021/08/10 11:15:46 nia Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/21 11:00:14 nia Exp $
 
 PKGNAME=	twemoji-color-font-ttf-13.1.0
 DISTNAME=	TwitterColorEmoji-SVGinOT-Linux-${PKGVERSION_NOREV}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=eosrei/}
 GITHUB_PROJECT=	twemoji-color-font
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/eosrei/twemoji-color-font
 COMMENT=	Twitter color emoji SVGinOT font
 LICENSE=	cc-by-v4.0 AND mit

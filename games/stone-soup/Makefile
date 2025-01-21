@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2024/11/14 22:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/21 11:00:15 nia Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Dungeon Crawl Stone Soup - roguelike adventure (text-only version)
 
 CONFLICTS+=	stone-soup-sdl-[0-9]*

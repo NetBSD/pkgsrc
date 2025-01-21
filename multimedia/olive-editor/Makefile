@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/12/29 15:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/01/21 11:00:17 nia Exp $
 
 DISTNAME=	olive-editor-0.2.0pre20230924
 PKGREVISION=	18
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=olive-editor/}
 GITHUB_PROJECT=	olive
 GITHUB_TAG=	55eedbfce909dfd7df97611a2eea1d1958385f9c
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://olivevideoeditor.org/
 COMMENT=	Non-linear video editor
 LICENSE=	gnu-gpl-v3

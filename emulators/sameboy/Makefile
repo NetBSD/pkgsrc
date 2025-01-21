@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2024/04/06 08:05:19 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/21 11:00:14 nia Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sameboy.github.io/
 COMMENT=	Highly accurate Game Boy and Game Boy Color emulator
 

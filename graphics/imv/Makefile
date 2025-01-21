@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2024/12/27 08:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	v4.5.0
 DIST_SUBDIR=	imv
@@ -7,7 +7,7 @@ PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://git.sr.ht/~exec64/imv/archive/
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://sr.ht/~exec64/imv/
 COMMENT=	Image viewer for X11/Wayland
 LICENSE=	mit

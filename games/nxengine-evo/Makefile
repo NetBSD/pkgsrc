@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/08/25 06:18:45 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/21 11:00:15 nia Exp $
 
 PKGNAME=	nxengine-evo-2.6.5.1
 PKGREVISION=	9
@@ -11,7 +11,7 @@ SITES.nxengine-evo.tar.gz= \
 SITES.cavestoryen.zip= \
 	-https://www.cavestory.org/downloads/cavestoryen.zip
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nxengine/nxengine-evo
 COMMENT=	Complete rewrite of the platform-adventure game Cave Story
 LICENSE=	gnu-gpl-v3

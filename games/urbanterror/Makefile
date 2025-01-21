@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/05/07 15:13:43 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	UrbanTerror434_full
 PKGNAME=	urbanterror-4.3.4
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://cdn.urbanterror.info/urt/43/releases/zips/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.urbanterror.info/home/
 COMMENT=	Hollywood tactical shooter based on the ioquake3 engine
 #LICENSE=	# freeware

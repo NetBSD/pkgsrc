@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.117 2024/12/27 08:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/01/21 11:00:14 nia Exp $
 
 PKGREVISION=	7
 .include "../../emulators/snes9x/Makefile.common"
 
 PKGNAME=	snes9x-gtk-${SNES9X_VERSION}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Super Nintendo Entertainment System (SNES) emulator (GUI version)
 
 USE_TOOLS+=	pkg-config

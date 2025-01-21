@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2023/02/07 10:30:24 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/21 11:00:10 nia Exp $
 
 DISTNAME=	busted-2.1.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
 GITHUB_PROJECT=	busted
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Olivine-Labs/busted
 COMMENT=	Elegant Lua unit testing
 LICENSE=	mit

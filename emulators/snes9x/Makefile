@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2024/02/21 11:31:21 nia Exp $
+# $NetBSD: Makefile,v 1.62 2025/01/21 11:00:14 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Super Nintendo Entertainment System (SNES) emulator (CLI version)
 
 FORCE_CXX_STD=		c++11

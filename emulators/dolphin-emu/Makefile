@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/12/27 08:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2025/01/21 11:00:12 nia Exp $
 
 DISTNAME=	dolphin-emu-5.0
 PKGREVISION=	55
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=dolphin-emu/}
 GITHUB_PROJECT=	dolphin
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://dolphin-emu.org/
 COMMENT=	Nintendo GameCube and Wii emulator
 LICENSE=	gnu-gpl-v2

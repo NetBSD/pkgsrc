@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2021/01/13 18:26:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	papirus-icon-theme-20200301
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PapirusDevelopmentTeam/}
 GITHUB_PROJECT=	papirus-icon-theme
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 COMMENT=	SVG icon theme based on the Paper Icon Set
 LICENSE=	gnu-gpl-v3

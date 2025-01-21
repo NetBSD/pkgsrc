@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2022/09/11 12:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/21 11:00:12 nia Exp $
 
 LIBRETRO_CORE=	mednafen_psx_hw
 
@@ -7,7 +7,7 @@ PKGREVISION= 1
 
 PKGNAME=	libretro-beetle-psx-hw-${VERSION}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/beetle_psx_hw/
 COMMENT=	Libretro core based on the Mednafen PlayStation emulator (OpenGL)
 

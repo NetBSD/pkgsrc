@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2025/01/08 19:17:40 js Exp $
+# $NetBSD: Makefile,v 1.213 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	https://mesa.freedesktop.org/archive/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.mesa3d.org/
 COMMENT=	Open source OpenGL implementation
 LICENSE=	mit
