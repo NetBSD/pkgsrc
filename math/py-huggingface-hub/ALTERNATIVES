@@ -1,0 +1,1 @@
+bin/huggingface-cli @PREFIX@/bin/huggingface-cli-@PYVERSSUFFIX@

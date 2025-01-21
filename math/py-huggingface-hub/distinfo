@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/21 13:28:40 ryoon Exp $
+
+BLAKE2s (huggingface_hub-0.26.1.tar.gz) = 86c88859d228f1e56ac5784f86a9d09e1e99a3d654943bb5287481cce4d15ebd
+SHA512 (huggingface_hub-0.26.1.tar.gz) = b41818f7c9db0af3c237d76b548a62c0453be4159ab39502a8f676a4ee038466e0baaf467e2ec9861c1ec0ee61e40948b0a1386092a21c54c661e55dba95fdf7
+Size (huggingface_hub-0.26.1.tar.gz) = 375458 bytes
