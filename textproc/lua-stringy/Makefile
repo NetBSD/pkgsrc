@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2020/12/09 11:12:47 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 14:35:47 nia Exp $
 
 DISTNAME=	lua-stringy-0.7.0
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=mdeneen/}
 GITHUB_PROJECT=	lua-stringy
 GITHUB_TAG=	v0.7-0
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mdeneen/lua-stringy
 COMMENT=	Fast Lua string operations
 LICENSE=	mit

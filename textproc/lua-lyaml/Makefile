@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2023/02/04 13:05:15 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/21 14:35:46 nia Exp $
 
 DISTNAME=	lyaml-6.2.8
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gvvaughan/}
 GITHUB_PROJECT=	lyaml
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gvvaughan.github.io/lyaml/
 COMMENT=	LibYAML binding for Lua
 LICENSE=	mit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/08/10 14:19:18 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 14:35:46 nia Exp $
 
 DISTNAME=	lua-inifile-1.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/^lua-//1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=bartbes/}
 GITHUB_PROJECT=	inifile
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://docs.bartbes.com/inifile
 COMMENT=	Lua library for parsing and writing .ini files
 LICENSE=	2-clause-bsd

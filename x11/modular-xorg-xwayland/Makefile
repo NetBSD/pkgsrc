@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/11/12 13:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/21 14:35:47 nia Exp $
 
 DISTNAME=	xwayland-23.1.1
 PKGNAME=	modular-xorg-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://xorg.freedesktop.org/
 COMMENT=	Server for running X clients under Wayland from modular X.org
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
