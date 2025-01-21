@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2024/02/04 05:46:25 schmonz Exp $
+$NetBSD: distinfo,v 1.28 2025/01/21 01:58:35 wen Exp $
 
-BLAKE2s (Getopt-Long-Descriptive-0.114.tar.gz) = 57d04a1a5f019966ba72c7ce1facf735742bad537e7ec1396e2e311de91689dd
-SHA512 (Getopt-Long-Descriptive-0.114.tar.gz) = f7d640f0ecfc2619036f8df3e5e6a85334a814f05156e7b056cee3add372225898701c7772e7507bcf87174d6c2bf3a699fc3f924e7fdcc8837457598e35ef7a
-Size (Getopt-Long-Descriptive-0.114.tar.gz) = 35499 bytes
+BLAKE2s (Getopt-Long-Descriptive-0.116.tar.gz) = ba63dfffe755ca41e122f613a6f8503dc1ee754be2e9ecc2edb7fe909bb10e28
+SHA512 (Getopt-Long-Descriptive-0.116.tar.gz) = 6c31592b98d8f594fd0d3bcc750120479fa3bd663211ef28ea6607a555c51717cda32679b463e404543392c68fcf289c2a6e51cf93200ec9ea5a43535e5ec438
+Size (Getopt-Long-Descriptive-0.116.tar.gz) = 35928 bytes
