@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/03/04 14:20:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/21 14:29:39 manu Exp $
 #
 
-DISTNAME=	mrbs-1.11.4
+DISTNAME=	mrbs-1.11.6
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	time www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mrbs/}/
@@ -66,6 +66,7 @@ do-install:
 			${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/${DOCDIR}; \
 		fi; \
 	done
+	${FIND} ${WRKSRC}/web -type f -exec ${CHMOD} og-w {} \; 
 	cd ${WRKSRC}/web && ${FIND} . -type f \
 		\! -name '*.orig' \! -name config.inc.php  \! -name .htaccess \
 		\! -path './site_faq/*' \
