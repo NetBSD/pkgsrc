@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/02/28 16:41:42 taca Exp $
+$NetBSD: distinfo,v 1.6 2025/01/21 14:29:39 manu Exp $
 
-BLAKE2s (mrbs-1.11.4.tar.gz) = 47c19053abaa4a6796cb617466bcf71a585918b1d0722189e3c5cf291b9d099c
-SHA512 (mrbs-1.11.4.tar.gz) = 4f9c56679892b31ce07988e6bcb6c08016024f9323a0bd70cd03cc2b3cb60e258a23553ee9e6cb52f0aefb9b85b9b2de0364428c792c8328ba23be9a9dfaa6c9
-Size (mrbs-1.11.4.tar.gz) = 8103445 bytes
+BLAKE2s (mrbs-1.11.6.tar.gz) = 497a92a9b981e90cdb07180dd6d147cd27387d46d27417ae3a5c4650f5e933e1
+SHA512 (mrbs-1.11.6.tar.gz) = c0466fdc462a7aee8c91612b5d610375a0f72752fe20a9172f0e08ca3e58c4f35d5ac2508e84e0bdcd85148ee7d8ef5b5e75e68d0660396be75e94838ce46877
+Size (mrbs-1.11.6.tar.gz) = 8284048 bytes
