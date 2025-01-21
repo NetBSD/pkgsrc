@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2022/02/19 20:47:21 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/21 11:00:18 nia Exp $
 
 DISTNAME=	lua-tz-0.4.1
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=daurnimator/}
 GITHUB_PROJECT=	luatz
 GITHUB_TAG=	v0.4-1
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://daurnimator.github.io/luatz/
 COMMENT=	Lua library for time and date manipulation
 LICENSE=	mit

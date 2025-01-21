@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2024/12/29 15:09:40 adam Exp $
+# $NetBSD: Makefile,v 1.55 2025/01/21 11:00:10 nia Exp $
 
 DISTNAME=	znc-1.9.1
 PKGREVISION=	6
@@ -7,7 +7,7 @@ MASTER_SITES=	https://znc.in/releases/archive/
 DISTFILES=	${DEFAULT_DISTFILES} znc-palaver-1.2.2.tar.gz
 SITES.znc-palaver-1.2.2.tar.gz= -${MASTER_SITE_GITHUB:=cocodelabs/znc-palaver/archive/}1.2.2.tar.gz
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://znc.in/
 COMMENT=	Advanced IRC bouncer with IPv6 and SSL support
 LICENSE=	gnu-gpl-v2

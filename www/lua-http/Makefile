@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2021/04/08 11:37:25 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:18 nia Exp $
 
 DISTNAME=	lua-http-0.4
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=daurnimator/}
 GITHUB_PROJECT=	lua-http
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://daurnimator.github.io/lua-http/
 COMMENT=	HTTP/1.0/1.1/2.0 client and server library for Lua
 LICENSE=	mit

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/04/06 08:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/21 11:00:11 nia Exp $
 
 DISTNAME=	sdl12-compat-1.2.52
 PKGREVISION=	5
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/libsdl-org/sdl12-compat
 COMMENT=	SDL-1.2 compatibility layer that uses SDL 2.0 behind the scenes
 LICENSE=	zlib

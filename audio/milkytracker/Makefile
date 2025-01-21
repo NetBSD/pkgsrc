@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/08/25 06:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/21 11:00:09 nia Exp $
 
 DISTNAME=	milkytracker-1.04.00
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=milkytracker/}
 GITHUB_PROJECT=	MilkyTracker
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://milkytracker.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
 LICENSE=	gnu-gpl-v3

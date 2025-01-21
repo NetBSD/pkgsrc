@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2024/08/01 06:44:22 pin Exp $
+# $NetBSD: Makefile,v 1.50 2025/01/21 11:00:17 nia Exp $
 
 DISTNAME=	scrot-1.11.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=resurrecting-open-source-projects/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/resurrecting-open-source-projects/scrot
 COMMENT=	Command line screen capture util like "import", but using imlib2
 LICENSE=	mit

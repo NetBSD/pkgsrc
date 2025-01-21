@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2020/03/24 18:03:05 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	materia-gtk-theme-20200320
 CATEGORIES=	graphics
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=nana-4/}
 GITHUB_PROJECT=	materia-theme
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/nana-4/materia-theme
 COMMENT=	Material Design theme for GTK based desktop environments
 LICENSE=	gnu-gpl-v2

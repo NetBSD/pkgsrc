@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/11/14 22:22:22 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/01/21 11:00:18 nia Exp $
 
 DISTNAME=	maim-5.8.0
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/naelstrof/maim
 COMMENT=	Screenshot utility with improvements over scrot
 LICENSE=	gnu-gpl-v3

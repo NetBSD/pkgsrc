@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2024/08/25 06:18:40 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2025/01/21 11:00:12 nia Exp $
 
 # This is a separate file out of optimism that the non-qt version will
 # eventually be portable.
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=stenzek/}
 GITHUB_PROJECT=	duckstation
 GITHUB_TAG=	v0.1-5624
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.duckstation.org/
 LICENSE=	gnu-gpl-v3
 

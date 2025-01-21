@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/06 21:49:07 ktnb Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 11:00:13 nia Exp $
 
 DISTNAME=	pcsx-rearmed-23
 PKGREVISION=	1
@@ -10,7 +10,7 @@ GITHUB_TAG=	r${PKGVERSION_NOREV}
 GITHUB_SUBMODULES+=	rtissera libchdr a03e69319164f69d781ab8e453f8cf407387bd13 libchdr
 GITHUB_SUBMODULES+=	notaz libpicofe 33787db41d955f8dcafe833097f2cc87d70186ec frontend/libpicofe
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/notaz/pcsx_rearmed
 COMMENT=	Sony PlayStation emulator with optimizations for ARM
 LICENSE=	gnu-gpl-v2

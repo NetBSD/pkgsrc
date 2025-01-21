@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/11/30 18:52:59 js Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/21 11:00:17 nia Exp $
 
 DISTNAME=	mbedtls-3.6.2
 PKGNAME=	${DISTNAME:S/mbedtls/mbedtls3/}
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Mbed-TLS/mbedtls/releases/download/mbedtls-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tls.mbed.org/
 COMMENT=	Lightweight, modular cryptographic and SSL/TLS library (3.x branch)
 LICENSE=	apache-2.0 OR gnu-gpl-v2

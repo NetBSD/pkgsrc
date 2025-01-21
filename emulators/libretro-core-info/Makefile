@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2020/05/26 09:45:13 nia Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/21 11:00:12 nia Exp $
 
 DISTNAME=	libretro-core-info-${RETROARCH_VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libretro/}
 GITHUB_TAG=	v${RETROARCH_VERSION}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.libretro.com/
 COMMENT=	Libretro core information
 LICENSE=	public-domain

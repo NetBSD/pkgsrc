@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2024/11/14 22:19:48 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/21 11:00:15 nia Exp $
 
 DISTNAME=	easyrpg-player-0.7.0
 PKGREVISION=	20
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://easyrpg.org/downloads/player/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://easyrpg.org/
 COMMENT=	RPG Maker 2000/2003 and EasyRPG games interpreter
 LICENSE=	gnu-gpl-v3

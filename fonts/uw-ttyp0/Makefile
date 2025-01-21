@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2022/06/28 11:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/21 11:00:14 nia Exp $
 
 DISTNAME=	uw-ttyp0-1.3
 PKGREVISION=	5
 CATEGORIES=	fonts
 MASTER_SITES=	https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/
 COMMENT=	Monospace bitmap screen fonts for X11
 LICENSE=	ttyp0-license AND mit

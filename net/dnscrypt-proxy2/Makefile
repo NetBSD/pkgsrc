@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2024/09/06 18:48:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.89 2025/01/21 11:00:17 nia Exp $
 
 PKGNAME=	dnscrypt-proxy2-2.0.45
 PKGREVISION=	43
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jedisct1/}
 GITHUB_PROJECT=	dnscrypt-proxy
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/jedisct1/dnscrypt-proxy
 COMMENT=	DNS proxy with support for encrypted protocols
 LICENSE=	isc

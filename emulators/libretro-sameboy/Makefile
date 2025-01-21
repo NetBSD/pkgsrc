@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2020/05/30 15:12:46 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/21 11:00:13 nia Exp $
 
 .include "../../emulators/sameboy/Makefile.common"
 
 PKGNAME=	libretro-${DISTNAME}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/sameboy/
 COMMENT=	Libretro core based on the SameBoy Game Boy/Game Boy Color emulator
 

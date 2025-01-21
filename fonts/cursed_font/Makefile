@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2021/04/19 16:52:39 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 11:00:14 nia Exp $
 
 DISTNAME=	cursed-0.1.0
 PKGNAME=	${DISTNAME:S/cursed-/cursed_font-/1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=kiedtl/}
 GITHUB_PROJECT=	cursed
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://tilde.team/~kiedtl/projects/cursed/
 COMMENT=	9x18 bitmapped font designed for low-DPI screens
 LICENSE=	cc-by-v4.0

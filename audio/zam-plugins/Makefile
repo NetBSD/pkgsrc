@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2023/05/06 19:09:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:10 nia Exp $
 
 DISTNAME=	zam-plugins-3.14
 PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=zamaudio/}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.zamaudio.com/?p=976
 COMMENT=	Collection of LADSPA/LV2/VST/JACK audio plugins
 LICENSE=	gnu-gpl-v2

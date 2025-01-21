@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2023/11/12 13:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/01/21 11:00:18 nia Exp $
 
 DISTNAME=	hsetroot-1.0.5
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=himdel/}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/himdel/hsetroot
 COMMENT=	Allows you to compose wallpapers for X
 LICENSE=	gnu-gpl-v2

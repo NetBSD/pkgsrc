@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2024/02/21 11:31:21 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/21 11:00:13 nia Exp $
 
 .include "../../emulators/snes9x/Makefile.common"
 
 PKGNAME=	libretro-snes9x-${SNES9X_VERSION}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://docs.libretro.com/library/snes9x/
 COMMENT=	Libretro core based on the snes9x Super Nintendo emulator
 

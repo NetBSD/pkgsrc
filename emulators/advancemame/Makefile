@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/01/06 21:49:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/21 11:00:12 nia Exp $
 
 DISTNAME=	advancemame-4.0
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=amadvance/}
 GITHUB_PROJECT=	advancemame
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.advancemame.it/
 COMMENT=	Arcade game emulator with advanced video support
 LICENSE=	gnu-gpl-v2

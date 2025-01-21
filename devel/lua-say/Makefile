@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/02/01 12:37:53 nia Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/21 11:00:11 nia Exp $
 
 DISTNAME=	lua-say-1.4.1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Olivine-Labs/}
 GITHUB_PROJECT=	say
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Olivine-Labs/say
 COMMENT=	Lua string hashing library, useful for internationalization
 LICENSE=	mit

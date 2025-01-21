@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2019/10/28 13:45:24 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/21 11:00:16 nia Exp $
 
 DISTNAME=	papirus-folders-1.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=PapirusDevelopmentTeam/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/PapirusDevelopmentTeam/papirus-folders
 COMMENT=	Script for modifying the Papirus Icon Theme
 LICENSE=	mit

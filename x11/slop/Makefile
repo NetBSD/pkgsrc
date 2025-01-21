@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/11/14 22:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/21 11:00:18 nia Exp $
 
 DISTNAME=	slop-7.5
 PKGREVISION=	12
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=naelstrof/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/naelstrof/slop
 COMMENT=	X display selection tool
 LICENSE=	gnu-gpl-v3

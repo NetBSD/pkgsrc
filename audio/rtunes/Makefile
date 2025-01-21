@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2023/10/24 22:08:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/21 11:00:10 nia Exp $
 
 DISTNAME=	rtunes-0.8
 PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://www.nazgul.ch/dev/
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nazgul.ch/dev_rtunes.html
 COMMENT=	Stream audio to an AirTunes device
 LICENSE=	modified-bsd

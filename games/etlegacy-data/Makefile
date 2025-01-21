@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2021/05/14 07:18:58 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/21 11:00:15 nia Exp $
 
 DISTNAME=	et260b.x86_full
 PKGNAME=	etlegacy-data-2.60b
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	https://cdn.splashdamage.com/downloads/games/wet/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.splashdamage.com/games/wolfenstein-enemy-territory/
 COMMENT=	Wolfenstein: Enemy Territory data files for etlegacy
 LICENSE=	et-eula-license
