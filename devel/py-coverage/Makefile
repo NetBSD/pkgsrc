@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2024/12/26 17:33:53 adam Exp $
+# $NetBSD: Makefile,v 1.65 2025/01/21 15:32:31 he Exp $
 
 DISTNAME=	coverage-7.6.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,4 +28,5 @@ post-install:
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
