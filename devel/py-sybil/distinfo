@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/21 15:28:34 adam Exp $
+
+BLAKE2s (sybil-9.0.0.tar.gz) = 5deb0526edd4b57da6beb7e0bbb9edc09a41f8709a77f0ac820d5d1235c56c0c
+SHA512 (sybil-9.0.0.tar.gz) = 8dd079be01ebe60d0ecb44f77cbfe38aa671f341de44af29c4b756f29fd46e6f52fa4f7cda69ae2e1bda00e2210ca55d30e15560488847c08d713681710b15a7
+Size (sybil-9.0.0.tar.gz) = 42529 bytes
