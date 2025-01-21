@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/21 13:28:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/21 14:10:52 adam Exp $
 bin/huggingface-cli-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -24,9 +24,6 @@ ${PYSITELIB}/huggingface_hub/_local_folder.pyo
 ${PYSITELIB}/huggingface_hub/_login.py
 ${PYSITELIB}/huggingface_hub/_login.pyc
 ${PYSITELIB}/huggingface_hub/_login.pyo
-${PYSITELIB}/huggingface_hub/_multi_commits.py
-${PYSITELIB}/huggingface_hub/_multi_commits.pyc
-${PYSITELIB}/huggingface_hub/_multi_commits.pyo
 ${PYSITELIB}/huggingface_hub/_snapshot_download.py
 ${PYSITELIB}/huggingface_hub/_snapshot_download.pyc
 ${PYSITELIB}/huggingface_hub/_snapshot_download.pyo
@@ -246,6 +243,9 @@ ${PYSITELIB}/huggingface_hub/serialization/__init__.pyo
 ${PYSITELIB}/huggingface_hub/serialization/_base.py
 ${PYSITELIB}/huggingface_hub/serialization/_base.pyc
 ${PYSITELIB}/huggingface_hub/serialization/_base.pyo
+${PYSITELIB}/huggingface_hub/serialization/_dduf.py
+${PYSITELIB}/huggingface_hub/serialization/_dduf.pyc
+${PYSITELIB}/huggingface_hub/serialization/_dduf.pyo
 ${PYSITELIB}/huggingface_hub/serialization/_tensorflow.py
 ${PYSITELIB}/huggingface_hub/serialization/_tensorflow.pyc
 ${PYSITELIB}/huggingface_hub/serialization/_tensorflow.pyo
