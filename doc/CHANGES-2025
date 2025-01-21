@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.546 2025/01/21 09:35:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.547 2025/01/21 13:29:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zeroconf to 0.140.1 [adam 2025-01-21]
 	Updated math/py-asdf to 4.0.0 [adam 2025-01-21]
 	Updated math/py-asdf_astropy to 0.7.0 [adam 2025-01-21]
+	Added math/py-huggingface-hub version 0.26.1 [ryoon 2025-01-21]
