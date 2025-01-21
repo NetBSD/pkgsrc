@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.541 2025/01/21 01:52:19 wen Exp $
+$NetBSD: CHANGES-2025,v 1.542 2025/01/21 01:59:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -711,3 +711,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Date-Manip to 6.96 [wen 2025-01-21]
 	Updated devel/p5-File-Find-Object to 0.3.9 [wen 2025-01-21]
 	Updated devel/p5-FileHandle-Fmode to 0.15 [wen 2025-01-21]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.116 [wen 2025-01-21]
