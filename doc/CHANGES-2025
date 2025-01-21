@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.544 2025/01/21 03:00:36 wen Exp $
+$NetBSD: CHANGES-2025,v 1.545 2025/01/21 08:37:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -714,3 +714,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.116 [wen 2025-01-21]
 	Updated cad/klayout to 0.29.11 [mef 2025-01-21]
 	Updated textproc/p5-Pod-Spell to 1.27 [wen 2025-01-21]
+	Updated devel/py-importlib-metadata to 8.6.1 [adam 2025-01-21]
+	Updated www/py-publicsuffixlist to 1.0.2.20250121 [adam 2025-01-21]
+	Updated net/py-zeroconf to 0.140.1 [adam 2025-01-21]
