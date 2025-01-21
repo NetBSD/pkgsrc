@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.615 2024/12/24 10:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.616 2025/01/21 13:29:46 ryoon Exp $
 
 COMMENT=	Mathematics
 
@@ -417,6 +417,7 @@ SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy2
 SUBDIR+=	py-gwcs
 SUBDIR+=	py-hmmlearn
+SUBDIR+=	py-huggingface-hub
 SUBDIR+=	py-infinity
 SUBDIR+=	py-intervals
 SUBDIR+=	py-jplephem
