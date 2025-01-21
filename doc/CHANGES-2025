@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.550 2025/01/21 14:29:39 manu Exp $
+$NetBSD: CHANGES-2025,v 1.551 2025/01/21 15:29:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -724,3 +724,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-huggingface-hub to 0.27.1 [adam 2025-01-21]
 	Updated www/py-starlette to 0.45.2 [adam 2025-01-21]
 	Updated www/php-mrbs to 1.11.6 [manu 2025-01-21]
+	Added devel/py-testfixtures version 8.3.0 [adam 2025-01-21]
+	Added devel/py-sybil version 9.0.0 [adam 2025-01-21]
