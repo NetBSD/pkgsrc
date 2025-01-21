@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:16:39 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/01/21 01:51:34 wen Exp $
 
-BLAKE2s (FileHandle-Fmode-0.14.tar.gz) = d4b68f348c3e2eebf2d1a5c1bdee6566033f3434187009c2915f58cb67898184
-SHA512 (FileHandle-Fmode-0.14.tar.gz) = 90b472c16540074ca5b8cca03c4d4d40ccd6515ef17ffc394a886a625a2bc99715fbe0a5f6ca1eb085f6fbdbf14b7dc037c86f7074fabc7b09e1b289d94f6734
-Size (FileHandle-Fmode-0.14.tar.gz) = 6240 bytes
+BLAKE2s (FileHandle-Fmode-0.15.tar.gz) = 6596cd08a0fd2a633d0b0975f8c3b313286a73dc17149098fc3f6020cc2eb807
+SHA512 (FileHandle-Fmode-0.15.tar.gz) = 6efdbf8d079fe775533d9bf60250f2de19b9098f609174a0b2afe3b6c70e39c9facb5bed74c39f79910099fe84b25bf52ea02b1b099cbb5ed34a0191f18b6f74
+Size (FileHandle-Fmode-0.15.tar.gz) = 6589 bytes
