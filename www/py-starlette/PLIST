@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/12/10 07:54:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/21 14:15:01 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,9 +6,6 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
 ${PYSITELIB}/starlette/__init__.py
 ${PYSITELIB}/starlette/__init__.pyc
 ${PYSITELIB}/starlette/__init__.pyo
-${PYSITELIB}/starlette/_compat.py
-${PYSITELIB}/starlette/_compat.pyc
-${PYSITELIB}/starlette/_compat.pyo
 ${PYSITELIB}/starlette/_exception_handler.py
 ${PYSITELIB}/starlette/_exception_handler.pyc
 ${PYSITELIB}/starlette/_exception_handler.pyo
