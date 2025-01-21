@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2020/07/02 17:30:23 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/21 14:35:46 nia Exp $
 
 DISTNAME=	lua-etlua-1.3.0
 PKGNAME=	${DISTNAME:S/lua-/${LUA_PKGPREFIX}-/1}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=leafo/}
 GITHUB_PROJECT=	etlua
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nia@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/leafo/etlua
 COMMENT=	Embedded templates for Lua
 LICENSE=	mit
