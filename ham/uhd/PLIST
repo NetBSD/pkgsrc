@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/01/08 15:30:27 tnn Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/01/21 22:03:12 wiz Exp $
 bin/uhd_adc_self_cal
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
@@ -358,7 +358,6 @@ lib/uhd/utils/latency/responder
 lib/uhd/utils/latency/run_tests.py
 lib/uhd/utils/octoclock_burn_eeprom
 lib/uhd/utils/query_gpsdo_sensors
-lib/uhd/utils/uhd-usrp.rules
 lib/uhd/utils/uhd_images_downloader.py
 lib/uhd/utils/uhd_power_cal.py
 lib/uhd/utils/usrp2_card_burner.py
