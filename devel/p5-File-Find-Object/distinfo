@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2023/12/16 11:29:37 mef Exp $
+$NetBSD: distinfo,v 1.11 2025/01/21 01:49:25 wen Exp $
 
-BLAKE2s (File-Find-Object-0.3.8.tar.gz) = 88ab379ad67d56a5ae3fac30d5e84931e044c4c7161bdaa2844f682cb72c4fe4
-SHA512 (File-Find-Object-0.3.8.tar.gz) = f3a00f6b8ec22e7a7361ef158a4c631e1c834e19fb672cf429bdcffb3d11b35aff94a07a73b1922a8f47bab90f3dbc64c39da7a8899df9337b062a430481827e
-Size (File-Find-Object-0.3.8.tar.gz) = 29766 bytes
+BLAKE2s (File-Find-Object-0.3.9.tar.gz) = 492e5b67d4a31f717b0023b9e18a88d19e3ca43cc9d88f0cce29c764f1b5ace3
+SHA512 (File-Find-Object-0.3.9.tar.gz) = 6d4dffd7586c7b752390dbcb220d9a849becec161b251c39a5146abb3f736efb7301e296d274f2dcccc95626c00e9c43a8e4c46cae23645f4aedd67914414667
+Size (File-Find-Object-0.3.9.tar.gz) = 29960 bytes
