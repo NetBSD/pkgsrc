@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4389 2025/01/21 15:28:33 adam Exp $
+# $NetBSD: Makefile,v 1.4390 2025/01/21 19:11:50 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -382,6 +382,7 @@ SUBDIR+=	exempi
 SUBDIR+=	extra-cmake-modules
 SUBDIR+=	fann
 SUBDIR+=	fastdep
+SUBDIR+=	feluda
 SUBDIR+=	fhist
 SUBDIR+=	fifechan
 SUBDIR+=	fifengine
