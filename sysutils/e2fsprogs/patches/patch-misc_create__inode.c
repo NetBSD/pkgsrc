@@ -1,10 +1,10 @@
-$NetBSD: patch-misc_create__inode.c,v 1.2 2017/12/08 08:12:58 adam Exp $
+$NetBSD: patch-misc_create__inode.c,v 1.3 2025/01/21 18:13:57 triaxx Exp $
 
 Fix build on SunOS.
 
 --- misc/create_inode.c.orig	2017-10-16 05:45:45.000000000 +0000
 +++ misc/create_inode.c
-@@ -25,6 +25,9 @@
+@@ -30,6 +30,9 @@
  #ifdef HAVE_SYS_SYSMACROS_H
  #include <sys/sysmacros.h>
  #endif

@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_ext2fs_bitops.c,v 1.3 2017/12/08 08:12:58 adam Exp $
+$NetBSD: patch-lib_ext2fs_bitops.c,v 1.4 2025/01/21 18:13:57 triaxx Exp $
 
 Avoid conflict with popcountXX().
 
 --- lib/ext2fs/bitops.c.orig	2016-09-02 13:17:32.000000000 +0900
 +++ lib/ext2fs/bitops.c	2017-02-03 21:44:49.000000000 +0900
-@@ -116,14 +116,14 @@ int ext2fs_test_bit64(__u64 nr, const vo
+@@ -106,14 +106,14 @@ int ext2fs_test_bit64(__u64 nr, const vo
  	return (mask & *ADDR);
  }
  
@@ -21,7 +21,7 @@ Avoid conflict with popcountXX().
  {
  	unsigned int res = w - ((w >> 1) & 0x55555555);
  	res = (res & 0x33333333) + ((res >> 2) & 0x33333333);
-@@ -139,19 +139,19 @@ unsigned int ext2fs_bitcount(const void 
+@@ -129,19 +129,19 @@ unsigned int ext2fs_bitcount(const void 
  	unsigned int res = 0;
  
  	while (((((uintptr_t) cp) & 3) != 0) && (nbytes > 0)) {

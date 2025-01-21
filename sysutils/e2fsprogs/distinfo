@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.28 2024/08/03 07:33:29 wiz Exp $
+$NetBSD: distinfo,v 1.29 2025/01/21 18:13:56 triaxx Exp $
 
-BLAKE2s (e2fsprogs-1.46.4.tar.xz) = 87ac05b6c50d2dee6271e09768e1551b442a5dc1860c68df11f0e478d4518bf2
-SHA512 (e2fsprogs-1.46.4.tar.xz) = 7d9cfdf00ed58e66049585e8382fe4977088956421a0fb8155900c69afd8857309ad2b9301b3f74c9c0afa7287a0ddba2fd1538fcf57858b37a9ab712390016d
-Size (e2fsprogs-1.46.4.tar.xz) = 7035200 bytes
-SHA1 (patch-ab) = 9b686655a75239279a456dc8889113be06519cd7
-SHA1 (patch-ac) = 1a7faec14d69cb1d317908297e5500c0cb72aa4f
-SHA1 (patch-af) = bcda43bb14afdbf6a98dfedd949af4d1aff443d6
-SHA1 (patch-ao) = a8fcacf506b003bf40ecadd5260ff0a6628ad2e6
-SHA1 (patch-as) = be316e404840a47422edbee65177bf6a9c94b335
-SHA1 (patch-aw) = d864c60c302230acdbdb1e33436883ad594c6808
-SHA1 (patch-debugfs_debugfs.c) = 085d29bc53e616dbeb08f4f48fd9d94e1d837e80
-SHA1 (patch-e2fsck_jfs__user.h) = 2fd21cedabc4356a0d76a6caa1dbf73461750800
-SHA1 (patch-lib_ext2fs_bitops.c) = 068cc0dfb6b2a6a185178479f20100917c7407c8
-SHA1 (patch-lib_ext2fs_bitops.h) = 8eec77c83bf85423a1420b18405e9ba655131528
-SHA1 (patch-lib_ext2fs_ext2fs.h) = 2811fd3eff03dd4fb7f72df4c854d2c33b37846f
+BLAKE2s (e2fsprogs-1.47.2.tar.xz) = 22ad92fbe4786671ff677cf218f1e9834fb7f52f241b35f04f36b37df67c06ca
+SHA512 (e2fsprogs-1.47.2.tar.xz) = a32632e072e535bf164503cf9992a4da7ea971e80f8f84ead4e7bc8899a92c27e4670bdebef1de0187596672e44af7b96078888e0cd4eefa3e3f551344d434d8
+Size (e2fsprogs-1.47.2.tar.xz) = 7299932 bytes
+SHA1 (patch-ab) = 364f7b0692b8085ad9d4323f2702bdd26e5652d3
+SHA1 (patch-ac) = 474e733c4c4fda8a48ea4285c62a56f31846fc94
+SHA1 (patch-af) = 91a694ca53c2bbfa77e7e4edbde4a892cb6ca62a
+SHA1 (patch-ao) = 33973866ce11d4acc37fed7c9d25d01ff35b426d
+SHA1 (patch-as) = 6cf4a28a194d452c4651373803e57b5b46e3d886
+SHA1 (patch-aw) = 5046ba1d36046150b16292d4c24edf55c3e6fca6
+SHA1 (patch-debugfs_debugfs.c) = 791ce440216a15bf7711c022032e9c837dca0b8b
+SHA1 (patch-e2fsck_jfs__user.h) = a54b1a597d1d0b4526d8ba0e4c442e4705fb93be
+SHA1 (patch-lib_ext2fs_bitops.c) = f641da9106c6a7e4314122d4b1f9d4067fc07f10
+SHA1 (patch-lib_ext2fs_bitops.h) = 4dd18ad892dbf91437e4996e7fcb7fd3a61758e8
+SHA1 (patch-lib_ext2fs_ext2fs.h) = 597435441fc537ec20f79d191181876ecdaa7b21
 SHA1 (patch-lib_ext2fs_ext2fsP.h) = 4ba2ef6c492dc61ae7c1e4b5b82a2406eea28a61
 SHA1 (patch-lib_ext2fs_tdb.c) = dd50993cd0beba0451cfb3422ca9f54700ee0e38
-SHA1 (patch-lib_ext2fs_unix__io.c) = 75f6eee01c125abb027d0dfde0a73538b2ed5cae
-SHA1 (patch-lib_uuid_gen__uuid.c) = 083ac45a8d2d30a5c272720fb9a6a1785c97eee2
-SHA1 (patch-misc_create__inode.c) = b3a9f313ea7cb55d9a40c7916a7862472e0aeaa8
+SHA1 (patch-lib_ext2fs_unix__io.c) = 78dcc99e04a981727d71271b5f4c69b426c6ada9
+SHA1 (patch-lib_uuid_gen__uuid.c) = 2f679453457522a10b90c489ce52e59b6e3909c5
+SHA1 (patch-misc_create__inode.c) = 43a9a2d3d53bfe055be3fd47f5db2990594a9faa

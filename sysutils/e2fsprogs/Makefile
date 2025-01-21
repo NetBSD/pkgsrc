@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/08/03 07:33:29 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/01/21 18:13:56 triaxx Exp $
 
-DISTNAME=	e2fsprogs-1.46.4
-PKGREVISION=	3
+DISTNAME=	e2fsprogs-1.47.2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v${PKGVERSION_NOREV}/
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
@@ -12,7 +11,8 @@ HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND modified-bsd AND mit
 
-USE_LANGUAGES=		c99
+USE_LANGUAGES=		c
+USE_CC_FEATURES=	c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo pkg-config
 GNU_CONFIGURE=		yes
@@ -40,8 +40,6 @@ PKGCONFIG_OVERRIDE+=	lib/ss/ss.pc.in
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-luuid
 .endif
-
-.include "options.mk"
 
 PLIST_VARS+=		shlib
 .if ${OBJECT_FMT} == "ELF"
@@ -80,6 +78,12 @@ SUBST_SED.man+=		-e '/mke2fs.conf/s,/etc,@root_sysconfdir@,'
 # next (two) path's in the man page do not exist
 SUBST_SED.man+=		-e '/e2fsck.conf/s,/etc,@root_sysconfdir@,'
 SUBST_SED.man+=		-e   '/blkid.tab/s,/etc,@root_sysconfdir@,'
+
+SUBST_CLASSES+=		sysconf
+SUBST_MESSAGE.sysconf=	Fixing sysconfdir path
+SUBST_STAGE.sysconf=	pre-configure
+SUBST_FILES.sysconf=	lib/blkid/blkidP.h
+SUBST_VARS.sysconf=	PKG_SYSCONFDIR
 
 .if ${OPSYS} == "Linux"
 USE_TOOLS+=		bash:run
