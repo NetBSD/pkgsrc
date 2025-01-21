@@ -1,30 +1,22 @@
-# $NetBSD: Makefile,v 1.12 2024/09/26 07:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/21 15:56:14 adam Exp $
 
-DISTNAME=	flufl.lock-7.1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
-CATEGORIES=	devel
+DISTNAME=	flufl_lock-8.1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flufl.lock/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://launchpad.net/flufl.lock/
+HOMEPAGE=	https://flufllock.readthedocs.io/
 COMMENT=	NFS-safe file locking with timeouts for POSIX systems
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
-DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
-# unpackaged
-#TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+TEST_DEPENDS+=	${PYPKGPREFIX}-sybil-[0-9]*:../../devel/py-sybil
+TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
-# fixup wrong WHEEL_INFODIR
-post-install:
-	mv ${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME:S/./_/}.dist-info \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/${WHEEL_NAME}.dist-info
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
