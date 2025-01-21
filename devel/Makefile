@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4388 2025/01/13 18:37:07 gdt Exp $
+# $NetBSD: Makefile,v 1.4389 2025/01/21 15:28:33 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -3065,6 +3065,7 @@ SUBDIR+=	py-subprocess32
 SUBDIR+=	py-subversion
 SUBDIR+=	py-subvertpy
 SUBDIR+=	py-sure
+SUBDIR+=	py-sybil
 SUBDIR+=	py-syrupy
 SUBDIR+=	py-sysctl
 SUBDIR+=	py-tenacity
@@ -3121,6 +3122,7 @@ SUBDIR+=	py-test-watch
 SUBDIR+=	py-test-xdist
 SUBDIR+=	py-test-xprocess
 SUBDIR+=	py-test_socket
+SUBDIR+=	py-testfixtures
 SUBDIR+=	py-testpath
 SUBDIR+=	py-testrepository
 SUBDIR+=	py-testresources
