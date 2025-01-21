@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.111 2024/01/27 00:03:49 wiz Exp $
+# $NetBSD: compiler.mk,v 1.112 2025/01/21 17:34:46 triaxx Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -60,7 +60,7 @@
 #	dialect (e.g. c++17) in USE_LANGUAGES.  This both requires a
 #	compiler that supports that dialect, and adds -std= flags via
 #	the wrappers.  (Instead, following the documentation below,
-#	the language dialect should be added to USE_C_FEATURES or
+#	the language dialect should be added to USE_CC_FEATURES or
 #	USE_CXX_FEATURES to require a compiler with support, and if
 #	the package does not add -std flags itself, then FORCE_C_STD
 #	or FORCE_CXX_STD should be set.)
