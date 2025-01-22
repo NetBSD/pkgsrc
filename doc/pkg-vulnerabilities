@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.295 2025/01/15 12:28:39 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.296 2025/01/22 22:28:33 rillig Exp $
 #
 #FORMAT 1.0.0
 #
@@ -4303,9 +4303,9 @@ squidGuard<1.4nb1	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?na
 squidGuard-[0-9]*	remote-security-bypass		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3826
 snort<2.8.5.1		denial-of-service		http://secunia.com/advisories/37135/
 p5-HTML-Parser<3.63	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3627
-seamonkey-{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-55.html
-seamonkey-{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-56.html
-seamonkey-{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-62.html
+seamonkey{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-55.html
+seamonkey{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-56.html
+seamonkey{,-bin,-gtk1}<2.0		arbitrary-code-execution	http://www.mozilla.org/security/announce/2009/mfsa2009-62.html
 asterisk<1.2.35		information-disclosure	http://downloads.digium.com/pub/security/AST-2009-008.html
 asterisk>=1.6.0<1.6.0.17	information-disclosure	http://downloads.digium.com/pub/security/AST-2009-008.html
 asterisk>=1.6.1<1.6.1.9	information-disclosure	http://downloads.digium.com/pub/security/AST-2009-008.html
@@ -7269,7 +7269,7 @@ poppler<0.24.5		denial-of-service	http://secunia.com/advisories/56268/
 openssl<1.0.1f		denial-of-service	http://secunia.com/advisories/56286/
 graphviz<2.34.0nb4		buffer-overflow		http://secunia.com/advisories/55666/
 mapserver<6.4.1		arbitrary-sql-injection		http://secunia.com/advisories/56155/
-nagios-base-<3.5.0nb2	denial-of-service	http://secunia.com/advisories/55976/
+nagios-base<3.5.0nb2	denial-of-service	http://secunia.com/advisories/55976/
 p5-Proc-Daemon<0.14nb4	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7135
 libXfont>=1.1<1.4.6nb1	privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6462
 kwallet<4.12		sensitive-information-exposure	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7252
@@ -7514,7 +7514,7 @@ wireshark<1.10.4	arbitrary-code-execution		http://www.wireshark.org/security/wnp
 py{33,27,26}-Pillow<2.3.1	insecure-temp-file	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1932
 py{27,26}-imaging<1.1.7nb8	insecure-temp-file	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1932
 py{33,27,26}-Pillow<2.3.1	insecure-temp-file	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933
-py{27,26}-imaging-<1.1.7nb8	insecure-temp-file	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933
+py{27,26}-imaging<1.1.7nb8	insecure-temp-file	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1933
 suse{,32}_libcurl<13.1nb3	privilege-escalation	http://support.novell.com/security/cve/CVE-2014-0138.html
 suse{,32}_libcurl<13.1nb3	ssl-certificate-spoofing	http://support.novell.com/security/cve/CVE-2014-0139.html
 dillo<3.0.4		arbitrary-code-execution		http://secunia.com/advisories/57797/
@@ -7818,7 +7818,7 @@ ldns<1.6.16nb4		sensitive-information-disclosure	http://cve.mitre.org/cgi-bin/cv
 php53-fpm-[0-9]*	local-privilege-escalation		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0185
 php54-fpm<5.4.28	local-privilege-escalation		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0185
 php55-fpm<5.5.12	local-privilege-escalation		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0185
-nagios-base-<3.5.1nb1	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1878
+nagios-base<3.5.1nb1	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1878
 icinga-base<1.9.5	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1878
 dovecot<1.2.17nb15		denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3430
 dovecot>=2<2.2.13		denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3430
@@ -8769,7 +8769,7 @@ libssh2<1.5.0		denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=
 cups-filters<1.0.66	remote-code-execution		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4336
 cups-filters<1.0.53	denial-of-service		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4337
 opera<28		unknown-impact			http://www.opera.com/docs/changelogs/unified/2800/
-suse{,32}_freetype2-<13.1nb2	multiple-vulnerabilities	http://www.suse.com/support/update/announcement/2015/suse-su-20150463-1.html
+suse{,32}_freetype2<13.1nb2	multiple-vulnerabilities	http://www.suse.com/support/update/announcement/2015/suse-su-20150463-1.html
 adobe-flash-plugin<11.2.202.451	multiple-vulnerabilities	http://helpx.adobe.com/security/products/flash-player/apsb15-05.html
 py{26,27,33,34}-django<1.7.6	cross-site-scripting	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2241
 percona-toolkit<2.2.13		information-disclosure	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1027
