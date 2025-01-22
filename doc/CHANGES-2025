@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.571 2025/01/22 13:43:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.572 2025/01/22 15:57:43 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added converters/ansi2text version 1.2 [nat 2025-01-22]
 	Updated comms/spandsp to 0.0.6 [mef 2025-01-22]
 	Updated databases/py-tortoise-orm to 0.22.2nb1 [wiz 2025-01-22]
+	Updated net/Radicale2 to 2.1.12nb1 [jakllsch 2025-01-22]
