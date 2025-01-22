@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/01/13 16:51:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.45 2025/01/22 09:07:27 riastradh Exp $
 
 DISTNAME=	libfm-qt-2.1.0
 PKGREVISION=	1
@@ -29,9 +29,10 @@ DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
-.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
+
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
