@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2024/12/18 08:26:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/22 18:44:53 he Exp $
 
-DISTNAME=	routinator-0.13.2
+VER=		0.14.1
+DISTNAME=	routinator-${VER}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=NLnetLabs/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	v${VER}
 GITHUB_PROJECT=	routinator
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +15,7 @@ LICENSE=	modified-bsd
 BROKEN=		"Does not support rust>=1.80"
 
 # 0.13.0 requires minimum this rust version:
-RUST_REQ=		1.70.0
+RUST_REQ=		1.74.0
 
 # This can reportedly go away in 0.14.0:
 ALLOW_NETWORK_ACCESS=	1
