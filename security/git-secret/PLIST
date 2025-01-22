@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/22 09:25:18 adam Exp $
+bin/git-secret
+man/man1/git-secret-add.1
+man/man1/git-secret-cat.1
+man/man1/git-secret-changes.1
+man/man1/git-secret-clean.1
+man/man1/git-secret-hide.1
+man/man1/git-secret-init.1
+man/man1/git-secret-list.1
+man/man1/git-secret-remove.1
+man/man1/git-secret-removeperson.1
+man/man1/git-secret-reveal.1
+man/man1/git-secret-tell.1
+man/man1/git-secret-usage.1
+man/man1/git-secret-whoknows.1
+man/man7/git-secret.7
