@@ -1,11 +1,15 @@
-$NetBSD: patch-makefile,v 1.2 2019/03/25 22:55:18 wiz Exp $
+$NetBSD: patch-makefile,v 1.3 2025/01/22 18:16:58 adam Exp $
 
 Honor LDFLAGS for RELRO builds.
+On Darwin, build dylib for neovim.
 
---- makefile.orig	2019-03-11 14:08:29.000000000 +0000
+--- makefile.orig	2023-06-26 16:30:55.000000000 +0000
 +++ makefile
-@@ -36,7 +36,7 @@ macosx:
+@@ -37,9 +37,10 @@ linux:
+ # For Mac OS
+ macosx:
  	$(MAKE) lpeg.so "DLLFLAGS = -bundle -undefined dynamic_lookup"
++	env $(CC) -dynamiclib -Wl,-undefined,dynamic_lookup,-install_name,${PREFIX}/${LUA_CDIR}/lpeg.dylib $(FILES) -o lpeg.dylib
  
  lpeg.so: $(FILES)
 -	env $(CC) $(DLLFLAGS) $(FILES) -o lpeg.so
