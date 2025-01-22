@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2024/08/25 06:19:13 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/01/22 22:29:01 wiz Exp $
+# used by security/qca2-gnupg/Makefile
+# used by security/qca2-ossl/Makefile
 
 DISTNAME=	qca-2.2.1
 CATEGORIES=	security
@@ -21,7 +23,7 @@ CMAKE_CONFIGURE_ARGS+=	-DQCA_INSTALL_IN_QT_PREFIX=ON
 CMAKE_CONFIGURE_ARGS+=	-DOSX_FRAMEWORK=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=OFF
 
-SUBST_CLASSES+=		certs 
+SUBST_CLASSES+=		certs
 SUBST_STAGE.certs=	pre-configure
 SUBST_FILES.certs=	CMakeLists.txt
 SUBST_VARS.certs=	PREFIX
