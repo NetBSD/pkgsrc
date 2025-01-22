@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.565 2025/01/22 09:40:21 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.566 2025/01/22 11:01:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -746,3 +746,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/git-secret version 0.5.0 [adam 2025-01-22]
 	Updated cad/py-simpy to 4.1.1 [adam 2025-01-22]
 	Updated games/openrct2 to 0.4.18 [ffaubert 2025-01-22]
+	Updated lang/nodejs18 to 18.20.6 [adam 2025-01-22]
+	Updated lang/nodejs20 to 20.18.2 [adam 2025-01-22]
+	Updated lang/nodejs22 to 22.13.1 [adam 2025-01-22]
+	Updated lang/nodejs to 23.6.1 [adam 2025-01-22]
