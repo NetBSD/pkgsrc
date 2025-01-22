@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25341 2025/01/19 21:04:01 pin Exp $
+$NetBSD: TODO,v 1.25342 2025/01/22 08:29:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1127,6 +1127,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-mailman-3.3.10
 	o py-mitmproxy_rs-0.9.3
 	o py-newt-0.52.21
+	o py-numba-0.61.0
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-orjson-3.10.15 [rust 1.82]
