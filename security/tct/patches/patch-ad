@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2015/03/19 08:34:53 dholland Exp $
+$NetBSD: patch-ad,v 1.5 2025/01/22 22:26:14 wiz Exp $
 
 Recognize NetBSD versions.
 
 --- lib/ostype.pl.orig	2000-07-30 16:39:20.000000000 -0700
 +++ lib/ostype.pl
-@@ -9,6 +9,15 @@ print "Determining OS (in determine_os()
+@@ -9,6 +9,16 @@ print "Determining OS (in determine_os()
  
  # Order does not matter, table is sorted.
  %OS_INFO = (
@@ -17,6 +17,7 @@ Recognize NetBSD versions.
 +    "NETBSD7", "NetBSD.7",
 +    "NETBSD8", "NetBSD.8",
 +    "NETBSD9", "NetBSD.9",
++    "NETBSD10", "NetBSD.10",
      "FREEBSD2", "FreeBSD.2",
      "FREEBSD3", "FreeBSD.3",
      "FREEBSD4", "FreeBSD.4",
