@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/17 15:42:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/22 18:18:32 adam Exp $
 
-DISTNAME=	neovim-0.10.0
+DISTNAME=	neovim-0.10.3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,12 +16,12 @@ USE_TOOLS+=	pkg-config gettext
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	notdarwin
+PLIST_VARS+=	desktop
 .if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib
 .else
 SHLIB_EXT=	so
-PLIST.notdarwin=	yes
+PLIST.desktop=	yes
 .endif
 
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -42,9 +42,10 @@ FORTIFY_SUPPORTED=	no
 DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../devel/lua-BitOp
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
 DEPENDS+=	${LUA_PKGPREFIX}-inspect-[0-9]*:../../devel/lua-inspect
-DEPENDS+=	${LUA_PKGPREFIX}-lpeg-[0-9]*:../../devel/lua-lpeg
+DEPENDS+=	${LUA_PKGPREFIX}-lpeg>=1.1.0nb1:../../devel/lua-lpeg
 DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../devel/lua-mpack
 
+.if ${SHLIB_TYPE} == "ELF"
 TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
 
 post-install:
@@ -52,6 +53,7 @@ post-install:
 		--replace-needed ${PREFIX}/lib/lua/5.1/lpeg.so lpeg.so
 	${PREFIX}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
 		--add-rpath ${PREFIX}/lib/lua/5.1
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
