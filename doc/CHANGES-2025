@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.559 2025/01/22 04:36:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.560 2025/01/22 08:19:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -735,3 +735,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-jirametrics to 2.9.1 [schmonz 2025-01-22]
 	Added net/py-awscli-plugin-logs-tail version 0.2 [schmonz 2025-01-22]
 	Updated textproc/hck to 0.11.1 [pin 2025-01-22]
+	Updated devel/py-flufl.testing to 0.8 [adam 2025-01-22]
+	Updated databases/py-sqlalchemy to 2.0.37 [adam 2025-01-22]
