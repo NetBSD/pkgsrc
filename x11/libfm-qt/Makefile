@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/01/22 09:07:27 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/22 09:08:02 riastradh Exp $
 
 DISTNAME=	libfm-qt-2.1.0
 PKGREVISION=	1
@@ -25,13 +25,13 @@ SUBST_FILES.prefix+=	src/core/vfs/vfs-menu.c
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
-DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"
 
 .include "../../graphics/libexif/buildlink3.mk"
+.include "../../sysutils/lxqt-menu-data/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/xcb-util-cursor/buildlink3.mk"

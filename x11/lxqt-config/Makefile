@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/01/22 09:07:34 riastradh Exp $
+# $NetBSD: Makefile,v 1.45 2025/01/22 09:08:02 riastradh Exp $
 
 DISTNAME=	lxqt-config-2.1.0
 CATEGORIES=	x11
@@ -36,7 +36,6 @@ SUBST_FILES.prefix=	lxqt-config-input/keyboardlayoutconfig.h
 SUBST_VARS.prefix=	X11BASE
 SUBST_VARS.prefix+=	XKBSUB
 
-DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
 DEPENDS+=	lxqt-themes-[0-9]*:../../graphics/lxqt-themes
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
@@ -45,6 +44,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../sysutils/lxqt-menu-data/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
 .include "../../x11/plasma6-libkscreen/buildlink3.mk"

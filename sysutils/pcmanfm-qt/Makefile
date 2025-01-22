@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2025/01/22 09:07:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/22 09:08:02 riastradh Exp $
 
 DISTNAME=	pcmanfm-qt-2.1.0
 CATEGORIES=	sysutils
@@ -27,13 +27,13 @@ CONF_FILES+=		${AUTOSTART_CONF}/lxqt-desktop.desktop \
 CONF_FILES+=		${SETTINGS_CONF}/settings.conf \
 			${PKG_SYSCONFDIR}/pcmanfm-qt/lxqt/settings.conf
 
-DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "../../devel/cmake/build.mk"
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/lxqt-menu-data/buildlink3.mk"
 .include "../../x11/libfm-qt/buildlink3.mk"
 .include "../../x11/liblxqt/buildlink3.mk"
 .include "../../x11/plasma6-layer-shell-qt/buildlink3.mk"
