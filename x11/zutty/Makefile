@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/02/01 10:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/22 10:22:05 wiz Exp $
 
 DISTNAME=	7e481c04507e9b5cacfe67fe2b96bdb449b08726
 PKGNAME=	zutty-0.15
@@ -21,6 +21,12 @@ WRKSRC=		${WRKDIR}/zutty-${DISTNAME:C/(.......).*/\1/}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.org ${DESTDIR}${PREFIX}/share/doc/zutty
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${X11_TYPE} != "modular"
+BROKEN=		"Needs GLES3/gl31.h header."
+.endif
 
 .include "../../devel/waf/waf.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
