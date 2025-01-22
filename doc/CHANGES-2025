@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.573 2025/01/22 17:47:55 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.574 2025/01/22 18:19:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -757,3 +757,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-tortoise-orm to 0.22.2nb1 [wiz 2025-01-22]
 	Updated net/Radicale2 to 2.1.12nb1 [jakllsch 2025-01-22]
 	Updated ham/hamlib to 4.6.1 [gdt 2025-01-22]
+	Updated devel/lua-lpeg to 1.1.0nb1 [adam 2025-01-22]
+	Updated editors/neovim to 0.10.3 [adam 2025-01-22]
