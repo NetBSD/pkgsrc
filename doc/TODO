@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25344 2025/01/22 13:04:41 wiz Exp $
+$NetBSD: TODO,v 1.25345 2025/01/22 22:29:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1147,6 +1147,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
 	o q5go-2.1.1
+	o qca2-2.3.9
 	o qconf-2.5
 	o qtcreator-13.0
 	o quazip-1.1
@@ -1355,6 +1356,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o worker-4.8.0
 	o wxRemind-101
 	o x2vnc-1.31
+	o xca-2.8.0
 	o xcoral-3.14
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
