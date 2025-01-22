@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/05/17 15:49:08 sborrill Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/22 15:57:26 jakllsch Exp $
 
 DISTNAME=	Radicale-2.1.12
+PKGREVISION=	1
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -15,7 +16,7 @@ RADICALE_USER?=			www
 RADICALE_GROUP?=		www
 PKG_GROUPS=			${RADICALE_GROUP}
 PKG_USERS=			${RADICALE_USER}:${RADICALE_GROUP}
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE=	27 312 313
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
@@ -39,6 +40,7 @@ SUBST_FILES.server+=	config
 SUBST_STAGE.server=	pre-configure
 SUBST_MESSAGE.server=	Configure as a daemon by default, and override default collection location
 
+DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
 # for md5 htpasswd_encryption method
@@ -48,5 +50,5 @@ DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
