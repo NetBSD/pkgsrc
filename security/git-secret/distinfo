@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/22 09:25:18 adam Exp $
+
+BLAKE2s (git-secret-0.5.0.tar.gz) = b8af730df4d49306c562b17314ff1fae29b27588a05679a3446436d765c61512
+SHA512 (git-secret-0.5.0.tar.gz) = c685ee4d7b7d247c37805fc3a16c431eff7f6740899d65f9178514b99e84ff83cb59330e6fb73da627f00bb60d0cca76da8b31004fcc3926dcee3fed15d65b85
+Size (git-secret-0.5.0.tar.gz) = 854497 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.969 2025/01/16 18:00:00 wiz Exp $
+# $NetBSD: Makefile,v 1.970 2025/01/22 09:25:18 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -107,6 +107,7 @@ SUBDIR+=	fprint-demo
 SUBDIR+=	fsh
 SUBDIR+=	gcr
 SUBDIR+=	git-crypt
+SUBDIR+=	git-secret
 SUBDIR+=	gnome-keyring
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnu-pw-mgr
