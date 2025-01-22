@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/22 15:57:26 jakllsch Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/22 16:07:55 wiz Exp $
 
 DISTNAME=	Radicale-2.1.12
 PKGREVISION=	1
@@ -40,7 +40,7 @@ SUBST_FILES.server+=	config
 SUBST_STAGE.server=	pre-configure
 SUBST_MESSAGE.server=	Configure as a daemon by default, and override default collection location
 
-DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
 # for md5 htpasswd_encryption method
