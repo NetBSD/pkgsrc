@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/10/28 19:56:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/22 08:30:49 adam Exp $
 bin/codespell-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -15,6 +15,12 @@ ${PYSITELIB}/codespell_lib/__main__.pyo
 ${PYSITELIB}/codespell_lib/_codespell.py
 ${PYSITELIB}/codespell_lib/_codespell.pyc
 ${PYSITELIB}/codespell_lib/_codespell.pyo
+${PYSITELIB}/codespell_lib/_spellchecker.py
+${PYSITELIB}/codespell_lib/_spellchecker.pyc
+${PYSITELIB}/codespell_lib/_spellchecker.pyo
+${PYSITELIB}/codespell_lib/_text_util.py
+${PYSITELIB}/codespell_lib/_text_util.pyc
+${PYSITELIB}/codespell_lib/_text_util.pyo
 ${PYSITELIB}/codespell_lib/_version.py
 ${PYSITELIB}/codespell_lib/_version.pyc
 ${PYSITELIB}/codespell_lib/_version.pyo
