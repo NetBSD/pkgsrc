@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.564 2025/01/22 09:32:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.565 2025/01/22 09:40:21 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -745,3 +745,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/openobex to 1.7.2nb4 [wiz 2025-01-22]
 	Added security/git-secret version 0.5.0 [adam 2025-01-22]
 	Updated cad/py-simpy to 4.1.1 [adam 2025-01-22]
+	Updated games/openrct2 to 0.4.18 [ffaubert 2025-01-22]
