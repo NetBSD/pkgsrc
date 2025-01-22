@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/22 18:44:53 he Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/22 18:55:31 he Exp $
 
 VER=		0.14.1
 DISTNAME=	routinator-${VER}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/NLnetLabs/routinator
 COMMENT=	Validate RPKI ROA against routing announcements
 LICENSE=	modified-bsd
-
-BROKEN=		"Does not support rust>=1.80"
 
 # 0.13.0 requires minimum this rust version:
 RUST_REQ=		1.74.0
