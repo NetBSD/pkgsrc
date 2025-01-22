@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2025/01/20 13:35:25 wiz Exp $
+# $NetBSD: Makefile,v 1.217 2025/01/22 13:06:47 nat Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -8,6 +8,7 @@ SUBDIR+=	R-base64enc
 SUBDIR+=	TECkit
 SUBDIR+=	ack
 SUBDIR+=	aklomp-base64
+SUBDIR+=	ansi2text
 SUBDIR+=	autoconvert
 SUBDIR+=	base64
 SUBDIR+=	bbcim

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/22 13:06:47 nat Exp $
+
+BLAKE2s (ansi2text-1.2.zip) = 9b425e1b8212a8c9b4c15ad6d85019df389537f613d5dfaec5057354c271c7af
+SHA512 (ansi2text-1.2.zip) = abbd5bfa179399efe6ec20d67be05e718bacf19ed0fd3b8cbe381b9c8672b24469d99339500e19d062d6cd609e9da4fc465fd0ab36184af725c277edb0506a0f
+Size (ansi2text-1.2.zip) = 5802 bytes

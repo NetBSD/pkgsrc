@@ -1,0 +1,3 @@
+Ansi2text a utility for formatting ansi sequences for display with less.
+
+From NetBSD PR#48092.
