@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2022/01/04 20:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/01/22 09:30:16 adam Exp $
 
-DISTNAME=	simpy-3.0.11
+DISTNAME=	simpy-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	cad math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpy/}
 
@@ -11,5 +10,8 @@ HOMEPAGE=	https://simpy.readthedocs.io/
 COMMENT=	Discrete event simulation framework
 LICENSE=	mit
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0:../../devel/py-setuptools
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
