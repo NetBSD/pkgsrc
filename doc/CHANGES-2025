@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.568 2025/01/22 12:34:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.569 2025/01/22 13:09:36 nat Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -752,3 +752,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs to 23.6.1 [adam 2025-01-22]
 	Added x11/copyq version 9.1.0 [wiz 2025-01-22]
 	Updated x11/rofi to 1.7.8 [wiz 2025-01-22]
+	Added converters/ansi2text version 1.2 [nat 2025-01-22]
