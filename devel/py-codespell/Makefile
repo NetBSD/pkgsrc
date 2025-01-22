@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:28:03 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/22 08:30:49 adam Exp $
 
-DISTNAME=	codespell-2.3.0
+DISTNAME=	codespell-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/codespell/}
@@ -16,8 +16,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	bin/codespell
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
