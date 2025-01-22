@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2024/04/21 16:08:29 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/01/22 12:47:49 wiz Exp $
 
 BLAKE2s (innoextract-1.9.tar.gz) = 1dca12efdfc57920e81b3a5d8a4ad776e9a7fb86d4ecd4177c03e26b928b3106
 SHA512 (innoextract-1.9.tar.gz) = 2b18f7bb7f50744bcb1bdcd25e57e0760193b179c77b55e0f63c537e55afc98de3b0380da3cae470ce97660ed41a7ffbb48c8c25329c9ce9b3811d9aec74bcde
 Size (innoextract-1.9.tar.gz) = 206931 bytes
-SHA1 (patch-src_stream_slice.cpp) = 38df0b08941f4a72c2aa29d18a4829cb2b6c27f8
+SHA1 (patch-CMakeLists.txt) = 69493f330d32e0c63737443b1e9647633146e0eb
+SHA1 (patch-src_stream_slice.cpp) = d98f14b988d17d3e85199fa9480e5b308497bafd
