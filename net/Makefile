@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1586 2025/01/15 14:13:39 manu Exp $
+# $NetBSD: Makefile,v 1.1587 2025/01/22 04:26:20 schmonz Exp $
 #
 
 COMMENT=	Networking tools
@@ -714,6 +714,7 @@ SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-asyncio-nats-client
 SUBDIR+=	py-awscli
+SUBDIR+=	py-awscli-plugin-logs-tail
 SUBDIR+=	py-beanstalkc
 SUBDIR+=	py-bonjour
 SUBDIR+=	py-boto
