@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.563 2025/01/22 09:21:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.564 2025/01/22 09:32:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -743,3 +743,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-issues to 5.0.0 [adam 2025-01-22]
 	Updated devel/py-codespell to 2.4.0 [adam 2025-01-22]
 	Updated comms/openobex to 1.7.2nb4 [wiz 2025-01-22]
+	Added security/git-secret version 0.5.0 [adam 2025-01-22]
+	Updated cad/py-simpy to 4.1.1 [adam 2025-01-22]
