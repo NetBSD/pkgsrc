@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.561 2025/01/22 08:29:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.562 2025/01/22 08:31:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -738,3 +738,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flufl.testing to 0.8 [adam 2025-01-22]
 	Updated databases/py-sqlalchemy to 2.0.37 [adam 2025-01-22]
 	Updated print/dspdfviewer to 1.15.1nb67 [wiz 2025-01-22]
+	Updated time/py-tzdata to 2025.1 [adam 2025-01-22]
+	Updated devel/py-test-httpserver to 1.1.1 [adam 2025-01-22]
+	Updated textproc/py-sphinx-issues to 5.0.0 [adam 2025-01-22]
+	Updated devel/py-codespell to 2.4.0 [adam 2025-01-22]
