@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/22 04:26:17 schmonz Exp $
+
+BLAKE2s (logs-tail-awscli-plugin-0.2.tar.gz) = 1877ecb78a7269ddba7948a422c852335a5399dc91483c4d86b89606e9381c86
+SHA512 (logs-tail-awscli-plugin-0.2.tar.gz) = 1771f9ee7110c3b79430903b8df1154e472ac88eb96c095c7f83970d946da19563b3ed45e1b2a8a6325198da5cfa574325647b6057e43fd98a177ecd81be6026
+Size (logs-tail-awscli-plugin-0.2.tar.gz) = 5737 bytes

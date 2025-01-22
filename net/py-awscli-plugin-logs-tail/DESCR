@@ -1,0 +1,11 @@
+This plugin is a backport of the tail command added in AWS CLI v2.
+
+To enable the plugin:
+
+$ cat .aws/config
+[plugins]
+logs_tail = awscli_plugin_logs_tail
+
+Assuming the plugin is registered:
+
+$ aws logs tail LOG_GROUP_NAME
