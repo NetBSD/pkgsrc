@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2025/01/22 09:07:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.59 2025/01/22 09:08:02 riastradh Exp $
 
 DISTNAME=	lxqt-panel-2.1.4
 CATEGORIES=	x11
@@ -45,7 +45,6 @@ CONF_FILES+=	${AUTOSTART_CONF}/lxqt-panel.desktop \
 CONF_FILES+=	${PANEL_CONF}/panel.conf \
 		${PKG_SYSCONFDIR}/lxqt/panel.conf
 
-DEPENDS+=	lxqt-menu-data-[0-9]*:../../sysutils/lxqt-menu-data
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
@@ -56,6 +55,7 @@ TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 .include "../../devel/libdbusmenu-lxqt/buildlink3.mk"
 .include "../../devel/libstatgrab/buildlink3.mk"
 .include "../../sysutils/kf6-solid/buildlink3.mk"
+.include "../../sysutils/lxqt-menu-data/buildlink3.mk"
 .include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../x11/kf6-kguiaddons/buildlink3.mk"
 .include "../../x11/kf6-kwindowsystem/buildlink3.mk"
