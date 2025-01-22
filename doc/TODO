@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25342 2025/01/22 08:29:13 wiz Exp $
+$NetBSD: TODO,v 1.25343 2025/01/22 12:04:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -582,6 +582,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o elasticsearch-8.15.0
 	o electric-9.07
 	o electricfence-2.4.16
+	o electrum-4.5.8
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
@@ -1066,6 +1067,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o php-tiki-24.6 [replacing php-tiki6]
 	o php-tt-rss-17.4
 	o php-tt-rss-fever-plugin-1.4.7
+	o phpmyadmin-5.2.2
 	o phraseanet-4.1.7
 	o phraseanet-indexer-3.8.6
 	o pick-4.0.0
@@ -1242,9 +1244,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o sup-0.4
 	o swapd-1.0.5
 	o swi-prolog-9.2.9
-	o swi-prolog-jpl-8.3.22
-	o swi-prolog-lite-8.3.22
-	o swi-prolog-packages-8.3.22
+	o swi-prolog-lite-9.2.9
+	o swi-prolog-packages-9.2.9
 	o syft-0.68.1
 	o sympa-6.2.72
 	o sysinfo-4.2.2
@@ -1344,6 +1345,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wgetpaste-2.30
 	o whowatch-1.8.5
 	o windowlab-1.40
+	o wine-10.0
 	o wine-devel-9.22
 	o wiredtiger-10.0.0
 	o wkhtmltopdf-0.12.6
