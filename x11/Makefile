@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1055 2025/01/13 11:30:23 wiz Exp $
+# $NetBSD: Makefile,v 1.1056 2025/01/22 12:10:16 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -25,6 +25,7 @@ SUBDIR+=	clisp-gtk2
 SUBDIR+=	clisp-mit-clx
 SUBDIR+=	clisp-new-clx
 SUBDIR+=	cool-retro-term
+SUBDIR+=	copyq
 SUBDIR+=	deforaos-integration
 SUBDIR+=	deforaos-keyboard
 SUBDIR+=	deforaos-libdesktop
