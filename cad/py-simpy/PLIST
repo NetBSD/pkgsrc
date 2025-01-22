@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2018/11/20 11:49:38 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.11 2025/01/22 09:30:16 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/simpy/__init__.py
 ${PYSITELIB}/simpy/__init__.pyc
 ${PYSITELIB}/simpy/__init__.pyo
-${PYSITELIB}/simpy/_compat.py
-${PYSITELIB}/simpy/_compat.pyc
-${PYSITELIB}/simpy/_compat.pyo
 ${PYSITELIB}/simpy/core.py
 ${PYSITELIB}/simpy/core.pyc
 ${PYSITELIB}/simpy/core.pyo
@@ -18,6 +16,7 @@ ${PYSITELIB}/simpy/events.pyo
 ${PYSITELIB}/simpy/exceptions.py
 ${PYSITELIB}/simpy/exceptions.pyc
 ${PYSITELIB}/simpy/exceptions.pyo
+${PYSITELIB}/simpy/py.typed
 ${PYSITELIB}/simpy/resources/__init__.py
 ${PYSITELIB}/simpy/resources/__init__.pyc
 ${PYSITELIB}/simpy/resources/__init__.pyo
