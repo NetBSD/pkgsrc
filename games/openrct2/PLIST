@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2024/12/14 20:47:52 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.24 2025/01/22 09:40:07 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -1219,10 +1219,10 @@ share/openrct2/object/rct2tt/ride/rct2tt.ride.funhouse.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.ganstrcr.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.gintspdr.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.halofmrs.json
-share/openrct2/object/rct2tt/ride/rct2tt.ride.harpiesx.json
+share/openrct2/object/rct2tt/ride/rct2tt.ride.harpiesx.parkobj
 share/openrct2/object/rct2tt/ride/rct2tt.ride.hotrodxx.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.hoverbke.json
-share/openrct2/object/rct2tt/ride/rct2tt.ride.hovercar.json
+share/openrct2/object/rct2tt/ride/rct2tt.ride.hovercar.parkobj
 share/openrct2/object/rct2tt/ride/rct2tt.ride.hovrbord.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.jetpackx.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.jetplane.json
@@ -1234,14 +1234,14 @@ share/openrct2/object/rct2tt/ride/rct2tt.ride.mktstal1.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.mktstal2.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.moonjuce.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.mythosea.json
-share/openrct2/object/rct2tt/ride/rct2tt.ride.neptunex.json
+share/openrct2/object/rct2tt/ride/rct2tt.ride.neptunex.parkobj
 share/openrct2/object/rct2tt/ride/rct2tt.ride.oakbarel.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.pegasusx.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.polchase.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.policecr.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.pterodac.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.raptorxx.json
-share/openrct2/object/rct2tt/ride/rct2tt.ride.rivrstyx.json
+share/openrct2/object/rct2tt/ride/rct2tt.ride.rivrstyx.parkobj
 share/openrct2/object/rct2tt/ride/rct2tt.ride.schoolbs.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.seaplane.json
 share/openrct2/object/rct2tt/ride/rct2tt.ride.softoyst.json
