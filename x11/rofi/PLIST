@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2021/10/18 11:42:35 nia Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/22 12:34:07 wiz Exp $
 bin/rofi
 bin/rofi-sensible-terminal
 bin/rofi-theme-selector
@@ -11,8 +11,15 @@ lib/pkgconfig/rofi.pc
 man/man1/rofi-sensible-terminal.1
 man/man1/rofi-theme-selector.1
 man/man1/rofi.1
+man/man5/rofi-debugging.5
+man/man5/rofi-dmenu.5
+man/man5/rofi-keys.5
 man/man5/rofi-script.5
 man/man5/rofi-theme.5
+man/man5/rofi-thumbnails.5
+share/applications/rofi-theme-selector.desktop
+share/applications/rofi.desktop
+share/icons/hicolor/scalable/apps/rofi.svg
 share/rofi/themes/Adapta-Nokto.rasi
 share/rofi/themes/Arc-Dark.rasi
 share/rofi/themes/Arc.rasi
@@ -20,7 +27,6 @@ share/rofi/themes/DarkBlue.rasi
 share/rofi/themes/Indego.rasi
 share/rofi/themes/Monokai.rasi
 share/rofi/themes/Paper.rasi
-share/rofi/themes/Pop-Dark.rasi
 share/rofi/themes/android_notification.rasi
 share/rofi/themes/arthur.rasi
 share/rofi/themes/blue.rasi
@@ -28,8 +34,10 @@ share/rofi/themes/c64.rasi
 share/rofi/themes/dmenu.rasi
 share/rofi/themes/docu.rasi
 share/rofi/themes/fancy.rasi
+share/rofi/themes/fancy2.rasi
+share/rofi/themes/fullscreen-preview.rasi
 share/rofi/themes/glue_pro_blue.rasi
-share/rofi/themes/gruvbox-common.rasi
+share/rofi/themes/gruvbox-common.rasinc
 share/rofi/themes/gruvbox-dark-hard.rasi
 share/rofi/themes/gruvbox-dark-soft.rasi
 share/rofi/themes/gruvbox-dark.rasi
@@ -39,8 +47,10 @@ share/rofi/themes/gruvbox-light.rasi
 share/rofi/themes/iggy.jpg
 share/rofi/themes/iggy.rasi
 share/rofi/themes/lb.rasi
+share/rofi/themes/material.rasi
 share/rofi/themes/paper-float.rasi
 share/rofi/themes/purple.rasi
+share/rofi/themes/sidebar-v2.rasi
 share/rofi/themes/sidebar.rasi
 share/rofi/themes/solarized.rasi
 share/rofi/themes/solarized_alternate.rasi
