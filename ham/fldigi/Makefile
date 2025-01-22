@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.149 2024/11/14 22:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2025/01/22 17:49:16 gdt Exp $
 
 DISTNAME=	fldigi-4.1.01
-PKGREVISION=	35
+PKGREVISION=	36
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fldigi/}
 
