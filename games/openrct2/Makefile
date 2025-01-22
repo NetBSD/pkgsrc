@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2024/12/23 23:22:04 mef Exp $
+# $NetBSD: Makefile,v 1.70 2025/01/22 09:40:07 triaxx Exp $
 
-PKGNAME=	openrct2-0.4.17
+PKGNAME=	openrct2-0.4.18
 CATEGORIES=	games
 
 DIST_SUBDIR=	openrct2-${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ DISTFILES+=	replays.zip
 EXTRACT_ONLY+=	openrct.tar.gz
 
 TITLE_SEQUENCE_VERSION=	0.4.14
-OBJECTS_VERSION=	1.4.11
+OBJECTS_VERSION=	1.4.12
 OPENSFX_VERSION=	1.0.5
 OPENMSX_VERSION=	1.6
 REPLAYS_VERSION=	0.0.84
@@ -53,7 +53,7 @@ USE_LANGUAGES=	c c++
 #    upstream
 #    https://github.com/OpenRCT2/OpenRCT2/wiki/Building-OpenRCT2-on-Linux
 #    Says GCC>=12. or clang >=8.0. (C++20 support required)
-GCC_REQD+=	12
+GCC_REQD+=		12
 #    But this line should be removed after 2024 Q4 branch
 #    And below is the right thing (if gcc.mk works correctly)
 USE_CXX_FEATURES+=	c++20
