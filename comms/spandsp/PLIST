@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/06 08:32:06 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/22 13:37:54 mef Exp $
 include/spandsp.h
+include/spandsp/ademco_contactid.h
 include/spandsp/adsi.h
 include/spandsp/arctan2.h
 include/spandsp/async.h
@@ -35,6 +36,7 @@ include/spandsp/ima_adpcm.h
 include/spandsp/image_translate.h
 include/spandsp/logging.h
 include/spandsp/lpc10.h
+include/spandsp/math_fixed.h
 include/spandsp/modem_connect_tones.h
 include/spandsp/modem_echo.h
 include/spandsp/noise.h
@@ -42,6 +44,7 @@ include/spandsp/oki_adpcm.h
 include/spandsp/playout.h
 include/spandsp/plc.h
 include/spandsp/power_meter.h
+include/spandsp/private/ademco_contactid.h
 include/spandsp/private/adsi.h
 include/spandsp/private/async.h
 include/spandsp/private/at_interpreter.h
@@ -105,6 +108,7 @@ include/spandsp/saturated.h
 include/spandsp/schedule.h
 include/spandsp/sig_tone.h
 include/spandsp/silence_gen.h
+include/spandsp/stdbool.h
 include/spandsp/super_tone_rx.h
 include/spandsp/super_tone_tx.h
 include/spandsp/swept_tone.h

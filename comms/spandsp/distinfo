@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:06:06 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/01/22 13:37:54 mef Exp $
 
-BLAKE2s (spandsp-0.0.6pre21.tgz) = 7fdb6b11889a24ad2d3c63c69749a7c75eb19d1accdf5f9ea2d18d5083b8115d
-SHA512 (spandsp-0.0.6pre21.tgz) = 6f846021cd6a1605d371a8e5d1ac3a5b6adc5b85de2517e24a5afaa57b4864202c2d16c1196959f7f11d866732d17d301d2d37121228cec75077678f8fc3e488
-Size (spandsp-0.0.6pre21.tgz) = 3278758 bytes
-SHA1 (patch-aa) = 9367cb23f8413d6adcff23ddecda914d9de27e0c
+BLAKE2s (spandsp-0.0.6.tar.gz) = 32a10a27bfc59882342bc1a62d2b640faa55a3c7ba85218c53de54c672a5ef0e
+SHA512 (spandsp-0.0.6.tar.gz) = 16bb215ca89a39282e832403f69bc4c98ad3fe35ab3a6eb4731ee5029a6acd9b2df243c3701de845441cbdc16c88b3cd398ef15dc3502e45d5aeca8a161917d4
+Size (spandsp-0.0.6.tar.gz) = 3309837 bytes
+SHA1 (patch-aa) = 617ddbd6023ed770effe5447a17a766929f2ae30
 SHA1 (patch-ab) = 11162d011e061172140b766c6c5fe7714f662eb8
-SHA1 (patch-src_gsm0610__rpe.c) = c35359c79940923e6cb0667df101410c179acc96
+SHA1 (patch-src_gsm0610__rpe.c) = 6c24d6557fc0bbf6872df132e8032bb1b111e0f2
