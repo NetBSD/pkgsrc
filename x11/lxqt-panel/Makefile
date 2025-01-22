@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/01/16 13:38:40 pin Exp $
+# $NetBSD: Makefile,v 1.58 2025/01/22 09:07:41 riastradh Exp $
 
 DISTNAME=	lxqt-panel-2.1.4
 CATEGORIES=	x11
@@ -50,17 +50,19 @@ TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
 
 .include "options.mk"
+
+.include "../../devel/cmake/build.mk"
+
 .include "../../devel/libdbusmenu-lxqt/buildlink3.mk"
 .include "../../devel/libstatgrab/buildlink3.mk"
-.include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../sysutils/kf6-solid/buildlink3.mk"
-.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../x11/kf6-kguiaddons/buildlink3.mk"
+.include "../../x11/kf6-kwindowsystem/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/lxqt-globalkeys/buildlink3.mk"
-.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../x11/plasma6-layer-shell-qt/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
