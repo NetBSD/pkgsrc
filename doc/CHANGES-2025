@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.572 2025/01/22 15:57:43 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.573 2025/01/22 17:47:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -756,3 +756,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated comms/spandsp to 0.0.6 [mef 2025-01-22]
 	Updated databases/py-tortoise-orm to 0.22.2nb1 [wiz 2025-01-22]
 	Updated net/Radicale2 to 2.1.12nb1 [jakllsch 2025-01-22]
+	Updated ham/hamlib to 4.6.1 [gdt 2025-01-22]
