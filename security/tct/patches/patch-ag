@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2015/03/19 08:34:53 dholland Exp $
+$NetBSD: patch-ag,v 1.5 2025/01/22 22:26:14 wiz Exp $
 
 Fix Linux off_t handling.
 Add NetBSD support.
@@ -27,7 +27,7 @@ Add NetBSD support.
  #define STRTOUL		strtoul
  #define DADDR_T		__u32
  #define EXT2FS_TYPE	"ext2fs"
-@@ -203,6 +203,26 @@ extern int optind;
+@@ -203,6 +209,26 @@ extern int optind;
  #endif
  #endif
  

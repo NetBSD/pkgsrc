@@ -1,13 +1,15 @@
-$NetBSD: patch-an,v 1.4 2015/03/19 08:34:53 dholland Exp $
+$NetBSD: patch-an,v 1.5 2025/01/22 22:26:14 wiz Exp $
 
 Recognize NetBSD versions.
 
 --- src/fstools/makedefs.orig	2001-10-04 19:44:26.000000000 +0000
 +++ src/fstools/makedefs
-@@ -2,6 +2,12 @@ SYSTEM=`(uname -s) 2>/dev/null`
+@@ -2,6 +2,14 @@ SYSTEM=`(uname -s) 2>/dev/null`
  RELEASE=`(uname -r) 2>/dev/null`
  
  case "$SYSTEM.$RELEASE" in
++   NetBSD.1[0-9]*)	DEFS="-DNETBSD7"
++		;;
 +   NetBSD.1*)	DEFS="-DNETBSD1"
 +		;;
 +   NetBSD.[2-6]*)	DEFS="-DNETBSD2"
