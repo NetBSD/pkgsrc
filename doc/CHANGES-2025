@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.558 2025/01/22 04:26:25 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.559 2025/01/22 04:36:32 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.11.0 [rillig 2025-01-21]
 	Updated devel/ruby-jirametrics to 2.9.1 [schmonz 2025-01-22]
 	Added net/py-awscli-plugin-logs-tail version 0.2 [schmonz 2025-01-22]
+	Updated textproc/hck to 0.11.1 [pin 2025-01-22]
