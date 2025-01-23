@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/28 22:42:58 snj Exp $
+$NetBSD: patch-aa,v 1.2 2025/01/23 20:03:21 wiz Exp $
 
---- main.c.orig	2004-01-27 12:52:49.000000000 -0800
-+++ main.c	2004-01-27 13:01:52.000000000 -0800
-@@ -145,6 +145,8 @@
+* Support undecorated properties
+* Fix 64 bit data from debian
+
+--- main.c.orig	2005-01-29 03:31:33.000000000 +0000
++++ main.c
+@@ -159,6 +159,8 @@ Free Software Foundation, Inc., 675 Mass
  "                           shaded, skip_taskbar, skip_pager, hidden,\n" \
  "                           fullscreen, above, below\n" \
  "\n" \
@@ -11,7 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/28 22:42:58 snj Exp $
  "Workarounds:\n" \
  "\n" \
  "  DESKTOP_TITLES_INVALID_UTF8      Print non-ASCII desktop titles correctly\n" \
-@@ -736,7 +738,11 @@
+@@ -776,7 +778,11 @@ static int window_state (Display *disp, 
                  fputs("Invalid zero length property.\n", stderr);
                  return EXIT_FAILURE;
              }
@@ -24,7 +27,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/28 22:42:58 snj Exp $
              p_verbose("State 2: %s\n", tmp_prop2); 
              prop2 = XInternAtom(disp, tmp_prop2, False);
              g_free(tmp2);
-@@ -748,7 +754,11 @@
+@@ -788,7 +794,11 @@ static int window_state (Display *disp, 
              fputs("Invalid zero length property.\n", stderr);
              return EXIT_FAILURE;
          }
@@ -37,3 +40,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/01/28 22:42:58 snj Exp $
          p_verbose("State 1: %s\n", tmp_prop1); 
          prop1 = XInternAtom(disp, tmp_prop1, False);
          g_free(tmp1);
+@@ -1425,6 +1435,16 @@ static gchar *get_property (Display *dis
+      *
+      * long_length = Specifies the length in 32-bit multiples of the
+      *               data to be retrieved.
++     *
++     * NOTE:  see
++     * http://mail.gnome.org/archives/wm-spec-list/2003-March/msg00067.html
++     * In particular:
++     *
++     * When the X window system was ported to 64-bit architectures, a
++     * rather peculiar design decision was made. 32-bit quantities such
++     * as Window IDs, atoms, etc, were kept as longs in the client side
++     * APIs, even when long was changed to 64 bits.
++     *
+      */
+     if (XGetWindowProperty(disp, win, xa_prop_name, 0, MAX_PROPERTY_VALUE_LEN / 4, False,
+             xa_prop_type, &xa_ret_type, &ret_format,     
+@@ -1441,6 +1461,8 @@ static gchar *get_property (Display *dis
+ 
+     /* null terminate the result to make string handling easier */
+     tmp_size = (ret_format / 8) * ret_nitems;
++    /* Correct 64 Architecture implementation of 32 bit data */
++    if(ret_format==32) tmp_size *= sizeof(long)/4;
+     ret = g_malloc(tmp_size + 1);
+     memcpy(ret, ret_prop, tmp_size);
+     ret[tmp_size] = '\0';
