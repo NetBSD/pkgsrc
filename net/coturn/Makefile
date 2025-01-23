@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/23 17:06:18 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/23 17:21:26 gdt Exp $
 
 DISTNAME=	coturn-4.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 
@@ -27,17 +27,46 @@ CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -leve
 CFLAGS+=	-Wno-stringop-truncation
 
 COTURN_CONFIG=	${PKG_SYSCONFDIR}/turnserver.conf
-COTURN_EGDIR=	${PREFIX}/share/examples/turnserver
-CONF_FILES=	${COTURN_EGDIR}/turnserver.conf.default ${COTURN_CONFIG}
+COTURN_EGDIR=	${PREFIX}/share/examples/coturn
+CONF_FILES=	${COTURN_EGDIR}/etc/turnserver.conf ${COTURN_CONFIG}
 
 BUILD_DEFS+=	VARBASE
 RCD_SCRIPTS=	turnserver
 
+# Set up to run as a non-root user.
+COTURN_USER?=	coturn
+COTURN_GROUP?=	${COTURN_USER}
+COTURN_DATA?=	${VARBASE}/db/coturn
+BUILD_DEFS+=	COTURN_USER COTURN_GROUP COTURN_DATA
+
+PKG_USERS_VARS=			COTURN_USER
+PKG_GROUPS_VARS=		COTURN_GROUP
+PKG_GROUPS=			${COTURN_GROUP}
+PKG_USERS=			${COTURN_USER}:${COTURN_GROUP}
+PKG_GECOS.${COTURN_USER}=	coturn daemon user
+PKG_HOME.${COTURN_USER}=	${COTURN_DATA}
+PKG_SHELL.${COTURN_USER}=	${NOLOGIN}
+
+FILES_SUBST+=	COTURN_USER=${COTURN_USER:Q}
+FILES_SUBST+=	COTURN_GROUP=${COTURN_GROUP:Q}
+FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+
+# Use coturn as docs/examples subdir name.  \todo No command-line argument?
+CONFIGURE_ENV+=		PORTNAME=coturn
+# Defaults to ${PREFIX}/etc; respect pkgsrc tunable.
+CONFIGURE_ARGS+=	--confdir=${PKG_SYSCONFDIR}
+# Defaults to ${PREFIX}/var; give it a subdirectory.
+CONFIGURE_ARGS+=	--localstatedir=${COTURN_DATA}
+
+# \todo Why is there a db installed in /var?  If not within PREFIX we don't pick it up,
+# but it seems like a bug.
+
 .include "options.mk"
 
+# upstream installs both a .conf.default in etcdir, and the
+# pkgsrc-right-way .conf in egdir.
 post-install:
-	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default \
-		${DESTDIR}${COTURN_EGDIR}/turnserver.conf.default
+	${RM} ${DESTDIR}${PKG_SYSCONFDIR}/turnserver.conf.default
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
