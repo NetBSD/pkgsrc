@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.60 2025/01/23 05:10:43 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.61 2025/01/23 05:23:01 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -345,6 +345,7 @@ class PackageVars:
     maintainer: str
     distname: str
     pkgname: str
+    wrksrc: str
 
     def __init__(self, url: str, pkgsrcdir: Path) -> None:
         self.url = url
@@ -362,6 +363,7 @@ class PackageVars:
         self.maintainer = ''
         self.distname = ''
         self.pkgname = ''
+        self.wrksrc = ''
 
         self.adjust_site_SourceForge()
         self.adjust_site_GitHub_archive()
@@ -505,6 +507,7 @@ class PackageVars:
             version = m.group(1)
             self.distfile = f'{proj}-{version}{ext}'
             self.github_tag = f'refs/tags/v${{PKGVERSION_NOREV}}'
+            self.wrksrc = '${GITHUB_TAG:T}'
             return
 
         self.github_project = proj
@@ -626,6 +629,10 @@ class Generator:
             Var('HOMEPAGE', '=', vars.homepage),
             Var('COMMENT', '=', 'TODO: Short description of the package'),
             Var('#LICENSE', '=', '# TODO: (see mk/license.mk)'),
+        )
+
+        lines.add_vars(
+            Var('WRKSRC', '=', vars.wrksrc),
         )
 
         lines.add('# url2pkg-marker (please do not remove this line.)')
