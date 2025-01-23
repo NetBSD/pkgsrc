@@ -1,6 +1,8 @@
-$NetBSD: patch-runtime_src_kmp__platform.h,v 1.1 2025/01/23 13:59:37 he Exp $
+$NetBSD: patch-runtime_src_kmp__platform.h,v 1.2 2025/01/23 17:22:16 he Exp $
 
 Recognize NetBSD/powerpc.
+Submitted upstream at
+https://github.com/llvm/llvm-project/pull/124151
 
 --- runtime/src/kmp_platform.h.orig	2025-01-23 13:46:36.907713760 +0000
 +++ runtime/src/kmp_platform.h
