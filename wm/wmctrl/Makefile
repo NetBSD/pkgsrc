@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2021/12/08 16:06:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/23 20:03:21 wiz Exp $
 
 DISTNAME=		wmctrl-1.07
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		wm
 MASTER_SITES=		https://sites.google.com/site/tstyblo/wmctrl/
 
