@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.593 2025/01/23 20:10:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.594 2025/01/23 20:11:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/wmctrl to 1.07nb7 [wiz 2025-01-23]
 	Added shells/zsh-history-substring-search version 1.1.0 [wiz 2025-01-23]
 	Updated net/megacmd to 1.7.0nb4 [wiz 2025-01-23]
+	Updated sysutils/sysupgrade to 1.5nb11 [wiz 2025-01-23]
