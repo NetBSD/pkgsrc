@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/11/14 22:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/23 23:27:29 riastradh Exp $
 #
 
 DISTNAME=	nextcloud-client-3.13.2
@@ -41,12 +41,11 @@ LDFLAGS+=	-Wl,--no-fatal-warnings
 
 AUTO_MKDIRS=	yes
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/kio/buildlink3.mk"
 .include "../../devel/libinotify/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

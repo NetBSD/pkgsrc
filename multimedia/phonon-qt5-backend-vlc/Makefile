@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2024/11/14 22:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	phonon-backend-vlc-0.11.2
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -24,9 +24,8 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MKDIR} ${WRKSRC}/_build
 
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.19.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../multimedia/vlc/buildlink3.mk"
-TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
-
 .include "../../multimedia/phonon-qt5/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

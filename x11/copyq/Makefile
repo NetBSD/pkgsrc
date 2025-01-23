@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/01/22 12:10:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	copyq-9.1.0
 CATEGORIES=	x11
@@ -10,12 +10,13 @@ MAINTAINER=	kikadf.01@gmail.com
 COMMENT=	Qt5 based clipboard manager
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
-
 USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${GH_PROJECT}-${PKGVERSION_NOREV}
 
 .include "../../devel/cmake/build.mk"
+
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.19.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/knotifications/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"

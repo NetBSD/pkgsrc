@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2024/11/14 22:21:00 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	phonon-4.11.1
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -12,7 +12,6 @@ COMMENT=	Multimedia API for KF5
 HOMEPAGE=	https://community.kde.org/Phonon
 LICENSE=	gnu-lgpl-v2.1
 
-TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
@@ -29,6 +28,9 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../devel/cmake/build.mk"
+
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.19.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt5-qtbase+=	qt5-qtbase>=5.10.1nb2
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"

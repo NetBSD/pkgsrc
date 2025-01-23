@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.5 2024/12/05 09:43:29 markd Exp $
+# $NetBSD: kf6.mk,v 1.6 2025/01/23 23:27:29 riastradh Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -71,7 +71,8 @@ MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/${KF6VER:R}/}
 EXTRACT_SUFX=	.tar.xz
 PKGNAME?=	kf6-${DISTNAME}
 
-TOOL_DEPENDS+= extra-cmake-modules>=${KF6VER}:../../devel/extra-cmake-modules
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=${KF6VER}
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
 
 CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true

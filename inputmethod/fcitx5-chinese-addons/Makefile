@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/12/29 15:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/01/23 23:27:26 riastradh Exp $
 
 DISTNAME=	fcitx5-chinese-addons-5.1.3
 PKGREVISION=	9
@@ -22,8 +22,6 @@ SITES.${f}=	https://download.fcitx-im.org/data/
 .endfor
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
@@ -37,6 +35,7 @@ post-extract:
 .include "../../devel/cmake/build.mk"
 .include "../../converters/opencc/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../inputmethod/fcitx5-lua/buildlink3.mk"
 .include "../../inputmethod/fcitx5-qt/buildlink3.mk"

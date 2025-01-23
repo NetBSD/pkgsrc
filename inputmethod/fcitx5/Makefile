@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/12/27 08:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/23 23:27:28 riastradh Exp $
 
 DISTNAME=	fcitx5-5.1.7
 PKGREVISION=	4
@@ -37,8 +37,6 @@ USE_CXX_FEATURES+=	charconv
 
 REPLACE_BASH+=		data/fcitx5-diagnose.sh
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-
 CMAKE_CONFIGURE_ARGS+=		-DENABLE_WAYLAND=off # cairo-egl is required.
 CMAKE_CONFIGURE_ARGS+=		-DUSE_SYSTEMD=off
 CMAKE_CONFIGURE_ARGS+=		-DLibIntl_INCLUDE_DIR=${BUILDLINK_PREFIX.gettext}/include
@@ -68,6 +66,8 @@ pre-configure:
 		${WRKSRC}/src/modules/spell/
 
 .include "../../devel/cmake/build.mk"
+
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
