@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.581 2025/01/23 11:10:05 jun Exp $
+$NetBSD: CHANGES-2025,v 1.582 2025/01/23 11:23:41 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/translate-toolkit to 3.14.6 [adam 2025-01-23]
 	Updated devel/py-prompt_toolkit to 3.0.50 [adam 2025-01-23]
 	Updated emulators/nono to 1.1.2 [jun 2025-01-23]
+	Updated chat/ircd-hybrid to 8.2.46 [fox 2025-01-23]
