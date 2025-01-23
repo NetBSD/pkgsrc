@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/01/14 09:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/23 16:37:40 adam Exp $
 
-DISTNAME=	pypika_tortoise-0.3.2
+DISTNAME=	pypika_tortoise-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pypika-tortoise/}
 
@@ -12,8 +11,6 @@ COMMENT=	Forked from pypika and streamline just for tortoise-orm
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.1:../../devel/py-poetry-core
-
-CONFLICTS=	py[0-9]*-pypika-[0-9]*
 
 USE_LANGUAGES=	# none
 
