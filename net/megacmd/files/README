@@ -1,8 +1,12 @@
-$NetBSD: README,v 1.1 2024/06/18 18:23:15 bsiegert Exp $
+$NetBSD: README,v 1.2 2025/01/23 20:10:07 wiz Exp $
 
 To use megacmd features you need machine-id.
 If /etc/machine-id or /var/lib/dbus/machine-id
 not exists, you should generate one. For that,
 run the following command as root:
 
+- if dbus installed:
 	dbus-uuidgen --ensure
+
+- without dbus:
+	sh -c 'date|md5 > /etc/machine-id'
