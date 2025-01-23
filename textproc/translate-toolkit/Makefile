@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/12/29 09:36:37 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/23 09:43:25 adam Exp $
 
-DISTNAME=	translate_toolkit-3.14.5
+DISTNAME=	translate_toolkit-3.14.6
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/translate-toolkit/}
