@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.8 2008/03/01 19:04:37 rillig Exp $
+# $NetBSD: create-report-txt.awk,v 1.9 2025/01/23 15:05:41 wiz Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -58,6 +58,7 @@ BEGIN {
 	pkgs_prefailed = 0
 	pkgs_indirect_failed = 0
 	pkgs_indirect_prefailed = 0
+	pkgs_invalid_dependencies = 0
 
 	while ((getline < status_file) > 0) {
 		if ($0 ~ "^PLATFORM=")
@@ -84,6 +85,8 @@ BEGIN {
 			location[cur] = substr($0, 14)
 		else if ($0 ~ "^PKG_DEPTH=")
 			depth[cur] = substr($0, 11) - 1
+		else if ($0 ~ "^PKG_FAIL_REASON=")
+			reason[cur] = substr($0, 17)
 		else if ($0 ~ "^BUILD_STATUS=") {
 			status[cur] = substr($0, 14)
 		}
@@ -110,8 +113,12 @@ BEGIN {
 			++pkgs_done
 		else if (status[pkg] == "failed")
 			++pkgs_failed
-		else if (status[pkg] == "prefailed")
+		else if (status[pkg] == "prefailed") {
+			if (reason[pkg] ~ "could not resolve dependency") {
+				invalid_dependencies[pkgs_invalid_dependencies++] = pkg
+			}
 			++pkgs_prefailed
+		}
 		else if (status[pkg] == "indirect-failed")
 			++pkgs_indirect_failed
 		else if (status[pkg] == "indirect-prefailed")
@@ -132,12 +139,13 @@ BEGIN {
 	print "Machine readable version: " report_base_url "/meta/report.bz2" > txt_report
 	print "" > txt_report
 	all_pkgs = pkgs_done + pkgs_failed + pkgs_prefailed + pkgs_indirect_failed + pkgs_indirect_prefailed
-	printf "Total number of packages:      %5d\n", all_pkgs > txt_report
-	printf "  Successfully built:          %5d\n", pkgs_done > txt_report
-	printf "  Failed to build:             %5d\n", pkgs_failed > txt_report
-	printf "  Depending on failed package: %5d\n", pkgs_indirect_failed > txt_report
-	printf "  Explicitly broken or masked: %5d\n", pkgs_prefailed > txt_report
-	printf "  Depending on masked package: %5d\n", pkgs_indirect_prefailed > txt_report
+	printf "Total number of packages:          %5d\n", all_pkgs > txt_report
+	printf "  Successfully built:              %5d\n", pkgs_done > txt_report
+	printf "  Failed to build:                 %5d\n", pkgs_failed > txt_report
+	printf "  Depending on failed package:     %5d\n", pkgs_indirect_failed > txt_report
+	printf "  Explicitly broken or masked:     %5d\n", pkgs_prefailed > txt_report
+	printf "    of which invalid dependencies: %5d\n", pkgs_invalid_dependencies > txt_report
+	printf "  Depending on masked package:     %5d\n", pkgs_indirect_prefailed > txt_report
 	print "" > txt_report
 
 	has_top_count = 0
@@ -157,6 +165,20 @@ BEGIN {
 			loc = top_count[sorted_top_count[i]]
 			printf "%- 37s % 6d %s\n", loc, broken_location[loc],
 			    maintainer[pkg_location[loc]] > txt_report
+		}
+		print "" > txt_report
+	}
+
+	if (pkgs_invalid_dependencies > 0) {
+		print "Packages with invalid dependencies" > txt_report
+		print "" > txt_report
+		print "Package                                      Location                      Maintainer" > txt_report
+		print "-----------------------------------------------------------------------------------------------" > txt_report
+
+		for (i = 0; i < pkgs_invalid_dependencies; i++) {
+			p = invalid_dependencies[i]
+			loc = location[p]
+			printf "%- 44s %- 29s %s\n", p, loc, maintainer[p] > txt_report
 		}
 		print "" > txt_report
 	}
