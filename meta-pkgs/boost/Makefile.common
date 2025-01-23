@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.110 2025/01/09 09:25:14 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.111 2025/01/23 19:37:41 riastradh Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -7,6 +7,7 @@
 # used by devel/boost-libs/Makefile
 # used by devel/boost-mpi/Makefile
 # used by devel/py-boost/Makefile
+# used by devel/py-boost-cmake/Makefile
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
