@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/01/15 15:12:36 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/23 17:36:19 he Exp $
 
 DISTNAME=	maxminddb-2.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,4 +15,5 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_sc
 
 .include "../../geography/libmaxminddb/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
