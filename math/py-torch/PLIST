@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/21 13:36:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/23 14:31:16 ryoon Exp $
 bin/convert-caffe2-to-onnx
 bin/convert-onnx-to-caffe2
 bin/torch_shm_manager
@@ -20386,6 +20386,28 @@ ${PYSITELIB}/torch/include/pybind11/stl_bind.h
 ${PYSITELIB}/torch/include/pybind11/type_caster_pyobject_ptr.h
 ${PYSITELIB}/torch/include/pybind11/typing.h
 ${PYSITELIB}/torch/include/sleef.h
+${PYSITELIB}/torch/include/tensorpipe/channel/basic/factory.h
+${PYSITELIB}/torch/include/tensorpipe/channel/context.h
+${PYSITELIB}/torch/include/tensorpipe/channel/error.h
+${PYSITELIB}/torch/include/tensorpipe/channel/mpt/factory.h
+${PYSITELIB}/torch/include/tensorpipe/channel/xth/factory.h
+${PYSITELIB}/torch/include/tensorpipe/common/buffer.h
+${PYSITELIB}/torch/include/tensorpipe/common/cpu_buffer.h
+${PYSITELIB}/torch/include/tensorpipe/common/device.h
+${PYSITELIB}/torch/include/tensorpipe/common/error.h
+${PYSITELIB}/torch/include/tensorpipe/common/optional.h
+${PYSITELIB}/torch/include/tensorpipe/config.h
+${PYSITELIB}/torch/include/tensorpipe/core/context.h
+${PYSITELIB}/torch/include/tensorpipe/core/error.h
+${PYSITELIB}/torch/include/tensorpipe/core/listener.h
+${PYSITELIB}/torch/include/tensorpipe/core/message.h
+${PYSITELIB}/torch/include/tensorpipe/core/pipe.h
+${PYSITELIB}/torch/include/tensorpipe/tensorpipe.h
+${PYSITELIB}/torch/include/tensorpipe/transport/context.h
+${PYSITELIB}/torch/include/tensorpipe/transport/error.h
+${PYSITELIB}/torch/include/tensorpipe/transport/uv/error.h
+${PYSITELIB}/torch/include/tensorpipe/transport/uv/factory.h
+${PYSITELIB}/torch/include/tensorpipe/transport/uv/utility.h
 ${PYSITELIB}/torch/include/torch/csrc/CudaIPCTypes.h
 ${PYSITELIB}/torch/include/torch/csrc/DataLoader.h
 ${PYSITELIB}/torch/include/torch/csrc/Device.h
@@ -22475,6 +22497,8 @@ ${PYSITELIB}/torch/share/cmake/Caffe2/public/mkldnn.cmake
 ${PYSITELIB}/torch/share/cmake/Caffe2/public/protobuf.cmake
 ${PYSITELIB}/torch/share/cmake/Caffe2/public/utils.cmake
 ${PYSITELIB}/torch/share/cmake/Caffe2/public/xpu.cmake
+${PYSITELIB}/torch/share/cmake/Tensorpipe/TensorpipeTargets-release.cmake
+${PYSITELIB}/torch/share/cmake/Tensorpipe/TensorpipeTargets.cmake
 ${PYSITELIB}/torch/share/cmake/Torch/TorchConfig.cmake
 ${PYSITELIB}/torch/share/cmake/Torch/TorchConfigVersion.cmake
 ${PYSITELIB}/torch/signal/__init__.py
@@ -23625,20 +23649,3 @@ share/cmake/kineto/kinetoLibraryConfig.cmake
 share/cpuinfo/cpuinfo-config.cmake
 share/cpuinfo/cpuinfo-targets-release.cmake
 share/cpuinfo/cpuinfo-targets.cmake
-@pkgdir include/torch/csrc/jit/tensorexpr/scripts
-@pkgdir include/torch/csrc/jit/docs
-@pkgdir include/torch/csrc/jit/backends/nnapi
-@pkgdir include/torch/csrc/deploy
-@pkgdir include/torch/csrc/cuda/shared
-@pkgdir include/torch/csrc/autograd/generated/templates
-@pkgdir include/torch/csrc/api/src/serialize
-@pkgdir include/torch/csrc/api/src/python
-@pkgdir include/torch/csrc/api/src/optim/schedulers
-@pkgdir include/torch/csrc/api/src/nn/options
-@pkgdir include/torch/csrc/api/src/nn/modules/container
-@pkgdir include/torch/csrc/api/src/data/samplers
-@pkgdir include/torch/csrc/api/src/data/datasets
-@pkgdir include/c10/test/core/impl
-@pkgdir include/c10/hip
-@pkgdir include/c10/cuda/test/impl
-@pkgdir include/c10/benchmark
