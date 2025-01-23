@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/01/23 19:37:40 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/23 23:09:45 riastradh Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python cmake files)
@@ -19,9 +19,7 @@ PKGNAME=		py-boost-cmake-${BOOST_VERSION}
 # XXX Can we convince bjam to build just the cmake files?
 #
 # XXX Reduce copypasta from devel/py-boost/Makefile.
-.if !defined(PYTHON_VERSION_REQD)
-PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_DEFAULT}
-.endif
+PYTHON_VERSIONS_ACCEPTED=	${PYTHON_VERSION_REQD:U${PYTHON_VERSION_DEFAULT}}
 
 USE_TOOLS+=		pax
 
