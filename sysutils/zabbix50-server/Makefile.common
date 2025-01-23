@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2023/12/09 13:26:49 otis Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/01/23 20:45:15 wiz Exp $
 # used by sysutils/zabbix50-agent/Makefile
 # used by sysutils/zabbix50-proxy/Makefile
 # used by sysutils/zabbix50-server/Makefile
@@ -28,4 +28,3 @@ FILES_SUBST+=			ZABBIX_USER=${ZABBIX_USER}
 FILES_SUBST+=			ZABBIX_GROUP=${ZABBIX_GROUP}
 
 OWN_DIRS_PERMS+=		${ZABBIX_HOMEDIR} ${ZABBIX_USER} ${ZABBIX_GROUP} 0755
-
