@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.578 2025/01/23 07:30:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.579 2025/01/23 08:27:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -764,3 +764,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/p5-Net-Curl to 0.57 [wiz 2025-01-23]
 	Updated textproc/py-xlsxwriter to 3.2.1 [adam 2025-01-23]
 	Updated www/py-hyperframe to 6.1.0 [adam 2025-01-23]
+	Updated net/py-hpack to 4.1.0 [adam 2025-01-23]
+	Updated security/py-josepy to 1.15.0 [adam 2025-01-23]
