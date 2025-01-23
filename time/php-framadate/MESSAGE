@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2025/01/23 15:47:16 manu Exp $
+
+Be sure to have the following lines in ${PREFIX}/etc/httpd/httpd.conf
+
+	DocumentRoot ${PREFIX}/share/framadate
+
+	<Directory "${PREFIX}/share/framadate">
+	    AllowOverride FileInfo
+	</Directory>
+
+===========================================================================
