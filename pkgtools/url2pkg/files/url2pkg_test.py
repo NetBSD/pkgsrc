@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.55 2025/01/23 05:49:53 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.56 2025/01/23 05:53:08 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -398,17 +398,17 @@ def test_PackageVars_adjust_site_SourceForge():
 
     lines = Generator(url).generate_Makefile()
 
-    assert lines.lines == [
+    assert detab(lines) == [
         mkcvsid,
         '',
-        'DISTNAME=\tcascade-1.4',
-        'CATEGORIES=\tpkgtools',
-        'MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=rfcascade/}',
+        'DISTNAME=       cascade-1.4',
+        'CATEGORIES=     pkgtools',
+        'MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=rfcascade/}',
         '',
-        'MAINTAINER=\tINSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
-        'HOMEPAGE=\thttps://rfcascade.sourceforge.net/',
-        'COMMENT=\tTODO: Short description of the package',
-        '#LICENSE=\t# TODO: (see mk/license.mk)',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://rfcascade.sourceforge.net/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
         ".include \"../../mk/bsd.pkg.mk\"",
@@ -422,12 +422,12 @@ def test_PackageVars_adjust_site_GitHub_archive():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= proj',
-        'GITHUB_TAG=     v1.0.0',
         'DISTNAME=       v1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'GITHUB_PROJECT= proj',
+        'GITHUB_TAG=     v1.0.0',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
@@ -447,12 +447,12 @@ def test_PackageVars_adjust_site_GitHub_archive__tag():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= proj',
-        'GITHUB_TAG=     refs/tags/1.0.0',
         'DISTNAME=       1.0.0',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME}',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'GITHUB_PROJECT= proj',
+        'GITHUB_TAG=     refs/tags/1.0.0',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
@@ -472,10 +472,10 @@ def test_PackageVars_adjust_site_GitHub_archive__tag_v():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_TAG=     refs/tags/v${PKGVERSION_NOREV}',
         'DISTNAME=       proj-1.0.0',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'GITHUB_TAG=     refs/tags/v${PKGVERSION_NOREV}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
         'HOMEPAGE=       https://github.com/org/proj/',
@@ -497,10 +497,10 @@ def test_PackageVars_adjust_site_GitHub_release__containing_project_name():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= proj',
         'DISTNAME=       proj',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'GITHUB_PROJECT= proj',
         'GITHUB_RELEASE= 1.0.0',
         'EXTRACT_SUFX=   .zip',
         '',
@@ -522,10 +522,10 @@ def test_PackageVars_adjust_site_GitHub_release__not_containing_project_name():
     assert detab(lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= proj',
         'DISTNAME=       data',
         'CATEGORIES=     pkgtools',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=org/}',
+        'GITHUB_PROJECT= proj',
         'GITHUB_RELEASE= 1.0.0',
         'EXTRACT_SUFX=   .zip',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
@@ -1584,12 +1584,12 @@ def test_Adjuster_adjust_lines_python_module(tmp_path: Path):
     assert detab(adjuster.makefile_lines) == [
         mkcvsid,
         '',
-        'GITHUB_PROJECT= esptool',
-        'GITHUB_TAG=     v2.7',
         'DISTNAME=       v2.7',
         'PKGNAME=        ${GITHUB_PROJECT}-${DISTNAME:S,^v,,}',
         'CATEGORIES=     pkgtools python',
         'MASTER_SITES=   ${MASTER_SITE_GITHUB:=espressif/}',
+        'GITHUB_PROJECT= esptool',
+        'GITHUB_TAG=     v2.7',
         'DIST_SUBDIR=    ${GITHUB_PROJECT}',
         '',
         'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
