@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.58 2024/11/24 07:21:58 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.59 2025/01/23 05:08:21 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1283,7 +1283,7 @@ class Adjuster:
 
         if self.cargo_crate_depends:
             lines = Lines()
-            lines.add('# $NetBSD: url2pkg.py,v 1.58 2024/11/24 07:21:58 rillig Exp $')
+            lines.add('# $''NetBSD$')
             lines.add('')
             for dep in self.cargo_crate_depends:
                 lines.add(f'CARGO_CRATE_DEPENDS+=\t{dep}')
