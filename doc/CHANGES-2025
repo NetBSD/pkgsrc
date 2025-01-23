@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.589 2025/01/23 16:30:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.590 2025/01/23 16:39:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -780,3 +780,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tox to 4.24.1 [adam 2025-01-23]
 	Updated devel/py-filelock to 3.17.0 [adam 2025-01-23]
 	Updated lang/py-executing to 2.2.0 [adam 2025-01-23]
+	Updated databases/py-pypika-tortoise to 0.5.0 [adam 2025-01-23]
+	Updated databases/py-tortoise-orm to 0.24.0 [adam 2025-01-23]
