@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.590 2025/01/23 16:39:54 adam Exp $
+$NetBSD: CHANGES-2025,v 1.591 2025/01/23 20:03:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-executing to 2.2.0 [adam 2025-01-23]
 	Updated databases/py-pypika-tortoise to 0.5.0 [adam 2025-01-23]
 	Updated databases/py-tortoise-orm to 0.24.0 [adam 2025-01-23]
+	Updated wm/wmctrl to 1.07nb7 [wiz 2025-01-23]
