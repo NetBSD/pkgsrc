@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/11/04 10:12:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/01/23 16:25:26 adam Exp $
 bin/tox-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -222,6 +222,9 @@ ${PYSITELIB}/tox/session/cmd/run/sequential.pyo
 ${PYSITELIB}/tox/session/cmd/run/single.py
 ${PYSITELIB}/tox/session/cmd/run/single.pyc
 ${PYSITELIB}/tox/session/cmd/run/single.pyo
+${PYSITELIB}/tox/session/cmd/schema.py
+${PYSITELIB}/tox/session/cmd/schema.pyc
+${PYSITELIB}/tox/session/cmd/schema.pyo
 ${PYSITELIB}/tox/session/cmd/show_config.py
 ${PYSITELIB}/tox/session/cmd/show_config.pyc
 ${PYSITELIB}/tox/session/cmd/show_config.pyo
@@ -234,6 +237,7 @@ ${PYSITELIB}/tox/session/env_select.pyo
 ${PYSITELIB}/tox/session/state.py
 ${PYSITELIB}/tox/session/state.pyc
 ${PYSITELIB}/tox/session/state.pyo
+${PYSITELIB}/tox/tox.schema.json
 ${PYSITELIB}/tox/tox_env/__init__.py
 ${PYSITELIB}/tox/tox_env/__init__.pyc
 ${PYSITELIB}/tox/tox_env/__init__.pyo
