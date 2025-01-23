@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2023/04/17 10:36:49 adam Exp $
+$NetBSD: distinfo,v 1.2 2025/01/23 19:31:09 riastradh Exp $
 
 BLAKE2s (installer-0.7.0.tar.gz) = 4187ebf5520c582b10d1c434bb3e41ef5eaf9a1c279740a6fc8f5c71f8b6944d
 SHA512 (installer-0.7.0.tar.gz) = e89c2d28ca73d9c4291d645dda675fdcfcaba2e4f8765b9fa4a2f211e27711510f3d171b96a6b024c11808ba7f06b7b560a7cb31fafba815bd5c7396f26789f7
 Size (installer-0.7.0.tar.gz) = 474349 bytes
+SHA1 (patch-src_installer_____main____.py) = b8660b711da4706eb0bfe2205b9a27492285ef69
+SHA1 (patch-tests_test__main.py) = 7128de09ad9d3cdab2969579892ca138332859ed
