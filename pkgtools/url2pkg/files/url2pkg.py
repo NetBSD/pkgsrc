@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.62 2025/01/23 05:49:53 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.63 2025/01/23 05:53:08 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -613,12 +613,12 @@ class Generator:
         lines.add('')
 
         lines.add_vars(
-            Var('GITHUB_PROJECT', '=', vars.github_project),
-            Var('GITHUB_TAG', '=', vars.github_tag),
             Var('DISTNAME', '=', vars.distname),
             Var('PKGNAME', '=', vars.pkgname),
             Var('CATEGORIES', '=', vars.categories),
             Var('MASTER_SITES', '=', vars.master_sites),
+            Var('GITHUB_PROJECT', '=', vars.github_project),
+            Var('GITHUB_TAG', '=', vars.github_tag),
             Var('GITHUB_RELEASE', '=', vars.github_release),
             Var('EXTRACT_SUFX', '=', vars.extract_sufx),
             Var('DIST_SUBDIR', '=', vars.dist_subdir),
