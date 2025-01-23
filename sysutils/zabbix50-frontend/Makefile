@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.11 2025/01/13 17:20:48 taca Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/23 20:46:17 wiz Exp $
 
-PKGREVISION= 1
+PKGREVISION=	1
+
+PHP_VERSIONS_ACCEPTED=	74
+
 .include "../../sysutils/zabbix50-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-${ZABBIX_DB_TYPE}-/}
 COMMENT=	Zabbix PHP 7.4 frontend
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix50-server/distinfo
+PATCHDIR=	${.CURDIR}/../../sysutils/zabbix50-server/patches
 
 CONFLICTS+=	zabbix-frontend-[0-9]*
-
-PHP_VERSIONS_ACCEPTED=	74
 
 EGDIR=		share/examples/${PKGBASE}
 
 USE_TOOLS+=		pax
 NO_BUILD=		yes
-NO_CONFIGURE=		yes
 
 REPLACE_SH+=	ui/locale/*.sh
 
@@ -43,7 +44,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=7.2.0:../../devel/php-sysvsem
 
 INSTALLATION_DIRS+=	${EGDIR} share/zabbix
 
-post-patch: replace-interpreter
+do-configure:
 
 do-install:
 	rm -f ${WRKSRC}/ui/locale/*.orig

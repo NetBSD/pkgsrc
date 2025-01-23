@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/07/10 11:24:08 otis Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/23 20:46:17 wiz Exp $
 share/examples/${PKGBASE}/httpd-zabbix.conf
 share/examples/${PKGBASE}/php-fpm-zabbix.conf
 share/zabbix/actionconf.php
@@ -1047,12 +1047,12 @@ share/zabbix/js/multilineinput.js
 share/zabbix/js/multiselect.js
 share/zabbix/js/pages/items.js
 share/zabbix/js/pages/monitoring.overview.js
-share/zabbix/js/pages/report2.js
-share/zabbix/js/pages/report4.js
-share/zabbix/js/pages/srv_status.js
 share/zabbix/js/pages/popup.condition.common.js
 share/zabbix/js/pages/popup.operation.common.js
+share/zabbix/js/pages/report2.js
+share/zabbix/js/pages/report4.js
 share/zabbix/js/pages/setup.js
+share/zabbix/js/pages/srv_status.js
 share/zabbix/js/servercheck.js
 share/zabbix/js/textareaflexible.js
 share/zabbix/js/vector/class.svg.canvas.js
