@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/01/22 13:43:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/01/23 16:39:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -201,6 +201,9 @@ ${PYSITELIB}/tortoise/contrib/sqlite/__init__.pyo
 ${PYSITELIB}/tortoise/contrib/sqlite/functions.py
 ${PYSITELIB}/tortoise/contrib/sqlite/functions.pyc
 ${PYSITELIB}/tortoise/contrib/sqlite/functions.pyo
+${PYSITELIB}/tortoise/contrib/sqlite/regex.py
+${PYSITELIB}/tortoise/contrib/sqlite/regex.pyc
+${PYSITELIB}/tortoise/contrib/sqlite/regex.pyo
 ${PYSITELIB}/tortoise/contrib/starlette/__init__.py
 ${PYSITELIB}/tortoise/contrib/starlette/__init__.pyc
 ${PYSITELIB}/tortoise/contrib/starlette/__init__.pyo
