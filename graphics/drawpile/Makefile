@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/11/14 22:20:05 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/23 23:27:26 riastradh Exp $
 
 DISTNAME=	Drawpile-2.1.17
 PKGNAME=	${DISTNAME:tl}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://drawpile.net/
 COMMENT=	Collaborative drawing program
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_CMAKE=	yes
@@ -21,6 +20,7 @@ USE_LANGUAGES=	c c++
 CMAKE_CONFIGURE_ARGS+=	-DINITSYS=""
 
 .include "../../archivers/karchive/buildlink3.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2024/12/27 08:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/01/23 23:27:26 riastradh Exp $
 #
 
 DISTNAME=		fcitx-4.2.9.6
@@ -25,8 +25,6 @@ DISTFILES+=		${f}
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		https://www.fcitx-im.org/
 COMMENT=		Free Chinese Input Toy of X
-
-TOOL_DEPENDS+=		extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 USE_LANGUAGES+=		c c++
 
@@ -61,6 +59,7 @@ post-extract:
 		${WRKSRC}/src/im/table/data/
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"

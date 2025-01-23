@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/12/29 15:09:54 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/23 23:27:28 riastradh Exp $
 
 DISTNAME=	libime-1.1.5
 PKGREVISION=	2
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/fcitx/libime
 COMMENT=	Generic inputmethod implementation library
 LICENSE=	gnu-lgpl-v2.1
-
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
 
 DICTDISTFILES+=	lm_sc.arpa-20230712.tar.xz
 DICTDISTFILES+=	dict-20230412.tar.xz
@@ -36,8 +34,10 @@ post-extract:
 .endfor
 
 .include "../../devel/cmake/build.mk"
+
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../inputmethod/fcitx5/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

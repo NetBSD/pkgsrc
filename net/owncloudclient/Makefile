@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2024/11/14 22:21:14 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	ownCloud-2.7.6.3261
 PKGNAME=	${DISTNAME:S/ownCloud/owncloudclient/1}
@@ -17,8 +17,6 @@ BROKEN=		"Needs to be updated, for qt5 compatibility"
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-TOOL_DEPENDS+=	extra-cmake-modules-[0-9]*:../../devel/extra-cmake-modules
-
 CMAKE_CONFIGURE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR}
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHELL_INTEGRATION=OFF
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
@@ -32,6 +30,7 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/ownCloud
 .include "../../mk/bsd.prefs.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.9.0
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .if ${OPSYS} != "Linux"
 .  include "../../devel/libinotify/buildlink3.mk"
 .endif

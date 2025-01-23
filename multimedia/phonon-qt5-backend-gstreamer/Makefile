@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/11/14 22:21:01 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.10.0
 PKGNAME=	${DISTNAME:S/-/-qt5-/}
@@ -26,10 +26,11 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 	${MKDIR} ${WRKSRC}/_build
 
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.19.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 
-TOOL_DEPENDS+=	extra-cmake-modules>=5.19.0:../../devel/extra-cmake-modules
 DEPENDS+=	phonon-backend-gstreamer-shared-${PKGVERSION_NOREV}{,nb*}:../../multimedia/phonon-backend-gstreamer-shared
 
 .include "../../multimedia/phonon-qt5/buildlink3.mk"
