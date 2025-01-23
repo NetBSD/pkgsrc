@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.588 2025/01/23 15:47:16 manu Exp $
+$NetBSD: CHANGES-2025,v 1.589 2025/01/23 16:30:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -538,9 +538,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fakefs to 5.7.4 [adam 2025-01-15]
 	Updated textproc/py-ftfy to 6.3.1 [adam 2025-01-15]
 	Updated devel/py-faker to 33.3.1 [adam 2025-01-15]
-	Added net/openbfdd 0.5.3 [manu 2025-01-15]
+	Added net/openbfdd version 0.5.3 [manu 2025-01-15]
 	Updated devel/regal to 0.30.0 [leot 2025-01-15]
-	Added net/coturn-4.6.3 [manu 2025-01-15]
+	Added net/coturn version 4.6.3 [manu 2025-01-15]
 	Updated ham/freedv to 1.4.2nb16 [gdt 2025-01-15]
 	Updated geography/py-maxminddb to 2.6.3 [adam 2025-01-15]
 	Updated geography/py-geojson to 3.2.0 [adam 2025-01-15]
@@ -776,3 +776,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-torch to 2.5.1nb1 [ryoon 2025-01-23]
 	Updated pkgtools/pbulk to 0.75 [wiz 2025-01-23]
 	Added time/php-framadate version 1.1.19 [manu 2025-01-23]
+	Updated net/coturn to 4.6.3nb1 [adam 2025-01-23]
+	Updated devel/py-tox to 4.24.1 [adam 2025-01-23]
+	Updated devel/py-filelock to 3.17.0 [adam 2025-01-23]
+	Updated lang/py-executing to 2.2.0 [adam 2025-01-23]
