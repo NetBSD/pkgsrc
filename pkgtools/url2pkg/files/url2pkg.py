@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.61 2025/01/23 05:23:01 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.62 2025/01/23 05:49:53 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -507,7 +507,7 @@ class PackageVars:
             version = m.group(1)
             self.distfile = f'{proj}-{version}{ext}'
             self.github_tag = f'refs/tags/v${{PKGVERSION_NOREV}}'
-            self.wrksrc = '${GITHUB_TAG:T}'
+            self.wrksrc = '${WRKDIR}/${DISTNAME}'
             return
 
         self.github_project = proj
