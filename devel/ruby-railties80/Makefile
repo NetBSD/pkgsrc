@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/01/02 07:13:52 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/23 08:02:12 wiz Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -18,11 +18,15 @@ USE_LANGUAGES=	# none
 
 RUBY_RAILS_ACCEPTED=	80
 RUBY_RAILS_STRICT_DEP=	yes
+
+RUBY_VERSIONS_INCOMPATIBLE=	31
+
 RUBYGEM_OPTIONS+=	--format-executable
 OVERRIDE_GEMSPEC+=	:executables rails=rails${RUBY_RAILS} \
 			:files exe/rails=exe/rails${RUBY_RAILS}
 
 .include "../../lang/ruby/rubyversion.mk"
+
 .if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-irb>=1.13<2:../../devel/ruby-irb
 .endif
