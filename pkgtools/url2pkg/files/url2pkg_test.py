@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.53 2024/11/23 22:30:30 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.54 2025/01/23 05:23:01 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -481,6 +481,8 @@ def test_PackageVars_adjust_site_GitHub_archive__tag_v():
         'HOMEPAGE=       https://github.com/org/proj/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        'WRKSRC= ${GITHUB_TAG:T}',
         '',
         '# url2pkg-marker (please do not remove this line.)',
         ".include \"../../mk/bsd.pkg.mk\"",
