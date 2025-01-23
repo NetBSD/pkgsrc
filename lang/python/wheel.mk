@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.16 2025/01/16 23:21:51 gutteridge Exp $
+# $NetBSD: wheel.mk,v 1.17 2025/01/23 19:31:43 riastradh Exp $
 #
 # Build and install Python wheels
 #
@@ -40,6 +40,8 @@ WHEEL_ARGS?=	# empty
 
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 .if !target(do-build)
 TOOL_DEPENDS+= ${PYPKGPREFIX}-build>=0:../../devel/py-build
 do-build:
@@ -49,11 +51,21 @@ do-build:
 .endif
 
 .if !target(do-install)
-TOOL_DEPENDS+= ${PYPKGPREFIX}-installer>=0.7.0nb1:../../misc/py-installer
+.  if ${USE_CROSS_COMPILE:tl} == "yes"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-installer>=0.7.0nb2:../../misc/py-installer
+PYINSTALL_EXEC=	--executable ${PYTHONBIN:Q}
+.  else
+TOOL_DEPENDS+=	${PYPKGPREFIX}-installer>=0.7.0nb1:../../misc/py-installer
+PYINSTALL_EXEC=	# empty
+.  endif
 do-install:
 	${RUN} cd ${WRKSRC}/${PYSETUPSUBDIR} && \
 	${SETENV} ${INSTALL_ENV} ${TOOL_PYTHONBIN} \
-		-m installer --destdir ${DESTDIR:Q} --prefix ${PREFIX:Q} ${WHEELFILE}
+		-m installer \
+		--destdir ${DESTDIR:Q} \
+		--prefix ${PREFIX:Q} \
+		${PYINSTALL_EXEC} \
+		${WHEELFILE}
 .endif
 
 USE_PYTEST?=	yes
