@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2024/08/25 06:18:53 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2025/01/23 23:27:26 riastradh Exp $
 
 DISTNAME=	oxygen-icons-5.114.0
 CATEGORIES=	graphics kde
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.oxygen-icons.org/
 COMMENT=	Oxygen icon set for the KDE integrated X11 desktop
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=		extra-cmake-modules>=5.98.0:../../devel/extra-cmake-modules
-
 USE_LANGUAGES=	c c++
 
 # Why a collection of images requires a C++17 compiler is anyone's guess,
@@ -21,4 +19,7 @@ USE_CXX_FEATURES+=	c++17
 CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
 
 .include "../../devel/cmake/build.mk"
+
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.98.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

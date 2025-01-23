@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/11/14 22:19:37 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/23 23:27:25 riastradh Exp $
 
 DISTNAME=	zeal-0.7.2
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	mikeandmore@gmail.com
 HOMEPAGE=	https://zealdocs.org/
 COMMENT=	Offline documentation browser inspired by Dash
 LICENSE=	gnu-gpl-v3
-
-TOOL_DEPENDS+=	extra-cmake-modules>=5.10.0:../../devel/extra-cmake-modules
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -26,6 +24,8 @@ INSTALLATION_DIRS+=	share/icons/hicolor/128x128/apps
 .include "../../devel/cmake/build.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.10.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"

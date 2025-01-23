@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/11/14 22:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/23 23:27:29 riastradh Exp $
 
 DISTNAME=	libkscreen-${PLASMAVER}
 PKGREVISION=	5
@@ -16,9 +16,10 @@ USE_CXX_FEATURES+=	c++17
 
 PKGCONFIG_OVERRIDE+=	src/kscreen2.pc.in
 
-TOOL_DEPENDS+=	extra-cmake-modules>=5.102.0:../../devel/extra-cmake-modules
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
+BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=5.102.0
+.include "../../devel/extra-cmake-modules/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kconfig+=	kconfig>=5.102.0
 .include "../../devel/kconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kwayland+=	kwayland>=5.102.0
