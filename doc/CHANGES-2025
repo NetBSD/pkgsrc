@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.579 2025/01/23 08:27:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.580 2025/01/23 09:44:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -766,3 +766,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-hyperframe to 6.1.0 [adam 2025-01-23]
 	Updated net/py-hpack to 4.1.0 [adam 2025-01-23]
 	Updated security/py-josepy to 1.15.0 [adam 2025-01-23]
+	Updated textproc/translate-toolkit to 3.14.6 [adam 2025-01-23]
+	Updated devel/py-prompt_toolkit to 3.0.50 [adam 2025-01-23]
