@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2024/12/29 18:41:54 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2025/01/23 19:37:41 riastradh Exp $
 
 BUILDLINK_TREE+=	py-boost
 
@@ -13,6 +13,7 @@ BUILDLINK_ABI_DEPENDS.py-boost+=	${PYPKGPREFIX}-boost-1.87.*
 BUILDLINK_PKGSRCDIR.py-boost?=		../../devel/py-boost
 
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/py-boost-cmake/buildlink3.mk"
 .endif # PY_BOOST_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py-boost

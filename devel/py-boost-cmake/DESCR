@@ -1,0 +1,5 @@
+Boost is a set of free, peer-reviewed, C++ libraries.  The emphasis is on
+portable libraries which work well with the ISO C++ Standard Library.
+
+This package provides the cmake config files for the Boost Python
+library which are agnostic to the Python version.

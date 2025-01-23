@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/23 19:37:40 riastradh Exp $
+lib/cmake/boost_numpy-${BOOST_VERSION}/boost_numpy-config-version.cmake
+lib/cmake/boost_numpy-${BOOST_VERSION}/boost_numpy-config.cmake
+lib/cmake/boost_python-${BOOST_VERSION}/boost_python-config-version.cmake
+lib/cmake/boost_python-${BOOST_VERSION}/boost_python-config.cmake
