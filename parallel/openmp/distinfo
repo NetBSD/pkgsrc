@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2024/12/03 11:27:01 jperkin Exp $
+$NetBSD: distinfo,v 1.22 2025/01/23 13:59:37 he Exp $
 
 BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
 SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
@@ -10,4 +10,5 @@ BLAKE2s (runtimes-18.1.8.src.tar.xz) = f9034c238edd0e7809d4a82a0bdb643926ad23566
 SHA512 (runtimes-18.1.8.src.tar.xz) = 6ddf33676a1f4b69111a077e2b4bec951433f9e6d84ba2f1d578be373690e0abd8fccd1104bf34355c8fb9613c002c720b53fa536be4a923dca7e2d7abd1614c
 Size (runtimes-18.1.8.src.tar.xz) = 6788 bytes
 SHA1 (patch-runtime_src_kmp__os.h) = a5b0e015bf21f284468931fb093956752f93700e
+SHA1 (patch-runtime_src_kmp__platform.h) = 6649b8af1b5ee93739b450e00fd28d10732cf825
 SHA1 (patch-runtime_src_z__Linux__util.cpp) = 45e50748b788f2e46a5cfeaf371074acd90cd21d
