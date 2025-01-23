@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/08/09 11:15:25 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/01/23 20:08:16 wiz Exp $
 #
 
 COMMENT=	Shells
@@ -51,6 +51,7 @@ SUBDIR+=	yash
 SUBDIR+=	zsh
 SUBDIR+=	zsh-autosuggestions
 SUBDIR+=	zsh-completions
+SUBDIR+=	zsh-history-substring-search
 SUBDIR+=	zsh-pure
 SUBDIR+=	zsh-syntax-highlighting
 
