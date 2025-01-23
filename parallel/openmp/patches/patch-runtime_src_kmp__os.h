@@ -1,6 +1,8 @@
-$NetBSD: patch-runtime_src_kmp__os.h,v 1.2 2024/07/06 15:45:09 adam Exp $
+$NetBSD: patch-runtime_src_kmp__os.h,v 1.3 2025/01/23 17:22:16 he Exp $
 
 NetBSD support.
+Submitted upstream at
+https://github.com/llvm/llvm-project/pull/124147
 
 --- runtime/src/kmp_os.h.orig	2024-04-17 00:21:15.000000000 +0000
 +++ runtime/src/kmp_os.h
