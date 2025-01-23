@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.582 2025/01/23 11:23:41 fox Exp $
+$NetBSD: CHANGES-2025,v 1.583 2025/01/23 13:40:40 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-prompt_toolkit to 3.0.50 [adam 2025-01-23]
 	Updated emulators/nono to 1.1.2 [jun 2025-01-23]
 	Updated chat/ircd-hybrid to 8.2.46 [fox 2025-01-23]
+	Updated net/yaydl to 0.17.2 [pin 2025-01-23]
