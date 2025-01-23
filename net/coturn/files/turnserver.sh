@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: head/net/coturn/files/turnserver.sh
+# $NetBSD: turnserver.sh,v 1.3 2025/01/23 17:06:18 gdt Exp $
 #
 # PROVIDE: turnserver
 # REQUIRE: LOGIN

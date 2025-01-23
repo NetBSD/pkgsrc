@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/23 16:24:02 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/23 17:06:18 gdt Exp $
 
 DISTNAME=	coturn-4.6.3
 PKGREVISION=	1
@@ -6,8 +6,9 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 
 MAINTAINER=	kethzer.dr@gmail.com
+#MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	https://github.com/coturn/coturn
-COMMENT=	VoIP media traffic NAT traversal server
+COMMENT=	TURN and STUN server (for VoIP/webrtc)
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_CFLAGS="-I${BUILDLINK_PREFIX.libevent}/include"
 CONFIGURE_ENV+=		LIBEVENT_OPENSSL_LIBS="-L${BUILDLINK_PREFIX.libevent}/lib -levent_openssl -levent"
 
+# \todo File a bug upstream, or explain why the warning is wrong.
 CFLAGS+=	-Wno-stringop-truncation
 
 COTURN_CONFIG=	${PKG_SYSCONFDIR}/turnserver.conf
