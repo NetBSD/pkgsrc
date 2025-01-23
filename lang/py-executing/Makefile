@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/23 16:29:25 adam Exp $
 
-DISTNAME=	executing-2.1.0
+DISTNAME=	executing-2.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/executing/}
