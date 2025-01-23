@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/23 20:07:42 wiz Exp $
+share/zsh-history-substring-search/zsh-history-substring-search.zsh
