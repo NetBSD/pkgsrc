@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/21 13:36:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/23 14:31:16 ryoon Exp $
 
 DISTNAME=	pytorch-v2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,pytorch-v,torch-,}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pytorch/}
 GITHUB_PROJECT=	pytorch
@@ -62,6 +63,7 @@ MAKE_ENV+=	USE_MKLDNN=0
 MAKE_ENV+=	BUILD_TEST=0
 MAKE_ENV+=	USE_CUDNN=0
 MAKE_ENV+=	USE_QNNPACK=0
+MAKE_ENV+=	USE_DISTRIBUTED=1
 
 post-extract:
 	# For mkpatches(1) and developers only.
