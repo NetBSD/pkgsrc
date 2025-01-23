@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.153 2024/12/29 14:53:13 adam Exp $
+$NetBSD: distinfo,v 1.154 2025/01/23 20:56:00 wiz Exp $
 
 BLAKE2s (boost_1_87_0.tar.bz2) = 20ba7a87b1e20b1bc54f46c4d23a4866aa47983cf6e3674f229933184a95b1d4
 SHA512 (boost_1_87_0.tar.bz2) = a2d5007953f67b816169efe0cf11675cd63fc6bae63f87ee1372515e57913ef6cf6ae8c3f2c400fef8ce63a035a02a0cad0da5acc29e977a85d458625b2a719c
@@ -19,6 +19,8 @@ SHA1 (patch-boost_math_tools_config.hpp) = 1b467a38081fe5e2e3004bca9a6aec7106edb
 SHA1 (patch-boost_math_tools_promotion.hpp) = d1079940594f7ffe7e70db6f61bba633b8fb31e5
 SHA1 (patch-boost_numeric_ublas_storage.hpp) = 282b5a3b5d09216ded14fae166169d64db72590e
 SHA1 (patch-boost_property__tree_detail_xml__parser__read__rapidxml.hpp) = 3499fcc37e72396d23a9fce0f1c97891adf12a9f
+SHA1 (patch-boost_smart__ptr_intrusive__ptr.hpp) = 530340ba1b5aaadb02e6a2767185975a81992fdb
+SHA1 (patch-boost_smart__ptr_shared__ptr.hpp) = 1e9aacc4db883fa28d763cdbe2715e81b6171310
 SHA1 (patch-boost_stacktrace_detail_collect__unwind.ipp) = a5922dffd929f596b6e7d71b11f32d17e0bbd806
 SHA1 (patch-boost_test_impl_execution__monitor.ipp) = ffd449576d00b7e6ea3081421e3e70decf5d7de8
 SHA1 (patch-boost_thread_pthread_thread__data.hpp) = d048867f0ed98720cc375e949e5c92b92f3ce1ac
