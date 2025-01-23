@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/15 21:19:09 pin Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/23 20:29:12 wiz Exp $
 
 DISTNAME=	gitui-0.27.0
 CATEGORIES=	devel
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/extrawurst/gitui/
 COMMENT=	Terminal UI for git
 LICENSE=	mit
 
+TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 .include "cargo-depends.mk"
