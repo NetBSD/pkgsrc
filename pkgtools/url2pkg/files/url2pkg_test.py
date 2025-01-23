@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.56 2025/01/23 05:53:08 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.57 2025/01/23 05:56:23 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -411,7 +411,7 @@ def test_PackageVars_adjust_site_SourceForge():
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\"",
+        '.include "../../mk/bsd.pkg.mk"',
     ]
 
 
@@ -436,7 +436,7 @@ def test_PackageVars_adjust_site_GitHub_archive():
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\"",
+        '.include "../../mk/bsd.pkg.mk"',
     ]
 
 
@@ -461,7 +461,7 @@ def test_PackageVars_adjust_site_GitHub_archive__tag():
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\"",
+        '.include "../../mk/bsd.pkg.mk"',
     ]
 
 
@@ -485,7 +485,7 @@ def test_PackageVars_adjust_site_GitHub_archive__tag_v():
         'WRKSRC= ${WRKDIR}/${DISTNAME}',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\"",
+        '.include "../../mk/bsd.pkg.mk"',
     ]
 
 
@@ -510,7 +510,7 @@ def test_PackageVars_adjust_site_GitHub_release__containing_project_name():
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -536,7 +536,7 @@ def test_PackageVars_adjust_site_GitHub_release__not_containing_project_name():
         '#LICENSE=       # TODO: (see mk/license.mk)',
         '',
         '# url2pkg-marker (please do not remove this line.)',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -798,7 +798,7 @@ def test_Adjuster_read_dependencies():
     assert adjuster.depends == ['package>=112.0:../../pkgtools/pkglint']
     assert adjuster.bl3_lines == [
         'BUILDLINK_API_DEPENDS.x11-links+=\tpackage>=120.0',
-        ".include \"../../pkgtools/x11-links/buildlink3.mk\"",
+        '.include "../../pkgtools/x11-links/buildlink3.mk"',
     ]
     assert adjuster.build_depends == [
         '# TODO: does-not-exist-build>=1.0',
@@ -890,7 +890,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
         mkcvsid,
         '',
         '# url2pkg-marker',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     )
     # some dependencies whose directory will not be found
     adjuster.add_dependency('DEPENDS', 'depends', '>=5.0', '../../devel/depends')
@@ -917,7 +917,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dependencies():
         'TEST_DEPENDS+=  # TODO: test-depends>=8.0',
         'TEST_DEPENDS+=  test-depends>=13.0:../../devel/test-depends',
         '',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -929,7 +929,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dont_overwrite_PKGNAME():
         'PKGNAME=\tmanually-edited-pkgname-1.0'
         '',
         '# url2pkg-marker',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     )
 
     lines = adjuster.generate_lines()
@@ -938,7 +938,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__dont_overwrite_PKGNAME():
         mkcvsid,
         'DISTNAME=       distname-1.0',
         'PKGNAME=        manually-edited-pkgname-1.0',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -949,7 +949,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME():
         'DISTNAME=\tdistname-1.0',
         '',
         '# url2pkg-marker',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     )
 
     lines = adjuster.generate_lines()
@@ -958,7 +958,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME():
         mkcvsid,
         'DISTNAME=\tdistname-1.0',
         '',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
@@ -969,7 +969,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME_with_prefix():
         'DISTNAME=\tdistname-1.0',
         '',
         '# url2pkg-marker',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     )
     adjuster.pkgname_prefix = '${PYPKGPREFIX}-'
 
@@ -980,7 +980,7 @@ def test_Adjuster_generate_adjusted_Makefile_lines__add_PKGNAME_with_prefix():
         'DISTNAME=\tdistname-1.0',
         'PKGNAME=\t${PYPKGPREFIX}-${DISTNAME}',
         '',
-        ".include \"../../mk/bsd.pkg.mk\""
+        '.include "../../mk/bsd.pkg.mk"'
     ]
 
 
