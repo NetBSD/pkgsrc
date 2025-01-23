@@ -1,0 +1,16 @@
+$NetBSD: patch-enju2ptb_Makefile.in,v 1.1 2025/01/23 21:10:11 wiz Exp $
+
+Fix
+make[2]: make[2]: don't know how to make BIN_DIR=IN_DIR. Stop
+
+--- enju2ptb/Makefile.in.orig	2025-01-23 21:05:48.482869312 +0000
++++ enju2ptb/Makefile.in
+@@ -703,8 +703,6 @@ uninstall-am: uninstall-enju2ptbSCRIPTS
+ 
+ conv-grammar: $(GRAMMARS)
+ 
+-convert: BIN_DIR=$$BIN_DIR
+-convert: BASE_DIR=$$BASE_DIR
+ convert: convert.header
+ 	cat convert.header > $@
+ 	echo 'COMMAND="$(XML2LISP) | $(SOURCE_PREPROC) | $(CONVERTER) $$CONV_GRAMMAR | $(TARGET_POSTPROC)"' >> $@
