@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2023/12/09 13:26:49 otis Exp $
+# $NetBSD: options.mk,v 1.4 2025/01/23 20:44:13 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.zabbix50-server
 PKG_SUPPORTED_OPTIONS+=		inet6 openipmi libssh libssh2 snmp
@@ -12,10 +12,6 @@ PKG_SUGGESTED_OPTIONS+=		inet6
 .endif
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmysql) && !empty(PKG_OPTIONS:Mpgsql)
-IGNORE=			Only one of mysql or pgsql databases can be selected at the same time.
-.endif
 
 PLIST_VARS+=		pgsql
 
