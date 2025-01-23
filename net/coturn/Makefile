@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/01/23 17:21:26 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/23 17:33:16 gdt Exp $
 
 DISTNAME=	coturn-4.6.3
-PKGREVISION=	2
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coturn/}
 
@@ -15,8 +15,15 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
+
+# Set up to run as a non-root user, with a partitioned data directory.
+COTURN_USER?=	coturn
+COTURN_GROUP?=	${COTURN_USER}
+COTURN_DATA?=	${VARBASE}/db/coturn
+BUILD_DEFS+=	COTURN_USER COTURN_GROUP VARBASE COTURN_DATA
+
 CONFIGURE_ARGS+=	--disable-rpath
-CONFIGURE_ARGS+=	--localstatedir ${VARBASE}/turnserver
+CONFIGURE_ARGS+=	--localstatedir ${COTURN_DATA}
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 
 # Pass cflags/libs
@@ -30,14 +37,10 @@ COTURN_CONFIG=	${PKG_SYSCONFDIR}/turnserver.conf
 COTURN_EGDIR=	${PREFIX}/share/examples/coturn
 CONF_FILES=	${COTURN_EGDIR}/etc/turnserver.conf ${COTURN_CONFIG}
 
-BUILD_DEFS+=	VARBASE
 RCD_SCRIPTS=	turnserver
 
-# Set up to run as a non-root user.
-COTURN_USER?=	coturn
-COTURN_GROUP?=	${COTURN_USER}
-COTURN_DATA?=	${VARBASE}/db/coturn
-BUILD_DEFS+=	COTURN_USER COTURN_GROUP COTURN_DATA
+# Create the data directory, because the daemon can't due to dropping root.
+OWN_DIRS_PERMS+=		${COTURN_DATA} ${COTURN_USER} ${COTURN_GROUP} 0770
 
 PKG_USERS_VARS=			COTURN_USER
 PKG_GROUPS_VARS=		COTURN_GROUP
