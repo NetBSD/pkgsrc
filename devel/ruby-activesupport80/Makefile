@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/16 14:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/23 08:02:12 wiz Exp $
 
 DISTNAME=	activesupport-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-activesupport${RUBY_RAILS}-${RAILS_VERSION}
@@ -22,6 +22,7 @@ RUBY_RAILS_STRICT_DEP=	yes
 RUBY_VERSIONS_INCOMPATIBLE=	31
 
 .include "../../lang/ruby/rubyversion.mk"
+
 .if ${RUBY_VER} < 33
 DEPENDS+=	${RUBY_PKGPREFIX}-benchmark>=0.3:../../benchmarks/ruby-benchmark
 DEPENDS+=	${RUBY_PKGPREFIX}-securerandom>=0.3:../../security/ruby-securerandom
