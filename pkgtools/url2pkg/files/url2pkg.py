@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.59 2025/01/23 05:08:21 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.60 2025/01/23 05:10:43 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -178,7 +178,8 @@ class Globals:
             ('mit AND lppl-1.3c', 'mitlppl'),
             ('modified-bsd', 'bsd3', 'BSD 3 clause', 'BSD_3_clause'),
             ('ofl-v1.1', 'ofl'),
-            ('ofl-v1.1 AND lppl-1.3c', 'ofllppl1.3', 'ofllppl1.3c', 'ofllppl'),
+            ('ofl-v1.1 AND lppl-1.3c', 'ofllppl1.3', 'ofllppl1.3c',
+             'ofllppl'),
             ('${PERL5_LICENSE}', 'perl'),
             ('postgresql-license', 'POSTGRESQL'),
             ('public-domain', 'pd'),
@@ -189,6 +190,7 @@ class Globals:
 
         lower = license_name.lower()
         for group in known_licenses:
+            # noinspection PyTypeChecker
             if lower in map(str.lower, group):
                 return group[0] + comment
         if (self.pkgsrcdir / 'licenses' / lower).is_file():
@@ -259,7 +261,7 @@ class Lines:
 
     def add(self, *lines: str):
         for line in lines:
-            assert type(line) == str, type(line)
+            assert type(line) is str, type(line)
             self.lines.append(line)
 
     def add_vars(self, *vars: Var):
@@ -306,14 +308,19 @@ class Lines:
         return True
 
     def remove(self, varname: str) -> bool:
-        """ Removes the unique variable assignment. """
+        """
+        Removes the variable assignment
+        if there is exactly one assignment for this variable name.
+        """
         varassign = self.unique_varassign(varname)
         if varassign is not None:
             self.lines.pop(varassign.index)
         return varassign is not None
 
     def remove_if(self, varname: str, expected_value: str) -> bool:
-        """ Removes a variable assignment if its value is the expected one. """
+        """
+        Removes a variable assignment if its value is the expected one.
+        """
         for varassign in self.all_varassigns(varname):
             if varassign.value == expected_value:
                 self.lines.pop(varassign.index)
@@ -447,7 +454,8 @@ class PackageVars:
             return
 
         project, subdir, filename = m.groups()
-        self.master_sites = f'${{MASTER_SITE_SOURCEFORGE:={project}/{subdir}}}'
+        self.master_sites =\
+            f'${{MASTER_SITE_SOURCEFORGE:={project}/{subdir}}}'
         self.homepage = f'https://{project}.sourceforge.net/'
         self.distfile = filename
 
@@ -569,7 +577,8 @@ class PackageVars:
 
         self.maintainer = \
             os.getenv('PKGMAINTAINER') or os.getenv('REPLYTO') \
-            or 'INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org'
+            or ('INSERT_YOUR_MAIL_ADDRESS_HERE '
+                '# or use pkgsrc-users@NetBSD.org')
 
     def package_dir(self) -> str:
         """Generate the suggested directory name for the package."""
@@ -799,7 +808,8 @@ class Adjuster:
             self.todos.append(f'dependency {kind} {value}')
 
     def read_dependencies(self, cmd: str, env: Dict[str, str],
-                          cwd: Union[Path, Any], python: bool = False) -> None:
+                          cwd: Union[Path, Any],
+                          python: bool = False) -> None:
         effective_env = dict(os.environ)
         effective_env.update(env)
 
@@ -813,14 +823,17 @@ class Adjuster:
 
         dep_lines: List[Tuple[str, str, str, str]] = []
         for line in output.decode('utf-8').splitlines():
-            # example: DEPENDS   pkgbase>=1.2.3:../../category/pkgbase
-            depends_re = r'^(\w+)\t([^\s:>]+)(>[^\s:]+|)(?::(\.\./\.\./\S+))?$'
+            # example: DEPENDS pkgbase>=1.2.3:../../category/pkgbase
+            depends_re = (r'^(\w+)\t'
+                          r'([^\s:>]+)'
+                          r'(>[^\s:]+|)'
+                          r'(?::(\.\./\.\./\S+))?$')
             m = re.search(depends_re, line)
             if m:
                 dep_lines.append((m[1], m[2], m[3] or '>=0', m[4] or ''))
                 continue
 
-            # example: var   VARNAME   value # possibly with comment
+            # example: var VARNAME value # possibly with comment
             m = re.search(r'^var\t(\S+)\t(.+)$', line)
             if m:
                 self.set_or_add(m[1], m[2])
@@ -901,7 +914,7 @@ class Adjuster:
     def wrksrc_find(self,
                     what: Union[str, Callable[[str], bool]]) -> List[str]:
         def search(f):
-            return re.search(what, f) if type(what) == str else what(f)
+            return re.search(what, f) if type(what) is str else what(f)
 
         return sorted(filter(search, self.wrksrc_files))
 
@@ -1144,7 +1157,8 @@ class Adjuster:
             self.abs_wrksrc = self.abs_wrkdir
         else:
             choices = ' '.join(subdirs)
-            wrksrc = f'${{WRKDIR}} # TODO: one of {choices}, or leave it as-is'
+            wrksrc = (f'${{WRKDIR}} '
+                      f'# TODO: one of {choices}, or leave it as-is')
             self.build_vars.append(Var('WRKSRC', '=', wrksrc))
             self.abs_wrksrc = self.abs_wrkdir
 
@@ -1197,12 +1211,13 @@ class Adjuster:
     def generate_lines(self) -> Lines:
         marker_index = self.makefile_lines.index(r'^# url2pkg-marker')
         if marker_index == -1:
-            sys.exit('error: didn\'t find the url2pkg marker in the Makefile.')
+            sys.exit(
+                'error: didn\'t find the url2pkg marker in the Makefile.')
 
         lines = Lines(*self.makefile_lines.lines[: marker_index])
 
         if lines.get('PKGNAME') == '' and \
-           (self.pkgname_prefix != '' or self.pkgname_transform != ''):
+                (self.pkgname_prefix != '' or self.pkgname_transform != ''):
             distname_index = lines.index(r'^DISTNAME=(\t+)')
             if distname_index != -1:
                 pkgname_line = f'PKGNAME=\t{self.pkgname_prefix}' \
@@ -1260,7 +1275,9 @@ class Adjuster:
 
         self.abs_wrkdir = Path(self.g.show_var('WRKDIR'))
         self.determine_wrksrc()
+        # noinspection PyTypeChecker
         self.wrksrc_dirs = scan(self.abs_wrksrc, Path.is_dir)
+        # noinspection PyTypeChecker
         self.wrksrc_files = scan(self.abs_wrksrc, Path.is_file)
 
         self.adjust_descr()
@@ -1316,15 +1333,16 @@ def main(argv: List[str], g: Globals):
 
         if dir == '':
             sys.exit(f'url2pkg: cannot determine package directory '
-                     f'from distname \'{vars.distname}\'; it must contain a version number')
+                     f'from distname \'{vars.distname}\'; '
+                     f'it must contain a version number')
         if Path(dir).exists():
             sys.exit(f'url2pkg: package directory \'{dir}\' already exists')
         os.mkdir(dir)
         os.chdir(dir)
 
     if not os.path.isfile('../../mk/bsd.pkg.mk'):
-        sys.exit(f'{argv[0]}: must be run from a package or category directory '
-                 f'(.../pkgsrc/category[/package])')
+        sys.exit(f'{argv[0]}: must be run from a package '
+                 f'or category directory (.../pkgsrc/category[/package])')
 
     initial_lines = Generator(url).generate_package(g)
     adjuster = Adjuster(g, url, initial_lines)
