@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.583 2025/01/23 13:40:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.584 2025/01/23 14:29:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/nono to 1.1.2 [jun 2025-01-23]
 	Updated chat/ircd-hybrid to 8.2.46 [fox 2025-01-23]
 	Updated net/yaydl to 0.17.2 [pin 2025-01-23]
+	Updated www/firefox to 134.0.2 [ryoon 2025-01-23]
