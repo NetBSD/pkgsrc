@@ -1,5 +1,5 @@
 #! @PYTHONBIN@
-# $NetBSD: url2pkg.py,v 1.63 2025/01/23 05:53:08 rillig Exp $
+# $NetBSD: url2pkg.py,v 1.64 2025/01/23 06:05:44 rillig Exp $
 
 # Copyright (c) 2019 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1069,15 +1069,17 @@ class Adjuster:
         #     BSD license)
         # devel/py-gcovr (uses setuptools; BSD license)
 
-        if not self.wrksrc_isfile('setup.py'):
+        if self.wrksrc_isfile('setup.py'):
+            cmd = f'{self.g.pythonbin} setup.py build'
+            env = {
+                'PYTHONDONTWRITEBYTECODE': 'x',
+                'PYTHONPATH': f'{self.g.libdir}/python'
+            }
+            self.read_dependencies(cmd, env, self.abs_wrksrc, python=True)
+        elif self.wrksrc_isfile('pyproject.toml'):
+            self.todos.append("Extract dependencies from pyproject.toml")
+        else:
             return
-
-        cmd = f'{self.g.pythonbin} setup.py build'
-        env = {
-            'PYTHONDONTWRITEBYTECODE': 'x',
-            'PYTHONPATH': f'{self.g.libdir}/python'
-        }
-        self.read_dependencies(cmd, env, self.abs_wrksrc, python=True)
 
         self.pkgname_prefix = '${PYPKGPREFIX}-'
         self.categories.append('python')

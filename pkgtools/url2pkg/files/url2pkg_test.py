@@ -1,4 +1,4 @@
-# $NetBSD: url2pkg_test.py,v 1.57 2025/01/23 05:56:23 rillig Exp $
+# $NetBSD: url2pkg_test.py,v 1.58 2025/01/23 06:05:44 rillig Exp $
 
 # URLs for manual testing:
 #
@@ -1327,6 +1327,37 @@ def test_Adjuster_adjust_python_module(tmp_path: Path):
         'HOMEPAGE=       https://example.org/',
         'COMMENT=        TODO: Short description of the package',
         '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '.include "../../lang/python/wheel.mk"',
+        '.include "../../mk/bsd.pkg.mk"',
+    ]
+
+
+def test_Adjuster_adjust_python_module__pyproject_toml(tmp_path: Path):
+    url = 'https://example.org/Mod-1.0.tar.gz'
+    g.pythonbin = 'echo python'
+    g.pkgdir = tmp_path
+    adjuster = Adjuster(g, url, Lines())
+    adjuster.abs_wrksrc = tmp_path
+    adjuster.makefile_lines = Generator(url).generate_Makefile()
+    (tmp_path / 'pyproject.toml').touch()
+
+    adjuster.adjust_python_module()
+
+    assert detab(adjuster.generate_lines()) == [
+        mkcvsid,
+        '',
+        'DISTNAME=       Mod-1.0',
+        'PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}',
+        'CATEGORIES=     pkgtools python',
+        'MASTER_SITES=   https://example.org/',
+        '',
+        'MAINTAINER=     INSERT_YOUR_MAIL_ADDRESS_HERE # or use pkgsrc-users@NetBSD.org',
+        'HOMEPAGE=       https://example.org/',
+        'COMMENT=        TODO: Short description of the package',
+        '#LICENSE=       # TODO: (see mk/license.mk)',
+        '',
+        '# TODO: Extract dependencies from pyproject.toml',
         '',
         '.include "../../lang/python/wheel.mk"',
         '.include "../../mk/bsd.pkg.mk"',
