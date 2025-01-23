@@ -1,9 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2017/04/18 00:44:27 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2025/01/23 21:25:54 wiz Exp $
 
 * Make ruby and swig commands are settable.
-* support DESTDIR.
-* Add an include directory for ruby 1.9 and later.
-* Fix build for Ruby 2.2 and later.
+* Use backquotes instead of gmake $(shell) to make this more reliable
+* Add DESTDIR support.
 
 --- Makefile.orig	2016-08-15 17:12:01.000000000 +0000
 +++ Makefile
@@ -19,11 +18,44 @@ $NetBSD: patch-aa,v 1.6 2017/04/18 00:44:27 minskim Exp $
  
  RM=rm -f
  INSTALL=install -c
-@@ -77,5 +76,5 @@ test_ruby:
+@@ -37,18 +36,18 @@ clean:
+ install:	itex2MML
+ 		$(INSTALL) itex2MML $(BINDIR)
+ 
+-RUBY_CFLAGS = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["CFLAGS"]')
+-RUBY_LD = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LDSHARED"]')
+-RUBYLIBDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["libdir"]')
+-RUBY_PREFIX =  $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubylibdir"]')
+-RUBY_ARCH = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["arch"]')
+-RUBYDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["archdir"]')
+-RUBYHDRDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubyhdrdir"]')
+-RUBY_SITEDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["sitelibdir"]')
+-RUBY_SITEARCHDIR = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["sitearchdir"]')
+-LIBRUBYARG = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LIBRUBYARG"]')
+-DYLIB_EXT = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["DLEXT"]')
+-RUBY_target_os = $(shell $(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["target_os"]')
++RUBY_CFLAGS = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["CFLAGS"]'`
++RUBY_LD = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LDSHARED"]'`
++RUBYLIBDIR = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["libdir"]'`
++RUBY_PREFIX =  `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubylibdir"]'`
++RUBY_ARCH = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["arch"]'`
++RUBYDIR = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["archdir"]'`
++RUBYHDRDIR = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["rubyhdrdir"]'`
++RUBY_SITEDIR = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["sitelibdir"]'`
++RUBY_SITEARCHDIR = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["sitearchdir"]'`
++LIBRUBYARG = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["LIBRUBYARG"]'`
++DYLIB_EXT = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["DLEXT"]'`
++RUBY_target_os = `$(RUBY) -e 'require "rbconfig"; print RbConfig::CONFIG["target_os"]'`
+ 
+ ifneq (, $(findstring darwin, $(RUBY_target_os)) )
+ EXTRA_CFLAGS = -DHAVE_SNPRINTF -DHAVE_STRUCT_TIMESPEC -DHAVE_STRUCT_TIMEZONE
+@@ -76,6 +75,6 @@ ruby:	itex2MML_ruby.o y.tab_ruby.o lex.y
+ test_ruby:
  	$(RUBY) ./itextomml.rb
  
- install_ruby:	itex2MML.$(DYLIB_EXT)
+-install_ruby:	itex2MML.$(DYLIB_EXT)
 -	$(INSTALL) itex2MML.$(DYLIB_EXT) $(RUBY_SITEARCHDIR)
 -	$(INSTALL) itextomml.rb itex_stringsupport.rb $(RUBY_SITEDIR)
++install_ruby:	ruby
 +	$(INSTALL) itex2MML.$(DYLIB_EXT) $(DESTDIR)$(RUBY_SITEARCHDIR)
 +	$(BSD_INSTALL_DATA) itextomml.rb itex_stringsupport.rb $(DESTDIR)$(RUBY_SITEDIR)
