@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.587 2025/01/23 15:05:50 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.588 2025/01/23 15:47:16 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -775,3 +775,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 134.0.2 [ryoon 2025-01-23]
 	Updated math/py-torch to 2.5.1nb1 [ryoon 2025-01-23]
 	Updated pkgtools/pbulk to 0.75 [wiz 2025-01-23]
+	Added time/php-framadate version 1.1.19 [manu 2025-01-23]

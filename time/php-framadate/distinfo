@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/23 15:47:16 manu Exp $
+
+BLAKE2s (framadate-1.1.19.tar.bz2) = 8b999bc54ac5fe0288ae6d713f62f3bfd82b0264b653858b502bfbe96a61b18f
+SHA512 (framadate-1.1.19.tar.bz2) = 1e56440fcd7aba32519b1d558e2ddd72de67cbf7c65fdf0d7a5f4e97b1c866be25f3248385d7ef720c0279d4ec525f659fcbcaf1fddf9374f678b6be7c243f2f
+Size (framadate-1.1.19.tar.bz2) = 2753770 bytes
