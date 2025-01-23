@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2021/12/24 22:28:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/01/23 19:37:41 riastradh Exp $
+${PLIST.py3x}lib/cmake/boost_numpy-${BOOST_VERSION}/libboost_numpy-variant-shared-py${PYVERSSUFFIX}.cmake
+${PLIST.py3x}lib/cmake/boost_numpy-${BOOST_VERSION}/libboost_numpy-variant-static-py${PYVERSSUFFIX}.cmake
+lib/cmake/boost_python-${BOOST_VERSION}/libboost_python-variant-shared-py${PYVERSSUFFIX}.cmake
+lib/cmake/boost_python-${BOOST_VERSION}/libboost_python-variant-static-py${PYVERSSUFFIX}.cmake
 ${PLIST.py3x}lib/libboost_numpy${PYVER}.a
 ${PLIST.py3x}lib/libboost_numpy${PYVER}.so
 ${PLIST.py3x}lib/libboost_numpy${PYVER}.so.${PKGVERSION}
