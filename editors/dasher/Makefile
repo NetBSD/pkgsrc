@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.121 2024/12/27 08:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2025/01/24 11:40:27 riastradh Exp $
 
 DISTNAME=	dasher-5.0.0.b20200225
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dasher-project/}
 GITHUB_TAG=	e03b0dbf1f1132e83645ff78c92efd63fca5a812
@@ -33,4 +33,5 @@ pre-configure:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
