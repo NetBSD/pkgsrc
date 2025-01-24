@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.601 2025/01/24 10:17:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.602 2025/01/24 11:55:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/creduce [wiz 2025-01-24]
 	Updated devel/cvise to 2.11.0 [wiz 2025-01-24]
 	Updated meta-pkgs/bulk-test-llvm to 20250124 [wiz 2025-01-24]
+	Added x11/qt5-qtwebkit version 5.212.0.alpha4nb29 [wiz 2025-01-24]
