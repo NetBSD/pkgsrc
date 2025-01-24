@@ -1,0 +1,13 @@
+$NetBSD: patch-gcc-4.6.4_gcc_doc_tm.texi,v 1.1 2025/01/24 10:15:03 wiz Exp $
+
+@end needs to be at the start of a line.
+
+--- gcc-4.6.4/gcc/doc/tm.texi.orig	2025-01-24 10:00:34.882178331 +0000
++++ gcc-4.6.4/gcc/doc/tm.texi
+@@ -11298,4 +11298,5 @@ accepted by immediate-add plus one.  We 
+ value of @code{TARGET_CONST_ANCHOR} is a power of 2.  For example, on
+ MIPS, where add-immediate takes a 16-bit signed value,
+ @code{TARGET_CONST_ANCHOR} is set to @samp{0x8000}.  The default value
+-is zero, which disables this optimization.  @end deftypevr
++is zero, which disables this optimization.
++@end deftypevr
