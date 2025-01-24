@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2021/10/26 10:51:55 nia Exp $
+$NetBSD: distinfo,v 1.32 2025/01/24 16:48:59 riastradh Exp $
 
 BLAKE2s (smalltalk-3.2.5.tar.gz) = c30aa57428542161a24a886d937abebe0c0c8da27f3b143f5f2c5e6f7ab712ad
 SHA512 (smalltalk-3.2.5.tar.gz) = 385e5fba2acb8870759e5178282210c09c45685d0cf776bc50f4ed10c9afacf9164547ba8099ea3ed9a92a2a253aa9c2b011a7a9f2dff47ea9cfdf3b42029ebc
@@ -7,4 +7,5 @@ SHA1 (patch-ae) = 0de0e6bed47d32e1c3088100c153054461e4f33b
 SHA1 (patch-ah) = 76366578593fd7afbf34d8215c1f3692e610f661
 SHA1 (patch-libgst_cint.c) = 51354b41f8edde0e42abcd5f8d0246d4f1025c6e
 SHA1 (patch-libgst_input.c) = 06168ed6decd6d42838e76ada81717e3f599d733
+SHA1 (patch-packages_gtk_mkorder.awk) = d3f4308abd6aaee3316dcc6a39632b1b2e49aa92
 SHA1 (patch-snprintfv_snprintfv_format.c) = 03eed55ade8f78ae1cf73b82df9d18629314945b
