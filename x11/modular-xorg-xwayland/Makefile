@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/01/21 14:35:47 nia Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/24 20:50:27 riastradh Exp $
 
 DISTNAME=	xwayland-23.1.1
 PKGNAME=	modular-xorg-${DISTNAME}
@@ -13,6 +13,12 @@ COMMENT=	Server for running X clients under Wayland from modular X.org
 LICENSE=	mit AND modified-bsd AND x11 # with no-advertising clause
 
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+CPPFLAGS+=	-D_OPENBSD_SOURCE # reallocarray
+.endif
 
 .include "../../devel/wayland/platform.mk"
 
