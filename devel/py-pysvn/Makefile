@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2024/11/14 22:19:35 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/01/24 08:59:39 riastradh Exp $
 
 VERS=		1.9.22
 DISTNAME=	pysvn-${VERS}
 PKGNAME=	${PYPKGPREFIX}-pysvn-${VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysvn/}
 
@@ -24,7 +24,18 @@ SUBST_FILES.path=	setup_configure.py
 SUBST_VARS.path+=	PREFIX
 
 PYSETUPCONFIGARGS=	--verbose --pycxx-dir="../Import/pycxx-7.1.9"
+PYSETUPCONFIGARGS+=	--apr-inc-dir=${BUILDLINK_DIR}/include/apr-1
+PYSETUPCONFIGARGS+=	--apr-lib-dir=${BUILDLINK_DIR}/lib
+PYSETUPCONFIGARGS+=	--apu-inc-dir=${BUILDLINK_DIR}/include/apr-1
+PYSETUPCONFIGARGS+=	--svn-inc-dir=${BUILDLINK_DIR}/include/subversion-1
+PYSETUPCONFIGARGS+=	--svn-lib-dir=${BUILDLINK_DIR}/lib
 PYLIBVER=		${PYVERSSUFFIX:S/./_/g}
+
+# Hack to convince pysvn build that we have an svnadmin executable,
+# which it proceeds to not use for anything.
+PYSETUPCONFIGARGS+=	--svn-bin-dir=${TOOLS_CMD.svnadmin:H}
+TOOLS_CREATE+=		svnadmin
+TOOLS_SCRIPT.svnadmin=	false
 
 INSTALLATION_DIRS+=	${PYSITELIB}/pysvn
 
@@ -45,6 +56,8 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/pysvn/_pysvn_${PYLIBVER}.so \
 		${DESTDIR}${PREFIX}/${PYSITELIB}/pysvn/_pysvn_${PYLIBVER}.so
 
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
