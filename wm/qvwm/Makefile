@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2021/09/17 10:27:34 nia Exp $
+# $NetBSD: Makefile,v 1.45 2025/01/24 20:41:13 riastradh Exp $
 
 DISTNAME=	qvwm-1.1.12
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qvwm/}
 
@@ -13,7 +14,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison flex
 USE_LANGUAGES=	c c++03
 
-LIBS.SunOS+=	-lICE -lSM
+LIBS+=		-lICE -lSM
 
 # Avoid embedding relative paths into the binary.
 CONFIGURE_ENV+=		ac_cv_path_PATH_RM=${RM}
