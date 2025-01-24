@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2025/01/12 20:33:36 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.45 2025/01/24 19:03:57 wiz Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -1215,7 +1215,7 @@ ${PLIST.doc}share/gtk-doc/html/gtk3/volumebutton.png
 ${PLIST.doc}share/gtk-doc/html/gtk3/widget-hvalign.png
 ${PLIST.doc}share/gtk-doc/html/gtk3/window-default.png
 ${PLIST.doc}share/gtk-doc/html/gtk3/window.png
-${PLIST.doc}share/icons/hicolor/16x16/apps/gtk3-demo-symbolic.symbolic.png
+share/icons/hicolor/16x16/apps/gtk3-demo-symbolic.symbolic.png
 share/icons/hicolor/16x16/apps/gtk3-demo.png
 share/icons/hicolor/16x16/apps/gtk3-widget-factory-symbolic.symbolic.png
 share/icons/hicolor/16x16/apps/gtk3-widget-factory.png
