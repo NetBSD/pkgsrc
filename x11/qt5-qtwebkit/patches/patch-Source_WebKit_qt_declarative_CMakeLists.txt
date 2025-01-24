@@ -1,0 +1,15 @@
+$NetBSD: patch-Source_WebKit_qt_declarative_CMakeLists.txt,v 1.3 2025/01/24 11:54:38 wiz Exp $
+
+Link against WebKit2 library.
+
+--- Source/WebKit/qt/declarative/CMakeLists.txt.orig	2022-12-30 10:44:44.000000000 +0000
++++ Source/WebKit/qt/declarative/CMakeLists.txt
+@@ -23,7 +23,7 @@ include_directories(SYSTEM
+ 
+ add_library(qmlwebkitplugin MODULE plugin.cpp)
+ target_link_libraries(qmlwebkitplugin
+-    WebKit Qt5::Quick)
++    WebKit2 Qt5::Quick)
+ 
+ set(qmlwebkit_output_dir "${CMAKE_BINARY_DIR}/imports/QtWebKit")
+ set(qmlwebkit_install_dir "${QML_INSTALL_DIR}/QtWebKit")
