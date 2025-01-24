@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.605 2025/01/24 21:21:39 pin Exp $
+$NetBSD: CHANGES-2025,v 1.606 2025/01/24 21:22:47 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -800,3 +800,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/cargo-edit version 0.13.1 [pin 2025-01-24]
 	Updated news/tin to 2.6.4 [micha 2025-01-24]
 	Updated security/cargo-audit to 0.21.1 [pin 2025-01-24]
+	Updated devel/cargo-upgrades to 2.1.3 [pin 2025-01-24]
