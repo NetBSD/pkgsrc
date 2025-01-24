@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2024/11/14 22:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2025/01/24 09:09:45 wiz Exp $
 
 DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -53,7 +53,7 @@ SCONS_BUILD_ARGS+=	--use-system-yaml
 SCONS_BUILD_ARGS+=	--use-system-zlib
 SCONS_BUILD_ARGS+=	--use-system-zstd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_ACCEPTED=	312 311 310
 
 .include "../../mk/bsd.prefs.mk"
 
