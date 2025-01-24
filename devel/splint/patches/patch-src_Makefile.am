@@ -1,0 +1,54 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2025/01/24 09:20:37 riastradh Exp $
+
+Don't delete $GRAM.tab.h files created by bison.  Older versions of
+Bison copied the $GRAM.tab.h files verbatim into the $GRAM.tab.c files,
+but versions of Bison since 3.6 instead use #include "$GRAM.tab.h",
+which requires us not to delete the .tab.h file.
+
+--- src/Makefile.am.orig	2003-06-10 05:58:24.000000000 +0000
++++ src/Makefile.am
+@@ -295,7 +295,7 @@ signature.c.der:
+ 	  $(CP) signature.c signature.c.der; \
+ 	  $(MV) Headers/signature_gen.h Headers/signature_gen.bak || true; \
+ 	  $(CAT) bison.head signature.tab.h bison.reset >Headers/signature_gen.h; \
+-	  $(RM) signature.tab.c signature.tab.h; \
++	  $(RM) signature.tab.c; \
+ 	fi
+ 
+ Headers/signature_gen.h signature.c: signature.c.der signature.y
+@@ -308,7 +308,7 @@ Headers/signature_gen.h signature.c: sig
+ 	  $(CP) signature.c signature.c.der; \
+ 	  $(MV) Headers/signature_gen.h Headers/signature_gen.bak; \
+ 	  $(CAT) bison.head signature.tab.h bison.reset >Headers/signature_gen.h; \
+-	  $(RM) signature.tab.c signature.tab.h; \
++	  $(RM) signature.tab.c; \
+ 	fi
+ 
+ ## 11/29/001 drl added copy so that the file cgrammar.c.der is created
+@@ -324,7 +324,7 @@ Headers/cgrammar_tokens.h cgrammar.c: cg
+ 	  $(CP) cgrammar.c cgrammar.c.der; \
+ 	  $(MV) Headers/cgrammar_tokens.h Headers/cgrammar_tokens.bak || true; \
+ 	  $(CAT) bison.head cgrammar.tab.h bison.reset | $(SED) 's/YYSTYPE/cgrammar_YYSTYPE/g' | $(SED) 's/lsllex/cgrammar_lsllex/g' > Headers/cgrammar_tokens.h; \
+-	  $(RM) cgrammar.tab.c cgrammar.tab.h; \
++	  $(RM) cgrammar.tab.c; \
+ 	fi
+ 
+ ## 10/16/001 drl added copy so that the file mtgrammar.c.der is created
+@@ -341,7 +341,7 @@ Headers/mtgrammar_tokens.h mtgrammar.c: 
+ 	  $(CP) mtgrammar.c mtgrammar.c.der; \
+ 	  $(MV) Headers/mtgrammar_tokens.h Headers/mtgrammar_tokens.bak; \
+ 	  $(CAT) bison.head mtgrammar.tab.h bison.reset >Headers/mtgrammar_tokens.h; \
+-	  $(RM) mtgrammar.tab.c mtgrammar.tab.h; \
++	  $(RM) mtgrammar.tab.c; \
+ 	fi
+ 
+ ## 11/29/001 drl added copy so that the file llgrammar.c.der is created
+@@ -359,7 +359,7 @@ Headers/llgrammar_gen.h Headers/llgramma
+ 	  $(CAT) bison.head llgrammar.tab.h bison.reset >Headers/llgrammar_gen2.h; \
+ 	  $(MV) Headers/llgrammar_gen.h Headers/llgrammar_gen.bak; \
+ 	  $(CAT) bison.head llgrammar.tab.h bison.reset >Headers/llgrammar_gen.h; \
+-	  $(RM) llgrammar.tab.c llgrammar.tab.h; \
++	  $(RM) llgrammar.tab.c; \
+ 	fi
+ 
+ cscanner.c: cscanner.l

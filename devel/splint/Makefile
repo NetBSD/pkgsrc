@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2023/12/30 21:30:47 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2025/01/24 09:20:37 riastradh Exp $
 #
 
 DISTNAME=	splint-3.1.2.src
 PKGNAME=	${DISTNAME:S/.src$//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://splint.org/downloads/
 EXTRACT_SUFX=	.tgz
@@ -16,7 +16,7 @@ LICENSE=	gnu-gpl-v2
 # mv: rename .deps/cgrammar.TPo to .deps/cgrammar.Po: No such file or directory
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=	gmake lex
+USE_TOOLS+=	bison gmake lex
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c99
 AUTO_MKDIRS=	yes
