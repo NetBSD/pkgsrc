@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2024/11/11 07:28:15 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/24 07:51:35 riastradh Exp $
 
 DISTNAME=	llvmlite-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -91,7 +91,7 @@ pre-configure:
 	${LN} -s libunwind-${LLVM_VERSION}.src ${WRKDIR}/libunwind
 	cd ${WRKDIR} &&  mkdir build && cd build && \
 	  cmake -G'Unix Makefiles' ${LLVM_CMAKE_CONFIGURE_ARGS} ../llvm && \
-	  ${MAKE} -j${MAKE_JOBS} && \
+	  ${MAKE} ${_MAKE_JOBS} && \
 	  ${MAKE} install
 	${SED} -e 's/ -stdlib=libc++//' ${WRKSRC}/ffi/Makefile.freebsd > ${WRKSRC}/ffi/Makefile.netbsd
 
