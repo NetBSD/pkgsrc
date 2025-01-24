@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.132 2024/11/14 22:22:02 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2025/01/24 08:57:05 adam Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.62
+DISTNAME=	httpd-2.4.63
 PKGNAME=	${DISTNAME:S/httpd/apache/}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/}
 EXTRACT_SUFX=	.tar.bz2
