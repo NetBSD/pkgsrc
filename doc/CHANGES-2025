@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.604 2025/01/24 17:23:45 micha Exp $
+$NetBSD: CHANGES-2025,v 1.605 2025/01/24 21:21:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -799,3 +799,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/qt5-qtwebkit version 5.212.0.alpha4nb29 [wiz 2025-01-24]
 	Added devel/cargo-edit version 0.13.1 [pin 2025-01-24]
 	Updated news/tin to 2.6.4 [micha 2025-01-24]
+	Updated security/cargo-audit to 0.21.1 [pin 2025-01-24]
