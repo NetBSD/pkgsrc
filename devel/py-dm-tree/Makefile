@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/11/11 07:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/24 08:02:28 riastradh Exp $
 
 DISTNAME=	dm-tree-0.1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.11.2:../../devel/py-wrapt
 
 USE_CXX_FEATURES=	c++14
 USE_LANGUAGES=		c++
-USE_TOOLS+=		cmake
+USE_TOOLS+=		cmake gmake
+
+SUBST_CLASSES+=		jobs
+SUBST_MESSAGE.jobs=	Limit parallelism to MAKE_JOBS
+SUBST_STAGE.jobs=	pre-configure
+SUBST_FILES.jobs=	setup.py
+SUBST_SED.jobs=		-e 's,-j{os.cpu_count()},-j${MAKE_JOBS:U1},'
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
