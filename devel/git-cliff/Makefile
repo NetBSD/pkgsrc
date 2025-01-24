@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/20 13:20:54 pin Exp $
+# $NetBSD: Makefile,v 1.46 2025/01/24 13:32:27 pin Exp $
 
 DISTNAME=	git-cliff-2.6.1
 #v2.7.0 requires Rust-1.82
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=orhun/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/orhun/git-cliff/
 COMMENT=	Highly customizable Changelog Generator
 LICENSE=	gnu-gpl-v3
