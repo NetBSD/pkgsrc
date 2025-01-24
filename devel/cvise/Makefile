@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/11/14 22:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/24 09:40:40 wiz Exp $
 
-DISTNAME=	cvise-2.10.0
-PKGREVISION=	4
+DISTNAME=	cvise-2.11.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marxin/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,15 +15,14 @@ DEPENDS+=	${PYPKGPREFIX}-pebble-[0-9]*:../../devel/py-pebble
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-USE_LANGUAGES=	c c++17
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex
 TEST_TARGET=	test
 
 USE_CXX_FEATURES+=	c++17
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 .include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} != "NetBSD"
 DEPENDS+=	unifdef-[0-9]*:../../devel/unifdef
 .endif

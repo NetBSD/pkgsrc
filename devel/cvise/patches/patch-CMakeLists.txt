@@ -1,9 +1,9 @@
-$NetBSD: patch-CMakeLists.txt,v 1.6 2024/08/04 10:18:42 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.7 2025/01/24 09:40:40 wiz Exp $
 
 Do not force -Werror.
 Do not set -O3 optimization flags.
 
---- CMakeLists.txt.orig	2024-03-13 20:19:48.000000000 +0000
+--- CMakeLists.txt.orig	2024-11-10 09:58:12.000000000 +0000
 +++ CMakeLists.txt
 @@ -171,7 +171,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
      OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -20,6 +20,6 @@ Do not set -O3 optimization flags.
  
 -  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 -  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELEASE} -O3 -g")
+ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++17 /GR-")
  endif()
- 
- ###############################################################################
