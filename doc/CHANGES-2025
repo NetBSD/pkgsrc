@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.599 2025/01/24 09:37:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.600 2025/01/24 09:40:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/apache24 to 2.4.63 [adam 2025-01-24]
 	Updated fonts/py-fonttools to 4.55.5 [adam 2025-01-24]
 	Removed devel/creduce [wiz 2025-01-24]
+	Updated devel/cvise to 2.11.0 [wiz 2025-01-24]
