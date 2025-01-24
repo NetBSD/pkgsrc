@@ -1,2 +1,0 @@
-Meta-package for testing LLVM updates. Depends on various non-trivial or
-important packages that depend on LLVM.
