@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/11/14 22:19:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/24 21:22:30 pin Exp $
 
-DISTNAME=	cargo-upgrades-2.1.2
-PKGREVISION=	4
+DISTNAME=	cargo-upgrades-2.1.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=kornelski/}
 GITLAB_RELEASE=	v${PKGVERSION_NOREV}
@@ -15,7 +14,7 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-WRKSRC=		${WRKDIR}/cargo-upgrades-v2.1.2-d890d43432610221d593216a68f0c14d7df4ccd7
+WRKSRC=		${WRKDIR}/cargo-upgrades-v2.1.3-87c78ffc5a9b7a9112bfa98dd7b1756a11a086e3
 
 RUST_REQ=	1.70.0
 USE_LANGUAGES+=	c c++
