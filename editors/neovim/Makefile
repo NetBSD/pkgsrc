@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/01/22 18:18:32 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/24 12:45:54 riastradh Exp $
 
 DISTNAME=	neovim-0.10.3
 CATEGORIES=	editors
@@ -42,17 +42,16 @@ FORTIFY_SUPPORTED=	no
 DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../devel/lua-BitOp
 DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
 DEPENDS+=	${LUA_PKGPREFIX}-inspect-[0-9]*:../../devel/lua-inspect
-DEPENDS+=	${LUA_PKGPREFIX}-lpeg>=1.1.0nb1:../../devel/lua-lpeg
 DEPENDS+=	${LUA_PKGPREFIX}-mpack-[0-9]*:../../devel/lua-mpack
 
 .if ${SHLIB_TYPE} == "ELF"
+CFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/lua/5.1
+
 TOOL_DEPENDS+=	patchelf-[0-9]*:../../devel/patchelf
 
 post-install:
-	${PREFIX}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
-		--replace-needed ${PREFIX}/lib/lua/5.1/lpeg.so lpeg.so
-	${PREFIX}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
-		--add-rpath ${PREFIX}/lib/lua/5.1
+	${TOOLBASE}/bin/patchelf ${DESTDIR}${PREFIX}/bin/nvim \
+		--replace-needed ${BUILDLINK_DIR.lua-lpeg}/lib/lua/5.1/lpeg.so lpeg.so
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
@@ -64,6 +63,7 @@ post-install:
 .include "../../devel/libuv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvterm03+=	libvterm03>=0.3.3
 .include "../../devel/libvterm03/buildlink3.mk"
+.include "../../devel/lua-lpeg/buildlink3.mk"
 .include "../../devel/lua-luv/buildlink3.mk"
 .include "../../devel/msgpack/buildlink3.mk"
 .include "../../devel/unibilium/buildlink3.mk"
