@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.596 2025/01/24 01:01:57 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.597 2025/01/24 06:31:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -788,3 +788,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/sysupgrade to 1.5nb11 [wiz 2025-01-23]
 	Removed mail/opensmtpd-extras [wiz 2025-01-23]
 	Updated print/brlaser to 6.2.7 [schmonz 2025-01-24]
+	Updated archivers/xz to 5.6.4 [adam 2025-01-24]
+	Updated devel/abseil to 20240722.1 [adam 2025-01-24]
+	Updated textproc/py-pyphen to 0.17.2 [adam 2025-01-24]
