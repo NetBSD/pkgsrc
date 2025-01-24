@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.3 2025/01/24 11:54:37 wiz Exp $
+
+WebKit needs GStreamer plugins to play web audio and video.
+
+Installing the following should be enough on BSD/Solaris:
+
+* gst-plugins1-libav
+* gst-plugins1-oss
+
+Installing gst-plugins1-alsa or gst-plugins1-pulse will be necessary
+for audio output on Linux.
+
+===========================================================================
