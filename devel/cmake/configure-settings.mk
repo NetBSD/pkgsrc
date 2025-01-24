@@ -1,4 +1,4 @@
-# $NetBSD: configure-settings.mk,v 1.2 2023/01/20 13:08:07 adam Exp $
+# $NetBSD: configure-settings.mk,v 1.3 2025/01/24 21:23:07 riastradh Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -26,6 +26,12 @@
 #	"CMAKE_PREFIX_PATH += ${PREFIX}/package" should be in its
 #	buildlink3.mk so that packages that depend on it can find its
 #	cmake modules if they use cmake to build.
+#
+# CMAKE_INCLUDE_PATH
+#	Like CMAKE_PREFIX_PATH but just for include files.
+#
+# CMAKE_LIBRARY_PATH
+#	Like CMAKE_PREFIX_PATH but just for libraries.
 #
 # CMAKE_USE_GNU_INSTALL_DIRS
 #	If set to yes, set GNU standard installation directories with pkgsrc
@@ -81,6 +87,19 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_LOCALEDIR:PATH=${PKGLOCALEDIR}/locale
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_APPLE_SILICON_PROCESSOR=arm64
 .endif
 
+# We define the environment variables CMAKE_PREFIX_PATH &c., rather
+# than cmake variables of the same name, because the environment
+# variables are meant to be set by the caller (e.g., packaging system),
+# while the cmake variables are meant to be set by the project (i.e.,
+# CMakeFiles.txt and similar), and some projects do set them.
 .if defined(CMAKE_PREFIX_PATH)
-CMAKE_CONFIGURE_ARGS+=	-DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH:ts;:Q}
+CONFIGURE_ENV+=		CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH:ts::Q}
+.endif
+
+.if defined(CMAKE_INCLUDE_PATH)
+CONFIGURE_ENV+=		CMAKE_INCLUDE_PATH=${CMAKE_INCLUDE_PATH:ts::Q}
+.endif
+
+.if defined(CMAKE_LIBRARY_PATH)
+CONFIGURE_ENV+=		CMAKE_LIBRARY_PATH=${CMAKE_LIBRARY_PATH:ts::Q}
 .endif

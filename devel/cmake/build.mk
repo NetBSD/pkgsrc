@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.20 2025/01/16 07:48:08 pho Exp $
+# $NetBSD: build.mk,v 1.21 2025/01/24 21:23:07 riastradh Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -60,6 +60,12 @@ OPSYSVARS+=		CMAKE_CONFIGURE_ARGS
 # mid-build.
 CMAKE_CONFIGURE_ARGS+=	-DFETCHCONTENT_FULLY_DISCONNECTED=ON
 
+# Ensure cmake only looks in system files or in the sanitized buildlink
+# directory for find_package/program/library/file/path.
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_FIND_USE_CMAKE_SYSTEM_PATH:BOOL=OFF
+CMAKE_PREFIX_PATH+=	${BUILDLINK_DIR}
+CMAKE_INCLUDE_PATH+=	${COMPILER_INCLUDE_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
+CMAKE_LIBRARY_PATH+=	${COMPILER_LIB_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
 
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 
