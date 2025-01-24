@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2022/05/13 15:43:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/24 19:50:01 riastradh Exp $
 
 DISTNAME=	flashrom-v1.2
 PKGNAME=	${DISTNAME:S/-v/-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://download.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -33,6 +33,8 @@ LDFLAGS+=	-lpci
 CPPFLAGS+=	-I/${PREFIX}/include
 .endif
 
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.libusb1}/include/libusb-1.0
+
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
 # Disable -Werror.
@@ -45,6 +47,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/flashrom.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/flashrom.8
 
 .include "../../devel/libftdi1/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=3.8
 .include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
