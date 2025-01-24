@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/24 07:51:35 riastradh Exp $
+# $NetBSD: Makefile,v 1.32 2025/01/24 08:30:01 riastradh Exp $
 
 DISTNAME=	llvmlite-0.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ SITES.libunwind-${LLVM_VERSION}.src.tar.xz=	${LLVM_SITE}
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
 # Just for LLVM build.
-USE_TOOLS=		cmake
+USE_TOOLS=		cmake patch
 
 # See
 # https://github.com/numba/llvmlite/blob/main/conda-recipes/llvmdev/build.sh
