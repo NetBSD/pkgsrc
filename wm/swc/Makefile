@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2024/05/19 16:01:26 nia Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/24 20:41:20 riastradh Exp $
 
 DISTNAME=	swc-0.0.0.20230701
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=michaelforney/}
 GITHUB_PROJECT=	swc
@@ -27,5 +28,6 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.83
 .include "../../graphics/wld/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
