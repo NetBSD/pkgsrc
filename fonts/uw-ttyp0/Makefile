@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/01/21 11:00:14 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/24 14:51:19 riastradh Exp $
 
 DISTNAME=	uw-ttyp0-1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	fonts
 MASTER_SITES=	https://people.mpi-inf.mpg.de/~uwe/misc/uw-ttyp0/
 
@@ -12,7 +12,7 @@ LICENSE=	ttyp0-license AND mit
 
 TOOL_DEPENDS+=	bdftopcf-[0-9]*:../../fonts/bdftopcf
 
-USE_TOOLS+=	gmake perl gzip
+USE_TOOLS+=	mkfontscale gmake perl gzip
 USE_LANGUAGES=	# none
 
 HAS_CONFIGURE=	yes
