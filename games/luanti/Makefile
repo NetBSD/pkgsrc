@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/11/16 01:57:06 ktnb Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/24 14:56:56 riastradh Exp $
 
 DISTNAME=	luanti-5.10.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=minetest/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -59,6 +60,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_LUAJIT=FALSE
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
