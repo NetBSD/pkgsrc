@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.30 2015/12/27 12:18:20 joerg Exp $
+# $NetBSD: Makefile.in,v 1.31 2025/01/24 13:08:54 wiz Exp $
 
 srcdir=		@srcdir@
 
@@ -52,7 +52,7 @@ $(PROG): $(OBJS)
 	$(CCLD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
 
 clean:
-	rm -f $(OBJS) $(PROG)
+	rm -f $(OBJS) $(PROG) $(SCRIPTS)
 
 install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(sbindir)
