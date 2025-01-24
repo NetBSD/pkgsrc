@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.597 2025/01/24 06:31:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.598 2025/01/24 08:58:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -791,3 +791,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/xz to 5.6.4 [adam 2025-01-24]
 	Updated devel/abseil to 20240722.1 [adam 2025-01-24]
 	Updated textproc/py-pyphen to 0.17.2 [adam 2025-01-24]
+	Updated www/apache24 to 2.4.63 [adam 2025-01-24]
+	Updated fonts/py-fonttools to 4.55.5 [adam 2025-01-24]
