@@ -1,0 +1,15 @@
+$NetBSD: patch-gcc-4.6.4_gcc_doc_sourcebuild.texi,v 1.1 2025/01/24 10:15:03 wiz Exp $
+
+@itemx can't be the first entry.
+
+--- gcc-4.6.4/gcc/doc/sourcebuild.texi.orig	2025-01-24 10:00:14.905403992 +0000
++++ gcc-4.6.4/gcc/doc/sourcebuild.texi
+@@ -676,7 +676,7 @@ standard rule in @file{gcc/Makefile.in} 
+ @code{lang_checks}.
+ 
+ @table @code
+-@itemx all.cross
++@item all.cross
+ @itemx start.encap
+ @itemx rest.encap
+ FIXME: exactly what goes in each of these targets?
