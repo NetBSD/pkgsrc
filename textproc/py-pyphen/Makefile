@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/11/09 09:28:23 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/24 06:30:47 adam Exp $
 
-DISTNAME=	pyphen-0.17.0
+DISTNAME=	pyphen-0.17.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyphen/}
