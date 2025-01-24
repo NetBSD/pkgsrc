@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4392 2025/01/24 09:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4393 2025/01/24 13:26:44 pin Exp $
 #
 
 COMMENT=	Development utilities
@@ -218,6 +218,7 @@ SUBDIR+=	cargo-about
 SUBDIR+=	cargo-binutils
 SUBDIR+=	cargo-bloat
 SUBDIR+=	cargo-c
+SUBDIR+=	cargo-edit
 SUBDIR+=	cargo-licenses
 SUBDIR+=	cargo-modules
 SUBDIR+=	cargo-outdated
