@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.595 2025/01/23 21:03:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.596 2025/01/24 01:01:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/megacmd to 1.7.0nb4 [wiz 2025-01-23]
 	Updated sysutils/sysupgrade to 1.5nb11 [wiz 2025-01-23]
 	Removed mail/opensmtpd-extras [wiz 2025-01-23]
+	Updated print/brlaser to 6.2.7 [schmonz 2025-01-24]
