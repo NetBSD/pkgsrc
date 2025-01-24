@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/01/22 09:30:16 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/24 10:13:59 wiz Exp $
 
 DISTNAME=	simpy-4.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Discrete event simulation framework
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8.0:../../devel/py-setuptools_scm
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
