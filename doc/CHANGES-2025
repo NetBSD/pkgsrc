@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.608 2025/01/25 11:28:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.609 2025/01/25 11:44:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -809,3 +809,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-doctestplus to 1.4.0 [adam 2025-01-25]
 	Updated textproc/py-referencing to 0.36.2 [adam 2025-01-25]
 	Updated textproc/py-jsonschema-path to 0.3.4 [adam 2025-01-25]
+	Updated www/py-test-aiohttp to 1.1.0 [adam 2025-01-25]
+	Updated devel/py-test-textual-snapshot to 1.1.0 [adam 2025-01-25]
+	Updated www/py-starlette to 0.45.3 [adam 2025-01-25]
+	Updated textproc/py-prettytable to 3.13.0 [adam 2025-01-25]
+	Updated net/py-softlayer to 6.2.6 [adam 2025-01-25]
