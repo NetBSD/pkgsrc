@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/03/20 11:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/25 11:49:13 adam Exp $
 
-DISTNAME=	fido2-1.1.3
+DISTNAME=	fido2-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fido2/}
@@ -14,12 +14,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0:../../security/py-cryptography
 # optional
 DEPENDS+=	${PYPKGPREFIX}-scard>=2.0.0:../../devel/py-scard
-TEST_DEPENDS+=	${PYPKGPREFIX}-test>=7.0:../../devel/py-test
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-do-test:
-	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
