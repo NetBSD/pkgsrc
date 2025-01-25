@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.90 2024/06/10 10:25:05 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.91 2025/01/25 03:30:46 pho Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -27,6 +27,12 @@ ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
 ULIMIT_CMD_cputime?=	ulimit -t `${SETENV} LC_MESSAGES=C ulimit -H -t`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
+
+.if ${OS_VARIANT:U} == "OmniOS"
+# The native tar(1) is a pre-POSIX one which truncates paths longer than
+# 100 bytes.
+EXTRACT_USING?=		bsdtar
+.endif
 
 .if exists(/usr/openwin/include/X11/X.h)
 X11_TYPE?=		native
