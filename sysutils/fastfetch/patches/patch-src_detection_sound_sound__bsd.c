@@ -1,11 +1,11 @@
-$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.1 2025/01/25 22:16:09 vins Exp $
+$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.2 2025/01/25 23:55:10 vins Exp $
 
 * Default sound unit detection on NetBSD, via audiocfg(1). 
 * Fix undefined macros on NetBSD.
 
 --- src/detection/sound/sound_bsd.c.orig	2025-01-13 07:57:52.000000000 +0000
 +++ src/detection/sound/sound_bsd.c
-@@ -5,14 +5,38 @@
+@@ -5,13 +5,38 @@
  #include <fcntl.h>
  #include <sys/soundcard.h>
  
@@ -18,33 +18,33 @@ $NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.1 2025/01/25 22:16:09 vins E
  const char* ffDetectSound(FFlist* devices)
  {
      char path[] = "/dev/mixer0";
-+#ifdef __NetBSD__
++
++#if defined(__FreeBSD) || defined(__DragonFly__)
+     int defaultDev = ffSysctlGetInt("hw.snd.default_unit", -1);
+ 
+     if (defaultDev == -1)
+         return "sysctl(hw.snd.default_unit) failed";
++#elif defined(__NetBSD__)
 +    const char* const cmd = "audiocfg list | grep [*] | cut -d: -f1";
 +    char buf[32];
-+    long defaultDev = 0;
++    long defaultDev = -1;
 +
 +    FILE* f = popen(cmd, "r");
 +    if (f == NULL)
 +        return "popen() failed";
 +
 +    while (fgets(buf, sizeof buf, f) != NULL) {
-+        defaultDev = strtol(buf, NULL, 10);
++        if ((defaultDev = strtol(buf, NULL, 10)) != -1)
++	    continue;
 +
 +    if (pclose(f) != 0)
 +        return "pclose() failed";
-+
-+    }
-+#else
-     int defaultDev = ffSysctlGetInt("hw.snd.default_unit", -1);
- 
-     if (defaultDev == -1)
-         return "sysctl(hw.snd.default_unit) failed";
- 
 +#endif
++    }
+ 
      for (int idev = 0; idev <= 9; ++idev)
      {
-         path[strlen("/dev/mixer")] = (char) ('0' + idev);
-@@ -26,7 +50,7 @@ const char* ffDetectSound(FFlist* device
+@@ -26,7 +51,7 @@ const char* ffDetectSound(FFlist* device
              continue;
  
          uint32_t mutemask = 0;
