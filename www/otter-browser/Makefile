@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2024/11/14 22:22:09 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/01/25 21:07:19 riastradh Exp $
 
 DISTNAME=	otter-browser-1.0.03
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OtterBrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,8 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_QTWEBENGINE=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_QTWEBKIT=OFF
+.include "options.mk"
 
 NOT_PAX_MPROTECT_SAFE+=	bin/otter-browser
 
@@ -32,6 +31,5 @@ SUBST_SED.fix-paths=		-e 's,"/usr/local,"${PREFIX},g'
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtwebchannel/buildlink3.mk"
-.include "../../x11/qt5-qtwebengine/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
