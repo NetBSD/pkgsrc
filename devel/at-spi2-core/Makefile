@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/01/12 19:23:00 riastradh Exp $
+# $NetBSD: Makefile,v 1.56 2025/01/25 10:15:23 riastradh Exp $
 
 DISTNAME=	at-spi2-core-2.54.0
 PKGREVISION=	4
@@ -33,10 +33,10 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
 .include "../../mk/bsd.prefs.mk"
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
-TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
-MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
-MESON_CROSS_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
-MESON_CROSS_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
+TOOL_DEPENDS+=			glib2-tools>=0:../../devel/glib2-tools
+MESON_BINARIES+=		glib-genmarshal glib-mkenums
+MESON_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
+MESON_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	tool

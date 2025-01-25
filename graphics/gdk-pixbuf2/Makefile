@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2024/06/27 15:19:59 adam Exp $
+# $NetBSD: Makefile,v 1.66 2025/01/25 10:15:24 riastradh Exp $
 
 DISTNAME=	gdk-pixbuf-2.42.12
 PKGNAME=	${DISTNAME:S/pixbuf/pixbuf2/}
@@ -47,10 +47,10 @@ PLIST_VARS+=		native
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 
-TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
-MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
-MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
-MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+TOOL_DEPENDS+=			glib2-tools>=0:../../devel/glib2-tools
+MESON_BINARIES+=		glib-genmarshal glib-mkenums
+MESON_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
+MESON_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
 
 .else
 

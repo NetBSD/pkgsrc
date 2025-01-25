@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/25 09:49:57 riastradh Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/25 10:15:23 riastradh Exp $
 
 DISTNAME=	wayland-protocols-1.39
 CATEGORIES=	devel
@@ -26,9 +26,9 @@ PKGCONFIG_OVERRIDE+=	wayland-protocols.pc.in
 # up a meson cross binary with the whole PREFIX-qualified original
 # pathname.
 TOOL_DEPENDS+=				wayland>=0:../../wayland
-MESON_CROSS_BINARIES+=			wayland_scanner
-MESON_CROSS_BINARY_KEY.wayland_scanner=	${PREFIX}/bin/wayland-scanner
-MESON_CROSS_BINARY.wayland_scanner=	${TOOLBASE}/bin/wayland-scanner
+MESON_BINARIES+=			wayland_scanner
+MESON_BINARY_KEY.wayland_scanner=	${PREFIX}/bin/wayland-scanner
+MESON_BINARY.wayland_scanner=		${TOOLBASE}/bin/wayland-scanner
 .endif
 
 .include "../../devel/meson/build.mk"
