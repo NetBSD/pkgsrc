@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/04/06 05:37:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/01/25 21:29:25 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -132,6 +132,8 @@ lib/tcl${BASEVER}/encoding/jis0201.enc
 lib/tcl${BASEVER}/encoding/jis0208.enc
 lib/tcl${BASEVER}/encoding/jis0212.enc
 lib/tcl${BASEVER}/encoding/koi8-r.enc
+lib/tcl${BASEVER}/encoding/koi8-ru.enc
+lib/tcl${BASEVER}/encoding/koi8-t.enc
 lib/tcl${BASEVER}/encoding/koi8-u.enc
 lib/tcl${BASEVER}/encoding/ksc5601.enc
 lib/tcl${BASEVER}/encoding/macCentEuro.enc
@@ -289,12 +291,13 @@ lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
+lib/tcl8/${BASEVER}/http-2.9.8.tm
 lib/tcl8/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.tm
+lib/tcl8/${BASEVER}/tdbc/sqlite3-${TDBC_VERSION}.uuid
 lib/tcl8/8.4/platform-1.0.19.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.6.1.tm
-lib/tcl8/8.5/tcltest-2.5.7.tm
-lib/tcl8/8.6/http-2.9.8.tm
+lib/tcl8/8.5/tcltest-2.5.9.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
 lib/tdbc${TDBC_VERSION}/libtdbc${TDBC_VERSION}.so
@@ -1077,6 +1080,7 @@ man/mann/my.n
 man/mann/namespace.n
 man/mann/next.n
 man/mann/nextto.n
+man/mann/oo_Slot.n
 man/mann/oo_class.n
 man/mann/oo_copy.n
 man/mann/oo_define.n

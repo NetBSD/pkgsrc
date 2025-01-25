@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.30 2024/04/06 05:37:47 adam Exp $
+# $NetBSD: Makefile.version,v 1.31 2025/01/25 21:29:25 adam Exp $
 # used by cad/xcircuit/Makefile
 # used by devel/tcl-tclcl/Makefile
 # used by lang/tcl/Makefile
@@ -7,10 +7,10 @@
 
 TCL_SONUM=	86
 TCL_BASEVER=	8.6
-TCL_VERSION=	8.6.14
+TCL_VERSION=	8.6.16
 
 # Update bundled versions in lang/tcl/buildlink3.mk
-ITCL_VERSION=		4.2.4
-SQLITE3_VERSION=	3.44.2
-TDBC_VERSION=		1.1.7
-THREAD_VERSION=		2.8.9
+ITCL_VERSION=		4.3.2
+SQLITE3_VERSION=	3.47.2
+TDBC_VERSION=		1.1.10
+THREAD_VERSION=		2.8.11
