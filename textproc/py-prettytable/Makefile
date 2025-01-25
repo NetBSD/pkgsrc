@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2024/11/04 19:07:57 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/01/25 11:40:15 adam Exp $
 
-DISTNAME=	prettytable-3.12.0
+DISTNAME=	prettytable-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/prettytable/}
@@ -11,7 +11,7 @@ COMMENT=	Display tabular data in a visually appealing ASCII table format
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-wcwidth-[0-9]*:../../devel/py-wcwidth
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-lazy-fixtures-[0-9]*:../../devel/py-test-lazy-fixtures
