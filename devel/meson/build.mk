@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.30 2025/01/25 09:49:47 riastradh Exp $
+# $NetBSD: build.mk,v 1.31 2025/01/25 10:15:23 riastradh Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -27,7 +27,25 @@ MAKE_ENV+=	CMAKE=${TOOLS_PATH.false}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${USE_CROSS_COMPILE:U:tl} == yes
+.if ${USE_CROSS_COMPILE:tl} == no
+
+MESON_NATIVE_FILE=	${WRKDIR}/.meson_native
+MESON_NATIVE_ARGS+=	--native-file ${MESON_NATIVE_FILE:Q}
+meson-configure: ${MESON_NATIVE_FILE}
+${MESON_NATIVE_FILE}:
+	@${STEP_MSG} Creating meson native file
+	${RUN}${RM} -f ${.TARGET}.tmp
+	${RUN}${ECHO} '[binaries]' >>${.TARGET}.tmp
+.  for _v_ in ${MESON_BINARIES}
+.    if !defined(MESON_BINARY.${_v_})
+.      error MESON_BINARIES lists ${_v_} but MESON_BINARY.${_v_} is undefined
+.    endif
+	${RUN}${ECHO} ${MESON_BINARY_KEY.${_v_}:U${_v_}} = \'${MESON_BINARY.${_v_}:Q}\' \
+		>>${.TARGET}.tmp
+.  endfor
+	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+.else
 
 MESON_CPU_FAMILY.amd64=		x86_64
 MESON_CPU_FAMILY.arm26?=	arm
@@ -87,9 +105,11 @@ MESON_CROSS_VARS+=	sys_root
 MESON_CROSS.sys_root=	'${_CROSS_DESTDIR}'
 
 MESON_CROSS_FILE=	${WRKDIR}/.meson_cross
+MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 meson-configure: ${MESON_CROSS_FILE}
 ${MESON_CROSS_FILE}:
 	@${STEP_MSG} Creating meson cross file
+	${RUN}${RM} -f ${.TARGET}.tmp
 	${RUN}${ECHO} '[properties]' >${.TARGET}.tmp
 .  for _v_ in ${MESON_CROSS_VARS}
 .    if defined(MESON_CROSS.${_v_})
@@ -114,15 +134,14 @@ ${MESON_CROSS_FILE}:
 	${RUN}${ECHO} "cpu = '${MESON_CPU}'" >>${.TARGET}.tmp
 	${RUN}${ECHO} "endian = '${MESON_CPU_ENDIAN}'" >>${.TARGET}.tmp
 	${RUN}${ECHO} '[binaries]' >>${.TARGET}.tmp
-.  for _v_ in ${MESON_CROSS_BINARIES}
-.    if !defined(MESON_CROSS_BINARY.${_v_})
-.      error MESON_CROSS_BINARIES lists ${_v_} but MESON_CROSS_BINARY.${_v_} is undefined
+.  for _v_ in ${MESON_BINARIES}
+.    if !defined(MESON_BINARY.${_v_})
+.      error MESON_BINARIES lists ${_v_} but MESON_BINARY.${_v_} is undefined
 .    endif
-	${RUN}${ECHO} ${MESON_CROSS_BINARY_KEY.${_v_}:U${_v_}} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' \
+	${RUN}${ECHO} ${MESON_BINARY_KEY.${_v_}:U${_v_}} = \'${MESON_BINARY.${_v_}:Q}\' \
 		>>${.TARGET}.tmp
 .  endfor
 	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
-MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
 
 .endif				# ${USE_CROSS_COMPILE:U:tl} == yes
 
@@ -139,7 +158,7 @@ meson-configure:
 		--mandir ${PKGMANDIR} \
 		--sysconfdir ${PKG_SYSCONFDIR} \
 		--wrap-mode=nodownload \
-		${MESON_CROSS_ARGS} \
+		${MESON_CROSS_ARGS} ${MESON_NATIVE_ARGS} \
 		--buildtype=plain ${MESON_ARGS} . output
 .endfor
 
@@ -186,12 +205,12 @@ _PKG_VARS.meson+=	TEST_DIRS TEST_ENV
 _PKG_VARS.meson+=	INSTALL_DIRS INSTALL_ENV
 _PKG_VARS.meson+=	LLVM_CONFIG_PATH
 _PKG_VARS.meson+=	USE_CMAKE MESON_ARGS
+_PKG_VARS.meson+=	MESON_BINARIES
+_PKG_VARS.meson+=	MESON_BINARY.*
+_PKG_VARS.meson+=	MESON_BINARY_KEY.*
 _PKG_VARS.meson+=	MESON_CROSS_ARCH_VARS
 _PKG_VARS.meson+=	MESON_CROSS_OPSYS_VARS
 _PKG_VARS.meson+=	MESON_CROSS_VARS MESON_CROSS.*
-_PKG_VARS.meson+=	MESON_CROSS_BINARIES
-_PKG_VARS.meson+=	MESON_CROSS_BINARY.*
-_PKG_VARS.meson+=	MESON_CROSS_BINARY_KEY.*
 _USER_VARS.meson=	MAKE_JOBS PKG_SYSCONFDIR
 _USE_VARS.meson=	TOOLS_PATH.false WRKDIR WRKSRC PREFIX PKGMANDIR
 _USE_VARS.meson+=	MACHINE_ARCH
@@ -253,6 +272,8 @@ _IGN_VARS.meson+=	MESON_CPU_FAMILY.powerpc64
 _IGN_VARS.meson+=	MESON_CPU_FAMILY.sh3eb
 _IGN_VARS.meson+=	MESON_CPU_FAMILY.sh3el
 _IGN_VARS.meson+=	MESON_CROSS.sys_root
+_IGN_VARS.meson+=	MESON_NATIVE_ARGS
+_IGN_VARS.meson+=	MESON_NATIVE_FILE
 _IGN_VARS.meson+=	MESON_CROSS_ARGS
 _IGN_VARS.meson+=	MESON_CROSS_FILE
 _LISTED_VARS.meson=	*_ARGS *_DEPENDS

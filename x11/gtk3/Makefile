@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2025/01/12 20:35:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.211 2025/01/25 10:15:24 riastradh Exp $
 
 DISTNAME=	gtk+-3.24.43
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -52,19 +52,19 @@ INSTALLATION_DIRS+=	lib/gtk-3.0/3.0.0/filesystems
 .if ${USE_CROSS_COMPILE:tl} == "yes"
 
 TOOL_DEPENDS+=		glib2>=0:../../devel/glib2
-MESON_CROSS_BINARIES+=	glib-compile-resources glib-compile-schemas
-MESON_CROSS_BINARY.glib-compile-resources=	\
+MESON_BINARIES+=	glib-compile-resources glib-compile-schemas
+MESON_BINARY.glib-compile-resources=	\
 			${TOOLBASE}/bin/glib-compile-resources
-MESON_CROSS_BINARY.glib-compile-schemas=	\
+MESON_BINARY.glib-compile-schemas=	\
 			${TOOLBASE}/bin/glib-compile-schemas
 
-TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
-MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
-MESON_CROSS_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
-MESON_CROSS_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
+TOOL_DEPENDS+=			glib2-tools>=0:../../devel/glib2-tools
+MESON_BINARIES+=		glib-genmarshal glib-mkenums
+MESON_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
+MESON_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
 
-MESON_CROSS_BINARIES+=			gdbus-codegen
-MESON_CROSS_BINARY.gdbus-codegen=	${TOOLS_CMD.gdbus-codegen}
+MESON_BINARIES+=		gdbus-codegen
+MESON_BINARY.gdbus-codegen=	${TOOLS_CMD.gdbus-codegen}
 
 # wayland-protocols abuses pc_sysrootdir in its .pc files, causing the
 # cross-destdir to be prefixed twice to paths.

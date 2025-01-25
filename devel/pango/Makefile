@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2025/01/11 18:10:53 wiz Exp $
+# $NetBSD: Makefile,v 1.270 2025/01/25 10:15:23 riastradh Exp $
 
 DISTNAME=	pango-1.56.0
 CATEGORIES=	devel fonts
@@ -27,10 +27,10 @@ MESON_ARGS+=		-Dcairo=enabled
 MESON_ARGS+=		-Dfontconfig=enabled
 
 .if ${USE_CROSS_COMPILE:tl} == "yes"
-TOOL_DEPENDS+=				glib2-tools>=0:../../devel/glib2-tools
-MESON_CROSS_BINARIES+=			glib-genmarshal glib-mkenums
-MESON_CROSS_BINARY.glib-genmarshal+=	${TOOLBASE:Q}/bin/glib-genmarshal
-MESON_CROSS_BINARY.glib-mkenums+=	${TOOLBASE:Q}/bin/glib-mkenums
+TOOL_DEPENDS+=			glib2-tools>=0:../../devel/glib2-tools
+MESON_BINARIES+=		glib-genmarshal glib-mkenums
+MESON_BINARY.glib-genmarshal=	${TOOLBASE}/bin/glib-genmarshal
+MESON_BINARY.glib-mkenums=	${TOOLBASE}/bin/glib-mkenums
 .endif
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/pango.pc
