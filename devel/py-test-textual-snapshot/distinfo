@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/07/29 07:17:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/01/25 11:36:21 adam Exp $
 
-BLAKE2s (pytest_textual_snapshot-1.0.0.tar.gz) = aeca1a9059ea40cc7f8511c168bdffc58316068800ef483623226b0d9539d791
-SHA512 (pytest_textual_snapshot-1.0.0.tar.gz) = 18e1b77d1f1bc7a89887af8b1c346b0b96bf410b9606aa43fd1fb763b799e1ebb510b622ab9a70ea2aa67f4cf7fba01fa6971c48f36656d4f19e8724c8b6feaa
-Size (pytest_textual_snapshot-1.0.0.tar.gz) = 11071 bytes
+BLAKE2s (pytest_textual_snapshot-1.1.0.tar.gz) = 59807233384960b481b620229d28a87ebff4c69798bbd0e7bc5d0ff7cdb0eea0
+SHA512 (pytest_textual_snapshot-1.1.0.tar.gz) = df667fc68b69ebe92ad669621203be0f89d0ec25c0a203b12a732cc56bd7a366f9ea24496bf9d3abceafa524cde506e7025deeb3d92f61d9e278ed56f8cf979e
+Size (pytest_textual_snapshot-1.1.0.tar.gz) = 11391 bytes
