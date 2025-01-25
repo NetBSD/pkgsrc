@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2025/01/24 11:54:37 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2025/01/25 21:06:23 riastradh Exp $
 
 QTWKVERSION=	5.212.0-alpha4
 DISTNAME=	qtwebkit-${QTWKVERSION}
@@ -24,6 +24,10 @@ USE_TOOLS+=		bison perl:build pkg-config
 CMAKE_INSTALL_PREFIX=	${QTDIR}
 CMAKE_INSTALL_NAME_DIR=	${QTDIR}/lib
 TEST_TARGET=		test
+
+# XXX Workaround for icu-76 whose header files require C++17 unless you
+# define U_HIDE_DRAFT_API.  pkg/59028: qt5-qtwebkit doesn't build
+CXXFLAGS+=		-DU_HIDE_DRAFT_API
 
 # Source/JavaScriptCore/offlineasm/parser.rb:587:in `block in parseSequence': undefined method `=~'
 RUBY_VERSIONS_ACCEPTED=		31
