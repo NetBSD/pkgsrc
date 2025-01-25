@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.57 2023/05/09 12:23:22 jperkin Exp $
+# $NetBSD: tools.SunOS.mk,v 1.58 2025/01/25 03:46:47 pho Exp $
 #
 # System-supplied tools for the Solaris and illumos operating systems.
 #
@@ -36,6 +36,9 @@ TOOLS_PLATFORM.cmp?=		/bin/cmp
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 .endif
 TOOLS_PLATFORM.cp?=		/bin/cp
+.if exists(/usr/lib/cpp)	# OmniOS
+TOOLS_PLATFORM.cpp?=		/usr/lib/cpp
+.endif
 TOOLS_PLATFORM.csh?=		/bin/csh
 .if exists(/usr/bin/curl)
 TOOLS_PLATFORM.curl?=		/usr/bin/curl
