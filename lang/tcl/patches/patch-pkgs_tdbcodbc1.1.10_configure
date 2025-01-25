@@ -1,10 +1,10 @@
-$NetBSD: patch-pkgs_tdbcmysql1.1.7_configure,v 1.1 2024/04/06 05:37:47 adam Exp $
+$NetBSD: patch-pkgs_tdbcodbc1.1.10_configure,v 1.1 2025/01/25 21:29:26 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/tdbcmysql1.1.7/configure.orig	2024-02-09 15:49:31.000000000 +0000
-+++ pkgs/tdbcmysql1.1.7/configure
+--- pkgs/tdbcodbc1.1.10/configure.orig	2024-02-09 15:53:38.000000000 +0000
++++ pkgs/tdbcodbc1.1.10/configure
 @@ -8131,20 +8131,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
