@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2023/06/26 15:53:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/01/25 21:32:11 adam Exp $
 bin/wish
 bin/wish${BASEVER}
 ${PLIST.aqua}include/X11/DECkeysym.h
@@ -147,6 +147,7 @@ lib/tk${BASEVER}/demos/ttknote.tcl
 lib/tk${BASEVER}/demos/ttkpane.tcl
 lib/tk${BASEVER}/demos/ttkprogress.tcl
 lib/tk${BASEVER}/demos/ttkscale.tcl
+lib/tk${BASEVER}/demos/ttkspin.tcl
 lib/tk${BASEVER}/demos/twind.tcl
 lib/tk${BASEVER}/demos/unicodeout.tcl
 lib/tk${BASEVER}/demos/vscale.tcl

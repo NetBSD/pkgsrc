@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_configure,v 1.17 2024/04/06 05:37:48 adam Exp $
+$NetBSD: patch-unix_configure,v 1.18 2025/01/25 21:32:12 adam Exp $
 
 Support MirBSD.
 Honor LDFLAGS.
 Standardize file names.
 
---- unix/configure.orig	2024-02-28 15:18:35.000000000 +0000
+--- unix/configure.orig	2024-12-10 17:31:03.000000000 +0000
 +++ unix/configure
 @@ -4378,10 +4378,10 @@ fi
      # LDFLAGS_ARCH so they eventually end up in LDFLAGS even if [load]
@@ -65,21 +65,20 @@ Standardize file names.
  fi
  
      DLL_INSTALL_DIR="\$(LIB_INSTALL_DIR)"
-@@ -6694,8 +6693,11 @@ fi
+@@ -6694,7 +6693,11 @@ fi
  
  else
  
--            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)"'
--
-+       if test "${SHLIB_SUFFIX}" = ".dylib" ; then
-+            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_VERSION)$(SHLIB_SUFFIX)"'
-+        else
-+            INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)$(SHLIB_VERSION)"'
-+        fi
+-	    INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)"'
++	if test "${SHLIB_SUFFIX}" = ".dylib" ; then
++	    INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/libtk$(MAJOR_VERSION)$(MINOR_VERSION)$(SHLIB_VERSION)$(SHLIB_SUFFIX)"'
++	else
++	    INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) "$(LIB_INSTALL_DIR)/$(LIB_FILE)$(SHLIB_VERSION)"'
++	fi
+ 
  fi
  
- 
-@@ -6729,7 +6731,7 @@ else
+@@ -6729,7 +6732,7 @@ else
  
  fi
  
@@ -88,7 +87,7 @@ Standardize file names.
  
      # Define TCL_LIBS now that we know what DL_LIBS is.
      # The trick here is that we don't want to change the value of TCL_LIBS if
-@@ -9820,7 +9822,7 @@ echo $ECHO_N "checking for X11 libraries
+@@ -9820,7 +9823,7 @@ echo $ECHO_N "checking for X11 libraries
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl -o -r $i/libX11.dylib; then
  		echo "$as_me:$LINENO: result: $i" >&5
  echo "${ECHO_T}$i" >&6
@@ -97,7 +96,7 @@ Standardize file names.
  		x_libraries="$i"
  		break
  	    fi
-@@ -9829,7 +9831,7 @@ echo "${ECHO_T}$i" >&6
+@@ -9829,7 +9832,7 @@ echo "${ECHO_T}$i" >&6
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -106,7 +105,7 @@ Standardize file names.
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -9925,11 +9927,6 @@ fi
+@@ -9925,11 +9928,6 @@ fi
  #	   be replaced by spaces.
  #--------------------------------------------------------------------
  
@@ -118,7 +117,7 @@ Standardize file names.
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
  fi
-@@ -11171,14 +11168,10 @@ else
+@@ -11171,14 +11169,10 @@ else
  	TK_LIB_FLAG="-ltk`echo ${TK_VERSION} | tr -d .`"
  	TK_BUILD_LIB_SPEC="-L\$(TOP_DIR)/win ${TK_LIB_FLAG}"
      else
@@ -134,7 +133,7 @@ Standardize file names.
  fi
  
  #--------------------------------------------------------------------
-@@ -11190,11 +11183,7 @@ fi
+@@ -11190,11 +11184,7 @@ fi
  eval "TK_STUB_LIB_FILE=libtkstub${TK_UNSHARED_LIB_SUFFIX}"
  eval "TK_STUB_LIB_DIR=\"${libdir}\""
  
@@ -147,7 +146,7 @@ Standardize file names.
  
  TK_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
  TK_STUB_LIB_SPEC="-L${TK_STUB_LIB_DIR} ${TK_STUB_LIB_FLAG}"
-@@ -12018,6 +12007,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
+@@ -12018,6 +12008,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
  s,@REZ@,$REZ,;t t
  s,@REZ_FLAGS@,$REZ_FLAGS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t
