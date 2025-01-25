@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2025/01/25 21:15:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.80 2025/01/25 21:52:09 riastradh Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
@@ -105,7 +105,6 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 PYTHON_FOR_BUILD_ONLY=	tool
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/tool.mk"
-.include "../../mk/atomic64.mk"
 .include "../../multimedia/ffmpeg5/buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../print/libcups/buildlink3.mk"
