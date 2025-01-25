@@ -1,8 +1,16 @@
-$NetBSD: distinfo,v 1.92 2024/11/24 19:45:10 adam Exp $
+$NetBSD: distinfo,v 1.93 2025/01/25 22:58:22 adam Exp $
 
 BLAKE2s (wesnoth-1.18.3.tar.bz2) = dc4cd90398171a974ba410b3c27b882e307c46d3dea518f5599d256455485d0d
 SHA512 (wesnoth-1.18.3.tar.bz2) = def324c9ed66ac59e2a9d0ab9ab95f00ddab2d31dacb2d0b5cfba42c5acdba210937f7dd6afde8870a387847a6d021a28dffcb04ce513272df6a4b52a626f30a
 Size (wesnoth-1.18.3.tar.bz2) = 461694247 bytes
 SHA1 (patch-CMakeLists.txt) = e1c4f9bb90529e0a1025c3ce6751b50ddb8171fd
 SHA1 (patch-src_CMakeLists.txt) = 7917bd0a3aedf3523a73e4542cbdf54c08a78f77
+SHA1 (patch-src_server_campaignd_server.cpp) = e30bc66bc8f52dd0fbdf8e658512a2501e528883
+SHA1 (patch-src_server_common_forum__user__handler.cpp) = 2e0e6955b9f02db2ce3a25ba5dd936563e764693
+SHA1 (patch-src_server_common_forum__user__handler.hpp) = 945e6a9cdf7e2e6abdb4bb7e8e8a9b6f8baebcd2
+SHA1 (patch-src_server_common_server__base.cpp) = 0b4ce250915b9bc7d7b15d7d7ad40fb170d0d881
+SHA1 (patch-src_server_common_server__base.hpp) = b67fa674e2305c79153dced4f4386751ff718259
+SHA1 (patch-src_server_common_user__handler.hpp) = 7a9a82d68c0a3e739affbcef08ba6dab2d11536c
+SHA1 (patch-src_server_wesnothd_game.cpp) = 5780f8df69e5f8d820733b63d8a39676e538c05b
+SHA1 (patch-src_server_wesnothd_server.cpp) = 974261c428ab56bf3d4014a23ea62055ad4105e2
 SHA1 (patch-src_wesnoth.cpp) = 73fa69b47de231c5ce16f66a52b449d5242ffe67
