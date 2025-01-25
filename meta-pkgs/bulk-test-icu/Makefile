@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/26 09:01:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/25 20:58:35 riastradh Exp $
 
-DISTNAME=	bulk-test-icu-20241113
+DISTNAME=	bulk-test-icu-20250125
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -35,9 +35,12 @@ DEPENDS+=	libzmf-[0-9]*:../../converters/libzmf
 DEPENDS+=	couchdb-[0-9]*:../../databases/couchdb
 DEPENDS+=	mongo-c-driver-[0-9]*:../../databases/mongo-c-driver
 # Testing mongodb3
+# See NOT_FOR_PLATFORM in databases/mongodb*/Makefile
+.if ${MACHINE_ARCH} != "i386"
 #DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb
 DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb3
 #DEPENDS+=	mongodb-[0-9]*:../../databases/mongodb4
+.endif
 DEPENDS+=	mysql-client-[0-9]*:../../databases/mysql80-client
 # protobuf problem. internel protobuf has rpath problem.
 #DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql80-server
@@ -57,7 +60,13 @@ DEPENDS+=	openrct2-[0-9]*:../../games/openrct2
 DEPENDS+=	openttd-[0-9]*:../../games/openttd
 DEPENDS+=	wesnoth-[0-9]*:../../games/wesnoth
 DEPENDS+=	widelands-[0-9]*:../../games/widelands
+# See ONLY_FOR_PLATFORM in graphics/darktable/Makefile.
+.if ${MACHINE_ARCH} == "aarch64" || \
+    ${MACHINE_ARCH} == "powerpc64le" || \
+    ${MACHINE_ARCH} == "riscv64" || \
+    ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	darktable-[0-9]*:../../graphics/darktable
+.endif
 DEPENDS+=	imv-[0-9]*:../../graphics/imv
 DEPENDS+=	tesseract-[0-9]*:../../graphics/tesseract
 DEPENDS+=	vtk-[0-9]*:../../graphics/vtk
@@ -114,6 +123,7 @@ DEPENDS+=	webkit-gtk-[0-9]*:../../www/webkit-gtk
 DEPENDS+=	maim-[0-9]*:../../x11/maim
 DEPENDS+=	qt5-qtbase-[0-9]*:../../x11/qt5-qtbase
 DEPENDS+=	qt5-qtwebengine-[0-9]*:../../x11/qt5-qtwebengine
+DEPENDS+=	qt5-qtwebkit-[0-9]*:../../x11/qt5-qtwebkit
 DEPENDS+=	qt6-qtbase-[0-9]*:../../x11/qt6-qtbase
 DEPENDS+=	slop-[0-9]*:../../x11/slop
 DEPENDS+=	vte3-[0-9]*:../../x11/vte3
