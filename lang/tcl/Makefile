@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2024/12/27 11:08:30 riastradh Exp $
+# $NetBSD: Makefile,v 1.131 2025/01/25 21:29:25 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -13,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 .include "../../lang/tcl/Makefile.version"
 
-WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
+WRKSRC=		${WRKDIR}/tcl${TCL_VERSION}
 
 USE_GCC_RUNTIME=	yes
 

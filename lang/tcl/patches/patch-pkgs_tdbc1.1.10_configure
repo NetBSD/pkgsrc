@@ -1,11 +1,11 @@
-$NetBSD: patch-pkgs_itcl4.2.4_configure,v 1.1 2024/04/06 05:37:47 adam Exp $
+$NetBSD: patch-pkgs_tdbc1.1.10_configure,v 1.1 2025/01/25 21:29:25 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/itcl4.2.4/configure.orig	2023-12-20 17:04:40.000000000 +0000
-+++ pkgs/itcl4.2.4/configure
-@@ -7444,20 +7444,18 @@ then :
+--- pkgs/tdbc1.1.10/configure.orig	2024-02-23 15:51:36.000000000 +0000
++++ pkgs/tdbc1.1.10/configure
+@@ -7765,20 +7765,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'

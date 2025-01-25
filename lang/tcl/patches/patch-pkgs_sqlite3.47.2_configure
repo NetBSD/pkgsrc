@@ -1,11 +1,11 @@
-$NetBSD: patch-pkgs_thread2.8.9_configure,v 1.1 2024/04/06 05:37:48 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.47.2_configure,v 1.1 2025/01/25 21:29:25 adam Exp $
 
 Honor LDFLAGS on NetBSD.
 https://core.tcl.tk/tcl/tktview/fed5069f8a8e59e97af0a784b534919f5b789b1e
 
---- pkgs/thread2.8.9/configure.orig	2024-02-07 18:27:29.000000000 +0000
-+++ pkgs/thread2.8.9/configure
-@@ -7667,20 +7667,18 @@ then :
+--- pkgs/sqlite3.47.2/configure.orig	2023-11-28 11:02:09.000000000 +0000
++++ pkgs/sqlite3.47.2/configure
+@@ -7458,20 +7458,18 @@ then :
  fi
  	    LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
  	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'

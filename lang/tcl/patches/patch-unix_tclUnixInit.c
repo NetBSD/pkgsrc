@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_tclUnixInit.c,v 1.5 2021/01/20 20:38:49 adam Exp $
+$NetBSD: patch-unix_tclUnixInit.c,v 1.6 2025/01/25 21:29:26 adam Exp $
 
 Carried over from TCL 8.4
 
---- unix/tclUnixInit.c.orig	2020-12-11 17:46:23.000000000 +0000
+--- unix/tclUnixInit.c.orig	2024-11-27 15:56:57.000000000 +0000
 +++ unix/tclUnixInit.c
 @@ -22,7 +22,7 @@
  #    endif
@@ -26,7 +26,7 @@ Carried over from TCL 8.4
  
  #ifdef __CYGWIN__
  #ifdef __cplusplus
-@@ -394,7 +400,7 @@ TclpInitPlatform(void)
+@@ -393,7 +399,7 @@ TclpInitPlatform(void)
      (void) signal(SIGPIPE, SIG_IGN);
  #endif /* SIGPIPE */
  
@@ -35,10 +35,10 @@ Carried over from TCL 8.4
      /*
       * Adjust the rounding mode to be more conventional. Note that FreeBSD
       * only provides the __fpsetreg() used by the following two for the GNU
-@@ -793,6 +799,11 @@ TclpSetVariables(
- #endif
+@@ -797,6 +803,11 @@ TclpSetVariables(
      int unameOK;
-     Tcl_DString ds;
+     const char *p, *q;
+     Tcl_Obj *pkgListObj = Tcl_NewObj();
 +#if defined(__NetBSD__)
 +    char machine_arch[SYS_NMLN];
 +    int mib[2] = { CTL_HW, HW_MACHINE_ARCH };
@@ -47,7 +47,7 @@ Carried over from TCL 8.4
  
  #ifdef HAVE_COREFOUNDATION
      char tclLibPath[MAXPATHLEN + 1];
-@@ -951,8 +962,15 @@ TclpSetVariables(
+@@ -947,8 +958,15 @@ TclpSetVariables(
  
  #endif /* DJGPP */
  	}
