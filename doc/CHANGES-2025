@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.610 2025/01/25 11:49:36 adam Exp $
+$NetBSD: CHANGES-2025,v 1.611 2025/01/25 12:08:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -817,3 +817,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-tablib to 3.8.0 [adam 2025-01-25]
 	Updated devel/py-pydantic to 2.10.6 [adam 2025-01-25]
 	Updated security/py-fido2 to 1.2.0 [adam 2025-01-25]
+	Updated sysutils/open-vm-tools to 12.5.0 [adam 2025-01-25]
+	Updated graphics/libimagequant to 4.3.4 [adam 2025-01-25]
+	Updated databases/postgresql-timescaledb to 2.18.0 [adam 2025-01-25]
