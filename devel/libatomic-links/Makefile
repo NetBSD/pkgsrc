@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/01/11 11:00:13 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/25 09:49:33 riastradh Exp $
 
-PKGNAME=		libatomic-links-1.0
+PKGNAME=		libatomic-links-1.1
 CATEGORIES=		devel
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -36,9 +36,15 @@ do-patch:
 # Only needed here so far; need stems from rust which wants -latomic
 # but rust most probably should not always search /usr/pkg/lib
 do-install:
+	${RUN} \
 	for f in $$(${PKG_INFO} -q -L libatomic); do \
-		b=$$(basename $$f); \
-		${LN} -s -f $$f ${DESTDIR}${PREFIX}/lib/libatomic/$$b; \
+		case $$f in \
+		${PREFIX}/lib/*) \
+			f=../$${f#${PREFIX}/lib/};; \
+		*) \
+			printf 'warning: non-lib symlink: %s\n' $$f >&2; \
+		esac; \
+		${LN} -s -f $$f ${DESTDIR}${PREFIX}/lib/libatomic/; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
