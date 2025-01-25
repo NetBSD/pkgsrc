@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/12/26 11:00:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/25 09:49:57 riastradh Exp $
 
 DISTNAME=	wayland-protocols-1.39
 CATEGORIES=	devel
@@ -15,6 +15,21 @@ USE_TOOLS+=		pkg-config
 MESON_ARGS+=		-Dtests=false
 
 PKGCONFIG_OVERRIDE+=	wayland-protocols.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# wayland-protocols runs wayland-scanner at build-time, but gets the
+# path via pkg-config, and pkg-config -- helpfully describing the
+# target system instead of the native system -- returns a full path
+# under PREFIX while we need it to be under TOOLBASE, so we have to set
+# up a meson cross binary with the whole PREFIX-qualified original
+# pathname.
+TOOL_DEPENDS+=				wayland>=0:../../wayland
+MESON_CROSS_BINARIES+=			wayland_scanner
+MESON_CROSS_BINARY_KEY.wayland_scanner=	${PREFIX}/bin/wayland-scanner
+MESON_CROSS_BINARY.wayland_scanner=	${TOOLBASE}/bin/wayland-scanner
+.endif
 
 .include "../../devel/meson/build.mk"
 .include "../../devel/wayland/buildlink3.mk"
