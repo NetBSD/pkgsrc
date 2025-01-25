@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/25 21:41:47 pin Exp $
+
+BLAKE2s (nerd-fonts/3.3.0/FantasqueSansMono.tar.xz) = 7282e8ccd07d61fd92b697a67d7a9f9c56b117deb89eb9db7e29b9f2ef811411
+SHA512 (nerd-fonts/3.3.0/FantasqueSansMono.tar.xz) = fbc6267e85b589eb4fc6ff25096d6c94a5393d49e3ebc64c96a8dac9c2266f78d7360e307841ea9d4a69e6477980f34661034ee2eacfdb1eaa2495dbbbe46b8d
+Size (nerd-fonts/3.3.0/FantasqueSansMono.tar.xz) = 2387688 bytes

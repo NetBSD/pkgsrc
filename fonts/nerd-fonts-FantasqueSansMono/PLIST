@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/25 21:41:47 pin Exp $
+share/fonts/X11/TTF/FantasqueSansMNerdFont-Bold.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFont-BoldItalic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFont-Italic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFont-Regular.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontMono-Bold.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontMono-BoldItalic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontMono-Italic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontMono-Regular.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontPropo-Bold.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontPropo-BoldItalic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontPropo-Italic.ttf
+share/fonts/X11/TTF/FantasqueSansMNerdFontPropo-Regular.ttf
