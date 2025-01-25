@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/12 16:13:10 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/25 10:27:31 riastradh Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -6,7 +6,7 @@ DISTNAME=	netatalk-4-0-6
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -20,6 +20,7 @@ WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 USE_TOOLS+=		pkg-config perl
 TOOL_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=		docbook-xsl>=1.79.2:../../textproc/docbook-xsl
+MESON_ARGS+=		-Dwith-docbook-path=${TOOLBASE:Q}/share/xsl/docbook
 
 PKG_SYSCONFSUBDIR=	netatalk
 
