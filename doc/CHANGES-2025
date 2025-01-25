@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.616 2025/01/25 21:43:10 pin Exp $
+$NetBSD: CHANGES-2025,v 1.617 2025/01/25 21:53:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/tcl to 8.6.16 [adam 2025-01-25]
 	Updated x11/tk to 8.6.16 [adam 2025-01-25]
 	Added fonts/nerd-fonts-FantasqueSansMono version 3.3.0 [pin 2025-01-25]
+	Updated x11/kwindowsystem to 5.116.0nb5 [wiz 2025-01-25]
