@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/11/04 19:07:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/01/25 11:40:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -6,6 +6,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/prettytable/__init__.py
 ${PYSITELIB}/prettytable/__init__.pyc
 ${PYSITELIB}/prettytable/__init__.pyo
+${PYSITELIB}/prettytable/__main__.py
+${PYSITELIB}/prettytable/__main__.pyc
+${PYSITELIB}/prettytable/__main__.pyo
 ${PYSITELIB}/prettytable/_version.py
 ${PYSITELIB}/prettytable/_version.pyc
 ${PYSITELIB}/prettytable/_version.pyo
