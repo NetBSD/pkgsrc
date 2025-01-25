@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2024/09/30 17:53:01 ktnb Exp $
+# $NetBSD: Makefile.common,v 1.21 2025/01/25 21:11:47 pin Exp $
 # used by fonts/nerd-fonts-3270/Makefile
 # used by fonts/nerd-fonts-Agave/Makefile
 # used by fonts/nerd-fonts-AnonymousPro/Makefile
@@ -12,6 +12,7 @@
 # used by fonts/nerd-fonts-iA-Writer/Makefile
 # used by fonts/nerd-fonts-IBMPlexMono/Makefile
 # used by fonts/nerd-fonts-DaddyTimeMono/Makefile
+# used by fonts/nerd-fonts-FantasqueSansMono/Makefile
 # used by fonts/nerd-fonts-Meslo/Makefile
 # used by fonts/nerd-fonts-JetBrainsMono/Makefile
 # used by fonts/nerd-fonts-SourceCodePro/Makefile
@@ -21,7 +22,7 @@
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ryanoasis/}
 GITHUB_PROJECT=	nerd-fonts
-GITHUB_RELEASE=	v3.2.1
+GITHUB_RELEASE=	v3.3.0
 DIST_SUBDIR=	${GITHUB_PROJECT}/${GITHUB_RELEASE:S/v//}
 EXTRACT_SUFX=	.tar.xz
 
