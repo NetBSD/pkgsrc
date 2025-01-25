@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.91 2025/01/25 03:30:46 pho Exp $
+# $NetBSD: SunOS.mk,v 1.92 2025/01/25 18:16:01 pho Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -32,6 +32,8 @@ USERADD?=		/usr/sbin/useradd
 # The native tar(1) is a pre-POSIX one which truncates paths longer than
 # 100 bytes.
 EXTRACT_USING?=		bsdtar
+# But bsdtar chokes on UTF-8 file names on the C locale.
+EXTRACT_ENV+=		LC_CTYPE=en_US.UTF-8
 .endif
 
 .if exists(/usr/openwin/include/X11/X.h)
