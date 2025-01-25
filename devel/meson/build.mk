@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.29 2024/08/11 00:19:14 js Exp $
+# $NetBSD: build.mk,v 1.30 2025/01/25 09:49:47 riastradh Exp $
 
 MESON_REQD?=	0
 .for version in ${MESON_REQD}
@@ -115,10 +115,11 @@ ${MESON_CROSS_FILE}:
 	${RUN}${ECHO} "endian = '${MESON_CPU_ENDIAN}'" >>${.TARGET}.tmp
 	${RUN}${ECHO} '[binaries]' >>${.TARGET}.tmp
 .  for _v_ in ${MESON_CROSS_BINARIES}
-.    if defined(MESON_CROSS_BINARY.${_v_})
-	${RUN}${ECHO} ${_v_} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' \
-		>>${.TARGET}.tmp
+.    if !defined(MESON_CROSS_BINARY.${_v_})
+.      error MESON_CROSS_BINARIES lists ${_v_} but MESON_CROSS_BINARY.${_v_} is undefined
 .    endif
+	${RUN}${ECHO} ${MESON_CROSS_BINARY_KEY.${_v_}:U${_v_}} = \'${MESON_CROSS_BINARY.${_v_}:Q}\' \
+		>>${.TARGET}.tmp
 .  endfor
 	${RUN}${MV} -f ${.TARGET}.tmp ${.TARGET}
 MESON_CROSS_ARGS+=	--cross-file ${MESON_CROSS_FILE:Q}
@@ -188,7 +189,9 @@ _PKG_VARS.meson+=	USE_CMAKE MESON_ARGS
 _PKG_VARS.meson+=	MESON_CROSS_ARCH_VARS
 _PKG_VARS.meson+=	MESON_CROSS_OPSYS_VARS
 _PKG_VARS.meson+=	MESON_CROSS_VARS MESON_CROSS.*
-_PKG_VARS.meson+=	MESON_CROSS_BINARIES MESON_CROSS_BINARY.*
+_PKG_VARS.meson+=	MESON_CROSS_BINARIES
+_PKG_VARS.meson+=	MESON_CROSS_BINARY.*
+_PKG_VARS.meson+=	MESON_CROSS_BINARY_KEY.*
 _USER_VARS.meson=	MAKE_JOBS PKG_SYSCONFDIR
 _USE_VARS.meson=	TOOLS_PATH.false WRKDIR WRKSRC PREFIX PKGMANDIR
 _USE_VARS.meson+=	MACHINE_ARCH
