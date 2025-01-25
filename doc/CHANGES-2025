@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.612 2025/01/25 13:39:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.613 2025/01/25 19:10:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libimagequant to 4.3.4 [adam 2025-01-25]
 	Updated databases/postgresql-timescaledb to 2.18.0 [adam 2025-01-25]
 	Updated devel/pango to 1.56.1 [pin 2025-01-25]
+	Updated www/snac to 2.69 [schmonz 2025-01-25]
