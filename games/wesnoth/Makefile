@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2024/12/29 15:09:49 adam Exp $
+# $NetBSD: Makefile,v 1.225 2025/01/25 21:33:37 riastradh Exp $
 
 DISTNAME=	wesnoth-1.18.3
 PKGREVISION=	2
@@ -10,6 +10,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
 LICENSE=	gnu-gpl-v2
+
+# In file included from /pbulk/work/games/wesnoth/work/wesnoth-1.18.3/src/server/common/server_base.cpp:16:
+# /pbulk/work/games/wesnoth/work/wesnoth-1.18.3/src/server/common/server_base.hpp:33:10: fatal error: boost/asio/io_service.hpp: No such file or directory
+#    33 | #include <boost/asio/io_service.hpp>
+#       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# This header file existed in 1.86 but no longer in 1.87:
+#
+# https://www.boost.org/doc/libs/1_86_0/boost/asio/io_service.hpp
+# https://www.boost.org/doc/libs/1_87_0/boost/asio/io_service.hpp
+BROKEN+=	"Incompatible with boost>=1.87"
 
 TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
