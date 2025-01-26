@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.631 2025/01/26 17:42:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.632 2025/01/26 18:02:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-soundfile to 0.13.1 [adam 2025-01-26]
 	Updated finance/py-braintree to 4.32.0 [adam 2025-01-26]
 	Updated devel/py-project-api to 1.9.0 [adam 2025-01-26]
+	Updated time/php-framadate to 1.1.19nb1 [wiz 2025-01-26]
