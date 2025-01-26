@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.627 2025/01/26 15:12:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.628 2025/01/26 15:18:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -840,3 +840,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-protego to 0.4.0 [adam 2025-01-26]
 	Updated www/py-flask-mail to 0.10.0 [adam 2025-01-26]
 	Added graphics/mtpaint version 3.50.11 [wiz 2025-01-26]
+	Updated shells/oh-my-posh to 24.19.0 [pin 2025-01-26]
