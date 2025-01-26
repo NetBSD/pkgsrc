@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/01/18 14:15:56 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/26 04:49:14 pho Exp $
 
-DISTNAME=	pkgchkxx-0.2.4
+DISTNAME=	pkgchkxx-0.2.5
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
 GITHUB_RELEASE=	${DISTNAME}
