@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.3 2025/01/01 19:41:23 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.4 2025/01/26 05:48:14 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	bitflags-2.6.0
 CARGO_CRATE_DEPENDS+=	libc-0.2.169
