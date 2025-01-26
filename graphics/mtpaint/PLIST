@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/26 15:12:27 wiz Exp $
+bin/mtpaint
+man/man1/mtpaint.1
+share/applications/mtpaint.desktop
+share/locale/cs/LC_MESSAGES/mtpaint.mo
+share/locale/de/LC_MESSAGES/mtpaint.mo
+share/locale/es/LC_MESSAGES/mtpaint.mo
+share/locale/fr/LC_MESSAGES/mtpaint.mo
+share/locale/gl/LC_MESSAGES/mtpaint.mo
+share/locale/hu/LC_MESSAGES/mtpaint.mo
+share/locale/it/LC_MESSAGES/mtpaint.mo
+share/locale/ja/LC_MESSAGES/mtpaint.mo
+share/locale/kab/LC_MESSAGES/mtpaint.mo
+share/locale/nl/LC_MESSAGES/mtpaint.mo
+share/locale/pl/LC_MESSAGES/mtpaint.mo
+share/locale/pt/LC_MESSAGES/mtpaint.mo
+share/locale/pt_BR/LC_MESSAGES/mtpaint.mo
+share/locale/ru/LC_MESSAGES/mtpaint.mo
+share/locale/sk/LC_MESSAGES/mtpaint.mo
+share/locale/sv/LC_MESSAGES/mtpaint.mo
+share/locale/tl/LC_MESSAGES/mtpaint.mo
+share/locale/tr/LC_MESSAGES/mtpaint.mo
+share/locale/zh_CN/LC_MESSAGES/mtpaint.mo
+share/locale/zh_TW/LC_MESSAGES/mtpaint.mo
+share/pixmaps/mtpaint.png
