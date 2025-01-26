@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25348 2025/01/24 13:23:36 pin Exp $
+$NetBSD: TODO,v 1.25349 2025/01/26 14:27:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -630,6 +630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flow-tools-0.411
 	o fltk-1.4.0
 	o fluent-bit-1.7.4
+	o fluidsynth-2.4.3
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -735,6 +736,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
+	o grpc-1.70.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gtklevel9-5.1
@@ -867,6 +869,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libobjc2-2.1
 	o liboobs-2.32.0
 	o liboop-1.0.1
+	o libpaper-2.2.6
 	o libpgm-5.2.122
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librdkafka-1.6.1
@@ -968,7 +971,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o obs-studio-30.2
 	o ocaml-5.2.1 [wip]
 	o ocaml-cppo-1.6.9
-	o ocaml-dune-3.17.1
+	o ocaml-dune-3.17.2
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
@@ -1117,6 +1120,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-attrs-25.1.0
+	o py-cachetools-5.5.1
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
@@ -1126,6 +1131,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-auth-2.38.0
+	o py-grpcio-1.70.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-mailman-3.3.10
@@ -1139,12 +1146,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-postgresql-5.1.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
+	o py-ruff-0.9.3
 	o py-sbws-1.1.0
 	o py-scgi-2.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
 	o py-tokyocabinet-0.6
+	o py-twine-6.1.0
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1284,6 +1293,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-5.21.0
 	o tfmxplay-1.1.6
 	o tigervnc-1.14.1
 	o tightvnc-2.7.10
@@ -1301,6 +1311,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.24.7
+	o tree-sitter-heex-0.8.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
