@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:17:28 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/01/26 07:31:51 wiz Exp $
 
-BLAKE2s (Crypt-Primes-0.50.tar.gz) = 6ef6beeda91f616bde003b87d72edffd08a9a1616694dceb9c17935e568d90f7
-SHA512 (Crypt-Primes-0.50.tar.gz) = 82e6c3eb5dacf7897c82284b33d18d08c82cd5c3d1f8bc1287ce0f918de655b1bd1f8639863969e5732cb01feb4733da347fa9529986f6fee035d73c0c810739
-Size (Crypt-Primes-0.50.tar.gz) = 136299 bytes
+BLAKE2s (Crypt-Primes-0.52.tar.gz) = dfdc667356bf78e261bc9d5163f85136c22b561940b187edf3dc8f91fbfd6f51
+SHA512 (Crypt-Primes-0.52.tar.gz) = d2ff88b424e0dffec0bc3f920ec7c8db5373ea302adad07837346f4a9999d314e9ad475a2383c84039202ebf209b94451e4066a5fb34d0731adf92619bd2becf
+Size (Crypt-Primes-0.52.tar.gz) = 151272 bytes
