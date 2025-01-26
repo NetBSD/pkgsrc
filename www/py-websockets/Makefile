@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2025/01/20 06:07:27 adam Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/26 15:48:45 he Exp $
 
 DISTNAME=	websockets-14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,4 +16,5 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 # 9 errors
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
