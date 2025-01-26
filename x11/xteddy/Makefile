@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/01/17 20:18:18 ktnb Exp $
+# $NetBSD: Makefile,v 1.25 2025/01/26 00:51:06 ktnb Exp $
 
 DISTNAME=	xteddy_2.2.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -16,7 +16,7 @@ USE_TOOLS+=	bash:run pkg-config
 
 GNU_CONFIGURE=	YES
 
-#BUILDLINK_DEPMETHOD.libXt?=	build
+LDFLAGS.SunOS+=	-lXext
 
 REPLACE_BASH+=	xtoys
 
@@ -30,6 +30,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_MESSAGE.prefix=	Adapt hardcoded prefix for pkgsrc.
 
 .include "../../graphics/imlib2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
