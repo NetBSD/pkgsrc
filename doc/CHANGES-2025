@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.630 2025/01/26 17:32:07 vins Exp $
+$NetBSD: CHANGES-2025,v 1.631 2025/01/26 17:42:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -843,3 +843,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 24.19.0 [pin 2025-01-26]
 	Updated devel/bacon to 3.9.0 [pin 2025-01-26]
 	Updated sysutils/fastfetch to 2.35.0 [vins 2025-01-26]
+	Updated audio/py-soundfile to 0.13.1 [adam 2025-01-26]
+	Updated finance/py-braintree to 4.32.0 [adam 2025-01-26]
+	Updated devel/py-project-api to 1.9.0 [adam 2025-01-26]
