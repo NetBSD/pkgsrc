@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.621 2025/01/26 07:07:34 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.622 2025/01/26 07:25:09 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkgchkxx to 0.2.5 [pho 2025-01-26]
 	Updated textproc/clicsv to 1.0.9 [pin 2025-01-26]
 	Updated sysutils/fzf to 0.58.0 [iquiw 2025-01-26]
+	Updated devel/ast-grep to 0.34.1 [pin 2025-01-26]
