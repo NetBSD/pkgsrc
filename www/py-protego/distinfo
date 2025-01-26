@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/08 17:53:36 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/01/26 11:44:53 adam Exp $
 
-BLAKE2s (Protego-0.3.1.tar.gz) = d7dd3a7af083ccf8b9ae918888e7737396e57a3b9afa630425e77919415ad242
-SHA512 (Protego-0.3.1.tar.gz) = 2ec2b7f5d27f7e69a0513f59c6916f5b022c89706a78e65f222d4e8470390b0bef342e341fd6f861e72cf448a0bfe3f0c23fb2ffe94fc8a14a9a1b501c890d06
-Size (Protego-0.3.1.tar.gz) = 3246145 bytes
+BLAKE2s (protego-0.4.0.tar.gz) = ddcfd7d459b61c758af63935f5c967baea4384ca9fe97176118816261e329f87
+SHA512 (protego-0.4.0.tar.gz) = 291b0c6a08c88d2c5d2e9926cd7b80a8174f04f6f4ef2fd3ff624af145bd8511ac5f5fec5757d7ea73d8d46575d29e860d2d874db6a20e96bd45a394bf5ebe6a
+Size (protego-0.4.0.tar.gz) = 3246425 bytes
