@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2025/01/23 19:37:41 riastradh Exp $
+# $NetBSD: Makefile,v 1.26 2025/01/26 06:47:38 riastradh Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -50,6 +50,8 @@ post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*container.*
 	${RM} -f ${DESTDIR}${PREFIX}/lib/libboost_*graph.*
 
+BUILDLINK_API_DEPENDS.boost-libs+=	boost-libs-${BOOST_VERSION}{,nb[0-9]*}
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/py-boost-cmake/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
