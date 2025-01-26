@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/01/23 14:31:16 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2025/01/26 12:33:03 wiz Exp $
 
 BLAKE2s (pytorch-v2.5.1.tar.gz) = 299bbffbdde5673d420cf21f08c3bcc518b233e63a19231e6a631980849bd8b9
 SHA512 (pytorch-v2.5.1.tar.gz) = a8882608c2ab6467a58d60c6df84c9f1004b43eafeba57db499dbbfdecc09db2e221b9d4c344c8af7c0bea6252e874c400483502dca24a0b474c376b9fef1dd4
@@ -18,6 +18,6 @@ SHA1 (patch-third__party_fbgemm_third__party_cpuinfo_src_init.c) = 0bb63c242f06c
 SHA1 (patch-third__party_kineto_libkineto_src_ThreadUtil.cpp) = cb6462eea995445c8f65592bf427605e781000f9
 SHA1 (patch-third__party_protobuf_post__process__dist.sh) = b27d6497f8649491441ef3a2bfc9eb5fa22ba474
 SHA1 (patch-third__party_tensorpipe_tensorpipe_common_system.cc) = 6f714d89681c245d531809fbf64b2b9c77fce84d
-SHA1 (patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp) = 3c3e96f4ff9fca29b9aca65ba3dab4d87782e682
+SHA1 (patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp) = 2c56c736040090040aa04d8d446ead61bb3b207c
 SHA1 (patch-torch_csrc_distributed_c10d_socket.cpp) = cace5d33d59bb8fec1933e74223049e5d63aa0a9
 SHA1 (patch-torch_csrc_utils_byte__order.h) = 089495773fbd7e7340dbd7545341c56d2f4de9b3
