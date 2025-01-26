@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1064 2025/01/04 16:34:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.1065 2025/01/26 15:12:36 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -391,6 +391,7 @@ SUBDIR+=	moka-icon-theme
 SUBDIR+=	mpeg2codec
 SUBDIR+=	mpgtx
 SUBDIR+=	mscgen
+SUBDIR+=	mtpaint
 SUBDIR+=	mygui
 SUBDIR+=	mypaint
 SUBDIR+=	mypaint-brushes
