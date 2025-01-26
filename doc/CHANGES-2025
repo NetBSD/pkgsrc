@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.620 2025/01/26 05:48:33 pin Exp $
+$NetBSD: CHANGES-2025,v 1.621 2025/01/26 07:07:34 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed x11/xteddy2 [ktnb 2025-01-25]
 	Updated pkgtools/pkgchkxx to 0.2.5 [pho 2025-01-26]
 	Updated textproc/clicsv to 1.0.9 [pin 2025-01-26]
+	Updated sysutils/fzf to 0.58.0 [iquiw 2025-01-26]
