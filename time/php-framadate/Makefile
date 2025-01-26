@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/23 15:47:16 manu Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/26 18:02:49 wiz Exp $
 
 DISTNAME=	framadate-1.1.19
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time www
 MASTER_SITES=	https://framagit.org/framasoft/framadate/framadate/-/archive/1.1.19/
 EXTRACT_SUFX=	.tar.bz2
@@ -44,7 +45,7 @@ MAKE_DIRS_PERMS+=	${WWWDIR}/app/inc ${APACHE_USER} ${SHAREGRP} 0755
 INSTALLATION_DIRS+=	${DOCDIR} ${WWWDIR}
 
 do-build:
-	cd ${WRKSRC} && composer update
+	cd ${WRKSRC} && ${SETENV} COMPOSER_HOME=${WRKDIR}/composer composer update
 	cd ${WRKSRC} && ${CHMOD} -R og-w .
 	${GREP} -rl '^#!/usr/bin/env' ${WRKSRC}/vendor | while read f ; do \
 		${CP} $$f $$f.orig && \
@@ -64,6 +65,7 @@ do-install:
 	done
 	cd ${WRKSRC} && ${FIND} ${WWW_DIRS} *.php robots.txt -print | \
 		${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${WWWDIR}
+	${RM} -rf ${DESTDIR}${PREFIX}/share/framadate/vendor/o80/i18n/.git
 	${INSTALL_DATA} ${WRKSRC}/htaccess.txt \
 		${DESTDIR}${PREFIX}/${WWWDIR}/.htaccess
 
