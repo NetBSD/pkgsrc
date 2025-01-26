@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/11/11 07:29:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/26 15:44:36 he Exp $
 
 DISTNAME=	ujson-5.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,4 +18,5 @@ USE_LANGUAGES=	c c++
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
