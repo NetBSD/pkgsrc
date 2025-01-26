@@ -1,11 +1,11 @@
-$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.2 2025/01/25 23:55:10 vins Exp $
+$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.3 2025/01/26 09:14:05 vins Exp $
 
 * Default sound unit detection on NetBSD, via audiocfg(1). 
 * Fix undefined macros on NetBSD.
 
 --- src/detection/sound/sound_bsd.c.orig	2025-01-13 07:57:52.000000000 +0000
 +++ src/detection/sound/sound_bsd.c
-@@ -5,13 +5,38 @@
+@@ -5,13 +5,39 @@
  #include <fcntl.h>
  #include <sys/soundcard.h>
  
@@ -34,8 +34,9 @@ $NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.2 2025/01/25 23:55:10 vins E
 +        return "popen() failed";
 +
 +    while (fgets(buf, sizeof buf, f) != NULL) {
-+        if ((defaultDev = strtol(buf, NULL, 10)) != -1)
-+	    continue;
++	defaultDev = strtol(buf, NULL, 10);
++        if (defaultDev == -1)
++	    return "audiocfg: failed to get default sound unit";
 +
 +    if (pclose(f) != 0)
 +        return "pclose() failed";
@@ -44,7 +45,7 @@ $NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.2 2025/01/25 23:55:10 vins E
  
      for (int idev = 0; idev <= 9; ++idev)
      {
-@@ -26,7 +51,7 @@ const char* ffDetectSound(FFlist* device
+@@ -26,7 +52,7 @@ const char* ffDetectSound(FFlist* device
              continue;
  
          uint32_t mutemask = 0;
