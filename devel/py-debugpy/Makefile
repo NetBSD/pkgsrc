@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2025/01/17 19:30:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/26 15:34:48 he Exp $
 
 DISTNAME=	debugpy-1.8.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -33,4 +33,5 @@ post-install:
 	${MV} debugpy debugpy-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
