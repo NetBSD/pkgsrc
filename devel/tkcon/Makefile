@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2019/10/01 23:40:40 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/26 12:14:14 gdt Exp $
 
 DISTNAME=	tkcon-2.7.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wjoye/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -8,7 +9,10 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wjoye/tkcon/
 COMMENT=	Enhanced Tk Console for all Tk platforms
-#LICENSE=	# esdl-license like with bourbon_ware clause v2
+LICENSE=	esdl-license
+# doc/license.terms also contains "bourbon_ware clause v2", which is a
+# declaration that donations are appreciated, rather than a license
+# or a modification of terms.
 
 USE_TOOLS+=	wish:run
 
