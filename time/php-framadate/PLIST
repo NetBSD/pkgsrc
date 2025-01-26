@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/23 15:47:16 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/26 18:02:49 wiz Exp $
 share/doc/framadate/AUTHORS.md
 share/doc/framadate/CHANGELOG.md
 share/doc/framadate/INSTALL.md
@@ -1472,31 +1472,6 @@ share/framadate/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php
 share/framadate/vendor/nikic/php-parser/lib/PhpParser/ParserFactory.php
 share/framadate/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php
 share/framadate/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php
-share/framadate/vendor/o80/i18n/.git/HEAD
-share/framadate/vendor/o80/i18n/.git/ORIG_HEAD
-share/framadate/vendor/o80/i18n/.git/config
-share/framadate/vendor/o80/i18n/.git/description
-share/framadate/vendor/o80/i18n/.git/hooks/applypatch-msg.sample
-share/framadate/vendor/o80/i18n/.git/hooks/commit-msg.sample
-share/framadate/vendor/o80/i18n/.git/hooks/post-update.sample
-share/framadate/vendor/o80/i18n/.git/hooks/pre-applypatch.sample
-share/framadate/vendor/o80/i18n/.git/hooks/pre-commit.sample
-share/framadate/vendor/o80/i18n/.git/hooks/pre-rebase.sample
-share/framadate/vendor/o80/i18n/.git/hooks/prepare-commit-msg.sample
-share/framadate/vendor/o80/i18n/.git/hooks/update.sample
-share/framadate/vendor/o80/i18n/.git/index
-share/framadate/vendor/o80/i18n/.git/info/exclude
-share/framadate/vendor/o80/i18n/.git/info/refs
-share/framadate/vendor/o80/i18n/.git/logs/HEAD
-share/framadate/vendor/o80/i18n/.git/logs/refs/heads/develop
-share/framadate/vendor/o80/i18n/.git/logs/refs/remotes/origin/HEAD
-share/framadate/vendor/o80/i18n/.git/objects/info/packs
-share/framadate/vendor/o80/i18n/.git/objects/pack/pack-741268c77b65b5fe2801b3b014e0b284771052a2.idx
-share/framadate/vendor/o80/i18n/.git/objects/pack/pack-741268c77b65b5fe2801b3b014e0b284771052a2.pack
-share/framadate/vendor/o80/i18n/.git/objects/pack/pack-741268c77b65b5fe2801b3b014e0b284771052a2.rev
-share/framadate/vendor/o80/i18n/.git/packed-refs
-share/framadate/vendor/o80/i18n/.git/refs/heads/develop
-share/framadate/vendor/o80/i18n/.git/refs/remotes/origin/HEAD
 share/framadate/vendor/o80/i18n/.gitignore
 share/framadate/vendor/o80/i18n/.gitlab-ci.yml
 share/framadate/vendor/o80/i18n/.php-cs-fixer.dist.php
