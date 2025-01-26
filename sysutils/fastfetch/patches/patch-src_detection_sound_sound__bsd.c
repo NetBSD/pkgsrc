@@ -1,56 +1,83 @@
-$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.3 2025/01/26 09:14:05 vins Exp $
+$NetBSD: patch-src_detection_sound_sound__bsd.c,v 1.4 2025/01/26 17:30:20 vins Exp $
 
 * Default sound unit detection on NetBSD, via audiocfg(1). 
 * Fix undefined macros on NetBSD.
 
---- src/detection/sound/sound_bsd.c.orig	2025-01-13 07:57:52.000000000 +0000
+--- src/detection/sound/sound_bsd.c.orig	2025-01-26 02:14:38.000000000 +0000
 +++ src/detection/sound/sound_bsd.c
-@@ -5,13 +5,39 @@
+@@ -4,29 +4,54 @@
+ 
  #include <fcntl.h>
  #include <sys/soundcard.h>
++#include <unistd.h>
  
-+/* Obsolete macros */
-+#ifndef SOUND_MIXER_MUTE	// unavailable on some platforms
-+#define SOUND_MIXER_MUTE	SOUND_MIXER_NONE
-+#define SOUND_MIXER_READ_MUTE	MIXER_READ(SOUND_MIXER_MUTE)
-+#endif
-+
  const char* ffDetectSound(FFlist* devices)
  {
-     char path[] = "/dev/mixer0";
-+
-+#if defined(__FreeBSD) || defined(__DragonFly__)
+-    char path[] = "/dev/mixer0";
++    #ifndef __NetBSD__
      int defaultDev = ffSysctlGetInt("hw.snd.default_unit", -1);
- 
+-
      if (defaultDev == -1)
          return "sysctl(hw.snd.default_unit) failed";
-+#elif defined(__NetBSD__)
-+    const char* const cmd = "audiocfg list | grep [*] | cut -d: -f1";
-+    char buf[32];
-+    long defaultDev = -1;
-+
-+    FILE* f = popen(cmd, "r");
-+    if (f == NULL)
-+        return "popen() failed";
-+
-+    while (fgets(buf, sizeof buf, f) != NULL) {
-+	defaultDev = strtol(buf, NULL, 10);
-+        if (defaultDev == -1)
-+	    return "audiocfg: failed to get default sound unit";
-+
-+    if (pclose(f) != 0)
-+        return "pclose() failed";
-+#endif
++    #else
++    int defaultDev;
++    {
++        char mixerp[12];
++        ssize_t plen = readlink("/dev/mixer", mixerp, ARRAY_SIZE(mixerp));
++        if (plen < 6)
++            return "readlink(/dev/mixer) failed";
++        defaultDev = mixerp[plen - 1] - '0';
++        if (defaultDev < 0 || defaultDev > 9)
++            return "Invalid mixer device";
 +    }
++    #endif
  
-     for (int idev = 0; idev <= 9; ++idev)
+-    for (int idev = 0; idev <= 9; ++idev)
++    char path[] = "/dev/mixer0";
++
++    struct oss_sysinfo info = { .nummixers = 9 };
++
++    for (int idev = 0; idev <= info.nummixers; ++idev)
      {
-@@ -26,7 +52,7 @@ const char* ffDetectSound(FFlist* device
+         path[strlen("/dev/mixer")] = (char) ('0' + idev);
+         FF_AUTO_CLOSE_FD int fd = open(path, O_RDWR);
+         if (fd < 0) break;
+ 
++        if (idev == 0)
++        {
++            if (ioctl(fd, SNDCTL_SYSINFO, &info) != 0)
++                return "ioctl(SNDCTL_SYSINFO) failed";
++        }
++
+         uint32_t devmask = 0;
+         if (ioctl(fd, SOUND_MIXER_READ_DEVMASK, &devmask) < 0)
+             continue;
+         if (!(devmask & SOUND_MASK_VOLUME))
              continue;
  
++        #if defined(SOUND_MIXER_MUTE) && (SOUND_MIXER_MUTE != SOUND_MIXER_NONE)
++        #define FF_SOUND_HAVE_MIXER_MUTE 1
          uint32_t mutemask = 0;
 -        ioctl(fd, SOUND_MIXER_READ_MUTE, &mutemask); // doesn't seem to be available on DragonFly
 +        ioctl(fd, SOUND_MIXER_READ_MUTE, &mutemask);
++        #endif
  
          struct oss_card_info ci = { .card = idev };
          if (ioctl(fd, SNDCTL_CARDINFO, &ci) < 0)
+@@ -40,10 +65,12 @@ const char* ffDetectSound(FFlist* device
+         ffStrbufInitS(&device->identifier, path);
+         ffStrbufInitF(&device->name, "%s %s", ci.longname, ci.hw_info);
+         ffStrbufTrimRightSpace(&device->name);
+-        ffStrbufInitStatic(&device->platformApi, "OSS");
+-        device->volume = mutemask & SOUND_MASK_VOLUME
+-            ? 0
+-            : ((uint8_t) volume /*left*/ + (uint8_t) (volume >> 8) /*right*/) / 2;
++        ffStrbufInitF(&device->platformApi, "%s %s", info.product, info.version);
++        device->volume =
++        #ifdef FF_SOUND_HAVE_MIXER_MUTE
++            mutemask & SOUND_MASK_VOLUME ? 0 :
++        #endif
++            ((uint8_t) volume /*left*/ + (uint8_t) (volume >> 8) /*right*/) / 2;
+         device->active = true;
+         device->main = defaultDev == idev;
+     }
