@@ -1,9 +1,9 @@
-$NetBSD: patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp,v 1.1 2025/01/23 14:31:16 ryoon Exp $
+$NetBSD: patch-torch_csrc_distributed_c10d_ProcessGroupGloo.cpp,v 1.2 2025/01/26 12:33:03 wiz Exp $
 
 * Support NetBSD.
 
---- /usr/tmp/pkgsrc/math/py-torch/work/pytorch-v2.5.1/torch/csrc/distributed/c10d/ProcessGroupGloo.cpp.orig	2025-01-21 17:59:06.880466509 +0000
-+++ /usr/tmp/pkgsrc/math/py-torch/work/pytorch-v2.5.1/torch/csrc/distributed/c10d/ProcessGroupGloo.cpp
+--- torch/csrc/distributed/c10d/ProcessGroupGloo.cpp.orig	2025-01-21 17:59:06.880466509 +0000
++++ torch/csrc/distributed/c10d/ProcessGroupGloo.cpp
 @@ -16,6 +16,10 @@
  #include <netdb.h>
  #include <sys/socket.h>
