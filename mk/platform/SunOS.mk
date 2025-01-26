@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.92 2025/01/25 18:16:01 pho Exp $
+# $NetBSD: SunOS.mk,v 1.93 2025/01/26 05:24:09 pho Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -140,6 +140,11 @@ _OPSYS_SUPPORTS_MKTOOLS=	yes # Requires err.h
 .endif
 _OPSYS_SUPPORTS_SSP?=		yes # Requires GCC
 _OPSYS_CAN_CHECK_SHLIBS=	yes # Requires readelf
+
+.if ${OS_VARIANT} == "OmniOS"
+# libssp doesn't get linked in because its symbols are in libc.
+_OPSYS_CAN_CHECK_SSP=		no
+.endif
 
 # The Solaris/illumos linker requires explicit library dependencies.
 OPSYS_EXPLICIT_LIBDEPS=		yes
