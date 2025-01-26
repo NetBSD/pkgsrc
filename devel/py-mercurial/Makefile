@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2024/12/11 23:32:49 riastradh Exp $
+# $NetBSD: Makefile,v 1.104 2025/01/26 16:00:33 he Exp $
 #
 # Changelog sometimes at: https://www.mercurial-scm.org/wiki/WhatsNew
 
@@ -55,4 +55,5 @@ do-test:
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
