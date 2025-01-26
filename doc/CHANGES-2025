@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.625 2025/01/26 07:35:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.626 2025/01/26 11:51:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -835,3 +835,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Crypt-Primes to 0.52 [wiz 2025-01-26]
 	Updated security/p5-Crypt-URandom to 0.52 [wiz 2025-01-26]
 	Updated databases/p5-DBI to 1.647 [wiz 2025-01-26]
+	Updated net/yt-dlp to 2025.1.26 [adam 2025-01-26]
+	Updated devel/py-hypothesis to 6.124.7 [adam 2025-01-26]
+	Updated www/py-protego to 0.4.0 [adam 2025-01-26]
+	Updated www/py-flask-mail to 0.10.0 [adam 2025-01-26]
