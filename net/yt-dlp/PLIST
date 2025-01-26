@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2025/01/13 09:52:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.38 2025/01/26 11:40:06 adam Exp $
 bin/yt-dlp
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -645,9 +645,6 @@ ${PYSITELIB}/yt_dlp/extractor/crowdbunker.pyo
 ${PYSITELIB}/yt_dlp/extractor/crtvg.py
 ${PYSITELIB}/yt_dlp/extractor/crtvg.pyc
 ${PYSITELIB}/yt_dlp/extractor/crtvg.pyo
-${PYSITELIB}/yt_dlp/extractor/crunchyroll.py
-${PYSITELIB}/yt_dlp/extractor/crunchyroll.pyc
-${PYSITELIB}/yt_dlp/extractor/crunchyroll.pyo
 ${PYSITELIB}/yt_dlp/extractor/cspan.py
 ${PYSITELIB}/yt_dlp/extractor/cspan.pyc
 ${PYSITELIB}/yt_dlp/extractor/cspan.pyo
@@ -801,6 +798,9 @@ ${PYSITELIB}/yt_dlp/extractor/ebay.pyo
 ${PYSITELIB}/yt_dlp/extractor/egghead.py
 ${PYSITELIB}/yt_dlp/extractor/egghead.pyc
 ${PYSITELIB}/yt_dlp/extractor/egghead.pyo
+${PYSITELIB}/yt_dlp/extractor/eggs.py
+${PYSITELIB}/yt_dlp/extractor/eggs.pyc
+${PYSITELIB}/yt_dlp/extractor/eggs.pyo
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.py
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.pyc
 ${PYSITELIB}/yt_dlp/extractor/eighttracks.pyo
@@ -966,9 +966,6 @@ ${PYSITELIB}/yt_dlp/extractor/frontendmasters.pyo
 ${PYSITELIB}/yt_dlp/extractor/fujitv.py
 ${PYSITELIB}/yt_dlp/extractor/fujitv.pyc
 ${PYSITELIB}/yt_dlp/extractor/fujitv.pyo
-${PYSITELIB}/yt_dlp/extractor/funimation.py
-${PYSITELIB}/yt_dlp/extractor/funimation.pyc
-${PYSITELIB}/yt_dlp/extractor/funimation.pyo
 ${PYSITELIB}/yt_dlp/extractor/funk.py
 ${PYSITELIB}/yt_dlp/extractor/funk.pyc
 ${PYSITELIB}/yt_dlp/extractor/funk.pyo
@@ -1695,6 +1692,9 @@ ${PYSITELIB}/yt_dlp/extractor/nekohacker.pyo
 ${PYSITELIB}/yt_dlp/extractor/nerdcubed.py
 ${PYSITELIB}/yt_dlp/extractor/nerdcubed.pyc
 ${PYSITELIB}/yt_dlp/extractor/nerdcubed.pyo
+${PYSITELIB}/yt_dlp/extractor/nest.py
+${PYSITELIB}/yt_dlp/extractor/nest.pyc
+${PYSITELIB}/yt_dlp/extractor/nest.pyo
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.py
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.pyc
 ${PYSITELIB}/yt_dlp/extractor/neteasemusic.pyo
@@ -1977,6 +1977,9 @@ ${PYSITELIB}/yt_dlp/extractor/pinkbike.pyo
 ${PYSITELIB}/yt_dlp/extractor/pinterest.py
 ${PYSITELIB}/yt_dlp/extractor/pinterest.pyc
 ${PYSITELIB}/yt_dlp/extractor/pinterest.pyo
+${PYSITELIB}/yt_dlp/extractor/piramidetv.py
+${PYSITELIB}/yt_dlp/extractor/piramidetv.pyc
+${PYSITELIB}/yt_dlp/extractor/piramidetv.pyo
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.py
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyc
 ${PYSITELIB}/yt_dlp/extractor/pixivsketch.pyo
@@ -2487,6 +2490,9 @@ ${PYSITELIB}/yt_dlp/extractor/stripchat.pyo
 ${PYSITELIB}/yt_dlp/extractor/stv.py
 ${PYSITELIB}/yt_dlp/extractor/stv.pyc
 ${PYSITELIB}/yt_dlp/extractor/stv.pyo
+${PYSITELIB}/yt_dlp/extractor/subsplash.py
+${PYSITELIB}/yt_dlp/extractor/subsplash.pyc
+${PYSITELIB}/yt_dlp/extractor/subsplash.pyo
 ${PYSITELIB}/yt_dlp/extractor/substack.py
 ${PYSITELIB}/yt_dlp/extractor/substack.pyc
 ${PYSITELIB}/yt_dlp/extractor/substack.pyo
