@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.629 2025/01/26 15:19:21 pin Exp $
+$NetBSD: CHANGES-2025,v 1.630 2025/01/26 17:32:07 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/mtpaint version 3.50.11 [wiz 2025-01-26]
 	Updated shells/oh-my-posh to 24.19.0 [pin 2025-01-26]
 	Updated devel/bacon to 3.9.0 [pin 2025-01-26]
+	Updated sysutils/fastfetch to 2.35.0 [vins 2025-01-26]
