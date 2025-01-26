@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 11:30:38 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/26 11:51:14 adam Exp $
 
-BLAKE2s (Flask-Mail-0.9.1.tar.gz) = f62b0292a515c18a9e373666f4baaaa2307c4288555e6a1ac9e469acaa92e6db
-SHA512 (Flask-Mail-0.9.1.tar.gz) = 1d19f0bade77c66e73624d8af0919165f8b6f208a00c1e4025049b50ad56912557b8446cb80f8567adf697e92b126954a5f130bd9fa7a2345d4e98e35b29ac47
-Size (Flask-Mail-0.9.1.tar.gz) = 45654 bytes
+BLAKE2s (flask_mail-0.10.0.tar.gz) = 1a6e896758e6cdbca23193f5875abd1df09e1534a8d506208c58aa84e35f4aa6
+SHA512 (flask_mail-0.10.0.tar.gz) = d20de1fd76eee9ac462c2b83d097447336a91de1aa4c88696fa32d431749221dc02600c804df18e656ffda460745bae4982862840317475d525e1e616989787a
+Size (flask_mail-0.10.0.tar.gz) = 8152 bytes

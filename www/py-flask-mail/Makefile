@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.9 2022/04/29 11:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/26 11:51:14 adam Exp $
 
-DISTNAME=	Flask-Mail-0.9.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
+DISTNAME=	flask_mail-0.10.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Mail/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	https://pythonhosted.org/Flask-Mail/
+HOMEPAGE=	https://github.com/pallets-eco/flask-mail
 COMMENT=	Flask extension for sending email
 LICENSE=	modified-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-blinker-[0-9]*:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
