@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.935 2024/08/18 20:39:59 markd Exp $
+# $NetBSD: Makefile,v 1.936 2025/01/27 13:44:31 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -164,7 +164,6 @@ SUBDIR+=	scribus-qt5
 SUBDIR+=	seetexk
 SUBDIR+=	sile
 SUBDIR+=	stylewriter
-SUBDIR+=	tcl-pdflib
 SUBDIR+=	tex-2up
 SUBDIR+=	tex-2up-doc
 SUBDIR+=	tex-IEEEconf
