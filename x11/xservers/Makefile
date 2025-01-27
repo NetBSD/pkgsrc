@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2021/05/24 19:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/27 18:59:09 rillig Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	3
@@ -10,9 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.xfree86.org/
 COMMENT=	Old X11 servers for use under XFree86 4.x
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL.
 
-NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL.
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 PKG_DESTDIR_SUPPORT=	destdir
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/11/15 22:14:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/27 18:59:08 rillig Exp $
 
 DISTNAME=	mxterm_129
-PKGREVISION=	4
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	4
 CATEGORIES=	x11
 #MASTER_SITES=	http://www.unixdev.net/downloads/mxterm/129/
 

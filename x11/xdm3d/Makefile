@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.30 2019/11/03 09:14:19 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/27 18:59:09 rillig Exp $
 
 DISTNAME=		xdm3d-1.0
 PKGREVISION=		7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-PATCHFILES=		xdm3d-jumbo-patch-20130616.gz
 PATCH_SITES=		http://www.NetBSD.org/~dholland/patchkits/xdm3d/
+PATCHFILES=		xdm3d-jumbo-patch-20130616.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

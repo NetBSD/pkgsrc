@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/29 05:06:42 asau Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/27 18:59:08 rillig Exp $
 
 DISTNAME=		oneko-1.1b
 PKGNAME=		oneko-1.2
@@ -7,8 +7,8 @@ CATEGORIES=		x11 games
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:S/contrib/R5contrib/}
 EXTRACT_SUFX=		.tar.Z
 
-PATCHFILES=		oneko-1.2.diff.gz
 PATCH_SITES=		http://www.bsddiary.net/oneko/
+PATCHFILES=		oneko-1.2.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		johnam@mail.kemper.org

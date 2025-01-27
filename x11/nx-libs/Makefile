@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2024/02/23 17:13:10 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/27 18:59:08 rillig Exp $
 
 DISTNAME=	nx-libs-${PKGVER}-lite
 PKGNAME=	nx-libs-${PKGVER:S/-/./}
 PKGVER=		3.5.99.26-0x2go1
-MASTER_SITES=	https://code.x2go.org/releases/source/nx-libs/
 CATEGORIES=	x11 devel
+MASTER_SITES=	https://code.x2go.org/releases/source/nx-libs/
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://wiki.x2go.org/doku.php
