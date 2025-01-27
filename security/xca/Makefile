@@ -1,29 +1,24 @@
-# $NetBSD: Makefile,v 1.39 2024/11/14 22:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/01/27 13:29:40 wiz Exp $
 
-DISTNAME=	xca-2.1.2
-PKGREVISION=	37
+DISTNAME=	xca-2.8.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chris2511/}
-GITHUB_RELEASE=	RELEASE.2.1.2
+GITHUB_RELEASE=	RELEASE.${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://hohnstaedt.de/xca/
 COMMENT=	Certificate and key management
 LICENSE=	modified-bsd
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config perl
+USE_TOOLS+=		pkg-config perl
 USE_LANGUAGES=		c c++
-DESTDIR_VARNAME=	destdir
 
 REPLACE_PERL+=		doc/code2html
 
-INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
-INSTALLATION_DIRS+=	share/applications share/mime/packages share/pixmaps
-INSTALLATION_DIRS+=	share/doc/xca share/xca
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
