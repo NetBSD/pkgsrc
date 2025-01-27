@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/10/24 22:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/27 13:52:54 wiz Exp $
 
 DISTNAME=	krb5-appl-1.0.3
 PKGNAME=	mit-${DISTNAME}
@@ -23,7 +23,7 @@ CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 CONFLICTS+=	mit-krb5<1.8
 
-USE_TOOLS+=		autoconf autoheader yacc
+USE_TOOLS+=		yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
@@ -60,11 +60,6 @@ post-extract:
 	@${ECHO} "=> Extracting internal tarball";	\
 	extract_file="${WRKDIR}/${DISTNAME}.tar.gz";	\
 	cd ${WRKDIR} && ${EXTRACT_CMD}
-
-pre-configure:
-	@${ECHO} "=> Generating configure";		\
-	cd ${WRKSRC}; autoheader -I ${WRKSRC} -f;	\
-	cd ${WRKSRC}; autoconf -I ${WRKSRC} -f;
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
