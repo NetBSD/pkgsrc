@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/12/27 08:20:38 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.80 2025/01/27 12:17:03 wiz Exp $
 
 DISTNAME=		gtk-send-pr-0.4.9
 PKGREVISION=		49
