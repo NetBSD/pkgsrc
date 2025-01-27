@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/06/06 12:42:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/27 11:56:43 wiz Exp $
 
 UBOOT_TARGET=		odroid-c2
 UBOOT_CONFIG=		odroid-c2_defconfig
@@ -61,6 +61,9 @@ post-extract:
 # XXX For now, we use the fip_create and aml_encrypt_gxb binaries
 # from Hardkernel.
 #
+EMUL_PLATFORMS=         linux-x86_64
+EMUL_MODULES.linux=     base
+
 TOOL_DEPENDS+=		amlogic-meson-fwtools>=0.0:../../sysutils/amlogic-meson-fwtools
 post-build:
 	${PREFIX}/bin/aml_fip_create \
