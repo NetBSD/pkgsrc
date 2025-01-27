@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.21 2025/01/24 21:23:07 riastradh Exp $
+# $NetBSD: build.mk,v 1.22 2025/01/27 08:49:08 adam Exp $
 #
 # This Makefile fragment supports building using the CMake build tool.
 #
@@ -64,6 +64,9 @@ CMAKE_CONFIGURE_ARGS+=	-DFETCHCONTENT_FULLY_DISCONNECTED=ON
 # directory for find_package/program/library/file/path.
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_FIND_USE_CMAKE_SYSTEM_PATH:BOOL=OFF
 CMAKE_PREFIX_PATH+=	${BUILDLINK_DIR}
+.if ${OPSYS} == "Darwin"
+CMAKE_PREFIX_PATH+=	${OSX_SDK_PATH}/System/Library/Frameworks
+.endif
 CMAKE_INCLUDE_PATH+=	${COMPILER_INCLUDE_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
 CMAKE_LIBRARY_PATH+=	${COMPILER_LIB_DIRS:@.d.@${_CROSS_DESTDIR:U}${.d.}@}
 
