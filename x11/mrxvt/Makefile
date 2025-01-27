@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2023/11/12 13:24:20 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/27 18:59:07 rillig Exp $
 #
 
 DISTNAME=	mrxvt-0.5.4
 PKGREVISION=	17
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
+
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	mrxvt-0.5.4-001-fix-segfault-when-wd-empty.patch
 

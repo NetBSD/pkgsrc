@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/12/27 08:20:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/27 18:59:07 rillig Exp $
 #
 
 DISTNAME=	Keyboard-0.4.0
@@ -10,7 +10,6 @@ MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Keyboard/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://www.defora.org/
 COMMENT=	DeforaOS desktop virtual keyboard
-
 LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	pkg-config

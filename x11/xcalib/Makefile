@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2020/01/26 05:26:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/27 18:59:08 rillig Exp $
 
 DISTNAME=	xcalib-source-0.8
-PKGREVISION=	3
 PKGNAME=	${DISTNAME:C/-source//}
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcalib/}
 
