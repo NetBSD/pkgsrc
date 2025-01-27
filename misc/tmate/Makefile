@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/01/10 19:34:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/27 16:23:42 wiz Exp $
 
 DISTNAME=	tmate-2.4.0
 PKGREVISION=	1
@@ -15,6 +15,9 @@ USE_TOOLS=	autoconf automake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+# for libssh and forkpty detection
+LDFLAGS.NetBSD+=	-pthread
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
