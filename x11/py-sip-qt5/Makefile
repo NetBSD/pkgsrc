@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/12/27 21:31:55 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/27 11:52:23 he Exp $
 
 DISTNAME=	pyqt5_sip-12.16.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyqt5_sip/sip-qt5/}
@@ -17,4 +17,5 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.5:../../devel/py-setuptools
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
