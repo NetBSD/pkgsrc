@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2024/01/30 14:21:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/27 20:21:14 rillig Exp $
 
 DISTNAME=	xmms-pulse-0.9.4
 PKGREVISION=	32
@@ -6,8 +6,8 @@ CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/xmms-pulse/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	XMMS plugin to output sound through the pulseaudio daemon
 HOMEPAGE=	http://0pointer.de/lennart/projects/xmms-pulse/
+COMMENT=	XMMS plugin to output sound through the pulseaudio daemon
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes

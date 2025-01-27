@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2019/11/02 21:09:16 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2025/01/27 20:21:14 rillig Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/
+DIST_SUBDIR=	rsynth
 DISTFILES=	rsynth-2.0.tar.gz ${DICT_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,7 +14,6 @@ COMMENT=	Public Domain Speech Synthesis System
 DICT_FILES+=	README cmudict.0.4.Z cmulex.0.4.Z phoneset.0.4
 EXTRACT_ONLY=	rsynth-2.0.tar.gz
 
-DIST_SUBDIR=		rsynth
 GNU_CONFIGURE=		YES
 CONFIGURE_HAS_MANDIR=	NO
 
