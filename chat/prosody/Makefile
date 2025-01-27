@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.52 2024/11/14 22:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/01/27 13:57:51 adam Exp $
 
-DISTNAME=		prosody-0.12.4
-PKGREVISION=		4
-CATEGORIES=		chat
-MASTER_SITES=		https://prosody.im/downloads/source/
+DISTNAME=	prosody-0.12.5
+CATEGORIES=	chat
+MASTER_SITES=	https://prosody.im/downloads/source/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://prosody.im/
-COMMENT=		Flexible communications server for Jabber/XMPP written in Lua
-LICENSE=		mit
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://prosody.im/
+COMMENT=	Flexible communications server for Jabber/XMPP written in Lua
+LICENSE=	mit
 
-DEPENDS+=		${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
-DEPENDS+=		${LUA_PKGPREFIX}-filesystem>=1.6.2:../../devel/lua-filesystem
-DEPENDS+=		${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
-DEPENDS+=		${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
-DEPENDS+=		${LUA_PKGPREFIX}-unbound-[0-9]*:../../net/lua-unbound
+DEPENDS+=	${LUA_PKGPREFIX}-expat>=1.2:../../textproc/lua-expat
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem>=1.6.2:../../devel/lua-filesystem
+DEPENDS+=	${LUA_PKGPREFIX}-sec>=0.3.3:../../security/lua-sec
+DEPENDS+=	${LUA_PKGPREFIX}-socket>=2.0:../../net/lua-socket
+DEPENDS+=	${LUA_PKGPREFIX}-unbound-[0-9]*:../../net/lua-unbound
 
-HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c
+HAS_CONFIGURE=		yes
+TEST_TARGET=		test
 BUILD_DEFS+=		VARBASE
 
 LUA_VERSIONS_ACCEPTED=	54 52 51
@@ -74,12 +74,10 @@ FILES_SUBST+=		PROSODY_RUN=${PROSODY_RUN}
 FILES_SUBST+=		PROSODY_USER=${PROSODY_USER}
 FILES_SUBST+=		PROSODY_GROUP=${PROSODY_GROUP}
 
-TEST_TARGET=		test
-
-.include "../../lang/lua/application.mk"
-.include "../../lang/lua/tool.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../lang/lua/application.mk"
 .include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua/tool.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
