@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.639 2025/01/27 11:25:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.640 2025/01/27 11:39:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -858,3 +858,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-jupyter_server to 2.15.0 [adam 2025-01-27]
 	Removed x11/xdaemon successor x11/xdaemon2 [wiz 2025-01-27]
 	Updated audio/py-beets to 2.2.0nb2 [wiz 2025-01-27]
+	Updated www/squid4 to 4.17nb14 [wiz 2025-01-27]
