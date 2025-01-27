@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.635 2025/01/27 09:42:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.636 2025/01/27 10:04:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -852,3 +852,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-barman to 3.12.1 [adam 2025-01-27]
 	Updated devel/py-atpublic to 5.1 [adam 2025-01-27]
 	Updated devel/py-attrs to 25.1.0 [adam 2025-01-27]
+	Updated textproc/fmtlib to 11.1.3 [adam 2025-01-27]
+	Updated devel/py-dash to 8.0.5 [adam 2025-01-27]
