@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2023/11/12 13:23:11 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/01/27 16:09:13 wiz Exp $
 
 DISTNAME=	nam-src-1.15
 PKGNAME=	nam-1.15
@@ -24,17 +24,18 @@ CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 CONFIGURE_ENV+=		V_LIBS="`${CONFIG_SHELL} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LIBS'`"
 
+MAKE_FLAGS+=		CCOPT+=${CFLAGS:Q}\ -fpermissive
+
 SUBST_CLASSES+=		char
 SUBST_STAGE.char=	pre-configure
 SUBST_MESSAGE.char=	unsigned char needed for 8bit values
 SUBST_FILES.char=	bitmap/*.xbm
 SUBST_SED.char=		-e 's,char,u_char,'
 
-MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/nam.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/tcl-tclcl/buildlink3.mk"
@@ -42,10 +43,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-otcl/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/nam.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
 .include "../../mk/bsd.pkg.mk"
