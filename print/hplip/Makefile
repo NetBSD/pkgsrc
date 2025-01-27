@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2024/11/14 22:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2025/01/27 14:00:09 wiz Exp $
 
 DISTNAME=	hplip-3.19.12
 PKGREVISION=	30
@@ -45,8 +45,6 @@ CONFIGURE_ARGS+=	--enable-foomatic-rip-hplip-install
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 EGFILES=		hp/hplip.conf
-
-PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
@@ -174,6 +172,13 @@ post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/hplip/__init__.py
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/hplip
 	${LN} -s ../../../share/hplip/ppd ${DESTDIR}${PREFIX}/share/cups/model/hplip-ppds
+
+.include "../../lang/python/pyversion.mk"
+
+# needs distutils
+.if ${PYTHON_VERSION} > 311
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
