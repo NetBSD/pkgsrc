@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/11/11 07:27:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/27 09:31:46 adam Exp $
 
-DISTNAME=	barman-3.11.1
+DISTNAME=	barman-3.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
@@ -43,7 +43,7 @@ OWN_DIRS_PERMS+=	${BARMAN_LOG_DIR} ${BARMAN_USER} ${BARMAN_GROUP} 0755
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	barman/config.py doc/barman.conf setup.py
+SUBST_FILES.path=	barman/config.py docs/barman.conf setup.py
 SUBST_MESSAGE.path=	Fixing paths
 SUBST_SED.path=		-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
 SUBST_SED.path+=	-e 's,/var/lib/barman,${BARMAN_DIR},g'
@@ -51,7 +51,7 @@ SUBST_SED.path+=	-e 's,/var/log/barman,${BARMAN_LOG_DIR},g'
 SUBST_SED.path+=	-e 's,share/man,${PKGMANDIR},g'
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/barman.conf \
+	${INSTALL_DATA} ${WRKSRC}/docs/barman.conf \
 		${DESTDIR}${PREFIX}/share/examples/barman/barman.conf
 
 .include "../../lang/python/wheel.mk"
