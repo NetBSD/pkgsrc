@@ -1,0 +1,62 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/01/27 13:37:07 riastradh Exp $
+
+Wrap autoconf runtime test (AC_RUN_IFELSE) in AC_CACHE_CHECK so we can
+override it on the command-line when cross-compiling.
+
+--- configure.ac.orig	2024-01-28 20:03:31.000000000 +0000
++++ configure.ac
+@@ -336,26 +336,35 @@ if test "x$OPT_UALPN" != "xno"; then
+                      AC_MSG_ERROR([ualpn requires sys/un.h]))
+     AC_CHECK_FUNCS([mmap],[],
+                    AC_MSG_ERROR([ualpn requires mmap]))
+-    AC_MSG_CHECKING([if mmap(MAP_ANON|MAP_SHARED) works])
++    AC_CACHE_CHECK([if mmap(MAP_ANON|MAP_SHARED) works],
++        [uacme_cv_mmap_anonshared_works], [
+     AC_RUN_IFELSE([AC_LANG_SOURCE([#include <sys/mman.h>
+                      int main() {return mmap(0, 4096, PROT_READ|PROT_WRITE,
+                         MAP_ANON|MAP_SHARED, -1, 0) == MAP_FAILED;}])],
+-        [
++        [uacme_cv_mmap_anonshared_works=yes],
++        [uacme_cv_mmap_anonshared_works=no])
++    ])
++    case $uacme_cv_mmap_anonshared_works in
++    yes)
+             AC_DEFINE(HAVE_MAP_ANON, 1, [if mmap(MAP_ANON|MAP_SHARED) works])
+-            AC_MSG_RESULT([yes])
+-        ], [
+-            AC_MSG_RESULT([no])
+-            AC_MSG_CHECKING([if mmap("/dev/zero", MAP_SHARED) works])
++            ;;
++    *)
++            AC_CACHE_CHECK([if mmap("/dev/zero", MAP_SHARED) works],
++                [uacme_cv_mmap_devzero_shared_works], [
+             AC_RUN_IFELSE([AC_LANG_SOURCE([#include <sys/mman.h>
+                              #include <sys/stat.h>
+                              #include <fcntl.h>
+                              int main() {return mmap(0, 4096, PROT_READ|PROT_WRITE,
+                                 MAP_ANON|MAP_SHARED, open("/dev/zero", O_RDWR), 0) ==
+                                 MAP_FAILED;}])],
++                [uacme_cv_mmap_devzero_shared_works=yes],
++                [uacme_cv_mmap_devzero_shared_works=no])
++            ])
++            if test "x$uacme_cv_mmap_devzero_shared_works" = xyes; then
+                 AC_DEFINE(HAVE_MAP_DEVZERO, 1, [if mmap("/dev/zero", MAP_SHARED) works])
+-                AC_MSG_RESULT([yes]),
+-                AC_MSG_RESULT([no])
+-                AC_MSG_ERROR([ualpn requires MAP_ANON or mmap("/dev/zero", MAP_SHARED)])),
++            else
++                AC_MSG_ERROR([ualpn requires MAP_ANON or mmap("/dev/zero", MAP_SHARED)])
++            fi
+             AC_COMPILE_IFELSE([AC_LANG_SOURCE([#include <sys/mman.h>
+                              int main() {return mmap(0, 4096, PROT_READ|PROT_WRITE,
+                                 MAP_ANON|MAP_SHARED, -1, 0) == MAP_FAILED;}])],
+@@ -364,7 +373,8 @@ if test "x$OPT_UALPN" != "xno"; then
+                 AC_MSG_RESULT([no])
+                 AC_MSG_NOTICE([falling back to mmap("/dev/zero", MAP_SHARED)])
+                 AC_DEFINE(HAVE_MAP_DEVZERO, 1, [if mmap("/dev/zero", MAP_SHARED) works]))
+-        ])
++            ;;
++    esac
+     AC_ARG_ENABLE(splice, AS_HELP_STRING([--disable-splice], [disable splice]))
+     if test "x$enable_splice" != "xno"; then
+         AC_CHECK_FUNCS([splice])
