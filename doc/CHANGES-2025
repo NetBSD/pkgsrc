@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.640 2025/01/27 11:39:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.641 2025/01/27 12:03:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -859,3 +859,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed x11/xdaemon successor x11/xdaemon2 [wiz 2025-01-27]
 	Updated audio/py-beets to 2.2.0nb2 [wiz 2025-01-27]
 	Updated www/squid4 to 4.17nb14 [wiz 2025-01-27]
+	Updated www/py-django-js-asset to 3.0.1 [adam 2025-01-27]
+	Updated www/py-django-registration to 5.1.0 [adam 2025-01-27]
