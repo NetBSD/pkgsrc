@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.74 2025/01/12 00:49:47 morr Exp $
+@comment $NetBSD: PLIST,v 1.75 2025/01/27 23:04:47 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
 man/man1/vimdiff.1
 man/man1/vimtutor.1
 man/man1/xxd.1
+share/vim/${VIM_SUBDIR}/LICENSE
+share/vim/${VIM_SUBDIR}/README.txt
 share/vim/${VIM_SUBDIR}/autoload/README.txt
 share/vim/${VIM_SUBDIR}/autoload/RstFold.vim
 share/vim/${VIM_SUBDIR}/autoload/ada.vim
@@ -36,9 +38,6 @@ share/vim/${VIM_SUBDIR}/autoload/htmlcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/javaformat.vim
 share/vim/${VIM_SUBDIR}/autoload/javascriptcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/modula2.vim
-share/vim/${VIM_SUBDIR}/autoload/netrw.vim
-share/vim/${VIM_SUBDIR}/autoload/netrwSettings.vim
-share/vim/${VIM_SUBDIR}/autoload/netrw_gitignore.vim
 share/vim/${VIM_SUBDIR}/autoload/paste.vim
 share/vim/${VIM_SUBDIR}/autoload/phpcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/python.vim
@@ -102,6 +101,7 @@ share/vim/${VIM_SUBDIR}/colors/slate.vim
 share/vim/${VIM_SUBDIR}/colors/sorbet.vim
 share/vim/${VIM_SUBDIR}/colors/tools/check_colors.vim
 share/vim/${VIM_SUBDIR}/colors/torte.vim
+share/vim/${VIM_SUBDIR}/colors/unokai.vim
 share/vim/${VIM_SUBDIR}/colors/wildcharm.vim
 share/vim/${VIM_SUBDIR}/colors/zaibatsu.vim
 share/vim/${VIM_SUBDIR}/colors/zellner.vim
@@ -328,7 +328,6 @@ share/vim/${VIM_SUBDIR}/doc/starting.txt
 share/vim/${VIM_SUBDIR}/doc/syntax.txt
 share/vim/${VIM_SUBDIR}/doc/tabpage.txt
 share/vim/${VIM_SUBDIR}/doc/tags
-share/vim/${VIM_SUBDIR}/doc/tags-ru
 share/vim/${VIM_SUBDIR}/doc/tagsrch.txt
 share/vim/${VIM_SUBDIR}/doc/term.txt
 share/vim/${VIM_SUBDIR}/doc/terminal.txt
@@ -336,7 +335,6 @@ share/vim/${VIM_SUBDIR}/doc/testing.txt
 share/vim/${VIM_SUBDIR}/doc/textprop.txt
 share/vim/${VIM_SUBDIR}/doc/tips.txt
 share/vim/${VIM_SUBDIR}/doc/todo.txt
-share/vim/${VIM_SUBDIR}/doc/uganda.rux
 share/vim/${VIM_SUBDIR}/doc/uganda.txt
 share/vim/${VIM_SUBDIR}/doc/undo.txt
 share/vim/${VIM_SUBDIR}/doc/userfunc.txt
@@ -561,6 +559,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/jsonc.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jsonnet.vim
 share/vim/${VIM_SUBDIR}/ftplugin/jsp.vim
 share/vim/${VIM_SUBDIR}/ftplugin/julia.vim
+share/vim/${VIM_SUBDIR}/ftplugin/just.vim
 share/vim/${VIM_SUBDIR}/ftplugin/karel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/kdl.vim
@@ -870,6 +869,7 @@ share/vim/${VIM_SUBDIR}/indent/json5.vim
 share/vim/${VIM_SUBDIR}/indent/jsonc.vim
 share/vim/${VIM_SUBDIR}/indent/jsp.vim
 share/vim/${VIM_SUBDIR}/indent/julia.vim
+share/vim/${VIM_SUBDIR}/indent/just.vim
 share/vim/${VIM_SUBDIR}/indent/kdl.vim
 share/vim/${VIM_SUBDIR}/indent/kotlin.vim
 share/vim/${VIM_SUBDIR}/indent/krl.vim
@@ -1030,6 +1030,14 @@ share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/autoload/matchit.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/doc/matchit.txt
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/doc/tags
 share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/plugin/matchit.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/LICENSE.txt
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/README.md
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrwSettings.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw_gitignore.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/doc/netrw.txt
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/syntax/netrw.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/nohlsearch/plugin/nohlsearch.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/shellmenu/plugin/shellmenu.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/swapmouse/plugin/swapmouse.vim
@@ -1041,6 +1049,7 @@ share/vim/${VIM_SUBDIR}/plugin/logiPat.vim
 share/vim/${VIM_SUBDIR}/plugin/manpager.vim
 share/vim/${VIM_SUBDIR}/plugin/matchparen.vim
 share/vim/${VIM_SUBDIR}/plugin/netrwPlugin.vim
+share/vim/${VIM_SUBDIR}/plugin/openPlugin.vim
 share/vim/${VIM_SUBDIR}/plugin/rrhelper.vim
 share/vim/${VIM_SUBDIR}/plugin/spellfile.vim
 share/vim/${VIM_SUBDIR}/plugin/tarPlugin.vim
@@ -1405,6 +1414,7 @@ share/vim/${VIM_SUBDIR}/syntax/json5.vim
 share/vim/${VIM_SUBDIR}/syntax/jsonc.vim
 share/vim/${VIM_SUBDIR}/syntax/jsp.vim
 share/vim/${VIM_SUBDIR}/syntax/julia.vim
+share/vim/${VIM_SUBDIR}/syntax/just.vim
 share/vim/${VIM_SUBDIR}/syntax/karel.vim
 share/vim/${VIM_SUBDIR}/syntax/kconfig.vim
 share/vim/${VIM_SUBDIR}/syntax/kdl.vim
@@ -1515,7 +1525,6 @@ share/vim/${VIM_SUBDIR}/syntax/ncf.vim
 share/vim/${VIM_SUBDIR}/syntax/neomuttlog.vim
 share/vim/${VIM_SUBDIR}/syntax/neomuttrc.vim
 share/vim/${VIM_SUBDIR}/syntax/netrc.vim
-share/vim/${VIM_SUBDIR}/syntax/netrw.vim
 share/vim/${VIM_SUBDIR}/syntax/nginx.vim
 share/vim/${VIM_SUBDIR}/syntax/ninja.vim
 share/vim/${VIM_SUBDIR}/syntax/nix.vim
