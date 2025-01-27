@@ -1,19 +1,24 @@
-@comment $NetBSD: PLIST,v 1.8 2024/02/08 14:46:49 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.9 2025/01/27 12:03:16 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/django_registration/__init__.py
 ${PYSITELIB}/django_registration/__init__.pyc
 ${PYSITELIB}/django_registration/__init__.pyo
+${PYSITELIB}/django_registration/_backports.py
+${PYSITELIB}/django_registration/_backports.pyc
+${PYSITELIB}/django_registration/_backports.pyo
 ${PYSITELIB}/django_registration/backends/__init__.py
 ${PYSITELIB}/django_registration/backends/__init__.pyc
 ${PYSITELIB}/django_registration/backends/__init__.pyo
 ${PYSITELIB}/django_registration/backends/activation/__init__.py
 ${PYSITELIB}/django_registration/backends/activation/__init__.pyc
 ${PYSITELIB}/django_registration/backends/activation/__init__.pyo
+${PYSITELIB}/django_registration/backends/activation/forms.py
+${PYSITELIB}/django_registration/backends/activation/forms.pyc
+${PYSITELIB}/django_registration/backends/activation/forms.pyo
 ${PYSITELIB}/django_registration/backends/activation/urls.py
 ${PYSITELIB}/django_registration/backends/activation/urls.pyc
 ${PYSITELIB}/django_registration/backends/activation/urls.pyo
