@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2022/06/28 11:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/27 20:47:19 rillig Exp $
 
-GITHUB_PROJECT=	FlameGraph
 DISTNAME=	flamegraph-1.0
 PKGREVISION=	5
 CATEGORIES=	benchmarks
 MASTER_SITES=	${MASTER_SITE_GITHUB:=brendangregg/}
+GITHUB_PROJECT=	FlameGraph
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

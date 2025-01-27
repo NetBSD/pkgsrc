@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2022/02/28 10:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/27 20:47:19 rillig Exp $
 
 DISTNAME=		super_pi
 PKGNAME=		super_pi-20030927
 CATEGORIES=		benchmarks math
 MASTER_SITES=		ftp://pi.super-computing.org/Linux/
 MASTER_SITES+=		http://www.phoronix-test-suite.com/benchmark-files/
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://pi.super-computing.org/Linux/
@@ -14,8 +15,6 @@ LICENSE=		generic-nonlicense
 RESTRICTED=		${LICENSE}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-DIST_SUBDIR=		${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	bin
 
