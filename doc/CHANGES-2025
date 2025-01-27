@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.645 2025/01/27 16:19:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.646 2025/01/27 21:17:07 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/prosody to 0.12.5 [adam 2025-01-27]
 	Updated textproc/py-pdf to 5.2.0 [adam 2025-01-27]
 	Updated multimedia/gerbera to 2.4.1 [wiz 2025-01-27]
+	Updated pkgtools/pkglint to 23.12.0 [rillig 2025-01-27]
