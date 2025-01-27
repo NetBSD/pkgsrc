@@ -1,4 +1,4 @@
-$NetBSD: patch-prnt_hpijs_hjzjscolor.cpp,v 1.1 2012/06/23 04:50:07 schnoebe Exp $
+$NetBSD: patch-prnt_hpijs_ljzjscolor.cpp,v 1.1 2025/01/27 14:00:53 wiz Exp $
 
 use strlen(3) instead of strnlen(3), for use on NetBSD 4.0 and earlier
 as well as other systems that don't have strnlen.
