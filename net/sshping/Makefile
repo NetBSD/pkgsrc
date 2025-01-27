@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/10/24 22:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/27 14:04:30 wiz Exp $
 
 DISTNAME=	sshping-0.1.4
 PKGREVISION=	1
@@ -14,6 +14,8 @@ LICENSE=	mit
 USE_TOOLS=	pod2man
 
 USE_LANGUAGES=	c c++
+
+LDFLAGS.NetBSD+=	-pthread
 
 .include "../../devel/cmake/build.mk"
 .include "../../security/libssh/buildlink3.mk"
