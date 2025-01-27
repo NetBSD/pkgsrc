@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/01/23 20:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/27 12:09:02 wiz Exp $
 
 DISTNAME=	megacmd-1.7.0
 PKGREVISION=	4
@@ -60,4 +60,5 @@ post-install:
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
