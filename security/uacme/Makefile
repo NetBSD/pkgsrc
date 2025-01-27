@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/12/18 16:22:57 hauke Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/27 13:37:06 riastradh Exp $
 
 PKGNAME=	uacme-${PKGVER}
-PKGREVISION=	5
+PKGREVISION=	6
 DISTNAME=	v${PKGVER}
 PKGVER=		1.7.5
 CATEGORIES=	security
@@ -12,7 +12,7 @@ COMMENT=	Lightweight C ACMEv2 client which uses external authenticators
 HOMEPAGE=	https://github.com/ndilieto/uacme
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
+TOOL_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 
 USE_TOOLS+=		gmake pkg-config autoconf autoreconf automake
 
@@ -29,6 +29,12 @@ UACME_CHALLENGE_PATH=	${UACME_CONFDIR}/challenge
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 LDFLAGS.SunOS+=		-lsocket
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+CONFIGURE_ENV.NetBSD+=	uacme_cv_mmap_anonshared_works=yes
+.endif
 
 CONFIGURE_ARGS=		--datadir=${PREFIX}/${HOOKDIR}
 CONFIGURE_ARGS+=	--disable-maintainer-mode
