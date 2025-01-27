@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2025/01/06 21:49:01 ktnb Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/27 19:35:57 rillig Exp $
 #
 
 DISTNAME=		SDL_sound-1.0.3
@@ -12,6 +12,7 @@ COMMENT=		SDL library to handle the decoding of different file formats
 LICENSE=		gnu-lgpl-v2.1
 
 GNU_CONFIGURE=		YES
+GNU_CONFIGURE_ICONV=	no
 USE_LIBTOOL=		YES
 
 .include "options.mk"
