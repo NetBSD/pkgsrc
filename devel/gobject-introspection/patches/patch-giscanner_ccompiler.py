@@ -1,4 +1,4 @@
-$NetBSD: patch-giscanner_ccompiler.py,v 1.9 2025/01/14 13:17:12 adam Exp $
+$NetBSD: patch-giscanner_ccompiler.py,v 1.10 2025/01/27 17:27:40 jperkin Exp $
 
 Exclude system paths from LD_LIBRARY_PATH.
 Do not use -Wl,--no-as-needed on SunOS.
@@ -24,3 +24,12 @@ Do not use -Wl,--no-as-needed on SunOS.
  
          for library in libraries + extra_libraries:
              if os.path.isfile(library):
+@@ -291,7 +292,7 @@ class CCompiler(object):
+ 
+         # Ensure libraries are always linked as we are going to use ldd to work
+         # out their names later
+-        if os.name != 'nt' and sys.platform != 'darwin':
++        if os.name != 'nt' and sys.platform != 'darwin' and sys.platform != 'sunos5':
+             args.append('-Wl,--no-as-needed')
+ 
+         for library in libraries:
