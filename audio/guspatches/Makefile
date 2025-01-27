@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/12 00:24:39 asau Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/27 20:21:13 rillig Exp $
 #
 
 DISTNAME=	dgguspat
@@ -12,8 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GUS (Gravis Ultrasound) patches (audio samples) for TiMidity
 
 RESTRICTED=		Uses copyrighted patches
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes

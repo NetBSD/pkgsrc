@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2019/11/02 21:09:17 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2025/01/27 20:21:14 rillig Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -10,8 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		MOD player
 
 RESTRICTED=		No commercial redistribution
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 MAKE_JOBS_SAFE=		no
