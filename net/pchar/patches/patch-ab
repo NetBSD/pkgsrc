@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2013/03/03 01:06:51 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2025/01/27 14:12:17 wiz Exp $
 
 --- GetIfInfo.h.orig	2013-03-02 23:47:03.000000000 +0000
 +++ GetIfInfo.h
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.2 2013/03/03 01:06:51 joerg Exp $
  #include "Pctest.h"
  
  class GetIfInfo
-@@ -18,7 +18,7 @@ public:
+@@ -18,7 +19,7 @@ public:
    bool	IsValid(void);
  
    const char *	GetDescription(void) const;

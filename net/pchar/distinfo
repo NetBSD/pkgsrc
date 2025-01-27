@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.14 2025/01/27 14:11:32 wiz Exp $
+$NetBSD: distinfo,v 1.15 2025/01/27 14:12:17 wiz Exp $
 
 BLAKE2s (pchar-1.5.tar.gz) = 092107cd135c40c3d2886203928e53fcebb84302f84900b87e5ac99fb84de739
 SHA512 (pchar-1.5.tar.gz) = 56784589a16638a12230a11a177b8dd97a7abac927624beaaea89e0169423f7242c2b434a36aad1a07d977e6b006fd71eb9132aecb1d35e3e3363eb2d1549d84
 Size (pchar-1.5.tar.gz) = 117678 bytes
 SHA1 (patch-GetIfInfo.cc) = bdab68f1c03ead8db6bf7caa413f74129f5e38f1
-SHA1 (patch-PctestIpv6Icmp.cc) = 28f4807aa8776fc45377661f4095b9033ad69d36
-SHA1 (patch-PctestIpv6Tcp.cc) = 06113c259529c51d756ae848bcea831c5dac5471
-SHA1 (patch-PctestIpv6Udp.cc) = c2d8dfac106ad7510b0005f6f078983833f909ce
-SHA1 (patch-ResultTable.cc) = ad3ce2c717d50f26c2dbea52fde648fe04e27c19
-SHA1 (patch-ab) = e298aec0ea18925f677da019bff8548fb5a2a96f
+SHA1 (patch-PctestIpv6Icmp.cc) = 9c0caea5f06c34849053e75a7dfad539cb67aff0
+SHA1 (patch-PctestIpv6Tcp.cc) = a316427d7154cc81bce3d8ffc9d834e0508db518
+SHA1 (patch-PctestIpv6Udp.cc) = 2fbff88c1ab4286d2124dc4bc097fdd13cea4e7a
+SHA1 (patch-ResultTable.cc) = 8e00b5b60a9c40fb6963a5ebc2f3e0701ba9b933
+SHA1 (patch-ab) = 5f18d096aa6a7a8b4fb5a16df9e5556329c7cf1b
 SHA1 (patch-pc.h) = ca30eeef1f48b88dc9c36d22caa4f2edc29d093e

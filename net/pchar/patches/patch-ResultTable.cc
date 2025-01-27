@@ -1,6 +1,7 @@
-$NetBSD: patch-ResultTable.cc,v 1.1 2014/02/24 12:49:56 wiedi Exp $
+$NetBSD: patch-ResultTable.cc,v 1.2 2025/01/27 14:12:17 wiz Exp $
 
 Fix "abs(int) is ambigous" on SunOS
+
 --- ResultTable.cc.orig	2005-02-12 20:32:18.000000000 +0000
 +++ ResultTable.cc
 @@ -909,11 +909,11 @@ void ResultTable::lmsint(double &a, doub
