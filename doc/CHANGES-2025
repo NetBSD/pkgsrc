@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.647 2025/01/27 22:39:24 mef Exp $
+$NetBSD: CHANGES-2025,v 1.648 2025/01/27 23:05:43 morr Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -868,3 +868,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/gerbera to 2.4.1 [wiz 2025-01-27]
 	Updated pkgtools/pkglint to 23.12.0 [rillig 2025-01-27]
 	Updated cad/py-gdstk to 0.9.58 [mef 2025-01-27]
+	Updated editors/vim-share to 9.1.1054 [morr 2025-01-27]
