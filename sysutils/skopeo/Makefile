@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/12/19 21:35:27 maya Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/27 12:02:56 wiz Exp $
 
 DISTNAME=	skopeo-1.14.3
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,6 +12,9 @@ COMMENT=	Tool for manipulating OCI containers
 LICENSE=	apache-2.0
 
 USE_TOOLS+=	bash gmake gsed pkg-config
+
+# skopeo-1.14.3/vendor/github.com/containers/common/pkg/password/password_*
+ONLY_FOR_PLATFORM=	Linux-*-* Darwin-*-* FreeBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/go/version.mk"
