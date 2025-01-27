@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:18:05 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/01/27 13:29:40 wiz Exp $
 
-BLAKE2s (xca-2.1.2.tar.gz) = 50d43300c28575aaf7a3aaa3a78e3386862f2486f91fe0890eb78c1cf91b0a77
-SHA512 (xca-2.1.2.tar.gz) = 1f104a22b83b802576b4820b7139971da50f9b3dd70aca8e1199e996bad4379b8681bb31b197b84a3dfa49cef4ae093f6622d15fac9667547ff47af43c1e5f07
-Size (xca-2.1.2.tar.gz) = 1086563 bytes
-SHA1 (patch-Makefile) = c23e7de9fcdff140a3863e56e2c666abf5c04d12
-SHA1 (patch-img_Makefile) = 040e2a2ca5c7caacf69ee282df0b12f8eb1a4200
+BLAKE2s (xca-2.8.0.tar.gz) = 4791d981c396b5a90bd968fc5302fd7fa29e66e25f447323c72a81cda2fe1da4
+SHA512 (xca-2.8.0.tar.gz) = d9642793ac265fc3e34655aa30b056dd177339a714716da32edc839c08402309781eb482fe5a912e9990ce4551c1bf356986ad1680515a02751dc690545f56ff
+Size (xca-2.8.0.tar.gz) = 1952653 bytes
