@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/09/18 12:02:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/27 16:19:02 wiz Exp $
 bin/gerbera
 man/man1/gerbera.1
 share/applications/gerbera.desktop
@@ -84,5 +84,5 @@ share/gerbera/web/vendor/md5.min.js
 share/gerbera/web/vendor/md5.min.js.map
 share/gerbera/web/vendor/popper/popper.min.js
 share/gerbera/web/vendor/popper/popper.min.js.map
-share/gerbera/web/vendor/tether/tether-2.0.0.min.css
-share/gerbera/web/vendor/tether/tether-2.0.0.min.js
+share/gerbera/web/vendor/tether-2.0.0/tether.min.css
+share/gerbera/web/vendor/tether-2.0.0/tether.min.js
