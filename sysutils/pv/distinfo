@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/11/04 12:09:49 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/01/27 01:00:45 scole Exp $
 
-BLAKE2s (pv-1.9.0.tar.gz) = e2584023492bfcc5680dd7a85184afe7072d3b2fad2e7bd327e317a5ce162448
-SHA512 (pv-1.9.0.tar.gz) = 1085387fdf645ab14b4b83b006dbc09018e2e3cb89a585cc6b9d5c03e947ffd84d300fb0698bb8e4dfc918aa25f9453897a394791a6aa9caefa278e21b9acf35
-Size (pv-1.9.0.tar.gz) = 369918 bytes
+BLAKE2s (pv-1.9.27.tar.gz) = 4272cf9fc15910ae41c01147afb8118b28be44c413bfb6e357bd95ee4e83afcd
+SHA512 (pv-1.9.27.tar.gz) = 04b66d4ce96f6570d8cb3441bb2e421f9a7767e75d716fac033d51947834a56dd226fc02820ea3b7ac4c8276fa69fed0335d9c103af29e64b38e59bf49f1fab7
+Size (pv-1.9.27.tar.gz) = 415403 bytes
