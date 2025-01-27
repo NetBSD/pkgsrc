@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2020/01/26 05:26:10 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2025/01/27 20:21:13 rillig Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
 PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://gqmpeg.sourceforge.net/skins/
+DIST_SUBDIR=	gqmpeg-skins
 DISTFILES+=	\
 		2black.tar.gz \
 		4thTry.tar.gz \
@@ -80,7 +81,6 @@ COMMENT=	Skins for gqmpeg
 
 DEPENDS+=	gqmpeg-[0-9]*:../../audio/gqmpeg-devel
 
-DIST_SUBDIR=	gqmpeg-skins
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 

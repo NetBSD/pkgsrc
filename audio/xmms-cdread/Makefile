@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2021/04/21 09:17:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/27 20:21:14 rillig Exp $
 
 DISTNAME=		xmms-cdread-0.14a
 PKGREVISION=		4
@@ -10,13 +10,12 @@ MAINTAINER=		cheusov@NetBSD.org
 COMMENT=		XMMS input plugin that reads audio data from CDs
 LICENSE=		gnu-gpl-v2
 
-# no cdrom access code
-NOT_FOR_PLATFORM=	Interix-*-*
-
 # The BSD cdrom access code ostensibly for FreeBSD requires:
 #   - CDIOREADTOCENTRY ioctl, which NetBSD and OpenBSD don't have
 #   - CDIOCREADAUDIO ioctl, which only Dragonfly has
 BROKEN_ON_PLATFORM+=	NetBSD-*-* FreeBSD-*-* OpenBSD-*-*
+# no cdrom access code
+NOT_FOR_PLATFORM=	Interix-*-*
 ONLY_FOR_COMPILER=	gcc clang
 
 GNU_CONFIGURE=		yes

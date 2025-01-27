@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.82 2017/09/06 09:03:00 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/01/27 20:21:14 rillig Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	http://www.ibiblio.org/tkan/download/xmcd/src/
 
+PATCH_SITES=		${HOMEPAGE}
+PATCHFILES=		xmcd-3.0.2-proxyauth-patch
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.amb.org/xmcd/
 COMMENT=	Motif CD player
 LICENSE=	gnu-gpl-v2
-
-PATCH_SITES=		${HOMEPAGE}
-PATCHFILES=		xmcd-3.0.2-proxyauth-patch
-PATCH_DIST_STRIP=	-p1
 
 WRKSRC=			${WRKDIR}/xmcd-3.0
 
