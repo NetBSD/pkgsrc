@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.29 2016/02/25 16:20:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2025/01/27 14:07:32 wiz Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://www.scn.rain.com/pub/security/firewalls/
+MASTER_SITES=	http://www.mirrorservice.org/pub/minix/distfiles/backup/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://service.real.com/firewall/fdev.html
+#HOMEPAGE=	http://service.real.com/firewall/fdev.html
 COMMENT=	Proxy server for the RealAudio RTSP protocol
 LICENSE=	no-commercial-use
 
 RESTRICTED=		${LICENSE}
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 RCD_SCRIPTS=		rtspd
 
