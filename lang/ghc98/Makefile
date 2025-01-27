@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2025/01/08 14:51:06 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/27 15:08:07 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.8.2-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -137,13 +137,6 @@ CONFIGURE_ENV+=	CONF_CC_OPTS_STAGE${stage}=${CFLAGS:M*:Q}
 # since it's entirely written in C there's no problem doing a PIE build.
 HADRIAN_ARGS+=	"*.unlit.ghc.c.opts += -fPIC"
 HADRIAN_ARGS+=	"*.unlit.ghc.link.opts += -pie"
-.endif
-
-# MacOS X 10.7 is the oldest OS X version supporting __thread. Although
-# ${WRKSRC}/configure has a check for it, the actual build will fail
-# without this env.
-.if ${OPSYS} == "Darwin"
-ALL_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.7"
 .endif
 
 
