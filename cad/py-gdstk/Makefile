@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2024/11/11 07:27:53 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/27 22:39:16 mef Exp $
 
-DISTNAME=	gdstk-0.9.50
+DISTNAME=	gdstk-0.9.58
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heitzmann/}
@@ -12,14 +12,19 @@ HOMEPAGE=	https://github.com/heitzmann/gdstk/
 COMMENT=	C++/Python library for GDSII and OASIS files
 LICENSE=	boost-license
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-build-core
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	cmake
 
+WHEEL_ARGS+=	-C cmake.define.CMAKE_BUILD_WITH_INSTALL_RPATH=1
+
+PRINT_PLIST_AWK+=	{gsub(/${PYVERSSUFFIX:S/.//}/, "$${PYVERS}");}
+PLIST_SUBST+=		PYVERS=${PYVERSSUFFIX:S/.//}
+
+.include "../../lang/python/wheel.mk"
+
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/wheel.mk"
 .include "../../math/qhull/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
