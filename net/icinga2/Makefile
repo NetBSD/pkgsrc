@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/12/29 15:09:56 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/27 23:03:10 wiz Exp $
 
 DISTNAME=	icinga2-2.12.11
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ef@math.uni-bonn.de
-HOMEPAGE=	https://www.icinga.com/products/icinga-2/
+HOMEPAGE=	https://icinga.com/docs/icinga-2/latest/doc/01-about/
 COMMENT=	Monitoring system
 LICENSE=	gnu-gpl-v2
 
