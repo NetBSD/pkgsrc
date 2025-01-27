@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2019/11/02 22:54:28 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/27 19:12:38 rillig Exp $
 #
 
 DISTNAME=	linunace25
@@ -13,8 +13,8 @@ COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 LICENSE=	unace-license
 
 RESTRICTED=		Only original file distribution.
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base compat

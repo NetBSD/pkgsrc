@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2021/04/13 03:09:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/27 19:12:38 rillig Exp $
 #
 
-GITHUB_PROJECT=	pixz
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 DISTNAME=	pixz-1.0.7
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vasi/}
+GITHUB_PROJECT=	pixz
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/vasi/pixz

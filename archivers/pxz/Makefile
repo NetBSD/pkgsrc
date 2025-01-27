@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2021/04/16 16:16:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/01/27 19:12:38 rillig Exp $
 
-GITHUB_PROJECT=	pxz
-GITHUB_TAG=	124382a6d0832b13b7c091f72264f8f3f463070a
 DISTNAME=	pxz-4.999.9beta
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jnovy/}
+GITHUB_PROJECT=	pxz
+GITHUB_TAG=	124382a6d0832b13b7c091f72264f8f3f463070a
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://jnovy.fedorapeople.org/pxz/
