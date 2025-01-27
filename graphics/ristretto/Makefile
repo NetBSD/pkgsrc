@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2024/12/27 08:20:02 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/01/27 23:25:34 gutteridge Exp $
 
-VERSION=	0.13.2
+VERSION=	0.13.3
 DISTNAME=	ristretto-${VERSION}
-PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	https://archive.xfce.org/src/apps/ristretto/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +16,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config msgfmt perl intltool gdbus-codegen
+USE_TOOLS+=		gmake pkg-config msgfmt gdbus-codegen
 
 LDFLAGS.DragonFly=	-lX11
 LDFLAGS.FreeBSD=	-lX11
