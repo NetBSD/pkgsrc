@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2023/11/12 13:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2025/01/27 16:35:10 wiz Exp $
 
 DISTNAME=	vic-2.8ucl1.4.0beta-4337
 PKGNAME=	vic-devel-2.8.1.4.0beta.4337
@@ -40,6 +40,8 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFLICTS+=	vic-[0-9]*
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+CHECK_PORTABILITY_SKIP+=	.svn/text-base/configure.svn-base
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
