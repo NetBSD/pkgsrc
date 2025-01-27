@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.version,v 1.31 2025/01/25 21:29:25 adam Exp $
+# $NetBSD: Makefile.version,v 1.32 2025/01/27 13:59:46 wiz Exp $
 # used by cad/xcircuit/Makefile
 # used by devel/tcl-tclcl/Makefile
 # used by lang/tcl/Makefile
 # used by lang/tcl-otcl/Makefile
-# used by print/tcl-pdflib/Makefile
 
 TCL_SONUM=	86
 TCL_BASEVER=	8.6
