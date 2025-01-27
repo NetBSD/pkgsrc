@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/27 10:46:16 adam Exp $
 bin/jupyter-events-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -33,6 +33,9 @@ ${PYSITELIB}/jupyter_events/schemas/property-metaschema.yml
 ${PYSITELIB}/jupyter_events/traits.py
 ${PYSITELIB}/jupyter_events/traits.pyc
 ${PYSITELIB}/jupyter_events/traits.pyo
+${PYSITELIB}/jupyter_events/utils.py
+${PYSITELIB}/jupyter_events/utils.pyc
+${PYSITELIB}/jupyter_events/utils.pyo
 ${PYSITELIB}/jupyter_events/validators.py
 ${PYSITELIB}/jupyter_events/validators.pyc
 ${PYSITELIB}/jupyter_events/validators.pyo
