@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.642 2025/01/27 13:29:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.643 2025/01/27 13:44:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -862,3 +862,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-js-asset to 3.0.1 [adam 2025-01-27]
 	Updated www/py-django-registration to 5.1.0 [adam 2025-01-27]
 	Updated security/xca to 2.8.0 [wiz 2025-01-27]
+	Removed print/tcl-pdflib [wiz 2025-01-27]
