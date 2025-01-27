@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/27 18:59:09 rillig Exp $
 
 DISTNAME=	xpmicons-1.0
 PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.plig.org/xwinman/
+DIST_SUBDIR=	icons
 DISTFILES=	icons.tar.gz KDEicons.tgz \
 		3d_pixmaps_V1.21.tar.gz StarOffice3.1-icons.tar.gz \
 		eicons-1.0.tar.gz kdeicons.tgz wm-icons-0.2.6.tar.gz \
@@ -15,7 +16,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Huge collection of icons for any windowmanager
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	icons
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	include/X11/bitmaps include/X11/pixmaps

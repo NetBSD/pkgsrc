@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2024/08/01 18:50:45 vins Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/27 18:59:08 rillig Exp $
 
 DISTNAME=	xc-core-hr
 PKGVER=		20220127
 PKGNAME=	xcursor-core-hr-${PKGVER}
 CATEGORIES=	x11 graphics
-DIST_SUBDIR=	${PKGNAME_NOREV}
 MASTER_SITES=	https://fastestcode.org/dl/
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
