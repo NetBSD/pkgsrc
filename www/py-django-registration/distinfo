@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/08 14:46:49 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/01/27 12:03:16 adam Exp $
 
-BLAKE2s (django-registration-3.4.tar.gz) = 66340cc7d1772e8bf7df6d49b41980d39ef54ad5a99981a0aea7cb277c370096
-SHA512 (django-registration-3.4.tar.gz) = 610da72654b00844dffed073be9cc36ffabe8aaf93b0cee8eb0ddc58cde82ca4c9a262481557136103af780405f2224222a8b06c2100ea6cfb0c22a6ddaab912
-Size (django-registration-3.4.tar.gz) = 89040 bytes
+BLAKE2s (django_registration-5.1.0.tar.gz) = 63f2d85907470df8ed558e32be9465d2f92d1cf31212c196ba5152de34b39289
+SHA512 (django_registration-5.1.0.tar.gz) = f74077d022b8d2667f30a962d6dc76c26fc773a0572bf5152247f8f13af1db87f8715b050499abeed891fd77f3dbb1c9e4a08bb7082ea3c9866a31c943383352
+Size (django_registration-5.1.0.tar.gz) = 93367 bytes
