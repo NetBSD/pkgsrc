@@ -1,0 +1,16 @@
+$NetBSD: patch-linters_lint-submodule-refs_lint-submodule-refs.cabal,v 1.3 2025/01/27 15:08:08 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- linters/lint-submodule-refs/lint-submodule-refs.cabal.orig	2025-01-12 04:47:27.735023240 +0000
++++ linters/lint-submodule-refs/lint-submodule-refs.cabal
+@@ -14,8 +14,7 @@ executable lint-submodule-refs
+   build-depends:
+     base
+        >= 4.14 && < 5,
+-    text
+-       >= 1.2  && < 2.1,
++    text,
+     linters-common
+ 
+   ghc-options:

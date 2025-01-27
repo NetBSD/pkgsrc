@@ -1,0 +1,11 @@
+$NetBSD: patch-linters_lint-whitespace_lint-whitespace.cabal,v 1.3 2025/01/27 15:08:08 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- linters/lint-whitespace/lint-whitespace.cabal.orig	2025-01-12 04:49:43.005054016 +0000
++++ linters/lint-whitespace/lint-whitespace.cabal
+@@ -28,4 +28,3 @@ executable lint-whitespace
+     base
+        >= 4.14 && < 5,
+     text
+-       >= 1.2  && < 2.1,

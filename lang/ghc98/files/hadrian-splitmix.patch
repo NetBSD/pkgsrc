@@ -1,0 +1,17 @@
+$NetBSD: hadrian-splitmix.patch,v 1.3 2025/01/27 15:08:07 pho Exp $
+
+Allow it to build with GHC 9.8.x. Already fixed in upstream.
+
+--- splitmix.cabal.orig	2025-01-12 02:00:28.583229536 +0000
++++ splitmix.cabal
+@@ -80,8 +80,8 @@ library
+   -- ghc-options: -fplugin=DumpCore -fplugin-opt DumpCore:core-html
+ 
+   build-depends:
+-      base     >=4.3     && <4.19
+-    , deepseq  >=1.3.0.0 && <1.5
++      base
++    , deepseq
+ 
+   if flag(optimised-mixer)
+     cpp-options: -DOPTIMISED_MIX32=1
