@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/09/20 23:10:12 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2025/01/27 13:37:31 wiz Exp $
+
+Only look in buildlink path for libraries.
 
 --- configure.orig	2013-08-02 11:35:56.000000000 +0000
 +++ configure

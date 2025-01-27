@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 11:17:10 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/01/27 13:37:31 wiz Exp $
 
 BLAKE2s (hydra-7.5.tar.gz) = f3180e39fdd5c6386a89533d0421a489c80fe06b4db11b8fea0be6d3869c6a3b
 SHA512 (hydra-7.5.tar.gz) = b15ca32da6f1cd675d7149e9ef32fbb7b3d01e1fa2d648a1ed12bb6ae38d131f1123d84ff125d5f98677f62cddc97597d98d9cee662fcd305342c6f3fd2e10f8
 Size (hydra-7.5.tar.gz) = 681784 bytes
-SHA1 (patch-Makefile.am) = 9ce2a3c8acfa672786729c161010e56c1055055e
-SHA1 (patch-configure) = 4954b157e6fa201f0542279e961f0e39c66ca23c
-SHA1 (patch-hydra-gtk_src_Makefile.in) = 961b07aeb9e78cb4d5fa3e43213fd6164bcd08c3
+SHA1 (patch-Makefile.am) = 2debd6359e7ed3333497aa53c729f85ced3f59c9
+SHA1 (patch-configure) = 11db76c85c51a86cff3751dde97b8b2d1076526e
+SHA1 (patch-hydra-gtk_src_Makefile.in) = 5f79694febecbd032731100f28d2d0f539aba6f0
 SHA1 (patch-hydra-snmp.c) = 1c17271eae1cdb56b6c89cdb55ea34f31dc7b67f
