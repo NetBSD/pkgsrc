@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/01/23 14:31:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/27 13:16:22 ryoon Exp $
 
 DISTNAME=	pytorch-v2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,pytorch-v,torch-,}
@@ -87,10 +87,10 @@ post-install:
 #.include "../../devel/protobuf/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
+.include "../../mk/blas.buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../parallel/openmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../mk/blas.buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
