@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2024/12/27 08:20:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.115 2025/01/27 13:37:31 wiz Exp $
 
 DISTNAME=	hydra-7.5
 PKGREVISION=	58
@@ -11,18 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Login password cracker
 LICENSE=	gnu-agpl-v3
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_TOOLS+=	pkg-config gmake
-GNU_CONFIGURE=	YES
+GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-
-INSTALLATION_DIRS=	bin
-
-LDFLAGS.SunOS+=	-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl
+LDFLAGS.NetBSD+=	-pthread
 
 .include "options.mk"
 
@@ -30,5 +24,4 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

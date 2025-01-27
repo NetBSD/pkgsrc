@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.am,v 1.1 2013/09/20 23:10:12 joerg Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2025/01/27 13:37:31 wiz Exp $
+
+Add DESTDIR support.
 
 --- Makefile.am.orig	2013-09-20 22:00:03.000000000 +0000
 +++ Makefile.am
