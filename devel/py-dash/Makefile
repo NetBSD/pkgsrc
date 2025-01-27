@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/01/07 11:37:44 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/27 10:04:30 adam Exp $
 
-DISTNAME=	pydash-8.0.4
+DISTNAME=	pydash-8.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydash/}
