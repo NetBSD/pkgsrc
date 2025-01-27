@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2020/03/01 03:01:19 gutteridge Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/27 19:12:38 rillig Exp $
 
 DISTNAME=	szip-2.1.1
 CATEGORIES=	archivers
@@ -11,10 +11,10 @@ COMMENT=	Extended-Rice lossless compression
 LICENSE=	szip-license
 
 RESTRICTED=		No permission to redistribute
-NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 # pkgrevisions 0, 1, 2 and 3 all have different distfiles
 DIST_SUBDIR=		${PKGNAME_NOREV}nb3

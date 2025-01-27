@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2022/04/08 06:24:00 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/27 19:12:38 rillig Exp $
 
 DISTNAME=	gzip-1.12
 CATEGORIES=	archivers
 #MASTER_SITES=	${MASTER_SITE_GNU:=gzip/}
-#EXTRACT_SUFX=	.tar.xz
 MASTER_SITES=	${MASTER_SITE_LOCAL}
+#EXTRACT_SUFX=	.tar.xz
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

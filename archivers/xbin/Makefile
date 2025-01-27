@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2023/12/12 13:58:26 zafer Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/27 19:12:39 rillig Exp $
 
 DISTNAME=	${PRGNAME}unix
 PKGNAME=	${PRGNAME}-2.3
@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert mailable BinHex format into binary
 
 RESTRICTED=		May not be sold without permission.
-NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 
