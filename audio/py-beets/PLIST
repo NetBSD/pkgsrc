@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/01/14 09:15:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/01/27 11:25:02 wiz Exp $
 bin/beet-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -345,3 +345,5 @@ ${PYSITELIB}/beetsplug/web/templates/index.html
 ${PYSITELIB}/beetsplug/zero.py
 ${PYSITELIB}/beetsplug/zero.pyc
 ${PYSITELIB}/beetsplug/zero.pyo
+man/man1/beet-${PYVERSSUFFIX}.1
+man/man5/beetsconfig-${PYVERSSUFFIX}.5
