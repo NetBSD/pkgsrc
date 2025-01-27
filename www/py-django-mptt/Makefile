@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2024/10/14 06:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/27 12:00:26 adam Exp $
 
 DISTNAME=	django_mptt-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -14,6 +14,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-django-js-asset-[0-9]*:../../www/py-django-js-asset
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-django-js-asset
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
