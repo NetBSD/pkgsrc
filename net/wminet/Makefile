@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2021/04/24 10:59:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/27 14:02:57 wiz Exp $
 
 DISTNAME=	wmnet-1.2
 PKGNAME=	wminet-1.2
@@ -11,6 +11,8 @@ MAINTAINER=	coto@core.de
 COMMENT=	Dockable network monitor
 
 NOT_FOR_PLATFORM=	Interix-*-* # no userland protocol stack support
+# if.c:124:25: error: 'const struct ifnet' has no member named 'if_ibytes'
+NOT_FOR_PLATFORM+=	NetBSD-1[0-9].*-*
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
