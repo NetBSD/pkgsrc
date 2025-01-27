@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2023/12/11 23:52:52 zafer Exp $
+# $NetBSD: Makefile,v 1.34 2025/01/27 19:12:37 rillig Exp $
 #
 
 DISTNAME=		bicom101
@@ -14,10 +14,10 @@ COMMENT=		Data compressor in the PPM family
 LICENSE=		bicom-license
 
 RESTRICTED=		No commercial use without prior arrangement, no permission to distribute granted.
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2022/01/01 19:02:34 rhialto Exp $
+# $NetBSD: Makefile,v 1.45 2025/01/27 19:12:38 rillig Exp $
 
 DISTNAME=	lha-1.14i-ac20211125
 PKGNAME=	lha-114.9.20211125
@@ -16,9 +16,9 @@ CONFIGURE_ARGS+=	--disable-multibyte-filename
 
 RESTRICTED=		Other than for-free distribution of the unmodified \
 			source over a network, redistribution terms are complex.
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
