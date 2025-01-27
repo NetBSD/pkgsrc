@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.28 2023/09/21 14:44:08 vins Exp $
+# $NetBSD: Makefile.common,v 1.29 2025/01/27 13:59:46 wiz Exp $
 #
 # used by print/pdflib/Makefile
-# used by print/tcl-pdflib/Makefile
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 CATEGORIES=		print
