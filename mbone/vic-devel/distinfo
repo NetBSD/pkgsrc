@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:57:01 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/01/27 16:35:10 wiz Exp $
 
 BLAKE2s (vic-2.8ucl1.4.0_ov511.diff.gz) = 6ee05f47167e8496673cc9eb029ac124cc91d78d1d8b9ba49962259dbc23534d
 SHA512 (vic-2.8ucl1.4.0_ov511.diff.gz) = b2618dddb2b07ceec37fb8f11d05c7164bc089f9f720c6d697e2d3b83f086bf2f1efeb99bf79f3b9d164f472fe485b31780d687c9f4fc04a28ba2d22a109dfb5
@@ -11,7 +11,7 @@ SHA1 (patch-codec_tmndec_store.c) = 65b7aa01864f428088788b0311a2c88dc7a46914
 SHA1 (patch-color-swscale.cpp) = 0796262c5db74cc354ce7f55ae246c489f5c9b33
 SHA1 (patch-configure) = bce8d7eacb17644689ba34bc2e5b776f9ce9665e
 SHA1 (patch-crypt-rijndael.cpp) = 5dfda8c17c91fa5f6b2df24d4e1ed93bc4ae5b87
-SHA1 (patch-grabber-v4l2.cpp) = b62fcfdfee0aa7f9515ce1d9ee65b9211873deb7
+SHA1 (patch-grabber-v4l2.cpp) = 5f8f45dbdc506525eb457a518df2cf9b44857587
 SHA1 (patch-main.cpp) = 671cda41595f1f5c001b089ee04b5c84f559330a
 SHA1 (patch-tcl_tcl2cpp_tcl2cpp.c) = 90d7f66a06dfdefebb058da6e688aecb965e3925
 SHA1 (patch-tkStripchart.c) = ab02270a2801684d6d915d268651262e068a9c5c
