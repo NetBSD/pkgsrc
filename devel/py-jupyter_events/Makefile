@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/04/18 07:16:22 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/27 10:46:16 adam Exp $
 
-DISTNAME=	jupyter_events-0.10.0
+DISTNAME=	jupyter_events-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-events/}
@@ -25,8 +25,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-console-scripts-[0-9]*:../../devel/py-test-co
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		tests
 SUBST_STAGE.tests=	pre-configure
