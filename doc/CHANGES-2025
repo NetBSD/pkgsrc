@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.632 2025/01/26 18:02:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.633 2025/01/27 01:04:30 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/py-braintree to 4.32.0 [adam 2025-01-26]
 	Updated devel/py-project-api to 1.9.0 [adam 2025-01-26]
 	Updated time/php-framadate to 1.1.19nb1 [wiz 2025-01-26]
+	Updated sysutils/pv to 1.9.27 [scole 2025-01-27]
