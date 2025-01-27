@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/07 11:37:44 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/01/27 10:04:30 adam Exp $
 
-BLAKE2s (pydash-8.0.4.tar.gz) = 249672d633d1b1e7c8f679f0cbedf74179bf357b958641098b9a937e641d32c1
-SHA512 (pydash-8.0.4.tar.gz) = ff6a5e928e57b805ea113864a50d17621ae90013aa68def892e7c7890a57d6ea2aba7d84cf5c40fe37fa5da66134c68e2a2db74ff4a04080a7f84f438f4a7cda
-Size (pydash-8.0.4.tar.gz) = 164676 bytes
+BLAKE2s (pydash-8.0.5.tar.gz) = 51911ad116f23739bccc1e3ddb98937fa9ca86c8fe9e211eed706367fe1de520
+SHA512 (pydash-8.0.5.tar.gz) = 5d237076c014f9ad711ab38050de8a909f1d8ff9f86a200a5fced712e9474f1df4e4637fc80f87297be424d1e8929d418fa3e96bb5f50f26dbe32e79e19e8770
+Size (pydash-8.0.5.tar.gz) = 164861 bytes
