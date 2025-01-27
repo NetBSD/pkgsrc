@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2024/12/26 22:16:45 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/01/27 12:17:52 wiz Exp $
 
 .include "../../sysutils/salt/Makefile.common"
 
@@ -18,6 +18,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-spelling-[0-9]*:../../textproc/py-sp
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
 BUILD_TARGET=	html
+
+USE_LANGUAGES=	c
 
 MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build-${PYVERSSUFFIX}
 
