@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2023/06/06 12:41:53 riastradh Exp $
+# $NetBSD: Makefile,v 1.6 2025/01/27 20:32:17 wiz Exp $
 
-PKGNAME=	yices2-2.6.1
 DISTNAME=	Yices-${PKGVERSION}
-GITHUB_TAG=	${DISTNAME}
+PKGNAME=	yices2-2.6.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SRI-CSL/}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://yices.csl.sri.com/
@@ -17,6 +17,7 @@ USE_TOOLS+=		autoconf bash gmake
 USE_LANGUAGES=		c
 GNU_CONFIGURE=		yes
 USE_GNU_CONFIGURE_HOST=	no
+BUILD_TARGET=		obj lib bin
 TEST_TARGET=		check
 
 REPLACE_BASH+=	tests/regress/check.sh
