@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25350 2025/01/27 09:42:10 adam Exp $
+$NetBSD: TODO,v 1.25351 2025/01/27 13:29:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -521,6 +521,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cdrkit-1.1.10
 	o ce-doc-4.8
 	o ce-x11-4.8
+	o cfengine-3.25.0
 	o cgen-20180601
 	o cgic-207
 	o cgiirc-0.5.13
@@ -1369,7 +1370,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o worker-4.8.0
 	o wxRemind-101
 	o x2vnc-1.31
-	o xca-2.8.0
 	o xcoral-3.14
 	o xcursor-capitaine-4
 	o xerces-j-2.4.0 [pkg/21725]
