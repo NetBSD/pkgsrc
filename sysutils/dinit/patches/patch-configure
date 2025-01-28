@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2025/01/28 06:26:33 imil Exp $
+
+Enable NetBSD as a supported platform
+
+--- configure.orig	2025-01-07 12:31:49.000000000 +0000
++++ configure
+@@ -328,10 +328,13 @@ fi
+ [ -z "${STRIPOPTS+IS_SET}" ] && STRIPOPTS="-s"
+ 
+ ## Verify PLATFORM value
+-if [ "$PLATFORM" != "Linux" ] && [ "$PLATFORM" != "FreeBSD" ] && \
+-[ "$PLATFORM" != "OpenBSD" ] && [ "$PLATFORM" != "Darwin" ]; then
+-    warning "$PLATFORM platform is unknown!" "Known Platforms are: Linux, FreeBSD, OpenBSD, Darwin"
+-fi
++case "$PLATFORM" in
++Linux|FreeBSD|NetBSD|OpenBSD|Darwin)
++    ;;
++*) warning "$PLATFORM platform is unknown!" \
++   "Known Platforms are: Linux, FreeBSD, NetBSD, OpenBSD, Darwin"
++    ;;
++esac
+ 
+ ## Create testfile.cc to test c++ compiler
+ echo "int main(int argc, char **argv) { return 0; }" > testfile.cc || error Can\'t create temporary file

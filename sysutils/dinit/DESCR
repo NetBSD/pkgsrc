@@ -1,0 +1,7 @@
+Dinit is a service supervisor with dependency support which can also act as the
+system "init" program. It was created with the intention of providing a portable
+init system with dependency management, that was functionally superior to many
+extant inits. Development goals include clean design, robustness, portability,
+usability, and avoiding feature bloat (whilst still handling common - and some
+less-common - use cases). Dinit is designed to integrate with rather than
+subsume or replace other system software.
