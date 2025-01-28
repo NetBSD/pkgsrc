@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.659 2025/01/28 11:54:09 jun Exp $
+$NetBSD: CHANGES-2025,v 1.660 2025/01/28 11:58:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -882,3 +882,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/py-owslib to 0.32.1 [adam 2025-01-28]
 	Updated devel/py-mocket to 3.13.2 [adam 2025-01-28]
 	Updated emulators/nono to 1.2.0 [jun 2025-01-28]
+	Added www/py-hishel version 0.1.1 [adam 2025-01-28]
+	Added devel/py-pdm-build-locked version 0.3.4 [adam 2025-01-28]
