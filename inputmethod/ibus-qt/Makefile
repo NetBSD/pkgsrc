@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2024/11/14 22:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/01/28 16:22:55 riastradh Exp $
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -15,6 +15,10 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
+
+# XXX Workaround for icu-76 whose header files require C++17 unless you
+# define U_HIDE_DRAFT_API.  pkg/59028: qt5-qtwebkit doesn't build
+CXXFLAGS+=		-DU_HIDE_DRAFT_API
 
 TOOL_DEPENDS+=	doxygen>=1.6:../../devel/doxygen
 
