@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/28 11:58:08 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pdm_build_locked/__init__.py
+${PYSITELIB}/pdm_build_locked/__init__.pyc
+${PYSITELIB}/pdm_build_locked/__init__.pyo
+${PYSITELIB}/pdm_build_locked/_utils.py
+${PYSITELIB}/pdm_build_locked/_utils.pyc
+${PYSITELIB}/pdm_build_locked/_utils.pyo
+${PYSITELIB}/pdm_build_locked/backend.py
+${PYSITELIB}/pdm_build_locked/backend.pyc
+${PYSITELIB}/pdm_build_locked/backend.pyo
+${PYSITELIB}/pdm_build_locked/command.py
+${PYSITELIB}/pdm_build_locked/command.pyc
+${PYSITELIB}/pdm_build_locked/command.pyo
+${PYSITELIB}/pdm_build_locked/hatchling.py
+${PYSITELIB}/pdm_build_locked/hatchling.pyc
+${PYSITELIB}/pdm_build_locked/hatchling.pyo
+${PYSITELIB}/pdm_build_locked/plugin.py
+${PYSITELIB}/pdm_build_locked/plugin.pyc
+${PYSITELIB}/pdm_build_locked/plugin.pyo

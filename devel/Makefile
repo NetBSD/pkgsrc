@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4393 2025/01/24 13:26:44 pin Exp $
+# $NetBSD: Makefile,v 1.4394 2025/01/28 11:58:08 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2792,6 +2792,7 @@ SUBDIR+=	py-pathspec
 SUBDIR+=	py-pathvalidate
 SUBDIR+=	py-pbr
 SUBDIR+=	py-pdm
+SUBDIR+=	py-pdm-build-locked
 SUBDIR+=	py-pdm_backend
 SUBDIR+=	py-pebble
 SUBDIR+=	py-pep517
