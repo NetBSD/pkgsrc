@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.86 2024/10/11 12:39:30 jperkin Exp $
+# $NetBSD: install.mk,v 1.87 2025/01/28 16:02:00 riastradh Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -468,3 +468,32 @@ privileged-install-hook: .PHONY
 ###
 install-clean: .PHONY package-eat-cookie check-clean _pkgformat-install-clean
 	${RUN} ${RM} -f ${PLIST} ${_COOKIE.install} ${_DEPENDS_PLIST}
+
+# install-env:
+#	Starts an interactive shell in WRKSRC.
+#
+#	This is only used during development and testing of a package
+#	to work in the environment (INSTALL_ENV) that is used by
+#	default for installing the packages.
+#
+# User-settable variables:
+#
+# INSTALL_ENV_SHELL
+#	The shell to start.
+#
+#	Default: ${SH}, to realistically match the install environment.
+#
+# Keywords: debug install
+
+INSTALL_ENV_SHELL?=	${SH}
+install-env: .PHONY ${_PKGSRC_BARRIER:Ubarrier:D_install-env}
+_install-env: .PHONY configure
+	@${STEP_MSG} "Entering the install environment for ${PKGNAME}"
+.if ${INSTALL_DIRS:[#]} > 1 || ${INSTALL_DIRS} != ${WRKSRC}
+	@${ECHO_MSG} "The INSTALL_DIRS are:" \
+		${INSTALL_DIRS:S,^${WRKSRC}$,.,:S,^${WRKSRC}/,,:Q}
+.endif
+	${RUN}${_ULIMIT_CMD}						\
+	cd ${WRKSRC} &&							\
+	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${INSTALL_MAKE_FLAGS} \
+		${INSTALL_ENV_SHELL}
