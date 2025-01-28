@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.649 2025/01/27 23:25:54 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.650 2025/01/28 00:47:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cad/py-gdstk to 0.9.58 [mef 2025-01-27]
 	Updated editors/vim-share to 9.1.1054 [morr 2025-01-27]
 	Updated graphics/ristretto to 0.13.3 [gutteridge 2025-01-27]
+	Updated textproc/p5-Text-Markdown-Discount to 0.18 [schmonz 2025-01-28]
