@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.11 2025/01/27 15:09:35 pho Exp $
+# $NetBSD: bootstrap.mk,v 1.12 2025/01/28 13:04:07 jperkin Exp $
 # -----------------------------------------------------------------------------
 # Select a bindist of bootstrapping compiler on a per-platform basis. See
 # ./files/BOOTSTRAP.md for details.
@@ -71,13 +71,13 @@ DISTFILES:=	${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE} # Available in L
 .endif
 
 .if ${MACHINE_PLATFORM:MSunOS-*-x86_64} || make(distinfo) || make (makesum) || make(mdi)
-BOOT_VERSION:=		9.8.2
+BOOT_VERSION:=		9.4.7
 BOOT_ARCHIVE:=		ghc-${BOOT_VERSION}-boot-x86_64-unknown-solaris2.tar.xz
 #
 # Built on OmniOS r151052 and available in LOCAL_PORTS. jperkin@, maybe you
 # want to replace it with something else? [2025-01-27; pho]
 #
-#SITES.${BOOT_ARCHIVE}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
+SITES.${BOOT_ARCHIVE}=	https://us-central.manta.mnx.io/pkgsrc/public/pkg-bootstraps/
 DISTFILES:=		${DISTFILES} ${BOOT_ARCHIVE} ${HADRIAN_BOOT_SOURCE}
 .endif
 
