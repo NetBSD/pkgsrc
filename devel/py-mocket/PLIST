@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/11 09:32:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/28 09:52:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -27,6 +27,9 @@ ${PYSITELIB}/mocket/mockredis.pyo
 ${PYSITELIB}/mocket/plugins/__init__.py
 ${PYSITELIB}/mocket/plugins/__init__.pyc
 ${PYSITELIB}/mocket/plugins/__init__.pyo
+${PYSITELIB}/mocket/plugins/aiohttp_connector.py
+${PYSITELIB}/mocket/plugins/aiohttp_connector.pyc
+${PYSITELIB}/mocket/plugins/aiohttp_connector.pyo
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.py
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.pyc
 ${PYSITELIB}/mocket/plugins/httpretty/__init__.pyo
