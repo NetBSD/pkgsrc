@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/01/28 06:26:33 imil Exp $
+
+BLAKE2s (dinit-0.19.3.tar.gz) = 0ba4864cfbcce075c09469b97827bc84be1a3f51459d8cb8bab0a3b4c3efd434
+SHA512 (dinit-0.19.3.tar.gz) = 541ade391ed6fd43da394e19152ba63267614742a60b8e219e03db1ef91dd1c884e157aaad020c2e08b0e3b580a0dd7deb1b17392fdae5691d4062e5a17d02b6
+Size (dinit-0.19.3.tar.gz) = 372252 bytes
+SHA1 (patch-configure) = 68c5f9ecac565cb5cd03620508385aa2cc861e9c
