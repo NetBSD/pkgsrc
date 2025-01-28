@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/11/25 10:45:23 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/01/28 16:21:28 riastradh Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	9
@@ -11,7 +11,9 @@ LICENSE=	python-software-foundation
 
 USE_GCC_RUNTIME=	yes
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYSETUPTOOLSVER=	${"${PYTHON_VERSION:M2*}" != "":?44:}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools${PYSETUPTOOLSVER}
 
 PYDISTUTILSPKG=		yes
 PY_SETUP_SUBST+=	BLPREFIX=${LOCALBASE}
