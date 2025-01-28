@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/01/16 19:41:38 vins Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/28 13:37:39 vins Exp $
 
 DISTNAME=	plan9port-20240717
 CATEGORIES=	misc plan9
@@ -13,7 +13,7 @@ COMMENT=	Plan 9 from User Space
 LICENSE=	mit AND zlib
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash:run gzip perl pax tar
+USE_TOOLS+=	bash:run perl pax sed
 
 MKPIE_SUPPORTED=	no
 RELRO_SUPPORTED=	no
