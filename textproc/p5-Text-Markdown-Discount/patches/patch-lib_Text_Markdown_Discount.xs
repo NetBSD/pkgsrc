@@ -1,9 +1,9 @@
-$NetBSD: patch-Discount.xs,v 1.1 2018/03/10 05:45:02 schmonz Exp $
+$NetBSD: patch-lib_Text_Markdown_Discount.xs,v 1.1 2025/01/28 00:47:04 schmonz Exp $
 
 Don't expect to find this in /usr/include or equivalent.
 
---- Discount.xs.orig	2013-08-09 20:07:01.000000000 +0000
-+++ Discount.xs
+--- lib/Text/Markdown/Discount.xs.orig	2025-01-27 22:57:34.104267097 +0000
++++ lib/Text/Markdown/Discount.xs
 @@ -5,7 +5,7 @@
  #include "ppport.h"
  
