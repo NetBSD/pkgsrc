@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2025/01/23 11:08:48 jun Exp $
+# $NetBSD: Makefile,v 1.47 2025/01/28 11:53:15 jun Exp $
 
-DISTNAME=	nono-1.1.2
+DISTNAME=	nono-1.2.0
 
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pastel-flower.jp/~isaki/nono/archive/
@@ -35,5 +35,6 @@ post-install:
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/wxGTK32/buildlink3.mk"
+.include "../../net/libslirp/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
