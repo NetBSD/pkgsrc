@@ -1,0 +1,23 @@
+$NetBSD: patch-src_cmd_compress_mkfile,v 1.1 2025/01/28 17:41:20 vins Exp $
+
+Do not install multiple copies of the same binary.
+
+--- src/cmd/compress/mkfile.orig	2025-01-28 14:09:21.281350403 +0000
++++ src/cmd/compress/mkfile
+@@ -1,15 +1,7 @@
+ <$PLAN9/src/mkhdr
+ 
+ TARG=\
+-	compress \
+-	zcat \
+-	uncompress
+-
+-$O.uncompress:Q: $O.compress
+-	cp $prereq $target
+-
+-$O.zcat:Q: $O.compress
+-	cp $prereq $target
++	compress
+ 
+ <$PLAN9/src/mkmany
+ 
