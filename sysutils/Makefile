@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1144 2025/01/19 02:27:52 rxg Exp $
+# $NetBSD: Makefile,v 1.1145 2025/01/28 06:29:49 imil Exp $
 #
 
 COMMENT=	System utilities
@@ -171,6 +171,7 @@ SUBDIR+=	devkitd
 SUBDIR+=	devpub-mount
 SUBDIR+=	dfc
 SUBDIR+=	di
+SUBDIR+=	dinit
 SUBDIR+=	direnv
 SUBDIR+=	direvent
 SUBDIR+=	dirsize
