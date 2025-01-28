@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/01/06 19:37:32 vins Exp $
+# $NetBSD: Makefile,v 1.49 2025/01/28 12:43:43 vins Exp $
 
 DISTNAME=		fam-2.7.0
 PKGREVISION=		9
@@ -54,8 +54,6 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 .endif
 
 .if ${OPSYS} == "Linux"
-# prevent linking errors for standard libraries.
-BUILDLINK_TRANSFORM+=	rm:-nostdlib
 # glibc lacks RPC support. 
 .include "../../devel/libtirpc/buildlink3.mk"
 .endif
