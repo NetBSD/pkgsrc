@@ -1,7 +1,6 @@
-# $NetBSD: options.mk,v 1.5 2024/08/25 06:19:04 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2025/01/28 08:05:19 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gerbera
-
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg ffmpegthumbnailer javascript matroska systemd
 PKG_SUGGESTED_OPTIONS=	javascript matroska
 
@@ -13,7 +12,7 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_DEBUG=OFF
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_AVCODEC=ON
-.  include "../../multimedia/ffmpeg4/buildlink3.mk"
+.  include "../../multimedia/ffmpeg6/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpegthumbnailer)
