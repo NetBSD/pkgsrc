@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2024/08/04 20:13:07 vins Exp $
+$NetBSD: distinfo,v 1.6 2025/01/28 17:41:20 vins Exp $
 
 BLAKE2s (plan9port-20240717-a2567fcac9851e5cc965a236679f568b0e79cff2.tar.gz) = 46c53ef9ae5043e5546bf49a1eca8093a1abd4237f0b5526e6c1b69fe4e5cf5d
 SHA512 (plan9port-20240717-a2567fcac9851e5cc965a236679f568b0e79cff2.tar.gz) = fecc317d80155dd5f07346ab2a448a0ab336a615c7f9877daeff1d010545a0360bce53b4fc5d60e3466e7db760d84657b89ff4e803f75c7129d86af99c005a7e
@@ -6,5 +6,8 @@ Size (plan9port-20240717-a2567fcac9851e5cc965a236679f568b0e79cff2.tar.gz) = 2341
 SHA1 (patch-INSTALL) = a20664c816a3c242bb6ca3484bccb84350843122
 SHA1 (patch-bin_9c) = 65184d75f4ff87718093f9e85e43adf8018ea366
 SHA1 (patch-bin_9l) = e6daeac87657ed3e25e0f0db403d973f60d544d2
+SHA1 (patch-src_cmd_compress_mkfile) = 9aaffb579741554555f606977c9f0e717a4c5309
 SHA1 (patch-src_cmd_devdraw_mkwsysrules.sh) = b81252ff054868622e07e743e436ddaad540b9e0
-SHA1 (patch-src_cmd_rio_mkfile) = b2584bf14a71efb7af4bebba763035d21b38a194
+SHA1 (patch-src_cmd_fossil_mkfile) = ff13ed2961d8e4eae7f3abf0457fd01e16385c0b
+SHA1 (patch-src_cmd_rio_mkfile) = 504067dbade77eac548ae2706c6e159fb3b91832
+SHA1 (patch-src_cmd_venti_srv_mkfile) = 0e49822506d6496294669e26283c518078aef8d9

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/01/28 13:37:39 vins Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/28 17:41:20 vins Exp $
 
 DISTNAME=	plan9port-20240717
+PKGREVISION=	1
 CATEGORIES=	misc plan9
 MASTER_SITES=	${MASTER_SITE_GITHUB:=9fans/}
 GITHUB_TAG=	a2567fcac9851e5cc965a236679f568b0e79cff2
@@ -21,6 +22,8 @@ RELRO_SUPPORTED=	no
 PTHREAD_AUTO_VARS=		yes
 BUILDLINK_TRANSFORM+=		rm:-lpthread
 
+PLAN9_TARGET=	${PREFIX}/plan9
+
 REPLACE_BASH+=	bin/macedit
 REPLACE_BASH+=	mac/9term.app/Contents/MacOS/9term
 REPLACE_BASH+=	mac/Plumb.app/Contents/MacOS/plumb
@@ -32,30 +35,40 @@ REPLACE_PERL+=	unix/man/fixurls
 
 REPLACE_INTERPRETER+=	rc
 REPLACE.rc.old=		.*/bin/rc
-REPLACE.rc.new=		${PREFIX}/plan9/bin/rc
-REPLACE_FILES.rc+=	bin/wintext
-REPLACE_FILES.rc+=	acid/transcript
-REPLACE_FILES.rc+=	acid/window
-REPLACE_FILES.rc+=	src/cmd/9660/mk9660.rc
-REPLACE_FILES.rc+=	src/cmd/dict/egfix
-REPLACE_FILES.rc+=	src/cmd/dict/egfix2
-REPLACE_FILES.rc+=	src/cmd/dict/gefix
-REPLACE_FILES.rc+=	src/cmd/dict/getneeds
-REPLACE_FILES.rc+=	src/cmd/fossil/conf.rc
-REPLACE_FILES.rc+=	src/cmd/lp/lp.rc
-REPLACE_FILES.rc+=	src/cmd/lp/lpsend.rc
-REPLACE_FILES.rc+=	src/cmd/map/map.rc
-REPLACE_FILES.rc+=	src/cmd/map/mapdemo.rc
-REPLACE_FILES.rc+=	src/cmd/netfiles/netfileget
-REPLACE_FILES.rc+=	src/cmd/netfiles/netfileput
-REPLACE_FILES.rc+=	src/cmd/netfiles/netfilestat
-REPLACE_FILES.rc+=	src/cmd/spell/spell.rc
-REPLACE_FILES.rc+=	src/cmd/upas/filterkit/pipefrom.sample
-REPLACE_FILES.rc+=	src/cmd/upas/misc/mail.rc
-REPLACE_FILES.rc+=	src/cmd/upas/misc/qmail
-REPLACE_FILES.rc+=	src/cmd/upas/misc/remotemail
-REPLACE_FILES.rc+=	src/cmd/venti/srv/conf.rc
-REPLACE_FILES.rc+=	src/cmd/venti/srv/tester
+REPLACE.rc.new=		${PLAN9_TARGET}/bin/rc
+REPLACE_FILES.rc+=	bin/9.rc bin/9fs bin/Getdir bin/adict		\
+			bin/doctype bin/ipso bin/lookman bin/man	\
+			bin/mount bin/quote1 bin/quote2 bin/sig		\
+			bin/soelim bin/spell bin/src bin/ssam		\
+			bin/stack bin/troff2png bin/u.rc bin/unmount	\
+			bin/upas/isspam bin/upas/msgcat bin/upas/spam	\
+			bin/upas/spambox bin/upas/unspam		\
+			bin/upas/unspambox acid/transcript acid/window	\
+			bin/vmount bin/vwhois bin/wintext bin/yesterday	\
+			dist/debian/mkpkg  dist/debian/mkrep		\
+			dist/manweb dist/mkdirlist dist/mkfilelist	\
+			dist/publish dist/troff/tfont			\
+			mail/lib/qmail	mail/lib/remotemail		\
+			mail/lib/validateattachment			\
+			man/mkindex man/secindex			\
+			src/cmd/9660/mk9660.rc src/cmd/dict/egfix	\
+			src/cmd/dict/egfix2 src/cmd/dict/gefix		\
+			src/cmd/dict/getneeds src/cmd/fossil/conf.rc	\
+			src/cmd/lp/lp.rc src/cmd/lp/lpsend.rc		\
+			lp/bin/* lp/daemon/* lp/process/* lp/stat/*	\
+			lp/kill/generic lp/sched/FIFO lp/spooler/*	\
+			src/cmd/map/map.rc src/cmd/map/mapdemo.rc	\
+			src/cmd/netfiles/netfileget			\
+			src/cmd/netfiles/netfileput			\
+			src/cmd/netfiles/netfilestat			\
+			src/cmd/postscript/printfont/printfont.rc	\
+			src/cmd/spell/spell.rc				\
+			src/cmd/upas/misc/mail.rc			\
+			src/cmd/upas/misc/qmail				\
+			src/cmd/upas/misc/remotemail			\
+			src/cmd/upas/filterkit/pipefrom.sample		\
+			src/cmd/venti/srv/conf.rc			\
+			src/cmd/venti/srv/tester
 
 SUBST_CLASSES+=		cc
 SUBST_STAGE.cc=		pre-configure
@@ -70,8 +83,6 @@ SUBST_FILES.prefix+=	src/cmd/devdraw/mkwsysrules.sh
 SUBST_FILES.prefix+=	INSTALL plan9.sh acme.sh
 SUBST_VARS.prefix=	PREFIX X11BASE
 SUBST_MESSAGE.prefix=	Replacing PREFIX placeholders.
-
-PLAN9_TARGET=	${PREFIX}/plan9
 
 EGDIR=		${PREFIX}/share/examples/profile.d
 CONF_FILES+=	${EGDIR}/plan9.sh \
@@ -160,7 +171,17 @@ do-install:
 	${RUN}${CHMOD} -x ${PLAN9_BUILD}/man/fonts
 
 post-install:
-# Run acme as a standalone application.
+# install venti/fossil conf scripts.
+	${INSTALL_SCRIPT} ${WRKSRC}/src/cmd/venti/srv/conf.rc   \
+		${PLAN9_BUILD}/bin/venti/conf
+	${INSTALL_SCRIPT} ${WRKSRC}/src/cmd/fossil/conf.rc      \
+		${PLAN9_BUILD}/bin/fossil/conf
+# symlink the `compress' utility to its counterpart(s).
+.for z in uncompress zcat
+	${RUN}${LN} -sf ${PLAN9_TARGET}/bin/compress 	\
+		${PLAN9_BUILD}/bin/${z}
+.endfor
+# Allow acme to be run as a standalone application.
 	${INSTALL_SCRIPT} ${WRKSRC}/acme.sh		\
 	  ${DESTDIR}${PREFIX}/bin/acme
 	${INSTALL_DATA} ${FILESDIR}/acme.desktop	\
