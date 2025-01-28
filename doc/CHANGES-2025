@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.652 2025/01/28 00:55:07 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.653 2025/01/28 00:59:44 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-Text-Markdown-Discount to 0.18 [schmonz 2025-01-28]
 	Updated sysutils/xfce4-thunar to 4.20.1 [gutteridge 2025-01-28]
 	Updated meta-pkgs/xfce4 to 4.20.0nb1 [gutteridge 2025-01-28]
+	Updated x11/xfce4-clipman-plugin to 1.6.7 [gutteridge 2025-01-28]
