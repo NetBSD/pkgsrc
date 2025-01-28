@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.650 2025/01/28 00:47:09 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.651 2025/01/28 00:51:35 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/vim-share to 9.1.1054 [morr 2025-01-27]
 	Updated graphics/ristretto to 0.13.3 [gutteridge 2025-01-27]
 	Updated textproc/p5-Text-Markdown-Discount to 0.18 [schmonz 2025-01-28]
+	Updated sysutils/xfce4-thunar to 4.20.1 [gutteridge 2025-01-28]
