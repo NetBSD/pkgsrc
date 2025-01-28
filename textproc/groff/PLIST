@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2025/01/15 02:37:31 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.31 2025/01/28 12:27:14 jperkin Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn2graph
@@ -598,7 +598,6 @@ share/groff/${PKGVERSION}/tmac/62bit.tmac
 share/groff/${PKGVERSION}/tmac/X.tmac
 share/groff/${PKGVERSION}/tmac/Xps.tmac
 share/groff/${PKGVERSION}/tmac/an-ext.tmac
-share/groff/${PKGVERSION}/tmac/an.tmac
 share/groff/${PKGVERSION}/tmac/andoc.tmac
 share/groff/${PKGVERSION}/tmac/composite.tmac
 share/groff/${PKGVERSION}/tmac/cp1047.tmac
@@ -637,7 +636,6 @@ share/groff/${PKGVERSION}/tmac/latin5.tmac
 share/groff/${PKGVERSION}/tmac/latin9.tmac
 share/groff/${PKGVERSION}/tmac/lbp.tmac
 share/groff/${PKGVERSION}/tmac/lj4.tmac
-share/groff/${PKGVERSION}/tmac/m.tmac
 share/groff/${PKGVERSION}/tmac/man.tmac
 share/groff/${PKGVERSION}/tmac/mandoc.tmac
 share/groff/${PKGVERSION}/tmac/mdoc.tmac
@@ -646,16 +644,13 @@ share/groff/${PKGVERSION}/tmac/mdoc/doc-ditroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-nroff
 share/groff/${PKGVERSION}/tmac/mdoc/doc-syms
 share/groff/${PKGVERSION}/tmac/me.tmac
-share/groff/${PKGVERSION}/tmac/mm.tmac
 share/groff/${PKGVERSION}/tmac/mm/0.MT
 share/groff/${PKGVERSION}/tmac/mm/4.MT
 share/groff/${PKGVERSION}/tmac/mm/5.MT
 share/groff/${PKGVERSION}/tmac/mm/ms.cov
 share/groff/${PKGVERSION}/tmac/mm/se_ms.cov
-share/groff/${PKGVERSION}/tmac/mmse.tmac
 share/groff/${PKGVERSION}/tmac/mom.tmac
 share/groff/${PKGVERSION}/tmac/ms.tmac
-share/groff/${PKGVERSION}/tmac/mse.tmac
 share/groff/${PKGVERSION}/tmac/om.tmac
 share/groff/${PKGVERSION}/tmac/papersize.tmac
 share/groff/${PKGVERSION}/tmac/pdf.tmac
@@ -672,7 +667,6 @@ share/groff/${PKGVERSION}/tmac/refer-mm.tmac
 share/groff/${PKGVERSION}/tmac/refer-ms.tmac
 share/groff/${PKGVERSION}/tmac/refer.tmac
 share/groff/${PKGVERSION}/tmac/rfc1345.tmac
-share/groff/${PKGVERSION}/tmac/s.tmac
 share/groff/${PKGVERSION}/tmac/sanitize.tmac
 share/groff/${PKGVERSION}/tmac/sboxes.tmac
 share/groff/${PKGVERSION}/tmac/spdf.tmac
