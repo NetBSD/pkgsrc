@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2021/12/18 20:12:01 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/28 00:59:09 gutteridge Exp $
 bin/xfce4-clipman
 bin/xfce4-clipman-history
 bin/xfce4-clipman-settings
@@ -54,6 +54,7 @@ share/locale/oc/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/pt/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-clipman-plugin.mo
+share/locale/ro/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/sk/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/sl/LC_MESSAGES/xfce4-clipman-plugin.mo
