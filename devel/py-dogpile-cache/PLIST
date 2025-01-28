@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/12 11:55:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/28 18:14:31 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -32,6 +32,9 @@ ${PYSITELIB}/dogpile/cache/backends/null.pyo
 ${PYSITELIB}/dogpile/cache/backends/redis.py
 ${PYSITELIB}/dogpile/cache/backends/redis.pyc
 ${PYSITELIB}/dogpile/cache/backends/redis.pyo
+${PYSITELIB}/dogpile/cache/backends/valkey.py
+${PYSITELIB}/dogpile/cache/backends/valkey.pyc
+${PYSITELIB}/dogpile/cache/backends/valkey.pyo
 ${PYSITELIB}/dogpile/cache/exception.py
 ${PYSITELIB}/dogpile/cache/exception.pyc
 ${PYSITELIB}/dogpile/cache/exception.pyo
