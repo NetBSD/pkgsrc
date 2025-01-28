@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2025/01/13 06:37:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.161 2025/01/28 16:02:42 riastradh Exp $
 
 DISTNAME=	icu4c-76_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -34,11 +34,12 @@ CONFIGURE_ENV+=		ac_cv_prog_PYTHON=""
 
 TOOL_DEPENDS+=		${PKGNAME}:../../${PKGPATH}
 
+ICU_CROSS_DIR=		${WRKDIR}/.icu_cross
+ICU_CROSS_COOKIE=	${ICU_CROSS_DIR}/.cookie
+
 CONFIGURE_ARGS+=	--with-cross-build=${ICU_CROSS_DIR}
 pre-configure: ${ICU_CROSS_COOKIE}
 
-ICU_CROSS_DIR=		${WRKDIR}/.icu_cross
-ICU_CROSS_COOKIE=	${ICU_CROSS_DIR}/.cookie
 ICU_CROSS_TOOLS=	\
 	${HOST_PKG_INFO} -qL ${PKGNAME} \
 	| ${GREP} -e '^'${TOOLBASE}/bin -e '^'${TOOLBASE}/sbin
