@@ -1,11 +1,25 @@
-$NetBSD: patch-MANIFEST,v 1.4 2024/12/31 14:31:09 schmonz Exp $
+$NetBSD: patch-MANIFEST,v 1.5 2025/01/28 00:47:04 schmonz Exp $
 
 Remove local copy of libdiscount.
 
---- MANIFEST.orig	2024-12-31 06:37:59.000000000 +0000
+--- MANIFEST.orig	2025-01-27 23:05:20.727777716 +0000
 +++ MANIFEST
-@@ -1,129 +1,4 @@
- Changes
+@@ -6,80 +6,6 @@ META.json
+ README.md
+ builder/MyBuilder.pm
+ cpanfile
+-discount-2.2.7d/COPYRIGHT
+-discount-2.2.7d/CREDITS
+-discount-2.2.7d/Csio.c
+-discount-2.2.7d/INSTALL
+-discount-2.2.7d/Makefile.in
+-discount-2.2.7d/Plan9/README.md
+-discount-2.2.7d/Plan9/markdown.1
+-discount-2.2.7d/Plan9/markdown.2
+-discount-2.2.7d/Plan9/markdown.6
+-discount-2.2.7d/Plan9/mkfile
+-discount-2.2.7d/README
+-discount-2.2.7d/VERSION
 -discount-2.2.7d/amalloc.c
 -discount-2.2.7d/amalloc.h
 -discount-2.2.7d/basename.c
@@ -14,9 +28,6 @@ Remove local copy of libdiscount.
 -discount-2.2.7d/cmake/discount-config.cmake.in
 -discount-2.2.7d/configure.inc
 -discount-2.2.7d/configure.sh
--discount-2.2.7d/COPYRIGHT
--discount-2.2.7d/CREDITS
--discount-2.2.7d/Csio.c
 -discount-2.2.7d/css.c
 -discount-2.2.7d/cstring.h
 -discount-2.2.7d/docheader.c
@@ -30,10 +41,8 @@ Remove local copy of libdiscount.
 -discount-2.2.7d/github_flavoured.c
 -discount-2.2.7d/h1title.c
 -discount-2.2.7d/html5.c
--discount-2.2.7d/INSTALL
 -discount-2.2.7d/libmarkdown.pc.in
 -discount-2.2.7d/main.c
--discount-2.2.7d/Makefile.in
 -discount-2.2.7d/makepage.1
 -discount-2.2.7d/makepage.c
 -discount-2.2.7d/markdown.1
@@ -50,87 +59,36 @@ Remove local copy of libdiscount.
 -discount-2.2.7d/mkdio.c
 -discount-2.2.7d/mkdio.h.in
 -discount-2.2.7d/mktags.c
--discount-2.2.7d/msvc/config.h.vc
 -discount-2.2.7d/msvc/Makefile
 -discount-2.2.7d/msvc/README.md
+-discount-2.2.7d/msvc/config.h.vc
 -discount-2.2.7d/notspecial.c
 -discount-2.2.7d/pgm_options.c
 -discount-2.2.7d/pgm_options.h
--discount-2.2.7d/Plan9/markdown.1
--discount-2.2.7d/Plan9/markdown.2
--discount-2.2.7d/Plan9/markdown.6
--discount-2.2.7d/Plan9/mkfile
--discount-2.2.7d/Plan9/README.md
--discount-2.2.7d/README
 -discount-2.2.7d/resource.c
 -discount-2.2.7d/setup.c
 -discount-2.2.7d/tags.c
 -discount-2.2.7d/tags.h
--discount-2.2.7d/tests/autolink.t
--discount-2.2.7d/tests/automatic.t
--discount-2.2.7d/tests/backslash.t
--discount-2.2.7d/tests/callbacks.t
--discount-2.2.7d/tests/chrome.text
--discount-2.2.7d/tests/code.t
--discount-2.2.7d/tests/codeblock.t
--discount-2.2.7d/tests/compat.t
--discount-2.2.7d/tests/crash.t
--discount-2.2.7d/tests/data/f01.html
--discount-2.2.7d/tests/data/f01.text
--discount-2.2.7d/tests/data/README
--discount-2.2.7d/tests/defects.t
--discount-2.2.7d/tests/div.t
--discount-2.2.7d/tests/dl.t
--discount-2.2.7d/tests/embedlinks.text
--discount-2.2.7d/tests/emphasis.t
--discount-2.2.7d/tests/extrafootnotes.t
--discount-2.2.7d/tests/flow.t
--discount-2.2.7d/tests/footnotes.t
--discount-2.2.7d/tests/functions.sh
--discount-2.2.7d/tests/githubtags.t
--discount-2.2.7d/tests/header.t
--discount-2.2.7d/tests/html.t
--discount-2.2.7d/tests/html5.t
--discount-2.2.7d/tests/html_comment.t
--discount-2.2.7d/tests/latex.t
--discount-2.2.7d/tests/links.text
--discount-2.2.7d/tests/linkylinky.t
--discount-2.2.7d/tests/linkypix.t
--discount-2.2.7d/tests/list.t
--discount-2.2.7d/tests/list3deep.t
--discount-2.2.7d/tests/misc.t
--discount-2.2.7d/tests/muñoz.t
--discount-2.2.7d/tests/pandoc.t
--discount-2.2.7d/tests/para.t
--discount-2.2.7d/tests/peculiarities.t
--discount-2.2.7d/tests/pseudo.t
--discount-2.2.7d/tests/reddit.t
--discount-2.2.7d/tests/reparse.t
--discount-2.2.7d/tests/safelinks.t
--discount-2.2.7d/tests/schiraldi.t
--discount-2.2.7d/tests/smarty.t
--discount-2.2.7d/tests/snakepit.t
--discount-2.2.7d/tests/strikethrough.t
--discount-2.2.7d/tests/style.t
--discount-2.2.7d/tests/superscript.t
--discount-2.2.7d/tests/syntax.text
--discount-2.2.7d/tests/tables.t
--discount-2.2.7d/tests/tabstop.t
--discount-2.2.7d/tests/toc.t
--discount-2.2.7d/tests/xml.t
+-discount-2.2.7d/test.md
 -discount-2.2.7d/theme.1
 -discount-2.2.7d/theme.c
 -discount-2.2.7d/toc.c
+-discount-2.2.7d/tools/README
 -discount-2.2.7d/tools/branch.c
 -discount-2.2.7d/tools/checkbits.sh
 -discount-2.2.7d/tools/cols.c
 -discount-2.2.7d/tools/echo.c
 -discount-2.2.7d/tools/pandoc_headers.c
--discount-2.2.7d/tools/README
--discount-2.2.7d/VERSION
 -discount-2.2.7d/version.c.in
 -discount-2.2.7d/xml.c
 -discount-2.2.7d/xmlpage.c
- Discount.xs
- INSTALL.Discount
  lib/Text/Markdown/Discount.pm
+ lib/Text/Markdown/Discount.xs
+ lib/Text/Markdown/ppport.h
+@@ -140,4 +66,4 @@ xt/MarkdownXS.pl
+ xt/index.text
+ xt/test.pl
+ META.yml
+-MANIFEST
+\ No newline at end of file
++MANIFEST
