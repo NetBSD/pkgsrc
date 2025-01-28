@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.660 2025/01/28 11:58:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.661 2025/01/28 12:19:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -884,3 +884,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/nono to 1.2.0 [jun 2025-01-28]
 	Added www/py-hishel version 0.1.1 [adam 2025-01-28]
 	Added devel/py-pdm-build-locked version 0.3.4 [adam 2025-01-28]
+	Updated audio/wavpack to 5.8.0 [adam 2025-01-28]
+	Updated textproc/ugrep to 7.2.1 [adam 2025-01-28]
