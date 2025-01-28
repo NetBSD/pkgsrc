@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.656 2025/01/28 06:33:44 imil Exp $
+$NetBSD: CHANGES-2025,v 1.657 2025/01/28 08:14:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -877,3 +877,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-desktop to 4.20.0nb1 [gutteridge 2025-01-28]
 	Updated editors/retext to 8.1.0nb1 [gutteridge 2025-01-28]
 	Added sysutils/dinit version 0.19.3  [imil 2025-01-28]
+	Updated sysutils/ansible-core to 2.18.2 [adam 2025-01-28]
+	Updated sysutils/ansible-lint to 25.1.0 [adam 2025-01-28]
