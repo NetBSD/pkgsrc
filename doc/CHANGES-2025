@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.654 2025/01/28 01:20:35 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.655 2025/01/28 02:31:48 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4 to 4.20.0nb1 [gutteridge 2025-01-28]
 	Updated x11/xfce4-clipman-plugin to 1.6.7 [gutteridge 2025-01-28]
 	Updated x11/xfce4-desktop to 4.20.0nb1 [gutteridge 2025-01-28]
+	Updated editors/retext to 8.1.0nb1 [gutteridge 2025-01-28]
