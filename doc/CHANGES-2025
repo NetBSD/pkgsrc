@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.661 2025/01/28 12:19:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.662 2025/01/28 17:23:51 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -886,3 +886,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-pdm-build-locked version 0.3.4 [adam 2025-01-28]
 	Updated audio/wavpack to 5.8.0 [adam 2025-01-28]
 	Updated textproc/ugrep to 7.2.1 [adam 2025-01-28]
+	Updated sysutils/xfce4-battery-plugin to 1.1.6 [gutteridge 2025-01-28]
