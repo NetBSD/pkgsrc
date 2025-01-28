@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2025/01/16 23:17:40 gutteridge Exp $
+$NetBSD: distinfo,v 1.12 2025/01/28 02:31:38 gutteridge Exp $
 
 BLAKE2s (retext-8.1.0.tar.gz) = 06a26c372d6f4120da18562f7f3fff9b47ad39389f1aa1d1e2c3ff443b40572a
 SHA512 (retext-8.1.0.tar.gz) = d4bdb39608b9cd74773255a95c940060b79fe578b045d00b1224d49a94f45e4ffcf8163fc3e9778b92509b7fe425a59d444054814dc2c5f70998dc865b7c7f8d
 Size (retext-8.1.0.tar.gz) = 569692 bytes
+SHA1 (patch-setup.py) = 2a554b05dc50716a94568fafd0da4010e2d70bde
