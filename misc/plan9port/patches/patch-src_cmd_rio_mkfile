@@ -1,6 +1,6 @@
-$NetBSD: patch-src_cmd_rio_mkfile,v 1.1 2022/12/06 14:29:25 vins Exp $
+$NetBSD: patch-src_cmd_rio_mkfile,v 1.2 2025/01/28 17:41:20 vins Exp $
 
-Properly honors LDFLAGS.
+Properly honor LDFLAGS.
 
 --- src/cmd/rio/mkfile.orig	2020-06-22 15:22:27.000000000 +0000
 +++ src/cmd/rio/mkfile
