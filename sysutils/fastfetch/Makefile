@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/01/26 17:30:20 vins Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/28 16:23:36 bsiegert Exp $
 
 DISTNAME=	fastfetch-2.35.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -13,8 +14,6 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES=	c c++
-
-DEPENDS+=	hwdata-[0-9]*:../../misc/hwdata
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,6 +53,7 @@ post-install:
 .include "../../lang/python/application.mk"
 PYTHON_VERSIONS_INCOMPATIBLE=   27
 
+.include "../../sysutils/hwdata/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../devel/yyjson/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
