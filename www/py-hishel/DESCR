@@ -1,0 +1,2 @@
+Hishel is a library that implements HTTP Caching for HTTPX and HTTP Core
+libraries in accordance with RFC 9111, the most recent caching specification.
