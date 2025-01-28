@@ -1,0 +1,15 @@
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2025/01/28 17:22:47 gutteridge Exp $
+
+Remove unnecessary and possibly incorrect rpath argument.
+
+--- panel-plugin/Makefile.in.orig	2024-12-24 10:26:56.000000000 +0000
++++ panel-plugin/Makefile.in
+@@ -92,7 +92,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
+-@NETBSD_TRUE@am__append_1 = -lprop -Wl,-rpath=/usr/X11R7/lib
++@NETBSD_TRUE@am__append_1 = -lprop
+ subdir = panel-plugin
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \

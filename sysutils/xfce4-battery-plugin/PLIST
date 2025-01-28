@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2023/05/05 01:43:55 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/28 17:22:47 gutteridge Exp $
 lib/xfce4/panel/plugins/libbattery.la
 share/icons/hicolor/16x16/apps/xfce4-battery-critical-charging.png
 share/icons/hicolor/16x16/apps/xfce4-battery-critical.png
@@ -83,6 +83,7 @@ share/locale/pa/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/pt/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-battery-plugin.mo
+share/locale/ro/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/sk/LC_MESSAGES/xfce4-battery-plugin.mo
 share/locale/sl/LC_MESSAGES/xfce4-battery-plugin.mo
