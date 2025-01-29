@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.739 2025/01/03 16:49:52 gdt Exp $
+# $NetBSD: Makefile,v 1.740 2025/01/29 13:22:22 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -102,6 +102,7 @@ SUBDIR+=	ghc810
 SUBDIR+=	ghc84
 SUBDIR+=	ghc88
 SUBDIR+=	ghc90
+SUBDIR+=	ghc910
 SUBDIR+=	ghc92
 SUBDIR+=	ghc94
 SUBDIR+=	ghc96
