@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/12/30 14:41:12 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/29 18:20:28 adam Exp $
 
-DISTNAME=	pytest_lazy_fixtures-1.1.1
+DISTNAME=	pytest_lazy_fixtures-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-lazy-fixtures/}
