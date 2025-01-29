@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2023/06/17 13:53:52 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/29 12:07:12 mef Exp $
 
 R_PKGNAME=	bench
-R_PKGVER=	1.1.3
+R_PKGVER=	1.1.4
 CATEGORIES=	benchmarks
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,6 +13,8 @@ DEPENDS+=	R-profmem-[0-9]*:../../benchmarks/R-profmem
 DEPENDS+=	R-rlang>=0.2.0:../../devel/R-rlang
 DEPENDS+=	R-tibble>=3.0.1:../../math/R-tibble
 DEPENDS+=	R-pillar>=1.6.2:../../misc/R-pillar
+
+# Packages suggested but not available: 'ggbeeswarm', 'ggridges'
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
