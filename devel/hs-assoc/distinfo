@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/27 15:15:24 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/29 17:44:17 pho Exp $
 
-BLAKE2s (assoc-1.1.tar.gz) = c9378f500ff549af2c2d4e91e471f7a99e91a4a669ea7d90712f564716e3ca79
-SHA512 (assoc-1.1.tar.gz) = 1ce6f3ca4ce9de3457b07ef995ec1819b0013bf90ee20c97ef7152b164c6751ea7f435ae28e4b55e9976ffa720aed7e2491daf5254480dd4b980e23d3420e9bb
-Size (assoc-1.1.tar.gz) = 3193 bytes
+BLAKE2s (assoc-1.1.1.tar.gz) = 7752a3d266a71afae491f3e82451a8c9feb5ac6d0be4b2d331abc76af3aa4a12
+SHA512 (assoc-1.1.1.tar.gz) = 3cfcfe84d755dce076c77f2a415bb1a69f80739c3494b9c262fded8861dfc73cdff2fdce15bf476d1a5a94cff7d9def5027b21042bb1d36f73fbd1255df79e49
+Size (assoc-1.1.1.tar.gz) = 3158 bytes
