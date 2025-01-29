@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.682 2025/01/29 15:29:33 pho Exp $
+$NetBSD: CHANGES-2025,v 1.683 2025/01/29 15:31:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -918,3 +918,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake-gui to 3.31.5 [adam 2025-01-29]
 	Updated net/bind918 to 9.18.33 [taca 2025-01-29]
 	Updated lang/hs-lua to 2.3.3 [pho 2025-01-29]
+	Updated lang/hs-hslua-list to 1.1.4 [pho 2025-01-29]
