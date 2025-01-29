@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.669 2025/01/29 09:31:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.670 2025/01/29 10:32:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -900,3 +900,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-test-plus version 0.7.0 [adam 2025-01-29]
 	Updated sysutils/py-ansible-compat to 25.1.1 [adam 2025-01-29]
 	Updated sysutils/ansible-lint to 25.1.1 [adam 2025-01-29]
+	Updated textproc/groff to 1.23.0nb1 [jperkin 2025-01-29]
