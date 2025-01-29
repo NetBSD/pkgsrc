@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.697 2025/01/29 17:24:25 pho Exp $
+$NetBSD: CHANGES-2025,v 1.698 2025/01/29 17:30:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -933,3 +933,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-tasty to 1.5.3 [pho 2025-01-29]
 	Updated devel/hs-vector to 0.13.2.0 [pho 2025-01-29]
 	Updated devel/hs-vector-algorithms to 0.9.0.3 [pho 2025-01-29]
+	Updated devel/hs-mono-traversable to 1.0.21.0 [pho 2025-01-29]
