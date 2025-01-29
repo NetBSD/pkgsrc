@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.699 2025/01/29 17:32:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.700 2025/01/29 17:32:59 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-vector-algorithms to 0.9.0.3 [pho 2025-01-29]
 	Updated devel/hs-mono-traversable to 1.0.21.0 [pho 2025-01-29]
 	Updated devel/hs-conduit to 1.3.6 [pho 2025-01-29]
+	Updated sysutils/hwdata to 0.391 [vins 2025-01-29]
