@@ -1,4 +1,14 @@
-This package defines a class, Hashable, for types that can be
-converted to a hash value. This class exists for the benefit of
-hashing-based data structures. The package provides instances for
-basic types and a way to combine hash values.
+This package defines a class, Hashable, for types that can be converted to a
+hash value. This class exists for the benefit of hashing-based data structures.
+The package provides instances for basic types and a way to combine hash values.
+
+Hashable is intended exclusively for use in in-memory data structures.
+
+Hashable does not have a fixed standard. This allows it to improve over time.
+
+Because it does not have a fixed standard, different computers or computers on
+different versions of the code will observe different hash values. As
+such, hashable is not recommended for use other than in-memory datastructures.
+Specifically, hashable is not intended for network use or in applications which
+persist hashed values. For stable hashing use named hashes: sha256, crc32,
+xxhash etc.
