@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2025/01/26 15:17:07 pin Exp $
+$NetBSD: distinfo,v 1.22 2025/01/29 21:43:04 pin Exp $
 
 BLAKE2s (adler2-2.0.0.crate) = d269f2089344d4a3f4d0908af3257cf2a65755be0349ff42e3854509afd388f3
 SHA512 (adler2-2.0.0.crate) = 12d12579ad617cf1a94cf95ab9d3f5db566c3b2de4bd5735eccd83c668fdad0eff134c996b73c46cbb9f932837682043878b8cc4764191625e9f93ccffcce423
@@ -57,9 +57,9 @@ Size (arrayvec-0.7.6.crate) = 31237 bytes
 BLAKE2s (autocfg-1.4.0.crate) = ce6aae5b8fe5dadf0c6a182c5940551ded4070c0c0143412d8c8356037ce1dc0
 SHA512 (autocfg-1.4.0.crate) = 3b5e7c30bc73e105e4bfcab584c24fc4016db41fac9c356c6649fd841051704bbe8848e09546eb50d7c1f18ea8ce1cb72fbc268a620d5c609b3472114b5be73c
 Size (autocfg-1.4.0.crate) = 17712 bytes
-BLAKE2s (bacon-3.9.0.tar.gz) = 26e6d984f41c526383aa178ab38d0f9e058c13df8efda6aecb8ee1d8dafb100e
-SHA512 (bacon-3.9.0.tar.gz) = d763d7203a0575c24a884e81e0d0b1ced596ce2b46a0abbaeaa404b57ab64c0556d1e0b05dc22608577fbb60c326c2d9dcfa1cb42148b1cda9a4657b75a78334
-Size (bacon-3.9.0.tar.gz) = 1980300 bytes
+BLAKE2s (bacon-3.9.1.tar.gz) = 45f23d74e7c66fd2f324f2697ae9092b895fd9b4a20a0334b91c9d951d81d16a
+SHA512 (bacon-3.9.1.tar.gz) = 1cb81be7bdeaf68ee34191e34d6b3b5f475a5891caea9c44c9a7049bf4db4693ca0bd5bce7f83bebed1fae8ba4eaa04b607862ac20ff8496c1f544684b278455
+Size (bacon-3.9.1.tar.gz) = 1980466 bytes
 BLAKE2s (bindgen-0.70.1.crate) = 7b4f5b0deed9db6664648d17705e9d7326a56fffedcc31186f346186fabcb147
 SHA512 (bindgen-0.70.1.crate) = cf1c87ea7ab9ed4df953795f1aa77e6ae6d72e768de3b517300074501ce49db6a3def1f58b9d824b5727974cab84a48461e7d98086fc440dc73ad9cf173ad5ed
 Size (bindgen-0.70.1.crate) = 226363 bytes
