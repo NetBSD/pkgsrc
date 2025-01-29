@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.13 2024/11/16 11:58:12 wiz Exp $
+# $NetBSD: eol-packages,v 1.14 2025/01/29 15:31:54 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1163,4 +1163,9 @@ Package: postgresql12
 eol date: November 14, 2024
 URL: https://www.postgresql.org/support/versioning/
 Description: Update to newer version.
+
+Package: bind916
+eol date: April, 2024
+URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
+Description: Package has been removed.  Update to newer version.
 
