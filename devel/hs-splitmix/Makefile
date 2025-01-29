@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/05/09 01:32:12 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/29 16:53:53 pho Exp $
 
-DISTNAME=	splitmix-0.1.0.5
-PKGREVISION=	2
+DISTNAME=	splitmix-0.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
