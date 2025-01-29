@@ -1,0 +1,6 @@
+This package defines Counter type that can be safely modified concurrently from
+multiple threads. The type supports only few operations, namely read, write, cas
+(compare and swap), add, subtract and a few bitwise ones like or, and xor.
+
+Most common use case is having a shared counter that multiple threads increment.
+Another potential use case is lightweight locks.
