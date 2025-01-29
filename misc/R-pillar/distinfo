@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/02 12:39:11 mef Exp $
+$NetBSD: distinfo,v 1.10 2025/01/29 11:27:50 mef Exp $
 
-BLAKE2s (R/pillar_1.9.0.tar.gz) = 00ab85daf61a113cd53996cb8761d770ab9cd2f131aeb8c02dde632b857fd19e
-SHA512 (R/pillar_1.9.0.tar.gz) = 3f3e37e39fb677d0a9792c4ee7b5d6701288b7ad09ed7f2cb74a7a91372550e985de3f18e59d439dc6242354bc10c6be8ac04fe3a95ffd6e5b951150a420ceb0
-Size (R/pillar_1.9.0.tar.gz) = 444528 bytes
+BLAKE2s (R/pillar_1.10.1.tar.gz) = beeede5dde353367cdc3bf696a41b78db8a8369318278b94db429bbd015539f4
+SHA512 (R/pillar_1.10.1.tar.gz) = c54c2c75d9e2714fd90c92519ce5c51564ef358b60250027d55a79ae0f65f8e3a43ef40dff834e841332f093cb4165a3280b41bf16345455121d231669c2e8cb
+Size (R/pillar_1.10.1.tar.gz) = 407070 bytes

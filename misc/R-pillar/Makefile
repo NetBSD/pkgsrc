@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/06/02 12:39:11 mef Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/29 11:27:50 mef Exp $
 
 R_PKGNAME=	pillar
-R_PKGVER=	1.9.0
+R_PKGVER=	1.10.1
 CATEGORIES=	misc
 
 MAINTAINER=	minskim@NetBSD.org
@@ -17,11 +17,18 @@ DEPENDS+=	R-utf8>=1.1.0:../../textproc/R-utf8
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 
 # Packages suggested but not available:
-#   'debugme', 'DiagrammeR', 'formattable', 'nanotime', 'nycflights13',
-#   'palmerpenguins', 'vdiffr'
+#   'DiagrammeR', 'formattable', 'nycflights13', 'palmerpenguins',
+#   'vdiffr'
 
+TEST_DEPENDS+=	R-DBI-[0-9]*:../../math/R-DBI
+TEST_DEPENDS+=	R-bit64-[0-9]*:../../devel/R-bit64
+TEST_DEPENDS+=	R-debugme-[0-9]*:../../devel/R-debugme
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
 TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
+TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
+TEST_DEPENDS+=	R-lubridate-[0-9]*:../../time/R-lubridate
+TEST_DEPENDS+=	R-nanotime-[0-9]*:../../time/R-nanotime
+TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-units-[0-9]*:../../math/R-units
 
