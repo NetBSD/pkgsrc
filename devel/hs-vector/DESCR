@@ -15,3 +15,6 @@ It is structured as follows:
     cost.
 * Data.Vector.Generic
     Generic interface to the vector types.
+
+There is also a (draft) tutorial on common uses of vector.
+* http://haskell.org/haskellwiki/Numeric_Haskell:_A_Vector_Tutorial

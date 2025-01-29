@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2023/10/28 17:01:01 pho Exp $
+$NetBSD: distinfo,v 1.15 2025/01/29 17:21:33 pho Exp $
 
-BLAKE2s (vector-0.13.1.0.tar.gz) = ba1c5ffe4c66ffd950e336492d2a257ff73f3d7a55e0c97c957f8a00024885e5
-SHA512 (vector-0.13.1.0.tar.gz) = 7c29df2449ee3858906c324cd8bc9128d97ab733bb11a010388cc06f85134cfeaea087ceefc2e3ca5ba06d6921f8cd2bb53c5dbc61d0e59cf004075b5c1d15c2
-Size (vector-0.13.1.0.tar.gz) = 156855 bytes
+BLAKE2s (vector-0.13.2.0.tar.gz) = 0345aada615bc6c612549309c0cb2b7f43a45e77771873d5afd4aba508b54862
+SHA512 (vector-0.13.2.0.tar.gz) = d52ad78c8859284bce141254f6a29b0e0175a9db8c15505bc0e35fed1b9027736ad00a42f55d465c81b4738be67c6655cc11276ca85af3c740f55c86708e15a3
+Size (vector-0.13.2.0.tar.gz) = 185739 bytes
