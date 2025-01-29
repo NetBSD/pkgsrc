@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2024/11/11 07:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/01/29 05:45:03 pho Exp $
 
 DISTNAME=	zstandard-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/indygreg/python-zstandard
 COMMENT=	Zstandard bindings for Python
 LICENSE=	modified-bsd
+
+USE_TOOLS+=	cpp
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cffi>=1.11:../../devel/py-cffi
