@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.695 2025/01/29 17:12:18 pho Exp $
+$NetBSD: CHANGES-2025,v 1.696 2025/01/29 17:21:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -931,3 +931,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-ansi-terminal to 1.1.2 [pho 2025-01-29]
 	Updated devel/hs-tagged to 0.8.9 [pho 2025-01-29]
 	Updated devel/hs-tasty to 1.5.3 [pho 2025-01-29]
+	Updated devel/hs-vector to 0.13.2.0 [pho 2025-01-29]
