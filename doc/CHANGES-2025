@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.712 2025/01/29 21:41:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.713 2025/01/29 21:42:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-structlog to 25.1.0 [adam 2025-01-29]
 	Updated fonts/py-fonttools to 4.55.8 [adam 2025-01-29]
 	Updated finance/py-braintree to 4.33.0 [adam 2025-01-29]
+	Updated devel/ast-grep to 0.34.3 [pin 2025-01-29]
