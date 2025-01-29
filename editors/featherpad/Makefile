@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2024/11/14 22:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/01/29 21:45:47 pin Exp $
 
-VERSION=	1.5.2
+VERSION=	1.6.0
 DISTNAME=	FeatherPad-V${VERSION}
 PKGNAME=	featherpad-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tsujan/}
 GITHUB_TAG=	V${PKGVERSION_NOREV}
@@ -18,11 +17,13 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
-.include "../../x11/qt6-qtbase/buildlink3.mk"
+
+.include "../../devel/cmake/build.mk"
+
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qt6-qtsvg/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
