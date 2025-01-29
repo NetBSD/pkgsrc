@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/29 16:24:50 pho Exp $
+
+BLAKE2s (atomic-counter-0.1.2.3.tar.gz) = 658cecb3845ec007fce88e8c20c70e0416cc5e601941f19422e891035fb1c3a4
+SHA512 (atomic-counter-0.1.2.3.tar.gz) = e9da01af52940c2a74a261c730cace315bf482bfd4951d7533e240de7fbfe89ae5cbb9c6f950dbd311e693bf58611f7702ecfd8d269d4f2ea17bdc9404569645
+Size (atomic-counter-0.1.2.3.tar.gz) = 17379 bytes
