@@ -1,0 +1,29 @@
+#!/bin/sh
+set -eu
+
+# This script extracts the package DB originally came from GHC you are
+# using. Only needed when you create a hadrian bootstrap archive.
+
+if [ "$#" -lt 1 ]; then
+    echo >&2 "Usage: $0 PKG_DB_DIR"
+    exit
+fi
+PKG_DB_DIR="$1"
+
+mkdir -p "$PKG_DB_DIR"
+pkg_info -qL ghc | {
+    conf_dir_path=
+    while read path; do
+        conf_dir_removed="${path#*/package.conf.d/}"
+        if [ "$conf_dir_removed" != "$path" ]; then
+            echo "Copying ${path}..."
+            if [ "$conf_dir_path" = "" ]; then
+                conf_dir_path="${path%/${conf_dir_removed}}"
+            fi
+            sed -e "s|\\\${pkgroot}|${conf_dir_path}/..|g" \
+                < "${path}" \
+                > "${PKG_DB_DIR}/${conf_dir_removed}"
+        fi
+    done
+}
+ghc-pkg --package-db="$PKG_DB_DIR" recache

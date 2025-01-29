@@ -1,0 +1,18 @@
+$NetBSD: patch-libraries_ghc-internal_configure.ac,v 1.1 2025/01/29 13:21:53 pho Exp $
+
+Ensure libiconv can be found at runtime.
+
+XXX: I don't think this is needed because rpath flags are handled by
+Cabal. LDFLAGS is not used anyway. (pho@)
+
+--- libraries/ghc-internal/configure.ac.orig	2025-01-09 09:07:59.514895966 +0000
++++ libraries/ghc-internal/configure.ac
+@@ -126,7 +126,7 @@ AC_ARG_WITH([iconv-includes],
+ AC_ARG_WITH([iconv-libraries],
+   [AS_HELP_STRING([--with-iconv-libraries],
+     [directory containing iconv library])],
+-    [ICONV_LIB_DIRS=$withval; LDFLAGS="-L$withval $LDFLAGS"],
++    [ICONV_LIB_DIRS=$withval; LDFLAGS="-L$withval ${COMPILER_RPATH_FLAG}$withval $LDFLAGS"],
+     [ICONV_LIB_DIRS=])
+ 
+ AC_SUBST(ICONV_INCLUDE_DIRS)
