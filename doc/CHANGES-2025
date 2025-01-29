@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.683 2025/01/29 15:31:40 pho Exp $
+$NetBSD: CHANGES-2025,v 1.684 2025/01/29 15:36:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/bind918 to 9.18.33 [taca 2025-01-29]
 	Updated lang/hs-lua to 2.3.3 [pho 2025-01-29]
 	Updated lang/hs-hslua-list to 1.1.4 [pho 2025-01-29]
+	Removed net/bind916 [taca 2025-01-29]
