@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/11/18 10:39:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/01/29 21:40:58 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -97,6 +97,9 @@ ${PYSITELIB}/braintree/customer_gateway.pyo
 ${PYSITELIB}/braintree/customer_search.py
 ${PYSITELIB}/braintree/customer_search.pyc
 ${PYSITELIB}/braintree/customer_search.pyo
+${PYSITELIB}/braintree/customer_session_gateway.py
+${PYSITELIB}/braintree/customer_session_gateway.pyc
+${PYSITELIB}/braintree/customer_session_gateway.pyo
 ${PYSITELIB}/braintree/descriptor.py
 ${PYSITELIB}/braintree/descriptor.pyc
 ${PYSITELIB}/braintree/descriptor.pyo
@@ -241,6 +244,9 @@ ${PYSITELIB}/braintree/facilitator_details.pyo
 ${PYSITELIB}/braintree/granted_payment_instrument_update.py
 ${PYSITELIB}/braintree/granted_payment_instrument_update.pyc
 ${PYSITELIB}/braintree/granted_payment_instrument_update.pyo
+${PYSITELIB}/braintree/graphql/__init__.py
+${PYSITELIB}/braintree/graphql/__init__.pyc
+${PYSITELIB}/braintree/graphql/__init__.pyo
 ${PYSITELIB}/braintree/iban_bank_account.py
 ${PYSITELIB}/braintree/iban_bank_account.pyc
 ${PYSITELIB}/braintree/iban_bank_account.pyo
