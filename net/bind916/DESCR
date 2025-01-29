@@ -1,4 +1,0 @@
-BIND, the Berkeley Internet Name Daemon.
-
-This package contains the BIND 9.16 release.  Upstream labels it as
-receiving security fixes only.
