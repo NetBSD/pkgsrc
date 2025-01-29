@@ -1,10 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/28 06:26:33 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/29 05:13:03 imil Exp $
 man/man5/dinit-service.5
 man/man8/dinit-monitor.8
 man/man8/dinit.8
 man/man8/dinitcheck.8
 man/man8/dinitctl.8
+man/man8/halt.8
+man/man8/poweroff.8
+man/man8/reboot.8
+man/man8/shutdown.8
+man/man8/soft-reboot.8
 sbin/dinit
 sbin/dinit-monitor
 sbin/dinitcheck
 sbin/dinitctl
+sbin/halt
+sbin/poweroff
+sbin/reboot
+sbin/shutdown
+sbin/soft-reboot
