@@ -1,0 +1,34 @@
+$NetBSD: patch-libraries_Cabal_Cabal-syntax_Cabal-syntax.cabal,v 1.1 2025/01/29 13:21:53 pho Exp $
+
+Add a way to remove tool dependency on alex, otherwise it cannot be built
+without having devel/alex preinstalled, which is impossible because
+devel/alex cannot be built without GHC.
+
+TODO: Upstream this.
+
+--- libraries/Cabal/Cabal-syntax/Cabal-syntax.cabal.orig	2025-01-11 14:49:32.211381314 +0000
++++ libraries/Cabal/Cabal-syntax/Cabal-syntax.cabal
+@@ -23,6 +23,13 @@ source-repository head
+   location: https://github.com/haskell/cabal/
+   subdir:   Cabal-syntax
+ 
++-- Hadrian is supposed to disable this flag because the user may be
++-- building from a source distribution where the parser has already been
++-- generated.
++Flag build-tool-depends
++    Description: Use build-tool-depends
++    Default: True
++
+ library
+   default-language: Haskell2010
+   hs-source-dirs: src
+@@ -56,7 +63,8 @@ library
+   if impl(ghc >= 8.10)
+     ghc-options: -Wunused-packages
+ 
+-  build-tool-depends: alex:alex
++  if flag(build-tool-depends)
++    build-tool-depends: alex:alex
+ 
+   exposed-modules:
+     Distribution.Backpack
