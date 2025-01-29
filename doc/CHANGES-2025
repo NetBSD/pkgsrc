@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.676 2025/01/29 12:16:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.677 2025/01/29 12:23:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -909,3 +909,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/py-flask-security-too successor www/py-flask-security [adam 2025-01-29]
 	Updated textproc/py-xlsxwriter to 3.2.2 [adam 2025-01-29]
 	Updated net/py-zeroconf to 0.141.0 [adam 2025-01-29]
+	Updated audio/wavpack to 5.8.1 [adam 2025-01-29]
+	Updated net/libtorrent-rasterbar to 2.0.11 [adam 2025-01-29]
