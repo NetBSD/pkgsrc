@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.690 2025/01/29 16:43:12 pho Exp $
+$NetBSD: CHANGES-2025,v 1.691 2025/01/29 16:54:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-file-io version 0.1.5 [pho 2025-01-29]
 	Updated archivers/hs-tar to 0.6.4.0 [pho 2025-01-29]
 	Updated devel/hs-hashable to 1.5.0.0 [pho 2025-01-29]
+	Updated devel/hs-splitmix to 0.1.1 [pho 2025-01-29]
