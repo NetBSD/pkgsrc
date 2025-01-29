@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/29 03:57:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/29 16:39:16 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar.hi
@@ -24,6 +24,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/Internal.p
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/StringTable.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/StringTable.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/StringTable.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/Utils.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/Utils.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/Index/Utils.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/LongNames.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/LongNames.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID.1}/Codec/Archive/Tar/LongNames.p_hi
