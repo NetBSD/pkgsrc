@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.28 2024/11/03 16:33:14 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.29 2025/01/29 21:44:27 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.22.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -47,7 +47,7 @@ CARGO_CRATE_DEPENDS+=	either-1.13.0
 CARGO_CRATE_DEPENDS+=	equivalent-1.0.1
 CARGO_CRATE_DEPENDS+=	faster-hex-0.9.0
 CARGO_CRATE_DEPENDS+=	filesize-0.2.0
-CARGO_CRATE_DEPENDS+=	fixedbitset-0.4.2
+CARGO_CRATE_DEPENDS+=	fixedbitset-0.5.7
 CARGO_CRATE_DEPENDS+=	gimli-0.29.0
 CARGO_CRATE_DEPENDS+=	gix-features-0.39.0
 CARGO_CRATE_DEPENDS+=	gix-glob-0.17.0
@@ -56,6 +56,7 @@ CARGO_CRATE_DEPENDS+=	gix-path-0.10.12
 CARGO_CRATE_DEPENDS+=	gix-trace-0.1.11
 CARGO_CRATE_DEPENDS+=	glob-0.3.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.14.5
+CARGO_CRATE_DEPENDS+=	hashbrown-0.15.2
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.1.19
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.3.9
@@ -63,7 +64,7 @@ CARGO_CRATE_DEPENDS+=	home-0.5.9
 CARGO_CRATE_DEPENDS+=	human_format-1.1.0
 CARGO_CRATE_DEPENDS+=	iana-time-zone-0.1.61
 CARGO_CRATE_DEPENDS+=	iana-time-zone-haiku-0.1.2
-CARGO_CRATE_DEPENDS+=	indexmap-2.3.0
+CARGO_CRATE_DEPENDS+=	indexmap-2.7.1
 CARGO_CRATE_DEPENDS+=	is-docker-0.2.0
 CARGO_CRATE_DEPENDS+=	is-wsl-0.4.0
 CARGO_CRATE_DEPENDS+=	is_terminal_polyfill-1.70.1
@@ -96,7 +97,7 @@ CARGO_CRATE_DEPENDS+=	parking_lot-0.12.3
 CARGO_CRATE_DEPENDS+=	parking_lot_core-0.9.10
 CARGO_CRATE_DEPENDS+=	paste-1.0.15
 CARGO_CRATE_DEPENDS+=	pathdiff-0.2.1
-CARGO_CRATE_DEPENDS+=	petgraph-0.6.5
+CARGO_CRATE_DEPENDS+=	petgraph-0.7.1
 CARGO_CRATE_DEPENDS+=	powerfmt-0.2.0
 CARGO_CRATE_DEPENDS+=	pretty_assertions-1.4.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
