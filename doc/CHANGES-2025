@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.710 2025/01/29 19:17:38 pho Exp $
+$NetBSD: CHANGES-2025,v 1.711 2025/01/29 19:19:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pylint to 3.3.4 [adam 2025-01-29]
 	Updated devel/py-test-lazy-fixtures to 1.1.2 [adam 2025-01-29]
 	Updated devel/hs-base-orphans to 0.9.3 [pho 2025-01-29]
+	Updated devel/hs-th-abstraction to 0.7.1.0 [pho 2025-01-29]
