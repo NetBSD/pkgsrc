@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/06/17 13:53:52 mef Exp $
+$NetBSD: distinfo,v 1.3 2025/01/29 12:07:12 mef Exp $
 
-BLAKE2s (R/bench_1.1.3.tar.gz) = 53faf928746887ae91c788f5111ec60224533a4fef56da0a7063959f341120fb
-SHA512 (R/bench_1.1.3.tar.gz) = 864739cc0ecebfa5aeb00135ed0973d431ca744dc36d4bb4fcb8c3fb45e6065879c06aa600e351e64e671e917e242ee6a672dffeeefac2fa041e8d5140738599
-Size (R/bench_1.1.3.tar.gz) = 314057 bytes
+BLAKE2s (R/bench_1.1.4.tar.gz) = c9883da26ec8c405fba698644bf5a45e9cf64671beecee11b23adbc2430e2629
+SHA512 (R/bench_1.1.4.tar.gz) = 653fd332ccc06be55504e8d0c44b65680bf4ae12d240e5bcbe45beb1eb591407bf46d03c8fc5bf54191eb47962ebc729b032b7759960f34bb638e806602f8dbd
+Size (R/bench_1.1.4.tar.gz) = 316570 bytes
