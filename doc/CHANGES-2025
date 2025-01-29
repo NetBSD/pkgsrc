@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.711 2025/01/29 19:19:42 pho Exp $
+$NetBSD: CHANGES-2025,v 1.712 2025/01/29 21:41:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -952,3 +952,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-lazy-fixtures to 1.1.2 [adam 2025-01-29]
 	Updated devel/hs-base-orphans to 0.9.3 [pho 2025-01-29]
 	Updated devel/hs-th-abstraction to 0.7.1.0 [pho 2025-01-29]
+	Updated www/py-w3lib to 2.3.1 [adam 2025-01-29]
+	Updated sysutils/py-structlog to 25.1.0 [adam 2025-01-29]
+	Updated fonts/py-fonttools to 4.55.8 [adam 2025-01-29]
+	Updated finance/py-braintree to 4.33.0 [adam 2025-01-29]
