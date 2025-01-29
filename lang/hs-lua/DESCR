@@ -1,2 +1,2 @@
-This package provides low-level bindings and types to bridge Haskell and
-Lua.
+This package provides bindings and types to bridge Haskell and Lua
+(https://www.lua.org/).

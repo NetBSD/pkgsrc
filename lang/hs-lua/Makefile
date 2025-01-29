@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/30 09:25:48 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/29 15:29:20 pho Exp $
 
-DISTNAME=	lua-2.3.2
-PKGREVISION=	1
+DISTNAME=	lua-2.3.3
 CATEGORIES=	lang
 DIST_SUBDIR=	hs-lua # To prevent it from conflicting with lang/lua*
 
@@ -10,7 +9,7 @@ COMMENT=	Low-level bindings to Lua, an embeddable scripting language
 LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
-CONFIGURE_ARGS+=	-fpkg-config
+CONFIGURE_ARGS+=	-fsystem-lua -fpkg-config
 
 # lua.cabal refers to a wrong pkg-config package name. Correct it.
 SUBST_CLASSES+=	pc
