@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.674 2025/01/29 12:07:18 mef Exp $
+$NetBSD: CHANGES-2025,v 1.675 2025/01/29 12:12:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -905,3 +905,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/R-Hmisc to 5.2.2 [mef 2025-01-29]
 	Updated devel/R-testthat to 3.2.3 [mef 2025-01-29]
 	Updated benchmarks/R-bench to 1.1.4 [mef 2025-01-29]
+	Updated www/py-flask-security to 5.5.2 [adam 2025-01-29]
+	Removed www/py-flask-security-too successor www/py-flask-security [adam 2025-01-29]
