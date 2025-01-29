@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/29 16:28:05 pho Exp $
+
+BLAKE2s (directory-ospath-streaming-0.2.1.tar.gz) = dd22817d369f3abc695b7bb25e8613f1843fb7e717c149f4940b3a7832befd56
+SHA512 (directory-ospath-streaming-0.2.1.tar.gz) = 237120e86ef9d8a5ce509f33a766579c4a41f12de2834e30b7dbbaba9da671cece0062151a9e9c1d57c109e4b776b963c7708ac61988bc0088d8ab7fb2b2d967
+Size (directory-ospath-streaming-0.2.1.tar.gz) = 13310 bytes
