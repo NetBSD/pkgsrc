@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1145 2025/01/28 06:29:49 imil Exp $
+# $NetBSD: Makefile,v 1.1146 2025/01/29 16:28:22 pho Exp $
 #
 
 COMMENT=	System utilities
@@ -352,6 +352,7 @@ SUBDIR+=	hs-byteorder
 SUBDIR+=	hs-co-log-core
 SUBDIR+=	hs-dbus
 SUBDIR+=	hs-dir-traverse
+SUBDIR+=	hs-directory-ospath-streaming
 SUBDIR+=	hs-disk-free-space
 SUBDIR+=	hs-easy-file
 SUBDIR+=	hs-fast-logger
