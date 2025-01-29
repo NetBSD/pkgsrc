@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.680 2025/01/29 14:32:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.681 2025/01/29 15:14:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/translate-toolkit to 3.14.7 [adam 2025-01-29]
 	Updated devel/cmake to 3.31.5 [adam 2025-01-29]
 	Updated devel/cmake-gui to 3.31.5 [adam 2025-01-29]
+	Updated net/bind918 to 9.18.33 [taca 2025-01-29]
