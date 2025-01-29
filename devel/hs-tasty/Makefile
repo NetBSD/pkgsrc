@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2024/05/09 01:32:14 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/29 17:12:11 pho Exp $
 
-DISTNAME=	tasty-1.5
-PKGREVISION=	2
+DISTNAME=	tasty-1.5.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Modern and extensible testing framework
 LICENSE=	mit
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	ansi-terminal
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
