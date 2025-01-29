@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/29 02:07:27 pho Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/29 17:00:33 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/Console/ANSI.p_hi
@@ -21,6 +21,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-B.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-C.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-D.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-E.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-F.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-G.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ansi-terminal-${PKGVERSION}/html/doc-index-H.html
