@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/08/22 10:11:27 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/01/29 17:24:18 pho Exp $
 
-BLAKE2s (vector-algorithms-0.9.0.1.tar.gz) = d823448df2a856976dbead8d09ddab52d90be95400d8ec20814502c3c7dc0814
-SHA512 (vector-algorithms-0.9.0.1.tar.gz) = 007a0aeac87ca6596cae0f67e8ab5cd3ac4120df940dd221745d86c6500fa1e732d6096248ba613472c57825283cae6a2d67d2d2a5a652496f9ad17c91f9b620
-Size (vector-algorithms-0.9.0.1.tar.gz) = 29149 bytes
+BLAKE2s (vector-algorithms-0.9.0.3.tar.gz) = cc41d5443aa9a490cda22a596aa878f4934022c2f35fedca36a0c880a9ba0adb
+SHA512 (vector-algorithms-0.9.0.3.tar.gz) = 5f6bddce7d0ebc6ff79c0cbe2f3e48af3f51ee70dfde6e3f20905b49789a51c654d27c27dfc73e1e9f3b6a1bd716a247cb7dacde7714de8f11fbd984c82712fd
+Size (vector-algorithms-0.9.0.3.tar.gz) = 29395 bytes

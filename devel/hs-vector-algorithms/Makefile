@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2024/05/09 01:32:19 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/29 17:24:18 pho Exp $
 
-DISTNAME=	vector-algorithms-0.9.0.1
-PKGREVISION=	4
+DISTNAME=	vector-algorithms-0.9.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Efficient algorithms for vector arrays
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	primitive
 
 .include "../../devel/hs-bitvec/buildlink3.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
