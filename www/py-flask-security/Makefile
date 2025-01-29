@@ -1,30 +1,27 @@
-# $NetBSD: Makefile,v 1.19 2024/11/11 07:29:23 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/29 12:08:12 adam Exp $
 
-DISTNAME=	Flask-Security-3.0.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	3
+DISTNAME=	flask_security-5.5.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Security/}
 
 MAINTAINER=	kleink@NetBSD.org
-#HOMEPAGE=	https://pythonhosted.org/Flask-Security/
+HOMEPAGE=	https://flask-security.readthedocs.io/
 COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-flask>=0.11:../../www/py-flask
-DEPENDS+=	${PYPKGPREFIX}-flask-babelex>=0.9.3:../../www/py-flask-babelex
-DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.3.0:../../www/py-flask-login
-DEPENDS+=	${PYPKGPREFIX}-flask-mail>=0.7.3:../../www/py-flask-mail
-DEPENDS+=	${PYPKGPREFIX}-flask-principal>=0.3.3:../../www/py-flask-principal
-DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=0.13.1:../../www/py-flask-wtf
-DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=0.21:../../security/py-itsdangerous
-DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7:../../security/py-passlib
-TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-email_validator>=2.0.0:../../mail/py-email_validator
+DEPENDS+=	${PYPKGPREFIX}-flask>=3.0.0:../../www/py-flask
+DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.6.3:../../www/py-flask-login
+DEPENDS+=	${PYPKGPREFIX}-flask-principal>=0.4.0:../../www/py-flask-principal
+DEPENDS+=	${PYPKGPREFIX}-flask-wtf>=1.1.2:../../www/py-flask-wtf
+DEPENDS+=	${PYPKGPREFIX}-importlib-resources>=5.10.0:../../devel/py-importlib-resources
+DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.0:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.4:../../security/py-passlib
+DEPENDS+=	${PYPKGPREFIX}-wtforms>=3.0.0:../../www/py-wtforms
 
-USE_LANGUAGES=	# empty
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+USE_LANGUAGES=	# none
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
