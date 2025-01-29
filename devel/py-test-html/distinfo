@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/29 09:23:44 adam Exp $
+
+BLAKE2s (pytest_html-4.1.1.tar.gz) = ea992d1d97c1129fbf57e1e7c4723fc1c341268dce90cb4882666ce5ed165858
+SHA512 (pytest_html-4.1.1.tar.gz) = 13832f3b81aa83a95e27d93d2df82fb68eee86696f431f777840484f426094084a03b52b3ad8a381d79ef4f2a4a4b1059349f653e2b6ac66a476f511f4ea8e22
+Size (pytest_html-4.1.1.tar.gz) = 150773 bytes
