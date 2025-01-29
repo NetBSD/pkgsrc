@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.705 2025/01/29 17:41:17 pho Exp $
+$NetBSD: CHANGES-2025,v 1.706 2025/01/29 17:44:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -941,3 +941,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-data-fix to 0.3.4 [pho 2025-01-29]
 	Updated devel/hs-indexed-traversable to 0.1.4 [pho 2025-01-29]
 	Updated devel/hs-indexed-traversable-instances to 0.1.2 [pho 2025-01-29]
+	Updated devel/hs-assoc to 1.1.1 [pho 2025-01-29]
