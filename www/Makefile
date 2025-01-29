@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1836 2025/01/28 11:50:12 adam Exp $
+# $NetBSD: Makefile,v 1.1837 2025/01/29 12:10:57 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -807,7 +807,6 @@ SUBDIR+=	py-flask-restful
 SUBDIR+=	py-flask-restplus
 SUBDIR+=	py-flask-script
 SUBDIR+=	py-flask-security
-SUBDIR+=	py-flask-security-too
 SUBDIR+=	py-flask-sendmail
 SUBDIR+=	py-flask-session
 SUBDIR+=	py-flask-sqlalchemy
