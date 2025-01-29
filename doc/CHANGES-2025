@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.675 2025/01/29 12:12:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.676 2025/01/29 12:16:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -907,3 +907,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated benchmarks/R-bench to 1.1.4 [mef 2025-01-29]
 	Updated www/py-flask-security to 5.5.2 [adam 2025-01-29]
 	Removed www/py-flask-security-too successor www/py-flask-security [adam 2025-01-29]
+	Updated textproc/py-xlsxwriter to 3.2.2 [adam 2025-01-29]
+	Updated net/py-zeroconf to 0.141.0 [adam 2025-01-29]
