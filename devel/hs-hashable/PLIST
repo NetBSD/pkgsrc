@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/29 03:28:32 pho Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/29 17:26:39 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Class.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Class.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Class.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/FFI.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/FFI.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/FFI.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Generic.p_hi
@@ -20,6 +23,12 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Lifted.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/LowLevel.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Mix.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Mix.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/Mix.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/XXH3.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/XXH3.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Hashable/XXH3.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
