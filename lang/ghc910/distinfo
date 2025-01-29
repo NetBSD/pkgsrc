@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2025/01/29 13:21:52 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/29 15:28:29 pho Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -39,6 +39,7 @@ SHA1 (patch-hadrian_src_Settings_Builders_Cabal.hs) = 16f2b1fa9d5259ec86773449b9
 SHA1 (patch-hadrian_src_Settings_Builders_Ghc.hs) = e2913e9f83bb36bb0b432a24518c9b6ca2990c6a
 SHA1 (patch-hadrian_src_Settings_Packages.hs) = e23eb2cf7fc96065a60a9d12bb5f419559b193c3
 SHA1 (patch-libraries_Cabal_Cabal-syntax_Cabal-syntax.cabal) = 239bfa58283d1ccea78afa7853cc4b12f66da86d
+SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC.hs) = 365abd84b9a2ac9ab3e325ffa769823b28d20696
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC_Build_Link.hs) = 1a25bd801ad3984b0e86dae5dcd30f0b36ab28f7
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs) = 7630d0170d7dc9b17f15b5eacc2c783e07adbd7f
 SHA1 (patch-libraries_base_src_System_CPUTime_Posix_Times.hsc) = 4c43abbdcfc35e35257acede8bbe47324f23ebcb
