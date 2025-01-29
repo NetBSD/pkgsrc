@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4396 2025/01/29 16:25:16 pho Exp $
+# $NetBSD: Makefile,v 1.4397 2025/01/29 16:33:17 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -609,6 +609,7 @@ SUBDIR+=	hs-extensions
 SUBDIR+=	hs-fail
 SUBDIR+=	hs-fgl
 SUBDIR+=	hs-file-embed
+SUBDIR+=	hs-file-io
 SUBDIR+=	hs-filtrable
 SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-fmlist
