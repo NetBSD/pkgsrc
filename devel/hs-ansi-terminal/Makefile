@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/05/09 01:31:44 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/29 17:00:33 pho Exp $
 
-DISTNAME=	ansi-terminal-1.1.1
-PKGREVISION=	1
+DISTNAME=	ansi-terminal-1.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
