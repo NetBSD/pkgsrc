@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.677 2025/01/29 12:23:32 adam Exp $
+$NetBSD: CHANGES-2025,v 1.678 2025/01/29 13:22:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zeroconf to 0.141.0 [adam 2025-01-29]
 	Updated audio/wavpack to 5.8.1 [adam 2025-01-29]
 	Updated net/libtorrent-rasterbar to 2.0.11 [adam 2025-01-29]
+	Added lang/ghc910 version 9.10.1 [pho 2025-01-29]
