@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2024/05/09 01:31:44 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/29 17:34:52 pho Exp $
 
-DISTNAME=	OneTuple-0.4.1.1
-PKGREVISION=	2
+DISTNAME=	OneTuple-0.4.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Singleton Tuple
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
