@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/29 09:22:03 adam Exp $
+
+BLAKE2s (pytest_metadata-3.1.1.tar.gz) = 1fba0ccbf0ca9b2e0dd08bf72003781177f6e9a27e7215a0eb9b166e7c4b1a8a
+SHA512 (pytest_metadata-3.1.1.tar.gz) = 20c880cd797534dee9206ef99755643fccc9d62521f1b50dbcc7f2ac0a8ab6adccc4158510c00e20308bed93ada180448ac9f06277cc1af3ba94a1b903da4b09
+Size (pytest_metadata-3.1.1.tar.gz) = 9952 bytes
