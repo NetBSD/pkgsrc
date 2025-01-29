@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/01/28 12:27:14 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/01/29 14:54:54 jperkin Exp $
 bin/addftinfo
 bin/afmtodit
 bin/eqn2graph
@@ -270,7 +270,6 @@ share/doc/${PKGNAME}/msboxes.ms
 share/doc/${PKGNAME}/pdf/automake.pdf
 share/doc/${PKGNAME}/pdf/mom-pdf.pdf
 share/doc/${PKGNAME}/pdf/msboxes.pdf
-share/doc/${PKGNAME}/pdf/pdfmark.pdf
 share/doc/${PKGNAME}/pic.ms
 share/doc/${PKGNAME}/pic.ps
 share/groff/${PKGVERSION}/eign
