@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.678 2025/01/29 13:22:01 pho Exp $
+$NetBSD: CHANGES-2025,v 1.679 2025/01/29 13:50:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -912,3 +912,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/wavpack to 5.8.1 [adam 2025-01-29]
 	Updated net/libtorrent-rasterbar to 2.0.11 [adam 2025-01-29]
 	Added lang/ghc910 version 9.10.1 [pho 2025-01-29]
+	Updated textproc/tree-sitter to 0.24.7 [adam 2025-01-29]
+	Updated textproc/translate-toolkit to 3.14.7 [adam 2025-01-29]
