@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.673 2025/01/29 12:01:14 mef Exp $
+$NetBSD: CHANGES-2025,v 1.674 2025/01/29 12:07:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/R-pillar to 1.10.1 [mef 2025-01-29]
 	Updated misc/R-Hmisc to 5.2.2 [mef 2025-01-29]
 	Updated devel/R-testthat to 3.2.3 [mef 2025-01-29]
+	Updated benchmarks/R-bench to 1.1.4 [mef 2025-01-29]
