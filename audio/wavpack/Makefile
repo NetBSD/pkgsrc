@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/01/28 12:17:44 adam Exp $
+# $NetBSD: Makefile,v 1.18 2025/01/29 12:18:44 adam Exp $
 
-DISTNAME=	wavpack-5.8.0
+DISTNAME=	wavpack-5.8.1
 CATEGORIES=	audio
 MASTER_SITES=	https://www.wavpack.com/
 EXTRACT_SUFX=	.tar.xz
