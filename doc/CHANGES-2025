@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.672 2025/01/29 11:49:22 mef Exp $
+$NetBSD: CHANGES-2025,v 1.673 2025/01/29 12:01:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/groff to 1.23.0nb1 [jperkin 2025-01-29]
 	Updated misc/R-pillar to 1.10.1 [mef 2025-01-29]
 	Updated misc/R-Hmisc to 5.2.2 [mef 2025-01-29]
+	Updated devel/R-testthat to 3.2.3 [mef 2025-01-29]
