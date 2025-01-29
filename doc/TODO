@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25356 2025/01/29 14:29:52 wiz Exp $
+$NetBSD: TODO,v 1.25357 2025/01/29 15:37:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -488,7 +488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o bibtex2html-1.99
 	o bibtool-2.68
 	o bin86-0.16.21
-	o bind-9.20.3
+	o bind-9.20.5
 	o bing-1.3.5
 	o binkd-104
 	o binutils-2.43
@@ -919,7 +919,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o mcsim-6.2.0
 	o md-whois-5.5.9
 	o mecab-ipadic-2.7.0.20070801
-	o mediawiki-1.43.0
+	o mediawiki-1.43.0 (LTS)
 	o memached-1.5.6
 	o memtestplus-7.20
 	o mercury-22.01.8
@@ -941,6 +941,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o modular-xorg-xwayland-24.1.3
 	o mono-nat-1.1.0
 	o monocypher-3.1.2
+	o moodle-4.5.1 (LTS)
 	o mopher-0.6.0
 	o moserial-2.30.0
 	o mserv-devel-0.41
@@ -1246,6 +1247,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o spcaview-20060501
 	o spiped-1.6.1b
 	o spl-1.0pre6
+	o sqlrelay-2.1.0
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squidclamav-7.2
