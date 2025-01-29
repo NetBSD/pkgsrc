@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/02/19 06:04:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/29 12:14:38 adam Exp $
 bin/vba_extract.py
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -62,6 +62,9 @@ ${PYSITELIB}/xlsxwriter/drawing.pyo
 ${PYSITELIB}/xlsxwriter/exceptions.py
 ${PYSITELIB}/xlsxwriter/exceptions.pyc
 ${PYSITELIB}/xlsxwriter/exceptions.pyo
+${PYSITELIB}/xlsxwriter/feature_property_bag.py
+${PYSITELIB}/xlsxwriter/feature_property_bag.pyc
+${PYSITELIB}/xlsxwriter/feature_property_bag.pyo
 ${PYSITELIB}/xlsxwriter/format.py
 ${PYSITELIB}/xlsxwriter/format.pyc
 ${PYSITELIB}/xlsxwriter/format.pyo
