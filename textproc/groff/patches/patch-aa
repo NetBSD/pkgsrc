@@ -1,12 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2019/04/01 16:48:37 ryoon Exp $
+$NetBSD: patch-aa,v 1.8 2025/01/29 10:31:53 jperkin Exp $
 
 Fix path to papers directory on NetBSD.
 Avoid arbitrary decisions wrt troff being present or not to use a g'prefix.
 Force it instead and use PKGGNUDIR logic to work it out.
+Fix infinite loop an.tmac -> an.tmac.
 
---- Makefile.in.orig	2018-12-23 14:34:27.000000000 +0000
+--- Makefile.in.orig	2023-07-05 20:58:38.000000000 +0000
 +++ Makefile.in
-@@ -3681,7 +3681,7 @@ tmac_an_prefix = \
+@@ -3963,7 +3963,7 @@ tmac_an_prefix = \
  indexext = .i
  
  # Directory containing the default index for refer.
@@ -15,3 +16,12 @@ Force it instead and use PKGGNUDIR logic to work it out.
  
  # The filename (without suffix) of the default index for refer.
  indexname = Ind
+@@ -15592,7 +15592,7 @@ tmac/stamp-wrap:
+ 	  for m in ""$(tmac_wrap); do \
+ 	    $(RM) $(top_builddir)/tmac/$$m-wrap; \
+ 	    if test "$$m" = an; then \
+-	      echo .do mso an.tmac >>$(top_builddir)/tmac/$$m-wrap; \
++	      echo .do mso andoc.tmac >>$(top_builddir)/tmac/$$m-wrap; \
+ 	    fi; \
+ 	    echo .cp 1 >>$(top_builddir)/tmac/$$m-wrap; \
+ 	    echo .so $(sys_tmac_prefix)$$m \
