@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2024/12/15 04:22:40 mef Exp $
+# $NetBSD: Makefile,v 1.25 2025/01/29 12:01:06 mef Exp $
 
 R_PKGNAME=	testthat
-R_PKGVER=	3.2.2
+R_PKGVER=	3.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +24,8 @@ DEPENDS+=	R-waldo>=0.4.0:../../devel/R-waldo
 DEPENDS+=	R-ps>=1.5.0:../../sysutils/R-ps
 DEPENDS+=	R-lifecycle-[0-9]*:../../devel/R-lifecycle
 DEPENDS+=	R-jsonlite-[0-9]*:../../textproc/R-jsonlite
+
+# Package suggested but not available: 'S7'
 
 TEST_DEPENDS+=	R-brio-[0-9]*:../../devel/R-brio
 TEST_DEPENDS+=	R-callr>=3.5.1:../../devel/R-callr
