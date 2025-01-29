@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.708 2025/01/29 18:12:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.709 2025/01/29 18:20:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -947,3 +947,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-nbconvert to 7.16.6 [adam 2025-01-29]
 	Updated devel/py-proto-plus to 1.26.0 [adam 2025-01-29]
 	Updated net/py-python-socks to 2.7.0 [adam 2025-01-29]
+	Updated security/libjwt to 2.1.1 [adam 2025-01-29]
+	Updated devel/py-pylint to 3.3.4 [adam 2025-01-29]
+	Updated devel/py-test-lazy-fixtures to 1.1.2 [adam 2025-01-29]
