@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2022/10/24 17:58:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/29 12:23:16 adam Exp $
 include/libtorrent/add_torrent_params.hpp
 include/libtorrent/address.hpp
 include/libtorrent/alert.hpp
@@ -6,7 +6,6 @@ include/libtorrent/alert_types.hpp
 include/libtorrent/announce_entry.hpp
 include/libtorrent/assert.hpp
 include/libtorrent/aux_/alert_manager.hpp
-include/libtorrent/aux_/aligned_storage.hpp
 include/libtorrent/aux_/aligned_union.hpp
 include/libtorrent/aux_/alloca.hpp
 include/libtorrent/aux_/allocating_handler.hpp
