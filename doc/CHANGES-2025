@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.820 2025/01/30 16:18:24 pho Exp $
+$NetBSD: CHANGES-2025,v 1.821 2025/01/30 16:24:26 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1068,3 +1068,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/hs-time-manager to 0.2.2 [pho 2025-01-30]
 	Updated devel/hs-psqueues to 0.2.8.1 [pho 2025-01-30]
 	Updated net/hs-network-control to 0.1.4 [pho 2025-01-30]
+	Updated www/hs-http-semantics to 0.3.0 [pho 2025-01-30]
