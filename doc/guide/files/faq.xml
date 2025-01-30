@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.59 2022/04/09 10:14:20 nia Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.60 2025/01/30 20:18:09 gdt Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -457,9 +457,15 @@ following into your &mk.conf;, somewhere
 
 <programlisting>
 .if exists(${LOCALBASE}/bin/sudo)
-SU_CMD=        ${LOCALBASE}/bin/sudo /bin/sh -c
+SU_CMD=        ${LOCALBASE}/bin/sudo -E /bin/sh -c
 .endif
 </programlisting>
+
+<para>Note the <command>-E</command> flag; that tells
+<command>sudo</command> to preserve the environment.
+Without this, the bin-install target will fail when building a
+package with a non-default python version.
+</para>
 
 </sect1>
 
