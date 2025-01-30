@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.735 2025/01/30 05:05:02 pho Exp $
+$NetBSD: CHANGES-2025,v 1.736 2025/01/30 05:06:47 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/hs-aeson to 2.2.3.0 [pho 2025-01-30]
 	Updated devel/hs-base-compat to 0.14.1 [pho 2025-01-30]
 	Updated benchmarks/hs-criterion-measurement to 0.2.3.0 [pho 2025-01-30]
+	Updated devel/hs-base-compat-batteries to 0.14.1 [pho 2025-01-30]
