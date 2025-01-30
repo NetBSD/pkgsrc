@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.762 2025/01/30 09:37:47 pho Exp $
+$NetBSD: CHANGES-2025,v 1.763 2025/01/30 09:50:57 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-data-default-instances-dlist to 0.0.1.2 [pho 2025-01-30]
 	Updated devel/hs-data-default-instances-old-locale to 0.0.1.2 [pho 2025-01-30]
 	Updated devel/hs-haskell-lexer to 1.1.2 [pho 2025-01-30]
+	Updated graphics/hs-JuicyPixels to 3.3.9 [pho 2025-01-30]
