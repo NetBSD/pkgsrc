@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/09/16 10:39:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/01/30 13:44:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -15,12 +15,6 @@ ${PYSITELIB}/sklearn/__init__.pyo
 ${PYSITELIB}/sklearn/_build_utils/__init__.py
 ${PYSITELIB}/sklearn/_build_utils/__init__.pyc
 ${PYSITELIB}/sklearn/_build_utils/__init__.pyo
-${PYSITELIB}/sklearn/_build_utils/openmp_helpers.py
-${PYSITELIB}/sklearn/_build_utils/openmp_helpers.pyc
-${PYSITELIB}/sklearn/_build_utils/openmp_helpers.pyo
-${PYSITELIB}/sklearn/_build_utils/pre_build_helpers.py
-${PYSITELIB}/sklearn/_build_utils/pre_build_helpers.pyc
-${PYSITELIB}/sklearn/_build_utils/pre_build_helpers.pyo
 ${PYSITELIB}/sklearn/_build_utils/tempita.py
 ${PYSITELIB}/sklearn/_build_utils/tempita.pyc
 ${PYSITELIB}/sklearn/_build_utils/tempita.pyo
@@ -654,9 +648,9 @@ ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_grower.pyo
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_histogram.py
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_histogram.pyc
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_histogram.pyo
-${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_contraints.py
-${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_contraints.pyc
-${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_contraints.pyo
+${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_constraints.py
+${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_constraints.pyc
+${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_monotonic_constraints.pyo
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_predictor.py
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_predictor.pyc
 ${PYSITELIB}/sklearn/ensemble/_hist_gradient_boosting/tests/test_predictor.pyo
@@ -857,6 +851,18 @@ ${PYSITELIB}/sklearn/feature_selection/tests/test_sequential.pyo
 ${PYSITELIB}/sklearn/feature_selection/tests/test_variance_threshold.py
 ${PYSITELIB}/sklearn/feature_selection/tests/test_variance_threshold.pyc
 ${PYSITELIB}/sklearn/feature_selection/tests/test_variance_threshold.pyo
+${PYSITELIB}/sklearn/frozen/__init__.py
+${PYSITELIB}/sklearn/frozen/__init__.pyc
+${PYSITELIB}/sklearn/frozen/__init__.pyo
+${PYSITELIB}/sklearn/frozen/_frozen.py
+${PYSITELIB}/sklearn/frozen/_frozen.pyc
+${PYSITELIB}/sklearn/frozen/_frozen.pyo
+${PYSITELIB}/sklearn/frozen/tests/__init__.py
+${PYSITELIB}/sklearn/frozen/tests/__init__.pyc
+${PYSITELIB}/sklearn/frozen/tests/__init__.pyo
+${PYSITELIB}/sklearn/frozen/tests/test_frozen.py
+${PYSITELIB}/sklearn/frozen/tests/test_frozen.pyc
+${PYSITELIB}/sklearn/frozen/tests/test_frozen.pyo
 ${PYSITELIB}/sklearn/gaussian_process/__init__.py
 ${PYSITELIB}/sklearn/gaussian_process/__init__.pyc
 ${PYSITELIB}/sklearn/gaussian_process/__init__.pyo
@@ -1026,7 +1032,6 @@ ${PYSITELIB}/sklearn/linear_model/_sag.pyc
 ${PYSITELIB}/sklearn/linear_model/_sag.pyo
 ${PYSITELIB}/sklearn/linear_model/_sag_fast.pyx.tp
 ${PYSITELIB}/sklearn/linear_model/_sag_fast.so
-${PYSITELIB}/sklearn/linear_model/_sgd_fast.pxd
 ${PYSITELIB}/sklearn/linear_model/_sgd_fast.pyx.tp
 ${PYSITELIB}/sklearn/linear_model/_sgd_fast.so
 ${PYSITELIB}/sklearn/linear_model/_stochastic_gradient.py
@@ -1608,9 +1613,6 @@ ${PYSITELIB}/sklearn/tests/__init__.pyo
 ${PYSITELIB}/sklearn/tests/metadata_routing_common.py
 ${PYSITELIB}/sklearn/tests/metadata_routing_common.pyc
 ${PYSITELIB}/sklearn/tests/metadata_routing_common.pyo
-${PYSITELIB}/sklearn/tests/random_seed.py
-${PYSITELIB}/sklearn/tests/random_seed.pyc
-${PYSITELIB}/sklearn/tests/random_seed.pyo
 ${PYSITELIB}/sklearn/tests/test_base.py
 ${PYSITELIB}/sklearn/tests/test_base.pyc
 ${PYSITELIB}/sklearn/tests/test_base.pyo
@@ -1695,6 +1697,9 @@ ${PYSITELIB}/sklearn/tree/_criterion.so
 ${PYSITELIB}/sklearn/tree/_export.py
 ${PYSITELIB}/sklearn/tree/_export.pyc
 ${PYSITELIB}/sklearn/tree/_export.pyo
+${PYSITELIB}/sklearn/tree/_partitioner.pxd
+${PYSITELIB}/sklearn/tree/_partitioner.pyx
+${PYSITELIB}/sklearn/tree/_partitioner.so
 ${PYSITELIB}/sklearn/tree/_reingold_tilford.py
 ${PYSITELIB}/sklearn/tree/_reingold_tilford.pyc
 ${PYSITELIB}/sklearn/tree/_reingold_tilford.pyo
@@ -1813,12 +1818,21 @@ ${PYSITELIB}/sklearn/utils/_sorting.so
 ${PYSITELIB}/sklearn/utils/_tags.py
 ${PYSITELIB}/sklearn/utils/_tags.pyc
 ${PYSITELIB}/sklearn/utils/_tags.pyo
+${PYSITELIB}/sklearn/utils/_test_common/__init__.py
+${PYSITELIB}/sklearn/utils/_test_common/__init__.pyc
+${PYSITELIB}/sklearn/utils/_test_common/__init__.pyo
+${PYSITELIB}/sklearn/utils/_test_common/instance_generator.py
+${PYSITELIB}/sklearn/utils/_test_common/instance_generator.pyc
+${PYSITELIB}/sklearn/utils/_test_common/instance_generator.pyo
 ${PYSITELIB}/sklearn/utils/_testing.py
 ${PYSITELIB}/sklearn/utils/_testing.pyc
 ${PYSITELIB}/sklearn/utils/_testing.pyo
 ${PYSITELIB}/sklearn/utils/_typedefs.pxd
 ${PYSITELIB}/sklearn/utils/_typedefs.pyx
 ${PYSITELIB}/sklearn/utils/_typedefs.so
+${PYSITELIB}/sklearn/utils/_unique.py
+${PYSITELIB}/sklearn/utils/_unique.pyc
+${PYSITELIB}/sklearn/utils/_unique.pyo
 ${PYSITELIB}/sklearn/utils/_user_interface.py
 ${PYSITELIB}/sklearn/utils/_user_interface.pyc
 ${PYSITELIB}/sklearn/utils/_user_interface.pyo
@@ -1907,9 +1921,6 @@ ${PYSITELIB}/sklearn/utils/tests/test_class_weight.pyo
 ${PYSITELIB}/sklearn/utils/tests/test_cython_blas.py
 ${PYSITELIB}/sklearn/utils/tests/test_cython_blas.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_cython_blas.pyo
-${PYSITELIB}/sklearn/utils/tests/test_cython_templating.py
-${PYSITELIB}/sklearn/utils/tests/test_cython_templating.pyc
-${PYSITELIB}/sklearn/utils/tests/test_cython_templating.pyo
 ${PYSITELIB}/sklearn/utils/tests/test_deprecation.py
 ${PYSITELIB}/sklearn/utils/tests/test_deprecation.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_deprecation.pyo
@@ -2003,6 +2014,9 @@ ${PYSITELIB}/sklearn/utils/tests/test_testing.pyo
 ${PYSITELIB}/sklearn/utils/tests/test_typedefs.py
 ${PYSITELIB}/sklearn/utils/tests/test_typedefs.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_typedefs.pyo
+${PYSITELIB}/sklearn/utils/tests/test_unique.py
+${PYSITELIB}/sklearn/utils/tests/test_unique.pyc
+${PYSITELIB}/sklearn/utils/tests/test_unique.pyo
 ${PYSITELIB}/sklearn/utils/tests/test_user_interface.py
 ${PYSITELIB}/sklearn/utils/tests/test_user_interface.pyc
 ${PYSITELIB}/sklearn/utils/tests/test_user_interface.pyo
