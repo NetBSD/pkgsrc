@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:28 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/30 04:20:41 pho Exp $
 
-DISTNAME=	semigroupoids-6.0.0.1
-PKGREVISION=	2
+DISTNAME=	semigroupoids-6.0.1
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Semigroupoids: Category sans id
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	hashable
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"
 .include "../../math/hs-bifunctors/buildlink3.mk"
