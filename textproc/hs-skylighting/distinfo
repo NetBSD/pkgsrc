@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/03 09:59:49 pho Exp $
+$NetBSD: distinfo,v 1.9 2025/01/30 12:44:44 pho Exp $
 
-BLAKE2s (skylighting-0.14.1.1.tar.gz) = d573702fc6e8a99b86f18ae96ac3ce9fe0cc19b9e5d1aba4dcd6fa46dddc467e
-SHA512 (skylighting-0.14.1.1.tar.gz) = 76b4ad20908e0b7e6eee04184e20728bfbcd87c6f68bf540fb4c867fba80ce321f7639aa8171f9c4e33810c379ea04c3d78a5a7b1328187b329d8152ce78c845
-Size (skylighting-0.14.1.1.tar.gz) = 1419144 bytes
+BLAKE2s (skylighting-0.14.6.tar.gz) = 4f10f9f14f46551af9f51ef80390bfc6abba64173d106e8209ec4de429e1d4a9
+SHA512 (skylighting-0.14.6.tar.gz) = bdca946b2d1333fa6e3d0521877de0e0cc46bc97b1daa07b53501ad67500e4e49ed47f752a08cf84822780c85290707dc747552436e2adc8f5dcce5e7a5534a5
+Size (skylighting-0.14.6.tar.gz) = 1471714 bytes
