@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.236 2024/12/27 08:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2025/01/30 11:18:41 wiz Exp $
 
-DISTNAME=	evolution-data-server-3.42.2
-PKGREVISION=	24
+DISTNAME=	evolution-data-server-3.44.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -11,7 +10,6 @@ HOMEPAGE=	https://wiki.gnome.org/Apps/Evolution/
 COMMENT=	Libraries and services for storing addressbooks and calendars
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config perl:run
 USE_TOOLS+=	intltool msgfmt msgmerge xgettext
 USE_TOOLS+=	gdbus-codegen
@@ -44,11 +42,8 @@ PKGCONFIG_OVERRIDE+=	src/libebackend/libebackend.pc.in
 PKGCONFIG_OVERRIDE+=	src/libedataserver/libedataserver.pc.in
 PKGCONFIG_OVERRIDE+=	src/libedataserverui/libedataserverui.pc.in
 
-# "gettext version 0.18.3+ required, but version '0.16.1' found instead."
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-_TOOLS_USE_PKGSRC.msgmerge=	yes
-_TOOLS_USE_PKGSRC.xgettext=	yes
-
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
