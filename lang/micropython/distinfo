@@ -1,13 +1,5 @@
-$NetBSD: distinfo,v 1.11 2021/10/26 10:51:42 nia Exp $
+$NetBSD: distinfo,v 1.12 2025/01/30 12:01:27 wiz Exp $
 
-BLAKE2s (micropython-1.9.2/micropython-1.9.2.tar.xz) = 6bec48480d8c23e7ba3ae01eeef1754eaf68cb264465a6c8d888e77d2448e97f
-SHA512 (micropython-1.9.2/micropython-1.9.2.tar.xz) = 67d070d47c19a100d164f9b4e4ec7eba10cf5ee49089f5f4d6a8338a9d72d6cffa41c2f6de73c8b169ba8011961b8ef197241fa5bea6813f77f65ef4cf2f4e4b
-Size (micropython-1.9.2/micropython-1.9.2.tar.xz) = 6699860 bytes
-SHA1 (patch-lib_utils_printf.c) = 6c152cd10a5fb0091d1149a0a50b202df6a6e931
-SHA1 (patch-mpy-cross_mpconfigport.h) = 827459126f9b6c3339db9c022a602d097e8e139c
-SHA1 (patch-py_mkenv.mk) = ff844cd4bcb6f9a2a27e02a62a066b4b70899c88
-SHA1 (patch-py_nlrx64.c) = 3aa81065c6357e42ff6a659f7b198d95711c5b2f
-SHA1 (patch-unix_Makefile) = 459483caf54b9180f67bd07bbfa7fcf6088de1cc
-SHA1 (patch-unix_main.c) = 8c199a25aaf5bef34a86754b1e492554903dad5b
-SHA1 (patch-unix_mpconfigport.h) = 9efe48cb6c49226efbe97243371ab302fab37812
-SHA1 (patch-unix_mpthreadport.c) = 5a021a4b1b7426ea7bae302870a04008381ee9c7
+BLAKE2s (micropython-1.24.1.tar.xz) = c46fbe24b343a1b124c069d337652945924fcf45c87c88c1e70611b40581e6b1
+SHA512 (micropython-1.24.1.tar.xz) = 6a71c570f3ff45273316d43c6862378d16cea7cc01d00eb149f567fecb4607a9092ba3ea7c3a182ceffa8f04da1aefd603a2cd03a52bd28aa18a9c6f5f69a24e
+Size (micropython-1.24.1.tar.xz) = 86842340 bytes
