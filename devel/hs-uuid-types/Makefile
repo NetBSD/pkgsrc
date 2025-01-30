@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/05/09 01:32:18 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/30 04:27:04 pho Exp $
 
-DISTNAME=	uuid-types-1.0.5.1
-PKGREVISION=	2
+DISTNAME=	uuid-types-1.0.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,8 +9,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	hashable	\
-	template-haskell	\
-	text
+	random
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
