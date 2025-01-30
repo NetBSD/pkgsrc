@@ -1,1 +1,1 @@
-Default instances for types in old-locale
+This module defines a Default instance for the type TimeLocale.
