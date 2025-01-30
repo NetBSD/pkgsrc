@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/30 14:30:57 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/30 10:12:49 pho Exp $
 
-BLAKE2s (crypton-x509-validation-1.6.12.tar.gz) = 278146d92083d182da58c20ec6248e1bdffb6efc8871b0a21328f2ff35a26114
-SHA512 (crypton-x509-validation-1.6.12.tar.gz) = 3f6e24f4c3c0ebe2a6dd6371d3abf6739fbb571a47d6918a380fe18f68fb33aec4503f826fd1b1a8bda484d91fe5c8cef2ec3d21fbbf3394eb6f77059a7094c2
-Size (crypton-x509-validation-1.6.12.tar.gz) = 19573 bytes
+BLAKE2s (crypton-x509-validation-1.6.13.tar.gz) = 20ac6d32639eaedc60887f77e19936b4f14034075d9c3bc1fcc7c9dc33d2aadd
+SHA512 (crypton-x509-validation-1.6.13.tar.gz) = a055d9bbf0340b5bf34d5f357602d65b63bf251b6370d7632b8bdcbd75e690b78b6e3409de3e894f56d74b2962bb221f4ceb2bca42df641df202a9db6c463f2d
+Size (crypton-x509-validation-1.6.13.tar.gz) = 18981 bytes
