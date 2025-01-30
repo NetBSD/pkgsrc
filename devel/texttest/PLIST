@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2024/10/14 14:30:00 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/01/30 14:39:17 schmonz Exp $
 bin/interpretcore
 bin/texttest
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyc
 ${PYSITELIB}/texttestlib/__init__.pyo
+${PYSITELIB}/texttestlib/__main__.py
+${PYSITELIB}/texttestlib/__main__.pyc
+${PYSITELIB}/texttestlib/__main__.pyo
 ${PYSITELIB}/texttestlib/default/__init__.py
 ${PYSITELIB}/texttestlib/default/__init__.pyc
 ${PYSITELIB}/texttestlib/default/__init__.pyo
