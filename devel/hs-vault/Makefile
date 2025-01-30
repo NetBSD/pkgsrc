@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/05/09 01:32:18 pho Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/30 15:48:47 pho Exp $
 
 DISTNAME=	vault-0.3.1.5
 PKGREVISION=	8
@@ -10,6 +10,7 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
+	containers	\
 	hashable
 
 .include "../../mk/haskell.mk"
