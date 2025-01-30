@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/05/09 01:32:56 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/01/30 16:31:32 pho Exp $
 
-DISTNAME=	warp-3.4.1
-PKGREVISION=	1
+DISTNAME=	warp-3.4.7
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,6 +8,7 @@ COMMENT=	Fast, light-weight web server for WAI applications
 LICENSE=	mit
 
 .include "../../devel/hs-auto-update/buildlink3.mk"
+.include "../../devel/hs-async/buildlink3.mk"
 .include "../../www/hs-bsb-http-chunked/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"

@@ -1,15 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.15 2024/05/09 01:32:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2025/01/30 16:31:32 pho Exp $
 
 BUILDLINK_TREE+=	hs-warp
 
 .if !defined(HS_WARP_BUILDLINK3_MK)
 HS_WARP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=3.4.1
-BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.4.1nb1
+BUILDLINK_API_DEPENDS.hs-warp+=	hs-warp>=3.4.7
+BUILDLINK_ABI_DEPENDS.hs-warp+=	hs-warp>=3.4.7
 BUILDLINK_PKGSRCDIR.hs-warp?=	../../www/hs-warp
 
 .include "../../devel/hs-auto-update/buildlink3.mk"
+.include "../../devel/hs-async/buildlink3.mk"
 .include "../../www/hs-bsb-http-chunked/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
