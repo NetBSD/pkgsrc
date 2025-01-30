@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/29 02:56:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/30 09:56:49 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket.hi
@@ -69,6 +69,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/Posix/MsgHdr.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/ReadShow.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/ReadShow.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/ReadShow.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/STM.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/STM.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/STM.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/Shutdown.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/Shutdown.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Socket/Shutdown.p_hi
