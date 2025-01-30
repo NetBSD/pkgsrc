@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:32 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/30 10:04:15 pho Exp $
 
-DISTNAME=	crypton-1.0.0
-PKGREVISION=	1
+DISTNAME=	crypton-1.0.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
