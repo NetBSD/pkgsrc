@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.728 2025/01/30 04:36:56 pho Exp $
+$NetBSD: CHANGES-2025,v 1.729 2025/01/30 04:39:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -972,3 +972,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/hs-integer-logarithms to 1.0.4 [pho 2025-01-30]
 	Updated math/hs-scientific to 0.3.8.0 [pho 2025-01-30]
 	Updated devel/hs-th-compat to 0.1.6 [pho 2025-01-30]
+	Updated textproc/hs-text-short to 0.1.6 [pho 2025-01-30]
