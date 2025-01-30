@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/02 06:54:42 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/30 16:24:19 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Semantics.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Semantics.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP/Semantics.p_hi
@@ -47,6 +47,7 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/http-semantics-${PKGVERSION}/${HS_VERSION}/package-description
 lib/http-semantics-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/ChangeLog.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/Network-HTTP-Semantics-Client-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/Network-HTTP-Semantics-Client.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/Network-HTTP-Semantics-IO.html
@@ -58,6 +59,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-B.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-C.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-D.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-E.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-F.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-G.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http-semantics-${PKGVERSION}/html/doc-index-H.html
