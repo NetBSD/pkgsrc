@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/29 23:15:19 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/30 05:24:44 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/MWC.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/Random/MWC.hi
@@ -21,7 +21,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/System-Random
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/System-Random-MWC-Distributions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/System-Random-MWC-SeedSource.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/System-Random-MWC.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/changelog.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/docs/RecreateFigure.svg
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/mwc-random-${PKGVERSION}/html/linuwial.css
