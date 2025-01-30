@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.92 2024/10/09 16:22:31 micha Exp $
+# $NetBSD: Makefile.common,v 1.93 2025/01/30 07:45:09 wiz Exp $
 #
 # used by x11/xlockmore/Makefile
 # used by x11/xlockmore-lite/Makefile
@@ -129,6 +129,7 @@ SUBST_FILES.adef=	xlock/XLock.ad
 SUBST_SED.adef=		-e 's|/usr/lib/|${PREFIX}/lib/|g'
 SUBST_SED.adef+=	-e 's|/usr/local/share/|${PREFIX}/share/|g'
 
+.if defined(XLOCK_DEFAULT_MODE) && !empty(XLOCK_DEFAULT_MODE) && ${XLOCK_DEFAULT_MODE} != "random"
 # Set the default xlock mode/screensaver.
 # XLOCK_DEFAULT_MODE can be defined by the user in mk.conf
 SUBST_CLASSES+=		mode
@@ -136,6 +137,7 @@ SUBST_STAGE.mode=	pre-configure
 SUBST_MESSAGE.mode=	Preparing default mode in xlock/XLock.ad file ...
 SUBST_FILES.mode=	xlock/XLock.ad
 SUBST_SED.mode=		-e 's|^\(XLock.mode:[ 	]*\).*|\1${XLOCK_DEFAULT_MODE}|'
+.endif
 
 # Configure INSTALL.pkgsrc (formerly displayed as MESSAGE)
 SUBST_CLASSES+=		install
