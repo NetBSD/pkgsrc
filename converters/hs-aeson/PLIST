@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/05/02 04:52:05 pho Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/01/30 04:50:51 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson.p_hi
@@ -56,12 +56,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Unescape.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/UnescapeFromText.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/UnescapeFromText.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/UnescapeFromText.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word16.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word16.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word16.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word8.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word8.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Internal/Word8.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Aeson/Key.p_hi
