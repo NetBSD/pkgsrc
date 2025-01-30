@@ -1,1 +1,2 @@
-A class for types with a default value
+This module re-exports the Default class from Data.Default, for compatibility
+with older code.
