@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.756 2025/01/30 08:28:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.757 2025/01/30 08:30:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1001,3 +1001,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-itemadapter to 0.11.0 [adam 2025-01-30]
 	Updated devel/py-cachetools to 5.5.1 [adam 2025-01-30]
 	Updated devel/py-deprecated to 1.2.18 [adam 2025-01-30]
+	Updated devel/quilt to 0.68 [wiz 2025-01-30]
