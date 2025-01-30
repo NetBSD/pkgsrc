@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:24 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/30 07:47:01 pho Exp $
 
 DISTNAME=	adjunctions-4.4.2
 PKGREVISION=	4
@@ -9,6 +9,7 @@ COMMENT=	Adjunctions and representable functors
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers	\
 	semigroupoids
 
 .include "../../math/hs-comonad/buildlink3.mk"
