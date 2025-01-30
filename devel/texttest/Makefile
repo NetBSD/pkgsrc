@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2024/12/27 08:19:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2025/01/30 14:39:17 schmonz Exp $
 
-DISTNAME=		TextTest-4.4.0.1
-PKGNAME=		${DISTNAME:tl}
-PKGREVISION=		3
+DISTNAME=		texttest-4.4.2
 CATEGORIES=		devel python
-MASTER_SITES=		https://downloads.sourceforge.net/project/texttest/texttest/4.4.0/
+MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://texttest.sourceforge.net/
@@ -21,6 +19,8 @@ REPLACE_PYTHON+=	texttestlib/default/virtualdisplay.py
 REPLACE_PYTHON+=	texttestlib/log/logconfiggen_setup.py
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
+
+WHEEL_NAME=		TextTest-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
