@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.758 2025/01/30 08:40:08 pho Exp $
+$NetBSD: CHANGES-2025,v 1.759 2025/01/30 08:50:48 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1003,3 +1003,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-deprecated to 1.2.18 [adam 2025-01-30]
 	Updated devel/quilt to 0.68 [wiz 2025-01-30]
 	Updated converters/hs-microaeson to 0.1.0.2 [pho 2025-01-30]
+	Removed devel/hs-data-default-instances-containers [pho 2025-01-30]
