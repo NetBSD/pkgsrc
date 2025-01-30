@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:11 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/30 04:23:20 pho Exp $
 
-DISTNAME=	semialign-1.3
-PKGREVISION=	2
+DISTNAME=	semialign-1.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,7 @@ COMMENT=	Align and Zip type-classes from the common Semialign ancestor
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	hashable
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-indexed-traversable/buildlink3.mk"
