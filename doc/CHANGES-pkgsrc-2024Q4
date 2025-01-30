@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.9 2025/01/28 08:56:47 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.10 2025/01/30 19:15:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -48,4 +48,7 @@ www/palemoon: security fix
 
 Pullup ticket #6934 - requested by morr
 editors/vim-share: security fix
+
+Pullup ticket #6935 - requested by taca
+devel/git: security fix
 
