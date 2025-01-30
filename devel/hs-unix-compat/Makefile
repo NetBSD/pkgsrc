@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:17 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/30 15:56:25 pho Exp $
 
-DISTNAME=	unix-compat-0.7.1
-PKGREVISION=	1
+DISTNAME=	unix-compat-0.7.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
