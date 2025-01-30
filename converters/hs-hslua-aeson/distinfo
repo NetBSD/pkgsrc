@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/02 11:08:49 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/30 07:36:50 pho Exp $
 
-BLAKE2s (hslua-aeson-2.3.1.tar.gz) = 88f02e5dfcc75d567e4d7133c838e4d39ac936c1153e7e6b18be10bbde398f56
-SHA512 (hslua-aeson-2.3.1.tar.gz) = 5257e6fb69d05f19941dca762081358a3c017c024450e672144e3e8d8d2e3cd4ef90027c7f8a32ab7e8104d5168ba6b5fa7a6de732ba9023a15dd9898e054fed
-Size (hslua-aeson-2.3.1.tar.gz) = 7462 bytes
+BLAKE2s (hslua-aeson-2.3.1.1.tar.gz) = c3c29e298b7da1b525ba4029a2c484a93f012c964f5efb39ae3d0cfda902f3ef
+SHA512 (hslua-aeson-2.3.1.1.tar.gz) = bcf92ec973a8f47a44dba02256c5859156f8cf67133f16bae0a732e2c3c8d97fca65709439aa3e946dab0540aad9d5154e3a3cfd0897105f07ab5808cf1e5c7d
+Size (hslua-aeson-2.3.1.1.tar.gz) = 7487 bytes
