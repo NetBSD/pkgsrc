@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.741 2025/01/30 05:33:56 pho Exp $
+$NetBSD: CHANGES-2025,v 1.742 2025/01/30 05:39:51 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-data-default-class to 0.2.0.0 [pho 2025-01-30]
 	Updated math/hs-mwc-random to 0.15.2.0 [pho 2025-01-30]
 	Updated math/hs-statistics to 0.16.3.0 [pho 2025-01-30]
+	Updated textproc/hs-cassava to 0.5.3.2 [pho 2025-01-30]
