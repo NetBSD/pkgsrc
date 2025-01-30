@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2023/10/29 09:39:14 pho Exp $
+$NetBSD: distinfo,v 1.7 2025/01/30 11:45:55 pho Exp $
 
-BLAKE2s (typed-process-0.2.11.1.tar.gz) = bcca40ac87208a05d9eb5c464638538f881ec56e4a89969d387b579a6ea9b692
-SHA512 (typed-process-0.2.11.1.tar.gz) = 034f5930c9f36e259f06420b0671922e18de04f0babbd107175c2f83f75ff1fed2c0211490efbce644f6decece9089ba18e3a3576b628fd244c64ffbf7b1d5df
-Size (typed-process-0.2.11.1.tar.gz) = 18339 bytes
+BLAKE2s (typed-process-0.2.12.0.tar.gz) = aee9f53a9397334062a231d8475fec1c7f0043a04dccdd1a38ef1b29980b167e
+SHA512 (typed-process-0.2.12.0.tar.gz) = 92c47157e19be03ccd82db5553e3f53ba75d80177e9fa59104a2e723fecf19018253d859554d9e23dbe9120d557135bfad63a757ca3487aaf62038a8b1dc3fd9
+Size (typed-process-0.2.12.0.tar.gz) = 18957 bytes
