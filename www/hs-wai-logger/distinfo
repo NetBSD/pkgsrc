@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/02/12 07:11:03 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/30 16:06:56 pho Exp $
 
-BLAKE2s (wai-logger-2.4.0.tar.gz) = 8cd120643f1de7f0f0d8e60c0b5be8355fcbd504a983aeac670a47e3789d8b7d
-SHA512 (wai-logger-2.4.0.tar.gz) = 8d09b7fa7688601396f994513772884ac7f73a0b934f73420e3d200ae4e906450bbef14746d43dc484ce8d9181f8171dfb8d3496d17c0d81ba7c27eee39a90d4
-Size (wai-logger-2.4.0.tar.gz) = 5925 bytes
+BLAKE2s (wai-logger-2.5.0.tar.gz) = 9ea0c11df6198b96a18d64c14d34740544b69896a0e900c8a9be8dd88d27a519
+SHA512 (wai-logger-2.5.0.tar.gz) = 0c24548b8f0e21ca8a9fe3512bf6f390ca27d37b7d61bd11c3a6fdf514b51f3f8744f0bbd02ba0b9fd56b200653a8a2fdad76085e0416f67ad962e16bc408f7b
+Size (wai-logger-2.5.0.tar.gz) = 6615 bytes
