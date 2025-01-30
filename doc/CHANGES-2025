@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.823 2025/01/30 16:31:39 pho Exp $
+$NetBSD: CHANGES-2025,v 1.824 2025/01/30 16:36:49 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1071,3 +1071,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hs-http-semantics to 0.3.0 [pho 2025-01-30]
 	Updated www/hs-http2 to 5.3.9 [pho 2025-01-30]
 	Updated www/hs-warp to 3.4.7 [pho 2025-01-30]
+	Updated www/hs-wai-extra to 3.1.17 [pho 2025-01-30]
