@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.739 2025/01/30 05:21:02 pho Exp $
+$NetBSD: CHANGES-2025,v 1.740 2025/01/30 05:24:51 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -983,3 +983,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-binary-orphans to 1.0.5 [pho 2025-01-30]
 	Updated devel/hs-data-default to 0.8.0.0 [pho 2025-01-30]
 	Updated devel/hs-data-default-class to 0.2.0.0 [pho 2025-01-30]
+	Updated math/hs-mwc-random to 0.15.2.0 [pho 2025-01-30]
