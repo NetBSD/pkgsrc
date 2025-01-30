@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/27 12:34:40 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 16:03:45 pho Exp $
 
-BLAKE2s (fast-logger-3.2.2.tar.gz) = 2e52a4b7a2220492650d310237c9df12a0b90a85c609fd9ca302013bb1aee2b0
-SHA512 (fast-logger-3.2.2.tar.gz) = 2a132b3c6eea08a127ad32d376ea749e1efc9fb7a9dc08272dd21945e3c6c5a966a73afb3ed13a1f427d5a63d5c6846cd3a025f9e7eb2c1a347c0c57d916bd3e
-Size (fast-logger-3.2.2.tar.gz) = 14570 bytes
+BLAKE2s (fast-logger-3.2.5.tar.gz) = b191a3f8ee7dd2be116642949cc0d405687d14e9215f43a5a235ee3699eeea74
+SHA512 (fast-logger-3.2.5.tar.gz) = 7c0b3c9fdb49c2c40f3067cf9c09ca29e32cd0ba5d47c8373532bdc7db0c5b5136e8eae295aa6adfa4785608b88506dbc83ce4e5e1295304e965431ccfcbcde5
+Size (fast-logger-3.2.5.tar.gz) = 14795 bytes
