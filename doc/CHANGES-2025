@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.814 2025/01/30 15:56:32 pho Exp $
+$NetBSD: CHANGES-2025,v 1.815 2025/01/30 16:00:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1062,3 +1062,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-singleton-bool to 0.1.8 [pho 2025-01-30]
 	Updated www/hs-servant to 0.20.2 [pho 2025-01-30]
 	Updated devel/hs-unix-compat to 0.7.3 [pho 2025-01-30]
+	Updated devel/hs-auto-update to 0.2.6 [pho 2025-01-30]
