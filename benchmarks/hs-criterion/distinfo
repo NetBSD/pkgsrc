@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/11/02 02:50:25 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/30 06:57:35 pho Exp $
 
-BLAKE2s (criterion-1.6.3.0.tar.gz) = dc284c20c08e3ac34b067689d36141d9f4f0aa2250c48cb726d611adcc8facbf
-SHA512 (criterion-1.6.3.0.tar.gz) = e753562678073c7686958f3649d959fae7946e02958ee9f8b0803aa6fe5fc64c66fda2524fd79777e976836f2c9b465675f3be2eca813e6b14986317543a8b46
-Size (criterion-1.6.3.0.tar.gz) = 47217 bytes
+BLAKE2s (criterion-1.6.4.0.tar.gz) = 02bb4e8e1e98129474c55115cff4e498076c32a41ba9695772f5c8c644fc11ef
+SHA512 (criterion-1.6.4.0.tar.gz) = 224e5a1eaf2904a6dc126d383b9a24780cb23e8b638ab3ae786e35dd3a83fcb3ad1ac528b87664dbc068b7f411a0e07ff190562cf79a9ae23b42167e37034ed0
+Size (criterion-1.6.4.0.tar.gz) = 46689 bytes
