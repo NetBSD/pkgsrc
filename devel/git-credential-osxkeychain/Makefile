@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2023/03/29 16:31:50 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.14.1 2025/01/30 19:14:48 bsiegert Exp $
 
 .include "../../devel/git/Makefile.common"
 
-PKGNAME=		git-credential-osxkeychain-${GIT_VERSION}
-COMMENT=		Git macOS Keychain credential manager
+PKGNAME=	git-credential-osxkeychain-${GIT_VERSION}
+COMMENT=	Git macOS Keychain credential manager
 
-DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
