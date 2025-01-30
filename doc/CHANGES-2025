@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.786 2025/01/30 12:15:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.787 2025/01/30 12:16:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-commonmark-pandoc to 0.2.2.3 [pho 2025-01-30]
 	Updated textproc/py-colored to 2.2.5 [adam 2025-01-30]
 	Updated devel/py-codespell to 2.4.1 [adam 2025-01-30]
+	Updated textproc/hs-djot to 0.1.2.2 [pho 2025-01-30]
