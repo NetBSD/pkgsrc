@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:48 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/30 13:26:08 pho Exp $
 
-DISTNAME=	toml-parser-2.0.0.0
-PKGREVISION=	1
+DISTNAME=	toml-parser-2.0.1.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
