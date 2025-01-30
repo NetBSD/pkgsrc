@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:28 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/01/30 05:33:49 pho Exp $
 
 BUILDLINK_TREE+=	hs-statistics
 
 .if !defined(HS_STATISTICS_BUILDLINK3_MK)
 HS_STATISTICS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-statistics+=	hs-statistics>=0.16.2
-BUILDLINK_ABI_DEPENDS.hs-statistics+=	hs-statistics>=0.16.2.1nb2
+BUILDLINK_API_DEPENDS.hs-statistics+=	hs-statistics>=0.16.3
+BUILDLINK_ABI_DEPENDS.hs-statistics+=	hs-statistics>=0.16.3.0
 BUILDLINK_PKGSRCDIR.hs-statistics?=	../../math/hs-statistics
 
 .include "../../converters/hs-aeson/buildlink3.mk"
