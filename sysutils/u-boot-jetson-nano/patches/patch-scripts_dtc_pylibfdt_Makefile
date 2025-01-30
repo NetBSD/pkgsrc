@@ -1,0 +1,16 @@
+$NetBSD: patch-scripts_dtc_pylibfdt_Makefile,v 1.1 2025/01/30 22:17:12 wiz Exp $
+
+Fix VERSION to be a standard version number, to be accepted by Python's
+packaging.
+
+--- scripts/dtc/pylibfdt/Makefile.orig	2025-01-30 22:15:03.859854708 +0000
++++ scripts/dtc/pylibfdt/Makefile
+@@ -17,7 +17,7 @@ quiet_cmd_pymod = PYMOD   $@
+       cmd_pymod = unset CROSS_COMPILE; unset CFLAGS; \
+ 		CC="$(HOSTCC)" LDSHARED="$(HOSTCC) -shared " \
+ 		LDFLAGS="$(HOSTLDFLAGS)" \
+-		VERSION="u-boot-$(UBOOTVERSION)" \
++		VERSION="$(UBOOTVERSION)" \
+ 		CPPFLAGS="$(HOSTCFLAGS) -I$(LIBFDT_srcdir)" OBJDIR=$(obj) \
+ 		SOURCES="$(PYLIBFDT_srcs)" \
+ 		SWIG_OPTS="-I$(LIBFDT_srcdir) -I$(LIBFDT_srcdir)/.." \
