@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:04 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/30 23:53:44 pho Exp $
 
-DISTNAME=	monad-logger-0.3.40
-PKGREVISION=	2
+DISTNAME=	monad-logger-0.3.41
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
