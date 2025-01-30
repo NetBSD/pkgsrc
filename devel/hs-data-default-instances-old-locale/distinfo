@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:14:55 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/01/30 09:29:25 pho Exp $
 
-BLAKE2s (data-default-instances-old-locale-0.0.1.tar.gz) = 49ba75412de83c31600830b12a0db37686e6a4f2e27f9b3e644d4ffb71301cdc
-SHA512 (data-default-instances-old-locale-0.0.1.tar.gz) = bbaf4626c922820dca8cc230585fef80b6f6bd6278d335cc7abd4e5b7a857f0626ca9937ea95066e7655387dfcc684e6fbb0f6f5bc6905e539fbd1176ddd99ec
-Size (data-default-instances-old-locale-0.0.1.tar.gz) = 1519 bytes
+BLAKE2s (data-default-instances-old-locale-0.0.1.2.tar.gz) = 1696a539595e74bcb8d4f75e7c7d7645918d3221079455098857049dc6503d00
+SHA512 (data-default-instances-old-locale-0.0.1.2.tar.gz) = b9b47b760bfaa35e7fce1410672dd342aa8377ec5adf69a84f1e537d9255913d15b21f7399b96202b9dcfa2ad7308cf5092e1ee7d5d0a1f7f9715b6d07d862f3
+Size (data-default-instances-old-locale-0.0.1.2.tar.gz) = 1611 bytes
