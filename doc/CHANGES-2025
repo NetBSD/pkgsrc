@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.832 2025/01/30 23:53:50 pho Exp $
+$NetBSD: CHANGES-2025,v 1.833 2025/01/30 23:54:59 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated converters/pandoc-cli to 3.6.2 [pho 2025-01-30]
 	Updated devel/hs-microlens-th to 0.4.3.16 [pho 2025-01-30]
 	Updated devel/hs-monad-logger to 0.3.41 [pho 2025-01-30]
+	Updated devel/hs-lift-type to 0.1.2.0 [pho 2025-01-30]
