@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/01/28 02:21:15 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/30 07:54:38 pho Exp $
 
-BLAKE2s (kan-extensions-5.2.5.tar.gz) = 2ac67fa484be49ea7386d96a5242bfdd985403b07d8919e6602001ea60a4d405
-SHA512 (kan-extensions-5.2.5.tar.gz) = 70303f23e4935ca662f5e094a0ab9c18997c5ff2896bbbe1c8f7d994002f75176457757ad8d4647699ea1cc28701c75cb10cb4fcbe81d8c2f3c71cf28244ca9c
-Size (kan-extensions-5.2.5.tar.gz) = 22205 bytes
+BLAKE2s (kan-extensions-5.2.6.tar.gz) = 6297b91930a21cb6160d92f36ceef1ed4e1f65433fbc4f25f52105d353ed01de
+SHA512 (kan-extensions-5.2.6.tar.gz) = a1736866bdb878a0d937ef0a26a0080ffc8acd817e8ccd33f550b703b3c325362d00649262faca7c5b3bc3ef764348f8bf04695612fb75a83810f877b6f76b9d
+Size (kan-extensions-5.2.6.tar.gz) = 21718 bytes
