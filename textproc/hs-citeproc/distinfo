@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/28 08:45:46 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 11:57:54 pho Exp $
 
-BLAKE2s (citeproc-0.8.1.tar.gz) = 243df96c208fce1cbaa5ca98eaa73d16a9fe1f32a643a533fdd7f9f3ebf13e50
-SHA512 (citeproc-0.8.1.tar.gz) = 7bce91a19e8db475b7c0c7f1f324e356dfb895fddc575b59d3fcdb8955b1ee17a82d3943edc383669a7bb5cc9fb14b3ff1cea766a2d322157017a97acddeee32
-Size (citeproc-0.8.1.tar.gz) = 549947 bytes
+BLAKE2s (citeproc-0.8.1.2.tar.gz) = 31ec6fd9a0ce539b15eb6db1fdb17347a4cac65a9fc99f9b805bd0dbdb26074e
+SHA512 (citeproc-0.8.1.2.tar.gz) = 03d1c15c00df8f2326c6166a8d85b86eae4c0a002ac7ed6a5fc3bc481608e0d68cb2325ce3c7b140a749fb1ad81a1dc5b0a90e262f6f9f4eb8360a2a7f56cb87
+Size (citeproc-0.8.1.2.tar.gz) = 551125 bytes
