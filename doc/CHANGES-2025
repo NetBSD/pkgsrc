@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.797 2025/01/30 13:44:19 pho Exp $
+$NetBSD: CHANGES-2025,v 1.798 2025/01/30 13:47:33 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1044,3 +1044,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-ordered-containers to 0.2.4 [pho 2025-01-30]
 	Updated textproc/hs-toml-parser to 2.0.1.0 [pho 2025-01-30]
 	Updated textproc/hs-typst to 0.6.1 [pho 2025-01-30]
+	Updated net/hs-iproute to 1.7.15 [pho 2025-01-30]
