@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/01/10 10:35:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/30 14:20:09 pho Exp $
 
 .include "../../converters/hs-pandoc/version.mk"
 DISTNAME=	pandoc-${PANDOC_VERSION}
@@ -16,17 +16,7 @@ LICENSE=	gnu-gpl-v2
 HASKELL_OPTIMIZATION_LEVEL=	1
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	citeproc	\
-	commonmark	\
-	commonmark-extensions	\
-	commonmark-pandoc	\
-	djot	\
-	doclayout	\
-	emojis	\
-	skylighting	\
-	skylighting-core	\
-	texmath	\
-	typst
+	xml-conduit
 
 # lib:pandoc
 .include "../../textproc/hs-Glob/buildlink3.mk"
