@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.809 2025/01/30 14:47:41 pho Exp $
+$NetBSD: CHANGES-2025,v 1.810 2025/01/30 14:52:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-Cucumber-TagExpressions to 6.1.2 [schmonz 2025-01-30]
 	Updated devel/swagger-codegen to 3.0.67 [schmonz 2025-01-30]
 	Updated devel/hs-constraints to 0.14.2 [pho 2025-01-30]
+	Updated www/hs-http-api-data to 0.6.1 [pho 2025-01-30]
