@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:31:48 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/30 14:41:19 pho Exp $
 
-DISTNAME=	boring-0.2.1
-PKGREVISION=	2
+DISTNAME=	boring-0.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Boring and Absurd types
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
 
 .include "../../devel/hs-tagged/buildlink3.mk"
 .include "../../mk/haskell.mk"
