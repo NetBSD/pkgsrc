@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.770 2025/01/30 11:09:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.771 2025/01/30 11:10:43 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xplr to 0.21.10 [pin 2025-01-30]
 	Updated audio/fluidsynth to 2.4.3 [adam 2025-01-30]
 	Updated audio/openal-soft to 1.24.2 [adam 2025-01-30]
+	Updated security/hs-tls to 2.1.7 [pho 2025-01-30]
