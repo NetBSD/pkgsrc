@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/01/26 09:38:22 pho Exp $
+$NetBSD: distinfo,v 1.8 2025/01/30 04:41:09 pho Exp $
 
-BLAKE2s (time-compat-1.9.6.1.tar.gz) = 8a3268b3a48c7692ae50f0dc6003d144614d1816edad371b8c464baa9cd2e553
-SHA512 (time-compat-1.9.6.1.tar.gz) = ca0b19aa5e7948fd7d9fbd8ff5e1b0f93a2d8d410d515e7078b40370e7d9fc363c111d53551d57a0320efb0894bcc2210afa8fc04da9f003ded626f53b7e58ea
-Size (time-compat-1.9.6.1.tar.gz) = 59964 bytes
+BLAKE2s (time-compat-1.9.8.tar.gz) = 8e2add186425a6318f281d1f1fecaf32cd744b8c1d7971e9255f13d806ca9dc8
+SHA512 (time-compat-1.9.8.tar.gz) = 148c2eab0edb626b447d63c77c00ce6b38a1a37459f29d7204ed5101031bf8d1675021f59b47ece11899350325c05c1f37116aa76178742e04c5da2519a5b504
+Size (time-compat-1.9.8.tar.gz) = 63414 bytes
