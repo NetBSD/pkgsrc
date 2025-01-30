@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/14 22:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/01/30 12:25:40 wiz Exp $
 
-DISTNAME=	ibus-libpinyin-1.12.0
-PKGREVISION=	12
+DISTNAME=	ibus-libpinyin-1.15.8
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpinyin/}
 
@@ -15,9 +14,7 @@ USE_TOOLS+=	gmake intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-PYVERSION_DIGIT=		${PYPKGPREFIX:S/py//}
-PLIST_SUBST+=			PYVERSION_DIGIT=${PYVERSION_DIGIT}
+PLIST_SUBST+=	PYVERSION_DIGIT=${PYTHON_VERSION}
 
 .include "options.mk"
 
@@ -28,7 +25,7 @@ PLIST_SUBST+=			PYVERSION_DIGIT=${PYVERSION_DIGIT}
 .  include "../../devel/libuuid/buildlink3.mk"
 .endif
 
-.if (!empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)) || !empty(PKGSRC_COMPILER:Mclang)
+.if (!empty(PKGSRC_COMPILER:Mgcc) && ${CC_VERSION:Mgcc-4.[4-9]*}) || !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--disable-boost
 .else
 CONFIGURE_ARGS+=	--enable-boost
@@ -41,6 +38,7 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libpinyin+=	libpinyin>=2.7.91
 .include "../../textproc/libpinyin/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
