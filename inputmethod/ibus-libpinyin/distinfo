@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:49:34 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 12:25:40 wiz Exp $
 
-BLAKE2s (ibus-libpinyin-1.12.0.tar.gz) = 1beaf31552b8586d30589728e84ff125285117442b7d4619163c93110b669b8b
-SHA512 (ibus-libpinyin-1.12.0.tar.gz) = 894bbd6f4f613037bf9c01c8b7a0ff46898135131e84413245751ad01672152b133f1f31a3b38616f13e68da8c90ec9c028082db86b88e4469edb23eeea965df
-Size (ibus-libpinyin-1.12.0.tar.gz) = 1245595 bytes
+BLAKE2s (ibus-libpinyin-1.15.8.tar.gz) = 60817efd884e7f4b0b9a671176566ede67d15fff899b0ca588f31987f3ea8c12
+SHA512 (ibus-libpinyin-1.15.8.tar.gz) = 17044077778e76cfa5f7ae6c9e2fd09d1ceece1f9713a50ea18497faa9c93f213f38eb07c6845715f9960ee9c42147d374b22002fc6a03a74949f717b2d02225
+Size (ibus-libpinyin-1.15.8.tar.gz) = 1306092 bytes
 SHA1 (patch-lua_lmyoslib.c) = d0858c884f7d018c773ccac15a3cad832ffd5a7d
 SHA1 (patch-lua_lua-plugin.h) = de317e3b4de609c3a465ee8ef7992238a55e5ff1

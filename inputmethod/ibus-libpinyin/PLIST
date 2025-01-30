@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/03/02 03:36:17 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/30 12:25:40 wiz Exp $
 libexec/ibus-engine-libpinyin
 libexec/ibus-setup-libpinyin
 share/applications/ibus-setup-libbopomofo.desktop
@@ -6,7 +6,7 @@ share/applications/ibus-setup-libpinyin.desktop
 share/glib-2.0/schemas/com.github.libpinyin.ibus-libpinyin.gschema.xml
 ${PLIST.lua}share/ibus-libpinyin/base.lua
 share/ibus-libpinyin/db/english.db
-share/ibus-libpinyin/db/strokes.db
+share/ibus-libpinyin/db/table.db
 share/ibus-libpinyin/icons/chinese.svg
 share/ibus-libpinyin/icons/english.svg
 share/ibus-libpinyin/icons/full-punct.svg
@@ -41,8 +41,10 @@ share/locale/cs/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/de/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/es/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/fr/LC_MESSAGES/ibus-libpinyin.mo
-share/locale/pt-BR/LC_MESSAGES/ibus-libpinyin.mo
+share/locale/ka/LC_MESSAGES/ibus-libpinyin.mo
+share/locale/pt_BR/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/ru/LC_MESSAGES/ibus-libpinyin.mo
+share/locale/si/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/uk/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/zh_CN/LC_MESSAGES/ibus-libpinyin.mo
 share/locale/zh_HK/LC_MESSAGES/ibus-libpinyin.mo
