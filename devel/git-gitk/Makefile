@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/06/14 10:30:11 riastradh Exp $
+# $NetBSD: Makefile,v 1.6.14.1 2025/01/30 19:14:49 bsiegert Exp $
 
 PKGNAME=	git-gitk-${GIT_VERSION}
 COMMENT=	GIT Tree History Storage Tool (gitk)
@@ -12,11 +12,20 @@ DEPENDS+=	git-base>=1.7.12nb1:../../devel/git-base
 BUILD_DIRS=		git-gui gitk-git
 INSTALL_DIRS=		${BUILD_DIRS}
 MAKE_ENV+=		prefix=${PREFIX}
+MAKE_ENV+=		TCLTK_PATH=${WISH:Q}
 
 USE_TOOLS+=		wish:run
 CONFIGURE_ARGS+=	--with-tcltk=${WISH:Q}
 
 INSTALLATION_DIRS+=	bin
+
+# not substituted even when using --with-tcltk and TCLTK_PATH
+SUBST_CLASSES+=		wish
+SUBST_FILES.wish+=	git-gui/git-gui--askpass
+SUBST_SED.wish+=	-e "s,exec wish,exec ${WISH:Q},"
+SUBST_SED.wish+=	-e "s,exec 'wish',exec ${WISH:Q},"
+SUBST_STAGE.wish=	post-configure
+SUBST_MESSAGE.wish=	Fixing path to wish binary.
 
 .include "../../mk/bsd.prefs.mk"
 
