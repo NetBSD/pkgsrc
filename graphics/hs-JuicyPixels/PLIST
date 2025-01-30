@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/29 12:28:58 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/30 09:50:50 pho Exp $
 lib/JuicyPixels-${PKGVERSION}/${HS_VERSION}/package-description
 lib/JuicyPixels-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Picture.dyn_hi
@@ -124,6 +124,8 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/Codec-Pictur
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/Codec-Picture-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/Codec-Picture.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/JuicyPixels.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/README.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/changelog
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-58.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-95.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/JuicyPixels-${PKGVERSION}/html/doc-index-A.html
