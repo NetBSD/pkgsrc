@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.750 2025/01/30 07:36:58 pho Exp $
+$NetBSD: CHANGES-2025,v 1.751 2025/01/30 07:42:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-half to 0.3.2 [pho 2025-01-30]
 	Updated converters/hs-deriving-aeson to 0.2.10 [pho 2025-01-30]
 	Updated converters/hs-hslua-aeson to 2.3.1.1 [pho 2025-01-30]
+	Updated devel/hs-reflection to 2.1.9 [pho 2025-01-30]
