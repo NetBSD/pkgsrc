@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2024/05/09 01:32:40 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/30 11:57:54 pho Exp $
 
-DISTNAME=	citeproc-0.8.1
-PKGREVISION=	4
+DISTNAME=	citeproc-0.8.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Generates citations and bibliography from CSL styles
 LICENSE=	2-clause-bsd
 
-CONFIGURE_ARGS+=	-fexecutable
+CONFIGURE_ARGS+=	-f +executable
 
 # lib:citeproc
 .include "../../converters/hs-aeson/buildlink3.mk"
