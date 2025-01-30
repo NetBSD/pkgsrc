@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/02 04:29:17 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/30 11:53:08 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML.hi
@@ -15,6 +15,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Parse.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Render/Internal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Token.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Token.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/Stream/Token.p_hi
@@ -29,6 +32,7 @@ share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Cursor-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Cursor.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Stream-Parse.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Stream-Render-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Stream-Render.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML-Unresolved.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/xml-conduit-${PKGVERSION}/html/Text-XML.html
