@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2022/02/12 05:13:43 pho Exp $
+$NetBSD: distinfo,v 1.9 2025/01/30 05:24:44 pho Exp $
 
-BLAKE2s (mwc-random-0.15.0.2.tar.gz) = fb8cba448e4414a4c33aa5ed433ce975a32c2dcd31b7cbe58e458bf40f72b068
-SHA512 (mwc-random-0.15.0.2.tar.gz) = 7e30a4584bca7f5e5147388dc9c081ac417d3aff1e9bd431535eac695db0779b4d20c6b3bedbda06a4780d9d57ab1f7880743f7bad20e4f5d2b7d32ce7f373bd
-Size (mwc-random-0.15.0.2.tar.gz) = 26591 bytes
+BLAKE2s (mwc-random-0.15.2.0.tar.gz) = 6cc6f5d796d5679fae56413724c253fd9b1700a9b311073b20ba8c11e5453815
+SHA512 (mwc-random-0.15.2.0.tar.gz) = d20687aaa34084587e5e294505dcb7ce3d12da1ce09a6e70b7d1f6070298da956aedb56419ab83d0539be2946d79cf0ea0389d6c7610640e75cbbe84f214e92b
+Size (mwc-random-0.15.2.0.tar.gz) = 43086 bytes
