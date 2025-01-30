@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2024/05/09 01:32:27 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/01/30 05:24:44 pho Exp $
 
-DISTNAME=	mwc-random-0.15.0.2
-PKGREVISION=	7
+DISTNAME=	mwc-random-0.15.2.0
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
 COMMENT=	Fast, high quality pseudo random number generation
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 .include "../../mk/haskell.mk"
 .include "../../math/hs-math-functions/buildlink3.mk"
