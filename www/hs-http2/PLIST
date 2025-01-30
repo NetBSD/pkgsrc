@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/02 06:59:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/30 16:29:53 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Imports.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Imports.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Imports.p_hi
@@ -104,9 +104,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/EncodeFrame.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/HPACK.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/HPACK.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/HPACK.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Manager.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Manager.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Manager.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Queue.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Queue.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Queue.p_hi
@@ -125,15 +122,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Stream.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/StreamTable.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/StreamTable.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/StreamTable.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Sync.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Sync.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Sync.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Types.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Window.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Window.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/H2/Window.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Internal.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Internal.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Internal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Server.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Server.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/HTTP2/Server.p_hi
@@ -158,7 +155,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HPACK.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Client-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Client.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Frame.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Server-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/Network-HTTP2-Server.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-A.html
@@ -171,7 +167,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-F.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-G.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-H.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-I.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-K.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-L.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-M.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/http2-${PKGVERSION}/html/doc-index-N.html
