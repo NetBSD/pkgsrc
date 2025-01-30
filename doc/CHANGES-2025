@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.755 2025/01/30 08:03:11 pin Exp $
+$NetBSD: CHANGES-2025,v 1.756 2025/01/30 08:28:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -997,3 +997,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/hs-kan-extensions to 5.2.6 [pho 2025-01-30]
 	Updated devel/hs-lens to 5.3.3 [pho 2025-01-30]
 	Updated lang/gleam to 1.7.0 [pin 2025-01-30]
+	Updated textproc/py-mistune to 3.1.1 [adam 2025-01-30]
+	Updated textproc/py-itemadapter to 0.11.0 [adam 2025-01-30]
+	Updated devel/py-cachetools to 5.5.1 [adam 2025-01-30]
+	Updated devel/py-deprecated to 1.2.18 [adam 2025-01-30]
