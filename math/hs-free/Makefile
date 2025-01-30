@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2024/05/09 01:32:25 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/30 07:45:25 pho Exp $
 
 DISTNAME=	free-5.2
 PKGREVISION=	2
@@ -9,6 +9,7 @@ COMMENT=	Monads for free
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers		\
 	semigroupoids		\
 	template-haskell	\
 	th-abstraction
