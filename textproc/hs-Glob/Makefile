@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:38 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/30 05:35:40 pho Exp $
 
 DISTNAME=	Glob-0.10.2
 PKGREVISION=	6
@@ -9,6 +9,8 @@ COMMENT=	Globbing library
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers	\
+	filepath	\
 	transformers
 
 .include "../../devel/hs-dlist/buildlink3.mk"
