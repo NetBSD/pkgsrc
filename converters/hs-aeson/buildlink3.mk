@@ -1,14 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.33 2024/05/09 01:31:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2025/01/30 04:50:51 pho Exp $
 
 BUILDLINK_TREE+=	hs-aeson
 
 .if !defined(HS_AESON_BUILDLINK3_MK)
 HS_AESON_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-aeson+=	hs-aeson>=2.2.1
-BUILDLINK_ABI_DEPENDS.hs-aeson+=	hs-aeson>=2.2.1.0nb2
+BUILDLINK_API_DEPENDS.hs-aeson+=	hs-aeson>=2.2.3
+BUILDLINK_ABI_DEPENDS.hs-aeson+=	hs-aeson>=2.2.3.0
 BUILDLINK_PKGSRCDIR.hs-aeson?=		../../converters/hs-aeson
 
+.include "../../devel/hs-generically/buildlink3.mk"
+.include "../../time/hs-time-compat/buildlink3.mk"
+.include "../../devel/hs-character-ps/buildlink3.mk"
 .include "../../devel/hs-data-fix/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-generically/buildlink3.mk"
