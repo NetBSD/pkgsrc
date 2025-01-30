@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.831 2025/01/30 23:50:31 pho Exp $
+$NetBSD: CHANGES-2025,v 1.832 2025/01/30 23:53:50 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1079,3 +1079,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/hs-hslua-cli to 1.4.3 [pho 2025-01-30]
 	Updated converters/pandoc-cli to 3.6.2 [pho 2025-01-30]
 	Updated devel/hs-microlens-th to 0.4.3.16 [pho 2025-01-30]
+	Updated devel/hs-monad-logger to 0.3.41 [pho 2025-01-30]
