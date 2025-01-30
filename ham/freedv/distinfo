@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2025/01/15 14:14:38 gdt Exp $
+$NetBSD: distinfo,v 1.12 2025/01/30 20:22:43 wiz Exp $
 
 BLAKE2s (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = 99e09f474f7c41b23aac1be374d06a6e1295ad3e658152dead9adc7778096e8c
 SHA512 (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = fc7589606a208938129ad622966fa108e4c1ee84a86273a1b33705331282e811f7891bbc47528e475742a9b78f4dbc78cc1d84c13e1784b7923de9babf60171d
@@ -6,4 +6,4 @@ Size (freedv-1.4.2-bb9558cc496b7b253fb54bb28486b0bcd7516ae5.tar.gz) = 6177996 by
 SHA1 (patch-cmake_FindPortaudio.cmake) = 1105012bc3287bd5044250ad6f1c4609cbf7c217
 SHA1 (patch-src_CMakeLists.txt) = 05636fb3c3f836fb8287b16147f5e99a745fb265
 SHA1 (patch-src_fdmdv2__main.cpp) = b002f17ecbe8f3091a10bd6854b0400ce50d3105
-SHA1 (patch-src_hamlib.cpp) = f88ad89bdc396a0c791988ee9e17283a2ee108cb
+SHA1 (patch-src_hamlib.cpp) = 59f5fe725ce1b9e00f04318e243f4cb3b455f7bb
