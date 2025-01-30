@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.748 2025/01/30 07:19:33 pho Exp $
+$NetBSD: CHANGES-2025,v 1.749 2025/01/30 07:23:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated benchmarks/hs-criterion to 1.6.4.0 [pho 2025-01-30]
 	Updated textproc/hs-attoparsec-aeson to 2.2.2.0 [pho 2025-01-30]
 	Updated devel/hs-half to 0.3.2 [pho 2025-01-30]
+	Updated converters/hs-deriving-aeson to 0.2.10 [pho 2025-01-30]
