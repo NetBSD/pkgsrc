@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 16:47:43 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/30 23:58:33 pho Exp $
 
-BLAKE2s (silently-1.2.5.3.tar.gz) = d57d62418a62dd3aaf4f1f6e0c612573f367bec8de8847f2176ce4b08974cc7f
-SHA512 (silently-1.2.5.3.tar.gz) = 1b05420e363ec763c08fb3767cde9b8c701a418ccdfba9b19731d87650f180955ae8affb0298d923a24b7354340945f973fdebdba7d91ac7aeb2cd904820afdb
-Size (silently-1.2.5.3.tar.gz) = 4430 bytes
+BLAKE2s (silently-1.2.5.4.tar.gz) = b9fde671c3be2f89d41de79cb0d15892cc0f95c3f2d1c7af4e859857fafb787e
+SHA512 (silently-1.2.5.4.tar.gz) = 213a80196a33f15c9dd7cb28915bb266fd148fdcc7d3f67576baa681e0c423f6753f68e5f6f31f4d8a374f07fff231f70fac8964a7991a4425b16fa8b8b50ceb
+Size (silently-1.2.5.4.tar.gz) = 4640 bytes
