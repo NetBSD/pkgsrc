@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.754 2025/01/30 07:59:07 pho Exp $
+$NetBSD: CHANGES-2025,v 1.755 2025/01/30 08:03:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -996,3 +996,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/hs-invariant to 0.6.4 [pho 2025-01-30]
 	Updated math/hs-kan-extensions to 5.2.6 [pho 2025-01-30]
 	Updated devel/hs-lens to 5.3.3 [pho 2025-01-30]
+	Updated lang/gleam to 1.7.0 [pin 2025-01-30]
