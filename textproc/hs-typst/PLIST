@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/02 10:49:38 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/01/30 13:44:12 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_typst.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_typst.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_typst.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Typst.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Typst.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst.p_hi
