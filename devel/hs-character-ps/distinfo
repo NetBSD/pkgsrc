@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/30 04:47:11 pho Exp $
+
+BLAKE2s (character-ps-0.1.tar.gz) = a2a75e47a36bbf28d678a20cac307aa58063dc809b823d05561b32decf9eab37
+SHA512 (character-ps-0.1.tar.gz) = 848e9ca6a06316daf20dae36e924ba6e186eeb4115b07fd94ff61f01a58ff4e95a45f34482e8db292c80207714bfc8c1612e45de329efeb06c72b30dbb28a73e
+Size (character-ps-0.1.tar.gz) = 8192 bytes
