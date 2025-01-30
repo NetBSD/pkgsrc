@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/03 09:59:49 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/30 12:44:44 pho Exp $
 bin/skylighting
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting.dyn_hi
@@ -73,6 +73,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Commonlisp.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cpp.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cpp.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cpp.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Crystal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Crystal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Crystal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cs.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cs.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Cs.p_hi
@@ -151,6 +154,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gap.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Gcc.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/GdScript.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/GdScript.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/GdScript.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Glsl.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Glsl.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Glsl.p_hi
@@ -307,6 +313,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Ocaml.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Octave.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Octave.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Octave.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Odin.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Odin.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Odin.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Opencl.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Opencl.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Opencl.p_hi
@@ -358,6 +367,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Qml.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/R.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/R.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/R.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Racket.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Racket.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Racket.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Raku.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Raku.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Raku.p_hi
@@ -436,15 +448,24 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tcl.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tcsh.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tcsh.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tcsh.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Terraform.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Terraform.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Terraform.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Texinfo.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Texinfo.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Texinfo.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tlaplus.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tlaplus.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Tlaplus.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Toml.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Toml.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Toml.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typescript.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typescript.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typescript.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typst.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typst.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Typst.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Verilog.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Verilog.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Verilog.p_hi
@@ -469,6 +490,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Yacc.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Yaml.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Yaml.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Yaml.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zig.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zig.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zig.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zsh.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zsh.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Syntax/Zsh.p_hi
