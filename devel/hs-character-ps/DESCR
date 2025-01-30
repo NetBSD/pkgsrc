@@ -1,0 +1,4 @@
+Pattern synonyms for ASCII characters, e.g.
+
+pattern SPACE :: Word8
+pattern SPACE = 0x20
