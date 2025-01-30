@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/01/24 12:51:03 pho Exp $
+$NetBSD: distinfo,v 1.9 2025/01/30 04:33:39 pho Exp $
 
-BLAKE2s (integer-logarithms-1.0.3.1.tar.gz) = 3b7f4ffcacd889387ab2b44b3db11b349acb5a6d3206e2869fe21e86fac051c5
-SHA512 (integer-logarithms-1.0.3.1.tar.gz) = 670aff419de8d6afd1b7e1a40b68290bcf7aefad788c3b08aebfa5ca3e709f5d22543fce82fb75dc18b3ba0ef6d8a8f61735cde647a7a6c9392a60ec365534b3
-Size (integer-logarithms-1.0.3.1.tar.gz) = 9023 bytes
+BLAKE2s (integer-logarithms-1.0.4.tar.gz) = d1c24797cfc6b6a9226b9e9f4a9d80540a0600a9c383d42b6be7ebcb6a140668
+SHA512 (integer-logarithms-1.0.4.tar.gz) = aa9eddff5bc8db9f1cca8a9250388d6d84498b1d443acecae116ac79ef50c7d5aa0ff3d018e8d999f0990d2862d5de87ec8971339bec571b417db6bbeaca8586
+Size (integer-logarithms-1.0.4.tar.gz) = 8948 bytes
