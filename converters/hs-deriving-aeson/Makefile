@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:31:40 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/30 07:23:33 pho Exp $
 
-DISTNAME=	deriving-aeson-0.2.9
-PKGREVISION=	4
+DISTNAME=	deriving-aeson-0.2.10
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Type driven generic aeson instance customisation
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	aeson
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../mk/haskell.mk"
