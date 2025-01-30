@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/01/10 10:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/01/30 23:46:48 pho Exp $
 
-DISTNAME=	pandoc-cli-3.6.1
+DISTNAME=	pandoc-cli-3.6.2
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,9 +21,6 @@ post-install:
 	for f in *.1; do \
 		${INSTALL_MAN} $$f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$$f; \
 	done
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	pandoc-lua-engine
 
 .include "options.mk"
 
