@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/30 23:17:20 pho Exp $
+
+BLAKE2s (skylighting-format-typst-0.1.tar.gz) = 05cd1e92566f6b2b18ce2de22dd28ca87450924b997d77e1aae9df5d9fa216a8
+SHA512 (skylighting-format-typst-0.1.tar.gz) = 1ed2c12f9dd94996e74dfda57f5782abfad7c0d14264c84733e06d10ec3de4e8e4ddb9e71c993d2fd3d73cfa6db3b8470a07379cd025c617f74f86e4e6d0ac64
+Size (skylighting-format-typst-0.1.tar.gz) = 3144 bytes

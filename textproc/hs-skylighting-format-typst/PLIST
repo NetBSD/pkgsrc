@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/30 23:17:19 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/Typst.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/Typst.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Skylighting/Format/Typst.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/skylighting-format-typst-${PKGVERSION}/${HS_VERSION}/package-description
+lib/skylighting-format-typst-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/Skylighting-Format-Typst.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/skylighting-format-typst.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/skylighting-format-typst-${PKGVERSION}/html/synopsis.png
