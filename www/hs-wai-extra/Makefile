@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:55 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/01/30 16:36:41 pho Exp $
 
-DISTNAME=	wai-extra-3.1.14
-PKGREVISION=	1
+DISTNAME=	wai-extra-3.1.17
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +13,7 @@ LICENSE=	mit
 .include "../../devel/hs-call-stack/buildlink3.mk"
 .include "../../textproc/hs-case-insensitive/buildlink3.mk"
 .include "../../www/hs-cookie/buildlink3.mk"
-.include "../../devel/hs-data-default-class/buildlink3.mk"
+.include "../../devel/hs-data-default/buildlink3.mk"
 .include "../../sysutils/hs-fast-logger/buildlink3.mk"
 .include "../../www/hs-http-types/buildlink3.mk"
 .include "../../devel/hs-HUnit/buildlink3.mk"

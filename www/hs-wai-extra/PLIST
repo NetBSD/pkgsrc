@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/02 10:20:02 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/30 16:36:41 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/EventSource.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/EventSource.hi
@@ -96,6 +96,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/StripHeaders.
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Timeout.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Timeout.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Timeout.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/ValidateHeaders.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/ValidateHeaders.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/ValidateHeaders.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Vhost.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Vhost.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Network/Wai/Middleware/Vhost.p_hi
@@ -153,6 +156,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Mi
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Middleware-StreamFile.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Middleware-StripHeaders.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Middleware-Timeout.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Middleware-ValidateHeaders.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Middleware-Vhost.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Parse.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/wai-extra-${PKGVERSION}/html/Network-Wai-Request.html
