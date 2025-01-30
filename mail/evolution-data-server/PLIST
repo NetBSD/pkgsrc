@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2022/01/03 08:13:23 cirnatdan Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/01/30 11:18:41 wiz Exp $
 etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop
 include/evolution-data-server/camel/camel-address.h
 include/evolution-data-server/camel/camel-async-closure.h
@@ -308,6 +308,7 @@ include/evolution-data-server/libedataserver/e-source-smime.h
 include/evolution-data-server/libedataserver/e-source-task-list.h
 include/evolution-data-server/libedataserver/e-source-uoa.h
 include/evolution-data-server/libedataserver/e-source-weather.h
+include/evolution-data-server/libedataserver/e-source-webdav-notes.h
 include/evolution-data-server/libedataserver/e-source-webdav.h
 include/evolution-data-server/libedataserver/e-source.h
 include/evolution-data-server/libedataserver/e-time-utils.h
@@ -421,6 +422,30 @@ share/dbus-1/services/org.gnome.evolution.dataserver.Calendar8.service
 share/dbus-1/services/org.gnome.evolution.dataserver.Sources5.service
 share/dbus-1/services/org.gnome.evolution.dataserver.UserPrompter0.service
 share/evolution-data-server/evolutionperson.schema
+share/evolution-data-server/icons/hicolor/16x16/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/16x16/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/16x16/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/16x16/status/dialog-warning.png
+share/evolution-data-server/icons/hicolor/22x22/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/22x22/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/22x22/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/22x22/status/dialog-warning.png
+share/evolution-data-server/icons/hicolor/24x24/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/24x24/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/24x24/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/24x24/status/dialog-warning.png
+share/evolution-data-server/icons/hicolor/256x256/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/256x256/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/256x256/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/256x256/status/dialog-warning.png
+share/evolution-data-server/icons/hicolor/32x32/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/32x32/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/32x32/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/32x32/status/dialog-warning.png
+share/evolution-data-server/icons/hicolor/48x48/status/appointment-missed.png
+share/evolution-data-server/icons/hicolor/48x48/status/appointment-soon.png
+share/evolution-data-server/icons/hicolor/48x48/status/dialog-password.png
+share/evolution-data-server/icons/hicolor/48x48/status/dialog-warning.png
 share/glib-2.0/schemas/org.gnome.Evolution.DefaultSources.gschema.xml
 share/glib-2.0/schemas/org.gnome.evolution-data-server.addressbook.gschema.xml
 share/glib-2.0/schemas/org.gnome.evolution-data-server.calendar.gschema.xml
