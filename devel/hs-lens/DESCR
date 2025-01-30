@@ -1,2 +1,10 @@
-This package provides families of lenses, isomorphisms, folds, traversals,
-getters and setters.
+This package comes "Batteries Included" with many useful lenses for the types
+commonly used from the Haskell Platform, and with tools for automatically
+generating lenses and isomorphisms for user-supplied data types.
+
+The combinators in Control.Lens provide a highly generic toolbox for composing
+families of getters, folds, isomorphisms, traversals, setters and lenses and
+their indexed variants.
+
+An overview, with a large number of examples can be found in the README
+(https://github.com/ekmett/lens#lens-lenses-folds-and-traversals).
