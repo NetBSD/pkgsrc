@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/05/01 14:29:33 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 16:13:35 pho Exp $
 
-BLAKE2s (time-manager-0.1.0.tar.gz) = 7dbce7ca9251ee9cb125dd275566783a8cbb02fbdd2427923e79cf6e7efec62c
-SHA512 (time-manager-0.1.0.tar.gz) = c00600dcd790ce0ae49a0e0c51ca723864ae04e468ffe91d72313b97193c7ccaac75d2dece248cb725b2c6a4e8a283e1314d15bb3758b1a380cc8b8ac8949c2a
-Size (time-manager-0.1.0.tar.gz) = 3063 bytes
+BLAKE2s (time-manager-0.2.2.tar.gz) = 093ea0248c85dcac05aba52f61689a05c2d34f263f31b753fa67713e86301f6f
+SHA512 (time-manager-0.2.2.tar.gz) = 4a7cb8233336d81217565d79eea8f208f3ebcff82f65cda64cf567aa56b71e580581c3d8b313566ab51bad6eeaca51ff3f0104a90c08dd97bcf4439511c59438
+Size (time-manager-0.2.2.tar.gz) = 5814 bytes

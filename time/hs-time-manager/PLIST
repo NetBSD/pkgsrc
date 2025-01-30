@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/01 14:29:33 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/30 16:13:35 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/ThreadManager.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/ThreadManager.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/ThreadManager.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/TimeManager.p_hi
@@ -8,6 +11,7 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-description
 lib/time-manager-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/System-ThreadManager.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/System-TimeManager.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/time-manager-${PKGVERSION}/html/haddock-bundle.min.js
