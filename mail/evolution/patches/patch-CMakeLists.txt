@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/01/30 11:29:21 wiz Exp $
+
+Fix typo.
+
+--- CMakeLists.txt.orig	2025-01-30 11:24:10.932271271 +0000
++++ CMakeLists.txt
+@@ -737,7 +737,7 @@ endif(ENABLE_MARKDOWN)
+ # news-to-appdata
+ # ******************************
+ 
+-set(CMAKE_REQUIRED_FLAGS ${GNOME_PLATFORM_CFLAGS})
++set(CMAKE_REQUIRED_CFLAGS ${GNOME_PLATFORM_CFLAGS})
+ set(CMAKE_REQUIRED_INCLUDES ${GNOME_PLATFORM_INCLUDE_DIRS})
+ set(CMAKE_REQUIRED_LIBRARIES ${GNOME_PLATFORM_LDFLAGS})
+ file(TO_NATIVE_PATH "${CMAKE_BINARY_DIR}/appdata-releases.txt" _output_filename)
