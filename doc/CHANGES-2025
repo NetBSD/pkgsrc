@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.784 2025/01/30 12:09:06 pho Exp $
+$NetBSD: CHANGES-2025,v 1.785 2025/01/30 12:11:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-unicode-data to 0.6.0 [pho 2025-01-30]
 	Updated textproc/hs-commonmark to 0.2.6.1 [pho 2025-01-30]
 	Updated textproc/hs-commonmark-extensions to 0.2.5.6 [pho 2025-01-30]
+	Updated textproc/hs-commonmark-pandoc to 0.2.2.3 [pho 2025-01-30]
