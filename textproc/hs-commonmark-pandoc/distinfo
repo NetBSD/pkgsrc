@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/05/02 11:06:10 pho Exp $
+$NetBSD: distinfo,v 1.7 2025/01/30 12:10:56 pho Exp $
 
-BLAKE2s (commonmark-pandoc-0.2.2.1.tar.gz) = 6a7de65a01ece63f26746ad493ae4bfb7179abfd01ab595f742884c2bfd52d8f
-SHA512 (commonmark-pandoc-0.2.2.1.tar.gz) = 0c09a00532df0e708746cbc68b67869c49ac3a46bf9eaa307a8f84389cfd33262938485811f84ed064869bfa8615713fac577841d851fe515df3681cfb70fc13
-Size (commonmark-pandoc-0.2.2.1.tar.gz) = 5022 bytes
+BLAKE2s (commonmark-pandoc-0.2.2.3.tar.gz) = f5022725ff817e8671fae43be09092cff2379e2e7d441775634d77cdd726be34
+SHA512 (commonmark-pandoc-0.2.2.3.tar.gz) = eec3802538bb72153eb1cfbadcf88d41251f80f1a10ce77e6791d83ba3d4c8485b3ab433e9ed2d385e93746ab2151310785593879bdb7bbd4a5f0e638704a5cb
+Size (commonmark-pandoc-0.2.2.3.tar.gz) = 5234 bytes
