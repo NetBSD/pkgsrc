@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.734 2025/01/30 04:54:31 pho Exp $
+$NetBSD: CHANGES-2025,v 1.735 2025/01/30 05:05:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -978,3 +978,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-character-ps version 0.1 [pho 2025-01-30]
 	Updated converters/hs-aeson to 2.2.3.0 [pho 2025-01-30]
 	Updated devel/hs-base-compat to 0.14.1 [pho 2025-01-30]
+	Updated benchmarks/hs-criterion-measurement to 0.2.3.0 [pho 2025-01-30]
