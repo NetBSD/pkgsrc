@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.768 2025/01/30 10:19:42 pho Exp $
+$NetBSD: CHANGES-2025,v 1.769 2025/01/30 10:58:11 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/hs-crypton-x509 to 1.7.7 [pho 2025-01-30]
 	Updated security/hs-crypton-x509-validation to 1.6.13 [pho 2025-01-30]
 	Updated time/hs-unix-time to 0.4.16 [pho 2025-01-30]
+	Updated sysutils/xplr to 0.21.10 [pin 2025-01-30]
