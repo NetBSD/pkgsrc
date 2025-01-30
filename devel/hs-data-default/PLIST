@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2024/04/29 12:29:36 pho Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/01/30 05:18:44 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Default/Internal.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/data-default-${PKGVERSION}/${HS_VERSION}/package-description
 lib/data-default-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/data-default-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-${PKGVERSION}/html/Data-Default-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-${PKGVERSION}/html/Data-Default.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-${PKGVERSION}/html/data-default.haddock
 ${PLIST.doc}share/doc/${HS_PLATFORM}/data-default-${PKGVERSION}/html/doc-index.html
