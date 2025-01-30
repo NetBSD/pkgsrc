@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/30 13:35:06 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/30 15:54:10 pho Exp $
 
-BLAKE2s (servant-0.20.1.tar.gz) = 06c90922f74a1b71929bcc79b6cb1fa5a8216d52e8f2a09a502670c1e3654d36
-SHA512 (servant-0.20.1.tar.gz) = b99b68ac106d1955f3868ed3de47052ea9498cbbff6ea21c7bb3e29f3228be169e09db5b8e1778397072f4bfb26262bafac8483b52da64f8f099fedd1bde7709
-Size (servant-0.20.1.tar.gz) = 56057 bytes
+BLAKE2s (servant-0.20.2.tar.gz) = 016689e548e6f6c382601505853999393d3df87b18442fb68bc0e92ea0207c50
+SHA512 (servant-0.20.2.tar.gz) = cc763214578e6b2d2372e0dd38957d33fb05fe1b27bb31027135b651c63390f314625dfdc4d8ac09f9ca106ca3a9f25af9493bb7bf7f544a5bb5ac3325969b4c
+Size (servant-0.20.2.tar.gz) = 58198 bytes

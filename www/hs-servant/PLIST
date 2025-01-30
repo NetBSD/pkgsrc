@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/02 06:47:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/30 15:54:10 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API.hi
@@ -48,6 +48,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/NamedRoutes.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryParam.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryParam.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryParam.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryString.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryString.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/QueryString.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/Raw.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/Raw.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Servant/API/Raw.p_hi
@@ -122,6 +125,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-IsSe
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Modifiers.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-NamedRoutes.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-QueryParam.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-QueryString.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-Raw.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-RemoteHost.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/servant-${PKGVERSION}/html/Servant-API-ReqBody.html
