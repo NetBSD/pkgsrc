@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4397 2025/01/29 16:33:17 pho Exp $
+# $NetBSD: Makefile,v 1.4398 2025/01/30 04:47:27 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -570,6 +570,7 @@ SUBDIR+=	hs-bytestring-strict-builder
 SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cborg
 SUBDIR+=	hs-cereal
+SUBDIR+=	hs-character-ps
 SUBDIR+=	hs-chunked-data
 SUBDIR+=	hs-classy-prelude
 SUBDIR+=	hs-cmdargs
