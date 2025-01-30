@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/05/09 01:32:01 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/01/30 23:54:51 pho Exp $
 
-DISTNAME=	lift-type-0.1.1.1
-PKGREVISION=	2
+DISTNAME=	lift-type-0.1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

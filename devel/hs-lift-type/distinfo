@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 16:34:57 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/30 23:54:51 pho Exp $
 
-BLAKE2s (lift-type-0.1.1.1.tar.gz) = 368ee2a365e82007924f6ed6dafe533ebce54895889c90add7ea88f328a14feb
-SHA512 (lift-type-0.1.1.1.tar.gz) = 7cdc22a3f3ac9af5bb16ef8cda0b6eb7baf8ff12744214036254cdce0f7e6b62bf2b72a4d77d591edfc4187dc851054cb7f3ba14a88b11bb2c0ee20f3703bf64
-Size (lift-type-0.1.1.1.tar.gz) = 3372 bytes
+BLAKE2s (lift-type-0.1.2.0.tar.gz) = b0a000eb1ff369c420bb0b207a53d2b1ee69e6e4080d002327ee37e460f20bd0
+SHA512 (lift-type-0.1.2.0.tar.gz) = d4b2fd4b853e29eafe76caaa433233eeae2a77dd2bb76a5d7b3f26fc29278a4d71c675c037c2aa2bb40df1c15204abd8cd451957f2fd9f38594693571f2a9377
+Size (lift-type-0.1.2.0.tar.gz) = 4112 bytes
