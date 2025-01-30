@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2024/05/09 01:32:27 pho Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/30 04:35:20 pho Exp $
 
-DISTNAME=	scientific-0.3.7.0
-PKGREVISION=	6
+DISTNAME=	scientific-0.3.8.0
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -9,16 +8,10 @@ COMMENT=	Numbers represented using scientific notation
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base			\
-	bytestring		\
-	deepseq			\
-	hashable		\
-	primitive		\
-	template-haskell	\
-	text
+	hashable
 
-.include "../../mk/haskell.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../math/hs-integer-logarithms/buildlink3.mk"
 .include "../../devel/hs-primitive/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
