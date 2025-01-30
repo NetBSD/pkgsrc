@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2025/01/29 23:11:51 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/30 08:02:52 pin Exp $
 
 GITHUB_PROJECT=	gleam
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-DISTNAME=	gleam-1.2.1
+DISTNAME=	gleam-1.7.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gleam-lang/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/gleam-lang/gleam/
+HOMEPAGE=	https://gleam.run/
 COMMENT=	ML-flavoured type-safe language using the BEAM runtime
 LICENSE=	apache-2.0
 
 WRKSRC=		${WRKDIR}/gleam-${PKGVERSION_NOREV}
-
-BROKEN=		"Does not build with rust 1.82, needs an update."
 
 .include "cargo-depends.mk"
 
