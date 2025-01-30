@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/14 22:20:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/01/30 15:51:11 wiz Exp $
 
 PKGNAME=	fcitx5-${DISTNAME}
 PKGREVISION=	5
@@ -20,6 +20,10 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	mozc-server>=2.29:../../inputmethod/mozc-server
 DEPENDS+=	mozc-renderer>=2.29:../../inputmethod/mozc-renderer
 DEPENDS+=	mozc-tool>=2.29:../../inputmethod/mozc-tool
+
+# TODO: fix, shouldn't download during build
+# bazel-skylib and many others
+ALLOW_NETWORK_ACCESS=	yes
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
