@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/04/29 12:15:53 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/30 23:50:24 pho Exp $
 
-BLAKE2s (microlens-th-0.4.3.15.tar.gz) = 837c211e9008bced95ae5a7c9b336f27065132f7366b675b7a6522a55d2647d9
-SHA512 (microlens-th-0.4.3.15.tar.gz) = 269e8a4e185723f044e9b8bcbaeb4b66979c52d663fbc5d6be2ce9f435ab5408252a6b06499d0c1d24fe4bf72b646f17eabce29708ed1dd7720f26065dc2c385
-Size (microlens-th-0.4.3.15.tar.gz) = 24239 bytes
+BLAKE2s (microlens-th-0.4.3.16.tar.gz) = fd0040b603351464a6ea1508d05f1cadda02ef254eb3bc3555a6c232668a88a4
+SHA512 (microlens-th-0.4.3.16.tar.gz) = 80740b4eb7d4c0d2f0c061d7b22bc7e4e234e2c67443abed64ed6186955932b760889f09ebc25ed83deccaf50f8cb9ad398fcd8784b73e357cef4f1b17e4fa8c
+Size (microlens-th-0.4.3.16.tar.gz) = 24248 bytes
