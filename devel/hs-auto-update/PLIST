@@ -1,10 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/28 20:34:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/30 16:00:10 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Util.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Util.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Util.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Event.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Event.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Event.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Internal.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Thread.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Thread.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Thread.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Types.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Types.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/AutoUpdate/Types.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Debounce.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Debounce.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Debounce.p_hi
@@ -23,6 +32,7 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/auto-update-${PKGVERSION}/${HS_VERSION}/package-description
 lib/auto-update-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-AutoUpdate-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-AutoUpdate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-Debounce-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/auto-update-${PKGVERSION}/html/Control-Debounce.html
