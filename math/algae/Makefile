@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/07/15 02:02:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2025/01/30 08:05:15 wiz Exp $
 
 DISTNAME=		algae-4.3.6
 PKGREVISION=		2
@@ -13,13 +13,14 @@ DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--disable-dlmalloc
-CONFIGURE_ENV=		ac_cv_path_XTERM=xterm
+CONFIGURE_ENV+=		ac_cv_path_XTERM=xterm
+CONFIGURE_ENV+=		ac_cv_prog_F77="gfortran -std=legacy"
 USE_LANGUAGES=		c fortran77
 INFO_FILES=		yes
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
-			mandir=${PREFIX}/${PKGMANDIR}/man1		\
-			infodir=${PREFIX}/${PKGINFODIR}		\
-			htmldir=${PREFIX}/share/doc/algae
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	infodir=${PREFIX}/${PKGINFODIR}
+INSTALL_MAKE_FLAGS+=	htmldir=${PREFIX}/share/doc/algae
 
 # uses history_truncate_file
 .include "../../devel/readline/buildlink3.mk"
