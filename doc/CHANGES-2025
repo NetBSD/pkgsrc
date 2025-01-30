@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.781 2025/01/30 12:01:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.782 2025/01/30 12:02:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1027,3 +1027,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-xml-conduit to 1.10.0.0 [pho 2025-01-30]
 	Updated textproc/hs-citeproc to 0.8.1.2 [pho 2025-01-30]
 	Updated lang/micropython to 1.24.1 [wiz 2025-01-30]
+	Updated textproc/hs-unicode-data to 0.6.0 [pho 2025-01-30]
