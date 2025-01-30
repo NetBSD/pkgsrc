@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/07/06 15:45:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/30 14:45:46 wiz Exp $
 bin/bbc
 bin/f18-parse-demo
 bin/fir-opt
@@ -315,21 +315,39 @@ lib/cmake/flang/FlangConfigVersion.cmake
 lib/cmake/flang/FlangTargets-release.cmake
 lib/cmake/flang/FlangTargets.cmake
 lib/libFIRAnalysis.so
+lib/libFIRAnalysis.so.18.1
 lib/libFIRBuilder.so
+lib/libFIRBuilder.so.18.1
 lib/libFIRCodeGen.so
+lib/libFIRCodeGen.so.18.1
 lib/libFIRDialect.so
+lib/libFIRDialect.so.18.1
 lib/libFIRDialectSupport.so
+lib/libFIRDialectSupport.so.18.1
 lib/libFIRSupport.so
+lib/libFIRSupport.so.18.1
 lib/libFIRTransforms.so
+lib/libFIRTransforms.so.18.1
 lib/libFortranCommon.so
+lib/libFortranCommon.so.18.1
 lib/libFortranDecimal.so
+lib/libFortranDecimal.so.18.1
 lib/libFortranEvaluate.so
+lib/libFortranEvaluate.so.18.1
 lib/libFortranLower.so
+lib/libFortranLower.so.18.1
 lib/libFortranParser.so
+lib/libFortranParser.so.18.1
 lib/libFortranRuntime.so
+lib/libFortranRuntime.so.18.1
 lib/libFortranSemantics.so
+lib/libFortranSemantics.so.18.1
 lib/libFortran_main.a
 lib/libHLFIRDialect.so
+lib/libHLFIRDialect.so.18.1
 lib/libHLFIRTransforms.so
+lib/libHLFIRTransforms.so.18.1
 lib/libflangFrontend.so
+lib/libflangFrontend.so.18.1
 lib/libflangFrontendTool.so
+lib/libflangFrontendTool.so.18.1
