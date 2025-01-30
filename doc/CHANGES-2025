@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.773 2025/01/30 11:20:49 pho Exp $
+$NetBSD: CHANGES-2025,v 1.774 2025/01/30 11:29:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1019,3 +1019,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/hs-tls to 2.1.7 [pho 2025-01-30]
 	Updated mail/evolution-data-server to 3.44.4 [wiz 2025-01-30]
 	Updated net/hs-crypton-connection to 0.4.3 [pho 2025-01-30]
+	Updated mail/evolution to 3.44.4 [wiz 2025-01-30]
