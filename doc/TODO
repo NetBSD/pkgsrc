@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25358 2025/01/29 23:11:55 wiz Exp $
+$NetBSD: TODO,v 1.25359 2025/01/30 08:03:11 pin Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gkrellm-share-2.3.11
 	o gkrellm-snmp-1.0
 	o gkrellm-weather-2.0.8 [pkg/51463]
-	o gleam-1.7.0
 	o glfw-3.4
 	o gli2-2.70.0
 	o gli2-tools-2.70.0
