@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:17 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/30 14:43:35 pho Exp $
 
-DISTNAME=	type-equality-1
-PKGREVISION=	5
+DISTNAME=	type-equality-1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Data.Type.Equality compat package
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
 
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
