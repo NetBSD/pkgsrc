@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/05/01 10:41:56 pho Exp $
+$NetBSD: distinfo,v 1.4 2025/01/30 23:43:25 pho Exp $
 
-BLAKE2s (hslua-cli-1.4.2.tar.gz) = de95ba6623284cd40f08df4a6871978e4dbfa0631cd5605735d2a03027ad909b
-SHA512 (hslua-cli-1.4.2.tar.gz) = ac2c96693096372e2d2abc341754fe199344e283de36a475fd52176a6afee72e80354a2498211cbb06e58df7c551aff5bf3331aab05169b6587f455fd3b30e8e
-Size (hslua-cli-1.4.2.tar.gz) = 5904 bytes
+BLAKE2s (hslua-cli-1.4.3.tar.gz) = 13be407df8595990ec97f09c8bacde949d33bd7d68ecec373814ee0e00320da4
+SHA512 (hslua-cli-1.4.3.tar.gz) = bc78b550486a32e1af8a35a3a2779e5470291de72816e5bb80695ec66ee4dfcd2e58d98183b16bccad74126bf715212976d8efbae003fd4b1ff2e3df7ee0a4d9
+Size (hslua-cli-1.4.3.tar.gz) = 5990 bytes
