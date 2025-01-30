@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.788 2025/01/30 12:25:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.789 2025/01/30 12:29:02 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1035,3 +1035,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-codespell to 2.4.1 [adam 2025-01-30]
 	Updated textproc/hs-djot to 0.1.2.2 [pho 2025-01-30]
 	Updated inputmethod/ibus-libpinyin to 1.15.8 [wiz 2025-01-30]
+	Updated textproc/hs-skylighting-core to 0.14.6 [pho 2025-01-30]
