@@ -1,7 +1,17 @@
-$NetBSD: distinfo,v 1.7 2024/10/26 00:06:49 gdt Exp $
+$NetBSD: distinfo,v 1.8 2025/01/30 22:07:41 wiz Exp $
 
 BLAKE2s (pcl-1.14.1.tar.gz) = 2041205bbfd63f4f5211a6332c6dd0a3d0ba90974a51b67e19e614936f0a7b20
 SHA512 (pcl-1.14.1.tar.gz) = 8e2d2839fe73a955d49b9a72861de2becf2da9a0dc906bd10ab8a3518e270a2f1900d801922d02871d704f2ed380273d35c2d0e04d8da7e24a21eb351c43c00b
 Size (pcl-1.14.1.tar.gz) = 68672885 bytes
+SHA1 (patch-apps_src_openni__mobile__server.cpp) = 8b3ec8361224a3a906b78da5fa4d412c1b6bac18
+SHA1 (patch-apps_src_openni__octree__compression.cpp) = a2e5596c17d8d093d637e2c571110cacc4276dbf
+SHA1 (patch-apps_src_openni__organized__compression.cpp) = 03a9bd658abca5a8bdd81eec514d137ee154c740
 SHA1 (patch-cmake_pcl__targets.cmake) = 8f3e85b48edabc6573d8741bbb330fbc531d9b3f
-SHA1 (patch-visualization_src_pcl__visualizer.cpp) = 00a54a61f3ef7344de185b23603b02dbae5d395a
+SHA1 (patch-io_include_pcl_io_hdl__grabber.h) = 7a2fe4b65e12709b3c67d2188e661f65edfa4d1f
+SHA1 (patch-io_include_pcl_io_robot__eye__grabber.h) = dd81cd932e636caff3f91ba905e728b3244e3bcc
+SHA1 (patch-io_include_pcl_io_tim__grabber.h) = ed4f73a86c23eeba4b44b3c948d280f593c6b29a
+SHA1 (patch-io_src_hdl__grabber.cpp) = bae5050da0c86e2d039e2622e2d987a5d5243cc7
+SHA1 (patch-io_src_robot__eye__grabber.cpp) = 3f579a71e725516d68b4656be727abda7541eefd
+SHA1 (patch-io_src_tim__grabber.cpp) = fc1fccd50d29a96d4b0788098f5a9b7eb7633178
+SHA1 (patch-io_src_vlp__grabber.cpp) = 42edc3c5da713438491338e3539088fb9cdf241e
+SHA1 (patch-visualization_src_pcl__visualizer.cpp) = 7ed098e91f8cc74df7c9ad94d2ff612a65682c33

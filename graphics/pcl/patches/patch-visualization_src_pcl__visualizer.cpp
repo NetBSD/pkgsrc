@@ -1,5 +1,6 @@
-$NetBSD: patch-visualization_src_pcl__visualizer.cpp,v 1.3 2024/10/26 00:06:50 gdt Exp $
+$NetBSD: patch-visualization_src_pcl__visualizer.cpp,v 1.4 2025/01/30 22:07:41 wiz Exp $
 
+build of 1.14.1 fails with boost 1.86.0 #6157
 https://github.com/PointCloudLibrary/pcl/issues/6157
 
 --- visualization/src/pcl_visualizer.cpp.orig	2024-10-25 23:54:29.888728521 +0000
