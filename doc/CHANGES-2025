@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.803 2025/01/30 14:23:48 pho Exp $
+$NetBSD: CHANGES-2025,v 1.804 2025/01/30 14:39:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1051,3 +1051,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hs-http-client-tls to 0.3.6.4 [pho 2025-01-30]
 	Updated converters/hs-pandoc to 3.6.2 [pho 2025-01-30]
 	Updated devel/hs-hslua-module-system to 1.1.2 [pho 2025-01-30]
+	Updated devel/texttest to 4.4.2 [schmonz 2025-01-30]
