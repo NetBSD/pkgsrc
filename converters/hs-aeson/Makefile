@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/05/09 01:31:39 pho Exp $
+# $NetBSD: Makefile,v 1.35 2025/01/30 04:50:51 pho Exp $
 
-DISTNAME=	aeson-2.2.1.0
-PKGREVISION=	2
+DISTNAME=	aeson-2.2.3.0
 CATEGORIES=	converters
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -9,10 +8,11 @@ COMMENT=	Fast JSON parsing and encoding
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	QuickCheck	\
-	primitive	\
-	th-abstraction
+	hashable
 
+.include "../../devel/hs-generically/buildlink3.mk"
+.include "../../time/hs-time-compat/buildlink3.mk"
+.include "../../devel/hs-character-ps/buildlink3.mk"
 .include "../../devel/hs-data-fix/buildlink3.mk"
 .include "../../devel/hs-dlist/buildlink3.mk"
 .include "../../devel/hs-generically/buildlink3.mk"
