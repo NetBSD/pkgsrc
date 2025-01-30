@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 05:20:55 pho Exp $
 
-BLAKE2s (data-default-class-0.1.2.0.tar.gz) = cff7334f5cd6d9c6a807e20a9f1fdc0821d7eff73f8cde34e054d2795cce17c5
-SHA512 (data-default-class-0.1.2.0.tar.gz) = 293c899cb2b5cded58baa086251110e4c5e7a15477f1864c33be30be8d16d6fadb55e1b5fa8117f4c47ac5c86ac09abb2f7f8b3b4fb658d1492eadd099f6f7b2
-Size (data-default-class-0.1.2.0.tar.gz) = 2522 bytes
+BLAKE2s (data-default-class-0.2.0.0.tar.gz) = f9f0f6ee8757d5e806e3c6b7ba88273611ce7246bf7fb8f9b9554ec62bf13653
+SHA512 (data-default-class-0.2.0.0.tar.gz) = ffd550e0ead0dbeee1fff45dfe270dce878dd69b6d1ac575e8a507ebee49d2b6492647529ad00e81ba80fe5c1a61fae51e256f9da9aa845ca2d8fdf0b039a785
+Size (data-default-class-0.2.0.0.tar.gz) = 1589 bytes
