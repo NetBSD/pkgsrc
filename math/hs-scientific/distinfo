@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2023/01/25 16:33:11 pho Exp $
+$NetBSD: distinfo,v 1.12 2025/01/30 04:35:20 pho Exp $
 
-BLAKE2s (scientific-0.3.7.0.tar.gz) = ab3bdb603d7aa58c5920f9ead0d4377958b08b0bba2fcfb30fa7d958052c7755
-SHA512 (scientific-0.3.7.0.tar.gz) = dbd13060a6d1d101138715b4106382a78d115cff247859cb6f83aca3cdb6f6caf8a2c52d7ae99be64845c5e4a7959940bbf31df6265b15079c236f193b087865
-Size (scientific-0.3.7.0.tar.gz) = 24723 bytes
+BLAKE2s (scientific-0.3.8.0.tar.gz) = 3355b1008759331f10d0dc4dce684ee5385290c7548bb71563f5591a7124d1fb
+SHA512 (scientific-0.3.8.0.tar.gz) = 7d56ffb6806d2fc8d771bb666dc417a0256b618e2d530f41065cdf94ae7842f4d24bc9323a5bab006dd5d50ffff5fc899b25b7361c51d62aeb73a2a0ac0195d4
+Size (scientific-0.3.8.0.tar.gz) = 24314 bytes
