@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1495 2025/01/30 12:38:51 pho Exp $
+# $NetBSD: Makefile,v 1.1496 2025/01/30 23:17:37 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -367,6 +367,7 @@ SUBDIR+=	hs-skylighting-format-ansi
 SUBDIR+=	hs-skylighting-format-blaze-html
 SUBDIR+=	hs-skylighting-format-context
 SUBDIR+=	hs-skylighting-format-latex
+SUBDIR+=	hs-skylighting-format-typst
 SUBDIR+=	hs-skylighting-format-typst
 SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-tagsoup
