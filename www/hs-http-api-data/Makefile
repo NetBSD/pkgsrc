@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:52 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/30 14:51:59 pho Exp $
 
-DISTNAME=	http-api-data-0.6
-PKGREVISION=	2
+DISTNAME=	http-api-data-0.6.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,10 +8,7 @@ COMMENT=	Converting to/from HTTP API data
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base		\
-	bytestring	\
-	cookie		\
-	text
+	hashable
 
 .include "../../www/hs-cookie/buildlink3.mk"
 .include "../../devel/hs-hashable/buildlink3.mk"
