@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/01/24 17:11:08 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/30 09:37:40 pho Exp $
 
-BLAKE2s (haskell-lexer-1.1.1.tar.gz) = 592748ac9f89ec58af605db69a760673286271f9834d2edd65f1a144e243f212
-SHA512 (haskell-lexer-1.1.1.tar.gz) = 3eb4659a88078ab4283a65f20a7b6a1a9241b841af6e50eef812700f0d968d765534d9503d7b961b3fbc5faff04eeb9c99db7b35b3f74d15785815838008b6df
-Size (haskell-lexer-1.1.1.tar.gz) = 14499 bytes
+BLAKE2s (haskell-lexer-1.1.2.tar.gz) = 1553a31d6fda372dd4e1e95c6eb26f70fb2f64f703d363b7a76bf964d930f48d
+SHA512 (haskell-lexer-1.1.2.tar.gz) = c3e6c22d9a1e356f115c44c8672456174d5be0503522416314ddd4c688c335c723033c83631a2f210d1837b3cdb262cdf0d172b10bac0276e1d73866a75a2636
+Size (haskell-lexer-1.1.2.tar.gz) = 14503 bytes
