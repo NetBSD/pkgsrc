@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/25 12:45:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/30 08:30:01 wiz Exp $
 bin/guards
 bin/quilt
 man/man1/guards.1

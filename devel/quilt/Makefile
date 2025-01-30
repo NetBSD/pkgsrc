@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.32 2024/07/25 05:41:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/01/30 08:30:01 wiz Exp $
 
-DISTNAME=	quilt-0.66
-PKGREVISION=	4
+DISTNAME=	quilt-0.68
 CATEGORIES=	devel scm
 MASTER_SITES=	https://download.savannah.gnu.org/releases/quilt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://savannah.nongnu.org/projects/quilt
 COMMENT=	Tools to manage series of patches
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash:run gettext-tools gmake msgfmt perl:run gsed
@@ -31,6 +31,9 @@ DEPENDS+=		patch>=2.4:../../devel/patch
 .  if ${OPSYS} == "OpenBSD"
 DEPENDS+=		grep-[0-9]*:../../textproc/grep
 CONFIGURE_ARGS+=	--with-grep=${PREFIX}/bin/ggrep
+.  elif ${OPSYS} == "Darwin"
+DEPENDS+=		diffutils-[0-9]*:../../devel/diffutils
+CONFIGURE_ARGS+=	--with-diff=${PREFIX}/bin/gdiff
 .  endif
 
 CONFIGURE_ARGS+=	--with-cp=${PREFIX}/bin/gcp
