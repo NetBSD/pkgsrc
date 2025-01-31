@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2024/11/14 22:19:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.44 2025/01/31 13:14:02 wiz Exp $
 
-PKGNAME=	ObjectiveLib-1.0.0
 DISTNAME=	objectivelib-1.0.0
-PKGREVISION=	30
+PKGNAME=	ObjectiveLib-1.0.0
+PKGREVISION=	31
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=objectivelib/}
 
@@ -12,7 +11,6 @@ HOMEPAGE=	http://objectivelib.sourceforge.net/
 COMMENT=	Object containers and generic algorithms for Objective-C
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	destdir
 MAKE_JOBS_SAFE=		no
 USE_LANGUAGES=		objc
 
