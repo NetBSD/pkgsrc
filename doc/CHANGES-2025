@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.836 2025/01/31 00:13:18 pho Exp $
+$NetBSD: CHANGES-2025,v 1.837 2025/01/31 00:17:40 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-silently to 1.2.5.4 [pho 2025-01-30]
 	Updated devel/hs-persistent to 2.14.6.3 [pho 2025-01-31]
 	Updated devel/cabal-fmt to 0.1.12 [pho 2025-01-31]
+	Updated devel/hs-fgl to 5.8.3.0 [pho 2025-01-31]
