@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:31:43 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/31 01:15:54 pho Exp $
 
 DISTNAME=	floskell-0.11.1
 PKGNAME=	${DISTNAME}
@@ -8,6 +8,10 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Flexible Haskell source code pretty printer
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base	\
+	data-default
 
 # lib:floskell
 .include "../../converters/hs-aeson/buildlink3.mk"
