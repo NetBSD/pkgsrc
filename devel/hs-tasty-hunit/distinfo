@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/10/30 10:23:47 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/31 14:42:22 pho Exp $
 
-BLAKE2s (tasty-hunit-0.10.1.tar.gz) = f4e7bd5084db88b90b15e3396484f2930317222a6efebdd7e9928d74f73902ee
-SHA512 (tasty-hunit-0.10.1.tar.gz) = 5661bd52d747c571eec1fbea2c60e36dbb2df4166355a74959909e8e481da983ea07fd304f408abd3ed4bf5a7396c71a2dd25c18ba3916c01fd36a5fd1eb5d44
-Size (tasty-hunit-0.10.1.tar.gz) = 7737 bytes
+BLAKE2s (tasty-hunit-0.10.2.tar.gz) = 5a1e3fa1903325f4ced79d25398d9d954765817f4ac446bb399a7e47d38dc8f1
+SHA512 (tasty-hunit-0.10.2.tar.gz) = 11fc165915cfa5235ff16b31dc0f229bc89902eb36f8da5ab25b1f7a48e2be82ae2c8b5bb681123b6df24ad50e1b2efa12b4fce46fba86d4dab22e34d144197b
+Size (tasty-hunit-0.10.2.tar.gz) = 7808 bytes
