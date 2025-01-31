@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2018/01/01 18:16:35 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2025/01/31 13:16:50 wiz Exp $
 
 CLISP_MODULE=	syscalls
 
@@ -13,6 +12,8 @@ HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
 MAKE_JOBS_SAFE=	no
+
+BROKEN_ON_PLATFORM=	NetBSD-1[0-9].*-x86_64
 
 .include "../../lang/clisp/module.mk"
 
