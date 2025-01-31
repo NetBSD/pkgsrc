@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.432 2025/01/25 21:42:41 pin Exp $
+# $NetBSD: Makefile,v 1.433 2025/01/31 09:32:04 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -59,8 +59,6 @@ SUBDIR+=	courier-prime
 SUBDIR+=	croscorefonts
 SUBDIR+=	culmus
 SUBDIR+=	cursed_font
-SUBDIR+=	cyberbase-ttf
-SUBDIR+=	cyberbit-ttf
 SUBDIR+=	cyr-rfx-bulgarian-mik
 SUBDIR+=	cyr-rfx-ibm-cp866
 SUBDIR+=	cyr-rfx-iso10646_0400

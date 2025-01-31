@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:27:05 nia Exp $
-
-BLAKE2s (cyberbit-ttf/Cyberbit.ZIP) = 1a44ecb095295338d86179f5a106425813c2ec5b7732eefa6c020fc6587b18ec
-SHA512 (cyberbit-ttf/Cyberbit.ZIP) = 39af2720123e7d732e3dffffab37d949221211748594a66ecbd41bafcd387e4582433ece802e42f3d1f0728da9ed0c5bb00465f20fa2ff3687018ed94edf25a1
-Size (cyberbit-ttf/Cyberbit.ZIP) = 6427108 bytes
-BLAKE2s (cyberbit-ttf/ReadMe.htm) = 24253fef2de5642fe66017023355d6c87452678e79eb4095827b780a9dabd8b4
-SHA512 (cyberbit-ttf/ReadMe.htm) = fd6d6e793d4704002c2abd7fa7ba10ee3120e10dab8df20284e29bd8cec2834d9b909248a8097fa58c50151cd4c05e1884ab10a70ac317058caa8970a65c9dda
-Size (cyberbit-ttf/ReadMe.htm) = 34832 bytes
