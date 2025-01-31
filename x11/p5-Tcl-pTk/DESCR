@@ -1,0 +1,9 @@
+Interfaces perl to an existing Tcl/Tk installation on your
+computer. It has fully perl/tk compatible syntax for running existing
+perl/tk scripts, as well as direct-tcl syntax for using any other
+Tcl/Tk features.
+
+Using this module an interpreter object is created, which then
+provides access to all the installed Tcl libraries (Tk, Tix, BWidgets,
+BLT, etc) and existing features (for example native-looking widgets
+using the Tile package).

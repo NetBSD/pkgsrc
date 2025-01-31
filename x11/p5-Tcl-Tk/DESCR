@@ -1,0 +1,3 @@
+Extension (not to be confused with the "native" perl5 Perl/Tk
+extension) to provide a raw but complete interface to the whole of Tk
+via the Tcl extension
