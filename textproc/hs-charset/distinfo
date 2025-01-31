@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2023/10/28 20:32:37 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/31 13:45:47 pho Exp $
 
-BLAKE2s (charset-0.3.10.tar.gz) = 03f828f6bdf39ad36e5f1d06bf1ffd9c577ad9f51a7b010bd8eaf9d3abb83c5e
-SHA512 (charset-0.3.10.tar.gz) = ad32c5380379570ec4872cc44236ab0833723f3a784c3cece7b2c8efbdf3f6930d9219a8a1a9d2b01eca9698b39294a8bae6cb44ce1d25b144ac86136da58292
-Size (charset-0.3.10.tar.gz) = 13790 bytes
+BLAKE2s (charset-0.3.11.tar.gz) = 5c366d0bc82f0cf13ec473673c009a56a5432864e48b7dd79ba6306ea34d4090
+SHA512 (charset-0.3.11.tar.gz) = 193b30ed21f0fd30fb229e76850f186c26c10b9c068aac57687d5f18706559c8e8d396c0cb0cfa8ab226ddf0128fef71b0f5ac485a1ce2f9e8ba0f8d7382d466
+Size (charset-0.3.11.tar.gz) = 13650 bytes
