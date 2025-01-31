@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/01 08:16:52 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/01/31 02:24:01 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec.hi
@@ -48,6 +48,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/State.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Stream.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Stream.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Stream.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Unicode.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Unicode.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Unicode.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/megaparsec-${PKGVERSION}/${HS_VERSION}/package-description
@@ -67,6 +70,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megapars
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Pos.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-State.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Stream.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec-Unicode.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/Text-Megaparsec.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-60.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/megaparsec-${PKGVERSION}/html/doc-index-A.html
