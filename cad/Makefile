@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2024/08/06 00:41:00 tnn Exp $
+# $NetBSD: Makefile,v 1.110 2025/01/31 15:36:14 wiz Exp $
 #
 
 COMMENT=	Computer Aided Design tools
@@ -13,7 +13,6 @@ SUBDIR+=	covered
 SUBDIR+=	dinotrace
 SUBDIR+=	dinotrace-mode
 SUBDIR+=	diylc
-SUBDIR+=	eagle
 SUBDIR+=	electric
 SUBDIR+=	fastcap
 SUBDIR+=	fasthenry
