@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.895 2025/01/31 13:38:59 pho Exp $
+$NetBSD: CHANGES-2025,v 1.896 2025/01/31 13:45:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mysql-connector-c++ to 9.2.0 [wiz 2025-01-31]
 	Updated math/hs-commutative-semigroups to 0.2.0.1 [pho 2025-01-31]
 	Updated math/hs-monoid-subclasses to 1.2.5.1 [pho 2025-01-31]
+	Updated textproc/hs-charset to 0.3.11 [pho 2025-01-31]
