@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1 2012/10/22 22:10:15 rh Exp $
+$NetBSD: patch-aa,v 1.2 2025/01/31 13:14:03 wiz Exp $
 
 Make this compile with libobjc2.
 
 --- ObjectOutStream.m.orig	2007-03-25 18:12:15.000000000 +0000
 +++ ObjectOutStream.m
+@@ -230,7 +230,7 @@
+ {
+     Class cls = NSClassFromString(className);
+ 
+-    return (cls == nil) ? NSNotFound : class_get_version(cls);
++    return (cls == nil) ? NSNotFound : class_getVersion(cls);
+ }
+ #endif
+ 
 @@ -257,11 +257,11 @@
          {
              [pointerMap assign: cls];

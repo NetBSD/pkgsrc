@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 10:14:00 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/01/31 13:14:02 wiz Exp $
 
 BLAKE2s (objectivelib-1.0.0.tar.gz) = 3513d6231508fc95e804365241dbd6baa99b520905a5ef1241b7edba923d615d
 SHA512 (objectivelib-1.0.0.tar.gz) = 1d9c53703600f7ad795bb6cbfee81d3f4e90a01a3b6fe7cbb60b103a9fcb4e912dcf9b97e9e325c27c74c88bcd27c708c36d66c5ea8630c668ddbc62ee3d4834
 Size (objectivelib-1.0.0.tar.gz) = 833390 bytes
-SHA1 (patch-aa) = 3604f398bba598878f731a19aab6ba55006b833d
+SHA1 (patch-aa) = 252731ba467f93dcadf796b65f6d993704ac6e22
 SHA1 (patch-ab) = bceb865ac5c72d47dfa219411836c047bfae1510
