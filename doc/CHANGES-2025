@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.893 2025/01/31 13:30:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.894 2025/01/31 13:34:16 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1145,3 +1145,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ObjectiveLib to 1.0.0nb31 [wiz 2025-01-31]
 	Updated devel/hs-generic-deriving to 1.14.6 [pho 2025-01-31]
 	Updated databases/mysql-connector-c++ to 9.2.0 [wiz 2025-01-31]
+	Updated math/hs-commutative-semigroups to 0.2.0.1 [pho 2025-01-31]
