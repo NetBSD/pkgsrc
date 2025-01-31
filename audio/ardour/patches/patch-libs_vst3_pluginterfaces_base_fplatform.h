@@ -1,6 +1,7 @@
-$NetBSD: patch-libs_vst3_pluginterfaces_base_fplatform.h,v 1.2 2025/01/31 17:15:11 wiz Exp $
+$NetBSD: patch-libs_vst3_pluginterfaces_base_fplatform.h,v 1.3 2025/01/31 22:01:23 wiz Exp $
 
 Fix build on *BSD.
+https://tracker.ardour.org/view.php?id=9886
 
 --- libs/vst3/pluginterfaces/base/fplatform.h.orig	2024-02-04 02:22:43.806501710 +0000
 +++ libs/vst3/pluginterfaces/base/fplatform.h

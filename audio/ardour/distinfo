@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.13 2025/01/31 17:15:11 wiz Exp $
+$NetBSD: distinfo,v 1.14 2025/01/31 22:01:23 wiz Exp $
 
 BLAKE2s (Ardour-8.10.0.tar.bz2) = 97bd16f9004040c247fe25da6a14f256cc23b505237d87dc5b708c6cc0fff7b6
 SHA512 (Ardour-8.10.0.tar.bz2) = 744e4bc73e35a758fce46c0035a11b430b70aa77503446a0118aba62b86b62fb293be1418ec8cfc0e1495a3a005bb71445f48661d9302a3b5bacc1a7f6c2874b
 Size (Ardour-8.10.0.tar.bz2) = 17811275 bytes
 SHA1 (patch-gtk2__ardour_wscript) = 18241b4e68a807792c3f48f29784d7c30a251c8d
-SHA1 (patch-libs_aaf_aaf_LibCFB.h) = b9549eac9f9c290cc49b5f59fc191930a2ca276d
-SHA1 (patch-libs_aaf_utils.c) = d0a84069147234df913840560011e001021d650c
-SHA1 (patch-libs_ardour_plugin__manager.cc) = 92564dc05e7f8febe6146f591f0a9c26d1ae0b60
-SHA1 (patch-libs_backends_jack_jack__utils.cc) = 5bf08ead83b3a2c4355a0424262878a1b89e1648
-SHA1 (patch-libs_pbd_cpus.cc) = 03d4a6d2da56722cb653053b1d439756137ecf95
+SHA1 (patch-libs_aaf_aaf_LibCFB.h) = 56ed1d50058985d1d372322f6005ced82c9adde7
+SHA1 (patch-libs_aaf_utils.c) = 212e33040450215dbe2827615277bed7a741ff40
+SHA1 (patch-libs_ardour_plugin__manager.cc) = ce0d65f175646bab7e5e2dcde42df7cb167502c6
+SHA1 (patch-libs_backends_jack_jack__utils.cc) = cbbfd8b41e4ea37ac39b84777cabbfa8d1cfa596
+SHA1 (patch-libs_pbd_cpus.cc) = 9aca1f9b994b27af176b0f550d179bef4e9434a1
 SHA1 (patch-libs_qm-dsp_wscript) = 84a6ae4ca9c696e862a4408a69856aafb0067073
-SHA1 (patch-libs_tk_ydk_config.h) = d96fe92215e7a462995b38bb4b7c1fd3e1b01ad0
-SHA1 (patch-libs_tk_ytk_config.h) = 242d42a8e99d607c06b90e94b0c1ea4bb4b4caaf
-SHA1 (patch-libs_vst3_pluginterfaces_base_fplatform.h) = 72c37163c22779415199acc1895ff1d7d1b8ecd6
+SHA1 (patch-libs_tk_ydk_config.h) = 519b568c3e76206ad99579925e72e6d625313620
+SHA1 (patch-libs_tk_ytk_config.h) = 6945d7b5cbfa111b03d9b0f5c7c08d268c35ed43
+SHA1 (patch-libs_vst3_pluginterfaces_base_fplatform.h) = 024e3fea2093b3b4dc40d109648f5a3480f91ec3
 SHA1 (patch-wscript) = cc2b59aa3a556129bcf0d26dd25937124c60dc73
