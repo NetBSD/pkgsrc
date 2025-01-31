@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.838 2025/01/31 00:27:14 pho Exp $
+$NetBSD: CHANGES-2025,v 1.839 2025/01/31 01:03:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1086,3 +1086,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cabal-fmt to 0.1.12 [pho 2025-01-31]
 	Updated devel/hs-fgl to 5.8.3.0 [pho 2025-01-31]
 	Updated www/hs-http-conduit to 2.3.9.1 [pho 2025-01-31]
+	Updated devel/darcs to 2.18.5 [pho 2025-01-31]
