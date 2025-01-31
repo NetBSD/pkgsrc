@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:31:59 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/01/31 07:59:43 pho Exp $
 
-DISTNAME=	hls-graph-2.7.0.0
-PKGREVISION=	1
+DISTNAME=	hls-graph-2.9.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
