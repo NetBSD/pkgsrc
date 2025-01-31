@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2024/12/31 09:42:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.93 2025/01/31 18:21:54 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -103,6 +103,7 @@ share/mame/hash/altos8600.xml
 share/mame/hash/amiga_a1000.xml
 share/mame/hash/amiga_a3000.xml
 share/mame/hash/amiga_apps.xml
+share/mame/hash/amiga_cd.xml
 share/mame/hash/amiga_demos.xml
 share/mame/hash/amiga_flop.xml
 share/mame/hash/amiga_hardware.xml
@@ -394,6 +395,7 @@ share/mame/hash/lviv.xml
 share/mame/hash/lynx.xml
 share/mame/hash/m20.xml
 share/mame/hash/m24.xml
+share/mame/hash/m3.xml
 share/mame/hash/m5_cart.xml
 share/mame/hash/m5_cass.xml
 share/mame/hash/m5_flop.xml
@@ -414,7 +416,6 @@ share/mame/hash/mc1000_cass.xml
 share/mame/hash/mc1502_flop.xml
 share/mame/hash/md2_flop.xml
 share/mame/hash/megacd.xml
-share/mame/hash/megacdj.xml
 share/mame/hash/megadriv.xml
 share/mame/hash/megaduck.xml
 share/mame/hash/megapc.xml
@@ -626,7 +627,6 @@ share/mame/hash/scv.xml
 share/mame/hash/sdk85.xml
 share/mame/hash/sega_beena_cart.xml
 share/mame/hash/segaai.xml
-share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
 share/mame/hash/sgi_mips.xml
