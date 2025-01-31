@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/02 10:06:47 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/31 06:56:09 pho Exp $
 
-BLAKE2s (hiedb-0.6.0.0.tar.gz) = c9bff838df49fc845b64fc43e9de6c1aed70b92fa854b155de71c515d3043a1a
-SHA512 (hiedb-0.6.0.0.tar.gz) = eb8170c8f9e602d0cb8a008443554ca8b0936a2002fb7bd202ba348c6e403b8825a8cd6519c93e578de06d8c2f234f6e1fa4fbc7798c9e61999c4611b32c99ed
-Size (hiedb-0.6.0.0.tar.gz) = 30343 bytes
+BLAKE2s (hiedb-0.6.0.1.tar.gz) = ecf979dd1367fbde0bdc4a70e804c5bfa9ce366f4dedf2de39cb3bc4f5c7da9b
+SHA512 (hiedb-0.6.0.1.tar.gz) = b978e162fe3dd8c2c4f58998a1d35a96b8f3fbc8f62cde4263387d62db9e30412bdfab80dac7a6e47c0d46f95dab2ed842b5e9d98bd76338e1c8397672bce301
+Size (hiedb-0.6.0.1.tar.gz) = 30368 bytes
