@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.890 2025/01/31 12:34:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.891 2025/01/31 13:14:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1142,3 +1142,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/serie to 0.4.3 [pin 2025-01-31]
 	Updated databases/diesel-cli to 2.2.7 [pin 2025-01-31]
 	Updated devel/iaito to 5.9.9 [wiz 2025-01-31]
+	Updated devel/ObjectiveLib to 1.0.0nb31 [wiz 2025-01-31]
