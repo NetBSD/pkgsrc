@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.845 2025/01/31 02:51:32 pho Exp $
+$NetBSD: CHANGES-2025,v 1.846 2025/01/31 03:51:34 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1095,3 +1095,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-Diff to 1.0.2 [pho 2025-01-31]
 	Updated textproc/hs-megaparsec to 9.7.0 [pho 2025-01-31]
 	Added devel/hs-choice version 0.2.4.1 [pho 2025-01-31]
+	Updated devel/hs-ghc-lib-parser to 9.10.1.20250103 [pho 2025-01-31]
