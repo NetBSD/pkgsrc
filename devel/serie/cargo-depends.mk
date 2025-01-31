@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.5 2025/01/13 20:33:10 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.6 2025/01/31 12:28:04 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -42,8 +42,8 @@ CARGO_CRATE_DEPENDS+=	cc-1.1.2
 CARGO_CRATE_DEPENDS+=	cfg-expr-0.15.8
 CARGO_CRATE_DEPENDS+=	cfg-if-1.0.0
 CARGO_CRATE_DEPENDS+=	chrono-0.4.39
-CARGO_CRATE_DEPENDS+=	clap-4.5.26
-CARGO_CRATE_DEPENDS+=	clap_builder-4.5.26
+CARGO_CRATE_DEPENDS+=	clap-4.5.27
+CARGO_CRATE_DEPENDS+=	clap_builder-4.5.27
 CARGO_CRATE_DEPENDS+=	clap_derive-4.5.24
 CARGO_CRATE_DEPENDS+=	clap_lex-0.7.4
 CARGO_CRATE_DEPENDS+=	clipboard-win-5.4.0
@@ -202,10 +202,9 @@ CARGO_CRATE_DEPENDS+=	ryu-1.0.18
 CARGO_CRATE_DEPENDS+=	safe_arch-0.5.2
 CARGO_CRATE_DEPENDS+=	same-file-1.0.6
 CARGO_CRATE_DEPENDS+=	scopeguard-1.2.0
-CARGO_CRATE_DEPENDS+=	semver-1.0.24
+CARGO_CRATE_DEPENDS+=	semver-1.0.25
 CARGO_CRATE_DEPENDS+=	serde-1.0.217
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.217
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.135
 CARGO_CRATE_DEPENDS+=	serde_spanned-0.6.7
 CARGO_CRATE_DEPENDS+=	sharded-slab-0.1.7
 CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
@@ -217,6 +216,7 @@ CARGO_CRATE_DEPENDS+=	simplecss-0.2.1
 CARGO_CRATE_DEPENDS+=	siphasher-0.3.11
 CARGO_CRATE_DEPENDS+=	slab-0.4.9
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
+CARGO_CRATE_DEPENDS+=	smart-default-0.7.1
 CARGO_CRATE_DEPENDS+=	spin-0.9.8
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
 CARGO_CRATE_DEPENDS+=	strsim-0.11.1
@@ -244,6 +244,7 @@ CARGO_CRATE_DEPENDS+=	tracing-subscriber-0.3.18
 CARGO_CRATE_DEPENDS+=	ttf-parser-0.12.3
 CARGO_CRATE_DEPENDS+=	tui-input-0.11.1
 CARGO_CRATE_DEPENDS+=	tui-tree-widget-0.23.0
+CARGO_CRATE_DEPENDS+=	umbra-0.3.0
 CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
 CARGO_CRATE_DEPENDS+=	unicode-bidi-mirroring-0.1.0
 CARGO_CRATE_DEPENDS+=	unicode-ccc-0.1.2
