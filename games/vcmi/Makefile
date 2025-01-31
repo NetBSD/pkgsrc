@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2024/12/29 15:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/01/31 08:49:39 wiz Exp $
 
-DISTNAME=	vcmi-1.5.6
-PKGREVISION=	5
+DISTNAME=	vcmi-1.6.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=vcmi/}
 
@@ -24,6 +23,16 @@ USE_TOOLS+=	pkg-config bash:run
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
 USE_CXX_FEATURES+=	c++17
+
+# lie to the compiler
+CXXFLAGS+=	-DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED
+
+SUBST_CLASSES+=		ffmpeg
+SUBST_FILES.ffmpeg+=	cmake_modules/Findffmpeg.cmake
+SUBST_SED.ffmpeg+=	-e "s,/opt/include,${BUILDLINK_DIR}/include/ffmpeg7,"
+SUBST_SED.ffmpeg+=	-e "s,/opt/lib,${BUILDLINK_DIR}/lib/ffmpeg7,"
+SUBST_MESSAGE.ffmpeg=	Helping cmake find ffmpeg.
+SUBST_STAGE.ffmpeg=	pre-configure
 
 .include "../../mk/compiler.mk"
 
