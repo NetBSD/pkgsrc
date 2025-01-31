@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.848 2025/01/31 04:29:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.849 2025/01/31 04:33:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-ghc-lib-parser to 9.10.1.20250103 [pho 2025-01-31]
 	Updated devel/fourmolu to 0.17.0.0 [pho 2025-01-31]
 	Updated devel/hs-ghc-lib-parser-ex to 9.10.0.0 [pho 2025-01-31]
+	Updated misc/hs-extra to 1.8 [pho 2025-01-31]
