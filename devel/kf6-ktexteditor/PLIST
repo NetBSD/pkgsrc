@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/26 12:09:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/31 12:27:25 wiz Exp $
+bin/ktexteditor-script-tester6
 include/KF6/KTextEditor/KTextEditor/AbstractAnnotationItemDelegate
 include/KF6/KTextEditor/KTextEditor/AnnotationInterface
 include/KF6/KTextEditor/KTextEditor/Application
