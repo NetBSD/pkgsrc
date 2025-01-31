@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.911 2025/01/31 15:53:12 pho Exp $
+$NetBSD: CHANGES-2025,v 1.912 2025/01/31 15:56:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1163,3 +1163,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/haskell-language-server to 2.9.0.0 [pho 2025-01-31]
 	Updated devel/hs-microlens-platform to 0.4.3.6 [pho 2025-01-31]
 	Updated devel/hs-atomic-primops to 0.8.8 [pho 2025-01-31]
+	Updated devel/hs-atomic-write to 0.2.1.0 [pho 2025-01-31]
