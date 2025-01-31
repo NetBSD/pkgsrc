@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/06/29 06:43:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 13:30:15 wiz Exp $
 include/mysqlx/common.h
 include/mysqlx/common/api.h
 include/mysqlx/common/error.h
@@ -26,8 +26,11 @@ include/mysqlx/devapi/result.h
 include/mysqlx/devapi/row.h
 include/mysqlx/devapi/settings.h
 include/mysqlx/devapi/table_crud.h
+include/mysqlx/version_info.h
 include/mysqlx/xapi.h
 include/mysqlx/xdevapi.h
-lib/debug/libmysqlcppconn8.so
-lib/debug/libmysqlcppconn8.so.2
-lib/debug/libmysqlcppconn8.so.2.${PKGVERSION}
+lib/debug/libmysqlcppconnx.so
+lib/debug/libmysqlcppconnx.so.2
+lib/debug/libmysqlcppconnx.so.2.${PKGVERSION}
+mysql-concpp-config-version.cmake
+mysql-concpp-config.cmake
