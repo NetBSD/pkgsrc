@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/10/27 14:00:55 pho Exp $
+$NetBSD: distinfo,v 1.8 2025/01/31 13:15:44 pho Exp $
 
-BLAKE2s (generic-deriving-1.14.5.tar.gz) = 90bf8f37f3d5bf67b20d4a24558e6ba22611a5a2bbf60d923feeabcfb9dcb1c5
-SHA512 (generic-deriving-1.14.5.tar.gz) = d3fc4e77a9c81ee570b20db6666f1c8bf32d1362cd045731401ff43db65b96c741752deec9f6239e8478d480e7d22e9bbc195fb473498cc380d7f94339563e3c
-Size (generic-deriving-1.14.5.tar.gz) = 76918 bytes
+BLAKE2s (generic-deriving-1.14.6.tar.gz) = 87148cb5567e71e856aad3391498aea84ab8e2758a097cd0d6bce0f6d214d959
+SHA512 (generic-deriving-1.14.6.tar.gz) = 98f2c27f873e80b18e8d14ea597fd119b2f5c42dd71586b02a060536c74893ae64feed52cc6fa4f571f02994356e76019487ecf590bb2552e00ee8a0596a0d70
+Size (generic-deriving-1.14.6.tar.gz) = 50583 bytes
