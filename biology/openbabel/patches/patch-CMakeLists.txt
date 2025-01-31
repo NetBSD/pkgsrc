@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/01/31 15:49:47 wiz Exp $
+
+Remove obsolete variable.
+
+--- CMakeLists.txt.orig	2025-01-31 15:47:24.131445152 +0000
++++ CMakeLists.txt
+@@ -344,7 +344,7 @@ elseif(HAVE_STD_TR1_SHARED_PTR_IN_TR1_HE
+ else()
+   find_package(Boost)
+   if(Boost_FOUND)
+-    include_directories(${Boost_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
++    include_directories(${Boost_INCLUDE_DIRS})
+     add_definitions(-DUSE_BOOST -DHAVE_SHARED_POINTER)
+     set(SHARED_POINTER true)
+   else()
+@@ -357,7 +357,7 @@ message(STATUS "Use ${OB_SHARED_PTR_IMPL
+ 
+ find_package(Boost COMPONENTS program_options iostreams)
+   if(Boost_FOUND)
+-    include_directories(${Boost_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
++    include_directories(${Boost_INCLUDE_DIRS})
+  endif()
+ 
+ # Intel C++ Compiler
+@@ -472,7 +472,7 @@ endif()
+ 
+ find_package(Boost COMPONENTS filesystem iostreams unit_test_framework)
+ if(Boost_FOUND)
+-  include_directories(${Boost_INCLUDE_DIRS} ${Boost_INCLUDE_DIR})
++  include_directories(${Boost_INCLUDE_DIRS})
+   option(WITH_MAEPARSER "Build Maestro support" ON)
+   if(BUILD_SHARED)
+     option(WITH_COORDGEN "Build Coordgen support" ON)
