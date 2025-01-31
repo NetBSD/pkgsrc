@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.15 2021/10/26 10:44:24 nia Exp $
+$NetBSD: distinfo,v 1.16 2025/01/31 07:40:48 wiz Exp $
 
 BLAKE2s (simgear-2020.3.11.tar.bz2) = a71b58bc875b8903832ba177ef975429acccaadc82d06ab45f7554f9dd640a95
 SHA512 (simgear-2020.3.11.tar.bz2) = e7b7c73a574012f9ee33cc751eca9dc968339d0f8f5ec005386ed6863d96af6d17423dd68eb5180f1c6bf3b05a422de10ce03ea5e745029445edac7919fc1c99
 Size (simgear-2020.3.11.tar.bz2) = 1415047 bytes
+SHA1 (patch-CMakeLists.txt) = 65b1c56988550552edfd5b9a61fc70c8ce7563fe
 SHA1 (patch-simgear_canvas_ShivaVG_src_shConfig.h) = 0cb3c4c6049bbc5aeed85153f4cca6381219fd61
 SHA1 (patch-simgear_canvas_ShivaVG_src_shDefs.h) = 3aacbfdf03b9dd7111bfe039cf929a54c0953ef8
 SHA1 (patch-simgear_io_test__untar.cxx) = b3625254f9410411b30a8c3e30845c3d1509a993
 SHA1 (patch-simgear_io_untar.cxx) = 2cc21468bd0319aae012fb7c16e9e279888e34e3
 SHA1 (patch-simgear_misc_strutils.cxx) = c442cf04d88f2c61845a25d6bf7492b75654aeaa
 SHA1 (patch-simgear_package_md5.h) = 91dc8741ed547c26a6de8ab8bd25ee441e0e5e92
+SHA1 (patch-simgear_scene_viewer_CompositorPass.hxx) = 7712ec8f3b22b7d66635dc9ab7b7d489f6c0ab7e
