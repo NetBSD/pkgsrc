@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/04/29 04:40:08 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/01/31 13:38:52 pho Exp $
 
-BLAKE2s (monoid-subclasses-1.2.5.tar.gz) = 2d2be3bbd34bbf92f2e92cb64328b61a5ec36ed855a38fc6b096141f63fad78e
-SHA512 (monoid-subclasses-1.2.5.tar.gz) = 8b1418120e6ba4a5bef57bc63668aea55e0704bca27485e8b0fadc48e4b45e089b8b983e0ea0f69060d3b3e1ccfce22fc997f7c4dd0a2867b32b2801a83ac861
-Size (monoid-subclasses-1.2.5.tar.gz) = 60565 bytes
+BLAKE2s (monoid-subclasses-1.2.5.1.tar.gz) = 82285f2a5af2174087511c527857a2a92acb81878b34765a4748ac4d507e89a8
+SHA512 (monoid-subclasses-1.2.5.1.tar.gz) = f8eb5f8b2af86dd858f2a607bc9b8ff2f239cc96b0e524c00a9ecfb3be3ae679bba7f389dac9098c7b0902f2c3dad5189cae533574e6372b3021021b3abd22d1
+Size (monoid-subclasses-1.2.5.1.tar.gz) = 60564 bytes
