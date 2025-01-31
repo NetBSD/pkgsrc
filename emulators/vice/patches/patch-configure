@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.6 2022/12/31 18:30:00 rhialto Exp $
+$NetBSD: patch-configure,v 1.7 2025/01/31 17:49:02 rhialto Exp $
 
 1. Ignore the option --enable-option-checking instead of erroring,
    it's the default anyway.
 
 --- configure.orig	2022-12-27 23:57:16.000000000 +0000
 +++ configure
-@@ -26048,6 +26048,8 @@ do
+@@ -25973,6 +25973,8 @@ do
    argcheck=`echo "$argcheck" | sed 's/=.*//'`
    argvalid=yes
    case $argcheck in #(
