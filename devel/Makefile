@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4408 2025/01/31 14:47:09 pho Exp $
+# $NetBSD: Makefile,v 1.4409 2025/01/31 17:14:21 micha Exp $
 #
 
 COMMENT=	Development utilities
@@ -1174,6 +1174,7 @@ SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	mph
 SUBDIR+=	msgpack
+SUBDIR+=	muon
 SUBDIR+=	mustach
 SUBDIR+=	myrepos
 SUBDIR+=	nana
