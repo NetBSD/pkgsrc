@@ -1,24 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2024/11/14 22:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/31 10:22:40 pho Exp $
 
-DISTNAME=	ghcide-2.7.0.0
-PKGREVISION=	5
+DISTNAME=	ghcide-2.9.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The core of an IDE
 LICENSE=	apache-2.0
 
-HASKELL_DISABLE_LIBRARIES+=	\
-	ghcide-test-utils
-
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	Diff		\
-	hie-bios	\
-	lsp		\
-	lsp-types
+	Diff
 
 CONFIGURE_ARGS+=	-f-test-exe
-CONFIGURE_ARGS+=	-f-bench-exe
 
 # ghcide is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
@@ -41,8 +33,6 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	ghcide
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-fingertree/buildlink3.mk"
 .include "../../devel/hs-focus/buildlink3.mk"
-.include "../../devel/hs-ghc-check/buildlink3.mk"
-.include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-ghc-trace-events/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../textproc/hs-haddock-library/buildlink3.mk"
@@ -64,7 +54,6 @@ OPTPARSE_APPLICATIVE_EXECUTABLES+=	ghcide
 .include "../../textproc/hs-prettyprinter-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
-.include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-safe-exceptions/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
 .include "../../databases/hs-sqlite-simple/buildlink3.mk"
