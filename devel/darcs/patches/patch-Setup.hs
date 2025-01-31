@@ -1,14 +1,16 @@
-$NetBSD: patch-Setup.hs,v 1.1 2022/02/14 14:45:09 pho Exp $
+$NetBSD: patch-Setup.hs,v 1.2 2025/01/31 01:03:47 pho Exp $
 
 Install the man page to the correct directory. This is pkgsrc-specific.
 
 --- Setup.hs.orig	2001-09-09 01:46:40.000000000 +0000
 +++ Setup.hs
-@@ -9,7 +9,7 @@ import Distribution.Package ( packageVer
+@@ -8,8 +8,8 @@ import Distribution.PackageDescription (
+ import Distribution.Package ( packageVersion )
  import Distribution.Version( Version )
  import Distribution.Simple.LocalBuildInfo
-          ( LocalBuildInfo(..), absoluteInstallDirs )
+-         ( LocalBuildInfo(..), absoluteInstallDirs )
 -import Distribution.Simple.InstallDirs (mandir, CopyDest (NoCopyDest))
++         ( LocalBuildInfo(..), absoluteInstallDirs, buildDir )
 +import Distribution.Simple.InstallDirs (prefix, CopyDest (NoCopyDest))
  import Distribution.Simple.Setup
      (buildVerbosity, copyDest, copyVerbosity, fromFlag,
