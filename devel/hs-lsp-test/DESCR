@@ -1,0 +1,7 @@
+A test framework for writing tests against Language Server Protocol servers
+(https://microsoft.github.io/language-server-protocol/).
+Language.LSP.Test launches your server as a subprocess and allows you to
+simulate a session down to the wire. To see examples of it in action, check
+out haskell-ide-engine (https://github.com/haskell/haskell-ide-engine),
+haskell-language-server (https://github.com/haskell/haskell-language-server) and
+ghcide (https://github.com/digital-asset/ghcide).

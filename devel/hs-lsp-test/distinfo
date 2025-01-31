@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 14:01:21 pho Exp $
+
+BLAKE2s (lsp-test-0.17.1.1.tar.gz) = 2b108de805bb2ad1a6c0893c14665b1d6f640966c3f50607645cd9bcfcf9663d
+SHA512 (lsp-test-0.17.1.1.tar.gz) = f8ae6a2e824d71b70f04c7f0c745d5c77a46fc6ca7cebfa915dc9f3e37d842e58e428b85d8f067d24ba5de1437c697ebc172f1fabbaebf826f59a64616925d4d
+Size (lsp-test-0.17.1.1.tar.gz) = 38137 bytes
