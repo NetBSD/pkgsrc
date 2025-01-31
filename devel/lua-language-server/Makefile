@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/07/06 10:57:00 riastradh Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/31 11:22:02 wiz Exp $
 
 DISTNAME=		lua-language-server-3.8.3
 PKGNAME=		${DISTNAME:S/lua/${LUA_PKGPREFIX}/}
@@ -12,6 +12,17 @@ MAINTAINER=		nikita@NetBSD.org
 HOMEPAGE=		https://github.com/luals/lua-language-server/
 COMMENT=		Language server for Lua
 LICENSE=		mit
+
+# Two failure modes known. In bulk builds on NetBSD-10:
+# FAILED: build/netbsd/obj/test.stamp
+# build/netbsd/bin/bootstrap bee.lua/test/test.lua --touch build/netbsd/obj/test.stamp
+# ninja: build stopped: subcommand failed.
+#
+# On NetBSD-current additionally
+# bee.lua/bee/net/endpoint.cpp:135:9: error: 'memset' was not declared in this scope
+# bee.lua/bee/net/endpoint.cpp:136:9: error: 'memcpy' was not declared in this scope
+# bee.lua/bee/net/endpoint.h:50:19: error: 'memcpy' was not declared in this scope
+BROKEN=			"Multiple problems."
 
 MAKE_FLAGS+=		PREFIX=${PREFIX}
 MAKE_FLAGS+=		CC=${CC:Q}
