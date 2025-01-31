@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.921 2025/01/31 18:32:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.922 2025/01/31 18:40:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1173,3 +1173,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/mame to 0.274 [wiz 2025-01-31]
 	Added devel/py-id version 1.5.0 [wiz 2025-01-31]
 	Updated net/py-twine to 6.1.0 [wiz 2025-01-31]
+	Updated devel/py-ruff to 0.9.4 [wiz 2025-01-31]
