@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/01 07:12:35 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 05:22:56 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Constraint/Compose.p_hi
@@ -17,6 +17,7 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-description
 lib/constraints-extras-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/ChangeLog.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Compose.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Extras-TH.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/constraints-extras-${PKGVERSION}/html/Data-Constraint-Extras.html
