@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.906 2025/01/31 14:47:01 pho Exp $
+$NetBSD: CHANGES-2025,v 1.907 2025/01/31 15:08:44 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1158,3 +1158,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-tasty-golden version 2.3.5 [pho 2025-01-31]
 	Updated devel/hs-tasty-hunit to 0.10.2 [pho 2025-01-31]
 	Added devel/hs-hls-test-utils version 2.9.0.0 [pho 2025-01-31]
+	Updated devel/hs-ghc-exactprint to 1.9.0.0 [pho 2025-01-31]
