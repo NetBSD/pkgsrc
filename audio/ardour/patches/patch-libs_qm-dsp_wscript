@@ -1,7 +1,6 @@
-$NetBSD: patch-libs_qm-dsp_wscript,v 1.2 2024/03/18 15:36:15 ryoon Exp $
+$NetBSD: patch-libs_qm-dsp_wscript,v 1.3 2025/01/31 17:15:11 wiz Exp $
 
-- Use internal copy of qm-dsp. From Arch Linux.
-- Install config files to examples, per pkgsrc policy
+Use internal copy of qm-dsp. From Arch Linux.
 
 --- libs/qm-dsp/wscript.orig	2024-02-04 01:47:23.964028392 +0000
 +++ libs/qm-dsp/wscript
