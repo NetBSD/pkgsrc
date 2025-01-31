@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:38 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/31 02:20:14 pho Exp $
 
-DISTNAME=	Diff-0.5
-PKGREVISION=	2
+DISTNAME=	Diff-1.0.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	O(ND) diff algorithm in Haskell
+COMMENT=	Diff algorithm in pure Haskell
 LICENSE=	modified-bsd
 
 .include "../../mk/haskell.mk"
