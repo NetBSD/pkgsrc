@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4409 2025/01/31 17:14:21 micha Exp $
+# $NetBSD: Makefile,v 1.4410 2025/01/31 18:23:12 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -650,7 +650,6 @@ SUBDIR+=	hs-hinotify
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hls-plugin-api
-SUBDIR+=	hs-hls-test-utils
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
 SUBDIR+=	hs-hw-fingertree
@@ -2678,6 +2677,7 @@ SUBDIR+=	py-hyperscan
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-hypothesis4
 SUBDIR+=	py-hypothesmith
+SUBDIR+=	py-id
 SUBDIR+=	py-idle
 SUBDIR+=	py-ijson
 SUBDIR+=	py-immutabledict
