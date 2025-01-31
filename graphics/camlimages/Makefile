@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2024/12/27 08:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2025/01/31 07:09:56 wiz Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -15,6 +15,7 @@ LICENSE=		gnu-gpl-v2
 
 TOOL_DEPENDS+=		omake>=0.9.8.6.0rc1:../../devel/omake
 TOOL_DEPENDS+=		ocaml-findlib>=1.2.6:../../devel/ocaml-findlib
+DEPENDS+=		rgb-[0-9]*:../../x11/rgb
 
 MAKE_JOBS_SAFE=		no
 
@@ -32,6 +33,8 @@ SUBST_MESSAGE.omf=	Fixing vars in OMakefile
 
 INSTALLATION_DIRS=	lib/ocaml/site-lib
 
+USE_TOOLS+=		pkg-config
+
 do-build:
 	cd ${WRKSRC} && ${PREFIX}/bin/omake --configure --verbose
 
@@ -41,7 +44,6 @@ do-install:
 
 OCAML_USE_FINDLIB=	yes
 
-BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.11.0
 .include "../../lang/ocaml/ocaml.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"

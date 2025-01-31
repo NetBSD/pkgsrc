@@ -1,4 +1,4 @@
-$NetBSD: patch-OMakefile,v 1.3 2016/09/18 05:48:59 dholland Exp $
+$NetBSD: patch-OMakefile,v 1.4 2025/01/31 07:09:56 wiz Exp $
 
 Use pkgsrc build variables, correct detection of libpng
 
@@ -30,12 +30,18 @@ Use pkgsrc build variables, correct detection of libpng
  
    HAVE_Z = $(Check_header_library z, zlib.h, zlibVersion)
 -  HAVE_PNG = $(Check_header_library png, png.h, png_create_read_struct)
-+  HAVE_PNG = $(Check_header_library png15, png.h, png_create_read_struct)
++  HAVE_PNG = $(Check_header_library png16, png.h, png_create_read_struct)
    SUPPORT_PNG = $(and $(HAVE_Z) $(HAVE_PNG))
    LDFLAGS_png=
    if $(SUPPORT_PNG)
 -    LDFLAGS_png=-lpng -lz
-+    LDFLAGS_png=-lpng15 -lz
++    LDFLAGS_png=-lpng16 -lz
      SUPPORTED_FORMATS+=png
      export
  
+@@ -207,4 +211,4 @@ section:
+   VERSION=$(PACKAGE_VERSION)
+   ConfReplaceConfigH(config.h)
+ 
+-.SUBDIRS: src test examples
++.SUBDIRS: src
