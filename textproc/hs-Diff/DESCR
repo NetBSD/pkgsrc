@@ -1,4 +1,4 @@
-O(ND) diff algorithm in Haskell.
+Implementation of the standard diff algorithm in Haskell.
 
-Implementation of the standard diff algorithm, and utilities for
-pretty-printing.
+Time complexity is O(ND) (input length * number of differences). Space
+complexity is O(D^2). Includes utilities for pretty printing.
