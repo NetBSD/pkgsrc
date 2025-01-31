@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/05 05:49:50 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/31 10:46:15 pho Exp $
 
-BLAKE2s (extensions-0.1.0.1.tar.gz) = ec550c8019451460057708d5c6af9bc69230415a13705bb3b8b4fb0898dada74
-SHA512 (extensions-0.1.0.1.tar.gz) = ac9d04a0746bf9c2fd69e389de80522258d73a70064a541698465a5fe7a46be8dd3a8ac485330ef230e84273c4bab2fed90a63e8d1afc7208b6b6a2356b83795
-Size (extensions-0.1.0.1.tar.gz) = 26645 bytes
+BLAKE2s (extensions-0.1.0.2.tar.gz) = 4ea2318588e3562e3460703ac354365f4073099d408f8735a825b2815f1dc219
+SHA512 (extensions-0.1.0.2.tar.gz) = aef7409930280eb18847d3de1e326af5b95c158e4824a12781645de7c81847465b18720aa2c59340706aeba40c25f71cdc40671ace9f3ce0b0379410fbf5c76b
+Size (extensions-0.1.0.2.tar.gz) = 26739 bytes

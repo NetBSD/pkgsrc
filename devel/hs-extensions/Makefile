@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:31:53 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/31 10:46:15 pho Exp $
 
-# NOTE: Cannot update to >=0.1.0.2 because they depend on GHC 10.
-DISTNAME=	extensions-0.1.0.1
-PKGREVISION=	1
+DISTNAME=	extensions-0.1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,6 +8,10 @@ COMMENT=	Parse Haskell Language Extensions
 LICENSE=	mpl-2.0
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base	\
+	containers	\
+	filepath	\
+	ghc-boot-th	\
 	optparse-applicative
 
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	\
