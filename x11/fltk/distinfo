@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.29 2022/07/27 18:42:42 wiz Exp $
+$NetBSD: distinfo,v 1.30 2025/01/31 12:22:44 micha Exp $
 
-BLAKE2s (fltk-1.1.10-source.tar.bz2) = 64883d2b8ad915a4922bbc3d3c799f5efbd751c77ff9ac3b8fd49d235578f301
-SHA512 (fltk-1.1.10-source.tar.bz2) = 5bdece6855f190e56ea57a54ebe38172f177e9a4ac40d834f7a646a1d419bf92cfda46a30a1434a952c81a2ad14a22a7a02961c8a24d0cfc352f4d80dc3319a6
-Size (fltk-1.1.10-source.tar.bz2) = 2214382 bytes
-SHA1 (patch-aa) = 661dcac75cf50c791c2edcc14ec93e9ee83b062a
-SHA1 (patch-ab) = 6c7b22664d0cc474ec3c26a1afa9150e535061a4
-SHA1 (patch-ac) = 6aa8efbb4bf9d9e49662d30ec02f02725220dfd8
-SHA1 (patch-ad) = b04051b14eb0bc74e8ccfe762e367ab8ccb11b80
-SHA1 (patch-ae) = de29d1be1219c3b17707216a7c54c25a9adb746c
-SHA1 (patch-af) = 791ba33cfc85e41e0f2b75ce0d1b0d6a378d9d0b
-SHA1 (patch-ag) = aaeb376acf79b695e8376e7610534d125dff6a86
-SHA1 (patch-ah) = 876f79b4d0523035307ecc7d76460cad44b40704
-SHA1 (patch-fluid_Fl__Type.h) = b2ea0bebf152ab0755135fbe8cc6179d2f6d79e1
-SHA1 (patch-src_fl__draw.cxx) = 824ee95fe997ed553b88801569b35f3698d11898
+BLAKE2s (fltk-1.4.1-source.tar.bz2) = a6bd639364903fa157331cc00b1d8d1b91e64e3c64b2ddb64a5a27747cb104e8
+SHA512 (fltk-1.4.1-source.tar.bz2) = 90b223f66e3a8eb23225a259cddfeb90f1f8744ff6a366f274923c1c34d251e028835755d1738efb53398ac7e45e362a71542978faef04fc3d84a87f7b722037
+Size (fltk-1.4.1-source.tar.bz2) = 8456879 bytes
+SHA1 (patch-FL_Fl__Cairo.H) = 8d6b8779040c466881502d82245789f69b6a019d
+SHA1 (patch-cairo_Makefile) = 578c24fac83e61f68c934159f28f5abd05896d27
+SHA1 (patch-configure) = 1beca8af8341f344623f04b9d89cac53119cf1ef
+SHA1 (patch-documentation_Makefile) = a7edaea63d7c4ef8b740281eaf65e6cb491487f9
+SHA1 (patch-fltk-options_Makefile) = ebfc6c34bb58304dd5ef8e35dbfb48c9e2d1b958
+SHA1 (patch-fluid_Makefile) = 7f12a68012ad77330af914aa6fbb8de61131c5cd
+SHA1 (patch-makeinclude.in) = 5a7213151af33b6f14c735aeebf416064e2c8dc6
+SHA1 (patch-src_Makefile) = b3ba47afcb87d31fc765ffa219bec75f1717f8cf
+SHA1 (patch-test_Makefile) = 18be155add5a8d50e9a64477c0088c190326f0cd
