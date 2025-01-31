@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2024/08/25 06:18:44 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2025/01/31 15:54:44 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eureka
 PKG_SUPPORTED_OPTIONS=	opengl xdg-utils
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	opengl xdg-utils
 
 .include "../../mk/bsd.options.mk"
 
-.include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 
 # opengl: Use OpenGL for rendering
 # If FLTK is compiled without opengl option, it is always disabled here too.
