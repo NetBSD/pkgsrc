@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.862 2025/01/31 07:59:50 pho Exp $
+$NetBSD: CHANGES-2025,v 1.863 2025/01/31 08:04:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1112,3 +1112,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-stm-hamt to 1.2.1 [pho 2025-01-31]
 	Updated devel/hs-stm-containers to 1.2.1 [pho 2025-01-31]
 	Updated devel/hs-hls-graph to 2.9.0.0 [pho 2025-01-31]
+	Updated devel/hs-quickcheck-instances to 0.3.32 [pho 2025-01-31]
