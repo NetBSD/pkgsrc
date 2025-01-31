@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4404 2025/01/31 14:14:30 pho Exp $
+# $NetBSD: Makefile,v 1.4405 2025/01/31 14:23:21 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -738,6 +738,7 @@ SUBDIR+=	hs-semver-range
 SUBDIR+=	hs-serialise
 SUBDIR+=	hs-setenv
 SUBDIR+=	hs-setlocale
+SUBDIR+=	hs-shake
 SUBDIR+=	hs-shelly
 SUBDIR+=	hs-silently
 SUBDIR+=	hs-singleton-bool
