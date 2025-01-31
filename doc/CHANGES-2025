@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.880 2025/01/31 10:51:34 pho Exp $
+$NetBSD: CHANGES-2025,v 1.881 2025/01/31 10:53:28 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-extensions to 0.1.0.2 [pho 2025-01-31]
 	Updated devel/hs-pretty-simple to 4.1.3.0 [pho 2025-01-31]
 	Updated devel/hs-relude to 1.2.2.0 [pho 2025-01-31]
+	Removed emulators/palmosemulator [micha 2025-01-31]
