@@ -1,6 +1,7 @@
-$NetBSD: patch-src_xercesc_util_Xerces__autoconf__config.hpp.cmake.in,v 1.1 2025/01/31 12:18:20 wiz Exp $
+$NetBSD: patch-src_xercesc_util_Xerces__autoconf__config.hpp.cmake.in,v 1.2 2025/01/31 15:13:26 wiz Exp $
 
 These symbols may be undefined, so check for them with #ifdef.
+https://issues.apache.org/jira/browse/XERCESC-2260
 
 --- src/xercesc/util/Xerces_autoconf_config.hpp.cmake.in.orig	2025-01-31 12:07:26.048504288 +0000
 +++ src/xercesc/util/Xerces_autoconf_config.hpp.cmake.in
