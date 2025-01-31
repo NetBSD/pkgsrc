@@ -1,0 +1,15 @@
+Shake is a Haskell library for writing build systems - designed as a replacement
+for make. See Development.Shake for an introduction, including an example. The
+homepage contains links to a user manual, an academic paper and further
+information: https://shakebuild.com
+
+To use Shake the user writes a Haskell program that imports Development.Shake,
+defines some build rules, and calls the Development.Shake.shakeArgs function.
+Thanks to do notation and infix operators, a simple Shake build system is not
+too dissimilar from a simple Makefile. However, as build systems get more
+complex, Shake is able to take advantage of the excellent abstraction facilities
+offered by Haskell and easily support much larger projects. The Shake library
+provides all the standard features available in other build systems, including
+automatic parallelism and minimal rebuilds. Shake also provides more accurate
+dependency tracking, including seamless support for generated files, and
+dependencies on system information (e.g. compiler version).

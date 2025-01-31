@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 14:22:52 pho Exp $
+
+BLAKE2s (shake-0.19.8.tar.gz) = 516d7e873607cb1197a5119e23c73817ebc230d146011d773d3a7dafbe7ed8c9
+SHA512 (shake-0.19.8.tar.gz) = 0570155f03a02cacfcd1c30d16e3a7c4a2d44bc74d4d37f21d36883a88fe51289aa01b1a6f8f961e79cf0143edbec6c50158f0a5aace87bb6b6010f00c9d02b9
+Size (shake-0.19.8.tar.gz) = 268011 bytes
