@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 14:29:44 pho Exp $
+
+BLAKE2s (neat-interpolation-0.5.1.4.tar.gz) = 842796f62a39a75b6dbd7c7eeb89233c7f906b436e5cd79543e2487d05fba958
+SHA512 (neat-interpolation-0.5.1.4.tar.gz) = 16f62bee23984fabebd70e70311b24bc2e7835ba90cf84bb7bb6f4d84c097bf817e3f5d653c843117b63ed886b0e16511219a688e17bdcf62c16f659074d690f
+Size (neat-interpolation-0.5.1.4.tar.gz) = 5741 bytes
