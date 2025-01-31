@@ -1,0 +1,17 @@
+$NetBSD: patch-meson.build,v 1.1 2025/01/31 17:11:10 micha Exp $
+
+Disable git (no downloads during build).
+
+--- meson.build.orig	2024-11-25 14:54:48.138610678 +0000
++++ meson.build
+@@ -19,7 +19,9 @@ fs = import('fs')
+ 
+ # version information
+ 
+-git = find_program('git', required: false)
++# Disable git for pkgsrc
++git = find_program('git_disabled', required: false)
++#git = find_program('git', required: false)
+ if git.found() and fs.is_dir('.git')
+     rev = run_command(git, 'rev-parse', '--short', 'HEAD', check: true)
+     git_sha = rev.stdout().strip()

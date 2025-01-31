@@ -1,0 +1,19 @@
+$NetBSD: patch-tests_project_meson.build,v 1.1 2025/01/31 17:11:10 micha Exp $
+
+Fix build without git.
+
+From upstream commit 74174cbb3e9e1386982b18ffd0ab0e4fe72c98b2.
+
+--- tests/project/meson.build.orig	2024-10-07 15:19:19.000000000 +0000
++++ tests/project/meson.build
+@@ -401,8 +401,9 @@ else
+     endif
+ endif
+ 
++meson_tests_dir = meson.current_source_dir() / 'meson-tests'
++
+ if git.found()
+-    meson_tests_dir = meson.current_source_dir() / 'meson-tests'
+     meson_tests_sha = '1e565931348f15f3f9b654f46ab4bf5fa009ca4f'
+ 
+     if not fs.is_dir(meson_tests_dir)
