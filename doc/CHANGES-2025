@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.914 2025/01/31 17:15:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.915 2025/01/31 17:17:20 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1166,3 +1166,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-atomic-write to 0.2.1.0 [pho 2025-01-31]
 	Updated devel/hs-pointed to 5.0.5 [pho 2025-01-31]
 	Updated audio/ardour to 8.10.0 [wiz 2025-01-31]
+	Added devel/muon version 0.3.1 [micha 2025-01-31]
