@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/04 11:24:53 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 10:22:40 pho Exp $
 bin/ghcide
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Strict.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Control/Concurrent/Strict.hi
@@ -60,6 +60,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/Tracing.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/UseStale.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/UseStale.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/UseStale.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/WorkerThread.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/WorkerThread.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Core/WorkerThread.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/CPP.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/CPP.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/GHC/CPP.p_hi
@@ -138,9 +141,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Main.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Main/HeapStats.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Main/HeapStats.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Main/HeapStats.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/EKG.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/EKG.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/EKG.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/OpenTelemetry.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/OpenTelemetry.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Monitoring/OpenTelemetry.p_hi
@@ -177,9 +177,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Diagnostics.
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/Implicit.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Session/VersionCheck.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Spans/AtPoint.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Spans/AtPoint.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Development/IDE/Spans/AtPoint.p_hi
@@ -252,6 +249,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-C
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-Shake.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-Tracing.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-UseStale.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Core-WorkerThread.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-CmdLine.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-Core.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-GHC-Compat-Env.html
@@ -276,7 +274,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-L
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-LSP-Server.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Main-HeapStats.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Main.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Monitoring-EKG.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Monitoring-OpenTelemetry.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-Completions-Logic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghcide-${PKGVERSION}/html/Development-IDE-Plugin-Completions-Types.html

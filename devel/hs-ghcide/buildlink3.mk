@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.19 2024/11/14 22:19:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2025/01/31 10:22:40 pho Exp $
 
 BUILDLINK_TREE+=	hs-ghcide
 
 .if !defined(HS_GHCIDE_BUILDLINK3_MK)
 HS_GHCIDE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.7.0
-BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.7.0.0nb5
+BUILDLINK_API_DEPENDS.hs-ghcide+=	hs-ghcide>=2.9.0
+BUILDLINK_ABI_DEPENDS.hs-ghcide+=	hs-ghcide>=2.9.0.0
 BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 
 .include "../../converters/hs-aeson/buildlink3.mk"
@@ -24,8 +24,6 @@ BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 .include "../../misc/hs-extra/buildlink3.mk"
 .include "../../devel/hs-fingertree/buildlink3.mk"
 .include "../../devel/hs-focus/buildlink3.mk"
-.include "../../devel/hs-ghc-check/buildlink3.mk"
-.include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-ghc-trace-events/buildlink3.mk"
 .include "../../textproc/hs-Glob/buildlink3.mk"
 .include "../../textproc/hs-haddock-library/buildlink3.mk"
@@ -47,7 +45,6 @@ BUILDLINK_PKGSRCDIR.hs-ghcide?=		../../devel/hs-ghcide
 .include "../../textproc/hs-prettyprinter-ansi-terminal/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
 .include "../../textproc/hs-regex-tdfa/buildlink3.mk"
-.include "../../devel/hs-row-types/buildlink3.mk"
 .include "../../devel/hs-safe-exceptions/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
 .include "../../databases/hs-sqlite-simple/buildlink3.mk"

@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/04 11:24:53 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/31 10:22:40 pho Exp $
 
-BLAKE2s (ghcide-2.7.0.0.tar.gz) = a0f2f535471f0f3bcc39a888f686dff8d8d0b0380468a784490455f861a5490b
-SHA512 (ghcide-2.7.0.0.tar.gz) = ddcca10eba2f4ad6d7d02a992826ca70769d1cddd84093b9d963ee3d05c8e7eefa788c04a0c9b42989f88a9642b01618d99ff042086bcc2e4a4c6ee634bdef52
-Size (ghcide-2.7.0.0.tar.gz) = 301061 bytes
-SHA1 (patch-session-loader_Development_IDE_Session.hs) = 6d2d73f366759bf15fcbaf1d8df3894ccf91dfae
-SHA1 (patch-src_Development_IDE_Core_PositionMapping.hs) = 27f1f7afaf8e83a8e0525eb70c96bf4a77e25114
-SHA1 (patch-src_Development_IDE_Plugin_Completions_Logic.hs) = a1dae580d7bf36ff8e0f285c6cbb6aea4dcf5703
+BLAKE2s (ghcide-2.9.0.0.tar.gz) = 6a456c7c6e1ada53350f41ca01ba4f01f210c3780737dc1da02c9d35fcf892aa
+SHA512 (ghcide-2.9.0.0.tar.gz) = f8d0cb3f05c8d7d72d6762a59b957174acccf845fa12336cf1056d8eff36d92a318e567c95a67174fbfddd9dcb1e8b525aeb9f8ff52034fa3afb435c095792d0
+Size (ghcide-2.9.0.0.tar.gz) = 255532 bytes
