@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 02:05:15 scole Exp $
+
+BLAKE2s (Tcl-pTk-1.11.tar.gz) = 59173b4361831baee6c509b8a5a276c6341d90b6e90aeb981e31ff2e2d25ffda
+SHA512 (Tcl-pTk-1.11.tar.gz) = 1aa85abbec720e78488d5be9ab67b6027dc5e239a7cd9bf90af504f92f7ce534d348ca166a47c3d7358758a88aa60999e56c496fb0925e08f7bf46c7d3a139c3
+Size (Tcl-pTk-1.11.tar.gz) = 551598 bytes

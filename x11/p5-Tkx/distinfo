@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 02:05:16 scole Exp $
+
+BLAKE2s (Tkx-1.10.tar.gz) = 4a040d57f9edc571e192ea50a09e6130f29614093be132e8daf29f5f2d98f284
+SHA512 (Tkx-1.10.tar.gz) = 95264a6cf0894f69dbc26c48e7e8772383c64aa9c2f5fc037a7f57a608ae1309f5a9f7570abfa5f0570a43b2a977594ee9caaacfeef48f9370fc4d99087f7dac
+Size (Tkx-1.10.tar.gz) = 29021 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1059 2025/01/27 11:13:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1060 2025/01/31 02:05:15 scole Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -276,7 +276,10 @@ SUBDIR+=	p5-Alien-wxWidgets
 SUBDIR+=	p5-Clipboard
 SUBDIR+=	p5-Gtk2-Ex-FormFactory
 SUBDIR+=	p5-Gtk3-SimpleList
+SUBDIR+=	p5-Tcl-Tk
+SUBDIR+=	p5-Tcl-pTk
 SUBDIR+=	p5-Tk
+SUBDIR+=	p5-Tkx
 SUBDIR+=	p5-Wx
 SUBDIR+=	p5-Wx-Perl-ProcessStream
 SUBDIR+=	p5-X11-Protocol
