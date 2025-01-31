@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2022/04/17 04:07:13 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2025/01/31 14:08:16 wiz Exp $
 
 BLAKE2s (mysql-cluster-gpl-7.5.25.tar.gz) = c9ee8801deaa869ae2476bb89b39085543b85ab864829b608bb83b056564f56f
 SHA512 (mysql-cluster-gpl-7.5.25.tar.gz) = df6e16318f02afbabfe55fce3b4ae9aef0e101fbf0af131a2cfb17ce511d7f8698f3a51a9374f485f428a17f72942cf0b3c67525f13a54af9531c40a9b210bbb
@@ -55,3 +55,4 @@ SHA1 (patch-storage_ndb_src_mgmapi_ndb__logevent.cpp) = b4bd079cd4b24b187b20d658
 SHA1 (patch-storage_perfschema_CMakeLists.txt) = bb4aa05dae20011f79c860b05b40017322d01e55
 SHA1 (patch-storage_perfschema_unittest_CMakeLists.txt) = 15f4255f175c1d5a0709542f71e99da0d4a0296c
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903
+SHA1 (patch-zlib_zlib.h) = 3134ce661cb37b3f4b504253770696863a4eac63
