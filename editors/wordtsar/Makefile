@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/11/30 21:03:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/31 10:09:43 wiz Exp $
 
 DISTNAME=	WordTsar-0.3.719-src
 PKGNAME=	${DISTNAME:tl:S/-src//}
@@ -12,13 +12,23 @@ HOMEPAGE=	http://wordtsar.ca/
 COMMENT=	Wordstar for the 21st Century
 LICENSE=	gnu-agpl-v3
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	bash pkg-config
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS+=	bin
 
+REPLACE_BASH+=	rev.sh
+
+# unclear why this is necessary or where this comes from
+SUBST_CLASSES+=		path
+SUBST_SED.path+=	-e s,../../src/core/include/version.h,../src/core/include/version.h,
+SUBST_FILES.path+=	build/Makefile
+SUBST_STAGE.path=	post-configure
+SUBST_MESSAGE.path=	Fixing path to version.h
+
 do-configure:
 	${MKDIR} ${WRKSRC}/build
+	${CHMOD} 755 ${WRKSRC}/rev.sh
 	cd ${WRKSRC}/build && \
 		${CONFIGURE_ENV} ${QTDIR}/bin/qmake ../wordtsar.pro
 
