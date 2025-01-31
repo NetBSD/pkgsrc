@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.868 2025/01/31 08:49:48 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.869 2025/01/31 09:05:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certifi to 2025.1.31 [adam 2025-01-31]
 	Updated databases/py-alembic to 1.14.1 [adam 2025-01-31]
 	Updated games/vcmi to 1.6.3 [wiz 2025-01-31]
+	Updated security/hs-entropy to 0.4.1.11 [pho 2025-01-31]
