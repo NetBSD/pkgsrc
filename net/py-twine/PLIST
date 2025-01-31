@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 18:32:35 wiz Exp $
 bin/twine-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -30,6 +30,9 @@ ${PYSITELIB}/twine/commands/register.pyo
 ${PYSITELIB}/twine/commands/upload.py
 ${PYSITELIB}/twine/commands/upload.pyc
 ${PYSITELIB}/twine/commands/upload.pyo
+${PYSITELIB}/twine/distribution.py
+${PYSITELIB}/twine/distribution.pyc
+${PYSITELIB}/twine/distribution.pyo
 ${PYSITELIB}/twine/exceptions.py
 ${PYSITELIB}/twine/exceptions.pyc
 ${PYSITELIB}/twine/exceptions.pyo
@@ -40,6 +43,9 @@ ${PYSITELIB}/twine/py.typed
 ${PYSITELIB}/twine/repository.py
 ${PYSITELIB}/twine/repository.pyc
 ${PYSITELIB}/twine/repository.pyo
+${PYSITELIB}/twine/sdist.py
+${PYSITELIB}/twine/sdist.pyc
+${PYSITELIB}/twine/sdist.pyo
 ${PYSITELIB}/twine/settings.py
 ${PYSITELIB}/twine/settings.pyc
 ${PYSITELIB}/twine/settings.pyo
@@ -49,6 +55,3 @@ ${PYSITELIB}/twine/utils.pyo
 ${PYSITELIB}/twine/wheel.py
 ${PYSITELIB}/twine/wheel.pyc
 ${PYSITELIB}/twine/wheel.pyo
-${PYSITELIB}/twine/wininst.py
-${PYSITELIB}/twine/wininst.pyc
-${PYSITELIB}/twine/wininst.pyo
