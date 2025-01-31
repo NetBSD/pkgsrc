@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2024/11/14 22:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/01/31 06:56:09 pho Exp $
 
-DISTNAME=	hiedb-0.6.0.0
-PKGREVISION=	5
+DISTNAME=	hiedb-0.6.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
