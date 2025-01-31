@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4406 2025/01/31 14:35:36 pho Exp $
+# $NetBSD: Makefile,v 1.4407 2025/01/31 14:39:45 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -761,6 +761,7 @@ SUBDIR+=	hs-tabular
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tasty
 SUBDIR+=	hs-tasty-expected-failure
+SUBDIR+=	hs-tasty-golden
 SUBDIR+=	hs-tasty-hunit
 SUBDIR+=	hs-tasty-quickcheck
 SUBDIR+=	hs-tasty-rerun
