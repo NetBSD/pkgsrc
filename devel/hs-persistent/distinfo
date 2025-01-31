@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/05/03 09:31:01 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/31 00:02:07 pho Exp $
 
-BLAKE2s (persistent-2.14.6.1.tar.gz) = 999301d5e0132e1e7b347a3299fdb33629d35ac5cb5f5a5972cf39975cde2d5f
-SHA512 (persistent-2.14.6.1.tar.gz) = 895b47c10077d24313390765121e5e127dc4ffc2414d771a32c4e09cb53e237613487405d24b7f0925a5d38616e9be32ae7a4b62aa9a8037f3cfeb4423ef107c
-Size (persistent-2.14.6.1.tar.gz) = 176684 bytes
+BLAKE2s (persistent-2.14.6.3.tar.gz) = 573943708cf4b55416321c1249448c8a10859309a85f28d05c67a18d72571016
+SHA512 (persistent-2.14.6.3.tar.gz) = d9e5babde740101f24da3a5f34db5de46398c399ab87114995f0361072e53cfef3a9cb18cada55e189877dbaa549675e32fb095836c2ba924a41c01cc2edee80
+Size (persistent-2.14.6.3.tar.gz) = 176943 bytes
