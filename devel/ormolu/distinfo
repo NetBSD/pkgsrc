@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/02 04:12:34 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/01/31 10:34:51 pho Exp $
 
-BLAKE2s (ormolu-0.7.4.0.tar.gz) = 0abc11416a4c127226cfd907c12709305fce7fb865869aeabb5bc46d9fba7ca3
-SHA512 (ormolu-0.7.4.0.tar.gz) = 2e5ec2b4a47ffb4e31c4461cbc4812b72a754b5dac32dc0ceedfdd780d1dfc5720f9e61bdb05f38936405603368ed7ea75b4d804254f31db43e0ab26c6d7a2c2
-Size (ormolu-0.7.4.0.tar.gz) = 350867 bytes
+BLAKE2s (ormolu-0.7.7.0.tar.gz) = 97b983bfa452c24ee628b060e9f8beb72a73f17b7caa2ae86e58de0b848df67e
+SHA512 (ormolu-0.7.7.0.tar.gz) = b0f2e889dbffb06b753f80409cc6792dc0c2d9e26c8e6a38f6b673d55be7395586b8497347f00652608ba16d482464906373791f6424bc4d4ddb8ed607a0b824
+Size (ormolu-0.7.7.0.tar.gz) = 361568 bytes
