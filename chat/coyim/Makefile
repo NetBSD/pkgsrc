@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2024/12/27 08:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2025/01/31 15:19:59 wiz Exp $
 
 DISTNAME=	coyim-0.4.1
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coyim/}
@@ -13,6 +13,9 @@ COMMENT=	Safe and secure by default chat client
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config gmake
+
+BROKEN_ON_PLATFORM+=	Darwin-*-*
+BROKEN_ON_PLATFORM+=	NetBSD-*-*
 
 # for patching
 EXTRACT_ONLY=	${DEFAULT_DISTFILES} github.com_awnumar_memcall_@v_v0.1.2.zip
