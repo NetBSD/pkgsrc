@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/04 07:04:15 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 09:56:22 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Diagnostics.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Diagnostics.hi
@@ -18,6 +18,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Core.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Processing.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Processing.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Processing.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Progress.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Progress.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/Server/Progress.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/VFS.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/VFS.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/LSP/VFS.p_hi
@@ -30,6 +33,29 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/Language-LSP-Diagnos
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/Language-LSP-Logging.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/Language-LSP-Server.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/Language-LSP-VFS.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-60.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-95.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-A.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-All.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-B.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-C.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-D.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-E.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-F.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-G.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-H.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-I.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-L.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-M.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-N.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-O.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-P.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-R.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-S.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-T.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-U.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-V.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index-W.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/lsp-${PKGVERSION}/html/index.html
