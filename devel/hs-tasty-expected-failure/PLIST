@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/31 14:35:08 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/ExpectedFailure.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/ExpectedFailure.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Test/Tasty/ExpectedFailure.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/tasty-expected-failure-${PKGVERSION}/${HS_VERSION}/package-description
+lib/tasty-expected-failure-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/Test-Tasty-ExpectedFailure.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/tasty-expected-failure-${PKGVERSION}/html/tasty-expected-failure.haddock

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 14:35:08 pho Exp $
+
+BLAKE2s (tasty-expected-failure-0.12.3.tar.gz) = 882b512de64d65eace0c01bcb65fbddfb57347646374ab8c1e9415e1cdd2622a
+SHA512 (tasty-expected-failure-0.12.3.tar.gz) = 38a38a6b918355b341ac52fbbd63312fbc44f2071785401dc667bb50b030e8c1963c5eb8f890c36daa0987d2fb4748effa543076429e0c8dea58f2fb0bf29f0c
+Size (tasty-expected-failure-0.12.3.tar.gz) = 6016 bytes
