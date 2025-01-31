@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/18 15:36:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/31 17:15:11 wiz Exp $
 bin/ardour8
 bin/ardour8-copy-mixer
 bin/ardour8-export
 bin/ardour8-lua
-bin/ardour8-new_aaf_session
 bin/ardour8-new_empty_session
 bin/ardour8-new_session
 lib/ardour8/LV2/a-comp.lv2/a-comp#stereo.ttl
@@ -69,6 +68,10 @@ lib/ardour8/libpbd.so.4.1.0
 lib/ardour8/libptformat.so
 lib/ardour8/libptformat.so.0
 lib/ardour8/libptformat.so.0.0.0
+lib/ardour8/libsuil.so
+lib/ardour8/libsuil.so.0
+lib/ardour8/libsuil.so.0.10.8
+lib/ardour8/libsuil_x11_in_gtk2.so
 lib/ardour8/libtemporal.so
 lib/ardour8/libtemporal.so.0
 lib/ardour8/libtemporal.so.0.0.0
@@ -78,6 +81,27 @@ lib/ardour8/libwaveview.so.0.0.0
 lib/ardour8/libwidgets.so
 lib/ardour8/libwidgets.so.0
 lib/ardour8/libwidgets.so.0.0.0
+lib/ardour8/libydk-pixbuf.so
+lib/ardour8/libydk-pixbuf.so.2
+lib/ardour8/libydk-pixbuf.so.2.31.1
+lib/ardour8/libydk.so
+lib/ardour8/libydk.so.2
+lib/ardour8/libydk.so.2.24.23
+lib/ardour8/libydkmm.so
+lib/ardour8/libydkmm.so.2
+lib/ardour8/libydkmm.so.2.24.5
+lib/ardour8/libytk.so
+lib/ardour8/libytk.so.2
+lib/ardour8/libytk.so.2.24.23
+lib/ardour8/libytkmm.so
+lib/ardour8/libytkmm.so.2
+lib/ardour8/libytkmm.so.2.24.5
+lib/ardour8/libztk.so
+lib/ardour8/libztk.so.2
+lib/ardour8/libztk.so.2.14.0
+lib/ardour8/libztkmm.so
+lib/ardour8/libztkmm.so.2
+lib/ardour8/libztkmm.so.2.22.7
 lib/ardour8/luasession
 lib/ardour8/panners/libpan1in2out.so
 lib/ardour8/panners/libpan2in2out.so
@@ -93,6 +117,7 @@ lib/ardour8/surfaces/libardour_faderport2.so
 lib/ardour8/surfaces/libardour_faderport8.so
 lib/ardour8/surfaces/libardour_generic_midi.so
 lib/ardour8/surfaces/libardour_launch_control_xl.so
+lib/ardour8/surfaces/libardour_launchkey_4.so
 lib/ardour8/surfaces/libardour_launchpad_mini.so
 lib/ardour8/surfaces/libardour_launchpad_pro.so
 lib/ardour8/surfaces/libardour_launchpad_x.so
@@ -104,7 +129,6 @@ lib/ardour8/surfaces/libardour_us2400.so
 lib/ardour8/utils/ardour-util.sh
 lib/ardour8/utils/ardour8-copy-mixer
 lib/ardour8/utils/ardour8-export
-lib/ardour8/utils/ardour8-new_aaf_session
 lib/ardour8/utils/ardour8-new_empty_session
 lib/ardour8/utils/ardour8-new_session
 lib/ardour8/vamp/libardourvampplugins.so
@@ -185,6 +209,8 @@ share/ardour8/icons/launch_control_xl.png
 share/ardour8/icons/launchpad-mini.png
 share/ardour8/icons/launchpad-pro.png
 share/ardour8/icons/launchpad-x.png
+share/ardour8/icons/lkmk4.png
+share/ardour8/icons/lkmk4mini.png
 share/ardour8/icons/mezzforte.png
 share/ardour8/icons/mezzoforte.png
 share/ardour8/icons/mezzopiano.png
@@ -306,11 +332,13 @@ share/ardour8/midi_maps/AKAI_MPK225_Plugins.map
 share/ardour8/midi_maps/AKAI_MPK249.map
 share/ardour8/midi_maps/AKAI_MPK61.map
 share/ardour8/midi_maps/AKAI_MPKmini.map
+share/ardour8/midi_maps/AKAI_MPKmini_mk3.map
 share/ardour8/midi_maps/AKAI_MPKminiplus.map
 share/ardour8/midi_maps/Alesis_Q49v2.map
 share/ardour8/midi_maps/Alesis_QX25.map
 share/ardour8/midi_maps/Alesis_VI25.map
 share/ardour8/midi_maps/Arturia_KeyLab49.map
+share/ardour8/midi_maps/Arturia_MiniLab_3.map
 share/ardour8/midi_maps/Arturia_MiniLab_mkII.map
 share/ardour8/midi_maps/DDX3216.map
 share/ardour8/midi_maps/Devine_Versakey.map
@@ -323,6 +351,7 @@ share/ardour8/midi_maps/Korg_nanoKONTROL_Studio.map
 share/ardour8/midi_maps/Korg_taktile.map
 share/ardour8/midi_maps/M-Audio_Axiom25.map
 share/ardour8/midi_maps/M-Audio_Axiom61.map
+share/ardour8/midi_maps/M-Audio_Axiom_49_mkII.map
 share/ardour8/midi_maps/M-Audio_Axiom_AIR_Mini_32.map
 share/ardour8/midi_maps/M-Audio_Axiom_Air_25_2015_Model_Transport_Only.map
 share/ardour8/midi_maps/M-Audio_Oxygen49.map
@@ -340,6 +369,7 @@ share/ardour8/midi_maps/Yamaha_KX25.map
 share/ardour8/midi_maps/akai-mpd-32.map
 share/ardour8/midi_maps/bcf2000.map
 share/ardour8/midi_maps/bcf2000_mackie.map
+share/ardour8/midi_maps/donnerdmk25.map
 share/ardour8/midi_maps/m-audio-oxygen61v3.map
 share/ardour8/midi_maps/m-audio_oxygen25.map
 share/ardour8/midi_maps/m-audio_oxygen25_3rdGen.map
@@ -572,6 +602,7 @@ share/ardour8/patchfiles/Korg_Wavestation_EX.midnam
 share/ardour8/patchfiles/Korg_Wavestation_SR.midnam
 share/ardour8/patchfiles/Korg_X2_3_3R.midnam
 share/ardour8/patchfiles/Korg_X5(D).midnam
+share/ardour8/patchfiles/Korg_X50.midnam
 share/ardour8/patchfiles/Korg_X5DR.midnam
 share/ardour8/patchfiles/Korg_Z1.midnam
 share/ardour8/patchfiles/Korg_iSeries.midnam
@@ -585,6 +616,7 @@ share/ardour8/patchfiles/Kurzweil_K2500X.midnam
 share/ardour8/patchfiles/Kurzweil_K2500_2600_Expansion.midnam
 share/ardour8/patchfiles/Kurzweil_K2600.midnam
 share/ardour8/patchfiles/Kurzweil_K2661.midnam
+share/ardour8/patchfiles/Kurzweil_K2700.midnam
 share/ardour8/patchfiles/Kurzweil_Mark_12_152.midnam
 share/ardour8/patchfiles/Kurzweil_Micro_Piano.midnam
 share/ardour8/patchfiles/Kurzweil_PC2_PC2r_w_Orch.midnam
@@ -598,6 +630,7 @@ share/ardour8/patchfiles/Kurzweil_SP88x.midnam
 share/ardour8/patchfiles/Lexicon_DR_Music_FX_Expansion.midnam
 share/ardour8/patchfiles/Lexicon_Dual_FX_Expansion.midnam
 share/ardour8/patchfiles/Lexicon_Dual_Vrb_Expansion.midnam
+share/ardour8/patchfiles/Lexicon_MPX100.midnam
 share/ardour8/patchfiles/Lexicon_MPX500.midnam
 share/ardour8/patchfiles/Lexicon_MPX_1.midnam
 share/ardour8/patchfiles/Lexicon_MPX_500.midnam
@@ -796,6 +829,7 @@ share/ardour8/patchfiles/Yamaha_RM50.midnam
 share/ardour8/patchfiles/Yamaha_S30_80.midnam
 share/ardour8/patchfiles/Yamaha_S90.midnam
 share/ardour8/patchfiles/Yamaha_SY77.midnam
+share/ardour8/patchfiles/Yamaha_SY85.midnam
 share/ardour8/patchfiles/Yamaha_SY99.midnam
 share/ardour8/patchfiles/Yamaha_So3.midnam
 share/ardour8/patchfiles/Yamaha_So8.midnam
@@ -835,6 +869,8 @@ share/ardour8/scripts/bypass_all_plugins.lua
 share/ardour8/scripts/collapse_playlists.lua
 share/ardour8/scripts/create_drum_tracks.lua
 share/ardour8/scripts/delete_xrun_markers.lua
+share/ardour8/scripts/dm10studio.lua
+share/ardour8/scripts/duplicate_to_grid.lua
 share/ardour8/scripts/export_mp4chaps.lua
 share/ardour8/scripts/jump_to_marker.lua
 share/ardour8/scripts/lfo_automation.lua
@@ -856,6 +892,7 @@ share/ardour8/scripts/post_export_save_hook.lua
 share/ardour8/scripts/preare_record_example.lua
 share/ardour8/scripts/raptor_arp.lua
 share/ardour8/scripts/record_now.lua
+share/ardour8/scripts/remove_sysex_from_region.lua
 share/ardour8/scripts/remove_unknown_procs.lua
 share/ardour8/scripts/reset_mixer.lua
 share/ardour8/scripts/reverse_midi.lua
@@ -888,6 +925,7 @@ share/ardour8/scripts/s_whoami.lua
 share/ardour8/scripts/scl_to_mts.lua
 share/ardour8/scripts/scope.lua
 share/ardour8/scripts/select_every_2nd_region.lua
+share/ardour8/scripts/select_regions_at_playhead.lua
 share/ardour8/scripts/send_to_bus.lua
 share/ardour8/scripts/session_template_advanced.lua
 share/ardour8/scripts/session_template_record.lua
@@ -907,8 +945,10 @@ share/ardour8/scripts/vamp_audio_to_midi.lua
 share/ardour8/scripts/voice_activate.lua
 share/ardour8/scripts/x-fade.lua
 share/ardour8/templates/.stub
+share/ardour8/themes/adwaita_dark-ardour.colors
 share/ardour8/themes/blueberry_milk-ardour.colors
 share/ardour8/themes/caineville-ardour.colors
+share/ardour8/themes/captain_light-ardour.colors
 share/ardour8/themes/clear_gray-ardour.colors
 share/ardour8/themes/cubasish-ardour.colors
 share/ardour8/themes/dark-ardour.colors

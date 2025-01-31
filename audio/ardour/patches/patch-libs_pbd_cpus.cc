@@ -1,4 +1,6 @@
-$NetBSD: patch-libs_pbd_cpus.cc,v 1.1 2024/03/18 15:36:15 ryoon Exp $
+$NetBSD: patch-libs_pbd_cpus.cc,v 1.2 2025/01/31 17:15:11 wiz Exp $
+
+Fix build on NetBSD and OpenBSD.
 
 --- libs/pbd/cpus.cc.orig	2024-02-04 02:25:51.019870123 +0000
 +++ libs/pbd/cpus.cc

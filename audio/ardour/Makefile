@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2024/12/29 15:09:38 adam Exp $
+# $NetBSD: Makefile,v 1.96 2025/01/31 17:15:11 wiz Exp $
 
-DISTNAME=	Ardour-8.2.0
+DISTNAME=	Ardour-8.10.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	12
 CATEGORIES=	audio
-# currently, distfiles must be downloaded by hand from ardour.org
-# and uploaded using `make upload-distfiles`.
-# there is no canonical URL, only https://community.ardour.org/srctar
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	https://community.ardour.org/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,7 +20,8 @@ EGDIR=		${PREFIX}/share/examples/ardour8
 
 WAF_ENV+=	EGDIR=${EGDIR}
 
-USE_CXX_FEATURES+=	c++11
+USE_CXX_FEATURES+=	c++14
+FORCE_CXX_STD=		c++14
 
 CXXFLAGS+=	-fpermissive
 
@@ -71,10 +68,6 @@ LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/ardour8/vamp
 # strdup prototype difficulties...
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
-WAF_REPLACE_EXECUTABLE=		no
-# No release with python 3 support yet.
-# Patches are available.
-PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_FOR_BUILD_ONLY=		tool
 
 INSTALLATION_DIRS+=	share/appdata
