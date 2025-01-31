@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 14:39:28 pho Exp $
+
+BLAKE2s (tasty-golden-2.3.5.tar.gz) = b69a3ef09babcb37bc07e70016f28aafd16a8b73fecb8a935ed8fb6f28ce698c
+SHA512 (tasty-golden-2.3.5.tar.gz) = e98935654b0df84a5bbfe36d772c0895b4bb50a6fcc30d305261c3845f7c8a5ab0c0d2297157809cb61fd230d567dadcd763b953d79d9fadeb8e6edb9af5980f
+Size (tasty-golden-2.3.5.tar.gz) = 15179 bytes
