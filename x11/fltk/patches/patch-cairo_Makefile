@@ -1,0 +1,28 @@
+$NetBSD: patch-cairo_Makefile,v 1.1 2025/01/31 12:22:44 micha Exp $
+
+Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- cairo/Makefile.orig	2024-12-12 17:45:50.000000000 +0000
++++ cairo/Makefile
+@@ -48,6 +48,10 @@ $(CAIROLIBNAME): $(CAIROOBJECTS)
+ 	$(LIBCOMMAND) $@ $(CAIROOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_cairo.la: $(CAIROOBJECTS) ../src/libfltk.la
++	echo $(DSOCOMMAND) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(CAIROOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 2:0:0 -L../src -lfltk $(CAIROLIBS) $(LDLIBS)
++
+ libfltk_cairo.so.$(FL_DSO_VERSION): $(CAIROOBJECTS) ../src/libfltk.so.$(FL_DSO_VERSION)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(CAIROOBJECTS) -L../src -lfltk $(CAIROLIBS)
+@@ -109,6 +113,9 @@ install: $(CAIROLIBNAME) $(CAIRODSONAME)
+ 	-$(INSTALL_DIR) $(DESTDIR)$(libdir)
+ 	$(INSTALL_LIB) $(CAIROLIBNAME) $(DESTDIR)$(libdir)
+ 
++	if test x$(CAIRODSONAME) = xlibfltk_cairo.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_cairo.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(CAIRODSONAME) = xlibfltk_cairo.so.$(FL_DSO_VERSION); then\
+ 		$(RM) $(DESTDIR)$(libdir)/libfltk_cairo.so*;\
+ 		$(INSTALL_LIB) libfltk_cairo.so.$(FL_DSO_VERSION) $(DESTDIR)$(libdir); \

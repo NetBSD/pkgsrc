@@ -1,0 +1,43 @@
+$NetBSD: patch-makeinclude.in,v 1.1 2025/01/31 12:22:45 micha Exp $
+
+Do not use the static libraries created in "../lib".
+Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- makeinclude.in.orig	2024-12-12 17:45:50.000000000 +0000
++++ makeinclude.in
+@@ -107,7 +107,7 @@ LINKFLTKIMG	= @LINKFLTKIMG@ @LINKFLTK@ $
+ LINKFLTKCAIRO	= @LINKFLTKCAIRO@ $(CAIROLIBS)
+ FLTKCAIROOPTION = @FLTKCAIROOPTION@
+ LINKSHARED	= @DSOLINK@ @LINKSHARED@ $(IMAGELIBS) $(CAIROLIBS)
+-IMAGELIBS	= -L../lib @IMAGELIBS@
++IMAGELIBS	= @IMAGELIBS@
+ 
+ # optional extra build step for fluid:
+ FLUIDDIR  = @FLUIDDIR@
+@@ -169,20 +169,21 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+ 
+ .o$(EXEEXT):
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) $< $(LINKFLTK) $(LDLIBS) -o $@
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ .c.o:
+ 	echo Compiling $<...
+-	$(CC) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CC) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CFLAGS) -c $< -o $@
++
+ 
+ .cxx.o:
+ 	echo Compiling $<...
+-	$(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(ARCHFLAGS) @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $< -o $@
+ 
+ .mm.o:
+ 	echo Compiling $<...
+-	$(CXX) -I.. $(ARCHFLAGS) $(CXXFLAGS) -x objective-c++ -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CXX) -I.. $(ARCHFLAGS) $(CXXFLAGS) -x objective-c++ -c $< -o $@
+ 
+ 
+ .man.0 .man.1 .man.3 .man.6:
