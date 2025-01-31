@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.923 2025/01/31 18:41:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.924 2025/01/31 18:43:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1175,3 +1175,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-twine to 6.1.0 [wiz 2025-01-31]
 	Updated devel/py-ruff to 0.9.4 [wiz 2025-01-31]
 	Updated security/py-google-auth to 2.38.0 [wiz 2025-01-31]
+	Updated print/libpaper to 2.2.6 [wiz 2025-01-31]
