@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:31:58 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/01/31 06:50:08 pho Exp $
 
 DISTNAME=	hie-bios-0.14.0
 PKGREVISION=	1
@@ -7,6 +7,10 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Set up a GHC API session
 LICENSE=	modified-bsd
+
+HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	extra	\
+	ghc
 
 # hie-bios is built with optparse-applicative, and can generate shell
 # completion scripts automatically.
