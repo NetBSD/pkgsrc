@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2022/10/24 14:18:21 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/01/31 12:18:20 wiz Exp $
 
 DISTNAME=	xerces-c-3.2.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_APACHE:=xerces/c/3/sources/}
 
@@ -10,12 +11,7 @@ COMMENT=	Validating C++ XML parser with DOM and SAX support
 LICENSE=	apache-2.0
 
 USE_LANGUAGES=		c c++11
-USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE=	xerces-c.pc.in
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-curl
-CONFIGURE_ARGS+=	--without-icu
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,5 +29,6 @@ CONFIGURE_ARGS+=	--enable-transcoder-gnuiconv
 LDFLAGS+=		-liconv
 .endif
 
+.include "../../devel/cmake/build.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

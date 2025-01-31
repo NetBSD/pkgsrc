@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2022/10/24 14:18:21 wiz Exp $
+$NetBSD: distinfo,v 1.27 2025/01/31 12:18:20 wiz Exp $
 
 BLAKE2s (xerces-c-3.2.4.tar.gz) = 414bb34b8c60b082163593e3e539b14b5f7848c91de07d1cfd6836fb5c774876
 SHA512 (xerces-c-3.2.4.tar.gz) = 9a95c91219c1d86e8a96673ec4758203f185c38722586950bb1037c46f89663c55f988f9cf068a9fc78b6f78dd8d088f7199def920cc5ff8e318eaa5471fc4b1
 Size (xerces-c-3.2.4.tar.gz) = 7374651 bytes
 SHA1 (patch-src_xercesc_util_Base64.cpp) = 56cc5074564fd43bef11e458a037746e0a8b1bc4
+SHA1 (patch-src_xercesc_util_Xerces__autoconf__config.hpp.cmake.in) = 1d918993a23b1bbc72589b769186ab343d2c1c84
