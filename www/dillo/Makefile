@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2025/01/19 15:34:43 ktnb Exp $
+# $NetBSD: Makefile,v 1.94 2025/01/31 14:33:17 micha Exp $
 
 DISTNAME=	dillo-3.2.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dillo-browser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,9 +14,12 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+USE_FEATURES+=		snprintf vsnprintf
+USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl:run
+
+DEPENDS+=	wget-[0-9]*:../../net/wget
 
 REPLACE_PERL+=	dillo-install-hyphenation
-USE_TOOLS+=	perl:run wget:run
 
 PKG_SYSCONFSUBDIR=	dillo
 EGDIR=			${PREFIX}/share/examples/dillo
@@ -28,12 +32,10 @@ INSTALLATION_DIRS=	share/doc/dillo ${EGDIR}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
-USE_TOOLS+=		aclocal autoconf automake autoreconf gmake perl tar
-
 .include "options.mk"
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -fi
+	cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/dillo
@@ -44,7 +46,6 @@ post-install:
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-.include "../../x11/fltk13/buildlink3.mk"
-
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

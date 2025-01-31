@@ -1,1 +1,10 @@
-A very small and fast graphical web browser using FLTK-1.3.
+Dillo is a web browser designed to be fast, use few resources and
+support slow and unreliable networks on resource-constrained machines.
+It can load local and remote files via HTTP, HTTPS and FTP.
+Other protocols like Gemini, Gopher, IPFS and others are available as
+plugins.
+
+Dillo supports a subset of HTML 4.01 and CSS 2.1 but it doesn't support
+JavaScript and only implements some elements of HTML 5 and CSS 3.
+It also renders plain text documents and images in PNG, JPG and GIF
+formats.
