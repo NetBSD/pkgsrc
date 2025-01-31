@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:09 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/31 10:51:27 pho Exp $
 
-DISTNAME=	relude-1.2.1.0
-PKGREVISION=	1
+DISTNAME=	relude-1.2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Alternative Haskell standard library
 LICENSE=	mit
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base	\
-	ghc-prim
 
 .include "../../devel/hs-hashable/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
