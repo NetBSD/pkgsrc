@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.886 2025/01/31 12:25:59 micha Exp $
+$NetBSD: CHANGES-2025,v 1.887 2025/01/31 12:27:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1138,3 +1138,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kf6-kwindowsystem to 6.8.0nb1 [wiz 2025-01-31]
 	Updated textproc/xerces-c to 3.2.4nb1 [wiz 2025-01-31]
 	Updated x11/fltk to 1.4.1 [micha 2025-01-31]
+	Updated devel/kf6-ktexteditor to 6.8.0nb2 [wiz 2025-01-31]
