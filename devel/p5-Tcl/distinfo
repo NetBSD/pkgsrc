@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 01:41:29 scole Exp $
+
+BLAKE2s (Tcl-1.51.tar.gz) = 8b48a92993640c3eb53c2f1fe0337c9e90a4e38449c2c5fd55e8c6c06646648a
+SHA512 (Tcl-1.51.tar.gz) = 9caf1819c238a88e9370c405194d2a0a8bd158d2513884a6d18bc271ddab539e7c81af51278bf6cab687d51c295dbe37895a88a595b0b3a1b220d39c0dc6c7ff
+Size (Tcl-1.51.tar.gz) = 173079 bytes
