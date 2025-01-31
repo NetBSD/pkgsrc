@@ -1,10 +1,10 @@
-$NetBSD: patch-gtk2__ardour_wscript,v 1.4 2024/03/18 15:36:15 ryoon Exp $
+$NetBSD: patch-gtk2__ardour_wscript,v 1.5 2025/01/31 17:15:11 wiz Exp $
 
 Install config files to examples, per pkgsrc policy
 
---- gtk2_ardour/wscript.orig	2023-12-13 14:20:57.000000000 +0000
+--- gtk2_ardour/wscript.orig	2024-10-17 04:04:34.000000000 +0000
 +++ gtk2_ardour/wscript
-@@ -779,7 +779,7 @@ def build(bld):
+@@ -825,7 +825,7 @@ def build(bld):
      obj              = bld(features = 'subst')
      obj.source       = [ 'clearlooks.rc.in' ]
      obj.target       = 'clearlooks.rc'
@@ -13,7 +13,7 @@ Install config files to examples, per pkgsrc policy
      set_subst_dict(obj, font_subst_dict)
  
      font_subst_dict['FONTFAMILY'] = 'ArdourSans'
-@@ -787,13 +787,13 @@ def build(bld):
+@@ -833,13 +833,13 @@ def build(bld):
      obj              = bld(features = 'subst')
      obj.source       = [ 'clearlooks.rc.in' ]
      obj.target       = 'clearlooks.ardoursans.rc'
@@ -29,16 +29,16 @@ Install config files to examples, per pkgsrc policy
      set_subst_dict(obj, font_subst_dict)
  
      # Menus
-@@ -823,7 +823,7 @@ def build(bld):
-         obj.dep_vars = ['PTFORMAT', 'MIXBUS', 'MIXBUS32C', 'WINDOWS']
-         obj.stdin = program + '.menus.in'
-         obj.stdout = program + '.menus'
--        bld.install_files (bld.env['CONFDIR'], program + '.menus')
-+        bld.install_files (os.environ['EGDIR'], program + '.menus')
+@@ -872,7 +872,7 @@ def build(bld):
+     else:
+         obj.stdin = 'ardour.menus.in'
+     obj.stdout = 'ardour.menus'        
+-    bld.install_files (bld.env['CONFDIR'], 'ardour.menus')
++    bld.install_files (os.environ['EGDIR'], 'ardour.menus')
  
      # Freedesktop
      freedesktop_subst_dict = {
-@@ -880,7 +880,7 @@ def build(bld):
+@@ -929,7 +929,7 @@ def build(bld):
              source = [ b + '.keys.in', 'mixer.bindings', 'processor_box.bindings', 'step_editing.bindings', 'monitor.bindings', 'trigger.bindings' ],
              rule = a_rule
              )
@@ -47,7 +47,7 @@ Install config files to examples, per pkgsrc policy
  
      # Icons/Images
      bld.install_files(os.path.join (bld.env['DATADIR'], 'icons'), bld.path.ant_glob('icons/*.png'))
-@@ -898,7 +898,7 @@ def build(bld):
+@@ -947,7 +947,7 @@ def build(bld):
          bld.install_files(os.path.join (bld.env['DATADIR'], 'icons'), 'icons/cursor_square/hotspots')
  
      # Default UI configuration
