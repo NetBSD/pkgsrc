@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2024/01/06 15:35:26 rhialto Exp $
+# $NetBSD: options.mk,v 1.18 2025/01/31 17:49:02 rhialto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vice
 PKG_SUPPORTED_OPTIONS=		ffmpeg vice-x64 vice-cpuhistory pulseaudio alsa
@@ -8,11 +8,12 @@ PKG_SUGGESTED_OPTIONS=		gtk3 ffmpeg
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gtk sdl sdl1 sdl2 x64 desktop
+PLIST_VARS+=	gui gtk sdl sdl1 sdl2 x64 desktop
 
 .if !empty(PKG_OPTIONS:Mgtk3)
 CONFIGURE_ARGS+=	--enable-gtk3ui
 PLIST.gtk=		yes
+PLIST.gui=		yes
 TOOL_DEPENDS+=		glib2-tools>=2.56:../../devel/glib2-tools
 
 CONFIGURE_ARGS+=	--enable-desktop-files
@@ -46,6 +47,7 @@ BUILD_DEFS+=	PKG_SYSCONFBASE
 CONFIGURE_ARGS+=	--enable-sdl1ui
 PLIST.sdl=		yes
 PLIST.sdl1=		yes
+PLIST.gui=		yes
 .  include "../../devel/SDL/buildlink3.mk"
 .  include "../../graphics/SDL_image/buildlink3.mk"
 .endif
@@ -54,6 +56,7 @@ PLIST.sdl1=		yes
 CONFIGURE_ARGS+=	--enable-sdl2ui
 PLIST.sdl=		yes
 PLIST.sdl2=		yes
+PLIST.gui=		yes
 .  include "../../devel/SDL2/buildlink3.mk"
 .  include "../../graphics/SDL2_image/buildlink3.mk"
 .endif
