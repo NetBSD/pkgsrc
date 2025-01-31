@@ -1,6 +1,7 @@
-$NetBSD: patch-libs_backends_jack_jack__utils.cc,v 1.3 2021/09/11 16:33:11 nia Exp $
+$NetBSD: patch-libs_backends_jack_jack__utils.cc,v 1.4 2025/01/31 22:01:23 wiz Exp $
 
 NetBSD needs the -Sr -d sun arguments to jackd.
+https://tracker.ardour.org/view.php?id=9886
 
 --- libs/backends/jack/jack_utils.cc.orig	2021-08-13 16:20:07.000000000 +0000
 +++ libs/backends/jack/jack_utils.cc

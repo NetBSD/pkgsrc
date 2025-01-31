@@ -1,6 +1,7 @@
-$NetBSD: patch-libs_aaf_utils.c,v 1.1 2025/01/31 17:15:11 wiz Exp $
+$NetBSD: patch-libs_aaf_utils.c,v 1.2 2025/01/31 22:01:23 wiz Exp $
 
 Fix build on NetBSD.
+https://tracker.ardour.org/view.php?id=9886
 
 --- libs/aaf/utils.c.orig	2025-01-31 16:58:13.463705776 +0000
 +++ libs/aaf/utils.c

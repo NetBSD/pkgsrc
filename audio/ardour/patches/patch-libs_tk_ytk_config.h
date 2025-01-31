@@ -1,7 +1,8 @@
-$NetBSD: patch-libs_tk_ytk_config.h,v 1.1 2025/01/31 17:15:11 wiz Exp $
+$NetBSD: patch-libs_tk_ytk_config.h,v 1.2 2025/01/31 22:01:23 wiz Exp $
 
 No getresuid() on NetBSD.
 Only assume GNU ftw on Linux.
+https://tracker.ardour.org/view.php?id=9886
 
 --- libs/tk/ytk/config.h.orig	2024-10-17 04:04:34.000000000 +0000
 +++ libs/tk/ytk/config.h
