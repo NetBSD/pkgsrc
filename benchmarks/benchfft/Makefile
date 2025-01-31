@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2018/07/17 14:58:05 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2025/01/31 15:46:55 wiz Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		5
@@ -26,6 +26,8 @@ REPLACE_CSH=		submit-script
 INSTALLATION_DIRS=	bin
 
 CONFIGURE_DIRS=		${WRKDIR}/fftw-2.0.1 ${WRKSRC}
+
+MAKE_FLAGS+=		FFLAGS="-O3 -std=legacy"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bench \
