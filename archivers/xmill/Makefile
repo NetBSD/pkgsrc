@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2025/01/27 19:12:39 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2025/01/31 16:27:30 wiz Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
@@ -24,6 +24,12 @@ MAKE_FILE=		makefile
 USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	bin
+
+# ./ppmdi/Model.cpp: In member function 'void PPM_MODEL::encodeBinSymbol(PPM_CONTEXT*, int)':
+# ./ppmdi/Model.cpp:237:70: error: cannot bind packed field '((PPM_MODEL*)this)->PPM_MODEL::BinSumm[((int)((PPM_MODEL*)this)->PPM_MODEL::QTable[(((int)rs.STATE::Freq) - 1)])][(((int)indx) + ((((PPM_MODEL*)this)->PPM_MODEL::RunLength >> 26) & 32))]' to 'WORD&' {aka 'short unsigned int&'}
+# ./ppmdi/Model.cpp: In member function 'void PPM_MODEL::decodeBinSymbol(PPM_CONTEXT*)':
+# ./ppmdi/Model.cpp:266:70: error: cannot bind packed field '((PPM_MODEL*)this)->PPM_MODEL::BinSumm[((int)((PPM_MODEL*)this)->PPM_MODEL::QTable[(((int)rs.STATE::Freq) - 1)])][(((int)indx) + ((((PPM_MODEL*)this)->PPM_MODEL::RunLength >> 26) & 32))]' to 'WORD&' {aka 'short unsigned int&'}
+BROKEN_ON_PLATFORM+=	NetBSD-1[0-9].*-*
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmill
