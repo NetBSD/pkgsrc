@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.840 2025/01/31 01:47:09 scole Exp $
+$NetBSD: CHANGES-2025,v 1.841 2025/01/31 02:10:03 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1088,3 +1088,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hs-http-conduit to 2.3.9.1 [pho 2025-01-31]
 	Updated devel/darcs to 2.18.5 [pho 2025-01-31]
 	Added devel/p5-Tcl version 1.51 [scole 2025-01-31]
+	Added x11/p5-Tcl-Tk version 1.51 [scole 2025-01-31]
+	Added x11/p5-Tcl-pTk version 1.11 [scole 2025-01-31]
+	Added x11/p5-Tkx version 1.10 [scole 2025-01-31]
