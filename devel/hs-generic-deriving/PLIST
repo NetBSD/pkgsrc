@@ -1,13 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2024/04/29 05:14:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/01/31 13:15:44 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base/Internal.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base/Internal.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/Base/Internal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/ConNames.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/ConNames.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Generics/Deriving/ConNames.p_hi
