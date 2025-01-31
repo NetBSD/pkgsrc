@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:33 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/31 09:05:38 pho Exp $
 
-DISTNAME=	entropy-0.4.1.10
-PKGREVISION=	4
+DISTNAME=	entropy-0.4.1.11
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
