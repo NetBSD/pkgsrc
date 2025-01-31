@@ -1,19 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/02 09:54:43 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 04:51:16 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Dump.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Dump.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Dump.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/ExactPrint.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/ExactPrint.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/ExactPrint.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Lookup.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Lookup.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Lookup.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Orphans.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Orphans.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Orphans.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Parsers.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Parsers.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Language/Haskell/GHC/ExactPrint/Parsers.p_hi
@@ -35,10 +29,9 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/ghc-exactprint-${PKGVERSION}/${HS_VERSION}/package-description
 lib/ghc-exactprint-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/LICENSE
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Dump.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/ChangeLog
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-ExactPrint.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Lookup.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Orphans.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Parsers.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Preprocess.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/ghc-exactprint-${PKGVERSION}/html/Language-Haskell-GHC-ExactPrint-Transform.html
