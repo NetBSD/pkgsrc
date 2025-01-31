@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/12/06 21:39:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/01/31 18:32:35 wiz Exp $
 
-DISTNAME=	twine-6.0.1
+DISTNAME=	twine-6.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twine/}
@@ -13,8 +13,9 @@ LICENSE=	apache-2.0
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.0:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=3.6:../../devel/py-importlib-metadata
+DEPENDS+=	${PYPKGPREFIX}-id>=0:../../devel/py-id
 DEPENDS+=	${PYPKGPREFIX}-keyring>=15.1:../../security/py-keyring
-DEPENDS+=	${PYPKGPREFIX}-pkginfo>=1.8.1:../../devel/py-pkginfo
+DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-readme_renderer>=35.0:../../textproc/py-readme_renderer
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.20:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.9.1:../../devel/py-requests-toolbelt
