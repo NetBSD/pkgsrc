@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4400 2025/01/31 01:41:29 scole Exp $
+# $NetBSD: Makefile,v 1.4401 2025/01/31 02:51:43 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -571,6 +571,7 @@ SUBDIR+=	hs-call-stack
 SUBDIR+=	hs-cborg
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-character-ps
+SUBDIR+=	hs-choice
 SUBDIR+=	hs-chunked-data
 SUBDIR+=	hs-classy-prelude
 SUBDIR+=	hs-cmdargs
