@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2023/11/12 13:20:53 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/01/31 15:27:30 wiz Exp $
 
 DISTNAME=	wkhtmltox-0.12.4
 PKGNAME=	wkhtmltopdf-0.12.4
@@ -13,6 +13,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://wkhtmltopdf.org/
 COMMENT=	Command line tools to render HTML into PDF
 LICENSE=	gnu-lgpl-v3
+
+# fails building the included qt4 distribution
+BROKEN_ON_PLATFORM+=	NetBSD-1[0-9].*-*
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	perl
