@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.872 2025/01/31 09:32:05 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.873 2025/01/31 09:51:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-text-rope to 0.3 [pho 2025-01-31]
 	Removed fonts/cyberbit-ttf [wiz 2025-01-31]
 	Removed fonts/cyberbase-ttf [wiz 2025-01-31]
+	Removed editors/yed [wiz 2025-01-31]

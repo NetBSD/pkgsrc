@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2024/09/10 13:59:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.256 2025/01/31 09:51:15 wiz Exp $
 #
 
 COMMENT=	Text and binary editors
@@ -189,7 +189,6 @@ SUBDIR+=	xnedit
 SUBDIR+=	xournalpp
 SUBDIR+=	xvile
 SUBDIR+=	xwpe
-SUBDIR+=	yed
 SUBDIR+=	yudit
 SUBDIR+=	zile
 SUBDIR+=	zim
