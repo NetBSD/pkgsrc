@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.888 2025/01/31 12:28:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.889 2025/01/31 12:29:39 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1140,3 +1140,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/fltk to 1.4.1 [micha 2025-01-31]
 	Updated devel/kf6-ktexteditor to 6.8.0nb2 [wiz 2025-01-31]
 	Updated devel/serie to 0.4.3 [pin 2025-01-31]
+	Updated databases/diesel-cli to 2.2.7 [pin 2025-01-31]
