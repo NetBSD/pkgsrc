@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-#	$NetBSD: eagle,v 1.2 2015/08/13 20:27:43 tnn Exp $
-#
-QT_XKB_CONFIG_ROOT="@@QT_XKB_CONFIG_ROOT@@"
-export QT_XKB_CONFIG_ROOT
-cd @@PREFIX@@/eagle && bin/eagle "$@"
