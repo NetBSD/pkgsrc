@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.850 2025/01/31 04:51:24 pho Exp $
+$NetBSD: CHANGES-2025,v 1.851 2025/01/31 05:15:23 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-ghc-lib-parser-ex to 9.10.0.0 [pho 2025-01-31]
 	Updated misc/hs-extra to 1.8 [pho 2025-01-31]
 	Updated devel/hs-ghc-exactprint to 1.10.0.0 [pho 2025-01-31]
+	Updated devel/hs-foldl to 1.4.18 [pho 2025-01-31]
