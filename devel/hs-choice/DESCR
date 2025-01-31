@@ -1,0 +1,8 @@
+Represent do/don't, is/isn't, with/without flags with Choice.
+
+Boolean blindness
+(https://existentialtype.wordpress.com/2011/03/15/boolean-blindness) refers
+to the problem that boolean literals on their own aren't very
+informative. In any given context, what does True mean? What does False
+mean? Instead of passing arguments of type Bool to functions, consider
+using Choice.
