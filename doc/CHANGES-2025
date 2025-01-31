@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.834 2025/01/30 23:58:40 pho Exp $
+$NetBSD: CHANGES-2025,v 1.835 2025/01/31 00:02:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1082,3 +1082,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-monad-logger to 0.3.41 [pho 2025-01-30]
 	Updated devel/hs-lift-type to 0.1.2.0 [pho 2025-01-30]
 	Updated devel/hs-silently to 1.2.5.4 [pho 2025-01-30]
+	Updated devel/hs-persistent to 2.14.6.3 [pho 2025-01-31]
