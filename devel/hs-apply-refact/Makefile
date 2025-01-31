@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:45 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/01/31 05:11:25 pho Exp $
 
 DISTNAME=	apply-refact-0.14.0.0
 PKGREVISION=	1
@@ -7,6 +7,9 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perform refactorings specified by the refact library
 LICENSE=	modified-bsd
+
+BROKEN+=	"apply-refact is incompatible with GHC 9.10."
+# It supports 9.12 though. No idea why the upstream skipped 9.10.
 
 OPTPARSE_APPLICATIVE_EXECUTABLES+=	refactor
 
