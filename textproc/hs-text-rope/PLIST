@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/29 05:12:16 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/01/31 09:09:56 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines.hi
@@ -6,6 +6,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines/Internal.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines/Internal.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Lines/Internal.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Mixed/Rope.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Mixed/Rope.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Mixed/Rope.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Rope.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Rope.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Rope.p_hi
@@ -18,17 +21,27 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope/Mixed.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope/Mixed.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf16/Rope/Mixed.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Lines.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Lines.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Lines.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Rope.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Rope.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Text/Utf8/Rope.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-description
 lib/text-rope-${PKGVERSION}/${HS_VERSION}/package-id
+share/${HS_PLATFORM}/text-rope-${PKGVERSION}/bench/bench-utf8.txt
 share/${HS_PLATFORM}/text-rope-${PKGVERSION}/bench/bench.txt
 share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Lines.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Mixed-Rope.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Rope.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf16-Lines.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf16-Rope-Mixed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf16-Rope.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf8-Lines.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/Data-Text-Utf8-Rope.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/haddock-bundle.min.js
 ${PLIST.doc}share/doc/${HS_PLATFORM}/text-rope-${PKGVERSION}/html/index.html
