@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/05/04 13:25:03 pho Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/01/31 01:03:47 pho Exp $
 bin/darcs
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Patch.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Patch/Annotate.hi
@@ -236,6 +236,7 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Regex.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Show.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/SignalHandler.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Ssh.hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/StrictIdentity.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Tree.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Tree/Hashed.hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Darcs/Util/Tree/Monad.hi
@@ -250,7 +251,7 @@ lib/${PKGNAME}/${HS_VERSION}/package-id
 man/man1/darcs.1
 share/bash-completion/completions/darcs
 share/doc/${HS_PLATFORM}/${PKGNAME}/COPYING
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CHANGELOG
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-Annotate-Class.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-Annotate.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Patch-Apply.html
@@ -487,6 +488,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Regex.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Show.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-SignalHandler.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Ssh.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-StrictIdentity.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Tree-Hashed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Tree-Monad.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Darcs-Util-Tree-Plain.html
