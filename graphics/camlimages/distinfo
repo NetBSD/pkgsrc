@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2021/12/26 05:28:23 dholland Exp $
+$NetBSD: distinfo,v 1.20 2025/01/31 07:09:56 wiz Exp $
 
 BLAKE2s (camlimages-4.0.1a/v4.0.1.tar.gz) = 0d8e3e7a10f89ff6afd5161a840ea9951a563daf8388f2717d2f75257b6276d4
 SHA512 (camlimages-4.0.1a/v4.0.1.tar.gz) = c4e2a816911ed128c0414308d1ace914bbb51e40b6d70a3c492690b38c860f79e3e01efa3f1be7d57654c78f8acca6f30bffb9e6b8fd423d1d36d6a477d0fd8d
 Size (camlimages-4.0.1a/v4.0.1.tar.gz) = 2190274 bytes
-SHA1 (patch-OMakefile) = f650eca9bf8edbc64f9f5352718ee2046c368667
+SHA1 (patch-OMakefile) = 6bcb0e8394a8b2097bc9602d29a7be9040695e5b
 SHA1 (patch-examples_crop_crop.ml) = 52d7fc9c39c394ecac22fe3d401aaef73c64b50d
 SHA1 (patch-examples_liv_icon.ml) = 29e1a5b7325f0b468dc76291563697ae301de664
 SHA1 (patch-examples_liv_livsh.ml) = b804ef21be7e55b3c63011f614cc1e3e6902cb16
