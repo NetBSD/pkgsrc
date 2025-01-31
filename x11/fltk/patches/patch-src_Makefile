@@ -1,0 +1,91 @@
+$NetBSD: patch-src_Makefile,v 1.1 2025/01/31 12:22:45 micha Exp $
+
+Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- src/Makefile.orig	2024-12-12 17:45:50.000000000 +0000
++++ src/Makefile
+@@ -456,6 +456,10 @@ $(LIBNAME): $(OBJECTS)
+ 	$(LIBCOMMAND) $@ $(OBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk.la: $(OBJECTS)
++	echo $(DSOCOMMAND) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(OBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 2:0:0 $(LDLIBS) $(CAIROLIBS)
++
+ libfltk.so.$(FL_DSO_VERSION): $(OBJECTS)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(OBJECTS) $(LDFLAGS) $(LDLIBS) $(CAIROLIBS)
+@@ -492,6 +496,10 @@ $(FLLIBNAME): $(FLOBJECTS)
+ 	$(LIBCOMMAND) $@ $(FLOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_forms.la: $(FLOBJECTS) libfltk.la
++	echo $(DSOCOMMAND) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(FLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 2:0:0 -L. -lfltk $(LDLIBS)
++
+ libfltk_forms.so.$(FL_DSO_VERSION): $(FLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(FLOBJECTS) -L. -lfltk $(LDFLAGS) $(LDLIBS)
+@@ -528,6 +536,10 @@ $(GLLIBNAME): $(GLOBJECTS)
+ 	$(LIBCOMMAND) $@ $(GLOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_gl.la: $(GLOBJECTS) libfltk.la
++	echo $(DSOCOMMAND) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(GLOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 2:0:0 -L. -lfltk $(LDLIBS) $(GLDLIBS)
++
+ libfltk_gl.so.$(FL_DSO_VERSION): $(GLOBJECTS) libfltk.so.$(FL_DSO_VERSION)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(GLOBJECTS) -L. -lfltk $(LDFLAGS) $(LDLIBS) $(GLDLIBS)
+@@ -564,6 +576,10 @@ $(IMGLIBNAME): $(IMGOBJECTS)
+ 	$(LIBCOMMAND) $@ $(IMGOBJECTS)
+ 	$(RANLIB) $@
+ 
++libfltk_images.la: $(IMGOBJECTS) libfltk.la
++	echo $(DSOCOMMAND) $@ ...
++	${LIBTOOL} --mode=link $(CXX) $(ARCHFLAGS) $(LDFLAGS) -o $@ $(IMGOBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info 2:0:0 -L. $(IMAGELIBS) -lfltk $(LDLIBS)
++
+ libfltk_images.so.$(FL_DSO_VERSION): $(IMGOBJECTS) libfltk.so.$(FL_DSO_VERSION)
+ 	echo $(DSOCOMMAND) $@ ...
+ 	$(DSOCOMMAND) $@ $(IMGOBJECTS) -L. $(IMAGELIBS) -lfltk $(LDFLAGS) $(LDLIBS)
+@@ -866,6 +882,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RANLIB) "$(DESTDIR)$(libdir)/$(GLLIBBASENAME)"; \
+ 	fi
+ 	$(RANLIB) "$(DESTDIR)$(libdir)/$(IMGLIBBASENAME)"
++	if test x$(DSONAME) = xlibfltk.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(DSONAME) = xlibfltk.so.$(FL_DSO_VERSION); then\
+ 		$(RM) "$(DESTDIR)$(libdir)"/libfltk.so*;\
+ 		$(INSTALL_LIB) libfltk.so.$(FL_DSO_VERSION) "$(DESTDIR)$(libdir)"; \
+@@ -897,6 +916,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RM) "$(DESTDIR)$(libdir)/libfltk.dll.a";\
+ 		$(INSTALL_LIB) libfltk.dll.a "$(DESTDIR)$(libdir)"; \
+ 	fi
++	if test x$(FLDSONAME) = xlibfltk_forms.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_forms.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(FLDSONAME) = xlibfltk_forms.so.$(FL_DSO_VERSION); then\
+ 		$(RM) "$(DESTDIR)$(libdir)"/libfltk_forms.so*;\
+ 		$(INSTALL_LIB) libfltk_forms.so.$(FL_DSO_VERSION) "$(DESTDIR)$(libdir)"; \
+@@ -928,6 +950,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RM) "$(DESTDIR)$(libdir)/libfltk_forms.dll.a";\
+ 		$(INSTALL_LIB) libfltk_forms.dll.a "$(DESTDIR)$(libdir)"; \
+ 	fi
++	if test x$(GLDSONAME) = xlibfltk_gl.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_gl.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(GLDSONAME) = xlibfltk_gl.so.$(FL_DSO_VERSION); then\
+ 		$(RM) "$(DESTDIR)$(libdir)"/libfltk_gl.so*;\
+ 		$(INSTALL_LIB) libfltk_gl.so.$(FL_DSO_VERSION) "$(DESTDIR)$(libdir)"; \
+@@ -959,6 +984,9 @@ install: $(LIBNAME) $(DSONAME) \
+ 		$(RM) "$(DESTDIR)$(libdir)/libfltk_gl.dll.a";\
+ 		$(INSTALL_LIB) libfltk_gl.dll.a "$(DESTDIR)$(libdir)"; \
+ 	fi
++	if test x$(IMGDSONAME) = xlibfltk_images.la; then\
++		${LIBTOOL} --mode=install $(INSTALL_LIB) libfltk_images.la $(DESTDIR)$(libdir); \
++	fi
+ 	if test x$(IMGDSONAME) = xlibfltk_images.so.$(FL_DSO_VERSION); then\
+ 		$(RM) "$(DESTDIR)$(libdir)"/libfltk_images.so*;\
+ 		$(INSTALL_LIB) libfltk_images.so.$(FL_DSO_VERSION) "$(DESTDIR)$(libdir)"; \

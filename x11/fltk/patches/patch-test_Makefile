@@ -1,0 +1,298 @@
+$NetBSD: patch-test_Makefile,v 1.1 2025/01/31 12:22:45 micha Exp $
+
+Use libtool.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- test/Makefile.orig	2024-12-12 17:45:50.000000000 +0000
++++ test/Makefile
+@@ -368,7 +368,7 @@ buttons$(EXEEXT): buttons.o
+ 
+ blocks$(EXEEXT): blocks.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) blocks.o -o $@ $(AUDIOLIBS) $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -f -r blocks.app
+ 	$(OSX_ONLY) mkdir -p blocks.app/Contents/MacOS blocks.app/Contents/Resources
+ 	$(OSX_ONLY) $(INSTALL_BIN) blocks$(EXEEXT) blocks.app/Contents/MacOS
+@@ -377,7 +377,7 @@ blocks$(EXEEXT): blocks.o
+ 
+ checkers$(EXEEXT): checkers.o checkers_pieces.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o checkers_pieces.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) checkers.o checkers_pieces.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -f -r checkers.app
+ 	$(OSX_ONLY) mkdir -p checkers.app/Contents/MacOS checkers.app/Contents/Resources
+ 	$(OSX_ONLY) $(INSTALL_BIN) checkers$(EXEEXT) checkers.app/Contents/MacOS
+@@ -391,14 +391,14 @@ checkers_pieces.cxx:	checkers_pieces.fl 
+ 
+ clipboard$(EXEEXT): clipboard.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) clipboard.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) clipboard.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ clock$(EXEEXT): clock.o
+ 
+ colbrowser$(EXEEXT): colbrowser.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ colbrowser.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 	$(OSX_ONLY) mkdir -p colbrowser.app/Contents/Resources
+ 	$(OSX_ONLY) cp -f rgb.txt colbrowser.app/Contents/Resources/
+@@ -413,21 +413,21 @@ curve$(EXEEXT): curve.o
+ 
+ demo$(EXEEXT): demo.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ demo.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 	$(OSX_ONLY) mkdir -p demo.app/Contents/Resources
+ 	$(OSX_ONLY) cp -f demo.menu demo.app/Contents/Resources/
+ 
+ device$(EXEEXT): device.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) device.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) device.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ doublebuffer$(EXEEXT): doublebuffer.o
+ 
+ editor$(EXEEXT): editor.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) editor.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) editor.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 	$(OSX_ONLY) cp -f mac-resources/editor.plist editor.app/Contents/Info.plist
+ 
+@@ -436,7 +436,7 @@ fast_slow.cxx:	fast_slow.fl ../fluid/flu
+ 
+ file_chooser$(EXEEXT): file_chooser.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) file_chooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) file_chooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ flex_demo$(EXEEXT): flex_demo.o
+@@ -449,7 +449,7 @@ fonts$(EXEEXT): fonts.o
+ 
+ forms$(EXEEXT): forms.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ forms.o $(LINKFLTKFORMS) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ forms.o $(LINKFLTKFORMS) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ grid_alignment$(EXEEXT): grid_alignment.o
+@@ -464,7 +464,7 @@ hello$(EXEEXT): hello.o
+ 
+ help_dialog$(EXEEXT): help_dialog.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) help_dialog.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) help_dialog.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 	$(OSX_ONLY) mkdir -p help_dialog.app/Contents/Resources
+ 	$(OSX_ONLY) cp -f help_dialog.html help_dialog.app/Contents/Resources/
+@@ -484,14 +484,14 @@ input_choice$(EXEEXT): input_choice.o
+ 
+ keyboard$(EXEEXT): keyboard_ui.o keyboard.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ keyboard.o keyboard_ui.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ keyboard.o keyboard_ui.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ keyboard_ui.o:	keyboard_ui.h
+ keyboard_ui.cxx:	keyboard_ui.fl ../fluid/fluid$(EXEEXT)
+ 
+ label$(EXEEXT): label.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ label.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ line_style$(EXEEXT): line_style.o
+@@ -502,7 +502,7 @@ list_visuals$(EXEEXT): list_visuals.o
+ 
+ mandelbrot$(EXEEXT): mandelbrot_ui.o mandelbrot.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ mandelbrot.o mandelbrot_ui.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ mandelbrot.o mandelbrot_ui.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ mandelbrot_ui.o:	mandelbrot_ui.h
+ mandelbrot_ui.cxx:	mandelbrot_ui.fl ../fluid/fluid$(EXEEXT)
+@@ -515,7 +515,7 @@ minimum$(EXEEXT): minimum.o
+ 
+ native-filechooser$(EXEEXT): native-filechooser.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) native-filechooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) native-filechooser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ navigation$(EXEEXT): navigation.o
+@@ -524,7 +524,7 @@ offscreen$(EXEEXT): offscreen.o
+ 
+ output$(EXEEXT): output.o $(FLLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ output.o $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ overlay$(EXEEXT): overlay.o
+@@ -533,12 +533,12 @@ pack$(EXEEXT): pack.o
+ 
+ pixmap$(EXEEXT): pixmap.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ pixmap.o $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ pixmap.o $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ pixmap_browser$(EXEEXT): pixmap_browser.o $(IMGLIBNAME)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) pixmap_browser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) pixmap_browser.o -o $@ $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ preferences$(EXEEXT):	preferences.o
+@@ -556,52 +556,52 @@ resizebox$(EXEEXT): resizebox.o
+ 
+ resize-example1$(EXEEXT): resize-example1.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example1.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example1.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example2$(EXEEXT): resize-example2.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example2.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example2.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example3a$(EXEEXT): resize-example3a.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example3b$(EXEEXT): resize-example3b.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example3c$(EXEEXT): resize-example3c.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3c.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example3c.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example4a$(EXEEXT): resize-example4a.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example4a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example4a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example4b$(EXEEXT): resize-example4b.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example4b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example4b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example5a$(EXEEXT): resize-example5a.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5a.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example5b$(EXEEXT): resize-example5b.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5b.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ resize-example5c$(EXEEXT): resize-example5c.o resize-arrows.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5c.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) resize-example5c.o resize-arrows.o -o $@ $(LINKFLTK) $(LDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ rotated_text$(EXEEXT): rotated_text.o
+@@ -612,7 +612,7 @@ subwindow$(EXEEXT): subwindow.o
+ 
+ sudoku: sudoku.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
+ 	$(OSX_ONLY) $(RM) -f -r sudoku.app
+ 	$(OSX_ONLY) mkdir -p sudoku.app/Contents/MacOS sudoku.app/Contents/Resources
+ 	$(OSX_ONLY) $(INSTALL_BIN) sudoku$(EXEEXT) sudoku.app/Contents/MacOS
+@@ -621,7 +621,7 @@ sudoku: sudoku.o
+ 
+ sudoku.exe: sudoku.o sudoku.rc
+ 	echo Linking $@...
+-	$(RC) sudoku.rc sudokures.o
++	$(LIBTOOL) --mode=link $(RC) sudoku.rc sudokures.o
+ 	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) sudoku.o sudokures.o -o $@ $(AUDIOLIBS) $(LINKFLTKIMG) $(LDLIBS)
+ 
+ symbols$(EXEEXT): symbols.o
+@@ -657,7 +657,7 @@ $(GLALL): $(LIBNAME) $(GLLIBNAME)
+ # OpenGL demos...
+ CubeView$(EXEEXT): CubeMain.o CubeView.o CubeViewUI.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ \
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ \
+ 		CubeMain.o CubeView.o CubeViewUI.o \
+ 		$(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+@@ -668,45 +668,45 @@ CubeViewUI.cxx:	CubeViewUI.fl ../fluid/f
+ 
+ cube$(EXEEXT): cube.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ cube.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ cube.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ fractals$(EXEEXT): fractals.o fracviewer.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ fractals.o fracviewer.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ fractals.o fracviewer.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ fullscreen$(EXEEXT): fullscreen.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ fullscreen.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ fullscreen.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ glpuzzle$(EXEEXT): glpuzzle.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ glpuzzle.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ glpuzzle.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ gl_overlay$(EXEEXT): gl_overlay.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ gl_overlay.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ gl_overlay.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ glut_test$(EXEEXT): glut_test.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ glut_test.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ glut_test.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ unittests$(EXEEXT): $(OBJUNITTEST)
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJUNITTEST) $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJUNITTEST) $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ shape$(EXEEXT): shape.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ shape.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@ shape.o $(LINKFLTKGL) $(LINKFLTK) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@
+ 
+ cairo_test$(EXEEXT): cairo_test.o
+ 	echo Linking $@...
+-	$(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(CAIROLIBS) $(GLDLIBS)
++	$(LIBTOOL) --mode=link $(CXX) $(ARCHFLAGS) $(CXXFLAGS) $(CAIROFLAGS) $(LDFLAGS) -o $@ cairo_test.o $(LINKFLTK) $(CAIROLIBS) $(GLDLIBS)
+ 	$(OSX_ONLY) ../fltk-config --post $@

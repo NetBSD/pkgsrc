@@ -1,53 +1,46 @@
-# $NetBSD: Makefile,v 1.89 2021/06/10 23:49:55 gutteridge Exp $
+# $NetBSD: Makefile,v 1.90 2025/01/31 12:22:44 micha Exp $
 
-DISTNAME=	fltk-1.1.10-source
+DISTNAME=	fltk-1.4.1-source
 PKGNAME=	${DISTNAME:S/-source//}
-VERS=		${DISTNAME:S/fltk-//:S/-source//}
-PKGREVISION=	7
 CATEGORIES=	x11
-MASTER_SITES=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/
-MASTER_SITES+=	ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VERS}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
+GITHUB_PROJECT=	fltk
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
-COMMENT=	Fast Light Tool Kit for graphical user interfaces (old 1.1 branch)
+COMMENT=	Fast Light Tool Kit for graphical user interfaces
+LICENSE=	gnu-lgpl-v2
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
+USE_CC_FEATURES+=	c99
+
+USE_TOOLS+=		autoconf gmake nroff pkg-config
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
-TEST_TARGET=		test
 
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_STRICT=	no	# --enable-libtool is not officially known
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
+CONFIGURE_ARGS+=	--enable-print
+CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
+# Use pkgsrc versions of libraries, not package's bundled versions
+CONFIGURE_ARGS+=	--disable-localjpeg
+CONFIGURE_ARGS+=	--disable-localpng
+CONFIGURE_ARGS+=	--disable-localzlib
+# Disable build of test programs
+CONFIGURE_ARGS+=	--disable-test
 
-.include "../../mk/bsd.prefs.mk"
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 
-PLIST_VARS+=		cs	# case-sensitive
-.if !exists(./descr) && ${OPSYS} != "Darwin"
-CONFIGURE_ARGS+=	--with-links
-PLIST.cs=		yes
-.endif
+.include "options.mk"
 
-# Fl_Text_Buffer.cxx: In function 'char chooseNullSubsChar(char*)':
-# Fl_Text_Buffer.cxx:1338:34: error: array subscript has type 'char' [-Werror=char-subscripts]
-#      if ( hist[ replacements[ i ] ] == 0 )
-#                                   ^
-# Maybe fix this later.
-BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
-
-
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

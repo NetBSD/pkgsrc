@@ -1,0 +1,61 @@
+$NetBSD: patch-configure,v 1.1 2025/01/31 12:22:44 micha Exp $
+
+Add libtool support.
+Upstream will not merge this (libtool is listed as not acceptable).
+
+--- configure.orig	2024-12-12 22:49:01.000000000 +0000
++++ configure
+@@ -1489,6 +1489,7 @@ Optional Features:
+   --enable-use_std        allow FLTK to use std::string etc.
+   --disable-print         turn off print support (X11)
+   --enable-shared         turn on shared libraries
++  --enable-libtool        pkgsrc: Use libtool
+   --disable-svg           disable SVG support
+   --disable-threads       turn off multi-threading support
+   --enable-x11            use X11 with Cygwin or macOS (default=no)
+@@ -5174,6 +5175,18 @@ fi
+ 
+ 
+ 
++# pkgsrc: Check whether --enable-libtool or --disable-libtool was given.
++if test "${enable_libtool+set}" = set; then
++  enableval="$enable_libtool"
++
++if test x$enable_libtool != xno; then
++    LIBTOOL="$enable_libtool"
++    enable_shared=no
++else
++    LIBTOOL=""
++fi
++fi
++
+ if test "x$enable_shared" = xyes
+ then :
+ 
+@@ -5484,7 +5497,25 @@ fi
+ 
+ 
+ 
+-
++# pkgsrc: libtool support
++if test "x$LIBTOOL" != "x"; then
++    LINKFLTK="../src/libfltk.la"
++    if test "x$LINKFLTKGL" != "x"; then
++        LINKFLTKGL="../src/libfltk_gl.la"
++    fi
++    if test "x$LINKFLTKIMG" != "x"; then
++        LINKFLTKIMG="../src/libfltk_images.la"
++    fi
++    if test "x$LINKFLTKCAIRO" != "x"; then
++        LINKFLTKCAIRO="../src/libfltk_cairo.la"
++    fi
++    LINKSHARED="-lfltk_images -lfltk_forms -lfltk"
++    DSONAME="libfltk.la"
++    FLDSONAME="libfltk_forms.la"
++    GLDSONAME="libfltk_gl.la"
++    IMGDSONAME="libfltk_images.la"
++    CAIRODSONAME="libfltk_cairo.la"
++fi
+ 
+ 
+ 
