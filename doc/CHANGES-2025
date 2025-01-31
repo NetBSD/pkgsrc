@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.858 2025/01/31 07:53:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.859 2025/01/31 07:54:43 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1108,3 +1108,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-hiedb to 0.6.0.1 [pho 2025-01-31]
 	Updated devel/hs-logict to 0.8.2.0 [pho 2025-01-31]
 	Updated devel/hs-primitive-unlifted to 2.2.0.0 [pho 2025-01-31]
+	Updated devel/hs-primitive-extras to 0.10.2.1 [pho 2025-01-31]
