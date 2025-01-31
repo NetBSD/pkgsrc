@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:21 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/31 11:07:03 pho Exp $
 
-DISTNAME=	stan-0.1.2.1
+DISTNAME=	stan-0.2.0.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +28,7 @@ LICENSE=	mpl-2.0
 .include "../../textproc/hs-trial-tomland/buildlink3.mk"
 
 # lib:target
+.include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 
 # exe:stan

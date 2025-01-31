@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2024/05/09 01:32:21 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/01/31 11:07:03 pho Exp $
 
 BUILDLINK_TREE+=	stan
 
 .if !defined(STAN_BUILDLINK3_MK)
 STAN_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.stan+=	stan>=0.1.2
-BUILDLINK_ABI_DEPENDS.stan+=	stan>=0.1.2.1nb1
+BUILDLINK_API_DEPENDS.stan+=	stan>=0.2.0
+BUILDLINK_ABI_DEPENDS.stan+=	stan>=0.2.0.0
 BUILDLINK_PKGSRCDIR.stan?=	../../devel/stan
 
 # lib:stan
@@ -29,6 +29,7 @@ BUILDLINK_PKGSRCDIR.stan?=	../../devel/stan
 .include "../../textproc/hs-trial-tomland/buildlink3.mk"
 
 # lib:target
+.include "../../math/hs-scientific/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
 
 .endif	# STAN_BUILDLINK3_MK

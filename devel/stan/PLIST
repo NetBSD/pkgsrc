@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/05/05 08:37:53 pho Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/01/31 11:07:03 pho Exp $
 bin/stan
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.2}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID.1}-${HS_VER}.so
@@ -258,6 +258,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Target-Style.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-124.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-38.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-63.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-95.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-A.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-All.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-B.html
