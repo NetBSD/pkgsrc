@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.843 2025/01/31 02:20:21 pho Exp $
+$NetBSD: CHANGES-2025,v 1.844 2025/01/31 02:24:08 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1093,3 +1093,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/p5-Tkx version 1.10 [scole 2025-01-31]
 	Updated devel/hs-ghc-lib-parser to 9.12.1.20250105 [pho 2025-01-31]
 	Updated textproc/hs-Diff to 1.0.2 [pho 2025-01-31]
+	Updated textproc/hs-megaparsec to 9.7.0 [pho 2025-01-31]
