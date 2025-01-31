@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.910 2025/01/31 15:44:47 pho Exp $
+$NetBSD: CHANGES-2025,v 1.911 2025/01/31 15:53:12 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed cad/eagle [wiz 2025-01-31]
 	Updated devel/haskell-language-server to 2.9.0.0 [pho 2025-01-31]
 	Updated devel/hs-microlens-platform to 0.4.3.6 [pho 2025-01-31]
+	Updated devel/hs-atomic-primops to 0.8.8 [pho 2025-01-31]
