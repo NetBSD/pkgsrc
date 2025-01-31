@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.3 2023/01/31 17:13:17 pho Exp $
+# $NetBSD: application.mk,v 1.4 2025/01/31 15:18:58 pho Exp $
 #
 # Generate shell completion scripts automatically.
 #
@@ -19,6 +19,8 @@
 #
 # Keywords: haskell optparse-applicative
 #
+.if !defined(DEVEL_HS_OPTPARSE_APPLICATIVE_APPLICATION_MK)
+DEVEL_HS_OPTPARSE_APPLICATIVE_APPLICATION_MK:=
 
 OPTPARSE_APPLICATIVE_EXECUTABLES?=	${PKGBASE}
 
@@ -113,3 +115,5 @@ OA.generate-cmds=	\
 post-install: generate-optparse-applicative-shell-completion-scripts
 generate-optparse-applicative-shell-completion-scripts:
 	${RUN}${OA.generate-cmds}
+
+.endif	# DEVEL_HS_OPTPARSE_APPLICATIVE_APPLICATION_MK
