@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:21 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/01/31 11:14:25 pho Exp $
 
 DISTNAME=	stylish-haskell-0.14.6.0
 PKGNAME=	${DISTNAME}
@@ -8,6 +8,8 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Haskell code prettifier
 LICENSE=	modified-bsd
+
+BROKEN+=	"stylish-haskell is not compatible with GHC 9.10: https://github.com/haskell/stylish-haskell/issues/479"
 
 # lib:stylish-haskell
 .include "../../converters/hs-aeson/buildlink3.mk"
