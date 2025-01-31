@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/05/04 06:47:41 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/31 08:04:16 pho Exp $
 
-BLAKE2s (quickcheck-instances-0.3.30.tar.gz) = 66251e994d921586443663e6098c6039c297e31267914cbff55428a19bf54ef2
-SHA512 (quickcheck-instances-0.3.30.tar.gz) = 090dba82984c45bf6e5c83ce460a77fe2af35443fa76ecaa50f63350c2b0a74f3945d53d67656530b322f95510b383a16eeeb5dd60177353e6c62ec50e7ced26
-Size (quickcheck-instances-0.3.30.tar.gz) = 13640 bytes
+BLAKE2s (quickcheck-instances-0.3.32.tar.gz) = c671ed75fce57b3e336ce239242250e9a3e4f65caaef1149f2c1c44f0feee58f
+SHA512 (quickcheck-instances-0.3.32.tar.gz) = 3ffda3fa607877f8efc232d8aa97930b10c167aa1aa5e839ad4fb9f44ed0e594346b8cec56c5949916c74b3ec3e9e0d6ce6eae8fe8db98da9fb57481fb928739
+Size (quickcheck-instances-0.3.32.tar.gz) = 12831 bytes
