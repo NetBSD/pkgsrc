@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2024/04/29 08:57:09 micha Exp $
+# $NetBSD: Makefile,v 1.21 2025/01/31 13:12:27 micha Exp $
 
 FLNEWS_VERSION=	1.2.1
 
 DISTNAME=	flnews-${FLNEWS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://micha.freeshell.org/flnews/src/
 MASTER_SITES+=	http://www.ybtra.de/flnews-mirror/src/
@@ -83,6 +84,6 @@ TOOL_DEPENDS+=			makedepend-[0-9]*:../../devel/makedepend
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/fltk13/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
