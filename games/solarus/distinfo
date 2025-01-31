@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.14 2024/08/16 15:35:12 bsiegert Exp $
+$NetBSD: distinfo,v 1.15 2025/01/31 08:07:01 wiz Exp $
 
 BLAKE2s (solarus-1.6.5-src.tar.gz) = 81383463cf2f7eac384f28c523aa53d5a50dcc572c45bda7f5a2ba439320fdc6
 SHA512 (solarus-1.6.5-src.tar.gz) = 3fc7473f1b7dd80cbcb0a7a639701f8b12bd40ee918a7853805bd54f877e752b4c31c26828e62248ca4594b3aed41a8c61a16be3b14b293f08d9ba938a723e91
 Size (solarus-1.6.5-src.tar.gz) = 15010899 bytes
-SHA1 (patch-cmake_modules_FindGLM.cmake) = e31842de643ddbef8624b8d8a337ffa24aed7758
-SHA1 (patch-src_audio_ItDecoder.cpp) = 331c4a41680d6ffc0b3605739e5b21ad5b97b6e5
+SHA1 (patch-src_audio_ItDecoder.cpp) = fde61c522b7a2b95a481552fc1fb2d3974f9d633
