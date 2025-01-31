@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/01/06 15:35:26 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/01/31 17:49:02 rhialto Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -100,6 +100,7 @@ share/doc/vice/html/vice_20.html
 share/doc/vice/html/vice_21.html
 share/doc/vice/html/vice_22.html
 share/doc/vice/html/vice_23.html
+share/doc/vice/html/vice_24.html
 share/doc/vice/html/vice_3.html
 share/doc/vice/html/vice_4.html
 share/doc/vice/html/vice_5.html
@@ -149,6 +150,7 @@ share/vice/C128/kernalfi
 share/vice/C128/kernalfr
 share/vice/C128/kernalit
 share/vice/C128/kernalno
+share/vice/C128/lemon64.vpl
 share/vice/C128/palette.vpl
 share/vice/C128/palette_6569R1_v1r.vpl
 share/vice/C128/palette_6569R5_v1r.vpl
@@ -217,6 +219,7 @@ share/vice/C64/kernal-901227-02.bin
 share/vice/C64/kernal-901227-03.bin
 share/vice/C64/kernal-901246-01.bin
 share/vice/C64/kernal-906145-02.bin
+share/vice/C64/lemon64.vpl
 share/vice/C64/palette.vpl
 share/vice/C64/palette_6569R1_v1r.vpl
 share/vice/C64/palette_6569R5_v1r.vpl
@@ -232,8 +235,10 @@ share/vice/C64/pepto-palold.vpl
 share/vice/C64/pixcen.vpl
 share/vice/C64/ptoing.vpl
 share/vice/C64/rgb.vpl
+${PLIST.sdl}share/vice/C64/sdl_joymap_keyrah_v3.vjm
 ${PLIST.sdl}share/vice/C64/sdl_joymap_ps3.vjm
 ${PLIST.sdl}share/vice/C64/sdl_joymap_thec64.vjm
+${PLIST.sdl}share/vice/C64/sdl_joymap_xbox360.vjm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah.vkm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah_combian.vkm
 ${PLIST.sdl}share/vice/C64/sdl_keyrah_de.vkm
@@ -510,6 +515,7 @@ ${PLIST.gtk}share/vice/SCPU64/gtk3_sym_se.vkm
 ${PLIST.gtk}share/vice/SCPU64/gtk3_sym_tr.vkm
 ${PLIST.gtk}share/vice/SCPU64/gtk3_sym_uk.vkm
 ${PLIST.gtk}share/vice/SCPU64/gtk3_the64_de.vkm
+share/vice/SCPU64/lemon64.vpl
 share/vice/SCPU64/palette.vpl
 share/vice/SCPU64/palette_6569R1_v1r.vpl
 share/vice/SCPU64/palette_6569R5_v1r.vpl
@@ -568,10 +574,13 @@ share/vice/VIC20/kernal.901486-07.bin
 share/vice/VIC20/mike-ntsc.vpl
 share/vice/VIC20/mike-pal.vpl
 ${PLIST.sdl}share/vice/VIC20/sdl_pos.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_pos_de.vkm
 ${PLIST.sdl}share/vice/VIC20/sdl_pos_fi.vkm
 ${PLIST.sdl}share/vice/VIC20/sdl_pos_fr.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_pos_uk.vkm
 ${PLIST.sdl}share/vice/VIC20/sdl_sym.vkm
 ${PLIST.sdl}share/vice/VIC20/sdl_sym_de.vkm
+${PLIST.sdl}share/vice/VIC20/sdl_sym_uk.vkm
 share/vice/VIC20/vice.vpl
 share/vice/common/C128_1024.svg
 share/vice/common/C128_16.png
@@ -612,6 +621,13 @@ share/vice/common/PET_256.svg
 share/vice/common/PET_32.png
 share/vice/common/PET_48.png
 share/vice/common/PET_64.png
+share/vice/common/PetMe.ttf
+share/vice/common/PetMe128.ttf
+share/vice/common/PetMe1282Y.ttf
+share/vice/common/PetMe2X.ttf
+share/vice/common/PetMe2Y.ttf
+share/vice/common/PetMe64.ttf
+share/vice/common/PetMe642Y.ttf
 share/vice/common/Plus4_1024.svg
 share/vice/common/Plus4_16.png
 share/vice/common/Plus4_24.png
@@ -643,16 +659,16 @@ share/vice/common/VIC20_64.png
 share/vice/common/icon1024x1024.png
 share/vice/common/vice-logo-black.svg
 ${PLIST.gtk}share/vice/common/vice.gresource
-share/vice/hotkeys/hotkeys-cartridge.vhk
-share/vice/hotkeys/hotkeys-datasette.vhk
-share/vice/hotkeys/hotkeys-debug.vhk
-share/vice/hotkeys/hotkeys-drive.vhk
-share/vice/hotkeys/hotkeys-fliplist.vhk
-share/vice/hotkeys/hotkeys-help.vhk
-share/vice/hotkeys/hotkeys-settings.vhk
-share/vice/hotkeys/hotkeys-snapshot.vhk
-share/vice/hotkeys/hotkeys-vsid.vhk
-share/vice/hotkeys/hotkeys-winvice-legacy.vhk
-share/vice/hotkeys/hotkeys.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-cartridge.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-datasette.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-debug.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-drive.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-fliplist.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-help.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-settings.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-snapshot.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-vsid.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys-winvice-legacy.vhk
+${PLIST.gui}share/vice/hotkeys/hotkeys.vhk
 ${PLIST.desktop}share/vice/vice-org-vice-org.menu
 ${PLIST.gtk}@pkgdir etc/xdg/menus/applications-merged

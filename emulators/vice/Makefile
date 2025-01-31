@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.192 2025/01/06 21:49:08 ktnb Exp $
+# $NetBSD: Makefile,v 1.193 2025/01/31 17:49:02 rhialto Exp $
 
-DISTNAME=	vice-3.8
-PKGREVISION=	13
+DISTNAME=	vice-3.9
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vice-emu/}
 
@@ -17,7 +16,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++11
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++11
 USE_TOOLS+=		bash gmake pkg-config perl flex yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-ethernet
@@ -44,6 +44,8 @@ CONFIGURE_ENV+=		ac_cv_prog_SVN=no
 CONFIGURE_ENV+=		ac_cv_prog_SVNVERSION=no
 CONFIGURE_ARGS+=	--disable-pdf-docs
 CONFIGURE_ARGS+=	--enable-html-docs
+
+MAKE_ENV+=		BASH_SHELL=${PREFIX}/bin/bash
 
 REQD_DIRS+=		${PREFIX}/share/vice
 
@@ -80,5 +82,4 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
