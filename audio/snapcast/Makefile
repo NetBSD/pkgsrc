@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/21 11:00:10 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/31 16:20:06 wiz Exp $
 
 DISTNAME=	snapcast-0.26.0
 PKGREVISION=	6
@@ -11,15 +11,12 @@ HOMEPAGE=	https://github.com/badaix/snapcast
 COMMENT=	Multiroom client-server audio player
 LICENSE=	gnu-gpl-v3
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 USE_CXX_FEATURES+=	filesystem
 
 REPLACE_PYTHON+=	server/etc/plug-ins/meta_mpd.py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CONF_FILES+=	${PREFIX}/share/examples/snapcast/snapserver.conf \
 		${PKG_SYSCONFDIR}/snapserver.conf
@@ -69,6 +66,7 @@ post-install:
 	cd ${WRKSRC} && ${CHMOD} +r ${DESTDIR}${PREFIX}/share/snapserver/plug-ins/meta_mpd.py
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../audio/libsoxr/buildlink3.mk"
