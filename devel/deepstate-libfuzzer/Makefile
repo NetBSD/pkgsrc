@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/10/14 06:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/01/31 13:05:56 wiz Exp $
 
 PKGNAME=	deepstate-libfuzzer-${VERSION}
 PKGREVISION=	2
@@ -6,6 +6,8 @@ PKGREVISION=	2
 USE_LANGUAGES=	c99 c++
 USE_CMAKE=	yes
 AUTO_MKDIRS=	yes
+
+BROKEN=		"Link error: does not find _Unwind_Resume."
 
 DEPENDS+=	deepstate>=${VERSION}:../../devel/deepstate
 TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
