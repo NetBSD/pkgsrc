@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/02/23 16:52:15 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/01/31 15:56:11 pho Exp $
 
-BLAKE2s (atomic-write-0.2.0.7.tar.gz) = 66d3c8b459d6fbe075c03e69cbd27e67c6f6067a412aaccecf9268342e7823dc
-SHA512 (atomic-write-0.2.0.7.tar.gz) = 3405437b801fbdd542c5c8a403f603ccb65ceaa63beca15062c429eaea412d7006342eb237982c9fe6751ffd160f810197b30fec3e49528e51bae1fc7f47af2e
-Size (atomic-write-0.2.0.7.tar.gz) = 7199 bytes
+BLAKE2s (atomic-write-0.2.1.0.tar.gz) = 609a3755fccf79255938f53653a26b4641d6d2ecb8e48e7748a76f98fa202648
+SHA512 (atomic-write-0.2.1.0.tar.gz) = 5ff555fd3d72de2b613ecd0445e5ec5f45c1ca722947c67709e6c622a52522d05d6b3f54d02b5f3f4babf1864aa7735a6bee7634453c71942cd76f107a8e1a89
+Size (atomic-write-0.2.1.0.tar.gz) = 7266 bytes
