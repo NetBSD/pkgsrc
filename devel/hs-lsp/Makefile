@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/05/09 01:32:02 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/01/31 09:56:22 pho Exp $
 
-DISTNAME=	lsp-2.5.0.0
-PKGREVISION=	1
+DISTNAME=	lsp-2.7.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,11 +18,10 @@ LICENSE=	mit
 .include "../../converters/hs-lens-aeson/buildlink3.mk"
 .include "../../devel/hs-lsp-types/buildlink3.mk"
 .include "../../textproc/hs-prettyprinter/buildlink3.mk"
-.include "../../devel/hs-random/buildlink3.mk"
 .include "../../devel/hs-sorted-list/buildlink3.mk"
 .include "../../textproc/hs-text-rope/buildlink3.mk"
+.include "../../devel/hs-unliftio/buildlink3.mk"
 .include "../../devel/hs-unliftio-core/buildlink3.mk"
 .include "../../devel/hs-unordered-containers/buildlink3.mk"
-.include "../../devel/hs-uuid/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
