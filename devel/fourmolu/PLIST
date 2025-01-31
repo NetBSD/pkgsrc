@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/05/03 09:21:00 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 03:55:34 pho Exp $
 bin/fourmolu
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/DynFlags.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/GHC/DynFlags.hi
@@ -12,6 +12,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Gen.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Gen.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Gen.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Types.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Types.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Config/Types.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Diff/ParseResult.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Diff/ParseResult.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Diff/ParseResult.p_hi
@@ -39,6 +42,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Fixity/Printer.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports/Grouping.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports/Grouping.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Imports/Grouping.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Parser.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Parser.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Parser.p_hi
@@ -156,6 +162,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Cabal.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Fixity.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Fixity.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Fixity.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Glob.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Glob.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/Glob.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/IO.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/IO.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Ormolu/Utils/IO.p_hi
@@ -178,6 +187,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Fixity-Internal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Fixity-Parser.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Fixity-Printer.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Fixity.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Imports-Grouping.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Imports.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Parser-CommentStream.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Parser-Pragma.html
@@ -217,6 +227,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Terminal-QualifiedDo
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Terminal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Utils-Cabal.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Utils-Fixity.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Utils-Glob.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Utils-IO.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu-Utils.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Ormolu.html
@@ -238,6 +249,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-M.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-N.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-O.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-P.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-Q.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-R.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-S.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-T.html
