@@ -1,0 +1,10 @@
+The Tcl extension module gives access to the Tcl library with
+functionality and interface similar to the C functions of Tcl.
+
+In other words, you can
+ create Tcl interpreters
+ execute Tcl code in an interpreter
+ bind in new Tcl procedures
+ Manipulate the result field of a Tcl interpreter
+ Set and get values of variables in a Tcl interpreter
+ Tie perl variables to variables in a Tcl interpreter
