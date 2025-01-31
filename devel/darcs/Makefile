@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2024/05/09 01:31:42 pho Exp $
+# $NetBSD: Makefile,v 1.76 2025/01/31 01:03:47 pho Exp $
 
-DISTNAME=	darcs-2.18.2
+DISTNAME=	darcs-2.18.5
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,9 +10,9 @@ COMMENT=	Distributed revision control system
 LICENSE=	gnu-gpl-v2
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	base	\
 	crypton	\
-	network	\
-	tls
+	hashable
 
 # Use crypton instead of outdated cryptonite.
 SUBST_CLASSES+=		crypton
@@ -40,36 +39,38 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/darcs_completion \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/darcs
 
-.include "../../devel/hs-async/buildlink3.mk"
-.include "../../textproc/hs-attoparsec/buildlink3.mk"
-.include "../../converters/hs-base16-bytestring/buildlink3.mk"
-.include "../../devel/hs-conduit/buildlink3.mk"
-.include "../../devel/hs-constraints/buildlink3.mk"
-.include "../../security/hs-crypton/buildlink3.mk"
-.include "../../devel/hs-data-ordlist/buildlink3.mk"
-.include "../../devel/hs-fgl/buildlink3.mk"
-.include "../../devel/hs-hashable/buildlink3.mk"
-.include "../../textproc/hs-html/buildlink3.mk"
-.include "../../www/hs-http-conduit/buildlink3.mk"
-.include "../../www/hs-http-types/buildlink3.mk"
-.include "../../devel/hs-memory/buildlink3.mk"
-.include "../../devel/hs-mmap/buildlink3.mk"
-.include "../../net/hs-network/buildlink3.mk"
-.include "../../net/hs-network-uri/buildlink3.mk"
-.include "../../time/hs-old-time/buildlink3.mk"
-.include "../../textproc/hs-regex-applicative/buildlink3.mk"
-.include "../../textproc/hs-regex-base/buildlink3.mk"
-.include "../../textproc/hs-regex-compat-tdfa/buildlink3.mk"
 .include "../../devel/hs-safe/buildlink3.mk"
-.include "../../devel/hs-strict-identity/buildlink3.mk"
-.include "../../archivers/hs-tar/buildlink3.mk"
-.include "../../sysutils/hs-temporary/buildlink3.mk"
-.include "../../devel/hs-terminal-size/buildlink3.mk"
-.include "../../security/hs-tls/buildlink3.mk"
-.include "../../devel/hs-unix-compat/buildlink3.mk"
+.include "../../textproc/hs-regex-base/buildlink3.mk"
+.include "../../textproc/hs-regex-tdfa/buildlink3.mk"
+.include "../../textproc/hs-regex-applicative/buildlink3.mk"
+.include "../../devel/hs-fgl/buildlink3.mk"
+.include "../../textproc/hs-html/buildlink3.mk"
+.include "../../devel/hs-memory/buildlink3.mk"
+.include "../../security/hs-crypton/buildlink3.mk"
+.include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../devel/hs-vector/buildlink3.mk"
+.include "../../archivers/hs-tar/buildlink3.mk"
+.include "../../devel/hs-data-ordlist/buildlink3.mk"
+.include "../../textproc/hs-attoparsec/buildlink3.mk"
 .include "../../archivers/hs-zip-archive/buildlink3.mk"
+.include "../../devel/hs-async/buildlink3.mk"
+.include "../../devel/hs-constraints/buildlink3.mk"
+.include "../../devel/hs-unix-compat/buildlink3.mk"
+.include "../../time/hs-old-time/buildlink3.mk"
+.include "../../sysutils/hs-temporary/buildlink3.mk"
+.include "../../devel/hs-hashable/buildlink3.mk"
+.include "../../devel/hs-mmap/buildlink3.mk"
 .include "../../archivers/hs-zlib/buildlink3.mk"
+.include "../../net/hs-network-uri/buildlink3.mk"
+.include "../../net/hs-network/buildlink3.mk"
+.include "../../devel/hs-conduit/buildlink3.mk"
+.include "../../www/hs-http-conduit/buildlink3.mk"
+.include "../../www/hs-http-types/buildlink3.mk"
+.include "../../devel/hs-terminal-size/buildlink3.mk"
+.include "../../net/hs-crypton-connection/buildlink3.mk"
+.include "../../devel/hs-data-default/buildlink3.mk"
+.include "../../www/hs-http-client-tls/buildlink3.mk"
+.include "../../security/hs-tls/buildlink3.mk"
 .include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
