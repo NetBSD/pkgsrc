@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/30 13:27:31 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/01/31 08:08:47 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Euclidean.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Euclidean.hi
@@ -6,9 +6,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Euclidean.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Field.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Field.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Field.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Ring/Ordered.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Ring/Ordered.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Ring/Ordered.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Directed.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Directed.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Directed.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Generic.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Generic.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Semiring/Generic.p_hi
@@ -25,6 +31,8 @@ lib/semirings-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Euclidean.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Field.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Ring-Ordered.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Semiring-Directed.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Semiring-Generic.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Semiring-Tropical.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/semirings-${PKGVERSION}/html/Data-Semiring.html
