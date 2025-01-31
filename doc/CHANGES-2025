@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.903 2025/01/31 14:35:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.904 2025/01/31 14:39:35 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1155,3 +1155,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-shake version 0.19.8 [pho 2025-01-31]
 	Added textproc/hs-neat-interpolation version 0.5.1.4 [pho 2025-01-31]
 	Added devel/hs-tasty-expected-failure version 0.12.3 [pho 2025-01-31]
+	Added devel/hs-tasty-golden version 2.3.5 [pho 2025-01-31]
