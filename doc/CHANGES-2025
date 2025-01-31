@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.925 2025/01/31 18:45:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.926 2025/01/31 23:39:14 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1177,3 +1177,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-google-auth to 2.38.0 [wiz 2025-01-31]
 	Updated print/libpaper to 2.2.6 [wiz 2025-01-31]
 	Updated print/texlab to 5.21.0 [wiz 2025-01-31]
+	Updated textproc/libxls to 1.6.3 [sjmulder 2025-01-31]
