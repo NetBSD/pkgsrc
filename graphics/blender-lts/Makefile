@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2024/12/29 15:09:49 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/01/31 08:08:33 wiz Exp $
 
 DISTNAME=	blender-3.6.18
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
+
+BROKEN=		"Does not build due to -Werror problems, despite all the BUILDLINK_TRANSFORMS."
 
 # GCC 11.0.0 or later is required.
 GCC_REQD+=	12
@@ -50,8 +52,14 @@ CMAKE_CONFIGURE_ARGS+=	-DPYTHON_VERSION=${PYVERSSUFFIX}
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_NUMPY=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_PYTHON_INSTALL_REQUESTS=OFF
 
-BUILDLINK_TRANSFORM+=	rm:-Werror=float-conversion
+BUILDLINK_TRANSFORM+=	rm:-Wall
+BUILDLINK_TRANSFORM+=	rm:-Werror=conversion
 BUILDLINK_TRANSFORM+=	rm:-Werror=double-conversion
+BUILDLINK_TRANSFORM+=	rm:-Werror=double-promotion
+BUILDLINK_TRANSFORM+=	rm:-Werror=float-conversion
+BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
+BUILDLINK_TRANSFORM+=	rm:-Werror=return-type
+BUILDLINK_TRANSFORM+=	rm:-Werror=vla
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .if ${MESALIB_SUPPORTS_EGL} == "yes"
