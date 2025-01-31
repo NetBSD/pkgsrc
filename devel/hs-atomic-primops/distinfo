@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/04/29 08:56:01 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/01/31 15:53:05 pho Exp $
 
-BLAKE2s (atomic-primops-0.8.7.tar.gz) = b9d4dc6d3c784e349b6d41602d48477ad8a90022ce82d5355d423c867de97594
-SHA512 (atomic-primops-0.8.7.tar.gz) = 3cf49658216bfc7ee0938f81b37a2fbe725ed2aa35ef39f4f0c60891cd55292256b2e26bf735c3967fcacfd0b7c707db60d0ba9e994e29fd8199e34701bd41fd
-Size (atomic-primops-0.8.7.tar.gz) = 34142 bytes
+BLAKE2s (atomic-primops-0.8.8.tar.gz) = 36cb891dd630276513fbc3321febd7ef3f3b82e9b2db943f1621272ec4fb7330
+SHA512 (atomic-primops-0.8.8.tar.gz) = efa881f7a148d3fe4cd4f4c6ccbdef9d6d7a0e47a29917e11344000c41f57b2265251970baa1743bd7b021e82c78f446907631b16bd7b5a4521e7b1d0530db52
+Size (atomic-primops-0.8.8.tar.gz) = 34182 bytes
