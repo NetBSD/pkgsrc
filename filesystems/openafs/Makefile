@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2024/11/15 18:14:42 jakllsch Exp $
+# $NetBSD: Makefile,v 1.28 2025/01/31 09:43:26 wiz Exp $
 
 DISTNAME=	openafs-1.8.13-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -17,6 +17,9 @@ CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	heimdal-[0-9]*
 CONFLICTS+=	lwp-[0-9]*
 CONFLICTS+=	rx-[0-9]*
+
+# upstream build system needs to be adapted for each version of an operating system
+NOT_FOR_PLATFORM+=	NetBSD-1[0-9].*-*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
