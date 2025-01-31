@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2025/01/31 13:52:43 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser/Internal.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser/Internal.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Conduit/Parser/Internal.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/conduit-parse-${PKGVERSION}/${HS_VERSION}/package-description
+lib/conduit-parse-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/Data-Conduit-Parser.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/conduit-parse.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/conduit-parse-${PKGVERSION}/html/synopsis.png
