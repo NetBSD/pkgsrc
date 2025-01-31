@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/01/31 13:52:43 pho Exp $
+
+BLAKE2s (conduit-parse-0.2.1.1.tar.gz) = 2bd71e0664bec82843a015a532c949f619090616f590d83dee31a46cb1192dc6
+SHA512 (conduit-parse-0.2.1.1.tar.gz) = bff6db0c2a67973b42eff052d9801067b453b25eba69ff594d87226074d825b7439a7c7ce116aa0e3f7c7f71955702da7a10edec4c5fe893ef196fcc13eeebd0
+Size (conduit-parse-0.2.1.1.tar.gz) = 4747 bytes
