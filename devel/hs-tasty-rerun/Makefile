@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:14 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/01/31 14:44:18 pho Exp $
 
 DISTNAME=	tasty-rerun-1.1.19
 PKGREVISION=	2
@@ -9,7 +9,8 @@ COMMENT=	Rerun only tests which failed in a previous test run
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	base
+	base	\
+	containers
 
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../devel/hs-split/buildlink3.mk"
