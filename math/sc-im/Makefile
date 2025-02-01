@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2024/11/14 22:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2025/02/01 00:52:13 sjmulder Exp $
 
 DISTNAME=	sc-im-0.8.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andmarti1424/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,6 +28,8 @@ REPLACE_BASH+=	src/scopen
 CFLAGS+=	-DGNUPLOT
 # needed for PATH_MAX due to std=c99 set above (at least on Illumos)
 CFLAGS+=	-D_XOPEN_SOURCE
+# formats/ods.c forgets to include some header(s), fixed in 0.8.4
+CFLAGS+=	-Wno-error=implicit-function-declaration
 
 MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.ncurses:Q}
 MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.ncurses:Q}
