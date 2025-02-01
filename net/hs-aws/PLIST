@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/04 14:10:26 pho Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/01 14:41:48 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Aws.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Aws.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Aws.p_hi
@@ -164,6 +164,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketLocation.p_
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketObjectVersions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketObjectVersions.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketObjectVersions.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketVersioning.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketVersioning.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetBucketVersioning.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetObject.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetObject.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Aws/S3/Commands/GetObject.p_hi
@@ -330,6 +333,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-Dele
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetBucket.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetBucketLocation.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetBucketObjectVersions.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetBucketVersioning.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetObject.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-GetService.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/aws-${PKGVERSION}/html/Aws-S3-Commands-HeadObject.html

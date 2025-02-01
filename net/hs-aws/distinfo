@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/05/04 14:10:26 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/02/01 14:41:48 pho Exp $
 
-BLAKE2s (aws-0.24.2.tar.gz) = 81b58d5acb503214f52ae4a3942380a0b7f7706dd52d89e374cc994fbb6745cd
-SHA512 (aws-0.24.2.tar.gz) = f169deb9faac2d7a33e96065a9ee10c7373a8cb2c4a1a5745aa9d86abdf882051a4c0884c26f8174161151c13e612309163cde3c32eebc2692d16e9b93362aa6
-Size (aws-0.24.2.tar.gz) = 106857 bytes
+BLAKE2s (aws-0.24.4.tar.gz) = 1a89e26aedeb2324cd31567fc991c5e586617523cea3b3f54ffa409299cf3ad0
+SHA512 (aws-0.24.4.tar.gz) = 23073a90ec91d95f1ddd42cb9bee043463c7564be1323bb7e84873d7c4e834b3c4afd31dd024f9fba983e42a5c63e28d0708e6266d31417bd395eb123680a43a
+Size (aws-0.24.4.tar.gz) = 107500 bytes
