@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:20 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/01 10:04:55 pho Exp $
 
 DISTNAME=	wizards-1.0.3
 PKGREVISION=	8
@@ -9,6 +9,7 @@ COMMENT=	High level, generic library for interrogative user interfaces
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers	\
 	haskeline	\
 	mtl	\
 	transformers
