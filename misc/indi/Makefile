@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2024/12/10 10:07:50 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/01 18:20:49 adam Exp $
 
-DISTNAME=	indi-2.1.1
+DISTNAME=	indi-2.1.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=indilib/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-# XXX: remove on next update
-DIST_SUBDIR=	indi
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/indilib/indi
