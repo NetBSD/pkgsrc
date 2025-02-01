@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.959 2025/02/01 14:41:56 pho Exp $
+$NetBSD: CHANGES-2025,v 1.960 2025/02/01 15:13:19 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1214,3 +1214,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/hs-tls-session-manager to 0.0.7 [pho 2025-02-01]
 	Updated www/hs-warp-tls to 3.4.12 [pho 2025-02-01]
 	Updated net/hs-aws to 0.24.4 [pho 2025-02-01]
+	Updated sysutils/hs-dbus to 1.3.11 [pho 2025-02-01]
