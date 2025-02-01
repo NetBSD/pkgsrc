@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/01/01 13:24:20 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/02/01 12:21:37 mef Exp $
 
-BLAKE2s (R/webfakes_1.3.1.tar.gz) = e812a40960874bce63ac5cf9502d4794de8dcdab67956df5c45653a90c5af6da
-SHA512 (R/webfakes_1.3.1.tar.gz) = db6abfd480896c95d0b5b34a15077bab4e448df77812c4e3ef3b186bf31c2a1f52b1ca1ba779535b768033ddc1a8b32188641f45453af7ade6f4473a45a159df
-Size (R/webfakes_1.3.1.tar.gz) = 393705 bytes
+BLAKE2s (R/webfakes_1.3.2.tar.gz) = 3aadced984658f8c31a75869740d53d6550ee95ceac9961b67de07cf5e22a387
+SHA512 (R/webfakes_1.3.2.tar.gz) = a7dfcf3db37a27fae0b0d74b8e231844af5883cd900d5c5b54190695e6b2bd4b72d612c69f59bea45245e3166d82c3b483c8689f39f392b68bee57e6a4760be4
+Size (R/webfakes_1.3.2.tar.gz) = 435284 bytes
