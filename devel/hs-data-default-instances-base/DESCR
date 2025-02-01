@@ -1,1 +1,2 @@
-Default instances for types in base
+This module reexports the Data.Default.Class.Default instances from the
+Data.Default.Class module.
