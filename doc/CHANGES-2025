@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.936 2025/02/01 08:42:22 pho Exp $
+$NetBSD: CHANGES-2025,v 1.937 2025/02/01 09:05:36 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1191,3 +1191,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/camlp5 to 8.03.01 [wiz 2025-02-01]
 	Updated devel/hs-git-lfs to 1.2.3 [pho 2025-02-01]
 	Updated devel/hs-hashtables to 1.4.2 [pho 2025-02-01]
+	Updated devel/hs-lukko to 0.1.2 [pho 2025-02-01]
