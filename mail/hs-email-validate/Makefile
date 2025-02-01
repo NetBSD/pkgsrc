@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:24 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/01 13:38:38 pho Exp $
 
-DISTNAME=	email-validate-2.3.2.20
-PKGREVISION=	1
+DISTNAME=	email-validate-2.3.2.21
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
