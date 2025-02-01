@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.928 2025/02/01 00:52:45 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.929 2025/02/01 01:45:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libxls to 1.6.3 [sjmulder 2025-01-31]
 	Updated textproc/libxlsxwriter to 1.1.9 [sjmulder 2025-01-31]
 	Updated math/sc-im to 0.8.3nb9 [sjmulder 2025-02-01]
+	Updated www/snac to 2.70 [schmonz 2025-02-01]
