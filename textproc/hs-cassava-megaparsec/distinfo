@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/05/01 17:06:10 pho Exp $
+$NetBSD: distinfo,v 1.9 2025/02/01 10:11:10 pho Exp $
 
-BLAKE2s (cassava-megaparsec-2.1.0.tar.gz) = f4b28668958858e6d41ca35f78d059bbe536551f24afa26ba925fe5bc8b29dbe
-SHA512 (cassava-megaparsec-2.1.0.tar.gz) = 50a550d5e06a4575e685599db23640a33841ce0ae1ce74f849ca75819d717bd6c30fd534cb0ac04ae4e4935ef974abcc2aaf879125dcc947ff1a8f411e65525f
-Size (cassava-megaparsec-2.1.0.tar.gz) = 6585 bytes
+BLAKE2s (cassava-megaparsec-2.1.1.tar.gz) = dcd3c3cb99eef12e4964a2afb62e6e4d6dd4838bc2cd6544fd476b6bcba0c052
+SHA512 (cassava-megaparsec-2.1.1.tar.gz) = 6e35e59e300480261dc8a96773975ae234b7a0e0533358bd1daef86377b6446eaff8b2c6326fd656140361a9ba3094a76238c2dc9b8644b355d00474560e4983
+Size (cassava-megaparsec-2.1.1.tar.gz) = 7428 bytes
