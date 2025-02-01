@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.17 2025/01/23 19:31:43 riastradh Exp $
+# $NetBSD: wheel.mk,v 1.18 2025/02/01 15:40:43 gdt Exp $
 #
 # Build and install Python wheels
 #
@@ -12,8 +12,10 @@
 # wheel.mk does not look for and parse pyproject.toml, and does not
 # support variables to declare the needed tools.  Therefore, packages
 # including wheel.mk must TOOL_DEPENDS on the needed build tools.
-# A typical package will need:
+# A typical package will need one of the following, perhaps with the
+# minimum version adjusted:
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+#   TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
 
 # Variables:
 #
