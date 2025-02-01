@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.953 2025/02/01 13:38:45 pho Exp $
+$NetBSD: CHANGES-2025,v 1.954 2025/02/01 13:48:42 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/dhall to 1.42.2 [pho 2025-02-01]
 	Updated devel/hs-witherable to 0.5 [pho 2025-02-01]
 	Updated mail/hs-email-validate to 2.3.2.21 [pho 2025-02-01]
+	Updated misc/hs-cabal-install-solver to 3.12.1.0 [pho 2025-02-01]
