@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.6 2024/10/25 10:41:57 adam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.7 2025/02/01 18:13:31 adam Exp $
 qt6/bin/macdeployqt
 qt6/bin/macdeployqt6
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qcfsocketnotifier_p.h
@@ -33,6 +33,7 @@ qt6/include/QtTest/${PKGVERSION}/QtTest/private/qtestutil_macos_p.h
 qt6/include/QtWidgets/${PKGVERSION}/QtWidgets/private/qmacgesturerecognizer_p.h
 qt6/lib/cmake/Qt6/macos/Info.plist.app.in
 qt6/lib/cmake/Qt6/macos/PrivacyInfo.xcprivacy
+qt6/lib/cmake/Qt6/macos/test.entitlements.plist
 qt6/lib/cmake/Qt6Core/Qt6CorePlugins.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Core/Qt6QDarwinBluetoothPermissionPluginConfig.cmake

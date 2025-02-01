@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/12/26 22:20:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/01 18:13:31 adam Exp $
 lib/pkgconfig/Qt6Grpc.pc
 lib/pkgconfig/Qt6GrpcQuick.pc
 lib/pkgconfig/Qt6Protobuf.pc
@@ -58,11 +58,15 @@ qt6/include/QtGrpcQuick/qtgrpcquickexports.h
 qt6/include/QtGrpcQuick/qtgrpcquickversion.h
 qt6/include/QtGrpcQuick/qtqmlgrpcstreamsender.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobuffieldpresencechecker_p.h
+qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobufscalarjsonserializers_p.h
+qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/protobufscalarserializers_p.h
+qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufdeserializerbase_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufmessage_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufpropertyorderingbuilder_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufregistration_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufselfcheckiterator_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufserializer_p.h
+qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qprotobufserializerbase_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qtprotobuf-config_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qtprotobufdefs_p.h
 qt6/include/QtProtobuf/${PKGVERSION}/QtProtobuf/private/qtprotobuflogging_p.h

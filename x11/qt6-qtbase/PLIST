@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2024/12/26 22:20:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/02/01 18:13:31 adam Exp $
 lib/pkgconfig/Qt6Concurrent.pc
 lib/pkgconfig/Qt6Core.pc
 ${PLIST.dbus}lib/pkgconfig/Qt6DBus.pc
@@ -65,6 +65,7 @@ qt6/doc/config/exampleurl-qtx11extras.qdocconf
 qt6/doc/config/exampleurl-qtxmlpatterns.qdocconf
 qt6/doc/global/compat.qdocconf
 qt6/doc/global/config.qdocconf
+qt6/doc/global/cpp-doc-macros.qdocconf
 qt6/doc/global/externalsites.qdocconf
 qt6/doc/global/externalsites/external-resources.qdoc
 qt6/doc/global/externalsites/qt-webpages.qdoc
@@ -2810,8 +2811,17 @@ qt6/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicGitHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicPluginHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicSbomHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake
+qt6/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTargetHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicTestHelpers.cmake
 qt6/lib/cmake/Qt6/QtPublicToolHelpers.cmake
@@ -2838,6 +2848,7 @@ qt6/lib/cmake/Qt6/QtUnityBuildHelpers.cmake
 qt6/lib/cmake/Qt6/QtVersionlessAliasTargets.cmake.in
 qt6/lib/cmake/Qt6/QtVersionlessTargets.cmake.in
 qt6/lib/cmake/Qt6/QtWasmHelpers.cmake
+qt6/lib/cmake/Qt6/QtWindowsHelpers.cmake
 qt6/lib/cmake/Qt6/QtWrapperScriptHelpers.cmake
 qt6/lib/cmake/Qt6/QtWriteArgsFile.cmake
 qt6/lib/cmake/Qt6/config.tests/binary_for_strip/CMakeLists.txt

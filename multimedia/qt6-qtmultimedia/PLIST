@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.18 2024/12/27 08:02:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/02/01 18:13:32 adam Exp $
 lib/pkgconfig/Qt6Multimedia.pc
 lib/pkgconfig/Qt6MultimediaWidgets.pc
 lib/pkgconfig/Qt6SpatialAudio.pc
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiobuffer_support_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiobufferoutput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodecoder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiodevice_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioengine_pulse_p.h
+${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevices_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioformat_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiohelpers_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudioringbuffer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachine_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiostatemachineutils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qaudiosystem_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcachedvalue_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcameradevice_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qcapturablewindow_p.h
@@ -26,9 +30,11 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediaplayer_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediarecorder_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmediastoragelocation_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmemoryvideobuffer_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimedia_enum_to_string_converter_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qmultimediautils_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiobufferinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiodecoder_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiodevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudioinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudiooutput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformaudioresampler_p.h
@@ -36,7 +42,6 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformcamera_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformcapturablewindows_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformimagecapture_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediacapture_p.h
-qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediadevices_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaformatinfo_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaintegration_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformmediaplayer_p.h
@@ -47,17 +52,19 @@ qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideodevice
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideoframeinput_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosink_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qplatformvideosource_p.h
-${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiodevice_p.h
-${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiomediadevices_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosink_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulseaudiosource_p.h
 ${PLIST.pulseaudio}qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qpulsehelpers_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qrhivaluemapper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsamplecache_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qsharedhandle_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimedia-config_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qtmultimediaglobal_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframe_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconversionhelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframeconverter_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframetexturefromsource_p.h
+qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideoframetexturepool_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideooutputorientationhandler_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotexturehelper_p.h
 qt6/include/QtMultimedia/${PKGVERSION}/QtMultimedia/private/qvideotransformation_p.h
@@ -205,7 +212,6 @@ ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstre
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamermetadata_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamervideodevices_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamervideooutput_p.h
-${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamervideooverlay_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstreamervideosink_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstsubtitlesink_p.h
 ${PLIST.gstreamer}qt6/include/QtQGstreamerMediaPluginImpl/${PKGVERSION}/QtQGstreamerMediaPluginImpl/private/qgstutils_p.h
