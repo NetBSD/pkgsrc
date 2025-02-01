@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:07 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/01 09:15:03 pho Exp $
 
 DISTNAME=	pattern-arrows-0.0.2
 PKGREVISION=	5
-CATEGORIES=	devel
+CATEGORIES=	devel # This probably belongs to textproc but it's too late to change.
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Arrows for Pretty Printing
