@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2024/05/02 12:03:23 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/01 12:07:03 pho Exp $
 bin/hledger
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anchor.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anchor.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anchor.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anon.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anon.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Anon.p_hi
@@ -99,6 +102,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Commands/Tags.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/CompoundBalanceCommand.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/CompoundBalanceCommand.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/CompoundBalanceCommand.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Conf.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Conf.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/Conf.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/DocFiles.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/DocFiles.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Cli/DocFiles.p_hi
@@ -121,6 +127,7 @@ lib/${PKGNAME}/${HS_VERSION}/package-description
 lib/${PKGNAME}/${HS_VERSION}/package-id
 share/bash-completion/completions/hledger
 share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Anchor.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Anon.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-CliOptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Accounts.html
@@ -153,6 +160,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Stats.
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands-Tags.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Commands.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-CompoundBalanceCommand.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Conf.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-DocFiles.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Script.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Cli-Utils.html
