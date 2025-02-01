@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.931 2025/02/01 07:47:43 pho Exp $
+$NetBSD: CHANGES-2025,v 1.932 2025/02/01 08:24:03 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1186,3 +1186,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-grpcio-testing to 1.70.0 [adam 2025-02-01]
 	Updated net/py-grpcio-tools to 1.70.0 [adam 2025-02-01]
 	Updated devel/hs-data-default-instances-base to 0.1.0.3 [pho 2025-02-01]
+	Updated devel/hs-foldable1-classes-compat to 0.1.1 [pho 2025-02-01]
