@@ -1,4 +1,4 @@
-$NetBSD: patch-libs_tk_ydk_config.h,v 1.2 2025/01/31 22:01:23 wiz Exp $
+$NetBSD: patch-libs_tk_ydk_config.h,v 1.3 2025/02/01 10:01:19 wiz Exp $
 
 Only assume GNU ftw on Linux.
 https://tracker.ardour.org/view.php?id=9886
@@ -10,7 +10,7 @@ https://tracker.ardour.org/view.php?id=9886
  #endif
  
 -#ifndef __APPLE__
-+#ifdef __Linux__
++#if !defined(__APPLE__) && !defined(__NetBSD__)
  /* Have GNU ftw */
  #define HAVE_GNU_FTW 1
  #endif
