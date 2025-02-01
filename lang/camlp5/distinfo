@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.26 2022/11/11 10:33:00 jaapb Exp $
+$NetBSD: distinfo,v 1.27 2025/02/01 08:40:04 wiz Exp $
 
-BLAKE2s (camlp5-8.00.03.tar.gz) = 8e2c4261ecc4a7eb931ca53028c936109155ce496acbd7fc0c7baa346f3ce5b1
-SHA512 (camlp5-8.00.03.tar.gz) = a6259d2d491ed1f967dd383f03d3da65a3f383d28340111f57883c6d56cee2d267c0f752ba98bcdb72c24cf724a606718de26b6c55b84ad9b5f8f6d620f3cba1
-Size (camlp5-8.00.03.tar.gz) = 1217877 bytes
+BLAKE2s (camlp5-8.03.01.tar.gz) = 64d156a11e9a5abff613949b3483b3cd0a2b022208488bdc957cdcc02b8a8742
+SHA512 (camlp5-8.03.01.tar.gz) = 144ab15e18673fa485d08cf37c6ba69146db7db4be9e7031e202e0747d922e223396b83881b1d65cf27bedb2115d91e5eb62b5a22e2d57dda838013ebd398ff2
+Size (camlp5-8.03.01.tar.gz) = 1308092 bytes
