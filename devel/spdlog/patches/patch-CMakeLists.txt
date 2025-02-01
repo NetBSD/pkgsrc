@@ -1,16 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2023/07/18 04:59:01 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2025/02/01 18:26:12 adam Exp $
 
 * Fix shared library name.
   Do not create libspdlog.so.1.11 symlink.
 
---- CMakeLists.txt.orig	2023-07-08 14:12:25.000000000 +0000
+--- CMakeLists.txt.orig	2025-02-01 11:08:54.000000000 +0000
 +++ CMakeLists.txt
-@@ -186,7 +186,7 @@ target_link_libraries(spdlog PUBLIC Thre
+@@ -191,7 +191,7 @@ target_link_libraries(spdlog PUBLIC Thre
  spdlog_enable_warnings(spdlog)
  
  set_target_properties(spdlog PROPERTIES VERSION ${SPDLOG_VERSION} SOVERSION
--                                                                  ${SPDLOG_VERSION_MAJOR}.${SPDLOG_VERSION_MINOR})
-+                                                                  ${SPDLOG_VERSION_MAJOR})
+-        ${SPDLOG_VERSION_MAJOR}.${SPDLOG_VERSION_MINOR})
++        ${SPDLOG_VERSION_MAJOR})
  set_target_properties(spdlog PROPERTIES DEBUG_POSTFIX d)
  
- if(COMMAND target_precompile_headers AND SPDLOG_ENABLE_PCH)
+ if (COMMAND target_precompile_headers AND SPDLOG_ENABLE_PCH)
