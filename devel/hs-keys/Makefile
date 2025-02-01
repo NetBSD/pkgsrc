@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:00 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/01 12:48:25 pho Exp $
 
 DISTNAME=	keys-3.12.3
 PKGREVISION=	5
@@ -9,6 +9,7 @@ COMMENT=	Keyed functors and containers
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers	\
 	hashable	\
 	semigroupoids	\
 	transformers
