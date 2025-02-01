@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/31 17:14:34 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/02/01 09:38:07 pho Exp $
 
-BLAKE2s (tasty-quickcheck-0.10.3.tar.gz) = 7e90dadca1512821680d121d4013a918a1b21bae167898208f46c61f71c94d6a
-SHA512 (tasty-quickcheck-0.10.3.tar.gz) = 6b7594df965575432e192d813268fe7b62b72a2f3d48da4b9817e1d025b7193cbd4a14653846c5b5191533448b8f2807863883d878997a5a13199072dffb59ec
-Size (tasty-quickcheck-0.10.3.tar.gz) = 6289 bytes
+BLAKE2s (tasty-quickcheck-0.11.1.tar.gz) = 1e60048bb73003a3fbb774063d1d26ff07cd4ec1afea2c8d1fad3c65abbcc893
+SHA512 (tasty-quickcheck-0.11.1.tar.gz) = 6e669a5ad95b4126aab0248d97f35247e3c3299341a3bf61e2650c5c3c7d05b12a187e2228d0116ab8dc2d6ee0c23e40dd4cd3339cc7f0a7d08b2235230d2651
+Size (tasty-quickcheck-0.11.1.tar.gz) = 7349 bytes
