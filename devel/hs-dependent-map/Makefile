@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:52 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/01 12:48:09 pho Exp $
 
 DISTNAME=	dependent-map-0.4.0.0
 PKGREVISION=	5
@@ -9,6 +9,7 @@ COMMENT=	Dependent finite maps (partial dependent products)
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
+	containers	\
 	constraints-extras
 
 .include "../../devel/hs-constraints-extras/buildlink3.mk"
