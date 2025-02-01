@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2024/05/09 01:32:24 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/01 13:30:00 pho Exp $
 
 DISTNAME=	purescript-0.15.15
 PKGNAME=	${DISTNAME}
@@ -27,8 +27,10 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	ansi-wl-pprint		\
 	base			\
 	bytestring		\
+	containers		\
 	crypton			\
 	deepseq			\
+	filepath		\
 	happy			\
 	language-javascript	\
 	lens			\
@@ -43,7 +45,8 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	these			\
 	time			\
 	transformers		\
-	vector
+	vector			\
+	witherable
 
 # If purs is to be linked dynamically, it will depend on more than 180
 # shared objects and the dynamic linker will spend several seconds to
