@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.957 2025/02/01 14:32:11 pho Exp $
+$NetBSD: CHANGES-2025,v 1.958 2025/02/01 14:35:20 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/cabal-install to 3.12.1.0 [pho 2025-02-01]
 	Updated security/hs-crypto-token to 0.1.2 [pho 2025-02-01]
 	Updated security/hs-tls-session-manager to 0.0.7 [pho 2025-02-01]
+	Updated www/hs-warp-tls to 3.4.12 [pho 2025-02-01]
