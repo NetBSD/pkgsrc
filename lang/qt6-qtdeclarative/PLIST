@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2024/12/26 23:03:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/02/01 18:13:31 adam Exp $
 lib/pkgconfig/Qt6LabsAnimation.pc
 lib/pkgconfig/Qt6LabsFolderListModel.pc
 lib/pkgconfig/Qt6LabsPlatform.pc
@@ -1399,6 +1399,7 @@ qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickswit
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquickswitchdelegate_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktabbar_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktabbutton_p.h
+qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktemplatesutils_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktextarea_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktextarea_p_p.h
 qt6/include/QtQuickTemplates2/${PKGVERSION}/QtQuickTemplates2/private/qquicktextfield_p.h
@@ -1881,6 +1882,7 @@ qt6/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlConfigExtras.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlConfigVersion.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlConfigVersionImpl.cmake
+qt6/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlDeploySupport.cmake
 qt6/lib/cmake/Qt6Qml/Qt6QmlFindQmlscInternal.cmake
