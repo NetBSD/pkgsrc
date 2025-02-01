@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2024/12/29 09:31:47 adam Exp $
+# $NetBSD: Makefile,v 1.107 2025/02/01 18:40:46 adam Exp $
 
-DISTNAME=	ipython-8.31.0
+DISTNAME=	ipython-8.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
