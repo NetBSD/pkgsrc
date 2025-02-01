@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.948 2025/02/01 12:07:10 pho Exp $
+$NetBSD: CHANGES-2025,v 1.949 2025/02/01 12:14:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-shakespeare to 2.1.1 [pho 2025-02-01]
 	Added net/hs-modern-uri version 0.3.6.1 [pho 2025-02-01]
 	Updated finance/hledger to 1.41 [pho 2025-02-01]
+	Updated www/R-bslib to 0.9.0 [mef 2025-02-01]
