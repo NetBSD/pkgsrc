@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:14:54 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/02/01 07:47:35 pho Exp $
 
-BLAKE2s (data-default-instances-base-0.1.0.1.tar.gz) = 18d20279753553989435df0c58b55728b14c9a7864d67fcf7b69b14910826ad7
-SHA512 (data-default-instances-base-0.1.0.1.tar.gz) = 32d25a84dc22be5fc0145a32eb4bb8879c4ab43ec08cba9a6e48084e668ca704b1fa69b82f756759a467c23958878c0dfe00620a6a8763e95e319ef71dcbb46d
-Size (data-default-instances-base-0.1.0.1.tar.gz) = 1554 bytes
+BLAKE2s (data-default-instances-base-0.1.0.3.tar.gz) = d065bda71334a143043f4609497bbbff1f147e619985a7d0ee12e2a3e7a44159
+SHA512 (data-default-instances-base-0.1.0.3.tar.gz) = 5bd45cc4984137215a032aac18304f0712df9b5ffa0e6027fdadb825d6430c24ab9d778df619b52ead683556a86f2a092b9ec5030f56e159af1c6cfc66c59992
+Size (data-default-instances-base-0.1.0.3.tar.gz) = 1566 bytes
