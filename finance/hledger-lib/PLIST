@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/05/02 11:59:34 pho Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/01 10:28:58 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger.p_hi
@@ -17,6 +17,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Amount.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Balancing.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Balancing.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Balancing.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Currency.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Currency.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Currency.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Dates.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Dates.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Data/Dates.p_hi
@@ -83,9 +86,6 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/Common.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvReader.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvReader.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvReader.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvUtils.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvUtils.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/CsvUtils.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/InputOptions.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/InputOptions.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Read/InputOptions.p_hi
@@ -152,12 +152,33 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Utils/Test.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Utils/Text.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Utils/Text.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Utils/Text.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Beancount.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Beancount.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Beancount.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Csv.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Csv.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Csv.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Attribute.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Attribute.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Attribute.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Blaze.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Blaze.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Blaze.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Lucid.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Lucid.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Html/Lucid.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Ods.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Ods.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Ods.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Spreadsheet.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Spreadsheet.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Hledger/Write/Spreadsheet.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hledger_lib.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hledger_lib.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_hledger_lib.p_hi
-${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Custom.dyn_hi
-lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Custom.hi
-${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Megaparsec/Custom.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Tabular/AsciiWide.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Text/Tabular/AsciiWide.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/Tabular/AsciiWide.p_hi
@@ -174,6 +195,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Account.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-AccountName.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Amount.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Balancing.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Currency.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Dates.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Errors.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data-Journal.html
@@ -196,7 +218,6 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Data.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Query.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-Common.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-CsvReader.html
-${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-CsvUtils.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-InputOptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-JournalReader.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Read-RulesReader.html
@@ -220,8 +241,17 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Utils-String.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Utils-Test.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Utils-Text.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Utils.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Beancount.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Csv.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Html-Attribute.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Html-Blaze.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Html-Lucid.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Html.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Ods.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger-Write-Spreadsheet.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Hledger.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Text-Tabular-AsciiWide.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Text-WideString.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-43.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-64.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-94.html
