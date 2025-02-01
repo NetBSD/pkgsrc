@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.45 2025/02/01 08:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/02/01 08:40:04 wiz Exp $
 
-GITHUB_PROJECT=	camlp5
-DISTNAME=	${GITHUB_PROJECT}-8.00.03
+DISTNAME=	camlp5-8.03.01
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camlp5/}
-GITHUB_TAG=	rel${PKGVERSION_NOREV}
-PKGREVISION=	1
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	https://camlp5.github.io/
 COMMENT=	Preprocessor-pretty-printer for ocaml
 LICENSE=	modified-bsd
 
+DEPENDS+=	ocaml-bos-[0-9]*:../../devel/ocaml-bos
+DEPENDS+=	ocaml-re-[0-9]*:../../devel/ocaml-re
+DEPENDS+=	ocaml-rresult-[0-9]*:../../devel/ocaml-rresult
+
 HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c # needed for optimised compiler
+USE_LANGUAGES=	c # needed for optimized compiler
 USE_TOOLS+=	perl gmake
 MAKE_JOBS_SAFE=	no
-
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 CONFIGURE_ARGS+=	--bindir ${PREFIX}/bin
 CONFIGURE_ARGS+=	--mandir ${PREFIX}/${PKGMANDIR}

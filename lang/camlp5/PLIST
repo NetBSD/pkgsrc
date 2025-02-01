@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2022/11/11 10:33:00 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/02/01 08:40:04 wiz Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5o.opt
@@ -52,6 +52,9 @@ lib/ocaml/camlp5/mLast.cmi
 lib/ocaml/camlp5/mLast.mli
 lib/ocaml/camlp5/mlsyntax.cmi
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/mlsyntax.cmx
+lib/ocaml/camlp5/o_keywords.cmo
+${PLIST.ocaml-opt}lib/ocaml/camlp5/o_keywords.cmx
+lib/ocaml/camlp5/o_keywords.o
 lib/ocaml/camlp5/ocpp.cmo
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/odyl.a
 lib/ocaml/camlp5/odyl.cma
@@ -227,6 +230,9 @@ lib/ocaml/camlp5/q_phony.o
 lib/ocaml/camlp5/quotation.cmi
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/quotation.cmx
 lib/ocaml/camlp5/quotation.mli
+lib/ocaml/camlp5/r_keywords.cmo
+${PLIST.ocaml-opt}lib/ocaml/camlp5/r_keywords.cmx
+lib/ocaml/camlp5/r_keywords.o
 lib/ocaml/camlp5/reloc.cmi
 ${PLIST.ocaml-opt}lib/ocaml/camlp5/reloc.cmx
 lib/ocaml/camlp5/reloc.mli
