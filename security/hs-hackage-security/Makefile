@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:34 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/01 13:55:43 pho Exp $
 
 DISTNAME=	hackage-security-0.6.2.6
 PKGREVISION=	1
@@ -9,7 +9,10 @@ COMMENT=	Hackage security library
 LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	network
+	base	\
+	filepath	\
+	network	\
+	template-haskell
 
 .include "../../converters/hs-base16-bytestring/buildlink3.mk"
 .include "../../converters/hs-base64-bytestring/buildlink3.mk"
