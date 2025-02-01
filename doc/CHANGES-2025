@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.929 2025/02/01 01:45:37 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.930 2025/02/01 07:22:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1181,3 +1181,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/libxlsxwriter to 1.1.9 [sjmulder 2025-01-31]
 	Updated math/sc-im to 0.8.3nb9 [sjmulder 2025-02-01]
 	Updated www/snac to 2.70 [schmonz 2025-02-01]
+	Updated net/grpc to 1.70.1 [adam 2025-02-01]
+	Updated net/py-grpcio to 1.70.0 [adam 2025-02-01]
+	Updated net/py-grpcio-testing to 1.70.0 [adam 2025-02-01]
+	Updated net/py-grpcio-tools to 1.70.0 [adam 2025-02-01]
