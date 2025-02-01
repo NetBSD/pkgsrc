@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/05/09 01:32:34 pho Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/01 14:52:35 pho Exp $
 
 DISTNAME=	ShellCheck-0.10.0
 PKGNAME=	${DISTNAME:tl}
@@ -14,6 +14,7 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	Diff		\
 	QuickCheck	\
 	aeson		\
+	filepath	\
 	mtl		\
 	transformers
 
