@@ -6,7 +6,7 @@ import them from this utility package then you can write code that
 runs on older GHC versions or other compilers like Hugs and JHC.
 
 All modules are plain Haskell 98.  The package depends exclusively on
-the @base@ package and only that portions of base that are simple to
+the base package and only that portions of base that are simple to
 port.  Thus you do not risk a dependency avalanche by importing it.
 However, further splitting the base package might invalidate this
 statement.

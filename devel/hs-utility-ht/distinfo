@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/04/28 14:26:59 pho Exp $
+$NetBSD: distinfo,v 1.7 2025/02/01 09:33:24 pho Exp $
 
-BLAKE2s (utility-ht-0.0.17.1.tar.gz) = 72376ed52aecd6f0a736de7f491fd957412a108f60dc1766ba330a350c983586
-SHA512 (utility-ht-0.0.17.1.tar.gz) = 35b20079b0d0918e1a7550bb21fd60b13bb5a2fc2e0466e8240f1011ed372cfc622332662ad4122d352ddf8a9d20194f1e825e6e20f413f3fb53f241bf68e95e
-Size (utility-ht-0.0.17.1.tar.gz) = 33770 bytes
+BLAKE2s (utility-ht-0.0.17.2.tar.gz) = c41a32b664782ca98f385338501cb159581fe03f88b75e3ee81397da7488d8a4
+SHA512 (utility-ht-0.0.17.2.tar.gz) = c178e6429954e32c0570c315c0bcdf70ea91566ed3adf9e15c04643dcb2e2186f0e68a0c8c129b3c4a9286eaec911d71bbc07d2af754601173b5a8585f9efcf7
+Size (utility-ht-0.0.17.2.tar.gz) = 33604 bytes
