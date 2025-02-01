@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:35 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/01 15:13:12 pho Exp $
 
-DISTNAME=	dbus-1.3.4
-PKGREVISION=	1
+DISTNAME=	dbus-1.3.11
 CATEGORIES=	sysutils
 DIST_SUBDIR=	${PKGBASE} # To avoid conflicting with sysutils/dbus
 

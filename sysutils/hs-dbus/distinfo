@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/05/03 18:29:01 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/02/01 15:13:12 pho Exp $
 
-BLAKE2s (hs-dbus/dbus-1.3.4.tar.gz) = 450e9aa4dc1e1767eaac87ee2237952dc37b916d29074f526be470468aa19b7f
-SHA512 (hs-dbus/dbus-1.3.4.tar.gz) = 92aead53a242db9b1002d094686bca4e011cbd6e34b1c9ab02deba2b24f0f220f7ddf34d3bf2c2f7575fc64daa6e0e11231a0b432fbd5f31fc5468c6c4ed23d9
-Size (hs-dbus/dbus-1.3.4.tar.gz) = 82110 bytes
+BLAKE2s (hs-dbus/dbus-1.3.11.tar.gz) = 5801555fbcd9ca7dd6eefbdf02740d10118e438bf0956791aac9372375e5cca1
+SHA512 (hs-dbus/dbus-1.3.11.tar.gz) = 482935e1447509d71a3dd692121c082920a8e883c3e538bfc57941d38d8c5931e9935cec741b41e1d6522ee7897357e96e140b4278e169f1351d2454b85b7afa
+Size (hs-dbus/dbus-1.3.11.tar.gz) = 81183 bytes
