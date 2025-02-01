@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2024/12/10 10:07:50 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/02/01 18:20:49 adam Exp $
 
-BLAKE2s (indi/indi-2.1.1.tar.gz) = 1a3b022ed2aeb10cc24d3ae1c4d93ab6f9638b614e8179a8b92248f0fa10652e
-SHA512 (indi/indi-2.1.1.tar.gz) = 3224afb13776462e906398be2b85802807e739042494b29701d106731423640a4dceaeb262cd62d3a87f032ba0655da7ceaa150e6912be20508e090ad93c3ba7
-Size (indi/indi-2.1.1.tar.gz) = 2929685 bytes
+BLAKE2s (indi-2.1.2.tar.gz) = 6ca5843698fa7bde6e12e033d072cb2edf2ee5bbd138c2c428f81ad188cc90c9
+SHA512 (indi-2.1.2.tar.gz) = 77838f7b64443f68a0aa6f0bc0232fbacaeed3d0759bc16496f11e434cf6d3eb2cb5ae07f49b1fa200c9dadc91e9418f6f5ea8f593e03543719a2d73ddb061d2
+Size (indi-2.1.2.tar.gz) = 2940192 bytes
 SHA1 (patch-libs_alignment_CMakeLists.txt) = 46824a50efabdf5bb03943b413a70d8753cfd3fc
