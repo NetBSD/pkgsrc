@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.962 2025/02/01 18:30:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.963 2025/02/01 18:37:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1252,3 +1252,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/indi to 2.1.2 [adam 2025-02-01]
 	Updated devel/spdlog to 1.15.1 [adam 2025-02-01]
 	Updated devel/py-babel to 2.17.0 [adam 2025-02-01]
+	Updated devel/py-test-codspeed to 3.2.0 [adam 2025-02-01]
+	Updated devel/py-test-plus to 0.8.0 [adam 2025-02-01]
