@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/05/09 01:32:24 pho Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/01 13:07:15 pho Exp $
 
 DISTNAME=	idris-1.3.4
 PKGNAME=	${DISTNAME}
@@ -14,7 +14,9 @@ HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	ansi-terminal		\
 	ansi-wl-pprint		\
 	bytestring		\
+	containers		\
 	deepseq			\
+	filepath		\
 	fsnotify		\
 	libffi			\
 	mtl			\
