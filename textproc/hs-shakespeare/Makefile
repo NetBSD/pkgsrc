@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/05/09 01:32:46 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/01 10:33:13 pho Exp $
 
-DISTNAME=	shakespeare-2.1.0.1
-PKGREVISION=	2
+DISTNAME=	shakespeare-2.1.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

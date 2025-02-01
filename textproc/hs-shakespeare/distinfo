@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/10/30 10:15:06 pho Exp $
+$NetBSD: distinfo,v 1.8 2025/02/01 10:33:13 pho Exp $
 
-BLAKE2s (shakespeare-2.1.0.1.tar.gz) = f7012aeca84283f925045d9bb573122138b3af4d8a0c3d5a1f8e7ffc81e35a8d
-SHA512 (shakespeare-2.1.0.1.tar.gz) = c265dcf07f2f355cd2614d882b5bd73a9b7239b3c2b6482d326be5137051ee630b5495c80fb3855e182a4a8db385c7b7b2cc083047996ae1e4ad31fdd1fbbd84
-Size (shakespeare-2.1.0.1.tar.gz) = 71698 bytes
+BLAKE2s (shakespeare-2.1.1.tar.gz) = 4d856e037f699ecde9d0c162d1bb844365755af349617bea395ba5570f39b465
+SHA512 (shakespeare-2.1.1.tar.gz) = fd070c739166ef63c922fb798cd8314c459468ba4e4ff05f6451725fc39bce3888fc3120d9587a17c74b62922f2fbaa78980cc409a864d24bf2bfa1600dbb7b9
+Size (shakespeare-2.1.1.tar.gz) = 72182 bytes
