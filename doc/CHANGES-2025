@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.935 2025/02/01 08:40:22 pho Exp $
+$NetBSD: CHANGES-2025,v 1.936 2025/02/01 08:42:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-lifted-async to 0.10.2.7 [pho 2025-02-01]
 	Updated lang/camlp5 to 8.03.01 [wiz 2025-02-01]
 	Updated devel/hs-git-lfs to 1.2.3 [pho 2025-02-01]
+	Updated devel/hs-hashtables to 1.4.2 [pho 2025-02-01]
