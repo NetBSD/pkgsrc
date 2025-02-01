@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2024/12/26 22:20:19 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/02/01 18:13:34 adam Exp $
 
-BLAKE2s (qttools-everywhere-src-6.8.1.tar.xz) = 1c02e47a78dbd445958990efa40640099e99f0175536172485f89bc91cc13371
-SHA512 (qttools-everywhere-src-6.8.1.tar.xz) = 1f5eb44e86d400858abe21efcadb27537ae213127078d95ee56792b57923573e55fd850042e63ca547cd27ba199196fe9956646dcb285c6f6976a22a7832db52
-Size (qttools-everywhere-src-6.8.1.tar.xz) = 10293192 bytes
+BLAKE2s (qttools-everywhere-src-6.8.2.tar.xz) = bd7cf99958aacbd2a296e10c1ffb7cf13248463f4988fa2383d5d984d8697e88
+SHA512 (qttools-everywhere-src-6.8.2.tar.xz) = ad448af0656640a712eefe81fc4291209dec27fe10d42dfb68c7c31e65003653fb3821996f44c50d8ab4371853a18cfc0b4032f7876ce6c75d0fb9b4fe91ca27
+Size (qttools-everywhere-src-6.8.2.tar.xz) = 10297596 bytes
 SHA1 (patch-src_assistant_assistant_CMakeLists.txt) = 530cb39e7389f04c4fb93bf32b71115a2312f091
 SHA1 (patch-src_designer_src_designer_CMakeLists.txt) = c5e7018dfc407aca967eb558158179a50a528f85
 SHA1 (patch-src_linguist_linguist_CMakeLists.txt) = 44580f9db6cd5f0bcdfaf4cff89f3a8c7703c828
