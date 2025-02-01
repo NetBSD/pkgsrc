@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/27 14:11:39 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/02/01 08:23:57 pho Exp $
 
-BLAKE2s (foldable1-classes-compat-0.1.tar.gz) = 0d06cef006f8fda786d3420a50ade0adee5067d3af6de86af09d52e8bee45cd6
-SHA512 (foldable1-classes-compat-0.1.tar.gz) = 680404e62d2d5bfec75c76c53b7178b548e4471fc6125ce86f404ddc1626e45ab448a3ff9e8fe902186c424b07d92635406f90c44586ed937d934e8c68ab0b8c
-Size (foldable1-classes-compat-0.1.tar.gz) = 10484 bytes
+BLAKE2s (foldable1-classes-compat-0.1.1.tar.gz) = 2f585330eb7da6b1359ccc5c15df64e8307af22100453e2a92a76e66c99ad711
+SHA512 (foldable1-classes-compat-0.1.1.tar.gz) = 3333013abd0744a47ff078f487bb113c2fcd09676262f01ce746a1d05b500f67f857eb72b43b8083ecd93cb03856404fa391e77b9bd2a62d1d060e984e5dd8fa
+Size (foldable1-classes-compat-0.1.1.tar.gz) = 10254 bytes
