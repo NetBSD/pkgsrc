@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2024/05/09 01:32:34 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/01 14:32:04 pho Exp $
 
-DISTNAME=	tls-session-manager-0.0.5
-PKGREVISION=	1
+DISTNAME=	tls-session-manager-0.0.7
 CATEGORIES=	security
 
-MAINTAINER=	pho@cielonegro.org
-COMMENT=	In-memory TLS session manager
+MAINTAINER=	pkgsrc-users@NetBSD.org
+COMMENT=	In-memory TLS session DB and session ticket
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	auto-update	\
-	bytestring
 
 .include "../../devel/hs-auto-update/buildlink3.mk"
 .include "../../devel/hs-basement/buildlink3.mk"
