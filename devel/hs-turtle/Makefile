@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:16 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/01 09:56:31 pho Exp $
 
 DISTNAME=	turtle-1.6.2
 PKGREVISION=	2
@@ -10,6 +10,8 @@ LICENSE=	modified-bsd
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	bytestring	\
+	containers	\
+	filepath	\
 	text
 
 .include "../../textproc/hs-ansi-wl-pprint/buildlink3.mk"
