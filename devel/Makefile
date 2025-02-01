@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4410 2025/01/31 18:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.4411 2025/02/01 08:36:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -650,6 +650,7 @@ SUBDIR+=	hs-hinotify
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hls-graph
 SUBDIR+=	hs-hls-plugin-api
+SUBDIR+=	hs-hls-test-utils
 SUBDIR+=	hs-hslua-module-system
 SUBDIR+=	hs-hslua-module-version
 SUBDIR+=	hs-hw-fingertree
