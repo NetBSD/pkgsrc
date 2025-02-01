@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/04/30 13:17:56 pho Exp $
+$NetBSD: distinfo,v 1.10 2025/02/01 14:13:08 pho Exp $
 
-BLAKE2s (cabal-install-3.10.2.1.tar.gz) = 08077ecc04b938daebe6ce5de58aeebf081b5291ccae4ebd4d5ec4ca9eb5a827
-SHA512 (cabal-install-3.10.2.1.tar.gz) = f87f3872e385d50b056dbdc6acda32b333743e24e36e3cffed02d088d83a37d9b44dcba43908e7f4cd0a83ec4802350b915c021991e3e6806bf7f4a0c99b6890
-Size (cabal-install-3.10.2.1.tar.gz) = 705129 bytes
-SHA1 (patch-src_Distribution_Client_Tar.hs) = 7eccb03656f6923ed766b4e153ff2f4a7bd9551d
+BLAKE2s (cabal-install-3.12.1.0.tar.gz) = 50016c65417b75acb9c6eccddcce77b4ecee98d9f60e9784ec0cdc86ff0326fa
+SHA512 (cabal-install-3.12.1.0.tar.gz) = c55b71d533462a588ca59e215eb889a8678a3f36808075ecd589d86aef638b077983ba3a5abfc82ac4dd14ac696cff9d5d8b619b174ba51621307b79818b7ed0
+Size (cabal-install-3.12.1.0.tar.gz) = 728629 bytes
