@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.939 2025/02/01 09:33:31 pho Exp $
+$NetBSD: CHANGES-2025,v 1.940 2025/02/01 09:38:14 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1194,3 +1194,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hs-lukko to 0.1.2 [pho 2025-02-01]
 	Updated devel/hs-monoidal-containers to 0.6.5.0 [pho 2025-02-01]
 	Updated devel/hs-utility-ht to 0.0.17.2 [pho 2025-02-01]
+	Updated devel/hs-tasty-quickcheck to 0.11.1 [pho 2025-02-01]
