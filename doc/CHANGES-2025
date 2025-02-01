@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.950 2025/02/01 12:21:43 mef Exp $
+$NetBSD: CHANGES-2025,v 1.951 2025/02/01 12:22:36 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/hledger to 1.41 [pho 2025-02-01]
 	Updated www/R-bslib to 0.9.0 [mef 2025-02-01]
 	Updated www/R-webfakes to 1.3.2 [mef 2025-02-01]
+	Updated lang/dhall to 1.42.2 [pho 2025-02-01]
