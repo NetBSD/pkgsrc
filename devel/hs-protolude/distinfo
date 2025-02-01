@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.4 2024/04/30 13:38:14 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/02/01 09:22:10 pho Exp $
 
 BLAKE2s (protolude-0.3.4.tar.gz) = 55016f2ad0801cbe47d3439aae82a2c31d3531bbb0e247b8f5f7a84f3cafa105
 SHA512 (protolude-0.3.4.tar.gz) = cd1e46d01fee8797bf3556db25791e80f91a9775a4945820246b36c62714ea02d079e3fc4abcec9e28a379fe9aace7cc8b7514c65d27f1579dca1aa49e7b919a
 Size (protolude-0.3.4.tar.gz) = 19321 bytes
+SHA1 (patch-src_Protolude_List.hs) = 7ab18f57f766c7f22a22a91830332a7fb7943da2
+SHA1 (patch-src_Protolude_Safe.hs) = 34b84b39bc20801170a353db07afc072db1a0f18
