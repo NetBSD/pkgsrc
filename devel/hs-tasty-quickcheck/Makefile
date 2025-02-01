@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:14 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/01 09:38:07 pho Exp $
 
-DISTNAME=	tasty-quickcheck-0.10.3
-PKGREVISION=	2
+DISTNAME=	tasty-quickcheck-0.11.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -9,7 +8,7 @@ COMMENT=	QuickCheck support for the Tasty test framework
 LICENSE=	mit
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	QuickCheck
+	random
 
 .include "../../devel/hs-optparse-applicative/buildlink3.mk"
 .include "../../devel/hs-QuickCheck/buildlink3.mk"
