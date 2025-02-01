@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:22 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/01 12:22:28 pho Exp $
 
-DISTNAME=	dhall-1.42.1
+DISTNAME=	dhall-1.42.2
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Configuration language guaranteed to terminate
 LICENSE=	modified-bsd
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	Diff	\
-	ansi-terminal
 
 # If bin/dhall is to be linked dynamically, it will depend on more than 140
 # shared objects and the dynamic linker will spend more than a second to
