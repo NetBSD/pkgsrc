@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/05/04 08:22:50 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/02/01 14:32:04 pho Exp $
 
-BLAKE2s (tls-session-manager-0.0.5.tar.gz) = 0a510db5ebac42b3879cfab697b58638eeb1b7c42cb9451d1bf1d111116e577a
-SHA512 (tls-session-manager-0.0.5.tar.gz) = dd3486fbc391754f21d38394283bdd67d2421e95051f4e9d0efb9cecd90c78a6cb0508d342e70b8fb610d9eabfdda55b6065d171aaa1d27e7ba47167c029b829
-Size (tls-session-manager-0.0.5.tar.gz) = 4389 bytes
+BLAKE2s (tls-session-manager-0.0.7.tar.gz) = c46ae8094de35582f03bf23bb4d4464eea3acc121cfe49e4a0e6cdb186ccd138
+SHA512 (tls-session-manager-0.0.7.tar.gz) = 256c804e4ddfe079e38deeebf461aa1995ca1c991dfa8b4e452f4596ec03f886288ef02a5f0ed61397958b212eccc27641c5c7a8c407533963b49ee3aa1b01b5
+Size (tls-session-manager-0.0.7.tar.gz) = 4330 bytes
