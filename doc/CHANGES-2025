@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.961 2025/02/01 18:14:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.962 2025/02/01 18:30:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1249,3 +1249,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6-qttranslations to 6.8.2 [adam 2025-02-01]
 	Updated devel/qt6-qtwayland to 6.8.2 [adam 2025-02-01]
 	Updated meta-pkgs/qt6 to 6.8.2 [adam 2025-02-01]
+	Updated misc/indi to 2.1.2 [adam 2025-02-01]
+	Updated devel/spdlog to 1.15.1 [adam 2025-02-01]
+	Updated devel/py-babel to 2.17.0 [adam 2025-02-01]
