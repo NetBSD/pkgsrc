@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/04/30 12:55:44 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/01 13:48:35 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Utils/Assertion.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Utils/Assertion.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Utils/Assertion.p_hi
@@ -131,6 +131,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/PkgConfigD
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/Progress.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/Progress.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/Progress.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ProjectConfigPath.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ProjectConfigPath.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ProjectConfigPath.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ResolverPackage.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ResolverPackage.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Solver/Types/ResolverPackage.p_hi
@@ -155,6 +158,7 @@ ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 lib/cabal-install-solver-${PKGVERSION}/${HS_VERSION}/package-description
 lib/cabal-install-solver-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/ChangeLog.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Client-Utils-Assertion.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Compat-Prelude.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Modular-Assignment.html
@@ -199,6 +203,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Dis
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-PackagePreferences.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-PkgConfigDb.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-Progress.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-ProjectConfigPath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-ResolverPackage.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-Settings.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/cabal-install-solver-${PKGVERSION}/html/Distribution-Solver-Types-SolverId.html
