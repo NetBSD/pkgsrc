@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/01 10:38:51 pho Exp $
+
+BLAKE2s (modern-uri-0.3.6.1.tar.gz) = 789d88718c3f0dc198b148de565c8f3222534c56f0dd8c1ef0b57fb2a8a4053e
+SHA512 (modern-uri-0.3.6.1.tar.gz) = 99759a0d61a587c9c2748cafb4705524bbc72c491468811a21bbbfe9f747e420353575444508c7fe7ff9369a2e97717b7dee1cb4e4d4c16387231233291e044c
+Size (modern-uri-0.3.6.1.tar.gz) = 26185 bytes
