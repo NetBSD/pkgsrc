@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/01 07:12:43 pho Exp $
+
+BLAKE2s (hls-test-utils-2.9.0.0.tar.gz) = 4c7df417c0d283ada94472d398ee4b47ca0c41dceec36c6a98f1ef9a8afee1bf
+SHA512 (hls-test-utils-2.9.0.0.tar.gz) = dbc8b6d2e8b5910334138003c8cc13c0b64867809021037464acfae1febdc0e758a74786fe3a3fadb709047474312da0172b6cebc14691eee35bbc9e46ab5a82
+Size (hls-test-utils-2.9.0.0.tar.gz) = 23267 bytes
