@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/30 13:22:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/01 14:13:08 pho Exp $
 bin/cabal
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/BuildReports/Anonymous.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/BuildReports/Anonymous.hi
@@ -63,6 +63,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdListBin.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdOutdated.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdOutdated.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdOutdated.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdPath.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdPath.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdPath.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdRepl.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdRepl.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/CmdRepl.p_hi
@@ -93,6 +96,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Prelude.p
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Semaphore.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Tar.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Tar.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Compat/Tar.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Config.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Config.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Config.p_hi
@@ -108,6 +114,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Dependency/Types
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/DistDirLayout.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/DistDirLayout.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/DistDirLayout.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Errors.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Errors.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Errors.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Fetch.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Fetch.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Fetch.p_hi
@@ -234,9 +243,15 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ParseUtils.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/PackageFileMonitor.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/PackageFileMonitor.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/PackageFileMonitor.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/Types.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/UnpackedPackage.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/UnpackedPackage.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectBuilding/UnpackedPackage.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectConfig.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectConfig.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectConfig.p_hi
@@ -258,6 +273,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanOutpu
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/SetupPolicy.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/SetupPolicy.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/SetupPolicy.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/Types.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/Types.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ProjectPlanning/Types.p_hi
@@ -267,6 +285,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/RebuildMonad.p_h
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Reconfigure.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Reconfigure.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Reconfigure.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ReplFlags.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ReplFlags.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/ReplFlags.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Run.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Run.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Client/Run.p_hi
@@ -399,6 +420,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Deprecated/ReadP.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Deprecated/ViewAsFieldDescr.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Deprecated/ViewAsFieldDescr.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Distribution/Deprecated/ViewAsFieldDescr.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_cabal_install.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Paths_cabal_install.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_cabal_install.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
@@ -427,6 +451,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdInst
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdLegacy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdListBin.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdOutdated.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdPath.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdRepl.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdRun.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-CmdSdist.html
@@ -437,11 +462,13 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Orphans.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Prelude.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Semaphore.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Compat-Tar.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Config.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Configure.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Dependency-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Dependency.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-DistDirLayout.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Errors.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Fetch.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-FetchUtils.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-FileMonitor.html
@@ -483,7 +510,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Nix.htm
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-NixStyleOptions.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-PackageHash.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ParseUtils.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectBuilding-PackageFileMonitor.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectBuilding-Types.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectBuilding-UnpackedPackage.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectBuilding.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectConfig-Legacy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectConfig-Types.html
@@ -491,10 +520,12 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Project
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectFlags.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectOrchestration.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectPlanOutput.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectPlanning-SetupPolicy.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectPlanning-Types.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ProjectPlanning.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-RebuildMonad.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Reconfigure.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-ReplFlags.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Run.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Sandbox-PackageEnvironment.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Sandbox.html
@@ -538,7 +569,9 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Version
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Client-Win32SelfUpgrade.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Deprecated-ReadP.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/Distribution-Deprecated-ViewAsFieldDescr.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/README.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/cabal-install.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/changelog
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-124.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-126.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/doc-index-33.html
