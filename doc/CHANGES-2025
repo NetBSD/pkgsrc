@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.963 2025/02/01 18:37:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.964 2025/02/01 18:41:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1254,3 +1254,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-babel to 2.17.0 [adam 2025-02-01]
 	Updated devel/py-test-codspeed to 3.2.0 [adam 2025-02-01]
 	Updated devel/py-test-plus to 0.8.0 [adam 2025-02-01]
+	Updated finance/py-braintree to 4.33.1 [adam 2025-02-01]
+	Updated devel/py-ipython to 8.32.0 [adam 2025-02-01]
