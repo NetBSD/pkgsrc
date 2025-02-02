@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2025/01/11 14:14:19 mef Exp $
+$NetBSD: distinfo,v 1.3 2025/02/02 13:45:44 mef Exp $
 
-BLAKE2s (R/nanotime_0.3.10.tar.gz) = b099f15c958e1e0470c207d62d9e41ec9c417d14f4471de898b3ed97dac31dec
-SHA512 (R/nanotime_0.3.10.tar.gz) = d3eae200d958936da1efd4a5b41af6c75148049982255b5c4999614d7d13883bc3f2335d0af1629802c7d34e535657518296e024e2145d8f7f9ed9fcc907ce5e
-Size (R/nanotime_0.3.10.tar.gz) = 408037 bytes
+BLAKE2s (R/nanotime_0.3.11.tar.gz) = d1aa2d7db24e0de8eea16419eee0a75e82b9c1c683cbee11655ba72c3cfe66a0
+SHA512 (R/nanotime_0.3.11.tar.gz) = 1391910042b2c1f6805f919ef1c8c71250637d82dbedbb9fa804b8ec8ec0edf7926ac81a4a876bd0b4c8417a26d4c14bedc8d78f2ea587e47dcd06b56724dfa0
+Size (R/nanotime_0.3.11.tar.gz) = 408523 bytes
