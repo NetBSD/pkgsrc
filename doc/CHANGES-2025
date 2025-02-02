@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.986 2025/02/02 12:33:23 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.987 2025/02/02 12:33:34 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1281,3 +1281,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fsspec to 2025.2.0 [adam 2025-02-02]
 	Updated net/p5-Net-DNS to 1.49nb1 [he 2025-02-02]
 	Updated chat/libpurple to 2.14.14 [gdt 2025-02-02]
+	Updated chat/finch to 2.14.14 [gdt 2025-02-02]
