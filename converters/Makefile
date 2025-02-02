@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2025/01/22 13:06:47 nat Exp $
+# $NetBSD: Makefile,v 1.218 2025/02/02 04:54:49 taca Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -123,7 +123,6 @@ SUBDIR+=	p5-nkf
 SUBDIR+=	pandoc
 SUBDIR+=	pandoc-cli
 SUBDIR+=	pdf2svg
-SUBDIR+=	pear-I18n_UnicodeNormalizer
 SUBDIR+=	php-iconv
 SUBDIR+=	php-mbstring
 SUBDIR+=	php-recode
