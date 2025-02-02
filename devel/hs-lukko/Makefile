@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/02/01 09:05:29 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/02 13:05:14 pho Exp $
 
 DISTNAME=	lukko-0.1.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/01/31 05:15:16 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/02 13:05:06 pho Exp $
 
 DISTNAME=	foldl-1.4.18
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

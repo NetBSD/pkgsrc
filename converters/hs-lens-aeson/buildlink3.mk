@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2024/05/09 01:31:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:04:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-lens-aeson
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lens-aeson
 HS_LENS_AESON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lens-aeson+=	hs-lens-aeson>=1.2.3
-BUILDLINK_ABI_DEPENDS.hs-lens-aeson+=	hs-lens-aeson>=1.2.3nb2
+BUILDLINK_ABI_DEPENDS.hs-lens-aeson+=	hs-lens-aeson>=1.2.3nb3
 BUILDLINK_PKGSRCDIR.hs-lens-aeson?=	../../converters/hs-lens-aeson
 
 .include "../../converters/hs-aeson/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:45 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:04:56 pho Exp $
 
 DISTNAME=	async-pool-0.9.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

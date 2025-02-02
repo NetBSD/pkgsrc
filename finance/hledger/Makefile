@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/02/01 12:07:03 pho Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/02 13:05:32 pho Exp $
 
 DISTNAME=	hledger-1.41
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	finance
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

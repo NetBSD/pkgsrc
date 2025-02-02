@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2024/05/09 01:32:05 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/02/02 13:05:16 pho Exp $
 
 BUILDLINK_TREE+=	hs-newtype
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-newtype
 HS_NEWTYPE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-newtype+=	hs-newtype>=0.2.2
-BUILDLINK_ABI_DEPENDS.hs-newtype+=	hs-newtype>=0.2.2.0nb4
+BUILDLINK_ABI_DEPENDS.hs-newtype+=	hs-newtype>=0.2.2.0nb5
 BUILDLINK_PKGSRCDIR.hs-newtype?=	../../devel/hs-newtype
 .endif	# HS_NEWTYPE_BUILDLINK3_MK
 

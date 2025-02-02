@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/01/30 23:32:29 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:04:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-pandoc-server
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pandoc-server
 HS_PANDOC_SERVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1.0.10
+BUILDLINK_ABI_DEPENDS.hs-pandoc-server+=	hs-pandoc-server>=0.1.0.10nb1
 BUILDLINK_PKGSRCDIR.hs-pandoc-server?=		../../converters/hs-pandoc-server
 
 .include "../../converters/hs-pandoc/buildlink3.mk"

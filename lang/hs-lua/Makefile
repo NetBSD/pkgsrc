@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/01/29 15:29:20 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:34 pho Exp $
 
 DISTNAME=	lua-2.3.3
+PKGREVISION=	1
 CATEGORIES=	lang
 DIST_SUBDIR=	hs-lua # To prevent it from conflicting with lang/lua*
 

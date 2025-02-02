@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/05/09 01:31:50 pho Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/02 13:05:02 pho Exp $
 
 DISTNAME=		cpphs-1.20.9.1
 #PKGNAME=		${DISTNAME} # XXX: This should be renamed to devel/cpphs.
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel
 
 MAINTAINER=		esg@sdf.lonestar.org

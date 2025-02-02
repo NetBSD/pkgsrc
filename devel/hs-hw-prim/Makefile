@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:59 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:11 pho Exp $
 
 DISTNAME=	hw-prim-0.6.3.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

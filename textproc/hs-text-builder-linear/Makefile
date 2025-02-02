@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/01 10:15:24 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:58 pho Exp $
 
 DISTNAME=	text-builder-linear-0.1.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

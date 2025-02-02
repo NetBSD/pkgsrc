@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/01/30 16:06:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/02/02 13:06:06 pho Exp $
 
 BUILDLINK_TREE+=	hs-wai-logger
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-wai-logger
 HS_WAI_LOGGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-wai-logger+=	hs-wai-logger>=2.5.0
-BUILDLINK_ABI_DEPENDS.hs-wai-logger+=	hs-wai-logger>=2.5.0
+BUILDLINK_ABI_DEPENDS.hs-wai-logger+=	hs-wai-logger>=2.5.0nb1
 BUILDLINK_PKGSRCDIR.hs-wai-logger?=	../../www/hs-wai-logger
 
 .include "../../sysutils/hs-byteorder/buildlink3.mk"

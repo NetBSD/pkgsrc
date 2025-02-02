@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/05/09 01:32:54 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/02 13:06:05 pho Exp $
 
 DISTNAME=	js-jquery-3.3.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

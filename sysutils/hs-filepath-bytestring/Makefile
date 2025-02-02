@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/02 02:59:31 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:47 pho Exp $
 
 DISTNAME=	filepath-bytestring-1.5.2.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

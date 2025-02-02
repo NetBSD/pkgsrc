@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 05:31:41 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 13:05:48 pho Exp $
 
 DISTNAME=	rawfilepath-1.1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

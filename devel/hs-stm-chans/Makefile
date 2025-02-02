@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:32:13 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:24 pho Exp $
 
 DISTNAME=	stm-chans-3.0.0.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
