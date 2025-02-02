@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.996 2025/02/02 14:25:44 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.997 2025/02/02 15:48:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/R-ff to 4.5.2 [mef 2025-02-02]
 	Updated lang/rust-bin to 1.82.0 [he 2025-02-02]
 	Updated biology/sra-tools to 3.2.0 [bacon 2025-02-02]
+	Updated graphics/libhighway to 1.2.0 [wiz 2025-02-02]
