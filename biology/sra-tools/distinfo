@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.2 2024/11/19 20:22:32 bacon Exp $
+$NetBSD: distinfo,v 1.3 2025/02/02 14:25:34 bacon Exp $
 
-BLAKE2s (ncbi-ncbi-vdb-3.1.1.tar.gz) = 60e10ac43b3bfbeac580fa1680ba86291b7f2656c950e6f13d0f2021a6894029
-SHA512 (ncbi-ncbi-vdb-3.1.1.tar.gz) = ccfeb38abf8eb80d54394b4a32d851e78408d9019d1ca4b53c71681e2e9ffec904d222b2d0d32fc98fe527f66c84764ae73a8d63dada7f3b5a33c51dc3f84462
-Size (ncbi-ncbi-vdb-3.1.1.tar.gz) = 19055901 bytes
-BLAKE2s (sra-tools-3.1.1.tar.gz) = de0665b9ec114fad64b052eda29e521612ea6dddaf5555a6ed32078222834553
-SHA512 (sra-tools-3.1.1.tar.gz) = df8ae5fca3761712306db6a98074d1b1e1a02a78c09c861852a16a9bc576fc39dd6e5afe0f1572e4901786fd3a757675fe0af7e79bb85d9eac021e69e88c48f1
-Size (sra-tools-3.1.1.tar.gz) = 45754110 bytes
-SHA1 (patch-build_env.cmake) = 14add56e66e5578fd0d51ce55329285e0981ac4e
+BLAKE2s (ncbi-ncbi-vdb-3.2.0.tar.gz) = eb3a98cb754ea78869adfc3651afce3f8e961e1f512e1f77427e9de85924ace2
+SHA512 (ncbi-ncbi-vdb-3.2.0.tar.gz) = badd63525eaaaeedb4de8bb0ab88b40cbeb388e0a0f93ac934c1af716da6f0fb2425eb2e1e95c198496a32fd9c04dfb8badf43b9b6f686b970411b18afec9ea2
+Size (ncbi-ncbi-vdb-3.2.0.tar.gz) = 19061110 bytes
+BLAKE2s (sra-tools-3.2.0.tar.gz) = 6afccc13740b972d483303db5040b0475484ebc6e62fb61f8e56e38f4946789c
+SHA512 (sra-tools-3.2.0.tar.gz) = ceddc5a2fd97c16ad56d130dc4469c6c8dd0f550825718b4fdd4c50d19e182bc42bc4c1681790ab3ea8912812fddb11dff03aca254999fc5b9e2c3fd39d42402
+Size (sra-tools-3.2.0.tar.gz) = 60313243 bytes
+SHA1 (patch-build_env.cmake) = 7c95dbe65c818ac638754ba6165eab1e613fe0eb
 SHA1 (patch-ncbi-vdb_libs_kproc_bsd_sysmgr.c) = f49eb28f8bfeb528c1d7c2e9d184502b9eba273c
 SHA1 (patch-ngs_ngs-java_CMakeLists.txt) = 44b822381fd564d045406cc926f807adae9fbe59
 SHA1 (patch-ngs_ngs-python_examples_CMakeLists.txt) = a8a01d17a27c060c08311ab8571ae10af265781d
