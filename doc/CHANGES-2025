@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.979 2025/02/02 07:23:47 pho Exp $
+$NetBSD: CHANGES-2025,v 1.980 2025/02/02 09:37:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-attoparsec-iso8601 to 1.1.1.0 [pho 2025-02-02]
 	Updated wm/xmonad-contrib to 0.18.1 [pho 2025-02-02]
 	Removed devel/hs-os-string [pho 2025-02-02]
+	Updated x11/libfm-qt to 2.1.0nb2 [wiz 2025-02-02]
