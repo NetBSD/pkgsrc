@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/04/30 06:04:24 pho Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/02 06:02:11 pho Exp $
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/AfterDrag.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/AfterDrag.hi
@@ -126,6 +126,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Plane.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Prefix.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Prefix.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Prefix.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Profiles.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Profiles.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Profiles.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Promote.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Promote.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Actions/Promote.p_hi
@@ -309,6 +312,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FadeInactive.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FadeWindows.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FadeWindows.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FadeWindows.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatConfigureReq.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatConfigureReq.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatConfigureReq.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatNext.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatNext.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Hooks/FloatNext.p_hi
@@ -438,6 +444,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/CircleEx.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Column.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Column.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Column.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Columns.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Columns.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Columns.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Combo.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Combo.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/XMonad/Layout/Combo.p_hi
@@ -1013,6 +1022,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-PerWorkspace
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-PhysicalScreens.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-Plane.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-Prefix.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-Profiles.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-Promote.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-RandomBackground.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Actions-RepeatAction.html
@@ -1074,6 +1084,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-DynamicPropert
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-EwmhDesktops.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-FadeInactive.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-FadeWindows.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-FloatConfigureReq.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-FloatNext.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-Focus.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Hooks-InsertPosition.html
@@ -1117,6 +1128,7 @@ ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-CenteredMaste
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-Circle.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-CircleEx.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-Column.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-Columns.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-Combo.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-ComboP.html
 ${PLIST.doc}share/doc/${HS_PLATFORM}/${PKGNAME}/html/XMonad-Layout-Cross.html
