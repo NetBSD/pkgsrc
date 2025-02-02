@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.19 2025/02/02 10:38:01 he Exp $
+# $NetBSD: wheel.mk,v 1.20 2025/02/02 15:26:12 gdt Exp $
 #
 # Build and install Python wheels
 #
@@ -15,6 +15,7 @@
 # A typical package will need one of the following, perhaps with the
 # minimum version adjusted:
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+#   TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry-core>=2:../../devel/py-poetry-core
 #   TOOL_DEPENDS+=  ${PYPKGPREFIX}-poetry>=0.12:../../devel/py-poetry
 
 # Variables:
