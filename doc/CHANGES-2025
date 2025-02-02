@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1009 2025/02/02 17:51:19 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1010 2025/02/02 18:08:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-isort to 6.0.0 [wiz 2025-02-02]
 	Updated net/tigervnc to 1.14.1.1.20.13 [wiz 2025-02-02]
 	Updated textproc/tree-sitter to 0.25.1nb1 [wiz 2025-02-02]
+	Updated devel/cargo-modules to 0.21.2 [pin 2025-02-02]
