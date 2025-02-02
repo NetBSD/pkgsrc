@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/02/02 10:41:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/02 10:58:08 wiz Exp $
 
 DISTNAME=	pyqt6-6.8.1.dev2502011625
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/.dev2502011625/pre2/}
@@ -44,6 +44,11 @@ fix-darwin-install-name:
 		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
+
+# for debugging
+verbose-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} sip-build --qmake \
+		${QTDIR}/bin/qmake --verbose --jobs ${MAKE_JOBS}
 
 post-install:
 .for bin in pylupdate6 pyuic6
