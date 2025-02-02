@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/08/25 06:18:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/02 15:48:17 wiz Exp $
 
-DISTNAME=	highway-1.0.7
+DISTNAME=	highway-1.2.0
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
@@ -11,7 +11,6 @@ HOMEPAGE=	https://github.com/google/highway/
 COMMENT=	C++ library for SIMD
 LICENSE=	apache-2.0
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 GCC_REQD+=	8 # -latomic and gcc 7 gives internal compiler error
@@ -30,6 +29,7 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=${WRKSRC}/hwy/hwy.version
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}
 TEST_TARGET=	test
 
+.include "../../devel/cmake/build.mk"
 .include "options.mk"
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
