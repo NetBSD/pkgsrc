@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/12/26 23:09:00 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/02 10:41:34 adam Exp $
 
-DISTNAME=	pyqt6-6.8.1.dev2412131231
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/.dev2412131231/pre1/}
+DISTNAME=	pyqt6-6.8.1.dev2502011625
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/.dev2502011625/pre2/}
 CATEGORIES=	x11 python
 #MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
 MASTER_SITES=	https://riverbankcomputing.com/pypi/packages/PyQt6/
