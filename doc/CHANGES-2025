@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.976 2025/02/02 05:31:48 pho Exp $
+$NetBSD: CHANGES-2025,v 1.977 2025/02/02 05:34:30 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/git-annex to 10.20250115 [pho 2025-02-02]
 	Removed converters/pear-I18n_UnicodeNormalizer [taca 2025-02-02]
 	Updated sysutils/hs-rawfilepath to 1.1.1 [pho 2025-02-02]
+	Updated textproc/hs-attoparsec-iso8601 to 1.1.1.0 [pho 2025-02-02]
