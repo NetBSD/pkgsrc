@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/01/18 19:49:58 he Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/02 10:38:02 he Exp $
 
 DISTNAME=	zope.interface-7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,5 +18,4 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 TEST_DEPENDS+=	${PYPKGPREFIX}-zope.testing-[0-9]*:../../devel/py-zope.testing
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

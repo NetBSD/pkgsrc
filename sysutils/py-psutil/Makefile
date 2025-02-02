@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/01/19 17:01:11 he Exp $
+# $NetBSD: Makefile,v 1.58 2025/02/02 10:38:03 he Exp $
 
 DISTNAME=	psutil-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,5 +28,4 @@ PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 #	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m psutil.tests
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

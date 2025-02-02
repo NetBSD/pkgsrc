@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/01/18 10:09:21 he Exp $
+# $NetBSD: Makefile,v 1.60 2025/02/02 10:38:01 he Exp $
 
 DISTNAME=	cffi-1.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,5 +21,4 @@ USE_TOOLS+=	pkg-config
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
