@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.981 2025/02/02 09:39:30 taca Exp $
+$NetBSD: CHANGES-2025,v 1.982 2025/02/02 09:40:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1274,3 +1274,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/hs-os-string [pho 2025-02-02]
 	Updated x11/libfm-qt to 2.1.0nb2 [wiz 2025-02-02]
 	Removed www/drupal9 [taca 2025-02-02]
+	Updated devel/SDL2 to 2.30.12 [adam 2025-02-02]
+	Updated textproc/py-black to 25.1.0 [adam 2025-02-02]
