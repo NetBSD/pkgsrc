@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1007 2025/02/02 16:16:42 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1008 2025/02/02 16:23:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1302,3 +1302,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pip to 25.0 [wiz 2025-02-02]
 	Updated print/texlab to 5.22.1 [wiz 2025-02-02]
 	Updated devel/py-isort to 6.0.0 [wiz 2025-02-02]
+	Updated net/tigervnc to 1.14.1.1.20.13 [wiz 2025-02-02]
