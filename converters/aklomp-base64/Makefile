@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/01/20 13:35:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/02 09:24:12 wiz Exp $
 
 DISTNAME=	base64-0.5.2
 PKGNAME=	aklomp-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aklomp/}
-GITHUB_PROJECT=	aklomp
+GITHUB_PROJECT=	base64
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
