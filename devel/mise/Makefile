@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/12/21 16:32:06 pin Exp $
+# $NetBSD: Makefile,v 1.54 2025/02/02 18:11:10 pin Exp $
 
-DISTNAME=		mise-2024.12.14
-# Newer versions require Rust >= 1.82
+DISTNAME=		mise-2025.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -11,7 +10,7 @@ HOMEPAGE=		https://mise.jdx.dev/
 COMMENT=		Polyglot tool version manager like asdf
 LICENSE=		mit
 
-RUST_REQ=		1.79.0
+RUST_REQ=		1.82.0
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 
