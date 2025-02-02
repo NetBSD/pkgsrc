@@ -1,6 +1,9 @@
-$NetBSD: patch-libs_lancelot-datamodels_CMakeLists.txt,v 1.1 2012/03/19 20:50:25 markd Exp $
+$NetBSD: patch-libs_lancelot-datamodels_CMakeLists.txt,v 1.2 2025/02/02 08:34:36 wiz Exp $
 
---- libs/lancelot-datamodels/CMakeLists.txt.orig	2011-07-27 18:42:29.000000000 +0000
+1. ?
+2. Fix build with latest boost
+
+--- libs/lancelot-datamodels/CMakeLists.txt.orig	2014-10-25 07:17:51.000000000 +0000
 +++ libs/lancelot-datamodels/CMakeLists.txt
 @@ -4,6 +4,7 @@ find_package(KDE4 REQUIRED)
  
@@ -10,3 +13,12 @@ $NetBSD: patch-libs_lancelot-datamodels_CMakeLists.txt,v 1.1 2012/03/19 20:50:25
  
  find_package(Lancelot REQUIRED)
  
+@@ -57,7 +58,7 @@ set(LANCELOT_DATAMODELS_LIBS
+    FORCE)
+ 
+ include_directories(
+-   ${Boost_INCLUDE_DIR}
++   ${Boost_INCLUDE_DIRS}
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}
