@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/12 10:18:46 mef Exp $
+$NetBSD: distinfo,v 1.14 2025/02/02 13:38:14 mef Exp $
 
-BLAKE2s (R/curl_6.1.0.tar.gz) = b0e67386069683594def8f37b4d34c657e10b8f10fa7730b5a51e29920fd3f18
-SHA512 (R/curl_6.1.0.tar.gz) = baf6246a4697ebe787d5407199da73e70c9c2e18406197da2725dca0a38af2bb04c1421021b13e2c51d382ee8ad4015c9e46345d2eae0c4a46644c7cefd015a7
-Size (R/curl_6.1.0.tar.gz) = 932957 bytes
+BLAKE2s (R/curl_6.2.0.tar.gz) = 9bb8ceff7e83dc6c3e5794e13a12ebd2bb9b28ff694d4320f9a256f2d3b6ad87
+SHA512 (R/curl_6.2.0.tar.gz) = 4186daf15e7c8963616790637c5cc6588b838b3e6859895e1f9070ab77e4f10fe6724eb5d161e2788a1e71599020b8ebba0be73d18432f29fda17e2eb81c2431
+Size (R/curl_6.2.0.tar.gz) = 933187 bytes
