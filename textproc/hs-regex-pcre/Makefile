@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:45 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/02 05:37:02 pho Exp $
 
 DISTNAME=	regex-pcre-0.95.0.0
 PKGREVISION=	8
@@ -12,9 +12,10 @@ USE_TOOLS+=	pkg-config
 
 HASKELL_UNRESTRICT_DEPENDENCIES+=	\
 	base	\
-	bytestring
+	bytestring	\
+	containers
 
-.include "../../mk/haskell.mk"
 .include "../../textproc/hs-regex-base/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
