@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/11/14 22:21:18 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2025/02/02 16:23:06 wiz Exp $
 
-DISTNAME=		tigervnc-1.14.0
+DISTNAME=		tigervnc-1.14.1
 PKGNAME=		${DISTNAME}.1.20.13
-PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=		v${DISTNAME:S/tigervnc-//}
@@ -142,14 +141,13 @@ pre-configure:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
-BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
-.include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/xorgproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
@@ -162,4 +160,5 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
