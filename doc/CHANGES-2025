@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1005 2025/02/02 16:10:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1006 2025/02/02 16:14:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-h2 to 4.2.0 [wiz 2025-02-02]
 	Updated textproc/py-orjson to 3.10.15 [wiz 2025-02-02]
 	Updated devel/py-pip to 25.0 [wiz 2025-02-02]
+	Updated print/texlab to 5.22.1 [wiz 2025-02-02]
