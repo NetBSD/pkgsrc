@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2024/07/31 08:14:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2025/02/02 16:10:42 wiz Exp $
 bin/pip-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -388,9 +388,6 @@ ${PYSITELIB}/pip/_internal/utils/direct_url_helpers.pyo
 ${PYSITELIB}/pip/_internal/utils/egg_link.py
 ${PYSITELIB}/pip/_internal/utils/egg_link.pyc
 ${PYSITELIB}/pip/_internal/utils/egg_link.pyo
-${PYSITELIB}/pip/_internal/utils/encoding.py
-${PYSITELIB}/pip/_internal/utils/encoding.pyc
-${PYSITELIB}/pip/_internal/utils/encoding.pyo
 ${PYSITELIB}/pip/_internal/utils/entrypoints.py
 ${PYSITELIB}/pip/_internal/utils/entrypoints.pyc
 ${PYSITELIB}/pip/_internal/utils/entrypoints.pyo
@@ -624,6 +621,12 @@ ${PYSITELIB}/pip/_vendor/packaging/_structures.pyo
 ${PYSITELIB}/pip/_vendor/packaging/_tokenizer.py
 ${PYSITELIB}/pip/_vendor/packaging/_tokenizer.pyc
 ${PYSITELIB}/pip/_vendor/packaging/_tokenizer.pyo
+${PYSITELIB}/pip/_vendor/packaging/licenses/__init__.py
+${PYSITELIB}/pip/_vendor/packaging/licenses/__init__.pyc
+${PYSITELIB}/pip/_vendor/packaging/licenses/__init__.pyo
+${PYSITELIB}/pip/_vendor/packaging/licenses/_spdx.py
+${PYSITELIB}/pip/_vendor/packaging/licenses/_spdx.pyc
+${PYSITELIB}/pip/_vendor/packaging/licenses/_spdx.pyo
 ${PYSITELIB}/pip/_vendor/packaging/markers.py
 ${PYSITELIB}/pip/_vendor/packaging/markers.pyc
 ${PYSITELIB}/pip/_vendor/packaging/markers.pyo
@@ -785,9 +788,6 @@ ${PYSITELIB}/pip/_vendor/pygments/util.pyo
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.py
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.pyc
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/__init__.pyo
-${PYSITELIB}/pip/_vendor/pyproject_hooks/_compat.py
-${PYSITELIB}/pip/_vendor/pyproject_hooks/_compat.pyc
-${PYSITELIB}/pip/_vendor/pyproject_hooks/_compat.pyo
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_impl.py
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_impl.pyc
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_impl.pyo
@@ -797,6 +797,7 @@ ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/__init__.pyo
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.py
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.pyc
 ${PYSITELIB}/pip/_vendor/pyproject_hooks/_in_process/_in_process.pyo
+${PYSITELIB}/pip/_vendor/pyproject_hooks/py.typed
 ${PYSITELIB}/pip/_vendor/requests/__init__.py
 ${PYSITELIB}/pip/_vendor/requests/__init__.pyc
 ${PYSITELIB}/pip/_vendor/requests/__init__.pyo
