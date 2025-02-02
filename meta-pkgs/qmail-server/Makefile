@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2023/08/14 05:24:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 20:31:27 schmonz Exp $
 #
 
-DISTNAME=	qmail-server-1.0
-PKGREVISION=	4
+DISTNAME=	qmail-server-1.0.20250202
 CATEGORIES=	meta-pkgs mail
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,6 +18,7 @@ DEPENDS+=	qmail-run-[0-9]*:../../mail/qmail-run
 DEPENDS+=	qtools-[0-9]*:../../mail/qtools
 DEPENDS+=	queue-repair-[0-9]*:../../mail/queue-repair
 DEPENDS+=	rspamd-[0-9]*:../../mail/rspamd
+DEPENDS+=	vmailmgr-[0-9]*:../../mail/vmailmgr
 
 META_PACKAGE=	yes
 
