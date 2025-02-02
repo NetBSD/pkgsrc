@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2024/10/22 09:42:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/02/02 16:03:37 wiz Exp $
 bin/meson
 ${PYSITELIB}/${WHEEL_INFODIR}/COPYING
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -205,6 +205,9 @@ ${PYSITELIB}/mesonbuild/compilers/mixins/metrowerks.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/pgi.pyo
+${PYSITELIB}/mesonbuild/compilers/mixins/tasking.py
+${PYSITELIB}/mesonbuild/compilers/mixins/tasking.pyc
+${PYSITELIB}/mesonbuild/compilers/mixins/tasking.pyo
 ${PYSITELIB}/mesonbuild/compilers/mixins/ti.py
 ${PYSITELIB}/mesonbuild/compilers/mixins/ti.pyc
 ${PYSITELIB}/mesonbuild/compilers/mixins/ti.pyo
@@ -547,6 +550,9 @@ ${PYSITELIB}/mesonbuild/scripts/clangtidy.pyo
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.py
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyc
 ${PYSITELIB}/mesonbuild/scripts/cleantrees.pyo
+${PYSITELIB}/mesonbuild/scripts/clippy.py
+${PYSITELIB}/mesonbuild/scripts/clippy.pyc
+${PYSITELIB}/mesonbuild/scripts/clippy.pyo
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.py
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyc
 ${PYSITELIB}/mesonbuild/scripts/cmake_run_ctgt.pyo
