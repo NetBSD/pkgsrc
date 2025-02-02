@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:10 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/02/02 13:05:21 pho Exp $
 
 BUILDLINK_TREE+=	hs-rio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-rio
 HS_RIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-rio+=	hs-rio>=0.1.22
-BUILDLINK_ABI_DEPENDS.hs-rio+=	hs-rio>=0.1.22.0nb4
+BUILDLINK_ABI_DEPENDS.hs-rio+=	hs-rio>=0.1.22.0nb5
 BUILDLINK_PKGSRCDIR.hs-rio?=	../../devel/hs-rio
 
 .include "../../devel/hs-hashable/buildlink3.mk"

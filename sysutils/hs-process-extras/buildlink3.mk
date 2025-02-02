@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:37 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/02/02 13:05:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-process-extras
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-process-extras
 HS_PROCESS_EXTRAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-process-extras+=	hs-process-extras>=0.7.4
-BUILDLINK_ABI_DEPENDS.hs-process-extras+=	hs-process-extras>=0.7.4nb8
+BUILDLINK_ABI_DEPENDS.hs-process-extras+=	hs-process-extras>=0.7.4nb9
 BUILDLINK_PKGSRCDIR.hs-process-extras?=		../../sysutils/hs-process-extras
 
 .include "../../devel/hs-data-default/buildlink3.mk"

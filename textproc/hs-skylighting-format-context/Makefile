@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:47 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/02 13:05:57 pho Exp $
 
 DISTNAME=	skylighting-format-context-0.1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

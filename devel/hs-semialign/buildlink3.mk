@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/01/30 04:23:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/02/02 13:05:22 pho Exp $
 
 BUILDLINK_TREE+=	hs-semialign
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-semialign
 HS_SEMIALIGN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-semialign+=	hs-semialign>=1.3.1
-BUILDLINK_ABI_DEPENDS.hs-semialign+=	hs-semialign>=1.3.1
+BUILDLINK_ABI_DEPENDS.hs-semialign+=	hs-semialign>=1.3.1nb1
 BUILDLINK_PKGSRCDIR.hs-semialign?=	../../devel/hs-semialign
 
 .include "../../devel/hs-hashable/buildlink3.mk"

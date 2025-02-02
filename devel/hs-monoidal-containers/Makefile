@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/02/01 09:11:44 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/02 13:05:16 pho Exp $
 
 DISTNAME=	monoidal-containers-0.6.5.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

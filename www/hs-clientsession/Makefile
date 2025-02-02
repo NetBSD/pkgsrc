@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 03:04:20 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 13:06:03 pho Exp $
 
 DISTNAME=	clientsession-0.9.3.0
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

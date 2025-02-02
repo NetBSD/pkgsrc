@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:54 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:06 pho Exp $
 
 DISTNAME=	focus-1.0.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

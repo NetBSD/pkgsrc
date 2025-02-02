@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2025/01/31 03:55:34 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/02 13:04:54 pho Exp $
 
 DISTNAME=	fourmolu-0.17.0.0
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2024/05/09 01:32:57 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:06:08 pho Exp $
 
 BUILDLINK_TREE+=	hs-yesod-static
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-yesod-static
 HS_YESOD_STATIC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-yesod-static+=	hs-yesod-static>=1.6.1
-BUILDLINK_ABI_DEPENDS.hs-yesod-static+=	hs-yesod-static>=1.6.1.0nb2
+BUILDLINK_ABI_DEPENDS.hs-yesod-static+=	hs-yesod-static>=1.6.1.0nb3
 BUILDLINK_PKGSRCDIR.hs-yesod-static?=	../../www/hs-yesod-static
 
 .include "../../devel/hs-async/buildlink3.mk"

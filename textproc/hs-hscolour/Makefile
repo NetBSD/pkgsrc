@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:42 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/02 13:05:53 pho Exp $
 
 DISTNAME=	hscolour-1.25
 # TODO: Rename this package to hscolour, not hs-hscolour
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

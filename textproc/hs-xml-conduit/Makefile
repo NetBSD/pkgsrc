@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/01/30 11:53:08 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/02 13:06:00 pho Exp $
 
 DISTNAME=	xml-conduit-1.10.0.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

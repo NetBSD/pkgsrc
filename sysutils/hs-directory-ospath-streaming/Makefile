@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/29 16:28:05 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/02 13:05:46 pho Exp $
 
 DISTNAME=	directory-ospath-streaming-0.2.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

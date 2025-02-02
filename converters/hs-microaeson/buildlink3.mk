@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/01/30 08:40:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:04:52 pho Exp $
 
 BUILDLINK_TREE+=	hs-microaeson
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-microaeson
 HS_MICROAESON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-microaeson+=	hs-microaeson>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-microaeson+=	hs-microaeson>=0.1.0.2
+BUILDLINK_ABI_DEPENDS.hs-microaeson+=	hs-microaeson>=0.1.0.2nb1
 BUILDLINK_PKGSRCDIR.hs-microaeson?=	../../converters/hs-microaeson
 
 .include "../../devel/hs-fail/buildlink3.mk"

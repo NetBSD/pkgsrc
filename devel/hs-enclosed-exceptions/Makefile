@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/05/09 01:31:53 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:04 pho Exp $
 
 DISTNAME=	enclosed-exceptions-1.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

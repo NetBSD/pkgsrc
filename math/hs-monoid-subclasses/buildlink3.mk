@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/01/31 13:38:52 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:05:37 pho Exp $
 
 BUILDLINK_TREE+=	hs-monoid-subclasses
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-monoid-subclasses
 HS_MONOID_SUBCLASSES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-monoid-subclasses+=	hs-monoid-subclasses>=1.2.5
-BUILDLINK_ABI_DEPENDS.hs-monoid-subclasses+=	hs-monoid-subclasses>=1.2.5.1
+BUILDLINK_ABI_DEPENDS.hs-monoid-subclasses+=	hs-monoid-subclasses>=1.2.5.1nb1
 BUILDLINK_PKGSRCDIR.hs-monoid-subclasses?=	../../math/hs-monoid-subclasses
 
 .include "../../math/hs-commutative-semigroups/buildlink3.mk"

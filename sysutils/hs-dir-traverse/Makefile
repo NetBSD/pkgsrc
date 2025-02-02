@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:35 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/02 13:05:46 pho Exp $
 
 DISTNAME=	dir-traverse-0.2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

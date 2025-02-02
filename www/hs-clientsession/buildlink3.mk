@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 03:04:20 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/02/02 13:06:03 pho Exp $
 
 BUILDLINK_TREE+=	hs-clientsession
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-clientsession
 HS_CLIENTSESSION_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-clientsession+=	hs-clientsession>=0.9.3
-BUILDLINK_ABI_DEPENDS.hs-clientsession+=	hs-clientsession>=0.9.3.0
+BUILDLINK_ABI_DEPENDS.hs-clientsession+=	hs-clientsession>=0.9.3.0nb1
 BUILDLINK_PKGSRCDIR.hs-clientsession?=		../../www/hs-clientsession
 
 .include "../../devel/hs-cereal/buildlink3.mk"

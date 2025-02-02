@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/01/31 11:00:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:59 pho Exp $
 
 BUILDLINK_TREE+=	hs-tomland
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-tomland
 HS_TOMLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-tomland+=	hs-tomland>=1.3.3
-BUILDLINK_ABI_DEPENDS.hs-tomland+=	hs-tomland>=1.3.3.3
+BUILDLINK_ABI_DEPENDS.hs-tomland+=	hs-tomland>=1.3.3.3nb1
 BUILDLINK_PKGSRCDIR.hs-tomland?=	../../textproc/hs-tomland
 
 .include "../../devel/hs-hashable/buildlink3.mk"

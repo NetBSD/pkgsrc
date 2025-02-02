@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/09 01:32:30 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:41 pho Exp $
 
 DISTNAME=	network-multicast-0.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

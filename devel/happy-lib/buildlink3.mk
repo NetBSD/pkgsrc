@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/01/19 18:38:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/02/02 13:04:54 pho Exp $
 
 BUILDLINK_TREE+=	happy-lib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	happy-lib
 HAPPY_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.happy-lib+=	happy-lib>=2.1.4
-BUILDLINK_ABI_DEPENDS.happy-lib+=	happy-lib>=2.1.4
+BUILDLINK_ABI_DEPENDS.happy-lib+=	happy-lib>=2.1.4nb1
 BUILDLINK_PKGSRCDIR.happy-lib?=		../../devel/happy-lib
 .endif	# HAPPY_LIB_BUILDLINK3_MK
 

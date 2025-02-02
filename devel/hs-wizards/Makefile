@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/02/01 10:04:55 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/02 13:05:31 pho Exp $
 
 DISTNAME=	wizards-1.0.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

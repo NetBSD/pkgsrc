@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/01/30 07:52:23 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/02 13:05:37 pho Exp $
 
 DISTNAME=	invariant-0.6.4
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

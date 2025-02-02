@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/01/31 06:44:33 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/02 13:05:08 pho Exp $
 
 DISTNAME=	ghc-trace-events-0.1.2.9
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

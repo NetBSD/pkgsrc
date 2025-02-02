@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/02/01 14:29:40 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:43 pho Exp $
 
 DISTNAME=	crypto-token-0.1.2
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
