@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.973 2025/02/02 04:03:59 pho Exp $
+$NetBSD: CHANGES-2025,v 1.974 2025/02/02 04:31:10 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1266,3 +1266,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hs-yesod-form to 1.7.9 [pho 2025-02-02]
 	Added www/hs-servant-client-core version 0.20.2 [pho 2025-02-02]
 	Added www/hs-servant-client version 0.20.2 [pho 2025-02-02]
+	Updated sysutils/git-annex to 10.20250115 [pho 2025-02-02]
