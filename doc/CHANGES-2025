@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.983 2025/02/02 09:44:44 taca Exp $
+$NetBSD: CHANGES-2025,v 1.984 2025/02/02 10:43:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1277,3 +1277,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/SDL2 to 2.30.12 [adam 2025-02-02]
 	Updated textproc/py-black to 25.1.0 [adam 2025-02-02]
 	Removed textproc/php-excel [taca 2025-02-02]
+	Updated x11/py-qt6 to 6.8.1pre2 [adam 2025-02-02]
+	Updated sysutils/py-fsspec to 2025.2.0 [adam 2025-02-02]
