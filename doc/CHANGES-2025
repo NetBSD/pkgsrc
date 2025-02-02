@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.968 2025/02/02 02:59:38 pho Exp $
+$NetBSD: CHANGES-2025,v 1.969 2025/02/02 03:04:27 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/codeberg-cli version 0.4.0 [schmonz 2025-02-01]
 	Updated security/botan2 to 2.19.4nb3 [he 2025-02-01]
 	Updated sysutils/hs-filepath-bytestring to 1.5.2.0.2 [pho 2025-02-02]
+	Updated www/hs-clientsession to 0.9.3.0 [pho 2025-02-02]
