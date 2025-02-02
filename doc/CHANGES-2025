@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.977 2025/02/02 05:34:30 pho Exp $
+$NetBSD: CHANGES-2025,v 1.978 2025/02/02 06:02:18 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1270,3 +1270,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed converters/pear-I18n_UnicodeNormalizer [taca 2025-02-02]
 	Updated sysutils/hs-rawfilepath to 1.1.1 [pho 2025-02-02]
 	Updated textproc/hs-attoparsec-iso8601 to 1.1.1.0 [pho 2025-02-02]
+	Updated wm/xmonad-contrib to 0.18.1 [pho 2025-02-02]
