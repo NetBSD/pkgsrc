@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2024/12/07 16:07:05 nia Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/02 07:34:40 ryoon Exp $
 
 DISTNAME=	oneTBB-2022.0.0
 PKGNAME=	${DISTNAME:S/oneTBB-/threadingbuildingblocks-/}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	oneTBB
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	https://www.threadingbuildingblocks.org/
+HOMEPAGE=	https://uxlfoundation.github.io/oneTBB/
 COMMENT=	Threading Buildling Blocks
 LICENSE=	apache-2.0
 
