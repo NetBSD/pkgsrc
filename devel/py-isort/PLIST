@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.10 2023/12/11 20:53:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/02/02 16:16:34 wiz Exp $
 bin/isort-${PYVERSSUFFIX}
 bin/isort-identify-imports-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/isort/__init__.py
 ${PYSITELIB}/isort/__init__.pyc
 ${PYSITELIB}/isort/__init__.pyo
@@ -120,6 +120,9 @@ ${PYSITELIB}/isort/stdlibs/py311.pyo
 ${PYSITELIB}/isort/stdlibs/py312.py
 ${PYSITELIB}/isort/stdlibs/py312.pyc
 ${PYSITELIB}/isort/stdlibs/py312.pyo
+${PYSITELIB}/isort/stdlibs/py313.py
+${PYSITELIB}/isort/stdlibs/py313.pyc
+${PYSITELIB}/isort/stdlibs/py313.pyo
 ${PYSITELIB}/isort/stdlibs/py36.py
 ${PYSITELIB}/isort/stdlibs/py36.pyc
 ${PYSITELIB}/isort/stdlibs/py36.pyo
