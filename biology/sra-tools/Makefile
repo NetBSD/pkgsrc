@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2024/11/19 20:22:31 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/02 14:25:34 bacon Exp $
 
-DISTNAME=		sra-tools-3.1.1
+DISTNAME=		sra-tools-3.2.0
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
-GITHUB_SUBMODULES+=	ncbi ncbi-vdb 3.1.1 ncbi-vdb
+GITHUB_SUBMODULES+=	ncbi ncbi-vdb ${PKGVERSION_NOREV} ncbi-vdb
 
 OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
