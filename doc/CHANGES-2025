@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.984 2025/02/02 10:43:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.985 2025/02/02 11:35:13 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed textproc/php-excel [taca 2025-02-02]
 	Updated x11/py-qt6 to 6.8.1pre2 [adam 2025-02-02]
 	Updated sysutils/py-fsspec to 2025.2.0 [adam 2025-02-02]
+	Updated net/p5-Net-DNS to 1.49nb1 [he 2025-02-02]
