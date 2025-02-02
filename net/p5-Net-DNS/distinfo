@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.73 2024/12/29 16:15:06 wiz Exp $
+$NetBSD: distinfo,v 1.74 2025/02/02 11:33:56 he Exp $
 
 BLAKE2s (Net-DNS-1.49.tar.gz) = 583395523a0ef9421a5fb06cb8f5f416658caa5562b5c4efc6ad40fe5cfda7b0
 SHA512 (Net-DNS-1.49.tar.gz) = 6976e01ee1e790f897635021dd2364131657455364eada7b8cdf0f0d975216007bfadbff01eeff89ad5c744e73bc22ebe01ec753b5751df12d7b799d7cae2107
 Size (Net-DNS-1.49.tar.gz) = 262957 bytes
+SHA1 (patch-lib_Net_DNS_Resolver_Base.pm) = 645dfd03654a121230b94bc0d010428f26d4c64e
