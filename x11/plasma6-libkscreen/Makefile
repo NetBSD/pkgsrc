@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/14 22:22:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 09:21:15 wiz Exp $
 
 DISTNAME=	libkscreen-${PLASMAVER}
 PKGREVISION=	3
@@ -12,8 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 
-TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
-
+.include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../devel/kf6-kconfig/buildlink3.mk"
 .include "../../devel/plasma6-kwayland/buildlink3.mk"
 .include "../../devel/plasma-wayland-protocols/buildlink3.mk"
