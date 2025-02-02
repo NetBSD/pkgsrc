@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makevars,v 1.1 2023/05/25 11:08:57 jperkin Exp $
+$NetBSD: patch-src_Makevars,v 1.2 2025/02/02 22:40:32 mef Exp $
 
 Support LIBS.
 
---- src/Makevars.orig	2022-10-04 11:20:23.000000000 +0000
+--- src/Makevars.orig	2024-08-28 08:29:32.000000000 +0000
 +++ src/Makevars
-@@ -11,14 +11,14 @@ OBJECTS = init.o poll.o errors.o process
- all: tools/px tools/sock supervisor/supervisor client$(SHLIB_EXT) $(SHLIB)
+@@ -18,14 +18,14 @@ strip: $(SHLIB) tools/px tools/sock supe
+ .PHONY: all clean strip
  
  tools/px: tools/px.c
 -	$(CC) $(CFLAGS) $(LDFLAGS) -Wall tools/px.c -o tools/px
