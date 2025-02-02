@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/05/09 01:32:11 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/02 13:05:22 pho Exp $
 
 DISTNAME=	setlocale-1.0.0.10
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

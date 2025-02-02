@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/05/09 01:32:44 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/02 13:05:55 pho Exp $
 
 DISTNAME=	prettyprinter-ansi-terminal-1.1.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

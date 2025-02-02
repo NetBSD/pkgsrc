@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/02/01 14:32:04 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/02 13:05:45 pho Exp $
 
 DISTNAME=	tls-session-manager-0.0.7
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

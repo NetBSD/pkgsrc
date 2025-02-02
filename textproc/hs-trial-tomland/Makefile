@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/05/09 01:32:48 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/02 13:05:59 pho Exp $
 
 DISTNAME=	trial-tomland-0.0.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

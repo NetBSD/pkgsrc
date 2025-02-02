@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/05/09 01:32:52 pho Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/02 13:06:02 pho Exp $
 
 DISTNAME=	HTTP-4000.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org

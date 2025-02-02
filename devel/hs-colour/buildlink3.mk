@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2024/05/09 01:31:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:05:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-colour
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-colour
 HS_COLOUR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-colour+=	hs-colour>=2.3.6
-BUILDLINK_ABI_DEPENDS.hs-colour+=	hs-colour>=2.3.6nb6
+BUILDLINK_ABI_DEPENDS.hs-colour+=	hs-colour>=2.3.6nb7
 BUILDLINK_PKGSRCDIR.hs-colour?=		../../devel/hs-colour
 .endif	# HS_COLOUR_BUILDLINK3_MK
 

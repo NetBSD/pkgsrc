@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/01/31 07:59:43 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/02/02 13:05:10 pho Exp $
 
 BUILDLINK_TREE+=	hs-hls-graph
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hls-graph
 HS_HLS_GRAPH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hls-graph+=	hs-hls-graph>=2.9.0
-BUILDLINK_ABI_DEPENDS.hs-hls-graph+=	hs-hls-graph>=2.9.0.0
+BUILDLINK_ABI_DEPENDS.hs-hls-graph+=	hs-hls-graph>=2.9.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-hls-graph?=	../../devel/hs-hls-graph
 
 .include "../../converters/hs-aeson/buildlink3.mk"

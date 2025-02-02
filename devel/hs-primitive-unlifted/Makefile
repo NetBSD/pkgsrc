@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/01/31 07:53:09 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/02 13:05:19 pho Exp $
 
 DISTNAME=	primitive-unlifted-2.2.0.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

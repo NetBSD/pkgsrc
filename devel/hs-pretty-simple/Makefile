@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/01/31 10:49:17 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:18 pho Exp $
 
 DISTNAME=	pretty-simple-4.1.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/02/02 05:34:23 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:49 pho Exp $
 
 DISTNAME=	attoparsec-iso8601-1.1.1.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

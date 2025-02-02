@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/01/30 15:47:05 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/02 13:05:23 pho Exp $
 
 DISTNAME=	singleton-bool-0.1.8
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

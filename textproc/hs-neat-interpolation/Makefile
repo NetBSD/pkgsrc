@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/31 14:29:44 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/02 13:05:55 pho Exp $
 
 DISTNAME=	neat-interpolation-0.5.1.4
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

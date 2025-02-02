@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/05/09 01:31:41 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:04:53 pho Exp $
 
 DISTNAME=	string-conversions-0.4.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

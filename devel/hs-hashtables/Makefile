@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2025/02/01 08:42:15 pho Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/02 13:05:09 pho Exp $
 
 DISTNAME=	hashtables-1.4.2
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

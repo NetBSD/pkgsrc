@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2025/01/31 09:56:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:05:13 pho Exp $
 
 BUILDLINK_TREE+=	hs-lsp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lsp
 HS_LSP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lsp+=	hs-lsp>=2.7.0
-BUILDLINK_ABI_DEPENDS.hs-lsp+=	hs-lsp>=2.7.0.1
+BUILDLINK_ABI_DEPENDS.hs-lsp+=	hs-lsp>=2.7.0.1nb1
 BUILDLINK_PKGSRCDIR.hs-lsp?=	../../devel/hs-lsp
 
 .include "../../converters/hs-aeson/buildlink3.mk"

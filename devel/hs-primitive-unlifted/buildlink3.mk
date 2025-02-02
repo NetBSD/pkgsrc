@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/01/31 07:53:09 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:05:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-primitive-unlifted
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-primitive-unlifted
 HS_PRIMITIVE_UNLIFTED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-primitive-unlifted+=	hs-primitive-unlifted>=2.2.0
-BUILDLINK_ABI_DEPENDS.hs-primitive-unlifted+=	hs-primitive-unlifted>=2.2.0.0
+BUILDLINK_ABI_DEPENDS.hs-primitive-unlifted+=	hs-primitive-unlifted>=2.2.0.0nb1
 BUILDLINK_PKGSRCDIR.hs-primitive-unlifted?=	../../devel/hs-primitive-unlifted
 
 .include "../../devel/hs-primitive/buildlink3.mk"

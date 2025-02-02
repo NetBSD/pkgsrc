@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/05/09 01:31:54 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:05 pho Exp $
 
 DISTNAME=	filtrable-0.1.6.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

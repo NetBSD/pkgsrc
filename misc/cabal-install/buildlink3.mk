@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/02/01 14:13:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/02/02 13:05:39 pho Exp $
 
 BUILDLINK_TREE+=	cabal-install
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cabal-install
 CABAL_INSTALL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cabal-install+=	cabal-install>=3.12.1
-BUILDLINK_ABI_DEPENDS.cabal-install+=	cabal-install>=3.12.1.0
+BUILDLINK_ABI_DEPENDS.cabal-install+=	cabal-install>=3.12.1.0nb1
 BUILDLINK_PKGSRCDIR.cabal-install?=	../../misc/cabal-install
 
 .include "../../misc/hs-cabal-install-solver/buildlink3.mk"

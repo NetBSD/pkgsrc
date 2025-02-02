@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/01 08:23:57 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:06 pho Exp $
 
 DISTNAME=	foldable1-classes-compat-0.1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

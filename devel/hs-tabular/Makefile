@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:14 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:25 pho Exp $
 
 DISTNAME=	tabular-0.2.2.8
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel textproc # XXX: Should be moved to textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

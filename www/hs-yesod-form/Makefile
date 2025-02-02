@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 03:29:51 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 13:06:07 pho Exp $
 
 DISTNAME=	yesod-form-1.7.9
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

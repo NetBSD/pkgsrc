@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/01/30 12:16:09 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:52 pho Exp $
 
 DISTNAME=	djot-0.1.2.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

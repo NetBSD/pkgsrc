@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/01/31 06:40:37 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:05:04 pho Exp $
 
 DISTNAME=	enummapset-0.7.3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

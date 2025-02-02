@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/01/30 07:09:52 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 13:05:49 pho Exp $
 
 DISTNAME=	attoparsec-aeson-2.2.2.0
+PKGREVISION=	1
 CATEGORIES=	textproc converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

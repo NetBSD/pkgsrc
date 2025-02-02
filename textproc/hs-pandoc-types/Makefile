@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/05/09 01:32:44 pho Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/02 13:05:55 pho Exp $
 
 DISTNAME=	pandoc-types-1.23.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc converters
 
 MAINTAINER=	szptvlfn@NetBSD.org

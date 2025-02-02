@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/05/09 01:32:24 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/02 13:05:35 pho Exp $
 
 DISTNAME=	algebraic-graphs-0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

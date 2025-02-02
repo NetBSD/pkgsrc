@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/01/30 04:43:49 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:06:01 pho Exp $
 
 DISTNAME=	text-iso8601-0.1.1
+PKGREVISION=	1
 CATEGORIES=	time converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

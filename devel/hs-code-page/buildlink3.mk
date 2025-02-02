@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/05/09 01:31:49 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/02/02 13:05:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-code-page
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-code-page
 HS_CODE_PAGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-code-page+=	hs-code-page>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-code-page+=	hs-code-page>=0.2.1nb8
+BUILDLINK_ABI_DEPENDS.hs-code-page+=	hs-code-page>=0.2.1nb9
 BUILDLINK_PKGSRCDIR.hs-code-page?=	../../devel/hs-code-page
 .endif	# HS_CODE_PAGE_BUILDLINK3_MK
 

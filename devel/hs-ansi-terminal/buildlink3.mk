@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/01/29 17:00:33 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/02/02 13:04:55 pho Exp $
 
 BUILDLINK_TREE+=	hs-ansi-terminal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-ansi-terminal
 HS_ANSI_TERMINAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-ansi-terminal+=	hs-ansi-terminal>=1.1.2
-BUILDLINK_ABI_DEPENDS.hs-ansi-terminal+=	hs-ansi-terminal>=1.1.2
+BUILDLINK_ABI_DEPENDS.hs-ansi-terminal+=	hs-ansi-terminal>=1.1.2nb1
 BUILDLINK_PKGSRCDIR.hs-ansi-terminal?=		../../devel/hs-ansi-terminal
 
 .include "../../devel/hs-ansi-terminal-types/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/09 01:32:36 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:46 pho Exp $
 
 DISTNAME=	fdo-notify-0.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

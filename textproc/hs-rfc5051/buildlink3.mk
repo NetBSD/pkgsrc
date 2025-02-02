@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2024/05/09 01:32:46 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/02/02 13:05:56 pho Exp $
 
 BUILDLINK_TREE+=	hs-rfc5051
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-rfc5051
 HS_RFC5051_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-rfc5051+=	hs-rfc5051>=0.2
-BUILDLINK_ABI_DEPENDS.hs-rfc5051+=	hs-rfc5051>=0.2nb8
+BUILDLINK_ABI_DEPENDS.hs-rfc5051+=	hs-rfc5051>=0.2nb9
 BUILDLINK_PKGSRCDIR.hs-rfc5051?=	../../textproc/hs-rfc5051
 .endif	# HS_RFC5051_BUILDLINK3_MK
 

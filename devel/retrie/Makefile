@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/05/09 01:32:20 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:32 pho Exp $
 
 DISTNAME=	retrie-1.2.3
 PKGNAME=	${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

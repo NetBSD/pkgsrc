@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/01/30 16:36:41 pho Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 13:06:06 pho Exp $
 
 DISTNAME=	wai-extra-3.1.17
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

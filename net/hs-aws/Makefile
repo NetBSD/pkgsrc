@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/01 14:41:48 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:40 pho Exp $
 
 DISTNAME=	aws-0.24.4
+PKGREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

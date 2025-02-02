@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/05/09 01:32:21 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/02 13:05:32 pho Exp $
 
 DISTNAME=	dotgen-0.4.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

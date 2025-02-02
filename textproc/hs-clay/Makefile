@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/31 10:56:18 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:51 pho Exp $
 
 DISTNAME=	clay-0.15.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
