@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/12/30 06:05:44 adam Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/02 16:09:06 wiz Exp $
 
-DISTNAME=	orjson-3.10.13
+DISTNAME=	orjson-3.10.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orjson/}
