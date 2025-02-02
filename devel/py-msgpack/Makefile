@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2025/01/20 10:57:59 he Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/02 10:38:03 he Exp $
 
 DISTNAME=	msgpack-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,5 +15,4 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.5.1:../../devel/py-setuptools
 USE_LANGUAGES=	c c++
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

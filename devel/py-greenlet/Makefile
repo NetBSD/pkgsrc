@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2025/01/19 16:58:53 he Exp $
+# $NetBSD: Makefile,v 1.29 2025/02/02 10:38:03 he Exp $
 
 DISTNAME=	greenlet-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,5 +26,4 @@ USE_CXX_FEATURES+=	c++11
 GCC_REQD+=		8
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

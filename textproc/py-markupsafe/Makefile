@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2025/01/18 19:43:28 he Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/02 10:38:02 he Exp $
 
 DISTNAME=	markupsafe-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,5 +15,4 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 WHEEL_NAME=	MarkupSafe-${PKGVERSION_NOREV}
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

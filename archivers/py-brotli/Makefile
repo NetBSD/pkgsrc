@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/01/16 16:41:28 he Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/02 10:38:01 he Exp $
 
 DISTNAME=	Brotli-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,5 +17,4 @@ USE_LANGUAGES=	c c++
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/egg.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

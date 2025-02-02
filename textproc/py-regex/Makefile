@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2025/01/19 17:04:01 he Exp $
+# $NetBSD: Makefile,v 1.60 2025/02/02 10:38:03 he Exp $
 
 DISTNAME=	regex-2024.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,5 +17,4 @@ do-test:
 	${PYTHONBIN} -m regex.test_regex
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

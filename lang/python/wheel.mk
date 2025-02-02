@@ -1,4 +1,4 @@
-# $NetBSD: wheel.mk,v 1.18 2025/02/01 15:40:43 gdt Exp $
+# $NetBSD: wheel.mk,v 1.19 2025/02/02 10:38:01 he Exp $
 #
 # Build and install Python wheels
 #
@@ -79,3 +79,6 @@ do-test:
 .endif
 
 .include "../../lang/python/extension.mk"
+.if ${PYTHON_VERSION} >= 313
+.include "../../mk/atomic64.mk"
+.endif

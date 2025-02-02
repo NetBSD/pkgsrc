@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2025/01/21 15:35:41 he Exp $
+# $NetBSD: Makefile,v 1.54 2025/02/02 10:38:04 he Exp $
 
 DISTNAME=	simplejson-3.19.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,5 +13,4 @@ LICENSE=	mit
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2025/01/20 10:58:59 he Exp $
+# $NetBSD: Makefile,v 1.83 2025/02/02 10:38:03 he Exp $
 
 DISTNAME=	protobuf-5.29.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,5 +18,4 @@ USE_LANGUAGES+=		c c++
 MAKE_ENV+=	PROTOC=${PREFIX}/bin/protoc
 
 .include "../../lang/python/wheel.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
