@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25379 2025/02/01 13:40:22 wiz Exp $
+$NetBSD: TODO,v 1.25380 2025/02/02 09:30:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,10 +405,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SDL-3.2.0
+	o SDL2-2.30.12
 	o SOGo5-5.11.1 [wip]
 	o SOPE5-5.11.1 [wip]
 	o SQLiteCpp-2.5.0
-	o Sigil-2.4.0
+	o Sigil-2.4.2
 	o TiffIO-140a
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
@@ -730,13 +731,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
 	o grafana-11.1.0 [wip]
-	o grafana-11.4.0
+	o grafana-11.5.0
 	o grafx2-2.8.3137
 	o grantlee-5.0.0
 	o greed-4.2
 	o gromacs-2021.1
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gtk4-4.17.4
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
@@ -856,6 +858,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libgiigic-1.1.2
 	o libgnomekbd-3.4.0.2
 	o libgtop-2.40 [blocking update of mate-system-monitor]
+	o libhighway-1.2.0
 	o libisoburn-1.5.4
 	o libisofs-1.5.4
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
@@ -919,6 +922,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o memtestplus-7.20
 	o mercury-22.01.8
 	o merkaator-0.18.3
+	o meson-1.7.0
 	o mesure-0.7.2
 	o metacity-3.14.2
 	o metis-5.1.0
@@ -975,6 +979,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ocaml-encore-0.8
 	o ocaml-eqaf-0.7
 	o ocaml-expat-1.1.0
+	o ocaml-lablgtk-2.18.14
 	o ocaml-mtime-1.2.0
 	o ocaml-parsexp-0.14.0
 	o ocaml-resource-pooling-1.2
@@ -1122,14 +1127,19 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
+	o py-cyclonedx-python-lib-8.5.1
 	o py-dot-3.0.1
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-gcovr-6.0
+	o py-google-api-core-2.24.1
+	o py-google-api-python-client-2.160.0
+	o py-h2-4.2.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-isort-6.0.0
 	o py-mailman-3.3.10
 	o py-mitmproxy_rs-0.9.3
 	o py-newt-0.52.21
@@ -1138,6 +1148,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-orjson-3.10.15 [rust 1.82]
 	o py-pdf-parser-0.7.4
+	o py-pip-25.0
 	o py-postgresql-5.1.2
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-quixote-3.3
@@ -1289,6 +1300,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o terraform-provider-null-3.1.0
 	o terraform-provider-random-3.1.0
 	o tetrinetx-1.40c
+	o texlab-5.22.1
 	o tfmxplay-1.1.6
 	o tigervnc-1.14.1
 	o tightvnc-2.7.10
@@ -1306,6 +1318,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-0.25.0
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
