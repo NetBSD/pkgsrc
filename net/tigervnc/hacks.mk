@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2024/08/27 07:31:12 wiz Exp $
+# $NetBSD: hacks.mk,v 1.4 2025/02/02 16:23:06 wiz Exp $
 
 .if !defined(TIGERVNC_HACKS_MK)
 TIGERVNC_HACKS_MK=	defined
