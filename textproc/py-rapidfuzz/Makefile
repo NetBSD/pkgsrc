@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/12/26 17:27:48 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/02 10:35:25 he Exp $
 
 DISTNAME=	rapidfuzz-3.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -42,4 +42,5 @@ post-install:
 	      ${DESTDIR}${PREFIX}/${PYSITELIB}/rapidfuzz/distance/CMakeLists.txt.orig
 
 .include "../../lang/python/wheel.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
