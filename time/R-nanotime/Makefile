@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/01/11 14:14:19 mef Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/02 13:45:44 mef Exp $
 
 R_PKGNAME=	nanotime
-R_PKGVER=	0.3.10
+R_PKGVER=	0.3.11
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
