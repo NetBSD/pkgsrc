@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2023/10/24 08:19:49 pho Exp $
+$NetBSD: distinfo,v 1.2 2025/02/02 02:59:31 pho Exp $
 
-BLAKE2s (filepath-bytestring-1.4.2.1.13.tar.gz) = dbdf8232f67d26b89021400a4f1eee8a2acede481d192341618723f7d647d007
-SHA512 (filepath-bytestring-1.4.2.1.13.tar.gz) = 51e4fa875b82d7f2b395154cdfe7175286202290811570e9b452946e0f1f3939dee6c1a1987e0e32dd31d9c3e7edec12e7b8f20917ab798e4653ca7157b23172
-Size (filepath-bytestring-1.4.2.1.13.tar.gz) = 26173 bytes
+BLAKE2s (filepath-bytestring-1.5.2.0.2.tar.gz) = 74b9e8fb0bdd344d099f1ea20c193c465bd42c4c25950d6522799f2f17216b68
+SHA512 (filepath-bytestring-1.5.2.0.2.tar.gz) = 8151c1d3ea40ff87d52b143b58d1d6bf814a85317b7440a20720a9a1c311a3d642c736b616e44abba80f5fb81beb6b7609747dd963fb5ec5ecbb4617425805b4
+Size (filepath-bytestring-1.5.2.0.2.tar.gz) = 26473 bytes
