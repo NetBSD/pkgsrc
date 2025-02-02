@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.45 2025/01/07 19:35:08 riastradh Exp $
+# $NetBSD: egg.mk,v 1.46 2025/02/02 10:38:01 he Exp $
 #
 # The method used in this Makefile fragment is obsolete.
 # Please use wheel.mk instead.
@@ -39,6 +39,10 @@ PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX:S,.,\.,g}/, \
 			       "$${PYVERSSUFFIX}") }
 
 USE_PKG_RESOURCES?=	no
+
+.if ${PYTHON_VERSION} >= 313
+.include "../../mk/atomic64.mk"
+.endif
 
 # py-setuptools needs to be bootstrapped from python itself, without using
 # py-setuptools.

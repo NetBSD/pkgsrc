@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2025/01/18 19:40:04 he Exp $
+# $NetBSD: Makefile,v 1.62 2025/02/02 10:38:02 he Exp $
 
 DISTNAME=	psycopg2-2.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,5 +15,4 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 .include "../../lang/python/wheel.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
