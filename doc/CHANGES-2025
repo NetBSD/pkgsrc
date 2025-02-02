@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1011 2025/02/02 18:09:25 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1012 2025/02/02 18:10:29 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1306,3 +1306,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter to 0.25.1nb1 [wiz 2025-02-02]
 	Updated devel/cargo-modules to 0.21.2 [pin 2025-02-02]
 	Updated devel/cargo-release to 0.25.16 [pin 2025-02-02]
+	Updated devel/git-cliff to 2.7.0 [pin 2025-02-02]
