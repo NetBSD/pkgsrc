@@ -1,11 +1,39 @@
-$NetBSD: patch-git-annex.cabal,v 1.1 2023/11/02 03:15:01 pho Exp $
+$NetBSD: patch-git-annex.cabal,v 1.2 2025/02/02 04:31:03 pho Exp $
 
-No reason to restrict D-Bus support to Linux. It's a cross-platform thing,
-unlike SystemD.
+Hunk #0:
+    Remove -O or -j options. In pkgsrc we handle it via mk/haskell.mk. This
+    is pkgsrc-specific.
 
---- git-annex.cabal.orig	2023-11-02 01:33:00.571134681 +0000
+Hunk #1:
+    No reason to restrict D-Bus support to Linux. It's a cross-platform
+    thing unlike SystemD.
+
+    TODO: Upstream this hunk.
+
+--- git-annex.cabal.orig	2001-09-09 01:46:40.000000000 +0000
 +++ git-annex.cabal
-@@ -460,7 +460,6 @@ Executable git-annex
+@@ -290,20 +290,6 @@ Executable git-annex
+   -- Some things don't work with the non-threaded RTS.
+   GHC-Options: -threaded
+ 
+-  -- Fully optimize for production.
+-  if flag(Production)
+-    -- Lower memory systems can run out of memory with -O2, so
+-    -- optimise slightly less.
+-    if arch(arm)
+-      GHC-Options: -O2 -optlo-O2
+-    else
+-      GHC-Options: -O2
+-  else
+-    GHC-Options: -O0
+-
+-  if flag(ParallelBuild)
+-    GHC-Options: -j
+-
+   -- Avoid linking with unused dynamic libraries.
+   if os(linux) || os(freebsd)
+     GHC-Options: -optl-Wl,--as-needed
+@@ -487,7 +473,6 @@ Executable git-annex
              Other-Modules: Utility.DirWatcher.Kqueue
    
    if flag(Dbus)
