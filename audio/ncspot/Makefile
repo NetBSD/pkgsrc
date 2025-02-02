@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.74 2024/12/12 07:28:21 pin Exp $
+# $NetBSD: Makefile,v 1.75 2025/02/02 18:13:24 pin Exp $
 
-DISTNAME=	ncspot-1.2.1
-PKGREVISION=	4
+DISTNAME=	ncspot-1.2.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,9 +15,9 @@ TOOL_DEPENDS+=	clang-[0-9]*:../../lang/clang
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.82.0
+#RUST_REQ=	1.83.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.82.0 on amd64
+#This package is confirmed to build with Rust 1.83.0 on amd64
 USE_LANGUAGES+=			c c++
 USE_TOOLS+=			pkg-config
 PYTHON_FOR_BUILD_ONLY=		tool
