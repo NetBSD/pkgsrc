@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2022/12/22 09:24:38 vins Exp $
+# $NetBSD: options.mk,v 1.2 2025/02/02 10:59:47 vins Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opendoas
 
@@ -11,5 +11,6 @@ PKG_SUGGESTED_OPTIONS=
 ## Enable credential caching.
 ##
 .if !empty(PKG_OPTIONS:Mpersist)
+CONFIGURE_ENV+=		OS=linux
 CONFIGURE_ARGS+=	--with-timestamp
 .endif
