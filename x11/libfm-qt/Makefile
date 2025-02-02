@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2025/01/22 09:08:02 riastradh Exp $
+# $NetBSD: Makefile,v 1.47 2025/02/02 09:37:36 wiz Exp $
 
 DISTNAME=	libfm-qt-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -24,6 +24,12 @@ SUBST_FILES.prefix=	src/core/fileinfo.cpp
 SUBST_FILES.prefix+=	src/core/vfs/vfs-menu.c
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
+
+SUBST_CLASSES+=		unbl3
+SUBST_MESSAGE.unbl3=	Undoing buildlink3 paths in cmake exports.
+SUBST_STAGE.unbl3=	post-build
+SUBST_FILES.unbl3+=	${CMAKE_BUILD_DIR}/src/CMakeFiles/Export/*/fm-qt6-targets.cmake
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
 TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
