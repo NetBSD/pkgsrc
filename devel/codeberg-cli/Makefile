@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/01 19:19:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/02 07:24:32 wiz Exp $
 
 DISTNAME=	codeberg-cli-0.4.0
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	gnu-agpl-v3
 WRKSRC=		${WRKDIR}/${PKGBASE}
 
 USE_LANGUAGES=	c
+USE_TOOLS+=	pkg-config
 
 .include "cargo-depends.mk"
 
