@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1019 2025/02/02 23:07:43 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1020 2025/02/02 23:32:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1313,5 +1313,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/vmailmgr to 0.97.0.20150901nb1 [schmonz 2025-02-02]
 	Updated meta-pkgs/qmail-server to 1.0.20250202 [schmonz 2025-02-02]
 	Updated sysutils/R-processx to 3.8.5 [mef 2025-02-02]
-	Updated www/R-webfakes to 1.3.2 [mef 2025-02-02]
 	Updated www/R-webfakes to 1.3.2 [mef 2025-02-02]
