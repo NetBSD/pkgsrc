@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/05/09 01:32:52 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/02 03:08:43 pho Exp $
 
 DISTNAME=	feed-1.3.2.1
 PKGREVISION=	2
@@ -13,7 +13,8 @@ HASKELL_UNRESTRICT_DEPENDENCIES=	\
 	base-compat	\
 	bytestring	\
 	text		\
-	time
+	time		\
+	xml-conduit
 
 .include "../../devel/hs-base-compat/buildlink3.mk"
 .include "../../devel/hs-old-locale/buildlink3.mk"
