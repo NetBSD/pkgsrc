@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.989 2025/02/02 12:33:59 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.990 2025/02/02 12:34:05 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1284,3 +1284,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/finch to 2.14.14 [gdt 2025-02-02]
 	Updated chat/pidgin to 2.14.14 [gdt 2025-02-02]
 	Updated chat/pidgin-sametime to 2.14.14 [gdt 2025-02-02]
+	Updated chat/pidgin-silc to 2.14.14 [gdt 2025-02-02]
