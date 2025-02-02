@@ -1,4 +1,4 @@
-# $NetBSD: eol-packages,v 1.14 2025/01/29 15:31:54 taca Exp $
+# $NetBSD: eol-packages,v 1.15 2025/02/02 09:35:54 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -1169,3 +1169,12 @@ eol date: April, 2024
 URL: https://kb.isc.org/docs/bind-9-end-of-life-dates
 Description: Package has been removed.  Update to newer version.
 
+Package: drupal 9.x
+eol date: November 7, 2023
+URL: https://www.drupal.org/psa-2023-11-01
+Description: Update to newer version.
+
+Package: drupal 7.x
+eol date: January 6, 2025
+URL: https://www.drupal.org/psa-2025-01-06
+Description: Update to newer version.
