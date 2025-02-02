@@ -1,0 +1,5 @@
+This library lets you derive automatically Haskell functions that let you
+query each endpoint of a servant
+(http://hackage.haskell.org/package/servant) webservice. See the client
+section of the tutorial
+(http://docs.servant.dev/en/stable/tutorial/Client.html).

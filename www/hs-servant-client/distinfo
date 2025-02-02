@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/02 04:03:52 pho Exp $
+
+BLAKE2s (servant-client-0.20.2.tar.gz) = 93a27e676ffc20670e255805ac214aec3bd5b08742d6ca09d14a3e4301317838
+SHA512 (servant-client-0.20.2.tar.gz) = 941bb0ac5e3f1a03b8ecfbaec114080f9ec27b7e526deff9096f0b90482ec244dcfef435412d33bac652f77cb0d9f5b140252cd188cf71a07403948b5f8a6bc2
+Size (servant-client-0.20.2.tar.gz) = 23756 bytes
