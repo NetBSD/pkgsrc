@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.298 2025/01/29 15:32:47 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.299 2025/02/02 09:36:33 taca Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26129,3 +26129,5 @@ git-base<2.48.1	missing-url-sanitizing	https://nvd.nist.gov/vuln/detail/CVE-2024
 pam-u2f<1.3.1	authentication-bypass		https://nvd.nist.gov/vuln/detail/CVE-2025-23013
 vim<9.1.1043	out-of-bounds-write	https://github.com/vim/vim/security/advisories/GHSA-j3g9-wg22-v955
 bind>=9.16<9.18		eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
+drupal>=9<10	eol	https://www.drupal.org/psa-2023-11-01
+drupal>=7<8	eol	https://www.drupal.org/psa-2025-01-06
