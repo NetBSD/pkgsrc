@@ -1,0 +1,15 @@
+$NetBSD: patch-runners_events_CMakeLists.txt,v 1.1 2025/02/02 08:34:36 wiz Exp $
+
+Fix build with latest boost.
+
+--- runners/events/CMakeLists.txt.orig	2014-10-25 07:17:51.000000000 +0000
++++ runners/events/CMakeLists.txt
+@@ -2,7 +2,7 @@ project(plasma-events)
+ 
+ find_package(KdepimLibs REQUIRED)
+ 
+-include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${Boost_INCLUDE_DIR} ${KDEPIMLIBS_INCLUDE_DIRS} ${KDE4_INCLUDES})
++include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${Boost_INCLUDE_DIRS} ${KDEPIMLIBS_INCLUDE_DIRS} ${KDE4_INCLUDES})
+ 
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${KDE4_ENABLE_EXCEPTIONS}")
+ 
