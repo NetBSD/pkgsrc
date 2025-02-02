@@ -1,0 +1,24 @@
+$NetBSD: patch-compiler_ghc.cabal.in,v 1.1 2025/02/02 09:40:50 pho Exp $
+
+Fix parallel builds. I don't know much about the magic behind ghc-bignum,
+but stage-2 compiler occasionally fails to build without ghc-bignum being
+already built:
+
+    ghc: panic! (the 'impossible' happened)                                         
+      GHC version 9.10.1:
+            lookupGlobal 
+      ErrorWithoutFlag
+        Failed to load interface for ‘GHC.Num.BigNat’.
+        There are files missing in the ‘ghc-bignum-1.3’ package,
+        try running 'ghc-pkg check'.
+
+--- compiler/ghc.cabal.in.orig	2025-02-02 08:39:33.634801110 +0000
++++ compiler/ghc.cabal.in
+@@ -121,6 +121,7 @@ Library
+                    exceptions == 0.10.*,
+                    semaphore-compat,
+                    stm,
++                   ghc-bignum,
+                    ghc-boot   == @ProjectVersionMunged@,
+                    ghc-heap   == @ProjectVersionMunged@,
+                    ghci == @ProjectVersionMunged@
