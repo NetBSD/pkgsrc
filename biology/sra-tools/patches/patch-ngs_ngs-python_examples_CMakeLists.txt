@@ -1,4 +1,4 @@
-$NetBSD: patch-ngs_ngs-python_examples_CMakeLists.txt,v 1.1 2024/11/19 20:22:32 bacon Exp $
+$NetBSD: patch-ngs_ngs-python_examples_CMakeLists.txt,v 1.2 2025/02/02 14:25:34 bacon Exp $
 
 # Canonicalize python examples dir
 

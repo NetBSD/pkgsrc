@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_external_driver-tool_sratools.cpp,v 1.2 2024/11/19 20:22:32 bacon Exp $
+$NetBSD: patch-tools_external_driver-tool_sratools.cpp,v 1.3 2025/02/02 14:25:35 bacon Exp $
 
 # Add NetBSD pthread_main_np() stand-in
 
