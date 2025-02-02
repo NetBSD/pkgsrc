@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2025/01/29 15:28:29 pho Exp $
+$NetBSD: distinfo,v 1.3 2025/02/02 09:40:50 pho Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -28,6 +28,7 @@ BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 819787068e68d3b31cc78a
 SHA512 (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 09bd263b97ee027cebc6cc31c30dd1a518726823bbed798451feea33da584a7e6dac7ea385681254b1706d885bd6ee7ed3b2c5c005d769292eff62d9a004d714
 Size (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 102072500 bytes
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = 0448318ec3426bb070176c2e36f82af239aa58fa
+SHA1 (patch-compiler_ghc.cabal.in) = 70e9385d85f5538da944901457be383991ce586b
 SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
 SHA1 (patch-hadrian_bindist_Makefile) = f605d4cceed5fa771c15971e669435ebbb705290
 SHA1 (patch-hadrian_bootstrap_bootstrap.py) = bf96af392612aad143373f628dcbd3345b83eee7
