@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.997 2025/02/02 15:48:27 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.998 2025/02/02 15:54:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1292,3 +1292,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust-bin to 1.82.0 [he 2025-02-02]
 	Updated biology/sra-tools to 3.2.0 [bacon 2025-02-02]
 	Updated graphics/libhighway to 1.2.0 [wiz 2025-02-02]
+	Updated textproc/tree-sitter to 0.25.1 [wiz 2025-02-02]
