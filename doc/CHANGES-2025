@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.999 2025/02/02 15:57:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1000 2025/02/02 15:58:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/libhighway to 1.2.0 [wiz 2025-02-02]
 	Updated textproc/tree-sitter to 0.25.1 [wiz 2025-02-02]
 	Updated security/py-cyclonedx-python-lib to 8.5.1 [wiz 2025-02-02]
+	Updated devel/py-google-api-core to 2.24.1 [wiz 2025-02-02]
