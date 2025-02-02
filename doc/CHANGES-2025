@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1017 2025/02/02 20:32:25 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1018 2025/02/02 22:40:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/ncspot to 1.2.2 [pin 2025-02-02]
 	Updated mail/vmailmgr to 0.97.0.20150901nb1 [schmonz 2025-02-02]
 	Updated meta-pkgs/qmail-server to 1.0.20250202 [schmonz 2025-02-02]
+	Updated sysutils/R-processx to 3.8.5 [mef 2025-02-02]
