@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1837 2025/01/29 12:10:57 adam Exp $
+# $NetBSD: Makefile,v 1.1838 2025/02/02 04:01:55 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -174,6 +174,7 @@ SUBDIR+=	hs-js-jquery
 SUBDIR+=	hs-open-browser
 SUBDIR+=	hs-path-pieces
 SUBDIR+=	hs-servant
+SUBDIR+=	hs-servant-client-core
 SUBDIR+=	hs-servant-server
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-wai-app-static
