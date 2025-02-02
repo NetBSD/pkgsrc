@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2024/12/07 04:15:39 mef Exp $
+$NetBSD: distinfo,v 1.4 2025/02/02 13:52:01 mef Exp $
 
-BLAKE2s (R/ff_4.5.0.tar.gz) = 1d1034136543745531773ded5f55752573f1538dbd83cfaa1f38606abae15f90
-SHA512 (R/ff_4.5.0.tar.gz) = 70b2ae168af80022bfbfc57a4a7423b6ce227c8d98781e8b75ff4f3fef7d04d7c73b0e0be015213e77e9a50f5dd50ad536488bd44c70c83c6edc2d5d57ad2508
-Size (R/ff_4.5.0.tar.gz) = 328402 bytes
+BLAKE2s (R/ff_4.5.2.tar.gz) = c3f0862a3d6ce39ee00d21b28b146b1bc30f28dd266fc23ec6740a327b25998a
+SHA512 (R/ff_4.5.2.tar.gz) = d8dc9d8f05be65076cb7d7d810cee99b10f351b6c2b9e66706e8e500025088993382ff97d9d86228bee63ff6a05a9d123543583c7696d745f74d86a07e7e2327
+Size (R/ff_4.5.2.tar.gz) = 328698 bytes
