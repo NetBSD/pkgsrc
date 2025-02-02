@@ -1,10 +1,10 @@
-$NetBSD: patch-vendor_zerocopy-0.7.34_src_lib.rs,v 1.1 2024/10/13 19:04:40 he Exp $
+$NetBSD: patch-vendor_zerocopy-0.7.35_src_lib.rs,v 1.1 2025/02/02 13:34:48 he Exp $
 
 Attempt at skipping SIMD / neon on big-endian aarch64,
 ref. https://github.com/rust-lang/rust/issues/129819.
 
---- vendor/zerocopy-0.7.34/src/lib.rs.orig	2024-08-31 21:15:29.602997509 +0000
-+++ vendor/zerocopy-0.7.34/src/lib.rs
+--- vendor/zerocopy-0.7.35/src/lib.rs.orig	2024-08-31 21:15:29.602997509 +0000
++++ vendor/zerocopy-0.7.35/src/lib.rs
 @@ -3727,7 +3727,7 @@ mod simd {
              powerpc64, powerpc64, vector_bool_long, vector_double, vector_signed_long, vector_unsigned_long
          );
