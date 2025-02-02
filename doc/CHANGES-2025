@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.970 2025/02/02 03:24:05 pho Exp $
+$NetBSD: CHANGES-2025,v 1.971 2025/02/02 03:29:58 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1263,3 +1263,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/hs-filepath-bytestring to 1.5.2.0.2 [pho 2025-02-02]
 	Updated www/hs-clientsession to 0.9.3.0 [pho 2025-02-02]
 	Updated www/hs-yesod-core to 1.6.26.0 [pho 2025-02-02]
+	Updated www/hs-yesod-form to 1.7.9 [pho 2025-02-02]
