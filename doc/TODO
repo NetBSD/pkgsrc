@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25395 2025/02/02 17:51:19 wiz Exp $
+$NetBSD: TODO,v 1.25396 2025/02/03 02:00:40 scole Exp $
 
 Suggested new packages
 ======================
@@ -206,10 +206,6 @@ Suggested new packages
 	M+ FONTS [pkg/37614]
 	http://mplus-fonts.sourceforge.jp/
 	Small and neat Japanese bitmap fonts
-
-	tkimg [pkg/38026]
-	http://tkimg.sourceforge.net/
-	Add support for several image formats to Tk
 
 	flyback [pkgsrc-wip]
 	http://code.google.com/p/flyback/
@@ -1292,6 +1288,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tk-9.0
+	o tk-tkimg 2.0.1 [at http://tkimg.sourceforge.net/]
 	o tkcon-2.7.3
 	o tkhylafax-3.2
 	o tkinfo-2.11
