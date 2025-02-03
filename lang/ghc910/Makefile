@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2025/01/29 15:28:29 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/03 16:09:09 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.10.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -78,9 +78,9 @@ CONFIGURE_ARGS.common+= \
 
 # We must pass non-wrapper tools to ./configure because they will be
 # embedded in the compiler (actually ${WRKSRC}/settings).
-CONFIGURE_ENV+=		ac_cv_prog_fp_prog_ar=${AR:Q}
-CONFIGURE_ENV+=		ac_cv_prog_LIBTOOL=libtool
+
 CONFIGURE_ARGS.common+=	LD=${LD:Q}
+CONFIGURE_ENV+=		MergeObjsCmd=${LD:Q}
 
 # While we use binutils ar which supports "@", this appears to be leaking
 # somewhere into assuming that SunOS ld also supports "@" which it does not.
