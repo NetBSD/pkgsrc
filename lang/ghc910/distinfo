@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/02/02 16:21:31 pho Exp $
+$NetBSD: distinfo,v 1.5 2025/02/03 16:09:09 pho Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -61,5 +61,6 @@ SHA1 (patch-libraries_unix_System_Posix_User.hsc) = b583f591838fe2d7f42241787e02
 SHA1 (patch-libraries_unix_System_Posix_User_ByteString.hsc) = 2a331de2292835ae6904980facd8201705fa63e8
 SHA1 (patch-m4_fptools__set__haskell__platform__vars.m4) = 8c7a7ab965f4df8a68bedb35c32ee32c59ac2c94
 SHA1 (patch-rts_rts.cabal) = 6ccf9c3a184e9ffe651fcbc9f1d05504c17aeb1a
+SHA1 (patch-utils_ghc-toolchain_src_GHC_Toolchain_Program.hs) = 15ceb99949d549dbf44ec19f0d7197c5c954981c
 SHA1 (patch-utils_haddock_driver_Main.hs) = 26b015d3aef9fdff66e66c8e3d9a370a2dbd7067
 SHA1 (patch-utils_haddock_haddock.cabal) = c8a244f2f341b736b65b218590d1a3a8309f55ba
