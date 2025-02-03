@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.5 2025/01/12 15:50:11 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2025/02/03 18:30:52 ktnb Exp $
 
 BLAKE2s (naev/lyaml-6.2.8.tar.gz) = 15e5a5c670dabdb8dc145bd794079c92660449048fe88e430c29d46e52b52f07
 SHA512 (naev/lyaml-6.2.8.tar.gz) = d9166d89f2275a1050218425c1365d6bda42294ab2629c71da3a2007eac7e8018e13d6e69181ea204eb7f051a49533e4b67227468b161df1f3450a073e2dbeab
 Size (naev/lyaml-6.2.8.tar.gz) = 49528 bytes
-BLAKE2s (naev/naev-0.12.2.tar.gz) = 64d8e028dace442e0100ed7ed245da407ca8e8ef392f19a99ead5b37866bc9e1
-SHA512 (naev/naev-0.12.2.tar.gz) = 84f822ed68137c205beaea6fb0078d32cc67ba770afd11d6611efe7c4aa0cc401a76aa056c60091be9742ebfde2fcdca25bfb92c04caf91fcc783af6defc0894
-Size (naev/naev-0.12.2.tar.gz) = 26504176 bytes
+BLAKE2s (naev/naev-0.12.3.tar.gz) = 0f6b9c9787dd41c9adbcff4877254b483377bda5dcc5975c32dd9fc84ae9f4b8
+SHA512 (naev/naev-0.12.3.tar.gz) = 7e5dcadc48aa61fe8011b8639674897a5314da1ae3b73db1103f9c7b5df027c7e5f48ac7723c3212ec73c6089e56c32d34b4a1d22117261a7531fc2f1da214bc
+Size (naev/naev-0.12.3.tar.gz) = 26510653 bytes
 BLAKE2s (naev/naev-naev-artwork-production-a685780631a345b2e3e635606961574c1ad2a0c3.tar.gz) = 651a64d175f7f32ca2e4e9dab6229ddfae7ff2e69035f85d1f325b5c1908a21d
 SHA512 (naev/naev-naev-artwork-production-a685780631a345b2e3e635606961574c1ad2a0c3.tar.gz) = 3ab19e59157cc0820dac569a6f83efcb74d48500f90c1d9c2a9b78e33a0be0fce008276a8c66b0505c968b5c32c4e1a351266a6f2643ab7ab1ff4e18d4fb3bc5
 Size (naev/naev-naev-artwork-production-a685780631a345b2e3e635606961574c1ad2a0c3.tar.gz) = 465807405 bytes
