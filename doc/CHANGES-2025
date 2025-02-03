@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1037 2025/02/03 16:53:15 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.1038 2025/02/03 17:01:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1334,3 +1334,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/kitty to 0.39.1 [ktnb 2025-02-03]
 	Updated devel/R-pak to 0.8.0.1 [mef 2025-02-03]
 	Updated textproc/ruby-nokogiri to 1.18.2 [tsutsui 2025-02-03]
+	Updated devel/capnproto to 1.1.0 [adam 2025-02-03]
+	Updated devel/py-factory_boy to 3.3.3 [adam 2025-02-03]
