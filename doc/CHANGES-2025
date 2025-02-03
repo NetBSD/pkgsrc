@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1028 2025/02/03 08:43:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1029 2025/02/03 08:51:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1324,3 +1324,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-plus to 0.8.1 [adam 2025-02-03]
 	Updated net/py-python-socks to 2.7.1 [adam 2025-02-03]
 	Updated www/py-pylsqpack to 0.3.19 [adam 2025-02-03]
+	Updated textproc/py-rapidfuzz to 3.12.1 [adam 2025-02-03]
+	Updated devel/py-mando to 0.8.2 [adam 2025-02-03]
