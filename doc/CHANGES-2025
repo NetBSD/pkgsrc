@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1026 2025/02/03 08:08:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1027 2025/02/03 08:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1320,3 +1320,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/p5-DateTime-Format-Natural to 1.19 [wen 2025-02-03]
 	Updated x11/xhost to 1.0.10 [wiz 2025-02-03]
 	Updated x11/libX11 to 1.8.11 [wiz 2025-02-03]
+	Updated net/py-zmq to 26.2.1 [adam 2025-02-03]
+	Updated devel/py-test-plus to 0.8.1 [adam 2025-02-03]
