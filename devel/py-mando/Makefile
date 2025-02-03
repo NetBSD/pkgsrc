@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2023/03/29 09:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/03 08:51:15 adam Exp $
 
-DISTNAME=	mando-0.7.1
+DISTNAME=	mando-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mando/}
@@ -10,14 +10,9 @@ HOMEPAGE=	https://mando.readthedocs.io/
 COMMENT=	Create Python CLI apps with little to no effort at all
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-.include "../../lang/python/pyversion.mk"
-
-.if ${PYTHON_VERSION} == 207
-DEPENDS+=	${PYPKGPREFIX}-funcsigs-[0-9]*:../../devel/py-funcsigs
-.endif
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
