@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/01/07 13:55:08 sborrill Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/03 12:36:38 sborrill Exp $
 
-VERSION=	6.12
+VERSION=	6.13
 DISTNAME=	squid-${VERSION}
 
 CATEGORIES=	www
