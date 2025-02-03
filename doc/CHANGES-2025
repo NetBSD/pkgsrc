@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1039 2025/02/03 18:31:12 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1040 2025/02/03 21:13:53 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1337,3 +1337,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/capnproto to 1.1.0 [adam 2025-02-03]
 	Updated devel/py-factory_boy to 3.3.3 [adam 2025-02-03]
 	Updated games/naev to 0.12.3 [ktnb 2025-02-03]
+	Updated textproc/man2html to 20240105 [bacon 2025-02-03]
