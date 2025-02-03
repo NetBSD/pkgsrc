@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/01/29 18:11:36 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/02/03 08:41:52 adam Exp $
 
-BLAKE2s (python_socks-2.7.0.tar.gz) = f5555a951978a8eb807ebc12a3e71505f935d31d96415b26eae4fd98eef801d6
-SHA512 (python_socks-2.7.0.tar.gz) = b4eb92663896f4006813e3e2aaa357c04b231f2b6c7594556538f1a7b9c87c3c886a70e0d5ea7916e43c6cddc33c144fa7ebc8400ef72af7a66eb6129ad0e11c
-Size (python_socks-2.7.0.tar.gz) = 230272 bytes
+BLAKE2s (python_socks-2.7.1.tar.gz) = b67183d5babd0bfcb55b48439b551b742e03a27da76d40d55c5c3e8233a727d4
+SHA512 (python_socks-2.7.1.tar.gz) = 23892739ee61a412daba5897b520221d89fa896de9d45c1d2f0c51798c73c4548e7e290835e0836d6bb9dfc024b062abeaac59a0b1c0b1389d57c54c57fc7ce4
+Size (python_socks-2.7.1.tar.gz) = 230371 bytes
