@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2021/02/20 21:58:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/03 16:59:10 adam Exp $
 bin/capnp
 bin/capnpc
 bin/capnpc-c++
@@ -13,6 +13,7 @@ include/capnp/compat/json.capnp
 include/capnp/compat/json.capnp.h
 include/capnp/compat/json.h
 include/capnp/compat/std-iterator.h
+include/capnp/compat/websocket-rpc.h
 include/capnp/dynamic.h
 include/capnp/endian.h
 include/capnp/ez-rpc.h
@@ -51,9 +52,11 @@ include/kj/array.h
 include/kj/async-inl.h
 include/kj/async-io.h
 include/kj/async-prelude.h
+include/kj/async-queue.h
 include/kj/async-unix.h
 include/kj/async-win32.h
 include/kj/async.h
+include/kj/cidr.h
 include/kj/common.h
 include/kj/compat/gtest.h
 include/kj/compat/gzip.h
@@ -68,6 +71,7 @@ include/kj/filesystem.h
 include/kj/function.h
 include/kj/hash.h
 include/kj/io.h
+include/kj/list.h
 include/kj/main.h
 include/kj/map.h
 include/kj/memory.h
@@ -76,6 +80,7 @@ include/kj/one-of.h
 include/kj/parse/char.h
 include/kj/parse/common.h
 include/kj/refcount.h
+include/kj/source-location.h
 include/kj/std/iostream.h
 include/kj/string-tree.h
 include/kj/string.h
@@ -88,6 +93,7 @@ include/kj/timer.h
 include/kj/tuple.h
 include/kj/units.h
 include/kj/vector.h
+include/kj/win32-api-version.h
 include/kj/windows-sanity.h
 lib/cmake/CapnProto/CapnProtoConfig.cmake
 lib/cmake/CapnProto/CapnProtoConfigVersion.cmake
@@ -95,6 +101,7 @@ lib/cmake/CapnProto/CapnProtoMacros.cmake
 lib/cmake/CapnProto/CapnProtoTargets.cmake
 lib/libcapnp-json.la
 lib/libcapnp-rpc.la
+lib/libcapnp-websocket.la
 lib/libcapnp.la
 lib/libcapnpc.la
 lib/libkj-async.la
@@ -105,7 +112,9 @@ lib/libkj-tls.la
 lib/libkj.la
 lib/pkgconfig/capnp-json.pc
 lib/pkgconfig/capnp-rpc.pc
+lib/pkgconfig/capnp-websocket.pc
 lib/pkgconfig/capnp.pc
+lib/pkgconfig/capnpc.pc
 lib/pkgconfig/kj-async.pc
 lib/pkgconfig/kj-gzip.pc
 lib/pkgconfig/kj-http.pc
