@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/20 08:07:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/03 17:00:35 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -43,6 +43,7 @@ ${PYSITELIB}/factory/mogo.pyo
 ${PYSITELIB}/factory/mongoengine.py
 ${PYSITELIB}/factory/mongoengine.pyc
 ${PYSITELIB}/factory/mongoengine.pyo
+${PYSITELIB}/factory/py.typed
 ${PYSITELIB}/factory/random.py
 ${PYSITELIB}/factory/random.pyc
 ${PYSITELIB}/factory/random.pyo
