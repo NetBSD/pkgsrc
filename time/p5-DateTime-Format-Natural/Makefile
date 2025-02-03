@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2024/11/16 12:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2025/02/03 01:45:57 wen Exp $
 
-DISTNAME=	DateTime-Format-Natural-1.18
+DISTNAME=	DateTime-Format-Natural-1.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -13,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-HiRes-[0-9]*:../../time/p5-DateTime-HiRes
-DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Params-Validate>=1.15:../../devel/p5-Params-Validate
 DEPENDS+=	p5-boolean-[0-9]*:../../devel/p5-boolean
 DEPENDS+=	p5-Module-Util>=0:../../devel/p5-Module-Util
