@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1041 2025/02/03 21:48:26 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1042 2025/02/03 22:13:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/naev to 0.12.3 [ktnb 2025-02-03]
 	Updated textproc/man2html to 20240105 [bacon 2025-02-03]
 	Updated devel/R-patrick to 0.3.0 [mef 2025-02-03]
+	Updated devel/R-pkgbuild to 1.4.6 [mef 2025-02-03]
