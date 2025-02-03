@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/10/19 12:04:55 mef Exp $
+$NetBSD: distinfo,v 1.6 2025/02/03 13:36:23 mef Exp $
 
-BLAKE2s (R/bit64_4.5.2.tar.gz) = f1bf4df6664fa071a69addb7d0447b199eebe449a388946a1d6a8c05b85afd45
-SHA512 (R/bit64_4.5.2.tar.gz) = 82519d7db94d2d78b8410f2b07a23cc4b03ca79dd6862eef19493bc503cc64c39a534762d550c74c5e3c1a4d8866d7f781958201fabb463877a86fb74486d401
-Size (R/bit64_4.5.2.tar.gz) = 135341 bytes
+BLAKE2s (R/bit64_4.6.0-1.tar.gz) = aa6d0f8fb97fa06d85ef53124532f001f923f80e4df8439f1b0035e34702ca76
+SHA512 (R/bit64_4.6.0-1.tar.gz) = 64de14794f1f035c6f32863b87c1bddfb431062fc655be78d454b825a3cb7344374b9e4142778a69f50ad6c7a8ab4e9451fcf571cddd08029dd54a25facbd317
+Size (R/bit64_4.6.0-1.tar.gz) = 142045 bytes
