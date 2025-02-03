@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp,v 1.6 2025/02/03 19:49:18 wiz Exp $
+$NetBSD: patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp,v 1.7 2025/02/03 19:55:34 wiz Exp $
 
 Fix build on NetBSD-current, where some symbols moved to a new header.
+https://github.com/llvm/llvm-project/issues/125566
 
 --- lib/sanitizer_common/sanitizer_linux_libcdep.cpp.orig	2024-06-15 17:21:32.000000000 +0000
 +++ lib/sanitizer_common/sanitizer_linux_libcdep.cpp
