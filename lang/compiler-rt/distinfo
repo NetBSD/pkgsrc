@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2025/02/03 19:49:18 wiz Exp $
+$NetBSD: distinfo,v 1.28 2025/02/03 19:55:34 wiz Exp $
 
 BLAKE2s (cmake-18.1.8.src.tar.xz) = 77d99e6cf6210475bda352d49bd823ecd428ffd92c4b5bc0147583e1f2628c64
 SHA512 (cmake-18.1.8.src.tar.xz) = e02243b491f9e688db28d7b53270fcf87debf09d3c95b136a7c7b96e26890de68712c60a1e85f5a448a95ad8c81f2d8ae77047780822443bbe39f1a9e6211007
@@ -13,4 +13,4 @@ SHA1 (patch-CMakeLists.txt) = f8b0a0ad43481ec0c2923ec19c3c4f2ce81a4c82
 SHA1 (patch-cmake_config-ix.cmake) = 40ee86393c0f9e26eeaa493c5312d2cabf4c2a58
 SHA1 (patch-lib_fuzzer_FuzzerUtilLinux.cpp) = 9de59ffcb31d511f67f10fa4ec55cfa7c7f64b31
 SHA1 (patch-lib_sanitizer__common_sanitizer__linux.cpp) = bc04e2d792c8eaffb26b60fdaceef261ffe03371
-SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = 1c17369d7ab3d61a35469f8f2631602b33fde888
+SHA1 (patch-lib_sanitizer__common_sanitizer__linux__libcdep.cpp) = f3635b56ab3d97cd1035fdea7f593d255fe14c24
