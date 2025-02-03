@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2025/01/16 15:43:02 ktnb Exp $
+# $NetBSD: PLIST,v 1.27 2025/02/03 14:32:47 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2025/01/16 15:43:02 ktnb Exp $
+$NetBSD: distinfo,v 1.29 2025/02/03 14:32:47 ktnb Exp $
 
 BLAKE2s (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = ed554d44b1070ae79986f3ff61e6ad4ed12060fb78fe6f2273733f762721d1e0
 SHA512 (github.com__a_l_tree_bigfloat_@v_v0.2.0.mod) = 09bbd28b9ce42a919f22339bdeb2b798a728cf3b7f5f7fd61bec418fa360893c4ebd72f0957be4c855621f96d9a146ef8f0074f5ac4154c04f537ae3ad3592c4
@@ -12,12 +12,12 @@ Size (github.com_alecthomas_chroma_v2_@v_v2.15.0.mod) = 230 bytes
 BLAKE2s (github.com_alecthomas_chroma_v2_@v_v2.15.0.zip) = 89972fd9f8909e4eb19fdb139fccb36fd35970d37c675b43ade33ac575814dec
 SHA512 (github.com_alecthomas_chroma_v2_@v_v2.15.0.zip) = 39be3d9589c80e7e8e044cf0814955cd119288506e71d03a50af1c06f076c29e65b8b66786fefb32085a4c454abdd6974ef24a0abe858ba2144eedb9a422907d
 Size (github.com_alecthomas_chroma_v2_@v_v2.15.0.zip) = 1423545 bytes
-BLAKE2s (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.mod) = e205ae79e7a61aeb6dfbab69a666bb662eb0af2302ed12a6bada3fc11bda1b53
-SHA512 (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.mod) = 4a9d86964802ae0545c6d9125387aa04a59f190f85d13719158a4aea07f9bb9b0e05cbe23101fb8a3c5b90e78488a671e2d274740e0db08a852f2dfeff3a8eec
-Size (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.mod) = 49 bytes
-BLAKE2s (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.zip) = d053d041a6ca0c106485b99d001f869c5059337b71dd1a7d31902a63bf6c8205
-SHA512 (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.zip) = be8dfd64e156d40f9bcf69497e9b9370d6e599e4202efdd502ab91ff8b370abde59912da6390e9a39947c1d18ccda5c1f4f0112f6aca8e5bffcf3e233218c95c
-Size (github.com_bmatcuk_doublestar_v4_@v_v4.7.1.zip) = 34830 bytes
+BLAKE2s (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.mod) = e205ae79e7a61aeb6dfbab69a666bb662eb0af2302ed12a6bada3fc11bda1b53
+SHA512 (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.mod) = 4a9d86964802ae0545c6d9125387aa04a59f190f85d13719158a4aea07f9bb9b0e05cbe23101fb8a3c5b90e78488a671e2d274740e0db08a852f2dfeff3a8eec
+Size (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.mod) = 49 bytes
+BLAKE2s (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.zip) = a5cbd7a02d9fb02d8abea848047342894619975f48a5050d3f88463f9bd00a8d
+SHA512 (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.zip) = 0d0b4ab0b5e51ab3aa9a2c89dbec0021b9f640b749ed8ffb8072de358688ba9f46d1fa016d6fa934be355e9ba130736694fa3f60d42132cf389c71353f8ea864
+Size (github.com_bmatcuk_doublestar_v4_@v_v4.8.1.zip) = 35337 bytes
 BLAKE2s (github.com_disintegration_imaging_@v_v1.6.2.mod) = 6eb5e1045f5eadfaacb613b9b574e741de68e71cf329ba5e28de283fa2f6402c
 SHA512 (github.com_disintegration_imaging_@v_v1.6.2.mod) = 68ffa1636c92bcaf09bf5e22ca6929837a0c01f60f294282b3136c578287263d93af997e47efc1e2d03653c91b1da1cfbd11f1259a6f3764b9e6f1755c8ce477
 Size (github.com_disintegration_imaging_@v_v1.6.2.mod) = 104 bytes
@@ -189,9 +189,9 @@ Size (howett.net_plist_@v_v1.0.1.mod) = 218 bytes
 BLAKE2s (howett.net_plist_@v_v1.0.1.zip) = 43dd213cd6f655b89cb6074acf972bc2e134c71fb991af59c14ebaf6747c2545
 SHA512 (howett.net_plist_@v_v1.0.1.zip) = 4f8b07bebf808ff4bbc1b2fdcf501d60731e26e048c1e7e2f21cfb9816fab8937e9f1915b44ff693a6a5b0f91cff470f40c4d7a71d7728afe2d0a3bca99432cd
 Size (howett.net_plist_@v_v1.0.1.zip) = 72046 bytes
-BLAKE2s (kitty-0.39.0.tar.xz) = b75737067c8d38fd3d41ef38e64664d4ffd362347050feb93b108059cb8646bd
-SHA512 (kitty-0.39.0.tar.xz) = 765f1c4bd6aa8fe751c4e0d4a44b924858ed1eb97b37beaa60e5a90b16df353e9b7db32990aa93bc960e8f01ae3de88381fe4cbc1a4dc69c0bdf655077fdf3ab
-Size (kitty-0.39.0.tar.xz) = 8938592 bytes
+BLAKE2s (kitty-0.39.1.tar.xz) = 6be51689cf2e69a5f0466c09808a36b8cd1b251e1f9861f6aeb8b867052748f6
+SHA512 (kitty-0.39.1.tar.xz) = 50d8e083e63fb5ccee5d6a4d7a3d07e775fe609307ad724527cd50ab33a7023d4e6694dd08ce322e643806fdcf92c0e990f14212ad168dbf4f39b8a666634000
+Size (kitty-0.39.1.tar.xz) = 8942308 bytes
 SHA1 (patch-glfw_wl__client__side__decorations.c) = 37c5ff491d8c9690d6e0291edb6c55388101edf0
 SHA1 (patch-glfw_wl__init.c) = 3dc143fba1a5fa5c15563aecc027cd6af872a0e0
 SHA1 (patch-kitty_binary.h) = e8e6e9b16a1bd7d0304bca919ad10dd932142da5
