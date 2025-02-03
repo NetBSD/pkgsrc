@@ -1,11 +1,11 @@
-# $NetBSD: go-modules.mk,v 1.7 2025/01/16 15:43:03 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.8 2025/02/03 14:32:47 ktnb Exp $
 
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.mod
 GO_MODULE_FILES+=	github.com/!a!l!tree/bigfloat/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.15.0.mod
 GO_MODULE_FILES+=	github.com/alecthomas/chroma/v2/@v/v2.15.0.zip
-GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.7.1.mod
-GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.7.1.zip
+GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.8.1.mod
+GO_MODULE_FILES+=	github.com/bmatcuk/doublestar/v4/@v/v4.8.1.zip
 GO_MODULE_FILES+=	github.com/disintegration/imaging/@v/v1.6.2.mod
 GO_MODULE_FILES+=	github.com/disintegration/imaging/@v/v1.6.2.zip
 GO_MODULE_FILES+=	github.com/dlclark/regexp2/@v/v1.11.4.mod
