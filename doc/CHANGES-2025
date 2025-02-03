@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1036 2025/02/03 14:33:17 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1037 2025/02/03 16:53:15 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-evaluate to 1.0.3 [mef 2025-02-03]
 	Updated x11/kitty to 0.39.1 [ktnb 2025-02-03]
 	Updated devel/R-pak to 0.8.0.1 [mef 2025-02-03]
+	Updated textproc/ruby-nokogiri to 1.18.2 [tsutsui 2025-02-03]
