@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1034 2025/02/03 13:48:17 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1035 2025/02/03 14:33:08 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-Rcpp to 1.0.14 [mef 2025-02-03]
 	Updated devel/R-bit64 to 4.6.0.1 [mef 2025-02-03]
 	Updated devel/R-evaluate to 1.0.3 [mef 2025-02-03]
+	Updated x11/kitty to 0.39.1 [ktnb 2025-02-03]
