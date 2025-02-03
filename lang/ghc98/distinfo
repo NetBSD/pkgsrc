@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.17 2025/01/28 13:04:07 jperkin Exp $
+$NetBSD: distinfo,v 1.18 2025/02/03 16:25:01 jperkin Exp $
 
-BLAKE2s (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = ac74fdc6f8a5d4a75bda0c6501902c2c160d3780b41b739129b5a36773c295cd
-SHA512 (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = e086a40eb6b655fcb22744a32247ab596adf649179681d6203514d66cbc0989e6b59430de5f02e18419b27584e2dbac5a418fb40f66bcdc76e8776d1e315a332
-Size (ghc-9.4.7-boot-hadrian-ghc9.8.tar.gz) = 1527081 bytes
-BLAKE2s (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 82abea5431d6d106c7eb4388c196594a050446f8164aecd5c76e263a96114a03
-SHA512 (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = c6dd73fce67dd8a4933a7f31318af662bc3fd873e3d96fa6aa2e0c72282c554cc2e13abdecc29919231c3cf346d878f5f738bb72f2db53d63dd79bf07a1e2d91
-Size (ghc-9.4.7-boot-x86_64-unknown-solaris2.tar.xz) = 128747936 bytes
 BLAKE2s (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = 45867db56f03b0c25a13f034dd3eca3a91cc1b031790e457a55f599b023827ba
 SHA512 (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = c9b8717b0e37fd7c0fcff4f3dac603673fabe235bc8257cc24200ca926b7d2a226f656b8ffd13c1e6c0260f73a162d81b19a4f866b7c34d1ea54cdddef3aa406
 Size (ghc-9.8.2-boot-aarch64-apple-darwin.tar.xz) = 119596964 bytes
@@ -27,6 +21,9 @@ Size (ghc-9.8.2-boot-x86_64-unknown-freebsd.tar.xz) = 82557688 bytes
 BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = cf656c857a5e6ea72a28291bb54f6f8178a49fb78d34e765f6615103a52485ed
 SHA512 (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = 18ac3925870d97017d6cc53a791798ae54ecc9b1281184ccdb75fae5dc138da3f024eaedb14355a5c31777a3a1bc339e0bfb53a390cb78a3bc9dcfd7df261270
 Size (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = 78498024 bytes
+BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = fb717a4654824bdbdfb91b90d2c874c75984707b4c058b76f9dcbffb5c89160c
+SHA512 (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 82ea973cf4917378cb27315cd0ece4ec3a4c3b4169e51902d13b118d19e4d188fbf86e522083199be26185694c06bdb8d1a719536b951ed8020baeb62b59eedf
+Size (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 123328852 bytes
 BLAKE2s (ghc-9.8.2-src.tar.xz) = 4d903dc828e46d12ad4dc8be912e2996666351ecf8b7a5e1c85790f1fb7eaa5a
 SHA512 (ghc-9.8.2-src.tar.xz) = 9b677d5ead5ebb5df7bc960055a76ef00e68ed8102844997b12154bf71bdbfafdfff9ca31edce86b3df759242a7c98f52a464887973b53985f54ecd9fc4b4627
 Size (ghc-9.8.2-src.tar.xz) = 32432564 bytes
