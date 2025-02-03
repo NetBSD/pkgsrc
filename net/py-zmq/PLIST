@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.22 2024/08/06 11:54:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/02/03 08:29:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.md
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/licenses/LICENSE.tornado.txt
 ${PYSITELIB}/zmq/__init__.pxd
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -10,6 +11,7 @@ ${PYSITELIB}/zmq/__init__.pyi
 ${PYSITELIB}/zmq/__init__.pyo
 ${PYSITELIB}/zmq/_future.py
 ${PYSITELIB}/zmq/_future.pyc
+${PYSITELIB}/zmq/_future.pyi
 ${PYSITELIB}/zmq/_future.pyo
 ${PYSITELIB}/zmq/_typing.py
 ${PYSITELIB}/zmq/_typing.pyc
