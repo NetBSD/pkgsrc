@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1038 2025/02/03 17:01:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1039 2025/02/03 18:31:12 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1336,3 +1336,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-nokogiri to 1.18.2 [tsutsui 2025-02-03]
 	Updated devel/capnproto to 1.1.0 [adam 2025-02-03]
 	Updated devel/py-factory_boy to 3.3.3 [adam 2025-02-03]
+	Updated games/naev to 0.12.3 [ktnb 2025-02-03]
