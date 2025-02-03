@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/08/13 00:59:43 wen Exp $
+$NetBSD: distinfo,v 1.18 2025/02/03 01:38:09 wen Exp $
 
-BLAKE2s (Rose-HTML-Objects-0.626.tar.gz) = 4813b694504521741758498c51c4b547a857a7e1e37281290f45809dc415e87b
-SHA512 (Rose-HTML-Objects-0.626.tar.gz) = abd72323eb96953af53533db509260c8c3714c094ac52334fd26a6eec1037d39fbbc8b1028b3af67707bcf6a92382cf5fb32cc1efd4a991e1aa35e925011cffa
-Size (Rose-HTML-Objects-0.626.tar.gz) = 210599 bytes
+BLAKE2s (Rose-HTML-Objects-0.627.tar.gz) = 92902e184e87234dc14f2c33c196d5ed8e852233a82b7f1c57875fa3b3b21a81
+SHA512 (Rose-HTML-Objects-0.627.tar.gz) = e5f6eccfbd98f73883ffd631ecd9a0d4f1bdca6d843869edc8f6010f6af4636f300afe7a73fe4f5a72fef0c28000dfe1432762e2b9349e4b25a1b1a95dc49dbc
+Size (Rose-HTML-Objects-0.627.tar.gz) = 210656 bytes
