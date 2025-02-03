@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1027 2025/02/03 08:31:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1028 2025/02/03 08:43:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1322,3 +1322,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libX11 to 1.8.11 [wiz 2025-02-03]
 	Updated net/py-zmq to 26.2.1 [adam 2025-02-03]
 	Updated devel/py-test-plus to 0.8.1 [adam 2025-02-03]
+	Updated net/py-python-socks to 2.7.1 [adam 2025-02-03]
+	Updated www/py-pylsqpack to 0.3.19 [adam 2025-02-03]
