@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25398 2025/02/03 08:31:47 adam Exp $
+$NetBSD: TODO,v 1.25399 2025/02/03 13:12:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1401,7 +1401,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yahttp-0.2.1
 	o yarn-3.2.4
 	o yaz-5.30.3
-	o yed-3.17.1
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
