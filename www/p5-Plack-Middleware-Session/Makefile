@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2024/11/16 12:07:57 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/03 01:26:00 wen Exp $
 
-DISTNAME=	Plack-Middleware-Session-0.33
+DISTNAME=	Plack-Middleware-Session-0.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
 
@@ -18,6 +17,7 @@ PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 DEPENDS+=	p5-Plack>=0.9910:../../www/p5-Plack
 DEPENDS+=	p5-Cookie-Baker>=0:../../www/p5-Cookie-Baker
+DEPENDS+=	p5-Digest-HMAC>=0:../../security/p5-Digest-HMAC
 
 TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
