@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1030 2025/02/03 12:37:07 sborrill Exp $
+$NetBSD: CHANGES-2025,v 1.1031 2025/02/03 13:12:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1327,3 +1327,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-rapidfuzz to 3.12.1 [adam 2025-02-03]
 	Updated devel/py-mando to 0.8.2 [adam 2025-02-03]
 	Updated www/squid6 to 6.13 [sborrill 2025-02-03]
+	Added editors/yed version 3.25 [wiz 2025-02-03]
