@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/01/12 15:50:11 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/03 18:30:52 ktnb Exp $
 bin/naev
 man/man6/naev.6
 share/applications/org.naev.Naev.desktop
@@ -6242,8 +6242,6 @@ share/naev/dat/naevpedia/outfits/bulky_abdomen.md
 share/naev/dat/naevpedia/outfits/camouflage_burster.md
 share/naev/dat/naevpedia/outfits/cargo_sacs.md
 share/naev/dat/naevpedia/outfits/catalytic_energy_drill.md
-share/naev/dat/naevpedia/outfits/cheaters_laser_cannon.md
-share/naev/dat/naevpedia/outfits/cheaters_ragnarok_beam.md
 share/naev/dat/naevpedia/outfits/cleansing_flames.md
 share/naev/dat/naevpedia/outfits/cloaking_device.md
 share/naev/dat/naevpedia/outfits/combat_hologram_projector.md
@@ -6290,6 +6288,8 @@ share/naev/dat/naevpedia/outfits/feral_rage_i.md
 share/naev/dat/naevpedia/outfits/feral_rage_ii.md
 share/naev/dat/naevpedia/outfits/feral_rage_iii.md
 share/naev/dat/naevpedia/outfits/flicker_drive.md
+share/naev/dat/naevpedia/outfits/four_winds_laser_cannon.md
+share/naev/dat/naevpedia/outfits/four_winds_ragnarok_beam.md
 share/naev/dat/naevpedia/outfits/fuel_bladder.md
 share/naev/dat/naevpedia/outfits/fuel_recycler.md
 share/naev/dat/naevpedia/outfits/fuzzy_dice.md
@@ -7103,8 +7103,8 @@ share/naev/dat/outfits/pointdefense/ratchet_point_defense.xml
 share/naev/dat/outfits/pointdefense/spittle_tubuloid_cluster.xml
 share/naev/dat/outfits/special/base_ripper_mk2.xml
 share/naev/dat/outfits/special/bikers_fury_launcher.xml
-share/naev/dat/outfits/special/cheaters_laser_cannon.xml
-share/naev/dat/outfits/special/cheaters_ragnarok_beam.xml
+share/naev/dat/outfits/special/four_winds_laser_cannon.xml
+share/naev/dat/outfits/special/four_winds_ragnarok_beam.xml
 share/naev/dat/outfits/structure/active_plating.xml
 share/naev/dat/outfits/structure/adaptive_stealth_plating.xml
 share/naev/dat/outfits/structure/auxiliary_processing_unit_i.xml
