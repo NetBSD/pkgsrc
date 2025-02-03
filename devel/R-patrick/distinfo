@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/18 02:33:53 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/02/03 21:48:19 mef Exp $
 
-BLAKE2s (R/patrick_0.2.0.tar.gz) = 14365d78706053ec2e28f0e27e016bd3fef1f85662a537db52fe5c416984472e
-SHA512 (R/patrick_0.2.0.tar.gz) = dab3faa2a6f68a74e30819100b32b405784784a1d65363bd0ec6a3a57185af11127c0340847d8086524762e063c7bcb6fc0b5a41ffda279c5b585d209fc9e843
-Size (R/patrick_0.2.0.tar.gz) = 7609 bytes
+BLAKE2s (R/patrick_0.3.0.tar.gz) = fa077f39b72fb727979025e11c034e2454f6340de14e57903ebe675c24da6966
+SHA512 (R/patrick_0.3.0.tar.gz) = 72e76b8f45dc56c81b6b8fd3b9764cfedfd974539104301b480237546ed5477c5409b284bfa1798047acf97551ea4438cac6c7663b6d7dc8eacc658141dd8965
+Size (R/patrick_0.3.0.tar.gz) = 8610 bytes
