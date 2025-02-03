@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2025/02/03 16:09:09 pho Exp $
+$NetBSD: distinfo,v 1.6 2025/02/03 16:47:59 jperkin Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -24,9 +24,9 @@ Size (ghc-9.8.2-boot-x86_64-unknown-freebsd.tar.xz) = 82557688 bytes
 BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = cf656c857a5e6ea72a28291bb54f6f8178a49fb78d34e765f6615103a52485ed
 SHA512 (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = 18ac3925870d97017d6cc53a791798ae54ecc9b1281184ccdb75fae5dc138da3f024eaedb14355a5c31777a3a1bc339e0bfb53a390cb78a3bc9dcfd7df261270
 Size (ghc-9.8.2-boot-x86_64-unknown-netbsd.tar.xz) = 78498024 bytes
-BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 819787068e68d3b31cc78ab9147f72816228ab8f9c1a19d97fc15ca133e72ec6
-SHA512 (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 09bd263b97ee027cebc6cc31c30dd1a518726823bbed798451feea33da584a7e6dac7ea385681254b1706d885bd6ee7ed3b2c5c005d769292eff62d9a004d714
-Size (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 102072500 bytes
+BLAKE2s (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = fb717a4654824bdbdfb91b90d2c874c75984707b4c058b76f9dcbffb5c89160c
+SHA512 (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 82ea973cf4917378cb27315cd0ece4ec3a4c3b4169e51902d13b118d19e4d188fbf86e522083199be26185694c06bdb8d1a719536b951ed8020baeb62b59eedf
+Size (ghc-9.8.2-boot-x86_64-unknown-solaris2.tar.xz) = 123328852 bytes
 SHA1 (patch-compiler_GHC_SysTools_Process.hs) = 0448318ec3426bb070176c2e36f82af239aa58fa
 SHA1 (patch-compiler_ghc.cabal.in) = 70e9385d85f5538da944901457be383991ce586b
 SHA1 (patch-configure.ac) = 985482ae70830ddbf1334c9c82a2cec78a34bb4c
