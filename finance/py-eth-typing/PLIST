@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/19 04:36:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/04 13:44:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -22,9 +22,6 @@ ${PYSITELIB}/eth_typing/encoding.pyo
 ${PYSITELIB}/eth_typing/enums.py
 ${PYSITELIB}/eth_typing/enums.pyc
 ${PYSITELIB}/eth_typing/enums.pyo
-${PYSITELIB}/eth_typing/ethpm.py
-${PYSITELIB}/eth_typing/ethpm.pyc
-${PYSITELIB}/eth_typing/ethpm.pyo
 ${PYSITELIB}/eth_typing/evm.py
 ${PYSITELIB}/eth_typing/evm.pyc
 ${PYSITELIB}/eth_typing/evm.pyo

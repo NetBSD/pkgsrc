@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/05/23 11:49:19 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/02/04 13:44:40 adam Exp $
 
-BLAKE2s (eth_typing-4.2.3.tar.gz) = 53f997b3281bcec184f90cec183dff4f8cbfadc179228dec4e1eba829898351f
-SHA512 (eth_typing-4.2.3.tar.gz) = 4677998bb9b66b2362dc84ef9e7a71631c5c482a7114cc09febf2b009d7d64a41f156f28ae83d71aa07fef9dcf33fbb2bdebc9ed643dffc20b30d7f16d923907
-Size (eth_typing-4.2.3.tar.gz) = 21840 bytes
+BLAKE2s (eth_typing-5.1.0.tar.gz) = 55271f22689c9dfc3cdc85533cb101bd6c4487cc3e4efee0b2ae7b3a0e5e4d6f
+SHA512 (eth_typing-5.1.0.tar.gz) = b84377b89200e9873c24b11b84178ce9edc8be6e4b0badf982f02795a4e9c798ca37a15b6244f387aa68b60bd688b017f1619e3e891afa76e7b91c45c943ca15
+Size (eth_typing-5.1.0.tar.gz) = 21727 bytes
