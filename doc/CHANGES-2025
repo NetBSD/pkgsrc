@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1065 2025/02/04 16:13:19 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.1066 2025/02/04 16:15:42 bacon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1378,3 +1378,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-hy to 1.0.0 [adam 2025-02-04]
 	Updated textproc/py-json5 to 0.10.0 [adam 2025-02-04]
 	Updated sysutils/auto-admin to 0.8.1 [bacon 2025-02-04]
+	Updated sysutils/desktop-installer to 1.1.0 [bacon 2025-02-04]
