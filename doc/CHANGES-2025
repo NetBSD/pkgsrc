@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1070 2025/02/04 20:29:40 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.1071 2025/02/04 22:21:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1389,3 +1389,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128 to 128.7.0 [bsiegert 2025-02-04]
 	Updated www/firefox115-l10n to 115.20.0 [bsiegert 2025-02-04]
 	Updated www/firefox115 to 115.20.0 [bsiegert 2025-02-04]
+	Updated x11/py-sip-qt5 to 12.17.0 [adam 2025-02-04]
+	Updated x11/py-sip-qt6 to 13.10.0 [adam 2025-02-04]
+	Updated lang/python312 to 3.12.9 [adam 2025-02-04]
+	Updated lang/py312-html-docs to 3.12.9 [adam 2025-02-04]
+	Updated lang/python313 to 3.13.2 [adam 2025-02-04]
+	Updated lang/py313-html-docs to 3.13.2 [adam 2025-02-04]
