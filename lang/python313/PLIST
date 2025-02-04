@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/12/05 07:54:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/04 22:21:19 adam Exp $
 bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -291,6 +291,9 @@ lib/python${PY_VER_SUFFIX}/_aix_support.pyo
 lib/python${PY_VER_SUFFIX}/_android_support.py
 lib/python${PY_VER_SUFFIX}/_android_support.pyc
 lib/python${PY_VER_SUFFIX}/_android_support.pyo
+lib/python${PY_VER_SUFFIX}/_apple_support.py
+lib/python${PY_VER_SUFFIX}/_apple_support.pyc
+lib/python${PY_VER_SUFFIX}/_apple_support.pyo
 lib/python${PY_VER_SUFFIX}/_collections_abc.py
 lib/python${PY_VER_SUFFIX}/_collections_abc.pyc
 lib/python${PY_VER_SUFFIX}/_collections_abc.pyo
@@ -2758,6 +2761,9 @@ lib/python${PY_VER_SUFFIX}/test/test_abstract_numbers.pyo
 lib/python${PY_VER_SUFFIX}/test/test_android.py
 lib/python${PY_VER_SUFFIX}/test/test_android.pyc
 lib/python${PY_VER_SUFFIX}/test/test_android.pyo
+lib/python${PY_VER_SUFFIX}/test/test_apple.py
+lib/python${PY_VER_SUFFIX}/test/test_apple.pyc
+lib/python${PY_VER_SUFFIX}/test/test_apple.pyo
 lib/python${PY_VER_SUFFIX}/test/test_argparse.py
 lib/python${PY_VER_SUFFIX}/test/test_argparse.pyc
 lib/python${PY_VER_SUFFIX}/test/test_argparse.pyo
@@ -2983,12 +2989,18 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_complex.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_dict.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_dict.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_eval_code_ex.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_exceptions.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_exceptions.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_exceptions.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_file.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_file.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_file.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_float.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_float.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_float.pyo
@@ -3001,6 +3013,9 @@ lib/python${PY_VER_SUFFIX}/test/test_capi/test_hash.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_immortal.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_immortal.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_immortal.pyo
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_import.py
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_import.pyc
+lib/python${PY_VER_SUFFIX}/test/test_capi/test_import.pyo
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_list.py
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_list.pyc
 lib/python${PY_VER_SUFFIX}/test/test_capi/test_list.pyo
@@ -5504,6 +5519,9 @@ lib/python${PY_VER_SUFFIX}/test/test_wsgiref.pyo
 lib/python${PY_VER_SUFFIX}/test/test_xml_dom_minicompat.py
 lib/python${PY_VER_SUFFIX}/test/test_xml_dom_minicompat.pyc
 lib/python${PY_VER_SUFFIX}/test/test_xml_dom_minicompat.pyo
+lib/python${PY_VER_SUFFIX}/test/test_xml_dom_xmlbuilder.py
+lib/python${PY_VER_SUFFIX}/test/test_xml_dom_xmlbuilder.pyc
+lib/python${PY_VER_SUFFIX}/test/test_xml_dom_xmlbuilder.pyo
 lib/python${PY_VER_SUFFIX}/test/test_xml_etree.py
 lib/python${PY_VER_SUFFIX}/test/test_xml_etree.pyc
 lib/python${PY_VER_SUFFIX}/test/test_xml_etree.pyo
