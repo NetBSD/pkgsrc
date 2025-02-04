@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1048 2025/02/04 02:27:38 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1049 2025/02/04 06:36:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1345,3 +1345,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/easy-rsa to 3.2.2 [gdt 2025-02-04]
 	Added sysutils/opensbi-hifive-unleashed to 1.4 [gutteridge 2025-02-04]
 	Added sysutils/u-boot-hifive-unleashed to 2024.04 [gutteridge 2025-02-04]
+	Updated devel/py-bitarray to 3.0.0 [adam 2025-02-04]
+	Updated devel/py-bitstring to 4.3.0 [adam 2025-02-04]
