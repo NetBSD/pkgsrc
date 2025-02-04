@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2024/12/24 10:13:40 wiz Exp $
+$NetBSD: distinfo,v 1.13 2025/02/04 22:11:15 adam Exp $
 
-BLAKE2s (Python-3.12.8.tar.xz) = 06c1062a5c7be61147a56e2fca507c0aa1664d0f73497fe69fbaaf4a232f40c8
-SHA512 (Python-3.12.8.tar.xz) = 406ce1146c4c2c70d252df56bbe9e5970ef469395cbaa211a96af71f32de2cf7abd944906920cc18b4a470027e63a3f64bf7679fb4954b31bf4ca4baf24fa370
-Size (Python-3.12.8.tar.xz) = 20489808 bytes
+BLAKE2s (Python-3.12.9.tar.xz) = 2b7dc7efb289b24b19fcbe8a9d95c0ca755f6318603f41dadd30568f9ff28b11
+SHA512 (Python-3.12.9.tar.xz) = c840b14aa21e6a963d18c06ebaafb551d9c9a101b3866417e762fc4a2fde071a7a25fa257faba2956c7344bbc2413ed61690a712d26fba4d0dbeaa50e49b2574
+Size (Python-3.12.9.tar.xz) = 20502440 bytes
 SHA1 (patch-Lib_ctypes_util.py) = 3dec1b6b7a36e46cbfa0dfcd71c5e7fac9f60764
 SHA1 (patch-Lib_lib2to3_pgen2_driver.py) = 593c4e93c5653ab400f0a98b91db92630c0a7390
 SHA1 (patch-Lib_sysconfig.py) = bc6d91bf8f7121456b26ea7f080f588c96f2596f
