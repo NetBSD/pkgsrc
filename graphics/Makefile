@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1066 2025/01/30 23:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.1067 2025/02/04 11:22:58 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -347,6 +347,7 @@ SUBDIR+=	libimagequant
 SUBDIR+=	libimagequant-c
 SUBDIR+=	libiptcdata
 SUBDIR+=	libjpeg-turbo
+SUBDIR+=	libjxl
 SUBDIR+=	libkdcraw
 SUBDIR+=	libkexiv2
 SUBDIR+=	libkipi
