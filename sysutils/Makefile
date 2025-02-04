@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1146 2025/01/29 16:28:22 pho Exp $
+# $NetBSD: Makefile,v 1.1147 2025/02/04 02:19:41 gutteridge Exp $
 #
 
 COMMENT=	System utilities
@@ -513,6 +513,7 @@ SUBDIR+=	onefetch
 SUBDIR+=	open-vm-tools
 SUBDIR+=	openipmi
 #SUBDIR+=	opensbi		# Contains .mk files intended for other packages
+SUBDIR+=	opensbi-hifive-unleashed
 SUBDIR+=	opensbi-sun20i-d1
 SUBDIR+=	opensbi-visionfive2
 SUBDIR+=	openstack_init
