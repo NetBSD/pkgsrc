@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2025/01/21 09:34:07 adam Exp $
+$NetBSD: distinfo,v 1.16 2025/02/04 18:32:59 adam Exp $
 
-BLAKE2s (asdf-4.0.0.tar.gz) = 4e7dfb1057426f782b81ebb79e46847a34c7e1491d9da2ecfb0d4cd2e3d4d5cb
-SHA512 (asdf-4.0.0.tar.gz) = aacc679b6884ad04af41332ce776adebbbdfc33667d7f3c2af9713e3b441e1f768ccb5626edb04349c5cd9ae5d9fc1a11ba336d7a76eec8c5e9573632593198b
-Size (asdf-4.0.0.tar.gz) = 799285 bytes
+BLAKE2s (asdf-4.1.0.tar.gz) = b8c21c5bf78bfde6544169a96033c77470500955bde9e6d85c4c723dd9da3d42
+SHA512 (asdf-4.1.0.tar.gz) = f7e3ca9be158a854112c811bb63a92a9ec69d036ae40973ce613df1552596e2dd71e943e8b0d2e996e72350437cae72048354e5ff682437fc243727ae9330c6f
+Size (asdf-4.1.0.tar.gz) = 905128 bytes
