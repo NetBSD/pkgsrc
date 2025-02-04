@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1053 2025/02/04 08:52:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1054 2025/02/04 08:57:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1356,3 +1356,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/dinit to 0.19.3nb2 [imil 2025-02-04]
 	Updated textproc/py-xml2rfc to 3.26.0 [adam 2025-02-04]
 	Updated x11/py-qt-builder to 1.18.0 [adam 2025-02-04]
+	Updated x11/libqtxdg to 4.1.0nb1 [wiz 2025-02-04]
