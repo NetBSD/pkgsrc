@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/04 02:16:46 gutteridge Exp $
+share/opensbi/hifive-unleashed/fw_dynamic.bin
