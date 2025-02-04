@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2023/10/21 20:45:02 bacon Exp $
+$NetBSD: distinfo,v 1.20 2025/02/04 16:13:13 bacon Exp $
 
-BLAKE2s (auto-admin-0.8.0.tar.gz) = be37cb3de6be12555255eef29051152c6f95dbab3d393496fccbd55044011210
-SHA512 (auto-admin-0.8.0.tar.gz) = 75dd912331ea5f64a916ec95fab26f62e673e6075b02813aceef1b574c43bc9a464394a15674f6f899be79cff52ed2667c5ec20739a5edf7fd87a117c926e185
-Size (auto-admin-0.8.0.tar.gz) = 135404 bytes
+BLAKE2s (auto-admin-0.8.1.tar.gz) = 094264f01288364a07ca370e6150089d7c5ae0b73261bb48a61266549e226bdd
+SHA512 (auto-admin-0.8.1.tar.gz) = a8612fc0f01d0dd2c398cc3b146f889e0f6718b106ea9acea9155b7bc280a9d250346c84b395508b272d37e44dde23b9bad2848f8a94af5257cdb3c5f33caa67
+Size (auto-admin-0.8.1.tar.gz) = 142316 bytes
