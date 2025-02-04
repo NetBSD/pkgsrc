@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/08/07 14:25:58 bacon Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/04 16:15:37 bacon Exp $
 
-DISTNAME=	desktop-installer-1.0.0
+DISTNAME=	desktop-installer-1.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
 COMMENT=	Quickly configure a NetBSD desktop system
 LICENSE=	2-clause-bsd
 
-# Script is NetBSD-specific in many ways
+# Desktop setup is NetBSD-specific in many ways
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 SUBST_CLASSES+=	tk
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 
 CHECK_INTERPRETER_SKIP+=	share/desktop-installer/XDM/xdmshutdown
 
-DEPENDS=	auto-admin>=0.8.0:../../sysutils/auto-admin
+DEPENDS=	auto-admin>=0.8.1:../../sysutils/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
