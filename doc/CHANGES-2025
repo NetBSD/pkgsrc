@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1060 2025/02/04 11:40:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1061 2025/02/04 12:17:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1367,3 +1367,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added graphics/vv version 3.1 [wiz 2025-02-04]
 	Updated sysutils/py-loguru to 0.7.3 [adam 2025-02-04]
 	Updated devel/py-orderly-set to 5.3.0 [adam 2025-02-04]
+	Updated net/py-mitmproxy_rs to 0.11.4 [adam 2025-02-04]
+	Updated graphics/py-dot to 3.0.4 [adam 2025-02-04]
