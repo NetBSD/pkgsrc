@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/08/25 06:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/04 09:33:35 adam Exp $
 
-DISTNAME=	rabbitmq-c-0.14.0
+DISTNAME=	rabbitmq-c-0.15.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alanxz/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,13 +13,12 @@ LICENSE=	mit
 TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 USE_CC_FEATURES=	c99
-
-USE_LANGUAGES=	c
-USE_TOOLS+=	pkg-config
+USE_LANGUAGES=		c
+USE_TOOLS+=		pkg-config
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS=ON
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TOOLS_DOCS=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_SSL_SUPPORT=ON
-TEST_TARGET=	test
+TEST_TARGET=		test
 
 .include "../../devel/cmake/build.mk"
 .include "../../devel/popt/buildlink3.mk"
