@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/08/31 08:43:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/04 12:10:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -11,6 +11,9 @@ ${PYSITELIB}/mitmproxy_rs/__init__.pyo
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.py
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.pyc
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/__init__.pyo
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_linux.py
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_linux.pyc
+${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_linux.pyo
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.py
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.pyc
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_macos.pyo
@@ -20,5 +23,12 @@ ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_rs.pyo
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.py
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyc
 ${PYSITELIB}/mitmproxy_rs/_pyinstaller/hook-mitmproxy_windows.pyo
+${PYSITELIB}/mitmproxy_rs/certs.pyi
+${PYSITELIB}/mitmproxy_rs/dns.pyi
+${PYSITELIB}/mitmproxy_rs/local.pyi
 ${PYSITELIB}/mitmproxy_rs/mitmproxy_rs.abi3.so
+${PYSITELIB}/mitmproxy_rs/process_info.pyi
 ${PYSITELIB}/mitmproxy_rs/py.typed
+${PYSITELIB}/mitmproxy_rs/tun.pyi
+${PYSITELIB}/mitmproxy_rs/udp.pyi
+${PYSITELIB}/mitmproxy_rs/wireguard.pyi

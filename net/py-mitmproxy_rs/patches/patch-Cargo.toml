@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.1 2025/02/04 12:10:02 adam Exp $
+
+Use vendored boringtun crate.
+
+--- Cargo.toml.orig	2025-02-04 11:53:12.800055939 +0000
++++ Cargo.toml
+@@ -62,7 +62,7 @@ socket2 = "0.5.8"
+ 
+ [patch.crates-io]
+ # tokio = { path = "../tokio/tokio" }
+-boringtun = { git = 'https://github.com/cloudflare/boringtun', rev = 'e3252d9c4f4c8fc628995330f45369effd4660a1' }
++boringtun = { path = "../boringtun-e3252d9c4f4c8fc628995330f45369effd4660a1/boringtun" }
+ 
+ [target.'cfg(windows)'.dependencies.windows]
+ version = "0.58.0"
