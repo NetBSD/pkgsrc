@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1066 2025/02/04 16:15:42 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.1067 2025/02/04 18:33:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1379,3 +1379,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-json5 to 0.10.0 [adam 2025-02-04]
 	Updated sysutils/auto-admin to 0.8.1 [bacon 2025-02-04]
 	Updated sysutils/desktop-installer to 1.1.0 [bacon 2025-02-04]
+	Updated devel/py-pbr to 6.1.1 [adam 2025-02-04]
+	Updated www/py-beautifulsoup4 to 4.13.2 [adam 2025-02-04]
+	Updated net/py-zeroconf to 0.143.0 [adam 2025-02-04]
+	Updated math/py-asdf to 4.1.0 [adam 2025-02-04]
