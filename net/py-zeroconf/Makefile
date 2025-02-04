@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2025/01/29 12:15:52 adam Exp $
+# $NetBSD: Makefile,v 1.50 2025/02/04 18:30:30 adam Exp $
 
-DISTNAME=	zeroconf-0.141.0
+DISTNAME=	zeroconf-0.143.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zeroconf/}
@@ -18,13 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.20.3:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-codspeed>=3.1.0:../../devel/py-test-codspeed
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.0.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
-
-USE_LANGUAGES=	c
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-async-timeout>=3.0.0:../../devel/py-async-timeout
-.endif
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
