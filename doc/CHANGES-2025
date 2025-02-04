@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1069 2025/02/04 19:20:16 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.1070 2025/02/04 20:29:40 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1387,3 +1387,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-FormEncode to 2.1.1 [adam 2025-02-04]
 	Updated www/firefox128-l10n to 128.7.0 [bsiegert 2025-02-04]
 	Updated www/firefox128 to 128.7.0 [bsiegert 2025-02-04]
+	Updated www/firefox115-l10n to 115.20.0 [bsiegert 2025-02-04]
+	Updated www/firefox115 to 115.20.0 [bsiegert 2025-02-04]
