@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/11/18 17:22:24 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/02/04 14:19:25 adam Exp $
 
-BLAKE2s (json5-0.9.28.tar.gz) = a8c70b146a746c9506e82a6dbe7aee9efd907a2636f71dd039457ced1f8414c8
-SHA512 (json5-0.9.28.tar.gz) = f9dd8bc14f33c92ebb8cae86f60915cb04880a037c03e8b3bc68d8bbec85e39d1add835bad3e417c1bd5215dd438f63fdb764e858438fdc86aed32cd64fba026
-Size (json5-0.9.28.tar.gz) = 41853 bytes
+BLAKE2s (json5-0.10.0.tar.gz) = 89ef850c528aa8b37da1f3eda2327dacdb6281124a3fbd679a7e0524402b9537
+SHA512 (json5-0.10.0.tar.gz) = 1c56def363c268aa256066c8e98b3a9bfba66a3756071bf6ff41929cdd98ccf5435f08103fbbc3b505abe81f39a14fa1ec50d4a984eebc52410cbb31f999b1b9
+Size (json5-0.10.0.tar.gz) = 48202 bytes
