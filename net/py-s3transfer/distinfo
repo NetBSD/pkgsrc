@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2024/11/26 07:55:05 adam Exp $
+$NetBSD: distinfo,v 1.23 2025/02/04 08:06:45 adam Exp $
 
-BLAKE2s (s3transfer-0.10.4.tar.gz) = b338459e71956da4981de1319712d8c6c62bec30507d567029cc3ba4736d0d0c
-SHA512 (s3transfer-0.10.4.tar.gz) = 671d95e9f507bdca8cf53b88cd28285f9c2ae1456fcb24ba4a61a75d30e8c8fa8b2a4faa8c8364114dc3e5c57f630d5b61575847b167e37b3de44b42c45f6a63
-Size (s3transfer-0.10.4.tar.gz) = 145287 bytes
+BLAKE2s (s3transfer-0.11.2.tar.gz) = 6adaf6eea6735a3e53e61eec28552ebe0996a8675f155774ac8a8f4dfb9f76c9
+SHA512 (s3transfer-0.11.2.tar.gz) = f118422878cfbbbc965ddecc6e93e49d194e68fce223ddf0bb7ff342ba48fa6fd0621cdc158e7e0bd1f35f22bafaed259e743304f4aac23bc58679e955dd9b40
+Size (s3transfer-0.11.2.tar.gz) = 147885 bytes
