@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/01/24 09:46:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/04 08:50:42 adam Exp $
 bin/xml2rfc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -69,6 +69,9 @@ ${PYSITELIB}/xml2rfc/uniscripts/__init__.pyo
 ${PYSITELIB}/xml2rfc/uniscripts/unidata.py
 ${PYSITELIB}/xml2rfc/uniscripts/unidata.pyc
 ${PYSITELIB}/xml2rfc/uniscripts/unidata.pyo
+${PYSITELIB}/xml2rfc/uniscripts/update/make_unidata.py
+${PYSITELIB}/xml2rfc/uniscripts/update/make_unidata.pyc
+${PYSITELIB}/xml2rfc/uniscripts/update/make_unidata.pyo
 ${PYSITELIB}/xml2rfc/util/__init__.py
 ${PYSITELIB}/xml2rfc/util/__init__.pyc
 ${PYSITELIB}/xml2rfc/util/__init__.pyo
@@ -102,6 +105,9 @@ ${PYSITELIB}/xml2rfc/writers/__init__.pyo
 ${PYSITELIB}/xml2rfc/writers/base.py
 ${PYSITELIB}/xml2rfc/writers/base.pyc
 ${PYSITELIB}/xml2rfc/writers/base.pyo
+${PYSITELIB}/xml2rfc/writers/bib.py
+${PYSITELIB}/xml2rfc/writers/bib.pyc
+${PYSITELIB}/xml2rfc/writers/bib.pyo
 ${PYSITELIB}/xml2rfc/writers/doc.py
 ${PYSITELIB}/xml2rfc/writers/doc.pyc
 ${PYSITELIB}/xml2rfc/writers/doc.pyo
