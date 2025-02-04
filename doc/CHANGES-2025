@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1054 2025/02/04 08:57:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1055 2025/02/04 09:33:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1357,3 +1357,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-xml2rfc to 3.26.0 [adam 2025-02-04]
 	Updated x11/py-qt-builder to 1.18.0 [adam 2025-02-04]
 	Updated x11/libqtxdg to 4.1.0nb1 [wiz 2025-02-04]
+	Updated textproc/ugrep to 7.2.2 [adam 2025-02-04]
+	Updated net/rabbitmq-c to 0.15.0 [adam 2025-02-04]
