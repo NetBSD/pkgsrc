@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1059 2025/02/04 11:26:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1060 2025/02/04 11:40:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1365,3 +1365,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-import-export to 4.3.5 [adam 2025-02-04]
 	Added graphics/libjxl version 0.11.1 [wiz 2025-02-04]
 	Added graphics/vv version 3.1 [wiz 2025-02-04]
+	Updated sysutils/py-loguru to 0.7.3 [adam 2025-02-04]
+	Updated devel/py-orderly-set to 5.3.0 [adam 2025-02-04]
