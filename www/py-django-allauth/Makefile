@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2024/11/11 07:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/04 10:18:11 adam Exp $
 
-DISTNAME=	django_allauth-0.63.6
+DISTNAME=	django_allauth-65.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-allauth/}
@@ -11,9 +11,12 @@ COMMENT=	Authentication, registration, account mgmt and 3rd party account auth
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-JWT>=1.7:../../textproc/py-JWT
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-asgiref>=3.8.1:../../www/py-asgiref
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2.16:../../www/py-django
+# openid
 DEPENDS+=	${PYPKGPREFIX}-openid>=3.0.8:../../security/py-openid
+# socialaccount
+DEPENDS+=	${PYPKGPREFIX}-JWT>=1.7:../../textproc/py-JWT
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.3.0:../../security/py-requests-oauthlib
 
