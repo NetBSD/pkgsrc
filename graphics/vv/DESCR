@@ -1,0 +1,8 @@
+vv - terminal image viewer
+
+With vv you can display image files directly in your terminal. This
+works both locally and over remote connections. An extensive range
+of modern image formats is supported. Image data is displayed in
+full color, without any color space reduction or dithering. Images
+are scaled to fit the available space in the terminal. Small images
+can be upscaled.
