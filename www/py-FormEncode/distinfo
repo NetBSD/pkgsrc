@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/02/02 13:13:09 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/04 18:56:16 adam Exp $
 
-BLAKE2s (FormEncode-2.1.0.tar.gz) = 7e92c7099ae479c2f8deedd7ed143d1f60ba5976e3e8565e0aecd4bba8bf5cea
-SHA512 (FormEncode-2.1.0.tar.gz) = 136253faaa299a6c5c92f70e11d53f410e1d7607b1c6530bd25042e8506e644409fcb0ff8ccd5fe7ed04707d4034fec224389681c8e4ff81af445b4dc67897a6
-Size (FormEncode-2.1.0.tar.gz) = 277757 bytes
+BLAKE2s (formencode-2.1.1.tar.gz) = ca041f408650a7c1e4b35d0d6504791aac79e8e58374400c7b7cd3b439cbf35d
+SHA512 (formencode-2.1.1.tar.gz) = 692623015f72104645f171cb830fdca49d43c8116d84738ae291a18ed727929b14856ef35790e1c46d3f25f3ad611b0c4cca35d331c0c01012b184e251e6c88b
+Size (formencode-2.1.1.tar.gz) = 277607 bytes
