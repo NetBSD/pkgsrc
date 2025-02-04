@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/01/21 09:34:07 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/04 18:32:59 adam Exp $
 
-DISTNAME=	asdf-4.0.0
+DISTNAME=	asdf-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/asdf/}
@@ -11,7 +11,7 @@ COMMENT=	Advanced Scientific Data Format
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=60:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-asdf-standard>=1.1.0:../../math/py-asdf-standard
 DEPENDS+=	${PYPKGPREFIX}-asdf-transform-schemas>=0.3:../../math/py-asdf-transform-schemas
 DEPENDS+=	${PYPKGPREFIX}-attrs>=22.2.0:../../devel/py-attrs
