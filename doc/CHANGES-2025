@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1063 2025/02/04 13:50:46 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1064 2025/02/04 14:19:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1375,3 +1375,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/py-eth-typing to 5.1.0 [adam 2025-02-04]
 	Updated finance/py-eth-utils to 5.2.0 [adam 2025-02-04]
 	Updated finance/py-eth-abi to 5.2.0 [adam 2025-02-04]
+	Updated lang/py-hy to 1.0.0 [adam 2025-02-04]
+	Updated textproc/py-json5 to 0.10.0 [adam 2025-02-04]
