@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1056 2025/02/04 09:44:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1057 2025/02/04 10:19:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1361,3 +1361,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rabbitmq-c to 0.15.0 [adam 2025-02-04]
 	Updated math/py-xarray to 2025.1.2 [adam 2025-02-04]
 	Updated textproc/py-prettytable to 3.14.0 [adam 2025-02-04]
+	Updated www/py-django-allauth to 65.3.1 [adam 2025-02-04]
+	Updated www/py-django-import-export to 4.3.5 [adam 2025-02-04]
