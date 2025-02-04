@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/01/06 10:26:41 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/04 11:40:06 adam Exp $
 
-DISTNAME=	orderly_set-5.2.3
+DISTNAME=	orderly_set-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orderly-set/}
