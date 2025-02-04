@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/01/02 14:24:54 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/02/04 13:15:38 adam Exp $
 
-BLAKE2s (flask_limiter-3.9.2.tar.gz) = cb8246af9cece1b3f6293abfbc3f14f7b69180fb8102e00a73ba33b08b4caeba
-SHA512 (flask_limiter-3.9.2.tar.gz) = 4ce78ef23adb072e22d981efb61de5714f9c7ab4530050a010ade7b9f50c430f4bbef26f5efe6ea22fab0538d7d9e981178acb08a20a3d77eaee2727003a0ed3
-Size (flask_limiter-3.9.2.tar.gz) = 301929 bytes
+BLAKE2s (flask_limiter-3.10.1.tar.gz) = a9766b17a5c2ddc4a254324fc1ce17233a053aa18d2297c0880fb9d60ba71b0f
+SHA512 (flask_limiter-3.10.1.tar.gz) = cdadec9ee5fe3bc9c92bdb6ab0e6f49f66926fd0227151e7274ff1e722ce0498a9772c435425992c9e839b4909bfa76f5275280f1b9b6e3ac22d2e7cf605d2f2
+Size (flask_limiter-3.10.1.tar.gz) = 302080 bytes
