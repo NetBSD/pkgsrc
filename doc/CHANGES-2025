@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1067 2025/02/04 18:33:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1068 2025/02/04 18:56:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1383,3 +1383,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-beautifulsoup4 to 4.13.2 [adam 2025-02-04]
 	Updated net/py-zeroconf to 0.143.0 [adam 2025-02-04]
 	Updated math/py-asdf to 4.1.0 [adam 2025-02-04]
+	Updated lang/nodejs to 23.7.0 [adam 2025-02-04]
+	Updated www/py-FormEncode to 2.1.1 [adam 2025-02-04]
