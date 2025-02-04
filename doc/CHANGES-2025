@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1046 2025/02/04 02:19:58 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1047 2025/02/04 02:24:17 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1344,3 +1344,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-rlang to 1.1.5 [mef 2025-02-03]
 	Updated security/easy-rsa to 3.2.2 [gdt 2025-02-04]
 	Updated sysutils/opensbi-hifive-unleashed to 1.4 [gutteridge 2025-02-04]
+	Updated sysutils/u-boot-hifive-unleashed to 2024.04 [gutteridge 2025-02-04]
