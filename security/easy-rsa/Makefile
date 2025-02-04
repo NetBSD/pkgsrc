@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2024/09/23 08:17:24 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/04 02:02:32 gdt Exp $
 
-DISTNAME=	EasyRSA-3.2.1
+DISTNAME=	EasyRSA-3.2.2
 PKGNAME=	${DISTNAME:S/EasyRSA/easy-rsa/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenVPN/}
