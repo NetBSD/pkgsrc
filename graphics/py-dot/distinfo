@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/02/06 21:40:08 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/02/04 12:17:08 adam Exp $
 
-BLAKE2s (pydot-2.0.0.tar.gz) = eaafa42346b7af71b5aa6c9195969b640f40dfaac74471b64837c66216db7c3e
-SHA512 (pydot-2.0.0.tar.gz) = 5d0c1f88838784184078b911c138b9b2f3588bb970e0247df5a8b17bb778b927e881c3d29efc3cbedf20c22ca2534bb65f1cc5265adcdf04e1c4d24ad0ae372a
-Size (pydot-2.0.0.tar.gz) = 152022 bytes
+BLAKE2s (pydot-3.0.4.tar.gz) = dcaefff8504ade0afe9c06a7018c323fe54407121655c10b2cb5a21d9c80e496
+SHA512 (pydot-3.0.4.tar.gz) = b2f60930fba79aa1af06bba05bb570bb597a0547685d7aa8cf7ecef8af00ccf856a0749042791b22775f1a5ae56eb5022f6f7567b988f8dacf09a5337a090602
+Size (pydot-3.0.4.tar.gz) = 168167 bytes

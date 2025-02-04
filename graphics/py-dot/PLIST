@@ -1,12 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/06 21:40:08 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/02/04 12:17:08 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/MIT.txt
+${PYSITELIB}/${WHEEL_INFODIR}/Python-2.0.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/pydot/__init__.py
 ${PYSITELIB}/pydot/__init__.pyc
 ${PYSITELIB}/pydot/__init__.pyo
+${PYSITELIB}/pydot/_vendor/__init__.py
+${PYSITELIB}/pydot/_vendor/__init__.pyc
+${PYSITELIB}/pydot/_vendor/__init__.pyo
+${PYSITELIB}/pydot/_vendor/tempfile.py
+${PYSITELIB}/pydot/_vendor/tempfile.pyc
+${PYSITELIB}/pydot/_vendor/tempfile.pyo
 ${PYSITELIB}/pydot/core.py
 ${PYSITELIB}/pydot/core.pyc
 ${PYSITELIB}/pydot/core.pyo
