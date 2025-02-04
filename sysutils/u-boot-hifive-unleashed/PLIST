@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/04 02:22:27 gutteridge Exp $
+share/u-boot/hifive-unleashed/u-boot-spl.bin
+share/u-boot/hifive-unleashed/u-boot.itb
