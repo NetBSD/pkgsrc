@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.27 2025/01/14 10:16:19 adam Exp $
+$NetBSD: distinfo,v 1.28 2025/02/05 13:23:34 adam Exp $
 
-BLAKE2s (gst-rtsp-server-1.24.11.tar.xz) = 598887c2ad4d87f33c1866359769697860098fcc53f65775c9f645d731a9d462
-SHA512 (gst-rtsp-server-1.24.11.tar.xz) = d1342a75154ff79f26447a14104cbdc6b8ebec46ff7588c3a1dad08ddb591e34401ad02c359e3f8fc3f018020f111573f5e38e9ebe1d3d0a73c142bb3affcf58
-Size (gst-rtsp-server-1.24.11.tar.xz) = 288008 bytes
+BLAKE2s (gst-rtsp-server-1.24.12.tar.xz) = bc71a6710556f2cb3f7a6dd92fce3aa7104cc96edf84460cf78d16dc1c67cb62
+SHA512 (gst-rtsp-server-1.24.12.tar.xz) = 28d6dd37be98e17ca2f01902b85cf1f61dd02053aa81f50114a8843478c34784b35896352a9a5913322dc6d90c632d436a9c9637aba4b9899712df7f7f3f3d15
+Size (gst-rtsp-server-1.24.12.tar.xz) = 289092 bytes
