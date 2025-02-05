@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1084 2025/02/05 13:29:40 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1085 2025/02/05 13:41:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1417,3 +1417,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/gstreamer1 to 1.24.12 [adam 2025-02-05]
 	Updated www/py-waitress to 3.0.2 [adam 2025-02-05]
 	Updated www/py-WebTest to 3.0.4 [adam 2025-02-05]
+	Added devel/jj-docs version 0.25.0 [wiz 2025-02-05]
