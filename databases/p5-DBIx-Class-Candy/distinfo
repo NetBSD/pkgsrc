@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2021/10/26 10:09:32 nia Exp $
+$NetBSD: distinfo,v 1.13 2025/02/05 22:43:43 wen Exp $
 
-BLAKE2s (DBIx-Class-Candy-0.005003.tar.gz) = 0948fce8ec6a4ec6d7c891b08163a00d97c08b360999a7a43225a028faf48704
-SHA512 (DBIx-Class-Candy-0.005003.tar.gz) = 59abea1913bfe5db91f8f98e1d94efa3007a5f60815d49485ad4570b59f554abc723b2e57b81f66e8fdd66e30645b7cd5d875a58165f3109b5107fef2be38a3b
-Size (DBIx-Class-Candy-0.005003.tar.gz) = 23033 bytes
+BLAKE2s (DBIx-Class-Candy-0.005004.tar.gz) = f122830f8b4e9588de47ba3886d64de0fcc1741fcd31840070b0e172fbd2a6c7
+SHA512 (DBIx-Class-Candy-0.005004.tar.gz) = 9f0a469d2bfa4c1a77ab8f4ab2a249de3c4db6b0c4a489d139ea55f8a48cb79b82a2fde95df9372e02bd82899e2acb95e6c7b0f06cd82e53006dc55397ea1763
+Size (DBIx-Class-Candy-0.005004.tar.gz) = 23626 bytes
