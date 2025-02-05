@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/09 10:32:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/05 20:47:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -49,9 +49,15 @@ ${PYSITELIB}/inline_snapshot/_external.pyo
 ${PYSITELIB}/inline_snapshot/_find_external.py
 ${PYSITELIB}/inline_snapshot/_find_external.pyc
 ${PYSITELIB}/inline_snapshot/_find_external.pyo
+${PYSITELIB}/inline_snapshot/_flags.py
+${PYSITELIB}/inline_snapshot/_flags.pyc
+${PYSITELIB}/inline_snapshot/_flags.pyo
 ${PYSITELIB}/inline_snapshot/_format.py
 ${PYSITELIB}/inline_snapshot/_format.pyc
 ${PYSITELIB}/inline_snapshot/_format.pyo
+${PYSITELIB}/inline_snapshot/_global_state.py
+${PYSITELIB}/inline_snapshot/_global_state.pyc
+${PYSITELIB}/inline_snapshot/_global_state.pyo
 ${PYSITELIB}/inline_snapshot/_inline_snapshot.py
 ${PYSITELIB}/inline_snapshot/_inline_snapshot.pyc
 ${PYSITELIB}/inline_snapshot/_inline_snapshot.pyo
@@ -67,6 +73,24 @@ ${PYSITELIB}/inline_snapshot/_rewrite_code.pyo
 ${PYSITELIB}/inline_snapshot/_sentinels.py
 ${PYSITELIB}/inline_snapshot/_sentinels.pyc
 ${PYSITELIB}/inline_snapshot/_sentinels.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/collection_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/collection_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/collection_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/dict_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/dict_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/dict_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/eq_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/eq_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/eq_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/generic_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/generic_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/generic_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/min_max_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/min_max_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/min_max_value.pyo
+${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.py
+${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyc
+${PYSITELIB}/inline_snapshot/_snapshot/undecided_value.pyo
 ${PYSITELIB}/inline_snapshot/_source_file.py
 ${PYSITELIB}/inline_snapshot/_source_file.pyc
 ${PYSITELIB}/inline_snapshot/_source_file.pyo
