@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2024/01/26 13:52:47 adam Exp $
+$NetBSD: distinfo,v 1.13 2025/02/05 13:29:01 adam Exp $
 
-BLAKE2s (WebTest-3.0.0.tar.gz) = 558da09248c7159f291092d82b6ba7d2af76591f13ba8abd8aa535e6f248e85a
-SHA512 (WebTest-3.0.0.tar.gz) = b97a6311d7e3bf653bec93c2390fb75c991d0dea6148680d8b6ff87861c130518a5d150dd157eab9b032b278566ad12c0ac8f5fc2ddbeba31e35de1e1f06f747
-Size (WebTest-3.0.0.tar.gz) = 75871 bytes
+BLAKE2s (webtest-3.0.4.tar.gz) = 47345eac25646041d8f18d84c73508ce6cfe725798463ee9dd880c42f211ce97
+SHA512 (webtest-3.0.4.tar.gz) = ebf7a76d18719283af5fcf0ea902285a9eee280e68892f2db35e5e48e04efd18e96e393a020e3c4ac4e001875c6da5583348572fd028c0e1a11d468695362a0b
+Size (webtest-3.0.4.tar.gz) = 79395 bytes
