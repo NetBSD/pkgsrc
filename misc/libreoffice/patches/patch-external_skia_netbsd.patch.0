@@ -1,13 +1,13 @@
-$NetBSD: patch-external_skia_netbsd.patch.0,v 1.5 2023/10/15 07:26:24 ryoon Exp $
+$NetBSD: patch-external_skia_netbsd.patch.0,v 1.6 2025/02/05 03:50:02 ryoon Exp $
 
 * Support NetBSD. It has no uselocale(3).
 
---- external/skia/netbsd.patch.0.orig	2023-08-21 19:21:45.895625567 +0000
+--- external/skia/netbsd.patch.0.orig	2025-01-30 15:08:53.729975881 +0000
 +++ external/skia/netbsd.patch.0
-@@ -0,0 +1,12 @@
-+diff -ur skia.orig/src/gpu/ganesh/GrAutoLocaleSetter.h skia/src/gpu/ganesh/GrAutoLocaleSetter.h
-+--- src/gpu/ganesh/GrAutoLocaleSetter.h	2023-01-27 17:09:20.000000000 +0900
-++++ src/gpu/ganesh/GrAutoLocaleSetter.h	2023-08-22 03:59:57.165336269 +0900
+@@ -0,0 +1,27 @@
++diff -urN skia.orig/src/gpu/ganesh/GrAutoLocaleSetter.h skia/src/gpu/ganesh/GrAutoLocaleSetter.h
++--- src/gpu/ganesh/GrAutoLocaleSetter.h	2024-10-10 21:39:49.000000000 +0900
+++++ src/gpu/ganesh/GrAutoLocaleSetter.h	2025-01-31 00:05:54.189333618 +0900
 +@@ -27,7 +27,7 @@
 + #define HAVE_XLOCALE 0
 + #endif
@@ -17,3 +17,18 @@ $NetBSD: patch-external_skia_netbsd.patch.0,v 1.5 2023/10/15 07:26:24 ryoon Exp 
 + #define HAVE_LOCALE_T 0
 + #else
 + #define HAVE_LOCALE_T 1
++diff -urN skia.orig/src/utils/SkGetExecutablePath_linux.cpp skia/src/utils/SkGetExecutablePath_linux.cpp
++--- src/utils/SkGetExecutablePath_linux.cpp	2024-10-10 21:39:49.000000000 +0900
+++++ src/utils/SkGetExecutablePath_linux.cpp	2025-01-31 00:18:55.164705492 +0900
++@@ -7,7 +7,11 @@
++ 
++ #include "src/utils/SkGetExecutablePath.h"
++ 
+++#if defined(__linux__)
++ #include <linux/limits.h>
+++#else defined(__NetBSD__)
+++#include <sys/syslimits.h>
+++#endif
++ #include <sys/types.h>
++ #include <unistd.h>
++ #include <cstddef>
