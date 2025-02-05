@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/11 16:10:14 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/05 08:05:27 adam Exp $
 
-BLAKE2s (pyobjc_framework_callkit-10.3.1.tar.gz) = 76da8ff867172e7b7fab9a12328a5994760f36108c34a2a70709bf56e2f5c4bf
-SHA512 (pyobjc_framework_callkit-10.3.1.tar.gz) = 9ec27d9c886634a3ceebf81fc9969d4b178fe83e1bcb267546d566b2b6bc347bc2c4b23129a646505daef0d88b9a2be15cd2c57539bed50fd89cadb9ea8ffe43
-Size (pyobjc_framework_callkit-10.3.1.tar.gz) = 31907 bytes
+BLAKE2s (pyobjc_framework_callkit-11.0.tar.gz) = 6435cde2c1c3a5a6c7b6ae313d8fe45f9e3f28fcaa488e44aee59463daae651e
+SHA512 (pyobjc_framework_callkit-11.0.tar.gz) = 60370e19c95daf8f8c132e74110e7483559142fcf6a27c0cc10aff36825f05b1ac4e6f5949f7ca67bf2008cbd5c9a1e7a58fc1b101269424827445024a07cba1
+Size (pyobjc_framework_callkit-11.0.tar.gz) = 39720 bytes

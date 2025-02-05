@@ -1,12 +1,12 @@
-$NetBSD: patch-setup.py,v 1.7 2024/06/06 14:48:29 adam Exp $
+$NetBSD: patch-setup.py,v 1.8 2025/02/05 08:05:24 adam Exp $
 
 Do not add debug symbols.
 Do not override compiler optimiztion flags.
 Avoid a hack.
 
---- setup.py.orig	2024-05-18 07:57:00.000000000 +0000
+--- setup.py.orig	2025-01-02 09:36:19.000000000 +0000
 +++ setup.py
-@@ -67,7 +67,6 @@ def get_sdk_level(sdk):
+@@ -68,7 +68,6 @@ def get_sdk_level(sdk):
  
  # CFLAGS for the objc._objc extension:
  CFLAGS = [
@@ -14,16 +14,21 @@ Avoid a hack.
      "-fexceptions",
      # Explicitly opt-out of ARC
      "-fno-objc-arc",
-@@ -94,8 +93,6 @@ CFLAGS = [
+@@ -91,13 +90,8 @@ CFLAGS = [
+     "-Wshorten-64-to-32",
+     # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
+     # "--analyze",
+-    "-Werror",
      "-I/usr/include/ffi",
      "-fvisibility=hidden",
-     # "-O0",
+-    # "-O0",
 -    "-g",
--    "-O0",
-     # "-O3",
-     # "-flto=thin",
+-    # "-O0",
+-    "-O3",
+     "-flto=thin",
      # XXX: Use object_path_lto (during linking?)
-@@ -112,12 +109,10 @@ OBJC_LDFLAGS = [
+     "-UNDEBUG",
+@@ -113,13 +107,9 @@ OBJC_LDFLAGS = [
      "-framework",
      "Foundation",
      # "-fvisibility=protected",
@@ -31,12 +36,13 @@ Avoid a hack.
      "-lffi",
      # "-fsanitize=address", "-fsanitize=undefined", "-fno-sanitize=vptr",
      "-fvisibility=hidden",
-     # "-O0",
+-    # "-O0",
 -    "-g",
-     # "-O3",
-     # "-flto=thin",
-     # "-fexceptions",
-@@ -257,8 +252,6 @@ class oc_test(test.test):
+-    "-O3",
+     "-flto=thin",
+     "-fexceptions",
+ ]
+@@ -254,8 +244,6 @@ class oc_test(Command):
          self.__old_path = sys.path[:]
          self.__old_modules = sys.modules.copy()
  

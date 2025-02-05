@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:02:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/05 08:05:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/CoreServices/CarbonCore/__init__.py
 ${PYSITELIB}/CoreServices/CarbonCore/__init__.pyc
@@ -36,4 +37,4 @@ ${PYSITELIB}/CoreServices/SearchKit/_metadata.pyo
 ${PYSITELIB}/CoreServices/__init__.py
 ${PYSITELIB}/CoreServices/__init__.pyc
 ${PYSITELIB}/CoreServices/__init__.pyo
-${PYSITELIB}/CoreServices/_inlines.abi3.so
+${PYSITELIB}/CoreServices/_inlines.so

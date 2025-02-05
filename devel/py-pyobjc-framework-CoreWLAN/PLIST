@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:02:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/05 08:05:30 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/CoreWLAN/_CoreWLAN.abi3.so
+${PYSITELIB}/CoreWLAN/_CoreWLAN.so
 ${PYSITELIB}/CoreWLAN/__init__.py
 ${PYSITELIB}/CoreWLAN/__init__.pyc
 ${PYSITELIB}/CoreWLAN/__init__.pyo

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/06/11 16:10:24 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/02/05 08:05:39 adam Exp $
 
-BLAKE2s (pyobjc_framework_photos-10.3.1.tar.gz) = ff4892f922e6c0e60583c2574654bcdd11555c8be351682c2cfb7e419ffe441e
-SHA512 (pyobjc_framework_photos-10.3.1.tar.gz) = 7be403b566151c946cfeab5aa5147e1597c5675238a3e27388cc5d7f99bcfcd0fab05d8af34e334ec56e087b96a5480d7a674380281c1cfeb3a9404ee38e6247
-Size (pyobjc_framework_photos-10.3.1.tar.gz) = 74176 bytes
+BLAKE2s (pyobjc_framework_photos-11.0.tar.gz) = 8aa27691aa7d2c90678c404f26280daaab43e88fa19f0e800d87fd936e7ec50e
+SHA512 (pyobjc_framework_photos-11.0.tar.gz) = a754a27f7581d46b928a03cfb74ad92692b4727207e9df4d2724e0c54ded0ca3f94ddff25ca2a20e86676f42f76babfd6c1951fce4156e181121ac2d9724199d
+Size (pyobjc_framework_photos-11.0.tar.gz) = 92122 bytes

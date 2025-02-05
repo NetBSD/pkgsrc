@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2023/11/19 17:03:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/05 08:05:37 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/MultipeerConnectivity/_MultipeerConnectivity.abi3.so
+${PYSITELIB}/MultipeerConnectivity/_MultipeerConnectivity.so
 ${PYSITELIB}/MultipeerConnectivity/__init__.py
 ${PYSITELIB}/MultipeerConnectivity/__init__.pyc
 ${PYSITELIB}/MultipeerConnectivity/__init__.pyo

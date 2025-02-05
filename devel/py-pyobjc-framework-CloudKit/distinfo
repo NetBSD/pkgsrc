@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/06/11 16:10:15 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/02/05 08:05:27 adam Exp $
 
-BLAKE2s (pyobjc_framework_cloudkit-10.3.1.tar.gz) = 28e8d0a3f419889a2ade14472e71e817399089d59433c91152b83bd9cfdf7227
-SHA512 (pyobjc_framework_cloudkit-10.3.1.tar.gz) = 2f3196642bedc7196b823882f10cd57d9582ab20a3f5c985e9fb5e8e86db56628b7f88c06480c2f54b0918ecc2b923b2b2a647252b21da0088d55fef53d645e3
-Size (pyobjc_framework_cloudkit-10.3.1.tar.gz) = 98916 bytes
+BLAKE2s (pyobjc_framework_cloudkit-11.0.tar.gz) = 3b0edc775badf0eab09909401e982e2da4022a2b1edbc244b920757bbba81ed3
+SHA512 (pyobjc_framework_cloudkit-11.0.tar.gz) = 6657d469f8fc7c187d9fb1203deef7d6ba494be680109d41cc1a4261ff29cdebdf84ccf41c513ba1c9658d57864239df675e3adc21d108acf09f9714bd2d2252
+Size (pyobjc_framework_cloudkit-11.0.tar.gz) = 123034 bytes

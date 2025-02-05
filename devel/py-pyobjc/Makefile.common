@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2024/11/11 07:28:20 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2025/02/05 08:05:24 adam Exp $
 # used by devel/py-pyobjc-core/Makefile
 # used by devel/py-pyobjc-framework-AdServices/Makefile
 # used by devel/py-pyobjc-framework-AdSupport/Makefile
@@ -150,7 +150,7 @@
 # used by devel/py-pyobjc-framework-libdispatch/Makefile
 # used by devel/py-pyobjc-framework-libxpc/Makefile
 
-PYOBJC_VERS=	10.3.1
+PYOBJC_VERS=	11.0
 
 DISTNAME=	${WHEEL_NAME:tl}
 PKGNAME=	${PYPKGPREFIX}-${WHEEL_NAME:S/_/-/g}
@@ -164,8 +164,6 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 ONLY_FOR_PLATFORM=	Darwin-*-* # only for macOS
 
 USE_LANGUAGES=	c objc
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 SUBST_CLASSES+=		pysetup
 SUBST_STAGE.pysetup=	pre-configure

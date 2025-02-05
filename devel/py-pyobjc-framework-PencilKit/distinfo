@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/11 16:10:24 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/05 08:05:38 adam Exp $
 
-BLAKE2s (pyobjc_framework_pencilkit-10.3.1.tar.gz) = 2659f2b8b9318c103abae7607f51eb2f38ef33898d463543ffe0f9bcaaa4e993
-SHA512 (pyobjc_framework_pencilkit-10.3.1.tar.gz) = 099b2e5cbcc7ad40a24aa7bbfc18774f89cf30f40e519baa1c2c6b4ee66a6f4ad5c93a67f6474e8c2f3a90f3a2967bee34ace1cd581b8c801c8425e03edad128
-Size (pyobjc_framework_pencilkit-10.3.1.tar.gz) = 18784 bytes
+BLAKE2s (pyobjc_framework_pencilkit-11.0.tar.gz) = d2ccb1d70aea2ebd5c2a231a45b5df921448d8053b7068035c6ed5fa201ac11d
+SHA512 (pyobjc_framework_pencilkit-11.0.tar.gz) = fd6b9fb0e4b6f0cb9568293e9fb4c921d47c3b06b5703a31915ccd99a382c1a42b2ff78fce0a993b5fb1178c4942d2a0da2d23b533626cba4471db77036e7d19
+Size (pyobjc_framework_pencilkit-11.0.tar.gz) = 22812 bytes

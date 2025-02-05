@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2024/06/11 16:10:16 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/05 08:05:29 adam Exp $
 
-BLAKE2s (pyobjc_framework_coremidi-10.3.1.tar.gz) = c64f20f055dc8bd75d521172fc8e6b45295ac34f5a06de98fad52fafec867b3d
-SHA512 (pyobjc_framework_coremidi-10.3.1.tar.gz) = 83482006e18bdf79608d617f8fa84cd626b16d48c9f517423cd7927772bd250afc6b8e1d02f4b8d9a26a33e303f55d532543455d0603bbb55255f7e3967cc759
-Size (pyobjc_framework_coremidi-10.3.1.tar.gz) = 78441 bytes
+BLAKE2s (pyobjc_framework_coremidi-11.0.tar.gz) = 8b0cf49afeafc920f7a4b0742c1758db0a0f1bdcec43e927babe7ca44e05d04b
+SHA512 (pyobjc_framework_coremidi-11.0.tar.gz) = 0eb6f93f69278aa9ba15321afd434962235e1c41c1d8744b744eb6a959552571ef4d346da9aa470ef57bcd6222253ce3a948c460386bd0b79a83f478bf565ad1
+Size (pyobjc_framework_coremidi-11.0.tar.gz) = 107342 bytes

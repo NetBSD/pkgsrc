@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2024/06/06 14:48:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/05 08:05:24 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/include/pyobjc-api.h
 ${PYSITELIB}/${WHEEL_INFODIR}/include/pyobjc-compat.h
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.py
 ${PYSITELIB}/PyObjCTools/KeyValueCoding.pyc

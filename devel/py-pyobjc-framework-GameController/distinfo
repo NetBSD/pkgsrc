@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/06/11 16:10:19 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/02/05 08:05:33 adam Exp $
 
-BLAKE2s (pyobjc_framework_gamecontroller-10.3.1.tar.gz) = b86c34d51052aba82d12177b99f39f1672c45d6fd0d13dbbb5a51b03642f4f5b
-SHA512 (pyobjc_framework_gamecontroller-10.3.1.tar.gz) = d8ad005d32f65dade90a55ea5a785632925291b8fcad572d8395cd406fca1c67a39433cef3535053207e30bc79576a933a3cdeeedb749929e7a3b8b75ecd3570
-Size (pyobjc_framework_gamecontroller-10.3.1.tar.gz) = 94100 bytes
+BLAKE2s (pyobjc_framework_gamecontroller-11.0.tar.gz) = 46911fc6a495805e941301c0999a55aec1cbd608d3a58c5f0cc42c0fcbcaf95a
+SHA512 (pyobjc_framework_gamecontroller-11.0.tar.gz) = 2146ea7ca08bd6921647f3a90f10f8a7a9918ca18bda9907467d7968bae41b6650e1620acad081f92b85ff520a0d2200c23bb4fb760550a1c4609fea3c12a382
+Size (pyobjc_framework_gamecontroller-11.0.tar.gz) = 115318 bytes

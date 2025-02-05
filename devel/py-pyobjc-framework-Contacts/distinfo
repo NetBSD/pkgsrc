@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2024/06/11 16:10:15 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/02/05 08:05:28 adam Exp $
 
-BLAKE2s (pyobjc_framework_contacts-10.3.1.tar.gz) = a79569e108e197b9998e87bcc594f47590f8b97129dd00ca42150b72a1f3313d
-SHA512 (pyobjc_framework_contacts-10.3.1.tar.gz) = 7068775eae10b0066ea9ebbe170556ccbbb52060780e4a4fc62469946ea56cf34d5d3e88fc974cb1de5a3fc2e0b1c6ef4f2610216bff5b377fcb8b71e9ee2c7f
-Size (pyobjc_framework_contacts-10.3.1.tar.gz) = 68431 bytes
+BLAKE2s (pyobjc_framework_contacts-11.0.tar.gz) = 39a34983e6825040fe57cf7bd85abddc01c347372f0592dd054d32dfc7802dbd
+SHA512 (pyobjc_framework_contacts-11.0.tar.gz) = 8ec9e4fef487264cbf44fe40bcce1b58cc7741af5af8a841d9b63f2056a83d4124af63ab6c9fd7a9f007a9c88a145a2e1df76042ee0cc13627bea676958aadd3
+Size (pyobjc_framework_contacts-11.0.tar.gz) = 84253 bytes

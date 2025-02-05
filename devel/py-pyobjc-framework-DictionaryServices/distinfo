@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2024/06/11 16:10:17 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/02/05 08:05:31 adam Exp $
 
-BLAKE2s (pyobjc_framework_dictionaryservices-10.3.1.tar.gz) = da6f7e1fe1cae011032ea4198ac8ba9c63c205ce3095de0833bed525e93a879b
-SHA512 (pyobjc_framework_dictionaryservices-10.3.1.tar.gz) = 312da6eaf6de3221cb88cb508adbd89efcd97b21c95939dc1073b8546425f852e455feb2671084c137c5526950f1d3c5a9ca765e75483011b14eb6454569ccd5
-Size (pyobjc_framework_dictionaryservices-10.3.1.tar.gz) = 10131 bytes
+BLAKE2s (pyobjc_framework_dictionaryservices-11.0.tar.gz) = e6daa996319f5dd20301430180206ab10488733070c75d83e27c5c06c587c318
+SHA512 (pyobjc_framework_dictionaryservices-11.0.tar.gz) = 8ae404010dcb5589aa905de403434876d6b9f48c9a6ea9fe351752d01635c26b966c19f696b67b0586f51a4c6093710bea1e1332edf7e211a024d18dd5f56983
+Size (pyobjc_framework_dictionaryservices-11.0.tar.gz) = 10823 bytes

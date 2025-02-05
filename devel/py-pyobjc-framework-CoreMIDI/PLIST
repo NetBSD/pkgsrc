@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/19 17:02:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/05 08:05:29 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/CoreMIDI/_CoreMIDI.abi3.so
+${PYSITELIB}/CoreMIDI/_CoreMIDI.so
 ${PYSITELIB}/CoreMIDI/__init__.py
 ${PYSITELIB}/CoreMIDI/__init__.pyc
 ${PYSITELIB}/CoreMIDI/__init__.pyo
-${PYSITELIB}/CoreMIDI/_inlines.abi3.so
+${PYSITELIB}/CoreMIDI/_inlines.so
 ${PYSITELIB}/CoreMIDI/_metadata.py
 ${PYSITELIB}/CoreMIDI/_metadata.pyc
 ${PYSITELIB}/CoreMIDI/_metadata.pyo
