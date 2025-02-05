@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1089 2025/02/05 19:01:29 osa Exp $
+$NetBSD: CHANGES-2025,v 1.1090 2025/02/05 19:55:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1425,3 +1425,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nginx to 1.26.3 [osa 2025-02-05]
 	Updated www/nginx-devel to 1.27.4 [osa 2025-02-05]
 	Updated www/nginx-devel to 1.27.4nb0 [osa 2025-02-05]
+	Updated databases/py-aiosqlite to 0.21.0 [adam 2025-02-05]
+	Updated databases/py-peewee to 3.17.9 [adam 2025-02-05]
+	Updated devel/py-rlp to 4.1.0 [adam 2025-02-05]
+	Updated finance/py-eth-rlp to 2.2.0 [adam 2025-02-05]
