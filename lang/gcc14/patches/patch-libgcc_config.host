@@ -1,4 +1,4 @@
-$NetBSD: patch-libgcc_config.host,v 1.2 2024/12/15 03:12:17 brook Exp $
+$NetBSD: patch-libgcc_config.host,v 1.3 2025/02/05 16:30:37 adam Exp $
 
 Part 1: drop legacy library build for macOS >= 14 [PR116809].
 
@@ -33,15 +33,26 @@ the previous change disabled it for macOS 15.
 Parts 2-3: This is needed for arm64 to get Out-of-line LSE atomics linked into libgcc.
 libsupc++ fails to link without this, and for arm to build.
 
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
 --- libgcc/config.host.orig	2024-08-01 08:17:17.000000000 +0000
 +++ libgcc/config.host
+@@ -82,7 +82,7 @@ m32c*-*-*)
+         cpu_type=m32c
+ 	tmake_file=t-fdpbit
+         ;;
+-aarch64*-*-*)
++aarch64*-*-* | arm64*-*-*)
+ 	cpu_type=aarch64
+ 	;;
+ alpha*-*-*)
 @@ -236,19 +236,25 @@ case ${host} in
    esac
    tmake_file="$tmake_file t-slibgcc-darwin"
    case ${host} in
 -    *-*-darwin1[89]* | *-*-darwin2* )
 -      tmake_file="t-darwin-min-8 $tmake_file"
-+    x64_64-*-darwin2[0-2]*)
++    x86_64-*-darwin2[0-2]*)
 +      tmake_file="t-darwin-min-11 t-darwin-libgccs1 $tmake_file"
 +      ;;
 +    *-*-darwin2*)
@@ -66,7 +77,32 @@ libsupc++ fails to link without this, and for arm to build.
        echo "Warning: libgcc configured to support macOS 10.5" 1>&2
        ;;
    esac
-@@ -429,6 +435,7 @@ aarch64*-*-freebsd*)
+@@ -274,7 +280,7 @@ case ${host} in
+   if test "x$enable_darwin_at_rpath" = "xyes"; then
+     tmake_file="$tmake_file t-darwin-rpath "
+   fi
+-  extra_parts="crt3.o libd10-uwfef.a crttms.o crttme.o libemutls_w.a"
++  extra_parts="crt3.o crttms.o crttme.o libemutls_w.a "
+   ;;
+ *-*-dragonfly*)
+   tmake_file="$tmake_file t-crtstuff-pic t-libgcc-pic t-eh-dw2-dip"
+@@ -418,6 +424,15 @@ aarch64*-*-elf | aarch64*-*-rtems*)
+ 	tmake_file="${tmake_file} t-dfprules"
+ 	md_unwind_header=aarch64/aarch64-unwind.h
+ 	;;
++aarch64*-*-darwin*)
++	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
++	tmake_file="${tmake_file} ${cpu_type}/t-lse"
++	tmake_file="${tmake_file} t-crtfm t-dfprules"
++	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp"
++	tmake_file="${tmake_file} ${cpu_type}/t-heap-trampoline"
++	md_unwind_header=aarch64/aarch64-unwind.h
++	;;
+ aarch64*-*-freebsd*)
+ 	extra_parts="$extra_parts crtfastmath.o"
+ 	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
+@@ -429,6 +444,7 @@ aarch64*-*-freebsd*)
  aarch64*-*-netbsd*)
  	extra_parts="$extra_parts crtfastmath.o"
  	tmake_file="${tmake_file} ${cpu_type}/t-aarch64"
@@ -74,7 +110,7 @@ libsupc++ fails to link without this, and for arm to build.
  	tmake_file="${tmake_file} ${cpu_type}/t-softfp t-softfp t-crtfm"
  	tmake_file="${tmake_file} t-dfprules"
  	md_unwind_header=aarch64/aarch64-unwind.h
-@@ -530,7 +537,8 @@ arm*-*-netbsdelf*)
+@@ -530,7 +546,8 @@ arm*-*-netbsdelf*)
  	case ${host} in
  	  arm*-*-netbsdelf-*eabi*)
  	    tmake_file="${tmake_file} arm/t-netbsd-eabi"
@@ -84,3 +120,35 @@ libsupc++ fails to link without this, and for arm to build.
  	    ;;
  	  *)
  	    tmake_file="${tmake_file} arm/t-netbsd t-slibgcc-gld-nover"
+@@ -725,14 +742,14 @@ i[34567]86-*-darwin*)
+ 	tmake_file="$tmake_file i386/t-crtpc t-crtfm i386/t-msabi"
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	extra_parts="$extra_parts crtprec32.o crtprec64.o crtprec80.o"
+-	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	extra_parts="$extra_parts crtfastmath.o libd10-uwfef.a libheapt_w.a"
+ 	tmake_file="${tmake_file} i386/t-heap-trampoline"
+ 	;;
+ x86_64-*-darwin*)
+ 	tmake_file="$tmake_file i386/t-crtpc t-crtfm i386/t-msabi"
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	extra_parts="$extra_parts crtprec32.o crtprec64.o crtprec80.o"
+-	extra_parts="$extra_parts crtfastmath.o libheapt_w.a"
++	extra_parts="$extra_parts crtfastmath.o libd10-uwfef.a libheapt_w.a"
+ 	tmake_file="${tmake_file} i386/t-heap-trampoline"
+ 	;;
+ i[34567]86-*-elfiamcu)
+@@ -1215,12 +1232,14 @@ powerpc-*-darwin*)
+ 	# We build the darwin10 EH shim for Rosetta (running on x86 machines).
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	tmake_file="$tmake_file rs6000/t-ppc64-fp rs6000/t-ibm-ldouble"
++	extra_parts="$extra_parts libd10-uwfef.a "
+ 	extra_parts="$extra_parts crt2.o crt3_2.o libef_ppc.a dw_ppc.o"
+ 	;;
+ powerpc64-*-darwin*)
+ 	# We build the darwin10 EH shim for Rosetta (running on x86 machines).
+ 	tm_file="$tm_file i386/darwin-lib.h"
+ 	tmake_file="$tmake_file rs6000/t-darwin64 rs6000/t-ibm-ldouble"
++	extra_parts="$extra_parts libd10-uwfef.a "
+ 	extra_parts="$extra_parts crt2.o crt3_2.o libef_ppc.a dw_ppc.o"
+ 	;;
+ powerpc*-*-freebsd*)

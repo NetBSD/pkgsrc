@@ -1,0 +1,54 @@
+$NetBSD: patch-gcc_doc_invoke.texi,v 1.1 2025/02/05 16:30:36 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/doc/invoke.texi
++++ gcc/doc/invoke.texi
+@@ -732,7 +732,7 @@ Objective-C and Objective-C++ Dialects}.
+ -freg-struct-return  -fshort-enums  -fshort-wchar
+ -fverbose-asm  -fpack-struct[=@var{n}]
+ -fleading-underscore  -ftls-model=@var{model}
+--fstack-reuse=@var{reuse_level}
++-fstack-reuse=@var{reuse_level} -fstack-use-cumulative-args
+ -ftrampolines -ftrampoline-impl=@r{[}stack@r{|}heap@r{]}
+ -ftrapv  -fwrapv
+ -fvisibility=@r{[}default@r{|}internal@r{|}hidden@r{|}protected@r{]}
+@@ -954,7 +954,7 @@ Objective-C and Objective-C++ Dialects}.
+ -twolevel_namespace  -umbrella  -undefined
+ -unexported_symbols_list  -weak_reference_mismatches
+ -whatsloaded  -F  -gused  -gfull  -mmacosx-version-min=@var{version}
+--mkernel  -mone-byte-bool}
++-mkernel  -mone-byte-bool -munreachable-traps}
+
+ @emph{DEC Alpha Options}
+ @gccoptlist{-mno-fp-regs  -msoft-float
+@@ -19132,6 +19132,17 @@ the behavior of older compilers in which temporaries' stack space is
+ not reused, the aggressive stack reuse can lead to runtime errors. This
+ option is used to control the temporary stack reuse optimization.
+
++@opindex fstack_use_cumulative_args
++@item -fstack-use-cumulative-args
++This option instructs the compiler to use the
++@code{cumulative_args_t}-based stack layout target hooks,
++@code{TARGET_FUNCTION_ARG_BOUNDARY_CA} and
++@code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY_CA}. If a given target does
++not define these hooks, the default behaviour is to fallback to using
++the standard non-@code{_CA} variants instead. Certain targets (such as
++AArch64 Darwin) require using the more advanced @code{_CA}-based
++hooks: For these targets this option should be enabled by default.
++
+ @opindex ftrapv
+ @item -ftrapv
+ This option generates traps for signed overflow on addition, subtraction,
+@@ -25148,6 +25159,11 @@ without that switch.  Using this switch may require recompiling all
+ other modules in a program, including system libraries.  Use this
+ switch to conform to a non-default data model.
+
++@opindex munreachable-traps
++@item -munreachable-traps
++Causes @code{__builtin_unreachable} to be rendered as a trap.  This is the
++default for all Darwin architectures.
++
+ @opindex mfix-and-continue
+ @opindex ffix-and-continue
+ @opindex findirect-data

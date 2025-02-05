@@ -1,0 +1,45 @@
+$NetBSD: patch-gcc_config.gcc,v 1.1 2025/02/05 16:30:35 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/config.gcc
++++ gcc/config.gcc
+@@ -1177,13 +1177,22 @@ case ${target} in
+   ;;
+ esac
+
+-# Figure out if we need to enable heap trampolines by default
++# Figure out if we need to enable heap trampolines
++# and variadic functions handling.
+ case ${target} in
++aarch64*-*-darwin2*)
++  # This applies to arm64 Darwin variadic funtions.
++  tm_defines="$tm_defines STACK_USE_CUMULATIVE_ARGS_INIT=1"
++  # Executable stack is forbidden.
++  tm_defines="$tm_defines HEAP_TRAMPOLINES_INIT=1"
++  ;;
+ *-*-darwin2*)
++  tm_defines="$tm_defines STACK_USE_CUMULATIVE_ARGS_INIT=0"
+   # Currently, we do this for macOS 11 and above.
+   tm_defines="$tm_defines HEAP_TRAMPOLINES_INIT=1"
+   ;;
+ *)
++  tm_defines="$tm_defines STACK_USE_CUMULATIVE_ARGS_INIT=0"
+   tm_defines="$tm_defines HEAP_TRAMPOLINES_INIT=0"
+   ;;
+ esac
+@@ -1227,6 +1236,14 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | aarch64*-*-rtems*)
+ 	done
+ 	TM_MULTILIB_CONFIG=`echo $TM_MULTILIB_CONFIG | sed 's/^,//'`
+ 	;;
++aarch64-*-darwin* )
++	tm_file="${tm_file} aarch64/aarch64-errata.h"
++	tmake_file="${tmake_file} aarch64/t-aarch64 aarch64/t-aarch64-darwin"
++	tm_defines="${tm_defines} TARGET_DEFAULT_ASYNC_UNWIND_TABLES=1"
++	tm_defines="${tm_defines} DISABLE_AARCH64_AS_CRC_BUGFIX=1"
++	# Choose a default CPU version that will work for all current releases.
++	with_cpu=${with_cpu:-apple-m1}
++	;;
+ aarch64*-*-freebsd*)
+ 	tm_file="${tm_file} elfos.h ${fbsd_tm_file}"
+ 	tm_file="${tm_file} aarch64/aarch64-elf.h aarch64/aarch64-errata.h aarch64/aarch64-freebsd.h"

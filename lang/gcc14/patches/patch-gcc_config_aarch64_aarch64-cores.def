@@ -1,0 +1,24 @@
+$NetBSD: patch-gcc_config_aarch64_aarch64-cores.def,v 1.1 2025/02/05 16:30:35 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/config/aarch64/aarch64-cores.def
++++ gcc/config/aarch64/aarch64-cores.def
+@@ -166,6 +166,17 @@ AARCH64_CORE("cortex-a76.cortex-a55",  cortexa76cortexa55, cortexa53, V8_2A,  (F
+ /* Armv8-R Architecture Processors.  */
+ AARCH64_CORE("cortex-r82", cortexr82, cortexa53, V8R, (), cortexa53, 0x41, 0xd15, -1)
+
++/* Apple (A12 and M) cores.
++   Apple implementer ID from xnu,
++   guesses for part #, guesses for scheduler ident, generic_armv8_a for costs.
++   A12 seems mostly 8.3,
++   M1 seems to be 8.4 + extras (see comments in option-extensions about f16fml),
++   M2 mostly 8.5 but with missing mandatory features.  */
++AARCH64_CORE("apple-a12", applea12, cortexa53, V8_3A,  (), generic_armv8_a, 0x61, 0x12, -1)
++AARCH64_CORE("apple-m1", applem1, cortexa57, V8_4A,  (F16, SB, SSBS), generic_armv8_a, 0x61, 0x23, -1)
++AARCH64_CORE("apple-m2", applem2, cortexa57, V8_4A,  (I8MM, BF16, F16, SB, SSBS), generic_armv8_a, 0x61, 0x23, -1)
++AARCH64_CORE("apple-m3", applem3, cortexa57, V8_4A,  (I8MM, BF16, F16, SB, SSBS), generic_armv8_a, 0x61, 0x23, -1)
++
+ /* Armv9.0-A Architecture Processors.  */
+
+ /* Arm ('A') cores. */
