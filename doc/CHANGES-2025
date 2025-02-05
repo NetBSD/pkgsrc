@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1088 2025/02/05 18:24:20 osa Exp $
+$NetBSD: CHANGES-2025,v 1.1089 2025/02/05 19:01:29 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1424,3 +1424,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-dateparser to 1.2.1 [adam 2025-02-05]
 	Updated www/nginx to 1.26.3 [osa 2025-02-05]
 	Updated www/nginx-devel to 1.27.4 [osa 2025-02-05]
+	Updated www/nginx-devel to 1.27.4nb0 [osa 2025-02-05]
