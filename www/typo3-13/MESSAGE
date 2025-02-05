@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2025/02/05 12:52:17 wen Exp $
+
+You will need to make Typo3 accessible through your HTTP server. If you
+are running Apache then you may add the following lines to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/typo3.conf
+
+to make Typo3 accessible through:
+
+	http://localhost/typo3/
+
+===========================================================================
