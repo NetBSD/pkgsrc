@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.102 2024/11/06 08:19:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.103 2025/02/05 08:51:31 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -41,6 +41,7 @@ man/man3/CURLINFO_FILETIME_T.3
 man/man3/CURLINFO_FTP_ENTRY_PATH.3
 man/man3/CURLINFO_HEADER_SIZE.3
 man/man3/CURLINFO_HTTPAUTH_AVAIL.3
+man/man3/CURLINFO_HTTPAUTH_USED.3
 man/man3/CURLINFO_HTTP_CONNECTCODE.3
 man/man3/CURLINFO_HTTP_VERSION.3
 man/man3/CURLINFO_LASTSOCKET.3
@@ -58,6 +59,7 @@ man/man3/CURLINFO_PRIMARY_PORT.3
 man/man3/CURLINFO_PRIVATE.3
 man/man3/CURLINFO_PROTOCOL.3
 man/man3/CURLINFO_PROXYAUTH_AVAIL.3
+man/man3/CURLINFO_PROXYAUTH_USED.3
 man/man3/CURLINFO_PROXY_ERROR.3
 man/man3/CURLINFO_PROXY_SSL_VERIFYRESULT.3
 man/man3/CURLINFO_QUEUE_TIME_T.3
@@ -436,6 +438,8 @@ man/man3/curl_easy_recv.3
 man/man3/curl_easy_reset.3
 man/man3/curl_easy_send.3
 man/man3/curl_easy_setopt.3
+man/man3/curl_easy_ssls_export.3
+man/man3/curl_easy_ssls_import.3
 man/man3/curl_easy_strerror.3
 man/man3/curl_easy_unescape.3
 man/man3/curl_easy_upkeep.3
