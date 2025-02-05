@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2025/02/05 09:11:59 adam Exp $
+# $NetBSD: Makefile,v 1.51 2025/02/05 16:07:16 adam Exp $
 
-DISTNAME=	picard-2.13
+DISTNAME=	picard-2.13.1
 CATEGORIES=	audio python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/picard/}
 
