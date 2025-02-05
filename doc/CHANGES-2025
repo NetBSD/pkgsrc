@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1083 2025/02/05 12:55:20 wen Exp $
+$NetBSD: CHANGES-2025,v 1.1084 2025/02/05 13:29:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1414,3 +1414,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/picard to 2.13 [adam 2025-02-05]
 	Updated www/py-beautifulsoup4 to 4.13.3 [adam 2025-02-05]
 	Added www/typo3-13 version 13.4.4 [wen 2025-02-05]
+	Updated multimedia/gstreamer1 to 1.24.12 [adam 2025-02-05]
+	Updated www/py-waitress to 3.0.2 [adam 2025-02-05]
+	Updated www/py-WebTest to 3.0.4 [adam 2025-02-05]
