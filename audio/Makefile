@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2024/11/12 21:27:33 nia Exp $
+# $NetBSD: Makefile,v 1.706 2025/02/05 08:07:46 adam Exp $
 #
 
 COMMENT=	Audio tools, players, and libraries
@@ -379,6 +379,7 @@ SUBDIR+=	py-audioread
 SUBDIR+=	py-beets
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
+SUBDIR+=	py-discid
 SUBDIR+=	py-discogs-client
 SUBDIR+=	py-dynampd
 SUBDIR+=	py-hsaudiotag3k
