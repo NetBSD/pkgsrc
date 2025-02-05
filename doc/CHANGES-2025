@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1080 2025/02/05 08:51:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1081 2025/02/05 08:52:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/p5-Math-BigInt to 2.003004 [wen 2025-02-05]
 	Updated math/p5-Spreadsheet-Read to 0.91 [wen 2025-02-05]
 	Updated www/curl to 8.12.0 [wiz 2025-02-05]
+	Updated www/libcurl-gnutls to 8.12.0 [wiz 2025-02-05]
