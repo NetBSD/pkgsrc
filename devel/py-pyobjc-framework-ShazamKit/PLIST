@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/19 17:03:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/05 08:05:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/ShazamKit/_ShazamKit.abi3.so
+${PYSITELIB}/ShazamKit/_ShazamKit.so
 ${PYSITELIB}/ShazamKit/__init__.py
 ${PYSITELIB}/ShazamKit/__init__.pyc
 ${PYSITELIB}/ShazamKit/__init__.pyo

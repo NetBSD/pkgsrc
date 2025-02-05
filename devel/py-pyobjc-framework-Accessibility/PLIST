@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/11/19 17:02:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/05 08:05:25 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/Accessibility/_Accessibility.abi3.so
+${PYSITELIB}/Accessibility/_Accessibility.so
 ${PYSITELIB}/Accessibility/__init__.py
 ${PYSITELIB}/Accessibility/__init__.pyc
 ${PYSITELIB}/Accessibility/__init__.pyo
