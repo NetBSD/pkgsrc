@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1085 2025/02/05 13:41:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1086 2025/02/05 16:12:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1418,3 +1418,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-waitress to 3.0.2 [adam 2025-02-05]
 	Updated www/py-WebTest to 3.0.4 [adam 2025-02-05]
 	Added devel/jj-docs version 0.25.0 [wiz 2025-02-05]
+	Updated audio/picard to 2.13.1 [adam 2025-02-05]
+	Updated devel/pcre2 to 10.45 [adam 2025-02-05]
