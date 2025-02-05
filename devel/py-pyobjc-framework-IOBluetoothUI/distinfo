@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/06/11 16:10:19 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/02/05 08:05:33 adam Exp $
 
-BLAKE2s (pyobjc_framework_iobluetoothui-10.3.1.tar.gz) = c99ae33077e3e49919063eb5ed98b22297b11a81e38bb04f7b2ea6457193142e
-SHA512 (pyobjc_framework_iobluetoothui-10.3.1.tar.gz) = 870458b3d13cc3f54edd8e65465c55617ee44f7951c4e08f2ce5b767a12b985293ee42289033c97dd670a422ece0b60040cfb5768d4ce8ff606a502752b96bb2
-Size (pyobjc_framework_iobluetoothui-10.3.1.tar.gz) = 19226 bytes
+BLAKE2s (pyobjc_framework_iobluetoothui-11.0.tar.gz) = 5048fe246d5ae926ad6be76bfc36d835632dba50246c3980e3bead0c44e706ee
+SHA512 (pyobjc_framework_iobluetoothui-11.0.tar.gz) = 20d8fbf6b65774cbe18c19c68909fd90aa0395c9769cc9c9f1fa5f7c7446f6f7cde2fd92f38fd8a721511da2cbc070a7f82830605003c345ff1a470abb67bbb5
+Size (pyobjc_framework_iobluetoothui-11.0.tar.gz) = 23091 bytes

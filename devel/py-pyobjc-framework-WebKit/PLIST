@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2024/01/23 22:15:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/05 08:05:44 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/JavaScriptCore/_JavaScriptCore.abi3.so
+${PYSITELIB}/JavaScriptCore/_JavaScriptCore.so
 ${PYSITELIB}/JavaScriptCore/__init__.py
 ${PYSITELIB}/JavaScriptCore/__init__.pyc
 ${PYSITELIB}/JavaScriptCore/__init__.pyo
@@ -14,7 +15,7 @@ ${PYSITELIB}/JavaScriptCore/_metadata.pyo
 ${PYSITELIB}/JavaScriptCore/_util.py
 ${PYSITELIB}/JavaScriptCore/_util.pyc
 ${PYSITELIB}/JavaScriptCore/_util.pyo
-${PYSITELIB}/WebKit/_WebKit.abi3.so
+${PYSITELIB}/WebKit/_WebKit.so
 ${PYSITELIB}/WebKit/__init__.py
 ${PYSITELIB}/WebKit/__init__.pyc
 ${PYSITELIB}/WebKit/__init__.pyo

@@ -1,19 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2023/11/19 17:02:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/05 08:05:26 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ApplicationServices/__init__.py
 ${PYSITELIB}/ApplicationServices/__init__.pyc
 ${PYSITELIB}/ApplicationServices/__init__.pyo
-${PYSITELIB}/HIServices/_HIServices.abi3.so
+${PYSITELIB}/HIServices/_HIServices.so
 ${PYSITELIB}/HIServices/__init__.py
 ${PYSITELIB}/HIServices/__init__.pyc
 ${PYSITELIB}/HIServices/__init__.pyo
 ${PYSITELIB}/HIServices/_metadata.py
 ${PYSITELIB}/HIServices/_metadata.pyc
 ${PYSITELIB}/HIServices/_metadata.pyo
-${PYSITELIB}/PrintCore/_PrintCore.abi3.so
+${PYSITELIB}/PrintCore/_PrintCore.so
 ${PYSITELIB}/PrintCore/__init__.py
 ${PYSITELIB}/PrintCore/__init__.pyc
 ${PYSITELIB}/PrintCore/__init__.pyo

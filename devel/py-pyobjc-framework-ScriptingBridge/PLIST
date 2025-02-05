@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2023/11/19 17:03:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/05 08:05:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/ScriptingBridge/_ScriptingBridge.abi3.so
+${PYSITELIB}/ScriptingBridge/_ScriptingBridge.so
 ${PYSITELIB}/ScriptingBridge/__init__.py
 ${PYSITELIB}/ScriptingBridge/__init__.pyc
 ${PYSITELIB}/ScriptingBridge/__init__.pyo

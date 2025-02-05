@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2023/11/19 17:02:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/05 08:05:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/pyobjc-build-info.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
-${PYSITELIB}/GameCenter/_GameCenter.abi3.so
+${PYSITELIB}/GameCenter/_GameCenter.so
 ${PYSITELIB}/GameCenter/__init__.py
 ${PYSITELIB}/GameCenter/__init__.pyc
 ${PYSITELIB}/GameCenter/__init__.pyo
