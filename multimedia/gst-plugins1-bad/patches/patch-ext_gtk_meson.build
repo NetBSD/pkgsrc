@@ -1,0 +1,16 @@
+$NetBSD: patch-ext_gtk_meson.build,v 1.1 2025/02/05 13:24:17 adam Exp $
+
+Exit the Gtk subdirectory if Wayland option is disabled.
+
+This is necessary to build the GStreamer libraries separately
+from the extension modules, since use_wayland (which is checked later)
+will be undefined in an extension build and cause an evaluation error.
+
+--- ext/gtk/meson.build.orig	2025-02-05 13:14:16.156988236 +0000
++++ ext/gtk/meson.build
+@@ -1,4 +1,4 @@
+-if not use_wayland
++if get_option('wayland').disabled() or not use_wayland
+   subdir_done()
+ endif
+ 
