@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2024/04/26 16:48:14 adam Exp $
+$NetBSD: distinfo,v 1.8 2025/02/05 20:49:27 adam Exp $
 
-BLAKE2s (eth_keys-0.5.1.tar.gz) = 20a843f5f0c80a91e05f32b397f286ab9f53d71b6e0533bf29eaf7c9cc071cde
-SHA512 (eth_keys-0.5.1.tar.gz) = 3e808f6c687bcc5f0225b4e6f1f60f3a98fd877a827d78c19d5d5f6efcc3e2ea95723fbd409625e669f0b75906889df1ffb1102b7c1695dc67e4b5e9ab77f98c
-Size (eth_keys-0.5.1.tar.gz) = 28969 bytes
+BLAKE2s (eth_keys-0.6.1.tar.gz) = 1b65aa3ce12e1971dd4e50b1881ad2b83a09c4611b03b20c6b3e822c84bb08bc
+SHA512 (eth_keys-0.6.1.tar.gz) = 91e1f5317c3791581b2e16087a175e098a732dc64826a6d287a3912829d8027d52d881389aaab4b79c1d422a2aacfce89223c61a8c6d55f923600d4f27e76417
+Size (eth_keys-0.6.1.tar.gz) = 30090 bytes
