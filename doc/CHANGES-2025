@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1078 2025/02/05 08:35:07 wen Exp $
+$NetBSD: CHANGES-2025,v 1.1079 2025/02/05 08:40:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1408,3 +1408,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added audio/py-discid version 1.2.0 [adam 2025-02-05]
 	Updated mail/p5-Mail-SPF to 3.20240923 [wen 2025-02-05]
 	Updated math/p5-Math-BigInt to 2.003004 [wen 2025-02-05]
+	Updated math/p5-Spreadsheet-Read to 0.91 [wen 2025-02-05]
