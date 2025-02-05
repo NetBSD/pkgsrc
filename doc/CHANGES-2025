@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1086 2025/02/05 16:12:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1087 2025/02/05 16:22:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1420,3 +1420,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/jj-docs version 0.25.0 [wiz 2025-02-05]
 	Updated audio/picard to 2.13.1 [adam 2025-02-05]
 	Updated devel/pcre2 to 10.45 [adam 2025-02-05]
+	Updated devel/py-maturin to 1.8.2 [adam 2025-02-05]
+	Updated time/py-dateparser to 1.2.1 [adam 2025-02-05]
