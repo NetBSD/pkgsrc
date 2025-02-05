@@ -1,0 +1,81 @@
+$NetBSD: patch-fixincludes_inclhack.def,v 1.3 2025/02/05 16:30:34 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- fixincludes/inclhack.def
++++ fixincludes/inclhack.def
+@@ -194,33 +194,6 @@ fix = {
+ 	_EndOfHeader_;
+ };
+
+-/*
+- *  SDKs for 10.13 and 10.14 omit the definitions for API_AVAILABLE where
+- *  __attribute__((availability)) is not supported.
+- */
+-fix = {
+-    hackname  = darwin_api_availability;
+-    mach      = "*-*-darwin*";
+-    files     = os/availability.h;
+-    bypass    = "__IPHONE_OS_VERSION_MIN_REQUIRED";
+-    select    =
+-    " *#define __API_AVAILABLE.*\n"
+-    " *#define __API_DEPRECATED.*\n"
+-    " *#define __API_DEPRECATED_WITH_REPLACEMENT.*\n"
+-    " *#define __API_UNAVAILABLE.*\n";
+-    c_fix     = format;
+-    c_fix_arg =
+-    "    #define API_AVAILABLE(...)\n"
+-    "    #define API_DEPRECATED(...)\n"
+-    "    #define API_DEPRECATED_WITH_REPLACEMENT(...)\n"
+-    "    #define API_UNAVAILABLE(...)\n";
+-    test_text =
+-    "#define __API_AVAILABLE(...)\n"
+-    "#define __API_DEPRECATED(...)\n"
+-    "#define __API_DEPRECATED_WITH_REPLACEMENT(...)\n"
+-    "#define __API_UNAVAILABLE(...)\n";
+-};
+-
+ /*
+  *  This fixes __FD_ZERO bug for linux 2.x.y (x <= 2 && y <= some n)
+  */
+@@ -1273,6 +1246,7 @@ fix = {
+     hackname  = apple_local_stdio_fn_deprecation;
+     mach      = "*-*-*darwin2*";
+     files     = stdio.h;
++    files     = _stdio.h;
+     select    = "__deprecated_msg([^\n]*)$";
+     c_fix     = format;
+     c_fix_arg = "#if defined(__APPLE_LOCAL_DEPRECATIONS)\n"
+@@ -1350,32 +1324,6 @@ fix = {
+     test_text = "extern void* malloc( size_t );";
+ };
+
+-/*
+- *  macOS 10.12 <AvailabilityInternal.h> uses __attribute__((availability))
+- *  unconditionally.
+- */
+-fix = {
+-    hackname  = darwin_availabilityinternal;
+-    mach      = "*-*-darwin*";
+-    files     = AvailabilityInternal.h;
+-    select    = "#define[ \t]+(__API_[ADU]\\([^)]*\\)).*";
+-    c_fix     = format;
+-    c_fix_arg = <<- _EOFix_
+-	#if defined(__has_attribute)
+-	  #if __has_attribute(availability)
+-	%0
+-	  #else
+-	    #define %1
+-	  #endif
+-	#else
+-	    #define %1
+-	#endif
+-	_EOFix_;
+-
+-    test_text = "#define __API_A(x) __attribute__((availability(__API_AVAILABLE_PLATFORM_##x)))\n"
+-		"#define __API_D(msg,x) __attribute__((availability(__API_DEPRECATED_PLATFORM_##x,message=msg)))";
+-};
+-
+ /*
+  *  For the AAB_darwin7_9_long_double_funcs fix (and later fixes for long long)
+  *  to be useful, the main math.h must use <> and not "" includes.

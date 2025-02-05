@@ -1,0 +1,15 @@
+$NetBSD: patch-libitm_configure.tgt,v 1.1 2025/02/05 16:30:37 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- libitm/configure.tgt
++++ libitm/configure.tgt
+@@ -50,7 +50,7 @@ fi
+ # Map the target cpu to an ARCH sub-directory.  At the same time,
+ # work out any special compilation flags as necessary.
+ case "${target_cpu}" in
+-  aarch64*)		ARCH=aarch64 ;;
++  aarch64* | arm64*)	ARCH=aarch64 ;;
+   alpha*)		ARCH=alpha ;;
+   rs6000 | powerpc*)
+ 	XCFLAGS="${XCFLAGS} -mhtm"

@@ -1,0 +1,17 @@
+$NetBSD: patch-gcc_testsuite_gcc.target_aarch64_sme_aarch64-sme.exp,v 1.1 2025/02/05 16:30:37 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/testsuite/gcc.target/aarch64/sme/aarch64-sme.exp
++++ gcc/testsuite/gcc.target/aarch64/sme/aarch64-sme.exp
+@@ -24,6 +24,11 @@ if {![istarget aarch64*-*-*] } {
+     return
+ }
+
++# Exit immediately if this is Darwin (for now).
++if {[istarget *-*-darwin*] } {
++    return
++}
++
+ # Load support procs.
+ load_lib gcc-dg.exp

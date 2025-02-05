@@ -1,0 +1,20 @@
+$NetBSD: patch-gcc_config_aarch64_aarch64.opt,v 1.1 2025/02/05 16:30:35 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/config/aarch64/aarch64.opt
++++ gcc/config/aarch64/aarch64.opt
+@@ -193,6 +193,13 @@ Enum(aarch64_abi) String(ilp32) Value(AARCH64_ABI_ILP32)
+ EnumValue
+ Enum(aarch64_abi) String(lp64) Value(AARCH64_ABI_LP64)
+
++EnumValue
++Enum(aarch64_abi) String(darwinpcs) Value(AARCH64_ABI_LP64)
++
++m64
++Target RejectNegative Alias(mabi=, darwinpcs)
++On Darwin for compatibility with other platform variants.
++
+ mpc-relative-literal-loads
+ Target Save Var(pcrelative_literal_loads) Init(2) Save
+ PC relative literal loads.
