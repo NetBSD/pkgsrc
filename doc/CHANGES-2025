@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1087 2025/02/05 16:22:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1088 2025/02/05 18:24:20 osa Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1422,3 +1422,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/pcre2 to 10.45 [adam 2025-02-05]
 	Updated devel/py-maturin to 1.8.2 [adam 2025-02-05]
 	Updated time/py-dateparser to 1.2.1 [adam 2025-02-05]
+	Updated www/nginx to 1.26.3 [osa 2025-02-05]
+	Updated www/nginx-devel to 1.27.4 [osa 2025-02-05]
