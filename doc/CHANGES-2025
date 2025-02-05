@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1091 2025/02/05 20:49:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1092 2025/02/05 20:56:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1433,3 +1433,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-mako to 1.3.9 [adam 2025-02-05]
 	Updated devel/py-inline-snapshot to 0.20.1 [adam 2025-02-05]
 	Updated finance/py-eth-keys to 0.6.1 [adam 2025-02-05]
+	Updated www/py-django4 to 4.2.19 [adam 2025-02-05]
+	Updated www/py-django to 5.1.6 [adam 2025-02-05]
+	Updated devel/py-boltons to 25.0.0 [adam 2025-02-05]
