@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/04/12 11:36:11 adam Exp $
+$NetBSD: distinfo,v 1.11 2025/02/05 19:54:35 adam Exp $
 
-BLAKE2s (eth-rlp-2.1.0.tar.gz) = e65248cf500d137392574460b1f73022abe13d606b93801f451ddc5485aa2f7c
-SHA512 (eth-rlp-2.1.0.tar.gz) = 0ae602f75858dc51301079907c54817950af75dab44a6727b4e51a71a3a233b48ebbe9400c766582eddf305e2a4603f48fff0d8b4c85437aa4eaf9859fcdcff2
-Size (eth-rlp-2.1.0.tar.gz) = 7345 bytes
+BLAKE2s (eth_rlp-2.2.0.tar.gz) = 37d39a7b1a59e9c2f58d49f8cc498e5a3b69991176a6c8387717462b47f94f93
+SHA512 (eth_rlp-2.2.0.tar.gz) = 702d854bf7a2d8ce67427e5f6d8df40c9e9bfbd1a5aecc8ef4b738fad519e20212be5a7e777f1aeb3e5cbe8ff6b7e9abdff9012180916fb511984246afb6d703
+Size (eth_rlp-2.2.0.tar.gz) = 7720 bytes
