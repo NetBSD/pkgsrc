@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/05 22:15:21 riastradh Exp $
 #
 
 DISTNAME=	log4cplus-2.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 GITHUB_RELEASE=	REL_2_0_3
 MASTER_SITES=	${MASTER_SITE_GITHUB:=log4cplus/}
@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ENV+=	ac_cv_thread_local=no
 CONFIGURE_ENV+=	ac_cv__thread_keyword=no
 .endif
+
+LIBS+=		${BUILDLINK_LDADD.iconv}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
