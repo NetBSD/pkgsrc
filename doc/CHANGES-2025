@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1082 2025/02/05 09:14:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1083 2025/02/05 12:55:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libcurl-gnutls to 8.12.0 [wiz 2025-02-05]
 	Updated audio/picard to 2.13 [adam 2025-02-05]
 	Updated www/py-beautifulsoup4 to 4.13.3 [adam 2025-02-05]
+	Added www/typo3-13 version 13.4.4 [wen 2025-02-05]
