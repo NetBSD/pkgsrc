@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2025/01/08 15:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2025/02/05 22:14:11 riastradh Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -47,6 +47,16 @@ PLIST.log=		yes
 # see patch-boost_math_tools_config.hpp
 .if ${OPSYS} != "FreeBSD"
 PLIST.longdbl=		yes
+.endif
+
+PLIST_VARS+=		stacktrace_addr2line
+
+# XXX In principle addr2line should work just as well in a cross-built
+# system as in a natively-built system, but it is detected by a
+# run-test and I don't know the boost-jam incantation to override that
+# test.  So for now, we'll just omit it.
+.if ${USE_CROSS_COMPILE:tl} == "no"
+PLIST.stacktrace_addr2line=	yes
 .endif
 
 # Add backtrace libs when they got built because of libbacktrace
