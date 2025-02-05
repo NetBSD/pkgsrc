@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1076 2025/02/05 08:08:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1077 2025/02/05 08:30:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1406,3 +1406,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/ghc90 [wiz 2025-02-05]
 	Updated devel/py-pyobjc to 11.0 [adam 2025-02-05]
 	Added audio/py-discid version 1.2.0 [adam 2025-02-05]
+	Updated mail/p5-Mail-SPF to 3.20240923 [wen 2025-02-05]
