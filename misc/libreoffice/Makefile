@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.352 2024/12/29 15:09:55 adam Exp $
+# $NetBSD: Makefile,v 1.353 2025/02/05 03:50:01 ryoon Exp $
 
-VERREL=		24.8.4
-VERRC=		2
+VERREL=		25.2.0
+VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -93,7 +92,7 @@ MORE_DISTFILES= \
 	907d6e99f241876695c19ff3db0b8923-source-code-pro-2.030R-ro-1.050R-it.tar.gz \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
 	source-serif-pro-3.000R.tar.gz \
-	xmlsec1-1.3.5.tar.gz \
+	xmlsec1-1.3.6.tar.gz \
 	3404ab6b1792ae5f16bbd603bd1e1d03-libformula-1.1.7.zip \
 	35c94d2df8893241173de1d16b6034c0-swingExSrc.zip \
 	39bb3fcea1514f1369fcfc87542390fd-sacjava-1.3.zip \
@@ -112,16 +111,16 @@ MORE_DISTFILES= \
 	33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip \
 	f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip \
 	mariadb-connector-c-3.3.13-src.tar.gz \
-	rhino-1.7.14.zip \
+	rhino-1.7.15.zip \
 	368f114c078f94214a308a74c7e991bc-crosextrafonts-20130214.tar.gz \
 	language-subtag-registry-2021-08-06.tar.bz2 \
-	postgresql-13.18.tar.bz2 \
+	postgresql-14.15.tar.bz2 \
 	graphite2-minimal-1.3.14.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz \
 	alef-1.001.tar.gz \
 	c74b7223abe75949b4af367942d96c7a-crosextrafonts-carlito-20130920.tar.gz \
-	culmus-0.133.tar.gz \
+	culmus-0.140.tar.gz \
 	ttf-kacst_2.01+mry.tar.gz \
 	libre-hebrew-1.0.tar.gz \
 	noto-fonts-20171024.tar.gz \
@@ -129,10 +128,10 @@ MORE_DISTFILES= \
 	lxml-4.1.1.tgz \
 	Amiri-1.000.zip \
 	ReemKufi-1.7.zip \
-	pdfium-6425.tar.bz2 \
+	pdfium-6764.tar.bz2 \
 	dtoa-20180411.tgz \
-	skia-m116-2ddcf183eb260f63698aa74d1bb380f247ad7ccd.tar.xz \
-	Java-WebSocket-1.5.6.tar.gz \
+	skia-m130-3c64459d5df2fa9794b277f0959ed8a92552bf4c.tar.xz \
+	Java-WebSocket-1.6.0.tar.gz \
 	NotoSans-v2.015.zip \
 	NotoSerif-v2.015.zip \
 	NotoSansHebrew-v3.001.zip \
@@ -268,6 +267,7 @@ CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
 CONFIGURE_ARGS+=	--with-system-libtommath
 CONFIGURE_ARGS+=	--with-system-openjpeg
 #CONFIGURE_ARGS+=	--with-help
+CONFIGURE_ARGS+=	--without-system-java-websocket
 
 LO_PROGRAMS=		libreoffice lobase localc lodraw loffice
 LO_PROGRAMS+=		lofromtemplate loimpress lomath loweb lowriter
