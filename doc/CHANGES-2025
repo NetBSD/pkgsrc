@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1074 2025/02/05 05:00:58 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1075 2025/02/05 07:50:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1398,3 +1398,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/libreoffice to 25.2.0.3 [ryoon 2025-02-05]
 	Updated www/snac to 2.71 [schmonz 2025-02-05]
 	Updated devel/asdf to 0.16.1 [schmonz 2025-02-05]
+	Removed lang/ghc7 [wiz 2025-02-05]
+	Removed lang/ghc80 [wiz 2025-02-05]
+	Removed lang/ghc84 [wiz 2025-02-05]
+	Removed lang/ghc88 [wiz 2025-02-05]
+	Removed lang/ghc810 [wiz 2025-02-05]
+	Removed lang/ghc90 [wiz 2025-02-05]

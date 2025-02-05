@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-GHC_VERSION="@GHC_VERSION@"
-
-case ${STAGE} in
-    DEINSTALL)
-        ${RM} -f ${PKG_PREFIX}/lib/${PKGBASE}-${GHC_VERSION}/package.conf.d/package.cache
-        ;;
-esac
