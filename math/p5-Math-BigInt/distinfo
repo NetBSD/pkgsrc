@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2024/07/29 04:53:34 wen Exp $
+$NetBSD: distinfo,v 1.18 2025/02/05 08:34:22 wen Exp $
 
-BLAKE2s (Math-BigInt-2.003003.tar.gz) = 9388086e599e33c70d9b7c96f6581d85c31d09070cef77d56c772937806a6413
-SHA512 (Math-BigInt-2.003003.tar.gz) = da742ac992df1bcb6a649eb4230195cb4c223f4192ac42a1d40b0ddb82fb1ebb71c24fba4d09cdee715b0e4db1fe7cd53c82b3d2387b05aaf13de69e2269b582
-Size (Math-BigInt-2.003003.tar.gz) = 2978556 bytes
+BLAKE2s (Math-BigInt-2.003004.tar.gz) = 7f9cd1cb8e5bdb910a94728da235be922888697b3ad77c2ae35fa9f26d8df7d9
+SHA512 (Math-BigInt-2.003004.tar.gz) = 0053caec3044ec78ad80fd20f5b3510e76f4d33482a655abe3c0f0f83771da6a807b103eefa1283728edd358b09092b980dde46ed25c6c293ea6790355ae8d93
+Size (Math-BigInt-2.003004.tar.gz) = 3048517 bytes
