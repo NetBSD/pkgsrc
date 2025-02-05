@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2025/01/08 15:23:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.49 2025/02/05 22:14:11 riastradh Exp $
 lib/cmake/Boost-${PKGVERSION}/BoostConfig.cmake
 lib/cmake/Boost-${PKGVERSION}/BoostConfigVersion.cmake
 lib/cmake/BoostDetectToolset-${PKGVERSION}.cmake
@@ -130,10 +130,10 @@ lib/cmake/boost_serialization-${PKGVERSION}/boost_serialization-config-version.c
 lib/cmake/boost_serialization-${PKGVERSION}/boost_serialization-config.cmake
 lib/cmake/boost_serialization-${PKGVERSION}/libboost_serialization-variant-shared.cmake
 lib/cmake/boost_serialization-${PKGVERSION}/libboost_serialization-variant-static.cmake
-lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/boost_stacktrace_addr2line-config-version.cmake
-lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/boost_stacktrace_addr2line-config.cmake
-lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/libboost_stacktrace_addr2line-variant-shared.cmake
-lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/libboost_stacktrace_addr2line-variant-static.cmake
+${PLIST.stacktrace_addr2line}lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/boost_stacktrace_addr2line-config-version.cmake
+${PLIST.stacktrace_addr2line}lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/boost_stacktrace_addr2line-config.cmake
+${PLIST.stacktrace_addr2line}lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/libboost_stacktrace_addr2line-variant-shared.cmake
+${PLIST.stacktrace_addr2line}lib/cmake/boost_stacktrace_addr2line-${PKGVERSION}/libboost_stacktrace_addr2line-variant-static.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config-version.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/boost_stacktrace_basic-config.cmake
 lib/cmake/boost_stacktrace_basic-${PKGVERSION}/libboost_stacktrace_basic-variant-shared.cmake
@@ -270,9 +270,9 @@ lib/libboost_regex.so.${PKGVERSION}
 lib/libboost_serialization.a
 lib/libboost_serialization.so
 lib/libboost_serialization.so.${PKGVERSION}
-lib/libboost_stacktrace_addr2line.a
-lib/libboost_stacktrace_addr2line.so
-lib/libboost_stacktrace_addr2line.so.${PKGVERSION}
+${PLIST.stacktrace_addr2line}lib/libboost_stacktrace_addr2line.a
+${PLIST.stacktrace_addr2line}lib/libboost_stacktrace_addr2line.so
+${PLIST.stacktrace_addr2line}lib/libboost_stacktrace_addr2line.so.${PKGVERSION}
 lib/libboost_stacktrace_basic.a
 lib/libboost_stacktrace_basic.so
 lib/libboost_stacktrace_basic.so.${PKGVERSION}
