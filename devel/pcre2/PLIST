@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/06/07 20:35:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/02/05 16:11:51 adam Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -76,10 +76,12 @@ man/man3/pcre2_set_max_pattern_length.3
 man/man3/pcre2_set_max_varlookbehind.3
 man/man3/pcre2_set_newline.3
 man/man3/pcre2_set_offset_limit.3
+man/man3/pcre2_set_optimize.3
 man/man3/pcre2_set_parens_nest_limit.3
 man/man3/pcre2_set_recursion_limit.3
 man/man3/pcre2_set_recursion_memory_management.3
 man/man3/pcre2_set_substitute_callout.3
+man/man3/pcre2_set_substitute_case_callout.3
 man/man3/pcre2_substitute.3
 man/man3/pcre2_substring_copy_byname.3
 man/man3/pcre2_substring_copy_bynumber.3
@@ -109,12 +111,13 @@ man/man3/pcre2sample.3
 man/man3/pcre2serialize.3
 man/man3/pcre2syntax.3
 man/man3/pcre2unicode.3
-share/doc/pcre2/AUTHORS
+share/doc/pcre2/AUTHORS.md
 share/doc/pcre2/COPYING
 share/doc/pcre2/ChangeLog
-share/doc/pcre2/LICENCE
+share/doc/pcre2/LICENCE.md
 share/doc/pcre2/NEWS
 share/doc/pcre2/README
+share/doc/pcre2/SECURITY.md
 share/doc/pcre2/html/NON-AUTOTOOLS-BUILD.txt
 share/doc/pcre2/html/README.txt
 share/doc/pcre2/html/index.html
@@ -180,10 +183,12 @@ share/doc/pcre2/html/pcre2_set_max_pattern_length.html
 share/doc/pcre2/html/pcre2_set_max_varlookbehind.html
 share/doc/pcre2/html/pcre2_set_newline.html
 share/doc/pcre2/html/pcre2_set_offset_limit.html
+share/doc/pcre2/html/pcre2_set_optimize.html
 share/doc/pcre2/html/pcre2_set_parens_nest_limit.html
 share/doc/pcre2/html/pcre2_set_recursion_limit.html
 share/doc/pcre2/html/pcre2_set_recursion_memory_management.html
 share/doc/pcre2/html/pcre2_set_substitute_callout.html
+share/doc/pcre2/html/pcre2_set_substitute_case_callout.html
 share/doc/pcre2/html/pcre2_substitute.html
 share/doc/pcre2/html/pcre2_substring_copy_byname.html
 share/doc/pcre2/html/pcre2_substring_copy_bynumber.html
