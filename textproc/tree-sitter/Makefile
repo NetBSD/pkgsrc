@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/02/02 17:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/05 09:38:30 jperkin Exp $
 
 DISTNAME=	tree-sitter-0.25.1
 PKGREVISION=	1
@@ -17,5 +17,7 @@ PKGCONFIG_OVERRIDE+=	lib/tree-sitter.pc.in
 # for be16toh and friends
 # https://github.com/tree-sitter/tree-sitter/issues/4180
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
+
+CPPFLAGS.SunOS+=	-DHAVE_ENDIAN_H
 
 .include "../../mk/bsd.pkg.mk"
