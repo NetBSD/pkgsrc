@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2024/11/11 07:28:02 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/05 20:56:23 adam Exp $
 
-DISTNAME=	boltons-24.1.0
+DISTNAME=	boltons-25.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/boltons/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/mahmoud/boltons
 COMMENT=	Functionality that should be in the standard library
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
