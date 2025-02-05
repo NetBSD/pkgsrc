@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/05 12:50:49 wen Exp $
+
+BLAKE2s (typo3_src-13.4.4.tar.gz) = cffda661e6c9b6882ad2d4c2c7f7e93fda2535ae745e1a2b27dc0ca638bf3330
+SHA512 (typo3_src-13.4.4.tar.gz) = 40dd3d10376d883d64b742b7577891af439863d80d7b825779883e49d1ad8fba550847af2640e8904214c0e280955e617f2ff3c1a9877dca16d466cc4189d7e0
+Size (typo3_src-13.4.4.tar.gz) = 25784463 bytes
