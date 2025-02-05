@@ -1,0 +1,27 @@
+$NetBSD: patch-gcc_common.opt,v 1.1 2025/02/05 16:30:35 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/common.opt
++++ gcc/common.opt
+@@ -2919,6 +2919,10 @@ fstack-usage
+ Common RejectNegative Var(flag_stack_usage)
+ Output stack usage information on a per-function basis.
+
++fstack-use-cumulative-args
++Common RejectNegative Var(flag_stack_use_cumulative_args) Init(STACK_USE_CUMULATIVE_ARGS_INIT)
++Use cumulative args-based stack layout hooks.
++
+ fstrength-reduce
+ Common Ignore
+ Does nothing.  Preserved for backward compatibility.
+@@ -3292,6 +3296,10 @@ fuse-ld=mold
+ Common Driver Negative(fuse-ld=mold)
+ Use the Modern linker (MOLD) linker instead of the default linker.
+
++fuse-ld=classic
++Common Driver Negative(fuse-ld=classic)
++Use the ld-classic linker instead of the default linker.
++
+ fuse-linker-plugin
+ Common Undocumented Var(flag_use_linker_plugin)

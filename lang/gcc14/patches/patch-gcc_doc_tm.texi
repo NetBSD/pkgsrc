@@ -1,0 +1,63 @@
+$NetBSD: patch-gcc_doc_tm.texi,v 1.1 2025/02/05 16:30:36 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/doc/tm.texi
++++ gcc/doc/tm.texi
+@@ -1066,6 +1066,10 @@ also define the hook to @code{default_promote_function_mode_always_promote}
+ if you would like to apply the same rules given by @code{PROMOTE_MODE}.
+ @end deftypefn
+
++@deftypefn {Target Hook} machine_mode TARGET_PROMOTE_FUNCTION_MODE_CA (cumulative_args_t, @var{function_arg_info}, @var{const_tree}, int *@var{}, @var{int})
++Like @code{promote_function_mode}, but takes a cumulative_args pointer   and a current arg to supply the input.
++@end deftypefn
++
+ @defmac PARM_BOUNDARY
+ Normal alignment required for function parameters on the stack, in
+ bits.  All stack parameters receive at least this much alignment
+@@ -4471,6 +4475,16 @@ with the specified mode and type.  The default hook returns
+ @code{PARM_BOUNDARY} for all arguments.
+ @end deftypefn
+
++@deftypefn {Target Hook} {unsigned int} TARGET_FUNCTION_ARG_BOUNDARY_CA (machine_mode @var{mode}, const_tree @var{type}, cumulative_args_t @var{ca})
++This is the @code{cumulative_args_t}-based version of
++@code{TARGET_FUNCTION_ARG_BOUNDARY}. Define this hook if you need more
++fine-grained control over argument alignment, e.g. depending on whether
++it is a named argument or not, or any other criteria that you choose to
++place in the @var{ca} structure.
++
++The default hook will call @code{TARGET_FUNCTION_ARG_BOUNDARY}.
++@end deftypefn
++
+ @deftypefn {Target Hook} {unsigned int} TARGET_FUNCTION_ARG_ROUND_BOUNDARY (machine_mode @var{mode}, const_tree @var{type})
+ Normally, the size of an argument is rounded up to @code{PARM_BOUNDARY},
+ which is the default value for this hook.  You can define this hook to
+@@ -4478,6 +4492,16 @@ return a different value if an argument size must be rounded to a larger
+ value.
+ @end deftypefn
+
++@deftypefn {Target Hook} {unsigned int} TARGET_FUNCTION_ARG_ROUND_BOUNDARY_CA (machine_mode @var{mode}, const_tree @var{type}, cumulative_args_t @var{ca})
++This is the @code{cumulative_args_t}-based version of
++@code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY}. Define this hook if you need more
++fine-grained control over argument size rounding, e.g. depending on whether
++it is a named argument or not, or any other criteria that you choose to
++place in the @var{ca} structure.
++
++The default hook will call @code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY}.
++@end deftypefn
++
+ @defmac FUNCTION_ARG_REGNO_P (@var{regno})
+ A C expression that is nonzero if @var{regno} is the number of a hard
+ register in which function arguments are sometimes passed.  This does
+@@ -12709,6 +12733,11 @@ This target hook can be used to generate a target-specific code
+ If selftests are enabled, run any selftests for this target.
+ @end deftypefn
+
++@deftypefn {Target Hook} bool TARGET_UNREACHABLE_SHOULD_TRAP (void)
++This hook should return @code{true} if the target wants   @code{__builtin_unreachable} to expand to a trap or @code{abort ()}.
++  The default value is false.
++@end deftypefn
++
+ @deftypefn {Target Hook} bool TARGET_MEMTAG_CAN_TAG_ADDRESSES ()
+ True if the backend architecture naturally supports ignoring some region
+ of pointers.  This feature means that @option{-fsanitize=hwaddress} can

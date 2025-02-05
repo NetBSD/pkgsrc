@@ -1,0 +1,14 @@
+$NetBSD: patch-libgcc_config_aarch64_t-darwin,v 1.1 2025/02/05 16:30:37 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- /dev/null
++++ libgcc/config/aarch64/t-darwin
+@@ -0,0 +1,7 @@
++# Ensure we have a suitable minimum OS version.
++
++HOST_LIBGCC2_CFLAGS += -mmacosx-version-min=11.0
++
++LIB2_SIDITI_CONV_FUNCS = yes
++
++BUILD_LIBGCCS1 =

@@ -1,0 +1,74 @@
+$NetBSD: patch-gcc_target.def,v 1.1 2025/02/05 16:30:36 adam Exp $
+
+Support Darwin/aarch64, from https://github.com/Homebrew/formula-patches.
+
+--- gcc/target.def
++++ gcc/target.def
+@@ -4680,6 +4680,13 @@ if you would like to apply the same rules given by @code{PROMOTE_MODE}.",
+ 		     const_tree funtype, int for_return),
+  default_promote_function_mode)
+
++DEFHOOK
++(promote_function_mode_ca,
++ "Like @code{promote_function_mode}, but takes a cumulative_args pointer \
++  and a current arg to supply the input.",
++ machine_mode, (cumulative_args_t, function_arg_info, const_tree, int *, int),
++ default_promote_function_mode_ca)
++
+ DEFHOOK
+ (promote_prototypes,
+  "This target hook returns @code{true} if an argument declared in a\n\
+@@ -5133,6 +5140,18 @@ with the specified mode and type.  The default hook returns\n\
+  unsigned int, (machine_mode mode, const_tree type),
+  default_function_arg_boundary)
+
++DEFHOOK
++(function_arg_boundary_ca,
++ "This is the @code{cumulative_args_t}-based version of\n\
++@code{TARGET_FUNCTION_ARG_BOUNDARY}. Define this hook if you need more\n\
++fine-grained control over argument alignment, e.g. depending on whether\n\
++it is a named argument or not, or any other criteria that you choose to\n\
++place in the @var{ca} structure.\n\
++\n\
++The default hook will call @code{TARGET_FUNCTION_ARG_BOUNDARY}.",
++ unsigned int, (machine_mode mode, const_tree type, cumulative_args_t ca),
++ default_function_arg_boundary_ca)
++
+ DEFHOOK
+ (function_arg_round_boundary,
+  "Normally, the size of an argument is rounded up to @code{PARM_BOUNDARY},\n\
+@@ -5142,6 +5161,18 @@ value.",
+  unsigned int, (machine_mode mode, const_tree type),
+  default_function_arg_round_boundary)
+
++DEFHOOK
++(function_arg_round_boundary_ca,
++ "This is the @code{cumulative_args_t}-based version of\n\
++@code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY}. Define this hook if you need more\n\
++fine-grained control over argument size rounding, e.g. depending on whether\n\
++it is a named argument or not, or any other criteria that you choose to\n\
++place in the @var{ca} structure.\n\
++\n\
++The default hook will call @code{TARGET_FUNCTION_ARG_ROUND_BOUNDARY}.",
++ unsigned int, (machine_mode mode, const_tree type, cumulative_args_t ca),
++ default_function_arg_round_boundary_ca)
++
+ /* Return the diagnostic message string if function without a prototype
+    is not allowed for this 'val' argument; NULL otherwise. */
+ DEFHOOK
+@@ -7389,6 +7420,16 @@ DEFHOOKPOD
+ libatomic.  The default value is false.",
+  bool, false)
+
++/* This value represents whether __builtin_unreachable should be expanded
++   as a trap instruction (or an abort() if the trap is not available).  */
++DEFHOOK
++(unreachable_should_trap,
++ "This hook should return @code{true} if the target wants \
++  @code{__builtin_unreachable} to expand to a trap or @code{abort ()}.\n\
++  The default value is false.",
++ bool, (void),
++ hook_bool_void_false)
++
+ /* Close the 'struct gcc_target' definition.  */
+ HOOK_VECTOR_END (C90_EMPTY_HACK)
