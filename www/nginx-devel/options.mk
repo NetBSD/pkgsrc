@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2025/01/14 17:45:00 osa Exp $
+# $NetBSD: options.mk,v 1.39 2025/02/05 19:00:26 osa Exp $
 
 CODELOAD_SITE_GITHUB=		https://codeload.github.com/
 
@@ -33,7 +33,7 @@ _addextmod=		add-module
 
 # documentation says naxsi must be the first module
 .if !empty(PKG_OPTIONS:Mnaxsi) || make(makesum) || make(mdi) || make(distclean)
-NAXSI_VERSION=			1.6
+NAXSI_VERSION=			1.7
 NAXSI_DISTFILE=			naxsi-${NAXSI_VERSION}-src-with-deps.tar.gz
 SITES.${NAXSI_DISTFILE}=	${MASTER_SITE_GITHUB:=wargio/naxsi/releases/download/${NAXSI_VERSION}/}
 DISTFILES+=			${NAXSI_DISTFILE}
@@ -148,7 +148,7 @@ DISTFILES+=		${NDK_DISTFILE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mluajit) || make(makesum) || make(mdi) || make(distclean)
-LUA_VERSION=		0.10.27
+LUA_VERSION=		0.10.28
 LUA_DISTNAME=		lua-nginx-module-${LUA_VERSION}
 LUA_DISTFILE=		${LUA_DISTNAME}.tar.gz
 SITES.${LUA_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/lua-nginx-module/archive/}v${LUA_VERSION}.tar.gz
@@ -226,7 +226,7 @@ PLIST.forminput=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mheaders-more) || make(makesum) || make(mdi) || make(distclean)
-HEADMORE_VERSION=		0.37
+HEADMORE_VERSION=		0.38
 HEADMORE_DISTNAME=		headers-more-nginx-module-${HEADMORE_VERSION}
 HEADMORE_DISTFILE=		${HEADMORE_DISTNAME}.tar.gz
 SITES.${HEADMORE_DISTFILE}=	-${MASTER_SITE_GITHUB:=openresty/headers-more-nginx-module/archive/}v${HEADMORE_VERSION}.tar.gz
@@ -290,7 +290,7 @@ CONFIGURE_ARGS+=	--with-http_auth_request_module
 .endif
 
 .if !empty(PKG_OPTIONS:Mcache-purge) || make(makesum) || make(mdi) || make(distclean)
-CPRG_VERSION=		2.5.1
+CPRG_VERSION=		2.5.3
 CPRG_DISTNAME=		ngx_cache_purge-${CPRG_VERSION}
 CPRG_DISTFILE=		${CPRG_DISTNAME}.tar.gz
 SITES.${CPRG_DISTFILE}=	-${MASTER_SITE_GITHUB:=nginx-modules/ngx_cache_purge/archive/}${CPRG_VERSION}.tar.gz
@@ -350,7 +350,7 @@ PLIST.upload=		yes
 .if !empty(PKG_OPTIONS:Mgssapi) || make(makesum) || make(mdi) || make(distclean)
 GSSAPI_GH_ACCOUNT=	stnoonan
 GSSAPI_GH_PROJECT=	spnego-http-auth-nginx-module
-GSSAPI_VERSION=		3575542
+GSSAPI_VERSION=		b62dadb
 GSSAPI_DISTNAME=		${GSSAPI_GH_PROJECT}-${GSSAPI_VERSION}
 GSSAPI_DISTFILE=		${GSSAPI_GH_ACCOUNT}-${GSSAPI_DISTNAME}_GH.tar.gz
 SITES.${GSSAPI_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${GSSAPI_GH_ACCOUNT}/${GSSAPI_GH_PROJECT}/tar.gz/${GSSAPI_VERSION}?dummy=${GSSAPI_DISTFILE}}
@@ -374,7 +374,7 @@ PLIST.sts=		yes
 .if !empty(PKG_OPTIONS:Mvts) || make(makesum) || make(mdi) || make(distclean)
 VTS_GH_ACCOUNT=		vozlt
 VTS_GH_PROJECT=		nginx-module-vts
-VTS_VERSION=		bf64dbf
+VTS_VERSION=		b6f6528
 VTS_DISTNAME=		${VTS_GH_PROJECT}-${VTS_VERSION}
 VTS_DISTFILE=		${VTS_GH_ACCOUNT}-${VTS_DISTNAME}_GH.tar.gz
 SITES.${VTS_DISTFILE}=	-${CODELOAD_SITE_GITHUB:=${VTS_GH_ACCOUNT}/${VTS_GH_PROJECT}/tar.gz/${VTS_VERSION}?dummy=${VTS_DISTFILE}}
