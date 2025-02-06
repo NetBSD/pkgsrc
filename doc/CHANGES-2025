@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1106 2025/02/06 09:58:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1107 2025/02/06 10:03:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1453,3 +1453,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp to 3.11.12 [adam 2025-02-06]
 	Updated textproc/py-json-logger to 3.2.1 [adam 2025-02-06]
 	Added www/chromium version 131.0.6778.204nb1 [wiz 2025-02-06]
+	Updated devel/py-jupyter_events to 0.12.0 [adam 2025-02-06]
+	Updated www/py-jupyterlab to 4.3.5 [adam 2025-02-06]
