@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2025/01/27 10:46:16 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/06 09:57:42 adam Exp $
 
-DISTNAME=	jupyter_events-0.11.0
+DISTNAME=	jupyter_events-0.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyter-events/}
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.5:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-jsonschema>=4.18.0:../../textproc/py-jsonschema
 DEPENDS+=	${PYPKGPREFIX}-json-logger>=2.0.4:../../textproc/py-json-logger
+DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-referencing-[0-9]*:../../textproc/py-referencing
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-validator-[0-9]*:../../time/py-rfc3339-validator
 DEPENDS+=	${PYPKGPREFIX}-rfc3986-validator>=0.1.1:../../www/py-rfc3986-validator
