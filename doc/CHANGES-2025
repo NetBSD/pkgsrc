@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1096 2025/02/06 00:30:45 wen Exp $
+$NetBSD: CHANGES-2025,v 1.1097 2025/02/06 00:37:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/p5-DBIx-Class-Candy to 0.005004 [wen 2025-02-05]
 	Updated databases/p5-DBIx-Class-Helpers to 2.037000 [wen 2025-02-05]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07052 [wen 2025-02-06]
+	Updated databases/p5-DBIx-Class to 0.82844 [wen 2025-02-06]
