@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.299 2025/02/02 09:36:33 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.300 2025/02/06 18:39:14 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26131,3 +26131,4 @@ vim<9.1.1043	out-of-bounds-write	https://github.com/vim/vim/security/advisories/
 bind>=9.16<9.18		eol		http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 drupal>=9<10	eol	https://www.drupal.org/psa-2023-11-01
 drupal>=7<8	eol	https://www.drupal.org/psa-2025-01-06
+libtasn1<4.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-12133
