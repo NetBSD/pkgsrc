@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1117 2025/02/06 13:51:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1118 2025/02/06 14:36:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1467,3 +1467,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-notebook to 7.3.2 [adam 2025-02-06]
 	Updated www/py-scgi to 2.2 [adam 2025-02-06]
 	Removed devel/py-quixote [adam 2025-02-06]
+	Updated devel/talloc to 2.4.3 [adam 2025-02-06]
+	Updated devel/tevent to 0.16.2 [adam 2025-02-06]
+	Updated databases/tdb to 1.4.13 [adam 2025-02-06]
