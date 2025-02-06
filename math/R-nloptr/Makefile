@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2024/11/06 14:06:25 mef Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/06 08:48:59 adam Exp $
 
 R_PKGNAME=	nloptr
 R_PKGVER=	2.1.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	R interface to NLopt
+PKGREVISION=	1
 LICENSE=	gnu-lgpl-v3
 
 TEST_DEPENDS+=	R-covr-[0-9]*:../../devel/R-covr
