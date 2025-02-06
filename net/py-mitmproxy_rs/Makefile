@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2025/02/04 12:10:02 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/06 13:28:12 wiz Exp $
+#
+# When updating this, make sure that net/mitmproxy still
+# works - usually it also needs to be updated.
 
 DISTNAME=	mitmproxy_rs-0.11.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
