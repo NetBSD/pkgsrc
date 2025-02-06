@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1108 2025/02/06 11:19:35 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1109 2025/02/06 11:20:42 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jupyter_events to 0.12.0 [adam 2025-02-06]
 	Updated www/py-jupyterlab to 4.3.5 [adam 2025-02-06]
 	Updated devel/ast-grep to 0.34.4 [pin 2025-02-06]
+	Updated devel/cargo-release to 0.25.17 [pin 2025-02-06]
