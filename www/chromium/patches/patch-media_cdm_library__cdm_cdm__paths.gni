@@ -1,0 +1,17 @@
+$NetBSD: patch-media_cdm_library__cdm_cdm__paths.gni,v 1.1 2025/02/06 09:58:12 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/cdm/library_cdm/cdm_paths.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ media/cdm/library_cdm/cdm_paths.gni
+@@ -15,7 +15,7 @@ assert(enable_library_cdms)
+ # Explicitly define what we use to avoid confusion.
+ if (is_chromeos) {
+   component_os = "cros"
+-} else if (is_linux) {
++} else if (is_linux || is_bsd) {
+   component_os = "linux"
+ } else if (is_win) {
+   component_os = "win"

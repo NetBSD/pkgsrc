@@ -1,0 +1,19 @@
+$NetBSD: patch-build_linux_chrome.map,v 1.1 2025/02/06 09:57:44 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/linux/chrome.map.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/linux/chrome.map
+@@ -20,6 +20,10 @@ global:
+   # Program entry point.
+   _start;
+ 
++  # FreeBSD specific variables.
++  __progname;
++  environ;
++
+   # Memory allocation symbols.  We want chrome and any libraries to
+   # share the same heap, so it is correct to export these symbols.
+   aligned_alloc;

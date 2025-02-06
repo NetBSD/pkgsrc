@@ -1,0 +1,17 @@
+$NetBSD: patch-sandbox_BUILD.gn,v 1.1 2025/02/06 09:58:18 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- sandbox/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ sandbox/BUILD.gn
+@@ -49,7 +49,7 @@ group("sandbox") {
+       "//sandbox/mac:system_services",
+       "//sandbox/mac/mojom",
+     ]
+-  } else if (is_linux || is_chromeos || is_android) {
++  } else if ((is_linux && !is_bsd) || is_chromeos || is_android) {
+     public_deps = [ "//sandbox/linux:sandbox" ]
+   }
+ }

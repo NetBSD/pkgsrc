@@ -1,0 +1,17 @@
+$NetBSD: patch-net_dns_public_BUILD.gn,v 1.1 2025/02/06 09:58:15 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/dns/public/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ net/dns/public/BUILD.gn
+@@ -78,7 +78,7 @@ source_set("tests") {
+     "doh_provider_entry_unittest.cc",
+   ]
+ 
+-  if (is_posix && !is_android) {
++  if (is_posix && !is_android && !is_bsd) {
+     sources += [ "resolv_reader_unittest.cc" ]
+   }
+ 

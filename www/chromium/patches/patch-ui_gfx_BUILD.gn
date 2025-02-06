@@ -1,0 +1,17 @@
+$NetBSD: patch-ui_gfx_BUILD.gn,v 1.1 2025/02/06 09:58:32 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/gfx/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ ui/gfx/BUILD.gn
+@@ -666,7 +666,7 @@ source_set("memory_buffer_sources") {
+     deps += [ "//build/config/linux/libdrm" ]
+   }
+ 
+-  if (is_linux || is_chromeos || is_android) {
++  if ((is_linux || is_chromeos || is_android) && !is_bsd) {
+     deps += [ "//third_party/libsync" ]
+   }
+ 

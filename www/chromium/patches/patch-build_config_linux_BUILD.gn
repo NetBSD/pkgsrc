@@ -1,0 +1,17 @@
+$NetBSD: patch-build_config_linux_BUILD.gn,v 1.1 2025/02/06 09:57:43 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/linux/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/config/linux/BUILD.gn
+@@ -41,7 +41,7 @@ config("runtime_library") {
+   }
+ 
+   if ((!is_chromeos || default_toolchain != "//build/toolchain/cros:target") &&
+-      (!use_custom_libcxx || current_cpu == "mipsel")) {
++      (!use_custom_libcxx || current_cpu == "mipsel") && !is_bsd) {
+     libs = [ "atomic" ]
+   }
+ }

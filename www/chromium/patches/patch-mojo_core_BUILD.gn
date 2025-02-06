@@ -1,0 +1,17 @@
+$NetBSD: patch-mojo_core_BUILD.gn,v 1.1 2025/02/06 09:58:14 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- mojo/core/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ mojo/core/BUILD.gn
+@@ -161,7 +161,7 @@ source_set("impl_for_embedder") {
+       ]
+     }
+ 
+-    if ((is_linux || is_chromeos || is_android) && !is_nacl) {
++    if ((is_linux || is_chromeos || is_android) && !is_nacl && !is_bsd) {
+       sources += [
+         "channel_linux.cc",
+         "channel_linux.h",

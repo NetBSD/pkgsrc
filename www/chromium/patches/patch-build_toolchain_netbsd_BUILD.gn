@@ -1,0 +1,75 @@
+$NetBSD: patch-build_toolchain_netbsd_BUILD.gn,v 1.1 2025/02/06 09:57:44 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/toolchain/netbsd/BUILD.gn.orig	2024-12-21 10:25:09.682613681 +0000
++++ build/toolchain/netbsd/BUILD.gn
+@@ -0,0 +1,66 @@
++# Copyright 2013 The Chromium Authors. All rights reserved.
++# Use of this source code is governed by a BSD-style license that can be
++# found in the LICENSE file.
++
++import("//build/config/sysroot.gni")
++import("//build/toolchain/gcc_toolchain.gni")
++
++clang_toolchain("clang_x86") {
++  toolchain_args = {
++    current_cpu = "x86"
++    current_os = "netbsd"
++  }
++}
++
++gcc_toolchain("x86") {
++  cc = "gcc"
++  cxx = "g++"
++
++  readelf = "readelf"
++  nm = "nm"
++  ar = "ar"
++  ld = cxx
++
++  toolchain_args = {
++    current_cpu = "x86"
++    current_os = "netbsd"
++    is_clang = false
++  }
++}
++
++clang_toolchain("clang_x64") {
++  toolchain_args = {
++    current_cpu = "x64"
++    current_os = "netbsd"
++  }
++}
++
++gcc_toolchain("x64") {
++  cc = "gcc"
++  cxx = "g++"
++
++  readelf = "readelf"
++  nm = "nm"
++  ar = "ar"
++  ld = cxx
++
++  toolchain_args = {
++    current_cpu = "x64"
++    current_os = "netbsd"
++    is_clang = false
++  }
++}
++
++clang_toolchain("clang_arm") {
++  toolchain_args = {
++    current_cpu = "arm64"
++    current_os = "netbsd"
++  }
++}
++
++clang_toolchain("clang_arm64") {
++  toolchain_args = {
++    current_cpu = "arm64"
++    current_os = "netbsd"
++  }
++}

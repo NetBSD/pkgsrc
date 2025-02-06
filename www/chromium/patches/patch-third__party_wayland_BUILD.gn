@@ -1,0 +1,20 @@
+$NetBSD: patch-third__party_wayland_BUILD.gn,v 1.1 2025/02/06 09:58:28 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/wayland/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/wayland/BUILD.gn
+@@ -24,6 +24,11 @@ if (!use_system_libwayland) {
+       "src/src",
+     ]
+ 
++    if (is_bsd) {
++      include_dirs += [ "/usr/local/include/libepoll-shim" ]
++      libs = [ "epoll-shim" ]
++    }   
++
+     # Client/Server headers are automatically generated. Though, we still need
+     # to pass the path where these headers are located.
+     include_dirs += [ "$root_gen_dir/third_party/wayland/src/protocol" ]

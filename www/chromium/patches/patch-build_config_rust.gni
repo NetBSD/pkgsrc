@@ -1,0 +1,28 @@
+$NetBSD: patch-build_config_rust.gni,v 1.1 2025/02/06 09:57:43 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/rust.gni.orig	2024-12-17 18:58:49.000000000 +0100
++++ build/config/rust.gni
+@@ -201,7 +201,7 @@ if (is_linux || is_chromeos) {
+     rust_abi_target = "aarch64-unknown-linux-gnu"
+     cargo_target_abi = ""
+   } else if (current_cpu == "x86") {
+-    rust_abi_target = "i686-unknown-linux-gnu"
++    rust_abi_target = "i586-unknown-linux-gnu"
+     cargo_target_abi = ""
+   } else if (current_cpu == "x64") {
+     rust_abi_target = "x86_64-unknown-linux-gnu"
+@@ -321,6 +321,10 @@ if (is_linux || is_chromeos) {
+   }
+ }
+ 
++if (is_bsd) {
++  rust_abi_target = string_replace(rust_abi_target, "linux-gnu", current_os)
++}
++
+ assert(!toolchain_has_rust || rust_abi_target != "")
+ 
+ # This variable is passed to the Rust libstd build.

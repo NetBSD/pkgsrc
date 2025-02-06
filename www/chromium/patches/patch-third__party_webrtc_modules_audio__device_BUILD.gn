@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_webrtc_modules_audio__device_BUILD.gn,v 1.1 2025/02/06 09:58:29 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/webrtc/modules/audio_device/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/webrtc/modules/audio_device/BUILD.gn
+@@ -330,7 +330,7 @@ rtc_library("audio_device_impl") {
+     if (rtc_use_dummy_audio_file_devices) {
+       defines += [ "WEBRTC_DUMMY_FILE_DEVICES" ]
+     } else {
+-      if (is_linux || is_chromeos) {
++      if ((is_linux || is_chromeos) && !is_bsd) {
+         sources += [
+           "linux/alsasymboltable_linux.cc",
+           "linux/alsasymboltable_linux.h",

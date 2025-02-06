@@ -1,0 +1,45 @@
+$NetBSD: patch-media_audio_BUILD.gn,v 1.1 2025/02/06 09:58:11 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/audio/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ media/audio/BUILD.gn
+@@ -268,10 +268,35 @@ source_set("audio") {
+     deps += [ "//media/base/android:media_jni_headers" ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [ "linux/audio_manager_linux.cc" ]
+   }
+ 
++  if (is_bsd && !use_audioio) {
++    sources += [ "sndio/audio_manager_sndio.cc" ]
++  }
++
++  if (use_sndio) {
++    libs += [ "sndio" ]
++    sources += [
++      "sndio/sndio_input.cc",
++      "sndio/sndio_input.h",
++      "sndio/sndio_output.cc",
++      "sndio/sndio_output.h"
++    ]
++   }
++
++  if (use_audioio) {
++    sources += [
++      "audioio/audio_manager_audioio.cc",
++      "audioio/audio_manager_audioio.h",
++      "audioio/audioio_input.cc",
++      "audioio/audioio_input.h",
++      "audioio/audioio_output.cc",
++      "audioio/audioio_output.h"
++    ]
++   }
++
+   if (use_alsa) {
+     libs += [ "asound" ]
+     sources += [

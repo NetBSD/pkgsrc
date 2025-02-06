@@ -1,0 +1,39 @@
+$NetBSD: patch-content_browser_BUILD.gn,v 1.1 2025/02/06 09:58:04 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/browser/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ content/browser/BUILD.gn
+@@ -2434,6 +2434,14 @@ source_set("browser") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources += [
++      "file_system_access/file_path_watcher/file_path_watcher_bsd.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_kqueue.h",
++    ]
++  }
++
+   if (is_linux || is_chromeos) {
+     sources += [
+       "child_process_launcher_helper_linux.cc",
+@@ -2479,6 +2487,15 @@ source_set("browser") {
+     deps += [ "//media/mojo/mojom/stable:stable_video_decoder" ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.cc",
++      "file_system_access/file_path_watcher/file_path_watcher_inotify.h",
++      "sandbox_ipc_linux.cc",
++      "sandbox_ipc_linux.h",
++    ]
++  }
++
+   if (is_chromeos) {
+     sources += [
+       "handwriting/handwriting_recognition_service_impl_cros.cc",

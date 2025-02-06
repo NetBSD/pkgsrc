@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_sqlite_BUILD.gn,v 1.1 2025/02/06 09:58:28 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/sqlite/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/sqlite/BUILD.gn
+@@ -142,7 +142,7 @@ config("sqlite_warnings") {
+       ]
+     }
+   }
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     cflags += [
+       # SQLite doesn't believe in compiler warnings, preferring testing.
+       # http://www.sqlite.org/faq.html#q17
