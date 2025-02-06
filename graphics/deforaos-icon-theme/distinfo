@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2021/10/26 10:46:04 nia Exp $
+$NetBSD: distinfo,v 1.10 2025/02/06 01:16:23 khorben Exp $
 
-BLAKE2s (DeforaOS-Artwork-0.1.3.tar.gz) = 202435f7b14725235034be3e3204565567db102c0e06247b52a3d2904c2f71a0
-SHA512 (DeforaOS-Artwork-0.1.3.tar.gz) = 43d35b948d7e546025371be18aa1fea7a4f5ed6b34f6bb9e7efa6c67532b6c2699e201f04eb02039d2b79a3523a09e43a46b34303f534870a46c538d584524f4
-Size (DeforaOS-Artwork-0.1.3.tar.gz) = 21400 bytes
-SHA1 (patch-src_convert.sh) = 2dcc716fbb9d01fb19938be3b08dfbdf80326e4a
+BLAKE2s (DeforaOS-Artwork-0.1.4.tar.gz) = d09e5617cc2412af7cb4279c193ed5acfa7964a25cb45143ab9ff0b33f5a3957
+SHA512 (DeforaOS-Artwork-0.1.4.tar.gz) = c464531acaedda7739aa56cdcc908f1f63debb28aa28590b80880b5e6a1eeff60c2691886d1ef0a2cd9f42bbb1d3af4269c33b0db8c16ba2835541ae51555ee6
+Size (DeforaOS-Artwork-0.1.4.tar.gz) = 21822 bytes
