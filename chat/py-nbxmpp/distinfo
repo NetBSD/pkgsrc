@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/08/06 23:21:25 gdt Exp $
+$NetBSD: distinfo,v 1.11 2025/02/06 20:45:37 gdt Exp $
 
-BLAKE2s (nbxmpp-2.0.6.tar.gz) = d12a293f2298bbffc7030ebe568db45ffb8f50a248bd57b84e5e1a6ad73721b6
-SHA512 (nbxmpp-2.0.6.tar.gz) = 258cdc253b91e8550f26236f80fe16ad112c58fd936337a5b11563db8d2535004475ed7bdf5a78172640cd6d6dc86c654f2feb1d4b38a62b92566768c74d65a0
-Size (nbxmpp-2.0.6.tar.gz) = 141999 bytes
+BLAKE2s (nbxmpp-4.4.0.tar.gz) = 72f58696084bf91697a99c107aa6939e401e5111685b6bd69a661294bddb4a5e
+SHA512 (nbxmpp-4.4.0.tar.gz) = c17f2d11c2647159abc7af5b5b2ac85ed95ad2e280477b3e3578ae6bbff767433306edd37796c8947e892bbf6cf9846dcc5af30d5980de3f03bc37e9a8be8330
+Size (nbxmpp-4.4.0.tar.gz) = 170831 bytes
