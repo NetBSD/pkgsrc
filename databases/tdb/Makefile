@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2024/12/06 09:23:16 nros Exp $
+# $NetBSD: Makefile,v 1.58 2025/02/06 14:36:08 adam Exp $
 
-DISTNAME=	tdb-1.4.12
-PKGREVISION=	1
+DISTNAME=	tdb-1.4.13
 CATEGORIES=	databases
 MASTER_SITES=	https://www.samba.org/ftp/tdb/
 
@@ -15,8 +14,6 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # both install tdbtool and tdbdump
 CONFLICTS+=	samba<3.6.6nb3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
@@ -44,8 +41,8 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
