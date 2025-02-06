@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:30:47 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/02/06 13:49:19 adam Exp $
 
-BLAKE2s (scgi-1.15.tar.gz) = 74dd1918bffaf7fe97d98a8edfa14d35bc0e57c6ccca05a2f678332530528e4d
-SHA512 (scgi-1.15.tar.gz) = 6d4d9938dcd18d38d397e49aa27cc1dcf764dd81cff7df3ba7531c298a521712b39c3c6743369f04a78d702b79559c5ce9a14d2069235224562f3bce912882f4
-Size (scgi-1.15.tar.gz) = 32984 bytes
+BLAKE2s (scgi-2.2.tar.gz) = 4b4db33c737c9a6f18447123a68f5248b5d4843f5c693002904aa09dab348ea8
+SHA512 (scgi-2.2.tar.gz) = 5af72e45cea7a088f258273b5c7f6c820376d331f1223b52b5a0542aefbbd4523f98e07cf72531b5d08b1813f44181eef7a3ac8b0fa60785b995488635c871a4
+Size (scgi-2.2.tar.gz) = 35052 bytes
