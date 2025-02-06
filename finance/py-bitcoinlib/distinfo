@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:26:03 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/02/06 16:27:44 adam Exp $
 
-BLAKE2s (python-bitcoinlib-0.11.0.tar.gz) = df9b0c6b31b21afd1e891240c5eebeb90616733d3d0e2ce32e459f530dda9594
-SHA512 (python-bitcoinlib-0.11.0.tar.gz) = 7898401275f64a6b4dd9fce1bfcfaf2c0c9103f35a18fe1f3e54eaea4b1311227f1711a0aaf9bc2749c158bc3f7b9c0cb9f7a5bd4d9cf7a9e7f3591320d6c072
-Size (python-bitcoinlib-0.11.0.tar.gz) = 150107 bytes
+BLAKE2s (python-bitcoinlib-0.12.2.tar.gz) = d9a603fd26d86bd0abf4f9e4966fe336e3f878398719dc6f6a3dee088bd86d9c
+SHA512 (python-bitcoinlib-0.12.2.tar.gz) = b6bca1582b53f6309d207f5e73698ba6495785b6a69e5a9bb0e99dce149db950b0e4b5f493e4d84a2618f9189a5919fb3db473b366d0950722a67ac2ddfdef6f
+Size (python-bitcoinlib-0.12.2.tar.gz) = 153798 bytes
