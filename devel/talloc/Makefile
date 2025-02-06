@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2024/12/18 10:40:03 nros Exp $
+# $NetBSD: Makefile,v 1.51 2025/02/06 14:28:27 adam Exp $
 
-DISTNAME=	talloc-2.4.2
-PKGREVISION=	1
+DISTNAME=	talloc-2.4.3
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/talloc/
 
@@ -15,8 +14,6 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 # include/talloc.h
 CONFLICTS+=	samba<=4.6.8nb3
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
