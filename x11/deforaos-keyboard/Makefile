@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2025/01/27 18:59:07 rillig Exp $
+# $NetBSD: Makefile,v 1.40 2025/02/06 22:45:02 khorben Exp $
 #
 
 DISTNAME=	Keyboard-0.4.0
 PKGNAME=	deforaos-keyboard-0.4.0
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	x11
 MASTER_SITES=	https://ftp.defora.org/pub/DeforaOS/Apps/Desktop/src/Keyboard/
 
@@ -20,6 +20,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 
+.include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
