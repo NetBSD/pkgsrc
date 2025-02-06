@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.10 2025/01/30 19:15:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.11 2025/02/06 15:53:09 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -52,3 +52,20 @@ editors/vim-share: security fix
 Pullup ticket #6935 - requested by taca
 devel/git: security fix
 
+Pullup ticket #6936 - requested by taca
+git-lfs: Security fix
+
+Pullup ticket #6937 - requested by taca
+devel/java-subversion: Security fix
+devel/p5-subversion: Security fix
+devel/ruby-subversion: Security fix
+devel/subversion: Security fix
+devel/subversion-base: Securitiy fix
+www/ap2-subversion: Security fix
+
+Pullup ticket #6938 - requested by taca
+net/bind918: Security fix
+
+Pullup ticket #6939 - requested by bsiegert
+lang/go122: Security fix
+lang/go123: Security fix
