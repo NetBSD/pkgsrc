@@ -21,13 +21,9 @@ configuration project default is
    for Shared_Library_Suffix use ".so";
    for Library_Auto_Init_Supported use "true";
    for Run_Path_Option  use ("-Wl,-z,origin,-rpath,");
-   for Run_Path_Origin use "$ORIGIN";
    for Library_Encapsulated_Supported use "true";
    for Library_Encapsulated_Options use ("-shared", "-static-libgcc");
    
-   for Toolchain_Version ("Ada") use "GNAT 13.2.0";
-   for Runtime_Dir       ("Ada") use "@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0";
-
    package Builder is
       for Executable_Suffix use "";
    end Builder;
@@ -69,8 +65,8 @@ configuration project default is
            "   Casing          => %c," &
            "   Dot_Replacement => ""%d"");";
       for Config_File_Unique    ("Ada") use "False";
-      for Leading_Required_Switches ("Ada") use
-        Compiler'Leading_Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+      for Leading_Required_Switches ("Ada") use Compiler'Leading_Required_Switches ("Ada");
+      for PIC_Option ("Ada") use ("-fPIC");
         
       for Leading_Required_Switches   ("C") use
          ("-c", "-x", "c") & Compiler'Leading_Required_Switches ("C");
@@ -114,13 +110,12 @@ configuration project default is
       for Objects_Path_File     ("Ada") use "ADA_PRJ_OBJECTS_FILE";
       for Driver         ("Ada") use
           "@WRKDIR@/.buildlink/libexec/gprbuild/gprbind";
-      for Required_Switches ("Ada") use
-        Binder'Required_Switches ("Ada") & ("--RTS=@WRKDIR@/.buildlink/gcc13-gnat/lib/gcc/x86_64--netbsd/13.2.0");
+      for Required_Switches ("Ada") use Binder'Required_Switches ("Ada");
    end Binder;
    
    package Linker is
       for Map_File_Option         use "-Wl,-Map,";
-      for Driver use Compiler'Driver ("Ada");
+      --for Driver use Compiler'Driver ("Ada");
       for Driver use Compiler'Driver ("C++");
       for Response_File_Format use "GNU";
       for Max_Command_Line_Length use "8192";

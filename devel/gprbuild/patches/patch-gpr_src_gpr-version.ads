@@ -1,4 +1,4 @@
-$NetBSD: patch-gpr_src_gpr-version.ads,v 1.1 2024/03/19 13:20:35 wiz Exp $
+$NetBSD: patch-gpr_src_gpr-version.ads,v 1.2 2025/02/06 11:27:49 wiz Exp $
 
 Fix incorrect version reporting
 
@@ -9,7 +9,7 @@ Fix incorrect version reporting
  package GPR.Version is
  
 -   Gpr_Version : constant String := "18.0w";
-+   Gpr_Version : constant String := "24.0.0";
++   Gpr_Version : constant String := "24.0w";
     --  Static string identifying this version
  
 -   Date : constant String := "19940713";

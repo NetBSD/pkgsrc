@@ -1,10 +1,20 @@
-$NetBSD: patch-Makefile,v 1.1 2024/03/12 17:50:13 wiz Exp $
+$NetBSD: patch-Makefile,v 1.2 2025/02/06 11:27:49 wiz Exp $
 
-Make it possible to set install parameters, fix install parameters
+Make it possible to set install parameters, fix install parameters, ENABLE_SHARED
 
 --- Makefile.orig	2023-10-09 21:31:11.000000000 +0300
-+++ Makefile	2023-12-26 15:07:17.160442141 +0200
-@@ -45,6 +45,7 @@
++++ Makefile	2024-05-08 22:24:58.865354615 +0300
+@@ -34,6 +34,9 @@
+ SOURCE_DIR    := $(shell dirname "$(MAKEFILE_LIST)")
+ LIB_DIR       = lib/
+ 
++ENABLE_SHARED := $(shell gprbuild $(GTARGET) -c -q -p \
++	-P$(MAKEPREFIX)config/test_shared 2>/dev/null && echo "yes")
++
+ # Load current setup if any
+ -include makefile.setup
+ 
+@@ -45,6 +48,7 @@
  GTARGET=--target=$(TARGET)
  endif
  
@@ -12,7 +22,19 @@ Make it possible to set install parameters, fix install parameters
  INSTALLER=$(LIB_INSTALLER)
  EXEC_INSTALLER=$(INSTALLER) -XBUILD=${BUILD}
  
-@@ -72,13 +73,13 @@
+@@ -61,24 +65,21 @@
+ MAKEPREFIX=$(SOURCE_DIR)/
+ endif
+ 
+-ENABLE_SHARED := $(shell gprbuild $(GTARGET) -c -q -p \
+-	-P$(MAKEPREFIX)config/test_shared 2>/dev/null && echo "yes")
+-
+ ifeq ($(ENABLE_SHARED), yes)
+    LIBGPR_TYPES=static shared static-pic
+ else
+-   LIBGPR_TYPES=static
++   LIBGPR_TYPES=static static-pic
+ endif
  
  # Make sure Windows's "OS" environment variable does not cause
  # confusion for cross-Linux builds.
