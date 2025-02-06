@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1116 2025/02/06 13:27:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1117 2025/02/06 13:51:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1465,3 +1465,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gprbuild to 24.0.0nb3 [wiz 2025-02-06]
 	Updated net/mitmproxy to 11.1.2 [adam 2025-02-06]
 	Updated www/py-notebook to 7.3.2 [adam 2025-02-06]
+	Updated www/py-scgi to 2.2 [adam 2025-02-06]
+	Removed devel/py-quixote [adam 2025-02-06]
