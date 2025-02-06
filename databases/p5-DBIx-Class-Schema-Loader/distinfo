@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2021/10/26 10:09:34 nia Exp $
+$NetBSD: distinfo,v 1.23 2025/02/06 00:29:34 wen Exp $
 
-BLAKE2s (DBIx-Class-Schema-Loader-0.07049.tar.gz) = 2bce2cade262133e1e7732ea27c418b02cfa0a05d3437d6d653f7f9df144e176
-SHA512 (DBIx-Class-Schema-Loader-0.07049.tar.gz) = da9ae31391d1fb2d93b471a3687ced9f04761d0c3e266d1f0fb8e5ac85e4959e56d882bf163524ee5296c7414892f172d66714042b2b15aa144cab509adf3402
-Size (DBIx-Class-Schema-Loader-0.07049.tar.gz) = 217280 bytes
+BLAKE2s (DBIx-Class-Schema-Loader-0.07052.tar.gz) = a79d92d48eb56f90b24eb18696ec61eda48ab5e41bb1b0f29c691161858c5a80
+SHA512 (DBIx-Class-Schema-Loader-0.07052.tar.gz) = 9cf027024ebf1f2b24ffa6626c05f2237f37f640b167ee3964d74340730f9e5490936a2f4262e47ea647c4561d0cab7f4b96a07f07c81ebc14dbf642267d7ee1
+Size (DBIx-Class-Schema-Loader-0.07052.tar.gz) = 217529 bytes
