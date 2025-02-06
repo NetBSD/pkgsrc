@@ -1,27 +1,18 @@
-# $NetBSD: Makefile,v 1.69 2025/02/06 12:39:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.70 2025/02/06 21:21:12 schmonz Exp $
 
-DISTNAME=		v${VERSION}
-PKGNAME=		${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
-PKGREVISION=		51
-VERSION=		2.0.1
-GITHUB_PROJECT=		vultr
-GITHUB_TAG=		${DISTNAME}
+DISTNAME=		vultr-2.0.3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=JamesClonk/}
-DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://jamesclonk.github.io/vultr/
 COMMENT=		CLI and API client library for Vultr
 LICENSE=		mit
 
-GO_DIST_BASE=		${PKGNAME_NOREV}
-GO_SRCPATH=		github.com/JamesClonk/vultr
+USE_LANGUAGES=		# none
 
-INSTALLATION_DIRS+=	bin
+.include "go-modules.mk"
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/${GOPATH_BIN}/vultr ${DESTDIR}${PREFIX}/bin
-
-.include "../../lang/go/go-package.mk"
+.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
