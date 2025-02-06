@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.19 2022/09/19 16:17:20 abs Exp $
+$NetBSD: distinfo,v 1.20 2025/02/06 00:45:09 wen Exp $
 
-BLAKE2s (Rose-DB-Object-0.820.tar.gz) = 2dd7f8472ed82e5107213ad5a1cf8d188c18c6b75fdbeb41275cbc793e00e45e
-SHA512 (Rose-DB-Object-0.820.tar.gz) = 89de965ac7cfadc4d6c247a51b5fd0b763b907ce384132bccf90eb3619a1f516db290dbc0ce8c9ef6a4db31eb23ad16d49324853ff075eb99c67b3ef030bc397
-Size (Rose-DB-Object-0.820.tar.gz) = 571553 bytes
+BLAKE2s (Rose-DB-Object-0.822.tar.gz) = 865fd4f52a0b995b49cf7b3b0763d6c5a40009e32d7e828e0c90331a2c56ef3f
+SHA512 (Rose-DB-Object-0.822.tar.gz) = ec466606dacf68c3157d9e1d8f32df62acc284055de0c9ab43e6ba5b240ea8e26dec12851148847b6eeef2dc46370430263bddd86d9b99d3cc46922bdd29b753
+Size (Rose-DB-Object-0.822.tar.gz) = 571671 bytes
