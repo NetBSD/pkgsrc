@@ -1,0 +1,139 @@
+$NetBSD: patch-v8_BUILD.gn,v 1.1 2025/02/06 09:58:36 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- v8/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ v8/BUILD.gn
+@@ -929,6 +929,9 @@ external_v8_defines = [
+   "V8_TARGET_OS_MACOS",
+   "V8_TARGET_OS_WIN",
+   "V8_TARGET_OS_CHROMEOS",
++  "V8_TARGET_OS_OPENBSD",
++  "V8_TARGET_OS_FREEBSD",
++  "V8_TARGET_OS_NETBSD",
+ ]
+ 
+ enabled_external_v8_defines = [
+@@ -1005,6 +1008,15 @@ if (target_os == "android") {
+ } else if (target_os == "chromeos") {
+   enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
+   enabled_external_v8_defines += [ "V8_TARGET_OS_CHROMEOS" ]
++} else if (target_os == "openbsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_OPENBSD" ]
++} else if (target_os == "freebsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_FREEBSD" ]
++} else if (target_os == "netbsd") {
++  enabled_external_v8_defines += [ "V8_HAVE_TARGET_OS" ]
++  enabled_external_v8_defines += [ "V8_TARGET_OS_NETBSD" ]
+ }
+ 
+ disabled_external_v8_defines = external_v8_defines - enabled_external_v8_defines
+@@ -2438,6 +2450,23 @@ action("generate_bytecode_builtins_list"
+   ]
+ }
+ 
++action("run_paxctl_mksnapshot") {
++    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++
++    script = "tools/run-paxctl.py"
++    stamp = "$target_gen_dir/paxctl_stamp"
++    outputs = [ stamp ]
++
++    sources = []
++    data = []
++
++    args = [
++      rebase_path(stamp, root_build_dir), "/usr/sbin/paxctl", "+m", "./" + rebase_path(get_label_info(":mksnapshot($v8_snapshot_toolchain)",
++                                        "root_out_dir") + "/mksnapshot",
++                         root_build_dir),
++    ]
++}
++
+ # Template to generate different V8 snapshots based on different runtime flags.
+ # Can be invoked with run_mksnapshot(<name>). The target will resolve to
+ # run_mksnapshot_<name>. If <name> is "default", no file suffixes will be used.
+@@ -2456,7 +2485,11 @@ template("run_mksnapshot") {
+     suffix = "_$name"
+   }
+   action("run_mksnapshot_" + name) {
+-    deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++    if (target_os == "netbsd") {
++      deps = [ ":mksnapshot($v8_snapshot_toolchain)", ":run_paxctl_mksnapshot" ]
++    } else {
++      deps = [ ":mksnapshot($v8_snapshot_toolchain)" ]
++    }
+     if (v8_verify_deterministic_mksnapshot) {
+       # We archive the snapshot executable when verifying snapshot
+       # determinism to ease debugging.
+@@ -2563,6 +2596,12 @@ template("run_mksnapshot") {
+       if (!v8_enable_builtins_profiling && v8_enable_builtins_reordering) {
+         args += [ "--reorder-builtins" ]
+       }
++
++      if (v8_current_cpu == "x86") {
++        args -= [
++          "--abort-on-bad-builtin-profile-data",
++        ]
++      }
+     }
+ 
+     if (v8_enable_turboshaft_csa) {
+@@ -4658,7 +4697,7 @@ v8_header_set("v8_internal_headers") {
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "netbsd") {
+         sources += [ "src/trap-handler/handler-inside-posix.h" ]
+       } else if (is_win) {
+         sources += [ "src/trap-handler/handler-inside-win.h" ]
+@@ -6021,7 +6060,7 @@ v8_source_set("v8_base_without_compiler"
+       # iOS Xcode simulator builds run on an x64 target. iOS and macOS are both
+       # based on Darwin and thus POSIX-compliant to a similar degree.
+       if (is_linux || is_chromeos || is_mac || is_ios ||
+-          target_os == "freebsd") {
++          target_os == "freebsd" || target_os == "netbsd") {
+         sources += [
+           "src/trap-handler/handler-inside-posix.cc",
+           "src/trap-handler/handler-outside-posix.cc",
+@@ -6636,7 +6675,7 @@ v8_component("v8_libbase") {
+     }
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",
+       "src/base/platform/platform-linux.cc",
+@@ -6647,6 +6686,27 @@ v8_component("v8_libbase") {
+       "dl",
+       "rt",
+     ]
++  } else if (is_openbsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-openbsd.cc",
++    ]
++    libs = [ "execinfo" ]
++  } else if (is_netbsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-openbsd.cc",
++    ]
++    libs = [
++      "rt",
++      "execinfo",
++    ]
++  } else if (is_freebsd) {
++    sources += [
++      "src/base/debug/stack_trace_posix.cc",
++      "src/base/platform/platform-freebsd.cc",
++    ]
++    libs = [ "execinfo" ]
+   } else if (current_os == "aix") {
+     sources += [
+       "src/base/debug/stack_trace_posix.cc",

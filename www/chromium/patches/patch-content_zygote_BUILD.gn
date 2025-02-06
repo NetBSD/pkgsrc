@@ -1,0 +1,17 @@
+$NetBSD: patch-content_zygote_BUILD.gn,v 1.1 2025/02/06 09:58:08 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/zygote/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ content/zygote/BUILD.gn
+@@ -5,7 +5,7 @@
+ import("//build/config/nacl/config.gni")
+ import("//content/public/common/zygote/features.gni")
+ 
+-if (is_linux || is_chromeos) {
++if ((is_linux || is_chromeos) && !is_bsd) {
+   source_set("zygote") {
+     sources = [
+       "zygote_linux.cc",

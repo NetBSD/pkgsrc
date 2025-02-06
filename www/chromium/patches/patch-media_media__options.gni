@@ -1,0 +1,28 @@
+$NetBSD: patch-media_media__options.gni,v 1.1 2025/02/06 09:58:13 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- media/media_options.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ media/media_options.gni
+@@ -190,12 +190,18 @@ declare_args() {
+   # Enables runtime selection of ALSA library for audio.
+   use_alsa = false
+ 
++  # Enable runtime selection of sndio(7)
++  use_sndio = false
++
++  # Enable runtime selection of audio(4)
++  use_audioio = false
++
+   # Alsa should be used on all non-Android, non-Mac POSIX systems - with the
+   # exception of CastOS desktop builds.
+   #
+   # TODO(crbug.com/1336055): Remove legacy target_cpu hack used for targeting
+   # desktop Chromecast builds.
+-  if (is_posix && !is_android && !is_apple &&
++  if (is_posix && !is_android && !is_apple && !is_bsd &&
+       (!is_castos || (target_cpu == "x86" || target_cpu == "x64") ||
+        is_cast_audio_only)) {
+     use_alsa = true

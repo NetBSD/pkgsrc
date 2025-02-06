@@ -1,0 +1,49 @@
+$NetBSD: patch-net_dns_BUILD.gn,v 1.1 2025/02/06 09:58:15 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/dns/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ net/dns/BUILD.gn
+@@ -138,7 +138,7 @@ source_set("dns") {
+       "dns_config_service_android.cc",
+       "dns_config_service_android.h",
+     ]
+-  } else if (is_linux) {
++  } else if (is_linux && !is_bsd) {
+     sources += [
+       "dns_config_service_linux.cc",
+       "dns_config_service_linux.h",
+@@ -171,7 +171,10 @@ source_set("dns") {
+     ]
+   }
+ 
+-  deps = [ "//net:net_deps" ]
++  deps = [
++    "//net:net_deps",
++    "///services/screen_ai/buildflags",
++  ]
+ 
+   public_deps = [
+     ":dns_client",
+@@ -179,6 +182,7 @@ source_set("dns") {
+     ":host_resolver_manager",
+     ":mdns_client",
+     "//net:net_public_deps",
++    "//printing/buildflags",
+   ]
+ 
+   allow_circular_includes_from = [
+@@ -447,9 +451,9 @@ source_set("tests") {
+ 
+   if (is_android) {
+     sources += [ "dns_config_service_android_unittest.cc" ]
+-  } else if (is_linux) {
++  } else if (is_linux && !is_bsd) {
+     sources += [ "dns_config_service_linux_unittest.cc" ]
+-  } else if (is_posix) {
++  } else if (is_posix && !is_bsd) {
+     sources += [ "dns_config_service_posix_unittest.cc" ]
+   }
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-build_config_clang_BUILD.gn,v 1.1 2025/02/06 09:57:43 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/clang/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/config/clang/BUILD.gn
+@@ -210,7 +210,12 @@ template("clang_lib") {
+ 
+ # Adds a dependency on the Clang runtime library clang_rt.builtins.
+ clang_lib("compiler_builtins") {
+-  if (is_mac) {
++  if (is_bsd) {
++    # Since there's no Rust in the toolchain, there's no concern that we'll use
++    # the Rust stdlib's intrinsics here.
++    #
++    # Don't define libname which makes this target do nothing.
++  } else if (is_mac) {
+     libname = "osx"
+   } else if (is_ios) {
+     if (target_environment == "simulator") {

@@ -1,0 +1,19 @@
+$NetBSD: patch-components_paint__preview_common_proto_paint__preview.proto,v 1.1 2025/02/06 09:58:01 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/paint_preview/common/proto/paint_preview.proto.orig	2024-12-17 17:58:49.000000000 +0000
++++ components/paint_preview/common/proto/paint_preview.proto
+@@ -82,8 +82,8 @@ message PaintPreviewFrameProto {
+ // Stores Chrome version.
+ // NEXT_TAG = 5
+ message ChromeVersionProto {
+-  optional uint64 major = 1;
+-  optional uint64 minor = 2;
++  optional uint64 gmajor = 1;
++  optional uint64 gminor = 2;
+   optional uint64 build = 3;
+   optional uint64 patch = 4;
+ }

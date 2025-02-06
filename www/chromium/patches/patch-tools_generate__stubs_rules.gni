@@ -1,0 +1,16 @@
+$NetBSD: patch-tools_generate__stubs_rules.gni,v 1.1 2025/02/06 09:58:29 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- tools/generate_stubs/rules.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ tools/generate_stubs/rules.gni
+@@ -110,7 +110,6 @@ template("generate_stubs") {
+       "${target_gen_dir}/${invoker.output_name}.cc",
+       "${target_gen_dir}/${invoker.output_name}.h",
+     ]
+-    libs = [ "dl" ]
+     include_dirs = [ target_gen_dir ]
+     if (defined(invoker.configs)) {
+       configs += invoker.configs

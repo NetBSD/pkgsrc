@@ -1,0 +1,22 @@
+$NetBSD: patch-third__party_crashpad_crashpad_client_BUILD.gn,v 1.1 2025/02/06 09:58:24 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/crashpad/crashpad/client/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/crashpad/crashpad/client/BUILD.gn
+@@ -137,6 +137,13 @@ static_library("common") {
+   if (crashpad_is_win) {
+     sources += [ "crash_report_database_win.cc" ]
+   }
++
++  if (crashpad_is_posix) {
++    sources += [
++      "crashpad_client_posix.cc",
++    ]
++  }
++
+   if (crashpad_is_linux || crashpad_is_android || crashpad_is_fuchsia) {
+     sources += [
+       "crash_report_database_generic.cc",

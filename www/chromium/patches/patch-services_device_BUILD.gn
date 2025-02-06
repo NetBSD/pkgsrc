@@ -1,0 +1,17 @@
+$NetBSD: patch-services_device_BUILD.gn,v 1.1 2025/02/06 09:58:19 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/device/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ services/device/BUILD.gn
+@@ -15,7 +15,7 @@ if (is_android) {
+ }
+ 
+ is_serial_enabled_platform =
+-    is_win || ((is_linux || is_chromeos) && use_udev) || is_mac
++    is_win || ((!is_bsd && is_linux || is_chromeos) && use_udev) || is_mac
+ 
+ source_set("lib") {
+   # This should be visible only to embedders of the Device Service, and the

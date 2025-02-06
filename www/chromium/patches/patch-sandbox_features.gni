@@ -1,0 +1,17 @@
+$NetBSD: patch-sandbox_features.gni,v 1.1 2025/02/06 09:58:18 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- sandbox/features.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ sandbox/features.gni
+@@ -6,7 +6,7 @@
+ # currently.
+ # Do not disable seccomp_bpf anywhere without talking to
+ # security@chromium.org!
+-use_seccomp_bpf = (is_linux || is_chromeos || is_android) &&
++use_seccomp_bpf = !is_bsd && (is_linux || is_chromeos || is_android) &&
+                   (current_cpu == "x86" || current_cpu == "x64" ||
+                    current_cpu == "arm" || current_cpu == "arm64" ||
+                    current_cpu == "mipsel" || current_cpu == "mips64el")

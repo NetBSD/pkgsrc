@@ -1,0 +1,17 @@
+$NetBSD: patch-build_toolchain_toolchain.gni,v 1.1 2025/02/06 09:57:44 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/toolchain/toolchain.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/toolchain/toolchain.gni
+@@ -72,7 +72,7 @@ if (host_os == "mac") {
+   host_shlib_extension = ".dylib"
+ } else if (host_os == "win") {
+   host_shlib_extension = ".dll"
+-} else if (host_os == "linux" || host_os == "aix" || host_os == "zos") {
++} else if (is_posix) {
+   host_shlib_extension = ".so"
+ } else {
+   assert(false, "Host platform not supported")

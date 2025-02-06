@@ -1,0 +1,17 @@
+$NetBSD: patch-components_crash_core_common_BUILD.gn,v 1.1 2025/02/06 09:57:59 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/crash/core/common/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ components/crash/core/common/BUILD.gn
+@@ -9,7 +9,7 @@ import("//components/gwp_asan/buildflags
+ 
+ declare_args() {
+   # If set to true, this will stub out and disable the entire crash key system.
+-  use_crash_key_stubs = is_fuchsia
++  use_crash_key_stubs = is_fuchsia || is_bsd
+ }
+ 
+ group("common") {
