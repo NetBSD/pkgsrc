@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/09/06 18:48:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.69 2025/02/06 12:39:08 riastradh Exp $
 
 DISTNAME=		v${VERSION}
 PKGNAME=		${GITHUB_PROJECT}-${DISTNAME:S,^v,,}
@@ -21,7 +21,7 @@ GO_SRCPATH=		github.com/JamesClonk/vultr
 INSTALLATION_DIRS+=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/vultr ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/${GOPATH_BIN}/vultr ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
