@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1105 2025/02/06 09:48:55 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1106 2025/02/06 09:58:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1452,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/ansible-lint to 25.1.2 [adam 2025-02-06]
 	Updated www/py-aiohttp to 3.11.12 [adam 2025-02-06]
 	Updated textproc/py-json-logger to 3.2.1 [adam 2025-02-06]
+	Added www/chromium version 131.0.6778.204nb1 [wiz 2025-02-06]
