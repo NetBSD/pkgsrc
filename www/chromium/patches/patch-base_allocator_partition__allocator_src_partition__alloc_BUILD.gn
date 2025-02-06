@@ -1,0 +1,17 @@
+$NetBSD: patch-base_allocator_partition__allocator_src_partition__alloc_BUILD.gn,v 1.1 2025/02/06 09:57:38 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/allocator/partition_allocator/src/partition_alloc/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ base/allocator/partition_allocator/src/partition_alloc/BUILD.gn
+@@ -863,7 +863,7 @@ if (is_clang_or_gcc) {
+         configs -= [ partition_alloc_enable_arc_config ]
+       }
+     }
+-    if (is_chromeos || is_linux) {
++    if ((is_chromeos || is_linux) && !is_bsd) {
+       shim_headers += [
+         "shim/allocator_shim_override_cpp_symbols.h",
+         "shim/allocator_shim_override_glibc_weak_symbols.h",
