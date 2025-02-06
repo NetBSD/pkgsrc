@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/15 06:05:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/06 00:00:44 riastradh Exp $
 
 DISTNAME=	kea-${VERSION}
 COMMENT=	Next-generation ISC Dynamic Host Configuration Protocol (DHCP) Server
@@ -42,6 +42,12 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 MAKE_DIRS+=		${VARBASE}/lib/kea
 MAKE_DIRS+=		${VARBASE}/run/kea
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+# This appears to store an absolute path to the bison(1) executable
+# which lives in TOOLBASE (or possibly in TOOLS_DIR).
+CHECK_WRKREF_SKIP+=	lib/libkea-process*
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
