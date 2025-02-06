@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2024/03/19 13:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/06 11:27:49 wiz Exp $
 
 .include "version.mk"
 
 DISTNAME=	gprbuild-${GPRBUILD_VERSION}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	devel
-MAINTAINER=	pkgsrc-users@NetBSD.org
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gprbuild
 COMMENT=	GPRbuild build system for Ada
 LICENSE=	gnu-gpl-v3
@@ -26,7 +26,9 @@ GCC_REQD+=	13
 
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
-CGPRDIR=	${WRKDIR}
+
+CONFIG_PROJECT=		${WRKDIR}/buildlink.cgpr
+GPR_PROJECT_PATH=	${WRKDIR}/.buildlink/share/gpr
 
 # environment for bootstrap build
 PREBUILD_ENV=	${CONFIGURE_ENV}
@@ -43,17 +45,22 @@ CONFIGURE_ARGS+=	SOURCE_DIR=${WRKSRC}
 
 BUILD_DIRS=		${OBJDIR}
 MAKE_FILE=		${WRKSRC}/Makefile
-BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CONFIG_PROJECT} -aP ${GPR_PROJECT_PATH}'
 
 INSTALL_DIRS=		${OBJDIR}
-INSTALL_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
-INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CGPRDIR}/buildlink.cgpr -aP ${WRKDIR}/.buildlink/share/gpr'
+INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CONFIG_PROJECT} -aP ${GPR_PROJECT_PATH}'
 
 SUBST_CLASSES+=			buildlink
 SUBST_STAGE.buildlink=		post-configure
-SUBST_FILES.buildlink=		../buildlink.cgpr
+SUBST_FILES.buildlink=		${CONFIG_PROJECT}
 SUBST_MESSAGE.buildlink=	Set work directory path in config project
 SUBST_VARS.buildlink=		WRKDIR
+
+SUBST_CLASSES+=			fixver
+SUBST_STAGE.fixver=		pre-configure
+SUBST_FILES.fixver=		deps/xmlada/configure
+SUBST_MESSAGE.fixver=		Fix version in configure
+SUBST_SED.fixver=		-e 's,18.0w,24.0w,g'
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
@@ -62,7 +69,7 @@ GENERATE_PLIST+= \
 .include "../../mk/bsd.prefs.mk"
 
 pre-configure:
-	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${CGPRDIR}/
+	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${WRKDIR}/
 	${RUN} ${MKDIR} ${OBJDIR}
 
 post-configure:
@@ -84,6 +91,6 @@ pre-build:
 # Build xmlada with bootstrapped gprbuild. It then will be used in normal build.
 	${RUN} cd ${WRKSRC}/deps/xmlada \
 	&& set -x ; env ${MAKE_ENV} \
-	${MAKE_PROGRAM} all install GPROPTS='--config=${CGPRDIR}/buildlink.cgpr'
+	${MAKE_PROGRAM} all install GPROPTS='--config=${CONFIG_PROJECT}'
 
 .include "../../mk/bsd.pkg.mk"
