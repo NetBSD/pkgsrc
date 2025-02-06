@@ -1,0 +1,26 @@
+$NetBSD: patch-base_allocator_partition__allocator_partition__alloc.gni,v 1.1 2025/02/06 09:57:38 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- base/allocator/partition_allocator/partition_alloc.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ base/allocator/partition_allocator/partition_alloc.gni
+@@ -38,7 +38,7 @@ if (is_nacl) {
+ use_large_empty_slot_span_ring = true
+ 
+ has_memory_tagging =
+-    current_cpu == "arm64" && is_clang && !is_asan && (is_linux || is_android)
++    current_cpu == "arm64" && is_clang && !is_asan && !is_bsd && (is_linux || is_android)
+ 
+ declare_args() {
+   # Causes all the allocations to be routed via allocator_shim.cc. Usually,
+@@ -432,7 +432,7 @@ assert(!use_asan_backup_ref_ptr || use_r
+ # dependencies that use partition_allocator are compiled in AOSP against a
+ # version of glibc that does not include pkeys syscall numbers.
+ is_pkeys_available =
+-    (is_linux || is_chromeos) && current_cpu == "x64" && !is_cronet_build
++    !is_bsd && (is_linux || is_chromeos) && current_cpu == "x64" && !is_cronet_build
+ declare_args() {
+   enable_pkeys = is_pkeys_available
+ }
