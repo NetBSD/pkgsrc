@@ -1,0 +1,17 @@
+$NetBSD: patch-components_gwp__asan_BUILD.gn,v 1.1 2025/02/06 09:58:00 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- components/gwp_asan/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ components/gwp_asan/BUILD.gn
+@@ -15,7 +15,7 @@ test("gwp_asan_unittests") {
+     "//testing/gtest",
+     "//third_party/boringssl",
+   ]
+-  if (is_win || is_mac || is_linux || is_chromeos || is_android) {
++  if ((is_win || is_mac || is_linux || is_chromeos || is_android) && !is_bsd) {
+     deps += [
+       "//components/gwp_asan/client:unit_tests",
+       "//components/gwp_asan/crash_handler:unit_tests",

@@ -1,0 +1,29 @@
+$NetBSD: patch-build_config_ozone.gni,v 1.1 2025/02/06 09:57:43 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/ozone.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/config/ozone.gni
+@@ -84,7 +84,19 @@ declare_args() {
+     } else if (is_chromeos_lacros) {
+       ozone_platform = "wayland"
+       ozone_platform_wayland = true
+-    } else if (is_linux) {
++    } else if (is_linux && !is_bsd) {
++      ozone_platform = "x11"
++      ozone_platform_wayland = true
++      ozone_platform_x11 = true
++    } else if (is_openbsd) {
++      ozone_platform = "x11"
++      ozone_platform_wayland = false
++      ozone_platform_x11 = true
++    } else if (is_netbsd) {
++      ozone_platform = "x11"
++      ozone_platform_wayland = false
++      ozone_platform_x11 = true
++    } else if (is_freebsd) {
+       ozone_platform = "x11"
+       ozone_platform_wayland = true
+       ozone_platform_x11 = true

@@ -1,0 +1,31 @@
+$NetBSD: patch-services_network_public_mojom_BUILD.gn,v 1.1 2025/02/06 09:58:21 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/network/public/mojom/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ services/network/public/mojom/BUILD.gn
+@@ -491,11 +491,11 @@ mojom("url_loader_base") {
+   }
+ 
+   enabled_features = []
+-  if (is_android || is_chromeos || is_linux) {
++  if (!is_bsd && (is_android || is_chromeos || is_linux)) {
+     enabled_features += [ "network_change_notifier_in_browser" ]
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     # TODO(crbug.com/40263697): Remove this once is_linux in the mojom IDL does
+     # not include lacros.
+     enabled_features += [ "use_network_interface_change_listener" ]
+@@ -1493,7 +1493,7 @@ mojom("mojom") {
+     }
+   }
+ 
+-  if (is_linux) {
++  if (is_linux && !is_bsd) {
+     # TODO(crbug.com/40263697): Remove this once is_linux in the mojom IDL does
+     # not include lacros.
+     enabled_features += [ "use_network_interface_change_listener" ]

@@ -1,0 +1,17 @@
+$NetBSD: patch-services_device_public_mojom_BUILD.gn,v 1.1 2025/02/06 09:58:20 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/device/public/mojom/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ services/device/public/mojom/BUILD.gn
+@@ -98,7 +98,7 @@ mojom("device_service") {
+   enable_js_fuzzing = false
+ 
+   enabled_features = []
+-  if ((is_linux || is_chromeos) && use_udev) {
++  if ((is_linux || is_chromeos) && !is_bsd && use_udev) {
+     enabled_features += [ "enable_input_device_manager" ]
+   }
+ 

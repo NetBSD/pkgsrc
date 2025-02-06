@@ -1,0 +1,17 @@
+$NetBSD: patch-net_third__party_quiche_BUILD.gn,v 1.1 2025/02/06 09:58:16 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- net/third_party/quiche/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ net/third_party/quiche/BUILD.gn
+@@ -29,7 +29,7 @@ import("//net/third_party/quiche/src/bui
+ import("//testing/libfuzzer/fuzzer_test.gni")
+ import("//third_party/protobuf/proto_library.gni")
+ 
+-build_epoll_based_tools = is_linux || is_chromeos
++build_epoll_based_tools = (is_linux && !is_bsd) || is_chromeos
+ 
+ config("quiche_internal_config") {
+   cflags = []

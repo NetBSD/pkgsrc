@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_node_node.gni,v 1.1 2025/02/06 09:58:26 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/node/node.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/node/node.gni
+@@ -22,7 +22,7 @@ template("node") {
+ 
+     # When use_remoteexec=true, node actions may run on remote
+     # Linux worker. So it should include linux node binary in inputs.
+-    if (is_linux || is_chromeos || use_remoteexec) {
++    if ((is_linux || is_chromeos || use_remoteexec) && !is_bsd) {
+       inputs += [ "//third_party/node/linux/node-linux-x64/bin/node" ]
+     }
+     if (is_win && host_os == "win") {

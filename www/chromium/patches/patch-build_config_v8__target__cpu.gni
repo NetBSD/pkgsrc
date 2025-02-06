@@ -1,0 +1,19 @@
+$NetBSD: patch-build_config_v8__target__cpu.gni,v 1.1 2025/02/06 09:57:43 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- build/config/v8_target_cpu.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ build/config/v8_target_cpu.gni
+@@ -36,6 +36,10 @@ declare_args() {
+ if (v8_target_cpu == "") {
+   if (current_toolchain == "//build/toolchain/linux:clang_x64_v8_arm64") {
+     v8_target_cpu = "arm64"
++  } else if (current_toolchain == "//build/toolchain/openbsd:clang_arm64") {
++    v8_target_cpu = "arm64"
++  } else if (current_toolchain == "//build/toolchain/freebsd:clang_arm64") {
++    v8_target_cpu = "arm64"
+   } else if (current_toolchain == "//build/toolchain/linux:clang_x86_v8_arm") {
+     v8_target_cpu = "arm"
+   } else if (current_toolchain ==

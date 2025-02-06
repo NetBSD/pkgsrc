@@ -1,0 +1,17 @@
+$NetBSD: patch-ui_strings_translations_app__locale__settings__bn.xtb,v 1.1 2025/02/06 09:58:34 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/strings/translations/app_locale_settings_bn.xtb.orig	2024-12-17 17:58:49.000000000 +0000
++++ ui/strings/translations/app_locale_settings_bn.xtb
+@@ -10,7 +10,7 @@
+   <translation id="IDS_WEB_FONT_FAMILY">Vrinda</translation>
+   <translation id="IDS_WEB_FONT_FAMILY_XP">Vrinda</translation>
+ </if>
+-<if expr="is_linux">
++<if expr="is_posix">
+   <translation id="IDS_WEB_FONT_FAMILY">Lohit Bengali</translation>
+ </if>
+ <if expr="is_chromeos">

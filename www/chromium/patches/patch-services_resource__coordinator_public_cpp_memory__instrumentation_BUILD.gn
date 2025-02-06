@@ -1,0 +1,24 @@
+$NetBSD: patch-services_resource__coordinator_public_cpp_memory__instrumentation_BUILD.gn,v 1.1 2025/02/06 09:58:21 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ services/resource_coordinator/public/cpp/memory_instrumentation/BUILD.gn
+@@ -29,10 +29,14 @@ component("memory_instrumentation") {
+     sources += [ "os_metrics_win.cc" ]
+   }
+ 
+-  if (is_android || is_linux || is_chromeos) {
++  if ((is_android || is_linux || is_chromeos) && !is_bsd) {
+     sources += [ "os_metrics_linux.cc" ]
+   }
+ 
++  if (is_bsd) {
++    sources += [ "os_metrics_bsd.cc" ]
++  }
++
+   if (is_fuchsia) {
+     sources += [ "os_metrics_fuchsia.cc" ]
+   }

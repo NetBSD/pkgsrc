@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_webrtc_system__wrappers_BUILD.gn,v 1.1 2025/02/06 09:58:29 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/webrtc/system_wrappers/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/webrtc/system_wrappers/BUILD.gn
+@@ -62,8 +62,6 @@ rtc_library("system_wrappers") {
+     if (!build_with_chromium) {
+       sources += [ "source/cpu_features_linux.cc" ]
+     }
+-
+-    libs += [ "rt" ]
+   }
+ 
+   if (is_win) {

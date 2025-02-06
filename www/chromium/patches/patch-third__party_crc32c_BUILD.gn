@@ -1,0 +1,17 @@
+$NetBSD: patch-third__party_crc32c_BUILD.gn,v 1.1 2025/02/06 09:58:25 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/crc32c/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/crc32c/BUILD.gn
+@@ -46,7 +46,7 @@ config("crc32c_config") {
+   }
+ 
+   # Android added <sys/auxv.h> in API level 18.
+-  if (is_linux || is_chromeos || is_android) {
++  if (is_linux || is_chromeos || is_android && !is_bsd) {
+     defines += [
+       "HAVE_STRONG_GETAUXVAL=1",
+       "HAVE_WEAK_GETAUXVAL=1",

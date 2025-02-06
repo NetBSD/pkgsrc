@@ -1,0 +1,15 @@
+$NetBSD: patch-device_bluetooth_cast__bluetooth.gni,v 1.1 2025/02/06 09:58:08 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- device/bluetooth/cast_bluetooth.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ device/bluetooth/cast_bluetooth.gni
+@@ -2,5 +2,5 @@ import("//build/config/features.gni")
+ 
+ declare_args() {
+   force_cast_bluetooth = false
+-  use_bluez = (is_linux && !is_castos && use_dbus) || is_chromeos
++  use_bluez = use_dbus && !is_bsd
+ }

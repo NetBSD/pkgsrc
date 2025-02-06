@@ -1,0 +1,42 @@
+$NetBSD: patch-content_common_BUILD.gn,v 1.1 2025/02/06 09:58:07 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- content/common/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ content/common/BUILD.gn
+@@ -386,19 +386,28 @@ source_set("common") {
+   }
+ 
+   if (is_linux || is_chromeos) {
+-    sources += [
+-      "gpu_pre_sandbox_hook_linux.cc",
+-      "gpu_pre_sandbox_hook_linux.h",
+-    ]
++    if (is_bsd) {
++      sources += [
++        "gpu_pre_sandbox_hook_bsd.cc",
++        "gpu_pre_sandbox_hook_bsd.h",
++      ]
++    } else {
++      sources += [
++        "gpu_pre_sandbox_hook_linux.cc",
++        "gpu_pre_sandbox_hook_linux.h",
++      ]
++    }
+     public_deps += [ "//sandbox/policy" ]
+     deps += [
+       ":sandbox_support_linux",
+       "//media/gpu:buildflags",
+       "//sandbox/linux:sandbox_services",
+-      "//sandbox/linux:seccomp_bpf",
+       "//sandbox/policy:chromecast_sandbox_allowlist_buildflags",
+       "//third_party/fontconfig",
+     ]
++    if (use_seccomp_bpf) {
++      deps += [ "//sandbox/linux:seccomp_bpf" ]
++    }
+     if (use_v4l2_codec) {
+       deps += [ "//media/gpu/v4l2" ]
+     }

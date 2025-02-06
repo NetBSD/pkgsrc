@@ -1,0 +1,56 @@
+$NetBSD: patch-sandbox_policy_BUILD.gn,v 1.1 2025/02/06 09:58:18 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- sandbox/policy/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ sandbox/policy/BUILD.gn
+@@ -50,7 +50,7 @@ component("policy") {
+       "//third_party/jni_zero",
+     ]
+   }
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [
+       "linux/bpf_audio_policy_linux.cc",
+       "linux/bpf_audio_policy_linux.h",
+@@ -129,6 +129,38 @@ component("policy") {
+       "//sandbox/linux:suid_sandbox_client",
+     ]
+   }
++  if (is_openbsd) {
++    sources += [
++      "openbsd/sandbox_openbsd.cc",
++      "openbsd/sandbox_openbsd.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++      "//ui/gfx/x",
++    ]
++    libs = [ "util" ]
++  }
++  if (is_netbsd) {
++    sources += [
++      "netbsd/sandbox_netbsd.cc",
++      "netbsd/sandbox_netbsd.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++      "//ui/gfx/x",
++    ]
++    libs = [ "util" ]
++  }
++  if (is_freebsd) {
++    sources += [
++      "freebsd/sandbox_freebsd.cc",
++      "freebsd/sandbox_freebsd.h",
++    ]
++    deps += [
++      "//sandbox:sandbox_buildflags",
++      "//ui/gfx/x",
++    ]
++  }
+   if (is_chromeos_ash) {
+     sources += [
+       "linux/bpf_ime_policy_linux.cc",

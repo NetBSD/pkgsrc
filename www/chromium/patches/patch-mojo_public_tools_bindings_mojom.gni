@@ -1,0 +1,30 @@
+$NetBSD: patch-mojo_public_tools_bindings_mojom.gni,v 1.1 2025/02/06 09:58:14 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- mojo/public/tools/bindings/mojom.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ mojo/public/tools/bindings/mojom.gni
+@@ -776,6 +776,21 @@ template("mojom") {
+       enabled_features += [ "is_apple" ]
+     }
+ 
++    if (is_openbsd) {
++      enabled_features += [ "is_openbsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
++    if (is_netbsd) {
++      enabled_features += [ "is_netbsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
++    if (is_freebsd) {
++      enabled_features += [ "is_freebsd" ]
++      enabled_features += [ "is_bsd" ]
++    }
++
+     action(parser_target_name) {
+       allow_remote = true
+ 

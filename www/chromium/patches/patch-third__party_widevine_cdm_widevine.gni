@@ -1,0 +1,18 @@
+$NetBSD: patch-third__party_widevine_cdm_widevine.gni,v 1.1 2025/02/06 09:58:29 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- third_party/widevine/cdm/widevine.gni.orig	2024-12-17 17:58:49.000000000 +0000
++++ third_party/widevine/cdm/widevine.gni
+@@ -28,6 +28,9 @@ library_widevine_cdm_available =
+     (is_chromeos &&
+      (target_cpu == "x64" || target_cpu == "arm" || target_cpu == "arm64")) ||
+     (target_os == "linux" && target_cpu == "x64") ||
++    (target_os == "openbsd" && target_cpu == "x64") ||
++    (target_os == "freebsd" && target_cpu == "x64") ||
++    (target_os == "netbsd" && target_cpu == "x64") ||
+     (target_os == "mac" && (target_cpu == "x64" || target_cpu == "arm64")) ||
+     (target_os == "win" &&
+      (target_cpu == "x86" || target_cpu == "x64" || target_cpu == "arm64"))

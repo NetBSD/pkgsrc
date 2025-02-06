@@ -1,0 +1,22 @@
+$NetBSD: patch-chrome_browser_BUILD.gn,v 1.1 2025/02/06 09:57:44 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- chrome/browser/BUILD.gn.orig	2024-12-17 17:58:49.000000000 +0000
++++ chrome/browser/BUILD.gn
+@@ -6980,6 +6980,13 @@ static_library("browser") {
+     }
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "metrics/bluetooth_metrics_provider.cc",
++      "metrics/bluetooth_metrics_provider.h",
++    ]
++  }
++
+   if (is_linux && use_dbus) {
+     sources += [
+       "dbus_memory_pressure_evaluator_linux.cc",

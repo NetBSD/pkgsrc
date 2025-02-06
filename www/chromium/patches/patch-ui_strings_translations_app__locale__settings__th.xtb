@@ -1,0 +1,17 @@
+$NetBSD: patch-ui_strings_translations_app__locale__settings__th.xtb,v 1.1 2025/02/06 09:58:35 wiz Exp $
+
+* Part of patchset to build chromium on NetBSD
+* Based on OpenBSD's chromium patches, and
+  pkgsrc's qt5-qtwebengine patches
+
+--- ui/strings/translations/app_locale_settings_th.xtb.orig	2024-12-17 17:58:49.000000000 +0000
++++ ui/strings/translations/app_locale_settings_th.xtb
+@@ -6,7 +6,7 @@
+   <translation id="IDS_WEB_FONT_FAMILY">Tahoma,sans-serif</translation>
+   <translation id="IDS_WEB_FONT_FAMILY_XP">Tahoma,sans-serif</translation>
+ </if>
+-<if expr="is_linux">
++<if expr="is_posix">
+   <translation id="IDS_WEB_FONT_FAMILY">Norasi,Waree,Garuda,Loma,sans-serif</translation>
+ </if>
+ <if expr="is_chromeos">
