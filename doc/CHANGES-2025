@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1104 2025/02/06 08:55:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1105 2025/02/06 09:48:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1450,3 +1450,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/dpkg to 1.22.15 [adam 2025-02-06]
 	Updated sysutils/py-ansible-compat to 25.1.2 [adam 2025-02-06]
 	Updated sysutils/ansible-lint to 25.1.2 [adam 2025-02-06]
+	Updated www/py-aiohttp to 3.11.12 [adam 2025-02-06]
+	Updated textproc/py-json-logger to 3.2.1 [adam 2025-02-06]
