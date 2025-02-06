@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/08/06 23:21:25 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/06 20:45:37 gdt Exp $
 
-DISTNAME=	nbxmpp-2.0.6
+DISTNAME=	nbxmpp-4.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbxmpp/}
@@ -17,7 +17,5 @@ DEPENDS+=	${PYPKGPREFIX}-precis-i18n>=1.0.0:../../textproc/py-precis-i18n
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
