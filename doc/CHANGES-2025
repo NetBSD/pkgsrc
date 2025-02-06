@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1115 2025/02/06 11:27:59 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1116 2025/02/06 13:27:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1463,3 +1463,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/chess-tui to 1.6.1 [pin 2025-02-06]
 	Updated textproc/inlyne to 0.5.0 [pin 2025-02-06]
 	Updated devel/gprbuild to 24.0.0nb3 [wiz 2025-02-06]
+	Updated net/mitmproxy to 11.1.2 [adam 2025-02-06]
+	Updated www/py-notebook to 7.3.2 [adam 2025-02-06]
