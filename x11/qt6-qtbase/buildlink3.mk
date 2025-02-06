@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/01/13 16:56:25 riastradh Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/02/06 06:47:38 adam Exp $
 
 BUILDLINK_TREE+=	qt6-qtbase
 
@@ -21,6 +21,7 @@ BUILDLINK_LIBDIRS.qt6-qtbase+=	qt6/plugins
 # to buildlink3.
 BUILDLINK_FILES.qt6-qtbase+=	qt6/bin/*
 BUILDLINK_FILES.qt6-qtbase+=	qt6/libexec/*
+BUILDLINK_FILES.qt6-qtbase+=	qt6/plugins/*/*/*/*
 
 # \todo Fix duplication with prefix coded in Makefile.common
 QTDIR=		${BUILDLINK_PREFIX.qt6-qtbase}/qt6
