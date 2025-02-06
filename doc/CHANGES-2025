@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1103 2025/02/06 08:51:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1104 2025/02/06 08:55:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1448,3 +1448,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 135.0 [ryoon 2025-02-06]
 	Updated math/nlopt to 2.10.0 [adam 2025-02-06]
 	Updated misc/dpkg to 1.22.15 [adam 2025-02-06]
+	Updated sysutils/py-ansible-compat to 25.1.2 [adam 2025-02-06]
+	Updated sysutils/ansible-lint to 25.1.2 [adam 2025-02-06]
