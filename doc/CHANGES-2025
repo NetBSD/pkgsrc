@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1124 2025/02/06 21:21:17 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1125 2025/02/06 21:46:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1478,3 +1478,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libtasn1 to 4.20.0 [wiz 2025-02-06]
 	Updated chat/py-nbxmpp to 4.4.0 [gdt 2025-02-06]
 	Updated sysutils/vultr to 2.0.3 [schmonz 2025-02-06]
+	Updated chat/py-nbxmpp to 4.4.0nb1 [wiz 2025-02-06]
