@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2020/04/11 14:08:10 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2025/02/06 16:27:44 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/bitcoin/__init__.py
 ${PYSITELIB}/bitcoin/__init__.pyc
 ${PYSITELIB}/bitcoin/__init__.pyo
@@ -22,6 +22,12 @@ ${PYSITELIB}/bitcoin/core/__init__.pyo
 ${PYSITELIB}/bitcoin/core/_bignum.py
 ${PYSITELIB}/bitcoin/core/_bignum.pyc
 ${PYSITELIB}/bitcoin/core/_bignum.pyo
+${PYSITELIB}/bitcoin/core/contrib/__init__.py
+${PYSITELIB}/bitcoin/core/contrib/__init__.pyc
+${PYSITELIB}/bitcoin/core/contrib/__init__.pyo
+${PYSITELIB}/bitcoin/core/contrib/ripemd160.py
+${PYSITELIB}/bitcoin/core/contrib/ripemd160.pyc
+${PYSITELIB}/bitcoin/core/contrib/ripemd160.pyo
 ${PYSITELIB}/bitcoin/core/key.py
 ${PYSITELIB}/bitcoin/core/key.pyc
 ${PYSITELIB}/bitcoin/core/key.pyo
@@ -85,6 +91,9 @@ ${PYSITELIB}/bitcoin/tests/test_messages.pyo
 ${PYSITELIB}/bitcoin/tests/test_net.py
 ${PYSITELIB}/bitcoin/tests/test_net.pyc
 ${PYSITELIB}/bitcoin/tests/test_net.pyo
+${PYSITELIB}/bitcoin/tests/test_ripemd160.py
+${PYSITELIB}/bitcoin/tests/test_ripemd160.pyc
+${PYSITELIB}/bitcoin/tests/test_ripemd160.pyo
 ${PYSITELIB}/bitcoin/tests/test_rpc.py
 ${PYSITELIB}/bitcoin/tests/test_rpc.pyc
 ${PYSITELIB}/bitcoin/tests/test_rpc.pyo
