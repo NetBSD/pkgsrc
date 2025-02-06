@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2024/09/06 18:48:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.107 2025/02/06 12:39:00 riastradh Exp $
 
 DISTNAME=	vault-1.6.6
 PKGREVISION=	37
@@ -28,7 +28,7 @@ pre-build:
 	${RM} -rf ${WRKSRC}/vault/external_tests
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/bin/vault ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/${GOPATH_BIN}/vault ${DESTDIR}${PREFIX}/bin
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg ${GO} test -v ./vault
