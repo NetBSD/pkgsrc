@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2025/02/06 01:16:23 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/06 22:47:44 khorben Exp $
 #
 
 DISTNAME=	DeforaOS-Artwork-0.1.4
 PKGNAME=	deforaos-icon-theme-0.1.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DeforaOS/}DeforaOS-Artwork/releases/download/DeforaOS-Artwork_0-1-4/
 
@@ -21,4 +22,5 @@ ICON_THEMES=	yes
 
 TEST_TARGET=	tests
 
+.include "../../devel/deforaos-configure/deforaos-configure.mk"
 .include "../../mk/bsd.pkg.mk"
