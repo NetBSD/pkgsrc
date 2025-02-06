@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.7 2025/02/02 18:08:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.8 2025/02/06 11:20:22 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.21.0
 CARGO_CRATE_DEPENDS+=	adler-1.0.2
@@ -269,6 +269,7 @@ CARGO_CRATE_DEPENDS+=	wait-timeout-0.2.0
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
 CARGO_CRATE_DEPENDS+=	want-0.3.1
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.93
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.93
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.36
