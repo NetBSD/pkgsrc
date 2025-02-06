@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2024/01/06 23:39:24 leot Exp $
+@comment $NetBSD: PLIST,v 1.23 2025/02/06 13:22:10 adam Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -137,12 +137,18 @@ ${PYSITELIB}/mitmproxy/addons/stickyauth.pyo
 ${PYSITELIB}/mitmproxy/addons/stickycookie.py
 ${PYSITELIB}/mitmproxy/addons/stickycookie.pyc
 ${PYSITELIB}/mitmproxy/addons/stickycookie.pyo
+${PYSITELIB}/mitmproxy/addons/strip_dns_https_records.py
+${PYSITELIB}/mitmproxy/addons/strip_dns_https_records.pyc
+${PYSITELIB}/mitmproxy/addons/strip_dns_https_records.pyo
 ${PYSITELIB}/mitmproxy/addons/termlog.py
 ${PYSITELIB}/mitmproxy/addons/termlog.pyc
 ${PYSITELIB}/mitmproxy/addons/termlog.pyo
 ${PYSITELIB}/mitmproxy/addons/tlsconfig.py
 ${PYSITELIB}/mitmproxy/addons/tlsconfig.pyc
 ${PYSITELIB}/mitmproxy/addons/tlsconfig.pyo
+${PYSITELIB}/mitmproxy/addons/update_alt_svc.py
+${PYSITELIB}/mitmproxy/addons/update_alt_svc.pyc
+${PYSITELIB}/mitmproxy/addons/update_alt_svc.pyo
 ${PYSITELIB}/mitmproxy/addons/upstream_auth.py
 ${PYSITELIB}/mitmproxy/addons/upstream_auth.pyc
 ${PYSITELIB}/mitmproxy/addons/upstream_auth.pyo
@@ -369,6 +375,9 @@ ${PYSITELIB}/mitmproxy/net/dns/classes.pyo
 ${PYSITELIB}/mitmproxy/net/dns/domain_names.py
 ${PYSITELIB}/mitmproxy/net/dns/domain_names.pyc
 ${PYSITELIB}/mitmproxy/net/dns/domain_names.pyo
+${PYSITELIB}/mitmproxy/net/dns/https_records.py
+${PYSITELIB}/mitmproxy/net/dns/https_records.pyc
+${PYSITELIB}/mitmproxy/net/dns/https_records.pyo
 ${PYSITELIB}/mitmproxy/net/dns/op_codes.py
 ${PYSITELIB}/mitmproxy/net/dns/op_codes.pyc
 ${PYSITELIB}/mitmproxy/net/dns/op_codes.pyo
@@ -411,6 +420,9 @@ ${PYSITELIB}/mitmproxy/net/http/url.pyo
 ${PYSITELIB}/mitmproxy/net/http/user_agents.py
 ${PYSITELIB}/mitmproxy/net/http/user_agents.pyc
 ${PYSITELIB}/mitmproxy/net/http/user_agents.pyo
+${PYSITELIB}/mitmproxy/net/http/validate.py
+${PYSITELIB}/mitmproxy/net/http/validate.pyc
+${PYSITELIB}/mitmproxy/net/http/validate.pyo
 ${PYSITELIB}/mitmproxy/net/local_ip.py
 ${PYSITELIB}/mitmproxy/net/local_ip.pyc
 ${PYSITELIB}/mitmproxy/net/local_ip.pyo
@@ -498,9 +510,27 @@ ${PYSITELIB}/mitmproxy/proxy/layers/http/_upstream_proxy.pyo
 ${PYSITELIB}/mitmproxy/proxy/layers/modes.py
 ${PYSITELIB}/mitmproxy/proxy/layers/modes.pyc
 ${PYSITELIB}/mitmproxy/proxy/layers/modes.pyo
-${PYSITELIB}/mitmproxy/proxy/layers/quic.py
-${PYSITELIB}/mitmproxy/proxy/layers/quic.pyc
-${PYSITELIB}/mitmproxy/proxy/layers/quic.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/__init__.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/__init__.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/__init__.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_client_hello_parser.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_client_hello_parser.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_client_hello_parser.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_commands.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_commands.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_commands.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_events.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_events.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_events.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_hooks.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_hooks.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_hooks.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_raw_layers.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_raw_layers.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_raw_layers.pyo
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_stream_layers.py
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_stream_layers.pyc
+${PYSITELIB}/mitmproxy/proxy/layers/quic/_stream_layers.pyo
 ${PYSITELIB}/mitmproxy/proxy/layers/tcp.py
 ${PYSITELIB}/mitmproxy/proxy/layers/tcp.pyc
 ${PYSITELIB}/mitmproxy/proxy/layers/tcp.pyo
@@ -704,6 +734,10 @@ ${PYSITELIB}/mitmproxy/tools/web/static_viewer.py
 ${PYSITELIB}/mitmproxy/tools/web/static_viewer.pyc
 ${PYSITELIB}/mitmproxy/tools/web/static_viewer.pyo
 ${PYSITELIB}/mitmproxy/tools/web/templates/index.html
+${PYSITELIB}/mitmproxy/tools/web/templates/login.html
+${PYSITELIB}/mitmproxy/tools/web/web_columns.py
+${PYSITELIB}/mitmproxy/tools/web/web_columns.pyc
+${PYSITELIB}/mitmproxy/tools/web/web_columns.pyo
 ${PYSITELIB}/mitmproxy/tools/web/webaddons.py
 ${PYSITELIB}/mitmproxy/tools/web/webaddons.pyc
 ${PYSITELIB}/mitmproxy/tools/web/webaddons.pyo
