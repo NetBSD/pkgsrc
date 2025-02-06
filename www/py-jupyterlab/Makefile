@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2024/10/14 06:46:07 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/06 10:02:16 adam Exp $
 
-DISTNAME=	jupyterlab-4.2.5
+DISTNAME=	jupyterlab-4.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jupyterlab/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.4.0:../../www/py-jupyter_server
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.19.0:../../www/py-jupyterlab-server
 DEPENDS+=	${PYPKGPREFIX}-notebook_shim>=0.2:../../www/py-notebook_shim
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.1.0:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=40.8.0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-traitlets-[0-9]*:../../devel/py-traitlets
 
@@ -33,6 +33,9 @@ CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 .include "../../lang/python/pyversion.mk"
+.if ${PYTHON_VERSION} < 310
+DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.3:../../devel/py-importlib-metadata
+.endif
 .if ${PYTHON_VERSION} < 311
 DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
 .endif
