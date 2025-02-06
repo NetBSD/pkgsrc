@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/08/30 09:13:35 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/06 11:26:29 pin Exp $
 
-DISTNAME=	inlyne-0.4.3
+DISTNAME=	inlyne-0.5.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Inlyne-Project/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -14,11 +14,11 @@ TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.72.1
+RUST_REQ=	1.81.0
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin share/examples/inlyne
+INSTALLATION_DIRS=	bin share/examples/inlyne share/applications
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
@@ -32,6 +32,8 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/inlyne.default.toml \
 		${DESTDIR}${PREFIX}/share/examples/inlyne
+	${INSTALL_DATA} ${WRKSRC}/assets/inlyne.desktop \
+		${DESTDIR}${PREFIX}/share/applications
 
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		x11
