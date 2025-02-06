@@ -1,4 +1,4 @@
-# $NetBSD: go-module.mk,v 1.22 2024/12/06 11:05:48 jperkin Exp $
+# $NetBSD: go-module.mk,v 1.23 2025/02/06 00:24:36 riastradh Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 #
@@ -53,6 +53,26 @@ MAKE_ENV+=	GOPATH=${WRKDIR}/.gopath GOPROXY=file://${WRKDIR}/.goproxy
 MAKE_ENV+=	GOCACHE=${GO_CACHE_DIR} GOTMPDIR=${GO_CACHE_DIR}
 MAKE_ENV+=	GOTOOLCHAIN=local
 
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${USE_CROSS_COMPILE:tl} == "yes"
+
+MAKE_ENV+=	GOHOSTARCH=${GOHOSTARCH}
+MAKE_ENV+=	GOARCH=${GOARCH}
+MAKE_ENV+=	GOOS=${GOOS}
+
+# TOOLBASE-relative .go source code paths get baked into binaries.
+# Pooh.
+CHECK_WRKREF_SKIP+=	bin/*
+
+GOPATH_BIN=	bin/${GO_PLATFORM}
+
+.else
+
+GOPATH_BIN=	bin
+
+.endif
+
 post-extract: ${GO_CACHE_DIR}
 ${GO_CACHE_DIR}:
 	@${MKDIR} ${.TARGET}
@@ -72,7 +92,8 @@ do-test:
 
 .if !target(do-install)
 do-install:
-	${RUN} cd ${WRKDIR}/.gopath && [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	${RUN} cd ${WRKDIR}/.gopath && [ ! -d ${GOPATH_BIN} ] || \
+		{ cd ${GOPATH_BIN} && ${PAX} -rw . ${DESTDIR}${PREFIX}/bin; }
 .endif
 
 .PHONY: print-go-modules show-go-modules

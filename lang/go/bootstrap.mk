@@ -1,7 +1,7 @@
-# $NetBSD: bootstrap.mk,v 1.14 2025/01/19 19:27:37 riastradh Exp $
+# $NetBSD: bootstrap.mk,v 1.15 2025/02/06 00:24:36 riastradh Exp $
 
 .if !defined(GOROOT_BOOTSTRAP) || !exists(${GOROOT_BOOTSTRAP}/bin/go)
-.  if ${MACHINE_ARCH} == "aarch64" || \
+.  if (${MACHINE_ARCH} == "aarch64" && ${USE_CROSS_COMPILE:tl} == "no") || \
     (${OPSYS} == "Darwin" && ${OPSYS_VERSION} >= 120000) || \
     (${OPSYS} == "FreeBSD" && ${OPSYS_VERSION} >= 140000) || \
     (${OPSYS} == "SunOS" && ${OS_VARIANT} != "Solaris")
