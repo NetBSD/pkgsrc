@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2024/11/16 12:03:26 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2025/02/06 00:29:34 wen Exp $
 
-DISTNAME=	DBIx-Class-Schema-Loader-0.07049
+DISTNAME=	DBIx-Class-Schema-Loader-0.07052
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
