@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2024/12/18 10:58:03 nros Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/06 14:31:55 adam Exp $
 
-DISTNAME=	tevent-0.16.1
-PKGREVISION=	1
+DISTNAME=	tevent-0.16.2
 CATEGORIES=	devel
 MASTER_SITES=	https://www.samba.org/ftp/tevent/
 
@@ -14,8 +13,6 @@ TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS+=	samba<=4.9.4nb1
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_TOOLS+=		pkg-config
 HAS_CONFIGURE=		yes
@@ -41,9 +38,9 @@ SUBST_FILES.docbook+=	buildtools/wafsamba/wafsamba.py
 SUBST_STAGE.docbook=	pre-configure
 SUBST_SED.docbook+=	-e 's,http://docbook.sourceforge.net/release/xsl/current,${PREFIX}/share/xsl/docbook,g'
 
+.include "../../devel/cmocka/buildlink3.mk"
 BUILDLINK_API_DEPENDS.talloc+=	talloc>=2.4.0
 .include "../../devel/talloc/buildlink3.mk"
-.include "../../devel/cmocka/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
