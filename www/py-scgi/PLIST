@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2022/01/22 14:17:46 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}
+@comment $NetBSD: PLIST,v 1.8 2025/02/06 13:49:19 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/scgi/__init__.py
 ${PYSITELIB}/scgi/__init__.pyc
 ${PYSITELIB}/scgi/__init__.pyo
@@ -10,12 +14,15 @@ ${PYSITELIB}/scgi/quixote_handler.pyo
 ${PYSITELIB}/scgi/scgi_server.py
 ${PYSITELIB}/scgi/scgi_server.pyc
 ${PYSITELIB}/scgi/scgi_server.pyo
-${PYSITELIB}/scgi/scgi_session_server.py
-${PYSITELIB}/scgi/scgi_session_server.pyc
-${PYSITELIB}/scgi/scgi_session_server.pyo
+${PYSITELIB}/scgi/session_server.py
+${PYSITELIB}/scgi/session_server.pyc
+${PYSITELIB}/scgi/session_server.pyo
+${PYSITELIB}/scgi/systemd_socket.py
+${PYSITELIB}/scgi/systemd_socket.pyc
+${PYSITELIB}/scgi/systemd_socket.pyo
 ${PYSITELIB}/scgi/test_passfd.py
 ${PYSITELIB}/scgi/test_passfd.pyc
 ${PYSITELIB}/scgi/test_passfd.pyo
-${PYSITELIB}/scgi/wsgi_handler.py
-${PYSITELIB}/scgi/wsgi_handler.pyc
-${PYSITELIB}/scgi/wsgi_handler.pyo
+${PYSITELIB}/scgi/util.py
+${PYSITELIB}/scgi/util.pyc
+${PYSITELIB}/scgi/util.pyo
