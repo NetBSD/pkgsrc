@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/06 05:53:48 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/06 22:44:51 mef Exp $
 
 DISTNAME=	pytorch-v2.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S,pytorch-v,torch-,}
@@ -31,8 +31,8 @@ BLAS_ACCEPTED=		openblas_pthread openblas_openmp
 USE_LANGUAGES+=		c c++
 USE_CC_FEATURES=	c11
 USE_CXX_FEATURES=	c++17
-# configure script asking fo gcc-9.3, (on NetBSD/amd64 9.3),
-# GCC-9.3 or newer is required to compile PyTorch, but found 7.5.0
+# configure script is asking for gcc-9.3 (on NetBSD/amd64 9.3) as:
+#   GCC-9.3 or newer is required to compile PyTorch, but found 7.5.0
 # so:
 GCC_REQD+=		10
 
