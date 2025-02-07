@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/03/07 20:28:46 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/07 13:56:03 adam Exp $
 
-BLAKE2s (WTForms-Alchemy-0.18.0.tar.gz) = 6fa083e711506f5433f8a9b5a03d6b6b5b9e4dfc3a575f32bccb0db6295dc0f5
-SHA512 (WTForms-Alchemy-0.18.0.tar.gz) = afce2b8e2f69ffb7954d7c57d4641c7ce169bbba2ab90efc2b0b403484cadd0944d2e4f01a9700daefba74f5214e4fb4eb814783dc4f28fbb85dfb24d97c6b63
-Size (WTForms-Alchemy-0.18.0.tar.gz) = 53368 bytes
+BLAKE2s (wtforms_alchemy-0.19.0.tar.gz) = 5ba543a1a60b6f9c22359a09e82fb981d3f225dd53c43b1c3a48e6e0905b2e29
+SHA512 (wtforms_alchemy-0.19.0.tar.gz) = b98620432638e12d83123b0e973ce960fbda195f66ccac588f063036836b13aa963eb4e772e8ca07e1f8abb96939682aa0a0661205f49f06b4d4f46f64d5d391
+Size (wtforms_alchemy-0.19.0.tar.gz) = 52451 bytes
