@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1132 2025/02/07 07:35:18 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1133 2025/02/07 07:52:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1496,3 +1496,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-astropy to 7.0.1 [adam 2025-02-07]
 	Updated lang/py-mypy to 1.15.0 [adam 2025-02-07]
 	Updated math/py-jplephem to 2.22 [adam 2025-02-07]
+	Updated editors/neovim to 0.10.4 [adam 2025-02-07]
+	Updated devel/py-hypothesis to 6.125.2 [adam 2025-02-07]
