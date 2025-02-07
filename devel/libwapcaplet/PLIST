@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/07 15:59:47 pho Exp $
+include/libwapcaplet/libwapcaplet.h
+lib/libwapcaplet.so
+lib/libwapcaplet.so.0
+lib/libwapcaplet.so.${PKGVERSION}
+lib/pkgconfig/libwapcaplet.pc
