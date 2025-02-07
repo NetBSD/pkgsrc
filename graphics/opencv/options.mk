@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2024/08/25 06:18:52 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2025/02/07 21:54:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.opencv
 PKG_SUPPORTED_OPTIONS=	ffmpeg jasper
