@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/07 16:03:47 pho Exp $
+
+BLAKE2s (libdom-0.4.2-src.tar.gz) = 64ffd7f5ed1b7f88e943ae7cc6872634cd2321b62340eb8f6a7a99dd363d9e29
+SHA512 (libdom-0.4.2-src.tar.gz) = 85ce95a545c48af2cc082896d8153f016f7452315c67390884181cde19c999c7122c913846d404e40957d07abedc22c5ef8342d69eee139309e7c221d0580bb6
+Size (libdom-0.4.2-src.tar.gz) = 878706 bytes
