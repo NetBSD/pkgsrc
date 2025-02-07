@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1159 2025/02/07 21:54:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1160 2025/02/07 21:56:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1543,3 +1543,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/gajim to 1.9.5 [adam 2025-02-07]
 	Updated security/py-truststore to 0.10.1 [adam 2025-02-07]
 	Updated graphics/opencv to 4.11.0 [wiz 2025-02-07]
+	Updated net/py-aiohappyeyeballs to 2.4.6 [adam 2025-02-07]
+	Updated devel/py-test-datadir to 1.6.1 [adam 2025-02-07]
