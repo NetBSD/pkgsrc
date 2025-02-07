@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/01/28 20:31:47 adam Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/07 13:59:36 adam Exp $
 
-DISTNAME=	flask_wtf-1.2.1
+DISTNAME=	flask_wtf-1.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-WTF/}
@@ -18,8 +18,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flask-babel-[0-9]*:../../www/py-flask-babel
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-babelex-[0-9]*:../../www/py-flask-babelex
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/build/lib
 
