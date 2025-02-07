@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/07 16:02:59 pho Exp $
+
+BLAKE2s (libhubbub-0.3.8-src.tar.gz) = 5f77405b3de9a93b27ca69fa70026b2d7320893bacb7f8f99ca320cba7d2e81e
+SHA512 (libhubbub-0.3.8-src.tar.gz) = 7f0e4a2494a73a1a84e6d41f18deb9aa8c2f16da7b39bdf9cb96110567b17f50b6c65e0d3a91d5393829ae1b8651d153fb678085747f59664cad4209b6a1a96b
+Size (libhubbub-0.3.8-src.tar.gz) = 780549 bytes
