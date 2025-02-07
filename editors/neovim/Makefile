@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2025/01/24 12:45:54 riastradh Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/07 07:50:02 adam Exp $
 
-DISTNAME=	neovim-0.10.3
+DISTNAME=	neovim-0.10.4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=neovim/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,7 +11,6 @@ COMMENT=	Vim fork focused on extensibility and usability
 LICENSE=	apache-2.0 AND vim-license
 
 USE_LANGUAGES=	c c++
-
 USE_TOOLS+=	pkg-config gettext
 
 .include "../../mk/bsd.prefs.mk"
