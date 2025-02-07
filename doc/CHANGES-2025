@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1150 2025/02/07 16:03:06 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1151 2025/02/07 16:03:54 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1527,3 +1527,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/libparserutils version 0.2.5 [pho 2025-02-07]
 	Added textproc/libcss version 0.9.2 [pho 2025-02-07]
 	Added www/libhubbub version 0.3.8 [pho 2025-02-07]
+	Added textproc/libdom version 0.4.2 [pho 2025-02-07]
