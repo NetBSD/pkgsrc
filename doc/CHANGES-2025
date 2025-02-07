@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1130 2025/02/07 07:06:50 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1131 2025/02/07 07:18:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1487,3 +1487,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-cors-headers to 4.7.0 [adam 2025-02-07]
 	Updated lang/py-lsp-server to 1.12.1 [adam 2025-02-07]
 	Updated math/py-xgboost to 2.1.4 [adam 2025-02-07]
+	Updated devel/py-ruff to 0.9.5 [adam 2025-02-07]
+	Updated databases/py-sqlalchemy to 2.0.38 [adam 2025-02-07]
+	Updated textproc/py-xml2rfc to 3.27.0 [adam 2025-02-07]
+	Updated www/py-whitenoise to 6.9.0 [adam 2025-02-07]
