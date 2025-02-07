@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.72 2025/01/05 20:47:57 adam Exp $
+$NetBSD: distinfo,v 1.73 2025/02/07 14:27:52 adam Exp $
 
-BLAKE2s (octave-9.3.0.tar.xz) = c112b893a26520e4a09549785301c1c7371b9d83c655d78e5bf625ae07f87802
-SHA512 (octave-9.3.0.tar.xz) = 9550162681aee88b4bcb94c5081ed0470df0d3f7c5307b25878b94b19f1282002ba69f0c4c79877e81f61122bfba1b2671ed5007a28fbb2d755bda466a3c46d8
-Size (octave-9.3.0.tar.xz) = 27667832 bytes
+BLAKE2s (octave-9.4.0.tar.xz) = 9d2eaa16edfc86b088ae2cbdbfca00427bbce1761cbb40c0fd30c1bb47a9b154
+SHA512 (octave-9.4.0.tar.xz) = f0a5ec7d3a14ee18c9a48bab240004ed67ce475b7d5f67037a102d20585b2a78475f260efac33396697dac12c3c49cbabdb2c1370e608ca9ae8ef7954a4e2d92
+Size (octave-9.4.0.tar.xz) = 27658760 bytes
 SHA1 (patch-Makefile.in) = 7fe47cf88e4dff2eba360600f086f8361ec11535
 SHA1 (patch-configure.ac) = e39207866da3deaf269f73b4db2a5c3e2f91eadf
 SHA1 (patch-doc_interpreter_module.mk) = 66389cceddbe71fca0c8197275a839170d64ad5b
