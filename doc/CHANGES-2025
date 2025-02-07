@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1142 2025/02/07 14:31:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1143 2025/02/07 15:11:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1516,3 +1516,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/octave to 9.4.0 [adam 2025-02-07]
 	Updated textproc/py-deepdiff to 8.2.0 [adam 2025-02-07]
 	Updated devel/py-faker to 35.2.0 [adam 2025-02-07]
+	Updated misc/rpm to 4.20.0 [adam 2025-02-07]
+	Updated www/py-django-allauth to 65.4.1 [adam 2025-02-07]
