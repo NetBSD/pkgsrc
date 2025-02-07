@@ -1,0 +1,14 @@
+$NetBSD: patch-ao,v 1.1 2025/02/07 03:15:06 ryoon Exp $
+
+Replace configurable paths with tags.
+
+--- etc/etcscreenrc.orig	2015-09-05 19:28:22.000000000 +0000
++++ etc/etcscreenrc
+@@ -1,6 +1,6 @@
+ #
+ # This is an example for the global screenrc file.
+-# You may want to install this file as /usr/local/etc/screenrc.
++# You may want to install this file as @PKG_SYSCONFDIR@/screenrc.
+ # Check config.h for the exact location.
+ #
+ # Flaws of termcap and standard settings are done here.

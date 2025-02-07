@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2025/02/07 03:15:05 ryoon Exp $
+
+You may want to create and edit the file:
+
+	${PKG_SYSCONFDIR}/screenrc
+
+to customize screen globally. Example configuration files have been
+installed to:
+
+	${PREFIX}/share/examples/screen/screenrc
+	${PREFIX}/share/examples/screen/etcscreenrc
+
+===========================================================================
