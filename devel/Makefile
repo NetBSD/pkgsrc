@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4415 2025/02/06 13:51:28 adam Exp $
+# $NetBSD: Makefile,v 1.4416 2025/02/07 15:58:55 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -1189,6 +1189,7 @@ SUBDIR+=	netbsd-iscsi-lib
 SUBDIR+=	netcdf
 SUBDIR+=	netcdf-cxx
 SUBDIR+=	netcdf-fortran
+SUBDIR+=	netsurf-buildsystem
 SUBDIR+=	newfile
 SUBDIR+=	nextpnr-ice40
 SUBDIR+=	ninja-build
