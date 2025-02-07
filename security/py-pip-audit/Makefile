@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2024/12/09 08:13:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/02/07 07:23:32 adam Exp $
 
-DISTNAME=	pip_audit-2.7.3
+DISTNAME=	pip_audit-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
 
@@ -17,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=5:../../security/py-cyclonedx-pyt
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pip-api>=0.0.28:../../devel/py-pip-api
 DEPENDS+=	${PYPKGPREFIX}-pip-requirements-parser>=32.0.0:../../devel/py-pip-requirements-parser
+DEPENDS+=	${PYPKGPREFIX}-platformdirs>=4.2.0:../../misc/py-platformdirs
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.31.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rich>=12.4:../../comms/py-rich
 DEPENDS+=	${PYPKGPREFIX}-toml>=0.10:../../textproc/py-toml
