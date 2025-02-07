@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.17 2022/05/13 15:35:17 wiz Exp $
+$NetBSD: distinfo,v 1.18 2025/02/07 00:54:34 khorben Exp $
 
-BLAKE2s (hexchat-2.16.1.tar.xz) = c4a0d6d4925f062eb6401c4764c38fdd28b261339de5d915544b424d5f30a286
-SHA512 (hexchat-2.16.1.tar.xz) = 9e6baa30ec8c3ce4fb56e2c82625da63295040eaf93a542aec8a4a18a6a3c95d69d1d4ffabc952bcdcd7b754afef234b348f296143991fafd0550342db95ce0e
-Size (hexchat-2.16.1.tar.xz) = 1349536 bytes
+BLAKE2s (hexchat-2.16.2.tar.xz) = aaadaba99fb5d3576eff85a05961fa20177f9cd994a722b44a32540477753b2d
+SHA512 (hexchat-2.16.2.tar.xz) = 2ceb4332328c4acf55a46bf5c45788a7f3a73fd2ffd676751c75cc08ca04ced5569c1e6406877e6f2972b8967e94bea2ad70a6966ade7cd811b5c4d700409ee2
+Size (hexchat-2.16.2.tar.xz) = 1352304 bytes
 SHA1 (patch-osx_launcher.sh) = 7493430921809182898aca2ebb8fd1f493dbd9d3
 SHA1 (patch-plugins_sysinfo_meson.build) = 35257a24137fe02a1ba292d7da8b627d318de0ab

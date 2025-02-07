@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.81 2024/12/27 08:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/02/07 00:54:34 khorben Exp $
 
-DISTNAME=	hexchat-2.16.1
-PKGREVISION=	24
+DISTNAME=	hexchat-2.16.2
 CATEGORIES=	chat
-MASTER_SITES=	https://dl.hexchat.net/hexchat/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hexchat/}
+GITHUB_PROJECT=	hexchat
+#GITHUB_RELEASE=	hexchat-${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
