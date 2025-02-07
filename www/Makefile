@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1843 2025/02/06 09:58:48 wiz Exp $
+# $NetBSD: Makefile,v 1.1844 2025/02/07 16:03:13 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -223,6 +223,7 @@ SUBDIR+=	libcurl-gnutls
 SUBDIR+=	libecap
 SUBDIR+=	libghttp
 SUBDIR+=	libgtkhtml
+SUBDIR+=	libhubbub
 SUBDIR+=	libmediawiki
 SUBDIR+=	libmicrohttpd
 SUBDIR+=	libmrss
