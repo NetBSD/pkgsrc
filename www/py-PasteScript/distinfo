@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/06/11 19:48:19 adam Exp $
+$NetBSD: distinfo,v 1.7 2025/02/07 15:22:50 adam Exp $
 
-BLAKE2s (PasteScript-3.6.0.tar.gz) = 4f207348336fc384293eb0abee31b19057d0420186c12774490115da376fa545
-SHA512 (PasteScript-3.6.0.tar.gz) = ffc81325476f24217b1064c2c07fb5437deb6ed768d3524a281cb6e25ab61f45f0f26d982c17940fa4fe02768f24ee2b9ce1b4cb8ce2e5157d869a22dd2d46f4
-Size (PasteScript-3.6.0.tar.gz) = 99063 bytes
+BLAKE2s (pastescript-3.7.0.tar.gz) = b91fd17b9536e3577e5e69126bf7f0640ec84336a6762debb10343f698658970
+SHA512 (pastescript-3.7.0.tar.gz) = d65067ae71a0b7fbc2bfbdcffd3c56b368e979093ccbdea392a57cf495f9c1b8bc773a0ae40b116fdf1094b7fe3c550b65857dd1e01440d6d35d2ff5a87d7a53
+Size (pastescript-3.7.0.tar.gz) = 98747 bytes
