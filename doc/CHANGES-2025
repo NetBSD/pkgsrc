@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1152 2025/02/07 16:18:25 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1153 2025/02/07 16:18:36 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/libhubbub version 0.3.8 [pho 2025-02-07]
 	Added textproc/libdom version 0.4.2 [pho 2025-02-07]
 	Updated www/elinks to 0.18.0 [pho 2025-02-07]
+	Updated www/palemoon to 33.6.0 [nia 2025-02-07]
