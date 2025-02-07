@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2025/01/22 08:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.84 2025/02/07 07:14:34 adam Exp $
 
-DISTNAME=	sqlalchemy-2.0.37
+DISTNAME=	sqlalchemy-2.0.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
