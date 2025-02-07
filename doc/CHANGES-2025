@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1143 2025/02/07 15:11:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1144 2025/02/07 15:23:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1518,3 +1518,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 35.2.0 [adam 2025-02-07]
 	Updated misc/rpm to 4.20.0 [adam 2025-02-07]
 	Updated www/py-django-allauth to 65.4.1 [adam 2025-02-07]
+	Updated sysutils/py-borgbackup to 1.4.0 [adam 2025-02-07]
+	Updated www/py-nbclassic to 1.2.0 [adam 2025-02-07]
+	Updated www/py-PasteScript to 3.7.0 [adam 2025-02-07]
