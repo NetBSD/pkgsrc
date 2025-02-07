@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/01/21 14:10:52 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/07 17:40:33 adam Exp $
 
-DISTNAME=	huggingface_hub-0.27.1
+DISTNAME=	huggingface_hub-0.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/huggingface-hub/}

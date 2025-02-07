@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/21 14:10:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/07 17:40:33 adam Exp $
 bin/huggingface-cli-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -198,6 +198,9 @@ ${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_image.pyo
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_speech.py
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_speech.pyc
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_speech.pyo
+${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_video.py
+${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_video.pyc
+${PYSITELIB}/huggingface_hub/inference/_generated/types/text_to_video.pyo
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/token_classification.py
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/token_classification.pyc
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/token_classification.pyo
@@ -219,6 +222,24 @@ ${PYSITELIB}/huggingface_hub/inference/_generated/types/zero_shot_image_classifi
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/zero_shot_object_detection.py
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/zero_shot_object_detection.pyc
 ${PYSITELIB}/huggingface_hub/inference/_generated/types/zero_shot_object_detection.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/__init__.py
+${PYSITELIB}/huggingface_hub/inference/_providers/__init__.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/__init__.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/fal_ai.py
+${PYSITELIB}/huggingface_hub/inference/_providers/fal_ai.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/fal_ai.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/hf_inference.py
+${PYSITELIB}/huggingface_hub/inference/_providers/hf_inference.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/hf_inference.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/replicate.py
+${PYSITELIB}/huggingface_hub/inference/_providers/replicate.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/replicate.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/sambanova.py
+${PYSITELIB}/huggingface_hub/inference/_providers/sambanova.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/sambanova.pyo
+${PYSITELIB}/huggingface_hub/inference/_providers/together.py
+${PYSITELIB}/huggingface_hub/inference/_providers/together.pyc
+${PYSITELIB}/huggingface_hub/inference/_providers/together.pyo
 ${PYSITELIB}/huggingface_hub/inference_api.py
 ${PYSITELIB}/huggingface_hub/inference_api.pyc
 ${PYSITELIB}/huggingface_hub/inference_api.pyo
@@ -228,6 +249,7 @@ ${PYSITELIB}/huggingface_hub/keras_mixin.pyo
 ${PYSITELIB}/huggingface_hub/lfs.py
 ${PYSITELIB}/huggingface_hub/lfs.pyc
 ${PYSITELIB}/huggingface_hub/lfs.pyo
+${PYSITELIB}/huggingface_hub/py.typed
 ${PYSITELIB}/huggingface_hub/repocard.py
 ${PYSITELIB}/huggingface_hub/repocard.pyc
 ${PYSITELIB}/huggingface_hub/repocard.pyo
