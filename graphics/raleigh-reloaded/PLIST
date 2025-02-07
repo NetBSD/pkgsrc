@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2022/08/18 15:49:40 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/07 17:54:22 tsutsui Exp $
 share/themes/Raleigh-Reloaded/firefox-proton/button-hover.png
 share/themes/Raleigh-Reloaded/firefox-proton/button-pressed.png
 share/themes/Raleigh-Reloaded/firefox-proton/check-checked.png
 share/themes/Raleigh-Reloaded/firefox-proton/check.png
 share/themes/Raleigh-Reloaded/firefox-proton/entry.png
-share/themes/Raleigh-Reloaded/firefox-proton/notebook-tab-top.png
+share/themes/Raleigh-Reloaded/firefox-proton/notebook-background.png
+share/themes/Raleigh-Reloaded/firefox-proton/notebook-tab-active.png
+share/themes/Raleigh-Reloaded/firefox-proton/notebook-tab.png
+share/themes/Raleigh-Reloaded/firefox-proton/separator-vertical.png
 share/themes/Raleigh-Reloaded/firefox-proton/userChrome.css
 share/themes/Raleigh-Reloaded/gtk-2.0/gtkrc
 share/themes/Raleigh-Reloaded/gtk-3.0/assets/button-disabled.png
