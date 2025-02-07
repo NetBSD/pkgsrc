@@ -1,11 +1,11 @@
-$NetBSD: patch-installplatform,v 1.1 2017/04/23 08:18:15 adam Exp $
+$NetBSD: patch-installplatform,v 1.2 2025/02/07 15:06:19 adam Exp $
 
 Keep macros in one place across platforms.
 
---- installplatform.orig	2017-04-23 06:48:59.000000000 +0000
+--- installplatform.orig	2025-02-07 14:38:06.824139208 +0000
 +++ installplatform
-@@ -194,7 +194,7 @@ for ARCH in noarch `grep ^arch_canon $RP
-       LIB=${LIB}64
+@@ -212,7 +212,7 @@ for ARCH in noarch `grep ^arch_canon $RP
+       DEBUGINFO=1
    fi
  
 -  PPD="${DESTDIR}/${platformdir}/${ARCH}-${OS}"
