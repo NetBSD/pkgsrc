@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1499 2025/02/02 09:43:52 taca Exp $
+# $NetBSD: Makefile,v 1.1500 2025/02/07 16:01:23 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -513,6 +513,7 @@ SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
 SUBDIR+=	libnxml
 SUBDIR+=	libodfgen
+SUBDIR+=	libparserutils
 SUBDIR+=	libpinyin
 SUBDIR+=	libplist
 SUBDIR+=	libstemmer
