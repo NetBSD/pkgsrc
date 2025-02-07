@@ -1,4 +1,4 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/02/07 14:01:11 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2025/02/07 14:24:42 wiz Exp $
 
 CMake Error at src/CMakeLists.txt:83 (if):
   if given arguments:
@@ -7,6 +7,8 @@ CMake Error at src/CMakeLists.txt:83 (if):
 
   Unknown arguments specified
 
+https://invent.kde.org/sdk/kdiff3/-/issues/51
+
 --- src/CMakeLists.txt.orig	2025-02-07 13:55:19.772490605 +0000
 +++ src/CMakeLists.txt
 @@ -80,7 +80,7 @@ if(APPLE)
@@ -14,7 +16,7 @@ CMake Error at src/CMakeLists.txt:83 (if):
  endif()
  
 -if(ENABLE_GDBINDEX AND ${CMAKE_SYSTEM_NAME} MATCHES "Linux" AND ${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-+if(FALSE)
++if(ENABLE_GDBINDEX AND ${CMAKE_SYSTEM_NAME} MATCHES "Linux" AND "${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
      find_program(GDBINDEX "gdb-add-index")
      if(GDBINDEX)
          add_custom_command(TARGET kdiff3 POST_BUILD
