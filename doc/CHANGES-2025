@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1141 2025/02/07 14:01:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1142 2025/02/07 14:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1513,3 +1513,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-wtforms-alchemy to 0.19.0 [adam 2025-02-07]
 	Updated www/py-flask-wtf to 1.2.2 [adam 2025-02-07]
 	Updated devel/py-zope.testrunner to 6.7 [adam 2025-02-07]
+	Updated math/octave to 9.4.0 [adam 2025-02-07]
+	Updated textproc/py-deepdiff to 8.2.0 [adam 2025-02-07]
+	Updated devel/py-faker to 35.2.0 [adam 2025-02-07]
