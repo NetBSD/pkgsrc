@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25405 2025/02/07 15:11:59 adam Exp $
+$NetBSD: TODO,v 1.25406 2025/02/07 19:51:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -558,6 +558,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o dega-1.12
 	o delegate-9.9.13
 	o diction-1.14
+	o digikam-8.5.0 [needs opencv4]
 	o direvent-5.2
 	o distcc-pump-3.3.5
 	o distccmon-gnome-3.3.5
