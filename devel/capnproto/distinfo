@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2025/02/03 16:59:10 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/02/07 13:19:30 riastradh Exp $
 
 BLAKE2s (capnproto-c++-1.1.0.tar.gz) = 8b8600454b8dba12e351509cd78533ec56ecdd22b101be70626757828d7ac664
 SHA512 (capnproto-c++-1.1.0.tar.gz) = 11f58bcaab5a5ffbc9cabecd85e74c37cc8657392d8755709e9e2db84b37379f9084a43e922519a4f975ac0a5438811fb124f715a3a9e5f6293983eb8c3e4581
 Size (capnproto-c++-1.1.0.tar.gz) = 1768797 bytes
+SHA1 (patch-src_kj_async-io-unix.c++) = b2bbb22bcb287850f8e4893ce7e2b51e4987965b
