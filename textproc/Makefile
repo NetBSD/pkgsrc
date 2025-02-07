@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1501 2025/02/07 16:02:26 pho Exp $
+# $NetBSD: Makefile,v 1.1502 2025/02/07 16:04:02 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -505,6 +505,7 @@ SUBDIR+=	libcss
 SUBDIR+=	libcsv
 SUBDIR+=	libcue
 SUBDIR+=	libcyaml
+SUBDIR+=	libdom
 SUBDIR+=	libexttextcat
 SUBDIR+=	libfastjson
 SUBDIR+=	libfyaml
