@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1129 2025/02/07 03:25:27 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.1130 2025/02/07 07:06:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1483,3 +1483,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/dav1d to 1.5.1 [ryoon 2025-02-07]
 	Added misc/screen4 version 4.9.1 [ryoon 2025-02-07]
 	Updated math/py-numba to 0.61.0 [ryoon 2025-02-07]
+	Updated www/py-publicsuffixlist to 1.0.2.20250207 [adam 2025-02-07]
+	Updated www/py-django-cors-headers to 4.7.0 [adam 2025-02-07]
+	Updated lang/py-lsp-server to 1.12.1 [adam 2025-02-07]
+	Updated math/py-xgboost to 2.1.4 [adam 2025-02-07]
