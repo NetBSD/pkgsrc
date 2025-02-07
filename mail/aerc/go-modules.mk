@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.5 2025/01/16 14:24:36 ktnb Exp $
+# $NetBSD: go-modules.mk,v 1.6 2025/02/07 18:21:59 ktnb Exp $
 
 GO_MODULE_FILES+=	git.sr.ht/~rjarry/go-opt/v2/@v/v2.0.1.mod
 GO_MODULE_FILES+=	git.sr.ht/~rjarry/go-opt/v2/@v/v2.0.1.zip
@@ -58,8 +58,6 @@ GO_MODULE_FILES+=	github.com/fsnotify/fsevents/@v/v0.2.0.zip
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.4.7.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/fsnotify/fsnotify/@v/v1.8.0.zip
-GO_MODULE_FILES+=	github.com/gatherstars-com/jwz/@v/v1.4.0.mod
-GO_MODULE_FILES+=	github.com/gatherstars-com/jwz/@v/v1.4.0.zip
 GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.6.0.mod
 GO_MODULE_FILES+=	github.com/go-ini/ini/@v/v1.67.0.mod
@@ -76,6 +74,8 @@ GO_MODULE_FILES+=	github.com/hpcloud/tail/@v/v1.0.0.mod
 GO_MODULE_FILES+=	github.com/jaytaylor/html2text/@v/v0.0.0-20200412013138-3577fbdbcff7.mod
 GO_MODULE_FILES+=	github.com/jaytaylor/html2text/@v/v0.0.0-20211105163654-bc68cce691ba.mod
 GO_MODULE_FILES+=	github.com/jhillyerd/enmime/@v/v0.11.0.mod
+GO_MODULE_FILES+=	github.com/konimarti/jwz/@v/v0.0.0-20241106152221-81c07e9284c3.mod
+GO_MODULE_FILES+=	github.com/konimarti/jwz/@v/v0.0.0-20241106152221-81c07e9284c3.zip
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.2.1.mod
 GO_MODULE_FILES+=	github.com/kr/pretty/@v/v0.3.0.mod
