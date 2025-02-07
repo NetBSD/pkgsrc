@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.4 2025/02/07 15:06:18 adam Exp $
+bin/rpmsort

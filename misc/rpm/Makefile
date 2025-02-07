@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.106 2023/10/24 22:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2025/02/07 15:06:18 adam Exp $
 
-DISTNAME=	rpm-4.13.0.1
-PKGREVISION=	12
+DISTNAME=	rpm-4.20.0
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.rpm.org/releases/rpm-4.13.x/
+MASTER_SITES=	http://ftp.rpm.org/releases/rpm-${PKGVERSION_NOREV:R}.x/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rpm.org/
+HOMEPAGE=	http://rpm.org/
 COMMENT=	The Red Hat Package Manager
 LICENSE=	gnu-lgpl-v2 OR gnu-gpl-v2
 
@@ -15,49 +14,36 @@ CONFLICTS+=		rpm2cpio<1.0nb1
 
 NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf bash:run gmake msgfmt perl:run pkg-config
-GNU_CONFIGURE=		yes
-# this is needed in addition of USE_PKGLOCALEDIR
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
-CONFIGURE_ARGS+=	--with-external-db
-CONFIGURE_ARGS+=	--with-vendor=pkgsrc
-CONFIGURE_ARGS+=	--without-lua
-# avoid build directory references
-CONFIGURE_ENV+=		MYPATH=/sbin:/bin:/usr/sbin:/usr/bin
-# rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
-CONFIGURE_ENV+=		varprefix=${RPM_DB_PREFIX:Q}
-CONFIGURE_ENV.Darwin+=	ac_cv_func_fdatasync=no
+USE_TOOLS+=		bash:run msgfmt perl:run pkg-config gsed
+LUA_VERSIONS_ACCEPTED=	54 53 52
 
-# for detecting nss
-CPPFLAGS+=		-I${PREFIX}/include/nss
+CMAKE_CONFIGURE_ARGS+=	-DIntl_INCLUDE_DIR=${PREFIX}/include
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_OPENMP=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_PYTHON=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_TESTSUITE=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_ACL=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_AUDIT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_CAP=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_DBUS=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LIBDW=OFF
+# Requires newer libelf
+CMAKE_CONFIGURE_ARGS+=	-DWITH_LIBELF=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SELINUX=OFF
+CMAKE_CONFIGURE_ARGS+=	-DWITH_SEQUOIA=OFF
 
 PKGCONFIG_OVERRIDE=	rpm.pc.in
 
-GMAKE_REQD=		3.82nb1
-
 REPLACE_BASH+=		installplatform
-REPLACE_BASH+=		scripts/brp-python-bytecompile
+REPLACE_BASH+=		scripts/brp-compress
 REPLACE_BASH+=		scripts/check-prereqs
 REPLACE_BASH+=		scripts/check-rpaths-worker
-REPLACE_BASH+=		scripts/find-debuginfo.sh
+REPLACE_BASH+=		scripts/find-lang.sh
 REPLACE_BASH+=		scripts/fontconfig.prov
-REPLACE_BASH+=		scripts/mono-find-provides
-REPLACE_BASH+=		scripts/mono-find-requires
+REPLACE_BASH+=		scripts/ocamldeps.sh
 REPLACE_BASH+=		scripts/pkgconfigdeps.sh
-REPLACE_BASH+=		scripts/pythondeps.sh
-REPLACE_BASH+=		scripts/rpmdb_loadcvt
-REPLACE_PERL+=		scripts/perl.prov
-REPLACE_PERL+=		scripts/perl.req
-
-BDB_ACCEPTED=		db4 db5
-.include "../../mk/bdb.buildlink3.mk"
-.if ${BDB_TYPE} == "db4"
-BUILDLINK_TRANSFORM+=	l:db:db4
-.else
-BUILDLINK_TRANSFORM+=	l:db:db5
-.endif
+REPLACE_BASH+=		scripts/rpm_macros_provides.sh
+REPLACE_BASH+=		scripts/sysusers.sh
 
 LDFLAGS+=		${PTHREAD_LDFLAGS}
 
@@ -67,36 +53,23 @@ MAKE_FLAGS+=		ROOT=${DESTDIR}
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR}
 
-# The configure script doesn't detect whether libintl.so has any
-# library dependencies.
-BROKEN_GETTEXT_DETECTION=	yes
-
 CHECK_PORTABILITY_SKIP=	tests/rpmtests
 
-# __progname without 'extern' segfaults on some platforms (e.g. Darwin)
-SUBST_CLASSES+=		progname
-SUBST_STAGE.progname=	pre-configure
-SUBST_MESSAGE.progname=	Fixing __progname declarations to include 'extern'.
-SUBST_FILES.progname=	lib/poptALL.c
-SUBST_FILES.progname+=	rpm2archive.c
-SUBST_FILES.progname+=	rpm2cpio.c
-SUBST_FILES.progname+=	rpmbuild.c
-SUBST_FILES.progname+=	rpmqv.c
-SUBST_FILES.progname+=	rpmspec.c
-SUBST_FILES.progname+=	tools/rpmdeps.c
-SUBST_FILES.progname+=	tools/rpmgraph.c
-SUBST_SED.progname=	-e 's,^const char \*__progname;,extern &,'
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
-
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libelf/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../sysutils/file/buildlink3.mk" # for libmagic.
+.include "../../lang/lua/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../sysutils/file/buildlink3.mk" # for libmagic
 .include "../../mk/bsd.pkg.mk"

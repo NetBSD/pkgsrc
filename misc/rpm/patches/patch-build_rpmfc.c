@@ -1,14 +1,15 @@
-$NetBSD: patch-build_rpmfc.c,v 1.2 2015/03/15 05:34:56 ryoon Exp $
+$NetBSD: patch-build_rpmfc.c,v 1.3 2025/02/07 15:06:18 adam Exp $
 
-* basemname(3) requires libgen.h on NetBSD.
+sighandler_t is not portable.
 
---- build/rpmfc.c.orig	2014-08-26 09:49:39.000000000 +0000
+--- build/rpmfc.c.orig	2024-10-07 09:35:46.000000000 +0000
 +++ build/rpmfc.c
-@@ -7,6 +7,10 @@
- #include <magic.h>
- #include <regex.h>
+@@ -12,6 +12,11 @@
+ #include <gelf.h>
+ #endif
  
-+#if defined(__NetBSD__)
++#if !defined(__linux__)
++typedef void (*sighandler_t)(int);
 +#include <libgen.h>
 +#endif
 +
