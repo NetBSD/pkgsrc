@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.5 2025/02/07 12:20:39 pho Exp $
+$NetBSD: patch-Makefile,v 1.6 2025/02/07 12:36:24 pho Exp $
 
 Portability patch for NetBSD.
 
---- Makefile.orig	2021-03-27 10:00:32.000000000 +0000
+--- Makefile.orig	2024-01-13 10:20:39.000000000 +0000
 +++ Makefile
 @@ -22,13 +22,19 @@
  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
@@ -25,7 +25,17 @@ Portability patch for NetBSD.
  # consider warnings as errors (for development)
  #CONFIG_WERROR=y
  # force 32 bit build for some utilities
-@@ -40,6 +46,10 @@ CONFIG_CLANG=y
+@@ -44,7 +50,8 @@ PREFIX?=/usr/local
+ # use address sanitizer
+ #CONFIG_ASAN=y
+ # include the code for BigFloat/BigDecimal, math mode and faster large integers
+-CONFIG_BIGNUM=y
++# Set via environment in pkg Makefile if supported:
++#CONFIG_BIGNUM=y
+ 
+ OBJDIR=.obj
+ 
+@@ -54,6 +61,10 @@ CONFIG_CLANG=y
  CONFIG_DEFAULT_AR=y
  endif
  
@@ -33,20 +43,10 @@ Portability patch for NetBSD.
 +CONFIG_LDL=y
 +endif
 +
- # installation directory
- prefix=/usr/local
- 
-@@ -48,7 +58,8 @@ prefix=/usr/local
- # use address sanitizer
- #CONFIG_ASAN=y
- # include the code for BigInt/BigFloat/BigDecimal and math mode
--CONFIG_BIGNUM=y
-+# Set via environment in pkg Makefile if supported:
-+#CONFIG_BIGNUM=y
- 
- OBJDIR=.obj
- 
-@@ -174,12 +185,18 @@ QJS_LIB_OBJS+=$(OBJDIR)/libbf.o 
+ ifdef CONFIG_WIN32
+   ifdef CONFIG_M32
+     CROSS_PREFIX?=i686-w64-mingw32-
+@@ -194,12 +205,18 @@ ifdef CONFIG_BIGNUM
  QJS_OBJS+=$(OBJDIR)/qjscalc.o
  endif
  
@@ -68,26 +68,26 @@ Portability patch for NetBSD.
  
  $(OBJDIR):
  	mkdir -p $(OBJDIR) $(OBJDIR)/examples $(OBJDIR)/tests
-@@ -205,6 +222,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
+@@ -225,6 +242,9 @@ QJSC_DEFINES:=-DCONFIG_CC=\"$(QJSC_CC)\"
  ifdef CONFIG_LTO
  QJSC_DEFINES+=-DCONFIG_LTO
  endif
 +ifdef CONFIG_LDL
 +QJSC_DEFINES+=-DCONFIG_LDL
 +endif
- QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(prefix)\"
+ QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(PREFIX)\"
  
  $(OBJDIR)/qjsc.o: CFLAGS+=$(QJSC_DEFINES)
-@@ -302,10 +322,9 @@ install: all
+@@ -322,10 +342,9 @@ install: all
  	$(STRIP) qjs qjsc
- 	install -m755 qjs qjsc "$(DESTDIR)$(prefix)/bin"
- 	ln -sf qjs "$(DESTDIR)$(prefix)/bin/qjscalc"
--	mkdir -p "$(DESTDIR)$(prefix)/lib/quickjs"
--	install -m644 libquickjs.a "$(DESTDIR)$(prefix)/lib/quickjs"
-+	install -m644 libquickjs.a "$(DESTDIR)$(prefix)/lib"
+ 	install -m755 qjs qjsc "$(DESTDIR)$(PREFIX)/bin"
+ 	ln -sf qjs "$(DESTDIR)$(PREFIX)/bin/qjscalc"
+-	mkdir -p "$(DESTDIR)$(PREFIX)/lib/quickjs"
+-	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
++	install -m644 libquickjs.a "$(DESTDIR)$(PREFIX)/lib"
  ifdef CONFIG_LTO
--	install -m644 libquickjs.lto.a "$(DESTDIR)$(prefix)/lib/quickjs"
-+	install -m644 libquickjs.lto.a "$(DESTDIR)$(prefix)/lib"
+-	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib/quickjs"
++	install -m644 libquickjs.lto.a "$(DESTDIR)$(PREFIX)/lib"
  endif
- 	mkdir -p "$(DESTDIR)$(prefix)/include/quickjs"
- 	install -m644 quickjs.h quickjs-libc.h "$(DESTDIR)$(prefix)/include/quickjs"
+ 	mkdir -p "$(DESTDIR)$(PREFIX)/include/quickjs"
+ 	install -m644 quickjs.h quickjs-libc.h "$(DESTDIR)$(PREFIX)/include/quickjs"
