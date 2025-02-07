@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2024/11/18 12:07:44 micha Exp $
+# $NetBSD: Makefile,v 1.50 2025/02/07 10:01:25 micha Exp $
 
-DISTNAME=	fltk-1.3.10-source
+DISTNAME=	fltk-1.3.11-source
 PKGNAME=	${DISTNAME:S/-source//}
-VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
-MASTER_SITES=	https://fltk.org/pub/fltk/${VERS}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
+GITHUB_PROJECT=	fltk
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
