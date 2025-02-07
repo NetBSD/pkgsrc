@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/04 08:50:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/07 07:16:25 adam Exp $
 bin/xml2rfc-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -78,6 +78,9 @@ ${PYSITELIB}/xml2rfc/util/__init__.pyo
 ${PYSITELIB}/xml2rfc/util/date.py
 ${PYSITELIB}/xml2rfc/util/date.pyc
 ${PYSITELIB}/xml2rfc/util/date.pyo
+${PYSITELIB}/xml2rfc/util/file.py
+${PYSITELIB}/xml2rfc/util/file.pyc
+${PYSITELIB}/xml2rfc/util/file.pyo
 ${PYSITELIB}/xml2rfc/util/fonts.py
 ${PYSITELIB}/xml2rfc/util/fonts.pyc
 ${PYSITELIB}/xml2rfc/util/fonts.pyo
