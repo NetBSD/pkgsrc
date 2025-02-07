@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1136 2025/02/07 09:48:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1137 2025/02/07 10:02:37 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-wtforms to 3.2.1 [adam 2025-02-07]
 	Updated www/py-wtforms-components to 0.11.0 [adam 2025-02-07]
 	Updated www/py-wtforms-sqlalchemy to 0.4.2 [adam 2025-02-07]
+	Updated x11/fltk13 to 1.3.11 [micha 2025-02-07]
