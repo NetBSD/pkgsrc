@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2024/11/26 12:32:41 nia Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/07 03:25:11 ryoon Exp $
 
-DISTNAME=	numba-0.60.0
+DISTNAME=	numba-0.61.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/numba/}
@@ -18,11 +18,12 @@ MAKE_ENV+=	NUMBA_DISABLE_OPENMP=1
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED=	312 311 310
+PYTHON_VERSIONS_ACCEPTED=	313 312 311 310
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${MV} numba numba-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/wheel.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../parallel/threadingbuildingblocks/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
