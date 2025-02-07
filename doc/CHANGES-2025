@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1128 2025/02/07 03:15:29 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.1129 2025/02/07 03:25:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1482,3 +1482,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/hexchat to 2.16.2 [khorben 2025-02-07]
 	Updated multimedia/dav1d to 1.5.1 [ryoon 2025-02-07]
 	Added misc/screen4 version 4.9.1 [ryoon 2025-02-07]
+	Updated math/py-numba to 0.61.0 [ryoon 2025-02-07]
