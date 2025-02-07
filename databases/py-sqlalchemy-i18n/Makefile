@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/11/11 07:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/07 13:53:43 adam Exp $
 
 DISTNAME=	SQLAlchemy-i18n-1.1.0
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-i18n/}
 
@@ -21,8 +21,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flexmock>=0.9.7:../../devel/py-flexmock
 TEST_DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.4.6:../../databases/py-psycopg2
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=2.4.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=3.9.6:../../devel/py-isort
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 USE_LANGUAGES=	# none
 
