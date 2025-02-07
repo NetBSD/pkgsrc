@@ -1,34 +1,17 @@
-$NetBSD: distinfo,v 1.32 2024/03/14 06:29:52 wiz Exp $
+$NetBSD: distinfo,v 1.33 2025/02/07 21:57:08 wiz Exp $
 
-BLAKE2s (opencv-3.4.20.tar.gz) = 2b69e87e4accd4da4d1a599e05fc206cd5644ddeb7f61c9800ddb625648e4ffe
-SHA512 (opencv-3.4.20.tar.gz) = 45b4447a5312acefffb9b11a6d4e8d8e98c62dcec902e4589d91bb32e7b5bc6e5c6407881a9edcca7d97df598e3f70925e458b2772d991d64ed2cc82701441f8
-Size (opencv-3.4.20.tar.gz) = 88348843 bytes
-BLAKE2s (opencv_contrib-3.4.20.tar.gz) = 94339e1afc668b1536ed1b95b4cb5fe540213c0e97082013cac39a9f5d636db2
-SHA512 (opencv_contrib-3.4.20.tar.gz) = bc60bbe0c64d6f2d0e0d35f1cde1d54ef43239549d1d0d4d8f6d6770e4a1c624cedd9d2abff6e198e95e547af02fac6813f3b45bfcd9c2bc2171744b0208de69
-Size (opencv_contrib-3.4.20.tar.gz) = 53793395 bytes
+BLAKE2s (opencv-4.11.0.tar.gz) = 9d98eab1bed16a059e66f52c4ee90bc7dd20603a1bbef0e89a4f9da568f08fca
+SHA512 (opencv-4.11.0.tar.gz) = 3b6e0da8169449944715de9e66380977791069a1d8288534ec768eaa2fb68533821fd8e06eac925a26656baf42185258b13aa80579e1e9be3ebc18fcea66f24d
+Size (opencv-4.11.0.tar.gz) = 95051012 bytes
+BLAKE2s (opencv-4.11.0_face_landmark_model.dat) = 27a36ff06273b7bf77d3a01742348482c129788e6baaa08c07d4d5b3803e57b0
+SHA512 (opencv-4.11.0_face_landmark_model.dat) = c16e60a6c4bb4de3ab39b876ae3c3f320ea56f69c93e9303bd2dff8760841dcd71be4161fff8bc71e8fe4fe8747fa8465d49d6bd8f5ebcdaea161f4bc2da7c93
+Size (opencv-4.11.0_face_landmark_model.dat) = 72368157 bytes
+BLAKE2s (opencv_contrib-4.11.0.tar.gz) = a3a5a86bbab7230e21f5f050091e78a789f8b5999409f2db44abb393c35c24fb
+SHA512 (opencv_contrib-4.11.0.tar.gz) = a5ebb6810a3b5e40858b7fd533f9eb7b3d475dfda843a489bc5168e72c5eaad0a7a23629aace1f43e1b62d9c24e5e1923d841059c297728fac464e00759886c2
+Size (opencv_contrib-4.11.0.tar.gz) = 55450097 bytes
+SHA1 (patch-.._opencv__contrib-4.11.0_modules_face_CMakeLists.txt) = bb29d053c0e050c53029b4443822dea978de181e
 SHA1 (patch-3rdparty_ippicv_ippicv.cmake) = 14ce5de382084793ace32f43c6dfaf01f7ffb390
-SHA1 (patch-3rdparty_protobuf_src_google_protobuf_message__lite.cc) = f1b77384ea8110d2bf3a30ff3fe9f2fa39608caf
-SHA1 (patch-CMakeLists.txt) = 86a524683091aad65dfaf719d56c5f76056596b6
-SHA1 (patch-apps_visualisation_opencv__visualisation.cpp) = b62c32172049c6369fd62a5c72325eef995fd1d0
-SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = ac7deccedcc5071d3785c7827a06419713ba0529
-SHA1 (patch-cmake_OpenCVDetectPython.cmake) = 87a304f12f4069103670052dfbedadff2c6e9c05
-SHA1 (patch-cmake_OpenCVFindLAPACK.cmake) = c7e8db9351f103c7e2a248f047e448e7bf0ac5ad
-SHA1 (patch-cmake_OpenCVFindProtobuf.cmake) = 2c8cde9efeb3f8a633c5712682ea16adec2e5c38
-SHA1 (patch-modules_core_include_opencv2_core_bindings__utils.hpp) = 44a8602670141b2a3bc90c5e1c23a8e7f96a1d40
-SHA1 (patch-modules_core_include_opencv2_core_opencl_opencl__info.hpp) = f0cff24b2a760086f54ab66536bdfee4f4f1a6d7
-SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
-SHA1 (patch-modules_core_src_check.cpp) = c8dac4e0fb6fa4a0dca6a2794bd598ba114e78b6
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
-SHA1 (patch-modules_core_src_rand.cpp) = aa87ee5a538deb1a2ed3e89dd3dd4ee9b86ae0de
-SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
-SHA1 (patch-modules_dnn_src_layers_accum__layer.cpp) = 20a12489f7e7fcbc90d47871f12ac500ab8ae6ed
-SHA1 (patch-modules_dnn_src_tensorflow_tf__importer.cpp) = 9b3628d91c2217c4b1ed77413efd4c0bf85758c4
-SHA1 (patch-modules_dnn_src_torch_torch__importer.cpp) = 814a3cc929569b691d01e34252dbd185f31161c2
-SHA1 (patch-modules_dnn_test_test__precomp.hpp) = 9bf15d32394f36b92e5fc5d57fd576b3860233ae
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
-SHA1 (patch-modules_imgcodecs_src_grfmt__exr.cpp) = 1a33d1b14e837b973b3ac2465d0b20fd6501e9bf
 SHA1 (patch-modules_imgproc_src_resize.cpp) = e842d5960c4c00162a34f46cb45cf69d0e9f21ce
-SHA1 (patch-modules_objdetect_src_qrcode__encoder.cpp) = eeeb7ec8ff7def1a5c6f9e81045f6bf36226de39
-SHA1 (patch-modules_objdetect_test_test__qrcode__encode.cpp) = aa76e97a5e7e3688c7a9c424d8b7b10c5a6fcb11
-SHA1 (patch-modules_ts_src_ts.cpp) = b9a3992014b02dbd89d46375a2476385e91dc24c
-SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = f80cc2f5b37e04378a2f25b2fa14e9b3206513c3
+SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = f9ff94f46cdee1b9616ceb2982b4f5925c0bfb3f
