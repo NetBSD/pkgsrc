@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2020/10/03 18:40:33 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2025/02/07 09:44:56 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/wtforms_components/__init__.py
 ${PYSITELIB}/wtforms_components/__init__.pyc
 ${PYSITELIB}/wtforms_components/__init__.pyo
-${PYSITELIB}/wtforms_components/_compat.py
-${PYSITELIB}/wtforms_components/_compat.pyc
-${PYSITELIB}/wtforms_components/_compat.pyo
 ${PYSITELIB}/wtforms_components/fields/__init__.py
 ${PYSITELIB}/wtforms_components/fields/__init__.pyc
 ${PYSITELIB}/wtforms_components/fields/__init__.pyo
@@ -44,9 +40,6 @@ ${PYSITELIB}/wtforms_components/fields/split_date_time.pyo
 ${PYSITELIB}/wtforms_components/fields/time.py
 ${PYSITELIB}/wtforms_components/fields/time.pyc
 ${PYSITELIB}/wtforms_components/fields/time.pyo
-${PYSITELIB}/wtforms_components/utils.py
-${PYSITELIB}/wtforms_components/utils.pyc
-${PYSITELIB}/wtforms_components/utils.pyo
 ${PYSITELIB}/wtforms_components/validators.py
 ${PYSITELIB}/wtforms_components/validators.pyc
 ${PYSITELIB}/wtforms_components/validators.pyo
