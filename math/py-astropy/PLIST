@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/01/21 01:18:25 wen Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/07 07:29:15 adam Exp $
 bin/fits2bitmap
 bin/fitscheck
 bin/fitsdiff
@@ -807,16 +807,17 @@ ${PYSITELIB}/astropy/extern/configobj/validate.pyo
 ${PYSITELIB}/astropy/extern/jquery/__init__.py
 ${PYSITELIB}/astropy/extern/jquery/__init__.pyc
 ${PYSITELIB}/astropy/extern/jquery/__init__.pyo
-${PYSITELIB}/astropy/extern/jquery/data/css/jquery.dataTables.css
+${PYSITELIB}/astropy/extern/jquery/data/css/datatables.css
+${PYSITELIB}/astropy/extern/jquery/data/css/datatables.min.css
 ${PYSITELIB}/astropy/extern/jquery/data/images/sort_asc.png
 ${PYSITELIB}/astropy/extern/jquery/data/images/sort_asc_disabled.png
 ${PYSITELIB}/astropy/extern/jquery/data/images/sort_both.png
 ${PYSITELIB}/astropy/extern/jquery/data/images/sort_desc.png
 ${PYSITELIB}/astropy/extern/jquery/data/images/sort_desc_disabled.png
+${PYSITELIB}/astropy/extern/jquery/data/js/datatables.js
+${PYSITELIB}/astropy/extern/jquery/data/js/datatables.min.js
 ${PYSITELIB}/astropy/extern/jquery/data/js/jquery-3.6.0.js
 ${PYSITELIB}/astropy/extern/jquery/data/js/jquery-3.6.0.min.js
-${PYSITELIB}/astropy/extern/jquery/data/js/jquery.dataTables.js
-${PYSITELIB}/astropy/extern/jquery/data/js/jquery.dataTables.min.js
 ${PYSITELIB}/astropy/extern/ply/__init__.py
 ${PYSITELIB}/astropy/extern/ply/__init__.pyc
 ${PYSITELIB}/astropy/extern/ply/__init__.pyo
