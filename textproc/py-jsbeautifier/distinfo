@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2024/02/19 18:19:27 adam Exp $
+$NetBSD: distinfo,v 1.22 2025/02/07 21:57:36 adam Exp $
 
-BLAKE2s (jsbeautifier-1.15.1.tar.gz) = 60e6dc0c3646cb6b872fd58079f571a1ba1d11f4f5ca1cceeaea3a421fef20a4
-SHA512 (jsbeautifier-1.15.1.tar.gz) = 5a5e7e1aae4b76ae01e69ea5b0ecbc268934e8b32f2de20449ead91cb8acafd1ca785a65c7d3124c7a217c5b039628358ef674a67b9a7b3dd02862e10d062177
-Size (jsbeautifier-1.15.1.tar.gz) = 75606 bytes
+BLAKE2s (jsbeautifier-1.15.2.tar.gz) = c7ff6f642b11dde9a3d6a1f9925bc95cb6354fea0057af27ba86ab023252d098
+SHA512 (jsbeautifier-1.15.2.tar.gz) = 3021666f72042394643ae1dda303431e6228e3cfb2909245d128c43777fb491cf1816e5fdeee5962d0297089aefd3132107aaa365990cbc9c5ec1e733f6a142c
+Size (jsbeautifier-1.15.2.tar.gz) = 75266 bytes
