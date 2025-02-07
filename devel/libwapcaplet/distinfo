@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/07 15:59:47 pho Exp $
+
+BLAKE2s (libwapcaplet-0.4.3-src.tar.gz) = 21c87c8085d4bb492e9ec50b9d638eea64e935fd736c5d10677510dfd717d756
+SHA512 (libwapcaplet-0.4.3-src.tar.gz) = b4cc8b0dac86c87b1806acfcf5c4734955eb797cb04ea67f764bae32fdecfd3ee4d8ad0f2f3f0a1813c9684b7120dbb97ecf11f29de0d60a7bd45d96c1a451cb
+Size (libwapcaplet-0.4.3-src.tar.gz) = 31766 bytes
