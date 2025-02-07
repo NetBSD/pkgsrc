@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/02/06 16:22:38 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/02/07 15:07:59 adam Exp $
 
-BLAKE2s (django_allauth-65.4.0.tar.gz) = 7d438d156e6371692cb838a1fefb5ba9eef4dff456356e756ed311057c0e9974
-SHA512 (django_allauth-65.4.0.tar.gz) = 697000e48098a950ff846d4e5c8bb120835115872dd2ffd51d5f3f2a527c28bb417cfab7a0324cbf44f1f5f8c8021e6bde1530408267ed7abb43351e167a9f0a
-Size (django_allauth-65.4.0.tar.gz) = 1559056 bytes
+BLAKE2s (django_allauth-65.4.1.tar.gz) = a3b4721fd01b0204c352c40674d965ad13d77719c66b51669a50d0c2b1d93e0c
+SHA512 (django_allauth-65.4.1.tar.gz) = 16e5102669b8ac9ca79883f6202b86aa32ed9b6b3614add5d84b5e5886b39c28da8325efcd30ba3d2ba361b645ad3a2c1b2fa97dfce4a2f923d29a633485c7ad
+Size (django_allauth-65.4.1.tar.gz) = 1558220 bytes
