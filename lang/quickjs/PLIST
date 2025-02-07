@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2022/01/30 10:55:03 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/07 12:20:38 pho Exp $
 bin/qjs
 bin/qjsc
 bin/qjscalc
 include/quickjs/quickjs-libc.h
 include/quickjs/quickjs.h
-lib/quickjs/libquickjs.a
-${PLIST.lto}lib/quickjs/libquickjs.lto.a
+lib/libquickjs.a
+${PLIST.lto}lib/libquickjs.lto.a
 share/doc/quickjs/examples/fib.c
 share/doc/quickjs/examples/fib_module.js
 share/doc/quickjs/examples/hello.js
