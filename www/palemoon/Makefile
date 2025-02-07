@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/01/16 17:46:54 nia Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/07 16:18:26 nia Exp $
 # for build instructions see
 # https://developer.palemoon.org/build/linux/
 
-PKGNAME=	palemoon-33.5.1
+PKGNAME=	palemoon-33.6.0
 CATEGORIES=	www
 
 DIST_SUBDIR=	palemoon-${PKGVERSION_NOREV}
@@ -14,7 +14,7 @@ SITES.palemoon.tar.gz= \
 	-https://repo.palemoon.org/MoonchildProductions/Pale-Moon/archive/${PKGVERSION_NOREV}_Release.tar.gz
 
 SITES.uxp.tar.gz= \
-	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20250115.tar.gz
+	-https://repo.palemoon.org/MoonchildProductions/UXP/archive/RB_20250207.tar.gz
 
 SITES.psutil.tar.gz= \
 	-https://files.pythonhosted.org/packages/7b/58/2675697b6831e6ac4b7b7bc4e5dcdb24a2f39f8411186573eb0de16eb6d5/psutil-3.4.2.tar.gz
@@ -140,7 +140,7 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/palemoon.png
 	${INSTALL_DATA} ${WRKSRC}/palemoon/branding/unofficial/mozicon128.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/128x128/apps/palemoon.png
-	${INSTALL_DATA} ${WRKSRC}/palemoon/branding/unofficial/browser.desktop \
+	${INSTALL_DATA} ${WRKSRC}/palemoon/branding/unofficial/newmoon.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications/palemoon.desktop
 
 .include "options.mk"
