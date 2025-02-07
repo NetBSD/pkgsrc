@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/02/07 15:58:36 pho Exp $
+
+BLAKE2s (buildsystem-1.10.tar.gz) = 38ec3bc0a7b2ec00d745f5208d4b166c092514242f9739b74e0677b259e6ae93
+SHA512 (buildsystem-1.10.tar.gz) = 0b0f9114567e5c0807bbf066f1c507f386dfb43bf993e3fe487b3c77edc6cee8ea573ca1105558e48b78b2c97857791fe1fe65af8e95fa0f4e205ef701677670
+Size (buildsystem-1.10.tar.gz) = 39221 bytes
+SHA1 (patch-makefiles_Makefile.tools) = 4c2fee22a3ffeef35aa89e3d1612f21a2193a005
