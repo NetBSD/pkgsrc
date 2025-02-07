@@ -1,31 +1,25 @@
-# $NetBSD: Makefile.common,v 1.21 2024/08/25 06:18:52 wiz Exp $
-# used by graphics/opencv/Makefile
-# used by graphics/opencv-contrib-face/Makefile
+# $NetBSD: Makefile.common,v 1.22 2025/02/07 21:54:16 wiz Exp $
 #
-# DO NOT FORGET to regen graphics/opencv-contrib-face/distinfo!
+# used by wip/opencv/Makefile
+# used by wip/opencv-contrib-face/Makefile
+#
+# DO NOT FORGET to regen wip/opencv-contrib-face/distinfo!
 
-OPENCV_VERSION=	3.4.20
+OPENCV_VERSION=	4.11.0
 
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 
 HOMEPAGE=	https://opencv.org/
-LICENSE=	modified-bsd
+LICENSE=	apache-2.0
 
-PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
-
-USE_CXX_FEATURES=	c++14
-FORCE_CXX_STD=		c++14
 USE_LANGUAGES=		c c++
-USE_PKGLOCALEDIR=	yes
+USE_CXX_FEATURES=	c++17
 USE_TOOLS+=		gmake pkg-config
-CONFIGURE_DIRS+=	build
-CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 CHECK_PORTABILITY_SKIP+=	platforms/ios/cmake/Toolchains/xcodebuild_wrapper.in
 CHECK_PORTABILITY_SKIP+=	cmake/templates/xcode-*
 
-CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_JAVA=OFF
 CMAKE_CONFIGURE_ARGS+=		-DBUILD_PROTOBUF=OFF
 CMAKE_CONFIGURE_ARGS+=		-DCV_ENABLE_INTRINSICS=OFF # XXX: problematic
@@ -34,23 +28,32 @@ CMAKE_CONFIGURE_ARGS+=		-DOPENCV_GENERATE_SETUPVARS=OFF
 CMAKE_CONFIGURE_ARGS+=		-DPROTOBUF_UPDATE_FILES=ON
 CMAKE_CONFIGURE_ARGS+=		-DWITH_EIGEN=OFF
 CMAKE_CONFIGURE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
+# needed by protobuf
+CMAKE_CONFIGURE_ARGS+=		-DCMAKE_CXX_STANDARD=17
+# doesn't build on NetBSD with libva-2.22.0
+CMAKE_CONFIGURE_ARGS+=		-DWITH_VA=OFF
+#.include "../../multimedia/libva/buildlink3.mk"
+
+# lapack: disabled because it makes the build fail with
+# n file included from /scratch/wip/opencv/work/opencv-4.11.0/modules/core/src/hal_internal.cpp:50:
+# modules/core/src/hal_internal.cpp: In function 'int lapack_gemm_c(const fptype*, size_t, const fptype*, size_t, fptype, const fptype*, size_t, fptype, fptype*, size_t, int, int, int, int)':
+# modules/core/src/hal_internal.cpp:518:48: error: expected unqualified-id before '_Complex'
+#  518 |     int ldsrc1 = (int)(src1_step / sizeof(std::complex<fptype>));
+#      |                                                ^~~~~~~
+## Pulled in via numpy, too, but we need to handle it explicitly
+## for LAPACK C API and CMake tests here.
+#BLAS_C_INTERFACE=	yes
+#.include "../../mk/blas.buildlink3.mk"
+#CMAKE_CONFIGURE_ARGS+=	-DWITH_LAPACK=ON
+#CMAKE_CONFIGURE_ARGS+=	-DBLA_PREFER_PKGCONFIG=ON
+#CMAKE_CONFIGURE_ARGS+=	-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
+#CMAKE_CONFIGURE_ARGS+=	-DBLA_PKGCONFIG_LAPACK=${LAPACK_PC}
+#CMAKE_CONFIGURE_ARGS+=	-DBLA_PKGCONFIG_CBLAS=${CBLAS_PC}
+#CMAKE_CONFIGURE_ARGS+=	-DBLA_PKGCONFIG_LAPACKE=${LAPACKE_PC}
+#CMAKE_CONFIGURE_ARGS+=	-DOPENCV_SKIP_LAPACK_EXTERN_C=ON
+
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=OFF
 CMAKE_CONFIGURE_ARGS.SunOS+=	-DOPENCV_PYTHON_SKIP_LINKER_EXCLUDE_LIBS=ON
-
-# Pulled in via numpy, too, but we need to handle it explicitly
-# for LAPACK C API and CMake tests here.
-BLAS_C_INTERFACE=	yes
-.include "../../mk/blas.buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=		-DWITH_LAPACK=ON
-CMAKE_CONFIGURE_ARGS+=		-DBLA_PREFER_PKGCONFIG=ON
-CMAKE_CONFIGURE_ARGS+=		-DBLA_PKGCONFIG_BLAS=${BLAS_PC}
-CMAKE_CONFIGURE_ARGS+=		-DBLA_PKGCONFIG_LAPACK=${LAPACK_PC}
-CMAKE_CONFIGURE_ARGS+=		-DBLA_PKGCONFIG_CBLAS=${CBLAS_PC}
-CMAKE_CONFIGURE_ARGS+=		-DBLA_PKGCONFIG_LAPACKE=${LAPACKE_PC}
-CMAKE_CONFIGURE_ARGS+=		-DOPENCV_SKIP_LAPACK_EXTERN_C=ON
-
-BUILDLINK_TRANSFORM+=	rm:-Werror=address
-BUILDLINK_TRANSFORM+=	rm:-Werror=non-virtual-dtor
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
@@ -62,7 +65,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--gc-sections
 CMAKE_CONFIGURE_ARGS+=		-DCPU_BASELINE=""
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27	# avoid Python 2.7
-
 .include "../../mk/atomic64.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../devel/cmake/build.mk"
