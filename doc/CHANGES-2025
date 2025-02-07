@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1125 2025/02/06 21:46:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1126 2025/02/07 00:54:45 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/py-nbxmpp to 4.4.0 [gdt 2025-02-06]
 	Updated sysutils/vultr to 2.0.3 [schmonz 2025-02-06]
 	Updated chat/py-nbxmpp to 4.4.0nb1 [wiz 2025-02-06]
+	Updated chat/hexchat to 2.16.2 [khorben 2025-02-07]
