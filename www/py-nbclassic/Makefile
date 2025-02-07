@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/10/14 08:13:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/07 15:19:57 adam Exp $
 
-DISTNAME=	nbclassic-1.1.0
+DISTNAME=	nbclassic-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nbclassic/}
@@ -22,8 +22,7 @@ USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
 
-# https://github.com/jupyter/nbclassic/issues/308
-PYTHON_VERSIONS_INCOMPATIBLE=	39 313
+PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 post-install:
 .for bin in jupyter-nbclassic jupyter-nbclassic-bundlerextension \

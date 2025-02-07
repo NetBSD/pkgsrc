@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/07/20 19:27:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/07 15:19:57 adam Exp $
 bin/jupyter-nbclassic-${PYVERSSUFFIX}
 bin/jupyter-nbclassic-bundlerextension-${PYVERSSUFFIX}
 bin/jupyter-nbclassic-extension-${PYVERSSUFFIX}
@@ -1395,5 +1395,11 @@ ${PYSITELIB}/nbclassic/tree/__init__.pyo
 ${PYSITELIB}/nbclassic/tree/handlers.py
 ${PYSITELIB}/nbclassic/tree/handlers.pyc
 ${PYSITELIB}/nbclassic/tree/handlers.pyo
+${PYSITELIB}/nbclassic/view/__init__.py
+${PYSITELIB}/nbclassic/view/__init__.pyc
+${PYSITELIB}/nbclassic/view/__init__.pyo
+${PYSITELIB}/nbclassic/view/handlers.py
+${PYSITELIB}/nbclassic/view/handlers.pyc
+${PYSITELIB}/nbclassic/view/handlers.pyo
 share/applications/jupyter-nbclassic.desktop
 share/icons/hicolor/scalable/apps/nbclassic.svg
