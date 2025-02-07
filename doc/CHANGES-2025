@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1139 2025/02/07 12:36:34 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1140 2025/02/07 13:30:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1507,3 +1507,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/go122 to 1.22.12 [bsiegert 2025-02-07]
 	Updated lang/go123 to 1.23.6 [bsiegert 2025-02-07]
 	Updated lang/quickjs to 20240113 [pho 2025-02-07]
+	Updated x11/py-qt6 to 6.8.1 [adam 2025-02-07]
+	Updated audio/picard to 2.13.2 [adam 2025-02-07]
+	Updated print/py-pikepdf to 9.5.2 [adam 2025-02-07]
