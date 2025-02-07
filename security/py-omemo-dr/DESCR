@@ -1,0 +1,1 @@
+This library handles only the crypto part of OMEMO, not the XMPP protocol part.

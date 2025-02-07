@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2025/01/22 09:25:18 adam Exp $
+# $NetBSD: Makefile,v 1.971 2025/02/07 21:45:41 adam Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -513,6 +513,7 @@ SUBDIR+=	py-oath
 SUBDIR+=	py-oauth2client
 SUBDIR+=	py-oauthlib
 SUBDIR+=	py-olm
+SUBDIR+=	py-omemo-dr
 SUBDIR+=	py-openid
 SUBDIR+=	py-otp
 SUBDIR+=	py-paramiko
