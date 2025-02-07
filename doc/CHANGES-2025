@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1131 2025/02/07 07:18:43 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1132 2025/02/07 07:35:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1491,3 +1491,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.38 [adam 2025-02-07]
 	Updated textproc/py-xml2rfc to 3.27.0 [adam 2025-02-07]
 	Updated www/py-whitenoise to 6.9.0 [adam 2025-02-07]
+	Updated security/py-pip-audit to 2.8.0 [adam 2025-02-07]
+	Updated math/py-astropy-iers-data to 0.2025.2.3.0.32.42 [adam 2025-02-07]
+	Updated math/py-astropy to 7.0.1 [adam 2025-02-07]
+	Updated lang/py-mypy to 1.15.0 [adam 2025-02-07]
+	Updated math/py-jplephem to 2.22 [adam 2025-02-07]
