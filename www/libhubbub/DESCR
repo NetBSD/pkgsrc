@@ -1,0 +1,8 @@
+Hubbub is an HTML5 compliant parsing library, written in C. It was
+developed as part of the NetSurf project and is available for use by other
+software under the MIT licence.
+
+The HTML5 specification defines a parsing algorithm, based on the behaviour
+of mainstream browsers, which provides instructions for how to parse all
+markup, both valid and invalid. As a result, Hubbub parses web content
+well.
