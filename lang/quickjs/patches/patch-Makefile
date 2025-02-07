@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.4 2022/01/30 10:55:03 he Exp $
+$NetBSD: patch-Makefile,v 1.5 2025/02/07 12:20:39 pho Exp $
 
 Portability patch for NetBSD.
 
@@ -78,3 +78,16 @@ Portability patch for NetBSD.
  QJSC_HOST_DEFINES:=-DCONFIG_CC=\"$(HOST_CC)\" -DCONFIG_PREFIX=\"$(prefix)\"
  
  $(OBJDIR)/qjsc.o: CFLAGS+=$(QJSC_DEFINES)
+@@ -302,10 +322,9 @@ install: all
+ 	$(STRIP) qjs qjsc
+ 	install -m755 qjs qjsc "$(DESTDIR)$(prefix)/bin"
+ 	ln -sf qjs "$(DESTDIR)$(prefix)/bin/qjscalc"
+-	mkdir -p "$(DESTDIR)$(prefix)/lib/quickjs"
+-	install -m644 libquickjs.a "$(DESTDIR)$(prefix)/lib/quickjs"
++	install -m644 libquickjs.a "$(DESTDIR)$(prefix)/lib"
+ ifdef CONFIG_LTO
+-	install -m644 libquickjs.lto.a "$(DESTDIR)$(prefix)/lib/quickjs"
++	install -m644 libquickjs.lto.a "$(DESTDIR)$(prefix)/lib"
+ endif
+ 	mkdir -p "$(DESTDIR)$(prefix)/include/quickjs"
+ 	install -m644 quickjs.h quickjs-libc.h "$(DESTDIR)$(prefix)/include/quickjs"
