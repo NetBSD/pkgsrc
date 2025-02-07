@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/01/14 11:59:15 adam Exp $
+$NetBSD: distinfo,v 1.9 2025/02/07 07:18:20 adam Exp $
 
-BLAKE2s (whitenoise-6.8.2.tar.gz) = 38b844fb6a216d419b05ca31c870da2260c1997534a59c0e41a00a6d132c3104
-SHA512 (whitenoise-6.8.2.tar.gz) = 3bb7c17274333595cda473c84e6f6ed5d7a9ed84446ae06bd8ead93438bc26bddeb7a06ae9cbd97a7bb3d2b8a5a976f4bc72fbfec7351f5ee7344e0984212663
-Size (whitenoise-6.8.2.tar.gz) = 25892 bytes
+BLAKE2s (whitenoise-6.9.0.tar.gz) = 92a185b98aa59d6877e6ddfca6bf6db64913a9e44a34775e4a181812834ee1fa
+SHA512 (whitenoise-6.9.0.tar.gz) = 981715651f29128156a7d25143c4e5cecb4fa9ce363971ea6312d9b445441e01465ee08de46809549a44905c541b4d10c17396f7bd11d6b43731755c4f43438d
+Size (whitenoise-6.9.0.tar.gz) = 25920 bytes
