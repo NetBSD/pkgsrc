@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2025/02/03 16:59:10 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/07 10:54:20 wiz Exp $
 
 DISTNAME=	capnproto-c++-1.1.0
 PKGNAME=	${DISTNAME:S/-c++-/-/}
@@ -18,6 +18,9 @@ GNU_CONFIGURE=		yes
 # Fibers are not supported on BSD platforms: see src/kj/async.h
 CONFIGURE_ARGS+=	--without-fibers
 TEST_TARGET=		check
+
+# Requires EVFILT_USER, unavailable on NetBSD 9.x and prior
+NOT_FOR_PLATFORM+=	NetBSD-[0-9].*-*
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/capnp-json.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/capnp-rpc.pc.in
