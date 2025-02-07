@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2025/02/07 10:54:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/07 13:10:11 riastradh Exp $
 
 DISTNAME=	capnproto-c++-1.1.0
 PKGNAME=	${DISTNAME:S/-c++-/-/}
@@ -19,8 +19,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-fibers
 TEST_TARGET=		check
 
-# Requires EVFILT_USER, unavailable on NetBSD 9.x and prior
-NOT_FOR_PLATFORM+=	NetBSD-[0-9].*-*
+.include "../../mk/bsd.prefs.mk"
+
+# When kqueue is enabled (default yes on *BSD), this requires
+# EVFILT_USER, which in NetBSD was only introduced in 10.0.  So
+# explicitly disable kqueue for NetBSD<10.
+.if ${OPSYS} == "NetBSD" && ${OPSYS_VERSION} < 100000
+CPPFLAGS+=		-DKJ_USE_KQUEUE=0
+.endif
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/capnp-json.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/capnp-rpc.pc.in
