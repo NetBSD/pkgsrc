@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.20 2025/02/05 16:07:16 adam Exp $
+$NetBSD: distinfo,v 1.21 2025/02/07 13:28:22 adam Exp $
 
-BLAKE2s (picard-2.13.1.tar.gz) = 39df4ebdc1e109b5fa7cf726367417299d4d338b2805112ed320ddf591537bad
-SHA512 (picard-2.13.1.tar.gz) = 40860678a42a58d5abe1b8289960233bf92b7c1b1903df8c4cfde633bb38a477f17f31b59cfad5b76327dfee1adaa615870dbe986355bff28a3fa9208226108c
-Size (picard-2.13.1.tar.gz) = 6088686 bytes
+BLAKE2s (picard-2.13.2.tar.gz) = a7c37ad02e8fb3841b743f5c0387621423571a5af25ba63b3895fe8dce940547
+SHA512 (picard-2.13.2.tar.gz) = c1809ca2dde0564871028f6388e0cb349f71abdf76c0379fcea37fd1efff5b01f7354ddad53b85f96dc50c621544c98407ed5cfdcf493b7bb08694a8e231823a
+Size (picard-2.13.2.tar.gz) = 6088810 bytes
 SHA1 (patch-setup.py) = d786441b3076928a49c00be8792116b8ce222f80
