@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/02/11 20:18:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/07 07:34:39 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -13,6 +13,9 @@ ${PYSITELIB}/jplephem/__main__.pyo
 ${PYSITELIB}/jplephem/ascii.py
 ${PYSITELIB}/jplephem/ascii.pyc
 ${PYSITELIB}/jplephem/ascii.pyo
+${PYSITELIB}/jplephem/calendar.py
+${PYSITELIB}/jplephem/calendar.pyc
+${PYSITELIB}/jplephem/calendar.pyo
 ${PYSITELIB}/jplephem/commandline.py
 ${PYSITELIB}/jplephem/commandline.pyc
 ${PYSITELIB}/jplephem/commandline.pyo
@@ -31,9 +34,6 @@ ${PYSITELIB}/jplephem/exceptions.pyo
 ${PYSITELIB}/jplephem/excerpter.py
 ${PYSITELIB}/jplephem/excerpter.pyc
 ${PYSITELIB}/jplephem/excerpter.pyo
-${PYSITELIB}/jplephem/jpltest.py
-${PYSITELIB}/jplephem/jpltest.pyc
-${PYSITELIB}/jplephem/jpltest.pyo
 ${PYSITELIB}/jplephem/names.py
 ${PYSITELIB}/jplephem/names.pyc
 ${PYSITELIB}/jplephem/names.pyo
