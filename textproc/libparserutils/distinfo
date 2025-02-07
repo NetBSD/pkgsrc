@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/07 16:01:08 pho Exp $
+
+BLAKE2s (libparserutils-0.2.5-src.tar.gz) = f3a1980c0699ddfb726e345c5bbcc1d8a654c1fc158b68be686e41e571e13325
+SHA512 (libparserutils-0.2.5-src.tar.gz) = 5d26bbfb754deb950c098f444d44003d681f30dfaf18a4d6b25ef5023ab5dbfa8968a9d8b6d319ad470fe3c75022328c55c810a623139208a7091b2df27f0a18
+Size (libparserutils-0.2.5-src.tar.gz) = 74518 bytes
