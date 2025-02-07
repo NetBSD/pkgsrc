@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1148 2025/02/07 16:01:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1149 2025/02/07 16:02:17 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1525,3 +1525,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/netsurf-buildsystem version 1.10 [pho 2025-02-07]
 	Added devel/libwapcaplet version 0.4.3 [pho 2025-02-07]
 	Added textproc/libparserutils version 0.2.5 [pho 2025-02-07]
+	Added textproc/libcss version 0.9.2 [pho 2025-02-07]
