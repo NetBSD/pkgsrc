@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/01/06 11:37:27 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/07 07:06:23 adam Exp $
 
-DISTNAME=	xgboost-2.1.3
+DISTNAME=	xgboost-2.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=x/xgboost/}
