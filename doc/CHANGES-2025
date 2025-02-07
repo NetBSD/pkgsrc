@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1144 2025/02/07 15:23:11 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1145 2025/02/07 15:57:03 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1521,3 +1521,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-borgbackup to 1.4.0 [adam 2025-02-07]
 	Updated www/py-nbclassic to 1.2.0 [adam 2025-02-07]
 	Updated www/py-PasteScript to 3.7.0 [adam 2025-02-07]
+	Updated geography/qgis to 3.34.15 [gdt 2025-02-07]
