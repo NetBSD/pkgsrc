@@ -1,0 +1,16 @@
+$NetBSD: patch-meson.build,v 1.1 2025/02/07 16:18:14 pho Exp $
+
+Fix build with quickjs: it only installs static libraries so "static:
+false" never succeeds. Did the upstream actually test this?
+
+--- meson.build.orig	2025-02-07 12:39:03.321364259 +0000
++++ meson.build
+@@ -669,7 +669,7 @@ if not compiler.links('''#include <stdin
+ endif
+ 
+ if conf_data.get('CONFIG_QUICKJS')
+-    quickjsdeps = compiler.find_library('quickjs', static: st, required: false)
++    quickjsdeps = compiler.find_library('quickjs', required: false)
+     if not quickjsdeps.found()
+         quickjsdeps = compiler.find_library('quickjs/libquickjs', static: true, required: not conf_data.get('CONFIG_OS_DOS'))
+     endif
