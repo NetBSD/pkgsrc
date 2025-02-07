@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1153 2025/02/07 16:18:36 nia Exp $
+$NetBSD: CHANGES-2025,v 1.1154 2025/02/07 17:42:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1530,3 +1530,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/libdom version 0.4.2 [pho 2025-02-07]
 	Updated www/elinks to 0.18.0 [pho 2025-02-07]
 	Updated www/palemoon to 33.6.0 [nia 2025-02-07]
+	Updated finance/bitcoin to 28.1 [adam 2025-02-07]
+	Updated math/py-huggingface-hub to 0.28.1 [adam 2025-02-07]
+	Updated finance/py-stripe to 11.5.0 [adam 2025-02-07]
