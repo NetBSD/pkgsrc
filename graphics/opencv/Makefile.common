@@ -1,9 +1,7 @@
-# $NetBSD: Makefile.common,v 1.22 2025/02/07 21:54:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2025/02/07 21:56:05 wiz Exp $
 #
-# used by wip/opencv/Makefile
-# used by wip/opencv-contrib-face/Makefile
-#
-# DO NOT FORGET to regen wip/opencv-contrib-face/distinfo!
+# used by graphics/opencv/Makefile
+# used by graphics/opencv-contrib-face/Makefile
 
 OPENCV_VERSION=	4.11.0
 
@@ -35,7 +33,7 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_VA=OFF
 #.include "../../multimedia/libva/buildlink3.mk"
 
 # lapack: disabled because it makes the build fail with
-# n file included from /scratch/wip/opencv/work/opencv-4.11.0/modules/core/src/hal_internal.cpp:50:
+# In file included from modules/core/src/hal_internal.cpp:50:
 # modules/core/src/hal_internal.cpp: In function 'int lapack_gemm_c(const fptype*, size_t, const fptype*, size_t, fptype, const fptype*, size_t, fptype, fptype*, size_t, int, int, int, int)':
 # modules/core/src/hal_internal.cpp:518:48: error: expected unqualified-id before '_Complex'
 #  518 |     int ldsrc1 = (int)(src1_step / sizeof(std::complex<fptype>));
