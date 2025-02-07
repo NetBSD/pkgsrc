@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2025/01/16 14:24:36 ktnb Exp $
+$NetBSD: distinfo,v 1.6 2025/02/07 18:21:59 ktnb Exp $
 
-BLAKE2s (aerc/0.19.0.tar.gz) = d82d6d9e3936de129b7b0f4615e3e0d3aa6ca77c01be3d49342e21befd6abf75
-SHA512 (aerc/0.19.0.tar.gz) = 8c8fa57d5b105734c719e4a4aed60ded5657ad53f53fe6f05f75bbe75820b510a551f93f0079f364f3f79ac46a801be10f344c3d488e39a120ef6929162d0407
-Size (aerc/0.19.0.tar.gz) = 473597 bytes
+BLAKE2s (aerc/0.20.1.tar.gz) = 73566fb8d260302cf87058d52509d980aa176bb3be71f8828dfb45929605261f
+SHA512 (aerc/0.20.1.tar.gz) = 7221217b7f0e6f92b589864b2e214b3edad3a2f702ab1d6b83f11eba6bb443bf334e76dbb61a67a13a9673e5e5106428ea3ba0ade940dc7f2cf488076783f4a5
+Size (aerc/0.20.1.tar.gz) = 474975 bytes
 BLAKE2s (aerc/git.sr.ht_~rjarry_go-opt_v2_@v_v2.0.1.mod) = 519eb30d5a7ba08ba35142f70925efb02f99ce170a87952c73053b22a61a8a51
 SHA512 (aerc/git.sr.ht_~rjarry_go-opt_v2_@v_v2.0.1.mod) = 19ad87736053db520cfc6151f09cacf237c4b820d201b54f28953e66473e472e1b2074c394756e738fb6b558ba2b23dccc4aa32c14b927d07c500d1a1baaca68
 Size (aerc/git.sr.ht_~rjarry_go-opt_v2_@v_v2.0.1.mod) = 235 bytes
@@ -177,12 +177,6 @@ Size (aerc/github.com_fsnotify_fsnotify_@v_v1.8.0.mod) = 279 bytes
 BLAKE2s (aerc/github.com_fsnotify_fsnotify_@v_v1.8.0.zip) = 7cb15dc1bd891ba5072b4d343959a5800ca6f2b7bae8c00d27291dc3a15d3be2
 SHA512 (aerc/github.com_fsnotify_fsnotify_@v_v1.8.0.zip) = af65bd49b6de9c4bef873eb73c127dbb8652077d0f08aa4a0f0f961a0cc6bba43f53ded14140661011d3f12f3fe48d4e267796229dd770b550360c7be24aafa7
 Size (aerc/github.com_fsnotify_fsnotify_@v_v1.8.0.zip) = 115781 bytes
-BLAKE2s (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.mod) = 09b5a73b268c350dbf6b14ad78c46c7ab6038eea29cce11126e4287979a25649
-SHA512 (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.mod) = ccbacc906563cbb5b00287635c60cdff2d078faaed8805a483a190b71fd681f07ef8d6212059a7b4a26392e56738b58e962bc61d72132fd4ab362ce1b6f2ff71
-Size (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.mod) = 554 bytes
-BLAKE2s (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.zip) = 5da01961a8bb0de469bfc6ea873f893faa1a79c242fdd6aecf4dd62453986692
-SHA512 (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.zip) = 8f7a15addcbc3e429bd12a65ee387daedc3e4a0e96d16bd58b8bbaaf937eeffa88bca08db19dc77d28cc2f9739766656d380e57b65ea93968f3cb87647f56893
-Size (aerc/github.com_gatherstars-com_jwz_@v_v1.4.0.zip) = 5011872 bytes
 BLAKE2s (aerc/github.com_gdamore_encoding_@v_v1.0.0.mod) = d98306119aa62bd2bb2dc3fd0a93976e35a5396dd7d50fb0fc3eb0c157fb88c2
 SHA512 (aerc/github.com_gdamore_encoding_@v_v1.0.0.mod) = fb153c4e481c073133f0c933c67eba8a1f160ab146921f2c77125b6ff5c348cea57e3a5701a557c8db2212d32e3cba1c09b9509210660c17b66c2a45ba97cb75
 Size (aerc/github.com_gdamore_encoding_@v_v1.0.0.mod) = 77 bytes
@@ -231,6 +225,12 @@ Size (aerc/github.com_jaytaylor_html2text_@v_v0.0.0-20211105163654-bc68cce691ba.
 BLAKE2s (aerc/github.com_jhillyerd_enmime_@v_v0.11.0.mod) = 86da6d548ef46e4d5df00a465fadc70419a222a82237d1b22d08dc85bc9501f7
 SHA512 (aerc/github.com_jhillyerd_enmime_@v_v0.11.0.mod) = acb47ac22ca5d10a8aefa6f4f5aecbd8009c6d14f7f2e8d68544fd7eb96aa23e1fc73a86eb236bfcbcb003271d0f0da65abe89c63d1fa68e24ca0f66edb18709
 Size (aerc/github.com_jhillyerd_enmime_@v_v0.11.0.mod) = 589 bytes
+BLAKE2s (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.mod) = 09b5a73b268c350dbf6b14ad78c46c7ab6038eea29cce11126e4287979a25649
+SHA512 (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.mod) = ccbacc906563cbb5b00287635c60cdff2d078faaed8805a483a190b71fd681f07ef8d6212059a7b4a26392e56738b58e962bc61d72132fd4ab362ce1b6f2ff71
+Size (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.mod) = 554 bytes
+BLAKE2s (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.zip) = 16654c00ce13b4ac0cb79b69fccbbeb88d088d1643d4ee0af023e173dcd22bb4
+SHA512 (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.zip) = 06879d40c9e2c2da704e46d6d52f47825f0a355b41b8b59475731d6aa1f818017b9afec71d8f3f684c553a426a57a3d898fad32179aec3ae60b301379ba98bc2
+Size (aerc/github.com_konimarti_jwz_@v_v0.0.0-20241106152221-81c07e9284c3.zip) = 5118600 bytes
 BLAKE2s (aerc/github.com_kr_pretty_@v_v0.1.0.mod) = 09417ed9d591b5c29a7fce2a9ed872082218f63cf0cfba87355e8e559aeea976
 SHA512 (aerc/github.com_kr_pretty_@v_v0.1.0.mod) = 4d841fc7a022e4e09e0a95925ad92a75809a67c30fb88de9190e4a2196383038dab9a5b3294b6a0b4786248977a0e09eea857a34100cbf22f8a52912ce9fa58d
 Size (aerc/github.com_kr_pretty_@v_v0.1.0.mod) = 67 bytes
