@@ -1,0 +1,4 @@
+LibWapcaplet is a string internment library, written in C. It provides
+reference counted string interment and rapid string comparison
+functionality. It was developed as part of the NetSurf project and is
+available for use by other software under the MIT licence.
