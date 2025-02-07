@@ -1,0 +1,3 @@
+LibCSS is a CSS (Cascading Style Sheet) parser and selection engine,
+written in C. It was developed as part of the NetSurf project and is
+available for use by other software under the MIT licence.
