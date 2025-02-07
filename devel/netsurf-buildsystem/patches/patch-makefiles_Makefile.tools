@@ -1,0 +1,15 @@
+$NetBSD: patch-makefiles_Makefile.tools,v 1.1 2025/02/07 15:58:36 pho Exp $
+
+"install -C" is a GNU-ism. It's not portable. Don't use it.
+
+--- makefiles/Makefile.tools.orig	2025-02-04 07:44:29.038718017 +0000
++++ makefiles/Makefile.tools
+@@ -285,7 +285,7 @@ GENHTML ?= genhtml
+ 
+ BUILD_CXX ?= c++
+ 
+-INSTALL ?= install -C
++INSTALL ?= install
+ 
+ LCOV ?= lcov
+ 
