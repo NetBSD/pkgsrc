@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2024/12/29 15:09:49 adam Exp $
+# $NetBSD: Makefile,v 1.242 2025/02/07 15:48:16 wiz Exp $
 
 DISTNAME=	digiKam-8.4.0
 PKGNAME=	${DISTNAME:tl}
@@ -64,5 +64,12 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../x11/qt5-qtnetworkauth/buildlink3.mk"
 # unpackaged: qtav - libXv is required by qtav
 .include "../../x11/libXv/buildlink3.mk"
+#
+# for qt6 - not possible yet, needs unpackaged Qt6WebEngineWidgets
+#CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_QT6=TRUE
+#.include "../../devel/kf6-ki18n/buildlink3.mk"
+#.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+#.include "../../security/qt6-qtnetworkauth/buildlink3.mk"
+#.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
