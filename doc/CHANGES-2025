@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1157 2025/02/07 19:51:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1158 2025/02/07 21:51:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1536,3 +1536,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/raleigh-reloaded to 1.7 [tsutsui 2025-02-07]
 	Updated mail/aerc to 0.20.1 [ktnb 2025-02-07]
 	Updated net/arti to 1.4.0 [wiz 2025-02-07]
+	Updated net/libsoup3 to 3.6.4 [adam 2025-02-07]
+	Updated x11/py-sip6 to 6.10.0 [adam 2025-02-07]
+	Updated chat/py-nbxmpp to 5.0.4 [adam 2025-02-07]
+	Added security/py-omemo-dr version 1.0.1 [adam 2025-02-07]
+	Updated chat/gajim to 1.9.5 [adam 2025-02-07]
+	Updated security/py-truststore to 0.10.1 [adam 2025-02-07]
