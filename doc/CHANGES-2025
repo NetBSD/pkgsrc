@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1156 2025/02/07 18:22:24 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1157 2025/02/07 19:51:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1535,3 +1535,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated finance/py-stripe to 11.5.0 [adam 2025-02-07]
 	Updated graphics/raleigh-reloaded to 1.7 [tsutsui 2025-02-07]
 	Updated mail/aerc to 0.20.1 [ktnb 2025-02-07]
+	Updated net/arti to 1.4.0 [wiz 2025-02-07]
