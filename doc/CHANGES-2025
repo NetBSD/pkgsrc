@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1133 2025/02/07 07:52:48 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1134 2025/02/07 09:24:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1498,3 +1498,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-jplephem to 2.22 [adam 2025-02-07]
 	Updated editors/neovim to 0.10.4 [adam 2025-02-07]
 	Updated devel/py-hypothesis to 6.125.2 [adam 2025-02-07]
+	Updated devel/kdiff3 to 1.12.0 [wiz 2025-02-07]
