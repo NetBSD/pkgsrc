@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2025/02/02 10:58:08 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/02/07 13:25:09 adam Exp $
 
-DISTNAME=	pyqt6-6.8.1.dev2502011625
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/.dev2502011625/pre2/}
+DISTNAME=	pyqt6-6.8.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	x11 python
-#MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
-MASTER_SITES=	https://riverbankcomputing.com/pypi/packages/PyQt6/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyQt6/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Python binding for Qt6
@@ -13,8 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 WHEEL_NAME=	${DISTNAME:S/^pyq/PyQ/}
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.15:../../x11/py-qt-builder
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.8:../../x11/py-sip6
+TOOL_DEPENDS+=	${PYPKGPREFIX}-qt-builder>=1.17:../../x11/py-qt-builder
+TOOL_DEPENDS+=	${PYPKGPREFIX}-sip6>=6.9:../../x11/py-sip6
 # Binaries won't work without this:
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
 
@@ -33,6 +32,12 @@ pre-configure:
 
 .include "../../mk/bsd.prefs.mk"
 
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
+WHEEL_ARGS+=	-C=--jobs=${MAKE_JOBS}
+.endif
+# for debugging
+#WHEEL_ARGS+=	-C=--verbose
+
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
@@ -44,11 +49,6 @@ fix-darwin-install-name:
 		install_name_tool -id $${libdir}/$${libname} $${lib};	\
 	done
 .endif
-
-# for debugging
-verbose-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} sip-build --qmake \
-		${QTDIR}/bin/qmake --verbose --jobs ${MAKE_JOBS}
 
 post-install:
 .for bin in pylupdate6 pyuic6
