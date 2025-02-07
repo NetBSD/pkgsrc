@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4416 2025/02/07 15:58:55 pho Exp $
+# $NetBSD: Makefile,v 1.4417 2025/02/07 16:00:04 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -1064,6 +1064,7 @@ SUBDIR+=	libuxre
 SUBDIR+=	libvolume_id
 SUBDIR+=	libvterm01
 SUBDIR+=	libvterm03
+SUBDIR+=	libwapcaplet
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	libwnck3
