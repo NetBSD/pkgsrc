@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2024/11/11 07:28:58 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/02/07 15:17:24 adam Exp $
 
-DISTNAME=	borgbackup-1.2.8
+DISTNAME=	borgbackup-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/borgbackup/}
 
@@ -12,9 +11,9 @@ COMMENT=	Deduplicating backup program with compression and encryption
 LICENSE=	modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-pkgconfig-[0-9]*:../../devel/py-pkgconfig
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=1.7:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.1:../../devel/py-msgpack
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=8:../../devel/py-setuptools_scm
+DEPENDS+=	${PYPKGPREFIX}-msgpack>=1.0.3:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TEST_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
@@ -22,12 +21,11 @@ USE_LANGUAGES=	c c++
 
 PYTHON_SELF_CONFLICT=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-MAKE_ENV+=	BORG_OPENSSL_PREFIX=${SSLBASE:Q}
-MAKE_ENV+=	BORG_LZ4_PREFIX=${BUILDLINK_PREFIX.lz4}
-MAKE_ENV+=	BORG_LIBZSTD_PREFIX=${BUILDLINK_PREFIX.zstd}
 MAKE_ENV+=	BORG_LIBB2_PREFIX=${BUILDLINK_PREFIX.libb2}
+MAKE_ENV+=	BORG_LIBLZ4_PREFIX=${BUILDLINK_PREFIX.lz4}
+MAKE_ENV+=	BORG_LIBXXHASH_PREFIX=${BUILDLINK_PREFIX.xxhash}
+MAKE_ENV+=	BORG_LIBZSTD_PREFIX=${BUILDLINK_PREFIX.zstd}
+MAKE_ENV+=	BORG_OPENSSL_PREFIX=${SSLBASE:Q}
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
@@ -41,6 +39,7 @@ post-install:
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/py-cython/buildlink3.mk"
+.include "../../devel/xxhash/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
 .include "../../security/libb2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

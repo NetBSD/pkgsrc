@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2024/02/16 20:37:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/02/07 15:17:24 adam Exp $
 bin/borg
 bin/borgfs
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
@@ -170,6 +170,9 @@ ${PYSITELIB}/borg/testsuite/chunker_slow.pyo
 ${PYSITELIB}/borg/testsuite/compress.py
 ${PYSITELIB}/borg/testsuite/compress.pyc
 ${PYSITELIB}/borg/testsuite/compress.pyo
+${PYSITELIB}/borg/testsuite/conftest.py
+${PYSITELIB}/borg/testsuite/conftest.pyc
+${PYSITELIB}/borg/testsuite/conftest.pyo
 ${PYSITELIB}/borg/testsuite/crypto.py
 ${PYSITELIB}/borg/testsuite/crypto.pyc
 ${PYSITELIB}/borg/testsuite/crypto.pyo
@@ -274,6 +277,7 @@ man/man1/borg-rename.1
 man/man1/borg-serve.1
 man/man1/borg-umount.1
 man/man1/borg-upgrade.1
+man/man1/borg-version.1
 man/man1/borg-with-lock.1
 man/man1/borg.1
 man/man1/borgfs.1
