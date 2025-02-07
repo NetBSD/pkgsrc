@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.73 2025/01/22 08:19:30 adam Exp $
+$NetBSD: distinfo,v 1.74 2025/02/07 07:14:34 adam Exp $
 
-BLAKE2s (sqlalchemy-2.0.37.tar.gz) = 11279eb993e85e20cedff3c8c8657f91ad47c781a254958b4e12a38cadef2ed3
-SHA512 (sqlalchemy-2.0.37.tar.gz) = ea83a9cc1bcd69424d8f0b6c0f2195ac2c7c77ad92187d9f83e1c0d02fbd0bc8b75973c1849757283434041f073994ed235dc9d520c24f21bd72b4cd20a51a5c
-Size (sqlalchemy-2.0.37.tar.gz) = 9626249 bytes
+BLAKE2s (sqlalchemy-2.0.38.tar.gz) = d6d9ba5df4f81b69e5134338089827fa33624cf2e1d6be0105f8dfed44da6f21
+SHA512 (sqlalchemy-2.0.38.tar.gz) = 244df15b30a2d585aa9cb1d89b7460b1e75871a5e41579a23743bbfe40ece9c5c24308e317ccb7686ba7599a2e02a61f61077da6e1ab8567e4e31d61d4d77380
+Size (sqlalchemy-2.0.38.tar.gz) = 9634782 bytes
