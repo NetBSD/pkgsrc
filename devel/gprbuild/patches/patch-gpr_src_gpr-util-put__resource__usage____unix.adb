@@ -1,4 +1,4 @@
-$NetBSD: patch-gpr_src_gpr-util-put__resource__usage____unix.adb,v 1.1 2025/02/06 11:27:49 wiz Exp $
+$NetBSD: patch-gpr_src_gpr-util-put__resource__usage____unix.adb,v 1.2 2025/02/08 14:14:49 wiz Exp $
 
 Fix warning at link stage on NetBSD
 

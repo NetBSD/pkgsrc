@@ -1,4 +1,4 @@
-# $NetBSD: gprbuild.mk,v 1.1 2025/02/06 11:27:49 wiz Exp $
+# $NetBSD: gprbuild.mk,v 1.2 2025/02/08 14:14:49 wiz Exp $
 #
 # This Makefile fragment supports building using the GPRbuild tool.
 #
@@ -51,7 +51,7 @@ do-install: gprbuild-install
 .if !target(gprbuild-build)
 .PHONY: gprbuild-build
 gprbuild-build:
-	@for dir in ${BUILD_DIRS}; do \
+	for dir in ${BUILD_DIRS}; do \
 	    set -e; \
 	    cd $$dir && \
 		${PKGSRC_SETENV} ${GPRBUILD_ENV} \
@@ -62,7 +62,7 @@ gprbuild-build:
 .if !target(gprbuild-install)
 .PHONY: gprbuild-install
 gprbuild-install:
-	@for dir in ${INSTALL_DIRS}; do \
+	for dir in ${INSTALL_DIRS}; do \
 	    set -e; \
 	    cd $$dir && \
 		${PKGSRC_SETENV} ${GPRINSTALL_ENV} \

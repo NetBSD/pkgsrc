@@ -1,4 +1,4 @@
-$NetBSD: patch-bootstrap.sh,v 1.2 2025/02/06 11:27:49 wiz Exp $
+$NetBSD: patch-bootstrap.sh,v 1.3 2025/02/08 14:14:49 wiz Exp $
 
 Fix out-of-tree bootstrap build
 

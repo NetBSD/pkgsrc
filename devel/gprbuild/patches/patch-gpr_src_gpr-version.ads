@@ -1,4 +1,4 @@
-$NetBSD: patch-gpr_src_gpr-version.ads,v 1.2 2025/02/06 11:27:49 wiz Exp $
+$NetBSD: patch-gpr_src_gpr-version.ads,v 1.3 2025/02/08 14:14:49 wiz Exp $
 
 Fix incorrect version reporting
 
@@ -9,14 +9,14 @@ Fix incorrect version reporting
  package GPR.Version is
  
 -   Gpr_Version : constant String := "18.0w";
-+   Gpr_Version : constant String := "24.0w";
++   Gpr_Version : constant String := "25.0w";
     --  Static string identifying this version
  
 -   Date : constant String := "19940713";
-+   Date : constant String := "20231113";
++   Date : constant String := "20241126";
  
 -   Current_Year : constant String := "2016";
-+   Current_Year : constant String := "2023";
++   Current_Year : constant String := "2024";
  
     type Gnat_Build_Type is (Gnatpro, FSF, GPL);
     --  See Get_Gnat_Build_Type below for the meaning of these values
