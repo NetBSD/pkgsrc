@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2025/01/07 19:55:52 riastradh Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 14:05:03 wiz Exp $
 
-GCC_PKGNAME=gcc13
-.include "../../lang/${GCC_PKGNAME}/version.mk"
+GCC_PKGNAME=		gcc13
+GCC_DIST_VERSION=	13.3.0
 
-PKGNAME=	${GCC_PKGNAME}-gnat-${GCC13_DIST_VERSION}
-PKGREVISION=	1
+PKGNAME=	${GCC_PKGNAME}-gnat-${GCC_DIST_VERSION}
+PKGREVISION=	2
 COMMENT=	GNAT Compiler and Ada tools
-DISTNAME=	gcc-${GCC13_DIST_VERSION}
+DISTNAME=	gcc-${GCC_DIST_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC13_DIST_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,16 +24,15 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_TOOLS+=		gmake makeinfo sed:run tar perl
 USE_TOOLS.NetBSD+=	gsed
 
-MKPIE_SUPPORTED=	no
-
-CHECK_RELRO_SKIP+=	${GCC_PKGNAME}-gnat/lib/*
+CHECK_PIE_SUPPORTED=	no
+CHECK_RELRO_SUPPORTED=	no
 
 .include "../../mk/bsd.prefs.mk"
 
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
-USE_LANGUAGES=		c c++ ada
+USE_LANGUAGES=	c c++ ada
 GCC_REQD+=	10
 
 UNLIMIT_RESOURCES+=	datasize
@@ -54,22 +53,27 @@ GNU_CONFIGURE_PREFIX=	${GNAT_PREFIX}
 
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
+STAGE1_LDFLAGS=		${LDFLAGS} -static
+
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
-LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*} ${LDFLAGS:M-Wl,-z*}
+LDFLAGS_FOR_TARGET=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 # The "-static-libstdc++ -static-libgcc" flags are normally added to the
 # boot-ldflags by configure but because we are supply the boot-ldflags
 # we mash supply them.
-BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
+BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib
+BOOT_LDFLAGS+=		${COMPILER_RPATH_FLAG}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adalib
+BOOT_LDFLAGS+=		${LDFLAGS_FOR_TARGET}
 # Needed on Darwin when LDFLAGS point to a SDK
+.if !empty(OSX_SDK_PATH)
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
+.endif
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
-
-STAGE1_LDFLAGS=	-static ${BOOT_LDFLAGS}
 
 # Disable fixincludes on SmartOS, header changes result in broken includes
 # being generated, see https://github.com/joyent/pkgsrc-legacy/issues/270
@@ -93,20 +97,19 @@ SUBST_SED.libstdc=	-e 's,libtool_VERSION=6:,libtool_VERSION=7:,g'
 CONFIGURE_ARGS+=	--enable-libssp
 .endif
 
-## For target librarys and libjava programs.
-CONFIGURE_ENV+=	LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
-
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 CONFIGURE_ENV+=	CXX_FOR_BUILD=${NATIVE_CXX:Q}
 .endif
 
 CONFIGURE_ARGS+=	--enable-languages=c,c++,ada --enable-stage1-languages=c++,ada
-#CONFIGURE_ARGS+=	--enable-shared
+# This will create slightly slower compiler
+CONFIGURE_ARGS+=	--enable-shared
+CONFIGURE_ARGS+=	--enable-host-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GNAT_PREFIX:Q}
+CONFIGURE_ARGS+=	--with-gxx-include-dir=${GNAT_PREFIX}/include/c++
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
-#CONFIGURE_ARGS+=	--with-gxx-include-dir='${GNAT_PREFIX}/include/c++'
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-stage1-ldflags=${STAGE1_LDFLAGS:Q}
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
@@ -151,21 +154,21 @@ MAKE_ENV+=	lt_cv_path_SED=${TOOLS_SED}
 # Determine whether to use binutils
 .if ${OPSYS} == "SunOS"
 .  if exists(/usr/sfw/bin/gobjdump)
-CONFIGURE_ENV+=OBJDUMP=/usr/sfw/bin/gobjdump
+CONFIGURE_ENV+=	OBJDUMP=/usr/sfw/bin/gobjdump
 .  endif
 .  if exists(/usr/bin/ld)
-CONFIGURE_ARGS+=--without-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/bin/ld
 .  else
-CONFIGURE_ARGS+=--without-gnu-ld --with-ld=/usr/ccs/bin/ld
+CONFIGURE_ARGS+=	--without-gnu-ld --with-ld=/usr/ccs/bin/ld
 .  endif
 .  if exists(/usr/sfw/bin/gas)
-CONFIGURE_ARGS+=--with-gnu-as --with-as=/usr/sfw/bin/gas
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/sfw/bin/gas
 .  elif exists(/usr/ccs/bin/as)
-CONFIGURE_ARGS+=--without-gnu-as --with-as=/usr/ccs/bin/as
+CONFIGURE_ARGS+=	--without-gnu-as --with-as=/usr/ccs/bin/as
 .  else
 BUILDLINK_DEPMETHOD.binutils=full
 .    include "../../devel/binutils/buildlink3.mk"
-CONFIGURE_ARGS+=--with-gnu-as --with-as=${PREFIX}/bin/gas
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
 .endif
 
@@ -207,16 +210,7 @@ GENERATE_PLIST+= \
 	${FIND} ${GNAT_SUBPREFIX} \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../archivers/zstd/buildlink3.mk"
-CONFIGURE_ARGS+=--with-zstd=${BUILDLINK_PREFIX.zstd}
-
-CHECK_BUILTIN.zlib=yes
-.include "../../devel/zlib/builtin.mk"
-CHECK_BUILTIN.zlib=no
-.if ${USE_BUILTIN.zlib:tl} == yes
-CONFIGURE_ARGS+=--with-system-zlib
-.else
-CONFIGURE_ARGS+=--without-system-zlib
-.endif
+CONFIGURE_ARGS+=	--with-zstd=${BUILDLINK_PREFIX.zstd}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
@@ -230,6 +224,9 @@ post-test:
 	${INFO_MSG} "Test summary are available in ${WRKDIR}/test_summary.log"
 
 post-install:
+# Fix group write mode
+	${CHMOD} g-w ${DESTDIR}${GNAT_PREFIX}/lib/gcc/${MACHINE_GNU_PLATFORM}/${GCC_DIST_VERSION}/adainclude/standard.ads.h
+# Create old name that modern gnat no longer provides
 	${TEST} -f ${DESTDIR}${GNAT_PREFIX}/bin/gnat && \
 		( cd ${DESTDIR}${GNAT_PREFIX}/bin ; ${LN} -f gnat ada )
 .if ${MACHINE_PLATFORM:MSunOS-*-*86*} && ${OS_VERSION} != "5.11"

@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_ada_libgnat_g-socthi____bsd.adb,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_libgnat_g-socthi____bsd.adb,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Create a g-socthi package that is common to all *BSD systems.
 
 --- /dev/null	2023-12-10 09:29:26.388655944 +0200
-+++ gcc/ada/libgnat/g-socthi__bsd.adb	2023-12-10 09:43:49.337413272 +0200
++++ gcc/ada/libgnat/g-socthi__bsd.adb
 @@ -0,0 +1,356 @@
 +------------------------------------------------------------------------------
 +--                                                                          --

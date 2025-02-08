@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2024/03/08 12:02:33 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc13-gnat
-PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-inplace-isl gcc-graphite
+PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-graphite
 PKG_SUGGESTED_OPTIONS=	gcc-graphite
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -13,12 +13,8 @@ PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	nls
 .elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math gcc-inplace-isl
+PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
 .else
-.endif
-
-.if !empty(PKG_OPTIONS:Mgcc-inplace-isl) && empty(PKG_OPTIONS:Mgcc-graphite)
-PKG_SUGGESTED_OPTIONS+=	gcc-graphite
 .endif
 
 ###
@@ -90,7 +86,7 @@ LIBS.SunOS+=-lgmp
 ###
 .if !empty(PKG_OPTIONS:Mgcc-graphite)
 BUILDLINK_API_DEPENDS.isl+=isl>=0.24
-.  if !empty(PKG_OPTIONS:Mgcc-inplace-isl)
+.  if !empty(PKG_OPTIONS:Mgcc-inplace-math)
 .    include "../../math/isl/inplace.mk"
 .  else
 .    include "../../math/isl/buildlink3.mk"

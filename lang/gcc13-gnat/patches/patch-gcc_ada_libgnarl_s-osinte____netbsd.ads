@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_ada_libgnarl_s-osinte____netbsd.ads,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_libgnarl_s-osinte____netbsd.ads,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Add NetBSD interface.
 
 --- gcc/ada/libgnarl/s-osinte__netbsd.ads.orig	2021-10-08 11:29:30.503927461 +0200
-+++ gcc/ada/libgnarl/s-osinte__netbsd.ads	2021-10-09 18:31:14.947869872 +0200
++++ gcc/ada/libgnarl/s-osinte__netbsd.ads
 @@ -0,0 +1,663 @@
 +------------------------------------------------------------------------------
 +--                                                                          --
