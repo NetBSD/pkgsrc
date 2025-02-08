@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/11/05 14:58:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/08 05:21:30 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1452,8 +1452,11 @@ ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/assertions.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/autorun.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/benchmark.rb
+${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/compress.rb
+${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/error_on_warning.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/expectations.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/hell.rb
+${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/manual_plugins.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/mock.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/parallel.rb
 ${GEM_HOME}/gems/minitest-${RUBY_MINITEST_VER}/lib/minitest/pride.rb
