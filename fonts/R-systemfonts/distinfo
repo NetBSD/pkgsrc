@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/17 14:02:43 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/02/08 08:01:17 mef Exp $
 
-BLAKE2s (R/systemfonts_1.0.4.tar.gz) = 25acc00043809e98b35344c5f4c90f4d6f31fc4758cb117b73c68180c4fcbccd
-SHA512 (R/systemfonts_1.0.4.tar.gz) = b0b4809236d92e9d3244d2972dc8a3f6c8f76c022332affbabd5bcaeded6f4cc7147f7d595cf457abe47f1162090929762d24fd5f39674d7f91bc1901cff2a16
-Size (R/systemfonts_1.0.4.tar.gz) = 81757 bytes
+BLAKE2s (R/systemfonts_1.2.1.tar.gz) = a754e2b2efa87e89090f9c4157d98335ff3bff37d81d3e8346e6763b96bc3a28
+SHA512 (R/systemfonts_1.2.1.tar.gz) = 68359fb9e7b9df28bc0e31634e267bf6dfc183160eda3cd7a4047c0bf02dd20fba4def19d0a75de9c2c68d81836c85a583dd616fd6ed7221bbe8107d4a493448
+Size (R/systemfonts_1.2.1.tar.gz) = 101773 bytes
