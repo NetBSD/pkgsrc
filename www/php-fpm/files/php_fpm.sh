@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: php_fpm.sh,v 1.3 2022/05/18 20:40:32 triaxx Exp $
+# $NetBSD: php_fpm.sh,v 1.4 2025/02/08 03:22:19 taca Exp $
 #
 # PROVIDE: php_fpm
 # REQUIRE: DAEMON
@@ -13,11 +13,11 @@
 
 $_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 
-name="php_fpm"
+name="php_fpm@PHP_VER@"
 rcvar=${name}
-command="@PREFIX@/sbin/php-fpm"
+command="@PREFIX@/sbin/php-fpm@PHP_VER@"
 required_files="@PKG_SYSCONFDIR@/php-fpm.conf"
-pidfile="@VARBASE@/run/php-fpm.pid"
+pidfile="@VARBASE@/run/php-fpm@PHP_VER@.pid"
 sig_reload="USR2"
 extra_commands="reload"
 

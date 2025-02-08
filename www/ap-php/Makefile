@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2024/12/01 16:17:18 taca Exp $
+# $NetBSD: Makefile,v 1.61 2025/02/08 03:22:18 taca Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_VERSION}
-PKGREVISION=		11
-COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
+PKGREVISION=		12
+COMMENT=		Apache (${PKG_APACHE}) module for ${PHP_PKG_PREFIX}
 
 CONFLICTS=		ap-php-[0-9]*
 
@@ -17,7 +17,7 @@ SSP_SUPPORTED=		no
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_MAJOR_VERS} < 7
+.if ${PHP_VER} == 56
 USE_TOOLS+=		autoconf269
 .else
 USE_TOOLS+=		autoconf
@@ -34,15 +34,15 @@ pre-configure:
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${CONFIGURE_ENV} autoconf -f
 
 do-install:
-	if [ -f ${WRKSRC}/.libs/libphp${PKG_PHP_MAJOR_VERS}.so ]; then	\
-		${INSTALL_DATA} ${WRKSRC}/.libs/libphp${PKG_PHP_MAJOR_VERS}.so \
-			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so;   \
-	elif [ -f ${WRKSRC}/libs/libphp${PKG_PHP_MAJOR_VERS}.so ]; then	\
-		${INSTALL_DATA} ${WRKSRC}/libs/libphp${PKG_PHP_MAJOR_VERS}.so  \
-			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so;   \
+	if [ -f ${WRKSRC}/.libs/libphp${PHP_VER}.so ]; then \
+		${INSTALL_DATA} ${WRKSRC}/.libs/libphp${PHP_VER}.so \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PHP_VER}.so; \
+	elif [ -f ${WRKSRC}/libs/libphp${PHP_VER}.so ]; then \
+		${INSTALL_DATA} ${WRKSRC}/libs/libphp${PHP_VER}.so \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PHP_VER}.so; \
 	elif [ -f ${WRKSRC}/.libs/libphp.so ]; then \
 		${INSTALL_DATA} ${WRKSRC}/.libs/libphp.so \
-			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PKG_PHP_MAJOR_VERS}.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PHP_VER}.so; \
 	fi
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

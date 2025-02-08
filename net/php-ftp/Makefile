@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2023/10/24 22:10:29 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/08 03:18:21 taca Exp $
 
 MODNAME=		ftp
+PKGREVISION=		4
 CATEGORIES+=		net
 COMMENT=		PHP extension for FTP access
-PKGREVISION=		3
 
 CONFLICTS=	php-ftp-[0-9]*
 
