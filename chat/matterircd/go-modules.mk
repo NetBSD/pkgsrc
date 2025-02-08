@@ -1,5 +1,4 @@
-===> Extracting for matterircd-0.28.0
-# $NetBSD: go-modules.mk,v 1.1 2023/11/14 19:41:30 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.2 2025/02/08 07:59:47 rillig Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20160811212531-371fbbdaa898.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.26.0.mod
