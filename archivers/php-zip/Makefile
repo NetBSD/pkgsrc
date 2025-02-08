@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.38 2024/11/14 22:18:38 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/02/08 03:04:35 taca Exp $
 
 MODNAME=		zip
+PKGREVISION=		17
 CATEGORIES+=		archivers
 COMMENT=		PHP extension for ZIP archive handling
-PKGREVISION=		16
 
-CONFLICTS=		php-zip-[0-9]*
+CONFLICTS=		php-zip-[0-9]* php${PHP_VER}-pecl-zip
 
 CONFIGURE_ARGS+=	--enable-zip
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
