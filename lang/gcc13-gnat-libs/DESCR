@@ -1,0 +1,5 @@
+The GNU Compiler Collection (GCC) GNAT libraries
+
+This packages provides GNAT support libraries in a specific location and allows
+packages to depend on just the libraries rather than having to pull in the full
+GNAT package.
