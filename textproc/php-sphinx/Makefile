@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 03:55:19 taca Exp $
 
 MODNAME=		sphinx
 PECL_VERSION=		1.3.3
+PKGREVISION=		1
 CATEGORIES+=		textproc databases
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

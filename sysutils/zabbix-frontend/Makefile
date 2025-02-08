@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/01/13 17:17:18 taca Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/08 03:54:12 taca Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../sysutils/zabbix/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-frontend-/}
@@ -22,15 +22,15 @@ BUILD_DEFS+=		APACHE_GROUP APACHE_USER
 PKG_GROUPS_VARS+=	${APACHE_GROUP}
 PKG_USERS_VARS=		${APACHE_USER}
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=5.4.0:../../math/php-bcmath
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.4.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=5.4.0:../../databases/php-ldap
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.4.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.4.0:../../databases/php-pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=5.4.0:../../net/php-sockets
-DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=5.4.0:../../devel/php-sysvsem
+DEPENDS+=	${PHP_PKG_PREFIX}-bcmath>=${PHP_BASE_VERS}:../../math/php-bcmath
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=${PHP_BASE_VERS}:../../devel/php-sysvsem
 
 INSTALLATION_DIRS+=	share/zabbix/frontend
 

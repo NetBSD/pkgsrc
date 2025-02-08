@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/01/26 18:02:49 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 03:56:22 taca Exp $
 
 DISTNAME=	framadate-1.1.19
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time www
 MASTER_SITES=	https://framagit.org/framasoft/framadate/framadate/-/archive/1.1.19/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,13 +19,13 @@ PHP_VERSIONS_INCOMPATIBLE=	56
 USE_LANGUAGES=	# none
 USE_TOOLS=	pax
 
-DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 
 TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-composer-[0-9]*:../../devel/php-composer
 TOOL_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
-TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+TOOL_DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -44,20 +44,19 @@ MAKE_DIRS_PERMS+=	${WWWDIR}/app/inc ${APACHE_USER} ${SHAREGRP} 0755
 
 INSTALLATION_DIRS+=	${DOCDIR} ${WWWDIR}
 
+REPLACE_SH+=	vendor/smarty/smarty/run-tests-for-all-php-versions.sh
+
+post-extract:
+	cd ${WRKSRC} && ${SETENV} COMPOSER_HOME=${WRKDIR}/composer composer${PHP_VER} update < /dev/null
+
 do-build:
-	cd ${WRKSRC} && ${SETENV} COMPOSER_HOME=${WRKDIR}/composer composer update
 	cd ${WRKSRC} && ${CHMOD} -R og-w .
 	${GREP} -rl '^#!/usr/bin/env' ${WRKSRC}/vendor | while read f ; do \
 		${CP} $$f $$f.orig && \
-		${SED} "s|^#!/usr/bin/env php|#!${PREFIX}/bin/php|" \
+		${SED} "s|^#!/usr/bin/env php|#!${PREFIX}/bin/php${PHP_VER}|" \
 			$$f.orig > $$f && \
 		${RM} $$f.orig ; \
 	done
-	f=${WRKSRC}/vendor/smarty/smarty/run-tests-for-all-php-versions.sh && \
-		${CP} $$f $$f.orig && \
-		${SED} "s|^#!/bin/bash|#!/bin/sh|" \
-			$$f.orig > $$f && \
-		${RM} $$f.orig
 
 do-install:
 	for f in ${DOC_FILES} ; do \
@@ -70,5 +69,4 @@ do-install:
 		${DESTDIR}${PREFIX}/${WWWDIR}/.htaccess
 
 .include "../../lang/php/phpversion.mk"
-.include "../../lang/php/replace.mk"
 .include "../../mk/bsd.pkg.mk"
