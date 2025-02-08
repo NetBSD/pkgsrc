@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2022/01/04 20:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/08 23:53:38 rillig Exp $
 
 DISTNAME=	BeautifulSoup-3.2.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/B/b/:S/S/s/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	https://www.crummy.com/software/BeautifulSoup/download/3.x/
