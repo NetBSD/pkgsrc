@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.77 2024/12/01 14:06:17 gdt Exp $
+# $NetBSD: Makefile,v 1.78 2025/02/08 03:53:26 taca Exp $
 
 VERSION=	1.36.33
+PKGREVISION=	1
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -212,10 +213,10 @@ ZM_PERL_PATH+=	scripts/zmx10.pl.in
 PHP_VERSIONS_INCOMPATIBLE=	56 83
 
 .include "../../lang/php/phpversion.mk"
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
-DEPENDS+=	${PHP_PKG_PREFIX}-intl-[0-9]*:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 
 .include "../../lang/php/json.mk"
@@ -241,7 +242,7 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 .if !empty(PKG_OPTIONS:Mnginx)
 # \todo Actually test this option.
 DEPENDS+=	nginx-[0-9]*:../../www/nginx
-DEPENDS+=	${PHP_PKG_PREFIX}-fpm-[0-9]*:../../www/php-fpm
+DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=${PHP_BASE_VERS}:../../www/php-fpm
 .endif
 
 ## MYSQL
@@ -333,6 +334,7 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../net/libvncserver/buildlink3.mk"
 .include "../../multimedia/mp4v2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
