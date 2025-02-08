@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2025/01/28 16:22:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.78 2025/02/08 12:15:21 wiz Exp $
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
