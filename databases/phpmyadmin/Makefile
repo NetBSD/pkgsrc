@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2022/04/22 18:06:05 tm Exp $
+# $NetBSD: Makefile,v 1.170 2025/02/08 03:33:12 taca Exp $
 
 DISTNAME=	phpMyAdmin-4.9.10-all-languages
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -11,21 +12,13 @@ HOMEPAGE=	https://www.phpmyadmin.net/
 COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=5.3.0:../../archivers/php-bz2
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.3.0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
-
-.include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} < 71
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
-.else
-DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
-.endif
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
@@ -55,15 +48,12 @@ PMCONFFILE=	${PKG_SYSCONFDIR}/config.inc.php
 PMDIR=		${PREFIX}/share/phpmyadmin
 PMVARDIR=	${VARBASE}/phpmyadmin
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	/usr/bin/env php
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	vendor/phpmyadmin/sql-parser/bin/highlight-query
-REPLACE_FILES.php+=	vendor/bin/highlight-query
-REPLACE_FILES.php+=	vendor/phpmyadmin/sql-parser/bin/lint-query
-REPLACE_FILES.php+=	vendor/bin/lint-query
-REPLACE_FILES.php+=	vendor/phpmyadmin/sql-parser/bin/tokenize-query
-REPLACE_FILES.php+=	vendor/bin/tokenize-query
+REPLACE_PHP+=	vendor/phpmyadmin/sql-parser/bin/highlight-query
+REPLACE_PHP+=	vendor/bin/highlight-query
+REPLACE_PHP+=	vendor/phpmyadmin/sql-parser/bin/lint-query
+REPLACE_PHP+=	vendor/bin/lint-query
+REPLACE_PHP+=	vendor/phpmyadmin/sql-parser/bin/tokenize-query
+REPLACE_PHP+=	vendor/bin/tokenize-query
 
 REPLACE_SH+=	vendor/twig/twig/drupal_test.sh
 
@@ -84,6 +74,14 @@ SUBST_STAGE.paths=	post-configure
 
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/phpmyadmin \
 			${PREFIX}/share/examples/phpmyadmin
+
+.include "../../lang/php/phpversion.mk"
+
+.if ${PHP_VER} < 71
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
+.else
+DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
+.endif
 
 post-extract:
 	${CP} ${FILESDIR}/phpmyadmin.conf ${WRKDIR}

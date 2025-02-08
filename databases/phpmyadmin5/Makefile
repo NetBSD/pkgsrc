@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/04/17 10:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 03:33:12 taca Exp $
 
 DISTNAME=	phpMyAdmin-5.1.3-all-languages
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/-all-languages//:tl}
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
@@ -12,16 +13,16 @@ COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 LICENSE=	gnu-gpl-v2
 
 # Required
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.2.5:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.2.5:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 
 # Suggest
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=7.2.5:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=7.2.5:../../archivers/php-bz2
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=7.2.5:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.2.5:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=7.2.5:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.2.5:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 
 PHP_VERSIONS_INCOMPATIBLE=	56
 

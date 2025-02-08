@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2023/10/16 13:02:26 hauke Exp $
+# $NetBSD: Makefile,v 1.41 2025/02/08 03:33:12 taca Exp $
 
 DISTNAME=	phpPgAdmin-7.13.0
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PgAdmin/pgadmin/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=phppgadmin/}
 GITHUB_PROJECT=	phppgadmin
@@ -12,8 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/phppgadmin/phppgadmin
 COMMENT=	Set of PHP scripts to administer PostgreSQL over the WWW
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=7.2.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}:../../databases/php-pgsql
 
 PHP_VERSIONS_INCOMPATIBLE=	56
 
