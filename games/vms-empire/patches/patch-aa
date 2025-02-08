@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2016/01/11 19:37:43 leot Exp $
+$NetBSD: patch-aa,v 1.6 2025/02/08 10:49:45 triaxx Exp $
 
 o Turn off optimizations present in DEBUG
 o Link against (generic) curses
@@ -6,7 +6,7 @@ o Honors user's CFLAGS and LDFLAGS
 
 --- Makefile.orig	2016-01-11 18:19:51.000000000 +0000
 +++ Makefile
-@@ -8,18 +8,18 @@ VERS=1.14
+@@ -9,18 +9,18 @@ VERS=1.14
  
  # Use -g to compile the program for debugging.
  #DEBUG = -g -DDEBUG
@@ -28,7 +28,7 @@ o Honors user's CFLAGS and LDFLAGS
  
  FILES = \
  	attack.c \
-@@ -58,7 +58,7 @@ OFILES = \
+@@ -59,7 +59,7 @@ OFILES = \
  all: vms-empire
  
  vms-empire: $(OFILES)
