@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2024/07/09 13:55:38 hauke Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/08 03:41:13 taca Exp $
 #
 
 LIBAWL_VERSION=	0.65
 DISTNAME=	libawl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
 GITLAB_PROJECT=	awl
@@ -20,8 +21,8 @@ USE_TOOLS+=	gmake
 
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
 
 INSTALLATION_DIRS=	${LIBAWLDIR} ${LIBAWLDIR}/inc ${LIBAWLDIR}/dba
 

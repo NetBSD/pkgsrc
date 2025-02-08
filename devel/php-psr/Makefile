@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2021/01/03 16:06:57 taca Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 03:41:14 taca Exp $
 
 MODNAME=	psr
 PECL_VERSION=	1.0.1
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,12 +14,12 @@ PHP_VERSIONS_INCOMPATIBLE=	56
 
 USE_LANGUAGES=	c c++
 
-INSTALLATION_DIRS+=	include/php/ext/psr
+INSTALLATION_DIRS+=	${PHP_INCDIR}/ext/psr
 PLIST_SRC+=		PLIST
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php_psr.h \
-		${DESTDIR}${PREFIX}/include/php/ext/psr
+		${DESTDIR}${PREFIX}/${PHP_INCDIR}/ext/psr
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

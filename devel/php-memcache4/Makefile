@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2021/12/29 06:05:18 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 03:41:14 taca Exp $
 #
 
 MODNAME=		memcache
 PECL_VERSION=		4.0.5.2
+PKGREVISION=		1
 CATEGORIES+=		devel
 
 COMMENT=		PHP extension for memcached
