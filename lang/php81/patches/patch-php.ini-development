@@ -1,19 +1,19 @@
-$NetBSD: patch-php.ini-development,v 1.1 2021/11/27 07:24:43 taca Exp $
+$NetBSD: patch-php.ini-development,v 1.2 2025/02/08 02:59:30 taca Exp $
 
 Set proper default configuration values.
 
---- php.ini-development.orig	2021-10-27 00:20:44.000000000 +0000
+--- php.ini-development.orig	2024-11-19 15:24:51.000000000 +0000
 +++ php.ini-development
-@@ -735,7 +735,7 @@ default_charset = "UTF-8"
+@@ -740,7 +740,7 @@ default_charset = "UTF-8"
  ;;;;;;;;;;;;;;;;;;;;;;;;;
  
  ; UNIX: "/path1:/path2"
 -;include_path = ".:/php/includes"
-+include_path = ".:@PREFIX@/lib/php"
++include_path = ".:@PREFIX@/lib/php@PHP_VER@"
  ;
  ; Windows: "\path1;\path2"
  ;include_path = ".;c:\php\includes"
-@@ -756,7 +756,8 @@ doc_root =
+@@ -761,7 +761,8 @@ doc_root =
  ; https://php.net/user-dir
  user_dir =
  
@@ -23,12 +23,12 @@ Set proper default configuration values.
  ; https://php.net/extension-dir
  ;extension_dir = "./"
  ; On windows:
-@@ -841,7 +842,7 @@ file_uploads = On
+@@ -846,7 +847,7 @@ file_uploads = On
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
  ; https://php.net/upload-tmp-dir
 -;upload_tmp_dir =
-+upload_tmp_dir =
++upload_tmp_dir = /tmp
  
  ; Maximum allowed size for uploaded files.
  ; https://php.net/upload-max-filesize
