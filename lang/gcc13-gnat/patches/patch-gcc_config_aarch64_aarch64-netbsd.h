@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_config_aarch64_aarch64-netbsd.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_config_aarch64_aarch64-netbsd.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Match what is in NetBSD src.  Fixes at least aarch64eb, and
 probably several others.
 
 --- gcc/config/aarch64/aarch64-netbsd.h.orig	2021-04-08 04:56:28.033740243 -0700
-+++ gcc/config/aarch64/aarch64-netbsd.h	2021-04-24 00:16:41.451665444 -0700
++++ gcc/config/aarch64/aarch64-netbsd.h
 @@ -20,6 +20,10 @@
  #ifndef GCC_AARCH64_NETBSD_H
  #define GCC_AARCH64_NETBSD_H

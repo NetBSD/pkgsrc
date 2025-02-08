@@ -1,12 +1,12 @@
-$NetBSD: patch-gcc_ada_adaint.c,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_adaint.c,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 NetBSD does not use symbol versioning, which requires some functions
 to be preprocessed in C. This patch adds those functions definitions,
 not only for NetBSD, but for any other system too.
 
---- gcc/ada/adaint.c.orig	2021-04-08 13:56:27.725736525 +0200
-+++ gcc/ada/adaint.c	2021-10-09 17:27:52.413919872 +0200
-@@ -817,7 +817,8 @@
+--- gcc/ada/adaint.c.orig	2024-05-21 10:47:37.000000000 +0300
++++ gcc/ada/adaint.c
+@@ -831,7 +831,8 @@
  }
  
  #if defined (_WIN32) || defined (__linux__) || defined (__sun__) \
@@ -16,7 +16,7 @@ not only for NetBSD, but for any other system too.
  #define HAS_TARGET_WCHAR_T
  #endif
  
-@@ -3544,6 +3545,69 @@
+@@ -3679,6 +3680,69 @@
    */
  }
  

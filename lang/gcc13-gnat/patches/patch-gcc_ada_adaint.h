@@ -1,12 +1,12 @@
-$NetBSD: patch-gcc_ada_adaint.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_adaint.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Due to the lack of symbol versioning in NetBSD, some functions need
 to be exported from C to be used correctly. This patch addresses
 that issue and makes sure that other systems also work correclty.
 
---- gcc/ada/adaint.h.orig	2021-10-09 19:21:39.117755578 +0200
-+++ gcc/ada/adaint.h	2021-10-09 19:02:38.871872061 +0200
-@@ -345,6 +345,28 @@
+--- gcc/ada/adaint.h.orig	2024-05-21 10:47:37.000000000 +0300
++++ gcc/ada/adaint.h
+@@ -348,6 +348,28 @@
  
  extern const void * __gnat_get_executable_load_address  (void);
  

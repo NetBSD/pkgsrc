@@ -1,11 +1,11 @@
-$NetBSD: patch-libffi_configure,v 1.1 2024/03/08 12:02:34 wiz Exp $
+$NetBSD: patch-libffi_configure,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90146
 https://github.com/libffi/libffi/issues/485
 
---- libffi/configure.orig	2022-05-06 07:31:19.000000000 +0000
+--- libffi/configure.orig	2024-05-21 10:49:00.000000000 +0300
 +++ libffi/configure
-@@ -16155,7 +16155,7 @@ case "$target" in
+@@ -16199,7 +16199,7 @@
  $as_echo "#define FFI_EXEC_TRAMPOLINE_TABLE 1" >>confdefs.h
  
       ;;
