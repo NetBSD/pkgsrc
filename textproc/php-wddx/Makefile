@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2024/11/14 22:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/08 03:20:14 taca Exp $
 
 MODNAME=		wddx
+PKGREVISION=		13
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for WDDX support
-PKGREVISION=		12
 
 CONFLICTS=	php-wddx-[0-9]*
 
@@ -15,7 +15,7 @@ USE_PHP_EXT_PATCHES=	# defined
 
 # appease some PHP build assumpsions
 CFLAGS+=	-I${BUILDLINK_DIR}/include/libxml2 \
-		-I${BUILDLINK_DIR}/include/php/ext/date/lib
+		-I${BUILDLINK_DIR}/${PHP_INCDIR}/ext/date/lib
 
 .include "../../lang/php/phpversion.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

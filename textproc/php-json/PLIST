@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2017/12/13 11:42:41 jperkin Exp $
-include/php/ext/json/php_json.h
+@comment $NetBSD: PLIST,v 1.2 2025/02/08 03:20:14 taca Exp $
+${PHP_INCDIR}/ext/json/php_json.h

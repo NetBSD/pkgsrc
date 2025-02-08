@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:24 asau Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 03:15:21 taca Exp $
 
 MODNAME=		sysvmsg
+PKGREVISION=		1
 CATEGORIES+=		devel
 COMMENT=		PHP extension for SysV IPC Message Queues support
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2019/01/14 13:06:11 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/08 03:19:18 taca Exp $
 
 MODNAME=		mcrypt
+PKGREVISION=		1
 CATEGORIES+=		security
 COMMENT=		PHP extension for the mcrypt crypto algorithms library
 
