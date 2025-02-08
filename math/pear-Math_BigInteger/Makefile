@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/07/03 07:28:22 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 03:46:08 taca Exp $
 
 DISTNAME=	Math_BigInteger-1.0.3
+PKGREVISION=	1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

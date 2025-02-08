@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 15:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/08 03:44:47 taca Exp $
 
 DISTNAME=	dmarc-srg-${GITHUB_RELEASE}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liuch/}
 GITHUB_PROJECT=	dmarc-srg
