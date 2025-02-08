@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1192 2025/02/08 14:17:53 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.1193 2025/02/08 14:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gce_metadata_server to 3.93.5 [bsiegert 2025-02-08]
 	Updated devel/gprbuild to 25.0.0 [wiz 2025-02-08]
 	Updated net/mikutter to 5.1.1 [tsutsui 2025-02-08]
+	Updated graphics/vv to 3.1.0.20250208 [wiz 2025-02-08]
