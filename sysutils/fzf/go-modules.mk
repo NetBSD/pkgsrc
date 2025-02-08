@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.21 2025/01/26 07:06:59 iquiw Exp $
+# $NetBSD: go-modules.mk,v 1.22 2025/02/08 06:59:43 iquiw Exp $
 
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.9.mod
 GO_MODULE_FILES+=	github.com/charlievieth/fastwalk/@v/v1.0.9.zip
@@ -7,8 +7,8 @@ GO_MODULE_FILES+=	github.com/gdamore/encoding/@v/v1.0.1.zip
 GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.8.1.mod
 GO_MODULE_FILES+=	github.com/gdamore/tcell/v2/@v/v2.8.1.zip
 GO_MODULE_FILES+=	github.com/google/go-cmp/@v/v0.6.0.mod
-GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20240813092932-a62c48c52e97.mod
-GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20240813092932-a62c48c52e97.zip
+GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20250127100254-2aa3b3277741.mod
+GO_MODULE_FILES+=	github.com/junegunn/go-shellwords/@v/v0.0.0-20250127100254-2aa3b3277741.zip
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.2.0.mod
 GO_MODULE_FILES+=	github.com/lucasb-eyer/go-colorful/@v/v1.2.0.zip
 GO_MODULE_FILES+=	github.com/mattn/go-isatty/@v/v0.0.20.mod
