@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2025/01/10 15:50:37 taca Exp $
+# $NetBSD: Makefile,v 1.82 2025/02/08 04:00:53 taca Exp $
 
 DISTNAME=	drupal-7.103
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp.drupal.org/files/projects/
@@ -10,13 +11,9 @@ HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 LICENSE=	gnu-gpl-v2
 
-PHP_VERSIONS_ACCEPTED=	56 74 81 82
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 
-.include "../../lang/php/phpversion.mk"
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
-.if ${PKG_PHP_MAJOR_VERS} < 8
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
-.endif
+PHP_VERSIONS_ACCEPTED=	56 74 81 82
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
@@ -43,14 +40,11 @@ CONF_FILES_PERMS+=	share/examples/drupal/default.settings.php \
 			${DRUPAL}/sites/default/settings.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	scripts/drupal.sh scripts/password-hash.sh
-REPLACE_FILES.php+=	scripts/dump-database-d6.sh
-REPLACE_FILES.php+=	scripts/dump-database-d7.sh
-REPLACE_FILES.php+=	scripts/generate-d6-content.sh
-REPLACE_FILES.php+=	scripts/generate-d7-content.sh
+REPLACE_PHP+=	scripts/drupal.sh scripts/password-hash.sh
+REPLACE_PHP+=	scripts/dump-database-d6.sh
+REPLACE_PHP+=	scripts/dump-database-d7.sh
+REPLACE_PHP+=	scripts/generate-d6-content.sh
+REPLACE_PHP+=	scripts/generate-d7-content.sh
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
@@ -87,4 +81,5 @@ post-install:
 	${FIND} ${DESTDIR}${PREFIX}/${DRUPAL} \
 		\( -name '*.jpg' -o -name '*.png' \) | ${XARGS} ${CHMOD} 0644
 
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

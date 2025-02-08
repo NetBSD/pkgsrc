@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2022/10/19 14:01:06 hauke Exp $
+# $NetBSD: Makefile,v 1.53 2025/02/08 04:00:53 taca Exp $
 
 DAVICAL_VERSION=	1.1.11
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITLAB:=davical-project/}
 GITLAB_PROJECT=	davical
@@ -33,13 +34,11 @@ PAXDIRS=	htdocs inc dba po scripts
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 
-.include "../../lang/php/phpversion.mk"
-
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=${PHP_BASE_VERS}:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.56:../../devel/php-libawl
-DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=5.3.18:../../time/php-calendar
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.18:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=${PHP_BASE_VERS}:../../time/php-calendar
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
 DEPENDS+=	p5-DBI>=1.631:../../databases/p5-DBI
 DEPENDS+=	p5-DBD-postgresql>=3.5:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
@@ -65,16 +64,13 @@ CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 
 REPLACE_PERL=		dba/update-davical-database scripts/davical-cli
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	scripts/archive-old-events.php
-REPLACE_FILES.php+=	scripts/cron-sync-ldap.php
-REPLACE_FILES.php+=	scripts/export_calendar.php
-REPLACE_FILES.php+=	scripts/load_calendar.php
-REPLACE_FILES.php+=	scripts/refresh-alarms.php
-REPLACE_FILES.php+=	scripts/sync-remote-caldav.php
-REPLACE_FILES.php+=	scripts/tz-update.php
+REPLACE_PHP+=	scripts/archive-old-events.php
+REPLACE_PHP+=	scripts/cron-sync-ldap.php
+REPLACE_PHP+=	scripts/export_calendar.php
+REPLACE_PHP+=	scripts/load_calendar.php
+REPLACE_PHP+=	scripts/refresh-alarms.php
+REPLACE_PHP+=	scripts/sync-remote-caldav.php
+REPLACE_PHP+=	scripts/tz-update.php
 
 SUBST_CLASSES+=			conf-path
 SUBST_STAGE.conf-path=		pre-configure
@@ -134,7 +130,7 @@ do-install:
 	done
 
 .include "options.mk"
-
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../devel/php-libawl/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
