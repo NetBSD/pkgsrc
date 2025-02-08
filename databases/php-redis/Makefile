@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2022/02/20 13:35:28 taca Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/08 03:31:57 taca Exp $
 #
 
 MODNAME=	redis
+PKGREVISION=	1
 PECL_VERSION=	5.3.7
 PECL_LEGACY_VERSION_SCHEME=	yes
 PECL_DISTNAME=	${PECL_VERSION}
@@ -24,8 +25,6 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
 CFLAGS+=	-Wno-error=return-type
 .endif
 
+.include "../../lang/php/json.mk"
 .include "../../lang/php/ext.mk"
-.if ${PKG_PHP_MAJOR_VERS} < 8
-.include "../../textproc/php-json/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
