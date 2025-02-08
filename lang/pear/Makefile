@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2024/12/11 16:19:12 taca Exp $
+# $NetBSD: Makefile,v 1.65 2025/02/08 03:24:29 taca Exp $
 #
 
 DISTNAME=	PEAR-1.10.16
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -14,14 +15,14 @@ LICENSE=	2-clause-bsd
 
 USE_LANGUAGES=	# none
 EXTRACT_ONLY=	# none
-USE_TOOLS+=	gzcat
+USE_TOOLS+=	gzcat tar
 
 .include "../../lang/php/phpversion.mk"
 
 CONFLICTS+=	php<5.2.1nb2
 
 PKG_SYSCONFVAR=	php
-CONF_FILES=	${PREFIX}/share/examples/pear/pear.conf \
+CONF_FILES=	${PREFIX}/${PHP_EGDIR}/pear.conf \
 		${PKG_SYSCONFDIR}/pear.conf
 
 BUNDLE=		${WRKSRC}/install/go-pear-bundle
@@ -53,14 +54,12 @@ DISTFILES+=		${XMLUTIL_SRCS}
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	install/go-pear.php
-SUBST_VARS.config=	WRKSRC
-SUBST_VARS.config+=	PREFIX
+SUBST_FILES.config=	install/go-pear.php PEAR/Config.php
+SUBST_VARS.config+=	PREFIX PHP_VER PHP_LIBDIR WRKSRC
 SUBST_MESSAGE.config=	Fixing configuration files.
 
-REPLACE_SH+=		scripts/pear.sh
-
-INSTALLATION_DIRS+=	share/examples/pear
+PEAR_COMMANDS=		pear peardev pecl
+INSTALLATION_DIRS+=	${PHP_EGDIR}
 
 pre-patch:
 	${RM} ${WRKSRC}/INSTALL
@@ -76,11 +75,18 @@ do-build:
 .endfor
 	${CP} ${ARCHIVE_WRKSRC}/Archive/Tar.php ${BUNDLE}
 	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
+	cd ${WRKDIR} && tar -u -f ${BUNDLE}/${DISTNAME}.tar \
+		${DISTNAME}/PEAR/Config.php
 
 do-install:
-	${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
+	${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/php${PHP_VER} ${WRKSRC}/install/go-pear.php local
 	${INSTALL_DATA} ${WRKSRC}/pear.conf \
-		${DESTDIR}${PREFIX}/share/examples/pear/pear.conf
+		${DESTDIR}${PREFIX}/${PHP_EGDIR}/pear.conf
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && for f in ${PEAR_COMMANDS}; do \
+		${MV} -f $${f} $${f}${PHP_VER}; \
+	done
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

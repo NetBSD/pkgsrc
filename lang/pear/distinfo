@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.50 2024/12/11 16:19:12 taca Exp $
+$NetBSD: distinfo,v 1.51 2025/02/08 03:24:29 taca Exp $
 
 BLAKE2s (Archive_Tar-1.5.0.tgz) = 5002a313cbb8cbc4c614a70a05b71fa249e005a8ced26a4838a4870a92879a38
 SHA512 (Archive_Tar-1.5.0.tgz) = 2e586320ee53e05b94d0fd26185362ddd5f4bab5b8adcecc46388c6a10b98bbf187d5ce9156e2677320c319827273d537e33698c3cc27107b8d42f627c4f2880
@@ -15,3 +15,4 @@ Size (Structures_Graph-1.2.0.tgz) = 12507 bytes
 BLAKE2s (XML_Util-1.4.5.tgz) = c866e4cec481ea5ce876dfc4f5410fc389f5f2326e5fec638a51ac75eda02661
 SHA512 (XML_Util-1.4.5.tgz) = dd373c15ea8057e1a31953a10d75a4821bb9ad63d55ec5ccdbe17c114895ac9b9a57871d50f9f83bca7e3920b461417aa09063cb06051834996d4a8aebfa84c9
 Size (XML_Util-1.4.5.tgz) = 19191 bytes
+SHA1 (patch-PEAR_Config.php) = e67fe5191cf13ebd582c70944ad723bbbf676183
