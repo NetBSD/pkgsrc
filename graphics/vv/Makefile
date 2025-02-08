@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/04 11:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/08 12:28:50 wiz Exp $
 
 DISTNAME=	vv-3.1
 CATEGORIES=	graphics
@@ -16,6 +16,9 @@ USE_CXX_FEATURES+=	c++20
 GCC_REQD+=		13
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS+=	bin share/doc/vv
+
+# uses JCS_EXT_RGBA
+JPEG_ACCEPTED=		libjpeg-turbo
 
 # 'master' as of 2025/01/20
 GITHUB_SUBMODULES+=	wolfpld tracy f583d1c855bcf45d182eb16a57e84afdab7b0e67 tracy
