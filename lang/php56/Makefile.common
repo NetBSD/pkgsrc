@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2023/05/06 14:02:13 taca Exp $
+# $NetBSD: Makefile.common,v 1.4 2025/02/08 02:57:59 taca Exp $
 # used by lang/php56/Makefile.php
 # used by lang/php/ext.mk
 
@@ -9,7 +9,7 @@ PHP_VERSION_REQD=	56
 CATEGORIES+=		www
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 
-# needed due to (broken?) configure checks in php-xmlrpc and php5-dom
+# needed due to (broken?) configure checks in php-xmlrpc
 CONFIGURE_ENV+=		PHP_LIBXML_SHARED="1"
 
 .include "../../mk/compiler.mk"

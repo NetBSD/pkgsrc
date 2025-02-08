@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_standard_php__dns.h,v 1.2 2016/05/02 13:08:00 taca Exp $
+$NetBSD: patch-ext_standard_php__dns.h,v 1.3 2025/02/08 02:57:59 taca Exp $
 
-Fix memory leak.
+* Fix memory leak.
 
 --- ext/standard/php_dns.h.orig	2016-04-28 00:33:49.000000000 +0000
 +++ ext/standard/php_dns.h

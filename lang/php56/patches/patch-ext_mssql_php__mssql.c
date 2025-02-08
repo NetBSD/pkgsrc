@@ -1,4 +1,9 @@
-$NetBSD: patch-ext_mssql_php__mssql.c,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-ext_mssql_php__mssql.c,v 1.2 2025/02/08 02:57:59 taca Exp $
+
+Fix with newer freetds:
+
+* cast pointer => long => int, hoping values are ranges in int.
+* Don't pass unsigned char ** to spprintf().
 
 --- ext/mssql/php_mssql.c.orig	2014-11-12 13:52:21.000000000 +0000
 +++ ext/mssql/php_mssql.c

@@ -1,4 +1,8 @@
-$NetBSD: patch-ext_pdo_config.m4,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-ext_pdo_config.m4,v 1.2 2025/02/08 02:57:59 taca Exp $
+
+* make databases/php-pdo compiles and works as shared module on Mac OS
+  X after the package has been modified to use modules shipped with
+  PHP instead of (obsolete) PCRE versions.
 
 --- ext/pdo/config.m4.orig	2014-11-12 13:52:21.000000000 +0000
 +++ ext/pdo/config.m4
