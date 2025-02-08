@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/02/19 15:43:34 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/08 03:36:56 taca Exp $
 
 DISTNAME=		libphutil-20170609
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 # Track the stable branch
@@ -16,42 +16,38 @@ LICENSE=		apache-2.0
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		bsdtar pax
 
-SUBST_CLASSES+=		php
-SUBST_MESSAGE.php=	Fixing PHP path
-SUBST_STAGE.php=	post-configure
-SUBST_FILES.php=	scripts/build_xhpast.php
-SUBST_FILES.php+=	scripts/daemon/exec/exec_daemon.php
-SUBST_FILES.php+=	scripts/daemon/launch_daemon.php
-SUBST_FILES.php+=	scripts/daemon/torture/resist-death.php
-SUBST_FILES.php+=	scripts/example/calculator.php
-SUBST_FILES.php+=	scripts/example/subworkflow.php
-SUBST_FILES.php+=	scripts/format_log.php
-SUBST_FILES.php+=	scripts/phutil_rebuild_map.php
-SUBST_FILES.php+=	scripts/phutil_symbols.php
-SUBST_FILES.php+=	scripts/sandpit/harden_directory.php
-SUBST_FILES.php+=	scripts/test/deferred_log.php
-SUBST_FILES.php+=	scripts/test/highlight.php
-SUBST_FILES.php+=	scripts/test/http.php
-SUBST_FILES.php+=	scripts/test/interactive_editor.php
-SUBST_FILES.php+=	scripts/test/lipsum.php
-SUBST_FILES.php+=	scripts/test/mime.php
-SUBST_FILES.php+=	scripts/test/paypal.php
-SUBST_FILES.php+=	scripts/test/progress_bar.php
-SUBST_FILES.php+=	scripts/test/prompt.php
-SUBST_FILES.php+=	scripts/test/service_profiler.php
-SUBST_FILES.php+=	scripts/timezones/generate_windows_timezone_map.php
-SUBST_FILES.php+=	scripts/update_compat_info.php
-SUBST_FILES.php+=	scripts/utils/directory_fixture.php
-SUBST_FILES.php+=	scripts/utils/lock.php
-SUBST_FILES.php+=	scripts/utils/prosediff.php
-SUBST_FILES.php+=	scripts/utils/utf8.php
-SUBST_FILES.php+=	src/parser/PhutilLanguageGuesser.php
-SUBST_FILES.php+=	src/parser/__tests__/languageguesser/php.shell-env
-SUBST_FILES.php+=	support/parser/generate-type-parser.php
-SUBST_FILES.php+=	support/xhpast/generate_nodes.php
-SUBST_FILES.php+=	bin/aws-s3
-SUBST_FILES.php+=	scripts/utils/aws-s3.php
-SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
+REPLACE_PHP=	scripts/build_xhpast.php
+REPLACE_PHP+=	scripts/daemon/exec/exec_daemon.php
+REPLACE_PHP+=	scripts/daemon/launch_daemon.php
+REPLACE_PHP+=	scripts/daemon/torture/resist-death.php
+REPLACE_PHP+=	scripts/example/calculator.php
+REPLACE_PHP+=	scripts/example/subworkflow.php
+REPLACE_PHP+=	scripts/format_log.php
+REPLACE_PHP+=	scripts/phutil_rebuild_map.php
+REPLACE_PHP+=	scripts/phutil_symbols.php
+REPLACE_PHP+=	scripts/sandpit/harden_directory.php
+REPLACE_PHP+=	scripts/test/deferred_log.php
+REPLACE_PHP+=	scripts/test/highlight.php
+REPLACE_PHP+=	scripts/test/http.php
+REPLACE_PHP+=	scripts/test/interactive_editor.php
+REPLACE_PHP+=	scripts/test/lipsum.php
+REPLACE_PHP+=	scripts/test/mime.php
+REPLACE_PHP+=	scripts/test/paypal.php
+REPLACE_PHP+=	scripts/test/progress_bar.php
+REPLACE_PHP+=	scripts/test/prompt.php
+REPLACE_PHP+=	scripts/test/service_profiler.php
+REPLACE_PHP+=	scripts/timezones/generate_windows_timezone_map.php
+REPLACE_PHP+=	scripts/update_compat_info.php
+REPLACE_PHP+=	scripts/utils/directory_fixture.php
+REPLACE_PHP+=	scripts/utils/lock.php
+REPLACE_PHP+=	scripts/utils/prosediff.php
+REPLACE_PHP+=	scripts/utils/utf8.php
+REPLACE_PHP+=	src/parser/PhutilLanguageGuesser.php
+REPLACE_PHP+=	src/parser/__tests__/languageguesser/php.shell-env
+REPLACE_PHP+=	support/parser/generate-type-parser.php
+REPLACE_PHP+=	support/xhpast/generate_nodes.php
+REPLACE_PHP+=	bin/aws-s3
+REPLACE_PHP+=	scripts/utils/aws-s3.php
 
 NO_BUILD=		yes
 
