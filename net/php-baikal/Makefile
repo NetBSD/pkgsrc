@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2023/08/28 13:57:42 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/08 03:49:23 taca Exp $
 
 DISTNAME=	baikal-0.9.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,8 +14,8 @@ HOMEPAGE=	https://sabre.io/baikal/
 COMMENT=	Lightweight CalDAV+CardDAV server
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.1:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.3.1:../../databases/php-pdo_sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=${PHP_BASE_VERS}:../../databases/php-pdo_sqlite
 
 REPLACE_SH+=	vendor/twig/twig/drupal_test.sh
 REPLACE_SH+=	vendor/bin/sabredav

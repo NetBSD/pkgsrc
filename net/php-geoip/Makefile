@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2022/05/22 14:11:05 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/08 03:49:23 taca Exp $
 #
 
 MODNAME=		geoip
+PKGREVISION=		1
 PECL_VERSION=		1.1.1
 CATEGORIES=		net geography
 

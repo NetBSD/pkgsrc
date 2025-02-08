@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/02/19 15:43:35 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/08 03:49:21 taca Exp $
 
 DISTNAME=	icingaweb2-2.8.2
 PKGREVISION=	2
@@ -30,7 +30,7 @@ do-configure:
 PKG_SYSCONFSUBDIR=		icingaweb2
 EGDIR=				${PREFIX}/share/examples/icingaweb2
 SHAREDIR=			${PREFIX}/share/icingaweb2
-INCDIR=				${PREFIX}/lib/php
+INCDIR=				${PREFIX}/${PHP_LIBDIR}
 INSTALLATION_DIRS+=		${PREFIX}/bin ${EGDIR} ${SHAREDIR}
 STORAGEDIR=			${VARBASE}/db/icingaweb2
 LOGDIR=				${VARBASE}/log/icingaweb2
@@ -118,11 +118,8 @@ NONEXECFILES+=	library/vendor/HTMLPurifier/DefinitionCache/Serializer/README
 REPLACE_SH=		test/setup_vendor.sh		# !/usr/bin/bash, no bashisms (not actually installed)
 REPLACE_SH+=		test/travis_database.sh		# !/usr/bin/bash, no bashisms (not actually installed)
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php				# /usr/bin/php, /usr/bin/env php
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	packages/files/bin/icingacli	# /usr/bin/php
-REPLACE_FILES.php+=	test/check-syntax.php		# /usr/bin/env php (but not actually installed)
+REPLACE_PHP+=	packages/files/bin/icingacli	# /usr/bin/php
+REPLACE_PHP+=	test/check-syntax.php		# /usr/bin/env php (but not actually installed)
 
 # We need a lot of SUBSTs. The list of hard-coded paths was gathered along the lines of "grep -rF '/etc/' . | sed -n -e 's:^.*/etc/\([^/]*\)/.*$:\1:p' | sort | uniq" etc., plus manual inspection.
 # See below for a descrption what is NOT substituted.
@@ -221,8 +218,8 @@ SUBST_CLASSES+=			php-config
 SUBST_STAGE.php-config=		pre-configure
 SUBST_MESSAGE.php-config=	Fixing PHP config paths.
 SUBST_FILES.php-config=		doc/02-Installation.md
-SUBST_SED.php-config=		-e 's,/etc/php\.ini,${PREFIX}/etc/php.ini,g'
-SUBST_SED.php-config+=		-e 's,/etc/php\.d,${PREFIX}/etc/php.d,g'
+SUBST_SED.php-config=		-e 's,/etc/php\.ini,${PREFIX}/etc/php/${PHP_VER}/php.ini,g'
+SUBST_SED.php-config+=		-e 's,/etc/php\.d,${PREFIX}/etc/php/${PHP_VER}/php.d,g'
 
 # These could be based on a "translation" option. It's used for msgformat, msgmerge and xgettext
 SUBST_CLASSES+=			env-gettext

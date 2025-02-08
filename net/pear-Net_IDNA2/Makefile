@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/03/17 15:47:23 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 03:49:22 taca Exp $
 
 DISTNAME=	Net_IDNA2-0.2.0
+PKGREVISION=	1
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

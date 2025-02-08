@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/05/28 11:21:33 taca Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/08 03:49:22 taca Exp $
 
 DISTNAME=	Net_Socket-1.2.2
+PKGREVISION=	1
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
