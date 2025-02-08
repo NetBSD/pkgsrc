@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/01/02 21:22:19 hauke Exp $
+# $NetBSD: options.mk,v 1.4 2025/02/08 04:11:32 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.hiawatha
 PKG_SUPPORTED_OPTIONS=		cache letsencrypt monitor rproxy tomahawk
@@ -25,7 +25,7 @@ PLIST.letsencrypt=		yes
 REPLACE_PHP+=			extra/letsencrypt/lefh.in
 
 DEPENDS+=	php-[0-9]*:${PHPPKGSRCDIR}
-.include "../../lang/php/replace.mk"
+.include "../../lang/php/phpversion.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmonitor)
