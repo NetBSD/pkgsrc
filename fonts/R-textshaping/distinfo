@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/12/17 14:35:09 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/02/08 08:12:35 mef Exp $
 
-BLAKE2s (R/textshaping_0.3.6.tar.gz) = 301739928ebff95575958f0f0bd37afb2236d3cf8a5baf7583cb0dbca577a1f7
-SHA512 (R/textshaping_0.3.6.tar.gz) = 191e3c467f7a27dc7f1df3c7aa01ebc19314b72787493e2ebc5e2b5d3a76d825c4155d69a1d119a97f8076cd525fdf4453e3227feb7b8e5d049ea58b8ebf5847
-Size (R/textshaping_0.3.6.tar.gz) = 35722 bytes
+BLAKE2s (R/textshaping_1.0.0.tar.gz) = ed9cca654d9f95bc39784a6b3f582f49bdd924ef989a20377c648b58a7795ea9
+SHA512 (R/textshaping_1.0.0.tar.gz) = 1ab864aaa843f10dddd0159bd07d15848a8de958b16342e52e38ac9d8f623fe1f6cb27ef38cc1f0744735fe37eaaf70c33b8de5eefeaada0eefb604af7eac6dd
+Size (R/textshaping_1.0.0.tar.gz) = 75510 bytes
