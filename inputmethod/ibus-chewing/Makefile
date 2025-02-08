@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2024/12/27 08:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2025/02/08 12:06:01 wiz Exp $
 #
 
 GITHUB_PROJECT=	ibus-chewing
@@ -21,6 +21,8 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt pkg-config
 TOOLS_NOOP+=		msgmerge xgettext
+
+MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=	all translations
 
