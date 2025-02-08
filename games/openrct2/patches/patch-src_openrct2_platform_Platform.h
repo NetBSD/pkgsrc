@@ -1,10 +1,10 @@
-$NetBSD: patch-src_openrct2_platform_Platform.h,v 1.6 2024/09/21 06:41:34 triaxx Exp $
+$NetBSD: patch-src_openrct2_platform_Platform.h,v 1.7 2025/02/08 09:43:19 triaxx Exp $
 
 Support NetBSD.
 
 --- src/openrct2/platform/Platform.h.orig	2022-04-25 17:21:38.000000000 +0000
 +++ src/openrct2/platform/Platform.h
-@@ -82,7 +82,7 @@ namespace Platform
+@@ -86,7 +86,7 @@ namespace Platform
      std::string GetUsername();
  
      std::string GetSteamPath();
