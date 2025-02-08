@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/05/12 14:36:45 taca Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/08 03:43:10 taca Exp $
 
 DISTNAME=	jpgraph-4.4.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics www
 #MASTER_SITES=	https://jpgraph.net/download/download.php?p=57
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://jpgraph.net/
 COMMENT=	Object Oriented class library for PHP
 LICENSE=	qpl-v1.0
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.1:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 
 CONFLICTS=	php-jgraph-[0-9]*
 

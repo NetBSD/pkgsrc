@@ -1,10 +1,10 @@
-# $NetBSD: squirrelmail.mk,v 1.2 2024/09/18 14:25:50 taca Exp $
+# $NetBSD: squirrelmail.mk,v 1.3 2025/02/08 03:44:48 taca Exp $
 
 .if !defined(SQUIRRELMAIL_MK)
 SQUIRRELMAIL_MK=	# defined
 
-EGDIR=			share/examples/${PHP_PKG_PREFIX}/squirrelmail
-SMDIR=			share/${PHP_PKG_PREFIX}/squirrelmail
+EGDIR=			${PHP_EGDIR}/squirrelmail
+SMDIR=			${PHP_SHAREDIR}/squirrelmail
 DATADIR=		${VARBASE}/spool/squirrelmail
 
 MESSAGE_SUBST+=		SMDIR=${PREFIX}/${SMDIR}

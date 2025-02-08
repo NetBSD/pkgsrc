@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2021/04/24 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/08 03:44:46 taca Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 #MASTER_SITES+=	ftp://ftp.horde.org/pub/mimp/
 

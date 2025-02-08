@@ -1,4 +1,4 @@
-# $NetBSD: plugin.mk,v 1.7 2008/05/27 12:40:37 martti Exp $
+# $NetBSD: plugin.mk,v 1.8 2025/02/08 03:44:48 taca Exp $
 
 DISTNAME?=		${PLUGIN_NAME}-${PLUGIN_VERSION}
 PKGNAME=		sm-${PLUGIN_NAME}-${PLUGIN_VERSION}
@@ -9,7 +9,7 @@ WRKSRC?=		${WRKDIR}/${PLUGIN_NAME}
 NO_CONFIGURE?=		YES
 NO_BUILD?=		YES
 
-SM_PLUGINDIR=		share/squirrelmail/plugins
+SM_PLUGINDIR=		${SMDIR}/plugins
 PLUGIN_DIR=		${SM_PLUGINDIR}/${PLUGIN_NAME}
 FULL_PLUGIN_DIR=	${PREFIX}/${PLUGIN_DIR}
 

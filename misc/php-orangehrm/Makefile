@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2024/05/12 14:36:45 taca Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/08 03:46:36 taca Exp $
 #
 
 DISTNAME=	orangehrm-4.10.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=orangehrm/}
 EXTRACT_SUFX=	.zip
@@ -12,8 +13,8 @@ HOMEPAGE=	https://www.orangehrm.com/
 COMMENT=	Open source Human Resource Management (HRM) solution
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.2.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
 
 PHP_VERSIONS_ACCEPTED=	56 74
 

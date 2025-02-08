@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2019/07/03 07:28:22 nia Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/08 03:43:10 taca Exp $
 
 DISTNAME=	Image_Graph-0.8.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
