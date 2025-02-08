@@ -35,7 +35,7 @@
  * @author     Tias Guns <tias@ulyssis.org>
  */
 
-/* $NetBSD: go-pear.php,v 1.5 2021/03/07 13:14:08 taca Exp $ */
+/* $NetBSD: go-pear.php,v 1.6 2025/02/08 03:24:29 taca Exp $ */
 
 $sapi_name = php_sapi_name();
 
@@ -1106,14 +1106,12 @@ function detect_install_dirs($_prefix = null) {
         }
     } else {
         if ($_prefix === null) {
-            #$prefix    = dirname(PHP_BINDIR);
             $prefix    = "@PREFIX@";
         } else {
             $prefix = $_prefix;
         }
         $bin_dir   = '$prefix/bin';
-        #$php_dir   = '$prefix/share/pear';
-        $php_dir   = '$prefix/lib/php';
+        $php_dir   = '$prefix/@PHP_LIBDIR@';
         $doc_dir   = '$php_dir/doc';
         $data_dir  = '$php_dir/data';
         $test_dir  = '$php_dir/test';
