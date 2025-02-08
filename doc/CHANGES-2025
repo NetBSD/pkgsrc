@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1163 2025/02/07 22:08:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1164 2025/02/08 01:29:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/digikam to 8.5.0 [wiz 2025-02-07]
 	Updated textproc/py-jsbeautifier to 1.15.2 [adam 2025-02-07]
 	Updated net/py-moto to 5.0.28 [adam 2025-02-07]
+	Updated devel/ruby-jirametrics to 2.10 [schmonz 2025-02-08]
