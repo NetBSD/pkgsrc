@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.12 2024/05/12 14:42:22 taca Exp $
+# $NetBSD: common.mk,v 1.13 2025/02/08 02:56:24 taca Exp $
 # used by lang/php56/Makefile.common
 # used by lang/php74/Makefile.common
 # used by lang/php81/Makefile.common
@@ -16,9 +16,6 @@ EXTRACT_SUFX?=		.tar.xz
 .endif
 
 HOMEPAGE?=		https://www.php.net/
-
-PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
-PKG_SYSCONFVAR?=	php
 
 .include "../../lang/php/phpversion.mk"
 .endif	# PHPCOMMON_MK
