@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1167 2025/02/08 06:53:52 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1168 2025/02/08 07:00:24 iquiw Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-readline to 3.2.7 [taca 2025-02-08]
 	Updated lang/ruby32 to 3.2.7 [taca 2025-02-08]
 	Updated archivers/R-zip to 2.3.2 [mef 2025-02-08]
+	Updated sysutils/fzf to 0.59.0 [iquiw 2025-02-08]
