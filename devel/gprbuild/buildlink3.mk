@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/02/06 11:27:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/02/08 14:14:49 wiz Exp $
 
 BUILDLINK_TREE+=	gprbuild
 
@@ -24,16 +24,13 @@ TARGET_LIBDIR.gprbuild=	${PREFIX}/lib
 
 # Buildlinked libraries search path
 GPR_PROJECT_PATH?=	${BUILDLINK_DIR}/share/gpr
+CONFIGURE_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
 MAKE_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
 INSTALL_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
 
-.if defined(LD_RUN_PATH)
-LD_RUN_PATH:=	${TARGET_LIBDIR.gprbuild}:${LD_RUN_PATH}
-.else
-LD_RUN_PATH:=	${TARGET_LIBDIR.gprbuild}
-.endif
+LDFLAGS+=	${COMPILER_RPATH_FLAG}'$$$$ORIGIN'
 
-GPRBUILD_OPTIONS+=	-R -largs -Wl,-z,origin,-rpath,'$$$$ORIGIN':${LD_RUN_PATH} -gargs
+GPRBUILD_OPTIONS+=	-eL -R -largs $${LDFLAGS} -gargs
 BUILD_MAKE_FLAGS+=	GPRBUILD_OPTIONS=${GPRBUILD_OPTIONS:Q}
 
 .endif

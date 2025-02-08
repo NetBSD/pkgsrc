@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2025/02/06 11:27:49 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 14:14:49 wiz Exp $
 
-.include "version.mk"
-
-DISTNAME=	gprbuild-${GPRBUILD_VERSION}
-PKGREVISION=	3
+DISTNAME=	gprbuild-25.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AdaCore/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/AdaCore/gprbuild
-COMMENT=	GPRbuild build system for Ada
+COMMENT=	Build system for Ada
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c ada
@@ -60,7 +57,7 @@ SUBST_CLASSES+=			fixver
 SUBST_STAGE.fixver=		pre-configure
 SUBST_FILES.fixver=		deps/xmlada/configure
 SUBST_MESSAGE.fixver=		Fix version in configure
-SUBST_SED.fixver=		-e 's,18.0w,24.0w,g'
+SUBST_SED.fixver=		-e 's,18.0w,25.0w,g'
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \

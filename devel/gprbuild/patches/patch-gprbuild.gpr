@@ -1,4 +1,4 @@
-$NetBSD: patch-gprbuild.gpr,v 1.2 2025/02/06 11:27:49 wiz Exp $
+$NetBSD: patch-gprbuild.gpr,v 1.3 2025/02/08 14:14:49 wiz Exp $
 
 Remove redundant file from install list
 
