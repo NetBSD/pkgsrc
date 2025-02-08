@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2025/02/08 12:28:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 14:26:32 wiz Exp $
 
-DISTNAME=	vv-3.1
+DISTNAME=	vv-3.1.0.20250208
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+#GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	84747114964a84aa7b9f1495cfc580b98817fac2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wolfpld/vv/
@@ -17,11 +18,8 @@ GCC_REQD+=		13
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS+=	bin share/doc/vv
 
-# uses JCS_EXT_RGBA
-JPEG_ACCEPTED=		libjpeg-turbo
-
-# 'master' as of 2025/01/20
-GITHUB_SUBMODULES+=	wolfpld tracy f583d1c855bcf45d182eb16a57e84afdab7b0e67 tracy
+# 'master' as of 2025-02-08
+GITHUB_SUBMODULES+=	wolfpld tracy 9b7d53a979f0734deebb07d0135f5400af12a576 tracy
 CMAKE_CONFIGURE_ARGS+=	-DCPM_tracy_SOURCE=${WRKSRC}/tracy
 # hash from CMakeLists.txt
 GITHUB_SUBMODULES+=	nothings stb 2e2bef463a5b53ddf8bb788e25da6b8506314c08 stb
@@ -31,19 +29,21 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/vv ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/vv/
 
+.include "../../devel/cmake/build.mk"
 .include "../../converters/aklomp-base64/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
 .include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libraw/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/libsixel/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
-.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../devel/cmake/build.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
