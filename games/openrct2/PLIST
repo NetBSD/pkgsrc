@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/01/22 09:40:07 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/02/08 09:43:19 triaxx Exp $
 bin/openrct2
 bin/openrct2-cli
 lib/libopenrct2.a
@@ -422,6 +422,21 @@ share/openrct2/object/rct2/music/rct2.music.wildwest.json
 share/openrct2/object/rct2/park_entrance/rct2.park_entrance.pkemm.json
 share/openrct2/object/rct2/park_entrance/rct2.park_entrance.pkent1.json
 share/openrct2/object/rct2/park_entrance/rct2.park_entrance.pkesfh.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_astronaut.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_bandit.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_elephant.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_gorilla.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_knight.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_panda.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_pirate.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_roman.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_sheriff.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_snowman.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.entertainer_tiger.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.guest.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.handyman.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.mechanic.json
+share/openrct2/object/rct2/peep_animations/rct2.peep_animations.security.json
 share/openrct2/object/rct2/peep_names/rct2.peep_names.original.json
 share/openrct2/object/rct2/ride/rct2.ride.4x4.json
 share/openrct2/object/rct2/ride/rct2.ride.aml1.json
