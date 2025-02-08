@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2025/01/13 17:24:36 taca Exp $
+# $NetBSD: Makefile,v 1.96 2025/02/08 04:00:54 taca Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/
 
@@ -10,9 +10,9 @@ HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.3.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.3.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.3.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 
 PHP_VERSION_ACCEPTED=	81 82 83
 

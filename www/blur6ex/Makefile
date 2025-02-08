@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2024/02/19 15:43:36 taca Exp $
+# $NetBSD: Makefile,v 1.22 2025/02/08 04:00:52 taca Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.blursoft.com/
 COMMENT=	Weblog and content framework
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=${PHP_BASE_VERS}:../../databases/php-mysql
 
 PHP_VERSIONS_ACCEPTED=	56
 

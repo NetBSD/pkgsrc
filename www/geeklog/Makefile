@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2024/05/12 14:36:46 taca Exp $
+# $NetBSD: Makefile,v 1.50 2025/02/08 04:00:53 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-geeklog-${VER:C/(sr|-)/./g}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Geeklog-Core/}
 GITHUB_PROJECT=	geeklog
@@ -13,8 +14,8 @@ HOMEPAGE=	https://www.geeklog.net/
 COMMENT=	PHP/MySQL based application for managing dynamic web content
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=7.4.0:../../archivers/php-bz2
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.4.0:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 
 PHP_VERSIONS_ACCEPTED=	74 81
 
@@ -82,6 +83,8 @@ GL_EG=			share/examples/geeklog
 
 PKG_SYSCONFSUBDIR?=	geeklog
 
+REPLACE_PHP+=		emailgeeklogstories
+
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	${WRKDIR}/README
 SUBST_FILES.paths+=	${WRKDIR}/geeklog.conf
@@ -102,8 +105,8 @@ INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GL_TMPL}/images \
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_VERSION} == 74
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.4.0:../../textproc/php-json
+.if ${PHP_VER} == 74
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
 .endif
 
 .include "options.mk"
