@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.30 2022/12/03 15:53:40 adam Exp $
+$NetBSD: distinfo,v 1.31 2025/02/08 03:34:38 taca Exp $
 
 BLAKE2s (sqlrelay-1.9.3.tar.gz) = 59f17e57399d0324b09c9c2dc3affa0ee19e286abd2bb77f18019d72aa41925f
 SHA512 (sqlrelay-1.9.3.tar.gz) = ad80a7be56ed5ca6eaa2ac97986c2e64ab61ad3ec895d76a3fee2d865e856877a319e16cf996ff92072249b170f2611295d9f8777c8d10c80d6eb6ab7add97e3
 Size (sqlrelay-1.9.3.tar.gz) = 4903142 bytes
 SHA1 (patch-Makefile) = 4005ca28daec0180fe298f711b22b3d8dcf02a9a
 SHA1 (patch-config.mk.in) = 172f04e655d31705b107f0889d86c48db9e0919a
-SHA1 (patch-configure) = b00b596b6c0a8353c0aaff8503bc80e3f17febb0
+SHA1 (patch-configure) = 2fabdd5410ec9043e9f069b7bb425755abc782df
 SHA1 (patch-etc_Makefile) = 5c768f50a97489ea06ca586b131ef0324878f8d0
 SHA1 (patch-src_api_nodejs_Makefile) = 6f0e569f25fd1e78e088b8e0cd8eb541c2c5d417
 SHA1 (patch-src_api_nodejs_package__in.json) = 76e2ebc4e47d5ef38d0c96059b62460fef687d1e
