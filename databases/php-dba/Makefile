@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2020/05/31 16:44:18 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/08 03:10:21 taca Exp $
 
 MODNAME=		dba
+PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for DBM database access
 
