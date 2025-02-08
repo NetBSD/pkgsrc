@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2024/05/12 14:36:45 taca Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/08 03:41:13 taca Exp $
 #
 
 MODNAME=		memcache
+PKGREVISION=		1
 PECL_VERSION=		8.0
 PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES+=		devel

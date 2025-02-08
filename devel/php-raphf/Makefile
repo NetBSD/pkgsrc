@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2023/06/06 12:41:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/08 03:41:14 taca Exp $
 
 MODNAME=	raphf
+PKGREVISION=	1
 PECL_VERSION=	1.1.2
 CATEGORIES=	devel
 
@@ -16,14 +17,14 @@ PHP_VERSIONS_ACCEPTED=	56
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
-INSTALLATION_DIRS+=	include/php/ext/raphf
+INSTALLATION_DIRS+=	${PHP_INCDIR}/ext/raphf
 PLIST_SRC+=		PLIST
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php_raphf.h \
-		${DESTDIR}${PREFIX}/include/php/ext/raphf
+		${DESTDIR}${PREFIX}/${PHP_INCDIR}/ext/raphf
 	${INSTALL_DATA} ${WRKSRC}/src/php_raphf_api.h \
-		${DESTDIR}${PREFIX}/include/php/ext/raphf
+		${DESTDIR}${PREFIX}/${PHP_INCDIR}/ext/raphf
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

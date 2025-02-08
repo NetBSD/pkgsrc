@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:41:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/08 03:41:14 taca Exp $
 
 MODNAME=	pthreads
+PKGREVISION=	1
 PECL_VERSION=	2.0.10
 CATEGORIES+=	devel
 
@@ -21,7 +22,7 @@ USE_LIBTOOL=	yes
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/php/ext.mk"
-.if empty(PKG_BUILD_OPTIONS.php:Mmaintainer-zts)
+.if empty(PKG_BUILD_OPTIONS.${PHP_PKG_PREFIX}:Mmaintainer-zts)
 BROKEN=		"Requires the maintainer-zts option enabled in PHP."
 .endif
 .include "../../mk/bsd.pkg.mk"

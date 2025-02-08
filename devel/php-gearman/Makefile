@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2025/01/19 14:36:00 taca Exp $
+# $NetBSD: Makefile,v 1.41 2025/02/08 03:41:13 taca Exp $
 
 MODNAME=	gearman
 PECL_VERSION=	2.1.4
+PKGREVISION=	1
 DISTNAME=	gearman-${PECL_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=php/}
