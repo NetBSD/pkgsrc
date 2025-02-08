@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2021/01/03 16:06:57 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/08 03:19:18 taca Exp $
 
 MODNAME=		sodium
+PKGREVISION=		1
 CATEGORIES+=		security
 COMMENT=		PHP extension for the sodium crypto algorithms library
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2024/07/11 19:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2025/02/08 03:16:33 taca Exp $
 
 MODNAME=		gd
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
 LICENSE=		php
@@ -10,7 +10,7 @@ CONFLICTS=	php-gd-[0-9]*
 
 .include "../../lang/php/phpversion.mk"
 
-.if ${PKG_PHP_VERSION} < 74
+.if ${PHP_VER} < 74
 CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-jpeg-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-png-dir=${BUILDLINK_DIR}

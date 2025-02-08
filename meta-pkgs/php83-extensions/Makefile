@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/01/30 14:33:03 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 03:23:44 taca Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.php.net/
 COMMENT=	"meta-package" for the PHP 8.3 HTML-embedded scripting language
 
-DEPENDS+=	php>=${PHP_VERSION}<${NEXT_VERS}:${PHPPKGSRCDIR}
+DEPENDS+=	php${PHP_VER}>=${PHP_VERSION}<${NEXT_VERS}:${PHPPKGSRCDIR}
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_VERSION}<${NEXT_VERS}:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-fpm>=${PHP_VERSION}<${NEXT_VERS}:../../www/php-fpm
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2021/09/28 12:57:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/08 03:18:21 taca Exp $
 
 MODNAME=		sockets
+PKGREVISION=		1
 CATEGORIES+=		net
 COMMENT=		PHP extension for sockets support
 
