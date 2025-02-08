@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2021/03/07 12:58:28 taca Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/08 03:33:11 taca Exp $
 #
 
 MODNAME=	redis
+PKGREVISION=	1
 PKGMODNAME=	redis
 PECL_VERSION=	4.3.0
 PECL_LEGACY_VERSION_SCHEME=	yes
