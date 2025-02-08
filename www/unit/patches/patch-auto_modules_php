@@ -1,0 +1,28 @@
+$NetBSD: patch-auto_modules_php,v 1.1 2025/02/08 04:08:59 taca Exp $
+
+* Adjust libphp${PHP_VER}.
+* Require <stdio.h> for using printf(3).
+
+--- auto/modules/php.orig	2024-12-19 01:30:03.000000000 +0000
++++ auto/modules/php
+@@ -102,11 +102,7 @@ if /bin/sh -c "${NXT_PHP_CONFIG} --versi
+                          `${NXT_PHP_CONFIG} --libs`"
+ 
+     else
+-        if [ $NXT_PHP_MAJOR_VERSION -ge 8 ]; then
+-            NXT_PHP_LIB="-lphp"
+-        else
+-            NXT_PHP_LIB="-lphp${NXT_PHP_VERSION%%.*}"
+-        fi
++        NXT_PHP_LIB="-lphp${PHP_VER}"
+ 
+         if [ "$NXT_PHP_LIB_PATH" != "" ]; then
+             # "php-config --ldflags" does not contain path to libphp, but
+@@ -129,6 +125,7 @@ nxt_feature_run=value
+ nxt_feature_incs="${NXT_PHP_INCLUDE}"
+ nxt_feature_libs="${NXT_PHP_LIB} ${NXT_PHP_LDFLAGS}"
+ nxt_feature_test="
++    #include <stdio.h>
+     #include <php.h>
+ 
+     int main(void) {

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2024/02/19 15:43:36 taca Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/08 04:04:40 taca Exp $
 
 DISTNAME=	glpi-${GLPI_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 GLPI_VERSION=	10.0.12
 CATEGORIES=	www
 
@@ -14,28 +14,22 @@ HOMEPAGE=	https://glpi-project.org/
 COMMENT=	IT inventory management software
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=7.4:../../archivers/php-bz2
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=7.4:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-exif>=7.4:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=7.4:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=7.4:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-imap>=7.4:../../mail/php-imap
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=7.4:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=7.4:../../databases/php-ldap
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=7.4:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=7.4:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=7.4:../../devel/php-opcache
-DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=7.4:../../security/php-sodium
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=7.4:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=7.4:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_BASE_VERS}:../../archivers/php-bz2
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=${PHP_BASE_VERS}:../../devel/php-opcache
+DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=${PHP_BASE_VERS}:../../security/php-sodium
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 DEPENDS+=	freefont-ttf-[0-9]*:../../fonts/freefont-ttf
-
-.include "../../lang/php/phpversion.mk"
-
-.if ${PKG_PHP_VERSION} == 74
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=7.4:../../textproc/php-json
-.endif
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -80,10 +74,7 @@ SUBST_FILES.path+=	inc/downstream.php
 SUBST_FILES.path+=	config/crontab.sample
 SUBST_FILES.path+=	config/httpd-glpi.conf
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	bin/console
+REPLACE_PHP+=		bin/console
 
 OWN_DIRS_PERMS+=	${GLPI_DIR}/marketplace ${APACHE_USER} \
 				${APACHE_GROUP} 0750
@@ -109,6 +100,7 @@ do-install:
 	cd ${WRKSRC} && rm -r files
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${GLPI_DIR}
 
+.include "../../lang/php/json.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../lang/php/phpversion.mk"

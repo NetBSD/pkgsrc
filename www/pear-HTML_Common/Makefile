@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/10/28 06:30:56 asau Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/08 04:04:39 taca Exp $
 
 DISTNAME=	HTML_Common-1.2.5
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

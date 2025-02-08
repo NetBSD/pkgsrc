@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/05/12 14:36:46 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/08 04:04:40 taca Exp $
 
 DISTNAME=	dotclear-2.25.3
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://download.dotclear.org/latest/ \
@@ -13,12 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 PHP_VERSIONS_ACCEPTED=	82 81 74
 
-.include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
-.if ${PKG_PHP_MAJOR_VERS} < 8
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 NO_BUILD=	yes
@@ -94,4 +91,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/nginx.conf ${DESTDIR}${EGDIR}/nginx.conf
 	${INSTALL_DATA} ${WRKSRC}/php-fpm.conf ${DESTDIR}${EGDIR}/php-fpm.conf
 
+.include "../../lang/php/json.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2023/06/06 12:42:48 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/08 04:07:18 taca Exp $
 #
 
 MODNAME=		phalcon
+PKGREVISION=		1
 PECL_VERSION=		3.4.5
 PKGNAME=		${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
@@ -19,18 +20,18 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
 
 TOOL_DEPENDS+=		re2c>=0.15.3:../../devel/re2c
-DEPENDS+=		${PHP_PKG_PREFIX}-curl>=5.6.0:../../www/php-curl
-DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
-DEPENDS+=		${PHP_PKG_PREFIX}-json>=5.6.0:../../textproc/php-json
-DEPENDS+=		${PHP_PKG_PREFIX}-mbstring>=5.6.0:../../converters/php-mbstring
-DEPENDS+=		${PHP_PKG_PREFIX}-pdo>=5.6.0:../../databases/php-pdo
-DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql>=5.6.0:../../databases/php-pdo_mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+DEPENDS+=		${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+DEPENDS+=		${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=		${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
 
 PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../lang/php/phpversion.mk"
 
-PHPSETUPSUBDIR=		build/php${PKG_PHP_MAJOR_VERS}/${"${MACHINE_ARCH:Mx86_64}":?64:32}bits
+PHPSETUPSUBDIR=		build/php${PHP_MAJOR_VERS}/${"${MACHINE_ARCH:Mx86_64}":?64:32}bits
 MODULESDIR=		${WRKSRC}/${PHPSETUPSUBDIR}/modules
 CONFIGURE_DIRS+=	${PHPSETUPSUBDIR}
 

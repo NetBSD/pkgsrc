@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2023/05/15 22:24:38 osa Exp $
+# $NetBSD: Makefile.common,v 1.6 2025/02/08 04:08:59 taca Exp $
 #
 # used by devel/libunit/Makefile
 # used by www/unit/Makefile
@@ -61,5 +61,3 @@ INSTALLATION_DIRS+=	sbin ${UNIT_EXTENSION_DIR}
 MAKE_DIRS+=		${UNIT_PIDDIR} ${UNIT_DATADIR} ${UNIT_RUNDIR}
 OWN_DIRS=		${UNIT_LOGDIR} ${UNIT_RUNDIR}
 OWN_DIRS_PERMS+=	${UNIT_DATADIR} ${UNIT_USER} ${UNIT_GROUP} 0700
-
-USE_LANGUAGES=	c

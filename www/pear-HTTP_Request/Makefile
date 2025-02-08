@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/28 06:30:57 asau Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/08 04:04:39 taca Exp $
 
 DISTNAME=	HTTP_Request-1.4.4
-#CATEGORIES+=	www
+PKGREVISION=	1
+CATEGORIES+=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	PHP classes to provides an easy way to perform HTTP requests
