@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pdo,v 1.5 2017/12/09 02:25:35 taca Exp $
-include/php/ext/pdo/php_pdo.h
-include/php/ext/pdo/php_pdo_driver.h
-include/php/ext/pdo/php_pdo_error.h
+@comment $NetBSD: PLIST.pdo,v 1.6 2025/02/08 03:10:22 taca Exp $
+${PHP_INCDIR}/ext/pdo/php_pdo.h
+${PHP_INCDIR}/ext/pdo/php_pdo_driver.h
+${PHP_INCDIR}/ext/pdo/php_pdo_error.h

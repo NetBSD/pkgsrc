@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2019/11/02 15:38:07 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/08 03:10:22 taca Exp $
 
 MODNAME=		oci8
+PKGREVISION=		1
 CATEGORIES+=		databases
 COMMENT=		PHP extension for Oracle 8 (and above) databases
 
