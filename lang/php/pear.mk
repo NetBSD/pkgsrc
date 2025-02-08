@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.34 2023/12/23 09:58:52 zafer Exp $
+# $NetBSD: pear.mk,v 1.35 2025/02/08 02:56:24 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -41,8 +41,8 @@ HOMEPAGE?=	https://pear.php.net/package/${DISTNAME:C/-.*//}
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-[0-9]*:../../lang/pear
 
-PEAR_CMD=	${PREFIX}/bin/pear
-PEAR_LIB=	lib/php
+PEAR_CMD=	${PREFIX}/bin/pear${PHP_VER}
+PEAR_LIB=	${PHP_LIBDIR}
 PEAR_DESTDIR=	-P ${DESTDIR} -f
 
 NO_BUILD=	yes
@@ -54,18 +54,21 @@ PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
 	${SETENV} PEAR_LIB=${PEAR_LIB:Q} WRKSRC=${WRKSRC:Q} TZ=UTC \
 	${INSTALL_ENV} PREFIX=${PREFIX:Q} \
-	${PREFIX}/bin/php -d include_path=".:${PREFIX}/lib/php" \
+	${PREFIX}/bin/php${PHP_VER} \
+		-d include_path=".:${PREFIX}/${PEAR_LIB}" \
 		-d log_errors=On -d display_errors=Off \
 		-C -n ${PKGDIR}/../../lang/php/pear_plist.php; \
-	${RM} -f ${PEAR_FILES_SKIP:S/^/${DESTDIR}&/};
+	${RM} -f ${PEAR_FILES_SKIP:S/^/${DESTDIR}${PREFIX}\/${PEAR_LIB}\//};
+
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
 
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/\.alias/.*\.txt
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.channels/.*\.reg
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.depdb
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.depdblock
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.filemap
-PEAR_FILES_SKIP+=	${PREFIX}/lib/php/\.lock
+PEAR_FILES_SKIP+=	.channels/.alias/*.txt
+PEAR_FILES_SKIP+=	.channels/*.reg
+PEAR_FILES_SKIP+=	.depdb
+PEAR_FILES_SKIP+=	.depdblock
+PEAR_FILES_SKIP+=	.filemap
+PEAR_FILES_SKIP+=	.lock
+
 CHECK_FILES_SKIP+=	${PEAR_FILES_SKIP}
 
 post-extract:
@@ -74,7 +77,7 @@ post-extract:
 do-install:
 	cd ${WRKSRC} && ${SETENV} TZ=UTC \
 		${PEAR_CMD} "install" ${PEAR_DESTDIR} -n -O package.xml || exit 1
-	${RM} -f ${PEAR_FILES_SKIP:S/^/${DESTDIR}&/}
+	${RM} -f ${PEAR_FILES_SKIP:S/^/${DESTDIR}${PREFIX}\/${PEAR_LIB}\//}
 
 .else	# PEAR_PACKAGE_XML == no
 

@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.452 2025/01/19 13:57:17 taca Exp $
+# $NetBSD: phpversion.mk,v 1.453 2025/02/08 02:56:24 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -36,49 +36,70 @@
 #	Possible: 56 74 81 82 83
 #	Default: (empty)
 #
-# PHP_CHECK_INSTALLED
-#	Check installed version of PHP.  Should be only used by
-#	lang/php56, lang/php74, lang/php81, lang/php82 and lang/php83.
-#
-#	Possible: Yes No
-#	Default: Yes
+# PHP_MINIMUM_TEENY
+#	Minimum teeny version for a pacakge.
 #
 # === Variables defined by this file ===
 #
-# PKG_PHP_VERSION
+# PHP_VER
 #	The selected PHP version.
 #
 #	Possible: 56 74 81 82 83
 #	Default: ${PHP_VERSION_DEFAULT}
 #
-# PHP_BASE_VERS
-#	The selected PHP's full version depends on PKG_PHP_VERSION
+# PHP_VERSION
+#	The selected PHP's full version.
 #
-# PKG_PHP_MAJOR_VERS
+# PHP_BASE_VERS
+#	Minimum version PHP's full version with selected PHP
+#	and PHP_MINIMUM_TEENY.
+#
+# PHP_MAJOR_VERS
 #	The selected PHP's major version.
 #
 #	Possible: 5 7 8
 #	Default: 8
 #
-# PKG_PHP
-#	The same as ${PKG_PHP_VERSION}, prefixed with "php-".
+# PHP_MINOR_VERS
+#	The selected PHP's minor version.
 #
 # PHPPKGSRCDIR
 #	The directory of the PHP implementation, relative to the
 #	package directory.
 #
-#	Example: ../../lang/php81
+#	Example: ../../lang/php82
 #
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
 #	Example: php56 php74 php81 php82 php83
 #
+# PHP_INCDIR
+#	PHP include directory path relative to ${PREFIX}.
+#
+#	Example: include/php/8.2
+#
+# PHP_LIBDIR
+#	PHP library directory path relative to ${PREFIX}.
+#
+#	Example: lib/php/8.2
+#
+# PHP_EGDIR
+#	PHP example directory path relative to ${PREFIX}.
+#
+#	Example: share/example/php/8.2
+#
+# PHP_SHAREDIR
+#	PHP share directory path relative to ${PREFIX}.
+#
+#	Example: share/share/php/8.2
+#
+#
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
-#	initial release of major version.
+#	MACHINE_GNU_ARCH.
 #
-#	Example: lib/php/20181200
+#	Example: lib/php/8.3/x86_64
 #
 # Keywords: php
 #
@@ -93,18 +114,10 @@ PHP81_VERSION=	8.1.31
 PHP82_VERSION=	8.2.27
 PHP83_VERSION=	8.3.16
 
-# Define API version or initial release of major version.
-PHP56_RELDATE=	20140828
-PHP74_RELDATE=	20191128
-PHP81_RELDATE=	20211125
-PHP82_RELDATE=	20220829
-PHP83_RELDATE=	20231123
-
 _VARGROUPS+=	php
 _USER_VARS.php=	PHP_VERSION_DEFAULT
 _PKG_VARS.php=	PHP_VERSIONS_ACCEPTED PHP_VERSION_REQD
-_SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
-		PKG_PHP_MAJOR_VERS
+_SYS_VARS.php=	PHP_VERSION_PHP PHPPKGSRCDIR PHP_PKG_PREFIX PHP_VER PHP_MAJOR_VERS
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -121,45 +134,15 @@ _PHP_VERSIONS_ACCEPTED+=	${pv}
 _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
-# check what is installed
-.if exists(${LOCALBASE}/lib/php/${PHP83_RELDATE})
-_PHP_VERSION_83_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/${PHP82_RELDATE})
-_PHP_VERSION_82_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/${PHP81_RELDATE})
-_PHP_VERSION_81_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/${PHP74_RELDATE})
-_PHP_VERSION_74_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.elif exists(${LOCALBASE}/lib/php/${PHP56_RELDATE})
-_PHP_VERSION_56_INSTALLED=	yes
-_PHP_INSTALLED=			yes
-.endif
-
 # if a version is explicitly required, take it
 .if defined(PHP_VERSION_REQD)
 _PHP_VERSION=	${PHP_VERSION_REQD}
 .endif
-# if the default is already installed, it is first choice
-.if !defined(_PHP_VERSION)
-.if defined(_PHP_VERSION_${PHP_VERSION_DEFAULT}_OK)
-.if defined(_PHP_VERSION_${PHP_VERSION_DEFAULT}_INSTALLED)
-_PHP_VERSION=	${PHP_VERSION_DEFAULT}
-.endif
-.endif
-.endif
 # prefer an already installed version, in order of "accepted"
 .if !defined(_PHP_VERSION)
 .for pv in ${_PHP_VERSIONS_ACCEPTED}
-.if defined(_PHP_VERSION_${pv}_INSTALLED)
-_PHP_VERSION?=	${pv}
-.else
 # keep information as last resort - see below
 _PHP_VERSION_FIRSTACCEPTED?=	${pv}
-.endif
 .endfor
 .endif
 # if the default is OK for the add-on pkg, take this
@@ -177,73 +160,100 @@ _PHP_VERSION=	${_PHP_VERSION_FIRSTACCEPTED}
 # Variable assignment for multi-PHP packages
 MULTI+=	PHP_VERSION_REQD=${_PHP_VERSION}
 
-# export some of the internal variables
-PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
-PKG_PHP:=		PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
-
-# Major version
-PKG_PHP_MAJOR_VERS:=	${_PHP_VERSION:C/^([0-9]).*/\1/}
-
-PHP_CHECK_INSTALLED?=	Yes
-
-# if installed PHP isn't compatible with required PHP, bail out
-.if empty(PHP_CHECK_INSTALLED:M[nN][oO])
-.if defined(_PHP_INSTALLED) && !defined(_PHP_VERSION_${_PHP_VERSION}_INSTALLED)
-PKG_FAIL_REASON+=	"Package accepts ${PKG_PHP}, but a different version is installed"
-.endif
-.endif
-
-MESSAGE_SUBST+=		PKG_PHP_VERSION=${PKG_PHP_VERSION} \
-			PKG_PHP=${PKG_PHP}
-PLIST_SUBST+=		PHP_PKG_PREFIX=${PHP_PKG_PREFIX} \
-			PKG_PHP_VERSION=${PKG_PHP_VERSION} \
-			PKG_PHP_MAJOR_VERS=${PKG_PHP_MAJOR_VERS} \
-			PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
-
-# force the selected PHP version for recursive builds
-PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
-
 #
 # set variables for the version we decided to use:
 #
 .if ${_PHP_VERSION} == 56
 PHP_VERSION=		${PHP56_VERSION}
-PHP_INITIAL_TEENY=	3
-PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
+PHP_MINIMUM_TEENY=	3
 .elif ${_PHP_VERSION} == 74
 PHP_VERSION=		${PHP74_VERSION}
-PHP_EXTENSION_DIR=	lib/php/${PHP74_RELDATE}
 .elif ${_PHP_VERSION} == 81
 PHP_VERSION=		${PHP81_VERSION}
-PHP_EXTENSION_DIR=	lib/php/${PHP81_RELDATE}
 .elif ${_PHP_VERSION} == 82
 PHP_VERSION=		${PHP82_VERSION}
-PHP_EXTENSION_DIR=	lib/php/${PHP82_RELDATE}
 .elif ${_PHP_VERSION} == 83
 PHP_VERSION=		${PHP83_VERSION}
-PHP_EXTENSION_DIR=	lib/php/${PHP83_RELDATE}
 .else
 # force an error
-PKG_FAIL_REASON+=	"${PKG_PHP} is not a valid package"
+PKG_FAIL_REASON+=	"${_PHP_VERSION} is not a valid package"
 .endif
 
-PHP_INITIAL_TEENY?=	0
-PHPPKGSRCDIR=		../../lang/php${PKG_PHP_VERSION}
-PHP_PKG_PREFIX=		php${PKG_PHP_VERSION}
+# PHP minimum teeny version for a package.
+PHP_MINIMUM_TEENY?=	0
 
-_PHP_VER_MAJOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
-_PHP_VER_MINOR=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
+# PHP major version
+PHP_MAJOR_VERS=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 
-PHP_BASE_VERS=	${_PHP_VER_MAJOR}.${_PHP_VER_MINOR}.${PHP_INITIAL_TEENY}
+# PHP minor version
+PHP_MINOR_VERS=		${PHP_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
 
+# export some of the internal variables
+PHP_VER:=		${PHP_MAJOR_VERS}${PHP_MINOR_VERS}
+
+# PHP minimum version
+PHP_BASE_VERS?=	${PHP_MAJOR_VERS}.${PHP_MINOR_VERS}.${PHP_MINIMUM_TEENY}
+
+# PHP API version; initial 
+PHP_API_VERS?=	${PHP_MAJOR_VERS}.${PHP_MINOR_VERS}
+
+PHPPKGSRCDIR=		../../lang/php${PHP_VER}
+
+PHP_PKG_PREFIX=		php${PHP_VER}
+PHP_NAME=		php${PHP_VER}
+
+PHPIZE?=		${PREFIX}/bin/phpize${PHP_VER}
+PHP_CONFIG?=		${PREFIX}/bin/php-config${PHP_VER}
+
+# force the selected PHP version for recursive builds
+PHP_VERSION_REQD:=	${PHP_VER}
+
+PHP_INCDIR=		include/php/${PHP_API_VERS}
+PHP_LIBDIR=		lib/php/${PHP_API_VERS}
+PHP_EGDIR=		share/examples/php/${PHP_API_VERS}
+PHP_SHAREDIR=		share/php/${PHP_API_VERS}
+
+PHP_EXTENSION_DIR=	${PHP_LIBDIR}/${MACHINE_GNU_ARCH}
+
+PKG_SYSCONFSUBDIR?=	php/${PHP_API_VERS}
+
+MAKE_ENV+=		PHP_VERSION_REQD="${PHP_VER}" \
+			PHP_VER="${PHP_VER}" PHP_API_VERS="${PHP_API_VERS}" \
+			PHP_INCDIR="${PHP_INCDIR}" \
+			PHP_LIBDIR="${PHP_LIBDIR}" PHP_EGDIR="${PHP_EGDIR}" \
+			PHP_SHAREDIR="${PHP_SHAREDIR}" \
+			PHP_EXTENSION_DIR="${PHP_EXTENSION_DIR}"
+MAKEFLAGS+=		PHP_VERSION_REQD="${PHP_VER}"
+FILES_SUBST+=		PHP_VER="${PHP_VER}" PHP_API_VERS="${PHP_API_VERS}" \
+			PHP_INCDIR="${PHP_INCDIR}" \
+			PHP_LIBDIR="${PHP_LIBDIR}" PHP_EGDIR="${PHP_EGDIR}" \
+			PHP_SHAREDIR="${PHP_SHAREDIR}" \
+			PHP_EXTENSION_DIR="${PHP_EXTENSION_DIR}"
+MESSAGE_SUBST+=		PHP_VER=${PHP_VER} PHP_API_VERS="${PHP_API_VERS}" \
+			PHP_INCDIR="${PHP_INCDIR}" \
+			PHP_LIBDIR="${PHP_LIBDIR}" PHP_EGDIR="${PHP_EGDIR}" \
+			PHP_SHAREDIR="${PHP_SHAREDIR}" \
+			PHP_EXTENSION_DIR="${PHP_EXTENSION_DIR}"
+PLIST_SUBST+=		PHP_PKG_PREFIX="${PHP_PKG_PREFIX}" \
+			PHP_VER="${PHP_VER}" \
+			PHP_MAJOR_VERS="${PHP_MAJOR_VERS}" \
+			PHP_INCDIR="${PHP_INCDIR}" \
+			PHP_LIBDIR="${PHP_LIBDIR}" PHP_EGDIR="${PHP_EGDIR}" \
+			PHP_SHAREDIR="${PHP_SHAREDIR}" \
+			PHP_EXTENSION_DIR="${PHP_EXTENSION_DIR}"
+
+# fix shebang line.
 #
-# check installed version against required:
+# REPLACE_PHP		replace shebang line of specified files.
 #
-.if !empty(PHP_CHECK_INSTALLED:M[nN][oO])
-.if defined(_PHP_VERSION_INSTALLED) && ${_PHP_VERSION} != ${_PHP_VERSION_INSTALLED}
-PKG_FAIL_REASON+=	"${PKGBASE} requires ${PKG_PHP}, but php-${_PHP_VERSION_INSTALLED} is already installed."
-.endif
-.endif
+.if defined(REPLACE_PHP)
+REPLACE_INTERPRETER+=	${PHP_NAME}
+
+REPLACE.${PHP_NAME}.old=	.*php
+REPLACE.${PHP_NAME}.new=	${PREFIX}/bin/php${PHP_VER}
+REPLACE_FILES.${PHP_NAME}=	${REPLACE_PHP}
+
+.endif # defined(REPLACE_PHP)
 
 MAKEFLAGS+=	PHP_VERSION_REQD=${PHP_VERSION_REQD}
 
