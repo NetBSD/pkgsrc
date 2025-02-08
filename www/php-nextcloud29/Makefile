@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/24 15:27:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/08 04:04:41 taca Exp $
 #
 
 # The nextcloud update process only works from one version to the
@@ -12,6 +12,7 @@
 # update to 20.
 DISTNAME=	nextcloud-29.0.8
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,18 +22,18 @@ HOMEPAGE=	https://nextcloud.com/
 COMMENT=	File sharing web service server, 29 release branch
 LICENSE=	gnu-agpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.0.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=8.0.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.0.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=8.0.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.0.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=8.0.0:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-posix>=8.0.0:../../devel/php-posix
-DEPENDS+=	${PHP_PKG_PREFIX}-curl>=8.0.0:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.0.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=8.0.0:../../security/php-sodium
-DEPENDS+=	${PHP_PKG_PREFIX}-exif>=8.0.0:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=8.0.0:../../devel/php-sysvsem
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}:../../devel/php-posix
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-sodium>=${PHP_BASE_VERS}:../../security/php-sodium
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=${PHP_BASE_VERS}:../../devel/php-sysvsem
 
 .include "options.mk"
 

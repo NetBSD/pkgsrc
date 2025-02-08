@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/05 12:50:49 wen Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/08 04:07:19 taca Exp $
 
 DISTNAME=	typo3_src-${VER}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
@@ -10,12 +10,12 @@ HOMEPAGE=	https://typo3.com/
 COMMENT=	The TYPO3 content management system, 13 LTS release
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=8.2.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=8.2.0:../../archivers/php-zlib
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=8.2.0:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=8.2.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=8.2.0:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-exif>=8.2.0:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=${PHP_BASE_VERS}:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
 
 PHP_VERSIONS_ACCEPTED=	82 83 # 84
 
@@ -58,7 +58,6 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}
 
 
-.include "../../lang/php/replace.mk"
-.include "../../lang/php/json.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

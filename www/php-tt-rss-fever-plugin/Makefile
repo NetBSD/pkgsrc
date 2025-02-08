@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/10/09 08:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 04:07:19 taca Exp $
 
 DISTNAME=	fever-1.2
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${DISTNAME:S/-/-plugin-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dasmurphy/}
 EXTRACT_SUFX=	.zip

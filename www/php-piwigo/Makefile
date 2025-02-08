@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/12/20 14:35:01 manu Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/08 04:07:18 taca Exp $
 #
 
 PWVER=		15.1.0
+PKGREVISION=	1
 DISTNAME=	piwigo-${PWVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
@@ -13,9 +14,9 @@ HOMEPAGE=	https://piwigo.org/
 COMMENT=	Piwigo is photo gallery software for the web
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-exif>=5.2.0:../../graphics/php-exif
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_BASE_VERS}:../../graphics/php-exif
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 
 WRKSRC=		${WRKDIR}/piwigo
 USE_LANGUAGES=	# none

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2023/11/04 15:25:50 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/08 04:04:39 taca Exp $
 #
 
 DISTNAME=	HTTP_Request2-2.6.0
+PKGREVISION=	1
 CATEGORIES+=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

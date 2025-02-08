@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/12/29 06:05:19 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/08 04:07:18 taca Exp $
 #
 
 DISTNAME=	tiki-6.8
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/tiki-/tiki6-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tikiwiki/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,10 +13,10 @@ HOMEPAGE=	http://info.tiki.org/
 COMMENT=	Tiki Wiki CMS Groupware web-based application
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.2.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=5.2.0:../../net/php-xmlrpc
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-xmlrpc>=${PHP_BASE_VERS}:../../net/php-xmlrpc
 DEPENDS+=	${PHP_PKG_PREFIX}-pear>=1.9.4:../../lang/pear
 
 USE_LANGUAGES=	# none

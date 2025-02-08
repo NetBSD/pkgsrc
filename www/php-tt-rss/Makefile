@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2021/03/07 13:21:58 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/08 04:07:19 taca Exp $
 
 TTRVER=		1.12
 DISTNAME=	Tiny-Tiny-RSS-${TTRVER}
 PKGNAME=	${PHP_PKG_PREFIX}-tt-rss-${TTRVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	-http://github.com/gothfox/Tiny-Tiny-RSS/archive/${TTRVER}.tar.gz
 
@@ -12,8 +12,8 @@ HOMEPAGE=	https://tt-rss.org/
 COMMENT=	Tiny Tiny RSS is an open source web-based RSS feed reader
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
 
 .include "options.mk"
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/01/19 13:50:09 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/08 04:04:40 taca Exp $
 #
 
 DISTNAME=	${CM_NAME}.phar
 PKGNAME=	${PHP_PKG_PREFIX}-${CM_NAME}-${CM_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.contao.org/contao-manager/stable/
 DIST_SUBDIR=	${CM_NAME}/${CM_VERSION}

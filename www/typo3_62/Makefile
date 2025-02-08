@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2019/12/15 18:25:22 taca Exp $
+# $NetBSD: Makefile,v 1.26 2025/02/08 04:07:19 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 
@@ -12,13 +13,14 @@ COMMENT=	The TYPO3 content management system, 6.2 LTS release
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysqli,pgsql}>=5.1.0:../../databases/php-mysqli
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.7:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.3.7:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.7:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.7:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.7:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 PHP_VERSIONS_ACCEPTED=	56
+PHP_MINIMUM_TEENY=	7
 
 VER=		6.2.31
 NO_BUILD=	yes
@@ -27,15 +29,10 @@ USE_TOOLS+=	bash:run pax
 TYPO3NAME=	typo3_src-${VER}
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-# maybe resides in lang/php/phpversion.mk
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
-
 REPLACE_BASH=	typo3/sysext/core/Build/Scripts/xlfcheck.sh \
 	typo3/sysext/core/Build/Scripts/splitFunctionalTests.sh \
 	typo3/sysext/core/Build/Scripts/update-static-composer.sh
+REPLACE_PHP+=	typo3/cli_dispatch.phpsh
 
 OWN_DIRS_PERMS+=	${TYPO3DIR}/${SITEDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0770
 
