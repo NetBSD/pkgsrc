@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1185 2025/02/08 10:53:37 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.1186 2025/02/08 12:23:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1573,3 +1573,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/R-sourcetools to 0.1.7.1 [mef 2025-02-08]
 	Updated games/vms-empire to 1.18 [triaxx 2025-02-08]
 	Updated games/openrct2 to 0.4.19.1 [triaxx 2025-02-08]
+	Updated games/simgear to 2020.3.11nb50 [wiz 2025-02-08]
