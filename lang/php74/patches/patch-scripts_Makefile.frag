@@ -1,0 +1,17 @@
+$NetBSD: patch-scripts_Makefile.frag,v 1.1 2025/02/08 02:58:55 taca Exp $
+
+* Adjust PHP directories.
+
+--- scripts/Makefile.frag.orig	2022-10-31 10:36:05.000000000 +0000
++++ scripts/Makefile.frag
+@@ -2,8 +2,8 @@
+ # Build environment install
+ #
+ 
+-phpincludedir = $(includedir)/php
+-phpbuilddir = $(libdir)/build
++phpincludedir = $(includedir)/php/$(PHP_API_VERS)
++phpbuilddir = $(prefix)/$(PHP_LIBDIR)/build
+ 
+ BUILD_FILES = \
+ 	scripts/phpize.m4 \

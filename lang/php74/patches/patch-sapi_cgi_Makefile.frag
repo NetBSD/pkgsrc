@@ -1,6 +1,6 @@
-$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.1 2019/12/15 17:56:34 taca Exp $
+$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.2 2025/02/08 02:58:55 taca Exp $
 
-Install to CGI directory.
+* Install php-cgi to ${PREFIX}/${CGIDIR}.
 
 --- sapi/cgi/Makefile.frag.orig	2015-06-23 17:33:33.000000000 +0000
 +++ sapi/cgi/Makefile.frag
