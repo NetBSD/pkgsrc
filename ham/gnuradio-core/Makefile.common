@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2025/01/30 15:41:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.55 2025/02/08 13:33:43 wiz Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -36,7 +36,7 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnuradio.org/
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++20
 
 USE_TOOLS=	gmake perl pkg-config
