@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/10/04 19:11:21 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/08 23:47:00 rillig Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -19,7 +19,7 @@ COMMENT=	Apache Project's Java-based make(1) replacement
 DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
 
 # Up to version 1.5.1 inclusive this was known as "jakarta-ant".
-CONFLICTS=	jakarta-ant*
+CONFLICTS=	jakarta-ant*-[0-9]*
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_JAVA=	run
