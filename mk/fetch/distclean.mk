@@ -1,10 +1,11 @@
-# $NetBSD: distclean.mk,v 1.5 2007/12/16 02:51:24 obache Exp $
+# $NetBSD: distclean.mk,v 1.6 2025/02/08 23:48:39 rillig Exp $
 #
 # === make targets for pkgsrc users ===
 #
 # distclean:
 #	Removes the distfiles of the current package.
 #
+# Keywords: distfiles
 
 .PHONY: pre-distclean
 .if !target(pre-distclean)
