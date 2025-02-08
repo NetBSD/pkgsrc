@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_standard_basic__functions.c,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-ext_standard_basic__functions.c,v 1.2 2025/02/08 02:57:59 taca Exp $
 
-Work around VAX FP lack of INF
+* Work around VAX FP lack of INF
 
 --- ext/standard/basic_functions.c.orig	2014-11-12 13:52:21.000000000 +0000
 +++ ext/standard/basic_functions.c

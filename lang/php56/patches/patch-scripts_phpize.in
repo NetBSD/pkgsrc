@@ -1,0 +1,17 @@
+$NetBSD: patch-scripts_phpize.in,v 1.1 2025/02/08 02:58:00 taca Exp $
+
+* Adjust PHP directories.
+
+--- scripts/phpize.in.orig	2019-01-09 09:54:13.000000000 +0000
++++ scripts/phpize.in
+@@ -4,8 +4,8 @@
+ prefix='@prefix@'
+ datarootdir='@datarootdir@'
+ exec_prefix="`eval echo @exec_prefix@`"
+-phpdir="`eval echo @libdir@`/build"
+-includedir="`eval echo @includedir@`/php"
++phpdir="@prefix@/@PHP_LIBDIR@/build"
++includedir="@prefix@/@PHP_INCDIR@"
+ builddir="`pwd`"
+ SED="@SED@"
+ 

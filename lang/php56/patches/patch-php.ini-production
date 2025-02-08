@@ -1,4 +1,6 @@
-$NetBSD: patch-php.ini-production,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-php.ini-production,v 1.2 2025/02/08 02:57:59 taca Exp $
+
+Set proper default configuration values.
 
 --- php.ini-production.orig	2014-11-12 13:52:21.000000000 +0000
 +++ php.ini-production
@@ -7,7 +9,7 @@ $NetBSD: patch-php.ini-production,v 1.1 2014/11/24 15:37:08 taca Exp $
  
  ; UNIX: "/path1:/path2"
 -;include_path = ".:/php/includes"
-+include_path = ".:@PREFIX@/lib/php"
++include_path = ".:@PREFIX@/@PHP_LIBDIR@"
  ;
  ; Windows: "\path1;\path2"
  ;include_path = ".;c:\php\includes"

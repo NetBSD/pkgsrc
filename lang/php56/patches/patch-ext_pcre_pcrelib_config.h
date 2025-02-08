@@ -1,4 +1,9 @@
-$NetBSD: patch-ext_pcre_pcrelib_config.h,v 1.1 2016/02/17 01:17:16 jklos Exp $
+$NetBSD: patch-ext_pcre_pcrelib_config.h,v 1.2 2025/02/08 02:57:59 taca Exp $
+
+* selectively enable just-in-time support in PCRE for supported
+  architectures.
+
+    https://mail-index.netbsd.org/pkgsrc-bugs/2015/09/13/msg057792.html
 
 --- ext/pcre/pcrelib/config.h.orig	2016-02-03 08:38:08.000000000 +0000
 +++ ext/pcre/pcrelib/config.h

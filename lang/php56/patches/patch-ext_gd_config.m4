@@ -1,4 +1,7 @@
-$NetBSD: patch-ext_gd_config.m4,v 1.2 2016/08/13 17:34:41 taca Exp $
+$NetBSD: patch-ext_gd_config.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
+
+* Make sure to use external gd (graphics/gd package).
+* Use the same PKG_OPTIONS as graphics/gd.
 
 --- ext/gd/config.m4.orig	2016-07-21 00:23:03.000000000 +0000
 +++ ext/gd/config.m4

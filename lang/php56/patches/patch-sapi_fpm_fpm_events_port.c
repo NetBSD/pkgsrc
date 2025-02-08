@@ -1,7 +1,8 @@
-$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-sapi_fpm_fpm_events_port.c,v 1.2 2025/02/08 02:57:59 taca Exp $
 
 Fix code to make FPM intercept signals properly even with pipes (via catch_workers_output=yes).
 See https://bugs.php.net/bug.php?id=65800.
+
 --- sapi/fpm/fpm/events/port.c.orig	2014-11-12 13:52:21.000000000 +0000
 +++ sapi/fpm/fpm/events/port.c
 @@ -124,6 +124,7 @@ static int fpm_event_port_wait(struct fp

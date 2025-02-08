@@ -1,4 +1,6 @@
-$NetBSD: patch-ext_intl_timezone_timezone__methods.cpp,v 1.1 2020/11/16 12:10:05 ryoon Exp $
+$NetBSD: patch-ext_intl_timezone_timezone__methods.cpp,v 1.2 2025/02/08 02:57:59 taca Exp $
+
+* Fix build with textproc/icu-68.1.
 
 --- ext/intl/timezone/timezone_methods.cpp.orig	2019-01-09 09:54:13.000000000 +0000
 +++ ext/intl/timezone/timezone_methods.cpp

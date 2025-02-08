@@ -1,7 +1,20 @@
-$NetBSD: patch-ext_pdo__mysql_config.m4,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-ext_pdo__mysql_config.m4,v 1.2 2025/02/08 02:57:59 taca Exp $
 
---- ext/pdo_mysql/config.m4.orig	2014-11-12 13:52:21.000000000 +0000
+* Do not append empty -I arguments.
+
+--- ext/pdo_mysql/config.m4.orig	2019-01-09 09:54:13.000000000 +0000
 +++ ext/pdo_mysql/config.m4
+@@ -130,8 +130,8 @@ if test "$PHP_PDO_MYSQL" != "no"; then
+       pdo_cv_inc_path=$abs_srcdir/ext
+     elif test -f $abs_srcdir/ext/pdo/php_pdo_driver.h; then
+       pdo_cv_inc_path=$abs_srcdir/ext
+-    elif test -f $prefix/include/php/ext/pdo/php_pdo_driver.h; then
+-      pdo_cv_inc_path=$prefix/include/php/ext
++    elif test -f $prefix/${PHP_INCDIR}/ext/pdo/php_pdo_driver.h; then
++      pdo_cv_inc_path=$prefix/${PHP_INCDIR}/php/ext
+     else
+       AC_MSG_ERROR([Cannot find php_pdo_driver.h.])
+     fi
 @@ -144,7 +144,7 @@ if test "$PHP_PDO_MYSQL" != "no"; then
    fi
  

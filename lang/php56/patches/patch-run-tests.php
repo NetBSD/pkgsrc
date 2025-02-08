@@ -1,4 +1,4 @@
-$NetBSD: patch-run-tests.php,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-run-tests.php,v 1.2 2025/02/08 02:57:59 taca Exp $
 
 Use proper shbang line.
 
@@ -6,7 +6,7 @@ Use proper shbang line.
 +++ run-tests.php
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env php
-+#!@PREFIX@/bin/php
++#!@PREFIX@/bin/php@PHP_VER@
  <?php
  /*
     +----------------------------------------------------------------------+

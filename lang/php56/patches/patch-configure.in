@@ -1,0 +1,63 @@
+$NetBSD: patch-configure.in,v 1.1 2025/02/08 02:57:59 taca Exp $
+
+* Adjust PHP directories.
+* Adjust PHP library name.
+* Do not create extra "include" sub directory.
+
+--- configure.in.orig	2019-01-09 09:54:13.000000000 +0000
++++ configure.in
+@@ -381,9 +381,9 @@ dnl SAPI configuration.
+ dnl -------------------------------------------------------------------------
+ 
+ dnl paths to the targets are relative to the build directory
+-SAPI_SHARED=libs/libphp[]$PHP_MAJOR_VERSION[.]$SHLIB_DL_SUFFIX_NAME
+-SAPI_STATIC=libs/libphp[]$PHP_MAJOR_VERSION[.a]
+-SAPI_LIBTOOL=libphp[]$PHP_MAJOR_VERSION[.la]
++SAPI_SHARED=libs/libphp[]${PHP_VER}[.]$SHLIB_DL_SUFFIX_NAME
++SAPI_STATIC=libs/libphp[]${PHP_VER}[.a]
++SAPI_LIBTOOL=libphp[]${PHP_VER}[.la]
+ 
+ PHP_CONFIGURE_PART(Configuring SAPI modules)
+ 
+@@ -1115,7 +1115,7 @@ dnl
+   if test "$PHP_PEAR" = "DEFAULT" || test "$PHP_PEAR" = "yes"; then
+     case $PHP_LAYOUT in
+       GNU) PEAR_INSTALLDIR=$datadir/pear;;
+-      *)   PEAR_INSTALLDIR=$libdir/php;;
++      *)   PEAR_INSTALLDIR=$libdir/php${PHP_API_VERS};;
+     esac
+   fi
+ 
+@@ -1170,12 +1170,12 @@ test "$program_suffix" = "NONE" && progr
+ 
+ case $libdir in
+   '${exec_prefix}/lib')
+-    libdir=$libdir/php
++    libdir=$libdir/php/${PHP_API_VERS}
+     ;;
+ esac
+ case `eval echo $datadir` in
+   '${prefix}/share')
+-    datadir=$datadir/php
++    datadir=$datadir/php/${PHP_API_VERS}
+     ;;
+ esac
+ 
+@@ -1226,7 +1226,7 @@ case $PHP_LAYOUT in
+     datarootdir=$prefix/share
+     ;;
+   *)
+-    datarootdir=$prefix/php
++    datarootdir=$prefix/${PHP_SHAREDIR}
+     ;;
+ esac
+ 
+@@ -1452,7 +1452,7 @@ PHP_SUBST(all_targets)
+ PHP_SUBST(install_targets)
+ PHP_SUBST(install_binary_targets)
+ 
+-PHP_INSTALL_HEADERS([Zend/ TSRM/ include/ main/ main/streams/])
++PHP_INSTALL_HEADERS([Zend/ TSRM/ main/ main/streams/])
+ 
+ PHP_ADD_SOURCES(TSRM, TSRM.c tsrm_strtok_r.c)
+ 
