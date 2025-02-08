@@ -1,0 +1,6 @@
+bin/phar @PREFIX@/bin/phar@PHP_VER@
+bin/phar.phar @PREFIX@/bin/phar@PHP_VER@.phar
+bin/php-config @PREFIX@/bin/php-config@PHP_VER@
+bin/php @PREFIX@/bin/php@PHP_VER@
+bin/phpdbg @PREFIX@/bin/phpdbg@PHP_VER@
+bin/phpize @PREFIX@/bin/phpize@PHP_VER@

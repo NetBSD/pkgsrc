@@ -1,17 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.4 2024/11/14 22:20:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/02/08 02:59:57 taca Exp $
 
-BUILDLINK_TREE+=	php
+BUILDLINK_TREE+=	php83
 
-.if !defined(PHP_BUILDLINK3_MK)
-PHP_BUILDLINK3_MK:=
+.if !defined(PHP83_BUILDLINK3_MK)
+PHP83_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php+=	php>=8.3.0<8.4
-BUILDLINK_ABI_DEPENDS.php+=	php>=8.3.13nb4
-BUILDLINK_PKGSRCDIR.php?=	../../lang/php83
+BUILDLINK_API_DEPENDS.php83+=	php${PHP_VER}>=8.3.0<8.4
+BUILDLINK_ABI_DEPENDS.php83+=	php${PHP_VER}>=8.3.13nb4
+BUILDLINK_PKGSRCDIR.php83?=	../../lang/php83
+BUILDLINK_INCDIRS.php83+=	${PHP_INCDIR}
 
-pkgbase := php
+pkgbase := php83
 .include "../../mk/pkg-build-options.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.endif # PHP_BUILDLINK3_MK
+.endif # PHP83_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-php
+BUILDLINK_TREE+=	-php83
