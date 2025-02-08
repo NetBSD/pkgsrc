@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1174 2025/02/08 08:50:48 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1175 2025/02/08 09:01:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1562,3 +1562,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/R-textshaping to 1.0.0 [mef 2025-02-08]
 	Updated geography/R-raster to 3.6.31 [mef 2025-02-08]
 	Updated geography/R-spData to 2.3.4 [mef 2025-02-08]
+	Updated geography/R-spatstat.utils to 3.1.2 [mef 2025-02-08]
