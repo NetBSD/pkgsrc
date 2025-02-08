@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/02/05 05:00:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/08 11:16:03 wiz Exp $
 
 DISTNAME=		asdf-0.16.1
 CATEGORIES=		devel
@@ -12,7 +12,7 @@ LICENSE=		mit
 
 DEPENDS+=		git-base-[0-9]*:../../devel/git-base
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=		c
 
 AUTO_MKDIRS=		yes
 
