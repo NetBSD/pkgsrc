@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1166 2025/02/08 05:23:12 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1167 2025/02/08 06:53:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby32-base to 3.2.7 [taca 2025-02-08]
 	Updated devel/ruby-readline to 3.2.7 [taca 2025-02-08]
 	Updated lang/ruby32 to 3.2.7 [taca 2025-02-08]
+	Updated archivers/R-zip to 2.3.2 [mef 2025-02-08]
