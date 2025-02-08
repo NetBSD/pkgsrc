@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.2 2024/06/07 23:11:41 taca Exp $
+# $NetBSD: Makefile.php,v 1.3 2025/02/08 02:59:45 taca Exp $
 # used by lang/php82/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -24,8 +24,18 @@ PLIST_VARS+=		dtrace
 DISTINFO_FILE=	${.CURDIR}/../../lang/php82/distinfo
 PATCHDIR=	${.CURDIR}/../../lang/php82/patches
 
+PLIST_SUBST+=	PHP_VER="${PHP_VER}"
+
+PRINT_PLIST_AWK+=	/${PHP_EXTENSION_DIR:S/\//\\\//g}/ \
+			{ sub(/${PHP_EXTENSION_DIR:S/\//\\\//g}/, \
+				"$${PHP_EXTENSION_DIR}") }
+PRINT_PLIST_AWK+=	/${PHP_VER}/ { sub(/${PHP_VER}/, "$${PHP_VER}") }
+
+CONFIGURE_ARGS+=	--program-suffix=${PHP_VER}
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR}/php.d
+CONFIGURE_ARGS+=	--with-pear=${PREFIX}/${PHP_LIBDIR}
+
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
@@ -45,16 +55,21 @@ CONFIGURE_ARGS+=	--enable-mysqlnd
 CONFIGURE_ARGS+=	--enable-xml
 #CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX}
 
+CONFIGURE_ENV+=		PHP_VER=${PHP_VER}
+CONFIGURE_ENV+=		PHP_VAR_SUBST=PHP_VER
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing common paths.
 SUBST_STAGE.path=	pre-configure
-SUBST_FILES.path=	build/php.m4
+SUBST_FILES.path+=	build/php.m4
 SUBST_FILES.path+=	php.ini-development php.ini-production
 SUBST_FILES.path+=	sapi/cgi/Makefile.frag
-SUBST_VARS.path=	CGIDIR
-SUBST_VARS.path+=	PREFIX
+SUBST_FILES.path+=	sapi/fpm/php-fpm.conf.in sapi/fpm/www.conf.in
+SUBST_FILES.path+=	sapi/fpm/fpm/fpm_conf.c
+SUBST_FILES.path+=	scripts/php-config.in scripts/phpize.in
+SUBST_VARS.path=	PREFIX CGIDIR PHP_VER PHP_API_VERS
+SUBST_VARS.path+=	PHP_EGDIR PHP_INCDIR PHP_LIBDIR
 SUBST_VARS.path+=	TOOLS_PATH.pkg-config PHP_PKGCONFIG_PATH
 
 .include "../../textproc/libxml2/buildlink3.mk"

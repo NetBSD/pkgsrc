@@ -1,9 +1,27 @@
-$NetBSD: patch-sapi_apache2handler_config.m4,v 1.1 2024/06/07 13:58:44 taca Exp $
+$NetBSD: patch-sapi_apache2handler_config.m4,v 1.2 2025/02/08 02:59:45 taca Exp $
 
-Don't autodetect maintainer-zts.
+* Don't autodetect maintainer-zts.
+* Adjust PHP library name.
 
---- sapi/apache2handler/config.m4.orig	2024-06-04 13:22:51.000000000 +0000
+--- sapi/apache2handler/config.m4.orig	2024-12-17 11:39:23.000000000 +0000
 +++ sapi/apache2handler/config.m4
+@@ -67,14 +67,14 @@ if test "$PHP_APXS2" != "no"; then
+   if test -z `$APXS -q SYSCONFDIR`; then
+     INSTALL_IT="\$(mkinstalldirs) '$APXS_LIBEXECDIR' && \
+                  $APXS -S LIBEXECDIR='$APXS_LIBEXECDIR' \
+-                       -i -n php"
++                       -i -n php$PHP_VER"
+   else
+     APXS_SYSCONFDIR='$(INSTALL_ROOT)'`$APXS -q SYSCONFDIR`
+     INSTALL_IT="\$(mkinstalldirs) '$APXS_LIBEXECDIR' && \
+                 \$(mkinstalldirs) '$APXS_SYSCONFDIR' && \
+                  $APXS -S LIBEXECDIR='$APXS_LIBEXECDIR' \
+                        -S SYSCONFDIR='$APXS_SYSCONFDIR' \
+-                       -i -a -n php"
++                       -i -a -n php$PHP_VER"
+   fi
+ 
+   LIBPHP_CFLAGS="-shared"
 @@ -108,18 +108,6 @@ if test "$PHP_APXS2" != "no"; then
      ;;
    esac
