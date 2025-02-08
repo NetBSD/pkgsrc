@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2025/02/06 13:26:39 adam Exp $
+# $NetBSD: Makefile,v 1.39 2025/02/08 11:07:12 wiz Exp $
 
 DISTNAME=	notebook-7.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://jupyter.org/
 COMMENT=	Web-based notebook environment for interactive computing
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.11:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-jupyter-builder>=0.5:../../devel/py-hatch-jupyter-builder
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab>=4.3.4:../../www/py-jupyterlab
 DEPENDS+=	${PYPKGPREFIX}-jupyterlab-server>=2.27.1:../../www/py-jupyterlab-server
 DEPENDS+=	${PYPKGPREFIX}-jupyter_server>=2.4.0:../../www/py-jupyter_server

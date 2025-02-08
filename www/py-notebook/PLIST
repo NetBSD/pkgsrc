@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2025/02/06 13:26:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2025/02/08 11:07:12 wiz Exp $
 bin/jupyter-notebook-${PYVERSSUFFIX}
 etc/jupyter/jupyter_server_config.d/notebook.json
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -19,36 +19,6 @@ ${PYSITELIB}/notebook/app.py
 ${PYSITELIB}/notebook/app.pyc
 ${PYSITELIB}/notebook/app.pyo
 ${PYSITELIB}/notebook/custom/custom.css
-${PYSITELIB}/notebook/labextension/package.json
-${PYSITELIB}/notebook/labextension/schemas/@jupyter-notebook/lab-extension/interface-switcher.json
-${PYSITELIB}/notebook/labextension/schemas/@jupyter-notebook/lab-extension/launch-tree.json
-${PYSITELIB}/notebook/labextension/schemas/@jupyter-notebook/lab-extension/package.json.orig
-${PYSITELIB}/notebook/labextension/static/568.f1a870f262b5e8588c75.js
-${PYSITELIB}/notebook/labextension/static/926.1e1698d53d81bf49c4ad.js
-${PYSITELIB}/notebook/labextension/static/928.7261ac56728710cbd7f2.js
-${PYSITELIB}/notebook/labextension/static/93.c48a681bb3e8043bbbd7.js
-${PYSITELIB}/notebook/labextension/static/remoteEntry.cad89c571bc2aee4aff2.js
-${PYSITELIB}/notebook/labextension/static/style.js
-${PYSITELIB}/notebook/labextension/static/third-party-licenses.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/menus.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/package.json.orig
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/pages.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/shell.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/title.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/top.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/application-extension/zen.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/documentsearch-extension/package.json.orig
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/help-extension/open.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/help-extension/package.json.orig
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/checkpoints.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/edit-notebook-metadata.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/full-width-notebook.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/kernel-logo.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/package.json.orig
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/notebook-extension/scroll-output.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/tree-extension/file-actions.json
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/tree-extension/package.json.orig
-${PYSITELIB}/notebook/schemas/@jupyter-notebook/tree-extension/widget.json
 ${PYSITELIB}/notebook/static/1053.c5e410a592cf559cef17.js
 ${PYSITELIB}/notebook/static/1053.c5e410a592cf559cef17.js.map
 ${PYSITELIB}/notebook/static/1088.47e247a20947f628f48f.js
