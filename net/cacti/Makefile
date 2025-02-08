@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2024/12/27 08:20:26 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2025/02/08 03:49:21 taca Exp $
 
 DISTNAME=	cacti-1.2.11
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	net
 MASTER_SITES=	https://www.cacti.net/downloads/
 
@@ -14,21 +14,17 @@ USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
 NO_BUILD=		yes
 
-#DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
-DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
-DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
-DEPENDS+=		${PHP_PKG_PREFIX}-snmp-[0-9]*:../../net/php-snmp
-DEPENDS+=		${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
-DEPENDS+=		${PHP_PKG_PREFIX}-gmp-[0-9]*:../../devel/php-gmp
-DEPENDS+=		${PHP_PKG_PREFIX}-posix-[0-9]*:../../devel/php-posix
-DEPENDS+=		${PHP_PKG_PREFIX}-ldap-[0-9]*:../../databases/php-ldap
-DEPENDS+=		${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
-DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../lang/php/json.mk"
-.include "../../mk/apache.mk"
+#DEPENDS+=		${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
+DEPENDS+=		${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=		${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-snmp>=${PHP_BASE_VERS}:../../net/php-snmp
+DEPENDS+=		${PHP_PKG_PREFIX}-sockets>=${PHP_BASE_VERS}:../../net/php-sockets
+DEPENDS+=		${PHP_PKG_PREFIX}-gmp>=${PHP_BASE_VERS}:../../devel/php-gmp
+DEPENDS+=		${PHP_PKG_PREFIX}-posix>=${PHP_BASE_VERS}:../../devel/php-posix
+DEPENDS+=		${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
+DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
 
 PKG_USERS=			${CACTI_USER}:${CACTI_GROUP}
 PKG_GROUPS=			${CACTI_GROUP}
@@ -47,10 +43,7 @@ CACTIDIR=		${PREFIX}/share/cacti
 CACTI_LOGDIR?=		${VARBASE}/log/cacti
 CACTI_RRADIR?=		${VARBASE}/db/cacti-rra
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	include/vendor/cldr-to-gettext-plural-rules/bin/export-plural-rules
+REPLACE_PHP+=		include/vendor/cldr-to-gettext-plural-rules/bin/export-plural-rules
 
 
 REPLACE_PERL+=		scripts/*.pl
@@ -75,7 +68,7 @@ SUBST_FILES.paths+=	cli/install_cacti.php install/functions.php
 SUBST_FILES.paths+=	include/global.php include/global_settings.php
 SUBST_FILES.paths+=	lib/clog_webapi.php lib/installer.php lib/functions.php
 SUBST_VARS.paths=	CACTIDIR PREFIX CACTI_USER CACTI_LOGDIR CACTI_RRADIR
-SUBST_VARS.paths+=	PKG_PHP_MAJOR_VERS SH
+SUBST_VARS.paths+=	SH PHP_VER
 
 SUBST_CLASSES+=		perl-xml
 SUBST_STAGE.perl-xml=	pre-configure
@@ -101,6 +94,8 @@ REQD_FILES_PERMS+=	${CACTIDIR}/rra/.htaccess ${CACTI_RRADIR}/.htaccess \
 INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/examples/cacti
 INSTALLATION_DIRS+=	share/cacti
+
+.include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=		localmemory
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || \
@@ -130,5 +125,7 @@ do-install:
 		. ${DESTDIR}${CACTIDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/cacti-poller ${DESTDIR}${PREFIX}/bin
 
+.include "../../lang/php/json.mk"
+.include "../../mk/apache.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
