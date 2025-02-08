@@ -1,7 +1,7 @@
-$NetBSD: patch-gcc_config_arm_netbsd-eabi.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_config_arm_netbsd-eabi.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 --- gcc/config/arm/netbsd-eabi.h.orig	2021-04-08 04:56:28.065740630 -0700
-+++ gcc/config/arm/netbsd-eabi.h	2022-01-31 21:15:29.555403989 -0800
++++ gcc/config/arm/netbsd-eabi.h
 @@ -49,8 +49,8 @@
  
  #undef ARM_UNWIND_INFO

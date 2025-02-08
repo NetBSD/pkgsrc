@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_ada_Makefile.rtl,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_Makefile.rtl,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Add NetBSD as a target and generate the required files correctly.
 
 --- gcc/ada/Makefile.rtl.orig	2023-07-27 11:13:03.000000000 +0300
-+++ gcc/ada/Makefile.rtl	2023-12-21 10:00:55.701750634 +0200
++++ gcc/ada/Makefile.rtl
 @@ -1767,6 +1767,129 @@
    MISCLIB = -lutil
  endif

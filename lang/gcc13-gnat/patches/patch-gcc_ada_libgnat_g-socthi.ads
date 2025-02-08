@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_ada_libgnat_g-socthi.ads,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_libgnat_g-socthi.ads,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Fix symbol to make it use the C processed one.
 
 --- gcc/ada/libgnat/g-socthi.ads.orig	2021-10-09 18:09:40.607907149 +0200
-+++ gcc/ada/libgnat/g-socthi.ads	2021-10-09 18:24:39.373733909 +0200
++++ gcc/ada/libgnat/g-socthi.ads
 @@ -53,8 +53,6 @@
  
     package C renames Interfaces.C;

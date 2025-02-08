@@ -1,10 +1,10 @@
-$NetBSD: patch-gcc_ada_s-oscons-tmplt.c,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_s-oscons-tmplt.c,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Add NetBSD to some defined parts and bump the version of
 _XOPEN_SOURCE and add _NETBSD_SOURCE.
 
 --- gcc/ada/s-oscons-tmplt.c.orig	2023-07-27 11:13:04.000000000 +0300
-+++ gcc/ada/s-oscons-tmplt.c	2023-12-01 14:00:08.000000000 +0200
++++ gcc/ada/s-oscons-tmplt.c
 @@ -86,16 +86,29 @@
   ** a number of non-POSIX but useful/required features.
   **/

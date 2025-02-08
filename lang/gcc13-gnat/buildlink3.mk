@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2024/03/08 12:02:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 BUILDLINK_TREE+=	gcc13-gnat
 
@@ -10,7 +10,9 @@ BUILDLINK_ABI_DEPENDS.gcc13-gnat+=	gcc13-gnat>=13.2
 BUILDLINK_PKGSRCDIR.gcc13-gnat=		../../lang/gcc13-gnat
 BUILDLINK_DEPMETHOD.gcc13-gnat?=	build
 
-ADALIB_PREFIX=	gcc13-gnat/lib/gcc/${MACHINE_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/${GCC13_DIST_VERSION}
+GNU_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
+
+ADALIB_PREFIX=	gcc13-gnat/lib/gcc/${GNU_TARGET_MACHINE}/13.3.0
 
 BUILDLINK_FILES.gcc13-gnat+=	${ADALIB_PREFIX}/adalib/*.ali
 

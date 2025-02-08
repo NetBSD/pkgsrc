@@ -1,7 +1,7 @@
-$NetBSD: patch-gcc_config_arm_bpabi.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_config_arm_bpabi.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 --- gcc/config/arm/bpabi.h.orig	2021-04-08 04:56:28.061740583 -0700
-+++ gcc/config/arm/bpabi.h	2022-01-31 21:13:16.734263818 -0800
++++ gcc/config/arm/bpabi.h
 @@ -24,6 +24,7 @@
     <http://www.gnu.org/licenses/>.  */
  

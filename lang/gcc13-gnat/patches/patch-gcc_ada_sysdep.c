@@ -1,9 +1,9 @@
-$NetBSD: patch-gcc_ada_sysdep.c,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_ada_sysdep.c,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Add NetBSD to some defined sections.
 
 --- gcc/ada/sysdep.c.orig	2023-07-27 11:13:04.000000000 +0300
-+++ gcc/ada/sysdep.c	2023-12-05 23:09:29.885605129 +0200
++++ gcc/ada/sysdep.c
 @@ -321,7 +321,7 @@
    || (defined (__svr4__) && defined (__i386__)) || defined (__Lynx__) \
    || defined (__CYGWIN__) || defined (__FreeBSD__) || defined (__OpenBSD__) \

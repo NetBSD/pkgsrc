@@ -1,8 +1,8 @@
-$NetBSD: patch-gcc_config_arm_arm.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
+$NetBSD: patch-gcc_config_arm_arm.h,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
---- gcc/config/arm/arm.h.orig	2021-04-08 04:56:28.057740534 -0700
-+++ gcc/config/arm/arm.h	2022-01-31 21:11:39.595024008 -0800
-@@ -937,6 +937,11 @@
+--- gcc/config/arm/arm.h.orig	2024-05-21 10:47:38.000000000 +0300
++++ gcc/config/arm/arm.h
+@@ -951,6 +951,11 @@
  #define ARM_UNWIND_INFO  0
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD: patch-gcc_config_arm_arm.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
  /* Use r0 and r1 to pass exception handling information.  */
  #define EH_RETURN_DATA_REGNO(N) (((N) < 2) ? N : INVALID_REGNUM)
  
-@@ -948,11 +953,19 @@
+@@ -962,11 +967,19 @@
  #define ARM_TARGET2_DWARF_FORMAT DW_EH_PE_pcrel
  #endif
  
@@ -34,7 +34,7 @@ $NetBSD: patch-gcc_config_arm_arm.h,v 1.1 2024/03/08 12:02:33 wiz Exp $
  
  /* The native (Norcroft) Pascal compiler for the ARM passes the static chain
     as an invisible last argument (possible since varargs don't exist in
-@@ -2342,7 +2355,7 @@
+@@ -2462,7 +2475,7 @@
  
  /* -mcpu=native handling only makes sense with compiler running on
     an ARM chip.  */

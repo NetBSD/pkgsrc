@@ -1,12 +1,12 @@
-$NetBSD: patch-gcc_configure,v 1.1 2024/03/08 12:02:34 wiz Exp $
+$NetBSD: patch-gcc_configure,v 1.2 2025/02/08 14:05:03 wiz Exp $
 
 Portability fix.
 
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90143
 
---- gcc/configure.orig	2022-05-06 07:30:57.000000000 +0000
+--- gcc/configure.orig	2024-05-21 10:49:00.000000000 +0300
 +++ gcc/configure
-@@ -6395,7 +6395,7 @@ _ACEOF
+@@ -6433,7 +6433,7 @@
  if test "$enable_largefile" != no; then
    case "$host, $build" in
      *-*-aix*,*|*,*-*-aix*)
@@ -15,7 +15,7 @@ https://gcc.gnu.org/bugzilla/show_bug.cgi?id=90143
  
  $as_echo "#define HOST_STAT_FOR_64BIT_INODES stat64x" >>confdefs.h
  
-@@ -31598,7 +31598,7 @@ case "$target" in
+@@ -31556,7 +31556,7 @@
        gcc_cv_target_dl_iterate_phdr=no
      fi
      ;;
