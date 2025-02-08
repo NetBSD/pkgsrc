@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/02/08 13:18:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/08 13:26:33 wiz Exp $
 
 DISTNAME=	cryptopp870
 PKGNAME=	cryptopp-8.7.0
@@ -18,6 +18,9 @@ MAKE_FILE=		GNUmakefile
 BUILD_TARGET=		all libcryptopp.pc
 WRKSRC=			${WRKDIR}
 CPPFLAGS+=		-DCRYPTOPP_DISABLE_ASM -fPIC
+
+PKGCONFIG_OVERRIDE=		libcryptopp.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cryptest.exe ${DESTDIR}${PREFIX}/bin/cryptest
