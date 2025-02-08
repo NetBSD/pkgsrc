@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1172 2025/02/08 08:12:44 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1173 2025/02/08 08:42:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-sessioninfo to 1.2.3 [mef 2025-02-08]
 	Updated fonts/R-systemfonts to 1.2.1 [mef 2025-02-08]
 	Updated fonts/R-textshaping to 1.0.0 [mef 2025-02-08]
+	Updated geography/R-raster to 3.6.31 [mef 2025-02-08]
