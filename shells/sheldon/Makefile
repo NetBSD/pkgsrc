@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/14 22:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/08 18:21:56 schmonz Exp $
 
-DISTNAME=		sheldon-0.8.0
-PKGREVISION=		3
+DISTNAME=		sheldon-0.8.1
 CATEGORIES=		shells
 MASTER_SITES=		${MASTER_SITE_GITHUB:=rossmacarthur/}
 GITHUB_TAG=		${PKGVERSION_NOREV}
@@ -21,14 +20,13 @@ AUTO_MKDIRS=		yes
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 RUSTFLAGS+=		-C link-arg=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
-do-install:
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md \
 		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/
 	${INSTALL_DATA} ${WRKSRC}/completions/${PKGBASE}.bash \
 		${DESTDIR}${PREFIX}/share/bash-completion/completions/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/completions/${PKGBASE}.zsh \
 		${DESTDIR}${PREFIX}/share/zsh/site-functions/_${PKGBASE}
-	${INSTALL_PROGRAM} ${WRKSRC}/target/release/${PKGBASE} ${DESTDIR}${PREFIX}/bin/
 
 .include "../../lang/rust/cargo.mk"
 .include "../../converters/libiconv/buildlink3.mk"
