@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2022/12/11 14:12:29 taca Exp $
+# $NetBSD: options.mk,v 1.2 2025/02/08 02:59:45 taca Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.${PHP_PKG_PREFIX}
+PKG_OPTIONS_VAR=		PKG_OPTIONS.php82
 PKG_SUPPORTED_OPTIONS+=		inet6 ssl zts readline argon2 php-embed
 PKG_SUPPORTED_OPTIONS+=		disable-filter-url
 PKG_SUGGESTED_OPTIONS+=		inet6 ssl readline
@@ -60,16 +60,14 @@ CFLAGS+=		-DDISABLE_FILTER_URL
 
 PLIST_VARS+=	embed
 
-.if !empty(PKGNAME:Mphp-[7-9]*)
-.  if !empty(PKG_OPTIONS:Mphp-embed)
+.if empty(.CURDIR:C/.*\///:Map-php) && empty(.CURDIR:C/.*\///:Mphp-fpm) && !empty(PKG_OPTIONS:Mphp-embed)
 CONFIGURE_ARGS+=	--enable-embed
-INSTALLATION_DIRS+=	include/php/sapi/embed
+INSTALLATION_DIRS+=	${PHP_INCDIR}/sapi/embed
 PLIST.embed=		yes
 
 .PHONY: post-install-embed
 post-install: post-install-embed
 post-install-embed:
-	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/include/php/sapi/embed/
-	${INSTALL_LIB} ${WRKSRC}/libs/libphp.so ${DESTDIR}${PREFIX}/lib/
-.  endif
+	${INSTALL_DATA} ${WRKSRC}/sapi/embed/php_embed.h ${DESTDIR}${PREFIX}/${PHP_INCDIR}/sapi/embed/
+	${INSTALL_LIB} ${WRKSRC}/libs/libphp${PHP_VER}.so ${DESTDIR}${PREFIX}/lib
 .endif
