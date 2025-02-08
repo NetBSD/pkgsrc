@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1190 2025/02/08 14:10:48 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.1191 2025/02/08 14:14:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1578,3 +1578,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/gcc13-gnat to 13.3.0nb2 [wiz 2025-02-08]
 	Added lang/gcc13-gnat-libs version 13.3.0nb3 [wiz 2025-02-08]
 	Updated devel/gce_metadata_server to 3.93.5 [bsiegert 2025-02-08]
+	Updated devel/gprbuild to 25.0.0 [wiz 2025-02-08]
