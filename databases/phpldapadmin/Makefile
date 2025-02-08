@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2024/05/08 21:32:18 khorben Exp $
+# $NetBSD: Makefile,v 1.49 2025/02/08 03:33:12 taca Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leenooks/}
 GITHUB_PROJECT=	phpLDAPadmin
@@ -15,8 +16,8 @@ LICENSE=	gnu-gpl-v2
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.1.2:../../databases/php-ldap
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.2:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=${PHP_BASE_VERS}:../../databases/php-ldap
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
 
 USE_TOOLS+=	pax
 
