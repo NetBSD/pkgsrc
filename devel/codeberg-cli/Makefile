@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/02/02 07:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 18:22:24 schmonz Exp $
 
-DISTNAME=	codeberg-cli-0.4.0
+DISTNAME=	codeberg-cli-0.4.7
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz=	-${MASTER_SITES}v${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
+
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${SSLBASE}/lib
 
 .include "cargo-depends.mk"
 
