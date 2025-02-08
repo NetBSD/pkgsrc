@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/06/28 17:36:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 03:41:14 taca Exp $
 
 MODNAME=	msgpack
 PECL_VERSION=	2.2.0
+PKGREVISION=	1
 CATEGORIES+=	devel
 
 MAINTAINER=	tpaul@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2020/05/27 19:37:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/08 03:41:14 taca Exp $
 #
 
 MODNAME=		memcached
 PECL_VERSION=		2.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES+=		devel
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
