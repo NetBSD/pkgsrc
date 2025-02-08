@@ -2,6 +2,6 @@
 
 PREFIX="@PREFIX@"
 BINDIR="$PREFIX/bin"
-DATADIR="$PREFIX/share"
+DATADIR="$PREFIX/@PHP_SHAREDIR@"
 
-"$BINDIR/php" "$DATADIR/php/composer.phar" $@
+"$BINDIR/php@PHP_VER@" "$DATADIR/composer.phar" $@
