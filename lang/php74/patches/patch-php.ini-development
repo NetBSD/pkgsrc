@@ -1,19 +1,19 @@
-$NetBSD: patch-php.ini-development,v 1.1 2019/12/15 17:56:34 taca Exp $
+$NetBSD: patch-php.ini-development,v 1.2 2025/02/08 02:58:55 taca Exp $
 
 Set proper default configuration values.
 
---- php.ini-development.orig	2018-12-04 16:12:20.000000000 +0000
+--- php.ini-development.orig	2022-10-31 10:36:05.000000000 +0000
 +++ php.ini-development
-@@ -722,7 +722,7 @@ default_charset = "UTF-8"
+@@ -733,7 +733,7 @@ default_charset = "UTF-8"
  ;;;;;;;;;;;;;;;;;;;;;;;;;
  
  ; UNIX: "/path1:/path2"
 -;include_path = ".:/php/includes"
-+include_path = ".:@PREFIX@/lib/php"
++include_path = ".:@PREFIX@/lib/php@PHP_VER@"
  ;
  ; Windows: "\path1;\path2"
  ;include_path = ".;c:\php\includes"
-@@ -743,7 +743,8 @@ doc_root =
+@@ -754,7 +754,8 @@ doc_root =
  ; http://php.net/user-dir
  user_dir =
  
@@ -23,7 +23,7 @@ Set proper default configuration values.
  ; http://php.net/extension-dir
  ;extension_dir = "./"
  ; On windows:
-@@ -828,7 +829,7 @@ file_uploads = On
+@@ -839,7 +840,7 @@ file_uploads = On
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
  ; http://php.net/upload-tmp-dir
