@@ -1,0 +1,3 @@
+bin/pear @PREFIX@/bin/pear@PHP_VER@
+bin/peardev @PREFIX@/bin/peardev@PHP_VER@
+bin/pecl @PREFIX@/bin/pecl@PHP_VER@
