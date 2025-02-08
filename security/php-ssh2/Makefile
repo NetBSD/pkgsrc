@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2024/04/17 10:38:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/08 03:51:48 taca Exp $
 
 MODNAME=		ssh2
 PECL_VERSION=		1.3.1
+PKGREVISION=		2
 CATEGORIES+=		security
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.libssh2.org/
 COMMENT=		PHP bindings to the functions of libssh2
-PKGREVISION=		1
 LICENSE=		php
 
 CONFIGURE_ARGS+=	--with-ssh2=${PREFIX}
