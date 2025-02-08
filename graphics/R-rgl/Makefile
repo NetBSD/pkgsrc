@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/12/07 06:06:28 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 10:04:45 mef Exp $
 
 R_PKGNAME=	rgl
-R_PKGVER=	1.3.14
+R_PKGVER=	1.3.17
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
