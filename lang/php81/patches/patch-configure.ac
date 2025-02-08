@@ -1,0 +1,62 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/02/08 02:59:30 taca Exp $
+
+* Adjust PHP directories.
+* Adjust PHP library name.
+* Do not create extra "include" sub directory.
+
+--- configure.ac.orig	2024-09-26 17:35:59.000000000 +0000
++++ configure.ac
+@@ -285,9 +285,9 @@ dnl SAPI configuration.
+ dnl ----------------------------------------------------------------------------
+ 
+ dnl Paths to the targets are relative to the build directory.
+-SAPI_SHARED=libs/libphp.[]$SHLIB_DL_SUFFIX_NAME
+-SAPI_STATIC=libs/libphp.a
+-SAPI_LIBTOOL=libphp.la
++SAPI_SHARED=libs/libphp${PHP_VER}.[]$SHLIB_DL_SUFFIX_NAME
++SAPI_STATIC=libs/libphp${PHP_VER}.a
++SAPI_LIBTOOL=libphp${PHP_VER}.la
+ 
+ PHP_CONFIGURE_PART(Configuring SAPI modules)
+ 
+@@ -1312,12 +1312,12 @@ test "$program_suffix" = "NONE" && progr
+ 
+ case $libdir in
+   '${exec_prefix}/lib')
+-    libdir=$libdir/php
++    libdir=$libdir/php/${PHP_API_VERS}
+     ;;
+ esac
+ case `eval echo $datadir` in
+   '${prefix}/share')
+-    datadir=$datadir/php
++    datadir=$datadir/php/${PHP_API_VERS}
+     ;;
+ esac
+ 
+@@ -1367,7 +1367,7 @@ case $PHP_LAYOUT in
+     datarootdir=$prefix/share
+     ;;
+   *)
+-    datarootdir=$prefix/php
++    datarootdir=$prefix/${PHP_SHAREDIR}
+     ;;
+ esac
+ 
+@@ -1489,6 +1489,7 @@ PHP_SUBST_OLD(PHP_LIBS)
+ PHP_SUBST(OVERALL_TARGET)
+ PHP_SUBST(PHP_RPATHS)
+ PHP_SUBST(PHP_SAPI)
++PHP_SUBST_OLD(PHP_VER)
+ PHP_SUBST_OLD(PHP_VERSION)
+ PHP_SUBST_OLD(PHP_VERSION_ID)
+ PHP_SUBST(SHELL)
+@@ -1619,7 +1620,7 @@ PHP_SUBST(all_targets)
+ PHP_SUBST(install_targets)
+ PHP_SUBST(install_binary_targets)
+ 
+-PHP_INSTALL_HEADERS([Zend/ TSRM/ include/ main/ main/streams/])
++PHP_INSTALL_HEADERS([Zend/ TSRM/ main/ main/streams/])
+ PHP_INSTALL_HEADERS([Zend/Optimizer], [ \
+     zend_call_graph.h \
+     zend_cfg.h \
