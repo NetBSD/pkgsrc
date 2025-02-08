@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2022/10/02 16:20:26 nros Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/02/08 13:18:48 bsiegert Exp $
 bin/cryptest
 include/cryptopp/3way.h
 include/cryptopp/adler32.h
@@ -196,6 +196,7 @@ lib/libcryptopp.a
 lib/libcryptopp.so
 lib/libcryptopp.so.8
 lib/libcryptopp.so.8.7
+lib/pkgconfig/libcryptopp.pc
 share/cryptopp/TestData/3desval.dat
 share/cryptopp/TestData/3wayval.dat
 share/cryptopp/TestData/aria.dat
