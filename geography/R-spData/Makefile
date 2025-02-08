@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/12/01 07:16:42 mef Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/08 08:50:36 mef Exp $
 
 R_PKGNAME=	spData
-R_PKGVER=	2.3.3
+R_PKGVER=	2.3.4
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
