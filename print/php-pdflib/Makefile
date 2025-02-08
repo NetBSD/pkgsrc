@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2022/05/22 12:43:09 taca Exp $
+# $NetBSD: Makefile,v 1.32 2025/02/08 03:50:28 taca Exp $
 
 MODNAME=		pdflib
+PKGREVISION=		1
 PKGMODNAME=		pdf
 PECL_VERSION=		4.1.4
 CATEGORIES+=		print
