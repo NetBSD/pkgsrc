@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2021/03/11 13:18:46 tpaul Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/08 03:36:57 taca Exp $
 
 MODNAME=		base58
+PKGREVISION=		1
 PECL_VERSION=		1.0.2
 CATEGORIES=		devel
 
