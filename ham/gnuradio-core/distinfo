@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2024/08/18 11:50:39 tnn Exp $
+$NetBSD: distinfo,v 1.60 2025/02/08 13:35:40 wiz Exp $
 
 BLAKE2s (gnuradio-3.10.9.2.tar.gz) = 1ff9c9ee91f1feddc1c76fed6fa644c7b687e6e5a2ac97f86c69e0c28d76178d
 SHA512 (gnuradio-3.10.9.2.tar.gz) = 5eca8dd21def7354ab8bd3b98a5780f80bc71b0dd8f556a50def157964e121c7ba6a8a8dc96584f6b15a6b2d7e0391fe77f5c72ba31c1c5b49a76306dd6f78cd
@@ -12,4 +12,8 @@ SHA1 (patch-gnuradio-runtime_lib_thread_thread.cc) = e3679afc3b05879736c5d568351
 SHA1 (patch-gr-audio_lib_CMakeLists.txt) = d5acab47fdb007c50bb544af436102f0d38317aa
 SHA1 (patch-gr-audio_lib_alsa_alsa__impl_h) = cfa9b629e5cf21198cfd53cf27a908b5874866f4
 SHA1 (patch-gr-blocks_lib_message__debug__impl.cc) = ae36b039e0224185fdd317390fcdfc47acb28365
+SHA1 (patch-gr-network_lib_socket__pdu__impl.cc) = 105784fc874c20daba0a1b42c29cd83496d76229
+SHA1 (patch-gr-network_lib_tcp__sink__impl.cc) = 2bd9a0920b293a244ea295d08d02a9a3ea2eabfd
+SHA1 (patch-gr-network_lib_udp__sink__impl.cc) = 2ad59e9572467944924e7e9f5f4f77d349b37c90
+SHA1 (patch-gr-network_lib_udp__source__impl.cc) = 4aea2b0a4cf3702a108fb8511b9492eb453924b1
 SHA1 (patch-gr-qtgui_examples_c++_CMakeLists.txt) = 06a5885b5e661667cf4bfe936ff45723d0801c22
