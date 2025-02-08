@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2021/04/24 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/08 03:56:22 taca Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www time
 #MASTER_SITES+=	ftp://ftp.horde.org/pub/kronolith/
 
@@ -12,7 +12,7 @@ COMMENT=	Horde calendar application
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	horde>=3.2:../../www/horde
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=${PHP_BASE_VERS}:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
 
 PHP_VERSIONS_ACCEPTED=	56

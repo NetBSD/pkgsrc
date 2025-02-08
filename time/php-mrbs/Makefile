@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/01/21 14:29:39 manu Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/08 03:56:22 taca Exp $
 #
 
 DISTNAME=	mrbs-1.11.6
+PKGREVISION=	1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	time www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mrbs/}/
