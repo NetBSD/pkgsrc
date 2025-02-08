@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2024/10/20 14:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2025/02/08 04:10:27 taca Exp $
 
-DISTNAME=	bulk-medium-20240708
+DISTNAME=	bulk-medium-20250208
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -81,10 +81,10 @@ DEPENDS+=	tme-[0-9]*:../../emulators/tme
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	gawk-[0-9]*:../../lang/gawk
-DEPENDS+=	php>=7.4<7.5:../../lang/php74
-DEPENDS+=	php>=8.1<8.2:../../lang/php81
-DEPENDS+=	php>=8.2<8.3:../../lang/php82
-DEPENDS+=	php>=8.3<8.4:../../lang/php83
+DEPENDS+=	php74>=7.4<7.5:../../lang/php74
+DEPENDS+=	php81>=8.1<8.2:../../lang/php81
+DEPENDS+=	php82>=8.2<8.3:../../lang/php82
+DEPENDS+=	php83>=8.3<8.4:../../lang/php83
 DEPENDS+=	ruby31-base-[0-9]*:../../lang/ruby31-base
 DEPENDS+=	ruby32-base-[0-9]*:../../lang/ruby32-base
 DEPENDS+=	ruby33-[0-9]*:../../lang/ruby33
