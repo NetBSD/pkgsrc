@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2024/11/14 22:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/08 03:11:26 taca Exp $
 
 MODNAME=		sqlite3
 CATEGORIES+=		databases
 COMMENT=		PHP extension for SQLite databases
-PKGREVISION=		15
+PKGREVISION=		16
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_DIR}
 
