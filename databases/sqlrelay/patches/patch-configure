@@ -1,13 +1,22 @@
-$NetBSD: patch-configure,v 1.10 2022/12/03 15:53:40 adam Exp $
+$NetBSD: patch-configure,v 1.11 2025/02/08 03:34:38 taca Exp $
 
 Cripple iODBC check, we're using UnixODBC and it was getting in the way.
+Fix PHP lookup.
 Fix Perl lookup.
 Fix Python lookup.
 Fix Ruby support.
 
 --- configure.orig	2022-08-09 14:57:21.000000000 +0000
 +++ configure
-@@ -28286,7 +28286,7 @@ fi
+@@ -1055,6 +1055,7 @@ CCC
+ CPP
+ LT_SYS_LIBRARY_PATH
+ CXXCPP
++PHP_VER
+ ERLC
+ ERLCFLAGS
+ ERL'
+@@ -28286,7 +28287,7 @@ fi
  
  
  
@@ -16,7 +25,7 @@ Fix Ruby support.
  NAME=iodbc
  HEADER=sql.h
  LIBNAME=iodbc
-@@ -34112,7 +34112,7 @@ fi
+@@ -34112,7 +34113,7 @@ fi
  
  			if ( test -z "$PERL" )
  			then
@@ -25,7 +34,7 @@ Fix Ruby support.
  				do
  					if ( test -d "$i" )
  					then
-@@ -34300,52 +34300,10 @@ then
+@@ -34300,52 +34301,10 @@ then
  
  		pyext=""
  
@@ -80,7 +89,7 @@ Fix Ruby support.
  			do
  
  				if ( test -n "$pyprefix" )
-@@ -34570,7 +34528,7 @@ echo "******************************"
+@@ -34570,7 +34529,7 @@ echo "******************************"
  echo
  echo "***** Ruby *******************"
  
@@ -89,3 +98,167 @@ Fix Ruby support.
  then
  
  	HAVE_RUBY=""
+@@ -35410,51 +35369,38 @@ then
+ 				echo "cross compiling..."
+ 
+ 	else
+-
+-		PHPCONFIG=""
+-		for file in "php-config" "php-config-5" "php-config-5.1" "php-config-5.2" "php-config-5.3" "php-config-5.3" "php-config-5.4" "php-config-5.5" "php-config-5.6" "php-config-5.7" "php-config-5.8" "php-config-7.0" "php-config-7.1" "php-config-7.2" "php-config-7.3" "php-config-7.4" "php-config-8.0" "php-config-8.1" "php-config-8.2" "php-config-8.3" "php-config-8.4"
+-		do
+-			if ( test -n "$PHPPATH" )
+-			then
+-
+-if ( test -r ""$PHPPATH/bin/$file"" )
+-then
+-	eval "PHPCONFIG=\"$PHPPATH/bin/$file\""
+-fi
+-
+-			else
+-				for i in "/usr/local/php/bin" "/usr/bin" "/usr/local/bin" "/usr/pkg/bin" "/opt/sfw/bin" "/usr/sfw/bin" "/opt/csw/bin" "/opt/csw/php4/bin" "/opt/csw/php5/bin" "/sw/bin" "/boot/common/bin" "/resources/index/bin"
+-				do
+-
+-if ( test -r ""$i/$file"" )
+-then
+-	eval "PHPCONFIG=\"$i/$file\""
+-fi
+-
+-					if ( test -n "$PHPCONFIG" )
+-					then
+-						break
+-					fi
+-				done
+-			fi
+-                done
+-
++	    file="php-config${PHP_VER}"
++	    if ( test -n "$PHPPATH" )
++	    then
++		if ( test -r ""$PHPPATH/bin/$file"" )
++		then
++		    eval "PHPCONFIG=\"$PHPPATH/bin/$file\""
++		fi
++	    else
++		i="${prefix}/bin"
++		if ( test -r ""$i/$file"" )
++		then
++		    eval "PHPCONFIG=\"$i/$file\""
++		fi
+ 		if ( test -n "$PHPCONFIG" )
+ 		then
+-			HAVE_PHP="yes"
+-			PHPPREFIX=`$PHPCONFIG --prefix`
+-															PHPINCLUDES=`$PHPCONFIG --includes | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|"`
+-			PHPEXTDIR=`$PHPCONFIG --extension-dir`
+-			PHPVERSION=`$PHPCONFIG --version`
+-			PHPMAJORVERSION=`echo "$PHPVERSION" | cut -d'.' -f1`
+-		else
+-			HAVE_PHP=""
+-			{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: The PHP API will not be built." >&5
+-$as_echo "$as_me: WARNING: The PHP API will not be built." >&2;}
++		    break
+ 		fi
+-
+-																fi
+-
++	    fi
++	    if ( test -n "$PHPCONFIG" )
++	    then
++		HAVE_PHP="yes"
++		PHPPREFIX=`$PHPCONFIG --prefix`
++		PHPINCLUDES=`$PHPCONFIG --includes | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|" | sed -e "s|\\${prefix}|$PHPPREFIX|"`
++		PHPEXTDIR=`$PHPCONFIG --extension-dir`
++		PHPVERSION=`$PHPCONFIG --version`
++		PHPMAJORVERSION=`echo "$PHPVERSION" | cut -d'.' -f1`
++	    else
++		HAVE_PHP=""
++		{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: The PHP API will not be built." >&5
++		  $as_echo "$as_me: WARNING: The PHP API will not be built." >&2;}
++	    fi
++	fi
+ 
+ if ( test -n "$PHPINCLUDES" )
+ then
+@@ -35469,80 +35415,8 @@ fi
+ 
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for PHP config directory" >&5
+ $as_echo_n "checking for PHP config directory... " >&6; }
+-	PHPCONFDIR="none"
+-	PHPCONFSTYLE="unknown"
+-	if ( test -d "/etc/php.d" )
+-	then
+-		PHPCONFDIR="/etc/php.d"
+-		PHPCONFSTYLE="fedora"
+-	fi
+-	if ( test -d "/etc/php5/conf.d" )
+-	then
+-		PHPCONFDIR="/etc/php5/conf.d"
+-		PHPCONFSTYLE="suse"
+-	fi
+-	if ( test -d "/etc/php7/conf.d" )
+-	then
+-		PHPCONFDIR="/etc/php7/conf.d"
+-		PHPCONFSTYLE="suse"
+-	fi
+-	if ( test -d "/etc/php5/mods-available" )
+-	then
+-		PHPCONFDIR="/etc/php5/mods-available"
+-		if ( test -d "/etc/php5/conf.d" )
+-		then
+-			PHPCONFSTYLE="debian"
+-		else
+-			PHPCONFSTYLE="ubuntu"
+-		fi
+-	fi
+-	if ( test -d "/etc/php7/mods-available" )
+-	then
+-		PHPCONFDIR="/etc/php7/mods-available"
+-		if ( test -d "/etc/php7/conf.d" )
+-		then
+-			PHPCONFSTYLE="debian"
+-		else
+-			PHPCONFSTYLE="ubuntu"
+-		fi
+-	fi
+-	if ( test -d "`ls -d /etc/php/*/mods-available 2> /dev/null | sort | head -1`" )
+-	then
+-		PHPCONFDIR="`ls -d /etc/php/*/mods-available 2> /dev/null | sort | head -1`"
+-		if ( test -d "`ls -d /etc/php/*/conf.d 2> /dev/null | sort | head -1`" )
+-		then
+-			PHPCONFSTYLE="debian"
+-		else
+-			PHPCONFSTYLE="ubuntu"
+-		fi
+-	fi
+-	if ( test "$PHPCONFSTYLE" = "unknown" )
+-	then
+-		for dir in `ls -d /etc/php/* 2> /dev/null`
+-		do
+-			if ( test -d "$dir/conf.d" )
+-			then
+-				PHPCONFDIR="$dir/conf.d"
+-				PHPCONFSTYLE="solaris"
+-			fi
+-		done
+-	fi
+-	if ( test "$PHPCONFSTYLE" = "unknown" )
+-	then
+-		if ( test -d "/usr/local/etc/php" )
+-		then
+-			PHPCONFDIR="/usr/local/etc/php"
+-			PHPCONFSTYLE="freebsd"
+-		fi
+-	fi
+-	if ( test "$PHPCONFSTYLE" = "unknown" )
+-	then
+-		if ( test -d "/usr/pkg/etc/php.d" )
+-		then
+-			PHPCONFDIR="/usr/pkg/etc/php.d"
+-			PHPCONFSTYLE="netbsd"
+-		fi
+-	fi
++	PHPCONFDIR="/usr/pkg/etc/php/${PHP_VER}/php.d"
++	PHPCONFSTYLE="pkgsrc"
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $PHPCONFDIR - $PHPCONFSTYLE style" >&5
+ $as_echo "$PHPCONFDIR - $PHPCONFSTYLE style" >&6; }
+ 
