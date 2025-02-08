@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2021/05/24 19:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/02/08 04:00:54 taca Exp $
 
 DISTNAME=	horde-3.3.13
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 #MASTER_SITES+=	ftp://ftp.horde.org/pub/horde/
 
@@ -16,15 +16,15 @@ PHP_VERSIONS_ACCEPTED=	56 # php-mysql, default-on option
 
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.3.3:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=4.3.3:../../security/php-mcrypt
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=4.3.3:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-DB-[0-9]*:../../databases/pear-DB
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.3:../../archivers/php-zlib
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Console_Table-[0-9]*:../../textproc/pear-Console_Table
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-File_Find-[0-9]*:../../textproc/pear-File_Find
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-HTTP_Request-[0-9]*:../../www/pear-HTTP_Request
