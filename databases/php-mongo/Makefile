@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2024/02/24 16:15:00 taca Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/08 03:30:48 taca Exp $
 
 MODNAME=		mongo
+PKGREVISION=		1
 PECL_VERSION=		1.6.16
 CATEGORIES+=		databases
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2024/02/19 15:43:34 taca Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/08 03:30:47 taca Exp $
 #
 
 DISTNAME=	adodb496a
 PKGNAME=	adodb-4.96a
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
