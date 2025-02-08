@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/12/01 09:02:51 mef Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/08 09:28:38 mef Exp $
 
 R_PKGNAME=	spatstat.model
-R_PKGVER=	3.3-3
+R_PKGVER=	3.3-4
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,6 +17,11 @@ DEPENDS+=	R-spatstat.random>=3.2.1:../../geography/R-spatstat.random
 DEPENDS+=	R-spatstat.sparse>=3.0:../../geography/R-spatstat.sparse
 DEPENDS+=	R-spatstat.utils>=3.0.3:../../geography/R-spatstat.utils
 DEPENDS+=	R-tensor>=1.5:../../math/R-tensor
+
+# Packages suggested but not available:
+#   'sm', 'gsl', 'locfit', 'fftwtools', 'nleqslv', 'glmnet',
+TEST_DEPENDS+=	R-spatstat.linnet-[0-9]*:../../geography/R-spatstat.linnet
+TEST_DEPENDS+=	R-spatstat-[0-9]*:../../geography/R-spatstat
 
 USE_LANGUAGES=	c
 
