@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1165 2025/02/08 04:23:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1166 2025/02/08 05:23:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1551,3 +1551,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-moto to 5.0.28 [adam 2025-02-07]
 	Updated devel/ruby-jirametrics to 2.10 [schmonz 2025-02-08]
 	Updated devel/msgpack to 6.1.0nb2 [taca 2025-02-08]
+	Updated lang/ruby32-base to 3.2.7 [taca 2025-02-08]
+	Updated devel/ruby-readline to 3.2.7 [taca 2025-02-08]
+	Updated lang/ruby32 to 3.2.7 [taca 2025-02-08]
