@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2020/03/14 04:40:47 tpaul Exp $
-lib/php/20191128/gnupg.so
-share/examples/php/gnupg.ini
-@pkgdir include/php/ext/gnupg
+@comment $NetBSD: PLIST,v 1.2 2025/02/08 03:51:48 taca Exp $
+${PHP_EXTENSION_DIR}/gnupg.so
+${PHP_EGDIR}/gnupg.ini
+@pkgdir ${PHP_INCDIR}/ext/gnupg

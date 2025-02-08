@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/08/09 09:42:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 03:51:48 taca Exp $
 
 MODNAME=		gnupg
 PECL_VERSION=		1.5.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 
 MAINTAINER=		tpaul@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=		PHP module for interacting with gnupg
 
 CONFIGURE_ARGS+=	--with-gnupg=${PREFIX}/include
 
-INSTALLATION_DIRS+=	include/php/ext/gnupg
+INSTALLATION_DIRS+=	${PHP_INCDIR}/ext/gnupg
 
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../lang/php/ext.mk"

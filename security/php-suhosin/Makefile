@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2020/01/26 17:32:06 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/08 03:51:49 taca Exp $
 #
 
 MODNAME=		suhosin
 DISTNAME=		suhosin-${PECL_VERSION}
 PECL_VERSION=		0.9.38
+PKGREVISION=		1
 PECL_LEGACY_VERSION_SCHEME=	yes
 CATEGORIES=		www
 MASTER_SITES=		https://download.suhosin.org/
