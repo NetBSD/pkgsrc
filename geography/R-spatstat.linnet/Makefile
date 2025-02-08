@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/12/01 09:43:59 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 09:25:44 mef Exp $
 
 R_PKGNAME=	spatstat.linnet
-R_PKGVER=	3.2-3
+R_PKGVER=	3.2-5
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,8 +15,10 @@ DEPENDS+=	R-spatstat.model>=3.2.8:../../geography/R-spatstat.model
 DEPENDS+=	R-spatstat.random>=3.2.1:../../geography/R-spatstat.random
 DEPENDS+=	R-spatstat.utils>=2.2.0:../../geography/R-spatstat.utils
 
+# Packages suggested but not available: 'locfit'
+TEST_DEPENDS+=	R-spatstat-[0-9]*:../../geography/R-spatstat
+
 USE_LANGUAGES=	c
-# Packages suggested but not available: 'locfit', 'spatstat'
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
