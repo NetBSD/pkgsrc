@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/12/01 22:23:45 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 09:43:43 mef Exp $
 
 R_PKGNAME=	stars
-R_PKGVER=	0.6-7
+R_PKGVER=	0.6-8
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
