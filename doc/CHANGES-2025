@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1184 2025/02/08 10:50:04 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.1185 2025/02/08 10:53:37 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1567,12 +1567,9 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/R-spatstat.linnet to 3.2.5 [mef 2025-02-08]
 	Updated geography/R-spatstat.model to 3.3.4 [mef 2025-02-08]
 	Updated geography/R-spatstat.explore to 3.3.4 [mef 2025-02-08]
-<<<<<<< CHANGES-2025
-	Updated games/openrct2 to 0.4.19.1 [triaxx 2025-02-08]
-=======
 	Updated geography/R-stars to 0.6.8 [mef 2025-02-08]
 	Updated geography/R-terra to 1.8.15 [mef 2025-02-08]
 	Updated graphics/R-rgl to 1.3.17 [mef 2025-02-08]
 	Updated lang/R-sourcetools to 0.1.7.1 [mef 2025-02-08]
->>>>>>> 1.1183
 	Updated games/vms-empire to 1.18 [triaxx 2025-02-08]
+	Updated games/openrct2 to 0.4.19.1 [triaxx 2025-02-08]
