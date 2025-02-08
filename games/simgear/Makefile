@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.176 2024/12/29 15:09:48 adam Exp $
+# $NetBSD: Makefile,v 1.177 2025/02/08 12:23:27 wiz Exp $
 
 DISTNAME=	simgear-2020.3.11
-PKGREVISION=	49
+PKGREVISION=	50
 CATEGORIES=	games devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flightgear/release-${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,12 @@ CMAKE_CONFIGURE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=		-DSIMGEAR_SHARED=ON
 CMAKE_CONFIGURE_ARGS+=		-DSYSTEM_EXPAT=ON
 CMAKE_CONFIGURE_ARGS+=		-DSYSTEM_UDNS=ON
+
+SUBST_CLASSES+=			wrkdir
+SUBST_FILES.wrkdir+=		sgbuild/CMakeFiles/Export/*/SimGearTargets.cmake
+SUBST_STAGE.wrkdir=		post-configure
+SUBST_SED.wrkdir+=		-e "s,;${WRKDIR},,"
+SUBST_MESSAGE.wrkdir=		Removing WRKDIR reference from installed file.
 
 .include "../../mk/bsd.prefs.mk"
 
