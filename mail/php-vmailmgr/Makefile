@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2025/02/02 20:22:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 03:44:47 taca Exp $
 
 .include "../../mail/vmailmgr/Makefile.common"
 
 PKGNAME=		${PHP_PKG_PREFIX}-vmailmgr-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		mail
 
 MAINTAINER=		schmonz@NetBSD.org
@@ -10,9 +11,9 @@ HOMEPAGE=		https://untroubled.org/vmailmgr/
 COMMENT=		Virtual domain manager for qmail (PHP bindings)
 LICENSE=		gnu-gpl-v2
 
-CONFLICTS+=		php-vmailmgr-[0-9]*
+DEPENDS+=		php${PHP_VER}>=${PHP_BASE_VERS}:${PHPPKGSRCDIR}
 
-DEPENDS+=		php-[0-9]*:${PHPPKGSRCDIR}
+CONFLICTS+=		php-vmailmgr-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-php
 

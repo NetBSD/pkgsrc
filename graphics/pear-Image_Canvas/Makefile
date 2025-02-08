@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/12/24 14:39:33 taca Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/08 03:43:10 taca Exp $
 
 DISTNAME=	Image_Canvas-0.5.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2024/02/28 14:45:43 taca Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/08 03:44:46 taca Exp $
 
 DISTNAME=	Mail-2.0.0
+PKGREVISION=	1
 CATEGORIES=	mail
 
 MAINTAINER=	wenheping@gmail.com
