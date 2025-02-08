@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/04/30 08:40:06 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/02/08 07:45:45 mef Exp $
 
-BLAKE2s (R/sessioninfo_1.2.2.tar.gz) = 00a0cdb86fddc5e489b5717fb71aa6aa3c071976bf1921a02b6c63ccca8368fa
-SHA512 (R/sessioninfo_1.2.2.tar.gz) = 3d319f0006ca29d79ac089bdc9a37fdc3f8753ba353aefebb0a2b0264a28138264abf6ef3f1f200dca118bdc39816eb0eb2682f5adff330e469e184aa37e2abf
-Size (R/sessioninfo_1.2.2.tar.gz) = 170924 bytes
+BLAKE2s (R/sessioninfo_1.2.3.tar.gz) = f4b85c31b9aee8d75e37fa66cfd89897c4550520d54323824851ca173fcb0d72
+SHA512 (R/sessioninfo_1.2.3.tar.gz) = 6d87254a7ae0b033be178f5e41419f759031fc29f451b1727f6ed38b06a2418850b49d129f2930e980c54c7d556b00593eb01c8cd4a458c6e47ab68df6b28825
+Size (R/sessioninfo_1.2.3.tar.gz) = 175597 bytes
