@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1180 2025/02/08 09:43:49 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1181 2025/02/08 09:58:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1568,3 +1568,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/R-spatstat.model to 3.3.4 [mef 2025-02-08]
 	Updated geography/R-spatstat.explore to 3.3.4 [mef 2025-02-08]
 	Updated geography/R-stars to 0.6.8 [mef 2025-02-08]
+	Updated geography/R-terra to 1.8.15 [mef 2025-02-08]
