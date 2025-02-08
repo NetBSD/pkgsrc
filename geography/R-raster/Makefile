@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/11/29 23:13:28 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 08:42:06 mef Exp $
 
 R_PKGNAME=	raster
-R_PKGVER=	3.6-30
+R_PKGVER=	3.6-31
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
