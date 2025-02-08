@@ -1,0 +1,39 @@
+$NetBSD: patch-sapi_apache_apMakefile.tmpl,v 1.1 2025/02/08 02:57:59 taca Exp $
+
+* Adjust PHP library name.
+
+--- sapi/apache/apMakefile.tmpl.orig	2019-01-09 09:54:13.000000000 +0000
++++ sapi/apache/apMakefile.tmpl
+@@ -4,7 +4,7 @@
+ ##
+ 
+ #   the parametrized target
+-LIB=libphp5.$(LIBEXT)
++LIB=libphp$(PHP_VER).$(LIBEXT)
+ 
+ #   objects for building the static library
+ OBJS=mod_php5.o
+@@ -19,20 +19,20 @@ all: lib
+ lib: $(LIB)
+ 
+ #   build the static library by merging the object files
+-libphp5.a: $(OBJS) $(OBJS_LIB)
++libphp$(PHP_VER).a: $(OBJS) $(OBJS_LIB)
+ 	cp $(OBJS_LIB) $@
+ 	ar r $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
+ #   ugly hack to support older Apache-1.3 betas that don't set $LIBEXT
+-libphp5.: $(OBJS) $(OBJS_LIB)
++libphp$(PHP_VER).: $(OBJS) $(OBJS_LIB)
+ 	cp $(OBJS_LIB) $@
+ 	ar r $@ $(OBJS)
+ 	$(RANLIB) $@
+ 	cp libphp5. libphp5.a
+ 
+ #   build the shared object library by linking the object files
+-libphp5.so: $(SHLIB_OBJS) $(SHLIB_OBJS_LIB)
++libphp$(PHP_VER).so: $(SHLIB_OBJS) $(SHLIB_OBJS_LIB)
+ 	rm -f $@
+ 	$(LD_SHLIB) $(LDFLAGS_SHLIB) -o $@ $(SHLIB_OBJS) $(SHLIB_OBJS_LIB) $(LIBS) $(PHP_LIBS) 
+ 

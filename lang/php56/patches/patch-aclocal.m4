@@ -1,20 +1,10 @@
-$NetBSD: patch-acinclude.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
+$NetBSD: patch-aclocal.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
 
 * Adjust PHP directories.
 * Adjust PHP library name.
-* On Darwin, allow native iconv when Command Line Tools are not installed.
 
---- acinclude.m4.orig	2019-01-09 09:54:13.000000000 +0000
-+++ acinclude.m4
-@@ -143,7 +143,7 @@ test -d include || $php_shtool mkdir inc
- > Makefile.fragments
- dnl We need to play tricks here to avoid matching the grep line itself
- pattern=define
--$EGREP $pattern'.*include/php' $srcdir/configure|$SED 's/.*>//'|xargs touch 2>/dev/null
-+$EGREP $pattern'.*'${PHP_INCDIR} $srcdir/configure|$SED 's/.*>//'|xargs touch 2>/dev/null
- ])
- 
- dnl
+--- aclocal.m4.orig	2019-01-09 10:25:55.000000000 +0000
++++ aclocal.m4
 @@ -772,7 +772,7 @@ dnl PHP_BUILD_SHARED
  dnl
  AC_DEFUN([PHP_BUILD_SHARED],[
@@ -42,23 +32,7 @@ $NetBSD: patch-acinclude.m4,v 1.3 2025/02/08 02:57:59 taca Exp $
    php_sapi_module=static
  ])
  
-@@ -2488,7 +2488,15 @@ AC_DEFUN([PHP_SETUP_ICONV], [
-     done
- 
-     if test -z "$ICONV_DIR"; then
-+    case $host_alias in
-+    *darwin*)
-+      ICONV_DIR=/usr
-+      iconv_lib_name=iconv
-+      ;;
-+    *)
-       AC_MSG_ERROR([Please specify the install prefix of iconv with --with-iconv=<DIR>])
-+      ;;
-+    esac
-     fi
-   
-     if test -f $ICONV_DIR/$PHP_LIBDIR/lib$iconv_lib_name.a ||
-@@ -2771,8 +2779,8 @@ AC_DEFUN([PHP_CHECK_PDO_INCLUDES],[
+@@ -2771,8 +2771,8 @@ AC_DEFUN([PHP_CHECK_PDO_INCLUDES],[
        pdo_cv_inc_path=$abs_srcdir/ext
      elif test -f $abs_srcdir/ext/pdo/php_pdo_driver.h; then
        pdo_cv_inc_path=$abs_srcdir/ext
