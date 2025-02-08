@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2020/05/27 19:37:40 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/08 03:42:28 taca Exp $
 
 DISTNAME=	magento-1.9.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www finance
 # Upstream temporarily removed the option to download directly
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
@@ -17,15 +17,15 @@ PATCH_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
 PATCHFILES=	# none sofar
 EXTRACT_DIR=	${WRKDIR}/magento
 
-DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt-[0-9]*:../../security/php-mcrypt
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-soap-[0-9]*:../../net/php-soap
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_BASE_VERS}:../../www/php-curl
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=${PHP_BASE_VERS}:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=${PHP_BASE_VERS}:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=${PHP_BASE_VERS}:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}:../../net/php-soap
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 PHP_VERSIONS_ACCEPTED=	56
 
