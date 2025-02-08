@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2023/11/12 13:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/02/08 03:48:15 taca Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
 MODNAME=		ming
