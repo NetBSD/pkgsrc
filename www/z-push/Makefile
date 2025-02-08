@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2024/02/19 15:43:36 taca Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/08 04:07:19 taca Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
 ZPUSH_VERSION=	2.2.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://download.z-push.org/final/2.2/
 
@@ -25,8 +25,6 @@ BUILD_DEFS=	APACHE_USER APACHE_GROUP VARBASE
 USE_TOOLS=	pax
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} bin ${ZPUSHDIR}
-
-.include "../../lang/php/phpversion.mk"
 
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=${PHP_BASE_VERS}:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=${PHP_BASE_VERS}:../../devel/php-pcntl
@@ -53,13 +51,10 @@ CONF_FILES_PERMS+=	${EGDIR}/config.php ${PKG_SYSCONFDIR}/config.php \
 CONF_FILES_PERMS+=	${EGDIR}/z-push.conf ${PKG_SYSCONFDIR}/z-push.conf \
 			${REAL_ROOT_USER} ${APACHE_GROUP} 0640
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	z-push-admin.php
-REPLACE_FILES.php+=	z-push-top.php
-REPLACE_FILES.php+=	backend/zarafa/listfolders.php
-REPLACE_FILES.php+=	tools/migrate-2.0.x-2.1.0.php
+REPLACE_PHP+=	z-push-admin.php
+REPLACE_PHP+=	z-push-top.php
+REPLACE_PHP+=	backend/zarafa/listfolders.php
+REPLACE_PHP+=	tools/migrate-2.0.x-2.1.0.php
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2023/12/22 17:51:18 zafer Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/08 04:07:19 taca Exp $
 #
 
 DISTNAME=	websvn-2.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	#
 
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.websvn.info/
 COMMENT=	Subversion repository web frontend
 
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2019/07/03 07:28:23 nia Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/08 04:04:39 taca Exp $
 
 DISTNAME=	HTTP-1.4.1
+PKGREVISION=	1
 CATEGORIES+=	www
 
 MAINTAINER=	brook@nmsu.edu pkgsrc-users@NetBSD.org

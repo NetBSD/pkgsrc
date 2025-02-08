@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST.extras,v 1.7 2021/12/12 15:25:53 taca Exp $
-include/php/ext/apcu/apc.h
-include/php/ext/apcu/apc_api.h
-include/php/ext/apcu/apc_arginfo.h
-include/php/ext/apcu/apc_cache.h
-include/php/ext/apcu/apc_globals.h
-include/php/ext/apcu/apc_iterator.h
-include/php/ext/apcu/apc_lock.h
-include/php/ext/apcu/apc_mutex.h
-include/php/ext/apcu/apc_serializer.h
-include/php/ext/apcu/apc_sma.h
-include/php/ext/apcu/apc_stack.h
-include/php/ext/apcu/php_apc.h
-include/php/ext/apcu/php_apc_legacy_arginfo.h
+@comment $NetBSD: PLIST.extras,v 1.8 2025/02/08 04:04:39 taca Exp $
+${PHP_INCDIR}/ext/apcu/apc.h
+${PHP_INCDIR}/ext/apcu/apc_api.h
+${PHP_INCDIR}/ext/apcu/apc_arginfo.h
+${PHP_INCDIR}/ext/apcu/apc_cache.h
+${PHP_INCDIR}/ext/apcu/apc_globals.h
+${PHP_INCDIR}/ext/apcu/apc_iterator.h
+${PHP_INCDIR}/ext/apcu/apc_lock.h
+${PHP_INCDIR}/ext/apcu/apc_mutex.h
+${PHP_INCDIR}/ext/apcu/apc_serializer.h
+${PHP_INCDIR}/ext/apcu/apc_sma.h
+${PHP_INCDIR}/ext/apcu/apc_stack.h
+${PHP_INCDIR}/ext/apcu/php_apc.h
+${PHP_INCDIR}/ext/apcu/php_apc_legacy_arginfo.h

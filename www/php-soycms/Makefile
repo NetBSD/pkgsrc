@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2021/03/07 13:21:58 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/08 04:07:18 taca Exp $
 
 DISTNAME=	soycms_1.4.0c_mysql
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:S/_mysql//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
 # https://www.soycms.net/download
@@ -13,11 +13,11 @@ HOMEPAGE=	https://www.soycms.net/
 COMMENT=	Flexible and pluggable CMS
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.0:../../databases/php-pdo
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.3.0:../../databases/php-pdo_mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=${PHP_BASE_VERS}:../../databases/php-pdo_mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
