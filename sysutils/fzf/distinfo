@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2025/01/26 07:06:58 iquiw Exp $
+$NetBSD: distinfo,v 1.35 2025/02/08 06:59:43 iquiw Exp $
 
-BLAKE2s (fzf-0.58.0.tar.gz) = 34b9df686bf4129239b42d53b10c0668a33d9c7d230dbe70a63beca20f21ea7a
-SHA512 (fzf-0.58.0.tar.gz) = c9da6e0c4c6bca7b19fa7145f4bb712721da9464c0c4ef39ffc2de0a5482b43807b1d5c6d904b47b30e2b7e7e55061811c60132da09fa61168e132779c36b350
-Size (fzf-0.58.0.tar.gz) = 313214 bytes
+BLAKE2s (fzf-0.59.0.tar.gz) = 4c5b1126c4c042121b3af7a546087210a4150b357213148a6260e7fbc85be67f
+SHA512 (fzf-0.59.0.tar.gz) = 271f6870c680f7631fd9e9ee1fe154ef617f2329b8cf3611e24d0c0bac0b3a2f9c0e1be1eda874ffa8343a9c5669607650aaf607087b73a7ff71efa9e1f9994a
+Size (fzf-0.59.0.tar.gz) = 323970 bytes
 BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = c40097d4f4ad93e100ae36b295bd103784b6f696d22d9bf7278a742f99be5199
 SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = 2088d7467b0b19cc8e8f7ac6d22793fc3c4ae696e81d1b21c563e84ce787afdc8817d43ef0a4568ea6b0a3aed5ad4fc45ea25a874be733fbaf26bbe902e869ae
 Size (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = 92 bytes
@@ -24,12 +24,12 @@ Size (github.com_gdamore_tcell_v2_@v_v2.8.1.zip) = 274137 bytes
 BLAKE2s (github.com_google_go-cmp_@v_v0.6.0.mod) = becdef0764c43b119969e6c10646c6fafece1f936110eaa977757d2e2e381cd0
 SHA512 (github.com_google_go-cmp_@v_v0.6.0.mod) = 89e0014b0c3ffa2578ab38c237fee3d2280d6955e810c83e426d4924cec07cfc796adc45074fc237629c5ff88a93044dc406472febf1adf73deae82cb1b24b80
 Size (github.com_google_go-cmp_@v_v0.6.0.mod) = 41 bytes
-BLAKE2s (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.mod) = 6009f1d96423201ae6aea4e101e45b1fc50353fae3fb0d19b2c215ea3d526b77
-SHA512 (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.mod) = 0d3d9f97c0ac4285153f150b9a027bf496013b6ff96a71e08834157926e3ac00cfd0870a3b22f24a19abc28930f753829d74fedc13437deb4fa0a891b0a6bb4a
-Size (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.mod) = 50 bytes
-BLAKE2s (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.zip) = abc72d7f620d78c44d15186e8c2aec482f02a648b5b887b1d3a7e0ccfb3155fa
-SHA512 (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.zip) = be7a8669574c5b21daae5d248adfe6a43b960c53544659154326f1b49674df5df902dc97af9a4168e79fd07d42d40ff586ff4ca246eb904ba874e261157c6c55
-Size (github.com_junegunn_go-shellwords_@v_v0.0.0-20240813092932-a62c48c52e97.zip) = 10179 bytes
+BLAKE2s (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.mod) = 6009f1d96423201ae6aea4e101e45b1fc50353fae3fb0d19b2c215ea3d526b77
+SHA512 (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.mod) = 0d3d9f97c0ac4285153f150b9a027bf496013b6ff96a71e08834157926e3ac00cfd0870a3b22f24a19abc28930f753829d74fedc13437deb4fa0a891b0a6bb4a
+Size (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.mod) = 50 bytes
+BLAKE2s (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.zip) = 6e7400c311947fb732ce0c17cef7f78146921b01dd403fceb6536cf0627d82ae
+SHA512 (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.zip) = 99e8dbd4d80c26b03e9c7fbf045e60d5f33214749e943d7f37c5480bc49e3316c89c716936d18ee33d386417c3fc912d67390d6fa87baf478116d605fd6626c4
+Size (github.com_junegunn_go-shellwords_@v_v0.0.0-20250127100254-2aa3b3277741.zip) = 10171 bytes
 BLAKE2s (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.mod) = d659ba07c1540d9564017c785739d2bf124b20eaaf3ffd78fbb38efe21ec5321
 SHA512 (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.mod) = 270b19446ac9a396f5ce7a000873928a44edb1457f86d294971dae08be37cd64ddb8edc0293e100ee60d56c504851aa69ab11db0b4cfd46649c5f79459e40011
 Size (github.com_lucasb-eyer_go-colorful_@v_v1.2.0.mod) = 51 bytes
