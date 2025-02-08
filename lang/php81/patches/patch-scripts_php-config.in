@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_php-config.in,v 1.1 2025/02/08 02:59:30 taca Exp $
+
+* Adjust PHP directories.
+
+--- scripts/php-config.in.orig	2024-11-19 15:24:51.000000000 +0000
++++ scripts/php-config.in
+@@ -6,7 +6,7 @@ datarootdir="@datarootdir@"
+ exec_prefix="@exec_prefix@"
+ version="@PHP_VERSION@"
+ vernum="@PHP_VERSION_ID@"
+-include_dir="@includedir@/php"
++include_dir="@includedir@/php/@PHP_API_VERS@"
+ includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ ldflags="@PHP_LDFLAGS@"
+ libs="@EXTRA_LIBS@"
