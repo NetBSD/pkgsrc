@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1188 2025/02/08 14:05:17 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1189 2025/02/08 14:06:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1576,3 +1576,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/simgear to 2020.3.11nb50 [wiz 2025-02-08]
 	Updated ham/gnuradio-network to 3.10.9.2nb13 [wiz 2025-02-08]
 	Updated lang/gcc13-gnat to 13.3.0nb2 [wiz 2025-02-08]
+	Added lang/gcc13-gnat-libs version 13.3.0nb3 [wiz 2025-02-08]
