@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/08 14:26:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/08 18:45:21 pho Exp $
 
 DISTNAME=	vv-3.1.0.20250208
 CATEGORIES=	graphics
@@ -24,6 +24,9 @@ CMAKE_CONFIGURE_ARGS+=	-DCPM_tracy_SOURCE=${WRKSRC}/tracy
 # hash from CMakeLists.txt
 GITHUB_SUBMODULES+=	nothings stb 2e2bef463a5b53ddf8bb788e25da6b8506314c08 stb
 CMAKE_CONFIGURE_ARGS+=	-DCPM_stb_SOURCE=${WRKSRC}/stb
+
+# Turn off -march=native that is enabled by default.
+CMAKE_CONFIGURE_ARGS+=	-DMARCH_NATIVE:BOOL=OFF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${CMAKE_BUILD_DIR}/vv ${DESTDIR}${PREFIX}/bin
