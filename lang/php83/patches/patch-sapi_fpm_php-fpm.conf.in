@@ -1,15 +1,23 @@
-$NetBSD: patch-sapi_fpm_php-fpm.conf.in,v 1.1 2023/11/30 16:14:50 taca Exp $
+$NetBSD: patch-sapi_fpm_php-fpm.conf.in,v 1.2 2025/02/08 02:59:57 taca Exp $
 
 Set proper default configuration values.
 
---- sapi/fpm/php-fpm.conf.in.orig	2015-06-23 17:33:33.000000000 +0000
+--- sapi/fpm/php-fpm.conf.in.orig	2024-12-17 18:18:02.000000000 +0000
 +++ sapi/fpm/php-fpm.conf.in
-@@ -14,7 +14,7 @@
+@@ -14,14 +14,14 @@
  ; Pid file
  ; Note: the default prefix is @EXPANDED_LOCALSTATEDIR@
  ; Default Value: none
 -;pid = run/php-fpm.pid
-+pid = run/php-fpm.pid
++pid = run/php-fpm@PHP_VER@.pid
  
  ; Error log file
  ; If it's set to "syslog", log is sent to syslogd instead of being written
+ ; into a local file.
+ ; Note: the default prefix is @EXPANDED_LOCALSTATEDIR@
+ ; Default Value: log/php-fpm.log
+-;error_log = log/php-fpm.log
++;error_log = log/php-fpm@PHP_VER@.log
+ 
+ ; syslog_facility is used to specify what type of program is logging the
+ ; message. This lets syslogd specify that messages from different facilities
