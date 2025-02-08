@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2023/12/21 13:07:17 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/08 03:27:04 taca Exp $
 #
 
 DISTNAME=	ampache-3.5.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ampache/}
 GITHUB_PROJECT=	ampache
@@ -12,11 +12,11 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	https://ampache.org/
 COMMENT=	Web-based Audio file manager
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=0:../../devel/php-gettext
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=0:../../databases/php-mysql
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=${PHP_BASE_VERS}:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=${PHP_BASE_VERS}:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=${PHP_BASE_VERS}:../../databases/php-mysql
 
 PHP_VERSIONS_ACCEPTED=	56
 NO_BUILD=		yes
