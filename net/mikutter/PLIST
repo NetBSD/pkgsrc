@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2024/12/30 20:41:28 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.56 2025/02/08 14:13:53 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -487,6 +487,7 @@ share/mikutter/plugin/intent_selector/listview.rb
 share/mikutter/plugin/libnotify/.mikutter.yml
 share/mikutter/plugin/libnotify/libnotify.rb
 share/mikutter/plugin/mastodon/.mikutter.yml
+share/mikutter/plugin/mastodon/Gemfile
 share/mikutter/plugin/mastodon/api.rb
 share/mikutter/plugin/mastodon/extractcondition.rb
 share/mikutter/plugin/mastodon/mastodon.rb
@@ -529,6 +530,7 @@ share/mikutter/plugin/mastodon_setting/.mikutter.yml
 share/mikutter/plugin/mastodon_setting/instance_setting_list.rb
 share/mikutter/plugin/mastodon_setting/mastodon_setting.rb
 share/mikutter/plugin/mastodon_sse_streaming/.mikutter.yml
+share/mikutter/plugin/mastodon_sse_streaming/Gemfile
 share/mikutter/plugin/mastodon_sse_streaming/connection.rb
 share/mikutter/plugin/mastodon_sse_streaming/cooldown_time.rb
 share/mikutter/plugin/mastodon_sse_streaming/error.rb
