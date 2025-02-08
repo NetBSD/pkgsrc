@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2019/07/03 07:28:21 nia Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/08 03:30:47 taca Exp $
 
 DISTNAME=	MDB2_Driver_mysqli-1.5.0b4
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +9,7 @@ HOMEPAGE=	https://pear.php.net/package/MDB2_Driver_mysqli
 COMMENT=	Mysqli MDB2 driver
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PHP_PKG_PREFIX}-mysqli-[0-9]*:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=${PHP_BASE_VERS}:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.5:../../databases/pear-MDB2
 
 PEAR_DIRRM_EXCLUDE=	lib/php/MDB2
