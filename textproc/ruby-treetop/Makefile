@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2022/12/04 16:10:18 taca Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/09 15:03:43 taca Exp $
 
-DISTNAME=	treetop-1.6.12
+DISTNAME=	treetop-1.6.14
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
