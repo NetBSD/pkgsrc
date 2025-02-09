@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1236 2025/02/09 14:17:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1237 2025/02/09 14:19:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1643,3 +1643,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-red-datasets to 0.1.8 [taca 2025-02-09]
 	Updated www/cpp-httplib to 0.18.7 [wiz 2025-02-09]
 	Added devel/ruby-traces version 0.15.2 [taca 2025-02-09]
+	Updated devel/libffi to 3.4.7 [wiz 2025-02-09]
