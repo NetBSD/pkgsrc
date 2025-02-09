@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2024/09/22 12:43:59 taca Exp $
+# $NetBSD: Makefile,v 1.49 2025/02/09 15:23:53 taca Exp $
 
-DISTNAME=	jekyll-4.3.4
+DISTNAME=	jekyll-4.4.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
