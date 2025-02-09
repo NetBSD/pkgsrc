@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/12/08 16:23:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/09 14:22:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/lib/async.rb
 ${GEM_LIBDIR}/lib/async/barrier.md
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/lib/async/condition.md
 ${GEM_LIBDIR}/lib/async/condition.rb
 ${GEM_LIBDIR}/lib/async/console.rb
 ${GEM_LIBDIR}/lib/async/idler.rb
+${GEM_LIBDIR}/lib/async/limited_queue.rb
 ${GEM_LIBDIR}/lib/async/list.rb
 ${GEM_LIBDIR}/lib/async/node.rb
 ${GEM_LIBDIR}/lib/async/notification.rb
