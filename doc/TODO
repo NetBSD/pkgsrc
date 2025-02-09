@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25418 2025/02/09 14:19:13 wiz Exp $
+$NetBSD: TODO,v 1.25419 2025/02/09 14:24:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
-	o googletest-1.16.0
 	o gossip-0.31
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
@@ -813,7 +812,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o jed-0.99-18
 	o jetty7-7.6.17
 	o jetty9-9.3.7
-	o jj-0.26.0
+	o jj-0.26.0 [wip]
 	o jools-1.0
 	o jpilot-syncmal-0.81
 	o jrep-1.1.1
