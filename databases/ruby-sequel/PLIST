@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.125 2025/01/02 04:58:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.126 2025/02/09 08:52:04 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -159,6 +159,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/pg_timestamptz.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/provenance.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
+${GEM_LIBDIR}/lib/sequel/extensions/query_blocker.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/round_timestamps.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/run_transaction_hooks.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/s.rb
