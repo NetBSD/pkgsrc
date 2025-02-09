@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1206 2025/02/09 08:49:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1207 2025/02/09 08:49:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/roundcube-plugin-zipdownload to 1.6.10 [taca 2025-02-09]
 	Updated games/xye to 0.12.2 [triaxx 2025-02-09]
 	Updated security/p5-CryptX to 0.085 [wiz 2025-02-09]
+	Updated mail/p5-MIME-Types to 2.27 [wiz 2025-02-09]
