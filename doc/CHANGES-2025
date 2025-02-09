@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1222 2025/02/09 10:26:52 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1223 2025/02/09 10:28:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1629,3 +1629,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-msgpack to 1.8.0 [taca 2025-02-09]
 	Updated devel/mise to 2025.2.2 [pin 2025-02-09]
 	Updated devel/ruby-redmine50 to 5.0.11 [taca 2025-02-09]
+	Updated devel/ruby-redmine51 to 5.1.6 [taca 2025-02-09]
