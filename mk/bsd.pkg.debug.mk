@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.debug.mk,v 1.21 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.pkg.debug.mk,v 1.22 2025/02/09 00:00:26 rillig Exp $
 #
 # Public targets:
 #
@@ -66,6 +66,8 @@ _show-dbginfo-configure:
 	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_ENV (sorted alphabetically):\\n"; ${CONFIGURE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
 	@${PRINTF} "\\n"
+	@${PRINTF} "CONFIGURE_ENV PATH:\\n"; ${CONFIGURE_ENV:MPATH=*:S,PATH=,,:S,:, ,g:@dir@${PRINTF} "\\t%s\\n" ${dir};@}
+	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_SCRIPT:\\n\\t%s\\n" ${CONFIGURE_SCRIPT}
 	@${PRINTF} "\\n"
 	@${PRINTF} "CONFIGURE_ARGS:\\n"; ${CONFIGURE_ARGS:@x@${PRINTF} "\\t%s\\n" ${x:S,<,\<,};@}
@@ -128,6 +130,8 @@ _show-dbginfo-build:
 	@${PRINTF} "BUILD_DIRS:\\n"; ${BUILD_DIRS:@x@${PRINTF} "\\t%s\\n" ${x};@}
 	@${PRINTF} "\\n"
 	@${PRINTF} "MAKE_ENV (sorted alphabetically):\\n"; ${MAKE_ENV:O:@x@${PRINTF} "\\t%s\\n" ${x};@}
+	@${PRINTF} "\\n"
+	@${PRINTF} "MAKE_ENV PATH:\\n"; ${MAKE_ENV:MPATH=*:S,PATH=,,:S,:, ,g:@dir@${PRINTF} "\\t%s\\n" ${dir};@}
 	@${PRINTF} "\\n"
 	@${PRINTF} "MAKE_PROGRAM:\\n\\t%s\\n" ${MAKE_PROGRAM:Q}
 	@${PRINTF} "\\n"
