@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1214 2025/02/09 09:03:33 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1215 2025/02/09 09:06:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1605,3 +1605,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-arel-helpers to 2.16.0 [taca 2025-02-09]
 	Updated devel/ruby-i18n to 1.14.7 [taca 2025-02-09]
 	Updated devel/ruby-io-event to 1.8.4 [taca 2025-02-09]
+	Updated devel/ruby-irb to 1.15.1 [taca 2025-02-09]
