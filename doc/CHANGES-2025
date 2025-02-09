@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1208 2025/02/09 08:50:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1209 2025/02/09 08:50:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1599,3 +1599,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-CryptX to 0.085 [wiz 2025-02-09]
 	Updated mail/p5-MIME-Types to 2.27 [wiz 2025-02-09]
 	Updated security/p5-Mozilla-CA to 20250202 [wiz 2025-02-09]
+	Updated devel/p5-Test-Warnings to 0.038 [wiz 2025-02-09]
