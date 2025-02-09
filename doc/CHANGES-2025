@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1259 2025/02/09 15:09:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1260 2025/02/09 15:11:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1666,3 +1666,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-treetop to 1.6.14 [taca 2025-02-09]
 	Updated textproc/ruby-kramdown-rfc2629 to 1.7.23 [taca 2025-02-09]
 	Updated time/ruby-hitimes to 3.1.0 [taca 2025-02-09]
+	Updated time/ruby-timers to 4.4.0 [taca 2025-02-09]
