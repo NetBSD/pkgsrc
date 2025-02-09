@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15.2.1 2025/01/09 12:07:14 maya Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2025/02/09 14:01:44 maya Exp $
 
-FIREFOX_VER=	115.19.0esr
+FIREFOX_VER=	115.20.0esr
 PKGNAME=	firefox115-l10n-${FIREFOX_VER:S/b/beta/:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
