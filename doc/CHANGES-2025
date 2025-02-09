@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1242 2025/02/09 14:27:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1243 2025/02/09 14:28:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1649,3 +1649,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/googletest to 1.16.0 [wiz 2025-02-09]
 	Updated graphics/ruby-RMagick to 6.1.1 [taca 2025-02-09]
 	Updated sysutils/snmp_exporter to 0.28.0 [wiz 2025-02-09]
+	Updated security/py-cyclonedx-python-lib to 8.7.0 [wiz 2025-02-09]
