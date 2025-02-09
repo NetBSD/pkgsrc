@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2022/12/04 16:35:12 taca Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/09 14:56:25 taca Exp $
 
-DISTNAME=	net-scp-4.0.0
+DISTNAME=	net-scp-4.1.0
 CATEGORIES=	net security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
