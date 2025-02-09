@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2022/12/04 16:35:12 taca Exp $
+$NetBSD: distinfo,v 1.16 2025/02/09 14:56:25 taca Exp $
 
-BLAKE2s (net-scp-4.0.0.gem) = 7b39f73241d0450da7989a73ca4e4c7b3a465899d54dc7c73bd689728d670d07
-SHA512 (net-scp-4.0.0.gem) = 02c2efcbcd6836b6f37c8422cdf55c2104f0f17f0e312464595ebbff31301e4b9fb92ce64049094be318721ed69b3d5a172236fccba9f9b0740c3f6f715f122e
-Size (net-scp-4.0.0.gem) = 31744 bytes
+BLAKE2s (net-scp-4.1.0.gem) = cb5b7779256a5f9a4510a4d5bfef265c4d60fb5b08cf628e6a33fe68d5d8db84
+SHA512 (net-scp-4.1.0.gem) = 8842cd53974c3fc01d976dec7a323c3deaf511907beffcce783cf0b59a11752361b8d5e03586fe5220a3eedbb4f666d9d1e596046843126599730631e71352d3
+Size (net-scp-4.1.0.gem) = 33280 bytes

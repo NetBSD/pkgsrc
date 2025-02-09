@@ -1,13 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2019/11/05 15:28:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/09 14:56:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/lib/net/scp.rb
 ${GEM_LIBDIR}/lib/net/scp/download.rb
 ${GEM_LIBDIR}/lib/net/scp/errors.rb
