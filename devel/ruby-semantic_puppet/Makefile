@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2023/04/27 14:43:51 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/09 14:11:51 taca Exp $
 
-DISTNAME=	semantic_puppet-1.1.0
+DISTNAME=	semantic_puppet-1.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
