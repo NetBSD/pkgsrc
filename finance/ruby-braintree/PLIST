@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/11/06 14:39:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/02/09 14:24:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/lib/braintree/credit_card_verification_search.rb
 ${GEM_LIBDIR}/lib/braintree/customer.rb
 ${GEM_LIBDIR}/lib/braintree/customer_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/customer_search.rb
+${GEM_LIBDIR}/lib/braintree/customer_session_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/descriptor.rb
 ${GEM_LIBDIR}/lib/braintree/digest.rb
 ${GEM_LIBDIR}/lib/braintree/disbursement.rb
@@ -63,6 +64,16 @@ ${GEM_LIBDIR}/lib/braintree/facilitator_details.rb
 ${GEM_LIBDIR}/lib/braintree/gateway.rb
 ${GEM_LIBDIR}/lib/braintree/google_pay_card.rb
 ${GEM_LIBDIR}/lib/braintree/granted_payment_instrument_update.rb
+${GEM_LIBDIR}/lib/braintree/graphql/enums/recommendations.rb
+${GEM_LIBDIR}/lib/braintree/graphql/enums/recommended_payment_option.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/create_customer_session_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/customer_recommendations_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/customer_session_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/phone_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/inputs/update_customer_session_input.rb
+${GEM_LIBDIR}/lib/braintree/graphql/types/customer_recommendations_payload.rb
+${GEM_LIBDIR}/lib/braintree/graphql/types/payment_options.rb
+${GEM_LIBDIR}/lib/braintree/graphql/unions/customer_recommendations.rb
 ${GEM_LIBDIR}/lib/braintree/graphql_client.rb
 ${GEM_LIBDIR}/lib/braintree/http.rb
 ${GEM_LIBDIR}/lib/braintree/local_payment_completed.rb
@@ -194,6 +205,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/credit_card_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/credit_card_verification_search_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/credit_card_verification_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/customer_search_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/customer_session_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/customer_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/disbursement_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/discount_spec.rb
@@ -245,6 +257,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/credit_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/credit_card_verification_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/customer_session_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/customer_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/digest_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/disbursement_spec.rb
@@ -259,6 +272,12 @@ ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_request_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_response_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/create_customer_session_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_recommendations_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_session_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/phone_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql/update_customer_session_input_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/graphql_client_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/http_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_completed_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/local_payment_expired_spec.rb
