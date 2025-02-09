@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2024/12/26 22:20:16 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/02/09 14:44:08 wiz Exp $
 
 DISTNAME=	qtgrpc-everywhere-src-${QTVERSION}
 PKGNAME=	qt6-qtgrpc-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	Qt6 gRPC and Protobuf module
 CATEGORIES=	net
 LICENSE=	gnu-gpl-v3
