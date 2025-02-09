@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2024/11/28 19:44:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/09 00:28:20 rillig Exp $
 
 DISTNAME=	jdk17u-${GITHUB_TAG:C/\+/-/}
 PKGNAME=	openjdk17-1.${GITHUB_TAG:C/\+/./:C/jdk-([.0-9]+).*/\1/}
@@ -40,6 +40,7 @@ BUILDLINK_TRANSFORM+=	opt:-Wl,--hash-style=gnu:-Wl,--hash-style=sysv
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_STRICT=	no # generates the configure script during the build
+GNU_CONFIGURE_ICONV=	no
 USE_GNU_CONFIGURE_HOST=	no
 CONFIGURE_SCRIPT=	configure
 CONFIG_SHELL=		bash
