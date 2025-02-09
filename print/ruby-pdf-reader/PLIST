@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2022/12/04 14:20:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2025/02/09 14:46:22 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/examples/text.rb
 ${GEM_LIBDIR}/examples/version.rb
 ${GEM_LIBDIR}/lib/pdf-reader.rb
 ${GEM_LIBDIR}/lib/pdf/reader.rb
+${GEM_LIBDIR}/lib/pdf/reader/advanced_text_run_filter.rb
 ${GEM_LIBDIR}/lib/pdf/reader/aes_v2_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/aes_v3_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Bold.afm
