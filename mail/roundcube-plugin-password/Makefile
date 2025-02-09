@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/02/08 03:44:47 taca Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/09 08:40:17 taca Exp $
 
 PLUGIN=		password
-PKGREVISION=	2
 
 MAINTAINER=	taca@NetBSD.org
 COMMENT=	Password change plugin for roundcube
