@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1212 2025/02/09 08:54:25 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1213 2025/02/09 08:56:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/p5-Text-CSV_XS to 1.60 [wiz 2025-02-09]
 	Updated databases/ruby-sequel to 5.89.0 [taca 2025-02-09]
 	Updated databases/ruby-arel-helpers to 2.16.0 [taca 2025-02-09]
+	Updated devel/ruby-i18n to 1.14.7 [taca 2025-02-09]
