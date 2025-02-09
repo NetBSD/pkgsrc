@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2024/12/27 08:21:08 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2025/02/09 20:05:39 gutteridge Exp $
 
-VERSION=	2.8.3
+VERSION=	2.8.4
 DISTNAME=	xfce4-whiskermenu-plugin-${VERSION}
-PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/${VERSION:R}/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,9 +11,8 @@ HOMEPAGE=	https://gottcode.org/xfce4-whiskermenu-plugin/
 COMMENT=	Alternate application launcher for Xfce
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake pkg-config msgfmt perl intltool
+USE_TOOLS+=	gmake pkg-config
 
 # AccountsService is an optional dependency; the version in pkgsrc is too old
 # at present.
@@ -25,6 +23,7 @@ CMAKE_CONFIGURE_ARGS+=	-DENABLE_GTK_LAYER_SHELL=No
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-O1
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
