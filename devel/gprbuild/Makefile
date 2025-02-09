@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 14:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/09 13:33:26 wiz Exp $
 
 DISTNAME=	gprbuild-25.0.0
 CATEGORIES=	devel
@@ -24,7 +24,6 @@ GCC_REQD+=	13
 OBJDIR=		${WRKDIR}/build
 BOOTSTRAPDIR=	${WRKDIR}/bootstrap
 
-CONFIG_PROJECT=		${WRKDIR}/buildlink.cgpr
 GPR_PROJECT_PATH=	${WRKDIR}/.buildlink/share/gpr
 
 # environment for bootstrap build
@@ -42,14 +41,14 @@ CONFIGURE_ARGS+=	SOURCE_DIR=${WRKSRC}
 
 BUILD_DIRS=		${OBJDIR}
 MAKE_FILE=		${WRKSRC}/Makefile
-BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='--config=${CONFIG_PROJECT} -aP ${GPR_PROJECT_PATH}'
+BUILD_MAKE_FLAGS=	GPRBUILD_OPTIONS='-aP ${GPR_PROJECT_PATH}'
 
 INSTALL_DIRS=		${OBJDIR}
-INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='--config=${CONFIG_PROJECT} -aP ${GPR_PROJECT_PATH}'
+INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS='-aP ${GPR_PROJECT_PATH}'
 
 SUBST_CLASSES+=			buildlink
-SUBST_STAGE.buildlink=		post-configure
-SUBST_FILES.buildlink=		${CONFIG_PROJECT}
+SUBST_STAGE.buildlink=		pre-configure
+SUBST_FILES.buildlink=		../build/default.cgpr deps/xmlada/default.cgpr
 SUBST_MESSAGE.buildlink=	Set work directory path in config project
 SUBST_VARS.buildlink=		WRKDIR
 
@@ -65,9 +64,10 @@ GENERATE_PLIST+= \
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-configure:
-	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${WRKDIR}/
+post-extract:
 	${RUN} ${MKDIR} ${OBJDIR}
+	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${OBJDIR}/default.cgpr
+	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${WRKSRC}/deps/xmlada/default.cgpr
 
 post-configure:
 	${RUN} cd ${WRKSRC}/deps/xmlada \
@@ -88,6 +88,6 @@ pre-build:
 # Build xmlada with bootstrapped gprbuild. It then will be used in normal build.
 	${RUN} cd ${WRKSRC}/deps/xmlada \
 	&& set -x ; env ${MAKE_ENV} \
-	${MAKE_PROGRAM} all install GPROPTS='--config=${CONFIG_PROJECT}'
+	${MAKE_PROGRAM} all install
 
 .include "../../mk/bsd.pkg.mk"
