@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1273 2025/02/09 19:18:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1274 2025/02/09 20:05:58 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/xvile to 9.8za [wiz 2025-02-09]
 	Updated devel/bacon to 3.10.0 [pin 2025-02-09]
 	Updated x11/libfm-qt to 2.1.0nb3 [wiz 2025-02-09]
+	Updated x11/xfce4-whiskermenu-plugin to 2.8.4 [gutteridge 2025-02-09]
