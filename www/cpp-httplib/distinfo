@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2025/01/19 19:25:18 wiz Exp $
+$NetBSD: distinfo,v 1.7 2025/02/09 14:15:10 wiz Exp $
 
-BLAKE2s (cpp-httplib-0.18.5.tar.gz) = a108342e110aa1c7317c51aba3718e43ef863c3c936d1cbaaaf2b12df9c1492f
-SHA512 (cpp-httplib-0.18.5.tar.gz) = f4bcac52eac856acf6ae3e358f6a92b5f40c3afbf5f999172f0c93f1bc1d4b6414023f69dd078e1ea30e0f9f08a70501e441d4b087482049cd0d08823aac095d
-Size (cpp-httplib-0.18.5.tar.gz) = 1327436 bytes
+BLAKE2s (cpp-httplib-0.18.7.tar.gz) = 4a53174a64d6410808bffa1ccc3c08a1af90a3b1dc9c7368f7a22618853631dc
+SHA512 (cpp-httplib-0.18.7.tar.gz) = 96bfd8665dc9b6a6055eae5d3328bdc48db785de15ca86de0d022604460b2e95412ed95b6fcc606c98534984cec67e34be0e03c866c8e89a0bd5bbd55feff409
+Size (cpp-httplib-0.18.7.tar.gz) = 1326497 bytes
