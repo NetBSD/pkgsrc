@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2024/02/18 20:55:51 adam Exp $
+# $NetBSD: Makefile,v 1.54 2025/02/09 14:19:04 wiz Exp $
 
-DISTNAME=	libffi-3.4.6
+DISTNAME=	libffi-3.4.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libffi/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
