@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2025/01/19 16:47:39 taca Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/09 15:16:05 taca Exp $
 
-DISTNAME=	aws-sdk-secretsmanager-1.111.0
+DISTNAME=	aws-sdk-secretsmanager-1.112.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
