@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/07/03 05:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/09 00:28:20 rillig Exp $
 
 DISTNAME=	libass-0.17.3
 CATEGORIES=	multimedia
@@ -14,6 +14,7 @@ LICENSE=	isc
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--disable-asm
 PKGCONFIG_OVERRIDE+=	libass.pc.in
 

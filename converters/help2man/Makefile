@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2024/04/30 12:22:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.73 2025/02/09 00:28:19 rillig Exp $
 
 DISTNAME=	help2man-1.49.3
 CATEGORIES=	converters
@@ -16,6 +16,7 @@ USE_GCC_RUNTIME=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run gmake
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing install lib paths.

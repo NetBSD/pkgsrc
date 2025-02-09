@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/11/14 22:20:58 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/02/09 00:28:20 rillig Exp $
 
 DISTNAME=	libbluray-1.3.4
 PKGREVISION=	8
@@ -14,6 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--disable-bdjava-jar
 CONFIGURE_ARGS+=	--disable-optimizations
 PKGCONFIG_OVERRIDE+=	src/libbluray.pc.in

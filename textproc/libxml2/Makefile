@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2024/11/14 22:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2025/02/09 00:28:20 rillig Exp $
 
 PKGREVISION= 3
 .include "../../textproc/libxml2/Makefile.common"
@@ -12,6 +12,7 @@ FORCE_C_STD=		c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 CONFIGURE_ARGS+=	--with-lzma=${BUILDLINK_PREFIX.xz}

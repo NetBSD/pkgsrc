@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2025/01/06 21:49:06 ktnb Exp $
+# $NetBSD: Makefile,v 1.52 2025/02/09 00:28:20 rillig Exp $
 
 DISTNAME=	dosbox-0.74-3
 PKGNAME=	dosbox-0.74.3
@@ -15,6 +15,7 @@ TOOL_DEPENDS+=	icoutils-[0-9]*:../../graphics/icoutils
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS.Darwin+=	--disable-dynrec
 CPPFLAGS.SunOS+=	-DDISABLE_JOYSTICK
 .include "../../mk/compiler.mk"

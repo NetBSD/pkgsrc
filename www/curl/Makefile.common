@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2025/02/05 08:51:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2025/02/09 00:28:21 rillig Exp $
 # used by www/libcurl-gnutls/Makefile
 
 DISTNAME=	curl-8.12.0
@@ -22,6 +22,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-impacket-[0-9]*:../../net/py-impacket
 USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 # Some systems use bundles instead of directories; this needs configuring
 # because curl doesn't use default validation.
 .if !empty(SSLCERTBUNDLE)
