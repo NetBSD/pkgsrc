@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2025/02/08 14:14:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/02/09 13:33:26 wiz Exp $
 
 BUILDLINK_TREE+=	gprbuild
 
@@ -30,8 +30,22 @@ INSTALL_ENV+=		GPR_PROJECT_PATH=${GPR_PROJECT_PATH:Q}
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}'$$$$ORIGIN'
 
-GPRBUILD_OPTIONS+=	-eL -R -largs $${LDFLAGS} -gargs
+GPRBUILD_OPTIONS?=	-eL -R -largs $${LDFLAGS} -gargs
+GPRINSTALL_OPTIONS?=	#empty
 BUILD_MAKE_FLAGS+=	GPRBUILD_OPTIONS=${GPRBUILD_OPTIONS:Q}
+INSTALL_MAKE_FLAGS+=	GPRINSTALL_OPTIONS=${GPRINSTALL_OPTIONS:Q}
+
+SUBST_CLASSES+=			gprbuildlink
+SUBST_STAGE.gprbuildlink=	pre-configure
+SUBST_FILES.gprbuildlink=	default.cgpr
+SUBST_MESSAGE.gprbuildlink=	Set directory path in config file
+SUBST_VARS.gprbuildlink=	WRKDIR
+
+BUILDLINK_TARGETS+=	gprbuild-make-config-project
+
+.PHONY: gprbuild-make-config-project
+gprbuild-make-config-project:
+	${RUN} ${CP} ${BUILDLINK_PKGSRCDIR.gprbuild}/files/buildlink.cgpr ${WRKSRC}/default.cgpr
 
 .endif
 
