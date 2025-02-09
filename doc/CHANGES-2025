@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1216 2025/02/09 09:21:58 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.1217 2025/02/09 09:25:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1623,3 +1623,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/ruby-poppler to 4.2.7 [tsutsui 2025-02-09]
 	Updated x11/ruby-gtk3 to 4.2.7 [tsutsui 2025-02-09]
 	Updated x11/ruby-gtksourceview3 to 4.2.7 [tsutsui 2025-02-09]
+	Updated devel/ruby-iruby to 0.8.0 [taca 2025-02-09]
