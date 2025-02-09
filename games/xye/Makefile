@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2025/01/06 21:49:19 ktnb Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/09 08:45:39 triaxx Exp $
 #
 
-DISTNAME=	xye-0.12.1
-PKGREVISION=	4
+DISTNAME=	xye-0.12.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xye/0.12.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xye.sourceforge.net/
 COMMENT=	Kye clone
+LICENSE=	zlib AND xye-resource
 
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc

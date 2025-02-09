@@ -1,13 +1,14 @@
-$NetBSD: patch-src_gen.cpp,v 1.3 2013/06/13 21:42:22 joerg Exp $
+$NetBSD: patch-src_gen.cpp,v 1.4 2025/02/09 08:45:39 triaxx Exp $
 
---- src/gen.cpp.orig	2013-06-13 19:51:44.000000000 +0000
+Add missing header files.
+
+--- src/gen.cpp.orig	2025-02-09 07:32:23.472515921 +0000
 +++ src/gen.cpp
-@@ -21,6 +21,8 @@ Permission is granted to anyone to use t
+@@ -21,6 +21,7 @@ Permission is granted to anyone to use t
  #include<cstdio>
  #include<iostream>
  #include<fstream>
 +#include<ctime>
-+#include <unistd.h>
+ #include <unistd.h>
  
  const float F_RAND_MAX = (float)(RAND_MAX);
- 
