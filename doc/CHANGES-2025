@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1250 2025/02/09 14:44:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1251 2025/02/09 14:44:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic-core to 2.29.0 [wiz 2025-02-09]
 	Updated net/ruby-net-imap to 0.5.6 [taca 2025-02-09]
 	Updated devel/abseil to 20250127.0 [wiz 2025-02-09]
+	Updated net/ruby-recog to 3.1.13 [taca 2025-02-09]
