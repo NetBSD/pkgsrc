@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1275 2025/02/09 21:21:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1276 2025/02/09 21:22:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1682,3 +1682,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/libfm-qt to 2.1.0nb3 [wiz 2025-02-09]
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.4 [gutteridge 2025-02-09]
 	Updated devel/jj to 0.26.0 [wiz 2025-02-09]
+	Updated devel/jj-docs to 0.26.0 [wiz 2025-02-09]
