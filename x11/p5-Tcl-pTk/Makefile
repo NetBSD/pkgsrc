@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2025/01/31 02:05:15 scole Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/09 05:00:41 scole Exp $
 
 DISTNAME=	Tcl-pTk-1.11
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tcl/}
 
@@ -13,9 +14,13 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Tcl-[0-9]*:../../devel/p5-Tcl
 DEPENDS+=	p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
+DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+DEPENDS+=	tk-Tix-[0-9]*:../../x11/tk-Tix
 
-TEST_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-TEST_DEPENDS+=	tk-Tix-[0-9]*:../../x11/tk-Tix
+MAKE_PARAMS+=	--tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
+# xxx no tklib in pkgsrc yet
+MAKE_PARAMS+=	--no-test-for-tk
+
 # xxx Img tests run but fail with this, maybe too old?
 TEST_DEPENDS+=	tkimg-[0-9]*:../../graphics/tk-tkimg
 
