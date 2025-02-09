@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1210 2025/02/09 08:51:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1211 2025/02/09 08:52:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Mozilla-CA to 20250202 [wiz 2025-02-09]
 	Updated devel/p5-Test-Warnings to 0.038 [wiz 2025-02-09]
 	Updated textproc/p5-Text-CSV_XS to 1.60 [wiz 2025-02-09]
+	Updated databases/ruby-sequel to 5.89.0 [taca 2025-02-09]
