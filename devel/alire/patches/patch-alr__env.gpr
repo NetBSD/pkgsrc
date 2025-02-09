@@ -1,10 +1,11 @@
-$NetBSD: patch-alr__env.gpr,v 1.1 2024/03/12 17:53:16 wiz Exp $
+$NetBSD: patch-alr__env.gpr,v 1.2 2025/02/09 13:34:24 wiz Exp $
 
 Add NetBSD support
+Change build type to avoid runtime check exceptions
 
---- alr_env.gpr.orig	2023-10-19 15:04:21.000000000 +0000
-+++ alr_env.gpr
-@@ -36,6 +36,7 @@ aggregate project Alr_Env is
+--- alr_env.gpr.orig	2024-03-21 00:22:58.000000000 +0200
++++ alr_env.gpr	2024-05-09 22:22:21.844009442 +0300
+@@ -36,13 +36,14 @@
  
     case Alire_Common.Host_Os is
        when "freebsd" => for External ("GNATCOLL_OS") use "unix";
@@ -12,3 +13,11 @@ Add NetBSD support
        when "linux"   => for External ("GNATCOLL_OS") use "unix";
        when "macos"   => for External ("GNATCOLL_OS") use "osx";
        when "windows" => for External ("GNATCOLL_OS") use "windows";
+    end case;
+ 
+    for External ("LIBRARY_TYPE") use "static";
+-   for External ("BUILD") use "DEBUG";
++   for External ("BUILD") use "PROD";
+ 
+    --  The user must set ALIRE_OS before building. See the list of valid values
+    --  in alire_common.gpr

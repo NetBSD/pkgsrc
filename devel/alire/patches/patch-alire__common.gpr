@@ -1,14 +1,23 @@
-$NetBSD: patch-alire__common.gpr,v 1.1 2024/03/12 17:53:16 wiz Exp $
+$NetBSD: patch-alire__common.gpr,v 1.2 2025/02/09 13:34:24 wiz Exp $
 
-Add NetBSD support
+Add NetBSD support, fix switches for release build (avoiding runtime exceptions)
 
---- alire_common.gpr.orig	2023-10-19 15:04:21.000000000 +0000
-+++ alire_common.gpr
-@@ -4,6 +4,7 @@ abstract project Alire_Common is
+--- alire_common.gpr.orig	2024-03-21 00:22:58.000000000 +0200
++++ alire_common.gpr	2024-05-10 08:10:43.529091158 +0300
+@@ -4,6 +4,7 @@
  
     type Host_OSes is ("linux",
                        "freebsd",
 +                      "netbsd",
                        "macos",
                        "windows");
+ 
+@@ -107,7 +108,7 @@
+                "-fPIC",
+ 
+                --  Enable lots of extra runtime checks
+-               "-gnatVa", "-gnatwa", "-gnato", "-fstack-check", "-gnata",
++               "-gnatwa", "-gnato",
+                "-gnatf", "-fPIC")
+               & Style_Check_Switches;
  

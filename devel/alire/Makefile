@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/03/14 07:48:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/09 13:34:23 wiz Exp $
 
-.include "version.mk"
-PKGNAME=alire-${ALIRE_VERSION}
-
+PKGNAME=	alire-2.0.2
 CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/alire-project/alire
@@ -11,12 +9,16 @@ LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c ada
 
+MKPIE_SUPPORTED=	no
+RELRO_SUPPORTED=	no
+
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=	${PKGNAME}
+GCC_REQD+=	13
+
+DISTNAME=	alire-${PKGVERSION_NOREV}
 GITHUB_PROJECT=	alire
-GITHUB_TYPE=	tag
-GITHUB_TAG=	v${ALIRE_VERSION}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alire-project/}
 
 GITHUB_SUBMODULES+=	mosteo	aaa	dff61d2615cc6332fa6205267bae19b4d044b9da	deps/aaa
@@ -29,7 +31,7 @@ GITHUB_SUBMODULES+=	mosteo	diskflags	60729edf31816aca0036b13b2794c39a9bd0172e	de
 GITHUB_SUBMODULES+=	alire-project	gnatcoll-core	4e663b87a028252e7e074f054f8f453661397166	deps/gnatcoll-slim
 GITHUB_SUBMODULES+=	mosteo	minirest	9a9c660f9c6f27f5ef75417e7fac7061dff14d78	deps/minirest
 GITHUB_SUBMODULES+=	mosteo	optional	1aa0e20bf7cd010c4b59e6ab7cc4b089790b796e	deps/optional
-GITHUB_SUBMODULES+=	alire-project	semantic_versioning	cc2148cf9c8934fb557b5ae49a3f7947194fa7ee	deps/semantic_versioning
+GITHUB_SUBMODULES+=	alire-project	semantic_versioning	4861e32bd8a2f0df038d3ecc9a72b6381e7a34cc	deps/semantic_versioning
 GITHUB_SUBMODULES+=	HeisenbugLtd	si_units	9329d2591b82440ccc859a53f1380ac07ea4194d	deps/si_units
 GITHUB_SUBMODULES+=	alire-project	simple_logging	3505dc645f3eef6799a486aae223d37e88cfc4d5	deps/simple_logging
 GITHUB_SUBMODULES+=	Fabien-Chouteau	spdx_ada	2df9b1182544359c751544e52e14c94830d99fa6	deps/spdx
@@ -39,41 +41,14 @@ GITHUB_SUBMODULES+=	mosteo	umwi	32496c15fe4fbb6cdab54ea11fbb0815549d2d48	deps/um
 GITHUB_SUBMODULES+=	mosteo	uri-ada	02a0780d7757e9e79b3410c3a34960655cacea3d	deps/uri-ada
 GITHUB_SUBMODULES+=	alire-project	xmlezout	1fcbd0b9303d044d8f09a8ef652afa8c0400ee8b	deps/xmlezout
 
-GCC_REQD+=	13
+MAKE_FILE=		alr_env.gpr
+MAKE_ENV=		ALIRE_OS=netbsd ALIRE_BUILD_MODE=release
 
-.include "../../devel/gprbuild/buildlink3.mk"
-
-CGPRDIR=	${WRKDIR}
-
-SUBST_CLASSES+=			buildlink
-SUBST_STAGE.buildlink=		post-configure
-SUBST_FILES.buildlink=		../buildlink.cgpr
-SUBST_MESSAGE.buildlink=	Set work directory path in config project
-SUBST_VARS.buildlink=		WRKDIR
-
-MAKE_ENV+=		ALIRE_OS=netbsd
-MAKE_PROGRAM=		gprbuild
-MAKE_FILE=		alr_env
-MAKE_FLAGS=		-j0 -p -P
-BUILD_MAKE_FLAGS=	--config=${CGPRDIR}/buildlink.cgpr
+# Use GPRBuild as main build system
+.include "../../devel/gprbuild/gprbuild.mk"
 
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
-	${FIND} bin \( -type f -or -type l \) -print | ${SORT};
-
-pre-configure:
-	${RUN} ${CP} ${PKGDIR}/files/buildlink.cgpr ${CGPRDIR}/
-
-do-build:
-	${RUN} \
-	cd ${WRKSRC} \
-	&& env ${MAKE_ENV} \
-	    ${MAKE_PROGRAM} ${MAKE_FLAGS} ${MAKE_FILE} ${BUILD_MAKE_FLAGS}
-
-do-install:
-	${RUN} \
-	cd ${WRKSRC} \
-	&& mkdir -p ${DESTDIR}${PREFIX}/bin \
-	&& install -m0755 bin/alr ${DESTDIR}${PREFIX}/bin
+	${FIND} bin share \( -type f -or -type l \) -print | ${SORT};
 
 .include "../../mk/bsd.pkg.mk"
