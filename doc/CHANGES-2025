@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1268 2025/02/09 15:30:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1269 2025/02/09 15:34:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-puma to 6.6.0 [taca 2025-02-09]
 	Updated www/ruby-rack to 3.1.9 [taca 2025-02-09]
 	Updated www/ruby-selenium-webdriver to 4.28.0 [taca 2025-02-09]
+	Updated x11/ruby-tk to 0.5.1 [taca 2025-02-09]
