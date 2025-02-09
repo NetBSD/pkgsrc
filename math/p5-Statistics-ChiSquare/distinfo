@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/09 07:33:14 wiz Exp $
+
+BLAKE2s (Statistics-ChiSquare-1.0000.tar.gz) = f56005dc31c2e5f5d77f7ee2b16b7f0a950f5dc1892e34d69e22199f00746718
+SHA512 (Statistics-ChiSquare-1.0000.tar.gz) = 6523c0e44b53835796c5b3f41cb6281413b79c596601a1971b8cb6fc7b2c76fc53ca60642bc96897083d6504ffc0e5ed35b475df4e9264231a5d602d90b3dd35
+Size (Statistics-ChiSquare-1.0000.tar.gz) = 28821 bytes

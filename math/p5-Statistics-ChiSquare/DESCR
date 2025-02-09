@@ -1,0 +1,6 @@
+In statistics, the chi-square test calculates how well a series of
+numbers fits a distribution. In this module, we only test for
+whether results fit an even distribution. It doesn't simply say
+"yes" or "no". Instead, it gives you a confidence interval, which
+sets upper and lower bounds on the likelihood that the variation
+in your data is due to chance.
