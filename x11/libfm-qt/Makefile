@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2025/02/02 09:37:36 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/02/09 19:18:31 wiz Exp $
 
 DISTNAME=	libfm-qt-2.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lxqt/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -25,10 +25,26 @@ SUBST_FILES.prefix+=	src/core/vfs/vfs-menu.c
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
+# some of the files in ${BUILDLINK_DIR} are from xsrc, some from
+# pkgsrc in the X.org native case, these need to be handled
+# differently, so we need multiple sed expression.
+#
+# This is probably fragile and needs to be checked on updates.
 SUBST_CLASSES+=		unbl3
 SUBST_MESSAGE.unbl3=	Undoing buildlink3 paths in cmake exports.
 SUBST_STAGE.unbl3=	post-build
 SUBST_FILES.unbl3+=	${CMAKE_BUILD_DIR}/src/CMakeFiles/Export/*/fm-qt6-targets.cmake
+# these are from pkgsrc
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-cursor\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-ewmh\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-icccm\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-image\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-keysyms\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-render-util\),${PREFIX}\1,g'
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb-util\),${PREFIX}\1,g'
+# all other libxcb* are from X
+SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR}\(/lib/libxcb\),${X11BASE}\1,g'
+# the rest of the libraries are from pkgsrc again
 SUBST_SED.unbl3+=	-e 's,${BUILDLINK_DIR},${PREFIX},g'
 
 TOOL_DEPENDS+=	lxqt-build-tools>=2.1.0:../../devel/lxqt-build-tools
