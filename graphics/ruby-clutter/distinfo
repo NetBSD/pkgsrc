@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.28 2024/12/29 15:53:08 tsutsui Exp $
+$NetBSD: distinfo,v 1.29 2025/02/09 09:19:09 tsutsui Exp $
 
-BLAKE2s (clutter-4.2.5.gem) = 1840210d0407d520e9472ee31a5849f1e5fa598b471116eb7d12017b9dcc2d4e
-SHA512 (clutter-4.2.5.gem) = bbb6667b7c22597a8a4606f7833a6b102c483c622dc9c2efb180a982ea76d1b17185b4627f3ad5f721b504ba2718a56a5d12a3113514e54e757a10036c223116
-Size (clutter-4.2.5.gem) = 42496 bytes
+BLAKE2s (clutter-4.2.7.gem) = 8c8b660ee5d56411a32f22a3db4c6cab39b1490191fb6ba2fa60cb62b05ec7bb
+SHA512 (clutter-4.2.7.gem) = ee63382da47a799b518cd9c1175ff1eb3c87c592d3f6062598699b775177de780c7286b4c0a6796cad1c66df8e06ad66933b6e5fcd36cd6e9895d27a2a5f8db2
+Size (clutter-4.2.7.gem) = 42496 bytes
