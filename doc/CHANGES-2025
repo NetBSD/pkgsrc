@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1231 2025/02/09 14:12:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1232 2025/02/09 14:13:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1638,3 +1638,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed graphics/gmic-qt-digikam successor graphics/digikam-gmic-qt [wiz 2025-02-09]
 	Added graphics/digikam-gmic-qt version 3.2.2.20250206 [wiz 2025-02-09]
 	Updated devel/ruby-semantic_puppet to 1.1.1 [taca 2025-02-09]
+	Updated textproc/tree-sitter-c to 0.23.5 [wiz 2025-02-09]
