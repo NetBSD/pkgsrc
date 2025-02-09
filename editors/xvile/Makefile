@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2024/11/16 12:05:38 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2025/02/09 17:44:38 wiz Exp $
 
-DISTNAME=		vile-9.8w
+DISTNAME=		vile-9.8za
 PKGNAME=		x${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		editors
 MASTER_SITES=		https://invisible-island.net/archives/vile/current/
 MASTER_SITES+=		ftp://ftp.invisible-island.net/vile/current/
@@ -15,7 +14,7 @@ COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 LICENSE=		gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../editors/vile/distinfo
-PATCHDIR=		${.CURDIR}/../../editors/vile/patches
+#PATCHDIR=		${.CURDIR}/../../editors/vile/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-imake
