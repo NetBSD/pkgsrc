@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/09 14:17:02 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/traces.rb
+${GEM_LIBDIR}/lib/traces/backend.rb
+${GEM_LIBDIR}/lib/traces/backend/capture.rb
+${GEM_LIBDIR}/lib/traces/backend/console.rb
+${GEM_LIBDIR}/lib/traces/backend/test.rb
+${GEM_LIBDIR}/lib/traces/config.rb
+${GEM_LIBDIR}/lib/traces/context.rb
+${GEM_LIBDIR}/lib/traces/provider.rb
+${GEM_LIBDIR}/lib/traces/version.rb
+${GEM_LIBDIR}/license.md
+${GEM_LIBDIR}/readme.md
+${GEM_LIBDIR}/releases.md
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
