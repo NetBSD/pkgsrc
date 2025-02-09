@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/09 15:31:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/09 14:41:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/NEWS.md
@@ -9,4 +9,5 @@ ${GEM_LIBDIR}/lib/net/smtp/auth_login.rb
 ${GEM_LIBDIR}/lib/net/smtp/auth_plain.rb
 ${GEM_LIBDIR}/lib/net/smtp/auth_xoauth2.rb
 ${GEM_LIBDIR}/lib/net/smtp/authenticator.rb
+${GEM_LIBDIR}/net-smtp.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
