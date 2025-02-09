@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1239 2025/02/09 14:24:28 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1240 2025/02/09 14:24:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/libffi to 3.4.7 [wiz 2025-02-09]
 	Updated devel/ruby-async to 2.22.0 [taca 2025-02-09]
 	Updated finance/ruby-braintree to 4.25.0 [taca 2025-02-09]
+	Updated devel/googletest to 1.16.0 [wiz 2025-02-09]
