@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2025/02/02 15:57:00 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/09 14:28:49 wiz Exp $
 
-DISTNAME=	cyclonedx_python_lib-8.5.1
+DISTNAME=	cyclonedx_python_lib-8.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-python-lib/}
@@ -22,8 +22,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-xmldiff>=2.6.3:../../textproc/py-xmldiff
 
 USE_LANGUAGES=	# none
 
-# as of 8.5.1
-# 20 failed, 5188 passed, 509 warnings
+# as of 8.7.0
+# 20 failed, 5223 passed, 510 warnings
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
