@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1248 2025/02/09 14:39:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1249 2025/02/09 14:40:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-mime-types-data to 3.2025.0204 [taca 2025-02-09]
 	Updated lang/py-lsp-server to 1.12.2 [wiz 2025-02-09]
 	Updated devel/py-pydantic-core to 2.29.0 [wiz 2025-02-09]
+	Updated net/ruby-net-imap to 0.5.6 [taca 2025-02-09]
