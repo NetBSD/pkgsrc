@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1220 2025/02/09 09:33:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1221 2025/02/09 10:13:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1627,3 +1627,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/ruby-metrics version 0.12.1 [taca 2025-02-09]
 	Updated devel/ruby-mixlib-log to 3.2.0 [taca 2025-02-09]
 	Updated devel/ruby-msgpack to 1.8.0 [taca 2025-02-09]
+	Updated devel/mise to 2025.2.2 [pin 2025-02-09]
