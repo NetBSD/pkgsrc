@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.14 2025/02/01 18:43:48 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.15 2025/02/09 14:39:36 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -62,7 +62,7 @@ CARGO_CRATE_DEPENDS+=	rustversion-1.0.17
 CARGO_CRATE_DEPENDS+=	ryu-1.0.18
 CARGO_CRATE_DEPENDS+=	serde-1.0.217
 CARGO_CRATE_DEPENDS+=	serde_derive-1.0.217
-CARGO_CRATE_DEPENDS+=	serde_json-1.0.134
+CARGO_CRATE_DEPENDS+=	serde_json-1.0.138
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	speedate-0.15.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
@@ -83,7 +83,7 @@ CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	url-2.5.2
 CARGO_CRATE_DEPENDS+=	utf16_iter-1.0.5
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
-CARGO_CRATE_DEPENDS+=	uuid-1.11.0
+CARGO_CRATE_DEPENDS+=	uuid-1.12.1
 CARGO_CRATE_DEPENDS+=	version_check-0.9.5
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	write16-1.0.0
