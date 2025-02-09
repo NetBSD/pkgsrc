@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1256 2025/02/09 15:00:47 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1257 2025/02/09 15:03:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1663,3 +1663,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-net-scp to 4.1.0 [taca 2025-02-09]
 	Updated security/ruby-sshkit to 1.24.0 [taca 2025-02-09]
 	Updated textproc/ruby-rdiscount to 2.2.7.3 [taca 2025-02-09]
+	Updated textproc/ruby-treetop to 1.6.14 [taca 2025-02-09]
