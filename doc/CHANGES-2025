@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1215 2025/02/09 09:06:57 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1216 2025/02/09 09:21:58 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1606,3 +1606,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-i18n to 1.14.7 [taca 2025-02-09]
 	Updated devel/ruby-io-event to 1.8.4 [taca 2025-02-09]
 	Updated devel/ruby-irb to 1.15.1 [taca 2025-02-09]
+	Updated devel/ruby-atk to 4.2.7 [tsutsui 2025-02-09]
+	Updated devel/ruby-gio2 to 4.2.7 [tsutsui 2025-02-09]
+	Updated devel/ruby-glib2 to 4.2.7 [tsutsui 2025-02-09]
+	Updated devel/ruby-gobject-introspection to 4.2.7 [tsutsui 2025-02-09]
+	Updated devel/ruby-pango to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-cairo-gobject to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-clutter to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-clutter-gdk to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-clutter-gtk to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-gdk3 to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-gdk_pixbuf2 to 4.2.7 [tsutsui 2025-02-09]
+	Updated graphics/ruby-rsvg2 to 4.2.7 [tsutsui 2025-02-09]
+	Updated multimedia/ruby-clutter-gstreamer to 4.2.7 [tsutsui 2025-02-09]
+	Updated multimedia/ruby-gstreamer to 4.2.7 [tsutsui 2025-02-09]
+	Updated print/ruby-poppler to 4.2.7 [tsutsui 2025-02-09]
+	Updated x11/ruby-gtk3 to 4.2.7 [tsutsui 2025-02-09]
+	Updated x11/ruby-gtksourceview3 to 4.2.7 [tsutsui 2025-02-09]
