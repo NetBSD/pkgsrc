@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.11 2025/02/06 15:53:09 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.12 2025/02/09 18:43:50 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -69,3 +69,17 @@ net/bind918: Security fix
 Pullup ticket #6939 - requested by bsiegert
 lang/go122: Security fix
 lang/go123: Security fix
+
+Pullup ticket #6940 - requested by bsiegert
+www/firefox128-l10n: Security fix
+www/firefox128: Security fix
+
+Pullup ticket #6941 - requested by bsiegert
+www/firefox115-l10n: Security fix
+www/firefox115: Security fix
+
+Pullup ticket #6942 - requested by nia
+www/palemoon: Security fix
+
+Pullup ticket #6943 - requested by taca
+www/drupal7: Security fix
