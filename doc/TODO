@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25411 2025/02/08 14:05:17 wiz Exp $
+$NetBSD: TODO,v 1.25412 2025/02/09 04:20:38 scole Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,10 @@ Suggested new packages
 	Signal Desktop
 	https://github.com/signalapp/Signal-Desktop
 	Signal Instant Messenger desktop client
+
+	tklib
+	https://www.tcl-lang.org/software/tklib/
+	collection of utility modules for Tk
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
