@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1261 2025/02/09 15:14:21 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1262 2025/02/09 15:15:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1668,3 +1668,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/ruby-hitimes to 3.1.0 [taca 2025-02-09]
 	Updated time/ruby-timers to 4.4.0 [taca 2025-02-09]
 	Updated www/ruby-aws-partitions to 1.1048.0 [taca 2025-02-09]
+	Updated www/ruby-aws-sdk-core to 3.218.1 [taca 2025-02-09]
