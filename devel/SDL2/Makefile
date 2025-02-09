@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2025/02/02 09:33:32 adam Exp $
+# $NetBSD: Makefile,v 1.102 2025/02/09 00:28:19 rillig Exp $
 
 DISTNAME=	SDL2-2.30.12
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_ICONV=	no
 
 # See devel/SDL2-legacy-darwin
 NOT_FOR_PLATFORM+=	Darwin-*-powerpc*

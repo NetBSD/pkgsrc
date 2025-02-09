@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/01/06 21:49:24 ktnb Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/09 00:28:20 rillig Exp $
 
 DISTNAME=	SDL_net-1.2.8
 PKGREVISION=	2
@@ -13,6 +13,7 @@ LICENSE=	zlib
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--disable-gui
 PKGCONFIG_OVERRIDE=	SDL_net.pc.in
 

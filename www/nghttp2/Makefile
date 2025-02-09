@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2024/11/14 22:22:08 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2025/02/09 00:28:21 rillig Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -12,6 +12,7 @@ USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--enable-lib-only
 PKGCONFIG_OVERRIDE+=	lib/libnghttp2.pc.in
 PKGCONFIG_OVERRIDE+=	src/libnghttp2_asio.pc.in

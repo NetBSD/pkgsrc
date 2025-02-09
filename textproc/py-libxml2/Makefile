@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2024/11/14 22:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2025/02/09 00:28:20 rillig Exp $
 
 PYTHON_27_ACCEPTED=	yes
 
@@ -14,6 +14,7 @@ USE_GCC_RUNTIME=	yes
 
 PYSETUPSUBDIR=	python
 GNU_CONFIGURE=	yes
+GNU_CONFIGURE_ICONV=	no
 USE_TOOLS+=	pkg-config
 
 # python/setup.py looks in various places for libxml2 and libiconv,

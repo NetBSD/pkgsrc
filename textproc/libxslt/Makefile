@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2024/11/14 22:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.137 2025/02/09 00:28:20 rillig Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -9,6 +9,7 @@ TOOL_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
+GNU_CONFIGURE_ICONV=	no
 CONFIGURE_ARGS+=	--with-libxml-prefix=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--without-python
 
