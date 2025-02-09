@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:20:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/09 09:30:37 wiz Exp $
 
 DISTNAME=	gmic-qt-digikam-3.2.2.20230417
 PKGREVISION=	12
@@ -8,7 +8,7 @@ GITHUB_TAG=	925ba362081e875a2ece1bcfffbe0f408a908017
 GITHUB_PROJECT=	gmic-qt
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/cgilles/gmic-qt/
+HOMEPAGE=	https://github.com/cgilles/digikam-gmic-qt
 COMMENT=	G'MIC plugin for digiKam
 LICENSE=	gnu-gpl-v3
 
