@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/10/14 06:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/09 09:25:33 taca Exp $
 
-DISTNAME=	iruby-0.7.4
-PKGREVISION=	1
+DISTNAME=	iruby-0.8.0
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -22,12 +21,6 @@ USE_LANGUAGES=	# none
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	pre-configure
-SUBST_MESSAGE.python=	Versioned ipython command
-SUBST_FILES.python=	lib/iruby/command.rb
-SUBST_VARS.python=	PYVERSSUFFIX
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/python/pyversion.mk"
