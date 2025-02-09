@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25412 2025/02/09 04:20:38 scole Exp $
+$NetBSD: TODO,v 1.25413 2025/02/09 08:45:57 triaxx Exp $
 
 Suggested new packages
 ======================
@@ -1389,7 +1389,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o xu4-1.4
 	o xview-3.2.1.4.25.5
 	o xwrits-2.26
-	o xye-0.12.2
 	o yacas-1.6.1
 	o yafc-1.1
 	o yahttp-0.2.1

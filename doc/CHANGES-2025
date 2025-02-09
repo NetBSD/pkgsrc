@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1204 2025/02/09 08:41:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1205 2025/02/09 08:45:57 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1595,3 +1595,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/roundcube-plugin-enigma to 1.6.10 [taca 2025-02-09]
 	Updated mail/roundcube-plugin-password to 1.6.10 [taca 2025-02-09]
 	Updated mail/roundcube-plugin-zipdownload to 1.6.10 [taca 2025-02-09]
+	Updated games/xye to 0.12.2 [triaxx 2025-02-09]
