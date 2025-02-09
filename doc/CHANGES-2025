@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1221 2025/02/09 10:13:57 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1222 2025/02/09 10:26:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-mixlib-log to 3.2.0 [taca 2025-02-09]
 	Updated devel/ruby-msgpack to 1.8.0 [taca 2025-02-09]
 	Updated devel/mise to 2025.2.2 [pin 2025-02-09]
+	Updated devel/ruby-redmine50 to 5.0.11 [taca 2025-02-09]
