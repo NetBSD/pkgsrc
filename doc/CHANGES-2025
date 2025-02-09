@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1245 2025/02/09 14:31:02 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1246 2025/02/09 14:31:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 8.7.0 [wiz 2025-02-09]
 	Updated graphics/ruby-mini-magick to 5.1.2 [taca 2025-02-09]
 	Updated fonts/py-fonttools to 4.56.0 [wiz 2025-02-09]
+	Updated mail/ruby-mime-types-data to 3.2025.0204 [taca 2025-02-09]
