@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.300 2025/02/06 18:39:14 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.301 2025/02/09 20:33:16 rillig Exp $
 #
 #FORMAT 1.0.0
 #
@@ -180,11 +180,9 @@ bind-9.2.0*		denial-of-service	http://www.cert.org/advisories/CA-2002-15.html
 bind-9.2.1rc*		denial-of-service	http://www.cert.org/advisories/CA-2002-15.html
 bind-8.3.0		denial-of-service	http://www.isc.org/products/BIND/bind8.html
 xchat<1.8.9		remote-user-shell	http://www.linuxsecurity.com/advisories/redhat_advisory-2107.html
-apache<1.3.26		remote-root-shell	http://httpd.apache.org/info/security_bulletin_20020617.txt
-apache6<1.3.26		remote-root-shell	http://httpd.apache.org/info/security_bulletin_20020617.txt
-apache-2.0.1?		remote-root-shell	http://httpd.apache.org/info/security_bulletin_20020617.txt
-apache-2.0.2?		remote-root-shell	http://httpd.apache.org/info/security_bulletin_20020617.txt
-apache-2.0.3[0-8]*	remote-root-shell	http://httpd.apache.org/info/security_bulletin_20020617.txt
+apache<1.3.26		remote-root-shell	https://httpd.apache.org/info/security_bulletin_20020617.txt
+apache6<1.3.26		remote-root-shell	https://httpd.apache.org/info/security_bulletin_20020617.txt
+apache>=2<2.0.39	remote-root-shell	https://httpd.apache.org/info/security_bulletin_20020617.txt
 irssi<0.8.5		denial-of-service	http://online.securityfocus.com/archive/1
 #ap-ssl<2.8.10		remote-root-shell	http://www.apache-ssl.org/advisory-20020620.txt
 ap-ssl<2.8.10		remote-root-shell	http://www.modssl.org/news/changelog.html
@@ -483,16 +481,9 @@ metamail<2.7nb2		remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?
 xboing<2.4nb2		privilege-escalation	http://www.debian.org/security/2004/dsa-451
 libxml2<2.6.6		remote-user-shell	http://lists.gnome.org/archives/xml/2004-February/msg00070.html
 automake<1.8.3		privilege-escalation	http://www.securityfocus.com/archive/1/356574/2004-03-05/2004-03-11/2
-apache-2.0.?		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0113
-apache-2.0.[0-3][0-9]	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0113
-apache-2.0.4[0-8]	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0113
-apache-2.0.?		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0174
-apache-2.0.[0-3][0-9]	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0174
-apache-2.0.4[0-8]	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0174
-apache-2.0.?		remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
-apache-2.0.[0-3][0-9]	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
-apache-2.0.4[0-8]	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
-apache<1.3.29nb2	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
+apache>=2<2.0.49	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0113
+apache>=2<2.0.49	denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0174
+apache>=2<2.0.49	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
 apache6<1.3.29nb2	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0020
 gdk-pixbuf<0.20		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0111
 openssl<0.9.6l		denial-of-service	http://www.openssl.org/news/secadv_20031104.txt
@@ -569,7 +560,7 @@ sqwebmail<4.0.0		remote-code-execution	http://www.securityfocus.com/bid/9845
 ap-ssl<2.8.19		remote-code-execution	http://www.mail-archive.com/modssl-users@modssl.org/msg16853.html
 ap{2,22}-subversion<1.0.6	weak-acl-enforcement	http://www.contactor.se/~dast/svn/archive-2004-07/0814.shtml
 samba<2.2.10		remote-code-execution	http://www.samba.org/samba/whatsnew/samba-2.2.10.html
-samba-3.0.[0-4]{,a*,nb?}	remote-code-execution	http://www.samba.org/samba/whatsnew/samba-3.0.5.html
+samba>=3<3.0.5		remote-code-execution	http://www.samba.org/samba/whatsnew/samba-3.0.5.html
 ja-samba<2.2.9.1.0nb1	remote-code-execution	http://www.samba.org/samba/whatsnew/samba-2.2.10.html
 acroread5<5.09		arbitrary-code-execution	http://kb2.adobe.com/cps/322/322914.html
 png<1.2.6rc1		remote-code-execution	http://scary.beasts.org/security/CESA-2004-001.txt
@@ -739,12 +730,8 @@ kdelibs<3.3.2nb1	plain-text-password-exposure	http://www.kde.org/info/security/a
 kdegraphics<3.3.2	denial-of-service	http://www.kde.org/info/security/advisory-20041209-2.txt
 kdelibs<3.3.2nb2	cross-site-scripting	http://www.kde.org/info/security/advisory-20041213-1.txt
 kdebase<3.3.2nb1	cross-site-scripting	http://www.kde.org/info/security/advisory-20041213-1.txt
-phpmyadmin-2.6.0-pl2	remote-code-execution	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
-phpmyadmin-2.6.0pl2	remote-code-execution	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
-phpmyadmin-2.[4-5]*	remote-file-read	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
-phpmyadmin-2.6.0	remote-file-read	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
-phpmyadmin-2.6.0pl2	remote-file-read	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
-phpmyadmin-2.6.0-pl*	remote-file-read	http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2004-4
+phpmyadmin>=2.6.0pl2<2.6.1rc1	remote-code-execution	https://www.phpmyadmin.net/security/PMASA-2004-4/
+phpmyadmin>=2.4<2.6.1rc1	remote-file-read	https://www.phpmyadmin.net/security/PMASA-2004-4/
 namazu<2.0.14		cross-site-scripting	http://www.namazu.org/security.html.en
 {ap-,}php<4.3.10	remote-code-execution	http://www.hardened-php.net/advisories/012004.txt
 {ap-,}php-5.0.2*	remote-code-execution	http://www.hardened-php.net/advisories/012004.txt
@@ -816,7 +803,7 @@ apache-2.0.4[0-9]nb*	privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.c
 apache-2.0.5[0-2]	privilege-escalation	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0885
 apache-2.0.5[0-2]nb[1-4]	weak-cryptography	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0885
 openmotif<2.1.30nb3	denial-of-service	http://www.ics.com/developers/index.php?cont=xpm_security_alert
-catdoc<0.91.5-2		local-file-write	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0193
+catdoc<0.91.5.2		local-file-write	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0193
 gd<2.0.22		remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0941
 gd<2.0.28		denial-of-service	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0990
 ImageMagick<6.1.0	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0981
@@ -844,7 +831,6 @@ xine-lib-1rc[2-5]*	remote-code-execution	http://www.xinehq.de/index.php/security
 xine-lib<1rc6		remote-code-execution	http://www.xinehq.de/index.php/security/XSA-2004-5
 gpdf<2.8.1		buffer-overrun		http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0888
 koffice<1.3.5		integer-overflow	http://kde.org/areas/koffice/releases/1.3.4-release.php
-pdfTexinteTexbin<perhaps	integer-overflow	http://www.tug.org/applications/pdftex/NEWS
 opera<7.54pl1		remote-code-execution	http://archives.neohapsis.com/archives/bugtraq/2004-11/0250.html
 wget<1.9		local-file-write	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1487
 p5-Tk<804.027nb2	remote-code-execution	http://scary.beasts.org/security/CESA-2004-001.txt
@@ -1692,7 +1678,7 @@ ap-auth-ldap<1.6.1	arbitrary-code-execution	http://secunia.com/advisories/18382/
 sudo<1.6.8pl12nb1	privilege-escalation	http://secunia.com/advisories/18358/
 wine>20000000<20060000	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0106
 wine<0.9.0		arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0106
-tor<=0.1.1.12-alpha	information-disclosure	http://archives.seul.org/or/announce/Jan-2006/msg00001.html
+tor<=0.1.1.12alpha	information-disclosure	http://archives.seul.org/or/announce/Jan-2006/msg00001.html
 mantis<1.0.0rc5		cross-site-scripting	http://secunia.com/advisories/18434/
 tuxpaint<0.9.14nb6	insecure-temp-file		http://secunia.com/advisories/18475/
 kdelibs<3.5.0nb2	buffer-overflow		http://www.kde.org/info/security/advisory-20060119-1.txt
@@ -1925,7 +1911,7 @@ quake3arena<1.32c	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi
 quake3arena<1.32c	information-exposure	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2236
 quake3server<1.32c	information-exposure	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2236
 quake3server-[0-9]*	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2875
-abcmidi<2006-04-22	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1514
+abcmidi<20060422	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1514
 openldap<2.3.22		buffer-overflow		http://secunia.com/advisories/20126/
 libextractor<0.5.14	remote-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-2458
 freetype2<2.1.10nb3	remote-code-execution	http://secunia.com/advisories/20100/
@@ -4776,7 +4762,7 @@ suse{,32}_resmgr<11.1	eol			http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-
 suse{,32}_slang<11.1	eol			http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 suse{,32}_vmware<11.1	eol			http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
 suse{,32}_x11<11.1	eol			http://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
-ruby-base19>=1.9<1.9.1-p429	local-security-bypass	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2489
+ruby-base19>=1.9<1.9.1.429	local-security-bypass	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2489
 gv<3.7.0		privilege-escalation		http://secunia.com/advisories/40475/
 ghostscript<8.71nb6	local-user-shell	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2055
 bind>=9.7.1<9.7.1pl2	denial-of-service	http://www.isc.org/software/bind/advisories/cve-2010-0213
@@ -5523,7 +5509,7 @@ awstats<7.0nb3		cross-site-scripting	http://secunia.com/advisories/46160/
 libpurple<2.10.1	unknown-impact		http://developer.pidgin.im/ticket/14636
 cyrus-imapd>=2.2<2.3.18	security-bypass		http://secunia.com/advisories/46093/
 cyrus-imapd>=2.4<2.4.12	security-bypass		http://secunia.com/advisories/46093/
-kdelibs4<.5.5nb8	spoofing-attack		http://secunia.com/advisories/46157/
+kdelibs4<4.5.5nb8	spoofing-attack		https://kde.org/info/security/advisory-20111003-1.txt
 p5-Crypt-DSA<1.17	security-bypass		http://secunia.com/advisories/46275/
 vlc<1.1.11nb2		denial-of-service	http://www.videolan.org/security/sa1107.html
 puppet-[0-9]*		local-system-compromise	http://secunia.com/advisories/46223/
@@ -5657,7 +5643,7 @@ seamonkey<2.6		multiple-vulnerabilities	http://www.mozilla.org/security/known-vu
 xulrunner192<1.9.2.23	multiple-vulnerabilities	http://www.mozilla.org/security/known-vulnerabilities/firefox.html#firefox7
 xulrunner>=2<9		multiple-vulnerabilities	http://www.mozilla.org/security/known-vulnerabilities/firefox.html
 opera-[0-9]*		sensitive-information-exposure	http://secunia.com/advisories/47128/
-ipmitool<ipmitool-1.8.11nb1	denial-of-service	http://secunia.com/advisories/47173/
+ipmitool<1.8.11nb1	denial-of-service	http://secunia.com/advisories/47173/
 p5-HTML-Template-Pro<0.9507	cross-site-scripting	http://secunia.com/advisories/47184/
 websvn<2.3.1		cross-site-scripting	http://secunia.com/advisories/47288/
 php{5,53}-tiki6<6.5		cross-site-scripting	http://secunia.com/advisories/47278/
@@ -6931,7 +6917,6 @@ xenkernel3-[0-9]*	privilege-escalation	http://secunia.com/advisories/53686/
 xenkernel33-[0-9]*	privilege-escalation	http://secunia.com/advisories/53686/
 xenkernel41<4.1.6.1	privilege-escalation	http://secunia.com/advisories/53686/
 xenkernel42<4.2.3	privilege-escalation	http://secunia.com/advisories/53686/
-ffmpeg<20130510-1.2.1	multiple-vulnerabilities	http://secunia.com/advisories/53825/
 dbus<1.6.12		denial-of-service	http://secunia.com/advisories/53317/
 haproxy<1.4.24		denial-of-service	http://secunia.com/advisories/53803/
 firefox17<17.0.7	multiple-vulnerabilities	http://www.mozilla.org/security/known-vulnerabilities/firefoxESR.html#firefox17.0.7
@@ -8590,7 +8575,7 @@ asterisk>=11.0<11.15.1		security-bypass	http://downloads.digium.com/pub/security
 asterisk>=12.0<12.8.1		security-bypass	http://downloads.digium.com/pub/security/AST-2015-002.html
 asterisk>=13.0<13.1.1		security-bypass	http://downloads.digium.com/pub/security/AST-2015-002.html
 djvulibre-tools-[0-9]*		insecure-temp-file	https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=775193
-xdg-utils>=1.1.0-rc2<1.1.0-rc4	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9622
+xdg-utils>=1.1.0rc2<1.1.0rc4	arbitrary-code-execution	http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9622
 moodle>=2.8<2.8.2		cross-site-scripting	https://moodle.org/mod/forum/discuss.php?d=278612
 moodle>=2.8<2.8.2		cross-site-request-forgery	https://moodle.org/mod/forum/discuss.php?d=278613
 moodle>=2.8<2.8.2		information-leak	https://moodle.org/mod/forum/discuss.php?d=278614
@@ -9548,7 +9533,7 @@ putty>=0.54<0.66	integer-overflow		http://www.chiark.greenend.org.uk/~sgtatham/p
 nautilus-[0-9]*		denial-of-service		http://seclists.org/bugtraq/2015/Dec/11
 gdm<3.18.2		security-bypass			https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-7496
 nss<3.20.1		arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-133/
-suse{,32}_mozilla-nss[0-9]*		arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-133/
+suse{,32}_mozilla-nss-[0-9]*		arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-133/
 xenkernel45<4.5.3		denial-of-service	http://xenbits.xen.org/xsa/advisory-145.html
 powerdns>=3.4.4<3.4.7		denial-of-service	https://doc.powerdns.com/md/security/powerdns-advisory-2015-03/
 sudo<1.8.15			symlink-attack		http://www.sudo.ws/stable.html#1.8.15
@@ -9630,7 +9615,7 @@ php{54,55,56}-owncloud>8.2.0<8.2.2	information-disclosure	https://owncloud.org/s
 subversion>1.9<1.9.3		heap-overflow		http://subversion.apache.org/security/CVE-2015-5259-advisory.txt
 qemu<2.6.0			buffer-overflow		https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-7512
 nss<3.20.2			arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-150/
-suse{,32}_mozilla-nss[0-9]*	arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-150/
+suse{,32}_mozilla-nss-[0-9]*	arbitrary-code-execution	https://www.mozilla.org/en-US/security/advisories/mfsa2015-150/
 gummi<0.6.6			symlink-attack		http://www.openwall.com/lists/oss-security/2015/10/08/5
 typo3>=6.2<6.2.16		cross-site-scripting	http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-010/
 typo3>=6.2<6.2.16		cross-site-scripting	http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2015-011/
@@ -22365,7 +22350,7 @@ vim<8.2.3612	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-3974
 vim<8.2.3611	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3973
 vim<8.2.3611	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3968
 gmp<6.2.1nb1	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-43618
-ImageMagick<7.1.0-14	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-3962
+ImageMagick<7.1.0.14	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-3962
 quagga<1.2.4	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2021-44038
 librecad-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2021-21900
 librecad-[0-9]*	heap-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-21899
@@ -24851,8 +24836,8 @@ matrix-synapse<1.52.0	sensitive-information-disclosure	https://nvd.nist.gov/vuln
 pkgconf<1.9.4	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2023-24056
 pixman<0.42.2	out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2022-44638
 pgpool-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2023-22332
-openscad<2022-01-09	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0497
-openscad<2022-02-04	uninitialized-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0496
+openscad<2022.01.09	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0497
+openscad<2022.02.04	uninitialized-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2022-0496
 opusfile<0.12nb3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-47021
 openssh<9.2	double-free	https://nvd.nist.gov/vuln/detail/CVE-2023-25136
 p5-HTML-StripScripts-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-24038
@@ -24942,7 +24927,7 @@ gnutls<3.7.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4209
 colord<1.4.6	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-42523
 anjuta-[0-9]*	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-42522
 ImageMagick6<6.9.12.44	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1115
-ImageMagick<7.1.0-29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1115
+ImageMagick<7.1.0.29	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-1115
 dnsmasq-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-0934
 ImageMagick<7.1.0.20	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-0284
 inetutils<2.4	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2022-39028
