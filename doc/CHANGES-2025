@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1252 2025/02/09 14:46:32 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1253 2025/02/09 14:49:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1659,3 +1659,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/abseil to 20250127.0 [wiz 2025-02-09]
 	Updated net/ruby-recog to 3.1.13 [taca 2025-02-09]
 	Updated print/ruby-pdf-reader to 2.14.1 [taca 2025-02-09]
+	Updated security/ruby-metasploit_payloads-mettle to 1.0.37 [taca 2025-02-09]
