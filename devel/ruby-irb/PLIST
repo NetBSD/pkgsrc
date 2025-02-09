@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2024/12/08 16:44:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/09 09:06:46 taca Exp $
 bin/irb-${PKGVERSION_NOREV}-${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
@@ -25,6 +24,7 @@ ${GEM_LIBDIR}/lib/irb/command/cd.rb
 ${GEM_LIBDIR}/lib/irb/command/chws.rb
 ${GEM_LIBDIR}/lib/irb/command/context.rb
 ${GEM_LIBDIR}/lib/irb/command/continue.rb
+${GEM_LIBDIR}/lib/irb/command/copy.rb
 ${GEM_LIBDIR}/lib/irb/command/debug.rb
 ${GEM_LIBDIR}/lib/irb/command/delete.rb
 ${GEM_LIBDIR}/lib/irb/command/disable_irb.rb
