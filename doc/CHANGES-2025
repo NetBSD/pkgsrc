@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1197 2025/02/08 18:22:29 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1198 2025/02/09 00:50:31 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1585,3 +1585,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/fq to 0.14.0 [wiz 2025-02-08]
 	Updated shells/sheldon to 0.8.1 [schmonz 2025-02-08]
 	Updated devel/codeberg-cli to 0.4.7 [schmonz 2025-02-08]
+	Updated geography/gama to 2.33 [gdt 2025-02-09]
