@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1200 2025/02/09 05:02:59 scole Exp $
+$NetBSD: CHANGES-2025,v 1.1201 2025/02/09 07:33:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/gama to 2.33 [gdt 2025-02-09]
 	Updated x11/p5-Tcl-Tk to 1.51nb1 [scole 2025-02-09]
 	Updated x11/p5-Tcl-pTk to 1.11nb1 [scole 2025-02-09]
+	Added math/p5-Statistics-ChiSquare version 1.0000 [wiz 2025-02-09]
