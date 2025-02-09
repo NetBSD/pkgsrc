@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/09 06:30:14 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/09 08:45:39 triaxx Exp $
 bin/xye
+share/applications/xye.desktop
+share/pixmaps/xye.png
 share/xye/AUTHORS
 share/xye/ChangeLog
 share/xye/NEWS
@@ -39,4 +41,3 @@ share/xye/res/fon.bmp
 share/xye/res/fon_bold.bmp
 share/xye/res/xye.png
 share/xye/res/xye_luminosity.png
-share/xye/xye.svg
