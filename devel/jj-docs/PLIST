@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/05 13:41:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/09 21:22:23 wiz Exp $
 share/doc/jj/FAQ.html
 share/doc/jj/assets/images/favicon.png
 share/doc/jj/assets/javascripts/bundle.525ec568.min.js
@@ -48,6 +48,7 @@ share/doc/jj/branches.html
 share/doc/jj/cli-reference.html
 share/doc/jj/code-of-conduct.html
 share/doc/jj/community_tools.html
+share/doc/jj/config-schema.json
 share/doc/jj/config.html
 share/doc/jj/config.toml
 share/doc/jj/conflicts.html
@@ -66,10 +67,13 @@ share/doc/jj/git-compatibility.html
 share/doc/jj/github.html
 share/doc/jj/glossary.html
 share/doc/jj/governance/temporary-voting.html
+share/doc/jj/images/LICENSE
+share/doc/jj/images/favicon-96x96.png
 share/doc/jj/index.html
 share/doc/jj/install-and-setup.html
 share/doc/jj/operation-log.html
 share/doc/jj/related-work.html
+share/doc/jj/releasing.html
 share/doc/jj/revsets.html
 share/doc/jj/roadmap.html
 share/doc/jj/sapling-comparison.html
@@ -80,6 +84,7 @@ share/doc/jj/sitemap.xml.gz
 share/doc/jj/technical/architecture.html
 share/doc/jj/technical/concurrency.html
 share/doc/jj/technical/conflicts.html
+share/doc/jj/technical/types.svg
 share/doc/jj/templates.html
 share/doc/jj/testimonials.html
 share/doc/jj/tutorial.html
