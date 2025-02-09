@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2024/02/14 21:45:28 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/02/09 14:44:03 wiz Exp $
 
 BUILDLINK_TREE+=	abseil
 
@@ -12,7 +12,7 @@ GCC_REQD+=	7
 USE_CXX_FEATURES+=	c++14 filesystem
 
 BUILDLINK_API_DEPENDS.abseil+=	abseil>=20220623.0
-BUILDLINK_ABI_DEPENDS.abseil+=	abseil>=20240116.0
+BUILDLINK_ABI_DEPENDS.abseil+=	abseil>=20250127.0
 BUILDLINK_PKGSRCDIR.abseil?=	../../devel/abseil
 .endif	# ABSEIL_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/12/26 23:57:22 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/09 14:44:08 wiz Exp $
 
 DISTNAME=	irdest-ratman-0.3.1
 PKGNAME=	${DISTNAME:S/^irdest-//g}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	https://git.irde.st/we/irdest/-/archive/ratman-${PKGVERSION_NOREV}/
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2024/12/26 23:57:22 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/09 14:44:08 wiz Exp $
 
 COLLECTD_PACKAGE=	grpc
 
 COMMENT=	Statistics collection daemon - grpc plugin
-PKGREVISION=	17
+PKGREVISION=	18
 
 BROKEN+=	"fatal error: absl/synchronization/mutex.h: No such file or directory"
 
