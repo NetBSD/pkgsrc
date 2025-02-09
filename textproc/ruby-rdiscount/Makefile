@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2023/06/17 15:27:05 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/09 15:00:37 taca Exp $
 
-DISTNAME=		rdiscount-2.2.7.1
+DISTNAME=		rdiscount-2.2.7.3
 CATEGORIES=		textproc
 
 MAINTAINER=		nils@NetBSD.org
