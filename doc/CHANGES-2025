@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1233 2025/02/09 14:14:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1234 2025/02/09 14:15:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-semantic_puppet to 1.1.1 [taca 2025-02-09]
 	Updated textproc/tree-sitter-c to 0.23.5 [wiz 2025-02-09]
 	Updated textproc/tree-sitter-elixir to 0.3.4 [wiz 2025-02-09]
+	Updated devel/ruby-red-datasets to 0.1.8 [taca 2025-02-09]
