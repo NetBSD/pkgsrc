@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/05/28 01:22:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/09 14:14:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -26,8 +26,11 @@ ${GEM_LIBDIR}/lib/datasets/fuel-economy.rb
 ${GEM_LIBDIR}/lib/datasets/geolonia.rb
 ${GEM_LIBDIR}/lib/datasets/ggplot2-dataset.rb
 ${GEM_LIBDIR}/lib/datasets/hepatitis.rb
+${GEM_LIBDIR}/lib/datasets/house-of-councillor.rb
+${GEM_LIBDIR}/lib/datasets/house-of-representative.rb
 ${GEM_LIBDIR}/lib/datasets/iris.rb
 ${GEM_LIBDIR}/lib/datasets/ita-corpus.rb
+${GEM_LIBDIR}/lib/datasets/japanese-date-parser.rb
 ${GEM_LIBDIR}/lib/datasets/kuzushiji-mnist.rb
 ${GEM_LIBDIR}/lib/datasets/lazy.rb
 ${GEM_LIBDIR}/lib/datasets/libsvm-dataset-list.rb
@@ -55,6 +58,7 @@ ${GEM_LIBDIR}/lib/datasets/wine.rb
 ${GEM_LIBDIR}/lib/datasets/zip-extractor.rb
 ${GEM_LIBDIR}/red-datasets.gemspec
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/japanese-date-parser-test.rb
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test-adult.rb
 ${GEM_LIBDIR}/test/test-afinn.rb
@@ -72,6 +76,8 @@ ${GEM_LIBDIR}/test/test-fashion-mnist.rb
 ${GEM_LIBDIR}/test/test-fuel-economy.rb
 ${GEM_LIBDIR}/test/test-geolonia.rb
 ${GEM_LIBDIR}/test/test-hepatitis.rb
+${GEM_LIBDIR}/test/test-house-of-councillor.rb
+${GEM_LIBDIR}/test/test-house-of-representative.rb
 ${GEM_LIBDIR}/test/test-iris.rb
 ${GEM_LIBDIR}/test/test-ita-corpus.rb
 ${GEM_LIBDIR}/test/test-kuzushiji-mnist.rb
