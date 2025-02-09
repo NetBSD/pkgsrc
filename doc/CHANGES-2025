@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1203 2025/02/09 07:37:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1204 2025/02/09 08:41:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1591,3 +1591,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/p5-Statistics-ChiSquare version 1.0000 [wiz 2025-02-09]
 	Updated security/p5-Crypt-Random to 1.56 [wiz 2025-02-09]
 	Updated security/p5-Crypt-URandom to 0.53 [wiz 2025-02-09]
+	Updated mail/roundcube to 1.6.10 [taca 2025-02-09]
+	Updated mail/roundcube-plugin-enigma to 1.6.10 [taca 2025-02-09]
+	Updated mail/roundcube-plugin-password to 1.6.10 [taca 2025-02-09]
+	Updated mail/roundcube-plugin-zipdownload to 1.6.10 [taca 2025-02-09]
