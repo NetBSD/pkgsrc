@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.4 2023/02/04 09:25:50 kim Exp $
+$NetBSD: patch-Makefile,v 1.5 2025/02/10 10:58:25 nonaka Exp $
 
 - Don't make/install PDF.
 - Add XMLTO_FLAGS.
 - Do not install tigrc, this is handled via CONF_FILES by pkgsrc.
 
---- Makefile.orig	2022-08-25 17:27:20.000000000 +0000
+--- Makefile.orig	2025-02-05 22:27:44.000000000 +0000
 +++ Makefile
 @@ -51,7 +51,7 @@
  TXTDOC	= doc/tig.1.adoc doc/tigrc.5.adoc doc/manual.adoc NEWS.adoc README.adoc INSTALL.adoc test/API.adoc
@@ -15,15 +15,15 @@ $NetBSD: patch-Makefile,v 1.4 2023/02/04 09:25:50 kim Exp $
  
  # Never include the release number in the tarname for tagged
  # versions.
-@@ -70,6 +70,7 @@
- ASCIIDOC ?= asciidoc
- ASCIIDOC_FLAGS = -aversion=$(VERSION) -asysconfdir=$(sysconfdir) -f doc/asciidoc.conf
+@@ -71,6 +71,7 @@
+ ASCIIDOC_FLAGS = -aversion=$(VERSION) -asysconfdir=$(sysconfdir) \
+ 		-arevdate=$(shell git show -s --format=%cs) -f doc/asciidoc.conf
  XMLTO ?= xmlto
 +XMLTO_FLAGS =
  DOCBOOK2PDF ?= docbook2pdf
  
  LCOV ?= lcov
-@@ -134,7 +135,6 @@
+@@ -135,7 +136,6 @@
  
  install: all
  	$(QUIET_INSTALL)tools/install.sh bin $(EXE) "$(DESTDIR)$(bindir)"
@@ -31,7 +31,7 @@ $NetBSD: patch-Makefile,v 1.4 2023/02/04 09:25:50 kim Exp $
  
  install-doc-man: doc-man
  	$(Q)$(foreach doc, $(filter %.1, $(MANDOC)), \
-@@ -440,10 +440,10 @@
+@@ -441,10 +441,10 @@
  	$(QUIET_ASCIIDOC)$(ASCIIDOC) $(ASCIIDOC_FLAGS) -b docbook -d article $<
  
  % : %.xml
