@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.115 2025/02/02 10:38:02 he Exp $
+# $NetBSD: Makefile,v 1.116 2025/02/10 13:10:41 adam Exp $
 
-DISTNAME=	lxml-5.3.0
+DISTNAME=	lxml-5.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
 
@@ -19,8 +18,6 @@ USE_CC_FEATURES=	c99
 # pycore_frame.h:134:5: error:
 # 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		gnu99
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 # as of 5.3.0, tests only work if lxml is built in-tree
 # pkgsrc defaults to out-of-src-tree though
