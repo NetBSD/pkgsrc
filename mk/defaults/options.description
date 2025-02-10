@@ -423,6 +423,13 @@ json			Enable JSON (JavaScript Object Notation) support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
 kde4			Enable support for KDE 4.
+keepassxc-browser	Enable KeePassXC-Browser extension support.
+keepassxc-browser-passkey	Enable Passkeys support for browser integration.
+keepassxc-fdosecrets	Enable Freedesktop.org Secrets Service support.
+keepassxc-keeshare	Enable KeeShare group synchronization extension.
+keepassxc-networking	Enable Networking support.
+keepassxc-sshagent	Enable SSHAgent support.
+keepassxc-yubikey	Enable YubiKey HMAC-SHA1 authentication support.
 kerberos		Enable Kerberos support.
 kerberos-prefix-cmds	Enables addition of a prefix to the kerberos client commands.
 kerberos4		Enable Kerberos4 support.
