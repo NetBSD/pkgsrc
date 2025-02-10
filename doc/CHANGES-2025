@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1285 2025/02/10 16:32:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1286 2025/02/10 16:41:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1697,3 +1697,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-test-django to 4.10.0 [adam 2025-02-10]
 	Updated devel/py-coverage to 7.6.11 [adam 2025-02-10]
 	Updated devel/py-test-check to 2.4.2 [adam 2025-02-10]
+	Updated math/fast_float to 8.0.0 [adam 2025-02-10]
+	Updated security/gpgme to 1.24.2 [adam 2025-02-10]
