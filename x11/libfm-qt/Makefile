@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2025/02/09 19:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2025/02/10 00:29:02 gutteridge Exp $
 
 DISTNAME=	libfm-qt-2.1.0
 PKGREVISION=	3
@@ -25,9 +25,9 @@ SUBST_FILES.prefix+=	src/core/vfs/vfs-menu.c
 SUBST_SED.prefix=	-e 's,/etc/xdg,${PKG_SYSCONFDIR},g'
 SUBST_SED.prefix+=	-e 's,/usr/share,${PREFIX}/share,g'
 
-# some of the files in ${BUILDLINK_DIR} are from xsrc, some from
-# pkgsrc in the X.org native case, these need to be handled
-# differently, so we need multiple sed expression.
+# Some of the files in ${BUILDLINK_DIR} are from xsrc, some from
+# pkgsrc in the NetBSD X.org native case; these need to be handled
+# differently, so we need multiple sed expressions.
 #
 # This is probably fragile and needs to be checked on updates.
 SUBST_CLASSES+=		unbl3
