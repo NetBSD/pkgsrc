@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/08/29 12:27:12 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/10 16:32:12 adam Exp $
 
-DISTNAME=	pytest_check-2.4.1
+DISTNAME=	pytest_check-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//:S/_/-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-check/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/okken/pytest-check
 COMMENT=	Pytest plugin that allows multiple failures per test
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-test>=7.0.0:../../devel/py-test
 
 USE_LANGUAGES=	# none
