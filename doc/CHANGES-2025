@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1280 2025/02/10 10:20:31 nonaka Exp $
+$NetBSD: CHANGES-2025,v 1.1281 2025/02/10 10:51:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1687,3 +1687,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkgchkxx to 0.3 [pho 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3.1 [pho 2025-02-10]
 	Added textproc/jnv version 5.0 [nonaka 2025-02-10]
+	Added devel/ade version 0.1.2e [adam 2025-02-10]
+	Updated devel/py-pip to 25.0.1 [adam 2025-02-10]
