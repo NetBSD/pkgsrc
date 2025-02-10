@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2020/09/21 03:03:55 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/10 13:13:26 wiz Exp $
 include/pkg.h
 lib/libpkg.la
 lib/libpkg_static.la
@@ -42,7 +42,6 @@ man/man8/pkg-version.8
 man/man8/pkg-which.8
 man/man8/pkg.8
 sbin/pkg
-sbin/pkg-static
 share/examples/pkg/bash_completion.d/_pkg.bash
 share/examples/pkg/periodic/daily/411.pkg-backup
 share/examples/pkg/periodic/daily/490.status-pkg-changes
