@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2025/02/10 07:16:41 wiz Exp $
+share/quilt/compat/awk
+share/quilt/compat/diff
