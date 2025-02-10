@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1502 2025/02/07 16:04:02 pho Exp $
+# $NetBSD: Makefile,v 1.1503 2025/02/10 10:19:55 nonaka Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -476,6 +476,7 @@ SUBDIR+=	java-pure-hyperestraier
 SUBDIR+=	jdom
 SUBDIR+=	jing
 SUBDIR+=	jless
+SUBDIR+=	jnv
 SUBDIR+=	jo
 SUBDIR+=	jose
 SUBDIR+=	jrep
