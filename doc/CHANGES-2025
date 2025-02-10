@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1276 2025/02/09 21:22:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1277 2025/02/10 00:26:18 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1683,3 +1683,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-whiskermenu-plugin to 2.8.4 [gutteridge 2025-02-09]
 	Updated devel/jj to 0.26.0 [wiz 2025-02-09]
 	Updated devel/jj-docs to 0.26.0 [wiz 2025-02-09]
+	Updated meta-pkgs/xfce4-extras to 4.20.0nb28 [gutteridge 2025-02-10]
