@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/10/27 10:05:38 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/10 03:52:32 pho Exp $
 
 LIB=		fetch
 SRCS=		fetch.c common.c ftp.c http.c file.c
 DPSRCS= 	ftperr.h httperr.h
 INCS=		fetch.h
 MAN=		fetch.3
+PKGCONFIGS=	fetch.pc
 CLEANFILES=	ftperr.h httperr.h
 MKLINT=		no
 MKPIC=		no
@@ -25,6 +26,7 @@ CPPFLAGS+=	-DINET6
 .if !empty(FETCH_WITH_OPENSSL:M[yY][eE][sS])
 CPPFLAGS+=	-DWITH_SSL
 LDADD=		-lssl -lcrypto
+_PC_DEPS+=	libssl libcrypto
 .endif
 
 CPPFLAGS+=	-DFTP_COMBINE_CWDS
@@ -42,4 +44,21 @@ httperr.h: ${.CURDIR}/http.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
 	sh ${.CURDIR}/errlist.sh http_errlist HTTP \
 	    ${.CURDIR}/http.errors > ${.TARGET}
 
+.if defined(PKGCONFIGS)
+.  for f in ${PKGCONFIGS}
+all:		${f}
+FILES+=		${f}
+CLEANFILES+=	${f}
+FILESDIR_${f}=	${LIBDIR}/pkgconfig
+.  endfor
+.SUFFIXES:	.pc.in .pc
+.pc.in.pc: ${.CURDIR}/Makefile
+	${SED} \
+		-e "s,@libdir@,${LIBDIR}," \
+		-e "s,@includedir@,${INCSDIR}," \
+		-e "s,@requires-private@,${_PC_DEPS}," \
+		< ${.IMPSRC} > ${.TARGET}
+.endif
+
 .include <bsd.lib.mk>
+.include <bsd.files.mk>
