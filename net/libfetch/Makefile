@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2024/01/03 03:54:46 riastradh Exp $
+# $NetBSD: Makefile,v 1.66 2025/02/10 03:52:32 pho Exp $
 
 DISTNAME=	libfetch-2.40
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,19 +15,24 @@ USE_FEATURES=		nbcompat
 
 USE_BSD_MAKEFILE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-.if !empty(FETCH_USING:Mfetch)
-CHECK_PERMS=		no
-.endif
-
-INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
+INSTALLATION_DIRS+=	include
+INSTALLATION_DIRS+=	lib
+INSTALLATION_DIRS+=	lib/pkgconfig
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat3
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 
 BUILD_TARGET=	depend all
 INSTALL_TARGET=	install includes
+MAKE_ENV+=	SED=${SED:Q}
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
 	${TOUCH} ${WRKSRC}/fetch.cat3
+
+SUBST_CLASSES+=	pc
+SUBST_STAGE.pc=	post-extract
+SUBST_FILES.pc=	fetch.pc.in
+SUBST_VARS.pc=	COMMENT HOMEPAGE PKGBASE PKGVERSION_NOREV
 
 .include "options.mk"
 

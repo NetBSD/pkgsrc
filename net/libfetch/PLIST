@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/02 15:33:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/10 03:52:32 pho Exp $
 include/fetch.h
 lib/libfetch.a
-man/cat3/fetch.0
+lib/pkgconfig/fetch.pc
 man/man3/fetch.3
+@pkgdir man/cat3

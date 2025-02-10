@@ -1,0 +1,12 @@
+# $NetBSD: fetch.pc.in,v 1.1 2025/02/10 03:52:32 pho Exp $
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @PKGBASE@
+Version: @PKGVERSION_NOREV@
+Description: @COMMENT@
+URL: @HOMEPAGE@
+License: BSD-3-Clause
+Requires.private: @requires-private@
+Libs: -L${libdir} -Wl,-R${libdir} -lfetch
+Cflags: -I${includedir}
