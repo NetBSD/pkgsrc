@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1279 2025/02/10 08:07:37 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1280 2025/02/10 10:20:31 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1686,3 +1686,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4-extras to 4.20.0nb28 [gutteridge 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3 [pho 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3.1 [pho 2025-02-10]
+	Added textproc/jnv version 5.0 [nonaka 2025-02-10]
