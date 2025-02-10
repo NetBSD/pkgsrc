@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/01/26 04:49:14 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/10 04:21:00 pho Exp $
 
-DISTNAME=	pkgchkxx-0.2.5
+DISTNAME=	pkgchkxx-0.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=depressed-pho/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -12,10 +12,12 @@ LICENSE=	modified-bsd AND 2-clause-bsd
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++17 filesystem
-USE_TOOLS=		gmake
+USE_TOOLS=		gmake pkg-config
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-doxygen
+CONFIGURE_ARGS+=	LIBFETCH_CFLAGS="-I${BUILDLINK_PREFIX.libfetch}/include"
+CONFIGURE_ARGS+=	LIBFETCH_LIBS="-L${BUILDLINK_PREFIX.libfetch}/lib -lfetch"
 
 # These are runtime dependencies and therefore must not contain references
 # to ${WRKDIR}.
