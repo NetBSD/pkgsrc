@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2024/05/06 08:40:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/10 10:58:25 nonaka Exp $
 
-DISTNAME=	tig-2.5.8
-PKGREVISION=	1
+DISTNAME=	tig-2.5.12
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jonas/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -16,7 +15,7 @@ TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake gsed
+USE_TOOLS+=	gmake gsed pkg-config
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
