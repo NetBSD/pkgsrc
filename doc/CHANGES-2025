@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1283 2025/02/10 13:10:57 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1284 2025/02/10 14:13:09 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1692,3 +1692,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/tig to 2.5.12 [nonaka 2025-02-10]
 	Updated biology/py-biopython to 1.85 [adam 2025-02-10]
 	Updated textproc/py-lxml to 5.3.1 [adam 2025-02-10]
+	Updated editors/xnedit to 1.6.2 [micha 2025-02-10]
