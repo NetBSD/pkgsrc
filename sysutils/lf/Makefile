@@ -1,14 +1,21 @@
-# $NetBSD: Makefile,v 1.79 2024/09/06 18:48:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.80 2025/02/10 21:44:12 wiz Exp $
 
-DISTNAME=		lf-30
-PKGREVISION=		15
+DISTNAME=		lf-34
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=gokcehan/}
 GITHUB_TAG=		r${PKGVERSION_NOREV}
 
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/gokcehan/lf
 COMMENT=		Terminal file manager
 LICENSE=		2-clause-bsd
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/applications share/examples/lf
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/lf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/lf.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/lf
 
 .include "go-modules.mk"
 
