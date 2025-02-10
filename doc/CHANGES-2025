@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1278 2025/02/10 04:21:17 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1279 2025/02/10 08:07:37 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1685,3 +1685,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/jj-docs to 0.26.0 [wiz 2025-02-09]
 	Updated meta-pkgs/xfce4-extras to 4.20.0nb28 [gutteridge 2025-02-10]
 	Updated pkgtools/pkgchkxx to 0.3 [pho 2025-02-10]
+	Updated pkgtools/pkgchkxx to 0.3.1 [pho 2025-02-10]
