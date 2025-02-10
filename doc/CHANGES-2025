@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1288 2025/02/10 21:57:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1289 2025/02/10 22:57:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1702,3 +1702,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/lf to 34 [wiz 2025-02-10]
 	Updated multimedia/mkvtoolnix to 90.0 [adam 2025-02-10]
 	Updated textproc/py-sphinx-autoapi to 3.5.0 [adam 2025-02-10]
+	Updated emulators/PC6001VX to 4.2.11 [tsutsui 2025-02-10]
