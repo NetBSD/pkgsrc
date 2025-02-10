@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/01/22 21:20:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/10 19:43:34 maya Exp $
 
 DISTNAME=	Radicale-2.1.12
 PKGREVISION=	2
@@ -16,7 +16,9 @@ RADICALE_USER?=			www
 RADICALE_GROUP?=		www
 PKG_GROUPS=			${RADICALE_GROUP}
 PKG_USERS=			${RADICALE_USER}:${RADICALE_GROUP}
-PYTHON_VERSIONS_INCOMPATIBLE=	27 312 313
+# Fails with python 3.12 or newer with
+# An exception occurred during server startup: module 'ssl' has no attribute 'wrap_socket'
+PYTHON_VERSIONS_ACCEPTED=	311 310
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
