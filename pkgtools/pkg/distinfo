@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.18 2025/01/23 07:08:51 wiz Exp $
+$NetBSD: distinfo,v 1.19 2025/02/10 13:13:26 wiz Exp $
 
 BLAKE2s (pkg-1.10.99.7.tar.xz) = 61884e04f4a8283925b53d388d19e3e56a0744459230f8d2c66ccd31e1b78ffb
 SHA512 (pkg-1.10.99.7.tar.xz) = 32bfb919da140bb7b75427ea6351aee3a4a297a0e13b5c722bdd5a0b8f488085883df36929fb97ff6fd944b901fa0fc95174b1474a9a4422047ffc626869e43b
 Size (pkg-1.10.99.7.tar.xz) = 2217824 bytes
-SHA1 (patch-scripts_periodic_411.pkg-backup) = 7f5f27b58629a17f1f3a197c9f02bd6f068585a9
+SHA1 (patch-configure) = b9897af770d89b07652d5a2fbc7116b758b5e80c
+SHA1 (patch-libpkg_pkg__elf.c) = a73e90e8a5048b5327a1192d066852ad63c0e094
+SHA1 (patch-scripts_periodic_411.pkg-backup) = cba8a752c07616e7efa2b775363f91446b570ff3
 SHA1 (patch-scripts_periodic_411.pkg-backup.in) = 4dbeee9b07d7a7795a02219f4d2f12a039c58aaa
+SHA1 (patch-src_main.c) = c161270714a62110f9a42585ff960a2c5f5b4157
+SHA1 (patch-src_pkgcli.h) = 5df652de38bab147bc7f245db340dd5811f81d23

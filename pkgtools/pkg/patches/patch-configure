@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2025/02/10 13:13:27 wiz Exp $
+
+Do not build static pkg binary.
+(Fails to link, is not needed.)
+
+--- configure.orig	2025-02-10 12:32:31.342030901 +0000
++++ configure
+@@ -13073,6 +13073,7 @@ case $host_os in
+         ;;
+ esac
+ 
++OS_STATIC="false"
+ 
+ 
+ 
