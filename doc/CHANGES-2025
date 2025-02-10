@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1284 2025/02/10 14:13:09 micha Exp $
+$NetBSD: CHANGES-2025,v 1.1285 2025/02/10 16:32:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1693,3 +1693,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/py-biopython to 1.85 [adam 2025-02-10]
 	Updated textproc/py-lxml to 5.3.1 [adam 2025-02-10]
 	Updated editors/xnedit to 1.6.2 [micha 2025-02-10]
+	Updated devel/py-cwcwidth to 0.1.10 [adam 2025-02-10]
+	Updated www/py-test-django to 4.10.0 [adam 2025-02-10]
+	Updated devel/py-coverage to 7.6.11 [adam 2025-02-10]
+	Updated devel/py-test-check to 2.4.2 [adam 2025-02-10]
