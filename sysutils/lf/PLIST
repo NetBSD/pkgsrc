@@ -1,2 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2023/01/13 20:37:58 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/10 21:44:12 wiz Exp $
 bin/lf
+man/man1/lf.1
+share/applications/lf.desktop
+share/examples/lf/colors.example
+share/examples/lf/icons.example
+share/examples/lf/icons_colored.example
+share/examples/lf/lf.bash
+share/examples/lf/lf.csh
+share/examples/lf/lf.fish
+share/examples/lf/lf.nu
+share/examples/lf/lf.ps1
+share/examples/lf/lf.vim
+share/examples/lf/lf.zsh
+share/examples/lf/lfcd.cmd
+share/examples/lf/lfcd.csh
+share/examples/lf/lfcd.fish
+share/examples/lf/lfcd.nu
+share/examples/lf/lfcd.ps1
+share/examples/lf/lfcd.sh
+share/examples/lf/lfrc.cmd.example
+share/examples/lf/lfrc.example
+share/examples/lf/lfrc.ps1.example
