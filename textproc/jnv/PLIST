@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/10 10:19:56 nonaka Exp $
+bin/jnv
+share/doc/jnv/CODE_OF_CONDUCT.md
+share/doc/jnv/CONTRIBUTING.md
+share/doc/jnv/LICENSE
+share/doc/jnv/README.md
+share/doc/jnv/assets/jnv-dark.svg
+share/doc/jnv/assets/jnv-light.svg
