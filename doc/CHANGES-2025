@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1297 2025/02/11 10:42:00 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.1298 2025/02/11 10:57:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gegl to 0.4.54 [wiz 2025-02-11]
 	Updated security/putty to 0.83 [ryoon 2025-02-11]
 	Updated net/remmina to 1.4.39 [ryoon 2025-02-11]
+	Updated graphics/autotrace to 0.31.10 [ryoon 2025-02-11]
