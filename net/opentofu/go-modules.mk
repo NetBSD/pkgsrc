@@ -1,5 +1,4 @@
-===> Extracting for opentofu-1.6.2
-# $NetBSD: go-modules.mk,v 1.1 2024/03/01 03:29:56 riastradh Exp $
+# $NetBSD: go-modules.mk,v 1.2 2025/02/11 09:39:24 wiz Exp $
 
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.100.2.mod
 GO_MODULE_FILES+=	cloud.google.com/go/@v/v0.102.0.mod
