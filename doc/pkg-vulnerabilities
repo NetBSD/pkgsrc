@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.302 2025/02/09 22:15:43 rillig Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.303 2025/02/11 21:28:54 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26117,3 +26117,4 @@ bind>=9.16<9.18		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packa
 drupal>=9<10	eol	https://www.drupal.org/psa-2023-11-01
 drupal>=7<8	eol	https://www.drupal.org/psa-2025-01-06
 libtasn1<4.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-12133
+openssl<3.4.1	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2024-12797
