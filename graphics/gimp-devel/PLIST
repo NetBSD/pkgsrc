@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/02/11 13:15:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/02/11 13:24:24 wiz Exp $
 bin/gimp
 bin/gimp-3
 bin/gimp-3.0
@@ -381,6 +381,7 @@ lib/gimp/3.0/plug-ins/file-icns/file-icns
 lib/gimp/3.0/plug-ins/file-ico/file-ico
 lib/gimp/3.0/plug-ins/file-jp2-load/file-jp2-load
 lib/gimp/3.0/plug-ins/file-jpeg/file-jpeg
+lib/gimp/3.0/plug-ins/file-jpegxl/file-jpegxl
 ${PLIST.mng}lib/gimp/3.0/plug-ins/file-mng/file-mng
 lib/gimp/3.0/plug-ins/file-openraster/file-openraster.py
 lib/gimp/3.0/plug-ins/file-pat/file-pat

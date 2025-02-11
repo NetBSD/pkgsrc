@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2025/02/11 13:15:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2025/02/11 13:24:23 wiz Exp $
 
 DISTNAME=	gimp-3.0.0-RC3
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/:S/-RC/rc/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://download.gimp.org/pub/gimp/v${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.xz
@@ -47,24 +48,11 @@ REPLACE_PYTHON+=	plug-ins/python/*/*.py
 REPLACE_PYTHON+=	tools/*.py
 REPLACE_PYTHON+=	extensions/goat-exercises/goat-exercise-py3.py
 
-# GCC 4.x C++14 support is not new enough.
-GCC_REQD+=	5
-
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/gimp/3.0
 EGDIR=			${PREFIX}/share/examples/gimp
 .for f in controllerrc gimp.css gimprc sessionrc templaterc toolrc unitrc
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/gimp/3.0/${f}
 .endfor
-
-# checking for xgettext version (>= 0.19)... no
-_TOOLS_USE_PKGSRC.xgettext=	yes
-
-.include "../../mk/bsd.prefs.mk"
-
-# msgfmt: unknown option -- desktop
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.msgfmt=
-.endif
 
 INSTALLATION_DIRS=	share/examples
 
@@ -72,6 +60,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/gimp/3.0 ${DESTDIR}${PREFIX}/share/examples/gimp
 
 .include "options.mk"
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/appstream-glib/buildlink3.mk"
@@ -84,7 +73,7 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.12.4
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.babl+=		babl>=0.1.110
 .include "../../graphics/babl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.52
+BUILDLINK_API_DEPENDS.gegl+=		gegl>=0.4.54
 .include "../../graphics/gegl/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
@@ -95,7 +84,7 @@ BUILDLINK_API_DEPENDS.gexiv2+=		gexiv2>=0.14
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libheif/buildlink3.mk"
-#.include "../../wip/libjxl/buildlink3.mk"
+.include "../../graphics/libjxl/buildlink3.mk"
 .include "../../graphics/libmypaint/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/mypaint-brushes1/buildlink3.mk"
