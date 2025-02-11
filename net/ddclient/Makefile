@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.54 2024/12/17 08:04:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2025/02/11 09:52:25 abs Exp $
 
 DISTNAME=	ddclient-3.11.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ddclient/}
 GITHUB_TAG=	v${DISTNAME:S/ddclient-//}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ddclient.sourceforge.net/
+HOMEPAGE=	https://ddclient.net/
 COMMENT=	Client to update dynamic DNS entries
 LICENSE=	gnu-gpl-v2
 
@@ -33,6 +33,11 @@ REPLACE.sh.old=		.*/bin/bash
 REPLACE.sh.new=		/bin/sh
 REPLACE_FILES.sh=	sample-ddclient-wrapper.sh
 REPLACE_FILES.sh+=	sample-get-ip-from-fritzbox
+
+SUBST_CLASSES+=		curlpath
+SUBST_STAGE.curlpath=	pre-configure
+SUBST_FILES.curlpath=	sample-get-ip-from-fritzbox
+SUBST_SED.curlpath=	-e "s,^curl ,${PREFIX}/bin/curl ,"
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 
