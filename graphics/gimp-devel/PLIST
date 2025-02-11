@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/12/28 09:45:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/11 13:15:13 ryoon Exp $
 bin/gimp
 bin/gimp-3
 bin/gimp-3.0
@@ -65,6 +65,7 @@ include/gimp-3.0/libgimp/gimpgrouplayer_pdb.h
 include/gimp-3.0/libgimp/gimphelp_pdb.h
 include/gimp-3.0/libgimp/gimpimage.h
 include/gimp-3.0/libgimp/gimpimage_pdb.h
+include/gimp-3.0/libgimp/gimpimageautocrop_pdb.h
 include/gimp-3.0/libgimp/gimpimagecolorprofile.h
 include/gimp-3.0/libgimp/gimpimagecolorprofile_pdb.h
 include/gimp-3.0/libgimp/gimpimagecombobox.h
@@ -212,6 +213,7 @@ include/gimp-3.0/libgimpwidgets/gimpenumcombobox.h
 include/gimp-3.0/libgimpwidgets/gimpenumlabel.h
 include/gimp-3.0/libgimpwidgets/gimpenumstore.h
 include/gimp-3.0/libgimpwidgets/gimpenumwidgets.h
+include/gimp-3.0/libgimpwidgets/gimpfilechooser.h
 include/gimp-3.0/libgimpwidgets/gimpframe.h
 include/gimp-3.0/libgimpwidgets/gimphelpui.h
 include/gimp-3.0/libgimpwidgets/gimphintbox.h
@@ -1440,14 +1442,22 @@ share/gimp/3.0/icons/Default/scalable/apps/go-bottom-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-bottom.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-down-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-down.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-first-rtl.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-first-symbolic-rtl.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-first-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-first.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-home-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-home.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-last-rtl.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-last-symbolic-rtl.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-last-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-last.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-next-rtl.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-next-symbolic-rtl.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-next-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-next.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-previous-rtl.svg
+share/gimp/3.0/icons/Default/scalable/apps/go-previous-symbolic-rtl.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-previous-symbolic.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-previous.svg
 share/gimp/3.0/icons/Default/scalable/apps/go-top-symbolic.svg
@@ -2601,3 +2611,5 @@ share/vala/vapi/gimp-3.0.deps
 share/vala/vapi/gimp-3.0.vapi
 share/vala/vapi/gimp-ui-3.0.deps
 share/vala/vapi/gimp-ui-3.0.vapi
+@pkgdir share/gimp/3.0/fonts
+@pkgdir etc/gimp
