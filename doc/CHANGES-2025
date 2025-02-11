@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1307 2025/02/11 16:07:02 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1308 2025/02/11 16:34:48 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1723,3 +1723,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/gimp-devel to 3.0.0rc3 [ryoon 2025-02-11]
 	Updated graphics/gimp-devel to 3.0.0rc3nb1 [wiz 2025-02-11]
 	Updated lang/sbcl to 2.5.1 [ktnb 2025-02-11]
+	Updated devel/allegro5 to 5.2.10.1 [triaxx 2025-02-11]
