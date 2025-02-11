@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1291 2025/02/11 03:04:28 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1292 2025/02/11 08:01:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/PC6001VX to 4.2.11 [tsutsui 2025-02-10]
 	Updated devel/asdf to 0.16.2 [schmonz 2025-02-11]
 	Updated www/snac to 2.72 [schmonz 2025-02-11]
+	Added editors/edt-o3one version 20161222 [wiz 2025-02-11]
