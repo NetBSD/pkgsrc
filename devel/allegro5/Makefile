@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/12/27 08:19:30 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/11 16:34:24 triaxx Exp $
 
-DISTNAME=	allegro-5.2.7.0
+DISTNAME=	allegro-5.2.10.1
 PKGNAME=	${DISTNAME:S/allegro-/allegro5-/1}
-PKGREVISION=	20
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=liballeg/}
 GITHUB_PROJECT=	allegro5
@@ -13,7 +12,6 @@ HOMEPAGE=	https://liballeg.org/
 COMMENT=	Cross-platform library aimed at video game programming
 LICENSE=	zlib
 
-USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
@@ -66,8 +64,10 @@ PKGCONFIG_OVERRIDE+=	misc/allegro_video.pc.in
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/minimp3/buildlink3.mk"
 .include "../../audio/opusfile/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
