@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/05/14 09:38:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/02/11 10:41:48 ryoon Exp $
 bin/remmina
 bin/remmina-file-wrapper
 include/remmina/plugin.h
@@ -53,6 +53,7 @@ share/icons/hicolor/scalable/actions/org.remmina.Remmina-password-reveal-symboli
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pin-down-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-pin-up-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-preferences-system-symbolic.svg
+share/icons/hicolor/scalable/actions/org.remmina.Remmina-reconnect-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-scale-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-switch-page-symbolic.svg
 share/icons/hicolor/scalable/actions/org.remmina.Remmina-system-run-symbolic.svg
@@ -64,6 +65,9 @@ share/icons/hicolor/scalable/emblems/org.remmina.Remmina-sftp-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-spice-ssh-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-spice-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-ssh-symbolic.svg
+share/icons/hicolor/scalable/emblems/org.remmina.Remmina-status-green.svg
+share/icons/hicolor/scalable/emblems/org.remmina.Remmina-status-grey.svg
+share/icons/hicolor/scalable/emblems/org.remmina.Remmina-status-red.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-tool-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-vnc-ssh-symbolic.svg
 share/icons/hicolor/scalable/emblems/org.remmina.Remmina-vnc-symbolic.svg
