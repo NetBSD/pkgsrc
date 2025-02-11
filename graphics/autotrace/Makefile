@@ -1,20 +1,29 @@
-# $NetBSD: Makefile,v 1.115 2024/11/24 06:59:06 adam Exp $
+# $NetBSD: Makefile,v 1.116 2025/02/11 10:56:47 ryoon Exp $
 
-DISTNAME=	autotrace-0.31.1
-PKGREVISION=	85
+DISTNAME=	autotrace-0.31.10
 CATEGORIES=	graphics cad
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autotrace/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=autotrace/}
+GITHUB_PROJECT=	autotrace
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://autotrace.sourceforge.net/
+HOMEPAGE=	https://github.com/autotrace/autotrace
 COMMENT=	Convert bitmap to vector graphics
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
+DEPENDS+=	pstoedit>=3.32.0:../../graphics/pstoedit
+
+USE_TOOLS+=		autoconf automake autoreconf intltool pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	autotrace.pc.in
 
+pre-configure:
+	cd ${WRKSRC} && ${SH} ./autogen.sh
+
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/pstoedit/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
