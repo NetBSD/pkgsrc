@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.285 2024/12/08 10:32:28 nia Exp $
+# $NetBSD: gcc.mk,v 1.286 2025/02/11 19:30:18 gdt Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -188,11 +188,9 @@ GCC_REQD+=     14
 
 .if !empty(USE_CXX_FEATURES:Mc++20)
 # gcc documents that 11 is required, with a few perhaps-obscure
-# features requiring 12.
-
-# 10 is the version included in netbsd-10.
-# We hope that it remains OK for most C++20 in the future...
-GCC_REQD+=	10
+# features requiring 12.  gcc10 does not define __cplusplus as meeting
+# c++20.
+GCC_REQD+=	12
 .endif
 
 .if !empty(USE_CXX_FEATURES:Mc++17)
