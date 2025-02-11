@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.11 2024/01/26 03:16:58 riastradh Exp $
+# $NetBSD: endian.mk,v 1.12 2025/02/11 20:25:15 rillig Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -13,6 +13,8 @@
 # .else
 # BROKEN=	"Unknown endianness"
 # .endif
+#
+# Keywords: endian big-endian little-endian MACHINE_ENDIAN
 
 .include "../../mk/bsd.prefs.mk"
 
