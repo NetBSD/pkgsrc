@@ -1,5 +1,4 @@
-===> Extracting for kubo-0.23.0
-# $NetBSD: go-modules.mk,v 1.5 2023/10/19 11:26:01 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.6 2025/02/11 08:28:01 wiz Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200117225306-7b5117fecadc.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20200117225306-7b5117fecadc.zip
