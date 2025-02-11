@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/08/06 11:44:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/11 12:09:55 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -549,8 +549,6 @@ ${PYSITELIB}/skimage/io/_io.pyo
 ${PYSITELIB}/skimage/io/_plugins/__init__.py
 ${PYSITELIB}/skimage/io/_plugins/__init__.pyc
 ${PYSITELIB}/skimage/io/_plugins/__init__.pyo
-${PYSITELIB}/skimage/io/_plugins/_colormixer.so
-${PYSITELIB}/skimage/io/_plugins/_histograms.so
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.ini
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.py
 ${PYSITELIB}/skimage/io/_plugins/fits_plugin.pyc
@@ -601,9 +599,6 @@ ${PYSITELIB}/skimage/io/tests/test_collection.pyo
 ${PYSITELIB}/skimage/io/tests/test_fits.py
 ${PYSITELIB}/skimage/io/tests/test_fits.pyc
 ${PYSITELIB}/skimage/io/tests/test_fits.pyo
-${PYSITELIB}/skimage/io/tests/test_histograms.py
-${PYSITELIB}/skimage/io/tests/test_histograms.pyc
-${PYSITELIB}/skimage/io/tests/test_histograms.pyo
 ${PYSITELIB}/skimage/io/tests/test_imageio.py
 ${PYSITELIB}/skimage/io/tests/test_imageio.pyc
 ${PYSITELIB}/skimage/io/tests/test_imageio.pyo
@@ -791,8 +786,8 @@ ${PYSITELIB}/skimage/morphology/_misc_cy.so
 ${PYSITELIB}/skimage/morphology/_skeletonize.py
 ${PYSITELIB}/skimage/morphology/_skeletonize.pyc
 ${PYSITELIB}/skimage/morphology/_skeletonize.pyo
-${PYSITELIB}/skimage/morphology/_skeletonize_3d_cy.so
-${PYSITELIB}/skimage/morphology/_skeletonize_cy.so
+${PYSITELIB}/skimage/morphology/_skeletonize_lee_cy.so
+${PYSITELIB}/skimage/morphology/_skeletonize_various_cy.so
 ${PYSITELIB}/skimage/morphology/_util.py
 ${PYSITELIB}/skimage/morphology/_util.pyc
 ${PYSITELIB}/skimage/morphology/_util.pyo
@@ -861,9 +856,6 @@ ${PYSITELIB}/skimage/morphology/tests/test_reconstruction.pyo
 ${PYSITELIB}/skimage/morphology/tests/test_skeletonize.py
 ${PYSITELIB}/skimage/morphology/tests/test_skeletonize.pyc
 ${PYSITELIB}/skimage/morphology/tests/test_skeletonize.pyo
-${PYSITELIB}/skimage/morphology/tests/test_skeletonize_3d.py
-${PYSITELIB}/skimage/morphology/tests/test_skeletonize_3d.pyc
-${PYSITELIB}/skimage/morphology/tests/test_skeletonize_3d.pyo
 ${PYSITELIB}/skimage/morphology/tests/test_util.py
 ${PYSITELIB}/skimage/morphology/tests/test_util.pyc
 ${PYSITELIB}/skimage/morphology/tests/test_util.pyo

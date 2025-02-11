@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2024/10/14 06:45:51 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/02/11 12:09:55 adam Exp $
 
-DISTNAME=	scikit_image-0.24.0
+DISTNAME=	scikit_image-0.25.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scikit-image/}
@@ -10,21 +10,22 @@ HOMEPAGE=	https://scikit-image.org/
 COMMENT=	Image processing routines for SciPy
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=0.29.32:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.13:../../devel/py-meson_python
-DEPENDS+=	${PYPKGPREFIX}-Pillow>=9.1:../../graphics/py-Pillow
+TOOL_DEPENDS+=	${PYPKGPREFIX}-meson_python>=0.16:../../devel/py-meson_python
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=68:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-Pillow>=10.1:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-imageio>=2.33:../../graphics/py-imageio
 DEPENDS+=	${PYPKGPREFIX}-lazy_loader>=0.4:../../misc/py-lazy_loader
-DEPENDS+=	${PYPKGPREFIX}-networkx>=2.8:../../math/py-networkx
-DEPENDS+=	${PYPKGPREFIX}-numpy>=1.23:../../math/py-numpy
+DEPENDS+=	${PYPKGPREFIX}-networkx>=3.0:../../math/py-networkx
+DEPENDS+=	${PYPKGPREFIX}-numpy>=1.24:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-packaging>=21:../../devel/py-packaging
-DEPENDS+=	${PYPKGPREFIX}-scipy>=1.9:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-scipy>=1.11.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-tifffile>=2022.8.12:../../graphics/py-tifffile
 # optional
-DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.6:../../graphics/py-matplotlib
-DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.1.1:../../math/py-pywavelets
+DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.7:../../graphics/py-matplotlib
+DEPENDS+=	${PYPKGPREFIX}-pywavelets>=1.6:../../math/py-pywavelets
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
 GCC_REQD+=	9
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
