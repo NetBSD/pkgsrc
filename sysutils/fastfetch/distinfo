@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.10 2025/01/26 17:30:20 vins Exp $
+$NetBSD: distinfo,v 1.11 2025/02/11 17:45:26 vins Exp $
 
-BLAKE2s (fastfetch-2.35.0.tar.gz) = bfa20ac20bcaff76148936c95ae542414f626fd358a853bcdcf95b946d0bc706
-SHA512 (fastfetch-2.35.0.tar.gz) = c77f0496e7be630b1e19443058e5176c0b361375adeb4a6c2f1e5084c00869f9c939f82e35205c9316f3f81a622124bcc926f409fd0eb9c0ce59be5f5ab086a2
-Size (fastfetch-2.35.0.tar.gz) = 1171386 bytes
-SHA1 (patch-CMakeLists.txt) = 4b3536dc6aff90a42ee6e56beacf0fdc25627944
-SHA1 (patch-src_detection_sound_sound__bsd.c) = a9dee8cddbdb50676b8726314184d339928f9dcb
+BLAKE2s (fastfetch-2.36.1.tar.gz) = 02d2a72f53a6cd0020971823e91b70780e3b20b783053d39c3a38958990e6829
+SHA512 (fastfetch-2.36.1.tar.gz) = 2906b8e6912185a3acdd2b615ff869fa8f44ce0e547ed5529068eb2570ef5c013ed84691e62d613e52f2433595aa4e67859cf89b4116588ba4cb7c7bb7d8bb01
+Size (fastfetch-2.36.1.tar.gz) = 1176932 bytes
