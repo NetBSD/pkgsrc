@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/02 05:41:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/11 16:15:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
@@ -50,6 +50,7 @@ ${GEM_LIBDIR}/lib/net/imap/stringprep/saslprep.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/saslprep_tables.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/tables.rb
 ${GEM_LIBDIR}/lib/net/imap/stringprep/trace.rb
+${GEM_LIBDIR}/lib/net/imap/uidplus_data.rb
 ${GEM_LIBDIR}/lib/net/imap/vanished_data.rb
 ${GEM_LIBDIR}/net-imap.gemspec
 ${GEM_LIBDIR}/rakelib/benchmarks.rake
