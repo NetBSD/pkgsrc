@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2024/09/06 18:48:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.106 2025/02/11 08:51:00 wiz Exp $
 
 DISTNAME=		beats-6.8.13
 PKGREVISION=		44
@@ -13,7 +13,7 @@ COMMENT=		Data Shippers for Elasticsearch
 LICENSE=		apache-2.0
 
 EXTRACT_USING=		bsdtar
-USE_TOOLS+=		gmake
+USE_TOOLS+=		bash gmake
 
 GO_DIST_BASE=		${PKGBASE}-${GITHUB_TAG:S/v//}
 GO_SRCPATH=		github.com/elastic/beats
