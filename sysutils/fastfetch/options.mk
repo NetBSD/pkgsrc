@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2025/01/25 22:16:08 vins Exp $
+# $NetBSD: options.mk,v 1.12 2025/02/11 17:45:26 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fastfetch
 PKG_OPTIONS_OPTIONAL_GROUPS=	server sound
@@ -22,7 +22,6 @@ PKG_SUGGESTED_OPTIONS+=	threads
 PKG_SUGGESTED_OPTIONS+=	opencl
 .endif
 
-PKG_SUGGESTED_OPTIONS.NetBSD+=		oss
 PKG_SUGGESTED_OPTIONS.SunOS+=		pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux+=		dbus pulseaudio sqlite3
 PKG_SUGGESTED_OPTIONS.FreeBSD+=		oss sqlite3

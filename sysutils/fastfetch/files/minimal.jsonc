@@ -25,7 +25,6 @@
         },
         {
             "type": "packages",
-            "format": "{} (pkgsrc)",
             "key": "PKG ",
             "keyColor": "34",  
         },
