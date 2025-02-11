@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1306 2025/02/11 13:24:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1307 2025/02/11 16:07:02 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/p5-gdbm to 5.40.1 [ryoon 2025-02-11]
 	Updated graphics/gimp-devel to 3.0.0rc3 [ryoon 2025-02-11]
 	Updated graphics/gimp-devel to 3.0.0rc3nb1 [wiz 2025-02-11]
+	Updated lang/sbcl to 2.5.1 [ktnb 2025-02-11]
