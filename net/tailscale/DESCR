@@ -1,0 +1,6 @@
+Private WireGuard VPN
+
+This package includes tailscaled daemon and tailscale CLI tool.
+
+FOr NetBSD, you can use userspace-networking support only.
+tun(4) backend does not work properly yet.
