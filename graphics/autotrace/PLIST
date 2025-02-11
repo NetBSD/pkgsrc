@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/11 10:56:47 ryoon Exp $
 bin/autotrace
-bin/autotrace-config
 include/autotrace/autotrace.h
+include/autotrace/color.h
 include/autotrace/exception.h
 include/autotrace/input.h
 include/autotrace/output.h
+include/autotrace/spline.h
 include/autotrace/types.h
 lib/libautotrace.la
 lib/pkgconfig/autotrace.pc
 man/man1/autotrace.1
-share/aclocal/autotrace.m4
