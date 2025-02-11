@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2023/10/24 22:08:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/11 19:03:18 vins Exp $
 
-DISTNAME=	libopensmtpd-0.7
-PKGREVISION=	2
+DISTNAME=	libopensmtpd-0.8
 CATEGORIES=	devel mail
-MASTER_SITES=	https://distfiles.sigtrap.nl/
+MASTER_SITES=	https://src.imperialat.at/releases/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://distfiles.sigtrap.nl/
