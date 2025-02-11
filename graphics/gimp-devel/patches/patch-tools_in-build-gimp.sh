@@ -1,6 +1,7 @@
-$NetBSD: patch-tools_in-build-gimp.sh,v 1.1 2025/02/11 13:15:13 ryoon Exp $
+$NetBSD: patch-tools_in-build-gimp.sh,v 1.2 2025/02/11 13:24:24 wiz Exp $
 
 * Do not use gdb during build.
+https://gitlab.gnome.org/GNOME/gimp/-/issues/12904
 
 --- tools/in-build-gimp.sh.orig	2025-02-11 12:53:23.323362498 +0000
 +++ tools/in-build-gimp.sh
