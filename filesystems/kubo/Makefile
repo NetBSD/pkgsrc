@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2024/09/06 18:48:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.29 2025/02/11 08:28:12 wiz Exp $
 
 DISTNAME=	kubo-0.23.0
 PKGREVISION=	11
@@ -12,7 +12,7 @@ COMMENT=	IPFS implementation in Go
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+USE_TOOLS+=	bash gmake
 
 INSTALLATION_DIRS=	bin
 
