@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1300 2025/02/11 11:06:07 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.1301 2025/02/11 11:11:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1715,3 +1715,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/autotrace to 0.31.10 [ryoon 2025-02-11]
 	Updated mail/thunderbird to 128.7.0 [ryoon 2025-02-11]
 	Updated mail/thunderbird-l10n to 128.7.0 [ryoon 2025-02-11]
+	Updated devel/SDL2 to 2.32.0 [ryoon 2025-02-11]
