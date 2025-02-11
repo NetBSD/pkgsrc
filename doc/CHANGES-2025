@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1311 2025/02/11 21:18:59 vins Exp $
+$NetBSD: CHANGES-2025,v 1.1312 2025/02/11 21:26:55 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1727,3 +1727,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/difftastic to 0.63.0 [bsiegert 2025-02-11]
 	Updated devel/libopensmtpd to 0.8 [vins 2025-02-11]
 	Updated sysutils/fastfetch to 2.36.1 [vins 2025-02-11]
+	Updated x11/qt6ct to 0.10 [vins 2025-02-11]
