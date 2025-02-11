@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2024/12/27 08:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2025/02/11 10:41:48 ryoon Exp $
 
-DISTNAME=	Remmina-v1.4.35
+DISTNAME=	Remmina-v1.4.39
 PKGNAME=	${DISTNAME:tl:S/-v/-/1}
-PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITLAB:=Remmina/}
 GITLAB_PROJECT=	Remmina
@@ -13,7 +12,6 @@ HOMEPAGE=	https://www.remmina.org/
 COMMENT=	Remote desktop client based on GTK+
 LICENSE=	gnu-gpl-v2
 
-USE_CMAKE=	yes
 USE_LANGUAGES=	c99 c++
 
 USE_TOOLS+=	pkg-config msgmerge
@@ -27,6 +25,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 LDFLAGS.NetBSD+=	-rdynamic
 
 .include "options.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../net/freerdp2/buildlink3.mk"
