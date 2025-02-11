@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1295 2025/02/11 09:45:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1296 2025/02/11 10:29:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1710,3 +1710,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/zlib-ng to 2.2.4 [adam 2025-02-11]
 	Updated databases/postgresql-timescaledb to 2.18.1 [adam 2025-02-11]
 	Updated graphics/gegl to 0.4.54 [wiz 2025-02-11]
+	Updated security/putty to 0.83 [ryoon 2025-02-11]
