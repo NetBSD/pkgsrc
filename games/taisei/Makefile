@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/12/16 08:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/02/11 08:24:34 wiz Exp $
 
 DISTNAME=	taisei-1.4.2
 CATEGORIES=	games
@@ -35,6 +35,9 @@ REPLACE_PYTHON+=	scripts/configure-file.py
 BUILDLINK_TRANSFORM+=	rm:-Werror=implicit-function-declaration
 
 PYTHON_FOR_BUILD_ONLY=		tool
+
+# needs sincos(), added in NetBSD 10
+NOT_FOR_PLATFORM+=	NetBSD-[0-9]*.*-*
 
 .include "../../devel/meson/build.mk"
 .include "../../archivers/libzip/buildlink3.mk"
