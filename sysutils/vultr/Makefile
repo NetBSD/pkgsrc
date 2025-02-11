@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2025/02/06 21:21:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.71 2025/02/11 08:41:43 wiz Exp $
 
 DISTNAME=		vultr-2.0.3
 CATEGORIES=		sysutils
@@ -10,7 +10,7 @@ HOMEPAGE=		https://jamesclonk.github.io/vultr/
 COMMENT=		CLI and API client library for Vultr
 LICENSE=		mit
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=		c
 
 .include "go-modules.mk"
 
