@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.1 2025/02/05 05:00:52 schmonz Exp $
+# $NetBSD: go-modules.mk,v 1.2 2025/02/11 03:03:48 schmonz Exp $
 
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.mod
 GO_MODULE_FILES+=	dario.cat/mergo/@v/v1.0.0.zip
@@ -13,8 +13,8 @@ GO_MODULE_FILES+=	github.com/chavacava/garif/@v/v0.1.0.mod
 GO_MODULE_FILES+=	github.com/chavacava/garif/@v/v0.1.0.zip
 GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.mod
 GO_MODULE_FILES+=	github.com/cloudflare/circl/@v/v1.3.7.zip
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.mod
-GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.3.zip
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.mod
+GO_MODULE_FILES+=	github.com/cpuguy83/go-md2man/v2/@v/v2.0.5.zip
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.mod
 GO_MODULE_FILES+=	github.com/cyphar/filepath-securejoin/@v/v0.2.5.zip
 GO_MODULE_FILES+=	github.com/davecgh/go-spew/@v/v1.1.0.mod
@@ -94,12 +94,12 @@ GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.4.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.7.1.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.0.mod
 GO_MODULE_FILES+=	github.com/stretchr/testify/@v/v1.8.4.mod
-GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.1.mod
-GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.1.zip
+GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.5.mod
+GO_MODULE_FILES+=	github.com/urfave/cli/v2/@v/v2.27.5.zip
 GO_MODULE_FILES+=	github.com/xanzy/ssh-agent/@v/v0.3.3.mod
 GO_MODULE_FILES+=	github.com/xanzy/ssh-agent/@v/v0.3.3.zip
-GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20201216005158-039620a65673.mod
-GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20201216005158-039620a65673.zip
+GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20240521201337-686a1a2994c1.mod
+GO_MODULE_FILES+=	github.com/xrash/smetrics/@v/v0.0.0-20240521201337-686a1a2994c1.zip
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.0.0-20220622213112-05595931fe9d.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.31.0.mod
 GO_MODULE_FILES+=	golang.org/x/crypto/@v/v0.31.0.zip
