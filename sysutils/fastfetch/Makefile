@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/01/28 16:23:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/11 08:48:20 wiz Exp $
 
 DISTNAME=	fastfetch-2.35.0
 PKGREVISION=	1
@@ -14,6 +14,9 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 USE_LANGUAGES=	c c++
+
+# prop_dictionary_keysym_value
+NOT_FOR_PLATFORM+=	NetBSD-[0-8]*.*-* NetBSD-9.[01].*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,8 +54,6 @@ post-install:
 # determined in options.mk, and PYTHON_FOR_BUILD_ONLY is set there, if needed.
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/application.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=   27
-
 .include "../../sysutils/hwdata/buildlink3.mk"
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../devel/yyjson/buildlink3.mk"
