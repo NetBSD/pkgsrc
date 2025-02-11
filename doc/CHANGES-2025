@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1302 2025/02/11 12:10:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1303 2025/02/11 12:30:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1718,3 +1718,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/SDL2 to 2.32.0 [ryoon 2025-02-11]
 	Updated devel/py-cython to 3.0.12 [adam 2025-02-11]
 	Updated math/py-scikit-image to 0.25.1 [adam 2025-02-11]
+	Updated lang/perl5 to 5.40.1 [ryoon 2025-02-11]
