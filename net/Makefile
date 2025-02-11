@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1589 2025/02/01 10:39:06 pho Exp $
+# $NetBSD: Makefile,v 1.1590 2025/02/11 08:56:06 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -954,6 +954,7 @@ SUBDIR+=	synergy
 SUBDIR+=	sysmon
 SUBDIR+=	tacacs
 SUBDIR+=	tacacs-shrubbery
+SUBDIR+=	tailscale
 SUBDIR+=	taskserver
 SUBDIR+=	tcl-scotty
 SUBDIR+=	tcpdmerge
