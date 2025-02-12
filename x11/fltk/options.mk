@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/01/31 12:22:44 micha Exp $
+# $NetBSD: options.mk,v 1.2 2025/02/12 11:52:04 micha Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -11,7 +11,7 @@ PKG_SUPPORTED_OPTIONS+=	wayland  # untested
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Cygwin"
 PKG_SUGGESTED_OPTIONS=	opengl
 .else
-PKG_SUGGESTED_OPTIONS=	cairo opengl pango x11 xcursor xfixes xft2 xinerama xrender
+PKG_SUGGESTED_OPTIONS=	opengl pango x11 xcursor xfixes xft2 xinerama xrender
 .endif
 PLIST_VARS+=		cairo opengl
 
