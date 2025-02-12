@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2022/04/23 12:45:09 js Exp $
+$NetBSD: distinfo,v 1.3 2025/02/12 16:40:34 adam Exp $
 
-BLAKE2s (tulir-telethon-1.25.0a7.tar.gz) = 6add46f696da388f2284677041bae88bcf4fa89963875eed155724b85f2334e8
-SHA512 (tulir-telethon-1.25.0a7.tar.gz) = 4fb229a57b361f0fd80e549a16580f30d3878e7110878a91502a4199609b6165a195c49e0302f4e3b1235ebfb8674c580b8666b487d2e8b412a03d9205211513
-Size (tulir-telethon-1.25.0a7.tar.gz) = 476754 bytes
+BLAKE2s (tulir-telethon-1.37.0a1.tar.gz) = 27112bb87a060fa268c733cfc3e72e79f82f47407bfd8f070c28adb0dd2b10ab
+SHA512 (tulir-telethon-1.37.0a1.tar.gz) = d2627c784df4fd4c3cb31f67401dabf4917b58558526b7a411bb374603245f61bb9396d456912a4908550b318a1b0e73aed0814e6a1c6edb5001acd01808edba
+Size (tulir-telethon-1.37.0a1.tar.gz) = 612904 bytes
