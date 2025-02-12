@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2024/12/29 15:09:47 adam Exp $
+# $NetBSD: Makefile,v 1.186 2025/02/12 11:29:35 wiz Exp $
 
 DISTNAME=	flightgear-2020.3.11
 PKGREVISION=	54
@@ -12,6 +12,7 @@ COMMENT=	The FlightGear Simulator
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES+=	c++14
 USE_CMAKE=		yes
 LDFLAGS.NetBSD+=	-lexecinfo
 
