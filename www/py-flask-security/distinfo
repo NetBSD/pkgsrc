@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/01/29 12:08:12 adam Exp $
+$NetBSD: distinfo,v 1.15 2025/02/12 16:32:00 adam Exp $
 
-BLAKE2s (flask_security-5.5.2.tar.gz) = 04d20f8394898a65283db4425757ab4fd690132c8fb16a1a923b2e6c63a8478e
-SHA512 (flask_security-5.5.2.tar.gz) = 4ffb4c87d5d747756b81dd5a11d528ce19d6c1f27f13271785f7a4217ff853fa429a7e8c84bdcd9059a8b704d4c78202d8288a88679ac6697f8d751598f82d40
-Size (flask_security-5.5.2.tar.gz) = 668289 bytes
+BLAKE2s (flask_security-5.6.0.tar.gz) = dc0f7a661f4937d0c61b5a7bda3e683c6428a2bded4b9b1051bb3bc9944f42a3
+SHA512 (flask_security-5.6.0.tar.gz) = 4dc95c2c47041b4e871066750e9874dceb594f7d15369bc67a1a8b41a5534f3a59f7da341cf7bd4d5dae637429977373ae598f4e7e504276d4ac2a4aa56e92de
+Size (flask_security-5.6.0.tar.gz) = 693721 bytes
