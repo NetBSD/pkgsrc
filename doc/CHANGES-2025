@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1320 2025/02/12 08:16:55 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1321 2025/02/12 08:34:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1739,3 +1739,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.4.0 [pin 2025-02-12]
 	Updated editors/tp-note to 1.25.2 [pin 2025-02-12]
 	Updated sysutils/zoxide to 0.9.7 [pin 2025-02-12]
+	Updated emulators/qemu to 9.2.1 [adam 2025-02-12]
+	Updated security/gnutls to 3.8.9 [adam 2025-02-12]
