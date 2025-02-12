@@ -708,6 +708,9 @@ extract_files(struct pkg_task *pkg)
 		return -1;
 	}
 
+#ifndef O_CLOEXEC
+#define	O_CLOEXEC	0
+#endif
 #ifndef O_DIRECTORY
 #define	O_DIRECTORY	0
 #endif
