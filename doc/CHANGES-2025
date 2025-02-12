@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1328 2025/02/12 13:08:25 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1329 2025/02/12 14:21:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/R-spatstat.geom to 3.3.5 [wiz 2025-02-12]
 	Updated geography/py-geoip2 to 5.0.1 [adam 2025-02-12]
 	Updated devel/py-gcovr to 8.3 [adam 2025-02-12]
+	Updated sysutils/yazi to 0.4.2nb1 [wiz 2025-02-12]
