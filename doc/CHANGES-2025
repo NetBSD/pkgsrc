@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1326 2025/02/12 12:13:09 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1327 2025/02/12 12:32:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1755,3 +1755,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-kubernetes to 32.0.0 [adam 2025-02-12]
 	Updated net/dante to 1.4.4 [adam 2025-02-12]
 	Updated textproc/py-pdf to 5.3.0 [adam 2025-02-12]
+	Updated geography/R-spatstat.geom to 3.3.5 [wiz 2025-02-12]
