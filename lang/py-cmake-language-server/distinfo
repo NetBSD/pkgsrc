@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2024/04/21 15:33:45 wiz Exp $
+$NetBSD: distinfo,v 1.11 2025/02/12 06:15:59 adam Exp $
 
-BLAKE2s (cmake_language_server-0.1.10.tar.gz) = d599137b5f1b19e734805d82f166244aebbaf3201e5518d92d5bf120c7a509f0
-SHA512 (cmake_language_server-0.1.10.tar.gz) = aaa420078481f109c4bec4a234bff4df6808b60d9f71f4f92c3d317ad16ccd21fec2036331cf108953be1194f8b4d8713882d400878bd2e3568130032fab62ad
-Size (cmake_language_server-0.1.10.tar.gz) = 11852 bytes
+BLAKE2s (cmake_language_server-0.1.11.tar.gz) = e2ce92be1b201156092669fb23f0defb1e80bff9c67eccca1bdd67a7ea2573b4
+SHA512 (cmake_language_server-0.1.11.tar.gz) = 25ecacf06330d2dd081773ae6b3e4a0c2b61f0ed81658555b1905330c2249bd894ca91c884b2322a16b82572d2f124410a8326d0d2ddcc9e1ce3e2140caeb970
+Size (cmake_language_server-0.1.11.tar.gz) = 11849 bytes
