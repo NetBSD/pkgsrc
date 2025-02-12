@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2024/11/28 10:31:24 adam Exp $
+# $NetBSD: Makefile,v 1.124 2025/02/12 06:13:07 adam Exp $
 
-DISTNAME=	cryptography-44.0.0
+DISTNAME=	cryptography-44.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -19,7 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmar
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
-#CARGO_WRKSRC=	${WRKSRC}/src/rust
 USE_TOOLS+=	pkg-config
 MAKE_ENV+=	CARGO_NET_OFFLINE=true
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl}
