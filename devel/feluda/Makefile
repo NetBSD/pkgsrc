@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2025/02/06 11:21:24 pin Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/12 08:11:36 pin Exp $
 
-DISTNAME=	feluda-1.2.3
+DISTNAME=	feluda-1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anistark/}
 
@@ -18,11 +18,5 @@ LICENSE=	mit AND cc-by-nc-nd-v4.0-license
 
 .include "cargo-depends.mk"
 
-USE_TOOLS+=	pkg-config
-
-MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
-RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
-
 .include "../../lang/rust/cargo.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
