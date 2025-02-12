@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1335 2025/02/12 20:49:10 leot Exp $
+$NetBSD: CHANGES-2025,v 1.1336 2025/02/12 21:06:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1767,3 +1767,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/py-tulir-telethon to 1.37.0a1 [adam 2025-02-12]
 	Updated net/py-dnsdiag to 2.6.0 [adam 2025-02-12]
 	Updated net/dhcpcd to 10.2.0 [roy 2025-02-12]
+	Updated graphics/pstoedit to 3.78nb27 [wiz 2025-02-12]
