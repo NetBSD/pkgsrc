@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1334 2025/02/12 16:54:33 roy Exp $
+$NetBSD: CHANGES-2025,v 1.1335 2025/02/12 20:49:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -723,7 +723,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/py-torch version 2.5.1 [ryoon 2025-01-21]
 	Updated math/py-huggingface-hub to 0.27.1 [adam 2025-01-21]
 	Updated www/py-starlette to 0.45.2 [adam 2025-01-21]
-	Updated www/php-mrbs to 1.11.6 [manu 2025-01-21]
+	Updated time/php-mrbs to 1.11.6 [manu 2025-01-21]
 	Added devel/py-testfixtures version 8.3.0 [adam 2025-01-21]
 	Added devel/py-sybil version 9.0.0 [adam 2025-01-21]
 	Updated devel/py-flufl.i18n to 5.1.0 [adam 2025-01-21]
