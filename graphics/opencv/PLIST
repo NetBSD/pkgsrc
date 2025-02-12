@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2025/02/07 21:54:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/02/12 11:22:16 wiz Exp $
 bin/opencv_annotation
 bin/opencv_interactive-calibration
 bin/opencv_model_diagnostics
@@ -305,7 +305,7 @@ ${PYSITELIB}/cv2/__init__.py
 ${PYSITELIB}/cv2/__init__.pyi
 ${PYSITELIB}/cv2/aruco/__init__.pyi
 ${PYSITELIB}/cv2/barcode/__init__.pyi
-${PYSITELIB}/cv2/config-3.13.py
+${PYSITELIB}/cv2/config-${PYVERSSUFFIX}.py
 ${PYSITELIB}/cv2/config.py
 ${PYSITELIB}/cv2/cuda/__init__.pyi
 ${PYSITELIB}/cv2/detail/__init__.pyi
@@ -323,7 +323,7 @@ ${PYSITELIB}/cv2/ocl/__init__.pyi
 ${PYSITELIB}/cv2/ogl/__init__.pyi
 ${PYSITELIB}/cv2/parallel/__init__.pyi
 ${PYSITELIB}/cv2/py.typed
-${PYSITELIB}/cv2/python-3.13/cv2.so
+${PYSITELIB}/cv2/python-${PYVERSSUFFIX}/cv2.so
 ${PYSITELIB}/cv2/samples/__init__.pyi
 ${PYSITELIB}/cv2/segmentation/__init__.pyi
 ${PYSITELIB}/cv2/typing/__init__.py
