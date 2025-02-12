@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2023/12/11 17:14:48 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING
+@comment $NetBSD: PLIST,v 1.3 2025/02/12 16:25:48 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/pbr.json
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/AUTHORS
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING
 ${PYSITELIB}/fixtures/__init__.py
 ${PYSITELIB}/fixtures/__init__.pyc
 ${PYSITELIB}/fixtures/__init__.pyo
@@ -51,6 +49,9 @@ ${PYSITELIB}/fixtures/_fixtures/timeout.pyo
 ${PYSITELIB}/fixtures/_fixtures/warnings.py
 ${PYSITELIB}/fixtures/_fixtures/warnings.pyc
 ${PYSITELIB}/fixtures/_fixtures/warnings.pyo
+${PYSITELIB}/fixtures/_version.py
+${PYSITELIB}/fixtures/_version.pyc
+${PYSITELIB}/fixtures/_version.pyo
 ${PYSITELIB}/fixtures/callmany.py
 ${PYSITELIB}/fixtures/callmany.pyc
 ${PYSITELIB}/fixtures/callmany.pyo
