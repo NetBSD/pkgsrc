@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/12 16:43:34 adam Exp $
 
-DISTNAME=	dnsdiag-2.5.0
+DISTNAME=	dnsdiag-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dnsdiag/}
@@ -11,15 +11,14 @@ COMMENT=	DNS Diagnostics and Performance Measurement Tools
 LICENSE=	2-clause-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.7:../../security/py-cryptography
+DEPENDS+=	${PYPKGPREFIX}-aioquic>=1.2.0:../../www/py-aioquic
+DEPENDS+=	${PYPKGPREFIX}-cryptography>=42.0.5:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-cymruwhois>=1.6:../../net/py-cymruwhois
-DEPENDS+=	${PYPKGPREFIX}-dns>=2.6.1:../../net/py-dns
+DEPENDS+=	${PYPKGPREFIX}-dns>=2.7.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-h2>=4.1.0:../../www/py-h2
 DEPENDS+=	${PYPKGPREFIX}-httpx>=0.27.0:../../www/py-httpx
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 .for bin in dnseval dnsping dnstraceroute
