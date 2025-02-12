@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2024/12/27 08:20:24 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2025/02/12 06:45:27 ryoon Exp $
 
 DISTNAME=	mlt-7.18.0
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mltframework/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

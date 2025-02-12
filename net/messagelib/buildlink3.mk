@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/11/14 22:21:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/02/12 06:45:31 ryoon Exp $
 
 BUILDLINK_TREE+=	messagelib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	messagelib
 MESSAGELIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.messagelib+=	messagelib>=20.04.1
-BUILDLINK_ABI_DEPENDS.messagelib?=	messagelib>=23.08.4nb6
+BUILDLINK_ABI_DEPENDS.messagelib?=	messagelib>=23.08.4nb7
 BUILDLINK_PKGSRCDIR.messagelib?=	../../net/messagelib
 
 .include "../../mail/kmailtransport/buildlink3.mk"

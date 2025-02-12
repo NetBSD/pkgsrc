@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2024/12/29 15:09:53 adam Exp $
+# $NetBSD: Makefile,v 1.77 2025/02/12 06:45:14 ryoon Exp $
 
 PKGNAME=	gnuradio-zeromq-${VERSION}
-PKGREVISION=	13
+PKGREVISION=	14
 COMMENT=	All of the zeromq blocks, utilities, and examples
 
 .include "../../ham/gnuradio-core/Makefile.common"

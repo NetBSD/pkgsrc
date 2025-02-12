@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2024/12/27 08:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2025/02/12 06:44:26 ryoon Exp $
 #
 
 DISTNAME=	MuSE-0.9
 PKGNAME=	${DISTNAME:S/MuSE/muse/}
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/
 MASTER_SITES+=	http://www.ljudmila.org/~jaromil/mirror/muse/releases/

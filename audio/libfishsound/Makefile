@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2023/05/06 19:09:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/12 06:44:24 ryoon Exp $
 #
 
 DISTNAME=	libfishsound-1.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/libfishsound/
 
