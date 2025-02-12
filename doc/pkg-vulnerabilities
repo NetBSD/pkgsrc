@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.304 2025/02/12 09:18:18 jperkin Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.305 2025/02/12 18:27:49 rillig Exp $
 #
 #FORMAT 1.0.0
 #
@@ -2614,7 +2614,7 @@ thunderbird{,-gtk1}<1.5.0.13		privilege-escalation	https://www.mozilla.org/secur
 thunderbird{,-gtk1}>=2.0<2.0.0.6	privilege-escalation	https://www.mozilla.org/security/announce/2007/mfsa2007-26.html
 seamonkey{,-bin,-gtk1}<1.1.4		privilege-escalation	https://www.mozilla.org/security/announce/2007/mfsa2007-26.html
 firefox{,-bin,-gtk1}<2.0.0.6		command-injection	https://www.mozilla.org/security/announce/2007/mfsa2007-27.html
-thunderbird{,-gtk1}>=2.0<1.5.0.13		command-injection	https://www.mozilla.org/security/announce/2007/mfsa2007-27.html
+thunderbird{,-gtk1}>=1.5<1.5.0.13	command-injection	https://www.mozilla.org/security/advisories/mfsa2007-27/
 thunderbird{,-gtk1}>=2.0<2.0.0.6	command-injection	https://www.mozilla.org/security/announce/2007/mfsa2007-27.html
 seamonkey{,-bin,-gtk1}<1.1.4		command-injection	https://www.mozilla.org/security/announce/2007/mfsa2007-27.html
 acroread-[0-9]*		eol		https://ftp.NetBSD.org/pub/NetBSD/packages/vulns/eol-packages
@@ -6550,8 +6550,10 @@ bind>=9.8<9.8.4pl1		denial-of-service	https://kb.isc.org/article/AA-00855
 bind>=9.9<9.9.2pl1nb2		denial-of-service	https://kb.isc.org/article/AA-00855
 ruby{18,19,193}-activesupport>=3<3.0.20	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0333
 ruby{18,19,193}-activemodel>=3<3.0.20	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0333
-ffmpeg>=20121018.1.0.0<20130121.1.0.2		multiple-vulnerabilities	http://secunia.com/advisories/51964/
-ffmpeg>=20130128.1.1.0<20130120.1.1.1		multiple-vulnerabilities	http://secunia.com/advisories/51975/
+ffmpeg<20130121.1.0.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2012-6617
+ffmpeg<20130121.1.0.2		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2012-6618
+ffmpeg<20130120.1.1.1		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2013-0860
+ffmpeg<20130120.1.1.1		memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2013-0861
 libupnp<1.6.18			buffer-overflow		http://secunia.com/advisories/51949/
 libssh<0.54			null-dereference	http://www.libssh.org/2013/01/22/libssh-0-5-4-security-release/
 libvirt<1.0.2			arbitrary-code-execution	http://secunia.com/advisories/52003/
@@ -10294,7 +10296,7 @@ phpmyadmin>=4.4<4.4.15.7 		code-injection				https://www.phpmyadmin.net/security
 phpmyadmin>=4.6<4.6.3 			code-injection				https://www.phpmyadmin.net/security/PMASA-2016-27/
 phpmyadmin>=4.4<4.4.15.7 		arbitrary-command-execution		https://www.phpmyadmin.net/security/PMASA-2016-19/
 phpmyadmin>=4.6<4.6.3 			arbitrary-command-execution		https://www.phpmyadmin.net/security/PMASA-2016-19/
-phpmyadmin>=5.0.10<4.0.10.16 		code-injection				https://www.phpmyadmin.net/security/PMASA-2016-17/
+phpmyadmin>=4.0.10<4.0.10.16 		code-injection				https://www.phpmyadmin.net/security/PMASA-2016-17/
 phpmyadmin>=4.4.15<4.4.15.7 		code-injection				https://www.phpmyadmin.net/security/PMASA-2016-17/
 phpmyadmin>=4.6<4.6.3 			code-injection				https://www.phpmyadmin.net/security/PMASA-2016-17/
 phpmyadmin>=4.4<4.4.15.7 		cross-site-scripting			https://www.phpmyadmin.net/security/PMASA-2016-21/
@@ -10403,12 +10405,12 @@ suse{,32}_libcurl-[0-9]* 	use-after-free	https://curl.haxx.se/docs/adv_20160803C
 php{55,56,70,71}-ja-wordpress<4.5	remote-hijacking	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6635
 wordpress<4.5 				remote-hijacking	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6635
 php70-gd>=7.0<7.0.9			denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6128
+php55-gd>=5.5<5.5.37			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5766
+php56-gd>=5.6<5.6.23			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5766
 php70-gd>=7.0<7.0.8			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5766
-php56-gd>=5.6<5.5.37			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5766
-php55-gd>=5.5<5.6.23			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5766
+php55-gd>=5.5<5.5.37			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5767
+php56-gd>=5.6<5.6.23			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5767
 php70-gd>=7.0<7.0.8			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5767
-php56-gd>=5.6<5.5.37			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5767
-php55-gd>=5.5<5.6.23			heap-overflow		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5767
 php70-mbstring>=7.0<7.0.8		denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5768
 php56-mbstring>=5.6<5.6.23		denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5768
 php55-mbstring>=5.5<5.5.37		denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5768
@@ -13764,7 +13766,7 @@ rpm<4.13.0.2		arbitrary-file-overwrite	https://nvd.nist.gov/vuln/detail/CVE-2017
 ncurses<6.1		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2017-16879
 slurm>=2.4.0pre4<16.05.11	privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2017-15566
 slurm>=17<17.02.9		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2017-15566
-slurm>=17.11<17.11.0rc2		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2017-15566
+slurm>=17.11alpha0<17.11.0rc2		privilege-escalation	https://nvd.nist.gov/vuln/detail/CVE-2017-15566
 wordpress<4.9		cross-domain-flash-injection	https://nvd.nist.gov/vuln/detail/CVE-2016-9263
 php{56,70,71,72}-ja-wordpress<4.9	cross-domain-flash-injection	https://nvd.nist.gov/vuln/detail/CVE-2016-9263
 wordpress<4.8.3		sql-injection		https://nvd.nist.gov/vuln/detail/CVE-2017-16510
@@ -22590,7 +22592,7 @@ py{36,37,38,39,310}-django>=3.2<3.2.11	access-bypass	https://nvd.nist.gov/vuln/d
 py{36,37,38,39,310}-django>=4<4.0.1	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2021-45452
 py{36,37,38,39,310}-django>=2.2<2.2.26	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
 py{36,37,38,39,310}-django>=3.2<3.2.11	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
-py{36,37,38,39,310}-django>=4<2.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
+py{36,37,38,39,310}-django>=4<4.0.1	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-45115
 py{36,37,38,39,310}-django>=2.2<2.2.26	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
 py{36,37,38,39,310}-django>=3.2<3.2.11	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
 py{36,37,38,39,310}-django>=4<4.0.1	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-45116
