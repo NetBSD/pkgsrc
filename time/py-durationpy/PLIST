@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/12 12:00:39 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/durationpy/__init__.py
+${PYSITELIB}/durationpy/__init__.pyc
+${PYSITELIB}/durationpy/__init__.pyo
+${PYSITELIB}/durationpy/duration.py
+${PYSITELIB}/durationpy/duration.pyc
+${PYSITELIB}/durationpy/duration.pyo
