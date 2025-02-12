@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2024/02/12 11:54:05 markd Exp $
+$NetBSD: distinfo,v 1.4 2025/02/12 11:28:55 adam Exp $
 
-BLAKE2s (mailman-3.3.9.tar.gz) = c00f96643fcf954124053b5e1433e509e6653d6c93c7dcdd83dd1e7673f21429
-SHA512 (mailman-3.3.9.tar.gz) = 28466cae5ca9210faaa9f8c70fe7004d62f91b0a92309d88574bf19dde130cddd15cc3138dd730b15a2d15ce20cfce4b847050de00cf32dafad9a6907d4fb53d
-Size (mailman-3.3.9.tar.gz) = 2173293 bytes
+BLAKE2s (mailman-3.3.10.tar.gz) = b7b28764c7b28cec96f003122c4f0a65d9981c853656fa97cb438d0b2b2f192c
+SHA512 (mailman-3.3.10.tar.gz) = 55cdebb6712615c49e1318a481ebbc090a56ad559fc6dfcf2b83ae8740536b9643ca771347a074b0eea8fa5134d1a8f5ecba4f767a687e7a81ff7f80ee3827e5
+Size (mailman-3.3.10.tar.gz) = 2294293 bytes
 SHA1 (patch-src_mailman_config_mailman.cfg) = 6210097dd8e00e88c966afb872cbee57b5f27c93
 SHA1 (patch-src_mailman_config_schema.cfg) = 02484fe9f01ef076c81e718246b18ed0ca95c821
 SHA1 (patch-src_mailman_core_initialize.py) = 3e40ba21cbbd95c22abe6792774bf63a65573f02
