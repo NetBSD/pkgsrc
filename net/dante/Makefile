@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2023/06/26 09:20:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2025/02/12 12:09:58 adam Exp $
 
-DISTNAME=	dante-1.4.3
+DISTNAME=	dante-1.4.4
 CATEGORIES=	net security
 MASTER_SITES=	http://www.inet.no/dante/files/
 
