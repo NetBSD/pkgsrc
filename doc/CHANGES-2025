@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1333 2025/02/12 16:43:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1334 2025/02/12 16:54:33 roy Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1766,3 +1766,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-virtualenv to 20.29.2 [adam 2025-02-12]
 	Updated chat/py-tulir-telethon to 1.37.0a1 [adam 2025-02-12]
 	Updated net/py-dnsdiag to 2.6.0 [adam 2025-02-12]
+	Updated net/dhcpcd to 10.2.0 [roy 2025-02-12]
