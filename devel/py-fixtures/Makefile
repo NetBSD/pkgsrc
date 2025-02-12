@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2025/01/15 08:02:00 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/12 16:25:48 adam Exp $
 
-DISTNAME=	fixtures-4.2.2
+DISTNAME=	fixtures-4.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/fixtures/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/fixtures/
+HOMEPAGE=	https://github.com/testing-cabal/fixtures
 COMMENT=	Fixtures, reusable state for writing clean tests and more
 LICENSE=	apache-2.0 OR modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-pbr>=5.7.0:../../devel/py-pbr
 # needs py-testtools for testing, but that depends on this
 #TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
