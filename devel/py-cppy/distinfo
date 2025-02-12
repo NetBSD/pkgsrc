@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/12/06 21:30:26 wiz Exp $
+$NetBSD: distinfo,v 1.6 2025/02/12 11:31:07 adam Exp $
 
-BLAKE2s (cppy-1.3.0.tar.gz) = 55904650cf5ddef097362bf9b2919e5ab2531122d47c6173a7f67e6afbc95e41
-SHA512 (cppy-1.3.0.tar.gz) = e0beabb70e91af9e10be25e3bb9b1f6838a82995a3741f30b73889f449c5160543bfc4afc02743d2a62fc3483445de0a04b0ed7be51eb308f34cd4582050ad05
-Size (cppy-1.3.0.tar.gz) = 18367 bytes
+BLAKE2s (cppy-1.3.1.tar.gz) = f261fa162592fb2dd5ec8f14af68d3fd40f51f08aa08b592ce36ab66a058a549
+SHA512 (cppy-1.3.1.tar.gz) = be5c9ee231958c6cd46a33868ca8aceb11df5648767e3abb7bf2ad9d37f2e7d37fc12966e1ab08bb36ce149be673c54f5bcb4ea82d0aad674b769bb29c287eab
+Size (cppy-1.3.1.tar.gz) = 18699 bytes
