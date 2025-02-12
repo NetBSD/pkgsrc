@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/02/08 11:58:31 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/02/12 15:45:55 wiz Exp $
 
 DISTNAME=	nushell-0.102.0
 CATEGORIES=	shells
@@ -20,7 +20,7 @@ USE_TOOLS+=	pkg-config
 
 PKG_SHELL=	bin/nu
 
-ARGMAX_REQ=	524288
+ARGMAX_REQ=	1048576
 
 MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
