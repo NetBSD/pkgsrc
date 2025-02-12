@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1331 2025/02/12 16:27:49 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1332 2025/02/12 16:33:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1762,3 +1762,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/hex [wiz 2025-02-12]
 	Updated devel/py-fixtures to 4.2.3 [adam 2025-02-12]
 	Updated textproc/py-myst-parser to 4.0.1 [adam 2025-02-12]
+	Updated www/py-flask-security to 5.6.0 [adam 2025-02-12]
+	Updated devel/py-virtualenv to 20.29.2 [adam 2025-02-12]
