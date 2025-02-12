@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2025/02/08 09:22:21 mef Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/12 12:33:04 wiz Exp $
 
 R_PKGNAME=	spatstat
 R_PKGVER=	3.3-1
@@ -12,7 +12,7 @@ USE_LANGUAGES+=	c c++
 
 DEPENDS+=	R-deldir>=0.0.21:../../geography/R-deldir
 DEPENDS+=	R-spatstat.data>=2.1.0:../../geography/R-spatstat.data
-DEPENDS+=	R-spatstat.geom>=2.1.0:../../geography/R-spatstat.geom
+DEPENDS+=	R-spatstat.geom>=3.3.5:../../geography/R-spatstat.geom
 DEPENDS+=	R-spatstat.linnet>=3.2.2:../../geography/R-spatstat.linnet
 DEPENDS+=	R-spatstat.model-[0-9]*:../../geography/R-spatstat.model
 DEPENDS+=	R-spatstat.utils>=2.1.0:../../geography/R-spatstat.utils
