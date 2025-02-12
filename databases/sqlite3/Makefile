@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2025/01/15 15:23:41 adam Exp $
+# $NetBSD: Makefile,v 1.163 2025/02/12 21:41:18 rillig Exp $
 
 .include "Makefile.common"
 
@@ -504,7 +504,7 @@ CFLAGS+=		-DSQLITE_ENABLE_UNLOCK_NOTIFY
 # on those platforms.)
 #
 # https://www.sqlite.org/compile.html#omit_load_extension
-CONFIGURE_ARGS+=	--enable-load-extension
+CONFIGURE_ARGS+=	--enable-dynamic-extensions
 
 # Uses dlopen and friends but doesn't use -ldl on Linux.
 # See http://www.sqlite.org/cvstrac/tktview?tn=3555
