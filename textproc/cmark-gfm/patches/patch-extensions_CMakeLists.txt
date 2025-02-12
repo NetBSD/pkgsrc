@@ -1,0 +1,15 @@
+$NetBSD: patch-extensions_CMakeLists.txt,v 1.1 2025/02/12 09:25:41 adam Exp $
+
+Remove gfm.N from shared library name.
+
+--- extensions/CMakeLists.txt.orig	2025-02-11 13:35:45.852099558 +0000
++++ extensions/CMakeLists.txt
+@@ -28,7 +28,7 @@ if (CMARK_SHARED)
+   set_target_properties(${LIBRARY} PROPERTIES
+     OUTPUT_NAME "cmark-gfm-extensions"
+     DEFINE_SYMBOL "cmark-gfm"
+-    SOVERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}.gfm.${PROJECT_VERSION_GFM}
++    SOVERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}
+     VERSION ${PROJECT_VERSION})
+ 
+   set_property(TARGET ${LIBRARY}
