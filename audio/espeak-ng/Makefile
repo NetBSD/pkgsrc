@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/12/26 11:45:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/12 06:44:21 ryoon Exp $
 
 DISTNAME=	espeak-ng-1.52.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=espeak-ng/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

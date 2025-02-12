@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2025/01/21 11:00:09 nia Exp $
+# $NetBSD: Makefile,v 1.61 2025/02/12 06:44:23 ryoon Exp $
 
 DISTNAME=	jack2-1.9.21
 PKGNAME=	${DISTNAME:S/jack2/jack/1}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jackaudio/}
 GITHUB_PROJECT=	jack2

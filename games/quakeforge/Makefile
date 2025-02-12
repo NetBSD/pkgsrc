@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2025/01/06 21:49:17 ktnb Exp $
+# $NetBSD: Makefile,v 1.68 2025/02/12 06:45:02 ryoon Exp $
 
 DISTNAME=		quakeforge-0.7.2
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=quake/}
 

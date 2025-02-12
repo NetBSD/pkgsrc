@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2024/11/14 22:19:34 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/02/12 06:44:39 ryoon Exp $
 
 DISTNAME=	purpose-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

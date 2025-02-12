@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2023/07/18 12:56:06 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/02/12 06:44:31 ryoon Exp $
 
 BUILDLINK_TREE+=	vamp-plugin-sdk
 
@@ -8,7 +8,7 @@ VAMP_PLUGIN_SDK_BUILDLINK3_MK:=
 USE_CXX_FEATURES+=	c++11
 
 BUILDLINK_API_DEPENDS.vamp-plugin-sdk+=	vamp-plugin-sdk>=2.6
-BUILDLINK_ABI_DEPENDS.vamp-plugin-sdk?=	vamp-plugin-sdk>=2.10.0nb3
+BUILDLINK_ABI_DEPENDS.vamp-plugin-sdk?=	vamp-plugin-sdk>=2.10.0nb4
 BUILDLINK_PKGSRCDIR.vamp-plugin-sdk?=	../../audio/vamp-plugin-sdk
 
 .include "../../audio/libsndfile/buildlink3.mk"

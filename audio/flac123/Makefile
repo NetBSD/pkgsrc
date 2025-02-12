@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2023/09/14 04:04:52 snj Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/12 06:44:21 ryoon Exp $
 
 DISTNAME=	flac123-2.1.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=flac123/}
 GITHUB_TAG=	v2.1.1

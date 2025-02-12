@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/05/13 09:05:55 adam Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/12 06:44:22 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/plugins/plugins1/:S/-bad/-fluidsynth/}
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 
 COMMENT=	Open source multimedia framework - MIDI plugin

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2024/05/06 08:40:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2025/02/12 06:44:26 ryoon Exp $
 
 DISTNAME=		ocp-0.2.109
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_GITHUB:=mywave82/}
 GITHUB_PROJECT=		opencubicplayer

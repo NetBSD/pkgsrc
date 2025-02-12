@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2024/11/14 22:21:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/02/12 06:45:36 ryoon Exp $
 
 BUILDLINK_TREE+=	ktextaddons
 
@@ -7,7 +7,7 @@ KTEXTADDONS_BUILDLINK3_MK:=
 
 
 BUILDLINK_API_DEPENDS.ktextaddons+=	ktextaddons>=1.3.2
-BUILDLINK_ABI_DEPENDS.ktextaddons?=	ktextaddons>=1.3.2nb9
+BUILDLINK_ABI_DEPENDS.ktextaddons?=	ktextaddons>=1.3.2nb10
 BUILDLINK_PKGSRCDIR.ktextaddons?=	../../textproc/ktextaddons
 
 .include "../../archivers/karchive/buildlink3.mk"

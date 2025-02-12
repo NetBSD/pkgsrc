@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2023/07/18 12:56:07 nia Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/12 06:44:32 ryoon Exp $
 
 DISTNAME=	ykchorus-v0.2.2-source
 PKGNAME=	${DISTNAME:S/-source//1:S/-v/-/1}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=SpotlightKid/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
