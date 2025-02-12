@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2024/12/27 11:16:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.94 2025/02/12 08:17:33 adam Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
@@ -430,6 +430,7 @@ share/qemu/firmware/60-edk2-aarch64.json
 share/qemu/firmware/60-edk2-arm.json
 share/qemu/firmware/60-edk2-i386.json
 share/qemu/firmware/60-edk2-loongarch64.json
+share/qemu/firmware/60-edk2-riscv64.json
 share/qemu/firmware/60-edk2-x86_64.json
 share/qemu/hppa-firmware.img
 share/qemu/hppa-firmware64.img
