@@ -1,17 +1,15 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2020/01/15 06:29:59 pho Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/02/12 09:25:41 adam Exp $
 
-Allow in-source building.
+Remove gfm.N from shared library name.
 
---- CMakeLists.txt.orig	2019-04-08 06:15:49.000000000 +0000
+--- CMakeLists.txt.orig	2025-02-11 13:30:26.767639843 +0000
 +++ CMakeLists.txt
-@@ -10,10 +10,6 @@ set(PROJECT_VERSION ${PROJECT_VERSION_MA
+@@ -5,7 +5,7 @@ set(PROJECT_VERSION_MAJOR 0)
+ set(PROJECT_VERSION_MINOR 29)
+ set(PROJECT_VERSION_PATCH 0)
+ set(PROJECT_VERSION_GFM 13)
+-set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}.gfm.${PROJECT_VERSION_GFM})
++set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
+ 
  include("FindAsan.cmake")
  include("CheckFileOffsetBits.cmake")
- 
--if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
--    message(FATAL_ERROR "Do not build in-source.\nPlease remove CMakeCache.txt and the CMakeFiles/ directory.\nThen: mkdir build ; cd build ; cmake .. ; make")
--endif()
--
- option(CMARK_TESTS "Build cmark-gfm tests and enable testing" ON)
- option(CMARK_STATIC "Build static libcmark-gfm library" ON)
- option(CMARK_SHARED "Build shared libcmark-gfm library" ON)
