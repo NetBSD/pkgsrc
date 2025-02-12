@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.21 2021/10/26 11:05:29 nia Exp $
+$NetBSD: distinfo,v 1.22 2025/02/12 12:09:58 adam Exp $
 
-BLAKE2s (dante-1.4.3.tar.gz) = cd497b2cea3846f8c4886abb983f0c0c1180e2f7595230a3ffefc81db58f964d
-SHA512 (dante-1.4.3.tar.gz) = c19675b2dee931366caf4a0dd4f44045ae731cc2f986e5d2e4bf498925c7d93a92a32088234d4a9443424f6dfb0796a1fa3fdc7c47e5aa11612c29a101f47888
-Size (dante-1.4.3.tar.gz) = 1343935 bytes
+BLAKE2s (dante-1.4.4.tar.gz) = dba20f1b0afbb63d8f4f7dbdeea48f99260986e516cd33f66808c888a012c90f
+SHA512 (dante-1.4.4.tar.gz) = bf6b82fcad63d0920b77cebe360612a639c8532fbda6dc84f1bc88e89671e358f4819bf9759b1ba3bb7fbe703eec7e59d9cef620b6e65f177686d5b00e5f221a
+Size (dante-1.4.4.tar.gz) = 1378352 bytes
 SHA1 (patch-ab) = 9566cf94bd52d3df4214232c8bdf77ccb71b0fd3
 SHA1 (patch-capi_Makefile.in) = ebeb34bfb769de1f4254c7c43f86bb077baa6df6
 SHA1 (patch-dlib_interposition.c) = 8c75c04b218a420a38a31319fcabcc7188b1431b
