@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.35 2025/01/16 08:48:33 adam Exp $
+$NetBSD: distinfo,v 1.36 2025/02/12 09:49:24 adam Exp $
 
-BLAKE2s (phonenumbers-8.13.52.tar.gz) = 2a928ea414e87a0828cd755efedd42232043ee22d5403e4d3ee6ad9ba50ada3f
-SHA512 (phonenumbers-8.13.52.tar.gz) = 7e2614760e99ce62404484c5832e6af16278bf7faffa2a6638ab241a8654d1141302652c63106572ffad8ee87655c188ddcf06298c86eff48016efd35218fb2f
-Size (phonenumbers-8.13.52.tar.gz) = 2296342 bytes
+BLAKE2s (phonenumbers-8.13.54.tar.gz) = 5fd88026c43f497caae8b3d2d5358e9fef12a1f1a12240e0ee8aab07593b6fe8
+SHA512 (phonenumbers-8.13.54.tar.gz) = 0fcdd8706293110c54c1f952a23f35b4674a37df429a54110f18e3e8e9c9da9cbe6ff7a011eb07401e4b2a4421da33b1821de5f4e22df11a435e043766e21eb1
+Size (phonenumbers-8.13.54.tar.gz) = 2296742 bytes
