@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1316 2025/02/12 06:20:29 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1317 2025/02/12 06:43:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1735,3 +1735,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cryptography_vectors to 44.0.1 [adam 2025-02-12]
 	Updated lang/py-cmake-language-server to 0.1.11 [adam 2025-02-12]
 	Updated devel/py-ruff to 0.9.6 [adam 2025-02-12]
+	Updated audio/flac to 1.5.0 [ryoon 2025-02-12]
