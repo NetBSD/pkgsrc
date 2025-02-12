@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/11/30 06:51:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/12 12:55:46 adam Exp $
 
-DISTNAME=	geoip2-4.8.1
+DISTNAME=	geoip2-5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	geography python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/geoip2/}
