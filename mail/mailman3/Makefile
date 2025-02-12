@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/12/10 07:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/12 11:28:55 adam Exp $
 
-DISTNAME=	mailman-3.3.9
+DISTNAME=	mailman-3.3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mailman/}
 
@@ -11,21 +10,21 @@ HOMEPAGE=	https://www.list.org/
 COMMENT=	GNU mailing list manager
 LICENSE=	gnu-gpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-pdm_backend-[0-9]*:../../devel/py-pdm_backend
 DEPENDS+=	${PYPKGPREFIX}-aiosmtpd>=1.4.3:../../mail/py-aiosmtpd
 DEPENDS+=	${PYPKGPREFIX}-alembic>=1.6.2:../../databases/py-alembic
 DEPENDS+=	${PYPKGPREFIX}-atpublic-[0-9]*:../../devel/py-atpublic
-DEPENDS+=	${PYPKGPREFIX}-authheaders>=0.15.2:../../mail/py-authheaders
+DEPENDS+=	${PYPKGPREFIX}-authheaders>=0.16:../../mail/py-authheaders
 DEPENDS+=	${PYPKGPREFIX}-authres>=1.0.1:../../mail/py-authres
 DEPENDS+=	${PYPKGPREFIX}-click>=8.0.0:../../devel/py-click
+DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns>=1.14.0:../../net/py-dns
-DEPENDS+=	${PYPKGPREFIX}-falcon>=3.0.0:../../devel/py-falcon
+DEPENDS+=	${PYPKGPREFIX}-falcon>=3.1.3:../../devel/py-falcon
 DEPENDS+=	${PYPKGPREFIX}-flufl.bounce>=4.0:../../mail/py-flufl.bounce
 DEPENDS+=	${PYPKGPREFIX}-flufl.i18n>=3.2:../../devel/py-flufl.i18n
 DEPENDS+=	${PYPKGPREFIX}-flufl.lock>=5.1:../../devel/py-flufl.lock
 DEPENDS+=	${PYPKGPREFIX}-gunicorn-[0-9]*:../../www/py-gunicorn
 DEPENDS+=	${PYPKGPREFIX}-lazr.config-[0-9]*:../../devel/py-lazr.config
-DEPENDS+=	${PYPKGPREFIX}-dateutil>=2.0:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.4.0:../../databases/py-sqlalchemy
@@ -33,7 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-zope.component-[0-9]*:../../devel/py-zope.component
 DEPENDS+=	${PYPKGPREFIX}-zope.configuration-[0-9]*:../../devel/py-zope.configuration
 DEPENDS+=	${PYPKGPREFIX}-zope.event-[0-9]*:../../devel/py-zope.event
 DEPENDS+=	${PYPKGPREFIX}-zope.interface>=5.0:../../devel/py-zope.interface
-TEST_DEPENDS+=	${PYPKGPREFIX}-flufl.testing-[0-9]*:../../devel/py-flufl.testing
+TEST_DEPENDS+=	${PYPKGPREFIX}-flufl.testing>=0.8:../../devel/py-flufl.testing
 TEST_DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose2-[0-9]*:../../devel/py-nose2
 
@@ -83,6 +82,8 @@ post-patch:
 	${CP} ${FILESDIR}/crontab.sample ${WRKSRC}/crontab.sample
 
 post-install:
+	cd ${DESTDIR}${PREFIX}/${PYSITELIB}/mailman && \
+	${RM} config/mailman.cfg.orig config/schema.cfg.orig core/initialize.py.orig
 	${INSTALL_DATA} ${FILESDIR}/mailman.cfg ${DESTDIR}${PREFIX}/${EGDIR}/mailman.cfg
 	${INSTALL_DATA} ${WRKSRC}/crontab.sample ${DESTDIR}${PREFIX}/${EGDIR}/crontab.sample
 
