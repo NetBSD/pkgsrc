@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/02/09 08:30:30 pin Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/12 14:21:23 wiz Exp $
 
-DISTNAME=	yazi-0.4.2
 # yazi-25.2.7 requires Rust >= 1.83
+DISTNAME=	yazi-0.4.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sxyazi/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,13 +14,13 @@ LICENSE=	mit
 
 .include "cargo-depends.mk"
 
-#RUST_REQ=	1.83.0
+#RUST_REQ=	1.82.0
 #Upstream does not state the required MSRV.
-#This package is confirmed to build with Rust 1.83.0 on amd64
+#This package is confirmed to build with Rust 1.82.0 on amd64
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config
 
-INSTALLATION_DIRS=	bin share/examples/yazi
+INSTALLATION_DIRS=	bin share/applications share/examples/yazi
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/yazi \
@@ -34,6 +35,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/yazi
 	${INSTALL_DATA} ${WRKSRC}/yazi-config/preset/yazi-default.toml \
 		${DESTDIR}${PREFIX}/share/examples/yazi
+	${INSTALL_DATA} ${WRKSRC}/assets/yazi.desktop \
+		${DESTDIR}${PREFIX}/share/applications
 
 .include "../../lang/rust/cargo.mk"
 .include "../../lang/lua54/buildlink3.mk"
