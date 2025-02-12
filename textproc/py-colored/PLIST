@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/30 12:12:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/12 09:51:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -17,6 +17,9 @@ ${PYSITELIB}/colored/colored.pyo
 ${PYSITELIB}/colored/controls.py
 ${PYSITELIB}/colored/controls.pyc
 ${PYSITELIB}/colored/controls.pyo
+${PYSITELIB}/colored/convert.py
+${PYSITELIB}/colored/convert.pyc
+${PYSITELIB}/colored/convert.pyo
 ${PYSITELIB}/colored/cprint.py
 ${PYSITELIB}/colored/cprint.pyc
 ${PYSITELIB}/colored/cprint.pyo
