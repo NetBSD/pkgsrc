@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1314 2025/02/11 21:53:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1315 2025/02/12 02:59:47 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1730,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qt6ct to 0.10 [vins 2025-02-11]
 	Updated security/openssl to 3.4.1 [wiz 2025-02-11]
 	Updated devel/nss to 3.108 [wiz 2025-02-11]
+	Updated sysutils/intel-microcode-netbsd to 20250211 [msaitoh 2025-02-12]
