@@ -1,0 +1,20 @@
+$NetBSD: patch-gtk_Makefile.in,v 1.1 2025/02/12 05:07:23 rillig Exp $
+
+https://gitlab.gnome.org/GNOME/gtk/-/issues/7332
+
+On at least NetBSD 10.99.12 amd64, updateiconcache.c needs to run in a
+UTF-8 locale, to prevent this error message during the build:
+
+> GLib: Cannot convert message: Conversion from character set “UTF-8” to
+> “646” is not supported
+
+--- gtk/Makefile.in.orig	2025-02-12 02:53:53.541743756 +0000
++++ gtk/Makefile.in
+@@ -7520,6 +7520,7 @@
+ 
+ gtkbuiltincache.h: @REBUILD@ stamp-icons
+ 	$(MAKE) $(AM_MAKEFLAGS) gtk-update-icon-cache$(EXEEXT)
++	LC_ALL=en_US.UTF-8 \
+ 	$(gtk_update_icon_cache_program) --force --ignore-theme-index		\
+ 	   --include-image-data							\
+ 	   --source builtin_icons stock-icons > gtkbuiltincache.h.tmp &&        \
