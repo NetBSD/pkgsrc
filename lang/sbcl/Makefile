@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2025/02/11 16:06:05 ktnb Exp $
+# $NetBSD: Makefile,v 1.109 2025/02/12 16:45:31 ktnb Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-2.5.1
@@ -112,7 +112,7 @@ do-build:
 	${RUN} ${_ULIMIT_CMD} \
 	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} ${SH} make.sh \
 	  --prefix=${PREFIX} ${SBCL_ARCH_ARGS} --xc-host=${SBCL_BOOT_SYSTEM:Q} \
-	  --with-sb-threads
+	  --with-sb-thread
 
 post-build:
 	cd ${WRKSRC} && ${RM} -f contrib/sb-cover/test-output/*
