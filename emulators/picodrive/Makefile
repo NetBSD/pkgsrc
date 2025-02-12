@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/01/07 02:46:56 gutteridge Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/12 06:44:46 ryoon Exp $
 
 DISTNAME=	PicoDrive_1.93
 PKGNAME=	${DISTNAME:tl:S/_/-/1}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notaz/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}

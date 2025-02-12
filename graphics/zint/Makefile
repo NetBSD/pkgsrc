@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/14 22:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/12 06:45:12 ryoon Exp $
 
 DISTNAME=	zint-2.13.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zint/}
 

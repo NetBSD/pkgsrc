@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2023/07/21 09:37:18 nia Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/12 06:44:44 ryoon Exp $
 
 DISTNAME=	libretro-pcsx-rearmed-20200526
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 GITHUB_PROJECT=	pcsx_rearmed
 GITHUB_TAG=	7973b25fe929f92e146a854ecaf4f3cea5b4ffb8

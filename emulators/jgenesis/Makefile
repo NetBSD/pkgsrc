@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/12/26 17:48:11 pin Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/12 06:44:44 ryoon Exp $
 
 DISTNAME=	jgenesis-0.8.3
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jsgroth/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2024/11/18 07:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/02/12 06:45:05 ryoon Exp $
 
 PKGVERSION=	1.2.1
 PKGNAME=	widelands-${PKGVERSION}
+PKGREVISION=	1
 DISTNAME=	v${PKGVERSION:C/rc/-rc/}
 CATEGORIES=	games
 MASTER_SITES=	https://codeberg.org/wl/widelands/archive/

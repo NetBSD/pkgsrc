@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2024/04/06 08:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/12 06:44:59 ryoon Exp $
 
 DISTNAME=	mightymike-3.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

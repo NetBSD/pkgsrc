@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2024/11/14 22:21:50 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/02/12 06:45:36 ryoon Exp $
 
 DISTNAME=	kcompletion-${KF5VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 HOMEPAGE=	https://community.kde.org/Frameworks

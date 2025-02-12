@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/02/09 14:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/02/12 06:44:21 ryoon Exp $
 
 DISTNAME=	forked-daapd-27.4
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ejurgensen/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}

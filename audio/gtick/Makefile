@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2024/12/27 08:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/02/12 06:44:22 ryoon Exp $
 #
 
 DISTNAME=	gtick-0.5.5
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	audio
 MASTER_SITES=	https://www.antcom.de/gtick/download/
 

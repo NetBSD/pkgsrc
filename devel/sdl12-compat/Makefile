@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/01/21 11:00:11 nia Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/12 06:44:40 ryoon Exp $
 
 DISTNAME=	sdl12-compat-1.2.52
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libsdl-org/}
 GITHUB_TAG=	release-${PKGVERSION_NOREV}

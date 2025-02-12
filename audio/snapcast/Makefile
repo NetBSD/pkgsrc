@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/01/31 16:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/12 06:44:29 ryoon Exp $
 
 DISTNAME=	snapcast-0.26.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=badaix/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
