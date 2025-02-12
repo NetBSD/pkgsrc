@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.13 2025/02/10 19:24:04 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.14 2025/02/12 07:26:08 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -86,3 +86,6 @@ www/drupal7: Security fix
 
 Pullup ticket #6944 - requested by jakllsch
 net/Radicale2: Runtime fix
+
+Pullup ticket #6945 - requested by taca
+net/ruby-net-imap: Security fix
