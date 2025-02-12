@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/12 16:27:29 adam Exp $
 
-DISTNAME=	myst_parser-4.0.0
+DISTNAME=	myst_parser-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/myst-parser/}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.4:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=3.0:../../textproc/py-markdown-it-py
-DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.4:../../textproc/py-mdit-py-plugins
+DEPENDS+=	${PYPKGPREFIX}-mdit-py-plugins>=0.4.1:../../textproc/py-mdit-py-plugins
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=7:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
