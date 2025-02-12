@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.305 2025/02/12 18:27:49 rillig Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.306 2025/02/12 21:10:22 rillig Exp $
 #
 #FORMAT 1.0.0
 #
@@ -47,9 +47,8 @@ apache6<1.3.14		remote-user-access	http://httpd.apache.org/dist/httpd/CHANGES_1.
 thttpd<2.20		remote-user-access	http://www.dopesquad.net/security/advisories/20001002-thttpd-ssi.txt
 bind<8.2.2.7		denial-of-service	http://www.isc.org/products/BIND/bind-security.html
 gnupg<1.0.4		weak-authentication	http://www.gnupg.org/whatsnew.html#rn20001017
-pine<=4.21		remote-root-shell	ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00:59.pine.asc
-navigator<4.76		remote-root-shell	ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00%3A66.netscape.asc
-navigator3<4.76		remote-root-shell	ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00%3A66.netscape.asc
+pine<=4.21		remote-root-shell	https://www.freebsd.org/security/advisories/FreeBSD-SA-00:59.pine.asc
+navigator{,3}<4.76	remote-root-shell	https://www.freebsd.org/security/advisories/FreeBSD-SA-00:66.netscape.asc
 openssh<2.3.0		weak-authentication	http://www.openbsd.org/errata27.html#sshforwarding
 ethereal<=0.8.13	remote-root-shell	http://www.securityfocus.com/frames/?content=/templates/archive.pike%3Ffromthread%3D1%26end%3D2000-11-25%26mid%3D145761%26start%3D2000-11-19%26list%3D1%26threads%3D0%26
 php<3.0.17		remote-user-shell	http://www.php.net/ChangeLog.php3
@@ -73,7 +72,7 @@ micq<0.4.6.1		remote-user-shell	http://www.freebsd.org/security/#adv
 ssh<1.2.27nb1		remote-root-shell	http://razor.bindview.com/publish/advisories/adv_ssh1crc.html
 ssh6<=1.2.31		remote-root-shell	http://razor.bindview.com/publish/advisories/adv_ssh1crc.html
 openssh<2.3.0		remote-root-shell	http://razor.bindview.com/publish/advisories/adv_ssh1crc.html
-camediaplay<20010211	local-user-shell	ftp://ftp.itojun.org/pub/digi-cam/C-400/unix/README
+camediaplay<20010211	local-user-shell	http://www.itojun.org/itojun.html
 analog<4.16		remote-user-shell	http://www.analog.cx/security2.html
 gnupg<1.0.4nb3		weak-authentication	http://www.gnupg.org/whatsnew.html#rn20001130
 xemacs<21.1.14		remote-user-shell	http://list-archive.xemacs.org/xemacs-announce/200102/msg00000.html
@@ -100,7 +99,7 @@ horde<1.2.6		remote-user-shell	http://www.securityfocus.com/frames/?content=/tem
 imp<1.2.6		remote-user-shell	http://www.securityfocus.com/frames/?content=/templates/archive.pike%3Flist%3D1%26mid%3D198495
 fetchmail<5.8.17	remote-user-shell	http://www.securityfocus.com/frames/?content=/templates/archive.pike%3Flist%3D1%26mid%3D203165
 windowmaker<0.65.1	remote-user-shell	http://www.debian.org/security/2001/dsa-074
-sendmail<8.11.6		local-root-shell	ftp://ftp.sendmail.org/pub/sendmail/RELEASE_NOTES
+sendmail<8.11.6		local-root-shell	https://ftp.sendmail.org/RELEASE_NOTES
 gnut<0.4.27		remote-script-inject	http://www.gnutelliums.com/linux_unix/gnut/
 screen<3.9.10		local-root-shell	http://lists.opensuse.org/opensuse-security-announce/2000-Sep/0005.html
 openssh<2.9.9.2		remote-user-access	http://www.securityfocus.com/cgi-bin/archive.pl?id=1&mid=216702&start=2001-09-23&end=2001-09-29
@@ -108,7 +107,7 @@ w3m<0.2.1.0.19nb2	weak-authentication	http://mi.med.tohoku.ac.jp/~satodai/w3m-de
 procmail<3.20		local-root-shell	http://www.somelist.com/mail.php/282/view/1200950
 slrn<0.9.7.2nb1		remote-script-inject	http://slrn.sourceforge.net/patches/index.html#subsect_decode
 nvi-m17n<1.79.19991117	local-user-shell	http://www.securityfocus.com/archive/1/221880
-mgetty<1.1.22		denial-of-service	ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-00%3A71.mgetty.asc
+mgetty<1.1.22		denial-of-service	https://www.freebsd.org/security/advisories/FreeBSD-SA-00:71.mgetty.asc
 kdeutils-2.2.1		local-root-shell	http://lists.kde.org/?l=kde-announce&m=100535642201983&w=2
 imp<2.2.7		remote-file-view	http://www.securityfocus.com/archive/1/225686
 libgtop<1.0.12nb1	remote-user-shell	http://www.intexxia.com/
@@ -208,7 +207,7 @@ cvsup<=16.1.d		remote-root-shell	http://www.pine.nl/advisories/pine-cert-2002060
 xpilot<4.5.1		remote-user-shell	http://online.securityfocus.com/bid/4534
 gnut<0.4.28		remote-user-shell	http://online.securityfocus.com/bid/3267/
 wwwoffle<2.7c		denial-of-service	http://bespin.org/~qitest1/adv/wwwoffle-2.7b.asc
-png<1.2.4		remote-user-shell	ftp://swrinde.nde.swri.edu/pub/png-group/archives/png-list.200207
+png<1.2.4		remote-user-shell	https://nvd.nist.gov/vuln/detail/CVE-2002-0728
 php-4.2.[01]		remote-user-shell	http://security.e-matters.de/advisories/022002.html
 ap-php-4.2.[01]		remote-user-shell	http://security.e-matters.de/advisories/022002.html
 srp_client<1.7.5	unknown			http://www-cs-students.stanford.edu/~tjw/srp/download.html
@@ -298,7 +297,7 @@ wget<1.8.2		local-file-write	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-
 wget<1.8.2		local-file-write	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1345
 ssh<=3.2.2		denial-of-service	http://www.rapid7.com/advisories/R7-0009.txt
 cups<1.1.18		remote-root-shell	http://www.idefense.com/advisory/12.19.02.txt
-png<1.2.5nb2		unknown			ftp://swrinde.nde.swri.edu/pub/png-group/archives/png-implement.200212
+png<1.2.5nb2		remote-code-execution	https://ftp.mizar.org/packages/libpng/png-group/archives/png-implement.200212
 leafnode<1.9.30		denial-of-service	http://archives.neohapsis.com/archives/vulnwatch/2002-q4/0123.html
 cups<1.1.18		local-code-execution	http://online.securityfocus.com/bid/6475
 xpdf<=2.01		local-code-execution	http://online.securityfocus.com/bid/6475
@@ -437,7 +436,7 @@ kdebase<2.2.2		remote-code-execution	http://www.kde.org/info/security/
 silc-client<0.9.13	denial-of-service	http://silcnet.org/txt/security_20031016_1.txt
 silc-server<0.9.14	denial-of-service	http://silcnet.org/txt/security_20031016_1.txt
 sylpheed-claws-0.9.4{,nb1}	denial-of-service	http://www.guninski.com/sylph.html
-vtun<2.6nb1		privacy-leak		ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/vtun-26to30.patch
+vtun<2.6nb1		privacy-leak		https://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/vtun-26to30.patch
 libnids<=1.17		remote-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0850
 apache<1.3.28nb2	remote-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0542
 apache6<1.3.28nb2	remote-code-execution	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0542
@@ -1436,8 +1435,8 @@ chmlib<0.36		remote-command-execution	http://morte.jedrea.com/~jedwin/projects/c
 chmlib<0.36		buffer-overflow			http://morte.jedrea.com/~jedwin/projects/chmlib/
 snort<2.4.0nb1		denial-of-service		http://marc.theaimsgroup.com/?l=vuln-dev&m=112655297606335&w=2
 xchat<2.4.5		unspecified			http://www.xchat.org/
-imake>=3<4.4.0nb2	insecure-temp-files		ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2005-009.txt.asc
-xorg-imake<6.8.2nb2	insecure-temp-files		ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2005-009.txt.asc
+imake>=3<4.4.0nb2	insecure-temp-files		https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2005-009.txt.asc
+xorg-imake<6.8.2nb2	insecure-temp-files		https://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2005-009.txt.asc
 clamav<0.87		buffer-overflow			http://secunia.com/advisories/16848/
 clamav<0.87		denial-of-service		http://secunia.com/advisories/16848/
 gtexinfo<4.8nb1		insecure-temp-files		https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-3011
@@ -1748,7 +1747,7 @@ honeyd>=1.1<1.5		remote-information-exposure	http://www.honeyd.org/adv.2006-01
 lighttpd<1.4.9		remote-information-exposure	http://secunia.com/product/4661/
 gnupg<1.4.2.1		verification-bypass	http://secunia.com/advisories/18845/
 dovecot>0.99.99<1.0beta3	denial-of-service		http://secunia.com/advisories/18870/
-tin<1.8.1		buffer-overflow		ftp://ftp.tin.org/pub/news/clients/tin/stable/CHANGES
+tin<1.8.1		buffer-overflow		https://ftp.funet.fi/pub/unix/news/tin-unoff/CHANGES.old
 opera<8.52		www-address-spoof		http://secunia.com/advisories/17571/
 bugzilla<2.20.1		sql-injection	http://www.securityfocus.com/archive/1/425584/30/0/threaded
 bugzilla<2.20.1		cross-site-scripting	http://www.securityfocus.com/archive/1/425584/30/0/threaded
@@ -2256,7 +2255,7 @@ seamonkey{,-bin,-gtk1}<1.0.6	signature-forgery		https://www.mozilla.org/security
 firefox{,-bin,-gtk1}<1.5.0.8	arbitrary-code-execution	https://www.mozilla.org/security/announce/2006/mfsa2006-67.html
 thunderbird{,-gtk1}<1.5.0.8	arbitrary-code-execution	https://www.mozilla.org/security/announce/2006/mfsa2006-67.html
 seamonkey{,-bin,-gtk1}<1.0.6	arbitrary-code-execution	https://www.mozilla.org/security/announce/2006/mfsa2006-67.html
-libarchive<1.3.1		denial-of-service		http://security.freebsd.org/advisories/FreeBSD-SA-06:24.libarchive.asc
+libarchive<1.3.1		denial-of-service		https://www.freebsd.org/security/advisories/FreeBSD-SA-06:24.libarchive.asc
 openssh<4.5.1		security-bypass			http://secunia.com/advisories/22771/
 trac<0.10.2		cross-site-request-forgeries	http://trac.edgewall.org/ticket/4049
 ja-trac<0.10.0.2	cross-site-request-forgeries	http://trac.edgewall.org/ticket/4049
@@ -2582,9 +2581,9 @@ p5-Net-DNS<0.60		denial-of-service	http://nvd.nist.gov/nvd.cfm?cvename=CVE-2007-
 gimp>2.2<2.2.15nb2	arbitrary-code-execution	http://secunia.com/secunia_research/2007-63/advisory/
 gimp-base<1.2.5nb6	arbitrary-code-execution	http://secunia.com/secunia_research/2007-63/advisory/
 gimp>2.3<2.3.18nb1	arbitrary-code-execution	http://secunia.com/secunia_research/2007-63/advisory/
-libarchive<1.3.1nb1	infinite-loop		http://security.freebsd.org/advisories/FreeBSD-SA-07:05.libarchive.asc
-libarchive<1.3.1nb1	null-dereference	http://security.freebsd.org/advisories/FreeBSD-SA-07:05.libarchive.asc
-libarchive<1.3.1nb1	arbitrary-code-execution	http://security.freebsd.org/advisories/FreeBSD-SA-07:05.libarchive.asc
+libarchive<1.3.1nb1	infinite-loop			https://www.freebsd.org/security/advisories/FreeBSD-SA-07:05.libarchive.asc
+libarchive<1.3.1nb1	null-dereference		https://www.freebsd.org/security/advisories/FreeBSD-SA-07:05.libarchive.asc
+libarchive<1.3.1nb1	arbitrary-code-execution	https://www.freebsd.org/security/advisories/FreeBSD-SA-07:05.libarchive.asc
 clamav<0.91	denial-of-service	https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-3725
 centericq<4.21.0nb5	arbitrary-code-execution	http://www.leidecker.info/advisories/07-06-07_centericq_bof.txt
 ipcalc<0.41		cross-site-scripting	http://jodies.de/ipcalc-archive/ipcalc-0.40/ipcalc-security.html
@@ -23614,10 +23613,10 @@ ruby{26,27,30,31}-activestorage60<6.0.4.7	arbitrary-code-execution	https://nvd.n
 ruby{26,27,30,31}-activestorage61<6.1.4.7	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2022-21831
 ruby30-base<3.0.4	double-free	https://nvd.nist.gov/vuln/detail/CVE-2022-28738
 ruby31-base<3.0.4	double-free	https://nvd.nist.gov/vuln/detail/CVE-2022-28738
-ruby26-base<2.6.10	out-of-bounds-read	https:/nvd.nist.gov/vuln/detail/CVE-2022-28739
-ruby27-base<2.7.6	out-of-bounds-read	https:/nvd.nist.gov/vuln/detail/CVE-2022-28739
-ruby30-base<3.0.4	out-of-bounds-read	https:/nvd.nist.gov/vuln/detail/CVE-2022-28739
-ruby31-base<3.1.2	out-of-bounds-read	https:/nvd.nist.gov/vuln/detail/CVE-2022-28739
+ruby26-base<2.6.10	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-28739
+ruby27-base<2.7.6	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-28739
+ruby30-base<3.0.4	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-28739
+ruby31-base<3.1.2	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2022-28739
 ruby{26,27,30,31}-jmespath<1.6.1	unspecified	https://nvd.nist.gov/vuln/detail/CVE-2022-32511
 ruby{26,27,30,31}-mechanize<2.8.5	sensitive-information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-31033
 ruby{26,27,30,31}-nokogiri<1.13.6	arbitrary-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2022-29181
