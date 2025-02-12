@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.140 2024/11/24 06:59:07 adam Exp $
+# $NetBSD: Makefile,v 1.141 2025/02/12 21:06:03 wiz Exp $
 
 DISTNAME=	pstoedit-3.78
-PKGREVISION=	26
-CATEGORIES=	converters graphics print
+PKGREVISION=	27
+CATEGORIES=	graphics converters print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -26,6 +26,8 @@ CONFIGURE_ENV+=		ac_cv_path_GS=${TOOLS_PATH.gs}
 
 GNU_CONFIGURE_LIBSUBDIR=	pstoedit	# plugin dir -- unused for now
 #BUILD_TARGET=
+
+PKGCONFIG_OVERRIDE+=	config/pstoedit.pc.in
 
 LIBS.SunOS+=	-ldl
 
