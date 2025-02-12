@@ -1,4 +1,4 @@
-# $NetBSD: mix.mk,v 1.3 2023/03/03 10:09:58 wiz Exp $
+# $NetBSD: mix.mk,v 1.4 2025/02/12 15:37:37 wiz Exp $
 #
 # Common logic that can be used by packages that use mix as a build tool.
 #
@@ -6,7 +6,7 @@
 #
 # It is not yet fully tested.
 # Should packages set HEX_HOME and HOME on their own?
-# See devel/hex for an example.
+# See wip/hex for an example.
 
 DEPENDS+=		elixir>=1.14.0:../../lang/elixir
 
