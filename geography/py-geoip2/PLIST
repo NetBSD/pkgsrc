@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/01/14 15:17:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/12 12:55:46 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -7,15 +7,15 @@ ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/geoip2/__init__.py
 ${PYSITELIB}/geoip2/__init__.pyc
 ${PYSITELIB}/geoip2/__init__.pyo
+${PYSITELIB}/geoip2/_internal.py
+${PYSITELIB}/geoip2/_internal.pyc
+${PYSITELIB}/geoip2/_internal.pyo
 ${PYSITELIB}/geoip2/database.py
 ${PYSITELIB}/geoip2/database.pyc
 ${PYSITELIB}/geoip2/database.pyo
 ${PYSITELIB}/geoip2/errors.py
 ${PYSITELIB}/geoip2/errors.pyc
 ${PYSITELIB}/geoip2/errors.pyo
-${PYSITELIB}/geoip2/mixins.py
-${PYSITELIB}/geoip2/mixins.pyc
-${PYSITELIB}/geoip2/mixins.pyo
 ${PYSITELIB}/geoip2/models.py
 ${PYSITELIB}/geoip2/models.pyc
 ${PYSITELIB}/geoip2/models.pyo
