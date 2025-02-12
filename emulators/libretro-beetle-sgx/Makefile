@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2022/09/11 12:51:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/12 06:44:44 ryoon Exp $
 
 DISTNAME=	libretro-beetle-sgx-20200520
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 GITHUB_PROJECT=	beetle-supergrafx-libretro
 GITHUB_TAG=	49c87096495438021a32c1bd1abd59b6a8b61ce9

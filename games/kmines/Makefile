@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2024/11/14 22:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2025/02/12 06:44:56 ryoon Exp $
 
 DISTNAME=	kmines-${KAPPSVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 
 HOMEPAGE=	https://kde.org/applications/games/kmines/

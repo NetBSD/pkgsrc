@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2023/11/22 08:02:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2025/02/12 06:44:24 ryoon Exp $
 
 BUILDLINK_TREE+=	libfishsound
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libfishsound
 LIBFISHSOUND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfishsound+=	libfishsound>=1.0.0
-BUILDLINK_ABI_DEPENDS.libfishsound?=	libfishsound>=1.0.0nb3
+BUILDLINK_ABI_DEPENDS.libfishsound?=	libfishsound>=1.0.0nb5
 BUILDLINK_PKGSRCDIR.libfishsound?=	../../audio/libfishsound
 
 pkgbase := libfishsound

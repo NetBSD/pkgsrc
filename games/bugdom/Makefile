@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/04/06 08:05:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/12 06:44:50 ryoon Exp $
 
 DISTNAME=	bugdom-1.3.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jorio/}
 

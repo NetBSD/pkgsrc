@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2024/04/06 08:05:21 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2025/02/12 06:44:48 ryoon Exp $
 
 DISTNAME=	SDL2_ttf-2.22.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts devel
 MASTER_SITES=	https://www.libsdl.org/projects/SDL_ttf/release/
 

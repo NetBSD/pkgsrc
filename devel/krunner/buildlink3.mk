@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.53 2024/11/14 22:19:29 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.54 2025/02/12 06:44:38 ryoon Exp $
 
 BUILDLINK_TREE+=	krunner
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	krunner
 KRUNNER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.krunner+=	krunner>=5.21.0
-BUILDLINK_ABI_DEPENDS.krunner?=	krunner>=5.116.0nb4
+BUILDLINK_ABI_DEPENDS.krunner?=	krunner>=5.116.0nb5
 BUILDLINK_PKGSRCDIR.krunner?=	../../devel/krunner
 
 .include "../../x11/plasma-framework/buildlink3.mk"

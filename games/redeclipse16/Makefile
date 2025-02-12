@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2024/04/06 08:05:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/12 06:45:02 ryoon Exp $
 
 DISTNAME=	redeclipse_1.6.0_nix
 PKGNAME=	redeclipse16-1.6.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GITHUB:=redeclipse/}
 GITHUB_PROJECT=	base

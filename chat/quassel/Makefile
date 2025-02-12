@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2024/11/14 22:18:52 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/02/12 06:44:33 ryoon Exp $
 
 DISTNAME=	quassel-0.14.0
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	chat
 MASTER_SITES=	https://quassel-irc.org/pub/
 EXTRACT_SUFX=	.tar.bz2

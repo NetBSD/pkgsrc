@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2024/08/25 06:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/12 06:44:18 ryoon Exp $
 
 DISTNAME=	alure-1.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	audio
 MASTER_SITES=	http://kcat.strangesoft.net/alure-releases/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/12/29 15:09:44 adam Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/12 06:44:35 ryoon Exp $
 
 DISTNAME=	fifengine-0.4.2
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fifengine/}
 

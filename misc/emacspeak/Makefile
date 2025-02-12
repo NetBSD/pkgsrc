@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2024/05/15 13:30:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/12 06:45:18 ryoon Exp $
 
 DISTNAME=	emacspeak-60.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tvraman/}
 GITHUB_PROJECT=	emacspeak

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2024/10/08 20:43:17 rjs Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/12 06:45:11 ryoon Exp $
 
 DISTNAME=		simage-1.8.3
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=coin3d/}
 GITHUB_PROJECT=		simage

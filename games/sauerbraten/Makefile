@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2024/05/06 08:07:30 nia Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/12 06:45:03 ryoon Exp $
 
 BUILD_TARGET=	client master server
 
 .include "Makefile.common"
 
-PKGREVISION=	8
+PKGREVISION=	9
 
 COMMENT=	First-person shooter game based on Cube 2
 

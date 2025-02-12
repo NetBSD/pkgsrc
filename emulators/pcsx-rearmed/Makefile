@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/01/21 11:00:13 nia Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/12 06:44:45 ryoon Exp $
 
 DISTNAME=	pcsx-rearmed-23
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=notaz/}
 GITHUB_PROJECT=	pcsx_rearmed

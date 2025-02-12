@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.48 2024/11/14 22:22:20 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.49 2025/02/12 06:45:42 ryoon Exp $
 
 BUILDLINK_TREE+=	ktextwidgets
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ktextwidgets
 KTEXTWIDGETS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ktextwidgets+=	ktextwidgets>=5.19.0
-BUILDLINK_ABI_DEPENDS.ktextwidgets?=	ktextwidgets>=5.116.0nb3
+BUILDLINK_ABI_DEPENDS.ktextwidgets?=	ktextwidgets>=5.116.0nb4
 BUILDLINK_PKGSRCDIR.ktextwidgets?=	../../x11/ktextwidgets
 
 .include "../../devel/kservice/buildlink3.mk"

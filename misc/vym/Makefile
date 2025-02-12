@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2024/12/18 12:31:30 nia Exp $
+# $NetBSD: Makefile,v 1.88 2025/02/12 06:45:24 ryoon Exp $
 
 DISTNAME=		vym-2.9.31
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=insilmaril/}
 GITHUB_TAG=		da30b21109544ee0596ebf4d9738b5fed69b3cc4

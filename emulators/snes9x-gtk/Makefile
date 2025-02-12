@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2025/01/21 11:00:14 nia Exp $
+# $NetBSD: Makefile,v 1.119 2025/02/12 06:44:47 ryoon Exp $
 
-PKGREVISION=	7
+PKGREVISION=	8
 .include "../../emulators/snes9x/Makefile.common"
 
 PKGNAME=	snes9x-gtk-${SNES9X_VERSION}

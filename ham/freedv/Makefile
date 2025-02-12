@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2025/01/22 17:49:16 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/12 06:45:12 ryoon Exp $
 
 # warning: TAG is also set, but upstream seems now to have release
 # name/tag/unpacking-location in alignment.
 DISTNAME=	freedv-1.4.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drowe67/}
 GITHUB_PROJECT=	freedv-gui

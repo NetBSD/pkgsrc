@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2025/02/02 18:13:24 pin Exp $
+# $NetBSD: Makefile,v 1.76 2025/02/12 06:44:26 ryoon Exp $
 
 DISTNAME=	ncspot-1.2.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hrkfdn/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

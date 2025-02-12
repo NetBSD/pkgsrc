@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/04/06 08:05:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/12 06:44:48 ryoon Exp $
 
 DISTNAME=	xroar-1.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.6809.org.uk/xroar/dl/
 
