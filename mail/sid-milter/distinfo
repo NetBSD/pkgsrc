@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:54:29 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/02/12 11:46:54 wiz Exp $
 
 BLAKE2s (sid-milter-1.0.0.tar.gz) = a929ee046f1e685b8f0a24f1827ae0a80bdf6fe08b7a343c931981e29f1d5dae
 SHA512 (sid-milter-1.0.0.tar.gz) = 599eae36b7708e045e3f120cd6b4215906ea954b5f10be520d917404a02cf0b03d79b8fcf9543080288a9ab8e436b393c8b6340d2b1edced3d4fb827ff4c30dc
 Size (sid-milter-1.0.0.tar.gz) = 351161 bytes
-SHA1 (patch-aa) = 4c47aeb2dc12851703ffdc8a0e7239fd5f673af2
-SHA1 (patch-ab) = c8d6294625d698e8eea0e23a3b9fcbe448dabcae
+SHA1 (patch-aa) = 4bdc42d331a73782fce64ddefabe772be4261a9f
+SHA1 (patch-ab) = f5299f0258efb2c53caa7615b58d60dcbceaa003
