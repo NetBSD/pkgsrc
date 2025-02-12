@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/01/29 12:08:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/12 16:32:00 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -12,6 +12,9 @@ ${PYSITELIB}/flask_security/babel.pyo
 ${PYSITELIB}/flask_security/change_email.py
 ${PYSITELIB}/flask_security/change_email.pyc
 ${PYSITELIB}/flask_security/change_email.pyo
+${PYSITELIB}/flask_security/change_username.py
+${PYSITELIB}/flask_security/change_username.pyc
+${PYSITELIB}/flask_security/change_username.pyo
 ${PYSITELIB}/flask_security/changeable.py
 ${PYSITELIB}/flask_security/changeable.pyc
 ${PYSITELIB}/flask_security/changeable.pyo
@@ -96,10 +99,13 @@ ${PYSITELIB}/flask_security/templates/security/_messages.html
 ${PYSITELIB}/flask_security/templates/security/base.html
 ${PYSITELIB}/flask_security/templates/security/change_email.html
 ${PYSITELIB}/flask_security/templates/security/change_password.html
+${PYSITELIB}/flask_security/templates/security/change_username.html
 ${PYSITELIB}/flask_security/templates/security/email/change_email_instructions.html
 ${PYSITELIB}/flask_security/templates/security/email/change_email_instructions.txt
 ${PYSITELIB}/flask_security/templates/security/email/change_notice.html
 ${PYSITELIB}/flask_security/templates/security/email/change_notice.txt
+${PYSITELIB}/flask_security/templates/security/email/change_username_notice.html
+${PYSITELIB}/flask_security/templates/security/email/change_username_notice.txt
 ${PYSITELIB}/flask_security/templates/security/email/confirmation_instructions.html
 ${PYSITELIB}/flask_security/templates/security/email/confirmation_instructions.txt
 ${PYSITELIB}/flask_security/templates/security/email/login_instructions.html
@@ -114,6 +120,8 @@ ${PYSITELIB}/flask_security/templates/security/email/two_factor_rescue.html
 ${PYSITELIB}/flask_security/templates/security/email/two_factor_rescue.txt
 ${PYSITELIB}/flask_security/templates/security/email/us_instructions.html
 ${PYSITELIB}/flask_security/templates/security/email/us_instructions.txt
+${PYSITELIB}/flask_security/templates/security/email/username_recovery.html
+${PYSITELIB}/flask_security/templates/security/email/username_recovery.txt
 ${PYSITELIB}/flask_security/templates/security/email/welcome.html
 ${PYSITELIB}/flask_security/templates/security/email/welcome.txt
 ${PYSITELIB}/flask_security/templates/security/email/welcome_existing.html
@@ -124,6 +132,7 @@ ${PYSITELIB}/flask_security/templates/security/forgot_password.html
 ${PYSITELIB}/flask_security/templates/security/login_user.html
 ${PYSITELIB}/flask_security/templates/security/mf_recovery.html
 ${PYSITELIB}/flask_security/templates/security/mf_recovery_codes.html
+${PYSITELIB}/flask_security/templates/security/recover_username.html
 ${PYSITELIB}/flask_security/templates/security/register_user.html
 ${PYSITELIB}/flask_security/templates/security/reset_password.html
 ${PYSITELIB}/flask_security/templates/security/send_confirmation.html
