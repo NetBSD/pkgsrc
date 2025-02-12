@@ -1,0 +1,1 @@
+bin/gcovr @PREFIX@/bin/gcovr-@PYVERSSUFFIX@
