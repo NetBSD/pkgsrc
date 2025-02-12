@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2020/12/14 00:41:03 dbj Exp $
+# $NetBSD: options.mk,v 1.22 2025/02/12 12:48:46 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fetchmail
 PKG_SUPPORTED_OPTIONS=		kerberos4 kerberos gssapi ssl
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=        --with-kerberos5=no
 ### Support POP3 and IMAP over SSL.
 ###
 .if !empty(PKG_OPTIONS:Mssl)
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3.0.9
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 .else
