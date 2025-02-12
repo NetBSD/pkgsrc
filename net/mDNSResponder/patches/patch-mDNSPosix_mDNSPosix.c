@@ -1,11 +1,14 @@
-$NetBSD: patch-mDNSPosix_mDNSPosix.c,v 1.1 2024/11/20 17:56:21 hauke Exp $
+$NetBSD: patch-mDNSPosix_mDNSPosix.c,v 1.2 2025/02/12 11:41:44 micha Exp $
 
  - OpenBSD fix from
 https://web.archive.org/web/20140115063128/http://lists.apple.com/archives/bonjour-dev/2007/Jan/msg00003.html
 
  - NetBSD HINFO record from hw.model and kern.osrelease
 
---- mDNSPosix/mDNSPosix.c.orig	2024-11-20 15:54:56.086626755 +0000
+ - pkgsrc fix for (disabled) option "inet6"
+error: 'IPV6_2292_PKTINFO' undeclared
+
+--- mDNSPosix/mDNSPosix.c.orig	2024-09-24 20:38:46.000000000 +0000
 +++ mDNSPosix/mDNSPosix.c
 @@ -453,7 +453,7 @@ mDNSlocal void SocketDataReady(mDNS *con
          // so all we can do is just assume it's a multicast
@@ -16,7 +19,28 @@ https://web.archive.org/web/20140115063128/http://lists.apple.com/archives/bonjo
          {
              destAddr.type = senderAddr.type;
              if      (senderAddr.type == mDNSAddrType_IPv4) destAddr.ip.v4 = AllDNSLinkGroup_v4.ip.v4;
-@@ -1849,6 +1855,37 @@ mDNSlocal mDNSBool mDNSPlatformInit_CanR
+@@ -1096,12 +1096,20 @@ mDNSlocal int SetupIPv6Socket(int fd)
+ {
+     int err;
+ 
++#if HAVE_IPV6
+     #if defined(IPV6_PKTINFO)
+     err = setsockopt(fd, IPPROTO_IPV6, IPV6_2292_PKTINFO, &kOn, sizeof(kOn));
+     if (err < 0) { err = errno; perror("setsockopt - IPV6_PKTINFO"); }
+     #else
+         #warning This platform has no way to get the destination interface information for IPv6 -- will only work for single-homed hosts
+     #endif
++#else  // HAVE_IPV6
++    (void)fd;
++
++    // pkgsrc: Added for (disabled) option "inet6"
++    errno = ENOPROTOOPT;
++    err = errno; perror("setsockopt - IPV6_PKTINFO");
++#endif  // HAVE_IPV6
+     return err;
+ }
+ 
+@@ -1849,6 +1857,37 @@ mDNSlocal mDNSBool mDNSPlatformInit_CanR
      return(err == 0);
  }
  
@@ -54,7 +78,7 @@ https://web.archive.org/web/20140115063128/http://lists.apple.com/archives/bonjo
  // mDNS core calls this routine to initialise the platform-specific data.
  mDNSexport mStatus mDNSPlatformInit(mDNS *const m)
  {
-@@ -1870,6 +1907,10 @@ mDNSexport mStatus mDNSPlatformInit(mDNS
+@@ -1870,6 +1909,10 @@ mDNSexport mStatus mDNSPlatformInit(mDNS
      GetUserSpecifiedRFC1034ComputerName(&m->hostlabel);
      if (m->hostlabel.c[0] == 0) MakeDomainLabelFromLiteralString(&m->hostlabel, "Computer");
  
