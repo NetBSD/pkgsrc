@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/18 10:31:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/13 11:01:28 adam Exp $
 bin/cyclonedx-py-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -33,6 +33,9 @@ ${PYSITELIB}/cyclonedx_py/_internal/poetry.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.py
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/requirements.pyo
+${PYSITELIB}/cyclonedx_py/_internal/utils/__init__.py
+${PYSITELIB}/cyclonedx_py/_internal/utils/__init__.pyc
+${PYSITELIB}/cyclonedx_py/_internal/utils/__init__.pyo
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.py
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.pyc
 ${PYSITELIB}/cyclonedx_py/_internal/utils/args.pyo

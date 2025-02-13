@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2024/06/18 10:31:17 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/02/13 11:01:28 adam Exp $
 
-BLAKE2s (cyclonedx_bom-4.5.0.tar.gz) = 4e6219a36894d6cf386465161d172166b63c7e481c4aa0d37e255b75a5074eb9
-SHA512 (cyclonedx_bom-4.5.0.tar.gz) = e851101c8b8c87c24d62c3fb76795ce2f79f41112573b461a43b5b4229c4ce333b3040b4fda3993a80507e288e042ec162b589f495cd4faeb673872b41b4ebb5
-Size (cyclonedx_bom-4.5.0.tar.gz) = 2269041 bytes
+BLAKE2s (cyclonedx_bom-5.1.2.tar.gz) = 73bbb00b83a3574612b5a8b4bee04af273c1828b5cab7e2626667f8fe71c1552
+SHA512 (cyclonedx_bom-5.1.2.tar.gz) = 44d915ab2cf1b9f804540fe0ca0b29746680520cdc8691e2f8f7c75c95de788cbac1a51db163649e2e04307cb064bd613b19784b26251deac24d4adf619add77
+Size (cyclonedx_bom-5.1.2.tar.gz) = 2335454 bytes

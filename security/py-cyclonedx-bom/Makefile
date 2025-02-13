@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/06/18 10:31:17 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/13 11:01:28 adam Exp $
 
-DISTNAME=	cyclonedx_bom-4.5.0
+DISTNAME=	cyclonedx_bom-5.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cyclonedx-bom/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
 DEPENDS+=	${PYPKGPREFIX}-chardet>=5.1:../../converters/py-chardet
-DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=7.3.2:../../security/py-cyclonedx-python-lib
+DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=8.0:../../security/py-cyclonedx-python-lib
 DEPENDS+=	${PYPKGPREFIX}-packageurl>=0.11:../../devel/py-packageurl
 DEPENDS+=	${PYPKGPREFIX}-packaging>=24:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pip-requirements-parser>=32.0:../../devel/py-pip-requirements-parser
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-pip>=23.0:../../devel/py-pip
 TEST_DEPENDS+=	${PYPKGPREFIX}-poetry>=1.7:../../devel/py-poetry
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
