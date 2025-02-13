@@ -1,10 +1,9 @@
-$NetBSD: patch-GNUmakefile,v 1.4 2022/10/02 16:20:26 nros Exp $
+$NetBSD: patch-GNUmakefile,v 1.5 2025/02/13 18:18:54 adam Exp $
 
-Avoid -march=native compiler flag.
 On Darwin, use absolute path to avoid conflict with devel/libtool.
 Fix dylib name.
 
---- GNUmakefile.orig	2022-08-07 19:52:03.000000000 +0000
+--- GNUmakefile.orig	2023-10-01 16:38:21.000000000 +0000
 +++ GNUmakefile
 @@ -33,7 +33,7 @@ CHMOD ?= chmod
  MKDIR ?= mkdir -p
@@ -24,50 +23,7 @@ Fix dylib name.
    HAS_SOLIB_VERSION := 1
  endif
  
-@@ -969,42 +969,6 @@ ARFLAGS = -xar -o
- RANLIB = true
- endif
- 
--# Native build testing. Issue 'make native'.
--ifeq ($(findstring native,$(MAKECMDGOALS)),native)
--  NATIVE_OPT =
--
--  # Try GCC and compatibles first
--  TPROG = TestPrograms/test_cxx.cpp
--  TOPT = -march=native
--  HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
--  ifeq ($(strip $(HAVE_OPT)),0)
--    NATIVE_OPT = -march=native
--  endif # NATIVE_OPT
--
--  # And tune
--  ifeq ($(NATIVE_OPT),)
--    TOPT = -mtune=native
--    HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
--    ifeq ($(strip $(HAVE_OPT)),0)
--      NATIVE_OPT = -mtune=native
--    endif # NATIVE_OPT
--  endif
--
--  # Try SunCC next
--  ifeq ($(NATIVE_OPT),)
--    TOPT = -native
--    HAVE_OPT = $(shell $(TCOMMAND) 2>&1 | wc -w)
--    ifeq ($(strip $(HAVE_OPT)),0)
--      NATIVE_OPT = -native
--    endif # NATIVE_OPT
--  endif
--
--  ifneq ($(NATIVE_OPT),)
--    CRYPTOPP_CXXFLAGS += $(NATIVE_OPT)
--  endif
--
--endif # Native
--
- # Undefined Behavior Sanitizer (UBsan) testing. Issue 'make ubsan'.
- ifeq ($(findstring ubsan,$(MAKECMDGOALS)),ubsan)
-   CRYPTOPP_CXXFLAGS := $(CRYPTOPP_CXXFLAGS:-g%=-g3)
-@@ -1139,9 +1103,9 @@ ifeq ($(HAS_SOLIB_VERSION),1)
+@@ -1148,9 +1148,9 @@ ifeq ($(HAS_SOLIB_VERSION),1)
  # Different patchlevels and minors are compatible since 6.1
  SOLIB_COMPAT_SUFFIX=.$(LIB_MAJOR)
  # Linux uses -Wl,-soname
@@ -79,7 +35,7 @@ Fix dylib name.
  SOLIB_FLAGS=-Wl,-soname,libcryptopp.so$(SOLIB_COMPAT_SUFFIX)
  endif
  # Solaris uses -Wl,-h
-@@ -1443,7 +1407,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
+@@ -1448,7 +1448,7 @@ ifneq ($(wildcard libcryptopp.dylib),)
  	@-$(MKDIR) $(DESTDIR)$(LIBDIR)
  	$(CP) libcryptopp.dylib $(DESTDIR)$(LIBDIR)
  	$(CHMOD) u=rwx,go=rx $(DESTDIR)$(LIBDIR)/libcryptopp.dylib
