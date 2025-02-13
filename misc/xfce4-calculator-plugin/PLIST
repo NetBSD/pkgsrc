@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2023/04/21 01:49:50 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/13 03:20:00 gutteridge Exp $
 lib/xfce4/panel/plugins/libcalculator.la
 share/icons/hicolor/16x16/apps/xfce4-calculator-plugin.png
 share/icons/hicolor/22x22/apps/xfce4-calculator-plugin.png
@@ -42,6 +42,7 @@ share/locale/nl/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/pt/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-calculator-plugin.mo
+share/locale/ro/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/sk/LC_MESSAGES/xfce4-calculator-plugin.mo
 share/locale/sl/LC_MESSAGES/xfce4-calculator-plugin.mo
