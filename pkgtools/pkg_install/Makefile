@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2024/03/12 23:22:35 snj Exp $
+# $NetBSD: Makefile,v 1.242 2025/02/13 02:31:05 pho Exp $
 
 # Notes to package maintainers:
 #
@@ -80,6 +80,7 @@ MAKE_ENV+=		PKGSRC_MACHINE_ARCH=${MACHINE_ARCH}
 MAKE_ENV+=		OPSYS=${OPSYS}
 MAKE_ENV+=		CATMAN_SECTION_SUFFIX=${CATMAN_SECTION_SUFFIX:Q}
 MAKE_ENV+=		MANINSTALL=${MANINSTALL:Q}
+MAKE_ENV+=		SED=${SED:Q}
 
 PKG_DBDIR?=		${PREFIX}/pkgdb
 EGDIR=			${PREFIX}/share/examples/pkg_install
