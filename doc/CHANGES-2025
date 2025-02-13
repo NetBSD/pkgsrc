@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1341 2025/02/13 09:23:07 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1342 2025/02/13 10:45:51 sjmulder Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1778,3 +1778,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-jsbeautifier to 1.15.3 [adam 2025-02-13]
 	Updated net/py-ec2instanceconnectcli to 1.0.3 [adam 2025-02-13]
 	Updated devel/py-faker to 36.1.0 [adam 2025-02-13]
+	Updated textproc/libxlsxwriter to 1.2.0 [sjmulder 2025-02-13]
