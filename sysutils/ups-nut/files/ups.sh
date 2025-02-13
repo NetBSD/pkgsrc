@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ups.sh,v 1.11 2023/01/07 16:16:10 gdt Exp $
+# $NetBSD: ups.sh,v 1.12 2025/02/13 19:18:37 gdt Exp $
 #
 # KEYWORD: nostart
 
-# NB: This file is not intended to be run automaticlally at boot.  It
+# NB: This file is not intended to be run automatically at boot.  It
 # is a convenience script for humans to start or stop all 4 nut-ups
 # daemons as a group.
 
