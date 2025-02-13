@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.76 2021/10/26 11:05:53 nia Exp $
+$NetBSD: distinfo,v 1.77 2025/02/13 09:10:43 adam Exp $
 
-BLAKE2s (lftp-4.9.2.tar.xz) = 03aa37d43f7ba4f15db9c19c9de7e4aa313e1d742cda65e9c2caab248007c0a3
-SHA512 (lftp-4.9.2.tar.xz) = cda8698e7e34d748715a6fe5dc06c758240302621c7957402f0cc67577acf1a96b436fda4282408dee8171dc84a31e0be432df99a30f0a10057a8e7ea9ec64ad
-Size (lftp-4.9.2.tar.xz) = 1654960 bytes
-SHA1 (patch-aa) = 988f4f2f5b9469d3c645ffa984d5449a219229bb
-SHA1 (patch-ac) = 8aa2ddc582bbc87cd0a5e8662f328dd2ac8dea90
-SHA1 (patch-ae) = 4e2506bbadbda97feeabb208cd43c0dff70ed7d3
+BLAKE2s (lftp-4.9.3.tar.xz) = 19691587cb46656e1b58665ff57503b9b59accfe708888c91b9a1e8db01bd0a8
+SHA512 (lftp-4.9.3.tar.xz) = 81dc39ff8638ae720f4b65a9a74dad8100f9a764b4ff6d1538cbf898f666d795137619b490d6b0586d1001f9d3b11a35bed52821ef1d5fc3b0529e5dcb5a836a
+Size (lftp-4.9.3.tar.xz) = 1872104 bytes
+SHA1 (patch-Makefile.in) = 8aa2ddc582bbc87cd0a5e8662f328dd2ac8dea90
 SHA1 (patch-lib_inttypes.in.h) = 1ed605531efa6fb92ebed762290f7b1060f4beb1
+SHA1 (patch-lib_md5-stream.c) = decf6542fb0a7ee75e5b7d158bd26b7c2127c8d0
+SHA1 (patch-lib_sha1-stream.c) = 10cce429e0636dc3c3b1d2873291d24cebee60bd
+SHA1 (patch-po_Makefile.in.in) = 4e2506bbadbda97feeabb208cd43c0dff70ed7d3
+SHA1 (patch-src_Makefile.in) = 84dbaf0e8be52d3efe40d549c660aba82f80e8f8
 SHA1 (patch-src_module.cc) = 236fe2ce4ff215ddfe44fc86ed43ed00849280b8
