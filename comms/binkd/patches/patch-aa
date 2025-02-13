@@ -1,7 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2004/11/29 00:58:09 tv Exp $
+$NetBSD: patch-aa,v 1.5 2025/02/13 06:25:39 dholland Exp $
 
---- Makefile.in.orig	2004-11-28 19:45:33.000000000 -0500
+Configure for pkgsrc.
+Add a .WAIT so the post-build message comes out right.
+
+Work around a bmake problem (PR 59073) by using $< and $@ instead of $*.
+
+--- Makefile.in.orig	2025-02-13 05:40:19.401064526 +0000
 +++ Makefile.in
+@@ -16,7 +16,7 @@ DEFINES=$(AUTODEFS) -DHAVE_FORK -DUNIX -
+ CFLAGS=$(DEFINES) -Wall -Wno-char-subscripts @CFLAGS@
+ LIBS=$(AUTOLIBS)
+ 
+-all: compile banner
++all: compile .WAIT banner
+ 
+ compile: $(APPL)
+ 
 @@ -34,9 +34,8 @@ banner:
  	@echo "        do not something criminal during the installation;   "
  	@echo "     2. \`su' to root;                                       "
@@ -25,3 +39,12 @@ $NetBSD: patch-aa,v 1.4 2004/11/29 00:58:09 tv Exp $
  
  clean:
  	rm -f *.[bo] unix/*.[bo] ntlm/*.[bo] *.BAK *.core *.obj *.err 
+@@ -71,7 +70,7 @@ realclean: cleanall
+ 
+ .c.o:
+ 	@echo Compiling $*.c...
+-	@$(CC) -c $(CFLAGS) -o $*.o $*.c
++	@$(CC) -c $(CFLAGS) -o $@ $<
+ 
+ binkd.txt: binkd.8
+ 	@groff -Tascii -mman binkd.8 | perl -npe 's/.\010//g' >binkd.txt
