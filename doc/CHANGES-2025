@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1356 2025/02/13 16:20:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1357 2025/02/13 16:44:28 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1797,3 +1797,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/serie to 0.4.4 [pin 2025-02-13]
 	Updated time/py-tzlocal to 5.3 [adam 2025-02-13]
 	Updated devel/py-test-check to 2.5.0 [adam 2025-02-13]
+	Updated math/sc-im to 0.8.4 [vins 2025-02-13]
