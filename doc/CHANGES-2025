@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1342 2025/02/13 10:45:51 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.1343 2025/02/13 11:00:03 triaxx Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-ec2instanceconnectcli to 1.0.3 [adam 2025-02-13]
 	Updated devel/py-faker to 36.1.0 [adam 2025-02-13]
 	Updated textproc/libxlsxwriter to 1.2.0 [sjmulder 2025-02-13]
+	Updated audio/flac to 1.5.0nb1 [triaxx 2025-02-13]
