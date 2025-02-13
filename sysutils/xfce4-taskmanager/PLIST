@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/03/03 16:54:18 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/13 03:52:32 gutteridge Exp $
 bin/xfce4-taskmanager
 share/applications/xfce4-taskmanager.desktop
 share/icons/hicolor/128x128/apps/org.xfce.taskmanager.png
@@ -51,6 +51,7 @@ share/locale/pa/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/pl/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/pt/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-taskmanager.mo
+share/locale/ro/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/ru/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/si/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/sk/LC_MESSAGES/xfce4-taskmanager.mo
