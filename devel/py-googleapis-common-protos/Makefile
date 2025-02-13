@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2024/11/17 09:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/13 09:16:30 adam Exp $
 
-DISTNAME=	googleapis_common_protos-1.66.0
+DISTNAME=	googleapis_common_protos-1.67.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/googleapis-common-protos/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/googleapis/python-api-common-protos
+HOMEPAGE=	https://github.com/googleapis/google-cloud-python
 COMMENT=	Python support for Public interface definitions of Google APIs
 LICENSE=	apache-2.0
 
