@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2024/11/14 22:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2025/02/13 05:22:48 dholland Exp $
 
 DISTNAME=	dar-2.7.7
 PKGREVISION=	9
@@ -72,5 +72,6 @@ BUILDLINK_TRANSFORM+=	l:execinfo:execinfo:elf
 .include "../../net/librsync/buildlink3.mk"
 .include "../../security/argon2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
