@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1338 2025/02/13 03:52:46 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1339 2025/02/13 06:34:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1770,3 +1770,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/pstoedit to 3.78nb27 [wiz 2025-02-12]
 	Updated misc/xfce4-calculator-plugin to 0.7.3 [gutteridge 2025-02-13]
 	Updated sysutils/xfce4-taskmanager to 1.5.8 [gutteridge 2025-02-13]
+	Updated textproc/translate-toolkit to 3.14.8 [adam 2025-02-13]
+	Updated math/py-asdf_astropy to 0.7.1 [adam 2025-02-13]
