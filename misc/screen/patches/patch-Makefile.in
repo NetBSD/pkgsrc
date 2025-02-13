@@ -1,8 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2025/01/09 20:07:03 ktnb Exp $
-
-Remove GNU Make conditional.  @ETCSCREENRC@ appears to get
-replaced always. If it doesn't in some cases, please fix
-configure.ac instead (and regen patch for configure as well).
+$NetBSD: patch-Makefile.in,v 1.2 2025/02/13 19:43:02 rillig Exp $
 
 Add utmp-netbsd.c (created in patch-am) and utmp-netbsd.o.
 Setting the setuid bit is handled by the package Makefile.
