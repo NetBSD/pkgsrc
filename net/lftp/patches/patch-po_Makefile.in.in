@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2013/05/18 20:23:03 adam Exp $
+$NetBSD: patch-po_Makefile.in.in,v 1.1 2025/02/13 09:10:43 adam Exp $
 
 Do not use $(SHELL), call directly @install_sh@.
 

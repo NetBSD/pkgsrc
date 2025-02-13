@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/07/12 08:58:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/02/13 09:10:43 adam Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.la
@@ -34,7 +34,9 @@ share/locale/ko/LC_MESSAGES/lftp.mo
 share/locale/pl/LC_MESSAGES/lftp.mo
 share/locale/pt_BR/LC_MESSAGES/lftp.mo
 share/locale/ru/LC_MESSAGES/lftp.mo
+share/locale/sr/LC_MESSAGES/lftp.mo
 share/locale/uk/LC_MESSAGES/lftp.mo
 share/locale/zh_CN/LC_MESSAGES/lftp.mo
 share/locale/zh_HK/LC_MESSAGES/lftp.mo
 share/locale/zh_TW/LC_MESSAGES/lftp.mo
+share/zsh/site-functions/_lftp

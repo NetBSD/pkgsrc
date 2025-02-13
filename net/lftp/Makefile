@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.151 2024/11/14 22:21:10 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2025/02/13 09:10:43 adam Exp $
 
-DISTNAME=	lftp-4.9.2
-PKGREVISION=	15
+DISTNAME=	lftp-4.9.3
 CATEGORIES=	net
 MASTER_SITES=	http://lftp.yar.ru/ftp/
 MASTER_SITES+=	ftp://ftp.st.ryukoku.ac.jp/pub/network/ftp/lftp/
@@ -20,6 +19,8 @@ USE_TOOLS+=		autoconf bison
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-modules
+# wcwidth from gnulib fails with duplicate symbol '_rpl_wcwidth'
+CONFIGURE_ENV+=		gl_cv_func_wcwidth_works=yes
 CONFIGURE_ENV+=		readline_prefix=${BUILDLINK_DIR}
 
 SUBST_CLASSES+=			readline
@@ -44,6 +45,7 @@ post-install: post-install-perl
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libidn2/buildlink3.mk"
 # uses _rl_mark_modified_lines and GNU history(3) functions
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
