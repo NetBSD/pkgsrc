@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2024/07/29 10:48:18 wiz Exp $
+$NetBSD: distinfo,v 1.17 2025/02/13 22:16:59 wiz Exp $
 
-BLAKE2s (krusader-2.8.1.tar.xz) = 4e5dc441835d80836d4c9d2ec4e95b6cecfa3ff80cf3238e623df5e1de14775f
-SHA512 (krusader-2.8.1.tar.xz) = 36a0b1ea3f2c00fd9093ae45e8a3cf196eeb51ac3cc5a006c611f6eee4209ec8fd10f6c9590bb22f381e68e7457ea8f62b0296338271b826d2071add126cb7bb
-Size (krusader-2.8.1.tar.xz) = 3104068 bytes
+BLAKE2s (krusader-2.9.0.tar.xz) = 831efedb361cb58dd05f1cabd620fdb813262fe3586ce51e9f58d05a97ac060a
+SHA512 (krusader-2.9.0.tar.xz) = 9f0fd1f1d85accdd2df46cda128f30660fcd6d8601a889fb003f1d959221ea5c850c3e523e6163cbf30997f7df607051030cb2bca076eedb895c1fc336c338ce
+Size (krusader-2.9.0.tar.xz) = 3221844 bytes
