@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1354 2025/02/13 13:50:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1355 2025/02/13 15:23:02 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1794,3 +1794,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/yash to 2.58.1 [vins 2025-02-13]
 	Added archivers/py-zlib-ng version 0.5.1 [adam 2025-02-13]
 	Updated devel/py-xopen to 2.0.2 [adam 2025-02-13]
+	Updated devel/serie to 0.4.4 [pin 2025-02-13]
