@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2025/01/14 18:36:16 ktnb Exp $
+# $NetBSD: Makefile,v 1.126 2025/02/13 19:43:02 rillig Exp $
 
 DISTNAME=	screen-5.0.0
+PKGREVISION=	1
 CATEGORIES=	misc shells
 MASTER_SITES=	${MASTER_SITE_GNU:=screen/}
 
@@ -25,7 +26,7 @@ NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-sys_screenrc=${PKG_SYSCONFDIR}/screenrc
+CONFIGURE_ARGS+=	--with-system_screenrc=${PKG_SYSCONFDIR}/screenrc
 CONFIGURE_ARGS+=	--enable-telnet
 
 PKG_SHELL=		bin/screen
