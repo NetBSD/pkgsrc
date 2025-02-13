@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2023/04/21 01:49:50 gutteridge Exp $
+$NetBSD: distinfo,v 1.9 2025/02/13 03:20:00 gutteridge Exp $
 
-BLAKE2s (xfce4-calculator-plugin-0.7.2.tar.bz2) = 3f1db72b86cfc84ca69b13cade5eaed82d977a2710c25c8f82a66251fb7e0ad6
-SHA512 (xfce4-calculator-plugin-0.7.2.tar.bz2) = 98fa51ff0afbb09e3066f629113f6a584c5afd9228c87ee67afd7a56b065060ece16ee646ec6a2c685907a0d9733cba19cbf25bc034e009a013af2122155cc2c
-Size (xfce4-calculator-plugin-0.7.2.tar.bz2) = 422611 bytes
+BLAKE2s (xfce4-calculator-plugin-0.7.3.tar.bz2) = 747af27ff5d7ee56fef09afac3e17636d0e9260fbcda5f76ed2b130fd94023b6
+SHA512 (xfce4-calculator-plugin-0.7.3.tar.bz2) = f4479cf65e35c1491792d7e74674e41d3e13bf59c73f43fa7b25b83731326ef2627ddfa34a190a799c83a424b3a80760716cb5bcd3fa3dc371a4e42255332dd5
+Size (xfce4-calculator-plugin-0.7.3.tar.bz2) = 481917 bytes
