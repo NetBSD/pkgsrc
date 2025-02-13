@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2021/06/10 08:16:49 leot Exp $
-bin/msftp${PYVERSSUFFIX}
-bin/mssh${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2025/02/13 09:20:07 adam Exp $
+bin/msftp-${PYVERSSUFFIX}
+bin/mssh-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/NOTICE
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/ec2instanceconnectcli/EC2InstanceConnectCLI.py
 ${PYSITELIB}/ec2instanceconnectcli/EC2InstanceConnectCLI.pyc
 ${PYSITELIB}/ec2instanceconnectcli/EC2InstanceConnectCLI.pyo
@@ -39,6 +40,3 @@ ${PYSITELIB}/ec2instanceconnectcli/mops.pyo
 ${PYSITELIB}/ec2instanceconnectcli/mputty.py
 ${PYSITELIB}/ec2instanceconnectcli/mputty.pyc
 ${PYSITELIB}/ec2instanceconnectcli/mputty.pyo
-${PYSITELIB}/ec2instanceconnectcli/py2py3.py
-${PYSITELIB}/ec2instanceconnectcli/py2py3.pyc
-${PYSITELIB}/ec2instanceconnectcli/py2py3.pyo
