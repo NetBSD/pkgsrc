@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2025/01/31 15:54:44 micha Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/13 06:33:25 dholland Exp $
 
 DISTNAME=	eureka-2.0.2
 PKGREVISION=	2
@@ -41,6 +41,7 @@ SUBST_SED.dwd=		-e 's,PKGSRC_DOOMWADDIR,${PREFIX}/${DOOMWADDIR},'
 
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.3
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libICE/buildlink3.mk"
