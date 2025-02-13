@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1358 2025/02/13 16:49:09 vins Exp $
+$NetBSD: CHANGES-2025,v 1.1359 2025/02/13 18:25:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1799,3 +1799,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test-check to 2.5.0 [adam 2025-02-13]
 	Updated math/sc-im to 0.8.4 [vins 2025-02-13]
 	Updated devel/got to 0.108 [vins 2025-02-13]
+	Updated security/crypto++ to 8.9.0 [adam 2025-02-13]
+	Updated www/curl to 8.12.1 [adam 2025-02-13]
