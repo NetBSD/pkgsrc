@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/06/09 07:44:54 vins Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/13 13:45:20 vins Exp $
 bin/yash
 man/ja/man1/yash.1
 man/man1/yash.1
@@ -64,6 +64,7 @@ share/yash/completion/fgrep
 share/yash/completion/file
 share/yash/completion/find
 share/yash/completion/fold
+share/yash/completion/fzy
 share/yash/completion/gawk
 share/yash/completion/getconf
 share/yash/completion/getopts
@@ -102,6 +103,7 @@ share/yash/completion/git-reflog
 share/yash/completion/git-remote
 share/yash/completion/git-request-pull
 share/yash/completion/git-reset
+share/yash/completion/git-restore
 share/yash/completion/git-rev-list
 share/yash/completion/git-rev-parse
 share/yash/completion/git-revert
