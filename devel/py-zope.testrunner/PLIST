@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/08/07 10:00:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/13 12:12:30 adam Exp $
 bin/zope-testrunner-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.md
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -26,9 +26,6 @@ ${PYSITELIB}/zope/testrunner/debug.pyo
 ${PYSITELIB}/zope/testrunner/digraph.py
 ${PYSITELIB}/zope/testrunner/digraph.pyc
 ${PYSITELIB}/zope/testrunner/digraph.pyo
-${PYSITELIB}/zope/testrunner/eggsupport.py
-${PYSITELIB}/zope/testrunner/eggsupport.pyc
-${PYSITELIB}/zope/testrunner/eggsupport.pyo
 ${PYSITELIB}/zope/testrunner/exceptions.py
 ${PYSITELIB}/zope/testrunner/exceptions.pyc
 ${PYSITELIB}/zope/testrunner/exceptions.pyo
@@ -127,7 +124,6 @@ ${PYSITELIB}/zope/testrunner/tests/testrunner-debugging-nonprintable-exc.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-debugging.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-discovery.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-edge-cases.rst
-${PYSITELIB}/zope/testrunner/tests/testrunner-eggsupport.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-errors.rst
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-251759/eggs/foo.bar-1.2-py2.5.egg/foo/__init__.py
 ${PYSITELIB}/zope/testrunner/tests/testrunner-ex-251759/eggs/foo.bar-1.2-py2.5.egg/foo/__init__.pyc
