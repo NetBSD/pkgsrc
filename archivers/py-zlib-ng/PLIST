@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/13 13:10:20 adam Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/zlib_ng/__init__.py
+${PYSITELIB}/zlib_ng/__init__.pyc
+${PYSITELIB}/zlib_ng/__init__.pyo
+${PYSITELIB}/zlib_ng/_version.py
+${PYSITELIB}/zlib_ng/_version.pyc
+${PYSITELIB}/zlib_ng/_version.pyi
+${PYSITELIB}/zlib_ng/_version.pyo
+${PYSITELIB}/zlib_ng/gzip_ng.py
+${PYSITELIB}/zlib_ng/gzip_ng.pyc
+${PYSITELIB}/zlib_ng/gzip_ng.pyo
+${PYSITELIB}/zlib_ng/gzip_ng_threaded.py
+${PYSITELIB}/zlib_ng/gzip_ng_threaded.pyc
+${PYSITELIB}/zlib_ng/gzip_ng_threaded.pyo
+${PYSITELIB}/zlib_ng/py.typed
+${PYSITELIB}/zlib_ng/zlib-ng/LICENSE.md
+${PYSITELIB}/zlib_ng/zlib-ng/README.md
+${PYSITELIB}/zlib_ng/zlib_ng.pyi
+${PYSITELIB}/zlib_ng/zlib_ng.so
