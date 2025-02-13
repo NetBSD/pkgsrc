@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1347 2025/02/13 11:23:55 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1348 2025/02/13 11:25:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1785,3 +1785,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/broot to 1.44.7 [pin 2025-02-13]
 	Updated graphics/stitchy to 0.1.9 [pin 2025-02-13]
 	Updated graphics/lximage-qt to 2.1.1 [pin 2025-02-13]
+	Updated x11/lxqt-runner to 2.1.2 [pin 2025-02-13]
