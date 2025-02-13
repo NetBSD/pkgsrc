@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2025/01/16 13:42:08 pin Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/13 11:27:46 pin Exp $
 
 PKGNAME=	lxqt-2.1.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	meta-pkgs
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,11 +22,11 @@ DEPENDS+=	libfm-qt>=2.1.0nb1:../../x11/libfm-qt
 DEPENDS+=	lxqt-themes>=2.1.0:../../graphics/lxqt-themes
 DEPENDS+=	pavucontrol-qt>=2.1.0:../../audio/pavucontrol-qt
 DEPENDS+=	qtermwidget>=2.1.0:../../x11/qtermwidget
-DEPENDS+=	lximage-qt>=2.1.0:../../graphics/lximage-qt
+DEPENDS+=	lximage-qt>=2.1.1:../../graphics/lximage-qt
 DEPENDS+=	lxqt-about>=2.1.0:../../x11/lxqt-about
 DEPENDS+=	lxqt-policykit>=2.1.0:../../security/lxqt-policykit
 DEPENDS+=	lxqt-admin>=2.1.0:../../x11/lxqt-admin
-DEPENDS+=	lxqt-config>=2.1.0:../../x11/lxqt-config
+DEPENDS+=	lxqt-config>=2.1.1:../../x11/lxqt-config
 DEPENDS+=	lxqt-globalkeys>=2.1.0:../../x11/lxqt-globalkeys
 DEPENDS+=	lxqt-openssh-askpass>=2.1.0:../../security/lxqt-openssh-askpass
 DEPENDS+=	lxqt-notificationd>=2.1.1:../../x11/lxqt-notificationd
@@ -38,7 +38,7 @@ DEPENDS+=	lxqt-sudo>=2.1.0:../../security/lxqt-sudo
 DEPENDS+=	pcmanfm-qt>=2.1.0:../../sysutils/pcmanfm-qt
 DEPENDS+=	qterminal>=2.1.0nb1:../../x11/qterminal
 DEPENDS+=	lxqt-panel>=2.1.4:../../x11/lxqt-panel
-DEPENDS+=	lxqt-runner>=2.1.1:../../x11/lxqt-runner
+DEPENDS+=	lxqt-runner>=2.1.2:../../x11/lxqt-runner
 DEPENDS+=	screengrab>=2.9.0:../../graphics/screengrab
 DEPENDS+=	lxqt-archiver>=1.1.0:../../archivers/lxqt-archiver
 # The Breeze icon set is the default that LXQt expects, and a compatible icon
