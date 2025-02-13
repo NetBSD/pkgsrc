@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2025/02/13 11:55:27 sjmulder Exp $
+# $NetBSD: Makefile,v 1.55 2025/02/13 16:43:50 vins Exp $
 
-DISTNAME=	sc-im-0.8.3
-PKGREVISION=	10
+DISTNAME=	sc-im-0.8.4
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andmarti1424/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,7 +16,7 @@ INSTALL_DIRS=	src
 .include "../../mk/bsd.prefs.mk"
 
 # pkg-config to avoid broken Makefile self-configuration
-USE_TOOLS+=	gmake pkg-config bison bash:run
+USE_TOOLS+=	gmake pkg-config yacc sed bash:run
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=	c99
@@ -31,14 +30,17 @@ CFLAGS+=	-D_XOPEN_SOURCE
 # formats/ods.c forgets to include some header(s), fixed in 0.8.4
 CFLAGS+=	-Wno-error=implicit-function-declaration
 
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	pre-configure
+SUBST_FILES.pkgsrc=	src/Makefile
+SUBST_VARS.pkgsrc=	CC PREFIX PKGMANDIR SED YACC
+SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
+
 MAKE_ENV+=	CFLAGS_CURSES=${BUILDLINK_CFLAGS.ncurses:Q}
 MAKE_ENV+=	LDLIBS_CURSES=${BUILDLINK_LDADD.ncurses:Q}
 MAKE_ENV+=	CFLAGS_DL=${BUILDLINK_CFLAGS.dl:Q}
 MAKE_ENV+=	LDLIBS_DL=${BUILDLINK_LDADD.dl:Q}
 MAKE_ENV+=	LDLIBS=${LDLIBS:Q}
-
-MAKE_FLAGS+=	prefix=${PREFIX}
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 
 .include "options.mk"
 

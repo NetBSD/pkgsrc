@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2023/04/19 13:38:53 sjmulder Exp $
+$NetBSD: distinfo,v 1.8 2025/02/13 16:43:50 vins Exp $
 
-BLAKE2s (sc-im-0.8.3.tar.gz) = 8b541d5b13b6f0e75f28ee2a6f44908e07c471cb7c260d7014ba3e655ba1bc36
-SHA512 (sc-im-0.8.3.tar.gz) = a3d7cf99c7c959d24ebf7e525abb665c02690674c9b3cdf5b234dcdb376fd73e9488bda522106802932084bbfd239928e39b35743c7051178aa14edf61ec2cb8
-Size (sc-im-0.8.3.tar.gz) = 1664440 bytes
-SHA1 (patch-src_Makefile) = d75c6716d96aae6c28e1cbedf30dc4b3d4167eac
+BLAKE2s (sc-im-0.8.4.tar.gz) = c8ede8331995e70853d95924dd46640845af196561dfe34584fecf37f6fd605e
+SHA512 (sc-im-0.8.4.tar.gz) = 8cbd701569f13285d6cb630e239a4fab5673dd886e069561552e1be40d08179ebad15c3dd72dfb232d2575e21a08e0499b1993cf361c536792c2951d00d712a6
+Size (sc-im-0.8.4.tar.gz) = 1672884 bytes
+SHA1 (patch-src_Makefile) = cbc4b7c54d56abc62ae1148c982b6845de006ed8
