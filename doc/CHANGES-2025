@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1359 2025/02/13 18:25:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1360 2025/02/13 22:17:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1801,3 +1801,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/got to 0.108 [vins 2025-02-13]
 	Updated security/crypto++ to 8.9.0 [adam 2025-02-13]
 	Updated www/curl to 8.12.1 [adam 2025-02-13]
+	Updated sysutils/krusader to 2.9.0 [wiz 2025-02-13]
