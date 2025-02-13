@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2025/01/31 23:52:52 sjmulder Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/13 10:45:34 sjmulder Exp $
 
-DISTNAME=	libxlsxwriter-1.1.9
+DISTNAME=	libxlsxwriter-1.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
