@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1345 2025/02/13 11:21:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1346 2025/02/13 11:22:52 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 8.8.0 [adam 2025-02-13]
 	Updated security/py-cyclonedx-bom to 5.1.2 [adam 2025-02-13]
 	Updated sysutils/broot to 1.44.7 [pin 2025-02-13]
+	Updated graphics/stitchy to 0.1.9 [pin 2025-02-13]
