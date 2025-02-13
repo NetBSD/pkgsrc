@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1343 2025/02/13 11:00:03 triaxx Exp $
+$NetBSD: CHANGES-2025,v 1.1344 2025/02/13 11:02:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1780,3 +1780,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 36.1.0 [adam 2025-02-13]
 	Updated textproc/libxlsxwriter to 1.2.0 [sjmulder 2025-02-13]
 	Updated audio/flac to 1.5.0nb1 [triaxx 2025-02-13]
+	Updated security/py-cyclonedx-python-lib to 8.8.0 [adam 2025-02-13]
+	Updated security/py-cyclonedx-bom to 5.1.2 [adam 2025-02-13]
