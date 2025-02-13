@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1336 2025/02/12 21:06:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1337 2025/02/13 03:20:15 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-dnsdiag to 2.6.0 [adam 2025-02-12]
 	Updated net/dhcpcd to 10.2.0 [roy 2025-02-12]
 	Updated graphics/pstoedit to 3.78nb27 [wiz 2025-02-12]
+	Updated misc/xfce4-calculator-plugin to 0.7.3 [gutteridge 2025-02-13]
