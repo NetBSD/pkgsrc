@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1352 2025/02/13 13:14:48 vins Exp $
+$NetBSD: CHANGES-2025,v 1.1353 2025/02/13 13:46:44 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1791,3 +1791,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-gwcs to 0.24.0 [adam 2025-02-13]
 	Updated devel/py-zope.testrunner to 7.0 [adam 2025-02-13]
 	Updated wm/fvwm3 to 1.1.2 [vins 2025-02-13]
+	Updated shells/yash to 2.58.1 [vins 2025-02-13]
