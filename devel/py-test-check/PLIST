@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/10 16:32:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/13 16:20:34 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -25,3 +25,4 @@ ${PYSITELIB}/pytest_check/plugin.pyo
 ${PYSITELIB}/pytest_check/pseudo_traceback.py
 ${PYSITELIB}/pytest_check/pseudo_traceback.pyc
 ${PYSITELIB}/pytest_check/pseudo_traceback.pyo
+${PYSITELIB}/pytest_check/py.typed
