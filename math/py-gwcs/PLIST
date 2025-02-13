@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/05/15 07:01:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/13 12:11:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -40,6 +40,9 @@ ${PYSITELIB}/gwcs/converters/wcs.pyo
 ${PYSITELIB}/gwcs/coordinate_frames.py
 ${PYSITELIB}/gwcs/coordinate_frames.pyc
 ${PYSITELIB}/gwcs/coordinate_frames.pyo
+${PYSITELIB}/gwcs/examples.py
+${PYSITELIB}/gwcs/examples.pyc
+${PYSITELIB}/gwcs/examples.pyo
 ${PYSITELIB}/gwcs/extension.py
 ${PYSITELIB}/gwcs/extension.pyc
 ${PYSITELIB}/gwcs/extension.pyo
@@ -77,6 +80,9 @@ ${PYSITELIB}/gwcs/tests/test_api.pyo
 ${PYSITELIB}/gwcs/tests/test_api_slicing.py
 ${PYSITELIB}/gwcs/tests/test_api_slicing.pyc
 ${PYSITELIB}/gwcs/tests/test_api_slicing.pyo
+${PYSITELIB}/gwcs/tests/test_bounding_box.py
+${PYSITELIB}/gwcs/tests/test_bounding_box.pyc
+${PYSITELIB}/gwcs/tests/test_bounding_box.pyo
 ${PYSITELIB}/gwcs/tests/test_coordinate_systems.py
 ${PYSITELIB}/gwcs/tests/test_coordinate_systems.pyc
 ${PYSITELIB}/gwcs/tests/test_coordinate_systems.pyo
@@ -104,9 +110,24 @@ ${PYSITELIB}/gwcs/tests/utils.pyo
 ${PYSITELIB}/gwcs/utils.py
 ${PYSITELIB}/gwcs/utils.pyc
 ${PYSITELIB}/gwcs/utils.pyo
-${PYSITELIB}/gwcs/wcs.py
-${PYSITELIB}/gwcs/wcs.pyc
-${PYSITELIB}/gwcs/wcs.pyo
+${PYSITELIB}/gwcs/wcs/__init__.py
+${PYSITELIB}/gwcs/wcs/__init__.pyc
+${PYSITELIB}/gwcs/wcs/__init__.pyo
+${PYSITELIB}/gwcs/wcs/_exception.py
+${PYSITELIB}/gwcs/wcs/_exception.pyc
+${PYSITELIB}/gwcs/wcs/_exception.pyo
+${PYSITELIB}/gwcs/wcs/_pipeline.py
+${PYSITELIB}/gwcs/wcs/_pipeline.pyc
+${PYSITELIB}/gwcs/wcs/_pipeline.pyo
+${PYSITELIB}/gwcs/wcs/_step.py
+${PYSITELIB}/gwcs/wcs/_step.pyc
+${PYSITELIB}/gwcs/wcs/_step.pyo
+${PYSITELIB}/gwcs/wcs/_utils.py
+${PYSITELIB}/gwcs/wcs/_utils.pyc
+${PYSITELIB}/gwcs/wcs/_utils.pyo
+${PYSITELIB}/gwcs/wcs/_wcs.py
+${PYSITELIB}/gwcs/wcs/_wcs.pyc
+${PYSITELIB}/gwcs/wcs/_wcs.pyo
 ${PYSITELIB}/gwcs/wcstools.py
 ${PYSITELIB}/gwcs/wcstools.pyc
 ${PYSITELIB}/gwcs/wcstools.pyo
