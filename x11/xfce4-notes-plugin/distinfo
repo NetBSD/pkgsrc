@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2024/01/21 01:59:45 gutteridge Exp $
+$NetBSD: distinfo,v 1.16 2025/02/13 23:41:27 gutteridge Exp $
 
-BLAKE2s (xfce4-notes-plugin-1.11.0.tar.bz2) = 3fb21710d9ef997c6ba061501ffab41aba96c44199b41d3c408627ccfe6f4136
-SHA512 (xfce4-notes-plugin-1.11.0.tar.bz2) = 3644049bb2aa77bbed5b391f47d67dbf6528cb535448287a28a011d78a6fb31971a3556fe37ad380858d2b561ef67fee2bc93c4ed0c19c75c564d832cd4d47f1
-Size (xfce4-notes-plugin-1.11.0.tar.bz2) = 524627 bytes
+BLAKE2s (xfce4-notes-plugin-1.11.2.tar.bz2) = e907a654e22ca779a8fb2f900e692a5b3f098b5eb769b052785954f81849238a
+SHA512 (xfce4-notes-plugin-1.11.2.tar.bz2) = 65d6ec24f67969ddc34a8da696c9df178f7d9469012b1866fd964d3ab3b58388dff6d66f1a477087d9c165fd536b711808177bf62cbee1c843221b289abba524
+Size (xfce4-notes-plugin-1.11.2.tar.bz2) = 640562 bytes
 SHA1 (patch-src_Makefile.in) = 265b1e3ee4c4f18aed03ffa697e7157de8e2110e
