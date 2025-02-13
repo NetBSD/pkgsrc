@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:34:55 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/02/13 21:09:01 vins Exp $
 
-BLAKE2s (xphoon.tar.Z) = e1c972b314890061a5540c74519c62e6c785a928d989bc39c254db5dd09ed11d
-SHA512 (xphoon.tar.Z) = 6801bc3bec5337664be6eb90254abbf4e084a42d417470810018ab6099e44b79f367ee90c3a9312e3552c7abc747e9c27103d43112b9284b6bbb0aa9cae546c9
-Size (xphoon.tar.Z) = 95407 bytes
-SHA1 (patch-ab) = 94647ef046da68e750a2cbe387d1e775483b208c
-SHA1 (patch-ac) = fbed89ba75f4dea2e9ecb3f865b6e1499e0e4245
-SHA1 (patch-ad) = 24bc9922d8adc84b0598d0d75a6794913e776abb
-SHA1 (patch-ae) = c331c6fc4568312e586cf0827e206df157826f2b
-SHA1 (patch-af) = 540e43756f62600f4152507b5548079b64413d2c
-SHA1 (patch-ag) = ba81413b85506e4f5eeb4b5d12a9a8fc71465018
-SHA1 (patch-ah) = 72d418638535f56147ad2d624a7ecf70cc407102
+BLAKE2s (xphoon_14Aug2014.tar.gz) = 9f6df7ff034315dfc08dba667c57c2377b494217a9c82d47c4d1e04c6bfd3a1f
+SHA512 (xphoon_14Aug2014.tar.gz) = 6f0cf53b305cbf15d3b28fdfbcf49ff78689d49fb7b95815b590f3d42f43bda31df1bfd515eefa849579f9055f004cc7bf901741d98e2a10ac4841cc4ed95a00
+Size (xphoon_14Aug2014.tar.gz) = 103903 bytes
+SHA1 (patch-Imakefile) = cc9091b8bbec7bfd7029c5b8179e0e9064596349
+SHA1 (patch-Makefile) = 154cb0169f81817e8f60719d077c40d6a031ad90
+SHA1 (patch-vroot.h) = e06529cf5a373e3f87f0a825dec28545e5aaae6d
+SHA1 (patch-xphoon.c) = 981c2adbb0e9c5e82a898c68c41c1cc4a0b67ad6

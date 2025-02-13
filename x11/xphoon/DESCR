@@ -1,1 +1,5 @@
-Xphoon sets X the root window to a picture of the moon in its current phase.
+Xphoon sets X the root window to a picture of the moon in its current
+phase, including the partial lighting of the dark side by reflected
+earthlight. Picture is a monochrome dithered bitmap which is calculated
+via mathematical formulae. It keeps running on background updating the
+picture accordingly as time goes by.
