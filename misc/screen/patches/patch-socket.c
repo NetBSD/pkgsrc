@@ -1,6 +1,6 @@
-$NetBSD: patch-socket.c,v 1.5 2025/01/09 20:07:04 ktnb Exp $
+$NetBSD: patch-socket.c,v 1.6 2025/02/13 19:43:02 rillig Exp $
 
-Include <uio.h> for iovec. 
+Include <uio.h> for iovec.
 
 --- socket.c.orig	2025-01-09 02:58:51.269455114 +0000
 +++ socket.c
