@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:06:35 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/02/13 09:20:07 adam Exp $
 
-BLAKE2s (ec2instanceconnectcli-1.0.2.tar.gz) = 6f7b02abbfc9a26a3b3aed523ccb6433b236c20f95e3810392c1ae998f0dad6f
-SHA512 (ec2instanceconnectcli-1.0.2.tar.gz) = 3d74d1ea04f4d948a619c835c9bd2595fd0c1957b20a1aa77f77f2e789c2dfe94550c563f852dcbd9106abb6b7fab392d8c681fa6671e38d5c8cbbee25ba1e42
-Size (ec2instanceconnectcli-1.0.2.tar.gz) = 22569 bytes
+BLAKE2s (ec2instanceconnectcli-1.0.3.tar.gz) = c16ea838947f8581aeb14a6889cec2f1789db3d7d0989b63aaeea92c5d6975a0
+SHA512 (ec2instanceconnectcli-1.0.3.tar.gz) = fb09e33450482c753ece0336ae2eab2e74ef82bb2d06ecbec62d912e6e49e2205089659bcf9df4f853d0677cf03633297bc5106c665e2bf46139ba556301b3af
+Size (ec2instanceconnectcli-1.0.3.tar.gz) = 21970 bytes
