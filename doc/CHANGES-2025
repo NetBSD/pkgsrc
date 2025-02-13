@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1350 2025/02/13 11:28:02 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1351 2025/02/13 12:12:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1788,3 +1788,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/lxqt-runner to 2.1.2 [pin 2025-02-13]
 	Updated x11/lxqt-config to 2.1.1 [pin 2025-02-13]
 	Updated meta-pkgs/lxqt to 2.1.0nb5 [pin 2025-02-13]
+	Updated math/py-gwcs to 0.24.0 [adam 2025-02-13]
+	Updated devel/py-zope.testrunner to 7.0 [adam 2025-02-13]
