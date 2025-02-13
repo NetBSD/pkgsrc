@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/03/03 16:54:18 gutteridge Exp $
+$NetBSD: distinfo,v 1.15 2025/02/13 03:52:32 gutteridge Exp $
 
-BLAKE2s (xfce4-taskmanager-1.5.7.tar.bz2) = b527be9e6aed92c4914beb1de916e39943d1d6fd9fd6f7f5371d68ee071aca56
-SHA512 (xfce4-taskmanager-1.5.7.tar.bz2) = b9c8a3d088b116ba51e3db8685052f68702283509d7a7a9e7a54c079fcdfefa22b019bc0f1572546907da1c8fcd0a98ae4320f7b99a3e77f49ed1a8e86f41a80
-Size (xfce4-taskmanager-1.5.7.tar.bz2) = 425324 bytes
+BLAKE2s (xfce4-taskmanager-1.5.8.tar.bz2) = d700e15d356566e3e342e5c81aa077bf57f0e3b77669df071cc9c2f248d5217b
+SHA512 (xfce4-taskmanager-1.5.8.tar.bz2) = d42af340fa4c54eb5a59ec0fe9026ab742b495e3020f47575b61feed6ac584654365ddd9895669311c175eb9a42f0df75ee7479df139eb5a8673dfc443b6a390
+Size (xfce4-taskmanager-1.5.8.tar.bz2) = 548651 bytes
