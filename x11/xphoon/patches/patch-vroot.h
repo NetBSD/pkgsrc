@@ -1,17 +1,19 @@
-$NetBSD: patch-ag,v 1.1 2008/07/28 02:45:56 dholland Exp $
+$NetBSD: patch-vroot.h,v 1.1 2025/02/13 21:09:02 vins Exp $
 
---- vroot.h.orig	1991-09-18 15:49:11.000000000 -0400
-+++ vroot.h	2008-07-27 22:17:45.000000000 -0400
-@@ -50,7 +50,7 @@ VirtualRootWindowOfScreen(screen)
+Fix signedness mismatch warning.
+
+--- vroot.h.orig	2014-07-02 05:48:38.000000000 +0000
++++ vroot.h
+@@ -45,7 +45,7 @@ VirtualRootWindowOfScreen( Screen* scree
  	if (screen != save_screen) {
  		Display *dpy = DisplayOfScreen(screen);
  		Atom __SWM_VROOT = None;
 -		int i;
-+		unsigned i;
++		unsigned int i;
  		Window rootReturn, parentReturn, *children;
  		unsigned int numChildren;
  
-@@ -64,14 +64,16 @@ VirtualRootWindowOfScreen(screen)
+@@ -59,14 +59,16 @@ VirtualRootWindowOfScreen( Screen* scree
  				Atom actual_type;
  				int actual_format;
  				unsigned long nitems, bytesafter;
