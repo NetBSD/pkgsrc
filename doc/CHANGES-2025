@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1337 2025/02/13 03:20:15 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1338 2025/02/13 03:52:46 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1769,3 +1769,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/dhcpcd to 10.2.0 [roy 2025-02-12]
 	Updated graphics/pstoedit to 3.78nb27 [wiz 2025-02-12]
 	Updated misc/xfce4-calculator-plugin to 0.7.3 [gutteridge 2025-02-13]
+	Updated sysutils/xfce4-taskmanager to 1.5.8 [gutteridge 2025-02-13]
