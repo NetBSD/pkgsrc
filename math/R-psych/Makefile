@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2024/11/12 14:28:44 mef Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/14 23:56:26 mef Exp $
 
 R_PKGNAME=	psych
-R_PKGVER=	2.4.6.26
+R_PKGVER=	2.4.12
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${R_HOMEPAGE_BASE}/psych/
