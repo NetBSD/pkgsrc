@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2024/12/29 19:09:46 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/02/14 01:55:15 gutteridge Exp $
 bin/xfce4-panel
 bin/xfce4-popup-applicationsmenu
 bin/xfce4-popup-directorymenu
@@ -41,6 +41,7 @@ share/gtk-doc/html/libxfce4panel-2.0/api-index-4-10.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-4-14.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-4-18.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-4-20.html
+share/gtk-doc/html/libxfce4panel-2.0/api-index-4-22.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-4-6.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-4-8.html
 share/gtk-doc/html/libxfce4panel-2.0/api-index-deprecated.html
