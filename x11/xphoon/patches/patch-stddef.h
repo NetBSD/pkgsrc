@@ -1,10 +1,10 @@
-$NetBSD: patch-stddef.h,v 1.1 2025/02/14 07:00:15 vins Exp $
+$NetBSD: patch-stddef.h,v 1.2 2025/02/14 17:04:46 vins Exp $
 
 Silence makedepend warnings:
 `#error __PTRDIFF_TYPE__ not present'
 
---- stddef.h.orig	2025-02-14 05:27:20.805605781 +0000
-+++ stddef.h
+--- lstddef.h.orig	2025-02-14 05:27:20.805605781 +0000
++++ lstddef.h
 @@ -0,0 +1,30 @@
 +/*
 + * stddef.h
