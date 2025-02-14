@@ -1,12 +1,13 @@
-$NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
+$NetBSD: patch-xphoon.c,v 1.3 2025/02/14 08:07:18 vins Exp $
 
 * Add Xrandr support.
 * Silence warnings about missing preprocessor defined macros.
 * Do not require a tty when forking to background.
+* Use ttcompat(7M) on SunOS for TIOCNOTTY. 
 
 --- xphoon.c.orig	2014-08-04 21:57:59.000000000 +0000
 +++ xphoon.c
-@@ -23,15 +23,19 @@
+@@ -23,15 +23,22 @@
  ** SUCH DAMAGE.
  */
  
@@ -18,6 +19,9 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  #include <math.h>
 +#include <errno.h>
  #include <sys/ioctl.h>
++#ifdef __sun
++#include <sys/ttold.h>
++#endif
  #include <X11/Xos.h>
  #include <X11/Xlib.h>
  #include <X11/Xutil.h>
@@ -26,7 +30,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  #include "vroot.h"
  #include "astro.h"
  #include "date_parse.h"
-@@ -190,13 +194,20 @@ usage:
+@@ -190,13 +197,20 @@ usage:
  	(void) fflush( stdout );
  
  	/* Go stealth (ditch our controlling tty). */
@@ -51,7 +55,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  	else
  	    {
  	    if ( ioctl( tty, TIOCNOTTY, 0 ) < 0 )
-@@ -236,6 +247,10 @@ usage:
+@@ -236,6 +250,10 @@ usage:
  
  /* xinit - initialize X stuff */
  
@@ -62,7 +66,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  static Display* display;
  static int screen;
  static Window root;
-@@ -244,11 +259,14 @@ static GC onegc;
+@@ -244,11 +262,14 @@ static GC onegc;
  static GC zerogc;
  static GC copygc;
  static GC clipgc;
@@ -77,7 +81,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  
      display = XOpenDisplay( display_name );
      if ( display == (Display*) 0 )
-@@ -260,8 +278,23 @@ xinit( char* display_name )
+@@ -260,8 +281,23 @@ xinit( char* display_name )
  	}
      screen = DefaultScreen( display );
      root = DefaultRootWindow( display );
@@ -103,7 +107,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
      temp_pixmap = XCreatePixmap( display, root, 1, 1, 1 );
      onegc = XCreateGC( display, temp_pixmap, 0, (XGCValues*) 0 );
      XSetForeground( display, onegc, 1L );
-@@ -278,6 +311,52 @@ xinit( char* display_name )
+@@ -278,6 +314,52 @@ xinit( char* display_name )
      XSetBackground( display, clipgc, WhitePixel( display, screen ) );
      }
  
@@ -156,7 +160,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  
  /* make_star_tiles - make random star tiles */
  
-@@ -518,6 +597,8 @@ set_root( int bits_w, int bits_h, unsign
+@@ -518,6 +600,8 @@ set_root( int bits_w, int bits_h, unsign
  	display, mask_bitmap, onegc, cx - r + 2, cy - r + 2,
  	r * 2 - 3, r * 2 - 3, 0, 360 * 64 );
  
@@ -165,7 +169,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
      /* Make the root pixmap. */
      root_pixmap = XCreatePixmap(
  	display, root, root_w, root_h, DefaultDepth( display, screen ) );
-@@ -545,13 +626,20 @@ set_root( int bits_w, int bits_h, unsign
+@@ -545,13 +629,20 @@ set_root( int bits_w, int bits_h, unsign
  	}
  
      /* Put the moon into the stars. */
@@ -193,7 +197,7 @@ $NetBSD: patch-xphoon.c,v 1.2 2025/02/14 07:00:15 vins Exp $
  
      /* And set the root. */
      XSetWindowBackgroundPixmap( display, root, root_pixmap );
-@@ -585,6 +673,8 @@ cleanup( void )
+@@ -585,6 +676,8 @@ cleanup( void )
      if ( star_tiles_made )
  	for ( i = 0; i < NUM_TILES; ++i )
  	    XFreePixmap( display, star_tile[i] );
