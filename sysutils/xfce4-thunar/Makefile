@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.105 2025/01/28 00:51:18 gutteridge Exp $
+# $NetBSD: Makefile,v 1.106 2025/02/14 00:43:24 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	thunar-4.20.1
+DISTNAME=	thunar-4.20.2
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/xfce/thunar/${PKGVERSION_NOREV:R}/
@@ -25,6 +25,7 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 
 .include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
@@ -33,5 +34,4 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
