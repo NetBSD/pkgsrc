@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/02/14 10:39:17 vins Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/14 13:26:54 vins Exp $
 
 DISTNAME=	fastfetch-2.36.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fastfetch-cli/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -27,6 +27,8 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_FILES.paths+=	src/detection/packages/packages_obsd.c	\
 			src/detection/packages/packages_sunos.c \
+			src/detection/packages/packages_linux.c \
+			src/detection/packages/packages_apple.c \
 			doc/fastfetch.1.in scripts/gen-man.py
 SUBST_SED.paths+=	-e "s:/usr/pkg/pkgdb:${PKG_DBDIR}:g"
 SUBST_SED.paths+=	-e "s:/usr/share:${PREFIX}/share:g"
@@ -35,7 +37,6 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release \
 			-DCMAKE_INSTALL_PREFIX='${PREFIX}' \
 			-DBINARY_LINK_TYPE=dlopen \
 			-DTARGET_DIR_USR='${PREFIX}' \
-			-DTARGET_DIR_ETC='${PKG_SYSCONFDIR}' \
 			-DCUSTOM_PCI_IDS_PATH=${PREFIX}/share/hwdata/pci.ids \
 			-DCUSTOM_AMDGPU_IDS_PATH=${BUILDLINK_PREFIX.libdrm}/share/libdrm/amdgpu.ids \
 			-DENABLE_SYSTEM_YYJSON=ON \
