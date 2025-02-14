@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2025/02/14 07:00:15 vins Exp $
+# $NetBSD: Makefile,v 1.32 2025/02/14 08:07:18 vins Exp $
 #
 
 DISTNAME=	xphoon_14Aug2014
 PKGNAME=	xphoon-20140814
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://www.acme.com/software/xphoon/
 
