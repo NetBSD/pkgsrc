@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2024/11/03 06:26:22 mef Exp $
+$NetBSD: distinfo,v 1.15 2025/02/14 15:30:55 mef Exp $
 
-BLAKE2s (R/gstat_2.1-2.tar.gz) = 8a15bbef5764c498ef83fe16bd21844c03eb9f781000c45c4c9aefb7ddb002d8
-SHA512 (R/gstat_2.1-2.tar.gz) = ad532f525c78c82edb4e28dcaeb042368894d6b20e14fa069269dfa3f9e45c0c0ba075af9dbc1b4c648431fa7a21d61f387c423226d00b82e2c45c2ae601d297
-Size (R/gstat_2.1-2.tar.gz) = 2283118 bytes
+BLAKE2s (R/gstat_2.1-3.tar.gz) = 02da296dd59fc64cf3afb50575fcfdfc8b741cd6327132a77a674e89e166d06a
+SHA512 (R/gstat_2.1-3.tar.gz) = 53718260126cd7a3c6353c425f155c7faf4987dde68d936e5423a94db29c634c4874bd8318993ea2be1bcca464d67a904e9d8f7ff70984122ff25add8bbec5af
+Size (R/gstat_2.1-3.tar.gz) = 2282735 bytes
