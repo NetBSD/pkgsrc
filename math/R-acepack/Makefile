@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2024/01/24 13:24:46 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/14 13:58:15 mef Exp $
 
 R_PKGNAME=	acepack
-R_PKGVER=	1.4.2
+R_PKGVER=	1.5.2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	ACE and AVAS for selecting multiple regression transformations
 LICENSE=	mit
 
+TEST_DEPENDS+=	R-roxygen2-[0-9]*:../../devel/R-roxygen2
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 
 # !pdfTeX error: pdflatex (file tcrm1000): Font tcrm1000 at 600 not found
