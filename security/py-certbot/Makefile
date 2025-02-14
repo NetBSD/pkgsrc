@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/11/11 12:10:44 adam Exp $
+# $NetBSD: Makefile,v 1.46 2025/02/14 16:25:08 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -47,7 +47,7 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/certbot-${PYVERSSUFFIX}
 
 .include "../../lang/python/batteries-included.mk"
-.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
