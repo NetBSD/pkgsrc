@@ -1,0 +1,30 @@
+$NetBSD: patch-src_logo_ascii_netbsd2.txt,v 1.1 2025/02/14 10:39:17 vins Exp $
+
+Add NetBSD2 logo.
+Originally written by Brett Bohnenkamper <kittykatt@kittykatt.us>
+https://github.com/KittyKatt/screenFetch
+
+--- src/logo/ascii/netbsd2.txt.orig	2025-02-14 09:05:35.316778482 +0000
++++ src/logo/ascii/netbsd2.txt
+@@ -0,0 +1,21 @@
++
++$1                                  __,gnnnOCCCCCOObaau,_
++$2   _._                    $1__,gnnCCCCCCCCOPF"''
++$2  (N\\$1XCbngg,._____.,gnnndCCCCCCCCCCCCF"___,,,,___ 
++$2   \N\\$1XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCOOOOPYvv.
++$2    \N\\$1XCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCPF"''
++$2     \N\\$1XCCCCCCCCCCCCCCCCCCCCCCCCCOF"'
++$2      \N\\$1XCCCCCCCCCCCCCCCCCCCCOF"'
++$2       \N\\$1XCCCCCCCCCCCCCCCPF"'
++$2        \N\\$1\"PCOCCCOCCFP""
++$2         \N\\
++$2          \N\\
++$2           \N\\
++$2            \NN\
++$2             \NN\
++$2              \NNA.
++$2               \NNA,
++$2                \NNN,
++$2                 \NNN\
++$2                  \NNN\
++$2                   \NNNA
