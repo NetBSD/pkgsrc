@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1364 2025/02/14 01:51:21 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1365 2025/02/14 01:54:26 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1806,3 +1806,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-notes-plugin to 1.11.2 [gutteridge 2025-02-13]
 	Updated sysutils/xfce4-thunar to 4.20.2 [gutteridge 2025-02-14]
 	Updated x11/libxfce4windowing to 4.20.2 [gutteridge 2025-02-14]
+	Updated x11/xfce4-settings to 4.20.1 [gutteridge 2025-02-14]
