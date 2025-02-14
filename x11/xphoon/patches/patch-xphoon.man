@@ -1,0 +1,12 @@
+$NetBSD: patch-xphoon.man,v 1.1 2025/02/14 07:00:15 vins Exp $
+
+Move xphoon manual to `games' section. 
+
+--- xphoon.man.orig	2025-02-14 06:38:53.024138069 +0000
++++ xphoon.man
+@@ -1,4 +1,4 @@
+-.TH xphoon 1 "14 September 1991"
++.TH xphoon 6 "14 September 1991"
+ .SH NAME
+ xphoon - displays the PHase of the mOON on the root window
+ .SH SYNOPSIS
