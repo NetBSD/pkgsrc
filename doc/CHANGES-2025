@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1377 2025/02/14 16:22:21 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.1378 2025/02/14 16:25:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1820,3 +1820,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/unicorn to 2.1.2 [adam 2025-02-14]
 	Updated emulators/py-unicorn to 2.1.2 [adam 2025-02-14]
 	Updated ham/hamlib to 4.6.2 [gdt 2025-02-14]
+	Updated security/py-acme to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-apache to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-cloudflare to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-digitalocean to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-dnsimple to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-dnsmadeeasy to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-gehirn to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-google to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-linode to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-luadns to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-nsone to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-ovh to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-rfc2136 to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-route53 to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-dns-sakuracloud to 3.2.0 [adam 2025-02-14]
+	Updated security/py-certbot-nginx to 3.2.0 [adam 2025-02-14]
