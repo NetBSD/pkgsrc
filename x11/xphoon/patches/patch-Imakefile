@@ -1,16 +1,38 @@
-$NetBSD: patch-Imakefile,v 1.1 2025/02/13 21:09:01 vins Exp $
+$NetBSD: patch-Imakefile,v 1.2 2025/02/14 07:00:15 vins Exp $
 
-Link with libXrandr.
+* Fix hard-coded paths.
+* Do not override CCOPTIONS.
+* Link with libXrandr.
+* Provide a simplified install target.
 
 --- Imakefile.orig	2014-08-11 19:15:00.000000000 +0000
 +++ Imakefile
-@@ -1,7 +1,7 @@
- CCOPTIONS =		-ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
- INCLUDES =		-I. -I$(TOP) -I$(TOP)/X11 -I$(TOP)/X11/bitmaps
+@@ -1,10 +1,24 @@
+-CCOPTIONS =		-ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
+-INCLUDES =		-I. -I$(TOP) -I$(TOP)/X11 -I$(TOP)/X11/bitmaps
 -LOCAL_LIBRARIES =	$(XLIB)
 -DEPLIBS =		$(DEPXLIB)
++
++BINDIR =		@PREFIX@/bin
++MANDIR =		@PREFIX@/@PKGMANDIR@/man6
++
++XRANDRLIB =		-lXrandr
++
++CCOPTIONS ?=		-ansi -pedantic -U__STRICT_ANSI__ -Wall -Wpointer-arith -Wshadow -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wno-long-long
++INCLUDES =		-I. -I/usr/include -I@X11BASE@/include/X11 -I@X11BASE@/include/X11/bitmaps
 +LOCAL_LIBRARIES =	$(XLIB) $(XRANDRLIB)
 +DEPLIBS =		$(DEPXLIB) $(DEPXRANDRLIB)
  LDLIBS =		-lm
  
  SRCS =			xphoon.c moon.c astro.c date_parse.c
+ OBJS =			xphoon.o moon.o astro.o date_parse.o
+ 
+ ComplexProgramTarget(xphoon)
++
++install:: all
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_PROGRAM} xphoon ${DESTDIR}$(BINDIR)
++
++install-man:: install
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}$(MANDIR)
++	${BSD_INSTALL_MAN} xphoon.man ${DESTDIR}$(MANDIR)/xphoon.6
