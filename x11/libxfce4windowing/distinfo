@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2024/12/25 11:04:36 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2025/02/14 01:50:54 gutteridge Exp $
 
-BLAKE2s (libxfce4windowing-4.20.0.tar.bz2) = 6b065cca7a0ef4127495eeeb069883f793ec962d79823aa9802b9e20aa40bff7
-SHA512 (libxfce4windowing-4.20.0.tar.bz2) = 4db76eacd25200a50619839eb7b0f7fbfc901b8641b40acfc2aa34b88b449212e13b8946a8f5fd43ab89f021ba5bab67384e616163efb06b11603faf6913ba90
-Size (libxfce4windowing-4.20.0.tar.bz2) = 596847 bytes
+BLAKE2s (libxfce4windowing-4.20.2.tar.bz2) = 5a75a0ff120c0931ad85245ba51b1740efde4b210829d755636178aa84bc5454
+SHA512 (libxfce4windowing-4.20.2.tar.bz2) = 7d8f66bcef56e238246c54d9bca62596c7699b65357d242c05a72c0c6797a3a973b9163ebc81af83e6f09985a0bbaa8e7fb787f8b9e99d2a812a6ed31ee82ebc
+Size (libxfce4windowing-4.20.2.tar.bz2) = 601778 bytes
+SHA1 (patch-meson.build) = 2563b1bd202b95df9bb4735e140682c8b6b7c9fd
