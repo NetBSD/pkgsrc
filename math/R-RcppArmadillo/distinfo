@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2024/11/24 08:30:56 mef Exp $
+$NetBSD: distinfo,v 1.10 2025/02/14 13:45:47 mef Exp $
 
-BLAKE2s (R/RcppArmadillo_14.2.0-1.tar.gz) = 901d34780e270bf32bb53c34180dd04bbfaecd1e9bc74e42c2ac79ffb26c542a
-SHA512 (R/RcppArmadillo_14.2.0-1.tar.gz) = c88cc2172736bd38e8d74737a4507fd2d1ae0c64c8424f6370f778bf3eb4d8b683f221fd24ebbf95da59eb7f5de95cb32ec6996905c58c4b12593b847af12a55
-Size (R/RcppArmadillo_14.2.0-1.tar.gz) = 1396882 bytes
+BLAKE2s (R/RcppArmadillo_14.2.3-1.tar.gz) = 78424c04919cac1c90d78f35fe3c946020164e9b3194599d1ce18e12c0e7f54e
+SHA512 (R/RcppArmadillo_14.2.3-1.tar.gz) = 7e45e9601a9ceb533484bcc4f76da713ac0ec7ca1ab7889a26f46314f1ecb343f685b7eb7ed4cd5f777d38732419ebbb4b0979abecb1e765a739453df1fe3638
+Size (R/RcppArmadillo_14.2.3-1.tar.gz) = 1397619 bytes
