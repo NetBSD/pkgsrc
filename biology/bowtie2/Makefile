@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/05/24 11:32:57 bacon Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/14 10:09:29 wiz Exp $
 
 DISTNAME=	bowtie2-2.5.4
 CATEGORIES=	biology
@@ -20,6 +20,8 @@ DATADIR=	${PREFIX}/share/bowtie2
 EXAMPLESDIR=	${PREFIX}/share/examples/bowtie2
 
 INSTALLATION_DIRS=	share/bowtie2/scripts share/examples/bowtie2
+
+ONLY_FOR_PLATFORM=	${LP64PLATFORMS}
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.sh ${WRKSRC}/scripts/*.pl \
