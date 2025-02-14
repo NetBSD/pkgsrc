@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2024/10/14 06:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/02/14 16:25:10 adam Exp $
 
 .include "../../security/py-certbot/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	Nginx plugin for Certbot
 
 DEPENDS+=	${PYPKGPREFIX}-acme>=${CERTBOT_VERSION}:../../security/py-acme
 DEPENDS+=	${PYPKGPREFIX}-certbot>=${CERTBOT_VERSION}:../../security/py-certbot
-DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.2.1:../../devel/py-pyparsing
+DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.4.7:../../devel/py-pyparsing
 
 PKG_SYSCONFVAR=		nginx
 
@@ -19,7 +19,7 @@ SUBST_MESSAGE.paths=	Fixing absolute paths.
 SUBST_FILES.paths=	certbot_nginx/_internal/constants.py
 SUBST_VARS.paths=	PKG_SYSCONFDIR
 
-.include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

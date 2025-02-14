@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/12/12 16:39:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/02/14 16:25:10 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -70,8 +70,10 @@ ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/invalid_unicode_co
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/mime.types
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/minimalistic_comments.conf
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/multiline_quotes.conf
+${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/nginx-include.conf
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/nginx.conf
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/server.conf
+${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/addr-80.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/both.com
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/default
 ${PYSITELIB}/certbot_nginx/_internal/tests/testdata/etc_nginx/sites-enabled/example.com
