@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/01/25 13:32:00 mef Exp $
+$NetBSD: distinfo,v 1.14 2025/02/14 14:13:57 mef Exp $
 
-BLAKE2s (R/classInt_0.4-10.tar.gz) = 191359f9910458b9fea0a1a9ba2e3ef0b11408aab9d75b856fdf16ff023a4168
-SHA512 (R/classInt_0.4-10.tar.gz) = d40156b4945543f42726b0ce238dbe9354b358449f7211fbfc73e07809037f4c88ef3226a6526f382173d3d0aa50e49a75d365408f15b3af91d25cfe75660302
-Size (R/classInt_0.4-10.tar.gz) = 440271 bytes
+BLAKE2s (R/classInt_0.4-11.tar.gz) = ce363ca4dfff567cbe6fb0b0dbacc44f302f674efb655ff77d14b2eea0abddde
+SHA512 (R/classInt_0.4-11.tar.gz) = 97915bba6a25bf29a911fc489a1b9f75766e62a82ecd79728da6d175eb951d48bcc28e24f9bd0d17bd0623e45f30b788ddf215202254fa5f91fabf70e35a089c
+Size (R/classInt_0.4-11.tar.gz) = 440406 bytes
