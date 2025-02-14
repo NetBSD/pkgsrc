@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.12 2025/02/14 10:39:17 vins Exp $
+$NetBSD: distinfo,v 1.13 2025/02/14 13:26:54 vins Exp $
 
 BLAKE2s (fastfetch-2.36.1.tar.gz) = 02d2a72f53a6cd0020971823e91b70780e3b20b783053d39c3a38958990e6829
 SHA512 (fastfetch-2.36.1.tar.gz) = 2906b8e6912185a3acdd2b615ff869fa8f44ce0e547ed5529068eb2570ef5c013ed84691e62d613e52f2433595aa4e67859cf89b4116588ba4cb7c7bb7d8bb01
 Size (fastfetch-2.36.1.tar.gz) = 1176932 bytes
 SHA1 (patch-src_common_color.h) = a452dcb56469578f0e51c46b1f7af079303e7da1
 SHA1 (patch-src_common_option.c) = e7563a636bda0aa909c2fd2ef852bbed3c952949
+SHA1 (patch-src_detection_packages_packages__apple.c) = 3678300a59d8ef989d1848b3685485db3c638038
+SHA1 (patch-src_detection_packages_packages__linux.c) = 85d415a590a4126170f4f20f3b45b816b6dd3654
 SHA1 (patch-src_logo_ascii_netbsd2.txt) = bf145d947cac62b88b999396ea0a0e9ad8e8a5ad
 SHA1 (patch-src_logo_builtin.c) = cf31f3769f1aae4c26cbdf5e68fd802436b0faa7
