@@ -1,4 +1,4 @@
-$NetBSD: patch-xphoon.c,v 1.3 2025/02/14 08:07:18 vins Exp $
+$NetBSD: patch-xphoon.c,v 1.4 2025/02/14 17:04:46 vins Exp $
 
 * Add Xrandr support.
 * Silence warnings about missing preprocessor defined macros.
@@ -11,7 +11,7 @@ $NetBSD: patch-xphoon.c,v 1.3 2025/02/14 08:07:18 vins Exp $
  ** SUCH DAMAGE.
  */
  
-+#include "stddef.h"
++#include "lstddef.h"
 +
  #include <stdlib.h>
  #include <stdio.h>
