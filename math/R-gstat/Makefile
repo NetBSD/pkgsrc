@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2024/11/03 06:26:22 mef Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/14 15:30:55 mef Exp $
 
 R_PKGNAME=	gstat
-R_PKGVER=	2.1-2
+R_PKGVER=	2.1-3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spatial & spatio-temporal modelling, prediction and simulation
@@ -15,12 +15,14 @@ DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 DEPENDS+=	R-sftime-[0-9]*:../../time/R-sftime
 DEPENDS+=	R-stars-[0-9]*:../../geography/R-stars
 
-# Package required but not available: 'sftime'
 # Packages suggested but not available: 'fields', 'future', 'future.apply'
 
+TEST_DEPENDS+=	R-RColorBrewer-[0-9]*:../../math/R-RColorBrewer
+#EST_DEPENDS+=	R-future-[0-9]*:../../wip/R-future
+TEST_DEPENDS+=	R-geoR-[0-9]*:../../math/R-geoR
+TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-mapdata-[0-9]*:../../geography/R-mapdata
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
-TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
 TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
