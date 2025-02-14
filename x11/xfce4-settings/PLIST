@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2025/01/06 18:42:51 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/02/14 01:54:08 gutteridge Exp $
 bin/xfce4-accessibility-settings
 bin/xfce4-appearance-settings
 bin/xfce4-display-settings
@@ -224,6 +224,7 @@ share/xfce4/helpers/nautilus.desktop
 share/xfce4/helpers/netscape-navigator.desktop
 share/xfce4/helpers/nxterm.desktop
 share/xfce4/helpers/opera-browser.desktop
+share/xfce4/helpers/opera-mailer.desktop
 share/xfce4/helpers/pcmanfm-qt.desktop
 share/xfce4/helpers/pcmanfm.desktop
 share/xfce4/helpers/qterminal.desktop
