@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2024/11/26 17:42:37 gdt Exp $
+@comment $NetBSD: PLIST,v 1.57 2025/02/15 15:34:05 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -942,9 +942,9 @@ ${PYSITELIB}/synapse/rest/client/appservice_ping.pyo
 ${PYSITELIB}/synapse/rest/client/auth.py
 ${PYSITELIB}/synapse/rest/client/auth.pyc
 ${PYSITELIB}/synapse/rest/client/auth.pyo
-${PYSITELIB}/synapse/rest/client/auth_issuer.py
-${PYSITELIB}/synapse/rest/client/auth_issuer.pyc
-${PYSITELIB}/synapse/rest/client/auth_issuer.pyo
+${PYSITELIB}/synapse/rest/client/auth_metadata.py
+${PYSITELIB}/synapse/rest/client/auth_metadata.pyc
+${PYSITELIB}/synapse/rest/client/auth_metadata.pyo
 ${PYSITELIB}/synapse/rest/client/capabilities.py
 ${PYSITELIB}/synapse/rest/client/capabilities.pyc
 ${PYSITELIB}/synapse/rest/client/capabilities.pyo
@@ -1401,6 +1401,9 @@ ${PYSITELIB}/synapse/storage/databases/state/__init__.pyo
 ${PYSITELIB}/synapse/storage/databases/state/bg_updates.py
 ${PYSITELIB}/synapse/storage/databases/state/bg_updates.pyc
 ${PYSITELIB}/synapse/storage/databases/state/bg_updates.pyo
+${PYSITELIB}/synapse/storage/databases/state/deletion.py
+${PYSITELIB}/synapse/storage/databases/state/deletion.pyc
+${PYSITELIB}/synapse/storage/databases/state/deletion.pyo
 ${PYSITELIB}/synapse/storage/databases/state/store.py
 ${PYSITELIB}/synapse/storage/databases/state/store.pyc
 ${PYSITELIB}/synapse/storage/databases/state/store.pyo
@@ -1899,12 +1902,14 @@ ${PYSITELIB}/synapse/storage/schema/main/delta/87/01_sliding_sync_memberships.sq
 ${PYSITELIB}/synapse/storage/schema/main/delta/87/02_per_connection_state.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/87/03_current_state_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/01_add_delayed_events.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/01_custom_profile_fields.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/02_fix_sliding_sync_membership_snapshots_forgotten_column.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/03_add_otk_ts_added_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/04_current_state_delta_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_drop_old_otks.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/main/delta/88/05_sliding_sync_room_config_index.sql
+${PYSITELIB}/synapse/storage/schema/main/delta/88/06_events_received_ts_index.sql
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/main/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/schema/state/delta/23/drop_state_index.sql
@@ -1918,6 +1923,7 @@ ${PYSITELIB}/synapse/storage/schema/state/delta/47/state_group_seq.pyo
 ${PYSITELIB}/synapse/storage/schema/state/delta/56/state_group_room_idx.sql
 ${PYSITELIB}/synapse/storage/schema/state/delta/61/02state_groups_state_n_distinct.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/delta/70/08_state_group_edges_unique.sql
+${PYSITELIB}/synapse/storage/schema/state/delta/89/01_state_groups_deletion.sql
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.postgres
 ${PYSITELIB}/synapse/storage/schema/state/full_schemas/72/full.sql.sqlite
 ${PYSITELIB}/synapse/storage/types.py
