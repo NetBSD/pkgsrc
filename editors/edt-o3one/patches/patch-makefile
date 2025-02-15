@@ -1,0 +1,15 @@
+$NetBSD: patch-makefile,v 1.1 2025/02/15 23:06:05 wiz Exp $
+
+Pass path to help file to build.
+
+--- makefile.orig	2016-12-23 00:28:13.000000000 +0000
++++ makefile
+@@ -119,7 +119,7 @@ md5.o:	md5.c md5.h
+ 	$(CC) md5.c
+ 
+ os.linux.o: os.c
+-	$(CC) -DUSE_LIBREADLINE -o os.linux.o os.c
++	$(CC) -DUSE_LIBREADLINE -DEDT_HELPFILE=\"${EDT_HELPFILE}\" -o os.linux.o os.c
+ 
+ output.o: output.c
+ 	$(CC) output.c

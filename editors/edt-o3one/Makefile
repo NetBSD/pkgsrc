@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/02/15 15:32:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/15 23:06:05 wiz Exp $
 
 DISTNAME=	edtdist_20161222
 PKGNAME=	${DISTNAME:S/dist_/-o3one-/}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.o3one.org/downloads/
 EXTRACT_SUFX=	.tbz
@@ -13,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 MAKE_FILE=	makefile
 BUILD_TARGET=	edt
+MAKE_FLAGS+=	EDT_HELPFILE=${PREFIX}/share/doc/edt-o3one/edt.hlp
 
 INSTALLATION_DIRS=	bin share/doc/edt-o3one
 
