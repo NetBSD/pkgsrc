@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2024/12/27 08:19:26 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2025/02/15 09:38:47 mef Exp $
 #
 #
 # Both of these hashes need to be updated when the solvespace version
@@ -9,11 +9,12 @@
 # Solvespace has a private fork of libdxfrw which is stored in github
 # as a submodule, which is not included in the v2.3 archive.
 #
+# [2020-06-06 18:32:46 +0200]
 LIBDXF_HASH=		0b7b7b709d9299565db603f878214656ef5e9ddf
-SOLVESPACE_HASH=	0e0b0252e23dd5bd4ae82ababcc54c44aee036d6
+# [2022-05-13 17:06:20 -0500] (tag: v3.1)
+SOLVESPACE_HASH=	70bde63cb32a7f049fa56cbdf924e2695fcb2916
 
-DISTNAME=		solvespace-3.0
-PKGREVISION=		18
+DISTNAME=		solvespace-3.1
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=solvespace/solvespace/archive/}
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -33,7 +34,6 @@ EXTRACT_DIR.${LIBDXF_HASH}.tar.gz= \
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
 
 CMAKE_CONFIGURE_ARGS+=		-DGIT_COMMIT_HASH=${SOLVESPACE_HASH}
 
@@ -49,6 +49,7 @@ CMAKE_ARG_PATH=		..
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} ${CONFIGURE_DIRS}
 
+.include "../../devel/cmake/build.mk"
 .include "../../devel/mimalloc/buildlink3.mk"
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -59,6 +60,7 @@ pre-configure:
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
