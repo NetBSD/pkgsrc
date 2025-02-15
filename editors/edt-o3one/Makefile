@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/11 08:01:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/15 15:32:45 wiz Exp $
 
 DISTNAME=	edtdist_20161222
 PKGNAME=	${DISTNAME:S/dist_/-o3one-/}
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	bin share/doc/edt-o3one
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/edt ${DESTDIR}${PREFIX}/bin/edt-o3one
-	${INSTALL_PROGRAM} ${WRKSRC}/edt.hlp ${DESTDIR}${PREFIX}/share/doc/edt-o3one
+	${INSTALL_DATA} ${WRKSRC}/edt.hlp ${DESTDIR}${PREFIX}/share/doc/edt-o3one
 
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
