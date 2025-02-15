@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/02/05 20:37:59 mef Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/15 06:03:51 mef Exp $
 
 R_PKGNAME=	poweRlaw
-R_PKGVER=	0.80.0
+R_PKGVER=	1.0.0
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Analysis of heavy tailed distributions
