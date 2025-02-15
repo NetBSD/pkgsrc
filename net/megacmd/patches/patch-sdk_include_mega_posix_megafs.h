@@ -1,16 +1,16 @@
-$NetBSD: patch-sdk_include_mega_posix_megafs.h,v 1.1 2024/06/18 18:23:15 bsiegert Exp $
+$NetBSD: patch-sdk_include_mega_posix_megafs.h,v 1.2 2025/02/15 07:40:13 wiz Exp $
 
-Add support to other BSDs.
-Upstream pull req: https://github.com/meganz/sdk/pull/2662
+* Use FSACCESS_CLASS of linux on BSDs
 
---- sdk/include/mega/posix/megafs.h.orig	2024-05-17 14:19:43.000000000 +0000
+--- sdk/include/mega/posix/megafs.h.orig	2025-02-13 10:44:28.677854322 +0100
 +++ sdk/include/mega/posix/megafs.h
-@@ -32,7 +32,7 @@
- #define O_DIRECT 0
- #include <sys/param.h>
- #include <sys/mount.h>
--#elif defined(__FreeBSD__)
-+#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
- #include <sys/mount.h>
- #else
- #include <sys/vfs.h>
+@@ -192,7 +192,8 @@ private:
+ 
+ };
+ 
+-#ifdef __linux__
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
++    defined(__NetBSD__) || defined(__DragonFly__)
+ 
+ #define FSACCESS_CLASS LinuxFileSystemAccess
+ 
