@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2024/11/14 22:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/15 12:04:25 mef Exp $
 #
 
-DISTNAME=	fstl-0.10.0
-PKGREVISION=	13
+DISTNAME=	fstl-0.11.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fstl-app/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ COMMENT=	Fast STL file viewer
 LICENSE=	mit
 
 USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
 
+.include "../../devel/cmake/build.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
