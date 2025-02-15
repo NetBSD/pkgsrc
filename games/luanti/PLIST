@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/16 01:57:06 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/15 20:43:03 ktnb Exp $
 bin/luanti
 bin/luantiserver
 bin/minetest
@@ -36,7 +36,6 @@ share/locale/ga/LC_MESSAGES/luanti.mo
 share/locale/gd/LC_MESSAGES/luanti.mo
 share/locale/gl/LC_MESSAGES/luanti.mo
 share/locale/hu/LC_MESSAGES/luanti.mo
-share/locale/ia/LC_MESSAGES/luanti.mo
 share/locale/id/LC_MESSAGES/luanti.mo
 share/locale/it/LC_MESSAGES/luanti.mo
 share/locale/ja/LC_MESSAGES/luanti.mo
@@ -68,12 +67,12 @@ share/locale/sr_Cyrl/LC_MESSAGES/luanti.mo
 share/locale/sr_Latn/LC_MESSAGES/luanti.mo
 share/locale/sv/LC_MESSAGES/luanti.mo
 share/locale/sw/LC_MESSAGES/luanti.mo
+share/locale/ta/LC_MESSAGES/luanti.mo
 share/locale/tok/LC_MESSAGES/luanti.mo
 share/locale/tr/LC_MESSAGES/luanti.mo
 share/locale/tt/LC_MESSAGES/luanti.mo
 share/locale/uk/LC_MESSAGES/luanti.mo
 share/locale/vi/LC_MESSAGES/luanti.mo
-share/locale/yue/LC_MESSAGES/luanti.mo
 share/locale/zh_CN/LC_MESSAGES/luanti.mo
 share/locale/zh_TW/LC_MESSAGES/luanti.mo
 share/luanti/builtin/async/game.lua
@@ -93,6 +92,13 @@ share/luanti/builtin/common/misc_helpers.lua
 share/luanti/builtin/common/mod_storage.lua
 share/luanti/builtin/common/register.lua
 share/luanti/builtin/common/serialize.lua
+share/luanti/builtin/common/settings/components.lua
+share/luanti/builtin/common/settings/dlg_change_mapgen_flags.lua
+share/luanti/builtin/common/settings/dlg_settings.lua
+share/luanti/builtin/common/settings/generate_from_settingtypes.lua
+share/luanti/builtin/common/settings/init.lua
+share/luanti/builtin/common/settings/settingtypes.lua
+share/luanti/builtin/common/settings/shadows_component.lua
 share/luanti/builtin/common/strict.lua
 share/luanti/builtin/common/tests/after_spec.lua
 share/luanti/builtin/common/tests/math_spec.lua
@@ -198,6 +204,7 @@ share/luanti/builtin/mainmenu/content/screenshots.lua
 share/luanti/builtin/mainmenu/content/tests/pkgmgr_spec.lua
 share/luanti/builtin/mainmenu/content/update_detector.lua
 share/luanti/builtin/mainmenu/credits.json
+share/luanti/builtin/mainmenu/dlg_clients_list.lua
 share/luanti/builtin/mainmenu/dlg_config_world.lua
 share/luanti/builtin/mainmenu/dlg_create_world.lua
 share/luanti/builtin/mainmenu/dlg_delete_content.lua
@@ -205,24 +212,19 @@ share/luanti/builtin/mainmenu/dlg_delete_world.lua
 share/luanti/builtin/mainmenu/dlg_register.lua
 share/luanti/builtin/mainmenu/dlg_reinstall_mtg.lua
 share/luanti/builtin/mainmenu/dlg_rename_modpack.lua
+share/luanti/builtin/mainmenu/dlg_server_list_mods.lua
 share/luanti/builtin/mainmenu/dlg_version_info.lua
 share/luanti/builtin/mainmenu/game_theme.lua
 share/luanti/builtin/mainmenu/init.lua
 share/luanti/builtin/mainmenu/serverlistmgr.lua
-share/luanti/builtin/mainmenu/settings/components.lua
-share/luanti/builtin/mainmenu/settings/dlg_change_mapgen_flags.lua
-share/luanti/builtin/mainmenu/settings/dlg_settings.lua
-share/luanti/builtin/mainmenu/settings/generate_from_settingtypes.lua
-share/luanti/builtin/mainmenu/settings/init.lua
-share/luanti/builtin/mainmenu/settings/settingtypes.lua
-share/luanti/builtin/mainmenu/settings/shader_warning_component.lua
-share/luanti/builtin/mainmenu/settings/shadows_component.lua
 share/luanti/builtin/mainmenu/tab_about.lua
 share/luanti/builtin/mainmenu/tab_content.lua
 share/luanti/builtin/mainmenu/tab_local.lua
 share/luanti/builtin/mainmenu/tab_online.lua
 share/luanti/builtin/mainmenu/tests/favorites_wellformed.txt
 share/luanti/builtin/mainmenu/tests/serverlistmgr_spec.lua
+share/luanti/builtin/pause_menu/init.lua
+share/luanti/builtin/pause_menu/register.lua
 share/luanti/builtin/profiler/init.lua
 share/luanti/builtin/profiler/instrumentation.lua
 share/luanti/builtin/profiler/reporter.lua
@@ -249,8 +251,6 @@ share/luanti/client/shaders/blur_v/opengl_fragment.glsl
 share/luanti/client/shaders/blur_v/opengl_vertex.glsl
 share/luanti/client/shaders/cloud_shader/opengl_fragment.glsl
 share/luanti/client/shaders/cloud_shader/opengl_vertex.glsl
-share/luanti/client/shaders/default_shader/opengl_fragment.glsl
-share/luanti/client/shaders/default_shader/opengl_vertex.glsl
 share/luanti/client/shaders/extract_bloom/opengl_fragment.glsl
 share/luanti/client/shaders/extract_bloom/opengl_vertex.glsl
 share/luanti/client/shaders/fxaa/opengl_fragment.glsl
@@ -365,6 +365,12 @@ share/luanti/textures/base/pack/server_ping_2.png
 share/luanti/textures/base/pack/server_ping_3.png
 share/luanti/textures/base/pack/server_ping_4.png
 share/luanti/textures/base/pack/server_public.png
+share/luanti/textures/base/pack/server_url.png
+share/luanti/textures/base/pack/server_url_unavailable.png
+share/luanti/textures/base/pack/server_view_clients.png
+share/luanti/textures/base/pack/server_view_clients_unavailable.png
+share/luanti/textures/base/pack/server_view_mods.png
+share/luanti/textures/base/pack/server_view_mods_unavailable.png
 share/luanti/textures/base/pack/settings_btn.png
 share/luanti/textures/base/pack/settings_info.png
 share/luanti/textures/base/pack/settings_reset.png
