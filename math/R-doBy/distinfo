@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/11/09 13:42:19 mef Exp $
+$NetBSD: distinfo,v 1.2 2025/02/15 00:03:11 mef Exp $
 
-BLAKE2s (R/doBy_4.6.24.tar.gz) = 05ac5d04dc12561596e7206211279a5a520e893324668f977f4c011fb13b6f76
-SHA512 (R/doBy_4.6.24.tar.gz) = e7d7caa9472f9421c5e5f16d8cf6a859b9e92ed2a194c5b3ecb243d490447aee2a3aeab6369ca3c3e700e899ba047347f35c8d2a3f8d735d9629161e54962aba
-Size (R/doBy_4.6.24.tar.gz) = 4557394 bytes
+BLAKE2s (R/doBy_4.6.25.tar.gz) = 2e6405e5aef0596037c4aaa0ba984ecfc0625049e1fc005f39fc7a8f3f89116a
+SHA512 (R/doBy_4.6.25.tar.gz) = f53422566099f58479972225e33bd71a3d880d4870a9489fc5b022b0de2a35c86dc59dc3335eed4a19af332c89e5cd2a2afd7c87ea903c2a7dff0159ce68e014
+Size (R/doBy_4.6.25.tar.gz) = 4556919 bytes
