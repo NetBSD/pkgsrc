@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1390 2025/02/15 05:46:35 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1391 2025/02/15 06:04:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1848,3 +1848,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/R-lme4 to 1.1.36 [mef 2025-02-15]
 	Updated math/R-mvtnorm to 1.3.3 [mef 2025-02-15]
 	Updated math/R-nimble to 1.3.0 [mef 2025-02-15]
+	Updated math/R-poweRlaw to 1.0.0 [mef 2025-02-15]
