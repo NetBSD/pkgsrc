@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1410 2025/02/15 20:59:47 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1411 2025/02/15 21:05:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1871,3 +1871,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/luanti to 5.11.0 [ktnb 2025-02-15]
 	Updated devel/py-pykka to 4.1.2 [adam 2025-02-15]
 	Updated math/py-numpy to 2.2.3 [adam 2025-02-15]
+	Updated textproc/py-humanize to 4.12.0 [adam 2025-02-15]
+	Updated devel/py-faker to 36.1.1 [adam 2025-02-15]
