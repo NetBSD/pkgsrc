@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/11/24 04:24:23 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/15 06:30:40 mef Exp $
 
 R_PKGNAME=	stringdist
-R_PKGVER=	0.9.12
+R_PKGVER=	0.9.15
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Approximate String Matching and String Distance Functions
