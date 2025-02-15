@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1405 2025/02/15 15:49:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1406 2025/02/15 16:07:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1863,3 +1863,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rakudo to 2025.01 [mef 2025-02-15]
 	Updated chat/matrix-synapse to 1.124.0 [gdt 2025-02-15]
 	Updated graphics/openimageio to 2.5.17.0nb3 [wiz 2025-02-15]
+	Updated graphics/oxipng to 9.1.4 [adam 2025-02-15]
+	Updated converters/py-simplejson to 3.20.1 [adam 2025-02-15]
