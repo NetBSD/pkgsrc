@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/11/15 23:25:48 mef Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/15 06:10:54 mef Exp $
 
 R_PKGNAME=	quantreg
-R_PKGVER=	5.99
+R_PKGVER=	6.00
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Quantile regression
