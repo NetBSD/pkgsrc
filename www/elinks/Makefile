@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2025/02/07 16:18:13 pho Exp $
+# $NetBSD: Makefile,v 1.90 2025/02/15 15:56:27 wiz Exp $
 
 DISTNAME=	elinks-0.18.0
 CATEGORIES=	www
@@ -11,6 +11,9 @@ HOMEPAGE=	https://github.com/rkd77/elinks
 COMMENT=	Feature-rich text mode web browser
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
+TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+
 CONFLICTS+=	felinks-[0-9]*
 SUPERSEDES+=	felinks-[0-9]*
 
@@ -18,6 +21,11 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		perl pkg-config
+
+REPLACE_PYTHON+=	doc/tools/*.py
+REPLACE_PYTHON+=	doc/tools/*/*.py
+REPLACE_PYTHON+=	test/*/*.py
+REPLACE_PYTHON+=	po/*.py
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,8 +59,7 @@ REPLACE_PERL+=	doc/tools/help2xml
 
 .include "options.mk"
 
-TOOL_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
+.include "../../lang/python/application.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
