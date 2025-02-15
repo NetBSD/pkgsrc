@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1403 2025/02/15 11:57:27 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1404 2025/02/15 15:34:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1861,3 +1861,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/MoarVM to 2025.01 [mef 2025-02-15]
 	Updated lang/nqp to 2025.01 [mef 2025-02-15]
 	Updated lang/rakudo to 2025.01 [mef 2025-02-15]
+	Updated chat/matrix-synapse to 1.124.0 [gdt 2025-02-15]
