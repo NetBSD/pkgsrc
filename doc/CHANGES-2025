@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1414 2025/02/15 23:37:28 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1415 2025/02/15 23:54:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1876,3 +1876,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 36.1.1 [adam 2025-02-15]
 	Updated editors/edt-o3one to 20161222nb1 [wiz 2025-02-15]
 	Updated cad/py-gdstk to 0.9.59 [mef 2025-02-15]
+	Updated devel/R-R6 to 2.6.1 [mef 2025-02-15]
