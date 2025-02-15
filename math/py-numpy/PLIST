@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2025/01/19 18:56:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2025/02/15 20:59:23 adam Exp $
 bin/f2py-${PYVERSSUFFIX}
 bin/numpy-config-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
@@ -22,6 +22,7 @@ ${PYSITELIB}/numpy/_array_api_info.pyi
 ${PYSITELIB}/numpy/_array_api_info.pyo
 ${PYSITELIB}/numpy/_configtool.py
 ${PYSITELIB}/numpy/_configtool.pyc
+${PYSITELIB}/numpy/_configtool.pyi
 ${PYSITELIB}/numpy/_configtool.pyo
 ${PYSITELIB}/numpy/_core/__init__.py
 ${PYSITELIB}/numpy/_core/__init__.pyc
@@ -411,12 +412,15 @@ ${PYSITELIB}/numpy/_core/umath.pyc
 ${PYSITELIB}/numpy/_core/umath.pyo
 ${PYSITELIB}/numpy/_distributor_init.py
 ${PYSITELIB}/numpy/_distributor_init.pyc
+${PYSITELIB}/numpy/_distributor_init.pyi
 ${PYSITELIB}/numpy/_distributor_init.pyo
 ${PYSITELIB}/numpy/_expired_attrs_2_0.py
 ${PYSITELIB}/numpy/_expired_attrs_2_0.pyc
+${PYSITELIB}/numpy/_expired_attrs_2_0.pyi
 ${PYSITELIB}/numpy/_expired_attrs_2_0.pyo
 ${PYSITELIB}/numpy/_globals.py
 ${PYSITELIB}/numpy/_globals.pyc
+${PYSITELIB}/numpy/_globals.pyi
 ${PYSITELIB}/numpy/_globals.pyo
 ${PYSITELIB}/numpy/_pyinstaller/__init__.py
 ${PYSITELIB}/numpy/_pyinstaller/__init__.pyc
@@ -1175,6 +1179,7 @@ ${PYSITELIB}/numpy/lib/_arrayterator_impl.pyi
 ${PYSITELIB}/numpy/lib/_arrayterator_impl.pyo
 ${PYSITELIB}/numpy/lib/_datasource.py
 ${PYSITELIB}/numpy/lib/_datasource.pyc
+${PYSITELIB}/numpy/lib/_datasource.pyi
 ${PYSITELIB}/numpy/lib/_datasource.pyo
 ${PYSITELIB}/numpy/lib/_function_base_impl.py
 ${PYSITELIB}/numpy/lib/_function_base_impl.pyc
@@ -1190,6 +1195,7 @@ ${PYSITELIB}/numpy/lib/_index_tricks_impl.pyi
 ${PYSITELIB}/numpy/lib/_index_tricks_impl.pyo
 ${PYSITELIB}/numpy/lib/_iotools.py
 ${PYSITELIB}/numpy/lib/_iotools.pyc
+${PYSITELIB}/numpy/lib/_iotools.pyi
 ${PYSITELIB}/numpy/lib/_iotools.pyo
 ${PYSITELIB}/numpy/lib/_nanfunctions_impl.py
 ${PYSITELIB}/numpy/lib/_nanfunctions_impl.pyc
@@ -1229,6 +1235,7 @@ ${PYSITELIB}/numpy/lib/_ufunclike_impl.pyi
 ${PYSITELIB}/numpy/lib/_ufunclike_impl.pyo
 ${PYSITELIB}/numpy/lib/_user_array_impl.py
 ${PYSITELIB}/numpy/lib/_user_array_impl.pyc
+${PYSITELIB}/numpy/lib/_user_array_impl.pyi
 ${PYSITELIB}/numpy/lib/_user_array_impl.pyo
 ${PYSITELIB}/numpy/lib/_utils_impl.py
 ${PYSITELIB}/numpy/lib/_utils_impl.pyc
@@ -1248,6 +1255,7 @@ ${PYSITELIB}/numpy/lib/format.pyi
 ${PYSITELIB}/numpy/lib/format.pyo
 ${PYSITELIB}/numpy/lib/introspect.py
 ${PYSITELIB}/numpy/lib/introspect.pyc
+${PYSITELIB}/numpy/lib/introspect.pyi
 ${PYSITELIB}/numpy/lib/introspect.pyo
 ${PYSITELIB}/numpy/lib/mixins.py
 ${PYSITELIB}/numpy/lib/mixins.pyc
@@ -1259,6 +1267,7 @@ ${PYSITELIB}/numpy/lib/npyio.pyi
 ${PYSITELIB}/numpy/lib/npyio.pyo
 ${PYSITELIB}/numpy/lib/recfunctions.py
 ${PYSITELIB}/numpy/lib/recfunctions.pyc
+${PYSITELIB}/numpy/lib/recfunctions.pyi
 ${PYSITELIB}/numpy/lib/recfunctions.pyo
 ${PYSITELIB}/numpy/lib/scimath.py
 ${PYSITELIB}/numpy/lib/scimath.pyc
@@ -1355,6 +1364,7 @@ ${PYSITELIB}/numpy/lib/tests/test_utils.pyc
 ${PYSITELIB}/numpy/lib/tests/test_utils.pyo
 ${PYSITELIB}/numpy/lib/user_array.py
 ${PYSITELIB}/numpy/lib/user_array.pyc
+${PYSITELIB}/numpy/lib/user_array.pyi
 ${PYSITELIB}/numpy/lib/user_array.pyo
 ${PYSITELIB}/numpy/linalg/__init__.py
 ${PYSITELIB}/numpy/linalg/__init__.pyc
@@ -1435,6 +1445,7 @@ ${PYSITELIB}/numpy/ma/timer_comparison.pyc
 ${PYSITELIB}/numpy/ma/timer_comparison.pyo
 ${PYSITELIB}/numpy/matlib.py
 ${PYSITELIB}/numpy/matlib.pyc
+${PYSITELIB}/numpy/matlib.pyi
 ${PYSITELIB}/numpy/matlib.pyo
 ${PYSITELIB}/numpy/matrixlib/__init__.py
 ${PYSITELIB}/numpy/matrixlib/__init__.pyc
@@ -1647,9 +1658,11 @@ ${PYSITELIB}/numpy/testing/__init__.pyi
 ${PYSITELIB}/numpy/testing/__init__.pyo
 ${PYSITELIB}/numpy/testing/_private/__init__.py
 ${PYSITELIB}/numpy/testing/_private/__init__.pyc
+${PYSITELIB}/numpy/testing/_private/__init__.pyi
 ${PYSITELIB}/numpy/testing/_private/__init__.pyo
 ${PYSITELIB}/numpy/testing/_private/extbuild.py
 ${PYSITELIB}/numpy/testing/_private/extbuild.pyc
+${PYSITELIB}/numpy/testing/_private/extbuild.pyi
 ${PYSITELIB}/numpy/testing/_private/extbuild.pyo
 ${PYSITELIB}/numpy/testing/_private/utils.py
 ${PYSITELIB}/numpy/testing/_private/utils.pyc
@@ -1657,9 +1670,11 @@ ${PYSITELIB}/numpy/testing/_private/utils.pyi
 ${PYSITELIB}/numpy/testing/_private/utils.pyo
 ${PYSITELIB}/numpy/testing/overrides.py
 ${PYSITELIB}/numpy/testing/overrides.pyc
+${PYSITELIB}/numpy/testing/overrides.pyi
 ${PYSITELIB}/numpy/testing/overrides.pyo
 ${PYSITELIB}/numpy/testing/print_coercion_tables.py
 ${PYSITELIB}/numpy/testing/print_coercion_tables.pyc
+${PYSITELIB}/numpy/testing/print_coercion_tables.pyi
 ${PYSITELIB}/numpy/testing/print_coercion_tables.pyo
 ${PYSITELIB}/numpy/testing/tests/__init__.py
 ${PYSITELIB}/numpy/testing/tests/__init__.pyc
@@ -1796,6 +1811,9 @@ ${PYSITELIB}/numpy/typing/tests/data/pass/fromnumeric.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/index_tricks.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/index_tricks.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/index_tricks.pyo
+${PYSITELIB}/numpy/typing/tests/data/pass/lib_user_array.py
+${PYSITELIB}/numpy/typing/tests/data/pass/lib_user_array.pyc
+${PYSITELIB}/numpy/typing/tests/data/pass/lib_user_array.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/lib_utils.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/lib_utils.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/lib_utils.pyo
@@ -1838,6 +1856,9 @@ ${PYSITELIB}/numpy/typing/tests/data/pass/numerictypes.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/random.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/random.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/random.pyo
+${PYSITELIB}/numpy/typing/tests/data/pass/recfunctions.py
+${PYSITELIB}/numpy/typing/tests/data/pass/recfunctions.pyc
+${PYSITELIB}/numpy/typing/tests/data/pass/recfunctions.pyo
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.py
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.pyc
 ${PYSITELIB}/numpy/typing/tests/data/pass/scalars.pyo
