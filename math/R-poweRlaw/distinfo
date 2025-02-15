@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2024/02/05 20:37:59 mef Exp $
+$NetBSD: distinfo,v 1.7 2025/02/15 06:03:51 mef Exp $
 
-BLAKE2s (R/poweRlaw_0.80.0.tar.gz) = 72c62a0078090963bacd21e22651e26e8375509d9eaa5784e6d81a95b250e542
-SHA512 (R/poweRlaw_0.80.0.tar.gz) = 4f81b7f7a6177b5e86152565758fae7315a1d4e69ac7482e80158951ad486d302721d8e4c0d8545dbe6d1876543bcf10c30e7784e79faac8694830f6813f9858
-Size (R/poweRlaw_0.80.0.tar.gz) = 4476068 bytes
+BLAKE2s (R/poweRlaw_1.0.0.tar.gz) = 8e2377d3bc127e3d5b6fec746ed19efc15f4a4bb79132ad8fdafb700091619a8
+SHA512 (R/poweRlaw_1.0.0.tar.gz) = 5e461e0c4efeff8a569b61786b7e8d6ef0eb39dcb0741b57f11d455aba57e6cf27a597b41d691b48c262f3a2eb209dde7c7c8e944ebbdb935cc3a0acb0fa59e8
+Size (R/poweRlaw_1.0.0.tar.gz) = 4476780 bytes
