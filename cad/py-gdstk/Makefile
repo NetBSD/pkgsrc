@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/01/27 22:39:16 mef Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/15 23:37:22 mef Exp $
 
-DISTNAME=	gdstk-0.9.58
+DISTNAME=	gdstk-0.9.59
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heitzmann/}
