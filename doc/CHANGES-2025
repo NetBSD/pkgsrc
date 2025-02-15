@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1387 2025/02/15 03:50:19 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1388 2025/02/15 04:29:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1845,3 +1845,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/R-doBy to 4.6.25 [mef 2025-02-15]
 	Updated math/R-insight to 1.0.2 [mef 2025-02-15]
 	Added math/R-reformulas version 0.4.0 [mef 2025-02-15]
+	Updated math/R-lme4 to 1.1.36 [mef 2025-02-15]
