@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 18:45:21 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/15 16:31:33 wiz Exp $
 
 DISTNAME=	vv-3.1.0.20250208
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
 #GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -17,6 +18,9 @@ USE_CXX_FEATURES+=	c++20
 GCC_REQD+=		13
 USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS+=	bin share/doc/vv
+
+# https://github.com/wolfpld/vv/issues/14#issuecomment-2660992164
+JPEG_ACCEPTED=		libjpeg-turbo
 
 # 'master' as of 2025-02-08
 GITHUB_SUBMODULES+=	wolfpld tracy 9b7d53a979f0734deebb07d0135f5400af12a576 tracy
