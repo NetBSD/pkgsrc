@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.618 2025/02/09 07:33:31 wiz Exp $
+# $NetBSD: Makefile,v 1.619 2025/02/15 03:50:19 mef Exp $
 
 COMMENT=	Mathematics
 
@@ -115,6 +115,7 @@ SUBDIR+=	R-psych
 SUBDIR+=	R-quadprog
 SUBDIR+=	R-quantreg
 SUBDIR+=	R-randomForest
+SUBDIR+=	R-reformulas
 SUBDIR+=	R-relimp
 SUBDIR+=	R-repurrrsive
 SUBDIR+=	R-reshape2
