@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2025/02/08 09:57:55 mef Exp $
+$NetBSD: distinfo,v 1.5 2025/02/15 07:09:56 mef Exp $
 
-BLAKE2s (R/terra_1.8-15.tar.gz) = 40ff229f013bfd56e70a1d9984059f17920c2bdef4c9f18f1b03cf5e20acbd11
-SHA512 (R/terra_1.8-15.tar.gz) = 1c26a183c0717438caa9316e96af7804c1f3cfb24764093229692f5599179d2289bd989d7ed64b245695dfa62be38b3fa61bf6e5ccf04d2c1b32a64f4833cfd3
-Size (R/terra_1.8-15.tar.gz) = 1007622 bytes
+BLAKE2s (R/terra_1.8-21.tar.gz) = 6b5b9727831abceb386ca3abe8e77c563f5318447080e6aa2805ff8e49d0f656
+SHA512 (R/terra_1.8-21.tar.gz) = 679f43f35570868c61da9df027f367ebd5522029dd560faa08960af62d642a57e85d4e0f36429a7ed429d109b7d7548d3e44f0ef2d2bce3b0beb6d202e68341d
+Size (R/terra_1.8-21.tar.gz) = 1015212 bytes
