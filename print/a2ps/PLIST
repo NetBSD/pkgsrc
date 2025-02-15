@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2023/03/13 10:39:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/02/15 08:26:21 mef Exp $
 bin/a2ps
 bin/a2ps-lpr-wrapper
 bin/card
@@ -242,6 +242,7 @@ share/locale/gl/LC_MESSAGES/a2ps-gnulib.mo
 share/locale/gl/LC_MESSAGES/a2ps.mo
 share/locale/hr/LC_MESSAGES/a2ps.mo
 share/locale/hu/LC_MESSAGES/a2ps-gnulib.mo
+share/locale/hu/LC_MESSAGES/a2ps.mo
 share/locale/id/LC_MESSAGES/a2ps.mo
 share/locale/it/LC_MESSAGES/a2ps-gnulib.mo
 share/locale/it/LC_MESSAGES/a2ps.mo
