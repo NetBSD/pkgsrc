@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1409 2025/02/15 20:43:15 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1410 2025/02/15 20:59:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1869,3 +1869,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-appconf to 1.1.0 [adam 2025-02-15]
 	Updated graphics/vv to 3.1.0.20250208nb1 [wiz 2025-02-15]
 	Updated games/luanti to 5.11.0 [ktnb 2025-02-15]
+	Updated devel/py-pykka to 4.1.2 [adam 2025-02-15]
+	Updated math/py-numpy to 2.2.3 [adam 2025-02-15]
