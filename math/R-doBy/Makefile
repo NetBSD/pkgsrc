@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/11/09 13:42:19 mef Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/15 00:03:11 mef Exp $
 
 R_PKGNAME=	doBy
-R_PKGVER=	4.6.24
+R_PKGVER=	4.6.25
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Groupwise Statistics, LSmeans, Linear Estimates, Utilities
