@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/11/20 06:19:30 adam Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/15 20:52:49 adam Exp $
 
-DISTNAME=	pykka-4.1.1
+DISTNAME=	pykka-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pykka/}
@@ -11,7 +11,6 @@ COMMENT=	Python implementation of the actor model
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=1.0.0:../../devel/py-poetry-core
-TEST_DEPENDS+=	${PYPKGPREFIX}-pydantic>=2.9:../../devel/py-pydantic
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov>=4.1.0:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock>=3.11.1:../../devel/py-test-mock
 
