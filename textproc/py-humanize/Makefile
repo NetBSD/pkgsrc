@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2024/10/15 05:54:05 adam Exp $
+# $NetBSD: Makefile,v 1.32 2025/02/15 21:04:18 adam Exp $
 
-DISTNAME=	humanize-4.11.0
+DISTNAME=	humanize-4.12.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/humanize/}
@@ -11,7 +11,7 @@ COMMENT=	Convert numbers into easily readable format
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-hatch-vcs-[0-9]*:../../devel/py-hatch-vcs
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27:../../devel/py-hatchling
 TEST_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
