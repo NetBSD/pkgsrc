@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/15 03:48:17 mef Exp $
+
+BLAKE2s (R/reformulas_0.4.0.tar.gz) = 9935ee2f5c1bcaacd9c59262f6e00975e71853fc38f492069eab53b01c870fd4
+SHA512 (R/reformulas_0.4.0.tar.gz) = ac6e216d417b45d04261c06ef81ab074752cce27a111115d9da18cae1bb39d6a16ce54a8089617d9b3a2563162a0aa8db8ff932f588de319e62a3f9d232b4b7d
+Size (R/reformulas_0.4.0.tar.gz) = 32012 bytes
