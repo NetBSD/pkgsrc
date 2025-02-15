@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/09/21 20:26:42 mef Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/02/15 11:39:20 mef Exp $
 bin/moar
 include/mimalloc/mimalloc-new-delete.h
 include/mimalloc/mimalloc-override.h
@@ -219,6 +219,7 @@ include/moar/strings/utf8_c8.h
 include/moar/strings/windows1252.h
 include/moar/types.h
 lib/libmoar.so
+lib/libmoar.so-gdb.py
 share/nqp/lib/MAST/Nodes.nqp
 share/nqp/lib/MAST/Ops.nqp
 share/pkgconfig/moar.pc
