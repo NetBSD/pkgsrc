@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2020/01/26 17:30:55 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/15 22:54:17 mef Exp $
 
 DISTNAME=	argtable-1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/devel/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.ibiblio.org/pub/Linux/devel/argtable.html
+HOMEPAGE=	https://argtable.sourceforge.io/
 COMMENT=	Library for parsing command line arguments of a C/C++ program
 
 GNU_CONFIGURE=		YES
