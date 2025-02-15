@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1394 2025/02/15 06:30:48 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1395 2025/02/15 07:10:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1852,3 +1852,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/R-quantreg to 6.00 [mef 2025-02-15]
 	Updated math/R-sp to 2.2.0 [mef 2025-02-15]
 	Updated math/R-stringdist to 0.9.15 [mef 2025-02-15]
+	Updated geography/R-terra to 1.8.21 [mef 2025-02-15]
