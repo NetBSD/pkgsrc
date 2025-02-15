@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2025/01/24 14:56:56 riastradh Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/15 20:43:03 ktnb Exp $
 
-DISTNAME=	luanti-5.10.0
-PKGREVISION=	1
+DISTNAME=	luanti-5.11.0
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_GITHUB:=minetest/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=luanti-org/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 GITHUB_PROJECT=	minetest
 
@@ -12,7 +11,7 @@ HOMEPAGE=	https://www.luanti.org/
 COMMENT=	Open source voxel game-creation platform
 LICENSE=	gnu-lgpl-v2.1 AND cc-by-sa-v3.0 AND apache-2.0
 
-WRKSRC=		${WRKDIR}/minetest-${PKGVERSION_NOREV}
+WRKSRC=		${WRKDIR}/luanti-${PKGVERSION_NOREV}
 
 USE_TOOLS+=	msgfmt
 USE_LANGUAGES=	c c++
