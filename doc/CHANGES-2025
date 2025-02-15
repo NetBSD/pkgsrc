@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1397 2025/02/15 07:39:51 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1398 2025/02/15 07:40:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1855,3 +1855,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/R-terra to 1.8.21 [mef 2025-02-15]
 	Updated net/R-pingr to 2.0.5 [mef 2025-02-15]
 	Updated security/R-openssl to 2.3.2 [mef 2025-02-15]
+	Updated net/megacmd to 2.0.0 [wiz 2025-02-15]
