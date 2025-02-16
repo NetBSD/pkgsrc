@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1432 2025/02/16 14:30:27 bacon Exp $
+$NetBSD: CHANGES-2025,v 1.1433 2025/02/16 16:42:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/tklib version 0.9 [scole 2025-02-16]
 	Updated devel/gprbuild to 25.0.0nb1 [wiz 2025-02-16]
 	Updated biology/vsearch to 2.29.4 [bacon 2025-02-16]
+	Updated net/slumber to 3.0.0 [pin 2025-02-16]
