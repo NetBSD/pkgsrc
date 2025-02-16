@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/02/08 14:05:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/02/16 10:10:22 wiz Exp $
 
 BUILDLINK_TREE+=	gcc13-gnat-libs
 
@@ -21,13 +21,7 @@ BUILDLINK_PASSTHRU_DIRS+=	${TARGET_LIBDIR.gcc13-gnat-libs}
 
 BUILDLINK_FILES.gcc13-gnat-libs=	#empty
 BUILDLINK_AUTO_VARS.gcc13-gnat-libs=	no
-BUILDLINK_RPATHDIRS.gcc13-gnat-libs=	${TARGET_LIBDIR.gcc13-gnat-libs}
-
-.if defined(LD_RUN_PATH)
-LD_RUN_PATH:=	${TARGET_LIBDIR.gcc13-gnat-libs}:${LD_RUN_PATH}
-.else
-LD_RUN_PATH:=	${TARGET_LIBDIR.gcc13-gnat-libs}
-.endif
+BUILDLINK_AUTO_DIRS.gcc13-gnat-libs=	no
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
