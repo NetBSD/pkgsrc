@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2022/02/26 16:26:38 fcambus Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/16 03:41:46 mef Exp $
 
-DISTNAME=		acr-2.0.0
+DISTNAME=		acr-2.2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=radare/}
 
