@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.306 2025/02/12 21:10:22 rillig Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.307 2025/02/16 22:41:13 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26120,3 +26120,8 @@ drupal>=7<8	eol	https://www.drupal.org/psa-2025-01-06
 libtasn1<4.20.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-12133
 openssl>=3.3<3.3.3	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2024-12797
 openssl>=3.4<3.4.1	man-in-the-middle	https://nvd.nist.gov/vuln/detail/CVE-2024-12797
+postgresql-server>=13<13.19	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
+postgresql-server>=14<14.16	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
+postgresql-server>=15<15.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
+postgresql-server>=16<16.7	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
+postgresql-server>=17<17.3	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
