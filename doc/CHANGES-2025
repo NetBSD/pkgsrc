@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1434 2025/02/16 20:21:23 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1435 2025/02/16 23:30:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1901,3 +1901,11 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/vsearch to 2.29.4 [bacon 2025-02-16]
 	Updated net/slumber to 3.0.0 [pin 2025-02-16]
 	Added fonts/nerd-fonts-Symbols version 3.3.0 [wiz 2025-02-16]
+	Updated databases/mariadb114-client to 11.4.5 [nia 2025-02-16]
+	Updated databases/mariadb114-server to 11.4.5 [nia 2025-02-16]
+	Updated databases/mariadb1011-client to 10.11.11 [nia 2025-02-16]
+	Updated databases/mariadb1011-server to 10.11.11 [nia 2025-02-16]
+	Updated databases/mariadb106-client to 10.6.21 [nia 2025-02-16]
+	Updated databases/mariadb106-server to 10.6.21 [nia 2025-02-16]
+	Updated databases/mariadb105-client to 10.5.28 [nia 2025-02-16]
+	Updated databases/mariadb105-server to 10.5.28 [nia 2025-02-16]
