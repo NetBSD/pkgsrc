@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2025/02/03 22:26:23 mef Exp $
+$NetBSD: distinfo,v 1.9 2025/02/16 00:32:17 mef Exp $
 
-BLAKE2s (R/renv_1.1.0.tar.gz) = 8dd50a7cae2a692d543a2dbd39469373e5b514fd4e6e2dbd632410fefd04c8fa
-SHA512 (R/renv_1.1.0.tar.gz) = 1b78d524c429fb71e57c6d50108790ea9aede16b2b8eccad1c4d355843a017aba91f63a9464d0c91d09ff8f5c01958454aaf2fd0afce145ec8b7ac68deb7a903
-Size (R/renv_1.1.0.tar.gz) = 1228025 bytes
+BLAKE2s (R/renv_1.1.1.tar.gz) = 34fee5359669251b3c4445b1ce38e65a2e7e83c675392449863456d2c1d04bf6
+SHA512 (R/renv_1.1.1.tar.gz) = b749f3bb036c99ac84521c94a7971f103c78424b72b8d02825e31e5f4af6c581a18ed2bc8297d52a4cd83ba9f74df05ed8bd0115013ae411def22adb6e6a984d
+Size (R/renv_1.1.1.tar.gz) = 1230488 bytes
