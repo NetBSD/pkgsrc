@@ -1,8 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:30 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/02/16 23:28:14 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
-
-#PKG_SUPPORTED_OPTIONS+=	columnstore
 
 PKG_SUPPORTED_OPTIONS+=	auth-pam embedded-server lzo lz4 oqgraph
 PKG_SUPPORTED_OPTIONS+=	rocksdb snappy ssl zstd
@@ -19,17 +17,10 @@ PKG_SUGGESTED_OPTIONS+=	auth-pam
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mcolumnstore)
-.include "../../devel/boost-headers/buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=YES
-.else
-CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=NO
-.endif
-
-PLIST_VARS+=	embedded
+PLIST_VARS+=		embedded
 .if !empty(PKG_OPTIONS:Membedded-server)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=	yes
+PLIST.embedded=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=OFF
 .endif
@@ -62,10 +53,10 @@ PLIST.oqgraph=	yes
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_OQGRAPH=NO
 .endif
 
-PLIST_VARS+=	rocksdb
+PLIST_VARS+=		rocksdb
 .if !empty(PKG_OPTIONS:Mrocksdb)
 .include "../../lang/python/application.mk"
-PLIST.rocksdb=	yes
+PLIST.rocksdb=		yes
 CMAKE_CONFIGURE_ARGS+=	-DWITHOUT_ROCKSDB_STORAGE_ENGINE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_SHEBANG=${PYTHONBIN}
 .else
@@ -97,11 +88,11 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_ROCKSDB_zstd=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_ROCKSDB_zstd=OFF
 .endif
 
-PLIST_VARS+=	auth_pam
+PLIST_VARS+=		auth_pam
 .if !empty(PKG_OPTIONS:Mauth-pam)
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM=YES
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=YES
-PLIST.auth_pam=	yes
+PLIST.auth_pam=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM=NO
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=NO
