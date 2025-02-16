@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1426 2025/02/16 08:50:56 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1427 2025/02/16 08:52:10 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1889,3 +1889,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/fzf to 0.60.0 [iquiw 2025-02-16]
 	Updated devel/ast-grep to 0.35.0 [pin 2025-02-16]
 	Updated sysutils/xcp to 0.23.1 [pin 2025-02-16]
+	Updated devel/mise to 2025.2.5 [pin 2025-02-16]
