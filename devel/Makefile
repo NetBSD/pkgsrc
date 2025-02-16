@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4421 2025/02/12 15:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.4422 2025/02/16 09:01:26 scole Exp $
 #
 
 COMMENT=	Development utilities
@@ -3653,6 +3653,7 @@ SUBDIR+=	tinycthread
 SUBDIR+=	tkcon
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
+SUBDIR+=	tklib
 SUBDIR+=	tl-expected
 SUBDIR+=	tla
 SUBDIR+=	tlsh
