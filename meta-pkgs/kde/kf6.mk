@@ -1,4 +1,4 @@
-# $NetBSD: kf6.mk,v 1.7 2025/02/05 22:29:15 markd Exp $
+# $NetBSD: kf6.mk,v 1.8 2025/02/16 19:45:47 markd Exp $
 # used by archivers/kf6-karchive/Makefile
 # used by devel/kf6-kbookmarks/Makefile
 # used by devel/kf6-kcmutils/Makefile
@@ -77,4 +77,7 @@ BUILDLINK_API_DEPENDS.extra-cmake-modules+=	extra-cmake-modules>=${KF6VER}
 TOOLS_DEPENDS.cmake= cmake>=3.0:../../devel/cmake
 
 CMAKE_CONFIGURE_ARGS+=	-DKF_IGNORE_PLATFORM_CHECK=true
+
+USE_CXX_FEATURES+=	c++20
+
 .include "../../meta-pkgs/kde/Makefile.common"
