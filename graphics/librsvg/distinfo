@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2025/02/15 23:41:45 he Exp $
+$NetBSD: distinfo,v 1.68 2025/02/16 22:54:11 wiz Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -879,34 +879,14 @@ Size (zune-core-0.4.12.crate) = 17355 bytes
 BLAKE2s (zune-jpeg-0.4.13.crate) = c73611b98918c5fb627ae71e36c4386b34e68222cb8467abbb1c0c8fba0ce0dd
 SHA512 (zune-jpeg-0.4.13.crate) = ebd349cfee5756fff64cbfc9a59bfd1cf262453ec74c6225e058d4c09398e9c7086f340d6e5215dd72fa32d29bf0fc86e64cf42038ea1b0c1baa67097a214875
 Size (zune-jpeg-0.4.13.crate) = 62999 bytes
-SHA1 (patch-.._vendor_aho-corasick-1.1.2_src_packed_teddy_builder.rs) = 5f1c2ca0b4cb0e7c062866ace876ba3137b4b1e2
-SHA1 (patch-.._vendor_aho-corasick-1.1.2_src_packed_vector.rs) = d3a5394e861eb3035a96441db00e2f8d3d2e0dda
 SHA1 (patch-.._vendor_cfg-expr-0.15.8_src_targets_builtins.rs) = d8de3edfff043b6cd1cc314c62c87adcc5beddbd
-SHA1 (patch-.._vendor_half-2.3.1_src_binary16_arch.rs) = 8bb46b6fae0b5a445aa7f7446c0387df10a8f547
-SHA1 (patch-.._vendor_matrixmultiply-0.3.8_src_dgemm__kernel.rs) = 355fa939101cdd077b1cae4a7a3624bb9d818690
-SHA1 (patch-.._vendor_matrixmultiply-0.3.8_src_sgemm__kernel.rs) = 69faa462994ff387f9e0c625e24762bbe9bdc03c
 SHA1 (patch-.._vendor_matrixmultiply-0.3.9_src_dgemm__kernel.rs) = d967e6918dccf3723efa78366a6713ad0af33536
 SHA1 (patch-.._vendor_matrixmultiply-0.3.9_src_sgemm__kernel.rs) = d98ef31134fd94d0068dd5bd1602d3de6383ab75
-SHA1 (patch-.._vendor_memchr-2.7.1_src_arch_aarch64_memchr.rs) = 688ec0f8cd452f9c774f44d5e106b8e4cecc54f8
-SHA1 (patch-.._vendor_memchr-2.7.1_src_arch_aarch64_mod.rs) = 50ed6fca6e633814d4e24ec28031e8427fc0c304
-SHA1 (patch-.._vendor_memchr-2.7.1_src_memchr.rs) = 6bf0a24fb9e5744c72d0827b037d06b8ef22f797
-SHA1 (patch-.._vendor_memchr-2.7.1_src_memmem_searcher.rs) = a1702d71578d51305161a14ae3350911a5ad1aa3
-SHA1 (patch-.._vendor_memchr-2.7.1_src_vector.rs) = 27336f42ff99991d35edae63fb78ad40a658ca43
 SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs) = 7539a89e29d600a732b04f84377f76e47cf0dfd1
 SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_mod.rs) = 690e22e915ef8ad6c3381ebdc10574fae5316f4f
 SHA1 (patch-.._vendor_memchr-2.7.4_src_memchr.rs) = 3c7b0002b847ce44e5f35cd3a9089b9983017023
 SHA1 (patch-.._vendor_memchr-2.7.4_src_memmem_searcher.rs) = 862bfd9a4dee057a690f8d234e1ae893ae173b53
 SHA1 (patch-.._vendor_memchr-2.7.4_src_vector.rs) = 30577c24ed0990a622bd8bf7439803ee4c5613ba
-SHA1 (patch-.._vendor_wide-0.7.15_src_f32x4__.rs) = 7328f539234a9718dd081d344873b509b2c1c997
-SHA1 (patch-.._vendor_wide-0.7.15_src_f64x2__.rs) = 0836c2099a5eb710099197a010a505af0b3e53e1
-SHA1 (patch-.._vendor_wide-0.7.15_src_i16x8__.rs) = 55d892609a14a6d6c5abbce7cf0f59247d2fc1f7
-SHA1 (patch-.._vendor_wide-0.7.15_src_i32x4__.rs) = eeefa64ef2e6bd523da3a820b94be2546571d025
-SHA1 (patch-.._vendor_wide-0.7.15_src_i64x2__.rs) = dab1fd177bd6495e918c1b89fbc9510ebf9dda87
-SHA1 (patch-.._vendor_wide-0.7.15_src_i8x16__.rs) = b8e1eb04cefc648c018ce1fbb02e1a0c07c6ebfd
-SHA1 (patch-.._vendor_wide-0.7.15_src_u16x8__.rs) = 0722b258bec04107a45e2adc812e598fa112cc48
-SHA1 (patch-.._vendor_wide-0.7.15_src_u32x4__.rs) = 3892268b42ea73be15ed30695feae5c8b33eb6e1
-SHA1 (patch-.._vendor_wide-0.7.15_src_u64x2__.rs) = 5ad16fe4d38f89c9f9851432723946fe43e0380f
-SHA1 (patch-.._vendor_wide-0.7.15_src_u8x16__.rs) = 422df5b1df2f8a00c1680be712a1e69f1022000c
 SHA1 (patch-.._vendor_wide-0.7.26_src_f32x4__.rs) = b3d6e78eb47487a1c520d154d073895663100fd9
 SHA1 (patch-.._vendor_wide-0.7.26_src_f64x2__.rs) = 357e24389fe87a7ff01bf90bac946a8a169c1678
 SHA1 (patch-.._vendor_wide-0.7.26_src_i16x8__.rs) = df321ccbaba96ba2dd5870280118dd8a55c5d683
