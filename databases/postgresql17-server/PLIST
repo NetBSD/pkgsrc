@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/08 13:43:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/16 09:03:16 adam Exp $
 bin/postgres
 include/postgresql/server/plpgsql.h
 ${PLIST.llvm}lib/postgresql/bitcode/postgres.index.bc
@@ -24,6 +24,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/reloptions.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/scankey.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/session.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/syncscan.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/tidstore.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/toast_compression.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/toast_internals.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/common/tupconvert.bc
@@ -110,6 +111,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/rmgrdesc/standbydesc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/rmgrdesc/tblspcdesc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/rmgrdesc/xactdesc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/rmgrdesc/xlogdesc.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/access/sequence/sequence.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/spgist/spgdoinsert.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/spgist/spginsert.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/access/spgist/spgkdtreeproc.bc
@@ -157,6 +159,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/backup_manifest.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_copy.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_gzip.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_incremental.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_lz4.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_progress.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_server.bc
@@ -164,6 +167,8 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_sink.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_target.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_throttle.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/basebackup_zstd.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/walsummary.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/backup/walsummaryfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/bootstrap/bootparse.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/bootstrap/bootscanner.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/bootstrap/bootstrap.bc
@@ -316,7 +321,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/tqueue.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/executor/tstoreReceiver.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/foreign/foreign.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/jit/jit.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/binaryheap.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/bipartite_match.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/bloomfilter.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/lib/dshash.bc
@@ -351,7 +355,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/list.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/makefuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/multibitmapset.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/nodeFuncs.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/nodes.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/outfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/params.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/nodes/print.bc
@@ -421,6 +424,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_cte.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_enr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_expr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_func.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_jsontable.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_merge.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_node.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/parser/parse_oper.bc
@@ -445,10 +449,12 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/bgwriter.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/checkpointer.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/fork_process.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/interrupt.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/launch_backend.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/pgarch.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/postmaster.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/startup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/syslogger.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/walsummarizer.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/postmaster/walwriter.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regcomp.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/regex/regerror.bc
@@ -466,6 +472,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/origin.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/proto.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/relation.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/reorderbuffer.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/slotsync.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/snapbuild.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/tablesync.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/replication/logical/worker.bc
@@ -490,6 +497,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/statistics/dependencies.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/statistics/extended_stats.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/statistics/mcv.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/statistics/mvdistinct.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/aio/read_stream.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/buffer/buf_init.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/buffer/buf_table.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/buffer/bufmgr.bc
@@ -507,6 +515,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/freespace/indexfsm.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/barrier.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/dsm.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/dsm_impl.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/dsm_registry.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/ipc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/ipci.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/ipc/latch.bc
@@ -526,7 +535,6 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/deadlock.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/lmgr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/lock.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/lwlock.bc
-${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/lwlocknames.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/predicate.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/proc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/s_lock.bc
@@ -534,9 +542,11 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/lmgr/spin.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/page/bufpage.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/page/checksum.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/page/itemptr.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/smgr/bulk_write.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/smgr/md.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/smgr/smgr.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/storage/sync/sync.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/backend_startup.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/cmdtag.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/dest.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/tcop/fastpath.bc
@@ -575,6 +585,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/activity/pgstat_subscription.
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/activity/pgstat_wal.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/activity/pgstat_xact.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/activity/wait_event.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/activity/wait_event_funcs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/acl.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/amutils.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/array_expanded.bc
@@ -645,6 +656,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pg_locale.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pg_lsn.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pg_upgrade_support.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pgstatfuncs.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pseudorandomfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/pseudotypes.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/quote.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/rangetypes.bc
@@ -678,6 +690,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varbit.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varchar.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/varlena.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/version.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/waitfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/windowfuncs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/xid.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/adt/xid8funcs.bc
@@ -721,6 +734,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/guc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/guc_funcs.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/guc_tables.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/help_config.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/injection_point.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/pg_config.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/pg_controldata.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/pg_rusage.bc
@@ -733,6 +747,7 @@ ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/timeout.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/misc/tzparser.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/alignedalloc.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/aset.bc
+${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/bump.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/dsa.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/freepage.bc
 ${PLIST.llvm}lib/postgresql/bitcode/postgres/utils/mmgr/generation.bc
