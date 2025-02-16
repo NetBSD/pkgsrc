@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2024/08/21 21:08:34 nia Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2025/02/16 23:28:14 nia Exp $
 
 Allow building a server-only configuration.
 
---- CMakeLists.txt.orig	2024-05-10 21:02:16.000000000 +0000
+--- CMakeLists.txt.orig	2025-01-30 17:54:53.000000000 +0000
 +++ CMakeLists.txt
-@@ -441,8 +441,6 @@ ENDIF()
+@@ -458,8 +458,6 @@ ENDIF()
  
  UNSET (MYSQLD_STATIC_PLUGIN_LIBS CACHE)
  
@@ -13,7 +13,7 @@ Allow building a server-only configuration.
  INCLUDE(cpack_tgz)
  INCLUDE(cpack_rpm)
  INCLUDE(cpack_deb)
-@@ -453,19 +451,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
+@@ -470,19 +468,16 @@ MARK_AS_ADVANCED(PYTHON_SHEBANG)
  # Add storage engines and plugins.
  CONFIGURE_PLUGINS()
  
@@ -33,7 +33,7 @@ Allow building a server-only configuration.
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MariaDB with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER)
-@@ -484,23 +479,26 @@ IF(NOT WITHOUT_SERVER)
+@@ -501,10 +496,12 @@ IF(NOT WITHOUT_SERVER)
      ADD_SUBDIRECTORY(win/upgrade_wizard)
      ADD_SUBDIRECTORY(win/packaging)
    ENDIF()
@@ -48,7 +48,8 @@ Allow building a server-only configuration.
 +  ADD_SUBDIRECTORY(support-files)
  ENDIF()
  
- INCLUDE(cmake/abi_check.cmake)
+ IF (NOT WITHOUT_ABI_CHECK)
+@@ -513,13 +510,14 @@ ENDIF()
  INCLUDE(cmake/tags.cmake)
  INCLUDE(for_clients)
  ADD_SUBDIRECTORY(scripts)
@@ -65,7 +66,7 @@ Allow building a server-only configuration.
    ENDIF()
    # minimal target to build only binaries for export
    ADD_CUSTOM_TARGET(import_executables DEPENDS ${EXPORTED})
-@@ -572,7 +570,7 @@ IF(WIN32 AND SIGNCODE)
+@@ -591,7 +589,7 @@ IF(WIN32 AND SIGNCODE)
    INSTALL(SCRIPT ${PROJECT_BINARY_DIR}/sign.cmake)
  ENDIF()
  
@@ -74,7 +75,7 @@ Allow building a server-only configuration.
  
  OPTION(FEATURE_SUMMARY "Print feature summary at the end of configure step" ON)
  IF (FEATURE_SUMMARY)
-@@ -584,41 +582,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
+@@ -603,41 +601,3 @@ IF(NON_DISTRIBUTABLE_WARNING)
    MESSAGE(WARNING "
  You have linked MariaDB with ${NON_DISTRIBUTABLE_WARNING} libraries!  You may not distribute the resulting binary. If you do, you will put yourself into a legal problem with the Free Software Foundation.")
  ENDIF()
