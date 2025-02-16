@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1429 2025/02/16 09:03:56 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1430 2025/02/16 09:09:18 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1896,3 +1896,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql15 to 15.11 [adam 2025-02-16]
 	Updated databases/postgresql16 to 16.7 [adam 2025-02-16]
 	Updated databases/postgresql17 to 17.3 [adam 2025-02-16]
+	Added devel/tklib version 0.9 [scole 2025-02-16]
