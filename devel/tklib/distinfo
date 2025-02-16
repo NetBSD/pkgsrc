@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/16 09:01:26 scole Exp $
+
+BLAKE2s (tklib-0.9.tar.gz) = 3ebc2d7c5ff22b5dd19367e5b47a850ff7474d6ada69e3bd0e6ffe851bba1641
+SHA512 (tklib-0.9.tar.gz) = 741274511a8325fe8cc07095d0d25c396be20d62bc5eb03542d15dbd5acd37da975bc6da24ebb35d9ed0239604ba4bd93a9abdfd99db3c1bbe7aebbad35c4baa
+Size (tklib-0.9.tar.gz) = 7625138 bytes
