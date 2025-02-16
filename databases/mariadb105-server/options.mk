@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2024/08/25 06:18:29 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2025/02/16 23:28:13 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
 
@@ -18,10 +18,10 @@ CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=YES
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=NO
 .endif
 
-PLIST_VARS+=	embedded
+PLIST_VARS+=		embedded
 .if !empty(PKG_OPTIONS:Membedded-server)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=	yes
+PLIST.embedded=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=OFF
 .endif
@@ -54,10 +54,10 @@ PLIST.oqgraph=	yes
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_OQGRAPH=NO
 .endif
 
-PLIST_VARS+=	rocksdb
+PLIST_VARS+=		rocksdb
 .if !empty(PKG_OPTIONS:Mrocksdb)
 .include "../../lang/python/application.mk"
-PLIST.rocksdb=	yes
+PLIST.rocksdb=		yes
 CMAKE_CONFIGURE_ARGS+=	-DWITHOUT_ROCKSDB_STORAGE_ENGINE=OFF
 CMAKE_CONFIGURE_ARGS+=	-DPYTHON_SHEBANG=${PYTHONBIN}
 .else

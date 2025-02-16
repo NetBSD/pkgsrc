@@ -1,8 +1,6 @@
-# $NetBSD: options.mk,v 1.4 2024/08/25 06:18:29 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2025/02/16 23:28:13 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql-server
-
-#PKG_SUPPORTED_OPTIONS+=	columnstore
 
 PKG_SUPPORTED_OPTIONS+=	auth-pam embedded-server lzo lz4 oqgraph
 PKG_SUPPORTED_OPTIONS+=	rocksdb snappy ssl zstd
@@ -19,17 +17,10 @@ PKG_SUGGESTED_OPTIONS+=	auth-pam
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mcolumnstore)
-.include "../../devel/boost-headers/buildlink3.mk"
-CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=YES
-.else
-CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_COLUMNSTORE=NO
-.endif
-
-PLIST_VARS+=	embedded
+PLIST_VARS+=		embedded
 .if !empty(PKG_OPTIONS:Membedded-server)
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=ON
-PLIST.embedded=	yes
+PLIST.embedded=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DWITH_EMBEDDED_SERVER=OFF
 .endif
@@ -52,10 +43,10 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_INNODB_LZ4=OFF
 CMAKE_CONFIGURE_ARGS+=	-DWITH_ROCKSDB_LZ4=OFF
 .endif
 
-PLIST_VARS+=	oqgraph
+PLIST_VARS+=		oqgraph
 .if !empty(PKG_OPTIONS:Moqgraph)
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_OQGRAPH=YES
-PLIST.oqgraph=	yes
+PLIST.oqgraph=		yes
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libjudy/buildlink3.mk"
 .else
@@ -97,11 +88,11 @@ CMAKE_CONFIGURE_ARGS+=	-DWITH_ROCKSDB_zstd=ON
 CMAKE_CONFIGURE_ARGS+=	-DWITH_ROCKSDB_zstd=OFF
 .endif
 
-PLIST_VARS+=	auth_pam
+PLIST_VARS+=		auth_pam
 .if !empty(PKG_OPTIONS:Mauth-pam)
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM=YES
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=YES
-PLIST.auth_pam=	yes
+PLIST.auth_pam=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM=NO
 CMAKE_CONFIGURE_ARGS+=	-DPLUGIN_AUTH_PAM_V1=NO
