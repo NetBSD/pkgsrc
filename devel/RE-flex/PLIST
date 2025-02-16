@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/27 13:59:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/16 01:23:12 mef Exp $
 bin/reflex
 include/reflex/abslexer.h
 include/reflex/absmatcher.h
@@ -8,6 +8,7 @@ include/reflex/convert.h
 include/reflex/debug.h
 include/reflex/error.h
 include/reflex/flexlexer.h
+include/reflex/fuzzymatcher.h
 include/reflex/input.h
 include/reflex/linematcher.h
 include/reflex/matcher.h
