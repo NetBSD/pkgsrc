@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2025/01/19 18:57:41 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2025/02/16 01:22:05 dholland Exp $
 
 DISTNAME=		findlib-1.9.8
 PKGNAME=		ocaml-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -11,7 +12,7 @@ COMMENT=		Library finder for OCaml
 LICENSE=		mit
 
 OCAML_FINDLIB_DIRS+=	bigarray bytes compiler-libs dynlink findlib \
-			ocamldoc stdlib str threads unix
+			ocamldoc stdlib str stublibs threads unix
 
 .include "../../lang/ocaml/ocaml.mk"
 
