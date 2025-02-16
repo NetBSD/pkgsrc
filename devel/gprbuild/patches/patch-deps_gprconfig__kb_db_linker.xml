@@ -1,0 +1,18 @@
+$NetBSD: patch-deps_gprconfig__kb_db_linker.xml,v 1.1 2025/02/16 10:11:49 wiz Exp $
+
+Fix link time lto plugin warning
+
+--- deps/gprconfig_kb/db/linker.xml.orig	2024-09-09 17:54:27.000000000 +0300
++++ deps/gprconfig_kb/db/linker.xml
+@@ -1000,9 +1000,9 @@
+       <target name="^cuda$" />
+     </targets>
+     <config>
+-   for Archive_Builder  use ("ar", "cr");
++   for Archive_Builder  use ("gcc-ar", "cr");
+    for Archive_Builder_Append_Option use ("q");
+-   for Archive_Indexer  use ("ranlib");
++   for Archive_Indexer  use ("gcc-ranlib");
+    for Archive_Suffix   use ".a";
+     </config>
+   </configuration>
