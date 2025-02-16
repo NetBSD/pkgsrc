@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/02/16 09:35:16 mef Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/16 09:40:42 mef Exp $
 
 DISTNAME=	RE-flex-5.2.2
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Genivia/RE-flex/
-COMMENT=	Fast lexical analyzer generator for C++ with full Unicode support 
+COMMENT=	Fast lexical analyzer generator for C++ with full Unicode support
 LICENSE=	modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
