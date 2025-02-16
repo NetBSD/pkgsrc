@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.23 2025/02/16 01:51:06 mef Exp $
+# $NetBSD: Makefile.common,v 1.24 2025/02/16 02:17:05 mef Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
 
-GCONF_VERSION=		3.2.4
+GCONF_VERSION=		3.2.5
 
 DISTNAME=		GConf-${GCONF_VERSION}
 CATEGORIES=		devel gnome
