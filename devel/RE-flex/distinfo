@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.8 2024/03/21 20:44:40 wiz Exp $
+$NetBSD: distinfo,v 1.9 2025/02/16 01:23:12 mef Exp $
 
-BLAKE2s (RE-flex-4.1.2.tar.gz) = 1d4cd5a78522ecfdb3deae59e3de1114b4452a8a4b9de41ab99da83194ce5956
-SHA512 (RE-flex-4.1.2.tar.gz) = 964567b865316f00a5f9cb1ca93ca29fd96ff79f02253c960dd5965e750e0fd30a3dbb5d4d51992b5359b0a89637ab98fd215bd41f48a47372f9ae1a8d5fcefa
-Size (RE-flex-4.1.2.tar.gz) = 6600481 bytes
-SHA1 (patch-doc_index.md) = 382df877d351eff1df7ccd2b919331db67c4ee21
+BLAKE2s (RE-flex-5.2.2.tar.gz) = f23c5b9c9c43bf0e8441c523a99e21473e9a54df80d0ad65d347e89e15a9a2dd
+SHA512 (RE-flex-5.2.2.tar.gz) = 26370777f6682776d546843a04039800d700122eb4112ba6742c416f69942d0c363e0f157fa1625b087a4c470160aad8e102a836dc8b4698ffc3ecd1b17c6bba
+Size (RE-flex-5.2.2.tar.gz) = 7296957 bytes
 SHA1 (patch-examples_Make) = 2e7a07f62cf80ef502cb76b8cdb980c7a2d0773b
 SHA1 (patch-include_reflex_convert.h) = ed9fbae2d615907a0b596ba5ee9080eb3129c9dc
 SHA1 (patch-include_reflex_pattern.h) = 3dee984028b48ecc7c34aa1e6b487bb4de89c079
