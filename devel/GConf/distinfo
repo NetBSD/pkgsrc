@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 10:13:59 nia Exp $
+$NetBSD: distinfo,v 1.36 2025/02/16 01:51:06 mef Exp $
 
-BLAKE2s (GConf-3.2.3.tar.bz2) = 9aca7bcc37fe7ef1cf66d7c359f928fec4473ad3e6814a0627a77ee013d08bd1
-SHA512 (GConf-3.2.3.tar.bz2) = 8d3be4bc042d341fc331b8fcd5a4f1ad83b950690ea73d2af3eb5c0741492317f9d503e648356958b190f7edd699d0f9ea00f84a7d458a9e6a56202b8fefdf07
-Size (GConf-3.2.3.tar.bz2) = 1782011 bytes
+BLAKE2s (GConf-3.2.4.tar.xz) = 96ea0367fbc67c052936481c9bc11019655acb35ed695328fa376c039bae043e
+SHA512 (GConf-3.2.4.tar.xz) = aa6b0929ca53566be3abb763e8e31589f915a34fbdab90ccb1c173e23dd6a6d42771872abcad138f04dc83d9fc887d204c2b541efa3488dcb9f1a356b82f77c4
+Size (GConf-3.2.4.tar.xz) = 1523824 bytes
 SHA1 (patch-ab) = ca0c9f45ff46ceb05a10c03c59f94b6a5be562b0
 SHA1 (patch-ac) = a810c943fc6408cd4f6024be65f9973d42028e1a
 SHA1 (patch-ae) = ec5b872713e3a5aec222ad46e6f24e27fff51a86
 SHA1 (patch-af) = 6c32965505db5d0b2e1083e629c7bc7f0cd0a439
 SHA1 (patch-ah) = 66485f9aeef7e6023c60f58cc054924f3cac4972
-SHA1 (patch-ai) = bd343f9e98dbb8597b593fdcb01de35824f18dd4
+SHA1 (patch-ai) = cacac229164e32a4f7b5a4d14c10d84685f1a2f1

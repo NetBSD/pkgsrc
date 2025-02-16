@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.22 2017/11/28 14:33:52 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2025/02/16 01:51:06 mef Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
 
-GCONF_VERSION=		3.2.3
+GCONF_VERSION=		3.2.4
 
 DISTNAME=		GConf-${GCONF_VERSION}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/3.2/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.gnome.org/projects/gconf/
