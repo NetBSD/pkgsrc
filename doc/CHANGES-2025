@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1416 2025/02/16 00:05:53 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1417 2025/02/16 00:20:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1878,3 +1878,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cad/py-gdstk to 0.9.59 [mef 2025-02-15]
 	Updated devel/R-R6 to 2.6.1 [mef 2025-02-15]
 	Updated devel/R-cli to 3.6.4 [mef 2025-02-16]
+	Updated devel/R-lintr to 3.2.0 [mef 2025-02-16]
