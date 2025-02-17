@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.311 2025/02/17 15:35:28 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.312 2025/02/17 15:47:14 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16504,12 +16504,12 @@ wireshark>=2.6.0<2.6.4	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-20
 py{27,34,35,36,37,38}-mezzanine-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2018-16632
 nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20535
 nasm-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20538
-libcaca<0.99.beta20	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2018-20544
-libcaca<0.99.beta20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20545
-libcaca<0.99.beta20	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-20546
-libcaca<0.99.beta20	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-20547
-libcaca<0.99.beta20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20548
-libcaca<0.99.beta20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20549
+libcaca<0.99.20	floating-point-exception	https://nvd.nist.gov/vuln/detail/CVE-2018-20544
+libcaca<0.99.20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20545
+libcaca<0.99.20	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-20546
+libcaca<0.99.20	out-of-bounds-read		https://nvd.nist.gov/vuln/detail/CVE-2018-20547
+libcaca<0.99.20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20548
+libcaca<0.99.20	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2018-20549
 tcpreplay<4.3.1	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-20552
 tcpreplay<4.3.1	buffer-overflow			https://nvd.nist.gov/vuln/detail/CVE-2018-20553
 poppler<0.73.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-20551
@@ -20639,7 +20639,7 @@ gsoap<2.8.111		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2020-13578
 isync<1.4.1		input-validation	https://nvd.nist.gov/vuln/detail/CVE-2021-20247
 jasper<2.0.25		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-26926
 jasper<2.0.25		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-26927
-libcaca<0.99.beta20		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3410
+libcaca<0.99.20		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3410
 libebml<1.4.2		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-3405
 libmysofa<1.2		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-36148
 libmysofa<1.2		null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2020-36149
@@ -21225,8 +21225,8 @@ gupnp12<1.2.5	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2021-3
 isc-dhcpd<4.4.2p1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-25217
 isc-dhclient<4.4.2p1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-25217
 libX11<1.7.1	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2021-31535
-libcaca<0.99.beta20	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-30498
-libcaca<0.99.beta20	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-30499
+libcaca<0.99.20	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-30498
+libcaca<0.99.20	heap-overflow			https://nvd.nist.gov/vuln/detail/CVE-2021-30499
 libvirt<6.2.0	authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-10701
 libvirt<7.0.0	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3559
 libytnef<2.8	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2009-3721
