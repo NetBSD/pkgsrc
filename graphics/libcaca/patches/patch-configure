@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2025/02/17 22:00:48 nia Exp $
+
+[PATCH] Remove bashism in configure.ac
+
+Patch courtesy of Jakub Bogusz.
+
+https://github.com/cacalabs/libcaca/commit/9a0ebef8d7d78bd32737ba45afc28d260fd1616b.patch
+
+--- configure.orig	2025-02-17 20:32:40.574425308 +0000
++++ configure
+@@ -19422,7 +19422,6 @@ fi
+ done
+   CFLAGS="$save_CFLAGS"
+   if test "${ac_cv_my_have_cocoa}" = "yes"; then
+-    [[ "$target_os" =~ [0-9]+ ]] && darwin_ver="${BASH_REMATCH[0]}"
+     case x${target} in
+     xpowerpc*darwin*)
+       # 10.3 needed to link with X11
+@@ -19450,6 +19449,7 @@ done
+     esac
+     CC="${CC:-gcc-${GCC_VERSION}}"
+     CXX="${CXX:-g++-${GCC_VERSION}}"
++    darwin_ver="$(echo "${target_os}" | sed -ne 's/[^0-9]*\([0-9]\+\).*/\1/p')"
+     if [ "$darwin_ver" -lt "13" ]; then
+       MACOSX_SDK_FRAMEWORKS="${MACOSX_SDK_FRAMEWORKS:--F${MACOSX_SDK}/System/Library/Frameworks}"
+       CPPFLAGS="${CPPFLAGS} ${ARCH} ${MACOSX_SDK_FRAMEWORKS}"
