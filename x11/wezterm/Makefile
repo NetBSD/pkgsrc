@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/17 10:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/17 19:51:29 wiz Exp $
 
 # update tag information in post-extract below when updating this
 DISTNAME=	wezterm-20250213.133349
@@ -68,7 +68,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/strip-ansi-escapes \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/assets/open-wezterm-here \
+	${INSTALL_SCRIPT} ${WRKSRC}/assets/open-wezterm-here \
 		${DESTDIR}${PREFIX}/bin
 #	${INSTALL_PROGRAM} ${WRKSRC}/target/release/sync-color-schemes \
 #		${DESTDIR}${PREFIX}/bin
