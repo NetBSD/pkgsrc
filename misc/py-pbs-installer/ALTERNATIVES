@@ -1,0 +1,1 @@
+bin/pbs-install @PREFIX@/bin/pbs-install-@PYVERSSUFFIX@
