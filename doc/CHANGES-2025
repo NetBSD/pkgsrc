@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1453 2025/02/17 19:35:38 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.1454 2025/02/17 20:15:58 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1933,3 +1933,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added misc/py-pbs-installer version 2025.2.12 [adam 2025-02-17]
 	Updated devel/py-poetry to 2.1.1 [adam 2025-02-17]
 	Updated pkgtools/pkglint to 23.14.0 [rillig 2025-02-17]
+	Updated x11/alacritty to 0.15.1 [pin 2025-02-17]
