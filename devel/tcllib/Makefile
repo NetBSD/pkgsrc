@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2022/05/05 07:17:02 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/17 12:15:40 scole Exp $
 
-DISTNAME=		tcllib-1.20
+DISTNAME=		tcllib-1.21
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GITHUB:=tcltk/}
-#GITHUB_TAG=		${DISTNAME:S/./-/}
-GITHUB_TAG=		391b141933ec0b7331d2f203064d941f1b724576
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://core.tcl-lang.org/tcllib/
@@ -16,7 +14,10 @@ USE_TOOLS+=		wget:run
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes
 
-CONFIGURE_ENV+=		ac_cv_path_tclsh=${TCLSH:Q}
+CONFIGURE_ARGS+=	--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
+
+TCL_EXDIR=		share/examples/tcllib
+INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/mann ${TCL_EXDIR}
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	pre-configure
@@ -28,6 +29,7 @@ SUBST_CLASSES+=		tclsh
 SUBST_STAGE.tclsh=	pre-configure
 SUBST_FILES.tclsh=	modules/defer/defer.tcl
 SUBST_FILES.tclsh+=	modules/devtools/recreate-certs
+SUBST_FILES.tclsh+=	modules/lazyset/lazyset.tcl
 SUBST_FILES.tclsh+=	modules/pki/pki.tcl
 SUBST_FILES.tclsh+=	modules/pt/tools/bench-compare.tcl
 SUBST_FILES.tclsh+=	modules/pt/tools/regenerate_parsers.tcl
@@ -44,6 +46,13 @@ SUBST_SED.tclsh=	-e "s,/usr/bin/env.*tclsh,${TCLSH},g"
 SUBST_MESSAGE.tclsh=	Fixing path to tclsh.
 
 TEST_TARGET=		test
+
+# add examples manually
+post-install:
+	cd ${WRKSRC}/examples; for d in `${FIND} . -type d -print`; do \
+	 ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${TCL_EXDIR}/$$d; done
+	cd ${WRKSRC}/examples; for f in `${FIND} . -type f -print`; do \
+	 ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/${TCL_EXDIR}/$$f; done
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
