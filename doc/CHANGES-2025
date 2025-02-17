@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1443 2025/02/17 12:19:27 scole Exp $
+$NetBSD: CHANGES-2025,v 1.1444 2025/02/17 13:36:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1919,3 +1919,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added x11/wezterm version 20250213.133349 [wiz 2025-02-17]
 	Updated graphics/gifsicle to 1.95 [nia 2025-02-17]
 	Updated devel/tcllib to 1.21 [scole 2025-02-17]
+	Updated devel/re2c to 4.1 [adam 2025-02-17]
+	Updated www/py-django-filter to 25.1 [adam 2025-02-17]
