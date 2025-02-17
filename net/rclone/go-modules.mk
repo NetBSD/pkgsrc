@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.13 2025/01/14 10:21:05 adam Exp $
+# $NetBSD: go-modules.mk,v 1.14 2025/02/17 09:32:37 adam Exp $
 
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.mod
 GO_MODULE_FILES+=	bazil.org/fuse/@v/v0.0.0-20230120002735-62a210ff1fd5.zip
@@ -404,6 +404,8 @@ GO_MODULE_FILES+=	github.com/minio/minio-go/v6/@v/v6.0.46.mod
 GO_MODULE_FILES+=	github.com/minio/minio-go/v7/@v/v7.0.74.mod
 GO_MODULE_FILES+=	github.com/minio/minio-go/v7/@v/v7.0.74.zip
 GO_MODULE_FILES+=	github.com/minio/sha256-simd/@v/v0.1.1.mod
+GO_MODULE_FILES+=	github.com/minio/xxml/@v/v0.0.3.mod
+GO_MODULE_FILES+=	github.com/minio/xxml/@v/v0.0.3.zip
 GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.mod
 GO_MODULE_FILES+=	github.com/mitchellh/go-homedir/@v/v1.1.0.zip
 GO_MODULE_FILES+=	github.com/moby/sys/mountinfo/@v/v0.7.2.mod
@@ -457,8 +459,8 @@ GO_MODULE_FILES+=	github.com/quasilyte/go-ruleguard/dsl/@v/v0.3.22.mod
 GO_MODULE_FILES+=	github.com/quasilyte/go-ruleguard/dsl/@v/v0.3.22.zip
 GO_MODULE_FILES+=	github.com/rasky/go-xdr/@v/v0.0.0-20170124162913-1a41d1a06c93.mod
 GO_MODULE_FILES+=	github.com/rasky/go-xdr/@v/v0.0.0-20170124162913-1a41d1a06c93.zip
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3.mod
-GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.3.zip
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.4.mod
+GO_MODULE_FILES+=	github.com/rclone/gofakes3/@v/v0.0.4.zip
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.3.0.mod
 GO_MODULE_FILES+=	github.com/relvacode/iso8601/@v/v1.3.0.zip
 GO_MODULE_FILES+=	github.com/rfjakob/eme/@v/v1.1.2.mod
