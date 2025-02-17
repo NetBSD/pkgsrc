@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1441 2025/02/17 10:50:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1442 2025/02/17 11:49:14 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-poetry-core to 2.1.1 [adam 2025-02-17]
 	Updated devel/py-flake8 to 7.1.2 [adam 2025-02-17]
 	Added x11/wezterm version 20250213.133349 [wiz 2025-02-17]
+	Updated graphics/gifsicle to 1.95 [nia 2025-02-17]
