@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2024/11/14 22:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2025/02/17 16:14:03 wiz Exp $
 
 DISTNAME=	ProjectCenter-0.6.2
 PKGREVISION=	24
@@ -10,19 +10,17 @@ HOMEPAGE=	http://www.gnustep.org/experience/ProjectCenter.html
 COMMENT=	GNUstep Integrated Development Environment
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	destdir
-
 USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
 MAKE_FILE=	GNUmakefile
 
-SUBST_CLASSES+=		gmake
-SUBST_STAGE.gmake=	pre-configure
-SUBST_FILES.gmake+=	Framework/GNUmakefile.preamble
-SUBST_FILES.gmake+=	Modules/Preferences/Build/PCBuildPrefs.h
-SUBST_SED.gmake+=	-e 's|.(GMAKE)|${GMAKE:Q}|g'
-SUBST_SED.gmake+=	-e 's|/usr/bin/make|${GMAKE:Q}|g'
+#SUBST_CLASSES+=		gmake
+#SUBST_STAGE.gmake=	pre-configure
+#SUBST_FILES.gmake+=	Framework/GNUmakefile.preamble
+#SUBST_FILES.gmake+=	Modules/Preferences/Build/PCBuildPrefs.h
+#SUBST_SED.gmake+=	-e 's|.(GMAKE)|${GMAKE:Q}|g'
+#SUBST_SED.gmake+=	-e 's|/usr/bin/make|${GMAKE:Q}|g'
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
