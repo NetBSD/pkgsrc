@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2025/01/11 20:25:14 adam Exp $
+$NetBSD: distinfo,v 1.12 2025/02/17 09:38:33 adam Exp $
 
-BLAKE2s (poetry_core-2.0.1.tar.gz) = ba86641ee324f660885d144a7a90bd331844bef484305c9ca9ba1c0e7123f789
-SHA512 (poetry_core-2.0.1.tar.gz) = dd1d303abd034fc0341aaa5fc8d11f13ef305e93b9e9036f4040c2cb007c8b1eecbdb719d2b5692530b80ecc06d416751a45c499f373a05b7066e56785d1a8e8
-Size (poetry_core-2.0.1.tar.gz) = 355487 bytes
+BLAKE2s (poetry_core-2.1.1.tar.gz) = 52aa34c0b62503f483e4f7be9add5318f7a1ffe652437f224d4239750a2f9123
+SHA512 (poetry_core-2.1.1.tar.gz) = 6624530062196c9a40be73d74a8dd51cfa8af8f34705837c5101b3955252e94fd136b32259887796ea304b77cfcd35042bf391fe78174f22faeebe77247605c4
+Size (poetry_core-2.1.1.tar.gz) = 362210 bytes
