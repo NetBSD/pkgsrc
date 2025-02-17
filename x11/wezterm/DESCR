@@ -1,0 +1,8 @@
+WezTerm is a powerful cross-platform terminal emulator and multiplexer
+written by wez and implemented in Rust.
+
+- Multiplex terminal panes, tabs and windows on local and remote
+  hosts, with native mouse and scrollback
+- Ligatures, Color Emoji and font fallback, with true color and
+  dynamic color schemes.
+- Hyperlinks
