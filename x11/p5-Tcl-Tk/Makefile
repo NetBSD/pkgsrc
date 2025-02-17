@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2025/02/09 04:11:10 scole Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/17 00:54:23 scole Exp $
 
 PKGVER=		1.51
 DISTNAME=	Tcl-Tk-${PKGVER}
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tcl/}
 
@@ -14,10 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Tcl>=${PKGVER}:../../devel/p5-Tcl
 DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
+DEPENDS+=	tklib-[0-9]*:../../devel/tklib
 
 MAKE_PARAMS+=	--tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
-# xxx no tklib in pkgsrc yet
-MAKE_PARAMS+=	--no-test-for-tk
 
 PERL5_PACKLIST=		auto/Tcl/Tk/.packlist
 
