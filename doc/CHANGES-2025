@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1436 2025/02/16 23:38:13 nia Exp $
+$NetBSD: CHANGES-2025,v 1.1437 2025/02/17 01:02:18 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1910,3 +1910,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/mariadb105-client to 10.5.28 [nia 2025-02-16]
 	Updated databases/mariadb105-server to 10.5.28 [nia 2025-02-16]
 	Added www/dillo-cxx98 version 3.1.0 [nia 2025-02-16]
+	Updated x11/p5-Tcl-Tk to 1.51nb2 [scole 2025-02-17]
+	Updated x11/p5-Tcl-pTk to 1.11nb2 [scole 2025-02-17]
