@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1438 2025/02/17 09:33:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1439 2025/02/17 09:43:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1914,3 +1914,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/p5-Tcl-pTk to 1.11nb2 [scole 2025-02-17]
 	Updated devel/blosc2 to 2.16.0 [adam 2025-02-17]
 	Updated net/rclone to 1.69.1 [adam 2025-02-17]
+	Updated devel/py-poetry-core to 2.1.1 [adam 2025-02-17]
+	Updated devel/py-flake8 to 7.1.2 [adam 2025-02-17]
