@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/02 06:51:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/17 15:21:03 taca Exp $
 bin/bundle${RUBY_SUFFIX}
 bin/bundler${RUBY_SUFFIX}
 bin/erb${RUBY_SUFFIX}
@@ -1735,6 +1735,7 @@ ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/saslprep.
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/saslprep_tables.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/tables.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/stringprep/trace.rb
+${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/uidplus_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/lib/net/imap/vanished_data.rb
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/benchmarks.rake
 ${GEM_HOME}/gems/net-imap-${RUBY_NET_IMAP_VER}/rakelib/rdoc.rake
