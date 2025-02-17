@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.17 2025/01/16 13:37:08 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.18 2025/02/17 20:15:36 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
@@ -77,10 +77,10 @@ CARGO_CRATE_DEPENDS+=	futures-io-0.3.31
 CARGO_CRATE_DEPENDS+=	gethostname-0.4.3
 CARGO_CRATE_DEPENDS+=	getrandom-0.2.15
 CARGO_CRATE_DEPENDS+=	gl_generator-0.14.0
-CARGO_CRATE_DEPENDS+=	glutin-0.32.1
-CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.7.0
-CARGO_CRATE_DEPENDS+=	glutin_glx_sys-0.6.0
-CARGO_CRATE_DEPENDS+=	glutin_wgl_sys-0.6.0
+CARGO_CRATE_DEPENDS+=	glutin-0.32.2
+CARGO_CRATE_DEPENDS+=	glutin_egl_sys-0.7.1
+CARGO_CRATE_DEPENDS+=	glutin_glx_sys-0.6.1
+CARGO_CRATE_DEPENDS+=	glutin_wgl_sys-0.6.1
 CARGO_CRATE_DEPENDS+=	hashbrown-0.15.2
 CARGO_CRATE_DEPENDS+=	heck-0.5.0
 CARGO_CRATE_DEPENDS+=	hermit-abi-0.4.0
@@ -208,6 +208,7 @@ CARGO_CRATE_DEPENDS+=	vte-0.13.1
 CARGO_CRATE_DEPENDS+=	vte_generate_state_changes-0.1.2
 CARGO_CRATE_DEPENDS+=	walkdir-2.5.0
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-0.2.99
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-backend-0.2.99
 CARGO_CRATE_DEPENDS+=	wasm-bindgen-futures-0.4.49
@@ -258,7 +259,7 @@ CARGO_CRATE_DEPENDS+=	windows_x86_64_gnullvm-0.52.6
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.42.2
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.48.5
 CARGO_CRATE_DEPENDS+=	windows_x86_64_msvc-0.52.6
-CARGO_CRATE_DEPENDS+=	winit-0.30.8
+CARGO_CRATE_DEPENDS+=	winit-0.30.9
 CARGO_CRATE_DEPENDS+=	winnow-0.6.20
 CARGO_CRATE_DEPENDS+=	winreg-0.52.0
 CARGO_CRATE_DEPENDS+=	wio-0.2.2

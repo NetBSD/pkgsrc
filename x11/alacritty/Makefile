@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2025/01/16 13:37:08 pin Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/17 20:15:36 pin Exp $
 
-DISTNAME=	alacritty-0.15.0
+DISTNAME=	alacritty-0.15.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alacritty/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
