@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/01/12 07:40:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/17 16:38:03 adam Exp $
 bin/poetry-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -77,6 +77,9 @@ ${PYSITELIB}/poetry/console/commands/debug/info.pyo
 ${PYSITELIB}/poetry/console/commands/debug/resolve.py
 ${PYSITELIB}/poetry/console/commands/debug/resolve.pyc
 ${PYSITELIB}/poetry/console/commands/debug/resolve.pyo
+${PYSITELIB}/poetry/console/commands/debug/tags.py
+${PYSITELIB}/poetry/console/commands/debug/tags.pyc
+${PYSITELIB}/poetry/console/commands/debug/tags.pyo
 ${PYSITELIB}/poetry/console/commands/env/__init__.py
 ${PYSITELIB}/poetry/console/commands/env/__init__.pyc
 ${PYSITELIB}/poetry/console/commands/env/__init__.pyo
@@ -119,6 +122,18 @@ ${PYSITELIB}/poetry/console/commands/new.pyo
 ${PYSITELIB}/poetry/console/commands/publish.py
 ${PYSITELIB}/poetry/console/commands/publish.pyc
 ${PYSITELIB}/poetry/console/commands/publish.pyo
+${PYSITELIB}/poetry/console/commands/python/__init__.py
+${PYSITELIB}/poetry/console/commands/python/__init__.pyc
+${PYSITELIB}/poetry/console/commands/python/__init__.pyo
+${PYSITELIB}/poetry/console/commands/python/install.py
+${PYSITELIB}/poetry/console/commands/python/install.pyc
+${PYSITELIB}/poetry/console/commands/python/install.pyo
+${PYSITELIB}/poetry/console/commands/python/list.py
+${PYSITELIB}/poetry/console/commands/python/list.pyc
+${PYSITELIB}/poetry/console/commands/python/list.pyo
+${PYSITELIB}/poetry/console/commands/python/remove.py
+${PYSITELIB}/poetry/console/commands/python/remove.pyc
+${PYSITELIB}/poetry/console/commands/python/remove.pyo
 ${PYSITELIB}/poetry/console/commands/remove.py
 ${PYSITELIB}/poetry/console/commands/remove.pyc
 ${PYSITELIB}/poetry/console/commands/remove.pyo
@@ -191,15 +206,6 @@ ${PYSITELIB}/poetry/console/events/console_events.pyo
 ${PYSITELIB}/poetry/console/exceptions.py
 ${PYSITELIB}/poetry/console/exceptions.pyc
 ${PYSITELIB}/poetry/console/exceptions.pyo
-${PYSITELIB}/poetry/console/io/__init__.py
-${PYSITELIB}/poetry/console/io/__init__.pyc
-${PYSITELIB}/poetry/console/io/__init__.pyo
-${PYSITELIB}/poetry/console/io/inputs/__init__.py
-${PYSITELIB}/poetry/console/io/inputs/__init__.pyc
-${PYSITELIB}/poetry/console/io/inputs/__init__.pyo
-${PYSITELIB}/poetry/console/io/inputs/run_argv_input.py
-${PYSITELIB}/poetry/console/io/inputs/run_argv_input.pyc
-${PYSITELIB}/poetry/console/io/inputs/run_argv_input.pyo
 ${PYSITELIB}/poetry/console/logging/__init__.py
 ${PYSITELIB}/poetry/console/logging/__init__.pyc
 ${PYSITELIB}/poetry/console/logging/__init__.pyo
@@ -502,9 +508,21 @@ ${PYSITELIB}/poetry/utils/env/mock_env.pyo
 ${PYSITELIB}/poetry/utils/env/null_env.py
 ${PYSITELIB}/poetry/utils/env/null_env.pyc
 ${PYSITELIB}/poetry/utils/env/null_env.pyo
-${PYSITELIB}/poetry/utils/env/python_manager.py
-${PYSITELIB}/poetry/utils/env/python_manager.pyc
-${PYSITELIB}/poetry/utils/env/python_manager.pyo
+${PYSITELIB}/poetry/utils/env/python/__init__.py
+${PYSITELIB}/poetry/utils/env/python/__init__.pyc
+${PYSITELIB}/poetry/utils/env/python/__init__.pyo
+${PYSITELIB}/poetry/utils/env/python/exceptions.py
+${PYSITELIB}/poetry/utils/env/python/exceptions.pyc
+${PYSITELIB}/poetry/utils/env/python/exceptions.pyo
+${PYSITELIB}/poetry/utils/env/python/installer.py
+${PYSITELIB}/poetry/utils/env/python/installer.pyc
+${PYSITELIB}/poetry/utils/env/python/installer.pyo
+${PYSITELIB}/poetry/utils/env/python/manager.py
+${PYSITELIB}/poetry/utils/env/python/manager.pyc
+${PYSITELIB}/poetry/utils/env/python/manager.pyo
+${PYSITELIB}/poetry/utils/env/python/providers.py
+${PYSITELIB}/poetry/utils/env/python/providers.pyc
+${PYSITELIB}/poetry/utils/env/python/providers.pyo
 ${PYSITELIB}/poetry/utils/env/script_strings.py
 ${PYSITELIB}/poetry/utils/env/script_strings.pyc
 ${PYSITELIB}/poetry/utils/env/script_strings.pyo
@@ -535,6 +553,9 @@ ${PYSITELIB}/poetry/utils/patterns.pyo
 ${PYSITELIB}/poetry/utils/pip.py
 ${PYSITELIB}/poetry/utils/pip.pyc
 ${PYSITELIB}/poetry/utils/pip.pyo
+${PYSITELIB}/poetry/utils/threading.py
+${PYSITELIB}/poetry/utils/threading.pyc
+${PYSITELIB}/poetry/utils/threading.pyo
 ${PYSITELIB}/poetry/utils/wheel.py
 ${PYSITELIB}/poetry/utils/wheel.pyc
 ${PYSITELIB}/poetry/utils/wheel.pyo
