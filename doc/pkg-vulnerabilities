@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.307 2025/02/16 22:41:13 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.308 2025/02/17 09:07:51 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -18252,7 +18252,7 @@ chicken<4.9.0		command-injection	https://nvd.nist.gov/vuln/detail/CVE-2013-2024
 chicken<4.9.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2013-2075
 webkit-gtk<2.26.0	multiple-vulnerabilities	https://webkitgtk.org/security/WSA-2019-0005.html
 elasticsearch<6.8.4	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2019-7619
-file-[0-9]*		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-18218
+file<5.38		out-of-bounds-write	https://nvd.nist.gov/vuln/detail/CVE-2019-18218
 freetds<1.1.20		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2019-13508
 go112<1.12.11		remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-17596
 haproxy<2.0.6		http-request-smuggling	https://nvd.nist.gov/vuln/detail/CVE-2019-18277
