@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1452 2025/02/17 19:21:44 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.1453 2025/02/17 19:35:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -458,7 +458,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/stitchy to 0.1.8 [pin 2025-01-13]
 	Updated sysutils/fastfetch to 2.34.1 [vins 2025-01-13]
 	Updated mail/neomutt to 20250113 [wiz 2025-01-13]
-	Updated ham/freedv to 1.9.9.2 [gdt 2025-01-13]
 	Updated devel/py-guppy3 to 3.1.5 [gutteridge 2025-01-13]
 	Updated net/py-responses to 0.25.6 [adam 2025-01-14]
 	Updated devel/py-license-expression to 30.4.1 [adam 2025-01-14]
@@ -1073,7 +1072,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hs-warp to 3.4.7 [pho 2025-01-30]
 	Updated www/hs-wai-extra to 3.1.17 [pho 2025-01-30]
 	Updated www/hs-servant-server to 0.20.2 [pho 2025-01-30]
-	Added textproc/hs-skylighting-format-typst version 0.1 [pho 2025-01-30]
 	Removed graphics/clutter-gtk0.10 successor graphics/clutter-gtk [wiz 2025-01-30]
 	Updated converters/hs-pandoc-server to 0.1.0.10 [pho 2025-01-30]
 	Updated lang/hs-hslua-cli to 1.4.3 [pho 2025-01-30]
@@ -1095,7 +1093,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-Diff to 1.0.2 [pho 2025-01-31]
 	Updated textproc/hs-megaparsec to 9.7.0 [pho 2025-01-31]
 	Added devel/hs-choice version 0.2.4.1 [pho 2025-01-31]
-	Updated devel/hs-ghc-lib-parser to 9.10.1.20250103 [pho 2025-01-31]
+	Downgraded devel/hs-ghc-lib-parser to 9.10.1.20250103 [pho 2025-01-31]
 	Updated devel/fourmolu to 0.17.0.0 [pho 2025-01-31]
 	Updated devel/hs-ghc-lib-parser-ex to 9.10.0.0 [pho 2025-01-31]
 	Updated misc/hs-extra to 1.8 [pho 2025-01-31]
@@ -1158,7 +1156,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-tasty-golden version 2.3.5 [pho 2025-01-31]
 	Updated devel/hs-tasty-hunit to 0.10.2 [pho 2025-01-31]
 	Added devel/hs-hls-test-utils version 2.9.0.0 [pho 2025-01-31]
-	Updated devel/hs-ghc-exactprint to 1.9.0.0 [pho 2025-01-31]
+	Downgraded devel/hs-ghc-exactprint to 1.9.0.0 [pho 2025-01-31]
 	Removed cad/eagle [wiz 2025-01-31]
 	Updated devel/haskell-language-server to 2.9.0.0 [pho 2025-01-31]
 	Updated devel/hs-microlens-platform to 0.4.3.6 [pho 2025-01-31]
@@ -1313,7 +1311,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/vmailmgr to 0.97.0.20150901nb1 [schmonz 2025-02-02]
 	Updated meta-pkgs/qmail-server to 1.0.20250202 [schmonz 2025-02-02]
 	Updated sysutils/R-processx to 3.8.5 [mef 2025-02-02]
-	Updated www/R-webfakes to 1.3.2 [mef 2025-02-02]
 	Updated www/p5-CGI to 4.67 [wen 2025-02-03]
 	Updated www/p5-Plack-Middleware-Session to 0.34 [wen 2025-02-03]
 	Updated www/p5-Rose-HTML-Objects to 0.627 [wen 2025-02-03]
@@ -1343,8 +1340,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/R-renv to 1.1.0 [mef 2025-02-03]
 	Updated devel/R-rlang to 1.1.5 [mef 2025-02-03]
 	Updated security/easy-rsa to 3.2.2 [gdt 2025-02-04]
-	Added sysutils/opensbi-hifive-unleashed to 1.4 [gutteridge 2025-02-04]
-	Added sysutils/u-boot-hifive-unleashed to 2024.04 [gutteridge 2025-02-04]
+	Added sysutils/opensbi-hifive-unleashed version 1.4 [gutteridge 2025-02-04]
+	Added sysutils/u-boot-hifive-unleashed version 2024.04 [gutteridge 2025-02-04]
 	Updated devel/py-bitarray to 3.0.0 [adam 2025-02-04]
 	Updated devel/py-bitstring to 4.3.0 [adam 2025-02-04]
 	Updated net/py-botocore to 1.36.12 [adam 2025-02-04]
@@ -1424,7 +1421,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-dateparser to 1.2.1 [adam 2025-02-05]
 	Updated www/nginx to 1.26.3 [osa 2025-02-05]
 	Updated www/nginx-devel to 1.27.4 [osa 2025-02-05]
-	Updated www/nginx-devel to 1.27.4nb0 [osa 2025-02-05]
 	Updated databases/py-aiosqlite to 0.21.0 [adam 2025-02-05]
 	Updated databases/py-peewee to 3.17.9 [adam 2025-02-05]
 	Updated devel/py-rlp to 4.1.0 [adam 2025-02-05]
