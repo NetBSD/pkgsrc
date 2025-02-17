@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1450 2025/02/17 15:38:53 micha Exp $
+$NetBSD: CHANGES-2025,v 1.1451 2025/02/17 16:38:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1934,3 +1934,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-pgsql to 3.9.2 [taca 2025-02-17]
 	Updated mail/postfix-sqlite to 3.9.2 [taca 2025-02-17]
 	Updated devel/muon to 0.4.0 [micha 2025-02-17]
+	Added misc/py-pbs-installer version 2025.2.12 [adam 2025-02-17]
+	Updated devel/py-poetry to 2.1.1 [adam 2025-02-17]
