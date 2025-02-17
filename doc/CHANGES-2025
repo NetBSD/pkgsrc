@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1442 2025/02/17 11:49:14 nia Exp $
+$NetBSD: CHANGES-2025,v 1.1443 2025/02/17 12:19:27 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-flake8 to 7.1.2 [adam 2025-02-17]
 	Added x11/wezterm version 20250213.133349 [wiz 2025-02-17]
 	Updated graphics/gifsicle to 1.95 [nia 2025-02-17]
+	Updated devel/tcllib to 1.21 [scole 2025-02-17]
