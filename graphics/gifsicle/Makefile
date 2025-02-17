@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2021/07/20 21:44:04 fcambus Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/17 11:49:03 nia Exp $
 
-DISTNAME=	gifsicle-1.93
+DISTNAME=	gifsicle-1.95
 CATEGORIES=	graphics
 MASTER_SITES=	${HOMEPAGE}
 
