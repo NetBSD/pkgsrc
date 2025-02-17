@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2024/12/31 17:15:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/17 13:34:42 adam Exp $
 
-DISTNAME=	re2c-4.0.2
-PKGREVISION=	1
+DISTNAME=	re2c-4.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=skvadrik/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -12,27 +11,24 @@ HOMEPAGE=	https://re2c.org/
 COMMENT=	Deterministic Finite State Automaton generator
 LICENSE=	public-domain
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison
 # needs 'make install'
 TEST_TARGET=		check
 PYTHON_FOR_BUILD_ONLY=	tool
 
-.include "../../mk/bsd.fast.prefs.mk"
+.include "../../mk/bsd.prefs.mk"
 
-.if ${PKGMANDIR} != "share/man"
 SUBST_CLASSES+=		man
 SUBST_SED.man+=		-e "s,share/man/man1,${PKGMANDIR}/man1,"
 SUBST_FILES.man+=	CMakeLists.txt
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page path.
-.endif
-
-.include "../../mk/bsd.prefs.mk"
 
 # can't use ninja, since ninja tool-depends on this
 CMAKE_GENERATOR=	make
 
-.include "../../lang/python/tool.mk"
 .include "../../devel/cmake/build.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
