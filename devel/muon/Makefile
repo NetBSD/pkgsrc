@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/31 17:11:09 micha Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/17 15:37:44 micha Exp $
 
-PKGNAME=		muon-0.3.1
-DISTNAME=		${PKGNAME:S/muon-//}
+DISTNAME=		0.4.0
+PKGNAME=		muon-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		https://git.sr.ht/~lattis/muon/archive/
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -36,8 +36,9 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-configure:
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${RM} -f subprojects/meson-tests.wrap
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${CONFIG_SHELL} ./bootstrap.sh bootstrap
-	cd ${WRKSRC} && env ${MAKE_ENV} ./bootstrap/muon setup ${MUON_ARGS} output
+	cd ${WRKSRC} && env ${MAKE_ENV} ./bootstrap/muon-bootstrap setup ${MUON_ARGS} output
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} samu -j ${_MAKE_JOBS_N:U1} -C output

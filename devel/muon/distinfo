@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.1 2025/01/31 17:11:10 micha Exp $
+$NetBSD: distinfo,v 1.2 2025/02/17 15:37:44 micha Exp $
 
-BLAKE2s (muon-0.3.1/0.3.1.tar.gz) = b7ef7da182dbd4d207050d13b57d006ad84384ee0dfdce56db8e69dbf1986233
-SHA512 (muon-0.3.1/0.3.1.tar.gz) = f9113d463bee6ecad6d97de0ea4ab210632e7baac265f32992036a5cab005222965615c3b3f7f0a4f2a5a880143f09d59233f43e9d6e3ae3ec700ba28f6a1bbc
-Size (muon-0.3.1/0.3.1.tar.gz) = 446185 bytes
-BLAKE2s (muon-0.3.1/man.tar.gz) = a4c684299b27f35615bf92d90a1761da8de86cdfeab5b77ac62695d611ab194e
-SHA512 (muon-0.3.1/man.tar.gz) = 1f1f054c0e2331c63245adbd1111552b331ecac337f1902490c5ba6dbe48c858787cb5a3cce00b26491b0dfac1001938b7f4461c7df098098e2202cd4021b8da
-Size (muon-0.3.1/man.tar.gz) = 8067 bytes
-SHA1 (patch-meson.build) = 3399887cc133b97fb6f2f5669ae59ec8d7bbaf8b
-SHA1 (patch-tests_project_meson.build) = dd116edbc57961fd34038197e6ec563fd6752e58
+BLAKE2s (muon-0.4.0/0.4.0.tar.gz) = 30ae7789bfd750e8a4ef098dd3d860dda2266690827d2917c87c659a87d70373
+SHA512 (muon-0.4.0/0.4.0.tar.gz) = cc6c63267487c4298599bf8b240e198d7cca7c4b8f0ec80bb1cb92b9ddc752cf612bb79efb77d3152741ef84efa82bb4f0ca1d3bfbfe6694cd31078386ae6166
+Size (muon-0.4.0/0.4.0.tar.gz) = 527121 bytes
+BLAKE2s (muon-0.4.0/man.tar.gz) = 998c4a4dd04a5b192fe21559c4367df6b8b3da63e386ea57c9c4d29a715dd670
+SHA512 (muon-0.4.0/man.tar.gz) = d511ad3e3510092183993ac373ac09b6d47e9ab91ee6d5c6c98c5051eb059cef99762065cd1b24b4b45fe2a242768666ca968ab270d824ce9b74ff24799d0bdc
+Size (muon-0.4.0/man.tar.gz) = 8006 bytes
