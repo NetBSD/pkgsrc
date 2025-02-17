@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1454 2025/02/17 20:15:58 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1455 2025/02/17 22:01:00 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-poetry to 2.1.1 [adam 2025-02-17]
 	Updated pkgtools/pkglint to 23.14.0 [rillig 2025-02-17]
 	Updated x11/alacritty to 0.15.1 [pin 2025-02-17]
+	Updated graphics/libcaca to 0.99.20 [nia 2025-02-17]
