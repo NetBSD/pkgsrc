@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1439 2025/02/17 09:43:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1440 2025/02/17 10:40:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/rclone to 1.69.1 [adam 2025-02-17]
 	Updated devel/py-poetry-core to 2.1.1 [adam 2025-02-17]
 	Updated devel/py-flake8 to 7.1.2 [adam 2025-02-17]
+	Added x11/wezterm version 2025023.133349 [wiz 2025-02-17]
