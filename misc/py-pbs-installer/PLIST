@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/17 16:35:13 adam Exp $
+bin/pbs-install-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/pbs_installer/__init__.py
+${PYSITELIB}/pbs_installer/__init__.pyc
+${PYSITELIB}/pbs_installer/__init__.pyo
+${PYSITELIB}/pbs_installer/__main__.py
+${PYSITELIB}/pbs_installer/__main__.pyc
+${PYSITELIB}/pbs_installer/__main__.pyo
+${PYSITELIB}/pbs_installer/_install.py
+${PYSITELIB}/pbs_installer/_install.pyc
+${PYSITELIB}/pbs_installer/_install.pyo
+${PYSITELIB}/pbs_installer/_utils.py
+${PYSITELIB}/pbs_installer/_utils.pyc
+${PYSITELIB}/pbs_installer/_utils.pyo
+${PYSITELIB}/pbs_installer/_versions.py
+${PYSITELIB}/pbs_installer/_versions.pyc
+${PYSITELIB}/pbs_installer/_versions.pyo
+${PYSITELIB}/pbs_installer/py.typed
