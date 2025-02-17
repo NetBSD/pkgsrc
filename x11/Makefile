@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1060 2025/01/31 02:05:15 scole Exp $
+# $NetBSD: Makefile,v 1.1061 2025/02/17 10:39:55 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -413,6 +413,7 @@ SUBDIR+=	viewres
 SUBDIR+=	vte
 SUBDIR+=	vte3
 SUBDIR+=	wdm
+SUBDIR+=	wezterm
 SUBDIR+=	wired-notify
 SUBDIR+=	wmavgload
 SUBDIR+=	wmfire
