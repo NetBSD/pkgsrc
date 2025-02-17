@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1445 2025/02/17 15:21:25 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1446 2025/02/17 15:23:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/re2c to 4.1 [adam 2025-02-17]
 	Updated www/py-django-filter to 25.1 [adam 2025-02-17]
 	Updated lang/ruby34 to 3.4.2 [taca 2025-02-17]
+	Updated net/ruby-net-imap to 0.5.6nb1 [taca 2025-02-17]
