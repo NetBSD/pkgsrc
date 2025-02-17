@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2025/01/06 21:49:21 ktnb Exp $
+# $NetBSD: Makefile,v 1.43 2025/02/17 22:00:48 nia Exp $
 
-DISTNAME=	libcaca-0.99.beta19
+DISTNAME=	libcaca-0.99.beta20
 PKGNAME=	${DISTNAME:S/beta//}
-PKGREVISION=	5
 CATEGORIES=	graphics
-MASTER_SITES=	http://caca.zoy.org/files/libcaca/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=cacalabs/}
+GITHUB_RELEASE=	v0.99.beta20
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://caca.zoy.org/
@@ -30,4 +30,5 @@ CONFIGURE_ARGS+=	--disable-doc
 LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
