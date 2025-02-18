@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1467 2025/02/18 10:43:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1468 2025/02/18 10:43:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1952,3 +1952,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-websockets to 15.0 [adam 2025-02-18]
 	Updated www/py-google-api-python-client to 2.161.0 [wiz 2025-02-18]
 	Updated devel/py-serializable to 2.0.0 [wiz 2025-02-18]
+	Updated security/py-cyclonedx-python-lib to 8.8.0nb1 [wiz 2025-02-18]
