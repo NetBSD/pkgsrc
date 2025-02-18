@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/10/03 08:43:22 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/18 10:43:11 wiz Exp $
 
-DISTNAME=	py_serializable-1.1.2
+DISTNAME=	py_serializable-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py_//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/py-serializable/}
