@@ -1,4 +1,4 @@
-# $NetBSD: GNUkFreeBSD.mk,v 1.4 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: GNUkFreeBSD.mk,v 1.5 2025/02/18 11:58:53 wiz Exp $
 #
 # Variable definitions for the Debian GNU/kFreeBSD operating system.
 
@@ -51,7 +51,6 @@ _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is unavailable
-_OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups

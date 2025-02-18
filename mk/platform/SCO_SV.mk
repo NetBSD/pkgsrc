@@ -1,4 +1,4 @@
-# $NetBSD: SCO_SV.mk,v 1.2 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: SCO_SV.mk,v 1.3 2025/02/18 11:58:53 wiz Exp $
 #
 # Variable definitions for the OpenServer 5.0.7/3.2 and 6.0.0/5.
 
@@ -32,7 +32,6 @@ _OPSYS_HAS_INET6=	no		# IPv6 is not standard
 _OPSYS_HAS_JAVA=	yes		# Java is not standard
 _OPSYS_HAS_MANZ=	no		# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
-_OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF		# shared lib type
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups

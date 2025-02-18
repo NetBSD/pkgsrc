@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.5 2019/04/23 09:27:46 adam Exp $
+# $NetBSD: version.mk,v 1.6 2025/02/18 11:58:53 wiz Exp $
 #
 # Distill the PERL5_REQD list into a single value that is the highest
 # version of Perl required.
@@ -6,7 +6,6 @@
 
 # Default to needing Perl 5.
 PERL5_REQD+=	5.0
-PERL5_REQD+=	${_OPSYS_PERL_REQD}
 
 .if !defined(_PERL5_REQD)
 _PERL5_REQD?=	none

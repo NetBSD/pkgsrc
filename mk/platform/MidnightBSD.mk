@@ -1,4 +1,4 @@
-# $NetBSD: MidnightBSD.mk,v 1.2 2021/11/09 12:04:43 nia Exp $
+# $NetBSD: MidnightBSD.mk,v 1.3 2025/02/18 11:58:53 wiz Exp $
 #
 # Variable definitions for the MidnightBSD operating system.
 
@@ -45,7 +45,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	${_OPSYS_SHLIB_TYPE_cmd:sh}	# shared library type
 _OPSYS_SHLIB_TYPE_cmd=	\

@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.26 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: HPUX.mk,v 1.27 2025/02/18 11:58:53 wiz Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -43,7 +43,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	yes	# Java is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	${OBJECT_FMT}	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
