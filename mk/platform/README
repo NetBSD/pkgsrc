@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.10 2024/03/16 22:55:42 nia Exp $
+$NetBSD: README,v 1.11 2025/02/18 11:58:53 wiz Exp $
 
 These files contain platform-specific definitions that are used by the
 pkgsrc infrastructure.
@@ -78,8 +78,6 @@ TODO: Document all these variables.
     _OPSYS_HAS_MANZ is "yes" if MANZ controles gzipping of man pages, or "no".
 
     _OPSYS_HAS_OSSAUDIO is "yes" if libossadio is available
-
-    _OPSYS_PERL_REQD is base version of perl required, or empty if not required.
 
     _OPSYS_PTHREAD_AUTO is "yes" if -lpthread is needed for pthreads, or "no".
 
