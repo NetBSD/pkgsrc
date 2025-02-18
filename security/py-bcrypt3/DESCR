@@ -1,0 +1,4 @@
+Modern password hashing for your software and your servers.
+
+This is the last version of this package that does not use
+Rust.

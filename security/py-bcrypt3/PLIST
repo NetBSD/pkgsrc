@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/18 15:03:53 wiz Exp $
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
+${PYSITELIB}/bcrypt/__about__.py
+${PYSITELIB}/bcrypt/__about__.pyc
+${PYSITELIB}/bcrypt/__about__.pyo
+${PYSITELIB}/bcrypt/__init__.py
+${PYSITELIB}/bcrypt/__init__.pyc
+${PYSITELIB}/bcrypt/__init__.pyo
+${PYSITELIB}/bcrypt/_bcrypt.abi3.so
+${PYSITELIB}/bcrypt/_bcrypt.pyi
+${PYSITELIB}/bcrypt/py.typed
