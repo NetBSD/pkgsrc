@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.187 2025/02/11 12:30:15 ryoon Exp $
+$NetBSD: distinfo,v 1.188 2025/02/18 11:49:55 wiz Exp $
 
 BLAKE2s (perl-5.40.1.tar.xz) = 8991d9896844fcdedf79c1c001785605f1e17969dc942f4c248fb1403a0a3556
 SHA512 (perl-5.40.1.tar.xz) = 3ff16b3462ce43ff38dab21b3dfc20f81772b8c9eac19ab96ba2d5e6cbb390e2302fa76c4879f915249357cd11c7ec0d548bcbf3ab2c156df1b9fca95da3f545
@@ -9,7 +9,7 @@ SHA1 (patch-builtin.c) = 7ac5821ab3f4c9ae29d2cbe9db0407560aee2328
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__BeOS.pm) = 79e5aeccfa272ca5ec08bffc616d8053ae90ac51
 SHA1 (patch-cpan_ExtUtils-MakeMaker_lib_ExtUtils_MM__Unix.pm) = 6171a21a24e3bea312155b1d5f692d76ef733d23
 SHA1 (patch-cpan_ExtUtils-MakeMaker_t_MM__BeOS.t) = 9b0e7ab85fdab4887b1754599a8879bd7d9f36cc
-SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
+SHA1 (patch-hints_cygwin.sh) = 5e2e7179336c9bc085bd2e83d22755a235ea1a4a
 SHA1 (patch-hints_linux.sh) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
 SHA1 (patch-hints_netbsd.sh) = cb498170c18f1f429eed9be245cd1df24c7ad628
 SHA1 (patch-hints_solaris__2.sh) = 83b20650435ea3b62314af6059f3d82c3dd6b0a2
