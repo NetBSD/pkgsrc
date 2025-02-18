@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1462 2025/02/18 10:07:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1463 2025/02/18 10:13:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/double-conversion to 3.3.1 [wiz 2025-02-18]
 	Updated inputmethod/librime to 1.13.1 [adam 2025-02-18]
 	Updated devel/py-typeguard to 4.4.2 [adam 2025-02-18]
+	Updated multimedia/openh264 to 2.6.0 [wiz 2025-02-18]
