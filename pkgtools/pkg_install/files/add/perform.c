@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.130 2025/02/18 11:26:40 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.131 2025/02/18 12:55:11 wiz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.130 2025/02/18 11:26:40 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.131 2025/02/18 12:55:11 wiz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1581,6 +1581,13 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 
 	if (pkg->other_version != NULL) {
 		/*
+		 * If we're upgrading then close stdout to avoid repeating
+		 * install/deinstall messages which can be confusing (e.g.
+		 * telling users to remove config files that are still in use).
+		 */
+		HideStdout = TRUE;
+
+		/*
 		 * Replacing an existing package.
 		 * Write meta-data, get rid of the old version,
 		 * install/update dependencies and finally extract.
@@ -1638,7 +1645,7 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 	if (Verbose)
 		printf("Package %s registered in %s\n", pkg->pkgname, pkg->install_logdir);
 
-	if (pkg->meta_data.meta_display != NULL)
+	if (pkg->meta_data.meta_display != NULL && !HideStdout)
 		fputs(pkg->meta_data.meta_display, stdout);
 
 	status = 0;
@@ -1685,6 +1692,7 @@ clean_memory:
 	free(pkg->pkgname);
 clean_find_archive:
 	free(pkg);
+	HideStdout = FALSE;
 	return status;
 }
 
