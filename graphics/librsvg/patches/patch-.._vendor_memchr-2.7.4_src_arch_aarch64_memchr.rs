@@ -1,4 +1,4 @@
-$NetBSD: patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs,v 1.1 2025/02/15 23:41:46 he Exp $
+$NetBSD: patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs,v 1.2 2025/02/18 14:23:06 adam Exp $
 
 Don't try to do neon / SIMD on big-endian aarch64.
 
@@ -18,7 +18,7 @@ Don't try to do neon / SIMD on big-endian aarch64.
              $ty::new_unchecked($($needles),+).$find($start, $end)
          }
 -        #[cfg(not(target_feature = "neon"))]
-+        #[cfg(not(all(target_feature = "neon", target_endian = "little"))]
++        #[cfg(not(all(target_feature = "neon", target_endian = "little")))]
          {
              use crate::arch::all::memchr::$ty;
  
