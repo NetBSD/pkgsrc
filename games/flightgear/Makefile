@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.186 2025/02/12 11:29:35 wiz Exp $
+# $NetBSD: Makefile,v 1.187 2025/02/18 09:20:12 wiz Exp $
 
 DISTNAME=	flightgear-2020.3.11
 PKGREVISION=	54
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.flightgear.org/
 COMMENT=	The FlightGear Simulator
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+# https://github.com/boostorg/move/issues/59
+BROKEN=		"broken with boost 1.87"
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++14
