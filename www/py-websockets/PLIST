@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2024/09/22 16:54:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/02/18 10:32:28 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -28,6 +28,9 @@ ${PYSITELIB}/websockets/asyncio/connection.pyo
 ${PYSITELIB}/websockets/asyncio/messages.py
 ${PYSITELIB}/websockets/asyncio/messages.pyc
 ${PYSITELIB}/websockets/asyncio/messages.pyo
+${PYSITELIB}/websockets/asyncio/router.py
+${PYSITELIB}/websockets/asyncio/router.pyc
+${PYSITELIB}/websockets/asyncio/router.pyo
 ${PYSITELIB}/websockets/asyncio/server.py
 ${PYSITELIB}/websockets/asyncio/server.pyc
 ${PYSITELIB}/websockets/asyncio/server.pyo
@@ -122,6 +125,9 @@ ${PYSITELIB}/websockets/sync/connection.pyo
 ${PYSITELIB}/websockets/sync/messages.py
 ${PYSITELIB}/websockets/sync/messages.pyc
 ${PYSITELIB}/websockets/sync/messages.pyo
+${PYSITELIB}/websockets/sync/router.py
+${PYSITELIB}/websockets/sync/router.pyc
+${PYSITELIB}/websockets/sync/router.pyo
 ${PYSITELIB}/websockets/sync/server.py
 ${PYSITELIB}/websockets/sync/server.pyc
 ${PYSITELIB}/websockets/sync/server.pyo
