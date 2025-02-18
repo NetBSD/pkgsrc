@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.68 2025/02/16 22:54:11 wiz Exp $
+$NetBSD: distinfo,v 1.69 2025/02/18 14:23:06 adam Exp $
 
 BLAKE2s (adler-1.0.2.crate) = f263779d752af886455fc0f42c997893fb1a09edcf1bd2980605251c2e3602aa
 SHA512 (adler-1.0.2.crate) = 7ab190d31890fc05b0b55d8e2c6527a505e06793d5496be0b3831e0513412f9ba97f8148f6f68ed0770fa9cd980a5092d885e058becf1d5506b7c74b82674aa1
@@ -882,7 +882,7 @@ Size (zune-jpeg-0.4.13.crate) = 62999 bytes
 SHA1 (patch-.._vendor_cfg-expr-0.15.8_src_targets_builtins.rs) = d8de3edfff043b6cd1cc314c62c87adcc5beddbd
 SHA1 (patch-.._vendor_matrixmultiply-0.3.9_src_dgemm__kernel.rs) = d967e6918dccf3723efa78366a6713ad0af33536
 SHA1 (patch-.._vendor_matrixmultiply-0.3.9_src_sgemm__kernel.rs) = d98ef31134fd94d0068dd5bd1602d3de6383ab75
-SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs) = 7539a89e29d600a732b04f84377f76e47cf0dfd1
+SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_memchr.rs) = f6017f73b1922197c7c53d8ad23ff21334af652c
 SHA1 (patch-.._vendor_memchr-2.7.4_src_arch_aarch64_mod.rs) = 690e22e915ef8ad6c3381ebdc10574fae5316f4f
 SHA1 (patch-.._vendor_memchr-2.7.4_src_memchr.rs) = 3c7b0002b847ce44e5f35cd3a9089b9983017023
 SHA1 (patch-.._vendor_memchr-2.7.4_src_memmem_searcher.rs) = 862bfd9a4dee057a690f8d234e1ae893ae173b53
