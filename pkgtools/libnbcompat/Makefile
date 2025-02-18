@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2024/08/05 11:29:53 tnn Exp $
+# $NetBSD: Makefile,v 1.95 2025/02/18 13:06:28 wiz Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
@@ -17,7 +17,13 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		LIBMODE=${LIBMODE}
 
 # Enable by default for standalone builds
-CONFIGURE_ARGS+=	--enable-db
+CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db
+
+# Avoid any dependency cycles
+CHECK_PERMS_SKIP=	*
+CHECK_PORTABILITY_SKIP=	*
+PKGSRC_LOCKTYPE=	none
+IGNORE_CCACHE=		yes
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
