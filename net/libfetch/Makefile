@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2025/02/10 03:52:32 pho Exp $
+# $NetBSD: Makefile,v 1.67 2025/02/18 13:00:09 wiz Exp $
 
 DISTNAME=	libfetch-2.40
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
