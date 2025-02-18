@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2025/02/14 01:55:15 gutteridge Exp $
+# $NetBSD: Makefile,v 1.114 2025/02/18 08:34:46 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,6 +8,8 @@ MASTER_SITES+=		https://archive.xfce.org/src/xfce/xfce4-panel/${PKGVERSION_NOREV
 
 HOMEPAGE=		https://docs.xfce.org/xfce/xfce4-panel/start
 COMMENT=		Xfce panel
+
+TOOL_DEPENDS+=		xfce4-dev-tools-[0-9]*:../../devel/xfce4-dev-tools
 
 USE_TOOLS+=		gdbus-codegen
 
