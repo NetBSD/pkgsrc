@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.65 2024/10/14 06:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2025/02/18 15:32:10 wiz Exp $
 
 VERSION_BASE=	1.19.0
 VERSION_RC=
 DISTNAME=	tahoe-lafs-${VERSION_BASE}${VERSION_RC}
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	https://tahoe-lafs.org/downloads/
 
@@ -26,7 +27,6 @@ DEPENDS+=	${PYPKGPREFIX}-foolscap>=21.7.0:../../net/py-foolscap
 # TODO: conch??
 DEPENDS+=	${PYPKGPREFIX}-twisted>=19.10.0:../../net/py-twisted
 # bcrypt and appdirs are required as twisted deps at runtime
-DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 DEPENDS+=	${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
@@ -47,7 +47,7 @@ DEPENDS+=	${PYPKGPREFIX}-click>8.1.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 
-PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
+PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt cryptography
 
 # tor_requires
 DEPENDS+=	${PYPKGPREFIX}-txtorcon>=0.17.0:../../net/py-txtorcon
