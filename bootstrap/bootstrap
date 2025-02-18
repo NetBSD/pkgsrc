@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.327 2025/02/18 13:06:28 wiz Exp $
+# $NetBSD: bootstrap,v 1.328 2025/02/18 13:45:57 wiz Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -583,7 +583,6 @@ CYGWIN_*)
 	root_user=Administrators
 	root_group=Administrators
 	opsys=`uname -o`
-	need_sed=yes
 	machine_arch=`uname -m`
 	# only used for unprivileged builds.
 	whoamiprog='id -u'
