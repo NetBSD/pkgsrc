@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1471 2025/02/18 10:54:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1472 2025/02/18 13:00:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1957,3 +1957,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/wayland-protocols to 1.41 [wiz 2025-02-18]
 	Updated net/py-aiorpcX to 0.24.0 [adam 2025-02-18]
 	Updated net/py-zeroconf to 0.145.1 [adam 2025-02-18]
+	Updated net/libfetch to 2.40nb2 [wiz 2025-02-18]
