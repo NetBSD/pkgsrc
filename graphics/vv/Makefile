@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2025/02/18 10:33:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/18 10:50:36 wiz Exp $
 
-DISTNAME=	vv-3.1.0.20250208
-PKGREVISION=	2
+DISTNAME=	vv-3.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wolfpld/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-GITHUB_TAG=	84747114964a84aa7b9f1495cfc580b98817fac2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/wolfpld/vv/
@@ -37,6 +35,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/vv/
 
 .include "../../devel/cmake/build.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../converters/aklomp-base64/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
