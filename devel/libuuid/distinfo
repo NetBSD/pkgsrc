@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2024/12/28 14:10:23 wiz Exp $
+$NetBSD: distinfo,v 1.28 2025/02/18 15:14:51 wiz Exp $
 
 BLAKE2s (util-linux-2.40.2.tar.xz) = e83f6b7f6b202ca27e8829ed7d70c4a37054925652f72de810908c4590f9ae68
 SHA512 (util-linux-2.40.2.tar.xz) = ffe20b915a518a150401d429b0338bc7022190e4ca0ef91a6d9eea345db8c1e11ad01784163b8fcf978506f3f5cad473f29d5d4ef93a4c66a5ae0ebd9fb0c8f2
@@ -6,6 +6,7 @@ Size (util-linux-2.40.2.tar.xz) = 8854820 bytes
 SHA1 (patch-Makefile.in) = 0d581288a8415719722cd095e71cf36a3d8cbf6a
 SHA1 (patch-configure) = 578db2e08fa28066732079d4efff3aa97837a7e5
 SHA1 (patch-include_strutils.h) = e993e6a5665b759c596bd1a46217f4c05fdcb120
+SHA1 (patch-include_ttyutils.h) = 6807e1ed50fef80cd9fc139b08f92fdce9a0779e
 SHA1 (patch-lib_canonicalize.c) = 1eee2273016ed673f062f38e80f8a30f1304a7d5
 SHA1 (patch-lib_ismounted.c) = ee9b3ea5dc4173790e3fc5207f860e8b6fbc29d5
 SHA1 (patch-lib_mangle.c) = cad7b1fbb51205b973f963b9c372f0884b882db7
