@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2024/12/27 08:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2025/02/18 15:32:10 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.4.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing-gtk/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc
-DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
+PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
@@ -56,4 +56,5 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.42.2		# for introspection
 .include "../../lang/python/wheel.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

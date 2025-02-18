@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2023/11/25 18:44:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/18 15:32:10 wiz Exp $
 
 DISTNAME=		${GITHUB_PROJECT}-${GITHUB_TAG}
 PKGNAME=		${GITHUB_PROJECT}-0.0.20150326
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ser/}
 GITHUB_PROJECT=		checkpassword-phpbb
@@ -14,7 +14,6 @@ COMMENT=		DJB-style checkpassword for phpBB MySQL userdb
 LICENSE=		gnu-lgpl-v3
 
 DEPENDS+=		${PYPKGPREFIX}-mysql-connector-[0-9]*:../../databases/py-mysql-connector
-DEPENDS+=		${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
@@ -27,4 +26,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/python/application.mk"
+PYTHON_VERSIONED_DEPENDENCIES+=	bcrypt
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
