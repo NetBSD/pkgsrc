@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2024/11/06 11:14:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.115 2025/02/18 15:23:33 wiz Exp $
 
 DISTNAME=	libgcrypt-1.11.0
 PKGREVISION=	2
@@ -22,6 +22,10 @@ INFO_FILES=		yes
 .if !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-fheinous-gnu-extensions
 .endif
+
+# Parts of the code actively reject optimisation.  The configure script
+# strips out most flags but oddly does not handle -O so do it ourselves.
+CFLAGS:=		${CFLAGS:C/^-O$//g}
 
 SUBST_CLASSES+=		rpath
 SUBST_FILES.rpath=	src/libgcrypt-config.in
