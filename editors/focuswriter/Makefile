@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/02/16 08:53:13 pin Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/18 09:24:20 wiz Exp $
 
 DISTNAME=	focuswriter-1.8.10
 CATEGORIES=	editors
@@ -10,6 +10,8 @@ HOMEPAGE=	https://gottcode.org/focuswriter/
 COMMENT=	Simple, distraction-free writing environment
 LICENSE=	gnu-gpl-v3
 
+TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
+
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
@@ -18,8 +20,7 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_PREFIX=${PREFIX}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_MANDIR=${PKGMANDIR}
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_INSTALL_DATADIR=${PREFIX}/share
 
-TOOL_DEPENDS+=	qt6-qttools-[0-9]*:../../devel/qt6-qttools
-
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../multimedia/qt6-qtmultimedia/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
