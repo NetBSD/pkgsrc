@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.312 2025/02/17 15:47:14 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.313 2025/02/18 16:47:52 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -14260,7 +14260,7 @@ apache-tomcat>=7.0.79<7.0.84	unexpected-code-execution	https://nvd.nist.gov/vuln
 apache-tomcat>=8.0.45<8.0.48	unexpected-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-15706
 apache-tomcat>=8.5.16<8.5.24	unexpected-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2017-15706
 ming-[0-9]*	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2018-5294
-p7zip<18.00	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2018-5996
+p7zip<17.01	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2018-5996
 qemu<2.10.2	integer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2017-18043
 zziplib<0.13.68	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-6484
 zabbix<2.3.2	xml-external-entity	https://nvd.nist.gov/vuln/detail/CVE-2014-3005
@@ -14958,7 +14958,7 @@ phpmyadmin<4.7.0	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2017
 libreoffice<5.4.7	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2018-10583
 openvpn<2.4.6	double-free			https://nvd.nist.gov/vuln/detail/CVE-2018-9336
 ansible<1.2.1	man-in-the-middle		https://nvd.nist.gov/vuln/detail/CVE-2013-2233
-p7zip<18.05	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-10115
+p7zip<17.01	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-10115
 lrzip-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10685
 libgxps-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10733
 libgxps-[0-9]*	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-10767
