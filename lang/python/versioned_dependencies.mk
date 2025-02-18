@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.115 2024/05/10 12:11:34 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.116 2025/02/18 15:05:10 wiz Exp $
 #
 # This file determines which separate distribution of a Python package
 # is used as dependency, depending on if Rust or C should be used.
@@ -10,13 +10,14 @@
 # PYTHON_VERSIONED_DEPENDENCIES
 #       The Python package which should be added as a dependency.
 #
-#       Possible values: OpenSSL cryptography
+#       Possible values: OpenSSL bcrypt cryptography
 #       Default: (nothing)
 #
 
 .include "../../lang/python/pyversion.mk"
 
 _PY_VERS_PKG.OpenSSL=		security/py-OpenSSL
+_PY_VERS_PKG.bcrypt=		security/py-bcrypt
 _PY_VERS_PKG.cryptography=	security/py-cryptography
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
