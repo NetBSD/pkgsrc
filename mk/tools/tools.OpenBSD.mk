@@ -1,4 +1,4 @@
-# $NetBSD: tools.OpenBSD.mk,v 1.38 2023/05/09 14:50:33 schmonz Exp $
+# $NetBSD: tools.OpenBSD.mk,v 1.39 2025/02/18 11:29:11 wiz Exp $
 #
 # System-supplied tools for the OpenBSD operating system.
 
@@ -37,6 +37,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/lex
+TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gstrip?=		/usr/bin/strip
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
