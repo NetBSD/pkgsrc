@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.14 2025/02/18 13:44:38 wiz Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.15 2025/02/18 13:45:17 wiz Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -125,7 +125,7 @@ TOOLS_PLATFORM.readlink?=	/bin/readlink
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sdiff?=		/bin/sdiff
-TOOLS_PLATFORM.sed?=		/bin/sed -b
+TOOLS_PLATFORM.sed?=		/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 TOOLS_PLATFORM.soelim?=		/bin/soelim
