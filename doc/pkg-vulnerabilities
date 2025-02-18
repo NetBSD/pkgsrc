@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.313 2025/02/18 16:47:52 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.314 2025/02/18 21:49:49 morr Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26124,3 +26124,4 @@ postgresql-server>=14<14.16	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2
 postgresql-server>=15<15.11	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
 postgresql-server>=16<16.7	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
 postgresql-server>=17<17.3	sql-injection	https://nvd.nist.gov/vuln/detail/CVE-2025-1094
+vim<9.1.1115			use-after-free	https://github.com/vim/vim/security/advisories/GHSA-63p5-mwg2-787v
