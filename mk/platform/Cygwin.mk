@@ -1,10 +1,6 @@
-# $NetBSD: Cygwin.mk,v 1.17 2025/02/18 11:48:58 wiz Exp $
+# $NetBSD: Cygwin.mk,v 1.18 2025/02/18 11:51:22 wiz Exp $
 #
 # Variable definitions for the Windows with Cygwin.
-
-###
-### Platform definitions common to pkgsrc/mk/platform/*.mk
-###
 
 CPP?=		/bin/cpp
 ECHO_N?=	${ECHO} -n
@@ -44,6 +40,8 @@ _OPSYS_SYSTEM_RPATH?=		# /usr/bin
 _OPSYS_LIB_DIRS?=		/lib /usr/lib
 _OPSYS_INCLUDE_DIRS?=		/usr/include
 
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
+
 _OPSYS_EXE_SUFFIX=	.exe	# executables may have suffix
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
@@ -72,4 +70,3 @@ _OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 .if !empty(OS_VARIANT:MCYGWIN_NT-[6-9].*)
 _OPSYS_REQUIRE_UAC_MANIFEST=	yes
 .endif
-
