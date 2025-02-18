@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1473 2025/02/18 15:04:18 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1474 2025/02/18 15:20:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zeroconf to 0.145.1 [adam 2025-02-18]
 	Updated net/libfetch to 2.40nb2 [wiz 2025-02-18]
 	Added security/py-bcrypt3 version 3.2.2 [wiz 2025-02-18]
+	Updated pkgtools/mktools to 20250213 [wiz 2025-02-18]
