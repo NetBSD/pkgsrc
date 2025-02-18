@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2025/02/15 15:34:05 gdt Exp $
+# $NetBSD: Makefile,v 1.108 2025/02/18 15:32:10 wiz Exp $
 
 DISTNAME=	matrix-synapse-1.124.0
 CATEGORIES=	chat
@@ -114,7 +114,7 @@ post-install:
 	# install phase, a pre-install target to clean them up in the
 	# sources does not work.  Cleaning them up earlier breaks
 	# mkpatches.
-	cd ${DESTDIR} && find . -name '*.orig' | xargs rm 
+	cd ${DESTDIR} && find . -name '*.orig' | xargs rm
 
 # \todo Grok upstream's new test scheme and port to it.
 # As of 1.98.0 all tests fail, most of them failing to import
