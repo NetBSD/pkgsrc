@@ -1,5 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/19 18:13:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/18 10:01:14 wiz Exp $
 include/SDL2/SDL_mixer.h
+lib/cmake/SDL2_mixer/FindFLAC.cmake
+lib/cmake/SDL2_mixer/FindFluidSynth.cmake
+lib/cmake/SDL2_mixer/FindOpusFile.cmake
+lib/cmake/SDL2_mixer/FindVorbis.cmake
+lib/cmake/SDL2_mixer/Findgme.cmake
+lib/cmake/SDL2_mixer/Findlibxmp-lite.cmake
+lib/cmake/SDL2_mixer/Findlibxmp.cmake
+lib/cmake/SDL2_mixer/Findmodplug.cmake
+lib/cmake/SDL2_mixer/Findmpg123.cmake
+lib/cmake/SDL2_mixer/Findtremor.cmake
+lib/cmake/SDL2_mixer/Findwavpack.cmake
+lib/cmake/SDL2_mixer/PkgConfigHelper.cmake
 lib/cmake/SDL2_mixer/sdl2_mixer-config-version.cmake
 lib/cmake/SDL2_mixer/sdl2_mixer-config.cmake
 lib/libSDL2_mixer.la
