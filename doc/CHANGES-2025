@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1476 2025/02/18 19:57:03 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1477 2025/02/18 21:16:24 morr Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1962,3 +1962,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/mktools to 20250213 [wiz 2025-02-18]
 	Updated devel/asdf to 0.16.3 [schmonz 2025-02-18]
 	Updated www/xh to 0.24.0 [pin 2025-02-18]
+	Updated editors/vim-share to 9.1.1122 [morr 2025-02-18]
