@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1478 2025/02/18 21:57:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1479 2025/02/18 22:08:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/xh to 0.24.0 [pin 2025-02-18]
 	Updated editors/vim-share to 9.1.1122 [morr 2025-02-18]
 	Updated pkgtools/pkg_install to 20250218 [wiz 2025-02-18]
+	Updated textproc/libxml2 to 2.12.10 [wiz 2025-02-18]
