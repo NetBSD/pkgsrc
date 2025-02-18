@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1475 2025/02/18 19:11:18 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1476 2025/02/18 19:57:03 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/py-bcrypt3 version 3.2.2 [wiz 2025-02-18]
 	Updated pkgtools/mktools to 20250213 [wiz 2025-02-18]
 	Updated devel/asdf to 0.16.3 [schmonz 2025-02-18]
+	Updated www/xh to 0.24.0 [pin 2025-02-18]
