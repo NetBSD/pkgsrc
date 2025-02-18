@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.58 2024/10/11 06:42:18 nia Exp $
+# $NetBSD: Makefile,v 1.59 2025/02/18 03:58:31 kim Exp $
 
 DISTNAME=	procmail-3.24
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BuGlessRB/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	kim@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/BuGlessRB/procmail
 COMMENT=	Local mail delivery agent
 LICENSE=	artistic OR gnu-gpl-v2
