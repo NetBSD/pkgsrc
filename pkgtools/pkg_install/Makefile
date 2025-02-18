@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2025/02/13 02:31:05 pho Exp $
+# $NetBSD: Makefile,v 1.243 2025/02/18 11:26:48 wiz Exp $
 
 # Notes to package maintainers:
 #
@@ -201,7 +201,7 @@ pre-configure:
 		--disable-bsdunzip --disable-shared			\
 		--disable-dependency-tracking --disable-maintainer-mode	\
 		--without-expat --without-xml2 --without-lz4 --without-lzo2 \
-		--without-iconv --without-nettle --without-zstd		\
+		--without-iconv --without-nettle --without-zstd --without-cng \
 		${LIBARCHIVE_CONFIGURE_ARGS}
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
