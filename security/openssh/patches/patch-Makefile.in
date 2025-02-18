@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.8 2024/07/01 09:19:40 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.9 2025/02/18 09:33:07 wiz Exp $
 
 Use askpass provided by pkgsrc.
 
@@ -15,7 +15,7 @@ Removed install-sysconf as we handle that phase through post-install
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
  SSHD_SESSION=$(libexecdir)/sshd-session
-@@ -389,7 +390,7 @@ distprep: catman-do depend-check
+@@ -389,7 +389,7 @@ distprep: catman-do depend-check
  	-rm -rf autom4te.cache .depend.bak
  
  install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
