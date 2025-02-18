@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2025/02/05 09:38:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2025/02/18 08:45:39 adam Exp $
 
-DISTNAME=	tree-sitter-0.25.1
-PKGREVISION=	1
+DISTNAME=	tree-sitter-0.25.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
