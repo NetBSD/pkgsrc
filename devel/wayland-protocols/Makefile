@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2025/01/25 10:15:23 riastradh Exp $
+# $NetBSD: Makefile,v 1.18 2025/02/18 10:53:25 wiz Exp $
 
-DISTNAME=	wayland-protocols-1.39
+DISTNAME=	wayland-protocols-1.41
 CATEGORIES=	devel
 MASTER_SITES=	https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/${PKGVERSION_NOREV}/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE+=	wayland-protocols.pc.in
 # under PREFIX while we need it to be under TOOLBASE, so we have to set
 # up a meson cross binary with the whole PREFIX-qualified original
 # pathname.
-TOOL_DEPENDS+=				wayland>=0:../../wayland
+TOOL_DEPENDS+=				wayland>=0:../../devel/wayland
 MESON_BINARIES+=			wayland_scanner
 MESON_BINARY_KEY.wayland_scanner=	${PREFIX}/bin/wayland-scanner
 MESON_BINARY.wayland_scanner=		${TOOLBASE}/bin/wayland-scanner
