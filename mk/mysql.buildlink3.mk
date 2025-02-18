@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.46 2024/12/25 09:23:27 nia Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.47 2025/02/18 11:56:41 wiz Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -60,7 +60,6 @@ MYSQL_PKGSRCDIR.mariadb114=	../../databases/mariadb114-client
 
 .for ver in ${MYSQL_VERSIONS_ALL}
 MYSQL_OK.${ver}=		no
-MYSQL_INSTALLED.${ver}=		no
 _SYS_VARS.mysql+=		MYSQL_PKGBASE.${ver} MYSQL_PKGSRCDIR.${ver}
 .endfor
 
@@ -86,7 +85,7 @@ MYSQL_VERSIONS_ACCEPTED:=	${MYSQL_VERSIONS_ACCEPTED:tl}
 #
 .for ver in ${MYSQL_VERSIONS_ACCEPTED}
 MYSQL_OK.${ver}=		yes
-MYSQL_INSTALLED.${ver}!=					\
+MYSQL_INSTALLED_CMD.${ver}=					\
 	if ${PKG_INFO} -qe ${MYSQL_PKGBASE.${ver}:Q}; then	\
 		${ECHO} yes;					\
 	else							\
@@ -109,12 +108,14 @@ MYSQL_INSTALLED.${ver}!=					\
 .if defined(MYSQL_VERSION_REQD)
 MYSQL_VERSION=	${MYSQL_VERSION_REQD}
 .elif ${MYSQL_OK.${MYSQL_VERSION_DEFAULT}} == "yes" && \
-      ${MYSQL_INSTALLED.${MYSQL_VERSION_DEFAULT}} == "yes"
+      ${MYSQL_INSTALLED_CMD.${MYSQL_VERSION_DEFAULT}:sh} == "yes"
 MYSQL_VERSION=	${MYSQL_VERSION_DEFAULT}
 .else
 .  for ver in ${MYSQL_VERSIONS_ACCEPTED}
-.    if ${MYSQL_INSTALLED.${ver}} == "yes"
-MYSQL_VERSION?=	${ver}
+.    if !defined(MYSQL_VERSION)
+.      if ${MYSQL_INSTALLED_CMD.${ver}:sh} == "yes"
+MYSQL_VERSION=	${ver}
+.      endif
 .    endif
 .  endfor
 .endif
