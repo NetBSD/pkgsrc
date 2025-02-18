@@ -1,4 +1,6 @@
-$NetBSD: patch-stable_xdg-shell_xdg-shell.xml,v 1.1 2023/01/03 20:43:35 ryoon Exp $
+$NetBSD: patch-stable_xdg-shell_xdg-shell.xml,v 1.2 2025/02/18 10:53:25 wiz Exp $
+
+* Remove 0x97 characters to fix gtk3 under NetBSD/amd64 10.99.2 as of 2022-01-03.
 
 --- stable/xdg-shell/xdg-shell.xml.orig	2022-11-29 13:37:41.000000000 +0000
 +++ stable/xdg-shell/xdg-shell.xml
