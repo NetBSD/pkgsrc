@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.11 2009/04/14 17:34:41 joerg Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.12 2025/02/18 13:06:29 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -35,7 +35,7 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
-__RCSID("$NetBSD: getopt_long.c,v 1.11 2009/04/14 17:34:41 joerg Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.12 2025/02/18 13:06:29 wiz Exp $");
 
 #if 0
 #include "namespace.h"
@@ -67,9 +67,6 @@ int	opterr = 1;		/* if error message should be printed */
 int	optind = 1;		/* index into parent argv vector */
 int	optopt = '?';		/* character checked for validity */
 char    *optarg;		/* argument associated with option */
-#endif
-#if !HAVE_DECL_OPTRESET
-int	optreset;		/* reset getopt */
 #endif
 
 #if 0
@@ -191,11 +188,8 @@ getopt_internal(int nargc, char **nargv, const char *options)
 	if (optind == 0)
 		optind = 1;
 
-	if (optreset)
-		nonopt_start = nonopt_end = -1;
 start:
-	if (optreset || !*place) {		/* update scanning pointer */
-		optreset = 0;
+	if (!*place) {		/* update scanning pointer */
 		if (optind >= nargc) {          /* end of argument vector */
 			place = EMSG;
 			if (nonopt_end != -1) {

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.39 2015/05/02 12:52:59 joerg Exp $
+# $NetBSD: Makefile.in,v 1.40 2025/02/18 13:06:29 wiz Exp $
 #
 
 srcdir=		@srcdir@
@@ -24,6 +24,7 @@ LIB=		libnbcompat.a
 INCS=		nbcompat.h \
 		nbcompat/assert.h \
 		nbcompat/cdefs.h \
+		nbcompat/config.h \
 		nbcompat/ctype.h \
 		nbcompat/dirent.h \
 		nbcompat/endian.h \
