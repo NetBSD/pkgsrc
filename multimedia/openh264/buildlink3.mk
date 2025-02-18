@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2021/11/16 14:56:36 nia Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/02/18 10:33:18 wiz Exp $
 
 BUILDLINK_TREE+=	openh264
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	openh264
 OPENH264_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openh264+=	openh264>=1.5.0
+BUILDLINK_ABI_DEPENDS.openh264?=		openh264>=2.6.0
 BUILDLINK_PKGSRCDIR.openh264?=		../../multimedia/openh264
 
 .endif	# OPENH264_BUILDLINK3_MK

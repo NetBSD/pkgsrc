@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.171 2025/02/12 06:45:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.172 2025/02/18 10:33:19 wiz Exp $
 
 DISTNAME=	darktable-5.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
