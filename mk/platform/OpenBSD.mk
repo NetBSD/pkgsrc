@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.45 2023/11/15 14:14:09 nia Exp $
+# $NetBSD: OpenBSD.mk,v 1.46 2025/02/18 11:58:53 wiz Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -49,7 +49,6 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	${_OPSYS_SHLIB_TYPE_cmd:sh}	# shared library type
 _OPSYS_SHLIB_TYPE_cmd=	\
