@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 19:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/18 10:51:10 adam Exp $
 
-DISTNAME=	aiorpcX-0.22.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	aiorpcx-0.24.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/x/X/}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiorpcX/}
 
@@ -11,11 +10,13 @@ HOMEPAGE=	https://github.com/kyuupichan/aiorpcX
 COMMENT=	Generic async RPC implementation, including JSON-RPC
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-websockets-[0-9]*:../../www/py-websockets
+WHEEL_NAME=	${DISTNAME:S/x/X/}
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+# ws
+DEPENDS+=	${PYPKGPREFIX}-websockets>=14.0:../../www/py-websockets
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
