@@ -1,4 +1,4 @@
-# $NetBSD: tools.Cygwin.mk,v 1.13 2015/02/16 11:01:40 jperkin Exp $
+# $NetBSD: tools.Cygwin.mk,v 1.14 2025/02/18 13:44:38 wiz Exp $
 #
 # System-supplied tools for the Cygwin operating system.
 
@@ -85,7 +85,9 @@ TOOLS_PLATFORM.m4?=		/bin/m4
 .if exists(/bin/make)
 TOOLS_PLATFORM.gmake?=		/bin/make
 .endif
+.if exists(/bin/makeinfo)
 TOOLS_PLATFORM.makeinfo?=	/bin/makeinfo
+.endif
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/bin/mktemp
 .if exists(/bin/msgconv)
