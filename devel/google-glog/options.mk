@@ -1,8 +1,6 @@
-# $NetBSD: options.mk,v 1.2 2024/08/25 06:18:34 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/02/18 09:03:44 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.google-glog
-
-# Tests are not installed, so default off.
 PKG_SUPPORTED_OPTIONS=	tests
 
 .include "../../mk/bsd.options.mk"
@@ -16,7 +14,6 @@ PKG_SUPPORTED_OPTIONS=	tests
 # googletest requires minimum c++14.
 TEST_TARGET=	test
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=ON
-USE_LANGUAGES+=	c++14
 .  include "../../devel/googletest/buildlink3.mk"
 .else
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTING=OFF
