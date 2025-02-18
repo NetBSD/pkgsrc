@@ -1,4 +1,4 @@
-/* $NetBSD: mk-buildlink-symlinks.c,v 1.2 2022/06/14 08:45:33 jperkin Exp $ */
+/* $NetBSD: mk-buildlink-symlinks.c,v 1.3 2025/02/18 15:20:24 wiz Exp $ */
 
 /*
  * Copyright (c) 2022 Jonathan Perkin <jonathan@perkin.org.uk>
@@ -33,14 +33,11 @@ extern int mkpath(char *, mode_t, mode_t);
 int
 main(int argc, char *argv[])
 {
-	char *line, *path1, *path2, *pdir;
-	size_t len;
-	ssize_t llen;
+	char buf[4096], *eol, *line, *path1, *path2, *pdir;
 
-	for (len = 0, line = NULL; (llen = getline(&line, &len, stdin)) > 0;
-	    free(line), line = NULL, len = 0) {
-		if (line[llen - 1] == '\n')
-			line[llen - 1] = '\0';
+	while ((line = fgets(buf, sizeof(buf), stdin)) != NULL) {
+		if ((eol = strrchr(line, '\n')) != NULL)
+			*eol = '\0';
 
 		if ((path1 = strstr(line, LINK_SEP)) == NULL)
 			errx(1, "Could not find separator");
