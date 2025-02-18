@@ -1,12 +1,27 @@
-$NetBSD: patch-hints_cygwin.sh,v 1.1 2013/04/23 12:22:36 obache Exp $
+$NetBSD: patch-hints_cygwin.sh,v 1.2 2025/02/18 11:49:55 wiz Exp $
 
+* Remove broken settings.
 * prevent to use C++ by default.
 
---- hints/cygwin.sh.orig	2013-03-04 15:16:22.000000000 +0000
+--- hints/cygwin.sh.orig	2024-02-27 00:50:15.000000000 +0000
 +++ hints/cygwin.sh
-@@ -39,7 +39,7 @@ archname='cygwin'
+@@ -28,11 +28,6 @@ libswanted=`echo " $libswanted " | sed -
+ test -z "$ignore_versioned_solibs" && ignore_versioned_solibs='y'
+ test -z "$usenm" && usenm='no'
+ test -z "$libc" && libc='/usr/lib/libcygwin.a'
+-test -z "$loclibpth" && loclibpth=' '
+-test -z "$glibpth" && glibpth=' '
+-test -z "$plibpth" && plibpth=' '
+-test -z "$libpth" && libpth=' '
+-PATH='.:/usr/bin/'
+ # - add libgdbm_compat $libswanted
+ libswanted="$libswanted gdbm_compat"
+ test -z "$optimize" && optimize='-O3'
+@@ -46,9 +41,8 @@ archname='cygwin'
+ 
+ # dynamic loading
  # - otherwise -fpic
- cccdlflags=' '
+-cccdlflags=' '
  lddlflags=' --shared'
 -test -z "$ld" && ld='g++'
 +test -z "$ld" && ld="$cc"
