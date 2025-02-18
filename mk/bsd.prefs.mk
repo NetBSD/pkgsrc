@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.453 2024/10/14 07:58:24 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.454 2025/02/18 11:47:48 wiz Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -187,7 +187,7 @@ NATIVE_LOWER_OPSYS?=	bsdi
 NATIVE_LOWER_OPSYS?=	cygwin
 NATIVE_LOWER_VENDOR?=	pc
 _NATIVE_OS_VERSION!=	${UNAME} -r
-NATIVE_OS_VERSION=	${_NATIVE_OS_VERSION:C/\(.*\)//}
+NATIVE_OS_VERSION=	${_NATIVE_OS_VERSION:C/\(.*\)//:C/-.*//}
 NATIVE_OS_VARIANT!=	${UNAME} -s
 
 .elif ${NATIVE_OPSYS} == "Darwin"
