@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1455 2025/02/17 22:01:00 nia Exp $
+$NetBSD: CHANGES-2025,v 1.1456 2025/02/18 08:46:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1935,3 +1935,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.14.0 [rillig 2025-02-17]
 	Updated x11/alacritty to 0.15.1 [pin 2025-02-17]
 	Updated graphics/libcaca to 0.99.20 [nia 2025-02-17]
+	Updated textproc/py-sphinx-autoapi to 3.6.0 [adam 2025-02-18]
+	Updated textproc/tree-sitter to 0.25.2 [adam 2025-02-18]
