@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.304 2024/07/03 13:27:16 cheusov Exp $
+# $NetBSD: replace.mk,v 1.305 2025/02/18 13:01:28 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -606,7 +606,7 @@ TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			m4
 TOOLS_PATH.m4=			${TOOLBASE}/bin/gm4
 .  endif
-.elif !empty(OSX_TOOLS_FORCE_NOOP:Mm4)
+.elif empty(_USE_TOOLS:Mgm4) && !empty(OSX_TOOLS_FORCE_NOOP:Mm4)
 # After 2024Q1: switch to TOOLS_FAIL and/or generalize to all undeclared tools
 TOOLS_NOOP+=			m4
 .endif
