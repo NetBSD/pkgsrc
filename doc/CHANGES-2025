@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1457 2025/02/18 09:04:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1458 2025/02/18 09:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1939,3 +1939,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter to 0.25.2 [adam 2025-02-18]
 	Updated devel/orc to 0.4.41 [adam 2025-02-18]
 	Updated devel/google-glog to 0.7.1 [adam 2025-02-18]
+	Updated security/openssh to 9.9p2 [wiz 2025-02-18]
