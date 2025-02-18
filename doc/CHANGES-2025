@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1464 2025/02/18 10:22:01 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1465 2025/02/18 10:32:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1948,3 +1948,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated multimedia/openh264 to 2.6.0 [wiz 2025-02-18]
 	Updated www/py-rcssmin to 1.2.1 [adam 2025-02-18]
 	Updated www/py-rjsmin to 1.2.4 [adam 2025-02-18]
+	Updated devel/py-zope.testing to 5.1 [adam 2025-02-18]
+	Updated www/py-websockets to 15.0 [adam 2025-02-18]
