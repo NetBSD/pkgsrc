@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.971 2025/02/07 21:45:41 adam Exp $
+# $NetBSD: Makefile,v 1.972 2025/02/18 15:04:08 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -457,6 +457,7 @@ SUBDIR+=	py-aws-sso-util
 SUBDIR+=	py-backports.ssl_match_hostname
 SUBDIR+=	py-bandit
 SUBDIR+=	py-bcrypt
+SUBDIR+=	py-bcrypt3
 SUBDIR+=	py-botan3
 SUBDIR+=	py-certbot
 SUBDIR+=	py-certbot-apache
