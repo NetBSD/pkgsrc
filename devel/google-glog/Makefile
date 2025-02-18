@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2024/08/25 06:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/18 09:03:18 adam Exp $
 
-DISTNAME=	glog-0.6.0
+DISTNAME=	glog-0.7.1
 PKGNAME=	google-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	glog
@@ -13,8 +12,9 @@ HOMEPAGE=	https://github.com/google/glog
 COMMENT=	Application Level Logging library for C++
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_CXX_FEATURES=	c++14
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DWITH_UNWIND=OFF
 
