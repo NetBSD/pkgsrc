@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1488 2025/02/19 12:08:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1489 2025/02/19 13:08:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1978,3 +1978,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/tree-sitter-jsdoc version 0.23.2 [wiz 2025-02-19]
 	Updated geography/libgeotiff to 1.7.4 [gdt 2025-02-19]
 	Updated textproc/tree-sitter-markdown to 0.7.1.0.3.2 [wiz 2025-02-19]
+	Removed gegraphy/R-geos [mef 2025-02-19]
