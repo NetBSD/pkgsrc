@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2025/02/18 22:08:20 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2025/02/19 01:10:36 gutteridge Exp $
 
 PYTHON_27_ACCEPTED=	yes
 
@@ -21,7 +21,7 @@ USE_TOOLS+=	pkg-config
 # and /opt/include, and finally (usually correctly) in
 # $prefix/include.  This can result in finding an old system libxml2,
 # which is problematic in general, but can result in enabling legacy
-# functions e.g. xmlCleanupPredefinedEntities which will then fail at
+# functions e.g., xmlCleanupPredefinedEntities which will then fail at
 # import time.
 #
 # The following attempts to patch around this, but it is not good
@@ -29,8 +29,8 @@ USE_TOOLS+=	pkg-config
 # path is first.  This can happen on old macOS.
 #
 # \todo Patch setup.py.in to have @LIBXML2_PREFIX@ and @ICONV_PREFIX@
-# (in order) and then substite those, or at least ensure that the
-# iconv prefix is afterwwards.
+# (in order) and then substitute those, or at least ensure that the
+# iconv prefix is afterwards.
 #
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
