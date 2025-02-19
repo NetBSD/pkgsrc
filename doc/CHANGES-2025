@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1482 2025/02/19 01:45:02 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1483 2025/02/19 06:19:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1968,3 +1968,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-libxml2 to 2.12.10 [wiz 2025-02-18]
 	Updated graphics/png to 1.6.47 [wiz 2025-02-19]
 	Updated misc/xfce4-time-out-plugin to 1.1.4 [gutteridge 2025-02-19]
+	Updated net/yt-dlp to 2025.2.19 [adam 2025-02-19]
+	Updated sysutils/py-kubernetes to 32.0.1 [adam 2025-02-19]
