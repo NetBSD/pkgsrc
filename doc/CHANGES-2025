@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1496 2025/02/19 14:03:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1497 2025/02/19 14:40:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/happy to 2.1.5 [wiz 2025-02-19]
 	Updated devel/ocamlbuild to 0.16.0 [wiz 2025-02-19]
 	Updated sysutils/coreutils to 9.6 [wiz 2025-02-19]
+	Updated net/bind918 to 9.18.34 [taca 2025-02-19]
