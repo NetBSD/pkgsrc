@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.131 2025/02/18 12:55:11 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.132 2025/02/19 15:19:49 wiz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.131 2025/02/18 12:55:11 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.132 2025/02/19 15:19:49 wiz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1178,6 +1178,10 @@ check_requires(struct pkg_task *pkg)
 		}
 	}
 
+	if (ret == 1 && Force) {
+		warnx("Required libraries are missing, but installation forced to continue");
+		ret = 0;
+	}
 	return ret;
 }
 
