@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/11/29 22:42:04 mef Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/19 12:53:51 mef Exp $
 
 R_PKGNAME=	prettymapr
 R_PKGVER=	0.2.5
@@ -16,7 +16,6 @@ DEPENDS+=	R-httr>=1.4.1:../../www/R-httr
 TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
 TEST_DEPENDS+=	R-rosm-[0-9]*:../../geography/R-rosm
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-sp-[0-9]*:../../math/R-sp
 
 TEST_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
