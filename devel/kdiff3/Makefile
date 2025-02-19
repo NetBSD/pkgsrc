@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2025/02/12 06:44:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.116 2025/02/19 17:27:03 gutteridge Exp $
 
-DISTNAME=	kdiff3-1.12.0
-PKGREVISION=	1
+DISTNAME=	kdiff3-1.12.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdiff3/}
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +11,6 @@ COMMENT=	File and directory diff and merge tool
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-# upstream states GCC < 9.2 support is "best effort only"
 USE_CXX_FEATURES+=	c++17
 CMAKE_REQD+=		3.1
 
