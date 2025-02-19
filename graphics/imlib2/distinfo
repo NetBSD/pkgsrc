@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.51 2024/04/27 03:05:38 schmonz Exp $
+$NetBSD: distinfo,v 1.52 2025/02/19 16:03:08 nia Exp $
 
-BLAKE2s (imlib2-1.12.2.tar.xz) = be2bd17f10fcfa90038d279c55b9158d7e4e8cae88c8532e41e29c211f576ade
-SHA512 (imlib2-1.12.2.tar.xz) = 3bffb8f0f6b3ec73a81f1d0c6ef3a3443425677cd8a1950422f102b67769c06df54128b21f84bd6c7880120cc5ec6f30d2ab134b3c001ad77f2d39efd749a5b7
-Size (imlib2-1.12.2.tar.xz) = 831812 bytes
-SHA1 (patch-src_bin_imlib2__view.c) = b819e6e05d2d9df27e21327af7811e41b9f7aff5
-SHA1 (patch-src_lib_amd64__blend.S) = 09e89c6b1d6fb622b3ee88f6c3a5e9b6f3ab3fad
-SHA1 (patch-src_lib_amd64__blend__cmod.S) = d533eeacd4b196086f1854c657d3e0773596790b
+BLAKE2s (imlib2-1.12.3.tar.xz) = 3abdba593bcb9d8cacdfe66f6a7d6af02e8e4fa1ed229c98601ed180619413f9
+SHA512 (imlib2-1.12.3.tar.xz) = 79feea73fb67508ffdce52f8430c2c887b06d8bcb70f6e3bc551c86d521ebf61fc1eff10994b69def4d7a237873f107066aefa367e05b5f89b5d675751d9314f
+Size (imlib2-1.12.3.tar.xz) = 833128 bytes
