@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/01/23 08:27:20 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/19 13:22:03 wiz Exp $
 
-DISTNAME=	josepy-1.15.0
+DISTNAME=	josepy-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/josepy/}
@@ -25,6 +25,5 @@ post-install:
 
 .include "../../lang/python/wheel.mk"
 PYTHON_VERSIONED_DEPENDENCIES+=	cryptography
-PYTHON_VERSIONED_DEPENDENCIES+=	OpenSSL
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
