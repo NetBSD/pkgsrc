@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1504 2025/02/19 18:02:34 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1505 2025/02/19 19:28:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1992,3 +1992,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/cfengine3 to 3.24.1 [wiz 2025-02-19]
 	Updated devel/kdiff3 to 1.12.1 [gutteridge 2025-02-19]
 	Updated net/icinga2 to 2.14.5 [wiz 2025-02-19]
+	Updated graphics/py-tifffile to 2025.2.18 [adam 2025-02-19]
+	Updated devel/py-sybil to 9.1.0 [adam 2025-02-19]
+	Updated security/libassuan2 to 3.0.2 [adam 2025-02-19]
+	Updated databases/postgresql-timescaledb to 2.18.2 [adam 2025-02-19]
