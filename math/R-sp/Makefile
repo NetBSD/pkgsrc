@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2025/02/15 06:22:57 mef Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/19 12:53:52 mef Exp $
 
 R_PKGNAME=	sp
 R_PKGVER=	2.2-0
@@ -13,8 +13,6 @@ TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
 TEST_DEPENDS+=	R-RColorBrewer-[0-9]*:../../math/R-RColorBrewer
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
-TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 
