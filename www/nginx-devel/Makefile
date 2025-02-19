@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.144 2025/02/05 19:00:26 osa Exp $
+# $NetBSD: Makefile,v 1.145 2025/02/19 16:55:01 wiz Exp $
 
 DISTNAME=	nginx-1.27.4
 PKGNAME=	${DISTNAME:S/-/-devel-/1}
-PKGREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	https://nginx.org/download/
 DISTFILES=	${DEFAULT_DISTFILES}
+
+PATCH_SITES=		https://github.com/freenginx/nginx/commit/
+PATCHFILES=		1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch
+PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
 MAINTAINER=	osa@NetBSD.org
 HOMEPAGE=	https://nginx.org/
 COMMENT=	Lightweight HTTP server and mail proxy server
 LICENSE=	2-clause-bsd
-
-PATCH_SITES=		https://github.com/freenginx/nginx/commit/
-PATCHFILES=		1ac658f44afc9240f13e9d6c1c9d5a7816299e8e.patch
-PATCH_DIST_ARGS=	-d ${WRKSRC} -p1
 
 CONFLICTS=	nginx-[0-9]*
 
@@ -55,11 +54,11 @@ CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 CONFIGURE_ARGS+=	--http-scgi-temp-path=${NGINX_DATADIR}/scgi_temp
 CONFIGURE_ARGS+=	--with-pcre
 
-SUBST_CLASSES+=		fix-pcre2
-SUBST_STAGE.fix-pcre2=	pre-configure
-SUBST_FILES.fix-pcre2=	auto/lib/pcre/conf
-SUBST_SED.fix-pcre2=	-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
-SUBST_NOOP_OK.fix-pcre2=yes
+SUBST_CLASSES+=			fix-pcre2
+SUBST_STAGE.fix-pcre2=		pre-configure
+SUBST_FILES.fix-pcre2=		auto/lib/pcre/conf
+SUBST_SED.fix-pcre2=		-e 's,/usr/pkg,${BUILDLINK_PREFIX.pcre2},g'
+SUBST_NOOP_OK.fix-pcre2=	yes
 
 PKG_SYSCONFSUBDIR=	nginx
 
