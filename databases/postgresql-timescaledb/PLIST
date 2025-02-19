@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2025/02/11 09:31:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2025/02/19 19:28:04 adam Exp $
 lib/postgresql/timescaledb-${PKGVERSION}.${SOEXT}
 ${PLIST.tsl}lib/postgresql/timescaledb-tsl-${PKGVERSION}.${SOEXT}
 lib/postgresql/timescaledb.${SOEXT}
@@ -28,6 +28,7 @@ share/postgresql/extension/timescaledb--2.17.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.17.1--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.17.2--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.18.0--${PKGVERSION}.sql
+share/postgresql/extension/timescaledb--2.18.1--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.5.0--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.5.1--${PKGVERSION}.sql
 share/postgresql/extension/timescaledb--2.5.2--${PKGVERSION}.sql
