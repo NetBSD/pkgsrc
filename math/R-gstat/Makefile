@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/02/19 12:50:45 mef Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/19 12:53:21 mef Exp $
 
 R_PKGNAME=	gstat
 R_PKGVER=	2.1-3
@@ -24,7 +24,6 @@ TEST_DEPENDS+=	R-ggplot2-[0-9]*:../../graphics/R-ggplot2
 TEST_DEPENDS+=	R-mapdata-[0-9]*:../../geography/R-mapdata
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 TEST_DEPENDS+=	R-stars-[0-9]*:../../geography/R-stars
 

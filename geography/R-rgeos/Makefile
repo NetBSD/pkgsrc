@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/06/03 12:52:36 mef Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/19 12:53:51 mef Exp $
 
 R_PKGNAME=	rgeos
 R_PKGVER=	0.6-3
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 # Packages suggested but not available: 'maptools', 'XML', 'rgdal'
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
 TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-testthat-[0-9]*:../../devel/R-testthat
 TEST_DEPENDS+=	R-XML-[0-9]*:../../math/R-XML
 
