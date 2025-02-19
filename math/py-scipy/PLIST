@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2025/01/05 08:58:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.32 2025/02/19 09:23:15 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -1513,7 +1513,6 @@ ${PYSITELIB}/scipy/optimize/_highspy/_highs_options.so
 ${PYSITELIB}/scipy/optimize/_highspy/_highs_wrapper.py
 ${PYSITELIB}/scipy/optimize/_highspy/_highs_wrapper.pyc
 ${PYSITELIB}/scipy/optimize/_highspy/_highs_wrapper.pyo
-${PYSITELIB}/scipy/optimize/_highspy/libhighs.a
 ${PYSITELIB}/scipy/optimize/_isotonic.py
 ${PYSITELIB}/scipy/optimize/_isotonic.pyc
 ${PYSITELIB}/scipy/optimize/_isotonic.pyo
