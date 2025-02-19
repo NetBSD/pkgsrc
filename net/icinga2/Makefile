@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2025/01/27 23:03:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/19 18:02:21 wiz Exp $
 
-DISTNAME=	icinga2-2.12.11
-PKGREVISION=	1
+DISTNAME=	icinga2-2.14.5
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=icinga/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -24,7 +23,7 @@ PKG_GROUPS_VARS+=	ICINGA2_GROUP ICINGA2_COMMAND_GROUP
 BUILD_DEFS+=		ICINGA2_USER ICINGA2_GROUP ICINGA2_COMMAND_GROUP VARBASE PKG_SYSCONFBASE
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++14
+USE_CXX_FEATURES=	c++17
 USE_TOOLS+=		flex bison
 
 PKG_RCD_SCRIPTS=	YES
@@ -96,21 +95,21 @@ FEATURES=		api debuglog mainlog syslog
 FEATURES+=		checker
 .endif
 .if !empty(PKG_OPTIONS:Micinga2-compat)
-FEATURES+=		command compatlog statusdata
+FEATURES+=		command compatlog
 .endif
 .if !empty(PKG_OPTIONS:Micinga2-livestatus)
 FEATURES+=		livestatus
 .endif
-.if !empty(PKG_OPTIONS:Micinga2-mysql)
+.if !empty(PKG_OPTIONS:Mmysql)
 FEATURES+=		ido-mysql
 .endif
 .if !empty(PKG_OPTIONS:Micinga2-notification)
 FEATURES+=		notification
 .endif
 .if !empty(PKG_OPTIONS:Micinga2-perfdata)
-FEATURES+=		elasticsearch gelf graphite influxdb opentsdb perfdata
+FEATURES+=		elasticsearch gelf graphite influxdb influxdb2 opentsdb perfdata
 .endif
-.if !empty(PKG_OPTIONS:Micinga2-pgsql)
+.if !empty(PKG_OPTIONS:Mpgsql)
 FEATURES+=		ido-pgsql
 .endif
 .for f in ${FEATURES}

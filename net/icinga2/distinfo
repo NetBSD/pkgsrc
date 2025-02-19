@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.6 2024/11/22 15:31:29 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2025/02/19 18:02:21 wiz Exp $
 
-BLAKE2s (icinga2-2.12.11.tar.gz) = 63daa21ef02608739fd4cd836488a1ab74a5daf9cdad7a6a3c578d441e588517
-SHA512 (icinga2-2.12.11.tar.gz) = 15efae7b7d755a01e3bebc123cb6aadc0ee48895378f12d57e4c7314f804dcb84f82652ee95762d04bf401579b48db254a85cba5889ccba2b46c7c66789f30d3
-Size (icinga2-2.12.11.tar.gz) = 7553720 bytes
+BLAKE2s (icinga2-2.14.5.tar.gz) = 3033f7b9a01d0d26a3fa91060f35de6129dac99036cc0068a82e5a95e37ecff2
+SHA512 (icinga2-2.14.5.tar.gz) = 841076e4207aa4c57d46ebff54e17b082490720b3aa194374448f2e1d06e9edb6823e59791bef769f38a14f463f216391666ecb21ccd5b6ca6f96f5b67030d2d
+Size (icinga2-2.14.5.tar.gz) = 9413390 bytes
+SHA1 (patch-lib_base_io-engine.hpp) = 45ee3b8c122915a36f4f3a5c9620c95d2875faf0
+SHA1 (patch-lib_base_tcpsocket.hpp) = 628642610723a7bae86e934f6439ca9bbe283fd9
+SHA1 (patch-lib_icingadb_redisconnection.cpp) = f6f32fb458682bdf70d9b44024eb8d40ef2b71b1
+SHA1 (patch-lib_icingadb_redisconnection.hpp) = e3d8873abc45209e4a3f1c6ee1daee47c8086f83
+SHA1 (patch-lib_remote_apilistener.cpp) = 2e486ed25ed8ee7097f021dc39c5d0997971ebae
+SHA1 (patch-lib_remote_jsonrpcconnection.cpp) = 99510ae14dd85a2a4152d5241c7bc37df397336d
+SHA1 (patch-test_base-io-engine.cpp) = 74876759c74b07aa0206b4c472ef242bf230098f
 SHA1 (patch-third-party_cmake_FindMySQL.cmake) = a33567c30db47c4fab379f1b7c358174dd85fdd3
