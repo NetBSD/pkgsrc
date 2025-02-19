@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2024/08/25 06:19:06 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2025/02/19 18:02:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.icinga2
 PKG_SUPPORTED_OPTIONS=	debug
@@ -28,10 +28,10 @@ CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_PGSQL=ON
 CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_PGSQL=OFF
 .endif
 
-PLIST_VARS+=	icingadb
+PLIST_VARS+=		icingadb
 .if !empty(PKG_OPTIONS:Micingadb)
 CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_ICINGADB=ON
-PLIST.icingadb=	yes
+PLIST.icingadb=		yes
 .else
 CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_ICINGADB=OFF
 .endif
@@ -39,9 +39,9 @@ CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_ICINGADB=OFF
 .for option in checker compat livestatus notification perfdata
 PLIST_VARS+=		${option}
 .  if !empty(PKG_OPTIONS:Micinga2-${option})
-CMAKE_CONFIGURE_ARGS+=		-DICINGA2_WITH_${option:tu}=ON
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_${option:tu}=ON
 PLIST.${option}=	yes
 .  else
-CMAKE_CONFIGURE_ARGS+=		-DICINGA2_WITH_${option:tu}=OFF
+CMAKE_CONFIGURE_ARGS+=	-DICINGA2_WITH_${option:tu}=OFF
 .  endif
 .endfor
