@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1503 2025/02/19 17:37:58 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1504 2025/02/19 18:02:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1991,3 +1991,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/gnuls to 9.6 [wiz 2025-02-19]
 	Updated sysutils/cfengine3 to 3.24.1 [wiz 2025-02-19]
 	Updated devel/kdiff3 to 1.12.1 [gutteridge 2025-02-19]
+	Updated net/icinga2 to 2.14.5 [wiz 2025-02-19]
