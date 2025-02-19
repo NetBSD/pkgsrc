@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1498 2025/02/19 15:20:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1499 2025/02/19 16:03:21 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1988,3 +1988,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/coreutils to 9.6 [wiz 2025-02-19]
 	Updated net/bind918 to 9.18.34 [taca 2025-02-19]
 	Updated pkgtools/pkg_install to 20250219 [wiz 2025-02-19]
+	Updated graphics/imlib2 to 1.12.3 [nia 2025-02-19]
