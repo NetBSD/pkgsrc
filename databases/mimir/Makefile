@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/01/12 10:22:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/19 12:26:26 tnn Exp $
 
 DISTNAME=	mimir-2.15.0
 CATEGORIES=	databases
@@ -13,6 +13,7 @@ LICENSE=	gnu-agpl-v3
 MAKE_ENV+=	CGO_ENABLED=0
 
 CHECK_PORTABILITY_SKIP+=	docs/make-docs
+CHECK_PORTABILITY_SKIP+=	vendor/cloud.google.com/go/internal/gen_info.sh
 
 .include "go-modules.mk"
 
