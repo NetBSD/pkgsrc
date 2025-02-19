@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2024/11/03 02:36:10 mef Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/19 12:50:45 mef Exp $
 
 R_PKGNAME=	spacetime
 R_PKGVER=	1.3-2
@@ -22,7 +22,6 @@ TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
 TEST_DEPENDS+=	R-RColorBrewer-[0-9]*:../../math/R-RColorBrewer
 TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
-TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
 TEST_DEPENDS+=	R-RPostgreSQL-[0-9]*:../../math/R-RPostgreSQL
 TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-markdown-[0-9]*:../../textproc/R-markdown

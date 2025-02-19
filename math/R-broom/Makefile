@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2024/10/30 21:07:24 mef Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/19 12:50:44 mef Exp $
 
 R_PKGNAME=	broom
 R_PKGVER=	1.0.7
@@ -87,7 +87,6 @@ TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 #EST_DEPENDS+=	R-poLCA-[0-9]*:
 TEST_DEPENDS+=	R-psych-[0-9]*:../../math/R-psych
 TEST_DEPENDS+=	R-quantreg-[0-9]*:../../math/R-quantreg
-TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 #EST_DEPENDS+=	R-robust-[0-9]*:
 TEST_DEPENDS+=	R-robustbase-[0-9]*:../../math/R-robustbase

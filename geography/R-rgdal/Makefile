@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2024/11/14 22:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/02/19 12:50:44 mef Exp $
 
 R_PKGNAME=	rgdal
 R_PKGVER=	1.6-7
@@ -16,7 +16,6 @@ TEST_DEPENDS+=	R-DBI-[0-9]*:../../math/R-DBI
 TEST_DEPENDS+=	R-maptools-[0-9]*:../../geography/R-maptools
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-curl-[0-9]*:../../www/R-curl
-TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
 
 USE_TOOLS+=	pkg-config
 
