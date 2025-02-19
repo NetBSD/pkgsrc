@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/12/04 13:08:24 mef Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/19 12:42:24 mef Exp $
 
 R_PKGNAME=	sf
 R_PKGVER=	1.0-19
@@ -11,12 +11,11 @@ LICENSE=	mit OR gnu-gpl-v2
 USE_LANGUAGES+=		c c++
 USE_CXX_FEATURES+=	c++11
 
-DEPENDS+=	R-magrittr>=1.5:../../devel/R-magrittr
-DEPENDS+=	R-rgeos>=0.5.2:../../geography/R-rgeos
-DEPENDS+=	R-DBI>=0.8:../../math/R-DBI
 DEPENDS+=	R-classInt>=0.4.1:../../math/R-classInt
-DEPENDS+=	R-units>=0.6.0:../../math/R-units
-DEPENDS+=	R-s2-[0-9]*:../../geography/R-s2
+DEPENDS+=	R-magrittr>=2.0.3:../../devel/R-magrittr
+DEPENDS+=	R-DBI>=0.8:../../math/R-DBI
+DEPENDS+=	R-s2>=1.1.0:../../geography/R-s2
+DEPENDS+=	R-units>=0.7.0:../../math/R-units
 
 # Packages suggested but not available:
 #  'nanoarrow', 'mapview', 'odbc', 'pbapply', 'pool', 'RPostgres',
@@ -34,7 +33,6 @@ TEST_DEPENDS+=	R-knitr-[0-9]*:../../print/R-knitr
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
 TEST_DEPENDS+=	R-microbenchmark-[0-9]*:../../benchmarks/R-microbenchmark
 TEST_DEPENDS+=	R-raster-[0-9]*:../../geography/R-raster
-TEST_DEPENDS+=	R-rgdal-[0-9]*:../../geography/R-rgdal
 TEST_DEPENDS+=	R-rmarkdown-[0-9]*:../../textproc/R-rmarkdown
 TEST_DEPENDS+=	R-stars-[0-9]*:../../geography/R-stars
 TEST_DEPENDS+=	R-spatstat-[0-9]*:../../geography/R-spatstat
