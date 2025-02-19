@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1494 2025/02/19 13:27:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1495 2025/02/19 13:28:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/cpp-httplib to 0.19.0 [wiz 2025-02-19]
 	Updated devel/happy-lib to 2.1.5 [wiz 2025-02-19]
 	Updated devel/happy to 2.1.5 [wiz 2025-02-19]
+	Updated devel/ocamlbuild to 0.16.0 [wiz 2025-02-19]
