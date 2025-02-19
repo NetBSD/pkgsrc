@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1503 2025/02/10 10:19:55 nonaka Exp $
+# $NetBSD: Makefile,v 1.1504 2025/02/19 12:00:50 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -1441,6 +1441,7 @@ SUBDIR+=	tree-sitter-heex
 SUBDIR+=	tree-sitter-html
 SUBDIR+=	tree-sitter-java
 SUBDIR+=	tree-sitter-javascript
+SUBDIR+=	tree-sitter-jsdoc
 SUBDIR+=	tree-sitter-json
 SUBDIR+=	tree-sitter-lua
 SUBDIR+=	tree-sitter-markdown
