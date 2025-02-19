@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2019/06/11 11:54:56 nia Exp $
+# $NetBSD: options.mk,v 1.8 2025/02/19 16:58:02 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.moc
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--without-aac
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
 PLIST.ffmpeg=		yes
-.  include "../../multimedia/ffmpeg3/buildlink3.mk"
+.  include "../../multimedia/ffmpeg4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ffmpeg
 .endif
