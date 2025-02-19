@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/06/05 12:00:07 mef Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/19 12:50:44 mef Exp $
 
 R_PKGNAME=	ggplot2
 R_PKGVER=	3.5.1
@@ -27,7 +27,6 @@ DEPENDS+=	R-isoband-[0-9]*:../../graphics/R-isoband
 TEST_DEPENDS+=	R-dplyr-[0-9]*:../../math/R-dplyr
 TEST_DEPENDS+=	R-mapproj-[0-9]*:../../math/R-mapproj
 TEST_DEPENDS+=	R-maps-[0-9]*:../../geography/R-maps
-TEST_DEPENDS+=	R-rgeos-[0-9]*:../../geography/R-rgeos
 TEST_DEPENDS+=	R-sf-[0-9]*:../../geography/R-sf
 
 USE_LANGUAGES=	# none
