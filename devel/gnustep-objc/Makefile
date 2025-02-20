@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.40 2024/08/25 06:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/02/20 14:24:02 manu Exp $
 
-DISTNAME=	libobjc2-2.1.0
+DISTNAME=	libobjc2-2.2.1
 PKGNAME=	${DISTNAME:S/libobjc2/gnustep-objc/}
 PKGREVISION=	1
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
 GITHUB_PROJECT=	libobjc2
-GITHUB_TAG=	v2.1
+GITHUB_TAG=	v2.2.1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gnustep/libobjc2
@@ -35,7 +35,7 @@ post-extract:
 
 do-configure:
 	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ${CMAKE} -Wno-dev ${CMAKE_CONFIGURE_ARGS} .
+		${SETENV} ${CONFIGURE_ENV} ${CMAKE} -Wno-dev ${CMAKE_ARGS} .
 
 .include "../../mk/compiler.mk"
 
@@ -43,7 +43,7 @@ do-configure:
 
 # Building tests with GCC is not supported.
 .if empty(CC_VERSION:Mclang-*)
-CMAKE_CONFIGURE_ARGS+=	-DTESTS:BOOL=FALSE
+CMAKE_ARGS+=	-DTESTS:BOOL=FALSE
 .endif
 
 PLIST_VARS+=	objcxx
