@@ -1,0 +1,47 @@
+n$NetBSD: patch-CMakeLists.txt,v 1.3 2025/02/20 14:53:50 gdt Exp $
+
+Remediate upstream having hard-to-follow code to find a python
+interpreter for a2x instead of just running it.  While it probably
+helps on Windows as they say, it results in finding the wrong python
+on non-broken systems.
+
+Not sent upstream because this is a philosophical choice.
+
+--- CMakeLists.txt.orig	2025-02-20 14:38:12.758394187 +0000
++++ CMakeLists.txt
+@@ -459,32 +459,9 @@ endif() # JPEGXL_ENABLE_DOXYGEN
+ if(JPEGXL_ENABLE_MANPAGES)
+   find_program(ASCIIDOC a2x)
+   if(ASCIIDOC)
+-    file(STRINGS "${ASCIIDOC}" ASCIIDOC_SHEBANG LIMIT_COUNT 1)
+-    if(ASCIIDOC_SHEBANG MATCHES "sh$" OR ASCIIDOC_SHEBANG MATCHES "libexec/bin/python$" OR MINGW)
+-      set(ASCIIDOC_PY_FOUND ON)
+-      # Run the program directly and set ASCIIDOC as empty.
+-      set(ASCIIDOC_PY "${ASCIIDOC}")
+-      set(ASCIIDOC "")
+-    elseif(ASCIIDOC_SHEBANG MATCHES "python2")
+-      find_package(Python2 COMPONENTS Interpreter)
+-      set(ASCIIDOC_PY_FOUND "${Python2_Interpreter_FOUND}")
+-      set(ASCIIDOC_PY Python2::Interpreter)
+-    elseif(ASCIIDOC_SHEBANG MATCHES "python3")
+-      find_package(Python3 COMPONENTS Interpreter)
+-      set(ASCIIDOC_PY_FOUND "${Python3_Interpreter_FOUND}")
+-      set(ASCIIDOC_PY Python3::Interpreter)
+-    else()
+-      find_package(Python COMPONENTS Interpreter QUIET)
+-      if(NOT Python_Interpreter_FOUND)
+-        find_program(ASCIIDOC_PY python)
+-        if(ASCIIDOC_PY)
+-          set(ASCIIDOC_PY_FOUND ON)
+-        endif()
+-      else()
+-        set(ASCIIDOC_PY_FOUND "${Python_Interpreter_FOUND}")
+-        set(ASCIIDOC_PY Python::Interpreter)
+-      endif()
+-    endif()
++    set(ASCIIDOC_PY "${ASCIIDOC}")
++    set(ASCIIDOC "")
++    set(ASCIIDOC_PY_FOUND ON) 
+
+     if (ASCIIDOC_PY_FOUND)
+       set(MANPAGE_FILES "")
