@@ -1,9 +1,9 @@
-$NetBSD: patch-lib_decompress_huf__decompress__amd64.S,v 1.2 2024/04/02 20:05:57 adam Exp $
+$NetBSD: patch-lib_decompress_huf__decompress__amd64.S,v 1.3 2025/02/20 08:10:34 adam Exp $
 
 Move the stack marking stuff inside the ifdef, as it doesn't necessarily
 work on non-amd64.
 
---- lib/decompress/huf_decompress_amd64.S.orig	2024-03-21 22:05:51.000000000 +0000
+--- lib/decompress/huf_decompress_amd64.S.orig	2025-02-19 00:04:24.000000000 +0000
 +++ lib/decompress/huf_decompress_amd64.S
 @@ -10,6 +10,7 @@
  
@@ -21,4 +21,4 @@ work on non-amd64.
 -
  /* Calling convention:
   *
-  * %rdi contains the first argument: HUF_DecompressAsmArgs*.
+  * %rdi (or %rcx on Windows) contains the first argument: HUF_DecompressAsmArgs*.
