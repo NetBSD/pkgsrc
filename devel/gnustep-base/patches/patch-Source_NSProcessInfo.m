@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_NSProcessInfo.m,v 1.1 2021/11/28 18:38:22 pho Exp $
+$NetBSD: patch-Source_NSProcessInfo.m,v 1.2 2025/02/20 14:28:46 manu Exp $
 
 Work around an issue regarding GNUstep and locale. GNUstep hijacks
 application main() with its own function to setup some global
@@ -17,9 +17,10 @@ This is a dirty hack on top of a dirty hack and I'm obvisouly not
 happy with this, but if the dirty hack is broken we still have to fix
 it.
 
---- Source/NSProcessInfo.m.orig	2020-04-05 18:00:40.000000000 +0000
-+++ Source/NSProcessInfo.m
-@@ -979,6 +979,8 @@ int gnustep_base_user_main (int argc, ch
+--- Source/NSProcessInfo.m.orig	2025-02-10 18:00:46.000000000 +0100
++++ Source/NSProcessInfo.m	2025-02-18 15:29:10.462572672 +0100
+@@ -1006,8 +1006,10 @@
+   exit(1);
  }
  int main(int argc, char *argv[], char *env[])
  {
@@ -28,3 +29,4 @@ it.
  #ifdef NeXT_RUNTIME
    /* This memcpy has to be done before the first message is sent to any
       constant string object. See Apple Radar 2870817 */
+   memcpy(&_NSConstantStringClassReference,
