@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.12 2020/04/16 09:21:51 manu Exp $
+$NetBSD: patch-ad,v 1.13 2025/02/20 14:34:52 manu Exp $
 
---- configure.orig	2020-04-05 16:59:54.000000000 +0200
-+++ configure	2020-04-14 10:31:20.723580801 +0200
-@@ -3442,15 +3442,15 @@
- $as_echo "$ac_cv_prog_cc_g" >&6; }
- if test "$ac_test_CFLAGS" = set; then
+--- configure.orig	2025-02-10 16:22:04.000000000 +0100
++++ configure	2025-02-18 15:57:17.613190582 +0100
+@@ -4310,15 +4310,15 @@
+ printf "%s\n" "$ac_cv_prog_cc_g" >&6; }
+ if test $ac_test_CFLAGS; then
    CFLAGS=$ac_save_CFLAGS
  elif test $ac_cv_prog_cc_g = yes; then
 -  if test "$GCC" = yes; then
@@ -20,24 +20,25 @@ $NetBSD: patch-ad,v 1.12 2020/04/16 09:21:51 manu Exp $
    else
      CFLAGS=
    fi
-@@ -7462,18 +7462,18 @@
+@@ -9057,9 +9057,9 @@
  fi
  
    fi
    if test x"$objc_threaded" = x""; then
 -    LIBS="$OBJCRT $saved_LIBS -lthread "
 +    LIBS="$OBJCRT $saved_LIBS ${OBJC_THREAD} "
-     if test "$cross_compiling" = yes; then :
+     if test "$cross_compiling" = yes
+ then :
    objc_threaded=""
- else
-   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
+ else $as_nop
+@@ -9068,9 +9068,9 @@
  #include "config_thread.m"
  _ACEOF
- if ac_fn_c_try_run "$LINENO"; then :
+ if ac_fn_c_try_run "$LINENO"
+ then :
 -  objc_threaded="-lthread"
 +  objc_threaded="${OBJC_THREAD}"
- else
+ else $as_nop
    objc_threaded=""
  fi
  rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
