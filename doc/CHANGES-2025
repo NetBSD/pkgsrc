@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1505 2025/02/19 19:28:28 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1506 2025/02/20 07:53:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1996,3 +1996,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-sybil to 9.1.0 [adam 2025-02-19]
 	Updated security/libassuan2 to 3.0.2 [adam 2025-02-19]
 	Updated databases/postgresql-timescaledb to 2.18.2 [adam 2025-02-19]
+	Updated audio/picard to 2.13.3 [adam 2025-02-20]
+	Updated misc/indi to 2.1.2.1 [adam 2025-02-20]
