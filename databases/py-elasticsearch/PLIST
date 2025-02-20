@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2024/11/03 19:32:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/02/20 12:38:32 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -103,6 +103,9 @@ ${PYSITELIB}/elasticsearch/_async/client/security.pyo
 ${PYSITELIB}/elasticsearch/_async/client/shutdown.py
 ${PYSITELIB}/elasticsearch/_async/client/shutdown.pyc
 ${PYSITELIB}/elasticsearch/_async/client/shutdown.pyo
+${PYSITELIB}/elasticsearch/_async/client/simulate.py
+${PYSITELIB}/elasticsearch/_async/client/simulate.pyc
+${PYSITELIB}/elasticsearch/_async/client/simulate.pyo
 ${PYSITELIB}/elasticsearch/_async/client/slm.py
 ${PYSITELIB}/elasticsearch/_async/client/slm.pyc
 ${PYSITELIB}/elasticsearch/_async/client/slm.pyo
@@ -238,6 +241,9 @@ ${PYSITELIB}/elasticsearch/_sync/client/security.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/shutdown.py
 ${PYSITELIB}/elasticsearch/_sync/client/shutdown.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/shutdown.pyo
+${PYSITELIB}/elasticsearch/_sync/client/simulate.py
+${PYSITELIB}/elasticsearch/_sync/client/simulate.pyc
+${PYSITELIB}/elasticsearch/_sync/client/simulate.pyo
 ${PYSITELIB}/elasticsearch/_sync/client/slm.py
 ${PYSITELIB}/elasticsearch/_sync/client/slm.pyc
 ${PYSITELIB}/elasticsearch/_sync/client/slm.pyo
