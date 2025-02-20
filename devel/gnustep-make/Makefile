@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.64 2021/10/21 17:45:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2025/02/20 14:34:52 manu Exp $
 
-DISTNAME=	gnustep-make-2.8.0
-PKGREVISION=	1
+DISTNAME=	gnustep-make-2.9.3
+MASTER_SITES=	${MASTER_SITE_GITHUB:=gnustep/}
+GITHUB_PROJECT=	tools-make
+GITHUB_TAG=	make-2_9_3
+WRKSRC=		${WRKDIR}/tools-make-make-2_9_3
+#PKGREVISION=	1
 CATEGORIES=	devel gnustep
-MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.33 2021/10/26 10:14:44 nia Exp $
+$NetBSD: distinfo,v 1.34 2025/02/20 14:34:52 manu Exp $
 
-BLAKE2s (gnustep-make-2.8.0.tar.gz) = 8fbf838318e8b44eace501835c320ce7aa8d9867c72b9436f07c0c178d039d1b
-SHA512 (gnustep-make-2.8.0.tar.gz) = e9e57ed7a1c360c2dbf17f70d38e5107a1a9613842dcc645f10ed7a01eb9f9ee71bd2d0cacbe00439ce73f194a3eb3ed2e71409241ac96ee3bba704dcf6dfd7b
-Size (gnustep-make-2.8.0.tar.gz) = 606337 bytes
+BLAKE2s (gnustep-make-2.9.3.tar.gz) = 8eb54c6b2f8e8dadba8987127a303694d4799bc8f2fc6ab91101d0ea6db00944
+SHA512 (gnustep-make-2.9.3.tar.gz) = e3230d3bf5ca6cb0cb721ebc9f2a0b554315e14d7e71a6e4d4f54d23d8e4c09cc229609e5b87f911f59873721ba46bd7f3cc22d19a4b5a2fd1456c2f7e3ec50d
+Size (gnustep-make-2.9.3.tar.gz) = 613298 bytes
 SHA1 (patch-aa) = 2b727a92404aeead88c9699fee144bfb0114370b
 SHA1 (patch-ab) = 5bd17b33f9b8381f77371228057cf6109f76d5b0
-SHA1 (patch-ad) = ee7dfbf7d6a7c35b1141b598b54dde3a2bd237de
+SHA1 (patch-ad) = 2eb3d84da290ad924228c16dc141bc84821e9efc
 SHA1 (patch-ae) = efd4d53184cb1e34ae129e52235de86f77e8a06a
-SHA1 (patch-target.make) = 5a46d7f391d6107a3cd61ad3db5e0bd2c1e1dfaf
+SHA1 (patch-target.make) = 4ec3141ee92d417891ad7aa0edf32476031b4bab
