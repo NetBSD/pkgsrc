@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2024/03/23 07:21:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/20 08:49:58 adam Exp $
 bin/readelf-${PYVERSSUFFIX}.py
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -107,6 +107,9 @@ ${PYSITELIB}/elftools/dwarf/ranges.pyo
 ${PYSITELIB}/elftools/dwarf/structs.py
 ${PYSITELIB}/elftools/dwarf/structs.pyc
 ${PYSITELIB}/elftools/dwarf/structs.pyo
+${PYSITELIB}/elftools/dwarf/typeunit.py
+${PYSITELIB}/elftools/dwarf/typeunit.pyc
+${PYSITELIB}/elftools/dwarf/typeunit.pyo
 ${PYSITELIB}/elftools/ehabi/__init__.py
 ${PYSITELIB}/elftools/ehabi/__init__.pyc
 ${PYSITELIB}/elftools/ehabi/__init__.pyo

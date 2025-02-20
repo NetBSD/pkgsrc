@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2024/11/11 07:28:20 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/20 08:49:58 adam Exp $
 
-DISTNAME=	pyelftools-0.31
+DISTNAME=	pyelftools-0.32
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyelftools/}
@@ -13,8 +13,6 @@ LICENSE=	public-domain
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=46.4.0:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
