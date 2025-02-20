@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/11/11 07:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/20 12:36:30 adam Exp $
 
-DISTNAME=	elastic_transport-8.15.1
+DISTNAME=	elastic_transport-8.17.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=e/elastic-transport/}
@@ -23,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-httpserver-[0-9]*:../../devel/py-test-httpserver
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-trustme-[0-9]*:../../security/py-trustme
-# TODO:
+# TODO: add to TEST_DEPENDS
 #opentelemetry-api
 #opentelemetry-sdk
 
