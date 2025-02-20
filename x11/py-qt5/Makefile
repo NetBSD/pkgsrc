@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2025/02/12 06:45:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2025/02/20 07:10:35 adam Exp $
 
 DISTNAME=	PyQt5-5.15.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyQt5/qt5/}
@@ -20,8 +20,6 @@ USE_TOOLS+=		gmake pkg-config
 
 PLIST_VARS+=		x11
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 SUBST_CLASSES+=		x11lib
 SUBST_STAGE.x11lib=	pre-configure
 SUBST_MESSAGE.x11lib=	Fixing rpath for X11 and pulseaudio libraries.
@@ -33,6 +31,12 @@ pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && ${MAKE_JOBS_SAFE:U:tl} == no)
+WHEEL_ARGS+=	-C=--jobs=${MAKE_JOBS}
+.endif
+# for debugging
+#WHEEL_ARGS+=	-C=--verbose
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
