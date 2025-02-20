@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1510 2025/02/20 12:17:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1511 2025/02/20 12:39:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2006,3 +2006,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/z3 to 4.14.0 [adam 2025-02-20]
 	Updated math/py-z3 to 4.14.0 [adam 2025-02-20]
 	Updated archivers/py-zstandard to 0.23.0nb1 [wiz 2025-02-20]
+	Updated databases/py-elastic-transport to 8.17.0 [adam 2025-02-20]
+	Updated databases/py-elasticsearch to 8.17.1 [adam 2025-02-20]
