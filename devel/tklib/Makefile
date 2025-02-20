@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/16 09:01:26 scole Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/20 06:38:51 scole Exp $
 
 PKGVERSION=		0.9
 DISTNAME=		tklib-${PKGVERSION}
@@ -12,7 +12,7 @@ LICENSE=		modified-bsd
 
 DEPENDS+=		tcllib-[0-9]*:../../devel/tcllib
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		find gmake
 
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes
