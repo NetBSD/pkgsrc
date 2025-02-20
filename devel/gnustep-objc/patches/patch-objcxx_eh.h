@@ -1,9 +1,9 @@
-$NetBSD: patch-objcxx_eh.h,v 1.3 2023/01/14 01:30:53 manu Exp $
+$NetBSD: patch-objcxx_eh.h,v 1.4 2025/02/20 14:24:03 manu Exp $
 
 Workaround build failure due to redefinition
 
---- ./objcxx_eh.h.orig	2020-08-23 15:10:20.000000000 +0000
-+++ ./objcxx_eh.h	2023-01-11 10:07:02.311233320 +0000
+--- objcxx_eh.h.orig	2024-03-21 17:06:36.000000000 +0100
++++ objcxx_eh.h	2025-02-18 11:03:56.455965494 +0100
 @@ -1,7 +1,12 @@
  #ifdef __cplusplus
  extern "C" {
@@ -17,11 +17,11 @@ Workaround build failure due to redefinition
   * Allocates a C++ exception.  This function is part of the Itanium C++ ABI and
   * is provided externally.
   */
-@@ -34,9 +39,9 @@
+@@ -31,9 +36,9 @@
+ /**
   * Frees an exception object allocated by __cxa_allocate_exception().  Part of
   * the Itanium C++ ABI.
   */
- __attribute__((weak))
 -void __cxa_free_exception(void *thrown_exception);
 +void __cxa_free_exception(void *thrown_exception) _GLIBCXX_NOTHROW;
  /**

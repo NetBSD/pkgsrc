@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2023/01/14 01:30:53 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/02/20 14:24:02 manu Exp $
 include/Block.h
 include/Block_private.h
 include/objc/Availability.h
@@ -15,6 +15,7 @@ include/objc/objc-api.h
 include/objc/objc-arc.h
 include/objc/objc-auto.h
 include/objc/objc-class.h
+include/objc/objc-exception.h
 include/objc/objc-runtime.h
 include/objc/objc-visibility.h
 include/objc/objc.h

@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.19 2023/01/14 01:30:53 manu Exp $
+$NetBSD: distinfo,v 1.20 2025/02/20 14:24:02 manu Exp $
 
-BLAKE2s (libobjc2-2.1.0.tar.gz) = 4812d384515b96a0b837356cd95f68fea492e109ad4166e6159f64b608299f79
-SHA512 (libobjc2-2.1.0.tar.gz) = a93c385f9ad53fce0f736088c3a18e72119c0128690725e435a35fe4250830d13e18899f98c7d80e6ea41cbfe1404f055d9d6c3d891ad7c770d47dcd0244fc7f
-Size (libobjc2-2.1.0.tar.gz) = 200290 bytes
-SHA1 (patch-CMakeLists.txt) = 7b4a6a3c28a332ed96ab08837397455ea699bada
-SHA1 (patch-objc_runtime.h) = af2e2944e825e8982252a878939465a259324030
-SHA1 (patch-objcxx_eh.cc) = 42760e1e3c91d686e13c6705c9b1f86d85a7d2ad
-SHA1 (patch-objcxx_eh.h) = 0ae17a3631d40e5db66ef0f0f09818d7fdc03d80
+BLAKE2s (libobjc2-2.2.1.tar.gz) = 8307b74942ab670835b7f0f3ebbc4114d892a9929d4a2292dc611e813d2b0e2a
+SHA512 (libobjc2-2.2.1.tar.gz) = 294db277da1ad929813cbb6c7ae1b5b9dfd9dcb6ceec157b9ec59bca85202c6f344ad8ba8ab3731b83abc5f72c2ab1cb88a79947e56eb92e87dcf62584169af9
+Size (libobjc2-2.2.1.tar.gz) = 205087 bytes
+SHA1 (patch-objc_runtime.h) = 4f429e8e7a85e830f1262351719082f40ffcfbcf
+SHA1 (patch-objcxx_eh.h) = c90b7acccfadb4e3f920810493040a181c428938
