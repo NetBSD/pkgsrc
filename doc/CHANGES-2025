@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1518 2025/02/20 14:39:36 manu Exp $
+$NetBSD: CHANGES-2025,v 1.1519 2025/02/20 18:42:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2013,3 +2013,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gnustep-make to 2.9.3 [manu 2025-02-20]
 	Added devel/SOPE5 version 5.11.2 [manu 2025-02-20]
 	Added www/SOGo5 version 5.11.2 [manu 2025-02-20]
+	Updated mail/mutt to 2.2.14 [tron 2025-02-20]
