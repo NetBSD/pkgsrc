@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/01 18:20:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/20 07:52:53 adam Exp $
 bin/indi_Excalibur
 bin/indi_aaf2_focus
 bin/indi_activefocuser_focus
@@ -290,19 +290,19 @@ lib/indi/MathPlugins/libindi_Nearest_MathPlugin.so
 lib/indi/MathPlugins/libindi_SVD_MathPlugin.so
 lib/libindiAlignmentClient.a
 lib/libindiAlignmentDriver.so
-lib/libindiAlignmentDriver.so.${PKGVERSION}
 lib/libindiAlignmentDriver.so.2
+lib/libindiAlignmentDriver.so.2.1.2
 lib/libindiclient.a
 lib/libindiclient.so
-lib/libindiclient.so.${PKGVERSION}
 lib/libindiclient.so.2
+lib/libindiclient.so.2.1.2
 lib/libindidriver.a
 lib/libindidriver.so
-lib/libindidriver.so.${PKGVERSION}
 lib/libindidriver.so.2
+lib/libindidriver.so.2.1.2
 lib/libindilx200.so
-lib/libindilx200.so.${PKGVERSION}
 lib/libindilx200.so.2
+lib/libindilx200.so.2.1.2
 lib/pkgconfig/libindi.pc
 share/indi/drivers.xml
 share/indi/indi_tcfs_sk.xml
