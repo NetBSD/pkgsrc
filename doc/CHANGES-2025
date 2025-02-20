@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1508 2025/02/20 08:50:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1509 2025/02/20 10:27:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2003,3 +2003,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/haproxy to 3.1.4 [adam 2025-02-20]
 	Updated devel/py-pykka to 4.2.0 [adam 2025-02-20]
 	Updated devel/py-pyelftools to 0.32 [adam 2025-02-20]
+	Updated math/z3 to 4.14.0 [adam 2025-02-20]
+	Updated math/py-z3 to 4.14.0 [adam 2025-02-20]
