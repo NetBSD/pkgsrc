@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2025/02/20 22:42:14 nia Exp $
+${PLIST.plugins}lib/bochs/plugins/libbx_eth_fbsd.la

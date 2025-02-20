@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.114 2024/12/27 08:19:42 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2025/02/20 22:42:14 nia Exp $
 
 DISTNAME=		bochs-2.7
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -19,7 +19,6 @@ FORCE_CXX_STD=		c++11
 USE_LIBTOOL=		yes
 
 CXXFLAGS+=		-DPARANOID
-LIBS+=			-lX11
 
 CONFIGURE_ARGS+=	--disable-docbook
 CONFIGURE_ARGS+=	--enable-cdrom
@@ -29,26 +28,7 @@ MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
 MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
 MAKE_ENV+=		WGET=${FETCH_CMD:Q}
 
-PLIST_VARS+=		notiny nox11 plugins x11
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
-PKG_SUPPORTED_OPTIONS+=	debug tiny x11
-PKG_SUGGESTED_OPTIONS+=	x11
-
 .include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
-
-# Debugging features for the client operating systems. These options are
-# not enabled by default because they can adversely impact performance.
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--disable-plugins
-CONFIGURE_ARGS+=	--enable-debugger
-CONFIGURE_ARGS+=	--enable-iodebug
-CONFIGURE_ARGS+=	--enable-x86-debugger
-.endif
-
-.if empty(PKG_OPTIONS:Mtiny)
-PLIST.notiny=		yes
 
 CONFIGURE_ARGS+=	--enable-idle-hack
 CONFIGURE_ARGS+=	--enable-a20-pin
@@ -79,29 +59,13 @@ CONFIGURE_ARGS+=	--enable-alignment-check
 CONFIGURE_ARGS+=	--enable-gameport
 CONFIGURE_ARGS+=	--enable-busmouse
 
-.  if empty(PKG_OPTIONS:Mdebug)
-PLIST.plugins=		yes
-CONFIGURE_ARGS+=	--enable-plugins
-.  endif
-
-.  if !empty(MACHINE_PLATFORM:M*-*-i386)
+.if !empty(MACHINE_PLATFORM:M*-*-i386)
 CONFIGURE_ARGS+=	--enable-fast-function-calls
-.  endif
+.endif
 
 CONFIGURE_ARGS.Linux+=		--enable-pcidev
 CONFIGURE_ARGS+=		--enable-sb16
 CONFIGURE_ARGS+=		--enable-es1370
-.endif
-
-.if empty(PKG_OPTIONS:Mx11)
-PLIST.nox11=		yes
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ARGS+=	--without-x11
-CONFIGURE_ARGS+=	--with-term
-CONFIGURE_ARGS+=	--with-sdl
-.else
-PLIST.x11=		yes
-.endif
 
 .if ${OPSYS} == "Linux"
 SUBST_CLASSES+=		nobpf
@@ -139,29 +103,10 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/bochs.sh ${PREFIX}/bin/bochs
 .else
 
-.  if !empty(PKG_OPTIONS:Mdebug) && !empty(PKG_OPTIONS:Mx11)
-.include "../../x11/gtk3/buildlink3.mk"
-.  endif
-.  if empty(PKG_OPTIONS:Mx11)
-.    include "../../mk/curses.buildlink3.mk"
-.    if ${OPSYS} == "NetBSD"
-.      if ${CURSES_TYPE} == "curses"
-GUI_LINK_OPTS_TERM=	-lcurses
-.      endif
-.    endif
-.  else
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.    include "../../x11/libSM/buildlink3.mk"
-.    include "../../x11/libX11/buildlink3.mk"
-.    include "../../x11/libXpm/buildlink3.mk"
-.    include "../../x11/libXrandr/buildlink3.mk"
-.    include "../../x11/libXt/buildlink3.mk"
-.  endif
-.endif
-
 pre-configure:
 	${SED} ${BOCHSRC_SUBST} <${WRKSRC}/.bochsrc >${WRKSRC}/.bochsrc.new
 	mv ${WRKSRC}/.bochsrc.new ${WRKSRC}/.bochsrc
+.endif
 
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,6 @@
-$NetBSD: patch-configure,v 1.8 2024/02/11 23:30:39 ryoon Exp $
+$NetBSD: patch-configure,v 1.9 2025/02/20 22:42:14 nia Exp $
+
+NetBSD curses cannot be found with pkg-config.
 
 --- configure.orig	2024-01-30 08:02:56.289870360 +0000
 +++ configure
