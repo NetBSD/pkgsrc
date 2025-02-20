@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1507 2025/02/20 08:23:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1508 2025/02/20 08:50:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2001,3 +2001,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/zstd to 1.5.7 [adam 2025-02-20]
 	Updated net/wireshark to 4.4.4 [adam 2025-02-20]
 	Updated net/haproxy to 3.1.4 [adam 2025-02-20]
+	Updated devel/py-pykka to 4.2.0 [adam 2025-02-20]
+	Updated devel/py-pyelftools to 0.32 [adam 2025-02-20]
