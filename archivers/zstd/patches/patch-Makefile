@@ -1,22 +1,22 @@
-$NetBSD: patch-Makefile,v 1.12 2024/04/02 20:05:57 adam Exp $
+$NetBSD: patch-Makefile,v 1.13 2025/02/20 08:10:34 adam Exp $
 
 Enable the "install" target on all OS.
 
---- Makefile.orig	2024-03-21 22:05:51.000000000 +0000
+--- Makefile.orig	2025-02-19 00:04:24.000000000 +0000
 +++ Makefile
-@@ -151,7 +151,6 @@ clean:
+@@ -147,7 +147,6 @@ clean:
  #------------------------------------------------------------------------------
  # make install is validated only for Linux, macOS, Hurd and some BSD targets
  #------------------------------------------------------------------------------
--ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD DragonFly NetBSD MSYS_NT CYGWIN_NT Haiku AIX))
+-ifneq (,$(filter Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD DragonFly NetBSD MSYS_NT% CYGWIN_NT% Haiku AIX,$(shell sh -c 'MSYSTEM="MSYS" uname') ))
  
  HOST_OS = POSIX
  
-@@ -387,7 +386,6 @@ clang38install:
+@@ -383,7 +382,6 @@ clang38install:
  lz4install:
  	[ -e lz4 ] || git clone https://github.com/lz4/lz4 && sudo $(MAKE) -C lz4 install
  
 -endif
  
  
- ifneq (,$(filter MSYS%,$(shell uname)))
+ ifneq (,$(filter MSYS%,$(shell sh -c 'MSYSTEM="MSYS" uname') ))
