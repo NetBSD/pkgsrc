@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1506 2025/02/20 07:53:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1507 2025/02/20 08:23:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -1998,3 +1998,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/postgresql-timescaledb to 2.18.2 [adam 2025-02-19]
 	Updated audio/picard to 2.13.3 [adam 2025-02-20]
 	Updated misc/indi to 2.1.2.1 [adam 2025-02-20]
+	Updated archivers/zstd to 1.5.7 [adam 2025-02-20]
+	Updated net/wireshark to 4.4.4 [adam 2025-02-20]
+	Updated net/haproxy to 3.1.4 [adam 2025-02-20]
