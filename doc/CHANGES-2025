@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1517 2025/02/20 14:38:17 manu Exp $
+$NetBSD: CHANGES-2025,v 1.1518 2025/02/20 14:39:36 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gnustep-base to 1.31.0 [manu 2025-02-20]
 	Updated devel/gnustep-make to 2.9.3 [manu 2025-02-20]
 	Added devel/SOPE5 version 5.11.2 [manu 2025-02-20]
+	Added www/SOGo5 version 5.11.2 [manu 2025-02-20]
