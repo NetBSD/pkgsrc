@@ -1,15 +1,15 @@
-$NetBSD: patch-src_api_python_setup.py,v 1.1 2023/05/11 06:43:43 adam Exp $
+$NetBSD: patch-src_api_python_setup.py,v 1.2 2025/02/20 10:27:01 adam Exp $
 
 Some platforms do not support LTO.
 
---- src/api/python/setup.py.orig	2023-05-10 16:39:33.324575995 +0000
+--- src/api/python/setup.py.orig	2025-02-18 21:41:31.000000000 +0000
 +++ src/api/python/setup.py
-@@ -110,7 +110,7 @@ def _configure_z3():
-         'CMAKE_BUILD_TYPE' : 'Release',
-         'Z3_BUILD_EXECUTABLE' : True,
-         'Z3_BUILD_LIBZ3_SHARED' : True,
--        'Z3_LINK_TIME_OPTIMIZATION' : True,
-+        'Z3_LINK_TIME_OPTIMIZATION' : False,
-         'WARNINGS_AS_ERRORS' : 'SERIOUS_ONLY',
-         # Disable Unwanted Options
-         'Z3_USE_LIB_GMP' : False, # Is default false in python build
+@@ -26,7 +26,7 @@ SRC_DIR_REPO = os.path.join(ROOT_DIR, '.
+ SRC_DIR = SRC_DIR_LOCAL if os.path.exists(SRC_DIR_LOCAL) else SRC_DIR_REPO
+ 
+ IS_SINGLE_THREADED = False
+-ENABLE_LTO = True
++ENABLE_LTO = False
+ 
+ IS_PYODIDE = 'PYODIDE_ROOT' in os.environ and os.environ.get('_PYTHON_HOST_PLATFORM', '').startswith('emscripten')
+ 
