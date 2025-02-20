@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.40 2024/05/12 00:22:02 manu Exp $
+$NetBSD: distinfo,v 1.41 2025/02/20 14:28:46 manu Exp $
 
-BLAKE2s (gnustep-base-1.29.0.tar.gz) = 2d1d7a4e64a417bc8b224068f741ccf29439ef69ab36fca90a5934c075c87cda
-SHA512 (gnustep-base-1.29.0.tar.gz) = a3ecbabf09c232acee964b59894f59d42a2ab63f7396c3560d10ad64363ceb455af91f9d40aa386e60f1d9671c436960b70e828e7055005c11f4c02372a4fc0b
-Size (gnustep-base-1.29.0.tar.gz) = 3698001 bytes
-SHA1 (patch-Source_Additions_GSXML.m) = ad3be89d60bb08dcc9b31b8cb8c5e489ecf88a02
-SHA1 (patch-Source_NSProcessInfo.m) = 398c03b9b4a6a97bcd0c13215d444cc4a94ecb19
-SHA1 (patch-Source_common.h) = ed8a68a023b01b1562793678b7ddbd641e3a40d8
-SHA1 (patch-aa) = 5b2b61058fcc8f4c8073598d61cccb3c23429a7c
+BLAKE2s (gnustep-base-1.31.0.tar.gz) = 4b4eff1b53eaab4d366f5ce795bc17a13c2dc8e0643c0bcc212184a8cf0ba82f
+SHA512 (gnustep-base-1.31.0.tar.gz) = 351c738b1c997174a4b5e5ed3a81c4bee68c2dfdb4c907b2c39a6c5ec713eae7f126ac9e99a7c45e5af83fad55c8c136e5cc7ce5c83ed278f964422b4cffed76
+Size (gnustep-base-1.31.0.tar.gz) = 3836883 bytes
+SHA1 (patch-Source_NSProcessInfo.m) = ed32b0ecb2533b95138e4e566bbb801611925b74
 SHA1 (patch-ab) = 1eb9746ae2cb8ba9c02d6131c4d797b210318851
 SHA1 (patch-ac) = 4e8e209ad202385948d0f4b0d29e5e61e01da410
-SHA1 (patch-ad) = 16442b907021c0e490ed6f2072887d7849b5df40
-SHA1 (patch-configure) = b7147653d65719c799a86bd1252207c4bf00168b
+SHA1 (patch-ad) = 7ed4fb7a6a40deebe85badb483307e2d70c8f6fe
+SHA1 (patch-configure) = 26ca8f745c27f44675f13113c767958eb021207b
