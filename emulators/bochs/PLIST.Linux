@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2019/01/21 10:04:45 markd Exp $
-lib/bochs/plugins/libbx_eth_linux.la
-lib/bochs/plugins/libbx_pcidev.la
+@comment $NetBSD: PLIST.Linux,v 1.2 2025/02/20 22:42:14 nia Exp $
+${PLIST.plugins}lib/bochs/plugins/libbx_eth_linux.la
+${PLIST.plugins}lib/bochs/plugins/libbx_pcidev.la
+${PLIST.plugins}lib/bochs/plugins/libbx_soundoss.la
