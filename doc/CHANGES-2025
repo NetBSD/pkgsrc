@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1514 2025/02/20 14:30:14 manu Exp $
+$NetBSD: CHANGES-2025,v 1.1515 2025/02/20 14:34:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-elasticsearch to 8.17.1 [adam 2025-02-20]
 	Updated www/gnustep-objc to 2.2.1 [manu 2025-02-20]
 	Updated www/gnustep-base to 1.31.0 [manu 2025-02-20]
+	Updated www/gnustep-make to 2.9.3 [manu 2025-02-20]
