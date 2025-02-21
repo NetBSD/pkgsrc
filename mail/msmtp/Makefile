@@ -1,39 +1,39 @@
-# $NetBSD: Makefile,v 1.99 2024/11/14 22:20:38 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2025/02/21 17:50:05 schmonz Exp $
 
-DISTNAME=	msmtp-1.8.23
-PKGREVISION=	8
-CATEGORIES=	mail
-MASTER_SITES=	https://marlam.de/msmtp/releases/
-EXTRACT_SUFX=	.tar.xz
+DISTNAME=		msmtp-1.8.28
+CATEGORIES=		mail
+MASTER_SITES=		${HOMEPAGE}releases/
+EXTRACT_SUFX=		.tar.xz
 
-MAINTAINER=	bcv@hub3.net
-HOMEPAGE=	https://marlam.de/msmtp/
-COMMENT=	SMTP plugin for MUAs
-LICENSE=	gnu-gpl-v3
+MAINTAINER=		bcv@hub3.net
+HOMEPAGE=		https://marlam.de/msmtp/
+COMMENT=		SMTP client for MUAs
+LICENSE=		gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config msgfmt xgettext
+INFO_FILES=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS.Darwin+=	--with-macosx-keyring
-
-EGDIR=		${PREFIX}/share/examples/msmtp
-CONF_FILES=	${EGDIR}/msmtprc-user.example \
-		${PKG_SYSCONFDIR}/msmtprc
-
-INFO_FILES=	yes
-PLIST_VARS+=	scripts
 
 CPPFLAGS.Interix+=	-D__WINSOCK
 LDFLAGS.SunOS+=		-lsocket -lnsl
 
+TEST_TARGET=		check
+
+EGDIR=			${PREFIX}/share/examples/msmtp
+INSTALLATION_DIRS+=	${EGDIR}
+CONF_FILES=		${EGDIR}/msmtprc-user.example \
+			${PKG_SYSCONFDIR}/msmtprc
+
 .include "options.mk"
 
-.PHONY: install-msmtp-scripts
 post-install: install-msmtp-scripts
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-user.example ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
