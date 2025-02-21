@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1533 2025/02/21 17:01:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1534 2025/02/21 17:26:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2035,3 +2035,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/nodejs20 to 20.18.3 [adam 2025-02-21]
 	Updated lang/nodejs22 to 22.14.0 [adam 2025-02-21]
 	Updated lang/nodejs to 23.8.0 [adam 2025-02-21]
+	Updated security/gsasl to 2.2.1 [schmonz 2025-02-21]
