@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2024,v 1.7949 2025/02/17 20:10:18 rillig Exp $
+$NetBSD: CHANGES-2024,v 1.7950 2025/02/21 21:15:33 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2024:
 
@@ -2268,8 +2268,6 @@ Changes to the packages collection and infrastructure in 2024:
 	Updated fonts/tex-evangelion-jfm-doc to 1.0.5c [markd 2024-02-18]
 	Updated fonts/tex-fontspec to 2.9a [markd 2024-02-18]
 	Updated fonts/tex-fontspec-doc to 2.9a [markd 2024-02-18]
-	Updated print/tex-footmisc to 6.0f [markd 2024-02-18]
-	Updated print/tex-footmisc-doc to 6.0f [markd 2024-02-18]
 	Updated fonts/tex-heuristica to 1.093 [markd 2024-02-18]
 	Updated fonts/tex-heuristica-doc to 1.093 [markd 2024-02-18]
 	Updated print/tex-jlreq to 2023.69932 [markd 2024-02-18]
