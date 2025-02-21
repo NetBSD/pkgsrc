@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/17 19:51:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/21 14:32:55 wiz Exp $
 
 # update tag information in post-extract below when updating this
 DISTNAME=	wezterm-20250213.133349
@@ -49,6 +49,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=-L${BUILDLINK_PREFIX.libX11}/lib
 RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxcb}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.xcb-util}/lib
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxkbcommon}/lib
 
 CARGO_NO_DEFAULT_FEATURES=	yes
 CARGO_FEATURES+=		distro-defaults
