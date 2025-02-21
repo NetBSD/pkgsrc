@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2025/02/16 16:42:38 pin Exp $
+$NetBSD: distinfo,v 1.29 2025/02/21 14:34:16 pin Exp $
 
 BLAKE2s (addr2line-0.24.2.crate) = 5bdb03ff8621c0993eda0ec3682c467ad3fc0015f48e46a70779bbd4bfbe8267
 SHA512 (addr2line-0.24.2.crate) = 39cbec3c920ffc0f37584afb55e1cfe4f182e4415319a4e9bfe842360f102f7b9315f6171c0cf71ba0337123903e604096cd573fe98698a26c8eebc2376d965b
@@ -723,24 +723,9 @@ Size (signal-hook-registry-1.4.2.crate) = 18064 bytes
 BLAKE2s (slab-0.4.9.crate) = 910e1c3640a12b3196dec14d77395cbb8ec6b85537612ac3653ee9bee7a415a5
 SHA512 (slab-0.4.9.crate) = b6b5423ae026472920f7c9a4abe0962314140a36dc562c0a9e3fa60725b2b8b7a8b343110d9d4c0e18fb318b0103e14c0ccbc9ae350d5563a5ac80c35f228c40
 Size (slab-0.4.9.crate) = 17108 bytes
-BLAKE2s (slumber-3.0.0.crate) = 7d96e9c5a345be3daaa84ac37ca3898279228167b8b9007f3534948f8187744a
-SHA512 (slumber-3.0.0.crate) = 3337589a1cd8a8ec4cc59dbb561c3f61011dc8eff7a03a1e62e58d747e3090a4bba03b1bd27b4d2de0fb07a6e4dd8067c89b02b6b9a809defa8e2e7078d655f5
-Size (slumber-3.0.0.crate) = 1275039 bytes
-BLAKE2s (slumber_cli-3.0.0.crate) = bd679d154471c22b1987e15bf95a40a238a90f6b68431eb5346d34d0ca35acf5
-SHA512 (slumber_cli-3.0.0.crate) = 953e768bc087f4139b5cd384ab1142800461aba799cb5b5a21dbd58baaeb3b995607750cc42473209c134a47f89a9cae48e8b9d0b846ee0da57dc0703c0008df
-Size (slumber_cli-3.0.0.crate) = 11376 bytes
-BLAKE2s (slumber_config-3.0.0.crate) = e26c4986c01b5da4e5d668a36bc96ab29cb373e865294f55dfdb32f0553bcfee
-SHA512 (slumber_config-3.0.0.crate) = 7f4a26f76cff10a3b5fcdd32dbf7ab110358e948902a49a94350a0ca15d10b267f05151d0fcf1277365a30ba40bfc5780c56ffad13e079a62cf66a94d58c9138
-Size (slumber_config-3.0.0.crate) = 11118 bytes
-BLAKE2s (slumber_core-3.0.0.crate) = f2ce1f9fddb617a08e27845e4464cc732a96be73d3fc11c0955f107d8649f87e
-SHA512 (slumber_core-3.0.0.crate) = 9470af396f48da77e811df3a9d00b76745be2b91041567b81b3d6bd4ea22d3fd4ce3a38292ef4dfcc25e8c68dc84c63f7bd38b7d9e554f4b1c2128a1b52aec9d
-Size (slumber_core-3.0.0.crate) = 87760 bytes
-BLAKE2s (slumber_import-3.0.0.crate) = 892647c8745c6eec49f6037f246c40d0939c816b89482f6a67e75441736a28a1
-SHA512 (slumber_import-3.0.0.crate) = 0bbe3e6b03a4ae3cc3c134c2dd1444cd53d1c3dcc5c79f9ff87bee97c6d173f0cae99957eec9a37f075efde49fddf6839dd03bee539faf2f99e3b24cc69f1a3b
-Size (slumber_import-3.0.0.crate) = 21444 bytes
-BLAKE2s (slumber_tui-3.0.0.crate) = 95f71441d1a175f9f708016da3033fe0c9b9bb90c3d55db10abca96716bb022a
-SHA512 (slumber_tui-3.0.0.crate) = af89ae0cbeb2ffa232ec54e3a9d39e8357585163fe326e1cfbbf6cb8af7fa27fc46c8fe56dfc81a7e9df8de90a7afb9d743eefe1589491121fc2fe93a36be25b
-Size (slumber_tui-3.0.0.crate) = 129372 bytes
+BLAKE2s (slumber-3.0.1.tar.gz) = 88a390a841b91e6d394a20755418f245422ef1d9fbbacb02fc9bd8b189f142a9
+SHA512 (slumber-3.0.1.tar.gz) = 780070d74a63fe375bba4bbda897edab9f146e022e9eaf64c84767897cc8227d62d73e31cae2241d4cee9186e1829d8fad3919a9b2170c494f2f5e4024371f9b
+Size (slumber-3.0.1.tar.gz) = 1114301 bytes
 BLAKE2s (smallvec-1.13.2.crate) = b0c6aa90972d031feb8f50aa1562ab0dbce3a027e6a54bea2586c819ef8e369b
 SHA512 (smallvec-1.13.2.crate) = a97c758b668e40ad9eb572e65feeae4954e09200a04ab92e26a13b48894381cd3a3d2571070c4b7a5e181182e1ede9688f990650342ec69ecfe1a264d234c679
 Size (smallvec-1.13.2.crate) = 35216 bytes

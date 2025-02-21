@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.28 2025/02/16 16:42:38 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.29 2025/02/21 14:34:16 pin Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -241,11 +241,6 @@ CARGO_CRATE_DEPENDS+=	signal-hook-0.3.17
 CARGO_CRATE_DEPENDS+=	signal-hook-mio-0.2.4
 CARGO_CRATE_DEPENDS+=	signal-hook-registry-1.4.2
 CARGO_CRATE_DEPENDS+=	slab-0.4.9
-CARGO_CRATE_DEPENDS+=	slumber_cli-3.0.0
-CARGO_CRATE_DEPENDS+=	slumber_core-3.0.0
-CARGO_CRATE_DEPENDS+=	slumber_config-3.0.0
-CARGO_CRATE_DEPENDS+=	slumber_import-3.0.0
-CARGO_CRATE_DEPENDS+=	slumber_tui-3.0.0
 CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
 CARGO_CRATE_DEPENDS+=	socket2-0.5.8
 CARGO_CRATE_DEPENDS+=	spin-0.9.8
