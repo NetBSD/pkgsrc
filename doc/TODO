@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25458 2025/02/21 14:36:56 pin Exp $
+$NetBSD: TODO,v 1.25459 2025/02/21 21:47:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,8 +401,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o R-mapproj-3
 	o R-ncdf-1.6.9
 	o SDL-3.2.2
-	o SOGo5-5.11.1 [wip]
-	o SOPE5-5.11.1 [wip]
 	o SQLiteCpp-2.5.0
 	o Sigil-2.4.2
 	o TiffIO-140a
@@ -1174,6 +1172,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.5.1
 	o rust-1.84.1 [wip]
+	o rust-1.85.0
 	o rvault-0.4
 	o rvm-1.20
 	o sabayon-2.30.1
