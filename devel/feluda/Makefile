@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2025/02/12 08:11:36 pin Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/21 14:32:10 pin Exp $
 
-DISTNAME=	feluda-1.4.0
+DISTNAME=	feluda-1.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anistark/}
 
