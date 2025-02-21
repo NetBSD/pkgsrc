@@ -1,0 +1,19 @@
+$NetBSD: patch-configure,v 1.6 2025/02/21 10:22:11 nia Exp $
+
+Upstream themselves seem unsure about this line (except
+on Solaris 9?) and it causes problems building on
+unexpected platforms.
+
+--- configure.orig	2025-02-21 08:18:11.766015967 +0000
++++ configure
+@@ -21026,10 +21026,6 @@ printf "%s\n" "yes" >&6; }
+ 
+ fi
+ NEEDED="xau >= 0.99.2"
+-case $host_os in
+-linux*|darwin*|solaris*|dragonfly*|freebsd*|netbsd*) ;;
+-     *) NEEDED="$NEEDED pthread-stubs" ;;
+-esac
+ 
+ pkg_failed=no
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for $NEEDED" >&5
