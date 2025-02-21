@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1528 2025/02/21 14:35:40 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1529 2025/02/21 14:36:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.2.7 [pin 2025-02-21]
 	Updated net/slumber to 3.0.1 [pin 2025-02-21]
 	Updated graphics/wallust to 3.2.0 [pin 2025-02-21]
+	Updated textproc/typst to 0.13.0 [pin 2025-02-21]
