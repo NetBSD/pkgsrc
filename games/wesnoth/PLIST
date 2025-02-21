@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2024/11/24 19:45:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.71 2025/02/21 11:59:28 adam Exp $
 bin/wesnoth
 bin/wesnothd
 man/bg/man6/wesnoth.6
@@ -96,6 +96,7 @@ share/doc/wesnoth/html/images/tr/multiplayer-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/recruit-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/right_pane-1.14.7.jpg
 share/doc/wesnoth/html/images/tr/top_pane-1.14.7.jpg
+share/doc/wesnoth/html/manual.ar.html
 share/doc/wesnoth/html/manual.bg.html
 share/doc/wesnoth/html/manual.ca.html
 share/doc/wesnoth/html/manual.cs.html
