@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1531 2025/02/21 16:24:53 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1532 2025/02/21 16:27:39 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2030,3 +2030,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/libjwt to 3.2.0 [adam 2025-02-21]
 	Updated net/ngtcp2 to 1.11.0 [adam 2025-02-21]
 	Updated www/nghttp3 to 1.8.0 [adam 2025-02-21]
+	Updated lang/joker to 1.4.1 [ktnb 2025-02-21]
