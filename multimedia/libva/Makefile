@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/07/13 08:44:20 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/02/21 10:19:08 nia Exp $
 
 DISTNAME=	libva-2.22.0
 CATEGORIES=	multimedia
@@ -14,13 +14,18 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
+USE_LANGUAGES=	c c++
 
 USE_CC_FEATURES=	c99
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
 FORCE_C_STD=		gnu99
 
-.include "../../mk/bsd.prefs.mk"
+.include "available.mk"
+
+.if ${VAAPI_AVAILABLE:tl} == "no"
+PKG_SKIP_REASON+=	"VAAPI unavailable on this platform"
+.endif
 
 #
 # vaapi drivers (e.g. intel-vaapi-driver) can be installed under
