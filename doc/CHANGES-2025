@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1538 2025/02/21 21:25:20 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1539 2025/02/21 23:38:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/mpop to 1.4.21 [schmonz 2025-02-21]
 	Updated mail/msmtp to 1.8.28 [schmonz 2025-02-21]
 	Added wm/stumpwm version 24.11 [ktnb 2025-02-21]
+	Updated www/cgicc to 3.2.20 [mef 2025-02-21]
