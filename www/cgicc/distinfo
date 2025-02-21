@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 11:29:22 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/02/21 23:38:34 mef Exp $
 
-BLAKE2s (cgicc-3.2.19.tar.gz) = 67b9041b7049b89abc33a6d32b030fb2d523ad20bc107325eb4a1fbf1109b294
-SHA512 (cgicc-3.2.19.tar.gz) = c361923cf3ac876bc3fc94dffd040d2be7cd44751d8534f4cfa3545e9f58a8ec35ebcd902a8ce6a19da0efe52db67506d8b02e5cc868188d187ce3092519abdf
-Size (cgicc-3.2.19.tar.gz) = 2456040 bytes
+BLAKE2s (cgicc-3.2.20.tar.gz) = fbc3d513c9245b0dcc81f1c04979ccd13448b9cca281da77e461265001d48f06
+SHA512 (cgicc-3.2.20.tar.gz) = e57b8f30b26b29008bcf1ffc3b2d272bdbd77848fb02e24912b6182ae90923d5933b9d204c556ac922a389f73ced465065b6e2202fc0c3d008e0e6038e7c8052
+Size (cgicc-3.2.20.tar.gz) = 2802735 bytes
