@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1521 2025/02/21 08:49:24 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1522 2025/02/21 10:51:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2017,3 +2017,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/objfw to 1.2.4 [js 2025-02-20]
 	Updated devel/py-cachetools to 5.5.2 [adam 2025-02-21]
 	Updated devel/py-propcache to 0.3.0 [adam 2025-02-21]
+	Updated audio/py-discogs-client to 2.8 [adam 2025-02-21]
