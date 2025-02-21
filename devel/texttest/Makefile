@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2025/01/30 14:39:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.37 2025/02/21 16:12:58 schmonz Exp $
 
-DISTNAME=		texttest-4.4.2
+DISTNAME=		texttest-4.4.3.1
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=t/texttest/}
 
@@ -11,6 +11,8 @@ LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=		${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
+
+TOOL_DEPENDS+=		${PYPKGPREFIX}-setuptools>=61.0:../../devel/py-setuptools
 
 USE_LANGUAGES=		# none
 
@@ -26,6 +28,12 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	texttestlib/default/__init__.py
 SUBST_VARS.prefix=	PREFIX
+
+post-extract:
+	${FIND} ${WRKSRC} -type f -name '*cpython*.pyc' | ${XARGS} ${RM} -f
+
+pre-configure:
+	${FIND} ${WRKSRC} -type f -name '*.orig' | ${XARGS} ${RM} -f
 
 .include "../../lang/python/wheel.mk"
 .include "../../lang/python/application.mk"

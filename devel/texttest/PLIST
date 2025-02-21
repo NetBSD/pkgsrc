@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2025/01/30 14:39:17 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/02/21 16:12:58 schmonz Exp $
 bin/interpretcore
 bin/texttest
+bin/texttestc
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/texttestlib/__init__.py
 ${PYSITELIB}/texttestlib/__init__.pyc
@@ -207,6 +209,7 @@ ${PYSITELIB}/texttestlib/default/traffic.pyo
 ${PYSITELIB}/texttestlib/default/virtualdisplay.py
 ${PYSITELIB}/texttestlib/default/virtualdisplay.pyc
 ${PYSITELIB}/texttestlib/default/virtualdisplay.pyo
+${PYSITELIB}/texttestlib/doc/COPYING
 ${PYSITELIB}/texttestlib/doc/CREDITS.txt
 ${PYSITELIB}/texttestlib/doc/ChangeLog
 ${PYSITELIB}/texttestlib/doc/LICENSE.txt
@@ -273,6 +276,9 @@ ${PYSITELIB}/texttestlib/images/texttest-icon-static.png
 ${PYSITELIB}/texttestlib/images/texttest-logo.png
 ${PYSITELIB}/texttestlib/images/throbber_active.gif
 ${PYSITELIB}/texttestlib/images/throbber_inactive.png
+${PYSITELIB}/texttestlib/interpretcore/__init__.py
+${PYSITELIB}/texttestlib/interpretcore/__init__.pyc
+${PYSITELIB}/texttestlib/interpretcore/__init__.pyo
 ${PYSITELIB}/texttestlib/jobprocess.py
 ${PYSITELIB}/texttestlib/jobprocess.pyc
 ${PYSITELIB}/texttestlib/jobprocess.pyo
