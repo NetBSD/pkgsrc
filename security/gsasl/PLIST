@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2022/07/17 08:24:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/02/21 17:26:17 schmonz Exp $
 bin/gsasl
 include/gsasl-mech.h
 include/gsasl-version.h
@@ -62,6 +62,7 @@ share/locale/hr/LC_MESSAGES/gsasl.mo
 share/locale/hu/LC_MESSAGES/gsasl.mo
 share/locale/id/LC_MESSAGES/gsasl.mo
 share/locale/it/LC_MESSAGES/gsasl.mo
+share/locale/ka/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/gsasl.mo
 share/locale/pl/LC_MESSAGES/gsasl.mo
 share/locale/pt_BR/LC_MESSAGES/gsasl.mo
