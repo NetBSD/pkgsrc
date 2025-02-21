@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2025/02/21 12:29:11 nia Exp $
+lib/${PKGNAME}/libfreebl3.so
