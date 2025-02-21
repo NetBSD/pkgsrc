@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2020/01/18 23:35:43 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2025/02/21 23:38:34 mef Exp $
 
-DISTNAME=	cgicc-3.2.19
+DISTNAME=	cgicc-3.2.20
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=cgicc/}
 
