@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2023/03/03 09:00:52 fcambus Exp $
+@comment $NetBSD: PLIST,v 1.17 2025/02/21 17:50:05 schmonz Exp $
 bin/msmtp
 bin/msmtpd
 info/msmtp.info
@@ -7,8 +7,11 @@ man/man1/msmtpd.1
 share/examples/msmtp/msmtprc-user.example
 share/locale/de/LC_MESSAGES/msmtp.mo
 share/locale/eo/LC_MESSAGES/msmtp.mo
+share/locale/es/LC_MESSAGES/msmtp.mo
 share/locale/fr/LC_MESSAGES/msmtp.mo
 share/locale/pt_BR/LC_MESSAGES/msmtp.mo
+share/locale/ro/LC_MESSAGES/msmtp.mo
+share/locale/ru/LC_MESSAGES/msmtp.mo
 share/locale/sr/LC_MESSAGES/msmtp.mo
 share/locale/sv/LC_MESSAGES/msmtp.mo
 share/locale/ta/LC_MESSAGES/msmtp.mo
@@ -25,4 +28,6 @@ ${PLIST.scripts}share/msmtp/msmtpqueue/msmtp-runqueue.sh
 ${PLIST.scripts}share/msmtp/set_sendmail/set_sendmail.conf
 ${PLIST.scripts}share/msmtp/set_sendmail/set_sendmail.sh
 ${PLIST.scripts}share/msmtp/vim/README
-${PLIST.scripts}share/msmtp/vim/msmtp.vim
+${PLIST.scripts}share/msmtp/vim/ftdetect/msmtp.vim
+${PLIST.scripts}share/msmtp/vim/ftplugin/msmtp.vim
+${PLIST.scripts}share/msmtp/vim/syntax/msmtp.vim
