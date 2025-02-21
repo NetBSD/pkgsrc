@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/21 21:24:33 ktnb Exp $
+bin/stumpwm
+info/stumpwm.info

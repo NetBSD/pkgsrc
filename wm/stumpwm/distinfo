@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2025/02/21 21:24:33 ktnb Exp $
+
+BLAKE2s (stumpwm/alexandria-1.4.tar.gz) = 173f0095c50f04a688658c4a3d29cf307e935b1b0985d82a83a5b4c0b4579746
+SHA512 (stumpwm/alexandria-1.4.tar.gz) = 4343be8eb2bac1924aaa8c890895aa885205af4c84110d7f8ceaf6c9ba1390e6037ffa3697fd1630266aede01bb596fd84c332ca43ded80326795637583332af
+Size (stumpwm/alexandria-1.4.tar.gz) = 57634 bytes
+BLAKE2s (stumpwm/cl-clx-0.7.6.tar.gz) = 991ffe6cd6d83cda66a44a12311d7489be58dda4736b687b4a9fdd67570403e2
+SHA512 (stumpwm/cl-clx-0.7.6.tar.gz) = 7ca1e1f55807d4af29b872937dcb5f03cc251185095e90ed224645ef23628cb3df019c57ca903b3fa2063d4c7d52c957699f15699abca9ae1a4ae8588ef9d0f3
+Size (stumpwm/cl-clx-0.7.6.tar.gz) = 462763 bytes
+BLAKE2s (stumpwm/cl-ppcre-2.1.2.tar.gz) = e812127ef3ccd8d194cb2ee21730b13b5e7d2ed080c07aa9ca44024f5aca509a
+SHA512 (stumpwm/cl-ppcre-2.1.2.tar.gz) = bfcea40b251a21861dae4883f6d5b277626ae2bed86fb895173e011bdf35a289eee949a3a87b3e83ed123ae22f2a19268038e624b378fd98d28855dda9e11f78
+Size (stumpwm/cl-ppcre-2.1.2.tar.gz) = 159376 bytes
+BLAKE2s (stumpwm/stumpwm-24.11.tar.gz) = a931416c7343a63e5e93bbef0b4f856788e6624ba005b4716cc0787caef31a1f
+SHA512 (stumpwm/stumpwm-24.11.tar.gz) = f5af75ac059481d0c24937f696a94f451e9dc26f24d3c65fb33ee5f1cbf04c8aa4c10a8faecd3c35021219d72ccdf91b194513433e648004c7c8dbb9c593830f
+Size (stumpwm/stumpwm-24.11.tar.gz) = 287797 bytes
+SHA1 (patch-Makefile.in) = 17a68d457d9d66e1b0ea2b41bde6fa24f7c6f0a5

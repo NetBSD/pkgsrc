@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.178 2024/11/20 13:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.179 2025/02/21 21:24:33 ktnb Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -89,6 +89,7 @@ SUBDIR+=	skhd
 SUBDIR+=	skippy
 SUBDIR+=	sowm
 SUBDIR+=	spectrwm
+SUBDIR+=	stumpwm
 SUBDIR+=	swc
 SUBDIR+=	tinywm
 SUBDIR+=	trayer

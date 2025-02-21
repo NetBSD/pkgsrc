@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2025/02/21 21:24:33 ktnb Exp $
+
+Don't validate the info doc, it'll fail otherwise
+
+--- Makefile.in.orig	2024-10-19 13:57:35.000000000 +0000
++++ Makefile.in
+@@ -19,7 +19,7 @@ all: stumpwm stumpwm.info
+ 
+ travis: stumpwm test
+ stumpwm.info: stumpwm.texi
+-	test "$(MAKEINFO)" = "no" || $(MAKEINFO) stumpwm.texi
++	test "$(MAKEINFO)" = "no" || $(MAKEINFO) --force --no-validate stumpwm.texi
+ 
+ # FIXME: This rule is too hardcoded
+ stumpwm.texi: stumpwm.texi.in $(FILES)
