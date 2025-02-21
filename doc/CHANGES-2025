@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1523 2025/02/21 12:02:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1524 2025/02/21 12:29:22 nia Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2020,3 +2020,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/py-discogs-client to 2.8 [adam 2025-02-21]
 	Updated games/wesnoth to 1.18.4 [adam 2025-02-21]
 	Updated security/py-asyncssh to 2.20.0 [adam 2025-02-21]
+	Updated www/palemoon to 33.6.0.1 [nia 2025-02-21]
