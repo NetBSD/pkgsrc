@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1526 2025/02/21 14:33:34 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1527 2025/02/21 14:34:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2023,3 +2023,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/palemoon to 33.6.0.1 [nia 2025-02-21]
 	Updated devel/feluda to 1.5.0 [pin 2025-02-21]
 	Updated devel/mise to 2025.2.7 [pin 2025-02-21]
+	Updated net/slumber to 3.0.1 [pin 2025-02-21]
