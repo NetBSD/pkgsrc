@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2025/02/16 16:42:38 pin Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/21 14:34:16 pin Exp $
 
-DISTNAME=	slumber-3.0.0
+DISTNAME=	slumber-3.0.1
 CATEGORIES=	net
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
-MASTER_SITES=	https://static.crates.io/crates/slumber/
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-EXTRACT_SUFX=	.crate
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LucasPickering/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://slumber.lucaspickering.me/
