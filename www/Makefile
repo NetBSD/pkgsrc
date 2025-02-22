@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1845 2025/02/16 23:37:56 nia Exp $
+# $NetBSD: Makefile,v 1.1846 2025/02/22 15:54:02 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -107,7 +107,6 @@ SUBDIR+=	dillo
 SUBDIR+=	dillo-cxx98
 SUBDIR+=	drraw
 SUBDIR+=	drupal11
-SUBDIR+=	drupal7
 SUBDIR+=	e2guardian
 SUBDIR+=	elinks
 SUBDIR+=	eliom
