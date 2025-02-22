@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/02/21 14:32:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/22 14:41:44 wiz Exp $
 
 # update tag information in post-extract below when updating this
 DISTNAME=	wezterm-20250213.133349
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
 GITHUB_TAG=	ee0c04e735fb94cb5119681f704fb7fa6731e713
