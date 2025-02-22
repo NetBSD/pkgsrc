@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2025/02/18 10:03:31 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2025/02/22 14:46:11 gdt Exp $
 
 DISTNAME=	exiv2-0.28.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Exiv2/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,9 +14,9 @@ LICENSE=	gnu-gpl-v2
 CHECK_PORTABILITY_SKIP+=	contrib/coverity.sh
 
 USE_TOOLS+=	msgfmt
-USE_LANGUAGES=	c c++
 
-USE_CXX_FEATURES+=	filesystem
+USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17
 
 .include "../../mk/bsd.prefs.mk"
 
