@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2020/02/13 19:03:57 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.51 2025/02/22 17:37:02 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -67,11 +67,13 @@ share/ikiwiki/basewiki/templates/popup.mdwn
 share/ikiwiki/basewiki/wikiicons/diff.png
 share/ikiwiki/basewiki/wikiicons/email.png
 share/ikiwiki/basewiki/wikiicons/openidlogin-bg.gif
+share/ikiwiki/basewiki/wikiicons/openidlogin-bg.png
 share/ikiwiki/basewiki/wikiicons/revert.png
 share/ikiwiki/basewiki/wikiicons/search-bg.gif
 share/ikiwiki/directives/ikiwiki/directive/aggregate.mdwn
 share/ikiwiki/directives/ikiwiki/directive/brokenlinks.mdwn
 share/ikiwiki/directives/ikiwiki/directive/calendar.mdwn
+share/ikiwiki/directives/ikiwiki/directive/caution.mdwn
 share/ikiwiki/directives/ikiwiki/directive/color.mdwn
 share/ikiwiki/directives/ikiwiki/directive/comment.mdwn
 share/ikiwiki/directives/ikiwiki/directive/commentmoderation.mdwn
@@ -87,12 +89,14 @@ share/ikiwiki/directives/ikiwiki/directive/graph.mdwn
 share/ikiwiki/directives/ikiwiki/directive/haiku.mdwn
 share/ikiwiki/directives/ikiwiki/directive/if.mdwn
 share/ikiwiki/directives/ikiwiki/directive/img.mdwn
+share/ikiwiki/directives/ikiwiki/directive/important.mdwn
 share/ikiwiki/directives/ikiwiki/directive/inline.mdwn
 share/ikiwiki/directives/ikiwiki/directive/linkmap.mdwn
 share/ikiwiki/directives/ikiwiki/directive/listdirectives.mdwn
 share/ikiwiki/directives/ikiwiki/directive/map.mdwn
 share/ikiwiki/directives/ikiwiki/directive/meta.mdwn
 share/ikiwiki/directives/ikiwiki/directive/more.mdwn
+share/ikiwiki/directives/ikiwiki/directive/note.mdwn
 share/ikiwiki/directives/ikiwiki/directive/orphans.mdwn
 share/ikiwiki/directives/ikiwiki/directive/osm.mdwn
 share/ikiwiki/directives/ikiwiki/directive/pagecount.mdwn
@@ -114,6 +118,7 @@ share/ikiwiki/directives/ikiwiki/directive/template.mdwn
 share/ikiwiki/directives/ikiwiki/directive/templatebody.mdwn
 share/ikiwiki/directives/ikiwiki/directive/testpagespec.mdwn
 share/ikiwiki/directives/ikiwiki/directive/teximg.mdwn
+share/ikiwiki/directives/ikiwiki/directive/tip.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toc.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
@@ -122,6 +127,7 @@ share/ikiwiki/directives/ikiwiki/directive/trailitems.mdwn
 share/ikiwiki/directives/ikiwiki/directive/traillink.mdwn
 share/ikiwiki/directives/ikiwiki/directive/trailoptions.mdwn
 share/ikiwiki/directives/ikiwiki/directive/version.mdwn
+share/ikiwiki/directives/ikiwiki/directive/warning.mdwn
 share/ikiwiki/directives/ikiwiki/directive/waypoint.mdwn
 share/ikiwiki/examples/blog.mdwn
 share/ikiwiki/examples/blog/archives.mdwn
@@ -611,6 +617,11 @@ share/ikiwiki/po/fr/directives/ikiwiki/directive/toggleable.fr.po
 share/ikiwiki/po/fr/directives/ikiwiki/directive/version.fr.po
 share/ikiwiki/po/fr/smiley/smileys.fr.po
 share/ikiwiki/smiley/smileys.mdwn
+share/ikiwiki/smiley/smileys/admon-caution.png
+share/ikiwiki/smiley/smileys/admon-important.png
+share/ikiwiki/smiley/smileys/admon-note.png
+share/ikiwiki/smiley/smileys/admon-tip.png
+share/ikiwiki/smiley/smileys/admon-warning.png
 share/ikiwiki/smiley/smileys/alert.png
 share/ikiwiki/smiley/smileys/angry.png
 share/ikiwiki/smiley/smileys/attention.png
@@ -650,6 +661,7 @@ share/ikiwiki/templates/calendaryear.tmpl
 share/ikiwiki/templates/change.tmpl
 share/ikiwiki/templates/comment.tmpl
 share/ikiwiki/templates/commentmoderation.tmpl
+share/ikiwiki/templates/duckduckgoform.tmpl
 share/ikiwiki/templates/editcomment.tmpl
 share/ikiwiki/templates/editconflict.tmpl
 share/ikiwiki/templates/editcreationconflict.tmpl
@@ -682,6 +694,7 @@ share/ikiwiki/themes/blueview/style.css
 share/ikiwiki/themes/goldtype/background_darkness.png
 share/ikiwiki/themes/goldtype/header_background.png
 share/ikiwiki/themes/goldtype/style.css
+share/ikiwiki/themes/lightdark/style.css
 share/ikiwiki/themes/monochrome/gradient.png
 share/ikiwiki/themes/monochrome/style.css
 share/locale/bg/LC_MESSAGES/ikiwiki.mo
