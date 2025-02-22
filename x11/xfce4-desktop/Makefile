@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.109 2025/01/28 01:20:20 gutteridge Exp $
+# $NetBSD: Makefile,v 1.110 2025/02/22 03:41:16 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	4.20.0
+VERSION=	4.20.1
 DISTNAME=	xfdesktop-${VERSION}
 PKGNAME=	xfce4-desktop-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES+=	https://archive.xfce.org/src/xfce/xfdesktop/${VERSION:R}/
 
@@ -19,7 +18,6 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 
-.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 .include "../../devel/libwnck3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
