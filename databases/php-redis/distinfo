@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/02/20 13:35:28 taca Exp $
+$NetBSD: distinfo,v 1.11 2025/02/22 16:54:17 taca Exp $
 
-BLAKE2s (php-redis/5.3.7.tar.gz) = d5c639c9bdb4a2a4170a9629859e633443647aa59069ca575171735f84042b6f
-SHA512 (php-redis/5.3.7.tar.gz) = 394ad0d5a45e2f985a1622ab9ceca55fb0b8e5ee0631a8dd763984611260e55de43bea308710569fa360ee88e02791e9b28ecaea26f2b770dc168a82a2afb4b3
-Size (php-redis/5.3.7.tar.gz) = 294541 bytes
+BLAKE2s (php-redis/6.1.0.tar.gz) = f9b178cb389ce56f0621ddb4220e609e157fbe8de80d7cf3a7f19528026d14cf
+SHA512 (php-redis/6.1.0.tar.gz) = 1116167ffa7457499b95b4d454c71abd6546b1b4d8e4fa91daf2fb8cd9e056340c05bcfae73b8ccb83fd10275260994ebb474a0df801c0c46c5dfcaabac3c0eb
+Size (php-redis/6.1.0.tar.gz) = 403285 bytes
