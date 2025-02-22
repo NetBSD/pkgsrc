@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1551 2025/02/22 16:02:15 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1552 2025/02/22 16:13:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-pcre to 3.10.0 [taca 2025-02-22]
 	Updated mail/postfix-pgsql to 3.10.0 [taca 2025-02-22]
 	Updated mail/postfix-sqlite to 3.10.0 [taca 2025-02-22]
+	Updated www/drupal11 to 11.1.3 [taca 2025-02-22]
