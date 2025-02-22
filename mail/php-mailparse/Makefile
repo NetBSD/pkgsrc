@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/08 03:44:47 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/22 17:41:22 taca Exp $
 
 MODNAME=		mailparse
-PECL_VERSION=		3.1.3
-PKGREVISION=		1
+PECL_VERSION=		3.1.8
 CATEGORIES+=		mail
 COMMENT=		PHP extension for email message manipulation
 LICENSE=		php
