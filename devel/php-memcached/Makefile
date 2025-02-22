@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/02/08 03:41:14 taca Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/22 17:22:29 taca Exp $
 #
 
 MODNAME=		memcached
-PECL_VERSION=		2.2.0
-PKGREVISION=		2
+PECL_VERSION=		3.3.0
 CATEGORIES+=		devel
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -13,7 +12,7 @@ LICENSE=		php
 
 CONFLICTS=		php-memcached-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	56
+PHP_VERSIONS_ACCEPTED=	74 81 82 83 84
 
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++

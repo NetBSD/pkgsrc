@@ -1,13 +1,14 @@
-# $NetBSD: options.mk,v 1.2 2015/04/07 23:09:39 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2025/02/22 17:22:29 taca Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.php-memcached
-PKG_SUPPORTED_OPTIONS=	igbinary sasl
-PKG_SUGGESTED_OPTIONS=	sasl
+PKG_OPTIONS_VAR=		PKG_OPTIONS.php-memcached
+PKG_SUPPORTED_OPTIONS=		memcached-igbinary sasl
+PKG_SUGGESTED_OPTIONS=		sasl
+PKG_OPTIONS_LEGACY_OPTS+=	igbinary:memcached-igbinary
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Migbinary)
-.include "../../lang/php/phpversion.mk" 
+.if !empty(PKG_OPTIONS:Mmemcached-igbinary)
+.include "../../lang/php/phpversion.mk"
 DEPENDS+=		${PHP_PKG_PREFIX}-igbinary-[0-9]*:../../devel/php-igbinary
 CONFIGURE_ARGS+=	--enable-memcached-igbinary
 .else
