@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2025/01/18 17:22:50 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.80 2025/02/22 03:30:33 gutteridge Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by devel/xfce4-conf/Makefile
@@ -71,6 +71,7 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
+.include "../../devel/gettext-tools/msgfmt-desktop.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.66.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=    gtk3+>=3.24.0
