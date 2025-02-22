@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.72 2024/12/27 08:20:30 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2025/02/22 03:35:22 gutteridge Exp $
 
-PKGREVISION= 11
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-wavelan-plugin-0.6.3
+DISTNAME=	xfce4-wavelan-plugin-0.6.4
 CATEGORIES=	sysutils
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-wavelan-plugin/0.6/
 
