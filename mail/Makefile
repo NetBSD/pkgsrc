@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.666 2025/01/23 21:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.667 2025/02/22 15:37:15 taca Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -314,6 +314,7 @@ SUBDIR+=	pfqueue
 SUBDIR+=	php-dmarc-srg
 SUBDIR+=	php-imap
 SUBDIR+=	php-mailparse
+SUBDIR+=	php-pecl-imap
 SUBDIR+=	php-vmailmgr
 SUBDIR+=	pim-sieve-editor
 SUBDIR+=	pine
