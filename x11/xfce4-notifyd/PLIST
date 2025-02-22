@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2024/02/11 02:58:05 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.12 2025/02/22 03:53:42 gutteridge Exp $
 bin/xfce4-notifyd-config
 lib/xfce4/notifyd/xfce4-notifyd
 lib/xfce4/panel/plugins/libnotification-plugin.la
@@ -7,9 +7,9 @@ share/applications/xfce4-notifyd-config.desktop
 share/dbus-1/services/org.xfce.xfce4-notifyd.Notifications.service
 share/dbus-1/services/org.xfce.xfce4-notifyd.Notifyd.service
 share/examples/xfce4-notifyd/xfce4-notifyd.desktop
+share/icons/hicolor/128x128/apps/org.xfce.notification.png
 share/icons/hicolor/16x16/apps/org.xfce.notification.png
 share/icons/hicolor/48x48/apps/org.xfce.notification.png
-share/icons/hicolor/128x128/apps/org.xfce.notification.png
 share/icons/hicolor/scalable/apps/org.xfce.notification.svg
 share/icons/hicolor/scalable/status/notification-disabled-symbolic.svg
 share/icons/hicolor/scalable/status/notification-symbolic.svg
@@ -73,5 +73,10 @@ share/themes/Bright/xfce-notify-4.0/gtk.css
 share/themes/Default/xfce-notify-4.0/gtk.css
 share/themes/Retro/xfce-notify-4.0/gtk.css
 share/themes/Smoke/xfce-notify-4.0/gtk.css
+share/themes/XP-Balloon/xfce-notify-4.0/gtk.css
+share/themes/XP-Balloon/xfce-notify-4.0/msgbox-bottom-left.png
+share/themes/XP-Balloon/xfce-notify-4.0/msgbox-bottom-right.png
+share/themes/XP-Balloon/xfce-notify-4.0/msgbox-top-left.png
+share/themes/XP-Balloon/xfce-notify-4.0/msgbox-top-right.png
 share/themes/ZOMG-PONIES!/xfce-notify-4.0/gtk.css
 share/xfce4/panel/plugins/notification-plugin.desktop
