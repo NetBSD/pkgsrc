@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.742 2025/02/08 14:06:04 wiz Exp $
+# $NetBSD: Makefile,v 1.743 2025/02/22 15:28:23 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -238,6 +238,7 @@ SUBDIR+=	php74
 SUBDIR+=	php81
 SUBDIR+=	php82
 SUBDIR+=	php83
+SUBDIR+=	php84
 SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	pnut
