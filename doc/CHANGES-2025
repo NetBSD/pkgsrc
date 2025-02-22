@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1561 2025/02/22 17:37:09 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1562 2025/02/22 17:41:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2074,3 +2074,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-xkb-plugin to 0.8.5 [gutteridge 2025-02-22]
 	Updated devel/php-psr to 1.2.0 [taca 2025-02-22]
 	Updated www/ikiwiki to 3.20250221 [schmonz 2025-02-22]
+	Updated mail/php-mailparse to 3.1.8 [taca 2025-02-22]
