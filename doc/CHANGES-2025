@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1540 2025/02/22 01:19:22 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1541 2025/02/22 03:35:52 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added wm/stumpwm version 24.11 [ktnb 2025-02-21]
 	Updated www/cgicc to 3.2.20 [mef 2025-02-21]
 	Updated audio/py-music21 to 9.5.0 [gutteridge 2025-02-22]
+	Updated net/xfce4-wavelan-plugin to 0.6.4 [gutteridge 2025-02-22]
