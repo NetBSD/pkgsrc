@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/08 01:55:28 wen Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/02/22 16:13:00 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3469,6 +3469,7 @@ share/drupal/core/lib/Drupal/Core/DefaultContent/Finder.php
 share/drupal/core/lib/Drupal/Core/DefaultContent/ImportException.php
 share/drupal/core/lib/Drupal/Core/DefaultContent/Importer.php
 share/drupal/core/lib/Drupal/Core/DefaultContent/InvalidEntityException.php
+share/drupal/core/lib/Drupal/Core/DefaultContent/PreImportEvent.php
 share/drupal/core/lib/Drupal/Core/DependencyInjection/AutowireTrait.php
 share/drupal/core/lib/Drupal/Core/DependencyInjection/ClassResolver.php
 share/drupal/core/lib/Drupal/Core/DependencyInjection/ClassResolverInterface.php
@@ -8920,6 +8921,7 @@ share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/Valid
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/Validation/Constraint/MediaTestConstraintValidator.php
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/Test.php
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/TestDifferentDisplays.php
+share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/TestSourceWithAReallyLongName.php
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/TestTranslation.php
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/TestWithConstraints.php
 share/drupal/core/modules/media/tests/modules/media_test_source/src/Plugin/media/Source/TestWithHiddenSourceField.php
@@ -9809,6 +9811,7 @@ share/drupal/core/modules/navigation/layouts/navigation.html.twig
 share/drupal/core/modules/navigation/modules/navigation_top_bar/navigation_top_bar.info.yml
 share/drupal/core/modules/navigation/modules/navigation_top_bar/src/Hook/NavigationTopBarHooks.php
 share/drupal/core/modules/navigation/modules/navigation_top_bar/tests/src/Functional/GenericTest.php
+share/drupal/core/modules/navigation/navigation.api.php
 share/drupal/core/modules/navigation/navigation.info.yml
 share/drupal/core/modules/navigation/navigation.install
 share/drupal/core/modules/navigation/navigation.layouts.yml
@@ -9845,10 +9848,10 @@ share/drupal/core/modules/navigation/src/TopBarItemManagerInterface.php
 share/drupal/core/modules/navigation/src/TopBarItemPluginInterface.php
 share/drupal/core/modules/navigation/src/TopBarRegion.php
 share/drupal/core/modules/navigation/src/UserLazyBuilder.php
-share/drupal/core/modules/navigation/templates/big-pipe-interface-preview--navigation-shortcut-lazy-builder-lazyLinks--Shortcuts.html.twig
 share/drupal/core/modules/navigation/templates/block--navigation.html.twig
 share/drupal/core/modules/navigation/templates/logo.svg.twig
 share/drupal/core/modules/navigation/templates/menu-region--footer.html.twig
+share/drupal/core/modules/navigation/templates/navigation-content-top.html.twig
 share/drupal/core/modules/navigation/templates/navigation-menu.html.twig
 share/drupal/core/modules/navigation/templates/top-bar-local-task.html.twig
 share/drupal/core/modules/navigation/templates/top-bar-local-tasks.html.twig
@@ -9858,6 +9861,7 @@ share/drupal/core/modules/navigation/tests/navigation_test/navigation_test.modul
 share/drupal/core/modules/navigation/tests/navigation_test/src/Hook/NavigationTestHooks.php
 share/drupal/core/modules/navigation/tests/navigation_test/src/Plugin/TopBarItem/TopBarItemInstantiation.php
 share/drupal/core/modules/navigation/tests/src/Functional/GenericTest.php
+share/drupal/core/modules/navigation/tests/src/Functional/NavigationContentTopTest.php
 share/drupal/core/modules/navigation/tests/src/Functional/NavigationLinkBlockTest.php
 share/drupal/core/modules/navigation/tests/src/Functional/NavigationLogoTest.php
 share/drupal/core/modules/navigation/tests/src/Functional/NavigationSafeBlockDefinitionTest.php
@@ -9865,6 +9869,8 @@ share/drupal/core/modules/navigation/tests/src/Functional/NavigationShortcutsBlo
 share/drupal/core/modules/navigation/tests/src/Functional/NavigationTopBarTest.php
 share/drupal/core/modules/navigation/tests/src/Functional/NavigationUserBlockTest.php
 share/drupal/core/modules/navigation/tests/src/FunctionalJavascript/NavigationBlockUiTest.php
+share/drupal/core/modules/navigation/tests/src/FunctionalJavascript/PerformanceTest.php
+share/drupal/core/modules/navigation/tests/src/FunctionalJavascript/TopBarPerformanceTest.php
 share/drupal/core/modules/navigation/tests/src/Kernel/ConfigAction/AddNavigationBlockConfigActionTest.php
 share/drupal/core/modules/navigation/tests/src/Kernel/NavigationMenuBlockTest.php
 share/drupal/core/modules/navigation/tests/src/Kernel/NavigationMenuMarkupTest.php
@@ -12248,6 +12254,7 @@ share/drupal/core/modules/system/tests/modules/menu_test/menu_test.services.yml
 share/drupal/core/modules/system/tests/modules/menu_test/src/Access/AccessCheck.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Controller/MenuTestController.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Hook/MenuTestHooks.php
+share/drupal/core/modules/system/tests/modules/menu_test/src/MenuTestServiceProvider.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Derivative/LocalActionTest.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Derivative/LocalTaskTest.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Derivative/LocalTaskTestWithUnsafeTitle.php
@@ -12259,6 +12266,7 @@ share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Menu/LocalAc
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Menu/LocalAction/TestLocalActionWithConfig.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Menu/LocalTask/TestTaskWithUserInput.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Plugin/Menu/LocalTask/TestTasksSettingsSub1.php
+share/drupal/core/modules/system/tests/modules/menu_test/src/SkippablePathBasedBreadcrumbBuilder.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/TestControllers.php
 share/drupal/core/modules/system/tests/modules/menu_test/src/Theme/TestThemeNegotiator.php
 share/drupal/core/modules/system/tests/modules/module_autoload_test/module_autoload_test.info.yml
@@ -12680,6 +12688,7 @@ share/drupal/core/modules/system/tests/modules/url_alter_test/url_alter_test.inf
 share/drupal/core/modules/system/tests/modules/url_alter_test/url_alter_test.services.yml
 share/drupal/core/modules/system/tests/src/Functional/Ajax/FrameworkTest.php
 share/drupal/core/modules/system/tests/src/Functional/Ajax/OffCanvasDialogTest.php
+share/drupal/core/modules/system/tests/src/Functional/Batch/BatchNotFoundTest.php
 share/drupal/core/modules/system/tests/src/Functional/Batch/PageTest.php
 share/drupal/core/modules/system/tests/src/Functional/Batch/ProcessingTest.php
 share/drupal/core/modules/system/tests/src/Functional/Bootstrap/DrupalMessengerServiceTest.php
@@ -14011,6 +14020,7 @@ share/drupal/core/modules/user/tests/src/Kernel/UserMailDefaultsTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserMailNotifyTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserNameValidatorTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserPassRehashTest.php
+share/drupal/core/modules/user/tests/src/Kernel/UserRequirementsTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserRoleDeleteTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserRoleEntityTest.php
 share/drupal/core/modules/user/tests/src/Kernel/UserSaveStatusTest.php
@@ -14880,6 +14890,8 @@ share/drupal/core/modules/views/tests/src/Unit/Plugin/filter/FilterPluginBaseTes
 share/drupal/core/modules/views/tests/src/Unit/Plugin/filter/InOperatorTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/pager/PagerPluginBaseTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/pager/SqlBaseTest.php
+share/drupal/core/modules/views/tests/src/Unit/Plugin/pager/StubPagerPluginBase.php
+share/drupal/core/modules/views/tests/src/Unit/Plugin/pager/StubSqlBase.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/query/SqlTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/views/display/BlockTest.php
 share/drupal/core/modules/views/tests/src/Unit/Plugin/views/field/BulkFormTest.php
@@ -16253,6 +16265,7 @@ share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/ClaroPasswordConf
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/ClaroTableDragTest.php
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/ClaroViewsBulkOperationsTest.php
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/ClaroViewsUiTest.php
+share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/OliveroAvoidStorageUsingTest.php
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/Theme/OliveroMessagesTest.php
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/WebDriverCurlService.php
 share/drupal/core/tests/Drupal/FunctionalJavascriptTests/WebDriverTestBase.php
@@ -16777,7 +16790,6 @@ share/drupal/core/tests/Drupal/KernelTests/Core/Render/Element/TableSortExtender
 share/drupal/core/tests/Drupal/KernelTests/Core/Render/Element/TableTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Render/Element/WeightTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Render/ElementInfoIntegrationTest.php
-share/drupal/core/tests/Drupal/KernelTests/Core/Render/RenderCacheTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/Render/RenderTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/RouteProcessor/RouteNoneTest.php
 share/drupal/core/tests/Drupal/KernelTests/Core/RouteProcessor/RouteProcessorCurrentIntegrationTest.php
@@ -17350,6 +17362,7 @@ share/drupal/core/tests/Drupal/Tests/Core/DrupalKernel/fixtures/custom.yml
 share/drupal/core/tests/Drupal/Tests/Core/DrupalTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Enhancer/EntityRevisionRouteEnhancerTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Enhancer/ParamConversionEnhancerTest.php
+share/drupal/core/tests/Drupal/Tests/Core/Entity/Access/EntityCreateAccessCustomCidTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Entity/Access/EntityFormDisplayAccessControlHandlerTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Entity/Access/EntityViewDisplayAccessControlHandlerTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Entity/BaseFieldDefinitionTest.php
@@ -19480,7 +19493,6 @@ share/drupal/vendor/drupal/core-vendor-hardening/README.txt
 share/drupal/vendor/drupal/core-vendor-hardening/TESTING.txt
 share/drupal/vendor/drupal/core-vendor-hardening/VendorHardeningPlugin.php
 share/drupal/vendor/drupal/core-vendor-hardening/composer.json
-share/drupal/vendor/egulias/email-validator/CHANGELOG.md
 share/drupal/vendor/egulias/email-validator/CONTRIBUTING.md
 share/drupal/vendor/egulias/email-validator/LICENSE
 share/drupal/vendor/egulias/email-validator/composer.json
@@ -21803,6 +21815,7 @@ share/drupal/vendor/twig/twig/src/Extension/DebugExtension.php
 share/drupal/vendor/twig/twig/src/Extension/EscaperExtension.php
 share/drupal/vendor/twig/twig/src/Extension/ExtensionInterface.php
 share/drupal/vendor/twig/twig/src/Extension/GlobalsInterface.php
+share/drupal/vendor/twig/twig/src/Extension/LastModifiedExtensionInterface.php
 share/drupal/vendor/twig/twig/src/Extension/OptimizerExtension.php
 share/drupal/vendor/twig/twig/src/Extension/ProfilerExtension.php
 share/drupal/vendor/twig/twig/src/Extension/RuntimeExtensionInterface.php
@@ -21842,6 +21855,7 @@ share/drupal/vendor/twig/twig/src/Node/Expression/Binary/BitwiseOrBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/BitwiseXorBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/ConcatBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/DivBinary.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Binary/ElvisBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/EndsWithBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/EqualBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/FloorDivBinary.php
@@ -21857,6 +21871,7 @@ share/drupal/vendor/twig/twig/src/Node/Expression/Binary/ModBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/MulBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/NotEqualBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/NotInBinary.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Binary/NullCoalesceBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/OrBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/PowerBinary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Binary/RangeBinary.php
@@ -21880,8 +21895,10 @@ share/drupal/vendor/twig/twig/src/Node/Expression/MacroReferenceExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/MethodCallExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/NameExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/NullCoalesceExpression.php
+share/drupal/vendor/twig/twig/src/Node/Expression/OperatorEscapeInterface.php
 share/drupal/vendor/twig/twig/src/Node/Expression/ParentExpression.php
 share/drupal/vendor/twig/twig/src/Node/Expression/TempNameExpression.php
+share/drupal/vendor/twig/twig/src/Node/Expression/Ternary/ConditionalTernary.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/ConstantTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/DefinedTest.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Test/DivisiblebyTest.php
@@ -21903,6 +21920,7 @@ share/drupal/vendor/twig/twig/src/Node/Expression/Variable/LocalVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/Variable/TemplateVariable.php
 share/drupal/vendor/twig/twig/src/Node/Expression/VariadicExpression.php
 share/drupal/vendor/twig/twig/src/Node/FlushNode.php
+share/drupal/vendor/twig/twig/src/Node/ForElseNode.php
 share/drupal/vendor/twig/twig/src/Node/ForLoopNode.php
 share/drupal/vendor/twig/twig/src/Node/ForNode.php
 share/drupal/vendor/twig/twig/src/Node/IfNode.php

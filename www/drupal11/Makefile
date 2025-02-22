@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 04:00:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/22 16:13:00 taca Exp $
 
-DISTNAME=	drupal-11.1.0
-PKGREVISION=	1
+DISTNAME=	drupal-11.1.3
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp-origin.drupal.org/files/projects/
@@ -17,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=${PHP_BASE_VERS}:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=${PHP_BASE_VERS}:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=${PHP_BASE_VERS}:../../archivers/php-zlib
 
-PHP_VERSIONS_ACCEPTED=	83 # 84
+PHP_VERSIONS_ACCEPTED=	83 84
 
 NO_BUILD=	YES
 DRUPAL=		share/drupal
