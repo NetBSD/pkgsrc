@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1557 2025/02/22 17:06:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1558 2025/02/22 17:22:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/php-pecl-zip to 1.22.5 [taca 2025-02-22]
 	Updated databases/php-redis to 6.1.0 [taca 2025-02-22]
 	Updated devel/php-memcache to 8.2 [taca 2025-02-22]
+	Updated devel/php-memcached to 3.3.0 [taca 2025-02-22]
