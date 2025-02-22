@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2025/01/24 12:56:01 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2025/02/22 15:31:13 taca Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -51,6 +51,7 @@ SUBDIR+=	php74-extensions
 SUBDIR+=	php81-extensions
 SUBDIR+=	php82-extensions
 SUBDIR+=	php83-extensions
+SUBDIR+=	php84-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
 SUBDIR+=	py-tryton-platform
