@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.200 2024/05/17 17:06:42 bacon Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.201 2025/02/22 17:17:25 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1413,6 +1413,13 @@ USE_TOOLS+=	pkg-config msgfmt xgettext
 <programlisting>
 MESON_ARGS+=	-Dx11=false
 </programlisting></para>
+  </sect2>
+
+  <sect2 id="endian">
+    <title>Determining the endianness</title>
+
+    <para>To determine the endianness of the target platform,
+    have a look at <filename>mk/endian.mk</filename>.</para>
   </sect2>
 
 </sect1>
