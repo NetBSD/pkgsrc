@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1543 2025/02/22 03:43:30 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1544 2025/02/22 03:55:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/xfce4-wavelan-plugin to 0.6.4 [gutteridge 2025-02-22]
 	Updated x11/xfce4-desktop to 4.20.1 [gutteridge 2025-02-22]
 	Updated meta-pkgs/xfce4 to 4.20.0nb3 [gutteridge 2025-02-22]
+	Updated x11/xfce4-notifyd to 0.9.7 [gutteridge 2025-02-22]
