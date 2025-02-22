@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2025/02/22 17:53:51 gutteridge Exp $
+# $NetBSD: Makefile,v 1.79 2025/02/22 17:56:20 gutteridge Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -10,7 +10,7 @@ MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin
 COMMENT=	Xfce system load plugin
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
 FORCE_CXX_STD+=		c++11
 USE_CXX_FEATURES+=	c++11
 
