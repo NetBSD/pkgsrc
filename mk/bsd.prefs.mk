@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.455 2025/02/18 13:06:28 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.456 2025/02/22 21:27:07 nia Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -315,7 +315,7 @@ NATIVE_OS_VARIANT=		Solaris
 NATIVE_LOWER_VARIANT_VERSION=	${_UNAME_V}
 .  endif
 
-.elif ${OPSYS} == "SCO_SV"
+.elif ${NATIVE_OPSYS} == "SCO_SV"
 SCO_RELEASE!=			${UNAME} -r
 SCO_VERSION!=			${UNAME} -v
 NATIVE_LOWER_VENDOR?=		pc
