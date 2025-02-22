@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2025/02/08 04:04:40 taca Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/22 16:22:42 taca Exp $
 #
 
 DISTNAME=	${CM_NAME}.phar
 PKGNAME=	${PHP_PKG_PREFIX}-${CM_NAME}-${CM_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.contao.org/contao-manager/stable/
 DIST_SUBDIR=	${CM_NAME}/${CM_VERSION}
@@ -23,10 +22,10 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 
 CM_NAME=	contao-manager
-CM_VERSION=	1.8.10
+CM_VERSION=	1.9.1
 NO_BUILD=	yes
 
-PHP_VERSIONS_ACCEPTED=	81 82 83
+PHP_VERSIONS_ACCEPTED=	81 82 83 84
 
 CT_DOCDIR=	share/doc/${PHP_PKG_PREFIX}/${CM_NAME}
 CT_EGDIR=	share/examples/${PHP_PKG_PREFIX}/${CM_NAME}
