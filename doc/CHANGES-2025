@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1550 2025/02/22 15:56:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1551 2025/02/22 16:02:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2056,3 +2056,11 @@ Changes to the packages collection and infrastructure in 2025:
 	Added meta-pkgs/php84-extensions version 8.4.4 [taca 2025-02-22]
 	Added mail/php-pecl-imap version 1.0.3 [taca 2025-02-22]
 	Removed www/drupal7 [taca 2025-02-22]
+	Updated mail/postfix to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-cdb to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-ldap to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-lmdb to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-mysql to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-pcre to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-pgsql to 3.10.0 [taca 2025-02-22]
+	Updated mail/postfix-sqlite to 3.10.0 [taca 2025-02-22]
