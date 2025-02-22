@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/22 15:36:23 taca Exp $
+
+BLAKE2s (php-imap/imap-1.0.3.tgz) = f7d5a65795d016a1df213ba33f8564551c7590acd600af0def179b8f3606c54d
+SHA512 (php-imap/imap-1.0.3.tgz) = 845642883d9b75a72408c272682377f1b9d672198118b2be99e466232471663f0ea0d839069c19bc30886c142db5a2f9b835cd0251162e0b0d3acad3be3cbca2
+Size (php-imap/imap-1.0.3.tgz) = 63476 bytes

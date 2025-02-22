@@ -1,0 +1,4 @@
+An extension to operate with the IMAP protocol, as well as the NNTP,
+POP3, and local mailbox access methods.
+
+This is pecl version for PHP 8.4 and later.
