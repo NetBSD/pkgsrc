@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1547 2025/02/22 15:28:39 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1548 2025/02/22 15:31:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/wezterm to 20250213.133349nb1 [wiz 2025-02-22]
 	Updated textproc/xt-rs to 0.19.3 [pin 2025-02-22]
 	Added lang/php84 version 8.4.4 [taca 2025-02-22]
+	Added meta-pkgs/php84-extensions version 8.4.4 [taca 2025-02-22]
