@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 10:18:02 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/02/22 17:29:13 taca Exp $
 
-BLAKE2s (php-psr/psr-1.0.1.tgz) = 2c72c264d15788943c2f60be971f468761f67f6cda44537e44d9ac1a34eb1a92
-SHA512 (php-psr/psr-1.0.1.tgz) = 27ea717f4a8b9d69998ad28dccf7adfcbda0092b88b3087cf282a450e9324c67aa36678956e8b9bfa56360c03a5341a47f849a030e6f698015d4fc5d1fb59519
-Size (php-psr/psr-1.0.1.tgz) = 27742 bytes
+BLAKE2s (php-psr/psr-1.2.0.tgz) = 372a2ea12acd325591939ba5edcc0e0421516ae5704bba5907cfc28fe8c246b1
+SHA512 (php-psr/psr-1.2.0.tgz) = 90d4bc1cd2364a15775024806ec5bc1b8f60ed44569162016a0a78fca89f4ad0f0e0b1f9f09ebdcfe6a803e888bddd1d8ce73100eec52ecc21c2e505a35ee5dd
+Size (php-psr/psr-1.2.0.tgz) = 28238 bytes
