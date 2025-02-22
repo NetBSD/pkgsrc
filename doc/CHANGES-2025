@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1558 2025/02/22 17:22:40 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1559 2025/02/22 17:27:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/php-redis to 6.1.0 [taca 2025-02-22]
 	Updated devel/php-memcache to 8.2 [taca 2025-02-22]
 	Updated devel/php-memcached to 3.3.0 [taca 2025-02-22]
+	Updated sysutils/xfce4-xkb-plugin to 0.8.5 [gutteridge 2025-02-22]
