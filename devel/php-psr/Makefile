@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 03:41:14 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/22 17:29:13 taca Exp $
 
 MODNAME=	psr
-PECL_VERSION=	1.0.1
-PKGREVISION=	1
+PECL_VERSION=	1.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
