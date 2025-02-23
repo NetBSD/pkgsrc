@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1608 2025/02/23 14:35:45 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1609 2025/02/23 14:37:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2123,3 +2123,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-rex-mime to 0.1.11 [taca 2025-02-23]
 	Updated security/ruby-rex-nop to 0.1.4 [taca 2025-02-23]
 	Updated security/ruby-rex-ole to 0.1.9 [taca 2025-02-23]
+	Updated security/ruby-rex-powershell to 0.1.101 [taca 2025-02-23]
