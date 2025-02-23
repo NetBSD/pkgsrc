@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1632 2025/02/23 16:48:15 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1633 2025/02/23 17:23:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added math/py-roman_numerals_py version 3.1.0 [wiz 2025-02-23]
 	Updated textproc/py-sphinx to 8.2.1 [wiz 2025-02-23]
 	Updated textproc/py-sphinx-autodoc-typehints to 3.1.0 [wiz 2025-02-23]
+	Updated comms/py-textual to 2.1.1 [wiz 2025-02-23]
