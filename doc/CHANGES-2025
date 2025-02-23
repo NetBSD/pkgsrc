@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1567 2025/02/23 08:58:06 he Exp $
+$NetBSD: CHANGES-2025,v 1.1568 2025/02/23 09:14:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2080,3 +2080,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/p5-SQL-Translator to 1.66 [wen 2025-02-23]
 	Updated sysutils/fastfetch to 2.37.0 [vins 2025-02-23]
 	Updated lang/rust to 1.83.0 [he 2025-02-23]
+	Updated lang/rust-bin to 1.83.0 [he 2025-02-23]
