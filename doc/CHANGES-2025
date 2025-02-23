@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1629 2025/02/23 15:19:05 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1630 2025/02/23 16:41:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack to 3.1.10 [taca 2025-02-23]
 	Updated www/ruby-rack2 to 2.2.11 [taca 2025-02-23]
 	Updated www/ruby-selenium-webdriver to 4.29.1 [taca 2025-02-23]
+	Added math/py-roman_numerals_py version 3.1.0 [wiz 2025-02-23]
