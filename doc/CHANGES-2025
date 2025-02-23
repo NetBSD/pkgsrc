@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1659 2025/02/23 18:50:54 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1660 2025/02/23 18:52:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2174,3 +2174,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-mdurl to 0.1.2nb2 [wiz 2025-02-23]
 	Updated audio/py-mediafile to 0.13.0nb1 [wiz 2025-02-23]
 	Updated devel/py-more-itertools to 10.6.0nb1 [wiz 2025-02-23]
+	Updated www/py-multipart to 1.2.1nb1 [wiz 2025-02-23]
