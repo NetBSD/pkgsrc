@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.39 2024/10/19 11:01:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.40 2025/02/23 16:41:56 wiz Exp $
 bin/sphinx-apidoc-${PYVERSSUFFIX}
 bin/sphinx-autogen-${PYVERSSUFFIX}
 bin/sphinx-build-${PYVERSSUFFIX}
 bin/sphinx-quickstart-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/sphinx/__init__.py
 ${PYSITELIB}/sphinx/__init__.pyc
 ${PYSITELIB}/sphinx/__init__.pyo
@@ -62,9 +62,6 @@ ${PYSITELIB}/sphinx/builders/html/_assets.pyo
 ${PYSITELIB}/sphinx/builders/html/_build_info.py
 ${PYSITELIB}/sphinx/builders/html/_build_info.pyc
 ${PYSITELIB}/sphinx/builders/html/_build_info.pyo
-${PYSITELIB}/sphinx/builders/html/transforms.py
-${PYSITELIB}/sphinx/builders/html/transforms.pyc
-${PYSITELIB}/sphinx/builders/html/transforms.pyo
 ${PYSITELIB}/sphinx/builders/latex/__init__.py
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyc
 ${PYSITELIB}/sphinx/builders/latex/__init__.pyo
@@ -122,6 +119,9 @@ ${PYSITELIB}/sphinx/deprecation.pyo
 ${PYSITELIB}/sphinx/directives/__init__.py
 ${PYSITELIB}/sphinx/directives/__init__.pyc
 ${PYSITELIB}/sphinx/directives/__init__.pyo
+${PYSITELIB}/sphinx/directives/admonitions.py
+${PYSITELIB}/sphinx/directives/admonitions.pyc
+${PYSITELIB}/sphinx/directives/admonitions.pyo
 ${PYSITELIB}/sphinx/directives/code.py
 ${PYSITELIB}/sphinx/directives/code.pyc
 ${PYSITELIB}/sphinx/directives/code.pyo
@@ -242,9 +242,24 @@ ${PYSITELIB}/sphinx/events.pyo
 ${PYSITELIB}/sphinx/ext/__init__.py
 ${PYSITELIB}/sphinx/ext/__init__.pyc
 ${PYSITELIB}/sphinx/ext/__init__.pyo
-${PYSITELIB}/sphinx/ext/apidoc.py
-${PYSITELIB}/sphinx/ext/apidoc.pyc
-${PYSITELIB}/sphinx/ext/apidoc.pyo
+${PYSITELIB}/sphinx/ext/apidoc/__init__.py
+${PYSITELIB}/sphinx/ext/apidoc/__init__.pyc
+${PYSITELIB}/sphinx/ext/apidoc/__init__.pyo
+${PYSITELIB}/sphinx/ext/apidoc/__main__.py
+${PYSITELIB}/sphinx/ext/apidoc/__main__.pyc
+${PYSITELIB}/sphinx/ext/apidoc/__main__.pyo
+${PYSITELIB}/sphinx/ext/apidoc/_cli.py
+${PYSITELIB}/sphinx/ext/apidoc/_cli.pyc
+${PYSITELIB}/sphinx/ext/apidoc/_cli.pyo
+${PYSITELIB}/sphinx/ext/apidoc/_extension.py
+${PYSITELIB}/sphinx/ext/apidoc/_extension.pyc
+${PYSITELIB}/sphinx/ext/apidoc/_extension.pyo
+${PYSITELIB}/sphinx/ext/apidoc/_generate.py
+${PYSITELIB}/sphinx/ext/apidoc/_generate.pyc
+${PYSITELIB}/sphinx/ext/apidoc/_generate.pyo
+${PYSITELIB}/sphinx/ext/apidoc/_shared.py
+${PYSITELIB}/sphinx/ext/apidoc/_shared.pyc
+${PYSITELIB}/sphinx/ext/apidoc/_shared.pyo
 ${PYSITELIB}/sphinx/ext/autodoc/__init__.py
 ${PYSITELIB}/sphinx/ext/autodoc/__init__.pyc
 ${PYSITELIB}/sphinx/ext/autodoc/__init__.pyo
@@ -372,6 +387,9 @@ ${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/ca/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/ca@valencia/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/ca@valencia/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/ca@valencia/LC_MESSAGES/sphinx.po
 ${PYSITELIB}/sphinx/locale/cak/LC_MESSAGES/sphinx.js
 ${PYSITELIB}/sphinx/locale/cak/LC_MESSAGES/sphinx.mo
 ${PYSITELIB}/sphinx/locale/cak/LC_MESSAGES/sphinx.po
@@ -873,6 +891,9 @@ ${PYSITELIB}/sphinx/util/_files.pyo
 ${PYSITELIB}/sphinx/util/_importer.py
 ${PYSITELIB}/sphinx/util/_importer.pyc
 ${PYSITELIB}/sphinx/util/_importer.pyo
+${PYSITELIB}/sphinx/util/_inventory_file_reader.py
+${PYSITELIB}/sphinx/util/_inventory_file_reader.pyc
+${PYSITELIB}/sphinx/util/_inventory_file_reader.pyo
 ${PYSITELIB}/sphinx/util/_io.py
 ${PYSITELIB}/sphinx/util/_io.pyc
 ${PYSITELIB}/sphinx/util/_io.pyo
@@ -912,9 +933,6 @@ ${PYSITELIB}/sphinx/util/docstrings.pyo
 ${PYSITELIB}/sphinx/util/docutils.py
 ${PYSITELIB}/sphinx/util/docutils.pyc
 ${PYSITELIB}/sphinx/util/docutils.pyo
-${PYSITELIB}/sphinx/util/exceptions.py
-${PYSITELIB}/sphinx/util/exceptions.pyc
-${PYSITELIB}/sphinx/util/exceptions.pyo
 ${PYSITELIB}/sphinx/util/fileutil.py
 ${PYSITELIB}/sphinx/util/fileutil.pyc
 ${PYSITELIB}/sphinx/util/fileutil.pyo
