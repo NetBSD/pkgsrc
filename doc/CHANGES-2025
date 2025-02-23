@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1646 2025/02/23 18:33:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1647 2025/02/23 18:35:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2161,3 +2161,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-project-metadata to 0.9.0nb1 [wiz 2025-02-23]
 	Updated devel/py-click to 8.1.8nb1 [wiz 2025-02-23]
 	Updated textproc/py-alabaster to 1.0.0nb1 [wiz 2025-02-23]
+	Updated devel/py-blinker to 1.9.0nb1 [wiz 2025-02-23]
