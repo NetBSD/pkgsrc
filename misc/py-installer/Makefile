@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/01/23 19:31:09 riastradh Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/23 17:31:02 wiz Exp $
 
 DISTNAME=	installer-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/installer/}
 
