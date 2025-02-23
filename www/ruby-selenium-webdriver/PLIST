@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2024/12/11 14:46:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2025/02/23 15:18:24 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
@@ -26,6 +26,14 @@ ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log/javascript_log_entry.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_handler.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/log_inspector.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/cookies.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/credentials.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/headers.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_auth.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_item.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_request.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/intercepted_response.rb
+${GEM_LIBDIR}/lib/selenium/webdriver/bidi/network/url_pattern.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/session.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/bidi/struct.rb
 ${GEM_LIBDIR}/lib/selenium/webdriver/chrome.rb
