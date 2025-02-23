@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2025/02/23 19:40:03 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/23 19:43:09 wiz Exp $
 
 VERSION=	3.4.0
 DISTNAME=	ct3-${VERSION}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cheetahtemplate.org/
 COMMENT=	Template engine and code generation tool
 LICENSE=	mit
+
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 WHEEL_NAME=	CT3-${VERSION}
 
