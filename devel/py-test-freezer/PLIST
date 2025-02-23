@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2023/11/28 17:05:27 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.2 2025/02/23 20:46:45 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pytest_freezer.py
 ${PYSITELIB}/pytest_freezer.pyc
 ${PYSITELIB}/pytest_freezer.pyo
