@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2025/02/09 14:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/02/23 21:05:17 wiz Exp $
 
 DISTNAME=	willow-1.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^w/W/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/Willow/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/wagtail/Willow
 COMMENT=	Wrapper library for Pillow, OpenCV and Wand
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.7:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-filetype>=1.1.1:../../sysutils/py-filetype
 # heif
