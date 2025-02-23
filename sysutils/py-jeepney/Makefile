@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2023/10/28 19:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/23 20:41:30 wiz Exp $
 
 DISTNAME=	jeepney-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jeepney/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://gitlab.com/takluyver/jeepney
 COMMENT=	Low-level pure Python DBus protocol wrapper
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-trio-[0-9]*:../../devel/py-trio
 TEST_DEPENDS+=	${PYPKGPREFIX}-async-timeout-[0-9]*:../../devel/py-async-timeout
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -19,8 +19,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio>=0.17:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-testpath-[0-9]*:../../devel/py-testpath
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
