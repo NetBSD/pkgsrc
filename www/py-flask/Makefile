@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2024/11/17 09:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/02/23 19:53:03 wiz Exp $
 
 DISTNAME=	flask-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/flask/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://flask.pocoo.org/
 COMMENT=	Python web microframework
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-blinker>=1.6.2:../../devel/py-blinker
 DEPENDS+=	${PYPKGPREFIX}-itsdangerous>=2.1.2:../../security/py-itsdangerous
 DEPENDS+=	${PYPKGPREFIX}-click>=8.1.3:../../devel/py-click
