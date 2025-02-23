@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2024/10/14 06:45:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/23 16:59:17 wiz Exp $
 
 DISTNAME=	matrix_nio-0.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-peewee>=3.14.4:../../databases/py-peewee
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-peewee -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-peewee -> py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2023/08/14 05:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/23 16:59:20 wiz Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -229,6 +229,7 @@ STRIP_FILES_SKIP+=		lib/${PKGNAME_NOREV}/libHSrts.a
 #
 .if ${BUILD_SPHINX_HTML} != "no"
 BUILDLINK_DEPMETHOD.python:=	build
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 .include "../../lang/python/pyversion.mk"
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif

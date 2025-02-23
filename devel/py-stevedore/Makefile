@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2024/11/29 09:00:45 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/23 16:59:19 wiz Exp $
 
 DISTNAME=	stevedore-5.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-sphinx>=2.2.0:../../textproc/py-sphinx
 TEST_DEPENDS+=	${PYPKGPREFIX}-testtools-[0-9]*:../../devel/py-testtools
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

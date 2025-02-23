@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/11/01 00:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/23 16:59:25 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 COMMENT=	Python WSGI Utility Library (HTML documentation)
@@ -7,6 +7,8 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-pallets-sphinx-themes>=2:../../textproc/py-pallets
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-issues-[0-9]*:../../textproc/py-sphinx-issues
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-log-cabinet-[0-9]*:../../textproc/py-sphinxcontrib-log-cabinet
 TOOL_DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 USE_TOOLS+=	gmake pax
 NO_CONFIGURE=	yes
