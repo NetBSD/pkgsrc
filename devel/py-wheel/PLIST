@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2024/11/10 10:05:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2025/02/23 19:38:37 wiz Exp $
 bin/wheel-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/wheel/__init__.py
 ${PYSITELIB}/wheel/__init__.pyc
 ${PYSITELIB}/wheel/__init__.pyo
