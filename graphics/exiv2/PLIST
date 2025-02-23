@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2024/07/14 12:59:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/02/23 11:24:54 wiz Exp $
 bin/exiv2
 include/exiv2/asfvideo.hpp
 include/exiv2/basicio.hpp
@@ -49,8 +49,8 @@ include/exiv2/xmp_exiv2.hpp
 include/exiv2/xmpsidecar.hpp
 lib/cmake/exiv2/exiv2Config.cmake
 lib/cmake/exiv2/exiv2ConfigVersion.cmake
-lib/cmake/exiv2/exiv2Export-release.cmake
-lib/cmake/exiv2/exiv2Export.cmake
+lib/cmake/exiv2/exiv2Targets-release.cmake
+lib/cmake/exiv2/exiv2Targets.cmake
 lib/libexiv2.so
 lib/libexiv2.so.${PKGVERSION}
 lib/libexiv2.so.28
