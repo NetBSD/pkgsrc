@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1692 2025/02/23 20:43:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1693 2025/02/23 20:44:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2207,3 +2207,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-jeepney to 0.8.0nb2 [wiz 2025-02-23]
 	Updated www/py-laces to 0.1.0nb1 [wiz 2025-02-23]
 	Updated lang/py-lsprotocol to 2023.0.1nb1 [wiz 2025-02-23]
+	Updated sysutils/py-nkdfu to 0.2nb2 [wiz 2025-02-23]
