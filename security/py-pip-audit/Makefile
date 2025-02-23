@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2025/02/07 07:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/02/23 21:08:49 wiz Exp $
 
 DISTNAME=	pip_audit-2.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip-audit/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/pypa/pip-audit
 COMMENT=	Scan Python environments for known vulnerabilities
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-cachecontrol>=0.13.0:../../devel/py-cachecontrol
 DEPENDS+=	${PYPKGPREFIX}-cyclonedx-python-lib>=5:../../security/py-cyclonedx-python-lib
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0.0:../../devel/py-packaging
