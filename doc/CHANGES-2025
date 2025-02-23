@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1669 2025/02/23 19:31:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1670 2025/02/23 19:32:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinxcontrib-applehelp to 2.0.0nb1 [wiz 2025-02-23]
 	Updated textproc/py-sphinxcontrib-devhelp to 2.0.0nb1 [wiz 2025-02-23]
 	Updated textproc/py-sphinxcontrib-htmlhelp to 2.1.0nb1 [wiz 2025-02-23]
+	Updated textproc/py-sphinxcontrib-qthelp to 2.0.0nb1 [wiz 2025-02-23]
