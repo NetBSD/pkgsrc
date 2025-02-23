@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1716 2025/02/23 21:40:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1717 2025/02/23 21:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2231,3 +2231,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-myst-parser to 4.0.1nb1 [wiz 2025-02-23]
 	Updated textproc/csvlens to 0.12.0 [wiz 2025-02-23]
 	Updated editors/xournalpp to 1.2.6 [wiz 2025-02-23]
+	Added sysutils/cpuinfo version 0.0.20250219 [wiz 2025-02-23]
