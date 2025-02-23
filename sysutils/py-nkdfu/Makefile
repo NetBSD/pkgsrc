@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/23 20:43:59 wiz Exp $
 
 DISTNAME=	nkdfu-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/nkdfu/}
 
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.org/project/nkdfu/
 COMMENT=	Python DFU tool for updating Nitrokeys' firmware
 LICENSE=	gnu-gpl-v2
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-libusb1-[0-9]*:../../devel/py-libusb1
 DEPENDS+=	${PYPKGPREFIX}-intelhex-[0-9]*:../../devel/py-intelhex
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
