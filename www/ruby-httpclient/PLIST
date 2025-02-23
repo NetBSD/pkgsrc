@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/03/20 15:51:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/02/23 15:13:08 taca Exp $
 bin/httpclient${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
@@ -30,6 +30,7 @@ ${GEM_LIBDIR}/sample/async.rb
 ${GEM_LIBDIR}/sample/auth.rb
 ${GEM_LIBDIR}/sample/cookie.rb
 ${GEM_LIBDIR}/sample/dav.rb
+${GEM_LIBDIR}/sample/generate_test_keys.rb
 ${GEM_LIBDIR}/sample/howto.rb
 ${GEM_LIBDIR}/sample/jsonclient.rb
 ${GEM_LIBDIR}/sample/oauth_buzz.rb
@@ -47,9 +48,15 @@ ${GEM_LIBDIR}/sample/thread.rb
 ${GEM_LIBDIR}/sample/wcat.rb
 ${GEM_LIBDIR}/test/ca-chain.pem
 ${GEM_LIBDIR}/test/ca.cert
+${GEM_LIBDIR}/test/ca.key
+${GEM_LIBDIR}/test/ca.srl
 ${GEM_LIBDIR}/test/client-pass.key
 ${GEM_LIBDIR}/test/client.cert
 ${GEM_LIBDIR}/test/client.key
+${GEM_LIBDIR}/test/fixtures/verify.alt.cert
+${GEM_LIBDIR}/test/fixtures/verify.foo.cert
+${GEM_LIBDIR}/test/fixtures/verify.key
+${GEM_LIBDIR}/test/fixtures/verify.localhost.cert
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/htdigest
 ${GEM_LIBDIR}/test/htpasswd
@@ -59,6 +66,8 @@ ${GEM_LIBDIR}/test/server.cert
 ${GEM_LIBDIR}/test/server.key
 ${GEM_LIBDIR}/test/sslsvr.rb
 ${GEM_LIBDIR}/test/subca.cert
+${GEM_LIBDIR}/test/subca.key
+${GEM_LIBDIR}/test/subca.srl
 ${GEM_LIBDIR}/test/test_auth.rb
 ${GEM_LIBDIR}/test/test_cookie.rb
 ${GEM_LIBDIR}/test/test_hexdump.rb
