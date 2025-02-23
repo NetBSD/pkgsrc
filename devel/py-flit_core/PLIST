@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2024/11/03 07:50:30 adam Exp $
-${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/LICENSE
+@comment $NetBSD: PLIST,v 1.8 2025/02/23 11:37:55 wiz Exp $
 ${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/METADATA
 ${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/RECORD
 ${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/WHEEL
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/licenses/LICENSE
+${PYSITELIB}/flit_core-${PKGVERSION}.dist-info/licenses/flit_core/vendor/tomli-1.2.3.dist-info/LICENSE
 ${PYSITELIB}/flit_core/__init__.py
 ${PYSITELIB}/flit_core/__init__.pyc
+${PYSITELIB}/flit_core/_spdx_data.py
+${PYSITELIB}/flit_core/_spdx_data.pyc
 ${PYSITELIB}/flit_core/buildapi.py
 ${PYSITELIB}/flit_core/buildapi.pyc
 ${PYSITELIB}/flit_core/common.py
