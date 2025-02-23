@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1571 2025/02/23 11:10:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1572 2025/02/23 11:11:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/php-yaz to 1.2.4 [taca 2025-02-23]
 	Updated security/php-ssh2 to 1.4.1 [taca 2025-02-23]
 	Updated security/p5-Crypt-Random to 1.57 [wiz 2025-02-23]
+	Updated devel/p5-Specio to 0.50 [wiz 2025-02-23]
