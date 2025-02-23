@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1565 2025/02/23 03:37:10 wen Exp $
+$NetBSD: CHANGES-2025,v 1.1566 2025/02/23 07:56:40 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-systemload-plugin to 1.3.3 [gutteridge 2025-02-22]
 	Updated devel/asdf to 0.16.4 [schmonz 2025-02-22]
 	Updated databases/p5-SQL-Translator to 1.66 [wen 2025-02-23]
+	Updated sysutils/fastfetch to 2.37.0 [vins 2025-02-23]
