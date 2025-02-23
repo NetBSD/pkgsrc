@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2025/02/23 18:29:36 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/02/23 18:37:44 wiz Exp $
 
 DISTNAME=	idna-3.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/kjd/idna
 COMMENT=	Python module for Internationalized Domain Names in Applications (IDNA)
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
