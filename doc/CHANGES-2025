@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1675 2025/02/23 19:37:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1676 2025/02/23 19:38:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2190,3 +2190,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-tinycss2 to 1.4.0nb1 [wiz 2025-02-23]
 	Updated textproc/py-tomli_w to 1.2.0nb1 [wiz 2025-02-23]
 	Updated security/py-truststore to 0.10.1nb1 [wiz 2025-02-23]
+	Updated www/py-werkzeug to 3.1.3nb1 [wiz 2025-02-23]
