@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2025/02/23 16:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/23 21:15:52 wiz Exp $
 
 DISTNAME=	myst_parser-4.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/myst-parser/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/executablebooks/MyST-Parser
 COMMENT=	Extended CommonMark compliant parser
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.4:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.19:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-markdown-it-py>=3.0:../../textproc/py-markdown-it-py

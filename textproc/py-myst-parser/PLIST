@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/04/30 09:28:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/23 21:15:52 wiz Exp $
 bin/myst-anchors-${PYVERSSUFFIX}
 bin/myst-docutils-demo-${PYVERSSUFFIX}
 bin/myst-docutils-html-${PYVERSSUFFIX}
@@ -7,11 +7,11 @@ bin/myst-docutils-latex-${PYVERSSUFFIX}
 bin/myst-docutils-pseudoxml-${PYVERSSUFFIX}
 bin/myst-docutils-xml-${PYVERSSUFFIX}
 bin/myst-inv-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/myst_parser/__init__.py
 ${PYSITELIB}/myst_parser/__init__.pyc
 ${PYSITELIB}/myst_parser/__init__.pyo
