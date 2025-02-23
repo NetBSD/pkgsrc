@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2024/11/16 12:07:16 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2025/02/23 11:15:20 wiz Exp $
 
-DISTNAME=	DateTime-1.65
+DISTNAME=	DateTime-1.66
 PKGNAME=	p5-${DISTNAME}00
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
@@ -14,13 +13,14 @@ LICENSE=	artistic-2.0
 DEPENDS+=	p5-DateTime-Locale>=1.06:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-DateTime-TimeZone>=2.02:../../time/p5-DateTime-TimeZone
 DEPENDS+=	p5-Math-Round-[0-9]*:../../math/p5-Math-Round
-DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
+DEPENDS+=	p5-Specio>=0.50:../../devel/p5-Specio
 DEPENDS+=	p5-Params-ValidationCompiler>=0.11:../../devel/p5-Params-ValidationCompiler
 DEPENDS+=	p5-namespace-autoclean>=0.19:../../devel/p5-namespace-autoclean
 
 TEST_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 TEST_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 TEST_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+TEST_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
 TEST_DEPENDS+=	p5-CPAN-Meta-Check>=0.11:../../devel/p5-CPAN-Meta-Check
 TEST_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 
