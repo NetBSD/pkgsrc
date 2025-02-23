@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1589 2025/02/23 11:50:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1590 2025/02/23 13:51:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2102,3 +2102,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-ruff to 0.9.7 [wiz 2025-02-23]
 	Updated sysutils/py-setproctitle to 1.3.5 [wiz 2025-02-23]
 	Updated devel/py-setuptools_scm to 8.2.0 [wiz 2025-02-23]
+	Updated databases/ruby-sqlite3 to 2.6.0 [taca 2025-02-23]
