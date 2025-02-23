@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1634 2025/02/23 17:31:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1635 2025/02/23 17:58:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-sphinx-autodoc-typehints to 3.1.0 [wiz 2025-02-23]
 	Updated comms/py-textual to 2.1.1 [wiz 2025-02-23]
 	Updated misc/py-installer to 0.7.0nb3 [wiz 2025-02-23]
+	Updated devel/py-flit to 3.11.0 [wiz 2025-02-23]
