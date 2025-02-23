@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1696 2025/02/23 20:46:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1697 2025/02/23 20:47:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2211,3 +2211,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 5.3.0nb1 [wiz 2025-02-23]
 	Updated graphics/py-seaborn to 0.13.2nb1 [wiz 2025-02-23]
 	Updated devel/py-test-freezer to 0.4.8nb1 [wiz 2025-02-23]
+	Updated math/py-xarray-einstats to 0.8.0nb1 [wiz 2025-02-23]
