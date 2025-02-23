@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1638 2025/02/23 18:13:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1639 2025/02/23 18:22:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2153,3 +2153,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pyparsing to 3.2.1nb1 [wiz 2025-02-23]
 	Updated devel/py-pyproject_hooks to 1.2.0nb1 [wiz 2025-02-23]
 	Updated devel/py-packaging to 24.2nb1 [wiz 2025-02-23]
+	Updated devel/py-build to 1.2.2.post1nb1 [wiz 2025-02-23]
