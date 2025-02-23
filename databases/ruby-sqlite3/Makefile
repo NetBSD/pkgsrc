@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2025/01/02 05:00:57 taca Exp $
+# $NetBSD: Makefile,v 1.88 2025/02/23 13:51:44 taca Exp $
 
-DISTNAME=	sqlite3-2.5.0
+DISTNAME=	sqlite3-2.6.0
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,7 @@ USE_GCC_RUNTIME=	yes
 RUBY_EXTCONF_ARGS=	--enable-system-libraries
 OVERRIDE_GEMSPEC+=	:files ${BUNDLED_ARCHIVE}=
 
-BUNDLED_ARCHIVE=	ports/archives/sqlite-autoconf-3470200.tar.gz
+BUNDLED_ARCHIVE=	ports/archives/sqlite-autoconf-3490100.tar.gz
 
 pre-configure:
 	${RM} -f ${WRKSRC}/${BUNDLED_ARCHIVE}
