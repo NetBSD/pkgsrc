@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1643 2025/02/23 18:29:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1644 2025/02/23 18:31:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2158,3 +2158,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pathspec to 0.12.1nb1 [wiz 2025-02-23]
 	Updated textproc/py-jinja2 to 3.1.5nb1 [wiz 2025-02-23]
 	Updated www/py-idna to 3.10nb1 [wiz 2025-02-23]
+	Updated devel/py-project-metadata to 0.9.0nb1 [wiz 2025-02-23]
