@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2024/11/13 17:36:51 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/23 16:59:23 wiz Exp $
 
 DISTNAME=	sphinx_rtd_theme-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-jquery>=4:../../textproc/py-sphinxcontrib
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2023/06/06 12:41:48 riastradh Exp $
+# $NetBSD: options.mk,v 1.14 2025/02/23 16:59:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.notmuch
 PKG_SUPPORTED_OPTIONS=	doc
@@ -14,6 +14,7 @@ PLIST_VARS+=		doc
 PLIST.doc=		yes
 USE_TOOLS+=		perl
 TOOL_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .else
 CONFIGURE_ARGS+=	--without-docs

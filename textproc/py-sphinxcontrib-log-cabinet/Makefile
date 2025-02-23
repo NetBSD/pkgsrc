@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/23 16:59:24 wiz Exp $
 
 DISTNAME=	sphinxcontrib-log-cabinet-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

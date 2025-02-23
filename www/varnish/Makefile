@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2024/10/14 06:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/02/23 16:59:26 wiz Exp $
 
 DISTNAME=	varnish-7.5.0
 CATEGORIES=	www
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 TOOL_DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/01/17 19:21:09 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/02/23 16:59:18 wiz Exp $
 
 DISTNAME=	bpython-0.25
 CATEGORIES=	devel python
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
