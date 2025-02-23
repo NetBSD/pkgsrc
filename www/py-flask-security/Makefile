@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2025/02/12 16:32:00 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/02/23 20:55:13 wiz Exp $
 
 DISTNAME=	flask_security-5.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Security/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://flask-security.readthedocs.io/
 COMMENT=	Simple security for Flask apps
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-email_validator>=2.0.0:../../mail/py-email_validator
 DEPENDS+=	${PYPKGPREFIX}-flask>=3.0.0:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-login>=0.6.3:../../www/py-flask-login
