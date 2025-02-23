@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1722 2025/02/23 22:29:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1723 2025/02/23 22:29:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2237,3 +2237,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/hs-commonmark-pandoc to 0.2.3 [wiz 2025-02-23]
 	Updated textproc/hs-typst to 0.6.2 [wiz 2025-02-23]
 	Updated converters/hs-pandoc to 3.6.3 [wiz 2025-02-23]
+	Updated converters/pandoc-cli to 3.6.3 [wiz 2025-02-23]
