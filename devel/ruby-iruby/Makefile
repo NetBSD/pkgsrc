@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2025/02/09 09:25:33 taca Exp $
+# $NetBSD: Makefile,v 1.16 2025/02/23 14:02:22 taca Exp $
 
-DISTNAME=	iruby-0.8.0
+DISTNAME=	iruby-0.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	ryoon@NetBSD.org
