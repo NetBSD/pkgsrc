@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1584 2025/02/23 11:38:06 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1585 2025/02/23 11:38:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz-icu to 10.3.0 [wiz 2025-02-23]
 	Updated devel/ocamlbuild to 0.16.1 [wiz 2025-02-23]
 	Updated devel/py-flit_core to 3.11.0 [wiz 2025-02-23]
+	Updated devel/py-googleapis-common-protos to 1.68.0 [wiz 2025-02-23]
