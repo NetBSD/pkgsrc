@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/23 16:40:45 wiz Exp $
+${PYSITELIB}/roman_numerals/__init__.py
+${PYSITELIB}/roman_numerals/__init__.pyc
+${PYSITELIB}/roman_numerals/__init__.pyo
+${PYSITELIB}/roman_numerals/py.typed
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.rst
