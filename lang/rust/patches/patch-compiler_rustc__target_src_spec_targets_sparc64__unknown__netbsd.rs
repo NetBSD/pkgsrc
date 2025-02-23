@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_sparc64__unknown__netbsd.rs,v 1.1 2024/07/31 08:05:50 he Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_sparc64__unknown__netbsd.rs,v 1.2 2025/02/23 08:53:54 he Exp $
 
 Make more similar to other sparc64 target specs.
 
@@ -6,10 +6,10 @@ Make more similar to other sparc64 target specs.
 +++ compiler/rustc_target/src/spec/targets/sparc64_unknown_netbsd.rs
 @@ -1,11 +1,13 @@
  use crate::abi::Endian;
--use crate::spec::{base, Cc, LinkerFlavor, Lld, Target, TargetOptions};
-+use crate::spec::{base, Cc, LinkerFlavor, Lld, Target};
+-use crate::spec::{Cc, LinkerFlavor, Lld, Target, TargetOptions, base};
++use crate::spec::{Cc, LinkerFlavor, Lld, Target, base};
  
- pub fn target() -> Target {
+ pub(crate) fn target() -> Target {
      let mut base = base::netbsd::opts();
      base.cpu = "v9".into();
      base.add_pre_link_args(LinkerFlavor::Gnu(Cc::Yes, Lld::No), &["-m64"]);
@@ -19,7 +19,7 @@ Make more similar to other sparc64 target specs.
  
      Target {
          llvm_target: "sparc64-unknown-netbsd".into(),
-@@ -18,6 +20,6 @@ pub fn target() -> Target {
+@@ -18,6 +20,6 @@ pub(crate) fn target() -> Target {
          pointer_width: 64,
          data_layout: "E-m:e-i64:64-n32:64-S128".into(),
          arch: "sparc64".into(),

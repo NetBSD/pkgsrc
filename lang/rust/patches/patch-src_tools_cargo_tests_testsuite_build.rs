@@ -1,4 +1,4 @@
-$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.15 2024/11/24 16:13:43 he Exp $
+$NetBSD: patch-src_tools_cargo_tests_testsuite_build.rs,v 1.16 2025/02/23 08:53:54 he Exp $
 
 Don't attempt incremental operations on sparc64, ref.
 https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_incremental_build.patch/
@@ -26,7 +26,7 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
  }
  
 +#[cfg(not(target_arch = "sparc64"))]
- #[allow(deprecated)]
+ #[expect(deprecated)]
  #[cargo_test]
  fn incremental_profile() {
 @@ -176,6 +179,7 @@ fn incremental_profile() {
@@ -34,6 +34,6 @@ https://sources.debian.org/patches/cargo/0.29.0-1/2007_sparc64_disable_increment
  }
  
 +#[cfg(not(target_arch = "sparc64"))]
- #[allow(deprecated)]
+ #[expect(deprecated)]
  #[cargo_test]
  fn incremental_config() {
