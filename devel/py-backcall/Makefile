@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2024/05/05 21:59:12 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2025/02/23 18:43:15 wiz Exp $
 
 DISTNAME=	backcall-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/backcall/}
 
@@ -11,9 +11,7 @@ HOMEPAGE=	https://github.com/takluyver/backcall
 COMMENT=	Specifications for callback functions passed in to an API
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
