@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1148 2025/02/04 02:24:01 gutteridge Exp $
+# $NetBSD: Makefile,v 1.1149 2025/02/23 21:54:13 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -144,6 +144,7 @@ SUBDIR+=	cpmtools
 SUBDIR+=	cpogm
 SUBDIR+=	cpuburn
 SUBDIR+=	cpuid
+SUBDIR+=	cpuinfo
 SUBDIR+=	crashme
 SUBDIR+=	cvsreport
 SUBDIR+=	daemond
