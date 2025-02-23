@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2025/02/23 18:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/23 18:36:52 wiz Exp $
 
 DISTNAME=	typing_extensions-4.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -11,11 +11,9 @@ HOMEPAGE=	https://github.com/python/typing
 COMMENT=	Backported and Experimental Type Hints for Python
 LICENSE=	python-software-foundation
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.4:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
