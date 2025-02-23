@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2025/02/04 18:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.47 2025/02/23 16:59:18 wiz Exp $
 
 DISTNAME=	pbr-6.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.32.0:../../devel/py-wheel
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	pbr/tests/testpackage/setup.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 post-install:
 	${CHMOD} -R g-w,o-w ${DESTDIR}${PREFIX}/${PYSITELIB}/pbr/tests/testpackage

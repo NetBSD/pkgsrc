@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/11/11 07:28:22 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/23 16:59:18 wiz Exp $
 
 DISTNAME=	rope-1.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-timeout>=2.1.0:../../devel/py-test-timeout
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-toolconfig -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-toolconfig -> py-sphinx
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2025/02/05 19:51:37 adam Exp $
+# $NetBSD: Makefile,v 1.116 2025/02/23 16:59:17 wiz Exp $
 
 DISTNAME=	peewee-3.17.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
 MAKE_FLAGS+=	SPHINXBUILD=sphinx-build-${PYVERSSUFFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2024/11/05 17:16:45 adam Exp $
+# $NetBSD: options.mk,v 1.5 2025/02/23 16:59:25 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.serd
 PKG_SUPPORTED_OPTIONS=	doc tests
@@ -10,6 +10,7 @@ PLIST_VARS+=	doc
 .if !empty(PKG_OPTIONS:Mdoc)
 MESON_ARGS+=	-Ddocs=enabled
 TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx>0:../../textproc/py-sphinx
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-lv2-theme>0:../../textproc/py-sphinx-lv2-theme
 TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinxygen>0:../../textproc/py-sphinxygen
