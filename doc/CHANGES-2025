@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1627 2025/02/23 15:15:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1628 2025/02/23 15:17:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-html-proofer to 5.0.10 [taca 2025-02-23]
 	Updated www/ruby-httpclient to 2.9.0 [taca 2025-02-23]
 	Updated www/ruby-rack to 3.1.10 [taca 2025-02-23]
+	Updated www/ruby-rack2 to 2.2.11 [taca 2025-02-23]
