@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.17 2024/04/18 09:29:42 pin Exp $
+$NetBSD: patch-compiler_rustc__llvm_build.rs,v 1.18 2025/02/23 08:53:54 he Exp $
 
 Fix build on NetBSD HEAD-llvm. XXX there is probably a better way to do this.
 
@@ -25,9 +25,9 @@ https://github.com/rust-lang/rust/pull/104572
          // However, LLVM insists on using 64-bit atomics.
          // This gives rise to a need to link rust itself with -latomic for these targets
 -        if target.starts_with("i586") || target.starts_with("i686") {
-+        if target.starts_with("i386") 
-+           || target.starts_with("i486") 
-+           || target.starts_with("i586") 
++        if target.starts_with("i386")
++           || target.starts_with("i486")
++           || target.starts_with("i586")
 +           || target.starts_with("i686")
 +        {
              println!("cargo:rustc-link-lib=atomic");
@@ -38,13 +38,13 @@ https://github.com/rust-lang/rust/pull/104572
      } else if target.contains("netbsd") && llvm_static_stdcpp.is_some() {
          // NetBSD uses a separate library when relocation is required
 -        "stdc++_p"
-+	if env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
++        if env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
 +            "c++_pic"
-+	} else {
++        } else {
 +            "stdc++_pic"
-+	}
++        }
 +    } else if env::var_os("PKGSRC_HAVE_LIBCPP").is_some() {
-+	"c++"
++        "c++"
      } else if llvm_use_libcxx.is_some() {
          "c++"
      } else {

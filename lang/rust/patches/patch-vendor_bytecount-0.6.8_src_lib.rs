@@ -1,4 +1,4 @@
-$NetBSD: patch-vendor_bytecount-0.6.8_src_lib.rs,v 1.1 2024/10/13 19:04:39 he Exp $
+$NetBSD: patch-vendor_bytecount-0.6.8_src_lib.rs,v 1.2 2025/02/23 08:53:54 he Exp $
 
 Avoid using neon on big-endian aarch64.
 Ref. https://github.com/rust-lang/rust/issues/129819
@@ -23,7 +23,7 @@ Ref. https://github.com/rust-lang/rust/issues/129819
          }
 -        #[cfg(all(target_arch = "aarch64", not(feature = "generic_simd")))]
 +        #[cfg(all(
-+            target_arch = "aarch64", 
++            target_arch = "aarch64",
 +            target_endian = "little",
 +            not(feature = "generic_simd")
 +        ))]

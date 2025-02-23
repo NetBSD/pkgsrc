@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_base_netbsd.rs,v 1.3 2024/07/15 03:32:23 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_base_netbsd.rs,v 1.4 2025/02/23 08:53:54 he Exp $
 
 For the benefit of powerpc, when libatomic-links is installed,
 search the directory containing the symlinks to -latomic.
@@ -6,10 +6,10 @@ search the directory containing the symlinks to -latomic.
 --- compiler/rustc_target/src/spec/base/netbsd.rs.orig	2024-01-06 19:57:14.887897867 +0000
 +++ compiler/rustc_target/src/spec/base/netbsd.rs
 @@ -1,12 +1,23 @@
--use crate::spec::{cvs, RelroLevel, TargetOptions};
-+use crate::spec::{cvs, Cc, Lld, RelroLevel, LinkerFlavor, TargetOptions};
+-use crate::spec::{RelroLevel, TargetOptions, cvs};
++use crate::spec::{Cc, Lld, LinkerFlavor, RelroLevel, TargetOptions, cvs};
  
- pub fn opts() -> TargetOptions {
+ pub(crate) fn opts() -> TargetOptions {
 +    let add_linker_paths =
 +        &[
 +            // For the benefit of powerpc, when libatomic-links is installed,
