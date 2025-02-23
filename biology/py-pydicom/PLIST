@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2024/01/14 18:29:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/23 18:55:10 wiz Exp $
 bin/pydicom-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/pydicom/__init__.py
 ${PYSITELIB}/pydicom/__init__.pyc
 ${PYSITELIB}/pydicom/__init__.pyo
