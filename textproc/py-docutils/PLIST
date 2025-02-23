@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2024/04/18 09:01:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2025/02/23 19:48:05 wiz Exp $
 bin/docutils-${PYVERSSUFFIX}
 bin/rst2html-${PYVERSSUFFIX}
 bin/rst2html4-${PYVERSSUFFIX}
@@ -10,11 +10,11 @@ bin/rst2pseudoxml-${PYVERSSUFFIX}
 bin/rst2s5-${PYVERSSUFFIX}
 bin/rst2xetex-${PYVERSSUFFIX}
 bin/rst2xml-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/COPYING.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/COPYING.txt
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
