@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/14 17:34:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/23 14:09:39 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE.md
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.rspec
