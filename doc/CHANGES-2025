@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1705 2025/02/23 21:01:03 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1706 2025/02/23 21:02:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2220,3 +2220,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-cairocffi to 1.7.1nb1 [wiz 2025-02-23]
 	Updated textproc/py-sphinxcontrib-websupport to 2.0.0nb1 [wiz 2025-02-23]
 	Updated www/py-flask-mail to 0.10.0nb1 [wiz 2025-02-23]
+	Updated www/py-flask-sqlalchemy to 3.1.1nb1 [wiz 2025-02-23]
