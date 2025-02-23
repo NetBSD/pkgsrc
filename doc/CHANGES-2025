@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1580 2025/02/23 11:30:43 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1581 2025/02/23 11:31:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/exiv2 to 0.28.5 [wiz 2025-02-23]
 	Updated devel/gopls to 0.18.0 [wiz 2025-02-23]
 	Updated fonts/harfbuzz to 10.3.0 [wiz 2025-02-23]
+	Updated devel/p5-App-cpanminus to 1.7048 [wen 2025-02-23]
