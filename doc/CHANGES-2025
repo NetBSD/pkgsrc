@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1583 2025/02/23 11:36:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1584 2025/02/23 11:38:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/p5-App-cpanminus to 1.7048 [wen 2025-02-23]
 	Updated fonts/harfbuzz-icu to 10.3.0 [wiz 2025-02-23]
 	Updated devel/ocamlbuild to 0.16.1 [wiz 2025-02-23]
+	Updated devel/py-flit_core to 3.11.0 [wiz 2025-02-23]
