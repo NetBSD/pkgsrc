@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2025/02/23 19:30:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/23 19:40:03 gdt Exp $
 bin/cheetah-${PYVERSSUFFIX}
 bin/cheetah-analyze-${PYVERSSUFFIX}
 bin/cheetah-compile-${PYVERSSUFFIX}
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/Cheetah/CacheRegion.py
 ${PYSITELIB}/Cheetah/CacheRegion.pyc
 ${PYSITELIB}/Cheetah/CacheRegion.pyo
@@ -107,9 +112,6 @@ ${PYSITELIB}/Cheetah/Tests/Misc.pyo
 ${PYSITELIB}/Cheetah/Tests/NameMapper.py
 ${PYSITELIB}/Cheetah/Tests/NameMapper.pyc
 ${PYSITELIB}/Cheetah/Tests/NameMapper.pyo
-${PYSITELIB}/Cheetah/Tests/NameMapper_pure.py
-${PYSITELIB}/Cheetah/Tests/NameMapper_pure.pyc
-${PYSITELIB}/Cheetah/Tests/NameMapper_pure.pyo
 ${PYSITELIB}/Cheetah/Tests/Parser.py
 ${PYSITELIB}/Cheetah/Tests/Parser.pyc
 ${PYSITELIB}/Cheetah/Tests/Parser.pyo
@@ -140,6 +142,9 @@ ${PYSITELIB}/Cheetah/Tests/Unicode.pyo
 ${PYSITELIB}/Cheetah/Tests/__init__.py
 ${PYSITELIB}/Cheetah/Tests/__init__.pyc
 ${PYSITELIB}/Cheetah/Tests/__init__.pyo
+${PYSITELIB}/Cheetah/Tests/test_abs_import.py
+${PYSITELIB}/Cheetah/Tests/test_abs_import.pyc
+${PYSITELIB}/Cheetah/Tests/test_abs_import.pyo
 ${PYSITELIB}/Cheetah/Tests/xmlrunner.py
 ${PYSITELIB}/Cheetah/Tests/xmlrunner.pyc
 ${PYSITELIB}/Cheetah/Tests/xmlrunner.pyo
@@ -196,8 +201,3 @@ ${PYSITELIB}/Cheetah/compat.pyo
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.py
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.pyc
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/METADATA
-${PYSITELIB}/${WHEEL_INFODIR}/RECORD
-${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
-${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

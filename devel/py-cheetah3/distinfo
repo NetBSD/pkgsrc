@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 10:18:17 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/02/23 19:40:03 gdt Exp $
 
-BLAKE2s (Cheetah3-3.2.6.tar.gz) = d8f873fe18eab176911f7658f29cecf6232a7f22c0aa6318cdb8ff3d0362f9ce
-SHA512 (Cheetah3-3.2.6.tar.gz) = e3422147b3d476676ecfd4ed0bba77c80b008869055748ea50fe83a79b462bb15a20239e6803403e90ea6a0a090697a7fe6ecaae8bfd8e4832f3f0c8da69200d
-Size (Cheetah3-3.2.6.tar.gz) = 295564 bytes
+BLAKE2s (ct3-3.4.0.tar.gz) = c9687b904a9acd59f590731c492c04800ae25d29f3e7d56f91e20d259b27ccf0
+SHA512 (ct3-3.4.0.tar.gz) = 6f5eb59fd2969d139b9fbe5780a5eeac71d669dd661c1684e9ad6f0cedb0da83ba72d755108274a54991364f7d9f8f6f07d894f2ef01e1369b16af2720227d7d
+Size (ct3-3.4.0.tar.gz) = 305071 bytes
