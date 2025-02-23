@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1606 2025/02/23 14:32:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1607 2025/02/23 14:34:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2121,3 +2121,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/ruby-rex-exploitation to 0.1.41 [taca 2025-02-23]
 	Updated security/ruby-rex-java to 0.1.8 [taca 2025-02-23]
 	Updated security/ruby-rex-mime to 0.1.11 [taca 2025-02-23]
+	Updated security/ruby-rex-nop to 0.1.4 [taca 2025-02-23]
