@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2024/02/08 14:04:43 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/02/23 20:39:09 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/django_filters/__init__.py
 ${PYSITELIB}/django_filters/__init__.pyc
 ${PYSITELIB}/django_filters/__init__.pyo
