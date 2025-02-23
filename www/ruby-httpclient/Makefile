@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2021/10/01 15:31:26 tsutsui Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/23 15:13:08 taca Exp $
 #
 
-DISTNAME=	httpclient-2.8.3
-PKGREVISION=	1
+DISTNAME=	httpclient-2.9.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
