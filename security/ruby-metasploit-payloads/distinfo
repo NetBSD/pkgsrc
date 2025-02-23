@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.50 2024/12/11 13:35:55 taca Exp $
+$NetBSD: distinfo,v 1.51 2025/02/23 14:13:18 taca Exp $
 
-BLAKE2s (metasploit-payloads-2.0.189.gem) = 3b0470cb3b0c4c2615d0bdd76df0d843bb9dfe1fcd0f0473e44a97d2feff9620
-SHA512 (metasploit-payloads-2.0.189.gem) = 14045d882db3eb199723b1d125fb609d2a6bc9bc098cc2d1122289df7931df1fcc4a0923cb933fda6ba91b0bf001db352637ff5e674966b4f63c3028c3916e1c
-Size (metasploit-payloads-2.0.189.gem) = 48089088 bytes
+BLAKE2s (metasploit-payloads-2.0.190.gem) = 9dee59e12dd26f695a53a95c0e6e273c75af99c78fb6a81f444e86103c190784
+SHA512 (metasploit-payloads-2.0.190.gem) = da796ebfd1f984600918c9f623cc1ab4deec53e7b1aa3e40e6009650526364e4cf08f8fcd053c9359314a3ffe1ac2c2e59d8fcad9de569c5400cc78a61fcf067
+Size (metasploit-payloads-2.0.190.gem) = 48089600 bytes
