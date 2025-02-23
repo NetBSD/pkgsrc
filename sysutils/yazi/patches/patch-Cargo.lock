@@ -1,6 +1,7 @@
-$NetBSD: patch-Cargo.lock,v 1.1 2025/02/23 07:52:58 wiz Exp $
+$NetBSD: patch-Cargo.lock,v 1.2 2025/02/23 07:58:27 wiz Exp $
 
 Use libc with NetBSD getmntinfo fix.
+https://github.com/sxyazi/yazi/issues/2387
 
 --- Cargo.lock.orig	2024-12-20 11:49:42.000000000 +0000
 +++ Cargo.lock
