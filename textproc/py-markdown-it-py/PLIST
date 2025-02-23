@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2023/10/28 19:57:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/23 19:54:03 wiz Exp $
 bin/markdown-it-${PYVERSSUFFIX}
 ${PYSITELIB}/markdown_it/__init__.py
 ${PYSITELIB}/markdown_it/__init__.pyc
@@ -200,9 +200,9 @@ ${PYSITELIB}/markdown_it/tree.pyo
 ${PYSITELIB}/markdown_it/utils.py
 ${PYSITELIB}/markdown_it/utils.pyc
 ${PYSITELIB}/markdown_it/utils.pyo
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.markdown-it
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.markdown-it
