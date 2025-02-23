@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1593 2025/02/23 13:58:36 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1594 2025/02/23 14:01:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/ruby-tiny_tds to 3.2.0 [taca 2025-02-23]
 	Updated devel/ruby-console to 1.29.3 [taca 2025-02-23]
 	Updated devel/ruby-io-event to 1.9.0 [taca 2025-02-23]
+	Updated devel/ruby-async to 2.23.0 [taca 2025-02-23]
