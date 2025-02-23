@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/08/06 13:08:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/23 19:32:47 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/serializinghtml/__init__.py
 ${PYSITELIB}/sphinxcontrib/serializinghtml/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/serializinghtml/__init__.pyo
@@ -119,3 +119,4 @@ ${PYSITELIB}/sphinxcontrib/serializinghtml/py.typed
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.rst
