@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2025/01/08 14:29:48 adam Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/23 20:16:54 wiz Exp $
 
 DISTNAME=	cachecontrol-0.14.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CacheControl/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/ionrock/cachecontrol
 COMMENT=	Port of httplib2's caching to requests
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.5.2:../../devel/py-msgpack
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.16.0:../../devel/py-requests
 # optional
