@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:24 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/23 16:59:19 wiz Exp $
 
 DISTNAME=	pytest_checkdocs-2.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//:S/_/-/}
@@ -18,7 +18,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-jaraco.packaging -> py-sphinx
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-jaraco.packaging -> py-sphinx
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
