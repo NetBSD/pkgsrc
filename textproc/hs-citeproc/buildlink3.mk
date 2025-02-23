@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/02/02 13:05:51 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/02/23 21:57:24 wiz Exp $
 
 BUILDLINK_TREE+=	hs-citeproc
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-citeproc
 HS_CITEPROC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-citeproc+=	hs-citeproc>=0.8.1
-BUILDLINK_ABI_DEPENDS.hs-citeproc+=	hs-citeproc>=0.8.1.2nb1
+BUILDLINK_ABI_DEPENDS.hs-citeproc+=	hs-citeproc>=0.8.1.3
 BUILDLINK_PKGSRCDIR.hs-citeproc?=	../../textproc/hs-citeproc
 
 .include "../../converters/hs-aeson/buildlink3.mk"
