@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1678 2025/02/23 19:40:11 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.1679 2025/02/23 19:48:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-werkzeug to 3.1.3nb1 [wiz 2025-02-23]
 	Updated devel/py-wheel to 0.45.1nb1 [wiz 2025-02-23]
 	Updated devel/py-cheetah3 to 3.4.0 [gdt 2025-02-23]
+	Updated textproc/py-docutils to 0.21.2nb1 [wiz 2025-02-23]
