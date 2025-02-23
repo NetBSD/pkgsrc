@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2024/04/30 08:15:20 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+@comment $NetBSD: PLIST,v 1.5 2025/02/23 20:58:52 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/cairocffi/__init__.py
 ${PYSITELIB}/cairocffi/__init__.pyc
 ${PYSITELIB}/cairocffi/__init__.pyo
