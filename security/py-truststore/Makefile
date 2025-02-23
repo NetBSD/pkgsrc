@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2025/02/07 21:50:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/23 19:36:52 wiz Exp $
 
 DISTNAME=	truststore-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/truststore/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/sethmlarson/truststore
 COMMENT=	Verify certificates using native system trust stores
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-httpx-[0-9]*:../../www/py-httpx
