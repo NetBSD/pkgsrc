@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2024/04/02 19:30:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/23 18:22:23 wiz Exp $
 bin/pyproject-build-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/build/__init__.py
 ${PYSITELIB}/build/__init__.pyc
 ${PYSITELIB}/build/__init__.pyo
