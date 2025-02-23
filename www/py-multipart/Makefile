@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2024/11/30 08:56:14 adam Exp $
+# $NetBSD: Makefile,v 1.8 2025/02/23 18:51:23 wiz Exp $
 
 DISTNAME=	multipart-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/multipart/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/defnull/multipart
 COMMENT=	Parser for multipart/form-data
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.9:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
