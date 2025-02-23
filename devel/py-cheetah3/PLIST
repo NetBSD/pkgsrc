@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2020/06/03 15:25:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/23 19:30:40 gdt Exp $
 bin/cheetah-${PYVERSSUFFIX}
 bin/cheetah-analyze-${PYVERSSUFFIX}
 bin/cheetah-compile-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/Cheetah/CacheRegion.py
 ${PYSITELIB}/Cheetah/CacheRegion.pyc
 ${PYSITELIB}/Cheetah/CacheRegion.pyo
@@ -201,3 +196,8 @@ ${PYSITELIB}/Cheetah/compat.pyo
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.py
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.pyc
 ${PYSITELIB}/Cheetah/convertTmplPathToModuleName.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt

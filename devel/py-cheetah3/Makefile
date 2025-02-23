@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2022/01/05 20:47:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/23 19:30:40 gdt Exp $
 
 DISTNAME=	Cheetah3-3.2.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Cheetah3/cheetah/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheetah3/}
 
@@ -32,10 +32,6 @@ post-install:
 	${MV} cheetah-analyze cheetah-analyze-${PYVERSSUFFIX} && \
 	${MV} cheetah-compile cheetah-compile-${PYVERSSUFFIX} || ${TRUE}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-USE_PKG_RESOURCES=	yes
-
 .include "../../lang/python/application.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
