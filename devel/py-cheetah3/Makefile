@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.6 2025/02/23 19:30:40 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/23 19:40:03 gdt Exp $
 
-DISTNAME=	Cheetah3-3.2.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Cheetah3/cheetah/}
-PKGREVISION=	3
+VERSION=	3.4.0
+DISTNAME=	ct3-${VERSION}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ct3/cheetah/}
 CATEGORIES=	devel python
-MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheetah3/}
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/ct3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cheetahtemplate.org/
 COMMENT=	Template engine and code generation tool
 LICENSE=	mit
+
+WHEEL_NAME=	CT3-${VERSION}
 
 CONFLICTS=	Cheetah-[0-9]*
 
