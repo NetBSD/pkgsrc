@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/11/11 14:16:39 taca Exp $
+$NetBSD: distinfo,v 1.6 2025/02/23 14:42:04 taca Exp $
 
-BLAKE2s (rex-rop_builder-0.1.5.gem) = fecacaf1a0ba68bd99f12a691f66bf33c609c9fc833622afd745f78057909695
-SHA512 (rex-rop_builder-0.1.5.gem) = d5190b9dfe129ce2a948dcc891dad4759e0f0a05d57f30f44bc0a855185ad8286c7e41418e320d21efa2573e02aa5c935c03c2991a412850195d995f29a3854a
-Size (rex-rop_builder-0.1.5.gem) = 17920 bytes
+BLAKE2s (rex-rop_builder-0.1.6.gem) = dd7f373c33a1a1c236807c34c5cd4d67d04bc894171d0df1a7e3534355834b21
+SHA512 (rex-rop_builder-0.1.6.gem) = ba7685b0a296b6b8b9d56c87ac91de99347dcfa393045e06ff61516fc8e2206500fe56f309c9e57c9d6567d853232d1bff40815f71e6fb3bda04477517a31ea2
+Size (rex-rop_builder-0.1.6.gem) = 15872 bytes
