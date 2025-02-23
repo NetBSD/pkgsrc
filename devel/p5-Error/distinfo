@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2021/10/26 10:16:30 nia Exp $
+$NetBSD: distinfo,v 1.25 2025/02/23 11:16:12 wiz Exp $
 
-BLAKE2s (Error-0.17029.tar.gz) = 4805c2dad583dc79ec8cc3f529b6323dcd962f7e831d9b8ea5acb3d8c9aa91a1
-SHA512 (Error-0.17029.tar.gz) = 266ba1feff897c1d162e69a83e595cb40da9a6e1d8b10cc5531626eff392c6da94be03ba722c74827fc2ea0d9d1c1e62e824d9021e098b700db65dd0b3acbd0a
-Size (Error-0.17029.tar.gz) = 33304 bytes
+BLAKE2s (Error-0.17030.tar.gz) = df76108fc34d3f20fb9cd43f9812679162fff8ecbda546010a4a76438d58e8c6
+SHA512 (Error-0.17030.tar.gz) = 842e33fbc2f2bd6eaf03459263070311fde9ae06105438baf8920826ca26d3f46c18d0d49bfe85a3eb25dfe94e671db0e7d1f30a143b8d82bea47410bfbf7f01
+Size (Error-0.17030.tar.gz) = 33488 bytes
