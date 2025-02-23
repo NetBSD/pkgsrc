@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2025/01/30 13:44:12 pho Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/23 22:03:42 wiz Exp $
+lib/typst-${PKGVERSION}/${HS_VERSION}/package-description
+lib/typst-${PKGVERSION}/${HS_VERSION}/package-id
 ${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Paths_typst.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Paths_typst.hi
@@ -9,6 +11,9 @@ ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Bind.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Bind.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Bind.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Constructors.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Constructors.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Constructors.p_hi
 ${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Evaluate.dyn_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Evaluate.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Evaluate.p_hi
@@ -47,8 +52,6 @@ lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Util.hi
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Typst/Util.p_hi
 lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
 ${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
-lib/typst-${PKGVERSION}/${HS_VERSION}/package-description
-lib/typst-${PKGVERSION}/${HS_VERSION}/package-id
 share/doc/${HS_PLATFORM}/typst-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/${HS_PLATFORM}/typst-${PKGVERSION}/html/CHANGELOG.md
 ${PLIST.doc}share/doc/${HS_PLATFORM}/typst-${PKGVERSION}/html/Typst-Evaluate.html
