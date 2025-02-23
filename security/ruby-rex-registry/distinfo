@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2023/11/11 14:14:27 taca Exp $
+$NetBSD: distinfo,v 1.6 2025/02/23 14:39:57 taca Exp $
 
-BLAKE2s (rex-registry-0.1.5.gem) = b390d55a0203b918e3c808abd5d0044229bab78bc00dfd7cc753441899f2a155
-SHA512 (rex-registry-0.1.5.gem) = 3a5de0c29f3a413d642bcf068566d72f6a6ba4311325701e8e0673c0f79bc923f4d56e37e659b0f7ec34a98aa83b71f4f18840fa1730e4b9904588d04a9d78de
-Size (rex-registry-0.1.5.gem) = 16896 bytes
+BLAKE2s (rex-registry-0.1.6.gem) = 83ce6e114c019086aa4d3953cb1fdbff42f27ae207b97cb49180f29485a4cee3
+SHA512 (rex-registry-0.1.6.gem) = 62fd4ebeded172d798ba5f4aa916471c4ee868ea5e7728aa913718595aaa2d7415d5ad0c79e31787433ffaedc6982ba4451d5a9a533058639f7f5d13060a6c59
+Size (rex-registry-0.1.6.gem) = 14848 bytes
