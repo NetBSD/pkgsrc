@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2025/02/19 13:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/02/23 11:36:17 wiz Exp $
 
-DISTNAME=	ocamlbuild-0.16.0
+DISTNAME=	ocamlbuild-0.16.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
