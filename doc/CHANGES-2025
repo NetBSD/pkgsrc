@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1599 2025/02/23 14:15:28 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1600 2025/02/23 14:19:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2110,5 +2110,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-iruby to 0.8.1 [taca 2025-02-23]
 	Updated devel/ruby-version_gem to 1.1.5 [taca 2025-02-23]
 	Updated graphics/ruby-mini-magick to 5.2.0 [taca 2025-02-23]
+	Updated mail/ruby-mime-types-data to 3.2025.0220 [taca 2025-02-23]
+	Updated net/ruby-amq-protocol to 2.3.3 [taca 2025-02-23]
+	Updated security/ruby-metasploit-concern to 5.0.4 [taca 2025-02-23]
 	Updated security/ruby-metasploit-payloads to 2.0.190 [taca 2025-02-23]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.38 [taca 2025-02-23]
