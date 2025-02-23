@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2024/06/11 11:24:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/02/23 21:02:49 wiz Exp $
 bin/weasyprint-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/weasyprint/__init__.py
 ${PYSITELIB}/weasyprint/__init__.pyc
 ${PYSITELIB}/weasyprint/__init__.pyo
