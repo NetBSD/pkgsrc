@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1694 2025/02/23 20:45:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1695 2025/02/23 20:45:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/py-lsprotocol to 2023.0.1nb1 [wiz 2025-02-23]
 	Updated sysutils/py-nkdfu to 0.2nb2 [wiz 2025-02-23]
 	Updated textproc/py-pdf to 5.3.0nb1 [wiz 2025-02-23]
+	Updated graphics/py-seaborn to 0.13.2nb1 [wiz 2025-02-23]
