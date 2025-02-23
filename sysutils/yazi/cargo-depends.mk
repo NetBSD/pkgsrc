@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2024/12/24 18:31:57 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2025/02/23 07:52:58 wiz Exp $
 
 CARGO_CRATE_DEPENDS+=	addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=	adler2-2.0.0
@@ -150,7 +150,7 @@ CARGO_CRATE_DEPENDS+=	kqueue-1.0.8
 CARGO_CRATE_DEPENDS+=	kqueue-sys-1.0.4
 CARGO_CRATE_DEPENDS+=	lazy_static-1.5.0
 CARGO_CRATE_DEPENDS+=	lebe-0.5.2
-CARGO_CRATE_DEPENDS+=	libc-0.2.168
+CARGO_CRATE_DEPENDS+=	libc-0.2.170
 CARGO_CRATE_DEPENDS+=	libfuzzer-sys-0.4.8
 CARGO_CRATE_DEPENDS+=	libredox-0.1.3
 CARGO_CRATE_DEPENDS+=	linux-raw-sys-0.4.14
