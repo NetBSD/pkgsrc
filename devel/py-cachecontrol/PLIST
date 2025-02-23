@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2023/10/28 19:56:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/23 20:16:54 wiz Exp $
 bin/doesitcache-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/cachecontrol/__init__.py
 ${PYSITELIB}/cachecontrol/__init__.pyc
 ${PYSITELIB}/cachecontrol/__init__.pyo
