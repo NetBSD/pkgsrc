@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2025/02/02 13:04:52 pho Exp $
+# $NetBSD: Makefile,v 1.9 2025/02/23 22:28:54 wiz Exp $
 
-PKGREVISION= 1
 .include "../../converters/hs-pandoc/version.mk"
 DISTNAME=	pandoc-${PANDOC_VERSION}
 CATEGORIES=	converters
@@ -15,9 +14,6 @@ LICENSE=	gnu-gpl-v2
 #
 # On the other hand -O1 "only" consumes 2 GiB.
 HASKELL_OPTIMIZATION_LEVEL=	1
-
-HASKELL_UNRESTRICT_DEPENDENCIES+=	\
-	xml-conduit
 
 # lib:pandoc
 .include "../../textproc/hs-Glob/buildlink3.mk"
