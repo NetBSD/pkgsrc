@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1653 2025/02/23 18:46:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1654 2025/02/23 18:46:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-boltons to 25.0.0nb1 [wiz 2025-02-23]
 	Updated devel/py-confuse to 2.0.1nb2 [wiz 2025-02-23]
 	Updated security/py-cryptography_vectors to 44.0.1nb1 [wiz 2025-02-23]
+	Updated textproc/py-diff-match-patch to 20241021nb1 [wiz 2025-02-23]
