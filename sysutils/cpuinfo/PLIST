@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/23 21:54:05 wiz Exp $
+include/cpuinfo.h
+lib/libcpuinfo.a
+lib/pkgconfig/libcpuinfo.pc
+share/cpuinfo/cpuinfo-config.cmake
+share/cpuinfo/cpuinfo-targets-noconfig.cmake
+share/cpuinfo/cpuinfo-targets.cmake
