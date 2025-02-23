@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1569 2025/02/23 09:23:17 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1570 2025/02/23 09:29:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2082,3 +2082,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rust to 1.83.0 [he 2025-02-23]
 	Updated lang/rust-bin to 1.83.0 [he 2025-02-23]
 	Updated net/php-yaz to 1.2.4 [taca 2025-02-23]
+	Updated security/php-ssh2 to 1.4.1 [taca 2025-02-23]
