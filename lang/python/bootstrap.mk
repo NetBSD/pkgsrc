@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.3 2023/10/25 22:49:02 wiz Exp $
+# $NetBSD: bootstrap.mk,v 1.4 2025/02/23 17:30:26 wiz Exp $
 #
 # Initial mk for building and installing Python packages that
 # are on the module install bootstrap path.
@@ -21,7 +21,7 @@ PLIST_SUBST+=	WHEEL_INFODIR=${_WHEEL_INFODIR}
 PRINT_PLIST_AWK+=	{ gsub(/${_WHEEL_INFODIR:S,.,\.,g}/, "$${WHEEL_INFODIR}") }
 
 .if !target(do-build)
-TOOL_DEPENDS+= ${PYPKGPREFIX}-flit_core>=3.9.0nb1:../../devel/py-flit_core
+TOOL_DEPENDS+= ${PYPKGPREFIX}-flit_core>=3.11.0:../../devel/py-flit_core
 do-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${TOOL_PYTHONBIN} -m flit_core.wheel
 .endif
