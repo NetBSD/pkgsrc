@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2025/02/12 06:45:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2025/02/23 18:50:08 markd Exp $
 # FIXME: build fails when protobuf and abseil packages are installed.
 
 DISTNAME=	qtwebengine-everywhere-opensource-src-${QTVERSION}
@@ -64,9 +64,6 @@ pre-configure:
 	${CP} ${FILESDIR}/audio_manager_openbsd.* ${CHROMESRC}/media/audio/openbsd
 	cd ${WRKSRC} && env -i ${MAKE_ENV} ${CHROMESRC}/build/linux/unbundle/replace_gn_files.py \
 		--system-libraries ${GN_SYSTEM_LIBS}
-	# re2 pulls in abseil headers, but doesn't need them
-	# avoid conflict with the ones included in the tarball
-	${RM} -rf ${BUILDLINK_DIR}/include/absl
 
 post-install:
 .for i in Qt5Pdf.pc Qt5PdfWidgets.pc Qt5WebEngine.pc Qt5WebEngineCore.pc Qt5WebEngineWidgets.pc
@@ -98,7 +95,6 @@ MAKE_ENV+=	OSX_VERSION=${OSX_VERSION}
 # chromium insists on using its own protobuf
 # so don't include here as versions must match
 #.include "../../devel/protobuf/buildlink3.mk"
-.include "../../devel/re2/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 #.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
