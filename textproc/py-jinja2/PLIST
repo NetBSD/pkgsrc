@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2024/05/06 04:39:49 adam Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
+@comment $NetBSD: PLIST,v 1.15 2025/02/23 18:28:23 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.txt
 ${PYSITELIB}/jinja2/__init__.py
 ${PYSITELIB}/jinja2/__init__.pyc
 ${PYSITELIB}/jinja2/__init__.pyo
