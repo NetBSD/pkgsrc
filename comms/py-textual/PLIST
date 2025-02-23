@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/12/06 22:06:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/02/23 17:23:06 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -90,6 +90,9 @@ ${PYSITELIB}/textual/_log.pyo
 ${PYSITELIB}/textual/_loop.py
 ${PYSITELIB}/textual/_loop.pyc
 ${PYSITELIB}/textual/_loop.pyo
+${PYSITELIB}/textual/_markup_playground.py
+${PYSITELIB}/textual/_markup_playground.pyc
+${PYSITELIB}/textual/_markup_playground.pyo
 ${PYSITELIB}/textual/_node_list.py
 ${PYSITELIB}/textual/_node_list.pyc
 ${PYSITELIB}/textual/_node_list.pyo
@@ -417,6 +420,9 @@ ${PYSITELIB}/textual/logging.pyo
 ${PYSITELIB}/textual/map_geometry.py
 ${PYSITELIB}/textual/map_geometry.pyc
 ${PYSITELIB}/textual/map_geometry.pyo
+${PYSITELIB}/textual/markup.py
+${PYSITELIB}/textual/markup.pyc
+${PYSITELIB}/textual/markup.pyo
 ${PYSITELIB}/textual/message.py
 ${PYSITELIB}/textual/message.pyc
 ${PYSITELIB}/textual/message.pyo
@@ -487,12 +493,18 @@ ${PYSITELIB}/textual/scroll_view.pyo
 ${PYSITELIB}/textual/scrollbar.py
 ${PYSITELIB}/textual/scrollbar.pyc
 ${PYSITELIB}/textual/scrollbar.pyo
+${PYSITELIB}/textual/selection.py
+${PYSITELIB}/textual/selection.pyc
+${PYSITELIB}/textual/selection.pyo
 ${PYSITELIB}/textual/signal.py
 ${PYSITELIB}/textual/signal.pyc
 ${PYSITELIB}/textual/signal.pyo
 ${PYSITELIB}/textual/strip.py
 ${PYSITELIB}/textual/strip.pyc
 ${PYSITELIB}/textual/strip.pyo
+${PYSITELIB}/textual/style.py
+${PYSITELIB}/textual/style.pyc
+${PYSITELIB}/textual/style.pyo
 ${PYSITELIB}/textual/suggester.py
 ${PYSITELIB}/textual/suggester.pyc
 ${PYSITELIB}/textual/suggester.pyo
