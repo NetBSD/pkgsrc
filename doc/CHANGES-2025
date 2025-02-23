@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1714 2025/02/23 21:16:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1715 2025/02/23 21:38:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-pip-audit to 2.8.0nb1 [wiz 2025-02-23]
 	Updated textproc/py-sphinx-autoapi to 3.6.0nb1 [wiz 2025-02-23]
 	Updated textproc/py-myst-parser to 4.0.1nb1 [wiz 2025-02-23]
+	Updated textproc/csvlens to 0.12.0 [wiz 2025-02-23]
