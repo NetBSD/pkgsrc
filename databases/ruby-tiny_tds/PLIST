@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/01/02 05:09:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/02/23 13:53:09 taca Exp $
 bin/defncopy-ttds${RUBY_SUFFIX}
 bin/tsql-ttds${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -45,18 +45,12 @@ ${GEM_LIBDIR}/start_dev.sh
 ${GEM_LIBDIR}/tasks/native_gem.rake
 ${GEM_LIBDIR}/tasks/package.rake
 ${GEM_LIBDIR}/tasks/ports.rake
-${GEM_LIBDIR}/tasks/ports/freetds.rb
-${GEM_LIBDIR}/tasks/ports/libiconv.rb
-${GEM_LIBDIR}/tasks/ports/openssl.rb
-${GEM_LIBDIR}/tasks/ports/recipe.rb
 ${GEM_LIBDIR}/tasks/test.rake
-${GEM_LIBDIR}/test/benchmark/query.rb
-${GEM_LIBDIR}/test/benchmark/query_odbc.rb
-${GEM_LIBDIR}/test/benchmark/query_tinytds.rb
 ${GEM_LIBDIR}/test/bin/install-freetds.sh
 ${GEM_LIBDIR}/test/bin/install-mssql.ps1
 ${GEM_LIBDIR}/test/bin/install-mssqltools.sh
 ${GEM_LIBDIR}/test/bin/install-openssl.sh
+${GEM_LIBDIR}/test/bin/restore-from-native-gem.ps1
 ${GEM_LIBDIR}/test/bin/setup_tinytds_db.sh
 ${GEM_LIBDIR}/test/bin/setup_volume_permissions.sh
 ${GEM_LIBDIR}/test/client_test.rb
