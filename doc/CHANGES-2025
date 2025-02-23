@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1650 2025/02/23 18:43:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1651 2025/02/23 18:44:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2165,3 +2165,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-itsdangerous to 2.2.0nb1 [wiz 2025-02-23]
 	Updated audio/py-audioread to 3.0.1nb2 [wiz 2025-02-23]
 	Updated devel/py-backcall to 0.2.0nb4 [wiz 2025-02-23]
+	Updated devel/py-boltons to 25.0.0nb1 [wiz 2025-02-23]
