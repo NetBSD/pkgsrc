@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/23 18:33:48 wiz Exp $
 
 DISTNAME=	alabaster-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/alabaster/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/bitprophet/alabaster
 COMMENT=	Configurable sidebar-enabled Sphinx theme
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 

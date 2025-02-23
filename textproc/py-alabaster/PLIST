@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2024/07/28 11:47:15 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+@comment $NetBSD: PLIST,v 1.7 2025/02/23 18:33:48 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/alabaster/__init__.py
 ${PYSITELIB}/alabaster/__init__.pyc
 ${PYSITELIB}/alabaster/__init__.pyo
