@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2024/11/04 08:23:52 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/23 18:46:49 wiz Exp $
 
 DISTNAME=	diff_match_patch-20241021
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/diff-match-patch/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/diff-match-patch-python/diff-match-patch
 COMMENT=	Robust algorithms for synchronizing plain text
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.8:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 
 USE_LANGUAGES=	# none
 
