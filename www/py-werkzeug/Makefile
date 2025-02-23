@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2024/11/11 16:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/02/23 19:37:48 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	Python WSGI Utility Library
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core-[0-9]*:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=2.1.1:../../textproc/py-markupsafe
 # optional
 #DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
