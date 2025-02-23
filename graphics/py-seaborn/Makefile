@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2024/10/14 06:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/02/23 20:45:42 wiz Exp $
 
 DISTNAME=	seaborn-0.13.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/seaborn/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://seaborn.pydata.org/
 COMMENT=	Statistical data visualization
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.2:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-matplotlib>=3.6.2:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.25:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas>=1.2:../../math/py-pandas
