@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.619 2025/02/15 03:50:19 mef Exp $
+# $NetBSD: Makefile,v 1.620 2025/02/23 16:41:02 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -446,6 +446,7 @@ SUBDIR+=	py-pythran
 SUBDIR+=	py-pywavelets
 SUBDIR+=	py-quadprog
 SUBDIR+=	py-roman
+SUBDIR+=	py-roman_numerals_py
 SUBDIR+=	py-rpy
 SUBDIR+=	py-scikit-image
 SUBDIR+=	py-scikit-learn
