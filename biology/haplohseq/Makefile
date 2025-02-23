@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2024/12/29 15:09:39 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/23 09:26:48 wiz Exp $
 
 DISTNAME=	haplohseq-0.1.2.2
 PKGREVISION=	2
@@ -11,6 +11,8 @@ OWNER=		bacon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/integrativecancergenomics/software/haplohseq
 COMMENT=	Identify regions of allelic imbalance
 LICENSE=	mit
+
+BROKEN=		"Does not build with boost-1.87"
 
 SUBST_CLASSES+=		test
 SUBST_STAGE.test=	pre-configure
