@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.318 2025/02/22 16:18:09 taca Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.319 2025/02/23 11:24:45 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26134,3 +26134,4 @@ openh264<2.6.0	remote-heap-overflow	https://github.com/cisco/openh264/security/a
 drupal>=11.1.0<11.1.3	cross-site-scripting	https://www.drupal.org/sa-core-2025-001
 drupal>=11.1.0<11.1.3	access-bypass	https://www.drupal.org/sa-core-2025-002
 drupal>=11.1.0<11.1.3	php-object-injection	https://www.drupal.org/sa-core-2025-003
+exiv2>0.28<0.28.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26623
