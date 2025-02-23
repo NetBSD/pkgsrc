@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2024/12/06 10:47:03 adam Exp $
+# $NetBSD: Makefile,v 1.106 2025/02/23 16:41:56 wiz Exp $
 
-DISTNAME=	sphinx-8.1.3
+DISTNAME=	sphinx-8.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.sphinx-doc.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7.14:../../textproc/py-alabaster
 DEPENDS+=	${PYPKGPREFIX}-babel>=2.13:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.20:../../textproc/py-docutils
@@ -19,6 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2>=3.1:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-packaging>=23.0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2.17:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.30.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-roman_numerals_py>=0:../../math/py-roman_numerals_py
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer>=2.2:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-applehelp>=1.0.7:../../textproc/py-sphinxcontrib-applehelp
 DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-devhelp>=1.0.6:../../textproc/py-sphinxcontrib-devhelp
@@ -36,8 +37,8 @@ USE_TOOLS+=	makeinfo
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 
-# as of 8.1.2
-# 38 failed, 2211 passed, 29 skipped, 6 warnings
+# as of 8.2.1
+# 39 failed, 2266 passed, 30 skipped, 6 warnings
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
