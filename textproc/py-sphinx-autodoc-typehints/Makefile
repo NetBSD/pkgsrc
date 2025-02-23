@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/01/16 22:19:26 adam Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/23 16:48:06 wiz Exp $
 
-DISTNAME=	sphinx_autodoc_typehints-3.0.1
+DISTNAME=	sphinx_autodoc_typehints-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx-autodoc-typehints/}
@@ -20,8 +20,13 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=4.12.2:../../devel/py-typing-ex
 
 USE_LANGUAGES=	# none
 
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
+
 # for testing
 ALLOW_NETWORK_ACCESS=	yes
+
+# as of 3.1.0
+# 4 failed, 331 passed
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
