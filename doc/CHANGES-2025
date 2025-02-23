@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1689 2025/02/23 20:40:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1690 2025/02/23 20:41:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2204,3 +2204,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-filter to 25.1nb1 [wiz 2025-02-23]
 	Updated devel/py-flit_scm to 1.7.0nb2 [wiz 2025-02-23]
 	Updated devel/py-id to 1.5.0nb1 [wiz 2025-02-23]
+	Updated sysutils/py-jeepney to 0.8.0nb2 [wiz 2025-02-23]
