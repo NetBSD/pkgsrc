@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/09 09:03:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/23 13:58:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/IO_Event.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -7,11 +7,13 @@ ${GEM_LIBDIR}/ext/extconf.rb
 ${GEM_LIBDIR}/ext/io/event/array.h
 ${GEM_LIBDIR}/ext/io/event/event.c
 ${GEM_LIBDIR}/ext/io/event/event.h
+${GEM_LIBDIR}/ext/io/event/fiber.c
+${GEM_LIBDIR}/ext/io/event/fiber.h
 ${GEM_LIBDIR}/ext/io/event/interrupt.c
 ${GEM_LIBDIR}/ext/io/event/interrupt.h
 ${GEM_LIBDIR}/ext/io/event/list.h
-${GEM_LIBDIR}/ext/io/event/profile.c
-${GEM_LIBDIR}/ext/io/event/profile.h
+${GEM_LIBDIR}/ext/io/event/profiler.c
+${GEM_LIBDIR}/ext/io/event/profiler.h
 ${GEM_LIBDIR}/ext/io/event/selector/epoll.c
 ${GEM_LIBDIR}/ext/io/event/selector/epoll.h
 ${GEM_LIBDIR}/ext/io/event/selector/kqueue.c
@@ -27,7 +29,9 @@ ${GEM_LIBDIR}/lib/IO_Event.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/io/event.rb
 ${GEM_LIBDIR}/lib/io/event/debug/selector.rb
 ${GEM_LIBDIR}/lib/io/event/interrupt.rb
+${GEM_LIBDIR}/lib/io/event/native.rb
 ${GEM_LIBDIR}/lib/io/event/priority_heap.rb
+${GEM_LIBDIR}/lib/io/event/profiler.rb
 ${GEM_LIBDIR}/lib/io/event/selector.rb
 ${GEM_LIBDIR}/lib/io/event/selector/nonblock.rb
 ${GEM_LIBDIR}/lib/io/event/selector/select.rb
