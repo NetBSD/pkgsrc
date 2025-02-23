@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1665 2025/02/23 18:56:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1666 2025/02/23 19:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pep517 to 0.13.1nb1 [wiz 2025-02-23]
 	Updated biology/py-pydicom to 2.4.4nb1 [wiz 2025-02-23]
 	Updated print/py-pydyf to 0.11.0nb1 [wiz 2025-02-23]
+	Updated textproc/py-pyphen to 0.17.2nb1 [wiz 2025-02-23]
