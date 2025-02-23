@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2024/03/06 21:17:22 wiz Exp $
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.rst
+@comment $NetBSD: PLIST,v 1.6 2025/02/23 21:01:54 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE.rst
 ${PYSITELIB}/flask_sqlalchemy/__init__.py
 ${PYSITELIB}/flask_sqlalchemy/__init__.pyc
 ${PYSITELIB}/flask_sqlalchemy/__init__.pyo
