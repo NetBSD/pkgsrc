@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2023/10/28 19:57:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/02/23 20:43:59 wiz Exp $
 bin/nkdfu-${PYVERSSUFFIX}
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
 ${PYSITELIB}/nkdfu/__init__.py
 ${PYSITELIB}/nkdfu/__init__.pyc
 ${PYSITELIB}/nkdfu/__init__.pyo
