@@ -1,15 +1,18 @@
-@comment $NetBSD: PLIST,v 1.9 2022/04/29 06:41:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/02/23 14:50:10 taca Exp $
 bin/htmldiff${RUBY_SUFFIX}
 bin/ldiff${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rspec
-${GEM_LIBDIR}/Code-of-Conduct.md
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CODE_OF_CONDUCT.md
+${GEM_LIBDIR}/CONTRIBUTING.md
+${GEM_LIBDIR}/CONTRIBUTORS.md
 ${GEM_LIBDIR}/Contributing.md
-${GEM_LIBDIR}/History.md
-${GEM_LIBDIR}/License.md
+${GEM_LIBDIR}/LICENCE.md
 ${GEM_LIBDIR}/Manifest.txt
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SECURITY.md
 ${GEM_LIBDIR}/bin/htmldiff
 ${GEM_LIBDIR}/bin/ldiff
 ${GEM_LIBDIR}/docs/COPYING.txt
