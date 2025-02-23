@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/08/06 13:05:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/02/23 19:30:20 wiz Exp $
 ${PYSITELIB}/sphinxcontrib/devhelp/__init__.py
 ${PYSITELIB}/sphinxcontrib/devhelp/__init__.pyc
 ${PYSITELIB}/sphinxcontrib/devhelp/__init__.pyo
@@ -103,3 +103,4 @@ ${PYSITELIB}/sphinxcontrib/devhelp/locales/zh_TW/LC_MESSAGES/sphinxcontrib.devhe
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENCE.rst
