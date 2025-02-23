@@ -1,4 +1,4 @@
-$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.3 2024/07/15 03:32:23 wiz Exp $
+$NetBSD: patch-compiler_rustc__target_src_spec_targets_mips64el__unknown__netbsd.rs,v 1.4 2025/02/23 08:53:54 he Exp $
 
 Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 
@@ -8,7 +8,7 @@ Provide a mips64el target with N32, suitable for NetBSD/mips64el.
 +use crate::abi::Endian;
 +use crate::spec::{base, Target, TargetOptions};
 +
-+pub fn target() -> Target {
++pub(crate) fn target() -> Target {
 +    let mut base = base::netbsd::opts();
 +    base.max_atomic_width = Some(32);
 +    base.cpu = "mips32".into();
