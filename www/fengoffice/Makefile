@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2025/02/08 04:00:53 taca Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/24 15:10:45 taca Exp $
 #
 
 DISTNAME=	fengoffice-${FO_VERSION}
-PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
-PKGREVISION=	2
+PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:C/.rc$/rc1/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fengoffice/}
 GITHUB_TYPE=	tag
@@ -23,9 +22,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zip>=${PHP_BASE_VERS}:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
 
-FO_VERSION=	3.8.5.8
+FO_VERSION=	3.11.6.8
 
-#EXTRACT_USING=	bsd-tar
 USE_TOOLS=	pax
 NO_BUILD=	yes
 
