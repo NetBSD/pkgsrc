@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1742 2025/02/24 14:24:58 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1743 2025/02/24 15:06:04 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2260,3 +2260,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/nsxiv to 33 [pin 2025-02-24]
 	Updated net/tigervnc to 1.15.0.1.20.13 [wiz 2025-02-24]
 	Updated sysutils/kfilemetadata5 to 5.116.0nb7 [wiz 2025-02-24]
+	Updated math/suitesparse to 7.9.0 [ktnb 2025-02-24]
