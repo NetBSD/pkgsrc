@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2025/02/23 16:59:20 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2025/02/24 03:41:02 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	doc coqide
@@ -6,8 +6,13 @@ PKG_SUGGESTED_OPTIONS=	coqide
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		coqide doc
+
 .if !empty(PKG_OPTIONS:Mdoc)
-CONFIGURE_ARGS+=		-with-doc yes
+#DUNE_BUILD_PACKAGES+=		@refman-html @refman-pdf @stdlib-html
+#OPAM_INSTALL_FILES+=		@refman-html @refman-pdf @stdlib-html
+DUNE_BUILD_PACKAGES+=		coq-doc
+OPAM_INSTALL_FILES+=		coq-doc
 PLIST.doc=			yes
 
 TOOL_DEPENDS+=			hevea>=1.10:../../textproc/hevea
@@ -22,8 +27,18 @@ PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 SUBST_CLASSES+=			sphinx-build
 SUBST_STAGE.sphinx-build=	pre-configure
 SUBST_MESSAGE.sphinx-build=	Fix hardcoded sphinx-build
-SUBST_FILES.sphinx-build+=	Makefile.doc configure.ml doc/dune
+SUBST_FILES.sphinx-build+=	doc/dune
 SUBST_SED.sphinx-build+=	-e 's/sphinx-build/sphinx-build-${PYVERSSUFFIX}/g'
+
+# The sphinx build is set up to default to -W (basically -Werror), and
+# fails that way. You can't set it to empty, though, that causes dune
+# to pass '' to sphinx and that confuses sphinx. Pass something harmless
+# instead.
+MAKE_ENV+=			SPHINXWARNOPT=--no-color
+
+#
+# sphinx
+#
 
 TOOL_DEPENDS+=			py[0-9]*-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=			py[0-9]*-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
@@ -66,17 +81,14 @@ TOOL_DEPENDS+=			tex-wrapfig-[0-9]*:../../print/tex-wrapfig
 TOOL_DEPENDS+=			tex-lm-math-[0-9]*:../../fonts/tex-lm-math
 TOOL_DEPENDS+=			tex-gnu-freefont-[0-9]*:../../fonts/tex-gnu-freefont
 TOOL_DEPENDS+=			dvipsk-[0-9]*:../../print/dvipsk
-.else
-CONFIGURE_ARGS+=		-with-doc no
 .endif
 
 .if !empty(PKG_OPTIONS:Mcoqide)
-BUILDLINK_API_DEPENDS.ocaml-lablgtk3+=	ocaml-lablgtk3>=3.1.0
+BUILDLINK_API_DEPENDS.ocaml-lablgtk3+=	ocaml-lablgtk3>=3.1.2
 .include "../../x11/ocaml-lablgtk3/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
-CONFIGURE_ARGS+=	-coqide ${COQIDE_TYPE}
+DUNE_BUILD_PACKAGES+=	coqide-server coqide
+OPAM_INSTALL_FILES+=	coqide-server coqide
 PLIST.coqide=		yes
-.else
-CONFIGURE_ARGS+= -coqide no
 .endif

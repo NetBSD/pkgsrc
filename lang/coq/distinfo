@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.39 2022/06/21 02:21:22 dholland Exp $
+$NetBSD: distinfo,v 1.40 2025/02/24 03:41:02 dholland Exp $
 
-BLAKE2s (coq-8.15.2.tar.gz) = 5caaf97e57ce5085e965dc6e98a5e2fd5373ce3c99cbfb605a5635e8ba2f987a
-SHA512 (coq-8.15.2.tar.gz) = 6a5487912dedb6e54145bf3f177a091cffe13429ba2f73db7c1cc241fe10e86340c968e19cefba7d680facce55f4e914cbd16a317264b109a6f9a01ec822a8c5
-Size (coq-8.15.2.tar.gz) = 7222794 bytes
-SHA1 (patch-Makefile.install) = ea229046833121d72db20c5b308a2e9051a68f22
-SHA1 (patch-Makefile.make) = 97e809e8db8e95090b570751be92829257160b82
-SHA1 (patch-tools_configure_coqide.ml) = 58956509df6ff56cbecc9c0215f6aae2b2eb3462
+BLAKE2s (coq-8.20.1.tar.gz) = 0a4ce018fa53c7ab28036d4d3e092292b02d473ea150617262a46f18b61842c0
+SHA512 (coq-8.20.1.tar.gz) = 8ee967c636b67b22a4f34115871d8f9b9114df309afc9ddf5f61275251088c6e21f6cf745811df75554d30f4cebb6682f23eeb2e88b771330c4b60ce3f6bf5e2
+Size (coq-8.20.1.tar.gz) = 7842928 bytes
 SHA1 (patch-tools_coqdoc_dune) = b2a1fdc3fd0bebc18754de5a0d7778e73a47c25d
