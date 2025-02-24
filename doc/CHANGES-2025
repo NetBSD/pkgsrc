@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1728 2025/02/24 08:35:52 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1729 2025/02/24 08:36:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2245,3 +2245,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-flask-caching to 2.3.1 [adam 2025-02-24]
 	Updated www/py-flask-cors to 5.0.1 [adam 2025-02-24]
 	Updated sysutils/eza to 0.20.22 [pin 2025-02-24]
+	Updated devel/garden to 2.1.0 [pin 2025-02-24]
