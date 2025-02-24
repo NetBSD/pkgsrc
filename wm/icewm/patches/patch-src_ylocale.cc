@@ -1,13 +1,13 @@
-$NetBSD: patch-src_ylocale.cc,v 1.1 2024/06/13 22:24:46 gutteridge Exp $
+$NetBSD: patch-src_ylocale.cc,v 1.2 2025/02/24 18:05:08 gutteridge Exp $
 
 Fix building on older NetBSD and SunOS, which don't have a POSIX-
 compliant iconv(3) signature.
 
---- src/ylocale.cc.orig	2024-05-20 14:51:49.000000000 +0000
+--- src/ylocale.cc.orig	2025-02-22 20:47:00.000000000 +0000
 +++ src/ylocale.cc
-@@ -26,6 +26,15 @@
- #include <X11/Xlib.h>
+@@ -27,6 +27,15 @@
  #include <iconv.h>
+ #include <ctype.h>
  
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
@@ -21,7 +21,7 @@ compliant iconv(3) signature.
  const iconv_t invalid = iconv_t(-1);
  
  class YConverter {
-@@ -194,6 +203,9 @@ char* YLocale::localeString(const wchar_
+@@ -192,6 +201,9 @@ char* YLocale::localeString(const wchar_
  
      size_t lSize = 4 * uLen;
      char* lStr = new char[lSize + 1];
@@ -31,7 +31,7 @@ compliant iconv(3) signature.
      char* inbuf = (char *) uStr;
      char* outbuf = lStr;
      size_t inlen = uLen * sizeof(wchar_t);
-@@ -227,6 +239,9 @@ wchar_t* YLocale::unicodeString(const ch
+@@ -225,6 +237,9 @@ wchar_t* YLocale::unicodeString(const ch
      iconv(instance->converter->unicode(), nullptr, nullptr, nullptr, nullptr);
  
      wchar_t* uStr(new wchar_t[lLen + 1]);
