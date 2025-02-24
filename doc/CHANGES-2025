@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1736 2025/02/24 10:33:21 micha Exp $
+$NetBSD: CHANGES-2025,v 1.1737 2025/02/24 11:58:18 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2254,3 +2254,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-breathe to 4.36.0 [adam 2025-02-24]
 	Updated devel/lazygit to 0.47.1 [pin 2025-02-24]
 	Updated x11/fltk to 1.4.2 [micha 2025-02-24]
+	Added ham/gqrx version 2.17.6 [jmcneill 2025-02-24]
