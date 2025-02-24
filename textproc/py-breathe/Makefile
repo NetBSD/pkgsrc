@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/02/23 16:59:22 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/24 09:04:25 adam Exp $
 
-DISTNAME=	breathe-4.35.0
+DISTNAME=	breathe-4.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/breathe/}
@@ -10,12 +10,10 @@ HOMEPAGE=	https://github.com/breathe-doc/breathe
 COMMENT=	Sphinx plugin providing integrated Doxygen output
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-docutils>=0.12:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=4.0:../../textproc/py-sphinx
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.2:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
-
-USE_PKG_RESOURCES=	yes
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
 
@@ -23,5 +21,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 	${MV} breathe-apidoc breathe-apidoc-${PYVERSSUFFIX} || ${TRUE}
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
