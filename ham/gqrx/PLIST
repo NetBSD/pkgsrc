@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/24 11:56:42 jmcneill Exp $
+bin/gqrx
+share/applications/dk.gqrx.gqrx.desktop
+share/icons/hicolor/scalable/apps/gqrx.svg
+share/metainfo/dk.gqrx.gqrx.appdata.xml

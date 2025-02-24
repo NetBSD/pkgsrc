@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/24 11:56:42 jmcneill Exp $
+
+BLAKE2s (gqrx-2.17.6.tar.gz) = 75cb83f7daaaa17643fbad19d450a3b7dbb7c25ce3d04cbe3e3aca2aaf90ac8f
+SHA512 (gqrx-2.17.6.tar.gz) = 626a7c842e9848fa3eb0326f0ebdee3d1b78eda36f3d378676dc10baf9a799ffd3cd6e3e78d992474443108a7f71d29a39eadd73821432846d8465eff1946974
+Size (gqrx-2.17.6.tar.gz) = 3627214 bytes
