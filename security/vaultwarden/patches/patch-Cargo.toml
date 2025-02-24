@@ -1,0 +1,15 @@
+$NetBSD: patch-Cargo.toml,v 1.5 2025/02/24 08:59:37 adam Exp $
+
+Use vendored yubico crate.
+
+--- Cargo.toml.orig	2025-01-25 21:53:34.923846967 +0000
++++ Cargo.toml
+@@ -175,7 +175,7 @@ grass_compiler = { version = "0.13.4", d
+ 
+ [patch.crates-io]
+ # Patch yubico to remove duplicate crates of older versions
+-yubico = { git = "https://github.com/BlackDex/yubico-rs", rev = "00df14811f58155c0f02e3ab10f1570ed3e115c6" }
++yubico = { path = "../yubico-rs-00df14811f58155c0f02e3ab10f1570ed3e115c6" }
+ 
+ # Strip debuginfo from the release builds
+ # The symbols are the provide better panic traces
