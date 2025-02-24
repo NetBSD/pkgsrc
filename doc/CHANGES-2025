@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1737 2025/02/24 11:58:18 jmcneill Exp $
+$NetBSD: CHANGES-2025,v 1.1738 2025/02/24 12:18:28 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2255,3 +2255,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/lazygit to 0.47.1 [pin 2025-02-24]
 	Updated x11/fltk to 1.4.2 [micha 2025-02-24]
 	Added ham/gqrx version 2.17.6 [jmcneill 2025-02-24]
+	Updated textproc/angle-grinder to 0.19.4 [pin 2025-02-24]
