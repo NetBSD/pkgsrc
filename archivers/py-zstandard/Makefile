@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2025/02/20 12:17:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/02/24 22:20:56 wiz Exp $
 
 DISTNAME=	zstandard-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,6 +20,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 # TODO: switch to this again
 # after https://github.com/indygreg/python-zstandard/issues/252
 # is fixed
+# or not:
+# https://github.com/indygreg/python-zstandard/blob/0063333790a853360c816101511635865405834f/c-ext/backend_c.c#L137-L151
 #BUILDLINK_API_DEPENDS.zstd+=	zstd>=1.5.6
 #.include "../../archivers/zstd/buildlink3.mk"
 .include "../../lang/python/wheel.mk"
