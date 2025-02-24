@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25482 2025/02/24 07:34:02 taca Exp $
+$NetBSD: TODO,v 1.25483 2025/02/24 08:43:17 pin Exp $
 
 Suggested new packages
 ======================
@@ -545,6 +545,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cygwin_lib-1.5.24.2
 	o cyrus-imapd-3.4.3
 	o dap-3.10
+	o dbus-1.16.0
 	o dcc-2.3.167
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
