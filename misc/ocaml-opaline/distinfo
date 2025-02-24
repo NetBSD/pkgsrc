@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2022/03/01 09:36:20 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2025/02/24 03:10:30 dholland Exp $
 
 BLAKE2s (opaline-0.3.3.tar.gz) = f34434a3658fa99524d27bbb6ae6cf2d4f34a71242586ade35c20b5439e7eee4
 SHA512 (opaline-0.3.3.tar.gz) = 0c84897d2820bc08dd2e752aa5ab0a34ac34045c5109ea0c69da6a802ac1365aa0f7dcc3b26e6fb2c2a37fed926feac0a56e992908dc61a685900147d3e1098a
 Size (opaline-0.3.3.tar.gz) = 3304 bytes
+SHA1 (patch-opaline.ml) = 58b6b82233d579f4e7f711389d8353092d34f00e
