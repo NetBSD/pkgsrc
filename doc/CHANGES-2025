@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1745 2025/02/24 15:07:47 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1746 2025/02/24 15:10:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2263,3 +2263,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/suitesparse to 7.9.0 [ktnb 2025-02-24]
 	Updated www/wordpress to 6.7.2 [taca 2025-02-24]
 	Updated www/php-ja-wordpress to 6.7.2 [taca 2025-02-24]
+	Updated www/fengoffice to 3.11.6.8 [taca 2025-02-24]
