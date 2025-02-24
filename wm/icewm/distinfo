@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.48 2024/06/28 17:11:26 gutteridge Exp $
+$NetBSD: distinfo,v 1.49 2025/02/24 18:05:08 gutteridge Exp $
 
-BLAKE2s (icewm-3.6.0.tar.gz) = 56c8a14620fe0cf7abc305542bd76ef6c49a09128ae397025d3ccd136ca72878
-SHA512 (icewm-3.6.0.tar.gz) = 8afc079d9085302bc2545a409615dcd857e9ef61d6f6202ecf1cd0abb8ecd9ce7ac83aec3b5d3743151f3154802955db8cc11f95b165424d09525accb5bf7cf9
-Size (icewm-3.6.0.tar.gz) = 2468153 bytes
-SHA1 (patch-src_ylocale.cc) = 6456b3fec5f8d11f03898a7206f600316ca8d0e8
+BLAKE2s (icewm-3.7.0.tar.gz) = d3c3d0b3d44a59de50ae946fcdc8219ae8235c8edc7b242836b05f9870f82efb
+SHA512 (icewm-3.7.0.tar.gz) = d6f20984175c77b5a9722b59d48ddd4b010ed32a24d7a79060829f3afb7e560f3429672d83404a89895cb88b064295be83fcf2b3d26e23a55e77d78d3cc259e2
+Size (icewm-3.7.0.tar.gz) = 2618625 bytes
+SHA1 (patch-src_ylocale.cc) = f5c5bada634b48dd958e37eb32115ee1efefe52d
