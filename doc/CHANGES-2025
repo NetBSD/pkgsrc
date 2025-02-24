@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1746 2025/02/24 15:10:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1747 2025/02/24 15:12:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/wordpress to 6.7.2 [taca 2025-02-24]
 	Updated www/php-ja-wordpress to 6.7.2 [taca 2025-02-24]
 	Updated www/fengoffice to 3.11.6.8 [taca 2025-02-24]
+	Updated graphics/pcl to 1.15.0 [gdt 2025-02-24]
