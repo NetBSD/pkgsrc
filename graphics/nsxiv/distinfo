@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/01/03 15:32:37 pin Exp $
+$NetBSD: distinfo,v 1.3 2025/02/24 12:23:30 pin Exp $
 
-BLAKE2s (nsxiv-32.tar.gz) = 77b64657a46c3be5aa7266539ab00cd9b8c499ce777d95d1773db8f9e1402e98
-SHA512 (nsxiv-32.tar.gz) = e53de494f104440c87eb55606c322cb7ac9989176547131f59e02eb091d04a3a2de6c11c1c775cb25302ff1da5997bc499d753a822c1de4652aa77bf2858fa9a
-Size (nsxiv-32.tar.gz) = 74345 bytes
+BLAKE2s (nsxiv-33.tar.gz) = 9f0cf0955eb5647110e757bfe4bfd7b15fabf07e2586e4148c343f2838db9f97
+SHA512 (nsxiv-33.tar.gz) = 005192a942582e81e811e4bc8739720b16ff2fd9214399e4796db76d99e1cb0cf52f338481459a40d156e5eb9d63246bda8ba2702aa2297b331aa12ff05fed45
+Size (nsxiv-33.tar.gz) = 77639 bytes
