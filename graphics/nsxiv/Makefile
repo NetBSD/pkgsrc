@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2024/01/03 15:32:37 pin Exp $
+# $NetBSD: Makefile,v 1.6 2025/02/24 12:23:30 pin Exp $
 
-DISTNAME=	nsxiv-32
+DISTNAME=	nsxiv-33
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nsxiv/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
