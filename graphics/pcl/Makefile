@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2025/02/24 15:12:15 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2025/02/24 17:22:56 adam Exp $
 
 DISTNAME=	pcl-1.15.0
 CATEGORIES=	graphics
@@ -12,9 +12,8 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/pcl-${DISTNAME}
 
-USE_LANGUAGES=		c c++
 USE_CXX_FEATURES=	c++14
-
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
 # Those could be enabled as options if desired.
@@ -22,7 +21,13 @@ CMAKE_CONFIGURE_ARGS+=		-DWITH_CUDA=FALSE
 # test is missing
 CMAKE_CONFIGURE_ARGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+
+# Clang needs openmp package for OpenMP support.
+.if !empty(PKGSRC_COMPILER:Mclang)
+.include "../../parallel/openmp/buildlink3.mk"
+.endif
+
 # See LIBATOMIC_NOT_NEEDED in CMakeLists.txt
 .if ${PKGSRC_COMPILER:Mgcc}
 .include "../../devel/libatomic/buildlink3.mk"

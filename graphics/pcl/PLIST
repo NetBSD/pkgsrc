@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2025/02/24 15:12:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/02/24 17:22:56 adam Exp $
 bin/pcl_add_gaussian_noise
 bin/pcl_bilateral_upsampling
 bin/pcl_boundary_estimation
@@ -1005,7 +1005,7 @@ ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/simple_buffer_visu
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_context_item.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_image_canvas_source_2d.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_vtk_compatibility.h
-${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/vtkFixedXRenderWindowInteractor.h
+${PLIST.vtk}${PLIST.x11}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/vtkFixedXRenderWindowInteractor.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/vtkRenderWindowInteractorFix.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/window.h
 ${PLIST.qt}lib/libpcl_apps.so
