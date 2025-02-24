@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/02/22 14:43:29 pin Exp $
+$NetBSD: distinfo,v 1.7 2025/02/24 08:39:47 pin Exp $
 
 BLAKE2s (aho-corasick-1.1.2.crate) = 340a895627e98ae84ce5dcbeb7f441ea2705511ebf01c2fee3ac71c34f1573cd
 SHA512 (aho-corasick-1.1.2.crate) = 61ef5092673ab5a60bec4e92df28a91fe6171ba59d5829ffe41fc55aff3bfb755533a4ad53dc7bf827a0b789fcce593b17e69d1fcfb3694f06ed3b1bd535d40c
@@ -291,6 +291,6 @@ Size (windows_x86_64_msvc-0.52.0.crate) = 821600 bytes
 BLAKE2s (winnow-0.7.2.crate) = a85a2625f0b1c931b5c10fa511f8a172deb6a91a48990443c7c8f52691073a09
 SHA512 (winnow-0.7.2.crate) = 9e248b27885c30e75e008b1df7b12813d5fb04ca286d65172c5760fd8a3a2f2d32b7eec79c84190c771fc7b3ab311ab6f2f394ffe16969f7908430c99aab9757
 Size (winnow-0.7.2.crate) = 170989 bytes
-BLAKE2s (xt-0.19.3.crate) = c5097b66e72e9ea22d275033319f5a844b3e1e3462e21d9c6ef846ed21008c8e
-SHA512 (xt-0.19.3.crate) = 750efd685e35c082ffa4abb74b1f11031d242dc2036792f7513c7759098a25353e36a40468ea709fc2d1c23f017b5bef5f0a07972b14b7ce31da04fc2b88701e
-Size (xt-0.19.3.crate) = 66357 bytes
+BLAKE2s (xt-0.19.4.crate) = 859adaef39fe1df4dcbf414e7e87b36ddbb6854c0bbef1f994e7927c65127e44
+SHA512 (xt-0.19.4.crate) = d66c78b03663c88a4c5dc9120c01b29be9d1edf029f21fb7a7dbb74fc4ca66f3a21ab31d1b1eb2a51bf67c9dc6b85365125de1b116c88bb0dc6e19600f1de732
+Size (xt-0.19.4.crate) = 66779 bytes
