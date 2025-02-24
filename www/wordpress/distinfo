@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.94 2025/01/02 12:02:37 wen Exp $
+$NetBSD: distinfo,v 1.95 2025/02/24 15:06:48 taca Exp $
 
-BLAKE2s (wordpress-6.7.1.zip) = 4607cbf4bdcf61624b4b71c8915cc8adbd8c4cb69c7f291e451cb33623b21859
-SHA512 (wordpress-6.7.1.zip) = 972d76829c3fef21fd21f51021be6585837570f4a16eef18f62266950b972842fca4e81faea88819fa83310ee2595fa3f6292801918a5625e1b415540bc4a06e
-Size (wordpress-6.7.1.zip) = 28585184 bytes
+BLAKE2s (wordpress-6.7.2.zip) = 4e6a9aa346f0ea57a2e4853e8a2930cc42ee71bfd10fb84fca7eb8c42be27e99
+SHA512 (wordpress-6.7.2.zip) = 559ffda63fb875b83b857b4a9ab7d5d55144dd26062370340b444e635b6a087d59f126a4f718ad1df1dfbc38f4e3e553fd560b5125c7c6516f943f6bb0f0db76
+Size (wordpress-6.7.2.zip) = 28410097 bytes
