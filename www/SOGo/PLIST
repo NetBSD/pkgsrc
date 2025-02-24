@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2018/03/21 14:36:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/02/24 16:43:49 manu Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
@@ -1967,7 +1967,7 @@ lib/sogo/libNGCards.so.4.9.0
 lib/sogo/libSOGo.so
 lib/sogo/libSOGo.so.${PKGVERSION}
 lib/sogo/libSOGoUI.so
-lib/sogo/libSOGoUI.so.2.3.0
+lib/sogo/libSOGoUI.so.2.4.0
 sbin/sogo-ealarms-notify
 sbin/sogo-slapd-sockd
 sbin/sogo-tool
