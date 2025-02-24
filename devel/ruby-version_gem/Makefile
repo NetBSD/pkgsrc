@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2025/02/23 14:04:49 taca Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/24 15:14:35 taca Exp $
 
-DISTNAME=	version_gem-1.1.5
+DISTNAME=	version_gem-1.1.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
