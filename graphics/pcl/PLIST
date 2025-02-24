@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2024/05/05 20:58:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/24 15:12:15 gdt Exp $
 bin/pcl_add_gaussian_noise
+bin/pcl_bilateral_upsampling
 bin/pcl_boundary_estimation
 bin/pcl_cluster_extraction
 bin/pcl_compute_cloud_error
@@ -130,7 +131,6 @@ ${PLIST.qt}include/pcl-${PCL_BASE_VERSION}/pcl/apps/timer.h
 include/pcl-${PCL_BASE_VERSION}/pcl/cloud_iterator.h
 include/pcl-${PCL_BASE_VERSION}/pcl/common/angles.h
 include/pcl-${PCL_BASE_VERSION}/pcl/common/bivariate_polynomial.h
-include/pcl-${PCL_BASE_VERSION}/pcl/common/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/common/centroid.h
 include/pcl-${PCL_BASE_VERSION}/pcl/common/colors.h
 include/pcl-${PCL_BASE_VERSION}/pcl/common/common.h
@@ -205,14 +205,12 @@ include/pcl-${PCL_BASE_VERSION}/pcl/correspondence.h
 include/pcl-${PCL_BASE_VERSION}/pcl/exceptions.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/3dsc.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/board.h
-include/pcl-${PCL_BASE_VERSION}/pcl/features/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/boundary.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/brisk_2d.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/cppf.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/crh.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/cvfh.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/don.h
-include/pcl-${PCL_BASE_VERSION}/pcl/features/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/esf.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/feature.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/flare.h
@@ -304,7 +302,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/features/usc.h
 include/pcl-${PCL_BASE_VERSION}/pcl/features/vfh.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/approximate_voxel_grid.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/bilateral.h
-include/pcl-${PCL_BASE_VERSION}/pcl/filters/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/box_clipper3D.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/clipper3D.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/conditional_removal.h
@@ -378,7 +375,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/filters/voxel_grid_label.h
 include/pcl-${PCL_BASE_VERSION}/pcl/filters/voxel_grid_occlusion_estimation.h
 include/pcl-${PCL_BASE_VERSION}/pcl/for_each_type.h
 include/pcl-${PCL_BASE_VERSION}/pcl/geometry/boost.h
-include/pcl-${PCL_BASE_VERSION}/pcl/geometry/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/geometry/get_boundary.h
 include/pcl-${PCL_BASE_VERSION}/pcl/geometry/impl/polygon_operations.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/geometry/line_iterator.h
@@ -401,10 +397,8 @@ include/pcl-${PCL_BASE_VERSION}/pcl/impl/pcl_base.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/impl/point_types.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/io/ascii_io.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/auto_io.h
-include/pcl-${PCL_BASE_VERSION}/pcl/io/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/debayer.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/dinast_grabber.h
-include/pcl-${PCL_BASE_VERSION}/pcl/io/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/file_grabber.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/file_io.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/fotonic_grabber.h
@@ -421,7 +415,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/io/impl/pcd_io.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/io/impl/point_cloud_image_extractors.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/io/impl/synchronized_queue.hpp
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/io/impl/vtk_lib_io.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/io/io.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/io_exception.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/low_level_io.h
 include/pcl-${PCL_BASE_VERSION}/pcl/io/lzf.h
@@ -473,8 +466,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/keypoints/smoothed_surfaces_keypoint.h
 include/pcl-${PCL_BASE_VERSION}/pcl/keypoints/susan.h
 include/pcl-${PCL_BASE_VERSION}/pcl/keypoints/trajkovic_2d.h
 include/pcl-${PCL_BASE_VERSION}/pcl/keypoints/trajkovic_3d.h
-include/pcl-${PCL_BASE_VERSION}/pcl/keypoints/uniform_sampling.h
-include/pcl-${PCL_BASE_VERSION}/pcl/make_shared.h
 include/pcl-${PCL_BASE_VERSION}/pcl/memory.h
 include/pcl-${PCL_BASE_VERSION}/pcl/ml/branch_estimator.h
 include/pcl-${PCL_BASE_VERSION}/pcl/ml/densecrf.h
@@ -509,7 +500,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/ml/regression_variance_stats_estimator.h
 include/pcl-${PCL_BASE_VERSION}/pcl/ml/stats_estimator.h
 include/pcl-${PCL_BASE_VERSION}/pcl/ml/svm.h
 include/pcl-${PCL_BASE_VERSION}/pcl/ml/svm_wrapper.h
-include/pcl-${PCL_BASE_VERSION}/pcl/octree/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/octree/impl/octree2buf_base.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/octree/impl/octree_base.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/octree/impl/octree_iterator.hpp
@@ -586,7 +576,6 @@ ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/people/person_cluster.h
 include/pcl-${PCL_BASE_VERSION}/pcl/point_cloud.h
 include/pcl-${PCL_BASE_VERSION}/pcl/point_representation.h
 include/pcl-${PCL_BASE_VERSION}/pcl/point_struct_traits.h
-include/pcl-${PCL_BASE_VERSION}/pcl/point_traits.h
 include/pcl-${PCL_BASE_VERSION}/pcl/point_types.h
 include/pcl-${PCL_BASE_VERSION}/pcl/point_types_conversion.h
 include/pcl-${PCL_BASE_VERSION}/pcl/range_image/bearing_angle_image.h
@@ -605,9 +594,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/recognition/3rdparty/metslib/observer.hh
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/3rdparty/metslib/simulated-annealing.hh
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/3rdparty/metslib/tabu-search.hh
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/3rdparty/metslib/termination-criteria.hh
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/auxiliary.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/boost.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/bvh.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/cg/correspondence_grouping.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/cg/geometric_consistency.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/cg/hough_3d.h
@@ -628,7 +614,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/recognition/hv/hv_go.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/hv/hv_papazov.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/hv/hypotheses_verification.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/hv/occlusion_reasoning.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/hypothesis.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/cg/correspondence_grouping.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/cg/geometric_consistency.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/cg/hough_3d.hpp
@@ -637,22 +622,13 @@ include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/hv/hv_go.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/hv/hv_papazov.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/hv/occlusion_reasoning.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/implicit_shape_model.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/line_rgbd.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/linemod/line_rgbd.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/ransac_based/simple_octree.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/ransac_based/voxel_structure.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/simple_octree.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/impl/voxel_structure.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/implicit_shape_model.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/line_rgbd.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/linemod.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/linemod/line_rgbd.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/mask_map.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/model_library.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/obj_rec_ransac.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/orr_graph.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/orr_octree.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/orr_octree_zprojection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/point_types.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/quantizable_modality.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/quantized_map.h
@@ -669,22 +645,16 @@ include/pcl-${PCL_BASE_VERSION}/pcl/recognition/ransac_based/simple_octree.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/ransac_based/trimmed_icp.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/ransac_based/voxel_structure.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/region_xy.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/rigid_transform_space.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/simple_octree.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/sparse_quantized_multi_mod_template.h
 include/pcl-${PCL_BASE_VERSION}/pcl/recognition/surface_normal_modality.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/trimmed_icp.h
-include/pcl-${PCL_BASE_VERSION}/pcl/recognition/voxel_structure.h
 include/pcl-${PCL_BASE_VERSION}/pcl/register_point_struct.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/bfgs.h
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/boost_graph.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/convergence_criteria.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_backprojection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_normal_shooting.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_estimation_organized_projection.h
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_distance.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_features.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_median_distance.h
@@ -696,11 +666,11 @@ include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_sample
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_surface_normal.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_trimmed.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection_var_trimmed.h
+include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_rejection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_sorting.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/correspondence_types.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/default_convergence_criteria.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/distances.h
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/elch.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/exceptions.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/gicp.h
@@ -714,17 +684,10 @@ include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_estimation.
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_estimation_backprojection.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_estimation_normal_shooting.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_estimation_organized_projection.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_distance.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_features.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_median_distance.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_one_to_one.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_organized_boundary.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_poly.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_sample_consensus.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_sample_consensus_2d.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_surface_normal.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_trimmed.hpp
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_rejection_var_trimmed.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/correspondence_types.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/default_convergence_criteria.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/impl/elch.hpp
@@ -781,12 +744,9 @@ include/pcl-${PCL_BASE_VERSION}/pcl/registration/transformation_estimation_svd_s
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/transformation_estimation_symmetric_point_to_plane_lls.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/transformation_validation.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/transformation_validation_euclidean.h
-include/pcl-${PCL_BASE_VERSION}/pcl/registration/transforms.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/warp_point_rigid.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/warp_point_rigid_3d.h
 include/pcl-${PCL_BASE_VERSION}/pcl/registration/warp_point_rigid_6d.h
-include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/boost.h
-include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/lmeds.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/mlesac.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/msac.hpp
@@ -811,6 +771,7 @@ include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/sac_model_registration
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/sac_model_registration_2d.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/sac_model_sphere.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/sac_model_stick.hpp
+include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/impl/sac_model_torus.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/lmeds.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/method_types.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/mlesac.h
@@ -839,6 +800,7 @@ include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/sac_model_registration.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/sac_model_registration_2d.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/sac_model_sphere.h
 include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/sac_model_stick.h
+include/pcl-${PCL_BASE_VERSION}/pcl/sample_consensus/sac_model_torus.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/brute_force.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/flann_search.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/impl/brute_force.hpp
@@ -852,7 +814,6 @@ include/pcl-${PCL_BASE_VERSION}/pcl/search/organized.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/pcl_search.h
 include/pcl-${PCL_BASE_VERSION}/pcl/search/search.h
 include/pcl-${PCL_BASE_VERSION}/pcl/segmentation/approximate_progressive_morphological_filter.h
-include/pcl-${PCL_BASE_VERSION}/pcl/segmentation/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/segmentation/comparator.h
 include/pcl-${PCL_BASE_VERSION}/pcl/segmentation/conditional_euclidean_clustering.h
 include/pcl-${PCL_BASE_VERSION}/pcl/segmentation/cpc_segmentation.h
@@ -940,11 +901,9 @@ include/pcl-${PCL_BASE_VERSION}/pcl/surface/3rdparty/poisson4/sparse_matrix.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/3rdparty/poisson4/vector.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/3rdparty/poisson4/vector.hpp
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/bilateral_upsampling.h
-include/pcl-${PCL_BASE_VERSION}/pcl/surface/boost.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/concave_hull.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/convex_hull.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/ear_clipping.h
-include/pcl-${PCL_BASE_VERSION}/pcl/surface/eigen.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/gp3.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/grid_projection.h
 include/pcl-${PCL_BASE_VERSION}/pcl/surface/impl/bilateral_upsampling.hpp
@@ -1019,7 +978,6 @@ ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/common/impl/shapes
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/common/io.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/common/ren_win_interact_map.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/common/shapes.h
-${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/eigen.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/histogram_visualizer.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/image_viewer.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/impl/histogram_visualizer.hpp
@@ -1044,7 +1002,6 @@ ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/qvtk_compatibility
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/range_image_visualizer.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/registration_visualizer.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/simple_buffer_visualizer.h
-${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_context_item.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_image_canvas_source_2d.h
 ${PLIST.vtk}include/pcl-${PCL_BASE_VERSION}/pcl/visualization/vtk/pcl_vtk_compatibility.h
@@ -1121,6 +1078,7 @@ lib/pkgconfig/pcl_features.pc
 lib/pkgconfig/pcl_filters.pc
 lib/pkgconfig/pcl_geometry.pc
 lib/pkgconfig/pcl_io.pc
+lib/pkgconfig/pcl_io_ply.pc
 lib/pkgconfig/pcl_kdtree.pc
 lib/pkgconfig/pcl_keypoints.pc
 lib/pkgconfig/pcl_ml.pc
@@ -1136,13 +1094,10 @@ lib/pkgconfig/pcl_stereo.pc
 lib/pkgconfig/pcl_surface.pc
 lib/pkgconfig/pcl_tracking.pc
 ${PLIST.vtk}lib/pkgconfig/pcl_visualization.pc
-share/pcl-${PCL_BASE_VERSION}/Modules/AdditionalBoostVersions.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindClangFormat.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindDSSDK.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindEnsenso.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindFLANN.cmake
-share/pcl-${PCL_BASE_VERSION}/Modules/FindGLEW.cmake
-share/pcl-${PCL_BASE_VERSION}/Modules/FindOpenMP.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindOpenNI.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindOpenNI2.cmake
 share/pcl-${PCL_BASE_VERSION}/Modules/FindPcap.cmake
