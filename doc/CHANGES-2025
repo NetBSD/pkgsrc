@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1751 2025/02/24 17:25:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1752 2025/02/24 18:05:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2270,3 +2270,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/SOGo to 2.4.3 [manu 2025-02-24]
 	Updated graphics/vtk to 9.4.1 [adam 2025-02-24]
 	Updated textproc/py-humanize to 4.12.1 [adam 2025-02-24]
+	Updated wm/icewm to 3.7.0 [gutteridge 2025-02-24]
