@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1752 2025/02/24 18:05:24 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1753 2025/02/24 19:28:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2271,3 +2271,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/vtk to 9.4.1 [adam 2025-02-24]
 	Updated textproc/py-humanize to 4.12.1 [adam 2025-02-24]
 	Updated wm/icewm to 3.7.0 [gutteridge 2025-02-24]
+	Updated sysutils/di to 5.0.13 [bsiegert 2025-02-24]
