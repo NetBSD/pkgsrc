@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2023/11/12 13:22:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/02/24 01:05:11 mef Exp $
 #
 
 DISTNAME=		fl_logbook-2.5
@@ -7,7 +7,7 @@ CATEGORIES=		ham
 MASTER_SITES=		http://www.w1hkj.com/LinuxApps/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.w1hkj.com/
+HOMEPAGE=		http://www.w1hkj.org/
 COMMENT=		FLTK-based amateur radio log book
 LICENSE=		gnu-gpl-v2
 
