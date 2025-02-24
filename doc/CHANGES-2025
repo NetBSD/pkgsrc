@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1735 2025/02/24 10:11:27 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1736 2025/02/24 10:33:21 micha Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2253,3 +2253,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/vaultwarden to 1.33.2 [adam 2025-02-24]
 	Updated textproc/py-breathe to 4.36.0 [adam 2025-02-24]
 	Updated devel/lazygit to 0.47.1 [pin 2025-02-24]
+	Updated x11/fltk to 1.4.2 [micha 2025-02-24]
