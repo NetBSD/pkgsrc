@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1739 2025/02/24 12:22:44 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1740 2025/02/24 12:23:50 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added ham/gqrx version 2.17.6 [jmcneill 2025-02-24]
 	Updated textproc/angle-grinder to 0.19.4 [pin 2025-02-24]
 	Updated sysutils/navi to 2.24.0 [pin 2025-02-24]
+	Updated graphics/nsxiv to 33 [pin 2025-02-24]
