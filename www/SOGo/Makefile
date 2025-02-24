@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.80 2024/11/14 22:22:01 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2025/02/24 16:43:49 manu Exp $
 #
 
-DISTNAME=	SOGo-2.3.23
-PKGREVISION=	34
+DISTNAME=	SOGo-2.4.3
+PKGNAME=	${DISTNAME}
+#PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Alinto/}
+GITHUB_PROJECT=	sogo
+GITHUB_TAG=	refs/tags/${DISTNAME}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sogo.nu/
@@ -13,6 +17,8 @@ LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake zip:run
+
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 
 CONFIG_SHELL=	bash
 CONFIGURE_ARGS=	--enable-debug --disable-strip
