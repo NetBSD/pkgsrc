@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2023/11/10 14:41:44 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2025/02/24 11:57:08 jmcneill Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -32,6 +32,7 @@ SUBDIR+=	gnuradio-vocoder
 SUBDIR+=	gnuradio-wavelet
 SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gpredict
+SUBDIR+=	gqrx
 SUBDIR+=	gr-osmosdr
 SUBDIR+=	grig
 SUBDIR+=	hackrf
