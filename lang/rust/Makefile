@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2025/02/23 08:53:54 he Exp $
+# $NetBSD: Makefile,v 1.325 2025/02/24 15:12:49 tnn Exp $
 
 DISTNAME=	rustc-1.83.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -154,6 +154,7 @@ CONFIGURE_ARGS+=	--set llvm.targets="Mips;X86"
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/backtrace/ci/*.sh
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/core/src/unicode/printable.py
 CHECK_INTERPRETER_SKIP+=	lib/rustlib/src/rust/library/stdarch/ci/*.sh
+CHECK_PORTABILITY_SKIP+=	src/gcc/contrib/*.sh
 CHECK_PORTABILITY_SKIP+=	tests/run-make/dump-ice-to-disk/check.sh
 CHECK_PORTABILITY_SKIP+=	vendor/libdbus-sys-0.2.5/vendor/dbus/tools/cmake-format
 
