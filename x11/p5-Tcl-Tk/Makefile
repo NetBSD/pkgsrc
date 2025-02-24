@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/17 00:54:23 scole Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/24 03:53:39 scole Exp $
 
 PKGVER=		1.51
 DISTNAME=	Tcl-Tk-${PKGVER}
@@ -17,6 +17,7 @@ DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
 DEPENDS+=	tklib-[0-9]*:../../devel/tklib
 
 MAKE_PARAMS+=	--tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
+MAKE_PARAMS+=	--no-test-for-tk
 
 PERL5_PACKLIST=		auto/Tcl/Tk/.packlist
 
