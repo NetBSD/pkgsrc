@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1732 2025/02/24 08:40:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1733 2025/02/24 08:41:21 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/git-cliff to 2.8.0 [pin 2025-02-24]
 	Updated wm/leftwm to 0.5.4 [pin 2025-02-24]
 	Updated textproc/xt-rs to 0.19.4 [pin 2025-02-24]
+	Updated sysutils/yazi to 25.2.11 [pin 2025-02-24]
