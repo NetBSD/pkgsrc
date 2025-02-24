@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.66 2024/11/14 22:19:16 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.67 2025/02/24 16:39:46 manu Exp $
 
-DISTNAME=	SOPE-2.3.23
-PKGREVISION=	22
+DISTNAME=	SOPE-2.4.3
+PKGNAME=	${DISTNAME}
+#PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Alinto/}
+GITHUB_PROJECT=	sope
+GITHUB_TAG=	refs/tags/${DISTNAME}
+DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/inverse-inc/sope
@@ -14,7 +17,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	gmake
 
-WRKSRC=		${WRKDIR}/SOPE
+WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${DISTNAME}
 HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS=	--with-gnustep --enable-debug --disable-strip
