@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.36 2025/02/16 08:04:53 iquiw Exp $
+$NetBSD: distinfo,v 1.37 2025/02/24 05:52:07 iquiw Exp $
 
-BLAKE2s (fzf-0.60.0.tar.gz) = 6f870679c7ff43b0baa4c5280bee74080c7c749b384023b8428952080eb326b6
-SHA512 (fzf-0.60.0.tar.gz) = 8666c77f7efcc645e88ec5823f719c06403a09c1c13a91a83e9786c13c87ef1cad098bf4bb2d56a1044a93534e861270da63064c4ca25ed9d6d480ee2c232f8d
-Size (fzf-0.60.0.tar.gz) = 327339 bytes
+BLAKE2s (fzf-0.60.2.tar.gz) = fd7343a31b886ca8f45752ff2b5a33f44b5c26fe28f3e739fb8387e8a375b4d5
+SHA512 (fzf-0.60.2.tar.gz) = 89c6f6079c0c412afe480bb0d3fb73cc1a23ab4686d6f5ebf3e795084f6e76bfca0fa88824547a2b7e4bae229f6115b6aa8d5f188902469f1011830b00331e65
+Size (fzf-0.60.2.tar.gz) = 328212 bytes
 BLAKE2s (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = c40097d4f4ad93e100ae36b295bd103784b6f696d22d9bf7278a742f99be5199
 SHA512 (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = 2088d7467b0b19cc8e8f7ac6d22793fc3c4ae696e81d1b21c563e84ce787afdc8817d43ef0a4568ea6b0a3aed5ad4fc45ea25a874be733fbaf26bbe902e869ae
 Size (github.com_charlievieth_fastwalk_@v_v1.0.9.mod) = 92 bytes
