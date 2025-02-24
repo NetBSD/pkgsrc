@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2025/02/02 16:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2025/02/24 13:04:58 wiz Exp $
 
-DISTNAME=		tigervnc-1.14.1
+DISTNAME=		tigervnc-1.15.0
 PKGNAME=		${DISTNAME}.1.20.13
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=TigerVNC/}
@@ -141,7 +141,7 @@ pre-configure:
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
