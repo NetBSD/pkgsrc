@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/17 00:53:17 scole Exp $
+# $NetBSD: Makefile,v 1.4 2025/02/24 03:41:13 scole Exp $
 
 DISTNAME=	Tcl-pTk-1.11
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,7 @@ DEPENDS+=	tk-Tix-[0-9]*:../../x11/tk-Tix
 DEPENDS+=	tklib-[0-9]*:../../devel/tklib
 
 MAKE_PARAMS+=	--tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
+MAKE_PARAMS+=   --no-test-for-tk
 
 # xxx Img tests run but fail with this, maybe too old?
 TEST_DEPENDS+=	tkimg-[0-9]*:../../graphics/tk-tkimg
