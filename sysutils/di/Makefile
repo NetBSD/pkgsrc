@@ -1,26 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2020/01/02 19:34:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/24 19:28:29 bsiegert Exp $
 
-DISTNAME=	di-4.47.3
+DISTNAME=	di-5.0.13
 CATEGORIES=	sysutils
-MASTER_SITES=	https://gentoo.com/di/
+MASTER_SITES=	https://sourceforge.net/projects/diskinfo-di/files/
 
 MAINTAINER=	brad.lanam.di@gmail.com
-HOMEPAGE=	https://gentoo.com/di/
+HOMEPAGE=	https://diskinfo-di.sourceforge.io/
 COMMENT=	Alternative df command
 LICENSE=	zlib
 
 USE_LANGUAGES=		c
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt pkg-config sed tr grep sh
 USE_PKGLOCALEDIR=	yes
 
-MAKE_ENV+=	prefix=${PREFIX} \
-		LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \
-		INSTALL_DIR=${DESTDIR}${PREFIX} \
-		INST_LOCALEDIR=${DESTDIR}${PREFIX}/${PKGLOCALEDIR}/locale \
-		DI_MANINSTDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
-
-# Leave pkgsrc to handle security features.
-MAKE_ENV+=	NO_PIE=yes
-
+.include "../../devel/cmake/build.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
