@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/02/08 14:53:24 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/02/24 08:38:44 pin Exp $
 
-DISTNAME=	leftwm-0.5.3
-# leftwm-0.5.4 requires Rust >= 1.83
+DISTNAME=	leftwm-0.5.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
