@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2024/11/11 07:29:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/24 07:13:50 adam Exp $
 
-DISTNAME=	flask_caching-2.3.0
+DISTNAME=	flask_caching-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Caching/}
@@ -22,8 +22,6 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-asyncio-[0-9]*:../../devel/py-test-asyncio
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-xprocess-[0-9]*:../../devel/py-test-xprocess
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
