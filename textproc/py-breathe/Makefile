@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/02/24 09:04:25 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/24 09:13:50 wiz Exp $
 
 DISTNAME=	breathe-4.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/breathe-doc/breathe
 COMMENT=	Sphinx plugin providing integrated Doxygen output
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.7:../../devel/py-flit_core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=7.2:../../textproc/py-sphinx
 
 USE_LANGUAGES=	# none
