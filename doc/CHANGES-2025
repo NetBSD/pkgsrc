@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1726 2025/02/24 05:52:53 iquiw Exp $
+$NetBSD: CHANGES-2025,v 1.1727 2025/02/24 07:18:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2242,3 +2242,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/ocaml-opaline to 0.3.3nb2 [dholland 2025-02-24]
 	Updated lang/coq to 8.20.1 [dholland 2025-02-24]
 	Updated sysutils/fzf to 0.60.2 [iquiw 2025-02-24]
+	Updated www/py-flask-caching to 2.3.1 [adam 2025-02-24]
+	Updated www/py-flask-cors to 5.0.1 [adam 2025-02-24]
