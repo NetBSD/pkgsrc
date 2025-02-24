@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/02/24 11:56:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/24 12:32:52 wiz Exp $
 
 DISTNAME=	gqrx-2.17.6
 CATEGORIES=	ham
@@ -7,7 +7,7 @@ GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/gqrx-sdr/gqrx/
-COMMENT=	open source software defined radio receiver
+COMMENT=	Open source software defined radio receiver
 LICENSE=	gnu-gpl-v3
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
@@ -21,6 +21,7 @@ USE_TOOLS+=	pkg-config
 .include "../../ham/gnuradio-digital/buildlink3.mk"
 .include "../../ham/gnuradio-network/buildlink3.mk"
 .include "../../ham/gr-osmosdr/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/volk/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
