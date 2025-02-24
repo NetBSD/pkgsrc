@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2024/11/14 22:20:19 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/02/24 17:22:44 adam Exp $
 
-DISTNAME=	VTK-9.2.6
+DISTNAME=	VTK-9.4.1
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	https://www.vtk.org/files/release/${PKGVERSION_NOREV:R}/
 
@@ -13,11 +12,9 @@ LICENSE=	modified-bsd
 
 TOOL_DEPENDS=	ninja-build-[0-9]*:../../devel/ninja-build
 
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++11
+USE_CXX_FEATURES=	c++11
+USE_LANGUAGES=		c c++
 
-CONFIGURE_DIRS=	build
-CMAKE_ARG_PATH=	..
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_CONFIGURE_ARGS+=	-DVTK_LEGACY_REMOVE=ON
 CMAKE_CONFIGURE_ARGS+=	-DVTK_USE_MPI=OFF
@@ -41,10 +38,14 @@ CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_exprtk=OFF
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_fmt=OFF
 # SEACAS ioss. Uneasy about packaging that. No proper releases, even.
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_ioss=OFF
+# https://gitlab.kitware.com/utils/token
+CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_token=OFF
 # Verdict, some quadrature computations in 2D, 3D. Unsure if useful as pkg.
 CMAKE_CONFIGURE_ARGS+=	-DVTK_MODULE_USE_EXTERNAL_VTK_verdict=OFF
 
-MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/lib
+MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
+# For Darwin
+MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 
 PLIST_VARS+=	cocoa opengl
 PLIST_SUBST+=	VTKVER=${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+).*/\1/}
@@ -59,13 +60,11 @@ PLIST.cocoa=	yes
 PLIST.opengl=	yes
 .endif
 
-post-extract:
-	${MKDIR} ${WRKSRC}/build
-
 .include "options.mk"
 
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 #.include "../../devel/loguru/buildlink3.mk"
 .include "../../devel/netcdf-cxx/buildlink3.mk"
@@ -76,19 +75,20 @@ post-extract:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/double-conversion/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../math/fast_float/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../print/libharu/buildlink3.mk"
+.include "../../science/cgnslib/buildlink3.mk"
 .include "../../textproc/PEGTL/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+# not compatible, misses specializations in vendored vork
+#.include "../../textproc/fmtlib/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/nlohmann-json/buildlink3.mk"
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../textproc/utf8-cpp/buildlink3.mk"
-# not compatible, misses specializations in vendored vork
-#.include "../../textproc/fmtlib/buildlink3.mk"
-.include "../../textproc/nlohmann-json/buildlink3.mk"
-.include "../../science/cgnslib/buildlink3.mk"
 .include "../../mk/atomic64.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

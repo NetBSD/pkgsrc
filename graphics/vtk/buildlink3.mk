@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2024/11/14 22:20:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2025/02/24 17:22:44 adam Exp $
 
 BUILDLINK_TREE+=	vtk
 
@@ -32,8 +32,12 @@ BUILDLINK_PKGSRCDIR.vtk?=	../../graphics/vtk
 pkgbase := vtk
 .include "../../mk/pkg-build-options.mk"
 
-.if ${PKG_BUILD_OPTIONS.vtk:Mqt}
+.if ${PKG_BUILD_OPTIONS.vtk:Mqt5}
 .  include "../../x11/qt5-qtbase/buildlink3.mk"
+.  include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.elif ${PKG_BUILD_OPTIONS.vtk:Mqt6}
+.  include "../../lang/qt6-qtdeclarative/buildlink3.mk"
+.  include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif
 
 # Referenced in the CMake stuff and needs to be linked with it.
