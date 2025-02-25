@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1768 2025/02/25 19:15:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1769 2025/02/25 20:09:45 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2295,3 +2295,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-sh to 2.2.2 [adam 2025-02-25]
 	Updated x11/modular-xorg-server to 21.1.16 [wiz 2025-02-25]
 	Updated x11/modular-xorg-xephyr to 21.1.16 [wiz 2025-02-25]
+	Added lang/go124 version 1.24.0 [bsiegert 2025-02-25]
