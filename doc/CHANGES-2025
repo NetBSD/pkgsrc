@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1762 2025/02/25 15:34:03 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1763 2025/02/25 16:13:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2287,3 +2287,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-excon to 1.2.4 [taca 2025-02-25]
 	Updated x11/py-qt-builder to 1.18.1 [adam 2025-02-25]
 	Updated textproc/py-sphinx-gallery to 0.19.0 [adam 2025-02-25]
+	Updated devel/cmake to 3.31.6 [adam 2025-02-25]
+	Updated devel/cmake-gui to 3.31.6 [adam 2025-02-25]
