@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2024/04/14 09:15:14 pho Exp $
+# $NetBSD: hacks.mk,v 1.2 2025/02/25 19:14:46 wiz Exp $
 
 .if !defined(MODULAR_XORG_SERVER_HACKS_MK)
 MODULAR_XORG_SERVER_HACKS_MK=	defined
@@ -18,7 +18,7 @@ MODULAR_XORG_SERVER_HACKS_MK=	defined
 ### regression.
 ###
 .if ${MACHINE_PLATFORM:MNetBSD-9.*-aarch64} || \
-	${MACHINE_PLATFORM:MNetBSD-10.0-aarch64}
+	${MACHINE_PLATFORM} == NetBSD-10.0-aarch64
 PKG_HACKS+=	smart-scheduler-workaround
 CONFIGURE_ENV+=	ac_cv_func_setitimer=no
 .endif
