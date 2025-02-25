@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1765 2025/02/25 17:01:47 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.1766 2025/02/25 18:00:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2291,3 +2291,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake-gui to 3.31.6 [adam 2025-02-25]
 	Updated multimedia/qt6-qtmultimedia to 6.8.2nb2 [tsutsui 2025-02-25]
 	Updated emulators/PC6001VX to 4.2.11nb2 [tsutsui 2025-02-25]
+	Updated www/py-starlette to 0.46.0 [adam 2025-02-25]
+	Updated sysutils/py-sh to 2.2.2 [adam 2025-02-25]
