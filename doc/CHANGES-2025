@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1759 2025/02/25 13:05:12 roy Exp $
+$NetBSD: CHANGES-2025,v 1.1760 2025/02/25 13:16:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2282,3 +2282,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/digikam to 8.5.0nb4 [wiz 2025-02-25]
 	Updated devel/tcllib to 2.0 [scole 2025-02-25]
 	Updated net/dhcpcd to 10.2.2 [roy 2025-02-25]
+	Updated www/py-aiohttp to 3.11.13 [adam 2025-02-25]
+	Updated devel/py-test-httpserver to 1.1.2 [adam 2025-02-25]
