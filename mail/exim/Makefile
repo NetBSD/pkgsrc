@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2025/02/21 12:21:22 abs Exp $
+# $NetBSD: Makefile,v 1.209 2025/02/25 18:22:23 nia Exp $
 
 DISTNAME=	exim-4.98.1
 CATEGORIES=	mail net
@@ -18,7 +18,7 @@ CONFLICTS+=	exim-exiscan-[0-9]*
 DEPENDS+=	p5-File-FcntlLock>=0.22:../../sysutils/p5-File-FcntlLock
 
 USE_TOOLS+=	perl:run
-USE_LANGUAGES=	c99
+FORCE_C_STD=	gnu99
 
 BUILD_DEFS+=	VARBASE
 
