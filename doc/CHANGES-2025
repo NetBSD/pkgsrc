@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1755 2025/02/25 07:56:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1756 2025/02/25 08:04:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2275,3 +2275,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/qemu to 9.2.2 [adam 2025-02-24]
 	Updated www/py-django-import-export to 4.3.6 [adam 2025-02-24]
 	Updated multimedia/mpv to 0.39.0nb5 [wiz 2025-02-25]
+	Updated devel/glib2 to 2.82.5 [adam 2025-02-25]
+	Updated devel/glib2-tools to 2.82.5 [adam 2025-02-25]
+	Updated devel/gdbus-codegen to 2.82.5 [adam 2025-02-25]
+	Updated archivers/py-lhafile to 0.3.1 [adam 2025-02-25]
