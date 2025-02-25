@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2024/11/24 17:09:52 pin Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/25 21:06:18 pin Exp $
 
 DISTNAME=	cargo-about-0.6.6
+#cargo-about-0.7.0 requires Rust >= 1.85
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EmbarkStudios/}
 
