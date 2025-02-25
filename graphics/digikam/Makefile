@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.246 2025/02/18 10:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.247 2025/02/25 08:32:38 wiz Exp $
 
 DISTNAME=	digiKam-8.5.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/${PKGVERSION_NOREV}/}
 
@@ -50,7 +50,7 @@ CHECK_PORTABILITY_SKIP+=	*.desktop.cmake.in
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../misc/marble/buildlink3.mk"
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../multimedia/x265/buildlink3.mk"
 .include "../../sysutils/kfilemetadata5/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
