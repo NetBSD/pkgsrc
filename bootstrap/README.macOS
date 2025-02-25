@@ -1,16 +1,15 @@
-$NetBSD: README.macOS,v 1.13 2025/02/18 23:35:31 gdt Exp $
+$NetBSD: README.macOS,v 1.14 2025/02/25 00:27:03 gdt Exp $
 
 Please read the general README file as well.
 
 # Building from source
 
-First, install either the full Xcode environment (if that's something
-you want to have) or else just its Command Line Tools.  For the latter:
+First, install Command Line Tools:
 
 	$ xcode-select --install
 
-While this is often sufficient, see the XCode section below for
-dealing with issues.
+Alternatively, if you want to have Xcode, you can use that instead.
+See the Toolchains section below.
 
 Next, if you haven't already done so, fetch and extract pkgsrc:
 
@@ -41,20 +40,40 @@ Patches to support older systems will generally get merged, provided
 they don't break newer systems and aren't too much trouble to maintain.
 Tigerbrew is a good place to look for such fixes.
 
-# XCode
+# Toolchains
 
-XCode and Command Line Tools are essentially cross compilers, even
+Xcode can build apple-style programs for iOS and macOS; one needs it
+to develop "apps".  Xcode is very large (a 2025 data point 5.8 GB) and
+includes a version of Command Line Tools.
+
+Command Line Tools is smaller (a 2025 data point is 343 MB), and can
+build POSIX-style programs for macOS.
+
+(For the most part, pkgsrc only builds POSIX-style programs, but there
+has been some discusion of building macOS apps.)
+
+Xcode and Command Line Tools are essentially cross compilers, even
 when build host and target are the same, similar to NetBSD's build.sh.
-There are typically multiple "SDKs" for various macOS versions, and
-generally later macOS versions run binaries built for earlier ones.
-For CLT, see /Library/Developer/CommandLineTools/SDKs, and inspect
-defaults with `xcrun`.
+For Xcode, there are typically multiple "SDKs" for various macOS
+versions, and generally later macOS versions run binaries built for
+earlier ones.  For Command Line Tools, there seems to often just be
+one version.
 
-New macOS versions usually lead to new XCode versions, and sometimes
-they are troubled.  To choose a specific SDK, set
-MACOSX_DEPLOYMENT_TARGET to [perhaps the SDK version, e.g. 14.2]
-during bootstrap.  The bootstrap tools and all subsequent packages
-built with those tools will use the specified SDK.
+Query the default SDK with `xcrun --show-sdk-version`.  For CLT, see
+/Library/Developer/CommandLineTools/SDKs.  It is not unusual for it to
+be one version higher than the OS you are running.
+
+The Internet advises that Command Line Tools can become broken,
+perhaps on upgrades, and that one might choose to remove the bits and
+reinstall.  The Internet tends to advise using Command Line Tools and
+not Xcode if you don't need Xcode.  The Interent tends to advise
+against having both installed.
+
+New macOS versions usually lead to new Xcode versions, and sometimes
+they are troubled (even if properly installed).  To choose a specific
+SDK, set MACOSX_DEPLOYMENT_TARGET to e.g. 14.5 during bootstrap.  The
+bootstrap tools and all subsequent packages built with those tools
+will use the specified SDK.
 
 -----
 
