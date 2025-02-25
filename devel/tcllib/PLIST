@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2025/02/17 12:15:40 scole Exp $
+@comment $NetBSD: PLIST,v 1.10 2025/02/25 12:11:48 scole Exp $
 bin/dtplite
 bin/mkdoc
 bin/nns
@@ -7,10 +7,6 @@ bin/nnslog
 bin/page
 bin/pt
 bin/tcldocstrip
-lib/tcllib${PKGVERSION}/0compatibility/d_config.tcl
-lib/tcllib${PKGVERSION}/0compatibility/d_paths.tcl
-lib/tcllib${PKGVERSION}/0compatibility/p_config.tcl
-lib/tcllib${PKGVERSION}/0compatibility/p_paths.tcl
 lib/tcllib${PKGVERSION}/0compatibility/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/aes/aes.tcl
 lib/tcllib${PKGVERSION}/aes/pkgIndex.tcl
@@ -71,9 +67,10 @@ lib/tcllib${PKGVERSION}/counter/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/crc/cksum.tcl
 lib/tcllib${PKGVERSION}/crc/crc16.tcl
 lib/tcllib${PKGVERSION}/crc/crc32.tcl
-lib/tcllib${PKGVERSION}/crc/crcc.tcl
+lib/tcllib${PKGVERSION}/crc/crc32c.tcl
 lib/tcllib${PKGVERSION}/crc/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/crc/sum.tcl
+lib/tcllib${PKGVERSION}/crc/sumc.tcl
 lib/tcllib${PKGVERSION}/cron/cron.tcl
 lib/tcllib${PKGVERSION}/cron/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/csv/csv.tcl
@@ -292,15 +289,16 @@ lib/tcllib${PKGVERSION}/log/msgs/en.msg
 lib/tcllib${PKGVERSION}/log/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/map/map_geocode_nominatim.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy.tcl
+lib/tcllib${PKGVERSION}/map/map_slippy_c.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy_cache.tcl
 lib/tcllib${PKGVERSION}/map/map_slippy_fetcher.tcl
+lib/tcllib${PKGVERSION}/map/map_slippy_tcl.tcl
 lib/tcllib${PKGVERSION}/map/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/mapproj/mapproj.tcl
 lib/tcllib${PKGVERSION}/mapproj/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/markdown/markdown.tcl
 lib/tcllib${PKGVERSION}/markdown/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/math/bessel.tcl
-lib/tcllib${PKGVERSION}/math/bigfloat.tcl
 lib/tcllib${PKGVERSION}/math/bigfloat2.tcl
 lib/tcllib${PKGVERSION}/math/bignum.tcl
 lib/tcllib${PKGVERSION}/math/calculus.tcl
@@ -345,6 +343,7 @@ lib/tcllib${PKGVERSION}/math/qcomplex.tcl
 lib/tcllib${PKGVERSION}/math/quasirandom.tcl
 lib/tcllib${PKGVERSION}/math/rational_funcs.tcl
 lib/tcllib${PKGVERSION}/math/romannumerals.tcl
+lib/tcllib${PKGVERSION}/math/rootfind.tcl
 lib/tcllib${PKGVERSION}/math/special.tcl
 lib/tcllib${PKGVERSION}/math/stat_kernel.tcl
 lib/tcllib${PKGVERSION}/math/stat_logit.tcl
@@ -555,12 +554,10 @@ lib/tcllib${PKGVERSION}/simulation/random.tcl
 lib/tcllib${PKGVERSION}/smtpd/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/smtpd/smtpd.tcl
 lib/tcllib${PKGVERSION}/snit/main1.tcl
-lib/tcllib${PKGVERSION}/snit/main1_83.tcl
 lib/tcllib${PKGVERSION}/snit/main2.tcl
 lib/tcllib${PKGVERSION}/snit/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/snit/snit.tcl
 lib/tcllib${PKGVERSION}/snit/snit2.tcl
-lib/tcllib${PKGVERSION}/snit/snit_tcl83_utils.tcl
 lib/tcllib${PKGVERSION}/snit/validate.tcl
 lib/tcllib${PKGVERSION}/soundex/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/soundex/soundex.tcl
@@ -587,7 +584,6 @@ lib/tcllib${PKGVERSION}/struct/list.tcl
 lib/tcllib${PKGVERSION}/struct/list.test.tcl
 lib/tcllib${PKGVERSION}/struct/map.tcl
 lib/tcllib${PKGVERSION}/struct/matrix.tcl
-lib/tcllib${PKGVERSION}/struct/matrix1.tcl
 lib/tcllib${PKGVERSION}/struct/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/struct/pool.tcl
 lib/tcllib${PKGVERSION}/struct/prioqueue.tcl
@@ -666,6 +662,7 @@ lib/tcllib${PKGVERSION}/treeql/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/treeql/treeql.tcl
 lib/tcllib${PKGVERSION}/treeql/treeql84.tcl
 lib/tcllib${PKGVERSION}/treeql/treeql85.tcl
+lib/tcllib${PKGVERSION}/try/fhome.tcl
 lib/tcllib${PKGVERSION}/try/pkgIndex.tcl
 lib/tcllib${PKGVERSION}/try/throw.tcl
 lib/tcllib${PKGVERSION}/try/try.tcl
@@ -932,7 +929,6 @@ man/mann/markdown.n
 man/mann/math.n
 man/mann/math_geometry.n
 man/mann/matrix.n
-man/mann/matrix1.n
 man/mann/md4.n
 man/mann/md5.n
 man/mann/md5crypt.n
@@ -1104,6 +1100,7 @@ man/mann/tcldesjr.n
 man/mann/tcldocstrip.n
 man/mann/tcllib_coroutine.n
 man/mann/tcllib_dns.n
+man/mann/tcllib_fhome.n
 man/mann/tcllib_fifo.n
 man/mann/tcllib_fifo2.n
 man/mann/tcllib_interp.n
@@ -1176,6 +1173,7 @@ man/mann/vt_base64.n
 man/mann/vt_counter.n
 man/mann/vt_crc32.n
 man/mann/vt_otp.n
+man/mann/wcswidth.n
 man/mann/websocket.n
 man/mann/wip.n
 man/mann/xsxp.n
@@ -1332,3 +1330,6 @@ share/examples/tcllib/transfer/sreceive.tcl
 share/examples/tcllib/transfer/stransmit.tcl
 share/examples/tcllib/transfer/tlssetup.tcl
 share/examples/tcllib/transfer/transmit.tcl
+share/examples/tcllib/websocket/oo_server_example.tcl
+share/examples/tcllib/websocket/server_example.tcl
+share/examples/tcllib/websocket/websocket_test.html

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2025/02/17 12:15:40 scole Exp $
+$NetBSD: distinfo,v 1.15 2025/02/25 12:11:48 scole Exp $
 
-BLAKE2s (tcllib-1.21.tar.gz) = 700903ff646795190027e8588fe81f17b5f8ba1bf5e44ddebd46c6078a20b105
-SHA512 (tcllib-1.21.tar.gz) = 58ddbf392dbc8c8935a7f28be974a4ba895e934046ff1ffe8c5ab65e3db7e68b9450d420bd1d547245e7f699ea11edf698047cfe0a305a09449779037db059ab
-Size (tcllib-1.21.tar.gz) = 10721290 bytes
+BLAKE2s (tcllib-2.0.tar.gz) = 09b85e686e60c535b2c31a5795ed858954c634ba8f03cb6185cdaa668e79148d
+SHA512 (tcllib-2.0.tar.gz) = fdb2cf402a90f1002189a108076ec0f407916ca90bfb172d974e6347547feb2e30167cd3bec63ea2b63a0632f1dabd2012d7eeff2679927d676b12e83fe5b168
+Size (tcllib-2.0.tar.gz) = 18903838 bytes

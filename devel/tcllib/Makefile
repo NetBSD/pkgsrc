@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/02/20 06:33:49 scole Exp $
+# $NetBSD: Makefile,v 1.23 2025/02/25 12:11:48 scole Exp $
 
-DISTNAME=		tcllib-1.21
+DISTNAME=		tcllib-2.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
 
@@ -9,12 +9,12 @@ HOMEPAGE=		https://core.tcl-lang.org/tcllib/
 COMMENT=		Collection of utility modules for Tcl
 LICENSE=		modified-bsd
 
-USE_TOOLS+=		find wget:run
+USE_TOOLS+=		find tclsh wget:run
 
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes
 
-CONFIGURE_ARGS+=	--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh
+CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
 
 TCL_EXDIR=		share/examples/tcllib
 INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/mann ${TCL_EXDIR}
@@ -46,6 +46,14 @@ SUBST_SED.tclsh=	-e "s,/usr/bin/env.*tclsh,${TCLSH},g"
 SUBST_MESSAGE.tclsh=	Fixing path to tclsh.
 
 TEST_TARGET=		test
+
+do-install:
+	cd ${WRKSRC} && ${TCLSH} ./installer.tcl \
+		-no-examples -no-html \
+		-pkg-path ${DESTDIR}${PREFIX}/lib/tcllib${PKGVERSION} \
+		-app-path ${DESTDIR}${PREFIX}/bin \
+		-nroff-path ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann \
+		-no-wait -no-gui
 
 # add examples manually
 post-install:
