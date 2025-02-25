@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1766 2025/02/25 18:00:33 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1767 2025/02/25 19:14:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2293,3 +2293,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/PC6001VX to 4.2.11nb2 [tsutsui 2025-02-25]
 	Updated www/py-starlette to 0.46.0 [adam 2025-02-25]
 	Updated sysutils/py-sh to 2.2.2 [adam 2025-02-25]
+	Updated x11/modular-xorg-server to 21.1.16 [wiz 2025-02-25]
