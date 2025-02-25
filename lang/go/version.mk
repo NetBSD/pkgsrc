@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.225 2025/02/25 20:09:16 bsiegert Exp $
+# $NetBSD: version.mk,v 1.226 2025/02/25 20:10:16 bsiegert Exp $
 
 #
 # If bsd.prefs.mk is included before go-package.mk in a package, then this
@@ -17,7 +17,7 @@ GO14_VERSION=	1.4.3
 
 .include "../../mk/bsd.prefs.mk"
 
-GO_VERSION_DEFAULT?=	123
+GO_VERSION_DEFAULT?=	124
 
 .if defined(GO_VERSION_REQD)
 GOVERSSUFFIX=		${GO_VERSION_REQD}
