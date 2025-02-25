@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1754 2025/02/24 19:32:02 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1755 2025/02/25 07:56:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/di to 5.0.13 [bsiegert 2025-02-24]
 	Updated emulators/qemu to 9.2.2 [adam 2025-02-24]
 	Updated www/py-django-import-export to 4.3.6 [adam 2025-02-24]
+	Updated multimedia/mpv to 0.39.0nb5 [wiz 2025-02-25]
