@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2025/02/24 17:22:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/02/25 13:56:20 gdt Exp $
 bin/vtkProbeOpenGLVersion-${VTKVER}
 include/vtk-${VTKVER}/Basis_Constant_CellC0Gradient.h
 include/vtk-${VTKVER}/DICOMAppHelper.h
@@ -809,7 +809,7 @@ include/vtk-${VTKVER}/vtkDuplicatePolyData.h
 include/vtk-${VTKVER}/vtkDynamic2DLabelMapper.h
 include/vtk-${VTKVER}/vtkDynamicLoader.h
 include/vtk-${VTKVER}/vtkEDLShading.h
-${PLIST.opengl}l${PLIST.qt}include/vtk-${VTKVER}/vtkEGLRenderWindow.h
+${PLIST.opengl}${PLIST.qt}include/vtk-${VTKVER}/vtkEGLRenderWindow.h
 include/vtk-${VTKVER}/vtkERFReader.h
 include/vtk-${VTKVER}/vtkEarthSource.h
 include/vtk-${VTKVER}/vtkEdgeCenters.h
