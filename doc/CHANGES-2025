@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1756 2025/02/25 08:04:37 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1757 2025/02/25 08:32:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/glib2-tools to 2.82.5 [adam 2025-02-25]
 	Updated devel/gdbus-codegen to 2.82.5 [adam 2025-02-25]
 	Updated archivers/py-lhafile to 0.3.1 [adam 2025-02-25]
+	Updated graphics/digikam to 8.5.0nb4 [wiz 2025-02-25]
