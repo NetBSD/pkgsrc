@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: opensmtpd.sh,v 1.4 2024/03/02 17:01:12 vins Exp $
+# $NetBSD: opensmtpd.sh,v 1.5 2025/02/25 05:05:15 vins Exp $
 #
 
 # PROVIDE: smtpd mail
@@ -14,7 +14,7 @@ $_rc_subr_loaded . @SYSCONFBASE@/rc.subr
 name="smtpd"
 rcvar=opensmtpd
 
-: ${smtpd_config:="@PKG_SYSCONFDIR@/smtpd/${name}.conf"}
+: ${smtpd_config:="@PKG_SYSCONFDIR@/${name}.conf"}
 : ${smtpd_server:="@PREFIX@/sbin/${name}"}
 : ${smtpd_flags:=""}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2025/01/07 05:24:43 vins Exp $
+# $NetBSD: Makefile,v 1.31 2025/02/25 05:05:15 vins Exp $
 
 VERSION=	7.6.0p1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	https://www.opensmtpd.org/archives/
@@ -12,7 +12,7 @@ COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc AND modified-bsd AND 2-clause-bsd
 
 BUILD_DEFS+=	VARBASE
-SMTPD_HOME=	${VARBASE}/smtpd/empty
+SMTPD_HOME=	${VARBASE}/chroot/smtpd
 SMTPD_QUEUE=	_smtpq
 
 GNU_CONFIGURE=	yes
