@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2021/10/26 09:57:14 nia Exp $
+$NetBSD: distinfo,v 1.6 2025/02/25 08:04:09 adam Exp $
 
-BLAKE2s (lhafile-0.3.0.tar.gz) = 3d40301371ddcf596829c7971bd2a3aad554320865d164aed1bb894e42698e1d
-SHA512 (lhafile-0.3.0.tar.gz) = 4403106a6c8109c70a66f0d7441a5c14e46ebb93713dece825404fda5d834aadb8ac2a70becbc9b730739cdbb95fa344a3f51dcb7f49e270174087dc4ec34f34
-Size (lhafile-0.3.0.tar.gz) = 14523 bytes
+BLAKE2s (lhafile-0.3.1.tar.gz) = b073e67695c52f272e65e73a02638c9dbbca62e4cef8849422e9ebf369564d3a
+SHA512 (lhafile-0.3.1.tar.gz) = 6e6d5b1593461d01107777127c91a6ddbeb8f09eeab6e04cc4d85da2783f64e638fec7364cbb7c5b6e6f16cb7b6c057f4e85b7ce1e75a981c1d46ba25ad348b9
+Size (lhafile-0.3.1.tar.gz) = 14541 bytes

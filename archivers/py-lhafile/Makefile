@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2022/01/04 20:52:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/25 08:04:09 adam Exp $
 
-DISTNAME=	lhafile-0.3.0
+DISTNAME=	lhafile-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lhafile/}
 
@@ -11,5 +10,7 @@ HOMEPAGE=	https://github.com/FrodeSolheim/python-lhafile
 COMMENT=	LHA(.lzh) file extract interface
 LICENSE=	modified-bsd
 
-.include "../../lang/python/egg.mk"
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
