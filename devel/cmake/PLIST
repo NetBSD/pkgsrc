@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.83 2024/11/27 07:02:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.84 2025/02/25 16:12:56 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -3191,6 +3191,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang-OBJC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang-OBJCXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-AppleClang.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-CUDA.cmake
@@ -3206,6 +3207,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-MOLD-OBJC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-MOLD-OBJCXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-OBJC.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-OBJCXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Apple-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/BSD-Linker-Initialize.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/CYGWIN-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/CYGWIN-C.cmake
@@ -3257,6 +3259,15 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/GNU-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/GNU-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/GNU-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/GNU.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-GNU-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-GNU-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-LLD-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-LLD-C.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Haiku-LLD-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-CUDA.cmake
@@ -3268,6 +3279,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU-HIP.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-C.cmake
@@ -3275,6 +3287,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-HIP.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-GNUgold-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-HIP.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-C.cmake
@@ -3282,6 +3295,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-HIP.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-LLD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD-C.cmake
@@ -3290,6 +3304,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD-HIP.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-MOLD.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Linux-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/MSYS-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/MSYS-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/MSYS-CXX.cmake
@@ -3381,7 +3396,9 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC-CUDA.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC-HIP.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-MSVC.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/Windows-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsCE-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsCE-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsCE-MSVC-C.cmake
@@ -3402,6 +3419,8 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-LLD-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-MSVC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-MSVC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-MSVC-Swift.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsPhone-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-CXX.cmake
@@ -3414,6 +3433,8 @@ share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-LLD-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-MSVC-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-MSVC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-MSVC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-MSVC-Swift.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Linker/WindowsStore-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-Apple-Swift.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-CCur-Fortran.cmake
