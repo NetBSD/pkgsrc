@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/12/06 10:52:23 adam Exp $
+$NetBSD: distinfo,v 1.6 2025/02/25 15:33:39 adam Exp $
 
-BLAKE2s (sphinx_gallery-0.18.0.tar.gz) = 168a94e6d1842063434b9f467a5cb366bc0d7f898f846bfeb6277ba83c60886e
-SHA512 (sphinx_gallery-0.18.0.tar.gz) = 59712e6a50d0a01e091b51e8532798ba4068a3a65472c25ea5a913dea599ac1afa54c44a057d332e6204930fa958d5b88dafe796af913566f504f0d9cf91e72a
-Size (sphinx_gallery-0.18.0.tar.gz) = 466371 bytes
+BLAKE2s (sphinx_gallery-0.19.0.tar.gz) = 5186b4a9e71487f212e8989d52bc4279fd075ebc8f770e3168f15467bf41be60
+SHA512 (sphinx_gallery-0.19.0.tar.gz) = 90ed1aafa718937ee9bd5c8f52937c5a65058ca5a2138606f48f41637dae8a1d3c22cfcbed2eef3aaf3180ee137d943cfbde72ba2625c23f6d7d8e911f3f374f
+Size (sphinx_gallery-0.19.0.tar.gz) = 471479 bytes

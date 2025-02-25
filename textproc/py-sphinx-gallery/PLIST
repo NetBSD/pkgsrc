@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/12/06 10:52:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/25 15:33:39 adam Exp $
 bin/sphinx_gallery_py2jupyter-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -116,8 +116,21 @@ ${PYSITELIB}/sphinx_gallery/tests/test_scrapers.pyo
 ${PYSITELIB}/sphinx_gallery/tests/test_sorting.py
 ${PYSITELIB}/sphinx_gallery/tests/test_sorting.pyc
 ${PYSITELIB}/sphinx_gallery/tests/test_sorting.pyo
+${PYSITELIB}/sphinx_gallery/tests/test_utils.py
+${PYSITELIB}/sphinx_gallery/tests/test_utils.pyc
+${PYSITELIB}/sphinx_gallery/tests/test_utils.pyo
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/index.rst
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/GALLERY_HEADER.rst
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/GALLERY_HEADER.rst
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_4.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_4.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_4.pyo
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_5.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_5.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_5.pyo
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_6.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_6.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/first-subsection/plot_6.pyo
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.py
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.pyc
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_1.pyo
@@ -127,6 +140,16 @@ ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_2.pyo
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.py
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.pyc
 ${PYSITELIB}/sphinx_gallery/tests/testconfs/src/plot_3.pyo
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/GALLERY_HEADER.rst
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_7.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_7.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_7.pyo
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_8.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_8.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_8.pyo
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_9.py
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_9.pyc
+${PYSITELIB}/sphinx_gallery/tests/testconfs/src/second-subsection/plot_9.pyo
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/Makefile
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/_static_nonstandard/broken_example.png
 ${PYSITELIB}/sphinx_gallery/tests/tinybuild/doc/_static_nonstandard/demo.png
