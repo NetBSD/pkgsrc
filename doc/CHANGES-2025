@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1764 2025/02/25 17:00:20 tsutsui Exp $
+$NetBSD: CHANGES-2025,v 1.1765 2025/02/25 17:01:47 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2290,3 +2290,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/cmake to 3.31.6 [adam 2025-02-25]
 	Updated devel/cmake-gui to 3.31.6 [adam 2025-02-25]
 	Updated multimedia/qt6-qtmultimedia to 6.8.2nb2 [tsutsui 2025-02-25]
+	Updated emulators/PC6001VX to 4.2.11nb2 [tsutsui 2025-02-25]
