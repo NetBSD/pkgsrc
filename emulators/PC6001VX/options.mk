@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2024/12/17 15:21:29 tsutsui Exp $
+# $NetBSD: options.mk,v 1.6 2025/02/25 17:01:32 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.PC6001VX
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg manual sdl2
@@ -23,7 +23,7 @@ QMAKE_ARGS+=	"DEFINES+=NOMONITOR"
 .endif
 
 .if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg6/buildlink3.mk"
+.include "../../multimedia/ffmpeg7/buildlink3.mk"
 .else
 QMAKE_ARGS+=	"DEFINES+=NOAVI"
 .endif
