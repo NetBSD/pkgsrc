@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.324 2025/02/26 11:59:15 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.325 2025/02/26 12:20:56 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -19994,7 +19994,7 @@ py{27,36,37,38}-urllib3<1.25.9	crlf-attack	https://nvd.nist.gov/vuln/detail/CVE-
 go-jwt-go<4.0.0		security-bypass		https://nvd.nist.gov/vuln/detail/CVE-2020-26160
 libproxy<0.4.16		buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-26154
 oniguruma<6.9.6rc1	buffer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2020-26159
-apache-ant-[0-9]*	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2020-11979
+apache-ant<1.10.9	insecure-file-permissions	https://nvd.nist.gov/vuln/detail/CVE-2020-11979
 powerdns<4.3.1		uninitialized-memory-read	https://nvd.nist.gov/vuln/detail/CVE-2020-17482
 powerdns<4.4.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-24697
 powerdns<4.4.0		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-24698
