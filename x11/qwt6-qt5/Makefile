@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2025/02/12 06:45:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2025/02/26 21:29:54 adam Exp $
 
-DISTNAME=	qwt-6.2.0
+DISTNAME=	qwt-6.3.0
 PKGNAME=	${DISTNAME:S/qwt/qwt6-qt5/}
-PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,9 +37,15 @@ CHECK_SHLIBS_SKIP+=	qt5/plugins/designer/libqwt_designer_plugin.dylib
 
 post-install:
 .if ${OPSYS} == "Darwin"
-	install_name_tool	\
-	  -id       ${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib	\
-	  ${DESTDIR}${PREFIX}/qwt-${PKGVERSION_NOREV}/lib/libqwt.${PKGVERSION_NOREV}.dylib
+	install_name_tool \
+	  -id       ${PREFIX}/${DISTNAME}/lib/libqwt.${PKGVERSION_NOREV}.dylib \
+	  ${DESTDIR}${PREFIX}/${DISTNAME}/lib/libqwt.${PKGVERSION_NOREV}.dylib
+	install_name_tool \
+	  -id       ${PREFIX}/qt5/plugins/designer/libqwt_designer_plugin.dylib \
+	  ${DESTDIR}${PREFIX}/qt5/plugins/designer/libqwt_designer_plugin.dylib
+	install_name_tool -change libqwt.6.dylib \
+	  ${PREFIX}/${DISTNAME}/lib/libqwt.${PKGVERSION_NOREV}.dylib \
+	  ${DESTDIR}${PREFIX}/qt5/plugins/designer/libqwt_designer_plugin.dylib
 .endif
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"
