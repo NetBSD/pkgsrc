@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.22 2024/11/17 07:21:09 wiz Exp $
+$NetBSD: distinfo,v 1.23 2025/02/26 23:21:19 nia Exp $
 
 BLAKE2s (libXt-1.3.1.tar.xz) = e8ac1599bb7b63b272dc513fb31c1043430970e1eabfe0743bb5c33a6f828605
 SHA512 (libXt-1.3.1.tar.xz) = c220292f60b0f53134cf9364831a32bbaa9fa6bbb3a7143e917920957b7a48c616e946042747089f29ea9d8a18ecd64de620bcaf56d82462e7107de906f5db38
 Size (libXt-1.3.1.tar.xz) = 691200 bytes
+SHA1 (patch-include_X11_Xtos.h) = 5da6f08b22b0175ae5c2df4a5284ea5ce06b0ecd
 SHA1 (patch-util_Makefile.in) = 3bc33e42c88e1bf45606175c4a83dc7781e1aa2b
