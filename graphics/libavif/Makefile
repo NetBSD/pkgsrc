@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2024/10/31 07:32:57 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/02/26 08:42:03 adam Exp $
 
-DISTNAME=	libavif-1.1.1
-PKGREVISION=	1
+DISTNAME=	libavif-1.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=AOMediaCodec/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +11,7 @@ COMMENT=	AV1 image file format library
 LICENSE=	2-clause-bsd
 
 USE_CC_FEATURES=	c99
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config
 
 CMAKE_CONFIGURE_ARGS+=	-DAVIF_BUILD_GDK_PIXBUF=ON
