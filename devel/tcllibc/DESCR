@@ -1,0 +1,2 @@
+The c-based accelerated components of tcllib.  Allows running of
+embedded c-code in Tcl scripts for improved performance.
