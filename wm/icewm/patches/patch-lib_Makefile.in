@@ -1,0 +1,26 @@
+$NetBSD: patch-lib_Makefile.in,v 1.1 2025/02/26 23:18:38 nia Exp $
+
+Avoid using non-portable "sed -i".
+
+--- lib/Makefile.in.orig	2025-02-26 17:18:13.395188424 +0000
++++ lib/Makefile.in
+@@ -1239,9 +1239,16 @@ uninstall-am: uninstall-dist_pkgdataDATA
+ 
+ 
+ install-data-hook:
+-	$(AM_V_GEN)sed -i 's|Exec=/.*/|Exec=$(bindir)/|' \
+-	    $(DESTDIR)$(xsessiondir)/icewm.desktop \
+-	    $(DESTDIR)$(xsessiondir)/icewm-session.desktop
++	$(AM_V_GEN)sed 's|Exec=/.*/|Exec=$(bindir)/|' \
++	    $(DESTDIR)$(xsessiondir)/icewm.desktop > \
++	    $(DESTDIR)$(xsessiondir)/icewm.desktop.new
++	$(AM_V_GEN)sed 's|Exec=/.*/|Exec=$(bindir)/|' \
++	    $(DESTDIR)$(xsessiondir)/icewm-session.desktop > \
++	    $(DESTDIR)$(xsessiondir)/icewm-session.desktop.new
++	$(AM_V_GEN)mv $(DESTDIR)$(xsessiondir)/icewm.desktop.new \
++		$(DESTDIR)$(xsessiondir)/icewm.desktop
++	$(AM_V_GEN)mv $(DESTDIR)$(xsessiondir)/icewm-session.desktop.new \
++		$(DESTDIR)$(xsessiondir)/icewm-session.desktop
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
