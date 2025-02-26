@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1778 2025/02/26 09:21:14 scole Exp $
+$NetBSD: CHANGES-2025,v 1.1779 2025/02/26 09:25:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2309,3 +2309,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-authlib to 1.5.0 [adam 2025-02-26]
 	Updated devel/py-stevedore to 5.4.1 [adam 2025-02-26]
 	Added devel/tcllibc version 2.0 [scole 2025-02-26]
+	Updated sysutils/ansible-core to 2.18.3 [adam 2025-02-26]
+	Updated sysutils/ansible to 11.3.0 [adam 2025-02-26]
