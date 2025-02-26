@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/02/26 09:39:03 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/02/26 11:46:17 wiz Exp $
 
 DISTNAME=	sigal-2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/saimn/sigal
 COMMENT=	Simple static gallery generator
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools_scm
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=64:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4:../../devel/py-setuptools_scm
 DEPENDS+=	ffmpeg7-[0-9]*:../../multimedia/ffmpeg7
 DEPENDS+=	${PYPKGPREFIX}-Pillow>=8.0.0:../../graphics/py-Pillow
