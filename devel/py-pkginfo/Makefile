@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2024/12/11 12:33:39 adam Exp $
+# $NetBSD: Makefile,v 1.27 2025/02/26 10:12:59 adam Exp $
 
-DISTNAME=	pkginfo-1.12.0
+DISTNAME=	pkginfo-1.12.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pkginfo/}
