@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/02/18 10:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/02/26 16:25:57 ryoon Exp $
 
 DISTNAME=	gimp-3.0.0-RC3
 PKGNAME=	${DISTNAME:S/gimp/gimp-devel/:S/-RC/rc/}
@@ -37,6 +37,8 @@ UNLIMIT_RESOURCES+=	datasize
 
 # Disable documentation for developers explicitly.
 MESON_ARGS+=	-Dgi-docgen=disabled
+# Do not find bin/gjs
+MESON_ARGS+=	-Djavascript=disabled
 
 # example files
 CHECK_INTERPRETER_SKIP+=	lib/gimp/3.0/extensions/org.gimp.extension.goat-exercises/*
