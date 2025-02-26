@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2025/02/17 09:27:02 adam Exp $
+$NetBSD: distinfo,v 1.24 2025/02/26 21:33:06 adam Exp $
 
-BLAKE2s (blosc2-2.16.0.tar.gz) = dfa288066e6de4d7b407fe268603c96f2704894431aed7e78f4d6882a191ca54
-SHA512 (blosc2-2.16.0.tar.gz) = f3c1155bc48fa3d1c67adbc13d5273f4cc0f4c72cc557f6f7f227cefbcbb26bf217911ecd5df1156a4d4f1ab747f649ac0dae83e0418196b902a4575dc9ee98c
-Size (blosc2-2.16.0.tar.gz) = 3278011 bytes
+BLAKE2s (blosc2-2.17.0.tar.gz) = c752fc8acbbb0d7285d17614239a2eda3e6af18232351c0e48a2190717bc96ed
+SHA512 (blosc2-2.17.0.tar.gz) = 741bf3a816507613114512eec10f5de32383c3c139fa1b6fdac36fc4d7d11e575e8f9b6b0372011598a787e98a12ff5b8451b08a23afca3a12da5e27823aeb3b
+Size (blosc2-2.17.0.tar.gz) = 3291090 bytes
 SHA1 (patch-tests_test__common.h) = 380e3a7421d93adbd7d01241053c0b86c2d75e8d
