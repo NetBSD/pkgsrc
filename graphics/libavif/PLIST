@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/10/31 07:32:57 pho Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/26 08:42:03 adam Exp $
 include/avif/avif.h
 include/avif/avif_cxx.h
 lib/cmake/libavif/libavif-config-noconfig.cmake
@@ -7,6 +7,6 @@ lib/cmake/libavif/libavif-config.cmake
 lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-avif.so
 lib/libavif.so
 lib/libavif.so.16
-lib/libavif.so.16.1.1
+lib/libavif.so.16.2.0
 lib/pkgconfig/libavif.pc
 share/thumbnailers/avif.thumbnailer
