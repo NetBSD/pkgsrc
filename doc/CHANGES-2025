@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1782 2025/02/26 10:13:23 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1783 2025/02/26 10:25:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2320,3 +2320,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-fixtures to 4.2.4.post1 [adam 2025-02-26]
 	Updated mail/py-checkdmarc to 5.8.0 [adam 2025-02-26]
 	Updated devel/py-pkginfo to 1.12.1.2 [adam 2025-02-26]
+	Updated devel/py-syrupy to 4.8.2 [adam 2025-02-26]
+	Updated www/py-publicsuffixlist to 1.0.2.20250225 [adam 2025-02-26]
+	Updated devel/py-pydantic-core to 2.30.0 [adam 2025-02-26]
