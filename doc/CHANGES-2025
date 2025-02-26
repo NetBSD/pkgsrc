@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1772 2025/02/26 03:38:20 scole Exp $
+$NetBSD: CHANGES-2025,v 1.1773 2025/02/26 08:01:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/codeberg-cli to 0.4.9 [schmonz 2025-02-26]
 	Updated textproc/glow to 2.0.0 [schmonz 2025-02-26]
 	Added devel/critcl version 3.3.1 [scole 2025-02-26]
+	Updated editors/xournalpp to 1.2.6nb1 [wiz 2025-02-26]
