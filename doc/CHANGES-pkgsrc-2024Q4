@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.14 2025/02/12 07:26:08 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.15 2025/02/26 00:02:55 maya Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -89,3 +89,7 @@ net/Radicale2: Runtime fix
 
 Pullup ticket #6945 - requested by taca
 net/ruby-net-imap: Security fix
+
+Pullup ticket #6946 - requested by morr
+editors/vim-share: Security fix
+editors/vim-lang: Security fix
