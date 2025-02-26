@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1787 2025/02/26 15:59:14 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.1788 2025/02/26 16:05:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2327,3 +2327,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/dupd version 1.7.3 [hauke 2025-02-26]
 	Updated databases/duckdb to 1.2.0 [ryoon 2025-02-26]
 	Updated multimedia/libaom to 3.12.0 [ryoon 2025-02-26]
+	Updated www/firefox to 135.0.1 [ryoon 2025-02-26]
