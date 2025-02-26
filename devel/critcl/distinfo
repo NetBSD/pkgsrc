@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/02/26 03:35:14 scole Exp $
+
+BLAKE2s (critcl-3.3.1.tar.gz) = 6fd5e938576060bd8dff8863446457eeff8369b042405c3b66c01074a1b26624
+SHA512 (critcl-3.3.1.tar.gz) = c9abb1c15d206b608fe54c61b169dbbaddf962bccff3997d06fc1552c282f0f9268d408659c15e9d1a9cadf05a878add62fe9d803b326c3b85c370ec43ff4c93
+Size (critcl-3.3.1.tar.gz) = 1668937 bytes
