@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1775 2025/02/26 08:17:31 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1776 2025/02/26 08:51:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2304,3 +2304,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-matplotlib-venn to 1.1.2 [adam 2025-02-26]
 	Updated databases/py-tortoise-orm to 0.24.1 [adam 2025-02-26]
 	Updated devel/py-decorator to 5.2.1 [adam 2025-02-26]
+	Updated graphics/libavif to 1.2.0 [adam 2025-02-26]
+	Updated net/qbittorrent to 5.0.4 [adam 2025-02-26]
