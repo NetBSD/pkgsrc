@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1770 2025/02/26 00:49:22 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1771 2025/02/26 01:20:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/modular-xorg-xephyr to 21.1.16 [wiz 2025-02-25]
 	Added lang/go124 version 1.24.0 [bsiegert 2025-02-25]
 	Updated devel/codeberg-cli to 0.4.9 [schmonz 2025-02-26]
+	Updated textproc/glow to 2.0.0 [schmonz 2025-02-26]
