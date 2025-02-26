@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1785 2025/02/26 14:03:52 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.1786 2025/02/26 15:43:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pydantic-core to 2.30.0 [adam 2025-02-26]
 	Updated emulators/mame to 0.275 [wiz 2025-02-26]
 	Added sysutils/dupd version 1.7.3 [hauke 2025-02-26]
+	Updated databases/duckdb to 1.2.0 [ryoon 2025-02-26]
