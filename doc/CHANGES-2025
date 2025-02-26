@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1793 2025/02/26 21:58:46 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.1794 2025/02/26 22:08:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2335,3 +2335,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/qwt6-qt5 to 6.3.0 [adam 2025-02-26]
 	Updated devel/blosc2 to 2.17.0 [adam 2025-02-26]
 	Updated pkgtools/pkglint to 23.15.0 [rillig 2025-02-26]
+	Updated ham/uhd to 4.8.0.0 [adam 2025-02-26]
+	Updated security/py-bandit to 1.8.3 [adam 2025-02-26]
