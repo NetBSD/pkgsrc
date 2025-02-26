@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2024/08/21 12:25:55 markd Exp $
+$NetBSD: distinfo,v 1.11 2025/02/26 11:15:39 markd Exp $
 
 BLAKE2s (ssr-0.4.4.tar.gz) = 797f74e3a7272b0738990114d3d0f08f553f43847fade594ea80684e114263bd
 SHA512 (ssr-0.4.4.tar.gz) = a90549a2709490482d70559073e505e669417a93abf16124b98c021e6d2bf08b91b53eb68e006df4f80fcee9fe4da2624bf8de979618953adb3f37eb1d471525
 Size (ssr-0.4.4.tar.gz) = 1961269 bytes
-SHA1 (patch-ffmpeg_updates) = 8a37d422315d05c77a1da85cfa47056b44f0a80d
+SHA1 (patch-ffmpeg_updates) = 8dcb5983e3c231438b7d7ee708a09a40f32f3162
 SHA1 (patch-glinject_elfhacks.c) = 4d416e0ea6b160d34583e737ba5bd1981a8a94ef
