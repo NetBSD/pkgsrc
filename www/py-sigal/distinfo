@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2023/10/19 15:39:44 wiz Exp $
+$NetBSD: distinfo,v 1.4 2025/02/26 09:39:03 adam Exp $
 
-BLAKE2s (sigal-2.4.tar.gz) = 5fab877c426c6bda5dd839f784b060b33cbc0a5ccd2c2c2a788c70a98d00c76d
-SHA512 (sigal-2.4.tar.gz) = 1cc53760a73ae868491714d22a3108eaf95a84d61895591349b644ea523f0dfd88344c1e09f0792eb23164dd113833ac4bb112f687ef551ce15f70b6c70b07d3
-Size (sigal-2.4.tar.gz) = 4773394 bytes
-SHA1 (patch-src_sigal_gallery.py) = bf5b5100947b77799d84f24223c0aa3956138d81
-SHA1 (patch-src_sigal_image.py) = 9eccca4fd65e05b8d676038362c95c5ee8225502
+BLAKE2s (sigal-2.5.tar.gz) = d3b0e2d45466a7b6a23f00c1103d1fe163dad93d8c683a0fc615c1ea9dc0035a
+SHA512 (sigal-2.5.tar.gz) = 9593d9563dc49a2911149aa9bc046ac42563bf78aab221502718d4cf330c38f19e65f51e582115e61d24f3e9d17cf90e5b68b197c956ca702f6490734e5bbd2c
+Size (sigal-2.5.tar.gz) = 4978240 bytes

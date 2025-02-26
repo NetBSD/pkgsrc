@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2023/10/28 19:57:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/26 09:39:03 adam Exp $
 bin/sigal-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -63,9 +63,6 @@ ${PYSITELIB}/sigal/plugins/nonmedia_files.pyo
 ${PYSITELIB}/sigal/plugins/titleregexp.py
 ${PYSITELIB}/sigal/plugins/titleregexp.pyc
 ${PYSITELIB}/sigal/plugins/titleregexp.pyo
-${PYSITELIB}/sigal/plugins/upload_s3.py
-${PYSITELIB}/sigal/plugins/upload_s3.pyc
-${PYSITELIB}/sigal/plugins/upload_s3.pyo
 ${PYSITELIB}/sigal/plugins/watermark.py
 ${PYSITELIB}/sigal/plugins/watermark.pyc
 ${PYSITELIB}/sigal/plugins/watermark.pyo
@@ -122,6 +119,7 @@ ${PYSITELIB}/sigal/themes/default/templates/analytics.html
 ${PYSITELIB}/sigal/themes/default/templates/breadcrumb.html
 ${PYSITELIB}/sigal/themes/default/templates/decrypt.html
 ${PYSITELIB}/sigal/themes/default/templates/default_head.html
+${PYSITELIB}/sigal/themes/default/templates/description.html
 ${PYSITELIB}/sigal/themes/default/templates/download_zip.html
 ${PYSITELIB}/sigal/themes/default/templates/footer.html
 ${PYSITELIB}/sigal/themes/default/templates/gtm.html
@@ -168,21 +166,19 @@ ${PYSITELIB}/sigal/themes/galleria/templates/album.html
 ${PYSITELIB}/sigal/themes/galleria/templates/album_items.html
 ${PYSITELIB}/sigal/themes/galleria/templates/album_list.html
 ${PYSITELIB}/sigal/themes/galleria/templates/base.html
-${PYSITELIB}/sigal/themes/photoswipe/static/app.js
-${PYSITELIB}/sigal/themes/photoswipe/static/default-skin/default-skin.css
-${PYSITELIB}/sigal/themes/photoswipe/static/default-skin/default-skin.css.map
-${PYSITELIB}/sigal/themes/photoswipe/static/default-skin/default-skin.png
-${PYSITELIB}/sigal/themes/photoswipe/static/default-skin/default-skin.svg
-${PYSITELIB}/sigal/themes/photoswipe/static/default-skin/preloader.gif
-${PYSITELIB}/sigal/themes/photoswipe/static/echo/blank.gif
-${PYSITELIB}/sigal/themes/photoswipe/static/echo/echo.js
-${PYSITELIB}/sigal/themes/photoswipe/static/echo/echo.min.js
-${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-ui-default.js
-${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-ui-default.min.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-dynamic-caption-plugin.esm.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-dynamic-caption-plugin.esm.min.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-fullscreen.esm.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-fullscreen.esm.min.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-lightbox.esm.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-lightbox.esm.js.map
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-lightbox.esm.min.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-video-plugin.esm.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe-video-plugin.esm.min.js
 ${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.css
-${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.css.map
-${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.js
-${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.min.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.esm.js
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.esm.js.map
+${PYSITELIB}/sigal/themes/photoswipe/static/photoswipe.esm.min.js
 ${PYSITELIB}/sigal/themes/photoswipe/static/styles.css
 ${PYSITELIB}/sigal/themes/photoswipe/templates/album.html
 ${PYSITELIB}/sigal/themes/photoswipe/templates/album_list.html
