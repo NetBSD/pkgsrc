@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/12/30 14:33:41 adam Exp $
+# $NetBSD: Makefile,v 1.13 2025/02/26 10:11:23 adam Exp $
 
-DISTNAME=	checkdmarc-5.7.11
+DISTNAME=	checkdmarc-5.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	mail python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/checkdmarc/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/domainaware/checkdmarc
 COMMENT=	Python module and command line parser for SPF and DMARC records
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.8.1:../../devel/py-hatchling
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling>=1.27.0:../../devel/py-hatchling
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=24.2.1:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=41.0.7:../../security/py-cryptography
 DEPENDS+=	${PYPKGPREFIX}-dns>=2.0.0:../../net/py-dns
