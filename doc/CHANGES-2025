@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1784 2025/02/26 10:36:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1785 2025/02/26 14:03:52 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2324,3 +2324,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-publicsuffixlist to 1.0.2.20250225 [adam 2025-02-26]
 	Updated devel/py-pydantic-core to 2.30.0 [adam 2025-02-26]
 	Updated emulators/mame to 0.275 [wiz 2025-02-26]
+	Added sysutils/dupd version 1.7.3 [hauke 2025-02-26]
