@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/03 09:04:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/02/26 22:07:53 adam Exp $
 bin/bandit-${PYVERSSUFFIX}
 bin/bandit-baseline-${PYVERSSUFFIX}
 bin/bandit-config-generator-${PYVERSSUFFIX}
@@ -181,9 +181,12 @@ ${PYSITELIB}/bandit/plugins/logging_config_insecure_listen.pyo
 ${PYSITELIB}/bandit/plugins/mako_templates.py
 ${PYSITELIB}/bandit/plugins/mako_templates.pyc
 ${PYSITELIB}/bandit/plugins/mako_templates.pyo
-${PYSITELIB}/bandit/plugins/pytorch_load_save.py
-${PYSITELIB}/bandit/plugins/pytorch_load_save.pyc
-${PYSITELIB}/bandit/plugins/pytorch_load_save.pyo
+${PYSITELIB}/bandit/plugins/markupsafe_markup_xss.py
+${PYSITELIB}/bandit/plugins/markupsafe_markup_xss.pyc
+${PYSITELIB}/bandit/plugins/markupsafe_markup_xss.pyo
+${PYSITELIB}/bandit/plugins/pytorch_load.py
+${PYSITELIB}/bandit/plugins/pytorch_load.pyc
+${PYSITELIB}/bandit/plugins/pytorch_load.pyo
 ${PYSITELIB}/bandit/plugins/request_without_timeout.py
 ${PYSITELIB}/bandit/plugins/request_without_timeout.pyc
 ${PYSITELIB}/bandit/plugins/request_without_timeout.pyo
