@@ -1,0 +1,2 @@
+critcl, or Compiled Runtime In Tcl, is a Tcl package that provides
+on-the-fly compilation and execution of C code.
