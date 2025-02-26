@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.27 2023/11/12 01:15:52 gdt Exp $
+# $NetBSD: gfortran.mk,v 1.28 2025/02/26 23:39:16 gdt Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,8 +48,10 @@ POSSIBLE_GFORTRAN_VERSION?=	${CC_VERSION:S/gcc-//:C/.[0-9].[0-9]$//}
 # On a variety of platforms various versions of gfortran are
 # problematic.
 
-# Choose gcc12 for Darwin/aarch64.  \todo Explain why.
-# gcc7 does not build on Darwin 12.6.x, so match aarch64.
+# Choose gcc12 for Darwin.  While unclear from the commit history, it
+# seems that earlier versions do not work for aarch64.  For x86_64, gcc7
+# does not build on Darwin 12 and newer.  While 10 would likely be ok,
+# match aarch64 so that the same compiler is used for all Darwin.
 .if ${MACHINE_PLATFORM:MDarwin-*-*}
 POSSIBLE_GFORTRAN_VERSION=	12
 .endif
