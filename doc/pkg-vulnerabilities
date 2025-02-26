@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.321 2025/02/26 09:47:07 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.322 2025/02/26 11:45:06 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -11985,7 +11985,7 @@ libsndfile<1.0.28nb1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-201
 suse{,32}_libsndfile-[0-9]*	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2017-8363
 ettercap-[0-9]*		heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-8366
 ettercap-NG-[0-9]*	heap-overflow		https://nvd.nist.gov/vuln/detail/CVE-2017-8366
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-6519
+avahi<0.8	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2017-6519
 libarchive<3.3.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2016-10349
 libarchive<3.3.1	out-of-bounds-read	https://nvd.nist.gov/vuln/detail/CVE-2016-10350
 Radicale<1.1.2		brute-force-attack	https://nvd.nist.gov/vuln/detail/CVE-2017-8342
@@ -16244,7 +16244,7 @@ exiv2<0.27	denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2018-19607
 samba>=4.0.0<4.9.3	denial-of-service	https://www.samba.org/samba/security/CVE-2018-14629.html
 samba>=4.3.0<4.9.3	double-free		https://www.samba.org/samba/security/CVE-2018-16841.html
 samba>=4.0.0<4.9.3	denial-of-service	https://www.samba.org/samba/security/CVE-2018-16851.html
-avahi-[0-9]*		traffic-amplification		https://nvd.nist.gov/vuln/detail/CVE-2018-1000845
+avahi<0.8		traffic-amplification		https://nvd.nist.gov/vuln/detail/CVE-2018-1000845
 nodejs<6.15.0		http-response-splitting		https://nvd.nist.gov/vuln/detail/CVE-2018-12116
 nodejs>=8<8.14.0	http-response-splitting		https://nvd.nist.gov/vuln/detail/CVE-2018-12116
 nodejs<6.15.0		arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2018-12120
@@ -21121,7 +21121,7 @@ ImageMagick<7.0.11.2	division-by-zero		https://nvd.nist.gov/vuln/detail/CVE-2021
 ImageMagick<7.0.11.2	integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2021-20312
 ImageMagick<7.0.11.2	information-disclosure		https://nvd.nist.gov/vuln/detail/CVE-2021-20313
 ap24-modsecurity<3.0.4	remote-denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-25043
-avahi-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3502
+avahi<0.8nb7		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3502
 bitcoin-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-31876
 cyrus-imapd<3.2.7	access-bypass			https://nvd.nist.gov/vuln/detail/CVE-2021-32056
 php{56,73,74,80}-drupal>=7<7.70		open-redirect			https://nvd.nist.gov/vuln/detail/CVE-2020-13662
@@ -21379,7 +21379,7 @@ libredwg<0.12.3.4194	double-free			https://nvd.nist.gov/vuln/detail/CVE-2021-360
 SOGo<2.4.1		account-impersonation		https://nvd.nist.gov/vuln/detail/CVE-2021-33054
 SOGo>=3<5.1.1		account-impersonation		https://nvd.nist.gov/vuln/detail/CVE-2021-33054
 apache>=2.4.47<2.4.48	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2021-31618
-avahi-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3468
+avahi<0.8nb7		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2021-3468
 cflow-[0-9]*		denial-of-service		https://nvd.nist.gov/vuln/detail/CVE-2020-23856
 djvulibre-lib<3.5.28	out-of-bounds-write		https://nvd.nist.gov/vuln/detail/CVE-2021-3630
 php{56,73,74,80}-drupal>=8<8.9.6	access-bypass	https://nvd.nist.gov/vuln/detail/CVE-2020-13667
@@ -25460,11 +25460,11 @@ catdoc-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2023-31979
 catdoc-[0-9]*	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-41633
 geeklog-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-37787
 geeklog-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2023-37786
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38469
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38470
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38471
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38472
-avahi-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38473
+avahi<0.8nb7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38469
+avahi<0.8nb7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38470
+avahi<0.8nb7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38471
+avahi<0.8nb7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38472
+avahi<0.8nb7	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2023-38473
 libxml2<2.12.2	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2023-45322
 libcue<2.2.1nb1	memory-corruption	https://nvd.nist.gov/vuln/detail/CVE-2023-43641
 mutt<2.2.12	null-pointer-dereference	https://nvd.nist.gov/vuln/detail/CVE-2023-4874
