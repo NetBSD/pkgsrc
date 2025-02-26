@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.15 2025/02/09 14:39:36 wiz Exp $
+# $NetBSD: cargo-depends.mk,v 1.16 2025/02/26 10:24:36 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -26,7 +26,6 @@ CARGO_CRATE_DEPENDS+=	icu_properties-1.5.1
 CARGO_CRATE_DEPENDS+=	icu_properties_data-1.5.0
 CARGO_CRATE_DEPENDS+=	icu_provider-1.5.0
 CARGO_CRATE_DEPENDS+=	icu_provider_macros-1.5.0
-CARGO_CRATE_DEPENDS+=	idna-0.5.0
 CARGO_CRATE_DEPENDS+=	idna-1.0.3
 CARGO_CRATE_DEPENDS+=	idna_adapter-1.2.0
 CARGO_CRATE_DEPENDS+=	indexmap-2.2.6
@@ -47,12 +46,12 @@ CARGO_CRATE_DEPENDS+=	once_cell-1.19.0
 CARGO_CRATE_DEPENDS+=	percent-encoding-2.3.1
 CARGO_CRATE_DEPENDS+=	portable-atomic-1.6.0
 CARGO_CRATE_DEPENDS+=	proc-macro2-1.0.86
-CARGO_CRATE_DEPENDS+=	pyo3-0.23.4
-CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.4
-CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.4
-CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.4
-CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.4
-CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.12
+CARGO_CRATE_DEPENDS+=	pyo3-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-build-config-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-ffi-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-macros-0.23.5
+CARGO_CRATE_DEPENDS+=	pyo3-macros-backend-0.23.5
+CARGO_CRATE_DEPENDS+=	python3-dll-a-0.2.13
 CARGO_CRATE_DEPENDS+=	quote-1.0.36
 CARGO_CRATE_DEPENDS+=	radium-0.7.0
 CARGO_CRATE_DEPENDS+=	regex-1.11.1
@@ -74,13 +73,9 @@ CARGO_CRATE_DEPENDS+=	synstructure-0.13.1
 CARGO_CRATE_DEPENDS+=	tap-1.0.1
 CARGO_CRATE_DEPENDS+=	target-lexicon-0.12.14
 CARGO_CRATE_DEPENDS+=	tinystr-0.7.6
-CARGO_CRATE_DEPENDS+=	tinyvec-1.6.1
-CARGO_CRATE_DEPENDS+=	tinyvec_macros-0.1.1
-CARGO_CRATE_DEPENDS+=	unicode-bidi-0.3.15
 CARGO_CRATE_DEPENDS+=	unicode-ident-1.0.12
-CARGO_CRATE_DEPENDS+=	unicode-normalization-0.1.23
 CARGO_CRATE_DEPENDS+=	unindent-0.2.3
-CARGO_CRATE_DEPENDS+=	url-2.5.2
+CARGO_CRATE_DEPENDS+=	url-2.5.4
 CARGO_CRATE_DEPENDS+=	utf16_iter-1.0.5
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
 CARGO_CRATE_DEPENDS+=	uuid-1.12.1
