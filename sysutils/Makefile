@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1149 2025/02/23 21:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.1150 2025/02/26 14:03:06 hauke Exp $
 #
 
 COMMENT=	System utilities
@@ -197,6 +197,7 @@ SUBDIR+=	dtb-arm64-tegra210
 SUBDIR+=	dtc
 SUBDIR+=	dtpstree
 SUBDIR+=	dua-cli
+SUBDIR+=	dupd
 SUBDIR+=	dupeguru
 SUBDIR+=	duplicity
 SUBDIR+=	durt
