@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1773 2025/02/26 08:01:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1774 2025/02/26 08:05:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2300,3 +2300,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/glow to 2.0.0 [schmonz 2025-02-26]
 	Added devel/critcl version 3.3.1 [scole 2025-02-26]
 	Updated editors/xournalpp to 1.2.6nb1 [wiz 2025-02-26]
+	Updated net/wireshark to 4.4.5 [adam 2025-02-26]
+	Updated graphics/py-matplotlib-venn to 1.1.2 [adam 2025-02-26]
