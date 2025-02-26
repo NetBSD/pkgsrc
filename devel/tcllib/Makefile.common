@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2025/02/26 09:18:10 scole Exp $
+# $NetBSD: Makefile.common,v 1.2 2025/02/26 09:59:00 scole Exp $
 #
 # used by devel/tcllib/Makefile
 # used by devel/tcllibc/Makefile
@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
-USE_TOOLS+=		find tclsh
+USE_TOOLS+=		tclsh
 
 TEST_TARGET=		test
 
