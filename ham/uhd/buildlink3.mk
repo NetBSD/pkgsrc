@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2023/08/14 05:24:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/02/26 22:12:50 adam Exp $
 
 BUILDLINK_TREE+=	uhd
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.uhd?=	../../ham/uhd
 # gnuradio-uhd FindUHD.cmake uses this env var as a hint for finding uhd
 CONFIGURE_ENV+=		UHD_DIR=${BUILDLINK_DIR}
 
+.include "../../devel/boost-libs/buildlink3.mk"
 .endif # UHD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-uhd
