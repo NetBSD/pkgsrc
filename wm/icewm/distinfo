@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.49 2025/02/24 18:05:08 gutteridge Exp $
+$NetBSD: distinfo,v 1.50 2025/02/26 23:18:38 nia Exp $
 
 BLAKE2s (icewm-3.7.0.tar.gz) = d3c3d0b3d44a59de50ae946fcdc8219ae8235c8edc7b242836b05f9870f82efb
 SHA512 (icewm-3.7.0.tar.gz) = d6f20984175c77b5a9722b59d48ddd4b010ed32a24d7a79060829f3afb7e560f3429672d83404a89895cb88b064295be83fcf2b3d26e23a55e77d78d3cc259e2
 Size (icewm-3.7.0.tar.gz) = 2618625 bytes
+SHA1 (patch-lib_Makefile.in) = 7b3aa4d0feb083aa93e536822112f7ad75e69e20
 SHA1 (patch-src_ylocale.cc) = f5c5bada634b48dd958e37eb32115ee1efefe52d
