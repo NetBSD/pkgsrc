@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2025/01/30 08:23:04 adam Exp $
+$NetBSD: distinfo,v 1.14 2025/02/26 09:40:25 adam Exp $
 
-BLAKE2s (mistune-3.1.1.tar.gz) = 3fc22d8d87d5d196809152006190b6ba071e3c8e9f9e9171bd982ac5a52d381b
-SHA512 (mistune-3.1.1.tar.gz) = 2920ec4a491ea9dcfa47bc5b368f8ce267d02bc312a5c21b97c52f3d9b59e2eccf5da564c6c126b2bfc7ec6070dc3a59f5506a549e6259c9c9b08f100298c2d0
-Size (mistune-3.1.1.tar.gz) = 94645 bytes
+BLAKE2s (mistune-3.1.2.tar.gz) = deb8b0a34a1e7dcd2aa90928e28e169618a8945f651a23eebf9afbf138e07af2
+SHA512 (mistune-3.1.2.tar.gz) = 62fe0a8849a36bc3e07854a9d3d333d1155e6a1e84cab0ade824b98869df2dbdc5741dea3e26b7af8e72e8339c7991f00729d890f5af2289c57865585a5d681a
+Size (mistune-3.1.2.tar.gz) = 94613 bytes
