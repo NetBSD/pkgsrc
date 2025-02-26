@@ -1,4 +1,4 @@
-$NetBSD: README.macOS,v 1.14 2025/02/25 00:27:03 gdt Exp $
+$NetBSD: README.macOS,v 1.15 2025/02/26 16:44:52 gdt Exp $
 
 Please read the general README file as well.
 
@@ -43,8 +43,8 @@ Tigerbrew is a good place to look for such fixes.
 # Toolchains
 
 Xcode can build apple-style programs for iOS and macOS; one needs it
-to develop "apps".  Xcode is very large (a 2025 data point 5.8 GB) and
-includes a version of Command Line Tools.
+to develop "apps".  Xcode is very large (a 2025 data point is 5.8 GB)
+and includes a version of Command Line Tools.
 
 Command Line Tools is smaller (a 2025 data point is 343 MB), and can
 build POSIX-style programs for macOS.
@@ -54,7 +54,7 @@ has been some discusion of building macOS apps.)
 
 Xcode and Command Line Tools are essentially cross compilers, even
 when build host and target are the same, similar to NetBSD's build.sh.
-For Xcode, there are typically multiple "SDKs" for various macOS
+For Xcode, there are typically multiple SDKs for various macOS
 versions, and generally later macOS versions run binaries built for
 earlier ones.  For Command Line Tools, there seems to often just be
 one version.
@@ -66,7 +66,7 @@ be one version higher than the OS you are running.
 The Internet advises that Command Line Tools can become broken,
 perhaps on upgrades, and that one might choose to remove the bits and
 reinstall.  The Internet tends to advise using Command Line Tools and
-not Xcode if you don't need Xcode.  The Interent tends to advise
+not Xcode if you don't need Xcode.  The Internet tends to advise
 against having both installed.
 
 New macOS versions usually lead to new Xcode versions, and sometimes
