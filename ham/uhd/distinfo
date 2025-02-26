@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2025/01/08 15:30:27 tnn Exp $
+$NetBSD: distinfo,v 1.42 2025/02/26 22:05:41 adam Exp $
 
-BLAKE2s (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = cd639ebceb7928d482041d935a3d35a3d49e8b0ce1a51191e48d286a5dc2c7af
-SHA512 (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = 21e788f013b2829ddb905432255b258cd34604218b9fd26b5095c9e58f4a4a6ac05a7c8ea1b2ef948838c2f9b39895e45b00dd895e772c7062bcd1b6a006ef27
-Size (uhd-4.7.0.0-e75629c3cfb4d0a654648f775e65e79375cf4f13.tar.gz) = 41266560 bytes
-SHA1 (patch-CMakeLists.txt) = e53b04bff05f14583349e855e85b1a3f52b91f9a
+BLAKE2s (uhd-4.8.0.0.tar.gz) = 8855f7a555f6e8e2138c2699577b3e18ad4591a311914f8f4dfab64add665a65
+SHA512 (uhd-4.8.0.0.tar.gz) = 61e92209e69994b1c5d3a2a88f749ddca612a3fa3c1580c00a9577e25fab5055d7c80571f2843cca3951fc941d1a81566bafc21070fb93cb3e566228c46331e7
+Size (uhd-4.8.0.0.tar.gz) = 41358938 bytes
+SHA1 (patch-CMakeLists.txt) = 97613e3acf75f4cedf26a0ead98c80c110194a94
 SHA1 (patch-examples_getopt_getopt.c) = f9c7297cb1dcc9438baed9dcdaf0f52b83297e01
 SHA1 (patch-examples_getopt_getopt.h) = 7f01c9385644dbf2b61dfd8bebac8016b46000c5
 SHA1 (patch-lib_rfnoc_vector__iir__block__control.cpp) = d0bc32f888a6cfc30f1eb57d7f2d71bb86cdc284
@@ -12,3 +12,4 @@ SHA1 (patch-lib_usrp_common_lmx2592.cpp) = 2828dcf989f1fc43c70e10b8de1e344850668
 SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.cpp) = a471808217b56d2175d33c5ca5e4bfc3f8f9f995
 SHA1 (patch-lib_usrp_mpmd_mpmd__link__if__ctrl__udp.hpp) = 3106d28c4ddc38fd304eb94de5773ff56fed0fd8
 SHA1 (patch-tests_rfnoc__block__tests_vector__iir__block__test.cpp) = 5d9594ce208acd8668589b117dd58d6b1a09de3a
+SHA1 (patch-utils_CMakeLists.txt) = 3bc3a4f33956335041a83c392173c0e90bbd9646

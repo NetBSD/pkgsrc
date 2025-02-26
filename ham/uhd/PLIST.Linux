@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2020/08/01 03:58:54 tnn Exp $
-bin/uhd_images_downloader
-bin/usrp2_card_burner
+@comment $NetBSD: PLIST.Linux,v 1.2 2025/02/26 22:05:41 adam Exp $
 lib/uhd/utils/uhd-usrp.rules
-lib/uhd/utils/usrp2_recovery.py
