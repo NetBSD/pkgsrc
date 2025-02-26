@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/26 14:03:06 hauke Exp $
+bin/dupd
+man/man1/dupd.1
+share/doc/dupd/CONTRIBUTING.md
+share/doc/dupd/design.md
+share/doc/dupd/examples.md
+share/doc/dupd/index.md
+share/doc/dupd/performance.md
