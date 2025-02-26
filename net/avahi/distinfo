@@ -1,12 +1,25 @@
-$NetBSD: distinfo,v 1.20 2021/10/26 11:05:23 nia Exp $
+$NetBSD: distinfo,v 1.21 2025/02/26 11:43:05 nia Exp $
 
 BLAKE2s (avahi-0.8.tar.gz) = d7f8334157bd36c5cdafbf804c293b593a7f2acd7b299454ac3823e9a705d608
 SHA512 (avahi-0.8.tar.gz) = c6ba76feb6e92f70289f94b3bf12e5f5c66c11628ce0aeb3cadfb72c13a5d1a9bd56d71bdf3072627a76cd103b9b056d9131aa49ffe11fa334c24ab3b596c7de
 Size (avahi-0.8.tar.gz) = 1591458 bytes
+SHA1 (patch-CVE-2023-38469) = 808917aa3ea4586124d8368d4579085d63b44116
+SHA1 (patch-CVE-2023-38470) = e2d6c8d561aa46b3f56ada9b01eee39ae6f956ba
+SHA1 (patch-CVE-2023-38472) = 1c816bc129e860e55ca7d88951f9ce041d02473c
+SHA1 (patch-CVE-2023-38473) = e07d9213ff1c045d6bc570f9fea8272a0fb7ed04
 SHA1 (patch-aa) = 95b883bf14dd1852cdf0ea8a364c57717eebb03f
 SHA1 (patch-ab) = 1f482b2a2f9a9bc59c3b1e300bad2896e2cf7bd2
 SHA1 (patch-ah) = 4b3ffdb927daef8c939527fd5c5893f9f88b3ff3
-SHA1 (patch-ai) = 48c5fca5683323a30dc646e5eafb1834e7bedaeb
+SHA1 (patch-ai) = dcf1e3149b09d7354ce90490f9c1ff0b584710c8
+SHA1 (patch-avahi-core_browse-dns-server.c) = fc858a099ab0a9553fd10f0d0a4d7fd9b3072f16
+SHA1 (patch-avahi-core_browse-domain.c) = 4781119275f154c8e0a7063925703454ac3cb3ce
+SHA1 (patch-avahi-core_browse-service-type.c) = dfad087ae82b7bf1d327e96eba63983c2826ad80
+SHA1 (patch-avahi-core_browse-service.c) = 0cc89766108ad8facf04167e6f91471622a4bc95
+SHA1 (patch-avahi-core_browse.c) = 6f66aaea82c7a864c7d9067f6209dbc99a16db32
+SHA1 (patch-avahi-core_resolve-address.c) = c45c67bd2c7417472873aefcc077fd572c741d34
+SHA1 (patch-avahi-core_resolve-host-name.c) = 9a06a93dbb2a70c4dc70d09a84201e7c818e1396
+SHA1 (patch-avahi-core_resolve-service.c) = 870c60382c07ff174fa9cf78c9d16a3cb973b87b
 SHA1 (patch-avahi-core_socket.c) = 503f05f77d95b6f73d933810371c53242d13058c
 SHA1 (patch-avahi-daemon_main.c) = 672be922ca7516a29d7eb1a409e78199b00ddfa2
+SHA1 (patch-avahi-daemon_simple-protocol.c) = e714f672cf13ba637e9803fa66948d59e1cb80cb
 SHA1 (patch-configure) = 5d81097a4d089a8bd57122dc384a4ae795301b03
