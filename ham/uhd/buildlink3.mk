@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/02/26 22:12:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/02/26 22:13:21 adam Exp $
 
 BUILDLINK_TREE+=	uhd
 
@@ -13,6 +13,7 @@ BUILDLINK_PKGSRCDIR.uhd?=	../../ham/uhd
 CONFIGURE_ENV+=		UHD_DIR=${BUILDLINK_DIR}
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .endif # UHD_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-uhd
