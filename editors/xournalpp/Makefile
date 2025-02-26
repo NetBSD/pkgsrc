@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.81 2025/02/23 21:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2025/02/26 08:00:51 wiz Exp $
 
 DISTNAME=	xournalpp-1.2.6
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=xournalpp/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +17,7 @@ USE_LANGUAGES=	c c++
 
 BUILD_TARGET=		translations xournalpp
 CMAKE_CONFIGURE_ARGS+=	-DPKGSRC_CMAKE_MODS=${BUILDLINK_DIR}/cmake-Modules
+CMAKE_REQD+=		3.18
 
 USE_CXX_FEATURES+=	c++17 filesystem
 
@@ -39,7 +41,7 @@ post-install:
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../lang/lua53/buildlink3.mk"
+.include "../../lang/lua54/buildlink3.mk"
 BUILDLINK_API_DEPENDS.poppler+=	poppler>=23.12.0
 .include "../../print/poppler/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
