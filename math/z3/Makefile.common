@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2025/02/20 10:27:00 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/02/26 09:59:42 wiz Exp $
 #
 # used by math/py-z3/Makefile
 # used by math/z3/Makefile
@@ -16,7 +16,7 @@ MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	https://github.com/Z3Prover/z3
 LICENSE=	mit
 
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
 
 .include "../../lang/python/tool.mk"
