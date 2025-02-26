@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4423 2025/02/24 16:22:50 manu Exp $
+# $NetBSD: Makefile,v 1.4424 2025/02/26 03:35:14 scole Exp $
 #
 
 COMMENT=	Development utilities
@@ -285,6 +285,7 @@ SUBDIR+=	cpuflags
 SUBDIR+=	cqual
 SUBDIR+=	crates-query
 SUBDIR+=	cre2
+SUBDIR+=	critcl
 SUBDIR+=	cscope
 SUBDIR+=	cssc
 SUBDIR+=	ctemplate
