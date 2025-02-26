@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2024/01/18 07:40:03 nia Exp $
+# $NetBSD: options.mk,v 1.37 2025/02/26 11:44:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -86,6 +86,7 @@ MESON_ARGS+=	-Dcaca=disabled
 ###
 .if !empty(PKG_OPTIONS:Mlua)
 MESON_ARGS+=	-Dlua=enabled
+# https://github.com/mpv-player/mpv/wiki/FAQ#Why_does_mpv_not_support_Lua_53_or_newer
 LUA_VERSIONS_ACCEPTED=	52 51
 .include "../../lang/lua/buildlink3.mk"
 .else
