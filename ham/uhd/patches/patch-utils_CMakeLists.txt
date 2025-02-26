@@ -1,0 +1,15 @@
+$NetBSD: patch-utils_CMakeLists.txt,v 1.1 2025/02/26 22:05:41 adam Exp $
+
+Install utils also on Darwin.
+
+--- utils/CMakeLists.txt.orig	2025-02-26 21:49:22.640572557 +0000
++++ utils/CMakeLists.txt
+@@ -70,7 +70,7 @@ endif(ENABLE_PYMOD_UTILS)
+ # Now, utilities which do not depend on Mako or ruamel.yaml
+ ########################################################################
+ # Decide if we install all utilities into the runtime path
+-if(LINUX OR BSD OR CMAKE_SYSTEM_NAME STREQUAL "GNU")
++if(APPLE OR LINUX OR BSD OR CMAKE_SYSTEM_NAME STREQUAL "GNU")
+     set(UHD_INSTALL_ALL_UTILS TRUE)
+ else()
+     set(UHD_INSTALL_ALL_UTILS FALSE)
