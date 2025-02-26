@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/02/18 10:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/02/26 10:02:24 wiz Exp $
 
 DISTNAME=	librime-1.13.1
 CATEGORIES=	inputmethod chinese
@@ -9,8 +9,8 @@ HOMEPAGE=	https://rime.im/
 COMMENT=	Rime input method engine
 LICENSE=	modified-bsd
 
-USE_CXX_FEATURES=	c++17
 USE_LANGUAGES=		c c++
+USE_CXX_FEATURES=	c++17 filesystem
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	rime.pc.in
 
