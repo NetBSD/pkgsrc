@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.x4xx,v 1.1 2022/10/04 09:45:53 wiz Exp $
+@comment $NetBSD: PLIST.x4xx,v 1.2 2025/02/26 22:05:41 adam Exp $
+lib/uhd/tests/ferrum_radio_block_test
 lib/uhd/tests/x4xx_radio_block_test
