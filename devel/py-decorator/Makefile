@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2023/08/29 07:29:24 adam Exp $
+# $NetBSD: Makefile,v 1.22 2025/02/26 08:17:14 adam Exp $
 
-DISTNAME=	decorator-5.1.1
+DISTNAME=	decorator-5.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/decorator/}
@@ -10,9 +10,9 @@ HOMEPAGE=	https://github.com/micheles/decorator
 COMMENT=	Generic Python decorator utilities
 LICENSE=	2-clause-bsd
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
