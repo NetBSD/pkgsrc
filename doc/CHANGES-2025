@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1774 2025/02/26 08:05:10 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1775 2025/02/26 08:17:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2302,3 +2302,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/xournalpp to 1.2.6nb1 [wiz 2025-02-26]
 	Updated net/wireshark to 4.4.5 [adam 2025-02-26]
 	Updated graphics/py-matplotlib-venn to 1.1.2 [adam 2025-02-26]
+	Updated databases/py-tortoise-orm to 0.24.1 [adam 2025-02-26]
+	Updated devel/py-decorator to 5.2.1 [adam 2025-02-26]
