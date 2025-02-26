@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1791 2025/02/26 19:41:03 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1792 2025/02/26 21:33:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2331,3 +2331,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox-l10n to 135.0.1 [ryoon 2025-02-26]
 	Updated print/qpdf to 11.10.1 [ryoon 2025-02-26]
 	Updated sysutils/yazi to 25.2.26 [pin 2025-02-26]
+	Updated textproc/fmtlib to 11.1.4 [adam 2025-02-26]
+	Updated x11/qwt6-qt5 to 6.3.0 [adam 2025-02-26]
+	Updated devel/blosc2 to 2.17.0 [adam 2025-02-26]
