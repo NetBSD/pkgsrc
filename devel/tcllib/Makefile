@@ -1,20 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2025/02/25 12:11:48 scole Exp $
+# $NetBSD: Makefile,v 1.24 2025/02/26 09:18:10 scole Exp $
 
-DISTNAME=		tcllib-2.0
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
+.include "../../devel/tcllib/Makefile.common"
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://core.tcl-lang.org/tcllib/
-COMMENT=		Collection of utility modules for Tcl
-LICENSE=		modified-bsd
+PKGNAME=	${DISTNAME}
+COMMENT=	Collection of utility modules for Tcl
 
-USE_TOOLS+=		find tclsh wget:run
-
-GNU_CONFIGURE=		yes
-NO_BUILD=		yes
-
-CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
+USE_TOOLS+=	wget:run
+NO_BUILD=	yes
 
 TCL_EXDIR=		share/examples/tcllib
 INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/mann ${TCL_EXDIR}
@@ -44,8 +36,6 @@ SUBST_FILES.tclsh+=	apps/pt
 SUBST_FILES.tclsh+=	apps/tcldocstrip
 SUBST_SED.tclsh=	-e "s,/usr/bin/env.*tclsh,${TCLSH},g"
 SUBST_MESSAGE.tclsh=	Fixing path to tclsh.
-
-TEST_TARGET=		test
 
 do-install:
 	cd ${WRKSRC} && ${TCLSH} ./installer.tcl \
