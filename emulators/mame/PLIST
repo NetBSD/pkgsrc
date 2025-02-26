@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2025/01/31 18:21:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.94 2025/02/26 10:36:30 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -100,8 +100,7 @@ share/mame/hash/alphatro_flop.xml
 share/mame/hash/altos5.xml
 share/mame/hash/altos586.xml
 share/mame/hash/altos8600.xml
-share/mame/hash/amiga_a1000.xml
-share/mame/hash/amiga_a3000.xml
+share/mame/hash/amiga_amix.xml
 share/mame/hash/amiga_apps.xml
 share/mame/hash/amiga_cd.xml
 share/mame/hash/amiga_demos.xml
@@ -555,6 +554,7 @@ share/mame/hash/pet_hdd.xml
 share/mame/hash/pet_quik.xml
 share/mame/hash/pet_rom.xml
 share/mame/hash/phc25_cass.xml
+share/mame/hash/photo_cd.xml
 share/mame/hash/pi_storyreader_cart.xml
 share/mame/hash/pi_storyreader_v2_cart.xml
 share/mame/hash/picno.xml
