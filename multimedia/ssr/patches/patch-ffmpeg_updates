@@ -1,4 +1,4 @@
-$NetBSD: patch-ffmpeg_updates,v 1.1 2024/08/21 12:25:55 markd Exp $
+$NetBSD: patch-ffmpeg_updates,v 1.2 2025/02/26 11:15:39 markd Exp $
 
 From f4cbde38021d9330dc73d2e3dfa8a70da3ff5721 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bernhard=20Rosenkr=C3=A4nzer?= <bero@lindev.ch>
@@ -300,7 +300,7 @@ index 3efde703..3a38a619 100644
  #endif
  #if SSR_USE_AVFRAME_CHANNELS
 -		assert(frame->GetFrame()->channels == GetCodecContext()->channels);
-+		assert(frame->GetFrame()->channels == GetCodecContext()->ch_layout.nb_channels);
++		assert(frame->GetFrame()->ch_layout.nb_channels == GetCodecContext()->ch_layout.nb_channels);
  #endif
  #if SSR_USE_AVFRAME_SAMPLE_RATE
  		assert(frame->GetFrame()->sample_rate == GetCodecContext()->sample_rate);
