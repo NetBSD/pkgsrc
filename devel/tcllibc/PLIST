@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2025/02/26 09:18:10 scole Exp $
+include/sha256c/sha256.h
+include/sha256c/sha256c.decls
+include/sha256c/sha256cDecls.h
+include/sha256c/sha256cStubLib.h
+lib/tcllibc${PKGVERSION}/critcl-rt.tcl
+lib/tcllibc${PKGVERSION}/license.terms
+lib/tcllibc${PKGVERSION}/netbsd-x86_64/tcllibc.so
+lib/tcllibc${PKGVERSION}/pkgIndex.tcl
+lib/tcllibc${PKGVERSION}/teapot.txt

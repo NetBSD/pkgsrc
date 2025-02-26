@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4424 2025/02/26 03:35:14 scole Exp $
+# $NetBSD: Makefile,v 1.4425 2025/02/26 09:18:10 scole Exp $
 #
 
 COMMENT=	Development utilities
@@ -3611,6 +3611,7 @@ SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tclap
 SUBDIR+=	tcllib
+SUBDIR+=	tcllibc
 SUBDIR+=	tclreadline
 SUBDIR+=	teem
 SUBDIR+=	termcolor
