@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1779 2025/02/26 09:25:35 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1780 2025/02/26 09:40:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2311,3 +2311,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/tcllibc version 2.0 [scole 2025-02-26]
 	Updated sysutils/ansible-core to 2.18.3 [adam 2025-02-26]
 	Updated sysutils/ansible to 11.3.0 [adam 2025-02-26]
+	Updated www/py-sigal to 2.5 [adam 2025-02-26]
+	Updated textproc/py-mistune to 3.1.2 [adam 2025-02-26]
