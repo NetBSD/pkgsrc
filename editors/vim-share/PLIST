@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73.2.2 2025/01/28 08:55:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.73.2.3 2025/02/26 00:01:28 maya Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -485,6 +485,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/erlang.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/eterm.vim
 share/vim/${VIM_SUBDIR}/ftplugin/expect.vim
+share/vim/${VIM_SUBDIR}/ftplugin/exports.vim
 share/vim/${VIM_SUBDIR}/ftplugin/falcon.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fennel.vim
 share/vim/${VIM_SUBDIR}/ftplugin/fetchmail.vim
@@ -691,6 +692,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/rrst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ruby.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rust.vim
+share/vim/${VIM_SUBDIR}/ftplugin/samba.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sass.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sbt.vim
 share/vim/${VIM_SUBDIR}/ftplugin/scala.vim
@@ -1033,6 +1035,7 @@ share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/plugin/matchit.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/LICENSE.txt
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/README.md
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw/own.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrwSettings.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw_gitignore.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/doc/netrw.txt
@@ -1894,6 +1897,8 @@ share/vim/${VIM_SUBDIR}/tutor/en/vim-01-beginner.tutor
 share/vim/${VIM_SUBDIR}/tutor/en/vim-01-beginner.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/it/vim-01-beginner.tutor
 share/vim/${VIM_SUBDIR}/tutor/it/vim-01-beginner.tutor.json
+share/vim/${VIM_SUBDIR}/tutor/sr/vim-01-beginner.tutor
+share/vim/${VIM_SUBDIR}/tutor/sr/vim-01-beginner.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/tutor.tutor
 share/vim/${VIM_SUBDIR}/tutor/tutor.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/tutor.vim
@@ -1969,5 +1974,6 @@ share/vim/${VIM_SUBDIR}/tutor/tutor1.zh_tw.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor2
 share/vim/${VIM_SUBDIR}/tutor/tutor2.it
 share/vim/${VIM_SUBDIR}/tutor/tutor2.it.utf-8
+share/vim/${VIM_SUBDIR}/tutor/tutor2.sr.utf-8
 share/vim/${VIM_SUBDIR}/tutor/tutor2.utf-8
 share/vim/${VIM_SUBDIR}/vimrc_example.vim
