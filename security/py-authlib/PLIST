@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/01/05 12:10:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/02/26 09:09:12 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -532,6 +532,12 @@ ${PYSITELIB}/authlib/oauth2/rfc9068/token.pyo
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.py
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyc
 ${PYSITELIB}/authlib/oauth2/rfc9068/token_validator.pyo
+${PYSITELIB}/authlib/oauth2/rfc9207/__init__.py
+${PYSITELIB}/authlib/oauth2/rfc9207/__init__.pyc
+${PYSITELIB}/authlib/oauth2/rfc9207/__init__.pyo
+${PYSITELIB}/authlib/oauth2/rfc9207/parameter.py
+${PYSITELIB}/authlib/oauth2/rfc9207/parameter.pyc
+${PYSITELIB}/authlib/oauth2/rfc9207/parameter.pyo
 ${PYSITELIB}/authlib/oidc/__init__.py
 ${PYSITELIB}/authlib/oidc/__init__.pyc
 ${PYSITELIB}/authlib/oidc/__init__.pyo
@@ -574,3 +580,9 @@ ${PYSITELIB}/authlib/oidc/discovery/models.pyo
 ${PYSITELIB}/authlib/oidc/discovery/well_known.py
 ${PYSITELIB}/authlib/oidc/discovery/well_known.pyc
 ${PYSITELIB}/authlib/oidc/discovery/well_known.pyo
+${PYSITELIB}/authlib/oidc/registration/__init__.py
+${PYSITELIB}/authlib/oidc/registration/__init__.pyc
+${PYSITELIB}/authlib/oidc/registration/__init__.pyo
+${PYSITELIB}/authlib/oidc/registration/claims.py
+${PYSITELIB}/authlib/oidc/registration/claims.pyc
+${PYSITELIB}/authlib/oidc/registration/claims.pyo
