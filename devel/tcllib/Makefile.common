@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2025/02/26 09:18:10 scole Exp $
+#
+# used by devel/tcllib/Makefile
+# used by devel/tcllibc/Makefile
+
+DISTNAME=		tcllib-2.0
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcllib/}
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		https://core.tcl-lang.org/tcllib/
+LICENSE=		modified-bsd
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-tclsh=${TCLSH}
+USE_TOOLS+=		find tclsh
+
+TEST_TARGET=		test
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/tcllib/distinfo
