@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.323 2025/02/26 11:52:29 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.324 2025/02/26 11:59:15 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23899,7 +23899,7 @@ php{56,74,80,81}-nextcloud>=23.0<23.0.4	excessive-logging	https://nvd.nist.gov/v
 php{56,74,80,81}-nextcloud<22.2.9	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31118
 php{56,74,80,81}-nextcloud>=23.0<23.0.6	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31118
 php{56,74,80,81}-nextcloud>=24.0<24.0.2	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-31118
-zlib-[0-9]*	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-37434
+zlib<1.2.13	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-37434
 libmpeg2-[0-9]*	arbitrary-memory-access	https://nvd.nist.gov/vuln/detail/CVE-2022-37416
 exim4<4.96	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-37451
 exim4<4.95	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2022-37452
