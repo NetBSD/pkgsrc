@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1781 2025/02/26 09:51:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1782 2025/02/26 10:13:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2316,3 +2316,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-inline-snapshot to 0.20.2 [adam 2025-02-26]
 	Updated devel/py-rpds-py to 0.23.1 [adam 2025-02-26]
 	Updated www/py-vcrpy to 7.0.0 [adam 2025-02-26]
+	Updated finance/py-stripe to 11.6.0 [adam 2025-02-26]
+	Updated devel/py-fixtures to 4.2.4.post1 [adam 2025-02-26]
+	Updated mail/py-checkdmarc to 5.8.0 [adam 2025-02-26]
+	Updated devel/py-pkginfo to 1.12.1.2 [adam 2025-02-26]
