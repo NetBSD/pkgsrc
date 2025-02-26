@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.322 2025/02/26 11:45:06 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.323 2025/02/26 11:52:29 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -16309,7 +16309,7 @@ libsass<3.6.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19797
 libsass<3.6.0		denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19827
 gnutls<3.6.5	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2018-16868
 nettle<3.4.1	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2018-16869
-polkit-[0-9]*	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-19788
+polkit<0.116	authentication-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-19788
 ruby1{8,9}-puppet<2.7.18	spoofing	https://nvd.nist.gov/vuln/detail/CVE-2012-3408
 nss<3.40.1	side-channel		https://nvd.nist.gov/vuln/detail/CVE-2018-12404
 libsass<3.5.5	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-19837
@@ -16581,7 +16581,7 @@ openssh<8.0		validation-bypass	https://nvd.nist.gov/vuln/detail/CVE-2018-20685
 openssh<8.0		spoofing		https://nvd.nist.gov/vuln/detail/CVE-2019-6109
 openssh<8.0		spoofing		https://nvd.nist.gov/vuln/detail/CVE-2019-6110
 openssh<8.0		validation-bypass	https://nvd.nist.gov/vuln/detail/CVE-2019-6111
-polkit-[0-9]*		authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-6133
+polkit<0.116		authorization-bypass		https://nvd.nist.gov/vuln/detail/CVE-2019-6133
 zeromq>=4.2.0<4.3.1	remote-code-execution		https://nvd.nist.gov/vuln/detail/CVE-2019-6250
 binutils-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2018-20712
 yaml-cpp-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2019-6285
@@ -22919,7 +22919,7 @@ lepton-[0-9]*	heap-based-buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-20
 polkit<0.119	local-root-exploit	https://nvd.nist.gov/vuln/detail/CVE-2021-3560
 qemu<6.2.0	buffer-overflow	https://nvd.nist.gov/vuln/detail/CVE-2021-3947
 qemu<6.2.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3930
-polkit-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4115
+polkit<121	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-4115
 php{56,73,74,80,81}-piwigo-[0-9]*	cross-site-scripting	https://nvd.nist.gov/vuln/detail/CVE-2022-24620
 qemu<6.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3608
 qemu<6.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-3607
