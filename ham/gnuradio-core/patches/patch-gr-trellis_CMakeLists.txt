@@ -1,0 +1,26 @@
+$NetBSD: patch-gr-trellis_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-trellis/CMakeLists.txt.orig	2025-02-26 17:15:40.262691440 +0000
++++ gr-trellis/CMakeLists.txt
+@@ -14,8 +14,7 @@
+ # Register component
+ ########################################################################
+ include(GrComponent)
+-gr_register_component("gr-trellis" ENABLE_GR_TRELLIS ENABLE_GNURADIO_RUNTIME
+-                      ENABLE_GR_ANALOG ENABLE_GR_BLOCKS ENABLE_GR_DIGITAL)
++gr_register_component("gr-trellis" ENABLE_GR_TRELLIS)
+
+ set(GR_PKG_TRELLIS_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/trellis)
+
+@@ -37,9 +36,7 @@ if(ENABLE_GR_TRELLIS)
+             add_subdirectory(examples/grc)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

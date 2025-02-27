@@ -1,0 +1,30 @@
+$NetBSD: patch-gr-digital_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-digital/CMakeLists.txt.orig	2025-02-26 16:55:20.077534202 +0000
++++ gr-digital/CMakeLists.txt
+@@ -17,12 +17,7 @@ include(GrComponent)
+ gr_register_component(
+     "gr-digital"
+     ENABLE_GR_DIGITAL
+-    Boost_FOUND
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_FFT
+-    ENABLE_GR_FILTER
+-    ENABLE_GR_BLOCKS
+-    ENABLE_GR_ANALOG)
++    Boost_FOUND)
+
+ set(GR_PKG_DIGITAL_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/digital)
+
+@@ -48,9 +43,7 @@ if(ENABLE_GR_DIGITAL)
+             add_subdirectory(examples)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

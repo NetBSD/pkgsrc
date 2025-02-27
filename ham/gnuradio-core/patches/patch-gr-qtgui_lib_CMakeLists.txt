@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-qtgui_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-qtgui/lib/CMakeLists.txt.orig	2025-02-20 01:23:56.000000000 +0000
++++ gr-qtgui/lib/CMakeLists.txt
+@@ -89,7 +89,7 @@ target_include_directories(
+     PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+ target_link_libraries(gnuradio-qtgui
+     PUBLIC ${QTGUI_LIBS}
+-    PRIVATE ${PRIVATE_LIBS}
++    PRIVATE ${PRIVATE_LIBS} fmt gnuradio-pmt
+ )
+
+ set(qtgui_mod_includedir ${CMAKE_CURRENT_SOURCE_DIR}/../include/gnuradio/qtgui)

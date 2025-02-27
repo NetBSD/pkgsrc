@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.135 2025/02/12 06:45:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.136 2025/02/27 13:49:50 adam Exp $
 
 PKGNAME=	gnuradio-core-${VERSION}
-PKGREVISION=	13
 COMMENT=	Core part of GNU Radio, all others need this
 
-PLIST_MINUS=	# empty
 .include	"Makefile.common"
 
 #CONF_FILES+=	${EGDIR}/gnuradio-runtime.conf	${PKG_SYSCONFDIR}/gnuradio-runtime.conf
@@ -18,12 +16,23 @@ PLIST_MINUS=	# empty
 PLIST_SRC=	${PKGDIR}/PLIST ${PKGDIR}/PLIST.oss
 .endif
 
-# set default as minimum
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEFAULT=OFF
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_ANALOG=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_AUDIO=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_BLOCKS=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_CTRLPORT=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FFT=ON
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FILTER=ON
 
-# Take care CONF_FILES stuff (The same code in Nocore.mk)
-#post-install:
-#	${MV} ${DESTDIR}${PREFIX}/etc/gnuradio/conf.d/* \
-#	      ${DESTDIR}${PREFIX}/${EGDIR}/
+REPLACE_PYTHON+=	gnuradio-runtime/apps/evaluation_random_numbers.py
+REPLACE_PYTHON+=	gnuradio-runtime/lib/math/gen_sine_table.py
+REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/*.py
+REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/gr/*.py
+REPLACE_PYTHON+=	gnuradio-runtime/python/gnuradio/ctrlport/*.py
+REPLACE_PYTHON+=	gnuradio-runtime/python/pmt/*.py
+REPLACE_PYTHON+=	gr-analog/python/analog/*.py
+REPLACE_PYTHON+=	gr-blocks/python/blocks/*.py
+REPLACE_PYTHON+=	gr-fft/python/fft/*.py
+REPLACE_PYTHON+=	gr-filter/python/filter/*.py
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2022/05/26 15:20:09 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/02/27 13:49:53 adam Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -63,18 +63,12 @@ lib/cmake/gnuradio/gnuradio-dtvConfig.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-dtvTargets.cmake
 lib/libgnuradio-dtv.so
-lib/libgnuradio-dtv.so.${PKGVER_MICRO}
 lib/libgnuradio-dtv.so.${PKGVERSION}
+lib/libgnuradio-dtv.so.${PKGVER_MICRO}
 lib/pkgconfig/gnuradio-dtv.pc
 ${PYSITELIB}/gnuradio/dtv/__init__.py
-${PYSITELIB}/gnuradio/dtv/__init__.pyc
-${PYSITELIB}/gnuradio/dtv/__init__.pyo
 ${PYSITELIB}/gnuradio/dtv/atsc_rx.py
-${PYSITELIB}/gnuradio/dtv/atsc_rx.pyc
-${PYSITELIB}/gnuradio/dtv/atsc_rx.pyo
 ${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.py
-${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.pyc
-${PYSITELIB}/gnuradio/dtv/atsc_rx_filter.pyo
 ${PYSITELIB}/gnuradio/dtv/dtv_python.so
 share/doc/gnuradio-${PKGVERSION}/README.dtv
 share/gnuradio/examples/dtv/README.atsc

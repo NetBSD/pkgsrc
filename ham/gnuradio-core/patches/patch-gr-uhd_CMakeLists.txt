@@ -1,0 +1,28 @@
+$NetBSD: patch-gr-uhd_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-uhd/CMakeLists.txt.orig	2025-02-26 22:13:41.784399423 +0000
++++ gr-uhd/CMakeLists.txt
+@@ -28,10 +28,7 @@ gr_register_component(
+     ENABLE_GR_UHD
+     Boost_FOUND
+     UHD_FOUND
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_FILTER
+-    ENABLE_GR_BLOCKS
+-    ENABLE_GR_ANALOG)
++)
+ set(GR_PKG_UHD_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/uhd)
+
+ gr_register_component("gr-uhd UHD 4.0 RFNoC" ENABLE_UHD_RFNOC ENABLE_GR_UHD
+@@ -59,9 +56,7 @@ if(ENABLE_GR_UHD)
+             add_subdirectory(examples/grc)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

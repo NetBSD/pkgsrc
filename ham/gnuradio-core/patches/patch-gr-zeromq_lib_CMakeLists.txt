@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-zeromq_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-zeromq/lib/CMakeLists.txt.orig	2025-02-26 22:35:37.706145863 +0000
++++ gr-zeromq/lib/CMakeLists.txt
+@@ -28,7 +28,7 @@ add_library(
+ target_link_libraries(
+     gnuradio-zeromq
+     PUBLIC gnuradio-runtime
+-    PRIVATE ZeroMQ::ZeroMQ)
++    PRIVATE fmt gnuradio-pmt ZeroMQ::ZeroMQ)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-zeromq PRIVATE common-precompiled-headers)

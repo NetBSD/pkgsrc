@@ -1,0 +1,41 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Common file are installed only for gnuradio-core (ENABLE_GNURADIO_RUNTIME is set).
+
+--- CMakeLists.txt.orig	2025-02-20 01:23:56.000000000 +0000
++++ CMakeLists.txt
+@@ -396,6 +396,7 @@ endif(HAVE_CX_LIMITED_RANGE)
+ ########################################################################
+ # Distribute the README file
+ ########################################################################
++if(ENABLE_GNURADIO_RUNTIME)
+ install(FILES README.md CONTRIBUTING.md CHANGELOG.md DESTINATION ${GR_PKG_DOC_DIR})
+ 
+ install(
+@@ -403,6 +404,7 @@ install(
+     RENAME clang-format.conf
+     DESTINATION ${GR_PKG_DATA_DIR})
+ install(FILES .cmake-format.py DESTINATION ${GR_PKG_DATA_DIR})
++endif(ENABLE_GNURADIO_RUNTIME)
+ 
+ ########################################################################
+ # The following dependency libraries are needed by all gr modules:
+@@ -487,7 +489,9 @@ configure_file(${PROJECT_SOURCE_DIR}/cma
+ set(cmake_configs ${PROJECT_BINARY_DIR}/cmake/Modules/GnuradioConfig.cmake
+                   ${PROJECT_BINARY_DIR}/cmake/Modules/GnuradioConfigVersion.cmake)
+ 
++if(ENABLE_GNURADIO_RUNTIME)
+ install(FILES ${cmake_configs} ${cmake_others} DESTINATION ${CMAKE_MODULES_DIR}/gnuradio)
++endif(ENABLE_GNURADIO_RUNTIME)
+ 
+ file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/grc/grc.conf
+      "enabled_components = ${_gr_enabled_components}")
+@@ -508,6 +512,8 @@ configure_file(
+     ${CMAKE_CURRENT_SOURCE_DIR}/gnuradio-runtime/lib/constants.cc.in
+     ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-runtime/lib/constants.cc ESCAPE_QUOTES @ONLY)
+ 
++if(ENABLE_GNURADIO_RUNTIME)
+ # Install config.h in include/gnuradio
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-runtime/include/gnuradio/config.h
+         DESTINATION ${GR_INCLUDE_DIR}/gnuradio)
++endif(ENABLE_GNURADIO_RUNTIME)

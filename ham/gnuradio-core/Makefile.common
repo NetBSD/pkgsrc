@@ -1,8 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2025/02/08 13:33:43 wiz Exp $
-# This Makefile fragment is included in the package Makefiles for
-# GNU Radio distributed packages (they all share common configure and build
-# settings).
-
+# $NetBSD: Makefile.common,v 1.56 2025/02/27 13:49:50 adam Exp $
 # used by ham/gnuradio-channels/Makefile
 # used by ham/gnuradio-companion/Makefile
 # used by ham/gnuradio-core/Makefile
@@ -22,12 +18,23 @@
 # used by ham/gnuradio-wavelet/Makefile
 # used by ham/gnuradio-zeromq/Makefile
 
+# How to configure gnuradio modules to use a separate packages:
+# * gnuradio-core registers and install these modules:
+#   - ENABLE_GNURADIO_RUNTIME
+#   - ENABLE_GR_ANALOG
+#   - ENABLE_GR_BLOCKS
+#   - ENABLE_GR_FFT
+#   - ENABLE_GR_FILTER
+# * In gr-<module>/CMakeLists.txt:
+#   - remove above components in gr_register_component()
+#   - remove 'if(ENABLE_GRC)' and 'endif(ENABLE_GRC)'
+# * In gr-<module>/lib/CMakeLists.txt:
+#   - add missing libraries in target_link_libraries (PRIVATE)
+
 .include "../../ham/gnuradio-core/version.mk"
 
 DISTNAME?=	gnuradio-${VERSION}
 CATEGORIES+=	ham
-#MASTER_SITES=	http://s3-dist.gnuradio.org/
-#MASTER_SITES+=	http://gnuradio.org/releases/gnuradio/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gnuradio/}
 GITHUB_PROJECT=	gnuradio
 GITHUB_TAG=	v${VERSION}
@@ -36,12 +43,10 @@ MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	https://www.gnuradio.org/
 LICENSE=	gnu-gpl-v3
 
+USE_CXX_FEATURES=	c++20
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES+=	c++20
 
 USE_TOOLS=	gmake perl pkg-config
-
-.include "../../devel/cmake/build.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,15 +64,14 @@ DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+# filter designer
+DEPENDS+=	${PYPKGPREFIX}-qtgraph-qt5-[0-9]*:../../x11/py-qtgraph-qt5
 
 DISTINFO_FILE=	${.CURDIR}/../../ham/gnuradio-core/distinfo
 PATCHDIR=	${.CURDIR}/../../ham/gnuradio-core/patches
 
-# see CMakeLists.txt GR_PYTHON_MIN_VERSION
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # three digit version number for shared library ex 3.10.2.0 -> 3.10.2
-PKGVER_MICRO=	${PKGVERSION_NOREV:C/([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)/\1.\2.\3/}
+PKGVER_MICRO=	${PKGVERSION_NOREV:R}
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
@@ -87,21 +91,11 @@ CXXFLAGS.SunOS+=	-pthreads
 
 INSTALLATION_DIRS+=	${EGDIR}
 
-# --------       R E S E T  CMAKE_CONFIGURE_ARGS  H E R E  -------------
-
-# \todo Explain why this is safe.  Lots of mk fragments add content,
-# and clearing that seems wrong.
-CMAKE_CONFIGURE_ARGS=
-
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GNURADIO_RUNTIME=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_ANALOG=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_AUDIO=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_BLOCKS=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FFT=ON
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_GR_FILTER=ON
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_PYTHON=ON
-
 CMAKE_CONFIGURE_ARGS+=	-DLIB_SUFFIX=""
+
+# Disable default components; see cmake/Modules/GrComponent.cmake
+CMAKE_CONFIGURE_ARGS+=	-DENABLE_DEFAULT=OFF
 
 # Default setting (for pkgsrc)
 CMAKE_CONFIGURE_ARGS+=	-Wno-dev
@@ -137,14 +131,12 @@ SUBST_MESSAGE.prefix=	Substitute PREFIX
 SUBST_FILES.prefix=	gnuradio-runtime/lib/constants.cc.in
 SUBST_VARS.prefix=	PREFIX
 
-REPLACE_PYTHON=		*/*.py */*/*.py */*/*/*.py */*/*/*/*.py */*/*/*/*/*.py \
-			*/*/*/*/*/*/*.py */*/*/*/*/*/*/*.py */*/*/*/*/*/*/*/*.py
-
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/build.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/spdlog/buildlink3.mk"

@@ -1,0 +1,26 @@
+$NetBSD: patch-gr-qtgui_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-qtgui/CMakeLists.txt.orig	2025-02-26 16:23:07.950072102 +0000
++++ gr-qtgui/CMakeLists.txt
+@@ -34,9 +34,6 @@ gr_register_component(
+     ENABLE_GR_QTGUI
+     QT_FOUND
+     QWT_FOUND
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_FFT
+-    ENABLE_GR_FILTER
+     PYTHONLIBS_FOUND
+     ${qt_gui_python_deps})
+
+@@ -63,9 +60,7 @@ if(ENABLE_GR_QTGUI)
+         endif(ENABLE_EXAMPLES)
+         add_subdirectory(apps)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

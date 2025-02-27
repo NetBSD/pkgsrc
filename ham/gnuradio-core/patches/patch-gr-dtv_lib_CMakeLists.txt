@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-dtv_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-dtv/lib/CMakeLists.txt.orig	2025-02-26 14:37:38.517173813 +0000
++++ gr-dtv/lib/CMakeLists.txt
+@@ -72,7 +72,7 @@ add_library(
+ target_link_libraries(
+     gnuradio-dtv
+     PUBLIC gnuradio-runtime
+-    PRIVATE gnuradio-analog gnuradio-filter gnuradio-fec Volk::volk)
++    PRIVATE fmt gnuradio-analog gnuradio-filter gnuradio-fec gnuradio-fft gnuradio-pmt Volk::volk)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-dtv PRIVATE common-precompiled-headers)

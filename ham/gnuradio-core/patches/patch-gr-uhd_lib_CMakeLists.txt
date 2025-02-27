@@ -1,0 +1,14 @@
+$NetBSD: patch-gr-uhd_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-uhd/lib/CMakeLists.txt.orig	2025-02-26 22:14:57.809324457 +0000
++++ gr-uhd/lib/CMakeLists.txt
+@@ -33,6 +33,7 @@ endif(ENABLE_UHD_RFNOC)
+ add_library(gnuradio-uhd ${LIB_GR_UHD_SOURCES})
+
+ target_link_libraries(gnuradio-uhd PUBLIC gnuradio-runtime UHD::UHD)
++target_link_libraries(gnuradio-uhd PRIVATE Boost::thread fmt gnuradio-pmt)
+
+ target_include_directories(
+     gnuradio-uhd PUBLIC $<INSTALL_INTERFACE:include>

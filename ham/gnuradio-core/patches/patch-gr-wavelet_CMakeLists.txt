@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-wavelet_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-wavelet/CMakeLists.txt.orig	2025-02-27 08:51:07.263741558 +0000
++++ gr-wavelet/CMakeLists.txt
+@@ -16,9 +16,6 @@ find_package(GSL)
+ include(GrComponent)
+
+ GR_REGISTER_COMPONENT("gr-wavelet" ENABLE_GR_WAVELET
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_BLOCKS
+-    ENABLE_GR_ANALOG
+     GSL_FOUND
+ )

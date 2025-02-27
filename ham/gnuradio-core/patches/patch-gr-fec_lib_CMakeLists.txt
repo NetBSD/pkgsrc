@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-fec_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-fec/lib/CMakeLists.txt.orig	2025-02-26 13:41:02.100400280 +0000
++++ gr-fec/lib/CMakeLists.txt
+@@ -75,7 +75,7 @@ if(MSVC)
+     target_sources(gnuradio-fec PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/gnuradio-fec.rc)
+ endif(MSVC)
+
+-target_link_libraries(gnuradio-fec PUBLIC gnuradio-runtime gnuradio-blocks)
++target_link_libraries(gnuradio-fec PUBLIC gnuradio-runtime gnuradio-blocks PRIVATE fmt gnuradio-pmt Volk::volk)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-fec PRIVATE common-precompiled-headers)

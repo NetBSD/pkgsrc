@@ -1,0 +1,14 @@
+$NetBSD: patch-gr-vocoder_python_vocoder_bindings_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-vocoder/python/vocoder/bindings/CMakeLists.txt.orig	2025-02-26 22:37:05.708201539 +0000
++++ gr-vocoder/python/vocoder/bindings/CMakeLists.txt
+@@ -1,6 +1,7 @@
+ ########################################################################
+ # Python Bindings
+ ########################################################################
++include(GrPybind)
+
+ list(APPEND vocoder_python_files
+     alaw_decode_bs_python.cc

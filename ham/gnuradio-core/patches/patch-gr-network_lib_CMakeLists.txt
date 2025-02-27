@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-network_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-network/lib/CMakeLists.txt.orig	2025-02-26 14:43:25.285517672 +0000
++++ gr-network/lib/CMakeLists.txt
+@@ -26,7 +26,7 @@ add_library(
+     udp_sink_impl.cc
+     udp_source_impl.cc)
+
+-target_link_libraries(gnuradio-network PUBLIC gnuradio-runtime)
++target_link_libraries(gnuradio-network PUBLIC gnuradio-runtime PRIVATE fmt gnuradio-pmt Boost::thread)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-network PRIVATE common-precompiled-headers)

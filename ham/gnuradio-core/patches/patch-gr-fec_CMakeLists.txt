@@ -1,0 +1,24 @@
+$NetBSD: patch-gr-fec_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-fec/CMakeLists.txt.orig	2025-02-20 01:23:56.000000000 +0000
++++ gr-fec/CMakeLists.txt
+@@ -16,7 +16,7 @@ include(GrComponent)
+
+ find_package(GSL)
+
+-gr_register_component("gr-fec" ENABLE_GR_FEC ENABLE_GNURADIO_RUNTIME ENABLE_GR_BLOCKS)
++gr_register_component("gr-fec" ENABLE_GR_FEC)
+
+ set(GR_PKG_FEC_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/fec)
+
+@@ -37,9 +37,7 @@ if(ENABLE_GR_FEC)
+             add_subdirectory(examples)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+     add_subdirectory(docs)
+     add_subdirectory(ldpc_alist)
