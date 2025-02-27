@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/01/28 11:58:08 adam Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/27 08:24:23 adam Exp $
 
-DISTNAME=	pdm_build_locked-0.3.4
+DISTNAME=	pdm_build_locked-0.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pdm-build-locked/}
