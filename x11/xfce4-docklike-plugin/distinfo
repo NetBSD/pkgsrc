@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2024/01/17 08:12:35 nros Exp $
+$NetBSD: distinfo,v 1.2 2025/02/27 04:17:21 gutteridge Exp $
 
-BLAKE2s (xfce4-docklike-plugin-0.4.2.tar.bz2) = 59cc423727c2341bf191357af9788a07dc67e2d11a4378a290dd4bdd1234e052
-SHA512 (xfce4-docklike-plugin-0.4.2.tar.bz2) = 8e96abbde0f9f81bb4797302aba3a711307ab46c832aac92351e038543e078bbf42f86785ee06c28c9d38dff0655ee2933247e9086ba0925f5aa05416b3ef708
-Size (xfce4-docklike-plugin-0.4.2.tar.bz2) = 377106 bytes
+BLAKE2s (xfce4-docklike-plugin-0.4.3.tar.bz2) = 932f3f0fefde9c8839ffcbc40f351c4b93439e6c79f5641d0a1b4c490c0cf3ff
+SHA512 (xfce4-docklike-plugin-0.4.3.tar.bz2) = 89b3739568fb4d908ad99268688448b8883d5f8e2b4c7ac092fbd687f53ada7f9c08f58e34572e9e2f733035174db1a5340a02e329a7fbed848786235bc3b298
+Size (xfce4-docklike-plugin-0.4.3.tar.bz2) = 456424 bytes
