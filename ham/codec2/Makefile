@@ -1,27 +1,24 @@
-# $NetBSD: Makefile,v 1.8 2024/08/25 06:18:54 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/02/27 13:43:34 adam Exp $
 
-# https://github.com/drowe67/codec2/archive/v0.9.2.tar.gz
-DISTNAME=	codec2-0.9.2
+DISTNAME=	codec2-1.2.0
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_GITHUB:=drowe67/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://rowetel.com/codec2.html
 COMMENT=	Speech codec for between 700 and 3200 bit/s
-
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=	c
+USE_CC_FEATURES=	c99
+USE_LANGUAGES=		c
 
-.include "../../devel/cmake/build.mk"
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 
+.include "../../devel/cmake/build.mk"
 # XXX this creates a circular dependency between
 # lpcnetfreedv and codec2 that requires bootstrapping
 # and causes problems with pkg tools once created.
 #CMAKE_CONFIGURE_ARGS+=	-DLPCNET=ON
 #.include "../../ham/lpcnetfreedv/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
