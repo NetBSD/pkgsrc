@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2022/03/11 20:59:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/02/27 13:44:29 adam Exp $
 bin/volk-config-info
 bin/volk_modtool
 bin/volk_profile
+@pkgdir include/volk/asm/neon
+@pkgdir include/volk/asm/orc
 include/volk/constants.h
 include/volk/saturation_arithmetic.h
 include/volk/volk.h
@@ -47,18 +49,23 @@ include/volk/volk_32f_index_min_32u.h
 include/volk/volk_32f_invsqrt_32f.h
 include/volk/volk_32f_log2_32f.h
 include/volk/volk_32f_null_32f.h
+include/volk/volk_32f_reciprocal_32f.h
 include/volk/volk_32f_s32f_32f_fm_detect_32f.h
 include/volk/volk_32f_s32f_add_32f.h
 include/volk/volk_32f_s32f_calc_spectral_noise_floor_32f.h
+include/volk/volk_32f_s32f_clamppuppet_32f.h
 include/volk/volk_32f_s32f_convert_16i.h
 include/volk/volk_32f_s32f_convert_32i.h
 include/volk/volk_32f_s32f_convert_8i.h
+include/volk/volk_32f_s32f_convertpuppet_8u.h
 include/volk/volk_32f_s32f_mod_rangepuppet_32f.h
 include/volk/volk_32f_s32f_multiply_32f.h
 include/volk/volk_32f_s32f_normalize.h
 include/volk/volk_32f_s32f_power_32f.h
 include/volk/volk_32f_s32f_s32f_mod_range_32f.h
 include/volk/volk_32f_s32f_stddev_32f.h
+include/volk/volk_32f_s32f_x2_clamp_32f.h
+include/volk/volk_32f_s32f_x2_convert_8u.h
 include/volk/volk_32f_sin_32f.h
 include/volk/volk_32f_sqrt_32f.h
 include/volk/volk_32f_stddev_and_mean_32f_x2.h
@@ -74,6 +81,7 @@ include/volk/volk_32f_x2_max_32f.h
 include/volk/volk_32f_x2_min_32f.h
 include/volk/volk_32f_x2_multiply_32f.h
 include/volk/volk_32f_x2_pow_32f.h
+include/volk/volk_32f_x2_powpuppet_32f.h
 include/volk/volk_32f_x2_s32f_interleave_16ic.h
 include/volk/volk_32f_x2_subtract_32f.h
 include/volk/volk_32f_x3_sum_of_poly_32f.h
@@ -101,8 +109,10 @@ include/volk/volk_32fc_s32f_power_32fc.h
 include/volk/volk_32fc_s32f_power_spectral_densitypuppet_32f.h
 include/volk/volk_32fc_s32f_power_spectrum_32f.h
 include/volk/volk_32fc_s32f_x2_power_spectral_density_32f.h
+include/volk/volk_32fc_s32fc_multiply2_32fc.h
 include/volk/volk_32fc_s32fc_multiply_32fc.h
-include/volk/volk_32fc_s32fc_rotatorpuppet_32fc.h
+include/volk/volk_32fc_s32fc_rotator2puppet_32fc.h
+include/volk/volk_32fc_s32fc_x2_rotator2_32fc.h
 include/volk/volk_32fc_s32fc_x2_rotator_32fc.h
 include/volk/volk_32fc_x2_add_32fc.h
 include/volk/volk_32fc_x2_conjugate_dot_prod_32fc.h
@@ -111,6 +121,7 @@ include/volk/volk_32fc_x2_dot_prod_32fc.h
 include/volk/volk_32fc_x2_multiply_32fc.h
 include/volk/volk_32fc_x2_multiply_conjugate_32fc.h
 include/volk/volk_32fc_x2_s32f_square_dist_scalar_mult_32f.h
+include/volk/volk_32fc_x2_s32fc_multiply_conjugate_add2_32fc.h
 include/volk/volk_32fc_x2_s32fc_multiply_conjugate_add_32fc.h
 include/volk/volk_32fc_x2_square_dist_32f.h
 include/volk/volk_32i_s32f_convert_32f.h
@@ -145,6 +156,7 @@ include/volk/volk_8u_x3_encodepolar_8u_x2.h
 include/volk/volk_8u_x3_encodepolarpuppet_8u.h
 include/volk/volk_8u_x4_conv_k7_r2_8u.h
 include/volk/volk_alloc.hh
+include/volk/volk_avx2_fma_intrinsics.h
 include/volk/volk_avx2_intrinsics.h
 include/volk/volk_avx_intrinsics.h
 include/volk/volk_common.h
@@ -163,8 +175,8 @@ lib/cmake/volk/VolkConfigVersion.cmake
 lib/cmake/volk/VolkTargets-release.cmake
 lib/cmake/volk/VolkTargets.cmake
 lib/libvolk.so
-lib/libvolk.so.2.5
 lib/libvolk.so.${PKGVERSION}
+lib/libvolk.so.3.2
 lib/pkgconfig/volk.pc
 ${PYSITELIB}/volk_modtool/__init__.py
 ${PYSITELIB}/volk_modtool/__init__.pyc
@@ -175,5 +187,3 @@ ${PYSITELIB}/volk_modtool/cfg.pyo
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.py
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.pyc
 ${PYSITELIB}/volk_modtool/volk_modtool_generate.pyo
-@pkgdir include/volk/asm/orc
-@pkgdir include/volk/asm/neon
