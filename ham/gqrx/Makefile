@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/24 12:32:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/27 15:48:22 gdt Exp $
 
 DISTNAME=	gqrx-2.17.6
 CATEGORIES=	ham
@@ -14,6 +14,8 @@ WRKSRC=	${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
+
+CMAKE_CONFIGURE_ARGS+=	-DFORCE_QT5=ON
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
