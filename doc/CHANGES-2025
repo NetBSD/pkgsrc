@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1804 2025/02/27 18:40:45 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1805 2025/02/27 18:43:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/postfix-pgsql to 3.10.1 [taca 2025-02-27]
 	Updated mail/postfix-sqlite to 3.10.1 [taca 2025-02-27]
 	Updated sysutils/eza to 0.20.23 [pin 2025-02-27]
+	Updated shells/oh-my-posh to 25.0.0 [pin 2025-02-27]
