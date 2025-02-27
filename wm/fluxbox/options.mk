@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2020/09/20 13:30:45 nia Exp $
+# $NetBSD: options.mk,v 1.9 2025/02/27 16:18:26 nia Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fluxbox
 PKG_SUPPORTED_OPTIONS=	imlib2 xft2 xrender nls
@@ -8,7 +8,9 @@ PKG_OPTIONS_LEGACY_OPTS+=	xft:xft2
 
 .include "../../mk/bsd.options.mk"
 
-.if ${OPSYS} != "MirBSD"
+# SunOS has issues:
+# gencat: "./generated-UTF-8.m", line 167: number or $ expected
+.if ${OPSYS} != "MirBSD" && ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	nls
 .endif
 
