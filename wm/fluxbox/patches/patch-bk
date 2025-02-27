@@ -1,4 +1,6 @@
-$NetBSD: patch-bk,v 1.2 2009/07/07 15:47:59 sborrill Exp $
+$NetBSD: patch-bk,v 1.3 2025/02/27 10:55:13 nia Exp $
+
+This patch was originally added to fix builds with sunpro.
 
 --- src/CurrentWindowCmd.hh.orig	2008-09-01 16:59:05.000000000 +0100
 +++ src/CurrentWindowCmd.hh	2009-07-06 12:53:48.000000000 +0100
