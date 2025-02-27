@@ -1,0 +1,22 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2025/02/27 13:43:34 adam Exp $
+
+Install executables.
+
+--- src/CMakeLists.txt.orig	2025-02-27 13:06:58.143226305 +0000
++++ src/CMakeLists.txt
+@@ -379,6 +379,15 @@ target_link_libraries(ldpc_enc codec2)
+ add_executable(ldpc_dec ldpc_dec.c)
+ target_link_libraries(ldpc_dec codec2)
+ 
++install(TARGETS c2enc c2dec c2sim fdmdv_get_test_bits fdmdv_mod fdmdv_demod
++fdmdv_put_test_bits freedv_tx freedv_rx freedv_data_raw_tx freedv_data_raw_rx
++freedv_data_tx freedv_data_rx freedv_mixed_tx freedv_mixed_rx fsk_mod
++fsk_demod fsk_get_test_bits fsk_put_test_bits framer deframer cohpsk_mod
++ofdm_get_test_bits ofdm_put_test_bits ofdm_mod ofdm_demod vhf_deframe_c2
++vhf_frame_c2 cohpsk_demod cohpsk_get_test_bits cohpsk_put_test_bits ch tollr
++ldpc_noise ldpc_enc ldpc_dec
++DESTINATION ${CMAKE_INSTALL_BINDIR})
++
+ install(TARGETS codec2 EXPORT codec2-config
+     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT lib
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR} COMPONENT lib

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2021/10/26 10:48:37 nia Exp $
+$NetBSD: distinfo,v 1.8 2025/02/27 13:43:34 adam Exp $
 
-BLAKE2s (codec2-0.9.2.tar.gz) = a051e198e3b3d24c0415ddb80ebcc91be5250b1e14f458050b53d0db328706af
-SHA512 (codec2-0.9.2.tar.gz) = 30a2eb95f7b0f47f0c0c7f08c9118f089acc32adf8b27f5b4354c89139efe80607d6d0ca5e0a9eefddf3640f02c483b9c804ad52c5dec6295968b7267f3a716c
-Size (codec2-0.9.2.tar.gz) = 12244006 bytes
+BLAKE2s (codec2-1.2.0.tar.gz) = 5191a79a978152e87fb5079baff6c5a716b7810cc8dce388c0003f68b3f269d4
+SHA512 (codec2-1.2.0.tar.gz) = a44e6eb3ec60b81e4dfefaa733c4f8a40c5e2e90454e964b14fbce896edd0877e32d917ce878a619d7e7e544c670231d7d0c9cd35659be6989fd18d474443489
+Size (codec2-1.2.0.tar.gz) = 7688549 bytes
+SHA1 (patch-src_CMakeLists.txt) = 704e96d6ca806e0e4d4532f74a78030ca90c3d70
