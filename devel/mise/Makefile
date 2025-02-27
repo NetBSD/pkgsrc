@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2025/02/21 14:33:14 pin Exp $
+# $NetBSD: Makefile,v 1.59 2025/02/27 18:41:51 pin Exp $
 
 DISTNAME=		mise-2025.2.7
+# mise >= 2025.2.9 requires Rust >= 1.85 to build
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=jdx/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
