@@ -1,0 +1,23 @@
+$NetBSD: patch-gr-utils_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-utils/CMakeLists.txt.orig	2025-02-27 08:54:33.038694303 +0000
++++ gr-utils/CMakeLists.txt
+@@ -27,13 +27,13 @@ if(NOT CMAKE_CROSSCOMPILING)
+
+ endif(NOT CMAKE_CROSSCOMPILING)
+
+-gr_register_component("gr-utils" ENABLE_GR_UTILS ENABLE_GNURADIO_RUNTIME ENABLE_PYTHON
++gr_register_component("gr-utils" ENABLE_GR_UTILS ENABLE_PYTHON
+                       ${utils_python_deps})
+
+-gr_register_component("gr_modtool" ENABLE_GR_MODTOOL ENABLE_GNURADIO_RUNTIME
++gr_register_component("gr_modtool" ENABLE_GR_MODTOOL
+                       ENABLE_PYTHON ${utils_modtool_deps})
+
+-gr_register_component("gr_blocktool" ENABLE_GR_BLOCKTOOL ENABLE_GNURADIO_RUNTIME
++gr_register_component("gr_blocktool" ENABLE_GR_BLOCKTOOL
+                       ENABLE_PYTHON)
+
+ ########################################################################

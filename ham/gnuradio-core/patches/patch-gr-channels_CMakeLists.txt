@@ -1,0 +1,30 @@
+$NetBSD: patch-gr-channels_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Let pkgsrc handle components.
+
+--- gr-channels/CMakeLists.txt.orig	2025-02-20 01:23:56.000000000 +0000
++++ gr-channels/CMakeLists.txt
+@@ -16,12 +16,7 @@ include(GrComponent)
+ 
+ gr_register_component(
+     "gr-channels"
+-    ENABLE_GR_CHANNELS
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_BLOCKS
+-    ENABLE_GR_FFT
+-    ENABLE_GR_FILTER
+-    ENABLE_GR_ANALOG)
++    ENABLE_GR_CHANNELS)
+ 
+ set(GR_PKG_CHANNELS_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/channels)
+ 
+@@ -41,9 +36,7 @@ if(ENABLE_GR_CHANNELS)
+             add_subdirectory(examples)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+     add_subdirectory(docs)
+ 
+     ########################################################################

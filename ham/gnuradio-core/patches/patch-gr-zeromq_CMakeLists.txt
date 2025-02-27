@@ -1,0 +1,24 @@
+$NetBSD: patch-gr-zeromq_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-zeromq/CMakeLists.txt.orig	2025-02-26 22:33:57.035514676 +0000
++++ gr-zeromq/CMakeLists.txt
+@@ -17,7 +17,6 @@ find_package(ZeroMQ)
+ include(GrComponent)
+
+ GR_REGISTER_COMPONENT("gr-zeromq" ENABLE_GR_ZEROMQ
+-    ENABLE_GNURADIO_RUNTIME
+     ZEROMQ_FOUND
+     CPPZMQ_HAS_SHUTDOWN
+ )
+@@ -40,9 +39,7 @@ if(ENABLE_PYTHON)
+         add_subdirectory(examples)
+     endif(ENABLE_EXAMPLES)
+ endif(ENABLE_PYTHON)
+-if(ENABLE_GRC)
+     add_subdirectory(grc)
+-endif(ENABLE_GRC)
+
+ ########################################################################
+ # Create Pkg Config File

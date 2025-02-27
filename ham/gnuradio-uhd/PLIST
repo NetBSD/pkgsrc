@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2023/10/28 09:23:28 mef Exp $
+@comment $NetBSD: PLIST,v 1.19 2025/02/27 13:49:54 adam Exp $
 bin/uhd_fft
 bin/uhd_rx_cfile
 bin/uhd_rx_nogui
@@ -18,21 +18,11 @@ lib/libgnuradio-uhd.so.${PKGVERSION}
 lib/libgnuradio-uhd.so.${PKGVER_MICRO}
 lib/pkgconfig/gnuradio-uhd.pc
 ${PYSITELIB}/gnuradio/uhd/__init__.py
-${PYSITELIB}/gnuradio/uhd/__init__.pyc
-${PYSITELIB}/gnuradio/uhd/__init__.pyo
 ${PYSITELIB}/gnuradio/uhd/msgq_runner.py
-${PYSITELIB}/gnuradio/uhd/msgq_runner.pyc
-${PYSITELIB}/gnuradio/uhd/msgq_runner.pyo
 ${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.py
-${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.pyc
-${PYSITELIB}/gnuradio/uhd/replaymsgpushbutton.pyo
 ${PYSITELIB}/gnuradio/uhd/uhd_app.py
-${PYSITELIB}/gnuradio/uhd/uhd_app.pyc
-${PYSITELIB}/gnuradio/uhd/uhd_app.pyo
 ${PYSITELIB}/gnuradio/uhd/uhd_python.so
 ${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.py
-${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyc
-${PYSITELIB}/gnuradio/uhd/uhd_siggen_base.pyo
 share/doc/gnuradio-${PKGVERSION}/README.uhd
 share/gnuradio/examples/uhd/rfnoc_addsub.grc
 share/gnuradio/examples/uhd/rfnoc_duc_radio.grc

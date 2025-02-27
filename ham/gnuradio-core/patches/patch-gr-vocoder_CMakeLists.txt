@@ -1,0 +1,28 @@
+$NetBSD: patch-gr-vocoder_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-vocoder/CMakeLists.txt.orig	2025-02-26 22:24:12.368674726 +0000
++++ gr-vocoder/CMakeLists.txt
+@@ -15,11 +15,6 @@
+ ########################################################################
+ include(GrComponent)
+ GR_REGISTER_COMPONENT("gr-vocoder" ENABLE_GR_VOCODER
+-    ENABLE_GNURADIO_RUNTIME
+-    ENABLE_GR_FFT
+-    ENABLE_GR_BLOCKS
+-    ENABLE_GR_FILTER
+-    ENABLE_GR_ANALOG
+ )
+
+ SET(GR_PKG_VOCODER_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/vocoder)
+@@ -65,9 +60,7 @@ if(ENABLE_PYTHON)
+         add_subdirectory(examples)
+     endif(ENABLE_EXAMPLES)
+ endif(ENABLE_PYTHON)
+-if(ENABLE_GRC)
+     add_subdirectory(grc)
+-endif(ENABLE_GRC)
+
+ ########################################################################
+ # Create Pkg Config File

@@ -1,0 +1,26 @@
+$NetBSD: patch-gr-dtv_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-dtv/CMakeLists.txt.orig	2025-02-26 14:30:35.787481115 +0000
++++ gr-dtv/CMakeLists.txt
+@@ -14,8 +14,7 @@
+ ########################################################################
+ include(GrComponent)
+
+-gr_register_component("gr-dtv" ENABLE_GR_DTV ENABLE_GNURADIO_RUNTIME ENABLE_GR_ANALOG
+-                      ENABLE_GR_FILTER ENABLE_GR_FEC)
++gr_register_component("gr-dtv" ENABLE_GR_DTV)
+
+ set(GR_PKG_DTV_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/dtv)
+
+@@ -36,9 +35,7 @@ if(ENABLE_GR_DTV)
+         endif(ENABLE_EXAMPLES)
+         add_subdirectory(apps)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+     add_subdirectory(docs)
+
+     ########################################################################
