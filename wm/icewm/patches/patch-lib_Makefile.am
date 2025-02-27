@@ -1,0 +1,26 @@
+$NetBSD: patch-lib_Makefile.am,v 1.1 2025/02/27 12:40:44 nia Exp $
+
+Avoid using non-portable "sed -i".
+
+--- lib/Makefile.am.orig	2025-02-27 12:37:39.435212297 +0000
++++ lib/Makefile.am
+@@ -6,9 +6,16 @@ dist_xsession_DATA = \
+ 	icewm-session.desktop
+ 
+ install-data-hook:
+-	$(AM_V_GEN)sed -i 's|Exec=/.*/|Exec=$(bindir)/|' \
+-	    $(DESTDIR)$(xsessiondir)/icewm.desktop \
+-	    $(DESTDIR)$(xsessiondir)/icewm-session.desktop
++	$(AM_V_GEN)sed 's|Exec=/.*/|Exec=$(bindir)/|' \
++		$(DESTDIR)$(xsessiondir)/icewm.desktop > \
++		$(DESTDIR)$(xsessiondir)/icewm.desktop.new
++	$(AM_V_GEN)sed 's|Exec=/.*/|Exec=$(bindir)/|' \
++		$(DESTDIR)$(xsessiondir)/icewm-session.desktop > \
++		$(DESTDIR)$(xsessiondir)/icewm-session.desktop.new
++	$(AM_V_GEN)mv $(DESTDIR)$(xsessiondir)/icewm.desktop.new \
++		$(DESTDIR)$(xsessiondir)/icewm.desktop
++	$(AM_V_GEN)mv $(DESTDIR)$(xsessiondir)/icewm-session.desktop.new \
++		$(DESTDIR)$(xsessiondir)/icewm-session.desktop
+ 
+ dist_pkgdata_DATA = \
+ 	IceWM.jpg
