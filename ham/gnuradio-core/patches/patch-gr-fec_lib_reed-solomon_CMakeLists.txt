@@ -1,0 +1,16 @@
+$NetBSD: patch-gr-fec_lib_reed-solomon_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires external includes.
+
+--- gr-fec/lib/reed-solomon/CMakeLists.txt.orig	2025-02-26 13:38:32.553754304 +0000
++++ gr-fec/lib/reed-solomon/CMakeLists.txt
+@@ -29,8 +29,7 @@ add_library(
+     ${CMAKE_CURRENT_SOURCE_DIR}/init_rs.c)
+ target_include_directories(
+     gr_fec_rs
+-    PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../include>
+-    PRIVATE $<TARGET_PROPERTY:gnuradio-runtime,INCLUDE_DIRECTORIES>)
++    PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../include>)
+ set_target_properties(gr_fec_rs PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+ target_sources(gnuradio-fec PRIVATE $<TARGET_OBJECTS:gr_fec_rs>)

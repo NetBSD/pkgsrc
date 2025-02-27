@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-filter_include_gnuradio_filter_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Install auto-generated interp_differentiator_taps.h.
+It is needed for gnuradio-digital.
+
+--- gr-filter/include/gnuradio/filter/CMakeLists.txt.orig	2025-02-26 16:59:27.801916087 +0000
++++ gr-filter/include/gnuradio/filter/CMakeLists.txt
+@@ -18,6 +18,7 @@ install(
+           ival_decimator.h
+           iir_filter.h
+           interpolator_taps.h
++          interp_differentiator_taps.h
+           interp_fir_filter.h
+           mmse_fir_interpolator_cc.h
+           mmse_fir_interpolator_ff.h

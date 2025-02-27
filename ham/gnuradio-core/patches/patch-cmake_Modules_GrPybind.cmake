@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_Modules_GrPybind.cmake,v 1.2 2022/10/09 07:56:09 adam Exp $
+$NetBSD: patch-cmake_Modules_GrPybind.cmake,v 1.3 2025/02/27 13:49:51 adam Exp $
 
 Disable use of precompiled headers; it doesn't play nice with pkgsrc nor ccache.
 
@@ -9,7 +9,7 @@ Disable use of precompiled headers; it doesn't play nice with pkgsrc nor ccache.
      # This should speed up building of the python bindings at least in larger modules
      # This functionality is only available in CMake >= 3.16
 -    if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
-+    if(FALSE AND ${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
++    if(FALSE)
          target_precompile_headers(
              ${name}_python
              PRIVATE

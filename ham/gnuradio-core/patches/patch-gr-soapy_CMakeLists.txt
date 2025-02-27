@@ -1,0 +1,25 @@
+$NetBSD: patch-gr-soapy_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-soapy/CMakeLists.txt.orig	2025-02-26 16:48:34.058650664 +0000
++++ gr-soapy/CMakeLists.txt
+@@ -18,7 +18,7 @@ find_package(SoapySDR 0.7.2)
+ # Register component
+ ########################################################################
+ include(GrComponent)
+-gr_register_component("gr-soapy" ENABLE_GR_SOAPY SoapySDR_FOUND ENABLE_GNURADIO_RUNTIME)
++gr_register_component("gr-soapy" ENABLE_GR_SOAPY SoapySDR_FOUND)
+ set(GR_PKG_SOAPY_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/soapy)
+
+ ########################################################################
+@@ -39,9 +39,7 @@ if(ENABLE_GR_SOAPY)
+             add_subdirectory(examples/grc)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

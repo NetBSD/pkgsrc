@@ -1,0 +1,25 @@
+$NetBSD: patch-gr-pdu_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-pdu/CMakeLists.txt.orig	2025-02-26 14:47:05.754914814 +0000
++++ gr-pdu/CMakeLists.txt
+@@ -13,7 +13,7 @@
+ # Register component
+ ########################################################################
+ include(GrComponent)
+-gr_register_component("gr-pdu" ENABLE_GR_PDU ENABLE_GNURADIO_RUNTIME)
++gr_register_component("gr-pdu" ENABLE_GR_PDU)
+
+ set(GR_PKG_PDU_EXAMPLES_DIR ${GR_PKG_DATA_DIR}/examples/pdu)
+
+@@ -33,9 +33,7 @@ if(ENABLE_GR_PDU)
+             add_subdirectory(examples)
+         endif(ENABLE_EXAMPLES)
+     endif(ENABLE_PYTHON)
+-    if(ENABLE_GRC)
+         add_subdirectory(grc)
+-    endif(ENABLE_GRC)
+
+     ########################################################################
+     # Create Pkg Config File

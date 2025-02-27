@@ -1,0 +1,24 @@
+$NetBSD: patch-gr-video-sdl_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- gr-video-sdl/CMakeLists.txt.orig	2025-02-26 17:20:12.014007676 +0000
++++ gr-video-sdl/CMakeLists.txt
+@@ -16,7 +16,6 @@ find_package(SDL)
+ include(GrComponent)
+ GR_REGISTER_COMPONENT("gr-video-sdl" ENABLE_GR_VIDEO_SDL
+     SDL_FOUND
+-    ENABLE_GNURADIO_RUNTIME
+ )
+
+ ########################################################################
+@@ -32,9 +31,7 @@ add_subdirectory(lib)
+ if(ENABLE_PYTHON)
+     add_subdirectory(python/video_sdl)
+ endif(ENABLE_PYTHON)
+-if(ENABLE_GRC)
+     add_subdirectory(grc)
+-endif(ENABLE_GRC)
+
+ ########################################################################
+ # Create Pkg Config File

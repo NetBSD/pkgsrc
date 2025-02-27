@@ -1,0 +1,16 @@
+$NetBSD: patch-gr-digital_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-digital/lib/CMakeLists.txt.orig	2025-02-26 17:11:34.838940329 +0000
++++ gr-digital/lib/CMakeLists.txt
+@@ -93,7 +93,8 @@ add_library(
+
+ target_link_libraries(
+     gnuradio-digital PUBLIC gnuradio-runtime gnuradio-filter gnuradio-blocks
+-                            gnuradio-analog Boost::boost Volk::volk)
++                            gnuradio-analog Boost::boost Volk::volk
++    PRIVATE fmt gnuradio-pmt)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-digital PRIVATE common-precompiled-headers)
