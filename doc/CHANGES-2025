@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1797 2025/02/27 04:00:26 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1798 2025/02/27 04:17:42 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2339,3 +2339,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.15.1 [rillig 2025-02-26]
 	Updated devel/critcl to 3.3.1nb1 [scole 2025-02-27]
 	Updated time/xfce4-timer-plugin to 1.7.3 [gutteridge 2025-02-27]
+	Updated x11/xfce4-docklike-plugin to 0.4.3 [gutteridge 2025-02-27]
