@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1796 2025/02/27 02:11:10 scole Exp $
+$NetBSD: CHANGES-2025,v 1.1797 2025/02/27 04:00:26 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2338,3 +2338,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-bandit to 1.8.3 [adam 2025-02-26]
 	Updated pkgtools/pkglint to 23.15.1 [rillig 2025-02-26]
 	Updated devel/critcl to 3.3.1nb1 [scole 2025-02-27]
+	Updated time/xfce4-timer-plugin to 1.7.3 [gutteridge 2025-02-27]
