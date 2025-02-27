@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/02/12 06:44:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2025/02/27 21:40:25 pin Exp $
 
 DISTNAME=	spotify-player-0.20.4
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aome510/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+OWNER=		pin@NetBSD.org
 HOMEPAGE=	https://github.com/aome510/spotify-player/
 COMMENT=	Command driven spotify player
 LICENSE=	mit
