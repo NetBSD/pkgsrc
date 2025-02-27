@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2025/02/24 08:38:44 pin Exp $
+# $NetBSD: Makefile,v 1.15 2025/02/27 21:44:22 pin Exp $
 
 DISTNAME=	leftwm-0.5.4
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=leftwm/}
 
-MAINTAINER=	pin@NetBSD.org
+OWNER=		pin@NetBSD.org
 HOMEPAGE=	https://leftwm.org/
 COMMENT=	Tiling window manager for adventurers
 LICENSE=	mit
