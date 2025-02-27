@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.48 2025/02/24 08:35:33 pin Exp $
+# $NetBSD: cargo-depends.mk,v 1.49 2025/02/27 18:40:24 pin Exp $
 
 CARGO_CRATE_DEPENDS+=				addr2line-0.24.2
 CARGO_CRATE_DEPENDS+=				adler2-2.0.0
@@ -84,14 +84,14 @@ CARGO_CRATE_DEPENDS+=				itertools-0.10.5
 CARGO_CRATE_DEPENDS+=				itoa-1.0.14
 CARGO_CRATE_DEPENDS+=				jobserver-0.1.32
 CARGO_CRATE_DEPENDS+=				js-sys-0.3.77
-CARGO_CRATE_DEPENDS+=				libc-0.2.169
+CARGO_CRATE_DEPENDS+=				libc-0.2.170
 CARGO_CRATE_DEPENDS+=				libgit2-sys-0.18.0+1.9.0
 CARGO_CRATE_DEPENDS+=				libredox-0.1.3
 CARGO_CRATE_DEPENDS+=				libz-sys-1.1.21
 CARGO_CRATE_DEPENDS+=				linux-raw-sys-0.4.15
 CARGO_CRATE_DEPENDS+=				litemap-0.7.4
 CARGO_CRATE_DEPENDS+=				locale-0.2.2
-CARGO_CRATE_DEPENDS+=				log-0.4.25
+CARGO_CRATE_DEPENDS+=				log-0.4.26
 CARGO_CRATE_DEPENDS+=				memchr-2.7.4
 CARGO_CRATE_DEPENDS+=				miniz_oxide-0.8.3
 CARGO_CRATE_DEPENDS+=				natord-plus-plus-2.0.0
@@ -141,8 +141,8 @@ CARGO_CRATE_DEPENDS+=				rustix-0.38.44
 CARGO_CRATE_DEPENDS+=				rustversion-1.0.19
 CARGO_CRATE_DEPENDS+=				ryu-1.0.19
 CARGO_CRATE_DEPENDS+=				same-file-1.0.6
-CARGO_CRATE_DEPENDS+=				serde-1.0.217
-CARGO_CRATE_DEPENDS+=				serde_derive-1.0.217
+CARGO_CRATE_DEPENDS+=				serde-1.0.218
+CARGO_CRATE_DEPENDS+=				serde_derive-1.0.218
 CARGO_CRATE_DEPENDS+=				serde_json-1.0.138
 CARGO_CRATE_DEPENDS+=				serde_norway-0.9.42
 CARGO_CRATE_DEPENDS+=				serde_spanned-0.6.8
@@ -169,7 +169,7 @@ CARGO_CRATE_DEPENDS+=				tinystr-0.7.6
 CARGO_CRATE_DEPENDS+=				tinytemplate-1.2.1
 CARGO_CRATE_DEPENDS+=				toml_datetime-0.6.8
 CARGO_CRATE_DEPENDS+=				toml_edit-0.22.22
-CARGO_CRATE_DEPENDS+=				trycmd-0.15.8
+CARGO_CRATE_DEPENDS+=				trycmd-0.15.9
 CARGO_CRATE_DEPENDS+=				unicode-ident-1.0.16
 CARGO_CRATE_DEPENDS+=				unicode-width-0.1.14
 CARGO_CRATE_DEPENDS+=				unicode-width-0.2.0
