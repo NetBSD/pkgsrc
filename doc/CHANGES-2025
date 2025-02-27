@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1795 2025/02/26 22:45:25 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.1796 2025/02/27 02:11:10 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2337,3 +2337,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated ham/uhd to 4.8.0.0 [adam 2025-02-26]
 	Updated security/py-bandit to 1.8.3 [adam 2025-02-26]
 	Updated pkgtools/pkglint to 23.15.1 [rillig 2025-02-26]
+	Updated devel/critcl to 3.3.1nb1 [scole 2025-02-27]
