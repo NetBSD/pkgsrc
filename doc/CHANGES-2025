@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1798 2025/02/27 04:17:42 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.1799 2025/02/27 08:30:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2340,3 +2340,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/critcl to 3.3.1nb1 [scole 2025-02-27]
 	Updated time/xfce4-timer-plugin to 1.7.3 [gutteridge 2025-02-27]
 	Updated x11/xfce4-docklike-plugin to 0.4.3 [gutteridge 2025-02-27]
+	Updated devel/py-isort to 6.0.1 [adam 2025-02-27]
+	Updated devel/py-pdm-build-locked to 0.3.5 [adam 2025-02-27]
+	Updated www/py-django-import-export to 4.3.7 [adam 2025-02-27]
+	Updated www/py-django-tastypie to 0.15.1 [adam 2025-02-27]
