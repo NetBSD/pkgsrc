@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2025/01/22 04:36:10 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/27 21:45:19 pin Exp $
 
 DISTNAME=	hck-0.11.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pin@NetBSD.org
+OWNER=		pin@NetBSD.org
 HOMEPAGE=	https://github.com/sstadick/hck/
 COMMENT=	Sharp cut(1) clone
 LICENSE=	unlicense OR mit
