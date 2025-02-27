@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2023/11/12 13:23:47 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/02/27 10:55:13 nia Exp $
 
 DISTNAME=	fluxbox-1.3.7
 PKGREVISION=	9
@@ -16,6 +16,9 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	YES
 EXTRACT_USING=	bsdtar
+
+# Uses auto_ptr deprecated in c++11, etc.
+FORCE_CXX_STD=	gnu++98
 
 .include "../../mk/bsd.prefs.mk"
 

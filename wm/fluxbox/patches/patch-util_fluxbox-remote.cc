@@ -1,4 +1,6 @@
-$NetBSD: patch-util_fluxbox-remote.cc,v 1.1 2017/03/07 13:22:28 joerg Exp $
+$NetBSD: patch-util_fluxbox-remote.cc,v 1.2 2025/02/27 10:55:13 nia Exp $
+
+Do not compare pointers with 0.
 
 --- util/fluxbox-remote.cc.orig	2017-02-28 00:35:38.013459100 +0000
 +++ util/fluxbox-remote.cc
