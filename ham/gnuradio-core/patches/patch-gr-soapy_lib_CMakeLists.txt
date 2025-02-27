@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-soapy_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-soapy/lib/CMakeLists.txt.orig	2025-02-26 16:49:33.717342484 +0000
++++ gr-soapy/lib/CMakeLists.txt
+@@ -13,7 +13,7 @@ add_library(gnuradio-soapy block_impl.cc
+
+ target_compile_features(gnuradio-soapy PRIVATE ${GR_CXX_VERSION_FEATURE})
+
+-target_link_libraries(gnuradio-soapy PUBLIC gnuradio-runtime ${SoapySDR_LIBRARIES})
++target_link_libraries(gnuradio-soapy PUBLIC gnuradio-runtime ${SoapySDR_LIBRARIES} PRIVATE fmt gmp gnuradio-pmt)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-soapy PRIVATE common-precompiled-headers)

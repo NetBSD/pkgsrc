@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-wavelet_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-wavelet/lib/CMakeLists.txt.orig	2025-02-27 08:52:57.097781764 +0000
++++ gr-wavelet/lib/CMakeLists.txt
+@@ -24,7 +24,7 @@ endif(MSVC)
+ target_link_libraries(
+     gnuradio-wavelet
+     PUBLIC gnuradio-runtime
+-    PRIVATE GSL::gsl)
++    PRIVATE GSL::gsl gnuradio-pmt)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-wavelet PRIVATE common-precompiled-headers)

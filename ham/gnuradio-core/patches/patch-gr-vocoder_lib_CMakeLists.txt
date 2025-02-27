@@ -1,0 +1,14 @@
+$NetBSD: patch-gr-vocoder_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-vocoder/lib/CMakeLists.txt.orig	2025-02-26 22:48:39.030204846 +0000
++++ gr-vocoder/lib/CMakeLists.txt
+@@ -27,6 +27,7 @@ target_include_directories(
+     PUBLIC $<INSTALL_INTERFACE:include>
+     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>)
+ target_link_libraries(gnuradio-vocoder PUBLIC gnuradio-runtime)
++target_link_libraries(gnuradio-vocoder PRIVATE fmt gnuradio-pmt)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-vocoder PRIVATE common-precompiled-headers)

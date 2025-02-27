@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2023/04/11 11:20:52 mef Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/02/27 13:49:55 adam Exp $
 include/gnuradio/vocoder/alaw_decode_bs.h
 include/gnuradio/vocoder/alaw_encode_sb.h
 include/gnuradio/vocoder/api.h
@@ -24,15 +24,11 @@ lib/cmake/gnuradio/gnuradio-vocoderConfig.cmake
 lib/cmake/gnuradio/gnuradio-vocoderTargets-release.cmake
 lib/cmake/gnuradio/gnuradio-vocoderTargets.cmake
 lib/libgnuradio-vocoder.so
-lib/libgnuradio-vocoder.so.${PKGVER_MICRO}
 lib/libgnuradio-vocoder.so.${PKGVERSION}
+lib/libgnuradio-vocoder.so.${PKGVER_MICRO}
 lib/pkgconfig/gnuradio-vocoder.pc
 ${PYSITELIB}/gnuradio/vocoder/__init__.py
-${PYSITELIB}/gnuradio/vocoder/__init__.pyc
-${PYSITELIB}/gnuradio/vocoder/__init__.pyo
 ${PYSITELIB}/gnuradio/vocoder/cvsd.py
-${PYSITELIB}/gnuradio/vocoder/cvsd.pyc
-${PYSITELIB}/gnuradio/vocoder/cvsd.pyo
 ${PYSITELIB}/gnuradio/vocoder/vocoder_python.so
 share/doc/gnuradio-${PKGVERSION}/README.vocoder
 share/gnuradio/examples/vocoder/alaw_audio_loopback.py

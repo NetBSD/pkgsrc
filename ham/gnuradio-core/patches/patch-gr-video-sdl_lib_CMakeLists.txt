@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-video-sdl_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-video-sdl/lib/CMakeLists.txt.orig	2025-02-26 17:24:50.927850162 +0000
++++ gr-video-sdl/lib/CMakeLists.txt
+@@ -13,7 +13,7 @@ add_library(gnuradio-video-sdl sink_s_im
+ target_link_libraries(
+     gnuradio-video-sdl
+     PUBLIC gnuradio-runtime
+-    PRIVATE ${SDL_LIBRARY})
++    PRIVATE ${SDL_LIBRARY} fmt gnuradio-pmt)
+
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-video-sdl PRIVATE common-precompiled-headers)

@@ -1,0 +1,14 @@
+$NetBSD: patch-grc_CMakeLists.txt,v 1.1 2025/02/27 13:49:52 adam Exp $
+
+Let pkgsrc handle components as separate packages.
+
+--- grc/CMakeLists.txt.orig	2025-02-26 12:08:33.284866597 +0000
++++ grc/CMakeLists.txt
+@@ -79,7 +79,6 @@ if(NOT CMAKE_CROSSCOMPILING)
+ endif(NOT CMAKE_CROSSCOMPILING)
+
+ GR_REGISTER_COMPONENT("gnuradio-companion" ENABLE_GRC
+-    ENABLE_GNURADIO_RUNTIME
+     ENABLE_PYTHON
+     ${grc_python_deps}
+ )

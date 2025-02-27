@@ -1,0 +1,15 @@
+$NetBSD: patch-gr-channels_lib_CMakeLists.txt,v 1.1 2025/02/27 13:49:51 adam Exp $
+
+Splitting gnuradio into separate packages requires explicit linking.
+
+--- gr-channels/lib/CMakeLists.txt.orig	2025-02-26 12:26:11.960923475 +0000
++++ gr-channels/lib/CMakeLists.txt
+@@ -23,7 +23,7 @@ add_library(
+ target_link_libraries(
+     gnuradio-channels
+     PUBLIC gnuradio-runtime
+-    PRIVATE gnuradio-filter gnuradio-analog gnuradio-blocks)
++    PRIVATE gnuradio-filter gnuradio-analog gnuradio-blocks gnuradio-pmt Volk::volk)
+ 
+ if(ENABLE_COMMON_PCH)
+     target_link_libraries(gnuradio-channels PRIVATE common-precompiled-headers)
