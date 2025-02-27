@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.325 2025/02/26 12:20:56 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.326 2025/02/27 10:59:53 nia Exp $
 #
 #FORMAT 1.0.0
 #
@@ -23854,7 +23854,7 @@ php{56,73,74,80,81}-piwigo-[0-9]*	sql-injection	https://nvd.nist.gov/vuln/detail
 ruby{26,27,30,31}-tzinfo<1.2.10	path-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-31163
 py{27,36,37,38,39,310}-mistune<2.0.3	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2022-34749
 php>=8.1<8.1.8	heap-corruption	https://nvd.nist.gov/vuln/detail/CVE-2022-31627
-SDL-[0-9]*	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-34568
+SDL<1.2.15nb46	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2022-34568
 packagekit-[0-9]*	information-disclosure	https://nvd.nist.gov/vuln/detail/CVE-2022-0987
 squid4-[0-9]*	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2021-46784
 py{27,36,37,38,39,310}-sanic<22.6.1	directory-traversal	https://nvd.nist.gov/vuln/detail/CVE-2022-35920
