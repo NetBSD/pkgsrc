@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.1 2022/04/01 10:43:05 nia Exp $
+$NetBSD: distinfo,v 1.2 2025/02/27 14:12:30 adam Exp $
 
-BLAKE2s (sdl12-compat-1.2.52.tar.gz) = d8abf6a0bfa94472c664208232c654ea358aff157f4c14f8c508b887d7801479
-SHA512 (sdl12-compat-1.2.52.tar.gz) = cd8f34f61ee9c6d0bd635f4c7a6f3cfb6bb570976f3bf843f1e3893b3a86d087a40bdf5f6bb2de16c9534ec42bc846b6ff599ac557c3b088c447e6106e2558f9
-Size (sdl12-compat-1.2.52.tar.gz) = 421046 bytes
-SHA1 (patch-CMakeLists.txt) = ca6c1fc0c32c4e68f6d1f9bcf988f5bcdbecfa5b
-SHA1 (patch-include_SDL_SDL__config.h) = 96eb020bb246e111d4240f94f68a1f5e49222070
+BLAKE2s (sdl12-compat-1.2.68.tar.gz) = 793a906f7234217b43da61953d50ff9756d97bb9dcf97218ca158b18d47dc152
+SHA512 (sdl12-compat-1.2.68.tar.gz) = d0e71e75f312402bf075f6553d9fd6493a3db9dd42719bb753287a35e6c40ee37c6092b157ff2384f3055400a3113645595d1269590cd50ea1e0c8f247240858
+Size (sdl12-compat-1.2.68.tar.gz) = 460180 bytes
