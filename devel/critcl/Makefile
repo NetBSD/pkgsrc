@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/02/26 03:35:14 scole Exp $
+# $NetBSD: Makefile,v 1.2 2025/02/27 02:08:21 scole Exp $
 
 DISTNAME=	critcl-3.3.1
+PKGREVISION=	1
 CATEGORIES=	devel tcl
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-kupries/}
 
@@ -9,12 +10,12 @@ HOMEPAGE=	https://wiki.tcl-lang.org/page/Critcl
 COMMENT=	Tcl utility to provide on-the-fly compilation and execution of C code
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	env ls
+USE_TOOLS+=	env find ls
 
-EX_DIR=			share/examples/crictl
-INSTALLATION_DIRS+=	lib/tcl ${EX_DIR}
+EXAM_DIR=		share/examples/critcl
+INSTALLATION_DIRS+=	${PKGMANDIR}/mann ${EXAM_DIR}
 
-DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
+DEPENDS+=		tcllib-[0-9]*:../../devel/tcllib
 
 # in .../critcl.tcl, temporary compilation files are created in $HOME.
 # override to ${WRKSRC} for pkgsrc build
@@ -30,6 +31,15 @@ GENERATE_PLIST+=	(cd ${DESTDIR}${PREFIX} && ${LS} \
 
 do-install:
 	# do nothing
+
+# add man pages and examples
+post-install:
+	cd ${WRKSRC}/embedded/man/files && \
+	 ${INSTALL_MAN} * ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann
+	cd ${WRKSRC}/examples; for d in `${FIND} . -type d -print`; do \
+	 ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EXAM_DIR}/$$d; done
+	cd ${WRKSRC}/examples; for f in `${FIND} . -type f -print`; do \
+	 ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/${EXAM_DIR}/$$f; done
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
