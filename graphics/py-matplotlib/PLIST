@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2025/01/05 20:49:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2025/02/27 21:21:02 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -2930,6 +2930,7 @@ ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_theta_position.sv
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_theta_wedge.pdf
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_theta_wedge.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_theta_wedge.svg
+${PYSITELIB}/matplotlib/tests/baseline_images/test_polar/polar_title_position.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_quiver/barbs_pivot_test_image.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_quiver/barbs_test_flip.png
 ${PYSITELIB}/matplotlib/tests/baseline_images/test_quiver/barbs_test_image.png
@@ -3250,6 +3251,7 @@ ${PYSITELIB}/matplotlib/tests/test_gridspec.pyo
 ${PYSITELIB}/matplotlib/tests/test_image.py
 ${PYSITELIB}/matplotlib/tests/test_image.pyc
 ${PYSITELIB}/matplotlib/tests/test_image.pyo
+${PYSITELIB}/matplotlib/tests/test_inline_01.ipynb
 ${PYSITELIB}/matplotlib/tests/test_legend.py
 ${PYSITELIB}/matplotlib/tests/test_legend.pyc
 ${PYSITELIB}/matplotlib/tests/test_legend.pyo
