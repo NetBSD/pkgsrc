@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2025/02/18 09:20:12 wiz Exp $
+# $NetBSD: Makefile,v 1.188 2025/02/28 18:45:33 wiz Exp $
 
 DISTNAME=	flightgear-2020.3.11
 PKGREVISION=	54
@@ -10,9 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.flightgear.org/
 COMMENT=	The FlightGear Simulator
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
-
-# https://github.com/boostorg/move/issues/59
-BROKEN=		"broken with boost 1.87"
 
 USE_LANGUAGES=		c c++
 USE_CXX_FEATURES+=	c++14
@@ -36,6 +33,7 @@ pre-configure:
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/speexdsp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.boost-headers+=	boost-headers>=1.87.0nb3
 .include "../../devel/boost-headers/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2
 .include "../../devel/libevent/buildlink3.mk"
