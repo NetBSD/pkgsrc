@@ -1,0 +1,6 @@
+TrunkVer is a versioning scheme for continuously-delivered, trunk-based
+applications and systems that don't follow a release scheme.
+
+It is a syntax-compatible drop-in replacement for SemVer and replaces
+the version with meaningful meta data, telling you at a glance what the
+artifact is, when it was built and where you may find the build log.
