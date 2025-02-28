@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2022/05/13 11:41:57 wiz Exp $
+$NetBSD: patch-lib_libpci.pc.in,v 1.1 2025/02/28 23:21:14 pin Exp $
 
---- lib/libpci.pc.in.orig	2020-12-06 18:17:21.000000000 +0000
+Fixing library name, avoid clashes with base system library.
+
+--- lib/libpci.pc.in.orig	2025-02-28 18:42:56.800135886 +0000
 +++ lib/libpci.pc.in
 @@ -6,6 +6,6 @@ idsdir=@IDSDIR@
  Name: libpci
