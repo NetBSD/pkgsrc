@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2025/02/27 21:42:22 pin Exp $
+# $NetBSD: Makefile,v 1.12 2025/02/28 08:22:59 pin Exp $
 
 DISTNAME=	marswm-0.6.0
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jzbor/}
 
-OWNER=		pin@NetBSD.org
+MAINTAINER=	pin@NetBSD.org
 HOMEPAGE=	https://github.com/jzbor/marswm/
 COMMENT=	Modern window manager featuring dynamic tiling
 LICENSE=	mit
