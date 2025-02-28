@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4425 2025/02/26 09:18:10 scole Exp $
+# $NetBSD: Makefile,v 1.4426 2025/02/28 14:06:23 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3670,6 +3670,7 @@ SUBDIR+=	transifex-client
 SUBDIR+=	tre
 SUBDIR+=	treecc
 SUBDIR+=	trio
+SUBDIR+=	trunkver
 SUBDIR+=	tvision
 SUBDIR+=	ucl
 SUBDIR+=	ucommon
