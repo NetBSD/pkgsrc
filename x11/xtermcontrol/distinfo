@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2021/10/26 11:34:58 nia Exp $
+$NetBSD: distinfo,v 1.4 2025/02/28 14:08:39 pin Exp $
 
-BLAKE2s (xtermcontrol-3.3.tar.gz) = d9645d47b37c4ae330ce319002ec368a76d98ca2a2b6166d73e51a5421a44cfe
-SHA512 (xtermcontrol-3.3.tar.gz) = 625b1ad93110032244eb277621676d89113a4c45642538b029dd36ab31e2fe9d2603c41236d2a1ffb22b2fd7feb61335f35397814569a634eb0a7d4b71961d1b
-Size (xtermcontrol-3.3.tar.gz) = 141972 bytes
+BLAKE2s (xtermcontrol-3.10.tar.gz) = e73c8cad43596c08ebe493af12e1eb4c4196f037e31334dd54d7e5cc725d1e4d
+SHA512 (xtermcontrol-3.10.tar.gz) = a7d4b3d5e7f9e7cd0c7a85c11584528d73507d258d3c48b832e2f842c88967d40a867c4ea75503dfd5288949992a6f6ead2a9fd73e9695c490e2935a133a92d2
+Size (xtermcontrol-3.10.tar.gz) = 187902 bytes

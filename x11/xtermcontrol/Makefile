@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2020/01/26 17:32:28 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2025/02/28 14:08:39 pin Exp $
 
-DISTNAME=	xtermcontrol-3.3
+DISTNAME=	xtermcontrol-3.10
 CATEGORIES=	x11
-MASTER_SITES=	http://thrysoee.dk/xtermcontrol/
+MASTER_SITES=	https://thrysoee.dk/xtermcontrol/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://thrysoee.dk/xtermcontrol/
