@@ -1,8 +1,8 @@
-$NetBSD: patch-meson.build,v 1.1 2022/04/12 14:43:01 nia Exp $
+$NetBSD: patch-meson.build,v 1.2 2025/02/28 14:11:21 pin Exp $
 
 Install configuration to examples, per pkgsrc conventions.
 
---- meson.build.orig	2021-11-09 07:27:11.974258400 +0000
+--- meson.build.orig	2025-02-28 13:51:44.577410289 +0000
 +++ meson.build
 @@ -215,7 +215,7 @@ executable(
  install_subdir(
