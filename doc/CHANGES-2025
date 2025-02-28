@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1812 2025/02/28 14:11:39 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1813 2025/02/28 16:34:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/trunkver version 1.1.0 [schmonz 2025-02-28]
 	Updated x11/xtermcontrol to 3.10 [pin 2025-02-28]
 	Updated sysutils/i3status to 2.15 [pin 2025-02-28]
+	Updated devel/jdebp-redo to 1.5 [schmonz 2025-02-28]
