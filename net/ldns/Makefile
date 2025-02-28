@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2024/02/26 20:11:44 he Exp $
+# $NetBSD: Makefile,v 1.51 2025/02/28 17:49:17 hauke Exp $
 
 .include "../../net/ldns/version.mk"
 
 DISTNAME=	ldns-${LDNS_VERSION}
 PKGNAME=	${DISTNAME:S/-rc./rc/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -16,6 +16,8 @@ LICENSE=	modified-bsd
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 REPLACE_PERL=	doc/doxyparse.pl
 
