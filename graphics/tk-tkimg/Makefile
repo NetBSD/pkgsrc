@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/11/12 13:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/02/28 03:34:32 scole Exp $
 #
 
 DISTNAME=	tkimg-1.3-2008-01-16
@@ -7,7 +7,7 @@ PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.flightlab.com/~joe/downloads/
 
-MAINTAINER=	egavilan@eie.fceia.unr.edu.ar
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flightlab.com/~joe/downloads/
 COMMENT=	Add support for several image formats to Tk
 LICENSE=	2-clause-bsd # XXX ? Same as Tcl
