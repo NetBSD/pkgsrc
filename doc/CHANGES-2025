@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1806 2025/02/27 21:21:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1807 2025/02/28 03:43:43 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2380,3 +2380,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.0.0 [pin 2025-02-27]
 	Updated lang/nodejs to 23.9.0 [adam 2025-02-27]
 	Updated graphics/py-matplotlib to 3.10.1 [adam 2025-02-27]
+	Updated sysutils/xfce4-netload-plugin to 1.4.2 [gutteridge 2025-02-28]
