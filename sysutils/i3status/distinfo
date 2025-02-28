@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.8 2022/04/12 14:43:01 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/02/28 14:11:21 pin Exp $
 
-BLAKE2s (i3status-2.14.tar.xz) = 06556d5a7be94cc298368068a9657f0c18b1568a98565e8815231346e51c02c4
-SHA512 (i3status-2.14.tar.xz) = 10a1235cc314f5fc4dde4e1369a30f49118c95271f636c5803caa52d94d99ad8565b89fcd602d0c8aa7c830a79d3a3bb08e5ac8123cf07cfddc8ef0126b10f80
-Size (i3status-2.14.tar.xz) = 68900 bytes
-SHA1 (patch-meson.build) = 8c3a34e49bcedd1a381909afca4357d001b665ab
-SHA1 (patch-src_print__disk__info.c) = a9fbbcd4aab59cddf6163a9a31e35af78e4c5254
-SHA1 (patch-src_print__volume.c) = d57447621989f470d41463810a1f865bf2aed0da
+BLAKE2s (i3status-2.15.tar.xz) = 67dd196e8fb8dff790c95e8c046f8c8bd065e94396ce871f5e72931a549b4df0
+SHA512 (i3status-2.15.tar.xz) = fc099abb6740a4989a1797bc298e57ed0c824598a3fac50d497060af53079a9d350bfc7748e75fa4194db05d3373254a03e94611f0a97a2ffe62cc023b2a2260
+Size (i3status-2.15.tar.xz) = 70220 bytes
+SHA1 (patch-meson.build) = 39e63c8e52c14fcceb00d1162edc0a328c11d13d
