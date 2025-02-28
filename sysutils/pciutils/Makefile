@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2024/02/25 15:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2025/02/28 23:21:14 pin Exp $
 
-DISTNAME=	pciutils-3.11.1
+DISTNAME=	pciutils-3.13.0
 CATEGORIES=	sysutils
 MASTER_SITES+=	https://www.kernel.org/pub/software/utils/pciutils/
 
