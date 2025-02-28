@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1814 2025/02/28 18:30:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1815 2025/02/28 18:41:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/i3status to 2.15 [pin 2025-02-28]
 	Updated devel/jdebp-redo to 1.5 [schmonz 2025-02-28]
 	Updated devel/boost-headers to 1.87.0nb2 [wiz 2025-02-28]
+	Updated devel/boost-headers to 1.87.0nb3 [wiz 2025-02-28]
