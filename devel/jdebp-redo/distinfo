@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2021/10/26 10:15:07 nia Exp $
+$NetBSD: distinfo,v 1.5 2025/02/28 16:34:36 schmonz Exp $
 
-BLAKE2s (redo-1.4.tar.gz) = 5648e7b556f0a18d9371df59ea68d1689c2115f556d1414543aae71948557d73
-SHA512 (redo-1.4.tar.gz) = c90c75acc53cb478edefb6fa5d6e76807239f94837416cbf814e0d08c4b30bcf5a9edb7b9065358e30395619ad5deb749790819eb8ed45719facbe680e150d63
-Size (redo-1.4.tar.gz) = 21514 bytes
+BLAKE2s (redo-1.5.tar.gz) = 374ac7eaa75e6f52be860bff5b2477c18d6dd3faa99cdda0445a87bda4cbda9f
+SHA512 (redo-1.5.tar.gz) = 4bb174868b9a38df7b392ae0ae813cbb7de0c043afab28507fbf85a07aeabd38a4968523aa73608a799c434d61a44173a8019f976dce6b4ba6a30a0939e45667
+Size (redo-1.5.tar.gz) = 26587 bytes
 SHA1 (patch-package_prepare) = 9dc0295ab3fe6830d920c49beeb9caae6bca0eab
-SHA1 (patch-source_redo.cpp) = 787086061157438762a9e03fa37f5570215834f1
+SHA1 (patch-source_redo.cpp) = 5c41649101d021dee2ef67b4e7f51c580b4f5eda

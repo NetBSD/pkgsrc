@@ -1,38 +1,36 @@
-$NetBSD: patch-source_redo.cpp,v 1.1 2020/07/06 15:16:49 schmonz Exp $
+$NetBSD: patch-source_redo.cpp,v 1.2 2025/02/28 16:34:36 schmonz Exp $
 
 Avoid CONFLICTS with other redo implementations.
 
---- source/redo.cpp.orig	2017-04-18 18:09:52.000000000 +0000
+--- source/redo.cpp.orig	2019-05-09 23:12:40.000000000 +0000
 +++ source/redo.cpp
-@@ -1373,6 +1373,7 @@ main ( int argc, const char * argv[] )
- 	putenv(levelbuf);
+@@ -1221,13 +1221,16 @@ redo_main ( const char * prog, int argc,
+ 	putenv(gnulevelbuf);
+ 	putenv(bsdlevelbuf);
  
- 	if (0 == std::strcmp(prog, "redo-ifcreate")
-+	||  0 == std::strcmp(prog, "jdebp-redo-ifcreate")
- #if defined(__OS2__) || defined(__WIN32__) || defined(__NT__)
- 	||  0 == stricmp(prog, "redo-ifcreate.exe")
- #endif
-@@ -1380,6 +1381,7 @@ main ( int argc, const char * argv[] )
+-	if (0 == std::strcmp(prog, "redo-ifcreate"))
++	if (0 == std::strcmp(prog, "redo-ifcreate")
++	||  0 == std::strcmp(prog, "jdebp-redo-ifcreate"))
  		return redo_ifcreate(prog, filev) ? EXIT_SUCCESS : EXIT_FAILURE;
  	else
- 	if (0 == std::strcmp(prog, "redo-ifchange")
-+	||  0 == std::strcmp(prog, "jdebp-redo-ifchange")
- #if defined(__OS2__) || defined(__WIN32__) || defined(__NT__)
- 	||  0 == stricmp(prog, "redo-ifchange.exe")
- #endif
-@@ -1390,6 +1392,7 @@ main ( int argc, const char * argv[] )
- 	}
+-	if (0 == std::strcmp(prog, "redo-ifchange"))
++	if (0 == std::strcmp(prog, "redo-ifchange")
++	||  0 == std::strcmp(prog, "jdebp-redo-ifchange"))
+ 		return redo_ifchange(prog, meta_depth, filev) ? EXIT_SUCCESS : EXIT_FAILURE;
  	else
- 	if (0 == std::strcmp(prog, "redo")
-+	||  0 == std::strcmp(prog, "jdebp-redo")
- #if defined(__OS2__) || defined(__WIN32__) || defined(__NT__)
- 	||  0 == stricmp(prog, "redo.exe")
- #endif
-@@ -1400,6 +1403,7 @@ main ( int argc, const char * argv[] )
- 		return r ? EXIT_SUCCESS : EXIT_FAILURE;
- 	}
- 	if (0 == std::strcmp(prog, "cubehash")
-+	||  0 == std::strcmp(prog, "jdebp-cubehash")
- #if defined(__OS2__) || defined(__WIN32__) || defined(__NT__)
- 	||  0 == stricmp(prog, "cubehash.exe")
- #endif
+-	if (0 == std::strcmp(prog, "redo")) {
++	if (0 == std::strcmp(prog, "redo")
++	||  0 == std::strcmp(prog, "jdebp-redo")) {
+ 		mkdir(".redo", 0777);
+ 		return redo(true, prog, meta_depth, filev) ? EXIT_SUCCESS : EXIT_FAILURE;
+ 	} else
+@@ -1283,7 +1286,8 @@ main ( int argc, const char * argv[] )
+ {
+ 	const char * prog(basename_of(argv[0]));
+ 
+-	if (0 == std::strcmp(prog, "cubehash"))
++	if (0 == std::strcmp(prog, "cubehash")
++	||  0 == std::strcmp(prog, "jdebp-cubehash"))
+ 		return cubehash_main(prog, argc, argv);
+ 	else
+ 		return redo_main(prog, argc, argv);
