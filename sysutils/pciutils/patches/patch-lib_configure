@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.8 2024/02/25 15:08:50 wiz Exp $
+$NetBSD: patch-lib_configure,v 1.1 2025/02/28 23:21:14 pin Exp $
 
 lspci on Linux is unprivileged and wants to go in bin, not sbin.
 But that breaks our PLIST so let's not bother with that.
 
---- lib/configure.orig	2024-02-23 13:56:07.000000000 +0000
+--- lib/configure.orig	2025-02-28 18:40:40.619585843 +0000
 +++ lib/configure
 @@ -85,7 +85,6 @@ case $sys in
  						;;
@@ -13,7 +13,7 @@ But that breaks our PLIST so let's not bother with that.
  		;;
  	sunos)
  		echo_n " mem-ports ecam"
-@@ -352,7 +351,7 @@ else
+@@ -355,7 +354,7 @@ else
  		echo >>$m 'PCILIB_LDFLAGS+=-Wl,--exclude-all-symbols'
  	fi
  fi
