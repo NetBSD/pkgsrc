@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1818 2025/03/01 15:57:11 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1819 2025/03/01 20:08:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/pciutils to 3.13.0 [pin 2025-02-28]
 	Updated textproc/ruby-nokogiri to 1.18.3 [tsutsui 2025-03-01]
 	Updated lang/ruby34 to 3.4.2nb1 [taca 2025-03-01]
+	Updated net/gh to 2.67.0 [bsiegert 2025-03-01]
