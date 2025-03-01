@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.365 2025/02/24 19:29:23 adam Exp $
+# $NetBSD: Makefile,v 1.366 2025/03/01 00:10:42 nia Exp $
 
 DISTNAME=	qemu-9.2.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.qemu.org/
-COMMENT=	CPU emulator using dynamic translation
+COMMENT=	Machine emulator and virtualizer
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
