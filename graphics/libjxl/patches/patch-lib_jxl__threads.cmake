@@ -1,6 +1,6 @@
-$NetBSD: patch-lib_jxl__threads.cmake,v 1.1 2025/02/04 11:22:48 wiz Exp $
+$NetBSD: patch-lib_jxl__threads.cmake,v 1.2 2025/03/01 12:16:44 adam Exp $
 
-All linkers do not support --version-script, so test for it
+Not all linkers support --version-script, so test for it.
 
 --- lib/jxl_threads.cmake.orig	2024-01-05 17:14:55.908788800 +0000
 +++ lib/jxl_threads.cmake
@@ -11,7 +11,7 @@ All linkers do not support --version-script, so test for it
 +  if(LINKER_VERSION_SCRIPT)
    set_property(TARGET jxl_threads APPEND_STRING PROPERTY
        LINK_FLAGS " -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/jxl/jxl.version")
-+  endif() # LINKER_VERSION_SCRIPT
++  endif(LINKER_VERSION_SCRIPT)
  endif()  # APPLE
  
  # Compile the shared library such that the JXL_THREADS_EXPORT symbols are
