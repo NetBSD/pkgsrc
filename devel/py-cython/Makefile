@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.99 2025/02/11 11:52:13 adam Exp $
+# $NetBSD: Makefile,v 1.100 2025/03/02 21:25:54 wiz Exp $
 
 DISTNAME=	cython-3.0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cython/}
 
@@ -10,12 +11,9 @@ HOMEPAGE=	https://cython.org/
 COMMENT=	C-Extensions for Python
 LICENSE=	apache-2.0
 
-WHEEL_NAME=	Cython-${PKGVERSION_NOREV}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=69.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TEST_DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
-REPLACE_PYTHON+=	Cython/Build/Cythonize.py
 REPLACE_PYTHON+=	Cython/Debugger/Cygdb.py
 REPLACE_PYTHON+=	Cython/Debugger/libpython.py
 REPLACE_PYTHON+=	cython.py
