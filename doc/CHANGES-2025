@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1857 2025/03/02 20:12:36 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1858 2025/03/02 20:17:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2429,3 +2429,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated fonts/harfbuzz to 10.4.0 [wiz 2025-03-02]
 	Updated fonts/harfbuzz-icu to 10.4.0 [wiz 2025-03-02]
 	Updated textproc/tree-sitter-php to 0.23.12 [wiz 2025-03-02]
+	Updated security/py-cryptography to 44.0.2 [wiz 2025-03-02]
