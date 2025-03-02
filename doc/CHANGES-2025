@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1840 2025/03/02 14:52:49 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1841 2025/03/02 14:54:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2412,3 +2412,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-redcarpet to 3.6.1 [taca 2025-03-02]
 	Updated www/ruby-aws-partitions to 1.1058.0 [taca 2025-03-02]
 	Added www/ruby-cgi version 0.4.2 [taca 2025-03-02]
+	Updated www/ruby-patron to 0.13.4 [taca 2025-03-02]
