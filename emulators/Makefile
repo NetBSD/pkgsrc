@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.368 2025/01/31 10:48:25 micha Exp $
+# $NetBSD: Makefile,v 1.369 2025/03/02 12:45:45 nia Exp $
 #
 
 COMMENT=	Emulators for other machines and systems
@@ -95,6 +95,7 @@ SUBDIR+=	gpsp-rpi
 SUBDIR+=	gxemul
 SUBDIR+=	handy_sdl
 SUBDIR+=	hatari
+SUBDIR+=	haxm
 SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	hercules4sdl
@@ -185,6 +186,7 @@ SUBDIR+=	picodrive
 SUBDIR+=	py-keystone
 SUBDIR+=	py-unicorn
 SUBDIR+=	qemu
+SUBDIR+=	qemu7
 SUBDIR+=	quasi88
 SUBDIR+=	raine
 SUBDIR+=	realboy
