@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2025/02/24 16:43:49 manu Exp $
+# $NetBSD: Makefile,v 1.82 2025/03/02 10:19:29 manu Exp $
 #
 
 DISTNAME=	SOGo-2.4.3
@@ -84,7 +84,7 @@ post-install:
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../devel/gnustep-make/buildlink3.mk"
-.include "../../devel/SOPE/buildlink3.mk"
+.include "../../devel/SOPE5/buildlink3.mk"
 .include "../../devel/libmemcached/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
