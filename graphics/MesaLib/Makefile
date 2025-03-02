@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2025/01/21 11:00:16 nia Exp $
+# $NetBSD: Makefile,v 1.214 2025/03/02 12:34:56 nia Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -32,6 +32,14 @@ MESA_PLATFORMS=		#
 .include "../../mk/compiler.mk"
 .include "features.mk"
 .include "options.mk"
+
+# This is actually a workaround for lld, but
+# we currently lack a way to test linker version.
+# Fixed upstream after 23.3.
+# See https://bugs.gentoo.org/914905
+.if ${OPSYS} != "SunOS" && ${PKGSRC_COMPILER:M*clang*}
+LDFLAGS+=	-Wl,--undefined-version
+.endif
 
 PLIST_SUBST+=	GLVER="1.2.0"
 PLIST_SUBST+=	MACHINE_ARCH=${MACHINE_ARCH}
