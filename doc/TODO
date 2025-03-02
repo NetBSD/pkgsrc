@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25494 2025/03/02 13:15:18 wiz Exp $
+$NetBSD: TODO,v 1.25495 2025/03/02 19:41:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -719,6 +719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o gok-2.30.1
 	o golem-0.0.6
 	o goocanvas-2.0.2
+	o gopls-0.18.1
 	o gossip-0.31
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
@@ -748,6 +749,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o hamster-applet-2.32.1
 	o handbrake-1.9.0
 	o hanzim-3.5
+	o harfbuzz-10.4.0
 	o harminv-1.4.1
 	o hashcash-1.23
 	o haskell-mode-13.20
@@ -951,6 +953,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o ncview-2.1.8
 	o netramet-50
 	o newmail-1.0.2
+	o nghttp2-1.65.0
 	o nicotine-plus-3.2.9
 	o nios2-binutils-2.36.1
 	o node_exporter-1.9.0
@@ -1300,6 +1303,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-php-0.23.12
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
