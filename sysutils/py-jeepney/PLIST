@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/02/23 20:41:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/03/02 20:23:42 wiz Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -63,9 +63,6 @@ ${PYSITELIB}/jeepney/io/trio.pyo
 ${PYSITELIB}/jeepney/low_level.py
 ${PYSITELIB}/jeepney/low_level.pyc
 ${PYSITELIB}/jeepney/low_level.pyo
-${PYSITELIB}/jeepney/routing.py
-${PYSITELIB}/jeepney/routing.pyc
-${PYSITELIB}/jeepney/routing.pyo
 ${PYSITELIB}/jeepney/tests/__init__.py
 ${PYSITELIB}/jeepney/tests/__init__.pyc
 ${PYSITELIB}/jeepney/tests/__init__.pyo
@@ -88,9 +85,9 @@ ${PYSITELIB}/jeepney/tests/test_fds.pyo
 ${PYSITELIB}/jeepney/tests/test_low_level.py
 ${PYSITELIB}/jeepney/tests/test_low_level.pyc
 ${PYSITELIB}/jeepney/tests/test_low_level.pyo
-${PYSITELIB}/jeepney/tests/test_routing.py
-${PYSITELIB}/jeepney/tests/test_routing.pyc
-${PYSITELIB}/jeepney/tests/test_routing.pyo
+${PYSITELIB}/jeepney/tests/test_wrappers.py
+${PYSITELIB}/jeepney/tests/test_wrappers.pyc
+${PYSITELIB}/jeepney/tests/test_wrappers.pyo
 ${PYSITELIB}/jeepney/wrappers.py
 ${PYSITELIB}/jeepney/wrappers.pyc
 ${PYSITELIB}/jeepney/wrappers.pyo
