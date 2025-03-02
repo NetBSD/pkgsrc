@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1844 2025/03/02 15:39:17 leot Exp $
+$NetBSD: CHANGES-2025,v 1.1845 2025/03/02 15:45:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2416,3 +2416,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-uri to 1.0.3 [taca 2025-03-02]
 	Updated databases/php-mongodb to 1.21.0 [taca 2025-03-02]
 	Updated devel/opa to 1.2.0 [leot 2025-03-02]
+	Updated devel/conftest to 0.58.0 [leot 2025-03-02]
