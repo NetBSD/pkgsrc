@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2020/03/20 17:58:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2025/03/02 14:54:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/patron/session_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.github/workflows/ci.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
@@ -49,6 +50,7 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/certs/cacert.pem
 ${GEM_LIBDIR}/spec/support/certs/privkey.pem
 ${GEM_LIBDIR}/spec/support/config.ru
+${GEM_LIBDIR}/spec/support/fork.rb
 ${GEM_LIBDIR}/spec/support/test_server.rb
 ${GEM_LIBDIR}/spec/util_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
