@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.126 2025/02/09 08:52:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.127 2025/03/02 14:34:49 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -257,6 +257,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/optimistic_locking_base.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/paged_operations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_array_associations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_auto_constraint_validations.rb
+${GEM_LIBDIR}/lib/sequel/plugins/pg_eager_any_typed_array.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/pg_xmin_optimistic_locking.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/prepared_statements.rb
