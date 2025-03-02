@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.15 2025/03/02 12:45:47 nia Exp $
+
+BLAKE2s (haxm-7.8.0.tar.gz) = e36adb5175a79d9a5038cf8d4dc1deb58205e377689fa2f3f5dbb7fd6e53b624
+SHA512 (haxm-7.8.0.tar.gz) = 403d1e2346885630d2ca58515bca8cc4cb0c8a4a30d22257101272f1dca352256b155dc051e4d665b5ddd3bd9a3692bd6d1a849f35cb9a3b8046a4c7d2c57960
+Size (haxm-7.8.0.tar.gz) = 364804 bytes
+SHA1 (patch-include_netbsd_hax__netbsd.h) = d1210e10e0f425ea7fb08f9aa8485128bc55c64b
+SHA1 (patch-platforms_netbsd_hax__entry.c) = 7ce2042644a11c7aaabf51fec2e582db63053df1

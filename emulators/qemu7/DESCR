@@ -1,0 +1,8 @@
+QEMU is an open source machine emulator and virtualizer.
+
+QEMU supports full-system emulation, to run operating systems for any
+machine, on any supported architecture. Virtualization can be
+accelerated to achieve near-native performance. Certain targets
+also support user-mode emulation.
+
+This is stable branch 7.x and retains support for HAXM acceleration.

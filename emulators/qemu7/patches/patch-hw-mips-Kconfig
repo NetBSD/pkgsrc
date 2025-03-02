@@ -1,0 +1,15 @@
+$NetBSD: patch-hw-mips-Kconfig,v 1.1 2025/03/02 12:45:46 nia Exp $
+
+Qemu MIPS target MIPSSIM adding VirtIO devices for development purposes.
+
+--- hw/mips/Kconfig.orig	2020-08-11 19:17:15.000000000 +0000
++++ hw/mips/Kconfig
+@@ -20,6 +20,8 @@ config MIPSSIM
+     select ISA_BUS
+     select SERIAL_ISA
+     select MIPSNET
++    select VIRTIO_MMIO
++    select OR_IRQ
+ 
+ config JAZZ
+     bool

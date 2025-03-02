@@ -1,0 +1,28 @@
+$NetBSD: distinfo,v 1.1 2025/03/02 12:45:45 nia Exp $
+
+BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
+SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
+Size (palcode-clipper-qemu-5.2.0nb8) = 159808 bytes
+BLAKE2s (qemu-7.2.16.tar.xz) = a7df9c5ce513308e0f69290b72531df01c29b6cea809e83cb6e5f6ebed29168d
+SHA512 (qemu-7.2.16.tar.xz) = 75623733f39396222e549498fd5dbbc1430593033f7480aa3a34c7e1c765eb5f7776d8827ee47b4b9c52cc1061232637742a8e31c5e5a9019945171d0c65ca7e
+Size (qemu-7.2.16.tar.xz) = 124427328 bytes
+SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
+SHA1 (patch-backends_tpm_tpm__ioctl.h) = 5e18e0c9d0581386e0100a566694b3e631618585
+SHA1 (patch-hw-mips-Kconfig) = 1e40f8265196e60d4f97ec50073025a3906ef754
+SHA1 (patch-hw-mips-mipssim.c) = 17696dacab62cb5ac4cd949a11ce120f5e1a3906
+SHA1 (patch-hw_display_omap__dss.c) = 68f6f5e86335114de64b397959a2238de84fcde2
+SHA1 (patch-hw_mips_meson.build) = a19ba2014e090dacda13f2eb1dd986b5134de710
+SHA1 (patch-hw_net_etraxfs__eth.c) = e5dd1661d60dbcd27b332403e0843500ba9544bc
+SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
+SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
+SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
+SHA1 (patch-hw_usb_dev-mtp.c) = f148a3ad6d72eb29f85684316af5fb219ddaeb71
+SHA1 (patch-meson.build) = 67fcc428b1953a63e4c0aa32ac1d41ec234a2462
+SHA1 (patch-meson_mesonbuild_linkers_linkers.py) = 842b01f543c99c66630df8450f71ab9fc422ff32
+SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
+SHA1 (patch-target_arm_translate-sve.c) = f5909d20ea6f04bbc4a0d61d79f795bac24d6d86
+SHA1 (patch-target_i386_cpu.c) = afa8a2f83399b2d142709322eb88d1112f1547e4
+SHA1 (patch-target_i386_meson.build) = 0ef0636dd68e5eeb9a2a34473e2a24bf3c141c0f
+SHA1 (patch-target_sparc_translate.c) = 7ec2add2fd808facb48b9a66ccc345599251bf76
+SHA1 (patch-util_coroutine-ucontext.c) = 890767e1f034b34f4aad6c791745fc0b151b8e3c
+SHA1 (patch-util_osdep.c) = 1e5bcde7be23792f487334d35797869bff686d25
