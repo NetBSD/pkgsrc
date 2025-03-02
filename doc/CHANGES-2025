@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1833 2025/03/02 12:46:09 nia Exp $
+$NetBSD: CHANGES-2025,v 1.1834 2025/03/02 14:35:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2405,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-aiohttp-remotes to 1.2.0nb1 [wiz 2025-03-02]
 	Updated devel/py-gidgethub to 5.3.0nb1 [wiz 2025-03-02]
 	Added emulators/qemu7 version 7.2.16 [nia 2025-03-02]
+	Updated databases/ruby-sequel to 5.90.0 [taca 2025-03-02]
