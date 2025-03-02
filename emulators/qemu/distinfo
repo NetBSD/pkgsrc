@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.227 2025/02/24 19:29:23 adam Exp $
+$NetBSD: distinfo,v 1.228 2025/03/02 12:44:19 nia Exp $
 
 BLAKE2s (palcode-clipper-qemu-5.2.0nb8) = d388c896a80c1cc3d4785c8434d6688bbcfd54c28f7252ce550ab162a0bba321
 SHA512 (palcode-clipper-qemu-5.2.0nb8) = 33695d6001d86a19793a92d5e31775607c4dfc9ab9eea019ea6c4d543a2e11e8c07f83cca4934811a13ef829b528737ea37d9d2aaf66cba6f2746d44d2aa0b43
@@ -7,13 +7,13 @@ BLAKE2s (qemu-9.2.2.tar.xz) = ad6aa908ac97ce61943832f768caa0794c184f5938cd69f4c5
 SHA512 (qemu-9.2.2.tar.xz) = b010876da9f91da01dbb9e06705a1358d5f062d0fdd4ad5c8cd8ce3fd43adcefcf72a61216eb8d415281f6607b945ce1cfb6b5fc5692ada9163e8f05b7fb5533
 Size (qemu-9.2.2.tar.xz) = 134756816 bytes
 SHA1 (patch-audio_jackaudio.c) = 771c2779e565242a500adc0223ef6b1ae5b2b91f
-SHA1 (patch-hw-mips-Kconfig) = 7969c712839138d60ecd1d8a72956c5e5147a475
-SHA1 (patch-hw-mips-mipssim.c) = 1683a52c0f065a5adb342f0a71bc63d3e7ffd931
-SHA1 (patch-hw_mips_meson.build) = 8bb977310e8dcd4fe12ddae343891855dd05c7d2
+SHA1 (patch-hw-mips-Kconfig) = c74efac1b5d3a49d141387eb9316617039be737b
+SHA1 (patch-hw-mips-mipssim.c) = c72129c6ad961a62d3f1b443bbf373ee3c900dc0
+SHA1 (patch-hw_mips_meson.build) = 06cc199b3b15add9f5d5ddcd84bf2791f96bd5d3
 SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_rtc_mc146818rtc.c) = cc7a3b28010966b65b7a16db756226ac2669f310
 SHA1 (patch-hw_scsi_scsi-disk.c) = fdbf2f962a6dcb1a115a7f8a5b8790ff9295fb33
-SHA1 (patch-hw_usb_dev-mtp.c) = 94ddf53a41cc75810cfece1b8aef1831fab4ce43
+SHA1 (patch-hw_usb_dev-mtp.c) = f148a3ad6d72eb29f85684316af5fb219ddaeb71
 SHA1 (patch-meson.build) = 6b0607903b84c84d26bd5c54f3f0b9e4b256d787
 SHA1 (patch-qemu-options.hx) = 6cf811ae421db1e8d45f7098bd36733c6dc7d9cf
 SHA1 (patch-roms_u-boot-sam460ex_Makefile) = 3a1bbf19b1422c10ebdd819eb0b711fafc78e2f2
