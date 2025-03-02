@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2024/11/21 15:43:04 leot Exp $
+# $NetBSD: Makefile,v 1.29 2025/03/02 17:51:55 leot Exp $
 
-DISTNAME=	entr-5.6
+DISTNAME=	entr-5.7
 CATEGORIES=	sysutils
 MASTER_SITES=	https://eradman.com/entrproject/code/
 
