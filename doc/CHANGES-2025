@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1847 2025/03/02 17:13:22 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1848 2025/03/02 17:52:00 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2419,3 +2419,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/conftest to 0.58.0 [leot 2025-03-02]
 	Updated devel/regal to 0.31.1 [leot 2025-03-02]
 	Updated sysutils/yazi to 25.3.2 [pin 2025-03-02]
+	Updated sysutils/entr to 5.7 [leot 2025-03-02]
