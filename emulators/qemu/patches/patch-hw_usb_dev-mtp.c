@@ -1,4 +1,6 @@
-$NetBSD: patch-hw_usb_dev-mtp.c,v 1.5 2021/02/20 22:59:29 ryoon Exp $
+$NetBSD: patch-hw_usb_dev-mtp.c,v 1.6 2025/03/02 12:44:19 nia Exp $
+
+Various build fixes for SunOS.
 
 --- hw/usb/dev-mtp.c.orig	2020-12-08 16:59:44.000000000 +0000
 +++ hw/usb/dev-mtp.c

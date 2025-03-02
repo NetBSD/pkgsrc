@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.366 2025/03/01 00:10:42 nia Exp $
+# $NetBSD: Makefile,v 1.367 2025/03/02 12:44:18 nia Exp $
 
 DISTNAME=	qemu-9.2.2
 PKGREVISION=	1
@@ -58,9 +58,9 @@ CONFIGURE_ARGS+=	--enable-fdt=system
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
 
-.if defined(PKGSRC_USE_SSP)
+.if ${PKGSRC_USE_SSP:Uno:tl} != "no"
 # do not add flags to everything
-PKGSRC_USE_SSP=		no
+SSP_SUPPORTED=		no
 CONFIGURE_ARGS+=	--enable-stack-protector
 .endif
 
