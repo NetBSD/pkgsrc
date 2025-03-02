@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1859 2025/03/02 20:21:21 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1860 2025/03/02 20:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-php to 0.23.12 [wiz 2025-03-02]
 	Updated security/py-cryptography to 44.0.2 [wiz 2025-03-02]
 	Updated security/py-cyclonedx-python-lib to 9.1.0 [wiz 2025-03-02]
+	Updated www/py-google-api-python-client to 2.162.0 [wiz 2025-03-02]
