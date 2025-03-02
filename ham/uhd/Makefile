@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2025/02/26 22:05:41 adam Exp $
+# $NetBSD: Makefile,v 1.85 2025/03/02 09:07:27 wiz Exp $
 
 DISTNAME=	uhd-4.8.0.0
 CATEGORIES=	ham
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 EXTRACT_USING=	gtar
 WRKSRC=		${WRKDIR}/${DISTNAME}/host
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-mako>=0.4.2:../../devel/py-mako
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.0:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-ruamel-yaml>=0.15:../../devel/py-ruamel-yaml
