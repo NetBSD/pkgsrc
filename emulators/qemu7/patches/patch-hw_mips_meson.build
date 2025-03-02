@@ -1,0 +1,15 @@
+$NetBSD: patch-hw_mips_meson.build,v 1.1 2025/03/02 12:45:46 nia Exp $
+
+Qemu MIPS target MIPSSIM adding VirtIO devices for development purposes.
+
+--- hw/mips/meson.build.orig	2021-08-04 16:29:07.000000000 +0000
++++ hw/mips/meson.build
+@@ -7,7 +7,7 @@ mips_ss.add(when: 'CONFIG_MIPS_CPS', if_
+ 
+ if 'CONFIG_TCG' in config_all
+ mips_ss.add(when: 'CONFIG_JAZZ', if_true: files('jazz.c'))
+-mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c'))
++mips_ss.add(when: 'CONFIG_MIPSSIM', if_true: files('mipssim.c', 'mipssim_virtio.c'))
+ mips_ss.add(when: 'CONFIG_FULOONG', if_true: files('fuloong2e.c'))
+ mips_ss.add(when: 'CONFIG_MIPS_BOSTON', if_true: [files('boston.c'), fdt])
+ endif
