@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1861 2025/03/02 20:23:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1862 2025/03/02 20:25:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-cyclonedx-python-lib to 9.1.0 [wiz 2025-03-02]
 	Updated www/py-google-api-python-client to 2.162.0 [wiz 2025-03-02]
 	Updated sysutils/py-jeepney to 0.9.0 [wiz 2025-03-02]
+	Updated www/py-nh3 to 0.2.21 [wiz 2025-03-02]
