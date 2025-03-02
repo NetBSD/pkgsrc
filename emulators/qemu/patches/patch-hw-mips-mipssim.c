@@ -1,4 +1,7 @@
-$NetBSD: patch-hw-mips-mipssim.c,v 1.5 2024/04/24 07:20:59 adam Exp $
+$NetBSD: patch-hw-mips-mipssim.c,v 1.6 2025/03/02 12:44:19 nia Exp $
+
+Adding support for VirtIO extensions to the MIPSSIM machine,
+which NetBSD has special extensions to support.
 
 --- hw/mips/mipssim.c.orig	2024-04-10 17:43:25.000000000 +0000
 +++ hw/mips/mipssim.c
