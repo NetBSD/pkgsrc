@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1866 2025/03/02 20:38:29 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1867 2025/03/02 20:40:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/nghttp2 to 1.65.0 [wiz 2025-03-02]
 	Updated www/nghttp2-tools to 1.65.0 [wiz 2025-03-02]
 	Updated devel/gopls to 0.18.1 [wiz 2025-03-02]
+	Updated devel/py-setuptools to 75.8.2 [wiz 2025-03-02]
