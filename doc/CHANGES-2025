@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1820 2025/03/01 22:06:26 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1821 2025/03/02 00:20:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2394,3 +2394,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/ruby34 to 3.4.2nb1 [taca 2025-03-01]
 	Updated net/gh to 2.67.0 [bsiegert 2025-03-01]
 	Updated devel/mise to 2025.2.8 [pin 2025-03-01]
+	Updated devel/cflow to 1.7 [mef 2025-03-02]
