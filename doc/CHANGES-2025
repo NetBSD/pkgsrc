@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1855 2025/03/02 20:11:38 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1856 2025/03/02 20:11:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2427,3 +2427,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/hugo to 0.145.0 [bsiegert 2025-03-02]
 	Updated security/nuclei to 3.3.9 [leot 2025-03-02]
 	Updated fonts/harfbuzz to 10.4.0 [wiz 2025-03-02]
+	Updated fonts/harfbuzz-icu to 10.4.0 [wiz 2025-03-02]
