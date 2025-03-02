@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:39 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/02 09:42:22 wiz Exp $
 
 DISTNAME=	gidgethub-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gidgethub/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://pypi.org/project/gidgethub/
 COMMENT=	Async GitHub API library
 LICENSE=	apache-2.0
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-uritemplate>=3.0.1:../../textproc/py-uritemplate
 DEPENDS+=	${PYPKGPREFIX}-JWT>=2.0.0:../../textproc/py-JWT
