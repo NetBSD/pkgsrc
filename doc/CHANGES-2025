@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1851 2025/03/02 18:25:03 leot Exp $
+$NetBSD: CHANGES-2025,v 1.1852 2025/03/02 18:32:40 leot Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2423,3 +2423,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/dnsx to 1.2.2 [leot 2025-03-02]
 	Updated security/tlsx to 1.1.9 [leot 2025-03-02]
 	Updated security/subfinder to 2.7.0 [leot 2025-03-02]
+	Updated security/httpx to 1.6.10 [leot 2025-03-02]
