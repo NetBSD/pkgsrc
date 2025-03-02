@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2025/02/15 11:39:20 mef Exp $
+@comment $NetBSD: PLIST,v 1.21 2025/03/02 00:46:46 mef Exp $
 bin/moar
 include/mimalloc/mimalloc-new-delete.h
 include/mimalloc/mimalloc-override.h
@@ -208,7 +208,6 @@ include/moar/strings/ops.h
 include/moar/strings/parse_num.h
 include/moar/strings/shiftjis.h
 include/moar/strings/shiftjis_codeindex.h
-include/moar/strings/siphash/csiphash.h
 include/moar/strings/unicode.h
 include/moar/strings/unicode_gen.h
 include/moar/strings/unicode_ops.h
