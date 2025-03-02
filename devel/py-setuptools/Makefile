@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.263 2025/01/09 09:27:48 adam Exp $
+# $NetBSD: Makefile,v 1.264 2025/03/02 20:39:51 wiz Exp $
 
-DISTNAME=	setuptools-75.8.0
+DISTNAME=	setuptools-75.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -29,6 +29,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-wheel>=0.44.0:../../devel/py-wheel
 
 # Pick setuptools.tests which are not built nor installed.
 TEST_ENV+=	PYTHONPATH=${WRKSRC}
+
+# as of 75.8.2
+# 25 failed, 1176 passed, 42 skipped, 10 xfailed, 2 xpassed, 18 errors
 
 .include "../../lang/python/batteries-included.mk"
 .include "../../lang/python/wheel.mk"
