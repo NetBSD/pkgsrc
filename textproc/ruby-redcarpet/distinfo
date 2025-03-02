@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2024/11/06 16:18:27 taca Exp $
+$NetBSD: distinfo,v 1.16 2025/03/02 14:45:34 taca Exp $
 
-BLAKE2s (redcarpet-3.6.0.gem) = 03b53a7752484dc9e843516843eb5d4649765f1568afee7bd5906c3105ce3175
-SHA512 (redcarpet-3.6.0.gem) = 795d4d252903ef6dd51febb18fa5665f599e199a07c0d60eeee60bea3d001c02d926f3b6802ac339de6b0f9efff30081471397256c5dcb6443ec1f04fd4e48f9
-Size (redcarpet-3.6.0.gem) = 55296 bytes
+BLAKE2s (redcarpet-3.6.1.gem) = f57106178688a93e2c6a8dfcd29f99a114806d3934d47569b16e2db9c96429ab
+SHA512 (redcarpet-3.6.1.gem) = 220452e147507604394ff5f3f2747cfc17da1e467bd59a54ed47ec46d2ffdaa1f505eb2a1c62723639d20f674e5e84014d55cf1b5d55b65c7ddee2d363a03812
+Size (redcarpet-3.6.1.gem) = 55296 bytes
