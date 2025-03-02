@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1825 2025/03/02 02:19:02 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1826 2025/03/02 09:01:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2399,3 +2399,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/MoarVM to 2025.02 [mef 2025-03-02]
 	Updated lang/nqp to 2025.02 [mef 2025-03-02]
 	Updated lang/rakudo to 2025.02 [mef 2025-03-02]
+	Updated devel/py-exceptiongroup to 1.2.2nb1 [wiz 2025-03-02]
