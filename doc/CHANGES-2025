@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1868 2025/03/02 20:46:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1869 2025/03/02 20:47:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2440,3 +2440,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/gopls to 0.18.1 [wiz 2025-03-02]
 	Updated devel/py-setuptools to 75.8.2 [wiz 2025-03-02]
 	Updated comms/py-textual-autocomplete to 4.0.0a0 [wiz 2025-03-02]
+	Updated comms/py-textual to 2.1.2 [wiz 2025-03-02]
