@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/10/14 06:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/02 09:21:40 wiz Exp $
 
 DISTNAME=	solo1-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/solo1/}
 
@@ -11,6 +11,7 @@ HOMEPAGE=	https://github.com/solokeys/solo1-cli/
 COMMENT=	Tool for managing SoloKeys Solo 1
 LICENSE=	apache-2.0 OR mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit>=0:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-click>=7.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-ecdsa>=0:../../security/py-ecdsa
