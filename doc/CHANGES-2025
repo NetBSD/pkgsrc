@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1863 2025/03/02 20:31:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1864 2025/03/02 20:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-jeepney to 0.9.0 [wiz 2025-03-02]
 	Updated www/py-nh3 to 0.2.21 [wiz 2025-03-02]
 	Updated devel/py-ruff to 0.9.9 [wiz 2025-03-02]
+	Updated www/nghttp2 to 1.65.0 [wiz 2025-03-02]
