@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1827 2025/03/02 09:28:51 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1828 2025/03/02 09:29:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated lang/rakudo to 2025.02 [mef 2025-03-02]
 	Updated devel/py-exceptiongroup to 1.2.2nb1 [wiz 2025-03-02]
 	Updated security/py-authlib to 1.5.0 [wiz 2025-03-02]
+	Updated security/py-solo1 to 0.1.1nb2 [wiz 2025-03-02]
