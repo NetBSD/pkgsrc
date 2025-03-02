@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1848 2025/02/24 16:22:50 manu Exp $
+# $NetBSD: Makefile,v 1.1849 2025/03/02 14:52:28 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -992,6 +992,7 @@ SUBDIR+=	ruby-aws-sdk-secretsmanager
 SUBDIR+=	ruby-aws-sigv4
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-capybara
+SUBDIR+=	ruby-cgi
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-coffee-rails
 SUBDIR+=	ruby-compass
