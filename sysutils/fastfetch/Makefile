@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/02/23 07:53:47 vins Exp $
+# $NetBSD: Makefile,v 1.21 2025/03/02 09:46:36 wiz Exp $
 
 DISTNAME=	fastfetch-2.37.0
 CATEGORIES=	sysutils
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 # prop_dictionary_keysym_value
-NOT_FOR_PLATFORM+=	NetBSD-[0-8].*-* NetBSD-9.[01].*-*
+NOT_FOR_PLATFORM+=	NetBSD-[0-8].*-* NetBSD-9.*-*
 
 .include "../../mk/bsd.prefs.mk"
 
