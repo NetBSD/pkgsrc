@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/02 14:51:54 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/cgi/escape.${RUBY_DLEXT}
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_LIBDIR}/BSDL
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/ext/cgi/escape/depend
+${GEM_LIBDIR}/ext/cgi/escape/escape.c
+${GEM_LIBDIR}/ext/cgi/escape/extconf.rb
+${GEM_LIBDIR}/lib/cgi.rb
+${GEM_LIBDIR}/lib/cgi/cookie.rb
+${GEM_LIBDIR}/lib/cgi/core.rb
+${GEM_LIBDIR}/lib/cgi/escape.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/cgi/html.rb
+${GEM_LIBDIR}/lib/cgi/session.rb
+${GEM_LIBDIR}/lib/cgi/session/pstore.rb
+${GEM_LIBDIR}/lib/cgi/util.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
