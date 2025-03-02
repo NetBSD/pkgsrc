@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2025/02/16 02:17:05 mef Exp $
+# $NetBSD: Makefile.common,v 1.25 2025/03/02 00:36:10 mef Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
@@ -11,7 +11,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/3.2/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://www.gnome.org/projects/gconf/
+HOMEPAGE=		https://gitlab.gnome.org/Archive/gconf
 COMMENT=		Configuration database system used by GNOME
 LICENSE=		gnu-lgpl-v2
 
