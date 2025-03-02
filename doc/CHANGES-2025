@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1835 2025/03/02 14:37:39 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1836 2025/03/02 14:39:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2407,3 +2407,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added emulators/qemu7 version 7.2.16 [nia 2025-03-02]
 	Updated databases/ruby-sequel to 5.90.0 [taca 2025-03-02]
 	Updated devel/ruby-pkg-config to 1.6.0 [taca 2025-03-02]
+	Updated net/ruby-dnsruby to 1.72.4 [taca 2025-03-02]
