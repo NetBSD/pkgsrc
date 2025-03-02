@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1822 2025/03/02 00:24:29 mef Exp $
+$NetBSD: CHANGES-2025,v 1.1823 2025/03/02 01:08:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2396,3 +2396,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/mise to 2025.2.8 [pin 2025-03-01]
 	Updated devel/cflow to 1.7 [mef 2025-03-02]
 	Updated devel/cflow-mode to 1.7 [mef 2025-03-02]
+	Updated devel/MoarVM to 2025.02 [mef 2025-03-02]
