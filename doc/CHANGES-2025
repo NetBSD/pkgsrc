@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1842 2025/03/02 14:56:56 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1843 2025/03/02 15:02:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/ruby-cgi version 0.4.2 [taca 2025-03-02]
 	Updated www/ruby-patron to 0.13.4 [taca 2025-03-02]
 	Updated www/ruby-uri to 1.0.3 [taca 2025-03-02]
+	Updated databases/php-mongodb to 1.21.0 [taca 2025-03-02]
