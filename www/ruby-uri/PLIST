@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2024/12/11 15:43:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/03/02 14:56:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.rdoc_options
 ${GEM_LIBDIR}/BSDL
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/docs/kernel.rb
 ${GEM_LIBDIR}/lib/uri.rb
 ${GEM_LIBDIR}/lib/uri/common.rb
 ${GEM_LIBDIR}/lib/uri/file.rb
