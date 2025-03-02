@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25493 2025/02/28 14:12:36 pin Exp $
+$NetBSD: TODO,v 1.25494 2025/03/02 13:15:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1111,23 +1111,34 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
+	o py-cryptography-44.0.2
+	o py-cyclonedx-python-lib-9.1.0
 	o py-ephem3-3.7.6.0
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
+	o py-gi-docgen-2025.3
+	o py-google-api-python-client-2.162.0
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
+	o py-jeepney-0.9.0
 	o py-josepy-2.0.0 [2.0.0 is incompatible to 1.x: check py-acme and py-certbot work]
 	o py-newt-0.52.21
+	o py-nh3-0.2.21
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
+	o py-posting-2.3.1
 	o py-pytz_deprecation_shim-0.1.0.post0
+	o py-ruff-0.9.9
 	o py-sbws-1.1.0
+	o py-setuptools-75.8.2
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-2.1.2
+	o py-textual-autocomplete-4.0.0a0
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
 	o py-uliweb-0.6
@@ -1217,6 +1228,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o softhsm-2.6.1
 	o sparsehash-2.0.4
 	o spcaview-20060501
+	o speech-dispatcher-0.12.0
 	o spiped-1.6.1b
 	o spl-1.0pre6
 	o sqlrelay-2.1.0
