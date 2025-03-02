@@ -1,4 +1,4 @@
-$NetBSD: patch-Cargo.toml,v 1.11 2025/02/23 11:45:54 wiz Exp $
+$NetBSD: patch-Cargo.toml,v 1.12 2025/03/02 20:31:19 wiz Exp $
 
 Depends on unpublished crates. Can't use cargo.mk to fetch it.
 
@@ -17,8 +17,8 @@ Depends on unpublished crates. Can't use cargo.mk to fetch it.
  regex = { version = "1.10.2" }
  rustc-hash = { version = "2.0.0" }
  # When updating salsa, make sure to also update the revision in `fuzz/Cargo.toml`
--salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "351d9cf0037be949d17800d0c7b4838e533c2ed6" }
-+salsa = { path = "../salsa-351d9cf0037be949d17800d0c7b4838e533c2ed6" }
+-salsa = { git = "https://github.com/salsa-rs/salsa.git", rev = "99be5d9917c3dd88e19735a82ef6bf39ba84bd7e" }
++salsa = { path = "../salsa-99be5d9917c3dd88e19735a82ef6bf39ba84bd7e" }
  schemars = { version = "0.8.16" }
  seahash = { version = "4.1.0" }
  serde = { version = "1.0.197", features = ["derive"] }
