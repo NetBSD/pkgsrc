@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2025/02/23 11:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2025/03/02 09:41:02 wiz Exp $
 
 DISTNAME=	exiv2-0.28.5
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ CHECK_PORTABILITY_SKIP+=	contrib/coverity.sh
 USE_TOOLS+=	msgfmt
 
 USE_LANGUAGES=		c c++
-USE_CXX_FEATURES=	c++17
+USE_CXX_FEATURES=	c++17 filesystem
 
 .include "../../mk/bsd.prefs.mk"
 
