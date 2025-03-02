@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1829 2025/03/02 09:30:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1830 2025/03/02 09:42:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-authlib to 1.5.0 [wiz 2025-03-02]
 	Updated security/py-solo1 to 0.1.1nb2 [wiz 2025-03-02]
 	Updated www/py-aiohttp-remotes to 1.2.0nb1 [wiz 2025-03-02]
+	Updated devel/py-gidgethub to 5.3.0nb1 [wiz 2025-03-02]
