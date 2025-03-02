@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2024/08/16 19:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/02 09:30:01 wiz Exp $
 
 DISTNAME=	aiohttp_remotes-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/aiohttp-remotes/}
 
@@ -10,6 +11,7 @@ HOMEPAGE=	https://github.com/aio-libs/aiohttp-remotes
 COMMENT=	Library of useful tools for aiohttp.web server
 LICENSE=	mit
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-flit_core>=3.11:../../devel/py-flit_core
 TOOL_DEPENDS+=	${PYPKGPREFIX}-flit-[0-9]*:../../devel/py-flit
 DEPENDS+=	${PYPKGPREFIX}-aiohttp>=3.8.1:../../www/py-aiohttp
 DEPENDS+=	${PYPKGPREFIX}-typing-extensions>=3.7.4:../../devel/py-typing-extensions
