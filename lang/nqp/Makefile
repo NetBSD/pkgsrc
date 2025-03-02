@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2025/02/15 11:46:55 mef Exp $
+# $NetBSD: Makefile,v 1.57 2025/03/02 02:15:46 mef Exp $
 
-DISTNAME=	nqp-2025.01
+DISTNAME=	nqp-2025.02
 CATEGORIES=	lang perl6
-#ASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
-MASTER_SITES=	https://github.com/perl6/nqp/releases/download/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=perl6/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://rakudo.org/
@@ -28,6 +27,13 @@ CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 
 # lang/rakudo wants these two *.pm on @INC path as well as 3rdparty/nqp..
 EXTRA_MODULES+=		Config.pm Macros.pm
+
+# strange, two files have been gone away, and still look necessary, picked from 2025.01 version
+pre-configure:
+	mkdir -p ${WRKSRC}/3rdparty/nqp-configure/lib/NQP
+	cp -p ${FILESDIR}/Config.pm \
+	      ${FILESDIR}/Macros.pm \
+	${WRKSRC}/3rdparty/nqp-configure/lib/NQP
 
 # please (or let me ) correct later for hard coding
 post-install:
