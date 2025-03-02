@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2024/10/27 13:39:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/03/02 14:37:11 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -7,7 +7,6 @@ ${GEM_LIBDIR}/NEWS.md
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/pkg-config.rb
-${GEM_LIBDIR}/lib/pkg-config/version.rb
-${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/run.rb
 ${GEM_LIBDIR}/test/test-pkg-config.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
