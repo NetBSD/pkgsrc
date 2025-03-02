@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1837 2025/03/02 14:41:14 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1838 2025/03/02 14:45:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2409,3 +2409,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-pkg-config to 1.6.0 [taca 2025-03-02]
 	Updated net/ruby-dnsruby to 1.72.4 [taca 2025-03-02]
 	Updated security/ruby-metasploit_payloads-mettle to 1.0.39 [taca 2025-03-02]
+	Updated textproc/ruby-redcarpet to 3.6.1 [taca 2025-03-02]
