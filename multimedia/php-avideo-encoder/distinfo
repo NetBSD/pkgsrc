@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/03 15:24:12 manu Exp $
+
+BLAKE2s (AVideo-Encoder/3.7.tar.gz) = 3a3a1b543e4e339fe130a81370c9e31a31a4ca6b185bc09bb9198b2535c77546
+SHA512 (AVideo-Encoder/3.7.tar.gz) = 7373d611b922d57207bdc0114fa00d89bee66d2f87185052a8ae16e56d29ab72abd31344624039ec3b3af31f23c6a5889e3ef5720cb989f2bc1eaae5f836f796
+Size (AVideo-Encoder/3.7.tar.gz) = 25904400 bytes
