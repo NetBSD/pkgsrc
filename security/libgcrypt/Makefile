@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.115 2025/02/18 15:23:33 wiz Exp $
+# $NetBSD: Makefile,v 1.116 2025/03/03 21:32:27 nia Exp $
 
 DISTNAME=	libgcrypt-1.11.0
 PKGREVISION=	2
 CATEGORIES=	security
-MASTER_SITES=	https://gnupg.org/ftp/gcrypt/libgcrypt/
+MASTER_SITES=	${MASTER_SITE_GNUPG:=libgcrypt/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
-TEXINFO_REQD=		4.0
+TEXINFO_REQD+=		4.0
 INFO_FILES=		yes
 
 .include "../../mk/compiler.mk"
@@ -45,8 +45,8 @@ CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 # dependencies like libgcrypt.  I don't see a way to use pkg-config or
 # anything reasonable to override this, so, we do the nonsense thing
 # instead.
-CONFIGURE_ARGS+=	GPGRT_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpgrt-config
-CONFIGURE_ARGS+=	GPG_ERROR_CONFIG=${CROSS_DESTDIR:Q}${LOCALBASE}/bin/gpg-error-config
+CONFIGURE_ARGS+=	GPGRT_CONFIG=${CROSS_DESTDIR:Q}${PREFIX}/bin/gpgrt-config
+CONFIGURE_ARGS+=	GPG_ERROR_CONFIG=${CROSS_DESTDIR:Q}${PREFIX}/bin/gpg-error-config
 .endif
 
 .if ${OPSYS} == "Darwin"
