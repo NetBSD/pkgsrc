@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1889 2025/03/03 07:05:31 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1890 2025/03/03 07:06:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.functools to 4.1.0nb1 [wiz 2025-03-03]
 	Updated mail/sendmail to 8.18.1nb7 [jnemeth 2025-03-03]
 	Updated x11/py-qt-builder to 1.18.1nb1 [wiz 2025-03-03]
+	Updated time/py-rfc3339 to 2.0.1nb1 [wiz 2025-03-03]
