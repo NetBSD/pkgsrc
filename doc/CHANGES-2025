@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1897 2025/03/03 10:55:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1898 2025/03/03 12:27:52 jun Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2474,3 +2474,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-test to 8.3.5 [adam 2025-03-03]
 	Updated textproc/py-sphinx to 8.2.3 [adam 2025-03-03]
 	Updated net/php-baikal to 0.9.5 [wiz 2025-03-03]
+	Updated emulators/nono to 1.3.0nb1 [jun 2025-03-03]
