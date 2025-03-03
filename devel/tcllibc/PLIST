@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/26 09:59:00 scole Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/03 01:31:02 scole Exp $
 include/sha256c/sha256.h
 include/sha256c/sha256c.decls
 include/sha256c/sha256cDecls.h
 include/sha256c/sha256cStubLib.h
-lib/tcllibc${PKGVERSION}/critcl-rt.tcl
-lib/tcllibc${PKGVERSION}/license.terms
-lib/tcllibc${PKGVERSION}/pkgIndex.tcl
-lib/tcllibc${PKGVERSION}/teapot.txt
+lib/${PVNR}/critcl-rt.tcl
+lib/${PVNR}/license.terms
+lib/${PVNR}/pkgIndex.tcl
+lib/${PVNR}/teapot.txt
