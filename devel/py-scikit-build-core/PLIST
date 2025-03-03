@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/09/15 15:51:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/03 08:43:53 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -38,6 +38,19 @@ ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/LICENSE
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.py
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.pyc
 ${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/__init__.pyo
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.py
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.pyc
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/constants.pyo
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/errors.py
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/errors.pyc
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/errors.pyo
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/project_table.py
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/project_table.pyc
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/project_table.pyo
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/py.typed
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/pyproject.py
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/pyproject.pyc
+${PYSITELIB}/scikit_build_core/_vendor/pyproject_metadata/pyproject.pyo
 ${PYSITELIB}/scikit_build_core/_version.py
 ${PYSITELIB}/scikit_build_core/_version.pyc
 ${PYSITELIB}/scikit_build_core/_version.pyi
@@ -150,6 +163,9 @@ ${PYSITELIB}/scikit_build_core/file_api/query.pyo
 ${PYSITELIB}/scikit_build_core/file_api/reply.py
 ${PYSITELIB}/scikit_build_core/file_api/reply.pyc
 ${PYSITELIB}/scikit_build_core/file_api/reply.pyo
+${PYSITELIB}/scikit_build_core/format.py
+${PYSITELIB}/scikit_build_core/format.pyc
+${PYSITELIB}/scikit_build_core/format.pyo
 ${PYSITELIB}/scikit_build_core/hatch/__init__.py
 ${PYSITELIB}/scikit_build_core/hatch/__init__.pyc
 ${PYSITELIB}/scikit_build_core/hatch/__init__.pyo
