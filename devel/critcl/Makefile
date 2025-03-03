@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/03/03 01:26:07 scole Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/03 06:35:48 scole Exp $
 
 DISTNAME=	critcl-3.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel tcl
 MASTER_SITES=	${MASTER_SITE_GITHUB:=andreas-kupries/}
 
