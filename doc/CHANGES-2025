@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1875 2025/03/03 02:30:27 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1876 2025/03/03 02:39:20 scole Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2449,3 +2449,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/tcllib to 2.0nb1 [scole 2025-03-03]
 	Updated devel/tcllibc to 2.0nb1 [scole 2025-03-03]
 	Updated mail/mu to 1.12.9 [ktnb 2025-03-03]
+	Updated graphics/tkimg to 2.0.1 [scole 2025-03-03]
