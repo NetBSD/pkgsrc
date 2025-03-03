@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2024/10/09 04:29:58 ryoon Exp $
+$NetBSD: patch-configure,v 1.3 2025/03/03 16:14:24 adam Exp $
 
 Sun audio support.
 
@@ -8,7 +8,7 @@ Fix install_name_dir on Darwin.
 
 Do not use 'rsync'.
 
---- configure.orig	2024-09-29 23:31:47.000000000 +0000
+--- configure.orig	2025-03-03 00:22:08.000000000 +0000
 +++ configure
 @@ -2299,6 +2299,7 @@ HEADERS_LIST="
      sys_resource_h
@@ -64,7 +64,7 @@ Do not use 'rsync'.
  disabled makeinfo_html && texi2html --help 2> /dev/null | grep -q 'init-file' && enable texi2html || disable texi2html
  perl -v            > /dev/null 2>&1 && enable perl      || disable perl
  pod2man --help     > /dev/null 2>&1 && enable pod2man   || disable pod2man
--rsync --help 2> /dev/null | grep -q 'contimeout' && enable rsync_contimeout || disable rsync_contimeout
+-rsync --help 2> /dev/null | grep -q 'contimeout=' && enable rsync_contimeout || disable rsync_contimeout
  xmllint --version  > /dev/null 2>&1 && enable xmllint   || disable xmllint
  
  check_headers linux/fb.h
