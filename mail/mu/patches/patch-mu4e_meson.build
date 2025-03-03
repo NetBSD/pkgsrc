@@ -1,0 +1,14 @@
+$NetBSD: patch-mu4e_meson.build,v 1.1 2025/03/03 02:29:41 ktnb Exp $
+
+Don't care about info errors
+
+--- mu4e/meson.build.orig	2025-02-27 21:15:32.748538946 +0000
++++ mu4e/meson.build
+@@ -143,6 +143,7 @@ if makeinfo.found()
+                 install_dir: infodir,
+                 install: true,
+                 command: [makeinfo,
++                          '--force', '--no-validate',
+                           '-o', join_paths(meson.current_build_dir(), 'mu4e.info'),
+                           join_paths(meson.current_source_dir(), 'mu4e.texi'),
+                           '-I', join_paths(meson.current_build_dir(), '..')])
