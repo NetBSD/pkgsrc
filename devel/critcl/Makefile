@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/27 02:08:21 scole Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/03 01:26:07 scole Exp $
 
 DISTNAME=	critcl-3.3.1
 PKGREVISION=	1
@@ -28,6 +28,8 @@ do-build:
 GENERATE_PLIST+=	(cd ${DESTDIR}${PREFIX} && ${LS} \
 			lib/critcl_callback_tcl8-1.1/*/* \
 			lib/critcl_md5c_tcl8-0.12/*/*);
+
+PLIST_SUBST+=		PVNR=${PKGVERSION_NOREV}
 
 do-install:
 	# do nothing
