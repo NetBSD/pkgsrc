@@ -1,0 +1,2080 @@
+$NetBSD: patch-uniqid,v 1.1 2025/03/03 15:21:05 manu Exp $
+
+Avoid uniqid() for performance sake
+
+uniqid() provides time-based unique idenfitiers. In order to avoid
+collisions, it waits for time to elapse. Depending on PHP version,
+this is done by sleeping or by polling the gettimeofday() system
+call, both approach being rather inefficient. uniqid() may take a
+few dozen of milliseconds to return, and it is called very often
+to build a page.
+
+AVideo implements _uniqid() which provides random-based unique
+identifiers. This change replace uniqid() calls by _uniqid() to
+improve performances.
+
+Backport of upstream https://github.com/WWBN/AVideo/pull/9905
+
+--- ./admin/functions.php.orig	2025-03-01 02:04:58.172236792 +0100
++++ ./admin/functions.php	2025-03-01 02:04:58.186281699 +0100
+@@ -64,9 +64,9 @@
+             }
+             $elements[] = "<tr><td>{$label} </td><td>{$input}{$help}</td></tr>";
+         } elseif (is_bool($valueJson)) {
+             //var_dump($keyJson, $valueJson, '---<br>');
+-            $id = uniqid();
++            $id = _uniqid();
+             $input = '<div class="material-switch">
+                                 <input data-toggle="toggle" type="checkbox" id="' . $keyJson . $id . '" name="' . $keyJson . '" value="1" ' . ($valueJson ? "checked" : "") . ' >
+                                 <label for="' . $keyJson . $id . '" class="label-primary"></label>
+                             </div>';
+@@ -85,9 +85,9 @@
+         $input = '<a href="https://youphp.tube/marketplace/" class="btn btn-danger btn-sm btn-xs">'.__('Buy this plugin now').'</a>';
+     } else {
+         $plugin = AVideoPlugin::loadPluginIfEnabled($pluginName);
+         $pluginForced = AVideoPlugin::loadPlugin($pluginName);
+-        $id = uniqid();
++        $id = _uniqid();
+         $uuid = $pluginForced->getUUID();
+         $input = '<div class="material-switch">
+                                 <input class="pluginSwitch" data-toggle="toggle" type="checkbox" id="' . $id . '" uuid="' . $uuid . '" name="' . $pluginName . '" value="1" ' . (!empty($plugin) ? "checked" : "") . ' >
+                                 <label for="' . $id . '" class="label-primary"></label>
+--- ./admin/index.php.orig	2025-03-01 02:04:58.189556384 +0100
++++ ./admin/index.php	2025-03-01 02:04:58.193064864 +0100
+@@ -233,9 +233,9 @@
+                 if (empty($_REQUEST['page'])) {
+                     $panel = 'panel-primary';
+                 }
+                 foreach ($itens as $key => $value) {
+-                    $uid = uniqid();
++                    $uid = _uniqid();
+                     $href = 'data-toggle="collapse" data-parent="#accordion" href="#collapse' . $uid . '"';
+                     if (!empty($value->href)) {
+                         $href = 'href="' . $global['webSiteRootURL'] . 'admin/?page=' . $value->href . '"';
+                     }
+--- ./install/checkConfiguration.php.orig	2025-03-01 02:04:58.196364835 +0100
++++ ./install/checkConfiguration.php	2025-03-01 02:06:52.684806806 +0100
+@@ -182,9 +182,9 @@
+ error_log("Installation: ".__LINE__);
+ $mysqli->close();
+ 
+ if (empty($_POST['salt'])) {
+-    $_POST['salt'] = uniqid();
++    $_POST['salt'] = _uniqid();
+ }
+ $content = "<?php
+ \$global['configurationVersion'] = 3.1;
+ \$global['disableAdvancedConfigurations'] = 0;
+@@ -200,15 +200,16 @@
+     \$global['webSiteRootURL'] = '{$_POST['webSiteRootURL']}';
+ }
+ \$global['systemRootPath'] = '{$_POST['systemRootPath']}';
+ \$global['salt'] = '{$_POST['salt']}';
+-\$global['saltV2'] = '"._uniqid()."';
++\$global['saltV2'] = '"._uniqid(true)."';
+ \$global['disableTimeFix'] = 0;
+ \$global['enableDDOSprotection'] = 1;
+ \$global['ddosMaxConnections'] = 40;
+ \$global['ddosSecondTimeout'] = 5;
+ \$global['strictDDOSprotection'] = 0;
+ \$global['noDebug'] = 0;
++\$global['noUniqid'] = 0;
+ \$global['webSiteRootPath'] = '';
+ if(empty(\$global['webSiteRootPath'])){
+     preg_match('/https?:\/\/[^\/]+(.*)/i', \$global['webSiteRootURL'], \$matches);
+     if(!empty(\$matches[1])){
+--- ./install/deleteStorageFiles.php.orig	2025-03-01 02:04:58.203135867 +0100
++++ ./install/deleteStorageFiles.php	2025-03-01 02:04:58.206624025 +0100
+@@ -19,9 +19,9 @@
+ //foreach (glob("../videos/*.{" . implode(",", $fileExtensions) . "}", GLOB_BRACE) as $filename) {
+ foreach (glob("../videos/*", GLOB_BRACE) as $filename) {
+     $base = basename($filename);
+     if (is_dir($filename)) {
+-        if (strpos($base, "_YPTuniqid_") !== false) {
++        if (strpos($base, "_YPT_uniqid_") !== false) {
+             $files[$base] = [$base, $filename];
+         }
+     } else {
+         $baseName = explode("_portrait", $base);
+--- ./install/populateForTest.php.orig	2025-03-01 02:04:58.209903935 +0100
++++ ./install/populateForTest.php	2025-03-01 02:04:58.213361893 +0100
+@@ -65,9 +65,9 @@
+ // create videos
+ for ($i = 0; $i < $totalVideos; $i++) {
+     $date = date('Y/m/d H:i:s');
+     $title = "[$i] Auto {$date}";
+-    $filename = "testvideo{$i}_" . uniqid();
++    $filename = "testvideo{$i}_" . _uniqid();
+     $video = new Video($title, $filename);
+ 
+     $video->setDuration("00:00:45");
+     $video->setType('video');
+--- ./install/recoverFilesToVideos.php.orig	2025-03-01 02:04:58.216646519 +0100
++++ ./install/recoverFilesToVideos.php	2025-03-01 02:04:58.220037871 +0100
+@@ -14,9 +14,9 @@
+ //foreach (glob("../videos/*.{" . implode(",", $fileExtensions) . "}", GLOB_BRACE) as $filename) {
+ foreach (glob("../videos/*", GLOB_BRACE) as $filename) {
+     $base = basename($filename);
+     if (is_dir($filename)) {
+-        if (strpos($base, "_YPTuniqid_") !== false || strpos($base, "video_2") !== false || strpos($base, "v_2") !== false) {
++        if (strpos($base, "_YPT_uniqid_") !== false || strpos($base, "video_2") !== false || strpos($base, "v_2") !== false) {
+             $files[$base] = [$base, $filename];
+         }
+     } else {
+         $types = ['_HD', '_Low', '_SD'];
+--- ./objects/ICS.php.orig	2025-03-01 02:04:58.223300045 +0100
++++ ./objects/ICS.php	2025-03-01 02:04:58.226764913 +0100
+@@ -118,9 +118,9 @@
+     }
+ 
+     // Set some default values
+     $props['DTSTAMP'] = $this->format_timestamp('now');
+-    $props['UID'] = uniqid();
++    $props['UID'] = _uniqid();
+ 
+     // Append properties
+     foreach ($props as $k => $v) {
+         if($k=='VALARM'){
+--- ./objects/Object.php.orig	2025-03-01 02:04:58.230190991 +0100
++++ ./objects/Object.php	2025-03-01 02:04:58.233967154 +0100
+@@ -786,9 +786,9 @@
+         unset($__getAVideoCache);
+         //_error_log('deleteALLCache: '.json_encode(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS)));
+         $tmpDir = self::getCacheDir('', false);
+ 
+-        $newtmpDir = rtrim($tmpDir, DIRECTORY_SEPARATOR) . uniqid();
++        $newtmpDir = rtrim($tmpDir, DIRECTORY_SEPARATOR) . _uniqid();
+         _error_log("deleteALLCache rename($tmpDir, $newtmpDir) ");
+         @rename($tmpDir, $newtmpDir);
+         if (is_dir($tmpDir)) {
+             _error_log('deleteALLCache 1 rmdir ' . $tmpDir);
+--- ./objects/aVideoQueueEncoder.json.php.orig	2025-03-01 02:04:58.237278647 +0100
++++ ./objects/aVideoQueueEncoder.json.php	2025-03-01 02:04:58.240763036 +0100
+@@ -110,9 +110,9 @@
+         /**
+          * Make a better title and clean title
+          */
+         $videoNewTitle = $video->getTitle();
+-        $titleParts = explode("YPTuniqid", $videoNewTitle);
++        $titleParts = explode("YPT_uniqid", $videoNewTitle);
+         $video->setTitle($titleParts[0]);
+         $video->setClean_title($titleParts[0]);
+     }
+     $id = $video->save($updateVideoGroups);
+--- ./objects/category.php.orig	2025-03-01 02:04:58.244112511 +0100
++++ ./objects/category.php	2025-03-01 02:04:58.247843866 +0100
+@@ -156,9 +156,9 @@
+ 
+         // check if clean name exists
+         $exists = $this->getCategoryByName($this->clean_name);
+         if (!empty($exists) && $exists['id'] !== $this->id) {
+-            $this->clean_name .= uniqid();
++            $this->clean_name .= _uniqid();
+         }
+ 
+         $this->nextVideoOrder = intval($this->nextVideoOrder);
+         $this->parentId = intval($this->parentId);
+--- ./objects/functionCroppie.php.orig	2025-03-01 02:04:58.251103210 +0100
++++ ./objects/functionCroppie.php	2025-03-01 02:04:58.254529504 +0100
+@@ -40,9 +40,9 @@
+         $boundary = 0;
+     }
+     $boundaryWidth = $viewportWidth + $boundary;
+     $boundaryHeight = $viewportHeight + $boundary;
+-    $uid = uniqid();
++    $uid = _uniqid();
+ 
+     $varsArray = [
+         'buttonTitle' => $buttonTitle,
+         'callBackJSFunction' => $callBackJSFunction,
+--- ./objects/functionInfiniteScroll.php.orig	2025-03-01 02:04:58.257821708 +0100
++++ ./objects/functionInfiniteScroll.php	2025-03-01 02:04:58.261283555 +0100
+@@ -56,9 +56,9 @@
+     }
+ 
+     $isInfiniteScroll = !empty($infinityScrollGetFromSelector) && !empty($infinityScrollAppendIntoSelector);
+ 
+-    $uid = uniqid();
++    $uid = _uniqid();
+ 
+     if ($total < $maxVisible) {
+         $maxVisible = $total;
+     }
+--- ./objects/functiongetShareMenu.php.orig	2025-03-01 02:04:58.264588743 +0100
++++ ./objects/functiongetShareMenu.php	2025-03-01 02:04:58.268090984 +0100
+@@ -54,9 +54,9 @@
+                     $url = $permaLink;
+                     //$title = urlencode($title);
+                     include $global['systemRootPath'] . 'view/include/social.php';
+                     $type = 'animate__flipInX';
+-                    $loaderSequenceName = uniqid();
++                    $loaderSequenceName = _uniqid();
+                     ?>
+                 </div>
+                 <div class="tab-pane" id="tabEmbed">
+                     <strong><i class="fas fa-share-square"></i> <?php echo __("Embed"); ?> (Iframe): <?php getButtontCopyToClipboard('textAreaEmbed'); ?></strong>
+@@ -85,9 +85,9 @@
+                     </textarea>
+                 </div>
+                 <?php
+                 if (empty($advancedCustom->disableEmailSharing)) {
+-                    $loaderSequenceName = uniqid();
++                    $loaderSequenceName = _uniqid();
+                     ?>
+                     <div class="tab-pane" id="tabEmail">
+                         <?php if (!User::isLogged()) { ?>
+                             <strong>
+@@ -165,9 +165,9 @@
+ 
+                     <?php
+                 }
+                 if (!empty($permaLink) && $permaLink !== $URLFriendly) {
+-                    $loaderSequenceName = uniqid();
++                    $loaderSequenceName = _uniqid();
+                     ?>
+                     <div class="tab-pane" id="tabPermaLink">
+                         <div class="form-group <?php echo getCSSAnimationClassAndStyle($type, $loaderSequenceName); ?>">
+                             <label class="control-label"><?php echo __("Permanent Link") ?></label>
+--- ./objects/functions.php.orig	2025-03-01 02:04:58.272126408 +0100
++++ ./objects/functions.php	2025-03-01 02:04:58.277603545 +0100
+@@ -1604,9 +1604,9 @@
+ }
+ 
+ function getVideoImagewithHoverAnimation($relativePath, $relativePathHoverAnimation = '', $title = '', $preloadImage = false, $doNotUseAnimatedGif = false)
+ {
+-    $id = uniqid();
++    $id = _uniqid();
+     //getImageTagIfExists($relativePath, $title = '', $id = '', $style = '', $class = 'img img-responsive', $lazyLoad = false, $preloadImage=false)
+     $img = getImageTagIfExists($relativePath, $title, "thumbsJPG{$id}", '', 'thumbsJPG img img-responsive', false, $preloadImage) . PHP_EOL;
+     if (empty($doNotUseAnimatedGif) && !empty($relativePathHoverAnimation) && empty($_REQUEST['noImgGif'])) {
+         $img .= getImageTagIfExists($relativePathHoverAnimation, $title, "thumbsGIF{$id}", 'position: absolute; top: 0;', 'thumbsGIF img img-responsive ', $preloadImage) . PHP_EOL;
+@@ -4118,9 +4118,9 @@
+ }
+ 
+ function getButtontCopyToClipboard($elemToCopyId, $attributes = 'class="btn btn-default btn-sm btn-xs pull-right"', $label = "Copy to Clipboard")
+ {
+-    $id = "getButtontCopyToClipboard" . uniqid();
++    $id = "getButtontCopyToClipboard" . _uniqid();
+ ?>
+     <button id="<?php echo $id; ?>" <?php echo $attributes; ?> data-toggle="tooltip" data-placement="left" title="<?php echo __($label); ?>"><i class="fas fa-clipboard"></i> <?php echo __($label); ?></button>
+     <script>
+         var timeOutCopyToClipboard_<?php echo $id; ?>;
+@@ -4246,9 +4246,9 @@
+ function getCaptcha($uid = "", $forceCaptcha = false)
+ {
+     global $global;
+     if (empty($uid)) {
+-        $uid = "capcha_" . uniqid();
++        $uid = "capcha_" . _uniqid();
+     }
+     $contents = getIncludeFileContent($global['systemRootPath'] . 'objects/functiongetCaptcha.php', ['uid' => $uid, 'forceCaptcha' => $forceCaptcha]);
+     $parts = explode('<script>', $contents);
+     return [
+@@ -4660,15 +4660,15 @@
+     if (empty($endTime)) {
+         $endTime = time();
+     }
+     $timer = abs($endTime - $startTime);
+-    $uid = uniqid();
++    $uid = _uniqid();
+     return "<span id='{$uid}'></span><script>$(document).ready(function () {startTimer({$timer}, '#{$uid}', '');})</script>";
+ }
+ 
+ function getServerClock()
+ {
+-    $id = uniqid();
++    $id = _uniqid();
+     $today = getdate();
+     $html = '<span id="' . $id . '">00:00:00</span>';
+     $html .= "<script type=\"text/javascript\">
+     $(document).ready(function () {
+@@ -4773,9 +4773,9 @@
+ function getSocialModal($videos_id, $url = "", $title = "")
+ {
+     global $global;
+     $video['id'] = $videos_id;
+-    $sharingUid = uniqid();
++    $sharingUid = _uniqid();
+     $filePath = $global['systemRootPath'] . 'objects/functionGetSocialModal.php';
+     $contents = getIncludeFileContent(
+         $filePath,
+         [
+@@ -6515,9 +6515,9 @@
+     if (empty($type) || ($type < 1 && $type > 8)) {
+         $type = rand(1, 8);
+     }
+     if (empty($id)) {
+-        $id = uniqid();
++        $id = _uniqid();
+     }
+     $filePath = $global['systemRootPath'] . 'objects/functionGetHamburgerButton.php';
+     return getIncludeFileContent($filePath, ['type' => $type, 'id' => $id, 'parameters' => $parameters, 'startActive' => $startActive, 'invert' => $invert]);
+ }
+@@ -6958,9 +6958,9 @@
+     $max = strlen($characters) - 1;
+     $char1 = $characters[rand(0, $max)];
+     $char2 = $characters[rand(0, $max)];
+     $char3 = $characters[rand(0, $max)];
+-    $uniqueId = uniqid();
++    $uniqueId = _uniqid();
+     $uniquePart1 = str_pad(base_convert(substr($uniqueId, -5), 16, 36), 4, $char1, STR_PAD_LEFT);
+     $uniquePart2 = str_pad(base_convert(substr($uniqueId, 4, 4), 16, 36), 4, $char2, STR_PAD_LEFT);
+     $uniquePart3 = str_pad(base_convert(substr($uniqueId, 0, 4), 16, 36), 4, $char3, STR_PAD_LEFT);
+     $code = strtoupper("{$uniquePart2}-{$uniquePart1}");
+@@ -7001,9 +7001,9 @@
+     ?>
+         <link href="<?php echo getURL('node_modules/flickity/dist/flickity.min.css'); ?>" rel="stylesheet" type="text/css" />
+     <?php
+     }
+-    $carouselClass = 'carousel_' . uniqid();
++    $carouselClass = 'carousel_' . _uniqid();
+     ?>
+     <div id="<?php echo $carouselClass; ?>" class=" HorizontalFlickity" style="visibility: hidden;">
+         <?php 
+         $initialIndex = 0;
+--- ./objects/functionsBrowser.php.orig	2025-03-01 02:04:58.280956723 +0100
++++ ./objects/functionsBrowser.php	2025-03-01 02:04:58.284442152 +0100
+@@ -98,9 +98,9 @@
+ 
+     $cookieName = "yptDeviceID";
+     if (empty($_COOKIE[$cookieName])) {
+         if (empty($_GET[$cookieName])) {
+-            $id = uniqidV4();
++            $id = _uniqidV4();
+             $_GET[$cookieName] = $id;
+         }
+         if (empty($_SESSION[$cookieName])) {
+             _session_start();
+--- ./objects/functionsFile.php.orig	2025-03-01 02:04:58.287806988 +0100
++++ ./objects/functionsFile.php	2025-03-01 02:04:58.291492487 +0100
+@@ -654,9 +654,9 @@
+ // due the some OS gives a fake is_writable response
+ function isWritable($dir)
+ {
+     $dir = rtrim($dir, '/') . '/';
+-    $file = $dir . uniqid();
++    $file = $dir . _uniqid();
+     $result = false;
+     $time = time();
+     if (@file_put_contents($file, $time)) {
+         if ($fileTime = @file_get_contents($file)) {
+@@ -673,9 +673,9 @@
+ {
+     if (!isWritable($dir)) {
+         return false;
+     }
+-    $tmpFile = "{$dir}" . uniqid();
++    $tmpFile = "{$dir}" . _uniqid();
+     $bytes = @file_put_contents($tmpFile, time());
+     @unlink($tmpFile);
+     return !empty($bytes);
+ }
+@@ -715,9 +715,9 @@
+ }
+ 
+ function getTmpFile()
+ {
+-    return getTmpDir("tmpFiles") . uniqid();
++    return getTmpDir("tmpFiles") . _uniqid();
+ }
+ 
+ function _file_put_contents($filename, $data, $flags = 0, $context = null)
+ {
+--- ./objects/functionsGetTinyMCE.php.orig	2025-03-01 02:04:58.294766492 +0100
++++ ./objects/functionsGetTinyMCE.php	2025-03-01 02:04:58.298239203 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ global $tinyMCELibs;
+-$tinyMCEuid = uniqid();
++$tinyMCEuid = _uniqid();
+ 
+ // Basic configurations
+ $basicValidElements = 'a[role|href|target|data-toggle|data-parent|data-dismiss|aria-expanded|aria-controls|class|title],' .
+     'div[class|role|data-toggle|aria-labelledby|aria-hidden|aria-expanded|data-target|data-parent|style],' .
+--- ./objects/functionsImages.php.orig	2025-03-01 02:04:58.301568453 +0100
++++ ./objects/functionsImages.php	2025-03-01 02:04:58.305271198 +0100
+@@ -275,9 +275,9 @@
+         $h = 200;
+         $sizes = getimagesize($source);
+         if ($sizes[0] < $w || $sizes[1] < $h) {
+             $tmpDir = getTmpDir();
+-            $fileConverted = $tmpDir . "_jpg_" . uniqid() . ".jpg";
++            $fileConverted = $tmpDir . "_jpg_" . _uniqid() . ".jpg";
+             convertImage($source, $fileConverted, 100);
+             im_resize($fileConverted, $destination, $w, $h, 100);            
+             //_error_log("convertImageToOG ($destination) unlink line=".__LINE__);
+             @unlink($fileConverted);
+@@ -323,9 +323,9 @@
+     if (!file_exists($destination)) {
+         //_error_log("convertImageIfNotExists($source, $destination, $width, $height)");
+         try {
+             $tmpDir = getTmpDir();
+-            $fileConverted = $tmpDir . "_jpg_" . uniqid() . ".jpg";
++            $fileConverted = $tmpDir . "_jpg_" . _uniqid() . ".jpg";
+             convertImage($source, $fileConverted, 100);
+             if (file_exists($fileConverted)) {
+                 if ($scaleUp) {
+                     scaleUpImage($fileConverted, $fileConverted, $width, $height);
+--- ./objects/functionsMail.php.orig	2025-03-01 02:04:58.308608501 +0100
++++ ./objects/functionsMail.php	2025-03-01 02:04:58.312103369 +0100
+@@ -155,9 +155,9 @@
+     // Make sure the emails in $to are unique
+     $to = array_unique($to);
+     $content = ['to' => $to, 'subject' => $subject, 'message' => $message];
+     //$tmpFile = getTmpFile();
+-    $tmpFile = "{$global['systemRootPath']}videos/emails_" . uniqid() . '.log';
++    $tmpFile = "{$global['systemRootPath']}videos/emails_" . _uniqid() . '.log';
+     $bytes = file_put_contents($tmpFile, _json_encode($content));
+     //outputAndContinueInBackground();
+     $command = "php {$global['systemRootPath']}objects/sendSiteEmailAsync.php '$tmpFile' && rm '$tmpFile'";
+     $totalEmails = count($to);
+--- ./objects/functionsPHP.php.orig	2025-03-01 02:04:58.315366906 +0100
++++ ./objects/functionsPHP.php	2025-03-01 02:04:58.318906839 +0100
+@@ -360,9 +360,9 @@
+     _resetcookie('PHPSESSID', session_id());
+     _resetcookie(session_name(), session_id());
+ }
+ 
+-function uniqidV4()
++function _uniqidV4()
+ {
+     $randomString = openssl_random_pseudo_bytes(16);
+     $time_low = bin2hex(substr($randomString, 0, 4));
+     $time_mid = bin2hex(substr($randomString, 4, 2));
+--- ./objects/sites.php.orig	2025-03-01 02:04:58.322127824 +0100
++++ ./objects/sites.php	2025-03-01 02:04:58.325545907 +0100
+@@ -63,9 +63,9 @@
+ 
+     public function save()
+     {
+         if (empty($this->getSecret())) {
+-            $this->setSecret(md5(uniqid()));
++            $this->setSecret(md5(_uniqid()));
+         }
+ 
+         $siteURL = $this->getUrl();
+         if (substr($siteURL, -1) !== '/') {
+--- ./objects/uploadArticleImage.php.orig	2025-03-01 02:04:58.328834783 +0100
++++ ./objects/uploadArticleImage.php	2025-03-01 02:04:58.332246125 +0100
+@@ -39,9 +39,9 @@
+         $relativeDestinationDir = "videos" . DIRECTORY_SEPARATOR . "tmpImages" . DIRECTORY_SEPARATOR . date('Ymd') . DIRECTORY_SEPARATOR . 'users_id_' . User::getId() . DIRECTORY_SEPARATOR;
+     }
+ 
+     if (!empty($relativeDestinationDir)) {
+-        $name = uniqid();
++        $name = _uniqid();
+         $filename = $name . "." . strtolower($extension);
+         $relativeDestinationDirFilename = $relativeDestinationDir . $filename;
+         $destinationDir = $global['systemRootPath'] . $relativeDestinationDir;
+         make_path($destinationDir);
+--- ./objects/user.php.orig	2025-03-01 02:04:58.335876795 +0100
++++ ./objects/user.php	2025-03-01 02:04:58.340316408 +0100
+@@ -421,9 +421,9 @@
+             }
+         }
+         if ($try > 10) {
+             _error_log("User:_recommendChannelName too many tries ({$name}) (" . User::getId() . ") ", AVideoLog::$ERROR);
+-            return uniqid();
++            return _uniqid();
+         }
+         if (empty($name)) {
+             $name = self::getNameIdentification();
+             if ($name == __("Unknown User") && !empty($unknown)) {
+@@ -442,9 +442,9 @@
+         $name = substr($name, 0, 36);
+         if (!Permissions::canAdminUsers()) {
+             $user = self::getUserFromChannelName($name);
+             if ($user && $user['id'] !== $users_id) {
+-                return self::_recommendChannelName($name . "_" . uniqid(), $try + 1, $unknown, $users_id);
++                return self::_recommendChannelName($name . "_" . _uniqid(), $try + 1, $unknown, $users_id);
+             }
+         }
+         return $name;
+     }
+@@ -2377,9 +2377,9 @@
+         global $global, $advancedCustomUser;
+         $userId = 0;
+         if (!$userId = self::userExists($user)) {
+             if (empty($pass)) {
+-                $pass = uniqid();
++                $pass = _uniqid();
+             }
+             $pass = encryptPassword($pass);
+             $userObject = new User(0, $user, $pass);
+             $userObject->setEmail($email);
+@@ -2432,9 +2432,9 @@
+     private function createRecoverPass($id, $secondsValid = 600)
+     {
+         $json = new stdClass();
+         $json->id = $id;
+-        $json->uniqid = uniqid();
++        $json->_uniqid = uniqid();
+         $json->valid = strtotime("+{$secondsValid} seconds");
+         _error_log("createRecoverPass " . getRealIpAddr() . ' ' . json_encode($_SERVER));
+         return encryptString(json_encode($json));
+     }
+--- ./objects/video.php.orig	2025-03-01 02:04:58.344594391 +0100
++++ ./objects/video.php	2025-03-01 02:04:58.350311473 +0100
+@@ -467,9 +467,9 @@
+                 _error_log('Video::save permission denied to save ' . json_encode(debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS)));
+                 return false;
+             }
+             if (empty($this->title)) {
+-                $this->title = uniqid();
++                $this->title = _uniqid();
+             }
+ 
+             $this->clean_title = _substr(safeString($this->clean_title), 0, 187);
+ 
+@@ -4088,9 +4088,9 @@
+                     }
+                     TimeLogEnd($timeLog1, __LINE__, $timeLog1Limit);
+                     $source['url'] = CDNStorage::getURL($f);
+                     TimeLogEnd($timeLog1, __LINE__, $timeLog1Limit);
+-                    //$source['url'] = addQueryStringParameter($source['url'], 'cache', uniqid());
++                    //$source['url'] = addQueryStringParameter($source['url'], 'cache', _uniqid());
+                     $source['url_noCDN'] = $source['url'];
+                 } elseif (!empty($yptStorage) && !empty($site) && $isValidType && $fsize < 20) {
+                     $siteURL = getCDNOrURL($site->getUrl(), 'CDN_YPTStorage', $video['sites_id']);
+                     TimeLogEnd($timeLog1, __LINE__, $timeLog1Limit);
+@@ -4165,9 +4165,9 @@
+             } else {
+                 $source = $videosPaths[$filename][$type][intval($includeS3)];
+             }
+             if (substr($type, -4) === ".jpg" || substr($type, -4) === ".png" || substr($type, -4) === ".gif" || substr($type, -4) === ".webp") {
+-                $x = uniqid();
++                $x = _uniqid();
+                 if (file_exists($source['path'])) {
+                     $x = filemtime($source['path']) . filectime($source['path']);
+                 } elseif (!empty($video)) {
+                     $x = strtotime($video['modified']);
+@@ -4299,9 +4299,9 @@
+         }
+ 
+         public static function getNewVideoFilename($prefix = '', $time = '')
+         {
+-            $uid = substr(uniqid(), -4);
++            $uid = substr(_uniqid(), -4);
+             if (empty($time)) {
+                 $time = time();
+             }
+             $prefix = preg_replace('/[^a-z0-9]/i', '', $prefix);
+@@ -6119,9 +6119,9 @@
+                 $video['videoLink'] = $evideo->videoLink;
+                 $video['title'] = $evideo->title;
+                 $video['clean_title'] = preg_replace('/[!#$&\'()*+,\\/:;=?@[\\] ]+/', '-', trim(mb_strtolower(cleanString($evideo->title))));
+                 if (empty($evideo->description) && !empty($evideo->videos_id)) {
+-                    $divId = uniqid();
++                    $divId = _uniqid();
+                     $video['description'] = '<div id="' . $divId . '"></div>
+                     <script>
+                         $(document).ready(function () {
+                             $.ajax({
+@@ -6568,9 +6568,9 @@
+                 }
+ 
+                 $galleryDropDownMenu = Gallery::getVideoDropdownMenu($videos_id);
+                 $galleryVideoButtons .= '
+-                <!-- getVideoImagewithHoverAnimationFromVideosId --><div class="galleryVideoButtons ' . getCSSAnimationClassAndStyle('animate__flipInY', uniqid(), 0) . '">
++                <!-- getVideoImagewithHoverAnimationFromVideosId --><div class="galleryVideoButtons ' . getCSSAnimationClassAndStyle('animate__flipInY', _uniqid(), 0) . '">
+                     <button onclick="addVideoToPlayList(' . $videos_id . ', false, ' . $watchLaterId . ');return false;" class="btn btn-dark btn-xs watchLaterBtnAdded watchLaterBtnAdded' . $videos_id . '" data-toggle="tooltip" data-placement="left" title=' . printJSString("Added On Watch Later", true) . ' style="color: #4285f4;' . $watchLaterBtnAddedStyle . '" ><i class="fas fa-check"></i></button>
+                     <button onclick="addVideoToPlayList(' . $videos_id . ', true, ' . $watchLaterId . ');return false;" class="btn btn-dark btn-xs watchLaterBtn watchLaterBtn' . $videos_id . '" data-toggle="tooltip" data-placement="left" title=' . printJSString("Watch Later", true) . ' style="' . $watchLaterBtnStyle . '" ><i class="fas fa-clock"></i></button>
+                     <br>
+                     <button onclick="addVideoToPlayList(' . $videos_id . ', false, ' . $favoriteId . ');return false;" class="btn btn-dark btn-xs favoriteBtnAdded favoriteBtnAdded' . $videos_id . '" data-toggle="tooltip" data-placement="left" title=' . printJSString("Added On Favorite", true) . ' style="color: #4285f4; ' . $favoriteBtnAddedStyle . '"><i class="fas fa-check"></i></button>
+--- ./objects/functionsSecurity.php.orig	2025-03-01 02:08:01.432057810 +0100
++++ ./objects/functionsSecurity.php	2025-03-01 02:08:55.301967472 +0100
+@@ -2,9 +2,15 @@
+ /*
+ secure salt in PHP using standard characters and numbers.
+ This code will generate a 10 to 32-character string
+ */
+-function _uniqid() {
++function _uniqid($noUniqid = false) {
++    global $global;
++
++    require_once '../videos/configuration.php';
++    if (!$noUniqid && empty($global['noUniqid']))
++         return uniqid();
++
+     // Generate 16 bytes of random data
+     $randomBytes = random_bytes(16);
+ 
+     // Convert the binary data to a hexadecimal string
+--- ./objects/include_config.php.orig	2025-03-01 02:09:42.555255651 +0100
++++ ./objects/include_config.php	2025-03-01 02:07:21.775963109 +0100
+@@ -139,9 +139,9 @@
+ includeConfigLog(__LINE__);
+ // for update config from old versions 2020-05-11
+ if (empty($global['saltV2'])) {
+     $additions = [
+-        '/\$global\[\'salt\'\].*/' => "\$global['saltV2'] = '"._uniqid()."';", // Add this line below the line that matches the pattern
++        '/\$global\[\'salt\'\].*/' => "\$global['saltV2'] = '"._uniqid(true)."';", // Add this line below the line that matches the pattern
+     ];
+ 
+     $replacements = [];
+ 
+--- ./plugin/AD_Server/AD_Server.php.orig	2025-03-01 02:04:58.353767284 +0100
++++ ./plugin/AD_Server/AD_Server.php	2025-03-01 02:04:58.357368176 +0100
+@@ -245,9 +245,9 @@
+         $video_length = self::getVideoLength();
+         $vmapURL = "{$global['webSiteRootURL']}plugin/AD_Server/VMAP.php";
+         $vmapURL = addQueryStringParameter($vmapURL, 'video_length', $video_length);
+         $vmapURL = addQueryStringParameter($vmapURL, 'vmap_id', $vmap_id);
+-        $vmapURL = addQueryStringParameter($vmapURL, 'random', uniqid());
++        $vmapURL = addQueryStringParameter($vmapURL, 'random', _uniqid());
+         $vmapURL = self::addVMAPS($vmapURL, $vmaps);
+         //var_dump($vmapURL, $vmaps);exit;
+         PlayerSkins::setIMAADTag($vmapURL);
+ 
+--- ./plugin/AD_Server/VMAP.php.orig	2025-03-01 02:04:58.360626698 +0100
++++ ./plugin/AD_Server/VMAP.php	2025-03-01 02:04:58.364027063 +0100
+@@ -11,9 +11,9 @@
+     $_GET['video_length'] = 300;
+ }
+ 
+ if (empty($_GET['vmap_id'])) {
+-    $_GET['vmap_id'] = uniqid();
++    $_GET['vmap_id'] = _uniqid();
+ }
+ 
+ $vmaps = AD_Server::getVMAPSFromRequest();
+ echo '<?xml version="1.0" encoding="UTF-8"?>';
+--- ./plugin/AD_Server/footer.php.orig	2025-03-01 02:04:58.367296613 +0100
++++ ./plugin/AD_Server/footer.php	2025-03-01 02:04:58.370734816 +0100
+@@ -3,9 +3,9 @@
+ <script>
+     if (typeof player === 'undefined' && $('#mainVideo').length) {
+         player = videojs('mainVideo'<?php echo PlayerSkins::getDataSetup(); ?>);
+     }
+-    var options = {id: 'mainVideo', adTagUrl: webSiteRootURL+'plugin/AD_Server/VMAP.php?video_length=<?php echo $video_length ?>&vmap_id=<?php echo $vmap_id ?>&random=<?php echo uniqid(); ?>'};
++    var options = {id: 'mainVideo', adTagUrl: webSiteRootURL+'plugin/AD_Server/VMAP.php?video_length=<?php echo $video_length ?>&vmap_id=<?php echo $vmap_id ?>&random=<?php echo _uniqid(); ?>'};
+         player.ima(options);
+         $(document).ready(function () {
+ 
+             // Remove controls from the player on iPad to stop native controls from stealing
+--- ./plugin/ADs/ADs.php.orig	2025-03-01 02:04:58.374052148 +0100
++++ ./plugin/ADs/ADs.php	2025-03-01 02:04:58.377688919 +0100
+@@ -179,9 +179,9 @@
+         if (!$showAds) {
+             return "";
+         }
+         if (preg_match("/adsbygoogle/i", $adCode)) {
+-            $uid = uniqid();
++            $uid = _uniqid();
+             $adCode = str_replace("(adsbygoogle = window.adsbygoogle || []).push({});", "document.addEventListener(\"DOMContentLoaded\", function(event) {startGoogleAd('#adContainer{$uid}');});", trim($adCode));
+             $adCode = "<div style='min-width:250px;min-height:90px;' id='adContainer{$uid}'>{$adCode}</div>";
+         }
+         $adCode = str_replace("<script", "<script doNotSepareteTag ", trim($adCode));
+@@ -240,9 +240,9 @@
+         if (empty($paths)) {
+             return false;
+         }
+ 
+-        $fileName = uniqid();
++        $fileName = _uniqid();
+ 
+         return ['fileName' => $fileName, 'path' => $paths['path'] . $fileName . '.png', 'url' => $paths['url'] . $fileName . '.png', 'txt' => $paths['path'] . $fileName . '.txt'];
+     }
+ 
+@@ -502,9 +502,9 @@
+             self::debug(__LINE__, "users_id={$is_regular_user}");
+             return false;
+         }
+ 
+-        $id = 'myCarousel' . $type . uniqid();
++        $id = 'myCarousel' . $type . _uniqid();
+ 
+         $size = self::getSize($type);
+ 
+         $style = '';
+--- ./plugin/AdsForJesus/AdsForJesus.php.orig	2025-03-01 02:04:58.388872473 +0100
++++ ./plugin/AdsForJesus/AdsForJesus.php	2025-03-01 02:04:58.392329710 +0100
+@@ -112,9 +112,9 @@
+                 }
+                 PlayerSkins::setIMAADTag($url);
+             } else {
+                 $video['duration'] = "01:00:00";
+-                $_GET['videoName'] = "Live-" . uniqid();
++                $_GET['videoName'] = "Live-" . _uniqid();
+                 $video_length = parseDurationToSeconds($video['duration']);
+                 $obj = $this->getDataObject();
+                 PlayerSkins::setIMAADTag("https://forjesus.tv/vmap.xml?video_durarion={$video_length}&start={$obj->start}&mid25Percent={$obj->mid25Percent}&mid50Percent={$obj->mid50Percent}&mid75Percent={$obj->mid75Percent}&end={$obj->end}");
+             }
+--- ./plugin/CloneSite/cloneServer.json.php.orig	2025-03-01 02:04:58.395595257 +0100
++++ ./plugin/CloneSite/cloneServer.json.php	2025-03-01 02:04:58.399087511 +0100
+@@ -54,9 +54,9 @@
+ }else{
+     _error_log("Clone: dir {$clonesDir} already exists");
+ }
+ 
+-$resp->sqlFile = uniqid('Clone_mysqlDump_') . ".sql";
++$resp->sqlFile = _uniqid('Clone_mysqlDump_') . ".sql";
+ // update this clone last request
+ $resp->error = !$canClone->clone->updateLastCloneRequest();
+ 
+ // get mysql dump
+--- ./plugin/CustomizeUser/actionButton.php.orig	2025-03-01 02:04:58.402363945 +0100
++++ ./plugin/CustomizeUser/actionButton.php	2025-03-01 02:04:58.405854227 +0100
+@@ -21,9 +21,9 @@
+         </a>    
+         <?php
+     } elseif (class_exists("YPTWallet")) {
+         $u = new User($video['users_id']);
+-        $uid = uniqid();
++        $uid = _uniqid();
+         $captcha = User::getCaptchaForm($uid);
+         $live = isLive();
+         if (!empty($live)) {
+             $lt = LiveTransmitionHistory::getLatest($live['key'], $live['live_servers_id']);
+--- ./plugin/CustomizeUser/confirmDeleteUser.php.orig	2025-03-01 02:04:58.409158407 +0100
++++ ./plugin/CustomizeUser/confirmDeleteUser.php	2025-03-01 02:04:58.412584720 +0100
+@@ -67,9 +67,9 @@
+                 ?>
+             </div>
+             <div class="panel-footer">
+                 <?php
+-                $uid = uniqid();
++                $uid = _uniqid();
+                 $captcha = User::getCaptchaForm($uid, true);
+                 ?>
+                 <div class="form-group" id="captchaDeleteUser">
+                     <?php echo $captcha['content']; ?>
+--- ./plugin/CustomizeUser/switchUserCanAllowFilesDownload.php.orig	2025-03-01 02:04:58.415890549 +0100
++++ ./plugin/CustomizeUser/switchUserCanAllowFilesDownload.php	2025-03-01 02:04:58.419271796 +0100
+@@ -1,6 +1,6 @@
+ <?php
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <div class="material-switch">
+     <input class="playerSwitchDefault" data-toggle="toggle" type="checkbox" value="" id="switch<?php echo $uid; ?>" <?php echo (CustomizeUser::canDownloadVideosFromUser($users_id)) ? "checked" : ""; ?>>
+     <label for="switch<?php echo $uid; ?>" class="label-primary"></label>
+--- ./plugin/CustomizeUser/switchUserCanAllowFilesShare.php.orig	2025-03-01 02:04:58.422587866 +0100
++++ ./plugin/CustomizeUser/switchUserCanAllowFilesShare.php	2025-03-01 02:04:58.425987989 +0100
+@@ -1,6 +1,6 @@
+ <?php
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <div class="material-switch">
+     <input class="playerSwitchDefault" data-toggle="toggle" type="checkbox" value="" id="switch<?php echo $uid; ?>" <?php echo (CustomizeUser::canShareVideosFromUser($users_id)) ? "checked" : ""; ?>>
+     <label for="switch<?php echo $uid; ?>" class="label-primary"></label>
+--- ./plugin/Gallery/view/BigVideo.php.orig	2025-03-01 02:04:58.436289492 +0100
++++ ./plugin/Gallery/view/BigVideo.php	2025-03-01 02:04:58.439881765 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ if (empty($crc)) {
+-    $crc = uniqid();
++    $crc = _uniqid();
+ }
+ if ($obj->BigVideo && empty($_GET['showOnly'])) {
+ 
+     if (!empty($obj->useSuggestedVideosAsCarouselInBigVideo)) {
+--- ./plugin/Gallery/view/mainAreaCategory.php.orig	2025-03-01 02:04:58.443166610 +0100
++++ ./plugin/Gallery/view/mainAreaCategory.php	2025-03-01 02:04:58.446638045 +0100
+@@ -72,9 +72,9 @@
+                     <i class="<?php echo $videos[0]['iconClass']; ?>"></i> <?php echo $videos[0]['category']; ?>
+                 </a>
+                 <?php
+                 if (!isHTMLEmpty($videos[0]['category_description'])) {
+-                    $duid = uniqid();
++                    $duid = _uniqid();
+                     $titleAlert = str_replace(array('"', "'"), array('``', "`"), $videos[0]['category']);
+                 ?>
+                     <a href="#" class="pull-right" onclick='avideoAlert("<?php echo $titleAlert; ?>", "<div style=\"max-height: 300px; overflow-y: scroll;overflow-x: hidden;\" id=\"categoryDescriptionAlertContent<?php echo $duid; ?>\" ></div>", "");$("#categoryDescriptionAlertContent<?php echo $duid; ?>").html($("#categoryDescription<?php echo $duid; ?>").html());return false;'><i class="far fa-file-alt"></i> <?php echo __("Description"); ?></a>
+                     <div id="categoryDescription<?php echo $duid; ?>" style="display: none;"><?php echo $videos[0]['category_description']; ?></div>
+--- ./plugin/Gallery/view/videoDropDownMenu.php.orig	2025-03-01 02:04:58.449937552 +0100
++++ ./plugin/Gallery/view/videoDropDownMenu.php	2025-03-01 02:04:58.453341570 +0100
+@@ -6,9 +6,9 @@
+ 
+ if ((!empty($video['description'])) && !empty($obj->Description)) {
+     $desc = nl2br(trim($video['description']));
+     if (!isHTMLEmpty($desc)) {
+-        $duid = uniqid();
++        $duid = _uniqid();
+         $titleAlert = str_replace(array('"', "'"), array('``', "`"), $video['title']);
+         $descTitle = __("Description");
+         $lis[] = "
+             <button type=\button\" class=\"btn btn-dark\" 
+--- ./plugin/Gallery/functions.php.orig	2025-03-01 02:04:58.429320665 +0100
++++ ./plugin/Gallery/functions.php	2025-03-01 02:04:58.432961910 +0100
+@@ -34,9 +34,9 @@
+     if (!empty($_GET['infiniteScrollRowCount'])) {
+         $rowCount = intval($_GET['infiniteScrollRowCount']);
+     }
+ 
+-    $uid = "gallery" . uniqid();
++    $uid = "gallery" . _uniqid();
+ ?>
+     <div class="clear clearfix galeryRowElement" id="<?php echo $uid; ?>">
+         <?php
+         if (canPrintCategoryTitle($title)) {
+--- ./plugin/ImageGallery/ImageGallery.php.orig	2025-03-01 02:04:58.456649343 +0100
++++ ./plugin/ImageGallery/ImageGallery.php	2025-03-01 02:04:58.460119429 +0100
+@@ -91,9 +91,9 @@
+         if (in_array($fileType, $allowedMimeTypes)) {
+             // Generate unique filename to avoid overwriting
+             $extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+             do {
+-                $newFilename = uniqid() . '.' . $extension;
++                $newFilename = _uniqid() . '.' . $extension;
+                 $newFilePath = $directory . $newFilename;
+             } while (file_exists($newFilePath));
+ 
+             // Move the file to the target directory
+--- ./plugin/Layout/Layout.php.orig	2025-03-01 02:04:58.463500885 +0100
++++ ./plugin/Layout/Layout.php	2025-03-01 02:04:58.467300028 +0100
+@@ -141,9 +141,9 @@
+             $name = $files[$rand_key]['name'];
+         }
+ 
+         $content = file_get_contents($global['systemRootPath'] . 'plugin/Layout/loaders/' . $name . '.html');
+-        return trim(preg_replace('/\s+/', ' ', str_replace('lds-', 'lds-' . uniqid(), $content)));
++        return trim(preg_replace('/\s+/', ' ', str_replace('lds-', 'lds-' . _uniqid(), $content)));
+     }
+ 
+     static function getLoaderDefault()
+     {
+@@ -331,9 +331,9 @@
+         global $getIconsSelect;
+         $getIconsSelect = 1;
+         $icons = self::getIconsList();
+         if (empty($id)) {
+-            $id = uniqid();
++            $id = _uniqid();
+         }
+                                   
+         $html = self::getSearch2Code($id);
+         self::addFooterCode($html);
+@@ -388,9 +388,9 @@
+         } else {
+             $flags = self::getAvailableFlags();
+         }
+         if (empty($id)) {
+-            $id = uniqid();
++            $id = _uniqid();
+         }
+         if ($selected == 'us') {
+             $selected = 'en_US';
+         }
+@@ -441,9 +441,9 @@
+                 $elements[$users_id] .= " (Me)";
+             }
+         }
+         if (empty($id)) {
+-            $id = uniqid();
++            $id = _uniqid();
+         }
+         $html = self::getSearch2Code($id);
+         self::addFooterCode($html);
+         return self::getSelectSearchable($elements, $name, $selected, $id, $class, true);
+@@ -461,9 +461,9 @@
+         foreach ($rows as $value) {
+             $cats[$value['id']] = htmlentities("<i class='{$value['iconClass']}'></i> " . $value['hierarchyAndName']);
+         }
+         if (empty($id)) {
+-            $id = uniqid();
++            $id = _uniqid();
+         }
+                                   
+         $html = self::getSearch2Code($id);
+         self::addFooterCode($html);
+@@ -473,9 +473,9 @@
+     static function getUserGroupsSelect($name, $selected = "", $id = "", $class = "")
+     {
+         $rows = UserGroups::getAllUsersGroupsArray();
+         if (empty($id)) {
+-            $id = uniqid();
++            $id = _uniqid();
+         }
+         $html = self::getSearch2Code($id);
+         self::addFooterCode($html);
+         return self::getSelectSearchable($rows, $name, $selected, $id, $class, true);
+@@ -551,9 +551,9 @@
+     {
+         global $global;
+         $default_Playlists_id = intval($default_Playlists_id);
+         if (empty($id)) {
+-            $id = 'getPlaylistAutocomplete_' . uniqid();
++            $id = 'getPlaylistAutocomplete_' . _uniqid();
+         }
+         include $global['systemRootPath'] . 'plugin/Layout/playlistAutocomplete.php';
+         return "updatePlaylistAutocomplete{$id}();";
+     }
+@@ -562,9 +562,9 @@
+     {
+         global $global;
+         $default_users_id = intval($default_users_id);
+         if (empty($id)) {
+-            $id = 'getUserAutocomplete_' . uniqid();
++            $id = 'getUserAutocomplete_' . _uniqid();
+         }
+         include $global['systemRootPath'] . 'plugin/Layout/userAutocomplete.php';
+         return "updateUserAutocomplete{$id}();";
+     }
+@@ -573,9 +573,9 @@
+     {
+         global $global;
+         $default_videos_id = intval($default_videos_id);
+         if (empty($id)) {
+-            $id = 'getVideoAutocomplete_' . uniqid();
++            $id = 'getVideoAutocomplete_' . _uniqid();
+         }
+         include $global['systemRootPath'] . 'plugin/Layout/videoAutocomplete.php';
+         return "updateVideoAutocomplete{$id}();";
+     }
+@@ -852,9 +852,9 @@
+ 
+     static function getSearchOptions($name)
+     {
+         $divs = array();
+-        $id = str_replace('[]', '', $name) . uniqid();
++        $id = str_replace('[]', '', $name) . _uniqid();
+         foreach (Layout::$searchOptions as $key => $value) {
+             
+             $divs[] = '<div class="form-check">
+                             <label class="form-check-label">
+@@ -868,9 +868,9 @@
+     static function getSearchCategories($name)
+     {
+         global $global;
+         $divs = array();
+-        $id = str_replace('[]', '', $name) . uniqid();
++        $id = str_replace('[]', '', $name) . _uniqid();
+ 
+         $divs[] = '<div class="form-check">
+                         <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="' . $name . '" checked value=""> 
+@@ -893,9 +893,9 @@
+     static function getSearchDateTime($name)
+     {
+         global $global;
+         $divs = array();
+-        $id = str_replace('[]', '', $name) . uniqid();
++        $id = str_replace('[]', '', $name) . _uniqid();
+ 
+         $divs[] = '<div class="form-check">
+                         <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="' . $name . '" checked value=""> ' . __('All') . '
+@@ -947,9 +947,9 @@
+             $step = round($step / 100) * 100;
+         }
+ 
+         $divs = array();
+-        $id = str_replace('[]', '', $name) . uniqid();
++        $id = str_replace('[]', '', $name) . _uniqid();
+                                     
+         $divs[] = '<div class="form-check">
+                         <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="' . $name . '" checked value="0"> 
+@@ -979,9 +979,9 @@
+         if (empty($tags)) {
+             return array();
+         }
+         $divs = array();
+-        $id = str_replace('[]', '', $name) . uniqid();                    
++        $id = str_replace('[]', '', $name) . _uniqid();                    
+         $divs[] = '<div class="form-check">
+                         <label class="form-check-label">
+                         <input class="form-check-input" type="radio" name="' . $name . '" checked value=""> 
+                         <i class="fas fa-tags"></i> ' . __('All') . ' 
+@@ -997,9 +997,9 @@
+     }
+ 
+     static function getSearchHTML($elements, $name)
+     {
+-        $id = 'search_' . uniqid();
++        $id = 'search_' . _uniqid();
+         $class = 'searchHTML' . str_replace('[]', '', $name);
+ ?>
+         <div class="panel panel-default searchHTML <?php echo $class; ?>" id="<?php echo $id; ?>-panel" style="margin: 0;">
+             <div class="panel-heading">
+--- ./plugin/Live/Objects/LiveTransmition.php.orig	2025-03-01 02:04:58.479408726 +0100
++++ ./plugin/Live/Objects/LiveTransmition.php	2025-03-01 02:04:58.482919678 +0100
+@@ -182,9 +182,9 @@
+         } else {
+             $l = new LiveTransmition(0);
+             $l->setTitle("I am Live");
+             $l->setDescription("");
+-            $l->setKey(uniqid());
++            $l->setKey(_uniqid());
+             $l->setCategories_id(1);
+             $l->setUsers_id($user_id);
+             $l->setPublicAutomatic();
+             $l->setSaveTransmitionAutomatic();
+@@ -201,9 +201,9 @@
+     public static function resetTransmitionKey($user_id) {
+         $row = static::getFromDbByUser($user_id);
+ 
+         $l = new LiveTransmition($row['id']);
+-        $newKey = uniqid();
++        $newKey = _uniqid();
+         $l->setKey($newKey);
+         if ($l->save()) {
+             return $newKey;
+         } else {
+--- ./plugin/Live/Objects/Live_schedule.php.orig	2025-03-01 02:04:58.486255371 +0100
++++ ./plugin/Live/Objects/Live_schedule.php	2025-03-01 02:04:58.489807846 +0100
+@@ -429,9 +429,9 @@
+             $this->status = 'a';
+         }
+ 
+         if (empty($this->key)) {
+-            $this->key = uniqid();
++            $this->key = _uniqid();
+         }
+ 
+         $this->_setTimeZone(date_default_timezone_get());
+ 
+--- ./plugin/Live/standAloneFiles/saveDVR.json.php.orig	2025-03-01 02:04:58.506717063 +0100
++++ ./plugin/Live/standAloneFiles/saveDVR.json.php	2025-03-01 02:04:58.510164425 +0100
+@@ -85,9 +85,9 @@
+ error_reporting(E_ALL & ~E_DEPRECATED);
+ 
+ $filename = $record_path . $file . '_' . (date('Y-m-d-H-i-s')) . ".mp4";
+ $DVRFile = "{$hls_path}{$key}";
+-$tmpDVRDir = $record_path . $file . uniqid();
++$tmpDVRDir = $record_path . $file . _uniqid();
+ 
+ $isAdaptive = !is_dir($DVRFile);
+ 
+ if (!$isAdaptive) {
+--- ./plugin/Live/view/Live_restreams/testRestreamer.json.php.orig	2025-03-01 02:04:58.513474722 +0100
++++ ./plugin/Live/view/Live_restreams/testRestreamer.json.php	2025-03-01 02:04:58.516880339 +0100
+@@ -20,9 +20,9 @@
+ 
+ $lth = new LiveTransmitionHistory();
+ $lth->setTitle('Restream test '.date('Y-m-d H:i:s'));
+ $lth->setDescription('');
+-$lth->setKey(uniqid());
++$lth->setKey(_uniqid());
+ $lth->setDomain('localhost');
+ $lth->setUsers_id(User::getId());
+ $lth->setLive_servers_id(Live::getLiveServersIdRequest());
+ $obj->liveTransmitionHistory_id = $lth->save();
+--- ./plugin/Live/view/modeYoutubeLive.php.orig	2025-03-01 02:04:58.520180025 +0100
++++ ./plugin/Live/view/modeYoutubeLive.php	2025-03-01 02:04:58.523697684 +0100
+@@ -73,9 +73,9 @@
+     $liveDescription = $ls->getDescription();
+     //$liveImg = Live_schedule::getPosterURL($_REQUEST['live_schedule']);
+     $liveUrl = addQueryStringParameter($liveUrl, 'live_schedule', intval($_REQUEST['live_schedule']));
+     $img = addQueryStringParameter($img, 'live_schedule', intval($_REQUEST['live_schedule']));
+-    $img = addQueryStringParameter($img, 'cache', uniqid());
++    $img = addQueryStringParameter($img, 'cache', _uniqid());
+     global $getLiveKey;
+     $getLiveKey = ['key' => $ls->getKey(), 'live_servers_id' => intval($ls->getLive_servers_id()), 'live_index' => '', 'cleanKey' => ''];
+ 
+     if (!empty($ls->getUsers_id_company())) {
+--- ./plugin/Live/Live.php.orig	2025-03-01 02:04:58.471122004 +0100
++++ ./plugin/Live/Live.php	2025-03-01 02:04:58.475983266 +0100
+@@ -1134,9 +1134,9 @@
+         if (!User::canStream()) {
+             return '';
+         }
+         global $global;
+-        $id = "getButton" . uniqid();
++        $id = "getButton" . _uniqid();
+         $afterLabel = "";
+         $obj = AVideoPlugin::getDataObject('Live');
+         switch ($command) {
+             case "record_start":
+--- ./plugin/Live/latestOrLive.php.orig	2025-03-01 02:04:58.493086393 +0100
++++ ./plugin/Live/latestOrLive.php	2025-03-01 02:04:58.496651916 +0100
+@@ -107,9 +107,9 @@
+ 
+         $objectToReturnToParentIframe->mediaSession = LiveLinks::getMediaSession($video['id']);
+         $objectToReturnToParentIframe->users_id = intval($video['users_id']);
+         $liveFound = true;
+-        $isLiveLink = uniqid();
++        $isLiveLink = _uniqid();
+     }
+ }
+ if (!$liveFound) {
+     $_POST['rowCount'] = 1;
+--- ./plugin/Live/on_publish.php.orig	2025-03-01 02:04:58.499929225 +0100
++++ ./plugin/Live/on_publish.php	2025-03-01 02:04:58.503400430 +0100
+@@ -165,9 +165,9 @@
+     if(strpos($_POST['name'], '-')===false){
+         _error_log("NGINX ON Publish redirect");
+         http_response_code(302);
+         header("HTTP/1.0 302 Publish Here");
+-        $newKey = $_POST['name'].'-'. uniqid();
++        $newKey = $_POST['name'].'-'. _uniqid();
+         header("Location: rtmp://192.168.1.18/live/$newKey/?p={$_GET['p']}");
+         exit;
+     }
+      *
+--- ./plugin/LiveLinks/view/Live.php.orig	2025-03-01 02:04:58.527010847 +0100
++++ ./plugin/LiveLinks/view/Live.php	2025-03-01 02:04:58.530489624 +0100
+@@ -32,9 +32,9 @@
+     AVideoPlugin::getModeLiveLink($liveLink->getId());
+     $date = convertFromDefaultTimezoneTimeToMyTimezone($liveLink->getStart_date());
+     $toTime = strtotime($date);
+ } else {
+-    $isLiveLink = uniqid();
++    $isLiveLink = _uniqid();
+     $uuid = $isLiveLink;
+     $t = LiveLinks::decodeDinamicVideoLink();
+     $toTime = time();
+ }
+--- ./plugin/LoginControl/Objects/logincontrol_history.php.orig	2025-03-01 02:04:58.540767105 +0100
++++ ./plugin/LoginControl/Objects/logincontrol_history.php	2025-03-01 02:04:58.544267258 +0100
+@@ -5,17 +5,17 @@
+ class logincontrol_history extends ObjectYPT
+ {
+     protected $id;
+     protected $users_id;
+-    protected $uniqidV4;
++    protected $_uniqidV4;
+     protected $ip;
+     protected $user_agent;
+     protected $confirmation_code;
+     protected $status;
+ 
+     public static function getSearchFieldsNames()
+     {
+-        return ['uniqidV4','ip','user_agent','confirmation_code'];
++        return ['_uniqidV4','ip','user_agent','confirmation_code'];
+     }
+ 
+     public static function getTableName()
+     {
+@@ -51,11 +51,11 @@
+     {
+         $this->users_id = intval($users_id);
+     }
+ 
+-    public function setUniqidV4($uniqidV4)
++    public function setUniqidV4($_uniqidV4)
+     {
+-        $this->uniqidV4 = $uniqidV4;
++        $this->_uniqidV4 = $uniqidV4;
+     }
+ 
+     public function setIp($ip)
+     {
+@@ -89,9 +89,9 @@
+     }
+ 
+     public function getUniqidV4()
+     {
+-        return $this->uniqidV4;
++        return $this->_uniqidV4;
+     }
+ 
+     public function getIp()
+     {
+@@ -235,15 +235,15 @@
+         }
+         return $row;
+     }
+ 
+-    public static function is2FAConfirmed($users_id, $uniqidV4)
++    public static function is2FAConfirmed($users_id, $_uniqidV4)
+     {
+         global $global;
+         $users_id = intval($users_id);
+-        $sql = "SELECT * FROM " . static::getTableName() . " WHERE  users_id = ? AND uniqidV4 = ? AND status = '".logincontrol_history_status::$CONFIRMED."' ORDER BY modified DESC LIMIT 1";
++        $sql = "SELECT * FROM " . static::getTableName() . " WHERE  users_id = ? AND _uniqidV4 = ? AND status = '".logincontrol_history_status::$CONFIRMED."' ORDER BY modified DESC LIMIT 1";
+         // I had to add this because the about from customize plugin was not loading on the about page http://127.0.0.1/AVideo/about
+-        $res = sqlDAL::readSql($sql, "is", [$users_id, $uniqidV4]);
++        $res = sqlDAL::readSql($sql, "is", [$users_id, $_uniqidV4]);
+         $data = sqlDAL::fetchAssoc($res);
+         sqlDAL::close($res);
+         if ($res) {
+             $row = $data;
+@@ -252,15 +252,15 @@
+         }
+         return $row;
+     }
+ 
+-    public static function getLastLoginAttempt($users_id, $uniqidV4)
++    public static function getLastLoginAttempt($users_id, $_uniqidV4)
+     {
+         global $global;
+         $users_id = intval($users_id);
+-        $sql = "SELECT * FROM " . static::getTableName() . " WHERE  users_id = ? AND uniqidV4 = ? ORDER BY modified DESC LIMIT 1";
++        $sql = "SELECT * FROM " . static::getTableName() . " WHERE  users_id = ? AND _uniqidV4 = ? ORDER BY modified DESC LIMIT 1";
+         // I had to add this because the about from customize plugin was not loading on the about page http://127.0.0.1/AVideo/about
+-        $res = sqlDAL::readSql($sql, "is", [$users_id, $uniqidV4]);
++        $res = sqlDAL::readSql($sql, "is", [$users_id, $_uniqidV4]);
+         $data = sqlDAL::fetchAssoc($res);
+         sqlDAL::close($res);
+         if ($res) {
+             $row = $data;
+--- ./plugin/LoginControl/View/Users_login_history/add.json.php.orig	2025-03-01 02:04:58.547592167 +0100
++++ ./plugin/LoginControl/View/Users_login_history/add.json.php	2025-03-01 02:04:58.550960200 +0100
+@@ -16,9 +16,9 @@
+ }
+ 
+ $o = new logincontrol_history(@$_POST['id']);
+ $o->setUsers_id($_POST['users_id']);
+-$o->setUniqidV4($_POST['uniqidV4']);
++$o->setUniqidV4($_POST['_uniqidV4']);
+ $o->setIp($_POST['ip']);
+ $o->setUser_agent($_POST['user_agent']);
+ $o->setConfirmation_code($_POST['confirmation_code']);
+ $o->setStatus($_POST['status']);
+--- ./plugin/LoginControl/View/Users_login_history/index_body.php.orig	2025-03-01 02:04:58.554297784 +0100
++++ ./plugin/LoginControl/View/Users_login_history/index_body.php	2025-03-01 02:04:58.557874713 +0100
+@@ -34,10 +34,10 @@
+                                         ?>
+                                     </select>
+                                 </div>
+                                 <div class="form-group col-sm-12">
+-                                    <label for="logincontrol_historyuniqidV4"><?php echo __("UniqidV4"); ?>:</label>
+-                                    <input type="text" id="logincontrol_historyuniqidV4" name="uniqidV4" class="form-control input-sm" placeholder="<?php echo __("UniqidV4"); ?>" required="true">
++                                    <label for="logincontrol_history_uniqidV4"><?php echo __("UniqidV4"); ?>:</label>
++                                    <input type="text" id="logincontrol_history_uniqidV4" name="uniqidV4" class="form-control input-sm" placeholder="<?php echo __("UniqidV4"); ?>" required="true">
+                                 </div>
+                                 <div class="form-group col-sm-12">
+                                     <label for="logincontrol_historyip"><?php echo __("Ip"); ?>:</label>
+                                     <input type="text" id="logincontrol_historyip" name="ip" class="form-control input-sm" placeholder="<?php echo __("Ip"); ?>" required="true">
+@@ -116,9 +116,9 @@
+ <script type="text/javascript">
+     function clearlogincontrol_historyForm() {
+         $('#logincontrol_historyid').val('');
+         $('#logincontrol_historyusers_id').val('');
+-        $('#logincontrol_historyuniqidV4').val('');
++        $('#logincontrol_history_uniqidV4').val('');
+         $('#logincontrol_historyip').val('');
+         $('#logincontrol_historyuser_agent').val('');
+         $('#logincontrol_historyconfirmation_code').val('');
+         $('#logincontrol_historystatus').val('');
+@@ -145,9 +145,9 @@
+         var logincontrol_historytableVar = $('#logincontrol_historyTable').DataTable({
+             "ajax": "<?php echo $global['webSiteRootURL']; ?>plugin/LoginControl/View/Users_login_history/list.json.php",
+             "columns": [
+                 {"data": "id"},
+-                {"data": "uniqidV4"},
++                {"data": "_uniqidV4"},
+                 {"data": "ip"},
+                 {"data": "user_agent"},
+                 {"data": "confirmation_code"},
+                 {"data": "status"},
+@@ -220,9 +220,9 @@
+             var tr = $(this).closest('tr')[0];
+             var data = logincontrol_historytableVar.row(tr).data();
+             $('#logincontrol_historyid').val(data.id);
+             $('#logincontrol_historyusers_id').val(data.users_id);
+-            $('#logincontrol_historyuniqidV4').val(data.uniqidV4);
++            $('#logincontrol_history_uniqidV4').val(data.uniqidV4);
+             $('#logincontrol_historyip').val(data.ip);
+             $('#logincontrol_historyuser_agent').val(data.user_agent);
+             $('#logincontrol_historyconfirmation_code').val(data.confirmation_code);
+             $('#logincontrol_historystatus').val(data.status);
+--- ./plugin/LoginControl/install/install.sql.orig	2025-03-01 02:04:58.561154275 +0100
++++ ./plugin/LoginControl/install/install.sql	2025-03-01 02:04:58.564542130 +0100
+@@ -1,17 +1,17 @@
+ CREATE TABLE IF NOT EXISTS `logincontrol_history` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `users_id` INT NOT NULL,
+-  `uniqidV4` VARCHAR(255) NOT NULL,
++  `_uniqidV4` VARCHAR(255) NOT NULL,
+   `ip` VARCHAR(45) NULL,
+   `user_agent` VARCHAR(255) NULL,
+   `confirmation_code` VARCHAR(45) NULL,
+   `status` CHAR(1) NULL,
+   `created` DATETIME NULL,
+   `modified` DATETIME NULL,
+   PRIMARY KEY (`id`),
+   INDEX `fk_login_history_users_idx` (`users_id` ASC),
+-  INDEX `uniqueidv4_index` USING BTREE (`uniqidV4`),
++  INDEX `uniqueidv4_index` USING BTREE (`_uniqidV4`),
+   INDEX `sort_created_index` (`created` ASC),
+   CONSTRAINT `fk_login_history_users`
+     FOREIGN KEY (`users_id`)
+     REFERENCES `users` (`id`)
+--- ./plugin/LoginControl/install/updateV2.0.sql.orig	2025-03-01 02:04:58.567868021 +0100
++++ ./plugin/LoginControl/install/updateV2.0.sql	2025-03-01 02:04:58.571271480 +0100
+@@ -1,2 +1,2 @@
+ ALTER TABLE `logincontrol_history` 
+-CHANGE COLUMN `uniqidV4` `uniqidV4` VARCHAR(255) NOT NULL ;
+\ No newline at end of file
++CHANGE COLUMN `_uniqidV4` `uniqidV4` VARCHAR(255) NOT NULL ;
+\ No newline at end of file
+--- ./plugin/LoginControl/LoginControl.php.orig	2025-03-01 02:04:58.533825795 +0100
++++ ./plugin/LoginControl/LoginControl.php	2025-03-01 02:04:58.537463081 +0100
+@@ -166,24 +166,24 @@
+         }
+         return $loginControlCreateLog;
+     }
+ 
+-    public static function getConfirmationCode($users_id, $uniqidV4) {
+-        $row = logincontrol_history::getLastLoginAttempt($users_id, $uniqidV4);
++    public static function getConfirmationCode($users_id, $_uniqidV4) {
++        $row = logincontrol_history::getLastLoginAttempt($users_id, $_uniqidV4);
+         if (!empty($row) && ($row['status'] === logincontrol_history_status::$CONFIRMED || strtotime($row['modified']) > strtotime("-24 hours"))) {
+             return $row['confirmation_code'];
+         } elseif (empty($row)) {
+-            _error_log("LoginControl::getConfirmationCode first login attempt $users_id, $uniqidV4");
++            _error_log("LoginControl::getConfirmationCode first login attempt $users_id, $_uniqidV4");
+         } else {
+-            _error_log("LoginControl::getConfirmationCode ERROR  $users_id, $uniqidV4");
++            _error_log("LoginControl::getConfirmationCode ERROR  $users_id, $_uniqidV4");
+             if ($row['status'] === logincontrol_history_status::$CONFIRMED) {
+                 _error_log("LoginControl::getConfirmationCode wrong status [{$row['status']}] ");
+             }
+             if (strtotime($row['modified']) > strtotime("-24 hours")) {
+                 _error_log("LoginControl::getConfirmationCode wrong modification is too old [{$row['modified']}] ");
+             }
+         }
+-        return uniqid();
++        return _uniqid();
+     }
+ 
+     public static function is2FAEnabled($users_id) {
+         $obj = AVideoPlugin::getObjectDataIfEnabled("LoginControl");
+@@ -198,15 +198,15 @@
+     public static function is2FAConfirmed($users_id) {
+         return !empty(logincontrol_history::is2FAConfirmed($users_id, getDeviceID()));
+     }
+ 
+-    public static function getLastLoginOnDevice($users_id, $uniqidV4 = "") {
+-        if (empty($uniqidV4)) {
+-            $uniqidV4 = getDeviceID();
++    public static function getLastLoginOnDevice($users_id, $_uniqidV4 = "") {
++        if (empty($_uniqidV4)) {
++            $_uniqidV4 = getDeviceID();
+         }
+-        $row = logincontrol_history::getLastLoginAttempt($users_id, $uniqidV4);
++        $row = logincontrol_history::getLastLoginAttempt($users_id, $_uniqidV4);
+         if (empty($row)) {
+-            _error_log("LoginControl::getLastLoginOnDevice Not found $users_id, " . $uniqidV4);
++            _error_log("LoginControl::getLastLoginOnDevice Not found $users_id, " . $_uniqidV4);
+         }
+         return $row;
+     }
+ 
+@@ -280,9 +280,9 @@
+                 return false;
+             }
+         }
+         $confirmationCode = $lastLogin['confirmation_code'];
+-        return encryptString(json_encode(['confirmation_code' => $confirmationCode, 'users_id' => $users_id, 'uniqidV4' => getDeviceID()]));
++        return encryptString(json_encode(['confirmation_code' => $confirmationCode, 'users_id' => $users_id, '_uniqidV4' => getDeviceID()]));
+     }
+ 
+     public static function validateConfirmationCodeHash($code) {
+         if (empty($code)) {
+@@ -299,9 +299,9 @@
+             _error_log("LoginControl::validateConfirmationCodeHash we could not decrypt json {$json}");
+             return false;
+         }
+ 
+-        return self::confirmCode($json->users_id, $json->confirmation_code, $json->uniqidV4);
++        return self::confirmCode($json->users_id, $json->confirmation_code, $json->_uniqidV4);
+     }
+ 
+     public function getStart() {
+         global $global;
+@@ -381,27 +381,27 @@
+         }
+         return self::isSameDeviceAsLastLogin(User::getId(), getDeviceID());
+     }
+ 
+-    public static function isSameDeviceAsLastLogin($users_id, $uniqidV4) {
++    public static function isSameDeviceAsLastLogin($users_id, $_uniqidV4) {
+         if (self::isUser2FAEnabled($users_id)) {
+             $row = self::getLastConfirmedLogin($users_id);
+         } else {
+             $row = self::getLastLogin($users_id);
+         }
+-        if (!empty($row) && $row['uniqidV4'] === $uniqidV4) {
++        if (!empty($row) && $row['_uniqidV4'] === $uniqidV4) {
+             return true;
+         } elseif (empty($row)) {
+             _error_log("LoginControl::isSameDeviceAsLastLogin that is the user first login at all {$users_id} ");
+             return true;
+         }
+-        _error_log("LoginControl::isSameDeviceAsLastLogin that is NOT the same device {$users_id} {$row['uniqidV4']} === $uniqidV4 " . json_encode($row));
++        _error_log("LoginControl::isSameDeviceAsLastLogin that is NOT the same device {$users_id} {$row['_uniqidV4']} === $uniqidV4 " . json_encode($row));
+ 
+         return false;
+     }
+ 
+-    public static function confirmCode($users_id, $code, $uniqidV4 = "") {
+-        $lastLogin = self::getLastLoginOnDevice($users_id, $uniqidV4);
++    public static function confirmCode($users_id, $code, $_uniqidV4 = "") {
++        $lastLogin = self::getLastLoginOnDevice($users_id, $_uniqidV4);
+         if (empty($lastLogin)) {
+             return false;
+         }
+         $confirmationCode = $lastLogin['confirmation_code'];
+@@ -522,9 +522,9 @@
+             return false;
+         }
+         _session_start();
+         if (empty($_SESSION['user']['challenge']['text'])) {
+-            $_SESSION['user']['challenge']['text'] = uniqid();
++            $_SESSION['user']['challenge']['text'] = _uniqid();
+             $_SESSION['user']['challenge']['isComplete'] = false;
+         }
+         $encMessage = self::encryptPGPMessage(User::getId(), $_SESSION['user']['challenge']['text']);
+         return $encMessage["encryptedMessage"];
+--- ./plugin/LoginControl/switchUser2FA.php.orig	2025-03-01 02:04:58.574526500 +0100
++++ ./plugin/LoginControl/switchUser2FA.php	2025-03-01 02:04:58.577989307 +0100
+@@ -1,6 +1,6 @@
+ <?php
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <div class="material-switch">
+     <input class="playerSwitchDefault" data-toggle="toggle" type="checkbox" value="" id="switch<?php echo $uid; ?>" <?php echo (LoginControl::is2FAEnabled($users_id)) ? "checked" : ""; ?>>
+     <label for="switch<?php echo $uid; ?>" class="label-primary"></label>
+--- ./plugin/Meet/Meet.php.orig	2025-03-01 02:04:58.581280064 +0100
++++ ./plugin/Meet/Meet.php	2025-03-01 02:04:58.584935005 +0100
+@@ -581,9 +581,9 @@
+     public static function createJitsiButton($title, $svg, $onclick, $class = "", $style = "", $id = "")
+     {
+         global $global;
+         if (empty($id)) {
+-            $id = "avideoMeet" . uniqid();
++            $id = "avideoMeet" . _uniqid();
+         }
+         $svgContent = file_get_contents($global['systemRootPath'] . 'plugin/Meet/buttons/' . $svg);
+         $btn = '<div class="toolbox-button aVideoMeet ' . $class . '" tabindex="0" role="button" onclick="' . $onclick . '" id="' . $id . '" style="' . $style . '">'
+                 . '<div class="tooltip" style="display:none; position: absolute; bottom: 70px;background-color: rgb(13, 20, 36); padding: 5px; border-radius: 4px; font-weight: bold; color: #909eb5; height: 10px; line-height: normal;">' . $title . '</div>'
+--- ./plugin/Meet/saveMeet.json.php.orig	2025-03-01 02:04:58.588215064 +0100
++++ ./plugin/Meet/saveMeet.json.php	2025-03-01 02:04:58.591615566 +0100
+@@ -74,9 +74,9 @@
+ $o->setPassword(@$_REQUEST['RoomPasswordNew']);
+ $o->setTopic(@$_REQUEST['RoomTopic']);
+ $o->setStarts($_REQUEST['starts']);
+ $o->setName($obj->roomName);
+-$o->setMeet_code(uniqid());
++$o->setMeet_code(_uniqid());
+ $meet_schedule_id = $o->save();
+ if ($meet_schedule_id) {
+     Meet_schedule_has_users_groups::saveUsergroupsToMeet($meet_schedule_id, $_REQUEST['userGroups']);
+     $createdMeet = new Meet_schedule($meet_schedule_id);
+--- ./plugin/PayPalYPT/ipn.php.orig	2025-03-01 02:04:58.594861930 +0100
++++ ./plugin/PayPalYPT/ipn.php	2025-03-01 02:04:58.598301884 +0100
+@@ -22,9 +22,9 @@
+ if (empty($_POST["recurring_payment_id"])) {
+     _error_log("PayPalIPN: recurring_payment_id EMPTY ");
+     $users_id = User::getId();
+ 
+-    $invoiceNumber = uniqid();
++    $invoiceNumber = _uniqid();
+ 
+     $payment = $paypal->execute();
+     //var_dump($amount);
+     if (!empty($payment)) {
+--- ./plugin/PayPalYPT/payOutReceiverEmailForm.php.orig	2025-03-01 02:04:58.601603161 +0100
++++ ./plugin/PayPalYPT/payOutReceiverEmailForm.php	2025-03-01 02:04:58.605019903 +0100
+@@ -1,6 +1,6 @@
+ <?php
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <div class="form-group">
+     <label class="col-md-4 control-label"><?php echo __("PayPal payout email"); ?></label>
+     <div class="col-md-8 inputGroupContainer">
+--- ./plugin/Permissions/getPermissionsFromPlugin.html.php.orig	2025-03-01 02:04:58.608377312 +0100
++++ ./plugin/Permissions/getPermissionsFromPlugin.html.php	2025-03-01 02:04:58.611850740 +0100
+@@ -17,9 +17,9 @@
+ 
+ $obj = AVideoPlugin::getObjectDataIfEnabled("Permissions");
+ $permissions = Permissions::getPluginPermissions($_REQUEST['plugins_id']);
+ $userGroups = UserGroups::getAllUsersGroupsArray();
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <div class="panel panel-default">
+     <div class="panel-heading tabbable-line">
+         <ul class="nav nav-tabs">
+--- ./plugin/PlayLists/PlayLists.php.orig	2025-03-01 02:04:58.615280355 +0100
++++ ./plugin/PlayLists/PlayLists.php	2025-03-01 02:04:58.619153422 +0100
+@@ -286,9 +286,9 @@
+         if (!empty($video)) {
+             $filename = $video['filename'];
+             $v = new Video("", "", $video['id']);
+         } else {
+-            $filename = 'serie_playlists_' . uniqid();
++            $filename = 'serie_playlists_' . _uniqid();
+             $v = new Video("", $filename);
+         }
+         $v->setTitle($playlist->getName());
+         $v->setSerie_playlists_id($serie_playlists_id);
+@@ -753,9 +753,9 @@
+         if (empty($playListArray) || empty($created)) {
+             return '';
+         }
+         global $global;
+-        $uid = uniqid();
++        $uid = _uniqid();
+         $totalDuration = 0;
+         foreach ($playListArray as $value) {
+             $totalDuration += $value['duration_seconds'];
+         }
+@@ -808,9 +808,9 @@
+         $per = 0;
+         $className = "class_{$uid}";
+         $epgBars = "";
+         foreach ($playListArray as $key => $value) {
+-            $epgId = "epg_" . uniqid();
++            $epgId = "epg_" . _uniqid();
+             $represents_percentage = number_format(($value['duration_seconds'] / $totalDuration) * 100, 2);
+             $images = Video::getImageFromFilename($value['filename']);
+             $per += $represents_percentage;
+             $thumbsJpg = $images->thumbsJpg;
+@@ -857,9 +857,9 @@
+             _error_log("getPlayLiveButton: canManagePlaylist($playlists_id) said no");
+             return "";
+         }
+         global $global;
+-        $btnId = "btnId" . uniqid();
++        $btnId = "btnId" . _uniqid();
+         $label = __("Play Live");
+         $tooltip = __("Play this Program live now");
+         $liveLink = PlayLists::getLiveLink($playlists_id);
+         $labelLive = __("Is Live");
+--- ./plugin/PlayLists/actionButton.php.orig	2025-03-01 02:04:58.622436151 +0100
++++ ./plugin/PlayLists/actionButton.php	2025-03-01 02:04:58.625906525 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ global $advancedCustom;
+-$crc = uniqid();
++$crc = _uniqid();
+ doNOTOrganizeHTMLIfIsPagination();
+ $global['laodPlaylistScript'] = 1;
+ ?>
+     <?php if ((empty($_POST['disableAddTo'])) && (( ($advancedCustom != false) && ($advancedCustom->disableShareAndPlaylist == false)) || ($advancedCustom == false))) { ?>
+--- ./plugin/PlayLists/script.js.orig	2025-03-01 02:04:58.629154914 +0100
++++ ./plugin/PlayLists/script.js	2025-03-01 02:04:58.632588399 +0100
+@@ -14,34 +14,34 @@
+ }
+ 
+ var _loadPL_timeout = [];
+ async function loadPL(videos_id, crc) {
+-    var uniqid = videos_id+crc;
+-    clearTimeout(_loadPL_timeout[uniqid]);
+-    if (typeof $('#addBtn' + uniqid).webuiPopover !== 'function' || typeof loadPlayLists !== 'function') {
+-        _loadPL_timeout[uniqid] = setTimeout(function () {
++    var _uniqid = videos_id+crc;
++    clearTimeout(_loadPL_timeout[_uniqid]);
++    if (typeof $('#addBtn' + _uniqid).webuiPopover !== 'function' || typeof loadPlayLists !== 'function') {
++        _loadPL_timeout[_uniqid] = setTimeout(function () {
+             loadPL(videos_id, crc);
+         }, 1000);
+     } else {
+         loadPlayLists(videos_id, crc);
+-        $('#addBtn' + uniqid).webuiPopover();
+-        $('#addPlayList' + uniqid).click(function () {
++        $('#addBtn' + _uniqid).webuiPopover();
++        $('#addPlayList' + _uniqid).click(function () {
+             modal.showPleaseWait();
+             $.ajax({
+                 url: webSiteRootURL + 'objects/playlistAddNew.json.php',
+                 method: 'POST',
+                 data: {
+                     'videos_id': videos_id,
+-                    'status': $('#publicPlayList' + uniqid).is(":checked") ? "public" : "private",
+-                    'name': $('#playListName' + uniqid).val()
++                    'status': $('#publicPlayList' + _uniqid).is(":checked") ? "public" : "private",
++                    'name': $('#playListName' + _uniqid).val()
+                 },
+                 success: function (response) {
+                     if (response.status > 0) {
+                         playList = [];
+                         reloadPlayLists();
+                         loadPlayLists(videos_id, crc);
+-                        $('#playListName' + uniqid).val("");
+-                        $('#publicPlayList' + uniqid).prop('checked', true);
++                        $('#playListName' + _uniqid).val("");
++                        $('#publicPlayList' + _uniqid).prop('checked', true);
+                     }
+                     modal.hidePleaseWait();
+                 }
+             });
+--- ./plugin/UserNotifications/Objects/User_notifications.php.orig	2025-03-01 02:04:58.635913312 +0100
++++ ./plugin/UserNotifications/Objects/User_notifications.php	2025-03-01 02:04:58.639377424 +0100
+@@ -173,9 +173,9 @@
+     }
+ 
+     public function save() {
+         if (empty($this->element_id)) {
+-            $this->element_id = 'automatic_id_' . uniqid();
++            $this->element_id = 'automatic_id_' . _uniqid();
+         }else{
+             if(self::elementIdExists($this->element_id)){
+                 return false;
+             }
+--- ./plugin/YPTSocket/Message.php.orig	2025-03-01 02:04:58.642704632 +0100
++++ ./plugin/YPTSocket/Message.php	2025-03-01 02:04:58.646338760 +0100
+@@ -324,9 +324,9 @@
+         } else {
+             $obj['msg'] = $msg;
+         }
+ 
+-        $obj['uniqid'] = uniqid();
++        $obj['_uniqid'] = uniqid();
+         $obj['users_id'] = $users_id;
+         $obj['videos_id'] = $videos_id;
+         $obj['live_key'] = $live_key;
+         $obj['webSocketServerVersion'] = $SocketDataObj->serverVersion;
+@@ -446,9 +446,9 @@
+                 if (!isset($return['users_uri'][$index][$client['yptDeviceId']])) {
+                     $return['users_uri'][$index][$client['yptDeviceId']] = array();
+                 }
+                 if (empty($client['users_id'])) {
+-                    $return['users_uri'][$index][$client['yptDeviceId']][uniqid()] = $client;
++                    $return['users_uri'][$index][$client['yptDeviceId']][_uniqid()] = $client;
+                 } else
+                 if (!isset($return['users_uri'][$index][$client['yptDeviceId']][$client['users_id']])) {
+                     $return['users_uri'][$index][$client['yptDeviceId']][$client['users_id']] = $client;
+                 }
+--- ./plugin/YPTSocket/MessageSQLite.php.orig	2025-03-01 02:04:58.649628755 +0100
++++ ./plugin/YPTSocket/MessageSQLite.php	2025-03-01 02:04:58.653214148 +0100
+@@ -356,9 +356,9 @@
+         } else {
+             $obj['msg'] = $msg;
+         }
+ 
+-        $obj['uniqid'] = uniqid();
++        $obj['_uniqid'] = uniqid();
+         $obj['users_id'] = $users_id;
+         $obj['videos_id'] = $videos_id;
+         $obj['live_key'] = $live_key;
+         $obj['webSocketServerVersion'] = $SocketDataObj->serverVersion;
+--- ./plugin/YPTSocket/test.php.orig	2025-03-01 02:04:58.656527152 +0100
++++ ./plugin/YPTSocket/test.php	2025-03-01 02:04:58.660000689 +0100
+@@ -95,9 +95,9 @@
+     $msgObj->isAdmin = 1;
+     $msgObj->test_msg = $msg;
+     $msgObj->user_name = SocketMessageType::TESTING;
+     $msgObj->browser = SocketMessageType::TESTING;
+-    $msgObj->yptDeviceId = SocketMessageType::TESTING . "-" . uniqid();
++    $msgObj->yptDeviceId = SocketMessageType::TESTING . "-" . _uniqid();
+     $msgObj->token = getToken($timeOut);
+     $msgObj->time = time();
+     $msgObj->ip = '127.0.0.1';
+     $msgObj->send_to_uri_pattern = '';
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/confirmRecurrentButton.php.orig	2025-03-01 02:04:58.663307902 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/confirmRecurrentButton.php	2025-03-01 02:04:58.666717896 +0100
+@@ -1,12 +1,12 @@
+ <?php
+-$uniqid = uniqid();
++$_uniqid = uniqid();
+ $obj = AVideoPlugin::getObjectData("PayPalYPT");
+ ?>
+-<button type="submit" class="btn btn-primary" id="YPTWalletPayPalRecurrentButton<?php echo $uniqid; ?>"><i class="fab fa-paypal"></i> <?php echo __($obj->subscriptionButtonLabel); ?></button>
++<button type="submit" class="btn btn-primary" id="YPTWalletPayPalRecurrentButton<?php echo $_uniqid; ?>"><i class="fab fa-paypal"></i> <?php echo __($obj->subscriptionButtonLabel); ?></button>
+ <script>
+     $(document).ready(function () {
+-        $('#YPTWalletPayPalRecurrentButton<?php echo $uniqid; ?>').click(function (evt) {
++        $('#YPTWalletPayPalRecurrentButton<?php echo $_uniqid; ?>').click(function (evt) {
+             evt.preventDefault();
+             modal.showPleaseWait();
+ 
+             $.ajax({
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/confirmRecurrentButtonV2.php.orig	2025-03-01 02:04:58.670027991 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/confirmRecurrentButtonV2.php	2025-03-01 02:04:58.673418422 +0100
+@@ -1,15 +1,15 @@
+ <?php
+-$uniqid = uniqid();
++$_uniqid = uniqid();
+ $obj = AVideoPlugin::getObjectData("PayPalYPT");
+ 
+ $params = array('total'=>$total, 'currency'=>$currency, 'frequency'=>$frequency, 'interval'=>$interval, 'name'=>$name, 'json'=>$json, 'trialDays'=>$trialDays, 'addFunds_Success'=>$addFunds_Success);
+ 
+ ?>
+-<button type="submit" class="btn btn-primary" id="YPTWalletPayPalRecurrentButton<?php echo $uniqid; ?>"><i class="fab fa-paypal"></i> <?php echo __($obj->subscriptionButtonLabel); ?></button>
++<button type="submit" class="btn btn-primary" id="YPTWalletPayPalRecurrentButton<?php echo $_uniqid; ?>"><i class="fab fa-paypal"></i> <?php echo __($obj->subscriptionButtonLabel); ?></button>
+ <script>
+     $(document).ready(function () {
+-        $('#YPTWalletPayPalRecurrentButton<?php echo $uniqid; ?>').click(function (evt) {
++        $('#YPTWalletPayPalRecurrentButton<?php echo $_uniqid; ?>').click(function (evt) {
+             evt.preventDefault();
+             modal.showPleaseWait();
+ 
+             $.ajax({
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/redirect_url.php.orig	2025-03-01 02:04:58.676783268 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/redirect_url.php	2025-03-01 02:04:58.680213072 +0100
+@@ -12,9 +12,9 @@
+ $paypal = AVideoPlugin::loadPluginIfEnabled("PayPalYPT");
+ // how to get the users_ID from the PayPal call back IPN?
+ $users_id = User::getId();
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ 
+ $payment = $paypal->execute();
+ 
+ //check if there is a token and this token has a user (recurrent payments)
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestPayment.json.php.orig	2025-03-01 02:04:58.683524579 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestPayment.json.php	2025-03-01 02:04:58.686967483 +0100
+@@ -23,9 +23,9 @@
+ if(!empty($_REQUEST['videos_id'])){
+     YPTWallet::setAddFundsSuccessRedirectToVideo($_REQUEST['videos_id']);
+ }
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ 
+ $description = $config->getWebSiteTitle()." Payment";
+ 
+ $payment = $plugin->setUpPayment($invoiceNumber, $objS->RedirectURL, $objS->CancelURL, $_POST['value'], $objS->currency, $description);
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestSubscription.json.php.orig	2025-03-01 02:04:58.690274336 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestSubscription.json.php	2025-03-01 02:04:58.693675378 +0100
+@@ -14,9 +14,9 @@
+ 
+ $obj= new stdClass();
+ $obj->error = true;
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ if (session_status() == PHP_SESSION_NONE) {
+     session_start();
+ }
+ unset($_SESSION['recurrentSubscription']['plans_id']);
+--- ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestSubscriptionV2.json.php.orig	2025-03-01 02:04:58.697060754 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletPayPal/requestSubscriptionV2.json.php	2025-03-01 02:04:58.700460595 +0100
+@@ -15,9 +15,9 @@
+ $obj= new stdClass();
+ $obj->error = true;
+ $obj->msg = '';
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ 
+ //$params = array('total'=>$total, 'currency'=>$currency, 'frequency'=>$frequency, 'interval'=>$interval, 'name'=>$name, 'json'=>$json, 'trialDays'=>$trialDays);
+ 
+ if(empty($_REQUEST['hash'])){
+--- ./plugin/YPTWallet/plugins/YPTWalletRazorPay/confirmRecurrentButton.php.orig	2025-03-01 02:04:58.703777747 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletRazorPay/confirmRecurrentButton.php	2025-03-01 02:04:58.707177368 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ $obj = AVideoPlugin::getObjectData('StripeYPT');
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <form method="post" action="<?php echo $global['webSiteRootURL']; ?>plugin/YPTWallet/plugins/YPTWalletRazorPay/requestSubscription.json.php" style="display:none;" id="RazorPayForm<?php echo $uid; ?>">
+     <input type="text" name="value" value="" id="valueRazorPay<?php echo $uid; ?>" autocomplete="off"/>
+     <input type="text" name="plans_id" value="<?php echo @$_GET['plans_id']; ?>" autocomplete="off"/>
+--- ./plugin/YPTWallet/plugins/YPTWalletRazorPay/requestPayment.json.php.orig	2025-03-01 02:04:58.710500536 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletRazorPay/requestPayment.json.php	2025-03-01 02:04:58.713970049 +0100
+@@ -24,9 +24,9 @@
+ //
+ // We create an razorpay order using orders api
+ // Docs: https://docs.razorpay.com/docs/orders
+ //
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ 
+ $displayCurrency = $objS->currency;
+ 
+ $orderData = [
+--- ./plugin/YPTWallet/plugins/YPTWalletRazorPay/requestSubscription.json.php.orig	2025-03-01 02:04:58.717319754 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletRazorPay/requestSubscription.json.php	2025-03-01 02:04:58.720742278 +0100
+@@ -16,9 +16,9 @@
+ 
+ $displayCurrency = $objS->currency;
+ 
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ if (session_status() == PHP_SESSION_NONE) {
+     session_start();
+ }
+ unset($_SESSION['recurrentSubscription']['plans_id']);
+--- ./plugin/YPTWallet/plugins/YPTWalletStripe/confirmButton.php.orig	2025-03-01 02:04:58.724050051 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletStripe/confirmButton.php	2025-03-01 02:04:58.727489637 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ $obj = AVideoPlugin::getObjectData('StripeYPT');
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <style>
+     /**
+  * The CSS shown here will not be introduced in the Quickstart guide, but shows
+--- ./plugin/YPTWallet/plugins/YPTWalletStripe/confirmRecurrentButton.php.orig	2025-03-01 02:04:58.730786279 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletStripe/confirmRecurrentButton.php	2025-03-01 02:04:58.734236382 +0100
+@@ -1,8 +1,8 @@
+ <?php
+ global $planTitle;
+ $obj = AVideoPlugin::getObjectData('StripeYPT');
+-$uid = uniqid();
++$uid = _uniqid();
+ ?>
+ <style>
+     /**
+  * The CSS shown here will not be introduced in the Quickstart guide, but shows
+--- ./plugin/YPTWallet/plugins/YPTWalletStripe/requestPayment.json.php.orig	2025-03-01 02:04:58.737570439 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletStripe/requestPayment.json.php	2025-03-01 02:04:58.740942466 +0100
+@@ -19,9 +19,9 @@
+     $obj->msg = "Invalid Value";
+     die(json_encode($obj));
+ }
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ //setUpPayment($total = '1.00', $currency = "USD", $description = "");
+ $payment = $plugin->setUpPayment($_POST['value'], $objS->currency, $config->getWebSiteTitle() . " Payment");
+ 
+ if (!empty($payment) && StripeYPT::isPaymentOk($payment, $_POST['value'], $objS->currency)) {
+--- ./plugin/YPTWallet/plugins/YPTWalletStripe/requestSubscription.json.php.orig	2025-03-01 02:04:58.744246021 +0100
++++ ./plugin/YPTWallet/plugins/YPTWalletStripe/requestSubscription.json.php	2025-03-01 02:04:58.747664335 +0100
+@@ -19,9 +19,9 @@
+ $obj->msg = "";
+ $obj->customer = false;
+ $obj->plans_id = intval(@$_REQUEST['plans_id']);
+ 
+-$invoiceNumber = uniqid();
++$invoiceNumber = _uniqid();
+ if (session_status() == PHP_SESSION_NONE) {
+     session_start();
+ }
+ 
+--- ./plugin/YouPHPFlix2/view/BigVideo.php.orig	2025-03-01 02:04:58.750934719 +0100
++++ ./plugin/YouPHPFlix2/view/BigVideo.php	2025-03-01 02:04:58.754374482 +0100
+@@ -1,7 +1,7 @@
+ <?php
+ global $advancedCustom;
+-$uid = uniqid();
++$uid = _uniqid();
+ $obj2 = AVideoPlugin::getObjectData("YouPHPFlix2");
+ $video = Video::getVideo("", Video::SORT_TYPE_VIEWABLENOTUNLISTED, !$obj2->hidePrivateVideos, false, true);
+ if (empty($video)) {
+     $video = Video::getVideo("", Video::SORT_TYPE_VIEWABLENOTUNLISTED, !$obj2->hidePrivateVideos, true);
+--- ./plugin/YouPHPFlix2/view/modeFlixCategory.php.orig	2025-03-01 02:04:58.757653872 +0100
++++ ./plugin/YouPHPFlix2/view/modeFlixCategory.php	2025-03-01 02:04:58.761088261 +0100
+@@ -20,16 +20,16 @@
+ $cacheName .= isForKidsSet()?'forKids':'';
+ 
+ $cache = ObjectYPT::getCache($cacheName, 600);
+ if (!empty($cache)) {
+-    echo str_replace('{serie_uid}', uniqid(), $cache);
++    echo str_replace('{serie_uid}', _uniqid(), $cache);
+     return false;
+ }
+ _ob_start();
+ $obj = AVideoPlugin::getObjectData("YouPHPFlix2");
+ $timeLog = __FILE__ . " - modeFlixCategory";
+ 
+-$uid = uniqid();
++$uid = _uniqid();
+ $divUUID = $uid;
+ 
+ $ads2 = getAdsLeaderBoardTop2();
+ $videosCounter = 0;
+@@ -162,6 +162,6 @@
+ $cache = _ob_get_clean();
+ 
+ ObjectYPT::setCache($cacheName, $cache);
+ 
+-echo str_replace('{serie_uid}', uniqid(), $cache);
++echo str_replace('{serie_uid}', _uniqid(), $cache);
+ ?>
+\ No newline at end of file
+--- ./plugin/YouPHPFlix2/view/modeFlixSerie.php.orig	2025-03-01 02:04:58.764345458 +0100
++++ ./plugin/YouPHPFlix2/view/modeFlixSerie.php	2025-03-01 02:04:58.767775287 +0100
+@@ -17,9 +17,9 @@
+     die('Video from playlist is empty ' . $playlists_id);
+ }
+ 
+ if (empty($_REQUEST['uid'])) {
+-    $uid = uniqid();
++    $uid = _uniqid();
+ } else {
+     $uid = preg_replace('/[^a-z0-0_]/i', '', $_REQUEST['uid']);
+ }
+ /*
+@@ -28,9 +28,9 @@
+ 
+   $cacheName = "modeFlixSerie" . md5(json_encode($_GET)) . User::getId();
+   $cache = ObjectYPT::getCache($cacheName, 600);
+   if (!empty($cache)) {
+-  echo str_replace('{serie_uid}', uniqid(), $cache);
++  echo str_replace('{serie_uid}', _uniqid(), $cache);
+   return false;
+   }
+   ob_start();
+  * 
+@@ -52,9 +52,9 @@
+     } else {
+         $dataFlickirty->wrapAround = true;
+     }
+     $videos = PlayList::getAllFromPlaylistsID($playlists_id);
+-    $uidFlickirty = uniqid();
++    $uidFlickirty = _uniqid();
+     ?>
+     <div class="row topicRow" id="<?php echo $uidFlickirty; ?>-Flickirty">
+         <!-- Serie -->
+         <?php
+@@ -76,8 +76,8 @@
+   $cache = ob_get_clean();
+ 
+   ObjectYPT::setCache($cacheName, $cache);
+ 
+-  echo str_replace('{serie_uid}', uniqid(), $cache);
++  echo str_replace('{serie_uid}', _uniqid(), $cache);
+  * 
+  */
+ ?>
+\ No newline at end of file
+--- ./plugin/YouPHPFlix2/view/row.php.orig	2025-03-01 02:04:58.771026860 +0100
++++ ./plugin/YouPHPFlix2/view/row.php	2025-03-01 02:04:58.774487143 +0100
+@@ -1,8 +1,8 @@
+ <?php
+ global $advancedCustom;
+ 
+-$uidOriginal = uniqid();
++$uidOriginal = _uniqid();
+ $landscape = "rowPortrait";
+ $css = "";
+ if (!empty($obj->landscapePosters)) {
+     $landscape = "landscapeTile";
+--- ./plugin/AVideoPlugin.php.orig	2025-03-01 02:04:58.381275454 +0100
++++ ./plugin/AVideoPlugin.php	2025-03-01 02:04:58.385529330 +0100
+@@ -1389,9 +1389,9 @@
+         }
+         $plugins = Plugin::getAllEnabled();
+         $userOptions = [];
+         $navBarButtons = "";
+-        $uid = uniqid();
++        $uid = _uniqid();
+         foreach ($plugins as $value) {
+             self::YPTstart($uid);
+             $p = static::loadPlugin($value['dirName']);
+             if (is_object($p)) {
+@@ -1460,9 +1460,9 @@
+         global $global;
+         $p = static::loadPlugin($name);
+         $btn = "";
+         if (!empty($p)) {
+-            $uid = uniqid();
++            $uid = _uniqid();
+             $btn = '<div class="material-switch">
+                     <input class="pluginSwitch" data-toggle="toggle" type="checkbox" id="subsSwitch' . $uid . '" value="1" ' . (self::isEnabledByName($name) ? "checked" : "") . ' >
+                     <label for="subsSwitch' . $uid . '" class="label-primary"></label>
+                 </div><script>
+--- ./view/include/social.php.orig	2025-03-01 02:04:58.784440229 +0100
++++ ./view/include/social.php	2025-03-01 02:04:58.787918823 +0100
+@@ -48,9 +48,9 @@
+ ];
+ ?>
+ <ul class="social-network social-circle social-bgColor">
+     <?php
+-    $loaderSequenceName = uniqid();
++    $loaderSequenceName = _uniqid();
+     foreach ($global['social_medias'] as $key => $value) {
+         eval("\$show = \$advancedCustom->showShareButton_{$key};");
+         if (empty($show)) {
+             continue;
+@@ -70,7 +70,7 @@
+     </li>
+ </ul>
+ <div style="margin-top: 10px;">
+     <?php
+-    getInputCopyToClipboard(uniqid(), $urlShort, 'class="form-control" readonly="readonly" style="background-color: #EEE; color: #000;"');
++    getInputCopyToClipboard(_uniqid(), $urlShort, 'class="form-control" readonly="readonly" style="background-color: #EEE; color: #000;"');
+     ?>
+ </div>
+\ No newline at end of file
+--- ./view/mini-upload-form/upload.php.orig	2025-03-01 02:04:58.798025060 +0100
++++ ./view/mini-upload-form/upload.php	2025-03-01 02:04:58.801446140 +0100
+@@ -30,9 +30,9 @@
+ 
+     $duration = Video::getDurationFromFile($_FILES['upl']['tmp_name']);
+     $path_parts = pathinfo($_FILES['upl']['name']);
+     $mainName = preg_replace("/[^A-Za-z0-9]/", "", cleanString($path_parts['filename']));
+-    $filename = uniqid($mainName . "_", true);
++    $filename = _uniqid($mainName . "_", true);
+     $videos_id = 0;
+     if (!empty($_FILES['upl']['videoId'])) {
+         $videos_id = $_FILES['upl']['videoId'];
+     } elseif (!empty($_POST['videos_id'])) {
+--- ./view/ddosCaptcha.php.orig	2025-03-01 02:04:58.777772329 +0100
++++ ./view/ddosCaptcha.php	2025-03-01 02:04:58.781207052 +0100
+@@ -45,9 +45,9 @@
+ if (!empty($_SERVER['HTTP_USER_AGENT']) && preg_match("/AVideo(.*)/", $ua)) {
+     return ;
+ }
+ 
+-$ip = uniqid();
++$ip = _uniqid();
+ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+     $ip = $_SERVER['HTTP_CLIENT_IP'];
+ } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+     $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+--- ./view/logs.php.orig	2025-03-01 02:04:58.791160069 +0100
++++ ./view/logs.php	2025-03-01 02:04:58.794745550 +0100
+@@ -36,24 +36,24 @@
+     global $printedarray, $global, $mysqlPass,
+     $outputText, $outputTextErrors, $outputTextWarnings,
+     $collapsibleOpen, $collapsibleClose, $linesAdded, $isCollapsed;
+ 
+-    $uniqid = '';
++    $_uniqid = '';
+     $class = '';
+     $collapsible = true;
+-    $uniqid = uniqid();
++    $_uniqid = uniqid();
+     if (
+             preg_match("/(AVideoLog::SECURITY)/", $text, $matches) ||
+             preg_match("/(Prepare failed)/i", $text, $matches) ||
+             preg_match("/(AVideoLog::ERROR)/", $text, $matches) ||
+             preg_match("/(fatal)/i", $text, $matches)) {
+-        $outputTextErrors[] = [$uniqid, $text, $matches[1]];
++        $outputTextErrors[] = [$_uniqid, $text, $matches[1]];
+         $class = "terminal-alert terminal-alert-error ";
+         $style = "background-color: #A00; color:#FFF;font-weight: bold;";
+         $collapsible = false;
+     } elseif (preg_match("/(PHP Warning)/i", $text, $matches)) {
+         $class = "terminal-alert terminal-alert-primary";
+-        $outputTextWarnings[] = [$uniqid, $text, $matches[1]];
++        $outputTextWarnings[] = [$_uniqid, $text, $matches[1]];
+         $collapsible = false;
+     } elseif (preg_match("/PHP Notice/", $text)) {
+         $class = "logNotice";
+     } elseif (preg_match("/(AVideoLog::WARNING)/", $text, $matches) || preg_match("/AVideoLog::DEBUG/", $text)) {
+@@ -95,9 +95,9 @@
+     }
+     if (!$collapsible && !$isCollapsed) {
+     }
+     $linesAdded++;
+-    $outputText .= "<div class='logLine {$class}' id='{$uniqid}'>"
++    $outputText .= "<div class='logLine {$class}' id='{$_uniqid}'>"
+             . "<span class='lineCount'>#{$linesAdded}</span> {$text}"
+             . "</div>" . PHP_EOL;
+     return true;
+ }
+--- ./view/userChannelArtUploadInclude.php.orig	2025-03-01 02:04:58.804710707 +0100
++++ ./view/userChannelArtUploadInclude.php	2025-03-01 02:04:58.808192473 +0100
+@@ -1,6 +1,6 @@
+ <?php
+-$caUid = 'ChannelArt_' . uniqid();
++$caUid = 'ChannelArt_' . _uniqid();
+ ?>
+ <style>
+     #custom-handle {
+         width: 3em;
+--- ./view/userLogin.php.orig	2025-03-01 02:04:58.811462768 +0100
++++ ./view/userLogin.php	2025-03-01 02:04:58.815021179 +0100
+@@ -210,9 +210,9 @@
+             if (is_string($value) && file_exists($value)) {
+                 //include $value;
+             } elseif (is_array($value)) {
+                 $loginCount++;
+-                $uid = uniqid();
++                $uid = _uniqid();
+                 $oauthURL = "{$global['webSiteRootURL']}login?type={$value['parameters']->type}&redirectUri=" . ($_GET['redirectUri'] ?? "");
+                 $loginBtnLabel = "<span class=\"{$value['parameters']->icon}\"></span> {$value['parameters']->type}";
+                 if (!empty($value['dataObject']->buttonLabel)) {
+                     $loginBtnLabel = $value['dataObject']->buttonLabel;
+--- ./view/userPhotoUploadInclude.php.orig	2025-03-01 02:04:58.818319802 +0100
++++ ./view/userPhotoUploadInclude.php	2025-03-01 02:04:58.821722675 +0100
+@@ -1,9 +1,9 @@
+ <?php
+ $finalWidth = 150;
+ $finalHeight = 150;
+ $screenWidth = 150;
+-$caUid = 'Photo_' . uniqid();
++$caUid = 'Photo_' . _uniqid();
+ ?>
+ <div class="form-group" id="<?php echo $caUid; ?>">
+     <?php
+     $croppie = getCroppie(__('Profile Photo'), 'userPhotoUpload', $finalWidth, $finalHeight, $screenWidth);
