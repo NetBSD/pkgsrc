@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.91 2025/03/03 20:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2025/03/03 23:07:48 he Exp $
 
 DISTNAME=	knot-3.4.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	https://secure.nic.cz/files/knot-dns/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--with-rundir=${VARBASE}/run/knot
 CONFIGURE_ARGS+=	--with-storage=${VARBASE}/knot/lib
 CONFIGURE_ARGS+=	--with-urcu=${BUILDLINK_PREFIX.userspace-rcu}
 CONFIGURE_ARGS+=	--with-libidn=${BUILDLINK_PREFIX.libidn}
+CONFIGURE_ARGS+=	--with-libnghttp2=${BUILDLINK_PREFIX.nghttp2}
 
 CONFIGURE_ARGS.NetBSD+=	--enable-recvmmsg=no
 
@@ -66,6 +67,7 @@ OWN_DIRS+=		${VARBASE}/knot
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../www/nghttp2/buildlink3.mk"
 .include "../../devel/userspace-rcu/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
