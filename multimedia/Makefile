@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2025/03/03 15:21:04 manu Exp $
+# $NetBSD: Makefile,v 1.348 2025/03/03 15:24:12 manu Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -165,6 +165,7 @@ SUBDIR+=	phonon-qt5
 SUBDIR+=	phonon-qt5-backend-gstreamer
 SUBDIR+=	phonon-qt5-backend-vlc
 SUBDIR+=	php-avideo
+SUBDIR+=	php-avideo-encoder
 SUBDIR+=	php-ming
 SUBDIR+=	pitivi
 SUBDIR+=	py-enzyme
