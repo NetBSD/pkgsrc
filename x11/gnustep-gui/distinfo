@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2023/03/02 22:28:17 wiz Exp $
+$NetBSD: distinfo,v 1.36 2025/03/03 01:26:21 manu Exp $
 
-BLAKE2s (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 1b61ff12930d76e35c24af77e4b678984b1f92164437c398556b76ffbb5c5a40
-SHA512 (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 42baca326db3ef4ffbee9d8f83c0156cbe256d345bd9b4307443c1bbadf628fa252d543feb0a958ee20d7c7f1190c4d459ee194f700fad11deb304193df8e0b3
-Size (gnustep-gui/gnustep-gui-0.30.0.tar.gz) = 3045228 bytes
-SHA1 (patch-Source_GSCharacterPanel.m) = 05a2d7e252f5134e37f71dd0f27c8e15b6f38a5e
+BLAKE2s (gnustep-gui/gnustep-gui-0.32.0.tar.gz) = 9d826a18ee4ad418f0ace371be47c564b44f1943700772d3225f3f5d846dd098
+SHA512 (gnustep-gui/gnustep-gui-0.32.0.tar.gz) = 43010bb2bdf714ee63ce6c91c4d951f1c259a66420e9a7b514de8f377d33f48c2960cbfa81c011af589e6ad9a99e8dee1fad6cd54ac4b447952122f3a1b2e13b
+Size (gnustep-gui/gnustep-gui-0.32.0.tar.gz) = 3121878 bytes
+SHA1 (patch-Source_GSCharacterPanel.m) = 5dec6f44dfbbda36d47ed5907d9279f7e185413e
