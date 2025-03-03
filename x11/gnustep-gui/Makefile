@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2025/03/03 01:26:21 manu Exp $
+# $NetBSD: Makefile,v 1.98 2025/03/03 09:22:42 wiz Exp $
 
 DISTNAME=	gnustep-gui-0.32.0
 #PKGREVISION=	1
@@ -23,13 +23,12 @@ MAKE_FILE=		GNUmakefile
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib -lunwind
 PLIST_SUBST=	API_VERSION=${PKGVERSION_NOREV:C/\.[0-9]$//}
 
-HOMEDIR=		${BUILD_DIR}/default/.home
 SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-build
 SUBST_MESSAGE.pc=	Remove work paths in gnustep-gui.pc
 SUBST_FILES.pc=		Source/gnustep-gui.pc
-SUBST_SED.pc=		-e 's|-L${HOMEDIR}/GNUstep/Library/Libraries||; \
-			    s|-I${HOMEDIR}/GNUstep/Library/Headers||;'
+SUBST_SED.pc=		-e 's|-L${FAKEHOMEDIR}/GNUstep/Library/Libraries||; \
+			    s|-I${FAKEHOMEDIR}/GNUstep/Library/Headers||;'
 
 post-build:
 	${CHMOD} -R g-w ${WRKSRC}
