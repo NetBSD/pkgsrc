@@ -1,4 +1,4 @@
-$NetBSD: patch-objects_functionsExec.php,v 1.1 2025/03/03 15:21:05 manu Exp $
+$NetBSD: patch-objects_functionsExec.php,v 1.2 2025/03/03 16:02:40 taca Exp $
 
 Implement getDirSize in pure PHP
 
@@ -16,11 +16,11 @@ diff --git a/objects/functionsExec.php b/objects/functionsExec.php
 index 23c55f8dd2de..b0b9af6e30cb 100644
 --- ./objects/functionsExec.php.orig
 +++ ./objects/functionsExec.php
-@@ -120,35 +120,16 @@ function getDirSize($dir, $forceNew = false)
+@@ -120,35 +120,16 @@ function getDirSize($dir, $forceNew = fa
  
      _error_log("getDirSize: start {$dir}");
  
--    if (isWindowsServer()) {
+-    if (isWindows()) {
 -        $return = foldersize($dir);
 -        $_getDirSize[$dir] = $return;
 -        return $return;
