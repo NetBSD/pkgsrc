@@ -1,0 +1,15 @@
+$NetBSD: patch-wx_Makefile,v 1.1 2025/03/03 12:25:03 jun Exp $
+
+* Fix non-root installation with pkgsrc-specific macro.
+
+--- wx/Makefile.orig	2025-02-26 12:01:05.000000000 +0000
++++ wx/Makefile
+@@ -51,7 +51,7 @@ nono:	${MYLIBS} ${OBJS}
+ 
+ install:	nono
+ 	${INSTALL} -d ${DESTDIR}${BINDIR}
+-	${INSTALL} -m 755 -o 0 -g 0 nono ${DESTDIR}${BINDIR}
++	${BSD_INSTALL_PROGRAM} nono ${DESTDIR}${BINDIR}
+ 
+ # make pot はトップディレクトリで行う必要がある (実行した位置からの相対パスが
+ # ファイルにコメントで残されるため、毎回違うと diff が出てしまう)。
