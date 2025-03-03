@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/03 15:29:15 manu Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/03 15:43:45 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder-Network
 GITHUB_TAG=	3ac08dfa79fadbd83feb1f8dca3b9370452c8cf5
@@ -23,9 +23,6 @@ NO_BUILD=	yes
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-.if ${PKG_PHP_MAJOR_VERS} < 8
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli-[0-9]*:../../databases/php-mysqli
 
 .include "../../mk/bsd.prefs.mk"
@@ -43,5 +40,6 @@ do-install:
 	    \! -name .gitignore \! -name .gitmodules  -print | \
                 ${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${AVIDEODIR}
 
+.include "../../lang/php/json.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
