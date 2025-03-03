@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/03 15:24:12 manu Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/03 15:43:45 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -23,9 +23,6 @@ NO_BUILD=	yes
 .include "../../lang/php/phpversion.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-.if ${PKG_PHP_MAJOR_VERS} < 8
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-.endif
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli-[0-9]*:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-zip-[0-9]*:../../archivers/php-zip
 
@@ -42,5 +39,6 @@ do-install:
                 ${PAX} -rw -pmp ${DESTDIR}${PREFIX}/${AVIDEODIR}
 
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
+.include "../../lang/php/json.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
