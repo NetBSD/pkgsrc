@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1890 2025/03/03 07:06:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1891 2025/03/03 07:07:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/sendmail to 8.18.1nb7 [jnemeth 2025-03-03]
 	Updated x11/py-qt-builder to 1.18.1nb1 [wiz 2025-03-03]
 	Updated time/py-rfc3339 to 2.0.1nb1 [wiz 2025-03-03]
+	Updated x11/py-sip-qt6 to 13.10.0nb1 [wiz 2025-03-03]
