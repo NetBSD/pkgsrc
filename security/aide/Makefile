@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2024/11/04 16:06:12 nia Exp $
-#
+# $NetBSD: Makefile,v 1.41 2025/03/03 20:29:29 wiz Exp $
 
 DISTNAME=	aide-0.15.1
 PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aide/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aide.sourceforge.net/
 COMMENT=	Free intrusion detection system for checking file integrity
 LICENSE=	artistic

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:08 riastradh Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/03 20:29:29 wiz Exp $
 
 DISTNAME=	pypcap-1.1
 PKGNAME=	${PYPKGPREFIX}-pcap-1.1
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net python
 MASTER_SITES=	http://pypcap.googlecode.com/files/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dugsong/pypcap
 COMMENT=	Simplified object-oriented python module for libpcap
 LICENSE=	modified-bsd

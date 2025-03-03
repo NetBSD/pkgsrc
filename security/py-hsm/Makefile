@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2022/01/05 20:47:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2025/03/03 20:29:31 wiz Exp $
 
 DISTNAME=	pyhsm-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	https://developers.yubico.com/python-pyhsm/Releases/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developers.yubico.com/python-pyhsm/
 COMMENT=	Python package that talk to a YubiHSM
 LICENSE=	modified-bsd

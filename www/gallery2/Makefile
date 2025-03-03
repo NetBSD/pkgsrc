@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/02/08 04:00:53 taca Exp $
-#
+# $NetBSD: Makefile,v 1.20 2025/03/03 20:29:32 wiz Exp $
 
 DISTNAME=		gallery-2.3.2-full
 PKGNAME=		gallery-2.3.2
@@ -7,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		www graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gallery/}
 
-MAINTAINER=		pettai@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gallery.sourceforge.net/
 COMMENT=		Web-based photo gallery written in PHP
 LICENSE=		gnu-gpl-v2

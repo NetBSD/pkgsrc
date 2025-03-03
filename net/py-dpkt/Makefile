@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2023/01/08 11:19:52 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/03 20:29:28 wiz Exp $
 
 DISTNAME=	dpkt-1.9.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dpkt/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/kbandla/dpkt
 COMMENT=	Fast, simple packet creation/parsing
 LICENSE=	modified-bsd

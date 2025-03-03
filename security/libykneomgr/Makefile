@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2024/11/14 22:21:31 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2025/03/03 20:29:29 wiz Exp $
 
 DISTNAME=	libykneomgr-0.1.8
 PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	https://developers.yubico.com/libykneomgr/Releases/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developers.yubico.com/libykneomgr/
 COMMENT=	Yubikey NEO C library and command-line tool
 LICENSE=	gnu-lgpl-v3

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2023/12/30 21:33:13 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.17 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=	userspace-rcu-0.12.1
 CATEGORIES=	devel
 MASTER_SITES=	https://lttng.org/files/urcu/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lttng.org/urcu
 COMMENT=	Userspace RCU (Read Copy Update)
 LICENSE=	gnu-lgpl-v2.1

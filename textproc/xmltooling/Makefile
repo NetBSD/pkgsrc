@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2024/12/29 15:10:00 adam Exp $
+# $NetBSD: Makefile,v 1.61 2025/03/03 20:29:32 wiz Exp $
 
 DISTNAME=	xmltooling-3.1.0
 PKGREVISION=	
@@ -6,7 +6,7 @@ PKGREVISION=	19
 CATEGORIES=	textproc
 MASTER_SITES=	http://shibboleth.net/downloads/c++-opensaml/3.1.0/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://shibboleth.net/
 COMMENT=	High level interface for XML processing library
 LICENSE=	apache-2.0

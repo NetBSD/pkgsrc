@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2023/10/24 22:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/03 20:29:29 wiz Exp $
 
 DISTNAME=		sysmon-0.93
 PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://puck.nether.net/pub/jared/
 
-MAINTAINER=		pettai@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.sysmon.org/
 COMMENT=		Small and fast network monitoring tool
 LICENSE=		gnu-gpl-v2

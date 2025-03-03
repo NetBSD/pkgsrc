@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2023/06/06 12:42:17 riastradh Exp $
-#
+# $NetBSD: Makefile,v 1.19 2025/03/03 20:29:31 wiz Exp $
 
 GITHUB_PROJECT=	yubikey-personalization
 DISTNAME=	ykpers-1.20.0
@@ -7,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developers.yubico.com/yubikey-personalization/
 COMMENT=	Yubico's YubiKey re-programming toolkit
 LICENSE=	modified-bsd

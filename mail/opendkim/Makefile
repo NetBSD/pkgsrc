@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2024/07/30 13:49:04 manu Exp $
+# $NetBSD: Makefile,v 1.41 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=	opendkim-2.10.3
 PKGREVISION=	12
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendkim/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opendkim.org/
 COMMENT=	Open source DKIM library, MTA filter implementation and tools
 LICENSE=	sendmail-open-source-license

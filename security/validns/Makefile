@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2023/10/24 22:11:01 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.24 2025/03/03 20:29:31 wiz Exp $
 
 DISTNAME=	validns-0.8
 PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	http://www.validns.net/download/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.validns.net/
 COMMENT=	Validns, a high performance DNS/DNSSEC zone validator
 LICENSE=	2-clause-bsd
