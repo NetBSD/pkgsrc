@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/03 06:52:14 wiz Exp $
 
 DISTNAME=	scons-4.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scons/}
 EXTRACT_USING=	bsdtar
@@ -11,7 +12,7 @@ HOMEPAGE=	https://www.scons.org/
 COMMENT=	Python-based, open-source build system
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
@@ -22,7 +23,6 @@ REPLACE_PYTHON+=	script/sconsign
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/sc/SC/}
-WHEEL_NAME=	${DISTNAME:S/sc/SC/}
 
 # XXX: not sure why this is needed exactly
 # but -Wl,-rpath is filtered out by buildlink from the c++ command line
