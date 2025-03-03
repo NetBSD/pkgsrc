@@ -1,15 +1,22 @@
-# $NetBSD: options.mk,v 1.24 2023/02/20 13:36:42 taca Exp $
+# $NetBSD: options.mk,v 1.25 2025/03/03 21:53:05 nia Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sudo
 PKG_SUPPORTED_OPTIONS=		ldap nls
 PKG_OPTIONS_OPTIONAL_GROUPS=	auth
 PKG_OPTIONS_GROUP.auth=		kerberos pam skey
 
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/skey.h)
+.if ${OPSYS} == "NetBSD"
+.  if exists(/usr/include/security/openpam.h)
+PKG_SUGGESTED_OPTIONS=	pam
+.  elif exists(/usr/include/skey.h)
 PKG_SUGGESTED_OPTIONS=	skey
+.  endif
 .endif
 
 PKG_SUGGESTED_OPTIONS.Darwin=	pam
+PKG_SUGGESTED_OPTIONS.FreeBSD=	pam
+PKG_SUGGESTED_OPTIONS.Linux=	pam
+PKG_SUGGESTED_OPTIONS.SunOS=	pam
 
 .include "../../mk/bsd.options.mk"
 
