@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/02/24 15:05:51 ktnb Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/03/03 14:44:42 ktnb Exp $
 bin/suitesparse_mongoose
 include/suitesparse/GraphBLAS.h
 include/suitesparse/LAGraph.h
@@ -138,8 +138,8 @@ lib/libcxsparse.so
 lib/libcxsparse.so.4
 lib/libcxsparse.so.4.4.1
 lib/libgraphblas.so
-lib/libgraphblas.so.9
-lib/libgraphblas.so.9.4.5
+lib/libgraphblas.so.10
+lib/libgraphblas.so.10.0.0
 lib/libklu.a
 lib/libklu.so
 lib/libklu.so.2
