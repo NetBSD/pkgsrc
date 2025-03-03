@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/03 02:35:31 scole Exp $
+
+BLAKE2s (Img-2.0.1.tar.gz) = a3e626d1c3c8690720cfbe3cd75acd8c75e2d72181eeced591796f0f759b40df
+SHA512 (Img-2.0.1.tar.gz) = b025fb8fc8fabe83ac7cdc6ce2e03fb9219cad92438bd6bb809dba14b95058ecbb61b274f009d824a4067c3be828c98e0b5b1b8305fb21590c266257502574fb
+Size (Img-2.0.1.tar.gz) = 12312476 bytes
