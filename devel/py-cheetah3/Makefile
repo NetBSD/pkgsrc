@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2025/02/23 19:43:09 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2025/03/03 10:33:59 abs Exp $
 
 VERSION=	3.4.0
+PKGREVISION=	1
 DISTNAME=	ct3-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ct3/cheetah/}
 CATEGORIES=	devel python
@@ -13,7 +14,7 @@ LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-WHEEL_NAME=	CT3-${VERSION}
+WHEEL_NAME=	ct3-${VERSION}
 
 CONFLICTS=	Cheetah-[0-9]*
 
