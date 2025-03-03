@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1879 2025/03/03 06:46:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1880 2025/03/03 06:52:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2452,3 +2452,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/tkimg to 2.0.1 [scole 2025-03-03]
 	Updated devel/why3 to 1.8.0 [dholland 2025-03-03]
 	Updated security/py-OpenSSL to 25.0.0nb1 [wiz 2025-03-03]
+	Updated devel/scons4 to 4.8.1nb1 [wiz 2025-03-03]
