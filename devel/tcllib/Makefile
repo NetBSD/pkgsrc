@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2025/02/26 09:59:00 scole Exp $
+# $NetBSD: Makefile,v 1.26 2025/03/03 01:28:17 scole Exp $
 
 .include "../../devel/tcllib/Makefile.common"
 
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 COMMENT=	Collection of utility modules for Tcl
 
 USE_TOOLS+=	find wget:run
@@ -37,10 +38,12 @@ SUBST_FILES.tclsh+=	apps/tcldocstrip
 SUBST_SED.tclsh=	-e "s,/usr/bin/env.*tclsh,${TCLSH},g"
 SUBST_MESSAGE.tclsh=	Fixing path to tclsh.
 
+PLIST_SUBST+=		PVNR=tcllib${PKGVERSION_NOREV}
+
 do-install:
 	cd ${WRKSRC} && ${TCLSH} ./installer.tcl \
 		-no-examples -no-html \
-		-pkg-path ${DESTDIR}${PREFIX}/lib/tcllib${PKGVERSION} \
+		-pkg-path ${DESTDIR}${PREFIX}/lib/tcllib${PKGVERSION_NOREV} \
 		-app-path ${DESTDIR}${PREFIX}/bin \
 		-nroff-path ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann \
 		-no-wait -no-gui
