@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2025/03/03 02:35:31 scole Exp $
+# $NetBSD: options.mk,v 1.2 2025/03/03 02:53:10 scole Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.tk-tkimg
+PKG_OPTIONS_VAR=	PKG_OPTIONS.tkimg
 PKG_SUPPORTED_OPTIONS=	debug ghostscript x11
 PKG_SUGGESTED_OPTIONS+=	ghostscript x11
 
