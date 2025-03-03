@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2025/03/03 15:21:05 manu Exp $
+$NetBSD: distinfo,v 1.2 2025/03/03 16:02:40 taca Exp $
 
 BLAKE2s (AVideo/14.3.tar.gz) = 5f6051dd2ddc71b7fd4c5de008add40b4fed856db6b2e60740b7ff05071994a5
 SHA512 (AVideo/14.3.tar.gz) = 85486c71fa007099cb0ca394a44a5e1d230ecd9eeb591bb9611b2918b25c76cecb5e660c1e6932461d1c42005a85648618b316906929f2ed77d14ae28fafcb1a
 Size (AVideo/14.3.tar.gz) = 256596166 bytes
 SHA1 (patch-install_checkConfiguration.php) = 0d288f8dc0da5d6757e24a0727f63e512efc7df1
-SHA1 (patch-objects_functionsExec.php) = ce6f2656f4b1624836777aef942111a05f3c7219
+SHA1 (patch-objects_functionsExec.php) = 776e13d980efaf667d3dcd9b82928c2d5bab667e
 SHA1 (patch-uniqid) = 8935dd0494a4bcc780bfdc900f12491505e0eb1f
 SHA1 (patch-updatedb) = fd492452cb732004f44844d765e3cde51a61e0fe
