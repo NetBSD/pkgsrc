@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1902 2025/03/03 14:44:58 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.1903 2025/03/03 14:52:09 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-setuptools to 75.8.2.20250301 [adam 2025-03-03]
 	Updated emulators/open-simh to 4.1.0.20250117nb2 [jakllsch 2025-03-03]
 	Updated math/suitesparse to 7.10.0 [ktnb 2025-03-03]
+	Updated mail/spampd to 2.62nb1 [jakllsch 2025-03-03]
