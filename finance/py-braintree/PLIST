@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2025/02/01 18:39:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2025/03/03 13:05:40 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -406,6 +406,12 @@ ${PYSITELIB}/braintree/paypal_account_gateway.pyo
 ${PYSITELIB}/braintree/paypal_here.py
 ${PYSITELIB}/braintree/paypal_here.pyc
 ${PYSITELIB}/braintree/paypal_here.pyo
+${PYSITELIB}/braintree/paypal_payment_resource.py
+${PYSITELIB}/braintree/paypal_payment_resource.pyc
+${PYSITELIB}/braintree/paypal_payment_resource.pyo
+${PYSITELIB}/braintree/paypal_payment_resource_gateway.py
+${PYSITELIB}/braintree/paypal_payment_resource_gateway.pyc
+${PYSITELIB}/braintree/paypal_payment_resource_gateway.pyo
 ${PYSITELIB}/braintree/plan.py
 ${PYSITELIB}/braintree/plan.pyc
 ${PYSITELIB}/braintree/plan.pyo
