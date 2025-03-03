@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2025/03/03 09:02:07 adam Exp $
+# $NetBSD: Makefile,v 1.37 2025/03/03 09:42:12 adam Exp $
 
 DISTNAME=	rapidfuzz-3.12.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,10 +11,10 @@ COMMENT=	Rapid fuzzy string matching
 LICENSE=	mit
 
 TOOL_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
-TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10.7:../../devel/py-scikit-build-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.11.0:../../devel/py-scikit-build-core
 # optional dependency, but not optional for testing
-TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>=0:../../math/py-numpy
-TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>=0:../../devel/py-hypothesis
+TEST_DEPENDS+=	${PYPKGPREFIX}-numpy>0:../../math/py-numpy
+TEST_DEPENDS+=	${PYPKGPREFIX}-hypothesis>0:../../devel/py-hypothesis
 
 PLIST_SUBST+=	PYTHON_VERSION=${_PYTHON_VERSION}
 PLIST_VARS+=	avx2
