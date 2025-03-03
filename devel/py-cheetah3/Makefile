@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2025/03/03 10:33:59 abs Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/03 10:49:48 wiz Exp $
 
-VERSION=	3.4.0
-PKGREVISION=	1
-DISTNAME=	ct3-${VERSION}
+DISTNAME=	ct3-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/ct3/cheetah/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/ct3/}
 
@@ -12,9 +11,7 @@ HOMEPAGE=	https://cheetahtemplate.org/
 COMMENT=	Template engine and code generation tool
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
-WHEEL_NAME=	ct3-${VERSION}
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
 CONFLICTS=	Cheetah-[0-9]*
 
