@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1900 2025/03/03 13:14:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1901 2025/03/03 14:34:22 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-pdf to 5.3.1 [adam 2025-03-03]
 	Updated devel/SDL2 to 2.32.2 [adam 2025-03-03]
 	Updated devel/py-types-setuptools to 75.8.2.20250301 [adam 2025-03-03]
+	Updated emulators/open-simh to 4.1.0.20250117nb2 [jakllsch 2025-03-03]
