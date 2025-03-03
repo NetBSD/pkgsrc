@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2024/10/09 04:29:58 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/03 16:14:24 adam Exp $
 bin/ffmpeg7
 bin/ffprobe7
 include/ffmpeg7/libavcodec/ac3_parser.h
@@ -145,7 +145,7 @@ include/ffmpeg7/libswscale/version_major.h
 lib/ffmpeg7/libavcodec.a
 lib/ffmpeg7/libavcodec.so
 lib/ffmpeg7/libavcodec.so.61
-lib/ffmpeg7/libavcodec.so.61.19.100
+lib/ffmpeg7/libavcodec.so.61.19.101
 lib/ffmpeg7/libavdevice.a
 lib/ffmpeg7/libavdevice.so
 lib/ffmpeg7/libavdevice.so.61
@@ -157,7 +157,7 @@ lib/ffmpeg7/libavfilter.so.10.4.100
 lib/ffmpeg7/libavformat.a
 lib/ffmpeg7/libavformat.so
 lib/ffmpeg7/libavformat.so.61
-lib/ffmpeg7/libavformat.so.61.${PKGVERSION}00
+lib/ffmpeg7/libavformat.so.61.7.100
 lib/ffmpeg7/libavutil.a
 lib/ffmpeg7/libavutil.so
 lib/ffmpeg7/libavutil.so.59
