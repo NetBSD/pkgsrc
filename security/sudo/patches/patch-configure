@@ -1,14 +1,15 @@
-$NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
+$NetBSD: patch-configure,v 1.12 2025/03/03 21:51:40 nia Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * When specified "--with-kerb5" option, test existence of several functions
   even if there is krb5-config.  krb5-config dosen't give all definitions for
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
+* Do not create links to localedir on SunOS.
 
---- configure.orig	2023-07-24 20:25:13.000000000 +0000
+--- configure.orig	2024-11-25 15:34:25.000000000 +0000
 +++ configure
-@@ -937,6 +937,7 @@ with_incpath
+@@ -942,6 +942,7 @@ with_incpath
  with_libpath
  with_libraries
  with_csops
@@ -16,7 +17,7 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
  with_passwd
  with_skey
  with_opie
-@@ -1676,7 +1677,7 @@ Fine tuning of the installation director
+@@ -1682,7 +1683,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -25,7 +26,7 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --runstatedir=DIR       modifiable per-process data [LOCALSTATEDIR/run]
-@@ -1808,6 +1809,7 @@ Optional Packages:
+@@ -1812,6 +1813,7 @@ Optional Packages:
    --with-libpath          additional places to look for libraries
    --with-libraries        additional libraries to link with
    --with-csops            add CSOps standard options
@@ -33,7 +34,7 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -5329,6 +5331,23 @@ fi
+@@ -5321,6 +5323,23 @@ fi
  
  
  
@@ -57,7 +58,7 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
  # Check whether --with-passwd was given.
  if test ${with_passwd+y}
  then :
-@@ -18263,7 +18282,7 @@ fi
+@@ -18312,7 +18331,7 @@ fi
  		: ${mansectform='4'}
  		: ${mansectmisc='5'}
  		;;
@@ -66,7 +67,18 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
  		# Check for SECCOMP_MODE_FILTER in linux/seccomp.h
-@@ -29669,6 +29688,8 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -28316,10 +28335,6 @@ fi
+ 
+ 	if test "$sudo_cv_gettext" = "yes"; then
+ 	    SUDO_NLS=enabled
+-	    # For Solaris we need links from lang to lang.UTF-8 in localedir
+-	    case "$host_os" in
+-		solaris2*) LOCALEDIR_SUFFIX=".UTF-8";;
+-	    esac
+ 	elif test "$sudo_cv_gettext_lintl" = "yes"; then
+ 	    SUDO_NLS=enabled
+ 	    LIBINTL="-lintl"
+@@ -30049,6 +30064,8 @@ rm -f core conftest.err conftest.$ac_obj
       ;;
  esac
  fi
@@ -75,7 +87,7 @@ $NetBSD: patch-configure,v 1.11 2023/08/13 14:14:37 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      ac_fn_c_check_func "$LINENO" "krb5_verify_user" "ac_cv_func_krb5_verify_user"
-@@ -35634,7 +35655,6 @@ test X"$localedir" = X'${datarootdir}/lo
+@@ -36021,7 +36038,6 @@ test X"$localedir" = X'${datarootdir}/lo
  test X"$localstatedir" = X'${prefix}/var' && localstatedir='$(prefix)/var'
  test X"$runstatedir" = X'${localstatedir}/run' && runstatedir='$(localstatedir)/run'
  test X"$adminconfdir" = X'${prefix}/etc' && adminconfdir='$(prefix)/etc'

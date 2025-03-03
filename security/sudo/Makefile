@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2025/01/13 19:56:51 vins Exp $
+# $NetBSD: Makefile,v 1.206 2025/03/03 21:51:40 nia Exp $
 
 DISTNAME=	sudo-1.9.16p2
 CATEGORIES=	security
@@ -31,6 +31,8 @@ CONFIGURE_ENV+=		NROFFPROG=${CAT:Q}
 CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
 TEST_TARGET=		check
+
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/sudo
 
 # Append ${PREFIX} directories to the default secure_path
 SUDO_SECURE_PATH_DIRS=	/usr/local/sbin
