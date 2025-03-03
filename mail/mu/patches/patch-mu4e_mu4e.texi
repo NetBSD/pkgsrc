@@ -1,0 +1,14 @@
+$NetBSD: patch-mu4e_mu4e.texi,v 1.1 2025/03/03 02:29:41 ktnb Exp $
+
+Org-mode node requires an unnumbed subsec or else it fails to build
+
+--- mu4e/mu4e.texi.orig	2025-02-26 16:53:07.000000000 +0000
++++ mu4e/mu4e.texi
+@@ -3454,6 +3454,7 @@ It is possible to get information about 
+ You can enable this by setting @t{mu4e-eldoc-support} to non-@t{nil}.
+ 
+ @node Org-mode
++@unnumberedsubsec Org-mode
+ 
+ Org-mode is a popular and powerful way to deal with todo-lists, agendas inside
+ Emacs. It's only natural to integrate it with @t{mu4e}, and
