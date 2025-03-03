@@ -1,10 +1,10 @@
-$NetBSD: patch-makefile,v 1.4 2024/10/03 12:42:53 rhialto Exp $
+$NetBSD: patch-makefile,v 1.5 2025/03/03 14:34:01 jakllsch Exp $
 
 Fix png16 detection.
 Let INCLUDES and LIBRARIES be the sole source for INCPATH and LIBPATH,
 to avoid seeing non-pkgsrc libraries (except MacOS platform).
 
---- makefile.orig	2024-09-05 21:21:41.000000000 +0000
+--- makefile.orig	2025-01-17 21:35:53.000000000 +0000
 +++ makefile
 @@ -404,16 +404,16 @@ ifeq (${WIN32},)  #*nix Environments (&&
      ifeq (Darwin,$(OSTYPE))
@@ -188,6 +188,15 @@ to avoid seeing non-pkgsrc libraries (except MacOS platform).
      endif
    endif
    ifneq (,$(call find_include,zlib))
+@@ -867,7 +867,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
+             $(info *** Error *** Support for linking statically has been removed on the $(OSTYPE))
+             $(info *** Error *** platform.)
+             $(info *** Error ***)
+-            $(error Retry your build without specifying USE_NETWORK=1)
++            #$(error Retry your build without specifying USE_NETWORK=1)
+           endif
+           ifeq (cygwin,$(OSTYPE))
+             # cygwin has no ldconfig so explicitly specify pcap object library
 @@ -922,7 +922,7 @@ ifeq (${WIN32},)  #*nix Environments (&&
            NETWORK_FEATURES = - dynamic networking support using libpcap components from www.tcpdump.org and locally installed libpcap.${LIBEXT}
            $(info using libpcap: $(call find_include,pcap))
