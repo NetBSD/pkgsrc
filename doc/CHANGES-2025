@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1872 2025/03/02 21:26:02 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1873 2025/03/03 01:26:20 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2444,3 +2444,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-markupsafe to 3.0.2nb1 [wiz 2025-03-02]
 	Updated textproc/py-markdown to 3.7nb1 [wiz 2025-03-02]
 	Updated devel/py-cython to 3.0.12nb1 [wiz 2025-03-02]
+	Updated x11/gnustep-gui to 0.32.0 [manu 2025-03-03]
