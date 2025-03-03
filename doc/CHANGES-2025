@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1895 2025/03/03 09:03:38 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1896 2025/03/03 09:42:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2471,3 +2471,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-scikit-build-core to 0.11.0 [adam 2025-03-03]
 	Updated textproc/py-rapidfuzz to 3.12.2 [adam 2025-03-03]
 	Updated security/py-authlib to 1.5.1 [adam 2025-03-03]
+	Updated devel/py-test to 8.3.5 [adam 2025-03-03]
+	Updated textproc/py-sphinx to 8.2.3 [adam 2025-03-03]
