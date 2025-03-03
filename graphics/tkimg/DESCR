@@ -1,0 +1,21 @@
+The IMG package provides the handling of several image formats beyond
+the standard formats in Tk.  The formats supported by Img's are:
+    * BMP       Windows bitmap format
+    * DTED      Digital Terrain Elevation Data format
+    * FLIR      FLIR FPF Public Image format
+    * GIF       Graphics Interchange Format
+    * ICO       Windows icon format
+    * JPEG      Joint Picture Experts Group format
+    * PCX       Paintbrush format
+    * PIXMAP    Pixmap image type
+    * PNG       Portable Network Graphics format
+    * PPM       Portable pixmap format
+    * PS        Postscript and PDF format
+    * RAW       Raw data format
+    * SGI       Silicon Graphics format
+    * SUN       Sun raster format
+    * TGA       Truevision Targa format
+    * TIFF      Tagged Image File Format
+    * WINDOW    Tk window as photo image
+    * XBM       X Windows Bitmap format
+    * XPM       X Windows Pixmap format
