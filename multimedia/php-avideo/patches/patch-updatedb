@@ -1,0 +1,62 @@
+$NetBSD: patch-updatedb,v 1.1 2025/03/03 15:21:05 manu Exp $
+
+Fix updatedb SQL scripts
+- Missing IF NOT EXISTS
+- Do not assume the database name is aVideo
+
+From upstream https://github.com/WWBN/AVideo/pull/9899
+
+diff --git a/updatedb/updateDb.v10.7.sql b/updatedb/updateDb.v10.7.sql
+index 86bdbb187a0a..97b3dfd0af68 100644
+--- ./updatedb/updateDb.v10.7.sql.orig
++++ ./updatedb/updateDb.v10.7.sql
+@@ -2,6 +2,6 @@
+ -- this update may release a column already exists error in some installations
+ 
+ ALTER TABLE `users_extra_info` 
+-ADD COLUMN `order` INT NOT NULL DEFAULT 0;
++ADD COLUMN IF NOT EXISTS `order` INT NOT NULL DEFAULT 0;
+ 
+-UPDATE configurations SET  version = '10.7', modified = now() WHERE id = 1;
+\ No newline at end of file
++UPDATE configurations SET  version = '10.7', modified = now() WHERE id = 1;
+diff --git a/updatedb/updateDb.v3.2.sql b/updatedb/updateDb.v3.2.sql
+index e6893576c2ea..bcd1a23593dc 100644
+--- ./updatedb/updateDb.v3.2.sql.orig
++++ ./updatedb/updateDb.v3.2.sql
+@@ -9,7 +9,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+ 
+-ALTER SCHEMA `aVideo`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci ;
++ALTER SCHEMA DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_general_ci ;
+ 
+ ALTER TABLE `users` 
+ ADD COLUMN `backgroundURL` VARCHAR(255) NULL DEFAULT NULL AFTER `recoverPass`;
+@@ -64,4 +64,4 @@ SET SQL_MODE=@OLD_SQL_MODE;
+ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+ 
+-UPDATE configurations SET  version = '3.2', modified = now() WHERE id = 1;
+\ No newline at end of file
++UPDATE configurations SET  version = '3.2', modified = now() WHERE id = 1;
+diff --git a/updatedb/updateDb.v4.0.sql b/updatedb/updateDb.v4.0.sql
+index 47da6db97988..4780683a0978 100644
+--- ./updatedb/updateDb.v4.0.sql.orig
++++ ./updatedb/updateDb.v4.0.sql
+@@ -9,7 +9,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+ 
+-ALTER TABLE `aVideo`.`configurations` 
++ALTER TABLE `configurations` 
+ DROP COLUMN `doNotShowCategories`,
+ DROP COLUMN `doNotShowVideoAndAudioLinks`,
+ DROP COLUMN `encode_mp3spectrum`,
+@@ -36,4 +36,4 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+ 
+ 
+-UPDATE configurations SET  version = '4.0', modified = now() WHERE id = 1;
+\ No newline at end of file
++UPDATE configurations SET  version = '4.0', modified = now() WHERE id = 1;
