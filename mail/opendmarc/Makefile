@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2024/12/20 16:05:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=	rel-${PKGNAME_NOREV:C/\./-/g}
 PKGNAME=	opendmarc-1.4.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=trusteddomainproject/}
 GITHUB_PROJECT=	OpenDMARC
 GITHUB_TAG=	${DISTNAME}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.trusteddomain.org/opendmarc/
 COMMENT=	Open source DMARC library, MTA filter implementation and tools
 LICENSE=	modified-bsd

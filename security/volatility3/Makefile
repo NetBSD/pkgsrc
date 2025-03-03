@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2024/11/11 07:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/03 20:29:31 wiz Exp $
 
 DISTNAME=	volatility3-2.7.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=volatilityfoundation/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.volatilityfoundation.org/
 COMMENT=	Advanced memory forensics framework
 LICENSE=	gnu-gpl-v2

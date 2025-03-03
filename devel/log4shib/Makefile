@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2019/11/03 10:39:19 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.12 2025/03/03 20:29:26 wiz Exp $
 
 DISTNAME=	log4shib-1.0.9
 CATEGORIES=	devel
 MASTER_SITES=	http://www.shibboleth.net/downloads/log4shib/${PKGVERSION_NOREV}/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://shibboleth.internet2.edu/
 COMMENT=	C++ library for flexible logging, modeled after Log4j
 LICENSE=	gnu-lgpl-v2.1

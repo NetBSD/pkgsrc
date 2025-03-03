@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.94 2024/11/14 22:21:32 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.95 2025/03/03 20:29:30 wiz Exp $
 
 DISTNAME=	opendnssec-1.4.14
 PKGREVISION=	16
 CATEGORIES=	security net
 MASTER_SITES=	https://www.opendnssec.org/files/source/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd

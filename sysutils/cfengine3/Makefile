@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2025/02/19 17:18:01 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2025/03/03 20:29:32 wiz Exp $
 
 DISTNAME=	cfengine-community-3.24.1
 PKGNAME=	${DISTNAME:S/-community//}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://cfengine-package-repos.s3.amazonaws.com/tarballs/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://cfengine.com/product/community/
 COMMENT=	Tool for automating system administration
 LICENSE=	gnu-gpl-v3

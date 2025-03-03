@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.76 2024/11/16 12:05:46 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=		mimedefang-3.4.1
 PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		https://mimedefang.org/releases/
 
-MAINTAINER=		pettai@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.mimedefang.org/
 COMMENT=		To inspect/modify e-mail as it passes through your mail relay
 LICENSE=		gnu-gpl-v2

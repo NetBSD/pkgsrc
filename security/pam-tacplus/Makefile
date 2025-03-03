@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2020/03/20 11:58:18 nia Exp $
-#
+# $NetBSD: Makefile,v 1.13 2025/03/03 20:29:30 wiz Exp $
 
 DISTNAME=	pam_tacplus-1.3.6
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tacplus/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tacplus.sourceforge.net/
 COMMENT=	TACACS+ client library and PAM module
 LICENSE=	gnu-gpl-v2

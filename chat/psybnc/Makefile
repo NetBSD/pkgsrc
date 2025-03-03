@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/04/14 08:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/03 20:29:26 wiz Exp $
 
 DISTNAME=	psyBNC-2.4.3
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	chat
 MASTER_SITES=	http://psybnc.org/download/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.psybnc.at/
 COMMENT=	Easy-to-use, multi-user, IRC-Bouncer with many features
 LICENSE=	gnu-gpl-v2
