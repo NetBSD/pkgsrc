@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2025/02/12 11:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=	sid-milter-1.0.0
 PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://sid-milter.sourceforge.net/
 COMMENT=	Open source SPF/SenderID filter software from Sendmail, Inc
 LICENSE=	sendmail-open-source-license

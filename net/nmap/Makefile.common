@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2024/04/25 07:15:03 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2025/03/03 20:29:28 wiz Exp $
 # used by net/ndiff/Makefile
 # used by net/nmap/Makefile
 # used by net/zenmap/Makefile
@@ -8,7 +8,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER?=	pettai@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://nmap.org/
 LICENSE=	gnu-gpl-v2
 

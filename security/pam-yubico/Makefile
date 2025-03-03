@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2024/11/14 22:21:32 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2025/03/03 20:29:30 wiz Exp $
 
 DISTNAME=	pam_yubico-2.27
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Yubico/}
 GITHUB_PROJECT=	yubico-pam
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensource.yubico.com/yubico-pam/
 COMMENT=	Pluggable Authentication Module for Yubikey validation
 LICENSE=	modified-bsd

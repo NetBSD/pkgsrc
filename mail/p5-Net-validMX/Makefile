@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/16 12:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/03/03 20:29:27 wiz Exp $
 
 DISTNAME=	Net-validMX-2.5.2
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	perl5 mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/pod/Net::validMX
 COMMENT=	Use DNS and/or regular expressions to verify a email address
 LICENSE=	artistic

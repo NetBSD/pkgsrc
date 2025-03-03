@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.60 2024/12/29 15:10:01 adam Exp $
-#
+# $NetBSD: Makefile,v 1.61 2025/03/03 20:29:32 wiz Exp $
 
 DISTNAME=	shibboleth-sp-3.1.0
-PKGREVISION=
 PKGREVISION=	19
 CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.net/downloads/service-provider/${PKGVERSION_NOREV}/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://shibboleth.net/
 COMMENT=	Shibboleth2 Service Provider
 LICENSE=	apache-2.0
