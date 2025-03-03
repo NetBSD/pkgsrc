@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1904 2025/03/03 15:21:04 manu Exp $
+$NetBSD: CHANGES-2025,v 1.1905 2025/03/03 15:24:12 manu Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/suitesparse to 7.10.0 [ktnb 2025-03-03]
 	Updated mail/spampd to 2.62nb1 [jakllsch 2025-03-03]
 	Added multimedia/php-avideo 14.3 [manu 2025-03-03]
+	Added multimedia/php-avideo-encoder 3.7 [manu 2025-03-03]
