@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2025/02/09 14:24:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/03/03 16:06:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/braintree.gemspec
@@ -107,6 +107,8 @@ ${GEM_LIBDIR}/lib/braintree/payment_method_nonce_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/payment_method_parser.rb
 ${GEM_LIBDIR}/lib/braintree/paypal_account.rb
 ${GEM_LIBDIR}/lib/braintree/paypal_account_gateway.rb
+${GEM_LIBDIR}/lib/braintree/paypal_payment_resource.rb
+${GEM_LIBDIR}/lib/braintree/paypal_payment_resource_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/plan.rb
 ${GEM_LIBDIR}/lib/braintree/plan_gateway.rb
 ${GEM_LIBDIR}/lib/braintree/processor_response_types.rb
@@ -224,6 +226,7 @@ ${GEM_LIBDIR}/spec/integration/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/payment_method_us_bank_account_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/paypal_account_spec.rb
+${GEM_LIBDIR}/spec/integration/braintree/paypal_payment_resource_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/plan_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/samsung_pay_card_spec.rb
 ${GEM_LIBDIR}/spec/integration/braintree/sepa_direct_debit_account_spec.rb
@@ -272,6 +275,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_request_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_response_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_quote_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/exchange_rate_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/google_pay_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/create_customer_session_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_recommendations_input_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/graphql/customer_session_input_spec.rb
@@ -295,6 +299,7 @@ ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_nonce_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/payment_method_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/paypal_account_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/paypal_payment_resource_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/resource_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data/liability_shift.rb
 ${GEM_LIBDIR}/spec/unit/braintree/risk_data_spec.rb
@@ -306,14 +311,19 @@ ${GEM_LIBDIR}/spec/unit/braintree/subscription_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/subscription_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/successful_result_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/three_d_secure_info_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/apple_pay_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/credit_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/customer_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/deposit_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/google_pay_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/installment_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/local_payment_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/meta_checkout_card_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/meta_checkout_token_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/payment_receipt_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/paypal_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction/sepa_direct_debit_account_details_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/transaction/visa_checkout_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_gateway_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_search_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/transaction_spec.rb
@@ -325,11 +335,13 @@ ${GEM_LIBDIR}/spec/unit/braintree/util_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/validation_error_collection_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/validation_error_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/venmo_profile_data_spec.rb
+${GEM_LIBDIR}/spec/unit/braintree/visa_checkout_card_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/webhook_notification_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/libxml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/parser_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml/rexml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree/xml_spec.rb
 ${GEM_LIBDIR}/spec/unit/braintree_spec.rb
+${GEM_LIBDIR}/spec/unit/credit_card_details_spec.rb
 ${GEM_LIBDIR}/spec/unit/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
