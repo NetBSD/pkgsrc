@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2022/10/16 10:51:45 tonio Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/03 03:27:04 dholland Exp $
 
-DISTNAME=	why3-1.5.1
-PKGREVISION=	1
+DISTNAME=	why3-1.8.0
 CATEGORIES=	devel
 MASTER_SITES=	https://why3.gitlabpages.inria.fr/releases/
 
@@ -15,12 +14,12 @@ DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--disable-ide
 INSTALL_TARGET=		install install-lib
 
-DEPENDS+=		coq>=8.6:../../lang/coq
+DEPENDS+=		coq>=8.16:../../lang/coq
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocamlgraph/buildlink3.mk"
-.include "../../math/ocaml-num/buildlink3.mk"
+.include "../../math/ocaml-zarith/buildlink3.mk"
+.include "../../x11/ocaml-lablgtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
