@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2024/11/16 12:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/03/03 20:29:28 wiz Exp $
 
 DISTNAME=	dotse-dnscheck-1.5.4-0-g352a15c
 PKGNAME=	dnscheck-1.5.4
@@ -6,7 +6,7 @@ PKGREVISION=	11
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dotse/dnscheck/tarball/1.5.4/}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/dotse/dnscheck/
 COMMENT=	DNSCheck is a DNS quality checker
 LICENSE=	2-clause-bsd

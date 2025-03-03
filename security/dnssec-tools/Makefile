@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2024/11/16 12:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2025/03/03 20:29:29 wiz Exp $
 
 DISTNAME=	dnssec-tools-2.2.3
 PKGREVISION=	5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=DNSSEC-Tools/}
 GITHUB_PROJECT=	DNSSEC-Tools
 GITHUB_TAG=	${DISTNAME}
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.dnssec-tools.org/
 COMMENT=	Toolkit to ease the deployment of DNSSEC related technologies
 LICENSE=	modified-bsd

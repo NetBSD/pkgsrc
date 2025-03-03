@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2019/09/12 22:45:24 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2025/03/03 20:29:30 wiz Exp $
 
 DISTNAME=	libyubikey-1.13
 CATEGORIES=	security
 MASTER_SITES=	http://opensource.yubico.com/yubico-c/releases/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensource.yubico.com/yubico-c/
 COMMENT=	Yubikey library
 

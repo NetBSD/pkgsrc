@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2023/10/24 22:10:13 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.15 2025/03/03 20:29:28 wiz Exp $
 
 DISTNAME=	cacti-spine-1.2.2
 PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	https://www.cacti.net/downloads/spine/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.cacti.net/spine_info.php
 COMMENT=	Cacti poller for large installations
 LICENSE=	gnu-lgpl-v2.1

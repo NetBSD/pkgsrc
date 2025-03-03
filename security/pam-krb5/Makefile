@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2021/10/21 07:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/03 20:29:30 wiz Exp $
 
 DISTNAME=	pam-krb5-4.6
 PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 
-MAINTAINER=	pettai@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.eyrie.org/~eagle/software/pam-krb5/
 COMMENT=	Very flexible kerberos module for the PAM framework
 LICENSE=	original-bsd OR gnu-gpl-v2
