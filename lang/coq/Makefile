@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2025/02/24 03:41:02 dholland Exp $
+# $NetBSD: Makefile,v 1.168 2025/03/03 09:29:21 wiz Exp $
 
 DISTNAME=	coq-8.20.1
 CATEGORIES=	lang math
@@ -72,14 +72,12 @@ PLIST.natdynlink=	yes
 
 .include "../../lang/python/pyversion.mk"
 
-REPLACE_SH=		configure install.sh
 REPLACE_INTERPRETER=	python
 REPLACE.python.old=	python3
 REPLACE.python.new=	${PYTHONBIN}
-REPLACE_FILES.python=	tools/TimeFileMaker.py \
-			tools/make-both-single-timing-files.py \
-			tools/make-both-time-files.py \
-			tools/make-one-time-file.py
+REPLACE_FILES.python+=	tools/make-both-single-timing-files.py
+REPLACE_FILES.python+=	tools/make-both-time-files.py
+REPLACE_FILES.python+=	tools/make-one-time-file.py
 
 # As of 8.20 it seems the best way to get things built is to do this
 # explicitly as a separate step and then use OCAML_USE_DUNE. You can
