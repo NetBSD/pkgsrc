@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1906 2025/03/03 15:29:15 manu Exp $
+$NetBSD: CHANGES-2025,v 1.1907 2025/03/03 16:06:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added multimedia/php-avideo 14.3 [manu 2025-03-03]
 	Added multimedia/php-avideo-encoder 3.7 [manu 2025-03-03]
 	Added multimedia/php-avideo-encoder-network 20240118 [manu 2025-03-03]
+	Updated finance/ruby-braintree to 4.26.0 [taca 2025-03-03]
