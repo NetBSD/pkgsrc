@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/02/23 16:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/03/04 17:15:50 schmonz Exp $
 
-DISTNAME=		feed2exec-0.20.0
+DISTNAME=		feed2exec-0.22.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		mail python
 MASTER_SITES=		${MASTER_SITE_GITLAB:=anarcat/feed2exec/-/archive/${PKGVERSION_NOREV}/}
@@ -40,10 +40,19 @@ SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	setup.py feed2exec/__init__.py
 SUBST_SED.version=	-e 's|@VERSION@|${PKGVERSION_NOREV}|'
 
+REPLACE_PYTHON+=	feed2exec/controller.py
+REPLACE_PYTHON+=	feed2exec/plugins/__init__.py
+REPLACE_PYTHON+=	feed2exec/plugins/ikiwikitoot.py
+REPLACE_PYTHON+=	feed2exec/tests/test_network.py
+REPLACE_PYTHON+=	feed2exec/tests/test_feeds.py
+REPLACE_PYTHON+=	feed2exec/tests/test_main.py
+REPLACE_PYTHON+=	feed2exec/__main__.py
+REPLACE_PYTHON+=	setup.py
+
 post-extract:
 	${ECHO} "version_number = \"${PKGVERSION_NOREV}\"" > ${WRKSRC}/feed2exec/_version.py
 
-# 3 failed, 45 passed, 2 skipped, 1 xfailed, 91 warnings
+# 1 failed, 47 passed, 2 skipped, 1 xfailed, 119 warnings (NetBSD 10.1)
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} pytest-${PYVERSSUFFIX}
 
