@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.19 2025/02/20 10:27:00 adam Exp $
+$NetBSD: distinfo,v 1.20 2025/03/04 05:09:51 adam Exp $
 
 BLAKE2s (z3-4.14.0.tar.gz) = e29081864c70fafa547f834a18c5e82805fda40e3bcae12cc281de5d7b5d09ed
 SHA512 (z3-4.14.0.tar.gz) = 5a3de3207b5c05f77f8369d7fdbb9e13a7db850f8c3edaa8f2adfcf58b186d34409e4a56d44646f853027850941135be5042e67a53ddf3302dc3b645c1ab3db4
 Size (z3-4.14.0.tar.gz) = 5841848 bytes
 SHA1 (patch-scripts_mk__util.py) = 56380c984c667ecf3861d3a329a6425d4a93bb1e
-SHA1 (patch-src_api_python_setup.py) = 16ee41bbd2af5f7009fc3c9971187af142f4e33c
+SHA1 (patch-src_api_python_setup.py) = 90756d137a1c447515cdfdda26487c6a1adada5f
 SHA1 (patch-src_ast_rewriter_seq__eq__solver.cpp) = 31cf8fc41855a4b3b5b6a10de88f613054719bc0
 SHA1 (patch-src_sat_sat__lookahead.cpp) = c091d8b267b5476e438888e82c9161599873264c
 SHA1 (patch-src_sat_sat__solver.cpp) = 0e279f291801901eabb11b7cb0268c137a3b41fe
