@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/02/21 16:20:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/04 08:59:07 wiz Exp $
 
 DISTNAME=	libjwt-3.2.0
 CATEGORIES=	security
@@ -32,6 +32,7 @@ SUBST_SED.bashpath=	-e 's,/bin/bash,${BASH},g'
 # for tests
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=3
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
