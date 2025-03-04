@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1921 2025/03/04 12:41:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1922 2025/03/04 13:07:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2514,3 +2514,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/libproxy to 0.5.9nb4 [wiz 2025-03-04]
 	Updated x11/xscreensaver to 6.09 [abs 2025-03-04]
 	Updated devel/py-automat to 24.8.1nb1 [adam 2025-03-04]
+	Updated devel/thrift to 0.21.0 [adam 2025-03-04]
