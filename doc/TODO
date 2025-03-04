@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25509 2025/03/03 07:16:39 scole Exp $
+$NetBSD: TODO,v 1.25510 2025/03/04 07:19:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1115,7 +1115,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-fecon235-6.18.1203
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
-	o py-gi-docgen-2025.3
 	o py-hgview-1.9.0
 	o py-input-pad-1.4.2
 	o py-josepy-2.0.0 [2.0.0 is incompatible to 1.x: check py-acme and py-certbot work]
