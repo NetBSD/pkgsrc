@@ -1,7 +1,10 @@
-# $NetBSD: java-vm.mk,v 1.137 2023/11/22 14:13:13 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.138 2025/03/04 11:46:26 abs Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
+#
+# Note: We should never choose a non LTS JDK when an LTS one is available
+# (unless a user has overridden)
 #
 # User-settable variables:
 #
