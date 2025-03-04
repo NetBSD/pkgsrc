@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25510 2025/03/04 07:19:04 wiz Exp $
+$NetBSD: TODO,v 1.25511 2025/03/04 09:31:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1123,7 +1123,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-onionbalance-0.2.2
 	o py-pdf-parser-0.7.4
 	o py-postgresql-5.1.2
-	o py-posting-2.3.1
+	o py-posting-2.4.0 [wip]
 	o py-pytz_deprecation_shim-0.1.0.post0
 	o py-sbws-1.1.0
 	o py-simpletal-5.1
