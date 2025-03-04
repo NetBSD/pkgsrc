@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1918 2025/03/04 10:35:45 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1919 2025/03/04 11:09:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2511,3 +2511,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/arti to 1.4.1 [wiz 2025-03-04]
 	Updated textproc/translate-toolkit to 3.15.0 [adam 2025-03-04]
 	Updated textproc/ugrep to 7.3.0 [adam 2025-03-04]
+	Updated www/libproxy to 0.5.9nb4 [wiz 2025-03-04]
