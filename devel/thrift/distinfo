@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2021/10/26 10:20:03 nia Exp $
+$NetBSD: distinfo,v 1.9 2025/03/04 13:05:20 adam Exp $
 
-BLAKE2s (thrift-0.15.0.tar.gz) = 3470f0804a8bd967f6834a9c5b1cd4ff3220e458934f87ccbcb730eab3da1b49
-SHA512 (thrift-0.15.0.tar.gz) = 37e48d1872c85abc92ae86017f98bb092ac2b64e46be21ed6fa0b72d46cf956257efcc7db344b55aa9a70f9a9741d400081c1b78f1eb8d72c9e53a196f3e62ef
-Size (thrift-0.15.0.tar.gz) = 4046460 bytes
-SHA1 (patch-configure) = 9c7c9747ea3845f8e7db7f923c313c96b96d3e9e
+BLAKE2s (thrift-0.21.0.tar.gz) = d304df274435888675fe38fecf56ae6640a148b8b2498556f5f520c730a5104e
+SHA512 (thrift-0.21.0.tar.gz) = 0ffca1232305c07f803adb7239b5d22ee5c766a2809703c127b45a80b820c677e05a2d5b82852af5e1e923abe07ff1d9eb2f3fa4f2aa8732c9a81d8b0daa1f35
+Size (thrift-0.21.0.tar.gz) = 4398072 bytes
+SHA1 (patch-compiler_cpp_Makefile.in) = f0dcffa37887897387316563e0776f623dee09f3
+SHA1 (patch-configure) = 7d61f2aec2cb3b6b232e130ef1d2b83774995dc6
 SHA1 (patch-lib_cpp_src_thrift_server_TNonblockingServer.cpp) = 1f648fc9ad2c3e3664e1baf64c1132a061dd249f
-SHA1 (patch-lib_cpp_src_thrift_transport_SocketCommon.cpp) = 48269cf7d6ce3df23ebffa3270462a8dd27e6762
+SHA1 (patch-lib_cpp_src_thrift_transport_SocketCommon.cpp) = 751a3408d5931553571527f57f0ec1fd9cf026ae
 SHA1 (patch-lib_cpp_src_thrift_transport_TSocketUtils.h) = 56b03b612c7b638769f3137de09f254df9ea83c6
