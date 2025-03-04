@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1913 2025/03/04 06:09:12 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1914 2025/03/04 07:19:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2505,3 +2505,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-scikit-image to 0.25.2 [adam 2025-03-04]
 	Updated databases/py-tortoise-orm to 0.24.2 [adam 2025-03-04]
 	Updated misc/py-trove-classifiers to 2025.3.3.18 [adam 2025-03-04]
+	Updated devel/py-gi-docgen to 2025.3 [wiz 2025-03-04]
