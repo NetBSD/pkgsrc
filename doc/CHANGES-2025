@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1925 2025/03/04 14:43:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1926 2025/03/04 17:15:55 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2518,3 +2518,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-partitions to 1.1059.0 [taca 2025-03-04]
 	Updated www/ruby-rack to 3.1.11 [taca 2025-03-04]
 	Updated www/ruby-rack2 to 2.2.12 [taca 2025-03-04]
+	Updated mail/feed2exec to 0.22.0 [schmonz 2025-03-04]
