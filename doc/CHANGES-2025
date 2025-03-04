@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1917 2025/03/04 10:25:25 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1918 2025/03/04 10:35:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2509,3 +2509,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.38nb1 [wiz 2025-03-04]
 	Updated devel/py-gitpython to 3.1.44nb1 [wiz 2025-03-04]
 	Updated net/arti to 1.4.1 [wiz 2025-03-04]
+	Updated textproc/translate-toolkit to 3.15.0 [adam 2025-03-04]
+	Updated textproc/ugrep to 7.3.0 [adam 2025-03-04]
