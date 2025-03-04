@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2025/02/13 06:28:39 adam Exp $
+# $NetBSD: Makefile,v 1.23 2025/03/04 10:34:16 adam Exp $
 
-DISTNAME=	translate_toolkit-3.14.8
+DISTNAME=	translate_toolkit-3.15.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/translate-toolkit/}
@@ -12,8 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=42:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=6.2:../../devel/py-setuptools_scm
-DEPENDS+=	${PYPKGPREFIX}-cwcwidth>=0.1.9:../../devel/py-cwcwidth
-DEPENDS+=	${PYPKGPREFIX}-lxml>=4.6.3:../../textproc/py-lxml
+DEPENDS+=	${PYPKGPREFIX}-cwcwidth>=0.1.10:../../devel/py-cwcwidth
+DEPENDS+=	${PYPKGPREFIX}-lxml>=5.2.0:../../textproc/py-lxml
 
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash:run
