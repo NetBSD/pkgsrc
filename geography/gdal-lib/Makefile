@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.182 2025/01/13 18:40:46 gdt Exp $
+# $NetBSD: Makefile,v 1.183 2025/03/04 09:37:37 nia Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -7,7 +7,6 @@ PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
 COMMENT=	Translator library for raster geospatial data formats
 
 USE_LANGUAGES+=		c c++
-USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++17 charconv
 
 USE_TOOLS+=		gmake

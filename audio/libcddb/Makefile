@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2023/07/18 12:56:05 nia Exp $
+# $NetBSD: Makefile,v 1.33 2025/03/04 09:37:36 nia Exp $
 
 DISTNAME=	libcddb-1.3.2
 PKGREVISION=	1
@@ -17,9 +17,6 @@ PKGCONFIG_OVERRIDE+=	libcddb.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-cdio
 USE_TOOLS+=		pkg-config
-
-# "The package needs at least gcc 2.95 since it uses variadic macros"
-USE_CC_FEATURES+=	c99
 
 TEST_TARGET=		check
 

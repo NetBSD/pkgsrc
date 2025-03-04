@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2024/09/28 08:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/04 09:37:37 nia Exp $
 
 DISTNAME=	QR-Code-generator-1.8.0
 PKGNAME=	${DISTNAME:tl}
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 
-USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++11
 
 USE_TOOLS+=	gmake

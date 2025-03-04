@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2024/05/31 10:47:15 micha Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/04 09:37:39 nia Exp $
 
 DISTNAME=	libcanlock-3.3.1
 CATEGORIES=	news
@@ -11,7 +11,6 @@ COMMENT=	Standalone RFC 8315 Netnews Cancel-Lock implementation
 LICENSE=	icu AND modified-bsd
 
 FORCE_C_STD=		c99
-USE_CC_FEATURES+=	c99
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes

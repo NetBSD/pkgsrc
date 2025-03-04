@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2025/01/14 18:50:15 ktnb Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/04 09:37:36 nia Exp $
 
 DISTNAME=	mle-1.7.2
 CATEGORIES=	editors
@@ -16,8 +16,6 @@ BROKEN_ON_PLATFORM+=	OpenBSD-*-*
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++
-
-USE_CC_FEATURES+=	c99
 
 MAKE_FLAGS+=	prefix=${PREFIX}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2024/11/07 07:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/03/04 09:37:37 nia Exp $
 
 DISTNAME=	babl-0.1.110
 CATEGORIES=	graphics
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
-
-USE_CC_FEATURES+=	c99
 
 MESON_ARGS+=	-Dwith-docs=false
 

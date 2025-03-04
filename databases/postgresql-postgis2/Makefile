@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2025/02/18 10:33:18 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2025/03/04 09:37:36 nia Exp $
 
 # Note that the directory is still postgis2, for historical reasons.
 # It remains, due to inertia and the pain of renaming outweighing the
@@ -32,7 +32,6 @@ CONFLICTS=		postgis-[0-9]*
 
 USE_GCC_RUNTIME=		yes
 USE_LANGUAGES=			c c++
-USE_CC_FEATURES+=		c99
 USE_LIBTOOL=			yes
 USE_TOOLS+=			gsed gmake lex pax perl pkg-config
 GNU_CONFIGURE=			yes

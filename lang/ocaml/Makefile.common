@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2024/11/30 01:34:47 gdt Exp $
+# $NetBSD: Makefile.common,v 1.68 2025/03/04 09:37:38 nia Exp $
 
 # not used by anything else these days
 
@@ -17,7 +17,6 @@ COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES+=		c
-USE_CC_FEATURES+=	c99
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 

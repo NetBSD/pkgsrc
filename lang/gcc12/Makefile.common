@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2025/01/07 19:55:37 riastradh Exp $
+# $NetBSD: Makefile.common,v 1.11 2025/03/04 09:37:37 nia Exp $
 # used by lang/gcc12-libjit/Makefile
 
 GCC_PKGNAME=		gcc12
@@ -42,7 +42,6 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99
 USE_CXX_FEATURES+=	c++11
 FORCE_CXX_STD=		c++11
