@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2025/02/12 06:45:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2025/03/04 09:37:39 nia Exp $
 
 DISTNAME=	vinagre-3.22.0
 PKGREVISION=	9
@@ -16,8 +16,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config itstool
 USE_TOOLS+=	msgfmt msgmerge xgettext
 USE_LANGUAGES=	c c++
-
-USE_CC_FEATURES+=	c99
 
 USE_PKGLOCALEDIR=	yes
 
