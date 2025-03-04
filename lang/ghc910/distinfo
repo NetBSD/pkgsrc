@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2025/02/03 16:47:59 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2025/03/04 13:57:17 pho Exp $
 
 BLAKE2s (ghc-9.10.1-src.tar.xz) = 7e4433ead6349bd073d31803b63e6c39fb3833ad691e985e25bc5b027da7fb85
 SHA512 (ghc-9.10.1-src.tar.xz) = 46d47e7811a19dcce501002ab674d84ab2fcb842309b5094af52dc5ad26bf5b309b160c1b689f3342666013bf4b0587425c60fbd6c637e739839d41a6a96d990
@@ -45,7 +45,6 @@ SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC.hs) = 365abd84b9a2
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_GHC_Build_Link.hs) = 1a25bd801ad3984b0e86dae5dcd30f0b36ab28f7
 SHA1 (patch-libraries_Cabal_Cabal_src_Distribution_Simple_Register.hs) = 7630d0170d7dc9b17f15b5eacc2c783e07adbd7f
 SHA1 (patch-libraries_base_src_System_CPUTime_Posix_Times.hsc) = 4c43abbdcfc35e35257acede8bbe47324f23ebcb
-SHA1 (patch-libraries_ghc-internal_configure.ac) = 9d83231666eaead0ac013cdedf553989412d3e95
 SHA1 (patch-libraries_ghc-internal_src_GHC_Internal_Event_KQueue.hsc) = 24b36b21eec74087eb875d205b85cebd3338a2fe
 SHA1 (patch-libraries_ghc-internal_src_GHC_Internal_System_Environment.hs) = 0c1d7f0e8561526cc00f0e069d6921689b63d919
 SHA1 (patch-libraries_ghc-internal_src_GHC_Internal_System_Environment_Blank.hsc) = 3eb8a30bc254b90244e2d45d4bafd09bfc188f03
