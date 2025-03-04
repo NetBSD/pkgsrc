@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.132 2025/02/19 15:19:49 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.133 2025/03/04 16:00:18 schmonz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.132 2025/02/19 15:19:49 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.133 2025/03/04 16:00:18 schmonz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -708,6 +708,9 @@ extract_files(struct pkg_task *pkg)
 		return -1;
 	}
 
+#ifndef O_CLOEXEC
+#define O_CLOEXEC	0
+#endif
 #ifndef O_DIRECTORY
 #define	O_DIRECTORY	0
 #endif
