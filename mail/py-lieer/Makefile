@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/04 09:14:38 wiz Exp $
 
 DISTNAME=	lieer-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-google-auth-oauthlib-[0-9]*:../../security/py-google-au
 DEPENDS+=	${PYPKGPREFIX}-tqdm-[0-9]*:../../misc/py-tqdm
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx via py-notmuch2 via notmuch
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && \
