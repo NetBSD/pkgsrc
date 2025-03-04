@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2025/02/11 12:09:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/03/04 06:06:19 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -166,6 +166,7 @@ ${PYSITELIB}/skimage/data/motorcycle_disp.npz
 ${PYSITELIB}/skimage/data/motorcycle_left.png
 ${PYSITELIB}/skimage/data/motorcycle_right.png
 ${PYSITELIB}/skimage/data/multipage.tif
+${PYSITELIB}/skimage/data/multipage_rgb.tif
 ${PYSITELIB}/skimage/data/no_time_for_that_tiny.gif
 ${PYSITELIB}/skimage/data/page.png
 ${PYSITELIB}/skimage/data/phantom.png
