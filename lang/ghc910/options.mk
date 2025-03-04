@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2025/02/23 16:59:20 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2025/03/04 13:57:17 pho Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghc
 PKG_SUPPORTED_OPTIONS=	doc
@@ -77,15 +77,15 @@ CONFIGURE_ARGS.common+=	CC=${CC:Q}
 ### entry for ghc" do you? But don't hesitate to turn it off if you find
 ### GHC stop building because of this.
 ###
-PLIST_VARS+=		doc
+PLIST_VARS+=			doc
 .if !empty(PKG_OPTIONS:Mdoc)
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310 # py-sphinx
-TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-CONFIGURE_ARGS+=	SPHINXBUILD=${PREFIX:Q}/bin/sphinx-build-${PYVERSSUFFIX}
-PLIST.doc=		yes
+TOOL_DEPENDS+=			${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+CONFIGURE_ARGS+=		SPHINXBUILD=${PREFIX:Q}/bin/sphinx-build-${PYVERSSUFFIX}
+PLIST.doc=			yes
 .else
-HADRIAN_ARGS+=		--docs=no-sphinx
+HADRIAN_ARGS+=			--docs=no-sphinx
 .endif
 # But don't even think of PDF either way. It's absolutely unacceptable for
 # GHC to stop building just because of fragility in Sphinx-TeX interaction.
-HADRIAN_ARGS+=		--docs=no-sphinx-pdfs
+HADRIAN_ARGS+=			--docs=no-sphinx-pdfs
