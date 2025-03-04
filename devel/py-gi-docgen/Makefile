@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2024/11/11 07:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/04 07:18:55 wiz Exp $
 
-DISTNAME=	gi_docgen-2024.1
+DISTNAME=	gi_docgen-2025.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gi_/gi-/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gi_docgen/}
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-packaging>=0:../../devel/py-packaging
 DEPENDS+=	${PYPKGPREFIX}-pygments>=2:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-typogrify>=2:../../textproc/py-typogrify
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 311
