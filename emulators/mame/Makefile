@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.210 2025/02/26 10:36:30 wiz Exp $
+# $NetBSD: Makefile,v 1.211 2025/03/04 09:37:36 nia Exp $
 
 DISTNAME=	mame-0.275
 CATEGORIES=	emulators
@@ -19,7 +19,6 @@ INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c c++
-USE_CC_FEATURES+=	c99
 USE_CXX_FEATURES+=	c++17
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	cputime datasize memorysize virtualsize

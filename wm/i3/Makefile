@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2024/12/27 08:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2025/03/04 09:37:39 nia Exp $
 
 DISTNAME=	i3-4.24
 PKGREVISION=	1
@@ -18,8 +18,6 @@ DEPENDS+=	p5-JSON-XS-[0-9]*:../../converters/p5-JSON-XS
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bash pkg-config perl:run
 USE_LANGUAGES=	c
-
-USE_CC_FEATURES+=	c99
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 LDFLAGS.SunOS+=	-lgen -lsocket

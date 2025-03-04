@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2024/02/21 10:36:20 nia Exp $
+# $NetBSD: Makefile,v 1.24 2025/03/04 09:37:39 nia Exp $
 
 DISTNAME=		libXvMC-1.0.14
 CATEGORIES=		x11
@@ -12,7 +12,6 @@ LICENSE=		mit
 
 USE_TOOLS+=		pkg-config
 
-USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99
 
 PKGCONFIG_OVERRIDE+=		output/meson-private/xvmc.pc
