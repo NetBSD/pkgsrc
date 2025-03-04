@@ -1,17 +1,16 @@
-$NetBSD: patch-lib_cpp_src_thrift_transport_SocketCommon.cpp,v 1.1 2021/03/21 12:41:11 taca Exp $
+$NetBSD: patch-lib_cpp_src_thrift_transport_SocketCommon.cpp,v 1.2 2025/03/04 13:05:20 adam Exp $
 
-Need string.h for memcpy().
+Include string.h for memcpy().
 
---- lib/cpp/src/thrift/transport/SocketCommon.cpp.orig	2021-02-04 23:07:31.000000000 +0000
+--- lib/cpp/src/thrift/transport/SocketCommon.cpp.orig	2024-03-18 20:28:38.000000000 +0000
 +++ lib/cpp/src/thrift/transport/SocketCommon.cpp
-@@ -34,6 +34,10 @@
- #include <sys/un.h>
- #endif
+@@ -24,6 +24,9 @@
+ #include <thrift/transport/TTransportException.h>
+ #include <thrift/TOutput.h>
  
 +#ifdef HAVE_STRING_H
 +#include <string.h>
 +#endif
-+
- #include <string>
+ #include <cstring>
  
- #include <thrift/transport/PlatformSocket.h>
+ namespace apache {
