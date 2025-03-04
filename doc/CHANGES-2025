@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1923 2025/03/04 14:41:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.1924 2025/03/04 14:42:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-automat to 24.8.1nb1 [adam 2025-03-04]
 	Updated devel/thrift to 0.21.0 [adam 2025-03-04]
 	Updated www/ruby-aws-partitions to 1.1059.0 [taca 2025-03-04]
+	Updated www/ruby-rack to 3.1.11 [taca 2025-03-04]
