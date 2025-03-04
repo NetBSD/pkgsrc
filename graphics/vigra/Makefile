@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2024/11/18 10:32:42 adam Exp $
+# $NetBSD: Makefile,v 1.45 2025/03/04 06:12:23 adam Exp $
 
 DISTNAME=	vigra-1.12.1-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/vigra-${GITHUB_TAG}
 
 TOOL_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
+USE_CXX_FEATURES=	c++11
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 
