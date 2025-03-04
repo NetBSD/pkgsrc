@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2024/10/26 07:42:27 nia Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/03/04 06:03:04 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -10,9 +10,6 @@ ${PYSITELIB}/psutil/__init__.pyo
 ${PYSITELIB}/psutil/_common.py
 ${PYSITELIB}/psutil/_common.pyc
 ${PYSITELIB}/psutil/_common.pyo
-${PYSITELIB}/psutil/_compat.py
-${PYSITELIB}/psutil/_compat.pyc
-${PYSITELIB}/psutil/_compat.pyo
 ${PYSITELIB}/psutil/_psaix.py
 ${PYSITELIB}/psutil/_psaix.pyc
 ${PYSITELIB}/psutil/_psaix.pyo
@@ -73,6 +70,9 @@ ${PYSITELIB}/psutil/tests/test_process.pyo
 ${PYSITELIB}/psutil/tests/test_process_all.py
 ${PYSITELIB}/psutil/tests/test_process_all.pyc
 ${PYSITELIB}/psutil/tests/test_process_all.pyo
+${PYSITELIB}/psutil/tests/test_scripts.py
+${PYSITELIB}/psutil/tests/test_scripts.pyc
+${PYSITELIB}/psutil/tests/test_scripts.pyo
 ${PYSITELIB}/psutil/tests/test_sunos.py
 ${PYSITELIB}/psutil/tests/test_sunos.pyc
 ${PYSITELIB}/psutil/tests/test_sunos.pyo
