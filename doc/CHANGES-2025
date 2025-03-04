@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1912 2025/03/04 05:18:05 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1913 2025/03/04 06:09:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2501,3 +2501,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-libusb1 to 3.3.0 [adam 2025-03-04]
 	Updated devel/py-inline-snapshot to 0.20.4 [adam 2025-03-04]
 	Updated devel/py-hypothesis to 6.127.6 [adam 2025-03-04]
+	Updated sysutils/py-psutil to 7.0.0 [adam 2025-03-04]
+	Updated math/py-scikit-image to 0.25.2 [adam 2025-03-04]
+	Updated databases/py-tortoise-orm to 0.24.2 [adam 2025-03-04]
+	Updated misc/py-trove-classifiers to 2025.3.3.18 [adam 2025-03-04]
