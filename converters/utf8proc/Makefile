@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2025/01/02 13:55:52 micha Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/04 09:37:36 nia Exp $
 
 DISTNAME=	utf8proc-2.10.0
 CATEGORIES=	converters
@@ -11,7 +11,6 @@ COMMENT=	C library for processing Unicode data
 LICENSE=	mit AND unicode-v3
 
 FORCE_C_STD=		c99
-USE_CC_FEATURES+=	c99
 USE_LIBTOOL=		yes
 
 INSTALLATION_DIRS=	include lib lib/pkgconfig

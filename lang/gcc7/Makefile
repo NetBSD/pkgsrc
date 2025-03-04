@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2023/08/29 09:48:47 nia Exp $
+# $NetBSD: Makefile,v 1.51 2025/03/04 09:37:38 nia Exp $
 
 GCC_PKGNAME=		gcc7
 .include		"version.mk"
@@ -44,7 +44,6 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 
 # error: 'for' loop initial declarations are only allowed in C99 mode
-USE_CC_FEATURES+=	c99
 FORCE_C_STD=		gnu99
 
 UNLIMIT_RESOURCES+=	datasize

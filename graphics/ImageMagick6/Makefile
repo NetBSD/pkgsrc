@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2024/11/14 22:20:04 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2025/03/04 09:37:37 nia Exp $
 
 PKGREVISION= 6
 .include "Makefile.common"
@@ -49,7 +49,6 @@ SUBST_NOOP_OK.pkgcfg=	yes
 # modified, and they don't need to since their names don't appear in any
 # "Requires:" line.
 
-USE_CC_FEATURES+=	c99
 FORCE_C_STD=		c99
 
 TEST_TARGET=		check
