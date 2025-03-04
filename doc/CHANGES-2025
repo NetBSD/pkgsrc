@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1916 2025/03/04 09:32:00 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1917 2025/03/04 10:25:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2508,3 +2508,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-gi-docgen to 2025.3 [wiz 2025-03-04]
 	Updated databases/py-sqlalchemy to 2.0.38nb1 [wiz 2025-03-04]
 	Updated devel/py-gitpython to 3.1.44nb1 [wiz 2025-03-04]
+	Updated net/arti to 1.4.1 [wiz 2025-03-04]
