@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2024/02/03 21:29:43 abs Exp $
+@comment $NetBSD: PLIST,v 1.59 2025/03/04 12:12:35 abs Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -160,6 +160,7 @@ libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hexadrop.xml
 libexec/xscreensaver/config/hexstrut.xml
 libexec/xscreensaver/config/hextrail.xml
+libexec/xscreensaver/config/highvoltage.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hopalong.xml
 libexec/xscreensaver/config/hydrostat.xml
@@ -176,6 +177,7 @@ libexec/xscreensaver/config/juggler3d.xml
 libexec/xscreensaver/config/julia.xml
 libexec/xscreensaver/config/kaleidescope.xml
 libexec/xscreensaver/config/kaleidocycle.xml
+libexec/xscreensaver/config/kallisti.xml
 libexec/xscreensaver/config/klein.xml
 libexec/xscreensaver/config/kumppa.xml
 libexec/xscreensaver/config/lament.xml
@@ -373,6 +375,7 @@ libexec/xscreensaver/helix
 libexec/xscreensaver/hexadrop
 libexec/xscreensaver/hexstrut
 libexec/xscreensaver/hextrail
+libexec/xscreensaver/highvoltage
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hopalong
 libexec/xscreensaver/hydrostat
@@ -389,6 +392,7 @@ libexec/xscreensaver/juggler3d
 libexec/xscreensaver/julia
 libexec/xscreensaver/kaleidescope
 libexec/xscreensaver/kaleidocycle
+libexec/xscreensaver/kallisti
 libexec/xscreensaver/klein
 libexec/xscreensaver/kumppa
 libexec/xscreensaver/lament
@@ -637,6 +641,7 @@ man/man6/helix.6
 man/man6/hexadrop.6
 man/man6/hexstrut.6
 man/man6/hextrail.6
+man/man6/highvoltage.6
 man/man6/hilbert.6
 man/man6/hopalong.6
 man/man6/hydrostat.6
@@ -653,6 +658,7 @@ man/man6/juggler3d.6
 man/man6/julia.6
 man/man6/kaleidescope.6
 man/man6/kaleidocycle.6
+man/man6/kallisti.6
 man/man6/klein.6
 man/man6/kumppa.6
 man/man6/lament.6
@@ -660,6 +666,7 @@ man/man6/lavalite.6
 man/man6/lcdscrub.6
 man/man6/lockward.6
 man/man6/loop.6
+man/man6/m6502.6
 man/man6/mapscroller.6
 man/man6/marbling.6
 man/man6/maze.6
@@ -696,6 +703,7 @@ man/man6/polyhedra.6
 man/man6/polyominoes.6
 man/man6/polytopes.6
 man/man6/pong.6
+man/man6/popsquares.6
 man/man6/projectiveplane.6
 man/man6/providence.6
 man/man6/pulsar.6
