@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2025/02/20 14:39:37 manu Exp $
+$NetBSD: distinfo,v 1.2 2025/03/05 14:36:03 wiz Exp $
 
-BLAKE2s (sogo/SOGo-5.11.2.tar.gz) = 958c41b04909940071ad7513de039febee64dab004aaadcefca1261190c5df41
-SHA512 (sogo/SOGo-5.11.2.tar.gz) = c48f1a06d0bb9d4e1d56ea9cc1c03b79860fb8415d37994047f2f06e28a9588b68e1ee0a473c123d00b98bf7b4924b4d9188ec4d8fc184eac1fc8233818fa8b2
-Size (sogo/SOGo-5.11.2.tar.gz) = 35252185 bytes
+BLAKE2s (SOGo-5.11.2.tar.gz) = 958c41b04909940071ad7513de039febee64dab004aaadcefca1261190c5df41
+SHA512 (SOGo-5.11.2.tar.gz) = c48f1a06d0bb9d4e1d56ea9cc1c03b79860fb8415d37994047f2f06e28a9588b68e1ee0a473c123d00b98bf7b4924b4d9188ec4d8fc184eac1fc8233818fa8b2
+Size (SOGo-5.11.2.tar.gz) = 35252185 bytes
 SHA1 (patch-SoObjects_SOGo_NSData+Crypto.m) = 67ab2d7f99834b597dcbaf7cacd9122405156ea3
 SHA1 (patch-general.make) = d1517f3fc9133c7edb4293612b87674504d3ac5f
