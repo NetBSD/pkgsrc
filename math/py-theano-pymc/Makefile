@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 10:16:51 wiz Exp $
 
 DISTNAME=	Theano-PyMC-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Theano-PyMC/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://pypi.org/project/theano-pymc
 COMMENT=	Optimizing compiler for evaluating mathematical expressions
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-versioneer-[0-9]*:../../devel/py-versioneer
 DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.9.1:../../math/py-numpy
@@ -18,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.14:../../math/py-scipy
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39
 REPLACE_SH+=			theano/misc/check_blas_many.sh
+
+WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 
 # Prefer versioneer from pkgsrc.
 post-extract:
