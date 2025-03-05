@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2022/10/21 12:55:31 adam Exp $
+$NetBSD: distinfo,v 1.5 2025/03/05 10:51:11 adam Exp $
 
-BLAKE2s (libaec-1.0.6.tar.gz) = 593ee5bac656f9b0e31eaea10f98477dcd011eb8a20ccc27785140b754431e4a
-SHA512 (libaec-1.0.6.tar.gz) = 4a796e93a46e8b45c0c7084b5130685cc7bef0b802a0e41a092a815f5c81927f3194be1717a95100701d61d4d5ba05ed807510e5104b5b5bfb78c2ac8a3f759e
-Size (libaec-1.0.6.tar.gz) = 3129358 bytes
+BLAKE2s (libaec-v1.1.3.tar.bz2) = e14e6f9cd6ef3556f70bb451a21466a03db481af276f8d0268ab1fb6a8ab9f86
+SHA512 (libaec-v1.1.3.tar.bz2) = 0d943dc074f819812d1536fb69845592acfd64390423a2bc40a85aeb829bb5c83d2d43492728dfed292acd09645cb18f427e572c707dd81dc503da48419eb918
+Size (libaec-v1.1.3.tar.bz2) = 2313620 bytes
