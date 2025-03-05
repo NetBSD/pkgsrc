@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2025/03/05 18:21:21 vins Exp $
+$NetBSD: distinfo,v 1.4 2025/03/05 19:24:37 vins Exp $
 
 BLAKE2s (syncterm-1.6-src.tgz) = 443b32af07b992d6a8a55c901c7960d3d15f6ea2a6f058eb91b12c69ce1e57f5
 SHA512 (syncterm-1.6-src.tgz) = 17b7d8ff5707172cb7baf3a2a3f573a38c9ec653d2ab2b5725b60f8fcbd392fefa58c6e57aa41ad89bbcdab98f373d891def6787f836b23eaabde373d82afa8a
@@ -6,5 +6,5 @@ Size (syncterm-1.6-src.tgz) = 10986287 bytes
 SHA1 (patch-src_build_Common.gmake) = daf111dc2742c2d21bdb87ef9250c4dad761f790
 SHA1 (patch-src_syncterm_GNUmakefile) = fb15798bf0fc75482e687b9ee1e2989560578df9
 SHA1 (patch-src_syncterm_syncterm.man.in) = 5bab64bccb335b0b80c2b5a7abddb449498e99c6
-SHA1 (patch-src_xpdev_Common.gmake) = a9b51c3a86140164d9ad85124030dc43bd0c70fb
+SHA1 (patch-src_xpdev_Common.gmake) = a47b4d63fa55f9d467544a4d7f477b500475d014
 SHA1 (patch-src_xpdev_genwrap.h) = 170c70ff745e6cc5dc53b187505e7ff5e0d47417
