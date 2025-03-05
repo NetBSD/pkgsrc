@@ -1,24 +1,18 @@
-# $NetBSD: Makefile.common,v 1.25 2023/08/31 11:57:27 adam Exp $
+# $NetBSD: Makefile.common,v 1.26 2025/03/05 06:24:20 adam Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
-DISTNAME=	hdf5-1.12.2
+DISTNAME=	hdf5-1.14.6
 CATEGORIES=	devel
-MASTER_SITES=	https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-${PKGVERSION_NOREV:R}/hdf5-${PKGVERSION_NOREV}/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=HDFGroup/}
+GITHUB_TAG=	hdf5_${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.hdfgroup.org/HDF5/
 LICENSE=	original-bsd
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pax tr
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-examplesdir=${PREFIX}/share/examples/hdf5
-TEST_TARGET=		check
-
-CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
-CONFIGURE_ENV.SunOS+=	ac_cv_func_gettimeofday=yes
+USE_TOOLS+=	bash:run pax tr
+TEST_TARGET=	test
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/hdf5/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/hdf5/patches
@@ -30,8 +24,10 @@ CHECK_PORTABILITY_SKIP=	bin/snapshot hl/tools/h5watch/testh5watch.sh.in
 # used by any installed tools
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
 
-INSTALL_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+REPLACE_BASH+=		utils/subfiling_vfd/h5fuse.in
 
 post-extract:
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsdelf
+
+.include "../../devel/cmake/build.mk"
