@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1989 2025/03/05 10:30:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1990 2025/03/05 10:31:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-Send2Trash to 1.8.3nb1 [wiz 2025-03-05]
 	Updated textproc/py-ICU to 2.14nb2 [wiz 2025-03-05]
 	Updated textproc/py-Whoosh to 2.7.4nb3 [wiz 2025-03-05]
+	Updated textproc/py-generateDS to 2.43.3nb1 [wiz 2025-03-05]
