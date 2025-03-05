@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2024/10/14 22:21:16 bacon Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/03/05 09:28:50 wiz Exp $
 bin/macs3
-${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/LICENSE
-${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/METADATA
-${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/RECORD
-${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/WHEEL
-${PYSITELIB}/MACS3-${PKGVERSION}.dist-info/top_level.txt
 ${PYSITELIB}/MACS3/Commands/__init__.py
 ${PYSITELIB}/MACS3/Commands/__init__.pyc
 ${PYSITELIB}/MACS3/Commands/__init__.pyo
@@ -102,3 +97,8 @@ ${PYSITELIB}/MACS3/Utilities/__init__.pyo
 ${PYSITELIB}/MACS3/__init__.py
 ${PYSITELIB}/MACS3/__init__.pyc
 ${PYSITELIB}/MACS3/__init__.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
