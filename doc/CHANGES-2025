@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1957 2025/03/05 09:51:30 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1958 2025/03/05 09:53:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.versioning to 1.1.0nb1 [wiz 2025-03-05]
 	Updated devel/py-kivy-garden to 0.1.5nb1 [wiz 2025-03-05]
 	Updated devel/py-logbook to 1.8.0nb1 [wiz 2025-03-05]
+	Updated devel/py-pebble to 5.1.0nb1 [wiz 2025-03-05]
