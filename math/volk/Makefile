@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/02/27 13:44:29 adam Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/05 14:58:45 gdt Exp $
 
 DISTNAME=	volk-3.2.0
 CATEGORIES=	math ham
@@ -32,6 +32,10 @@ MAKE_ENV+=	DYLD_LIBRARY_PATH=${WRKSRC}/${CMAKE_BUILD_DIR}/lib
 .include "../../lang/python/pyversion.mk"
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 
+.include "../../devel/cmake/build.mk"
+# Yet another variation, for volk's boutique cmake code to find python.
+CMAKE_CONFIGURE_ARGS+=          -DPYTHON_EXECUTABLE=${TOOL_PYTHONBIN}
+
 .if	${MACHINE_ARCH:M*arm*} ||		\
 	${MACHINE_ARCH} == "aarch64" ||		\
 	${MACHINE_ARCH} == "i386" ||		\
@@ -40,7 +44,6 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 	${MACHINE_ARCH:M*powerpc*}
 .include "../../devel/cpu_features/buildlink3.mk"
 .endif
-.include "../../devel/cmake/build.mk"
 .include "../../devel/orc/buildlink3.mk"
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../textproc/fmtlib/buildlink3.mk"
