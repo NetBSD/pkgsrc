@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2022/08/15 06:55:16 pin Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/03/05 20:48:49 pin Exp $
 bin/feathernotes
 share/applications/feathernotes.desktop
 share/feathernotes/translations/feathernotes_ar_DZ.qm
@@ -10,6 +10,7 @@ share/feathernotes/translations/feathernotes_cy.qm
 share/feathernotes/translations/feathernotes_da.qm
 share/feathernotes/translations/feathernotes_de.qm
 share/feathernotes/translations/feathernotes_el.qm
+share/feathernotes/translations/feathernotes_en_GB.qm
 share/feathernotes/translations/feathernotes_eo.qm
 share/feathernotes/translations/feathernotes_es.qm
 share/feathernotes/translations/feathernotes_et.qm
@@ -22,6 +23,7 @@ share/feathernotes/translations/feathernotes_hu.qm
 share/feathernotes/translations/feathernotes_id.qm
 share/feathernotes/translations/feathernotes_it.qm
 share/feathernotes/translations/feathernotes_ja.qm
+share/feathernotes/translations/feathernotes_ka.qm
 share/feathernotes/translations/feathernotes_ko.qm
 share/feathernotes/translations/feathernotes_lt.qm
 share/feathernotes/translations/feathernotes_nb_NO.qm
@@ -32,6 +34,7 @@ share/feathernotes/translations/feathernotes_pt_BR.qm
 share/feathernotes/translations/feathernotes_ru.qm
 share/feathernotes/translations/feathernotes_si.qm
 share/feathernotes/translations/feathernotes_sk_SK.qm
+share/feathernotes/translations/feathernotes_sl.qm
 share/feathernotes/translations/feathernotes_sv.qm
 share/feathernotes/translations/feathernotes_tr.qm
 share/feathernotes/translations/feathernotes_uk.qm
