@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.79 2025/03/04 09:37:37 nia Exp $
+# $NetBSD: Makefile,v 1.80 2025/03/05 10:02:29 wiz Exp $
 
 .include "../../geography/gdal-lib/Makefile.common"
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-#PKGREVISION=	0
+PKGREVISION=	1
 
 COMMENT=	Translator library for raster geospatial data formats, Python binding
 
@@ -14,9 +14,8 @@ USE_CXX_FEATURES+=	c++11
 
 .include "../../mk/bsd.prefs.mk"
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
-WHEEL_NAME=		GDAL-${VERSION_BASE}
 PYSETUPSUBDIR=		build/swig/python
 
 # Upstream's distfile does not have a ready-to-use python module
