@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2034 2025/03/05 19:26:08 ktnb Exp $
+$NetBSD: CHANGES-2025,v 1.2035 2025/03/05 20:47:53 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/swagger-codegen to 3.0.68 [schmonz 2025-03-05]
 	Updated comms/syncterm to 1.6 [vins 2025-03-05]
 	Updated math/suitesparse to 7.10.1 [ktnb 2025-03-05]
+	Updated devel/bacon to 3.11.0 [pin 2025-03-05]
