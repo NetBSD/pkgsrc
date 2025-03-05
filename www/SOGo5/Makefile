@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/02/20 14:39:37 manu Exp $
-#
+# $NetBSD: Makefile,v 1.2 2025/03/05 14:36:03 wiz Exp $
 
 DISTNAME=	SOGo-5.11.2
-#PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Alinto/}
 GITHUB_PROJECT=	sogo
-GITHUB_TAG=	refs/tags/${DISTNAME}
-DIST_SUBDIR=	${GITHUB_PROJECT}
+GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sogo.nu/
@@ -70,6 +67,8 @@ pre-configure:
 	${CHMOD} ${NONBINMODE} ${WRKSRC}/${f}
 .endfor
 
+INSTALLATION_DIRS+=	lib/GNUstep/Frameworks
+
 post-install:
 	${SED} -e "s|@SOGOUSER@|${SOGOUSER}|" ${FILESDIR}/sogo-conf.sh > \
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/sogo-conf.sh
@@ -78,7 +77,6 @@ post-install:
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/SOGo.conf
 	${SED} -e "s|@PREFIX@|${PREFIX}|" ${FILESDIR}/SOGo.conf >> \
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/SOGo.conf
-	${MKDIR} -p ${DESTDIR}${PREFIX}/lib/GNUstep/Frameworks
 	${LN} -s ../SOGo/SOGo.framework \
 	  ${DESTDIR}${PREFIX}/lib/GNUstep/Frameworks/SOGo.framework
 
@@ -91,6 +89,4 @@ post-install:
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-
-
 .include "../../mk/bsd.pkg.mk"
