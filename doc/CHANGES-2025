@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1935 2025/03/05 09:19:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1936 2025/03/05 09:28:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2531,3 +2531,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.15.2 [rillig 2025-03-05]
 	Updated audio/py-audio to 0.2.14nb2 [wiz 2025-03-05]
 	Updated biology/py-macs2 to 2.2.9.1nb1 [wiz 2025-03-05]
+	Updated biology/py-macs3 to 3.0.2nb1 [wiz 2025-03-05]
