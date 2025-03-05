@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/05 10:25:39 wiz Exp $
 
 DISTNAME=	pyOpenSSL-21.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyOpenSSL/}
 
@@ -11,13 +11,13 @@ HOMEPAGE=	https://pyopenssl.org/
 COMMENT=	Python interface to the OpenSSL library (non-Rust version)
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-cryptography<4:../../security/py27-cryptography
 DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 TEST_DEPENDS+=	${PYPKGPREFIX}-flaky-[0-9]*:../../devel/py-flaky
 TEST_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../security/openssl/buildlink3.mk"
