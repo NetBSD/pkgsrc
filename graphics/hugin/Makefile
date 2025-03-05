@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.156 2024/12/29 15:09:50 adam Exp $
+# $NetBSD: Makefile,v 1.157 2025/03/05 06:27:43 adam Exp $
 
-DISTNAME=	hugin-2023.0.0
-PKGREVISION=	13
+DISTNAME=	hugin-2024.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,15 +10,14 @@ HOMEPAGE=	https://hugin.sourceforge.io/
 COMMENT=	Panorama photo stitcher
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
 
-CMAKE_CONFIGURE_ARGS+=		-DBUILD_HSI=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_HSI=ON
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_WITH_EPOXY=ON
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	src/hugin_script_interface/*.py
@@ -49,7 +47,7 @@ post-patch:
 .include "../../devel/swig3/buildlink3.mk"
 .include "../../devel/tclap/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
-.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/libepoxy/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/freeglut/buildlink3.mk"
 .endif
