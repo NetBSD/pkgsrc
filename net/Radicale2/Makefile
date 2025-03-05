@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/02/10 19:43:34 maya Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/05 10:18:18 wiz Exp $
 
 DISTNAME=	Radicale-2.1.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -9,6 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://radicale.org/
 COMMENT=	CalDAV (calendar) and CardDAV (contact) server
 LICENSE=	gnu-gpl-v3
+
+DEPENDS+=		${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
+DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
+# for md5 htpasswd_encryption method
+DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 
 EGDIR=			share/examples/radicale
 
@@ -19,6 +24,8 @@ PKG_USERS=			${RADICALE_USER}:${RADICALE_GROUP}
 # Fails with python 3.12 or newer with
 # An exception occurred during server startup: module 'ssl' has no attribute 'wrap_socket'
 PYTHON_VERSIONS_ACCEPTED=	311 310
+
+WHEEL_NAME=		${DISTNAME:tl}
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
@@ -41,13 +48,6 @@ SUBST_SED.server+=	-e 's,\#filesystem_folder,filesystem_folder,'
 SUBST_FILES.server+=	config
 SUBST_STAGE.server=	pre-configure
 SUBST_MESSAGE.server=	Configure as a daemon by default, and override default collection location
-
-DEPENDS+=		${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
-
-# for md5 htpasswd_encryption method
-DEPENDS+=		${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
-
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/${EGDIR}/config
