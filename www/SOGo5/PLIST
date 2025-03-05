@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/20 14:39:37 manu Exp $
-
+@comment $NetBSD: PLIST,v 1.2 2025/03/05 14:36:03 wiz Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAdminFolder.h
 include/GDLContentStore/GCSAlarmsFolder.h
