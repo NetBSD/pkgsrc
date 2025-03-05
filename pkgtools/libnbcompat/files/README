@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.31 2024/08/05 11:29:54 tnn Exp $
+$NetBSD: README,v 1.32 2025/03/05 11:54:23 nia Exp $
 
  0 Introduction
  ==============
@@ -43,6 +43,16 @@ breakage seep in.  Proper methodology for updating this package is:
 *NOTE* This section should be kept up-to-date with the results for
 *NOTE* the most recent libnbcompat.
 *NOTE*
+
+libnbcompat-20250303 has been tested to build and install correctly
+on the following operating systems:
+
+	UnixWare/i386 7.4.1		<nia@NetBSD.org>
+	OmniOS/amd64			<nia@NetBSD.org>
+	NetBSD/amd64 10.1		<nia@NetBSD.org>
+	Darwin/aarch64 15		<nia@NetBSD.org>
+	FreeBSD/amd64 14.2		<nia@NetBSD.org>
+	OpenBSD/amd64 7.6		<nia@NetBSD.org>
 
 libnbcompat-20240805 has been tested to build and install correctly
 on the following operating systems:

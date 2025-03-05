@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt.c,v 1.1 2009/03/22 22:33:13 joerg Exp $	*/
+/*	$NetBSD: getopt.c,v 1.2 2025/03/05 11:54:24 nia Exp $	*/
 
 /*
  * Copyright (c) 1987, 1993, 1994
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: getopt.c,v 1.1 2009/03/22 22:33:13 joerg Exp $");
+__RCSID("$NetBSD: getopt.c,v 1.2 2025/03/05 11:54:24 nia Exp $");
 
 #if 0
 #include "namespace.h"
@@ -58,11 +58,25 @@ __weak_alias(getopt,_getopt)
 #endif
 #endif
 
-int	opterr = 1,		/* if error message should be printed */
-	optind = 1,		/* index into parent argv vector */
-	optopt,			/* character checked for validity */
-	optreset;		/* reset getopt */
+#if !HAVE_DECL_OPTERR
+int	opterr = 1;		/* if error message should be printed */
+#endif
+
+#if !HAVE_DECL_OPTIND
+int	optind = 1;		/* index into parent argv vector */
+#endif
+
+#if !HAVE_DECL_OPTOPT
+int	optopt;			/* character checked for validity */
+#endif
+
+#if !HAVE_DECL_OPTRESET
+int	optreset;		/* reset getopt */
+#endif
+
+#if !HAVE_DECL_OPTARG
 char	*optarg;		/* argument associated with option */
+#endif
 
 #define	BADCH	(int)'?'
 #define	BADARG	(int)':'
