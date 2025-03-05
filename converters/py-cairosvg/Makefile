@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2024/11/11 07:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/03/05 09:33:32 wiz Exp $
 
 DISTNAME=	CairoSVG-2.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	converters graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CairoSVG/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	http://www.cairosvg.org/
 COMMENT=	Simple SVG Converter for Cairo
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../graphics/py-cairocffi
 DEPENDS+=	${PYPKGPREFIX}-cssselect2-[0-9]*:../../textproc/py-cssselect2
@@ -22,7 +23,7 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-test-isort-[0-9]*:../../devel/py-test-isort
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:tl}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
