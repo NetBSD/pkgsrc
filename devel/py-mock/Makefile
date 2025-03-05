@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2024/11/11 07:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2025/03/05 15:02:53 adam Exp $
 
-DISTNAME=	mock-5.1.0
+DISTNAME=	mock-5.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mock/}
