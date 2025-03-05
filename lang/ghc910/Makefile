@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2025/02/03 16:09:09 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/05 03:33:59 pho Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
 DISTNAME=	ghc-9.10.1-src
 PKGNAME=	${DISTNAME:S/-src$//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	https://downloads.haskell.org/~ghc/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -173,8 +173,9 @@ NOT_PAX_ASLR_SAFE+=	lib/${PKGNAME_NOREV}/bin/${f}
 # We patch configure.ac in some directories.
 post-patch:
 	@${PHASE_MSG} "Regenerating configuration scripts for ${PKGNAME}"
-	${RUN}cd ${WRKSRC} && autoconf
-	${RUN}cd ${WRKSRC}/libraries/terminfo && autoconf
+	${RUN}cd ${WRKSRC} && autoreconf
+	${RUN}cd ${WRKSRC}/libraries/ghc-internal && autoreconf
+	${RUN}cd ${WRKSRC}/libraries/terminfo && autoreconf
 
 # Define the target "pre-configure", "pre-build", and non-standard
 # "bootstrap".

@@ -1,0 +1,38 @@
+$NetBSD: patch-libraries_ghc-internal_configure.ac,v 1.3 2025/03/05 03:33:59 pho Exp $
+
+Detect the case where clock_getres(2) doesn't support
+CLOCK_PROCESS_CPUTIME_ID. This is conceptually not OS-specific but I (pho@)
+don't think it's worth upstreaming. See
+https://gnats.netbsd.org/cgi-bin/query-pr-single.pl?number=59127 for the
+background.
+
+See also patch-libraries_base_src_System_CPUTime.hsc
+
+--- libraries/ghc-internal/configure.ac.orig	2025-03-04 13:58:17.963896190 +0000
++++ libraries/ghc-internal/configure.ac
+@@ -113,6 +113,25 @@ case "$fptools_cv_func_unsetenv_return_t
+   ;;
+ esac
+ 
++AC_MSG_CHECKING([if clock_getres(CLOCK_PROCESS_CPUTIME_ID) works])
++AC_RUN_IFELSE(
++  [AC_LANG_PROGRAM(
++     [@%:@include <time.h>],
++     [struct timespec ts;
++      int rv;
++      rv = clock_getres(CLOCK_PROCESS_CPUTIME_ID, &ts);
++      return rv;])],
++  [clock_getres_supports_proc_cputime=yes],
++  [clock_getres_supports_proc_cputime=no],
++  [clock_getres_supports_proc_cputime=no])
++if test x"$clock_getres_supports_proc_cputime" = x"yes"; then
++  AC_MSG_RESULT([yes])
++  AC_DEFINE([CLOCK_GETRES_SUPPORTS_CLOCK_PROCESS_CPUTIME_ID], [1],
++            [Define if clock_getres(2) works with CLOCK_PROCESS_CPUTIME_ID])
++else
++  AC_MSG_RESULT([no])
++fi
++
+ dnl--------------------------------------------------------------------
+ dnl * Deal with arguments telling us iconv is somewhere odd
+ dnl--------------------------------------------------------------------
