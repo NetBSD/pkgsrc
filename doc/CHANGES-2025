@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2022 2025/03/05 11:02:08 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2023 2025/03/05 11:12:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-wtforms-components to 0.11.0nb1 [wiz 2025-03-05]
 	Updated www/py-zope.proxy to 6.1nb1 [wiz 2025-03-05]
 	Updated x11/py-sip-qt5 to 12.17.0nb1 [wiz 2025-03-05]
+	Updated security/sequoia-sq to 1.2.0 [wiz 2025-03-05]
