@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1992 2025/03/05 10:32:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1993 2025/03/05 10:33:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-generateDS to 2.43.3nb1 [wiz 2025-03-05]
 	Updated textproc/py-jaraco.text to 4.0.0nb1 [wiz 2025-03-05]
 	Updated textproc/py-markups to 4.1.0nb2 [wiz 2025-03-05]
+	Updated textproc/py-types-yaml to 6.0.12.20241230nb1 [wiz 2025-03-05]
