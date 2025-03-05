@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/01/30 08:27:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/05 09:39:56 wiz Exp $
 
 DISTNAME=	deprecated-1.2.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/deprecated/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://github.com/tantale/deprecated
 COMMENT=	Python decorator to deprecate old python classes, functions or methods
 LICENSE=	mit
 
-WHEEL_NAME=	Deprecated-${PKGVERSION_NOREV}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.10:../../devel/py-wrapt
 
 USE_LANGUAGES=	# none
