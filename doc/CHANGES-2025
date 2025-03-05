@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2032 2025/03/05 17:02:49 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2033 2025/03/05 18:21:58 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/php-oauth to 2.0.9 [taca 2025-03-05]
 	Updated editors/vim-share to 9.1.1170 [morr 2025-03-05]
 	Updated devel/swagger-codegen to 3.0.68 [schmonz 2025-03-05]
+	Updated comms/syncterm to 1.6 [vins 2025-03-05]
