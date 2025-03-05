@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2018 2025/03/05 10:58:28 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2019 2025/03/05 10:59:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-lti1p3 to 2.0.0nb1 [wiz 2025-03-05]
 	Updated www/py-paste to 3.10.1nb1 [wiz 2025-03-05]
 	Updated www/py-protego to 0.4.0nb1 [wiz 2025-03-05]
+	Updated www/py-sparqlwrapper to 2.0.0nb1 [wiz 2025-03-05]
