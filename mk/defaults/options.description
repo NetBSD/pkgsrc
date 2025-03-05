@@ -421,6 +421,7 @@ jpeg			Enable JPEG support.
 jre-jce			Enable the Java Cryptography Extension.
 json			Enable JSON (JavaScript Object Notation) support.
 jwhois-enable-cache	Enable cache support.
+jxl			Enable JPEG XL support using the libjxl library.
 kde			Enable KDE support.
 kde4			Enable support for KDE 4.
 keepassxc-browser	Enable KeePassXC-Browser extension support.
