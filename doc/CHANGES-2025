@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1940 2025/03/05 09:34:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1941 2025/03/05 09:35:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/py-telethon to 1.36.0nb1 [wiz 2025-03-05]
 	Updated converters/py-cairosvg to 2.7.1nb1 [wiz 2025-03-05]
 	Updated databases/py-pymysql to 1.1.1nb1 [wiz 2025-03-05]
+	Updated databases/py-pypika to 0.48.9nb2 [wiz 2025-03-05]
