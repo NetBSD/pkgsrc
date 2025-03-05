@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2024/07/05 07:56:18 adam Exp $
+# $NetBSD: Makefile,v 1.38 2025/03/05 22:26:18 nia Exp $
 
 DISTNAME=	p11-kit-0.25.5
 CATEGORIES=	security
@@ -17,7 +17,6 @@ DEPENDS+=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 MESON_ARGS+=	-Dtrust_paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 
-USE_CC_FEATURES=	c99
 USE_FEATURES+=		strndup strnlen
 USE_LANGUAGES=		c
 USE_TOOLS+=		msgfmt pkg-config readlink
@@ -44,10 +43,16 @@ CONF_FILES+=		share/examples/p11-kit/pkcs11.conf.example \
 
 INSTALLATION_DIRS+=	share/examples/p11-kit
 
+PTHREAD_OPTS=		require
+PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/pthread.buildlink3.mk"
+
 post-install:
 	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/pkcs11/pkcs11.conf.example \
 		${DESTDIR}${PREFIX}/share/examples/p11-kit
 
+.include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/meson/build.mk"
