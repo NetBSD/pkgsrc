@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/02/02 13:05:17 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/03/05 03:39:22 pho Exp $
 
 BUILDLINK_TREE+=	hs-old-locale
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-old-locale
 HS_OLD_LOCALE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-old-locale+=	hs-old-locale>=1.0.0
-BUILDLINK_ABI_DEPENDS.hs-old-locale+=	hs-old-locale>=1.0.0.7nb9
+BUILDLINK_ABI_DEPENDS.hs-old-locale+=	hs-old-locale>=1.0.0.7nb10
 BUILDLINK_PKGSRCDIR.hs-old-locale?=	../../devel/hs-old-locale
 .endif	# HS_OLD_LOCALE_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:05:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/03/05 03:39:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-lsp-types
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-lsp-types
 HS_LSP_TYPES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.3.0
-BUILDLINK_ABI_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.3.0.1nb1
+BUILDLINK_ABI_DEPENDS.hs-lsp-types+=	hs-lsp-types>=2.3.0.1nb2
 BUILDLINK_PKGSRCDIR.hs-lsp-types?=	../../devel/hs-lsp-types
 
 # lib:lsp-types

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:05:30 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/03/05 03:39:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-vector-instances
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-vector-instances
 HS_VECTOR_INSTANCES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-vector-instances+=	hs-vector-instances>=3.4.2
-BUILDLINK_ABI_DEPENDS.hs-vector-instances+=	hs-vector-instances>=3.4.2nb3
+BUILDLINK_ABI_DEPENDS.hs-vector-instances+=	hs-vector-instances>=3.4.2nb4
 BUILDLINK_PKGSRCDIR.hs-vector-instances?=	../../devel/hs-vector-instances
 
 .include "../../math/hs-comonad/buildlink3.mk"

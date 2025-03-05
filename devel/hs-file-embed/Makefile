@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:05 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/05 03:39:11 pho Exp $
 
 DISTNAME=	file-embed-0.0.16.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

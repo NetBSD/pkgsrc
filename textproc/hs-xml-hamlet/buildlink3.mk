@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:06:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:40:06 pho Exp $
 
 BUILDLINK_TREE+=	hs-xml-hamlet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-xml-hamlet
 HS_XML_HAMLET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-xml-hamlet+=	hs-xml-hamlet>=0.5.0
-BUILDLINK_ABI_DEPENDS.hs-xml-hamlet+=	hs-xml-hamlet>=0.5.0.2nb3
+BUILDLINK_ABI_DEPENDS.hs-xml-hamlet+=	hs-xml-hamlet>=0.5.0.2nb4
 BUILDLINK_PKGSRCDIR.hs-xml-hamlet?=	../../textproc/hs-xml-hamlet
 
 .include "../../textproc/hs-shakespeare/buildlink3.mk"

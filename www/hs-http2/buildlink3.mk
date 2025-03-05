@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/02/02 13:06:04 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/03/05 03:40:10 pho Exp $
 
 BUILDLINK_TREE+=	hs-http2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http2
 HS_HTTP2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http2+=	hs-http2>=5.3.9
-BUILDLINK_ABI_DEPENDS.hs-http2+=	hs-http2>=5.3.9nb1
+BUILDLINK_ABI_DEPENDS.hs-http2+=	hs-http2>=5.3.9nb2
 BUILDLINK_PKGSRCDIR.hs-http2?=		../../www/hs-http2
 
 .include "../../devel/hs-async/buildlink3.mk"

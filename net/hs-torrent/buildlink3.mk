@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:42 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:48 pho Exp $
 
 BUILDLINK_TREE+=	hs-torrent
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-torrent
 HS_TORRENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-torrent+=	hs-torrent>=10000.1.3
-BUILDLINK_ABI_DEPENDS.hs-torrent+=	hs-torrent>=10000.1.3nb3
+BUILDLINK_ABI_DEPENDS.hs-torrent+=	hs-torrent>=10000.1.3nb4
 BUILDLINK_PKGSRCDIR.hs-torrent?=	../../net/hs-torrent
 
 .include "../../converters/hs-bencode/buildlink3.mk"

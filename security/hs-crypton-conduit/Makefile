@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:43 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:49 pho Exp $
 
 DISTNAME=	crypton-conduit-0.2.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

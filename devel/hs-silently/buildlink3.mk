@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/02/02 13:05:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/03/05 03:39:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-silently
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-silently
 HS_SILENTLY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-silently+=	hs-silently>=1.2.5
-BUILDLINK_ABI_DEPENDS.hs-silently+=	hs-silently>=1.2.5.4nb1
+BUILDLINK_ABI_DEPENDS.hs-silently+=	hs-silently>=1.2.5.4nb2
 BUILDLINK_PKGSRCDIR.hs-silently?=	../../devel/hs-silently
 .endif	# HS_SILENTLY_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2025/02/02 13:05:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2025/03/05 03:39:37 pho Exp $
 
 BUILDLINK_TREE+=	retrie
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	retrie
 RETRIE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.retrie+=	retrie>=1.2.3
-BUILDLINK_ABI_DEPENDS.retrie+=	retrie>=1.2.3nb2
+BUILDLINK_ABI_DEPENDS.retrie+=	retrie>=1.2.3nb3
 BUILDLINK_PKGSRCDIR.retrie?=	../../devel/retrie
 
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"

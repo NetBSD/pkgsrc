@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/02/02 13:04:50 pho Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/05 03:38:55 pho Exp $
 
 DISTNAME=	tar-conduit-0.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/02/02 13:04:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/03/05 03:39:02 pho Exp $
 
 BUILDLINK_TREE+=	hs-async
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-async
 HS_ASYNC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-async+=	hs-async>=2.2.5
-BUILDLINK_ABI_DEPENDS.hs-async+=	hs-async>=2.2.5nb2
+BUILDLINK_ABI_DEPENDS.hs-async+=	hs-async>=2.2.5nb3
 BUILDLINK_PKGSRCDIR.hs-async?=		../../devel/hs-async
 
 .include "../../devel/hs-hashable/buildlink3.mk"

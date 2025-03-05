@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2025/02/02 13:06:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2025/03/05 03:40:07 pho Exp $
 
 BUILDLINK_TREE+=	hs-text-iso8601
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-text-iso8601
 HS_TEXT_ISO8601_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-text-iso8601+=	hs-text-iso8601>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-text-iso8601+=	hs-text-iso8601>=0.1.1nb1
+BUILDLINK_ABI_DEPENDS.hs-text-iso8601+=	hs-text-iso8601>=0.1.1nb2
 BUILDLINK_PKGSRCDIR.hs-text-iso8601?=	../../time/hs-text-iso8601
 
 .include "../../math/hs-integer-conversion/buildlink3.mk"

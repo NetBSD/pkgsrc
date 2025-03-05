@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2025/02/02 13:05:30 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2025/03/05 03:39:35 pho Exp $
 
 BUILDLINK_TREE+=	hs-vector-algorithms
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-vector-algorithms
 HS_VECTOR_ALGORITHMS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-vector-algorithms+=	hs-vector-algorithms>=0.9.0
-BUILDLINK_ABI_DEPENDS.hs-vector-algorithms+=	hs-vector-algorithms>=0.9.0.3nb1
+BUILDLINK_ABI_DEPENDS.hs-vector-algorithms+=	hs-vector-algorithms>=0.9.0.3nb2
 BUILDLINK_PKGSRCDIR.hs-vector-algorithms?=	../../devel/hs-vector-algorithms
 
 .include "../../devel/hs-bitvec/buildlink3.mk"

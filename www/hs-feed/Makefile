@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/02/02 13:06:03 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/05 03:40:09 pho Exp $
 
 DISTNAME=	feed-1.3.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

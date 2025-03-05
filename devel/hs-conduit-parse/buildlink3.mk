@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/02/02 13:05:01 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:39:07 pho Exp $
 
 BUILDLINK_TREE+=	hs-conduit-parse
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-conduit-parse
 HS_CONDUIT_PARSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-conduit-parse+=	hs-conduit-parse>=0.2.1
-BUILDLINK_ABI_DEPENDS.hs-conduit-parse+=	hs-conduit-parse>=0.2.1.1nb1
+BUILDLINK_ABI_DEPENDS.hs-conduit-parse+=	hs-conduit-parse>=0.2.1.1nb2
 BUILDLINK_PKGSRCDIR.hs-conduit-parse?=		../../devel/hs-conduit-parse
 
 .include "../../devel/hs-conduit/buildlink3.mk"

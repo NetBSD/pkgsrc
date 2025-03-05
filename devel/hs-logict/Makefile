@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2025/02/02 13:05:13 pho Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/05 03:39:18 pho Exp $
 
 DISTNAME=	logict-0.8.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/02 13:04:51 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/05 03:38:57 pho Exp $
 
 DISTNAME=	cborg-json-0.2.6.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

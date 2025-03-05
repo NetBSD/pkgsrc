@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/02/02 13:05:41 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:47 pho Exp $
 
 BUILDLINK_TREE+=	hs-recv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-recv
 HS_RECV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-recv+=	hs-recv>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-recv+=	hs-recv>=0.1.0nb3
+BUILDLINK_ABI_DEPENDS.hs-recv+=	hs-recv>=0.1.0nb4
 BUILDLINK_PKGSRCDIR.hs-recv?=	../../net/hs-recv
 
 .include "../../net/hs-network/buildlink3.mk"

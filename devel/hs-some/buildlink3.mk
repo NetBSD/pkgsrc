@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:05:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/03/05 03:39:28 pho Exp $
 
 BUILDLINK_TREE+=	hs-some
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-some
 HS_SOME_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-some+=	hs-some>=1.0.6
-BUILDLINK_ABI_DEPENDS.hs-some+=	hs-some>=1.0.6nb3
+BUILDLINK_ABI_DEPENDS.hs-some+=	hs-some>=1.0.6nb4
 BUILDLINK_PKGSRCDIR.hs-some?=	../../devel/hs-some
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

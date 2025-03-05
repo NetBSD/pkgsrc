@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/02/02 13:05:49 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/05 03:39:54 pho Exp $
 
 DISTNAME=	HsYAML-0.2.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

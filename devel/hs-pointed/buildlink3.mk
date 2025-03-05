@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:05:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/03/05 03:39:24 pho Exp $
 
 BUILDLINK_TREE+=	hs-pointed
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pointed
 HS_POINTED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pointed+=	hs-pointed>=5.0.5
-BUILDLINK_ABI_DEPENDS.hs-pointed+=	hs-pointed>=5.0.5nb1
+BUILDLINK_ABI_DEPENDS.hs-pointed+=	hs-pointed>=5.0.5nb2
 BUILDLINK_PKGSRCDIR.hs-pointed?=	../../devel/hs-pointed
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"

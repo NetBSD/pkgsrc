@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/02/02 13:05:11 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/03/05 03:39:16 pho Exp $
 
 BUILDLINK_TREE+=	hs-hw-prim
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-hw-prim
 HS_HW_PRIM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-hw-prim+=	hs-hw-prim>=0.6.3
-BUILDLINK_ABI_DEPENDS.hs-hw-prim+=	hs-hw-prim>=0.6.3.2nb5
+BUILDLINK_ABI_DEPENDS.hs-hw-prim+=	hs-hw-prim>=0.6.3.2nb6
 BUILDLINK_PKGSRCDIR.hs-hw-prim?=	../../devel/hs-hw-prim
 
 .include "../../devel/hs-mmap/buildlink3.mk"

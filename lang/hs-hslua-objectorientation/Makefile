@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2025/02/02 13:05:34 pho Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/05 03:39:39 pho Exp $
 
 DISTNAME=	hslua-objectorientation-2.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

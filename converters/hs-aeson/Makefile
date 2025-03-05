@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2025/02/02 13:04:50 pho Exp $
+# $NetBSD: Makefile,v 1.37 2025/03/05 03:38:56 pho Exp $
 
 DISTNAME=	aeson-2.2.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 
 MAINTAINER=	szptvlfn@NetBSD.org

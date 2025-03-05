@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:37 pho Exp $
 
 BUILDLINK_TREE+=	stan
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	stan
 STAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.stan+=	stan>=0.2.0
-BUILDLINK_ABI_DEPENDS.stan+=	stan>=0.2.0.0nb1
+BUILDLINK_ABI_DEPENDS.stan+=	stan>=0.2.0.0nb2
 BUILDLINK_PKGSRCDIR.stan?=	../../devel/stan
 
 # lib:stan

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:36 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:41 pho Exp $
 
 BUILDLINK_TREE+=	hs-dense-linear-algebra
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-dense-linear-algebra
 HS_DENSE_LINEAR_ALGEBRA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-dense-linear-algebra+=	hs-dense-linear-algebra>=0.1.0
-BUILDLINK_ABI_DEPENDS.hs-dense-linear-algebra+=	hs-dense-linear-algebra>=0.1.0.0nb3
+BUILDLINK_ABI_DEPENDS.hs-dense-linear-algebra+=	hs-dense-linear-algebra>=0.1.0.0nb4
 BUILDLINK_PKGSRCDIR.hs-dense-linear-algebra?=	../../math/hs-dense-linear-algebra
 
 .include "../../math/hs-math-functions/buildlink3.mk"

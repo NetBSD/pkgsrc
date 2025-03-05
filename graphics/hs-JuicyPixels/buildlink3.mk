@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/02/02 13:05:32 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/03/05 03:39:38 pho Exp $
 
 BUILDLINK_TREE+=	hs-JuicyPixels
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-JuicyPixels
 HS_JUICYPIXELS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-JuicyPixels+=	hs-JuicyPixels>=3.3.9
-BUILDLINK_ABI_DEPENDS.hs-JuicyPixels+=	hs-JuicyPixels>=3.3.9nb1
+BUILDLINK_ABI_DEPENDS.hs-JuicyPixels+=	hs-JuicyPixels>=3.3.9nb2
 BUILDLINK_PKGSRCDIR.hs-JuicyPixels?=	../../graphics/hs-JuicyPixels
 
 .include "../../archivers/hs-zlib/buildlink3.mk"

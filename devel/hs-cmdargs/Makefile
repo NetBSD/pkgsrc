@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2025/02/02 13:05:00 pho Exp $
+# $NetBSD: Makefile,v 1.18 2025/03/05 03:39:06 pho Exp $
 
 DISTNAME=	cmdargs-0.10.22
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

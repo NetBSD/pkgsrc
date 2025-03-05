@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/02/02 13:05:12 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:17 pho Exp $
 
 BUILDLINK_TREE+=	hs-keys
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-keys
 HS_KEYS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-keys+=	hs-keys>=3.12.3
-BUILDLINK_ABI_DEPENDS.hs-keys+=	hs-keys>=3.12.3nb6
+BUILDLINK_ABI_DEPENDS.hs-keys+=	hs-keys>=3.12.3nb7
 BUILDLINK_PKGSRCDIR.hs-keys?=	../../devel/hs-keys
 
 .include "../../math/hs-comonad/buildlink3.mk"

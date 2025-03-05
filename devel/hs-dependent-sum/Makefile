@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/02/02 13:05:04 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/05 03:39:09 pho Exp $
 
 DISTNAME=	dependent-sum-0.7.2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
