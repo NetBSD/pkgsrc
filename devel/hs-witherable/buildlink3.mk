@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2025/02/02 13:05:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2025/03/05 03:39:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-witherable
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-witherable
 HS_WITHERABLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-witherable+=	hs-witherable>=0.5
-BUILDLINK_ABI_DEPENDS.hs-witherable+=	hs-witherable>=0.5nb1
+BUILDLINK_ABI_DEPENDS.hs-witherable+=	hs-witherable>=0.5nb2
 BUILDLINK_PKGSRCDIR.hs-witherable?=	../../devel/hs-witherable
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

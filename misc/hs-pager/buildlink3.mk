@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:39 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:45 pho Exp $
 
 BUILDLINK_TREE+=	hs-pager
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pager
 HS_PAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pager+=	hs-pager>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-pager+=	hs-pager>=0.1.1.0nb3
+BUILDLINK_ABI_DEPENDS.hs-pager+=	hs-pager>=0.1.1.0nb4
 BUILDLINK_PKGSRCDIR.hs-pager?=		../../misc/hs-pager
 
 .include "../../devel/hs-conduit/buildlink3.mk"

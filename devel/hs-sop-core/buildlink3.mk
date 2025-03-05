@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2025/02/02 13:05:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2025/03/05 03:39:29 pho Exp $
 
 BUILDLINK_TREE+=	hs-sop-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-sop-core
 HS_SOP_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-sop-core+=	hs-sop-core>=0.5.0
-BUILDLINK_ABI_DEPENDS.hs-sop-core+=	hs-sop-core>=0.5.0.2nb5
+BUILDLINK_ABI_DEPENDS.hs-sop-core+=	hs-sop-core>=0.5.0.2nb6
 BUILDLINK_PKGSRCDIR.hs-sop-core?=	../../devel/hs-sop-core
 .endif	# HS_SOP_CORE_BUILDLINK3_MK
 

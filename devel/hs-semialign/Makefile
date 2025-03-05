@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:22 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/05 03:39:27 pho Exp $
 
 DISTNAME=	semialign-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

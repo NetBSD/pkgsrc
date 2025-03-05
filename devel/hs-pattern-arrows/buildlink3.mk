@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2025/02/02 13:05:18 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/03/05 03:39:23 pho Exp $
 
 BUILDLINK_TREE+=	hs-pattern-arrows
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-pattern-arrows
 HS_PATTERN_ARROWS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-pattern-arrows+=	hs-pattern-arrows>=0.0.2
-BUILDLINK_ABI_DEPENDS.hs-pattern-arrows+=	hs-pattern-arrows>=0.0.2nb6
+BUILDLINK_ABI_DEPENDS.hs-pattern-arrows+=	hs-pattern-arrows>=0.0.2nb7
 BUILDLINK_PKGSRCDIR.hs-pattern-arrows?=		../../devel/hs-pattern-arrows
 .endif	# HS_PATTERN_ARROWS_BUILDLINK3_MK
 

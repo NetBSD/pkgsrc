@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:33 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:38 pho Exp $
 
 DISTNAME=	hjsmin-0.2.1
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

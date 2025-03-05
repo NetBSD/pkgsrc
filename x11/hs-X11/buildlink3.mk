@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2025/02/02 13:06:08 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2025/03/05 03:40:14 pho Exp $
 
 BUILDLINK_TREE+=	hs-X11
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-X11
 HS_X11_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-X11+=	hs-X11>=1.10.3
-BUILDLINK_ABI_DEPENDS.hs-X11+=	hs-X11>=1.10.3nb5
+BUILDLINK_ABI_DEPENDS.hs-X11+=	hs-X11>=1.10.3nb6
 BUILDLINK_PKGSRCDIR.hs-X11?=	../../x11/hs-X11
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"

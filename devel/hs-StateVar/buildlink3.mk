@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2025/02/02 13:04:55 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2025/03/05 03:39:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-StateVar
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-StateVar
 HS_STATEVAR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-StateVar+=	hs-StateVar>=1.2.2
-BUILDLINK_ABI_DEPENDS.hs-StateVar+=	hs-StateVar>=1.2.2nb7
+BUILDLINK_ABI_DEPENDS.hs-StateVar+=	hs-StateVar>=1.2.2nb8
 BUILDLINK_PKGSRCDIR.hs-StateVar?=	../../devel/hs-StateVar
 .endif	# HS_STATEVAR_BUILDLINK3_MK
 

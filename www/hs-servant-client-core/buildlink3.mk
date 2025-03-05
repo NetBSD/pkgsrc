@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2025/02/02 13:06:06 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2025/03/05 03:40:11 pho Exp $
 
 BUILDLINK_TREE+=	hs-servant-client-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-servant-client-core
 HS_SERVANT_CLIENT_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-servant-client-core+=	hs-servant-client-core>=0.20.2
-BUILDLINK_ABI_DEPENDS.hs-servant-client-core+=	hs-servant-client-core>=0.20.2nb1
+BUILDLINK_ABI_DEPENDS.hs-servant-client-core+=	hs-servant-client-core>=0.20.2nb2
 BUILDLINK_PKGSRCDIR.hs-servant-client-core?=	../../www/hs-servant-client-core
 
 .include "../../devel/hs-constraints/buildlink3.mk"

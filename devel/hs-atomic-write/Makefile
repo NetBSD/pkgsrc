@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2025/02/02 13:04:57 pho Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/05 03:39:02 pho Exp $
 
 DISTNAME=	atomic-write-0.2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel # XXX: Should be moved to sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

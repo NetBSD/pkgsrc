@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2025/02/02 13:05:31 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2025/03/05 03:39:36 pho Exp $
 
 BUILDLINK_TREE+=	hs-void
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-void
 HS_VOID_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-void+=	hs-void>=0.7.3
-BUILDLINK_ABI_DEPENDS.hs-void+=	hs-void>=0.7.3nb9
+BUILDLINK_ABI_DEPENDS.hs-void+=	hs-void>=0.7.3nb10
 BUILDLINK_PKGSRCDIR.hs-void?=	../../devel/hs-void
 .endif	# HS_VOID_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2025/02/02 13:04:58 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/05 03:39:03 pho Exp $
 
 DISTNAME=	binary-orphans-1.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

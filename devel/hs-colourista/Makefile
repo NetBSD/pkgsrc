@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2025/02/02 13:05:01 pho Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/05 03:39:06 pho Exp $
 
 DISTNAME=	colourista-0.1.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
