@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1978 2025/03/05 10:19:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1979 2025/03/05 10:19:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2574,3 +2574,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/py-theano-pymc to 1.1.2nb1 [wiz 2025-03-05]
 	Updated net/Radicale2 to 2.1.12nb3 [wiz 2025-03-05]
 	Updated net/py-aiorpcX to 0.24.0nb1 [wiz 2025-03-05]
+	Updated net/py-softlayer to 6.2.6nb1 [wiz 2025-03-05]
