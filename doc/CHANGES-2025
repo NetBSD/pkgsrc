@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1986 2025/03/05 10:26:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1987 2025/03/05 10:27:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-keyrings.alt to 5.0.2nb1 [wiz 2025-03-05]
 	Updated security/py27-OpenSSL to 21.0.0nb4 [wiz 2025-03-05]
 	Updated sysutils/py-Glances to 4.3.0.8nb1 [wiz 2025-03-05]
+	Updated sysutils/py-Send2Trash to 1.8.3nb1 [wiz 2025-03-05]
