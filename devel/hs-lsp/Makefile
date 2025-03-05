@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2025/02/02 13:05:13 pho Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/05 03:39:19 pho Exp $
 
 DISTNAME=	lsp-2.7.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

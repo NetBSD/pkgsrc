@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 13:04:52 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 03:38:58 pho Exp $
 
 DISTNAME=	sandi-0.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

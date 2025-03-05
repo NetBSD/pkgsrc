@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/02/02 13:05:35 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/05 03:39:40 pho Exp $
 
 # NOTE: spago is getting rewritten in PureScript, and this Haskell
 # implementation is being phased out. We should remove this package and
@@ -6,7 +6,7 @@
 # and/or the old one bitrots further. It's already bitrotting.
 DISTNAME=	spago-0.21.0
 PKGNAME=	${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=purescript/}
 GITHUB_PROJECT=	spago-legacy

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/02/02 13:05:59 pho Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/05 03:40:05 pho Exp $
 
 DISTNAME=	typst-symbols-0.1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

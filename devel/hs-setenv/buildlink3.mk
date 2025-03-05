@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2025/02/02 13:05:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2025/03/05 03:39:27 pho Exp $
 
 BUILDLINK_TREE+=	hs-setenv
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-setenv
 HS_SETENV_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-setenv+=	hs-setenv>=0.1.1
-BUILDLINK_ABI_DEPENDS.hs-setenv+=	hs-setenv>=0.1.1.3nb3
+BUILDLINK_ABI_DEPENDS.hs-setenv+=	hs-setenv>=0.1.1.3nb4
 BUILDLINK_PKGSRCDIR.hs-setenv?=		../../devel/hs-setenv
 .endif	# HS_SETENV_BUILDLINK3_MK
 

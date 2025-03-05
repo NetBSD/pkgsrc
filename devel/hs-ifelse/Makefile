@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:11 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:17 pho Exp $
 
 DISTNAME=	IfElse-0.85
 PKGNAME=	hs-${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

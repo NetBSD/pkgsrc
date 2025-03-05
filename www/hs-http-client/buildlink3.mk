@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/02/02 13:06:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/03/05 03:40:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-client
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-client
 HS_HTTP_CLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-client+=	hs-http-client>=0.7.18
-BUILDLINK_ABI_DEPENDS.hs-http-client+=	hs-http-client>=0.7.18nb1
+BUILDLINK_ABI_DEPENDS.hs-http-client+=	hs-http-client>=0.7.18nb2
 BUILDLINK_PKGSRCDIR.hs-http-client?=	../../www/hs-http-client
 
 .include "../../devel/hs-async/buildlink3.mk"

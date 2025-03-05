@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2025/02/02 13:05:51 pho Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/05 03:39:57 pho Exp $
 
 DISTNAME=	cmark-gfm-0.2.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
