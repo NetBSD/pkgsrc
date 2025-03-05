@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2024/04/23 21:33:37 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2025/03/05 12:23:16 schmonz Exp $
 
-BLAKE2s (macports-legacy-support-1.2.3.tar.gz) = 5ffbcc22e4fd3c060da89cf9abffca7756bfd729d765f76a8347007f10365860
-SHA512 (macports-legacy-support-1.2.3.tar.gz) = 83af34a71660410238b18a30dc831f3e6e0fbaa19308b74ed26ac946807791dee9145bb68f77e4d550660d6eba60525d10449b2443979f208817e2d1b9763bf4
-Size (macports-legacy-support-1.2.3.tar.gz) = 75978 bytes
-SHA1 (patch-Makefile) = 802c1989d6ea0bca7416d1dcfd4f5c140778b42c
+BLAKE2s (macports-legacy-support-1.4.0.tar.gz) = 40fa664a34a66ff13cbed93fc1a5645ec741c7c5976ee71ea7da1cc93493f44e
+SHA512 (macports-legacy-support-1.4.0.tar.gz) = 42b43b82406be482af620b5d07e417fff82d19542f814c63e107ecd389078280fe8f38ba086bc61b81bed6e0e92d064a82879c8cd750c803a3c2aebafa89fb85
+Size (macports-legacy-support-1.4.0.tar.gz) = 163809 bytes
