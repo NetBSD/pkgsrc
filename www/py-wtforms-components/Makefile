@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/02/07 09:44:56 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/05 10:59:57 wiz Exp $
 
 DISTNAME=	wtforms_components-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=W/WTForms-Components/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://github.com/kvesteri/wtforms-components
 COMMENT=	Additional fields, validators and widgets for WTForms
 LICENSE=	modified-bsd
 
-WHEEL_NAME=	WTForms_Components-${PKGVERSION_NOREV}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-intervals>=0.6.0:../../math/py-intervals
 DEPENDS+=	${PYPKGPREFIX}-markupsafe>=1.0.0:../../textproc/py-markupsafe
 DEPENDS+=	${PYPKGPREFIX}-validators>=0.21:../../textproc/py-validators
