@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.328 2025/02/18 13:45:57 wiz Exp $
+# $NetBSD: bootstrap,v 1.329 2025/03/05 11:44:42 nia Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -834,6 +834,7 @@ SCO_SV)
 	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
+		shprog=$bootstrap_sh
 	else
 		need_mksh=yes
 	fi
@@ -881,17 +882,20 @@ UnixWare)
 	root_group=sys
 	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
 	need_mkdir=yes
-	need_awk=yes
-	need_sed=yes
+	if [ -x "/usr/bin/nawk" ]; then
+		bootstrap_awk="/usr/bin/nawk"
+	else
+		need_awk=yes
+	fi
 	if [ -x "/usr/bin/bash" ]; then
 		bootstrap_sh=${SH:-/usr/bin/bash}
 		bootstrap_sh_set=set
+		shprog=$bootstrap_sh
 	else
 		need_mksh=yes
 	fi
 	whoamiprog=/usr/ucb/whoami
 	machine_arch=`uname -m`
-	CC="gcc -DUNIXWARE"; export CC
 	;;
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
