@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2025/02/18 21:15:26 morr Exp $
+@comment $NetBSD: PLIST,v 1.77 2025/03/05 16:55:15 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -213,6 +213,7 @@ share/vim/${VIM_SUBDIR}/compiler/spotbugs.vim
 share/vim/${VIM_SUBDIR}/compiler/stack.vim
 share/vim/${VIM_SUBDIR}/compiler/standard.vim
 share/vim/${VIM_SUBDIR}/compiler/stylelint.vim
+share/vim/${VIM_SUBDIR}/compiler/svelte-check.vim
 share/vim/${VIM_SUBDIR}/compiler/tcl.vim
 share/vim/${VIM_SUBDIR}/compiler/tex.vim
 share/vim/${VIM_SUBDIR}/compiler/tidy.vim
@@ -468,6 +469,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/dictconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dictdconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/diff.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dircolors.vim
+share/vim/${VIM_SUBDIR}/ftplugin/dnsmasq.vim
 share/vim/${VIM_SUBDIR}/ftplugin/docbk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dockerfile.vim
 share/vim/${VIM_SUBDIR}/ftplugin/dosbatch.vim
@@ -591,6 +593,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/lprolog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lua.vim
 share/vim/${VIM_SUBDIR}/ftplugin/luau.vim
 share/vim/${VIM_SUBDIR}/ftplugin/lynx.vim
+share/vim/${VIM_SUBDIR}/ftplugin/m17ndb.vim
 share/vim/${VIM_SUBDIR}/ftplugin/m3build.vim
 share/vim/${VIM_SUBDIR}/ftplugin/m3quake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/m4.vim
@@ -884,6 +887,7 @@ share/vim/${VIM_SUBDIR}/indent/livebook.vim
 share/vim/${VIM_SUBDIR}/indent/logtalk.vim
 share/vim/${VIM_SUBDIR}/indent/lua.vim
 share/vim/${VIM_SUBDIR}/indent/luau.vim
+share/vim/${VIM_SUBDIR}/indent/m17ndb.vim
 share/vim/${VIM_SUBDIR}/indent/mail.vim
 share/vim/${VIM_SUBDIR}/indent/make.vim
 share/vim/${VIM_SUBDIR}/indent/matlab.vim
@@ -1035,7 +1039,9 @@ share/vim/${VIM_SUBDIR}/pack/dist/opt/matchit/plugin/matchit.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/LICENSE.txt
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/README.md
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw.vim
-share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw/own.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw/fs.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw/msg.vim
+share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw/os.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrwSettings.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/autoload/netrw_gitignore.vim
 share/vim/${VIM_SUBDIR}/pack/dist/opt/netrw/doc/netrw.txt
@@ -1464,6 +1470,7 @@ share/vim/${VIM_SUBDIR}/syntax/lua.vim
 share/vim/${VIM_SUBDIR}/syntax/luau.vim
 share/vim/${VIM_SUBDIR}/syntax/lynx.vim
 share/vim/${VIM_SUBDIR}/syntax/lyrics.vim
+share/vim/${VIM_SUBDIR}/syntax/m17ndb.vim
 share/vim/${VIM_SUBDIR}/syntax/m3build.vim
 share/vim/${VIM_SUBDIR}/syntax/m3quake.vim
 share/vim/${VIM_SUBDIR}/syntax/m4.vim
