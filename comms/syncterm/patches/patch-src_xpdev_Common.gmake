@@ -1,0 +1,15 @@
+$NetBSD: patch-src_xpdev_Common.gmake,v 1.1 2025/03/05 18:21:22 vins Exp $
+
+Allow discovery of PortAudio within pkgsrc prefix. 
+
+--- src/xpdev/Common.gmake.orig	2025-03-05 15:59:46.610682896 +0000
++++ src/xpdev/Common.gmake
+@@ -204,7 +204,7 @@ else
+ endif
+ 
+ ifndef WITHOUT_PORTAUDIO
+- PORTAUDIO_PATH ?=      $(shell if [ -f /usr/local/include/portaudio.h ]; then echo /usr/local ; elif [ -f /usr/include/portaudio.h ] ; then echo /usr ; else echo NOTFOUND ; fi)
++ PORTAUDIO_PATH ?=      $(shell  if [ -f $(PREFIX)/include/portaudio.h ] then echo $(PREFIX); elif [ -f /usr/local/include/portaudio.h ]; then echo /usr/local ; elif [ -f /usr/include/portaudio.h ] ; then echo /usr ; else echo NOTFOUND ; fi)
+  ifneq ($(PORTAUDIO_PATH),NOTFOUND)
+   XPDEV_CFLAGS += -DWITH_PORTAUDIO
+   ifeq ($(os),linux)
