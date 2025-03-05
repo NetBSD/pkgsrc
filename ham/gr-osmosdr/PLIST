@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2021/04/07 16:14:09 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/03/05 18:29:29 gdt Exp $
 bin/osmocom_fft
 bin/osmocom_siggen_nogui
 include/osmosdr/api.h
@@ -15,11 +15,7 @@ lib/libgnuradio-osmosdr.so
 lib/libgnuradio-osmosdr.so.0.2.0
 lib/libgnuradio-osmosdr.so.0.2.0.0
 ${PYSITELIB}/osmosdr/__init__.py
-${PYSITELIB}/osmosdr/__init__.pyc
-${PYSITELIB}/osmosdr/__init__.pyo
 ${PYSITELIB}/osmosdr/osmocom_siggen_base.py
-${PYSITELIB}/osmosdr/osmocom_siggen_base.pyc
-${PYSITELIB}/osmosdr/osmocom_siggen_base.pyo
 ${PYSITELIB}/osmosdr/osmosdr_python.so
 share/gnuradio/grc/blocks/osmosdr_sink.block.yml
 share/gnuradio/grc/blocks/osmosdr_source.block.yml
