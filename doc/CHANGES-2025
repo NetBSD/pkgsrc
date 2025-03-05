@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1971 2025/03/05 10:11:13 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1972 2025/03/05 10:12:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2567,3 +2567,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-exifread to 3.0.0nb1 [wiz 2025-03-05]
 	Updated graphics/py-wand to 0.6.13nb1 [wiz 2025-03-05]
 	Updated mail/py-imapclient to 3.0.1nb1 [wiz 2025-03-05]
+	Updated math/py-astroML to 1.0.2.post1nb1 [wiz 2025-03-05]
