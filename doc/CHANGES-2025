@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1953 2025/03/05 09:47:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1954 2025/03/05 09:48:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.logging to 3.3.0nb1 [wiz 2025-03-05]
 	Updated devel/py-jaraco.packaging to 10.1.0nb1 [wiz 2025-03-05]
 	Updated devel/py-jaraco.path to 3.7.2nb1 [wiz 2025-03-05]
+	Updated devel/py-jaraco.stream to 3.0.4nb1 [wiz 2025-03-05]
