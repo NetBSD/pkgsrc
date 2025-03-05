@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/01/12 14:40:20 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/05 10:33:24 wiz Exp $
 
 DISTNAME=	types_pyyaml-6.0.12.20241230
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/:S/py//}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/types-PyYAML/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://github.com/python/typeshed
 COMMENT=	Typing stubs for PyYAML
 LICENSE=	apache-2.0
 
-WHEEL_NAME=	${DISTNAME:S/pyyaml/PyYAML/}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
