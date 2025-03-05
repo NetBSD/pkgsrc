@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.91 2024/03/19 00:59:00 nia Exp $
+dnl $NetBSD: configure.ac,v 1.92 2025/03/05 11:54:23 nia Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -190,7 +190,7 @@ AC_ARG_ENABLE([bsd-getopt],
 	[AS_HELP_STRING([--enable-bsd-getopt],
 			[force use of BSDish getopt implementation])])
 
-AC_CHECK_DECLS([optarg, optind, optreset], [:], [:], [
+AC_CHECK_DECLS([opterr, optarg, optind, optopt, optreset], [:], [:], [
 	#include <stdio.h>
 	#include <stdlib.h>
 	#include <unistd.h>
