@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1930 2025/03/05 04:27:56 pin Exp $
+$NetBSD: CHANGES-2025,v 1.1931 2025/03/05 05:16:00 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2523,3 +2523,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated geography/geos to 3.13.1 [gdt 2025-03-04]
 	Updated devel/asdf to 0.16.5 [schmonz 2025-03-05]
 	Updated editors/featherpad to 1.6.1 [pin 2025-03-05]
+	Updated pkgtools/pkgchkxx to 0.3.2 [pho 2025-03-05]
