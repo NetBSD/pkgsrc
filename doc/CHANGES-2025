@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2028 2025/03/05 15:03:14 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2029 2025/03/05 15:09:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2626,3 +2626,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-bcrypt to 4.3.0 [adam 2025-03-05]
 	Updated net/py-aio-pika to 9.5.5 [adam 2025-03-05]
 	Updated devel/py-mock to 5.2.0 [adam 2025-03-05]
+	Updated devel/py-debugpy to 1.8.13 [adam 2025-03-05]
+	Updated parallel/py-ipyparallel to 9.0.1 [adam 2025-03-05]
