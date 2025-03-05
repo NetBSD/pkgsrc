@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1981 2025/03/05 10:21:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1982 2025/03/05 10:22:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2577,3 +2577,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-softlayer to 6.2.6nb1 [wiz 2025-03-05]
 	Updated net/py-uModbus to 1.0.4nb1 [wiz 2025-03-05]
 	Updated print/py-octoprint-filecheck to 2024.11.12nb1 [wiz 2025-03-05]
+	Updated print/py-octoprint-firmwarecheck to 2021.10.11nb1 [wiz 2025-03-05]
