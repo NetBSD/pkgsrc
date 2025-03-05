@@ -1,0 +1,15 @@
+$NetBSD: patch-.._package.xml,v 1.1 2025/03/05 15:24:18 taca Exp $
+
+Update file's md5 after patch.
+
+--- ../package.xml.orig	2023-12-19 10:55:02.000000000 +0000
++++ ../package.xml
+@@ -92,7 +92,7 @@
+    <file md5sum="4b8429b52aa3b9ed54b6f3c3a01f95b3" name="tests/vectors.txt" role="test" />
+    <file md5sum="b7cfabd517a52fe262d494c70ac40366" name="config.m4" role="src" />
+    <file md5sum="79427c4645a176502ec00e420f463a77" name="config.w32" role="src" />
+-   <file md5sum="5cf24d083c22116f03ac838c659a06a6" name="mcrypt.c" role="src" />
++   <file md5sum="907e071db60c8b03526c1363e98bd16b" name="mcrypt.c" role="src" />
+    <file md5sum="f89c8dd8ceb67cc8e97f058a0ec6110b" name="mcrypt_filter.c" role="src" />
+    <file md5sum="7657d3d1ad7d4030833ba1cce8ac8499" name="php_mcrypt.h" role="src" />
+    <file md5sum="b7db75bfa122dccd192534b3bd2d0d79" name="php_mcrypt_filter.h" role="src" />

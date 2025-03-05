@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.9 2024/01/07 15:41:17 taca Exp $
+$NetBSD: distinfo,v 1.10 2025/03/05 15:24:18 taca Exp $
 
 BLAKE2s (php-mcrypt/mcrypt-1.0.7.tgz) = 0ac7e8d3a550563755da9dd966acac039f178e34ed119026c57089683c18cbbf
 SHA512 (php-mcrypt/mcrypt-1.0.7.tgz) = 1b579af868a2db073520437ad6a93513c2591bc865d982dc7926591e712614995148d13bacc1b4b207ddecda4bad219b67010a39ea17e1ec6e180d4fd69182ff
 Size (php-mcrypt/mcrypt-1.0.7.tgz) = 27060 bytes
+SHA1 (patch-.._package.xml) = d139719b045f73996373fe5fae7d0ded9a486821
+SHA1 (patch-mcrypt.c) = 5fbfdefe0ae0fc08ba0956cf9d1c8cd85c83ba8a
