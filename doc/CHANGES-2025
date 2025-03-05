@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1994 2025/03/05 10:34:12 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1995 2025/03/05 10:35:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-markups to 4.1.0nb2 [wiz 2025-03-05]
 	Updated textproc/py-types-yaml to 6.0.12.20241230nb1 [wiz 2025-03-05]
 	Updated textproc/py-xlsxwriter to 3.2.2nb1 [wiz 2025-03-05]
+	Updated time/py-goocalendar to 0.8.0nb3 [wiz 2025-03-05]
