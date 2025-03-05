@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1984 2025/03/05 10:24:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1985 2025/03/05 10:25:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/py-octoprint-firmwarecheck to 2021.10.11nb1 [wiz 2025-03-05]
 	Updated print/py-octoprint-pisupport to 2023.10.10nb1 [wiz 2025-03-05]
 	Updated security/py-keyrings.alt to 5.0.2nb1 [wiz 2025-03-05]
+	Updated security/py27-OpenSSL to 21.0.0nb4 [wiz 2025-03-05]
