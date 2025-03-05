@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2025/01/07 12:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2025/03/05 10:26:24 wiz Exp $
 
 DISTNAME=	glances-4.3.0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/g/G/}
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/glances/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://nicolargo.github.io/glances/
 COMMENT=	Cross-platform curses-based monitoring tool
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-psutil>=5.6.7:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-defusedxml-[0-9]*:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
@@ -27,8 +28,6 @@ ALLOW_NETWORK_ACCESS=	yes
 # 35 failed, 35 passed, 2 skipped, 5 errors
 
 USE_LANGUAGES=	# none
-
-WHEEL_NAME=	Glances-${PKGVERSION_NOREV}
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
