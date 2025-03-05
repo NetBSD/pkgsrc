@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1948 2025/03/05 09:43:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1949 2025/03/05 09:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2544,3 +2544,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-dogpile-cache to 1.3.4nb1 [wiz 2025-03-05]
 	Updated devel/py-editorconfig-core to 0.17.0nb1 [wiz 2025-03-05]
 	Updated devel/py-faker to 36.1.1nb1 [wiz 2025-03-05]
+	Updated devel/py-flufl.testing to 0.8nb1 [wiz 2025-03-05]
