@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2030 2025/03/05 15:17:26 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2031 2025/03/05 16:55:59 morr Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-debugpy to 1.8.13 [adam 2025-03-05]
 	Updated parallel/py-ipyparallel to 9.0.1 [adam 2025-03-05]
 	Updated security/php-oauth to 2.0.9 [taca 2025-03-05]
+	Updated editors/vim-share to 9.1.1170 [morr 2025-03-05]
