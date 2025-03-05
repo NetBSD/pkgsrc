@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2025/03/05 06:24:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2025/03/05 09:44:47 tnn Exp $
 # used by devel/hdf5/Makefile
 # used by devel/hdf5-c++/Makefile
 
@@ -17,8 +17,11 @@ TEST_TARGET=	test
 DISTINFO_FILE=	${.CURDIR}/../../devel/hdf5/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/hdf5/patches
 
-# These 2 files are not used in the build. They use [[ ... ]].
-CHECK_PORTABILITY_SKIP=	bin/snapshot hl/tools/h5watch/testh5watch.sh.in
+# These files are not used in the build. They use [[ ... ]].
+CHECK_PORTABILITY_SKIP+=	HDF5Examples/*/*/*
+CHECK_PORTABILITY_SKIP+=	bin/snapshot
+CHECK_PORTABILITY_SKIP+=	hl/tools/h5watch/testh5watch.sh.in
+CHECK_PORTABILITY_SKIP+=	java/test/junit.sh.in
 
 # it appears that this file is informative only and is not actually
 # used by any installed tools
