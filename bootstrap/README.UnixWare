@@ -1,5 +1,36 @@
-$NetBSD: README.UnixWare,v 1.2 2022/06/10 13:27:24 gdt Exp $
+$NetBSD: README.UnixWare,v 1.3 2025/03/05 11:44:42 nia Exp $
 
 See https://en.wikipedia.org/wiki/UnixWare
 
 As of 2022-04, "SCO UnixWare 7 Definitive 2018" works.
+
+UnixWare has a limit of 1000 files per directory.  When transferring
+the tree to UnixWare, you should delete unwanted packages to reduce
+the size of categories such as "devel".
+
+The default install of UnixWare 7 lacks a modern toolchain
+and fetch tool.  It helps to get some packages from Xinuos to
+help you bootstrap.
+
+https://download.xinuos.com/unixware7D/D2M1/patches/ptf9150d.image
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosgmp-6.1.2-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosisl-0.18-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosmpfr-4.0.2-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosmpc-1.1.0-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosgcc-rtlibs-7.3.0d-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosgcc-7.3.0d-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1MP/packages/Xinuosgettext-0.22.5-UnixWare-i386.pkg.xz
+https://download.xinuos.com/unixware7D/D2M1/packages/Xinuosbinutils-2.30a-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1MP/packages/Xinuosflex-2.6.4-UnixWare-i386.pkg.xz
+https://download.xinuos.com/unixware7D/D2M1MP/packages/Xinuospcre-8.45-UnixWare-i386.pkg.xz
+https://download.xinuos.com/unixware7D/D2M1MP/packages/Xinuoswget-1.20-UnixWare-i386.pkg.gz
+https://download.xinuos.com/unixware7D/D2M1MP/packages/Xinuosdiffutils-3.7-UnixWare-i386.pkg.gz
+
+Extract them with gunzip/unxz, then install them in order:
+
+# /usr/sbin/pkgadd -d /full/path/name.pkg all
+
+Note that the pkgadd tool does _not_ support relative
+paths!
+
+Add /usr/sysv5/bin to your $PATH before bootstrap.
