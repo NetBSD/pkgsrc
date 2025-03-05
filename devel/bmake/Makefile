@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2025/01/13 11:24:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.84 2025/03/05 11:44:42 nia Exp $
 
 PKGNAME=	bmake-20240909
 CATEGORIES=	devel
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/mksh
 .elif ${TOOLS_PLATFORM.sh:M?*/bin/pdksh}
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
-.elif ${OPSYS} == "SunOS" && exists(/usr/bin/bash)
+.elif (${OPSYS} == "SunOS" || ${OPSYS} == "UnixWare") && exists(/usr/bin/bash)
 CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
 .endif
 
