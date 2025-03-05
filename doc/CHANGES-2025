@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1950 2025/03/05 09:44:56 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1951 2025/03/05 09:45:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2546,3 +2546,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-faker to 36.1.1nb1 [wiz 2025-03-05]
 	Updated devel/py-flufl.testing to 0.8nb1 [wiz 2025-03-05]
 	Updated devel/py-jaraco.env to 1.0.0nb1 [wiz 2025-03-05]
+	Updated devel/py-jaraco.logging to 3.3.0nb1 [wiz 2025-03-05]
