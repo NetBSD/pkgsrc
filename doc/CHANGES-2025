@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1932 2025/03/05 06:28:51 adam Exp $
+$NetBSD: CHANGES-2025,v 1.1933 2025/03/05 06:28:56 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2528,3 +2528,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/hdf5 to 1.14.6 [adam 2025-03-05]
 	Updated devel/hdf5-c++ to 1.14.6 [adam 2025-03-05]
 	Updated graphics/hugin to 2024.0.1 [adam 2025-03-05]
+	Updated pkgtools/pkglint to 23.15.2 [rillig 2025-03-05]
