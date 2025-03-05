@@ -1,16 +1,17 @@
-$NetBSD: patch-src_syncterm_GNUmakefile,v 1.1 2022/01/16 13:11:07 nia Exp $
+$NetBSD: patch-src_syncterm_GNUmakefile,v 1.2 2025/03/05 18:21:22 vins Exp $
 
 Use SYSTEM_LIST_DIR to refer to the configuration directory
 in man pages rather than the DESTDIR.
 
---- src/syncterm/GNUmakefile.orig	2020-06-26 23:40:21.000000000 +0000
+--- src/syncterm/GNUmakefile.orig	2025-03-02 21:16:40.838077160 +0000
 +++ src/syncterm/GNUmakefile
-@@ -118,7 +118,7 @@ ifeq ($(os),darwin)
- endif
+@@ -189,8 +189,7 @@ endif
  
  syncterm.man: syncterm.man.in
--	sed -E -e 's|%%DESTDIR%%|${DESTDIR}|g' -e 's|%%PREFIX%%|${PREFIX}|g' < syncterm.man.in > syncterm.man
-+	sed -E -e 's|%%SYSTEM_LIST_DIR%%|${SYSTEM_LIST_DIR}|g' < syncterm.man.in > syncterm.man
- 
+ 	@echo Creating $@
+-	${QUIET}sed -E -e 's|%%DESTDIR%%|${DESTDIR}|g' -e 's|%%PREFIX%%|${PREFIX}|g' < syncterm.man.in > syncterm.man
+-
++	${QUIET}sed -E -e 's|%%SYSTEM_LIST_DIR%%|${SYSTEM_LIST_DIR}|g' < syncterm.man.in > syncterm.man
  syncterm.1.gz: syncterm.man
- 	gzip < syncterm.man > syncterm.1.gz
+ 	@echo Creating $@
+ 	${QUIET}gzip -9n < syncterm.man > syncterm.1.gz

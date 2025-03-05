@@ -1,0 +1,25 @@
+$NetBSD: patch-src_build_Common.gmake,v 1.1 2025/03/05 18:21:22 vins Exp $
+
+Do not hard-code -O3 and -fpic.
+
+--- src/build/Common.gmake.orig	2025-03-05 16:41:31.557894840 +0000
++++ src/build/Common.gmake
+@@ -278,9 +278,6 @@ endif
+ ifeq ($(machine_uname),x86_64)
+  machine_uname	:= x64
+ endif
+-ifndef win
+- CFLAGS +=	-fpic
+-endif
+ ifeq ($(machine_uname),sparc64)
+  CFLAGS +=      -D__BIG_ENDIAN__
+ endif
+@@ -524,7 +521,7 @@ ifdef DEBUG
+ else # RELEASE
+  # -finline-functions (used to) break the baja build badly.
+  # This also meant that -O3 wouldn't work either.
+- CFLAGS	:= -O3 -Wno-unused-result -ffast-math -funroll-loops $(CFLAGS) -DNDEBUG
++ CFLAGS	:= -Wno-unused-result -ffast-math -funroll-loops $(CFLAGS) -DNDEBUG
+  ifndef NO_LTO
+   # Not Yet... this requires more care with library ordering.
+   # CFLAGS += -flto
