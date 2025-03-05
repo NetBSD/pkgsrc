@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2025/03/02 12:45:45 nia Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/05 07:48:35 wiz Exp $
 
 DISTNAME=	qemu-7.2.16
 CATEGORIES=	emulators
@@ -11,6 +11,7 @@ COMMENT=	Machine emulator and virtualizer
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -20,8 +21,6 @@ HAS_CONFIGURE=		yes
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=0.4.3:../../textproc/py-sphinx-rtd-theme
