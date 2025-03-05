@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2025 2025/03/05 11:59:23 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2026 2025/03/05 12:23:23 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2621,3 +2621,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/sequoia-sq to 1.2.0 [wiz 2025-03-05]
 	Updated pkgtools/libnbcompat to 20250303 [nia 2025-03-05]
 	Updated audio/faac to 1.31.1 [nia 2025-03-05]
+	Updated devel/macports-legacy-support to 1.4.0 [schmonz 2025-03-05]
