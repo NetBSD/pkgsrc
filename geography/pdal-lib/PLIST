@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2024/05/05 21:00:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/03/05 13:37:59 adam Exp $
 bin/pdal
 bin/pdal-config
 include/pdal/Artifact.hpp
@@ -73,6 +73,7 @@ include/pdal/filters/ELMFilter.hpp
 include/pdal/filters/EigenvaluesFilter.hpp
 include/pdal/filters/EstimateRankFilter.hpp
 include/pdal/filters/ExpressionFilter.hpp
+include/pdal/filters/ExpressionStatsFilter.hpp
 include/pdal/filters/FaceRasterFilter.hpp
 include/pdal/filters/FarthestPointSamplingFilter.hpp
 include/pdal/filters/FerryFilter.hpp
@@ -92,6 +93,7 @@ include/pdal/filters/IQRFilter.hpp
 include/pdal/filters/InfoFilter.hpp
 include/pdal/filters/IterativeClosestPoint.hpp
 include/pdal/filters/LOFFilter.hpp
+include/pdal/filters/LabelDuplicatesFilter.hpp
 include/pdal/filters/LiTreeFilter.hpp
 include/pdal/filters/LloydKMeansFilter.hpp
 include/pdal/filters/LocateFilter.hpp
@@ -330,12 +332,12 @@ lib/cmake/PDAL/PDALTargets-noconfig.cmake
 lib/cmake/PDAL/PDALTargets.cmake
 lib/cmake/PDAL/pluginmacros.cmake
 lib/libpdal_plugin_kernel_fauxplugin.so
-lib/libpdal_plugin_kernel_fauxplugin.so.17
-lib/libpdal_plugin_kernel_fauxplugin.so.17.0.0
+lib/libpdal_plugin_kernel_fauxplugin.so.18
+lib/libpdal_plugin_kernel_fauxplugin.so.18.1.0
 lib/libpdal_plugin_reader_hdf.so
-lib/libpdal_plugin_reader_hdf.so.17
-lib/libpdal_plugin_reader_hdf.so.17.0.0
+lib/libpdal_plugin_reader_hdf.so.18
+lib/libpdal_plugin_reader_hdf.so.18.1.0
 lib/libpdalcpp.so
-lib/libpdalcpp.so.17
-lib/libpdalcpp.so.17.0.0
+lib/libpdalcpp.so.18
+lib/libpdalcpp.so.18.1.0
 lib/pkgconfig/pdal.pc
