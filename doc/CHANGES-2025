@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1965 2025/03/05 10:00:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1966 2025/03/05 10:01:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2561,3 +2561,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.i18nmessageid to 7.0nb1 [wiz 2025-03-05]
 	Updated devel/py-zope.testing to 5.1nb1 [wiz 2025-03-05]
 	Updated devel/texttest to 4.4.3.1nb1 [wiz 2025-03-05]
+	Updated devel/py-path.py to 12.5.0nb2 [wiz 2025-03-05]
