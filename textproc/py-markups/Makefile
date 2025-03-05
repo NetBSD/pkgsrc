@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2025/01/28 02:24:35 gutteridge Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/05 10:32:46 wiz Exp $
 
 DISTNAME=	markups-4.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=M/Markups/}
@@ -11,9 +11,7 @@ HOMEPAGE=	https://github.com/retext-project/pymarkups
 COMMENT=	Python text markup language wrapper module
 LICENSE=	modified-bsd
 
-WHEEL_NAME=	${DISTNAME:S/m/M/}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-markdown-math-[0-9]*:../../textproc/py-markdown-math
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
