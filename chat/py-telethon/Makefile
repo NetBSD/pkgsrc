@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2024/11/11 07:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/05 09:32:24 wiz Exp $
 
 DISTNAME=	Telethon-1.36.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_PYPI:=T/Telethon/}
 
@@ -10,13 +11,13 @@ HOMEPAGE=	https://github.com/LonamiWebs/Telethon
 COMMENT=	Full-featured Telegram client library for Python 3
 LICENSE=	mit
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-aes-[0-9]*:../../security/py-aes
 DEPENDS+=	${PYPKGPREFIX}-rsa-[0-9]*:../../security/py-rsa
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
