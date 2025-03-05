@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2026 2025/03/05 12:23:23 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2027 2025/03/05 13:43:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2622,3 +2622,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/libnbcompat to 20250303 [nia 2025-03-05]
 	Updated audio/faac to 1.31.1 [nia 2025-03-05]
 	Updated devel/macports-legacy-support to 1.4.0 [schmonz 2025-03-05]
+	Updated geography/pdal-lib to 2.8.4 [adam 2025-03-05]
+	Updated security/py-bcrypt to 4.3.0 [adam 2025-03-05]
