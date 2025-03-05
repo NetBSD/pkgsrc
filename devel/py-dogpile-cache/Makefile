@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2025/03/04 09:10:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2025/03/05 09:41:01 wiz Exp $
 
 DISTNAME=	dogpile_cache-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dogpile.cache/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://bitbucket.org/zzzeek/dogpile.cache
 COMMENT=	Caching front-end based on the Dogpile lock
 LICENSE=	modified-bsd
 
-WHEEL_NAME=	${DISTNAME:S/_/./}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=61.2:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.0:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-stevedore>=3.0.0:../../devel/py-stevedore
 TEST_DEPENDS+=	${PYPKGPREFIX}-mako-[0-9]*:../../devel/py-mako
