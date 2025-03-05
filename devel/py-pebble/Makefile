@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/01/02 10:48:04 adam Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/05 09:52:58 wiz Exp $
 
 DISTNAME=	Pebble-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pebble/}
 
@@ -10,9 +11,11 @@ HOMEPAGE=	https://github.com/noxdafox/pebble
 COMMENT=	Threading and multiprocessing eye-candy
 LICENSE=	gnu-lgpl-v3
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
+
+WHEEL_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
