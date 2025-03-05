@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.326 2025/02/27 10:59:53 nia Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.327 2025/03/05 16:59:37 morr Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26136,3 +26136,4 @@ drupal>=11.1.0<11.1.3	php-object-injection	https://www.drupal.org/sa-core-2025-0
 exiv2>0.28<0.28.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26623
 modular-xorg-server<21.1.16	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26601
 modular-xorg-xwayland<24.1.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26601
+vim<9.1.1164			arbitrary-code-execution https://github.com/vim/vim/security/advisories/GHSA-wfmf-8626-q3r3
