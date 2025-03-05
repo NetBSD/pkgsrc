@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2025/02/02 13:05:45 pho Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/05 03:39:50 pho Exp $
 
 DISTNAME=	securemem-0.1.10
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

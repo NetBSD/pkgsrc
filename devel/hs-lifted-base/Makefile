@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2025/02/02 13:05:13 pho Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/05 03:39:18 pho Exp $
 
 DISTNAME=	lifted-base-0.2.3.12
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@NetBSD.org

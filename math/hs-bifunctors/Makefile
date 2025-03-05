@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2025/02/02 13:05:35 pho Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/05 03:39:41 pho Exp $
 
 DISTNAME=	bifunctors-5.6.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org

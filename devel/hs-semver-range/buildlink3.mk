@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2025/02/02 13:05:22 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2025/03/05 03:39:27 pho Exp $
 
 BUILDLINK_TREE+=	hs-semver-range
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-semver-range
 HS_SEMVER_RANGE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-semver-range+=	hs-semver-range>=0.2.8
-BUILDLINK_ABI_DEPENDS.hs-semver-range+=	hs-semver-range>=0.2.8nb8
+BUILDLINK_ABI_DEPENDS.hs-semver-range+=	hs-semver-range>=0.2.8nb9
 BUILDLINK_PKGSRCDIR.hs-semver-range?=	../../devel/hs-semver-range
 
 .include "../../devel/hs-classy-prelude/buildlink3.mk"

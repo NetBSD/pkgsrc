@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/02/02 13:04:56 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:01 pho Exp $
 
 BUILDLINK_TREE+=	hs-apply-refact
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-apply-refact
 HS_APPLY_REFACT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-apply-refact+=	hs-apply-refact>=0.14.0
-BUILDLINK_ABI_DEPENDS.hs-apply-refact+=	hs-apply-refact>=0.14.0.0nb2
+BUILDLINK_ABI_DEPENDS.hs-apply-refact+=	hs-apply-refact>=0.14.0.0nb3
 BUILDLINK_PKGSRCDIR.hs-apply-refact?=	../../devel/hs-apply-refact
 
 .include "../../misc/hs-extra/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2025/02/02 13:05:23 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2025/03/05 03:39:29 pho Exp $
 
 BUILDLINK_TREE+=	hs-split
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-split
 HS_SPLIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-split+=	hs-split>=0.2.5
-BUILDLINK_ABI_DEPENDS.hs-split+=	hs-split>=0.2.5nb2
+BUILDLINK_ABI_DEPENDS.hs-split+=	hs-split>=0.2.5nb3
 BUILDLINK_PKGSRCDIR.hs-split?=		../../devel/hs-split
 .endif	# HS_SPLIT_BUILDLINK3_MK
 

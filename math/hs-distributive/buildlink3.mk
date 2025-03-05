@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2025/02/02 13:05:36 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2025/03/05 03:39:42 pho Exp $
 
 BUILDLINK_TREE+=	hs-distributive
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-distributive
 HS_DISTRIBUTIVE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-distributive+=	hs-distributive>=0.6.2
-BUILDLINK_ABI_DEPENDS.hs-distributive+=	hs-distributive>=0.6.2.1nb9
+BUILDLINK_ABI_DEPENDS.hs-distributive+=	hs-distributive>=0.6.2.1nb10
 BUILDLINK_PKGSRCDIR.hs-distributive?=	../../math/hs-distributive
 
 .include "../../devel/hs-base-orphans/buildlink3.mk"

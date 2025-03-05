@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/02/02 13:05:38 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/05 03:39:43 pho Exp $
 
 DISTNAME=	mwc-random-0.15.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 
 MAINTAINER=	szptvlfn@NetBSD.org

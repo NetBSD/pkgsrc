@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2025/02/02 13:05:54 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2025/03/05 03:40:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-libyaml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-libyaml
 HS_LIBYAML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-libyaml+=	hs-libyaml>=0.1.4
-BUILDLINK_ABI_DEPENDS.hs-libyaml+=	hs-libyaml>=0.1.4nb2
+BUILDLINK_ABI_DEPENDS.hs-libyaml+=	hs-libyaml>=0.1.4nb3
 BUILDLINK_PKGSRCDIR.hs-libyaml?=	../../textproc/hs-libyaml
 
 .include "../../devel/hs-conduit/buildlink3.mk"

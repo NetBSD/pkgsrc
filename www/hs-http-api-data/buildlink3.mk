@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/02/02 13:06:03 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:40:09 pho Exp $
 
 BUILDLINK_TREE+=	hs-http-api-data
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-http-api-data
 HS_HTTP_API_DATA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-http-api-data+=	hs-http-api-data>=0.6.1
-BUILDLINK_ABI_DEPENDS.hs-http-api-data+=	hs-http-api-data>=0.6.1nb1
+BUILDLINK_ABI_DEPENDS.hs-http-api-data+=	hs-http-api-data>=0.6.1nb2
 BUILDLINK_PKGSRCDIR.hs-http-api-data?=		../../www/hs-http-api-data
 
 .include "../../www/hs-cookie/buildlink3.mk"

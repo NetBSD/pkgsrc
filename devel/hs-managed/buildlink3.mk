@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2025/02/02 13:05:14 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2025/03/05 03:39:19 pho Exp $
 
 BUILDLINK_TREE+=	hs-managed
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-managed
 HS_MANAGED_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-managed+=	hs-managed>=1.0.10
-BUILDLINK_ABI_DEPENDS.hs-managed+=	hs-managed>=1.0.10nb3
+BUILDLINK_ABI_DEPENDS.hs-managed+=	hs-managed>=1.0.10nb4
 BUILDLINK_PKGSRCDIR.hs-managed?=	../../devel/hs-managed
 .endif	# HS_MANAGED_BUILDLINK3_MK
 

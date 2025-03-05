@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2025/02/02 13:05:00 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2025/03/05 03:39:06 pho Exp $
 
 BUILDLINK_TREE+=	hs-cmdargs
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-cmdargs
 HS_CMDARGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-cmdargs+=	hs-cmdargs>=0.10.22
-BUILDLINK_ABI_DEPENDS.hs-cmdargs+=	hs-cmdargs>=0.10.22nb3
+BUILDLINK_ABI_DEPENDS.hs-cmdargs+=	hs-cmdargs>=0.10.22nb4
 BUILDLINK_PKGSRCDIR.hs-cmdargs?=	../../devel/hs-cmdargs
 .endif	# HS_CMDARGS_BUILDLINK3_MK
 
