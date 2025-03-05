@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.12 2025/02/18 13:06:29 wiz Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.13 2025/03/05 11:54:24 nia Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -35,7 +35,7 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
-__RCSID("$NetBSD: getopt_long.c,v 1.12 2025/02/18 13:06:29 wiz Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.13 2025/03/05 11:54:24 nia Exp $");
 
 #if 0
 #include "namespace.h"
@@ -63,10 +63,18 @@ __RCSID("$NetBSD: getopt_long.c,v 1.12 2025/02/18 13:06:29 wiz Exp $");
 #ifdef __weak_alias
 __weak_alias(getopt,_getopt)
 #endif
+#if !HAVE_DECL_OPTERR
 int	opterr = 1;		/* if error message should be printed */
+#endif
+#if !HAVE_DECL_OPTIND
 int	optind = 1;		/* index into parent argv vector */
+#endif
+#if !HAVE_DECL_OPTOPT
 int	optopt = '?';		/* character checked for validity */
+#endif
+#if !HAVE_DECL_OPTARG
 char    *optarg;		/* argument associated with option */
+#endif
 #endif
 
 #if 0
