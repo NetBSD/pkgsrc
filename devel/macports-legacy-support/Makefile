@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2024/04/23 21:33:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/05 12:23:16 schmonz Exp $
 
-DISTNAME=	macports-legacy-support-1.2.3
+DISTNAME=	macports-legacy-support-1.4.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=macports/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -25,19 +25,5 @@ ONLY_FOR_PLATFORM+=	Darwin-*-*
 GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && \
 	${FIND} lib include \( -type f -o -type l \) -print | ${SORT};
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS_VERSION} < 100500
-CWRAPPERS_APPEND.cc+=	-isystem ${WRKSRC}/tiger_only/include
-.endif
-
-pre-configure:
-	${RM} ${WRKSRC}/src/macports_legacy_atexit.c
-
-post-install:
-.if ${OPSYS_VERSION} < 100500
-	${CP} -Rp ${WRKSRC}/tiger_only/include/* ${DESTDIR}${PREFIX}/include/LegacySupport
-.endif
 
 .include "../../mk/bsd.pkg.mk"
