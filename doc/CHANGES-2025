@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1929 2025/03/05 00:43:43 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.1930 2025/03/05 04:27:56 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2522,3 +2522,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/snac to 2.73 [schmonz 2025-03-04]
 	Updated geography/geos to 3.13.1 [gdt 2025-03-04]
 	Updated devel/asdf to 0.16.5 [schmonz 2025-03-05]
+	Updated editors/featherpad to 1.6.1 [pin 2025-03-05]
