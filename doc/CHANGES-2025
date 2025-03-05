@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1931 2025/03/05 05:16:00 pho Exp $
+$NetBSD: CHANGES-2025,v 1.1932 2025/03/05 06:28:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2524,3 +2524,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/asdf to 0.16.5 [schmonz 2025-03-05]
 	Updated editors/featherpad to 1.6.1 [pin 2025-03-05]
 	Updated pkgtools/pkgchkxx to 0.3.2 [pho 2025-03-05]
+	Updated textproc/xerces-c to 3.3.0 [adam 2025-03-05]
+	Updated devel/hdf5 to 1.14.6 [adam 2025-03-05]
+	Updated devel/hdf5-c++ to 1.14.6 [adam 2025-03-05]
+	Updated graphics/hugin to 2024.0.1 [adam 2025-03-05]
