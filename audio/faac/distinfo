@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.13 2021/10/26 09:58:53 nia Exp $
+$NetBSD: distinfo,v 1.14 2025/03/05 11:59:14 nia Exp $
 
-BLAKE2s (faac-1.30.tar.gz) = 90694fefe3d44ab801e504335437fb01bbe3b1562a02872e7a39eafecce260cd
-SHA512 (faac-1.30.tar.gz) = 8582cd580dba2a347d15dc4fab42020d7120d0552c54ab74cfaf59ba1b270abb94c67e39d42459a14cbc6e98f3fd00cbda589e1b4f0c7278e41bdef6ae7b6554
-Size (faac-1.30.tar.gz) = 241750 bytes
-SHA1 (patch-configure.ac) = d29bb3379a47b62c739ef055db6acb175c4ed060
+BLAKE2s (faac-1.31.1.tar.gz) = 0d07e753460a9469f4394676b7ddac0c38cc2824257ec2b9ae235a6e4698c8ff
+SHA512 (faac-1.31.1.tar.gz) = 5b38c14d96edeec628551f6722a3e8503aa5d013c9582945c52e8d0e4208cb103edf9327b2215ea7fc2dbd82111a1d123dc213c56695fea7b9bcb4b1f40c8674
+Size (faac-1.31.1.tar.gz) = 244025 bytes
 SHA1 (patch-frontend_main.c) = 3b0327b636c60cf2a0466d3b38363e364bf504fe
