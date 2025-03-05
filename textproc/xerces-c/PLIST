@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2025/01/31 12:18:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2025/03/05 06:14:11 adam Exp $
 bin/CreateDOMDocument
 bin/DOMCount
 bin/DOMPrint
@@ -269,9 +269,8 @@ include/xercesc/util/MutexManagers/StdMutexMgr.hpp
 include/xercesc/util/Mutexes.hpp
 include/xercesc/util/NameIdPool.c
 include/xercesc/util/NameIdPool.hpp
-include/xercesc/util/NetAccessors/BinHTTPInputStreamCommon.hpp
-include/xercesc/util/NetAccessors/Socket/SocketNetAccessor.hpp
-include/xercesc/util/NetAccessors/Socket/UnixHTTPURLInputStream.hpp
+include/xercesc/util/NetAccessors/Curl/CurlNetAccessor.hpp
+include/xercesc/util/NetAccessors/Curl/CurlURLInputStream.hpp
 include/xercesc/util/NoSuchElementException.hpp
 include/xercesc/util/NullPointerException.hpp
 include/xercesc/util/NumberFormatException.hpp
@@ -490,7 +489,7 @@ lib/cmake/XercesC/XercesCConfig.cmake
 lib/cmake/XercesC/XercesCConfigInternal-noconfig.cmake
 lib/cmake/XercesC/XercesCConfigInternal.cmake
 lib/cmake/XercesC/XercesCConfigVersion.cmake
-lib/libxerces-c-3.2.so
+lib/libxerces-c-3.3.so
 lib/libxerces-c.so
 lib/pkgconfig/xerces-c.pc
 share/doc/xerces-c/html/ApacheDOMC++Binding.html
@@ -875,6 +874,7 @@ share/doc/xerces-c/html/apiDocs-3/Xerces__autoconf__config_8hpp.html
 share/doc/xerces-c/html/apiDocs-3/Xerces__autoconf__config_8hpp_source.html
 share/doc/xerces-c/html/apiDocs-3/annotated.html
 share/doc/xerces-c/html/apiDocs-3/bc_s.png
+share/doc/xerces-c/html/apiDocs-3/bc_sd.png
 share/doc/xerces-c/html/apiDocs-3/bdwn.png
 share/doc/xerces-c/html/apiDocs-3/classAbstractDOMParser-members.html
 share/doc/xerces-c/html/apiDocs-3/classAbstractDOMParser.html
@@ -1164,6 +1164,9 @@ share/doc/xerces-c/html/apiDocs-3/classWrapper4DOMLSInput.png
 share/doc/xerces-c/html/apiDocs-3/classWrapper4InputSource-members.html
 share/doc/xerces-c/html/apiDocs-3/classWrapper4InputSource.html
 share/doc/xerces-c/html/apiDocs-3/classWrapper4InputSource.png
+share/doc/xerces-c/html/apiDocs-3/classXERCES__CPP__NAMESPACE_1_1DOMAttr-members.html
+share/doc/xerces-c/html/apiDocs-3/classXERCES__CPP__NAMESPACE_1_1DOMAttr.html
+share/doc/xerces-c/html/apiDocs-3/classXERCES__CPP__NAMESPACE_1_1DOMAttr.png
 share/doc/xerces-c/html/apiDocs-3/classXMLAbstractDoubleFloat-members.html
 share/doc/xerces-c/html/apiDocs-3/classXMLAbstractDoubleFloat.html
 share/doc/xerces-c/html/apiDocs-3/classXMLAbstractDoubleFloat.png
@@ -1375,6 +1378,7 @@ share/doc/xerces-c/html/apiDocs-3/classXercesDOMParser-members.html
 share/doc/xerces-c/html/apiDocs-3/classXercesDOMParser.html
 share/doc/xerces-c/html/apiDocs-3/classXercesDOMParser.png
 share/doc/xerces-c/html/apiDocs-3/classes.html
+share/doc/xerces-c/html/apiDocs-3/clipboard.js
 share/doc/xerces-c/html/apiDocs-3/closed.png
 share/doc/xerces-c/html/apiDocs-3/deprecated.html
 share/doc/xerces-c/html/apiDocs-3/dir_009f01f96e29bfe35b1a69e0f3cf156d.html
@@ -1386,13 +1390,20 @@ share/doc/xerces-c/html/apiDocs-3/dir_a2cc1840867e4e424f0a8b3bfae7e6ed.html
 share/doc/xerces-c/html/apiDocs-3/dir_c1997eb1c4bc0042e79dfd08a7008743.html
 share/doc/xerces-c/html/apiDocs-3/dir_c4fbab58ef683febbe342b4985e148cc.html
 share/doc/xerces-c/html/apiDocs-3/doc.png
+share/doc/xerces-c/html/apiDocs-3/doc.svg
+share/doc/xerces-c/html/apiDocs-3/docd.svg
 share/doc/xerces-c/html/apiDocs-3/doxygen.css
 share/doc/xerces-c/html/apiDocs-3/doxygen.png
 share/doc/xerces-c/html/apiDocs-3/doxygen.svg
+share/doc/xerces-c/html/apiDocs-3/doxygen_crawl.html
 share/doc/xerces-c/html/apiDocs-3/dynsections.js
 share/doc/xerces-c/html/apiDocs-3/files.html
 share/doc/xerces-c/html/apiDocs-3/folderclosed.png
+share/doc/xerces-c/html/apiDocs-3/folderclosed.svg
+share/doc/xerces-c/html/apiDocs-3/folderclosedd.svg
 share/doc/xerces-c/html/apiDocs-3/folderopen.png
+share/doc/xerces-c/html/apiDocs-3/folderopen.svg
+share/doc/xerces-c/html/apiDocs-3/folderopend.svg
 share/doc/xerces-c/html/apiDocs-3/functions.html
 share/doc/xerces-c/html/apiDocs-3/functions_b.html
 share/doc/xerces-c/html/apiDocs-3/functions_c.html
@@ -1492,12 +1503,23 @@ share/doc/xerces-c/html/apiDocs-3/index.html
 share/doc/xerces-c/html/apiDocs-3/jquery.js
 share/doc/xerces-c/html/apiDocs-3/menu.js
 share/doc/xerces-c/html/apiDocs-3/menudata.js
+share/doc/xerces-c/html/apiDocs-3/minus.svg
+share/doc/xerces-c/html/apiDocs-3/minusd.svg
+share/doc/xerces-c/html/apiDocs-3/namespaceXERCES__CPP__NAMESPACE.html
+share/doc/xerces-c/html/apiDocs-3/namespaces.html
 share/doc/xerces-c/html/apiDocs-3/nav_f.png
+share/doc/xerces-c/html/apiDocs-3/nav_fd.png
 share/doc/xerces-c/html/apiDocs-3/nav_g.png
 share/doc/xerces-c/html/apiDocs-3/nav_h.png
+share/doc/xerces-c/html/apiDocs-3/nav_hd.png
+share/doc/xerces-c/html/apiDocs-3/navtree.css
 share/doc/xerces-c/html/apiDocs-3/open.png
 share/doc/xerces-c/html/apiDocs-3/pages.html
+share/doc/xerces-c/html/apiDocs-3/plus.svg
+share/doc/xerces-c/html/apiDocs-3/plusd.svg
+share/doc/xerces-c/html/apiDocs-3/resize.js
 share/doc/xerces-c/html/apiDocs-3/splitbar.png
+share/doc/xerces-c/html/apiDocs-3/splitbard.png
 share/doc/xerces-c/html/apiDocs-3/structHash2KeysSetBucketElem-members.html
 share/doc/xerces-c/html/apiDocs-3/structHash2KeysSetBucketElem.html
 share/doc/xerces-c/html/apiDocs-3/structXMLTransService_1_1TransRec-members.html
@@ -1507,9 +1529,13 @@ share/doc/xerces-c/html/apiDocs-3/structXSValue_1_1XSValue__Data.html
 share/doc/xerces-c/html/apiDocs-3/sync_off.png
 share/doc/xerces-c/html/apiDocs-3/sync_on.png
 share/doc/xerces-c/html/apiDocs-3/tab_a.png
+share/doc/xerces-c/html/apiDocs-3/tab_ad.png
 share/doc/xerces-c/html/apiDocs-3/tab_b.png
+share/doc/xerces-c/html/apiDocs-3/tab_bd.png
 share/doc/xerces-c/html/apiDocs-3/tab_h.png
+share/doc/xerces-c/html/apiDocs-3/tab_hd.png
 share/doc/xerces-c/html/apiDocs-3/tab_s.png
+share/doc/xerces-c/html/apiDocs-3/tab_sd.png
 share/doc/xerces-c/html/apiDocs-3/tabs.css
 share/doc/xerces-c/html/applications.html
 share/doc/xerces-c/html/bug-report.html
@@ -1679,6 +1705,7 @@ share/doc/xerces-c/html/secadv/CVE-2016-0729.txt
 share/doc/xerces-c/html/secadv/CVE-2016-4463.txt
 share/doc/xerces-c/html/secadv/CVE-2017-12627.txt
 share/doc/xerces-c/html/secadv/CVE-2018-1311.txt
+share/doc/xerces-c/html/secadv/CVE-2018-1311.txt.asc
 share/doc/xerces-c/html/senumval-3.html
 share/doc/xerces-c/html/source-repository.html
 share/doc/xerces-c/html/stdinparse-3.html
