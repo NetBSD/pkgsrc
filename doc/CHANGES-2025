@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2033 2025/03/05 18:21:58 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2034 2025/03/05 19:26:08 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/vim-share to 9.1.1170 [morr 2025-03-05]
 	Updated devel/swagger-codegen to 3.0.68 [schmonz 2025-03-05]
 	Updated comms/syncterm to 1.6 [vins 2025-03-05]
+	Updated math/suitesparse to 7.10.1 [ktnb 2025-03-05]
