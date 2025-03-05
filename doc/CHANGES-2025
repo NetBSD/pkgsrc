@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.1938 2025/03/05 09:32:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.1939 2025/03/05 09:33:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2534,3 +2534,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated biology/py-macs3 to 3.0.2nb1 [wiz 2025-03-05]
 	Updated chat/py-mastodon to 1.8.1nb1 [wiz 2025-03-05]
 	Updated chat/py-telethon to 1.36.0nb1 [wiz 2025-03-05]
+	Updated converters/py-cairosvg to 2.7.1nb1 [wiz 2025-03-05]
