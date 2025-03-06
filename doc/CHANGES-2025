@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2051 2025/03/06 19:15:36 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2052 2025/03/06 19:46:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2659,3 +2659,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django4 to 4.2.20 [adam 2025-03-06]
 	Added sysutils/xdg-ninja version 0.2.0.2 [wiz 2025-03-06]
 	Updated shells/oh-my-posh to 25.2.0 [pin 2025-03-06]
+	Updated net/mosquitto to 2.0.21 [gdt 2025-03-06]
