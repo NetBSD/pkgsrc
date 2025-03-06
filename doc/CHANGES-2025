@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2044 2025/03/06 08:31:05 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2045 2025/03/06 08:33:54 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2649,3 +2649,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-websockets to 15.0.1 [adam 2025-03-06]
 	Updated databases/diesel-cli to 2.2.8 [pin 2025-03-06]
 	Updated textproc/hgrep to 0.3.8 [pin 2025-03-06]
+	Updated editors/tp-note to 1.25.3 [pin 2025-03-06]
