@@ -1,0 +1,6 @@
+A shell script which checks your $HOME for unwanted files and
+directories.
+
+When it encounters a file it knows about, it will tell you whether
+it's possible to move this file to an appropriate location, and
+how to do it.
