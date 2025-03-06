@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2025/03/05 17:28:32 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/06 13:09:53 gdt Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
@@ -9,7 +9,15 @@ BUILD_DIRS+=	c++
 USE_LANGUAGES=		c c++
 
 CMAKE_CONFIGURE_ARGS+=	-DHDF5_BUILD_CPP_LIB=ON
-# BUILD_DIRS (at least for hdf5) is not compatible with ninja
+
+# BUILD_DIRS (at least for hdf5) is not compatible with ninja.  pkgsrc
+# does not support CMAKE_GENERATORS_ACCEPTED=make as a
+# package-settable variable to indicate that only make works, so we
+# have to abuse CMAKE_GENERATOR (a user-settable variable).  That
+# might be set with = in mk.conf, and if so we want to just override
+# it, as being more helpful than erroring.  We therefore force reading
+# prefs first so that our assignment will prevail.
+.include "../../mk/bsd.prefs.mk"
 CMAKE_GENERATOR=	make
 
 .include "../../devel/hdf5/Makefile.common"
