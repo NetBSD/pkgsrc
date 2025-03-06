@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile,v 1.1 2025/03/06 18:55:00 wiz Exp $
+
+Use pkgsrc installation variables.
+
+--- Makefile.orig	2024-02-03 13:37:34.000000000 +0000
++++ Makefile
+@@ -6,11 +6,14 @@ all:
+ .PHONY: all install uninstall
+ 
+ install:
+-	install -Dm 0755 -T xdg-ninja.sh '$(DESTDIR)$(PREFIX)/bin/xdg-ninja'
+-	install -d '$(DESTDIR)$(PREFIX)/share/xdg-ninja/'
++	${BSD_INSTALL_SCRIPT_DIR} '$(DESTDIR)$(PREFIX)/bin'
++	${BSD_INSTALL_SCRIPT} xdg-ninja.sh '$(DESTDIR)$(PREFIX)/bin/xdg-ninja'
++	${BSD_INSTALL_DATA_DIR} '$(DESTDIR)$(PREFIX)/share/xdg-ninja/'
+ 	cp -r programs '$(DESTDIR)$(PREFIX)/share/xdg-ninja/'
+-	install -Dm 0644 -t '$(DESTDIR)$(PREFIX)/share/doc/xdg-ninja/' LICENSE README.md
+-	install -Dm 0644 -t '$(DESTDIR)$(PREFIX)/share/man/man1/' man/xdg-ninja.1
++	${BSD_INSTALL_DATA_DIR} '$(DESTDIR)$(PREFIX)/share/doc/xdg-ninja/'
++	${BSD_INSTALL_DATA} LICENSE README.md '$(DESTDIR)$(PREFIX)/share/doc/xdg-ninja/'
++	${BSD_INSTALL_MAN_DIR} '$(DESTDIR)$(PREFIX)/share/man/man1/'
++	${BSD_INSTALL_MAN} man/xdg-ninja.1 '$(DESTDIR)$(PREFIX)/share/man/man1/'
+ 
+ uninstall:
+ 	rm -rf '$(DESTDIR)$(PREFIX)/bin/xdg-ninja' \

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/03/06 18:55:00 wiz Exp $
+
+BLAKE2s (xdg-ninja-0.2.0.2.tar.gz) = 8c071f2fdb5a2accb333aa2e790cb2c6a0666f10da0c22279b8d79029f216a75
+SHA512 (xdg-ninja-0.2.0.2.tar.gz) = d96764067af5812869d53b99b0a04d224f8a5d70f2664df7149c11692c32d2b86105436d7aad3271192aeb8eb128a22571227cf2a1b6d99e80765f0a505ff71a
+Size (xdg-ninja-0.2.0.2.tar.gz) = 51103 bytes
+SHA1 (patch-Makefile) = 774b1db9f6662cbf2d5d0d2a47d9949f819a7476
