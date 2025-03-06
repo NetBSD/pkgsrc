@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2025/02/18 10:32:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2025/03/06 08:21:26 adam Exp $
+bin/websockets-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/websockets/__init__.py
 ${PYSITELIB}/websockets/__init__.pyc
@@ -37,6 +39,9 @@ ${PYSITELIB}/websockets/asyncio/server.pyo
 ${PYSITELIB}/websockets/auth.py
 ${PYSITELIB}/websockets/auth.pyc
 ${PYSITELIB}/websockets/auth.pyo
+${PYSITELIB}/websockets/cli.py
+${PYSITELIB}/websockets/cli.pyc
+${PYSITELIB}/websockets/cli.pyo
 ${PYSITELIB}/websockets/client.py
 ${PYSITELIB}/websockets/client.pyc
 ${PYSITELIB}/websockets/client.pyo
