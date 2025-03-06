@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2025/03/06 08:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2025/03/06 22:40:56 wiz Exp $
 
-DISTNAME=	pkgconf-2.4.0
+DISTNAME=	pkgconf-2.3.0
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -24,6 +24,8 @@ PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
 PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
 
+# as of 2.3.0
+# 117/154 passed (37 failed)
 TEST_TARGET=	check
 
 # for reallocarray

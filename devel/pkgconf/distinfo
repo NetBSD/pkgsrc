@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2025/03/06 08:51:54 wiz Exp $
+$NetBSD: distinfo,v 1.28 2025/03/06 22:40:56 wiz Exp $
 
-BLAKE2s (pkgconf-2.4.0.tar.gz) = af5c3cfd5ac0c7d46bb15dc7da60dd1ee8f555e4dd2226b513d803423877bf94
-SHA512 (pkgconf-2.4.0.tar.gz) = 4284bccec61c0091d81cbaec86620a1aabaf8b8dc371c24af03b1d05b5a9368b3e073f85963b92452aae284bf3d964f8f0771e40c4753be6f3e268f65f0c228b
-Size (pkgconf-2.4.0.tar.gz) = 468171 bytes
-SHA1 (patch-tests_Kyuafile.in) = d9813bde7517ad490286e388aa842171375c922a
+BLAKE2s (pkgconf-2.3.0.tar.gz) = 1db050c48f9458afeb2361c16876e4ebba7b8333b94972271952e958940c18a1
+SHA512 (pkgconf-2.3.0.tar.gz) = 03af45564a82740e6aa55d701b13e11c4e1d5ae0b4ec9329fbc07165406c5770ec5f8efb6ce23f947c23b407ba9e47b84dd91b24e9c015969185dc2120d36df2
+Size (pkgconf-2.3.0.tar.gz) = 459191 bytes
+SHA1 (patch-tests_Kyuafile.in) = bb8099b38a5c16e7776ab97b520f2ee2535d9c3a
