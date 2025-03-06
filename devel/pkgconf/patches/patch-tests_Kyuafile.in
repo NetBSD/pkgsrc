@@ -1,11 +1,11 @@
-$NetBSD: patch-tests_Kyuafile.in,v 1.1 2025/03/06 08:51:54 wiz Exp $
+$NetBSD: patch-tests_Kyuafile.in,v 1.2 2025/03/06 22:40:56 wiz Exp $
 
 Fix "basic not found" etc.
 https://github.com/pkgconf/pkgconf/issues/382
 
---- tests/Kyuafile.in.orig	2025-03-06 07:34:24.375323109 +0000
+--- tests/Kyuafile.in.orig	2024-08-05 19:52:16.000000000 +0000
 +++ tests/Kyuafile.in
-@@ -2,13 +2,13 @@ syntax(2)
+@@ -2,12 +2,12 @@ syntax(2)
  
  test_suite('pkgconf')
  
@@ -18,7 +18,6 @@ https://github.com/pkgconf/pkgconf/issues/382
 -atf_test_program{name='version'}
 -atf_test_program{name='framework'}
 -atf_test_program{name='provides'}
--atf_test_program{name='symlink'}
 +atf_test_program{name='basic.sh'}
 +atf_test_program{name='requires.sh'}
 +atf_test_program{name='regress.sh'}
@@ -28,4 +27,3 @@ https://github.com/pkgconf/pkgconf/issues/382
 +atf_test_program{name='version.sh'}
 +atf_test_program{name='framework.sh'}
 +atf_test_program{name='provides.sh'}
-+atf_test_program{name='symlink.sh'}
