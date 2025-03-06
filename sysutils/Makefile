@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1150 2025/02/26 14:03:06 hauke Exp $
+# $NetBSD: Makefile,v 1.1151 2025/03/06 18:55:12 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -946,6 +946,7 @@ SUBDIR+=	xc3028l-firmware
 SUBDIR+=	xc5k-firmware
 SUBDIR+=	xcdroast
 SUBDIR+=	xcp
+SUBDIR+=	xdg-ninja
 SUBDIR+=	xdu
 SUBDIR+=	xe
 SUBDIR+=	xe-guest-utilities
