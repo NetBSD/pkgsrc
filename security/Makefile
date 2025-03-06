@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.972 2025/02/18 15:04:08 wiz Exp $
+# $NetBSD: Makefile,v 1.973 2025/03/06 22:56:32 wiz Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -642,6 +642,7 @@ SUBDIR+=	scrypt
 SUBDIR+=	seahorse
 SUBDIR+=	seccure
 SUBDIR+=	secpanel
+SUBDIR+=	sequoia-chameleon-gnupg
 SUBDIR+=	sequoia-sq
 SUBDIR+=	sha3sum
 SUBDIR+=	signify
