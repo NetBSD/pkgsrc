@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1590 2025/02/11 08:56:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.1591 2025/03/06 01:17:36 manu Exp $
 #
 
 COMMENT=	Networking tools
@@ -23,6 +23,7 @@ SUBDIR+=	amazon-ecs-cli
 SUBDIR+=	amfora
 SUBDIR+=	amule
 SUBDIR+=	aoe-vblade
+SUBDIR+=	ap-maxminddb
 SUBDIR+=	apollo
 SUBDIR+=	argus
 SUBDIR+=	aria2
