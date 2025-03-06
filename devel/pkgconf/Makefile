@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2025/03/06 08:47:09 adam Exp $
+# $NetBSD: Makefile,v 1.31 2025/03/06 08:50:06 wiz Exp $
 
 DISTNAME=	pkgconf-2.4.0
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	https://github.com/pkgconf/pkgconf
 COMMENT=	API-driven pkg-config replacement
 LICENSE=	modified-bsd
+
+TEST_DEPENDS+=	kyua-[0-9]*:../../devel/kyua
 
 CONFLICTS+=	pkg-config-[0-9]*
 
@@ -21,6 +23,8 @@ MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
 PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
+
+TEST_TARGET=	check
 
 # for reallocarray
 # https://github.com/pkgconf/pkgconf/issues/285
