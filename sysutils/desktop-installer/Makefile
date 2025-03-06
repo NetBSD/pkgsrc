@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2025/02/04 16:15:37 bacon Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	desktop-installer-1.1.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/desktop-installer/tree/master/NetBSD
 COMMENT=	Quickly configure a NetBSD desktop system
 LICENSE=	2-clause-bsd

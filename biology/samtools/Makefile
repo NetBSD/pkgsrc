@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/10/11 22:38:32 bacon Exp $
+# $NetBSD: Makefile,v 1.22 2025/03/06 01:19:05 bacon Exp $
 
 DISTNAME=	samtools-1.21
 CATEGORIES=	biology
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	Tools for manipulating sequence alignment maps
 LICENSE=	mit

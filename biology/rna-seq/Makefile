@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/04/11 14:46:53 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/06 01:19:05 bacon Exp $
 #
 
 DISTNAME=	rna-seq-1.3.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools needed for RNA-Seq analysis
 
 DEPENDS+=	sra-tools>0:../../biology/sra-tools

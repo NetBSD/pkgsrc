@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2024/12/19 17:01:09 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:07 bacon Exp $
 
 DISTNAME=	npmount-0.1.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	e0c8050286b01c8b6b70a6c773457753e5a7a567
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/npmount
 COMMENT=	Command line tool for non-privileged [un]mount
 LICENSE=	2-clause-bsd
