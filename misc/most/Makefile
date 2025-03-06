@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2025/01/06 21:49:22 ktnb Exp $
+# $NetBSD: Makefile,v 1.36 2025/03/06 08:44:41 adam Exp $
 
-DISTNAME=	most-5.1.0
-PKGREVISION=	2
+DISTNAME=	most-5.2.0
 CATEGORIES=	misc
 MASTER_SITES=	https://www.jedsoft.org/releases/most/
 
@@ -10,11 +9,8 @@ HOMEPAGE=	https://www.jedsoft.org/most/
 COMMENT=	Pager (like less) which has support for windows and binary files
 LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
-
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-x
-
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 
 # prevent duplicate definition of zopen
