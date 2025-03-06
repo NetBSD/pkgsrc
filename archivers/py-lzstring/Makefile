@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2023/07/24 04:51:37 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/06 01:19:02 bacon Exp $
 
 DISTNAME=	lzstring-1.0.4
 PKGNAME=	${PYPKGPREFIX}-lzstring-1.0.4
 CATEGORIES=	archivers python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lzstring/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/gkovacs/lz-string-python
 COMMENT=	LZ-based in-memory string compression
 LICENSE=	mit
