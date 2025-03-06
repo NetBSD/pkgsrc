@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.34 2025/01/13 10:37:08 adam Exp $
+$NetBSD: distinfo,v 1.35 2025/03/06 12:07:56 adam Exp $
 
-BLAKE2s (mold-2.36.0.tar.gz) = 78d6db991eecf1025ec3d04a8708b6b8fa4b1ffa22b851de9b2d9036f6a75ebf
-SHA512 (mold-2.36.0.tar.gz) = 985ca22400b2d957b4ea8d35d6716cc6f13d1abe9c9e1eed461efda6f2612a5fbfa707aff879c616c756111fea751a335ad3a3fc224c7573855e7b2795596164
-Size (mold-2.36.0.tar.gz) = 10094759 bytes
+BLAKE2s (mold-2.37.0.tar.gz) = fe9e70dbcb17a434786e134974ad3625b2cb9f0d09917a6cbf77119d2c127076
+SHA512 (mold-2.37.0.tar.gz) = d17cc96cfa023ef3543c620af76519fcf389555dbb58466ed062624d02eb2721ad831a4f06a7f0d36d710aa3656d1e559aab857ac92da448eadbd6efb17e19ea
+Size (mold-2.37.0.tar.gz) = 10170004 bytes
