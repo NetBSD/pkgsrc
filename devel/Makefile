@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4426 2025/02/28 14:06:23 schmonz Exp $
+# $NetBSD: Makefile,v 1.4427 2025/03/06 11:15:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -3683,6 +3683,7 @@ SUBDIR+=	unittest-cpp
 SUBDIR+=	uno
 SUBDIR+=	userspace-rcu
 SUBDIR+=	uthash
+SUBDIR+=	uv
 SUBDIR+=	valgrind
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
