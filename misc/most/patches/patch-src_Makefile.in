@@ -1,6 +1,10 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2022/05/21 21:38:36 fcambus Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2025/03/06 08:44:41 adam Exp $
 
---- src/Makefile.in.orig	2018-10-29 07:55:02.000000000 +0000
+Fix installation.
+
+Wait for OBJDIR creation.
+
+--- src/Makefile.in.orig	2022-08-04 15:24:21.000000000 +0000
 +++ src/Makefile.in
 @@ -22,7 +22,7 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
@@ -11,14 +15,22 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2022/05/21 21:38:36 fcambus Exp $
  DOC_DIR		= $(datarootdir)/doc/most
  SYS_INITFILE	= @sysconfdir@/most.conf
  MKINSDIR	= ../autoconf/mkinsdir.sh
-@@ -79,20 +79,20 @@ clean:
+@@ -52,7 +52,7 @@ UPDATE_VERSION_SCRIPT = $(HOME)/bin/upda
+ COMPILE_CMD = $(CC) -c $(ALL_CFLAGS) -DMOST_SYSTEM_INITFILE='"$(SYS_INITFILE)"'
+ #
+ all: $(EXEC)
+-$(EXEC): $(OBJDIR) $(CONFIG_H) slangversion $(OBJDIR)/$(EXEC)
++$(EXEC): $(OBJDIR) .WAIT $(CONFIG_H) slangversion $(OBJDIR)/$(EXEC)
+ 	@echo $(EXEC) created in $(OBJDIR)
+ 
+ # C source files include autogenrated "config.h". Make sure
+@@ -85,20 +85,11 @@ clean:
  distclean: clean
  	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
  installdirs:
 -	$(MKINSDIR) $(DEST_DOCDIR)
 -	$(MKINSDIR) $(DEST_MANDIR)/man1
 -	$(MKINSDIR) $(DEST_BINDIR)
-+	#$(MKINSDIR) $(DEST_DOCDIR)
 +	$(BSD_INSTALL_MAN_DIR) $(DEST_MANDIR)/man1
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DEST_BINDIR)
  install: all installdirs
@@ -34,14 +46,6 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2022/05/21 21:38:36 fcambus Exp $
 -	done
 +	$(BSD_INSTALL_PROGRAM) $(OBJDIR)/most $(DEST_BINDIR)
 +	$(BSD_INSTALL_MAN) ../doc/most.1 $(DEST_MANDIR)/man1
-+	#@for i in $(DOC_FILES); \
-+	#do \
-+	#	echo $(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
-+	#	$(INSTALL_DATA) $$i $(DEST_DOCDIR)/; \
-+	#	if [ "$$?" != "0" ]; then \
-+	#	  exit 1; \
-+	#	fi; \
-+	#done
  # The symlinks target is for my own private use.  It simply creates the object
  # directory as a symbolic link to a local disk instead of an NFS mounted one.
  symlinks:
