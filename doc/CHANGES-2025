@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2040 2025/03/06 01:21:37 manu Exp $
+$NetBSD: CHANGES-2025,v 1.2041 2025/03/06 08:09:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2639,3 +2639,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.1.1 [pin 2025-03-05]
 	Added net/ap-maxminddb version 1.2.0 [manu 2025-03-06]
 	Added www/php-matomo version 5.5.2 [manu 2025-03-06]
+	Updated devel/py-faker to 36.2.2 [adam 2025-03-06]
+	Updated time/py-tzlocal to 5.3.1 [adam 2025-03-06]
+	Updated net/py-aiohappyeyeballs to 2.5.0 [adam 2025-03-06]
+	Updated textproc/py-jinja2 to 3.1.6 [adam 2025-03-06]
