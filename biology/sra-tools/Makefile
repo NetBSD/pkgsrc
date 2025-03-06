@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2025/02/02 14:25:34 bacon Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/06 01:19:05 bacon Exp $
 
 DISTNAME=		sra-tools-3.2.0
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ncbi/}
 GITHUB_SUBMODULES+=	ncbi ncbi-vdb ${PKGVERSION_NOREV} ncbi-vdb
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/sra-tools
 COMMENT=	NCBI's toolkit for handling data in INSDC Sequence Read Archives
 LICENSE=	public-domain AND gnu-lgpl-v2.1

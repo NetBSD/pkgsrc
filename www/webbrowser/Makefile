@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2023/01/23 21:35:51 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/06 01:19:07 bacon Exp $
 
 DISTNAME=	webbrowser-0.4.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/webbrowser/
 COMMENT=	Proxy script for launching "best" available web browser
 LICENSE=	2-clause-bsd
