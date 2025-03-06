@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1849 2025/03/02 14:52:28 taca Exp $
+# $NetBSD: Makefile,v 1.1850 2025/03/06 01:21:38 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -660,6 +660,7 @@ SUBDIR+=	php-glpi
 SUBDIR+=	php-http3
 SUBDIR+=	php-http4
 SUBDIR+=	php-ja-wordpress
+SUBDIR+=	php-matomo
 SUBDIR+=	php-nextcloud
 SUBDIR+=	php-nextcloud29
 SUBDIR+=	php-owncloud
