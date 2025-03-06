@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2025/02/04 08:12:22 adam Exp $
+# $NetBSD: Makefile,v 1.73 2025/03/06 01:47:16 schmonz Exp $
 
 DISTNAME=	awscli-1.37.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/awscli/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/aws/aws-cli
+HOMEPAGE=	https://aws.amazon.com/cli/
 COMMENT=	Universal Command Line Interface for Amazon Web Services
 LICENSE=	apache-2.0
 
