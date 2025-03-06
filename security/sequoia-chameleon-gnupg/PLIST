@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/06 22:56:20 wiz Exp $
+bin/gpg-sq
+bin/gpgv-sq
+man/man1/gpg-sq.1
+man/man1/gpgv-sq.1
+share/bash-completion/completions/gpg-sq.bash
+share/bash-completion/completions/gpgv-sq.bash
+share/fish/vendor_completions.d/gpg-sq.fish
+share/fish/vendor_completions.d/gpgv-sq.fish
+share/zsh/site-functions/_gpg-sq
+share/zsh/site-functions/_gpgv-sq
