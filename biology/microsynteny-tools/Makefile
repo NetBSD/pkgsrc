@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2024/12/17 14:56:54 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:04 bacon Exp $
 
 DISTNAME=	microsynteny-tools-0.1.0.175
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	c471264f8df1fd73621973737d74f4f48e8eb9d1
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/microsynteny-tools
 COMMENT=	Tools for exploring microsyntenic differences among species
 LICENSE=	2-clause-bsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/08/29 21:49:56 bacon Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/06 01:19:05 bacon Exp $
 
 DISTNAME=	STAR-2.7.10b
 PKGNAME=	rna-star-2.7.10b
@@ -6,7 +6,7 @@ CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexdobin/}
 GITHUB_PROJECT=	STAR
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/alexdobin/STAR
 COMMENT=	Spliced Transcripts Alignment to a Reference
 LICENSE=	gnu-gpl-v3

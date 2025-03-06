@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/11/11 07:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	cykhash-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cykhash/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/realead/cykhash
 COMMENT=	Cython equivalent to khash-sets/maps
 LICENSE=	mit

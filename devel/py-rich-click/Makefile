@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2023/07/24 04:45:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	rich-click-1.6.1
 PKGNAME=	${PYPKGPREFIX}-rich-click-1.6.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rich-click/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ewels/rich-click
 COMMENT=	Format click help output nicely with rich
 LICENSE=	mit

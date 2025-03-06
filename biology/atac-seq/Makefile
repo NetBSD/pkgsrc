@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2024/10/14 06:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/06 01:19:02 bacon Exp $
 
 DISTNAME=	atac-seq-1.5.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools needed for ATAC-Seq analysis
 
 DEPENDS+=	sra-tools>0:../../biology/sra-tools

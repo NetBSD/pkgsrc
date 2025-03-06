@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2024/11/22 21:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	orca-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orca/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/UDST/orca
 COMMENT=	Python library for task orchestration
 LICENSE=	modified-bsd

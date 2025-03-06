@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	spectra-0.0.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/spectra/}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/jsvine/spectra
 COMMENT=	Color scales and color conversion made easy for Python
 LICENSE=	mit

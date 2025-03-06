@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2024/11/14 22:18:47 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2025/03/06 01:19:04 bacon Exp $
 
 # CAUTION: htslib should always be upgraded in conjunction with
 # samtools, bcftools, bio-mocha, and bcf-score
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=samtools/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.bz2
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://www.htslib.org/
 COMMENT=	C library for high-throughput sequencing data formats
 LICENSE=	mit

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2024/09/20 00:03:15 bacon Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/06 01:19:04 bacon Exp $
 
 DISTNAME=	kallisto-0.51.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pachterlab/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pachterlab.github.io/kallisto/
 COMMENT=	Quantify abundances of transcripts from RNA-Seq data
 LICENSE=	2-clause-bsd

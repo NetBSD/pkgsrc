@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2025/02/14 10:09:29 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/06 01:19:03 bacon Exp $
 
 DISTNAME=	bowtie2-2.5.4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BenLangmead/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/BenLangmead/bowtie2
 COMMENT=	Ultrafast, memory-efficient short read aligner
 LICENSE=	gnu-gpl-v3

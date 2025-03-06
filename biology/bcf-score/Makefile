@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/11 22:49:06 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/06 01:19:02 bacon Exp $
 
 DISTNAME=	bcf-score-1.20
 CATEGORIES=	biology
@@ -9,7 +9,7 @@ DISTFILES+=	score_1.20-20240505.tar.gz
 DISTFILES+=	bcftools-1.21.tar.bz2
 GH_TAG=		1.21
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://software.broadinstitute.org/software/score/
 COMMENT=	Bcftools plugin for mosaic chromosomal alteration analysis
 LICENSE=	mit

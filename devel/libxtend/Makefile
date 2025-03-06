@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2024/12/02 07:52:50 nia Exp $
+# $NetBSD: Makefile,v 1.18 2025/03/06 01:19:06 bacon Exp $
 
 DISTNAME=	libxtend-0.2.0.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_TAG=	5f45f635517a1877166ab1a7ca8a73d841b666bb
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/outpaddling/libxtendc
 COMMENT=	Miscellaneous functions to extend libc
 LICENSE=	2-clause-bsd

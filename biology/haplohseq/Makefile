@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2025/02/23 09:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:04 bacon Exp $
 
 DISTNAME=	haplohseq-0.1.2.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	haplohseq
 GITHUB_TAG=	e4892945eced075a5bb98f208786cdf85eb3d82a
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://sites.google.com/site/integrativecancergenomics/software/haplohseq
 COMMENT=	Identify regions of allelic imbalance
 LICENSE=	mit

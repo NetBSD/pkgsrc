@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/15 12:15:29 bacon Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/06 01:19:04 bacon Exp $
 #
 # Update minor version when adding/removing dependencies
 # Update revision for lesser changes
@@ -7,7 +7,7 @@ DISTNAME=	mca-calling-0.1.0
 CATEGORIES=	biology meta-pkgs
 MASTER_SITES=	# empty
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 COMMENT=	Core tools for Mosaic Chromosomal Alteration event calling
 
 DEPENDS+=	sra-tools>0:../../biology/sra-tools

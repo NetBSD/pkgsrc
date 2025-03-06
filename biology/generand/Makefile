@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2024/11/29 15:14:45 bacon Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/06 01:19:03 bacon Exp $
 
 DISTNAME=	generand-0.1.2.9
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=auerlab/}
 GITHUB_TAG=	502772efafca1212922bb6170d4de673df16ecb4
 
-OWNER=		bacon@NetBSD.org
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/auerlab/generand
 COMMENT=	Generate random genomic data in FASTA/FASTQ, SAM, or VCF format
 LICENSE=	2-clause-bsd
