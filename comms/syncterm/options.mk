@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2025/03/05 18:21:22 vins Exp $
+# $NetBSD: options.mk,v 1.2 2025/03/06 04:33:36 vins Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.syncterm
 PKG_OPTIONS_NONEMPTY_SETS=	display sound
@@ -7,8 +7,6 @@ PKG_OPTIONS_SET.sound=		alsa oss portaudio pulseaudio sdl2
 
 PKG_SUPPORTED_OPTIONS=	alsa curses jxl oss portaudio pulseaudio sdl2 x11
 PKG_SUGGESTED_OPTIONS=	curses sdl2 x11
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS:M*BSD} || ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+=	oss

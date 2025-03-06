@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/03/05 18:21:21 vins Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/06 04:33:36 vins Exp $
 
 DISTNAME=	syncterm-1.6-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=syncterm/}
 EXTRACT_SUFX=	.tgz
@@ -23,11 +24,23 @@ USE_CC_FEATURES=	c11
 PTHREAD_AUTO_VARS=	yes
 BUILDLINK_TRANSFORM+=	rm:-lpthread
 
-CFLAGS+=	-DUSE_SNPRINTF 		# avoid redefinition
+CFLAGS+=	-DUSE_SNPRINTF			  # avoid redefinition
+CFLAGS.SunOS+=	-DNEEDS_CFMAKERAW -DNEEDS_FORKPTY # missing on SunOS
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "big"
-CFLAGS+=	-D__BIG_ENDIAN__	# build on any big-endian arch
+CFLAGS+=	-D__BIG_ENDIAN__		  # build on any big-endian arch
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		ints
+SUBST_MESSAGE.ints=	SunOS stdint(3) doesn't provide `u_int*' typedefs
+SUBST_STAGE.ints=	pre-configure
+SUBST_FILES.ints+=	src/xpdev/xpevent.h
+SUBST_FILES.ints+=	src/xpdev/sockwrap.h
+SUBST_SED.ints=		-e 's|u_int|uint|g'
 .endif
 
 MAKE_FILE=	GNUmakefile
