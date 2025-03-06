@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2024/08/08 17:29:34 pin Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/06 06:39:12 pin Exp $
 
 DISTNAME=	cobalt-0.19.6
+# cobalt >= v0.19.8 requires Rust >= 1.85 to build
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cobalt-org/}
 GITHUB_PROJECT=	cobalt.rs
