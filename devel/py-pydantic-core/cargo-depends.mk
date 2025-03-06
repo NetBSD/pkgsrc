@@ -1,4 +1,4 @@
-# $NetBSD: cargo-depends.mk,v 1.16 2025/02/26 10:24:36 adam Exp $
+# $NetBSD: cargo-depends.mk,v 1.17 2025/03/06 08:18:36 adam Exp $
 
 CARGO_CRATE_DEPENDS+=	ahash-0.8.11
 CARGO_CRATE_DEPENDS+=	aho-corasick-1.1.3
@@ -59,10 +59,10 @@ CARGO_CRATE_DEPENDS+=	regex-automata-0.4.8
 CARGO_CRATE_DEPENDS+=	regex-syntax-0.8.5
 CARGO_CRATE_DEPENDS+=	rustversion-1.0.17
 CARGO_CRATE_DEPENDS+=	ryu-1.0.18
-CARGO_CRATE_DEPENDS+=	serde-1.0.217
-CARGO_CRATE_DEPENDS+=	serde_derive-1.0.217
+CARGO_CRATE_DEPENDS+=	serde-1.0.218
+CARGO_CRATE_DEPENDS+=	serde_derive-1.0.218
 CARGO_CRATE_DEPENDS+=	serde_json-1.0.138
-CARGO_CRATE_DEPENDS+=	smallvec-1.13.2
+CARGO_CRATE_DEPENDS+=	smallvec-1.14.0
 CARGO_CRATE_DEPENDS+=	speedate-0.15.0
 CARGO_CRATE_DEPENDS+=	stable_deref_trait-1.2.0
 CARGO_CRATE_DEPENDS+=	static_assertions-1.1.0
@@ -78,7 +78,7 @@ CARGO_CRATE_DEPENDS+=	unindent-0.2.3
 CARGO_CRATE_DEPENDS+=	url-2.5.4
 CARGO_CRATE_DEPENDS+=	utf16_iter-1.0.5
 CARGO_CRATE_DEPENDS+=	utf8_iter-1.0.4
-CARGO_CRATE_DEPENDS+=	uuid-1.12.1
+CARGO_CRATE_DEPENDS+=	uuid-1.15.1
 CARGO_CRATE_DEPENDS+=	version_check-0.9.5
 CARGO_CRATE_DEPENDS+=	wasi-0.11.0+wasi-snapshot-preview1
 CARGO_CRATE_DEPENDS+=	write16-1.0.0
