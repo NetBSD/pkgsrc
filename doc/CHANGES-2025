@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2041 2025/03/06 08:09:15 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2042 2025/03/06 08:21:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2643,3 +2643,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated time/py-tzlocal to 5.3.1 [adam 2025-03-06]
 	Updated net/py-aiohappyeyeballs to 2.5.0 [adam 2025-03-06]
 	Updated textproc/py-jinja2 to 3.1.6 [adam 2025-03-06]
+	Updated devel/py-argcomplete to 3.6.0 [adam 2025-03-06]
+	Updated devel/py-zope.testrunner to 7.1 [adam 2025-03-06]
+	Updated devel/py-pydantic-core to 2.31.0 [adam 2025-03-06]
+	Updated www/py-websockets to 15.0.1 [adam 2025-03-06]
