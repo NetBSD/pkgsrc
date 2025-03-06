@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/03/06 01:21:38 manu Exp $
+
+BLAKE2s (matomo-5.2.2.tar.gz) = 83202eb2d2977cae29577bcda895a0afcff9676e689e31586c6a9dfa2b716e65
+SHA512 (matomo-5.2.2.tar.gz) = 5d83113facf6d32d77f5ff8c97b3f09a135f526d33daba9a7d7e7d24c820ef20517d105b388948623f0bbccf8aad12f2b183ad046cdcdafa10d85c5f01cbb9f4
+Size (matomo-5.2.2.tar.gz) = 21896452 bytes
+SHA1 (patch-config_manifest.inc.php) = 4efd7c1a388c0605fb2b9a8ee7a8fc5090244a11
+SHA1 (patch-plugins_GeoIp2_LocationProvider_GeoIp2_Php.php) = 5d4407d4e7ccb8ce616dfe1f48d0136fa980a82c
