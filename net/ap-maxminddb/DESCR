@@ -1,0 +1,22 @@
+This module allows you to query MaxMind geolocalization DB files from
+Apache. It can be used with net/dbip-asn-lite, net/dbip-city-lite and
+net/dbip-country-lite
+
+Exampe usage for Matomo:
+
+LoadModule maxminddb_module lib/httpd/mod_maxminddb.so
+
+<Locaton />
+    MaxMindDBEnable On
+    MaxMindDBFile CITY_DB  /usr/pkg/share/dbip/dbip-city-lite.mmdb
+    MaxMindDBFile ASN_DB  /usr/pkg/share/dbip/dbip-asn-lite.mmdb
+    MaxMindDBFile COUNTRY_DB  /usr/pkg/share/dbip/dbip-country-lite.mmdb
+    MaxMindDBEnv MM_COUNTRY_CODE COUNTRY_DB/country/iso_code
+    MaxMindDBEnv MM_COUNTRY_NAME COUNTRY_DB/country/names/en
+    MaxMindDBEnv MM_CITY_NAME CITY_DB/city/names/en
+    MaxMindDBEnv MM_ORG ASN_DB/autonomous_system_organization
+    MaxMindDBEnv MM_LONGITUDE CITY_DB/location/longitude
+    MaxMindDBEnv MM_LATITUDE CITY_DB/location/latitude
+</Locaton>
+
+...
