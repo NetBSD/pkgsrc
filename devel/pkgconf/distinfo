@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.26 2025/03/06 08:47:09 adam Exp $
+$NetBSD: distinfo,v 1.27 2025/03/06 08:51:54 wiz Exp $
 
 BLAKE2s (pkgconf-2.4.0.tar.gz) = af5c3cfd5ac0c7d46bb15dc7da60dd1ee8f555e4dd2226b513d803423877bf94
 SHA512 (pkgconf-2.4.0.tar.gz) = 4284bccec61c0091d81cbaec86620a1aabaf8b8dc371c24af03b1d05b5a9368b3e073f85963b92452aae284bf3d964f8f0771e40c4753be6f3e268f65f0c228b
 Size (pkgconf-2.4.0.tar.gz) = 468171 bytes
+SHA1 (patch-tests_Kyuafile.in) = d9813bde7517ad490286e388aa842171375c922a
