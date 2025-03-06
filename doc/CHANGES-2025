@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2048 2025/03/06 12:08:27 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2049 2025/03/06 16:07:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2655,3 +2655,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/uv version 0.6.4 [wiz 2025-03-06]
 	Updated security/dropbear to 2025.87 [adam 2025-03-06]
 	Updated devel/mold to 2.37.0 [adam 2025-03-06]
+	Updated www/py-django to 5.1.7 [adam 2025-03-06]
+	Updated www/py-django4 to 4.2.20 [adam 2025-03-06]
