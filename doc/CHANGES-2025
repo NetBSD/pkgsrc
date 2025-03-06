@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2052 2025/03/06 19:46:50 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2053 2025/03/06 22:41:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2660,3 +2660,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added sysutils/xdg-ninja version 0.2.0.2 [wiz 2025-03-06]
 	Updated shells/oh-my-posh to 25.2.0 [pin 2025-03-06]
 	Updated net/mosquitto to 2.0.21 [gdt 2025-03-06]
+	Downgraded devel/pkgconf to 2.3.0 [wiz 2025-03-06]
