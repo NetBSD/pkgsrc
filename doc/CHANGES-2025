@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2042 2025/03/06 08:21:52 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2043 2025/03/06 08:28:37 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2647,3 +2647,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-zope.testrunner to 7.1 [adam 2025-03-06]
 	Updated devel/py-pydantic-core to 2.31.0 [adam 2025-03-06]
 	Updated www/py-websockets to 15.0.1 [adam 2025-03-06]
+	Updated databases/diesel-cli to 2.2.8 [pin 2025-03-06]
