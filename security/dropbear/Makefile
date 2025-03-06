@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2024/11/21 19:06:41 adam Exp $
+# $NetBSD: Makefile,v 1.43 2025/03/06 11:53:50 adam Exp $
 
-DISTNAME=	dropbear-2024.86
+DISTNAME=	dropbear-2025.87
 CATEGORIES=	security
 MASTER_SITES=	https://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ COMMENT=	Small SSH2 server and client, aimed at embedded market
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --disable-bundled-libtom
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} --disable-bundled-libtom
 USE_TOOLS+=		gmake
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dropbear
@@ -36,7 +36,7 @@ SUBST_CLASSES+=		config
 SUBST_MESSAGE.config=	Fixing path to config directory.
 SUBST_STAGE.config=	post-build
 SUBST_FILES.config=	manpages/dropbear.8 manpages/dropbearkey.1
-SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
+SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR}"/dropbear/,g"
 
 # needed by dbscp
 CPPFLAGS+=		-DDROPBEAR_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
