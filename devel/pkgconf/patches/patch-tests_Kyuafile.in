@@ -1,0 +1,31 @@
+$NetBSD: patch-tests_Kyuafile.in,v 1.1 2025/03/06 08:51:54 wiz Exp $
+
+Fix "basic not found" etc.
+https://github.com/pkgconf/pkgconf/issues/382
+
+--- tests/Kyuafile.in.orig	2025-03-06 07:34:24.375323109 +0000
++++ tests/Kyuafile.in
+@@ -2,13 +2,13 @@ syntax(2)
+ 
+ test_suite('pkgconf')
+ 
+-atf_test_program{name='basic'}
+-atf_test_program{name='requires'}
+-atf_test_program{name='regress'}
+-atf_test_program{name='parser'}
+-atf_test_program{name='sysroot'}
+-atf_test_program{name='conflicts'}
+-atf_test_program{name='version'}
+-atf_test_program{name='framework'}
+-atf_test_program{name='provides'}
+-atf_test_program{name='symlink'}
++atf_test_program{name='basic.sh'}
++atf_test_program{name='requires.sh'}
++atf_test_program{name='regress.sh'}
++atf_test_program{name='parser.sh'}
++atf_test_program{name='sysroot.sh'}
++atf_test_program{name='conflicts.sh'}
++atf_test_program{name='version.sh'}
++atf_test_program{name='framework.sh'}
++atf_test_program{name='provides.sh'}
++atf_test_program{name='symlink.sh'}
