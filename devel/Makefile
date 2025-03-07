@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4448 2025/03/07 17:22:20 pho Exp $
+# $NetBSD: Makefile,v 1.4449 2025/03/07 18:27:03 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -722,6 +722,7 @@ SUBDIR+=	hs-persistent-template
 SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pretty-show
 SUBDIR+=	hs-pretty-simple
+SUBDIR+=	hs-prettyclass
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-primitive-addr
 SUBDIR+=	hs-primitive-extras
