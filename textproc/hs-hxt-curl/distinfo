@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 13:56:30 pho Exp $
+
+BLAKE2s (hxt-curl-9.1.1.1.tar.gz) = bec84edd0dc1fc78684ae936ebb6f777959e2e751c0853b7b876bad85e92b859
+SHA512 (hxt-curl-9.1.1.1.tar.gz) = a89af5c11ffa9c4eb6f55be987527c2481de79671c4476f78e37e12b48bfd35091a18c04771e30a43f58f828762c2245e9a1e8161b380424cd25e284a191a5bd
+Size (hxt-curl-9.1.1.1.tar.gz) = 5463 bytes
