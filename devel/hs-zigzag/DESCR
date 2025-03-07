@@ -1,0 +1,3 @@
+Zigzag encoding is usually a precursor to a varint encoding such as LEB128.
+It has the advantage that numbers nearer zero are represented with only the
+lower-order bits set.
