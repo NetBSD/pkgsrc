@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 15:57:54 pho Exp $
+
+BLAKE2s (natural-arithmetic-0.2.1.0.tar.gz) = e7c8992c7e44dd76f863f0bfc191ce75de8b26def4f8295ba5c54674268d0807
+SHA512 (natural-arithmetic-0.2.1.0.tar.gz) = 13fd1aeedba1bfe3c7ec653d1d388d313fb5768dd149700cf177a5e0ccc5251f95a3cdad7ca607295272fe24f2d1341656f6d1ea039ac001a875b803fbdf3935
+Size (natural-arithmetic-0.2.1.0.tar.gz) = 12479 bytes
