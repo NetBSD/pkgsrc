@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:00:43 pho Exp $
+
+BLAKE2s (primitive-addr-0.1.0.3.tar.gz) = 449452a2b3fd31c90cde20d67399b77e871564bf9c3fdf911a5c12e3b585bdf0
+SHA512 (primitive-addr-0.1.0.3.tar.gz) = 96442502c80d21dd9c79723073a982899a9cd8311254e404e97ca5f11b0f056331a5166e8c8bdb16c787b64ea067d1d5316c7880d8bf6b726d002528b2306d31
+Size (primitive-addr-0.1.0.3.tar.gz) = 3080 bytes
