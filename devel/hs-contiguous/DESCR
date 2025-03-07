@@ -1,0 +1,2 @@
+This package provides a typeclass Contiguous that offers a unified interface
+to working with Array, SmallArray, PrimArray, and UnliftedArray.
