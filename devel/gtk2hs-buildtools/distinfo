@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 12:52:01 pho Exp $
+
+BLAKE2s (gtk2hs-buildtools-0.13.11.0.tar.gz) = 799fbb0350d473111dd26b16d95185521dcd4ffe312c577a9b62843831916be4
+SHA512 (gtk2hs-buildtools-0.13.11.0.tar.gz) = 82315798132f1485d0f32c62d9084bc035afda904f6af1e00b9b22d2a28353b28494e4b9192f8ffba0b752960b9a4403e4af9a85929fbdd4f455e7bbfc883970
+Size (gtk2hs-buildtools-0.13.11.0.tar.gz) = 178544 bytes
