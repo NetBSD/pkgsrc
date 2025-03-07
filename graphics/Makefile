@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1072 2025/03/07 13:04:06 pho Exp $
+# $NetBSD: Makefile,v 1.1073 2025/03/07 16:44:20 pho Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -265,6 +265,7 @@ SUBDIR+=	hp2xx
 SUBDIR+=	hs-JuicyPixels
 SUBDIR+=	hs-cairo
 SUBDIR+=	hs-chart
+SUBDIR+=	hs-chart-cairo
 SUBDIR+=	hs-dotgen
 SUBDIR+=	hugin
 SUBDIR+=	iGMT
