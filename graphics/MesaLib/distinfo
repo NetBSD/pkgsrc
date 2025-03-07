@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.166 2023/07/18 19:33:31 ryoon Exp $
+$NetBSD: distinfo,v 1.167 2025/03/07 06:56:20 wiz Exp $
 
 BLAKE2s (mesa-21.3.9.tar.xz) = e948a37881a088c0df4df880e3d1218b874ed5a8cac951a109249b3648519472
 SHA512 (mesa-21.3.9.tar.xz) = 4cec6f4f50f444fcd327f7c40f8899c2f265e348e121455262b540b1f890a1468bbea59965af0876c548fa97aa0a05a1b23fa6ca7d308bd60328cfdeab757684
@@ -41,5 +41,6 @@ SHA1 (patch-src_util_strndup.h) = 73f49694ca48ad6b9a9d8346c5b84fddec2463bd
 SHA1 (patch-src_util_u__atomic.h) = 31d4514538ef5ee53012695eb5c66134aaec981e
 SHA1 (patch-src_util_u__printf.h) = 3b19d079d3857612be3cb1b5c1edb5384cd4d6fd
 SHA1 (patch-src_util_u__process.c) = 9b785d660f3d55803315598a66370139fcd9168f
+SHA1 (patch-src_util_u__qsort.h) = 36e7712997faeb6582b517ef145c5762088d72ec
 SHA1 (patch-src_util_u__queue.c) = e8d6b00473a16b6a32dcacd5ae092326fb2adb84
 SHA1 (patch-src_util_u__thread.h) = 996a51b8570cb019b9ed5ce9f3653488ce26b2df
