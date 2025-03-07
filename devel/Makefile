@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4430 2025/03/07 12:14:58 pho Exp $
+# $NetBSD: Makefile,v 1.4431 2025/03/07 12:52:44 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -508,6 +508,7 @@ SUBDIR+=	grantlee-qt5
 SUBDIR+=	gsoap
 SUBDIR+=	gst-plugins1-pango
 SUBDIR+=	gtexinfo
+SUBDIR+=	gtk2hs-buildtools
 SUBDIR+=	gtl
 SUBDIR+=	guile-bytestructures
 SUBDIR+=	guile-gcrypt
