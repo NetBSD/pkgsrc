@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:25:37 pho Exp $
+
+BLAKE2s (tuples-0.1.0.0.tar.gz) = 1eaa828bd4eca5394e32078b4c007a1fafe19daf45b59aec7bf0b59c9cc114d8
+SHA512 (tuples-0.1.0.0.tar.gz) = fa9a2d3eda63ba5a07f198071bd05e848415dbccc971d9b284c42db86acafcdd335bba7eeddf2bd4f673aea53ae4cee77838e8c1f5ccda0207420a08f474b2ab
+Size (tuples-0.1.0.0.tar.gz) = 3334 bytes
