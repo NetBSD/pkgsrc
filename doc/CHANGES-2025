@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2088 2025/03/07 17:19:36 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2089 2025/03/07 17:22:07 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2697,3 +2697,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-bytebuild version 0.3.16.3 [pho 2025-03-07]
 	Added devel/hs-contiguous version 0.6.4.2 [pho 2025-03-07]
 	Added devel/hs-bytesmith version 0.3.11.1 [pho 2025-03-07]
+	Added devel/hs-word-compat version 0.0.6 [pho 2025-03-07]
