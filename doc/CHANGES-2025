@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2058 2025/03/07 11:08:27 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2059 2025/03/07 12:14:33 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/hs-text-metrics version 0.3.3 [pho 2025-03-07]
 	Added devel/hs-infer-license version 0.2.0 [pho 2025-03-07]
 	Added devel/hs-hpack version 0.38.0 [pho 2025-03-07]
+	Added devel/hs-operational version 0.2.4.2 [pho 2025-03-07]
