@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.24 2024/01/13 20:07:33 riastradh Exp $
+# $NetBSD: builtin.mk,v 1.25 2025/03/07 07:00:33 wiz Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -30,7 +30,7 @@ MAKEVARS+=	IS_BUILTIN.MesaLib
 ### a package name to represent the built-in package.
 ###
 .if !defined(BUILTIN_PKG.MesaLib) && \
-    !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS])
+    ${IS_BUILTIN.MesaLib:tl} == yes
 .  if empty(PC_GL:M__nonexistent__)
 BUILTIN_VERSION.Mesa!= \
 	${SED} -n -e 's/Version: //p' ${_CROSS_DESTDIR:U:Q}${PC_GL:Q}
@@ -54,10 +54,10 @@ USE_BUILTIN.MesaLib=	no
 .  else
 USE_BUILTIN.MesaLib=	${IS_BUILTIN.MesaLib}
 .    if defined(BUILTIN_PKG.MesaLib) && \
-        !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS])
+        ${IS_BUILTIN.MesaLib:tl} == yes
 USE_BUILTIN.MesaLib=	yes
 .      for dep in ${BUILDLINK_API_DEPENDS.MesaLib}
-.        if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
+.        if ${USE_BUILTIN.MesaLib:tl} == yes
 USE_BUILTIN.MesaLib!=							\
 	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.MesaLib}; then \
 		${ECHO} yes;						\
@@ -77,9 +77,9 @@ MAKEVARS+=	USE_BUILTIN.MesaLib
 ### solely to determine whether a built-in implementation exists.
 ###
 CHECK_BUILTIN.MesaLib?=	no
-.if !empty(CHECK_BUILTIN.MesaLib:M[nN][oO])
+.if ${CHECK_BUILTIN.MesaLib:tl} == no
 
-.  if !empty(USE_BUILTIN.MesaLib:M[nN][oO])
+.  if ${USE_BUILTIN.MesaLib:tl} == no
 .    include "../../mk/pthread.buildlink3.mk"
 .    include "../../mk/pthread.builtin.mk"
 BUILTIN_PKG:=	MesaLib

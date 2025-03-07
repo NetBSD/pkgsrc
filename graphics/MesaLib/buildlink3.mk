@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.68 2023/08/14 05:24:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.69 2025/03/07 07:00:33 wiz Exp $
 
 BUILDLINK_TREE+=	MesaLib
 
@@ -20,7 +20,7 @@ pkgbase:= MesaLib
 
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.MesaLib:Mx11)
+.if ${PKG_BUILD_OPTIONS.MesaLib:Mx11}
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXdamage/buildlink3.mk"
 .  include "../../x11/libXext/buildlink3.mk"

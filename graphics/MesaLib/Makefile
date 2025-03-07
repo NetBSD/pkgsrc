@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2025/03/02 12:34:56 nia Exp $
+# $NetBSD: Makefile,v 1.215 2025/03/07 07:00:33 wiz Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -89,7 +89,7 @@ PLIST.iris=		yes
 .  endif
 # FreeBSD lacks nouveau support (there are official binaries from Nvidia)
 .  if ${OPSYS} != "FreeBSD"
-.    if empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
+.    if !${MACHINE_PLATFORM:MNetBSD-*-powerpc}
 # nouveau not available on this platform
 PLIST.nouveau=		yes
 PLIST.nouveau_dri=	yes
@@ -97,15 +97,15 @@ GALLIUM_DRIVERS+=	nouveau
 DRI_DRIVERS+=		nouveau
 .    endif
 .  endif
-.  if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  if ${MACHINE_PLATFORM:MLinux-*-x86_64}
 # qemu Linux guest driver
 # XXX test this
 #GALLIUM_DRIVERS+=	virgl
 #PLIST.virgl=		yes
 .  endif
 # theoretically cross platform PCI drivers
-.  if empty(MACHINE_PLATFORM:MNetBSD-*-*arm*) && \
-      empty(MACHINE_PLATFORM:MNetBSD-*-mipsel)
+.  if !${MACHINE_PLATFORM:MNetBSD-*-*arm*} && \
+      !${MACHINE_PLATFORM:MNetBSD-*-mipsel}
 DRI_DRIVERS+=		r100 r200
 GALLIUM_DRIVERS+=	r300
 PLIST.r100=		yes
