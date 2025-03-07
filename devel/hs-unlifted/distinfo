@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 15:53:33 pho Exp $
+
+BLAKE2s (unlifted-0.2.2.0.tar.gz) = 10fe30cfb6432f5ea8deb5a6139eb3d992a9d3106f06b8d06c5e3a6b02a69512
+SHA512 (unlifted-0.2.2.0.tar.gz) = 2efc11b828e7b5e0a69a441860c40b89009474bedef3f804c411d46f26ac6a84dbba34da1e2cf2dd3bb15030d38b77cc66093edacb3323023987d02fad00e9c5
+Size (unlifted-0.2.2.0.tar.gz) = 3812 bytes
