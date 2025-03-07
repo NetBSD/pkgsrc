@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4438 2025/03/07 16:39:57 pho Exp $
+# $NetBSD: Makefile,v 1.4439 2025/03/07 16:46:32 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -783,6 +783,7 @@ SUBDIR+=	hs-th-env
 SUBDIR+=	hs-th-expand-syns
 SUBDIR+=	hs-th-lift
 SUBDIR+=	hs-th-lift-instances
+SUBDIR+=	hs-th-reify-many
 SUBDIR+=	hs-these
 SUBDIR+=	hs-timeit
 SUBDIR+=	hs-transformers-base
