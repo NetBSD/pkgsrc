@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:40:26 pho Exp $
+
+BLAKE2s (mbox-0.3.4.tar.gz) = 35e517f731749905dccfead0ee374c437211614b19486c37e70df68ca2954595
+SHA512 (mbox-0.3.4.tar.gz) = 15627147d1c598be31e41e7e33a4a91703fe8fb3ecca086bdd0223b0db51d927e10da8c58674ffe32d22d359fa3f17ab5d87fd3214383c69af31702a71eea753
+Size (mbox-0.3.4.tar.gz) = 3680 bytes
+SHA1 (patch-Data_MBox.hs) = e04328de460b686c0b8194d6e66d0737c8a5a83a
+SHA1 (patch-Data_MBox_String.hs) = 02d36de839b3bc0f92db05240d6a9678a29bef0e
