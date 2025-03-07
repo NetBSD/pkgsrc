@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2093 2025/03/07 17:55:35 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2094 2025/03/07 18:26:46 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added mail/hs-mbox version 0.3.4 [pho 2025-03-07]
 	Added net/hs-mime version 0.4.0.2 [pho 2025-03-07]
 	Added textproc/hs-stache version 2.3.4 [pho 2025-03-07]
+	Added devel/hs-prettyclass version 1.0.0.0 [pho 2025-03-07]
