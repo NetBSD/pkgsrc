@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1504 2025/02/19 12:00:50 wiz Exp $
+# $NetBSD: Makefile,v 1.1505 2025/03/07 10:43:52 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -375,6 +375,7 @@ SUBDIR+=	hs-texmath
 SUBDIR+=	hs-text-ansi
 SUBDIR+=	hs-text-builder-linear
 SUBDIR+=	hs-text-manipulate
+SUBDIR+=	hs-text-metrics
 SUBDIR+=	hs-text-rope
 SUBDIR+=	hs-text-short
 SUBDIR+=	hs-toml-parser
