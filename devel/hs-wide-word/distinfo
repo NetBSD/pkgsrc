@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:00:47 pho Exp $
+
+BLAKE2s (wide-word-0.1.7.0.tar.gz) = c6140e2a616ef1ec61d180e62aedcc3269f7080ac19e0c3517d0af413e158cec
+SHA512 (wide-word-0.1.7.0.tar.gz) = 430d1cc7ee42edb57c5d5bfe855a7a18a3b828f28caf41c544522cf8f0d7cd81656e617fcbdb4085f18d41500bb6d1f5b9871b46287a7cc14632ed320f491924
+Size (wide-word-0.1.7.0.tar.gz) = 20066 bytes
