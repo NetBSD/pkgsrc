@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2095 2025/03/07 18:31:23 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2096 2025/03/07 18:34:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/hs-stache version 2.3.4 [pho 2025-03-07]
 	Added devel/hs-prettyclass version 1.0.0.0 [pho 2025-03-07]
 	Added lang/hs-language-glsl version 0.3.0 [pho 2025-03-07]
+	Added devel/hs-raw-strings-qq version 1.1 [pho 2025-03-07]
