@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:55:27 pho Exp $
+
+BLAKE2s (stache-2.3.4.tar.gz) = c18ca4b0825be8d7500b7a1e9c61f744b991e5b858c316cdd4621143de908beb
+SHA512 (stache-2.3.4.tar.gz) = cbd914cfe8cf26372c9cd93689a7bd83c71b8d5b8848bb6461b276e66c154a0318e4e29b966984827177a5652fa5bf248fa33e542612f39015fcf1953d26bfbf
+Size (stache-2.3.4.tar.gz) = 29328 bytes
