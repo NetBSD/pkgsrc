@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:44:03 pho Exp $
+
+BLAKE2s (Chart-cairo-1.9.4.1.tar.gz) = def65197513974d1f21cfa0dc8c72081b651e84278eb87e86aec5dfba35b8383
+SHA512 (Chart-cairo-1.9.4.1.tar.gz) = f02b68609292399e2cb29b5f1ed02d14625e0f63b9eb45eeef6c28644de93d661f6ba7884ac114a2842ce6772c1ccdd4e877a89f4ffb3c84ec8eacfdd8e1f22c
+Size (Chart-cairo-1.9.4.1.tar.gz) = 4398 bytes
