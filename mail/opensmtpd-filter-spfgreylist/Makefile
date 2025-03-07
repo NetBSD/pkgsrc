@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/12/05 09:08:30 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/07 20:54:20 bsiegert Exp $
 
 DISTNAME=	filter-spfgreylist-1.0.0
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=poolpOrg/}
 GITHUB_PROJECT=	filter-spfgreylist

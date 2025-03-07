@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.116 2024/09/06 18:48:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.117 2025/03/07 20:54:20 bsiegert Exp $
 
 DISTNAME=	gif2png-3.0.0
-PKGREVISION=	58
+PKGREVISION=	59
 CATEGORIES=	graphics
 #MASTER_SITES=	https://gitlab.com/esr/gif2png/-/archive/master/
 MASTER_SITES=	http://www.catb.org/~esr/gif2png/
