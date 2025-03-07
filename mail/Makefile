@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2025/02/22 15:37:15 taca Exp $
+# $NetBSD: Makefile,v 1.668 2025/03/07 17:40:42 pho Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -116,6 +116,7 @@ SUBDIR+=	gyb
 SUBDIR+=	heirloom-mailx
 SUBDIR+=	himalaya
 SUBDIR+=	hs-email-validate
+SUBDIR+=	hs-mbox
 SUBDIR+=	hypermail
 SUBDIR+=	ifile
 SUBDIR+=	im
