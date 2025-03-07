@@ -1,0 +1,14 @@
+This is similar to the builder facilities provided by
+Data.ByteString.Builder. It is intended to be used in situations where the
+following apply:
+
+* An individual entity will be serialized as a small number of bytes (less
+  than 512).
+* A large number (more than 32) of entities will be serialized one after
+  another without anything between them.
+
+Unlike builders from the bytestring package, these builders do not track
+their state when they run out of space. A builder that runs out of space
+simply aborts and is rerun at the beginning of the next chunk. This strategy
+for building is suitable for most CSVs and several line protocols (carbon,
+InfluxDB, etc.).
