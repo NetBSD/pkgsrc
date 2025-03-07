@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 14:04:19 pho Exp $
+
+BLAKE2s (hxt-relaxng-9.1.5.5.tar.gz) = dedda5da5f21add93ab9e2bf58218a6975118cf4898bb3fb917d9dc1310bde90
+SHA512 (hxt-relaxng-9.1.5.5.tar.gz) = 72c3f5a16549567b47c95cd86594c7672e9a47a45598cf9a93981d3d06c2fed28ff82dbd46e5c8ade7d53f4e5d5a7275aa93a5bc2c80089a7fa829ce6fbf658c
+Size (hxt-relaxng-9.1.5.5.tar.gz) = 58597 bytes
