@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 13:03:47 pho Exp $
+
+BLAKE2s (cairo-0.13.11.0.tar.gz) = caa061bb405aff1f6002e06ac2721099e6a34d2f827acb340b195bd78d9ed177
+SHA512 (cairo-0.13.11.0.tar.gz) = c14ac41c16085e5dccf33fd57e8cdea4744f1df74629d9b3c607ec4fe06afa3c5395e37d470e93f54757c84b3b5ba863ded4e311e29ccc95227de4c178bf16e7
+Size (cairo-0.13.11.0.tar.gz) = 53375 bytes
