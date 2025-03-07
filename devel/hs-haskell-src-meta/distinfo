@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:52:31 pho Exp $
+
+BLAKE2s (haskell-src-meta-0.8.15.tar.gz) = 1fab2565c55ecf19e6703464fee2019ae644a799560fa98996b73d90b8f3663a
+SHA512 (haskell-src-meta-0.8.15.tar.gz) = 9f210450f94a806d5d429c745fd94e459b5cafd1c3d382c406a6dc266de7a4998bb6fe68d9a69c27a66244bf3eb9ab96d1d4f1b5e66cf334cabca7296647ac2a
+Size (haskell-src-meta-0.8.15.tar.gz) = 28071 bytes
