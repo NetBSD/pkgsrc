@@ -1,0 +1,24 @@
+A search for terms like arithmetic and natural on hackage reveals no
+shortage of libraries for handling the arithmetic of natural numbers. How is
+this library any different some of the others? It has a particular purpose:
+providing a foundation on top on which other libraries may define types
+indexed by sizes. This uses GHC's non-inductively-defined GHC.TypeNats.Nat.
+As a rule, this does not use unsafeCoerce internally anywhere.
+
+Perhaps the most direct competitor to `natural-arithmetic` is a typechecker
+plugin like type-nat-solver (https://github.com/yav/type-nat-solver). The
+big difference is that `type-nat-solver` can really only be used in
+application code, not in library code. This is because libraries should not
+require the presence of typechecker plugins. Technically, they can (you
+could document it), but many developers will not use libraries that have
+unusual install procedures like this.
+
+This library, in places, requires users to use the TypeApplications language
+extension. This is done when a number is only need at the type level
+(without a runtime witness).
+
+This library uses a non-minimal core, providing redundant primitives
+in Arithmetic.Lt and Arithmetic.Lte. This is done in the interest of making
+it easy for user to assemble proofs. Recall that proof assembly is done by
+hand rather than by an SMT solver, so removing some tediousness from this is
+helpful to users.
