@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/13 10:03:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/07 16:02:51 adam Exp $
 
 DISTNAME=	django-gravatar2-1.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/twaddington/django-gravatar
 COMMENT=	Essential Gravatar support for Django
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none
 

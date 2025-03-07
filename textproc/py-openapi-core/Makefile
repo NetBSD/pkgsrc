@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2024/12/10 07:55:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/07 16:02:51 adam Exp $
 
 DISTNAME=	openapi_core-0.19.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-parse-[0-9]*:../../textproc/py-parse
 DEPENDS+=	${PYPKGPREFIX}-werkzeug-[0-9]*:../../www/py-werkzeug
 TEST_DEPENDS+=	${PYPKGPREFIX}-WebOb-[0-9]*:../../www/py-WebOb
 TEST_DEPENDS+=	${PYPKGPREFIX}-aiohttp-[0-9]*:../../www/py-aiohttp
-TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django3
+TEST_DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 #TEST_DEPENDS+=	${PYPKGPREFIX}-falcon-[0-9]*:../../devel/py-falcon
 TEST_DEPENDS+=	${PYPKGPREFIX}-fastapi-[0-9]*:../../wip/py-fastapi
 TEST_DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask

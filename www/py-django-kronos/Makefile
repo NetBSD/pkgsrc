@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2023/07/13 10:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/07 16:02:50 adam Exp $
 
 DISTNAME=	django-kronos-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Django application to define and schedule tasks with cron
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-crontab>=1.9.0:../../sysutils/py-crontab
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=		# empty

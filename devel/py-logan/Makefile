@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2023/07/13 10:03:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/07 16:02:49 adam Exp $
 
 DISTNAME=	logan-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/dcramer/logan
 COMMENT=	Toolkit for building standalone Django applications
 LICENSE=	apache-2.0
 
-TEST_DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+TEST_DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-mock>=0.8.0:../../devel/py-mock
 TEST_DEPENDS+=	${PYPKGPREFIX}-nose>=1.1.2:../../devel/py-nose

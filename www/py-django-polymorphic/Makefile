@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2023/08/30 14:36:56 adam Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/07 16:02:50 adam Exp $
 
 DISTNAME=	django-polymorphic-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/chrisglass/django_polymorphic
 COMMENT=	Simplifies using inherited models in Django projects
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none
 

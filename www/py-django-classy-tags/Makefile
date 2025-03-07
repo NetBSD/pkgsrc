@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2023/10/10 16:21:59 adam Exp $
+# $NetBSD: Makefile,v 1.21 2025/03/07 16:02:51 adam Exp $
 
 DISTNAME=	django-classy-tags-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/ojii/django-classy-tags
 COMMENT=	Class based template tags for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
