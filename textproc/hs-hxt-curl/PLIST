@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/07 13:56:30 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Arrow/LibCurlInput.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Arrow/LibCurlInput.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Arrow/LibCurlInput.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Curl.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Curl.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/Curl.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/IO/GetHTTPLibCurl.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/IO/GetHTTPLibCurl.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/XML/HXT/IO/GetHTTPLibCurl.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/hxt-curl-${PKGVERSION}/${HS_VERSION}/package-description
+lib/hxt-curl-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/Text-XML-HXT-Curl.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/hxt-curl.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/hxt-curl-${PKGVERSION}/html/synopsis.png
