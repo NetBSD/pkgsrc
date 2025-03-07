@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2025/02/19 13:17:25 mef Exp $
+# $NetBSD: Makefile,v 1.141 2025/03/07 13:19:41 pho Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -58,6 +58,7 @@ SUBDIR+=	gpsd
 SUBDIR+=	gpspoint
 SUBDIR+=	gpsutils
 SUBDIR+=	gpxsee
+SUBDIR+=	hs-country-codes
 SUBDIR+=	kplex
 SUBDIR+=	laszip
 SUBDIR+=	libchamplain012
