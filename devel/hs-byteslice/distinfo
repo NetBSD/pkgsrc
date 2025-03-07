@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:34:02 pho Exp $
+
+BLAKE2s (byteslice-0.2.14.0.tar.gz) = 3d2336a589b16d85c1cfc76b6e043093b11cb0a8e50c6556ea63ef45a0e319f7
+SHA512 (byteslice-0.2.14.0.tar.gz) = bc5d9fc05cb3eaa0baae9589edb5cdff5aa03cae0ddb4442caa5c4478dffbb44216076bc00b3fbb707d300aeaf0cc328858e5b237f1298616108d1164db2cb95
+Size (byteslice-0.2.14.0.tar.gz) = 36127 bytes
