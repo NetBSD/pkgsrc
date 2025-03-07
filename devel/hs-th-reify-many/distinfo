@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:46:16 pho Exp $
+
+BLAKE2s (th-reify-many-0.1.10.tar.gz) = ef55675d9a0362d492308091e85660607ca7dab42815d685f58d4261caf7074a
+SHA512 (th-reify-many-0.1.10.tar.gz) = 9c5b64e791a0649d7e05a471cfc1b6e84e50c90a3711ffd7304c2bd8af9623ba3c026e68fb36bc0497f9f67e18ad2d76902d96fa98220399e8feaac2b09d51be
+Size (th-reify-many-0.1.10.tar.gz) = 5825 bytes
