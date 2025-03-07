@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1505 2025/03/07 10:43:52 pho Exp $
+# $NetBSD: Makefile,v 1.1506 2025/03/07 13:56:49 pho Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -339,6 +339,7 @@ SUBDIR+=	hs-hslua-module-text
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
+SUBDIR+=	hs-hxt-curl
 SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-hxt-unicode
 SUBDIR+=	hs-jira-wiki-markup
