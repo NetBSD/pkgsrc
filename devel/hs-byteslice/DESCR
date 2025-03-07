@@ -1,0 +1,4 @@
+This library provides types that allow the user to talk about a slice of a
+ByteArray or a MutableByteArray. It also offers UnmanagedBytes, which is
+kind of like a slice into unmanaged memory. However, it is just an address
+and a length.
