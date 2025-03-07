@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2025/03/07 20:17:35 vins Exp $
+
+TIMESPEC(3HEAD) available on SunOS 5.11
+
+--- configure.ac.orig	2025-03-07 20:11:19.628450340 +0000
++++ configure.ac
+@@ -263,7 +263,7 @@ AS_CASE([$host_os],
+     abi_wcsl=no
+   ],
+   [solaris2*], [
+-    api_time_macros=yes
++    api_time_macros=no
+ 
+     abi_accmode=yes
+     abi_arc4random=no
