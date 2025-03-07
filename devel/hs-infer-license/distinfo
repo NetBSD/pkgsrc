@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 10:48:17 pho Exp $
+
+BLAKE2s (infer-license-0.2.0.tar.gz) = 043ba1891e5768c5200374b66916b9ef4fa7d7589d2df13befe7aeccae3cfa3b
+SHA512 (infer-license-0.2.0.tar.gz) = 266651d9890ccbd9281ef3f9cd16df10f9c6fa8449990b63e956bd13559b1ef773c9dee92ad80de5b9d03599ac6a09766a1f4f3425884007982ab14d01697d45
+Size (infer-license-0.2.0.tar.gz) = 48173 bytes
