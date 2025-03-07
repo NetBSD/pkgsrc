@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2076 2025/03/07 16:30:25 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.2077 2025/03/07 16:34:15 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2685,3 +2685,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-tuple version 0.3.0.2 [pho 2025-03-07]
 	Added devel/hs-tuples version 0.1.0.0 [pho 2025-03-07]
 	Updated lang/go124 to 1.24.1 [bsiegert 2025-03-07]
+	Added devel/hs-byteslice version 0.2.14.0 [pho 2025-03-07]
