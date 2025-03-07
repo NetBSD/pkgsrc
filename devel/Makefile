@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4445 2025/03/07 17:10:22 pho Exp $
+# $NetBSD: Makefile,v 1.4446 2025/03/07 17:17:31 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -590,6 +590,7 @@ SUBDIR+=	hs-conduit-extra
 SUBDIR+=	hs-conduit-parse
 SUBDIR+=	hs-constraints
 SUBDIR+=	hs-constraints-extras
+SUBDIR+=	hs-contiguous
 SUBDIR+=	hs-control-monad-free
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-data-array-byte
