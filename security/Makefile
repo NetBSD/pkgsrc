@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.973 2025/03/06 22:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.974 2025/03/07 13:12:26 pho Exp $
 #
 
 COMMENT=	Security and cryptography tools and libraries
@@ -138,6 +138,7 @@ SUBDIR+=	hitch
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	hs-SHA
+SUBDIR+=	hs-blake2
 SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-crypto-token
 SUBDIR+=	hs-cryptohash-md5
