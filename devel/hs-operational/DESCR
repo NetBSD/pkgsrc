@@ -1,0 +1,9 @@
+This library makes it easy to implement monads with tricky control flow.
+
+This is useful for: writing web applications in a sequential style,
+programming games with a uniform interface for human and AI players and easy
+replay capababilities, implementing fast parser monads, designing monadic
+DSLs, etc.
+
+See the project homepage http://wiki.haskell.org/Operational for a more
+detailed introduction and features.
