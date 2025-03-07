@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:20:00 pho Exp $
+
+BLAKE2s (run-st-0.1.3.3.tar.gz) = 26245e6dab3600c013c9c4c1ef7d4fa438393beeb780226aa35282b422f90bc2
+SHA512 (run-st-0.1.3.3.tar.gz) = 9f4f8af6106340e50adefe2107b0031c712a85f1eb5776bdee745acf9626f14802decd3e2678e4445f06aec7c7ace584763af2bf005f6c6c2bf6daab4f0337b8
+Size (run-st-0.1.3.3.tar.gz) = 3086 bytes
