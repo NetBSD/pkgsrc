@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:55:28 pho Exp $
+
+BLAKE2s (primitive-offset-0.2.0.1.tar.gz) = 9f6ba03d2ae158cf71be5fc210133a4a202fbd743b040e873fc9858a8746b7b7
+SHA512 (primitive-offset-0.2.0.1.tar.gz) = 85038bb98fb29c2901d6343e3c572f80395b0d0b852b01e030adbea99b4ea4bd664153b09e0aff19380c57942c9444e3405da38466107f73c26af6116f0105cd
+Size (primitive-offset-0.2.0.1.tar.gz) = 2893 bytes
