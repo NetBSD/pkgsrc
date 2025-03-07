@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2024/09/16 12:55:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/07 20:54:13 bsiegert Exp $
 
 DISTNAME=	soju-${VERSION}
 VERSION=	0.8.2
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	https://codeberg.org/emersion/soju/releases/download/v${VERSION}/
 

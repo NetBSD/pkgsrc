@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/01/11 18:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/07 20:54:27 bsiegert Exp $
 
 DISTNAME=	gobuster-3.6.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OJ/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
