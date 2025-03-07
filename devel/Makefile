@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4437 2025/03/07 16:34:25 pho Exp $
+# $NetBSD: Makefile,v 1.4438 2025/03/07 16:39:57 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -780,6 +780,7 @@ SUBDIR+=	hs-tf-random
 SUBDIR+=	hs-th-abstraction
 SUBDIR+=	hs-th-compat
 SUBDIR+=	hs-th-env
+SUBDIR+=	hs-th-expand-syns
 SUBDIR+=	hs-th-lift
 SUBDIR+=	hs-th-lift-instances
 SUBDIR+=	hs-these
