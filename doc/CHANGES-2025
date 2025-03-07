@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2056 2025/03/07 10:43:42 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2057 2025/03/07 10:48:24 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2664,3 +2664,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added security/sequoia-chameleon-gnupg version 0.12.0 [wiz 2025-03-06]
 	Updated pkgtools/pkgchkxx to 0.3.3 [pho 2025-03-07]
 	Added textproc/hs-text-metrics version 0.3.3 [pho 2025-03-07]
+	Added devel/hs-infer-license version 0.2.0 [pho 2025-03-07]
