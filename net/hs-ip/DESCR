@@ -1,0 +1,19 @@
+The ip package provides types and functions for dealing with IPv4 addresses,
+CIDR blocks, and MAC addresses. We provide instances for typeclasses found
+in commonly used packages like aeson, vector, and hashable. We also
+provide Parsers for working with attoparsec.
+
+Notably, this package does not overload functions by introducing any
+typeclasses of its own. Neither does it prefix functions with the name of
+the type that they work on.  Instead, functions of the same name are
+exported by several different modules, and it is expected that end users
+disambiguate by importing these modules qualified.
+
+The only module intended to be imported unqualified is Net.Types. The types
+in this package should not conflict with the types in any other commonly
+used packages.
+
+The following packages are intended to be used with this package:
+
+* yesod-ip: Provides orphan instances needed to work with yesod and
+  persistent. Also, provides a yesod-form helper.
