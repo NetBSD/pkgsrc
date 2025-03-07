@@ -1,0 +1,3 @@
+Pair a typed or untyped primitive array with an offset. This is useful for
+providing meaningful type signatures when working with the foreign function
+interface.

@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/07 16:55:28 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray/Offset.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray/Offset.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/ByteArray/Offset.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/PrimArray/Offset.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/PrimArray/Offset.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Primitive/PrimArray/Offset.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/primitive-offset-${PKGVERSION}/${HS_VERSION}/package-description
+lib/primitive-offset-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/CHANGELOG.md
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/Data-Primitive-ByteArray-Offset.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/Data-Primitive-PrimArray-Offset.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/primitive-offset.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/primitive-offset-${PKGVERSION}/html/synopsis.png
