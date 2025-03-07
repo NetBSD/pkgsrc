@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2069 2025/03/07 15:53:41 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2070 2025/03/07 15:58:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added textproc/hs-hxt-curl version 9.1.1.1 [pho 2025-03-07]
 	Added textproc/hs-hxt-relaxng version 9.1.5.5 [pho 2025-03-07]
 	Added devel/hs-unlifted version 0.2.2.0 [pho 2025-03-07]
+	Added math/hs-natural-arithmetic version 0.2.1.0 [pho 2025-03-07]
