@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:19:29 pho Exp $
+
+BLAKE2s (bytesmith-0.3.11.1.tar.gz) = 3994086a77dda69268f8ddb840103e75914e5325ee419af4c0bfdb9bc8f8e769
+SHA512 (bytesmith-0.3.11.1.tar.gz) = 55d059ddbfb0553a26f9d04c36399981e0cf96ad35dc1560690b24ce2e1a745916b9e08f71736b66d77396692329dd0b15d13c9919fb099ea1e24a24f37fb8b2
+Size (bytesmith-0.3.11.1.tar.gz) = 33879 bytes

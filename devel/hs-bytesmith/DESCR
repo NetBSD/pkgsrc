@@ -1,0 +1,2 @@
+Parse bytes as fast as possible. This is a nonresumable parser that
+aggresively uses UnboxedSums to avoid performing any allocations.
