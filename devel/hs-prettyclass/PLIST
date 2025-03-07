@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/07 18:26:37 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/HughesPJClass.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/HughesPJClass.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Text/PrettyPrint/HughesPJClass.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/prettyclass-${PKGVERSION}/${HS_VERSION}/package-description
+lib/prettyclass-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/Text-PrettyPrint-HughesPJClass.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/prettyclass.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/prettyclass-${PKGVERSION}/html/synopsis.png

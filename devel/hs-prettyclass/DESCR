@@ -1,0 +1,3 @@
+Pretty printing class similar to Show, based on the HughesPJ pretty printing
+library. Provides the pretty printing class and instances for the Prelude
+types.
