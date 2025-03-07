@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4436 2025/03/07 16:27:47 pho Exp $
+# $NetBSD: Makefile,v 1.4437 2025/03/07 16:34:25 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,6 +569,7 @@ SUBDIR+=	hs-blaze-textual
 SUBDIR+=	hs-bloomfilter
 SUBDIR+=	hs-boring
 SUBDIR+=	hs-byteable
+SUBDIR+=	hs-byteslice
 SUBDIR+=	hs-bytestring-builder
 SUBDIR+=	hs-bytestring-strict-builder
 SUBDIR+=	hs-call-stack
