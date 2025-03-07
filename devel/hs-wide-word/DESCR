@@ -1,0 +1,7 @@
+A library to provide data types for large (ie > 64 bits) but fixed width
+signed and unsigned integers with the usual typeclass instances to allow
+them to be used interchangeably with Word64.
+
+The types and operations are coded to be as fast as possible using
+strictness annotations, INLINEABLE pragmas and unboxed values and operations
+where appropriate.
