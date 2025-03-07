@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4427 2025/03/06 11:15:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4428 2025/03/07 10:48:36 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -662,6 +662,7 @@ SUBDIR+=	hs-ifelse
 SUBDIR+=	hs-implicit-hie
 SUBDIR+=	hs-indexed-traversable
 SUBDIR+=	hs-indexed-traversable-instances
+SUBDIR+=	hs-infer-license
 SUBDIR+=	hs-ipynb
 SUBDIR+=	hs-isocline
 SUBDIR+=	hs-keys
