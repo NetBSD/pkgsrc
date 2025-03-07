@@ -1,0 +1,2 @@
+This package offers a workaround for the breaking change in Word/Int. Import
+GHC.Word.Compat in place of GHC.Word to take effect.

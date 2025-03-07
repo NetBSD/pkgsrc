@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/07 17:21:59 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Int/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Int/Compat.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Int/Compat.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Prim/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Prim/Compat.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Prim/Compat.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Word/Compat.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Word/Compat.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/GHC/Word/Compat.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/word-compat-${PKGVERSION}/${HS_VERSION}/package-description
+lib/word-compat-${PKGVERSION}/${HS_VERSION}/package-id
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/GHC-Int-Compat.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/GHC-Prim-Compat.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/GHC-Word-Compat.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/word-compat-${PKGVERSION}/html/word-compat.haddock

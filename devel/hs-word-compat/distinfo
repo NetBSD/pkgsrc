@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:21:59 pho Exp $
+
+BLAKE2s (word-compat-0.0.6.tar.gz) = 56fee1bd8bb4cb2210229fbfb615b869eaae938c177126c02c1e2b8edbdeaa1a
+SHA512 (word-compat-0.0.6.tar.gz) = 52b082d4e7cd038b9397c243a63bcc53753022802d1a58bc2a9f7252a0140817fe44b8237300c762dfd5b9a02d5a382d846e4dbad0f445e8de6218548200765d
+Size (word-compat-0.0.6.tar.gz) = 3212 bytes
