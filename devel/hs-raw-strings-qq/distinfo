@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 18:34:11 pho Exp $
+
+BLAKE2s (raw-strings-qq-1.1.tar.gz) = 05f39069f45c1d403b392e7b63505de3102f09ff2296bbc6d1bde990803f93a9
+SHA512 (raw-strings-qq-1.1.tar.gz) = 9daf7acad6619c9d077b49591003f2c42baca060b20202f597c7468da765a59add2b78b90d634bbf785e299fb85d39dba242d070e15ec208391059e64850acbc
+Size (raw-strings-qq-1.1.tar.gz) = 3505 bytes
