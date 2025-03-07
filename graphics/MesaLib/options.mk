@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.85 2023/07/19 18:32:49 tnn Exp $
+# $NetBSD: options.mk,v 1.86 2025/03/07 07:00:33 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 
@@ -88,7 +88,7 @@ MESON_ARGS+=		-Dllvm=disabled
 #
 # Vulkan support - experimental
 #
-PLIST_VARS+=		 vulkan vulkan_intel
+PLIST_VARS+=		vulkan vulkan_intel
 .if !empty(PKG_OPTIONS:Mvulkan)
 VULKAN_DRIVERS+=	amd
 VULKAN_DRIVERS+=	swrast
