@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 11:08:19 pho Exp $
+
+BLAKE2s (hpack-0.38.0.tar.gz) = a0ace9cf0cd5a88cfa7f7da102e75c01951b9008bf69d3710d205e44372f6498
+SHA512 (hpack-0.38.0.tar.gz) = e169fe7a494b50bf9070ab86a6e128343fb68ab00acd6f033c9e2c88e7fcc346584875f28bfc45a2cd0fa0fd8052919fdf13562ad8894e5547f3acf56f698ad5
+Size (hpack-0.38.0.tar.gz) = 72699 bytes
