@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2060 2025/03/07 12:39:43 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2061 2025/03/07 12:52:09 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-hpack version 0.38.0 [pho 2025-03-07]
 	Added devel/hs-operational version 0.2.4.2 [pho 2025-03-07]
 	Added graphics/hs-chart version 1.9.5 [pho 2025-03-07]
+	Added devel/gtk2hs-buildtools version 0.13.11.0 [pho 2025-03-07]
