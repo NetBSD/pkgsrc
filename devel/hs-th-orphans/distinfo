@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:48:18 pho Exp $
+
+BLAKE2s (th-orphans-0.13.16.tar.gz) = bba1389e2e969d6a0303726755f206b828656e9bd2bdd33ce4c45df2b747e526
+SHA512 (th-orphans-0.13.16.tar.gz) = 2b5c6db633eea589b1e9568012853628892dc01bb46f770f9172dbaaf413bce2931db39cb335766c33780c4aeac08d476e8b5a14c92883117a53891a63b4ba97
+Size (th-orphans-0.13.16.tar.gz) = 7145 bytes
