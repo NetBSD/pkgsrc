@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/02/25 20:09:17 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/03/07 16:30:08 bsiegert Exp $
 bin/go${GOVERSSUFFIX}
 bin/gofmt${GOVERSSUFFIX}
 go124/CONTRIBUTING.md
@@ -5625,8 +5625,13 @@ go124/src/debug/buildinfo/buildinfo.go
 go124/src/debug/buildinfo/buildinfo_test.go
 go124/src/debug/buildinfo/search_test.go
 go124/src/debug/buildinfo/testdata/fuzz/FuzzRead/36aeb674e3454016
-go124/src/debug/buildinfo/testdata/go117
-go124/src/debug/buildinfo/testdata/notgo
+go124/src/debug/buildinfo/testdata/go117/README.md
+go124/src/debug/buildinfo/testdata/go117/go.mod
+go124/src/debug/buildinfo/testdata/go117/go117.base64
+go124/src/debug/buildinfo/testdata/go117/main.go
+go124/src/debug/buildinfo/testdata/notgo/README.md
+go124/src/debug/buildinfo/testdata/notgo/main.c
+go124/src/debug/buildinfo/testdata/notgo/notgo.base64
 go124/src/debug/dwarf/attr_string.go
 go124/src/debug/dwarf/buf.go
 go124/src/debug/dwarf/class_string.go
@@ -13217,6 +13222,12 @@ go124/test/fixedbugs/issue7083.go
 go124/test/fixedbugs/issue7129.go
 go124/test/fixedbugs/issue7150.go
 go124/test/fixedbugs/issue7153.go
+go124/test/fixedbugs/issue71675.go
+go124/test/fixedbugs/issue71675.out
+go124/test/fixedbugs/issue71680.go
+go124/test/fixedbugs/issue71852.go
+go124/test/fixedbugs/issue71857.go
+go124/test/fixedbugs/issue71932.go
 go124/test/fixedbugs/issue7214.go
 go124/test/fixedbugs/issue7223.go
 go124/test/fixedbugs/issue7272.go
