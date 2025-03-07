@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1070 2025/03/03 02:35:30 scole Exp $
+# $NetBSD: Makefile,v 1.1071 2025/03/07 12:39:52 pho Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -263,6 +263,7 @@ SUBDIR+=	hermes
 SUBDIR+=	hicolor-icon-theme
 SUBDIR+=	hp2xx
 SUBDIR+=	hs-JuicyPixels
+SUBDIR+=	hs-chart
 SUBDIR+=	hs-dotgen
 SUBDIR+=	hugin
 SUBDIR+=	iGMT
