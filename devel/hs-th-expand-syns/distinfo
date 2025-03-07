@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 16:39:41 pho Exp $
+
+BLAKE2s (th-expand-syns-0.4.12.0.tar.gz) = afe366fc677271d9be76947fa085ff925f220f73a720a97a96522b033e2e764b
+SHA512 (th-expand-syns-0.4.12.0.tar.gz) = 2865c2238069d1a9430f25a6a126e95f43c203cbdefec67d8d9592f8e5cc3a08b5ef1c930f32754c466980e220e1736eae60db9d0682013970a842753adee196
+Size (th-expand-syns-0.4.12.0.tar.gz) = 7090 bytes
