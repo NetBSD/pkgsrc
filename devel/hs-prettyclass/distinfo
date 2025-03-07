@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 18:26:37 pho Exp $
+
+BLAKE2s (prettyclass-1.0.0.0.tar.gz) = 651647f5559d2c25305a65f62e72037eab5975cba90bfb254948b8b571322d2f
+SHA512 (prettyclass-1.0.0.0.tar.gz) = f0785e7780f71ee0f8f6b6ca5db6a82f030f75b34f618ff9ee0025032516114769f4cd4e6094b5fefd13e645a7eece9d87b82c2d4c144dddf5093bc2c600af4a
+Size (prettyclass-1.0.0.0.tar.gz) = 1542 bytes
