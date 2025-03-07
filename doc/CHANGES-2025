@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2086 2025/03/07 17:10:10 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2087 2025/03/07 17:17:22 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2695,3 +2695,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-wide-word version 0.1.7.0 [pho 2025-03-07]
 	Added devel/hs-zigzag version 0.1.0.0 [pho 2025-03-07]
 	Added devel/hs-bytebuild version 0.3.16.3 [pho 2025-03-07]
+	Added devel/hs-contiguous version 0.6.4.2 [pho 2025-03-07]
