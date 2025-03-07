@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 13:19:24 pho Exp $
+
+BLAKE2s (country-codes-0.1.4.tar.gz) = 2aaffbb168ac607ef95243438e270caa3ff3a0fd5a9615b95daeb4c6aaef583f
+SHA512 (country-codes-0.1.4.tar.gz) = 31841a2b1fdfc3f4475585d48579e69ec57211f6a2b68a3bc3fd4e09804b7206bfcc9138d1f2ac29f2b250744734b9e912d22104f42e8d24785929e9fdacaada
+Size (country-codes-0.1.4.tar.gz) = 14212 bytes
