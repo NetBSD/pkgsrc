@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 10:43:34 pho Exp $
+
+BLAKE2s (text-metrics-0.3.3.tar.gz) = 895059ab5784cd1364b7b346d21f86b1f193020d4f49793fc0583d45bc66d22f
+SHA512 (text-metrics-0.3.3.tar.gz) = b37f4959f6dab6f524a987bd3c9469345a643f3222600c2a86380b2417dc9e329c702d74e960623082a9fcaf6c081f2f2fb67cf4f85c64ef25ba347963a3dff6
+Size (text-metrics-0.3.3.tar.gz) = 8288 bytes
