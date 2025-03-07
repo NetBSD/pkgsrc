@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2024/09/06 18:48:51 bsiegert Exp $
+# $NetBSD: Makefile,v 1.51 2025/03/07 20:54:23 bsiegert Exp $
 
 DISTNAME=	kubectl-1.22.17
-PKGREVISION=	20
+PKGREVISION=	21
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kubernetes/}
 GITHUB_PROJECT=	kubernetes

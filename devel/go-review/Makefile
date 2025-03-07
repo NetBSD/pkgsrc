@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2024/09/06 18:48:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.78 2025/03/07 20:54:16 bsiegert Exp $
 #
 
 DISTNAME=		go-review-1.0.2
-PKGREVISION=		38
+PKGREVISION=		39
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		review
