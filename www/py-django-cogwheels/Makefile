@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2023/09/28 22:31:07 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/07 16:02:51 adam Exp $
 
 DISTNAME=	django-cogwheels-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	mit
 GITHUB_PROJECT=	django-cogwheels
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=	# none
 

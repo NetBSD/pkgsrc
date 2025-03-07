@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/06/27 13:05:00 adam Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/07 16:02:51 adam Exp $
 
 DISTNAME=	telepath-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/wagtail/telepath
 COMMENT=	Data exchange library between Django and browser
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
 
 USE_LANGUAGES=	# none
 
