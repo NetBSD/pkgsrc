@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2071 2025/03/07 16:00:53 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2072 2025/03/07 16:13:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2679,3 +2679,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/hs-unlifted version 0.2.2.0 [pho 2025-03-07]
 	Added math/hs-natural-arithmetic version 0.2.1.0 [pho 2025-03-07]
 	Added devel/hs-primitive-addr version 0.1.0.3 [pho 2025-03-07]
+	Updated www/py-curl to 7.45.6 [adam 2025-03-07]
+	Updated devel/py-zope.testrunner to 7.2 [adam 2025-03-07]
