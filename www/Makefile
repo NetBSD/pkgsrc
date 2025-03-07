@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1850 2025/03/06 01:21:38 manu Exp $
+# $NetBSD: Makefile,v 1.1851 2025/03/07 13:35:43 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -156,6 +156,7 @@ SUBDIR+=	hs-bower-json
 SUBDIR+=	hs-bsb-http-chunked
 SUBDIR+=	hs-clientsession
 SUBDIR+=	hs-cookie
+SUBDIR+=	hs-curl
 SUBDIR+=	hs-dav
 SUBDIR+=	hs-feed
 SUBDIR+=	hs-http-api-data
