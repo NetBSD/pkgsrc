@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 13:12:09 pho Exp $
+
+BLAKE2s (blake2-0.3.0.1.tar.gz) = ec92f279a517e3c17513e0d78941f5a5f36488eef66323db22b61eafc6467e17
+SHA512 (blake2-0.3.0.1.tar.gz) = 900dfbd898be476cb1373dda7e9dcc4d6850ad56d069ea3de88a84ff851db73c3ae9319bac38c1a092c473700d359018626a6f3cd763b34b3caf8740d8d50e01
+Size (blake2-0.3.0.1.tar.gz) = 22182 bytes
