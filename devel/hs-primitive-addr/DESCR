@@ -1,0 +1,2 @@
+This library provides the Data.Primitive.Addr module that was a part of
+the primitive library before `primitive-0.7.0.0`.
