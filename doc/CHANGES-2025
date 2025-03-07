@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2054 2025/03/06 22:56:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2055 2025/03/07 07:09:01 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2662,3 +2662,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/mosquitto to 2.0.21 [gdt 2025-03-06]
 	Downgraded devel/pkgconf to 2.3.0 [wiz 2025-03-06]
 	Added security/sequoia-chameleon-gnupg version 0.12.0 [wiz 2025-03-06]
+	Updated pkgtools/pkgchkxx to 0.3.3 [pho 2025-03-07]
