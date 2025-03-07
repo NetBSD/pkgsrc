@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 17:17:15 pho Exp $
+
+BLAKE2s (contiguous-0.6.4.2.tar.gz) = f0907bb7c2b4b05772c3a9806e4faf7afee47f629343416a026d66d78a1ddfbf
+SHA512 (contiguous-0.6.4.2.tar.gz) = 597c051e02a95c91fbe5d87a0dfad0e39e62e949170392997b4b2f5605afa3f311c289e7334a33a6df83988f5154cb2a75a60bff4f6c8e1cd2e4c41af8012710
+Size (contiguous-0.6.4.2.tar.gz) = 26785 bytes
