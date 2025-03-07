@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 18:31:13 pho Exp $
+
+BLAKE2s (language-glsl-0.3.0.tar.gz) = cda08d62fa17520a0f35eff3cb52ad2d37f1c81d3c46aea72419d1121bcfa78a
+SHA512 (language-glsl-0.3.0.tar.gz) = cdd004906d927654164bb6cb562457ee4d7010dea3a35c3408ebb345abc2698777c5748d1dfb27ed8d43dc7189f5299c05ac6b53eb9b400a25750f47cad62f9b
+Size (language-glsl-0.3.0.tar.gz) = 16622 bytes
