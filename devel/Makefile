@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4441 2025/03/07 16:52:46 pho Exp $
+# $NetBSD: Makefile,v 1.4442 2025/03/07 16:55:45 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -722,6 +722,7 @@ SUBDIR+=	hs-pretty-simple
 SUBDIR+=	hs-primitive
 SUBDIR+=	hs-primitive-addr
 SUBDIR+=	hs-primitive-extras
+SUBDIR+=	hs-primitive-offset
 SUBDIR+=	hs-primitive-unlifted
 SUBDIR+=	hs-protolude
 SUBDIR+=	hs-psqueues
