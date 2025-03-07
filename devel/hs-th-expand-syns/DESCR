@@ -1,0 +1,5 @@
+Expands type synonyms in Template Haskell ASTs.
+
+As of version 0.4.9.0, this library is a small shim on top of
+the applySubstitution/resolveTypeSynonyms functions from th-abstraction, so
+you may want to consider using th-abstraction instead.
