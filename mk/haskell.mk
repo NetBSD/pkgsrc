@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.72 2025/02/02 12:55:38 pho Exp $
+# $NetBSD: haskell.mk,v 1.73 2025/03/07 13:06:19 pho Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages. Package
 # configuration, building, installation, registration and unregistration
@@ -179,7 +179,9 @@ HASKELL_UNRESTRICT_DEPENDENCIES?=	# empty
 # default.
 .include "../../mk/haskell/tools/alex.mk"
 .include "../../mk/haskell/tools/cpphs.mk"
+.include "../../mk/haskell/tools/gtk2hs-buildtools.mk"
 .include "../../mk/haskell/tools/happy.mk"
+.include "../../mk/haskell/tools/hpack.mk"
 
 # Define some useful targets for pkgsrc developers.
 .include "../../mk/haskell/developer.mk"
