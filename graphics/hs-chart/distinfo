@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/07 12:39:35 pho Exp $
+
+BLAKE2s (Chart-1.9.5.tar.gz) = 01f241cab947fff434f8975b43eb303811053967c93023b72afd29dcba651c70
+SHA512 (Chart-1.9.5.tar.gz) = cf0ae7c888e799bb9733b9becdf72336c7e2bf115745a019b80a3a6ffb88b312fd3f74d712c9f6b3d9d0d903bb85f66d61173636e26408a75eaf5d6662bc08c4
+Size (Chart-1.9.5.tar.gz) = 62026 bytes
