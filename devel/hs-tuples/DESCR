@@ -1,0 +1,3 @@
+This library provides small tuples where all the elements are the same type.
+The elements always unpack into the data constructor. This can be helpful
+when the tuple type is itself nested inside of another data constructor.
