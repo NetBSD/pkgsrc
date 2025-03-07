@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2023/09/01 04:02:29 wen Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/07 16:02:50 adam Exp $
 
 DISTNAME=	django-tagging-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 GITHUB_PROJECT=	django-tagging
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=		# none
 

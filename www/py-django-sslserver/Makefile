@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2023/07/13 10:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/07 16:02:50 adam Exp $
 
 DISTNAME=	django-sslserver-0.20
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/teddziuba/django-sslserver
 COMMENT=	SSL-enabled development server for Django
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django3
+DEPENDS+=	${PYPKGPREFIX}-django>=3:../../www/py-django
 
 USE_LANGUAGES=		# none
 
