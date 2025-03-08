@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/08 02:47:31 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib/Lowlevel.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib/Lowlevel.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Codec/Zlib/Lowlevel.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/zlib-bindings-${PKGVERSION}/${HS_VERSION}/package-description
+lib/zlib-bindings-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/Codec-Zlib-Lowlevel.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/Codec-Zlib.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/synopsis.png
+${PLIST.doc}share/doc/${HS_PLATFORM}/zlib-bindings-${PKGVERSION}/html/zlib-bindings.haddock
