@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2025/01/16 13:59:58 adam Exp $
+# $NetBSD: Makefile,v 1.52 2025/03/08 13:12:08 wiz Exp $
 
 DISTNAME=	cherrypy-18.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
 
@@ -10,9 +11,7 @@ HOMEPAGE=	https://cherrypy.dev/
 COMMENT=	Pythonic, object-oriented HTTP framework
 LICENSE=	modified-bsd
 
-WHEEL_NAME=	${DISTNAME:S/cherrypy/CherryPy/}
-
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=45:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-cheroot>=8.2.1:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-jaraco.collections-[0-9]*:../../devel/py-jaraco.collections
