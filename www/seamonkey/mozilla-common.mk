@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.25 2024/08/03 09:34:01 nia Exp $
+# $NetBSD: mozilla-common.mk,v 1.26 2025/03/08 16:15:58 nia Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -7,7 +7,6 @@
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
-USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize virtualsize
 
 GCC_REQD+=		4.9
@@ -128,52 +127,9 @@ OBJDIR=			${WRKDIR}/build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue avx86
-
-.include "../../mk/endian.mk"
-.if ${MACHINE_ENDIAN} == "little"
-PLIST.glskia=	yes
-.endif
-
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
-    ${MACHINE_ARCH} == "aarch64"
-PLIST.avx86=	yes	# see media/libav/README_MOZILLA
-.endif
-
-.if ${MACHINE_ARCH} != "sparc64"
-# For some reasons the configure test for GCC bug 26905 still triggers on
-# sparc64, which makes mozilla skip the installation of a few wrapper headers.
-# Other archs end up with one additional file in the SDK headers
-PLIST.throwwrapper=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
-PLIST.sps=	yes
-.endif
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-arm*)
-PLIST.tremor=	yes
-.else
-PLIST.vorbis=	yes
-.endif
-
-# See ${WRKSRC}/mozglue/build/moz.build: libmozglue is built and
-# installed as a shared library on these platforms.
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin" # or Android
-PLIST.mozglue=	yes
-.endif
-
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
 # support is only available when the toolkit is cairo-cocoa.
 CONFIGURE_ARGS.Darwin+=	--disable-sandbox
-
-# See ${WRKSRC}/configure.in: It tries to use MacOS X 10.6 SDK by
-# default, which is not always possible.
-.if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.4
-.elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
-CONFIGURE_ARGS+=	--enable-macos-target=10.5
-.endif
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
@@ -190,14 +146,6 @@ CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
 PREFER.bzip2?=	pkgsrc
-.endif
-
-.if ${OPSYS} == "OpenBSD"
-PLIST_SUBST+=	DLL_SUFFIX=".so.1.0"
-.elif ${OPSYS} == "Darwin"
-PLIST_SUBST+=	DLL_SUFFIX=".dylib"
-.else
-PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../mk/atomic64.mk"
