@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/02/07 13:53:43 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/08 13:09:04 wiz Exp $
 
 DISTNAME=	SQLAlchemy-i18n-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-i18n/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/kvesteri/sqlalchemy-i18n
 COMMENT=	Internationalization extension for SQLAlchemy models
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.3:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy-utils>=0.37.3:../../databases/py-sqlalchemy-utils
 DEPENDS+=	${PYPKGPREFIX}-six>=1.4.1:../../lang/py-six
@@ -23,6 +24,8 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-flake8>=2.4.0:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=3.9.6:../../devel/py-isort
 
 USE_LANGUAGES=	# none
+
+WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
