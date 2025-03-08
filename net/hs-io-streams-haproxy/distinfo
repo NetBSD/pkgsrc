@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 03:14:17 pho Exp $
+
+BLAKE2s (io-streams-haproxy-1.0.1.0.tar.gz) = 12ad3e29cb4b3659a0e737bcb07117b24896f449056b17237e3d318586937c52
+SHA512 (io-streams-haproxy-1.0.1.0.tar.gz) = 6d9f2da6b014a9f2ee894237af56376b94616af1c1795681adac4bfd10edfb851cbe1a37295025c6ebf7e77fe7b5d2abba3557ac1a9ed594deabaee05151572a
+Size (io-streams-haproxy-1.0.1.0.tar.gz) = 10348 bytes
