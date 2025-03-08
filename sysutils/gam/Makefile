@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2024/12/13 13:33:44 sborrill Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/08 13:20:15 wiz Exp $
 
 DISTNAME=	gam-7.02.00
+PKGREVISION=	1
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -14,7 +15,6 @@ COMMENT=	Command line tool for Google Workspace admins
 LICENSE=	apache-2.0
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1.0:../../devel/py-setuptools
-
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.0:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.11.2:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2-[0-9]*:../../security/py-google-auth-httplib2
@@ -25,9 +25,6 @@ DEPENDS+=	${PYPKGPREFIX}-filelock-[0-9]*:../../devel/py-filelock
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.7.2:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
-PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-PLIST_SUBST+=	INFODIR=GAM_for_Google_Workspace-${VERSION_TRIM}.dist-info
-
 REPLACE_PYTHON=	gam.py
 WRKSRC=		${WRKDIR}/GAM-${PKGVERSION_NOREV}/src
 
@@ -36,7 +33,7 @@ SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	setup.cfg
 SUBST_VARS.version=	PKGVERSION_NOREV
 
-INSTALLATION_DIRS=	bin ${PYSITELIB}
+WHEEL_NAME=	gam_for_google_workspace-${VERSION_TRIM}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
