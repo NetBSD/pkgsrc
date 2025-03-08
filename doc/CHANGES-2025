@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2119 2025/03/08 13:10:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2120 2025/03/08 13:12:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2728,3 +2728,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-mezzanine to 6.0.0nb1 [wiz 2025-03-08]
 	Updated www/py-scrapy to 2.12.0nb1 [wiz 2025-03-08]
 	Updated devel/py-jaraco.develop to 8.15.1nb1 [wiz 2025-03-08]
+	Updated www/py-cherrypy to 18.10.0nb1 [wiz 2025-03-08]
