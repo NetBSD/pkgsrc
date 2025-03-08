@@ -2733,3 +2733,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.test to 5.5.1nb1 [wiz 2025-03-08]
 	Updated sysutils/gam to 7.02.00nb1 [wiz 2025-03-08]
 	Updated x11/kitty to 0.40.0 [ktnb 2025-03-08]
+	Updated sysutils/ncdu2 to 2.7 [kaznovac 2025-03-08]
