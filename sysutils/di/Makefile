@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2025/02/24 19:28:29 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/08 10:19:04 bsiegert Exp $
 
-DISTNAME=	di-5.0.13
+DISTNAME=	di-5.0.14
 CATEGORIES=	sysutils
 MASTER_SITES=	https://sourceforge.net/projects/diskinfo-di/files/
 
