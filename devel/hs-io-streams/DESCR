@@ -1,0 +1,9 @@
+The io-streams library contains simple and easy-to-use primitives for I/O
+using streams. Most users will want to import the top-level convenience
+module System.IO.Streams, which re-exports most of the library:
+
+import System.IO.Streams (InputStream, OutputStream)
+import qualified System.IO.Streams as Streams
+
+For first-time users, io-streams comes with an included tutorial, which can
+be found in the System.IO.Streams.Tutorial module.
