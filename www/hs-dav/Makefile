@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2025/03/05 03:40:09 pho Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/08 05:13:51 pho Exp $
 
 DISTNAME=	DAV-1.3.4
 PKGNAME=	hs-${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
