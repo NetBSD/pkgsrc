@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2025/02/12 06:45:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.279 2025/03/08 16:15:58 nia Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -43,6 +43,8 @@ CONFIGURE_ARGS+=	--enable-application=comm/suite
 CONFIGURE_ARGS+=	--enable-calendar
 CONFIGURE_ARGS+=	--enable-irc
 CONFIGURE_ARGS+=	--enable-dominspector
+CONFIGURE_ARGS+=	--disable-jemalloc
+CONFIGURE_ARGS+=	--disable-webrtc
 
 ALL_ENV+=		MOZILLA_PKG_NAME=${PKGBASE}
 #ALL_ENV+=		MOZ_APP_NAME=${PKGBASE}
@@ -60,7 +62,7 @@ CHECK_INTERPRETER_SKIP+=	lib/seamonkey-sdk/sdk/bin/xpt.py
 
 CHECK_WRKREF_SKIP+=		lib/seamonkey/omni.ja
 
-CKSUM_CRATES+= third_party/rust/libc/
+CKSUM_CRATES+=	third_party/rust/libc/
 # src/unix/bsd/netbsdlike/netbsd/other/mod.rs
 CKSUMS+=	4d9f7091af8e166943ac6f42ce85558909e5b6e61325039bff7adfbcf4b90212
 CKSUMS+=	30c5211b393d9314f880f63e29833785c8b55369102eec21170a0fe0fd1c4a16
