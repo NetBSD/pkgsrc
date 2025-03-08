@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2025/02/22 14:41:44 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/08 10:05:54 wiz Exp $
 
-# update tag information in post-extract below when updating this
-DISTNAME=	wezterm-20250213.133349
-PKGREVISION=	1
+# VERSION must match the output of:
+# git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
+DISTNAME=	wezterm-20250307.120843
+VERSION=	${PKGVERSION_NOREV:S/./-/}-${GITHUB_TAG:C/(........).*/\1/}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=wezterm/}
-GITHUB_TAG=	ee0c04e735fb94cb5119681f704fb7fa6731e713
+GITHUB_TAG=	622e404be29f861589067d109bd16b643acee2c8
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	https://wezterm.org/
@@ -56,11 +57,8 @@ RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libxkbcommon}/l
 CARGO_NO_DEFAULT_FEATURES=	yes
 CARGO_FEATURES+=		distro-defaults
 
-# get the magic value below by running
-#     git -c "core.abbrev=8" show -s "--format=%cd-%h" "--date=format:%Y%m%d-%H%M%S"
-# in a git checkout.
 post-extract:
-	${ECHO} 20250213-133349-ee0c04e7 > ${WRKSRC}/.tag
+	${ECHO} ${VERSION} > ${WRKSRC}/.tag
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/wezterm \
