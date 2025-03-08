@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/08 02:54:47 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Readable.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/Data/Readable.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/Data/Readable.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+lib/readable-${PKGVERSION}/${HS_VERSION}/package-description
+lib/readable-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/Data-Readable.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/readable.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/readable-${PKGVERSION}/html/synopsis.png

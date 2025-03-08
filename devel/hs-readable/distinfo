@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 02:54:48 pho Exp $
+
+BLAKE2s (readable-0.3.1.tar.gz) = 003d97b1df7a3dd8b712386b8477467cdde85a745d50aa6ce2fe5365c7e492ed
+SHA512 (readable-0.3.1.tar.gz) = 237467c4b6dfef9fe090c53e45a1f4261e34fc947b16878575c2b1d2b93400a67678bfde3ad8500f82c56a4b87c5b45e561304c9936572a033d7b295740fb3be
+Size (readable-0.3.1.tar.gz) = 2907 bytes
