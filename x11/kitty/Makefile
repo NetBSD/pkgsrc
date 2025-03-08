@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2025/03/07 20:54:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.63 2025/03/08 14:11:34 ktnb Exp $
 
-DISTNAME=	kitty-0.39.1
-PKGREVISION=	1
+DISTNAME=	kitty-0.40.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=kovidgoyal/}
 GITHUB_PROJECT=	kitty
@@ -79,6 +78,7 @@ do-install:
 .include "../../devel/xxhash/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/librsync/buildlink3.mk"

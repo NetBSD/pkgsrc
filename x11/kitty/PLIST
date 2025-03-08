@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2025/02/07 10:48:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/03/08 14:11:34 ktnb Exp $
 bin/kitten
 bin/kitty
 lib/kitty/__main__.py
@@ -246,9 +246,6 @@ lib/kitty/kitty/file_transmission.pyo
 lib/kitty/kitty/fonts/__init__.py
 lib/kitty/kitty/fonts/__init__.pyc
 lib/kitty/kitty/fonts/__init__.pyo
-lib/kitty/kitty/fonts/box_drawing.py
-lib/kitty/kitty/fonts/box_drawing.pyc
-lib/kitty/kitty/fonts/box_drawing.pyo
 lib/kitty/kitty/fonts/common.py
 lib/kitty/kitty/fonts/common.pyc
 lib/kitty/kitty/fonts/common.pyo
@@ -634,8 +631,8 @@ share/doc/kitty/html/_images/remote_file.png
 share/doc/kitty/html/_images/screenshot.png
 share/doc/kitty/html/_images/social_previews/summary_actions_1745a1bd.png
 share/doc/kitty/html/_images/social_previews/summary_binary_478594b0.png
-share/doc/kitty/html/_images/social_previews/summary_build_7ee1e14e.png
-share/doc/kitty/html/_images/social_previews/summary_changelog_c9c504f3.png
+share/doc/kitty/html/_images/social_previews/summary_build_e554a463.png
+share/doc/kitty/html/_images/social_previews/summary_changelog_28f2229d.png
 share/doc/kitty/html/_images/social_previews/summary_clipboard_673291d1.png
 share/doc/kitty/html/_images/social_previews/summary_color-stack_b2e66ffc.png
 share/doc/kitty/html/_images/social_previews/summary_conf_6d817f14.png
@@ -690,6 +687,7 @@ share/doc/kitty/html/_images/social_previews/summary_rc_protocol_ea1138ef.png
 share/doc/kitty/html/_images/social_previews/summary_remote-control_7371e6b3.png
 share/doc/kitty/html/_images/social_previews/summary_shell-integration_4b2a7549.png
 share/doc/kitty/html/_images/social_previews/summary_support_daeae705.png
+share/doc/kitty/html/_images/social_previews/summary_text-sizing-protocol_974e580e.png
 share/doc/kitty/html/_images/social_previews/summary_underlines_c33f785f.png
 share/doc/kitty/html/_images/social_previews/summary_unscroll_98a1c6ca.png
 share/doc/kitty/html/_images/splits.png
@@ -754,6 +752,7 @@ share/doc/kitty/html/_sources/rc_protocol.rst.txt
 share/doc/kitty/html/_sources/remote-control.rst.txt
 share/doc/kitty/html/_sources/shell-integration.rst.txt
 share/doc/kitty/html/_sources/support.rst.txt
+share/doc/kitty/html/_sources/text-sizing-protocol.rst.txt
 share/doc/kitty/html/_sources/underlines.rst.txt
 share/doc/kitty/html/_sources/unscroll.rst.txt
 share/doc/kitty/html/_static/basic.css
@@ -850,6 +849,7 @@ share/doc/kitty/html/search.html
 share/doc/kitty/html/searchindex.js
 share/doc/kitty/html/shell-integration.html
 share/doc/kitty/html/support.html
+share/doc/kitty/html/text-sizing-protocol.html
 share/doc/kitty/html/underlines.html
 share/doc/kitty/html/unscroll.html
 share/icons/hicolor/256x256/apps/kitty.png
