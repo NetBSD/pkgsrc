@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2025/01/30 11:10:36 pho Exp $
+$NetBSD: distinfo,v 1.10 2025/03/08 05:10:17 pho Exp $
 
 BLAKE2s (tls-2.1.7.tar.gz) = 0faee6a2b1fb6820de750e99fe3f4658a8a6a80600d6fe8f8338e29c4ffae743
 SHA512 (tls-2.1.7.tar.gz) = 0cb83f3220be33564c48a248633a5dae1c6b4c78134e465a397f0894f3e4e0134577bf5936fbabf4412cfcb9415d7fe36be3f057cd16e37da3dc1c186edb61ee
 Size (tls-2.1.7.tar.gz) = 172969 bytes
+SHA1 (patch-Network_TLS_Parameters.hs) = 12ae291a7306f9392b4216d361b6b2bb603e1874
