@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2025/03/05 03:40:13 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/08 05:13:52 pho Exp $
 
 DISTNAME=	warp-tls-3.4.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
