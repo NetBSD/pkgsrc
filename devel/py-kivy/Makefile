@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/02/12 06:44:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/08 12:39:17 wiz Exp $
 
 DISTNAME=	Kivy-2.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=K/Kivy/}
 
@@ -13,12 +13,10 @@ LICENSE=	mit
 
 USE_TOOLS+=	pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 # For share/kivy-examples
 PYTHON_SELF_CONFLICT=	yes
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-kivy-garden-[0-9]*:../../devel/py-kivy-garden
 
@@ -37,6 +35,8 @@ DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
 
 TEST_DEPENDS+=	${PYPKGPREFIX}-test-benchmark-[0-9]*:../../devel/py-test-benchmark
+
+WHEEL_NAME=	${DISTNAME:tl}
 
 # Despite bad permissions in the distfile, extraction seems to result
 # in ok permissions, at least on NetBSD.  Commented out code remains
