@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2025/02/07 15:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/08 13:00:47 wiz Exp $
 
 DISTNAME=	pastescript-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pastes/PasteS/}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PasteScript/}
 
@@ -10,11 +11,9 @@ HOMEPAGE=	https://github.com/pasteorg/pastescript
 COMMENT=	Pluggable command-line frontend for setting up package file layouts
 LICENSE=	mit
 
-WHEEL_NAME=	${DISTNAME:S/pastes/PasteS/}
-
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-PasteDeploy-[0-9]*:../../www/py-PasteDeploy
 DEPENDS+=	${PYPKGPREFIX}-paste>=3.0:../../www/py-paste
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
