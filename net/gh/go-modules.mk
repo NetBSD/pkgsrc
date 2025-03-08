@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.38 2025/03/01 20:07:57 bsiegert Exp $
+# $NetBSD: go-modules.mk,v 1.39 2025/03/08 19:50:08 bsiegert Exp $
 
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.mod
 GO_MODULE_FILES+=	github.com/!alec!aivazis/survey/v2/@v/v2.3.7.zip
@@ -84,8 +84,8 @@ GO_MODULE_FILES+=	github.com/go-chi/chi/@v/v4.1.2+incompatible.mod
 GO_MODULE_FILES+=	github.com/go-chi/chi/@v/v4.1.2+incompatible.zip
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.1.0.mod
 GO_MODULE_FILES+=	github.com/godbus/dbus/v5/@v/v5.1.0.zip
-GO_MODULE_FILES+=	github.com/go-jose/go-jose/v4/@v/v4.0.2.mod
-GO_MODULE_FILES+=	github.com/go-jose/go-jose/v4/@v/v4.0.2.zip
+GO_MODULE_FILES+=	github.com/go-jose/go-jose/v4/@v/v4.0.5.mod
+GO_MODULE_FILES+=	github.com/go-jose/go-jose/v4/@v/v4.0.5.zip
 GO_MODULE_FILES+=	github.com/golang/snappy/@v/v0.0.4.mod
 GO_MODULE_FILES+=	github.com/golang/snappy/@v/v0.0.4.zip
 GO_MODULE_FILES+=	github.com/go-logr/logr/@v/v1.2.2.mod
@@ -261,7 +261,8 @@ GO_MODULE_FILES+=	github.com/spf13/cast/@v/v1.7.0.zip
 GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.mod
 GO_MODULE_FILES+=	github.com/spf13/cobra/@v/v1.8.1.zip
 GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.mod
-GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.5.zip
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.mod
+GO_MODULE_FILES+=	github.com/spf13/pflag/@v/v1.0.6.zip
 GO_MODULE_FILES+=	github.com/spf13/viper/@v/v1.19.0.mod
 GO_MODULE_FILES+=	github.com/spf13/viper/@v/v1.19.0.zip
 GO_MODULE_FILES+=	github.com/stretchr/objx/@v/v0.1.0.mod
