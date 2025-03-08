@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4451 2025/03/08 02:51:48 pho Exp $
+# $NetBSD: Makefile,v 1.4452 2025/03/08 02:55:04 pho Exp $
 #
 
 COMMENT=	Development utilities
@@ -735,6 +735,7 @@ SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-random
 SUBDIR+=	hs-random-shuffle
 SUBDIR+=	hs-raw-strings-qq
+SUBDIR+=	hs-readable
 SUBDIR+=	hs-refact
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-relude
