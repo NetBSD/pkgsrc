@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 02:51:31 pho Exp $
+
+BLAKE2s (io-streams-1.5.2.2.tar.gz) = c288ca163c69ff805cf526533ce3390cf4a225298de69d754deaf7016a7a6a28
+SHA512 (io-streams-1.5.2.2.tar.gz) = ba94eb8d8bed29870469666696fdc984f0abacadc71cc7b26e0aa747ffa88500946f09c37803df598476727286689f807959440ff2b1f312ab6a9d8beb248865
+Size (io-streams-1.5.2.2.tar.gz) = 64166 bytes
