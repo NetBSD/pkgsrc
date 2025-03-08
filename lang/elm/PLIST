@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/08 07:29:13 pho Exp $
+bin/elm
+share/doc/${HS_PLATFORM}/${PKGNAME}/LICENSE
