@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 03:21:46 pho Exp $
+
+BLAKE2s (snap-server-1.1.2.1.tar.gz) = a0b759a593ad68e081acba03b3d103a77cf70d85280f10af5688fac0d2c0d80a
+SHA512 (snap-server-1.1.2.1.tar.gz) = 001eee7119a0ab008289511436347b5cdbcb4707ec54a270892b0f11ad14081fa8f06e30df50625919702c37bd868a29be38035f918ce64488f6fc49c496b9c2
+Size (snap-server-1.1.2.1.tar.gz) = 73909 bytes
