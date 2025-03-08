@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 22:57:40 jakllsch Exp $
+
+BLAKE2s (vulkan-tools-1.3.296.0.tar.gz) = 29e6f612fa7812bf7156a1246c060d16947a14bbdfb29056054461fff05cb5d6
+SHA512 (vulkan-tools-1.3.296.0.tar.gz) = 66bc89272f150198cd52f2971ad67a2fd6c922ac4bafb420c0d54788ca6bab2246e8a153a09eccce15a87e1fe16fdeef16af1c6b6b13386bff79dd73858f3cae
+Size (vulkan-tools-1.3.296.0.tar.gz) = 757355 bytes
+BLAKE2s (zeux-volk-1.3.295.tar.gz) = 403e8df2d3620228fce6b97e618f0785200167ac62a1674c4b528bc140c5847e
+SHA512 (zeux-volk-1.3.295.tar.gz) = 1e0b05f0a7aa9e185b4b7ef42d53c1a23ccb8511cd3c2821e8976c11130ea196a24612ca18319fc2c0ac99bc2b1d334fc62ea9863f45800007b9bc92978da665
+Size (zeux-volk-1.3.295.tar.gz) = 63127 bytes
+SHA1 (patch-CMakeLists.txt) = b8096df88d59fe8771635f0e9a9ac18deca56599
