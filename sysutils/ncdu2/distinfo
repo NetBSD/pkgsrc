@@ -1,6 +1,5 @@
 $NetBSD: distinfo,v 1.2 2024/04/24 21:17:22 nikita Exp $
 
-BLAKE2s (ncdu-2.4.tar.gz) = 2a63316c11525522a6d7ada5a0d42f7534c4763bf9fabfceea57b2c2346fe9fe
-SHA512 (ncdu-2.4.tar.gz) = 0bbc4400d05831528415c7e22d1e4b5c43cb8682c2bc35439e150763bcbc159664fee887d0fce89d28fb4199378972ffeb54c694e27b5f58d2ddaef890b055a7
-Size (ncdu-2.4.tar.gz) = 51648 bytes
-SHA1 (patch-build-zig) = 7d0a69b565a8718437231ea3885a8cca1a47a4ba
+BLAKE2s (ncdu-2.7.tar.gz) = e5bfb259ed84639ef70be29a30250840a715acd318487e1f892d5f900818e50a
+SHA512 (ncdu-2.7.tar.gz) = 58d29583f09f6707b2a903fa37b0f263969b32a289e1f8f442044edb1a61351c7ac841dccebf92af227b35a9e6a90fa298a84dad607ad084f2a5883196935229
+Size (ncdu-2.7.tar.gz) = 71122 bytes
