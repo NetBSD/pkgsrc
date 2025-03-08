@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2024/11/11 07:27:58 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2025/03/08 12:31:18 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.41.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Utils/}
 
@@ -10,7 +11,7 @@ HOMEPAGE=	https://github.com/kvesteri/sqlalchemy-utils
 COMMENT=	Various utility functions for SQLAlchemy
 LICENSE=	modified-bsd
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=1.0:../../databases/py-sqlalchemy
 TEST_DEPENDS+=	${PYPKGPREFIX}-pygments>=1.2:../../textproc/py-pygments
 TEST_DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.3:../../textproc/py-jinja2
@@ -34,9 +35,9 @@ TEST_DEPENDS+=	${PYPKGPREFIX}-isort>=4.2.2:../../devel/py-isort
 #TEST_DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 #TEST_DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
-
 USE_LANGUAGES=	# none
+
+WHEEL_NAME=	${DISTNAME:tl:S/-/_/}
 
 .include "options.mk"
 
