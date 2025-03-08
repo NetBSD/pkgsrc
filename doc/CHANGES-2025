@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2103 2025/03/08 03:21:54 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2104 2025/03/08 07:29:21 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/hs-snap-core version 1.0.5.1 [pho 2025-03-08]
 	Added net/hs-io-streams-haproxy version 1.0.1.0 [pho 2025-03-08]
 	Added www/hs-snap-server version 1.1.2.1 [pho 2025-03-08]
+	Added lang/elm version 0.19.1 [pho 2025-03-08]
