@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/08 03:14:16 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/HAProxy.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/HAProxy.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/HAProxy.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/Internal/Address.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/Internal/Address.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/IO/Streams/Network/Internal/Address.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/io-streams-haproxy-${PKGVERSION}/${HS_VERSION}/package-description
+lib/io-streams-haproxy-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/System-IO-Streams-Network-HAProxy.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/io-streams-haproxy.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/io-streams-haproxy-${PKGVERSION}/html/synopsis.png
