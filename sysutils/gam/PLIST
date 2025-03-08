@@ -1,11 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2024/11/19 15:35:39 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/08 13:20:15 wiz Exp $
 bin/gam
-${PYSITELIB}/${INFODIR}/LICENSE
-${PYSITELIB}/${INFODIR}/METADATA
-${PYSITELIB}/${INFODIR}/RECORD
-${PYSITELIB}/${INFODIR}/WHEEL
-${PYSITELIB}/${INFODIR}/entry_points.txt
-${PYSITELIB}/${INFODIR}/top_level.txt
 ${PYSITELIB}/gam/__init__.py
 ${PYSITELIB}/gam/__init__.pyc
 ${PYSITELIB}/gam/__init__.pyo
@@ -196,3 +190,9 @@ ${PYSITELIB}/gam/iso8601/iso8601.pyo
 ${PYSITELIB}/gam/six.py
 ${PYSITELIB}/gam/six.pyc
 ${PYSITELIB}/gam/six.pyo
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/METADATA
+${PYSITELIB}/${WHEEL_INFODIR}/RECORD
+${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
+${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
+${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
