@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/08 02:59:26 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/08 04:14:00 pho Exp $
 
 DISTNAME=	snap-core-1.0.5.1
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
