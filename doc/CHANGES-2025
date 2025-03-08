@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2123 2025/03/08 13:20:24 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2124 2025/03/08 14:12:00 ktnb Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2732,3 +2732,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy-i18n to 1.1.0nb1 [wiz 2025-03-08]
 	Updated devel/py-jaraco.test to 5.5.1nb1 [wiz 2025-03-08]
 	Updated sysutils/gam to 7.02.00nb1 [wiz 2025-03-08]
+	Updated x11/kitty to 0.40.0 [ktnb 2025-03-08]
