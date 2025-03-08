@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2025/03/07 11:08:19 pho Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/08 05:13:50 pho Exp $
 
 DISTNAME=	hpack-0.38.0
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
