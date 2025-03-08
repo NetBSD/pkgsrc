@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1852 2025/03/08 02:59:48 pho Exp $
+# $NetBSD: Makefile,v 1.1853 2025/03/08 03:22:28 pho Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -180,6 +180,7 @@ SUBDIR+=	hs-servant-client
 SUBDIR+=	hs-servant-client-core
 SUBDIR+=	hs-servant-server
 SUBDIR+=	hs-snap-core
+SUBDIR+=	hs-snap-server
 SUBDIR+=	hs-wai
 SUBDIR+=	hs-wai-app-static
 SUBDIR+=	hs-wai-cors
