@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2025/03/01 20:07:57 bsiegert Exp $
+$NetBSD: distinfo,v 1.45 2025/03/08 19:50:08 bsiegert Exp $
 
-BLAKE2s (gh-2.67.0.tar.gz) = 86c8b9b54ead3630e7dcf87dd490188b0f1b0769da0577819cccc87a20219c71
-SHA512 (gh-2.67.0.tar.gz) = 60350b935e7c73259459f254023244e3e69d527d3205a66fd3d8b3a5a2e52bcee0594b49fcfc201e4a9c81a196dfb46786dd53b53dcbfc9571d63fb6f223fbdf
-Size (gh-2.67.0.tar.gz) = 12968392 bytes
+BLAKE2s (gh-2.68.1.tar.gz) = ebefd78093432574a807c683c8ffb0d9a33504d2501d7143feae8daa74652f4a
+SHA512 (gh-2.68.1.tar.gz) = cc46186151ab2711eb3b9af61e3339db542db389f594db489942f425a0101b5878cd49800f29e7bab3eeeeb67f6147f540994b9c9cac6d644aef8e4b1c3104e5
+Size (gh-2.68.1.tar.gz) = 12985312 bytes
 BLAKE2s (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 7ff4e62d167148a47ea2954be89d7301397c4c75ef6e7d27016b47e039c4637f
 SHA512 (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = f8186f43b04970d779e9fdb09128e24e6cbe66a49ed8a3e5525f0a9370f897b9f914c6755e5b33da1439b0d12d345219c4ed1c2c19913db318d8c07664bd3e0d
 Size (github.com__alec_aivazis_survey_v2_@v_v2.3.7.mod) = 595 bytes
@@ -258,12 +258,12 @@ Size (github.com_go-chi_chi_@v_v4.1.2+incompatible.mod) = 29 bytes
 BLAKE2s (github.com_go-chi_chi_@v_v4.1.2+incompatible.zip) = ae286688e0e81b5d2053909fbb5f411d686faa3a7ffc69bbe5a671ac994c472a
 SHA512 (github.com_go-chi_chi_@v_v4.1.2+incompatible.zip) = 5aec42c3144ba16106ac16103adb200e2fd77e6cf2267c3e1a648d98addafc742749560ebf8b124fffe54caf7000c6e3a5b6a150216d7eaab1edd528f1ed51cb
 Size (github.com_go-chi_chi_@v_v4.1.2+incompatible.zip) = 106340 bytes
-BLAKE2s (github.com_go-jose_go-jose_v4_@v_v4.0.2.mod) = 7da66a1660ee2e253025a40ac5e9600930abc990498c98c05473cffc7ecd9c28
-SHA512 (github.com_go-jose_go-jose_v4_@v_v4.0.2.mod) = afd8417d897888aa7b0a1312be3044e8a17f6e21cdbd398c1eac15d96efd855eb8c2602db93b71dfe8f7a1fad590e6b6465aed5a02d23bc8b8c794761f30f2a9
-Size (github.com_go-jose_go-jose_v4_@v_v4.0.2.mod) = 304 bytes
-BLAKE2s (github.com_go-jose_go-jose_v4_@v_v4.0.2.zip) = 73ca36325a1aa90021733bef0b56b0c3e3a0b7bcaaa857769aef16b917e6667f
-SHA512 (github.com_go-jose_go-jose_v4_@v_v4.0.2.zip) = fbb9303debf6b4155767c193f15fca40b49a01593d58067a042373a132c619edf649d5c96df756794ee8b2171fdb08894479f67925090a5c4ac77c0575679fa7
-Size (github.com_go-jose_go-jose_v4_@v_v4.0.2.zip) = 365718 bytes
+BLAKE2s (github.com_go-jose_go-jose_v4_@v_v4.0.5.mod) = 5dbc83ee6e7650768fcc71b97622d63e324f9ef7b0eac2362e2ffb0e47f34e05
+SHA512 (github.com_go-jose_go-jose_v4_@v_v4.0.5.mod) = 651ba3e6bd621e8a72f66be33cd1821398fb085d86cd7253fba5d9f3ce5ccb5f92efec18079e1e4b7f183d0bcfbf228c6a2abdef2464f19836701c602b76ce50
+Size (github.com_go-jose_go-jose_v4_@v_v4.0.5.mod) = 305 bytes
+BLAKE2s (github.com_go-jose_go-jose_v4_@v_v4.0.5.zip) = a9fbd80e988e80b3eb4150d79e87bedbe7a05f33d4d616c53e4233311a953508
+SHA512 (github.com_go-jose_go-jose_v4_@v_v4.0.5.zip) = 3c8f126a1d1793f4d41e562693c0ff1c6a42cc35de8171ea89aa65d56193d473ab6836717a5bcb5e4f9ffea236f40cf9f832a71ce0fc77d1e4eae6a9a32ae65f
+Size (github.com_go-jose_go-jose_v4_@v_v4.0.5.zip) = 365752 bytes
 BLAKE2s (github.com_go-logr_logr_@v_v1.2.2.mod) = 54daee7499cc13c6940dbe895aa9e993436c4f611f688ab703a8f14e29d79e2e
 SHA512 (github.com_go-logr_logr_@v_v1.2.2.mod) = c9225b7852db46ece49121f957a38d7a7cd4a63dad0286e5748bd02ec52db9469e433113f7285aee1170ab2a719a255815c71208816013ad7e51d2cd462138aa
 Size (github.com_go-logr_logr_@v_v1.2.2.mod) = 40 bytes
@@ -786,9 +786,12 @@ Size (github.com_spf13_cobra_@v_v1.8.1.zip) = 231907 bytes
 BLAKE2s (github.com_spf13_pflag_@v_v1.0.5.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
 SHA512 (github.com_spf13_pflag_@v_v1.0.5.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
 Size (github.com_spf13_pflag_@v_v1.0.5.mod) = 39 bytes
-BLAKE2s (github.com_spf13_pflag_@v_v1.0.5.zip) = 4b3cdadae11a8d2432c380818c116751885b01f307e8c59fb626cc10f07dfc44
-SHA512 (github.com_spf13_pflag_@v_v1.0.5.zip) = 9a81f0635ca8ac059c48a15cbf625a7c91513f95a9b402ba166d48ab72d5d38cbd941d5309446f5637bd7c23eef35b60fef2f06e8b557f415dd8409a6ddf43e9
-Size (github.com_spf13_pflag_@v_v1.0.5.zip) = 88931 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.6.mod) = 1b1abf476b994d1f08514612e3291343509d867ac0dbe4ebd4316f0e296a4486
+SHA512 (github.com_spf13_pflag_@v_v1.0.6.mod) = 8071c316d33aff1d8ffcabaeb42e8f9320465d83600cb57ac5ef071569f948d5cfd69e1bd2e92855c061395c1b814e84d1705f42e37f00d5bc713b6e724f29f5
+Size (github.com_spf13_pflag_@v_v1.0.6.mod) = 39 bytes
+BLAKE2s (github.com_spf13_pflag_@v_v1.0.6.zip) = 9b9fed448b5670ac79b33c17f56a47e17ce490be129405434616f37cd22a66c6
+SHA512 (github.com_spf13_pflag_@v_v1.0.6.zip) = 5b953fac0f17a29a299829784b549aa9c0a556dbd12c60e3ae98c206341f8ba2c5e981ab64d68cb89113798d795f01b85e89e2ae9d2409d9266e5f24fe652ae7
+Size (github.com_spf13_pflag_@v_v1.0.6.zip) = 94062 bytes
 BLAKE2s (github.com_spf13_viper_@v_v1.19.0.mod) = fa1287f263d8989811754b68f2fa1147d3c32daecf97ceb00e2fa5c0a18f9682
 SHA512 (github.com_spf13_viper_@v_v1.19.0.mod) = 2d41bd626afcf7aacf6435934aa20eb637591cb68b68a02e439cb881f000e991b57811652af2abe3b3339669ca2837973d0989a273a1b0750c9094e0c81773c7
 Size (github.com_spf13_viper_@v_v1.19.0.mod) = 4210 bytes
