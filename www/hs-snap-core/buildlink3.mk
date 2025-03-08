@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2025/03/08 02:59:26 pho Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2025/03/08 04:14:00 pho Exp $
 
 BUILDLINK_TREE+=	hs-snap-core
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-snap-core
 HS_SNAP_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-snap-core+=	hs-snap-core>=1.0.5
-BUILDLINK_ABI_DEPENDS.hs-snap-core+=	hs-snap-core>=1.0.5.1
+BUILDLINK_ABI_DEPENDS.hs-snap-core+=	hs-snap-core>=1.0.5.1nb1
 BUILDLINK_PKGSRCDIR.hs-snap-core?=	../../www/hs-snap-core
 
 .include "../../devel/hs-HUnit/buildlink3.mk"
