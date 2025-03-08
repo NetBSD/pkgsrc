@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2025/03/07 20:54:32 bsiegert Exp $
+# $NetBSD: Makefile,v 1.49 2025/03/08 21:26:36 vins Exp $
 
 DISTNAME=	fvwm3-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -32,12 +32,13 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_FILES.paths=	bin/fvwm-menu-desktop.in doc/fvwm3_manpage_source.adoc
 SUBST_FILES.paths+=	fvwm/fvwm3.c meson.build
-SUBST_VARS.paths=	PKG_SYSCONFDIR SED BUILDLINK_PREFIX.readline
+SUBST_VARS.paths=	PKG_SYSCONFDIR SED
 SUBST_SED.paths=	-e "s:/etc/system.fvwm2rc:${PKG_SYSCONFDIR}/fvwm/system.fvwm2rc:g"
 SUBST_SED.paths+=	-e "s:/usr/local/share/fvwm:${PREFIX}/share/fvwm:g"
 
 MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/fvwm
 MESON_ARGS+=	-Dreadline=enabled				# required by FvwmConsole
+MESON_ARGS+=	-Dreadline_lib=${BUIDLINK_PREFIX.editlinereadline}/lib
 MESON_ARGS+=	-Dgolang=disabled				# handled locally by options.mk
 MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/fvwm3/locale
 MESON_ARGS+=	-Dnls=enabled
