@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2107 2025/03/08 12:31:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2108 2025/03/08 12:36:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/wezterm to 20250307.120843 [wiz 2025-03-08]
 	Updated sysutils/di to 5.0.14 [bsiegert 2025-03-08]
 	Updated databases/py-sqlalchemy-utils to 0.41.2nb1 [wiz 2025-03-08]
+	Updated devel/py-jaraco.collections to 5.1.0nb1 [wiz 2025-03-08]
