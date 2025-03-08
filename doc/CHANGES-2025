@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2117 2025/03/08 13:05:44 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2118 2025/03/08 13:06:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2726,3 +2726,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-flask-user to 1.0.2.2nb2 [wiz 2025-03-08]
 	Updated print/py-octoprint to 1.10.3nb1 [wiz 2025-03-08]
 	Updated www/py-mezzanine to 6.0.0nb1 [wiz 2025-03-08]
+	Updated www/py-scrapy to 2.12.0nb1 [wiz 2025-03-08]
