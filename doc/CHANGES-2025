@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2105 2025/03/08 10:06:04 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2106 2025/03/08 10:19:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added www/hs-snap-server version 1.1.2.1 [pho 2025-03-08]
 	Added lang/elm version 0.19.1 [pho 2025-03-08]
 	Updated x11/wezterm to 20250307.120843 [wiz 2025-03-08]
+	Updated sysutils/di to 5.0.14 [bsiegert 2025-03-08]
