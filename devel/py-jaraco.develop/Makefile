@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2025/02/23 16:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/08 13:09:55 wiz Exp $
 
 DISTNAME=	jaraco_develop-8.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/./}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jaraco.develop/}
 
@@ -10,8 +11,7 @@ HOMEPAGE=	https://github.com/jaraco/jaraco.develop
 COMMENT=	Development utilities by jaraco
 LICENSE=	mit
 
-WHEEL_NAME=	${DISTNAME:S/_/./}
-
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm>=3.4.1:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-autocommand-[0-9]*:../../misc/py-autocommand
 DEPENDS+=	${PYPKGPREFIX}-build-[0-9]*:../../devel/py-build
