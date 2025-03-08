@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2025/03/08 20:17:29 triaxx Exp $
+# $NetBSD: Makefile,v 1.34 2025/03/08 22:05:40 wiz Exp $
 
 DISTNAME=	pyyaml-6.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyYAML/}
 
@@ -12,9 +12,9 @@ COMMENT=	Collection of libraries to process YAML with Python
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0:../../devel/py-cython
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+WHEEL_NAME=	${DISTNAME:S/pyyaml/PyYAML/}
 
 .include "../../lang/python/wheel.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
