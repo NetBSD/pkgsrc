@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2025/02/13 13:10:20 adam Exp $
+# $NetBSD: Makefile,v 1.217 2025/03/08 02:47:59 pho Exp $
 #
 
 COMMENT=	Archivers and compression tools
@@ -48,6 +48,7 @@ SUBDIR+=	hs-tar
 SUBDIR+=	hs-tar-conduit
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
+SUBDIR+=	hs-zlib-bindings
 SUBDIR+=	innoextract
 SUBDIR+=	jamjar
 SUBDIR+=	karchive
