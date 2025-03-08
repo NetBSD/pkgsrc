@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2025/01/19 16:13:21 adam Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/08 13:04:33 wiz Exp $
 
 DISTNAME=	octoprint-1.10.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	print python
 MASTER_SITES=	${MASTER_SITE_PYPI:=O/OctoPrint/}
 
@@ -9,8 +10,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/OctoPrint/OctoPrint
 COMMENT=	Snappy web interface for 3D printers
 LICENSE=	gnu-agpl-v3
-
-WHEEL_NAME=	OctoPrint-${PKGVERSION_NOREV}
 
 RCD_SCRIPTS=	octoprint
 
@@ -49,7 +48,7 @@ DEPENDS+=	${PYPKGPREFIX}-sarge>=0.1.7:../../devel/py-sarge
 DEPENDS+=	${PYPKGPREFIX}-semantic_version>=2.10.0:../../devel/py-semantic_version
 DEPENDS+=	${PYPKGPREFIX}-sentry-sdk>=1.40.0:../../devel/py-sentry-sdk
 DEPENDS+=	${PYPKGPREFIX}-serial>=3.5:../../comms/py-serial
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-tornado>=6.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=2.3.1:../../sysutils/py-watchdog
 DEPENDS+=	${PYPKGPREFIX}-websocket-client>=1.6.1:../../www/py-websocket-client
