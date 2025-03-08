@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.745 2025/03/07 18:31:31 pho Exp $
+# $NetBSD: Makefile,v 1.746 2025/03/08 07:29:32 pho Exp $
 #
 
 COMMENT=	Programming languages
@@ -51,6 +51,7 @@ SUBDIR+=	eieio
 SUBDIR+=	elisp-manual
 SUBDIR+=	elixir
 SUBDIR+=	elk
+SUBDIR+=	elm
 SUBDIR+=	embryo
 SUBDIR+=	erlang
 SUBDIR+=	erlang-doc
