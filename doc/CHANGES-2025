@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2110 2025/03/08 12:39:26 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2111 2025/03/08 12:40:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2719,3 +2719,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.collections to 5.1.0nb1 [wiz 2025-03-08]
 	Updated devel/py-jaraco.vcs to 2.4.0nb1 [wiz 2025-03-08]
 	Updated devel/py-kivy to 2.2.1nb7 [wiz 2025-03-08]
+	Updated devel/py-zope.configuration to 6.0nb1 [wiz 2025-03-08]
