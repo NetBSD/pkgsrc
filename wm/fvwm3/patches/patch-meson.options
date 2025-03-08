@@ -1,8 +1,9 @@
-$NetBSD: patch-meson.options,v 1.1 2024/12/06 21:10:16 vins Exp $
+$NetBSD: patch-meson.options,v 1.2 2025/03/08 21:26:36 vins Exp $
 
-Add option to set preferred perl intepreter.
+* Add option to set preferred perl intepreter.
+* Allow to pass readline library path. 
 
---- meson.options.orig	2024-11-30 20:43:16.000000000 +0000
+--- meson.options.orig	2025-02-08 21:38:17.000000000 +0000
 +++ meson.options
 @@ -65,6 +65,11 @@ option(
      description: 'Select python implementation',
@@ -16,3 +17,13 @@ Add option to set preferred perl intepreter.
      'readline',
      type: 'feature',
      value: 'auto',
+@@ -106,3 +111,9 @@ option(
+     value: 'auto',
+     description: 'Enable X PixMap (xpm) support',
+ )
++
++option(
++    'readline_lib',
++    type: 'string',
++    description: 'Readline library path',
++)

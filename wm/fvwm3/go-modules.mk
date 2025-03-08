@@ -1,4 +1,4 @@
-# $NetBSD: go-modules.mk,v 1.2 2024/12/01 17:41:15 vins Exp $
+# $NetBSD: go-modules.mk,v 1.3 2025/03/08 21:26:36 vins Exp $
 
 GO_MODULE_FILES+=	github.com/abiosoft/ishell/@v/v2.0.0+incompatible.mod
 GO_MODULE_FILES+=	github.com/abiosoft/ishell/@v/v2.0.0+incompatible.zip
