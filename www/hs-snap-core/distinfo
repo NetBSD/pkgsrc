@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/08 02:59:26 pho Exp $
+
+BLAKE2s (snap-core-1.0.5.1.tar.gz) = 5a9ae88481055ba15c7aa99335a37265be3f8071df63fc3695463efa822d2c69
+SHA512 (snap-core-1.0.5.1.tar.gz) = 1b4c15d0aa2d73cb09df32dbc2d2c4057f6dbd548d5c53350462b1b3dd0d892a7f7ee2726ac5a1c7fdc6070cebdbb24295c23595f662fad58300b0f5c0ae91b8
+Size (snap-core-1.0.5.1.tar.gz) = 150427 bytes
