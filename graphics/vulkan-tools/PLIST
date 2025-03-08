@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/08 22:57:40 jakllsch Exp $
+bin/vkcube
+bin/vkcubepp
+bin/vulkaninfo

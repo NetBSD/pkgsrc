@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2025/03/08 22:57:40 jakllsch Exp $
+
+Use our submodule for volk.
+
+--- CMakeLists.txt.orig	2024-10-02 19:48:47.000000000 +0000
++++ CMakeLists.txt
+@@ -56,7 +56,7 @@ endif()
+ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+ 
+ find_package(VulkanHeaders QUIET REQUIRED CONFIG)
+-find_package(volk QUIET REQUIRED CONFIG)
++add_subdirectory(volk)
+ if ((APPLE OR BUILD_TESTS) AND NOT ANDROID)
+     find_package(VulkanLoader QUIET REQUIRED CONFIG)
+ endif()
