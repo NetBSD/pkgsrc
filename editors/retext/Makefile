@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2025/01/28 02:31:38 gutteridge Exp $
+# $NetBSD: Makefile,v 1.24 2025/03/08 12:44:49 wiz Exp $
 
 DISTNAME=	retext-8.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors python
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/ReText/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/retext-project/retext
 COMMENT=	Simple but powerful editor for various markup formats
 LICENSE=	gnu-gpl-v2
 
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 # Technically asciidoc is a dependency of py-markups, but we can't cleanly
 # enable it there.
@@ -18,13 +19,10 @@ DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
 DEPENDS+=	${PYPKGPREFIX}-markups-[0-9]*:../../textproc/py-markups
 DEPENDS+=	${PYPKGPREFIX}-qt6-[0-9]*:../../x11/py-qt6
 DEPENDS+=	${PYPKGPREFIX}-sip-qt6-[0-9]*:../../x11/py-sip-qt6
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=70.1:../../devel/py-setuptools
 
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39  # py-markups
-
-WHEEL_NAME=	ReText-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	share/applications
 
