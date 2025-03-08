@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2097 2025/03/07 20:41:45 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.2098 2025/03/08 02:47:41 pho Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added lang/hs-language-glsl version 0.3.0 [pho 2025-03-07]
 	Added devel/hs-raw-strings-qq version 1.1 [pho 2025-03-07]
 	Updated lang/go123 to 1.23.7 [bsiegert 2025-03-07]
+	Added archivers/hs-zlib-bindings version 0.1.1.5 [pho 2025-03-08]
