@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.168 2024/11/14 22:21:29 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2025/03/09 14:04:48 jakllsch Exp $
 
 DISTNAME=	heimdal-7.8.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=heimdal/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -15,7 +15,6 @@ TOOL_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
 
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*
-CONFLICTS+=	openafs-[0-9]*
 CONFLICTS+=	gss-[0-9]*
 CONFLICTS+=	kth-krb4-[0-9]*
 
