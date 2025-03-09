@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/06/04 05:16:53 wiz Exp $
+$NetBSD: distinfo,v 1.10 2025/03/09 06:37:17 wiz Exp $
 
-BLAKE2s (xscope-1.4.4.tar.xz) = a027beae8ceb3f028dea3d831f3efcc9a058d7c173e3467a2f8a7ad9be669ce9
-SHA512 (xscope-1.4.4.tar.xz) = 3a9fe1e58fa7671a91a2364d7b50cf005c9b1aac18b958e8356d5733e0758534d0974c6b982935270f17277224d4efe9b2e4553f45fdb7b3aab0cbf059a8b843
-Size (xscope-1.4.4.tar.xz) = 202980 bytes
+BLAKE2s (xscope-1.4.5.tar.xz) = d7799ea9c5d9ef4caae3dae5fa4c8bbb946b403bcbd85c5e8d366c06d75930af
+SHA512 (xscope-1.4.5.tar.xz) = f880d25e92ebebaa41fd08e801c8766d0452d57cc6e807df83c45e5fc9dc51c2dd82efe14f2f8c011ddce3172a0130caac939953d519ef516ea6e09e1bf1f2e9
+Size (xscope-1.4.5.tar.xz) = 206412 bytes
