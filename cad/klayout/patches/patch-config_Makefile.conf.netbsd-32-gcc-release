@@ -1,4 +1,4 @@
-$NetBSD: patch-config_Makefile.conf.netbsd-32-gcc-release,v 1.2 2021/05/22 13:45:52 mef Exp $
+$NetBSD: patch-config_Makefile.conf.netbsd-32-gcc-release,v 1.3 2025/03/09 11:27:52 mef Exp $
 
 # Configuration file for
 # gcc, NetBSD
@@ -37,8 +37,8 @@ $NetBSD: patch-config_Makefile.conf.netbsd-32-gcc-release,v 1.2 2021/05/22 13:45
 +# 
 +# # Linker
 +LINK=gcc
-+LOPT=   -pthread -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/qt5/lib -L/usr/pkg/qt5/plugins -Wl,-R/usr/pkg/qt5/lib -Wl,-R/usr/pkg/qt5/plugins -L/usr/pkg/lib/pulseaudio -Wl,-R/usr/pkg/lib/pulseaudio -g -Wl,-E -o
-+LOPT_SO=	-Wl,-R/usr/pkg/lib:/usr/pkg/qt5/lib:/usr/lib @   -pthread -L/usr/lib -Wl,-R/usr/lib -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/pkg/qt5/lib -L/usr/pkg/qt5/plugins -Wl,-R/usr/pkg/qt5/lib -Wl,-R/usr/pkg/qt5/plugins -L/usr/pkg/lib/pulseaudio -Wl,-R/usr/pkg/lib/pulseaudio@ -g -shared -o
++LOPT=   -pthread -L/usr/lib -Wl,-R/usr/lib -L@PREFIX@/lib -Wl,-R@PPEFIX@/lib -L@PREFIX@/qt5/lib -L@PREFIX@/qt5/plugins -Wl,-R@PREFIX@/qt5/lib -Wl,-R@PREFIX@/qt5/plugins -L@PREFIX@/lib/pulseaudio -Wl,-R@PREFIX@/lib/pulseaudio -g -Wl,-E -o
++LOPT_SO=	-Wl,-R@PREFIX@/lib:@PREFIX@/qt5/lib:/usr/lib @   -pthread -L/usr/lib -Wl,-R/usr/lib -L@PREFIX@/lib -Wl,-R@PREFIX@/lib -L@PREFIX@/qt5/lib -L@PREFIX@/qt5/plugins -Wl,-R@PREFIX@/qt5/lib -Wl,-R@PREFIX@/qt5/plugins -L@PREFIX@/lib/pulseaudio -Wl,-R@PREFIX@/lib/pulseaudio@ -g -shared -o
 +# 
 +LIBS=${PTHREAD_LIBS} -L$(QTLIB) -lQtGui -lQtCore -lQtXml -lQtNetwork -lQtSql -lQtDesigner -lrt -lm -lcrypt -lz
 +
