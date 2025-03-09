@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2025/03/03 03:27:04 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/09 19:44:10 dholland Exp $
 
 DISTNAME=	why3-1.8.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://why3.gitlabpages.inria.fr/releases/
 
@@ -14,6 +15,7 @@ DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
+CONFIGURE_ARGS+=	--disable-emacs-compilation
 INSTALL_TARGET=		install install-lib
 
 DEPENDS+=		coq>=8.16:../../lang/coq
