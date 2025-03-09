@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2022/11/22 12:51:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2025/03/09 14:04:48 jakllsch Exp $
 bin/${KRB5_PREFIX}su
 bin/afslog
 bin/bsearch
@@ -18,7 +18,7 @@ bin/kswitch
 bin/ktutil
 bin/otp
 bin/otpprint
-bin/pagsh
+bin/${KRB5_PREFIX}pagsh
 bin/string2key
 bin/verify_krb5_conf
 include/krb5/asn1-common.h
@@ -184,7 +184,7 @@ man/man1/kswitch.1
 man/man1/ktutil.1
 man/man1/otp.1
 man/man1/otpprint.1
-man/man1/pagsh.1
+man/man1/${KRB5_PREFIX}pagsh.1
 man/man3/HDB.3
 man/man3/arg_printusage.3
 man/man3/data.3
