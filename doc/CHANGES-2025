@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2135 2025/03/09 06:11:52 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2136 2025/03/09 06:13:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2744,3 +2744,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-genmon-plugin to 4.2.1 [gutteridge 2025-03-09]
 	Updated devel/pkgconf to 2.4.3 [wiz 2025-03-09]
 	Updated textproc/p5-Text-CSV to 2.06 [wiz 2025-03-09]
+	Updated x11/libX11 to 1.8.12 [wiz 2025-03-09]
