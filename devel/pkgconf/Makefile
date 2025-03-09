@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2025/03/06 22:40:56 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2025/03/09 06:06:44 wiz Exp $
 
-DISTNAME=	pkgconf-2.3.0
+DISTNAME=	pkgconf-2.4.3
 CATEGORIES=	devel
 MASTER_SITES=	https://distfiles.dereferenced.org/pkgconf/
 
@@ -24,8 +24,6 @@ PKGCONFIG_PATHS=	${PREFIX}/lib/pkgconfig
 PKGCONFIG_PATHS+=	${PREFIX}/share/pkgconfig
 PKGCONFIG_PATHS+=	/usr/lib/pkgconfig
 
-# as of 2.3.0
-# 117/154 passed (37 failed)
 TEST_TARGET=	check
 
 # for reallocarray
@@ -48,3 +46,5 @@ post-install:
 	${LN} -s pkgconf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pkg-config.1
 
 .include "../../mk/bsd.pkg.mk"
+# PKG_CONFIG* variables in test environment break tests
+TEST_ENV=	HOME=${FAKEHOMEDIR}
