@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2025/01/05 22:41:18 wiz Exp $
+$NetBSD: distinfo,v 1.21 2025/03/09 22:09:38 wiz Exp $
 
-BLAKE2s (xinit-1.4.3.tar.xz) = 012d8fe511c4d43d791754bb1aa496bc8025bd5dc451927ff62e3dcb7bbe323c
-SHA512 (xinit-1.4.3.tar.xz) = ff754567d2224d1ff5023b302cae3a435950a6f24a773e214ea108b96d18b722d4cc86d0e25a7d92edea1307e3037248b4da004c1b392f73ba7bc1e04a94b77b
-Size (xinit-1.4.3.tar.xz) = 158348 bytes
+BLAKE2s (xinit-1.4.4.tar.xz) = 456235c8b9b6b2993debeff402941c4aa5a15e06b9eec35e84e586709aad45f7
+SHA512 (xinit-1.4.4.tar.xz) = 387285c952bbe074d2ed2dbbf745d1634763bb71f7f7edb22b3306b9e96ae4e28e59ecd6c48cc646b12dbdbcc68d42036bd127da75ef3c16fabdae87794ad6d1
+Size (xinit-1.4.4.tar.xz) = 162496 bytes
