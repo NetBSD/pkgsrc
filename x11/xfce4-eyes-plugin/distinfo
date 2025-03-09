@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2022/06/05 18:39:15 gutteridge Exp $
+$NetBSD: distinfo,v 1.11 2025/03/09 03:11:20 gutteridge Exp $
 
-BLAKE2s (xfce4-eyes-plugin-4.6.0.tar.bz2) = e94a1f66c5bba7e36b99b2f5e9f25a23878027a2be7dfd01383d85cc083ff860
-SHA512 (xfce4-eyes-plugin-4.6.0.tar.bz2) = 877a589e5d75ab31146183a82268c06dd58bb9d8713bb6e87283ba3c9196aa327dfcb62256e30220ac946cfd20e5d355f903a80484502fbe2ccc55506f965e0a
-Size (xfce4-eyes-plugin-4.6.0.tar.bz2) = 366703 bytes
+BLAKE2s (xfce4-eyes-plugin-4.6.2.tar.bz2) = 9a718fbbace8503acd58065f92cbc37c6e3986262b7c6ac7b04a3dfa8eec08f7
+SHA512 (xfce4-eyes-plugin-4.6.2.tar.bz2) = 38528a35573860f6340cd24b6acb183feafe6bb47c3e84fa8ad8f1a8b64c799e6a9a567b52da6c6671f218ec0bb13ee8de60525d974a6c920ba58c0783095c6e
+Size (xfce4-eyes-plugin-4.6.2.tar.bz2) = 447028 bytes
