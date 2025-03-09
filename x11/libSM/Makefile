@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2024/12/14 12:41:03 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/03/09 06:38:03 wiz Exp $
 
-DISTNAME=		libSM-1.2.5
+DISTNAME=		libSM-1.2.6
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.xz
