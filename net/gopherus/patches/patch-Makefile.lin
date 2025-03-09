@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.lin,v 1.1 2025/03/09 08:49:48 wiz Exp $
+
+Fixes ncursesw6-config to match tool name in ../devel/ncurses
+
+--- Makefile.lin.orig	2022-11-13 07:40:00.442995420 +0000
++++ Makefile.lin
+@@ -9,8 +9,8 @@ CC ?= gcc
+ CFLAGS ?= -std=gnu99 -O3 -Wall -Wextra -pedantic
+ LDFLAGS ?=
+ 
+-NC_CFLAGS := $(shell ncursesw6-config --cflags)
+-LDLIBS += $(shell ncursesw6-config --libs)
++NC_CFLAGS := $(shell ncurses6-config --cflags)
++LDLIBS += $(shell ncurses6-config --libs)
+ 
+ all: gopherus
+ 
