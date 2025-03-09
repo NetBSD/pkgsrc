@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2153 2025/03/09 14:05:03 jakllsch Exp $
+$NetBSD: CHANGES-2025,v 1.2154 2025/03/09 18:52:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed multimedia/gst-plugins1-egl-opengl [wiz 2025-03-09]
 	Removed parallel/sge [wiz 2025-03-09]
 	Updated security/heimdal to 7.8.0nb12 [jakllsch 2025-03-09]
+	Updated textproc/py-yaml to 6.0.2nb3 [wiz 2025-03-09]
