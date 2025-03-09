@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2025/03/08 07:29:13 pho Exp $
-
-BLAKE2s (elm-0.19.1.tar.gz) = d4c754cf63e99fc4c440af83572e0dee8540819e1137241c4fb868b5aa1b937c
-SHA512 (elm-0.19.1.tar.gz) = 3d961a0aab0afe742c730f0a9058ad0457437d2665e729fc88106d4a6377c7b79058419c8658931b711719447f6afe37421abcc605d0113672baaee683383ac6
-Size (elm-0.19.1.tar.gz) = 490990 bytes
-SHA1 (patch-compiler_src_Data_Name.hs) = cfc63c7d0e0838d9ef083efbab5e8d67f954103e
-SHA1 (patch-compiler_src_Data_Utf8.hs) = 0babce9f193b40c5137ff1ed12c2262ccbddb090
-SHA1 (patch-compiler_src_Parse_Variable.hs) = ff0e2110ba492d5636efd1895772bb9ad28b806d
-SHA1 (patch-compiler_src_Reporting_Doc.hs) = 3209a6abb420c32563da894c284bf8c6c5e3bbd6
