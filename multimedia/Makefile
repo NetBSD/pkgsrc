@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2025/03/03 15:29:15 manu Exp $
+# $NetBSD: Makefile,v 1.350 2025/03/09 11:23:57 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -58,7 +58,6 @@ SUBDIR+=	gst-plugins1-bad
 SUBDIR+=	gst-plugins1-base
 SUBDIR+=	gst-plugins1-dvdread
 SUBDIR+=	gst-plugins1-editing-services
-SUBDIR+=	gst-plugins1-egl-opengl
 SUBDIR+=	gst-plugins1-good
 SUBDIR+=	gst-plugins1-gtk
 SUBDIR+=	gst-plugins1-libav
