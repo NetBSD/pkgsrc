@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/03/05 03:39:00 pho Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/09 12:20:22 pho Exp $
 
 DISTNAME=	hlint-3.8
 PKGNAME=	${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell source code suggestions
 LICENSE=	modified-bsd
 
-BROKEN+=	"hlint is incompatible with GHC 9.10. The upstream has a fix but it's not been released yet. See https://github.com/ndmitchell/hlint/commit/05257f69f28a1593a2dcb65189150122cbcbce3f"
+BROKEN+=	"hlint is incompatible with GHC 9.10. The upstream has a fix but it requires GHC 9.12. See https://github.com/ndmitchell/hlint/releases/tag/v3.10"
 
 .include "../../converters/hs-aeson/buildlink3.mk"
 .include "../../devel/hs-ansi-terminal/buildlink3.mk"
