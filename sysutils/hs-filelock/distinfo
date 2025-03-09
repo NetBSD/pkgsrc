@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/09 07:18:07 pho Exp $
+
+BLAKE2s (filelock-0.1.1.7.tar.gz) = 2213abb666537742b6ccc1359875924b49771b61f6dd16557668a795fe5b136a
+SHA512 (filelock-0.1.1.7.tar.gz) = ca82dc7efde8a36dc4c7df63609159349d145e7de1fed6b9dcdc8c16b64cdddb3d13b838c39f363eb89ee82871cb2904e76cb833c5798319ed514815aac88e98
+Size (filelock-0.1.1.7.tar.gz) = 8109 bytes

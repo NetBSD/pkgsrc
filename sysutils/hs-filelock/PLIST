@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2025/03/09 07:18:07 pho Exp $
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/Flock.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/Flock.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/Flock.p_hi
+${PLIST.shlibs}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/LockFileEx.dyn_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/LockFileEx.hi
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/System/FileLock/Internal/LockFileEx.p_hi
+lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}.a
+${PLIST.prof}lib/${HS_PLATFORM}/${HS_PKGID}/libHS${HS_PKGID}_p.a
+${PLIST.shlibs}lib/${HS_PLATFORM}/libHS${HS_PKGID}-${HS_VER}.so
+lib/filelock-${PKGVERSION}/${HS_VERSION}/package-description
+lib/filelock-${PKGVERSION}/${HS_VERSION}/package-id
+share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/System-FileLock.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/filelock.haddock
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/haddock-bundle.min.js
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/linuwial.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/meta.json
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/quick-jump.css
+${PLIST.doc}share/doc/${HS_PLATFORM}/filelock-${PKGVERSION}/html/synopsis.png
