@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2130 2025/03/09 03:09:45 mef Exp $
+$NetBSD: CHANGES-2025,v 1.2131 2025/03/09 03:11:38 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2739,3 +2739,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-cpugraph-plugin to 1.2.11 [gutteridge 2025-03-09]
 	Updated sysutils/xfce4-diskperf-plugin to 2.7.1 [gutteridge 2025-03-09]
 	Updated cad/klayout to 0.29.12 [mef 2025-03-09]
+	Updated x11/xfce4-eyes-plugin to 4.6.2 [gutteridge 2025-03-09]
