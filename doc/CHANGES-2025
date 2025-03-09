@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2147 2025/03/09 11:16:39 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2148 2025/03/09 11:18:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added net/gopherus version 1.2.2 [wiz 2025-03-09]
 	Removed finance/electrum [wiz 2025-03-09]
 	Removed games/gnuchess-book-medium [wiz 2025-03-09]
+	Removed graphics/gri [wiz 2025-03-09]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25519 2025/03/09 11:14:55 wiz Exp $
+$NetBSD: TODO,v 1.25520 2025/03/09 11:18:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -516,6 +516,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o cgen-20180601
 	o cgic-207
 	o cgiirc-0.5.13
+	o cheese-44.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
 	o chrpath-0.16
