@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2141 2025/03/09 06:38:11 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2142 2025/03/09 06:52:35 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xdm to 1.1.17 [wiz 2025-03-09]
 	Updated x11/xscope to 1.4.5 [wiz 2025-03-09]
 	Updated x11/libSM to 1.2.6 [wiz 2025-03-09]
+	Updated shells/oh-my-posh to 25.2.1 [pin 2025-03-09]
