@@ -1,11 +1,25 @@
-$NetBSD: patch-meson.build,v 1.3 2025/03/08 21:26:36 vins Exp $
+$NetBSD: patch-meson.build,v 1.4 2025/03/09 18:28:29 vins Exp $
 
-* Prevent reference to build directory in perl scripts
-* Fix detection of readline and asciidoctor
+* Prevent reference to build directory in perl scripts.
+* Fix detection of readline and asciidoctor.
+* Fix iconv prototype mismatch on SunOS.
 
 --- meson.build.orig	2025-02-08 21:38:17.000000000 +0000
 +++ meson.build
-@@ -222,7 +222,7 @@ else
+@@ -89,7 +89,11 @@ conf.set_quoted('LOCALEDIR', prefix / ge
+ conf.set_quoted('FVWM_CONFDIR', prefix / get_option('sysconfdir'))
+ conf.set('RETSIGTYPE', 'void')
+ conf.set('SIGNAL_RETURN', 'return')
+-conf.set('ICONV_ARG_CONST', '')
++if host_machine.system() == 'sunos'
++    conf.set('ICONV_ARG_CONST', 'const')
++else
++    conf.set('ICONV_ARG_CONST', '')
++endif
+ conf.set('fd_set_size_t', 'int')
+ conf.set('EXECUTABLE_EXTENSION', 'NULL')
+ 
+@@ -222,7 +226,7 @@ else
  endif
  
  # Perl is a required dependency, we generate shebangs at buildtime
@@ -14,7 +28,7 @@ $NetBSD: patch-meson.build,v 1.3 2025/03/08 21:26:36 vins Exp $
  
  golang = find_program('go', required: get_option('golang'))
  if golang.found()
-@@ -237,19 +237,29 @@ if golang.found()
+@@ -237,19 +241,29 @@ if golang.found()
      endif
  else
      # the readline dependency is only required for FvwmConsole so let's only check for it if we're not building FvwmPrompt
@@ -52,7 +66,7 @@ $NetBSD: patch-meson.build,v 1.3 2025/03/08 21:26:36 vins Exp $
  
  # Optional dependencies
  # Tip: 'Feature' types always report 'not found' if disabled
-@@ -390,7 +400,7 @@ endforeach
+@@ -390,7 +404,7 @@ endforeach
  build_docs = false
  if get_option('htmldoc') or get_option('mandoc')
      build_docs = true

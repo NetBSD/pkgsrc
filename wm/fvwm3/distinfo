@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2025/03/08 21:26:36 vins Exp $
+$NetBSD: distinfo,v 1.20 2025/03/09 18:28:28 vins Exp $
 
 BLAKE2s (fvwm3-1.1.2/fvwm3-1.1.2.tar.gz) = aae90a152b485cbc7cd0f6e88d1a4e3a5392a2321ab56c28e3ea467661e4b020
 SHA512 (fvwm3-1.1.2/fvwm3-1.1.2.tar.gz) = 1b9473ebde6e9a6399fd185f83c0fc403e84f6e7d3648d141f6418e4b6489d0955d384bb2249b85b8372b8731ab205a99dcd64b0aeb697129b1164fb33090f56
@@ -191,5 +191,5 @@ SHA512 (fvwm3-1.1.2/gopkg.in_yaml.v3_@v_v3.0.0.zip) = 28237ca1abc2a7712d05a4b684
 Size (fvwm3-1.1.2/gopkg.in_yaml.v3_@v_v3.0.0.zip) = 104597 bytes
 SHA1 (patch-bin_fvwm-menu-desktop.in) = 233e16992dbf81efdb4d41421a2904bc24463c16
 SHA1 (patch-doc_meson.build) = 4fa0d191c79356b4b1c40305f1051d93f6fee247
-SHA1 (patch-meson.build) = 96cfbc6b8f794c872d29156ffdf8d9e4b36d2e8d
+SHA1 (patch-meson.build) = 65ac85987fa7f16f4f9647782540c9fad80d4176
 SHA1 (patch-meson.options) = 1b39baf3ae658cc5df1b9e951a2a1707c70aa2bd

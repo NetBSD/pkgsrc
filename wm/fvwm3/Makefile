@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2025/03/08 21:26:36 vins Exp $
+# $NetBSD: Makefile,v 1.50 2025/03/09 18:28:28 vins Exp $
 
 DISTNAME=	fvwm3-1.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fvwmorg/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -13,6 +13,8 @@ COMMENT=	Multiple large virtual desktop window manager
 LICENSE=	gnu-gpl-v2 AND mit
 
 CONFLICTS=	fvwm-[0-9]* fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]*
+
+USE_CC_FEATURES=	c99
 
 USE_TOOLS+=		grep pkg-config perl sed
 USE_TOOLS+=		msgfmt msgmerge xgettext
@@ -36,11 +38,13 @@ SUBST_VARS.paths=	PKG_SYSCONFDIR SED
 SUBST_SED.paths=	-e "s:/etc/system.fvwm2rc:${PKG_SYSCONFDIR}/fvwm/system.fvwm2rc:g"
 SUBST_SED.paths+=	-e "s:/usr/local/share/fvwm:${PREFIX}/share/fvwm:g"
 
-MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/fvwm
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__ 			#strncasecmp()
+LDFLAGS.SunOS+=		-lsocket
+
+MESON_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}/fvwm
+MESON_ARGS+=	--localedir=${PKGLOCALEDIR}/locale
 MESON_ARGS+=	-Dreadline=enabled				# required by FvwmConsole
-MESON_ARGS+=	-Dreadline_lib=${BUIDLINK_PREFIX.editlinereadline}/lib
 MESON_ARGS+=	-Dgolang=disabled				# handled locally by options.mk
-MESON_ARGS+=	-Dlocaledir=${PKGLOCALEDIR}/fvwm3/locale
 MESON_ARGS+=	-Dnls=enabled
 # otherwise we get installed scripts that point to the tools directory
 MESON_ARGS+=	-Dpython=${PYTHONBIN:Q}
@@ -65,4 +69,9 @@ BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline"
+MESON_ARGS+=    -Dreadline_lib=${BUILDLINK_PREFIX.editline}/lib
+.else
+MESON_ARGS+=    -Dreadline_lib=${BUILDLINK_PREFIX.readline}/lib
+.endif
 .include "../../mk/bsd.pkg.mk"
