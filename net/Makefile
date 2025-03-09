@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1594 2025/03/08 03:15:04 pho Exp $
+# $NetBSD: Makefile,v 1.1595 2025/03/09 08:50:00 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -208,6 +208,7 @@ SUBDIR+=	go-dnstap
 SUBDIR+=	go-websocket
 SUBDIR+=	gofish
 SUBDIR+=	gopher
+SUBDIR+=	gopherus
 SUBDIR+=	gping
 SUBDIR+=	grilo
 SUBDIR+=	grilo-plugins
