@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25520 2025/03/09 11:18:55 wiz Exp $
+$NetBSD: TODO,v 1.25521 2025/03/09 11:21:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o qtcreator-13.0
 	o quazip-1.1
 	o qutebrowser-3.0.1
-	o radiance-5.3
+	o radiance-5.4
 	o rails-6.1.0
 	o rasmol-2.7.5.2
 	o rat-4.2.25
@@ -1219,7 +1219,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o shairport-sync-4.1.1
 	o sharity-3.7
 	o shc-3.8.9b
-	o shotwell-0.30.10
+	o shotwell-0.32.10
 	o showfont-1.0.4 [wip]
 	o silc-1.1.11
 	o silc-client-1.1.11

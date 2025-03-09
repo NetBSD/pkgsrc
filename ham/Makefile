@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2025/02/27 13:49:50 adam Exp $
+# $NetBSD: Makefile,v 1.56 2025/03/09 11:21:37 wiz Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -33,7 +33,6 @@ SUBDIR+=	gnuradio-zeromq
 SUBDIR+=	gpredict
 SUBDIR+=	gqrx
 SUBDIR+=	gr-osmosdr
-SUBDIR+=	grig
 SUBDIR+=	hackrf
 SUBDIR+=	hamlib
 SUBDIR+=	kalibrate-hackrf
