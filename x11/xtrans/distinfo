@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.32 2024/11/10 08:27:46 wiz Exp $
+$NetBSD: distinfo,v 1.33 2025/03/09 06:33:20 wiz Exp $
 
-BLAKE2s (xtrans-1.5.2.tar.xz) = d45e8e88608a02de60e1bbeec2714e4d66f50902b506a9a7c184d64097d81b49
-SHA512 (xtrans-1.5.2.tar.xz) = 4c4909402cb7df0d69bf2801722de822f7e376d585ff5aa8db8f88be77ed7fb7dfbdc410827069fc5041327e81afeb9d403c6c92e5c1e02d593c829ef6c37536
-Size (xtrans-1.5.2.tar.xz) = 176680 bytes
+BLAKE2s (xtrans-1.6.0.tar.xz) = a728c949108a4d7fe8f7dcd60d611b25196e21da4f8b4e6438d0b007b01dc171
+SHA512 (xtrans-1.6.0.tar.xz) = e0ac4a2df0eeacdf23cedd74fee063a8eea81d05c4c4c9a9a113b9b4238db7cacb3c831973ac647fe1a5b06426dcdf0b2f8be5ac27862700333269880e25725b
+Size (xtrans-1.6.0.tar.xz) = 177156 bytes
