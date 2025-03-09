@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2025/03/03 03:27:04 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4 2025/03/09 19:44:10 dholland Exp $
 bin/isabelle_client
 bin/why3
 lib/ocaml/site-lib/why3/META
@@ -102,7 +102,6 @@ lib/why3/why3-call-pvs
 lib/why3/why3cpulimit
 lib/why3/why3server
 share/emacs/site-lisp/why3.el
-share/emacs/site-lisp/why3.elc
 share/why3/LICENSE
 share/why3/Makefile.config
 share/why3/drivers/alt_ergo.drv
