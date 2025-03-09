@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/12/01 17:52:29 vins Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/03/09 20:38:41 vins Exp $
 bin/toot
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -51,6 +51,9 @@ ${PYSITELIB}/toot/cli/tags.pyo
 ${PYSITELIB}/toot/cli/timelines.py
 ${PYSITELIB}/toot/cli/timelines.pyc
 ${PYSITELIB}/toot/cli/timelines.pyo
+${PYSITELIB}/toot/cli/timelines_v2.py
+${PYSITELIB}/toot/cli/timelines_v2.pyc
+${PYSITELIB}/toot/cli/timelines_v2.pyo
 ${PYSITELIB}/toot/cli/tui.py
 ${PYSITELIB}/toot/cli/tui.pyc
 ${PYSITELIB}/toot/cli/tui.pyo
