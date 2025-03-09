@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2146 2025/03/09 11:14:55 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2147 2025/03/09 11:16:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Renamed lang/elm to lang/elm-lang [pho 2025-03-09]
 	Added net/gopherus version 1.2.2 [wiz 2025-03-09]
 	Removed finance/electrum [wiz 2025-03-09]
+	Removed games/gnuchess-book-medium [wiz 2025-03-09]
