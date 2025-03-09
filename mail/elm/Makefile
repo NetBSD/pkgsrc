@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/08/19 00:20:25 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2025/03/09 07:43:48 pho Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
@@ -16,6 +16,7 @@ DEPENDS+=		metamail>=2.7:../../mail/metamail
 
 CONFLICTS+=		mm-[0-9]*
 CONFLICTS+=		elm-me-[0-9]*
+CONFLICTS+=		elm-lang-[0-9]*	# lang/elm-lang
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
