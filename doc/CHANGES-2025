@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2160 2025/03/09 20:10:29 bsiegert Exp $
+$NetBSD: CHANGES-2025,v 1.2161 2025/03/09 20:26:09 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2769,3 +2769,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/go-impl to 1.4.0 [bsiegert 2025-03-09]
 	Updated databases/sqlc to 1.28.0 [bsiegert 2025-03-09]
 	Updated sysutils/hwdata to 0.393 [bsiegert 2025-03-09]
+	Updated sysutils/fastfetch to 2.38.0 [vins 2025-03-09]
