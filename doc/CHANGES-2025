@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2151 2025/03/09 11:23:57 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2152 2025/03/09 11:27:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2760,3 +2760,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed ham/grig [wiz 2025-03-09]
 	Removed mail/prayer [wiz 2025-03-09]
 	Removed multimedia/gst-plugins1-egl-opengl [wiz 2025-03-09]
+	Removed parallel/sge [wiz 2025-03-09]
