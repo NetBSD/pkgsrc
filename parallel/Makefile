@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2023/05/09 08:04:35 adam Exp $
+# $NetBSD: Makefile,v 1.40 2025/03/09 11:27:56 wiz Exp $
 #
 
 COMMENT=	Applications dealing with parallelism in computing
@@ -30,7 +30,6 @@ SUBDIR+=	pvm3
 SUBDIR+=	py-billiard
 SUBDIR+=	py-ipyparallel
 SUBDIR+=	py-threadpoolctl
-SUBDIR+=	sge
 SUBDIR+=	slurm-wlm
 SUBDIR+=	spirv-headers
 SUBDIR+=	spirv-llvm-translator
