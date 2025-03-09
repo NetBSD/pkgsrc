@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2164 2025/03/09 20:54:35 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2165 2025/03/09 20:57:08 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2773,3 +2773,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated chat/toot to 0.48.0 [vins 2025-03-09]
 	Updated devel/ast-grep to 0.36.0 [pin 2025-03-09]
 	Updated devel/got to 0.109 [vins 2025-03-09]
+	Updated editors/focuswriter to 1.8.11 [pin 2025-03-09]
