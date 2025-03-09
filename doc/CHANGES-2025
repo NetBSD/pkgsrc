@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2132 2025/03/09 03:17:36 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2133 2025/03/09 03:37:04 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cad/klayout to 0.29.12 [mef 2025-03-09]
 	Updated x11/xfce4-eyes-plugin to 4.6.2 [gutteridge 2025-03-09]
 	Updated sysutils/xfce4-fsguard-plugin to 1.1.4 [gutteridge 2025-03-09]
+	Updated sysutils/xfce4-genmon-plugin to 4.2.1 [gutteridge 2025-03-09]
