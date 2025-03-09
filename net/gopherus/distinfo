@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2025/03/09 08:49:48 wiz Exp $
+
+BLAKE2s (gopherus-1.2.2.tar.xz) = f19e3cd9db5abd73517fdff452d9042f905a7c76760058955f70e2b6aa09d18d
+SHA512 (gopherus-1.2.2.tar.xz) = f4b912d13ef7fa281bf3e2d21efcaf4278d79eff335356bbc50a3fe221a76c78411eb50d309d17daa2542daa402006b4d772427fb59531d13ffd3e3583ace82a
+Size (gopherus-1.2.2.tar.xz) = 320688 bytes
+SHA1 (patch-Makefile.lin) = 455e27be57bfdc28265029b86919fd01a5f6082f
