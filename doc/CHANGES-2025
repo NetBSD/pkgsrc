@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2149 2025/03/09 11:21:37 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2150 2025/03/09 11:22:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2758,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed games/gnuchess-book-medium [wiz 2025-03-09]
 	Removed graphics/gri [wiz 2025-03-09]
 	Removed ham/grig [wiz 2025-03-09]
+	Removed mail/prayer [wiz 2025-03-09]
