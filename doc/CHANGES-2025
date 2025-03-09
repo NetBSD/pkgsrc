@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2144 2025/03/09 07:40:15 pho Exp $
+$NetBSD: CHANGES-2025,v 1.2145 2025/03/09 08:50:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2753,3 +2753,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.2.1 [pin 2025-03-09]
 	Added sysutils/hs-filelock version 0.1.1.7 [pho 2025-03-09]
 	Renamed lang/elm to lang/elm-lang [pho 2025-03-09]
+	Added net/gopherus version 1.2.2 [wiz 2025-03-09]
