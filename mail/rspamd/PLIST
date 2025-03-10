@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2024/12/28 09:53:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.35 2025/03/10 13:15:47 schmonz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
@@ -164,6 +164,7 @@ share/rspamd/lualib/lua_auth_results.lua
 share/rspamd/lualib/lua_aws.lua
 share/rspamd/lualib/lua_bayes_learn.lua
 share/rspamd/lualib/lua_bayes_redis.lua
+share/rspamd/lualib/lua_cache.lua
 share/rspamd/lualib/lua_cfg_transform.lua
 share/rspamd/lualib/lua_cfg_utils.lua
 share/rspamd/lualib/lua_clickhouse.lua
@@ -333,6 +334,7 @@ share/rspamd/rules/regexp/compromised_hosts.lua
 share/rspamd/rules/regexp/headers.lua
 share/rspamd/rules/regexp/misc.lua
 share/rspamd/rules/regexp/upstream_spam_filters.lua
+share/rspamd/rules/regexp/urls.lua
 share/rspamd/rules/rspamd.lua
 share/rspamd/rules/subject_checks.lua
 share/rspamd/www/README.md
