@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2023/11/24 20:25:39 jakllsch Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/10 15:38:12 jakllsch Exp $
 
-DISTNAME=	Argyll_V3.0.2_src
+DISTNAME=	Argyll_V3.3.0_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
@@ -19,8 +19,6 @@ PKGCONFIG_OVERRIDE+=	png/libpng.pc.in
 PKGCONFIG_OVERRIDE+=	tiff/libtiff-4.pc.in
 PKGCONFIG_OVERRIDE+=	xml/mxml.pc.in
 PKGCONFIG_OVERRIDE+=	zlib/zlib.pc.in
-
-BUILDLINK_TRANSFORM+=	rm:-ldl
 
 TOOL_DEPENDS+=	jam>=2.5.2:../../devel/jam
 

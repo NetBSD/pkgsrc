@@ -1,12 +1,12 @@
-$NetBSD: patch-Jamtop,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+$NetBSD: patch-Jamtop,v 1.2 2025/03/10 15:38:12 jakllsch Exp $
 
 Search and use pkgsrc ${X11BASE} and ${PREFIX} paths.
 Recognize pkgsrc libpng16.so (somewhat haphazardly).
 Recognize NetBSD.
 
---- Jamtop.orig	2023-10-23 00:55:56.000000000 +0000
+--- Jamtop.orig	2024-09-24 22:29:00.000000000 +0000
 +++ Jamtop
-@@ -83,7 +83,11 @@ if $(UNIX) {
+@@ -86,7 +86,11 @@ if $(UNIX) {
  
  	# Hmm. Would be nice to use pkg-config here, if system has it.
  	} else {
@@ -19,7 +19,7 @@ Recognize NetBSD.
  			LibWinH = /usr/X11R6/include ;
  		} else if [ GLOB /usr/include/X11 : X.h ] {
  			LibWinH = /usr/include ;
-@@ -94,7 +98,11 @@ if $(UNIX) {
+@@ -97,7 +101,11 @@ if $(UNIX) {
  		}
  
  		if $(HOST64) {
@@ -32,7 +32,7 @@ Recognize NetBSD.
  				LibWinD = /usr/X11R6/lib ;
  			} else if [ GLOB /usr/lib/x86_64-linux-gnu : libX11.so libX11.a ] {
  				LibWinD = /usr/lib/x86_64-linux-gnu ;
-@@ -108,7 +116,11 @@ if $(UNIX) {
+@@ -111,7 +119,11 @@ if $(UNIX) {
  				ECHO Unable to locate the 64 bit X11 library files ;
  			}
  		} else {
@@ -45,7 +45,7 @@ Recognize NetBSD.
  				LibWinD = /usr/X11R6/lib ;
  			} else if [ GLOB /usr/lib/i386-linux-gnu : libX11.so libX11.a ] {
  				LibWinD = /usr/lib/i386-linux-gnu ;
-@@ -123,6 +135,9 @@ if $(UNIX) {
+@@ -126,6 +138,9 @@ if $(UNIX) {
  		if $(OS) = FREEBSD {
  			LINKFLAGS += -g -lrt -lusb ;
  			GUILINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss  ;
@@ -55,20 +55,24 @@ Recognize NetBSD.
  		} else if $(OS) = OPENBSD {
  			LINKFLAGS += ;
  			GUILINKFLAGS += -L$(LibWinD) -g -lX11 -lXext -lXxf86vm -lXinerama -lXrandr -lXau -lXdmcp -lXss -L/usr/local/lib ;
-@@ -153,11 +168,14 @@ rule CheckForLibrary {
+@@ -156,7 +171,8 @@ rule CheckForLibrary {
  	}
  
  	if ! $(BUILTIN_$(UCASE)) && $(UNIX) {
--		if  [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
-+		if  [ GLOB $(PREFIX)/include$(subd) : $(lcase).h $(lcase)lib.h ]
+-	    if  [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
++	    if  [ GLOB $(PREFIX)/include$(subd) : $(lcase).h $(lcase)lib.h ]
 +		 || [ GLOB /usr/include$(subd) : $(lcase).h $(lcase)lib.h ]
- 	     || [ GLOB /usr/local/include$(subd) : $(lcase).h $(lcase)lib.h ]
+ 		 || [ GLOB /usr/local/include$(subd) : $(lcase).h $(lcase)lib.h ]
  		 || [ GLOB /usr/include/x86_64-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
- 	     || [ GLOB /usr/include/i386-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ] {
--			if  [ GLOB /usr/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
-+			if  [ GLOB $(PREFIX)/lib : lib$(lcase).so ] || [ GLOB $(PREFIX)/lib : lib$(lcase).a ]
-+			 || [ GLOB $(PREFIX)/lib : lib$(lcase)16.so ] || [ GLOB $(PREFIX)/lib : lib$(lcase)16.a ]
-+			 || [ GLOB /usr/lib : lib$(lcase).so ] || [ GLOB /usr/lib : lib$(lcase).a ]
- 			 || [ GLOB /usr/local/lib : lib$(lcase).so ] || [ GLOB /usr/local/lib : lib$(lcase).a ]
- 			 || [ GLOB /usr/lib64 : lib$(lcase).so ] || [ GLOB /usr/lib64 : lib$(lcase).a ]
- 			 || [ GLOB /usr/lib/x86_64-linux-gnu : lib$(lcase).so ]
+ 		 || [ GLOB /usr/include/i386-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
+@@ -183,7 +199,9 @@ rule CheckForLibrary {
+ 		 || [ GLOB /usr/include/sparc-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
+ 		 || [ GLOB /usr/include/sparc64-linux-gnu$(subd) : $(lcase).h $(lcase)lib.h ]
+ 		 || [ GLOB /usr/include/x86_64-linux-gnux32$(subd) : $(lcase).h $(lcase)lib.h ] {
+-		    if  [ GLOB /usr/lib : lib$(lcase).so ]  || [ GLOB /usr/lib : lib$(lcase).a ]
++		    if  [ GLOB $(PREFIX)/lib : lib$(lcase).so ] || [ GLOB $(PREFIX)/lib : lib$(lcase).a ]
++		         || [ GLOB $(PREFIX)/lib : lib$(lcase)16.so ] || [ GLOB $(PREFIX)/lib : lib$(lcase)16.a ]
++		         || [ GLOB /usr/lib : lib$(lcase).so ]  || [ GLOB /usr/lib : lib$(lcase).a ]
+ 			 || [ GLOB /usr/local/lib : lib$(lcase).so ]
+ 			 || [ GLOB /usr/local/lib : lib$(lcase).a ]
+ 			 || [ GLOB /usr/lib64 : lib$(lcase).so ]
