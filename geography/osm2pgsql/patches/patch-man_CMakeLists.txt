@@ -1,7 +1,11 @@
-$NetBSD: patch-docs_CMakeLists.txt,v 1.1 2025/01/06 19:18:00 gdt Exp $
+$NetBSD: patch-man_CMakeLists.txt,v 1.1 2025/03/10 22:54:38 gdt Exp $
 
---- docs/CMakeLists.txt.orig	2025-01-06 18:19:00.158960664 +0000
-+++ docs/CMakeLists.txt
+Ask cmake config to respect CMAKE_INSTALL_MANDIR.
+
+\todo File upstream.
+
+--- man/CMakeLists.txt.orig	2025-01-06 18:19:00.158960664 +0000
++++ man/CMakeLists.txt
 @@ -62,9 +62,9 @@ if(MANPAGE_TARGETS)
  endif()
  
