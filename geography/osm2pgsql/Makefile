@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2025/01/06 19:18:00 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2025/03/10 22:54:38 gdt Exp $
 
-DISTNAME=	osm2pgsql-1.9.2
+DISTNAME=	osm2pgsql-1.11.0
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openstreetmap/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -39,12 +39,14 @@ TEST_TARGET=	test
 .include "../../textproc/nlohmann-json/buildlink3.mk"
 
 # vendored libs which could be provided:
+#   CLI11
 #   fmt
 #   libosmium
 #   protozero
 
 # optional for generalization:
 #   cimg
+#   opencv
 #   potrace
 
 .include "../../mk/bsd.pkg.mk"
