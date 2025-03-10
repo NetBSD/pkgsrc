@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2024/12/07 20:37:34 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/10 07:23:48 vins Exp $
 
 DISTNAME=	table-mysql-1.2.1
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
 CATEGORIES=	mail databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opensmtpd/}
@@ -25,11 +26,8 @@ SUBST_MESSAGE.dir=	Fixing smtpdir for pkgsrc.
 SUBST_FILES.dir=	Makefile.am
 SUBST_SED.dir+=		-e "s:libexec/smtpd:libexec/opensmtpd:g"
 
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-
 pre-configure:
-	set -e; cd ${WRKSRC} && autoreconf -fiv
+	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
