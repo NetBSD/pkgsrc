@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2179 2025/03/10 15:43:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2180 2025/03/10 15:45:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/argyllcms to 3.3.0 [jakllsch 2025-03-10]
 	Updated x11/dunst to 1.12.2 [wiz 2025-03-10]
 	Updated audio/faad2 to 2.11.2 [wiz 2025-03-10]
+	Updated graphics/libheif to 1.19.7 [wiz 2025-03-10]
