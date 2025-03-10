@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2023/12/31 21:36:46 wiz Exp $
+$NetBSD: distinfo,v 1.8 2025/03/10 15:46:37 wiz Exp $
 
-BLAKE2s (tinyxml2-10.0.0.tar.gz) = 7e843ce018e598da3656f5986f75fa64ea09d038164cf002c796255ffa130920
-SHA512 (tinyxml2-10.0.0.tar.gz) = a359d33bc12fad455b53d81011dbe12727cae0aabfaa5704f1a25807ca216dd854a571291029886c0beedeca5c3b6393dd49c4718773e18a0e008abbdb3de36a
-Size (tinyxml2-10.0.0.tar.gz) = 642421 bytes
+BLAKE2s (tinyxml2-10.1.0.tar.gz) = b14425579ebd08c2f69f42596b164b5c2a7783f5a151afab760e0faed4485a9d
+SHA512 (tinyxml2-10.1.0.tar.gz) = acdd42c7431de65272fdcb2cdf64beb44efc97deffed45f9933453883182238a60071bec5dda2f87d166dd8455e8cd3118af6937ddd7c6abacafda2a060f6cc6
+Size (tinyxml2-10.1.0.tar.gz) = 642822 bytes
