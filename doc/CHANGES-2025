@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2172 2025/03/10 13:46:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2173 2025/03/10 13:47:37 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2781,3 +2781,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated emulators/qemu to 9.2.2nb2 [imil 2025-03-10]
 	Updated mail/rspamd to 3.11.1 [schmonz 2025-03-10]
 	Updated emulators/qemu to 9.2.2nb3 [wiz 2025-03-10]
+	Updated sysutils/flashprog to 1.4 [jakllsch 2025-03-10]

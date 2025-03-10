@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2024/08/31 19:46:15 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/03/10 13:47:37 jakllsch Exp $
+bin/flashprog
 include/libflashprog.h
 lib/libflashprog.a
 lib/libflashprog.so
 lib/libflashprog.so.1
 lib/libflashprog.so.1.0.0
 lib/pkgconfig/flashprog.pc
+man/man8/flashprog-config.8
+man/man8/flashprog-write-protect.8
 man/man8/flashprog.8
-sbin/flashprog
