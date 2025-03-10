@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/10 09:02:51 sborrill Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/10 09:07:53 wiz Exp $
 
 DISTNAME=	gam-7.05.08
 CATEGORIES=	sysutils python
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/GAM-team/GAM
 COMMENT=	Command line tool for Google Workspace admins
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=66.1.0:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools>=75.8.2:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-google-api-python-client>=2.0:../../www/py-google-api-python-client
 DEPENDS+=	${PYPKGPREFIX}-google-auth>=1.11.2:../../security/py-google-auth
 DEPENDS+=	${PYPKGPREFIX}-google-auth-httplib2-[0-9]*:../../security/py-google-auth-httplib2
@@ -32,7 +32,7 @@ SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	setup.cfg
 SUBST_VARS.version=	PKGVERSION_NOREV
 
-WHEEL_NAME=	GAM_for_Google_Workspace-${VERSION_TRIM}
+WHEEL_NAME=	gam_for_google_workspace-${VERSION_TRIM}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
