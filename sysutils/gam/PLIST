@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2025/03/08 13:20:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/03/10 09:02:51 sborrill Exp $
 bin/gam
 ${PYSITELIB}/gam/__init__.py
 ${PYSITELIB}/gam/__init__.pyc
@@ -124,12 +124,6 @@ ${PYSITELIB}/gam/gdata/apps/contacts/service.pyo
 ${PYSITELIB}/gam/gdata/apps/service.py
 ${PYSITELIB}/gam/gdata/apps/service.pyc
 ${PYSITELIB}/gam/gdata/apps/service.pyo
-${PYSITELIB}/gam/gdata/apps/sites/__init__.py
-${PYSITELIB}/gam/gdata/apps/sites/__init__.pyc
-${PYSITELIB}/gam/gdata/apps/sites/__init__.pyo
-${PYSITELIB}/gam/gdata/apps/sites/service.py
-${PYSITELIB}/gam/gdata/apps/sites/service.pyc
-${PYSITELIB}/gam/gdata/apps/sites/service.pyo
 ${PYSITELIB}/gam/gdata/service.py
 ${PYSITELIB}/gam/gdata/service.pyc
 ${PYSITELIB}/gam/gdata/service.pyo

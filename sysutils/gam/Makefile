@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/03/08 13:20:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/10 09:02:51 sborrill Exp $
 
-DISTNAME=	gam-7.02.00
-PKGREVISION=	1
+DISTNAME=	gam-7.05.08
 CATEGORIES=	sysutils python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GAM-team/}
 GITHUB_PROJECT=	GAM
@@ -33,7 +32,7 @@ SUBST_STAGE.version=	pre-configure
 SUBST_FILES.version=	setup.cfg
 SUBST_VARS.version=	PKGVERSION_NOREV
 
-WHEEL_NAME=	gam_for_google_workspace-${VERSION_TRIM}
+WHEEL_NAME=	GAM_for_Google_Workspace-${VERSION_TRIM}
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
