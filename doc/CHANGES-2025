@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2169 2025/03/10 09:24:45 fox Exp $
+$NetBSD: CHANGES-2025,v 1.2170 2025/03/10 11:55:56 imil Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/gam to 7.05.08 [sborrill 2025-03-10]
 	Updated sysutils/pfetch to 1.8.1 [fox 2025-03-10]
 	Updated audio/fasttracker2 to 1.95 [fox 2025-03-10]
+	Updated emulators/qemu to 9.2.2nb2 [imil 2025-03-10]
