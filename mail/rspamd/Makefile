@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2025/03/10 13:15:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.121 2025/03/10 13:20:49 schmonz Exp $
 #
 # When updating this, run 'make cfgfiles'.
 
@@ -116,7 +116,6 @@ CMAKE_GENERATOR=	make
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/fann/buildlink3.mk"
