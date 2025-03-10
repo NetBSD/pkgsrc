@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2168 2025/03/10 09:21:45 fox Exp $
+$NetBSD: CHANGES-2025,v 1.2169 2025/03/10 09:24:45 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2777,3 +2777,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xinit to 1.4.4 [wiz 2025-03-09]
 	Updated sysutils/gam to 7.05.08 [sborrill 2025-03-10]
 	Updated sysutils/pfetch to 1.8.1 [fox 2025-03-10]
+	Updated audio/fasttracker2 to 1.95 [fox 2025-03-10]
