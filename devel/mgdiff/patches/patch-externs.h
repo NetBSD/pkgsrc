@@ -1,6 +1,7 @@
-$NetBSD: patch-externs.h,v 1.1 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-externs.h,v 1.2 2025/03/10 08:54:50 vins Exp $
 
-Pull patches from Debian.
+* Pull patches from Debian.
+* Provide a declaration of reload_both().
 
 --- externs.h.orig	1994-05-19 02:01:05.000000000 +0000
 +++ externs.h
@@ -15,7 +16,12 @@ Pull patches from Debian.
  #endif
  
  extern int main (int argc, char *argv[]);
-@@ -43,7 +43,7 @@ extern DiffInfo *blank_diff_info (void);
+@@ -39,11 +39,12 @@ extern void process_right_file (char *fi
+ extern void toggle_open_sensitive (Boolean sensitive);
+ extern void toggle_openlr_sensitive (Boolean sensitive);
+ extern void free_diff_info (DiffInfo *di);
++extern void reload_both (void);
+ extern DiffInfo *blank_diff_info (void);
  extern DiffInfo *build_diff_info (char *prog, char *args, char *path1, char *path2);
  extern int max (int i, int j);
  extern int min (int i, int j);
@@ -24,7 +30,7 @@ Pull patches from Debian.
  extern void set_cursor (Widget w);
  extern void reset_cursor (Widget w);
  extern Widget get_top_shell (Widget w);
-@@ -61,5 +61,6 @@ extern void add_editres (Widget shell);
+@@ -61,5 +62,6 @@ extern void add_editres (Widget shell);
  extern void turn_off_sash_traversal (Widget pane);
  extern void show_legend (Widget parent);
  extern void show_context (Widget parent);
