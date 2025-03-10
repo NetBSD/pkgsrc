@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2025/02/12 06:44:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.133 2025/03/10 09:23:31 fox Exp $
 
-DISTNAME=	fasttracker2-1.93
-PKGREVISION=	1
+DISTNAME=	fasttracker2-1.95
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=8bitbubsy/}
 GITHUB_PROJECT=	ft2-clone
