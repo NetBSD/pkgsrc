@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2023/12/07 08:22:44 wiz Exp $
+$NetBSD: distinfo,v 1.38 2025/03/10 15:42:45 wiz Exp $
 
-BLAKE2s (faad2-2.11.1.tar.gz) = 2e494d7c590e419d8c9de094cad121a63fb255cfba24b6941667337d15cc328f
-SHA512 (faad2-2.11.1.tar.gz) = b8f17680610b2f47344ea52b54412a02810a85eaf9d4c91b97ca09b2c6415c62d4af1b0771bfcacb9dfee400ed34504c0bd3c28369921c0392b3809e7de46ec5
-Size (faad2-2.11.1.tar.gz) = 657255 bytes
+BLAKE2s (faad2-2.11.2.tar.gz) = 410a9e9fb32ccde326885a4928fa08fc54abcecbd39e99fb9a5dacda0523e604
+SHA512 (faad2-2.11.2.tar.gz) = fd140c0f4e7946e95a49a8652e26f33b138fc3375da34d5e3a55cdde8a74be429eb6fe0180bd434841022cee3c2ec65fe40dda7440fe0dd2761622174f992490
+Size (faad2-2.11.2.tar.gz) = 657260 bytes
 SHA1 (patch-CMakeLists.txt) = 28a4680cd053a96eba052d35e0c3661df077aaee
