@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.327 2025/03/05 16:59:37 morr Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.328 2025/03/10 13:57:53 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26137,3 +26137,7 @@ exiv2>0.28<0.28.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26623
 modular-xorg-server<21.1.16	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26601
 modular-xorg-xwayland<24.1.6	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2025-26601
 vim<9.1.1164			arbitrary-code-execution https://github.com/vim/vim/security/advisories/GHSA-wfmf-8626-q3r3
+firefox115<115.21		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-43097
+firefox128<128.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-43097
+firefox<136			use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
+thunderbird<128.8		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
