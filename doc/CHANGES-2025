@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2166 2025/03/09 22:09:47 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2167 2025/03/10 09:03:43 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/got to 0.109 [vins 2025-03-09]
 	Updated editors/focuswriter to 1.8.11 [pin 2025-03-09]
 	Updated x11/xinit to 1.4.4 [wiz 2025-03-09]
+	Updated sysutils/gam to 7.05.08 [sborrill 2025-03-10]
