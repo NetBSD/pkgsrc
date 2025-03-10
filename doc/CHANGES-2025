@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2183 2025/03/10 15:50:54 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2184 2025/03/10 22:41:03 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2792,3 +2792,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tinyxml2 to 10.1.0 [wiz 2025-03-10]
 	Updated textproc/tree-sitter to 0.25.3 [wiz 2025-03-10]
 	Updated devel/compiledb-go to 1.5.0 [wiz 2025-03-10]
+	Updated graphics/argyllcms to 3.3.0nb1 [jakllsch 2025-03-10]
