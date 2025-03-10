@@ -1,3 +1,14 @@
-Rspamd is fast, modular and lightweight spam filter. It is designed to work
-with big ammount of mail and can be easily extended with own filters written in
-lua.
+Rspamd is an advanced spam filtering system and email processing
+framework that allows evaluation of messages by a number of rules
+including regular expressions, statistical analysis and custom services
+such as URL black lists. Each message is analysed by Rspamd and given a
+verdict that might be used by MTA for further processing (e.g. to reject
+a message, or add a special header indicating spam) along with other
+information, such as possible DKIM signature or modifications suggested
+for a message.
+
+Rspamd is designed to process hundreds of messages per second
+simultaneously, and provides a number of useful features including a
+comprehensive Lua API that allows access to messages processing in
+various aspects as well as asynchronous network API to access external
+resources, such as DNS, HTTP or even generic TCP/UDP services.
