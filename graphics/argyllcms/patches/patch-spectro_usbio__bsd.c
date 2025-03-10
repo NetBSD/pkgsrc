@@ -1,15 +1,15 @@
-$NetBSD: patch-spectro_usbio__bsd.c,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+$NetBSD: patch-spectro_usbio__bsd.c,v 1.2 2025/03/10 15:38:12 jakllsch Exp $
 
 Attempt to make actually function with NetBSD ugen(4).
 
---- spectro/usbio_bsd.c.orig	2023-10-23 00:56:17.000000000 +0000
+--- spectro/usbio_bsd.c.orig	2024-09-24 22:29:21.000000000 +0000
 +++ spectro/usbio_bsd.c
-@@ -67,13 +67,15 @@ icompaths *p 
- #if defined(__FreeBSD__)
+@@ -69,13 +69,16 @@ icompaths *p 
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
  	    "/dev/usb/[0-9]*.*.0",		/* FreeBSD >= 8 */
  	    "/dev/ugen[0-9]*",			/* FreeBSD < 8, but no .E */
 +#elif defined(__NetBSD__)
-+	    "/dev/ugen[0-9]*.00",		/* NetBSD */
++	    "/dev/ugen[0-9]*.00",               /* NetBSD */
  #else
 -	    "/dev/ugen/[0-9]*.00",		/* NetBSD, OpenBSD */
 +	    "/dev/ugen/[0-9]*.00",		/* OpenBSD */
@@ -17,12 +17,12 @@ Attempt to make actually function with NetBSD ugen(4).
  	    NULL
  	};
  	int vid, pid;
--	int nconfig = 0, nep = 0;
-+	unsigned int configix, nconfig, nep;
+ 	int nconfig = 0, nep = 0;
++	int configix;
  	char *dpath;
  	devType itype;
  	struct usb_idevice *usbd = NULL;
-@@ -85,6 +87,9 @@ icompaths *p 
+@@ -87,6 +90,9 @@ icompaths *p 
  		glob_t g;
  		int fd;
  		struct usb_device_info di;
@@ -32,7 +32,7 @@ Attempt to make actually function with NetBSD ugen(4).
  		int rv, found = 0;
  
  		if (paths[j] == NULL)
-@@ -121,12 +126,8 @@ icompaths *p 
+@@ -123,12 +129,8 @@ icompaths *p 
  				continue;
  			}
  
@@ -47,7 +47,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  			/* Allocate an idevice so that we can fill in the end point information */
  			if ((usbd = (struct usb_idevice *) calloc(sizeof(struct usb_idevice), 1)) == NULL) {
-@@ -136,8 +137,56 @@ icompaths *p 
+@@ -138,8 +140,55 @@ icompaths *p 
  				return ICOM_SYS;
  			}
  
@@ -95,7 +95,6 @@ Attempt to make actually function with NetBSD ugen(4).
 +					usbd->EPINFO(ad).addr = ad;
 +					usbd->EPINFO(ad).packetsize = UGETW(ued.ued_desc.wMaxPacketSize);
 +					usbd->EPINFO(ad).type = ued.ued_desc.bmAttributes & IUSB_ENDPOINT_TYPE_MASK;
-+					usbd->EPINFO(ad).interface = uid.uid_desc.bInterfaceNumber;
 +					usbd->EPINFO(ad).fd = -1;
 +
 +					a1logd(p->log, 6, "set ep ad 0x%x packetsize %d type %d\n",ad,usbd->EPINFO(ad).packetsize,usbd->EPINFO(ad).type);
@@ -105,7 +104,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			/* Found a known instrument ? */
  			if ((itype = inst_usb_match(vid, pid, nep)) != instUnknown) {
  				char pname[400], *cp;
-@@ -310,7 +359,6 @@ char **pnames		/* List of process names 
+@@ -312,7 +361,6 @@ char **pnames		/* List of process names 
  	if (p->is_open)
  		p->close_port(p);
  
@@ -113,7 +112,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Make sure the port is open */
  	if (!p->is_open) {
  		int rv, i, iface;
-@@ -345,12 +393,16 @@ char **pnames		/* List of process names 
+@@ -347,12 +395,16 @@ char **pnames		/* List of process names 
  			p->cconfig = 1;
  
  			if (p->cconfig != config) {
@@ -130,7 +129,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			}
  
  			/* We're done */
-@@ -363,6 +415,7 @@ char **pnames		/* List of process names 
+@@ -365,6 +417,7 @@ char **pnames		/* List of process names 
  		/* Claim all the interfaces */
  		for (iface = 0; iface < p->nifce; iface++) {
  
@@ -138,7 +137,7 @@ Attempt to make actually function with NetBSD ugen(4).
  			if ((rv = ioctl(p->usbd->fd, USBDEVFS_CLAIMINTERFACE, &iface)) < 0) {
  				struct usbdevfs_getdriver getd;
  				getd.interface = iface;
-@@ -387,6 +440,30 @@ char **pnames		/* List of process names 
+@@ -389,6 +442,30 @@ char **pnames		/* List of process names 
  					return ICOM_SYS;
  				}
  			}
@@ -169,7 +168,7 @@ Attempt to make actually function with NetBSD ugen(4).
  		}
  
  		/* Clear any errors. */
-@@ -408,25 +485,10 @@ char **pnames		/* List of process names 
+@@ -410,25 +487,10 @@ char **pnames		/* List of process names 
  			p->rd_qa = 8;
  		a1logd(p->log, 8, "usb_open_port: 'serial' read quanta = packet size = %d\n",p->rd_qa);
  
@@ -195,7 +194,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Install the cleanup signal handlers, and add to our cleanup list */
  	usb_install_signal_handlers(p);
  
-@@ -445,88 +507,23 @@ static int icoms_usb_transaction(
+@@ -447,88 +509,23 @@ static int icoms_usb_transaction(
  	int length,
  	unsigned int timeout		/* In msec */
  ) {
@@ -291,7 +290,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	if (cancelt != NULL) {
  		amutex_lock(cancelt->cmtx);
  		cancelt->hcancel = (void *)&req;
-@@ -534,85 +531,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
+@@ -536,85 +533,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
  		amutex_unlock(cancelt->cond);		/* Signal any thread waiting for IO start */
  		amutex_unlock(cancelt->cmtx);
  	}
@@ -378,7 +377,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	/* requested size wasn't transferred ? */
  	if (reqrv == ICOM_OK && xlength != length)
-@@ -621,6 +540,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
+@@ -623,6 +542,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
  	if (transferred != NULL)
  		*transferred = xlength;
  
@@ -386,7 +385,7 @@ Attempt to make actually function with NetBSD ugen(4).
  done:;
  	if (cancelt != NULL) {
  		amutex_lock(cancelt->cmtx);
-@@ -630,20 +550,7 @@ done:;
+@@ -632,20 +552,7 @@ done:;
  		cancelt->state = 2;
  		amutex_unlock(cancelt->cmtx);
  	}
@@ -408,7 +407,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	if (in_usb_rw < 0)
  		exit(0);
-@@ -651,7 +558,6 @@ done:;
+@@ -653,7 +560,6 @@ done:;
  	in_usb_rw--;
  
  	a1logd(p->log, 8, "coms_usb_transaction: returning err 0x%x and %d bytes\n",reqrv, xlength);
@@ -416,7 +415,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	return reqrv;
  }
-@@ -666,51 +572,34 @@ int value, int index, unsigned char *byt
+@@ -668,51 +574,34 @@ int value, int index, unsigned char *byt
  int timeout) {
  	int reqrv = ICOM_OK;
  	int dirw = (requesttype & IUSB_REQ_DIR_MASK) == IUSB_REQ_HOST_TO_DEV ? 1 : 0;
@@ -484,7 +483,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  /* Cancel i/o in another thread */
  int icoms_usb_cancel_io(
-@@ -718,8 +607,9 @@ int icoms_usb_cancel_io(
+@@ -720,8 +609,9 @@ int icoms_usb_cancel_io(
  	usb_cancelt *cancelt
  ) {
  	int rv = ICOM_OK;
@@ -495,7 +494,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	usb_lock_cancel(cancelt);
  	if (cancelt->hcancel != NULL)
  		rv = cancel_req(p, (usbio_req *)cancelt->hcancel, -1);
-@@ -740,6 +630,8 @@ int icoms_usb_resetep(
+@@ -742,6 +632,8 @@ int icoms_usb_resetep(
  ) {
  	int rv = ICOM_OK;
  
@@ -504,7 +503,7 @@ Attempt to make actually function with NetBSD ugen(4).
  #ifdef NEVER    // ~~99
  	if ((rv = ioctl(p->usbd->fd, USBDEVFS_RESETEP, &ep)) != 0) {
  		a1logd(p->log, 1, "icoms_usb_resetep failed with %d\n",rv);
-@@ -757,6 +649,8 @@ int icoms_usb_clearhalt(
+@@ -759,6 +651,8 @@ int icoms_usb_clearhalt(
  ) {
  	int rv = ICOM_OK;
  
