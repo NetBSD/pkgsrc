@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/03/10 15:38:12 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/10 22:40:50 jakllsch Exp $
 
 DISTNAME=	Argyll_V3.3.0_src
 PKGNAME=	${DISTNAME:S/_V/cms-/:S/_src$//:tl}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.argyllcms.com/
 EXTRACT_SUFX=	.zip

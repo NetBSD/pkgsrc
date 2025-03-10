@@ -1,4 +1,4 @@
-$NetBSD: patch-spectro_usbio__bsd.c,v 1.2 2025/03/10 15:38:12 jakllsch Exp $
+$NetBSD: patch-spectro_usbio__bsd.c,v 1.3 2025/03/10 22:40:50 jakllsch Exp $
 
 Attempt to make actually function with NetBSD ugen(4).
 
@@ -194,7 +194,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	/* Install the cleanup signal handlers, and add to our cleanup list */
  	usb_install_signal_handlers(p);
  
-@@ -447,88 +509,23 @@ static int icoms_usb_transaction(
+@@ -447,174 +509,31 @@ static int icoms_usb_transaction(
  	int length,
  	unsigned int timeout		/* In msec */
  ) {
@@ -215,7 +215,8 @@ Attempt to make actually function with NetBSD ugen(4).
 -		a1logv(p->log, 1, "icoms_usb_transaction: reaper thread is not running\n");
 -		return ICOM_SYS;
 -	}
-+	/* XXX USB_SET_TIMEOUT */
++	if (ioctl(p->ep[endpoint&0xf].fd, USB_SET_TIMEOUT, &timeout) < 0)
++		a1logd(p->log, 8, "icoms_usb_transaction: SET_TIMEOUT failed\n");
  
 -	/* Translate icoms transfer type of Linux */
 -	switch (ttype) {
@@ -290,7 +291,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	if (cancelt != NULL) {
  		amutex_lock(cancelt->cmtx);
  		cancelt->hcancel = (void *)&req;
-@@ -536,85 +533,7 @@ a1logd(p->log, 8, "icoms_usb_transaction
+-		cancelt->state = 1;
  		amutex_unlock(cancelt->cond);		/* Signal any thread waiting for IO start */
  		amutex_unlock(cancelt->cmtx);
  	}
@@ -415,7 +416,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  	return reqrv;
  }
-@@ -668,51 +574,34 @@ int value, int index, unsigned char *byt
+@@ -668,51 +574,35 @@ int value, int index, unsigned char *byt
  int timeout) {
  	int reqrv = ICOM_OK;
  	int dirw = (requesttype & IUSB_REQ_DIR_MASK) == IUSB_REQ_HOST_TO_DEV ? 1 : 0;
@@ -460,7 +461,8 @@ Attempt to make actually function with NetBSD ugen(4).
  
 -	if (transferred != NULL)	/* Adjust for header size requested */
 -		*transferred -= IUSB_REQ_HEADER_SIZE;
-+	/* XXX USB_SET_TIMEOUT */
++	if (ioctl(p->ep[0].fd, USB_SET_TIMEOUT, &timeout) < 0)
++		a1logd(p->log, 8, "icoms_usb_control_msg: SET_TIMEOUT failed\n");
  
 -	free(buf);
 +	if (ioctl(p->ep[0].fd, USB_DO_REQUEST, &ucr) < 0)
@@ -483,7 +485,7 @@ Attempt to make actually function with NetBSD ugen(4).
  
  /* Cancel i/o in another thread */
  int icoms_usb_cancel_io(
-@@ -720,8 +609,9 @@ int icoms_usb_cancel_io(
+@@ -720,8 +610,9 @@ int icoms_usb_cancel_io(
  	usb_cancelt *cancelt
  ) {
  	int rv = ICOM_OK;
@@ -494,7 +496,7 @@ Attempt to make actually function with NetBSD ugen(4).
  	usb_lock_cancel(cancelt);
  	if (cancelt->hcancel != NULL)
  		rv = cancel_req(p, (usbio_req *)cancelt->hcancel, -1);
-@@ -742,6 +632,8 @@ int icoms_usb_resetep(
+@@ -742,6 +633,8 @@ int icoms_usb_resetep(
  ) {
  	int rv = ICOM_OK;
  
@@ -503,7 +505,7 @@ Attempt to make actually function with NetBSD ugen(4).
  #ifdef NEVER    // ~~99
  	if ((rv = ioctl(p->usbd->fd, USBDEVFS_RESETEP, &ep)) != 0) {
  		a1logd(p->log, 1, "icoms_usb_resetep failed with %d\n",rv);
-@@ -759,6 +651,8 @@ int icoms_usb_clearhalt(
+@@ -759,6 +652,8 @@ int icoms_usb_clearhalt(
  ) {
  	int rv = ICOM_OK;
  
