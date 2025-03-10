@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2024/12/04 22:54:16 vins Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/10 07:57:40 vins Exp $
 
 DISTNAME=	table-ldap-1.0
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
 CATEGORIES=	mail databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opensmtpd/}
@@ -15,7 +16,10 @@ LICENSE=	isc
 CONFLICTS+=	opensmtpd-extras-[0-9]*
 DEPENDS+=	opensmtpd>=7.6.0:../../mail/opensmtpd
 
+USE_FEATURES+=	cdefs
 USE_TOOLS+=	autoconf automake autoreconf
+
+LDFLAGS.SunOS+=	-lsocket
 
 GNU_CONFIGURE=	yes
 
@@ -28,7 +32,7 @@ SUBST_SED.dir+=		-e "s:libexec/smtpd:libexec/opensmtpd:g"
 INSTALLATION_DIRS+=	share/examples/opensmtpd
 
 pre-configure:
-	set -e; cd ${WRKSRC} && autoreconf -fiv
+	${RUN}set -e; cd ${WRKSRC} && autoreconf -fiv
 
 post-install:
 .for f in table-ldap.conf.example
