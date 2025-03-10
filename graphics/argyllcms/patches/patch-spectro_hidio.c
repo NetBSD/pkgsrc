@@ -1,8 +1,8 @@
-$NetBSD: patch-spectro_hidio.c,v 1.1 2023/11/17 17:37:48 jakllsch Exp $
+$NetBSD: patch-spectro_hidio.c,v 1.2 2025/03/10 15:38:12 jakllsch Exp $
 
 Recognize NetBSD.
 
---- spectro/hidio.c.orig	2023-10-23 00:56:17.000000000 +0000
+--- spectro/hidio.c.orig	2024-09-24 22:29:21.000000000 +0000
 +++ spectro/hidio.c
 @@ -92,6 +92,10 @@
  #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__)
@@ -147,10 +147,12 @@ Recognize NetBSD.
  	if (bwrittenp != NULL)
  		*bwrittenp = bwritten;
  
-@@ -1117,6 +1212,10 @@ int hid_copy_hid_idevice(icoms *d, icomp
+@@ -1116,7 +1211,11 @@ int hid_copy_hid_idevice(icoms *d, icomp
+ 	IOObjectRetain(d->hidd->ioob);
  #endif	/* __MAC_OS_X_VERSION_MAX_ALLOWED < 1060 */
  #endif	/* UNIX_APPLE */
- #if defined (UNIX_X11)
+-#if defined (UNIX_X11)
++#if defined (UNIX_X11) && defined (__NetBSD__)
 +	if ((d->hidd->dpath = strdup(s->hidd->dpath)) == NULL) {
 +		a1loge(d->log, ICOM_SYS, "hid_copy_hid_idevice: malloc\n");
 +		return ICOM_SYS;
@@ -158,10 +160,12 @@ Recognize NetBSD.
  #endif
  	return ICOM_OK;
  }
-@@ -1140,6 +1239,8 @@ void hid_del_hid_idevice(struct hid_idev
+@@ -1139,7 +1238,9 @@ void hid_del_hid_idevice(struct hid_idev
+ 		IOObjectRelease(hidd->ioob);
  #endif	/* __MAC_OS_X_VERSION_MAX_ALLOWED < 1060 */
  #endif	/* UNIX_APPLE */
- #if defined (UNIX_X11)
+-#if defined (UNIX_X11)
++#if defined (UNIX_X11) && defined (__NetBSD__)
 +	if (hidd->dpath != NULL)
 +		free(hidd->dpath);
  #endif
