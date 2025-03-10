@@ -1,4 +1,4 @@
-$NetBSD: patch-mgdiff.c,v 1.4 2023/03/02 08:15:32 vins Exp $
+$NetBSD: patch-mgdiff.c,v 1.5 2025/03/10 08:54:50 vins Exp $
 
 Prevent unsafe use of tmpnam(). 
 Pull patches from Debian.
@@ -128,7 +128,7 @@ Pull patches from Debian.
  
  /* ARGSUSED1 */
  static void Visible (Widget widget, XtPointer closure, XEvent *event, Boolean *continue_to_dispatch)
-@@ -398,23 +420,37 @@ static void drawit (Widget w, XtPointer 
+@@ -398,23 +420,37 @@ static void drawit (Widget w, XtPointer
      Region region;
      Block *b;
      GC fore, back;
@@ -170,7 +170,7 @@ Pull patches from Debian.
  		fore = gcfore[4];
  		back = gcback[4];
  	    }
-@@ -423,10 +459,10 @@ static void drawit (Widget w, XtPointer 
+@@ -423,10 +459,10 @@ static void drawit (Widget w, XtPointer
  		back = gcback[ths->type];
  	    }
  	}
@@ -183,7 +183,7 @@ Pull patches from Debian.
  		fore = gcfore[4];
  		back = gcback[4];
  	    }
-@@ -520,7 +556,7 @@ static void drawit (Widget w, XtPointer 
+@@ -520,7 +556,7 @@ static void drawit (Widget w, XtPointer
  /* ARGSUSED */
  static void file_cb (Widget w, XtPointer closure, XtPointer call_data)
  {
@@ -432,7 +432,7 @@ Pull patches from Debian.
  }
  
  static void redraw_partial_vert (Widget w)
-@@ -1622,9 +1696,9 @@ static void update_line_numbers (int l, 
+@@ -1622,9 +1696,9 @@ static void update_line_numbers (int l,
  {
      char buffer[16];
  
@@ -719,7 +719,7 @@ Pull patches from Debian.
 +	widget_side = WIDGET_LEFT;
 +    else if (widget == textr)
 +	widget_side = WIDGET_RIGHT;
-+    else
++    	else
 +	assert (False);
 +
 + 	

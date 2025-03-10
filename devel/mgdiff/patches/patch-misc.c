@@ -1,4 +1,4 @@
-$NetBSD: patch-misc.c,v 1.1 2023/03/01 23:48:00 vins Exp $
+$NetBSD: patch-misc.c,v 1.2 2025/03/10 08:54:50 vins Exp $
 
 Pull patches from Debian.
 
@@ -103,3 +103,23 @@ Pull patches from Debian.
      return ((fclose (fout) == 0));
  }
  
+@@ -102,19 +143,6 @@ Widget get_top_shell (Widget w)
+     return (w);
+ }
+ 
+-#if sun
+-char *strerror (int errnum)
+-{
+-    extern int sys_nerr;
+-    extern char *sys_errlist[];
+-
+-    if ((0 < errnum) && (errnum < sys_nerr))
+-	return (sys_errlist[errnum]);
+-    else
+-	return ("");
+-}
+-#endif
+-
+ void add_editres (Widget shell)
+ {
+ #if EDITRES && X11R5
