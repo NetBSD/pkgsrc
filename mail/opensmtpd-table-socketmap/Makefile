@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2025/03/10 05:44:52 vins Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/10 05:45:41 vins Exp $
 
 DISTNAME=	table-socketmap-1.1.1
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S|^|opensmtpd-|}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opensmtpd/}
