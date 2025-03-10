@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2181 2025/03/10 15:46:46 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2182 2025/03/10 15:49:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2790,3 +2790,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/faad2 to 2.11.2 [wiz 2025-03-10]
 	Updated graphics/libheif to 1.19.7 [wiz 2025-03-10]
 	Updated textproc/tinyxml2 to 10.1.0 [wiz 2025-03-10]
+	Updated textproc/tree-sitter to 0.25.3 [wiz 2025-03-10]
