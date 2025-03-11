@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2189 2025/03/11 07:57:16 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2190 2025/03/11 07:58:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2798,3 +2798,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/firefox128-l10n to 128.8.0 [gutteridge 2025-03-11]
 	Updated devel/ode to 0.16.5 [wiz 2025-03-11]
 	Removed www/jalbum [wiz 2025-03-11]
+	Removed graphics/PanoTools [wiz 2025-03-11]
