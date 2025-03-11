@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2196 2025/03/11 14:00:21 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2197 2025/03/11 16:25:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2809,3 +2809,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/py-fsspec to 2025.3.0 [adam 2025-03-11]
 	Updated devel/ccache to 4.11 [adam 2025-03-11]
 	Updated devel/shfmt to 3.11.0 [adam 2025-03-11]
+	Updated math/fast_float to 8.0.2 [adam 2025-03-11]
+	Updated misc/dpkg to 1.22.18 [adam 2025-03-11]
