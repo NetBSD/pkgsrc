@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2199 2025/03/11 18:07:26 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2200 2025/03/11 21:17:08 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2814,3 +2814,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated pkgtools/pkglint to 23.15.3 [rillig 2025-03-11]
 	Updated textproc/py-yamllint to 1.36.0 [adam 2025-03-11]
 	Updated www/py-furl to 2.1.4 [adam 2025-03-11]
+	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
+	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
