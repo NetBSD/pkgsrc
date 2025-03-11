@@ -1,9 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.32 2024/12/29 15:09:51 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2025/03/11 12:36:06 nia Exp $
 
 BUILDLINK_TREE+=	pcl
 
 .if !defined(PCL_BUILDLINK3_MK)
 PCL_BUILDLINK3_MK:=
+
+USE_CXX_FEATURES+=	c++17 filesystem
 
 BUILDLINK_API_DEPENDS.pcl+=	pcl>=1.10.0
 BUILDLINK_ABI_DEPENDS.pcl+=	pcl>=1.14.1nb10
