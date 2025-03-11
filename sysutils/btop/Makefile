@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2024/10/06 10:43:17 fox Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/11 12:28:49 nia Exp $
 
 DISTNAME=	btop-1.4.0
 CATEGORIES=	sysutils
@@ -30,5 +30,6 @@ post-install:
 	${INSTALL_MAN} ${WRKDIR}/btop.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
