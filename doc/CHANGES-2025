@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2198 2025/03/11 16:57:16 rillig Exp $
+$NetBSD: CHANGES-2025,v 1.2199 2025/03/11 18:07:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2812,3 +2812,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated math/fast_float to 8.0.2 [adam 2025-03-11]
 	Updated misc/dpkg to 1.22.18 [adam 2025-03-11]
 	Updated pkgtools/pkglint to 23.15.3 [rillig 2025-03-11]
+	Updated textproc/py-yamllint to 1.36.0 [adam 2025-03-11]
+	Updated www/py-furl to 2.1.4 [adam 2025-03-11]
