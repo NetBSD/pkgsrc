@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2191 2025/03/11 07:58:33 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2192 2025/03/11 08:00:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2800,3 +2800,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/jalbum [wiz 2025-03-11]
 	Removed graphics/PanoTools [wiz 2025-03-11]
 	Removed devel/eclipse [wiz 2025-03-11]
+	Removed lang/sun-jdk7 [wiz 2025-03-11]
+	Removed lang/sun-jre7 [wiz 2025-03-11]
