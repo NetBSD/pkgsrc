@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2020/01/26 17:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/11 07:52:38 wiz Exp $
 
-DISTNAME=	ode-0.13
+DISTNAME=	ode-0.16.5
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	https://bitbucket.org/odedevs/ode/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.ode.org/

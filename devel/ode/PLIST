@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/07/24 01:28:37 kamil Exp $
+@comment $NetBSD: PLIST,v 1.6 2025/03/11 07:52:38 wiz Exp $
 bin/ode-config
 include/ode/collision.h
 include/ode/collision_space.h
@@ -6,10 +6,12 @@ include/ode/collision_trimesh.h
 include/ode/common.h
 include/ode/compatibility.h
 include/ode/contact.h
+include/ode/cooperative.h
 include/ode/error.h
 include/ode/export-dif.h
 include/ode/mass.h
 include/ode/matrix.h
+include/ode/matrix_coop.h
 include/ode/memory.h
 include/ode/misc.h
 include/ode/objects.h
@@ -25,5 +27,6 @@ include/ode/rotation.h
 include/ode/threading.h
 include/ode/threading_impl.h
 include/ode/timer.h
+include/ode/version.h
 lib/libode.la
 lib/pkgconfig/ode.pc
