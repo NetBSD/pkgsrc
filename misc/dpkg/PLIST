@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2025/01/03 13:41:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2025/03/11 16:25:21 adam Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildapi
@@ -71,7 +71,9 @@ include/dpkg/program.h
 include/dpkg/progress.h
 include/dpkg/report.h
 include/dpkg/string.h
+include/dpkg/strvec.h
 include/dpkg/subproc.h
+include/dpkg/sysuser.h
 include/dpkg/tarfn.h
 include/dpkg/treewalk.h
 include/dpkg/trigdeferred.h
@@ -254,7 +256,6 @@ man/es/man5/dpkg.cfg.5
 man/es/man5/dselect.cfg.5
 man/fr/man1/dpkg-architecture.1
 man/fr/man1/dpkg-checkbuilddeps.1
-man/fr/man1/dpkg-deb.1
 man/fr/man1/dpkg-distaddfile.1
 man/fr/man1/dpkg-divert.1
 man/fr/man1/dpkg-genbuildinfo.1
