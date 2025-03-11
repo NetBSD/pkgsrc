@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2024/12/24 17:53:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/03/11 13:47:41 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
@@ -90,6 +90,9 @@ ${PYSITELIB}/fsspec/implementations/github.pyo
 ${PYSITELIB}/fsspec/implementations/http.py
 ${PYSITELIB}/fsspec/implementations/http.pyc
 ${PYSITELIB}/fsspec/implementations/http.pyo
+${PYSITELIB}/fsspec/implementations/http_sync.py
+${PYSITELIB}/fsspec/implementations/http_sync.pyc
+${PYSITELIB}/fsspec/implementations/http_sync.pyo
 ${PYSITELIB}/fsspec/implementations/jupyter.py
 ${PYSITELIB}/fsspec/implementations/jupyter.pyc
 ${PYSITELIB}/fsspec/implementations/jupyter.pyo
