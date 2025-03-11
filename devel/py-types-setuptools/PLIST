@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2024/12/24 17:43:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2025/03/11 10:52:18 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -33,14 +33,6 @@ ${PYSITELIB}/distutils-stubs/py.typed
 ${PYSITELIB}/distutils-stubs/spawn.pyi
 ${PYSITELIB}/distutils-stubs/sysconfig.pyi
 ${PYSITELIB}/distutils-stubs/util.pyi
-${PYSITELIB}/pkg_resources-stubs/METADATA.toml
-${PYSITELIB}/pkg_resources-stubs/__init__.pyi
-${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/__init__.pyi
-${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/markers.pyi
-${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/requirements.pyi
-${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/specifiers.pyi
-${PYSITELIB}/pkg_resources-stubs/_vendored_packaging/version.pyi
-${PYSITELIB}/pkg_resources-stubs/py.typed
 ${PYSITELIB}/setuptools-stubs/METADATA.toml
 ${PYSITELIB}/setuptools-stubs/__init__.pyi
 ${PYSITELIB}/setuptools-stubs/_distutils/__init__.pyi
