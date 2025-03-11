@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2025/03/11 20:09:53 fox Exp $
+$NetBSD: distinfo,v 1.27 2025/03/11 22:41:11 nia Exp $
 
-BLAKE2s (htop-3.4.0.tar.gz) = 18f6219aeae1e06a3381cca36629aed4ddee13d3e9bf6983737f11d3abc29896
-SHA512 (htop-3.4.0.tar.gz) = aff7fc1961687b885fe680ec27cd08fdfdcc8b5411156fa7195e7acce10b7cf3c11eca7d6f55741da2d286ade77a0238f609cfeb862151cdaf6815087c73c340
-Size (htop-3.4.0.tar.gz) = 427077 bytes
+BLAKE2s (htop-3.4.0.tar.xz) = 6f3295e756ca26faff4ef22374220e83858a6d409d68a64881385c1aee6a39db
+SHA512 (htop-3.4.0.tar.xz) = a37170f72e8d4801da71d3e18be6277f2bc4822e72443fa772a0e7c25934b38353a0a79e7128d93b17c36bb70eea5e931099f8bcbf5a89b84a31c341e3ba7788
+Size (htop-3.4.0.tar.xz) = 427092 bytes
 SHA1 (patch-Settings.c) = af04b2ff4e9aee95e6903e6417e01f474816c833
