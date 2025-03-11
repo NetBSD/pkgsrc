@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2186 2025/03/11 02:04:37 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2187 2025/03/11 02:25:39 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2795,3 +2795,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/argyllcms to 3.3.0nb1 [jakllsch 2025-03-10]
 	Updated geography/osm2pgsql to 1.11.0 [gdt 2025-03-10]
 	Updated www/firefox128 to 128.8.0 [gutteridge 2025-03-11]
+	Updated www/firefox128-l10n to 128.8.0 [gutteridge 2025-03-11]
