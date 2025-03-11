@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2194 2025/03/11 10:52:34 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2195 2025/03/11 13:47:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2805,3 +2805,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated audio/schismtracker to 20250307 [nia 2025-03-11]
 	Updated security/py-krb5 to 0.7.1 [adam 2025-03-11]
 	Updated devel/py-types-setuptools to 75.8.2.20250305 [adam 2025-03-11]
+	Updated devel/py-pydantic-core to 2.31.1 [adam 2025-03-11]
+	Updated sysutils/py-fsspec to 2025.3.0 [adam 2025-03-11]
