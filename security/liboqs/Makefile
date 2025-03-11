@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2024/12/18 21:30:34 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/11 12:44:47 nia Exp $
 
 DISTNAME=	liboqs-0.12.0
 CATEGORIES=	security
@@ -16,6 +16,16 @@ TOOLS_CREATE+=		python3
 TOOLS_PATH.python3=	${TOOL_PYTHONBIN:Q}
 
 CMAKE_CONFIGURE_ARGS+=	-DOQS_PERMIT_UNSUPPORTED_ARCHITECTURE=ON
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+PLIST_VARS+=		x86_64
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST.x86_64=		yes
+CMAKE_CONFIGURE_ARGS+=	-DOQS_ENABLE_KEM_BIKE=ON
+.else
+CMAKE_CONFIGURE_ARGS+=	-DOQS_ENABLE_KEM_BIKE=OFF
+.endif
 
 REPLACE_BASH+=	tests/run_astyle.sh
 REPLACE_BASH+=	tests/test_spdx.sh
