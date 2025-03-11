@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2024/10/10 19:32:27 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/11 12:44:47 nia Exp $
 include/oqs/aes_ops.h
 include/oqs/common.h
 include/oqs/kem.h
-include/oqs/kem_bike.h
+${PLIST.x86_64}include/oqs/kem_bike.h
 include/oqs/kem_classic_mceliece.h
 include/oqs/kem_frodokem.h
 include/oqs/kem_hqc.h
