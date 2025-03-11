@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2024/05/06 08:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2025/03/11 20:09:53 fox Exp $
 
-DISTNAME=	htop-3.3.0
-PKGREVISION=	1
+DISTNAME=	htop-3.4.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=htop-dev/}
 
@@ -12,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoreconf automake
+USE_TOOLS+=	autoreconf automake pkg-config
 USE_CURSES=	getmouse
 
 .include "options.mk"
