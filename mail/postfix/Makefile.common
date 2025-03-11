@@ -1,10 +1,13 @@
-# $NetBSD: Makefile.common,v 1.52 2025/02/27 15:42:54 taca Exp $
+# $NetBSD: Makefile.common,v 1.53 2025/03/11 16:49:20 nia Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
 DISTNAME=	postfix-3.10.1
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
+MASTER_SITES=	https://ftp.fu-berlin.de/unix/mail/postfix/official/
+MASTER_SITES+=	https://ghostarchive.org/postfix/postfix-release/official/
+MASTER_SITES+=	https://linorg.usp.br/postfix/release/official/
+MASTER_SITES+=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
