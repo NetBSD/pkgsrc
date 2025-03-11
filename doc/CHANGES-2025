@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2195 2025/03/11 13:47:58 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2196 2025/03/11 14:00:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2807,3 +2807,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-types-setuptools to 75.8.2.20250305 [adam 2025-03-11]
 	Updated devel/py-pydantic-core to 2.31.1 [adam 2025-03-11]
 	Updated sysutils/py-fsspec to 2025.3.0 [adam 2025-03-11]
+	Updated devel/ccache to 4.11 [adam 2025-03-11]
+	Updated devel/shfmt to 3.11.0 [adam 2025-03-11]
