@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/12 06:44:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/11 12:42:22 nia Exp $
 
 DISTNAME=	furnace-0.6.7
 PKGREVISION=	1
@@ -45,4 +45,5 @@ CMAKE_CONFIGURE_ARGS+=	-DRTMIDI_API_ALSA=OFF
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
