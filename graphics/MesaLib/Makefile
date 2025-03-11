@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2025/03/07 07:00:33 wiz Exp $
+# $NetBSD: Makefile,v 1.216 2025/03/11 11:18:43 nia Exp $
 
 DISTNAME=	mesa-21.3.9
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -37,7 +37,7 @@ MESA_PLATFORMS=		#
 # we currently lack a way to test linker version.
 # Fixed upstream after 23.3.
 # See https://bugs.gentoo.org/914905
-.if ${OPSYS} != "SunOS" && ${PKGSRC_COMPILER:M*clang*}
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin" && ${PKGSRC_COMPILER:M*clang*}
 LDFLAGS+=	-Wl,--undefined-version
 .endif
 
