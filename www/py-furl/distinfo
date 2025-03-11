@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2021/10/26 11:30:40 nia Exp $
+$NetBSD: distinfo,v 1.17 2025/03/11 18:06:07 adam Exp $
 
-BLAKE2s (furl-2.1.3.tar.gz) = 810bf265fed7195eae7ef88c5cb047443769b281b235ba552e97a91e6a9d9473
-SHA512 (furl-2.1.3.tar.gz) = ce7455bd1a352243efd9715e80e9f9979631cc058927edcd8c52ccb85d27fd8f32079611bb29c487d2add2d1d941d56e4db75520339dc371b1539811ccefda02
-Size (furl-2.1.3.tar.gz) = 44223 bytes
+BLAKE2s (furl-2.1.4.tar.gz) = 31b72640242fd4ca41f7c3c39eafc5836363a74360910dbca08428d5565a33ac
+SHA512 (furl-2.1.4.tar.gz) = cfd160bb0b87c9b8410690836bf9ec106f981a1f939c90dd1c213800085c7de807ebbacef50a6b7a88894cd12c24f6505ddc4cd111f23fa7615f7ed11a02f027
+Size (furl-2.1.4.tar.gz) = 57526 bytes
