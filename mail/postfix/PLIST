@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.35 2025/02/22 16:00:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.36 2025/03/11 18:11:58 nia Exp $
 bin/mailq
 bin/newaliases
-lib/postfix/libpostfix-dns.so
-lib/postfix/libpostfix-global.so
-lib/postfix/libpostfix-master.so
-lib/postfix/libpostfix-tls.so
-lib/postfix/libpostfix-util.so
+lib/postfix/libpostfix-dns.${SO_EXT}
+lib/postfix/libpostfix-global.${SO_EXT}
+lib/postfix/libpostfix-master.${SO_EXT}
+lib/postfix/libpostfix-tls.${SO_EXT}
+lib/postfix/libpostfix-util.${SO_EXT}
 libexec/postfix/anvil
 libexec/postfix/bounce
 libexec/postfix/cleanup

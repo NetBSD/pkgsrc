@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2025/03/11 16:49:20 nia Exp $
+# $NetBSD: Makefile.common,v 1.54 2025/03/11 18:11:58 nia Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -46,6 +46,19 @@ CCARGS+=	-DUSE_SASL_AUTH
 # Enable Berkeley DB map type. BDB_LIBS is defined in mk/bdb.buildlink3.mk.
 CCARGS+=	-DHAS_DB
 AUXLIBS+=	${BDB_LIBS}
+
+# Support for NIS is unavailable on some recent Linux distributions.
+.if ${OPSYS} == "Linux"
+CCARGS+=	-DNO_NIS
+.endif
+
+.if ${OPSYS} == "OpenBSD"
+PLIST_SUBST+=		SO_EXT="so.1.0"
+PRINT_PLIST_AWK+=	{ gsub(/\.so.1.0/, ".$${SOEXT}"); }
+.else
+PLIST_SUBST+=		SO_EXT="so"
+PRINT_PLIST_AWK+=	{ gsub(/\.so/, ".$${SOEXT}"); }
+.endif
 
 # Disable modules by default
 .for module in cdb ldap lmdb mysql pcre pgsql sqlite
