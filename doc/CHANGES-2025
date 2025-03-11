@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2193 2025/03/11 09:57:26 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2194 2025/03/11 10:52:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2803,3 +2803,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/sun-jdk7 [wiz 2025-03-11]
 	Removed lang/sun-jre7 [wiz 2025-03-11]
 	Updated audio/schismtracker to 20250307 [nia 2025-03-11]
+	Updated security/py-krb5 to 0.7.1 [adam 2025-03-11]
+	Updated devel/py-types-setuptools to 75.8.2.20250305 [adam 2025-03-11]
