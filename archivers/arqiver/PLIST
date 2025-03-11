@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2024/11/09 19:41:54 pin Exp $
+@comment $NetBSD: PLIST,v 1.9 2025/03/11 21:18:03 pin Exp $
 bin/arqiver
 share/applications/arqiver.desktop
+share/arqiver/translations/arqiver_be.qm
 share/arqiver/translations/arqiver_bg.qm
 share/arqiver/translations/arqiver_ca.qm
 share/arqiver/translations/arqiver_cs.qm
+share/arqiver/translations/arqiver_de.qm
 share/arqiver/translations/arqiver_el.qm
 share/arqiver/translations/arqiver_eo.qm
 share/arqiver/translations/arqiver_es.qm
@@ -15,6 +17,7 @@ share/arqiver/translations/arqiver_hi.qm
 share/arqiver/translations/arqiver_hr.qm
 share/arqiver/translations/arqiver_hu.qm
 share/arqiver/translations/arqiver_it.qm
+share/arqiver/translations/arqiver_ka.qm
 share/arqiver/translations/arqiver_ko.qm
 share/arqiver/translations/arqiver_lt.qm
 share/arqiver/translations/arqiver_nl.qm
