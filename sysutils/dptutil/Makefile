@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/08/01 16:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/11 12:29:25 nia Exp $
 
 DISTNAME=		raidmgt-3.31
 PKGNAME=		dptutil-3.31
@@ -17,6 +17,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 USE_LANGUAGES=		c++
 USE_TOOLS+=		makedepend
 INSTALLATION_DIRS=	sbin
+
+FORCE_CXX_STD=		gnu++98
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dpteng/dpteng \
