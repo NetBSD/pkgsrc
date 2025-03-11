@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1853 2025/03/08 03:22:28 pho Exp $
+# $NetBSD: Makefile,v 1.1854 2025/03/11 07:57:16 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -208,7 +208,6 @@ SUBDIR+=	httpfile
 SUBDIR+=	hugo
 SUBDIR+=	ijb
 SUBDIR+=	ikiwiki
-SUBDIR+=	jalbum
 SUBDIR+=	jetty7
 SUBDIR+=	jetty9
 SUBDIR+=	jira-cli
