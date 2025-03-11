@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1075 2025/03/09 11:18:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1076 2025/03/11 07:58:00 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -16,7 +16,6 @@ SUBDIR+=	MesaLib
 SUBDIR+=	Ngraph
 SUBDIR+=	OpenJPH
 SUBDIR+=	OpenRM
-SUBDIR+=	PanoTools
 SUBDIR+=	R-Cairo
 SUBDIR+=	R-colorspace
 SUBDIR+=	R-colourpicker
