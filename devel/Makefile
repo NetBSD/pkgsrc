@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4452 2025/03/08 02:55:04 pho Exp $
+# $NetBSD: Makefile,v 1.4453 2025/03/11 07:58:33 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -354,7 +354,6 @@ SUBDIR+=	drkonqi
 SUBDIR+=	dumpet
 SUBDIR+=	easygit
 SUBDIR+=	ecb
-SUBDIR+=	eclipse
 SUBDIR+=	ecore
 SUBDIR+=	editline
 SUBDIR+=	editorconfig-core
