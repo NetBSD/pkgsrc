@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1854 2025/03/11 07:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.1855 2025/03/12 10:45:12 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -89,8 +89,6 @@ SUBDIR+=	cgilib
 SUBDIR+=	cgit
 SUBDIR+=	checkbot
 SUBDIR+=	chromium
-SUBDIR+=	clearsilver
-SUBDIR+=	clearsilver-base
 SUBDIR+=	clisp-fastcgi
 SUBDIR+=	cobalt
 SUBDIR+=	cpp-httplib
@@ -714,7 +712,6 @@ SUBDIR+=	py-cfscrape
 SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
-SUBDIR+=	py-clearsilver
 SUBDIR+=	py-cookies
 SUBDIR+=	py-curl
 SUBDIR+=	py-daphne
@@ -996,7 +993,6 @@ SUBDIR+=	ruby-aws-sigv4
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-capybara
 SUBDIR+=	ruby-cgi
-SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-coffee-rails
 SUBDIR+=	ruby-compass
 SUBDIR+=	ruby-compass-core
