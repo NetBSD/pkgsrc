@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2020/10/26 10:57:15 triaxx Exp $
+# $NetBSD: options.mk,v 1.2 2025/03/12 22:46:21 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gutenprint
 PKG_SUPPORTED_OPTIONS=	gimp
-PKG_SUGGESTED_OPTIONS=	gimp
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
