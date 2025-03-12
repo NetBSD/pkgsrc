@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2021/12/18 04:38:41 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/12 22:04:40 gutteridge Exp $
 lib/xfce4/panel/plugins/libsmartbookmark.la
 share/locale/ar/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
@@ -24,6 +24,7 @@ share/locale/hr/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/hye/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
+share/locale/ie/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/is/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/it/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/ja/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
@@ -38,6 +39,7 @@ share/locale/oc/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/pt/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
+share/locale/ro/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/sk/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
 share/locale/sl/LC_MESSAGES/xfce4-smartbookmark-plugin.mo
