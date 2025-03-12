@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2224 2025/03/12 16:34:56 ryoon Exp $
+$NetBSD: CHANGES-2025,v 1.2225 2025/03/12 18:57:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2854,3 +2854,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Added devel/py-ipython-pygments-lexers version 1.1.1 [adam 2025-03-12]
 	Updated devel/py-ipython to 9.0.2 [adam 2025-03-12]
 	Updated devel/nss to 3.108nb1 [ryoon 2025-03-12]
+	Updated parallel/slurm-wlm to 20.11.9 [adam 2025-03-12]
+	Updated devel/mold to 2.37.1 [adam 2025-03-12]
