@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2024/12/27 08:20:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2025/03/12 22:04:39 gutteridge Exp $
 
-PKGREVISION= 11
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.5.2
+VERSION=	0.5.3
 DISTNAME=	xfce4-smartbookmark-plugin-${VERSION}
 CATEGORIES=	misc
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/${VERSION:R}/
