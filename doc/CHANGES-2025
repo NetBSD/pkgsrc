@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2226 2025/03/12 21:54:04 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2227 2025/03/12 21:56:31 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2857,3 +2857,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated parallel/slurm-wlm to 20.11.9 [adam 2025-03-12]
 	Updated devel/mold to 2.37.1 [adam 2025-03-12]
 	Updated archivers/xfce4-thunar-archive to 0.5.3 [gutteridge 2025-03-12]
+	Updated mail/xfce4-mailwatch-plugin to 1.3.2 [gutteridge 2025-03-12]
