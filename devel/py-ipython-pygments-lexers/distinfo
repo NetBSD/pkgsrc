@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2025/03/12 15:04:50 adam Exp $
+
+BLAKE2s (ipython_pygments_lexers-1.1.1.tar.gz) = d3c379b34db6a7e01379bff77171e87bf5d2fec3c7dc040c0580b5e15b9d9097
+SHA512 (ipython_pygments_lexers-1.1.1.tar.gz) = 603e3d9d3d22895415d2db7824648f289cea4d87692a5df2264fbbfcce2b50bf8e39a2915d5e11b37077f890d2983d125c5e4a3c97b92f9be9e5945b6a940f73
+Size (ipython_pygments_lexers-1.1.1.tar.gz) = 8393 bytes
