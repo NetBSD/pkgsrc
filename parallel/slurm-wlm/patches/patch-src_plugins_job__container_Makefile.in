@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_job__container_Makefile.in,v 1.1 2025/03/12 18:54:23 adam Exp $
+
+tmpfs is not portable; disable it for the time being.
+
+--- src/plugins/job_container/Makefile.in.orig	2025-03-11 07:26:20.933426624 +0000
++++ src/plugins/job_container/Makefile.in
+@@ -455,7 +455,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = cncu none tmpfs
++SUBDIRS = cncu none #tmpfs
+ all: all-recursive
+ 
+ .SUFFIXES:
