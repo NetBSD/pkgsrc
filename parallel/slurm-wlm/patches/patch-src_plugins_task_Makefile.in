@@ -1,0 +1,15 @@
+$NetBSD: patch-src_plugins_task_Makefile.in,v 1.1 2025/03/12 18:54:23 adam Exp $
+
+affinity is not portable.
+
+--- src/plugins/task/Makefile.in.orig	2025-03-12 16:04:58.510187749 +0000
++++ src/plugins/task/Makefile.in
+@@ -456,7 +456,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-SUBDIRS = affinity cray_aries none $(am__append_1)
++SUBDIRS = cray_aries none $(am__append_1)
+ all: all-recursive
+ 
+ .SUFFIXES:
