@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2025/02/09 14:44:03 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2025/03/12 13:27:41 pin Exp $
 
-DISTNAME=	termusic-0.9.1
-PKGREVISION=	3
+DISTNAME=	termusic-0.10.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tramhao/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -13,7 +12,7 @@ LICENSE=	mit AND gnu-gpl-v3
 
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.77.0
+RUST_REQ=	1.79.0
 USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin
