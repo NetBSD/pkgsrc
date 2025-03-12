@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2215 2025/03/12 13:24:31 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2216 2025/03/12 13:26:46 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ast-grep to 0.36.1 [pin 2025-03-12]
 	Updated devel/feluda to 1.5.1 [pin 2025-03-12]
 	Updated www/monolith to 2.9.0 [pin 2025-03-12]
+	Updated shells/oh-my-posh to 25.4.1 [pin 2025-03-12]
