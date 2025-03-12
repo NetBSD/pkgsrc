@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2023/07/16 20:22:43 gutteridge Exp $
+$NetBSD: distinfo,v 1.10 2025/03/12 22:00:02 gutteridge Exp $
 
-BLAKE2s (xfce4-verve-plugin-2.0.3.tar.bz2) = 226027b57baac51132777690a0f9f5fe8dd40a4b4790c102b8c0ef00888d4448
-SHA512 (xfce4-verve-plugin-2.0.3.tar.bz2) = acfa0c9ee19904a0cbb5118bbb3324499a6fcfbf881478bfb745e0675be89aacb4ccd23137ba78fab0fe77e2e4b67a0c815cb3f37ee8132ebc09aecf9aaf1d1e
-Size (xfce4-verve-plugin-2.0.3.tar.bz2) = 383536 bytes
+BLAKE2s (xfce4-verve-plugin-2.0.4.tar.bz2) = beaae0bffc46e78b281a5cd570640a382b5b791ce73319152e942740fc68dbf5
+SHA512 (xfce4-verve-plugin-2.0.4.tar.bz2) = bca7613c4a6d5f6f083ee9ba480f9484e8c13dee0ae71740e980e3a358b5203b158086a8a71fb4a8bca698db719af4f445aaf31f75c56f58560f23fab1da181d
+Size (xfce4-verve-plugin-2.0.4.tar.bz2) = 450881 bytes
