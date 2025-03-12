@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25538 2025/03/12 09:35:41 wiz Exp $
+$NetBSD: TODO,v 1.25539 2025/03/12 13:29:32 pin Exp $
 
 Suggested new packages
 ======================
@@ -1308,7 +1308,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o trojita-0.7
 	o ttftot42-0.4.1
 	o turba-4.2.12
-	o typst-0.13.1
 	o uae-0.8.29
 	o ubs-0.20
 	o ucview-0.33
