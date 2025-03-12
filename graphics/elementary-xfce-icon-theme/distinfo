@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2024/10/18 00:29:56 gutteridge Exp $
+$NetBSD: distinfo,v 1.14 2025/03/12 22:10:48 gutteridge Exp $
 
-BLAKE2s (elementary-xfce-icon-theme-0.20.tar.gz) = dc4e3336512b5a3b46baa7ddb06ff2469baee7da00527b0ad97b0649c0eded63
-SHA512 (elementary-xfce-icon-theme-0.20.tar.gz) = 483bd6c7b6ac92f074c79d4b5fe6b992055d6b92a025731d39e1a92f638eb04d38394ed6c38366f4c2eddac8b52e5a605d4e5be69e4a825a02875e5ca31f04d4
-Size (elementary-xfce-icon-theme-0.20.tar.gz) = 7439368 bytes
+BLAKE2s (elementary-xfce-icon-theme-0.21.tar.gz) = 8d7a37a381c3ba5c1af95a508fd7de20431f2e74d3680c6c86e2b8907cb83f4e
+SHA512 (elementary-xfce-icon-theme-0.21.tar.gz) = be2a10099513f5501d03379b795bc882ae6af5bd56c56b5f852019b31e84ee4ec826bacf2b1c8822a706e02591c56277a2b22ccd68b3df87d57c6b26971f6cb0
+Size (elementary-xfce-icon-theme-0.21.tar.gz) = 7422680 bytes
