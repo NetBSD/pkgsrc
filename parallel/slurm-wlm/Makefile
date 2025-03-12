@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2024/11/14 22:21:21 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2025/03/12 18:54:23 adam Exp $
 
-DISTNAME=	slurm-19.05.5
+DISTNAME=	slurm-20.11.9
 PKGNAME=	${DISTNAME:S/-/-wlm-/}
-PKGREVISION=	26
 CATEGORIES=	parallel
-MASTER_SITES=	http://download.schedmd.com/slurm/
+MASTER_SITES=	https://download.schedmd.com/slurm/
 MASTER_SITES+=	http://www.schedmd.com/download/latest/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -16,20 +15,19 @@ LICENSE=	gnu-gpl-v2
 
 TOOL_DEPENDS+=	man2html-[0-9]*:../../textproc/man2html
 
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash perl pkg-config
+USE_TOOLS+=	bash gmake perl pkg-config
+GNU_CONFIGURE=	yes
 
 CONFIG_SHELL=		bash
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
+CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
-CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 CONFIGURE_ARGS+=	--with-hwloc=${PREFIX}
 CONFIGURE_ARGS+=	--with-json=${PREFIX}
 CONFIGURE_ARGS+=	--with-libssh2=${PREFIX}
-# Future: Enable task affinity code is fully patched for NetBSD
-# CONFIGURE_ARGS.NetBSD+=	ac_cv_func_sched_setaffinity=yes
+CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 
 REPLACE_PYTHON=		doc/html/shtml2html.py
 REPLACE_PYTHON+=	doc/man/man2html.py
@@ -78,19 +76,19 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/slurm
 	${RM} -f ${DESTDIR}${PREFIX}/share/examples/slurm/init.d.slurm.in.orig
 
-.include "../../www/curl/buildlink3.mk"
-.include "../../lang/python/tool.mk"
-.include "../../security/munge/buildlink3.mk" # optional
-.include "../../parallel/hwloc/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../archivers/lz4/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
-.include "../../security/libssh2/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
+.include "../../lang/python/tool.mk"
+.include "../../parallel/hwloc/buildlink3.mk"
+.include "../../security/libssh2/buildlink3.mk"
+.include "../../security/munge/buildlink3.mk" # optional
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
