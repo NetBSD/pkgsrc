@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2024/12/27 08:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2025/03/12 03:52:04 gutteridge Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-indicator-plugin-2.4.2
+DISTNAME=	xfce4-indicator-plugin-2.4.3
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-indicator-plugin/2.4/
 
