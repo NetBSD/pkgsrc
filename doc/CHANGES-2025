@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2208 2025/03/12 09:35:41 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2209 2025/03/12 09:35:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-proto-plus to 1.26.1 [adam 2025-03-12]
 	Updated textproc/py-prettytable to 3.15.1 [adam 2025-03-12]
 	Updated print/poppler to 24.10.0nb5 [wiz 2025-03-12]
+	Updated print/poppler-utils to 24.10.0nb4 [wiz 2025-03-12]
