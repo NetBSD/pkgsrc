@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2024/12/29 15:09:58 adam Exp $
+# $NetBSD: Makefile,v 1.110 2025/03/12 09:35:29 wiz Exp $
 
 COMMENT=	PDF rendering library
-PKGREVISION=	4
+PKGREVISION=	5
 
 SUPERSEDES+=	poppler-glib-[0-9]*
 
@@ -48,7 +48,6 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/nss/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.41.0
 .include "../../devel/glib2/buildlink3.mk"
