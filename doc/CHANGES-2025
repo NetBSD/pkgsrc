@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2203 2025/03/12 03:51:14 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2204 2025/03/12 03:52:21 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2819,3 +2819,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/arqiver to 1.0.1 [pin 2025-03-11]
 	Updated www/firefox115 to 115.21.0 [gutteridge 2025-03-12]
 	Updated www/firefox115-l10n to 115.21.0 [gutteridge 2025-03-12]
+	Updated x11/xfce4-indicator-plugin to 2.4.3 [gutteridge 2025-03-12]
