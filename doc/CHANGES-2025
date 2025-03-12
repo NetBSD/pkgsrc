@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2218 2025/03/12 13:29:32 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2219 2025/03/12 13:50:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2842,3 +2842,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated shells/oh-my-posh to 25.4.1 [pin 2025-03-12]
 	Updated audio/termusic to 0.10.0 [pin 2025-03-12]
 	Updated textproc/typst to 0.13.1 [pin 2025-03-12]
+	Updated devel/py-attrs to 25.2.0 [adam 2025-03-12]
+	Updated net/py-responses to 0.25.7 [adam 2025-03-12]
