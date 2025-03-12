@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2025/01/23 16:25:26 adam Exp $
+$NetBSD: distinfo,v 1.45 2025/03/12 14:30:24 adam Exp $
 
-BLAKE2s (tox-4.24.1.tar.gz) = 5a791631997627600999ffbacf60bd865d7a6af17079093593d660b1d7cbde20
-SHA512 (tox-4.24.1.tar.gz) = 8d7a3cd9c6140463dd2d2e1df7845c676f750ca23c0a9d528ee4fc7923bcadea94cfc0e7a1d70bd436d867be5f2edddd1576569777f2c15a0e11768cd932b6dd
-Size (tox-4.24.1.tar.gz) = 194742 bytes
+BLAKE2s (tox-4.24.2.tar.gz) = 26b2ebd0eef26531dad28aebb686d2e3b802dfaf6cc00ef57af959a542febdb3
+SHA512 (tox-4.24.2.tar.gz) = 864189ae85bb7bd8545de0b0e6e39b1a62248f51888ab829ac6bb5674646ac7c4a07a2500aa86ebc0f55ecd48c8e1d6811eae7dd4827bc9fee71d88e7d0df885
+Size (tox-4.24.2.tar.gz) = 195354 bytes
