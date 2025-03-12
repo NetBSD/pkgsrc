@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2205 2025/03/12 06:05:19 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2206 2025/03/12 06:15:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2822,3 +2822,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-aiohappyeyeballs to 2.6.1 [adam 2025-03-12]
 	Updated devel/py-fakefs to 5.8.0 [adam 2025-03-12]
 	Updated sysutils/py-structlog to 25.2.0 [adam 2025-03-12]
+	Updated devel/py-astroid to 3.3.9 [adam 2025-03-12]
+	Updated devel/py-pylint to 3.3.5 [adam 2025-03-12]
+	Updated devel/py-ruff to 0.9.10 [adam 2025-03-12]
+	Updated devel/py-project-metadata to 0.9.1 [adam 2025-03-12]
