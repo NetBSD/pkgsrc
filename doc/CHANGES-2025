@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2210 2025/03/12 09:55:04 hauke Exp $
+$NetBSD: CHANGES-2025,v 1.2211 2025/03/12 10:45:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2831,3 +2831,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/poppler to 24.10.0nb5 [wiz 2025-03-12]
 	Updated print/poppler-utils to 24.10.0nb4 [wiz 2025-03-12]
 	Updated net/netatalk4 to 4.1.2 [hauke 2025-03-12]
+	Removed www/clearsilver-base [wiz 2025-03-12]
+	Removed www/clearsilver [wiz 2025-03-12]
+	Removed www/py-clearsilver [wiz 2025-03-12]
+	Removed www/ruby-clearsilver [wiz 2025-03-12]
