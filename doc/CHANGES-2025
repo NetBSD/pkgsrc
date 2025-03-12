@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2206 2025/03/12 06:15:08 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2207 2025/03/12 09:31:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2826,3 +2826,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-pylint to 3.3.5 [adam 2025-03-12]
 	Updated devel/py-ruff to 0.9.10 [adam 2025-03-12]
 	Updated devel/py-project-metadata to 0.9.1 [adam 2025-03-12]
+	Updated devel/py-proto-plus to 1.26.1 [adam 2025-03-12]
+	Updated textproc/py-prettytable to 3.15.1 [adam 2025-03-12]
