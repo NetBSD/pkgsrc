@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.159 2024/10/20 20:01:34 nia Exp $
+# $NetBSD: Makefile.common,v 1.160 2025/03/12 09:35:29 wiz Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -25,7 +25,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config gsed
 
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_GPGME=OFF
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_NSS3=OFF
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -38,5 +37,6 @@ CMAKE_GENERATOR=	make
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../graphics/openjpeg/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/openjpeg/buildlink3.mk"
