@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2222 2025/03/12 14:33:16 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2223 2025/03/12 15:06:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2851,3 +2851,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-tox to 4.24.2 [adam 2025-03-12]
 	Updated devel/py-virtualenv to 20.29.3 [adam 2025-03-12]
 	Updated databases/py-sqlalchemy to 2.0.39 [adam 2025-03-12]
+	Added devel/py-ipython-pygments-lexers version 1.1.1 [adam 2025-03-12]
+	Updated devel/py-ipython to 9.0.2 [adam 2025-03-12]
