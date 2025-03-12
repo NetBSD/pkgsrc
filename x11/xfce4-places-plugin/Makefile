@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2024/12/27 08:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2025/03/12 22:07:06 gutteridge Exp $
 
-PKGREVISION= 10
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	1.8.3
+VERSION=	1.8.4
 DISTNAME=	xfce4-places-plugin-${VERSION}
 CATEGORIES=	x11
 MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/${VERSION:R}/
@@ -11,6 +10,6 @@ MASTER_SITES=	https://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/${V
 HOMEPAGE=	https://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin
 COMMENT=	Xfce Places plugin
 
-.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
+.include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
