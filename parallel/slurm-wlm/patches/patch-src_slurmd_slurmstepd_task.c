@@ -1,4 +1,4 @@
-$NetBSD: patch-src_slurmd_slurmstepd_task.c,v 1.2 2020/02/01 00:15:02 bacon Exp $
+$NetBSD: patch-src_slurmd_slurmstepd_task.c,v 1.3 2025/03/12 18:54:24 adam Exp $
 
 # Linux compat
 
