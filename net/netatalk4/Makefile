@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2025/01/25 10:28:05 riastradh Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/12 09:54:41 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
-DISTNAME=	netatalk-4-0-6
+DISTNAME=	netatalk-4-1-2
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
-PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Netatalk/}
 
@@ -23,6 +22,8 @@ TOOL_DEPENDS+=		docbook-xsl>=1.79.2:../../textproc/docbook-xsl
 MESON_ARGS+=		-Dwith-docbook-path=${TOOLBASE:Q}/share/xsl/docbook
 
 PKG_SYSCONFSUBDIR=	netatalk
+
+BUILD_DEFS+=		VARBASE
 
 EGDIR=			share/examples/netatalk
 CONF_FILES+=		${EGDIR}/afp.conf	${PKG_SYSCONFDIR}/afp.conf
@@ -42,8 +43,6 @@ RCD_SCRIPT_SRC.netatalk= ${WRKSRC}/output/distrib/initscripts/netatalk
 SMF_SRCDIR=		${WRKSRC}/distrib/initscripts
 SMF_METHODS=		netatalk_smf
 SMF_MANIFEST=		netatalk.xml
-
-BUILD_DEFS+=		VARBASE
 
 .if ${OPSYS} == "NetBSD"
 # See PR lib/50485
@@ -65,7 +64,7 @@ SUBST_CLASSES+=		perlpath
 SUBST_STAGE.perlpath=	pre-configure
 SUBST_FILES.perlpath+=	contrib/macusers/macusers.in
 SUBST_FILES.perlpath+=	contrib/shell_utils/afpstats.in
-SUBST_FILES.perlpath+=	contrib/shell_utils/apple_dump.in
+SUBST_FILES.perlpath+=	contrib/shell_utils/addump.in
 SUBST_FILES.perlpath+=	contrib/shell_utils/asip-status.in
 SUBST_SED.perlpath=	-e 's|@PERL@|${PERL5}|g'
 

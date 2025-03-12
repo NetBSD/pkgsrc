@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2024/11/21 15:26:08 hauke Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/03/12 09:54:41 hauke Exp $
 ${PLIST.ea}bin/ad
+bin/addump
 ${PLIST.appletalk}bin/aecho
 ${PLIST.ldap}bin/afpldaptest
 bin/afppasswd
 bin/afpstats
-bin/apple_dump
 bin/asip-status
 bin/dbd
 ${PLIST.appletalk}bin/getzones
@@ -34,7 +34,6 @@ include/atalk/nbp.h
 include/atalk/netatalk_conf.h
 include/atalk/netddp.h
 include/atalk/pap.h
-include/atalk/paths.h
 include/atalk/queue.h
 include/atalk/rtmp.h
 include/atalk/standards.h
@@ -68,6 +67,7 @@ ${PLIST.pam}lib/netatalk/uams_pam.so
 lib/netatalk/uams_passwd.so
 lib/netatalk/uams_randnum.so
 man/man1/ad.1
+man/man1/addump.1
 man/man1/aecho.1
 man/man1/afp_lantest.1
 man/man1/afp_logintest.1
@@ -78,7 +78,6 @@ man/man1/afpldaptest.1
 man/man1/afppasswd.1
 man/man1/afpstats.1
 man/man1/afptest.1
-man/man1/apple_dump.1
 man/man1/asip-status.1
 man/man1/dbd.1
 man/man1/getzones.1
@@ -96,6 +95,7 @@ man/man5/afp_signature.conf.5
 man/man5/afp_voluuid.conf.5
 man/man5/atalkd.conf.5
 man/man5/extmap.conf.5
+man/man5/macipgw.conf.5
 man/man5/papd.conf.5
 man/man8/a2boot.8
 man/man8/afpd.8
@@ -116,7 +116,6 @@ ${PLIST.appletalk}sbin/macipgw
 sbin/netatalk
 ${PLIST.appletalk}sbin/papd
 ${PLIST.appletalk}sbin/timelord
-${PLIST.spotlight}share/dbus-1/netatalk-dbus.conf
 share/doc/netatalk/CONTRIBUTORS
 share/doc/netatalk/DEVELOPER
 share/doc/netatalk/DOCKER.txt
@@ -127,7 +126,6 @@ share/doc/netatalk/README.txt
 share/doc/netatalk/SECURITY.txt
 share/examples/netatalk/afp.conf
 ${PLIST.appletalk}share/examples/netatalk/atalkd.conf
-${PLIST.spotlight}share/examples/netatalk/dbus-session.conf
 share/examples/netatalk/extmap.conf
 ${PLIST.pam}share/examples/netatalk/netatalk.pam
 ${PLIST.appletalk}share/examples/netatalk/papd.conf

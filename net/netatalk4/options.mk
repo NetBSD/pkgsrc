@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2025/01/25 10:28:05 riastradh Exp $
+# $NetBSD: options.mk,v 1.4 2025/03/12 09:54:41 hauke Exp $
 #
 PKG_OPTIONS_VAR=		PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=		debug dnssd kerberos ldap pam
@@ -16,7 +16,7 @@ PKG_SUGGESTED_OPTIONS+=		appletalk
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=			appletalk gssapi ldap pam spotlight
+PLIST_VARS+=			appletalk gssapi ldap pam # spotlight
 
 .if !empty(PKG_OPTIONS:Mappletalk)
 # For AppleTalk pap

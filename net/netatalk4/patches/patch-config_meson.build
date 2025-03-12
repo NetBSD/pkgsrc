@@ -1,10 +1,10 @@
-$NetBSD: patch-config_meson.build,v 1.1 2024/12/16 15:40:54 hauke Exp $
+$NetBSD: patch-config_meson.build,v 1.2 2025/03/12 09:54:41 hauke Exp $
 
 Leave installation of config files to pkgsrc framework
 
---- config/meson.build.orig	2024-12-16 15:31:18.321903696 +0000
+--- config/meson.build.orig	2025-02-10 20:41:20.000000000 +0000
 +++ config/meson.build
-@@ -10,65 +10,6 @@ dbus_session_conf = configure_file(
+@@ -4,75 +4,14 @@ afp_conf = configure_file(
      configuration: cdata,
  )
  
@@ -17,28 +17,38 @@ Leave installation of config files to pkgsrc framework
 -    install_data(afp_conf, install_dir: pkgconfdir)
 -endif
 -
--if (
--    fs.exists(pkgconfdir / 'dbus-session.conf')
--    and not get_option('with-overwrite')
--)
--    message('will not replace existing', pkgconfdir / 'dbus-session.conf')
--else
--    install_data(dbus_session_conf, install_dir: pkgconfdir)
--endif
+ if have_spotlight
+     dbus_session_conf = configure_file(
+         input: 'dbus-session.conf.in',
+         output: 'dbus-session.conf',
+         configuration: cdata,
+     )
 -
--if (
--    fs.exists(dbus_sysconfpath / 'netatalk-dbus.conf')
--    and not get_option('with-overwrite')
--)
--    message('will not replace existing', dbus_sysconfpath / 'netatalk-dbus.conf')
--else
--    install_data('netatalk-dbus.conf', install_dir: dbus_sysconfpath)
+-    if (
+-        fs.exists(pkgconfdir / 'dbus-session.conf')
+-        and not get_option('with-overwrite')
+-    )
+-        message('will not replace existing', pkgconfdir / 'dbus-session.conf')
+-    else
+-        install_data(dbus_session_conf, install_dir: pkgconfdir)
+-    endif
+ endif
+ 
+-if have_afpstats
+-    if (
+-        fs.exists(dbus_sysconfpath / 'netatalk-dbus.conf')
+-        and not get_option('with-overwrite')
+-    )
+-        message('will not replace existing', dbus_sysconfpath / 'netatalk-dbus.conf')
+-    else
+-        install_data('netatalk-dbus.conf', install_dir: dbus_sysconfpath)
+-    endif
 -endif
 -
 -static_conf_files = ['extmap.conf']
 -
 -if have_appletalk
--    static_conf_files += ['atalkd.conf', 'papd.conf']
+-    static_conf_files += ['atalkd.conf', 'macipgw.conf', 'papd.conf']
 -endif
 -
 -foreach file : static_conf_files
