@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.2 2022/01/20 01:25:04 gutteridge Exp $
+$NetBSD: patch-configure,v 1.3 2025/03/12 03:52:04 gutteridge Exp $
 
 Portability fix.
 
---- configure.orig	2022-01-08 13:57:52.000000000 +0000
+--- configure.orig	2024-12-24 16:29:53.000000000 +0000
 +++ configure
-@@ -17263,7 +17263,7 @@ else $as_nop
-   enable_application=yes
+@@ -18348,7 +18348,7 @@ else case e in #(
+ esac
  fi
  
 -if test x"$enable_application" == x"no"; then
