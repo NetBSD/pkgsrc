@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2234 2025/03/12 22:12:23 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2235 2025/03/12 22:18:36 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2865,3 +2865,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated x11/xfce4-places-plugin to 1.8.4 [gutteridge 2025-03-12]
 	Updated graphics/elementary-xfce-icon-theme to 0.21 [gutteridge 2025-03-12]
 	Updated meta-pkgs/xfce4 to 4.20.0nb4 [gutteridge 2025-03-12]
+	Updated meta-pkgs/xfce4-extras to 4.20.0nb30 [gutteridge 2025-03-12]
