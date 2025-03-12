@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2025/03/03 20:29:28 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2025/03/12 22:08:55 hauke Exp $
 
 DISTNAME=	nsd-4.11.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/nsd/
 
@@ -9,12 +10,14 @@ HOMEPAGE=	https://www.nlnetlabs.nl/projects/nsd/about/
 COMMENT=	Authoritative-only DNS server
 LICENSE=	modified-bsd
 
-BUILD_DEFS+=	VARBASE NSD_USER NSD_GROUP
+BUILD_DEFS+=	VARBASE NSD_USER NSD_GROUP NSD_LOG_FACILITY
 FILES_SUBST+=	NSD_USER=${NSD_USER} NSD_GROUP=${NSD_GROUP}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nsd
 PKG_SUPPORTED_OPTIONS=	inet6 rrl
 PKG_SUGGESTED_OPTIONS=	inet6
+
+NSD_LOG_FACILITY?=	LOG_DAEMON
 
 .include "../../mk/bsd.options.mk"
 
@@ -30,9 +33,9 @@ GNU_CONFIGURE=	yes
 
 PKG_SYSCONFSUBDIR=	nsd
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-configdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-facility=${NSD_LOG_FACILITY}
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
