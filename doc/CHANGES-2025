@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2223 2025/03/12 15:06:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2224 2025/03/12 16:34:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated databases/py-sqlalchemy to 2.0.39 [adam 2025-03-12]
 	Added devel/py-ipython-pygments-lexers version 1.1.1 [adam 2025-03-12]
 	Updated devel/py-ipython to 9.0.2 [adam 2025-03-12]
+	Updated devel/nss to 3.108nb1 [ryoon 2025-03-12]
