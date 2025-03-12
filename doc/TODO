@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25537 2025/03/12 06:15:08 adam Exp $
+$NetBSD: TODO,v 1.25538 2025/03/12 09:35:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -721,6 +721,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o golem-0.0.6
 	o goocanvas-2.0.2
 	o gossip-0.31
+	o gotosocial-0.18.2
 	o gperiodic-3.0.3
 	o gprolog-1.5.0 [adds arm64 support]
 	o gps-17.0
@@ -733,6 +734,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o grpc-1.71.0
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
+	o gstreamer1-1.26
 	o gtklevel9-5.1
 	o gtklife-5.2
 	o gtkmagnetic-23
