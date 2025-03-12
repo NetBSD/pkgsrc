@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.73 2024/11/14 22:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2025/03/12 09:35:45 wiz Exp $
 
 PKGNAME=	poppler-utils-${POPPLER_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	PDF utilities (from poppler)
 
 CONFLICTS+=	poppler-0.5.1{,nb*}
 CONFLICTS+=	xpdf<3.02pl4nb1
-
-# for pdfsig
-CMAKE_CONFIGURE_ARGS+=	-DENABLE_NSS3:BOOL=ON
 
 # Don't compile GTK+ test program.
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_GTK_TESTS=OFF
@@ -27,6 +24,8 @@ BUILD_DIRS=		utils
 USE_CXX_FEATURES+=	filesystem
 
 BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
+# for nss support for pdfsig - remove on next update
+BUILDLINK_API_DEPENDS.poppler+=     poppler>=24.10.0nb5
 .include "../../print/poppler/buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
