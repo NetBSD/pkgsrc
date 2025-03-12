@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2025/02/21 14:32:10 pin Exp $
+$NetBSD: distinfo,v 1.5 2025/03/12 13:23:10 pin Exp $
 
 BLAKE2s (addr2line-0.21.0.crate) = aa7d8fa248d0454d92b962f5d741ba41c55564299d33e6814e70dfe0b71bbcc7
 SHA512 (addr2line-0.21.0.crate) = afde7660dda30dee240e79df1fb5b92d4572520bf17a134ef3765e2a077af9e13713952d52e27fae420109b40f6e24dbce1056687dbcbead858ffc21cc7dc69b
@@ -171,9 +171,9 @@ Size (eyre-0.6.12.crate) = 45330 bytes
 BLAKE2s (fastrand-2.3.0.crate) = 17b53f60ee5cb0e59aa32c5e6d48a968a714aeb8d905b7e0dc37f8c8392813bc
 SHA512 (fastrand-2.3.0.crate) = 267fecbb7459c8840f03425733d278dd6c4e7637b85b99552877117ed5e8015e094d86aa95841f77064136b7f382276c3cb2c2bef7b2881d272f4aa57c5cf947
 Size (fastrand-2.3.0.crate) = 15076 bytes
-BLAKE2s (feluda-1.5.0.tar.gz) = 08b0b0308aa5228ed5872691a04042def107a4fee7bf6d7da71ed2e56a1d8fe4
-SHA512 (feluda-1.5.0.tar.gz) = 1e8be0a10549cf72afed5f1c57a5d88457cdc9a210233489f460c1acfde6b19b69ae6090254ab5be518370be5e94dd79854833bf5abb4f23da8fac019ab71cea
-Size (feluda-1.5.0.tar.gz) = 37651 bytes
+BLAKE2s (feluda-1.5.1.tar.gz) = 38413bdba1d35f9f82c52081c56a65821936718a1bdb1a6a2a4107bbe32d9069
+SHA512 (feluda-1.5.1.tar.gz) = 4d75d9f686e105e8acb59ee44610bbc784c25445e25812ed7597b87190a5e0b80b6d32c0c779a46740f51eadffbfe52990d7821f434d7e43e5390a59f2edeafb
+Size (feluda-1.5.1.tar.gz) = 38232 bytes
 BLAKE2s (figment-0.10.19.crate) = a3e1ddeeab89744acbff111cc319d4e9837b626d5edc58e8e76ba6cc8bf11e7a
 SHA512 (figment-0.10.19.crate) = 1b153903f54c980451d013a145138b8c4254796014c19e6bc096927d490c96f04bf0a2266164cca3ad3a50322c07b3ef41831e317d264ae9273645e1e43ee095
 Size (figment-0.10.19.crate) = 70111 bytes
