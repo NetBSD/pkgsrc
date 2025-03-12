@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2023/05/05 01:57:46 gutteridge Exp $
+@comment $NetBSD: PLIST,v 1.8 2025/03/12 22:02:25 gutteridge Exp $
 lib/xfce4/panel/plugins/libmpc.la
 share/locale/ar/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-mpc-plugin.mo
@@ -38,6 +38,7 @@ share/locale/oc/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/pt/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/pt_BR/LC_MESSAGES/xfce4-mpc-plugin.mo
+share/locale/ro/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/ru/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/sk/LC_MESSAGES/xfce4-mpc-plugin.mo
 share/locale/sl/LC_MESSAGES/xfce4-mpc-plugin.mo
