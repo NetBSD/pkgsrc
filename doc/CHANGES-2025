@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2201 2025/03/11 21:18:29 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2202 2025/03/12 03:50:56 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2817,3 +2817,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
 	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
 	Updated archivers/arqiver to 1.0.1 [pin 2025-03-11]
+	Updated www/firefox115 to 115.21.0 [gutteridge 2025-03-12]
