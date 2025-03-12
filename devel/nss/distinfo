@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.189 2025/02/11 21:53:28 wiz Exp $
+$NetBSD: distinfo,v 1.190 2025/03/12 16:34:45 ryoon Exp $
 
 BLAKE2s (nss-3.108.tar.gz) = d11ee5aff35616f3ac3ff36ff32c6fd56c40be26f1486118d9027281a9caff0f
 SHA512 (nss-3.108.tar.gz) = 8a9545ec201f610abfae40d29e989c6a140b066755c02a36225a95fb9abfe47834352f3eae168e1cfb16382dfd12820c63bb9ad37361a624907cc45faa7bd34b
@@ -15,6 +15,3 @@ SHA1 (patch-nss_coreconf_command.mk) = a7b682d367825b48f8802fa30cee83f10680bb74
 SHA1 (patch-nss_coreconf_nsinstall_Makefile) = 69981ba7355a4413111754859ef08cbd5e1bf4f4
 SHA1 (patch-nss_lib_freebl_sha256-armv8.c) = 48ec50204493dd510099a3495f3b775c6bfa8828
 SHA1 (patch-nss_lib_freebl_verified_internal_Hacl__Bignum__Base.h) = 52565ef5bab1f37154d4266544144d56a5b95699
-SHA1 (patch-nss_lib_util_utilpars.c) = 00737c798ab268d0fd219f29a45699e642ab6a79
-SHA1 (patch-nss_tests_all.sh) = b328778b538db66f5447f962f23afd6f650f7071
-SHA1 (patch-nss_tests_merge_merge.sh) = 42a4866d226b1076740ba9a5e42c7604f2cb15a7
