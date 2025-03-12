@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2231 2025/03/12 22:05:00 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2232 2025/03/12 22:07:24 gutteridge Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated sysutils/xfce4-verve-plugin to 2.0.4 [gutteridge 2025-03-12]
 	Updated multimedia/xfce4-mpc-plugin to 0.5.5 [gutteridge 2025-03-12]
 	Updated misc/xfce4-smartbookmark-plugin to 0.5.3 [gutteridge 2025-03-12]
+	Updated x11/xfce4-places-plugin to 1.8.4 [gutteridge 2025-03-12]
