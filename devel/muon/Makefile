@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/02/17 15:37:44 micha Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/12 10:03:45 micha Exp $
 
 DISTNAME=		0.4.0
 PKGNAME=		muon-${DISTNAME}
@@ -19,8 +19,8 @@ USE_CC_FEATURES=	c99
 CFLAGS+=		-DBOOTSTRAP_NO_SAMU
 DEPENDS+=		samurai>=1.2:../../devel/samurai
 
-# Required by some platforms for clock_gettime()
-LDFLAGS+=		-lrt
+# Required for clock_gettime() from GNU libc <2.17
+LDFLAGS.Linux+=		-lrt
 
 MUON_ARGS+=		-Dlibcurl=disabled
 MUON_ARGS+=		-Dlibarchive=disabled
