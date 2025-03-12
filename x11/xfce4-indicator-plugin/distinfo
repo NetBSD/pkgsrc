@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2024/05/25 01:47:21 gutteridge Exp $
+$NetBSD: distinfo,v 1.8 2025/03/12 03:52:04 gutteridge Exp $
 
-BLAKE2s (xfce4-indicator-plugin-2.4.2.tar.bz2) = bb30779cb4319dc443c681e44b6c7a6ce246e0826b967642dd8511f7a62d5334
-SHA512 (xfce4-indicator-plugin-2.4.2.tar.bz2) = ed778cfb2daa55edded450114b9ba83ca6050a549572d6f09294b9e89cc927f8abc79deb008f8ff6933dab35a16f5ba819b14d1d7f6b7464e1cd809aabaaad6b
-Size (xfce4-indicator-plugin-2.4.2.tar.bz2) = 386998 bytes
-SHA1 (patch-configure) = 6784b05144582fb463e344ffdb178dc3ff29a100
+BLAKE2s (xfce4-indicator-plugin-2.4.3.tar.bz2) = faf29be8a7a17e6b97be8edf51b1a4248524e4338f97d86fccd9db6b91a4b4d5
+SHA512 (xfce4-indicator-plugin-2.4.3.tar.bz2) = fd3d733811f3f7b4be174e9e477bdb85f7007aa4038d2490db79dbce5add6589f9e2788725257881e14eeaf84f472d18bffe3f1ba08360e59b2dc029bcf080c4
+Size (xfce4-indicator-plugin-2.4.3.tar.bz2) = 457820 bytes
+SHA1 (patch-configure) = d074b7349b7866884b1bd81cbdb96d591f3f40c6
