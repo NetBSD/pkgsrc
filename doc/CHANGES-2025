@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2212 2025/03/12 12:05:08 thorpej Exp $
+$NetBSD: CHANGES-2025,v 1.2213 2025/03/12 13:22:27 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2836,3 +2836,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed www/py-clearsilver [wiz 2025-03-12]
 	Removed www/ruby-clearsilver [wiz 2025-03-12]
 	Updated sysutils/nabud to 1.4 [thorpej 2025-03-12]
+	Updated devel/ast-grep to 0.36.1 [pin 2025-03-12]
