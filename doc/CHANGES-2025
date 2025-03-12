@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2204 2025/03/12 03:52:21 gutteridge Exp $
+$NetBSD: CHANGES-2025,v 1.2205 2025/03/12 06:05:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2815,8 +2815,10 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-yamllint to 1.36.0 [adam 2025-03-11]
 	Updated www/py-furl to 2.1.4 [adam 2025-03-11]
 	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
-	Updated sysutils/htop to 3.4.0 [fox 2025-03-11]
 	Updated archivers/arqiver to 1.0.1 [pin 2025-03-11]
 	Updated www/firefox115 to 115.21.0 [gutteridge 2025-03-12]
 	Updated www/firefox115-l10n to 115.21.0 [gutteridge 2025-03-12]
 	Updated x11/xfce4-indicator-plugin to 2.4.3 [gutteridge 2025-03-12]
+	Updated net/py-aiohappyeyeballs to 2.6.1 [adam 2025-03-12]
+	Updated devel/py-fakefs to 5.8.0 [adam 2025-03-12]
+	Updated sysutils/py-structlog to 25.2.0 [adam 2025-03-12]
