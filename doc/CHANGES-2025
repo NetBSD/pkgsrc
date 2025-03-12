@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2236 2025/03/12 22:46:36 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2237 2025/03/12 23:40:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2867,3 +2867,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated meta-pkgs/xfce4 to 4.20.0nb4 [gutteridge 2025-03-12]
 	Updated meta-pkgs/xfce4-extras to 4.20.0nb30 [gutteridge 2025-03-12]
 	Updated print/gutenprint-lib to 5.3.5 [gdt 2025-03-12]
+	Updated devel/ruby-jirametrics to 2.11 [schmonz 2025-03-12]
