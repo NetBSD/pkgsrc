@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.120 2025/02/09 14:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2025/03/12 23:02:16 hauke Exp $
 
 DISTNAME=	unbound-1.22.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	https://nlnetlabs.nl/downloads/unbound/
 
@@ -10,8 +10,11 @@ HOMEPAGE=	https://nlnetlabs.nl/projects/unbound/
 COMMENT=	DNS resolver and recursive server
 LICENSE=	modified-bsd
 
-BUILD_DEFS+=	VARBASE UNBOUND_USER UNBOUND_GROUP
+BUILD_DEFS+=	PKG_SYSCONFBASE VARBASE
+BUILD_DEFS+=	UNBOUND_USER UNBOUND_GROUP UNBOUND_LOG_FACILITY
 FILES_SUBST+=	UNBOUND_USER=${UNBOUND_USER} UNBOUND_GROUP=${UNBOUND_GROUP}
+
+UNBOUND_LOG_FACILITY?=	LOG_DAEMON
 
 USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--enable-allsymbols
@@ -19,6 +22,7 @@ CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=	--enable-event-api
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-syslog-facility=${UNBOUND_LOG_FACILITY}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 GNU_CONFIGURE=		yes
