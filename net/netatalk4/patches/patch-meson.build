@@ -1,6 +1,9 @@
-$NetBSD: patch-meson.build,v 1.3 2025/01/12 16:13:10 hauke Exp $
+$NetBSD: patch-meson.build,v 1.4 2025/03/12 09:54:41 hauke Exp $
 
 Make PREFIX path configurable.
+
+Quota support on NetBSD is currently broken, pull up an upstream
+change to disable it explicitly.
 
 While NetBSD has libwrap, the meson code doesn't find it. The test
 cond still succeeds, so add a branch that does not require the
@@ -8,9 +11,9 @@ library.
 
 Install at.h on Linux, we do it on NetBSD, too.
 
---- meson.build.orig	2024-11-15 06:52:12.000000000 +0000
+--- meson.build.orig	2025-02-10 20:41:20.000000000 +0000
 +++ meson.build
-@@ -169,7 +169,7 @@ elif host_os == 'netbsd'
+@@ -170,7 +170,7 @@ elif host_os == 'netbsd'
          'include',
          'sys',
          'etc/afpd',
@@ -28,20 +31,20 @@ Install at.h on Linux, we do it on NetBSD, too.
  endif
  
  if uname.found() and uname_stdout.to_lower().contains('omnios')
-@@ -2010,7 +2010,11 @@ int main(void) {
- }
- '''
+@@ -1025,6 +1025,12 @@ endif
  
--    have_tcpwrap = wrap.found() and cc.links(tcpwrap_code, args: '-lwrap')
-+    # *BSD have tcpwrappers support in libc
-+    have_tcpwrap = wrap.found() and cc.links(tcpwrap_code)
-+    if not have_tcpwrap
-+	have_tcpwrap = wrap.found() and cc.links(tcpwrap_code, args: '-lwrap')
-+    endif
-     if not have_tcpwrap
-         have_tcpwrap = cc.links(tcpwrap_code, args: ['-lwrap', '-lnsl'])
-     endif
-@@ -2077,7 +2081,6 @@ if host_os.contains('freebsd')
+ enable_quota = get_option('with-quota')
+ 
++if host_os == 'netbsd'
++    enable_quota = false
++    cdata.set('NO_QUOTA_SUPPORT', 1)
++    warning('quota is broken on NetBSD, see https://github.com/Netatalk/netatalk/issues/1225')
++endif
++
+ prop = cc.find_library('prop', required: false)
+ quota = cc.find_library('quota', required: false)
+ rpcsvc = cc.find_library('rpcsvc', required: false)
+@@ -2193,7 +2199,6 @@ if host_os.contains('freebsd')
      cdata.set('FREEBSD', 1)
      cdata.set('OPEN_NOFOLLOW_ERRNO', 'EMLINK')
  elif host_os.contains('linux')
