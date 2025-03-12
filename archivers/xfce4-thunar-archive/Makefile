@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2024/12/27 08:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2025/03/12 21:53:47 gutteridge Exp $
 
-PKGREVISION= 7
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	thunar-archive-plugin-0.5.2
+DISTNAME=	thunar-archive-plugin-0.5.3
 PKGNAME=	xfce4-${DISTNAME}
 CATEGORIES=	archivers
 MASTER_SITES=	https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.5/
@@ -14,6 +13,6 @@ COMMENT=	Thunar archive plugin
 
 DEPENDS=	xarchiver-[0-9]*:../../archivers/xarchiver
 
-.include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/xfce4-thunar/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
