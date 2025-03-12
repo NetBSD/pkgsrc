@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2025/01/18 01:25:59 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/03/12 23:40:22 schmonz Exp $
 bin/jirametrics
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bin/jirametrics
@@ -12,6 +12,7 @@ ${GEM_LIBDIR}/lib/jirametrics/blocked_stalled_change.rb
 ${GEM_LIBDIR}/lib/jirametrics/board.rb
 ${GEM_LIBDIR}/lib/jirametrics/board_column.rb
 ${GEM_LIBDIR}/lib/jirametrics/board_config.rb
+${GEM_LIBDIR}/lib/jirametrics/board_movement_calculator.rb
 ${GEM_LIBDIR}/lib/jirametrics/change_item.rb
 ${GEM_LIBDIR}/lib/jirametrics/chart_base.rb
 ${GEM_LIBDIR}/lib/jirametrics/columns_config.rb
