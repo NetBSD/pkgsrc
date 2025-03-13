@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/03/10 22:54:38 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2025/03/13 12:18:41 gdt Exp $
 
 DISTNAME=	osm2pgsql-1.11.0
 CATEGORIES=	geography
@@ -24,7 +24,7 @@ REPLACE_PYTHON+=	scripts/osm2pgsql-replication
 
 # Test dependencies.
 CMAKE_CONFIGURE_ARGS+=	-DBUILD_TESTS=ON
-TEST_TARGET=	test
+TEST_TARGET=		test
 # python, psycopg2
 
 .include "../../archivers/bzip2/buildlink3.mk"
