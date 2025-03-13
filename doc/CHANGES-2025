@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2247 2025/03/13 19:20:13 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2248 2025/03/13 19:36:52 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2888,3 +2888,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/palemoon to 33.6.1 [nia 2025-03-13]
 	Updated textproc/epubcheck to 5.2.1 [wiz 2025-03-13]
 	Updated www/arcticfox to 45.3 [nia 2025-03-13]
+	Updated sysutils/ncdu2 to 2.7 [vins 2025-03-13]
