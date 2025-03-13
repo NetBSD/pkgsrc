@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.15 2025/02/26 00:02:55 maya Exp $
+$NetBSD: CHANGES-pkgsrc-2024Q4,v 1.1.2.16 2025/03/13 06:40:57 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2024Q4 branch:
 
@@ -93,3 +93,8 @@ net/ruby-net-imap: Security fix
 Pullup ticket #6946 - requested by morr
 editors/vim-share: Security fix
 editors/vim-lang: Security fix
+
+Pullup ticket #6948 - requested by gutteridge
+www/firefox128: security fix
+www/firefox128-l10n: dependent update
+
