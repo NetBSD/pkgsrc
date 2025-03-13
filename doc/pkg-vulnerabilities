@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.329 2025/03/10 15:48:22 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.330 2025/03/13 08:03:35 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26142,3 +26142,4 @@ firefox128<128.8		integer-overflow		https://nvd.nist.gov/vuln/detail/CVE-2024-43
 firefox<136			use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 thunderbird<128.8		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 tinyxml2<10.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50615
+freetype2<2.13.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-27363
