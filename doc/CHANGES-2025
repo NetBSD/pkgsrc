@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2241 2025/03/13 15:17:59 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2242 2025/03/13 15:21:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/py-django-bootstrap5 to 25.1 [adam 2025-03-13]
 	Updated www/py-django-js-asset to 3.1.2 [adam 2025-03-13]
 	Updated www/py-django-picklefield to 3.3 [adam 2025-03-13]
+	Updated lang/php84 to 8.4.5 [taca 2025-03-13]
