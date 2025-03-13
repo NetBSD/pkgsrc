@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2025/02/03 08:29:00 adam Exp $
+# $NetBSD: Makefile,v 1.48 2025/03/13 15:31:56 adam Exp $
 
-DISTNAME=	pyzmq-26.2.1
+DISTNAME=	pyzmq-26.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyzmq/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3 AND modified-bsd
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-cython>=3.0.0:../../devel/py-cython
 TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core-[0-9]*:../../devel/py-scikit-build-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-scikit-build-core>=0.10:../../devel/py-scikit-build-core
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	cmake pkg-config
