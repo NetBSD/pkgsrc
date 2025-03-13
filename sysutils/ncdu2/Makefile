@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2024/05/06 08:40:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2025/03/13 19:36:14 vins Exp $
 
-DISTNAME=	ncdu-2.4
-PKGREVISION=	1
+DISTNAME=	ncdu-2.7
 CATEGORIES=	sysutils
 MASTER_SITES=	https://dev.yorhel.nl/download/
 
@@ -13,13 +12,14 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 # Temporary required, a zig build system parser is being written.
-ALLOW_NETWORK_ACCESS=yes
+ALLOW_NETWORK_ACCESS=	yes
 
-# TODO: fix "make doc" or patch zig.build to install docs
-post-build:
-	mkdir ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/ncdu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/ncdu.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/zig/application.mk"
 .include "../../mk/bsd.pkg.mk"
