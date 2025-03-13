@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2024/11/11 07:29:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/13 15:15:54 adam Exp $
 
-DISTNAME=	django-picklefield-3.2
+DISTNAME=	django-picklefield-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-picklefield/}
@@ -11,11 +11,9 @@ COMMENT=	Pickled object field for Django
 LICENSE=	mit
 
 TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-DEPENDS+=	${PYPKGPREFIX}-django>=3.2:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=4.2:../../www/py-django
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
