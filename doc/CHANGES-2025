@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2239 2025/03/13 15:11:00 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2240 2025/03/13 15:16:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2874,3 +2874,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-attrs to 25.3.0 [adam 2025-03-13]
 	Updated parallel/py-threadpoolctl to 3.6.0 [adam 2025-03-13]
 	Updated devel/py-inline-snapshot to 0.20.6 [adam 2025-03-13]
+	Updated lang/php83 to 8.3.19 [taca 2025-03-13]
