@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2025/02/12 06:45:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2025/03/13 19:19:52 nia Exp $
 
-DISTNAME=	arcticfox-45.1
-PKGREVISION=	7
+DISTNAME=	arcticfox-45.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rmottola/}
 GITHUB_PROJECT=	Arctic-Fox
@@ -38,6 +37,7 @@ CONFIG_SUB_OVERRIDE+=	./toolkit/crashreporter/google-breakpad/autotools/config.s
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-crashreporter
+CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-updater
@@ -45,7 +45,6 @@ CONFIGURE_ARGS+=	--disable-mozril-geoloc
 CONFIGURE_ARGS+=	--disable-webrtc
 CONFIGURE_ARGS+=	--disable-safe-browsing
 CONFIGURE_ARGS+=	--disable-parental-controls
-CONFIGURE_ARGS+=	--disable-safe-browsing
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--disable-eme
 CONFIGURE_ARGS+=	--disable-gamepad
@@ -56,14 +55,28 @@ CONFIGURE_ARGS+=	--enable-strip
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--with-branding=browser/branding/arcticfox
 
-# gtk3 now supported and default, but gtk2 less buggy
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-
 # Necessary for PaX safety on NetBSD.
 CONFIGURE_ARGS+=	--disable-precompiled-startupcache
 
+CONFIGURE_ARGS+=	--with-system-cairo
 CONFIGURE_ARGS+=	--with-system-bz2
 CONFIGURE_ARGS+=	--with-system-zlib
+
+AF_EXTERNAL_ICU?=	no
+.for plat in ${BIGENDIANPLATFORMS}
+.  if !empty(MACHINE_PLATFORM:M${plat})
+# See https://github.com/rmottola/Arctic-Fox/issues/210
+AF_EXTERNAL_ICU=	yes
+.  endif
+.endfor
+
+PLIST_VARS+=		icu
+.if ${AF_EXTERNAL_ICU:tl} != "no"
+CONFIGURE_ARGS+=	--with-system-icu
+.  include "../../textproc/icu/buildlink3.mk"
+.else
+PLIST.icu=		yes
+.endif
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 # Without this NetBSD/sparc64 starts, but crashes on some sites
@@ -79,6 +92,9 @@ TOOL_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 CONFIGURE_DIRS=		${WRKDIR}/build
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
+
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1402303
+ALL_ENV+=		SHELL=${CONFIG_SHELL:Q}
 
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/${PKGNAME_NOREV}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib
@@ -134,8 +150,8 @@ post-install:
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
-.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
@@ -143,7 +159,13 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-cocoa
+.else
+# gtk3 now supported and default, but gtk2 less buggy
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+.  include "../../x11/gtk2/buildlink3.mk"
+.  include "../../x11/libXt/buildlink3.mk"
+.endif
 .include "../../mk/atomic64.mk"
 .include "../../mk/bsd.pkg.mk"
