@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2245 2025/03/13 17:57:12 nia Exp $
+$NetBSD: CHANGES-2025,v 1.2246 2025/03/13 19:16:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/py-trove-classifiers to 2025.3.13.13 [adam 2025-03-13]
 	Updated net/py-zmq to 26.3.0 [adam 2025-03-13]
 	Updated www/palemoon to 33.6.1 [nia 2025-03-13]
+	Updated textproc/epubcheck to 5.2.1 [wiz 2025-03-13]
