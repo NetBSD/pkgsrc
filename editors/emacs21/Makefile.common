@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2023/12/11 01:03:55 gdt Exp $
+# $NetBSD: Makefile.common,v 1.23 2025/03/13 18:44:01 maya Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -72,6 +72,11 @@ LDFLAGS.OpenBSD+=	-Z
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3.*)
 CFLAGS+=	-fno-zero-initialized-in-bss
+.endif
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=implicit-int
+CFLAGS+=	-Wno-error=implicit-function-declaration
+CFLAGS+=	-Wno-error=incompatible-pointer-types
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mclang)
