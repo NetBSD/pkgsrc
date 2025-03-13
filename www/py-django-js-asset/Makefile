@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2025/01/27 11:58:40 adam Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/13 15:14:38 adam Exp $
 
-DISTNAME=	django_js_asset-3.0.1
+DISTNAME=	django_js_asset-3.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/g}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-js-asset/}
