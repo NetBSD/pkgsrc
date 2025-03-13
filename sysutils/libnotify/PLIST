@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2024/12/01 19:09:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2025/03/13 07:42:01 wiz Exp $
 bin/notify-send
 include/libnotify/notification.h
 include/libnotify/notify-enum-types.h
@@ -55,11 +55,13 @@ ${PLIST.doc}share/doc/libnotify-0/enum.Urgency.html
 ${PLIST.doc}share/doc/libnotify-0/fonts.css
 ${PLIST.doc}share/doc/libnotify-0/func.ACTION_CALLBACK.html
 ${PLIST.doc}share/doc/libnotify-0/func.CHECK_VERSION.html
+${PLIST.doc}share/doc/libnotify-0/func.get_app_icon.html
 ${PLIST.doc}share/doc/libnotify-0/func.get_app_name.html
 ${PLIST.doc}share/doc/libnotify-0/func.get_server_caps.html
 ${PLIST.doc}share/doc/libnotify-0/func.get_server_info.html
 ${PLIST.doc}share/doc/libnotify-0/func.init.html
 ${PLIST.doc}share/doc/libnotify-0/func.is_initted.html
+${PLIST.doc}share/doc/libnotify-0/func.set_app_icon.html
 ${PLIST.doc}share/doc/libnotify-0/func.set_app_name.html
 ${PLIST.doc}share/doc/libnotify-0/func.uninit.html
 ${PLIST.doc}share/doc/libnotify-0/fzy.js
@@ -74,6 +76,7 @@ ${PLIST.doc}share/doc/libnotify-0/method.Notification.clear_hints.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.close.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.get_activation_token.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.get_closed_reason.html
+${PLIST.doc}share/doc/libnotify-0/method.Notification.set_app_icon.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.set_app_name.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.set_category.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.set_hint.html
@@ -90,6 +93,7 @@ ${PLIST.doc}share/doc/libnotify-0/method.Notification.set_urgency.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.show.html
 ${PLIST.doc}share/doc/libnotify-0/method.Notification.update.html
 ${PLIST.doc}share/doc/libnotify-0/opensearch.xml
+${PLIST.doc}share/doc/libnotify-0/property.Notification.app-icon.html
 ${PLIST.doc}share/doc/libnotify-0/property.Notification.app-name.html
 ${PLIST.doc}share/doc/libnotify-0/property.Notification.body.html
 ${PLIST.doc}share/doc/libnotify-0/property.Notification.closed-reason.html
