@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2258 2025/03/14 13:39:32 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2259 2025/03/14 15:25:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2902,3 +2902,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-json-logger to 3.3.0 [adam 2025-03-14]
 	Updated net/unifi to 8.6.9 [abs 2025-03-14]
 	Updated security/botan3 to 3.6.1nb4 [wiz 2025-03-14]
+	Updated lang/php81 to 8.1.32 [taca 2025-03-14]
