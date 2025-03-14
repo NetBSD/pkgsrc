@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2261 2025/03/14 15:28:20 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2262 2025/03/14 15:47:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2907,3 +2907,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated archivers/py-libarchive-c to 5.2 [adam 2025-03-14]
 	Updated databases/py-alembic to 1.15.1 [adam 2025-03-14]
 	Updated textproc/py-validate-pyproject to 0.24 [adam 2025-03-14]
+	Updated net/ncftp3 to 3.2.8 [adam 2025-03-14]
+	Updated textproc/translate-toolkit to 3.15.1 [adam 2025-03-14]
