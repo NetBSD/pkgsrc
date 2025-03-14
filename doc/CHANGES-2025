@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2250 2025/03/14 08:21:39 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2251 2025/03/14 08:41:39 fox Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2893,3 +2893,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated graphics/py-tifffile to 2025.3.13 [adam 2025-03-14]
 	Updated net/py-zeroconf to 0.146.1 [adam 2025-03-14]
 	Updated misc/py-pbs-installer to 2025.3.11 [adam 2025-03-14]
+	Updated sysutils/eza to 0.20.24 [fox 2025-03-14]
