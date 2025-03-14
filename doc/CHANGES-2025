@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2251 2025/03/14 08:41:39 fox Exp $
+$NetBSD: CHANGES-2025,v 1.2252 2025/03/14 10:14:15 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2894,3 +2894,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/py-zeroconf to 0.146.1 [adam 2025-03-14]
 	Updated misc/py-pbs-installer to 2025.3.11 [adam 2025-03-14]
 	Updated sysutils/eza to 0.20.24 [fox 2025-03-14]
+	Updated shells/oh-my-posh to 25.4.2 [pin 2025-03-14]
