@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2266 2025/03/14 19:46:36 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2267 2025/03/14 21:00:57 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated wm/emwm to 1.3 [vins 2025-03-14]
 	Updated wm/emwm-utils to 1.3 [vins 2025-03-14]
 	Updated misc/qt6gtk2 to 0.4 [vins 2025-03-14]
+	Updated textproc/hck to 0.11.4 [pin 2025-03-14]
