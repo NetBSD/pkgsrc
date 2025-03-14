@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2025/02/24 10:30:48 micha Exp $
+# $NetBSD: Makefile,v 1.93 2025/03/14 16:04:15 micha Exp $
 
 DISTNAME=	fltk-1.4.2-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -12,6 +12,8 @@ MAINTAINER=	micha@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
+
+CONFLICTS+=	fltk13-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_CC_FEATURES+=	c99
