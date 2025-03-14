@@ -1,9 +1,9 @@
-$NetBSD: patch-src_common.mf,v 1.2 2024/12/08 14:00:28 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.3 2025/03/14 18:31:21 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2024-01-21 18:22:22.000000000 +0000
+--- src/common.mf.orig	2025-03-11 12:31:37.000000000 +0000
 +++ src/common.mf
 @@ -28,10 +28,10 @@ wsm_objs = \
  	WmWsmLib/util.o WmWsmLib/utm_send.o
@@ -18,28 +18,19 @@ $NetBSD: patch-src_common.mf,v 1.2 2024/12/08 14:00:28 vins Exp $
  
  .PHONY: clean install common_install
  
-@@ -40,21 +40,11 @@ clean:
+@@ -40,15 +40,14 @@ clean:
  	-rm .depend
  
  common_install:
--	install -m 775 emwm $(PREFIX)/bin/emwm
--	install -m 775 -d $(MANDIR)/man1
--	install -m 664 emwm.1 $(MANDIR)/man1/emwm.1
--	install -m 775 -d $(MANDIR)/man4
--	install -m 664 emwmrc.4 $(MANDIR)/man4/emwmrc.4
--	install -m 775 -d $(RCDIR)
--	install -m 664 system.emwmrc $(RCDIR)/system.emwmrc
--	install -m 775 -d $(APPLRESDIR)
--	install -m 664 Emwm.ad $(APPLRESDIR)/Emwm
--
--uninstall:
--	rm -f $(PREFIX)/bin/emwm
--	rm -f $(MANDIR)/man1/emwm.1
--	rm -f $(MANDIR)/man4/emwmrc.4
--	rm -f $(RCDIR)/system.emwmrc
--	rmdir $(RCDIR)
--	rm -f $(APPLRESDIR)/Emwm
--
+-	install -m 755 emwm $(PREFIX)/bin/emwm
+-	install -m 755 -d $(MANDIR)/man1
+-	install -m 644 emwm.1 $(MANDIR)/man1/emwm.1
+-	install -m 755 -d $(MANDIR)/man4
+-	install -m 644 emwmrc.4 $(MANDIR)/man4/emwmrc.4
+-	install -m 755 -d $(RCDIR)
+-	install -m 644 system.emwmrc $(RCDIR)/system.emwmrc
+-	install -m 755 -d $(APPLRESDIR)
+-	install -m 644 Emwm.ad $(APPLRESDIR)/Emwm
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) emwm $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man1 $(DESTDIR)$(MANDIR)/man4
@@ -48,3 +39,6 @@ $NetBSD: patch-src_common.mf,v 1.2 2024/12/08 14:00:28 vins Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(RCDIR) $(DESTDIR)$(APPLRESDIR)
 +	$(BSD_INSTALL_DATA) system.emwmrc $(DESTDIR)$(RCDIR)/system.emwmrc
 +	$(BSD_INSTALL_DATA) Emwm.ad $(DESTDIR)$(APPLRESDIR)/Emwm
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/bin/emwm

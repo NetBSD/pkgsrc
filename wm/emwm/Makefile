@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/12/08 16:34:38 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/03/14 18:31:21 vins Exp $
 
-DISTNAME=	emwm-src-1.2
+DISTNAME=	emwm-src-1.3
 PKGNAME=	${DISTNAME:S,-src,,}
-PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	https://fastestcode.org/dl/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -25,7 +24,6 @@ EGFILES=	gtk-configs/* Xresources-sample
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	pre-configure
 SUBST_FILES.pkgsrc=	mf/Makefile.pkgsrc
-SUBST_VARS.pkgsrc=	CC CFLAGS LDFLAGS
 SUBST_VARS.pkgsrc+=	PREFIX PKGMANDIR RCDIR
 SUBST_MESSAGE.pkgsrc=	Replacing pkgsrc placeholders
 
