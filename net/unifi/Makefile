@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2024/09/21 13:37:34 abs Exp $
+# $NetBSD: Makefile,v 1.37 2025/03/14 13:21:07 abs Exp $
 
-DISTNAME=	unifi-8.4.62
+DISTNAME=	unifi-8.6.9
 CATEGORIES=	net
 MASTER_SITES=	-http://dl.ubnt.com/unifi/${PKGVERSION_NOREV}/UniFi.unix.zip
 EXTRACT_SUFX=	.zip
+DISTFILES=	${DEFAULT_DISTFILES}
+EXTRACT_ONLY=	${DEFAULT_DISTFILES}
 
 # Updates must be tested to not only build but actually function under
 # at least NetBSD 10/amd64 with actual UBNT hardware.
@@ -20,10 +22,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-
-DISTFILES=		${DEFAULT_DISTFILES}
-EXTRACT_ONLY=		${DEFAULT_DISTFILES}
-
 
 # Unifi bundles snappy-java-1.0.5.jar, which contains native code.
 # We can use the bundled snappy-java but we must recompile the native portion
