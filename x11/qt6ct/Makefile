@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2025/03/14 19:30:25 vins Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/14 19:54:00 vins Exp $
 
 DISTNAME=	qt6ct-${PKGVER}
-PKGREVISION=	1
+PKGREVISION=	2
 PKGVER=		0.10
 CATEGORIES=	x11
-MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVER}
+MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVER}/
 
 MAINTAINER=	vins@NetBSD.org
 HOMEPAGE=	https://www.opencode.net/trialuser/qt6ct
@@ -32,7 +32,7 @@ do-configure:
 		${QTDIR}/bin/qmake ${QMAKE_ARGS}
 
 post-install:
-	${INSTALL_DATA}	${WRKSRC}/README	\
+	${INSTALL_DATA}	${WRKSRC}/README.md	\
 		${DESTDIR}${PREFIX}/${DOCDIR}/README
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
