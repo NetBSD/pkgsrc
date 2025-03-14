@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2265 2025/03/14 18:34:36 vins Exp $
+$NetBSD: CHANGES-2025,v 1.2266 2025/03/14 19:46:36 vins Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/py-certbot-nginx to 3.3.0 [adam 2025-03-14]
 	Updated wm/emwm to 1.3 [vins 2025-03-14]
 	Updated wm/emwm-utils to 1.3 [vins 2025-03-14]
+	Updated misc/qt6gtk2 to 0.4 [vins 2025-03-14]
