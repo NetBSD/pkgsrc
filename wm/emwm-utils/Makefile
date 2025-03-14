@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2024/12/08 15:56:21 vins Exp $
+# $NetBSD: Makefile,v 1.9 2025/03/14 18:34:17 vins Exp $
 
-DISTNAME=	emwm-utils-src-1.2
+DISTNAME=	emwm-utils-src-1.3
 PKGNAME=	${DISTNAME:S,-src,,}
-PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	https://fastestcode.org/dl/
 EXTRACT_SUFX=	.tar.xz
