@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2262 2025/03/14 15:47:44 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2263 2025/03/14 15:58:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2909,3 +2909,20 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-validate-pyproject to 0.24 [adam 2025-03-14]
 	Updated net/ncftp3 to 3.2.8 [adam 2025-03-14]
 	Updated textproc/translate-toolkit to 3.15.1 [adam 2025-03-14]
+	Updated security/py-acme to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-apache to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-cloudflare to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-digitalocean to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-dnsimple to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-dnsmadeeasy to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-gehirn to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-google to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-linode to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-luadns to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-nsone to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-ovh to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-rfc2136 to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-route53 to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-dns-sakuracloud to 3.3.0 [adam 2025-03-14]
+	Updated security/py-certbot-nginx to 3.3.0 [adam 2025-03-14]
