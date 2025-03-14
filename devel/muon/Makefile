@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2025/03/12 10:03:45 micha Exp $
+# $NetBSD: Makefile,v 1.4 2025/03/14 11:53:40 micha Exp $
 
 DISTNAME=		0.4.0
 PKGNAME=		muon-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		https://git.sr.ht/~lattis/muon/archive/
 DIST_SUBDIR=		${PKGNAME_NOREV}
