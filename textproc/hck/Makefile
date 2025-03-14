@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2025/02/28 08:21:35 pin Exp $
+# $NetBSD: Makefile,v 1.14 2025/03/14 21:00:31 pin Exp $
 
-DISTNAME=	hck-0.11.1
+DISTNAME=	hck-0.11.4
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sstadick/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,6 +11,9 @@ COMMENT=	Sharp cut(1) clone
 LICENSE=	unlicense OR mit
 
 TOOL_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
 
 RUST_REQ=	1.81.0
 
