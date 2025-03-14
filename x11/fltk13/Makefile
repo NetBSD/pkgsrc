@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2025/02/07 10:01:25 micha Exp $
+# $NetBSD: Makefile,v 1.51 2025/03/14 16:00:40 micha Exp $
 
 DISTNAME=	fltk-1.3.11-source
-PKGNAME=	${DISTNAME:S/-source//}
+PKGNAME=	${DISTNAME:S/-source//:S/fltk/fltk13/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fltk/}
 GITHUB_PROJECT=	fltk
@@ -12,6 +13,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.fltk.org/
 COMMENT=	Fast Light Tool Kit for graphical user interfaces
 LICENSE=	gnu-lgpl-v2
+
+SUPERSEDES+=	fltk>=1.3.0<1.4.0
+CONFLICTS+=	fltk-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
