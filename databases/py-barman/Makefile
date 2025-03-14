@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2025/01/27 09:31:46 adam Exp $
+# $NetBSD: Makefile,v 1.25 2025/03/14 12:36:01 adam Exp $
 
-DISTNAME=	barman-3.12.1
+DISTNAME=	barman-3.13.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/barman/}
