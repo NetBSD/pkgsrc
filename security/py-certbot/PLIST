@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2023/12/12 16:39:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2025/03/14 15:57:50 adam Exp $
 bin/certbot-${PYVERSSUFFIX}
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
@@ -365,7 +365,6 @@ ${PYSITELIB}/certbot/tests/testdata/ocsp_issuer_certificate.pem
 ${PYSITELIB}/certbot/tests/testdata/ocsp_responder_certificate.pem
 ${PYSITELIB}/certbot/tests/testdata/os-release
 ${PYSITELIB}/certbot/tests/testdata/rsa2048_key.pem
-${PYSITELIB}/certbot/tests/testdata/rsa256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/cert1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive-ec/chain1.pem
