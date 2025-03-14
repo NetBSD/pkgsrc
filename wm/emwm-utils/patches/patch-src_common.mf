@@ -1,9 +1,9 @@
-$NetBSD: patch-src_common.mf,v 1.1 2024/12/08 15:09:54 vins Exp $
+$NetBSD: patch-src_common.mf,v 1.2 2025/03/14 18:34:17 vins Exp $
 
 * Use standard CFLAGS and LDFLAGS.
 * Provide a pkgsrc-compliant install target.
 
---- src/common.mf.orig	2024-01-03 16:20:35.000000000 +0000
+--- src/common.mf.orig	2024-08-02 18:13:58.000000000 +0000
 +++ src/common.mf
 @@ -1,6 +1,5 @@
  # Common Makefile part, included by platform specific makefiles
@@ -12,7 +12,7 @@ $NetBSD: patch-src_common.mf,v 1.1 2024/12/08 15:09:54 vins Exp $
  toolbox_libs =  -lXm -lXt -lX11
  xmsm_libs = -lXm -lXt -lXss -lXrandr -lXinerama -lX11 $(SYSLIBS)
  
-@@ -15,49 +14,37 @@ executables = xmsm xmtoolbox xmsession
+@@ -15,34 +14,33 @@ executables = xmsm xmtoolbox xmsession
  all: $(executables) $(app_defaults) 
  
  xmtoolbox: $(toolbox_objs) $(common_objs)
@@ -39,27 +39,16 @@ $NetBSD: patch-src_common.mf,v 1.1 2024/12/08 15:09:54 vins Exp $
  .PHONY: clean install common_install
  
  common_install:
--	install -m775 xmsession $(PREFIX)/bin/xmsession
--	install -m775 xmtoolbox $(PREFIX)/bin/xmtoolbox
--	install -m4775 xmsm $(PREFIX)/bin/xmsm
--	install -m775 -d $(MANDIR)/man1
--	install -m664 xmtoolbox.1 $(MANDIR)/man1/xmtoolbox.1
--	install -m664 xmsm.1 $(MANDIR)/man1/xmsm.1
--	install -m775 -d $(APPLRESDIR)
--	install -m664 XmSm.ad $(APPLRESDIR)/XmSm
--	install -m664 XmToolbox.ad $(APPLRESDIR)/XmToolbox
--	install -m664 toolboxrc $(RCDIR)/toolboxrc
--
--uninstall:
--	rm -f $(PREFIX)/bin/xmsm
--	rm -f $(PREFIX)/bin/xmsession
--	rm -f $(PREFIX)/bin/xmtoolbox
--	rm -f $(MANDIR)/man1/xmtoolbox.1
--	rm -f $(MANDIR)/man1/xmtoolbox.1
--	rm -f $(APPLRESDIR)/XmSm
--	rm -f $(APPLRESDIR)/XmToolbox
--	rm -f $(RCDIR)/toolboxrc
--	rmdir $(RCDIR)
+-	install -m755 xmsession $(PREFIX)/bin/xmsession
+-	install -m755 xmtoolbox $(PREFIX)/bin/xmtoolbox
+-	install -m4755 xmsm $(PREFIX)/bin/xmsm
+-	install -m755 -d $(MANDIR)/man1
+-	install -m644 xmtoolbox.1 $(MANDIR)/man1/xmtoolbox.1
+-	install -m644 xmsm.1 $(MANDIR)/man1/xmsm.1
+-	install -m755 -d $(APPLRESDIR)
+-	install -m644 XmSm.ad $(APPLRESDIR)/XmSm
+-	install -m644 XmToolbox.ad $(APPLRESDIR)/XmToolbox
+-	install -m644 toolboxrc $(RCDIR)/toolboxrc
 +	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) xmsm xmtoolbox $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_SCRIPT) xmsession $(DESTDIR)$(BINDIR)
@@ -70,8 +59,9 @@ $NetBSD: patch-src_common.mf,v 1.1 2024/12/08 15:09:54 vins Exp $
 +	$(BSD_INSTALL_DATA) XmSm.ad $(DESTDIR)$(APPLRESDIR)/XmSm
 +	$(BSD_INSTALL_DATA) XmToolbox.ad $(DESTDIR)$(APPLRESDIR)/XmToolbox
  
- clean:
- 	-rm $(toolbox_objs) $(xmsm_objs) $(common_objs) $(executables) $(app_defaults)
+ uninstall:
+ 	rm -f $(PREFIX)/bin/xmsm
+@@ -60,4 +58,4 @@ clean:
  	-rm .depend
  
  .depend:
