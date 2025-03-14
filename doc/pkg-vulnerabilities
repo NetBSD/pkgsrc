@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.330 2025/03/13 08:03:35 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.331 2025/03/14 18:58:57 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26143,3 +26143,8 @@ firefox<136			use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 thunderbird<128.8		use-after-free		https://nvd.nist.gov/vuln/detail/CVE-2025-1931
 tinyxml2<10.1.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-50615
 freetype2<2.13.3	arbitrary-code-execution	https://nvd.nist.gov/vuln/detail/CVE-2025-27363
+php81<8.1.32	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
+php82<8.2.28	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
+php83<8.3.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
+php84<8.4.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
+expat<2.7.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8176
