@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2025/03/14 08:41:16 fox Exp $
+# $NetBSD: Makefile,v 1.58 2025/03/14 20:59:36 pin Exp $
 
 DISTNAME=	eza-0.20.24
 CATEGORIES=	sysutils
@@ -10,6 +10,9 @@ MAINTAINER=	fox@NetBSD.org
 HOMEPAGE=	https://eza.rocks/
 COMMENT=	Modern, maintained replacement for ls
 LICENSE=	mit
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
 
 RUST_REQ=	1.78.0
 SUPERSEDES=	exa-[0-9]*
