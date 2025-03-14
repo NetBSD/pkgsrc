@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2025/01/31 15:54:44 micha Exp $
+# $NetBSD: options.mk,v 1.7 2025/03/14 15:36:44 micha Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eureka
 PKG_SUPPORTED_OPTIONS=	opengl xdg-utils
@@ -12,7 +12,7 @@ PKG_SUGGESTED_OPTIONS=	opengl xdg-utils
 # If FLTK is compiled without opengl option, it is always disabled here too.
 # If FLTK is compiled with opengl option, disabling it here allows to force
 # usage of the software renderer (recommended without hardware acceleration).
-.if empty(PKG_OPTIONS.fltk13:Mopengl) || empty(PKG_OPTIONS:Mopengl)
+.if empty(PKG_OPTIONS.fltk:Mopengl) || empty(PKG_OPTIONS:Mopengl)
 CMAKE_CONFIGURE_ARGS+=	-DENABLE_OPENGL=off
 .endif
 
