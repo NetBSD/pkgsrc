@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2025/02/15 15:34:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.58 2025/03/14 11:48:43 gdt Exp $
 bin/export_signing_key
 bin/generate_config
 bin/generate_log_config
@@ -12,7 +12,8 @@ bin/synapse_worker
 bin/synctl
 bin/update_synapse_database
 ${PYSITELIB}/${WHEEL_INFODIR}/AUTHORS.rst
-${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-AGPL-3.0
+${PYSITELIB}/${WHEEL_INFODIR}/LICENSE-COMMERCIAL
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
