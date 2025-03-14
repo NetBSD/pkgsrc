@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2024/12/27 08:20:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/14 19:45:48 vins Exp $
 
-DISTNAME=	qt6gtk2-0.3
-PKGREVISION=	1
+DISTNAME=	qt6gtk2-${PKGVER}
+PKGVER=		0.4
 CATEGORIES=	misc x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=trialuser02/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	https://www.opencode.net/trialuser/qt6gtk2/-/archive/${PKGVER}/
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://github.com/trialuser02/qt6ct/
+HOMEPAGE=	https://www.opencode.net/trialuser/qt6gtk2
 COMMENT=	GTK+2.0 integration plugins for Qt6
 LICENSE=	gnu-gpl-v2
 
