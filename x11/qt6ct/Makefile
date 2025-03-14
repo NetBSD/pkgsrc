@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2025/02/11 21:26:08 vins Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/14 19:30:25 vins Exp $
 
-DISTNAME=	qt6ct-0.10
+DISTNAME=	qt6ct-${PKGVER}
+PKGREVISION=	1
+PKGVER=		0.10
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GITHUB:=ilya-fedin/}
-GITHUB_TAG=	${PKGVERSION_NOREV}
+MASTER_SITES=	https://www.opencode.net/trialuser/qt6ct/-/archive/${PKGVER}
 
 MAINTAINER=	vins@NetBSD.org
-HOMEPAGE=	https://github.com/trialuser02/qt6ct/
+HOMEPAGE=	https://www.opencode.net/trialuser/qt6ct
 COMMENT=	Qt6 configuration tool
 LICENSE=	2-clause-bsd
 
