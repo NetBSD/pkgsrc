@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2255 2025/03/14 11:58:02 gdt Exp $
+$NetBSD: CHANGES-2025,v 1.2256 2025/03/14 12:38:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2898,3 +2898,5 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated editors/tp-note to 1.25.4 [pin 2025-03-14]
 	Updated chat/matrix-synapse to 1.125.0 [gdt 2025-03-14]
 	Updated chat/matrix-synapse to 1.126.0 [gdt 2025-03-14]
+	Updated databases/py-barman to 3.13.0 [adam 2025-03-14]
+	Updated textproc/py-json-logger to 3.3.0 [adam 2025-03-14]
