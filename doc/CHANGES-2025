@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2273 2025/03/15 16:00:57 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2274 2025/03/15 16:02:13 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2936,3 +2936,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/bacon to 3.12.0 [pin 2025-03-15]
 	Updated devel/feluda to 1.5.2 [pin 2025-03-15]
 	Updated shells/oh-my-posh to 25.4.3 [pin 2025-03-15]
+	Updated multimedia/t-rec to 0.7.9 [pin 2025-03-15]
