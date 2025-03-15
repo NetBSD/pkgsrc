@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2020/06/02 08:48:18 sjmulder Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/03/15 15:34:04 sjmulder Exp $
 bin/micro
 man/man1/micro.1
+share/applications/micro.desktop
+share/doc/micro/LICENSE
+share/doc/micro/LICENSE-THIRD-PARTY
+share/doc/micro/README.md
