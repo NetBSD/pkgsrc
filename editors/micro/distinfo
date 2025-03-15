@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2024/01/30 15:46:27 sjmulder Exp $
+$NetBSD: distinfo,v 1.11 2025/03/15 15:34:04 sjmulder Exp $
 
 BLAKE2s (github.com_blang_semver_@v_v3.5.1+incompatible.mod) = 90703ddd7449c70b84e1be1a2b5671c5dc0ee30dc2ce7f14d5e35f0785a9057a
 SHA512 (github.com_blang_semver_@v_v3.5.1+incompatible.mod) = 5f7f52012aa82bdc43bd89d1491fbe00091299554bd85dbfc07f0cc757fcf44f4499df97a4f19c234ce70fbb7af0f4c54c13ffd547ef0a733365ea9c68dd0297
@@ -324,6 +324,6 @@ Size (gopkg.in_yaml.v2_@v_v2.2.8.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v2_@v_v2.2.8.zip) = 3ad99eca6ee3b3673ac0ab8a50d8f6cdab25f134329dbdd8edb5c0fd28bae0ea
 SHA512 (gopkg.in_yaml.v2_@v_v2.2.8.zip) = 19f019e85b8c9a533c3cf2fd492b1813272f00cce06a56ffe43046935e49ccf6e191ce83f1d236f6355bae7126aa722016f05174687ff2faf54f121958266edf
 Size (gopkg.in_yaml.v2_@v_v2.2.8.zip) = 80666 bytes
-BLAKE2s (micro-2.0.13.tar.gz) = 023ab6176d374da69641e8116d3c5fa7403b6415e5b4c9de951ccd4c7a5aae8d
-SHA512 (micro-2.0.13.tar.gz) = b4b1dd3b03c906ee5c0bf9d0b576efea2a527fcdb0fe40338c78515fd5f6a4eb22bd9541567bb5956c4087e749775a1e8c33a73d185f7a6b00ba91e405d6a117
-Size (micro-2.0.13.tar.gz) = 563438 bytes
+BLAKE2s (micro-2.0.14.tar.gz) = 5ba89fcb2f57beee610914cf3a68feb39a4ff5fd6ab4c4d2778aa61c41e9ea57
+SHA512 (micro-2.0.14.tar.gz) = 424fd5b03167ca428e6831069e4f0ac471acd8a74a8476240835dc1e5d57d7398302814a5bfe460554169ececbd1e6f7d026b716ef1307887e3e2a8363f5e70a
+Size (micro-2.0.14.tar.gz) = 576800 bytes
