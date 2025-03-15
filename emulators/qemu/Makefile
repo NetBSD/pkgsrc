@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2025/03/15 20:19:15 riastradh Exp $
+# $NetBSD: Makefile,v 1.373 2025/03/15 20:20:32 riastradh Exp $
 
 .include	"../../emulators/qemu/version.mk"
 
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
 TOOL_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-TOOL_DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
 
 USE_CURSES=		resize_term wide
 USE_LANGUAGES+=		c c++
@@ -55,7 +53,6 @@ CONFIGURE_ARGS+=	--python=${PYTHONBIN}
 CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
-CONFIGURE_ARGS+=	--enable-docs
 CONFIGURE_ARGS+=	--enable-fdt=system
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 ALL_ENV+=		MESON_RSP_THRESHOLD=262144
