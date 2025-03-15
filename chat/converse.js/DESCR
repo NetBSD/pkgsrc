@@ -1,22 +1,9 @@
-
-What is Converse?
 Converse is a free and open-source XMPP chat client that runs in
 a web browser.
 
-Converse is easy to set up
-You can use it here, host it yourself, or integrate it into your
-own website. It's possible to connect to any publically accessible
-XMPP/Jabber server. Take a look at the demo page for other examples
-of how Converse can be configured and used.
+Converse is easy to set up - you can use it on conversejs.org, host
+it yourself, or integrate it into your own website. It's possible
+to connect to any publically accessible XMPP/Jabber server.
 
-Need an XMPP/Jabber account?
-No problem! With Converse you can register an account on any public
-XMPP server that allows in-band registration, including our own at
-conversejs.org.
-
-Converse is a community
-Over 130 people have contributed features, bugfixes and translations,
-and many more have integrated it into their own websites or
-applications.
-
-Come and chat with us at discuss@conference.conversejs.org.
+With Converse you can register an account on any public XMPP server
+that allows in-band registration, including our own at conversejs.org.
