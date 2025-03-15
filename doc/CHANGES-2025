@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2274 2025/03/15 16:02:13 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2275 2025/03/15 19:34:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2937,3 +2937,7 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/feluda to 1.5.2 [pin 2025-03-15]
 	Updated shells/oh-my-posh to 25.4.3 [pin 2025-03-15]
 	Updated multimedia/t-rec to 0.7.9 [pin 2025-03-15]
+	Updated devel/py-pebble to 5.1.1 [adam 2025-03-15]
+	Updated textproc/py-yamllint to 1.36.1 [adam 2025-03-15]
+	Updated textproc/py-lunr to 0.8.0 [adam 2025-03-15]
+	Updated textproc/py-deepdiff to 8.3.0 [adam 2025-03-15]
