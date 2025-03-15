@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.370 2025/03/12 10:08:48 is Exp $
+# $NetBSD: Makefile,v 1.371 2025/03/15 20:18:23 riastradh Exp $
 
 .include	"../../emulators/qemu/version.mk"
 
@@ -114,7 +114,7 @@ SUBST_FILES.man+=	qemu-options.hx
 SUBST_VARS.man+=	PKG_SYSCONFDIR
 
 UE_ARCHS+=		aarch64 aarch64_be
-UE_ARCHS+=		alpha arm armeb cris
+UE_ARCHS+=		alpha arm armeb
 UE_ARCHS+=		hexagon hppa
 UE_ARCHS+=		i386
 UE_ARCHS+=		loongarch64
