@@ -1,0 +1,15 @@
+$NetBSD: patch-hw_9pfs_meson.build,v 1.1 2025/03/15 20:19:15 riastradh Exp $
+
+Add BSD support for fsdev 9p.
+
+--- hw/9pfs/meson.build.orig	2024-12-10 23:46:36.000000000 +0000
++++ hw/9pfs/meson.build
+@@ -14,7 +14,7 @@ fs_ss.add(files(
+ ))
+ if host_os == 'darwin'
+   fs_ss.add(files('9p-util-darwin.c'))
+-elif host_os == 'linux'
++elif host_os == 'linux' or host_os == 'netbsd'
+   fs_ss.add(files('9p-util-linux.c'))
+ endif
+ fs_ss.add(when: 'CONFIG_XEN_BUS', if_true: files('xen-9p-backend.c'))

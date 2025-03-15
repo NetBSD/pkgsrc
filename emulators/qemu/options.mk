@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2024/02/20 19:08:39 imil Exp $
+# $NetBSD: options.mk,v 1.24 2025/03/15 20:19:15 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
 PKG_SUPPORTED_OPTIONS=	debug debug-info gtk3 iscsi jack sdl spice
@@ -8,6 +8,11 @@ PKG_SUGGESTED_OPTIONS+=	iscsi sdl spice
 
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=	virtfs-proxy-helper
+.endif
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
+PKG_SUPPORTED_OPTIONS+=	qemu-virtfs
+PKG_SUGGESTED_OPTIONS+=	qemu-virtfs
 .endif
 
 .if ${OPSYS} != "Darwin"
@@ -80,8 +85,10 @@ CONFIGURE_ARGS+=	--disable-xkbcommon
 # header/development libraries for libcap and libattr must be installed.
 .if ${OPSYS} == "Linux" && !empty(PKG_OPTIONS:Mvirtfs-proxy-helper)
 PLIST.virtfs-proxy-helper=	yes
-CONFIGURE_ARGS+=		--enable-virtfs
-.elif ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=		--enable-virtfs-proxy-helper
+.endif
+
+.if !empty(PKG_OPTIONS:Mqemu-virtfs)
 CONFIGURE_ARGS+=		--enable-virtfs
 .else
 CONFIGURE_ARGS+=		--disable-virtfs
