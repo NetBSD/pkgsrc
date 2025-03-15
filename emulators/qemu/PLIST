@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.94 2025/02/12 08:17:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.95 2025/03/15 20:18:23 riastradh Exp $
 bin/elf2dmp
 ${PLIST.aarch64}bin/qemu-aarch64
 ${PLIST.aarch64_be}bin/qemu-aarch64_be
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
-${PLIST.cris}bin/qemu-cris
 bin/qemu-edid
 ${PLIST.ga}bin/qemu-ga
 ${PLIST.hexagon}bin/qemu-hexagon
