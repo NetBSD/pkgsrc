@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2025/01/02 10:48:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/15 19:28:21 adam Exp $
 ${PYSITELIB}/${WHEEL_INFODIR}/LICENSE
 ${PYSITELIB}/${WHEEL_INFODIR}/METADATA
 ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
@@ -58,3 +58,4 @@ ${PYSITELIB}/pebble/pool/process.pyo
 ${PYSITELIB}/pebble/pool/thread.py
 ${PYSITELIB}/pebble/pool/thread.pyc
 ${PYSITELIB}/pebble/pool/thread.pyo
+${PYSITELIB}/pebble/py.typed
