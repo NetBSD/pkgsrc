@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2270 2025/03/15 15:34:28 sjmulder Exp $
+$NetBSD: CHANGES-2025,v 1.2271 2025/03/15 15:58:59 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2933,3 +2933,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Added chat/converse.js version 10.1.8 [manu 2025-03-15]
 	Updated graphics/ruby-cairo to 1.18.4 [tsutsui 2025-03-15]
 	Updated editors/micro to 2.0.14 [sjmulder 2025-03-15]
+	Updated devel/bacon to 3.12.0 [pin 2025-03-15]
