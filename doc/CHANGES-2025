@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2275 2025/03/15 19:34:06 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2276 2025/03/15 20:41:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2941,3 +2941,6 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-yamllint to 1.36.1 [adam 2025-03-15]
 	Updated textproc/py-lunr to 0.8.0 [adam 2025-03-15]
 	Updated textproc/py-deepdiff to 8.3.0 [adam 2025-03-15]
+	Updated textproc/py-jsonrpclib-pelix to 0.4.3.4 [adam 2025-03-15]
+	Updated devel/py-maturin to 1.8.3 [adam 2025-03-15]
+	Updated devel/py-requests-unixsocket to 0.4.1 [adam 2025-03-15]
