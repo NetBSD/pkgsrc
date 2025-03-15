@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2024/11/11 07:29:04 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/15 20:26:45 adam Exp $
 
-DISTNAME=	jsonrpclib-pelix-0.4.3.3
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	jsonrpclib_pelix-0.4.3.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_/-/}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonrpclib-pelix/}
 
@@ -10,11 +10,9 @@ HOMEPAGE=	https://github.com/tcalmant/jsonrpclib
 COMMENT=	Implementation of the JSON-RPC v2.0 specification
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+TOOL_DEPENDS+=	${PYPKGPREFIX}-hatchling-[0-9]*:../../devel/py-hatchling
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/wheel.mk"
 .include "../../mk/bsd.pkg.mk"
