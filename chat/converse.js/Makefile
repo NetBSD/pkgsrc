@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2025/03/15 01:09:02 manu Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/15 08:04:00 wiz Exp $
 
 DISTNAME=	converse.js-10.1.8
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GITHUB:=conversejs/converse.js/releases/download/v10.1.8/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=conversejs/}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
