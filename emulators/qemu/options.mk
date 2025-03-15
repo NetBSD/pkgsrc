@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.24 2025/03/15 20:19:15 riastradh Exp $
+# $NetBSD: options.mk,v 1.25 2025/03/15 20:20:33 riastradh Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qemu
-PKG_SUPPORTED_OPTIONS=	debug debug-info gtk3 iscsi jack sdl spice
-PKG_SUGGESTED_OPTIONS+=	iscsi sdl spice
+PKG_SUPPORTED_OPTIONS=	debug debug-info doc gtk3 iscsi jack sdl spice
+PKG_SUGGESTED_OPTIONS+=	doc iscsi sdl spice
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk keymap virtfs-proxy-helper
+PLIST_VARS+=		doc gtk keymap virtfs-proxy-helper
 
 .if !empty(PKG_OPTIONS:Mjack)
 CONFIGURE_ARGS+=	--enable-jack
@@ -44,6 +44,15 @@ CONFIGURE_ARGS+=	--disable-debug-info
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+.endif
+
+.if !empty(PKG_OPTIONS:Mdoc)
+PLIST.doc=		yes
+CONFIGURE_ARGS+=	--enable-docs
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+TOOL_DEPENDS+=		${PYPKGPREFIX}-sphinx-rtd-theme>=1.2.0:../../textproc/py-sphinx-rtd-theme
+.else
+CONFIGURE_ARGS+=	--disable-docs
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
