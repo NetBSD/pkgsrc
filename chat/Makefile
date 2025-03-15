@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2024/10/14 21:12:54 nia Exp $
+# $NetBSD: Makefile,v 1.294 2025/03/15 01:09:02 manu Exp $
 #
 
 COMMENT=	Communication programs
@@ -18,6 +18,7 @@ SUBDIR+=	catgirl
 SUBDIR+=	centerim
 SUBDIR+=	centerim5
 SUBDIR+=	cgiirc
+SUBDIR+=	converse.js
 SUBDIR+=	coyim
 SUBDIR+=	ctrlproxy
 SUBDIR+=	dccserver
@@ -107,6 +108,7 @@ SUBDIR+=	py-matrix-common
 SUBDIR+=	py-matrix-nio
 SUBDIR+=	py-mautrix
 SUBDIR+=	py-nbxmpp
+SUBDIR+=	py-sydent
 SUBDIR+=	py-telethon
 SUBDIR+=	py-tulir-telethon
 SUBDIR+=	py-xmpppy
