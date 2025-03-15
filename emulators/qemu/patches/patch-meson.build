@@ -1,12 +1,13 @@
-$NetBSD: patch-meson.build,v 1.15 2024/04/24 07:20:59 adam Exp $
+$NetBSD: patch-meson.build,v 1.16 2025/03/15 20:19:15 riastradh Exp $
 
 * Detect iconv in libc properly for pkgsrc (pkgsrc removes -liconv)
   to fix qemu-system-aarch64 link.
 * Detect curses (non-ncurses{,w} too)
+* Allow building fsdev on non-Linux/Darwin
 
---- meson.build.orig	2024-04-10 17:43:26.000000000 +0000
+--- meson.build.orig	2024-12-10 23:46:36.000000000 +0000
 +++ meson.build
-@@ -1329,7 +1329,7 @@ if have_system and get_option('curses').
+@@ -1471,7 +1471,7 @@ if have_system and get_option('curses').
        has_curses_h = cc.has_header('curses.h', args: curses_compile_args)
      endif
      if has_curses_h
@@ -15,7 +16,7 @@ $NetBSD: patch-meson.build,v 1.15 2024/04/24 07:20:59 adam Exp $
        foreach curses_libname : curses_libname_list
          libcurses = cc.find_library(curses_libname,
                                      required: false)
-@@ -1346,7 +1346,7 @@ if have_system and get_option('curses').
+@@ -1488,7 +1488,7 @@ if have_system and get_option('curses').
      endif
    endif
    if get_option('iconv').allowed()
@@ -24,3 +25,16 @@ $NetBSD: patch-meson.build,v 1.15 2024/04/24 07:20:59 adam Exp $
        # Programs will be linked with glib and this will bring in libiconv on FreeBSD.
        # We need to use libiconv if available because mixing libiconv's headers with
        # the system libc does not work.
+@@ -2318,9 +2318,9 @@ dbus_display = get_option('dbus_display'
+   .allowed()
+ 
+ have_virtfs = get_option('virtfs') \
+-    .require(host_os == 'linux' or host_os == 'darwin',
+-             error_message: 'virtio-9p (virtfs) requires Linux or macOS') \
+-    .require(host_os == 'linux' or cc.has_function('pthread_fchdir_np'),
++    .require(host_os == 'linux' or host_os == 'darwin' or host_os == 'netbsd',
++             error_message: 'virtio-9p (virtfs) requires Linux, macOS, or NetBSD') \
++    .require(host_os != 'darwin' or cc.has_function('pthread_fchdir_np'),
+              error_message: 'virtio-9p (virtfs) on macOS requires the presence of pthread_fchdir_np') \
+     .require(host_os == 'darwin' or libattr.found(),
+              error_message: 'virtio-9p (virtfs) on Linux requires libattr-devel') \
