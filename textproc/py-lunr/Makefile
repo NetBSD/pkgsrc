@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2024/10/14 06:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2025/03/15 19:32:03 adam Exp $
 
-DISTNAME=	lunr-0.7.0.post1
+DISTNAME=	lunr-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lunr/}
