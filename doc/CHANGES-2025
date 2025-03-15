@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2276 2025/03/15 20:41:13 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2277 2025/03/15 23:23:57 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2944,3 +2944,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/py-jsonrpclib-pelix to 0.4.3.4 [adam 2025-03-15]
 	Updated devel/py-maturin to 1.8.3 [adam 2025-03-15]
 	Updated devel/py-requests-unixsocket to 0.4.1 [adam 2025-03-15]
+	Updated textproc/ruby-nokogiri to 1.18.4 [tsutsui 2025-03-15]
