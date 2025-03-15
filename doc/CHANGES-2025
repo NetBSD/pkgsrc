@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2268 2025/03/15 01:09:02 manu Exp $
+$NetBSD: CHANGES-2025,v 1.2269 2025/03/15 14:14:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated misc/qt6gtk2 to 0.4 [vins 2025-03-14]
 	Updated textproc/hck to 0.11.4 [pin 2025-03-14]
 	Added chat/converse.js version 10.1.8 [manu 2025-03-15]
+	Updated graphics/ruby-cairo to 1.18.4 [tsutsui 2025-03-15]
