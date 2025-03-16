@@ -1,9 +1,9 @@
-$NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
+$NetBSD: patch-Gemfile,v 1.13 2025/03/16 12:41:16 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2024-11-03 22:15:01.000000000 +0000
+--- Gemfile.orig	2025-03-10 23:30:01.000000000 +0000
 +++ Gemfile
 @@ -3,9 +3,9 @@ source 'https://rubygems.org'
  ruby '>= 2.5.0', '< 3.2.0'
@@ -17,12 +17,8 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
  gem 'request_store', '~> 1.5.0'
  gem 'mini_mime', '~> 1.1.0'
  gem "actionpack-xml_parser"
-@@ -18,10 +18,10 @@ gem 'nokogiri', (if Gem.ruby_version < G
-                  elsif Gem.ruby_version < Gem::Version.new('2.7.0')
-                    '~> 1.13.10'
-                  else
--                   '~> 1.15.2'
-+                   '~> 1.15'
+@@ -25,7 +25,7 @@ gem 'nokogiri', (if Gem.ruby_version >= 
+                    '~> 1.12.5'
                   end)
  gem "rexml", require: false if Gem.ruby_version >= Gem::Version.new('3.0')
 -gem 'i18n', '~> 1.10.0'
@@ -30,7 +26,7 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
  gem 'rbpdf', '~> 1.21.3'
  gem 'addressable'
  gem 'rubyzip', '~> 2.3.0'
-@@ -40,12 +40,12 @@ gem 'rqrcode'
+@@ -44,12 +44,12 @@ gem 'rqrcode'
  
  # Optional gem for LDAP authentication
  group :ldap do
@@ -45,7 +41,7 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
  end
  
  # Optional Markdown support, not for JRuby
-@@ -54,10 +54,10 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
+@@ -58,10 +58,10 @@ gem 'redcarpet', '~> 3.5.1', groups: [:m
  
  # Optional CommonMark support, not for JRuby
  group :common_mark do
@@ -58,7 +54,7 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
  end
  
  # Include database gems for the adapters found in the database
-@@ -75,9 +75,9 @@ if File.exist?(database_file)
+@@ -79,9 +79,9 @@ if File.exist?(database_file)
        when 'mysql2'
          gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
        when /postgresql/
@@ -70,7 +66,7 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
        when /sqlserver/
          gem "tiny_tds", "~> 2.1.2", :platforms => [:mri, :mingw, :x64_mingw]
          gem "activerecord-sqlserver-adapter", "~> 6.1.0", :platforms => [:mri, :mingw, :x64_mingw]
-@@ -92,6 +92,7 @@ else
+@@ -96,6 +96,7 @@ else
    warn("Please configure your config/database.yml first")
  end
  
@@ -78,7 +74,7 @@ $NetBSD: patch-Gemfile,v 1.12 2024/11/06 15:56:16 taca Exp $
  group :development do
    gem 'listen', '~> 3.3'
    gem "yard"
-@@ -118,6 +119,7 @@ group :test do
+@@ -122,6 +123,7 @@ group :test do
    gem 'rubocop-performance', '~> 1.13.0'
    gem 'rubocop-rails', '~> 2.14.0'
  end
