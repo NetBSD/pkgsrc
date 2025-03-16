@@ -1,9 +1,9 @@
-$NetBSD: patch-Gemfile,v 1.6 2024/11/06 16:21:19 taca Exp $
+$NetBSD: patch-Gemfile,v 1.7 2025/03/16 12:38:01 taca Exp $
 
 * Relax dependency.
 * Do not load gem for developemt and test.
 
---- Gemfile.orig	2024-11-03 22:15:03.000000000 +0000
+--- Gemfile.orig	2025-03-10 23:30:03.000000000 +0000
 +++ Gemfile
 @@ -2,7 +2,7 @@ source 'https://rubygems.org'
  
@@ -18,8 +18,8 @@ $NetBSD: patch-Gemfile,v 1.6 2024/11/06 16:21:19 taca Exp $
  gem 'roadie-rails', '~> 3.1.0'
  gem 'marcel'
  gem 'mail', '~> 2.8.1'
--gem 'nokogiri', '~> 1.15.2'
-+gem 'nokogiri', '>= 1.15.2'
+-gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '1.18.3' : '~> 1.15.7'
++gem 'nokogiri', Gem.ruby_version >= Gem::Version.new('3.1') ? '>= 1.18.3' : '>= 1.15.7'
  gem 'i18n', '~> 1.14.1'
  gem 'rbpdf', '~> 1.21.3'
  gem 'addressable'
@@ -44,7 +44,7 @@ $NetBSD: patch-Gemfile,v 1.6 2024/11/06 16:21:19 taca Exp $
  end
  
  # Optional Markdown support
-@@ -73,7 +73,7 @@ if File.exist?(database_file)
+@@ -80,7 +80,7 @@ if File.exist?(database_file)
        when /postgresql/
          gem 'pg', '~> 1.5.3', :platforms => [:mri, :mingw, :x64_mingw]
        when /sqlite3/
@@ -53,7 +53,7 @@ $NetBSD: patch-Gemfile,v 1.6 2024/11/06 16:21:19 taca Exp $
        when /sqlserver/
          gem "tiny_tds", "~> 2.1.2", :platforms => [:mri, :mingw, :x64_mingw]
          gem "activerecord-sqlserver-adapter", "~> 6.1.0", :platforms => [:mri, :mingw, :x64_mingw]
-@@ -88,6 +88,7 @@ else
+@@ -95,6 +95,7 @@ else
    warn("Please configure your config/database.yml first")
  end
  
