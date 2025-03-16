@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2025/03/06 11:15:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/16 12:00:26 wiz Exp $
 
-DISTNAME=	uv-0.6.4
+DISTNAME=	uv-0.6.6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=astral-sh/}
 
@@ -26,6 +26,9 @@ DISTFILES+=		tl-${TL_REV}.tar.gz
 SITES.async_zip-${ASYNC_ZIP_REV}.tar.gz+=		-${MASTER_SITE_GITHUB:=charliermarsh/}rs-async-zip/archive/${ASYNC_ZIP_REV}.tar.gz
 SITES.pubgrub-${PUBGRUB_REV}.tar.gz+=			-${MASTER_SITE_GITHUB:=astral-sh/}pubgrub/archive/${PUBGRUB_REV}.tar.gz
 SITES.tl-${TL_REV}.tar.gz+=				-${MASTER_SITE_GITHUB:=astral-sh/}tl/archive/${TL_REV}.tar.gz
+
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+SITES.wasi-0.13.3+wasi-0.2.2.crate=		https://static.crates.io/crates/wasi/
 
 RUST_REQ=	1.83
 USE_LANGUAGES+=	c c++
