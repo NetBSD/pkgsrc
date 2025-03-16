@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2021/10/26 11:06:29 nia Exp $
+$NetBSD: distinfo,v 1.7 2025/03/16 13:09:33 taca Exp $
 
-BLAKE2s (pear/Net_URL2-2.2.1.tgz) = 26022ae46b775d1d9f5cb1dde3ed6bdaf322cabafef20a252d14d62b1c7affdc
-SHA512 (pear/Net_URL2-2.2.1.tgz) = 356eebcb7b077e8a57d19f7a0549c973fe4923fbd83836ac000c1068d7f19c42ebebef5e07a2a5880737d0f8b2398bb32be9fa97ef931a1009d6229dfd71b495
-Size (pear/Net_URL2-2.2.1.tgz) = 20010 bytes
+BLAKE2s (pear/Net_URL2-2.2.2.tgz) = 4b72d7adec6a4fe3ebcb27ac7b058bab31186f7374895d2fee1a2093da49327e
+SHA512 (pear/Net_URL2-2.2.2.tgz) = 646321d053d175588c00069505f96b48d1867ed97c8dd2cb9134a9d487e87619be6e087a52cd2c0d5c9d117a7dce719df45228bd039c548b06a44be1381262c7
+Size (pear/Net_URL2-2.2.2.tgz) = 20187 bytes
