@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.126 2025/02/12 06:44:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.127 2025/03/16 14:56:11 plunky Exp $
 
-DISTNAME=		qcad-3.28.2.2
-PKGREVISION=		7
+DISTNAME=		qcad-3.32.2.0
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
 EXTRACT_USING=		bsdtar
 GITHUB_TAG=		v${PKGVERSION_NOREV}
 
+GITHUB_SUBMODULES=	qcad qtjsapi ${GITHUB_TAG} src/qtjsapi \
+			qcad qcadjsapi ${GITHUB_TAG} src/qcadjsapi
+
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.qcad.org/
+HOMEPAGE=		https://www.qcad.org/
 COMMENT=		2D CAD system
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		bash-[0-9]*:../../shells/bash
-
-USE_TOOLS+=		chmod find make pax
+USE_TOOLS+=		cmake find pax
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
-SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
 SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
+SUBST_FILES.paths+=	src/core/RS.cpp src/core/RSettings.cpp
 SUBST_VARS.paths=	PREFIX
 
 SUBST_CLASSES+=		icon
@@ -31,22 +30,21 @@ SUBST_MESSAGE.icon=	Fix icon name.
 SUBST_FILES.icon=	qcad.desktop
 SUBST_SED.icon=		-e s,qcad_icon,qcad,g
 
-AUTO_MKDIRS=	yes
+# qcad source includes libzlib, transform this to libz to use builtin
+BUILDLINK_TRANSFORM+=	l:zlib:z
 
-# ensure we don't build debug libs
-BUILD_TARGET=	release
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE="Release"
 
-#
-# The QCad build system normally links direct to a release dir but this
-# causes a lot of problems with libtool dependencies. We patch it so that
-# the libs are linked from the source dirs and add an install target to
-# allow pkgsrc to use DESTDIR
-#
-do-configure:
-	cd ${WRKSRC} && ${QTDIR}/bin/qmake -r -after DESTDIR=
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications	\
+			share/icons/hicolor/scalable/apps \
+			share/icons/hicolor/512x512/apps \
+			share/icons/hicolor/256x256/apps \
+			share/icons/hicolor/64x64/apps \
+			lib/qcad/plugins/
 
 do-install:
-	cd ${WRKSRC} && make INSTALL_ROOT=${DESTDIR} install
+	${INSTALL_PROGRAM} ${WRKSRC}/release/qcad \
+	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/support/logo/logo_512.svg \
@@ -59,12 +57,17 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/256x256/apps/qcad.png
 	${INSTALL_DATA} ${WRKSRC}/support/doc/api/qcad_icon.png \
 	    ${DESTDIR}${PREFIX}/share/icons/hicolor/64x64/apps/qcad.png
-	${INSTALL_LIB} ${WRKSRC}/src/3rdparty/qt-labs-qtscriptgenerator-*/qtbindings/qtscript_*/libqtscript_*.so* \
-	    ${DESTDIR}${PREFIX}/lib/qcad/plugins/script
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${FIND} ${WRKSRC}/scripts -name \*.orig -delete
-	${FIND} ${WRKSRC} -name \*.gitignore -delete
+	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/src/qcad/plugins/libqcadjsapi.so \
+	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}/plugins
+	${INSTALL_LIB} ${WRKSRC}/${CMAKE_BUILD_DIR}/src/qtjsapi/out/libqtjsapi.so \
+	    ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC}/${CMAKE_BUILD_DIR}/release && ${PAX} -rwpm \
+	    lib*.so ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC}/${CMAKE_BUILD_DIR} && ${PAX} -rwpm plugins \
+	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	${FIND} ${WRKSRC}/scripts \( -name \*.orig -or -name .gitignore \) -delete
 	cd ${WRKSRC} && ${PAX} -rwpm \
 	    fonts linetypes patterns scripts themes ts \
 	    ${DESTDIR}${PREFIX}/lib/${PKGBASE}
@@ -72,13 +75,16 @@ do-install:
 	    readme.txt examples libraries \
 	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
+.include "../../devel/cmake/build.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/qt6-qt5compat/buildlink3.mk"
+.include "../../devel/qt6-qttools/buildlink3.mk"
+.include "../../graphics/qt6-qtsvg/buildlink3.mk"
+.include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../textproc/libstemmer/buildlink3.mk"
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtscript/buildlink3.mk"
-.include "../../x11/qt5-qtsvg/buildlink3.mk"
-.include "../../x11/qt5-qtxmlpatterns/buildlink3.mk"
+.include "../../x11/qt6-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
