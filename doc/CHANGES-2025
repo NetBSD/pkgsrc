@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2312 2025/03/16 15:38:31 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2313 2025/03/16 20:32:37 maya Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2992,3 +2992,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-actionmailbox80 to 8.0.2 [taca 2025-03-16]
 	Updated textproc/ruby-actiontext80 to 8.0.2 [taca 2025-03-16]
 	Updated www/ruby-rails80 to 8.0.2 [taca 2025-03-16]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q1 branch [maya 2025-03-16]
