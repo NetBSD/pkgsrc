@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2025/03/15 01:09:02 manu Exp $
+# $NetBSD: Makefile,v 1.295 2025/03/16 19:43:41 riastradh Exp $
 #
 
 COMMENT=	Communication programs
@@ -108,7 +108,6 @@ SUBDIR+=	py-matrix-common
 SUBDIR+=	py-matrix-nio
 SUBDIR+=	py-mautrix
 SUBDIR+=	py-nbxmpp
-SUBDIR+=	py-sydent
 SUBDIR+=	py-telethon
 SUBDIR+=	py-tulir-telethon
 SUBDIR+=	py-xmpppy
