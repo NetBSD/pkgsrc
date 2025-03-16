@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2024/12/27 08:20:50 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2025/03/16 21:28:48 wiz Exp $
 
 DISTNAME=	netsurf-all-3.11
 PKGNAME=	${DISTNAME:S/-all//}
@@ -14,11 +14,17 @@ LICENSE=	gnu-gpl-v2 AND mit
 TOOL_DEPENDS+=	lemon>=1.0:../../devel/lemon
 TOOL_DEPENDS+=	re2c>=0.12:../../devel/re2c
 TOOL_DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+# Needed for the xxd utility
+TOOL_DEPENDS+=	vim-share-[0-9]*:../../editors/vim-share
 
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
 
 MAKE_FLAGS+=	TARGET=gtk3
+
+# gmake[1]: *** No rule to make target 'build-x86_64--netbsd-x86_64--netbsd-release-lib-static/filter-lexer.inc', needed by 'build-x86_64--netbsd-x86_64--netbsd-release-lib-static/filter-lexer.c'.  Stop.
+# src/filter-parser.y:15:10: fatal error: filter-lexer.h: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 SUBST_CLASSES+=			ssl-certs
 SUBST_STAGE.ssl-certs=		pre-configure
@@ -42,14 +48,11 @@ INSTALLATION_DIRS+=	share/pixmaps
 BUILDLINK_TRANSFORM+=	rm:-Werror
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# needed for strcasestr(3) and strndup(3)
 
-# Needed for the xxd utility
-TOOL_DEPENDS+=		vim-share-[0-9]*:../../editors/vim-share
-
 SUBST_CLASSES+=		tools
 SUBST_STAGE.tools=	pre-build
 SUBST_MESSAGE.tools=	Remove the -C option
 SUBST_FILES.tools=	buildsystem/makefiles/Makefile.tools
-SUBST_SED.tools=		-e 's,install -C,install,'
+SUBST_SED.tools=	-e 's,install -C,install,'
 
 SUBST_CLASSES+=		bin
 SUBST_STAGE.bin=	pre-install
