@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2284 2025/03/16 12:01:53 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2285 2025/03/16 12:29:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2952,3 +2952,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/tree-sitter-javascript to 0.23.1 [wiz 2025-03-16]
 	Updated devel/uv to 0.6.6 [wiz 2025-03-16]
 	Updated textproc/tinyxml2 to 11.0.0 [wiz 2025-03-16]
+	Updated devel/ruby-redmine60 to 6.0.4 [taca 2025-03-16]
