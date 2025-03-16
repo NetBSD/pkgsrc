@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2024/12/13 16:31:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2025/03/16 12:38:01 taca Exp $
 bin/redmine51_generate_secret_token${RUBY_SUFFIX}.sh
 bin/redmine51_load_default_data${RUBY_SUFFIX}.sh
 bin/redmine51_migrate_db${RUBY_SUFFIX}.sh
@@ -159,6 +159,7 @@ share/${RUBY_NAME}-redmine51/app/models/message.rb
 share/${RUBY_NAME}-redmine51/app/models/news.rb
 share/${RUBY_NAME}-redmine51/app/models/principal.rb
 share/${RUBY_NAME}-redmine51/app/models/project.rb
+share/${RUBY_NAME}-redmine51/app/models/project_admin_query.rb
 share/${RUBY_NAME}-redmine51/app/models/project_custom_field.rb
 share/${RUBY_NAME}-redmine51/app/models/project_query.rb
 share/${RUBY_NAME}-redmine51/app/models/query.rb
@@ -2213,6 +2214,7 @@ share/${RUBY_NAME}-redmine51/test/unit/member_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/message_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/news_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/principal_test.rb
+share/${RUBY_NAME}-redmine51/test/unit/project_admin_query_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/project_copy_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/project_members_inheritance_test.rb
 share/${RUBY_NAME}-redmine51/test/unit/project_nested_set_concurrency_test.rb
