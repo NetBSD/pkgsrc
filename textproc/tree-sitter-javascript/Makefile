@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2023/06/03 06:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/16 11:50:46 wiz Exp $
 
-DISTNAME=	tree-sitter-javascript-0.20.0
+DISTNAME=	tree-sitter-javascript-0.23.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tree-sitter/}
-GITHUB_TAG=	rust-0.20.0
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/tree-sitter/tree-sitter-javascript/
