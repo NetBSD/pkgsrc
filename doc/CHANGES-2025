@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2297 2025/03/16 14:02:21 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2298 2025/03/16 14:04:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2965,3 +2965,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-inline to 3.14.2 [taca 2025-03-16]
 	Updated devel/ruby-metrics to 0.12.2 [taca 2025-03-16]
 	Updated devel/ruby-mixlib-shellout to 3.3.8 [taca 2025-03-16]
+	Updated mail/ruby-mime-types-data to 3.2025.0304 [taca 2025-03-16]
