@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2025/02/09 10:28:39 taca Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/16 12:38:01 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://www.redmine.org/
 COMMENT=	Flexible project management web application
 LICENSE=	gnu-gpl-v2 # and so on.
 
-RM_VERSION=	5.1.6
+RM_VERSION=	5.1.7
 
 NO_BUILD=	yes
 
@@ -21,7 +21,7 @@ RUBY_RAILS_ACCEPTED=	61
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
-OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 nokogiri>=1.13.4
+OVERRIDE_GEMSPEC+=	mini-magick>=4.11.0 cvs>=3.2.6
 
 #DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.12.0:../../misc/ruby-bundler
 DEPENDS+=	${RUBY_RAILS_DEPENDS}
@@ -33,8 +33,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-actionpack${RUBY_RAILS}-xml_parser>=2.0:../../textpr
 DEPENDS+=	${RUBY_PKGPREFIX}-roadie31-rails${RUBY_RAILS}>=3.1.0<3.2:../../mail/ruby-roadie31-rails
 DEPENDS+=	${RUBY_PKGPREFIX}-marcel>=1.0.0:../../devel/ruby-marcel
 DEPENDS+=	${RUBY_PKGPREFIX}-mail>=2.8.1<2.9:../../mail/ruby-mail
-DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.15<2:../../textproc/ruby-nokogiri
-DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.10.0:../../devel/ruby-i18n
+DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.18.3:../../textproc/ruby-nokogiri
+DEPENDS+=	${RUBY_PKGPREFIX}-i18n>=1.14.1<1.15:../../devel/ruby-i18n
 DEPENDS+=	${RUBY_PKGPREFIX}-rbpdf>=1.21.3<1.22:../../print/ruby-rbpdf
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=0:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-zip>=2.3.0<2.4:../../archivers/ruby-zip
@@ -52,6 +52,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 .include "../../lang/ruby/modules.mk"
 
 .if ${RUBY_VER} == 31
+DEPENDS+=	${RUBY_PKGPREFIX}-net-csv>=3.2.6:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.3.4:../../net/ruby-net-imap
 DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.2:../../net/ruby-net-pop
 DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.3.3:../../net/ruby-net-smtp
