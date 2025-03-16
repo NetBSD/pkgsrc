@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2287 2025/03/16 12:41:42 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2288 2025/03/16 12:55:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/ruby-redmine60 to 6.0.4 [taca 2025-03-16]
 	Updated devel/ruby-redmine51 to 5.1.7 [taca 2025-03-16]
 	Updated devel/ruby-redmine50 to 5.0.11 [taca 2025-03-16]
+	Updated time/libical to 3.0.20 [wiz 2025-03-16]
