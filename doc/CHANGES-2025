@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2281 2025/03/16 11:49:10 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2282 2025/03/16 11:50:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2949,3 +2949,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated security/p5-Crypt-URandom to 0.54 [wiz 2025-03-16]
 	Updated graphics/p5-Image-ExifTool to 13.25 [wiz 2025-03-16]
 	Updated devel/compiledb-go to 1.5.1 [wiz 2025-03-16]
+	Updated textproc/tree-sitter-javascript to 0.23.1 [wiz 2025-03-16]
