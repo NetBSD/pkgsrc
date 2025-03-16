@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.373 2025/03/15 20:20:32 riastradh Exp $
+# $NetBSD: Makefile,v 1.374 2025/03/16 21:05:21 wiz Exp $
 
 .include	"../../emulators/qemu/version.mk"
 
@@ -21,6 +21,8 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		bison gdbus-codegen flex makeinfo perl:build pod2man pkg-config
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
+
+CONFLICTS+=	qemu-guest-agent-[0-9]*
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=	7
