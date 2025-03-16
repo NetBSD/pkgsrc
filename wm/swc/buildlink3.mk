@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2024/04/06 08:06:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2025/03/16 21:40:13 wiz Exp $
 
 BUILDLINK_TREE+=	swc
 
@@ -11,7 +11,9 @@ BUILDLINK_PKGSRCDIR.swc?=	../../wm/swc
 
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../graphics/wld/buildlink3.mk"
+.include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
+.include "../../x11/xcb-util-wm/buildlink3.mk"
 .endif	# SWC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-swc
