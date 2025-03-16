@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1152 2025/03/09 07:18:29 pho Exp $
+# $NetBSD: Makefile,v 1.1153 2025/03/16 20:07:38 riastradh Exp $
 #
 
 COMMENT=	System utilities
@@ -634,6 +634,7 @@ SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
 SUBDIR+=	py27-dbus
 SUBDIR+=	qdirstat
+SUBDIR+=	qemu-guest-agent
 SUBDIR+=	qlogtools
 SUBDIR+=	qmail-dovecot-checkpassword
 SUBDIR+=	qmediamanager
