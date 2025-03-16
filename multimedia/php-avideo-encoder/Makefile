@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/03 15:43:45 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/16 15:40:16 taca Exp $
 
 GITHUB_PROJECT=	AVideo-Encoder
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -40,5 +40,4 @@ do-install:
 
 .include "../../multimedia/ffmpeg7/buildlink3.mk"
 .include "../../lang/php/json.mk"
-.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
