@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2025/01/02 07:02:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2025/03/16 15:17:25 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -271,7 +271,6 @@ ${GEM_LIBDIR}/lib/active_support/testing/parallelization/worker.rb
 ${GEM_LIBDIR}/lib/active_support/testing/parallelize_executor.rb
 ${GEM_LIBDIR}/lib/active_support/testing/setup_and_teardown.rb
 ${GEM_LIBDIR}/lib/active_support/testing/stream.rb
-${GEM_LIBDIR}/lib/active_support/testing/strict_warnings.rb
 ${GEM_LIBDIR}/lib/active_support/testing/tagged_logging.rb
 ${GEM_LIBDIR}/lib/active_support/testing/tests_without_assertions.rb
 ${GEM_LIBDIR}/lib/active_support/testing/time_helpers.rb
