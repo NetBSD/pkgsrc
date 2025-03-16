@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.172 2025/02/18 10:33:19 wiz Exp $
+# $NetBSD: Makefile,v 1.173 2025/03/16 19:10:16 riastradh Exp $
 
 DISTNAME=	darktable-5.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
@@ -54,6 +54,8 @@ CMAKE_CONFIGURE_ARGS+=	-DTESTBUILD_OPENCL_PROGRAMS=OFF
 CONFIGURE_DIRS=	../pkgsrc_build
 CMAKE_ARG_PATH=	${WRKSRC}
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/darktable
+LDFLAGS+=	${BUILDLINK_LDFLAGS.libexecinfo}
+LIBS+=		${BUILDLINK_LDADD.libexecinfo}
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${MACHINE_ARCH} == "i386"
@@ -84,6 +86,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.14.1nb1
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.11
 .include "../../devel/zlib/buildlink3.mk"
