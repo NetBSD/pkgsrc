@@ -1,0 +1,5 @@
+QEMU is a FAST! processor emulator using dynamic translation to achieve
+good emulation speed.
+
+This package contains the only the Guest Agent, which is run on the
+guest and enables communicating with the host.
