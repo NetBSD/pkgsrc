@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2301 2025/03/16 14:22:27 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2302 2025/03/16 14:26:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/ruby-recog to 3.1.14 [taca 2025-03-16]
 	Updated security/ruby-rex-arch to 0.1.18 [taca 2025-03-16]
 	Updated sysutils/ruby-specinfra to 2.92.0 [taca 2025-03-16]
+	Updated textproc/ruby-kramdown-rfc2629 to 1.7.26 [taca 2025-03-16]
