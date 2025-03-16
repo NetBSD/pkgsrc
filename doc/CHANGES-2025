@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2279 2025/03/16 07:35:43 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2280 2025/03/16 07:36:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated textproc/ruby-nokogiri to 1.18.4 [tsutsui 2025-03-15]
 	Updated devel/hexpatch to 1.11.0 [pin 2025-03-16]
 	Updated security/p5-Crypt-URandom to 0.54 [wiz 2025-03-16]
+	Updated graphics/p5-Image-ExifTool to 13.25 [wiz 2025-03-16]
