@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2025/03/16 20:07:39 riastradh Exp $
+# $NetBSD: Makefile,v 1.2 2025/03/16 21:04:37 wiz Exp $
 
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
-CATEGORIES=	sysutils
+CATEGORIES=	sysutils emulators
 MASTER_SITES=	https://download.qemu.org/
 EXTRACT_SUFX=	.tar.xz
 
@@ -26,6 +26,8 @@ HAS_CONFIGURE=		yes
 PATCHDIR=		../../emulators/qemu/patches
 DISTINFO_FILE=		../../emulators/qemu/distinfo
 RCD_SCRIPTS=		qemu-guest-agent
+
+CONFLICTS+=		qemu-[0-9]*
 
 # https://github.com/qemu/qemu/commit/56208a0d473c6db263cc333c787ca48b502d72ab
 GCC_REQD+=		7
