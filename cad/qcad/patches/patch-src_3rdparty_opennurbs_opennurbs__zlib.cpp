@@ -1,6 +1,6 @@
-$NetBSD: patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp,v 1.1 2017/12/18 21:21:44 plunky Exp $
+$NetBSD: patch-src_3rdparty_opennurbs_opennurbs__zlib.cpp,v 1.2 2025/03/16 14:56:12 plunky Exp $
 
-don't provide own zlib
+don't provide zlib, use pkgsrc version
 
 --- src/3rdparty/opennurbs/opennurbs_zlib.cpp.orig	2017-12-18 11:43:25.553607369 +0000
 +++ src/3rdparty/opennurbs/opennurbs_zlib.cpp

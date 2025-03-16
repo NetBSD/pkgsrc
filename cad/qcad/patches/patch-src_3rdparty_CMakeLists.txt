@@ -1,0 +1,14 @@
+$NetBSD: patch-src_3rdparty_CMakeLists.txt,v 1.1 2025/03/16 14:56:12 plunky Exp $
+
+don't provide libstemmer, use pkgsrc version
+
+--- src/3rdparty/CMakeLists.txt.orig	2025-03-11 20:29:01.577633096 +0000
++++ src/3rdparty/CMakeLists.txt
+@@ -6,7 +6,6 @@ include(../../CMakeInclude.txt)
+ add_subdirectory(dxflib)
+ add_subdirectory(opennurbs)
+ add_subdirectory(spatialindexnavel)
+-add_subdirectory(stemmer)
+ 
+ IF(NOT BUILD_QT6)
+ 	add_subdirectory(qt-labs-qtscriptgenerator-5.5.0)
