@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2025/02/23 15:06:17 taca Exp $
+# $NetBSD: Makefile,v 1.57 2025/03/16 14:34:19 taca Exp $
 
-DISTNAME=	aws-sdk-core-3.219.0
+DISTNAME=	aws-sdk-core-3.220.1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
