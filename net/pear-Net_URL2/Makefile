@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2025/02/08 03:49:23 taca Exp $
+# $NetBSD: Makefile,v 1.5 2025/03/16 13:09:33 taca Exp $
 
-DISTNAME=	Net_URL2-2.2.1
-PKGREVISION=	1
+DISTNAME=	Net_URL2-2.2.2
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
