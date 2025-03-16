@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2025/03/13 23:08:22 nia Exp $
+$NetBSD: distinfo,v 1.21 2025/03/16 21:38:14 nia Exp $
 
-BLAKE2s (arcticfox-45.3.tar.gz) = 7c89b8236e5a14b267799168d30f6f48333c63d021372ef994b92b168dfb8a55
-SHA512 (arcticfox-45.3.tar.gz) = 65a44a75d4546945381369487604dedb3142a15cec511f4c3ead61d8c0ebcb0b009a01375e07f168573303332690a2ba8843c1bdc001dbb97aaa6c3d45707034
-Size (arcticfox-45.3.tar.gz) = 226073097 bytes
+BLAKE2s (arcticfox-45.3/arcticfox-45.3.tar.gz) = 2f9940773f2898a264aebf3e36c729a5d6e3e63923f6fcffd64cc02749cfd02d
+SHA512 (arcticfox-45.3/arcticfox-45.3.tar.gz) = c49304c3e6c97cc92c875c9aad6afcc59d2f4072d9431c44c12a23df299c536c7d914ed14b8f395d75241c54d041e4b5cbe9c82c1d64910b5ad693eab3842829
+Size (arcticfox-45.3/arcticfox-45.3.tar.gz) = 226073445 bytes
 SHA1 (patch-intl_icu_source_configure) = 051da587e03131b3a6c1dec7c55ab0cc9c06c26c
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 3ca1d435c9f85d1e5a54532739909454c86242a2
 SHA1 (patch-ipc_chromium_src_base_atomicops__internals__arm__gcc.h) = ecf6c5ee16346c0ecf06c886fd7d76dc33b85734
