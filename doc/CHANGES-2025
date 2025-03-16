@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2306 2025/03/16 14:36:20 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2307 2025/03/16 14:56:37 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-aws-partitions to 1.1067.0 [taca 2025-03-16]
 	Updated www/ruby-aws-sdk-core to 3.220.1 [taca 2025-03-16]
 	Updated www/ruby-css-parser to 1.21.1 [taca 2025-03-16]
+	Updated cad/qcad to 3.32.2.0 [plunky 2025-03-16]
