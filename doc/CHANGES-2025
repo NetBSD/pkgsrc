@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2300 2025/03/16 14:21:02 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2301 2025/03/16 14:22:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2968,3 +2968,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/ruby-mime-types-data to 3.2025.0304 [taca 2025-03-16]
 	Updated net/ruby-recog to 3.1.14 [taca 2025-03-16]
 	Updated security/ruby-rex-arch to 0.1.18 [taca 2025-03-16]
+	Updated sysutils/ruby-specinfra to 2.92.0 [taca 2025-03-16]
