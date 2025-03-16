@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2316 2025/03/16 21:50:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2317 2025/03/16 22:10:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2996,3 +2996,4 @@ Changes to the packages collection and infrastructure in 2025:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2025Q1 branch [maya 2025-03-16]
 	Updated devel/py-jaraco.envs to 2.6.0nb2 [wiz 2025-03-16]
 	Updated www/py-wtforms-alchemy to 0.19.0nb1 [wiz 2025-03-16]
+	Updated devel/py-jaraco.itertools to 6.4.1nb1 [wiz 2025-03-16]
