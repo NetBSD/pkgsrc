@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2024/11/06 14:06:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2025/03/16 13:50:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/bake/console.rb
 ${GEM_LIBDIR}/lib/console.rb
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/lib/console/adapter.rb
 ${GEM_LIBDIR}/lib/console/capture.rb
 ${GEM_LIBDIR}/lib/console/clock.rb
 ${GEM_LIBDIR}/lib/console/compatible/logger.rb
+${GEM_LIBDIR}/lib/console/config.rb
 ${GEM_LIBDIR}/lib/console/event.rb
 ${GEM_LIBDIR}/lib/console/event/failure.rb
 ${GEM_LIBDIR}/lib/console/event/generic.rb
@@ -27,6 +28,7 @@ ${GEM_LIBDIR}/lib/console/output/wrapper.rb
 ${GEM_LIBDIR}/lib/console/progress.rb
 ${GEM_LIBDIR}/lib/console/resolver.rb
 ${GEM_LIBDIR}/lib/console/terminal.rb
+${GEM_LIBDIR}/lib/console/terminal/formatter.rb
 ${GEM_LIBDIR}/lib/console/terminal/formatter/failure.rb
 ${GEM_LIBDIR}/lib/console/terminal/formatter/progress.rb
 ${GEM_LIBDIR}/lib/console/terminal/formatter/spawn.rb
