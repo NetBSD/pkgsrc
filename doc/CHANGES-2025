@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2309 2025/03/16 15:10:04 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2310 2025/03/16 15:11:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2977,3 +2977,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated cad/qcad to 3.32.2.0 [plunky 2025-03-16]
 	Updated www/ruby-excon to 1.2.5 [taca 2025-03-16]
 	Updated www/ruby-rack to 3.1.12 [taca 2025-03-16]
+	Updated www/ruby-rack2 to 2.2.13 [taca 2025-03-16]
