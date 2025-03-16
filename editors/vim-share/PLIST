@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.77 2025/03/05 16:55:15 morr Exp $
+@comment $NetBSD: PLIST,v 1.78 2025/03/16 15:12:37 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -653,6 +653,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/perl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/php.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pinfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/plaintex.vim
+share/vim/${VIM_SUBDIR}/ftplugin/plsql.vim
 share/vim/${VIM_SUBDIR}/ftplugin/pod.vim
 share/vim/${VIM_SUBDIR}/ftplugin/poefilter.vim
 share/vim/${VIM_SUBDIR}/ftplugin/poke.vim
@@ -740,6 +741,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/systemverilog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tap.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tcl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tcsh.vim
+share/vim/${VIM_SUBDIR}/ftplugin/tera.vim
 share/vim/${VIM_SUBDIR}/ftplugin/terminfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/terraform.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tex.vim
@@ -1123,6 +1125,7 @@ share/vim/${VIM_SUBDIR}/syntax/abap.vim
 share/vim/${VIM_SUBDIR}/syntax/abaqus.vim
 share/vim/${VIM_SUBDIR}/syntax/abc.vim
 share/vim/${VIM_SUBDIR}/syntax/abel.vim
+share/vim/${VIM_SUBDIR}/syntax/abnf.vim
 share/vim/${VIM_SUBDIR}/syntax/acedb.vim
 share/vim/${VIM_SUBDIR}/syntax/ada.vim
 share/vim/${VIM_SUBDIR}/syntax/aflex.vim
@@ -1770,6 +1773,7 @@ share/vim/${VIM_SUBDIR}/syntax/tasm.vim
 share/vim/${VIM_SUBDIR}/syntax/tcl.vim
 share/vim/${VIM_SUBDIR}/syntax/tcsh.vim
 share/vim/${VIM_SUBDIR}/syntax/template.vim
+share/vim/${VIM_SUBDIR}/syntax/tera.vim
 share/vim/${VIM_SUBDIR}/syntax/teraterm.vim
 share/vim/${VIM_SUBDIR}/syntax/terminfo.vim
 share/vim/${VIM_SUBDIR}/syntax/terraform.vim
@@ -1902,10 +1906,14 @@ share/vim/${VIM_SUBDIR}/tutor/README.ru.utf-8.txt
 share/vim/${VIM_SUBDIR}/tutor/README.txt
 share/vim/${VIM_SUBDIR}/tutor/en/vim-01-beginner.tutor
 share/vim/${VIM_SUBDIR}/tutor/en/vim-01-beginner.tutor.json
+share/vim/${VIM_SUBDIR}/tutor/en/vim-02-beginner.tutor
+share/vim/${VIM_SUBDIR}/tutor/en/vim-02-beginner.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/it/vim-01-beginner.tutor
 share/vim/${VIM_SUBDIR}/tutor/it/vim-01-beginner.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/sr/vim-01-beginner.tutor
 share/vim/${VIM_SUBDIR}/tutor/sr/vim-01-beginner.tutor.json
+share/vim/${VIM_SUBDIR}/tutor/sr/vim-02-beginner.tutor
+share/vim/${VIM_SUBDIR}/tutor/sr/vim-02-beginner.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/tutor.tutor
 share/vim/${VIM_SUBDIR}/tutor/tutor.tutor.json
 share/vim/${VIM_SUBDIR}/tutor/tutor.vim
