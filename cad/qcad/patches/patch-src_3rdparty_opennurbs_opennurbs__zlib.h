@@ -1,24 +1,23 @@
-$NetBSD: patch-src_3rdparty_opennurbs_opennurbs__zlib.h,v 1.1 2017/12/18 21:21:44 plunky Exp $
+$NetBSD: patch-src_3rdparty_opennurbs_opennurbs__zlib.h,v 1.2 2025/03/16 14:56:12 plunky Exp $
 
-don't provide own zlib
+don't provide zlib, use pkgsrc version
 
---- src/3rdparty/opennurbs/opennurbs_zlib.h.orig	2017-12-18 11:43:25.553865013 +0000
+--- src/3rdparty/opennurbs/opennurbs_zlib.h.orig	2025-02-20 12:25:22.000000000 +0000
 +++ src/3rdparty/opennurbs/opennurbs_zlib.h
-@@ -30,7 +30,7 @@
+@@ -30,7 +30,6 @@
  
  #if !defined(Z_PREFIX)
  /* decorates zlib functions with a "z_" prefix to prevent symbol collision. */
 -#define Z_PREFIX
-+//#define Z_PREFIX
  #endif
  
  #if !defined(MY_ZCALLOC)
-@@ -38,7 +38,7 @@
- //#define MY_ZCALLOC
+@@ -39,7 +38,7 @@
  #endif
  
+ extern "C" {
 -#include "./zlib/zlib.h"
 +#include <zlib.h>
+ }
  
  ON_BEGIN_EXTERNC
- voidpf zcalloc (voidpf, unsigned, unsigned);
