@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2293 2025/03/16 13:51:07 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2294 2025/03/16 13:55:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/php-xdebug to 3.4.2 [taca 2025-03-16]
 	Updated devel/ruby-io-event to 1.10.0 [taca 2025-03-16]
 	Updated devel/ruby-console to 1.30.2 [taca 2025-03-16]
+	Updated devel/ruby-async to 2.23.1 [taca 2025-03-16]
