@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2311 2025/03/16 15:18:00 morr Exp $
+$NetBSD: CHANGES-2025,v 1.2312 2025/03/16 15:38:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2979,3 +2979,16 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/ruby-rack to 3.1.12 [taca 2025-03-16]
 	Updated www/ruby-rack2 to 2.2.13 [taca 2025-03-16]
 	Updated editors/vim-share to 9.1.1206 [morr 2025-03-16]
+	Updated devel/ruby-activesupport80 to 8.0.2 [taca 2025-03-16]
+	Updated devel/ruby-activemodel80 to 8.0.2 [taca 2025-03-16]
+	Updated devel/ruby-activejob80 to 8.0.2 [taca 2025-03-16]
+	Updated databases/ruby-activerecord80 to 8.0.2 [taca 2025-03-16]
+	Updated www/ruby-actionview80 to 8.0.2 [taca 2025-03-16]
+	Updated www/ruby-actionpack80 to 8.0.2 [taca 2025-03-16]
+	Updated www/ruby-actioncable80 to 8.0.2 [taca 2025-03-16]
+	Updated devel/ruby-railties80 to 8.0.2 [taca 2025-03-16]
+	Updated devel/ruby-activestorage80 to 8.0.2 [taca 2025-03-16]
+	Updated mail/ruby-actionmailer80 to 8.0.2 [taca 2025-03-16]
+	Updated mail/ruby-actionmailbox80 to 8.0.2 [taca 2025-03-16]
+	Updated textproc/ruby-actiontext80 to 8.0.2 [taca 2025-03-16]
+	Updated www/ruby-rails80 to 8.0.2 [taca 2025-03-16]
