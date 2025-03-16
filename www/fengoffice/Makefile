@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/02/24 15:10:45 taca Exp $
-#
+# $NetBSD: Makefile,v 1.45 2025/03/16 21:58:25 wiz Exp $
 
 DISTNAME=	fengoffice-${FO_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/_/-/:C/.rc$/rc1/}
@@ -23,6 +22,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=${PHP_BASE_VERS}:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=${PHP_BASE_VERS}:../../mail/php-imap
 
 FO_VERSION=	3.11.6.8
+
+PHP_VERSIONS_INCOMPATIBLE=	84 # php-imap
 
 USE_TOOLS=	pax
 NO_BUILD=	yes
