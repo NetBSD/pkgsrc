@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lisp.h,v 1.5 2016/04/13 13:52:27 hauke Exp $
+$NetBSD: patch-src_lisp.h,v 1.6 2025/03/17 13:08:58 hauke Exp $
 
 Don't try to define max_align_t in C11 or C++11 mode.
 
@@ -8,7 +8,7 @@ Don't try to define max_align_t in C11 or C++11 mode.
  
  /* No type has a greater alignment requirement than max_align_t.
     (except perhaps for types we don't use, like long double) */
-+#if (__STDC_VERSION__ - 0) < 201112L && (__cplusplus - 0) < 201103L
++#if (__STDC_VERSION__ - 0) < 201112L && (__cplusplus - 0) < 201103L && (__ISO_C_VISIBLE - 0) < 2011L
  typedef union
  {
    struct { long l; } l;
