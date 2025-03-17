@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2021/10/26 10:21:43 nia Exp $
+$NetBSD: distinfo,v 1.36 2025/03/17 13:08:58 hauke Exp $
 
 BLAKE2s (xemacs/xemacs-21.4.24.tar.gz) = 1b186f91ab8d8347e1051a4e867d95393a9897e4e1f5dc51b9f6763a4ca46665
 SHA512 (xemacs/xemacs-21.4.24.tar.gz) = b7a88d5a4a9f74f74c2067ed60f7ea87ac8ccad5d9c2c1033ecf07f540250191f8fa5f9e6d23d9fedd0f2ab1eb5ea6c29a7665a310ec512d85e2e4f337447213
@@ -16,7 +16,7 @@ SHA1 (patch-man_xemacs_custom.texi) = e564906bced48b0a7c788c217c02eafe167fee59
 SHA1 (patch-src_Makefile.in.in) = 8d2c262983ff16197c99429e7d4cc80cd8371775
 SHA1 (patch-src_config.h.in) = 25ac897560abad51d83b58818e1dc2e77a8519e4
 SHA1 (patch-src_emacs.c) = 19bbba8b9a777388060bab637b2bdc5e9027e11f
-SHA1 (patch-src_lisp.h) = ed1210a179f7dce537634e3129acc93f9c9b5966
+SHA1 (patch-src_lisp.h) = cced6b8e0dac07c4dae887739ad9677b4f9d0c7d
 SHA1 (patch-src_process.c) = b33b37e7e68bd49036d90cfed206170456a4b443
 SHA1 (patch-src_sound.c) = fd3717943310c049fbcc8598b072d80d9812ae20
 SHA1 (patch-src_unexelf.c) = 5147a3f41d1188aaf08b99e768d8b93e9e28d305
