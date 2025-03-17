@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2025/02/08 15:21:17 pin Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/17 20:59:45 pin Exp $
 
-DISTNAME=	tlrc-1.10.0
+DISTNAME=	tlrc-1.11.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tldr-pages/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -10,9 +10,11 @@ HOMEPAGE=	https://tldr.sh/
 COMMENT=	Tldr client written in Rust
 LICENSE=	mit
 
+SITES.wasi-0.11.0+wasi-snapshop-preview1.crate=	https://static.crates.io/crates/wasi/
+
 .include "cargo-depends.mk"
 
-RUST_REQ=	1.74.0
+RUST_REQ=		1.74.0
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-install:
