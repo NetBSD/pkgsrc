@@ -1,5 +1,13 @@
 $NetBSD: distinfo,v 1.1 2024/04/29 13:27:52 nikita Exp $
 
-BLAKE2s (zls-0.12.0.tar.gz) = e7ed5f0c856248d88a07cccd5f71d5135e6f215bb0c47cc24ce07dac6d60e406
-SHA512 (zls-0.12.0.tar.gz) = d27653ae57c89f5fea03ecaaefa4c273a6a3694db24a1ebdf735c7ef0ca145e2d61c8f19d18bd5434659ac8ed0f5f715e6d15e4252db87ad89ac9402f580a860
-Size (zls-0.12.0.tar.gz) = 341927 bytes
+BLAKE2s (zls-0.13.0.tar.gz) = 3ae5318e6a133d21745733eec1a369eaa9c220d70b1088b4271bf74eb9f16d13
+SHA512 (zls-0.13.0.tar.gz) = 92b20418d1410f013ac3d4cbe432ab1b748454d013a2d1be5abd47b91ea7d2340d55b775a66eb116f4641e9f2fc3baf84a44ba8f58b1a774254e7428449bb088
+Size (zls-0.13.0.tar.gz) = 352025 bytes
+SHA1 (patch-build.zig) = 5bbfc5ff0aea336803169774b131276eedff546d
+SHA1 (patch-flake.lock) = 7082474f1872246b84ac65f89987a38ab85ca9ba
+SHA1 (patch-flake.nix) = 0d9f8c5eef4777e04c51a03b2bb77085fafc518f
+SHA1 (patch-schema.json) = db1b2476f5115d499d6fddf28f3d730b7cab6009
+SHA1 (patch-src_Config.zig) = 89c168e6f079673c0848a43db8bdba0d230692b6
+SHA1 (patch-src_config__gen_config.json) = 423f0ac5909b0941c94062811c91a6ff6d74af0d
+SHA1 (patch-src_config__gen_config__gen.zig) = d94bff19c26342b952c61528b26cbae46cf0d370
+SHA1 (patch-src_tools_langref__0.13.0.html.in) = bfdfad8878769d788afcdd350ca5a53e95ea7100

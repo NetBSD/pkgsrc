@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- schema.json.orig	2025-03-17 06:46:13.332129443 +0000
++++ schema.json
+@@ -30,7 +30,7 @@
+             "default": false
+         },
+         "semantic_tokens": {
+-            "description": "Set level of semantic tokens. Partial only includes information that requires semantic analysis.",
++            "description": "Set level of semantic tokens. `partial` only includes information that requires semantic analysis.",
+             "type": "string",
+             "enum": [
+                 "none",

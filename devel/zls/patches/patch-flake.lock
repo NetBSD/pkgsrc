@@ -1,0 +1,31 @@
+$NetBSD$
+
+--- flake.lock.orig	2025-03-17 06:46:13.322381314 +0000
++++ flake.lock
+@@ -72,18 +72,6 @@
+         "type": "github"
+       }
+     },
+-    "langref": {
+-      "flake": false,
+-      "locked": {
+-        "narHash": "sha256-O6p2tiKD8ZMhSX+DeA/o5hhAvcPkU2J9lFys/r11peY=",
+-        "type": "file",
+-        "url": "https://raw.githubusercontent.com/ziglang/zig/0fb2015fd3422fc1df364995f9782dfe7255eccd/doc/langref.html.in"
+-      },
+-      "original": {
+-        "type": "file",
+-        "url": "https://raw.githubusercontent.com/ziglang/zig/0fb2015fd3422fc1df364995f9782dfe7255eccd/doc/langref.html.in"
+-      }
+-    },
+     "nixpkgs": {
+       "locked": {
+         "lastModified": 1717696253,
+@@ -104,7 +92,6 @@
+       "inputs": {
+         "flake-utils": "flake-utils",
+         "gitignore": "gitignore",
+-        "langref": "langref",
+         "nixpkgs": "nixpkgs",
+         "zig-overlay": "zig-overlay"
+       }
