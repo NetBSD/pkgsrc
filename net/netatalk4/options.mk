@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2025/03/12 09:54:41 hauke Exp $
+# $NetBSD: options.mk,v 1.5 2025/03/17 17:42:44 hauke Exp $
 #
 PKG_OPTIONS_VAR=		PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=		debug dnssd kerberos ldap pam
@@ -26,10 +26,7 @@ MESON_ARGS+=		-Dwith-appletalk=true
 MESON_ARGS+=		-Dwith-spooldir=${VARBASE}/spool/netatalk
 CONF_FILES+=		${EGDIR}/atalkd.conf	${PKG_SYSCONFDIR}/atalkd.conf
 CONF_FILES+=		${EGDIR}/papd.conf	${PKG_SYSCONFDIR}/papd.conf
-.  if ${OPSYS} == "NetBSD"
-MESON_BINARIES+=	service
-MESON_BINARY.service=	/usr/sbin/service
-.  endif
+ATALK_RCD_SCRIPTS=	a2boot atalkd macipgw papd timelord
 RCD_SCRIPTS+=		${ATALK_RCD_SCRIPTS}
 .for rs in ${ATALK_RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${rs}=	${WRKSRC}/output/distrib/initscripts/${rs}

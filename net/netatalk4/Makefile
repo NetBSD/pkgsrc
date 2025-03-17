@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2025/03/12 09:54:41 hauke Exp $
+# $NetBSD: Makefile,v 1.12 2025/03/17 17:42:44 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
 DISTNAME=	netatalk-4-1-2
+PKGREVISION=	1
 
 PKGVER=		${GITHUB_TAG:C/^.+netatalk-//:C/-/./g}
 PKGNAME=	${DISTNAME:C/-[0-9].*$//}-${PKGVER}
@@ -34,11 +35,8 @@ CONFLICTS+=		netatalk-[0-9]* netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
 RCD_SCRIPTS=		netatalk
-ATALK_RCD_SCRIPTS=	a2boot atalkd macipgw papd timelord
 RCD_SCRIPT_SRC.netatalk= ${WRKSRC}/output/distrib/initscripts/netatalk
-.endif
 
 SMF_SRCDIR=		${WRKSRC}/distrib/initscripts
 SMF_METHODS=		netatalk_smf
@@ -57,6 +55,8 @@ MESON_ARGS+=		-Dwith-bdb-path=${BDBBASE}
 MESON_ARGS+=		-Dwith-tcp-wrappers=true
 MESON_ARGS+=		-Dwith-statedir-path=${VARBASE}/db
 MESON_ARGS+=		-Dwith-init-hooks=false
+
+LDFLAGS.FreeBSD+=	-lpthread
 
 # Meson will look for perl(1), but then substitute the buildlink path
 # into scripts, so replace manually
@@ -93,13 +93,23 @@ PLIST.ea=		yes
 .for atbin in aecho getzones nbplkup nbprgstr nbpunrgstr pap papstatus
 PRINT_PLIST_AWK+=	{ gsub(/^bin\/${atbin}$$/, "$${PLIST.appletalk}&"); }
 .endfor
+.for atsbin in a2boot atalkd macipgw papd timelord
+PRINT_PLIST_AWK+=	{ gsub(/^sbin\/${atsbin}$$/, "$${PLIST.appletalk}&"); }
+.endfor
 .for athdr in aarp at at_var ddp ddp_var endian phase2
 PRINT_PLIST_AWK+=	{ gsub(/^include\/netatalk\/${athdr}\.h$$/, "$${PLIST.appletalk}&"); }
 .endfor
-.for atsbin in a2boot atalkd macipgw papd timelord
-PRINT_PLIST_AWK+=	{ gsub(/^sbin\/${atsbin}$$/, "$${PLIST.appletalk}&"); }
-PRINT_PLIST_AWK+=	{ gsub(/^share\/examples\/netatalk\/(atalk|pap)d\.conf$$/, "$${PLIST.appletalk}&"); }
+.for atman1 in aecho getzones nbp nbplkup nbprgstr nbpunrgstr pap
+PRINT_PLIST_AWK+=	{ gsub(/^man\/man1\/${atman1}\.1$$/, "$${PLIST.appletalk}&"); }
 .endfor
+.for atman5 in atalkd.conf papd.conf
+PRINT_PLIST_AWK+=	{ gsub(/^man\/man5\/${atman5}\.5$$/, "$${PLIST.appletalk}&"); }
+.endfor
+.for atman8 in a2boot atalkd macipgw papd papstatus timelord
+PRINT_PLIST_AWK+=	{ gsub(/^man\/man8\/${atman8}\.8$$/, "$${PLIST.appletalk}&"); }
+.endfor
+PRINT_PLIST_AWK+=	{ gsub(/^share\/examples\/netatalk\/(atalk|pap)d\.conf$$/, "$${PLIST.appletalk}&"); }
+PRINT_PLIST_AWK+=	{ gsub(/^share\/doc\/netatalk\/README.AppleTalk$$/, "$${PLIST.appletalk}&"); }
 
 # ea
 PRINT_PLIST_AWK+=	{ gsub(/^bin\/ad$$/, "$${PLIST.ea}&"); }
@@ -157,8 +167,8 @@ BUILDLINK_API_DEPENDS.libevent+=        libevent>=2
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../textproc/cmark-gfm/buildlink3.mk"
-
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../devel/meson/build.mk"
 .include "../../mk/bsd.pkg.mk"
