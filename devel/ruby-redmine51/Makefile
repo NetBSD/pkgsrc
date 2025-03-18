@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2025/03/16 12:38:01 taca Exp $
+# $NetBSD: Makefile,v 1.11 2025/03/18 13:27:40 taca Exp $
 
 DISTNAME=	redmine-${RM_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/redmine/redmine${RM_VER}/}
@@ -52,7 +52,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sanitize>=6.0<7:../../textproc/ruby-sanitize
 .include "../../lang/ruby/modules.mk"
 
 .if ${RUBY_VER} == 31
-DEPENDS+=	${RUBY_PKGPREFIX}-net-csv>=3.2.6:../../textproc/ruby-csv
+DEPENDS+=	${RUBY_PKGPREFIX}-csv>=3.2.6:../../textproc/ruby-csv
 DEPENDS+=	${RUBY_PKGPREFIX}-net-imap>=0.3.4:../../net/ruby-net-imap
 DEPENDS+=	${RUBY_PKGPREFIX}-net-pop>=0.1.2:../../net/ruby-net-pop
 DEPENDS+=	${RUBY_PKGPREFIX}-net-smtp>=0.3.3:../../net/ruby-net-smtp
