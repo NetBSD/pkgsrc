@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4455 2025/03/18 09:01:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4456 2025/03/18 10:10:20 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -2810,7 +2810,6 @@ SUBDIR+=	py-nihtest
 SUBDIR+=	py-ninja
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose2
-SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
 SUBDIR+=	py-orca
