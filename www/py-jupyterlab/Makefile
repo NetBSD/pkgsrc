@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2025/03/18 09:02:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2025/03/18 16:47:08 gutteridge Exp $
 
 DISTNAME=	jupyterlab-4.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,14 +31,6 @@ USE_LANGUAGES=	# none
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 
 PYTHON_VERSIONS_INCOMPATIBLE=	39 310
-
-.include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION} < 310
-DEPENDS+=	${PYPKGPREFIX}-importlib-metadata>=4.8.3:../../devel/py-importlib-metadata
-.endif
-.if ${PYTHON_VERSION} < 311
-DEPENDS+=	${PYPKGPREFIX}-tomli>=1.2.2:../../textproc/py-tomli
-.endif
 
 post-install:
 .for bin in jlpm jupyter-lab jupyter-labextension jupyter-labhub
