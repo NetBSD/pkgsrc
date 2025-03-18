@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2025/02/06 10:02:16 adam Exp $
+# $NetBSD: Makefile,v 1.15 2025/03/18 09:02:32 wiz Exp $
 
 DISTNAME=	jupyterlab-4.3.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ USE_LANGUAGES=	# none
 
 CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/jupyterlab/staging/yarn.js
 
-PYTHON_VERSIONS_INCOMPATIBLE=	39
+PYTHON_VERSIONS_INCOMPATIBLE=	39 310
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYTHON_VERSION} < 310
