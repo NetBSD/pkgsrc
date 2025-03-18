@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 02:56:05 khorben Exp $
-lib/libdeepstate_AFL.a

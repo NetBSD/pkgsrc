@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 03:03:54 khorben Exp $
-lib/libdeepstate_LF.a
