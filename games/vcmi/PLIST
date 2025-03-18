@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/01/31 08:49:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/18 09:43:00 wiz Exp $
 bin/vcmibuilder
 bin/vcmiclient
 ${PLIST.qt}bin/vcmieditor
@@ -78,11 +78,13 @@ share/vcmi/Mods/vcmi/Content/Sprites/heroWindow/artifactSlotEmpty.png
 share/vcmi/Mods/vcmi/Content/Sprites/heroWindow/backpackButtonIcon.png
 share/vcmi/Mods/vcmi/Content/Sprites/heroWindow/commanderButtonIcon.png
 share/vcmi/Mods/vcmi/Content/Sprites/itpa.json
+share/vcmi/Mods/vcmi/Content/Sprites/lobby/addChannel.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/checkbox.json
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/checkboxBlueOff.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/checkboxBlueOn.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/checkboxOff.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/checkboxOn.png
+share/vcmi/Mods/vcmi/Content/Sprites/lobby/closeChannel.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/delete-normal.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/delete-pressed.png
 share/vcmi/Mods/vcmi/Content/Sprites/lobby/deleteButton.json
@@ -128,6 +130,7 @@ share/vcmi/Mods/vcmi/Content/Sprites/radialMenu/stackSplitOne.png
 share/vcmi/Mods/vcmi/Content/Sprites/radialMenu/statusBar.png
 share/vcmi/Mods/vcmi/Content/Sprites/radialMenu/swapArtifacts.png
 share/vcmi/Mods/vcmi/Content/Sprites/radialMenu/tradeHeroes.png
+share/vcmi/Mods/vcmi/Content/Sprites/radialMenu/upgradeCreatures.png
 share/vcmi/Mods/vcmi/Content/Sprites/settingsWindow/frameAudio.png
 share/vcmi/Mods/vcmi/Content/Sprites/settingsWindow/frameMovement.png
 share/vcmi/Mods/vcmi/Content/Sprites/settingsWindow/frameStackQueue.png
@@ -174,6 +177,9 @@ share/vcmi/Mods/vcmi/Content/Sprites/vcmi/creatureIcons/towerLarge.png
 share/vcmi/Mods/vcmi/Content/Sprites/vcmi/creatureIcons/towerSmall.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/battle/queueDefend.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/battle/queueWait.png
+share/vcmi/Mods/vcmi/Content/Sprites2x/lobby/addChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites2x/lobby/closeChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites2x/lobby/iconPlayer.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/mapFormatIcons/vcmi1.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/minimapIcons/bordergate.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/minimapIcons/borderguard.png
@@ -186,10 +192,16 @@ share/vcmi/Mods/vcmi/Content/Sprites2x/minimapIcons/portalExit.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/settingsWindow/gear.png
 share/vcmi/Mods/vcmi/Content/Sprites2x/stackWindow/icons.png
 share/vcmi/Mods/vcmi/Content/Sprites3x/battle/queueDefend.png
+share/vcmi/Mods/vcmi/Content/Sprites3x/lobby/addChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites3x/lobby/closeChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites3x/lobby/iconPlayer.png
 share/vcmi/Mods/vcmi/Content/Sprites3x/mapFormatIcons/vcmi1.png
 share/vcmi/Mods/vcmi/Content/Sprites3x/settingsWindow/gear.png
 share/vcmi/Mods/vcmi/Content/Sprites3x/stackWindow/icons.png
 share/vcmi/Mods/vcmi/Content/Sprites4x/battle/queueDefend.png
+share/vcmi/Mods/vcmi/Content/Sprites4x/lobby/addChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites4x/lobby/closeChannel.png
+share/vcmi/Mods/vcmi/Content/Sprites4x/lobby/iconPlayer.png
 share/vcmi/Mods/vcmi/Content/Sprites4x/mapFormatIcons/vcmi1.png
 share/vcmi/Mods/vcmi/Content/Sprites4x/settingsWindow/gear.png
 share/vcmi/Mods/vcmi/Content/Sprites4x/stackWindow/icons.png
@@ -205,6 +217,8 @@ share/vcmi/Mods/vcmi/Content/config/czech.json
 share/vcmi/Mods/vcmi/Content/config/english.json
 share/vcmi/Mods/vcmi/Content/config/french.json
 share/vcmi/Mods/vcmi/Content/config/german.json
+share/vcmi/Mods/vcmi/Content/config/hungarian.json
+share/vcmi/Mods/vcmi/Content/config/italian.json
 share/vcmi/Mods/vcmi/Content/config/polish.json
 share/vcmi/Mods/vcmi/Content/config/portuguese.json
 share/vcmi/Mods/vcmi/Content/config/rmg/hdmod/aroundamarsh.json
@@ -480,7 +494,10 @@ share/vcmi/config/widgets/battleWindow2.json
 share/vcmi/config/widgets/buttons/campaignBonusSelection.json
 share/vcmi/config/widgets/buttons/castleInterfaceQuickAccess.json
 share/vcmi/config/widgets/buttons/heroBackpack.json
+share/vcmi/config/widgets/buttons/heroBackpackSort.json
 share/vcmi/config/widgets/buttons/heroCommander.json
+share/vcmi/config/widgets/buttons/lobbyAddChannel.json
+share/vcmi/config/widgets/buttons/lobbyCloseChannel.json
 share/vcmi/config/widgets/buttons/lobbyCreateRoom.json
 share/vcmi/config/widgets/buttons/lobbyHideWindow.json
 share/vcmi/config/widgets/buttons/lobbyJoinRoom.json
@@ -495,6 +512,7 @@ share/vcmi/config/widgets/buttons/settingsWindow/button80.json
 share/vcmi/config/widgets/commonPrimitives.json
 share/vcmi/config/widgets/extraOptionsTab.json
 share/vcmi/config/widgets/lobbyWindow.json
+share/vcmi/config/widgets/lobbyWindowWide.json
 share/vcmi/config/widgets/mapOverview.json
 share/vcmi/config/widgets/playerOptionsTab.json
 share/vcmi/config/widgets/randomMapTab.json
