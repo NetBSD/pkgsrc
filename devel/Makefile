@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4454 2025/03/12 15:04:50 adam Exp $
+# $NetBSD: Makefile,v 1.4455 2025/03/18 09:01:58 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -318,10 +318,6 @@ SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
 SUBDIR+=	debugcon_printf
-SUBDIR+=	deepstate
-SUBDIR+=	deepstate-afl
-SUBDIR+=	deepstate-honggfuzz
-SUBDIR+=	deepstate-libfuzzer
 SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-coder
 SUBDIR+=	deforaos-configure
@@ -2599,7 +2595,6 @@ SUBDIR+=	py-dash
 SUBDIR+=	py-ddt
 SUBDIR+=	py-debugpy
 SUBDIR+=	py-decorator
-SUBDIR+=	py-deepstate
 SUBDIR+=	py-deprecat
 SUBDIR+=	py-deprecated
 SUBDIR+=	py-deprecation

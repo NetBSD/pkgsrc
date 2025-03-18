@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2319 2025/03/17 21:00:06 pin Exp $
+$NetBSD: CHANGES-2025,v 1.2320 2025/03/18 09:01:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -2999,3 +2999,8 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-jaraco.itertools to 6.4.1nb1 [wiz 2025-03-16]
 	Updated devel/cargo-outdated to 0.17.0 [pin 2025-03-17]
 	Updated net/tlrc to 1.11.0 [pin 2025-03-17]
+	Removed devel/py-deepstate [wiz 2025-03-18]
+	Removed devel/deepstate-afl [wiz 2025-03-18]
+	Removed devel/deepstate-honggfuzz [wiz 2025-03-18]
+	Removed devel/deepstate-libfuzzer [wiz 2025-03-18]
+	Removed devel/deepstate [wiz 2025-03-18]

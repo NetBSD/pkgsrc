@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2020/09/29 03:06:08 khorben Exp $
-lib/libdeepstate_HFUZZ.a
