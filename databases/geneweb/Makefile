@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2022/05/24 18:51:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.58 2025/03/18 09:11:03 wiz Exp $
 
 DISTNAME=	geneweb-5.01
 PKGREVISION=	19
@@ -12,6 +12,13 @@ COMMENT=	GeneWeb is a genealogy database that runs as a web server
 
 # A macports packages is at:
 #  http://db.macports.org/port/show/903
+
+#File "wserver.ml", line 84, characters 59-60:
+#84 |     if strip_spaces then strip_heading_and_trailing_spaces s else s
+#                                                                ^
+#Error: This expression has type bytes but an expression was expected of type
+#         string
+BROKEN=		"Broken by an ocaml/dependency update"
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
