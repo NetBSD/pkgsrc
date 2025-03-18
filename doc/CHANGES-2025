@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2321 2025/03/18 09:43:09 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2322 2025/03/18 10:10:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3005,3 +3005,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/deepstate-libfuzzer [wiz 2025-03-18]
 	Removed devel/deepstate [wiz 2025-03-18]
 	Updated games/vcmi to 1.6.7 [wiz 2025-03-18]
+	Removed devel/py-ode [wiz 2025-03-18]
