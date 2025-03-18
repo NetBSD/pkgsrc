@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2025/01/31 08:49:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2025/03/18 09:43:00 wiz Exp $
 
 BLAKE2s (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = 752aabdf207e52c191d90ca89dcd8f6ff637faee89531b59deac5fe8040c0490
 SHA512 (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = f7ef98b28c52ff7e793ca21d532f49fc547bae882ab77ed72fd4b43e80805d738c829be11e13a4f71c74166a0c4e54936a79d3f89ae68edced3cf39dc37c5be5
 Size (fuzzylite-fuzzylite-7aee562d6ca17f3cf42588ffb5116e03017c3c50.tar.gz) = 2194254 bytes
-BLAKE2s (vcmi-1.6.3.tar.gz) = d72c2d8ecc87498d8caa74e2a015aecac86f355ca377b0ae060bf5d515a266c2
-SHA512 (vcmi-1.6.3.tar.gz) = 8146cd1aedb293a79c65f36aa82b72e1de6e9c9b2026979568d34e30ab7e6956d1aa301dd969ba98250ede32c24b30f7bf906dfbc1390dd9299ff39ed7df689f
-Size (vcmi-1.6.3.tar.gz) = 11500495 bytes
+BLAKE2s (vcmi-1.6.7.tar.gz) = 4b959af6e2a5468feb163d5c86a3057f83e40b3b5bce48b53bb100796388d1ee
+SHA512 (vcmi-1.6.7.tar.gz) = c7231a53a18884a483f888de3327014c12d8fa1d49142e41adacff7e852e3aa884f78f2a167c164a9e6cdf1d4ce9421d90385561b7f6f7737afd5f213342729b
+Size (vcmi-1.6.7.tar.gz) = 12106442 bytes
 BLAKE2s (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = 3fd52b79fd6378c52f00ff3043cff6401dbd832e16977d8645ab6ea8843fe81f
 SHA512 (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = d78d70268afcc99badc62e1ac53f7c90add2af8818c34685e6ae505af8c4141024050fc6c861972cb51a696b62e9d368b77572b3c58ec8eddd1d04d5153a010e
 Size (vcmi-innoextract-9977089412ebafe9f79936aa65a2edf16a84ae3e.tar.gz) = 205354 bytes
