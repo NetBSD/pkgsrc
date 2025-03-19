@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2025/03/05 06:24:20 adam Exp $
+# $NetBSD: options.mk,v 1.14 2025/03/19 09:18:14 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hdf5
 PKG_SUPPORTED_OPTIONS=	szip threads hdf5-unsafe-threads
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--with-szlib
 # Threadsafe API is incompatible with high-level and C++ APIs.
 PLIST_VARS+=	hl
 .if !empty(PKG_OPTIONS:Mthreads)
-CMAKE_CONFIGURE_ARGS+=	-DHDF5_BUILD_HL_LIB=OFF # why?
+CMAKE_CONFIGURE_ARGS+=	-DHDF5_BUILD_HL_LIB=OFF # not compatible with threadsafe
 CMAKE_CONFIGURE_ARGS+=	-DHDF5_ENABLE_THREADSAFE=ON
 .include "../../mk/pthread.buildlink3.mk"
 .else
