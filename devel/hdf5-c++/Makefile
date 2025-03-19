@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/06 13:09:53 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/19 09:18:14 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
@@ -29,5 +29,7 @@ CMAKE_GENERATOR=	make
 .if !empty(PKG_OPTIONS:Mthreads)
 PKG_FAIL_REASON=	"Threadsafe HDF5 with C++ interface is unsupported."
 .endif
+
+SUBST_FILES.unwrap+=	${DESTDIR}${PREFIX}/bin/h5c++
 
 .include "../../mk/bsd.pkg.mk"
