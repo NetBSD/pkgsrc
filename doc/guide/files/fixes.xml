@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.201 2025/02/22 17:17:25 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.202 2025/03/20 14:41:07 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -140,6 +140,17 @@ LICENSE=        xv-license
 ===>     To indicate acceptance, add this line to your /etc/mk.conf:
 ===>     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
+</programlisting>
+
+    <para>In case a package requires multiple licenses, you can add all of
+    them to the LICENSE variable, connected with the upper-case keyword
+    <varname>AND</varname>. If the user has a choice between multiple
+    licenses, you can add them connected with the upper-case keyword
+    <varname>OR</varname>, for example:</para>
+
+<programlisting>
+LICENSE=        isc AND apache-2.0
+LICENSE=        2-clause-bsd OR ruby-license
 </programlisting>
 
     <para>The license can be viewed with <command>make
