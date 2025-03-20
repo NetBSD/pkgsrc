@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2025/03/04 17:24:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2025/03/20 16:41:38 schmonz Exp $
 
-DISTNAME=		snac-2.73
+DISTNAME=		snac-2.74
 CATEGORIES=		www
 MASTER_SITES=		${HOMEPAGE}archive/
 SITES.${DISTNAME}.tar.gz= -${MASTER_SITES}${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -21,7 +21,10 @@ INSTALL_MAKE_FLAGS+=	PREFIX_MAN=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
 INSTALLATION_DIRS=	share/${PKGBASE}/po
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/po/en.po ${DESTDIR}${PREFIX}/share/${PKGBASE}/po/
+	cd ${WRKSRC}/po;							\
+	for f in *.po; do							\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/${PKGBASE}/po/;	\
+	done
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
