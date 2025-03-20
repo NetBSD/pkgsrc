@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2025/02/22 16:13:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2025/03/20 01:21:21 taca Exp $
 share/drupal/.csslintrc
 share/drupal/.editorconfig
 share/drupal/.eslintignore
@@ -3771,7 +3771,6 @@ share/drupal/core/lib/Drupal/Core/EventSubscriber/RenderArrayNonHtmlSubscriber.p
 share/drupal/core/lib/Drupal/Core/EventSubscriber/ResponseGeneratorSubscriber.php
 share/drupal/core/lib/Drupal/Core/EventSubscriber/RouteAccessResponseSubscriber.php
 share/drupal/core/lib/Drupal/Core/EventSubscriber/RouteMethodSubscriber.php
-share/drupal/core/lib/Drupal/Core/EventSubscriber/RssResponseCdata.php
 share/drupal/core/lib/Drupal/Core/EventSubscriber/RssResponseRelativeUrlFilter.php
 share/drupal/core/lib/Drupal/Core/EventSubscriber/SpecialAttributesRouteSubscriber.php
 share/drupal/core/lib/Drupal/Core/Executable/ExecutableException.php
@@ -8615,6 +8614,7 @@ share/drupal/core/modules/link/link.info.yml
 share/drupal/core/modules/link/link.libraries.yml
 share/drupal/core/modules/link/link.module
 share/drupal/core/modules/link/migrations/state/link.migrate_drupal.yml
+share/drupal/core/modules/link/src/AttributeXss.php
 share/drupal/core/modules/link/src/Hook/LinkHooks.php
 share/drupal/core/modules/link/src/LinkItemInterface.php
 share/drupal/core/modules/link/src/Plugin/Field/FieldFormatter/LinkFormatter.php
@@ -12036,6 +12036,9 @@ share/drupal/core/modules/system/tests/modules/hold_test/hold_test.install
 share/drupal/core/modules/system/tests/modules/hold_test/hold_test.module
 share/drupal/core/modules/system/tests/modules/hold_test/hold_test.services.yml
 share/drupal/core/modules/system/tests/modules/hold_test/src/EventSubscriber/HoldTestSubscriber.php
+share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/hook_collector_hook_attribute.info.yml
+share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/src/Hook/HookAttributeInvokeHook.php
+share/drupal/core/modules/system/tests/modules/hook_collector_hook_attribute/src/Hook/HookAttributeNamedArgumentsHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf/hook_collector_on_behalf.info.yml
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf/src/Hook/OnBehalfOfOtherModuleHook.php
 share/drupal/core/modules/system/tests/modules/hook_collector_on_behalf_procedural/hook_collector_on_behalf_procedural.info.yml
@@ -17408,7 +17411,6 @@ share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/OptionsRequestSubscrib
 share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/PathRootsSubscriberTest.php
 share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/PsrResponseSubscriberTest.php
 share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/RedirectResponseSubscriberTest.php
-share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/RssResponseCdataTest.php
 share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/RssResponseRelativeUrlFilterTest.php
 share/drupal/core/tests/Drupal/Tests/Core/EventSubscriber/SpecialAttributesRouteSubscriberTest.php
 share/drupal/core/tests/Drupal/Tests/Core/Extension/DatabaseDriverListTest.php
