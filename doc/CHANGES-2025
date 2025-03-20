@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2323 2025/03/20 01:21:37 taca Exp $
+$NetBSD: CHANGES-2025,v 1.2324 2025/03/20 16:41:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated games/vcmi to 1.6.7 [wiz 2025-03-18]
 	Removed devel/py-ode [wiz 2025-03-18]
 	Updated www/drupal11 to 11.1.5 [taca 2025-03-20]
+	Updated www/snac to 2.74 [schmonz 2025-03-20]
