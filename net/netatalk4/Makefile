@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2025/03/17 17:42:44 hauke Exp $
+# $NetBSD: Makefile,v 1.13 2025/03/20 21:01:06 hauke Exp $
 
 GITHUB_PROJECT=	netatalk
 GITHUB_TAG=	refs/tags/${DISTNAME}
@@ -55,6 +55,11 @@ MESON_ARGS+=		-Dwith-bdb-path=${BDBBASE}
 MESON_ARGS+=		-Dwith-tcp-wrappers=true
 MESON_ARGS+=		-Dwith-statedir-path=${VARBASE}/db
 MESON_ARGS+=		-Dwith-init-hooks=false
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+MESON_BINARIES+=	service
+MESON_BINARY.service=	/usr/sbin/service
+.endif
 
 LDFLAGS.FreeBSD+=	-lpthread
 
