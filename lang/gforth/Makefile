@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2022/06/28 11:34:11 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2025/03/20 09:18:51 wiz Exp $
 
 DISTNAME=		gforth-0.7.3
 PKGREVISION=		10
@@ -59,7 +59,7 @@ PLIST_SUBST+=	KERNEL_FI=${KERNEL_FI_cmd:sh:Q}
 # Owing to https://gcc.gnu.org/bugzilla/show_bug.cgi?id=31152,
 # demand at least gcc 4.3 for arm.
 .include "../../mk/bsd.prefs.mk"
-.if !empty(MACHINE_ARCH:Marm*) || !empty(MACHINE_ARCH:Mearm*)
+.if ${MACHINE_ARCH:Marm*} || ${MACHINE_ARCH:Mearm*}
 .  if !empty(PKGSRC_COMPILER:Mgcc)
 GCC_REQD+=	4.3
 .  endif
