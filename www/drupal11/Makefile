@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2025/02/22 16:13:00 taca Exp $
+# $NetBSD: Makefile,v 1.6 2025/03/20 01:21:21 taca Exp $
 
-DISTNAME=	drupal-11.1.3
+DISTNAME=	drupal-11.1.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	https://ftp-origin.drupal.org/files/projects/
@@ -40,7 +40,7 @@ CONF_FILES_PERMS+=	share/examples/drupal/default.settings.php \
 			${DRUPAL}/sites/default/settings.php \
 			${WWW_USER} ${WWW_GROUP} 0640
 
-REPLACE_PHP+=	core/scripts/drupal.sh core/scripts/password-hash.sh
+REPLACE_PHP+=	core/scripts/drupal core/scripts/password-hash.sh
 REPLACE_PHP+=	core/scripts/rebuild_token_calculator.sh
 REPLACE_PHP+=	core/scripts/update-countries.sh
 REPLACE_PHP+=	vendor/bin/var-dump-server
