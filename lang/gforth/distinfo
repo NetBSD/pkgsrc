@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2021/10/26 10:51:36 nia Exp $
+$NetBSD: distinfo,v 1.15 2025/03/20 09:18:51 wiz Exp $
 
 BLAKE2s (gforth-0.7.3.tar.gz) = 714cad264dfa2a1055825ecac4eda82304990c282f1da1d8907b1dbfbec2163b
 SHA512 (gforth-0.7.3.tar.gz) = f034234acfb0fc727f28b564432219a100b916c6df4b847794a55b2fc3b8ed8714eca6de0df67c7c427b7c2bb4dd00f65cfd34e6eb60181e41ab84fea30304e4
@@ -8,3 +8,4 @@ SHA1 (patch-ae) = 5ed4c1b54d6c2af55580183cdc9d66b70fffa955
 SHA1 (patch-configure) = 405b75bc920f5709fcaa90aa63d91d10c23f5b32
 SHA1 (patch-configure.in) = 9f916f1d40817f2781baeed7197d1a6336c39a2a
 SHA1 (patch-engine_Makefile.in) = 3403d2c2c5a2594a35894df2950dc28d36a701aa
+SHA1 (patch-engine_forth.h) = 0de02917e04709b23ab9b06210665d0e40e40d40
