@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.5 2024/09/27 14:25:56 maya Exp $
+@comment $NetBSD: PLIST.Linux,v 1.6 2025/03/21 16:38:14 jakllsch Exp $
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/minimum-linux_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfilesystemwatcher_inotify_p.h
 qt6/include/QtCore/${PKGVERSION}/QtCore/private/qfutex_linux_p.h
@@ -19,9 +19,7 @@ qt6/include/QtInputSupport/${PKGVERSION}/QtInputSupport/private/qoutputmapping_p
 qt6/include/QtInputSupport/QtInputSupport
 qt6/include/QtInputSupport/QtInputSupportVersion
 qt6/include/QtInputSupport/qtinputsupportversion.h
-qt6/include/QtTest/${PKGVERSION}/QtTest/private/callgrind_p.h
 qt6/include/QtTest/${PKGVERSION}/QtTest/private/qbenchmarkvalgrind_p.h
-qt6/include/QtTest/${PKGVERSION}/QtTest/private/valgrind_p.h
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake
 qt6/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfigVersion.cmake
