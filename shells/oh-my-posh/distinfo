@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.218 2025/03/15 16:00:39 pin Exp $
+$NetBSD: distinfo,v 1.219 2025/03/21 10:49:58 pin Exp $
 
 BLAKE2s (dario.cat_mergo_@v_v1.0.1.mod) = 0af2e8f4417b8a004650a071a3fcd9716e3bb01ac60f24dc579155e301d2911f
 SHA512 (dario.cat_mergo_@v_v1.0.1.mod) = 706f0038b07866385f4d91a8a28e4b9648c1bd45f0f7124f97069bfa1af16ce6ea77fadd0585c050996c9a36001151b68bdd1d6a6c44fd8645865ef76a7c0c57
@@ -174,12 +174,12 @@ Size (github.com_goccy_go-json_@v_v0.10.5.mod) = 41 bytes
 BLAKE2s (github.com_goccy_go-json_@v_v0.10.5.zip) = 21b7d01734335917747b5077636101731bdf911fb634f4d653b514303ad6e632
 SHA512 (github.com_goccy_go-json_@v_v0.10.5.zip) = 871250fff353416e6ba489a739f82259d542de7b343e2bebccee7e34bf1c09e0e6f3bc077418f58f47c47453f7699b8cd9e6f02a217e6eb75541354b6656cd78
 Size (github.com_goccy_go-json_@v_v0.10.5.zip) = 309039 bytes
-BLAKE2s (github.com_goccy_go-yaml_@v_v1.15.23.mod) = 457a17def3de8c2babfed0511d9e71c7cbb45916729b6d8ab169fad30edf72c8
-SHA512 (github.com_goccy_go-yaml_@v_v1.15.23.mod) = ebcea080a07eac5ad62f1012676030885ab41dc158a894daa39b03cc53c188a5d23fb2af205a793d5c31c8764f4cccd02f5b35532c82d65e0467b0d2710a3c9a
-Size (github.com_goccy_go-yaml_@v_v1.15.23.mod) = 43 bytes
-BLAKE2s (github.com_goccy_go-yaml_@v_v1.15.23.zip) = 371bb50a7e3e2af5079ac48caca88bce582f336e710c4645fb25a212ee6ebbc2
-SHA512 (github.com_goccy_go-yaml_@v_v1.15.23.zip) = 85b242ff9087638243b8f6778d5c3294085364573058deb63ec83cbfcf0e19c038458f7a8c2cec2b1eb275e3bfe9223e58a0ec2a7dd6449cceeea071a5ef7f81
-Size (github.com_goccy_go-yaml_@v_v1.15.23.zip) = 483493 bytes
+BLAKE2s (github.com_goccy_go-yaml_@v_v1.16.0.mod) = 457a17def3de8c2babfed0511d9e71c7cbb45916729b6d8ab169fad30edf72c8
+SHA512 (github.com_goccy_go-yaml_@v_v1.16.0.mod) = ebcea080a07eac5ad62f1012676030885ab41dc158a894daa39b03cc53c188a5d23fb2af205a793d5c31c8764f4cccd02f5b35532c82d65e0467b0d2710a3c9a
+Size (github.com_goccy_go-yaml_@v_v1.16.0.mod) = 43 bytes
+BLAKE2s (github.com_goccy_go-yaml_@v_v1.16.0.zip) = 1d2766b42f0f64873e18ecff325b2b3395838d1d2aae83229372533d9e57fa6e
+SHA512 (github.com_goccy_go-yaml_@v_v1.16.0.zip) = b1192f198dcdc28275e6b67c3a71437faaefa99e5555304272430602c3be24002ef43b26806c3d67b271cdcbf24ec8b6257757a10ba2d57d7a4e7c69e8b1c266
+Size (github.com_goccy_go-yaml_@v_v1.16.0.zip) = 483399 bytes
 BLAKE2s (github.com_golang_freetype_@v_v0.0.0-20170609003504-e2365dfdc4a0.mod) = 285706aa66a67c03399c43be9c0a1ba607d91892cadf8120f5ae6518b6380ede
 SHA512 (github.com_golang_freetype_@v_v0.0.0-20170609003504-e2365dfdc4a0.mod) = a34e950c565fa284163c40712c9f5e53881996c85153f972a78f27a5cdcaebfdbcce60556e173bbef2db32939f1b8721325846b705ef1504a1c5680598343b10
 Size (github.com_golang_freetype_@v_v0.0.0-20170609003504-e2365dfdc4a0.mod) = 34 bytes
@@ -549,9 +549,9 @@ Size (gopkg.in_yaml.v3_@v_v3.0.1.mod) = 95 bytes
 BLAKE2s (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 2e80fa896e65b1ae160400012c71aeac70e22a31cac82ec4921c85a93d65774c
 SHA512 (gopkg.in_yaml.v3_@v_v3.0.1.zip) = d57b0d42c71ad6503415e42979b51b0dc7f6344072c728ab2e3d4bab88da7b7d775e7f261868909f990f6b44aed6c533966c97bbe333a0acd65fc8bac9d1d4ff
 Size (gopkg.in_yaml.v3_@v_v3.0.1.zip) = 104623 bytes
-BLAKE2s (oh-my-posh-25.4.3.tar.gz) = f93eb514fd030666f0207cba0d9ec0ceba0027673ab1218ad0eb23f8410fa5b1
-SHA512 (oh-my-posh-25.4.3.tar.gz) = ad6301594223be4063d3e92a85b63272870b67ee8b1310ba5b2ef3857a455a9a0677d057978578bd5cf3414e2a09ccbd3eb49a6ce4d389077cea1df8bdb6755f
-Size (oh-my-posh-25.4.3.tar.gz) = 6722099 bytes
+BLAKE2s (oh-my-posh-25.5.0.tar.gz) = 560a51457ba2a883792eb6d80356a8e746b373bd2fcfda0012e39ea1106ac88c
+SHA512 (oh-my-posh-25.5.0.tar.gz) = 5975f386fe48c64a76e0971a243d2a866c808e2b6fb21b5782c48318644f0bf25995d679d2dfe6eda07b63e0accd692d21b86e585257dea864f91c078e702513
+Size (oh-my-posh-25.5.0.tar.gz) = 6722103 bytes
 SHA1 (patch-go.mod) = f02ebe53cae01005f81d0e9abfe06cf756bac9b2
 SHA1 (patch-runtime_battery_battery__solaris.go) = 9e8f8fa10006cadfc7fb9d2b95e7a85bc271315a
 SHA1 (patch-runtime_battery_battery__windows__nix.go) = 8e8863cf8c925a1e409b135e5abf113640f0e708
