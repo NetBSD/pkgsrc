@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/02/19 16:12:17 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2025/03/21 18:04:13 gdt Exp $
 
 DISTNAME=	josepy-1.15.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/certbot/josepy
 COMMENT=	JOSE protocol implementation in Python using cryptography
 LICENSE=	apache-2.0
 
-TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=0:../../devel/py-poetry-core
+TOOL_DEPENDS+=	${PYPKGPREFIX}-poetry-core>=2.0.0:../../devel/py-poetry-core
 TEST_DEPENDS+=	${PYPKGPREFIX}-coverage>=4.0:../../devel/py-coverage
 TEST_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
 TEST_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
