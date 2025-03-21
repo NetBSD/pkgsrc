@@ -1,4 +1,4 @@
-# $NetBSD: pkg-vulnerabilities,v 1.333 2025/03/17 07:22:17 wiz Exp $
+# $NetBSD: pkg-vulnerabilities,v 1.334 2025/03/21 09:14:22 wiz Exp $
 #
 #FORMAT 1.0.0
 #
@@ -26149,3 +26149,4 @@ php83<8.3.19	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 php84<8.4.5	use-after-free	https://nvd.nist.gov/vuln/detail/CVE-2024-11235
 expat<2.7.0	denial-of-service	https://nvd.nist.gov/vuln/detail/CVE-2024-8176
 vim<9.1.1198	argument-injection	https://github.com/vim/vim/security/advisories/GHSA-693p-m996-3rmf
+webkit-gtk<2.48.0	out-of-bounds	https://nvd.nist.gov/vuln/detail/CVE-2025-24201
