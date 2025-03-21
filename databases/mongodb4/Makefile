@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2024/11/14 22:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2025/03/21 22:04:00 abs Exp $
 
 DISTNAME=	mongodb-4.4.29
 PKGREVISION=	4
@@ -23,8 +23,9 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-mongo>=3.0:../../databases/py-mongo
 TOOL_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TOOL_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
-TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-wrapt>=1.12.1:../../devel/py-wrapt
+TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 
 # https://github.com/mongodb/mongo/blob/master/docs/building.md
 USE_LANGUAGES=		c c++

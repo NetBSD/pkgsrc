@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2025/01/24 09:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2025/03/21 22:05:01 abs Exp $
 
 DISTNAME=	mongodb-src-r6.0.13
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -23,6 +23,7 @@ TOOL_DEPENDS+=	${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
 TOOL_DEPENDS+=	${PYPKGPREFIX}-psutil-[0-9]*:../../sysutils/py-psutil
 TOOL_DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
 TOOL_DEPENDS+=	${PYPKGPREFIX}-requests>=2.0.0:../../devel/py-requests
+TOOL_DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 TOOL_DEPENDS+=	${PYPKGPREFIX}-types-yaml>=6.0.5:../../textproc/py-types-yaml
 TOOL_DEPENDS+=	${PYPKGPREFIX}-yaml>=3.0.0:../../textproc/py-yaml
 
