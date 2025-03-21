@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2324 2025/03/20 16:41:45 schmonz Exp $
+$NetBSD: CHANGES-2025,v 1.2325 2025/03/21 10:50:17 pin Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed devel/py-ode [wiz 2025-03-18]
 	Updated www/drupal11 to 11.1.5 [taca 2025-03-20]
 	Updated www/snac to 2.74 [schmonz 2025-03-20]
+	Updated shells/oh-my-posh to 25.5.0 [pin 2025-03-21]
