@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2024/05/08 18:35:49 spz Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/21 23:14:11 wiz Exp $
 
-DISTNAME=	Pound-2.8
-PKGNAME=	${DISTNAME:S/Pound/pound/}
-PKGREVISION=	3
+DISTNAME=	pound-4.16
 CATEGORIES=	www
-MASTER_SITES=	http://www.apsis.ch/pound/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=graygnuorg/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://www.apsis.ch/pound.html
-COMMENT=	Reverse proxy, load balancer and HTTPS front-end
+HOMEPAGE=	https://github.com/graygnuorg/pound
+COMMENT=	Light-weight reverse proxy, load balancer and HTTPS front-end for Web servers
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+INFO_FILES=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_FEATURES.openssl=	threads
 
@@ -21,24 +21,18 @@ RCD_SCRIPTS=		pound
 SUBST_CLASSES=		config
 SUBST_MESSAGE.config=	Fixing path to default config file.
 SUBST_STAGE.config=	post-build
-SUBST_FILES.config=	pound.8
+SUBST_FILES.config=	doc/pound.8
 SUBST_SED.config=	-e "s,/usr/local/etc/,"${PKG_SYSCONFDIR}"/,g"
 
-INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8
+USE_TOOLS+=		autoconf automake autoreconf makeinfo perl
 
-# OpenSSL removed the dhparam -C option in 3.0, and the call hangs
-# for some reason on i386
-NOT_FOR_BULK_PLATFORM   += NetBSD-10.0-*
+TEXINFO_REQD+=		7.0
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pound \
-		${DESTDIR}${PREFIX}/sbin/pound
-	${INSTALL_PROGRAM} ${WRKSRC}/poundctl \
-		${DESTDIR}${PREFIX}/sbin/poundctl
-	${INSTALL_MAN} ${WRKSRC}/pound.8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/pound.8
-	${INSTALL_MAN} ${WRKSRC}/poundctl.8 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/poundctl.8
+# from 'bootstrap'
+pre-configure:
+	cd ${WRKSRC} && \
+	perl md2txt.pl -l 4 README.md > README && \
+	autoreconf -fiv
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
