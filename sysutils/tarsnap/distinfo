@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2022/02/12 22:58:08 wiz Exp $
+$NetBSD: distinfo,v 1.15 2025/03/21 17:11:46 wiz Exp $
 
-BLAKE2s (tarsnap-autoconf-1.0.40.tgz) = 6945aed985bae52458785106558d01c553ed23e59e6d33814295739ec81b2175
-SHA512 (tarsnap-autoconf-1.0.40.tgz) = a4910c5cbea4a71218638703ba3140e5536a2c9bb7f35007115a7ae4a87fcd07b1be91d88e49240ee8db39be326bac049c0893c1406f215123d55a13b7b57941
-Size (tarsnap-autoconf-1.0.40.tgz) = 723380 bytes
+BLAKE2s (tarsnap-autoconf-1.0.41.tgz) = 8ffa046771391c1061259f56b5877ec333e973be8cee1e871b8286a37ade0653
+SHA512 (tarsnap-autoconf-1.0.41.tgz) = ea9fc30c9d9860040021eae2583c370c6ebd5bb37c5fa39d9d0ea141ff976d22e5df8c842c0963b6d930da9452eb0e6c3040e74e9cdb3a348e41f4aeec27deb8
+Size (tarsnap-autoconf-1.0.41.tgz) = 763978 bytes
