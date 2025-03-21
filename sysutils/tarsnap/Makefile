@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2023/10/24 22:11:15 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2025/03/21 17:11:46 wiz Exp $
 
-DISTNAME=	tarsnap-autoconf-1.0.40
+DISTNAME=	tarsnap-autoconf-1.0.41
 PKGNAME=	${DISTNAME:S/-autoconf//}
-PKGREVISION=	1
 CATEGORIES=	sysutils archivers security
 MASTER_SITES=	https://www.tarsnap.com/download/
 EXTRACT_SUFX=	.tgz
