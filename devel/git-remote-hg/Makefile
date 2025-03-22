@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2024/06/15 08:09:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2025/03/22 07:05:02 wiz Exp $
 
-DISTNAME=	git-remote-hg-0.6.0.0.20240307
+DISTNAME=	git-remote-hg-0.7
 CATEGORIES=	devel scm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=felipec/}
-#GITHUB_TAG=	v${PKGVERSION_NOREV}
-# regex fix post 0.6.0 release, no new release out yet
-GITHUB_TAG=	615cc7fe045d0417ac97f7790ebe941b39652ad2
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://felipec.wordpress.com/2012/11/13/git-remote-hg-bzr-2/
@@ -20,8 +18,6 @@ USE_TOOLS+=	gmake
 MAKE_FLAGS+=	prefix=${PREFIX}
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
 REPLACE_PYTHON=	git-remote-hg
-
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 INSTALL_TARGET=	install install-doc
 
