@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2022/03/28 21:38:54 riastradh Exp $
-
-BLAKE2s (asymptote-2.79.src.tgz) = 2124f219cc08aa16c619abc98aae36ddbc6dc7d8ee9eda9768ec4c699b3a293c
-SHA512 (asymptote-2.79.src.tgz) = 59331c5c185ca59137ca8ad4ee2ab1be20822ab3b13fe82d211f8fa0d005ca5b6f218477277abe14f1a7efdd801a10b66d259aebdbd758db34c149c8563c857b
-Size (asymptote-2.79.src.tgz) = 15271295 bytes
-SHA1 (patch-configure) = c3d035f0744b8558624863fddbe68205c862a37b
