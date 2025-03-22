@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2024/12/27 08:19:23 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2025/03/22 09:37:10 wiz Exp $
 
 DISTNAME=		solfege-3.23.4
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 
@@ -10,11 +10,10 @@ HOMEPAGE=		https://www.gnu.org/software/solfege/
 COMMENT=		Practice several musical ear training exercises
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
-
 TOOL_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-TOOL_DEPENDS+=		lilypond-[0-9]*:../../print/lilypond
+#TOOL_DEPENDS+=		lilypond-[0-9]*:../../print/lilypond
 TOOL_DEPENDS+=		txt2man-[0-9]*:../../converters/txt2man
+DEPENDS+=		${PYPKGPREFIX}-gobject3-[0-9]*:../../devel/py-gobject3
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -23,13 +22,14 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-oss-sound
 CONFIGURE_ARGS+=	--enable-docbook-stylesheet=${PREFIX}/share/xsl/docbook/html/chunk.xsl
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
+# lilypond dumps core and causes 100%-CPU-using-processes
+CONFIGURE_ARGS+=	ac_cv_path_LILYPOND=""
 
 USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt bash:run
 
 REPLACE_BASH=		exercises/standard/lesson-files/bin/csound-play-harmonic-interval.sh
 
 REPLACE_PYTHON=	*.py */*.py */*/*.py *.py.in */*.py.in */*/*.py.in
-PYTHON_VERSIONS_INCOMPATIBLE= 27
 
 SUBST_CLASSES+=		sound
 SUBST_STAGE.sound=	do-configure
@@ -69,9 +69,6 @@ MIDIPLAYER=	${PREFIX}/bin/timidity
 MP3PLAYER=	/usr/bin/afplay
 OGGPLAYER=	${PREFIX}/bin/ogg123
 .endif
-
-# hanging lilypond
-NOT_FOR_BULK_PLATFORM	+= NetBSD-10.0-*
 
 post-install:
 	find ${DESTDIR}${PREFIX} -type d -name __pycache__ | xargs rm -rf
