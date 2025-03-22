@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.framework,v 1.8 2024/12/07 16:44:01 js Exp $
+@comment $NetBSD: PLIST.framework,v 1.9 2025/03/22 13:10:55 js Exp $
 Library/Frameworks/ObjFW.framework/Headers
 Library/Frameworks/ObjFW.framework/Modules
 Library/Frameworks/ObjFW.framework/ObjFW
@@ -91,6 +91,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLOCDNSResourceRecord.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLinkItemFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFList.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFListenOnSocketFailedException.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLoadModuleFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLoadPluginFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLocale.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFLockFailedException.h
@@ -104,6 +105,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMemoryStream.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMessagePackExtension.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMessagePackRepresentation.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMethodSignature.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFModule.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMoveItemFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableArchiveEntry.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFMutableArray.h
@@ -215,6 +217,7 @@ Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFUnsupportedVersionExcept
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFValue.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFWaitForConditionFailedException.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFWriteFailedException.h
+Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFX509Certificate.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFXMLAttribute.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFXMLCDATA.h
 Library/Frameworks/ObjFW.framework/Versions/1/Headers/OFXMLCharacters.h
@@ -245,10 +248,12 @@ Library/Frameworks/ObjFW.framework/Versions/Current
 Library/Frameworks/ObjFWHID.framework/Headers
 Library/Frameworks/ObjFWHID.framework/ObjFWHID
 Library/Frameworks/ObjFWHID.framework/Resources
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OH8BitDoUltimate2CWirelessGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualSenseGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHDualShock4Gamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedN64Controller.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHExtendedSNESGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameController.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerAxis.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGameControllerButton.h
@@ -259,8 +264,11 @@ Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHJoyConPair.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHLeftJoyCon.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHN64Controller.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHNESGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHRightJoyCon.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHSNESGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHStadiaGamepad.h
+Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHSwitchProController.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/OHXboxGamepad.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/Headers/ObjFWHID.h
 Library/Frameworks/ObjFWHID.framework/Versions/1/ObjFWHID
