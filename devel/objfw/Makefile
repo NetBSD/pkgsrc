@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2025/02/20 23:41:55 js Exp $
+# $NetBSD: Makefile,v 1.43 2025/03/22 12:11:40 js Exp $
 
-DISTNAME=	objfw-1.2.4
+DISTNAME=	objfw-1.3
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
 
