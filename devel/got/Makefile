@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2025/03/22 10:37:27 vins Exp $
+# $NetBSD: Makefile,v 1.18 2025/03/22 12:51:45 vins Exp $
 
 DISTNAME=	got-portable-0.109
 PKGNAME=	${DISTNAME:S/-portable//}
@@ -111,6 +111,10 @@ SUBST_SED.ncursesw+=	-e "s:gnupanelw:gnupanel:g"
 SUBST_SED.ncursesw+=	-e "s:gnupanelw:panel:g"
 .endif
 SUBST_SED.ncursesw+=	-e "s:panelw:panel:g"
+
+# tog(1) uses POSIX threads
+.include "../../mk/pthread.buildlink3.mk"
+PTHREAD_OPTS+=			require
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
