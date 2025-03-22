@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2333 2025/03/22 08:31:40 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2334 2025/03/22 09:37:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3017,3 +3017,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/asdf to 0.16.6 [schmonz 2025-03-22]
 	Updated devel/git-remote-hg to 0.7 [wiz 2025-03-22]
 	Removed graphics/asymptote [wiz 2025-03-22]
+	Updated audio/solfege to 3.23.4nb12 [wiz 2025-03-22]
