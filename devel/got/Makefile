@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2025/03/09 20:53:49 vins Exp $
+# $NetBSD: Makefile,v 1.17 2025/03/22 10:37:27 vins Exp $
 
 DISTNAME=	got-portable-0.109
 PKGNAME=	${DISTNAME:S/-portable//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://gameoftrees.org/releases/portable/
 
@@ -17,8 +18,8 @@ PREV_PKGPATH=	devel/got-portable
 BUILD_DEFS+=	VARBASE
 
 USE_TOOLS+=	pkg-config yacc ksh:test perl:test
-# required for waddwstr(3)
-USE_NCURSES=	yes
+USE_CURSES=	halfdelay resize_term wgetnstr wide
+FAKE_NCURSES=	yes
 
 PKG_GROUPS=		_gotd
 PKG_USERS=		_gotd:_gotd
@@ -72,12 +73,6 @@ SUBST_FILES.conf+=	gitwrapper/gitwrapper.1 gotd/gotd.conf.5	\
 			gotd/gotd.h gotd/gotd.8
 SUBST_SED.conf+=	-e "s:/etc/gotd.conf:${PKG_SYSCONFDIR}/gotd.conf:g"
 
-SUBST_CLASSES+=		ncursesw
-SUBST_STAGE.ncursesw=	pre-configure
-SUBST_MESSAGE.ncursesw=	Do not check for ncursesw on NetBSD
-SUBST_FILES.ncursesw=	configure
-SUBST_SED.ncursesw+=	-e "s:gnupanelw:gnupanel:g"
-
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
@@ -87,7 +82,7 @@ post-extract:
 
 .if ${OPSYS} == "Linux"
 post-patch:
-# let libmd include the correct header.
+# Avoid clash with libmd's own __SHA2_H__ implementation.
 	${RUN}${RM} -f ${WRKSRC}/compat/sha2.h
 .endif
 
@@ -98,14 +93,24 @@ post-install:
 # needs libtls
 .include "../../security/libretls/buildlink3.mk"
 
-# needs gnupanelw
-BUILDLINK_API_DEPENDS.ncurses+=   ncurses>=6.5
-.include "../../devel/ncurses/buildlink3.mk"
-
 # compatibility macros and functions for Linux.
 .if ${OPSYS} == "Linux"
 .  include "../../devel/libbsd/buildlink3.mk"
 .endif
+
+# hack for (gnu)panelw
+.include "../../mk/curses.buildlink3.mk"
+
+SUBST_CLASSES+=		ncursesw
+SUBST_STAGE.ncursesw=	pre-configure
+SUBST_MESSAGE.ncursesw=	Do not check for ncursesw
+SUBST_FILES.ncursesw=	configure
+.if ${CURSES_TYPE:M*ncurses*}
+SUBST_SED.ncursesw+=	-e "s:gnupanelw:gnupanel:g"
+.else
+SUBST_SED.ncursesw+=	-e "s:gnupanelw:panel:g"
+.endif
+SUBST_SED.ncursesw+=	-e "s:panelw:panel:g"
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
