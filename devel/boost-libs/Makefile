@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2025/03/10 15:56:23 jakllsch Exp $
+# $NetBSD: Makefile,v 1.116 2025/03/22 17:36:38 jakllsch Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -62,7 +62,8 @@ PLIST.stacktrace_addr2line=	yes
 # Add backtrace libs when they got built because of libbacktrace
 # being available in the toolchain (not easy to detect beforehand).
 GENERATE_PLIST+=	cd ${DESTDIR}/${PREFIX}; \
-			for f in lib/libboost_stacktrace_backtrace*; do \
+			for f in lib/libboost_stacktrace_backtrace* \
+			lib/cmake/boost_stacktrace_backtrace-${BOOST_VERSION}/*.cmake; do \
 			if [ -f "$$f" ]; then ${ECHO} "$$f"; fi; \
 			done;
 
