@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2330 2025/03/21 23:14:22 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2331 2025/03/22 01:00:28 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3014,3 +3014,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated devel/py-mercurial to 6.9.4 [wiz 2025-03-21]
 	Updated devel/py-hg-evolve to 11.1.8 [wiz 2025-03-21]
 	Updated www/pound to 4.16 [wiz 2025-03-21]
+	Updated devel/asdf to 0.16.6 [schmonz 2025-03-22]
