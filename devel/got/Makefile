@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2025/03/22 12:51:45 vins Exp $
+# $NetBSD: Makefile,v 1.19 2025/03/22 13:40:01 vins Exp $
 
 DISTNAME=	got-portable-0.109
 PKGNAME=	${DISTNAME:S/-portable//}
@@ -42,7 +42,7 @@ CONF_FILES+=	${EGDIR}/gotd.conf ${PKG_SYSCONFDIR}/gotd.conf
 DOCDIR=		${PREFIX}/share/doc/got
 PKG_DOCS=	CHANGELOG README README.pkgsrc README.portable TODO
 
-MAKE_DIRS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=	${VARBASE}/empty ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
 INSTALLATION_DIRS=	bin libexec
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
