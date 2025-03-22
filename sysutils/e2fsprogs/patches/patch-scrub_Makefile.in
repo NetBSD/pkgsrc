@@ -1,0 +1,25 @@
+$NetBSD: patch-scrub_Makefile.in,v 1.1 2025/03/22 12:22:07 nia Exp $
+
+Use INSTALL_SCRIPT instead of INSTALL_PROGRAM so that it doesn't
+attempt to strip sh scripts.
+
+--- scrub/Makefile.in.orig	2025-03-22 11:12:56.839342535 +0000
++++ scrub/Makefile.in
+@@ -121,7 +121,7 @@ install-crond: installdirs-crond
+ install-libprogs: $(LIBPROGS) installdirs-libprogs
+ 	$(Q) for i in $(LIBPROGS); do \
+ 		$(ES) "	INSTALL $(pkglibdir)/$$i"; \
+-		$(INSTALL_PROGRAM) $$i $(DESTDIR)$(pkglibdir)/$$i; \
++		$(INSTALL_SCRIPT) $$i $(DESTDIR)$(pkglibdir)/$$i; \
+ 	done
+ 
+ install-systemd: $(SERVICE_FILES) installdirs-systemd
+@@ -135,7 +135,7 @@ install-strip: install
+ install: $(PROGS) $(MANPAGES) $(FMANPAGES) installdirs $(INSTALL_TGT)
+ 	$(Q) for i in $(PROGS); do \
+ 		$(ES) "	INSTALL $(root_sbindir)/$$i"; \
+-		$(INSTALL_PROGRAM) $$i $(DESTDIR)$(root_sbindir)/$$i; \
++		$(INSTALL_SCRIPT) $$i $(DESTDIR)$(root_sbindir)/$$i; \
+ 	done
+ 	$(Q) for i in $(MANPAGES); do \
+ 		for j in $(COMPRESS_EXT); do \
