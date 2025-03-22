@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2024/06/15 08:09:11 wiz Exp $
+$NetBSD: distinfo,v 1.6 2025/03/22 07:05:02 wiz Exp $
 
-BLAKE2s (git-remote-hg-0.6.0.0.20240307-615cc7fe045d0417ac97f7790ebe941b39652ad2.tar.gz) = d91675c79033c0ba7e55f4caff9d4e9740e63d0a735ec2ed5440a6bebb3eb10b
-SHA512 (git-remote-hg-0.6.0.0.20240307-615cc7fe045d0417ac97f7790ebe941b39652ad2.tar.gz) = 0e0bb1bf94e8b07f0590f6a8d431538e1ef9d6ebe28927dfbee4f7b938e8b32b1eeda8d51f924afb5937b03fd0d879f9720f5807272f24cba0ba804addc5b0d6
-Size (git-remote-hg-0.6.0.0.20240307-615cc7fe045d0417ac97f7790ebe941b39652ad2.tar.gz) = 41248 bytes
+BLAKE2s (git-remote-hg-0.7.tar.gz) = f8b2704f4577941ca54fbac62f08e20ef2dc2e6c7ed847595f5fd36d17b9671d
+SHA512 (git-remote-hg-0.7.tar.gz) = ecf4737e85f6e4170c85541ec1e6c85785128420a5b753189f71ef0abc0ac5739c9186acd53dcb767b68d3b1291621aabec9fe97a6bde41ce251650e5e5874f8
+Size (git-remote-hg-0.7.tar.gz) = 41208 bytes
