@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2025/03/21 17:11:46 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2025/03/22 12:24:06 nia Exp $
 
 DISTNAME=	tarsnap-autoconf-1.0.41
 PKGNAME=	${DISTNAME:S/-autoconf//}
@@ -19,5 +19,9 @@ TEST_TARGET=		test
 CONF_FILES=	${PREFIX}/share/examples/tarsnap/tarsnap.conf.sample ${PKG_SYSCONFDIR}/tarsnap.conf
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} == "Linux"
+.  include "../../sysutils/e2fsprogs/buildlink3.mk"
+.endif
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
