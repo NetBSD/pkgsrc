@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2024/12/27 08:19:32 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2025/03/23 22:08:53 wiz Exp $
 
 DISTNAME=	frama-c-25.0-Manganese
 PKGNAME=	${DISTNAME:S/-Manganese//}
@@ -13,6 +13,8 @@ LICENSE=	gnu-lgpl-v2
 
 USE_TOOLS+=	autoconf bash gmake
 GNU_CONFIGURE=	yes
+
+BROKEN=		"Broken by why3 update, updating to a newer version might fix it."
 
 REPLACE_SH+=		bin/frama-c-script
 REPLACE_SH+=		src/plugins/e-acsl/scripts/e-acsl-gcc.sh
