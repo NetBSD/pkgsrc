@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2024/10/06 09:16:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.49 2025/03/23 18:41:05 rillig Exp $
 #
 
 DISTNAME=	mk-configure-0.40.0
@@ -26,6 +26,10 @@ MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
 			USE_INSTALL=mkc_install \
 			USE_AWK=${AWK:Q} \
 			USE_ID=${ID:Q}
+
+# Fix the build on NetBSD 9 since it passes .MAKE.LEVEL.ENV via MAKEFLAGS,
+# and the pkgsrc make doesn't allow this variable.
+MAKE_ENV+=		MAKEFLAGS=
 
 PLIST_SRC+=		${WRKDIR}/PLIST-addon
 PLIST_SRC+=		PLIST
