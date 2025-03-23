@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.25557 2025/03/22 09:37:20 wiz Exp $
+$NetBSD: TODO,v 1.25558 2025/03/23 12:43:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -404,6 +404,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o aarch64-none-elf-binutils-2.36.1
 	o aarch64-none-elf-gcc-9.3.0
 	o abiword-3.0.6
+	o abseil-20250127.1
 	o accountsservice-23.13.9 [switched to meson]
 	o admesh-0.98.2
 	o adms-2.3.6
@@ -456,6 +457,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o asn1c-0.9.28
 	o asp2php-2008-08-13
 	o aspell-nb-2.0.10
+	o ast-grep-0.36.2
 	o asymptote-3.01
 	o atf-0.22
 	o audacity-3.5
@@ -537,6 +539,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o consul-1.9.5
 	o cook-2.31
 	o coordgenlibs-2.0.3
+	o cpp-httplib-0.20.0
 	o cross-binutils-2.36.1
 	o cross-h8300-hms-binutils-2.17
 	o csound6-6.18.1
@@ -628,6 +631,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o flatbuffers-1.12.0
 	o flow-tools-0.411
 	o fluent-bit-1.7.4
+	o fluidsynth-2.4.4
 	o fortunes-calvin-0.3
 	o fortunes-de-0.34
 	o fplll-5.4.0
@@ -848,11 +852,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o lcc-4.2
 	o ldapsdk-6.0.7
 	o lgeneral-1.3.1
+	o lgogdownloader-3.17
+	o libavif-1.2.1
 	o libbaloo4-21.04.0
 	o libbpg-0.9.8
 	o libburn-1.5.4
 	o libcap-2.49
 	o libcarddav-14.0.13
+	o libcbor-0.12.0
 	o libcec-6.0.2
 	o libdevq-0.0.4
 	o libdsk-1.5.19
@@ -881,6 +888,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o libretro-core-info-1.9.1
 	o libthai-0.2.2
 	o libtrace-4.0.16
+	o libusb1-1.0.28
 	o libvirt-11.0
 	o libxdg-basedir-1.2.3
 	o libzookeeper-3.7.0
@@ -888,7 +896,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
 	o llvm-19.1.7 [wip]
-	o llvm-20.1
+	o llvm-20.1.1
 	o lmbench-3
 	o log4cxx-0.11.0
 	o lohit-fonts-2.4.2
@@ -1052,6 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o pam-krb5-4.10
 	o pam-passwdqc-2.0.2
 	o pam-u2f-1.3.1
+	o pandoc-cli-3.6.4
 	o papirus-folders-1.8.0
 	o parrot-8.1.0
 	o passenger-6.0.20
@@ -1112,7 +1121,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o privoxy-3.0.33
 	o profit-2.5.3
 	o prometheus-3.2.1
-	o protobuf-30.0
+	o protobuf-30.1
 	o ps2eps-1.70
 	o psmisc-22.20
 	o pspp-1.4.1
@@ -1123,6 +1132,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-HappyDoc-3.0
 	o py-MyHDL-0.11
 	o py-OTXv2-1.5.2
+	o py-aiohttp-3.11.14
+	o py-anyio-4.9.0
 	o py-cassa-1.11.0
 	o py-configparser-5.0.0 [drops python-2.x support; pkgsrc only needs this package for python 2.x]
 	o py-cramjam-2.9.0
@@ -1132,31 +1143,39 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o py-filebytes-0.10.2
 	o py-gammu-3.1
 	o py-google-api-core-2.24.2
-	o py-google-api-python-client-2.164.0
-	o py-googleapis-common-protos-1.69.1
+	o py-google-api-python-client-2.165.0
+	o py-googleapis-common-protos-1.69.2
 	o py-grpcio-1.71.0
 	o py-hgview-1.9.0
+	o py-icalendar-6.1.2
 	o py-input-pad-1.4.2
 	o py-josepy-2.0.0 [2.0.0 is incompatible to 1.x: check py-acme and py-certbot work]
+	o py-multidict-6.2.0
 	o py-newt-0.52.21
+	o py-numpy-2.2.4
 	o py-omniORBpy-3.7
 	o py-onionbalance-0.2.2
+	o py-pdf-5.4.0
 	o py-pdf-parser-0.7.4
+	o py-platformdirs-4.3.7
 	o py-postgresql-5.1.2
 	o py-posting-2.5.2 [wip]
 	o py-posting-2.5.4
 	o py-protobuf-6.30.1
 	o py-pydantic-core-2.32.0
+	o py-pylint-3.3.6
 	o py-pytz_deprecation_shim-0.1.0.post0
-	o py-ruff-0.11.0
+	o py-ruff-0.11.2
 	o py-sbws-1.1.0
-	o py-setuptools-76.0.0
+	o py-setuptools-77.0.3
 	o py-setuptools-rust-1.11.0
 	o py-simpletal-5.1
 	o py-sybase-0.37
 	o py-syslog-ng-3.31.2
+	o py-textual-autocomplete-4.0.3
 	o py-tokyocabinet-0.6
 	o py-torch-2.6
+	o py-trove-classifiers-2025.3.19.19
 	o py-uliweb-0.6
 	o py-yubiauth-0.3.10
 	o pythontidy-1.23
@@ -1317,6 +1336,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o torrentzip-2.1.0
 	o trafficserver-9.0.1
 	o transmission-4.0.4
+	o tree-sitter-lua-0.3.0
+	o tree-sitter-markdown-0.4.1
 	o trimmomatic-0.39
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.7
@@ -1336,6 +1357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o userppp-030706
 	o userspace-rcu-0.12.2
 	o utilisp-1.14
+	o uv-0.6.9
 	o vault-1.7.4
 	o vbetool-1.1
 	o vera-1.24
@@ -1372,6 +1394,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o wmi-11
 	o wordwarvi-1.0.4
 	o worker-4.8.0
+	o wxGTK32-3.2.7
 	o wxRemind-101
 	o x2vnc-1.31
 	o xcoral-3.14
@@ -1418,6 +1441,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html
 	o yices2-2.6.2
 	o yodl-4.03.03
 	o yorick-2.1.05
+	o yt-dlp-2025.3.21
 	o yubikey-manager-5.1.1
 	o yudit-3.0.7
 	o z-push-2.6.1
