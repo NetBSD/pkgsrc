@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2025/03/22 12:22:07 nia Exp $
+$NetBSD: distinfo,v 1.31 2025/03/23 07:03:32 wiz Exp $
 
 BLAKE2s (e2fsprogs-1.47.2.tar.xz) = 22ad92fbe4786671ff677cf218f1e9834fb7f52f241b35f04f36b37df67c06ca
 SHA512 (e2fsprogs-1.47.2.tar.xz) = a32632e072e535bf164503cf9992a4da7ea971e80f8f84ead4e7bc8899a92c27e4670bdebef1de0187596672e44af7b96078888e0cd4eefa3e3f551344d434d8
@@ -19,4 +19,4 @@ SHA1 (patch-lib_ext2fs_tdb.c) = dd50993cd0beba0451cfb3422ca9f54700ee0e38
 SHA1 (patch-lib_ext2fs_unix__io.c) = 78dcc99e04a981727d71271b5f4c69b426c6ada9
 SHA1 (patch-lib_uuid_gen__uuid.c) = 2f679453457522a10b90c489ce52e59b6e3909c5
 SHA1 (patch-misc_create__inode.c) = 43a9a2d3d53bfe055be3fd47f5db2990594a9faa
-SHA1 (patch-scrub_Makefile.in) = cd31c6d42e21280b78f689eef0257dcd4bcf5ce8
+SHA1 (patch-scrub_Makefile.in) = 76080c14fa8590a3c350ce241d62cc9da356146b
