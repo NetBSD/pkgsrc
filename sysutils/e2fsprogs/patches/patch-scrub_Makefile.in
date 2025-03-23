@@ -1,20 +1,20 @@
-$NetBSD: patch-scrub_Makefile.in,v 1.1 2025/03/22 12:22:07 nia Exp $
+$NetBSD: patch-scrub_Makefile.in,v 1.2 2025/03/23 07:03:32 wiz Exp $
 
 Use INSTALL_SCRIPT instead of INSTALL_PROGRAM so that it doesn't
 attempt to strip sh scripts.
 
---- scrub/Makefile.in.orig	2025-03-22 11:12:56.839342535 +0000
+--- scrub/Makefile.in.orig	2025-01-01 06:24:42.000000000 +0000
 +++ scrub/Makefile.in
-@@ -121,7 +121,7 @@ install-crond: installdirs-crond
+@@ -126,7 +126,7 @@ install-crond: installdirs-crond
  install-libprogs: $(LIBPROGS) installdirs-libprogs
  	$(Q) for i in $(LIBPROGS); do \
- 		$(ES) "	INSTALL $(pkglibdir)/$$i"; \
--		$(INSTALL_PROGRAM) $$i $(DESTDIR)$(pkglibdir)/$$i; \
-+		$(INSTALL_SCRIPT) $$i $(DESTDIR)$(pkglibdir)/$$i; \
+ 		$(ES) "	INSTALL $(pkglibexecdir)/$$i"; \
+-		$(INSTALL_PROGRAM) $$i $(DESTDIR)$(pkglibexecdir)/$$i; \
++		$(INSTALL_SCRIPT) $$i $(DESTDIR)$(pkglibexecdir)/$$i; \
  	done
  
  install-systemd: $(SERVICE_FILES) installdirs-systemd
-@@ -135,7 +135,7 @@ install-strip: install
+@@ -140,7 +140,7 @@ install-strip: install
  install: $(PROGS) $(MANPAGES) $(FMANPAGES) installdirs $(INSTALL_TGT)
  	$(Q) for i in $(PROGS); do \
  		$(ES) "	INSTALL $(root_sbindir)/$$i"; \
