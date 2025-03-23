@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2025/03/22 12:11:40 js Exp $
+# $NetBSD: Makefile,v 1.44 2025/03/23 16:01:28 js Exp $
 
 DISTNAME=	objfw-1.3
 CATEGORIES=	devel
 MASTER_SITES=	https://objfw.nil.im/downloads/
+
+PATCHFILES=		2d297b2d3702d24662819016b57f0a67d902990d.patch
+PATCH_SITES=		https://github.com/ObjFW/ObjFW/commit/
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	js@NetBSD.org
 HOMEPAGE=	https://objfw.nil.im/
