@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2025/02/12 06:44:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2025/03/24 09:38:19 nia Exp $
 
 PKGREVISION= 4
 .include "${.CURDIR}/../../emulators/mgba/Makefile.common"
@@ -22,6 +22,9 @@ USE_CXX_FEATURES+=	c++14
 # It's an option as an audio output, but SDL supports many more pkgsrc
 # platforms natively, without going via PulseAudio.
 CMAKE_CONFIGURE_ARGS+=	-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Multimedia=TRUE
+
+# Limitations in qt atomics support.
+BROKEN_ON_PLATFORM+=	*-*-i386
 
 TOOL_DEPENDS+=	qt5-qttools-[0-9]*:../../x11/qt5-qttools
 
