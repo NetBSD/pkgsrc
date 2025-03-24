@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2025/03/01 15:56:52 taca Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/24 02:38:30 taca Exp $
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${RUBY_VERSION}
@@ -28,6 +28,14 @@ FILES_SUBST+=		PKGMANDIR=${PKGMANDIR:Q}
 USE_CC_FEATURES+=	c11
 
 .include "options.mk"
+
+# On NetBSD/i386 9 with gcc 7.x, it cause error on compiling vm.c
+# (really vm_exec.c).
+#
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+GCC_REQD+=	8
+.endif
+
 .include "../../lang/ruby/platform.mk"
 
 .if !empty(RUBY_SUFFIX)
