@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2338 2025/03/24 06:39:20 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2339 2025/03/25 07:32:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated print/cups-pdf to 3.0.1nb18 [ryoon 2025-03-22]
 	Updated www/lighttpd to 1.4.78 [schmonz 2025-03-23]
 	Removed lang/smlnj11072 successor lang/smlnj [wiz 2025-03-24]
+	Updated net/yt-dlp to 2025.3.25 [mrg 2025-03-25]
