@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2025/03/16 21:04:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2025/03/25 09:01:20 kim Exp $
 
 .include "../../emulators/qemu/version.mk"
 
 DISTNAME=	qemu-${QEMU_VERSION}
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/qemu/qemu-guest-agent/}
 CATEGORIES=	sysutils emulators
 MASTER_SITES=	https://download.qemu.org/
@@ -10,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.qemu.org/
-COMMENT=	CPU emulator using dynamic translation
+COMMENT=	QEMU guest agent
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
 TOOL_DEPENDS+=	meson-[0-9]*:../../devel/meson
