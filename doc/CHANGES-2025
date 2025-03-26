@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2344 2025/03/26 22:52:07 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2345 2025/03/26 23:19:04 js Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated mail/exim to 4.98.2 [abs 2025-03-26]
 	Removed lang/sather [wiz 2025-03-26]
 	Removed x11/gtk-sharp successor x11/gtk-sharp3 [wiz 2025-03-26]
+	Updated chat/matrix-synapse to 1.127.1 [js 2025-03-26]
