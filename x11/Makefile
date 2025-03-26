@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1061 2025/02/17 10:39:55 wiz Exp $
+# $NetBSD: Makefile,v 1.1062 2025/03/26 22:52:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X Window System
@@ -75,7 +75,6 @@ SUBDIR+=	gst-plugins1-ximagesrc
 SUBDIR+=	gtk
 SUBDIR+=	gtk+extra
 SUBDIR+=	gtk-mac-integration
-SUBDIR+=	gtk-sharp
 SUBDIR+=	gtk-sharp3
 SUBDIR+=	gtk2
 SUBDIR+=	gtk2+extra
