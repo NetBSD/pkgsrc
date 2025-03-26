@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2339 2025/03/25 07:32:35 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2340 2025/03/26 05:06:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3023,3 +3023,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated www/lighttpd to 1.4.78 [schmonz 2025-03-23]
 	Removed lang/smlnj11072 successor lang/smlnj [wiz 2025-03-24]
 	Updated net/yt-dlp to 2025.3.25 [mrg 2025-03-25]
+	Updated net/yt-dlp to 2025.3.26 [adam 2025-03-26]
