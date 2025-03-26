@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2025/03/26 13:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.751 2025/03/26 22:51:01 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -324,7 +324,6 @@ SUBDIR+=	rust176-bin
 SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
-SUBDIR+=	sather
 SUBDIR+=	sbcl
 SUBDIR+=	scala
 SUBDIR+=	scala-sbt

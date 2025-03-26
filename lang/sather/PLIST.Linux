@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2009/06/14 18:03:40 joerg Exp $
-lib/sather/System/Platforms/${LOWER_OPSYS}/lwp/CONFIG
-lib/sather/System/Platforms/${LOWER_OPSYS}/lwp/Makefile
-lib/sather/System/Platforms/${LOWER_OPSYS}/lwp/Platform.module
-lib/sather/System/Platforms/${LOWER_OPSYS}/lwp/header.h
