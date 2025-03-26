@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2022/12/15 07:12:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.10 2025/03/26 14:17:31 wiz Exp $
 
 .include "../../databases/qdbm/Makefile.common"
 
@@ -15,7 +14,7 @@ MY_SUBDIR=	java
 BUILD_DIRS=	${MY_SUBDIR:Q}
 CONFIGURE_DIRS=	${MY_SUBDIR:Q}
 
-PKG_JVMS_ACCEPTED=	kaffe openjdk8 sun-jdk7 oracle-jdk8 openjdk11
+PKG_JVMS_ACCEPTED=	kaffe openjdk8 oracle-jdk8 openjdk11
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PTHREAD=	no
