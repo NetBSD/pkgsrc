@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.16 2024/08/25 06:19:09 wiz Exp $
+# $NetBSD: makevars.map,v 1.17 2025/03/26 14:17:32 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -591,22 +591,16 @@ PKG_HACKS		List of Identifier [h:a]
 PKG_INFO		ShellCommand [$system]
 PKG_JAVA_HOME		Pathname [$system]
 PKG_JVM			{						\
-				blackdown-jdk13				\
-				jdk jdk14				\
 				kaffe					\
-				openjdk7 openjdk7-bin sun-jdk7		\
+				openjdk7 openjdk7-bin 			\
 			} [$system]
 PKG_JVMS_ACCEPTED	List of {					\
-				blackdown-jdk13				\
-				jdk jdk14				\
 				kaffe					\
-				openjdk7 openjdk7-bin sun-jdk7		\
+				openjdk7 openjdk7-bin 			\
 			} [m:s,c:ds]
 PKG_JVM_DEFAULT		{						\
-				blackdown-jdk13				\
-				jdk jdk14				\
 				kaffe					\
-				openjdk7 openjdk7-bin sun-jdk7		\
+				openjdk7 openjdk7-bin 			\
 			} [$user]
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname [m:s]

@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2024/10/04 19:07:58 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.9 2025/03/26 14:17:31 wiz Exp $
 
 DISTNAME=	apache-ivy-2.5.0-bin
 PKGREVISION=	1
@@ -14,11 +13,7 @@ LICENSE=	apache-2.0
 
 .include "../../mk/java-vm.mk"
 
-.if ${PKG_JVM} == "sun-jdk7"
-DEPENDS+=	apache-ant>=1.9<1.10:../../devel/apache-ant19
-.else
 DEPENDS+=	apache-ant>=1.10:../../devel/apache-ant
-.endif
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
