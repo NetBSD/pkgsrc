@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2025/02/08 03:53:26 taca Exp $
+# $NetBSD: Makefile,v 1.79 2025/03/26 13:23:12 gdt Exp $
 
 VERSION=	1.36.33
-PKGREVISION=	1
+PKGREVISION=	2
 # Distfile is ZoneMinder but package and tarball contents are zoneminder.
 NAME_DIST=	ZoneMinder
 NAME_LOWER=	zoneminder
@@ -52,6 +52,12 @@ PKG_SUGGESTED_OPTIONS=		apache
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake perl pkg-config
 
+# Previously, we open-coded zm as a subdir of PKG_SYSCONFSUBDIR.  But
+# lang/php/phpversion.mk (arguably wrongly) sets PKG_SYSCONFSUBDIR to
+# a php location, leading to zoneminder looking for config in the
+# wrong place.
+PKG_SYSCONFSUBDIR=	zm
+
 # Place man pages following pkgsrc norms, rather than share/man.
 CMAKE_CONFIGURE_ARGS+=	-DZM_MANPAGE_DEST_PREFIX=${PREFIX}/${PKGMANDIR}
 
@@ -67,9 +73,9 @@ CMAKE_CONFIGURE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
 # ZoneMinder prefers a subdirectory of etc. Further, it demands a
 # conf.d subdirectory within its config directory, which would be
 # irregular at top level.
-CMAKE_CONFIGURE_ARGS+=	-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}/zm
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/zm ${REAL_ROOT_USER} ${APACHE_GROUP} 775
-OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/zm/conf.d ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+CMAKE_CONFIGURE_ARGS+=	-DZM_CONFIG_DIR=${PKG_SYSCONFDIR}
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 775
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/conf.d ${REAL_ROOT_USER} ${APACHE_GROUP} 775
 
 # \todo We prepare a webroot, even without the apache option.
 ZM_HTTPD_ROOT=		share/zoneminder/htdocs
@@ -312,7 +318,7 @@ pre-configure:
 EGDIR=			share/examples/${PKGBASE}
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/config ${EGDIR}/apache
-CONF_FILES+=		${PREFIX}/${EGDIR}/config/zm.conf ${PKG_SYSCONFDIR}/zm/zm.conf
+CONF_FILES+=		${PREFIX}/${EGDIR}/config/zm.conf ${PKG_SYSCONFDIR}/zm.conf
 INSTALLATION_DIRS+=	bin share/examples/rc.d share/zoneminder/db
 INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
