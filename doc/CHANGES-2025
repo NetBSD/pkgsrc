@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2343 2025/03/26 22:51:01 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2344 2025/03/26 22:52:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3027,3 +3027,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/oo2c [wiz 2025-03-26]
 	Updated mail/exim to 4.98.2 [abs 2025-03-26]
 	Removed lang/sather [wiz 2025-03-26]
+	Removed x11/gtk-sharp successor x11/gtk-sharp3 [wiz 2025-03-26]
