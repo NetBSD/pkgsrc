@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2025/02/12 06:45:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2025/03/26 15:10:10 wiz Exp $
 
 # warning: TAG is also set, but upstream seems now to have release
 # name/tag/unpacking-location in alignment.
@@ -13,6 +13,8 @@ MAINTAINER=	dbj@NetBSD.org
 HOMEPAGE=	https://freedv.org/
 COMMENT=	FreeDV: HF Digital Voice for Radio Amateurs
 LICENSE=	gnu-lgpl-v2.1
+
+BROKEN=		"Broken by codec2-1.2.0 update."
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
