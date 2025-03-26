@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2022/05/14 22:25:36 dholland Exp $
-#
+# $NetBSD: Makefile,v 1.32 2025/03/26 14:17:31 wiz Exp $
 
 DISTNAME=	jde-2.3.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -26,8 +25,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/lisp
 EMACS_VERSIONS_ACCEPTED=	emacs21		# XXX Won't compile with emacs20...
 
 .include "../../editors/emacs/modules.mk"
-
-PKG_DEFAULT_JVM=	sun-jdk14
 
 PKGSRC_MAKE_ENV+=	EMACS=${EMACS}
 MAKE_ENV+=		EMACS_LISPPREFIX=${EMACS_LISPPREFIX}

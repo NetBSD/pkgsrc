@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2018/10/17 13:54:39 hauke Exp $
+# $NetBSD: options.mk,v 1.2 2025/03/26 14:17:32 wiz Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tsm
 PKG_SUPPORTED_OPTIONS=	java
@@ -14,7 +14,7 @@ USE_TOOLS+=		bash:run
 USE_JAVA=		run
 USE_JAVA2=		yes
 # We need a Linux jvm
-PKG_JVMS_ACCEPTED=	sun-jdk7 oracle-jdk8
+PKG_JVMS_ACCEPTED=	oracle-jdk8
 
 PLIST.java=		yes
 PUBLIC_BINS+=		dsmj

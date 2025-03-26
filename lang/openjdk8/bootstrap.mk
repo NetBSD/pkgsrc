@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.15 2019/09/22 15:16:26 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.16 2025/03/26 14:17:32 wiz Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -82,17 +82,6 @@ EXTRACT_ONLY+=		${BOOT.fbsd10-amd64}
 
 .if ${OPSYS} == "Linux"
 # TODO adoptopenjdk?
-.endif
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_DEPMETHOD.sun-jdk7?=	build
-.include "../../lang/sun-jdk7/buildlink3.mk"
-#NB: sun-jdk7 includes sun-jre7/buildlink3.mk
-post-extract: copy-bootstrap-jdk
-.PHONY: copy-bootstrap-jdk
-copy-bootstrap-jdk:
-	${MKDIR} ${ALT_BOOTDIR}
-	cd ${BUILDLINK_JAVA_PREFIX.sun-jre7:tA} && pax -rw . ${ALT_BOOTDIR}
 .endif
 
 ALT_BOOTDIR=		${WRKDIR}/bootstrap

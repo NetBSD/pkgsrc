@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2024/08/30 07:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2025/03/26 14:17:31 wiz Exp $
 
 DISTNAME=	elasticsearch-6.8.8
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	Distributed RESTful Search Engine
 LICENSE=	apache-2.0
 
 # Uses javah, which doesn't exist in JDK10+ anymore.
-PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8 sun-jdk7
+PKG_JVMS_ACCEPTED=	openjdk8 oracle-jdk8
 
 # Build our own native JNA, the version should match the one that ES ships with
 JNA=			jna-4.5.1
