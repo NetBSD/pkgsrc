@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2341 2025/03/26 13:59:49 wiz Exp $
+$NetBSD: CHANGES-2025,v 1.2342 2025/03/26 18:27:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3025,3 +3025,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Updated net/yt-dlp to 2025.3.25 [mrg 2025-03-25]
 	Updated net/yt-dlp to 2025.3.26 [adam 2025-03-26]
 	Removed lang/oo2c [wiz 2025-03-26]
+	Updated mail/exim to 4.98.2 [abs 2025-03-26]
