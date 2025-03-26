@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.138 2025/03/04 11:46:26 abs Exp $
+# $NetBSD: java-vm.mk,v 1.139 2025/03/26 14:17:32 wiz Exp $
 #
 # This Makefile fragment provides a Java VM, either at build-time or at
 # run-time, depending on the package's needs.
@@ -12,7 +12,7 @@
 #	The JVM that should be used if nothing particular is specified.
 #
 #	Possible values: kaffe openjdk8
-#		sun-jdk7 oracle-jdk8
+#		oracle-jdk8
 #		adoptopenjdk11-bin
 #		openjdk-bin openjdk11
 #		openjdk17 oracle-jdk17
@@ -87,7 +87,7 @@ _PKG_JVMS.11=		${_PKG_JVMS.17} openjdk11 adoptopenjdk11-bin
 _PKG_JVMS.11=		${_PKG_JVMS.17} adoptopenjdk11-bin openjdk11
 .endif
 _PKG_JVMS.8=		${_PKG_JVMS.11} openjdk8 oracle-jdk8
-_PKG_JVMS.7=		${_PKG_JVMS.8} sun-jdk7
+_PKG_JVMS.7=		${_PKG_JVMS.8}
 _PKG_JVMS.6=		${_PKG_JVMS.7} jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5}
@@ -149,16 +149,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k \
 	*-*-mipsel* *-*-sparc *-*-powerpc
-_ONLY_FOR_PLATFORMS.sun-jdk7= \
-	Darwin-9.*-i386			Darwin-[1-9][0-9].*-i386	\
-        Darwin-9.*-x86_64		Darwin-[1-9][0-9].*-x86_64 	\
-	FreeBSD-6.*-i386 \
-	Linux-*-i[3-6]86 \
-	Linux-*-x86_64 \
-	NetBSD-[6-9].*-x86_64		NetBSD-1[0-9].*-x86_64		\
-	NetBSD-[6-9].*-i386		NetBSD-1[0-9].*-i386		\
-	SunOS-5.11-i386 \
-	SunOS-5.11-x86_64
 _ONLY_FOR_PLATFORMS.oracle-jdk8= \
 	Darwin-9.*-i386			Darwin-[1-9][0-9].*-i386	\
         Darwin-9.*-x86_64		Darwin-[1-9][0-9].*-x86_64 	\
@@ -217,7 +207,6 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk8=		openjdk8
-_JAVA_PKGBASE.sun-jdk7=		sun-jre7
 _JAVA_PKGBASE.oracle-jdk8=	oracle-jre8
 _JAVA_PKGBASE.adoptopenjdk11-bin=	adoptopenjdk11-bin
 _JAVA_PKGBASE.openjdk-bin=	openjdk-bin
@@ -229,7 +218,6 @@ _JAVA_PKGBASE.openjdk21=	openjdk21
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.kaffe=		kaffe
 _JAVA_NAME.openjdk8=		openjdk8
-_JAVA_NAME.sun-jdk7=		sun7
 _JAVA_NAME.oracle-jdk8=		oracle8
 _JAVA_NAME.adoptopenjdk11-bin=		adoptopenjdk11-bin
 _JAVA_NAME.openjdk-bin=		openjdk-bin
@@ -286,8 +274,6 @@ _PKG_JVM=		"none"
 
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk8?=	openjdk8-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jdk8?=	oracle-jdk8-[0-9]*
 BUILDLINK_API_DEPENDS.oracle-jre8?=	oracle-jre8-[0-9]*
 BUILDLINK_API_DEPENDS.adoptopenjdk11-bin?=	adoptopenjdk11-bin-[0-9]*
@@ -299,7 +285,6 @@ BUILDLINK_API_DEPENDS.openjdk21?=	openjdk21-[0-9]*
 
 _JRE.kaffe=		kaffe
 _JRE.openjdk8=		openjdk8
-_JRE.sun-jdk7=		sun-jre7
 _JRE.oracle-jdk8=	oracle-jre8
 _JRE.adoptopenjdk11-bin=	adoptopenjdk11-bin
 _JRE.openjdk-bin=	openjdk-bin
@@ -318,11 +303,6 @@ _JAVA_HOME=		${LOCALBASE}/java/kaffe
 _JDK_PKGSRCDIR=		../../lang/openjdk8
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME=		${LOCALBASE}/java/openjdk8
-.elif ${_PKG_JVM} == "sun-jdk7"
-_JDK_PKGSRCDIR=		../../lang/sun-jdk7
-_JRE_PKGSRCDIR=		../../lang/sun-jre7
-_JAVA_HOME=		${LOCALBASE}/java/sun-7
-UNLIMIT_RESOURCES+=	datasize virtualsize
 .elif ${_PKG_JVM} == "oracle-jdk8"
 _JDK_PKGSRCDIR=		../../lang/oracle-jdk8
 _JRE_PKGSRCDIR=		../../lang/oracle-jre8
