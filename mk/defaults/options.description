@@ -920,7 +920,6 @@ streamtuner-xiph	Enable the Xiph plugin.
 subversion-plaintext-storage	Enable cleartest password storage.
 suexec			Enable suEXEC support in Apache web server.
 suhosin			Enable suhosin security enhancements for PHP.
-sun-jre-jce		Use unlimited strength cryptography extension.
 sunaudio		Enable Sun audio support.
 svg			Enable SVG support.
 svn			Enable subversion support.
