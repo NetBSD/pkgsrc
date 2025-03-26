@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2025,v 1.2340 2025/03/26 05:06:41 adam Exp $
+$NetBSD: CHANGES-2025,v 1.2341 2025/03/26 13:59:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2025:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2025:
 	Removed lang/smlnj11072 successor lang/smlnj [wiz 2025-03-24]
 	Updated net/yt-dlp to 2025.3.25 [mrg 2025-03-25]
 	Updated net/yt-dlp to 2025.3.26 [adam 2025-03-26]
+	Removed lang/oo2c [wiz 2025-03-26]
