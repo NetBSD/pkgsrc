@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2024/01/16 15:17:41 taca Exp $
+# $NetBSD: hacks.mk,v 1.3 2025/03/27 14:12:02 taca Exp $
 
 .if !defined(RUBY31_BASE_HACKS_MK)
 RUBY31_BASE_HACKS_MK=	defined
@@ -39,6 +39,13 @@ BUILDLINK_TRANSFORM+=	opt:-Os:-O1 rm:-freorder-blocks
 .if ${MACHINE_PLATFORM:MNetBSD-*-aarch64*} && ${CC_VERSION:Mgcc-[2-9]*}
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
+.endif
+
+# On NetBSD/i386 9.0 release with gcc 7.4.0, it cause error on compilign
+# vm.c (really vm_exec.c).
+#
+.if ${MACHINE_PLATFORM:MNetBSD-*-i386}
+GCC_REQD=	8
 .endif
 
 .endif	# RUBY31_BASE_HACKS_MK
